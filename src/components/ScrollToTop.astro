@@ -1,0 +1,47 @@
+---
+import ArrowUpToLine from '@lucide/astro/icons/arrow-up-to-line';
+---
+
+<button type="button" class="scroll-to-top" aria-label="回到顶部" hidden>
+	<svg class="scroll-progress-ring" viewBox="0 0 44 44" aria-hidden="true">
+		<circle class="scroll-progress-track" cx="22" cy="22" r="19"></circle>
+		<circle class="scroll-progress-bar" cx="22" cy="22" r="19"></circle>
+	</svg>
+	<span class="scroll-to-top-icon">
+		<ArrowUpToLine size={18} stroke-width={2} aria-hidden="true" />
+	</span>
+</button>
+
+<script>
+	const button = document.querySelector<HTMLButtonElement>('.scroll-to-top');
+	const progressBar = button?.querySelector<SVGCircleElement>('.scroll-progress-bar');
+
+	if (button && progressBar) {
+		const threshold = 240;
+		const radius = 19;
+		const circumference = 2 * Math.PI * radius;
+
+		progressBar.style.strokeDasharray = `${circumference}`;
+		progressBar.style.strokeDashoffset = `${circumference}`;
+
+		const getScrollProgress = () => {
+			const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+			if (maxScroll <= 0) return 0;
+			return Math.min(1, Math.max(0, window.scrollY / maxScroll));
+		};
+
+		const update = () => {
+			const progress = getScrollProgress();
+			progressBar.style.strokeDashoffset = `${circumference * (1 - progress)}`;
+			button.hidden = window.scrollY < threshold;
+		};
+
+		update();
+		window.addEventListener('scroll', update, { passive: true });
+		window.addEventListener('resize', update, { passive: true });
+
+		button.addEventListener('click', () => {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	}
+</script>

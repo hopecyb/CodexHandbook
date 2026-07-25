@@ -8,7 +8,7 @@
 - 完整覆盖 Codex 的桌面 App、CLI、IDE、Web/Cloud、移动与远程协作、集成和开发者平台。
 - 系统讲解提示词、上下文、Skills、Plugins、MCP、Hooks、自动化、多 Agent 与安全治理。
 - 提供可复用的提示词、Skill、配置、工作流和完整案例。
-- 采用简体中文作为源语言，支持繁体中文、英语、法语、日语、韩语及更多语言。
+- 采用简体中文作为源语言；繁体中文、英语、法语、日语、韩语等为规划中的译文目标。
 
 ## 内容组织
 
@@ -24,9 +24,11 @@
 
 - [总体内容架构](docs/planning/content-architecture.md)
 - [完整章节大纲](docs/planning/chapter-outline.md)
+- [MVP 范围](docs/planning/mvp-scope.md)
 - [提示词、Skill 与案例体系](docs/planning/examples-system.md)
 - [多语言与内容维护规范](docs/planning/i18n-and-maintenance.md)
 - [内容设计总规格](docs/superpowers/specs/2026-07-25-codex-handbook-content-design.md)
+- [路线图](ROADMAP.md)
 
 ## 文档站点
 
@@ -47,4 +49,4 @@ npm run build
 
 ## 当前阶段
 
-项目目前处于内容规划与站点框架初始化阶段。本仓库中的规划文档定义信息架构、章节边界、实例规范、多语言策略和维护机制；教程正文将在规划确认后分阶段建设到 `src/content/docs/`。
+项目已完成 **简体中文 MVP 正文**：`00`–`05` 黄金路径与精简 `12` 参考页位于 `src/content/docs/`。后续里程碑（产品余页、个性化、扩展、案例、团队与翻译）见 [ROADMAP.md](ROADMAP.md)。
