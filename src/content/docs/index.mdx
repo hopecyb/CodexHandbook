@@ -16,64 +16,73 @@ hero:
   actions:
     - text: 从这里开始
       icon: right-arrow
-      link: /00-start-here/
+      link: /guide/start-here/
     - text: 在 GitHub 上查看
       icon: external
       variant: minimal
       link: https://github.com/cyberhope/codex-handbook
 ---
 
-import { CardGrid, Card } from '@astrojs/starlight/components';
 import AboutHandbook from '../../components/AboutHandbook.astro';
 
 <section class="home-section home-section-lead" aria-label="手册定位">
-	<div>Codex 不只是一个能改代码的工具。它可以帮助你理解资料、生成内容、搭建原型、处理文档、审查变更、自动化重复工作，也可以成为团队协作中的执行伙伴。</div>
-	<div>这份手册把这些能力拆成清晰的学习路径、产品手册、能力专题、工作流和真实案例，让不同基础的读者都能找到下一步。</div>
+	<p>Codex 不只是一个能改代码的工具。它可以帮助你理解资料、生成内容、搭建原型、处理文档、审查变更、自动化重复工作，也可以成为团队协作中的执行伙伴。</p>
+	<p>这份手册按四个模块组织：认识产品、写好提示词、封装 Skills、通过实战案例学习完整流程，让不同基础的读者都能找到下一步。</p>
 </section>
 
-<CardGrid stagger>
-	<Card title="从零开始" icon="open-book">
-		不预设终端、Git 或 Agent 经验。先理解 Codex 是什么、适合做什么，再完成第一个安全可检查的任务。
-	</Card>
-	<Card title="按角色学习" icon="star">
-		为初学者、创作者、开发者和团队分别组织路线，避免在不需要的细节里迷路，也不牺牲专业深度。
-	</Card>
-	<Card title="覆盖多种入口" icon="laptop">
-		统一说明桌面 App、CLI、IDE、Web/Cloud、移动端和集成场景，帮助你按任务选择合适的使用方式。
-	</Card>
-	<Card title="沉淀工作流" icon="puzzle">
-		系统讲解提示词、上下文、Skills、Plugins、MCP、Hooks、自动化、多 Agent 和安全治理，把一次成功变成稳定方法。
-	</Card>
-</CardGrid>
+<section class="home-section" aria-labelledby="modules-heading">
+	<div class="section-heading">
+		<p>四个模块</p>
+		<h2 id="modules-heading">按模块开始</h2>
+	</div>
+	<div class="module-grid">
+		<a class="module-card" href="/guide/">
+			<strong>Codex 指南</strong>
+			<span>安装客户端、理解权限、完成第一次任务。</span>
+		</a>
+		<a class="module-card" href="/prompts/">
+			<strong>提示词</strong>
+			<span>讲清目标、背景、约束与验收标准，附带可复制模板。</span>
+		</a>
+		<a class="module-card" href="/skills/">
+			<strong>Skills</strong>
+			<span>封装稳定方法，扩展 Plugins、MCP 与 Hooks。</span>
+		</a>
+		<a class="module-card" href="/cases/">
+			<strong>实战案例</strong>
+			<span>从 Bug 修复、写作、自动化等真实任务中学习。</span>
+		</a>
+	</div>
+</section>
 
 <section class="home-section" aria-labelledby="paths-heading">
 	<div class="section-heading">
-		<p>Choose your path</p>
+		<p>选择你的路径</p>
 		<h2 id="paths-heading">按你的目标开始</h2>
 	</div>
 	<div class="path-grid">
-		<a class="path-card" href="/03-learning-paths/beginner/01-talk-to-codex/">
+		<a class="path-card" href="/guide/learning-paths/beginner/01-talk-to-codex/">
 			<strong>初学者</strong>
 			<span>认识 Codex、完成第一次任务、学会检查和撤回结果。</span>
 		</a>
-		<a class="path-card" href="/03-learning-paths/creator/">
+		<a class="path-card" href="/guide/learning-paths/creator/">
 			<strong>创作者</strong>
-			<span>把研究、写作、图片、演示和发布流程整理成可复用模板。（深度步骤后续补齐）</span>
+			<span>研究、写作、图片、演示与发布的起步指南与模板。（更多步骤持续更新）</span>
 		</a>
-		<a class="path-card" href="/03-learning-paths/developer/">
+		<a class="path-card" href="/guide/learning-paths/developer/">
 			<strong>开发者</strong>
-			<span>理解代码库、实现需求、运行测试、审查变更并处理复杂任务。（深度步骤后续补齐）</span>
+			<span>理解代码库、实现需求、测试、审查与复杂任务处理。（更多步骤持续更新）</span>
 		</a>
-		<a class="path-card" href="/03-learning-paths/team/">
+		<a class="path-card" href="/guide/learning-paths/team/">
 			<strong>团队</strong>
-			<span>设计共享说明、权限边界、质量标准和团队级自动化流程。（深度步骤后续补齐）</span>
+			<span>共享说明、权限边界、质量标准与团队自动化。（更多步骤持续更新）</span>
 		</a>
 	</div>
 </section>
 
 <section class="home-section home-map" aria-labelledby="map-heading">
 	<div class="section-heading">
-		<p>Capability map</p>
+		<p>能力地图</p>
 		<h2 id="map-heading">你会逐步掌握这些能力</h2>
 	</div>
 	<ul>
@@ -89,6 +98,6 @@ import AboutHandbook from '../../components/AboutHandbook.astro';
 
 手册以简体中文为源语言，后续会持续扩展繁体中文、英语、法语、日语、韩语等版本。内容会标注状态、核验日期和适用产品，让读者知道哪些内容可以直接照做，哪些内容需要复核。
 
-[从这里开始](/00-start-here/)
+[浏览学习路径](/guide/learning-paths/)
 
 </AboutHandbook>

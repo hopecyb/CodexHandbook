@@ -331,10 +331,51 @@ html[data-has-sidebar] .pagination-bar {
 	letter-spacing: 0;
 }
 
+.module-grid,
 .path-grid {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 1rem;
+}
+
+.module-card {
+	display: flex;
+	min-height: 10rem;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.1rem;
+	border: 1px solid var(--sl-color-gray-6);
+	border-radius: 0.5rem;
+	background:
+		linear-gradient(180deg, color-mix(in srgb, var(--sl-color-accent) 10%, transparent), transparent),
+		var(--sl-color-bg);
+	color: var(--sl-color-gray-2);
+	text-decoration: none;
+	transition:
+		border-color 0.18s ease,
+		transform 0.18s ease,
+		background-color 0.18s ease;
+}
+
+.module-card:hover {
+	border-color: color-mix(in srgb, var(--sl-color-accent) 60%, var(--sl-color-gray-5));
+	background-color: color-mix(in srgb, var(--sl-color-accent) 8%, var(--sl-color-bg));
+	transform: translateY(-2px);
+}
+
+.module-card strong {
+	color: var(--sl-color-white);
+	font-size: 1.2rem;
+	letter-spacing: 0;
+}
+
+.module-card span {
+	line-height: 1.65;
+}
+
+html[data-theme='light'] .module-card strong {
+	color: var(--sl-color-gray-1);
 }
 
 .path-card {
@@ -417,6 +458,7 @@ html[data-theme='light'] .path-card strong {
 }
 
 @media (max-width: 64rem) {
+	.module-grid,
 	.path-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
@@ -428,10 +470,12 @@ html[data-theme='light'] .path-card strong {
 
 @media (max-width: 44rem) {
 	.home-section-lead,
+	.module-grid,
 	.path-grid {
 		grid-template-columns: 1fr;
 	}
 
+	.module-card,
 	.path-card {
 		min-height: auto;
 	}

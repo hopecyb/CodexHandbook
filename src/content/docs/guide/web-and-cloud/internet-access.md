@@ -1,0 +1,89 @@
+---
+title: 互联网访问
+description: Cloud 环境的出网策略、依赖安装与数据外泄风险——如何按需开放又守住边界。
+---
+
+Cloud 任务常需要**出网**：拉取 npm/PyPI 包、访问 API、克隆子模块。互联网访问也是**数据外泄**的高风险面——Agent 可能把仓库或 Secrets 中的内容带到外部服务。
+
+## 这篇解决什么问题
+
+- Cloud 环境默认能否访问互联网
+- 何时需要开放、如何最小化暴露
+- 与本地沙盒、Secrets 策略的配合
+
+## 先理解两层「网络」
+
+| 层 | 含义 |
+|---|---|
+| Cloud 环境出网 | 远程机器能否访问公网或内网 API |
+| Agent 工具联网 | 会话内 web search、curl 等（各客户端策略不同） |
+
+本页侧重 **Cloud 环境**；通用概念见 [沙盒与网络](/guide/foundations/sandbox-and-network/)。
+
+## 典型需要出网的场景
+
+- 安装依赖：`npm install`、`pip install`、`go mod download`
+- 拉取私有 registry（需 [Secrets](/guide/web-and-cloud/secrets-and-variables/)）
+- 调用第三方 API（支付、地图、LLM 网关等）
+- 克隆子模块或下载构建资源
+
+## 推荐策略
+
+### 默认收紧，按需放开
+
+1. 在 [Cloud 环境](/guide/web-and-cloud/cloud-environments/) 中确认当前网络策略
+2. 把**必需域名**列成清单（包管理器、公司 API），避免「全网开放」
+3. 在 `AGENTS.md` 写明：允许访问哪些 URL、禁止把密钥写进 prompt
+4. 用测试任务验证：能装依赖，但不能访问无关站点（若产品支持细粒度策略）
+
+### 与 Secrets 分工
+
+| 内容 | 放哪 |
+|---|---|
+| API key、token | Cloud Secrets，不进仓库 |
+| 允许的 API 基址 | 文档或环境变量名（非值） |
+| 代理 / 镜像 URL | 团队标准配置 |
+
+### 数据外泄防护
+
+- 不要把生产数据库连接串放进任务描述
+- 审查 Agent 是否尝试把 `.env`、密钥文件内容发到外部
+- 对不可信仓库首次跑 Cloud 时，**禁止出网或只读沙盒**试跑
+
+## 与本地开发对齐
+
+本地能 `curl` 不代表 Cloud 能——常见「Cloud 红」原因：
+
+| 现象 | 可能原因 |
+|---|---|
+| 依赖安装失败 | 出网被禁或 registry 需认证 |
+| 子模块拉不下来 | SSH key 未注入 Secrets |
+| 内网 API 超时 | Cloud 不在公司 VPN 内 |
+
+解决方向：改用 HTTPS + token、提供可达的镜像、或在文档中说明 Cloud 不支持内网资源。
+
+## 常见错误
+
+- 为省事全局开放出网，却在含 Secrets 的生产仓库跑无限制任务
+- 假设 Cloud 与笔记本共用同一 `.npmrc`（未推送或未配 Secret）
+- 把「需要联网」和「需要 web search 工具」混为一谈
+
+## 验收清单
+
+- [ ] 列出该仓库 Cloud 任务必需的出站域名/服务
+- [ ] Secrets 已配置且未提交 Git
+- [ ] 在测试分支跑通一次完整安装 + 测试
+- [ ] 团队知晓哪些数据禁止出现在联网 prompt 中
+
+## 参考来源
+
+- OpenAI Codex Cloud 网络与安全文档
+- stormzhang `10-cloud.md`、`19-security.md`
+- KimYx0207 CX-10、CX-11
+- codex.bozhouai.com 云端章节
+
+---
+
+**状态：** review  
+**适用产品：** Cloud  
+**最近核验：** 2026-07-25

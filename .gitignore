@@ -23,6 +23,7 @@ test-results/
 # Vercel output
 .vercel
 
+.idea/
 # VS Code
 .vscode/
 
