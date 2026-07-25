@@ -1,0 +1,98 @@
+---
+title: Codex Handbook
+head:
+  - tag: title
+    content: Codex Handbook
+description: An open-source Codex guide for AI beginners, creators, developers, and teams—from first use to professional workflows and team adoption.
+template: splash
+editUrl: false
+lastUpdated: false
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-25
+hero:
+  title: Turn ideas into results <br /> with Codex
+  tagline: An open-source handbook for AI beginners, creators, developers, and teams. Start with your first conversation and gradually build verifiable, reusable, collaborative Codex workflows.
+  image:
+    file: ../../../assets/hero-codex.svg
+    alt: Codex Handbook illustration
+  actions:
+    - text: Start here
+      icon: right-arrow
+      link: /00-start-here/
+    - text: View on GitHub
+      icon: external
+      variant: minimal
+      link: https://github.com/cyberhope/codex-handbook
+---
+
+import { CardGrid, Card } from '@astrojs/starlight/components';
+import AboutHandbook from '../../../components/AboutHandbook.astro';
+
+<section class="home-section home-section-lead" aria-label="Handbook positioning">
+	<div>Codex is more than a tool that edits code. It can help you understand materials, generate content, build prototypes, handle documents, review changes, automate repetitive work, and serve as an execution partner in team collaboration.</div>
+	<div>This handbook breaks these capabilities into clear learning paths, product guides, capability topics, workflows, and real-world examples—so readers at every level can find their next step.</div>
+</section>
+
+<CardGrid stagger>
+	<Card title="Start from zero" icon="open-book">
+		No prior terminal, Git, or Agent experience assumed. Understand what Codex is and what it's good for, then complete your first safe, inspectable task.
+	</Card>
+	<Card title="Learn by role" icon="star">
+		Routes organized for beginners, creators, developers, and teams—avoid getting lost in details you don't need without sacrificing professional depth.
+	</Card>
+	<Card title="Multiple entry points" icon="laptop">
+		Unified coverage of desktop App, CLI, IDE, Web/Cloud, mobile, and integration scenarios—helping you choose the right way to work for each task.
+	</Card>
+	<Card title="Build workflows" icon="puzzle">
+		Systematic coverage of prompting, context, Skills, Plugins, MCP, Hooks, automation, multi-Agent collaboration, and security governance—turning one-off wins into repeatable methods.
+	</Card>
+</CardGrid>
+
+<section class="home-section" aria-labelledby="paths-heading">
+	<div class="section-heading">
+		<p>Choose your path</p>
+		<h2 id="paths-heading">Start with your goal</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/03-learning-paths/beginner/01-talk-to-codex/">
+			<strong>Beginner</strong>
+			<span>Get to know Codex, complete your first task, and learn how to inspect and undo results.</span>
+		</a>
+		<a class="path-card" href="/03-learning-paths/creator/">
+			<strong>Creator</strong>
+			<span>Turn research, writing, images, presentations, and publishing into reusable templates. (In-depth steps coming later.)</span>
+		</a>
+		<a class="path-card" href="/03-learning-paths/developer/">
+			<strong>Developer</strong>
+			<span>Understand codebases, implement features, run tests, review changes, and handle complex tasks. (In-depth steps coming later.)</span>
+		</a>
+		<a class="path-card" href="/03-learning-paths/team/">
+			<strong>Team</strong>
+			<span>Design shared instructions, permission boundaries, quality standards, and team-level automation. (In-depth steps coming later.)</span>
+		</a>
+	</div>
+</section>
+
+<section class="home-section home-map" aria-labelledby="map-heading">
+	<div class="section-heading">
+		<p>Capability map</p>
+		<h2 id="map-heading">Capabilities you'll master step by step</h2>
+	</div>
+	<ul>
+		<li><span>01</span> Write task prompts with clear goals, explicit boundaries, and verifiable outcomes</li>
+		<li><span>02</span> Manage files, context, terminal, browser, and external materials</li>
+		<li><span>03</span> Extend Codex with Skills, Plugins, MCP, and Hooks</li>
+		<li><span>04</span> Organize long tasks, multi-Agent collaboration, retrospectives, and handoffs</li>
+		<li><span>05</span> Establish security, verification, and governance in personal and team settings</li>
+	</ul>
+</section>
+
+<AboutHandbook title="Open collaboration">
+
+The handbook is authored in Simplified Chinese as the source language. Traditional Chinese, English, French, Japanese, Korean, and other versions will follow. Content is labeled with status, verification dates, and applicable products—so readers know what they can follow directly and what needs a second look.
+
+[Start here](/00-start-here/)
+
+</AboutHandbook>

@@ -6,7 +6,10 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Codex 指南手册',
+			title: {
+				'zh-CN': 'Codex 指南手册',
+				en: 'Codex Handbook',
+			},
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				PageFrame: './src/components/PageFrame.astro',
@@ -35,6 +38,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '从这里开始',
+					translations: { en: 'Start here' },
 					items: [
 						{ slug: '00-start-here' },
 						{ slug: '00-start-here/what-is-codex' },
@@ -48,6 +52,7 @@ export default defineConfig({
 				},
 				{
 					label: '基础概念',
+					translations: { en: 'Foundations' },
 					items: [
 						{ slug: '01-foundations' },
 						{ slug: '01-foundations/ai-and-language-models' },
@@ -66,6 +71,7 @@ export default defineConfig({
 				},
 				{
 					label: '快速上手',
+					translations: { en: 'Getting started' },
 					items: [
 						{ slug: '02-getting-started' },
 						{ slug: '02-getting-started/account-plans-and-access' },
@@ -84,10 +90,12 @@ export default defineConfig({
 				},
 				{
 					label: '学习路径',
+					translations: { en: 'Learning paths' },
 					items: [
 						{ slug: '03-learning-paths' },
 						{
 							label: '初学者',
+							translations: { en: 'Beginner' },
 							items: [
 								{ slug: '03-learning-paths/beginner/01-talk-to-codex' },
 								{ slug: '03-learning-paths/beginner/02-work-with-files' },
@@ -103,10 +111,12 @@ export default defineConfig({
 				},
 				{
 					label: '产品手册',
+					translations: { en: 'Product guides' },
 					items: [
 						{ slug: '04-product-guides' },
 						{
 							label: '桌面 App',
+							translations: { en: 'Desktop App' },
 							items: [
 								{ slug: '04-product-guides/desktop-app' },
 								{ slug: '04-product-guides/desktop-app/installation-and-interface' },
@@ -123,6 +133,7 @@ export default defineConfig({
 						},
 						{
 							label: 'CLI',
+							translations: { en: 'CLI' },
 							items: [
 								{ slug: '04-product-guides/cli' },
 								{ slug: '04-product-guides/cli/installation-and-updates' },
@@ -132,6 +143,7 @@ export default defineConfig({
 						},
 						{
 							label: 'IDE',
+							translations: { en: 'IDE' },
 							items: [
 								{ slug: '04-product-guides/ide' },
 								{ slug: '04-product-guides/ide/installation' },
@@ -146,10 +158,12 @@ export default defineConfig({
 				},
 				{
 					label: '核心能力',
+					translations: { en: 'Core capabilities' },
 					items: [
 						{ slug: '05-core-capabilities' },
 						{
 							label: '提示词',
+							translations: { en: 'Prompting' },
 							items: [
 								{ slug: '05-core-capabilities/prompting' },
 								{ slug: '05-core-capabilities/prompting/prompt-basics' },
@@ -167,6 +181,7 @@ export default defineConfig({
 						},
 						{
 							label: '上下文',
+							translations: { en: 'Context' },
 							items: [
 								{ slug: '05-core-capabilities/context' },
 								{ slug: '05-core-capabilities/context/project-context' },
@@ -180,6 +195,7 @@ export default defineConfig({
 						},
 						{
 							label: '质量与验证',
+							translations: { en: 'Quality & verification' },
 							items: [
 								{ slug: '05-core-capabilities/quality' },
 								{ slug: '05-core-capabilities/quality/review-diffs' },
@@ -192,6 +208,7 @@ export default defineConfig({
 						},
 						{
 							label: '工具',
+							translations: { en: 'Tools' },
 							items: [
 								{ slug: '05-core-capabilities/tools' },
 								{ slug: '05-core-capabilities/tools/tool-selection' },
@@ -201,6 +218,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Agent 工作',
+							translations: { en: 'Agent work' },
 							items: [
 								{ slug: '05-core-capabilities/agent-work' },
 								{ slug: '05-core-capabilities/agent-work/planning' },
@@ -212,6 +230,7 @@ export default defineConfig({
 				},
 				{
 					label: '参考资料',
+					translations: { en: 'Reference' },
 					items: [
 						{ slug: '12-reference' },
 						{ slug: '12-reference/glossary' },

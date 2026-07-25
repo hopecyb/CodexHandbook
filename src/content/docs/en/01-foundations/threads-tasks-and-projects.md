@@ -1,0 +1,27 @@
+---
+title: Threads, tasks, and projects
+description: How sessions, tasks, and project workspaces relate.
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-25
+---
+
+Product wording may vary slightly; this handbook uses:
+
+- **Project / workspace**: the folder or repo root Codex is bound to
+- **Thread / session**: one continuous conversation; context accumulates
+- **Task**: goal-oriented work (may include many tool calls)
+
+## Practical tips
+
+- **Start a new thread** when the topic changes—old context causes interference
+- For long tasks, define phases and checkpoints—see [Prompting for long tasks](/05-core-capabilities/prompting/prompting-for-long-tasks/)
+- To continue across sessions, write a handoff summary—see [Handoff and resume](/05-core-capabilities/agent-work/handoff-and-resume/)
+
+
+---
+
+**Status:** review  
+**Applicable products:** App / CLI / IDE / Cloud  
+**Last verified:** 2026-07-25
