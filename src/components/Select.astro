@@ -1,0 +1,151 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+
+interface Props {
+	label: string;
+	icon: Parameters<typeof Icon>[0]['name'];
+	width?: string;
+	options: Array<{
+		label: string;
+		value: string;
+		selected: boolean;
+	}>;
+}
+
+const { label, icon, width = '7em', options } = Astro.props;
+const selected = options.find((option) => option.selected) ?? options[0];
+const labelId = `sl-select-${icon}-${options.map((option) => option.value).join('-')}`.replace(
+	/[^\w-]/g,
+	'',
+);
+---
+
+<sl-select class="sl-select" style={`--sl-select-width: ${width}`}>
+	<span class="sr-only" id={labelId}>{label}</span>
+	<button
+		type="button"
+		class="sl-select-trigger"
+		aria-labelledby={labelId}
+		aria-haspopup="listbox"
+		aria-expanded="false"
+	>
+		<Icon name={icon} class="icon label-icon" />
+		<span class="sl-select-value">{selected.label}</span>
+		<Icon name="down-caret" class="icon caret" />
+	</button>
+	<ul class="sl-select-menu" role="listbox" hidden>
+		{
+			options.map((option) => (
+				<li role="presentation">
+					<button
+						type="button"
+						class="sl-select-option"
+						role="option"
+						aria-selected={option.selected}
+						data-value={option.value}
+					>
+						{option.label}
+					</button>
+				</li>
+			))
+		}
+	</ul>
+	<select class="sl-select-native" autocomplete="off" tabindex="-1" aria-hidden="true">
+		{
+			options.map(({ value, selected, label: optionLabel }) => (
+				<option value={value} selected={selected}>
+					{optionLabel}
+				</option>
+			))
+		}
+	</select>
+</sl-select>
+
+<script>
+	class SlSelect extends HTMLElement {
+		#trigger: HTMLButtonElement | null = null;
+		#menu: HTMLUListElement | null = null;
+		#native: HTMLSelectElement | null = null;
+		#value: HTMLSpanElement | null = null;
+
+		connectedCallback() {
+			this.#trigger = this.querySelector('.sl-select-trigger');
+			this.#menu = this.querySelector('.sl-select-menu');
+			this.#native = this.querySelector('.sl-select-native');
+			this.#value = this.querySelector('.sl-select-value');
+
+			this.#trigger?.addEventListener('click', () => this.toggle());
+			this.querySelectorAll('.sl-select-option').forEach((option) => {
+				option.addEventListener('click', (event) => {
+					const button = event.currentTarget;
+					if (!(button instanceof HTMLButtonElement)) return;
+					this.select(button.dataset.value ?? '', button.textContent?.trim() ?? '');
+				});
+			});
+
+			document.addEventListener('click', (event) => {
+				if (!this.contains(event.target as Node)) this.close();
+			});
+
+			document.addEventListener('keydown', (event) => {
+				if (event.key === 'Escape') this.close();
+			});
+		}
+
+		toggle() {
+			this.#menu?.hidden ? this.open() : this.close();
+		}
+
+		open() {
+			if (!this.#menu || !this.#trigger) return;
+			document.querySelectorAll('sl-select .sl-select-menu:not([hidden])').forEach((menu) => {
+				if (menu !== this.#menu) {
+					menu.setAttribute('hidden', '');
+					menu
+						.closest('sl-select')
+						?.querySelector('.sl-select-trigger')
+						?.setAttribute('aria-expanded', 'false');
+				}
+			});
+			this.#menu.hidden = false;
+			this.#trigger.setAttribute('aria-expanded', 'true');
+		}
+
+		close() {
+			if (!this.#menu || !this.#trigger) return;
+			this.#menu.hidden = true;
+			this.#trigger.setAttribute('aria-expanded', 'false');
+		}
+
+		select(value: string, label: string) {
+			if (!this.#native || !this.#value) return;
+
+			this.#native.value = value;
+			this.#native.dispatchEvent(new Event('change', { bubbles: true }));
+			this.#value.textContent = label;
+
+			this.querySelectorAll('.sl-select-option').forEach((option) => {
+				const isSelected = option instanceof HTMLButtonElement && option.dataset.value === value;
+				option.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+			});
+
+			this.close();
+		}
+
+		syncFromNative() {
+			if (!this.#native || !this.#value) return;
+			const option = this.#native.selectedOptions[0];
+			if (!option) return;
+			this.#value.textContent = option.textContent;
+			this.querySelectorAll('.sl-select-option').forEach((item) => {
+				const isSelected =
+					item instanceof HTMLButtonElement && item.dataset.value === option.value;
+				item.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+			});
+		}
+	}
+
+	if (!customElements.get('sl-select')) {
+		customElements.define('sl-select', SlSelect);
+	}
+</script>
