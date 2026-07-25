@@ -27,6 +27,7 @@
 - [MVP 范围](docs/planning/mvp-scope.md)
 - [提示词、Skill 与案例体系](docs/planning/examples-system.md)
 - [多语言与内容维护规范](docs/planning/i18n-and-maintenance.md)
+- [外部资料整合计划](docs/planning/external-source-integration.md)
 - [内容设计总规格](docs/superpowers/specs/2026-07-25-codex-handbook-content-design.md)
 - [路线图](ROADMAP.md)
 

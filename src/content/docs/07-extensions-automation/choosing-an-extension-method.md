@@ -1,0 +1,66 @@
+---
+title: 如何选择扩展方式
+description: 从提示词到 Automations 的决策树——避免「为用而用」。
+---
+
+
+扩展机制越多，越需要**刻意选型**。本页帮助你在动手装 Plugin 或写 MCP 之前停一秒。
+
+## 决策树
+
+```text
+任务会重复 ≥3 次？
+├─ 否 → 用好提示词 + @ 引用即可
+└─ 是 → 需要持久规则吗？
+    ├─ 是 → 写进 AGENTS.md
+    └─ 否 → 流程固定且可描述？
+        ├─ 是 → 做 Skill
+        └─ 否 → 需要读外部系统？
+            ├─ 是 → 评估 MCP（只读优先）
+            └─ 否 → 需要无人值守？
+                ├─ 是 → Automations + 人工闸门
+                └─ 否 → 保持 Skill + 手动触发
+```
+
+团队要统一分发多个 Skill + MCP？在以上路径末端考虑 **Plugin**。
+
+## 场景对照
+
+| 场景 | 推荐组合 |
+|---|---|
+| 统一测试与提交规范 | AGENTS.md |
+| 每次合并前审查清单 | Skill `pr-review` |
+| 从 Linear 拉 ticket 上下文 | MCP + 任务提示 |
+| 每周依赖报告 | Automation → 开 issue |
+| 提交前密钥扫描 | Hooks（企业）或 CI |
+| 新人一键装全套工具 | Plugin（经安全审查） |
+
+## 成本维度
+
+| 机制 | 编写成本 | 维护成本 | 安全风险 |
+|---|---|---|---|
+| 提示词 | 低 | 低 | 低 |
+| AGENTS.md | 中 | 中 | 低 |
+| Skill | 中 | 中 | 低–中 |
+| MCP | 高 | 高 | 中–高 |
+| Plugin | 低（用现成的）/高（自建） | 中 | 中–高 |
+| Automations | 高 | 高 | 高 |
+
+## 反模式
+
+- **技能膨胀**：安装几十个 Skill，description 互相抢匹配
+- **MCP 万能锤**：本可用 `git` 的事硬接 API
+- **无验收自动化**：定时改代码但无人看 diff
+- **重复造轮子**：官方已有 Connector 仍自建 MCP
+
+## 延伸阅读
+
+- [扩展能力地图](/07-extensions-automation/capability-map/)
+- [人工审批模式](/09-workflows/human-approval-patterns/)
+- [把流程沉淀为 Skill](/09-workflows/turn-a-workflow-into-a-skill/)（路线图页）
+
+---
+
+**状态：** review  
+**适用产品：** App / CLI / IDE / Cloud  
+**最近核验：** 2026-07-25

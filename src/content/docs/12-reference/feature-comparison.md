@@ -13,6 +13,7 @@ description: App、CLI、IDE、Cloud 能力对照。
 | 编辑器内联上下文 | 中 | 弱 | 强 | 中 |
 | 远程标准化环境 | 视集成 | 视用法 | 视用法 | 强 |
 | 并行任务 / 工作树 | 常见 | 视工作流 | 视工作流 | 视产品 |
+| Skills / MCP / Plugin | 常见 | 常见 | 视版本 | 视产品 |
 | 移动中审批跟进 | 视通知/远程 | 弱 | 弱 | 视产品 |
 
 选择建议：[选择 Codex 客户端](/02-getting-started/choose-your-codex-client/)

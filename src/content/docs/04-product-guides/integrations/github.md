@@ -1,0 +1,68 @@
+---
+title: GitHub 集成
+description: 仓库连接、PR、Review 与 CI——Codex 在 GitHub 工作流中的位置。
+---
+
+
+GitHub 是 Codex **最常见的代码协作面**：Cloud 任务、PR 审查、Actions 与本地 push 都围绕同一套分支与权限。
+
+## 能力地图
+
+| 能力 | 典型入口 | 手册位置 |
+|---|---|---|
+| 连接远程仓库 | Cloud 设置 | [连接 GitHub](/04-product-guides/web-and-cloud/connect-github/) |
+| 云端改代码开 PR | Cloud 任务 | [创建 Pull Request](/04-product-guides/web-and-cloud/create-pull-requests/) |
+| 本地审查 diff | 桌面 App / IDE | [diff 与评论](/04-product-guides/desktop-app/diffs-comments-and-review/) |
+| CI 中跑 Codex | GitHub Actions | 路线图 `08-developer-platform/ci-cd/` |
+| PR 自动评论审查 | Actions + exec | [非交互模式](/04-product-guides/cli/non-interactive-mode/) |
+
+## 推荐团队规范
+
+```md
+## GitHub × Codex（可放入 AGENTS.md）
+
+- 默认分支保护 main；Codex 只推 feature 分支
+- PR 必须链接 issue；描述含测试说明
+- 禁止 Codex 合并 PR，除非 release bot 明确授权
+- 密钥使用 GitHub Secrets / 环境 secrets，不进 prompt
+```
+
+## Cloud vs 本地 Git
+
+| | 本地 clone | Cloud |
+|---|---|---|
+| 代码来源 | 你机器上的工作区 | 远程克隆 |
+| 未推送 commit | 可见 | 不可见，需先 push |
+| 环境 | 你的 Node/系统版本 | 配置的环境镜像 |
+| 适合 | 日常开发 | 异步长任务、标准化构建 |
+
+## Review 工作流
+
+1. Codex 或人开 PR
+2. 人读 diff（或 `$pr-review` Skill）
+3. CI 跑测试
+4. 评论驱动修订——可用新 Codex 任务「仅处理 review 评论」
+5. 人合并
+
+## 安全
+
+- 最小化 GitHub Token scope
+- 对 `pull_request_target` 等敏感 Actions 模式保持警惕（注入面）
+- Fork PR 上运行自动化需额外隔离策略
+
+## 常见错误
+
+- Cloud 任务假设本地未提交改动存在
+- 让 Codex 在 PR 描述中执行未消毒的指令（提示注入）
+- 同一 PR 混合格式化与功能改动
+
+## 参考来源
+
+- OpenAI Codex GitHub 集成文档
+- KimYx0207 CX-10；stormzhang `26-git-github.md`
+
+---
+
+**状态：** review  
+**适用产品：** Cloud / App / CLI  
+**最近核验：** 2026-07-25

@@ -23,9 +23,13 @@ description: 总览提示词、工具、扩展、多 Agent 与治理等能力模
 | 模型、Agent、权限、沙箱 | [基础概念](/01-foundations/) |
 | 各入口怎么点、怎么跑 | [产品手册](/04-product-guides/) |
 | 提示词、上下文、工具、质量 | [核心能力](/05-core-capabilities/) |
+| AGENTS.md 与配置 | [个性化配置](/06-customization/) |
+| Skills、MCP、Plugin、自动化 | [扩展与自动化](/07-extensions-automation/) |
+| 可重复协作方法 | [工作流方法](/09-workflows/) |
+| 端到端案例 | [场景案例](/10-use-cases/) |
 | 阅读顺序 | [学习路径](/03-learning-paths/) |
 
-扩展能力（Skills、Plugins、MCP、Hooks）在 MVP 中只作概念点名；系统教学见后续里程碑。扩展选型总图与产品对照不要混用：本页讲「学什么」，[功能对照](/12-reference/feature-comparison/) 讲「哪个入口有什么」。
+扩展选型总图见 [扩展能力地图](/07-extensions-automation/capability-map/)；产品对照见 [功能对照](/12-reference/feature-comparison/)。本页讲「学什么」，功能对照讲「哪个入口有什么」。
 
 
 ---

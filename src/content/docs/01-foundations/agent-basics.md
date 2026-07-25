@@ -17,7 +17,7 @@ description: 解释 Agent 如何围绕目标调用工具并迭代推进。
 
 ## 相关概念
 
-- Skill / Plugin / MCP：扩展「会做什么」与「连到哪」——进阶章节后续补齐；概念区别见 [能力地图](/00-start-here/codex-capability-map/)
+- Skill / Plugin / MCP：扩展「会做什么」与「连到哪」——见 [扩展与自动化](/07-extensions-automation/) 与 [能力地图](/00-start-here/codex-capability-map/)
 - 人工审批：见 [权限与审批](/01-foundations/permissions-and-approvals/)
 
 

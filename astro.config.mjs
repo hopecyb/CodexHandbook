@@ -13,6 +13,7 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				PageFrame: './src/components/PageFrame.astro',
+				Footer: './src/components/Footer.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
 				LanguageSelect: './src/components/LanguageSelect.astro',
 			},
@@ -138,6 +139,10 @@ export default defineConfig({
 								{ slug: '04-product-guides/cli' },
 								{ slug: '04-product-guides/cli/installation-and-updates' },
 								{ slug: '04-product-guides/cli/interactive-mode' },
+								{ slug: '04-product-guides/cli/non-interactive-mode' },
+								{ slug: '04-product-guides/cli/configuration' },
+								{ slug: '04-product-guides/cli/commands-and-shortcuts' },
+								{ slug: '04-product-guides/cli/approvals-and-sandbox' },
 								{ slug: '04-product-guides/cli/troubleshooting' },
 							],
 						},
@@ -146,14 +151,41 @@ export default defineConfig({
 							translations: { en: 'IDE' },
 							items: [
 								{ slug: '04-product-guides/ide' },
+								{ slug: '04-product-guides/ide/supported-editors' },
 								{ slug: '04-product-guides/ide/installation' },
+								{ slug: '04-product-guides/ide/editor-context' },
+								{ slug: '04-product-guides/ide/selected-code-and-open-files' },
 								{ slug: '04-product-guides/ide/local-task-workflow' },
+								{ slug: '04-product-guides/ide/cloud-task-workflow' },
+								{ slug: '04-product-guides/ide/reviewing-changes' },
+								{ slug: '04-product-guides/ide/settings' },
 								{ slug: '04-product-guides/ide/troubleshooting' },
 							],
 						},
-						{ slug: '04-product-guides/web-and-cloud' },
+						{
+							label: 'Web 与 Cloud',
+							translations: { en: 'Web & Cloud' },
+							items: [
+								{ slug: '04-product-guides/web-and-cloud' },
+								{ slug: '04-product-guides/web-and-cloud/connect-github' },
+								{ slug: '04-product-guides/web-and-cloud/cloud-environments' },
+								{ slug: '04-product-guides/web-and-cloud/secrets-and-variables' },
+								{ slug: '04-product-guides/web-and-cloud/internet-access' },
+								{ slug: '04-product-guides/web-and-cloud/create-pull-requests' },
+								{ slug: '04-product-guides/web-and-cloud/code-review' },
+								{ slug: '04-product-guides/web-and-cloud/delegate-and-follow-up' },
+								{ slug: '04-product-guides/web-and-cloud/troubleshooting' },
+							],
+						},
 						{ slug: '04-product-guides/mobile-and-remote' },
-						{ slug: '04-product-guides/integrations' },
+						{
+							label: '集成',
+							translations: { en: 'Integrations' },
+							items: [
+								{ slug: '04-product-guides/integrations' },
+								{ slug: '04-product-guides/integrations/github' },
+							],
+						},
 					],
 				},
 				{
@@ -207,6 +239,19 @@ export default defineConfig({
 							],
 						},
 						{
+							label: '文件与产物',
+							translations: { en: 'Files & artifacts' },
+							items: [
+								{ slug: '05-core-capabilities/files-and-artifacts' },
+								{ slug: '05-core-capabilities/files-and-artifacts/text-and-code-files' },
+								{ slug: '05-core-capabilities/files-and-artifacts/images-and-screenshots' },
+								{ slug: '05-core-capabilities/files-and-artifacts/pdf-and-documents' },
+								{ slug: '05-core-capabilities/files-and-artifacts/tables-and-spreadsheets' },
+								{ slug: '05-core-capabilities/files-and-artifacts/presentations' },
+								{ slug: '05-core-capabilities/files-and-artifacts/generated-artifacts' },
+							],
+						},
+						{
 							label: '工具',
 							translations: { en: 'Tools' },
 							items: [
@@ -214,6 +259,10 @@ export default defineConfig({
 								{ slug: '05-core-capabilities/tools/tool-selection' },
 								{ slug: '05-core-capabilities/tools/shell-and-terminal' },
 								{ slug: '05-core-capabilities/tools/web-search' },
+								{ slug: '05-core-capabilities/tools/browser' },
+								{ slug: '05-core-capabilities/tools/computer-use' },
+								{ slug: '05-core-capabilities/tools/image-generation' },
+								{ slug: '05-core-capabilities/tools/voice' },
 							],
 						},
 						{
@@ -222,8 +271,186 @@ export default defineConfig({
 							items: [
 								{ slug: '05-core-capabilities/agent-work' },
 								{ slug: '05-core-capabilities/agent-work/planning' },
+								{ slug: '05-core-capabilities/agent-work/subagents' },
 								{ slug: '05-core-capabilities/agent-work/progress-and-steering' },
 								{ slug: '05-core-capabilities/agent-work/handoff-and-resume' },
+							],
+						},
+					],
+				},
+				{
+					label: '个性化配置',
+					translations: { en: 'Customization' },
+					items: [
+						{ slug: '06-customization' },
+						{
+							label: 'AGENTS.md',
+							translations: { en: 'AGENTS.md' },
+							items: [
+								{ slug: '06-customization/agents-md/what-is-agents-md' },
+								{ slug: '06-customization/agents-md/scope-and-precedence' },
+								{ slug: '06-customization/agents-md/writing-effective-instructions' },
+							],
+						},
+						{ slug: '06-customization/project-instructions' },
+						{ slug: '06-customization/memories-and-persistent-context' },
+						{ slug: '06-customization/configuration/config-basics' },
+						{ slug: '06-customization/configuration/profiles' },
+						{ slug: '06-customization/personal-preferences' },
+						{
+							label: '规则',
+							translations: { en: 'Rules' },
+							items: [
+								{ slug: '06-customization/rules/allow-and-deny-patterns' },
+								{ slug: '06-customization/rules/command-rules' },
+								{ slug: '06-customization/rules/team-rules' },
+							],
+						},
+						{ slug: '06-customization/examples/monorepo-agents-md' },
+					],
+				},
+				{
+					label: '扩展与自动化',
+					translations: { en: 'Extensions' },
+					items: [
+						{ slug: '07-extensions-automation' },
+						{ slug: '07-extensions-automation/capability-map' },
+						{ slug: '07-extensions-automation/choosing-an-extension-method' },
+						{
+							label: 'Skills',
+							translations: { en: 'Skills' },
+							items: [
+								{ slug: '07-extensions-automation/skills/skills-overview' },
+								{ slug: '07-extensions-automation/skills/create-your-first-skill' },
+								{ slug: '07-extensions-automation/skills/skill-security-and-versioning' },
+							],
+						},
+						{
+							label: 'MCP',
+							items: [
+								{ slug: '07-extensions-automation/mcp/mcp-overview' },
+								{ slug: '07-extensions-automation/mcp/connect-an-mcp-server' },
+								{ slug: '07-extensions-automation/mcp/debugging-mcp' },
+							],
+						},
+						{
+							label: 'Hooks',
+							items: [
+								{ slug: '07-extensions-automation/hooks/hooks-overview' },
+								{ slug: '07-extensions-automation/hooks/hook-event-types' },
+								{ slug: '07-extensions-automation/hooks/hooks-examples' },
+							],
+						},
+						{ slug: '07-extensions-automation/plugins/plugins-overview' },
+						{ slug: '07-extensions-automation/automations/scheduled-tasks' },
+					],
+				},
+				{
+					label: '开发者平台',
+					translations: { en: 'Developer platform' },
+					items: [
+						{ slug: '08-developer-platform' },
+						{ slug: '08-developer-platform/sdk-overview' },
+						{
+							label: '非交互',
+							translations: { en: 'Non-interactive' },
+							items: [
+								{ slug: '08-developer-platform/non-interactive/codex-exec' },
+								{ slug: '08-developer-platform/non-interactive/scripts-and-pipelines' },
+								{ slug: '08-developer-platform/non-interactive/structured-output' },
+								{ slug: '08-developer-platform/non-interactive/exit-codes-and-retries' },
+							],
+						},
+						{
+							label: 'Webhooks',
+							items: [
+								{ slug: '08-developer-platform/webhooks/overview' },
+							],
+						},
+						{
+							label: 'CI/CD',
+							items: [
+								{ slug: '08-developer-platform/ci-cd/code-review-automation' },
+							],
+						},
+					],
+				},
+				{
+					label: '工作流方法',
+					translations: { en: 'Workflows' },
+					items: [
+						{ slug: '09-workflows' },
+						{ slug: '09-workflows/explore-plan-execute-verify' },
+						{ slug: '09-workflows/brainstorm-before-building' },
+						{ slug: '09-workflows/specification-driven-work' },
+						{ slug: '09-workflows/test-driven-work' },
+						{ slug: '09-workflows/diagnose-before-fixing' },
+						{ slug: '09-workflows/review-before-merge' },
+						{ slug: '09-workflows/research-with-sources' },
+						{ slug: '09-workflows/artifact-first-work' },
+						{ slug: '09-workflows/multi-agent-coordination' },
+						{ slug: '09-workflows/long-running-task-management' },
+						{ slug: '09-workflows/human-approval-patterns' },
+						{ slug: '09-workflows/failure-recovery' },
+						{ slug: '09-workflows/turn-a-workflow-into-a-skill' },
+					],
+				},
+				{
+					label: '场景案例',
+					translations: { en: 'Use cases' },
+					items: [
+						{ slug: '10-use-cases' },
+						{ slug: '10-use-cases/case-study-template' },
+						{
+							label: '软件开发',
+							translations: { en: 'Software development' },
+							items: [
+								{ slug: '10-use-cases/software-development/fix-a-bug-with-verification' },
+							],
+						},
+						{
+							label: '内容创作',
+							translations: { en: 'Content creation' },
+							items: [
+								{ slug: '10-use-cases/content-creation/refactor-docs-with-review' },
+							],
+						},
+						{
+							label: '研究与学习',
+							translations: { en: 'Research & learning' },
+							items: [
+								{ slug: '10-use-cases/research-and-learning/competitive-feature-matrix' },
+							],
+						},
+						{
+							label: '团队自动化',
+							translations: { en: 'Team automation' },
+							items: [
+								{ slug: '10-use-cases/team-automation/scheduled-link-check' },
+								{ slug: '10-use-cases/team-automation/issue-triage-suggestions' },
+							],
+						},
+					],
+				},
+				{
+					label: '团队与企业',
+					translations: { en: 'Team & enterprise' },
+					items: [
+						{ slug: '11-team-enterprise' },
+						{
+							label: '安全',
+							translations: { en: 'Security' },
+							items: [
+								{ slug: '11-team-enterprise/security/threat-model' },
+								{ slug: '11-team-enterprise/security/plugin-and-mcp-risk' },
+								{ slug: '11-team-enterprise/security/prompt-injection' },
+							],
+						},
+						{
+							label: '治理',
+							translations: { en: 'Governance' },
+							items: [
+								{ slug: '11-team-enterprise/governance/acceptable-use' },
 							],
 						},
 					],
@@ -236,8 +463,25 @@ export default defineConfig({
 						{ slug: '12-reference/glossary' },
 						{ slug: '12-reference/faq' },
 						{ slug: '12-reference/feature-comparison' },
+						{ slug: '12-reference/commands' },
+						{ slug: '12-reference/slash-commands' },
+						{ slug: '12-reference/configuration-reference' },
+						{ slug: '12-reference/permission-matrix' },
+						{ slug: '12-reference/environment-variables' },
+						{ slug: '12-reference/keyboard-shortcuts' },
+						{ slug: '12-reference/error-reference' },
 						{ slug: '12-reference/troubleshooting' },
 						{ slug: '12-reference/official-resources' },
+					],
+				},
+				{
+					label: '参与贡献',
+					translations: { en: 'Contributing' },
+					items: [
+						{ slug: '13-contributing' },
+						{ slug: '13-contributing/write-a-guide' },
+						{ slug: '13-contributing/add-a-prompt-example' },
+						{ slug: '13-contributing/verify-technical-content' },
 					],
 				},
 			],
