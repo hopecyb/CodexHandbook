@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="glow" x1="80" y1="40" x2="320" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="currentColor" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="120" y1="120" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="currentColor" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="currentColor" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="168" fill="url(#glow)"/>
+  <rect x="92" y="108" width="216" height="184" rx="20" stroke="currentColor" stroke-width="3" opacity="0.35"/>
+  <rect x="108" y="124" width="184" height="152" rx="14" fill="url(#accent)" opacity="0.12"/>
+  <path d="M132 156h136M132 188h96M132 220h112M132 252h72" stroke="currentColor" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M248 72 200 24l-48 48-2 4-10-11a6 6 0 0 0-9 9l11 11h-2L136 104l48 23h2l-10 11a6 6 0 1 0 9 9l10-11 2 4 48 48 48-48v-2l10 11a6 6 0 1 0 9-9l-10-10 2-1 48-23-48-23-2-1 10-11a6 6 0 1 0-9-9l-10 11v-2Z" fill="currentColor" opacity="0.9"/>
+  <circle cx="292" cy="116" r="10" fill="currentColor" opacity="0.45"/>
+  <circle cx="108" cy="292" r="8" fill="currentColor" opacity="0.35"/>
+  <circle cx="320" cy="280" r="6" fill="currentColor" opacity="0.3"/>
+</svg>

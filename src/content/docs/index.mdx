@@ -1,20 +1,94 @@
 ---
 title: Codex 指南手册
-description: 面向 AI 初学者、创作者、开发者与团队的 Codex 开源指南。
+head:
+  - tag: title
+    content: Codex 指南手册
+description: 面向 AI 初学者、创作者、开发者与团队的 Codex 开源指南，从第一次使用到专业工作流与团队落地。
+template: splash
+editUrl: false
+lastUpdated: false
+hero:
+  title: 用 Codex <br /> 把想法变成成果
+  tagline: 一份面向 AI 初学者、创作者、开发者与团队的开源手册。从第一次对话开始，逐步建立可验证、可复用、可协作的 Codex 工作流。
+  image:
+    file: ../../assets/hero-codex.svg
+    alt: Codex 指南手册插图
+  actions:
+    - text: 从这里开始
+      icon: right-arrow
+      link: /00-start-here/
+    - text: 在 GitHub 上查看
+      icon: external
+      variant: minimal
+      link: https://github.com/cyberhope/codex-handbook
 ---
 
-欢迎使用 Codex 指南手册。本手册帮助读者从第一次使用 Codex 开始，逐步掌握专业工作流、能力扩展与团队落地方法。
+import { CardGrid, Card } from '@astrojs/starlight/components';
+import AboutHandbook from '../../components/AboutHandbook.astro';
 
-## 从这里开始
+<section class="home-section home-section-lead" aria-label="手册定位">
+	<div>Codex 不只是一个能改代码的工具。它可以帮助你理解资料、生成内容、搭建原型、处理文档、审查变更、自动化重复工作，也可以成为团队协作中的执行伙伴。</div>
+	<div>这份手册把这些能力拆成清晰的学习路径、产品手册、能力专题、工作流和真实案例，让不同基础的读者都能找到下一步。</div>
+</section>
 
-如果你还不确定 Codex 是什么、适合谁使用，或想选择一条适合自己的学习路径，请从 [从这里开始](/00-start-here/) 章节入手。
+<CardGrid stagger>
+	<Card title="从零开始" icon="open-book">
+		不预设终端、Git 或 Agent 经验。先理解 Codex 是什么、适合做什么，再完成第一个安全可检查的任务。
+	</Card>
+	<Card title="按角色学习" icon="star">
+		为初学者、创作者、开发者和团队分别组织路线，避免在不需要的细节里迷路，也不牺牲专业深度。
+	</Card>
+	<Card title="覆盖多种入口" icon="laptop">
+		统一说明桌面 App、CLI、IDE、Web/Cloud、移动端和集成场景，帮助你按任务选择合适的使用方式。
+	</Card>
+	<Card title="沉淀工作流" icon="puzzle">
+		系统讲解提示词、上下文、Skills、Plugins、MCP、Hooks、自动化、多 Agent 和安全治理，把一次成功变成稳定方法。
+	</Card>
+</CardGrid>
 
-## 手册结构
+<section class="home-section" aria-labelledby="paths-heading">
+	<div class="section-heading">
+		<p>Choose your path</p>
+		<h2 id="paths-heading">按你的目标开始</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/00-start-here/">
+			<strong>初学者</strong>
+			<span>认识 Codex、完成第一次任务、学会检查和撤回结果。</span>
+		</a>
+		<a class="path-card" href="/00-start-here/">
+			<strong>创作者</strong>
+			<span>把研究、写作、图片、演示和发布流程整理成可复用模板。</span>
+		</a>
+		<a class="path-card" href="/00-start-here/">
+			<strong>开发者</strong>
+			<span>理解代码库、实现需求、运行测试、审查变更并处理复杂任务。</span>
+		</a>
+		<a class="path-card" href="/00-start-here/">
+			<strong>团队</strong>
+			<span>设计共享说明、权限边界、质量标准和团队级自动化流程。</span>
+		</a>
+	</div>
+</section>
 
-手册采用“学习路径为主线，产品、能力、场景为专题”的分层结构：
+<section class="home-section home-map" aria-labelledby="map-heading">
+	<div class="section-heading">
+		<p>Capability map</p>
+		<h2 id="map-heading">你会逐步掌握这些能力</h2>
+	</div>
+	<ul>
+		<li><span>01</span> 写出目标清楚、边界明确、可验收的任务提示词</li>
+		<li><span>02</span> 管理文件、上下文、终端、浏览器和外部资料</li>
+		<li><span>03</span> 使用 Skills、Plugins、MCP 和 Hooks 扩展 Codex</li>
+		<li><span>04</span> 组织长任务、多 Agent 协作、复盘和交接</li>
+		<li><span>05</span> 在个人项目与团队场景中建立安全、验证和治理机制</li>
+	</ul>
+</section>
 
-1. **学习路径**：告诉读者按什么顺序学习。
-2. **产品手册**：说明每种 Codex 使用形态如何操作。
-3. **能力专题**：解释提示词、上下文、工具和扩展能力。
-4. **案例实践**：展示真实目标如何从头做到尾。
-5. **参考资料**：提供命令、配置、术语和故障排查入口。
+<AboutHandbook title="开源共建">
+
+手册以简体中文为源语言，后续会持续扩展繁体中文、英语、法语、日语、韩语等版本。内容会标注状态、核验日期和适用产品，让读者知道哪些内容可以直接照做，哪些内容需要复核。
+
+[从这里开始](/00-start-here/)
+
+</AboutHandbook>
