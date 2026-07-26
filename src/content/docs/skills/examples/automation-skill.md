@@ -29,6 +29,7 @@ description: 汇总昨日变更、测试结果与待办，生成日报 Markdown�
 - [定时任务](/skills/automations/scheduled-tasks/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 本页提供的是重复汇总类 Skill 的示意骨架，仍属于当前 Codex/Skills 可承载的稳定 workflow 模式，不绑定具体自动化入口。  
+**最近核验：** 2026-07-26

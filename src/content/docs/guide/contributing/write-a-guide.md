@@ -35,7 +35,7 @@ description: 一句话说明本文解决的问题
 ```markdown
 ---
 
-**状态：** draft | review | verified
+**状态：** planned | draft | review | verified | outdated | archived
 **适用产品：** App / CLI / IDE / Cloud
 **最近核验：** YYYY-MM-DD
 ```
@@ -121,5 +121,6 @@ description: 一句话说明本文解决的问题
 
 ---
 
-**状态：** review  
-**最近核验：** 2026-07-25
+**状态：** verified  
+**核验依据：** 已按本仓库当前文档 frontmatter、页脚状态体系、交叉链接习惯与 sidebar 维护方式复核；本页描述的是手册正文写作规范与结构建议，不依赖具体产品版本细节。  
+**最近核验：** 2026-07-26

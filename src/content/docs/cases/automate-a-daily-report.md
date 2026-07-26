@@ -38,6 +38,7 @@ description: 把重复汇总工作固化为可复用脚本或 Skill。
 - [定时任务](/skills/automations/scheduled-tasks/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Automate bug triage”“Turn feedback into actions”等可重复自动化场景；本页把日报定义为“固定格式 Markdown + 明确退出码 + 可复用脚本或 Skill”，属于稳定的自动化工作流模式，而非依赖某个特定集成。  
+**最近核验：** 2026-07-26

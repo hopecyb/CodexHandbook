@@ -58,6 +58,7 @@ description: 用 Codex 阅读新 Issue 并建议标签与负责人——轻量�
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** CLI / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 已按 OpenAI Developers 当前公开的自动化 bug triage / review 相关 use cases，以及本手册已核验的人工审批、Webhook、GitHub 集成与团队自动化章节交叉复核；本页只确认“生成结构化标签建议、保留人工最终决定”的稳定自动化模式。  
+**最近核验：** 2026-07-26

@@ -108,6 +108,7 @@ IDE 扩展：编辑中 → 小步修改 → 内联审查 → 本地测试
 
 ---
 
-**状态：** review  
+**状态：** outdated  
 **适用产品：** IDE  
-**最近核验：** 2026-07-25
+**复核说明：** 当前官方帮助中心只足够强地确认“Codex VS Code extension is compatible with most VS Code forks”，但本页还延伸到了 Cursor、Windsurf、JetBrains 等具体支持形态与对比；在补齐现行支持矩阵前更适合标为 `outdated`。  
+**最近核验：** 2026-07-26

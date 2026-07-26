@@ -85,6 +85,7 @@ description: 审查当前分支相对 main 的 diff，标出风险与测试缺�
 完整动手练习：[创建第一个 Skill](/skills/create-your-first-skill/)。
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 当前 Codex 运行时技能说明仍以 `SKILL.md` 为核心文件，并允许按需扩展脚本与参考资料；本页聚焦目录职责划分，未绑定易变产品入口。  
+**最近核验：** 2026-07-26

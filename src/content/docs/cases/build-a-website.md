@@ -40,6 +40,7 @@ description: 从需求到可预览页面的原型搭建案例。
 - [产物优先工作](/cases/workflows/artifact-first-work/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Get from idea to proof of concept”“Build responsive front-end designs”“Deploy an app or website”等前端构建场景；本页示例限定为小型站点或落地页原型，并要求先出线框、限制改动范围、用浏览器预览验收。  
+**最近核验：** 2026-07-26

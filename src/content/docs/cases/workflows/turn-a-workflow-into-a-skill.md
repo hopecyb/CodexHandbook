@@ -37,7 +37,7 @@ description: 第三次重复的流程值得写成 Skill——触发、说明与�
     → 删减为 Skill 正文（删口语、留约束）
     → 加触发描述（「合并前」「发布前」）
     → 团队 PR review
-    → 写入 examples/skills/ 或内部插件
+    → 写入仓库约定的 examples/ 目录、团队插件或内部技能库
 ```
 
 与 [把流程变成自动化](/skills/automations/scheduled-tasks/) 对比：Skill 偏**交互式指导**；Automation 偏**定时/无人值守**。
@@ -69,6 +69,7 @@ description: 第三次重复的流程值得写成 Skill——触发、说明与�
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** 已按 OpenAI Developers 当前公开的“Save workflows as skills”相关 use cases，以及本手册已核验的 Skills、自动化、命令规则与扩展风险章节交叉复核；页面内容限定为“重复流程何时沉淀成 Skill、如何组织说明与验收”的稳定方法。  
+**最近核验：** 2026-07-26

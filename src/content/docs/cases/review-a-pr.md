@@ -40,6 +40,7 @@ description: 合并前用 Codex 做结构化 diff 审查。
 - [合并前审查](/cases/workflows/review-before-merge/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Review GitHub pull requests”，强调在人工审查前捕捉回归与潜在问题；本页示例仅要求对 diff 做结构化审查、输出 P0/P1 与文件路径，不依赖特定界面或固定命令。  
+**最近核验：** 2026-07-26

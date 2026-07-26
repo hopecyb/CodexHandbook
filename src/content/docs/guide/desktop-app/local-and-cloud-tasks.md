@@ -42,6 +42,7 @@ description: 在 App 中切换本地与 Cloud 执行。
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help Center 当前《ChatGPT Work and Codex》与《Using Codex with your ChatGPT plan》都明确区分 local workflows 与 cloud tasks；本页只在桌面 App 语境下概括“本地更适合快速迭代，Cloud 更适合远程仓库与长任务”的选型原则。  
+**最近核验：** 2026-07-26

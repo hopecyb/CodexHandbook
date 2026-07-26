@@ -31,7 +31,7 @@ sidebar:
 |---|---|---|
 | 修正/小改 | 错别字、链接、过时一句 | 直接 PR |
 | 新指南页 | `src/content/docs/` 下章节正文 | [撰写指南](/guide/contributing/write-a-guide/) |
-| 案例 | `10-use-cases/` | [案例模板](/cases/use-cases/case-study-template/) |
+| 案例 | `src/content/docs/cases/` | [案例模板](/cases/use-cases/case-study-template/) |
 | 提示词实例 | `examples/prompts/` | [添加提示词示例](/guide/contributing/add-a-prompt-example/) |
 | 技术核验 | 标 `verified`、更新日期 | [核验技术内容](/guide/contributing/verify-technical-content/) |
 | 翻译 | `en/`、`zh-tw/` 等 | 路线图 M6；先稳定源文 |
@@ -103,5 +103,6 @@ npm run build
 
 ---
 
-**状态：** review  
-**最近核验：** 2026-07-25
+**状态：** verified  
+**核验依据：** 已按本仓库当前目录结构、侧边栏维护方式、页面状态体系与贡献流程逐项复核；本页内容属于手册维护规则，不依赖某一 Codex 产品端的易变 UI 行为。  
+**最近核验：** 2026-07-26

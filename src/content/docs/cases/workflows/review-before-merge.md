@@ -72,6 +72,7 @@ description: 在 merge 之前用 Codex 做结构化 diff 与风险审查——�
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 已按 OpenAI Developers 当前公开的 code review / pull request 相关 use cases，以及本手册已核验的质量、diff 审查与 Cloud 相关章节交叉复核；本页只确认“合并前结构化审查、只读审查与人工最终签字”的稳定原则。  
+**最近核验：** 2026-07-26

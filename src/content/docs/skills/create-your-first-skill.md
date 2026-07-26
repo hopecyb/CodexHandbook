@@ -147,6 +147,7 @@ git commit -m "docs: add pr-review skill for Codex"
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** 当前 Codex 运行时仍支持项目内技能目录、以 `SKILL.md` 定义技能，以及显式调用进行试跑；本页是首个 Skill 的稳定入门练习。  
+**最近核验：** 2026-07-26

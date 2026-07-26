@@ -94,6 +94,7 @@ description: 从提示词到 Automations 的决策树，避免「为用而用」
 
 ---
 
-**状态：** review  
+**状态：** outdated  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**复核说明：** 本页决策树涉及当前 Automations、Plugins、MCP 与官方 Connector 的边界和适用面；这些产品形态仍在快速变化，现有公开资料不足以稳定支撑整页判断。  
+**最近核验：** 2026-07-26

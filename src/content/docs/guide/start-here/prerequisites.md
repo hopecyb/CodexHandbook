@@ -58,6 +58,12 @@ sidebar:
 - 了解 [权限与审批](/guide/foundations/permissions-and-approvals/) 与 [沙箱与网络](/guide/foundations/sandbox-and-network/)
 - 官方安装与产品变更以 [https://developers.openai.com/codex](https://developers.openai.com/codex) 为准
 
+## 参考来源
+
+- OpenAI Academy: Getting started with ChatGPT
+- OpenAI Academy: Using ChatGPT
+- OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
+
 ## 一个常见起步顺序
 
 可以按这个顺序来：
@@ -73,6 +79,7 @@ sidebar:
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 已按 OpenAI 官方起步与文件上传资料复查本页关于访问权限、客户端准备和练习环境的建议；正文保留的是长期有效的起步原则，不依赖细粒度安装步骤。  
+**最近核验：** 2026-07-26

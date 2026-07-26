@@ -77,6 +77,7 @@ Skill 更适合沉淀“会重复、要一致、又不想每次重新讲一遍�
 扩展方式选型见 [如何选择扩展方式](/skills/choosing-an-extension-method/)。工作流沉淀见 [把流程变成 Skill](/cases/workflows/turn-a-workflow-into-a-skill/)。
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help《Skills in ChatGPT》确认 Skill 是可复用、可分享的 workflow；当前 Codex 运行时也按技能名称与描述进行匹配。本页主要是选型原则，不依赖易变界面。  
+**最近核验：** 2026-07-26

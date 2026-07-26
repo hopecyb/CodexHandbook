@@ -44,6 +44,7 @@ description: 在 App 内使用终端配合任务。
 
 ---
 
-**状态：** review  
+**状态：** outdated  
 **适用产品：** App  
-**最近核验：** 2026-07-25
+**复核说明：** 本页假定桌面 App 中存在稳定的“集成终端”查看与复跑体验，但当前官方可核资料主要只确认 Codex 能与本地 folders、repositories、terminals、developer tools 一起工作，尚不足以支撑这里的具体界面写法。  
+**最近核验：** 2026-07-26

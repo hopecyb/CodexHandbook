@@ -120,6 +120,7 @@ echo "$result" | jq -e '.pass == true'
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** CLI / API  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI API 当前模型/对比文档仍列出 `Structured outputs` 能力；本页内容限定在“为非交互任务设计稳定输出接口”的通用实践，示例中的 JSON schema、校验与降级策略属于工程模式说明。  
+**最近核验：** 2026-07-26

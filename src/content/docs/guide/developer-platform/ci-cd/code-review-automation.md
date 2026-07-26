@@ -104,6 +104,7 @@ PR opened / updated
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** CLI / API / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 首页当前仍将 Codex 描述为可用于测试、审查并准备交付变更；官方 Codex use cases 也仍包含“Review GitHub pull requests”场景。本页仅总结安全接入 CI 的原则与门禁模式，不宣称固定命令或唯一实现。  
+**最近核验：** 2026-07-26

@@ -37,6 +37,7 @@ IDE 扩展适合“小范围、边看边改”的任务，但范围控制和审�
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** IDE  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help Center 当前《Using Codex with your ChatGPT plan》仍明确支持 Codex IDE extension，并说明其与 CLI、桌面 App 属于并列本地客户端；本页只作为 IDE 章节导航，强调“当前文件、选区与 diff 审查”这一稳定工作方式。  
+**最近核验：** 2026-07-26

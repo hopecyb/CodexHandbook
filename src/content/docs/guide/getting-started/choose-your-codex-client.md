@@ -76,6 +76,7 @@ description: 在 App、CLI、IDE、Cloud 之间做第一次选择。
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 首页当前同时呈现 Codex、桌面工作流与开发者入口；本页结论属于首次上手的场景化选型建议，且已避免把 App / CLI / IDE / Cloud 写成互斥或能力完全不同的产品。  
+**最近核验：** 2026-07-26

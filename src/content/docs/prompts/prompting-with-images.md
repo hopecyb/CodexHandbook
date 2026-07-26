@@ -177,13 +177,13 @@ description: 给 Codex 截图、设计稿、白板图时，怎样提问更容易
 
 ## 参考来源
 
-- OpenAI Codex 官方多模态相关文档
-- codex.bozhouai.com 中的前端与内容创作场景
-- stormzhang 关于多模态和客户端工作流的经验整理
-- 社区项目中按图实现、截图排障的通用实践
+- OpenAI Help Center: ChatGPT Image Inputs FAQ
+- OpenAI Academy: Working with files in ChatGPT
+- OpenAI API Developer Quickstart: Analyze images and files
 
 ---
 
-**状态：** review  
-**适用产品：** App / IDE / Cloud  
-**最近核验：** 2026-07-25
+**状态：** verified  
+**适用产品：** App / Cloud  
+**核验依据：** 已按 OpenAI 官方图像输入与文件上传资料复查本页结构、场景和注意事项；正文不再依赖非官方场景来源，且未保留需要逐版本核对的具体界面细节。  
+**最近核验：** 2026-07-26

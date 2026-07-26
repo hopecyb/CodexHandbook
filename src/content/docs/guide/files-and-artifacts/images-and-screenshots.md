@@ -97,6 +97,12 @@ description: 向 Codex 提供截图、设计稿，并管理任务中的图像文
 - 不要把含密钥的配置界面发给不可信任务
 - [敏感上下文](/guide/context/sensitive-context/)
 
+## 参考来源
+
+- OpenAI Help Center: ChatGPT Image Inputs FAQ
+- OpenAI Academy: Working with files in ChatGPT
+- OpenAI API Developer Quickstart: Analyze images and files
+
 ## 验收
 
 对「按图实现」类任务：
@@ -115,6 +121,7 @@ description: 向 Codex 提供截图、设计稿，并管理任务中的图像文
 
 ---
 
-**状态：** review  
-**适用产品：** App / IDE / Cloud  
-**最近核验：** 2026-07-25
+**状态：** verified  
+**适用产品：** App / Cloud  
+**核验依据：** 已按 OpenAI 官方图像输入与文件上传资料复查本页关于截图上传、重点标注、文件体积和隐私注意事项的描述；正文未保留需要逐版本核对的具体界面步骤。  
+**最近核验：** 2026-07-26

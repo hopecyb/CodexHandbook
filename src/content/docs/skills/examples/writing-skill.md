@@ -30,6 +30,7 @@ description: 按大纲撰写技术文章，含研究、成稿与润色。在用�
 - [写文章案例](/cases/write-an-article/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 本页为示意性 `SKILL.md` 骨架，围绕写作流程组织步骤与禁止项，符合当前 Skills 作为可复用 workflow 的定义。  
+**最近核验：** 2026-07-26

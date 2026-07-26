@@ -51,6 +51,7 @@ description: 从选题到大纲、成稿与事实检查的技术写作完整流�
 重复写作可封装 `article-writer` Skill；见 [创作者路径](/guide/learning-paths/creator/)。
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Learn a new concept”，强调把复杂材料整理成可复核的学习或说明产出；本页写作流程限定为“先角度与大纲，再分段成稿，最后人工核对链接、版本号与命令”，属于稳定的写作协作模式。  
+**最近核验：** 2026-07-26

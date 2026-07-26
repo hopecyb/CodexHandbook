@@ -38,6 +38,7 @@ description: 上传或引用表格数据，完成汇总与洞察。
 - [表格与电子表格](/guide/files-and-artifacts/tables-and-spreadsheets/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Query tabular data”“Clean and prepare messy data”；本页示例聚焦对 CSV/Excel 做只读清洗、汇总与异常分析，并要求关键数字可追溯到原表字段，和当前官方场景一致。  
+**最近核验：** 2026-07-26

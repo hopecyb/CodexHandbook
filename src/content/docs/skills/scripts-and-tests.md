@@ -74,6 +74,7 @@ Skill 还要测试“什么时候调用、怎么调用、输出是否符合预�
 脚本继承当前审批策略；见 [命令规则](/guide/customization/rules/command-rules/) 与 [Skill 安全](/skills/security/)。
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 当前 Codex 运行时允许技能配合脚本与确定性命令执行；本页强调“稳定动作脚本化、流程仍由 Skill 约束”的原则，和现行能力一致。  
+**最近核验：** 2026-07-26

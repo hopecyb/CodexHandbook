@@ -118,6 +118,7 @@ Plugin 可把 Skill 打包统一分发：[Plugins 概述](/skills/plugins/plugin
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help《Skills in ChatGPT》确认 Skills 可包含 instructions、supporting files 和 code，上传前后仍需用户自行审查来源与风险；本页安全治理建议与该原则一致。  
+**最近核验：** 2026-07-26

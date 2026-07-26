@@ -142,6 +142,7 @@ GitHub 侧：[GitHub 集成](/guide/integrations/github/)
 
 ---
 
-**状态：** review  
+**状态：** outdated  
 **适用产品：** Cloud / GitHub  
-**最近核验：** 2026-07-25
+**复核说明：** Cloud 产物仍然需要人工审查这一原则没有问题，但本页把 Cloud PR、自动开 PR、远程审查节奏与通知方式写成了较具体的当前工作流；由于这些 Cloud/GitHub 集成形态更新较快，需按最新官方流程重写。  
+**最近核验：** 2026-07-26

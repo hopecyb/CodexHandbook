@@ -65,6 +65,7 @@ description: 理解执行隔离、网络访问与风险边界。
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help Center 当前 Codex CLI 文档仍把 Full Auto 描述为“sandboxed, network-disabled environment scoped to the current directory”，并与审批模式区分；本页只说明沙箱和网络是两道不同的风险边界，以及新手应如何收紧访问范围。  
+**最近核验：** 2026-07-26

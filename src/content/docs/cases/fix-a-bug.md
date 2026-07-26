@@ -59,7 +59,7 @@ description: 从失败测试到最小修复与回归——开发者最常见闭�
 跑完整测试套件；总结 diff 供我 review；不要 git push。
 ```
 
-人工：读 diff，确认无无关改动，按 [审查 diff](/guide/verification/) 检查。
+人工：读 diff，确认无无关改动，按 [审查差异](/guide/quality/review-diffs/) 检查。
 
 ## 4. 失败与恢复
 
@@ -76,12 +76,13 @@ description: 从失败测试到最小修复与回归——开发者最常见闭�
 
 ## 6. 相关章节
 
-- [先诊断再修复](/cases/fix-a-bug/)
-- [开发者学习路径](/cases/understand-a-codebase/)
-- [运行测试](/guide/verification/)
+- [理解代码库](/cases/understand-a-codebase/)
+- [审查差异](/guide/quality/review-diffs/)
+- [运行测试](/guide/quality/run-tests/)
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** CLI / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 首页当前仍将 Codex 描述为可用于修复缺陷、运行测试与审查变更；本页示例聚焦“先复现失败、做最小修复、补测试并回归验证”的稳定工程闭环，不依赖某个特定框架或产品界面。  
+**最近核验：** 2026-07-26

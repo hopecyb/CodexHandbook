@@ -12,7 +12,7 @@ last_verified: 2026-07-25
 
 # 使用场景
 
-仓库中已有**失败单元测试**或你能指出失败用例，需要最小修复并防止回归。对应手册案例：[带验证的 Bug 修复](/10-use-cases/software-development/fix-a-bug-with-verification/)。
+仓库中已有**失败单元测试**或你能指出失败用例，需要最小修复并防止回归。对应手册案例：[带验证的 Bug 修复](/cases/use-cases/software-development/fix-a-bug-with-verification/)。
 
 # 使用前准备
 

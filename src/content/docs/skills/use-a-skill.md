@@ -83,6 +83,7 @@ $pr-review 请审查我当前未提交的改动
 更多概念见 [Skills 概述](/skills/overview/)。
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 当前 Codex 运行时仍支持按技能名显式引用并在合适场景下自动匹配技能；OpenAI Help《Skills in ChatGPT》也确认 Skills 会在有帮助时被自动使用。本页以触发方式与写法原则为主。  
+**最近核验：** 2026-07-26

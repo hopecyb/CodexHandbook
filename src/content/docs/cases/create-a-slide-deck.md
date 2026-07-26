@@ -40,6 +40,7 @@ description: 从大纲到可演示文稿的产物生成案例。
 - [演示文稿能力](/guide/files-and-artifacts/presentations/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Generate slide decks”，描述为操作 pptx 文件并结合图像生成自动制作演示文稿；本页内容保持在“先做大纲、再按环境输出、数字必须标来源或标示例”的稳定工作流层。  
+**最近核验：** 2026-07-26

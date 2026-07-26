@@ -7,9 +7,9 @@ description: 用 Codex 做检索、比较与事实核验——产出可追溯的
 
 ## 这篇解决什么问题
 
-- 何时用 [网页搜索](/guide/context-and-files/) vs 只读仓库
+- 何时用 [网页搜索](/guide/tools/web-search/) vs 只读仓库
 - 如何要求引用格式与不确定性标注
-- 与 [验证来源](/guide/verification/) 的衔接
+- 与 [核验来源](/guide/quality/validate-sources/) 的衔接
 
 ## 最小可用做法
 
@@ -55,7 +55,7 @@ description: 用 Codex 做检索、比较与事实核验——产出可追溯的
 
 ## 相关章节
 
-- [处理不确定性](/guide/verification/handle-uncertainty/)
+- [处理不确定性](/guide/quality/handle-uncertainty/)
 - [案例：文档重构与审查](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## 参考来源
@@ -65,6 +65,7 @@ description: 用 Codex 做检索、比较与事实核验——产出可追溯的
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Developers 当前 Codex use cases 仍包含“Learn a new concept”，强调把密集材料转成可复核的学习或研究产出；本页同时要求每个结论附 URL 或仓库文件路径，并显式标出待确认项，符合当前“带来源研究”最佳实践。  
+**最近核验：** 2026-07-26

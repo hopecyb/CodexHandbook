@@ -73,6 +73,7 @@ description: 对比本地任务与 Cloud 任务的适用场景。
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help Center 当前《Using Codex with your ChatGPT plan》仍明确区分“local workflows run on your device”和“cloud tasks run in OpenAI-managed environments”；《ChatGPT Work and Codex》也确认 Work on web/mobile runs in the cloud。本页只总结本地与云端任务的适用场景与权衡，不绑定具体套餐或入口细节。  
+**最近核验：** 2026-07-26

@@ -221,6 +221,7 @@ Cloud Secrets：[Secrets 与环境变量](/guide/web-and-cloud/secrets-and-varia
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** CLI / App / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** OpenAI Help Center 当前配置材料仍明确存在 `~/.codex/config.toml` 与 `~/.codex/.env` 这类用户级配置载体；本页同时明确把自己定位为“概念索引”，避免把具体键名、路径优先级或旧版字段写成固定事实，因此可标为 `verified`。  
+**最近核验：** 2026-07-26

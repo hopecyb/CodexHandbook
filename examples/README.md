@@ -26,7 +26,7 @@ examples/
 
 ## 贡献
 
-见手册 [添加提示词示例](/13-contributing/add-a-prompt-example/)。
+见手册 [添加提示词示例](/guide/contributing/add-a-prompt-example/)。
 
 ---
 

@@ -78,6 +78,7 @@ description: Skill、MCP、Plugin、Hooks、斜杠命令与 AGENTS.md 的关系�
 
 ---
 
-**状态：** review  
+**状态：** outdated  
 **适用产品：** App / CLI / IDE  
-**最近核验：** 2026-07-25
+**复核说明：** 本页把 Skill、MCP、Plugin、Hooks、Automations 画成固定关系图，并暗含当前支持层级；这些边界与入口在 2026-07-26 的官方公开资料中覆盖不完整，需按现行产品重写。  
+**最近核验：** 2026-07-26

@@ -80,6 +80,7 @@ Cloud 场景见 [创建 Pull Request](/guide/web-and-cloud/create-pull-requests/
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 已按 OpenAI Developers 当前关于 autonomy / approval boundaries 的官方模型指导，以及本手册已核验的审批、命令规则、PR 与自动化章节交叉复核；本页只确认“哪些动作该自动继续、哪些动作应停给人批”的稳定协作原则。  
+**最近核验：** 2026-07-26

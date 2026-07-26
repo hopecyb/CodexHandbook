@@ -137,6 +137,7 @@ Computer Use 几乎等价于**把键盘鼠标交给 Agent**：
 
 ---
 
-**状态：** review  
-**适用产品：** App（视版本与套餐）  
-**最近核验：** 2026-07-25
+**状态：** verified  
+**适用产品：** App / Codex（视版本、地区与权限）  
+**核验依据：** OpenAI Help Center 当前关于 Codex 计划与桌面能力的资料仍将 Computer Use 作为 Codex 相关功能之一；Business 发布说明也确认 2026-05-29 起 Codex 在 Windows 端支持 Computer Use。本文仅总结其风险模型、适用场景和审批边界，并未声明所有平台或账号默认可用。  
+**最近核验：** 2026-07-26

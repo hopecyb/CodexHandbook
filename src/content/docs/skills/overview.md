@@ -115,6 +115,7 @@ Skill 不是起步必需品，更适合拿来整理那些已经反复出现的�
 
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE  
-**最近核验：** 2026-07-25
+**核验依据：** 当前 Codex 运行时对 Skill 的装载规则（`SKILL.md`、按需读取完整技能文件）与 OpenAI Help《Skills in ChatGPT》对 Skill 作为可复用 workflow 的定义一致；本页以概念与目录组织为主，不依赖易变 UI。  
+**最近核验：** 2026-07-26

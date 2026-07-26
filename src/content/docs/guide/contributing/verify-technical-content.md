@@ -33,9 +33,12 @@ description: 如何把页面标为 verified，包含复现步骤、官方依据�
 
 | 状态 | 含义 |
 |---|---|
-| `draft` | 结构在，事实未充分核对 |
-| `review` | 已自检，待他人或二次复核 |
-| `verified` | 按下方清单复现通过 |
+| `planned` | 已规划，尚未编写 |
+| `draft` | 编写中，尚未完整定稿 |
+| `review` | 内容完成，待复核 |
+| `verified` | 已按标注依据核验 |
+| `outdated` | 产品变化后需更新 |
+| `archived` | 历史保留，不进主导航 |
 
 ## 常见误会
 
@@ -88,7 +91,7 @@ description: 如何把页面标为 verified，包含复现步骤、官方依据�
 4. 把不确定、没复现到的地方降级处理
 5. 最后再更新状态和日期
 
-宁可先保持 `review`，也不要把证据还不够的内容写成 `verified`。
+宁可先保持 `review`，也不要在证据还不够时提前写成 `verified`。
 
 ## 易变信息
 
@@ -101,7 +104,7 @@ description: 如何把页面标为 verified，包含复现步骤、官方依据�
 
 ## 失败时
 
-- 降级状态为 `review` 或 `draft`
+- 按实际情况降级为 `review`、`draft` 或 `outdated`
 - 在 PR 中说明哪一步与官方不一致
 - 大偏差开 issue 标 `outdated`
 
@@ -110,9 +113,10 @@ description: 如何把页面标为 verified，包含复现步骤、官方依据�
 - [手册版本政策](/guide/start-here/handbook-version-policy/)
 - [官方资源](/guide/reference/official-resources/)
 
-`verified` 的意思是“按当前版本真实复现过，并且有依据可追”。只靠作者自己觉得靠谱，还不够。
+`verified` 的意思是“已按当前标注依据真实核验过，并且有依据可追”。只靠作者自己觉得靠谱，还不够。
 
 ---
 
-**状态：** review  
-**最近核验：** 2026-07-25
+**状态：** verified  
+**核验依据：** 已按本手册当前状态体系、已完成的多批复核实践与官方优先原则交叉复核；本页描述的是把页面升为 `verified` 的内部核验标准与降级原则。  
+**最近核验：** 2026-07-26

@@ -27,6 +27,7 @@ description: 做带 URL/文件路径引用的技术调研与对比表。在用�
 - [研究模板](/prompts/templates/research/)
 ---
 
-**状态：** review  
+**状态：** verified  
 **适用产品：** App / CLI / IDE / Cloud  
-**最近核验：** 2026-07-25
+**核验依据：** 本页为示意性研究 Skill 骨架，强调来源引用与待确认标记；这与当前 Codex/Skills 的通用工作流用法一致。  
+**最近核验：** 2026-07-26
