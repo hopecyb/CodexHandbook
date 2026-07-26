@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="./cover-image/codex-handbook-cover/cover.png" alt="Codex Handbook Cover" width="100%" />
+  <img src="./public/cover.png" alt="Codex Handbook Cover" width="100%" />
 </p>
 
 <p align="center"><strong>Sổ tay có hệ thống và cơ sở kiến thức thực hành về Codex</strong></p>

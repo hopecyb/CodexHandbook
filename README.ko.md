@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="./cover-image/codex-handbook-cover/cover.png" alt="Codex Handbook Cover" width="100%" />
+  <img src="./public/cover.png" alt="Codex Handbook Cover" width="100%" />
 </p>
 
 <p align="center"><strong>Codex 체계적 핸드북 및 실습 지식 베이스</strong></p>

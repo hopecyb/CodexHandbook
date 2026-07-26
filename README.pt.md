@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="./cover-image/codex-handbook-cover/cover.png" alt="Codex Handbook Cover" width="100%" />
+  <img src="./public/cover.png" alt="Codex Handbook Cover" width="100%" />
 </p>
 
 <p align="center"><strong>Manual sistemático e base de conhecimento prática para Codex</strong></p>
