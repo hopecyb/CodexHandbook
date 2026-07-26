@@ -1,47 +1,59 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
 
 /** Legacy numbered section roots → four-module structure */
 const legacyRedirects = {
 	'/00-start-here': '/guide/start-here',
-	'/00-start-here/': '/guide/start-here/',
 	'/01-foundations': '/guide/foundations',
-	'/01-foundations/': '/guide/foundations/',
 	'/02-getting-started': '/guide/getting-started',
-	'/02-getting-started/': '/guide/getting-started/',
 	'/03-learning-paths': '/guide/learning-paths',
-	'/03-learning-paths/': '/guide/learning-paths/',
 	'/04-product-guides': '/guide',
-	'/04-product-guides/': '/guide/',
 	'/05-core-capabilities': '/guide',
-	'/05-core-capabilities/': '/guide/',
 	'/05-core-capabilities/prompting': '/prompts',
-	'/05-core-capabilities/prompting/': '/prompts/',
 	'/06-customization': '/guide/customization',
-	'/06-customization/': '/guide/customization/',
 	'/07-extensions-automation': '/skills',
-	'/07-extensions-automation/': '/skills/',
 	'/08-developer-platform': '/guide/developer-platform',
-	'/08-developer-platform/': '/guide/developer-platform/',
 	'/09-workflows': '/cases/workflows',
-	'/09-workflows/': '/cases/workflows/',
 	'/10-use-cases': '/cases/use-cases',
-	'/10-use-cases/': '/cases/use-cases/',
 	'/11-team-enterprise': '/guide/team-enterprise',
-	'/11-team-enterprise/': '/guide/team-enterprise/',
 	'/12-reference': '/guide/reference',
-	'/12-reference/': '/guide/reference/',
 	'/13-contributing': '/guide/contributing',
-	'/13-contributing/': '/guide/contributing/',
 	'/guide/what-is-codex': '/guide/start-here/what-is-codex',
-	'/guide/what-is-codex/': '/guide/start-here/what-is-codex/',
+};
+
+const siteUrl = 'https://codexhandbook.com';
+const legacyRedirectPaths = new Set(Object.keys(legacyRedirects));
+const sitemapLocales = {
+	root: 'zh-CN',
+	en: 'en',
+	'zh-tw': 'zh-TW',
+	fr: 'fr',
+	ja: 'ja',
+	ko: 'ko',
+	es: 'es',
+	de: 'de',
+	pt: 'pt',
+	vi: 'vi',
 };
 
 // https://astro.build/config
 export default defineConfig({
+	site: siteUrl,
 	redirects: legacyRedirects,
 	integrations: [
+		sitemap({
+			i18n: {
+				defaultLocale: 'root',
+				locales: sitemapLocales,
+			},
+			filter(page) {
+				const pathname = new URL(page).pathname;
+				const normalizedPathname = pathname === '/' ? pathname : pathname.replace(/\/$/, '');
+				return !legacyRedirectPaths.has(normalizedPathname);
+			},
+		}),
 		starlight({
 			title: {
 				'zh-CN': 'Codex 指南手册',
@@ -86,6 +98,22 @@ export default defineConfig({
 						sizes: '16x16',
 						href: '/favicon-16x16.png',
 					},
+				},
+				{
+					tag: 'script',
+					attrs: {
+						async: true,
+						src: 'https://www.googletagmanager.com/gtag/js?id=G-KPP4Z7D6SZ',
+					},
+				},
+				{
+					tag: 'script',
+					content: `
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-KPP4Z7D6SZ');
+					`,
 				},
 			],
 			customCss: ['./src/styles/custom.css'],
