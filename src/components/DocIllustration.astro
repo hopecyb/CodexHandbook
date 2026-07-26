@@ -6,7 +6,9 @@ interface Props {
 
 const { title, entryId } = Astro.props;
 
-const localeSegments = new Set(['en', 'zh-tw', 'fr', 'ja', 'ko']);
+import { CONTENT_LOCALE_PREFIXES } from '../utils/siteLocales';
+
+const localeSegments = CONTENT_LOCALE_PREFIXES;
 const rawSegments = entryId.split('/').filter(Boolean);
 const segments = localeSegments.has(rawSegments[0] ?? '') ? rawSegments.slice(1) : rawSegments;
 

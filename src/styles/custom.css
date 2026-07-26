@@ -77,6 +77,10 @@
 	border-radius: 0.5rem;
 	background-color: var(--sl-color-bg-nav);
 	box-shadow: 0 8px 24px color-mix(in srgb, var(--sl-color-black) 35%, transparent);
+	min-width: max(100%, 11rem);
+	max-height: min(70vh, 22rem);
+	overflow-y: auto;
+	scrollbar-gutter: stable;
 }
 
 .sl-select-option {

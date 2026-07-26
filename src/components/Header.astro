@@ -46,8 +46,8 @@ function isActive(prefix: string) {
 	<div class="sl-flex print:hidden">
 		{shouldRenderSearch && <Search />}
 	</div>
-	<div class="sl-hidden md:sl-flex print:hidden right-group">
-		<div class="sl-flex social-icons">
+	<div class="sl-flex print:hidden header-controls">
+		<div class="sl-hidden md:sl-flex social-icons">
 			<SocialIcons />
 		</div>
 		<ThemeSelect />
@@ -101,6 +101,7 @@ function isActive(prefix: string) {
 		}
 
 		.right-group,
+		.header-controls,
 		.social-icons {
 			gap: 1rem;
 			align-items: center;

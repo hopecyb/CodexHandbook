@@ -46,6 +46,14 @@ export default defineConfig({
 			title: {
 				'zh-CN': 'Codex 指南手册',
 				en: 'Codex Handbook',
+				'zh-TW': 'Codex 指南手冊',
+				fr: 'Manuel Codex',
+				ja: 'Codex ハンドブック',
+				ko: 'Codex 핸드북',
+				es: 'Manual de Codex',
+				de: 'Codex Handbuch',
+				pt: 'Manual Codex',
+				vi: 'Sổ tay Codex',
 			},
 			logo: {
 				src: './src/assets/brand/logo.png',
@@ -101,6 +109,10 @@ export default defineConfig({
 				fr: { label: 'Français', lang: 'fr' },
 				ja: { label: '日本語', lang: 'ja' },
 				ko: { label: '한국어', lang: 'ko' },
+				es: { label: 'Español', lang: 'es' },
+				de: { label: 'Deutsch', lang: 'de' },
+				pt: { label: 'Português', lang: 'pt' },
+				vi: { label: 'Tiếng Việt', lang: 'vi' },
 			},
 			social: [
 				{
