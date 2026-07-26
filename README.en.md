@@ -152,6 +152,15 @@ Build the static site:
 pnpm build
 ```
 
+Check English translation coverage:
+
+```bash
+pnpm i18n:status
+pnpm i18n:status -- --missing
+```
+
+English content lives under `src/content/docs/en/` (mirrors the Simplified Chinese source at `src/content/docs/`). Terminology for translators: [`glossary/en.md`](./glossary/en.md). As of 2026-07-26, English page coverage is **100%** of the zh-CN source set; core onboarding sections are marked `reviewed`, and remaining pages are `draft` pending language/tech review.
+
 ## Principles
 
 - **Official first**: For product capabilities, rules, and boundaries, prefer official sources.

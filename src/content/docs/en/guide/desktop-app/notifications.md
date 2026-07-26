@@ -3,8 +3,10 @@ title: Notifications
 description: Track long-running task completion and approval reminders.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 

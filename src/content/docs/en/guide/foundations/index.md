@@ -3,8 +3,10 @@ title: Foundations
 description: Build shared language for models, Agents, tools, permissions, and verification.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 This section establishes concepts used across the handbook. Product UI differences live in [Product guides](/guide/); prompting techniques live in [Core capabilities](/guide/).

@@ -12,13 +12,21 @@ const localeSegments = CONTENT_LOCALE_PREFIXES;
 const rawSegments = entryId.split('/').filter(Boolean);
 const segments = localeSegments.has(rawSegments[0] ?? '') ? rawSegments.slice(1) : rawSegments;
 
+const routeLocale = Astro.locals.starlightRoute?.locale ?? 'root';
+const isZh = routeLocale === 'root' || routeLocale === 'zh-tw';
+
 const moduleKey = segments[0] ?? 'guide';
 const topicKey = segments[1] ?? 'overview';
 
-const moduleMap: Record<
-	string,
-	{ label: string; accent: string; secondary: string; glyph: string; orbit: string[] }
-> = {
+type ModuleVisual = {
+	label: string;
+	accent: string;
+	secondary: string;
+	glyph: string;
+	orbit: string[];
+};
+
+const moduleMapZh: Record<string, ModuleVisual> = {
 	guide: {
 		label: 'Guide',
 		accent: '#f97316',
@@ -49,6 +57,39 @@ const moduleMap: Record<
 	},
 };
 
+const moduleMapEn: Record<string, ModuleVisual> = {
+	guide: {
+		label: 'Guide',
+		accent: '#f97316',
+		secondary: '#fed7aa',
+		glyph: '01',
+		orbit: ['Path', 'Permissions', 'Verify'],
+	},
+	prompts: {
+		label: 'Prompts',
+		accent: '#0ea5e9',
+		secondary: '#bae6fd',
+		glyph: '02',
+		orbit: ['Goal', 'Constraints', 'Done'],
+	},
+	skills: {
+		label: 'Skills',
+		accent: '#14b8a6',
+		secondary: '#99f6e4',
+		glyph: '03',
+		orbit: ['Flow', 'Extend', 'Reuse'],
+	},
+	cases: {
+		label: 'Cases',
+		accent: '#f43f5e',
+		secondary: '#fecdd3',
+		glyph: '04',
+		orbit: ['Task', 'Execute', 'Review'],
+	},
+};
+
+const moduleMap = isZh ? moduleMapZh : moduleMapEn;
+
 const moduleVisual =
 	moduleMap[moduleKey] ??
 	({
@@ -56,8 +97,8 @@ const moduleVisual =
 		accent: '#8b5cf6',
 		secondary: '#ddd6fe',
 		glyph: '05',
-		orbit: ['内容', '结构', '协作'],
-	} satisfies (typeof moduleMap)['guide']);
+		orbit: isZh ? ['内容', '结构', '协作'] : ['Content', 'Structure', 'Collab'],
+	} satisfies ModuleVisual);
 
 const topicSeed = `${moduleKey}/${topicKey}/${title}`;
 const codePoints = Array.from(topicSeed).map((char) => char.codePointAt(0) ?? 0);
@@ -76,10 +117,13 @@ const nodes = Array.from({ length: 4 }, (_, index) => {
 	return { x, y, radius };
 });
 
-const hintMap: Record<
-	string,
-	{ variant: 'split' | 'terminal' | 'shield' | 'flow' | 'document'; chips: string[]; kicker: string }
-> = {
+type PageHint = {
+	variant: 'split' | 'terminal' | 'shield' | 'flow' | 'document';
+	chips: string[];
+	kicker: string;
+};
+
+const hintMapZh: Record<string, PageHint> = {
 	'local-vs-cloud': {
 		variant: 'split',
 		chips: ['本地', '云端', '切换场景'],
@@ -122,14 +166,81 @@ const hintMap: Record<
 	},
 };
 
+const hintMapEn: Record<string, PageHint> = {
+	'local-vs-cloud': {
+		variant: 'split',
+		chips: ['Local', 'Cloud', 'Pick a scenario'],
+		kicker: 'Choose where to run',
+	},
+	'files-tools-and-commands': {
+		variant: 'terminal',
+		chips: ['Files', 'Tools', 'Commands'],
+		kicker: 'Keep actions bounded',
+	},
+	'permissions-and-approvals': {
+		variant: 'shield',
+		chips: ['Approval', 'Scope', 'Confirm'],
+		kicker: 'Confirm risky actions first',
+	},
+	'sandbox-and-network': {
+		variant: 'shield',
+		chips: ['Sandbox', 'Network', 'Risk boundary'],
+		kicker: 'Tighten first, then open up',
+	},
+	'run-your-first-task': {
+		variant: 'flow',
+		chips: ['Goal', 'Constraints', 'Acceptance'],
+		kicker: 'Start with a small first task',
+	},
+	'review-the-result': {
+		variant: 'document',
+		chips: ['Diff', 'Acceptance', 'Fix'],
+		kicker: 'Do not trust “done” alone',
+	},
+	'undo-and-recover': {
+		variant: 'flow',
+		chips: ['Undo', 'Roll back', 'Retry'],
+		kicker: 'Return to a safe state first',
+	},
+	'context-and-files': {
+		variant: 'document',
+		chips: ['Context', 'Files', 'Focus'],
+		kicker: 'Put the right info in reach',
+	},
+};
+
+const hintMap = isZh ? hintMapZh : hintMapEn;
+
 const pageHint = hintMap[topicKey] ?? {
-	variant: 'document',
+	variant: 'document' as const,
 	chips: moduleVisual.orbit,
 	kicker: `${moduleVisual.label} / ${topicKey.replace(/-/g, ' ')}`,
 };
+
+const splitLabels = isZh
+	? {
+			yourComputer: '你的电脑',
+			remoteRunner: '远程运行器',
+			howToChoose: '怎么选',
+			byScenario: '看任务场景',
+			fastIterate: '快改快看',
+			longTasks: '长任务继续跑',
+			bottomHint: '本机文件 / 长任务 / 远程仓库',
+			ariaSuffix: '主题插图',
+		}
+	: {
+			yourComputer: 'Your computer',
+			remoteRunner: 'Remote runner',
+			howToChoose: 'How to choose',
+			byScenario: 'By task scenario',
+			fastIterate: 'Iterate fast',
+			longTasks: 'Long tasks keep going',
+			bottomHint: 'Local files / long tasks / remote repos',
+			ariaSuffix: 'topic illustration',
+		};
 ---
 
-<figure class="doc-illustration" aria-label={`${title} 主题插图`}>
+<figure class="doc-illustration" aria-label={`${title} ${splitLabels.ariaSuffix}`}>
 	<div class="doc-illustration__meta">
 		<span class="doc-illustration__eyebrow">{moduleVisual.label}</span>
 		<strong>{title}</strong>
@@ -161,19 +272,19 @@ const pageHint = hintMap[topicKey] ?? {
 						Local
 					</text>
 					<text x="83" y="59" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="600">
-						你的电脑
+						{splitLabels.yourComputer}
 					</text>
 					<text x="237" y="45" text-anchor="middle" fill="#f8fafc" font-size="12" font-weight="700">
 						Cloud
 					</text>
 					<text x="237" y="59" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="600">
-						远程运行器
+						{splitLabels.remoteRunner}
 					</text>
 					<text x="160" y="67" text-anchor="middle" fill={moduleVisual.accent} font-size="9" font-weight="700">
-						怎么选
+						{splitLabels.howToChoose}
 					</text>
 					<text x="160" y="80" text-anchor="middle" fill="#475569" font-size="7" font-weight="700">
-						看任务场景
+						{splitLabels.byScenario}
 					</text>
 					<path d="M118 86 h8" stroke={moduleVisual.accent} stroke-width="3.5" stroke-linecap="round" />
 					<path d="M194 86 h8" stroke={moduleVisual.accent} stroke-width="3.5" stroke-linecap="round" />
@@ -189,7 +300,7 @@ const pageHint = hintMap[topicKey] ?? {
 					<path d="M60 124 h46" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" />
 					<path d="M56 131 h54" stroke="#475569" stroke-width="4" stroke-linecap="round" />
 					<text x="83" y="144" text-anchor="middle" fill="#cbd5e1" font-size="8" font-weight="600">
-						快改快看
+						{splitLabels.fastIterate}
 					</text>
 					<path d="M198 74 h78" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" stroke-opacity="0.95" />
 					<circle cx="214" cy="74" r="4" fill="#0f172a" />
@@ -202,13 +313,13 @@ const pageHint = hintMap[topicKey] ?? {
 						GitHub / Queue
 					</text>
 					<text x="238" y="123" text-anchor="middle" fill="#cbd5e1" font-size="8" font-weight="600">
-						长任务继续跑
+						{splitLabels.longTasks}
 					</text>
 					<circle cx="145" cy="101" r="4" fill={moduleVisual.accent} fill-opacity="0.9" />
 					<circle cx="160" cy="101" r="4" fill="#f59e0b" fill-opacity="0.9" />
 					<circle cx="175" cy="101" r="4" fill="#38bdf8" fill-opacity="0.9" />
 					<text x="160" y="113" text-anchor="middle" fill="#475569" font-size="7" font-weight="700">
-						本机文件 / 长任务 / 远程仓库
+						{splitLabels.bottomHint}
 					</text>
 				</>
 			)

@@ -1,8 +1,12 @@
 ---
 import ArrowUpToLine from '@lucide/astro/icons/arrow-up-to-line';
+
+const locale = Astro.locals.starlightRoute?.locale ?? 'root';
+const isZh = locale === 'root' || locale === 'zh-tw';
+const scrollLabel = isZh ? '回到顶部' : 'Back to top';
 ---
 
-<button type="button" class="scroll-to-top" aria-label="回到顶部" hidden>
+<button type="button" class="scroll-to-top" aria-label={scrollLabel} hidden>
 	<svg class="scroll-progress-ring" viewBox="0 0 44 44" aria-hidden="true">
 		<circle class="scroll-progress-track" cx="22" cy="22" r="19"></circle>
 		<circle class="scroll-progress-bar" cx="22" cy="22" r="19"></circle>

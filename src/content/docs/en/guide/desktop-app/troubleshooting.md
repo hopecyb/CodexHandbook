@@ -3,8 +3,10 @@ title: Desktop App Troubleshooting
 description: Common fixes for install, sign-in, and task failures.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 

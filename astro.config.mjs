@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
+import { rehypeLocaleInternalLinks } from './src/utils/rehypeLocaleInternalLinks.mjs';
 
 /** Legacy numbered section roots → four-module structure */
 const legacyRedirects = {
@@ -87,7 +88,7 @@ export default defineConfig({
 	redirects: legacyRedirects,
 	markdown: {
 		processor: unified({
-			rehypePlugins: [rehypeExternalLinks],
+			rehypePlugins: [rehypeLocaleInternalLinks, rehypeExternalLinks],
 		}),
 	},
 	integrations: [
@@ -167,6 +168,7 @@ export default defineConfig({
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				Header: './src/components/Header.astro',
+				Hero: './src/components/Hero.astro',
 				Sidebar: './src/components/Sidebar.astro',
 				PageFrame: './src/components/PageFrame.astro',
 				PageTitle: './src/components/PageTitle.astro',

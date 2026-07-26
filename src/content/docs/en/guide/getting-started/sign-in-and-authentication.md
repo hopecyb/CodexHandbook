@@ -3,8 +3,10 @@ title: Sign in and authentication
 description: Complete sign-in and confirm identity and permission status.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 Sign in through your chosen client per on-screen prompts. You may see:

@@ -11,6 +11,7 @@
     "start": "astro dev",
     "build": "astro build",
     "build:brand": "node scripts/build-brand-assets.mjs",
+    "i18n:status": "node scripts/i18n-status.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

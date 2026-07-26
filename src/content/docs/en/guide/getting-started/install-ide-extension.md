@@ -3,8 +3,10 @@ title: Install IDE extension
 description: Install the Codex extension in a supported editor.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 1. Confirm your editor is on the official support list (see [https://developers.openai.com/codex](https://developers.openai.com/codex))

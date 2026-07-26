@@ -3,8 +3,10 @@ title: Tokens, context, and compaction
 description: Context windows, usage, and compaction.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 A **Token** is the unit models use to process text. The **context window** is how much information can be used effectively in one turn.

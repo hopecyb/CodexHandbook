@@ -1,0 +1,183 @@
+# Codex Handbook terminology — stable term IDs and recommended translations.
+# Source locale: zh-CN. Keep product names and protocol names untranslated.
+
+terms:
+  - id: agent
+    en: Agent
+    zh-CN: Agent
+    keep_english: true
+    note: Execution approach that calls tools and iterates toward a goal. Do not translate.
+
+  - id: approval
+    en: Approval
+    zh-CN: 审批
+    keep_english: false
+    note: Human confirmation before high-risk operations.
+
+  - id: cloud-task
+    en: Cloud task
+    zh-CN: Cloud 任务
+    keep_english: false
+    note: Task executed in a cloud environment, not local sandbox.
+
+  - id: compaction
+    en: Compaction
+    zh-CN: 压缩
+    keep_english: false
+    note: Summarizing long context to save window space.
+
+  - id: context
+    en: Context
+    zh-CN: 上下文
+    keep_english: false
+    note: Information the model can currently use (files, conversation, project).
+
+  - id: diff
+    en: Diff
+    zh-CN: 差异 / diff
+    keep_english: false
+    note: Before/after view of changes. Prefer "diff" in English UI copy.
+
+  - id: hook
+    en: Hook
+    zh-CN: Hook
+    keep_english: true
+    note: Custom logic at lifecycle nodes (advanced). Product concept — keep English.
+
+  - id: mcp
+    en: MCP
+    zh-CN: MCP
+    keep_english: true
+    note: Model Context Protocol. Never translate.
+
+  - id: plugin
+    en: Plugin
+    zh-CN: Plugin
+    keep_english: true
+    note: Product extension package. Keep English.
+
+  - id: prompt
+    en: Prompt
+    zh-CN: 提示词
+    keep_english: false
+    note: Goal and requirements text given to an Agent.
+
+  - id: sandbox
+    en: Sandbox
+    zh-CN: 沙箱
+    keep_english: false
+    note: Execution isolation that limits filesystem and network blast radius.
+
+  - id: skill
+    en: Skill
+    zh-CN: Skill
+    keep_english: true
+    note: Reusable package of specialized instructions and resources. Product name.
+
+  - id: task
+    en: Task
+    zh-CN: 任务
+    keep_english: false
+    note: A goal-oriented work unit (may span multiple tool calls).
+
+  - id: thread
+    en: Thread
+    zh-CN: 线程
+    keep_english: false
+    note: Continuous conversation and its accumulated context. Not an OS thread.
+
+  - id: token
+    en: Token
+    zh-CN: Token
+    keep_english: true
+    note: Unit used to measure text processed by the model.
+
+  - id: tool
+    en: Tool
+    zh-CN: 工具
+    keep_english: false
+    note: Callable capability such as read file, run command, or search.
+
+  - id: worktree
+    en: Worktree
+    zh-CN: 工作树
+    keep_english: false
+    note: Isolated working directory for parallel experiments (git worktree).
+
+  - id: agents-md
+    en: AGENTS.md
+    zh-CN: AGENTS.md
+    keep_english: true
+    note: Project instruction file name. Never translate.
+
+  - id: thread-session
+    en: Thread / session
+    zh-CN: 线程 / 会话
+    keep_english: false
+    note: Beginner-facing alias for thread when explaining conversation continuity.
+
+  - id: cloud-environment
+    en: Cloud environment
+    zh-CN: Cloud 环境
+    keep_english: false
+    note: Remote runner configuration for cloud tasks.
+
+  - id: profile
+    en: Profile
+    zh-CN: Profile
+    keep_english: true
+    note: Named configuration bundle in config.toml. Keep as product term.
+
+  - id: subagent
+    en: Subagent
+    zh-CN: Subagent
+    keep_english: true
+    note: Nested agent run delegated from a parent task.
+
+  - id: verification
+    en: Verification
+    zh-CN: 核验 / 验证
+    keep_english: false
+    note: Checking that artifacts and changes meet acceptance criteria.
+
+  - id: artifact
+    en: Artifact
+    zh-CN: 产物 / 制品
+    keep_english: false
+    note: Generated output such as files, docs, or build results.
+
+  - id: permission
+    en: Permission
+    zh-CN: 权限
+    keep_english: false
+    note: What Codex is allowed to do (filesystem, network, approvals).
+
+  - id: reasoning
+    en: Reasoning
+    zh-CN: 推理
+    keep_english: false
+    note: Model deliberation effort / reasoning mode.
+
+  - id: non-interactive
+    en: Non-interactive mode
+    zh-CN: 非交互模式
+    keep_english: false
+    note: codex exec and scripted runs without a live chat UI.
+
+  - id: interactive
+    en: Interactive mode
+    zh-CN: 交互模式
+    keep_english: false
+    note: Live chat / TUI session with the user.
+
+  - id: handover
+    en: Handoff
+    zh-CN: 交接
+    keep_english: false
+    note: Passing context so another session or person can resume work.
+
+  - id: steering
+    en: Steering
+    zh-CN: 引导 / 纠偏
+    keep_english: false
+    note: Redirecting an in-progress agent run without restarting from scratch.

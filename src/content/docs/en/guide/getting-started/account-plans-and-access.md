@@ -3,8 +3,10 @@ title: Account, plans, and access
 description: Sign-in methods, plans, and access prerequisites.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 Before using Codex you need a valid OpenAI account and **product access** allowed by your region and organization policy. Plan names, quotas, and whether App/CLI/Cloud are included follow official documentation.

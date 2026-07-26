@@ -3,8 +3,10 @@ title: AI and language models
 description: Understand how language models generate responses from context.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+reviewed_at: 2026-07-26
+source_revision: 1013ae4
+translation_status: reviewed
+translated_at: 2026-07-26
 ---
 
 Language models **predict plausible next output** from the text, files, and tool results you provide. They're strong at patterns, drafts, and retrieval-style reasoning, but they don't inherently "know" secrets not on your machine, and they don't guarantee facts are always correct.
