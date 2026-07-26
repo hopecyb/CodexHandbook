@@ -1,7 +1,7 @@
 # Codex Handbook
 
 <p align="center">
-  <img src="./public/logo-origin.png" alt="Codex Handbook Logo" width="180" />
+  <img src="./public/icon-512.png" alt="Codex Handbook Logo" width="180" />
 </p>
 
 <p align="center">

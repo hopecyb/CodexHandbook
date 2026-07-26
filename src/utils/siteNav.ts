@@ -36,8 +36,8 @@ export const footerBrand: {
 } = {
 	name: { 'zh-CN': 'Codex 指南手册', en: 'Codex Handbook' },
 	tagline: {
-		'zh-CN': '从第一次对话开始，建立可验证、可复用、可协作的 Codex 工作流。',
-		en: 'Start with your first conversation and build verifiable, reusable, collaborative Codex workflows.',
+		'zh-CN': '把任务说明、执行过程与验收结果沉淀成可复用的 Codex 方法。',
+		en: 'Turn task briefs, execution notes, and review results into reusable Codex methods.',
 	},
 };
 
