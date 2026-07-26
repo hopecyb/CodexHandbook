@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 4
 ---
 
 You can enter by **role**, **task**, or **product**. All three paths converge on the same authoritative pages.

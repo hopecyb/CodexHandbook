@@ -3,9 +3,9 @@ title: 产物优先
 description: 先约定最终产物形态与路径，再反推步骤——适合文档、配置、报表等交付物。
 ---
 
-**产物优先**先锁定「交付物长什么样、放在哪」，再让 Codex 反推步骤。适合 Markdown 文档、OpenAPI、迁移脚本、幻灯片大纲等**可见输出**明确的任务，与 [规格驱动](/cases/workflows/specification-driven-work/) 互补。
+**产物优先**是先把交付物的形态和位置说明白，再让 Codex 反推步骤。它适合 Markdown 文档、OpenAPI、迁移脚本、幻灯片大纲这类输出明确的任务，也可以和 [规格驱动](/cases/workflows/specification-driven-work/) 配合使用。
 
-## 这篇解决什么问题
+## 这页重点
 
 - 如何描述产物结构而非过程细节
 - 多文件产物的一致性检查

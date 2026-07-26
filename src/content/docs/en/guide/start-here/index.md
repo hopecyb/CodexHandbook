@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 1
 ---
 
 Welcome to the Codex Handbook. This handbook assumes **AI beginners** as the default reader: we don't assume you know the terminal, Git, or Agents, but we will build professional skills step by step.

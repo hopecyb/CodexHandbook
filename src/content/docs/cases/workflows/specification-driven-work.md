@@ -3,9 +3,9 @@ title: 规格驱动工作
 description: 先写清可验收的规格，再让 Codex 按计划实现——适合需求明确的交付任务。
 ---
 
-**规格驱动**把「完成定义」前置：在大量改文件之前，先有一份短规格（目标、范围、接口、验收标准）。它衔接 [头脑风暴](/cases/workflows/brainstorm-before-building/) 之后的路径，或与已澄清的需求直接搭配 [EPXV](/cases/workflows/explore-plan-execute-verify/)。
+**规格驱动**就是在大量改文件之前，先准备一份短规格，写清目标、范围、接口和验收标准。它可以接在 [头脑风暴](/cases/workflows/brainstorm-before-building/) 之后，也可以直接配合已经澄清过的需求进入 [EPXV](/cases/workflows/explore-plan-execute-verify/)。
 
-## 这篇解决什么问题
+## 这页重点
 
 - 规格要写多细才够
 - 如何让 Codex 按规格执行而不擅自扩 scope
@@ -57,7 +57,7 @@ description: 先写清可验收的规格，再让 Codex 按计划实现——适
 ## 常见错误
 
 - 规格过长如设计文档，关键约束反而找不到
-- 执行中 silent scope creep，未更新规格
+- 执行中范围悄悄变大，却没更新规格
 - 验收标准模糊（「更好用」）导致争论
 - 规格与 `AGENTS.md` 架构约定冲突
 

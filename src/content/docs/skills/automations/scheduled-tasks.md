@@ -6,7 +6,7 @@ description: Automations——在触发条件下无人值守运行 Codex，必�
 
 **Automations** 让 Codex 在**时间表、仓库事件或外部触发**下自动执行任务，例如依赖更新检查、文档同步、周期性健康扫描。
 
-## 这篇解决什么问题
+## 本页内容
 
 - 何时值得自动化，何时必须留人在回路里
 - 触发、执行、通知、失败四类设计点
@@ -66,7 +66,7 @@ description: Automations——在触发条件下无人值守运行 Codex，必�
 - 新 PR 打开 → 运行 review Skill（评论建议，不 push）
 - Issue 标签 `bug` → 生成复现步骤草稿
 
-### 长运行目标
+### 长时任务
 
 拆成多段 Automation + [交接与恢复](/guide/agent-work/handoff-and-resume/)，避免单次上下文耗尽。
 

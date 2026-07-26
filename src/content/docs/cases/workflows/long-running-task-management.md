@@ -3,9 +3,9 @@ title: 长任务管理
 description: 跨小时或多会话的大任务——检查点、压缩、委托与退出条件。
 ---
 
-长任务会碰到：**上下文变满**、**人要离开**、**方向漂移**、**不知道何时停**。本页把 [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/) 延伸到数小时尺度。
+长任务常见的问题是：**上下文变满**、**人要离开**、**方向漂移**、**不知道何时停**。这一页把 [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/) 放到数小时甚至多会话的场景里来看。
 
-## 这篇解决什么问题
+## 这页重点
 
 - 何时拆任务、何时委托 Cloud
 - 检查点与状态记录写什么
@@ -20,7 +20,7 @@ description: 跨小时或多会话的大任务——检查点、压缩、委托�
 - 需要等人反馈或外部 API
 - 需要跑完整 E2E / 性能测试
 
-满足任一时，应**显式计划**而非一路聊天到底。
+满足任一条件时，都应该先把计划写出来，不要一路聊到底。
 
 ## 三阶段管理
 
@@ -40,7 +40,7 @@ description: 跨小时或多会话的大任务——检查点、压缩、委托�
 
 ### 3. 收尾或委托
 
-- 本地装不下时 → [Cloud 委托](/guide/web-and-cloud/delegate-and-follow-up/)
+- 本地放不下时 → [Cloud 委托](/guide/web-and-cloud/delegate-and-follow-up/)
 - 需持续监控 → Automation + 明确 **max iterations / 截止时间**
 
 ## 退出条件（自动化必备）

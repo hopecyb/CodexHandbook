@@ -1,10 +1,10 @@
 ---
 title: 扩展能力地图
-description: Skill、MCP、Plugin、Hooks、斜杠命令与 AGENTS.md 的关系一张图看懂。
+description: Skill、MCP、Plugin、Hooks、斜杠命令与 AGENTS.md 的关系说明。
 ---
 
 
-扩展机制多，容易混淆。本页是**选型地图**，不是安装教程。
+扩展机制不少，也确实容易混淆。这页只讲它们之间的关系，不展开安装步骤。
 
 ## 关系示意
 
@@ -59,9 +59,9 @@ description: Skill、MCP、Plugin、Hooks、斜杠命令与 AGENTS.md 的关系�
 | Hooks | 系统事件 | 配置级 | 企业常见 |
 | Automations | 时间/事件 | 配置级 | 需审批流 |
 
-## 决策速查
+## 常见对应关系
 
-| 你想… | 优先选 |
+| 需求 | 建议选择 |
 |---|---|
 | 统一代码风格和测试命令 | AGENTS.md |
 | 把「审查 PR」流程标准化 | Skill |
@@ -70,11 +70,11 @@ description: Skill、MCP、Plugin、Hooks、斜杠命令与 AGENTS.md 的关系�
 | 每次提交前扫描密钥 | Hooks |
 | 每周一自动生成周报草稿 | Automations（+ 人工发布） |
 
-详细分支逻辑：[如何选择扩展方式](/skills/choosing-an-extension-method/)。
+详细分支逻辑见 [如何选择扩展方式](/skills/choosing-an-extension-method/)。
 
 ## 与产品入口无关
 
-上述机制**不绑定**单一界面：CLI、桌面 App、IDE 对 Skill/MCP 的支持程度可能不同，以 [功能对照](/guide/reference/feature-comparison/) 与官方说明为准。
+这些机制**不绑定**单一界面：CLI、桌面 App、IDE 对 Skill/MCP 的支持程度可能不同，以 [功能对照](/guide/reference/feature-comparison/) 与官方说明为准。
 
 ---
 

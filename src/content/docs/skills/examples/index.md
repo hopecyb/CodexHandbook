@@ -12,7 +12,7 @@ description: 写作、审查、研究、自动化四类 Skill 示例入口。
 | [研究 Skill](/skills/examples/research-skill/) | 带引用的调研输出 |
 | [自动化 Skill](/skills/examples/automation-skill/) | 重复任务与定时流程 |
 
-动手创建：[创建第一个 Skill](/skills/create-your-first-skill/)。
+相关页面：[创建第一个 Skill](/skills/create-your-first-skill/)。
 ---
 
 **状态：** review  

@@ -4,7 +4,7 @@ description: Codex 通用主工作流——四阶段检查点，比「一步到�
 ---
 
 
-这是本手册推荐的**默认主链路**，覆盖从「还不清楚怎么做」到「可以合并」的全过程。
+这是本手册推荐的默认工作流，适合从“还不清楚怎么做”一路走到“可以合并”。
 
 ## 四阶段概览
 
@@ -15,11 +15,11 @@ description: Codex 通用主工作流——四阶段检查点，比「一步到�
 ④ 验证 Verify    → 测试、diff 审查、对照「完成定义」
 ```
 
-不要跳过①②直接③——那是「猜修」高发区。参见 [先诊断再修复](/cases/workflows/diagnose-before-fixing/)。
+不要跳过①②直接③，这样很容易变成“猜着修”。参见 [先诊断再修复](/cases/workflows/diagnose-before-fixing/)。
 
 ## ① 探索
 
-**目标：** 建立共享事实，而不是立刻改文件。
+**目标：** 先把现状说清楚，再决定怎么改。
 
 提示词示例：
 
@@ -41,11 +41,11 @@ description: Codex 通用主工作流——四阶段检查点，比「一步到�
 在我回复「按计划执行」之前不要写代码。
 ```
 
-大任务或高风险变更：**必须**等确认。小任务可约定「计划不超过 3 步可自动执行」——写入 [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/)。
+大任务或高风险变更要先等确认。小任务可以约定“计划不超过 3 步可自动执行”，再写进 [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/)。
 
 ## ③ 执行
 
-**目标：** 小步、可回滚的改动。
+**目标：** 让改动保持小步、可回滚。
 
 - 一次聚焦一个子目标
 - 优先改测试能覆盖的路径
@@ -63,7 +63,7 @@ description: Codex 通用主工作流——四阶段检查点，比「一步到�
 | 人工 | 读 diff、关键路径手测 |
 | 产物 | 截图、日志片段、API 响应 |
 
-清单见 [定义完成](/prompts/define-done/) 与 [运行测试](/guide/quality/run-tests/)。
+相关清单见 [定义完成](/prompts/define-done/) 与 [运行测试](/guide/quality/run-tests/)。
 
 ## 按任务规模裁剪
 

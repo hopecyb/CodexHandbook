@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 7
 ---
 
 Think of Codex as layers of capability, not just a chat box:

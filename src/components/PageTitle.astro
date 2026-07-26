@@ -1,0 +1,30 @@
+---
+import DocIllustration from './DocIllustration.astro';
+
+const { starlightRoute } = Astro.locals;
+const title = starlightRoute.entry.data.title;
+const entryId = starlightRoute.entry.id;
+const PAGE_TITLE_ID = '_top';
+---
+
+<div class="doc-title-block">
+	<h1 id={PAGE_TITLE_ID}>{title}</h1>
+	<DocIllustration title={title} entryId={entryId} />
+</div>
+
+<style>
+	@layer starlight.core {
+		.doc-title-block {
+			display: flex;
+			flex-direction: column;
+		}
+
+		h1 {
+			margin-top: 1rem;
+			font-size: var(--sl-text-h1);
+			line-height: var(--sl-line-height-headings);
+			font-weight: 600;
+			color: var(--sl-color-white);
+		}
+	}
+</style>

@@ -1,22 +1,104 @@
 ---
-title: Agent 工作（精简）
-description: 计划、引导与交接；MVP 精简子集。
+title: Agent 工作
+description: 让 Codex 像一个可协作的执行者工作，而不是一次性回答机器。
 sidebar:
   order: 31
 ---
 
+Agent 工作关注的是：怎么把一个任务**带到可验证的完成状态**。什么时候先做计划，什么时候拆子任务，什么时候中途纠偏，什么时候该交接与恢复，都是这一章要处理的问题。
 
-- [规划](/guide/agent-work/planning/)
-- [子 Agent](/guide/agent-work/subagents/)
-- [进度与引导](/guide/agent-work/progress-and-steering/)
-- [交接与恢复](/guide/agent-work/handoff-and-resume/)
+这一章讲的是协作方式，不是某个单独功能。
 
-多 Agent 协作方法见 [工作流 · 多 Agent 协作](/cases/workflows/multi-agent-coordination/)。
+很多任务难的地方，不在于把需求说出口，而在于把它一路带到“确实做完而且能检查”的状态。
 
+## 这章在讲什么
+
+- 任务复杂时，如何先收敛成计划
+- 执行中发现偏了，如何小步纠偏
+- 哪些子问题值得拆给子 Agent
+- 长任务中断后，如何交接与恢复
+
+## 推荐阅读顺序
+
+1. [规划](/guide/agent-work/planning/)
+2. [进度与引导](/guide/agent-work/progress-and-steering/)
+3. [子 Agent](/guide/agent-work/subagents/)
+4. [交接与恢复](/guide/agent-work/handoff-and-resume/)
+
+## 一个常用框架
+
+Agent 工作大致可以看成四个连续动作：
+
+```text
+先理解 → 再计划 → 执行中纠偏 → 最后交接/收尾
+```
+
+如果少了中间任何一步，常见后果分别是：
+
+- 少了理解：改错方向
+- 少了计划：做到一半才发现范围失控
+- 少了纠偏：越修越偏
+- 少了交接：长任务断掉后没人知道做到哪
+
+## 常见误会
+
+### 1. Agent 工作就是把 prompt 写长一点
+
+不够。
+
+Prompt 只是起点，真正决定任务质量的，还有：
+
+- 有没有计划
+- 有没有中途纠偏
+- 有没有把复杂部分拆开
+- 有没有留下能接续的状态
+
+### 2. 中途改方向，说明前面都白做了
+
+很多时候，边执行边收口本来就是正常做法，不必假装第一次就能把一切说对。
+
+### 3. 子 Agent 一拆就会更高效
+
+不总是。
+
+如果边界没讲清楚，子任务越多，主线程反而越乱。
+
+## 本章与其他章节的关系
+
+- 需要完整主工作流：见 [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
+- 需要把任务讲清楚：见 [提示词](/prompts/)
+- 需要管理上下文：见 [上下文](/guide/context/)
+- 需要多人/多任务并行：见 [并行 Agent](/guide/desktop-app/parallel-agents/) 与 [多 Agent 协作](/cases/workflows/multi-agent-coordination/)
+
+## 先跑通这个最小流程
+
+如果你只想用最基本的方式把任务跑通，可以按这 4 步来：
+
+1. 把任务说清楚
+2. 复杂时先让它给计划
+3. 执行中根据结果小步纠偏
+4. 结束前要求它给出可验证结果
+
+把这 4 步跑顺，再去学子 Agent 和交接会更自然。
+
+Agent 工作更看重任务能不能在计划、执行、纠偏和收尾这几步里持续往正确方向推进。
+
+## 常见误区
+
+- 把 Agent 当搜索框，只给一句模糊目标
+- 认为“中途改口”就等于推翻重来
+- 明明是长任务，却没有任何交接产物
+- 拆子任务时不给边界，最后主线程反而更乱
+
+## 参考来源
+
+- OpenAI Codex 官方任务协作与执行说明
+- freestylefly/CodexGuide 的协作式任务实践
+- KimYx0207《AI-Coding-Guide-Zh》Codex 工作流章节
+- stormzhang 子任务与自动化实践
 
 ---
 
 **状态：** review  
 **适用产品：** App / CLI / IDE / Cloud  
 **最近核验：** 2026-07-25
-

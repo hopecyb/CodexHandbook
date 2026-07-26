@@ -5,9 +5,17 @@ sidebar:
   order: 50
 ---
 
-**开发者平台**面向要把 Codex **产品化**进流水线的人：自定义应用、批量审查、发布门禁、内部开发者门户。日常「写一个 prompt 改 bug」仍从 [快速上手](/guide/getting-started/) 开始。
+**开发者平台**面向要把 Codex **产品化**进流水线的人：自定义应用、批量审查、发布门禁、内部开发者门户。日常“写一个 prompt 改 bug”仍从 [快速上手](/guide/getting-started/) 开始。
 
-## 这篇解决什么问题
+这一章讲的不是日常怎么使用 Codex，而是怎么把 Codex 接进你自己的系统里。
+
+它更偏向这些场景：
+
+- 想在 CI 里自动跑任务
+- 想在自家后台或工具里接入 Codex
+- 想把 Codex 变成团队工作流的一部分
+
+## 这篇会讲什么
 
 - 开发者平台与终端用户手册的边界
 - 典型集成架构
@@ -49,6 +57,25 @@ Git 提供商 / 工单 / 制品库
 | CI/CD | [代码审查自动化](/guide/developer-platform/ci-cd/code-review-automation/) |
 
 更多 `codex-sdk/`、`app-server/`、`architecture-patterns/` 见 [章节大纲](https://github.com/cyberhope/codex-handbook/blob/main/docs/planning/chapter-outline.md) 与 [路线图](/ROADMAP/)。
+
+## 常见误会
+
+### 1. 我是不是必须学这一章，才算真正会用 Codex？
+
+如果你当前只是想先把 Codex 用起来，这一章可以后看。
+
+### 2. 它和 CLI / App / IDE 的关系是什么？
+
+可以这样理解：
+
+- **App / CLI / IDE**：你个人或团队直接用 Codex 的入口
+- **开发者平台**：你把 Codex 再嵌进别的系统和流程里
+
+### 3. 第一次读这一章，先看哪一页最有价值？
+
+如果只是建立概念，优先看 [SDK 概述](/guide/developer-platform/sdk-overview/) 和 [非交互模式](/guide/cli/non-interactive-mode/) 的关系。
+
+开发者平台这一章讲的是“怎么把 Codex 接进系统”。第一次上手用 Codex，还是先看前面的入门内容。
 
 ## 参考来源
 

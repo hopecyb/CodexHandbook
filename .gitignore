@@ -30,11 +30,15 @@ test-results/
 # Cursor
 .cursor/
 
+scripts/
+
 # AI
+.baoyu-skills/
+.superpowers/
+cover-image/
 docs/planning/
 docs/superpowers/
 
 # Astro / Starlight
 dist/
 .astro/
-

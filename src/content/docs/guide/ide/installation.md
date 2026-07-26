@@ -3,8 +3,39 @@ title: 安装 IDE 扩展
 description: 在支持的编辑器中安装扩展。
 ---
 
+如果你平时主要在编辑器里工作，这页除了安装位置，也会覆盖这些问题：
 
-见 [安装 IDE 扩展](/guide/getting-started/install-ide-extension/) 与 [https://developers.openai.com/codex](https://developers.openai.com/codex)。
+- 我适不适合从 IDE 扩展开始
+- 装完以后应该看到什么
+- 为什么有时候插件装上了，但体验还是不像“可用状态”
+
+IDE 扩展装好，不只是扩展出现在列表里，而是你在正确的编辑器和工作区里能正常调用它。
+
+## 安装后至少确认这几件事
+
+1. 扩展装在你当前正在用的编辑器里
+2. 登录或认证已经完成
+3. 打开的工作区是你真正要操作的项目
+4. 扩展入口、命令或侧栏能正常出现
+
+## 常见误会
+
+### 1. Marketplace 里点了安装，就一定能用吗
+
+很多时候后续还要再做几步：
+
+- 登录
+- 重载窗口
+- 打开正确工作区
+
+### 2. IDE 扩展和 CLI 是完全一样的东西吗
+
+底层能力可能相通，但使用入口和上下文来源不一样。  
+IDE 更依赖“你当前打开了什么文件、什么工程”。
+
+判断 IDE 扩展是不是真的装好，主要看你能不能在当前编辑器和工作区里正常把它唤起。
+
+详细步骤见 [安装 IDE 扩展](/guide/getting-started/install-ide-extension/)。官方说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
 
 
 ---
@@ -12,4 +43,3 @@ description: 在支持的编辑器中安装扩展。
 **状态：** review  
 **适用产品：** IDE  
 **最近核验：** 2026-07-25
-

@@ -6,9 +6,11 @@ sidebar:
 ---
 
 
-Codex 不只靠「这一次怎么问」，还靠**持久化配置**记住你和团队的约定。本章讲如何把重复说明沉到项目里，而不是每次任务重敲一遍。
+Codex 不只靠“这一次怎么问”，还靠**持久化配置**记住你和团队的约定。本章主要区分哪些要求该留在对话里，哪些该沉到项目里。
 
-## 这篇解决什么问题
+如果你已经开始反复说同样的话，比如“别改这个目录”“先跑测试”“默认用这个模型”，这一章就在处理这类问题。
+
+## 内容
 
 - 个人偏好、项目说明、团队规则、临时提示词**谁覆盖谁**
 - `AGENTS.md` 该写什么、不该写什么
@@ -21,6 +23,19 @@ Codex 不只靠「这一次怎么问」，还靠**持久化配置**记住你和�
 | 刚跑通第一个任务 | [项目说明](/guide/customization/project-instructions/) |
 | 要在仓库里固化协作规范 | [什么是 AGENTS.md](/guide/customization/agents-md/what-is-agents-md/) |
 | 要统一 CLI/App 行为 | [配置基础](/guide/customization/configuration/config-basics/) |
+
+## 这一章在处理什么
+
+很多人在用 Codex 一段时间后，会碰到同一类问题：规则写了不少，但总感觉没完全生效，或者不同地方互相打架。
+
+这一章主要讨论怎么把协作规则分层放好：
+
+- 哪些是我个人习惯
+- 哪些是仓库共享规则
+- 哪些是组织级硬边界
+- 哪些只是这次任务的临时要求
+
+分层不清时，很容易出现“写了很多，但该生效的时候没生效”。
 
 ## 配置优先级（从高到低）
 
@@ -35,6 +50,26 @@ Codex 不只靠「这一次怎么问」，还靠**持久化配置**记住你和�
 
 **原则：** 越靠近「组织强制」越不可被单次任务覆盖；越靠近「当前对话」越灵活、也越易丢失。
 
+## 常见误会
+
+### 1. 只要我会写 prompt，就不需要做长期配置？
+
+短任务也许勉强够，但只要开始持续协作，你就会越来越想把重复要求沉下去。
+
+### 2. 什么规则都塞进 `AGENTS.md` 就行？
+
+也不对。  
+有些东西更适合放在：
+
+- 个人偏好
+- 配置文件
+- 组织托管策略
+- 当前任务 prompt
+
+### 3. 配置不是越多越好
+
+配置太散、规则太长、层级太乱，反而更容易让人和工具都搞不清楚该听谁的。
+
 ## 本章导航
 
 | 主题 | 页面 |
@@ -42,12 +77,26 @@ Codex 不只靠「这一次怎么问」，还靠**持久化配置**记住你和�
 | AGENTS.md | [概述](/guide/customization/agents-md/what-is-agents-md/) · [作用域与优先级](/guide/customization/agents-md/scope-and-precedence/) · [写好项目指令](/guide/customization/agents-md/writing-effective-instructions/) |
 | 项目指令 | [项目说明](/guide/customization/project-instructions/) |
 | 记忆 | [记忆与持久上下文](/guide/customization/memories-and-persistent-context/) |
+| 机制选型 | [选择合适的机制](/guide/customization/choosing-the-right-mechanism/) |
 | 配置文件 | [配置基础](/guide/customization/configuration/config-basics/) · [Profile](/guide/customization/configuration/profiles/) |
 | 个人偏好 | [个人偏好](/guide/customization/personal-preferences/) |
 | 规则 | [允许与拒绝](/guide/customization/rules/allow-and-deny-patterns/) · [命令规则](/guide/customization/rules/command-rules/) · [团队策略](/guide/customization/rules/team-rules/) |
 | 示例 | [Monorepo 中的 AGENTS.md](/guide/customization/examples/monorepo-agents-md/) |
 
 Rules 细目已起步；更多配置细页见 [路线图](/ROADMAP/) M3 后续。
+
+## 建议顺序
+
+第一次系统整理 Codex 的协作规则时，可以按这个顺序：
+
+1. 先整理项目规则
+2. 再补 `AGENTS.md`
+3. 再分离个人偏好
+4. 最后再处理配置文件和更细的规则控制
+
+这样比一上来就改一堆配置键更不容易乱。
+
+规则不必追求多，放对位置更重要。
 
 ## 常见错误
 

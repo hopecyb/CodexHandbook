@@ -3,8 +3,16 @@ title: 安装 CLI
 description: 安装 Codex 命令行并完成基本检查。
 ---
 
+按官方 CLI 安装说明操作：[https://developers.openai.com/codex](https://developers.openai.com/codex)（一般是包管理器或官方安装脚本，以当前文档为准）。
 
-按官方 CLI 安装说明操作：[https://developers.openai.com/codex](https://developers.openai.com/codex)（通常为包管理器或官方安装脚本，以当前文档为准）。
+平时就常用终端的话，CLI 用起来会顺手一些。  
+第一次安装时，更容易卡住的地方多半在这里：
+
+- 装完之后怎么确认不是装了一半
+- 为什么命令明明装了，终端却找不到
+- 什么时候应该回到 PATH / 认证，而不是重复安装
+
+CLI 装没装好，主要看当前终端能不能稳定识别 `codex`。
 
 ## 安装后检查
 
@@ -12,6 +20,32 @@ description: 安装 Codex 命令行并完成基本检查。
 
 - 命令可执行
 - 能进入登录或已认证状态
+
+## 常见误会
+
+### 1. 装完以后，任何终端窗口都会立刻认命令
+
+有时你需要重新打开终端，或者确认当前 shell 的 `PATH` 已经更新。
+
+### 2. 看到安装输出成功，就说明已经能用了
+
+更值得确认的是当前环境能不能找到这个命令。
+
+### 3. CLI 问题都要重装
+
+很多时候真正要查的是：
+
+- `PATH`
+- 当前 shell
+- 登录状态
+
+## 安装后怎么查
+
+1. 先确认命令能执行
+2. 再确认当前会话能进入登录或已登录状态
+3. 还不行再去查安装位置和 PATH
+
+CLI 装好以后，当前终端应该能找到它，你也能继续完成认证。
 
 详细交互见 [CLI 交互模式](/guide/cli/interactive-mode/)。排障：[CLI 排障](/guide/cli/troubleshooting/)。
 
@@ -21,4 +55,3 @@ description: 安装 Codex 命令行并完成基本检查。
 **状态：** review  
 **适用产品：** CLI  
 **最近核验：** 2026-07-25
-

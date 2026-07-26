@@ -3,9 +3,9 @@ title: 合并前审查
 description: 在 merge 之前用 Codex 做结构化 diff 与风险审查——人机分工清晰。
 ---
 
-**合并前审查**把 [质量与验证](/guide/quality/) 落到 Git 流程：在 PR 合并前，用 Codex 检查 diff、测试、安全与规格符合度。自动评论**不等于**自动合并。
+**合并前审查**就是把 [质量与验证](/guide/quality/) 放到 Git 流程里：在 PR 合并前，用 Codex 检查 diff、测试、安全和规格是否一致。自动评论本身不能代替自动合并。
 
-## 这篇解决什么问题
+## 这页重点
 
 - 本地审查 vs Cloud/CI 审查的分工
 - 审查提示词应覆盖哪些维度
@@ -39,7 +39,7 @@ description: 在 merge 之前用 Codex 做结构化 diff 与风险审查——�
 | 可维护性 | 命名、重复、公共 API |
 | 规格 | 与 issue/规格文档一致 |
 
-与 [审查 diff](/guide/quality/review-diffs/) 配合；高风险项走 [人工审批模式](/cases/workflows/human-approval-patterns/)。
+可以和 [审查 diff](/guide/quality/review-diffs/) 配合使用；高风险项走 [人工审批模式](/cases/workflows/human-approval-patterns/)。
 
 ## 常见错误
 

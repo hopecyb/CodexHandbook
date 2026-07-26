@@ -1,6 +1,6 @@
 ---
 title: 示例：研究 Skill
-description: 带引用格式与置信度标注的调研 Skill。
+description: 用于带引用和待确认标记的调研 Skill 示例。
 ---
 
 # 示例：研究 Skill

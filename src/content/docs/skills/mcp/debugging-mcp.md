@@ -5,13 +5,13 @@ description: MCP 服务器启不来、工具超时或结果异常时的系统化
 
 MCP 把外部系统接进 Codex。失败时常见三类：**进程起不来**、**鉴权错**、**工具逻辑或超时**。本页给出检查顺序，避免反复改配置碰运气。
 
-## 这篇解决什么问题
+## 本页内容
 
 - 最小复现 MCP 问题的方法
 - 日志与配置核对清单
 - 何时怀疑服务器实现而非 Codex
 
-入门：[MCP 概述](/skills/mcp/mcp-overview/) · [连接 MCP 服务器](/skills/mcp/connect-an-mcp-server/)
+相关页面：[MCP 概述](/skills/mcp/mcp-overview/) · [连接 MCP 服务器](/skills/mcp/connect-an-mcp-server/)
 
 ## 分诊流程
 

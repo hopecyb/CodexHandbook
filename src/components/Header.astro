@@ -8,32 +8,22 @@ import SocialIcons from 'virtual:starlight/components/SocialIcons';
 import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
 import { getActiveModule } from '../utils/activeModule';
 import { localizedUrl } from '../utils/localizedUrl';
+import { getSiteLang, mainNavItems, pickLabel } from '../utils/siteNav';
 
 const shouldRenderSearch =
 	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
 
 const locale = Astro.locals.starlightRoute.locale ?? 'root';
 const normalizedLocale = locale === 'root' ? undefined : locale;
-const lang = locale === 'root' ? 'zh-CN' : (config.locales[locale]?.lang ?? 'en');
+const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
 
 function localizeHref(path: string) {
 	return localizedUrl(new URL(path, Astro.url), locale, context.trailingSlash).pathname;
 }
 
-const navItems = [
-	{ href: '/guide/', label: { 'zh-CN': 'Codex 指南', en: 'Codex Guide' }, prefix: '/guide' },
-	{ href: '/prompts/', label: { 'zh-CN': '提示词', en: 'Prompts' }, prefix: '/prompts' },
-	{ href: '/skills/', label: { 'zh-CN': 'Skills', en: 'Skills' }, prefix: '/skills' },
-	{ href: '/cases/', label: { 'zh-CN': '实战案例', en: 'Cases' }, prefix: '/cases' },
-];
-
 function isActive(prefix: string) {
 	const moduleDir = prefix.replace(/^\//, '');
 	return getActiveModule(Astro.url.pathname, normalizedLocale) === moduleDir;
-}
-
-function navLabel(item: (typeof navItems)[number]) {
-	return item.label[lang as keyof typeof item.label] ?? item.label.en;
 }
 ---
 
@@ -43,12 +33,12 @@ function navLabel(item: (typeof navItems)[number]) {
 	</div>
 	<nav class="main-nav sl-hidden md:sl-flex print:hidden" aria-label={lang === 'zh-CN' ? '主导航' : 'Main navigation'}>
 		{
-			navItems.map((item) => (
+			mainNavItems.map((item) => (
 				<a
 					href={localizeHref(item.href)}
 					aria-current={isActive(item.prefix) ? 'page' : undefined}
 				>
-					{navLabel(item)}
+					{pickLabel(item.label, lang)}
 				</a>
 			))
 		}
@@ -76,7 +66,7 @@ function navLabel(item: (typeof navItems)[number]) {
 		}
 
 		.title-wrapper {
-			overflow: clip;
+			overflow: visible;
 			padding: 0.25rem;
 			margin: -0.25rem;
 			min-width: 0;

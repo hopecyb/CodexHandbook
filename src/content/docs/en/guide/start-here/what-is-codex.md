@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 2
 ---
 
 Codex is OpenAI's **AI coding and work Agent**: you give it a goal, and it combines project files, tools, and your approvals to read, edit, run commands, generate artifacts, and let you inspect the results.

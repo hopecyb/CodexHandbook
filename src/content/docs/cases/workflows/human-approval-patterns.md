@@ -1,10 +1,10 @@
 ---
 title: 人工审批模式
-description: 何时批准、拒绝或要求 Codex 暂停——人机协作的闸门设计。
+description: 何时批准、拒绝或要求 Codex 暂停，以及怎么把这些规则写清楚。
 ---
 
 
-审批不是拖慢速度，而是**把不可逆操作留在人类一侧**。本页给可复制的决策模式。
+审批的作用，是把不可逆操作留给人来决定。本页整理了几种常见做法。
 
 ## 审批分层
 
@@ -64,7 +64,7 @@ Cloud 场景见 [创建 Pull Request](/guide/web-and-cloud/create-pull-requests/
 
 ## 与 Automations 的关系
 
-无人值守任务必须在设计时嵌入**人工闸门**——见 [定时与后台任务](/skills/automations/scheduled-tasks/)。
+无人值守任务在设计时也要保留人工确认点，见 [定时与后台任务](/skills/automations/scheduled-tasks/)。
 
 ## 常见错误
 

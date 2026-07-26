@@ -8,12 +8,83 @@ const { title } = Astro.props;
 
 <article class="about-handbook sl-flex" aria-labelledby="about-handbook-heading">
 	<small id="about-handbook-heading">{title}</small>
-	<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="currentColor">
-		<path
-			fill-rule="evenodd"
-			d="M81 36 64 0 47 36l-1 2-9-10a6 6 0 0 0-9 9l10 10h-2L0 64l36 17h2L28 91a6 6 0 1 0 9 9l9-10 1 2 17 36 17-36v-2l9 10a6 6 0 1 0 9-9l-9-9 2-1 36-17-36-17-2-1 9-9a6 6 0 1 0-9-9l-9 10v-2Zm-17 2-2 5c-4 8-11 15-19 19l-5 2 5 2c8 4 15 11 19 19l2 5 2-5c4-8 11-15 19-19l5-2-5-2c-8-4-15-11-19-19l-2-5Z"
-			clip-rule="evenodd"></path>
-	</svg>
+	<div class="about-handbook__mark" aria-hidden="true">
+		<svg class="about-handbook__icon" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<radialGradient id="about-halo" cx="50%" cy="46%" r="52%">
+					<stop offset="0%" stop-color="currentColor" stop-opacity="0.2" />
+					<stop offset="100%" stop-color="currentColor" stop-opacity="0" />
+				</radialGradient>
+				<linearGradient id="about-spine" x1="18" y1="18" x2="30" y2="66" gradientUnits="userSpaceOnUse">
+					<stop offset="0%" stop-color="var(--about-spine-light)" />
+					<stop offset="100%" stop-color="var(--about-spine)" />
+				</linearGradient>
+				<linearGradient id="about-cover" x1="30" y1="20" x2="30" y2="64" gradientUnits="userSpaceOnUse">
+					<stop offset="0%" stop-color="var(--about-cover-top)" />
+					<stop offset="100%" stop-color="var(--about-cover)" />
+				</linearGradient>
+			</defs>
+
+			<ellipse cx="44" cy="42" rx="34" ry="30" fill="url(#about-halo)" />
+			<ellipse cx="44" cy="73" rx="20" ry="3.5" fill="currentColor" opacity="0.1" />
+
+			<g class="about-handbook__book">
+				<path
+					d="M58 62.5c0 2.2-1.8 4-4 4H30.5c-2.2 0-4-1.8-4-4V25.5c0-2.2 1.8-4 4-4H54c2.2 0 4 1.8 4 4v37Z"
+					fill="url(#about-cover)"
+					stroke="currentColor"
+					stroke-opacity="0.14"
+					stroke-width="1"
+				></path>
+				<path
+					d="M26.5 21.5c-2.5 0-4.5 2-4.5 4.5v36.5c0 2.5 2 4.5 4.5 4.5h5.5V21.5h-5.5Z"
+					fill="url(#about-spine)"
+				></path>
+				<path
+					d="M58.5 28.5c1.2-.4 2.5-.2 3.5.5 1.2.9 1.9 2.3 2 3.8v24.4c-.1 1.5-.8 2.9-2 3.8-1 .7-2.3.9-3.5.5"
+					stroke="var(--about-page-edge)"
+					stroke-width="1.4"
+					stroke-linecap="round"
+				></path>
+
+				<path d="M34 33h20" stroke="currentColor" stroke-opacity="0.28" stroke-width="1" stroke-linecap="round"
+				></path>
+				<circle cx="44" cy="33" r="1.2" fill="currentColor" opacity="0.42"></circle>
+
+				<rect x="34.5" y="38.5" width="8.5" height="8.5" rx="2" fill="currentColor" opacity="0.9"></rect>
+				<rect x="45.5" y="38.5" width="8.5" height="8.5" rx="2" fill="currentColor" opacity="0.9"></rect>
+				<rect x="34.5" y="50.5" width="8.5" height="8.5" rx="2" fill="currentColor" opacity="0.9"></rect>
+				<rect x="45.5" y="50.5" width="8.5" height="8.5" rx="2" fill="currentColor" opacity="0.9"></rect>
+
+				<path
+					d="M37.2 41.2h2.8M37.2 44.2h2.2M48.2 41.8a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2Z"
+					stroke="var(--about-cover-top)"
+					stroke-width="1"
+					stroke-linecap="round"
+				></path>
+				<path
+					d="M37.2 53.2h2.6M37.2 56.2h1.8M48.4 55.2l1.4 1.4 2.4-2.8"
+					stroke="var(--about-cover-top)"
+					stroke-width="1"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				></path>
+			</g>
+
+			<g class="about-handbook__orbit" opacity="0.55">
+				<circle cx="67" cy="24" r="2" fill="currentColor"></circle>
+				<circle cx="72" cy="34" r="1.5" fill="currentColor" opacity="0.7"></circle>
+				<circle cx="18" cy="30" r="1.5" fill="currentColor" opacity="0.7"></circle>
+				<path
+					d="M67 24c4 2 6 6 5 10M18 30c-4 1-6 5-5 9"
+					stroke="currentColor"
+					stroke-width="1"
+					stroke-linecap="round"
+					opacity="0.35"
+				></path>
+			</g>
+		</svg>
+	</div>
 	<slot />
 </article>
 
@@ -37,8 +108,33 @@ const { title } = Astro.props;
 		color: var(--sl-color-gray-3);
 	}
 
-	svg {
-		width: 5rem;
-		color: var(--sl-color-white);
+	.about-handbook__mark {
+		--about-spine: color-mix(in srgb, var(--sl-color-accent) 88%, #1a2f8f);
+		--about-spine-light: color-mix(in srgb, var(--sl-color-accent-high) 82%, white);
+		--about-cover: #f4eee1;
+		--about-cover-top: #faf6ee;
+		--about-page-edge: color-mix(in srgb, var(--about-cover) 55%, var(--sl-color-gray-4));
+		width: clamp(5.5rem, 9vw, 6.5rem);
+		height: clamp(5.5rem, 9vw, 6.5rem);
+		color: var(--sl-color-accent);
+		filter: drop-shadow(0 1rem 1.5rem color-mix(in srgb, var(--sl-color-black) 16%, transparent));
+	}
+
+	.about-handbook__icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.about-handbook__book {
+		transform-origin: 44px 44px;
+		transform: rotate(-5deg);
+	}
+
+	:global(html[data-theme='light']) .about-handbook__mark {
+		--about-cover: #f7f0e4;
+		--about-cover-top: #fffaf2;
+		--about-page-edge: #d8c7ad;
+		filter: drop-shadow(0 0.85rem 1.25rem color-mix(in srgb, var(--sl-color-accent) 12%, transparent));
 	}
 </style>

@@ -3,12 +3,12 @@ title: 失败恢复
 description: 任务跑偏、测试变红或上下文耗尽时——如何安全回退并继续。
 ---
 
-**失败恢复**是工作流的保险丝：Codex 任务不会总是一次成功。本章给出可重复的**检测 → 止损 → 恢复 → 复盘**步骤，与 [撤销与恢复](/guide/getting-started/undo-and-recover/) 和 [长任务管理](/cases/workflows/long-running-task-management/) 配合。
+**失败恢复**讲的是任务跑偏或中断后，怎么把现场收住，再继续往前走。本章给出一套可重复的 **检测 → 止损 → 恢复 → 复盘** 步骤，可和 [撤销与恢复](/guide/getting-started/undo-and-recover/) 以及 [长任务管理](/cases/workflows/long-running-task-management/) 配合使用。
 
-## 这篇解决什么问题
+## 这页重点
 
 - 何时该 `git stash`、回退 commit、开新线程
-- 如何把失败信息喂回下一轮 prompt
+- 如何把失败信息整理进下一轮 prompt
 - 团队如何记录复发问题
 
 ## 失败信号
@@ -49,7 +49,7 @@ description: 任务跑偏、测试变红或上下文耗尽时——如何安全�
     → 复盘沉淀
 ```
 
-多 Agent 场景见 [多 Agent 协作](/cases/workflows/multi-agent-coordination/)：失败时明确哪个子任务负责回滚。
+多 Agent 场景见 [多 Agent 协作](/cases/workflows/multi-agent-coordination/)：失败时要明确哪个子任务负责回滚。
 
 ## 常见错误
 

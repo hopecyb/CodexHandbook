@@ -47,11 +47,45 @@ export default defineConfig({
 				'zh-CN': 'Codex 指南手册',
 				en: 'Codex Handbook',
 			},
+			logo: {
+				src: './src/assets/brand/logo.png',
+				alt: 'Codex 指南手册',
+			},
+			favicon: '/favicon.png',
+			head: [
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'apple-touch-icon',
+						sizes: '180x180',
+						href: '/apple-touch-icon.png',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'icon',
+						type: 'image/png',
+						sizes: '32x32',
+						href: '/favicon-32x32.png',
+					},
+				},
+				{
+					tag: 'link',
+					attrs: {
+						rel: 'icon',
+						type: 'image/png',
+						sizes: '16x16',
+						href: '/favicon-16x16.png',
+					},
+				},
+			],
 			customCss: ['./src/styles/custom.css'],
 			components: {
 				Header: './src/components/Header.astro',
 				Sidebar: './src/components/Sidebar.astro',
 				PageFrame: './src/components/PageFrame.astro',
+				PageTitle: './src/components/PageTitle.astro',
 				Footer: './src/components/Footer.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
 				LanguageSelect: './src/components/LanguageSelect.astro',

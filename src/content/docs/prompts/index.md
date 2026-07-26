@@ -10,11 +10,13 @@ description: 学会把任务、背景、输入、约束和验收标准讲清楚�
 ## 推荐顺序
 
 1. [提示词基础](/prompts/basics/)
-2. [任务结构](/prompts/task-anatomy/)
-3. [目标与上下文](/prompts/goals-and-context/)
-4. [约束与边界](/prompts/constraints-and-boundaries/)
-5. [定义完成标准](/prompts/define-done/)
-6. [长任务提示](/prompts/long-running-tasks/)
-7. [提示词排错](/prompts/prompt-debugging/)
-8. [反模式](/prompts/anti-patterns/)
-9. 使用 [提示词模板](/prompts/templates/) 处理常见任务
+2. [先要计划](/prompts/ask-for-a-plan/)
+3. [任务结构](/prompts/task-anatomy/)
+4. [目标与上下文](/prompts/goals-and-context/)
+5. [约束与边界](/prompts/constraints-and-boundaries/)
+6. [定义完成标准](/prompts/define-done/)
+7. [图像提示](/prompts/prompting-with-images/)
+8. [长任务提示](/prompts/long-running-tasks/)
+9. [提示词排错](/prompts/prompt-debugging/)
+10. [反模式](/prompts/anti-patterns/)
+11. 使用 [提示词模板](/prompts/templates/) 处理常见任务

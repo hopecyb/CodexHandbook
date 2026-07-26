@@ -3,9 +3,9 @@ title: 测试驱动工作
 description: 先定义或补齐失败测试，再驱动实现——让 Codex 的修改可客观验收。
 ---
 
-**测试驱动工作**（TDD 或「测试先行」变体）让验证自动化：Codex 先让测试红，再改实现变绿。适合有测试基建的代码库；与 [带验证的 Bug 修复](/cases/use-cases/software-development/fix-a-bug-with-verification/) 案例直接相关。
+**测试驱动工作**（TDD 或“测试先行”）的做法，是先让测试失败，再通过最小实现把它改到通过。它适合已经有测试基建的代码库，也和 [带验证的 Bug 修复](/cases/use-cases/software-development/fix-a-bug-with-verification/) 这类场景直接相关。
 
-## 这篇解决什么问题
+## 这页重点
 
 - 何时要求「先写/先跑测试」
 - 如何提示 Codex 不跳过测试步骤
@@ -16,7 +16,7 @@ description: 先定义或补齐失败测试，再驱动实现——让 Codex 的
 - 已有单元/集成测试的仓库
 - 回归 bug、API 行为变更、重构
 
-不适合：无测试基建的原型、纯文案站的一次性改动（改用 [EPXV](/cases/workflows/explore-plan-execute-verify/) 人工验证）。
+不适合的场景包括：没有测试基建的原型、纯文案站的一次性改动。这类任务更适合用 [EPXV](/cases/workflows/explore-plan-execute-verify/) 做人工验证。
 
 ## 最小可用做法
 

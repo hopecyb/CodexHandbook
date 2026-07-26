@@ -1,11 +1,11 @@
 ---
 title: 示例：审查 Skill
-description: 基于 pr-review 的完整 Skill 示例，可直接复用。
+description: 基于 pr-review 的 Skill 示例，适合团队复用或调整。
 ---
 
 # 示例：审查 Skill
 
-本示例与 [创建第一个 Skill](/skills/create-your-first-skill/) 中的 `pr-review` 一致，可作为团队模板。
+本示例与 [创建第一个 Skill](/skills/create-your-first-skill/) 中的 `pr-review` 对应，可按团队需要调整。
 
 ## SKILL.md
 
