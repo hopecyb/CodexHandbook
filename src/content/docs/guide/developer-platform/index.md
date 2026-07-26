@@ -56,7 +56,7 @@ Git 提供商 / 工单 / 制品库
 | Webhooks | [概述](/guide/developer-platform/webhooks/overview/) |
 | CI/CD | [代码审查自动化](/guide/developer-platform/ci-cd/code-review-automation/) |
 
-更多 `codex-sdk/`、`app-server/`、`architecture-patterns/` 见 [章节大纲](https://github.com/cyberhope/codex-handbook/blob/main/docs/planning/chapter-outline.md) 与 [路线图](/ROADMAP/)。
+更多 `codex-sdk/`、`app-server/`、`architecture-patterns/` 见 [章节大纲](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)。
 
 ## 常见误会
 

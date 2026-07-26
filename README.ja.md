@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">コンテンツ構成</a>
   ·
-  <a href="./ROADMAP.md">ロードマップ</a>
-  ·
   <a href="./examples/README.md">サンプル集</a>
 </p>
 
@@ -119,7 +117,6 @@ Skills の設計・利用・保守・ガバナンスを学び、一度の成功�
 | [Examples](./examples/README.md) | プロンプトとサンプル資産をそのまま再利用 |
 | [コンテンツ構成](./docs/planning/content-architecture.md) | サイト全体の情報設計を把握 |
 | [章の概要](./docs/planning/chapter-outline.md) | トピックのカバー範囲を確認 |
-| [ロードマップ](./ROADMAP.md) | プロジェクトの計画と方向性 |
 
 ## コンテンツ構造
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # 実タスクのケース
 ├── examples/                    # コピー可能なプロンプトと拡張例
 ├── docs/planning/               # コンテンツ計画と保守資料
-└── ROADMAP.md                   # プロジェクトのロードマップと段階
 ```
 
 ## ローカル開発

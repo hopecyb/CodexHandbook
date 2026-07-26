@@ -1,5 +1,6 @@
 ---
 import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+import ExternalLinks from './ExternalLinks.astro';
 import ScrollToTop from './ScrollToTop.astro';
 import SiteFooter from './SiteFooter.astro';
 
@@ -28,6 +29,7 @@ const showSiteFooter = !hasSidebar;
 		{showSiteFooter && <SiteFooter />}
 	</div>
 </div>
+<ExternalLinks />
 <ScrollToTop />
 
 <style>

@@ -28,7 +28,12 @@ const hasPagination = Boolean(pagination.prev || pagination.next);
 
 	{
 		config.credits && (
-			<a class="kudos sl-flex" href="https://starlight.astro.build">
+			<a
+				class="kudos sl-flex"
+				href="https://starlight.astro.build"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				<Icon name="starlight" /> {Astro.locals.t('builtWithStarlight.label')}
 			</a>
 		)

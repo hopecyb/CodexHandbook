@@ -36,8 +36,12 @@ scripts/
 .baoyu-skills/
 .superpowers/
 cover-image/
-docs/planning/
-docs/superpowers/
+docs/planning/*
+!docs/planning/**/
+!docs/planning/**/*.md
+docs/superpowers/*
+!docs/superpowers/**/
+!docs/superpowers/**/*.md
 
 # Astro / Starlight
 dist/

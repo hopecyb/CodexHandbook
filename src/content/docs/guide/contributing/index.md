@@ -98,8 +98,7 @@ npm run build
 
 ## 相关链接
 
-- 仓库：<https://github.com/cyberhope/codex-handbook>
-- [路线图](/ROADMAP/)
+- 仓库：<https://github.com/hopecyb/CodexHandbook>
 - [章节大纲](/docs/planning/chapter-outline.md)（规划用）
 
 ---

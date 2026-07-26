@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">內容架構</a>
   ·
-  <a href="./ROADMAP.md">路線圖</a>
-  ·
   <a href="./examples/README.md">範例庫</a>
 </p>
 
@@ -119,7 +117,6 @@
 | [Examples](./examples/README.md) | 直接複用提示詞與範例資產 |
 | [內容架構](./docs/planning/content-architecture.md) | 快速理解整站資訊設計 |
 | [章節大綱](./docs/planning/chapter-outline.md) | 查看主題覆蓋範圍 |
-| [路線圖](./ROADMAP.md) | 了解專案規劃與後續方向 |
 
 ## 內容結構
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # 真實任務案例
 ├── examples/                    # 可複製提示詞與擴展實例
 ├── docs/planning/               # 內容規劃與維護資料
-└── ROADMAP.md                   # 專案路線與階段脈絡
 ```
 
 ## 本地開發

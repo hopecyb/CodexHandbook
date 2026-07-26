@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">Inhaltsarchitektur</a>
   ·
-  <a href="./ROADMAP.md">Roadmap</a>
-  ·
   <a href="./examples/README.md">Beispiele</a>
 </p>
 
@@ -119,7 +117,6 @@ End-to-End-Workflows durch echte Aufgaben verstehen: Code lesen, Bugs beheben, D
 | [Beispiele](./examples/README.md) | Prompts und Beispiel-Assets direkt wiederverwenden |
 | [Inhaltsarchitektur](./docs/planning/content-architecture.md) | Die Informationsarchitektur der Website verstehen |
 | [Kapitelübersicht](./docs/planning/chapter-outline.md) | Themenabdeckung ansehen |
-| [Roadmap](./ROADMAP.md) | Projektpläne und Ausrichtung |
 
 ## Inhaltsstruktur
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # Echte Aufgabenfälle
 ├── examples/                    # Kopierbare Prompts und erweiterte Beispiele
 ├── docs/planning/               # Inhaltsplanung und Wartung
-└── ROADMAP.md                   # Projekt-Roadmap und Phasen
 ```
 
 ## Lokale Entwicklung

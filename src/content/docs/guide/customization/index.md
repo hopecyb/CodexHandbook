@@ -83,7 +83,7 @@ Codex 不只靠“这一次怎么问”，还靠**持久化配置**记住你和�
 | 规则 | [允许与拒绝](/guide/customization/rules/allow-and-deny-patterns/) · [命令规则](/guide/customization/rules/command-rules/) · [团队策略](/guide/customization/rules/team-rules/) |
 | 示例 | [Monorepo 中的 AGENTS.md](/guide/customization/examples/monorepo-agents-md/) |
 
-Rules 细目已起步；更多配置细页见 [路线图](/ROADMAP/) M3 后续。
+Rules 细目已起步；更多配置细页会随自定义模块持续补充。
 
 ## 建议顺序
 

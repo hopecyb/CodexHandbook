@@ -1,0 +1,46 @@
+<script>
+	const externalProtocols = new Set(['http:', 'https:']);
+
+	function isExternalLink(anchor) {
+		const href = anchor.getAttribute('href');
+		if (!href) return false;
+
+		let url;
+		try {
+			url = new URL(href, window.location.href);
+		} catch {
+			return false;
+		}
+
+		return externalProtocols.has(url.protocol) && url.origin !== window.location.origin;
+	}
+
+	function mergeRel(anchor) {
+		const values = new Set((anchor.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+		values.add('noopener');
+		values.add('noreferrer');
+		return Array.from(values).join(' ');
+	}
+
+	function prepareExternalLinks(root = document) {
+		root.querySelectorAll('a[href]').forEach((anchor) => {
+			if (!(anchor instanceof HTMLAnchorElement) || !isExternalLink(anchor)) return;
+			anchor.target = '_blank';
+			anchor.rel = mergeRel(anchor);
+		});
+	}
+
+	prepareExternalLinks();
+
+	const observer = new MutationObserver((records) => {
+		for (const record of records) {
+			for (const node of record.addedNodes) {
+				if (!(node instanceof Element)) continue;
+				if (node.matches('a[href]')) prepareExternalLinks(node.parentElement || document);
+				else prepareExternalLinks(node);
+			}
+		}
+	});
+
+	observer.observe(document.documentElement, { childList: true, subtree: true });
+</script>

@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">Arquitetura de conteúdo</a>
   ·
-  <a href="./ROADMAP.md">Roadmap</a>
-  ·
   <a href="./examples/README.md">Exemplos</a>
 </p>
 
@@ -119,7 +117,6 @@ Compreender fluxos de trabalho de ponta a ponta por meio de tarefas reais: ler c
 | [Exemplos](./examples/README.md) | Reutilizar prompts e ativos de exemplo |
 | [Arquitetura de conteúdo](./docs/planning/content-architecture.md) | Entender o design de informação do site |
 | [Esboço de capítulos](./docs/planning/chapter-outline.md) | Ver cobertura de tópicos |
-| [Roadmap](./ROADMAP.md) | Planos e direção do projeto |
 
 ## Estrutura do conteúdo
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # Casos de tarefas reais
 ├── examples/                    # Prompts copiáveis e exemplos estendidos
 ├── docs/planning/               # Planejamento e manutenção de conteúdo
-└── ROADMAP.md                   # Roadmap e fases do projeto
 ```
 
 ## Desenvolvimento local

@@ -52,7 +52,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 		title: { 'zh-CN': '资源', en: 'Resources' },
 		links: [
 			{
-				href: 'https://github.com/cyberhope/codex-handbook',
+				href: 'https://github.com/hopecyb/CodexHandbook',
 				label: { 'zh-CN': 'GitHub 仓库', en: 'GitHub repository' },
 				external: true,
 			},

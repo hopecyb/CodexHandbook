@@ -365,9 +365,9 @@
 	display: none;
 }
 
-/* Fixed pagination bar — width aligned to article content */
+/* Fixed pagination bar — bottom sheet on mobile, article-aligned on desktop */
 .pagination-spacer {
-	height: 5.75rem;
+	height: 6.5rem;
 }
 
 .pagination-bar {
@@ -376,7 +376,7 @@
 	inset-block-end: 0;
 	inset-inline-start: 0;
 	inset-inline-end: 0;
-	padding: 0.75rem var(--sl-content-pad-x) 1rem;
+	padding: 0.75rem max(1rem, var(--sl-content-pad-x)) max(1rem, env(safe-area-inset-bottom));
 	background: linear-gradient(
 		to top,
 		var(--sl-color-bg) 65%,
@@ -394,11 +394,71 @@
 }
 
 .pagination-bar .pagination-links a {
+	min-width: 0;
+	white-space: normal;
 	box-shadow: var(--sl-shadow-sm);
 }
 
-html[data-has-sidebar] .pagination-bar {
-	inset-inline-start: var(--sl-content-inline-start, var(--sl-sidebar-width));
+html[data-has-sidebar] .site-footer {
+	padding-block-end: calc(6.5rem + 1.5rem);
+}
+
+@media (max-width: 49.999rem) {
+	.pagination-spacer {
+		height: 7.25rem;
+	}
+
+	.pagination-bar {
+		z-index: var(--sl-z-index-navbar);
+		padding-block-start: 0.75rem;
+		background: linear-gradient(
+			to top,
+			var(--sl-color-bg) 78%,
+			color-mix(in srgb, var(--sl-color-bg) 88%, transparent) 92%,
+			transparent
+		);
+	}
+
+	.pagination-bar .pagination-links {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.625rem;
+		width: min(100%, 34rem);
+	}
+
+	.pagination-bar .pagination-links a {
+		align-items: center;
+		justify-content: center;
+		min-height: 4.25rem;
+		padding: 0.75rem 0.7rem;
+		text-align: start;
+		line-height: 1.25;
+	}
+
+	.pagination-bar .pagination-links a:only-child {
+		grid-column: 1 / -1;
+	}
+
+	.pagination-bar .pagination-links a span {
+		min-width: 0;
+	}
+
+	.pagination-bar .pagination-links .link-title {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+	}
+
+	html[data-has-sidebar] .site-footer {
+		padding-block-end: calc(7.25rem + 1rem);
+	}
+}
+
+@media (min-width: 50rem) {
+	html[data-has-sidebar] .pagination-bar {
+		inset-inline-start: var(--sl-content-inline-start, var(--sl-sidebar-width));
+	}
 }
 
 @media (min-width: 72rem) {
@@ -423,11 +483,6 @@ html[data-has-sidebar] .pagination-bar {
 	html[data-has-sidebar] .scroll-to-top {
 		inset-block-end: calc(5.75rem + 1rem);
 	}
-}
-
-/* Site footer — below content; clear fixed pagination + right TOC */
-html[data-has-sidebar] .site-footer {
-	padding-block-end: calc(5.75rem + 1.5rem);
 }
 
 @media (min-width: 72rem) {

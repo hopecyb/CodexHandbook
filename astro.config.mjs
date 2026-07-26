@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
 
@@ -38,10 +39,57 @@ const sitemapLocales = {
 	vi: 'vi',
 };
 
+function mergeRel(value) {
+	const tokens = Array.isArray(value)
+		? value
+		: String(value || '')
+				.split(/\s+/)
+				.filter(Boolean);
+	return Array.from(new Set(tokens.concat('noopener', 'noreferrer'))).join(' ');
+}
+
+function isExternalUrl(value) {
+	if (typeof value !== 'string') return false;
+
+	try {
+		const url = new URL(value, siteUrl);
+		return (url.protocol === 'http:' || url.protocol === 'https:') && url.origin !== siteUrl;
+	} catch {
+		return false;
+	}
+}
+
+function rehypeExternalLinks() {
+	return function transform(tree) {
+		const visit = (node) => {
+			if (!node || typeof node !== 'object') return;
+
+			if (node.type === 'element' && node.tagName === 'a' && isExternalUrl(node.properties?.href)) {
+				node.properties = {
+					...node.properties,
+					target: '_blank',
+					rel: mergeRel(node.properties?.rel),
+				};
+			}
+
+			if (Array.isArray(node.children)) {
+				for (const child of node.children) visit(child);
+			}
+		};
+
+		visit(tree);
+	};
+}
+
 // https://astro.build/config
 export default defineConfig({
 	site: siteUrl,
 	redirects: legacyRedirects,
+	markdown: {
+		processor: unified({
+			rehypePlugins: [rehypeExternalLinks],
+		}),
+	},
 	integrations: [
 		sitemap({
 			i18n: {
@@ -146,7 +194,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/cyberhope/codex-handbook',
+					href: 'https://github.com/hopecyb/CodexHandbook',
 				},
 			],
 			sidebar: [

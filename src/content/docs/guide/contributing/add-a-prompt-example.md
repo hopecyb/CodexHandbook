@@ -3,7 +3,7 @@ title: 添加提示词示例
 description: 向 examples/prompts 提交可复现提示词，包含元数据与验收标准。
 ---
 
-提示词实例存放在仓库根目录 [`examples/prompts/`](https://github.com/cyberhope/codex-handbook/tree/main/examples/prompts)，由手册正文链接引用。设计规范见 [`docs/planning/examples-system.md`](/docs/planning/examples-system.md)。
+提示词实例存放在仓库根目录 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)，由手册正文链接引用。设计规范见 [`docs/planning/examples-system.md`](/docs/planning/examples-system.md)。
 
 ## 本页内容
 

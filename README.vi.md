@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">Kiến trúc nội dung</a>
   ·
-  <a href="./ROADMAP.md">Lộ trình</a>
-  ·
   <a href="./examples/README.md">Thư viện ví dụ</a>
 </p>
 
@@ -119,7 +117,6 @@ Hiểu quy trình end-to-end qua tác vụ thực: đọc code, sửa bug, viế
 | [Ví dụ](./examples/README.md) | Tái sử dụng prompts và tài sản mẫu |
 | [Kiến trúc nội dung](./docs/planning/content-architecture.md) | Nắm thiết kế thông tin của toàn site |
 | [Dàn ý chương](./docs/planning/chapter-outline.md) | Xem phạm vi chủ đề |
-| [Lộ trình](./ROADMAP.md) | Kế hoạch và hướng phát triển dự án |
 
 ## Cấu trúc nội dung
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # Case tác vụ thực tế
 ├── examples/                    # Prompts sao chép được và ví dụ mở rộng
 ├── docs/planning/               # Lập kế hoạch và bảo trì nội dung
-└── ROADMAP.md                   # Lộ trình và giai đoạn dự án
 ```
 
 ## Phát triển local

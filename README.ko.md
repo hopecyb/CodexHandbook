@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">콘텐츠 구조</a>
   ·
-  <a href="./ROADMAP.md">로드맵</a>
-  ·
   <a href="./examples/README.md">예제 라이브러리</a>
 </p>
 
@@ -119,7 +117,6 @@ Skills 설계·사용·유지·거버넌스를 학습하고, 한 번의 성공�
 | [Examples](./examples/README.md) | 프롬프트와 예제 자산을 직접 재사용 |
 | [콘텐츠 구조](./docs/planning/content-architecture.md) | 사이트 정보 설계를 빠르게 이해 |
 | [챕터 개요](./docs/planning/chapter-outline.md) | 주제 범위 확인 |
-| [로드맵](./ROADMAP.md) | 프로젝트 계획과 향후 방향 |
 
 ## 콘텐츠 구조
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # 실제 작업 사례
 ├── examples/                    # 복사 가능한 프롬프트와 확장 예제
 ├── docs/planning/               # 콘텐츠 계획 및 유지보수 자료
-└── ROADMAP.md                   # 프로젝트 로드맵과 단계
 ```
 
 ## 로컬 개발

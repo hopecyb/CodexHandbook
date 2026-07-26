@@ -29,7 +29,7 @@ description: 端到端真实任务——准备、执行、验证、失败恢复�
 | 研究与学习 | [竞品功能对比表](/cases/use-cases/research-and-learning/competitive-feature-matrix/) | 带来源的研究产出 |
 | 团队自动化 | [定时文档链接检查](/cases/use-cases/team-automation/scheduled-link-check/) · [Issue 分流建议](/cases/use-cases/team-automation/issue-triage-suggestions/) | CI 与工单轻量自动化 |
 
-可复制提示词见仓库 [`examples/prompts/`](https://github.com/cyberhope/codex-handbook/tree/main/examples/prompts)。更多领域案例见 [路线图](/ROADMAP/)。
+可复制提示词见仓库 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)。更多领域案例会持续补充到本案例库。
 
 ## 贡献方向
 

@@ -39,8 +39,6 @@
   ·
   <a href="./docs/planning/content-architecture.md">Content architecture</a>
   ·
-  <a href="./ROADMAP.md">Roadmap</a>
-  ·
   <a href="./examples/README.md">Examples</a>
 </p>
 
@@ -119,7 +117,6 @@ Understand end-to-end workflows through real tasks: reading code, fixing bugs, w
 | [Examples](./examples/README.md) | Reuse prompts and example assets directly |
 | [Content architecture](./docs/planning/content-architecture.md) | Understand the site information design |
 | [Chapter outline](./docs/planning/chapter-outline.md) | See topic coverage |
-| [Roadmap](./ROADMAP.md) | Project plans and direction |
 
 ## Content structure
 
@@ -131,7 +128,6 @@ Codex Handbook
 ├── src/content/docs/cases/      # Real task cases
 ├── examples/                    # Copyable prompts and extended examples
 ├── docs/planning/               # Content planning and maintenance
-└── ROADMAP.md                   # Project roadmap and phases
 ```
 
 ## Local development
