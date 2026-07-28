@@ -1,56 +1,56 @@
 ---
 title: Plugins
-description: Team distribution of extensions—Plugins are a packaging layer, not a new capability type.
+description: Página sobre cómo el equipo distribuye capacidades de extensión; primero entiende que es la capa de empaquetado, no un tipo de capacidad nuevo.
 locale: es
-source_locale: en
-source_revision: f7ad9b9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Plugins mainly solve how to ship and manage a set of extensions for others to install.
+Un Plugin resuelve sobre todo cómo empaquetar un conjunto de capacidades de extensión para que otros las instalen y gestionen.
 
-They focus on:
+Se acerca más a:
 
-- Packaging
-- Distribution
-- Upgrades
-- Permission governance
+- Empaquetado
+- Distribución
+- Actualización
+- Gobernanza de Permisos
 
-They are not a separate new capability type.
+No es un tipo de capacidad nuevo inventado por separado.
 
-## When this section applies
+## Escenarios de uso
 
-Mainly two situations:
+Este grupo apunta sobre todo a dos situaciones:
 
-- You are about to ship one extension pack to the whole team
-- You want to judge whether a plugin is worth installing
+- Vas a distribuir al equipo un conjunto unificado de capacidades de extensión
+- Quieres decidir si merece la pena instalar un Plugin
 
-For personal learning, one overview page is often enough.
+Si solo estás aprendiendo por tu cuenta, suele bastar con una página de conceptos.
 
-## Entry in this section
+## Entrada del grupo
 
-- [Plugins overview](/skills/plugins/plugins-overview/): How Plugin relates to Skill and MCP, and why it is a distribution layer
+- [Descripción general de Plugins](/skills/plugins/plugins-overview/): la relación del Plugin con Skill y MCP, y por qué se parece más a una capa de distribución
 
-## Common misconceptions
+## Errores frecuentes
 
-### 1. Installing a Plugin is automatically safe
+### 1. Instalar un Plugin implica seguridad automática
 
-A Plugin only makes capabilities easier to distribute—not implicitly trusted or low-permission.
+El Plugin solo hace más cómoda la distribución de capacidades; no implica confianza por defecto ni Permiso bajo por defecto.
 
-### 2. More features means worth installing
+### 2. Si tiene muchas funciones, merece la pena instalarlo
 
-Better to check first:
+Merece más mirar primero:
 
-- Is the source trustworthy?
-- How wide are permissions?
-- Can the team upgrade, roll back, and audit?
+- Si la fuente es de confianza
+- Si el alcance de Permisos es grande
+- Si el equipo puede actualizar, hacer rollback y auditar
 
-A Plugin is a distribution pack for extensions—not a replacement for Skill or MCP.
+El Plugin se parece más a un paquete de distribución de capacidades de extensión; tampoco sustituye a Skill o MCP.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI  
-**Verification basis:** Plugin catalog, install policy, and surface support are still evolving; this section states those details too fixedly—marked `outdated` pending rewrite for current Plugin catalog.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** App / CLI  
+**Nota de revisión:** El catálogo de Plugins, la política de instalación y el soporte de superficie siguen evolucionando; este grupo fijó demasiado esos detalles, por eso se marca `outdated` hasta reescribirlo según el catálogo vigente.  
+**Última verificación:** 2026-07-26

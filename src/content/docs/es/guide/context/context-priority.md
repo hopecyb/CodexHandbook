@@ -1,25 +1,65 @@
 ---
-title: Context priority
-description: Who wins when instructions conflict.
+title: Prioridad del Contexto
+description: Quién manda cuando las instrucciones chocan.
 locale: es
-source_locale: en
-source_revision: 5bba277
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+Conflictos habituales: descripción del proyecto vs Prompt actual vs conversación antigua. Principio práctico:
 
-Common conflicts: project instructions vs. current prompt vs. old conversation. Practical principles:
+1. El **Prompt de la Tarea actual** tiene la máxima prioridad para el alcance de esta vez
+2. Las prohibiciones de seguridad a nivel de proyecto (p. ej. «prohibido push», «prohibidas claves de producción») deben cumplirse siempre
+3. Si detectas conflicto, escribe con claridad: «Prevalece este mensaje; ignora las instrucciones anteriores sobre X»
 
-1. **Current task prompt** takes priority for this session's scope
-2. Project-level security bans (e.g., "no push", "no production secrets") should always be followed
-3. When you find a conflict, state explicitly: "This message overrides previous instructions about X"
+La «prioridad del Contexto» es, cuando chocan varias instrucciones, cuál manda.
 
-Team-enforced policies may override personal preferences (covered in later governance chapters).
+## Qué significa realmente «prioridad»
+
+Los conflictos más habituales son cotidianos:
+
+- Antes dijiste «solo análisis de lectura»
+- Después dices «cámbiamelo directamente»
+- En el proyecto además pone «prohibido tocar cierto directorio»
+
+Si esa información no está en capas, el resultado es fácil: quiere cambiar y a la vez no debería.
+
+## Malentendidos frecuentes
+
+### 1. Si lo digo otra vez después, ¿cubre todo lo anterior?
+
+No del todo. Si lo anterior es una restricción de seguridad a nivel de proyecto, una instrucción temporal posterior no necesariamente la anula.
+
+### 2. Da igual la información en conflicto; ya lo entenderá
+
+Precisamente entonces es más fácil desviarse. Cuanta más información en conflicto, más hay que decirle con claridad «cuál manda».
+
+### 3. La prioridad del Contexto es solo un problema teórico
+
+Es muy práctica; afecta directamente a:
+
+- Si cambia por error
+- Si incumple las reglas del repositorio
+- Si arrastra una Tarea antigua a una nueva
+
+## Cómo escribir más claro en un conflicto
+
+Cuando sospeches que las instrucciones anteriores y posteriores chocan, dilo directamente:
+
+```text
+Prevalece este mensaje; ignora las instrucciones anteriores sobre X.
+```
+
+Ese tipo de frase es especialmente útil en hilos largos.
+
+En cuanto el Contexto choque, lo mejor es indicar «esta vez se escucha cuál». Las políticas obligatorias del equipo también pueden estar por encima de las preferencias personales.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Esta página solo explica cómo tratar Contexto en conflicto; el cuerpo no depende de la interfaz de un cliente concreto ni de hechos volátiles de producto; conceptos y ejemplos se han revisado.  
+**Última verificación:** 2026-07-26

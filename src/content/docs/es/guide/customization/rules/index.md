@@ -1,34 +1,35 @@
 ---
-title: Rules
-description: Overview of allow/deny, command rules, and team policy—what to block, what to warn, and what to standardize.
+title: Reglas
+description: Página de introducción a allow/deny, reglas de comandos y política de equipo — primero aclara qué hay que bloquear y qué hay que recordar.
 locale: es
-source_locale: en
-source_revision: 4faab45
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The rules group is easy for beginners to mistake for “writing a few more reminders for Codex.”
 
-More accurately, rules answer: which actions are allowed by default, which to block, and which to enforce uniformly as a team standard.
+El grupo de reglas es el que más fácil confunden los principiantes con «escribirle a Codex unas cuantas recordatorios más».
 
-## Recommended Order
+Es más preciso entenderlo así: las reglas resuelven «qué acciones se permiten por defecto, cuáles hay que bloquear y cuáles deben seguir un estándar de equipo unificado».
 
-1. [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Command Rules](/guide/customization/rules/command-rules/)
-3. [Team Rules](/guide/customization/rules/team-rules/)
+## Orden recomendado
 
-## What This Group Helps You Solve
+1. [Patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/)
+2. [Reglas de comandos](/guide/customization/rules/command-rules/)
+3. [Reglas de equipo](/guide/customization/rules/team-rules/)
 
-- Which actions should be blocked outright
-- Which limits belong in explicit rules instead of verbal reminders
-- How teams keep the same boundaries for similar risks
+## Qué te ayuda a resolver este grupo
 
-Rules exist to nail down boundaries so the system executes against them.
+- Qué acciones deberían bloquearse directamente
+- Qué límites conviene escribir como reglas explícitas, en lugar de confiar en recordatorios orales
+- Cómo garantizar en el equipo el mismo límite ante riesgos del mismo tipo
+
+Las reglas existen para dejar el límite cerrado y que el sistema lo ejecute.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked against this repo’s current rules subsection structure and entry links; this page only navigates by allow/deny, command rules, and team rules grouping and does not declare specific rule implementation or default blocking behavior.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / Cloud  
+**Base de verificación:** Contrastado con la estructura actual del subcapítulo rules de este repositorio y sus enlaces de entrada; esta página solo navega por grupos allow/deny, reglas de comandos y reglas de equipo, sin declarar por sí sola implementaciones concretas de reglas ni comportamientos de bloqueo por defecto.  
+**Última verificación:** 2026-07-26

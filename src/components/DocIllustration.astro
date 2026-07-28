@@ -13,7 +13,7 @@ const rawSegments = entryId.split('/').filter(Boolean);
 const segments = localeSegments.has(rawSegments[0] ?? '') ? rawSegments.slice(1) : rawSegments;
 
 const routeLocale = Astro.locals.starlightRoute?.locale ?? 'root';
-const uiLang: 'zh' | 'ja' | 'fr' | 'ko' | 'en' =
+const uiLang: 'zh' | 'ja' | 'fr' | 'ko' | 'es' | 'en' =
 	routeLocale === 'root' || routeLocale === 'zh-tw'
 		? 'zh'
 		: routeLocale === 'ja'
@@ -22,7 +22,9 @@ const uiLang: 'zh' | 'ja' | 'fr' | 'ko' | 'en' =
 				? 'fr'
 				: routeLocale === 'ko'
 					? 'ko'
-					: 'en';
+					: routeLocale === 'es'
+						? 'es'
+						: 'en';
 
 const moduleKey = segments[0] ?? 'guide';
 const topicKey = segments[1] ?? 'overview';
@@ -190,6 +192,37 @@ const moduleMapKo: Record<string, ModuleVisual> = {
 	},
 };
 
+const moduleMapEs: Record<string, ModuleVisual> = {
+	guide: {
+		label: 'Guide',
+		accent: '#f97316',
+		secondary: '#fed7aa',
+		glyph: '01',
+		orbit: ['Ruta', 'Permisos', 'Verificar'],
+	},
+	prompts: {
+		label: 'Prompts',
+		accent: '#0ea5e9',
+		secondary: '#bae6fd',
+		glyph: '02',
+		orbit: ['Objetivo', 'Límites', 'Hecho'],
+	},
+	skills: {
+		label: 'Skills',
+		accent: '#14b8a6',
+		secondary: '#99f6e4',
+		glyph: '03',
+		orbit: ['Flujo', 'Extender', 'Reutilizar'],
+	},
+	cases: {
+		label: 'Cases',
+		accent: '#f43f5e',
+		secondary: '#fecdd3',
+		glyph: '04',
+		orbit: ['Tarea', 'Ejecutar', 'Repaso'],
+	},
+};
+
 const moduleMap =
 	uiLang === 'zh'
 		? moduleMapZh
@@ -199,7 +232,9 @@ const moduleMap =
 				? moduleMapFr
 				: uiLang === 'ko'
 					? moduleMapKo
-					: moduleMapEn;
+					: uiLang === 'es'
+						? moduleMapEs
+						: moduleMapEn;
 
 const moduleVisual =
 	moduleMap[moduleKey] ??
@@ -217,7 +252,9 @@ const moduleVisual =
 						? ['Contenu', 'Structure', 'Collab']
 						: uiLang === 'ko'
 							? ['내용', '구조', '협업']
-							: ['Content', 'Structure', 'Collab'],
+							: uiLang === 'es'
+								? ['Contenido', 'Estructura', 'Colab']
+								: ['Content', 'Structure', 'Collab'],
 	} satisfies ModuleVisual);
 
 const topicSeed = `${moduleKey}/${topicKey}/${title}`;
@@ -458,6 +495,49 @@ const hintMapKo: Record<string, PageHint> = {
 	},
 };
 
+const hintMapEs: Record<string, PageHint> = {
+	'local-vs-cloud': {
+		variant: 'split',
+		chips: ['Local', 'Cloud', 'Elegir escenario'],
+		kicker: 'Elegir dónde ejecutar',
+	},
+	'files-tools-and-commands': {
+		variant: 'terminal',
+		chips: ['Archivos', 'Herramientas', 'Comandos'],
+		kicker: 'Poner límites a las acciones',
+	},
+	'permissions-and-approvals': {
+		variant: 'shield',
+		chips: ['Aprobación', 'Alcance', 'Confirmar'],
+		kicker: 'Confirmar primero las acciones de riesgo',
+	},
+	'sandbox-and-network': {
+		variant: 'shield',
+		chips: ['Sandbox', 'Red', 'Límite de riesgo'],
+		kicker: 'Primero cerrar, luego abrir',
+	},
+	'run-your-first-task': {
+		variant: 'flow',
+		chips: ['Objetivo', 'Límites', 'Aceptación'],
+		kicker: 'Empezar con una tarea pequeña',
+	},
+	'review-the-result': {
+		variant: 'document',
+		chips: ['diff', 'Aceptación', 'Corregir'],
+		kicker: 'No confiar solo en «listo»',
+	},
+	'undo-and-recover': {
+		variant: 'flow',
+		chips: ['Deshacer', 'Revertir', 'Reintentar'],
+		kicker: 'Volver primero a un estado seguro',
+	},
+	'context-and-files': {
+		variant: 'document',
+		chips: ['Contexto', 'Archivos', 'Foco'],
+		kicker: 'Tener a mano la info correcta',
+	},
+};
+
 const hintMap =
 	uiLang === 'zh'
 		? hintMapZh
@@ -467,7 +547,9 @@ const hintMap =
 				? hintMapFr
 				: uiLang === 'ko'
 					? hintMapKo
-					: hintMapEn;
+					: uiLang === 'es'
+						? hintMapEs
+						: hintMapEn;
 
 const pageHint = hintMap[topicKey] ?? {
 	variant: 'document' as const,
@@ -520,16 +602,27 @@ const splitLabels =
 							bottomHint: '로컬 파일 / 긴 작업 / 원격 저장소',
 							ariaSuffix: '주제 일러스트',
 						}
-					: {
-							yourComputer: 'Your computer',
-							remoteRunner: 'Remote runner',
-							howToChoose: 'How to choose',
-							byScenario: 'By task scenario',
-							fastIterate: 'Iterate fast',
-							longTasks: 'Long tasks keep going',
-							bottomHint: 'Local files / long tasks / remote repos',
-							ariaSuffix: 'topic illustration',
-						};
+					: uiLang === 'es'
+						? {
+								yourComputer: 'Tu ordenador',
+								remoteRunner: 'Ejecutor remoto',
+								howToChoose: 'Cómo elegir',
+								byScenario: 'Según el escenario',
+								fastIterate: 'Iterar rápido',
+								longTasks: 'Las tareas largas siguen',
+								bottomHint: 'Archivos locales / tareas largas / repos remotos',
+								ariaSuffix: 'ilustración del tema',
+							}
+						: {
+								yourComputer: 'Your computer',
+								remoteRunner: 'Remote runner',
+								howToChoose: 'How to choose',
+								byScenario: 'By task scenario',
+								fastIterate: 'Iterate fast',
+								longTasks: 'Long tasks keep going',
+								bottomHint: 'Local files / long tasks / remote repos',
+								ariaSuffix: 'topic illustration',
+							};
 ---
 
 <figure class="doc-illustration" aria-label={`${title} ${splitLabels.ariaSuffix}`}>

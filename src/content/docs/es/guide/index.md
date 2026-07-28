@@ -1,72 +1,72 @@
 ---
-title: Codex guide
-description: Understand Codex, choose a client, complete your first task, and learn permissions, context, and verification.
+title: Guía de Codex
+description: "Entiende Codex, elige un cliente, completa tu primera Tarea y aprende Permisos, Contexto y Verificación."
 locale: es
-source_locale: en
-source_revision: 8858fca
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Codex guide
+# Guía de Codex
 
-This section helps you understand what Codex is, what it is good for, and how to move from first use to a stable workflow.
+Esta sección te ayuda a entender qué es Codex, para qué sirve y cómo pasar del primer uso a un flujo de trabajo estable.
 
-If this is your first time opening the handbook, do not treat it as a book to read cover to cover. Use it as a map from first steps toward fluency.
+Si abres este handbook por primera vez, no lo trates como un libro que hay que leer de cabo a rabo. Úsalo como un mapa «del primer contacto a usarlo con soltura».
 
-You do not need every term, product, and workflow upfront. Find your current stage and proceed in order.
+No necesitas dominar de entrada todos los términos, productos y flujos. Encuentra tu etapa actual y avanza en orden.
 
-## What this section covers
+## Qué cubre esta parte
 
-- Where to start on first contact with Codex
-- Which client to pick first
-- What to learn after your first task
-- Where to return for permissions, context, and verification questions
+- Dónde mirar la primera vez que contactas con Codex
+- Qué cliente elegir primero
+- Qué capacidad complementar tras la primera Tarea
+- A qué capítulo volver cuando hay problemas de Permisos, Contexto o Verificación
 
-## Recommended order
+## Orden recomendado
 
-1. [Start here](/guide/start-here/) — shortest path for new readers
-2. [What is Codex](/guide/start-here/what-is-codex/)
-3. [Choose your client](/guide/choose-your-client/)
-4. [Complete your first task](/cases/first-task/)
-5. [Permissions and sandbox](/guide/permissions-and-sandbox/)
-6. [Context and files](/guide/context-and-files/)
-7. [Verification](/guide/verification/)
-8. When stuck, see [Troubleshooting](/guide/troubleshooting/)
+1. [Empieza aquí](/guide/start-here/) — ruta más corta para lectores nuevos
+2. [Qué es Codex](/guide/start-here/what-is-codex/)
+3. [Elige un cliente](/guide/choose-your-client/)
+4. [Completa la primera Tarea](/cases/first-task/)
+5. [Permisos y Sandbox](/guide/permissions-and-sandbox/)
+6. [Contexto y archivos](/guide/context-and-files/)
+7. [Verificación](/guide/verification/)
+8. Si hay problemas, consulta [Resolución de problemas](/guide/troubleshooting/)
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. I should read the entire handbook before starting
+### 1. Debo leer todo el handbook antes de empezar a usarlo
 
-For most people, a better rhythm is:
+Para la mayoría, el ritmo más adecuado es:
 
-- Learn basic safety and collaboration first
-- Run one small task
-- Return with real questions
+- Entender primero la seguridad y la forma básica de colaborar
+- Cerrar una Tarea pequeña
+- Volver a leer con problemas reales
 
-### 2. So many chapters means I am not ready yet
+### 2. Hay tantos capítulos que aún no estoy listo para empezar
 
-Many chapters exist for later lookup—not because you must master everything on day one.
+Hay muchos capítulos para que puedas volver a consultarlos después; no implica que debas dominarlos todos al principio.
 
-### 3. I only need one client, so the rest does not matter
+### 3. Si elijo un cliente, el resto del contenido ya no me importa
 
-The client is just the entry point; permissions, context, and verification recur across all of them.
+El cliente solo cambia la entrada; muchos conceptos centrales —Permisos, Contexto, Verificación— reaparecen en todos los extremos.
 
-## Product entry points
+## Entradas de producto
 
-- [Desktop App](/guide/desktop-app/)
+- [App de escritorio](/guide/desktop-app/)
 - [CLI](/guide/cli/)
-- [IDE extension](/guide/ide/)
-- [Web and Cloud](/guide/web-and-cloud/)
+- [Extensión IDE](/guide/ide/)
+- [Web y Cloud](/guide/web-and-cloud/)
 
-## More topics
+## Más temas
 
-- [Foundations](/guide/foundations/)
-- [Getting started](/guide/getting-started/)
-- [Learning paths](/guide/learning-paths/)
-- [Customization](/guide/customization/)
-- [Reference](/guide/reference/)
-- [Team and enterprise](/guide/team-enterprise/)
-- [Developer platform](/guide/developer-platform/)
+- [Conceptos básicos](/guide/foundations/)
+- [Primeros pasos](/guide/getting-started/)
+- [Rutas de aprendizaje](/guide/learning-paths/)
+- [Personalización](/guide/customization/)
+- [Referencia](/guide/reference/)
+- [Equipos y empresa](/guide/team-enterprise/)
+- [Plataforma para desarrolladores](/guide/developer-platform/)
 
-Use this guide to find "what should I read next"—usually more useful than trying to learn all of Codex at once.
+Usar esta guía para responder «¿qué miro ahora?» suele ser más útil que intentar aprender todo Codex de una vez.

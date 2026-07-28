@@ -1,136 +1,136 @@
 ---
-title: Delegate and follow up
-description: Hand tasks to Cloud from App, IDE, or phone—and review, approve, and iterate after you leave your desk.
+title: Delegar y hacer seguimiento
+description: Entregar Tareas a Cloud desde App, IDE o móvil, y seguir viendo, Aprobando e iterando lejos del ordenador.
 locale: es
-source_locale: en
-source_revision: 8ccb103
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Delegation** sends a task to Cloud to run in a remote environment; **follow-up** is checking progress, adding context, approving risky steps, and requesting changes while a task runs or after it finishes. This is the core workflow for making progress away from your desk.
+**Delegar** es entregar la Tarea a Cloud para que se ejecute en un entorno remoto; **hacer seguimiento** es, mientras corre o al terminar, ver el progreso, completar el Contexto, Aprobar operaciones peligrosas y pedir cambios. Es el flujo central de «seguir avanzando lejos del puesto de trabajo».
 
-## What's covered
+## Contenido
 
-- When to delegate to Cloud instead of running locally
-- Differences across entry points
-- How to follow up effectively and avoid "fire and forget"
+- Cuándo delegar a Cloud en lugar de correr en local
+- Diferencias al lanzar la delegación desde cada entrada
+- Cómo hacer un seguimiento efectivo y evitar «lo tiro y me olvido»
 
-## How this flow works
+## Cómo va este tipo de flujo
 
-Cloud tasks usually look like:
+Una Tarea Cloud se parece más a esto:
 
-- You explain the task clearly
-- It runs remotely
-- You may need to add constraints or approve mid-flight
-- After completion you still review diffs, PRs, and decide next steps
+- Primero formular bien la Tarea
+- Empieza a correr en remoto
+- A mitad de camino puede hacer falta una restricción o una Aprobación
+- Al terminar aún hay que mirar el diff, el PR y decidir si continuar
 
-Cloud only moves execution off your machine—you still own follow-up and decisions.
+Cloud solo cambia el lugar de ejecución; el seguimiento y el juicio siguen siendo tuyos.
 
-## Who it's for
+## Para quién
 
-| Scenario | Suggestion |
+| Escenario | Sugerencia |
 |---|---|
-| Long builds/tests | Delegate to Cloud; keep working locally |
-| Commute / between meetings | Check status on phone; approve critical steps |
-| Standardized environment needed | Cloud + [environment config](/guide/web-and-cloud/cloud-environments/) |
-| Quick local experimentation | Prefer [desktop App](/guide/desktop-app/) or [IDE](/guide/ide/local-task-workflow/) |
+| Build/pruebas largas | Delega a Cloud; en local sigue con otra cosa |
+| Trayecto / huecos entre reuniones | Ver estado y Aprobar pasos clave en el móvil |
+| Necesitas entorno estandarizado | Cloud + [configuración de entorno](/guide/web-and-cloud/cloud-environments/) |
+| Prueba-error rápida en local | Prioriza [App de escritorio](/guide/desktop-app/) o [IDE](/guide/ide/local-task-workflow/) |
 
-## When delegation makes sense
+## Cuándo conviene delegar
 
-If unsure:
+Si no tienes claro si delegar:
 
-- Still iterating and want to steer live: stay local
-- Long runtime, want to walk away, or need a shared environment: delegate to Cloud
+- La Tarea aún se prueba una y otra vez y quieres ir viendo y cambiando: primero local
+- La Tarea tarda mucho, quieres alejarte del ordenador o entregarla a un entorno unificado: entonces Cloud
 
-## Pre-delegation checklist
+## Comprobación antes de delegar
 
-- [ ] [GitHub connected](/guide/web-and-cloud/connect-github/); branch strategy is clear
-- [ ] Task description includes goal, scope, prohibitions, and acceptance (see [task anatomy](/prompts/task-anatomy/))
-- [ ] Required unpushed local commits are pushed—or do the work locally instead
-- [ ] Secrets and [outbound access](/guide/web-and-cloud/internet-access/) are ready
+- [ ] [GitHub conectado](/guide/web-and-cloud/connect-github/); estrategia de rama objetivo clara
+- [ ] La descripción de la Tarea incluye: objetivo, alcance, prohibiciones, forma de aceptación (véase [Anatomía de una buena Tarea](/prompts/task-anatomy/))
+- [ ] Si hacen falta commits locales sin push, haz push primero o hazlo en local
+- [ ] Secrets / [necesidad de salida a red](/guide/web-and-cloud/internet-access/) listos
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. After delegating, I can ignore it
+### 1. Tras delegar, ya no hace falta mirar
 
-That wastes the most time. The later you catch drift, the more rework.
+Eso es lo que más tiempo pierde. Si la dirección se desvía, cuanto más tarde lo detectes, más retrabajo.
 
-### 2. Follow-up means "nudge for status"
+### 2. Hacer seguimiento es «empujar el progreso»
 
-More valuable follow-up:
+El seguimiento de más valor son estas acciones:
 
-- Fill missing context
-- Narrow scope
-- Reject unsafe operations
-- Request fixes after completion
+- Completar Contexto que faltaba
+- Acotar el alcance
+- Rechazar operaciones peligrosas que no deben pasar
+- Al terminar, pedir más correcciones
 
-### 3. Delegation vs local is either/or
+### 3. Delegar y local son opuestos
 
-A common real pattern:  
-**explore locally → delegate the long run → finish locally.**
+Un flujo real muy habitual es:  
+**explorar en local → delegar la Tarea larga → retomar el cierre en local.**
 
-## Delegation by entry point (conceptual)
+## Delegación desde cada entrada (concepto)
 
-| Entry | Characteristics |
+| Entrada | Peculiaridad |
 |---|---|
-| [Desktop App · local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/) | Same project view; switch local/Cloud |
-| [IDE · Cloud tasks](/guide/ide/cloud-task-workflow/) | Carries editor selection and open-file context |
-| Web / mobile | Light status, approvals, short follow-ups |
+| [App de escritorio · Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/) | Misma vista de proyecto; cambiar entre local/Cloud |
+| [IDE · Tarea Cloud](/guide/ide/cloud-task-workflow/) | Lleva el código seleccionado y el Contexto de archivos abiertos |
+| Web / móvil | Ver ligero, Aprobar, añadir una línea de seguimiento |
 
-Buttons and naming depend on the current product.
+Botones y nombres según el producto actual.
 
-## Recommended follow-up rhythm
+## Ritmo de seguimiento recomendado
 
 ```text
-Delegate → confirm environment started → (optional) check logs mid-flight
-    → approve risky steps → on completion review diff/PR
-    → if unsatisfied: add instructions or start a follow-up task
+Lanzar delegación → confirmar que el entorno arrancó → (opcional) mirar logs a mitad
+    → Aprobar en puntos de operación peligrosa → al terminar mirar diff/PR
+    → Si no convence: instrucción adicional o nueva Tarea de seguimiento
 ```
 
-A practical minimum:  
-**After sending, look once mid-flight and once at the end.**
+Orden de acción:  
+**Tras enviarla, mira al menos una vez a mitad de camino y una vez al terminar.**
 
-### Mid-flight intervention
+### Intervención a mitad de camino
 
-- **Add context**: if files or constraints were missing, say so in a follow-up message to preserve history
-- **Narrow scope**: if drifting, say "stop changing X; only do Y"
-- **Approve**: see [human approval patterns](/cases/workflows/human-approval-patterns/)—prefer slow and explicit over bulk-approving unknown shell
+- **Completar Contexto**: si faltaba un archivo o una restricción, dilo en un mensaje de seguimiento; evita reabrir la Tarea y perder historial
+- **Acotar alcance**: si se desvía, deja claro «deja de cambiar X; solo haz Y»
+- **Aprobar**: véase [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/) — mejor un paso más lento que aprobar en lote shells desconocidos
 
-### After completion
+### Al terminar
 
-- Review diff in the [create PR](/guide/web-and-cloud/create-pull-requests/) flow
-- Validate with [Cloud code review](/guide/web-and-cloud/code-review/) or local branch checkout
-- Need more changes: delegate again on the same PR or take over locally
+- Revisar el diff en el flujo de [Crear PR](/guide/web-and-cloud/create-pull-requests/)
+- Validar con [Revisión de código en Cloud](/guide/web-and-cloud/code-review/) o haciendo checkout local de la rama
+- Si hace falta seguir cambiando: delegar de nuevo sobre el mismo PR, o retomar en local
 
-## Notifications
+## Combinar con notificaciones
 
-Enable [desktop notifications](/guide/desktop-app/notifications/) or mobile push so tasks do not stall waiting for approval. Teams should agree who can approve production-related repos and when.
+Activa [notificaciones de escritorio](/guide/desktop-app/notifications/) o push móvil para evitar que la Tarea se quede colgada sin Aprobación. El equipo debería acordar: en qué franjas debe haber alguien que pueda Aprobar repos relacionados con producción.
 
-## Common mistakes
+## Errores frecuentes
 
-- Vague delegation leading to large unrequested refactors
-- Half-done local edits while Cloud starts from remote main
-- Never checking mid-flight; discovering wrong direction at the end
-- "LGTM" on a PR without running tests
-- Treating "remote execution" as "remote responsibility"
+- Texto de delegación demasiado vago; Cloud «entiende» solo y hace un refactor amplio
+- Local a medias sin commit, y se delega a Cloud desde main remoto
+- Nunca mirar a mitad; al terminar descubres que la dirección era incorrecta y se pierde toda la ronda de entorno
+- En el PR solo «LGTM» sin correr pruebas
+- Confundir «ejecución remota» con «responsabilidad remota»
 
-## Acceptance checklist
+## Lista de aceptación
 
-- [ ] Successfully started and completed one Cloud task from at least one entry point
-- [ ] Added an effective constraint while the task was running
-- [ ] Produced a PR or branch reviewed by a human diff pass
+- [ ] Puedes lanzar y completar una Tarea Cloud desde al menos una entrada
+- [ ] Puedes añadir una restricción efectiva mientras corre la Tarea
+- [ ] Produce PR o rama, y pasó por revisión humana del diff
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex Cloud task docs
+- Documentación de Tareas de OpenAI Codex Cloud
 - stormzhang `10-cloud.md`, `27-mobile.md`
 - KimYx0207 CX-10
-- codex.bozhouai.com App/Cloud collaboration sections
+- Capítulos de colaboración App/Cloud de codex.bozhouai.com
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / App / IDE / Mobile  
-**Review note:** This page depends on current product behavior for starting or following Cloud tasks from App, IDE, Web, and phone—capabilities that have changed quickly; align line by line with official docs before upgrading from `outdated`.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Productos aplicables:** Cloud / App / IDE / Mobile  
+**Nota de revisión:** Esta página depende de la forma actual del producto para lanzar o seguir Tareas Cloud desde App, IDE, Web y móvil; esas capacidades multiplataforma han cambiado rápido en los últimos meses; hasta alinear ítem a ítem con la documentación oficial vigente, conviene `outdated`.  
+**Última verificación:** 2026-07-26

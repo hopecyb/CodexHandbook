@@ -1,127 +1,133 @@
 ---
-title: Images and Screenshots
-description: Provide screenshots and design inputs to Codex; manage image files in tasks.
+title: Imágenes y capturas
+description: Proporciona capturas y diseños a Codex, y gestiona archivos de imagen en la tarea.
 locale: es
-source_locale: en
-source_revision: 79bbcdd
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Images let the Agent **see** UI issues, design intent, or whiteboard sketches. This page covers input (images you provide) and image files in the repo; for generating new images see [Image generation](/guide/tools/image-generation/).
 
-When tasking with screenshots, say what to look at and why it matters.
+Las imágenes permiten al Agent **ver** problemas de interfaz, intención de diseño o bocetos de pizarra. Esta página cubre la entrada (imágenes que aportas) y la gestión de archivos de imagen en el repositorio; para generar imágenes nuevas, ver [Generación de imágenes](/guide/tools/image-generation/).
 
-## What this page covers
+Al encargar una tarea con capturas, conviene que sepa dónde mirar y por qué ahí hay un problema.
 
-- How to attach screenshots effectively
-- Using design exports / Figma
-- Image size in repo and context
+## Contenido de esta página
 
-## Input image scenarios
+- Cómo adjuntar capturas de la forma más eficaz
+- Cómo usar exportaciones de diseño / Figma
+- Problemas de tamaño de imagen en el repositorio y el contexto
 
-| Scenario | Approach |
+## Escenarios de entrada de imagen
+
+| Escenario | Enfoque |
 |---|---|
-| UI bug | Screenshot + text marking the problem area |
-| Design implementation | Exported PNG + breakpoints and component library |
-| Architecture whiteboard | Clear photo or export + legend |
-| Error dialog | Full error text visible—not a cropped corner |
+| Bug de UI | Captura + texto que marque la zona anómala |
+| Fidelidad al diseño | Exportar PNG + indicar breakpoints y biblioteca de componentes |
+| Pizarra de arquitectura | Foto nítida o exportación + leyenda |
+| Ventana de error | Incluye el texto completo del error; evita cortar solo una esquina |
 
-Deep dive: [Prompting with images](/prompts/prompting-with-images/)
+Profundidad: [Prompt con imágenes](/prompts/prompting-with-images/)
 
-## What images actually add
+## Qué aporta realmente la imagen
 
-Best for information that is hard in words alone:
+Lo más valioso de una imagen es mostrar lo que cuesta describir solo con texto, por ejemplo:
 
-- How layout is wrong
-- Where a button is squeezed
-- What a dialog says
+- Cómo está torcido el layout
+- Hasta dónde se aprieta el botón
+- Qué dice exactamente el diálogo
 
-Images do not automatically tell Codex:
+Pero la imagen sola no le dice automáticamente a Codex:
 
-- What you care about most
-- Expected change
-- Whether this is “current” or “target”
+- Qué bloque te importa más
+- Cómo quieres que lo cambie
+- Si es la «situación actual» o el «efecto objetivo»
 
-Pair images with a direct sentence.
+Por eso la imagen suele ir acompañada de una frase directa.
 
-## Quality requirements
+## Requisitos de calidad
 
-- **Resolution**: text readable; avoid blurry thumbnails
-- **Crop**: remove irrelevant desktop, sensitive notification bar
-- **Annotation**: arrows/circles OK—repeat key points in text
-- **Multiple images**: pair “current / expected”
+- **Resolución**: texto legible; evita miniaturas borrosas
+- **Recorte**: quita escritorio ajeno y datos sensibles de la barra de notificaciones
+- **Anotaciones**: flechas/círculos sirven, pero repite el punto clave en texto
+- **Varias imágenes**: súbelas emparejadas «actual / esperado»
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. Screenshot ≠ automatic understanding
+### 1. Enviar una captura no significa que entienda el problema solo
 
-Screenshots are evidence—you still need:
+La captura aporta evidencia visual, pero conviene añadir:
 
-- Where the problem is
-- What you want changed
-- Which image is current vs target
+- Dónde está el problema
+- Cómo quieres cambiarlo
+- Cuál es la actual y cuál el objetivo
 
-### 2. Bigger is not always better
+### 2. Cuanto más grande y nítida, no siempre mejor
 
-Huge originals add noise and bloat repo/context.
+Una original demasiado grande trae dos problemas:
 
-### 3. Design image alone is not enough
+- Demasiada información irrelevante
+- Más peso en el repositorio o el contexto
 
-For “implement from design,” also specify:
+### 3. Solo enviar el diseño aún no basta
 
-- Breakpoints
-- Component constraints
-- What is fixed vs flexible
+Si es «implementar según la imagen», añade también:
 
-## Images in the repo
+- Requisitos de breakpoints
+- Restricciones de componentes
+- Dónde se puede improvisar y dónde no
 
-| Practice | Why |
+## Imágenes en el repositorio
+
+| Práctica | Motivo |
 |---|---|
-| Unified `assets/` or `docs/images/` | Easier maintenance |
-| WebP/compression | Control clone size |
-| Meaningful filenames | `login-form-mobile.png` not `image1.png` |
-| Alt text (in docs) | Accessibility |
+| Directorio unificado `assets/` o `docs/images/` | Más fácil de mantener |
+| WebP / compresión | Controlar el tamaño del clone |
+| Nombres con sentido | `login-form-mobile.png`, no `image1.png` |
+| Texto alt (en documentos) | Accesibilidad |
 
-## Copy-paste prompt pattern
+## Forma de escritura aplicable directamente
+
+Puedes escribir:
 
 ```text
-First image is current page, second is desired result.
-Focus on hero title area and button spacing.
-Do not infer business logic from screenshots—layout and visuals only.
+La primera imagen es la página actual; la segunda es el efecto esperado.
+Céntrate en el área del título de la primera pantalla y el espaciado de los botones.
+No adivines lógica de negocio a partir de la captura; solo trata lo visual y el layout.
 ```
 
-## Privacy and security
+## Privacidad y seguridad
 
-- Screenshots may contain customer data, internal URLs, tokens—redact first
-- Do not send config screens with secrets to untrusted tasks
-- [Sensitive context](/guide/context/sensitive-context/)
+- Las capturas pueden contener datos de clientes, URLs internas, tokens — enmascáralos primero
+- No envíes pantallas de configuración con secretos a tareas no confiables
+- [Contexto sensible](/guide/context/sensitive-context/)
 
-## Reference sources
+## Referencias
 
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
 
-## Verification
+## Aceptación
 
-For “implement from image” tasks:
+Para tareas del tipo «implementar según la imagen»:
 
-1. Side-by-side compare implementation and reference (or [Browser tool](/guide/tools/browser/))
-2. Check responsive and dark mode if required
-3. [Verify artifacts](/guide/quality/verify-artifacts/)
+1. Compara en paralelo implementación y referencia (o abre la página con la [herramienta de navegador](/guide/tools/browser/))
+2. Comprueba responsive y modo oscuro (si se exige)
+3. [Verificar artefactos](/guide/quality/verify-artifacts/)
 
-## Common mistakes
+## Errores habituales
 
-- Design only, no interaction notes
-- Commit 4K originals
-- Assume model reads Figma links without export
+- Solo dar el diseño sin explicación de interacción
+- Hacer commit de originales 4K
+- Asumir que el modelo puede leer un enlace de Figma sin exportar
 
-Good screenshots are clear image, clear focus, clear expectation—not just “there is a picture.”
+Una buena captura no es solo «hay imagen». Imagen clara, foco claro y expectativa clara: así la tarea se hace bien con más facilidad.
 
 ---
 
-**Status:** verified  
-**Products:** App / Cloud  
-**Verification basis:** Cross-checked against OpenAI official image input and file upload materials for screenshot upload, annotation, file size, and privacy; no version-specific UI steps retained in body.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / Cloud  
+**Base de verificación:** Contrastado con materiales oficiales de OpenAI sobre entrada de imágenes y subida de archivos respecto a subida de capturas, marcado de focos, tamaño de archivo y privacidad; el cuerpo no conserva pasos de interfaz concretos que haya que contrastar versión a versión.  
+**Última verificación:** 2026-07-26

@@ -1,128 +1,128 @@
 ---
-title: Customization and Project Configuration
-description: Personal preferences, AGENTS.md, configuration, and rule precedence—so Codex keeps working your way over time.
+title: "Personalización y configuración del proyecto"
+description: Preferencias personales, AGENTS.md, configuración y prioridad de las reglas — para que Codex siga trabajando a tu manera a lo largo del tiempo.
 sidebar:
   order: 40
 locale: es
-source_locale: en
-source_revision: 8fa97f5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-Codex does not rely only on “how you ask this time”; it also relies on **persistent configuration** to remember your conventions and your team’s. This chapter mainly separates what should stay in the conversation from what should sink into the project.
+Codex no depende solo de «cómo preguntas esta vez»; también usa una **configuración persistente** para recordar tus convenciones y las del equipo. Este capítulo separa principalmente lo que debe quedarse en la conversación de lo que debe anclarse en el proyecto.
 
-If you have started repeating the same things—such as “don’t touch this directory,” “run tests first,” or “use this model by default”—this chapter addresses that kind of problem.
+Si has empezado a repetir las mismas cosas —como «no toques este directorio», «ejecuta primero los tests» o «usa este modelo por defecto»—, este capítulo trata ese tipo de problema.
 
-## Contents
+## Contenido
 
-- Who overrides whom among personal preferences, project instructions, team rules, and temporary prompts
-- What belongs in `AGENTS.md` and what does not
-- Which layer owns configuration files and approval/sandbox policy
+- Quién anula a quién entre preferencias personales, instrucciones del proyecto, reglas de equipo y prompts temporales
+- Qué pertenece a `AGENTS.md` y qué no
+- En qué capa se gestionan los archivos de configuración y la política de aprobación/Sandbox
 
-## Who This Is For
+## Para quién
 
-| Reader | Start here |
+| Lector | Empieza aquí |
 |---|---|
-| Just got your first task working | [Project Instructions](/guide/customization/project-instructions/) |
-| Want to codify collaboration norms in the repo | [What Is AGENTS.md](/guide/customization/agents-md/what-is-agents-md/) |
-| Want consistent CLI/App behavior | [Configuration Basics](/guide/customization/configuration/config-basics/) |
+| Acabas de completar la primera tarea | [Instrucciones del proyecto](/guide/customization/project-instructions/) |
+| Quieres fijar normas de colaboración en el repositorio | [Qué es AGENTS.md](/guide/customization/agents-md/what-is-agents-md/) |
+| Quieres unificar el comportamiento de CLI/App | [Fundamentos de configuración](/guide/customization/configuration/config-basics/) |
 
-## What This Chapter Addresses
+## Qué trata este capítulo
 
-After using Codex for a while, many people run into the same kind of problem: they have written plenty of rules, but things do not feel fully effective, or different places contradict each other.
+Tras un tiempo usando Codex, mucha gente tropieza con el mismo tipo de problema: hay muchas reglas escritas, pero no parecen aplicarse del todo, o distintos sitios se contradicen.
 
-This chapter is mainly about how to layer collaboration rules well:
+Este capítulo habla principalmente de cómo estratificar bien las reglas de colaboración:
 
-- What is my personal habit
-- What is a shared repo rule
-- What is an organization-level hard boundary
-- What is only a temporary requirement for this task
+- Qué es un hábito personal
+- Qué es una regla compartida del repositorio
+- Qué es un límite duro a nivel de organización
+- Qué es solo un requisito temporal de esta tarea
 
-When layering is unclear, it is easy to end up with “wrote a lot, but it did not take effect when it should have.”
+Cuando las capas no están claras, es fácil acabar con «mucho escrito, pero no se aplicó cuando debía».
 
-## Common Layers (Conceptual)
+## Capas habituales (concepto)
 
-Understanding the layers helps avoid the confusion of “I wrote rules but they did not apply.” Different clients, organization-managed capabilities, and version implementations may differ, but you can usually start with the layers below:
+Entender las capas ayuda a evitar la confusión de «escribí reglas pero no se aplicaron». Los clientes, las capacidades gestionadas por la organización y las implementaciones por versión pueden diferir, pero suele bastar empezar con estas capas:
 
 ```text
-1. Organization/team managed policy (if deployed)
-2. Project-level AGENTS.md / project instructions (in the repo)
-3. User-level configuration and preferences (local machine, e.g. ~/.codex)
-4. Temporary requirements and @ references in the current task
+1. Política gestionada de organización/equipo (si está desplegada)
+2. AGENTS.md / instrucciones de proyecto a nivel de proyecto (en el repositorio)
+3. Configuración y preferencias de usuario (máquina local, p. ej. ~/.codex)
+4. Requisitos temporales y referencias @ en la tarea actual
 ```
 
-**Principle:** The closer something is to “organization-mandated,” the less it should be casually relaxed by a single task; the closer it is to “the current task,” the more flexible it is—and the easier it is to lose when the session ends. For actual precedence, follow the current client and official documentation.
+**Principio:** Cuanto más cerca de «impuesto por la organización», menos debería relajarse a la ligera por una sola tarea; cuanto más cerca de «la tarea actual», más flexible —y más fácil de perder al terminar la sesión—. La prioridad real sigue al cliente actual y a la documentación oficial.
 
-## Common Misconceptions
+## Malentendidos habituales
 
-### 1. If I can write prompts, I do not need long-term configuration?
+### 1. ¿Si sé escribir prompts, no necesito configuración a largo plazo?
 
-For short tasks that may barely suffice, but once you start ongoing collaboration, you increasingly want to sink repeated requirements downward.
+Para tareas cortas quizá baste a duras penas, pero en cuanto la colaboración es continua, querrás ir anclando los requisitos repetidos hacia abajo.
 
-### 2. Can I just put every rule into `AGENTS.md`?
+### 2. ¿Se puede meterlo todo en `AGENTS.md`?
 
-Not really.  
-Some things fit better in:
+Tampoco.  
+Algunas cosas encajan mejor en:
 
-- Personal preferences
-- Configuration files
-- Organization-managed policy
-- The current task prompt
+- Preferencias personales
+- Archivos de configuración
+- Política gestionada por la organización
+- El prompt de la tarea actual
 
-### 3. More configuration is not always better
+### 3. Más configuración no siempre es mejor
 
-When configuration is scattered, rules are too long, and layers are messy, both people and tools have a harder time knowing what to follow.
+Cuando la configuración está dispersa, las reglas son demasiado largas y las capas están desordenadas, personas y herramientas tienen más difícil saber a quién seguir.
 
-## Chapter Navigation
+## Navegación del capítulo
 
-| Topic | Pages |
+| Tema | Páginas |
 |---|---|
-| AGENTS.md | [Overview](/guide/customization/agents-md/what-is-agents-md/) · [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/) · [Writing Effective Instructions](/guide/customization/agents-md/writing-effective-instructions/) |
-| Project instructions | [Project Instructions](/guide/customization/project-instructions/) |
-| Memory | [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/) |
-| Mechanism selection | [Choosing the Right Mechanism](/guide/customization/choosing-the-right-mechanism/) |
-| Configuration | [Configuration Basics](/guide/customization/configuration/config-basics/) · [Profiles](/guide/customization/configuration/profiles/) |
-| Personal preferences | [Personal Preferences](/guide/customization/personal-preferences/) |
-| Rules | [Allow and Deny](/guide/customization/rules/allow-and-deny-patterns/) · [Command Rules](/guide/customization/rules/command-rules/) · [Team Policy](/guide/customization/rules/team-rules/) |
-| Examples | [AGENTS.md in a Monorepo](/guide/customization/examples/monorepo-agents-md/) |
+| AGENTS.md | [Resumen](/guide/customization/agents-md/what-is-agents-md/) · [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/) · [Escribir instrucciones eficaces](/guide/customization/agents-md/writing-effective-instructions/) |
+| Instrucciones del proyecto | [Instrucciones del proyecto](/guide/customization/project-instructions/) |
+| Memoria | [Memorias y contexto persistente](/guide/customization/memories-and-persistent-context/) |
+| Elección de mecanismo | [Elegir el mecanismo adecuado](/guide/customization/choosing-the-right-mechanism/) |
+| Configuración | [Fundamentos de configuración](/guide/customization/configuration/config-basics/) · [Profiles](/guide/customization/configuration/profiles/) |
+| Preferencias personales | [Preferencias personales](/guide/customization/personal-preferences/) |
+| Reglas | [Permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/) · [Reglas de comandos](/guide/customization/rules/command-rules/) · [Política de equipo](/guide/customization/rules/team-rules/) |
+| Ejemplos | [AGENTS.md en un monorepo](/guide/customization/examples/monorepo-agents-md/) |
 
-Rules coverage has started; more configuration detail pages will be added as the customization module grows.
+La cobertura de Rules ya ha empezado; se irán añadiendo más páginas de detalle de configuración a medida que crezca el módulo de personalización.
 
-## Suggested Order
+## Orden sugerido
 
-When you are organizing Codex collaboration rules for the first time, you can follow this order:
+La primera vez que organices de forma sistemática las reglas de colaboración de Codex, puedes seguir este orden:
 
-1. Organize project rules first
-2. Then add `AGENTS.md`
-3. Then separate personal preferences
-4. Finally handle configuration files and finer rule controls
+1. Organiza primero las reglas del proyecto
+2. Luego completa `AGENTS.md`
+3. Después separa las preferencias personales
+4. Por último gestiona los archivos de configuración y los controles de reglas más finos
 
-This is less chaotic than changing a pile of config keys right away.
+Así hay menos caos que cambiar de golpe un montón de claves de config.
 
-Rules do not need to be numerous; putting them in the right place matters more.
+Las reglas no necesitan ser muchas; lo importante es ponerlas en el sitio correcto.
 
-## Common Mistakes
+## Errores habituales
 
-- Stuffing a long architecture document into `AGENTS.md`, drowning out key constraints
-- Repeating team norms in chat without committing them to the repo, so collaborators get inconsistent experiences
-- Relaxing the sandbox on your personal machine while assuming teammates in a shared repo have the same permissions
+- Meter un largo documento de arquitectura en `AGENTS.md` y ahogar las restricciones clave
+- Repetir normas de equipo en el chat sin committearlas al repositorio, con experiencias inconsistentes para los colaboradores
+- Relajar el Sandbox en tu máquina personal asumiendo que los compañeros en un repositorio compartido tienen los mismos permisos
 
-## Acceptance Checklist
+## Lista de verificación
 
-- [ ] You can explain the priority of the four configuration layers
-- [ ] The repo has a short `AGENTS.md` (or equivalent project instructions)
-- [ ] Sensitive operations still go through approval instead of relying on text rules to “scare” the model
+- [ ] Puedes explicar la prioridad de las cuatro capas de configuración
+- [ ] El repositorio tiene un `AGENTS.md` breve (o instrucciones de proyecto equivalentes)
+- [ ] Las operaciones sensibles siguen pasando por aprobación, en lugar de confiar en que las reglas de texto «asusten» al modelo
 
-## References
+## Referencias
 
-- OpenAI Codex documentation: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Community practice structure references: freestylefly/CodexGuide AGENTS.md topics, stormzhang/ai-coding-guide `11-agents-md.md`
+- Documentación OpenAI Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
+- Referencias de estructura de práctica comunitaria: temas AGENTS.md de freestylefly/CodexGuide, stormzhang/ai-coding-guide `11-agents-md.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI’s current Help Center and Codex configuration materials still clearly describe layering among user-level `~/.codex` configuration, organization-managed capabilities, and project-level collaboration instructions; this page rewrites “precedence” as a more conservative common layering description to avoid writing specific implementation details as absolute rules.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Los materiales actuales del Help Center de OpenAI y de configuración de Codex siguen describiendo con claridad la estratificación entre configuración de usuario `~/.codex`, capacidades gestionadas por la organización e instrucciones de colaboración a nivel de proyecto; esta página reescribe la «prioridad» como una descripción de capas habituales más conservadora, para evitar convertir detalles de implementación concretos en reglas absolutas.  
+**Última verificación:** 2026-07-26

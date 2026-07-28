@@ -1,36 +1,36 @@
 ---
-title: Governance
-description: Policies, boundaries, and org rules—what is allowed, what is not, and who is accountable.
+title: Gobernanza
+description: 'Página de políticas, límites y reglas organizacionales: primero qué se puede hacer, qué no, y quién responde.'
 locale: es
-source_locale: en
-source_revision: 829dd90
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In the Codex context, governance is mainly two things: what the team allows, and who handles problems when they arise.
+En el contexto de Codex, gobernanza se resume en dos cosas: cómo permite el equipo usarlo, y quién actúa cuando hay un problema.
 
-That affects:
+Eso afecta directamente a:
 
-- Which extensions can connect
-- Which tasks can be automated
-- When human approval is mandatory
+- Si se pueden conectar ciertas extensiones
+- Qué Tareas se pueden automatizar
+- En qué casos hace falta Aprobación humana
 
-## Section entry
+## Entrada de este grupo
 
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Política de uso aceptable](/guide/team-enterprise/governance/acceptable-use/)
 
-## What these pages answer
+## Qué responden estas páginas
 
-- How to write org boundaries as clear rules
-- What should not be left to individual judgment
-- Why “everyone knows” is usually not enough
+- Cómo escribir los límites organizacionales como reglas claras
+- Qué no debería dejarse al criterio individual
+- Por qué el «consenso implícito que todos entienden» suele no bastar
 
-Governance pages exist to state high-risk boundaries upfront—not leave teams guessing.
+Lo importante de las páginas de gobernanza es dejar claros de antemano los límites de alto riesgo, sin que el equipo tenga que adivinar.
 
 ---
 
-**Status:** verified  
-**Products:** Team / enterprise scenarios  
-**Verification basis:** OpenAI enterprise plugin/app docs still treat role access, action permissions, approval, and source-system boundaries as governance prerequisites; this page defines the governance section role and entry only—does not claim specific org controls are on by default.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** Escenarios de equipo / empresa  
+**Base de verificación:** La documentación empresarial actual de OpenAI sobre plugins y apps sigue tomando como premisa de gobernanza el acceso por rol, los Permisos de acción, la Aprobación y los límites de acceso a sistemas de origen; esta página solo define el papel y la entrada del grupo de gobernanza, sin afirmar que algún control organizacional esté activado por defecto.  
+**Última verificación:** 2026-07-26

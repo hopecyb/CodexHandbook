@@ -1,55 +1,55 @@
 ---
-title: Research template
-description: Investigation and comparison with citations.
+title: Plantilla de investigación
+description: Investigación y comparación con citas.
 locale: es
-source_locale: en
-source_revision: b0f8d5e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Research template
+# Plantilla de investigación
 
-Research differs from ordinary Q&A: you want answers **and** where they came from.
+La diferencia con una pregunta ordinaria es que no solo quieres la respuesta, sino de dónde viene.
 
-## Template
+## Plantilla
 
 ```text
-Research question: 【one sentence】
-Evaluation dimensions: 【list 3–5 items】
-Constraints:
-- Each conclusion must cite source URL or @in-repo path
-- Mark unverifiable items as 「pending confirmation」
-- Do not change code
-Output: comparison table + recommendation + open questions
+Pregunta de investigación: 【una frase】
+Dimensiones de evaluación: 【lista 3–5】
+Restricciones:
+- cada conclusión con URL de fuente o ruta @dentro del repositorio
+- lo no verificable, márcalo como «pendiente de confirmar»
+- no cambies código
+Salida: tabla comparativa + recomendación + preguntas abiertas
 ```
 
-## When to use this template
+## Cuándo usarla
 
-- Product or solution comparison
-- Latest capabilities, rules, or differences
-- Conclusions you can audit later
+- Comparar productos o enfoques
+- Consultar capacidades, reglas o diferencias recientes
+- Necesitas poder volver a verificar las conclusiones
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. Research means polished summary
+### 1. Investigar = que resuma con buen formato
 
-Sources, boundaries, and pending items matter more.
+En investigación pesan más las fuentes, los límites y lo pendiente de confirmar.
 
-### 2. Must give a definite answer even when evidence is thin
+### 2. Si no encuentra nada, igual debe dar una respuesta cerrada
 
-Marking 「pending confirmation」 beats false certainty.
+Marcar «pendiente de confirmar» vale más que fingir certeza.
 
-Key constraint: every major conclusion traceable to a source—not just pretty formatting.
+Una restricción clave de esta plantilla: cada conclusión importante debe rastrearse hasta una fuente; no basta con que el formato se vea completo.
 
-## Related
+## Relacionado
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Verification](/guide/verification/)
+- [Caso: investigar con fuentes](/cases/research-with-sources/)
+- [Verificación](/guide/verification/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a research-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página ofrece una plantilla de tareas de investigación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

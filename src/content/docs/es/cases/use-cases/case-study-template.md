@@ -1,83 +1,83 @@
 ---
-title: Case study template
-description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
+title: Plantilla de caso
+description: Estructura unificada para redactar y hacer retrospectiva de casos de Codex — facilita la captura y la comparación en el equipo.
 locale: es
-source_locale: en
-source_revision: 985e88b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Copy this template to create a new case page or internal retro doc.
+Copia esta plantilla para crear una página de caso nueva o un documento interno de retrospectiva.
 
-Before copying, delete sections your actual readers and deliverables don't need.
+Antes de copiarla, elimina las secciones que no necesites según el lector y el entregable reales.
 
 ---
 
-## Metadata
+## Metadatos
 
-| Field | Fill in |
+| Campo | Rellenar |
 |---|---|
-| Case title | |
-| Audience | Beginner / Developer / Creator / Team |
-| Client used | App / CLI / IDE / Cloud |
-| Estimated time | |
-| Verification date | YYYY-MM-DD |
+| Título del caso | |
+| Público | Principiantes / desarrolladores / creadores / equipos |
+| Cliente usado | App / CLI / IDE / Cloud |
+| Tiempo estimado | |
+| Fecha de verificación | YYYY-MM-DD |
 
-## 1. Goal and context
+## 1. Objetivo y contexto
 
-- **Business goal:** one sentence
-- **Success criteria:** observable and verifiable
-- **Out of scope:** explicit exclusions
+- **Objetivo de negocio:** Una frase
+- **Criterios de éxito:** Observables y verificables
+- **Fuera de alcance:** Exclusiones explícitas
 
-## 2. Preparation
+## 2. Preparación
 
-- Account/permissions/repo state
-- Context files needed (`AGENTS.md`, designs, etc.)
-- Risks: data, production, secrets
+- Estado de cuenta/permisos/repo
+- Archivos de contexto necesarios (`AGENTS.md`, diseños, etc.)
+- Riesgos: datos, producción, secretos
 
-## 3. Workflow (EPXV)
+## 3. Flujo de trabajo (EPXV)
 
-### Explore
+### Explorar
 
-- Input prompt (summary)
-- Key findings
+- Prompt de entrada (resumen)
+- Hallazgos clave
 
-### Plan
+### Planificar
 
-- Step list
-- Human confirmation points
+- Lista de pasos
+- Puntos de confirmación humana
 
-### Execute
+### Ejecutar
 
-- Actual change scope
-- Deviations from plan and why
+- Alcance real de los cambios
+- Desvíos respecto al plan y motivos
 
-### Verify
+### Verificar
 
-- Automated tests
-- Manual checks
-- Evidence (screenshots, logs, links)
+- Tests automáticos
+- Revisión humana
+- Evidencia (capturas, logs, enlaces)
 
-## 4. Failure and recovery
+## 4. Fallo y recuperación
 
-- What went wrong
-- How to undo or fix
-- What you'd change in prompts/config if you redid it
+- Qué problemas aparecieron
+- Cómo se deshicieron o corrigieron
+- Si se repitiera, qué cambiarías en el prompt/config
 
-## 5. Capture
+## 5. Captura para reutilizar
 
-- Whether to write `AGENTS.md` / Skill / Automation
-- Three recommendations for the team
+- ¿Se escribe en `AGENTS.md` / Skill / Automation?
+- 3 recomendaciones para el equipo
 
-## 6. References
+## 6. Fuentes de referencia
 
-- Official doc links
-- Whether this case adapts an external tutorial (task type only)
+- Enlaces a documentación oficial
+- Si este caso se adapta de un tutorial externo (solo el tipo de tarea)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified EPXV workflow, failure recovery, project instructions, and case library structure; this page only provides a unified template for writing and retrospecting cases—not specific product behavior.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los capítulos ya verificados de EPXV, recuperación ante fallos, instrucciones de proyecto y la estructura de la biblioteca de casos. Esta página solo ofrece una plantilla unificada para redactar y hacer retrospectiva; no declara comportamiento concreto del producto.

@@ -1,36 +1,37 @@
 ---
-title: Beginner path
-description: A shortest five-step route for first-time Codex users—from clear tasks to finishing a small project.
+title: Ruta para principiantes
+description: La ruta más corta de cinco pasos para quien usa Codex por primera vez, desde formular la Tarea hasta completar el primer proyecto pequeño.
 locale: es
-source_locale: en
-source_revision: 135c0a5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When learning Codex for the first time, the blocker is often not one confusing page—it is not knowing where to start.
+Al aprender Codex por primera vez, lo que más suele bloquear no es que una página sea difícil de entender, sino no saber por dónde empezar.
 
-This path is the shortest route for newcomers.
+Este conjunto es la ruta más corta preparada para principiantes.
 
-## Recommended order
+## Orden recomendado
 
-1. [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Work with files](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Review results](/guide/learning-paths/beginner/04-review-results/)
-5. [Complete your first small project](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Hablar con Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Trabajar con archivos](/guide/learning-paths/beginner/02-work-with-files/)
+3. [Dar Tareas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Revisar resultados](/guide/learning-paths/beginner/04-review-results/)
+5. [Completar el primer proyecto pequeño](/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Who this is for
+## Para quién es este conjunto
 
-- Have not yet completed one full task loop reliably
-- Know Codex can do work but unsure how to practice first
-- Want "enough to be useful" before full terminology
+- Quien aún no ha cerrado de forma estable un ciclo completo de tarea
+- Quien sabe que Codex puede actuar, pero no cómo practicar la primera vez
+- Quien quiere primero un método «suficiente», no todo el glosario de una vez
 
-The beginner path goal is not learning everything—it is completing one full loop.
+El objetivo de la ruta para principiantes no es aprenderlo todo, sino cerrar el primer ciclo completo.
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked with this repo's current five-step beginner files, getting-started chapters, and beginner safety/check pages; this page only navigates reading order for newcomers.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** Contrastado con los archivos de la ruta de cinco pasos para principiantes, el capítulo de primeros pasos y las páginas de seguridad/revisión de entrada; esta página solo indica en qué orden leer como principiante.  
+**Última verificación:** 2026-07-26

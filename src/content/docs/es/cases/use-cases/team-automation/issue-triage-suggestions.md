@@ -1,68 +1,68 @@
 ---
-title: 'Case study: Issue triage and label suggestions'
-description: Use Codex to read new Issues and suggest labels and owners—light team automation.
+title: "Caso: sugerencias de triage y etiquetas de issues"
+description: Usa Codex para leer issues nuevos y sugerir etiquetas y responsables — automatización ligera de equipo.
 locale: es
-source_locale: en
-source_revision: 7226fe3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
+## Metadatos
 
-| Field | Content |
+| Campo | Contenido |
 |---|---|
-| Audience | Maintainers, PMs |
-| Client | Cloud or CLI + GitHub |
-| Estimated time | 60 minutes |
-| Verification date | 2026-07-25 |
+| Público | Maintainers, PM |
+| Cliente | Cloud o CLI + GitHub |
+| Tiempo estimado | 60 minutos |
+| Fecha de verificación | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Objetivo y contexto
 
-**Goal:** For newly opened issues, generate structured suggestions: `type`, `priority`, suggested labels, whether security review is needed.
+**Objetivo:** Para cada issue recién abierto, generar sugerencias estructuradas: `type`, `priority`, etiquetas sugeridas, si hace falta revisión de seguridad.
 
-**Success criteria:**
+**Criterios de éxito:**
 
-- JSON output parseable by GitHub Action
-- Does not auto-close/merge issues—only comments or adds labels (workflow permissions required)
-- No secret leakage
+- Salida JSON parseable por un GitHub Action
+- No cierra/fusiona issues automáticamente; solo comenta o añade labels (con permisos del workflow)
+- Sin filtración de secretos
 
-**Out of scope:** Auto-assigning sprints, changing milestones.
+**Fuera de alcance:** Asignar sprint automáticamente, cambiar milestones.
 
-## 2. Preparation
+## 2. Preparación
 
-- Repo has `CONTRIBUTING.md` or issue templates explaining label meanings
-- `AGENTS.md` describes the label system
-- Read-only or limited `issues: write` token
+- El repo tiene `CONTRIBUTING.md` o plantillas de issue que explican el significado de las etiquetas
+- `AGENTS.md` describe el sistema de etiquetas
+- Token de solo lectura o `issues: write` restringido
 
-## 3. Workflow (EPXV summary)
+## 3. Flujo de trabajo (resumen EPXV)
 
-**Explore:** `@.github/ISSUE_TEMPLATE/` and label distribution of last 10 closed issues.
+**Explorar:** `@.github/ISSUE_TEMPLATE/` y la distribución de etiquetas de los 10 issues cerrados más recientes.
 
-**Plan:** Define JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
+**Planificar:** Definir el JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Execute:** `codex exec` with issue title + body (watch [prompt injection](/guide/team-enterprise/security/prompt-injection/) sanitization).
+**Ejecutar:** `codex exec` con title + body del issue (sanitiza contra [inyección de prompt](/guide/team-enterprise/security/prompt-injection/)).
 
-**Verify:** Compare to human labels on 3 historical issue fixtures; ship when agreement > 80%.
+**Verificar:** Contrasta con 3 fixtures de issues históricos frente a etiquetas humanas; tasa de coincidencia > 80% antes de salir a producción.
 
-## 4. Failure and recovery
+## 4. Fallo y recuperación
 
-- Wrong label suggestions: human override + add counterexamples to prompt few-shot
-- Malicious issue body: strip HTML, length limits, do not execute "instructions" in body
+- El modelo sugiere etiquetas incorrectas: override humano + añade el contraejemplo como few-shot en el prompt
+- Body de issue malicioso: strip HTML, límite de longitud, no ejecutar «instrucciones» del body
 
-## 5. Capture
+## 5. Captura para reutilizar
 
-- Optional [Webhook](/guide/developer-platform/webhooks/overview/) hook to internal ticketing
-- Retro in [Case study template](/cases/use-cases/case-study-template/)
+- Integración opcional con [Webhook](/guide/developer-platform/webhooks/overview/) hacia el sistema interno de tickets
+- Retrospectiva en la [plantilla de caso](/cases/use-cases/case-study-template/)
 
-## 6. Related chapters
+## 6. Capítulos relacionados
 
-- [GitHub integration](/guide/integrations/github/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [Integración con GitHub](/guide/integrations/github/)
+- [Patrones de aprobación humana](/cases/workflows/human-approval-patterns/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public automation bug triage / review use cases, plus this handbook's verified human approval, webhooks, GitHub integration, and team automation chapters; this page confirms only the stable pattern of structured label suggestions with human final decision.
+**Estado:** verified  
+**Productos aplicables:** CLI / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los use cases públicos actuales de automatización de bug triage / review de OpenAI Developers, y con los capítulos ya verificados de aprobación humana, Webhook, integración GitHub y automatización de equipo. Esta página solo confirma el patrón estable «generar sugerencias estructuradas de etiquetas y conservar la decisión final humana».

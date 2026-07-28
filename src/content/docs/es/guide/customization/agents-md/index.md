@@ -1,36 +1,37 @@
 ---
 title: AGENTS.md
-description: Overview of project-level long-term instructions—who they are for and what problem they solve before you write content.
+description: Página de introducción a las instrucciones persistentes a nivel de proyecto — primero aclara para quién es y qué problema resuelve, luego escribe el contenido.
 locale: es
-source_locale: en
-source_revision: bd6003c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people’s first impression of `AGENTS.md` is “another longer prompt.”
 
-`AGENTS.md` is not a one-off task description; it is collaboration rules in the project that stay effective over time.
+La primera vez que mucha gente ve `AGENTS.md`, lo entiende como «otro prompt más largo».
 
-It is better for conventions you do not want to repeat every time and that team members should share.
+`AGENTS.md` no es una descripción de tarea de una sola vez; son reglas de colaboración que viven en el proyecto y aplican a largo plazo.
 
-## Recommended Order
+Encaja mejor con convenciones que no quieres repetir cada vez y que los miembros del equipo también deberían compartir.
 
-1. [What Is AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-2. [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/)
-3. [Writing Effective Instructions](/guide/customization/agents-md/writing-effective-instructions/)
+## Orden recomendado
 
-## Read These First
+1. [Qué es AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+2. [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/)
+3. [Escribir instrucciones eficaces](/guide/customization/agents-md/writing-effective-instructions/)
 
-- It documents long-term rules, not this task’s details
-- It should be short, precise, and executable—not a long document
-- It has precedence relationships with personal preferences and team-managed policy
+## Empieza por estos puntos
 
-The value of `AGENTS.md` is sinking long-term stable project conventions into the repo.
+- Escribe reglas a largo plazo, no los detalles de esta tarea
+- Debe ser corto, preciso y ejecutable; no lo conviertas en un documento largo
+- Tiene relación de prioridad con preferencias personales y políticas gestionadas por el equipo
+
+El valor de `AGENTS.md` está en anclar en el repositorio las convenciones estables del proyecto.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s verified project context, workflow, and verification chapters; this page only states the stable role of `AGENTS.md` as project-level long-term collaboration rules and does not treat specific client entry points or managed implementations as long-term contracts.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre contexto de proyecto, flujos de trabajo y verificación; esta página solo sitúa `AGENTS.md` como reglas de colaboración persistentes a nivel de proyecto, sin convertir entradas concretas de cliente o implementaciones gestionadas en un contrato a largo plazo.  
+**Última verificación:** 2026-07-26

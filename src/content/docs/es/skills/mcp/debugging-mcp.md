@@ -1,90 +1,90 @@
 ---
-title: Debugging MCP connections
-description: Systematic troubleshooting when MCP servers fail to start, tools time out, or results look wrong.
+title: Depurar la conexión MCP
+description: Pasos sistemáticos cuando el servidor MCP no arranca, la herramienta hace timeout o el resultado es anómalo.
 locale: es
-source_locale: en
-source_revision: f45a7ae
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-MCP brings external systems into Codex. Failures often fall into three buckets: **process won't start**, **auth wrong**, **tool logic or timeout**. This page gives a check order so you are not guessing at config.
+MCP conecta sistemas externos a Codex. Al fallar hay tres tipos habituales: **el proceso no arranca**, **autenticación incorrecta** y **lógica de la herramienta o timeout**. Esta página da un orden de comprobación para no cambiar la configuración a ciegas.
 
-## Contents
+## Contenido de esta página
 
-- Minimal reproduction for MCP issues
-- Log and configuration checklist
-- When to suspect the server implementation vs Codex
+- Cómo reproducir al mínimo un problema de MCP
+- Lista de comprobación de logs y configuración
+- Cuándo sospechar de la implementación del servidor y no de Codex
 
-Related: [MCP overview](/skills/mcp/mcp-overview/) · [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
+Páginas relacionadas: [Descripción general de MCP](/skills/mcp/mcp-overview/) · [Conectar un servidor MCP](/skills/mcp/connect-an-mcp-server/)
 
-## Triage flow
+## Flujo de triaje
 
 ```text
-1. Can the server start alone in a terminal?
-2. Is config JSON/TOML syntax and path correct?
-3. Are environment variables visible inside the MCP process?
-4. Was the Codex session restarted to load new config?
-5. Does a single tool call timeout or have bad parameters?
+1. ¿Puede arrancar el servidor solo en la terminal?
+2. ¿Son correctos la sintaxis y la ruta del JSON/TOML de configuración?
+3. ¿Son visibles las variables de entorno en el proceso MCP?
+4. ¿Se reinició la sesión de Codex para cargar la nueva configuración?
+5. ¿Una sola llamada a herramienta hace timeout / tiene parámetros erróneos?
 ```
 
-## Startup failures
+## Fallo al arrancar
 
-| Check | Notes |
+| Comprobación | Nota |
 |---|---|
-| Command path | Is `npx`, `uvx`, absolute path on PATH? |
-| Dependency versions | Node/Python versions meet MCP server requirements? |
-| Manual run | Run command + args from config in shell |
-| Transport | stdio vs HTTP/SSE matches docs? |
+| Ruta del comando | ¿Están `npx`, `uvx` o la ruta absoluta en el PATH? |
+| Versión de dependencias | ¿Cumple Node/Python los requisitos del servidor MCP? |
+| Ejecución manual | Copia command + args de la configuración y ejecútalos en el shell |
+| Transporte | ¿Coincide stdio vs HTTP/SSE con la documentación? |
 
-## Auth failures
+## Fallo de autenticación
 
-- API key injected via environment variable (not in repo)
-- OAuth MCP may need re-authorization when expired
-- Corporate proxy blocking MCP outbound
+- ¿Se inyecta la API key por variable de entorno (no escrita en el repo)?
+- ¿Los MCP tipo OAuth han caducado y hay que reautorizar?
+- ¿El proxy corporativo bloquea el tráfico saliente de MCP?
 
-Environment variable index: [environment variables](/guide/reference/environment-variables/)
+Índice de variables de entorno: [Variables de entorno](/guide/reference/environment-variables/)
 
-## Abnormal tool calls
+## Anomalías en la llamada a herramienta
 
-| Symptom | Possible cause |
+| Síntoma | Causa posible |
 |---|---|
-| Tool not found | Server version vs client schema mismatch |
-| Timeout | Slow external API; increase timeout or optimize query |
-| Empty result | Wrong parameter names; check MCP server logs |
-| Garbled text | Non–UTF-8 encoding |
+| Tool not found | Desajuste de versión del servidor y del schema del cliente |
+| Timeout | API externa lenta; sube el timeout u optimiza la consulta |
+| Resultado vacío | Nombre de parámetro incorrecto; mira el log del servidor MCP |
+| Texto corrupto | Codificación distinta de UTF-8 |
 
-In prompt, ask Agent to **print tool return structure** (redacted) for debugging.
+En el Prompt, pide al Agent que **imprima la estructura devuelta por la herramienta** (desensibilizada) para depurar.
 
-## Safe debugging habits
+## Hábitos seguros de depuración
 
-- Use **test tenant** API keys, not production
-- Do not paste full tokens into chat logs
-- If MCP is suspicious, disconnect immediately and rotate keys
+- Usa API keys de un **tenant de prueba**, no de producción
+- No pegues tokens completos en el chat con los logs de depuración
+- Si sospechas un MCP malicioso, desconéctalo de inmediato y rota las claves
 
-Error index: [error reference](/guide/reference/error-reference/)
+Índice de errores: [Referencia de errores y mensajes](/guide/reference/error-reference/)
 
-## Common mistakes
+## Errores habituales
 
-- Config changed but Codex session not restarted
-- Inconsistent MCP config in IDE vs CLI
-- MCP server log level always debug; screenshots submitted with secrets
+- Cambiar la configuración sin reiniciar la sesión de Codex
+- Tener configuraciones MCP inconsistentes en IDE y CLI
+- Dejar el nivel de log del servidor MCP en debug para siempre y pegar capturas con secretos
 
-## Acceptance checklist
+## Lista de verificación
 
-- [ ] Can start MCP server independently in terminal
-- [ ] At least one read-only tool call succeeded
-- [ ] Team standard MCP config template documented
+- [ ] Puedes arrancar el servidor MCP de forma independiente en la terminal
+- [ ] Has llamado con éxito al menos a una herramienta de solo lectura
+- [ ] El equipo tiene una plantilla estándar de configuración MCP
 
-## References
+## Fuentes de referencia
 
-- Model Context Protocol spec and debugging guide
+- Especificación y guía de depuración de Model Context Protocol
 - KimYx0207 CX-07
 - stormzhang `21-mcp.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / IDE / App  
-**Verification basis:** Troubleshooting depends on how current Codex clients load, display, and invoke MCP tools—high change risk; needs rewrite against current docs.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** CLI / IDE / App  
+**Nota de revisión:** Los pasos de diagnóstico dependen de cómo el cliente Codex actual carga, muestra y llama a las herramientas MCP; el riesgo de cambio es alto y hay que reescribirlos según la documentación vigente.  
+**Última verificación:** 2026-07-26

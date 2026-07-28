@@ -1,158 +1,158 @@
 ---
-title: Create your first Skill
-description: Build a committable pr-review Skill from scratch, with testing and team sharing.
+title: Crear tu primer Skill
+description: Crea desde cero un Skill pr-review enviable, con pruebas y pasos para compartirlo en el equipo.
 locale: es
-source_locale: en
-source_revision: a3c057a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-If you can assign tasks but have not built a Skill yet, this page covers the basics of your first one.
+Si ya sabes asignar tareas pero aún no has hecho un Skill de verdad, esta página cubre el método básico del primero.
 
-Spend 15–30 minutes on a **repo-reusable** Skill—often more direct than reading theory first. A small, well-bounded Skill is a good start.
+Dedicar 15–30 minutos a un Skill **reutilizable en el repositorio** suele ser más directo que leer mucha teoría. Un buen punto de partida es un Skill pequeño con límites claros.
 
-## Who this is for
+## Para quién
 
-You can complete [your first task](/cases/first-task/) and are willing to experiment in a test repo.
+Ya puedes completar la [primera tarea](/cases/first-task/) y estás dispuesto a experimentar en un repositorio de prueba.
 
-## Why start with `pr-review`
+## Por qué empezar con `pr-review`
 
-It has several advantages:
+Tiene varias ventajas:
 
-- Input is relatively clear
-- Lower risk than "change code directly"
-- Easy to judge whether it works
-- Helps you learn triggers and boundary writing
+- La entrada es relativamente clara
+- El riesgo es menor que «cambiar código directamente»
+- Es fácil juzgar si funciona bien
+- Te ayuda a entender activación y redacción de límites de un Skill
 
-It is a strong practice piece for turning a routine into something reusable.
+Encaja para practicar cómo convertir un método de trabajo en algo reutilizable.
 
-## Target outcome
+## Resultado objetivo
 
-A Skill under `.agents/skills/pr-review/` that produces structured review feedback on current changes.
+Un Skill en `.agents/skills/pr-review/` que emita una revisión estructurada de los cambios actuales.
 
-## Minimum bar
+## Objetivo mínimo
 
-For a first Skill, aim for three things:
+En el primer Skill, basta con lograr estas tres cosas:
 
-1. It can be recognized
-2. It reliably runs one clear process
-3. It does not do dangerous actions on the side
+1. Que se reconozca
+2. Que ejecute de forma estable un flujo claro
+3. Que no haga acciones peligrosas por su cuenta
 
-Once those are clear, iteration gets easier.
+Con eso claro, las iteraciones posteriores van mucho más fluidas.
 
-## Steps
+## Pasos
 
-### 1. Create the directory
+### 1. Crear el directorio
 
 ```bash
 mkdir -p .agents/skills/pr-review
 ```
 
-### 2. Write SKILL.md
+### 2. Escribir SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review git diff; list blocking issues, test gaps, and style suggestions. Use when the user mentions review, audit, or pre-merge checks. Not for writing new features.
+description: Revisa el git diff; lista problemas bloqueantes, huecos de pruebas y sugerencias de estilo. Úsalo cuando el usuario mencione review, revisión o comprobación previa a fusionar. No sirve para escribir funciones nuevas.
 ---
 
-# PR review
+# Revisión de PR
 
-## Input
-- Default compare branch: main (or default branch if main does not exist)
+## Entrada
+- Rama de comparación por defecto: main (si no existe, la rama por defecto)
 
-## Process
-1. List changed files and change type (feature/fix/refactor/docs)
-2. For each logic change: missing tests? API break?
-3. Check for secrets, debug logs, oversized unrelated diff
-4. Output:
-   - 🔴 Blocking: must fix
-   - 🟡 Suggestion: should fix
-   - 🟢 Pass: meets AGENTS.md requirements
+## Flujo
+1. Listar archivos cambiados y tipo de cambio (función/fix/refactor/docs)
+2. Por cada cambio lógico: ¿faltan pruebas? ¿rompe la API?
+3. Comprobar secretos, logs de depuración y diffs irrelevantes demasiado grandes
+4. Salida:
+   - 🔴 Bloqueante: hay que corregirlo
+   - 🟡 Recomendación: conviene corregirlo
+   - 🟢 OK: cumple los requisitos de AGENTS.md
 
-## Do not
-- Do not git push
-- Do not change public API without discussion
+## Prohibido
+- No hacer git push
+- No modificar APIs públicas no discutidas
 ```
 
-### 3. Try locally
+### 3. Probar en local
 
-Open the repo in Codex and try:
+Abre el repositorio en Codex e intenta:
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Por favor revisa mis cambios sin confirmar
 ```
 
-Or in natural language: "Review the diff the team way, focus on tests."
+O en lenguaje natural: «Revisa el diff según el hábito del equipo, prioriza las pruebas.»
 
-### 4. Test explicit first, then implicit
+### 4. Primero explícito, luego implícito
 
-Do not jump straight to auto-trigger.
+No empieces probando la activación automática.
 
-Suggested order:
+Prueba en este orden:
 
-1. Explicit `$pr-review`
-2. Confirm process and output
-3. Try natural-language trigger
+1. Llama explícitamente con `$pr-review`
+2. Confirma que el flujo y la salida están bien
+3. Luego prueba la activación en lenguaje natural
 
-That separates Skill content issues from weak `description` triggers.
+Así es más fácil saber si el problema está en el contenido del Skill o en que `description` no deja claros los disparadores.
 
-### 5. Iterate description
+### 5. Iterar description
 
-If the model **never** auto-selects it, tighten or add trigger words in `description`. If it **over-triggers**, add "when not to use."
+Si el modelo **nunca lo elige solo**, estrecha o añade palabras de activación en `description`. Si lo **usa en exceso**, añade «cuándo no usarlo».
 
-### 6. Commit for the team
+### 6. Enviar para compartir en el equipo
 
 ```bash
 git add .agents/skills/pr-review
 git commit -m "docs: add pr-review skill for Codex"
 ```
 
-Add one line to team README or `AGENTS.md`: "Before merge, you can use `$pr-review`."
+En el README del equipo o en `AGENTS.md`, añade una línea: «Antes de fusionar puedes usar `$pr-review`.»
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. The first Skill should be as complete as possible
+### 1. El primer Skill debe ser lo más completo posible
 
-Often the opposite. Smaller and more focused makes value easier to judge.
+A menudo es al revés. Cuanto más pequeño y enfocado sea el primero, más fácil juzgar si aporta valor.
 
-### 2. The point is not to sound "smart"
+### 2. Lo importante no es que «parezca inteligente»
 
-Clear **boundaries** matter more.
+Lo importante es que los **límites estén claros**.
 
-What it should and should not do beats sounding impressive.
+Qué debe hacer y qué no importa más que «parecer potente».
 
-### 3. "It runs" equals success
+### 3. Si el Skill corre, ya es un éxito
 
-A useful Skill should also:
+Un Skill útil al menos debe:
 
-- Be obvious to others when to use
-- Have stable output structure
-- Avoid dangerous side actions
+- Dejar claro a otros cuándo usarlo
+- Tener una estructura de salida fija
+- No hacer operaciones peligrosas por su cuenta
 
-## Acceptance checklist
+## Lista de aceptación
 
-- [ ] `$pr-review` runs without dangerous git operations
-- [ ] Output has tiered conclusions, not vague prose
-- [ ] `description` states trigger scenario in one sentence
-- [ ] Checked script needs against [permissions and sandbox](/guide/permissions-and-sandbox/) (this example has no scripts)
+- [ ] `$pr-review` funciona y no ejecuta operaciones git peligrosas
+- [ ] La salida incluye conclusiones graduadas, no generalidades
+- [ ] `description` deja claro el escenario de activación en una frase
+- [ ] Has contrastado las necesidades de scripts con [Permisos y Sandbox](/guide/permissions-and-sandbox/) (este ejemplo no tiene scripts)
 
-Starting with a small, steady Skill makes it easier to reuse a clear workflow reliably.
+Empezar con un Skill «pequeño y estable» facilita reutilizar de forma estable un método de trabajo claro.
 
-## Next steps
+## Siguientes pasos
 
-- Turn [explore–plan–execute–verify](/prompts/templates/understand/) into a Skill
-- When you need GitHub API access, add [MCP](/skills/mcp/mcp-overview/)
+- Consolidar [Explorar—Planificar—Ejecutar—Verificar](/prompts/templates/understand/) como Skill
+- Cuando necesites la API de GitHub, introduce [MCP](/skills/mcp/mcp-overview/)
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex Skills official examples and `skill-creator` (if provided in your environment)
+- Ejemplos oficiales de OpenAI Codex Skills y `skill-creator` (si el entorno lo ofrece)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Current Codex runtime still supports project skill directories, `SKILL.md` definitions, and explicit invocation for trial runs; this page is a stable first-Skill exercise.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** El runtime actual de Codex sigue admitiendo directorios de Skills en el proyecto, definición mediante `SKILL.md` y prueba con invocación explícita; esta página es un ejercicio estable de primer Skill.  
+**Última verificación:** 2026-07-26

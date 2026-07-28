@@ -1,36 +1,36 @@
 ---
-title: Connect an MCP server
-description: Configure, authenticate, verify, and troubleshoot—safely connect your first MCP tool.
+title: Conectar un servidor MCP
+description: Configuración, autenticación, verificación y diagnóstico para conectar con seguridad la primera herramienta MCP.
 locale: es
-source_locale: en
-source_revision: 346252d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-This page focuses on connection and verification; protocol details and server development are in official MCP docs.
+Esta página se centra en el flujo de conexión y verificación; el detalle del protocolo y el desarrollo de servidores están en la documentación oficial de MCP.
 
-## Before you start
+## Antes de empezar
 
-- [ ] Understand security boundaries in [MCP overview](/skills/mcp/mcp-overview/)
-- [ ] Have a read-only or sandbox test account
-- [ ] Confirm current Codex client version supports MCP (official docs)
+- [ ] Has entendido los límites de seguridad de [Descripción general de MCP](/skills/mcp/mcp-overview/)
+- [ ] Tienes una cuenta de prueba de solo lectura o en entorno Sandbox
+- [ ] Confirmas que la versión actual del cliente Codex soporta MCP (según documentación oficial)
 
-## Recommended flow
+## Flujo recomendado
 
-### 1. Choose server type
+### 1. Elige el tipo de servidor
 
-| Type | Notes | Risk |
+| Tipo | Descripción | Riesgo |
 |---|---|---|
-| Local stdio server | Process on your machine | Medium: process permissions = your user |
-| Remote HTTP/SSE | Hosted service | Medium–high: needs TLS, token rotation |
+| Servidor local stdio | Proceso arrancado en la máquina | Medio: Permiso del proceso = Permiso de tu usuario |
+| HTTP/SSE remoto | Servicio alojado | Medio-alto: hace falta TLS y rotación de tokens |
 
-For first connection, start with an **official example or read-only local server**.
+En la primera integración, conviene empezar por un **ejemplo oficial o un servidor local de solo lectura**.
 
-### 2. Add configuration
+### 2. Añade la configuración
 
-Config location varies by CLI/App; commonly user- or project-level `mcp` block. Illustrative structure (**field names per official docs**):
+La ubicación depende de CLI/App; lo habitual es un bloque de configuración `mcp` a nivel de usuario o de proyecto. Estructura ilustrativa (**los nombres de campo se rigen por la documentación oficial**):
 
 ```json
 {
@@ -39,67 +39,67 @@ Config location varies by CLI/App; commonly user- or project-level `mcp` block. 
       "command": "npx",
       "args": ["-y", "@example/mcp-server"],
       "env": {
-        "API_TOKEN": "Read from environment variable—do not hard-code in repo"
+        "API_TOKEN": "léelo de una variable de entorno; no lo hardcodees en el repo"
       }
     }
   }
 }
 ```
 
-Principles:
+Principios:
 
-- Inject secrets via environment variables or a secrets manager
-- Config changes go through Git review (except secrets)
+- Inyecta secretos con variables de entorno o un gestor de secretos
+- Los cambios de configuración pasan por revisión en Git (salvo los secrets)
 
-### 3. Restart or reload client
+### 3. Reinicia o recarga el cliente
 
-After MCP config changes, usually restart the Codex session so the server list refreshes.
+Tras cambiar la configuración MCP suele hacer falta reiniciar la sesión de Codex para refrescar la lista de servidores.
 
-### 4. Verify tools are visible
+### 4. Verifica que las herramientas son visibles
 
-In a task, explicitly ask:
+En la Tarea, pide de forma explícita:
 
 ```text
-List currently available MCP tools (names and one-line descriptions only).
-Then call one test tool read-only and show the result.
-Do not perform write operations.
+Lista las herramientas MCP disponibles ahora (solo nombre y una frase de descripción).
+Luego llama en modo solo lectura a una herramienta de prueba y muestra el resultado.
+No ejecutes operaciones de escritura.
 ```
 
-### 5. Try in small steps
+### 5. Prueba en pasos pequeños
 
-Pick a real but low-risk task, e.g.: "Use MCP to fetch ticket #123 title only; do not change status."
+Elige una Tarea real pero de bajo riesgo, por ejemplo: «Con MCP consulta el título del ticket #123; no cambies el estado.»
 
-## Auth modes
+## Modos de autenticación
 
-| Mode | Fit |
+| Modo | Cuándo |
 |---|---|
-| API Key / PAT | Personal dev; rotate regularly |
-| OAuth | User-level auth; good for SaaS |
-| No-auth local | Local mock only; do not expose to network |
+| API Key / PAT | Desarrollo personal; rotación periódica |
+| OAuth | Autorización a nivel de usuario; adecuado para SaaS |
+| Local sin autenticación | Solo mock en la máquina; no lo expongas a la red |
 
-On failure check: expired token, env var not passed into process, corporate proxy blocking.
+Si falla, comprueba: token caducado, variable de entorno no inyectada, proxy corporativo que intercepta.
 
-## Debugging checklist
+## Lista de depuración
 
-| Symptom | Possible cause |
+| Síntoma | Causa posible |
 |---|---|
-| Empty tool list | Wrong config path, process failed to start |
-| Call timeout | Network, VPN, server down |
-| Permission denied | Insufficient token scope |
-| Model never calls tools | Task did not ask; or tool description unclear |
+| Lista de herramientas vacía | Ruta de configuración incorrecta; el proceso no arranca |
+| Timeout en la llamada | Red, VPN, servidor caído |
+| Permiso denegado | Scope del token insuficiente |
+| El modelo nunca llama a la herramienta | La descripción de la Tarea no lo pide; o la `description` de la herramienta no es clara |
 
-## Working with approval
+## Coordinación con la Aprobación
 
-First call to an unfamiliar tool may prompt confirmation—that is expected. Do not encourage "always allow all MCP writes" in team policy.
+En la primera llamada a una herramienta desconocida, el cliente puede pedir confirmación: es el comportamiento esperado. No animes en la normativa del equipo a «permitir para siempre todas las escrituras MCP».
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex MCP configuration documentation
-- modelcontextprotocol.io server examples
+- Documentación de configuración MCP de OpenAI Codex
+- Ejemplos de servidor en modelcontextprotocol.io
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Directly describes current MCP server configuration, reload, and verification steps—highly version- and client-sensitive; not suitable for `verified` yet.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** App / CLI / IDE  
+**Nota de revisión:** Esta página describe de forma directa la configuración actual de servidores MCP, la recarga y los pasos de verificación; son muy sensibles a la versión y a la implementación del cliente, y por ahora no conviene marcarlos como `verified`.  
+**Última verificación:** 2026-07-26

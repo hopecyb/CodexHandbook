@@ -1,33 +1,33 @@
 ---
 title: Webhooks
-description: Event-driven integration—webhooks receive notifications; they do not replace workflow design.
+description: 'Página de integración disparada por eventos: el Webhook recibe notificaciones; no sustituye el diseño del flujo de trabajo.'
 locale: es
-source_locale: en
-source_revision: 790c6f2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-“Webhook” sounds abstract.  
-Simply: when something happens, a system actively notifies you.
+La palabra `Webhook` suena abstracta.  
+En claro: cuando ocurre algo, el sistema te envía una notificación por iniciativa propia.
 
-In Codex integration, it answers “when an external event arrives, how do we trigger what comes next?”
+En integraciones de Codex, resuelve «llegó un evento externo → cómo disparar el flujo siguiente».
 
-## Section entry
+## Entrada de este grupo
 
-- [Webhooks overview](/guide/developer-platform/webhooks/overview/)
+- [Resumen de Webhooks](/guide/developer-platform/webhooks/overview/)
 
-## What this section covers
+## Contenido del grupo
 
-- How external systems push events to you
-- What to wire after an event arrives
-- Why a webhook is only a trigger, not a full automation design
+- Cómo te empujan eventos los sistemas externos
+- Cómo encajar el flujo después de que llega el evento
+- Por qué el Webhook es solo un disparador, no una automatización completa
 
-A webhook is like a doorbell—it says “something happened”; you still connect the workflow.
+Un Webhook es más un timbre: te dice «pasó algo»; cómo lo tratas después lo defines tú en el flujo.
 
 ---
 
-**Status:** verified  
-**Products:** API / Cloud  
-**Verification basis:** Cross-checked against current webhooks subsection structure and entry links in this repo; this page only describes webhooks as event triggers in integration, without fixing event fields or implementation contracts.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** API / Cloud  
+**Base de verificación:** Contrastado con la estructura actual del subcapítulo webhooks y sus enlaces de entrada; esta página solo aclara que el Webhook actúa como «disparador de eventos» en la integración, sin fijar campos de evento ni detalles de implementación como contrato.  
+**Última verificación:** 2026-07-26

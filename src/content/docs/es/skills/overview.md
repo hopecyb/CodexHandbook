@@ -1,126 +1,126 @@
 ---
-title: Skills overview
-description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
+title: Descripción general de Skills
+description: Enseña a Codex flujos de trabajo reutilizables con SKILL.md; escríbelo una vez y llámalo cuando haga falta.
 locale: es
-source_locale: en
-source_revision: 9d68601
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
+Un **Skill** es un directorio que contiene `SKILL.md` (y, opcionalmente, scripts y material de referencia) que empaqueta un flujo fijo en una capacidad que Codex puede **invocar automáticamente o de forma explícita**.
 
-It fits workflows that have already repeated and will likely repeat again.
+Encaja con métodos de trabajo que ya se han repetido y que seguirán reutilizándose.
 
-## Core concepts
+## Conceptos clave
 
-### How it differs from slash commands
+### Diferencia con los comandos slash
 
-| | Slash command | Skill |
+| | Comando slash | Skill |
 |---|---|---|
-| Trigger | You type `/xxx` | You can call with `$name`, or the model matches by description |
-| Context | Usually expands immediately | **Progressive disclosure**: only name + description by default; full text loads when selected |
-| Best for | Fixed, high-frequency entries you remember | Long flows, documentation-heavy work, letting the model decide when to use it |
+| Activación | Escribes `/xxx` | Puedes llamar con `$name`, o el modelo hace match por la descripción |
+| Contexto | Suele expandirse de inmediato | **Divulgación progresiva**: en reposo solo ocupa nombre + descripción; el texto completo se lee al seleccionarlo |
+| Encaja con | Entradas fijas, frecuentes y que recuerdas | Flujos largos, con documentación, en los que quieres que el modelo decida cuándo usarlo |
 
-### Progressive disclosure
+### Divulgación progresiva
 
-At startup, Codex only sees each Skill's **name, description, and path**; it loads the full `SKILL.md` only when it decides to use the Skill. So the body can include detailed checklists without filling the context window.
+Al arrancar, Codex solo ve el **name, description y ruta** de cada Skill; carga el `SKILL.md` completo solo cuando decide usarlo. Por eso el cuerpo puede incluir listas de comprobación detalladas sin saturar el contexto.
 
-Note: the Skill list has an **initial character budget** (a small fraction of context). Put core trigger scenarios at the **front** of `description` so truncation does not break matching.
+Nota: la lista de Skills tiene un **presupuesto inicial de caracteres** (una fracción pequeña del contexto). Pon los escenarios de activación principales **al principio** de `description`, para que un recorte no rompa el match.
 
-## Skill directory structure
+## Estructura del directorio de un Skill
 
 ```text
 my-skill/
-├── SKILL.md          # Required
-├── scripts/          # Optional: deterministic steps
-└── references/       # Optional: long reference docs
+├── SKILL.md          # Obligatorio
+├── scripts/          # Opcional: pasos deterministas
+└── references/       # Opcional: documentación de referencia larga
 ```
 
-Minimal `SKILL.md` example:
+Ejemplo mínimo de `SKILL.md`:
 
 ```md
 ---
 name: pr-review
-description: Review the diff of the current branch against main; flag risks and test gaps. Use when the user asks for review, PR review, or pre-merge checks.
+description: Revisa el diff de la rama actual frente a main; señala riesgos y huecos de pruebas. Úsalo cuando el usuario pida review, revisar un PR o comprobar antes de fusionar.
 ---
 
-## Steps
-1. Get the diff against main
-2. Classify by file: logic errors, security, performance, tests
-3. Output a tiered list: blocking / suggestion / nit
-4. Do not auto push or merge
+## Pasos
+1. Obtener el diff respecto a main
+2. Clasificar por archivo: errores lógicos, seguridad, rendimiento, pruebas
+3. Emitir lista graduada: bloqueante / recomendación / nit
+4. No hacer push ni fusionar automáticamente
 ```
 
-## Where to store Skills
+## Dónde guardarlo
 
-| Type | Typical location | Notes |
+| Tipo | Ubicación típica | Notas |
 |---|---|---|
-| Project Skill | `.agents/skills/<name>/` | Lives in the repo; shared by the team |
-| User Skill | User skills directory (see official docs) | Personal, cross-project |
-| Official curated | Installed via installer | Path managed by installer; do not mix with hand-written dirs |
+| Skill de proyecto | `.agents/skills/<name>/` | Viaja con el repo; compartido por el equipo |
+| Skill de usuario | Directorio de skills del usuario (ver docs oficiales) | Personal, entre proyectos |
+| Selección oficial | Instalado mediante el instalador | Ruta gestionada por el instalador; no confundir con directorios escritos a mano |
 
-**Do not** copy outdated tutorial paths or fictional `trigger:` fields; follow the [official Skills documentation](https://developers.openai.com/codex/skills).
+**No** copies rutas erróneas de tutoriales obsoletos ni campos inventados como `trigger:`; sigue la [documentación oficial de Skills](https://developers.openai.com/codex/skills).
 
-## How Skills are triggered
+## Formas de activación
 
-1. **Explicit**: In supported environments, call with `$skill-name` (name matches frontmatter `name`)
-2. **Implicit**: The model judges whether the task fits `description` semantically
+1. **Explícita**: en entornos compatibles, llama con `$skill-name` (el nombre coincide con el `name` del frontmatter)
+2. **Implícita**: el modelo decide por semántica de `description` si la tarea actual encaja
 
-Tips for writing `description`:
+Claves para escribir bien `description`:
 
-- State clearly when to use and when not to use
-- Include keywords users might say (review, release, changelog)
-- Avoid vague phrases like "help the user write code"
+- Deja claro «cuándo usarlo» y «cuándo no»
+- Incluye palabras clave que el usuario podría decir (review, release, changelog)
+- Evita frases vagas como «ayudar al usuario a escribir código»
 
-## Recommended workflow
+## Flujo de trabajo recomendado
 
-1. Notice a workflow has repeated several times
-2. Draft `SKILL.md` with plain-text steps first
-3. Try `$name` and implicit matching on a small task
-4. Add `scripts/` when you need determinism
-5. Commit to `.agents/skills/` and open a PR for the team
+1. Detectas que un flujo ya se ha repetido varias veces
+2. Redactas `SKILL.md`, primero solo con pasos en texto
+3. Pruebas en una tarea pequeña con `$name` y match implícito
+4. Cuando necesites determinismo, añades `scripts/`
+5. Lo envías a `.agents/skills/` y abres un PR para el equipo
 
-Hands-on practice: [Create your first Skill](/skills/create-your-first-skill/)
+Práctica: [Crear tu primer Skill](/skills/create-your-first-skill/)
 
-## Common questions
+## Confusiones habituales
 
-### 1. How is a Skill different from a prompt?
+### 1. ¿Qué diferencia hay entre un Skill y un Prompt?
 
-- **Prompt**: What you say for this task only
-- **Skill**: A reusable workflow for similar tasks later
+- **Prompt**: lo que dices de forma temporal para esta tarea
+- **Skill**: un flujo reutilizable para tareas parecidas en el futuro
 
-### 2. Do I need to learn to write Skills from day one?
+### 2. ¿Debo aprender a escribir Skills desde el principio?
 
-No. Get ordinary tasks right first; when a flow repeats many times, consider turning it into a Skill.
+No. Primero formula bien las tareas normales; cuando un flujo se repita muchas veces, plantéate consolidarlo como Skill.
 
-### 3. Is it the same as a slash command?
+### 3. ¿Es lo mismo que un comando slash?
 
-Not exactly. Slash commands are more like shortcuts; Skills are workflow packages with full instructions and steps.
+No del todo. El comando slash es más una entrada rápida; el Skill es un paquete de trabajo con instrucciones y flujo completos.
 
-Skills are not required to get started—they shine when you organize flows that keep coming back.
+Un Skill no es obligatorio al empezar; encaja mejor para organizar flujos que ya se repiten.
 
-## Security boundaries
+## Límites de seguridad
 
-- Scripts and MCP calls inside a Skill inherit the current approval policy
-- Do not hard-code secrets in Skills; use environment variables or MCP auth
-- Teams should review third-party Skills like dependencies
+- Los scripts y las llamadas MCP dentro de un Skill heredan la política de Aprobación actual
+- No codifiques secretos en el Skill; usa variables de entorno o autenticación MCP
+- El equipo debe revisar Skills de terceros como revisaría dependencias
 
-## Common mistakes
+## Errores frecuentes
 
-- `description` too long or too broad—never triggers or triggers wrongly
-- One Skill cramming ten unrelated flows
-- Replacing clear steps with scripts that are hard to maintain
+- `description` demasiado largo o genérico → nunca se activa o se activa mal
+- Meter diez flujos no relacionados en un solo Skill
+- Sustituir con scripts pasos que bastaría describir con claridad, y volverse difíciles de mantener
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex Skills documentation
+- Documentación de OpenAI Codex Skills
 - KimYx0207 CX-06; stormzhang `22-skills.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Consistent with current Codex runtime Skill loading (`SKILL.md`, on-demand full skill file) and OpenAI Help "Skills in ChatGPT" defining Skills as reusable workflows; this page focuses on concepts and directory layout, not volatile UI.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** Las reglas actuales de carga de Skills en el runtime de Codex (`SKILL.md`, lectura bajo demanda del archivo completo) coinciden con la definición de Skill como workflow reutilizable en OpenAI Help «Skills in ChatGPT»; esta página se centra en conceptos y organización de directorios, sin depender de UI volátil.  
+**Última verificación:** 2026-07-26

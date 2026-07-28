@@ -1,76 +1,76 @@
 ---
-title: Research with sources
-description: Use Codex for search, comparison, and fact-checking—traceable sources and conclusions.
+title: Investigación con fuentes
+description: Usa Codex para buscar, comparar y verificar hechos — con fuentes y conclusiones trazables.
 locale: es
-source_locale: en
-source_revision: cc7038f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Research with sources** means every key conclusion can be traced to a specific source—official docs, papers, or repo files—not just an unsupported claim. It fits tech selection, competitive comparison, literature review, and policy interpretation.
+**Investigación con fuentes** exige que cada conclusión clave vuelva a una fuente concreta —documentación oficial, papers o archivos del repo—, no a un juicio sin base. Sirve para selección técnica, comparación de competidores, revisiones bibliográficas e interpretación de políticas.
 
-## What's covered
+## Enfoque de esta página
 
-- When to use [web search](/guide/tools/web-search/) vs read-only repo work
-- How to require citation format and uncertainty labels
-- How this pairs with [validate sources](/guide/quality/validate-sources/)
+- Cuándo usar [búsqueda web](/guide/tools/web-search/) frente a solo leer el repositorio
+- Cómo exigir formato de citas y marcar incertidumbre
+- Cómo encajar con [validar fuentes](/guide/quality/validate-sources/)
 
-## Minimum viable approach
-
-```text
-Research "Rust vs Go for this repo's context":
-1. List evaluation dimensions first (performance, ecosystem, team familiarity)
-2. Attach source URL or @in-repo file path to each conclusion
-3. Mark unverifiable items as "to confirm"
-4. End with recommendation and open questions
-Do not change code.
-```
-
-## Recommended workflow
+## Práctica mínima viable
 
 ```text
-Define question and exclusions
-    → collect sources (search / read docs / MCP)
-    → comparison table + pros/cons
-    → label confidence and conflicting sources
-    → human decision or move to spec phase
+Investiga la idoneidad de «Rust frente a Go en el contexto de este repositorio»:
+1. Lista primero las dimensiones de evaluación (rendimiento, ecosistema, familiaridad del equipo)
+2. Cada conclusión lleva URL de fuente o ruta de archivo @en el repo
+3. Lo no verificable se marca como «pendiente de confirmar»
+4. Al final, recomendación y preguntas abiertas
+No cambies el código.
 ```
 
-For long research, split across rounds—see [Long-running task management](/cases/workflows/long-running-task-management/).
+## Flujo recomendado
 
-## Common mistakes
+```text
+Definir el problema y las exclusiones
+    → Recoger fuentes (búsqueda / leer docs / MCP)
+    → Tabla comparativa + pros y contras
+    → Marcar confianza y fuentes en conflicto
+    → Decisión humana o pasar a la fase de especificación
+```
 
-- No URL required—output can't be rechecked
-- Mix outdated blogs with official docs without saying so
-- Treat research conclusions as implementation orders, skipping spec
-- Upload confidential data to unauthorized external tools
+Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas largas](/cases/workflows/long-running-task-management/).
 
-## Security boundaries
+## Errores frecuentes
 
-- Internal unpublished material must not leave via uncontrolled MCP
-- Volatile facts (pricing, versions, regional availability) need a [verification date](/guide/start-here/handbook-version-policy/)
+- No exigir URL: la salida no se puede contrastar
+- Mezclar blogs obsoletos con docs oficiales sin aclararlo
+- Tomar conclusiones de investigación como instrucciones de implementación, saltándose la especificación
+- Subir archivos con datos confidenciales a herramientas externas no autorizadas
 
-## Acceptance checklist
+## Límites de seguridad
 
-- [ ] Key conclusions have at least one clickable or traceable source
-- [ ] Conflicting information is presented side by side
-- [ ] "Uncertain" items are listed, not disguised as facts
-- [ ] Sensitive data does not appear in prompts or logs
+- Material interno no publicado no debe salir por MCP no controlados
+- Hechos variables (precios, versiones, disponibilidad por región) deben marcar [fecha de verificación](/guide/start-here/handbook-version-policy/)
 
-## Related chapters
+## Checklist de aceptación
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [ ] Cada conclusión clave tiene al menos una fuente clicable o trazable
+- [ ] La información en conflicto se presenta en paralelo
+- [ ] Los puntos «inciertos» están listados, no disfrazados de hechos
+- [ ] No aparecen datos sensibles en el prompt ni en los logs
 
-## References
+## Capítulos relacionados
 
-- CodexGuide research and citation methods
-- stormzhang search and verification chapters
+- [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/)
+- [Caso: refactorizar documentación con revisión](/cases/use-cases/content-creation/refactor-docs-with-review/)
+
+## Fuentes de referencia
+
+- Métodos de investigación y citas de CodexGuide
+- Capítulos de búsqueda y verificación de stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public web search and source-backed research capabilities, plus this handbook's verified web search, validate sources, handle uncertainty, and version policy chapters; this page confirms only the stable research method that key conclusions trace to sources and conflicts/uncertainty are explicit.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con las capacidades públicas actuales de Web search e investigación con fuentes de OpenAI Developers, y con los capítulos ya verificados de búsqueda web, validar fuentes, incertidumbre y política de versiones. Esta página solo confirma el método estable «conclusiones clave trazables a fuentes; conflictos e incertidumbre marcados de forma explícita».

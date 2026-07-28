@@ -1,29 +1,56 @@
 ---
-title: Review Results
-description: Build habits for checking diffs, running verification, and asking follow-ups.
+title: Revisar resultados
+description: Crea el hábito de revisar el diff, ejecutar la Verificación y preguntar de nuevo.
 locale: es
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: b4899ea
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-## Goal for this step
+## Objetivo de este paso
 
-Replace “glance and approve” with a fixed review routine.
+Sustituye «mirar un momento y dar por bueno» por una comprobación fija.
 
-Checklists: [Review the result](/guide/getting-started/review-the-result/) · [Review diffs](/guide/quality/review-diffs/)
+Listas: [Revisar el resultado](/guide/getting-started/review-the-result/) · [Revisar diferencias](/guide/quality/review-diffs/)
 
-## Exercise
+Mucha gente se salta este paso. Usar Codex con estabilidad suele depender de si sabes hacer review del resultado.
 
-Deliberately give a vague prompt that is easy to overstep; watch the plan. Reject out-of-scope steps, tighten constraints, and run again.
+## Ejercicio
 
-Next: [Complete your first small project](/guide/learning-paths/beginner/05-complete-first-project/)
+Da a propósito un Prompt vago fácil de sobrepasar, observa el plan; rechaza los pasos fuera de alcance, reescribe las restricciones y vuelve a ejecutar.
+
+## Puntos clave del ejercicio
+
+Aquí se practica sobre todo:
+
+- Detectar si se prepara a salir del alcance
+- Saber cuándo rechazar
+- Saber cómo acotar una Tarea vaga y volver a intentarlo
+
+Eso es más directo que esperar que lo haga perfecto a la primera.
+
+## Malentendidos frecuentes
+
+### 1. El review solo hace falta en proyectos formales posteriores
+
+Cuanto antes se forme el hábito de review, menos se confiará a ciegas en el resultado.
+
+### 2. Si ya dio un plan, no hace falta juzgar tú
+
+Tampoco.
+
+El plan solo ayuda; sigues teniendo que ver si toca un alcance que no debía.
+
+Revisar el resultado no es un paso extra: forma parte del uso.
+
+Siguiente: [Completar el primer proyecto pequeño](/guide/learning-paths/beginner/05-complete-first-project/)
 
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** Contrastado con los capítulos ya verificados de revisión de resultados, revisión de diferencias y ruta para principiantes; esta página solo entrena el hábito estable de «detectar salidas de alcance, rechazar pasos inadecuados y acotar de nuevo la Tarea».  
+**Última verificación:** 2026-07-26

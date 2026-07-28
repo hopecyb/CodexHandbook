@@ -1,106 +1,108 @@
 ---
-title: Constraints and boundaries
-description: Limit what can change, style rules, and forbidden actions.
+title: Restricciones y límites
+description: Limita el alcance editable, el estilo y las prohibiciones.
 locale: es
-source_locale: en
-source_revision: d18b013
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many tasks fail not because the goal was missing entirely, but because **boundaries were unclear**.
+Muchas tareas fallan no porque el objetivo falte del todo, sino porque **los límites no están claros**.
 
-You say "help me fix this page" and Codex might read it as:
+Si dices «ayúdame a cambiar esta página», Codex puede entender:
 
-- copy only
-- copy plus styles
-- components too
-- add dependencies
+- solo cambiar el copy
+- también retocar estilos
+- tocar componentes
+- añadir dependencias
 
-When you only wanted "this paragraph of copy, don't touch structure."
+Y lo que tú querías quizá era solo «cambia este párrafo; no toques la estructura».
 
-Constraints answer: where does this stop, and what is absolutely off limits?
+Las restricciones responden a: hasta dónde llega esta tarea y qué no debe tocarse en absoluto.
 
-## What this covers
+## Contenido
 
-It mainly helps avoid:
+Sirve sobre todo para evitar:
 
-- changing more than asked
-- unauthorized actions
-- edits at layers you didn't intend
-- "done" outcomes with too much collateral change
+- cambios «de paso»
+- operaciones fuera de permiso
+- tocar capas que no querías
+- parecer terminado, pero a un coste demasiado alto
 
-## Common constraints
+## Restricciones habituales
 
-Constraints answer: "what must never happen?"
+Responden a: «¿qué no debe hacerse en absoluto?»
 
-- only listed files/directories
-- don't change API contracts / don't change the database
-- don't add new dependencies
-- don't make network requests
-- keep existing formatter configuration
+- solo los archivos/directorios listados
+- no cambiar el contrato de API / no tocar la base de datos
+- no añadir dependencias nuevas
+- no iniciar peticiones de red
+- conservar la configuración actual del formateador
 
-## Goal vs. constraints
+## Cómo distinguir «objetivo» y «restricción»
 
-- **Goal:** what you want it to achieve
-- **Constraints:** lines it must not cross while doing it
+- **Objetivo:** qué quieres que logre
+- **Restricción:** qué líneas no puede cruzar al hacerlo
 
-Example:
-
-```text
-Goal: Make the homepage hero copy clearer
-Constraints: Don't change layout, don't add dependencies, don't change CTA behavior
-```
-
-Without constraints, "make it clearer" often becomes a much larger redesign.
-
-## Common misconceptions
-
-### 1. Constraints make results worse
-
-Clear constraints often produce results closer to what you actually want—they cut detours.
-
-### 2. "Don't change too much" is enough
-
-Too vague.
-
-More useful:
-
-- only `src/content/docs/...`
-- don't change components
-- don't change APIs
-- don't install dependencies
-
-### 3. Constraints only matter for high-risk tasks
-
-Small tasks need them too—one vague sentence easily expands the scope.
-
-## A usable skeleton
+Por ejemplo:
 
 ```text
-Constraints:
-- Only change 【directory/file】
-- Don't change 【components / API / database / config】
-- Don't add dependencies
-- Ask when information is insufficient; don't guess
+Objetivo: hacer más claro el copy del Hero de la home
+Restricciones: no cambiar el layout, no añadir dependencias, no modificar el comportamiento del CTA
 ```
 
-## When to write constraints more finely
+Sin restricciones, Codex puede interpretar «hacerlo más claro» como un rediseño mucho mayor.
 
-Be explicit when:
+## Ideas erróneas habituales
 
-- legacy codebase with heavy baggage
-- you want a local patch only
-- hard team rules on style or architecture
-- permissions, network, or dependency installs are involved
+### 1. ¿Las restricciones limitan demasiado y empeoran el resultado?
 
-Goal tells Codex what to do; constraints tell it where to stop.
+A menudo, restricciones claras acercan el resultado a lo que de verdad necesitas, porque evita rodeos.
 
-Write permission boundaries with constraints to reduce "while I'm here" overreach. See also [Define done](/prompts/define-done/) and [Permissions and sandbox](/guide/permissions-and-sandbox/).
+### 2. «No cambies demasiado» ya cuenta como restricción
+
+Eso es demasiado vago.
+
+Más útil:
+
+- solo `src/content/docs/...`
+- no tocar componentes
+- no tocar interfaces
+- no instalar dependencias
+
+### 3. Las restricciones solo hacen falta en tareas de alto riesgo
+
+También en tareas pequeñas: ahí es fácil soltar un requisito vago y dejar que amplíe el alcance por su cuenta.
+
+## Una redacción suficiente
+
+Si no sabes cómo escribirlo, usa este esqueleto:
+
+```text
+Restricciones:
+- solo modificar 【directorio/archivo】
+- no modificar 【componentes / API / base de datos / configuración】
+- no añadir dependencias
+- si falta información, pregunta primero; no adivines
+```
+
+## Cuándo afinar más las restricciones
+
+Conviene explicitarlas en estos casos:
+
+- proyecto legacy con mucha deuda
+- solo quieres un parche local
+- el equipo impone estilo o arquitectura
+- implica permisos, red o instalar dependencias
+
+El objetivo dice a Codex qué hacer; la restricción dice hasta dónde.
+
+Escribe los límites de permiso junto con las restricciones para reducir extralimitaciones «de paso». Ver [Definir el terminado](/prompts/define-done/) y [Permisos y sandbox](/guide/permissions-and-sandbox/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains constraint and boundary writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página solo describe cómo escribir restricciones y límites; se han revisado los enlaces internos y el cuerpo no depende de hechos volátiles del producto.

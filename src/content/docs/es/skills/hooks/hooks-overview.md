@@ -1,133 +1,133 @@
 ---
-title: Hooks overview
-description: Insert validation, logging, and audit at Agent key points—supplement team security and compliance.
+title: Descripción general de Hooks
+description: Inserta validación, logs y auditoría en nodos clave del Agent, para complementar seguridad y cumplimiento del equipo.
 locale: es
-source_locale: en
-source_revision: 720b503
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Simply put, a Hook automatically inserts a check or log at a key point.
+En resumen, un Hook inserta automáticamente una capa de comprobación o registro en un nodo clave.
 
-**Hooks** let you run custom logic at fixed nodes in the Codex execution chain—for example pre-commit secret scans, MCP call logging, or blocking dangerous commands. They supplement policy and observability from [approvals and sandbox](/guide/cli/approvals-and-sandbox/).
+Los **Hooks** permiten ejecutar lógica personalizada en nodos fijos de la cadena de ejecución de Codex —por ejemplo escanear secretos antes de un commit, registrar llamadas MCP o bloquear comandos peligrosos—. Sirven para complementar las políticas y la observabilidad de [Aprobaciones y Sandbox](/guide/cli/approvals-and-sandbox/).
 
-## Contents
+## Contenido
 
-- How Hooks differ from Skills and MCP
-- Typical team use cases
-- Security principles when designing Hooks
+- Diferencia entre Hooks, Skill y MCP
+- Casos típicos de equipo
+- Principios de seguridad al diseñar un Hook
 
-## Why teams use Hooks
+## Por qué los equipos usan Hooks
 
-Even if you will not write Hooks yourself, know what teams use them for:
+Aunque no pienses escribir Hooks todavía, conviene saber para qué suelen usarse en el equipo:
 
-- Why some actions get an extra gate at a key point
-- Why people say "this check is a Hook, not a Skill"
-- Why some rules live on system nodes instead of in prompts
+- Por qué algunas acciones se detienen un momento extra en un punto concreto
+- Por qué el equipo dice «esta comprobación no es un Skill, es un Hook»
+- Por qué ciertas reglas no van en el Prompt, sino en nodos del sistema
 
-Many "why is there an extra check here?" moments in teams are Hooks.
+Muchas veces, detrás de «¿por qué hay una comprobación más aquí?» hay un Hook.
 
-Compare options: [Choosing an extension method](/skills/choosing-an-extension-method/)
+Comparación y elección: [Cómo elegir el método de extensión](/skills/choosing-an-extension-method/)
 
-## What Hooks do
+## Qué hacen los Hooks
 
-| Phase (conceptual) | What a Hook can do |
+| Fase (concepto) | Qué puede hacer un Hook |
 |---|---|
-| Before tool call | Reject commands with `rm -rf`, leaking `.env`, etc. |
-| After tool call | Write audit logs to SIEM |
-| Session end | Summarize changed files |
-| Before PR create | Check issue number format |
+| Antes de la llamada a herramienta | Rechazar comandos con `rm -rf` o que filtren `.env` |
+| Después de la llamada a herramienta | Escribir logs de auditoría a un SIEM |
+| Fin de sesión | Resumir la lista de archivos cambiados |
+| Antes de crear un PR | Comprobar el formato del número de issue |
 
-## How to tell Hook from Skill
+## Cómo distinguirlo de un Skill
 
-- **Skill**: Tell Codex "for this kind of task, follow this workflow"
-- **Hook**: Tell the system "at this node, run an automatic check first"
+- **Skill**: indica a Codex «cuando llegue este tipo de Tarea, sigue este flujo»
+- **Hook**: indica al sistema «al llegar a este nodo, comprueba primero de forma automática»
 
-They solve different problems:
+Resuelven problemas distintos:
 
-- Skill = workflow instructions
-- Hook = gate or observation point on the process
+- El Skill se acerca más a la descripción del flujo de trabajo
+- El Hook se acerca más a una compuerta o punto de observación en el proceso
 
-Exact event names and config format: [official Hooks documentation](https://developers.openai.com/codex).
+Los nombres de evento y el formato de configuración se rigen por la [documentación oficial de Hooks](https://developers.openai.com/codex).
 
-## Compared to Skill / MCP
+## Diferencia con Skill / MCP
 
 | | Hooks | Skill | MCP |
 |---|---|---|---|
-| Trigger | System events | User or model invocation | Tool requests |
-| Purpose | Policy, audit | Workflow instructions | External systems |
-| Maintainer | Platform/team infra | Product or engineering | Integration developers |
+| Disparo | Evento del sistema | Usuario o modelo | Petición de herramienta |
+| Objetivo | Política, auditoría | Descripción de workflow | Sistema externo |
+| Quién lo mantiene | Infraestructura de plataforma/equipo | Equipo de producto o ingeniería | Desarrollador de integración |
 
-## Common misconceptions
+## Errores frecuentes
 
-### 1. Hooks replace approval and sandbox
+### 1. El Hook puede sustituir Aprobación y Sandbox
 
-Hooks are a supplemental check layer—not the only security boundary.
+El Hook es una capa de comprobación adicional; no debe ser el único límite de seguridad.
 
-### 2. More Hooks means safer
+### 2. Cuantos más Hooks, más seguro
 
-Too many slow, heavy, opaque Hooks slow the flow and make debugging painful.
+Demasiados Hooks lentos, pesados o difíciles de entender solo atascan el flujo y complican el diagnóstico.
 
-### 3. Hooks are not for complex logic
+### 3. El Hook no sirve para lógica compleja
 
-Hooks fit work that is:
+Un Hook encaja mejor con cosas:
 
-- Fast
-- Deterministic
-- Easy to test
+- Rápidas
+- Deterministas
+- Fáciles de probar
 
-Do not add another layer of heavy reasoning here.
+No metas aquí otra capa de razonamiento complejo.
 
-## Recommended team use cases
+## Casos de equipo recomendados
 
-1. **Secret leak detection**: Block when diff matches AWS key patterns
-2. **License header check**: Warn when new files lack company copyright notice
-3. **Compliance logging**: Who, when, write actions on which repo (redacted)
-4. **Align with CI**: Local Hook rules share source with GitHub Action when possible
+1. **Detección de filtración de secretos**: bloquear si el diff muestra un patrón de clave AWS
+2. **Comprobación de cabecera de licencia**: avisar si un archivo nuevo carece de la declaración de copyright de la empresa
+3. **Log de cumplimiento**: quién, cuándo y en qué repo hizo escrituras (desensibilizado)
+4. **Alineación con CI**: que las reglas del Hook local y de GitHub Actions compartan origen en la medida de lo posible
 
-## When Hooks fit
+## Cuándo encaja un Hook
 
-A check belongs in a Hook if:
+Si una comprobación cumple estas dos condiciones, encaja bien en un Hook:
 
-- It always happens at the same node
-- People should not have to remember it manually every time
+- Siempre ocurre en un nodo fijo
+- No debería depender de que alguien se acuerde cada vez
 
-Examples: sensitive data scan, naming validation, audit records.
+Por ejemplo: escaneo de información sensible, validación de nombres, registro de auditoría.
 
-## Design principles
+## Principios de diseño
 
-- **Fast**: Hook timeouts slow every tool call
-- **Deterministic**: Avoid calling an LLM inside a Hook
-- **Testable**: Unit-test Hook scripts with fixed input
-- **Disableable**: Team can bypass in emergencies (with audit)
+- **Rápido**: un timeout del Hook ralentiza cada llamada a herramienta
+- **Determinista**: evita llamar otra vez a un LLM dentro del Hook
+- **Comprobable**: prueba unitaria del script Hook con entrada fija
+- **Desactivable**: en urgencias el equipo puede omitirlo (con auditoría)
 
-Security angle: roadmap `11-team-enterprise`; personal users often start with read-only log Hooks.
+Para la perspectiva de seguridad, ver la hoja de ruta `11-team-enterprise`; un usuario individual suele bastarle empezar con un Hook de log de solo lectura.
 
-Hooks fit automatic checks at system key points. They are not workflow instructions and do not replace approval.
+El Hook encaja en nodos clave del sistema para comprobaciones automáticas. No es una descripción de workflow ni sustituye la Aprobación.
 
-## Common mistakes
+## Errores habituales
 
-- Hook scripts with network write access become a new attack surface
-- Rules duplicate and contradict `AGENTS.md`
-- Hook config not versioned—teammates' environments diverge
+- El propio script Hook tiene Permiso de escritura en red y se convierte en nueva superficie de ataque
+- Duplica y contradice reglas de `AGENTS.md`
+- Configuración de Hook sin versionar: entornos de compañeros inconsistentes
 
-## Acceptance checklist
+## Lista de verificación
 
-- [ ] Can name the one Hook scenario your team needs most
-- [ ] Clear error message to developers when Hook fails
-- [ ] Config included in code review
+- [ ] Puedes describir el escenario de Hook más necesario del equipo
+- [ ] Ante fallo del Hook hay un mensaje de error claro para el desarrollador
+- [ ] La configuración entra en revisión de código
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex Hooks documentation
+- Documentación de OpenAI Codex Hooks
 - stormzhang `22-hooks.md`
 - KimYx0207 CX-08
-- freestylefly/CodexGuide audit and compliance
+- Auditoría y cumplimiento de freestylefly/CodexGuide
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** This page depends on current Hook capability, typical nodes, and team governance; official public docs lack enough detail—needs rewrite for current clients.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** CLI / App (según versión)  
+**Nota de revisión:** Esta página depende de la descripción actual de capacidades Hook, nodos típicos y gobernanza de equipo; la documentación pública oficial cubre poco estos detalles y hay que reescribirla según el cliente vigente.  
+**Última verificación:** 2026-07-26

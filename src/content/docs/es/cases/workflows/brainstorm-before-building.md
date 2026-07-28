@@ -1,95 +1,95 @@
 ---
-title: Brainstorm before building
-description: Structured exploration to converge on an approach before code or long-form writing—reduces rework.
+title: Lluvia de ideas antes de construir
+description: Antes de escribir código o textos largos, explora de forma estructurada y converge en un plan — menos retrabajo.
 locale: es
-source_locale: en
-source_revision: b64945f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Brainstorm before building** fits tasks where the goal is fuzzy or multiple approaches exist: new features, redesigns, content topics, tech selection. It connects to the ① Explore phase of [explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/), but emphasizes **diverge and converge** rather than immediately reading code and editing files.
+**Lluvia de ideas antes de construir** encaja cuando el objetivo es difuso y hay más de una solución: funciones nuevas, rediseños, temas de contenido, selección técnica. Se enlaza con la fase ① explorar de [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/), pero insiste en **divergir y converger**, no en leer código y editar archivos de inmediato.
 
-## What this page covers
+## Qué resuelve esta página
 
-- When brainstorm is worth it vs going straight to EPXV
-- How to bound divergence and avoid empty chat
-- Artifacts: option table, decision record, next-step plan
+- Cuándo merece la pena hacer brainstorm primero y cuándo ir directo a EPXV
+- Cómo limitar el alcance de la divergencia y evitar charla vacía
+- Artefactos: tabla de opciones, registro de decisiones, plan del siguiente paso
 
-## Who it's for
+## Para quién
 
-| Scenario | Example |
+| Escenario | Ejemplo |
 |---|---|
-| Product / feature | "Add export for users—three UI options" |
-| Content | "Who is this tutorial for, how to structure it" |
-| Technical | "Queue vs cron for scheduled tasks" |
+| Producto / función | «Añadir exportación; hay tres UIs posibles» |
+| Contenido | «¿A quién va este tutorial y cómo se estructura?» |
+| Técnica | «¿Cola o cron para tareas programadas?» |
 
-## Minimum viable approach
+## Práctica mínima viable
 
-**Phase A — Diverge (time-boxed)**
-
-```text
-Do not change any files yet. For "export CSV" requirement, list 3 implementation paths:
-each with pros/cons, involved modules, estimated effort (S/M/L).
-Do not pick a final approach.
-```
-
-**Phase B — Converge**
+**Fase A — Divergir (con límite de tiempo)**
 
 ```text
-From the table above, recommend 1 default and 1 backup;
-note 2 decision points I must confirm (format, permissions).
+No modifiques ningún archivo. Para el requisito «exportar CSV», lista 3 caminos de implementación:
+para cada uno, pros/contras, módulos implicados y esfuerzo estimado (S/M/L).
+No elijas la solución final.
 ```
 
-**Phase C — Enter planning**
-
-After confirmation, proceed to [specification-driven work](/cases/workflows/specification-driven-work/) or EPXV ② Plan.
-
-## Recommended workflow
+**Fase B — Converger**
 
 ```text
-State constraints (time, stack, what cannot change)
-    → Diverge 3–5 options (no code)
-    → Rank by value / risk / cost
-    → Human picks direction or requests more info
-    → Written plan + execute
+Según la tabla anterior, recomienda 1 opción por defecto y 1 alternativa;
+indica 2 puntos de decisión que debo confirmar (formato, permisos).
 ```
 
-Set a **time box**: e.g. complete divergence in 15 minutes to prevent drift.
+**Fase C — Pasar al plan**
 
-## Common mistakes
+Tras confirmar, continúa con [trabajo impulsado por especificación](/cases/workflows/specification-driven-work/) o la fase ② planificar de EPXV.
 
-- Treating brainstorm as execution—model starts editing files—use "do not change yet" constraint
-- Too many options without ranking—decision fatigue
-- Rejected options not recorded—same debate two weeks later
-- Skipping constraints—beautiful plan but not feasible
+## Flujo recomendado
 
-## Safety boundaries
+```text
+Aclarar restricciones (tiempo, stack, partes intocables)
+    → Divergir 3–5 opciones (prohibido escribir código)
+    → Ordenar por «valor / riesgo / coste»
+    → Elección humana o pedir más información
+    → Plan escrito + ejecución
+```
 
-- Brainstorm may still read sensitive files—use `@` to scope references precisely
-- Compliance/privacy options need human legal/security review—not model-only decisions
+Fija un **timebox**: por ejemplo, terminar la divergencia en 15 minutos para evitar que la discusión derive.
 
-## Acceptance checklist
+## Errores frecuentes
 
-- [ ] At least 2 viable options with clear recommendation
-- [ ] Decision points marked, awaiting human confirmation
-- [ ] No unauthorized repo writes
-- [ ] Next step can connect to written plan
+- Tratar el brainstorm como ejecución: el modelo ya edita archivos — usa la restricción «no cambies todavía»
+- Demasiadas opciones sin ordenar → fatiga de decisión
+- No registrar las opciones descartadas → se vuelve a discutir dos semanas después
+- Saltar restricciones: el plan es «bonito» pero no es viable
 
-## Related chapters
+## Límites de seguridad
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Ask for a plan](/prompts/ask-for-a-plan/)
+- En brainstorming aún se pueden leer archivos sensibles — acota con `@` el alcance
+- Opciones con impacto de cumplimiento o privacidad requieren revisión humana legal/seguridad; el modelo no decide solo
 
-## Reference sources
+## Checklist de aceptación
 
-- CodexGuide requirement clarification and option comparison
-- codex.bozhouai.com task templates and topic selection methods
+- [ ] Al menos 2 opciones viables y una recomendación clara
+- [ ] Puntos de decisión marcados, a la espera de confirmación humana
+- [ ] Sin escrituras no autorizadas en el repo
+- [ ] El siguiente paso puede enlazar con un plan escrito
+
+## Capítulos relacionados
+
+- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
+- [Trabajo impulsado por especificación](/cases/workflows/specification-driven-work/)
+- [Pedir un plan](/prompts/ask-for-a-plan/)
+
+## Fuentes de referencia
+
+- Aclaración de requisitos y comparación de opciones de CodexGuide
+- Plantillas de tareas y métodos de selección de tema de codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified EPXV, planning, specification-driven, and prompts chapters in this handbook; this page only describes the stable collaboration method—diverge first, converge, then plan—not dependent on specific product entry details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los capítulos ya verificados de EPXV, planificación, especificación y prompts. Esta página solo describe el método estable «divergir → converger → planificar», sin depender de detalles de entrada del producto.

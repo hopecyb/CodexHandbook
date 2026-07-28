@@ -1,49 +1,49 @@
 ---
-title: 'Example: Review Skill'
-description: pr-review-based Skill example for team reuse or adaptation.
+title: "Ejemplo: Skill de revisión"
+description: Ejemplo de Skill basado en pr-review, listo para reutilizar o adaptar en el equipo.
 locale: es
-source_locale: en
-source_revision: fba9c2b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Review Skill
+# Ejemplo: Skill de revisión
 
-This example matches `pr-review` in [Create your first Skill](/skills/create-your-first-skill/)—adjust for your team.
+Este ejemplo corresponde al `pr-review` de [Crear tu primer Skill](/skills/create-your-first-skill/); ajústalo a las necesidades del equipo.
 
 ## SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review git diff; list blocking issues, test gaps, and style suggestions. Use when the user mentions review, audit, or pre-merge checks. Not for writing new features.
+description: Revisa el git diff y lista problemas bloqueantes, huecos de tests y sugerencias de estilo. Úsalo cuando el usuario mencione review, revisión o comprobación previa al merge. No sirve para escribir funciones nuevas.
 ---
 
-# PR review
+# Revisión de PR
 
-## Input
-- Default compare branch: main (or default branch if main does not exist)
+## Entrada
+- Rama de comparación por defecto: main (si no existe, la rama por defecto)
 
-## Process
-1. List changed files and change type (feature/fix/refactor/docs)
-2. For each logic change: missing tests? API break?
-3. Check for secrets, debug logs, oversized unrelated diff
-4. Output: 🔴 blocking / 🟡 suggestion / 🟢 pass
+## Flujo
+1. Listar archivos cambiados y tipo de cambio (función / corrección / refactor / docs)
+2. Por cada cambio lógico: ¿faltan tests? ¿rompe la API?
+3. Comprobar si hay secretos, logs de depuración o un diff ajeno demasiado grande
+4. Salida: 🔴 Bloqueante / 🟡 Sugerencia / 🟢 Aprobado
 
-## Do not
-- Do not git push
-- Do not change public API without discussion
+## Prohibido
+- No hacer git push
+- No modificar APIs públicas no discutidas
 ```
 
-## Try it
+## Prueba
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Revisa mis cambios sin commitear
 ```
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Reviewing diffs with structured conclusions remains a typical Codex use case; this page provides an illustrative `SKILL.md` skeleton, not a volatile UI dependency.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Revisar un diff y devolver conclusiones estructuradas sigue siendo un uso típico de Codex; esta página ofrece un esqueleto ilustrativo de `SKILL.md`, sin depender de una UI volátil.  
+**Última verificación:** 2026-07-26

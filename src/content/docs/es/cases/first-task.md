@@ -1,60 +1,60 @@
 ---
-title: First task
-description: Complete a small change with a clear prompt and learn how to review results.
+title: Primera tarea
+description: Completa un cambio pequeño con un prompt claro y aprende a revisar el resultado.
 locale: es
-source_locale: en
-source_revision: 4063d54
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# First task
+# Primera tarea
 
-The example below assumes the **Desktop App** by default; CLI/IDE can use the same prompt.
+El ejemplo siguiente asume la **App de escritorio** por defecto; CLI e IDE pueden usar el mismo prompt.
 
-## Meta information
+## Metadatos
 
-| Field | Content |
+| Campo | Contenido |
 |---|---|
-| Audience | Beginners |
-| Client | Desktop App (recommended) |
-| Estimated time | 15–20 minutes |
+| Público | Principiantes |
+| Cliente | App de escritorio (recomendado) |
+| Tiempo estimado | 15–20 minutos |
 
-## 1. Goal and background
+## 1. Objetivo y contexto
 
-**Goal:** Complete a safe file edit in a practice project.
+**Objetivo:** Completar una edición segura de un archivo en un proyecto de práctica.
 
-**Success criteria:** Only the specified file is modified, the result matches the acceptance description, and you can read the diff.
+**Criterios de éxito:** Solo se modifica el archivo indicado, el resultado coincide con la descripción de aceptación y puedes leer el diff.
 
-## 2. Preparation
+## 2. Preparación
 
-- Client installed and signed in
-- Practice project created (with `hello.md` or similar file)
+- Cliente instalado e iniciado sesión
+- Proyecto de práctica creado (con `hello.md` o un archivo similar)
 
-## 3. Recommended prompt
+## 3. Prompt recomendado
 
 ```text
-Goal: Append a section "Today's practice" at the end of hello.md with a three-item bullet list.
-Constraints: Only modify hello.md; do not delete existing content; do not run network requests.
-Acceptance: The heading and exactly three list items appear at the end of the file.
-If information is insufficient, ask me first; do not guess.
+Objetivo: Al final de hello.md, añade una sección «Práctica de hoy» con una lista de tres puntos clave.
+Restricciones: Solo modificar hello.md; no borrar el contenido existente; no ejecutar peticiones de red.
+Aceptación: Al final del archivo aparecen el título y exactamente tres elementos de lista.
+Si falta información, pregúntame primero; no inventes.
 ```
 
-## 4. Execution and review
+## 4. Ejecución y revisión
 
-1. Ask for a short plan first (or request one yourself)
-2. When approving file writes, confirm the path is correct
-3. After completion, check the diff against each acceptance criterion
+1. Pide primero un plan breve (o solicítalo tú)
+2. Al aprobar la escritura de archivos, confirma que la ruta es correcta
+3. Al terminar, contrasta el diff con cada criterio de aceptación
 
-## 5. Next steps
+## 5. Siguientes pasos
 
-- [Prompt basics](/prompts/basics/)
-- [Verification](/guide/verification/)
-- [Start here](/guide/start-here/)
+- [Fundamentos de prompts](/prompts/basics/)
+- [Verificación](/guide/verification/)
+- [Empieza aquí](/guide/start-here/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page is a low-risk introductory exercise within the handbook: limited to editing one file, no network access, requiring you to read the diff and check each acceptance criterion. Related prerequisite chapters (installation, practice project, verification) have been cross-checked; content does not depend on specific product version details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página es un ejercicio introductorio de bajo riesgo del manual: limitada a editar un solo archivo, sin red, exige leer el diff y comprobar cada criterio de aceptación. Los capítulos previos (instalación, proyecto de práctica, verificación) se han contrastado; el contenido no depende de detalles de versión del producto.

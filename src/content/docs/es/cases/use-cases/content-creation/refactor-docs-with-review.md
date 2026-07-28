@@ -1,84 +1,84 @@
 ---
-title: Refactor docs with review
-description: Case study—batch link and section updates in an Astro/Starlight docs project; small diffs and build verification.
+title: Refactorizar un sitio de docs con revisión
+description: "Caso: actualizar en lote enlaces y capítulos en un proyecto Astro/Starlight — diffs pequeños y verificación por build."
 locale: es
-source_locale: en
-source_revision: 9c6c087
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This case demonstrates a **content engineering** task: multi-file Markdown, sidebar config, build verification. The stack matches this handbook, but the pattern applies to any static site.
+Este caso ilustra tareas de **ingeniería de contenido**: Markdown multiarchivo, configuración de sidebar y verificación por build. El stack se parece al de este manual, pero el escenario se puede migrar a cualquier sitio estático.
 
-## Metadata
+## Metadatos
 
-| Item | Value |
+| Ítem | Valor |
 |---|---|
-| Domain | Content creation / docs engineering |
-| Entry | CLI or IDE |
-| Risk | Medium (many links and navigation) |
-| Duration | 1–3 hours (depends on scale) |
+| Dominio | Creación de contenido / ingeniería de docs |
+| Entrada | CLI o IDE |
+| Riesgo | Medio (muchos enlaces y navegación) |
+| Duración | 1–3 horas (según escala) |
 
-Template reference: [Case study template](/cases/use-cases/case-study-template/)
+Sobre la plantilla: [Plantilla de caso](/cases/use-cases/case-study-template/)
 
-## Background
+## Contexto
 
-After adding a new handbook chapter, you need to:
+Tras añadir un capítulo al sitio de docs, hace falta:
 
-1. Update `astro.config` sidebar slugs
-2. Fix in-page relative links
-3. `npm run build` with zero errors
+1. Actualizar el slug del sidebar en `astro.config`
+2. Corregir enlaces relativos en el texto
+3. `npm run build` sin errores
 
-Humans often miss slugs; this fits Agent **checklist execution + build verification**.
+Es fácil olvidar un slug a mano; conviene que el Agent **ejecute según checklist + acepte por build**.
 
-## Preparation
+## Preparación
 
-- [ ] Clean git branch
-- [ ] Local `npm run build` works
-- [ ] List new page paths and target sidebar positions
+- [ ] Rama git limpia
+- [ ] `npm run build` funciona en local
+- [ ] Lista de rutas de páginas nuevas y posición objetivo en el sidebar
 
-## Task prompt (example)
+## Prompt de tarea (ejemplo)
 
 ```text
-Goal: add environment-variables.md under 12-reference and wire it into sidebar and index links.
-Constraints: only change src/content/docs and astro.config.mjs; do not upgrade dependencies.
-Acceptance: npm run build succeeds; no dead links.
-Steps: config first, then md, then update 12-reference/index.md.
+Objetivo: Añadir environment-variables.md a 12-reference e integrarlo en el sidebar y los enlaces del index.
+Restricciones: Solo modificar src/content/docs y astro.config.mjs; no actualizar dependencias.
+Aceptación: npm run build correcto; sin enlaces rotos.
+Pasos: primero config, luego el md, por último actualizar 12-reference/index.md.
 ```
 
-## Execution notes
+## Puntos clave de ejecución
 
-- **Config before content**: avoids missing-slug build errors
-- Commit in batches of 3–5 files for easier review
-- Use [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/)
+- **Config primero, contenido después:** evita errores de build por missing slug
+- Commit cada 3–5 archivos para facilitar el review
+- Usa [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
 
-## Checks
+## Comprobación
 
-- [ ] Every sidebar slug has a matching file
-- [ ] Internal links follow relative path conventions
-- [ ] Build log has no Starlight warnings (if team requires zero warnings)
+- [ ] Cada ítem del sidebar tiene un archivo correspondiente al slug
+- [ ] Los enlaces internos siguen la convención de rutas relativas
+- [ ] El log de build no tiene avisos de Starlight (si el equipo exige cero avisos)
 
-## Failure recovery
+## Recuperación ante fallos
 
-| Issue | Action |
+| Problema | Tratamiento |
 |---|---|
-| Sidebar slug error | Fix slug or add md per astro docs |
-| Dead link | `grep` target path; fix link or add page |
-| Build OOM | Change in batches; increase Node memory locally |
+| Error de slug del sidebar | Ajusta el slug según docs de Astro o añade el md |
+| Enlace roto | `grep` la ruta objetivo; corrige el enlace o añade la página |
+| OOM en el build | Cambia por lotes; aumenta memoria de Node en local |
 
-## Retro
+## Retrospectiva
 
-- Third similar "new chapter + sidebar" task should become a Skill
-- Check off ROADMAP items so docs and plan stay aligned
+- La tercera vez que hagas «capítulo nuevo + sidebar» debería capturarse como Skill
+- Marca ítems del ROADMAP al completarlos para que docs y plan no se desalineen
 
-## References
+## Fuentes de referencia
 
-- This repo's actual M2 docs iteration flow
-- codex.bozhouai.com docs maintenance case (structural reference)
+- Flujo real de iteración M2 de docs de este repo
+- Casos de mantenimiento de docs de codex.bozhouai.com (referencia de estructura)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified content artifacts, EPXV, build verification, and case template chapters; content is limited to the stable content-engineering case of small multi-file doc-site edits, build verification, and failure recovery.
+**Estado:** verified  
+**Productos aplicables:** CLI / IDE  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los capítulos ya verificados de artefactos de contenido, EPXV, aceptación por build y plantilla de caso. El contenido se limita al caso estable de ingeniería de contenido «cambios pequeños multiarchivo en el sitio de docs, verificación por build y recuperación ante fallos».

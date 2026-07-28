@@ -1,82 +1,84 @@
 ---
-title: Local vs cloud
-description: Compare local tasks and Cloud tasks and when to use each.
+title: Local frente a Cloud
+description: Compara cuándo encajan las Tareas locales y las Tareas Cloud.
 locale: es
-source_locale: en
-source_revision: 877a261
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-“Local” and “cloud” can sound technical. Simply: local means work on your own computer; cloud means work on a remote machine.
 
-If you just want to start using Codex, **local** is usually the easier first choice.
+«Local» y «Cloud» suenan a jerga técnica; en corto: local es trabajar en tu propio ordenador; Cloud, en una máquina remota.
 
-| | Local task | Cloud task |
+Si solo quieres empezar a usar Codex, suele ser más sencillo empezar por **local**.
+
+| | Tarea local | Tarea Cloud |
 |---|---|---|
-| Where it runs | Your machine / local environment | Cloud environment |
-| Best for | Fast iteration, local files, debugging with local secrets | Remote repos, long tasks, standardized environments |
-| Watch for | Local permissions and accidental edits | Environment setup, secret injection, network policy |
+| Dónde se ejecuta | Tu máquina / entorno local | Entorno Cloud |
+| Encaja cuando | Iteración rápida, archivos locales, depuración que necesita claves locales | Conectar repositorios remotos, Tareas largas, entornos estandarizados |
+| Atención | Permisos locales y riesgo de ediciones erróneas | Configuración del entorno, inyección de claves, políticas de red |
 
-## How they feel
+## Cómo se siente al usarlo
 
-Roughly:
+A grandes rasgos:
 
-- **Local task**: you sit at your computer and Codex helps edit the current project
-- **Cloud task**: you hand the work to a remote workstation and let it keep running there
+- **Tarea local**: como si estuvieras delante de tu ordenador y Codex te ayudara a editar el proyecto actual
+- **Tarea Cloud**: como encargarle la Tarea a una máquina remota para que siga allí
 
-The difference is not only location. It also includes:
+La diferencia no es solo «dónde», también incluye:
 
-- Which files are reachable
-- Whether it can use software and environments already on your machine
-- How long a task can run
-- Whether the team needs a shared environment
+- a qué archivos puede acceder
+- si puede usar directamente el software y el entorno que ya tienes en local
+- cuánto tiempo puede correr la Tarea
+- si el equipo necesita un entorno unificado
 
-## Why many beginners start local
+## Por qué muchos principiantes empiezan en local
 
-Local is easier to understand and easier to inspect.
+Porque es más fácil de entender y de comprobar.
 
-- You know the files are on your computer
-- It is easier to open the project, check results, and fix by hand
-- Undo paths are clearer when something goes wrong
+- Sabes que los archivos están en tu ordenador
+- Es más fácil abrir el proyecto, ver el resultado y corregir a mano
+- Si algo falla, la vía de revertir es más clara
 
-For a first run, completing the task loop matters more than going to the cloud immediately.
+Para la primera vez, cerrar el ciclo de una Tarea importa más que subir a la nube de entrada.
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. Cloud is not automatically more advanced or more “formal”
+### 1. Cloud no es necesariamente más avanzado ni más adecuado para trabajo formal
 
-If the job is editing a local project, looking at local files, and iterating quickly, local is more direct.
+Si tu Tarea es editar un proyecto local, mirar archivos locales y probar unas cuantas veces, local es más directo.
 
-### 2. Is local somehow less “professional”?
+### 2. ¿Local es «menos profesional»?
 
-A lot of real development happens locally. Whether to use cloud depends on the task type, not on how advanced it feels.
+Mucho trabajo de desarrollo real ya se hace en local. Usar Cloud o no depende sobre todo del tipo de Tarea; no uses la «sensación de avanzado» como criterio.
 
-### 3. How should I choose?
+### 3. Cómo elegir
 
-Use this rule of thumb:
+Puedes juzgar así:
 
-- **Editing an existing project on your computer**: choose local
-- **Long-running work, leave-it-running jobs, or remote repo environments**: then consider cloud
+- **Editar un proyecto que ya tienes en el ordenador**: local
+- **Tarea larga, quieres dejarla corriendo, quieres un entorno de repositorio remoto**: entonces considera Cloud
 
-## If you are unsure
+## Cómo elegir si no estás seguro
 
-If you still cannot tell them apart: if it can be done locally, do not rush to the cloud.
+Si aún no lo tienes claro, usa esta regla: si se puede completar en local, no te apresures a subir a Cloud.
 
-Switch to Cloud when you actually need:
+Cuando de verdad encuentres estas necesidades, pasa a Cloud:
 
-- Very long task time
-- A shared standardized environment
-- Remote repos or remote resources
-- Not to occupy your local machine
+- la Tarea dura mucho
+- necesitas un entorno unificado
+- necesitas conectar un repositorio remoto o recursos remotos
+- no quieres ocupar la máquina local
 
-Many beginners start with **local + desktop App**. Cloud details: [Web and Cloud overview](/guide/web-and-cloud/). Switching in the App: [Local and cloud tasks](/guide/desktop-app/local-and-cloud-tasks/).
+Muchos principiantes empiezan con **local + App de escritorio**. Detalles de Cloud: [Resumen de Web y Cloud](/guide/web-and-cloud/). Cambio dentro de la App: [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/).
 
-Local is better for understanding the flow and making small changes. Cloud is better for longer, more standardized, more remote-collaborative work.
+Local encaja mejor para entender el flujo y hacer cambios pequeños. Cloud, para Tareas más largas, más estandarizadas y con más colaboración remota.
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** OpenAI Help Center, en «Using Codex with your ChatGPT plan», sigue distinguiendo “local workflows run on your device” y “cloud tasks run in OpenAI-managed environments”; «ChatGPT Work and Codex» también confirma que Work en web/móvil corre en la nube. Esta página solo resume escenarios y trade-offs de Tareas locales y Cloud, sin atarse a planes o detalles de entrada concretos.  
+**Última verificación:** 2026-07-26

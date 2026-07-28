@@ -1,129 +1,129 @@
 ---
-title: Skill security and versioning
-description: Install sources, permission boundaries, upgrades and rollbacks—govern team Skills.
+title: Seguridad y versiones de Skills
+description: Origen de instalación, límites de permisos, actualización y rollback — gobernar Skills de equipo.
 locale: es
-source_locale: en
-source_revision: d55780b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A Skill is not just another prompt template.
+Un Skill no es solo una plantilla de Prompt más.
 
-It changes how Codex works and may include scripts or extra resources.
+Influye en cómo trabaja Codex y a veces trae scripts u otros recursos.
 
-Untrusted sources, unreviewed content, and version drift make Skill risk comparable to MCP. This page covers how teams **select, install, upgrade, and audit** Skills.
+Por eso, si el origen no es de confianza, el contenido no se ha revisado o las versiones se desvían, el riesgo no es mucho menor que el de MCP. Esta página explica cómo el equipo **elige, instala, actualiza y audita** Skills.
 
-## Contents
+## Contenido
 
-- Which Skills not to install
-- Pinning versions and change review
-- Relationship to Plugin distribution
+- Qué Skills no conviene instalar
+- Fijar versiones y revisar cambios
+- Relación con la distribución vía Plugin
 
-## Why regular users should care
+## Por qué también importa al usuario habitual
 
-If you:
+Si haces alguna de estas cosas:
 
-- Install Skills others share
-- Reference team Skills in a project
-- Upgrade existing Skills
-- Recommend Skills to colleagues
+- Instalar un Skill que alguien compartió
+- Referenciar Skills de equipo en el proyecto
+- Actualizar Skills existentes
+- Recomendar un Skill a un compañero
 
-—you are already in the risk propagation chain.
+Ya participas en la cadena de propagación del riesgo.
 
-Skill security cannot rely only on "someone centrally manages it"; every user needs basic judgment.
+La seguridad de Skills no puede depender solo de «alguien que lo gestione de forma central»; cada usuario necesita criterio básico.
 
-Basics: [Skills overview](/skills/overview/) · [Create your first Skill](/skills/create-your-first-skill/)
+Base: [Descripción general de Skills](/skills/overview/) · [Crear tu primer Skill](/skills/create-your-first-skill/)
 
-## Threat model (simplified)
+## Modelo de amenazas (simplificado)
 
-| Risk | Manifestation |
+| Riesgo | Manifestación |
 |---|---|
-| Malicious Skill | Induce secret leak, run destructive shell |
-| Excessive permissions | Read/write paths that should be off limits |
-| Supply chain | Tampered third-party Skill repo |
-| Stale Skill | Incompatible with new CLI; odd behavior |
+| Skill malicioso | Inducir a filtrar secretos o ejecutar shell destructivo |
+| Permisos excesivos | Leer/escribir rutas que no debería tocar |
+| Cadena de suministro | Depender de un repositorio de Skills de terceros alterado |
+| Skill obsoleto | Incompatible con el CLI nuevo; comportamiento anómalo |
 
-## What to check before install
+## Qué comprobar antes de instalar
 
-For any Skill, ask:
+Ante un Skill, pregunta primero tres cosas:
 
-1. Where did it come from?
-2. What extra actions will it make Codex take?
-3. Can I understand its `SKILL.md` and bundled scripts?
+1. ¿De dónde viene?
+2. ¿Qué le hace hacer de más a Codex?
+3. ¿Entiendo su `SKILL.md` y los scripts adjuntos?
 
-If you cannot answer two of three, do not drop it into a production project.
+Si no puedes responder dos de las tres, no conviene meterlo directo en un proyecto formal.
 
-## Install principles
+## Principios de instalación
 
-1. **Source**: Prefer official marketplace and company Git; be careful with anonymous gists
-2. **Read**: Open `SKILL.md` and scripts before install; watch for odd permission requests
-3. **Isolate**: Separate client projects from personal experiment Skills
-4. **Minimal use**: One Skill that solves the problem beats stacking ten
+1. **Origen**: prioriza el marketplace oficial y Git interno de la empresa; ten cuidado con gists anónimos
+2. **Lectura**: antes de instalar, abre `SKILL.md` y los scripts adjuntos; mira si piden permisos raros
+3. **Aislamiento**: separa directorios de Skills de proyectos de cliente y de experimentos personales
+4. **Uso mínimo**: si un Skill basta, no apiles diez
 
-## Common misconceptions
+## Errores frecuentes
 
-### 1. Skills are only text, so no real risk
+### 1. Un Skill es solo texto; no hay riesgo real
 
-They affect workflow, tool choice, and script execution—risk is not just "tone changed."
+Como afecta al flujo, a la elección de herramientas y a cómo se ejecutan scripts, el riesgo no es solo «cambió el tono».
 
-### 2. Popular Skills are safe for production
+### 2. Si mucha gente lo usa, puede ir directo a producción
 
-Others' context does not match your repo, permission boundaries, or team rules.
+Que a otros les sirva no implica que encaje con tu repo, límites de Permiso y normas de equipo.
 
-### 3. Upgrading a Skill is like updating a doc
+### 3. Actualizar un Skill es como actualizar un documento
 
-For teams, upgrading a Skill upgrades automated behavior—treat it like a dependency upgrade.
+Para el equipo, actualizar un Skill es actualizar un comportamiento automatizado: trátalo con la misma seriedad que actualizar una dependencia.
 
-## Versioning and upgrades
+## Versiones y actualización
 
-| Practice | Notes |
+| Práctica | Notas |
 |---|---|
-| Pin version | Record Skill name + commit/tag in team docs |
-| Change review | Skill updates go through PR like dependency bumps |
-| Changelog | Maintain release notes for the team Skill set |
-| Rollback | Keep previous copy; switch quickly on failure |
+| Pin de versión | Documenta nombre del Skill + commit/tag |
+| Revisión de cambios | Las actualizaciones de Skill van por PR, como las de dependencias |
+| Changelog | Mantén release notes del conjunto de Skills del equipo |
+| Rollback | Conserva una copia de la versión anterior; cambia rápido si falla |
 
-Plugins can bundle Skills for unified distribution: [Plugins overview](/skills/plugins/plugins-overview/)
+Un Plugin puede empaquetar Skills para distribución unificada: [Descripción general de Plugins](/skills/plugins/plugins-overview/)
 
-## Team habits
+## Hábitos de equipo
 
-If a Skill will be reused long-term by many people, do not leave it as "someone DM'd a path."  
-Better:
+Si un Skill lo reutilizarán varias personas a largo plazo, no lo dejes en «alguien pasó una ruta por chat privado».  
+Es mejor:
 
-- Fixed source
-- Version history
-- Upgrade notes
-- Rollback path
+- Origen fijo
+- Registro de versiones
+- Notas de actualización
+- Camino de rollback
 
-## And `$skill` invocation
+## Con la llamada `$skill`
 
-Explicit `$name` calls are clear; for **model auto-selection**, limit available Skills and scenarios in `AGENTS.md`.
+Cuando el usuario llama con `$name` de forma explícita, la intención es clara; cuando el **modelo elige el Skill solo**, limita en `AGENTS.md` la lista disponible y los escenarios.
 
-## Team governance checklist
+## Lista de gobernanza de equipo
 
-- [ ] Allowlist of permitted Skill sources
-- [ ] New hire onboarding installs only a "base pack"
-- [ ] Quarterly review of Skills still needed
-- [ ] Aligned with [allow and deny patterns](/guide/customization/rules/allow-and-deny-patterns/)
+- [ ] Lista blanca de orígenes de Skills permitidos
+- [ ] Onboarding de nuevos: solo el «paquete base»
+- [ ] Revisión trimestral de Skills que aún hacen falta
+- [ ] Alineado con [Patrones allow y deny](/guide/customization/rules/allow-and-deny-patterns/)
 
-## Common mistakes
+## Errores comunes
 
-- Installing "one-click universal Skill" from chat links
-- Production `AGENTS.md` referencing personal-path Skills
-- No smoke task after upgrade
-- Trusting behavior without reading `SKILL.md`
+- Instalar desde un enlace de chat un «Skill universal de un clic»
+- Que el AGENTS.md de un repo de producción apunte a un Skill en una ruta personal
+- Actualizar sin correr una tarea de humo
+- Confiar en el comportamiento sin haber leído `SKILL.md`
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex Skills security guidance
+- Guías de seguridad de OpenAI Codex Skills
 - KimYx0207 CX-05～CX-06
 - stormzhang `20-skills.md`
 - freestylefly/CodexGuide Skill playbook
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** OpenAI Help "Skills in ChatGPT" confirms Skills can include instructions, supporting files, and code; users must review sources and risks before and after upload; this page's governance advice aligns with that principle.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** OpenAI Help «Skills in ChatGPT» confirma que los Skills pueden incluir instructions, supporting files y code, y que el usuario debe revisar origen y riesgo antes y después de subirlos; las recomendaciones de gobernanza de esta página alinean con ese principio.  
+**Última verificación:** 2026-07-26

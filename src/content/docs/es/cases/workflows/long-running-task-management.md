@@ -1,83 +1,83 @@
 ---
-title: Long-running task management
-description: Large tasks across hours or sessions—checkpoints, compaction, delegation, and exit conditions.
+title: Gestión de tareas largas
+description: Tareas grandes de varias horas o sesiones — puntos de control, compactación, delegación y condiciones de salida.
 locale: es
-source_locale: en
-source_revision: 67e4f30
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Long tasks often run into the same problems: **context fills up**, **people step away**, **direction drifts**, and **it's unclear when to stop**. This page applies [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/) to scenarios that span hours or multiple sessions.
+Los problemas habituales de las tareas largas: **el contexto se llena**, **la persona se va**, **la dirección deriva**, **no se sabe cuándo parar**. Esta página sitúa [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/) en escenarios de horas o varias sesiones.
 
-## What's covered
+## Enfoque de esta página
 
-- When to split tasks vs delegate to Cloud
-- What to write in checkpoints and status notes
-- Exit conditions for automated long runs
+- Cuándo dividir la tarea y cuándo delegar a Cloud
+- Qué escribir en puntos de control y registros de estado
+- Condiciones de salida para tareas largas automatizadas
 
-Related: [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Relacionado: [Delegar y hacer seguimiento](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
 
-## Signals of a long task
+## Señales de tarea larga
 
-- Expected machine time over 30 minutes
-- Multiple subsystems or >20 files involved
-- Waiting on human feedback or external APIs
-- Full E2E / performance test runs required
+- Más de 30 minutos de tiempo de máquina estimado
+- Varios subsistemas o >20 archivos
+- Espera de feedback humano o APIs externas
+- Hay que correr E2E completo / pruebas de rendimiento
 
-If any apply, write the plan first—don't chat straight through to the end.
+Si se cumple cualquiera, escribe el plan primero; no hagas toda la conversación de un tirón.
 
-## Three-phase management
+## Gestión en tres fases
 
-### 1. Freeze the plan
+### 1. Congelar el plan
 
-Produce a written plan: scope, non-goals, milestones, acceptance commands. Get human sign-off before large-scale execution.
+Produce un plan escrito: alcance, no-objetivos, hitos, comandos de aceptación. Confirma con una persona antes de una ejecución a gran escala.
 
-[Planning](/guide/agent-work/planning/) · [Subagents](/guide/agent-work/subagents/)
+[Planificación](/guide/agent-work/planning/) · [Subagents](/guide/agent-work/subagents/)
 
-### 2. Checkpoints
+### 2. Puntos de control
 
-After each milestone:
+Tras cada hito:
 
-- Commit or stash a reviewable increment
-- Update `PROGRESS.md` or an issue comment: what finished, what's next, blockers
-- When context is full, use [compaction](/guide/context/compaction/) or start a new session + link the progress file
+- Commit o stash de un incremento revisable
+- Actualiza `PROGRESS.md` o un comentario de issue: qué se hizo, siguiente paso, bloqueos
+- Si el contexto está lleno, usa [compactación](/guide/context/compaction/) o abre una sesión nueva + enlaza el archivo de progreso
 
-### 3. Wrap up or delegate
+### 3. Cierre o delegación
 
-- When local capacity runs out → [Cloud delegation](/guide/web-and-cloud/delegate-and-follow-up/)
-- For ongoing monitoring → Automation + explicit **max iterations / deadline**
+- Si lo local no da abasto → [delegación Cloud](/guide/web-and-cloud/delegate-and-follow-up/)
+- Si hace falta monitorización continua → Automation + **max iterations / fecha límite** claras
 
-## Exit conditions (required for automation)
+## Condiciones de salida (obligatorias en automatización)
 
-| Condition | Description |
+| Condición | Descripción |
 |---|---|
-| Time limit | Alert if no progress in 4h |
-| Iteration limit | Stop after 3 failures on the same test |
-| Human gate | Must @ someone before changing production config |
-| Success criteria | Tests green + PR opened |
+| Tope de tiempo | 4 h sin progreso → alerta |
+| Tope de iteraciones | El mismo test falla 3 veces → parar |
+| Puerta humana | Antes de cambiar config de producción hay que @ a una persona |
+| Condición de éxito | Tests verdes + PR abierto |
 
-## Common mistakes
+## Errores frecuentes
 
-- No PROGRESS file—duplicate work after switching sessions
-- Long task with no non-goals; Agent "tidies the whole repo" on the side
-- Cloud task left unapproved overnight
+- Sin archivo PROGRESS, al cambiar de sesión se repite trabajo
+- Tarea larga sin no-objetivos: el Agent «ordena todo el repo» de paso
+- Tarea Cloud colgada toda la noche sin aprobación
 
-## Acceptance checklist
+## Checklist de aceptación
 
-- [ ] Plan document exists before the long task starts
-- [ ] At least two checkpoints have reviewable diffs
-- [ ] You know how to pause, resume, or hand off
+- [ ] Antes de empezar hay un documento de plan
+- [ ] Al menos dos puntos de control con diff revisable
+- [ ] Se sabe cómo pausar, reanudar o traspasar
 
-## References
+## Fuentes de referencia
 
-- codex.bozhouai.com long-task and standard workflow material
-- freestylefly/CodexGuide task capture
-- stormzhang `14-workflows.md`
+- Tareas largas y flujos estándar de codex.bozhouai.com
+- Captura de tareas de freestylefly/CodexGuide
+- `14-workflows.md` de stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public use cases for long-horizon goals and long-task collaboration, plus this handbook's verified handoff/resume, planning, compaction, and delegation chapters; this page covers only stable methods for checkpoints, handoff, and exit conditions on long tasks.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los use cases públicos actuales de OpenAI Developers sobre objetivos a largo plazo y colaboración en tareas largas, y con los capítulos ya verificados de traspaso, planificación, compactación y delegación. Esta página solo describe métodos estables de puntos de control, traspaso y condiciones de salida.

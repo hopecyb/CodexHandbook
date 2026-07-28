@@ -1,30 +1,30 @@
 ---
-title: Content creation
-description: Entry for docs, articles, and content-asset cases—focus on review, rewriting, and artifact verification.
+title: Creación de contenido
+description: Entrada a casos de documentación, artículos y activos de contenido — énfasis en revisión, reescritura y aceptación de artefactos.
 locale: es
-source_locale: en
-source_revision: 1e7006a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Content-creation cases focus on this scenario:
+Los casos de creación de contenido se centran en este tipo de escenario:
 
-> **When you need publishable, reviewable content, how can Codex help?**
+> **Cuando hay que entregar contenido publicable y revisable, cómo puede colaborar Codex.**
 
-## Cases in this group
+## Entradas de este grupo
 
-- [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refactorizar un sitio de docs con revisión](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## What this group emphasizes
+## Enfoque del grupo
 
-- How to change multi-file content in batches
-- How to avoid rewrite that only "expands" copy
-- How build, review, and human check form a closed loop
+- Cómo modificar contenido multiarchivo por lotes
+- Cómo reescribir copy sin quedarse solo en «ampliar»
+- Cómo formar un bucle con build, revisión y contraste
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current content-creation case entry and related content-artifact/review chapters; this page only describes what the content-creation case group covers and where to enter.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con la entrada actual de casos content-creation del repo y los capítulos de artefactos de contenido / revisión. Esta página solo describe los problemas y entradas del grupo de creación de contenido.

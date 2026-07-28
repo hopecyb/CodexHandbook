@@ -1,67 +1,67 @@
 ---
-title: Exit Codes and Retries
-description: Interpret codex exec success and failure in pipelines—when to retry vs fail fast.
+title: Códigos de salida y reintentos
+description: Interpretar bien el éxito o el fallo de codex exec en el pipeline — cuándo reintentar y cuándo fallar de inmediato.
 locale: es
-source_locale: en
-source_revision: afcb9be
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-CI relies on **process exit codes** to judge step success. This page covers common semantics for [codex exec](/guide/developer-platform/non-interactive/codex-exec/), retry strategy, and idempotent design.
+CI depende del **código de salida del proceso** para juzgar si un paso tuvo éxito. Este capítulo explica la semántica habitual de [codex exec](/guide/developer-platform/non-interactive/codex-exec/), la estrategia de reintentos y el diseño idempotente.
 
-## What this page covers
+## Contenido de esta página
 
-- Exit codes vs business “review did not pass”
-- Whether to retry 429/network errors
-- Avoiding duplicate side effects on retry
+- Diferencia entre código de salida y «la revisión no pasó» a nivel de negocio
+- Si reintentar errores 429 / de red
+- Cómo evitar efectos secundarios al repetir la ejecución
 
-## What exit codes tell you
+## Qué te dice realmente el código de salida
 
-If this is new, think of an exit code as a short result left for scripts and CI when a task finishes.
+Si es la primera vez, piensa el «código de salida» como un resultado breve que el programa deja al script y a CI cuando termina la Tarea.
 
-It usually does not explain much—it only tells the pipeline:
+Suele no explicar mucho; solo dice al pipeline:
 
-- Success this time
-- Or failure
+- Esta vez cuenta como éxito
+- O cuenta como fallo
 
-“Retry” answers a different question: should this failure stop immediately, or is another attempt worth it?
+El «reintento» responde a otra pregunta: ¿este fallo debe detenerse ya, o merece otra oportunidad?
 
 :::note
-The exact exit code table follows official CLI docs; the table below is **design guidance** for integration.
+La tabla concreta de códigos de salida la marca la documentación oficial del CLI; la tabla siguiente son **principios de diseño** para la integración.
 :::
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### Not all failures are the same
+### No hay un solo tipo de fallo
 
-Beginners often treat every non-`0` as one kind of failure.
+Muchos principiantes tratan todo lo distinto de `0` como el mismo fallo.
 
-At minimum, distinguish:
+En la práctica hay que distinguir al menos:
 
-- Task crashed
-- Policy or sandbox blocked it
-- External service had a transient issue
-- Run succeeded but review conclusion was “fail”
+- La Tarea se rompió al correr
+- La política o el Sandbox la bloquearon
+- Un servicio externo falló de forma temporal
+- Corrió bien, pero la conclusión de la revisión es «no pasa»
 
-Each needs different handling—not blanket retry.
+El tratamiento no es el mismo; no todo se resuelve reintentando.
 
-### “Auto retry” is not automatically more reliable
+### «Reintento automático» ≠ más estabilidad
 
-If the failure will not disappear on retry—permissions, policy blocks, bad prompt—retry only wastes time and quota.
+Si la causa del fallo no desaparece al reintentar —Permiso insuficiente, regla que bloquea, Prompt malo—, el reintento solo gasta tiempo y cuota.
 
-## Recommended semantics (conceptual)
+## Semántica recomendada (concepto)
 
-| Situation | Suggested handling |
+| Situación | Tratamiento sugerido |
 |---|---|
-| `0` | Task completed and met success criteria in the prompt |
-| Non-`0` with policy/sandbox denial in logs | **Do not** blindly retry; fix config or prompt |
-| Non-`0` with API 429/5xx | Limited exponential backoff retries |
-| P0 issues found but execution succeeded | Use [structured output](/guide/developer-platform/non-interactive/structured-output/) `pass: false` + wrapper script `exit 1` |
+| `0` | La Tarea terminó y cumple el criterio de éxito del Prompt |
+| Distinto de `0` y el log muestra rechazo de policy/sandbox | **No** reintentar a ciegas; corrige configuración o Prompt |
+| Distinto de `0` y API 429/5xx | Reintento limitado con backoff exponencial |
+| Se encontró un P0 pero la ejecución tuvo éxito | Usa `pass: false` de la [salida estructurada](/guide/developer-platform/non-interactive/structured-output/) + `exit 1` en el script |
 
-“Found a security issue” should not rely on a crash—**explicitly** set `pass: false` in JSON and let a wrapper script choose the exit code.
+«Se encontró un problema de seguridad» no debería depender de una excepción tipo crash: debe ser **explícito** con `pass: false` en JSON y que el script envolvente decida el código de salida.
 
-## Retry template (bash)
+## Plantilla de reintento (bash)
 
 ```bash
 max=3
@@ -80,54 +80,54 @@ done
 exit 1
 ```
 
-Align “do not retry” codes with official docs and branch in `case`.
+Alinea los códigos «no reintentables» con la documentación oficial y mételos en ramas `case`.
 
-## Idempotency and side effects
+## Idempotencia y efectos secundarios
 
-| Risk | Mitigation |
+| Riesgo | Mitigación |
 |---|---|
-| Duplicate PR comments | Use check run id or “update if bot comment exists” |
-| Duplicate file writes | exec defaults to read-only review; writes in separate job + human gate |
-| Duplicate notifications | Webhook with dedupe key |
+| Comentarios duplicados en el PR | Usar check run id o «si ya hay comentario del bot, actualizar» |
+| Escritura repetida de archivos | exec de revisión de solo lectura por defecto; escritura en job aparte + puerta humana |
+| Notificaciones duplicadas | Webhook de notificación con clave de dedupe |
 
-## When unsure
+## Cómo decidir si no tienes claro
 
-Ask:
+Si no sabes si un fallo merece reintento, pregúntate:
 
-1. Does this look like a transient external glitch?
-2. On retry, could we duplicate comments, writes, or notifications?
-3. Is the real fix config, prompt, or permissions?
+1. ¿Parece una fluctuación externa temporal?
+2. Aunque se vuelva a correr, ¿generará comentarios, escrituras o notificaciones duplicadas?
+3. ¿La causa real es que alguien debe cambiar configuración, Prompt o Permisos?
 
-Closer to (1): limited retry may help. Closer to (2) or (3): stop and fix root cause.
+Cuanto más cerca de (1), más sentido tiene un reintento limitado; cuanto más cerca de (2) o (3), más conviene parar y atacar la causa raíz.
 
-## Common mistakes
+## Errores frecuentes
 
-- Ignoring exit codes; CI always green
-- Infinite retry on policy errors, burning quota
-- Retry without fixed prompt/git sha, incomparable results
+- Ignorar el código de salida; CI siempre green
+- Reintentar sin límite errores de política y quemar cuota
+- Reintentar sin fijar Prompt/git sha; resultados incomparables
 
-First separate “temporary fault” from “retry will not help,” then decide whether to retry. Not every failure deserves another run.
+Primero distingue «¿es un fallo temporal o no mejorará al reintentar?» y luego decide. No todo fallo merece otra pasada.
 
-## Acceptance checklist
+## Lista de aceptación
 
-- [ ] CI fails on non-zero exit codes
-- [ ] Retry count and backoff have upper bounds
-- [ ] “Review failed” vs “run crashed” are distinguishable
-- [ ] Logs retain enough detail for troubleshooting
+- [ ] CI falla ante códigos de salida distintos de 0
+- [ ] Hay tope de reintentos y de backoff
+- [ ] Se distinguen «revisión no pasó» y «la ejecución se rompió»
+- [ ] Los logs conservan información suficiente para depurar
 
-## Related
+## Capítulos relacionados
 
-- [Error reference](/guide/reference/error-reference/)
-- [Failure recovery](/cases/workflows/failure-recovery/)
+- [Referencia de errores](/guide/reference/error-reference/)
+- [Recuperación ante fallos](/cases/workflows/failure-recovery/)
 
-## Reference sources
+## Fuentes de referencia
 
-- OpenAI API retry guidance (conceptual)
-- stormzhang CI troubleshooting
+- Guía de reintentos de la API de OpenAI (concepto)
+- Depuración de CI de stormzhang
 
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** This page gives reasonable engineering advice on exit codes and retries, but examples assume specific exit semantics (e.g. `code=2`) and `codex exec` behavior without strong current official backing; restore `verified` after new CLI docs are checked.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Productos aplicables:** CLI  
+**Nota de revisión:** La página da consejos de ingeniería razonables sobre códigos de salida y reintentos, pero el ejemplo asume semántica concreta (p. ej. `code=2`) y comportamiento de `codex exec`; esos detalles aún carecen de base oficial vigente lo bastante sólida y deben verificarse con la documentación nueva del CLI antes de volver a `verified`.  
+**Última verificación:** 2026-07-26

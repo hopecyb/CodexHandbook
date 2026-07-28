@@ -1,153 +1,159 @@
 ---
-title: Presentations
-description: Generate and revise slides and decks—structure, masters, and speaker notes.
+title: Presentaciones
+description: Generar, revisar y exportar diapositivas y guiones — convenciones de estructura, plantilla maestra y notas del orador.
 locale: es
-source_locale: en
-source_revision: b6c309e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Presentations (PPT, Keynote, Google Slides, Marp/Reveal, etc.) emphasize **narrative structure** and **visual consistency**. Agents excel at outlines and first drafts; masters and brand rules still need human review.
+Las presentaciones (PPT, Keynote, Google Slides, Marp/Reveal, etc.) priorizan la **estructura narrativa** y la **consistencia visual**. El Agent destaca en esquemas y borradores; la plantilla maestra y las normas de marca siguen necesitando supervisión humana.
 
-With Codex, the most value is early structure, slide order, and story—final polish is still yours.
+Al usar Codex para una presentación, lo más valioso es montar primero estructura, orden de páginas y lógica del relato; el cierre final del entregable sigue siendo tuyo.
 
-## What this page covers
+## Contenido de esta página
 
-- Recommended workflow for slides with Codex
-- Tradeoffs: `.pptx` vs Markdown slides
-- Avoiding “every slide looks different”
+- Flujo recomendado al hacer diapositivas con Codex
+- Criterios entre formatos (`.pptx`, diapositivas Markdown)
+- Cómo evitar «cada página con un estilo distinto»
 
-## Pick delivery format first
+## Fija primero el formato de entrega
 
-| Format | Fits |
+| Formato | Adecuado para |
 |---|---|
-| Marp / Slidev / reveal.md | Developers, version control |
-| `.pptx` | Business reviews, sharing with clients |
-| Google Slides | Live collaboration (often via export or MCP) |
-| PDF export | Read-only distribution |
+| Marp / Slidev / reveal.md | Desarrolladores; amigable con control de versiones |
+| `.pptx` | Informes de negocio; compartir con clientes |
+| Google Slides | Colaboración en tiempo real (a menudo vía exportación o MCP) |
+| Exportación PDF | Distribución de solo lectura |
 
-State format at the start so the Agent does not mix toolchains.
+Fija el formato al inicio de la tarea para evitar que el Agent mezcle varias cadenas de herramientas.
 
-Choose by audience:
+Elige según a quién entregas:
 
-- Client, exec, colleagues who edit in Office: usually `.pptx`
-- Version with code: usually Markdown slides
-- Read-only handout: usually PDF export
+- Cliente, jefe o colegas que abren y editan directamente: suele ser `.pptx`
+- Versionar junto con el código: suelen ser diapositivas Markdown
+- Solo versión de lectura: suele exportarse finalmente a PDF
 
-## Recommended workflow
+## Flujo de trabajo recomendado
 
 ```text
-1. Outline: audience, duration, 3–5 core messages
-2. Per slide: title + 3 bullets, speaker note bullets
-3. Pick tool, generate first draft
-4. Human pass: master, charts, data sources
-5. Export PDF, rehearse timing
+1. Esquema: audiencia, duración, 3–5 mensajes clave
+2. Título de cada página + 3 bullets; puntos del guion en notas
+3. Elegir herramienta y generar el borrador
+4. Ajuste humano de plantilla, gráficos y procedencia de datos
+5. Exportar PDF y ensayar con cronómetro
 ```
 
-Aligns with [Explore–plan–execute–verify](/cases/workflows/explore-plan-execute-verify/): approve outline before detail.
+Alineado con [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/): en la fase de esquema, acepta primero y luego rellena el detalle.
 
-## Why structure comes first
+## Por qué conviene controlar primero la estructura
 
-Without structure, Codex may produce many slides with:
+Sin controlar la estructura, Codex tiende a llenar muchas páginas, pero el contenido también suele:
 
-- Wrong order
-- Runaway page count
-- Each slide like a poster, not one deck
+- Tener el orden revuelto
+- Descontrolar el número de páginas
+- Que cada página parezca un cartel independiente, no el mismo informe
 
-Usually work in three layers:
+Avanzar en estas 3 capas suele ser más estable:
 
-1. What must this deck make clear?
-2. What is each slide’s one job?
-3. Then fill copy, chart notes, speaker notes
+1. Fija primero «qué debe dejar claro esta presentación»
+2. Luego «qué mensaje clave lleva cada página»
+3. Solo al final deja que el Agent rellene copy, notas de gráficos y notas del orador
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. Flashy slides ≠ clearer message
+### 1. ¿Un PPT más florido equivale a expresión más fuerte?
 
-What matters:
+A menudo, lo que de verdad afecta a la comprensión es:
 
-- Titles that state the point
-- Slide-to-slide progression
-- Sourced data
+- Si el título dice el punto clave en una frase
+- Si hay relación de avance entre páginas
+- Si los datos tienen fuente
 
-### 2. Full first draft ≠ no human review
+### 2. ¿Si el Agent puede generar el borrador entero, ya no hace falta supervisión humana?
 
-Still human-check:
+Tampoco.  
+Estas partes conviene revisarlas siempre a mano:
 
-- Brand and master
-- Key conclusions
-- Numbers and charts
-- External-facing versions
+- Marca y plantilla de la empresa
+- Conclusiones clave
+- Números y gráficos
+- Versión que se envía al exterior
 
-### 3. More on a slide ≠ more clarity
+### 3. ¿Cuanto más llena una página, más completa parece la información?
 
-Too many bullets, charts, and conclusions per slide hides the point.
+Suele ser más difícil de explicar.  
+Si una página mete demasiados bullets, figuras y conclusiones, al público le cuesta agarrar el foco de golpe.
 
-## Practical order for Codex
+## Orden habitual de producción
 
-1. Audience
-2. Duration
-3. Three takeaways you want
-4. Ask for outline first
-5. After outline approval, expand each slide
-6. Then speaker notes, visual requirements, export format
+Si quieres que Codex te ayude ya con una presentación, puedes pedir en este orden:
 
-Structure → copy → style is usually easier to control.
+1. Di primero quién es la audiencia
+2. Luego la duración de la charla
+3. Luego los 3 puntos que quieres que se lleven
+4. Pide primero el esquema
+5. Tras confirmar el esquema, que desarrolle cada página
+6. Al final, notas del orador, requisitos visuales y formato de exportación
 
-## Prompt essentials
+Con ese orden suele ser más fácil cerrar: primero estructura, luego copy, al final estilo.
 
-- **Audience**: engineers vs executives → terminology depth
-- **Page cap**: prevents 80-slide noise
-- **Brand**: primary color, logo path, no clipart if policy says so
-- **Charts**: cite source files; updatable data not fake screenshots
+## Puntos clave del Prompt
 
-Example tone:
+- **Audiencia**: colegas técnicos vs. dirección — decide la profundidad del léxico
+- **Tope de páginas**: evita 80 páginas de relleno
+- **Marca**: color principal, ruta del logo, prohibir clipart (si la empresa tiene norma)
+- **Gráficos de datos**: indica el archivo fuente; pide actualizables, no inventar capturas
 
-> “Outline up to 10 slides for non-technical executives; one core conclusion per slide; add speaker notes last.”
+También puedes formular el requisito con este tono:
 
-Better than “make a great PPT.”
+> «Primero un esquema de ≤10 páginas; audiencia: dirección no técnica; cada página solo una conclusión clave; al final añade notas del orador.»
 
-Images: [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/); pure generation: [Image generation](/guide/tools/image-generation/).
+Ese tipo de pedido suele producir versiones más fáciles de seguir puliendo que «haz un PPT impresionante».
 
-## Verification
+Necesidades de imagen: [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/); solo generación de imagen: [Generación de imágenes](/guide/tools/image-generation/).
 
-- Readable font size at projection resolution
-- Animation restraint (hard to maintain if excessive)
-- Numbers match [Validate sources](/guide/quality/validate-sources/)
-- Speaker notes sufficient if needed
+## Aceptación
 
-## What to delegate vs own
+- Tamaño de tipografía legible a resolución de proyección
+- Animación moderada (demasiada es difícil de mantener)
+- Números alineados con [Validar fuentes](/guide/quality/validate-sources/)
+- Si las notas del orador bastan (si hacen falta)
 
-| Better for Codex | Better for humans |
+## Qué conviene dejar a Codex y qué conviene decidir tú
+
+| Más adecuado para Codex | Mejor supervisión humana |
 |---|---|
-| Outline and slide breakdown | Final wording of conclusions |
-| Draft titles | Brand consistency |
-| Draft speaker notes | Sensitive data |
-| Chart caption drafts | External release versions |
+| Dividir el esquema en páginas | Redacción final de la conclusión |
+| Borrador de títulos de página | Consistencia de marca |
+| Borrador de notas del orador | Datos sensibles |
+| Copy de explicación de gráficos | Versión de publicación externa |
 
-## Common mistakes
+Esa división suele ahorrar tiempo y facilita sujetar la calidad al final.
 
-- No outline—“make a quarterly report deck”
-- Hand-edit `.pptx` repeatedly without Markdown source
-- Chart data inconsistent with repo CSV
-- One prompt decides structure, design, conclusions, and data definitions
+## Errores frecuentes
 
-## Acceptance checklist
+- Sin esquema, pedir directamente «haz un PPT del informe trimestral»
+- Editar a mano el binario `.pptx` una y otra vez sin conservar la fuente Markdown
+- Datos de gráficos inconsistentes con el CSV del repositorio
+- Pedir de una vez que el Agent decida estructura, diseño, conclusiones y criterio de datos
 
-- [ ] Outline approved before full generation
-- [ ] Opens in target environment without font breakage
-- [ ] Key data traceable to source files
+## Checklist de aceptación
 
-## Reference sources
+- [ ] El esquema lo confirma una persona antes de generar el texto completo
+- [ ] Se abre en el entorno de reproducción objetivo sin tipografía rota
+- [ ] Los datos clave se pueden rastrear hasta el archivo fuente
 
-- codex.bozhouai.com presentation cases
-- stormzhang content creation chapters
-- baoyu-slide-deck community practice (structure reference)
+## Referencias
+
+- Casos de presentación e informes de codex.bozhouai.com
+- Capítulos de creación de contenido de stormzhang
+- Prácticas de la comunidad tipo baoyu-slide-deck (referencia de estructura)
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified artifacts-first, validate-sources, images-and-screenshots, verify-artifacts pages; stable method: structure → copy → style and export.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Contrastado con los capítulos ya verificados de este manual sobre artefacto primero, validar fuentes, imágenes y capturas, verificar artefactos, etc.; el contenido se limita al método estable de trabajo con presentaciones «primero estructura, luego copy, al final estilo y exportación».  
+**Última verificación:** 2026-07-26

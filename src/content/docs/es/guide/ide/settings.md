@@ -1,124 +1,126 @@
 ---
-title: IDE extension settings
-description: Model, approvals, context, and extension behavior configuration in the IDE.
+title: Ajustes de la extensión IDE
+description: Entradas de configuración en el IDE para modelo, Aprobación, Contexto y comportamiento de la extensión.
 locale: es
-source_locale: en
-source_revision: 3f51326
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-IDE extension settings connect **personal preferences** and **project rules**: which model, how strict approvals are, whether open files attach automatically, etc. Aligned with global [configuration basics](/guide/customization/configuration/config-basics/); this page focuses on common editor options.
+Los ajustes de la extensión IDE conectan **preferencias personales** y **reglas del proyecto**: qué nivel de modelo, cuánta Aprobación, si se adjuntan automáticamente los archivos abiertos, etc. Coinciden con los [fundamentos de configuración](/guide/customization/configuration/config-basics/) globales; esta página se centra en las opciones habituales dentro del editor.
 
-## What's covered
+## Contenido de esta página
 
-- IDE settings vs user config vs `AGENTS.md`
-- Settings developers adjust most often
-- How teams align defaults
+- Reparto entre ajustes del IDE, configuración de usuario y `AGENTS.md`
+- Lo que más suelen tocar los desarrolladores
+- Cómo alinear valores por defecto en el equipo
 
-## What these settings control
+## Qué controlan realmente estos ajustes
 
-IDE settings are closer to: **default habits when Codex works with you in the editor**.
+Los ajustes del IDE se parecen más a: **los hábitos por defecto de cómo Codex colabora contigo en el editor**.
 
-They answer questions like:
+Resuelven preguntas como:
 
-- Default model
-- Default approval strictness
-- Whether to auto-attach current file and selection
+- Qué modelo usar por defecto
+- Cuánta Aprobación aplicar por defecto
+- Si incluir automáticamente el archivo actual y la selección
 
-They do not define project rules—they shape whether the editor feels smooth and predictable.
+No definen las reglas del proyecto en sí; deciden si el uso en el editor te resulta cómodo y estable.
 
-## Configuration layers (review)
+## Capas de configuración (repaso)
 
-| Layer | Examples | Priority |
+| Capa | Ejemplo | Prioridad |
 |---|---|---|
-| Org managed policy | Forbid relaxing sandbox | Highest |
-| Project `AGENTS.md` / project config | Test commands, directory conventions | High |
-| IDE extension settings UI | Default model, panel layout | Medium |
-| Single-task prompt | "No network this time" | Task-level |
+| Política gestionada por la organización | Prohibir relajar el Sandbox | Máxima |
+| `AGENTS.md` / configuración del proyecto | Comandos de test, convenciones de directorios | Alta |
+| UI de ajustes de la extensión IDE | Modelo por defecto, disposición del panel | Media |
+| Prompt de una sola Tarea | «Esta vez no conectes a la red» | A nivel de Tarea |
 
-See [scope and precedence](/guide/customization/agents-md/scope-and-precedence/)
+Ver [Alcance y precedencia](/guide/customization/agents-md/scope-and-precedence/)
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### IDE settings are not project standards
+### Los ajustes del IDE no son la norma del proyecto
 
-Do not confuse "how I like my editor configured" with "how this project should work."
+Muchos confunden «cómo lo tengo por defecto en mi editor» con «así debe hacerse en este proyecto».
 
-- Editor settings → personal UX
-- `AGENTS.md` and project config → team agreement
+Más claro:
 
-Related but not the same.
+- Los ajustes del editor van hacia la experiencia personal
+- `AGENTS.md` y la configuración del proyecto van hacia el consenso del equipo
 
-### More automatic context is not always better
+Están relacionados, pero no son lo mismo.
 
-Auto-attaching current file, selection, and tabs helps until it dilutes the task focus.
+### Más Contexto automático no siempre es mejor
 
-"Enough" beats "open everything."
+Incluir automáticamente archivo actual, selección y pestañas abiertas es cómodo; pero si se mete demasiado, también diluye el foco de la Tarea.
 
-## Commonly adjusted settings (conceptual)
+El criterio práctico es lo suficiente; no hace falta perseguir «cuanto más abierto, más potente».
 
-### Model and reasoning
+## Ajustes que se cambian a menudo (concepto)
 
-Affects speed vs quality on hard tasks. Teams can note recommended model tier in README so everyone does not debug different defaults.
+### Modelo y razonamiento
 
-### Approvals and sandbox
+Afectan a la velocidad de respuesta y a la calidad en Tareas complejas. En proyectos de equipo, el README puede indicar el «nivel de modelo recomendado» para que cada uno no tenga un default distinto y sea difícil reproducir problemas.
 
-Maps to [permissions and approvals](/guide/foundations/permissions-and-approvals/):
+### Aprobación y Sandbox
 
-- Beginners: keep default or stricter
-- Trusted repos: relax carefully; do not mix with production secrets directories
+Corresponde a [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/):
 
-CLI and IDE should share the **same security baseline**; CLI: [CLI configuration](/guide/cli/configuration/).
+- Principiantes: mantén el default o algo más estricto
+- Repositorios de confianza: relaja con cuidado y no mezcles con directorios de secrets de producción
 
-### Context behavior
+CLI e IDE deben compartir la **misma línea base de seguridad**; detalle de CLI en [Configuración de la CLI](/guide/cli/configuration/).
 
-Some extensions configure:
+### Comportamiento del Contexto
 
-- Auto-include current file / selection
-- Read `AGENTS.md`
-- Context window options (version-dependent)
+Algunas extensiones permiten configurar:
 
-Too much auto-context adds noise; see [keep context focused](/guide/context/keep-context-focused/).
+- Si incluir automáticamente el archivo / selección actuales
+- Si leer `AGENTS.md`
+- Opciones relacionadas con la ventana de Contexto (según versión)
 
-### Login and account
+Demasiado Contexto automático añade ruido; ver [Mantener el Contexto enfocado](/guide/context/keep-context-focused/).
 
-Shared with [sign-in and authentication](/guide/getting-started/sign-in-and-authentication/); restart extension session after switching accounts.
+### Login y cuenta
 
-## Team alignment
+Se comparte con [Inicio de sesión y autenticación](/guide/getting-started/sign-in-and-authentication/); tras cambiar de cuenta, reinicia la sesión de la extensión.
 
-1. Put **must-match** items in the repo (`AGENTS.md` + optional project config)
-2. Keep **personal habits** in IDE settings—not in Git
-3. New member onboarding: check extension version per [IDE installation](/guide/ide/installation/)
+## Alineación de equipo
 
-## First-time focus
+1. Lo que **debe ser igual** va al repositorio (`AGENTS.md` + configuración de proyecto opcional)
+2. Los **hábitos personales** se quedan en los ajustes del IDE, fuera de Git
+3. Onboarding de nuevos miembros: contrastar la versión de la extensión con [Instalación IDE](/guide/ide/installation/)
 
-On first setup, check three categories:
+## Qué mirar la primera vez
 
-1. Model and reasoning tier
-2. Approval / security
-3. Automatic context
+La primera vez que configures la extensión IDE, basta con tres tipos de ajustes:
 
-Tuning these covers most real-world friction.
+1. Modelo y nivel de razonamiento
+2. Relacionados con Aprobación / seguridad
+3. Relacionados con Contexto automático
 
-## Troubleshooting
+Si esas tres categorías están en orden, ya cubres la mayoría de problemas reales de uso.
 
-| Symptom | Check |
+## Resolución de problemas
+
+| Fenómeno | Comprueba |
 |---|---|
-| Settings not applying | Org policy override? Reload window? |
-| Differs from CLI | Compare [configuration reference](/guide/reference/configuration-reference/) |
-| Extension unresponsive | [IDE troubleshooting](/guide/ide/troubleshooting/) |
+| El ajuste no aplica | Si lo sobrescribe una política de organización; si hace falta recargar la ventana |
+| Comportamiento distinto al de la CLI | Contrasta con la [referencia de configuración](/guide/reference/configuration-reference/) |
+| La extensión no responde | [Resolución de problemas del IDE](/guide/ide/troubleshooting/) |
 
-IDE settings are how you and Codex cooperate in the editor; project rules are a separate layer—do not mix them up.
+Los ajustes del IDE se parecen más a «cómo colaboras con Codex en el editor»; cómo se escriben las reglas del proyecto es otra capa — no las mezcles.
 
-## References
+## Fuentes de referencia
 
 - OpenAI Codex IDE settings
 - stormzhang `18-config.md`, `09-ide.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page covers IDE setting entries, auto-context, approval preferences, and org overrides—names and UI change frequently; lacks strong official settings documentation to support the full page.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Productos aplicables:** IDE  
+**Nota de revisión:** Esta página gira en torno a opciones de la extensión IDE, Contexto automático, preferencias de Aprobación y cobertura por organización, pero esas entradas y nombres cambian con facilidad según la versión; falta documentación oficial de ajustes lo bastante sólida para sostener toda la página.  
+**Última verificación:** 2026-07-26

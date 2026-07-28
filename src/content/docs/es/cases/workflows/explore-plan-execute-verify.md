@@ -1,101 +1,101 @@
 ---
-title: Explore—plan—execute—verify
-description: Codex's default main workflow—four phase checkpoints, steadier than "one shot."
+title: "Explorar—planificar—ejecutar—verificar"
+description: Flujo principal genérico de Codex — cuatro puntos de control por fase, más fiable que «todo de una vez».
 locale: es
-source_locale: en
-source_revision: 395ebda
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This is the handbook's recommended default workflow—from "not sure how yet" to "ready to merge."
+Este es el flujo de trabajo por defecto que recomienda este manual: de «aún no sé cómo» a «listo para fusionar».
 
-## Four phases overview
-
-```text
-① Explore   → Understand current state, scope, risks
-② Plan      → Steps, files, acceptance criteria (large tasks need your confirmation)
-③ Execute   → Change code/docs/config in small steps
-④ Verify    → Tests, diff review, check against definition of done
-```
-
-Do not skip ①② and jump to ③—that often becomes "guess and patch." See [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/).
-
-## ① Explore
-
-**Goal:** Describe current state before deciding what to change.
-
-Prompt example:
+## Vista de las cuatro fases
 
 ```text
-Do not change code yet. Read @src/auth/ and related tests; list:
-1. Current login flow
-2. Files possibly related to Safari layout bug
-3. One point you're unsure about and need me to confirm
+① Explorar Explore   → Aclarar estado actual, alcance y riesgos
+② Planificar Plan    → Pasos, archivos, criterios de aceptación (las tareas grandes requieren tu confirmación)
+③ Ejecutar Execute   → Cambiar código/docs/config en pasos pequeños
+④ Verificar Verify   → Tests, revisión del diff, contraste con la «definición de terminado»
 ```
 
-Output: problem statement, impact scope, items to confirm.
+No saltes ①② para ir directo a ③: eso suele acabar en «arreglar a ciegas». Ver [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/).
 
-## ② Plan
+## ① Explorar
 
-**Goal:** A reviewable step checklist.
+**Objetivo:** Dejar claro el estado actual antes de decidir cómo cambiar.
+
+Ejemplo de prompt:
 
 ```text
-Based on the exploration above, give a plan: numbered steps, involved files, how to verify each step.
-Do not write code until I reply "execute per plan."
+No cambies el código todavía. Lee @src/auth/ y los tests relacionados, y explica en lista:
+1. Flujo de login actual
+2. Archivos que podrían relacionarse con el bug de layout en Safari
+3. Un punto del que no estás seguro y necesitas que yo confirme
 ```
 
-Large or high-risk changes need confirmation first. Small tasks can agree "plan under 3 steps can auto-execute"—write that in [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Salida: enunciado del problema, alcance del impacto, puntos pendientes de confirmar.
 
-## ③ Execute
+## ② Planificar
 
-**Goal:** Keep changes small and reversible.
+**Objetivo:** Una lista de pasos revisable.
 
-- Focus on one sub-goal at a time
-- Prefer paths covered by tests
-- If plan diverges, **return to ②** instead of forcing ahead
+```text
+A partir de la exploración anterior, dame un plan: pasos numerados, archivos implicados, cómo verificar cada paso.
+No escribas código hasta que yo responda «ejecutar según el plan».
+```
 
-Guide phrase: "Execute step 2; if the plan must change, stop and explain first."
+Las tareas grandes o de alto riesgo esperan confirmación. En tareas pequeñas puedes acordar «si el plan tiene ≤3 pasos, puede ejecutarse automáticamente» y escribirlo en [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
 
-## ④ Verify
+## ③ Ejecutar
 
-**Goal:** Prove definition of done is met.
+**Objetivo:** Mantener los cambios pequeños y revertibles.
 
-| Verification type | Approach |
+- Un subobjetivo por vez
+- Prioriza rutas que los tests puedan cubrir
+- Ante imprevistos, **vuelve a ②** en lugar de forzar
+
+Frase guía: «Ejecuta el paso 2; si hace falta cambiar el plan, para y explícalo.»
+
+## ④ Verificar
+
+**Objetivo:** Demostrar que se cumple la «definición de terminado».
+
+| Tipo de verificación | Práctica |
 |---|---|
-| Automated | Unit tests, lint, type check |
-| Manual | Read diff, hand-test critical paths |
-| Artifacts | Screenshots, log snippets, API responses |
+| Automática | Tests unitarios, lint, comprobación de tipos |
+| Humana | Leer el diff, probar a mano las rutas críticas |
+| Artefacto | Capturas, fragmentos de log, respuestas de API |
 
-See [Definition of done](/prompts/define-done/) and [Run tests](/guide/quality/run-tests/) for checklists.
+Listas relacionadas: [Definir terminado](/prompts/define-done/) y [Ejecutar tests](/guide/quality/run-tests/).
 
-## Trim by task size
+## Ajuste según el tamaño de la tarea
 
-| Size | Explore | Plan | Execute | Verify |
+| Escala | Explorar | Planificar | Ejecutar | Verificar |
 |---|---|---|---|---|
-| Typo fix | Can skip | 1 verbal step | Short | lint |
-| Single-file bug | Light | 3–5 steps | Medium | tests + diff |
-| Cross-module feature | Required | Written plan + confirm | Phased | Full tests + hand-test |
-| Production incident | Diagnose first | Rollback plan first | Tiny steps | Monitoring + postmortem |
+| Corrección de typo | Opcional | 1 paso oral | Corta | lint |
+| Bug de un solo archivo | Ligera | 3–5 pasos | Media | Tests + diff |
+| Función cross-módulo | Obligatoria | Plan escrito + confirmación | Por fases | Suite completa + prueba manual |
+| Incidente de producción | Diagnóstico primero | Plan de rollback primero | Pasos mínimos | Monitorización + retrospectiva |
 
-## EPXV case template
+## Con la plantilla de casos EPXV
 
-Teams can embed the four phases in [case study template](/cases/use-cases/case-study-template/) and PR descriptions for shared language.
+El equipo puede volcar las cuatro fases en la [plantilla de caso](/cases/use-cases/case-study-template/) y en las descripciones de PR, para un lenguaje común.
 
-## Common mistakes
+## Errores frecuentes
 
-- Plan stays in your head—execution drifts
-- Verification is only "looks like it runs"
-- Insufficient explore—wrong module changed
+- El plan solo está «en la cabeza» y la ejecución se desvía
+- Verificar solo «parece que arranca»
+- Explorar poco y tocar el módulo equivocado
 
-## Reference sources
+## Fuentes de referencia
 
-- CodexGuide task design and verification methods
-- Orange Book "full chain from requirements to delivery"
+- Métodos de diseño y verificación de tareas de CodexGuide
+- Cadena completa «de requisito a entrega» del libro naranja
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, diagnose, definition of done, run tests, and `AGENTS.md` pages in this handbook; content limited to four-phase collaboration main path and checkpoints—no volatile product parameters or entry details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con las páginas ya verificadas de planificación, diagnóstico, definir terminado, ejecutar tests y `AGENTS.md`. El contenido se limita a la cadena principal de cuatro fases y sus puntos de control; no incluye parámetros de producto volátiles ni detalles de entrada.

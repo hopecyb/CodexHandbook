@@ -1,159 +1,159 @@
 ---
-title: Ask for a plan first
-description: Before Codex edits, have it explain steps, risks, and how to verify.
+title: Pedir un plan primero
+description: Antes de que Codex actúe, haz que explique los pasos, los riesgos y cómo verificar.
 locale: es
-source_locale: en
-source_revision: df516b9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many problems aren't impossible—they started **too fast**. "Help me fix this" blends exploration, planning, and execution, leaving you to accept whatever shows up in the diff.
+Muchos problemas no son de imposibilidad, sino de **empezar demasiado rápido**. Un «ayúdame a arreglarlo» mezcla con facilidad exploración, plan y ejecución, y al final solo puedes validar de forma pasiva mirando el diff.
 
-A better move: ask for a plan first instead of lengthening the requirement forever.
+En ese caso es más eficaz pedirle primero un plan, en lugar de alargar cada vez más el requisito.
 
-## When you should ask for a plan
+## Cuándo pedir un plan es imprescindible
 
-| Scenario | Why |
+| Escenario | Por qué |
 |---|---|
-| Cross-file or cross-module work | Easy to hit unrelated areas |
-| You're unfamiliar with the codebase | Confirm scope before edits |
-| Requirements still shifting | Surface disagreements early |
-| You must approve before execution | Separate "authorization to run" from "thinking out loud" |
-| High-risk actions | See rollback and verification up front |
+| Varios archivos o módulos | fácil tocar zonas no relacionadas |
+| No conoces el repositorio | confirmar primero el alcance que entiende |
+| El requisito aún oscila | sacar a la luz las discrepancias pronto |
+| Necesitas aprobación antes de ejecutar | separar «autorización de ejecución» y «discusión de enfoque» |
+| Acciones de alto riesgo | ver antes el rollback y la verificación |
 
-A single typo or one-line copy tweak may not need a formal plan—but if going wrong would hurt, pause first.
+Una typo o un cambio puntual de texto no siempre necesita un plan formal, pero si sientes que «desviarse sería muy costoso», conviene pausar.
 
-## What a good plan should include
+## Qué debe cubrir como mínimo un buen plan
 
-Even a minimal plan should cover:
+Incluso en versión mínima, estos cuatro puntos:
 
-1. Steps
-2. Files or scope involved
-3. Risks or open questions
-4. How each step will be verified
+1. pasos
+2. archivos o alcance implicados
+3. riesgos o puntos por confirmar
+4. cómo verificar cada paso
 
-Without item 4, it's a todo list—not an executable, verifiable plan.
+Sin el punto 4, es más una lista de tareas que un plan verificable.
 
-## Three common phrasings
+## Tres formulaciones habituales
 
-### Minimal
-
-```text
-Don't change code yet. Give me a 3–5 step plan: which files you'll touch and how each step will be verified.
-```
-
-Fits when you know the direction and only want the breakdown.
-
-### Recommended
+### Versión mínima
 
 ```text
-Don't execute yet. Based on the current repo, give me a plan that includes:
-1. Your understanding of the goal
-2. Numbered steps
-3. Files or directories involved
-4. Risks and open questions
-5. Verification approach
-
-Do not modify files until I reply "execute the plan."
+No modifiques el código todavía. Dame primero un plan de 3 a 5 pasos: qué archivos tocarás y cómo verificar cada paso.
 ```
 
-Fits daily dev, doc refactors, prompt rewrites, config changes.
+Encaja cuando ya conoces la dirección y solo quieres ver cómo lo descompone.
 
-### High-risk
+### Versión recomendada
 
 ```text
-Don't make changes yet. Produce a plan and separately explain:
-- Which step is most likely to cause regressions
-- How to roll back if it fails
-- Which operations need my confirmation
-- Which tests or manual checks prove completion
+No ejecutes todavía. Con base en el repositorio actual, dame un plan que incluya:
+1. Comprensión del objetivo
+2. Pasos numerados
+3. Archivos o directorios implicados
+4. Riesgos y puntos por confirmar
+5. Forma de verificación
+
+No modifiques archivos hasta que yo responda «ejecuta según el plan».
 ```
 
-Fits production issues, permission config, automation scripts, cross-module refactors.
+Encaja en desarrollo diario, cambios de documentación, reescritura de Prompts y ajustes de configuración.
 
-## Plans shouldn't be long for length's sake
-
-You want something **you can approve, steer, and execute**—not a lengthy proposal.
-
-Check whether the plan is usable:
-
-- Can you say "skip step 2, do something else instead"?
-- Can you see which critical areas will move?
-- Do you know how to verify before starting?
-
-If not, it's not specific enough.
-
-## How to steer a plan
-
-You don't need to rewrite the whole thing—guide it like you'd guide a colleague.
-
-Common steering lines:
+### Versión de alto riesgo
 
 ```text
-Keep steps 1 and 2; drop step 3.
-Split database changes into a separate step.
-Read-only analysis first—no implementation yet.
-Add regression tests and rollback to the plan.
+No hagas cambios todavía. Produce primero un plan y explica por separado:
+- qué paso introduce regresiones con más facilidad
+- cómo hacer rollback si falla
+- qué operaciones requieren mi confirmación
+- qué tests o revisiones humanas demuestran que está terminado
 ```
 
-This saves context versus "start over" and pulls results back on track.
+Encaja en problemas de producción, configuración de permisos, scripts de automatización y refactorizaciones entre módulos.
 
-## Benefits vs. jumping straight in
+## El plan no es cuanto más largo, mejor
 
-| Plan first | Start immediately |
+Lo que necesitas es un artefacto intermedio **aprobable, corregible y ejecutable**, no un documento largo.
+
+Para juzgar si el plan sirve, mira tres cosas:
+
+- puedes decir con claridad «el paso 2 no; cámbialo por otra cosa»
+- ves de un vistazo qué zonas críticas tocará
+- sabes antes de empezar cómo aceptar el resultado
+
+Si no, el plan aún no es lo bastante concreto.
+
+## Cómo aprobar el plan
+
+No hace falta reescribirlo entero; basta orientar como a un compañero.
+
+Frases habituales:
+
+```text
+Conserva los pasos 1 y 2; elimina el 3.
+Separa el cambio de base de datos en un paso propio.
+Haz solo análisis de solo lectura; no pases a la implementación.
+Añade al plan tests de regresión y un plan de rollback.
+```
+
+Eso ahorra más contexto que un «empieza de nuevo» y reorienta el resultado con más facilidad.
+
+## Beneficios frente a «empezar ya»
+
+| Pedir un plan primero | Empezar ya |
 |---|---|
-| Catch misunderstandings early | Often discover wrong direction after edits |
-| Easier approval and collaboration | You only see the final diff |
-| Natural split into subtasks | Multiple goals get mashed together |
-| Verification visible upfront | Tests remembered only at the end |
+| Detectas malentendidos pronto | A menudo solo ves el error de dirección tras el cambio |
+| Facilita aprobación y colaboración | Solo puedes mirar el diff final de forma pasiva |
+| Ayuda a dividir en subtareas | Fácil mezclar varios objetivos |
+| La verificación es visible de antemano | A menudo solo piensas en tests al final |
 
-Many workflows separate exploration and planning. See [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/).
+Muchos flujos separan «exploración» y «plan». Ver [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/).
 
-## Where plans go wrong
+## Problemas más frecuentes del plan
 
-### Actions without boundaries
+### Solo acciones, sin límites
 
-e.g. "update docs and improve structure" with no directories to touch or modules to avoid—the plan tends to grow.
+Por ejemplo: «actualiza la documentación y optimiza la estructura», sin decir qué directorios tocar y cuáles no. Ese plan crece con facilidad.
 
-### Implementation without verification
+### Solo implementación, sin verificación
 
-e.g. "change component logic, update styles, commit" with no proof behavior still works.
+Por ejemplo: «cambia la lógica del componente, actualiza estilos, haz commit», sin decir cómo demostrar que el comportamiento no se rompió.
 
-### Task list without open questions
+### Solo lista de tareas, sin puntos por confirmar
 
-Good plans admit uncertainty instead of pretending every assumption holds.
+Un buen plan admite incertidumbre; no finge que todas las premisas ya están cerradas.
 
-## Recommended pairings
+## Combinaciones recomendadas
 
-- Formal execution flow: [Planning](/guide/agent-work/planning/)
-- Reusable plan structure: [Task anatomy](/prompts/task-anatomy/)
-- Mid-run steering: [Progress and steering](/guide/agent-work/progress-and-steering/)
-- Clear acceptance: [Define done](/prompts/define-done/)
+- Cadena de ejecución formal: [Planificación](/guide/agent-work/planning/)
+- Plan reutilizable: [Anatomía de una tarea](/prompts/task-anatomy/)
+- Corrección a mitad de ejecución: [Progreso y reorientación](/guide/agent-work/progress-and-steering/)
+- Aceptación clara: [Definir el terminado](/prompts/define-done/)
 
-## A useful team convention
+## Una convención útil en el equipo
 
-In `AGENTS.md` you can state:
+Puedes dejarlo explícito en `AGENTS.md`:
 
 ```md
-- For changes touching 3+ files, produce a plan first
-- Don't run destructive commands without confirmation
-- Plans must include verification
+- Cambios que afecten a más de 3 archivos: plan primero
+- Sin confirmación, no ejecutar comandos destructivos
+- El plan debe incluir la forma de verificación
 ```
 
-Then "plan first" becomes default practice—not a one-off reminder.
+Así «pedir un plan primero» deja de ser un recordatorio puntual y pasa a ser la práctica por defecto del equipo.
 
-## Reference sources
+## Fuentes de referencia
 
-- Plan-and-execute patterns in OpenAI Codex official documentation
-- Task design and collaboration practices from freestylefly/CodexGuide
-- Codex workflow chapters in KimYx0207's AI-Coding-Guide-Zh
-- Practical execution methods from stormzhang's Codex series
+- Enfoque de plan y ejecución en la documentación oficial de OpenAI Codex
+- Prácticas de diseño de tareas y colaboración de freestylefly/CodexGuide
+- Capítulos de flujo Codex en KimYx0207《AI-Coding-Guide-Zh》
+- Métodos de ejecución práctica en la serie Codex de stormzhang
 - [codex.bozhouai.com](https://codex.bozhouai.com/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains plan-first collaboration only; in-site links and example structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página solo describe el método de colaboración de pedir un plan primero; se han revisado enlaces y estructura de ejemplos, y el cuerpo no depende de hechos volátiles del producto.

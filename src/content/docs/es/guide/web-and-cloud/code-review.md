@@ -1,151 +1,153 @@
 ---
-title: Cloud code review
-description: Reviewing diffs, PRs, and automated review suggestions from Cloud tasks.
+title: Revisión de código en Cloud
+description: Revisar el diff, el PR y las sugerencias de revisión automática que produce una Tarea Cloud.
 locale: es
-source_locale: en
-source_revision: f609c3e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud can produce changes for you, but it does not take merge responsibility on your behalf.
+Cloud te ayuda a producir cambios, pero no asume por ti la responsabilidad del merge.
 
-After a Cloud task finishes, **human review** remains the last gate before merge. This page explains how to review remote Agent output and connect it with GitHub PRs, CI, and Skill-based review.
+Tras una Tarea Cloud, la **revisión humana** sigue siendo la última puerta antes del merge. Esta página explica cómo revisar lo que produce el Agent remoto y cómo encajarlo con PR de GitHub, CI y revisión con Skill.
 
-## What's covered
+## Contenido
 
-- How Cloud PR review differs from local PR review
-- Review checklists and common risk points
-- Using Codex to assist review without giving up accountability
+- En qué se diferencia revisar un PR de Cloud de uno local
+- Lista de revisión y puntos de riesgo habituales
+- Cómo usar Codex para ayudar a revisar sin ceder la responsabilidad
 
-## Why Cloud review needs extra attention
+## Por qué la revisión Cloud pide un poco más de atención
 
-Remote Agents are more likely to:
+Porque el Agent remoto cae con más facilidad en:
 
-- Touch unrelated files while "fixing" something
-- Produce large lockfile or generated-file diffs due to environment differences
-- Show tests as run without covering critical logic
-- Write polished PR descriptions you have not verified
+- Cambiar archivos no relacionados «de paso»
+- Generar cambios masivos de lockfile o archivos generados por diferencias de entorno
+- Parecer que corrió pruebas sin cubrir la lógica clave
+- Escribir una descripción de PR muy completa que aún no has verificado
 
-Cloud review is not lighter—it needs sharper focus.
+Así que la revisión Cloud no es más ligera: hay que agarrar los puntos clave.
 
-## Where review sits in the flow
+## Dónde encaja la revisión en el flujo
 
 ```text
-Cloud task completes → push branch → open PR
+Tarea Cloud terminada → push de rama → abrir PR
         ↓
-CI runs (tests, lint, security scans)
+CI (pruebas, lint, escaneo de seguridad)
         ↓
-Human reviews diff + optional Agent-assisted review
+Revisión humana del diff + revisión auxiliar opcional del Agent
         ↓
-Approve merge (subject to branch protection)
+Aprobar merge (sujeto a protección de ramas)
 ```
 
-Opening PRs: [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Abrir PR: [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## Minimum bar before full review
+## Criterio mínimo de comprobación
 
-Before a deep pass, confirm at least four things:
+Antes de una revisión completa, confirma al menos cuatro cosas:
 
-1. Did the change scope drift?
-2. Was critical logic actually changed as intended?
-3. Were tests or verification really run?
-4. Were sensitive data or dangerous changes introduced?
+1. Si el alcance del cambio se desvió
+2. Si la lógica clave cambió de verdad según el objetivo
+3. Si las pruebas o la Verificación se hicieron de verdad
+4. Si entró información sensible o un cambio peligroso
 
-Until those are confirmed, "task done" is not "safe to merge."
+Sin eso, «Tarea terminada» no equivale a «se puede mergear».
 
-## Human review checklist
+## Lista de revisión humana
 
-Aligned with [review diffs](/guide/quality/review-diffs/); Cloud adds extra focus:
+Alineada con [Revisar diffs](/guide/quality/review-diffs/); en Cloud presta atención extra a:
 
-| Check | Why |
+| Comprobación | Motivo |
 |---|---|
-| Unrelated files changed | Remote Agent may "refactor while here" |
-| Lockfile / generated files | Environment differences cause large diffs |
-| New dependency sources | Supply chain risk |
-| Tests actually cover new logic | Agent may write empty tests |
-| Permission and auth changes | Privilege escalation, hard-coded tokens |
-| Matches issue scope | Prevent scope creep |
+| ¿Cambió archivos no relacionados? | El Agent remoto puede refactorizar «de paso» |
+| lockfile / archivos generados | Diferencias de entorno → cambios masivos |
+| Origen de dependencias nuevas | Riesgo de cadena de suministro |
+| ¿Las pruebas cubren de verdad la lógica nueva? | El Agent puede escribir pruebas vacías |
+| Cambios de Permiso y autenticación | Elevación de privilegios, token hardcodeado |
+| Alineado con el alcance del issue | Evitar scope creep |
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. CI green means ready to merge
+### 1. ¿CI en verde implica que se puede mergear?
 
-CI only means "these automated checks did not fail." Whether requirements were understood, scope stayed correct, and risk is acceptable still needs human judgment.
+CI solo dice «este conjunto de comprobaciones automáticas no falló». Si el requisito se entendió bien, si el alcance se desvió y si el riesgo es aceptable sigue siendo juicio humano.
 
-### 2. A complete PR description means I can skim the diff
+### 2. ¿Si la descripción del PR que escribió es completa, puedo mirar menos?
 
-No.
+Tampoco.
 
-Descriptions help you get context faster; they do not verify facts for you.
+La descripción del PR te mete más rápido en el contexto; no sustituye verificar los hechos.
 
-### 3. Running Codex review again equals done
+### 3. ¿Pedir a Codex otra revisión equivale a haber revisado?
 
-Assisted review is useful, but accountability stays with people.
+La revisión auxiliar es útil, pero la responsabilidad final sigue siendo humana.
 
-## Using Codex to assist review (not replace you)
+## Usar Codex para ayudar a revisar (sin sustituir a la persona)
 
-Acceptable:
+Aceptable:
 
-- Run a `$pr-review` Skill locally or in Cloud on a new PR (see [Create a Skill](/skills/create-your-first-skill/))
-- Ask for opinions grouped as blockers / suggestions / nits
-- **You** confirm each blocker
+- Correr el Skill `$pr-review` en local o Cloud sobre el PR nuevo (véase [Crear tu primer Skill](/skills/create-your-first-skill/))
+- Pedir opiniones en tres clases: «bloqueante / sugerencia / nit»
+- **Tú** confirmas uno a uno los bloqueantes
 
-Not acceptable:
+No aceptable:
 
-- Merging without reading the diff because the Agent said it looks fine
-- Letting the Agent approve a protected branch on its own
+- Mergear solo porque el Agent «dice que no hay problema» sin leer el diff
+- Dejar que el Agent apruebe solo una rama protegida
 
-See [verification and human review](/guide/foundations/verification-and-human-review/)
+Véase [Verificación y revisión humana](/guide/foundations/verification-and-human-review/)
 
-## Suggested review order
+## Orden sugerido
 
-1. PR title and description—confirm the goal
-2. Main logic diff
-3. Tests, generated files, config
-4. Automated comments and follow-up suggestions
+Puedes mirar en este orden:
 
-This avoids drowning in noise upfront.
+1. Título y descripción del PR; confirmar el objetivo
+2. Diff de la lógica principal
+3. Pruebas, archivos generados, configuración
+4. Comentarios automáticos y sugerencias complementarias
 
-## Driving revisions from review comments
+Así evitas ahogarte de entrada en detalles.
 
-After review comments land on a PR:
+## Comentarios de review que impulsan la revisión
 
-1. Start a new Cloud or local task: "Address only the following review comments; do not expand scope"
-2. Attach comment links or numbers
-3. Push new commits to the same PR
-4. Re-run CI and skim the incremental diff
+Cuando el PR recibe comentarios de review:
 
-On GitHub: [GitHub integration](/guide/integrations/github/)
+1. Abre una Tarea Cloud o local nueva: «trata solo estos comentarios de review; no amplíes el alcance»
+2. Adjunta enlaces o números de comentario
+3. Haz push de un commit nuevo al mismo PR
+4. Vuelve a correr CI + mira a ojo el delta
 
-## Combining with Automations
+Lado GitHub: [Integración con GitHub](/guide/integrations/github/)
 
-- Run a review Skill automatically when a PR opens (comment only, no merge)
-- See [scheduled and triggered tasks](/skills/automations/scheduled-tasks/)
+## Combinar con Automations
 
-## Common mistakes
+- Al abrir el PR, correr automáticamente el Skill de revisión (solo comentar, no merge)
+- Detalle en [Tareas programadas y disparadas](/skills/automations/scheduled-tasks/)
 
-- Skipping security review because Cloud is "isolated"
-- Merging a huge diff because "CI is green"
-- Pasting unsanitized production logs into review comments
-- Treating "I did not spot issues" as "there are no issues"
+## Errores frecuentes
 
-## Acceptance checklist
+- Confiar en el «aislamiento» del Entorno Cloud y saltarse la revisión de seguridad
+- Mergear un diff enorme porque «CI está verde»
+- Pegar en comentarios de review logs de producción sin desensibilizar
+- Tomar «no encontré problemas» por «de verdad no hay problemas»
 
-- [ ] CI is green and you understand any retry history
-- [ ] At least one person read the main logic diff
-- [ ] Scope matches the issue/task description
-- [ ] No Secrets committed to the repo
+## Lista de aceptación
 
-## References
+- [ ] CI todo verde y entiendes el historial de reintentos fallidos
+- [ ] Al menos una persona leyó el diff de la lógica principal
+- [ ] Alineado con el alcance del issue/descripción de la Tarea
+- [ ] Sin Secrets en el repo
+
+## Fuentes de referencia
 
 - stormzhang `26-git-github.md`
-- KimYx0207 Review/PR sections
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- Capítulos Review/PR de KimYx0207
+- [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / GitHub  
-**Review note:** The principle that Cloud output still needs human review holds, but this page describes Cloud PRs, auto-open PR behavior, remote review rhythm, and notifications as a concrete current workflow; those integration shapes change quickly and need a rewrite against the latest official flow.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Productos aplicables:** Cloud / GitHub  
+**Nota de revisión:** El principio de que la entrega de Cloud sigue necesitando revisión humana es correcto, pero esta página escribe de forma bastante concreta el PR de Cloud, la apertura automática, el ritmo de revisión remota y las notificaciones; esas formas de integración Cloud/GitHub cambian rápido y hay que reescribirlas según el flujo oficial más reciente.  
+**Última verificación:** 2026-07-26

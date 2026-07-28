@@ -1,111 +1,113 @@
 ---
-title: Cloud tasks in the IDE
-description: Delegating Cloud tasks from the IDE, following status, and reviewing remote output.
+title: Tareas Cloud en el IDE
+description: Delegar Tareas Cloud desde el IDE, seguir el estado y revisar el resultado remoto.
 locale: es
-source_locale: en
-source_revision: 9e4d19c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Some IDE integrations let you **delegate tasks to Cloud**. Work runs in a standardized remote environment while you keep editing locally or walk away. The flow matches pure Cloud/Web—only the entry point is in the editor.
+Algunas integraciones IDE permiten **delegar la Tarea a Cloud**. La Tarea corre en un entorno remoto estandarizado; puedes seguir editando en local o simplemente dejar el ordenador. El flujo se parece al de Cloud/Web puro; solo cambia que la entrada está en el lado del editor.
 
-## What's covered
+## Contenido
 
-- When to send a Cloud task from the IDE vs purely local
-- What to prepare before and after delegation
-- Bringing remote diffs back for local review
+- Cuándo lanzar una Tarea Cloud desde el IDE en lugar de puro local
+- Qué preparar antes y después de delegar
+- Cómo traer el diff remoto de vuelta a la revisión local
 
-## Good fits
+## Escenarios adecuados
 
-| Prefer Cloud | Stay local |
+| Conviene Cloud | Quédate en local |
 |---|---|
-| Heavy installs, hard-to-reproduce environments | Quick two-line edits |
-| Need branch push / open PR | GitHub not connected |
-| Long runs with phone approval notifications | Uncommitted sensitive drafts on machine |
+| Instalación de dependencias pesada, entorno difícil de reproducir | Cambiar dos líneas rápido |
+| Hay que hacer push de rama / abrir PR | GitHub no está conectado |
+| Ejecución larga, quieres notificaciones de Aprobación en el móvil | Incluye borradores sensibles locales sin commit |
 
-Concept: [local vs cloud](/guide/foundations/local-vs-cloud/)
+Conceptos: [Local frente a Cloud](/guide/foundations/local-vs-cloud/)
 
-## When this workflow helps
+## Cuándo encaja este flujo
 
-Common pattern:
+Es habitual cuando:
 
-- You work in the IDE habitually
-- But the task runs better in a remote environment
+- Estás acostumbrado a trabajar en el IDE
+- Pero la Tarea en sí conviene ejecutarla en un entorno remoto
 
-You still work in the IDE; execution has moved remote.
+Es decir: sigues trabajando en el IDE, pero el entorno de ejecución ya es remoto.
 
-## Prerequisites
+## Condiciones previas
 
-- [ ] [GitHub connected](/guide/web-and-cloud/connect-github/)
-- [ ] Cloud [environment](/guide/web-and-cloud/cloud-environments/) and [Secrets](/guide/web-and-cloud/secrets-and-variables/) configured if needed
-- [ ] Local changes committed or explicitly "remote branch is source of truth"
+- [ ] [GitHub conectado](/guide/web-and-cloud/connect-github/)
+- [ ] Entorno [Cloud](/guide/web-and-cloud/cloud-environments/) y [Secrets](/guide/web-and-cloud/secrets-and-variables/) configurados (si la Tarea lo necesita)
+- [ ] Los cambios locales ya tienen commit, o está claro «prevalece la rama remota»
 
-**The IDE cannot make Cloud see unpushed commits on your machine.**
+**El IDE no puede sustituir a Cloud para ver commits locales que aún no has empujado.**
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. "Run in Cloud" from the IDE carries everything on my machine
+### 1. Si en el IDE pulso «ejecutar en la nube», ¿lleva automáticamente todo lo de mi máquina?
 
 No.  
-Remote tasks see the remote repo, remote environment, and what you explicitly attach.
+Lo que ve la Tarea remota sigue siendo el repositorio remoto, el entorno remoto y lo que le entregues de forma explícita.
 
-### 2. Because the entry is in the IDE, it behaves like a local task
+### 2. Como la entrada está en el IDE, ¿es casi igual que una Tarea local?
 
-Not quite.  
-Launch location is IDE; execution boundary, environment, and visibility are still Cloud rules.
+Tampoco.  
+Aunque se inicie desde el IDE, los límites de ejecución, el entorno y lo visible siguen siendo los de Cloud.
 
-### 3. Remote completion equals reviewed and approved
+### 3. Que Cloud termine no significa que la revisión haya pasado
 
-Remote done only means it finished there—not that local review, tests, and sign-off are complete.
+Que remota termine solo significa que la Tarea corrió allí; no implica que review local, tests y confirmación final estén hechos.
 
-## Recommended flow
+## Flujo recomendado
 
 ```text
-1. Write task in IDE (goal, branch, constraints, acceptance)
-2. Choose "Run in Cloud" or equivalent (per product UI)
-3. Confirm plan (if plan mode enabled)
-4. Leave or keep working locally → check progress in notifications/panel
-5. When remote finishes: review diff in Web/App → open PR or pull branch locally
-6. Run tests locally + human review → merge
+1. En el IDE escribe la descripción de la Tarea (objetivo, rama, restricciones, aceptación)
+2. Elige «ejecutar en la nube» o la entrada equivalente (según la UI del producto)
+3. Confirma el plan (si está activo el modo plan)
+4. Sal o sigue trabajando en local → mira el progreso en notificaciones/panel
+5. Cuando remota termine: mira el diff en Web/App → abre PR o haz pull de la rama a local
+6. Tests locales + review humana → merge
 ```
 
-PR details: [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Detalle de abrir PR: [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## A practical first-time sequence
+## Un orden habitual
 
-1. Confirm local changes committed—or intentionally excluded
-2. Confirm GitHub, Secrets, branch ready
-3. Delegate with clear goal, scope, and acceptance
-4. Review diff when remote completes
-5. Add local tests and human review
+La primera vez que lances una Tarea Cloud desde el IDE, puedes seguir este orden:
 
-The core difference from local IDE tasks: execution environment is remote.
+1. Confirma si los cambios locales ya están committed o si a propósito no quieres llevarlos
+2. Confirma que GitHub, Secrets y la rama están listos
+3. Lanza la Tarea con objetivo, alcance y criterios de aceptación claros
+4. Cuando remota termine, vuelve a mirar el diff
+5. En local completa tests y revisión humana
 
-## Relation to desktop App delegation
+La diferencia central entre Tarea Cloud en el IDE y Tarea local es si el entorno de ejecución es remoto.
 
-[Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/) in the desktop App share the same Cloud backend; difference is mainly **entry UI and attached context** (IDE may include current selection summary).
+## Relación con la delegación desde la App de escritorio
 
-## Security boundaries
+Las [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/) de la App de escritorio y la delegación desde el IDE comparten el mismo backend Cloud; la diferencia está sobre todo en la **UI de entrada y los adjuntos de Contexto** (el IDE puede adjuntar un resumen de la selección actual).
 
-- Cloud task permissions bounded by GitHub connection scope and org policy
-- Do not paste production keys in task descriptions; use [Secrets](/guide/web-and-cloud/secrets-and-variables/)
-- Still require [human review](/guide/web-and-cloud/code-review/) before merge
+## Límites de seguridad
 
-## Common mistakes
+- Los Permisos de la Tarea Cloud están acotados por el alcance de la conexión de GitHub y las políticas de la organización
+- No pegues claves de producción en la descripción de la Tarea; usa [Secrets](/guide/web-and-cloud/secrets-and-variables/)
+- Antes del merge sigue haciendo falta [revisión humana](/guide/web-and-cloud/code-review/)
 
-- Keep editing the same file locally after delegation → conflicts with remote branch
-- No branch name → remote pushes to a shared branch
-- Treat Cloud output as "accepted" and skip CI
+## Errores frecuentes
 
-## References
+- Tras delegar, seguir cambiando el mismo archivo en local y chocar con la rama remota
+- No indicar el nombre de rama y empujar directamente a una rama compartida
+- Tratar el resultado de Cloud como «ya aceptado» y saltarse el CI
+
+## Fuentes de referencia
 
 - stormzhang `10-cloud.md`, `09-ide.md`
 - KimYx0207 CX-10 Cloud
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE / Cloud  
-**Review note:** This page describes IDE-to-Cloud delegation, diff handoff, and local follow-up as concrete current behavior; official docs do not yet verify that IDE Cloud delegation experience line by line—better `outdated` until formal IDE/Cloud documentation is available.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Productos aplicables:** IDE / Cloud  
+**Nota de revisión:** Esta página describe como capacidad y flujo actuales bastante concretos «delegar Tareas Cloud desde el IDE, recuperar el diff y seguir en local», pero el material oficial vigente no basta para demostrar uno a uno esa experiencia; conviene marcarla como `outdated` hasta completar la documentación formal IDE/Cloud.  
+**Última verificación:** 2026-07-26

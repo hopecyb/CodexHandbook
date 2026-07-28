@@ -1,111 +1,111 @@
 ---
-title: Plugins overview
-description: Package Skills, MCP, and app connectors for unified team distribution and management.
+title: Descripción general de Plugins
+description: Empaqueta Skills, MCP y conectores de aplicación para que el equipo los distribuya y gestione de forma unificada.
 locale: es
-source_locale: en
-source_revision: 578ec7c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-A Plugin is like an installer package: it bundles pre-configured extensions for others to install.
+Un Plugin se puede ver como un paquete de instalación: agrupa un conjunto de capacidades de extensión ya configuradas para que otros las instalen directamente.
 
-**Plugin** packages Skills, MCP servers, app integrations, and more into **installable, updatable, governable** units—especially "one person configures, whole team reuses."
+Un **Plugin (plugin / conector)** empaqueta Skills, servidores MCP, integraciones de aplicaciones, etc., en una unidad **instalable, actualizable y gobernable**, especialmente útil cuando «una persona lo configura y todo el equipo lo reutiliza».
 
-## Core difference
+## Diferencia clave
 
-| Standalone | Via Plugin |
+| Uso por separado | A través de Plugin |
 |---|---|
-| Manually copy Skill directories | One-click install/upgrade |
-| Each person configures MCP JSON | Preconfigured servers and permission notes |
-| Docs scattered | Publisher provides manifest and release notes |
+| Copiar a mano el directorio Skill | Instalación / actualización en un clic |
+| Cada uno configura su JSON de MCP | Servidor y descripción de Permisos predefinidos |
+| Documentación dispersa | El publicador aporta inventario y notas de versión |
 
-Plugin is the **distribution and composition layer**. Capabilities still live in Skill, MCP, connectors—see [capability map](/skills/capability-map/).
+El Plugin pertenece a la **capa de distribución y composición**. La capacidad en sí sigue residiendo en Skill, MCP y conectores; ver [Mapa de capacidades de extensión](/skills/capability-map/).
 
-## Plugin vs Skill vs MCP
+## Diferencia entre Plugin, Skill y MCP
 
-Short version:
+Puedes mirar esta versión breve:
 
-- **Skill**: Tell Codex "follow these steps"
-- **MCP**: Tell Codex "these external tools are callable"
-- **Plugin**: Package the above for install and governance
+- **Skill**: indica a Codex «con qué pasos hacerlo»
+- **MCP**: indica a Codex «qué herramientas externas puede llamar»
+- **Plugin**: empaqueta lo anterior para facilitar instalación y gobernanza
 
-Much confusion comes from treating all three as the same thing.
+Gran parte de la confusión viene de tratar estas tres capas como la misma cosa.
 
-## Typical composition
+## Composición típica
 
 ```text
-Plugin package
-├── Skills (optional)
-├── MCP server definitions (optional)
-├── App connectors / OAuth flows (optional)
-└── Metadata: version, permission declaration, changelog
+Paquete Plugin
+├── Skills (opcional)
+├── Definiciones de servidor MCP (opcional)
+├── Conector de aplicación / flujo OAuth (opcional)
+└── Metadatos: versión, declaración de Permisos, changelog
 ```
 
-## When to use Plugin
+## Cuándo usar Plugin
 
-| Use Plugin | Skip Plugin |
+| Usar Plugin | No usar Plugin |
 |---|---|
-| Team-wide Figma/Linear/GitHub enhancement pack | Personal one-off script |
-| Need version management and rollback | Single `SKILL.md` is enough |
-| Enterprise allowlist extensions only | Experimental prototype |
+| Instalación unificada en el equipo de un paquete Figma/Linear/GitHub | Script personal único |
+| Hace falta versionado y rollback | Basta un solo `SKILL.md` |
+| La empresa solo permite extensiones en lista blanca | Prototipo en fase experimental |
 
-## When to care about Plugin
+## Cuándo preocuparte por Plugin
 
-- Personal learning, writing a few Skills: can wait
-- Shipping one extension pack to the team: time to care about Plugin
+- Solo aprendes por tu cuenta y escribes unos cuantos Skills: puedes aparcarlo un tiempo
+- Vas a distribuir al equipo un conjunto unificado de capacidades: entonces sí conviene preocuparte por Plugin
 
-Plugin mainly solves **distribution and governance**—not a day-one Codex requirement.
+Plugin resuelve sobre todo **distribución y gobernanza**; no es imprescindible la primera vez que usas Codex.
 
-## Install and manage (conceptual)
+## Instalación y gestión (concepto)
 
-1. Choose Plugin from **official marketplace or team-approved list**
-2. Read permission notes: which repos, which SaaS
-3. After install, restart session; verify tools and Skill list
-4. Update regularly; try major versions in staging repo first
+1. Elige el Plugin en el **marketplace oficial o la lista aprobada por el equipo**
+2. Lee la descripción de Permisos: qué repos lee, a qué SaaS accede
+3. Tras instalar, reinicia la sesión y verifica la lista de herramientas y Skills
+4. Actualiza con regularidad; las versiones mayores, pruébalas primero en un repo de staging
 
-Exact buttons and commands follow current desktop App / CLI UI.
+Los botones y comandos concretos se rigen por la UI actual de la App de escritorio / CLI.
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. Installing a Plugin does not mean automatic safety
+### 1. Instalar un Plugin no implica seguridad automática
 
-Plugin only distributes capabilities more conveniently—not inherently safe permissions. Still check:
+El Plugin solo facilita la distribución; el Permiso no es seguro por naturaleza. Sigue mirando:
 
-- What it can access
-- Whether it acts on your behalf externally
-- Whether the source is trustworthy
+- A qué puede acceder
+- Si ejecuta acciones externas en tu nombre
+- Si la fuente es de confianza
 
-### 2. Not everything installable is worth keeping
+### 2. Si se puede instalar, merece la pena instalarlo
 
-Extensions the team can maintain, reclaim, and audit suit long-term enablement.
+En el equipo solo encajan a largo plazo las extensiones que se pueden mantener, retirar y auditar.
 
-## Security and privacy
+## Seguridad y privacidad
 
-- Install only trusted sources; review OAuth scopes Plugin requests
-- Separate "read design files" from "send messages on my behalf"
-- Revoke connector auth on offboarding or role change
-- Layer with [permissions and approvals](/guide/foundations/permissions-and-approvals/)—do not assume Plugin brings its own security
+- Instala solo fuentes de confianza; revisa el scope OAuth que pide el Plugin
+- Distingue Permisos de «leer diseños» frente a «enviar mensajes en tu nombre»
+- Al cambiar de rol o dejar la empresa, retira la autorización del conector
+- Se suma a [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/); no asumas que el Plugin trae seguridad por sí solo
 
-## Compared to Claude Code / other ecosystems
+## Comparación con Claude Code / otros ecosistemas
 
-"Plugin" means different things across products. Compare: **what is bundled, permission model, open source auditable or not**—see [feature comparison](/guide/reference/feature-comparison/) and KimYx0207 CX-14 (facts need re-check).
+El significado de «Plugin» no es idéntico en todos los productos. Al comparar, mira: **qué empaqueta, el modelo de Permisos y si es open source auditable** — ver [Comparación de funciones](/guide/reference/feature-comparison/) y KimYx0207 CX-14 (hechos por verificar).
 
-## Common mistakes
+## Errores habituales
 
-- One Plugin per tiny Skill—maintenance explodes
-- Never update after install—miss security fixes
-- Experimental Plugin enabled in production repo
+- Hacer un Plugin por cada Skill pequeño: el coste de mantenimiento explota
+- Instalar y no actualizar nunca: te pierdes correcciones de seguridad
+- Activar Plugins experimentales en el repo de producción
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex Plugins documentation
+- Documentación de OpenAI Codex Plugins
 - KimYx0207 CX-07; stormzhang `23-plugins.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI  
-**Verification basis:** OpenAI Help confirms Plugin bundles Skills, Apps, and app templates, but this page still describes overly specific install, upgrade, and governance flows beyond current stable public basis.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** App / CLI  
+**Nota de revisión:** OpenAI Help confirma que Plugin es un contenedor que empaqueta Skills, Apps y plantillas de app, pero esta página aún incluye flujos demasiado concretos de instalación, actualización y gobernanza, más allá de la base pública estable actual.  
+**Última verificación:** 2026-07-26

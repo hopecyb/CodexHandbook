@@ -1,41 +1,41 @@
 ---
-title: 'Example: Writing Skill'
-description: Turn research, outline, draft, and polish into a repeatable writing workflow.
+title: "Ejemplo: Skill de escritura"
+description: Organiza investigación, esquema, borrador y pulido en un flujo de escritura reutilizable.
 locale: es
-source_locale: en
-source_revision: '6446139'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Writing Skill
+# Ejemplo: Skill de escritura
 
-## SKILL.md skeleton
+## Esqueleto de SKILL.md
 
 ```md
 ---
 name: article-writer
-description: Write technical articles from an outline—in research, draft, and polish. Use when the user wants a blog post, tutorial, or article.
+description: Escribe artículos técnicos siguiendo un esquema, con investigación, borrador y pulido. Úsalo cuando el usuario quiera un blog, tutorial o artículo para redes.
 ---
 
-## Process
-1. Confirm audience, length, tone, and prohibitions
-2. If material is missing, list outline and mark gaps to fill
-3. Write section by section; confirm direction after key sections if needed
-4. After full draft, fact-check and link-check
-5. Output final draft to specified path
+## Flujo
+1. Confirmar audiencia, longitud, tono y prohibiciones
+2. Si faltan fuentes, primero un esquema con puntos por completar
+3. Escribir por secciones; si hace falta, confirmar dirección tras párrafos clave
+4. Al terminar el texto, comprobar hechos y enlaces
+5. Guardar el borrador final en la ruta indicada
 
-## Do not
-- Do not fabricate citations or data
-- Do not publish to external platforms without approval
+## Prohibido
+- No inventar citas ni datos
+- No publicar en plataformas externas sin Aprobación
 ```
 
-## Related
+## Relacionado
 
-- [Write an article case](/cases/write-an-article/)
+- [Caso de escribir un artículo](/cases/write-an-article/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative `SKILL.md` skeleton organizing writing steps and prohibitions—fits current Skills definition as reusable workflow.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Esqueleto ilustrativo de `SKILL.md` organizado alrededor de un flujo de escritura con pasos y prohibiciones; encaja con la definición actual de Skills como workflows reutilizables.  
+**Última verificación:** 2026-07-26

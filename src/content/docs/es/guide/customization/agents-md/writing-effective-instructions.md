@@ -1,162 +1,162 @@
 ---
-title: Writing Effective Project Instructions
-description: AGENTS.md writing checklist—short, hard, executable, verifiable.
+title: Escribir instrucciones eficaces
+description: Checklist de escritura de AGENTS.md — corto, duro, ejecutable y verificable.
 locale: es
-source_locale: en
-source_revision: bc73096
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-Effective project instructions are closer to a **checklist**. The goal is for Codex to make fewer predictable mistakes on the first try.
+Las instrucciones de proyecto eficaces se parecen más a una **lista de verificación**. El objetivo es que Codex cometa menos errores previsibles en el primer intento.
 
-When writing project instructions for the first time, a common problem is many ideas but unclear key constraints.
+La primera vez que se escriben, el problema habitual es que hay muchas ideas, pero las restricciones realmente clave no quedan claras.
 
-## Contents
+## Contenido
 
-- What project instructions should look like
-- What “short, hard, executable” means
-- Patterns that most confuse Codex and humans
+- Cómo deberían verse las instrucciones del proyecto
+- Qué significa «corto, duro y ejecutable»
+- Qué estilos hacen más difícil que Codex y las personas entiendan
 
-## Recommended Structure
+## Estructura recomendada
 
 ```md
-# Project Instructions
+# Instrucciones del proyecto
 
-## Quick Start (3–5 lines)
-Install, dev server, most common test command
+## Inicio rápido (3–5 líneas)
+Instalación, servidor de desarrollo, comando de test más usado
 
-## Must Follow
-Numbered list of non-negotiable rules
+## Obligatorio
+Lista numerada de reglas que no se pueden violar
 
-## Code and Directories
-Naming, placement, dependency conventions
+## Código y directorios
+Nombres, ubicación, convenciones de dependencias
 
-## Definition of Done
-What counts as “ready to commit”
+## Definición de hecho
+Qué cuenta como «listo para commit»
 
-## Prohibited
-Explicitly state what not to do
+## Prohibiciones
+Deja claro qué no hacer
 ```
 
-## Writing Principles
+## Principios de escritura
 
-### 1. Front-load hard constraints
+### 1. Pon delante las restricciones duras
 
-Put “must” and “must not” near the top of the file. When context is limited, the model weights the beginning higher—the same logic as [Context Priority](/guide/context/context-priority/).
+Coloca «debe» y «prohibido» al inicio del archivo. Con contexto limitado, el modelo da más peso al comienzo — la misma lógica que [prioridad del contexto](/guide/context/context-priority/).
 
-### 2. Commands should be copy-pasteable
+### 2. Comandos copiables
 
-Write **real runnable** commands, not “run the tests”:
+Escribe comandos **realmente ejecutables**, no «pasa los tests»:
 
 ```md
-# Good
+# Bien
 pnpm test --filter @app/web
 
-# Poor
-Make sure tests pass
+# Mal
+Asegura que los tests pasen
 ```
 
-### 3. Verifiable definition of done
+### 3. Criterios de hecho verificables
 
 ```md
-## Definition of Done
-- `pnpm lint` and `pnpm test` pass with no failures
-- New APIs have corresponding unit tests
-- User-visible changes include manual test steps (browser + mobile)
+## Definición de hecho
+- `pnpm lint` y `pnpm test` sin fallos
+- Las APIs nuevas tienen tests unitarios correspondientes
+- Cambios visibles al usuario con pasos de prueba manual (navegador + móvil)
 ```
 
-### 4. Keep “why” to one sentence when possible
+### 4. El «por qué» en una frase como máximo
 
 ```md
-- Do not edit `generated/`: code-generated; manual edits are overwritten on next build
+- No toques `generated/`: lo genera el código; un cambio manual se sobrescribe en el próximo build
 ```
 
-Long background should link to formal `docs/`.
+El trasfondo largo debe enlazar a documentación formal en `docs/`.
 
-## What “Good Instructions” Mean
+## Qué es una «buena instrucción»
 
-Good instructions let humans and Codex quickly grasp:
+Una buena instrucción permite que personas y Codex capten rápido:
 
-- What to do first
-- What not to do
-- What “done” looks like
+- Qué hacer primero
+- Qué no se puede hacer
+- Hasta dónde hay que llegar para darlo por hecho
 
-If after reading you still do not know which command to run first, what not to touch, or how to know you are finished, it is not useful enough yet.
+Si tras leerla aún no sabes qué comando ejecutar primero, qué no tocar ni cómo darlo por terminado, aún no es lo bastante útil.
 
-## Team Playbook Snippet Example
+## Fragmento de playbook de equipo
 
 ```md
-## PR and Git
-- Branch naming: `feat/`, `fix/`, `docs/` prefixes
-- One PR does one thing; large refactors get their own PR
-- Human review of the diff is required before merge, even if Codex ran tests
+## PR y Git
+- Nombres de rama con prefijos `feat/`, `fix/`, `docs/`
+- Un PR hace una sola cosa; los refactorings grandes van en un PR aparte
+- Antes del merge, alguien debe revisar el diff a mano, aunque Codex ya haya ejecutado los tests
 
-## Working with Codex
-- For large tasks, ask for “a plan first; wait for my confirmation before changing code”
-- For database migrations, output migration SQL for human review first
+## Colaboración con Codex
+- En tareas grandes, pide primero «dame un plan; espera mi confirmación antes de cambiar código»
+- Con migraciones de base de datos, primero saca el SQL de migración para revisión humana
 ```
 
-## Common Mistakes
+## Errores habituales
 
-| Mistake | Consequence |
+| Error | Consecuencia |
 |---|---|
-| Piling on framework encyclopedia | Key test commands ignored |
-| Contradictory rules | Model picks one at random |
-| Vague lines like “be elegant” | Cannot verify |
-| Keys or internal URLs included | Leak risk |
+| Apilar una enciclopedia del framework | Se ignoran los comandos de test clave |
+| Reglas que se contradicen | El modelo elige una al azar |
+| Solo frases vacías del tipo «sé elegante» | No se puede verificar |
+| Incluir secretos o URLs de intranet | Riesgo de fuga |
 
-## Common Misconceptions
+## Malentendidos habituales
 
-### 1. More detail is not always better
+### 1. Más detalle no siempre es mejor
 
-Too scattered, too long, too encyclopedic—and high-priority rules get drowned out.
+Demasiado disperso, largo o enciclopédico ahoga las reglas de alta prioridad.
 
-### 2. Does “follow conventions” count as an instruction?
+### 2. ¿«Presta atención a las normas» ya cuenta como instrucción?
 
-Usually not executable enough.  
-Better to give:
+Ese tipo de frase suele no ser ejecutable.  
+Es mejor dar directamente:
 
-- Real commands
-- Explicit directories
-- Concrete completion criteria
+- Comandos reales
+- Directorios concretos
+- Criterios de hecho específicos
 
-### 3. Can background and execution rules be mixed freely?
+### 3. ¿Se pueden mezclar trasfondo y reglas de ejecución?
 
-Not recommended.  
-Better:
+Tampoco conviene.  
+Mejor:
 
-- Rules up front
-- Background compressed to one line
-- Longer explanation in docs
+- Reglas delante
+- Trasfondo comprimido en una frase
+- Explicaciones más largas en docs
 
-## When Rewriting, Start Here
+## Al reescribir, céntrate en esto
 
-If you have a scattered project instruction doc, tighten it this way:
+Si tienes unas instrucciones de proyecto muy dispersas, puedes condensarlas así:
 
-1. Move “must/must not” to the front
-2. Turn vague language into concrete commands or checks
-3. Shorten long background; replace with links
-4. Provide a minimal definition of done
+1. Sube «debe/prohibido» al principio
+2. Convierte frases vacías en comandos o ítems de checklist
+3. Acorta el trasfondo largo y conviértelo en enlaces
+4. Da un conjunto mínimo de definición de hecho
 
-Good project instructions are not about volume—they make key constraints, key commands, and completion criteria clear enough to execute directly.
+Una buena instrucción de proyecto no se mide por cuánto escribe, sino por si las restricciones clave, los comandos clave y los criterios de hecho están lo bastante claros para ejecutarse directamente.
 
-## Maintenance Rhythm
+## Ritmo de mantenimiento
 
-- **Update** `AGENTS.md` whenever CI commands change
-- Quarterly review: remove obsolete rules
-- First onboarding step for new members: read AGENTS.md and complete “Quick Start”
+- Cada vez que cambien comandos de CI, **actualiza a la vez** `AGENTS.md`
+- Revisión trimestral: elimina reglas obsoletas
+- Primer paso del onboarding de un miembro nuevo: leer AGENTS.md y completar el «inicio rápido»
 
-## Further Reading
+## Lecturas relacionadas
 
-- [Project Instructions](/guide/customization/project-instructions/)
-- [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- [Define Done](/prompts/define-done/)
+- [Instrucciones del proyecto](/guide/customization/project-instructions/)
+- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
+- [Definir hecho](/prompts/define-done/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this repo’s current `AGENTS.md` series, context, and workflow chapters; this page only states stable writing principles and maintenance rhythm for project instructions and does not treat any one client’s implementation details as a long-term promise.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Contrastado con las páginas actuales de la serie `AGENTS.md` de este repositorio y con los capítulos de contexto y flujos de trabajo; esta página solo explica principios estables de escritura y ritmo de mantenimiento de instrucciones de proyecto, sin convertir detalles de implementación de un cliente concreto en promesas a largo plazo.  
+**Última verificación:** 2026-07-26

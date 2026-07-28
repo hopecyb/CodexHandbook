@@ -1,57 +1,57 @@
 ---
-title: Coordinate multiple agents
-description: A collaboration case for parallel exploration, divided execution, and merging results.
+title: Coordinar varios Agents
+description: Caso de colaboración con exploración en paralelo, división del trabajo y fusión de resultados.
 locale: es
-source_locale: en
-source_revision: a99435a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Coordinate multiple agents
+# Coordinar varios Agents
 
-## Meta information
+## Metadatos
 
-| Field | Content |
+| Campo | Contenido |
 |---|---|
-| Audience | Developers / teams |
-| Client | Desktop App |
-| Estimated time | Depends on task |
+| Público | Desarrolladores / equipos |
+| Cliente | App de escritorio |
+| Tiempo estimado | Según la tarea |
 
-## 1. Goal and background
+## 1. Objetivo y contexto
 
-**Goal:** Split parallelizable sub-problems across multiple agents; humans merge conclusions.
+**Objetivo:** Dividir subproblemas paralelizables entre varios Agents y fusionar las conclusiones a mano.
 
-**Success criteria:** Each sub-agent has a clear completion definition; no two agents edit the same files.
+**Criterios de éxito:** Cada Subagent tiene su propia definición de terminado y no se pisan los mismos archivos.
 
-## 2. Recommended patterns
+## 2. Patrones recomendados
 
-### Parallel exploration, human selects approach
+### Exploración en paralelo, elección humana
 
 ```text
-Agent 1: Pros, cons, and effort for plan A
-Agent 2: Pros, cons, and effort for plan B
-(You choose; single agent executes)
+Agent 1: pros, contras y esfuerzo de la opción A
+Agent 2: pros, contras y esfuerzo de la opción B
+(Tras tu elección, un solo Agent ejecuta)
 ```
 
-### Worktree isolation
+### Aislamiento con worktree
 
-Different agents work in different [git worktrees](/guide/desktop-app/worktrees/) on different branches; humans merge at the end.
+Distintos Agents modifican distintas ramas en distintos [git worktree](/guide/desktop-app/worktrees/); al final fusionas tú.
 
-## 3. Coordination rules (recommended in AGENTS.md)
+## 3. Reglas de coordinación (recomendado en AGENTS.md)
 
-- Each agent has explicit directory boundaries
-- No parallel `git push`
-- Run CI before merging
+- Cada Agent tiene un límite claro de directorios
+- Prohibido `git push` en paralelo
+- Antes de fusionar, ejecutar CI de forma unificada
 
-## 4. Related
+## 4. Relacionado
 
-- [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)
+- [Coordinación multi-Agent](/cases/workflows/multi-agent-coordination/)
 - [Subagents](/guide/agent-work/subagents/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Help Center's current Codex plan materials still describe parallel Codex agents in the Desktop App, built-in worktree support, and cloud delegation; this page summarizes collaboration patterns—parallel exploration, directory-boundary isolation, avoiding parallel push, human merge of conclusions—not dependent on any single UI flow.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** La documentación de planes de Codex en OpenAI Help Center sigue indicando que la App de escritorio admite agents de Codex en paralelo, worktrees integrados y delegación en la nube. Esta página solo resume el patrón «exploración en paralelo, aislamiento por directorios, evitar push paralelo y fusión humana», sin depender de un flujo de UI concreto.

@@ -1,63 +1,63 @@
 ---
-title: Write an article
-description: Full technical writing flow from topic selection through outline, draft, and fact-checking.
+title: Escribir un artículo
+description: Flujo completo de escritura técnica — de la idea al esquema, el borrador y la comprobación de hechos.
 locale: es
-source_locale: en
-source_revision: 9c9a32e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Write an article
+# Escribir un artículo
 
-## Meta information
+## Metadatos
 
-| Field | Content |
+| Campo | Contenido |
 |---|---|
-| Audience | Creators |
-| Client | App / CLI |
-| Estimated time | 1–2 hours |
+| Público | Creadores |
+| Cliente | App / CLI |
+| Tiempo estimado | 1–2 horas |
 
-## 1. Goal and background
+## 1. Objetivo y contexto
 
-**Goal:** Produce a publishable technical article draft.
+**Objetivo:** Producir un borrador publicable de artículo técnico.
 
-**Success criteria:** Complete structure, verifiable facts, style matches audience.
+**Criterios de éxito:** Estructura completa, hechos verificables y estilo adecuado a la audiencia.
 
-## 2. Workflow (EPXV)
+## 2. Flujo de trabajo (EPXV)
 
-### Explore
-
-```text
-Topic: [article topic]
-Audience: [beginners/developers]
-Give 3 optional angles and an outline first; do not write the body.
-```
-
-### Plan
-
-After confirming the outline:
+### Explorar
 
 ```text
-Write section 1 per outline, ~300 words; pause after for my tone confirmation.
+Tema: 【tema del artículo】
+Audiencia: 【principiantes/desarrolladores】
+Dame primero 3 ángulos posibles y un esquema; no escribas el cuerpo todavía.
 ```
 
-### Execute
+### Planificar
 
-Write section by section—avoid generating the full article in one pass (hard to revise).
+Tras confirmar el esquema:
 
-### Verify
+```text
+Redacta la sección 1 del esquema, unas 300 palabras; al terminar, pausa para que yo confirme el tono.
+```
 
-- Manually verify links, version numbers, commands still valid
-- Optional: solidify flow with [Writing Skill](/skills/examples/writing-skill/)
+### Ejecutar
 
-## 3. Capture for reuse
+Escribe sección a sección; evita generar el texto completo de una vez, que luego es difícil de revisar.
 
-Repeated writing can be packaged as `article-writer` Skill; see [Creator path](/guide/learning-paths/creator/).
+### Verificar
+
+- Comprueba a mano enlaces, números de versión y comandos
+- Opcional: fija el flujo con el [Skill de escritura](/skills/examples/writing-skill/)
+
+## 3. Captura para reutilizar
+
+La escritura repetida puede encapsularse en el Skill `article-writer`; ver [ruta del creador](/guide/learning-paths/creator/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Learn a new concept," emphasizing organizing complex material into auditable learning or explanatory output; this page's writing flow—angles and outline first, section-by-section drafting, then manual verification of links, versions, and commands—is a stable writing collaboration pattern.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Los use cases actuales de Codex en OpenAI Developers siguen incluyendo «Learn a new concept», centrados en convertir material denso en una salida de aprendizaje o explicación verificable. El flujo de esta página —ángulo y esquema primero, luego secciones, y al final comprobación humana de enlaces, versiones y comandos— es un patrón estable de colaboración en escritura.

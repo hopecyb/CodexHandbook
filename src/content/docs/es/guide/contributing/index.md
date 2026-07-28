@@ -1,79 +1,86 @@
 ---
-title: Contributing
-description: How to contribute guides, cases, prompt examples, and translations—process and quality standards.
+title: Contribuir
+description: Cómo contribuir al manual con texto, casos, ejemplos de prompt y traducciones — proceso y estándares de calidad.
 sidebar:
   order: 80
 locale: es
-source_locale: en
-source_revision: 110f6ba
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Codex Handbook** is a community-maintained documentation site. We welcome fixes, new pages, reproducible cases, and prompt examples in [examples/](/examples/README.md).
 
-## What this page covers
+El **Codex Handbook** es un sitio de documentación mantenido por la comunidad. Se aceptan correcciones de errores, páginas nuevas, casos reproducibles y ejemplos de prompt en [examples/](/examples/README.md).
 
-- Contribution types and entry points
-- Writing and verification standards
-- PR and release expectations
+## Contenido de esta página
 
-## What helps most
+- Tipos de contribución y puntos de entrada
+- Estándares de escritura y verificación
+- Expectativas de PR y publicación
 
-If you notice:
+## Qué contribuciones aportan más valor
 
-- Sections you cannot follow as a newcomer
-- Nav entries with thin content
-- Outdated commands, screenshots, or explanations
+Si en el sitio ves:
 
-—that is already a high-value contribution signal.
+- Algo que tú mismo no entiendes
+- Entradas en el índice cuyo contenido no guía bien
+- Comandos, capturas o explicaciones ya desactualizados
 
-You do not need to be the domain expert first. Many improvements come from first-time readers saying “this assumes I already know X.”
+esas ya son pistas de contribución muy valiosas.
 
-## Contribution types
+No hace falta ser «el que más sabe del tema» para empezar a ayudar. Muchas mejoras útiles vienen justo de quien empieza y señala «aquí se asume que ya lo sé, pero yo no lo entendí».
 
-| Type | Description | Guide |
+## Tipos de contribución
+
+| Tipo | Descripción | Guía |
 |---|---|---|
-| Fix / small edit | Typos, links, one outdated sentence | Direct PR |
-| New guide page | Chapter body under `src/content/docs/` | [Write a guide](/guide/contributing/write-a-guide/) |
-| Case study | `src/content/docs/cases/` | [Case template](/cases/use-cases/case-study-template/) |
-| Prompt example | `examples/prompts/` | [Add a prompt example](/guide/contributing/add-a-prompt-example/) |
-| Technical verification | Mark `verified`, update dates | [Verify technical content](/guide/contributing/verify-technical-content/) |
-| Translation | `en/`, `zh-tw/`, etc. | Roadmap M6; stabilize source first |
+| Corrección / cambio pequeño | Erratas, enlaces, una frase desactualizada | PR directo |
+| Nueva página de guía | Texto del capítulo bajo `src/content/docs/` | [Escribir una guía](/guide/contributing/write-a-guide/) |
+| Caso | `src/content/docs/cases/` | [Plantilla de caso](/cases/use-cases/case-study-template/) |
+| Ejemplo de prompt | `examples/prompts/` | [Añadir un ejemplo de prompt](/guide/contributing/add-a-prompt-example/) |
+| Verificación técnica | Marcar `verified`, actualizar fecha | [Verificar contenido técnico](/guide/contributing/verify-technical-content/) |
+| Traducción | `en/`, `zh-tw/`, etc. | Hoja de ruta M6; estabilizar primero el texto fuente |
 
-## Common misconceptions
+## Malentendidos habituales
 
-### Contributing ≠ writing a whole chapter
+### Contribuir no equivale a escribir un capítulo entero nuevo
 
-Valuable contributions include:
+Quien participa por primera vez suele imaginar que «contribuir» es rellenar un bloque grande de contenido.
 
-- A paragraph that helps beginners
-- Fixing misleading wording
-- A missing nav entry
-- Downgrading or dating outdated commands
+En realidad, estas cosas también valen mucho:
 
-### “Not an expert” ≠ useless feedback
+- Añadir un párrafo que un principiante entienda
+- Corregir una formulación engañosa
+- Completar una entrada de índice que faltaba
+- Degradar o fechar un comando desactualizado
 
-If your audience includes beginners, where you get stuck is signal—if you make it specific and improve the text, not only “confusing.”
+### «No soy experto» no significa «mi feedback no sirve»
 
-## Core principles
+Si el público objetivo incluye a principiantes, los puntos en los que te atascas al leer son en sí una señal de alto valor.
 
-1. **Simplified Chinese `root` is source** (unless stated otherwise)
-2. **Do not copy** external tutorials verbatim; see [External source integration plan](/docs/planning/external-source-integration.md)
-3. **Volatile facts** need `Last verified` dates
-4. **Every sidebar slug** needs a markdown file or `npm run build` fails
-5. New pages must update `astro.config.mjs` sidebar
+La condición es solo: formular el problema con concreción e intentar convertirlo en una expresión más clara, no dejar solo un «aquí no se entiende».
 
-## First contribution path
+## Principios básicos
 
-1. Pick something you actually got stuck on
-2. Decide: copy fix, new page, example, or verify outdated info
-3. Change one focused slice—but explain reader context
-4. Run build so site structure stays valid
+1. **El chino simplificado `root` es el texto fuente** (salvo indicación contraria)
+2. **No copiar** tutoriales externos literales; ver [plan de integración de fuentes externas](/docs/planning/external-source-integration.md)
+3. Los **hechos variables** deben llevar fecha de `Última verificación`
+4. **Cada slug del sidebar** debe tener su markdown; si no, `npm run build` falla
+5. Las páginas nuevas deben actualizar también el sidebar de `astro.config.mjs`
 
-Smaller scoped PRs review faster than whole-chapter rewrites.
+## Cómo empezar la primera contribución
 
-## Local development
+Si es tu primera contribución, el orden más estable es:
+
+1. Elige un punto en el que te hayas atascado de verdad
+2. Decide si es corregir texto, completar página, añadir ejemplo o verificar información desactualizada
+3. Cambia solo ese trozo pequeño, pero deja claras las premisas y la perspectiva del lector
+4. Ejecuta el build y confirma que no rompiste la estructura del sitio
+
+Así es más fácil tener éxito —y más fácil de revisar— que empezar con un gran cambio de capítulo.
+
+## Desarrollo local
 
 ```bash
 source ~/.nvm/nvm.sh && nvm use 22
@@ -81,27 +88,27 @@ pnpm install
 pnpm dev
 ```
 
-Before merge:
+Antes de fusionar, ejecuta:
 
 ```bash
 npm run build
 ```
 
-## Code of conduct
+## Código de conducta
 
-- Respect others’ work; discuss ideas not people
-- No real keys or customer data
-- Large refactors: issue or RFC first
+- Respeta el trabajo de otros; discute sobre el asunto, no sobre la persona
+- No envíes claves reales ni datos de clientes
+- Ante un refactor amplio, abre primero un issue o RFC
 
-A first contribution does not need to be huge—clarify one real beginner pain point and pass build.
+La primera contribución no tiene que aspirar a escribir mucho. Aclarar un punto que de verdad atasca a un principiante y confirmar que pasa la verificación de build ya aporta mucho valor.
 
-## Related links
+## Enlaces relacionados
 
-- Repository: <https://github.com/hopecyb/CodexHandbook>
-- [Chapter outline](/docs/planning/chapter-outline.md) (planning)
+- Repositorio: <https://github.com/hopecyb/CodexHandbook>
+- [Esquema de capítulos](/docs/planning/chapter-outline.md) (para planificación)
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked repo directory structure, sidebar maintenance, page status system, and contribution flow; handbook maintenance rules—not volatile Codex UI behavior.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Base de verificación:** Contrastado ítem a ítem con la estructura actual del repositorio, el mantenimiento del sidebar, el sistema de estados de página y el flujo de contribución; el contenido pertenece a las reglas de mantenimiento del manual y no depende de comportamientos de UI variables de un cliente Codex concreto.  
+**Última verificación:** 2026-07-26

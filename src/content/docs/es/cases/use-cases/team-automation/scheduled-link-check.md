@@ -1,91 +1,91 @@
 ---
-title: 'Case study: Scheduled documentation link check'
-description: Non-interactive Codex or CI to scan for dead site links—a team automation starter case.
+title: "Caso: comprobación programada de enlaces de documentación"
+description: Escanea enlaces rotos del sitio con Codex no interactivo o CI — caso de entrada a la automatización de equipo.
 locale: es
-source_locale: en
-source_revision: f7b153b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
+## Metadatos
 
-| Field | Content |
+| Campo | Contenido |
 |---|---|
-| Audience | Team maintainers, technical writers |
-| Client | CLI + GitHub Actions |
-| Estimated time | 45–90 minutes (including first CI setup) |
-| Verification date | 2026-07-25 |
+| Público | Maintainers de equipo, Technical Writers |
+| Cliente | CLI + GitHub Actions |
+| Tiempo estimado | 45–90 minutos (incluye la primera config de CI) |
+| Fecha de verificación | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Objetivo y contexto
 
-**Goal:** Weekly automatic check of in-site links and key external links; report dead links via PR or issue.
+**Objetivo:** Comprobar cada semana enlaces internos del sitio de docs y enlaces externos clave; informar de enlaces rotos en PR o issue.
 
-**Success criteria:**
+**Criterios de éxito:**
 
-- CI or scheduled workflow runs repeatably
-- Structured dead-link list (file, line, URL)
-- No unrelated file changes, no push
+- CI o workflow programado reproducible
+- Lista estructurada de enlaces rotos (archivo, número de línea, URL)
+- No modifica archivos ajenos ni hace push
 
-**Out of scope:** Full-site crawl, logged-in pages, performance testing.
+**Fuera de alcance:** Crawler de todo el sitio, páginas tras login, pruebas de rendimiento.
 
-## 2. Preparation
+## 2. Preparación
 
-- Docs site source in a Git repo (e.g. this handbook `src/content/docs/`)
-- Existing `npm run build` or link-check script (optional)
-- Read-only `GITHUB_TOKEN` and `OPENAI_API_KEY` in org secrets
+- El código fuente del sitio de docs está en un repo Git (p. ej. `src/content/docs/` de este manual)
+- Ya existe `npm run build` o un script de link checker (opcional)
+- `GITHUB_TOKEN` de solo lectura y `OPENAI_API_KEY` en secrets de la org
 
-## 3. Workflow
+## 3. Flujo de trabajo
 
-### Explore
+### Explorar
 
 ```text
-Read @src/content/docs/ and existing package.json scripts.
-List whether link check exists; if not, suggest minimal approach: markdown internal links + sample official doc externals.
-Do not change files.
+Lee @src/content/docs/ y los scripts de package.json existentes.
+Indica si ya hay link check; si no, sugiere el esquema mínimo: enlaces internos markdown + muestreo de enlaces externos a docs oficiales.
+No modifiques archivos.
 ```
 
-### Plan
+### Planificar
 
 ```text
-Give plan: prompt file path, CI workflow name, structured JSON output fields.
-Wait for my confirmation before creating files.
+Propón un plan: ruta del archivo de prompt, nombre del workflow de CI, campos del JSON estructurado de salida.
+Espera mi confirmación antes de crear archivos.
 ```
 
-### Execute
+### Ejecutar
 
-- Add `prompts/ci/link-check.md`
-- Add `.github/workflows/docs-link-check.yml` (illustrative—see [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Use [codex exec](/guide/developer-platform/non-interactive/codex-exec/) or plain script + Codex for secondary classification
+- Añadir `prompts/ci/link-check.md`
+- Añadir `.github/workflows/docs-link-check.yml` (esquema; ver [Scripts y pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Usar [codex exec](/guide/developer-platform/non-interactive/codex-exec/) o script puro + reclasificación secundaria con Codex
 
-### Verify
+### Verificar
 
-- Local `codex exec` once
-- CI manual `workflow_dispatch`
-- Insert a dead link on purpose; confirm `pass: false`
+- Una pasada local de `codex exec`
+- `workflow_dispatch` manual en CI
+- Insertar a propósito un enlace roto y confirmar `pass: false`
 
-## 4. Failure and recovery
+## 4. Fallo y recuperación
 
-| Issue | Action |
+| Problema | Tratamiento |
 |---|---|
-| External site temporary 503 | Distinguish hard dead links vs soft failures in prompt |
-| JSON parse failure | Tighten [structured output](/guide/developer-platform/non-interactive/structured-output/) constraints |
-| Quota exhausted | Switch to weekly schedule + incremental checks |
+| Sitio externo con 503 temporal | Distingue enlace duro vs fallo blando; defínelo en el prompt |
+| Fallo al parsear JSON | Endurece las restricciones de [salida estructurada](/guide/developer-platform/non-interactive/structured-output/) |
+| Cuota agotada | Pasa a cron semanal + comprobación incremental |
 
-## 5. Capture
+## 5. Captura para reutilizar
 
-- After third successful run, capture as Skill: `docs-link-audit`
-- Team [command rules](/guide/customization/rules/team-rules/) allow `npm run build` and read-only git
+- Tras la tercera ejecución correcta, captura como Skill: `docs-link-audit`
+- Las [reglas de comandos del equipo](/guide/customization/rules/team-rules/) permiten `npm run build` y git en solo lectura
 
-## 6. Related chapters
+## 6. Capítulos relacionados
 
-- [Long-running task management](/cases/workflows/long-running-task-management/)
-- [Automations scheduled tasks](/skills/automations/scheduled-tasks/)
-- [Team learning path](/guide/learning-paths/team/)
+- [Gestión de tareas largas](/cases/workflows/long-running-task-management/)
+- [Tareas programadas de Automations](/skills/automations/scheduled-tasks/)
+- [Ruta de aprendizaje de equipo](/guide/learning-paths/team/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified non-interactive mode, scripts and pipelines, structured output, team rules, and automation chapters; content is limited to the stable team automation case of scheduled link checks, structured reports, and failure stop conditions.
+**Estado:** verified  
+**Productos aplicables:** CLI  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los capítulos ya verificados de modo no interactivo, scripts y pipelines, salida estructurada, reglas de equipo y automatización. El contenido se limita al caso estable de automatización de equipo «comprobación programada de enlaces, informe estructurado y parada ante fallos».

@@ -1,47 +1,92 @@
 ---
-title: Start Here
-description: Learn what Codex is, who it's for, and choose your learning path.
+title: Empieza aquí
+description: Entiende qué es Codex, para quién sirve y elige tu ruta de aprendizaje.
 locale: es
-source_locale: en
-source_revision: 6c1c505
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 1
 ---
 
-Welcome to the Codex Handbook. This handbook assumes **AI beginners** as the default reader: we don't assume you know the terminal, Git, or Agents, but we will build professional skills step by step.
+# Empieza aquí
 
-## What you'll get
+Este handbook está pensado sobre todo para **principiantes en IA**: no asume que sepas usar la terminal, Git o Agents, pero te irá explicando paso a paso lo que necesitarás después.
 
-- Clarify what Codex can and cannot do
-- Choose a reading path by role and task
-- Complete your first verifiable task in a safe practice project
-- Learn to write prompts with goals, constraints, and acceptance criteria—and build a review habit
+## Contenido
 
-## Suggested reading order
+- Aclarar qué puede y qué no puede hacer Codex
+- Elegir una ruta de lectura según tu rol y tu Tarea
+- Completar tu primera Tarea verificable en un proyecto de práctica seguro
+- Aprender a escribir Prompts con objetivo, límites y criterios de aceptación, y a revisar resultados
 
-1. [What is Codex](/guide/start-here/what-is-codex/)
-2. [Who is this handbook for](/guide/start-here/who-is-this-handbook-for/)
-3. [Choose your path](/guide/start-here/choose-your-path/)
-4. Continue to [Foundations](/guide/foundations/) and [Getting Started](/guide/getting-started/)
+## Orden de lectura sugerido
 
-If you want to jump in right away, go straight to [First 30 minutes](/guide/getting-started/first-30-minutes/), and skim the [Beginner safety checklist](/guide/getting-started/beginner-safety-checklist/) first.
+1. [Qué es Codex](/guide/start-here/what-is-codex/) — qué puede y qué no puede hacer
+2. [Elige un cliente](/guide/choose-your-client/) — App, CLI, IDE o Cloud
+3. [Completa tu primera Tarea](/cases/first-task/) — un cambio pequeño con un Prompt claro y revisión del resultado
+4. [Permisos y Sandbox](/guide/permissions-and-sandbox/) — aprobación, aislamiento y límites de red
+5. [Contexto y archivos](/guide/context-and-files/) — cómo dar entradas útiles
+6. [Verificación](/guide/verification/) — hábitos de revisión y pruebas
 
-## How this site is organized
+## Malentendidos frecuentes
 
-| Layer | Purpose | Entry |
+### 1. «Empieza aquí» no lo explica todo de una vez
+
+Esta sección aclara entradas y orden. No intenta meterte todo el contenido de golpe.
+
+### 2. Puedes seguir aunque al principio no entiendas muchas palabras
+
+Con saber esto basta por ahora:
+
+- cómo colaboras con Codex
+- cómo abres una Tarea
+- cómo revisas el resultado
+
+El resto lo irás completando sobre la marcha.
+
+### 3. Entender los conceptos no basta para empezar
+
+No basta. Hay que combinar comprensión, práctica en pequeño y comprobación del resultado.
+
+## Ruta de los primeros 30 minutos
+
+| Tiempo | Qué hacer |
+|---|---|
+| 0–5 min | Lee los puntos de seguridad en [Permisos y Sandbox](/guide/permissions-and-sandbox/) |
+| 5–10 min | Instala e inicia sesión en el cliente que elijas (ver [App de escritorio](/guide/desktop-app/) y similares) |
+| 10–25 min | Sigue el [caso de la primera Tarea](/cases/first-task/) |
+| 25–30 min | Mira [Fundamentos de prompts](/prompts/basics/) para escribir Tareas más claras |
+
+Si te atascas, consulta [Solución de problemas](/guide/troubleshooting/).
+
+## Qué leer después
+
+1. [Qué es Codex](/guide/start-here/what-is-codex/)
+2. [Para quién es este handbook](/guide/start-here/who-is-this-handbook-for/)
+3. [Elige tu ruta](/guide/start-here/choose-your-path/)
+4. Entra en [Fundamentos](/guide/foundations/) y [Primeros pasos](/guide/getting-started/)
+
+Si quieres empezar ya, ve a [Los primeros 30 minutos](/guide/getting-started/first-30-minutes/) y pasa por la [Lista de seguridad para principiantes](/guide/getting-started/beginner-safety-checklist/).
+
+## Cómo se organiza el sitio
+
+| Capa | Función | Entrada |
 |---|---|---|
-| Learning paths | What to read and in what order | [Learning paths](/guide/learning-paths/) |
-| Product guides | UI and operations | [Product guides](/guide/) |
-| Capability topics | Principles and methods | [Core capabilities](/guide/) |
-| Reference | Quick lookup | [Reference](/guide/reference/) |
+| Rutas de aprendizaje | Qué leer y en qué orden | [Rutas de aprendizaje](/guide/learning-paths/) |
+| Guías de producto | Interfaz y operaciones | [Guías de producto](/guide/) |
+| Temas de capacidades | Principios y métodos | [Capacidades principales](/guide/) |
+| Referencia | Consulta rápida | [Referencia](/guide/reference/) |
 
-Each topic has one authoritative page; paths and case studies use summaries with links to avoid duplication.
+Cada tema tiene una página canónica; las rutas y los casos usan resúmenes con enlaces para no duplicar contenido.
+
+Esta sección explica el orden y los límites del arranque, y adelanta varios riesgos claros.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Esta página solo explica el orden de arranque y las entradas de lectura; se revisaron enlaces internos, capas de secciones y estructura de guía, y el cuerpo no depende de hechos de producto que cambien con facilidad.  
+**Última verificación:** 2026-07-26

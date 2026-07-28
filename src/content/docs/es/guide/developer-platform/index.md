@@ -1,97 +1,97 @@
 ---
-title: Developer Platform
-description: Embed Codex into your engineering stack with SDK, non-interactive CLI, and CI/CD—for integration developers.
+title: Plataforma para desarrolladores
+description: Integra Codex en tu stack de ingeniería con SDK, CLI no interactivo y CI/CD — para desarrolladores de integración.
 sidebar:
   order: 50
 locale: es
-source_locale: en
-source_revision: 15f28d4
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **Developer Platform** is for people who want to **productize** Codex into pipelines: custom apps, batch review, release gates, internal developer portals. For everyday “write a prompt to fix a bug,” start with [Getting started](/guide/getting-started/).
+La **plataforma para desarrolladores** es para quienes quieren **productivizar** Codex en pipelines: apps a medida, revisión por lotes, puertas de release, portales internos. El uso cotidiano de «escribir un Prompt para corregir un bug» sigue empezando en [Primeros pasos](/guide/getting-started/).
 
-This chapter is not about day-to-day Codex usage—it is about wiring Codex into your own systems.
+Este capítulo no trata el uso diario de Codex, sino cómo enchufarlo en tus propios sistemas.
 
-It is aimed at scenarios like:
+Se orienta a escenarios como:
 
-- Running tasks automatically in CI
-- Integrating Codex into your backend or internal tools
-- Making Codex part of team workflows
+- Ejecutar Tareas automáticamente en CI
+- Integrar Codex en tu backend o herramientas internas
+- Hacer de Codex parte del flujo de trabajo del equipo
 
-## What this chapter covers
+## Qué cubre esta página
 
-- The boundary between the developer platform and end-user product docs
-- Typical integration architecture
-- Chapter navigation and roadmap
+- El límite entre la plataforma para desarrolladores y el manual de producto para usuarios finales
+- Arquitectura típica de integración
+- Navegación del capítulo y hoja de ruta
 
-## How this relates to product docs
+## División con el manual de producto
 
-| Reader question | Where to go |
+| Pregunta del lector | Dónde ir |
 |---|---|
-| How to run `codex` in the terminal | [CLI product guide](/guide/cli/) |
-| How to exec review in CI | [Non-interactive mode](/guide/cli/non-interactive-mode/) + CI in this chapter |
-| How to embed an Agent in your app | [SDK overview](/guide/developer-platform/sdk-overview/) |
-| Permissions and security model | [Human approval patterns](/cases/workflows/human-approval-patterns/) |
+| Cómo ejecutar `codex` en la terminal | [Manual de producto CLI](/guide/cli/) |
+| Cómo hacer revisión con exec en CI | [Modo no interactivo](/guide/cli/non-interactive-mode/) + CI de este capítulo |
+| Cómo incrustar un Agent en tu App | [Resumen del SDK](/guide/developer-platform/sdk-overview/) |
+| Modelo de Permisos y seguridad | [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/) |
 
-## Typical architecture (conceptual)
+## Arquitectura típica (concepto)
 
 ```text
-Your system (CI / internal platform / SaaS)
-        ↓ API or CLI
-Codex (model + tools + policy)
+Tu sistema (CI / plataforma interna / SaaS)
+        ↓ API o CLI
+Codex (modelo + Herramientas + política)
         ↓
-Git provider / tickets / artifact store
+Proveedor Git / tickets / almacén de artefactos
 ```
 
-## Design principles
+## Principios de diseño
 
-1. **Idempotent and retryable**: repeated review of the same PR should yield comparable results
-2. **Least privilege**: CI tokens read-only or scoped to specific repos
-3. **Observable**: retain prompt version, model, diff artifacts
-4. **Human-in-the-loop**: auto comments ≠ auto merge
+1. **Idempotente y reintentable**: revisiones repetidas del mismo PR deben ser comparables
+2. **Privilegio mínimo**: token de CI de solo lectura o limitado a repositorios
+3. **Observable**: conservar versión del Prompt, modelo y artefacto del diff
+4. **División humano-máquina**: comentario automático ≠ merge automático
 
-## Chapter navigation
+## Navegación del capítulo
 
-| Topic | Pages |
+| Tema | Páginas |
 |---|---|
-| SDK | [SDK overview](/guide/developer-platform/sdk-overview/) |
-| Non-interactive | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Structured output](/guide/developer-platform/non-interactive/structured-output/) · [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Overview](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [Resumen del SDK](/guide/developer-platform/sdk-overview/) |
+| No interactivo | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Scripts y pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Salida estructurada](/guide/developer-platform/non-interactive/structured-output/) · [Códigos de salida y reintentos](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Resumen](/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Automatización de revisión de código](/guide/developer-platform/ci-cd/code-review-automation/) |
 
-For more on `codex-sdk/`, `app-server/`, and `architecture-patterns/`, see the [chapter outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
+Más sobre `codex-sdk/`, `app-server/` y `architecture-patterns/` en el [esquema del capítulo](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. Do I have to learn this chapter to really use Codex?
+### 1. ¿Debo aprender este capítulo para «saber de verdad» usar Codex?
 
-If you mainly want to get started with Codex first, you can read this chapter later.
+Si ahora solo quieres empezar a usar Codex, puedes leerlo más tarde.
 
-### 2. How does this relate to CLI / App / IDE?
+### 2. ¿Cómo se relaciona con CLI / App / IDE?
 
-Think of it this way:
+Así:
 
-- **App / CLI / IDE**: entry points where you or your team use Codex directly
-- **Developer platform**: embedding Codex into other systems and workflows
+- **App / CLI / IDE**: entradas donde tú o tu equipo usáis Codex directamente
+- **Plataforma para desarrolladores**: enchufar Codex en otros sistemas y flujos
 
-### 3. What is most valuable to read first in this chapter?
+### 3. ¿Qué página vale más la pena leer primero en este capítulo?
 
-If you only want a conceptual overview, start with [SDK overview](/guide/developer-platform/sdk-overview/) and how it relates to [non-interactive mode](/guide/cli/non-interactive-mode/).
+Para formarte el concepto, prioriza [Resumen del SDK](/guide/developer-platform/sdk-overview/) y su relación con el [modo no interactivo](/guide/cli/non-interactive-mode/).
 
-The developer platform chapter is about wiring Codex into systems. For your first hands-on use of Codex, read the getting-started content first.
+Este capítulo habla de «cómo enchufar Codex en el sistema». Para el primer uso práctico, empieza por el contenido de primeros pasos.
 
-## Reference sources
+## Fuentes de referencia
 
-- OpenAI Codex API / SDK official documentation
-- KimYx0207 developer chapter
-- stormzhang CI and automation tutorials
-- codex.bozhouai.com engineering case studies
+- Documentación oficial de la API / SDK de OpenAI Codex
+- Capítulos para desarrolladores de KimYx0207
+- Tutoriales de CI y automatización de stormzhang
+- Casos de ingeniería de codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Products:** API / CLI / Cloud  
-**Verification basis:** Cross-checked against the current developer-platform chapter structure, navigation entries, and related CLI/CI/SDK pages in this repo; this page only describes the stable split that the developer platform targets engineering integration, without claiming specific parameters or runtime behavior.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** API / CLI / Cloud  
+**Base de verificación:** Contrastado con la estructura actual del capítulo developer-platform, las entradas de navegación y las páginas relacionadas de CLI/CI/SDK; esta página solo aclara la división estable de que la plataforma para desarrolladores apunta a la integración de ingeniería, sin declarar parámetros o comportamientos de runtime concretos.  
+**Última verificación:** 2026-07-26

@@ -1,85 +1,85 @@
 ---
-title: Define done
-description: Write checkable completion conditions.
+title: Definir el terminado
+description: Escribe condiciones de terminado comprobables.
 locale: es
-source_locale: en
-source_revision: 61ae3f2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people state what they want but not what "done enough" looks like. Then whether the work is finished becomes a matter of feel.
+Al formular una tarea, mucha gente dice «qué quiero» pero no «hasta qué punto cuenta como terminado». Al final, solo puedes juzgar a ojo.
 
-Definition of done is how you plan to verify the result.
+Los criterios de terminado son, en la práctica, cómo vas a verificar el resultado.
 
-Acceptance criteria must be **observable**:
+Los criterios de aceptación deben ser **observables**:
 
-- Weak: "code quality improved"
-- Strong: "`npm test` passes; `Button` supports `disabled`; Storybook screenshots match the design"
+- Mal: «mejora la calidad del código»
+- Bien: «`npm test` pasa; el componente `Button` soporta `disabled`; la captura de Storybook coincide con el diseño»
 
-## Why tasks often end without a clear "done"
+## Por qué tantas tareas no dejan claro si están terminadas
 
-Often goal and definition of done are blended.
+A menudo se mezclan objetivo y criterios de terminado.
 
-- **Goal:** the outcome you want
-- **Definition of done:** how you confirm that outcome was reached
+- **Objetivo:** qué resultado quieres
+- **Criterios de terminado:** cómo confirmas que ese resultado se alcanzó de verdad
 
-"Fix this bug" is a goal;  
-"reproducible fix, related tests pass, no new console errors" is closer to definition of done.
+Por ejemplo, «arregla este bug» es el objetivo;  
+«puedes reproducir de forma estable la corrección, pasan los tests relacionados y no hay nuevos errores en consola» se acerca más a criterios de terminado.
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. If it looks roughly right, it's done
+### 1. Si el resultado «se parece», ya está terminado
 
-This bites hardest on small tasks. "Roughly right" often misses tests, edge cases, and side effects.
+En tareas pequeñas es fácil enterrar problemas. «Se parece» suele omitir tests, casos límite y efectos secundarios.
 
-### 2. Definition of done is praising the result in more words
+### 2. Criterios de terminado = unas frases de elogio al resultado
 
-Definition of done must be checkable—not a victory speech.
+Deben ser comprobables, no un discurso de cierre.
 
-### 3. Build passing equals done
+### 3. Que el build pase equivale a terminado
 
-Not necessarily.
+No necesariamente.
 
-Build passing is usually one checkpoint, not proof that:
+Que el build pase suele ser solo un punto de control; no implica:
 
-- behavior is correct
-- scope wasn't exceeded
-- copy fits the audience
-- sources were verified
+- que la función sea correcta
+- que el alcance no se haya excedido
+- que el copy encaje con el lector
+- que las fuentes se hayan verificado
 
-## A common way to write it
+## Una redacción habitual
 
-If you're unsure, pick from these three types:
+Si no sabes cómo escribirlo, elige entre estas 3 categorías:
 
-- **Functional check:** does behavior match expectation?
-- **Technical check:** build / test / lint pass?
-- **Scope check:** only agreed areas changed?
+- **Comprobación funcional:** ¿el comportamiento coincide con lo esperado?
+- **Comprobación técnica:** ¿pasan build / tests / lint?
+- **Comprobación de alcance:** ¿solo se cambió lo acordado?
 
-For example:
+Por ejemplo:
 
 ```text
-Acceptance criteria:
-- Only edit docs homepage copy; don't change layout or components
-- `pnpm build` passes
-- Hero copy is easier for beginners; no assumed jargon on first visit
+Criterios de aceptación:
+- solo el copy de la home de docs; no layout ni componentes
+- `pnpm build` pasa
+- el copy de la primera pantalla es comprensible para principiantes; no asume jerga
 ```
 
-## A quick self-check
+## Método de juicio
 
-After writing, ask:
+Tras escribirlo, pregúntate:
 
-> **If someone else had this list, could they judge pass or fail?**
+> **Si se lo das a otra persona, ¿puede decidir con esto «pasa» o «no pasa»?**
 
-If not, it's probably still too vague.
+Si no, casi seguro sigue siendo demasiado vago.
 
-Bottom line: don't let "is it done?" depend on guessing.
+Al final, no dejes que «¿cuenta como terminado?» dependa de adivinar.
 
-Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/guide/verification/)
+Incluye los comandos de verificación en los criterios para que el Agent tenga más probabilidad de ejecutarlos: [Ejecutar tests](/guide/verification/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains acceptance and definition-of-done writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página solo describe cómo escribir aceptación y criterios de terminado; se han revisado los enlaces internos y el cuerpo no depende de hechos volátiles del producto.

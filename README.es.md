@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/es/">Leer en línea</a>
   ·
-  <a href="./src/content/docs/guide/index.md">Guía para principiantes</a>
+  <a href="./src/content/docs/es/guide/start-here/index.md">Empieza aquí</a>
   ·
   <a href="./docs/planning/content-architecture.md">Arquitectura del contenido</a>
   ·
@@ -72,11 +72,11 @@ Para navegación completa, búsqueda, organización de capítulos y actualizacio
 
 Recomendamos empezar en este orden:
 
-1. [Guía — inicio](./src/content/docs/guide/index.md)
-2. [Contexto y archivos](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Casos](./src/content/docs/cases/index.md)
+1. [Empieza aquí](./src/content/docs/es/guide/start-here/index.md)
+2. [Contexto](./src/content/docs/es/guide/context/index.md)
+3. [Prompts](./src/content/docs/es/prompts/index.md)
+4. [Skills](./src/content/docs/es/skills/index.md)
+5. [Casos](./src/content/docs/es/cases/index.md)
 
 Esta ruta es para quienes son nuevos en Codex: ayuda a construir una base sólida antes de la práctica.
 
@@ -110,10 +110,10 @@ Comprender flujos de trabajo de extremo a extremo mediante tareas reales: leer c
 | Enlace | Uso |
 | --- | --- |
 | [Leer en línea](https://codexhandbook.com/es/) | Explorar el manual completo en el sitio |
-| [Guía](./src/content/docs/guide/index.md) | Entender las rutas de uso de Codex desde cero |
-| [Prompts](./src/content/docs/prompts/index.md) | Aprender a describir tareas y límites con claridad |
-| [Skills](./src/content/docs/skills/index.md) | Convertir la experiencia en capacidades reutilizables |
-| [Casos](./src/content/docs/cases/index.md) | Ver flujos de extremo a extremo con tareas reales |
+| [Guía](./src/content/docs/es/guide/start-here/index.md) | Entender las rutas de uso de Codex desde cero |
+| [Prompts](./src/content/docs/es/prompts/index.md) | Aprender a describir tareas y límites con claridad |
+| [Skills](./src/content/docs/es/skills/index.md) | Convertir la experiencia en capacidades reutilizables |
+| [Casos](./src/content/docs/es/cases/index.md) | Ver flujos de extremo a extremo con tareas reales |
 | [Ejemplos](./examples/README.md) | Reutilizar prompts y activos de ejemplo |
 | [Arquitectura del contenido](./docs/planning/content-architecture.md) | Entender el diseño de información del sitio |
 | [Esquema de capítulos](./docs/planning/chapter-outline.md) | Ver la cobertura de temas |
@@ -122,17 +122,17 @@ Comprender flujos de trabajo de extremo a extremo mediante tareas reales: leer c
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # Guía, clientes, permisos, verificación
-├── src/content/docs/prompts/    # Métodos de prompts y expresión de tareas
-├── src/content/docs/skills/     # Diseño, uso y gobernanza de Skills
-├── src/content/docs/cases/      # Casos de tareas reales
+├── src/content/docs/es/guide/   # Guía, clientes, permisos, verificación
+├── src/content/docs/es/prompts/ # Métodos de prompts y expresión de tareas
+├── src/content/docs/es/skills/  # Diseño, uso y gobernanza de Skills
+├── src/content/docs/es/cases/   # Casos de tareas reales
 ├── examples/                    # Prompts copiables y ejemplos extendidos
 ├── docs/planning/               # Planificación y mantenimiento del contenido
 ```
 
 ## Desarrollo local
 
-Este proyecto usa [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) para el sitio de documentación. El contenido principal está en `src/content/docs/`.
+Este proyecto usa [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) para el sitio de documentación. El contenido en español está en `src/content/docs/es/`.
 
 Requisitos:
 
@@ -151,6 +151,14 @@ Construir el sitio estático:
 ```bash
 pnpm build
 ```
+
+Seguir la cobertura de traducción al español:
+
+```bash
+pnpm i18n:status -- --locale es
+```
+
+El contenido en español está en `src/content/docs/es/` (espejo de la fuente en chino simplificado). Glosario: [`glossary/es.md`](./glossary/es.md). A 2026-07-28, la cobertura española es del **100%** (`translation_status: draft`; revisión lingüística/técnica pendiente).
 
 ## Principios
 

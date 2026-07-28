@@ -1,30 +1,58 @@
 ---
-title: Complete Your First Small Project
-description: Chain the onboarding steps into one end-to-end delivery.
+title: Completar el primer proyecto pequeño
+description: Encadena los pasos de puesta en marcha en una entrega completa.
 locale: es
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: a164a12
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-## Goal for this step
+## Objetivo de este paso
 
-Deliver a small but complete artifact in your practice directory—for example, a one-page `practice-report.md`:
+Entrega en el directorio de práctica un producto pequeño y completo, por ejemplo una página `practice-report.md`:
 
-- Which client you used
-- Three successful tasks
-- One capability you want to learn next (prompting / context / quality)
+- Indica qué cliente usaste
+- Enumera tres Tareas completadas con éxito
+- Escribe la capacidad que quieres aprender a continuación (Prompt / Contexto / calidad)
 
-## When you finish
+Este paso no es «hacer un documento tipo deberes», sino encadenar los pasos anteriores y cerrar un ciclo pequeño e independiente.
 
-- Revisit the [capability map](/guide/start-here/codex-capability-map/)
-- Go deeper into the [desktop App](/guide/desktop-app/) or [prompting](/prompts/)
+## Después de terminar
+
+- Repasa el [mapa de capacidades](/guide/start-here/codex-capability-map/)
+- Profundiza en [App de escritorio](/guide/desktop-app/) o [Prompts](/prompts/)
+
+## Puntos clave del ejercicio
+
+Aquí importan tres cosas:
+
+- No solo saber enviar una petición
+- También controlar el alcance, comprobar el resultado y resumir la experiencia
+
+Al llegar aquí, suele poderse completar de forma independiente un proyecto pequeño.
+
+## Malentendidos frecuentes
+
+### 1. El primer proyecto pequeño debe parecer impresionante
+
+Pequeño y completo vale más que grande y fuera de control.
+
+### 2. Basta con generar un artefacto para darlo por terminado
+
+Más importante es poder explicar:
+
+- Cómo lo hiciste actuar
+- Cómo juzgaste que lo hizo bien
+- Qué capacidad quieres reforzar a continuación
+
+El valor del primer proyecto pequeño no está en el tamaño de la obra, sino en haber cerrado un ciclo completo de colaboración.
 
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** Contrastado con el mapa de capacidades, la revisión de resultados y la ruta de cinco pasos para principiantes; el contenido se limita al método estable de «encadenar los pasos anteriores en un ciclo pequeño resumible».  
+**Última verificación:** 2026-07-26

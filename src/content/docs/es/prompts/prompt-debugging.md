@@ -1,101 +1,101 @@
 ---
-title: Prompt debugging
-description: How to locate prompt problems when results drift.
+title: Depuración de Prompts
+description: Cómo localizar problemas del Prompt cuando el resultado se desvía.
 locale: es
-source_locale: en
-source_revision: 6b34687
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When results are wrong, common causes include:
+Cuando el resultado no encaja, las causas habituales son:
 
-- goal not written as a checkable outcome
-- constraints unclear
-- context incomplete or stale
-- task too large without asking for a plan first
+- el objetivo no se escribió como resultado comprobable
+- las restricciones no están claras
+- el contexto está incompleto o desactualizado
+- la tarea es demasiado grande y no pediste un plan primero
 
-Prompt debugging finds which layer of information was lost.
+La depuración de Prompts consiste en encontrar qué capa de información falta.
 
-## Locate the problem first
+## Localiza primero dónde está el problema
 
-When output drifts, you don't always need to start over. Find which layer failed:
+Si el resultado se desvía, no hace falta rehacerlo todo de inmediato. Localizar la capa suele ahorrar trabajo:
 
-1. unclear goal?
-2. scope out of control?
-3. insufficient context?
-4. task too big?
-5. wrong tool path chosen?
+1. ¿objetivo poco claro?
+2. ¿alcance fuera de control?
+3. ¿contexto insuficiente?
+4. ¿tarea demasiado grande?
+5. ¿o la ruta de herramientas ya estaba mal elegida?
 
-## When results are wrong, ask in order:
+## Cuando el resultado falla, pregunta en orden:
 
-1. Is the goal checkable?
-2. Are constraints clear? Did the Agent see them?
-3. Is context stale or conflicting? (compaction / old thread)
-4. Should you have asked for a plan first?
-5. Wrong tools? (network when it shouldn't, etc.)
+1. ¿El objetivo es comprobable?
+2. ¿Las restricciones están claras? ¿El Agent las vio?
+3. ¿El contexto está desactualizado o en conflicto? (compactación / hilo antiguo)
+4. ¿Había que pedir un plan primero?
+5. ¿Se eligió mal la herramienta? (buscó en la red cuando no debía)
 
-## What each question checks
+## Qué mira cada punto
 
-### 1. Is the goal checkable?
+### 1. Si el objetivo es comprobable
 
-Vague goals like "optimize a bit" commonly produce drift.
+Si el objetivo es vago («optimízalo un poco»), la desviación es habitual.
 
-### 2. Are constraints clear?
+### 2. Si las restricciones están claras
 
-Much "overdoing" comes from not stating where to stop—not from inability.
+Muchos «se pasó de la raya» no vienen de que no sepa hacerlo, sino de que no dijiste «hasta dónde solo».
 
-### 3. Is context stale or conflicting?
+### 3. Si el contexto está desactualizado o en conflicto
 
-Especially in long threads:
+Sobre todo en hilos largos:
 
-- you said A earlier
-- later you added B
-- the Agent holds a mixed state
+- antes dijiste A
+- luego añadiste B
+- ahora tiene un estado mezclado
 
-### 4. Should you have asked for a plan first?
+### 4. Si había que pedir un plan primero
 
-Large tasks executed directly often deviate more than planned work.
+Con tareas grandes, ejecutar directo suele desviarse más que planificar primero.
 
-### 5. Wrong tools?
+### 5. Si se eligió mal la herramienta
 
-Local code focus but it searched the web; or you wanted cited research but it answered from memory.
+Por ejemplo: querías foco en código local y se fue a buscar en la red; o pedías investigación con citas y respondió de memoria.
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. Bad results mean the whole prompt is trash
+### 1. Si el resultado falla, todo el Prompt está muerto
 
-Often you only need a small addition:
+A menudo basta con un pequeño complemento:
 
-- explicit acceptance
-- narrower scope
-- plan before execution
+- aclarar la aceptación
+- reducir el alcance
+- pedirle un plan primero
 
-### 2. Debugging means making the prompt longer
+### 2. Depurar es alargar el Prompt cada vez más
 
-Sometimes delete noise and keep only the critical boundaries.
+A veces hace falta quitar ruido y dejar solo los límites críticos.
 
-### 3. Longer threads are better because more context
+### 3. Cuanto más largo el hilo, mejor, porque hay más contexto
 
-Very long threads: old constraints, stale facts, compaction residue can interfere.
+En hilos muy largos, restricciones antiguas, información obsoleta y restos tras la compactación pueden interferir.
 
-## A usable recovery sequence
+## Un orden de remediación suficiente
 
-To pull work back on track:
+Para recuperar el rumbo:
 
-1. Rewrite goal to be checkable
-2. Add "only change here, don't change there"
-3. If the task is large, require a plan first
-4. If still messy, shrink to single file or single repro
-5. If still stuck, new thread with key boundaries restated
+1. Reescribe el objetivo para que sea comprobable
+2. Añade «solo cambia dónde / no toques dónde»
+3. Si la tarea es grande, exige un plan primero
+4. Si sigue caótico, reduce a un solo archivo o a un único fallo reproducible
+5. Si no, abre un hilo nuevo y reafirma los límites críticos
 
-Core idea: find which critical information wasn't conveyed—not keep complicating the wording.
+El núcleo de depurar Prompts es encontrar qué capa de información clave no se transmitió bien, no seguir complicando el texto.
 
-If it still fails, shrink to a single-file repro or open a new thread and restate constraints.
+Si sigue fallando, reduce a un fallo en un solo archivo o abre un hilo nuevo y reafirma las restricciones.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains prompt debugging only; in-site links and recovery sequence were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página solo describe el enfoque de depuración de Prompts; se han revisado enlaces y el orden de depuración, y el cuerpo no depende de hechos volátiles del producto.

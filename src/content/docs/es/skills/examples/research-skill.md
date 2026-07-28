@@ -1,38 +1,38 @@
 ---
-title: 'Example: Research Skill'
-description: Example research Skill with citations and "needs confirmation" markers.
+title: "Ejemplo: Skill de investigación"
+description: Ejemplo de Skill de investigación con citas y marcas de pendiente de confirmación.
 locale: es
-source_locale: en
-source_revision: c37acf0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Research Skill
+# Ejemplo: Skill de investigación
 
-## SKILL.md skeleton
+## Esqueleto de SKILL.md
 
 ```md
 ---
 name: source-backed-research
-description: Technical research and comparison tables with URL/file path citations. Use when the user needs selection, competitive analysis, or literature review.
+description: Investigación técnica y tablas comparativas con citas a URL o rutas de archivo. Úsalo cuando el usuario pida selección de herramientas, análisis de competencia o revisión de literatura.
 ---
 
-## Process
-1. Clarify research question and exclusions
-2. List evaluation dimensions (3–5)
-3. Attach a source to each conclusion; mark unverifiable items "needs confirmation"
-4. Output comparison table + recommendation + open questions
-5. Do not change code
+## Flujo
+1. Aclarar la pregunta de investigación y las exclusiones
+2. Listar dimensiones de evaluación (3–5)
+3. Cada conclusión con fuente; si no se puede verificar, marcar «pendiente de confirmación»
+4. Entregar tabla comparativa + recomendación + preguntas abiertas
+5. No modificar código
 ```
 
-## Related
+## Relacionado
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Research template](/prompts/templates/research/)
+- [Caso de investigación](/cases/research-with-sources/)
+- [Plantilla de investigación](/prompts/templates/research/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative research Skill skeleton emphasizing citations and "needs confirmation" markers—consistent with general Codex/Skills workflow usage.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Esqueleto ilustrativo de Skill de investigación; enfatiza citas y marcas de pendiente de confirmación, alineado con el uso genérico actual de Codex/Skills.  
+**Última verificación:** 2026-07-26

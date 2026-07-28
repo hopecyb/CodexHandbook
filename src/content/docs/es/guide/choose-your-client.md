@@ -1,89 +1,89 @@
 ---
-title: Choose your Codex client
-description: Making your first choice among App, CLI, IDE, and Cloud.
+title: Elige tu cliente de Codex
+description: Haz la primera elección entre App, CLI, IDE y Cloud.
 sidebar:
   order: 2
 locale: es
-source_locale: en
-source_revision: 88e1b18
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Seeing `App / CLI / IDE / Cloud` for the first time, many people stall on "which one do I install?"
+La primera vez que ves `App / CLI / IDE / Cloud`, mucha gente se atasca en «¿cuál instalo?».
 
-Picking the wrong first entry is not fatal—start with something workable and add others later.
+Si la primera entrada no es la más adecuada, no es el fin: empieza por una que te resulte cómoda y añade otras después.
 
-## A direct way to choose
+## Una forma directa de elegir
 
-Without strong preference:
+Si ahora no tienes una preferencia fuerte, elige así:
 
-- **First time**: desktop App
-- **You live in the terminal**: CLI
-- **You code mainly in VS Code / JetBrains**: IDE extension
-- **You already need GitHub cloud repos or long remote tasks**: look at Cloud
+- **Primera vez**: App de escritorio
+- **Ya usas el terminal a diario**: CLI
+- **Escribes código sobre todo en VS Code / JetBrains**: extensión IDE
+- **Ya sabes que necesitas un repositorio Cloud de GitHub o Tareas largas**: mira Cloud
 
-## What each entry is
+## Qué es cada entrada
 
-| Entry | Think of it as |
+| Entrada | Puedes entenderla como |
 |---|---|
-| Desktop App | Graphical console—tasks, diffs, approvals |
-| CLI | Codex in the terminal—for command-line users |
-| IDE extension | Assistant inside the editor—edit while you read code |
-| Cloud | Remote task execution—for repo collaboration and long runs |
+| App de escritorio | Consola gráfica; útil para ver Tareas, diffs y dar Aprobaciones |
+| CLI | Codex en el terminal; útil para usuarios de línea de comandos |
+| Extensión IDE | Asistente dentro del editor; útil para leer y cambiar código a la vez |
+| Cloud | Forma de ejecutar Tareas en remoto; útil para colaboración en repos y Tareas largas |
 
-| If you… | Choose |
+| Si… | Elige |
 |---|---|
-| First time; want clear diffs and review | **Desktop App** (recommended default) |
-| Prefer terminal and scripts | **CLI** |
-| Mostly edit in an editor | **IDE extension** |
-| Need GitHub cloud environment / long tasks | **Cloud** (read overview first) |
+| Es tu primera vez y quieres ver diffs y revisión con claridad | **App de escritorio** (recomendado por defecto) |
+| Prefieres el terminal y quieres escribir scripts | **CLI** |
+| Cambias código sobre todo en el editor | **Extensión IDE** |
+| Necesitas entorno Cloud de GitHub / Tareas largas | **Cloud** (lee primero la visión general) |
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### 1. Choosing a client is too technical to bother with now
+### 1. Elegir cliente es demasiado técnico; puedo saltármelo
 
-It is practical—it shapes whether your first experience feels clear or opaque.
+Este paso es muy práctico: decide si tu primera experiencia será fluida.
 
-### 2. Pick the most "pro" looking option
+### 2. Debo empezar por el que parece más profesional
 
-First time, pick the entry where process and results are easiest to see—not the most hardcore one.
+La primera vez conviene la entrada donde más fácil veas el proceso y el resultado, no la más «hardcore».
 
-## Why desktop App first for beginners
+## Por qué recomiendo primero la App de escritorio
 
-Friendlier for newcomers because:
+Para principiantes, la App de escritorio es más amable porque:
 
-- Easier to see what it did
-- Permission requests are visible
-- Tasks, diffs, and projects feel more concrete
-- Easier to pause and inspect when something goes wrong
+- Es más fácil ver qué hizo
+- Cuándo pide Permisos queda a la vista
+- Diff, Tarea y proyecto se entienden mejor
+- Si algo falla, es más fácil parar y revisar
 
-Unless you clearly prefer terminal, desktop App is often the better start.
+Si no prefieres claramente el terminal, la App de escritorio suele encajar mejor.
 
-## You can use multiple entries later
+## Después puedes usar varias entradas a la vez
 
-Not a permanent four-way choice.
+No es una elección de cuatro opciones ni un vínculo permanente.
 
-Many people later combine:
+Muchas personas combinan así:
 
-- Desktop App for tasks and review
-- CLI for batch operations
-- IDE extension while coding
+- App de escritorio a diario para ver Tareas y revisar cambios
+- CLI cuando necesitan operaciones en lote
+- Extensión IDE cuando escriben código
 
-First choice is only a starting point.
+La primera elección es solo el punto de partida.
 
-## If you want less friction
+## Si quieres menos fricción
 
-1. Install [desktop App](/guide/getting-started/install-desktop-app/)
-2. Run [your first task](/guide/getting-started/run-your-first-task/)
-3. Add CLI or IDE once comfortable
+1. Instala primero la [App de escritorio](/guide/getting-started/install-desktop-app/)
+2. Ejecuta una [primera Tarea](/guide/getting-started/run-your-first-task/)
+3. Cuando te resulte cómodo, considera CLI o IDE
 
-Full comparison: [feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep practice projects in the same directory** to compare clients fairly.
+Comparación completa: [comparación de funciones](/guide/reference/feature-comparison/). Puedes instalar varios clientes; **mantén el mismo directorio en el proyecto de práctica** para comparar con más facilidad.
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** OpenAI Developers homepage currently presents Codex, desktop workflows, and developer entry together; this page offers first-time path advice without fixing a rigid capability matrix or treating clients as mutually exclusive products.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** La página de inicio de OpenAI Developers presenta a la vez Codex, flujos de escritorio y entradas para desarrolladores; esta página es una recomendación de ruta para el primer uso y no presenta las distintas entradas como matriz fija de capacidades ni como productos mutuamente excluyentes.  
+**Última verificación:** 2026-07-26

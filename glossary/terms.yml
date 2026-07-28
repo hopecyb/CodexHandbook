@@ -8,6 +8,7 @@ terms:
     ja: Agent
     fr: Agent
     ko: Agent
+    es: Agent
     keep_english: true
     note: Execution approach that calls tools and iterates toward a goal. Do not translate.
 
@@ -17,6 +18,7 @@ terms:
     ja: 承認
     fr: Approbation
     ko: 승인
+    es: Aprobación
     keep_english: false
     note: Human confirmation before high-risk operations.
 
@@ -26,6 +28,7 @@ terms:
     ja: Cloud タスク
     fr: Tâche Cloud
     ko: Cloud 작업
+    es: Tarea Cloud
     keep_english: false
     note: Task executed in a cloud environment, not local sandbox.
 
@@ -35,6 +38,7 @@ terms:
     ja: 圧縮
     fr: Compression
     ko: 압축
+    es: Compactación
     keep_english: false
     note: Summarizing long context to save window space.
 
@@ -44,6 +48,7 @@ terms:
     ja: コンテキスト
     fr: Contexte
     ko: 컨텍스트
+    es: Contexto
     keep_english: false
     note: Information the model can currently use (files, conversation, project).
 
@@ -53,6 +58,7 @@ terms:
     ja: diff / 差分
     fr: Diff / écart
     ko: diff / 차이
+    es: Diff / diferencia
     keep_english: false
     note: Before/after view of changes. Prefer "diff" in English UI copy.
 
@@ -62,6 +68,7 @@ terms:
     ja: Hook
     fr: Hook
     ko: Hook
+    es: Hook
     keep_english: true
     note: Custom logic at lifecycle nodes (advanced). Product concept — keep English.
 
@@ -71,6 +78,7 @@ terms:
     ja: MCP
     fr: MCP
     ko: MCP
+    es: MCP
     keep_english: true
     note: Model Context Protocol. Never translate.
 
@@ -80,6 +88,7 @@ terms:
     ja: Plugin
     fr: Plugin
     ko: Plugin
+    es: Plugin
     keep_english: true
     note: Product extension package. Keep English.
 
@@ -89,6 +98,7 @@ terms:
     ja: プロンプト
     fr: Prompt
     ko: 프롬프트
+    es: Prompt
     keep_english: false
     note: Goal and requirements text given to an Agent.
 
@@ -98,6 +108,7 @@ terms:
     ja: サンドボックス
     fr: Bac à sable
     ko: 샌드박스
+    es: Sandbox
     keep_english: false
     note: Execution isolation that limits filesystem and network blast radius.
 
@@ -107,6 +118,7 @@ terms:
     ja: Skill
     fr: Skill
     ko: Skill
+    es: Skill
     keep_english: true
     note: Reusable package of specialized instructions and resources. Product name.
 
@@ -116,6 +128,7 @@ terms:
     ja: タスク
     fr: Tâche
     ko: 작업
+    es: Tarea
     keep_english: false
     note: A goal-oriented work unit (may span multiple tool calls).
 
@@ -125,6 +138,7 @@ terms:
     ja: スレッド
     fr: Fil / thread
     ko: 스레드
+    es: Hilo / thread
     keep_english: false
     note: Continuous conversation and its accumulated context. Not an OS thread.
 
@@ -134,6 +148,7 @@ terms:
     ja: Token
     fr: Token
     ko: Token
+    es: Token
     keep_english: true
     note: Unit used to measure text processed by the model.
 
@@ -143,6 +158,7 @@ terms:
     ja: ツール
     fr: Outil
     ko: 도구
+    es: Herramienta
     keep_english: false
     note: Callable capability such as read file, run command, or search.
 
@@ -152,6 +168,7 @@ terms:
     ja: 作業ツリー
     fr: Arbre de travail
     ko: 작업 트리
+    es: Árbol de trabajo
     keep_english: false
     note: Isolated working directory for parallel experiments (git worktree).
 
@@ -161,6 +178,7 @@ terms:
     ja: AGENTS.md
     fr: AGENTS.md
     ko: AGENTS.md
+    es: AGENTS.md
     keep_english: true
     note: Project instruction file name. Never translate.
 
@@ -170,6 +188,7 @@ terms:
     ja: スレッド / セッション
     fr: Fil / session
     ko: 스레드 / 세션
+    es: Hilo / sesión
     keep_english: false
     note: Beginner-facing alias for thread when explaining conversation continuity.
 
@@ -179,6 +198,7 @@ terms:
     ja: Cloud 環境
     fr: Environnement Cloud
     ko: Cloud 환경
+    es: Entorno Cloud
     keep_english: false
     note: Remote runner configuration for cloud tasks.
 
@@ -188,6 +208,7 @@ terms:
     ja: Profile
     fr: Profile
     ko: Profile
+    es: Profile
     keep_english: true
     note: Named configuration bundle in config.toml. Keep as product term.
 
@@ -197,6 +218,7 @@ terms:
     ja: Subagent
     fr: Subagent
     ko: Subagent
+    es: Subagent
     keep_english: true
     note: Nested agent run delegated from a parent task.
 
@@ -206,6 +228,7 @@ terms:
     ja: 検証
     fr: Vérification
     ko: 검증
+    es: Verificación
     keep_english: false
     note: Checking that artifacts and changes meet acceptance criteria.
 
@@ -215,6 +238,7 @@ terms:
     ja: 成果物
     fr: Artefact / livrable
     ko: 산출물
+    es: Artefacto / entregable
     keep_english: false
     note: Generated output such as files, docs, or build results.
 
@@ -224,6 +248,7 @@ terms:
     ja: 権限
     fr: Permission
     ko: 권한
+    es: Permiso
     keep_english: false
     note: What Codex is allowed to do (filesystem, network, approvals).
 
@@ -233,6 +258,7 @@ terms:
     ja: 推論
     fr: Raisonnement
     ko: 추론
+    es: Razonamiento
     keep_english: false
     note: Model deliberation effort / reasoning mode.
 
@@ -242,6 +268,7 @@ terms:
     ja: 非対話モード
     fr: Mode non interactif
     ko: 비대화형 모드
+    es: Modo no interactivo
     keep_english: false
     note: codex exec and scripted runs without a live chat UI.
 
@@ -251,6 +278,7 @@ terms:
     ja: 対話モード
     fr: Mode interactif
     ko: 대화형 모드
+    es: Modo interactivo
     keep_english: false
     note: Live chat / TUI session with the user.
 
@@ -260,6 +288,7 @@ terms:
     ja: 引き継ぎ
     fr: Passation
     ko: 인수인계
+    es: Traspaso
     keep_english: false
     note: Passing context so another session or person can resume work.
 
@@ -269,5 +298,6 @@ terms:
     ja: 軌道修正 / 誘導
     fr: Pilotage / recentrage
     ko: 궤도 수정 / 유도
+    es: Reorientación / guía
     keep_english: false
     note: Redirecting an in-progress agent run without restarting from scratch.

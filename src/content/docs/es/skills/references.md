@@ -1,22 +1,22 @@
 ---
-title: references/ directory
-description: Organize long reference docs in a Skill for progressive disclosure.
+title: Directorio references/
+description: Organiza documentación de referencia larga en un Skill para divulgación progresiva.
 locale: es
-source_locale: en
-source_revision: 9e8387d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`references/` holds long material you do not need to expand every time—so the main flow stays short and clear.
+`references/` encaja con material largo que no necesitas expandir cada vez, para que el flujo principal no quede largo y confuso.
 
-It is not just "extra files"; it is material that is **not always needed immediately but matters at a specific step**, loaded when needed.
+No es solo «meter unos documentos más»: es guardar aparte lo que **no hay que leer siempre de inmediato, pero sí es útil en un paso concreto**, y abrirlo solo cuando haga falta.
 
-# references/ directory
+# Directorio references/
 
-When `SKILL.md` grows too long, move detailed standards, API notes, and checklists to `references/` and reference them from steps as needed.
+Cuando el cuerpo de `SKILL.md` se alarga demasiado, mueve normas detalladas, APIs y listas de comprobación a `references/`, y cítalos bajo demanda en los pasos.
 
-## Example
+## Ejemplo
 
 ```text
 my-skill/
@@ -26,63 +26,63 @@ my-skill/
     └── api-contracts.md
 ```
 
-In `SKILL.md`:
+En `SKILL.md` escribe:
 
 ```md
-When reviewing code style, read references/style-guide.md and check against its rules.
+Al revisar el estilo del código, lee references/style-guide.md y comprueba según esas reglas.
 ```
 
-## What it does
+## Qué hace
 
-- `SKILL.md` owns the main line
-- `references/` owns "open when needed" material
+- `SKILL.md` lleva el flujo principal
+- `references/` lleva el «material que se abre cuando hace falta»
 
-Or simply:
+También puedes pensarlo así:
 
-- `SKILL.md` is the work instruction
-- `references/` is the reference shelf
+- `SKILL.md` es la instrucción de trabajo
+- `references/` es el armario de materiales
 
-Readers are not buried in background on first read; details are there when needed.
+Así, al leer el Skill no te aplastan de entrada grandes bloques de contexto, y cuando necesitas detalle tienes base.
 
-## When to split out references/
+## Cuándo merece la pena sacar `references/`
 
-Consider splitting when `SKILL.md` has:
+Si en `SKILL.md` empiezan a pasar estas cosas, considera separar:
 
-- A large standards block eating space every time
-- Multiple reference topics mixed together
-- Background breaking the main flow so first read loses the thread
+- Un bloque largo de normas ocupa espacio cada vez
+- Hay varios materiales de temas distintos mezclados
+- El flujo principal queda interrumpido por contexto de fondo y cuesta pillar la línea en la primera lectura
 
-Your first Skill does not need `references/`.  
-Common order: **get it working, split when content actually grows.**
+En el primer Skill no hace falta tener `references/`.  
+El orden habitual es **hacerlo funcionar primero y separarlo cuando el contenido de verdad se alargue**.
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. references/ is not just copying content elsewhere
+### 1. `references/` no es solo copiar un poco de contenido fuera
 
-Its job is keeping the main flow short, clear, and runnable first.
+Su papel más importante es mantener el flujo principal corto, claro y ejecutable.
 
-### 2. More reference files is not always better
+### 2. Más material de referencia no siempre es mejor
 
-Dumping everything into `references/` just moves clutter across files.
+Si metes de todo en `references/`, solo mudas el desorden de un archivo a muchos.
 
-### 3. With references/, SKILL.md can be very thin
+### 3. Con `references/`, `SKILL.md` puede ser muy escueto
 
-The main process should still live in `SKILL.md` so first-time readers know how to execute.
+El flujo principal debe seguir en `SKILL.md`; si no, la primera lectura no deja claro cómo ejecutar.
 
-## Principles
+## Principios
 
-- Main flow stays in `SKILL.md`; references load on demand
-- One file, one topic—easier maintenance
-- Avoid repeating SKILL.md steps inside references
+- El flujo principal queda en `SKILL.md`; el material de referencia se carga bajo demanda
+- Un archivo, un tema, para facilitar el mantenimiento
+- Evita repetir en references los pasos que ya están en SKILL.md
 
-## What belongs in references/
+## Qué poner en `references/`
 
-If content answers "**what rules apply**," it usually fits `references/`; if it answers "**what step comes next**," keep it in the main flow.
+Si un bloque responde a «**según qué reglas**», suele ir mejor en `references/`; si responde a «**qué paso va primero**», debe quedarse en el flujo principal.
 
-`references/` shortens the main flow and expands detail when needed.
+`references/` sirve para acortar el flujo principal y desplegar el detalle solo cuando haga falta.
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime explicitly uses on-demand reads of skill body and related material; this page describes stable documentation organization for `references/`.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** El runtime actual de Codex usa de forma explícita la lectura bajo demanda del cuerpo del Skill y del material relacionado; la explicación de `references/` en esta página es un principio estable de organización documental.  
+**Última verificación:** 2026-07-26

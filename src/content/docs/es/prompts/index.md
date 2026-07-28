@@ -1,27 +1,27 @@
 ---
 title: Prompts
-description: Learn how to state tasks, context, inputs, constraints, and acceptance criteria clearly.
+description: Aprende a formular con claridad la tarea, el contexto, las entradas, las restricciones y los criterios de aceptación.
 locale: es
-source_locale: en
-source_revision: dcd0d82
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 # Prompts
 
-The prompts module focuses on how to express tasks clearly so Codex knows the goal, context, boundaries, and definition of done.
+El módulo de Prompts se centra en cómo expresar la tarea con claridad para que Codex conozca el objetivo, el contexto, los límites y la definición de terminado.
 
-## Recommended order
+## Orden recomendado
 
-1. [Prompt basics](/prompts/basics/)
-2. [Ask for a plan first](/prompts/ask-for-a-plan/)
-3. [Task anatomy](/prompts/task-anatomy/)
-4. [Goals and context](/prompts/goals-and-context/)
-5. [Constraints and boundaries](/prompts/constraints-and-boundaries/)
-6. [Define done](/prompts/define-done/)
-7. [Prompting with images](/prompts/prompting-with-images/)
-8. [Long-running tasks](/prompts/long-running-tasks/)
-9. [Prompt debugging](/prompts/prompt-debugging/)
+1. [Fundamentos de Prompts](/prompts/basics/)
+2. [Pedir un plan primero](/prompts/ask-for-a-plan/)
+3. [Anatomía de una tarea](/prompts/task-anatomy/)
+4. [Objetivos y contexto](/prompts/goals-and-context/)
+5. [Restricciones y límites](/prompts/constraints-and-boundaries/)
+6. [Definir el terminado](/prompts/define-done/)
+7. [Prompts con imágenes](/prompts/prompting-with-images/)
+8. [Prompts para tareas largas](/prompts/long-running-tasks/)
+9. [Depuración de Prompts](/prompts/prompt-debugging/)
 10. [Anti-patterns](/prompts/anti-patterns/)
-11. Use [prompt templates](/prompts/templates/) for common task types
+11. Usa las [plantillas de Prompts](/prompts/templates/) para tareas habituales

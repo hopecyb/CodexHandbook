@@ -1,50 +1,50 @@
 ---
 title: Hooks
-description: Add checks, logs, and blocks at fixed execution points—when to block vs log.
+description: Añade comprobaciones, logs y bloqueos en nodos fijos de ejecución; cuándo bloquear y cuándo solo registrar.
 locale: es
-source_locale: en
-source_revision: 38cc806
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A Hook automatically inserts a check or log at a fixed moment.
+Un Hook inserta automáticamente una comprobación o un registro en un momento fijo.
 
-It handles checks, logging, and interception at process nodes—not defining how the task itself should run.
+Se ocupa de comprobar, registrar e interceptar en nodos del flujo; no define cómo se hace la tarea en sí.
 
-## Contents
+## Contenido
 
-This section mainly answers three questions:
+Este grupo cubre sobre todo 3 preguntas:
 
-- When should I trigger a Hook?
-- Am I trying to prevent problems or only record them?
-- How do I start Hook configuration in a low-risk way?
+- En qué momento debo disparar el Hook
+- ¿Quiero impedir que ocurra el problema, o solo registrarlo?
+- En la primera configuración, cómo empezar con bajo riesgo
 
-## Reading order
+## Orden de lectura
 
-1. [Hooks overview](/skills/hooks/hooks-overview/): Separate Hook from Skill and MCP first
-2. [Hook event types](/skills/hooks/hook-event-types/): Know whether to attach before, after, or at session start/end
-3. [Hook configuration examples](/skills/hooks/hooks-examples/): Three common patterns—log only / block first / light input check
+1. [Descripción general de Hooks](/skills/hooks/hooks-overview/): primero distingue Hook de Skill y MCP
+2. [Tipos de eventos Hook](/skills/hooks/hook-event-types/): saber si colgarlo delante, detrás, o al inicio/fin de sesión
+3. [Ejemplos de configuración de Hooks](/skills/hooks/hooks-examples/): tres patrones habituales — solo registrar / bloquear primero / comprobación ligera de entrada
 
-## Configuration order
+## Orden de configuración
 
-Do not start with the strictest block policy. A better order:
+No conviene empezar con la política de bloqueo más estricta. Un orden más adecuado:
 
-1. `log` first
-2. Then `warn`
-3. Then `block`
+1. Primero `log`
+2. Luego `warn`
+3. Luego `block`
 
-That makes it easier to verify:
+Así es más fácil verificar antes:
 
-- Events are wired correctly
-- False positives are acceptable
-- Performance does not slow daily use
+- Si el evento está bien colgado
+- Si hay muchos falsos positivos
+- Si el rendimiento ralentiza el uso diario
 
-Think of a Hook as a small gate on a process node—for check, log, or block.
+Un Hook se puede ver como una pequeña compuerta en un nodo del flujo, para comprobar, registrar o interceptar.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Hook support surface, event model, and configuration entry points depend heavily on client version; as of 2026-07-26 official public material is insufficient to stabilize this section—marked `outdated`.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** CLI / App (según versión)  
+**Nota de revisión:** El alcance de soporte, el modelo de eventos y la entrada de configuración de Hooks dependen mucho de la versión del cliente; a 2026-07-26, el material público oficial no basta para validar de forma estable este grupo, por ahora marcado como `outdated`.  
+**Última verificación:** 2026-07-26

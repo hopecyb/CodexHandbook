@@ -1,83 +1,83 @@
 ---
-title: Review before merge
-description: Structured diff and risk review with Codex before merge—clear human–machine roles.
+title: Revisión antes de fusionar
+description: Antes del merge, usa Codex para una revisión estructurada del diff y de riesgos — con división clara humano/máquina.
 locale: es
-source_locale: en
-source_revision: e8e66da
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Review before merge** puts [quality and verification](/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not replace human merge decisions.
+**Revisión antes de fusionar** lleva [Calidad y verificación](/guide/quality/) al flujo de Git: antes de fusionar el PR, Codex comprueba que diff, tests, seguridad y especificación coincidan. Un comentario automático no sustituye la fusión automática.
 
-## What's covered
+## Enfoque de esta página
 
-- Local review vs Cloud/CI review roles
-- What dimensions review prompts should cover
-- When human final sign-off is required
+- División de trabajo entre revisión local y revisión Cloud/CI
+- Qué dimensiones debe cubrir el prompt de revisión
+- Cuándo hace falta la firma final humana
 
-## Minimum viable approach
+## Práctica mínima viable
 
-**Local (author self-check)**
+**Local (autoinspección del autor)**
 
 ```text
-Compare current branch diff to main (do not change code yet):
-1. Is it outside issue scope?
-2. Obvious security risks (secrets, injection, permissions)?
-3. Missing tests or docs?
-Output a checklist with P0/P1 labels.
+Compara el diff de la rama actual con main (no cambies código todavía):
+1. ¿Se sale del alcance del issue?
+2. ¿Hay riesgos evidentes de seguridad (secretos, inyección, permisos)?
+3. ¿Faltan tests o documentación?
+Devuelve un checklist con P0/P1.
 ```
 
-**CI (team gate)**
+**CI (puerta del equipo)**
 
-- Fixed prompt version + read-only token
-- Results in PR comment or check run
-- See [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Versión fija del prompt + token de solo lectura
+- Resultado en comentario de PR o check run
+- Ver [Automatización de code review](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## Recommended review dimensions
+## Dimensiones de revisión recomendadas
 
-| Dimension | Focus |
+| Dimensión | Qué mirar |
 |---|---|
-| Correctness | Logic, edge cases, error handling |
-| Tests | Coverage for new behavior |
-| Security | Secrets, injection, dependency vulnerability signals |
-| Maintainability | Naming, duplication, public API |
-| Spec | Alignment with issue/spec doc |
+| Corrección | Lógica, bordes, manejo de errores |
+| Tests | Si el comportamiento nuevo tiene cobertura |
+| Seguridad | Secretos, inyección, pistas de vulnerabilidades en dependencias |
+| Mantenibilidad | Nombres, duplicación, API pública |
+| Especificación | Coherencia con issue / documento de especificación |
 
-Pair with [Review diffs](/guide/quality/review-diffs/); high-risk items follow [Human approval patterns](/cases/workflows/human-approval-patterns/).
+Puede combinarse con [Revisar diffs](/guide/quality/review-diffs/); los ítems de alto riesgo pasan por [Patrones de aprobación humana](/cases/workflows/human-approval-patterns/).
 
-## Common mistakes
+## Errores frecuentes
 
-- Model only says "LGTM" with no specifics
-- Unsanitized full PR description pasted into CI prompt (injection risk)
-- Review passes but CI tests never ran
-- Auto-merge bot enabled with no branch protection
+- Dejar que el modelo diga solo «LGTM» sin base concreta
+- Pegar la descripción completa del PR sin sanitizar en el prompt de CI (riesgo de inyección)
+- Revisión aprobada pero sin ejecutar los tests de CI
+- Bot de fusión automática activo sin protección de ramas
 
-## Security boundaries
+## Límites de seguridad
 
-- Review uses read-only permissions; fixes belong in **new commits** triggered by humans
-- Do not log user PII or secrets in review logs
+- Revisión con permisos de solo lectura; las correcciones deben ir en un **commit nuevo** disparado por una persona
+- No registrar PII de usuarios ni secretos en logs de revisión
 
-## Acceptance checklist
+## Checklist de aceptación
 
-- [ ] Review output traces to specific files/lines
-- [ ] P0 issues block merge or are fixed
-- [ ] Aligned with team review checklist
-- [ ] Human maintainer has final say on disputed items
+- [ ] La salida de la revisión se puede rastrear hasta archivos/líneas concretas
+- [ ] Los P0 bloquean la fusión o ya están corregidos
+- [ ] Alineado con el checklist de review del equipo
+- [ ] Un maintainer humano decide los puntos en disputa
 
-## Related chapters
+## Capítulos relacionados
 
-- [Cloud code review](/guide/web-and-cloud/code-review/)
-- [Create pull requests](/guide/web-and-cloud/create-pull-requests/)
+- [Code review en Cloud](/guide/web-and-cloud/code-review/)
+- [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## References
+## Fuentes de referencia
 
-- KimYx0207 Review/PR chapters
-- codex.bozhouai.com Git/GitHub workflow material
+- Capítulos Review/PR de KimYx0207
+- Flujos Git/GitHub de codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public code review / pull request use cases, plus this handbook's verified quality, diff review, and Cloud chapters; this page confirms only stable principles for structured pre-merge review, read-only review, and human final sign-off.
+**Estado:** verified  
+**Productos aplicables:** CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los use cases públicos actuales de code review / pull request de OpenAI Developers, y con los capítulos ya verificados de calidad, revisión de diffs y Cloud. Esta página solo confirma el principio estable «revisión estructurada antes de fusionar, revisión en solo lectura y firma final humana».

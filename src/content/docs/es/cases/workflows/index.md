@@ -1,66 +1,66 @@
 ---
-title: Workflow methods
-description: Repeatable collaboration methods—not tied to a single product UI, emphasizing checkpoints and acceptance.
+title: Métodos de flujo de trabajo
+description: Métodos de colaboración repetibles — no atados a una sola interfaz de producto, con puntos de control y criterios de aceptación.
 locale: es
-source_locale: en
-source_revision: 89115b8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-[Prompts](/prompts/) teach you how to **say** things; workflows teach you how to **organize a whole task**. Methods in this chapter apply to App, CLI, IDE, and Cloud.
+Los [prompts](/prompts/) enseñan **cómo formular**; los flujos de trabajo enseñan **cómo organizar toda una tarea**. Los métodos de este capítulo aplican a App, CLI, IDE y Cloud.
 
-## Why workflows matter
+## Por qué hacen falta flujos de trabajo
 
-External tutorials often tell a "one conversation solves it" story; real projects more often look like:
+En tutoriales externos suele narrarse «una sola conversación basta»; en proyectos reales es más frecuente:
 
 ```text
-Explore → Plan → Execute → Verify → (possibly) handoff or automation
+Explorar → Planificar → Ejecutar → Verificar → (posible) traspaso o automatización
 ```
 
-Without checkpoints, you risk: editing the wrong directory, skipping tests, mistaken merges, losing conclusions when context runs out.
+Sin puntos de control es fácil: tocar el directorio equivocado, no ejecutar tests, fusionar por error o perder conclusiones cuando se agota el contexto.
 
-## Core workflows
+## Flujos de trabajo principales
 
-| Workflow | What it solves |
+| Flujo de trabajo | Qué problema resuelve |
 |---|---|
-| [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/) | General main path; fits most tasks |
-| [Brainstorm before building](/cases/workflows/brainstorm-before-building/) | Diverge and converge when approach is unclear |
-| [Specification-driven work](/cases/workflows/specification-driven-work/) | Write acceptance spec before implementation |
-| [Test-driven work](/cases/workflows/test-driven-work/) | Tests first drive implementation |
-| [Human approval patterns](/cases/workflows/human-approval-patterns/) | When to stop, approve, or reject |
-| [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/) | Avoid "guess and patch" |
-| [Review before merge](/cases/workflows/review-before-merge/) | Structured review before PR merge |
-| [Research with sources](/cases/workflows/research-with-sources/) | Search, compare, and source verification |
-| [Artifact-first work](/cases/workflows/artifact-first-work/) | Agree on deliverables first, then derive steps |
-| [Multi-agent coordination](/cases/workflows/multi-agent-coordination/) | Parallel work and division of labor |
-| [Long-running task management](/cases/workflows/long-running-task-management/) | Cross-session checkpoints and exit conditions |
-| [Failure recovery](/cases/workflows/failure-recovery/) | Roll back when off track or tests go red |
-| [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Write repeated flows as Skills |
+| [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/) | Cadena principal genérica, adecuada para la mayoría de tareas |
+| [Lluvia de ideas antes de construir](/cases/workflows/brainstorm-before-building/) | Divergir y converger cuando la solución aún no está clara |
+| [Trabajo impulsado por especificación](/cases/workflows/specification-driven-work/) | Escribir una especificación aceptable antes de implementar |
+| [Trabajo impulsado por tests](/cases/workflows/test-driven-work/) | Dejar que los tests impulsen la implementación |
+| [Patrones de aprobación humana](/cases/workflows/human-approval-patterns/) | Cuándo pausar, cuándo aprobar, cuándo rechazar |
+| [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/) | Evitar «arreglar a ciegas» |
+| [Revisión antes de fusionar](/cases/workflows/review-before-merge/) | Revisión estructurada del PR antes de fusionar |
+| [Investigación con fuentes](/cases/workflows/research-with-sources/) | Búsqueda, comparación y verificación de fuentes |
+| [Trabajo orientado a artefactos](/cases/workflows/artifact-first-work/) | Acordar el entregable primero y deducir los pasos |
+| [Coordinación multi-Agent](/cases/workflows/multi-agent-coordination/) | Paralelismo y división del trabajo |
+| [Gestión de tareas largas](/cases/workflows/long-running-task-management/) | Puntos de control entre sesiones y condiciones de salida |
+| [Recuperación ante fallos](/cases/workflows/failure-recovery/) | Retroceder cuando el trabajo se desvía o los tests fallan |
+| [Convertir un flujo en Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Escribir procesos repetidos como Skill |
 
-## Other chapters related to workflows
+## Otros capítulos relacionados con flujos
 
-- Quality: [Core capabilities · Quality and verification](/guide/quality/)
-- Agent: [Planning](/guide/agent-work/planning/), [Subagents](/guide/agent-work/subagents/)
-- Capture: [Skills](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- Cases: [Use cases library](/cases/use-cases/)
+- Calidad: [Capacidades clave · Calidad y verificación](/guide/quality/)
+- Agent: [Planificación](/guide/agent-work/planning/), [Subagents](/guide/agent-work/subagents/)
+- Captura: [Skill](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+- Casos: [Biblioteca de escenarios y casos](/cases/use-cases/)
 
-## Design principles
+## Principios de diseño
 
-1. **Each phase has an artifact**: plan, diff, test report, decision record
-2. **Default to small steps**: reviewable increments beat one huge change
-3. **Failures recoverable**: know how to undo and fork a thread to continue
-4. **Capture when possible**: third repetition of a flow → Skill or template
+1. **Cada fase tiene un artefacto:** plan, diff, informe de tests, registro de decisiones
+2. **Pasos pequeños por defecto:** un incremento revisable supera un cambio enorme de una sola vez
+3. **Fallos recuperables:** saber cómo deshacer y cómo hacer fork del hilo para continuar
+4. **Capturar lo repetible:** la tercera repetición de un proceso se escribe como Skill o plantilla
 
-## Reference sources
+## Fuentes de referencia
 
-- freestylefly/CodexGuide workflows and playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com fourth article standard workflows
+- Flujos y playbooks de freestylefly/CodexGuide
+- `14-workflows.md` de stormzhang
+- Flujo estándar del artículo 4 de codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified prompts, quality, agent work, and Skills chapters in this handbook; this page only provides method navigation and phase checkpoint guidance—not treating specific client flows as long-term contracts.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los capítulos ya verificados de prompts, calidad, trabajo con Agents y Skills de este manual. Esta página solo navega métodos y puntos de control por fase; no convierte flujos concretos de cliente en un contrato a largo plazo.

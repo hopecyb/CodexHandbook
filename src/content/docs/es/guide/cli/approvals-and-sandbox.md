@@ -1,120 +1,120 @@
 ---
-title: Approvals and sandbox
-description: CLI approval policy for shell, disk, and network—and how sandbox limits Agent behavior.
+title: Aprobación y Sandbox
+description: Estrategia de Aprobación para shell, escritura en disco y red en la CLI, y cómo el Sandbox limita el comportamiento del Agent.
 locale: es
-source_locale: en
-source_revision: 4f30cb0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In CLI, Agents can **read files, write files, run shell, and possibly use the network**—approvals and sandbox are the safety valve between you and automation. Misconfiguration means constant prompts in interactive use—or runaway risk in unattended CI.
+En la CLI el Agent puede **leer archivos, escribir archivos, ejecutar shell y posiblemente conectar a la red**: Aprobación y Sandbox son la válvula de seguridad entre tú y la automatización. Una mala configuración provoca ventanas frecuentes en modo interactivo, o riesgo descontrolado en CI sin supervisión.
 
-## What's covered
+## Contenido de esta página
 
-- What approval prompts are asking and how to choose
-- How sandbox tiers affect files and network
-- Aligning team policy across CLI and `AGENTS.md`
+- Qué pregunta el diálogo de Aprobación y cómo elegir
+- Cómo el nivel de Sandbox afecta a archivos y red
+- Cómo alinear la estrategia del equipo entre CLI y `AGENTS.md`
 
-## What approvals and sandbox control
+## Qué controlan Aprobación y Sandbox por separado
 
-Remember:
+Puedes recordarlo así:
 
-- **Approval** asks: "Should this step continue?"
-- **Sandbox** limits: "Even if it continues, what can it touch?"
+- **Aprobación** te pregunta: «¿sigo con este paso?»
+- **Sandbox** lo limita: «aunque siga, ¿hasta dónde puede llegar?»
 
-Together they shape whether CLI feels conservative or overly permissive.
+Juntos influyen en si el uso de la CLI es más conservador o si los límites se abren demasiado.
 
-Concept basics: [permissions and approvals](/guide/foundations/permissions-and-approvals/) · [sandbox and network](/guide/foundations/sandbox-and-network/)
+Base conceptual: [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/) · [Sandbox y red](/guide/foundations/sandbox-and-network/)
 
-## When approvals fire
+## Cuándo ocurre la Aprobación
 
-Typical triggers (product-dependent):
+Puntos típicos de disparo (el producto concreto manda):
 
-| Operation | Risk | Default tendency |
+| Tipo de operación | Riesgo | Tendencia por defecto |
 |---|---|---|
-| Write inside project | Medium | Often needs confirmation |
-| Write outside project | High | Reject or strict confirm |
-| Run shell | High | Confirm command contents |
-| Network / curl | High | Confirm target and data |
-| MCP tool call | Depends on server | Per-tool granularity |
+| Escribir archivos dentro del proyecto | Medio | Suele pedir confirmación |
+| Escribir rutas fuera del proyecto | Alto | Rechazar o confirmar con rigor |
+| Ejecutar shell | Alto | Confirmar el contenido del comando |
+| Red / curl | Alto | Confirmar destino y datos |
+| Llamada a herramienta MCP | Según el servidor | Por granularidad de herramienta |
 
-In interactive mode you may get **once / session / deny** (names vary by version). **Do not choose "always allow" for commands you do not understand.**
+En modo interactivo tienes opciones como **permitir una vez / permitir en la sesión / rechazar** (los nombres varían según la versión). **No pulses «permitir siempre» en un comando que no entiendas.**
 
-## Sandbox tiers (conceptual)
+## Niveles de Sandbox (concepto)
 
-| Intent | Good for |
+| Intención del nivel | Encaja con |
 |---|---|
-| Strict / read-only | Untrusted code review, read-only CI |
-| Standard | Daily dev repos |
-| Relaxed | Personal trusted environments per company policy |
+| Estricto / solo lectura | Revisar código no confiable, revisión de solo lectura en CI |
+| Estándar | Repositorio de desarrollo diario |
+| Relajado | Entorno personal de confianza, y conforme a la política de la empresa |
 
-Sandbox may limit:
+El Sandbox puede limitar:
 
-- Writable directory scope
-- Access to other projects under `$HOME`
-- Subprocess and network capability
+- El alcance de directorios escribibles
+- Si puede acceder a otros proyectos de `$HOME`
+- Capacidades de subproceso y red
 
-Configuration: [CLI configuration](/guide/cli/configuration/) · matrix: [permission matrix](/guide/reference/permission-matrix/)
+Entrada de configuración: [Configuración de la CLI](/guide/cli/configuration/) · Matriz: [Matriz de Permisos](/guide/reference/permission-matrix/)
 
-## Interactive vs non-interactive
+## Interactivo frente a no interactivo
 
-| Mode | Approval behavior |
+| Modo | Característica de Aprobación |
 |---|---|
-| Interactive `codex` | Human present; judge each request |
-| Non-interactive `exec` | No human; tighten sandbox + fixed prompt upfront |
+| Interactivo `codex` | Estás presente; puedes juzgar uno a uno |
+| No interactivo `exec` | No estás; hay que apretar el Sandbox de antemano + Prompt fijo |
 
-CI must read: [non-interactive mode](/guide/cli/non-interactive-mode/) · [human approval patterns](/cases/workflows/human-approval-patterns/)
+Lectura obligatoria en CI: [Modo no interactivo](/guide/cli/non-interactive-mode/) · [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/)
 
-Recommended CI principles:
+Principios recomendados en CI:
 
-- Read-only or limited write paths
-- Forbid arbitrary `curl` uploading repo contents
-- Non-zero exit on failure; retain logs
+- Solo lectura o rutas de escritura limitadas
+- Prohibir `curl` arbitrario que suba contenido del repo
+- Fallo = salida distinta de cero; conservar logs
 
-## Allow/deny rules
+## Relación con reglas allow/deny
 
-Projects can declare expected commands in [allow and deny patterns](/guide/customization/rules/allow-and-deny-patterns/). **Rules must match real product behavior** or Agents stay blocked—or become too open.
+El proyecto puede declarar «comandos previsibles» en [Reglas de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/). **Las reglas deben coincidir con el comportamiento real del producto**; si no, el Agent seguirá bloqueado o, al contrario, demasiado amplio.
 
-## Common mistakes
+## Errores frecuentes
 
-- Global "auto-approve all shell" then working on customer repos
-- Approving `sudo`, repo deletion, or `~/.ssh` changes by mistake
-- CI using the same relaxed config as your dev machine
-- Assuming sandbox replaces code review—it blocks mistakes, not malicious prompt injection
+- En la máquina local, «aprobar automáticamente todo shell» y luego trabajar en el repo del cliente
+- Aprobar por error comandos tipo `sudo`, borrar la base de datos o tocar `~/.ssh`
+- Usar en CI la misma configuración relajada que en el portátil de desarrollo
+- Creer que el Sandbox sustituye la revisión de código — evita operaciones erróneas, no la inyección de Prompts maliciosos
 
-## Common misconceptions
+## Malentendidos frecuentes
 
-### Many prompts does not always mean misconfiguration
+### Muchas ventanas no significan que la configuración esté mal
 
-While learning CLI, more approvals can be safer—they force you to read each step.
+Si estás aprendiendo la CLI, más Aprobación suele ser más seguro: te obliga a entender qué hace cada paso.
 
-The real danger is approving without reading—not being asked too often.
+Lo que de verdad hay que vigilar es empezar a pulsar «sí» sin leer el contenido, no que pregunte demasiado.
 
-### Relaxing once does not make future runs safe
+### Relajar una vez no significa que luego sea siempre seguro
 
-Do not carry a wide-open profile from one convenient task into other repos and tasks.
+Algunos, por comodidad la primera vez, dejan las reglas muy amplias y luego las reutilizan en otros repos y otras Tareas.
 
-Security boundaries should follow task risk—not last time's convenience.
+El problema: el límite de seguridad debe seguir el riesgo de la Tarea; no debe darse por bueno esta vez solo porque la anterior fue cómoda.
 
-## Acceptance checklist
+## Lista de verificación
 
-- [ ] Can explain what the latest approval request would do
-- [ ] Know where to change sandbox tier and restart session
-- [ ] Team docs state forbidden commands and what may auto-pass
+- [ ] Puedes explicar qué hacía la última solicitud de Aprobación
+- [ ] Sabes dónde cambiar el nivel de Sandbox y reiniciar la sesión
+- [ ] La documentación del equipo indica qué comandos están prohibidos y cuáles pueden pasar automáticamente de forma previsible
 
-Starting conservative on CLI approvals and sandbox is usually steadier. Widen only when you know what you are opening.
+Al principio, dejar Aprobación y Sandbox de la CLI un poco conservadores suele ser más estable. Cuando sepas de verdad qué estás abriendo, relajar poco a poco aún llega a tiempo.
 
-## References
+## Fuentes de referencia
 
-- OpenAI Codex CLI security and sandbox docs
+- Documentación de seguridad y Sandbox de OpenAI Codex CLI
 - stormzhang `17-permissions.md`, `19-security.md`
 - KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide sandbox approval topics
+- freestylefly/CodexGuide — tema Sandbox y Aprobación
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI  
-**Verification basis:** OpenAI Help Center CLI getting-started material still distinguishes approval modes for read/write, command execution, and sandbox/network boundaries; this page stays conceptual about interactive vs unattended risk without fixing button labels or mode names as facts.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** CLI  
+**Base de verificación:** La documentación de introducción a la CLI de OpenAI Help Center sigue distinguiendo lectura/escritura, ejecución de comandos y límites de Sandbox/red según approval modes; esta página se centra en los conceptos de Aprobación y Sandbox y en las diferencias de riesgo entre escenarios interactivos y sin supervisión, sin fijar como hechos textos de botones o nombres de modo concretos.  
+**Última verificación:** 2026-07-26

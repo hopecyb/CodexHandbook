@@ -1,22 +1,22 @@
 ---
-title: scripts/ and tests
-description: Add deterministic scripts to a Skill and verify their behavior.
+title: scripts/ y pruebas
+description: Añade scripts deterministas a un Skill y verifica su comportamiento.
 locale: es
-source_locale: en
-source_revision: c4f1381
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Early on, it is tempting to put everything in `SKILL.md`. That works for simple flows, but once a step must run **stably, repeatedly, and verifiably**, scripts beat prose.
+Al empezar un Skill, lo habitual es meterlo todo en `SKILL.md`. En flujos simples vale; pero cuando un paso debe ejecutarse de forma **estable, repetible y verificable**, un script es más fiable que solo prosa.
 
-Hand fixed actions to scripts; leave judgment and collaboration to the Skill.
+Las acciones fijas van al script; el juicio y el flujo de colaboración se quedan en el Skill.
 
-# scripts/ and tests
+# scripts/ y pruebas
 
-When a step must run deterministically (run tests, generate diff, validate format), provide a script under `scripts/` and document when to call it in `SKILL.md`.
+Cuando un paso debe ejecutarse de forma determinista (correr pruebas, generar un diff, validar formato), ofrece el script en `scripts/` y explica en `SKILL.md` cuándo invocarlo.
 
-## Example
+## Ejemplo
 
 ```text
 my-skill/
@@ -25,61 +25,61 @@ my-skill/
     └── run-checks.sh
 ```
 
-## When to consider scripts/
+## Cuándo considerar `scripts/`
 
-If a step matches any of these, scripts are a strong choice:
+Si un paso cumple cualquiera de estas, prioriza un script:
 
-- Should run exactly the same every time
-- Exit code itself carries meaning
-- Natural-language description would be verbose
-- You want reuse in CI or other tools later
+- Debe ejecutarse exactamente igual cada vez
+- El código de salida en sí tiene sentido
+- Describirlo en lenguaje natural sería muy verboso
+- Quieres reutilizarlo después en CI u otras herramientas
 
-Actions like "run checks," "generate diff," "validate format," and "export report on a fixed schedule" fit scripts well.
+Acciones como «correr comprobaciones», «generar diff», «validar formato» o «exportar un informe fijo» encajan en scripts.
 
-## Testing suggestions
+## Sugerencias de prueba
 
-- Run scripts manually in a practice repo; confirm exit codes and output
-- Trigger end-to-end via the Skill; confirm scripts are called as expected
-- Team scenario: verify scripts still work in CI or pre-commit
+- Ejecuta el script a mano en un repositorio de práctica y confirma código de salida y salida
+- Dispara el flujo de extremo a extremo con el Skill y comprueba que llama al script como se espera
+- En equipo: verifica en CI o pre-commit que el script sigue siendo usable
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. Scripts make Skills complex, so avoid them
+### 1. Con scripts el Skill se complica, así que mejor no
 
-If a script stabilizes a flaky step, the whole thing often gets simpler.
+Si el script fija un paso que antes era inestable, el conjunto suele volverse más simple.
 
-### 2. If a script runs locally, the Skill is fine
+### 2. Si el script corre en local, el Skill ya está bien
 
-Also check:
+También hay que mirar:
 
-- Whether the Skill triggers it correctly
-- Whether approval policy blocks it
-- Whether it still works in team environments or CI
+- Si el Skill lo dispara correctamente
+- Si la política de Aprobación lo bloquea
+- Si sigue funcionando en el entorno del equipo o en CI
 
-### 3. "Testing the Skill" means testing the script
+### 3. «Probar el Skill» es solo probar el script
 
-Not enough.
+No basta.
 
-Script tests one action;  
-Skill tests when to call, how to call, and whether output matches expectations.
+El script prueba una acción;  
+el Skill también debe probar «cuándo llamarlo, cómo llamarlo y si la salida cumple lo esperado».
 
-## Suggested verification order
+## Orden de verificación habitual
 
-When starting out:
+Al empezar, sigue este orden:
 
-1. Run the script alone
-2. Check exit code and output clarity
-3. Run full flow through the Skill once
-4. Test again in a realistic environment
+1. Ejecuta el script solo
+2. Comprueba que el código de salida y la salida sean claros
+3. Deja que el Skill ejecute una vez el flujo completo
+4. Prueba otra vez en un entorno más cercano a la realidad
 
-That separates "script is broken" from "Skill integration is wrong."
+Así separas «el script está roto» de «la integración del Skill es incorrecta».
 
-Do not rely on prose alone for actions that must repeat reliably. Get scripts working first, then confirm Skill invocation.
+Las acciones que pueden repetirse de forma estable no deben depender solo de prosa. Primero haz correr el script; luego confirma que la llamada del Skill está bien.
 
-Scripts inherit the current approval policy; see [command rules](/guide/customization/rules/command-rules/) and [Skill security](/skills/security/).
+Los scripts heredan la política de Aprobación actual; ver [Reglas de comandos](/guide/customization/rules/command-rules/) y [Seguridad de Skills](/skills/security/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime allows skills to work with scripts and deterministic commands; this page's principle—script stable actions, Skill constrains flow—matches current capability.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** El runtime actual de Codex permite que los Skills combinen scripts y comandos deterministas; esta página enfatiza el principio «acciones estables en script, el flujo lo sigue acotando el Skill», alineado con la capacidad actual.  
+**Última verificación:** 2026-07-26

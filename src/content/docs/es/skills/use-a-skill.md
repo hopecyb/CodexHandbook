@@ -1,93 +1,94 @@
 ---
-title: Use a Skill
-description: Explicit and implicit Skill triggers, and how to write a good description.
+title: Usar un Skill
+description: Activación explícita e implícita de Skills, y claves para escribir bien description.
 locale: es
-source_locale: en
-source_revision: 63ea4c8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A common early mistake is thinking "once installed, it just works." Using a Skill means having Codex follow a pre-written workflow.
+Un malentendido habitual al empezar es pensar: «una vez instalado, ya funciona solo». Usar un Skill es hacer que Codex siga un flujo de trabajo ya escrito.
 
-A Skill can be **named explicitly** or **chosen automatically** when the scene fits. Knowing both avoids debugging dead ends.
+Un Skill puede invocarse **por nombre explícito** o, en el escenario adecuado, ser **elegido automáticamente** por el modelo. Distinguir ambas formas de activación evita rodeos al depurar.
 
-# Use a Skill
+# Usar un Skill
 
-## Trigger modes
+## Formas de activación
 
-1. **Explicit**: In supported environments, call with `$skill-name` (name matches frontmatter `name`)
-2. **Implicit**: The model judges whether the task fits `description` semantically
+1. **Explícita**: en entornos compatibles, llama con `$skill-name` (coincide con el `name` del frontmatter)
+2. **Implícita**: el modelo decide por semántica de `description` si la tarea actual encaja
 
-## Telling the two apart
+## Cómo distinguirlas
 
-- **Explicit**: You directly say "use this Skill"
-- **Implicit**: You do not name it, but your task reads like its intended scenario
+- **Activación explícita**: dices «usa este Skill»
+- **Activación implícita**: no lo nombras, pero la descripción de la tarea se parece mucho a su escenario de uso
 
-When first trying Skills, prefer **explicit** triggers. That makes it easier to see:
+Al probar un Skill por primera vez, prioriza la **activación explícita**. Así es más fácil comprobar:
 
-- Whether the Skill was recognized
-- Whether behavior matches expectations
-- Whether name and description are correct
+- Si el Skill se reconoce
+- Si el comportamiento es el esperado
+- Si el nombre y la descripción están bien escritos
 
-## Examples
+## Ejemplo
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Por favor revisa mis cambios sin confirmar
 ```
 
-Or in natural language: "Review the diff the team way, focus on tests."
+O en lenguaje natural: «Revisa el diff según el hábito del equipo, prioriza las pruebas.»
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. I wrote a Skill, so it will always auto-trigger
+### 1. Si escribí el Skill, se activará solo
 
-Auto-trigger depends on a clear `description` and whether the task looks like its scenario.
+La activación automática depende de lo clara que sea `description` y de si la tarea actual se parece lo bastante a su escenario.
 
-### 2. Natural language and `$name` always behave the same
+### 2. Lenguaje natural y `$name` dan siempre el mismo resultado
 
-They do not.
+No necesariamente.
 
-`$name` is explicit—good for verification and forcing use. Natural language is convenient but the model may pick the wrong Skill or none at all.
+`$name` es más explícito: útil para verificar y forzar el uso. El lenguaje natural es más cómodo, pero a veces el modelo elige mal el Skill o no lo usa.
 
-### 3. If a Skill does not trigger, the Skill must be broken
+### 3. Si no se activa, el Skill está roto
 
-It might also be:
+También puede ser:
 
-- Wrong name
-- `description` too broad
-- Task wording missing trigger keywords
+- Nombre incorrecto
+- `description` demasiado genérica
+- La descripción de la tarea no acierta las palabras de activación
 
-When debugging, check not only "is the file there?" but "does it read like something that would be selected?"
+Al depurar, no mires solo «si el archivo existe»; mira también «si está escrito como una herramienta que merezca ser elegida».
 
-## Suggested test order
+## Orden de prueba habitual
 
-To get one clean run:
+Para comprobar una vez que funciona:
 
-1. Call explicitly with `$skill-name`
-2. Check output matches expectations
-3. Adjust `description`
-4. Test whether natural language triggers it
+1. Llama explícitamente con `$skill-name`
+2. Comprueba si la salida cumple lo esperado
+3. Ajusta `description`
+4. Prueba si el lenguaje natural lo activa
 
-That separates "Skill content is wrong" from "auto-trigger conditions are weak."
+Así separas «problema del Skill en sí» de «condiciones de activación automática mal escritas».
 
-## Writing a good description
+## Escribir bien description
 
-- State when to use and when not to use
-- Include keywords users might say (review, release, changelog)
-- Avoid vague "help the user write code"
-- Put core trigger scenarios **first** (Skill list has a character budget)
+- Deja claro «cuándo usarlo» y «cuándo no»
+- Incluye palabras clave que el usuario podría decir (review, release, changelog)
+- Evita frases vagas como «ayudar al usuario a escribir código»
+- Pon el escenario de activación principal **al principio** (la lista de Skills tiene presupuesto de caracteres)
 
-## Is the description clear enough?
+## ¿Está clara la description?
 
-A useful bar: after reading `description`, you know when to use it and when not to.
+Un criterio útil:  
+tras leer esa `description`, deberías saber «cuándo usarlo y cuándo no».
 
-If it still sounds like "does everything," it is probably too broad.
+Si tras leerla parece que «sirve para casi todo», suele ser demasiado genérica.
 
-More concepts: [Skills overview](/skills/overview/).
+Más conceptos: [Descripción general de Skills](/skills/overview/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still supports explicit skill references and automatic matching when appropriate; OpenAI Help "Skills in ChatGPT" also confirms Skills are used automatically when helpful. This page focuses on triggers and writing principles.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** El runtime actual de Codex sigue permitiendo referenciar Skills por nombre de forma explícita y hacer match automático cuando encaja; OpenAI Help «Skills in ChatGPT» también confirma que los Skills se usan automáticamente cuando ayudan. Esta página se centra en formas de activación y principios de redacción.  
+**Última verificación:** 2026-07-26

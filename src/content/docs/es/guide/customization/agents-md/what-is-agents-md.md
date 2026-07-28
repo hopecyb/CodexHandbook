@@ -1,138 +1,138 @@
 ---
-title: What Is AGENTS.md
-description: Project-level persistent instruction file—a "collaboration contract" for Codex, not an architecture encyclopedia.
+title: Qué es AGENTS.md
+description: Archivo de instrucciones persistentes a nivel de proyecto — el «contrato de colaboración» para Codex, no una enciclopedia de arquitectura.
 locale: es
-source_locale: en
-source_revision: 7e393ee
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-`AGENTS.md` is a **Markdown project instruction** file in the repo (or a subdirectory). Codex reads it when entering the project to align on coding style, test requirements, commit conventions, and no-go areas.
+`AGENTS.md` es un archivo de **instrucciones de proyecto en Markdown** en el repositorio (o en un subdirectorio). Codex lo lee al entrar en el proyecto para alinear estilo de código, requisitos de test, normas de commit y zonas prohibidas.
 
-Think of `AGENTS.md` as instructions for “how Codex should work with this project.”
+Puedes entender `AGENTS.md` como el manual de «cómo espera este proyecto que Codex colabore».
 
-It is not an advanced architecture document or a complete handbook for new human hires; it is project collaboration rules for Codex.
+No es documentación avanzada de arquitectura ni el manual completo para un empleado nuevo humano; son reglas de colaboración del proyecto para Codex.
 
-## One Core Concept
+## Un concepto central
 
-Treat it as a **condensed new-hire handbook**: only “how to work in this repo,” not company history.
+Trátalo como la **versión condensada del manual de onboarding de un colega nuevo**: solo escribe «cómo se trabaja en este repositorio», no la historia de la empresa.
 
-| Good fit for AGENTS.md | Poor fit |
+| Sí conviene en AGENTS.md | No conviene |
 |---|---|
-| How to run tests, lint, build | Full API docs (link to formal docs) |
-| Directory conventions, naming style | Thousands of lines of historical design decisions |
-| Prohibitions (e.g. do not change `main`, do not commit secrets) | Temporary needs that differ every task |
-| Commit messages, PR checklists | Personal preferences unrelated to code |
+| Cómo ejecutar tests, lint y build | Documentación completa de API (enlaza a la documentación formal) |
+| Convenciones de directorios y estilo de nombres | Miles de líneas de decisiones de diseño históricas |
+| Prohibiciones (p. ej. no tocar `main`, no committear secretos) | Requisitos temporales distintos en cada tarea |
+| Mensajes de commit, checklist de PR | Preferencias personales ajenas al código |
 
-## Minimum Viable Practice
+## Enfoque mínimo viable
 
-Create `AGENTS.md` at the repo root:
+Crea `AGENTS.md` en la raíz del repositorio:
 
 ```md
-# Project Instructions
+# Instrucciones del proyecto
 
-## Build and Test
-- Install: `pnpm install`
-- Test: `pnpm test` (must run after logic changes)
-- Type check: `pnpm typecheck`
+## Build y tests
+- Instalación: `pnpm install`
+- Tests: `pnpm test` (obligatorio tras cambiar lógica)
+- Comprobación de tipos: `pnpm typecheck`
 
-## Code Style
-- Use TypeScript strict mode
-- New components go in `src/components/`, filenames PascalCase
+## Estilo de código
+- Usa TypeScript en modo estricto
+- Componentes nuevos en `src/components/`, nombres de archivo en PascalCase
 
-## Prohibited
-- Do not modify `pnpm-lock.yaml` unless dependencies change
-- Do not commit `.env` or API keys
-- Do not run `git push` without confirmation
+## Prohibido
+- No modifiques `pnpm-lock.yaml` salvo cambios de dependencias
+- No committees `.env` ni API keys
+- No ejecutes `git push` sin confirmación
 
-## Definition of Done
-- Related tests pass
-- No new lint errors
-- Describe verification steps in the PR description
+## Definición de hecho
+- Tests relacionados en verde
+- Sin errores nuevos de lint
+- En la descripción del PR, explica los pasos de verificación
 ```
 
-After saving, in a new task write only **this task’s delta**, for example: “Fix login page layout on Safari; accept per AGENTS.md.”
+Tras guardar, en tareas nuevas solo escribe la **diferencia de esta vez**, por ejemplo: «Corrige el layout de la página de login en Safari; acepta según AGENTS.md.»
 
-## Common Misconceptions
+## Malentendidos habituales
 
-### 1. Do I have to repeat these rules manually every time?
+### 1. ¿Tengo que volver a decir estas reglas a mano cada vez?
 
-Usually not.  
-That is one reason `AGENTS.md` exists:
-put **stable project rules** there so you do not re-explain them every new task.
+Normalmente no.  
+Ese es precisamente uno de los sentidos de `AGENTS.md`:
+poner dentro las **reglas estables del proyecto** para no repetirlas al abrir cada tarea nueva.
 
-### 2. If I write it, will Codex always follow it 100%?
+### 2. ¿Escribirlo equivale a «Codex lo cumplirá al 100 %»?
 
-`AGENTS.md` matters, but it still works together with:
+`AGENTS.md` importa, pero sigue trabajando junto a:
 
-- Explicit requirements in this task
-- Product permissions and approval mechanisms
-- Sandbox, network, and team policy
+- Los requisitos explícitos de esta tarea
+- Los mecanismos de permisos y aprobación del producto
+- Sandbox, red y políticas de equipo
 
-More accurately, it helps alignment; it is not a universal enforcer.
+Más exactamente: ayuda a alinear, pero no es un forzador universal.
 
-### 3. If I am not a programmer, do I still need to care about this file?
+### 3. Si no programo, ¿también debo preocuparme por este archivo?
 
-You need the basic idea.  
-Even if you do not write code yourself, as long as you have Codex working on a project over time, `AGENTS.md` reduces repeated explanation and drift.
+Conviene entender el concepto básico.  
+Aunque no escribas código tú, si usas Codex de forma continua en un proyecto, `AGENTS.md` reduce repeticiones y desviaciones.
 
-## Where to Put It
+## Dónde colocarlo
 
-| Location | Scope |
+| Ubicación | Alcance |
 |---|---|
-| Repo root `AGENTS.md` | Default for the whole project |
-| Subdirectory `AGENTS.md` | That directory and subpaths (common in monorepos) |
-| User-level notes | Personal configuration or global preferences—do not mix with project instructions |
+| `AGENTS.md` en la raíz del repositorio | Aplica por defecto a todo el proyecto |
+| `AGENTS.md` en un subdirectorio | Ese directorio y sus subrutas (habitual en monorepos) |
+| Notas a nivel de usuario | Usa configuración personal o preferencias globales; no las mezcles con instrucciones de proyecto |
 
-Scope and conflict handling: [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/).
+Sobre alcance y conflictos: [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/).
 
-## Difference from Skills and Slash Commands
+## Diferencia con Skill y comandos slash
 
-| Mechanism | Essence | Typical use |
+| Mecanismo | Esencia | Uso típico |
 |---|---|---|
-| AGENTS.md | Persistent, passive project rules | Style, tests, no-go areas |
-| Skill | Reusable workflow package (`SKILL.md`) | Release checklist, specialized review flow |
-| Slash command | Shortcut you trigger actively | `/review`, one-off workflows |
+| AGENTS.md | Reglas de proyecto persistentes y pasivas | Estilo, tests, zonas prohibidas |
+| Skill | Paquete de flujo reutilizable (`SKILL.md`) | Checklist de release, flujos de revisión especializados |
+| Comandos slash | Atajos que disparas tú | `/review`, flujos de una sola vez |
 
-Use `AGENTS.md` for project rules; **repeatable, shareable step sets** fit better as a [Skill](/skills/overview/).
+Reglas de proyecto → `AGENTS.md`; **un conjunto de pasos repetible y compartible** encaja mejor como [Skill](/skills/overview/).
 
-## How to Decide Where to Write Something
+## Cómo decidir dónde escribir
 
-If unsure where a sentence belongs, use this rule:
+Si no estás seguro de dónde va una frase, usa esta regla:
 
-- **This rule holds long term**: better in `AGENTS.md`
-- **This is special for this task only**: in the current task prompt
-- **This is a reusable procedure**: consider a Skill
+- **La regla vale a largo plazo** → mejor en `AGENTS.md`
+- **Es un requisito especial de esta tarea** → en el prompt de la tarea actual
+- **Es un conjunto de pasos reutilizable** → considera un Skill
 
-For example:
+Por ejemplo:
 
-- “This repo validates with `pnpm test`” → `AGENTS.md`
-- “Only change the login page this time; do not touch registration” → current task
-- “Run the same check flow before every release” → better as a Skill
+- «Este repositorio valida siempre con `pnpm test`» → `AGENTS.md`
+- «Esta vez solo cambia la página de login; no toques el registro» → tarea actual
+- «Antes de cada release, ejecuta el mismo flujo de checks» → mejor como Skill
 
-## Common Mistakes
+## Errores habituales
 
-- File too long; the model only reads the first part—**put hard constraints in the first 30 lines**
-- Writing high-risk instructions like “always auto push,” conflicting with [Permissions and Approvals](/guide/foundations/permissions-and-approvals/)
-- Nobody on the team maintains it; docs disagree with real script commands
+- Archivo demasiado largo: el modelo solo lee bien la primera mitad — **pon las restricciones duras en las primeras 30 líneas**
+- Instrucciones de alto riesgo del tipo «siempre haz push automático», en conflicto con [permisos y aprobación](/guide/foundations/permissions-and-approvals/)
+- Nadie del equipo lo mantiene; el documento no coincide con los scripts reales
 
-## Security Boundaries
+## Límites de seguridad
 
-`AGENTS.md` **cannot replace** sandbox and approval. Even if you write “feel free to run any command,” the product may still require confirmation; team-managed policy can tighten further.
+`AGENTS.md` **no sustituye** Sandbox ni aprobación. Aunque escribas «puedes ejecutar cualquier comando», el producto puede seguir pidiendo confirmación; la política gestionada del equipo puede restringirlo aún más.
 
-`AGENTS.md` tells Codex how this project usually works—not what to do in this specific task.
+`AGENTS.md` le dice a Codex «cómo se suele trabajar en este proyecto», no te sustituye al describir qué hay que hacer en esta tarea concreta.
 
-## References
+## Referencias
 
-- OpenAI Codex project context documentation
+- Explicación de contexto de proyecto de OpenAI Codex
 - freestylefly/CodexGuide: `docs/advanced/02-agents-md.md`
 - stormzhang/ai-coding-guide: `codex/11-agents-md.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public description of project context, task boundaries, and approval/sandbox constraints; page content is limited to purpose, boundaries, and common patterns for `AGENTS.md`, without unverified mandatory precedence details.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Contrastado con las explicaciones públicas actuales de OpenAI Developers sobre contexto de proyecto, límites de tarea y restricciones de aprobación/Sandbox; el contenido se limita al uso, límites y escrituras habituales de `AGENTS.md`, sin detalles de prioridad forzada no confirmados.  
+**Última verificación:** 2026-07-26

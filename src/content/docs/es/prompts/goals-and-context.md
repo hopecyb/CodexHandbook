@@ -1,89 +1,91 @@
 ---
-title: Goals and context
-description: Tell Codex what to accomplish and why it matters.
+title: Objetivos y contexto
+description: Haz que Codex sepa qué completar y por qué importa.
 locale: es
-source_locale: en
-source_revision: '2138057'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many prompts look information-rich but still miss two things:
+Muchos Prompts parecen tener bastante información, pero estas dos cosas no quedan claras:
 
-- What outcome you actually want
-- Why you're doing it this way
+- qué resultado quieres de verdad
+- por qué hay que hacerlo de esa forma
 
-Goal explains what to deliver; context explains why.
+El objetivo explica «qué hay que lograr»; el contexto explica «por qué hacerlo así».
 
-**Goal:** state the final deliverable, not a vague wish.  
-"Make the site better" → "Change the homepage primary button copy to … and keep existing style class names."
+**Objetivo** describe el artefacto final, no un deseo vago.  
+«Que el sitio sea mejor» → «Cambia el copy del botón principal de la home a …… y conserva las clases CSS actuales».
 
-**Context:** fill in what the reader knows but the Agent needs—stack, audience, deadline reason, known pitfalls.
+**Contexto** aporta el estado que el lector no conoce pero el Agent necesita: stack, audiencia, motivo del plazo, trampas conocidas.
 
-## Why goal and context shouldn't be mixed
+## Por qué no mezclar «objetivo» y «contexto»
 
-Context without goal reads like a situation report with no deliverable.  
-Goal without context invites a solution that's technically possible but wrong for your situation.
+Si solo hay contexto y no hay objetivo, Codex puede leerlo como una descripción de situación y no saber qué debe entregar.  
+Si solo hay objetivo y no hay contexto, puede hacerlo de una forma «técnicamente viable, pero no adecuada a tu escenario».
 
-## Common misconceptions
+## Malentendidos habituales
 
-### 1. Goal means "I want to improve things"
+### 1. El objetivo es «quiero mejorarlo un poco»
 
-That's a wish, not a goal.
+Eso es un deseo, no un objetivo.
 
-A clearer goal usually states:
+Un objetivo más claro suele indicar:
 
-- what to change
-- what end state you want
-- what must stay the same
+- qué cosa cambiar
+- a qué estado
+- qué debe permanecer igual
 
-### 2. More context is always better
+### 2. Más contexto no es siempre mejor
 
-Valuable context is what **you know but Codex doesn't**, and what **changes decisions**.
+La parte valiosa del contexto es lo que **tú sabes y Codex no**, y que además influye en la decisión.
 
-### 3. Only technical context counts
+### 3. Solo el contexto técnico cuenta como contexto
 
-Not only technical context.
+No solo el técnico.
 
-These can also matter:
+También puede ser contexto importante:
 
-- who the audience is
-- why there's a deadline
-- known pitfalls
-- team constraints
+- quién es el lector
+- el motivo del plazo
+- trampas conocidas
+- restricciones del equipo
 
-## A usable minimal form
+## Una redacción suficiente
 
-```text
-Goal: change X to Y
-Context: why, who it's for, what's blocking you now
-```
-
-Example:
+Si primero escribes una versión usable:
 
 ```text
-Goal: Make the docs homepage hero copy easier for beginners to understand, keeping the existing structure
-Context: Current copy assumes readers already know many terms; first-time visitors face a high barrier
+Objetivo: cambiar qué a qué
+Contexto: por qué cambiarlo, para quién, dónde estás atascado ahora
 ```
 
-## How to check if it's clear enough
+Por ejemplo:
 
-For goal, check:
+```text
+Objetivo: reescribir el copy de la primera pantalla de la home de docs para principiantes, conservando la estructura actual
+Contexto: el copy actual asume que el lector conoce muchos términos; el umbral de comprensión en la primera visita es alto
+```
 
-- can you see the outcome?
-- can you sense the scope?
+## Cómo comprobar si está lo bastante claro
 
-For context, check:
+Al revisar el objetivo, mira dos cosas:
 
-- will this actually change how it works?
+- ¿se ve el resultado?
+- ¿se percibe el alcance?
 
-Goal decides what to deliver; context explains why.
+Al revisar el contexto, mira una más:
 
-Related: project-level background can live in [project context](/guide/context/project-context/) so you don't repeat long blocks in every prompt.
+- ¿esta información influye de verdad en cómo lo hará?
+
+El objetivo decide qué entregar; el contexto explica por qué hacerlo así.
+
+Relacionado: el contexto a nivel de proyecto puede vivir en [Contexto del proyecto](/guide/context/project-context/) para no repetir párrafos largos en cada Prompt.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains goal and context writing only; in-site links and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página solo describe cómo escribir objetivo y contexto; se han revisado enlaces y ejemplos, y el cuerpo no depende de hechos volátiles del producto.

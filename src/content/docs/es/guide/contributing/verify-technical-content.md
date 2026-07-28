@@ -1,125 +1,128 @@
 ---
-title: Verify Technical Content
-description: How to mark pages verified—in reproduction steps, official sources, and dates.
+title: Verificar contenido técnico
+description: Cómo marcar una página como verified, con pasos de reproducción, base oficial y fecha.
 locale: es
-source_locale: en
-source_revision: 5fadcc9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Commands, permissions, pricing, and product features change. **Verification** means readers who follow the doc today get predictable results.
+En el manual, comandos, permisos, precios y funciones de producto cambian con la versión. La **verificación** asegura que, al seguir el documento, el resultado sea previsible.
 
-## What this page covers
+## Contenido de esta página
 
-Many first-time doc contributors confuse “looks fine to me” with “verified.”
+Quien mantiene documentación por primera vez suele tomar «no vi problemas» por «ya está verificado».
 
-For a technical handbook:
+En un manual técnico, esas dos cosas difieren mucho:
 
-- The first is subjective
-- The second means you tried it on current version, environment, and steps
+- La primera es solo una sensación subjetiva de que parece cierto
+- La segunda significa que ya lo probaste de verdad con la versión, el entorno y los pasos actuales
 
-This page explains upgrading “seems right” to “evidence it still works.”
+Aquí se trata de cómo subir «parece correcto» a «hay evidencia de que sigue siendo correcto ahora».
 
-## What verification checks
+## Qué comprueba la «verificación»
 
-Not only prose—confirm a reader can do it **today**.
+«Verificar contenido técnico» se puede entender así: no solo mirar si el texto fluye, sino confirmar que, si el lector lo sigue hoy, de verdad puede hacerlo.
 
-Especially important because:
+Importa especialmente porque mucho contenido no es estable para siempre, por ejemplo:
 
-- Commands change
-- Menu locations move
-- Permission defaults shift
-- Product capabilities and regions evolve
+- Los comandos cambian
+- La ubicación de menús cambia
+- Los valores por defecto de permisos se ajustan
+- Las capacidades y el alcance disponible del producto se actualizan
 
-Verification prevents readers following stale docs into traps.
+Así que verificar no es manía editorial: es evitar que el lector tropiece con documentación vieja.
 
-## Status meanings
+## Significado de los estados
 
-| Status | Meaning |
+| Estado | Significado |
 |---|---|
-| `planned` | Planned, not yet written |
-| `draft` | In progress, not finalized |
-| `review` | Complete, awaiting second pass |
-| `verified` | Checked per stated basis |
-| `outdated` | Product changed; needs update |
-| `archived` | Historical; not in main nav |
+| `planned` | Planificado, aún sin redactar |
+| `draft` | En redacción, aún sin cerrar del todo |
+| `review` | Contenido listo, pendiente de revisión |
+| `verified` | Verificado según la base indicada |
+| `outdated` | Tras un cambio de producto, hay que actualizar |
+| `archived` | Conservado históricamente; no entra en la navegación principal |
 
-## Common misconceptions
+## Malentendidos habituales
 
-### `verified` means evidence, not confidence
+### `verified` representa evidencia, no solo confianza
 
-Not a tone—it is an evidence state.
+No es un tono: es un estado de evidencia.
 
-Mark `verified` only after reproduction, official cross-check, and scope/date alignment.
+Solo cuando de verdad has reproducido, contrastado bases oficiales y confirmado que el alcance de la página y la fecha cuadran, conviene marcar `verified`.
 
-### Community articles inform topics, not facts
+### Los artículos de la comunidad ayudan a entender, pero no sustituyen la verificación de hechos
 
-CodexGuide, AI-Coding-Guide-Zh, etc. help you see what to cover.
+Materiales como CodexGuide, AI-Coding-Guide-Zh u otras fuentes de la comunidad sirven bien para descubrir qué temas conviene completar.
 
-For:
+Pero cuando se trata de:
 
-- Command names
-- Permission behavior
-- Product entry points
-- Pricing, quotas, regional differences
+- Nombres de comando
+- Comportamiento de permisos
+- Entradas de producto
+- Precio, cuotas, diferencias regionales
 
-—use official docs or live behavior.
+hay que volver a la documentación oficial o al resultado real de ejecución actual.
 
-### Verification is not one sentence at a time
+### Verificar no es mirar solo frases sueltas
 
-Sentences may each look fine while the whole path fails:
+A veces cada frase por separado está bien, pero encadenadas no se sostienen, por ejemplo:
 
-- Products mismatch page scope
-- Step order wrong
-- Unstated assumptions
-- Title promises more than body verified
+- Productos aplicables y página real no coinciden
+- El orden de pasos es incorrecto
+- No se escribió la premisa por defecto
+- El título promete más de lo que el cuerpo verificó de verdad
 
-Verify the **full operational path**.
+Así que hay que verificar por «cadena completa de operación», no solo escanear la literalidad.
 
-## Verification checklist
+## Checklist de verificación
 
-1. **State scope**: product (App/CLI/IDE/Cloud), OS, CLI version
-2. **Reproduce step by step**: from zero or clean worktree
-3. **Official basis**: at least one OpenAI doc or Help Center link
-4. **Community sources**: CodexGuide / KimYx0207 etc. for topics only—facts from official
-5. **Update date**: footer `Last verified: YYYY-MM-DD`
-6. **Independent review**: `verified` ideally confirmed by someone other than author
+1. **Marcar el alcance**: producto (App/CLI/IDE/Cloud), OS, número de versión de CLI
+2. **Reproducir paso a paso**: seguir desde cero o desde un worktree limpio
+3. **Base oficial**: al menos un enlace a documentación oficial de OpenAI o al centro de ayuda
+4. **Fuentes de la comunidad**: si te apoyas en CodexGuide / KimYx0207, etc., solo como referencia temática; los hechos prevalecen oficiales
+5. **Actualizar la fecha**: pie `Última verificación: YYYY-MM-DD`
+6. **Revisión independiente**: para `verified` se recomienda confirmación de una segunda persona distinta del autor
 
-## Verification order
+## Orden de verificación
 
-1. Confirm product, entry, scenario
-2. Walk the documented steps
-3. Cross-check volatile facts with official docs
-4. Downgrade uncertain or unreproduced parts
-5. Update status and date last
+Este orden es el que menos se salta:
 
-Prefer `review` over premature `verified`.
+1. Confirma primero de qué producto, entrada y escenario habla la página
+2. Recorre desde el principio los pasos del texto
+3. Contrasta con la documentación oficial la información variable
+4. Degrada lo que no esté seguro o no hayas reproducido
+5. Solo al final actualiza estado y fecha
 
-## Volatile information
+Más vale quedarse en `review` que marcar `verified` antes de tiempo sin evidencia suficiente.
 
-Re-check quarterly or on major releases:
+## Información variable
 
-- Command and subcommand names, flags
-- Default permissions and sandbox behavior
-- Plans, model names, regional availability
-- MCP/Hook event names
+Lo siguiente hay que reverificar cada trimestre o con cada major:
 
-## On failure
+- Nombres de comandos y subcomandos, flags
+- Valores por defecto de permisos y comportamiento del Sandbox
+- Planes, nombres de modelo, disponibilidad regional
+- Nombres de eventos MCP/Hook
 
-- Downgrade to `review`, `draft`, or `outdated` as appropriate
-- In PR, note which step disagrees with official docs
-- Large drift: open issue labeled `outdated`
+## Si falla
 
-## Related
+- Degrada según la realidad a `review`, `draft` u `outdated`
+- En el PR, explica en qué paso no coincide con lo oficial
+- Ante una desviación grande, abre un issue marcado `outdated`
 
-- [Handbook version policy](/guide/start-here/handbook-version-policy/)
-- [Official resources](/guide/reference/official-resources/)
+## Relacionado
 
-`verified` means checked against stated current basis with traceable evidence—not author gut feel alone.
+- [Política de versiones del manual](/guide/start-here/handbook-version-policy/)
+- [Recursos oficiales](/guide/reference/official-resources/)
+
+`verified` significa «verificado de verdad según la base actual anotada, y hay base que se puede rastrear». Que el autor solo «sienta que es fiable» no basta.
+
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked handbook status system, completed review practice, and official-first principle; describes internal standards for promoting pages to `verified` and when to downgrade.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Base de verificación:** Contrastado con el sistema de estados actual del manual, las prácticas de revisión por lotes ya hechas y el principio de prioridad oficial; esta página describe el estándar interno de verificación y los principios de degradación para subir una página a `verified`.  
+**Última verificación:** 2026-07-26

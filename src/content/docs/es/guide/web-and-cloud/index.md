@@ -1,58 +1,58 @@
 ---
-title: Web and Cloud (overview)
-description: Entry navigation for Cloud tasks, environments, Secrets, and PR review.
+title: Web y Cloud (resumen)
+description: Navegación de entrada para Tareas Cloud, entornos, Secrets y revisión de PR.
 sidebar:
   order: 13
 locale: es
-source_locale: en
-source_revision: 73d5ce7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud fits running tasks in a **standardized remote environment**, connecting GitHub, and producing PRs. Start with [local vs cloud](/guide/foundations/local-vs-cloud/) and read [official Cloud documentation](https://developers.openai.com/codex).
+Cloud encaja para correr Tareas en un **entorno remoto estandarizado**, conectar GitHub y producir PRs. Antes de empezar, mira [Local frente a Cloud](/guide/foundations/local-vs-cloud/) y lee la [documentación oficial de Cloud](https://developers.openai.com/codex).
 
-Tasks do not run on your laptop—they continue in a remote environment.
+La Tarea no corre en tu ordenador: sigue en un entorno remoto.
 
-Typical scenarios:
+Escenarios habituales:
 
-- Long-running tasks
-- You do not want to babysit your machine
-- You need remote repo and PR workflows directly
+- La Tarea tarda mucho
+- No quieres vigilar la máquina local todo el tiempo
+- Necesitas conectar directamente el repo remoto y el flujo de PR
 
-Cloud is not always the first thing you touch, but once you work with remote repos, PRs, and async long tasks, you will likely use it.
+Cloud no tiene por qué ser lo primero que tocas, pero al empezar con repos remotos, PRs y Tareas largas asíncronas casi siempre aparece.
 
-## Section navigation
+## Navegación del capítulo
 
-| Phase | Page |
+| Fase | Página |
 |---|---|
-| Connect | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Environment | [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
-| Credentials | [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Output | [Create Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Quality | [Cloud code review](/guide/web-and-cloud/code-review/) |
-| Collaboration | [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) |
-| Network | [Internet access](/guide/web-and-cloud/internet-access/) |
-| Troubleshooting | [Cloud troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Integration | [GitHub integration](/guide/integrations/github/) |
+| Conexión | [Conectar GitHub](/guide/web-and-cloud/connect-github/) |
+| Entorno | [Entorno Cloud](/guide/web-and-cloud/cloud-environments/) |
+| Credenciales | [Secrets y variables de entorno](/guide/web-and-cloud/secrets-and-variables/) |
+| Entrega | [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/) |
+| Calidad | [Revisión de código en Cloud](/guide/web-and-cloud/code-review/) |
+| Colaboración | [Delegar y hacer seguimiento](/guide/web-and-cloud/delegate-and-follow-up/) |
+| Red | [Acceso a internet](/guide/web-and-cloud/internet-access/) |
+| Diagnóstico | [Diagnóstico de Cloud](/guide/web-and-cloud/troubleshooting/) |
+| Integración | [Integración con GitHub](/guide/integrations/github/) |
 
-Start Cloud tasks from the desktop App: [Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/). Delegate from IDE: [IDE Cloud tasks](/guide/ide/cloud-task-workflow/).
+Tareas Cloud desde la App de escritorio: [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/). Delegar desde el IDE: [Flujo de Tarea Cloud en el IDE](/guide/ide/cloud-task-workflow/).
 
-## Suggested reading order
+## Orden de lectura sugerido
 
-On first contact with Cloud:
+La primera vez con Cloud, lee en este orden:
 
-1. [Connect GitHub](/guide/web-and-cloud/connect-github/)
-2. [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/)
-3. PR, code review, and collaboration flows
+1. [Conectar GitHub](/guide/web-and-cloud/connect-github/)
+2. [Secrets y variables de entorno](/guide/web-and-cloud/secrets-and-variables/)
+3. PR, revisión de código y flujo de colaboración
 
-Understanding how it connects to repos, permissions, and secrets saves effort before diving into automation.
+Cuando tengas claros «cómo se conecta el repo, cómo obtiene Permisos y cómo trata los secretos», los detalles de automatización cuestan menos.
 
-Cloud is for remote repo work that continues after you leave your machine—not simply "local workflow in a browser."
+Cloud sirve para Tareas de repo remoto que siguen corriendo lejos de tu máquina, no solo para «mover el flujo local a la web».
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This navigation page still has structural value, but it depends on high-churn capabilities—GitHub connection, Secrets, PRs, mobile follow-up, network access; mark `outdated` until each subpage is aligned with current official Cloud docs.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Productos aplicables:** Cloud  
+**Nota de revisión:** Como página de navegación de Cloud sigue teniendo valor estructural, pero depende de capacidades muy volátiles (conectar GitHub, Secrets, PR, seguimiento móvil, acceso a red); hasta completar página a página la documentación oficial actual de Cloud, conviene marcarla como `outdated`.  
+**Última verificación:** 2026-07-26

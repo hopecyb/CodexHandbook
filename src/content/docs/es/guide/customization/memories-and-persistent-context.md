@@ -1,121 +1,120 @@
 ---
-title: Memories and Persistent Context
-description: How Codex remembers preferences and facts across sessions—capabilities, boundaries, and team norms.
+title: Memorias y contexto persistente
+description: Cómo Codex recuerda preferencias y hechos entre sesiones — capacidades, límites y normas de equipo.
 locale: es
-source_locale: en
-source_revision: cf8f791
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Some Codex clients support **Memory**: keeping preferences or facts you confirm across multiple turns for later sessions. It complements `AGENTS.md` and project configuration, but it **cannot** replace versioned team norms.
 
-## Contents
+Algunos clientes de Codex admiten **memoria (Memory)**: conservar preferencias o hechos que confirmaste en varios turnos para sesiones posteriores. Complementa `AGENTS.md` y la configuración del proyecto, pero **no** sustituye las normas de equipo versionadas.
 
-- What memory should and should not store
-- Precedence versus AGENTS.md, the Memories feature, and project instructions
-- How individuals and teams should manage memory content
+## Contenido
 
-## What Memory Is Good For
+- Qué guardar en memoria y qué no
+- Prioridad respecto a AGENTS.md, la función Memories y las instrucciones del proyecto
+- Cómo gestionar el contenido de memoria a nivel personal y de equipo
 
-Think of memory as: **Codex helping you remember things you always have to repeat but are not worth re-explaining every time.**
+## Para qué sirve la memoria
 
-For example:
+Puedes entenderla así: **Codex te ayuda a recordar lo que siempre tienes que repetir, pero que no merece la pena volver a explicar cada vez.**
 
-- You prefer explanations in Chinese
-- You like conclusion first, then details
-- In a project, which directory “backend” refers to by default
+Por ejemplo:
 
-It is closer to “personal long-term preferences and a few stable facts,” not a project manual or a secret vault.
+- Prefieres explicaciones en español
+- Te gusta la conclusión primero y el detalle después
+- En un proyecto, «backend» apunta por defecto a cierto directorio
 
-## What Memory Should Store
+Se parece más a «preferencias personales a largo plazo y unos pocos hechos estables» que a un manual del proyecto o a una caja fuerte de secretos.
 
-| Good fit | Poor fit |
+## Qué conviene guardar en memoria
+
+| Conviene | No conviene |
 |---|---|
-| Personal coding preferences (comment language, indentation habits) | Production keys, tokens |
-| Repeated project aliases (“backend means `services/api`”) | Changing sprint task status |
-| Non-sensitive facts you explicitly say “please remember” | Team norms that belong in Git |
+| Preferencias personales de código (idioma de comentarios, sangría) | Claves de producción, tokens |
+| Alias de proyecto que repites («backend = `services/api`») | Estado de sprint que cambia |
+| Hechos no sensibles que dijiste explícitamente «por favor, recuerda» | Normas de equipo que deberían estar en Git |
 
-Team-level norms should go into **`AGENTS.md` or project configuration** for review and newcomer onboarding. See [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/).
+Las normas a nivel de equipo deben ir a **`AGENTS.md` o a la configuración del proyecto**, para poder hacer review y onboarding. Ver [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/).
 
-## Common Misconceptions
+## Malentendidos habituales
 
-### Memory does not “remember everything forever for you”
+### La memoria no «lo recuerda todo para siempre»
 
-Many people assume that once they said something, Codex will remember it completely, permanently, and stably afterward.
+Mucha gente cree que, si lo dijo una vez, Codex lo recordará después de forma completa y estable.
 
-A more accurate view: memory is an auxiliary layer that reduces repetition, but it cannot replace documentation and formal information in the repo.
+Es más preciso verla como una capa auxiliar para reducir repeticiones; no sustituye la documentación ni la información formal del repositorio.
 
-### Memory is not for team consensus
+### La memoria no debe cargar el consenso del equipo
 
-If only your account’s memory knows a rule, others cannot see it and it cannot be reviewed.
+Si una regla solo existe en la memoria de tu cuenta, los demás no la ven y no pueden hacer review.
 
-That content should go back to:
+Ese contenido debe volver a:
 
 - `AGENTS.md`
-- Project documentation
-- Configuration files
+- Documentación del proyecto
+- Archivos de configuración
 
-### Memory is not for sensitive information
+### La memoria no es el sitio para información sensible
 
-Even if a client supports memory, you should not store:
+Aunque un cliente admita memoria, no deberías dejarle guardar a largo plazo:
 
 - tokens
-- Customer data
-- Internal accounts
-- Unreleased business information
+- datos de clientes
+- cuentas internas
+- información de negocio no pública
 
-in it long term.
+## Comparación con mecanismos relacionados
 
-## Comparison with Related Mechanisms
-
-| Mechanism | Who can see it | How it changes |
+| Mecanismo | Quién lo ve | Cómo cambia |
 |---|---|---|
-| One-off prompt | Current task | You type it |
-| Memory | Usually only your account/workspace | Confirm in conversation or manage in settings |
-| `AGENTS.md` | All repo collaborators | Git PR |
-| Project configuration | By configuration layer | Files + managed policy |
+| Prompt de una sola vez | Tarea actual | Tú escribes |
+| Memoria | Suele ser solo tu cuenta/workspace | Confirmación en el chat o gestión en ajustes |
+| `AGENTS.md` | Todos los colaboradores del repositorio | Git PR |
+| Configuración del proyecto | Según la capa de configuración | Archivos + política gestionada |
 
-## Recommended Usage
+## Uso recomendado
 
-1. **Write into the repo first**: test commands, directory structure, no push—these should not live only in memory
-2. **Use memory for personal preferences**: such as “explain in Chinese” or “diff comments in English”
-3. **Clean up regularly**: delete stale memory after major architecture changes
-4. **Sensitive projects**: disable or limit memory to avoid cross-project context leakage
+1. **Escríbelo primero en el repositorio**: comandos de test, estructura de directorios, prohibición de push — no deberían vivir solo en memoria
+2. **Memoria para preferencias personales**: p. ej. «explica en español», «comentarios del diff en inglés»
+3. **Limpia con regularidad**: tras un cambio grande de arquitectura, borra memorias obsoletas
+4. **Proyectos sensibles**: desactiva o limita la memoria para evitar fugas de contexto entre proyectos
 
-## How to Decide Whether Something Belongs in Memory
+## Cómo decidir si guardar en memoria
 
-If you are unsure whether a piece of information should go into memory, ask yourself:
+Si no estás seguro de si una información debe ir a memoria, pregúntate:
 
-1. Is this a preference I often repeat personally?
-2. Is this a fact that stays relatively stable for a while?
-3. Would collaboration be unaffected if others cannot see this information?
+1. ¿Es una preferencia personal que repito a menudo?
+2. ¿Es un hecho relativamente estable a corto plazo?
+3. ¿Aunque otros no la vean, no afectará a la colaboración del equipo?
 
-If all three lean toward “yes,” memory is a better fit.
+Solo si las tres se acercan a «sí» conviene meterla en memoria.
 
-## Security Boundaries
+## Límites de seguridad
 
-- Do not let memory become a **secret channel** that bypasses `AGENTS.md` prohibitions
-- Do not store customer data, credentials, or unreleased financial information in memory
-- Enterprise environments may disable memory—follow managed policy
+- No dejes que la memoria sea un **canal secreto** para saltarse prohibiciones de `AGENTS.md`
+- No guardes en memoria datos de clientes, credenciales ni información financiera no pública
+- En entornos empresariales la memoria puede estar desactivada — respeta la política gestionada
 
-## Common Mistakes
+## Errores habituales
 
-- Putting “this week’s epic list” only in memory, invisible to collaborators
-- Not updating either side when memory conflicts with `AGENTS.md`
-- Assuming memory means “the model always remembers the whole repo”
+- Dejar solo en memoria la «lista de epics de esta semana», invisible para los colaboradores
+- Cuando memoria y `AGENTS.md` chocan, no actualizar ninguno de los dos lados
+- Creer que memoria equivale a «el modelo recuerda para siempre el repositorio entero»
 
-Memory is best for “personal preferences and a few stable facts you always repeat”; it is not a substitute for repo documentation, team rules, or sensitive information management.
+La memoria encaja mejor con «preferencias personales que siempre hay que repetir y unos pocos hechos estables»; no sustituye la documentación del repositorio, las reglas de equipo ni la gestión de información sensible.
 
-## References
+## Referencias
 
-- OpenAI Codex memory documentation (per version)
+- Documentación de memoria de OpenAI Codex (según versión)
 - stormzhang `19-memory.md`
-- codex.bozhouai.com memory chapter (structure reference)
+- Capítulo de memoria de codex.bozhouai.com (referencia de estructura)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI (depending on version)  
-**Verification basis:** Cross-checked against OpenAI Help Center’s current official ChatGPT Memory description and this handbook’s verified project instructions, personal preferences, and security boundary chapters; page content is limited to the stable principle that memory suits personal preferences and a few stable facts and does not replace repo rules or sensitive information management.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI (según versión)  
+**Base de verificación:** Contrastado con la explicación oficial actual del Help Center de OpenAI sobre ChatGPT Memory, y con los capítulos ya verificados de este manual sobre instrucciones de proyecto, preferencias personales y límites de seguridad; el contenido se limita al principio estable «la memoria sirve para preferencias personales y unos pocos hechos estables; no sustituye las reglas del repositorio ni la gestión de información sensible».  
+**Última verificación:** 2026-07-26

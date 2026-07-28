@@ -1,58 +1,58 @@
 ---
-title: Diagnose template
-description: Find root cause before discussing fixes.
+title: Plantilla de diagnóstico
+description: Localizar primero la causa raíz y luego hablar de la corrección.
 locale: es
-source_locale: en
-source_revision: 1c4bf6a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Diagnose template
+# Plantilla de diagnóstico
 
-A common diagnose mistake: you say "investigate first" but still expect an immediate fix.
+El error habitual en diagnóstico es decir «primero investiga» y, en la práctica, dejar que corrija ya.
 
-This template separates finding cause from editing code.
+Esta plantilla separa «encontrar la causa» de «arreglar».
 
-## Template
+## Plantilla
 
 ```text
-Symptom: 【error message, failing test, user report】
-Context: 【recent changes, environment, repro steps】
-Inputs: @【logs/tests/relevant code】
-Constraints: Do not change code yet; list 2–3 likely root causes and how to verify each.
-Output:
-1. Most likely root cause (with evidence)
-2. Executable verification steps (commands or checkpoints)
-3. If verified, draft fix plan (wait for my confirmation before executing)
+Fenómeno: 【mensaje de error, test fallido, informe de usuario】
+Contexto: 【cambios recientes, entorno, pasos de reproducción】
+Entradas: @【logs/tests/código relacionado】
+Restricciones: no cambies código todavía; lista 2–3 causas raíz posibles y cómo verificarlas.
+Salida:
+1. Causa raíz más probable (con evidencia)
+2. Pasos de verificación ejecutables (comandos o checkpoints)
+3. Si la verificación pasa, borrador del plan de corrección (espera mi confirmación antes de ejecutar)
 ```
 
-## When to use this template
+## Cuándo usarla
 
-- Bug not yet localized
-- Tests red but layer unknown
-- Complex suspected issue—don't want guess-and-patch
+- El bug aún no está localizado
+- Los tests fallan y no sabes qué capa se rompió
+- Sospechas complejidad y no quieres que adivine la corrección
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. Diagnosis is slow—just fix it
+### 1. Diagnosticar es lento; mejor cambiar ya
 
-Much rework comes from skipping diagnosis.
+Mucho retrabajo viene de saltarse el diagnóstico.
 
-### 2. Listing 2–3 causes is verbose
+### 2. ¿Listar 2–3 causas posibles es demasiado verboso?
 
-It shows whether reasoning is grounded or random.
+No: ayuda a ver si está adivinando.
 
-The diagnose template requires explaining why it's broken before how to fix it.
+La plantilla de diagnóstico exige primero explicar por qué se rompe y luego cómo cambiarlo.
 
-## Related
+## Relacionado
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Fix a bug case](/cases/fix-a-bug/)
+- [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/)
+- [Caso: corregir un bug](/cases/fix-a-bug/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a diagnose-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página ofrece una plantilla de tareas de diagnóstico; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

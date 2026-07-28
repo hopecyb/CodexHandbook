@@ -1,30 +1,30 @@
 ---
-title: Research and learning
-description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
+title: Investigación y aprendizaje
+description: Entrada a casos de investigación, comparación y aprendizaje con fuentes — énfasis en búsqueda, citas y límites de las conclusiones.
 locale: es
-source_locale: en
-source_revision: d446512
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Research tasks differ from ordinary Q&A in one way:
+La mayor diferencia entre una tarea de investigación y un «Q&A» normal es:
 
-> **You want not just an answer, but how it was reached and whether it's reliable.**
+> **No solo quieres una respuesta; quieres saber de dónde sale y si es fiable.**
 
-## Cases in this group
+## Entradas de este grupo
 
-- [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Matriz de funciones de competencia](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
-## What this group emphasizes
+## Enfoque del grupo
 
-- How to require sources and citations
-- Turning "I think" into "what I found in evidence"
-- Keeping conclusions within what the material actually supports
+- Cómo exigir fuentes y citas
+- Cómo pasar de «creo que» a «esta es la evidencia que encontré»
+- Cómo limitar que las conclusiones no vayan más allá de lo que los materiales pueden sostener
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current research-and-learning case entry and source-backed research / validate sources chapters; this page only navigates the research case group and highlights focus areas.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con la entrada actual de casos research-and-learning del repo y los capítulos de investigación con fuentes / validar fuentes. Esta página solo navega el grupo de investigación y sus focos.

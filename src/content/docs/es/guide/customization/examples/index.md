@@ -1,32 +1,33 @@
 ---
-title: Examples
-description: Learn how configuration and AGENTS.md should be written from real examples, not abstract principles alone.
+title: Ejemplos
+description: Entiende cómo escribir configuración y AGENTS.md con ejemplos reales, no solo con principios abstractos.
 locale: es
-source_locale: en
-source_revision: da72647
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many principles make sense in isolation but are hard to apply in your own repo.
 
-This group shows “how others wrote it” so you can turn abstract rules into concrete patterns.
+Muchos principios se entienden al leerlos, pero al llegar a tu propio repositorio no sabes cómo aterrizarlos.
 
-## Entries in This Group
+La función de este grupo es mostrarte «cómo lo escriben otros», para convertir reglas abstractas en formas de escritura más concretas.
 
-- [AGENTS.md in a Monorepo](/guide/customization/examples/monorepo-agents-md/)
+## Entrada del grupo
 
-## When to Read This Group
+- [AGENTS.md en un monorepo](/guide/customization/examples/monorepo-agents-md/)
 
-- You understand what AGENTS.md is but do not know how to start writing
-- You know you need rules but are unsure about directory layers and scope
-- You want a real sample first, then adapt it for your project
+## Cuándo conviene más mirar este grupo
 
-Example pages are for reference thinking—not for blind copy-paste.
+- Ya entiendes qué es AGENTS.md, pero aún no sabes cómo empezar a escribir
+- Sabes que hay que configurar reglas, pero no estás seguro de cómo escribir capas de directorios y alcances
+- Quieres ver primero una plantilla real y luego adaptarla a tu proyecto
+
+Las páginas de ejemplo sirven para tomar ideas, no para copiarlas tal cual.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this repo’s current customization examples grouping and index structure; this page only serves as “example navigation and how to use examples,” without volatile product parameters or version behavior.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Contrastado con la agrupación actual de ejemplos de customization de este repositorio y la estructura de la página de entrada; esta página solo navega ejemplos y explica cómo usarlos, sin parámetros de producto variables ni comportamientos por versión.  
+**Última verificación:** 2026-07-26

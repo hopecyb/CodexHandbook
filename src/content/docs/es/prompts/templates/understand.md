@@ -1,63 +1,63 @@
 ---
-title: Understand template
-description: Build shared understanding before making changes.
+title: Plantilla de comprensión
+description: Construir primero el mapa mental y luego cambiar.
 locale: es
-source_locale: en
-source_revision: d714793
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Understand template
+# Plantilla de comprensión
 
-Many tasks stall because there's no shared baseline understanding yet.
+Muchas tareas se atascan porque aún no hay una comprensión compartida mínima.
 
-The understand template fits "figure it out first, then decide next steps."
+Esta plantilla encaja en tareas de «entender primero, decidir después».
 
-## Template
+## Plantilla
 
 ```text
-Goal: Understand 【topic/module/codebase area】 to prepare for subsequent 【implementation/changes/review】.
-Context: 【project type, stack, related issue】
-Inputs: 【@file paths, doc links, screenshots】
-Constraints: Read-only analysis; do not modify any files; do not run destructive commands.
-Output:
-1. 5–8 bullets on core concepts or module responsibilities
-2. The 3 files/directories most relevant to 【goal】 and why
-3. Three open questions to confirm
-Acceptance: I can decide the next task scope from your output.
+Objetivo: comprender 【tema/módulo/zona del repositorio】 para preparar 【implementación/cambio/revisión】.
+Contexto: 【tipo de proyecto, stack, issues relacionados】
+Entradas: 【@rutas de archivo, enlaces de documentación, capturas】
+Restricciones: solo análisis de lectura; no modificar ningún archivo; no ejecutar comandos destructivos.
+Salida:
+1. Explica en 5–8 puntos los conceptos centrales o las responsabilidades del módulo
+2. Señala los 3 archivos/directorios más relacionados con el 【objetivo】 y por qué
+3. Lista 3 preguntas por confirmar
+Aceptación: con la salida puedo decidir el alcance de la siguiente tarea.
 ```
 
-## When to use this template
+## Cuándo usarla
 
-- New to a codebase
-- Exploring unfamiliar module
-- Mapping related scope before editing
+- Acabas de tomar un repositorio
+- Miras un módulo desconocido
+- Antes de cambiar, quieres mapear el alcance relacionado
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. Understand tasks are just "summarize this"
+### 1. Comprender no es solo «que resuma»
 
-Also ask for:
+También debe señalar:
 
-- which files matter most
-- what's still unclear
-- where to start next
+- qué archivos son los más relevantes
+- qué sigue sin estar claro
+- por dónde empezar el siguiente paso
 
-### 2. More detail in the understand phase is always better
+### 2. En la fase de comprensión, más detalle no siempre es mejor
 
-Clear main line beats digging every detail immediately.
+Aclarar primero la línea principal importa más que excavarlo todo de golpe.
 
-The understand template helps narrow the next task scope.
+El valor de esta plantilla es acotar primero el alcance de la siguiente tarea.
 
-## Related
+## Relacionado
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Understand a codebase case](/cases/understand-a-codebase/)
+- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
+- [Caso: comprender un repositorio](/cases/understand-a-codebase/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an understand-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página ofrece una plantilla de tareas de comprensión; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

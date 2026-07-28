@@ -1,123 +1,131 @@
 ---
-title: Write a Guide Page
-description: Structure, frontmatter, and cross-link conventions for new handbook guides.
+title: Escribir una página de guía
+description: Estructura, frontmatter y convenciones de enlaces cruzados para el cuerpo nuevo del manual.
 locale: es
-source_locale: en
-source_revision: 78da82d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This page explains how to add or revise **guide-style** pages in `src/content/docs/` (not pure cases or pure reference tables).
+Esta página explica cómo añadir o reescribir páginas de tipo **guía** en `src/content/docs/` (no casos puros ni tablas de referencia puras).
 
-## What this page covers
+## Contenido de esta página
 
-Common blockers:
+Los atascos habituales incluyen:
 
-- What a guide page should look like
-- Tutorial vs policy vs index summary
-- How to actually help newcomers
+- No saber cómo debe quedar una página de guía
+- No estar seguro de si escribes un «tutorial», una «norma» o un «resumen de índice»
+- No saber cómo escribir para que de verdad ayude a un principiante
 
-## Role of a guide page
+Aquí se desglosan esos problemas para que puedas escribir páginas de guía fáciles de mantener después y que el lector entienda.
 
-A guide is not “dump information.” It should move readers from “I know this topic exists” to “I know when to use it, what to read first, and what to avoid.”
+## Función de una página de guía
 
-Not only a bullet list or command sheet—it should show next steps.
+Una «página de guía» no se completa solo apilando material. Debe ayudar al lector a pasar de «sé que este tema existe» a «más o menos sé cuándo usarlo, qué mirar primero y qué trampas evitar».
+
+Así que no suele ser solo una lista de puntos ni solo una lista de comandos: también debe decir al lector cómo seguir el siguiente paso.
 
 ## Frontmatter
 
 ```yaml
 ---
-title: Page title
-description: One sentence on what problem this page solves
+title: Título de la página
+description: En una frase, el problema que resuelve este texto
 ---
 ```
 
-Optional unified footer (match existing pages):
+Opcionalmente, al final del texto, un pie unificado (como en las páginas existentes):
 
 ```markdown
 ---
 
-**Status:** planned | draft | review | verified | outdated | archived
-**Products:** App / CLI / IDE / Cloud
-**Last verified:** YYYY-MM-DD
+**Estado:** planned | draft | review | verified | outdated | archived
+**Productos aplicables:** App / CLI / IDE / Cloud
+**Última verificación:** YYYY-MM-DD
 ```
 
-## Recommended structure
+## Estructura recomendada
 
-Per [external source integration template](/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, recommended page template), common sections:
+Elige secciones según la [plantilla de integración de fuentes externas](/docs/planning/external-source-integration.md#6-推荐页面模板); combinaciones habituales:
 
-- What problem the page solves
-- Who it is for
-- Minimal viable approach
-- Recommended workflow
-- Common mistakes
-- Security boundaries
-- Acceptance checklist
-- Reference sources
+- Qué problema resuelve la página
+- Para quién sirve
+- Enfoque mínimo usable
+- Flujo de trabajo recomendado
+- Errores habituales
+- Límites de seguridad
+- Checklist de aceptación
+- Referencias
 
-Product how-tos may be step-heavy; concept pages may use tables and diagrams.
+Las páginas de operación de producto pueden inclinarse a pasos; las de concepto, a tablas y esquemas.
 
-## Common misconceptions
+## Malentendidos habituales
 
-### Not every page is an encyclopedia
+### No hace falta que cada página sea una enciclopedia
 
-Lead with:
+Al escribir la primera guía, es fácil meter todo lo que sabes y que el foco se pierda.
 
-- Main problem
-- What readers misunderstand
-- One usable approach or decision rule
+La forma más habitual es:
 
-Better for newcomers than every detail at once.
+- Decir primero qué problema principal resuelve la página
+- Luego qué malinterpreta con más facilidad el lector
+- Luego dar un enfoque o criterio suficiente
 
-### Write for readers, not only yourself
+Eso suele ayudar más al recién llegado que llenar todos los detalles de una vez.
 
-Bridge for first-time visitors:
+### No escribas solo para quien ya sabe; piensa cómo lee el otro
 
-- Who it is for
-- What they can solve after reading
-- What to grab first for a quick start
+Tú conoces el contexto; quien llega por primera vez, no.
 
-### Guides do not replace official docs
+Así que hay que añadir a propósito este puente:
 
-Community handbook helps understanding and landing—but volatile facts need official verification.
+- Para quién sirve la página
+- Qué debería poder resolver al terminar
+- Si solo quiere empezar, qué punto agarrar primero
 
-## Cross-links
+### Una página de guía no sustituye la documentación oficial
 
-- Internal links use root paths: `/cases/workflows/explore-plan-execute-verify/`
-- Link to authoritative pages; avoid long duplication
-- Register new pages in chapter `index.md` and `astro.config.mjs` sidebar
+El manual de la comunidad puede ayudar a entender, encadenar y aterrizar; pero los hechos que cambian hay que volver a verificarlos en la documentación oficial.
 
-## Tone
+## Enlaces cruzados
 
-- Simplified Chinese is source; English translations follow source structure
-- Acknowledge uncertainty (“per official documentation”)
-- Avoid “magic prompt” narrative
+- Enlaces internos con ruta raíz: `/cases/workflows/explore-plan-execute-verify/`
+- Enlaza a la página canónica; evita repetir bloques grandes
+- Registra la página nueva en el `index.md` del capítulo y en el sidebar de `astro.config.mjs`
 
-## Writing order
+## Tono
 
-1. What problem does this page solve?
-2. What do readers misunderstand or skip?
-3. Minimal approach, workflow, or decision rule
-4. Cross-links and reference sources
+- Español orientado a quien practica
+- Reconocer la incertidumbre («prevalece la documentación oficial»)
+- No usar la narrativa del «prompt universal»
 
-## Verification
+## Orden de escritura
 
-Before PR, read [Verify technical content](/guide/contributing/verify-technical-content/). Commands, pricing, permissions, etc. must be re-checked.
+Puedes escribir en este orden:
 
-A good guide tells first-time readers why the page exists, what to read first, and where to go next—not only “all the facts.”
+1. Primero qué problema resuelve exactamente la página
+2. Luego los puntos que el lector malinterpreta o se salta con más facilidad
+3. Luego el enfoque mínimo usable, el flujo o el criterio
+4. Al final, enlaces cruzados y referencias
 
-## Reference sources format
+## Verificación
+
+Antes del PR, lee [Verificar contenido técnico](/guide/contributing/verify-technical-content/). Información variable como comandos, precios y permisos debe revalidarse.
+
+Una buena página de guía no consiste en «escribir todo el material», sino en que quien llega por primera vez sepa por qué existe la página, qué mirar primero y hacia dónde ir después.
+
+## Cómo escribir las referencias
 
 ```markdown
-## Reference sources
+## Referencias
 
-- OpenAI Codex official documentation
-- Community structure reference: CodexGuide (topics only, not verbatim)
+- Documentación oficial de OpenAI Codex
+- Referencia de estructura de la comunidad: CodexGuide (solo tema, no texto original)
 ```
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked current doc frontmatter, footer status system, cross-link habits, and sidebar maintenance; describes writing conventions—not specific product version details.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Base de verificación:** Contrastado con el frontmatter actual de la documentación del repositorio, el sistema de estados del pie, los hábitos de enlaces cruzados y el mantenimiento del sidebar; esta página describe normas de escritura del cuerpo del manual y sugerencias de estructura, sin depender de detalles de versión de producto concretos.  
+**Última verificación:** 2026-07-26

@@ -1,29 +1,53 @@
 ---
-title: Worktrees
-description: Use isolated worktrees to try changes in parallel.
+title: Árboles de trabajo
+description: Probar cambios en paralelo con árboles de trabajo aislados.
 locale: es
-source_locale: en
-source_revision: 8c094c9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+Un **árbol de trabajo (worktree)** sirve para experimentar cambios en un directorio aislado y reducir la interferencia con el área de trabajo principal.
 
-A **worktree** lets you try changes in an isolated directory with less impact on your main workspace (especially when using Git worktrees).
+Puedes verlo como abrir una «zona de prueba paralela» del mismo repositorio, para no amontonar todos los intentos en el área de trabajo actual.
 
-## When to use
+## Cuándo usarlo
 
-- You want to try two implementations in parallel
-- You worry an experimental refactor will pollute the main branch workspace
+- Quieres probar dos implementaciones en paralelo
+- Te preocupa que una refactorización experimental contamine el área de trabajo de la rama principal
 
-## When not to use
+## Cuándo no usarlo
 
-- The practice project is already isolated enough
-- You are not comfortable with Git yet: finish serial tasks in the practice directory first
+- El propio proyecto de práctica ya está lo bastante aislado
+- Aún no dominas Git: primero completa las Tareas en serie en un directorio de práctica
+
+## Malentendidos frecuentes
+
+### 1. ¿No es simplemente crear otra carpeta?
+
+Por fuera lo parece, pero el objetivo no es solo «tener un directorio más», sino dejar espacio aislado para distintos intentos sobre el mismo repositorio.
+
+### 2. ¿Hay que aprenderlo desde el principio?
+
+No.
+
+Si aún estás familiarizándote con el flujo básico de Tareas, suele ser más sencillo no tocar worktrees todavía.
+
+### 3. ¿Cuándo conviene aprenderlo?
+
+Merece la pena cuando empiezas a encontrarte con esto:
+
+- Quieres probar dos implementaciones
+- No quieres mezclar cambios experimentales en el área de trabajo actual
+- En el equipo se abren varias Tareas en paralelo
+
+El worktree es una herramienta de aislamiento avanzada, no un requisito para empezar con Codex.
 
 
 ---
 
-**Status:** review  
-**Applies to:** App  
-**Last verified:** 2026-07-25
+**Estado:** outdated  
+**Productos aplicables:** App  
+**Nota de revisión:** Esta página presenta el worktree como capacidad avanzada de la App de escritorio, pero el material oficial público actual no basta para demostrar uno a uno la entrada vigente ni el alcance del soporte de árboles de trabajo en la UI de escritorio; conviene marcarlo como `outdated` hasta completar la documentación de producto más reciente.  
+**Última verificación:** 2026-07-26

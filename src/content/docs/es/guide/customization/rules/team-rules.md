@@ -1,138 +1,139 @@
 ---
-title: Team Rules Policy
-description: Layer governance of command and path rules across organization, repo, and individual—reviewable and rollback-friendly.
+title: "Política de reglas de equipo"
+description: Gobierna por capas reglas de comandos y rutas entre organización, repositorio e individuo — revisable y reversible.
 locale: es
-source_locale: en
-source_revision: e90f23a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When teams use Codex, **rules policy** answers: which constraints are company-wide, which the repo maintains, and whether individuals may relax anything. This chapter is the governance view of [Command Rules](/guide/customization/rules/command-rules/) and [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/).
 
-## Contents
+Al usar Codex en equipo, la **política de reglas** responde: qué restricciones unifica toda la empresa, cuáles mantiene el repositorio y si el individuo aún puede relajarlas. Este capítulo es la perspectiva de gobernanza de [reglas de comandos](/guide/customization/rules/command-rules/) y [patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/).
 
-- Organization managed policy vs project rules vs personal preferences
-- How rule changes go through review and release
-- Coordination with `AGENTS.md`, Hooks, and CI
+## Contenido
 
-## What Team Rules Policy Does
+- Política gestionada de la organización vs reglas de proyecto vs preferencias personales
+- Cómo pasan las reglas por revisión y publicación
+- Coordinación con `AGENTS.md`, Hooks y CI
 
-Team rules policy answers: which boundaries the company sets, which the project sets, and which are personal habit.
+## Función de la política de reglas de equipo
 
-If this layering is unclear, you often get:
+La política de reglas de equipo responde: qué límites debe fijar la empresa de forma unificada, cuáles el propio proyecto y cuáles son solo hábitos personales.
 
-- Rules that should be team-wide living on one person’s machine
-- Temporary personal convenience mistaken for team standard
+Si esa estratificación no está clara, es fácil caer en dos problemas:
 
-## Who This Is For
+- Reglas que deberían ser iguales en todo el equipo viven solo en el ordenador de alguien
+- Ajustes personales de comodidad temporal se toman por error como estándar del equipo
 
-| Role | Focus |
+## Para quién
+
+| Rol | Enfoque |
 |---|---|
-| Engineering lead | Baseline deny, audit requirements |
-| Repo maintainer | Project allowlist, test commands |
-| Individual developer | Local supplement within policy |
+| Responsable de ingeniería | Deny de línea roja, requisitos de auditoría |
+| Mantenedor del repositorio | Allowlist del proyecto, comandos de test |
+| Desarrollador individual | Complementos locales dentro de lo que permite la política |
 
-## Common Misconceptions
+## Malentendidos habituales
 
-### Team rules do not need maximum uniformity
+### Las reglas de equipo no tienen por qué ser lo más unificadas posible
 
-Some boundaries should be organization-wide, such as high-risk deny.
+Algunos límites sí deben unificarse en toda la organización, por ejemplo denys de alto riesgo.
 
-Forcing every repo into identical rules causes another problem: rules too loose or too tight—eventually nobody trusts them.
+Pero forzar todos los repositorios a ser idénticos trae otro problema: reglas demasiado anchas o demasiado estrechas, a las que al final nadie cree de verdad.
 
-The point is separating organization, project, and personal layers—not making all rules look the same.
+El foco es aclarar los límites entre capa de organización, de proyecto y personal, no hacer todas las reglas iguales.
 
-### Personal supplements must not weaken team bottom lines
+### Los complementos personales no deben debilitar la línea roja del equipo
 
-You may add convenience on your machine, but not bypass organization or team bottom lines.
+Puedes añadir ajustes cómodos en tu máquina, siempre que no eludan la línea roja ya fijada por el equipo o la organización.
 
-Otherwise it looks like “faster locally” while planting mines for collaboration.
+Si no, en apariencia «esta máquina es más eficiente»; en la práctica estás sembrando minas en la colaboración.
 
-## Recommended Layering Model
+## Modelo de capas recomendado
 
 ```text
-L1 Organization managed (Managed)     → cannot be overridden by project/individual
-L2 Team template repo                 → rules snippets new repos inherit
-L3 Project rules + AGENTS.md          → Git PR review
-L4 Personal configuration             → local only; must not weaken L1
-L5 Single-task prompt                 → temporary tightening OK; temporary relaxation limited by L1
+L1 Organización gestionada (Managed) → no anulable por proyecto/individuo
+L2 Repositorio plantilla del equipo     → fragmentos de rules que heredan repos nuevos
+L3 Rules del proyecto + AGENTS.md      → revisión por Git PR
+L4 Configuración personal              → solo esta máquina; no puede debilitar L1
+L5 Prompt de una sola tarea            → se puede endurecer temporalmente; relajar temporalmente está limitado por L1
 ```
 
-Compare with [AGENTS.md Scope](/guide/customization/agents-md/scope-and-precedence/): **rules lean toward execution enforcement; AGENTS.md leans toward behavior description**; they should agree—do not write contradictory requirements in two places.
+Contrasta con [alcance de AGENTS.md](/guide/customization/agents-md/scope-and-precedence/): **las reglas inclinan hacia enforcement de ejecución; AGENTS.md inclina hacia explicación de comportamiento**; deben ser coherentes, no escribir requisitos contradictorios por separado.
 
-## Basic Practice
+## Enfoque básico
 
-1. **Write the “never allowed” list first** (deny): `git push --force`, read `~/.ssh`, POST repo content to the public internet
-2. **Then the “daily allowed” list** (allow): tests, lint, read-only git
-3. **Deploy L1 via management** (if the organization enables Managed configuration)
-4. **Each service/monorepo subpackage** may add L3 but must not conflict with L1
-5. **Quarterly review**: “false block” and “false allow” from approval logs flow back into rules PRs
+1. **Escribe primero la lista de «nunca permitido»** (deny): `git push --force`, leer `~/.ssh`, POST a internet público con contenido del repo
+2. **Luego la lista de «permitido a diario»** (allow): tests, lint, git de solo lectura
+3. **Emite L1 de forma gestionada** (si la organización ya usa Managed configuration)
+4. **Cada servicio / subpaquete de monorepo** puede añadir L3, sin chocar con L1
+5. **Revisión trimestral**: «bloqueos falsos» y «permisos falsos» que se repiten en logs de aprobación vuelven a un PR de reglas
 
-## Recommended Workflow: Rule Changes
+## Flujo recomendado: cambio de reglas
 
 ```text
-Proposal (issue or RFC) → security/platform review → PR changing rule files
-    → trial typical tasks in staging repo → merge → announcement + handbook update
+Propuesta (issue o RFC) → review de seguridad/plataforma → PR que cambia archivos de reglas
+    → prueba tipica en repo de staging → merge → anuncio + actualización de la página del manual
 ```
 
-Large changes (e.g. allowing outbound network) should update [Hooks audit](/skills/hooks/hooks-overview/) and [acceptable use](/guide/team-enterprise/governance/acceptable-use/) together.
+Cambios grandes (por ejemplo abrir salida a red) deben actualizar a la vez [auditoría con Hooks](/skills/hooks/hooks-overview/) y [uso aceptable](/guide/team-enterprise/governance/acceptable-use/).
 
-## Alignment with Hooks and CI
+## Alineación con Hooks y CI
 
-| Mechanism | Role |
+| Mecanismo | Función |
 |---|---|
-| Rules | Allow/deny before execution |
-| Hooks | Complex validation, logging, compliance format |
-| CI | Merge gate; scripts aligned with local rules |
+| Reglas | Permitir/denegar antes de ejecutar |
+| Hooks | Validación compleja, logs, formato de cumplimiento |
+| CI | Puerta de merge, scripts de la misma fuente que las reglas locales |
 
-Avoid three separate logics: prefer a **single source of truth** (e.g. `tools/codex-rules.json`) referenced by both CLI and CI.
+Evita tres lógicas distintas cada una por su lado: prioriza una **única fuente de verdad** (p. ej. `tools/codex-rules.json`) referenciada por CLI y CI.
 
-## Common Mistakes
+## Errores habituales
 
-- Verbal “do not push” only; rule files not updated
-- Personal machine relaxes sandbox; screenshot treated as “team standard”
-- Monorepo subprojects differ but share one overly broad global allowlist
-- Rule change without announcement; teammates suddenly hit many approval failures
+- Solo acuerdo oral «no hagas push», sin actualizar el archivo de reglas
+- Relajar el Sandbox en tu máquina y tomar capturas como «estándar del equipo»
+- Subproyectos de monorepo con necesidades distintas pero una allowlist global demasiado ancha
+- Cambios de reglas sin anuncio: los compañeros empiezan a fallar en masa en aprobaciones
 
-## Which Layer a Rule Belongs On
+## Cómo decidir en qué capa va una regla
 
-Ask:
+Mira estas tres preguntas:
 
-1. Is this a bottom line every repo must follow?
-2. Does this hold only for the current project?
-3. Is this only my personal convenience?
+1. ¿Es una línea roja que deben respetar todos los repositorios?
+2. ¿Solo vale para el proyecto actual?
+3. ¿Es solo un complemento personal por comodidad?
 
-Usually:
+Suele corresponder a:
 
-- Organization layer
-- Project layer
-- Personal layer
+- Capa de organización
+- Capa de proyecto
+- Capa personal
 
-## Security Boundaries
+## Límites de seguridad
 
-- Rules cannot replace [threat model](/guide/team-enterprise/security/threat-model/) and incident response
-- For regulated data, rules need joint review with data classification and retention policy
-- Emergency bypass needs **audit record** and post-incident review
+- Las reglas no sustituyen el [modelo de amenazas](/guide/team-enterprise/security/threat-model/) ni el flujo de respuesta a incidentes
+- Con datos regulados, las reglas deben revisarse junto con clasificación de datos y políticas de retención
+- Un bypass de emergencia debe tener **registro de auditoría** y retrospectiva posterior
 
-## Acceptance Checklist
+## Lista de verificación
 
-- [ ] You can diagram your organization’s L1–L3 division of labor
-- [ ] Repo rule files have clear owner and review requirements
-- [ ] No contradiction with `AGENTS.md`, Hooks, and CI
-- [ ] Channel for “false block” feedback (issue template or internal form)
+- [ ] Puedes dibujar el reparto L1–L3 de tu organización
+- [ ] Los archivos de reglas del repositorio tienen owner claro y requisitos de review
+- [ ] No hay contradicciones mutuas con `AGENTS.md`, Hooks y CI
+- [ ] Hay un canal para feedback de «bloqueos falsos» (plantilla de issue o formulario interno)
 
-The most important part of team rules policy is knowing who sets boundaries at which layer—then how to write the rules.
+Lo más importante de la política de reglas de equipo es aclarar primero «quién fija el límite de cada capa» y luego decidir cómo escribir las reglas.
 
-## References
+## Referencias
 
-- freestylefly/CodexGuide team governance and playbook
-- KimYx0207 enterprise security chapter
-- codex.bozhouai.com team configuration cases (task-type reference)
+- Gobernanza de equipo y playbook de freestylefly/CodexGuide
+- Capítulos de seguridad empresarial de KimYx0207
+- Casos de configuración de equipo en codex.bozhouai.com (referencia de tipos de tarea)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App / Cloud (depending on organization features)  
-**Verification basis:** OpenAI’s current organization-level plugin, app, and permission materials still emphasize role access, action approval, managed configuration, and team-level control layering; this page abstracts rules policy into organization, project, and personal governance and requires rule changes to go through review and announcement—a stable governance practice summary.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Productos aplicables:** CLI / App / Cloud (según funciones de la organización)  
+**Base de verificación:** Los materiales actuales de OpenAI sobre plugins, apps y permisos a nivel de organización siguen enfatizando el acceso por rol, la aprobación de acciones, la configuración gestionada y el control a nivel de equipo; esta página abstrae la política de reglas como un modelo de gobernanza organización/proyecto/individuo y exige que los cambios de reglas pasen por revisión y anuncio — resumen de práctica de gobernanza estable.  
+**Última verificación:** 2026-07-26

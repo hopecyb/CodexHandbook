@@ -1,36 +1,72 @@
 ---
-title: Glossary
-description: Short definitions of handbook terms.
+title: Glosario
+description: Definiciones cortas de términos habituales del manual.
 locale: es
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 0aa65ed
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-| Term | Definition |
+| Término | Definición |
 |---|---|
-| Agent | An execution approach that calls tools and iterates toward a goal |
-| Approval | Human confirmation before high-risk operations |
-| Diff | A before/after view of changes |
-| Cloud task | A task executed in a cloud environment |
-| Context | The set of information the model can currently use |
-| Compaction | The process of summarizing long context to save window space |
-| Hook | Custom logic that runs at lifecycle nodes (advanced) |
-| MCP | Protocol for connecting external tools and data (advanced) |
-| Prompt | The goal and requirements text given to an Agent |
-| Sandbox | Execution isolation that limits blast radius |
-| Skill | A reusable package of specialized instructions and resources (advanced) |
-| Thread | A continuous conversation and its accumulated context |
-| Token | The unit used to measure text processed by the model |
-| Worktree | An isolated working directory for parallel experiments |
+| Agent | Forma de ejecución que llama Herramientas y avanza por iteración hacia un objetivo |
+| Aprobación | Confirmación humana antes de una operación de alto riesgo |
+| Diff | Vista de comparación antes/después de un cambio |
+| Tarea Cloud | Tarea ejecutada en un Entorno Cloud |
+| Contexto | Conjunto de información que el modelo puede usar en el momento |
+| Compactación | Proceso de resumir Contexto largo para ahorrar ventana |
+| Hook | Lógica personalizada en nodos del ciclo de vida (avanzado) |
+| MCP | Protocolo para conectar Herramientas y datos externos (avanzado) |
+| Prompt | Texto de objetivo y requisitos para el Agent |
+| Sandbox | Aislamiento de ejecución que limita el alcance del impacto |
+| Skill | Paquete reutilizable de instrucciones y recursos especializados (avanzado) |
+| Hilo | Conversación continua y su Contexto acumulado |
+| Token | Unidad de medida del texto que procesa el modelo |
+| Árbol de trabajo | Directorio de trabajo aislado para experimentos en paralelo |
 
-Beginner version: [Terminology for beginners](/guide/start-here/terminology-for-beginners/)
+Versión para principiantes: [Terminología para principiantes](/guide/start-here/terminology-for-beginners/)
+
+## Cómo usarlo
+
+Esto es un diccionario rápido, no un tutorial completo.  
+Si en otra página ves una palabra y no recuerdas qué significa, vuelve aquí.
+
+Si la mayoría de estos términos aún no te suenan, empieza por [Terminología para principiantes](/guide/start-here/terminology-for-beginners/).
+
+## Malentendidos frecuentes
+
+### 1. No hace falta memorizarlo de principio a fin
+
+El uso más habitual es:
+
+- Encontrar la palabra en otra página
+- Volver a consultarla aquí
+- Seguir leyendo el original
+
+### 2. Entender la definición corta ≠ saber usarlo
+
+El glosario te ayuda a identificar el término; el cómo usarlo está en la página temática correspondiente.
+
+### 3. Que haya muchos términos no significa que no puedas seguir aprendiendo
+
+En Codex hay palabras nuevas de por sí. Basta con una idea aproximada y luego completar detalles.
+
+## Cuando no entiendas una palabra
+
+Puedes hacer esto:
+
+1. Consultar la definición corta
+2. Confirmar solo a qué clase de concepto pertenece
+3. Ir a la página temática para la explicación completa
+
+Así un término no interrumpe demasiado el ritmo de lectura.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Base de verificación:** Esta página solo ofrece definiciones cortas de términos habituales del manual; se revisaron enlaces internos y definiciones, y el cuerpo no depende de versión de producto, precios ni hechos de interfaz variables.  
+**Última verificación:** 2026-07-26

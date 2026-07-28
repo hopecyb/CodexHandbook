@@ -1,72 +1,74 @@
 ---
-title: Change template
-description: Bounded iteration on existing work.
+title: Plantilla de modificación
+description: Iterar con límites sobre lo existente.
 locale: es
-source_locale: en
-source_revision: abd9706
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Change template
+# Plantilla de modificación
 
-For "change a little on what already exists."
+Esta plantilla encaja en tareas de «cambiar un poco sobre lo que ya hay».
 
-Change tasks should state edit boundaries first.
+En modificación, lo primero es aclarar los límites del cambio.
 
-## Template
+## Plantilla
 
 ```text
-Goal: On 【existing feature/file】, complete 【specific change】.
-Context: 【why changing, blast radius】
-Inputs: @【relevant file paths】
-Constraints:
-- Keep 【API/style/behavior】 unchanged unless I explicitly allow
-- Minimal diff; no unrelated refactors
-- After each step, run only 【relevant tests】
-Acceptance:
-- 【behavior change description】
-- Related tests pass
-- Diff touches only necessary files
+Objetivo: en 【función/archivo existente】 completar 【cambio concreto】.
+Contexto: 【por qué cambiar, alcance del impacto】
+Entradas: @【rutas de archivos relacionados】
+Restricciones:
+- mantener 【API/estilo/comportamiento】 salvo que yo lo permita explícitamente
+- diff mínimo; sin refactor no relacionado
+- tras cada paso, ejecutar solo 【tests relevantes】
+Aceptación:
+- 【descripción del cambio de comportamiento】
+- pasan los tests relacionados
+- el diff solo incluye archivos necesarios
 ```
 
-## When to use this template
+## Cuándo usarla
 
-- Edit existing page or component
-- Fix a specific bug
-- Tweak copy, interaction, or config
-- Emphasize "only this part—no drive-by refactors"
+- Cambiar una página o un componente existente
+- Corregir un bug concreto
+- Ajustar copy, interacción o configuración
+- Quieres enfatizar «solo esta zona; sin refactor de paso»
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. Change is simpler than create, so write less
+### 1. Modificar es más simple que crear, así que se puede escribir mucho menos
 
-Change tasks hit old code, old constraints, and hidden dependencies—boundaries matter more.
+La modificación tropieza con facilidad con código antiguo, restricciones viejas y dependencias ocultas; necesita más límites.
 
-### 2. "Minimal diff" means fewer lines
+### 2. «Diff mínimo» = cambiar pocas líneas
 
-Minimal diff means **only what directly serves the goal**.
+«Diff mínimo» significa **solo lo directamente relacionado con el objetivo**.
 
-### 3. "Keep existing behavior" is enough
+### 3. Decir «mantén el comportamiento actual» no basta
 
-Also state what counts as "existing behavior."
+Conviene añadir: qué cuenta exactamente como «comportamiento actual».
 
-## What this template prevents
+## Qué evita esta plantilla
 
-- changing too much
-- changing the wrong thing
-- editing layers you didn't authorize
+Principalmente:
 
-Change prompts need "what to change" and "where changes are allowed."
+- cambiar de más
+- desviarse
+- tocar capas que no autorizaste
 
-## Related
+Un Prompt de modificación, además de «qué cambiar», debe aclarar «hasta dónde solo puede cambiar».
 
-- [Define done](/prompts/define-done/)
-- [Constraints and boundaries](/prompts/constraints-and-boundaries/)
+## Relacionado
+
+- [Definir el terminado](/prompts/define-done/)
+- [Restricciones y límites](/prompts/constraints-and-boundaries/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a change-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página ofrece una plantilla de tareas de modificación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

@@ -1,115 +1,117 @@
 ---
-title: AGENTS.md Scope and Precedence
-description: Multiple files, monorepos, and who wins between project rules and conversation prompts.
+title: "Alcance y prioridad de AGENTS.md"
+description: Varios archivos, monorepos y «reglas de proyecto vs prompt de conversación» — quién manda.
 locale: es
-source_locale: en
-source_revision: 9e4097e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-When multiple `AGENTS.md` files, configuration files, and the current conversation coexist, you need clarity on **which rule applies**.
+Cuando coexisten varios `AGENTS.md`, archivos de configuración y la conversación actual, hay que aclarar **qué regla aplica**.
 
-This page is about: when two rules look different, which one should you follow?
+Aquí se trata de: cuando dos reglas parecen distintas, ¿a cuál hay que hacer caso?
 
-## Precedence Overview
+## Resumen de prioridad
 
 ```text
-Managed organization policy > nearer-directory AGENTS.md > repo-root AGENTS.md > user configuration > current conversation
+Política gestionada de la organización > AGENTS.md más cercano al directorio > AGENTS.md de la raíz del repo > configuración de usuario > conversación actual
 ```
 
-“Nearer” means the subdirectory file **closer to the current working path**. For example, when working under `packages/web/AGENTS.md`, that file merges with the root file; on conflict, **the subdirectory wins**.
+«Más cercano» significa el archivo de subdirectorio **más próximo a la ruta de trabajo actual**. Por ejemplo, al trabajar bajo `packages/web/AGENTS.md`, ese archivo se fusiona con el de la raíz; en conflicto, **gana el subdirectorio**.
 
-## How to Understand “Closer Wins”
+## Cómo entender «lo más cercano gana»
 
-Think of it as:
+Puedes verlo así:
 
-- Root rules are “whole-repo default law”
-- Subdirectory rules are “special notes for this local area”
+- Las reglas de la raíz son la «ley por defecto de todo el repo»
+- Las reglas de un subdirectorio son la «nota especial de esa zona»
 
-So rules closer to where you are working are usually more specific and should take priority.
+Así, cuanto más cerca de la ubicación de trabajo, más específicas suelen ser — y más prioridad tienen.
 
-## Relationship with Conversation Prompts
+## Relación con el prompt de conversación
 
-| Source | Persistence | Good for |
+| Fuente | Persistencia | Qué conviene escribir |
 |---|---|---|
-| AGENTS.md | Cross-session, versioned | Team consensus, build commands, no-go areas |
-| Task prompt | This session only | This task’s goal, scope, deadline |
-| @ file reference | Session context boost | Specific implementation files, design files |
+| AGENTS.md | Entre sesiones, versionable | Consenso de equipo, comandos de build, zonas prohibidas |
+| Prompt de la tarea | Solo esta sesión | Objetivo de esta vez, alcance, plazo |
+| Referencias `@` a archivos | Refuerzo de contexto de esta sesión | Archivos de implementación concretos, diseños |
 
-**Do not** paste the entire `AGENTS.md` into chat repeatedly; if you must emphasize one item, reference it in one line: “Follow test requirements in AGENTS.md; additionally do not change `legacy/` this time.”
+**No** pegues de nuevo el `AGENTS.md` entero en el chat; si debes enfatizar una regla, cita en una frase: «Cumple los requisitos de test de AGENTS.md; esta vez, además, no toques el directorio `legacy/`.»
 
-## Monorepo Pattern
+## Patrón monorepo
 
 ```text
 repo/
-├── AGENTS.md              # Whole repo: package manager, CI, security
+├── AGENTS.md              # Común a todo el repo: gestor de paquetes, CI, seguridad
 ├── apps/
 │   └── web/
-│       └── AGENTS.md      # Frontend: component library, E2E commands
+│       └── AGENTS.md      # Frontend: biblioteca de componentes, comandos E2E
 └── packages/
     └── api/
-        └── AGENTS.md      # Backend: database migration conventions
+        └── AGENTS.md      # Backend: convenciones de migraciones de base de datos
 ```
 
-Principles:
+Principios:
 
-- **Root file**: 10–20 hard rules shared across the repo
-- **Subpackage files**: commands and directory notes specific to that package only
-- Avoid three files that are 80% duplicate—put shared content at the root; subpackages write only deltas
+- **Archivo raíz**: 10–20 reglas duras compartidas por todo el repo
+- **Archivos de subpaquete**: solo comandos y notas de directorio propias de ese paquete
+- Evita tres archivos con un 80 % de repetición — lo repetido va en la raíz; el subpaquete solo escribe el incremento
 
-## Boundary with Personal Preferences
+## Límite con preferencias personales
 
-Personal habits (theme, default model, local paths) belong in **user configuration**; do not put them in the team repo’s `AGENTS.md` or collaborators get hurt by mistake.
+Los hábitos personales (tema, modelo por defecto, rutas locales) van en la **configuración de usuario**, no en el `AGENTS.md` del repositorio del equipo; si no, perjudicas a los colaboradores.
 
-## Common Misconceptions
+## Malentendidos habituales
 
-### 1. What I say in the current conversation is newest, so it has highest priority
+### 1. Lo dicho en la conversación actual es lo más nuevo, así que también tiene la máxima prioridad
 
-Conversation is for “extra requirements this time,” not for casually overriding team or organization hard rules.
+La conversación sirve para añadir «requisitos extra de esta vez», pero eso no equivale a poder anular a la ligera reglas duras de equipo u organización.
 
-### 2. Subdirectory `AGENTS.md` is just copying root rules
+### 2. El `AGENTS.md` del subdirectorio es una copia de las reglas raíz
 
-It should not be.
+Tampoco debería serlo.
 
-Better practice:
+Enfoque más adecuado:
 
-- Root rules hold what is common
-- Subdirectories write only deltas and exceptions
+- La raíz escribe lo común
+- El subdirectorio solo escribe incrementos y excepciones
 
-### 3. Knowing the order alone is not enough
+### 3. Solo memorizar el orden no basta
 
-You also need to know:
+No basta.
 
-- Which kind of information belongs on which layer
-- Why one layer wins on conflict
+Más importante es saber:
 
-## How to Judge on Conflict
+- Qué tipo de información va en cada capa
+- Por qué, en conflicto, manda una capa concreta
 
-When two rules seem to conflict, check in this order:
+## Cómo juzgar un conflicto
 
-1. Which is closer to the current working directory
-2. Which is a long-term project rule versus a temporary addition for this time only
-3. Whether organization or managed policy restricts from above
+Cuando dos reglas parecen chocar, mira en este orden:
 
-On rule conflict, usually prefer the layer that is closer, harder, and more explicit—do not assume “the latest sentence” always wins.
+1. ¿Cuál está más cerca del directorio de trabajo actual?
+2. ¿Cuál es una regla de proyecto a largo plazo y cuál solo un refuerzo temporal?
+3. ¿Hay una política de organización o gestionada que restrinja desde una capa superior?
 
-## Common Mistakes
+En conflicto, suele ganar la capa más cercana, más dura y más explícita; no asumas por defecto que «la frase más reciente» siempre gana.
 
-- Subdirectory `AGENTS.md` contradicts the root file without saying which wins
-- Putting sensitive keys in `AGENTS.md` and committing to Git—use secret management and environment variables
-- Expecting a “temporary relaxation” in conversation to override team-managed policy (usually not possible)
+## Errores habituales
 
-## Acceptance Checklist
+- El `AGENTS.md` del subdirectorio contradice el de la raíz sin aclarar cuál manda
+- Escribir secretos en `AGENTS.md` y hacer commit en Git — usa gestión de secretos y variables de entorno
+- Esperar que un «relajamiento temporal» en el chat anule la política gestionada del equipo (normalmente no se puede)
 
-- [ ] Root `AGENTS.md` and subpackage files have a clear division of labor
-- [ ] Clear awareness that conflicting rules favor the subdirectory
-- [ ] Task prompts write only deltas, not a full copy of the project manual
+## Lista de verificación
+
+- [ ] El `AGENTS.md` raíz y los de subpaquete tienen un reparto claro
+- [ ] Hay conciencia clara de «el subdirectorio gana» ante conflictos
+- [ ] El prompt de la tarea solo escribe el incremento; no copia el manual entero del proyecto
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Review note:** This page currently states precedence among `AGENTS.md`, user configuration, and the current conversation as an overly fixed linear order; actual precedence may differ across clients, organization-managed capabilities, and runtime environments. It needs a rewrite after official current sources are added.  
-**Last verified:** 2026-07-26
+**Estado:** desactualizado  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Nota de revisión:** Esta página escribe la prioridad entre `AGENTS.md`, configuración de usuario y conversación actual como un orden lineal demasiado determinista; la precedence real puede diferir según cliente, capacidades gestionadas por la organización y entorno de ejecución. Hay que reescribirla tras completar la base oficial actual.  
+**Última verificación:** 2026-07-26

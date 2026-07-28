@@ -1,73 +1,73 @@
 ---
-title: Create template
-description: Build features, documents, or artifacts from scratch.
+title: Plantilla de creación
+description: Implementar de cero una función, un texto o un artefacto.
 locale: es
-source_locale: en
-source_revision: f7e4caa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Create template
+# Plantilla de creación
 
-From-scratch tasks often fail in two ways:
+En tareas de creación desde cero, los dos problemas más fáciles son:
 
-- big goal, no boundaries
-- not enough information but generation starts anyway
+- objetivo amplio sin límites
+- poca información, pero prisa por que Codex genere ya
 
-The create template states deliverable, audience, and constraints before work begins.
+La plantilla de creación fija primero el artefacto, el uso y las restricciones, y luego empieza.
 
-## Template
+## Plantilla
 
 ```text
-Goal: Create 【artifact name】 for 【purpose/audience】.
-Context: 【existing conventions, design style, dependency limits】
-Inputs: 【spec, sketch, reference @files】
-Constraints:
-- Only modify/create within 【path scope】
-- Do not introduce 【exclusions】
-- Require my approval before 【high-risk operations】
-Acceptance:
-- 【observable result 1】
-- 【observable result 2】
-- Provide self-test steps
-If information is insufficient, list assumptions and ask me—don't guess.
+Objetivo: crear 【nombre del artefacto】 para 【uso/usuarios】.
+Contexto: 【convenciones existentes, estilo de diseño, límites de dependencias】
+Entradas: 【especificación, boceto, referencias @archivos】
+Restricciones:
+- modificar/crear solo dentro de 【alcance de rutas】
+- no introducir 【exclusiones】
+- operaciones de alto riesgo: ejecutar tras mi aprobación
+Aceptación:
+- 【resultado observable 1】
+- 【resultado observable 2】
+- pasos de auto-prueba incluidos
+Si falta información, lista las hipótesis y pregunta; no adivines.
 ```
 
-## When to use this template
+## Cuándo usarla
 
-- New page, component, script, or document from zero
-- You know what to produce but haven't started
-- You want scope stated before building
+- Crear de cero una página, un componente, un script o documentación
+- Ya sabes qué entregar, pero aún no has empezado
+- Quieres acotar el alcance de creación antes de actuar
 
-## Common misconceptions
+## Ideas erróneas habituales
 
-### 1. Create tasks mean "free rein"
+### 1. Crear = darle carta blanca
 
-From-scratch work especially needs:
+Hay que aclarar:
 
-- who it's for
-- what it's for
-- style or technical paths that are off limits
+- para quién
+- para qué sirve
+- qué estilos o stacks están prohibidos
 
-### 2. Context is optional decoration
+### 2. El contexto es solo decoración opcional
 
-For create tasks, context often steers the entire deliverable.
+En creación, el contexto suele orientar toda la dirección del artefacto.
 
-### 3. "Looks good" as acceptance
+### 3. Aceptación = «que se vea bien»
 
-Hard to judge whether you're actually done.
+Así es muy difícil juzgar si de verdad está terminado.
 
-In create tasks, the riskiest move is starting before "what to build and for whom" is clear.
+Lo peor en creación: empezar sin aclarar «qué» y «para quién».
 
-## Related
+## Relacionado
 
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Define done](/prompts/define-done/)
+- [Trabajo guiado por especificación](/cases/workflows/specification-driven-work/)
+- [Definir el terminado](/prompts/define-done/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a create-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Esta página ofrece una plantilla de tareas de creación; se han revisado enlaces y estructura, y el cuerpo no depende de hechos volátiles del producto.

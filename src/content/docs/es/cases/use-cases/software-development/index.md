@@ -1,30 +1,30 @@
 ---
-title: Software development
-description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
+title: Desarrollo de software
+description: Entrada a casos de cambiar código, corregir bugs y añadir verificación — énfasis en control de alcance, tests y rollback.
 locale: es
-source_locale: en
-source_revision: 050fe4a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Software development cases focus on this question:
+Los casos de desarrollo de software se centran en este tipo de pregunta:
 
-> **How does Codex change real repos accurately, reviewably, and verifiably?**
+> **Cómo hace Codex cambios precisos, revisables y verificables en un repo real.**
 
-## Cases in this group
+## Entradas de este grupo
 
-- [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Corregir un bug con verificación](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## What this group emphasizes
+## Enfoque del grupo
 
-- How to state task scope clearly
-- Why verification and rollback paths matter from the start
-- Avoiding "while I'm here" extra changes in real development
+- Cómo dejar claro el alcance de la tarea
+- Por qué hay que pensar desde el inicio en verificación y ruta de rollback
+- Cómo evitar en el desarrollo real el «arreglar un poco más de paso»
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current software-development case entry and development workflow, run tests, and rollback chapters; this page only describes the development case group entry and focus areas.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con la entrada actual de casos software-development del repo y los capítulos de flujo de desarrollo, ejecutar tests y rollback. Esta página solo describe las entradas y focos del grupo de desarrollo.

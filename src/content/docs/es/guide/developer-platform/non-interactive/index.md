@@ -1,35 +1,35 @@
 ---
-title: Non-Interactive Mode
-description: Batch jobs, scripts, and pipelines—understand what tasks fit first, then commands and output design.
+title: Modo no interactivo
+description: 'Página sobre lotes, scripts y pipelines: primero qué Tareas encajan, después comandos y diseño de salida.'
 locale: es
-source_locale: en
-source_revision: d52e702
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people first hear “non-interactive mode” and think of it as “Codex without chat.”
+La primera vez que se ve «modo no interactivo», mucha gente lo entiende como «Codex normal sin chat».
 
-Non-interactive mode is for putting Codex in scripts, CI, or batch jobs so one command completes one stable task.
+El modo no interactivo encaja mejor cuando metes Codex en un script, CI o lote para que complete una cosa de forma estable con un solo comando.
 
-## Recommended order
+## Orden recomendado
 
 1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [Structured output](/guide/developer-platform/non-interactive/structured-output/)
-4. [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+2. [Scripts y pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [Salida estructurada](/guide/developer-platform/non-interactive/structured-output/)
+4. [Códigos de salida y reintentos](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## What this section solves
+## Qué problemas resuelve mejor este grupo
 
-- Turning one task into a CLI step
-- Letting CI judge success, failure, and retry
-- Making output easy for downstream scripts
+- Cómo convertir una Tarea en un paso de línea de comandos
+- Cómo hace CI para distinguir éxito, fallo y reintento
+- Cómo hacer la salida más fácil de seguir consumiendo por scripts
 
-It fits when scripts and pipelines need stable handoff—not back-and-forth chat.
+Sirve para que scripts y pipelines reciban resultados de forma estable; no para charlar ida y vuelta.
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** Cross-checked against the current non-interactive subsection structure and entry links in this repo; this page only groups “non-interactive mode fits scripts, batch, and pipelines” without promising specific command flags.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Productos aplicables:** CLI / API / Cloud  
+**Base de verificación:** Contrastado con la estructura actual del subcapítulo non-interactive y sus enlaces de entrada; esta página solo aclara que el modo no interactivo encaja en scripts, lotes y pipelines, sin comprometer parámetros concretos de comandos.  
+**Última verificación:** 2026-07-26

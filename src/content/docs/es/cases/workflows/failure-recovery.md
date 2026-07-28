@@ -1,94 +1,94 @@
 ---
-title: Failure recovery
-description: When tasks drift, tests go red, or context runs out—how to roll back safely and continue.
+title: Recuperación ante fallos
+description: Cuando la tarea se desvía, los tests fallan o se agota el contexto — cómo retroceder con seguridad y continuar.
 locale: es
-source_locale: en
-source_revision: 12fa1a5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Failure recovery** covers how to stabilize the situation after a task goes off track or stops mid-way. This chapter gives repeatable **detect → stop loss → recover → postmortem** steps—pair with [Undo and recover](/guide/getting-started/undo-and-recover/) and [Long-running task management](/cases/workflows/long-running-task-management/).
+**Recuperación ante fallos** trata de cómo contener la situación cuando una tarea se desvía o se interrumpe, y luego seguir adelante. Este capítulo ofrece un ciclo repetible **detectar → contener → recuperar → retrospectiva**, combinable con [Deshacer y recuperar](/guide/getting-started/undo-and-recover/) y [Gestión de tareas largas](/cases/workflows/long-running-task-management/).
 
-## What this page covers
+## Enfoque de esta página
 
-- When to `git stash`, revert commits, or open a new thread
-- How to package failure info into the next prompt
-- How teams record recurring issues
+- Cuándo usar `git stash`, revertir un commit o abrir un hilo nuevo
+- Cómo volcar la información del fallo en el siguiente prompt
+- Cómo registra el equipo los problemas recurrentes
 
-## Failure signals
+## Señales de fallo
 
-| Signal | Possible action |
+| Señal | Acción posible |
 |---|---|
-| Tests failing widely | Stop execution; narrow diff |
-| Wrong directory/branch | Undo; re-`@` correct path |
-| Plan and implementation diverge badly | Return to explore or plan |
-| Context too long, constraints forgotten | New thread + summary handoff |
-| Approvals/rules repeatedly rejected | Check if rules conflict with task |
+| Fallo masivo de tests | Detener la ejecución, reducir el diff |
+| Directorio/rama equivocados | Deshacer, volver a `@` la ruta correcta |
+| Plan e implementación muy desviados | Volver a explorar o planificar |
+| Contexto demasiado largo, se olvidan restricciones | Hilo nuevo + traspaso con resumen |
+| Aprobación/reglas rechazan una y otra vez | Revisar si reglas y tarea se contradicen |
 
-## Minimum viable recovery flow
-
-```text
-1. Stop further changes (explicitly say "do not write code yet")
-2. Save state: git status / stash / record thread ID
-3. Summarize in 5 bullets or fewer: goal, done so far, failure symptom, hypothesis
-4. Choose: roll back / narrow scope / continue in new thread
-5. On success, write to AGENTS.md or case postmortem
-```
-
-Prompt example:
+## Flujo mínimo de recuperación
 
 ```text
-Current changes caused 12 test failures. Do not keep fixing yet.
-List files affected by the last 3 commits, suggest minimal rollback point,
-and give a smaller fix plan.
+1. Deja de cambiar (di claramente «no escribas código todavía»)
+2. Guarda el estado: git status / stash / anota el thread ID
+3. Resume en ≤5 puntos: objetivo, hecho, síntoma del fallo, hipótesis
+4. Elige: retroceder / reducir alcance / continuar en hilo nuevo
+5. Tras el éxito, escribe en AGENTS.md o en la retrospectiva del caso
 ```
 
-## Recommended workflow
+Ejemplo de prompt:
 
 ```text
-Detect (tests / human / CI)
-    → Stop loss (stop writing, isolate branch)
-    → Diagnose (see "diagnose before fixing")
-    → Small-step retry
-    → Capture lessons
+Los cambios actuales hacen fallar 12 tests. No sigas corrigiendo todavía.
+Lista los archivos afectados por los 3 commits más recientes, sugiere el punto mínimo de rollback
+y propón un plan de corrección más pequeño.
 ```
 
-Multi-agent: see [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)—on failure, clarify which sub-task owns rollback.
+## Flujo recomendado
 
-## Common mistakes
+```text
+Detectar (tests / humano / CI)
+    → Contener (dejar de escribir, aislar la rama)
+    → Diagnosticar (ver «Diagnosticar antes de corregir»)
+    → Reintentar en pasos pequeños
+    → Retrospectiva y captura
+```
 
-- Stack patches in the wrong direction
-- Don't save failure logs—new thread repeats same error
-- Force `git push` to salvage
-- Don't distinguish environment (local vs Cloud)—recovery steps invalid
+En escenarios multi-Agent, ver [Coordinación multi-Agent](/cases/workflows/multi-agent-coordination/): ante un fallo hay que dejar claro qué subtarea hace el rollback.
 
-## Safety boundaries
+## Errores frecuentes
 
-- Recovery itself constrained by [command rules](/guide/customization/rules/command-rules/)
-- Production incidents: roll back first, root cause later—don't let Agent fix production data directly
+- Seguir «añadiendo un poco más» en la dirección equivocada
+- No guardar logs del fallo → el hilo nuevo repite el mismo error
+- Forzar `git push` para «salvar» la situación
+- No distinguir entornos (local vs Cloud) → pasos de recuperación inútiles
 
-## Acceptance checklist
+## Límites de seguridad
 
-- [ ] Can explain chosen recovery strategy and why
-- [ ] Repo back to buildable/testable state
-- [ ] Failure cause and lesson recorded (issue or AGENTS.md)
-- [ ] If new thread needed, key constraint summary included
+- La propia recuperación está sujeta a [reglas de comandos](/guide/customization/rules/command-rules/)
+- En incidentes de producción: rollback primero, análisis de causa después; no dejes que el Agent conecte a producción a «arreglar datos»
 
-## Related chapters
+## Checklist de aceptación
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Handoff and resume](/guide/agent-work/handoff-and-resume/)
-- [Error reference](/guide/reference/error-reference/)
+- [ ] Puedes explicar la estrategia de recuperación elegida y por qué
+- [ ] El repo vuelve a un estado construible/testeable
+- [ ] Causa y lecciones quedaron registradas (issue o AGENTS.md)
+- [ ] Si hace falta un hilo nuevo, hay un resumen de restricciones clave
 
-## Reference sources
+## Capítulos relacionados
 
-- freestylefly/CodexGuide postmortems and playbook
-- stormzhang troubleshooting chapters
+- [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/)
+- [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+- [Referencia de errores](/guide/reference/error-reference/)
+
+## Fuentes de referencia
+
+- Retrospectivas y playbooks de freestylefly/CodexGuide
+- Capítulos de depuración de stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified handoff and resume, diagnose, command rules, and error reference chapters in this handbook; this page describes general failure stop-loss and continue methods—not treating one client's recovery button or command as fixed rules.
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE / Cloud  
+**Última verificación:** 2026-07-26  
+**Base de verificación:** Contrastado con los capítulos ya verificados de traspaso y reanudación, diagnóstico, reglas de comandos y referencia de errores. Esta página describe el método general de contención y continuación ante fallos; no fija un botón o comando concreto de un cliente.

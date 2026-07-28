@@ -1,33 +1,60 @@
 ---
-title: Work with Files
-description: Have Codex read and write files within a clear scope.
+title: Trabajar con archivos
+description: Haz que Codex lea y escriba archivos dentro de un alcance explícito.
 locale: es
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: b704295
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-## Goal for this step
+## Objetivo de este paso
 
-Name a specific file and complete one controlled edit.
+Indica el nombre del archivo y completa una edición controlada.
 
-## Exercise
+A partir de aquí, la Tarea pasa de «solo chat» a «hacer que mueva archivos de verdad»; el foco pasa de explicar el objetivo a controlar el alcance.
+
+## Ejercicio
 
 ```text
-Edit only hello.md: add a date comment at the top (today's date).
-Do not change other files and do not run commands.
-When done, list the lines you changed.
+Edita solo hello.md: añade al inicio una línea de comentario con la fecha de hoy.
+No cambies otros archivos ni ejecutes comandos.
+Al terminar, enumera las líneas que modificaste.
 ```
 
-Review the diff before accepting. Related: [File and folder context](/guide/context/file-and-folder-context/)
+Revisa el diff antes de aceptar. Relacionado: [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
 
-Next: [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
+## Puntos clave del ejercicio
+
+Aquí importan tres cosas:
+
+- Indicar qué archivo se puede cambiar
+- Indicar qué acciones extra no hacer
+- Pedir que explique los cambios al terminar
+
+Juntas, son la capacidad básica de «edición controlada».
+
+## Malentendidos frecuentes
+
+### 1. Cambiar un archivo pequeño no tiene sentido
+
+Cuanto menor es el alcance, más fácil ver si se ha salido de los límites.
+
+### 2. Si escribes el nombre del archivo, seguro que no toca nada más
+
+Tampoco puedes darlo por sentado.
+
+Por eso hay que combinarlo con la revisión del diff.
+
+La primera vez que se mueven archivos, lo importante no es cuánto se cambia, sino que el límite del cambio sea claro y fácil de comprobar.
+
+Siguiente: [Dar Tareas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Productos aplicables:** App / CLI / IDE  
+**Base de verificación:** Contrastado con los capítulos ya verificados de contexto de archivos y carpetas, revisión de resultados y ruta para principiantes; el contenido se limita al método estable de «una edición controlada en un alcance explícito».  
+**Última verificación:** 2026-07-26
