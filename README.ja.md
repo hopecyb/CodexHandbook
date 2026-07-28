@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/ja/">オンラインで読む</a>
   ·
-  <a href="./src/content/docs/guide/index.md">初心者ガイド</a>
+  <a href="./src/content/docs/ja/guide/start-here/index.md">ここから始める</a>
   ·
   <a href="./docs/planning/content-architecture.md">コンテンツ構成</a>
   ·
@@ -151,6 +151,14 @@ pnpm dev
 ```bash
 pnpm build
 ```
+
+日本語翻訳の進捗確認：
+
+```bash
+pnpm i18n:status -- --locale ja
+```
+
+日本語本文は `src/content/docs/ja/`（簡体字中国語ソース `src/content/docs/` のミラー）にあります。用語集：[`glossary/ja.md`](./glossary/ja.md)。2026-07-28 時点で日本語ページのカバー率は **100%**（いずれも `translation_status: draft`、言語・技術レビュー待ち）。
 
 ## プロジェクトの原則
 

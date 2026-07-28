@@ -1,0 +1,125 @@
+---
+title: Codex ハンドブック
+head:
+  - tag: title
+    content: Codex ハンドブック
+description: Codex ハンドブックは、製品の基礎、プロンプト、Skills、実践ケースを通じて、タスクの説明、実行プロセス、検証結果を再利用可能な方法にまとめます。
+template: splash
+editUrl: false
+lastUpdated: false
+locale: ja
+source_locale: zh-CN
+source_revision: ba31b5a
+translation_status: draft
+translated_at: 2026-07-28
+hero:
+  title: Codex で <br /> アイデアを成果物に
+  tagline: 製品の理解、プロンプトの書き方、Skills のパッケージ化、実践ケースの振り返りまで。毎回のタスクを実行可能で検証でき、引き継ぎ可能な方法に整理します。
+  image:
+    html: |
+      <div class="home-hero-art" aria-hidden="true">
+        <span class="home-hero-art__halo"></span>
+        <span class="home-hero-art__panel home-hero-art__panel--back"></span>
+        <span class="home-hero-art__panel home-hero-art__panel--mid"></span>
+        <span class="home-hero-art__shelf"></span>
+        <div class="home-hero-art__book">
+          <img src="/icon-512.png" alt="" />
+        </div>
+        <div class="home-hero-art__note home-hero-art__note--guide">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="home-hero-art__note home-hero-art__note--check">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  actions:
+    - text: ここから始める
+      icon: right-arrow
+      link: /ja/guide/start-here/
+    - text: GitHub で見る
+      icon: external
+      variant: minimal
+      link: https://github.com/hopecyb/CodexHandbook
+---
+
+import AboutHandbook from '../../../components/AboutHandbook.astro';
+
+<section class="home-section home-section-lead" aria-label="ハンドブックの位置づけ">
+	<p>Codex はコードを編集するだけのツールではありません。資料の理解、コンテンツの生成、プロトタイプの構築、ドキュメントの処理、変更のレビュー、反復作業の自動化などに役立ち、チーム協業における実行パートナーにもなります。</p>
+	<p>このハンドブックは 4 つのモジュールで構成されています。製品の理解、プロンプトの書き方、Skills のパッケージ化、実践ケースを通じた完全なフローの学習。基礎レベルに関わらず、次のステップが見つかります。</p>
+</section>
+
+<section class="home-section" aria-labelledby="modules-heading">
+	<div class="section-heading">
+		<p>4 つのモジュール</p>
+		<h2 id="modules-heading">モジュールから始める</h2>
+	</div>
+	<div class="module-grid">
+		<a class="module-card" href="/ja/guide/">
+			<strong>Codex ガイド</strong>
+			<span>クライアントのインストール、権限の理解、最初のタスクの完了。</span>
+		</a>
+		<a class="module-card" href="/ja/prompts/">
+			<strong>プロンプト</strong>
+			<span>目標、背景、制約、検証基準を明確に。コピー可能なテンプレート付き。</span>
+		</a>
+		<a class="module-card" href="/ja/skills/">
+			<strong>Skills</strong>
+			<span>安定した方法をパッケージ化し、Plugins、MCP、Hooks で拡張。</span>
+		</a>
+		<a class="module-card" href="/ja/cases/">
+			<strong>実践ケース</strong>
+			<span>バグ修正、ライティング、自動化など、実際のタスクから学ぶ。</span>
+		</a>
+	</div>
+</section>
+
+<section class="home-section" aria-labelledby="paths-heading">
+	<div class="section-heading">
+		<p>パスを選ぶ</p>
+		<h2 id="paths-heading">目標に合わせて始める</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/ja/guide/learning-paths/beginner/01-talk-to-codex/">
+			<strong>初心者</strong>
+			<span>Codex を理解し、最初のタスクを完了し、結果の確認と取り消しを学ぶ。</span>
+		</a>
+		<a class="path-card" href="/ja/guide/learning-paths/creator/">
+			<strong>クリエイター</strong>
+			<span>リサーチ、ライティング、画像、プレゼン、公開の入門ガイドとテンプレート。（さらなるステップは順次追加）</span>
+		</a>
+		<a class="path-card" href="/ja/guide/learning-paths/developer/">
+			<strong>開発者</strong>
+			<span>コードベースの理解、要件の実装、テスト、レビュー、複雑なタスクの処理。（さらなるステップは順次追加）</span>
+		</a>
+		<a class="path-card" href="/ja/guide/learning-paths/team/">
+			<strong>チーム</strong>
+			<span>共有の説明、権限の境界、品質基準、チーム自動化。（さらなるステップは順次追加）</span>
+		</a>
+	</div>
+</section>
+
+<section class="home-section home-map" aria-labelledby="map-heading">
+	<div class="section-heading">
+		<p>能力マップ</p>
+		<h2 id="map-heading">段階的に身につける能力</h2>
+	</div>
+	<ul>
+		<li><span>01</span> 目標が明確で境界がはっきりし、検証可能なタスクプロンプトを書く</li>
+		<li><span>02</span> ファイル、コンテキスト、ターミナル、ブラウザ、外部資料を管理する</li>
+		<li><span>03</span> Skills、Plugins、MCP、Hooks で Codex を拡張する</li>
+		<li><span>04</span> 長期タスク、マルチ Agent 協業、振り返り、引き継ぎを組織する</li>
+		<li><span>05</span> 個人プロジェクトとチームシーンで安全、検証、ガバナンスの仕組みを構築する</li>
+	</ul>
+</section>
+
+<AboutHandbook title="オープンソースでの共同開発">
+
+ハンドブックは簡体中国語をソース言語とし、繁体中国語、英語、フランス語、日本語、韓国語などのバージョンを順次拡充していきます。コンテンツには状態、検証日、対象製品が記載されており、読者がそのまま実行できる内容と、再確認が必要な内容を区別できます。
+
+[学習パスを見る](/ja/guide/learning-paths/)
+
+</AboutHandbook>

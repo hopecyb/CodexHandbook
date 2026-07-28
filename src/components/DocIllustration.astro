@@ -13,7 +13,8 @@ const rawSegments = entryId.split('/').filter(Boolean);
 const segments = localeSegments.has(rawSegments[0] ?? '') ? rawSegments.slice(1) : rawSegments;
 
 const routeLocale = Astro.locals.starlightRoute?.locale ?? 'root';
-const isZh = routeLocale === 'root' || routeLocale === 'zh-tw';
+const uiLang: 'zh' | 'ja' | 'en' =
+	routeLocale === 'root' || routeLocale === 'zh-tw' ? 'zh' : routeLocale === 'ja' ? 'ja' : 'en';
 
 const moduleKey = segments[0] ?? 'guide';
 const topicKey = segments[1] ?? 'overview';
@@ -88,7 +89,38 @@ const moduleMapEn: Record<string, ModuleVisual> = {
 	},
 };
 
-const moduleMap = isZh ? moduleMapZh : moduleMapEn;
+const moduleMapJa: Record<string, ModuleVisual> = {
+	guide: {
+		label: 'Guide',
+		accent: '#f97316',
+		secondary: '#fed7aa',
+		glyph: '01',
+		orbit: ['経路', '権限', '検証'],
+	},
+	prompts: {
+		label: 'Prompts',
+		accent: '#0ea5e9',
+		secondary: '#bae6fd',
+		glyph: '02',
+		orbit: ['目標', '制約', '完了'],
+	},
+	skills: {
+		label: 'Skills',
+		accent: '#14b8a6',
+		secondary: '#99f6e4',
+		glyph: '03',
+		orbit: ['流れ', '拡張', '再利用'],
+	},
+	cases: {
+		label: 'Cases',
+		accent: '#f43f5e',
+		secondary: '#fecdd3',
+		glyph: '04',
+		orbit: ['タスク', '実行', '振り返り'],
+	},
+};
+
+const moduleMap = uiLang === 'zh' ? moduleMapZh : uiLang === 'ja' ? moduleMapJa : moduleMapEn;
 
 const moduleVisual =
 	moduleMap[moduleKey] ??
@@ -97,7 +129,12 @@ const moduleVisual =
 		accent: '#8b5cf6',
 		secondary: '#ddd6fe',
 		glyph: '05',
-		orbit: isZh ? ['内容', '结构', '协作'] : ['Content', 'Structure', 'Collab'],
+		orbit:
+			uiLang === 'zh'
+				? ['内容', '结构', '协作']
+				: uiLang === 'ja'
+					? ['内容', '構造', '協業']
+					: ['Content', 'Structure', 'Collab'],
 	} satisfies ModuleVisual);
 
 const topicSeed = `${moduleKey}/${topicKey}/${title}`;
@@ -209,7 +246,50 @@ const hintMapEn: Record<string, PageHint> = {
 	},
 };
 
-const hintMap = isZh ? hintMapZh : hintMapEn;
+const hintMapJa: Record<string, PageHint> = {
+	'local-vs-cloud': {
+		variant: 'split',
+		chips: ['ローカル', 'クラウド', '場面を選ぶ'],
+		kicker: '実行場所を選ぶ',
+	},
+	'files-tools-and-commands': {
+		variant: 'terminal',
+		chips: ['ファイル', 'ツール', 'コマンド'],
+		kicker: '操作に境界を付ける',
+	},
+	'permissions-and-approvals': {
+		variant: 'shield',
+		chips: ['承認', '範囲', '確認'],
+		kicker: '危険な操作は先に確認',
+	},
+	'sandbox-and-network': {
+		variant: 'shield',
+		chips: ['サンドボックス', 'ネットワーク', 'リスク境界'],
+		kicker: 'まず締めてから開く',
+	},
+	'run-your-first-task': {
+		variant: 'flow',
+		chips: ['目標', '制約', '受け入れ'],
+		kicker: '最初は小さなタスクから',
+	},
+	'review-the-result': {
+		variant: 'document',
+		chips: ['差分', '受け入れ', '修正'],
+		kicker: '「完了」だけを信じない',
+	},
+	'undo-and-recover': {
+		variant: 'flow',
+		chips: ['取り消し', '巻き戻し', '再試行'],
+		kicker: 'まず安全な状態に戻す',
+	},
+	'context-and-files': {
+		variant: 'document',
+		chips: ['コンテキスト', 'ファイル', '焦点'],
+		kicker: '必要な情報を手元に',
+	},
+};
+
+const hintMap = uiLang === 'zh' ? hintMapZh : uiLang === 'ja' ? hintMapJa : hintMapEn;
 
 const pageHint = hintMap[topicKey] ?? {
 	variant: 'document' as const,
@@ -217,27 +297,39 @@ const pageHint = hintMap[topicKey] ?? {
 	kicker: `${moduleVisual.label} / ${topicKey.replace(/-/g, ' ')}`,
 };
 
-const splitLabels = isZh
-	? {
-			yourComputer: '你的电脑',
-			remoteRunner: '远程运行器',
-			howToChoose: '怎么选',
-			byScenario: '看任务场景',
-			fastIterate: '快改快看',
-			longTasks: '长任务继续跑',
-			bottomHint: '本机文件 / 长任务 / 远程仓库',
-			ariaSuffix: '主题插图',
-		}
-	: {
-			yourComputer: 'Your computer',
-			remoteRunner: 'Remote runner',
-			howToChoose: 'How to choose',
-			byScenario: 'By task scenario',
-			fastIterate: 'Iterate fast',
-			longTasks: 'Long tasks keep going',
-			bottomHint: 'Local files / long tasks / remote repos',
-			ariaSuffix: 'topic illustration',
-		};
+const splitLabels =
+	uiLang === 'zh'
+		? {
+				yourComputer: '你的电脑',
+				remoteRunner: '远程运行器',
+				howToChoose: '怎么选',
+				byScenario: '看任务场景',
+				fastIterate: '快改快看',
+				longTasks: '长任务继续跑',
+				bottomHint: '本机文件 / 长任务 / 远程仓库',
+				ariaSuffix: '主题插图',
+			}
+		: uiLang === 'ja'
+			? {
+					yourComputer: '自分の PC',
+					remoteRunner: 'リモート実行環境',
+					howToChoose: '選び方',
+					byScenario: 'タスクの場面で',
+					fastIterate: '素早く試す',
+					longTasks: '長時間タスクも継続',
+					bottomHint: 'ローカルファイル / 長時間 / リモート倉庫',
+					ariaSuffix: 'の挿絵',
+				}
+			: {
+					yourComputer: 'Your computer',
+					remoteRunner: 'Remote runner',
+					howToChoose: 'How to choose',
+					byScenario: 'By task scenario',
+					fastIterate: 'Iterate fast',
+					longTasks: 'Long tasks keep going',
+					bottomHint: 'Local files / long tasks / remote repos',
+					ariaSuffix: 'topic illustration',
+				};
 ---
 
 <figure class="doc-illustration" aria-label={`${title} ${splitLabels.ariaSuffix}`}>

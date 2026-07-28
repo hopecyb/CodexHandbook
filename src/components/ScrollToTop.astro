@@ -2,8 +2,12 @@
 import ArrowUpToLine from '@lucide/astro/icons/arrow-up-to-line';
 
 const locale = Astro.locals.starlightRoute?.locale ?? 'root';
-const isZh = locale === 'root' || locale === 'zh-tw';
-const scrollLabel = isZh ? '回到顶部' : 'Back to top';
+const scrollLabel =
+	locale === 'root' || locale === 'zh-tw'
+		? '回到顶部'
+		: locale === 'ja'
+			? 'ページ上部へ'
+			: 'Back to top';
 ---
 
 <button type="button" class="scroll-to-top" aria-label={scrollLabel} hidden>

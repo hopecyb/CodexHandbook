@@ -41,3 +41,6 @@ docs/superpowers/*
 # Astro / Starlight
 dist/
 .astro/
+
+# Auto-generated Traditional Chinese locale (OpenCC from zh-CN root)
+src/content/docs/zh-tw/

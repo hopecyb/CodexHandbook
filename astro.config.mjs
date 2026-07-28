@@ -164,6 +164,16 @@ export default defineConfig({
 						gtag('config', 'G-KPP4Z7D6SZ');
 					`,
 				},
+				{
+					tag: 'script',
+					content: `
+						(function(c,l,a,r,i,t,y){
+							c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+							t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+							y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+						})(window, document, "clarity", "script", "xtawngb7re");
+					`,
+				},
 			],
 			customCss: ['./src/styles/custom.css'],
 			components: {
@@ -202,22 +212,34 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Codex 指南',
-					translations: { en: 'Codex Guide' },
+					translations: {
+						en: 'Codex Guide',
+						ja: 'Codex ガイド',
+						'zh-tw': 'Codex 指南',
+					},
 					items: [{ autogenerate: { directory: 'guide' } }],
 				},
 				{
 					label: '提示词',
-					translations: { en: 'Prompts' },
+					translations: {
+						en: 'Prompts',
+						ja: 'プロンプト',
+						'zh-tw': '提示詞',
+					},
 					items: [{ autogenerate: { directory: 'prompts' } }],
 				},
 				{
 					label: 'Skills',
-					translations: { en: 'Skills' },
+					translations: { en: 'Skills', ja: 'Skills', 'zh-tw': 'Skills' },
 					items: [{ autogenerate: { directory: 'skills' } }],
 				},
 				{
 					label: '实战案例',
-					translations: { en: 'Cases' },
+					translations: {
+						en: 'Cases',
+						ja: '実践ケース',
+						'zh-tw': '實戰案例',
+					},
 					items: [{ autogenerate: { directory: 'cases' } }],
 				},
 			],
