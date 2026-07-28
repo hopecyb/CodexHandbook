@@ -25,10 +25,11 @@ export type FooterLink = {
 	href: string;
 	label: LocalizedLabel;
 	external?: boolean;
+	global?: boolean;
 };
 
 export type FooterLinkGroup = {
-	id: 'modules' | 'resources' | 'community';
+	id: 'modules' | 'resources' | 'community' | 'trust';
 	title: LocalizedLabel;
 	links: FooterLink[];
 };
@@ -284,6 +285,71 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 					de: 'Versionsrichtlinie',
 					pt: 'Política de versão',
 					vi: 'Chính sách phiên bản',
+				},
+			},
+		],
+	},
+	{
+		id: 'trust',
+		title: {
+			'zh-CN': '信任',
+			en: 'Trust',
+			'zh-TW': '信任',
+			fr: 'Confiance',
+			ja: '信頼',
+			ko: '신뢰',
+			es: 'Confianza',
+			de: 'Vertrauen',
+			pt: 'Confiança',
+			vi: 'Tin cậy',
+		},
+		links: [
+			{
+				href: '/contact/',
+				global: true,
+				label: {
+					'zh-CN': '联系',
+					en: 'Contact',
+					'zh-TW': '聯絡',
+					fr: 'Contact',
+					ja: '連絡先',
+					ko: '연락처',
+					es: 'Contacto',
+					de: 'Kontakt',
+					pt: 'Contato',
+					vi: 'Liên hệ',
+				},
+			},
+			{
+				href: '/privacy-policy/',
+				global: true,
+				label: {
+					'zh-CN': '隐私政策',
+					en: 'Privacy policy',
+					'zh-TW': '隱私政策',
+					fr: 'Confidentialité',
+					ja: 'プライバシー',
+					ko: '개인정보',
+					es: 'Privacidad',
+					de: 'Datenschutz',
+					pt: 'Privacidade',
+					vi: 'Quyền riêng tư',
+				},
+			},
+			{
+				href: '/terms/',
+				global: true,
+				label: {
+					'zh-CN': '使用条款',
+					en: 'Terms',
+					'zh-TW': '使用條款',
+					fr: 'Conditions',
+					ja: '利用規約',
+					ko: '약관',
+					es: 'Términos',
+					de: 'Nutzungsbedingungen',
+					pt: 'Termos',
+					vi: 'Điều khoản',
 				},
 			},
 		],

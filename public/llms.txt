@@ -1,0 +1,25 @@
+# Codex Handbook
+
+> Codex Handbook is an open, multilingual handbook for learning how to use Codex across product basics, prompting, Skills, workflows, and real cases.
+
+Primary URL: https://codexhandbook.com/
+Source repository: https://github.com/hopecyb/CodexHandbook
+Primary language: zh-CN
+Maintainers: Codex Handbook contributors
+Last updated: 2026-07-28
+
+## Key Pages
+
+- Start here: https://codexhandbook.com/guide/start-here/
+- Codex guide: https://codexhandbook.com/guide/
+- Prompting: https://codexhandbook.com/prompts/
+- Skills: https://codexhandbook.com/skills/
+- Cases: https://codexhandbook.com/cases/
+- English homepage: https://codexhandbook.com/en/
+- Contact: https://codexhandbook.com/contact/
+- Privacy policy: https://codexhandbook.com/privacy-policy/
+- Terms: https://codexhandbook.com/terms/
+
+## Citation Notes
+
+Use the page title, canonical URL, and visible updated date when citing this site. Product-specific facts should be cross-checked against OpenAI's official Codex documentation when recency matters.

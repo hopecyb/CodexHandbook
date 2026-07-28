@@ -1,6 +1,7 @@
 ---
 import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
 import ExternalLinks from './ExternalLinks.astro';
+import GeoJsonLd from './GeoJsonLd.astro';
 import ScrollToTop from './ScrollToTop.astro';
 import SiteFooter from './SiteFooter.astro';
 
@@ -8,6 +9,7 @@ const { hasSidebar } = Astro.locals.starlightRoute;
 const showSiteFooter = !hasSidebar;
 ---
 
+<GeoJsonLd />
 <div class="page sl-flex">
 	<header class="header"><slot name="header" /></header>
 	{

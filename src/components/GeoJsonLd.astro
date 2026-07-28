@@ -1,0 +1,112 @@
+---
+import logo from '../assets/brand/logo.png';
+
+const siteUrl = 'https://codexhandbook.com';
+const pageUrl = new URL(Astro.url.pathname, siteUrl).href;
+const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '/en/';
+const title = Astro.url.pathname.startsWith('/en/') ? 'Codex Handbook' : 'Codex 指南手册';
+const description = Astro.url.pathname.startsWith('/en/')
+	? 'Codex Handbook turns product basics, prompting, Skills, and real cases into reusable methods for describing tasks, guiding execution, and checking results.'
+	: 'Codex 指南手册围绕产品入门、提示词、Skills 与真实案例，帮助你把任务说明、执行过程和验收结果沉淀成可复用方法。';
+const homeFaq =
+	Astro.url.pathname.startsWith('/en/')
+		? [
+				{
+					question: 'Who is Codex Handbook for?',
+					answer:
+						'Codex Handbook is for beginners, creators, developers, and teams who want reusable methods for using Codex safely and effectively.',
+				},
+				{
+					question: 'What should first-time Codex users read first?',
+					answer:
+						'First-time users should start with terminology, client choice, permission boundaries, and the first-task guide before moving into prompts, Skills, and team workflows.',
+				},
+			]
+		: [
+				{
+					question: 'Codex 指南手册适合谁？',
+					answer:
+						'Codex 指南手册适合初学者、创作者、开发者和团队读者，用于学习如何把 Codex 任务说明、执行过程和验收结果沉淀成可复用方法。',
+				},
+				{
+					question: '第一次使用 Codex 应该先读什么？',
+					answer:
+						'第一次使用 Codex 时，建议先读术语、客户端选择、权限边界和第一次任务，再进入提示词、Skills 和团队工作流。',
+				},
+				{
+					question: '团队如何把 Codex 用得更稳定？',
+					answer:
+						'团队可以优先关注项目说明、审批边界、代码审查、验证标准和安全治理，并把经验沉淀到仓库或团队文档中。',
+				},
+			];
+
+const graph = [
+	{
+		'@type': 'Organization',
+		'@id': `${siteUrl}/#organization`,
+		name: 'Codex Handbook',
+		url: siteUrl,
+		logo: new URL(logo.src, siteUrl).href,
+		sameAs: ['https://github.com/hopecyb/CodexHandbook'],
+	},
+	{
+		'@type': 'WebSite',
+		'@id': `${siteUrl}/#website`,
+		name: 'Codex Handbook',
+		alternateName: 'Codex 指南手册',
+		url: siteUrl,
+		inLanguage: ['zh-CN', 'en', 'zh-TW', 'fr', 'ja', 'ko', 'es', 'de', 'pt', 'vi'],
+		publisher: {
+			'@id': `${siteUrl}/#organization`,
+		},
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: `${siteUrl}/search/?q={search_term_string}`,
+			'query-input': 'required name=search_term_string',
+		},
+	},
+	{
+		'@type': isHomePage ? 'CollectionPage' : 'WebPage',
+		'@id': `${pageUrl}#webpage`,
+		url: pageUrl,
+		name: title,
+		description,
+		isPartOf: {
+			'@id': `${siteUrl}/#website`,
+		},
+		about: {
+			'@id': `${siteUrl}/#organization`,
+		},
+		author: {
+			'@type': 'Organization',
+			name: 'Codex Handbook contributors',
+			url: 'https://github.com/hopecyb/CodexHandbook',
+		},
+		datePublished: '2026-07-26',
+		dateModified: '2026-07-28',
+		inLanguage: Astro.url.pathname.startsWith('/en/') ? 'en' : 'zh-CN',
+	},
+];
+
+if (isHomePage) {
+	graph.push({
+		'@type': 'FAQPage',
+		'@id': `${pageUrl}#faq`,
+		url: pageUrl,
+		name: `${title} FAQ`,
+		isPartOf: {
+			'@id': `${pageUrl}#webpage`,
+		},
+		mainEntity: homeFaq.map((item) => ({
+			'@type': 'Question',
+			name: item.question,
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: item.answer,
+			},
+		})),
+	});
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })} />

@@ -52,7 +52,7 @@ const footerLabel = pickLabel(uiLabels.siteFooter, lang);
 						</p>
 						<ul>
 							{group.links.map((link) => {
-								const href = link.external ? link.href : localizeHref(link.href);
+								const href = link.external || link.global ? link.href : localizeHref(link.href);
 								const current =
 									!link.external && group.id === 'modules' && isModuleActive(link.href)
 										? 'page'
