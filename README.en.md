@@ -74,9 +74,9 @@ We recommend starting in this order:
 
 1. [Start here](./src/content/docs/en/guide/start-here/index.md)
 2. [Context](./src/content/docs/en/guide/context/index.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Cases](./src/content/docs/cases/index.md)
+3. [Prompts](./src/content/docs/en/prompts/index.md)
+4. [Skills](./src/content/docs/en/skills/index.md)
+5. [Cases](./src/content/docs/en/cases/index.md)
 
 This path is for people new to Codex—it helps you build a solid foundation before moving into hands-on work.
 
@@ -111,9 +111,9 @@ Understand end-to-end workflows through real tasks: reading code, fixing bugs, w
 | --- | --- |
 | [Read online](https://codexhandbook.com/en/) | Browse the full handbook on the website |
 | [Guide](./src/content/docs/en/guide/start-here/index.md) | Understand Codex usage paths from scratch |
-| [Prompts](./src/content/docs/prompts/index.md) | Learn to describe tasks and boundaries clearly |
-| [Skills](./src/content/docs/skills/index.md) | Turn experience into reusable capabilities |
-| [Cases](./src/content/docs/cases/index.md) | See end-to-end workflows through real tasks |
+| [Prompts](./src/content/docs/en/prompts/index.md) | Learn to describe tasks and boundaries clearly |
+| [Skills](./src/content/docs/en/skills/index.md) | Turn experience into reusable capabilities |
+| [Cases](./src/content/docs/en/cases/index.md) | See end-to-end workflows through real tasks |
 | [Examples](./examples/README.md) | Reuse prompts and example assets directly |
 | [Content architecture](./docs/planning/content-architecture.md) | Understand the site information design |
 | [Chapter outline](./docs/planning/chapter-outline.md) | See topic coverage |
@@ -122,17 +122,17 @@ Understand end-to-end workflows through real tasks: reading code, fixing bugs, w
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # Getting started, clients, permissions, verification
-├── src/content/docs/prompts/    # Prompt methods and task expression
-├── src/content/docs/skills/     # Skills design, use, and governance
-├── src/content/docs/cases/      # Real task cases
+├── src/content/docs/en/guide/   # Getting started, clients, permissions, verification
+├── src/content/docs/en/prompts/ # Prompt methods and task expression
+├── src/content/docs/en/skills/  # Skills design, use, and governance
+├── src/content/docs/en/cases/   # Real task cases
 ├── examples/                    # Copyable prompts and extended examples
 ├── docs/planning/               # Content planning and maintenance
 ```
 
 ## Local development
 
-This project uses [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) for the docs site. Main content lives in `src/content/docs/`.
+This project uses [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) for the docs site. English content lives in `src/content/docs/en/`.
 
 Requirements:
 

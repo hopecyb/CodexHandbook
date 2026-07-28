@@ -72,11 +72,11 @@ Codex をこれから学ぶ方にとって、このリポジトリとサイト�
 
 次の順番での開始を推奨します：
 
-1. [Guide ホーム](./src/content/docs/guide/index.md)
-2. [コンテキストとファイル](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Cases](./src/content/docs/cases/index.md)
+1. [ここから始める](./src/content/docs/ja/guide/start-here/index.md)
+2. [コンテキスト](./src/content/docs/ja/guide/context/index.md)
+3. [プロンプト](./src/content/docs/ja/prompts/index.md)
+4. [Skills](./src/content/docs/ja/skills/index.md)
+5. [実践ケース](./src/content/docs/ja/cases/index.md)
 
 Codex 初心者向けのルートで、実践に入る前に安定した基礎を築けます。
 
@@ -110,10 +110,10 @@ Skills の設計・利用・保守・ガバナンスを学び、一度の成功�
 | リンク | 用途 |
 | --- | --- |
 | [オンラインで読む](https://codexhandbook.com/ja/) | サイトでハンドブック全体を閲覧 |
-| [Guide](./src/content/docs/guide/index.md) | Codex の利用パスをゼロから理解 |
-| [Prompts](./src/content/docs/prompts/index.md) | タスクと境界を明確に記述する |
-| [Skills](./src/content/docs/skills/index.md) | 経験を再利用可能な能力に変える |
-| [Cases](./src/content/docs/cases/index.md) | 実タスクでエンドツーエンドの流れを理解 |
+| [ガイド](./src/content/docs/ja/guide/start-here/index.md) | Codex の利用パスをゼロから理解 |
+| [プロンプト](./src/content/docs/ja/prompts/index.md) | タスクと境界を明確に記述する |
+| [Skills](./src/content/docs/ja/skills/index.md) | 経験を再利用可能な能力に変える |
+| [実践ケース](./src/content/docs/ja/cases/index.md) | 実タスクでエンドツーエンドの流れを理解 |
 | [Examples](./examples/README.md) | プロンプトとサンプル資産をそのまま再利用 |
 | [コンテンツ構成](./docs/planning/content-architecture.md) | サイト全体の情報設計を把握 |
 | [章の概要](./docs/planning/chapter-outline.md) | トピックのカバー範囲を確認 |
@@ -122,17 +122,17 @@ Skills の設計・利用・保守・ガバナンスを学び、一度の成功�
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # 入門ガイド、クライアント、権限、検証
-├── src/content/docs/prompts/    # プロンプト手法とタスク表現
-├── src/content/docs/skills/     # Skills の設計・利用・ガバナンス
-├── src/content/docs/cases/      # 実タスクのケース
+├── src/content/docs/ja/guide/   # 入門ガイド、クライアント、権限、検証
+├── src/content/docs/ja/prompts/ # プロンプト手法とタスク表現
+├── src/content/docs/ja/skills/  # Skills の設計・利用・ガバナンス
+├── src/content/docs/ja/cases/   # 実タスクのケース
 ├── examples/                    # コピー可能なプロンプトと拡張例
 ├── docs/planning/               # コンテンツ計画と保守資料
 ```
 
 ## ローカル開発
 
-このプロジェクトは [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) でドキュメントサイトを構築しています。本文は `src/content/docs/` にあります。
+このプロジェクトは [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) でドキュメントサイトを構築しています。日本語本文は `src/content/docs/ja/` にあります。
 
 環境要件：
 
