@@ -1,52 +1,51 @@
 ---
-title: Review a PR
-description: Use Codex for structured diff review before merge.
+title: Review PR
+description: Dùng Codex để review diff có cấu trúc trước khi merge.
 locale: vi
-source_locale: en
-source_revision: f4abfbb
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Review a PR
+# Review PR
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Developers / teams |
+| Đối tượng | Nhà phát triển / nhóm |
 | Client | CLI / IDE / Cloud |
-| Estimated time | 20–40 minutes |
+| Thời gian ước tính | 20–40 phút |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Before merge, catch scope creep, security risks, and test gaps.
+**Mục tiêu:** Trước merge, phát hiện phạm vi lan rộng, rủi ro bảo mật và thiếu test.
 
-**Success criteria:** Review output traces to specific files/lines; P0 items handled or merge blocked.
+**Tiêu chí thành công:** Đầu ra review truy được về tệp/dòng cụ thể; P0 đã xử lý hoặc chặn merge.
 
-## 2. Recommended prompt
+## 2. Prompt đề xuất
 
 ```text
-Compare diff of current branch vs main (do not change code yet):
-1. Does it exceed issue scope?
-2. Obvious security risks (secrets, injection, permissions)?
-3. Missing tests or docs?
-Output checklist with P0/P1, include file paths.
+So sánh diff nhánh hiện tại với main (chưa sửa code):
+1. Có vượt phạm vi issue không
+2. Có rủi ro bảo mật rõ (bí mật, injection, quyền) không
+3. Có thiếu test hoặc tài liệu không
+Xuất checklist, gắn P0/P1, kèm đường dẫn tệp.
 ```
 
-## 3. Team capture
+## 3. Đóng gói cho nhóm
 
-- Use [`$pr-review`](/skills/examples/review-skill/) Skill
-- CI integration: [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Dùng Skill [`$pr-review`](/skills/examples/review-skill/)
+- Tích hợp CI xem [tự động hóa code review](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## 4. Related
+## 4. Liên quan
 
-- [Review template](/prompts/templates/review/)
-- [Review before merge](/cases/workflows/review-before-merge/)
-
+- [Mẫu review](/prompts/templates/review/)
+- [Review trước khi merge](/cases/workflows/review-before-merge/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Review GitHub pull requests," emphasizing catching regressions and potential issues before human review; this page only requires structured diff review with P0/P1 and file paths—not dependent on a specific UI or fixed command.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Review GitHub pull requests”, nhấn mạnh bắt hồi quy và vấn đề tiềm ẩn trước review thủ công; ví dụ trang này chỉ yêu cầu review diff có cấu trúc, xuất P0/P1 và đường dẫn tệp, không phụ thuộc giao diện hay lệnh cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

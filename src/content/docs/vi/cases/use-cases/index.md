@@ -1,49 +1,49 @@
 ---
-title: Scenarios and case library
-description: End-to-end real tasks—prep, execution, verification, failure recovery, and retrospectives.
+title: Thư viện kịch bản và case
+description: Tác vụ thực tế đầu-cuối — chuẩn bị, thực thi, kiểm chứng, phục hồi thất bại và rút kinh nghiệm.
 locale: vi
-source_locale: en
-source_revision: 6067c38
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The case library answers: **"What does running Codex end-to-end look like for this real goal?"** It complements single-topic product docs.
+Thư viện case trả lời: «**Với mục tiêu thực tế kiểu này, trải nghiệm đi hết một vòng Codex là gì?**» Bổ sung cho mô tả sản phẩm từng trang.
 
-## Cases vs tutorials
+## Case vs hướng dẫn
 
-| | Getting-started tutorials | Case library |
+| | Hướng dẫn nhập môn | Thư viện case |
 |---|---|---|
-| Goal | Learn a button/concept | Deliver a class of real outcome |
-| Structure | By product feature | By task type |
-| Failure handling | Often omitted | Must be included |
+| Mục tiêu | Học một nút/khái niệm | Giao một loại thành quả thực tế |
+| Cấu trúc | Theo tính năng sản phẩm | Theo loại tác vụ |
+| Xử lý thất bại | Thường bỏ qua | Bắt buộc có |
 
-## How to use
+## Cách dùng
 
-1. Pick the closest case (or use only its prep checklist)
-2. Cross-check [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/)
-3. After finishing, use the [case template](/cases/use-cases/case-study-template/) to retro—decide whether to capture as a Skill
+1. Chọn case gần mục tiêu nhất (hoặc chỉ lấy «checklist chuẩn bị»)
+2. Đối chiếu [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
+3. Sau khi xong, dùng [mẫu case](/cases/use-cases/case-study-template/) để rút kinh nghiệm, quyết định có đóng gói thành Skill không
 
-## Starter cases
+## Case starter hiện có
 
-| Domain | Case | Notes |
+| Lĩnh vực | Case | Mô tả |
 |---|---|---|
-| Software development | [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/) | Most common developer loop |
-| Content creation | [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/) | Multi-file docs and build verification |
-| Research and learning | [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/) | Source-backed research output |
-| Team automation | [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/) · [Issue triage suggestions](/cases/use-cases/team-automation/issue-triage-suggestions/) | Light CI and ticket automation |
+| Phát triển phần mềm | [Sửa bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/) | Vòng lặp phổ biến nhất của nhà phát triển |
+| Sáng tạo nội dung | [Refactor site tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/) | Tài liệu nhiều tệp và nghiệm thu build |
+| Nghiên cứu và học | [Bảng so sánh tính năng đối thủ](/cases/use-cases/research-and-learning/competitive-feature-matrix/) | Đầu ra nghiên cứu có nguồn |
+| Tự động hóa nhóm | [Kiểm tra liên kết theo lịch](/cases/use-cases/team-automation/scheduled-link-check/) · [Gợi ý phân loại Issue](/cases/use-cases/team-automation/issue-triage-suggestions/) | Tự động hóa CI và ticket nhẹ |
 
-Copyable prompts live in repo [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts). More domain cases will be added to this library over time.
+Prompt có thể sao chép xem trong kho [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts). Case theo lĩnh vực sẽ tiếp tục được bổ sung vào thư viện này.
 
-## Contribution directions
+## Hướng đóng góp
 
-- Reproducible steps (repo, branch, commands)
-- Label applicable clients and verification date
-- Avoid unverifiable "first try success" narratives
+- Bước tái hiện được (kho, nhánh, lệnh)
+- Ghi client áp dụng và ngày kiểm chứng
+- Không viết tường thuật «một lần thành công» không kiểm chứng được
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current case library structure, domain index pages, case template, and examples prompt entry; this page only navigates cases organized by real task type.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo theo cấu trúc thư viện case hiện tại của kho, trang vào từng lĩnh vực, mẫu case và lối vào prompt trong examples; trang này chỉ đảm nhận vai trò điều hướng “tổ chức case theo loại tác vụ thực tế”.  
+**Kiểm chứng gần nhất:** 2026-07-26

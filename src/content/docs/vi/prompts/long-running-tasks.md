@@ -1,85 +1,86 @@
 ---
-title: Long-running tasks
-description: Phases, checkpoints, and handoff information.
+title: Prompt cho tác vụ dài
+description: Tách giai đoạn, checkpoint và thông tin bàn giao.
 locale: vi
-source_locale: en
-source_revision: 672cd09
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Long tasks often fail like this:
+Tác vụ dài thường thất bại theo các cách này:
 
-- too much in one go
-- no checkpoints midway
-- constraints fighting each other in a long thread
+- Làm quá nhiều một mạch
+- Giữa chừng không có checkpoint
+- Thread càng dài, ràng buộc trước sau bắt đầu xung đột
 
-The point isn't a longer prompt—it's splitting into phased substeps with checkpoints.
+Trọng tâm của tác vụ dài không phải viết Prompt dài hơn, mà là tách tác vụ thành chuỗi giai đoạn nhỏ có checkpoint.
 
-Break long work into phases, each with acceptance:
-
-```text
-Phase 1: Research and list options only (no code changes)
-Phase 2: Minimal implementation
-Phase 3: Add tests and run …
-Stop after each phase for my confirmation.
-```
-
-## Why long tasks drift
-
-They usually mix:
-
-- understanding the problem
-- designing a solution
-- implementing changes
-- running verification
-- writing handoff notes
-
-Doing it all in one shot raises risk noticeably.
-
-## Common misconceptions
-
-### 1. Long tasks are just short tasks with more detail
-
-Long tasks need **phased management**, not only more background.
-
-### 2. Listing phases isn't enough
-
-Each phase needs a clear exit, e.g.:
-
-- options only, no code
-- minimal implementation only
-- tests and verification only
-
-### 3. One thread to the end is always better
-
-Handoff, summary, and a fresh thread often clarify more.
-
-## A usable phased split
-
-For long work, try four phases:
-
-1. Research: understand, don't touch code
-2. Plan: steps, risks, verification
-3. Execute: minimal changes
-4. Verify: run checks, write conclusions, prepare handoff
-
-## A practical phrasing
+Tách tác vụ dài thành giai đoạn; mỗi giai đoạn có nghiệm thu:
 
 ```text
-Phase 1: Research and list options; no code changes; wait for my confirmation
-Phase 2: Minimal changes only; report impact after each batch
-Phase 3: Add verification and run relevant checks
-Phase 4: Summarize changes, risks, and follow-up recommendations
+Giai đoạn 1: Chỉ khảo sát và liệt kê phương án (không sửa code)
+Giai đoạn 2: Triển khai thay đổi tối thiểu
+Giai đoạn 3: Bổ sung kiểm thử và chạy……
+Mỗi giai đoạn xong thì dừng, chờ tôi xác nhận.
 ```
 
-Better to stop and check each segment than finish everything in one breath.
+## Vì sao tác vụ dài dễ lệch hướng
 
-See also: [Progress and steering](/guide/agent-work/progress-and-steering/) · [Handoff and resume](/guide/agent-work/handoff-and-resume/)
+Vì thường chứa cùng lúc nhiều loại việc:
+
+- Hiểu vấn đề
+- Thiết kế phương án
+- Triển khai thay đổi
+- Chạy kiểm chứng
+- Viết mô tả bàn giao
+
+Nếu trộn hết vào một lần «làm xong luôn», rủi ro tăng rõ.
+
+## Hiểu lầm thường gặp
+
+### 1. Tác vụ dài không chỉ là viết chi tiết hơn tác vụ ngắn
+
+Tác vụ dài cần **quản lý theo đoạn**, không chỉ viết thêm bối cảnh.
+
+### 2. Chỉ liệt kê giai đoạn vẫn chưa đủ
+
+Mỗi giai đoạn nên có lối thoát rõ, ví dụ:
+
+- Chỉ xuất phương án, không sửa code
+- Chỉ làm triển khai tối thiểu
+- Chỉ bổ sung kiểm thử và kiểm chứng
+
+### 3. Một Thread kéo dài đến cùng chưa chắc tốt hơn
+
+Khi tác vụ quá dài, bàn giao, tóm tắt, mở Thread mới rồi tiếp thường rõ hơn.
+
+## Một cách tách đoạn đủ dùng
+
+Với tác vụ dài, có thể tách theo 4 đoạn này trước:
+
+1. Khảo sát: hiểu vấn đề, chưa làm
+2. Kế hoạch: liệt kê bước, rủi ro, kiểm chứng
+3. Thực thi: làm thay đổi tối thiểu
+4. Kiểm chứng: chạy kiểm tra, viết kết luận, chuẩn bị bàn giao
+
+## Cách viết thực dụng hơn
+
+```text
+Giai đoạn 1: Khảo sát và liệt kê phương án trước; không sửa code; chờ tôi xác nhận
+Giai đoạn 2: Chỉ làm thay đổi tối thiểu; xong thì báo phạm vi ảnh hưởng
+Giai đoạn 3: Bổ sung kiểm chứng và chạy kiểm tra liên quan
+Giai đoạn 4: Tóm tắt thay đổi, rủi ro và đề xuất tiếp theo
+```
+
+Cách phù hợp hơn là mỗi đoạn có thể dừng để kiểm, chứ không làm một mạch đến hết.
+
+Kết hợp: [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/) · [Bàn giao và phục hồi](/guide/agent-work/handoff-and-resume/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains long-task splitting and handoff only; in-site links and phase examples were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách tách tác vụ dài và bàn giao; liên kết nội bộ và ví dụ giai đoạn đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

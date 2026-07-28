@@ -1,89 +1,92 @@
 ---
-title: Goals and context
-description: Tell Codex what to accomplish and why it matters.
+title: Mục tiêu và ngữ cảnh
+description: Để Codex biết cần hoàn thành gì và vì sao điều đó quan trọng.
 locale: vi
-source_locale: en
-source_revision: '2138057'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many prompts look information-rich but still miss two things:
+Nhiều Prompt trông như có nhiều thông tin, nhưng lại chưa nói rõ hai điều sau:
 
-- What outcome you actually want
-- Why you're doing it this way
+- Bạn thực sự muốn kết quả gì
+- Vì sao việc này phải làm theo cách đó
 
-Goal explains what to deliver; context explains why.
+Mục tiêu nói «cần làm thành gì»; bối cảnh nói «vì sao phải làm như vậy».
 
-**Goal:** state the final deliverable, not a vague wish.  
-"Make the site better" → "Change the homepage primary button copy to … and keep existing style class names."
+**Mục tiêu** viết sản phẩm đầu ra cuối cùng, không viết ước muốn mơ hồ.  
+«Làm website tốt hơn» → «Đổi copy nút chính trang chủ thành…… và giữ nguyên tên class hiện có».
 
-**Context:** fill in what the reader knows but the Agent needs—stack, audience, deadline reason, known pitfalls.
+**Bối cảnh** bổ sung hiện trạng người đọc có thể không biết nhưng Agent cần: tech stack, đối tượng, lý do deadline, hố đã biết.
 
-## Why goal and context shouldn't be mixed
+## Vì sao không được trộn «mục tiêu» và «bối cảnh»
 
-Context without goal reads like a situation report with no deliverable.  
-Goal without context invites a solution that's technically possible but wrong for your situation.
+Chỉ có bối cảnh, không có mục tiêu—Codex có thể hiểu như một đoạn tường thuật tình huống, không biết cần xuất ra gì.  
+Chỉ có mục tiêu, không có bối cảnh—nó dễ làm theo cách «về kỹ thuật được, nhưng chưa chắc hợp ngữ cảnh của bạn».
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Goal means "I want to improve things"
+### 1. Mục tiêu là «tôi muốn cải thiện một chút»
 
-That's a wish, not a goal.
+Đó gần ước muốn hơn mục tiêu.
 
-A clearer goal usually states:
+Một mục tiêu rõ hơn thường nêu:
 
-- what to change
-- what end state you want
-- what must stay the same
+- Sửa thứ gì
+- Đưa về trạng thái nào
+- Cần giữ nguyên gì
 
-### 2. More context is always better
+### 2. Bối cảnh không phải càng nhiều càng tốt
 
-Valuable context is what **you know but Codex doesn't**, and what **changes decisions**.
+Phần thật sự có giá trị trong bối cảnh là những gì **bạn biết nhưng Codex không biết**, và ảnh hưởng quyết định.
 
-### 3. Only technical context counts
+### 3. Chỉ ngữ cảnh kỹ thuật mới tính là bối cảnh
 
-Not only technical context.
+Không chỉ ngữ cảnh kỹ thuật.
 
-These can also matter:
+Những điểm sau cũng có thể là bối cảnh quan trọng:
 
-- who the audience is
-- why there's a deadline
-- known pitfalls
-- team constraints
+- Độc giả là ai
+- Lý do deadline
+- Hố đã biết
+- Ràng buộc của nhóm
 
-## A usable minimal form
+## Một cách viết đủ dùng
 
-```text
-Goal: change X to Y
-Context: why, who it's for, what's blocking you now
-```
-
-Example:
+Nếu viết bản dùng được trước, có thể theo:
 
 ```text
-Goal: Make the docs homepage hero copy easier for beginners to understand, keeping the existing structure
-Context: Current copy assumes readers already know many terms; first-time visitors face a high barrier
+Mục tiêu: Đổi cái gì thành trạng thái nào
+Bối cảnh: Vì sao đổi, cho ai xem, hiện đang kẹt ở đâu
 ```
 
-## How to check if it's clear enough
+Ví dụ:
 
-For goal, check:
+```text
+Mục tiêu: Sửa copy màn hình đầu trang docs cho dễ hiểu với người mới, giữ cấu trúc hiện có
+Bối cảnh: Copy hiện tại mặc định độc giả đã biết nhiều thuật ngữ; lần truy cập đầu ngưỡng hiểu cao
+```
 
-- can you see the outcome?
-- can you sense the scope?
+## Kiểm tra xem đã viết đủ rõ chưa
 
-For context, check:
+Khi kiểm mục tiêu, xem hai điểm:
 
-- will this actually change how it works?
+- Kết quả có nhìn ra được không
+- Phạm vi có cảm nhận được không
 
-Goal decides what to deliver; context explains why.
+Khi kiểm bối cảnh, xem thêm một điểm:
 
-Related: project-level background can live in [project context](/guide/context/project-context/) so you don't repeat long blocks in every prompt.
+- Thông tin này có thật sự ảnh hưởng cách nó làm không
+
+Mục tiêu quyết định giao gì; bối cảnh bổ sung vì sao phải làm như vậy.
+
+Liên quan: bối cảnh cấp dự án có thể gửi xuống [Ngữ cảnh dự án](/guide/context/project-context/), tránh lặp đoạn dài trong mọi Prompt.
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains goal and context writing only; in-site links and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách viết mục tiêu và bối cảnh; liên kết nội bộ và cách diễn đạt ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,86 +1,86 @@
 ---
-title: Test-driven work
-description: Define or add failing tests first, then drive implementation—objective acceptance for Codex changes.
+title: Làm việc theo test
+description: Định nghĩa hoặc bổ sung test thất bại trước, rồi dẫn dắt triển khai — để thay đổi của Codex nghiệm thu khách quan được.
 locale: vi
-source_locale: en
-source_revision: fa65f8d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Test-driven work** (TDD or "tests first") means making tests fail first, then minimal implementation to pass. It fits repos with test infrastructure and links directly to cases like [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Làm việc theo test** (TDD hoặc “test trước”) là để test thất bại trước, rồi bằng triển khai tối thiểu đưa nó sang pass. Phù hợp kho đã có nền tảng test, và liên quan trực tiếp các kịch bản như [sửa Bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
-## What's covered
+## Trọng tâm trang này
 
-- When to require "write/run tests first"
-- How to prompt Codex not to skip test steps
-- Rollback strategy when tests fail
+- Khi nào yêu cầu «viết/chạy test trước»
+- Cách nhắc Codex không bỏ bước test
+- Chiến lược hoàn tác khi test thất bại
 
-## Who it's for
+## Phù hợp ai
 
-- Repos with unit/integration tests
-- Regression bugs, API behavior changes, refactors
+- Kho đã có unit/integration test
+- Bug hồi quy, đổi hành vi API, refactor
 
-Poor fits: prototypes without tests, one-off copy on marketing sites. Use [EPXV](/cases/workflows/explore-plan-execute-verify/) with manual verification instead.
+Kịch bản không phù hợp gồm: nguyên mẫu chưa có nền tảng test, sửa một lần trên site copy thuần. Những tác vụ đó nên dùng [EPXV](/cases/workflows/explore-plan-execute-verify/) để người kiểm chứng.
 
-## Minimum viable approach
+## Cách làm tối thiểu dùng được
 
 ```text
-1. Write a failing test for expected behavior (or point to an existing failure)
-2. Implement only the minimum code to pass that test
-3. Run the related test suite, then the full suite
-4. Do not delete assertions or mock away real logic just to pass
+1. Viết một test thất bại cho hành vi mong muốn (hoặc chỉ ra test thất bại sẵn có)
+2. Chỉ triển khai code tối thiểu để test đó pass
+3. Chạy bộ test liên quan, rồi chạy đầy đủ
+4. Không xóa assertion hay mock mất logic thật chỉ để test pass
 ```
 
 Prompt:
 
 ```text
-TDD: first write a failing test for "empty input returns []" in @src/foo.ts;
-run tests to confirm failure, then change implementation; run only the related test file each step.
+Theo TDD: trước hết viết test thất bại cho «đầu vào rỗng trả về []» của @src/foo.ts;
+Chạy test xác nhận thất bại rồi mới sửa triển khai; mỗi bước chỉ chạy tệp test liên quan.
 ```
 
-## Recommended workflow
+## Quy trình đề xuất
 
-| Phase | Output |
+| Giai đoạn | Đầu ra |
 |---|---|
-| Red | Failing test + explanation of failure |
-| Green | Minimal implementation + passing tests |
-| Refactor | Clean up under test protection (optional separate step) |
+| Đỏ | Test thất bại + giải thích nguyên nhân thất bại |
+| Xanh | Triển khai tối thiểu + test pass |
+| Refactor | Chỉnh code dưới bảo vệ của test (tùy chọn bước riêng) |
 
-Combine with [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/): read failing assertions and stack first, then change implementation.
+Kết hợp [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/): đọc assertion thất bại và stack trước, rồi mới động triển khai.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Claiming done without running tests
-- Changing tests to match wrong implementation
-- Running one test but claiming full green
-- Full slow E2E on every iteration—use `-t` or file-level filters
+- Chưa chạy test đã tuyên bố xong
+- Sửa test để chiều theo triển khai sai
+- Chỉ chạy một test rồi tuyên bố toàn bộ xanh
+- Lặp chạy đầy đủ trên bộ E2E chậm — nên dùng `-t` hoặc lọc theo tệp
 
-## Security boundaries
+## Ranh giới an toàn
 
-- Test commands must stay within [command rules](/guide/customization/rules/command-rules/)
-- Integration tests hitting production APIs must be forbidden in spec or use mocks
+- Lệnh test phải trong phạm vi [quy tắc lệnh](/guide/customization/rules/command-rules/) cho phép
+- Integration test nếu chạm API production phải cấm trong đặc tả hoặc đổi sang mock
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Evidence of fail→pass tests (logs or CI)
-- [ ] Full or agreed-scope test suite passes
-- [ ] Diff has no unrelated test deletions
-- [ ] Aligned with [Define done](/prompts/define-done/)
+- [ ] Có bằng chứng test thất bại→pass (log hoặc CI)
+- [ ] Test đầy đủ hoặc phạm vi đã thỏa thuận đều pass
+- [ ] Diff không chứa xóa test không liên quan
+- [ ] Khớp [định nghĩa hoàn thành](/prompts/define-done/)
 
-## Related chapters
+## Chương liên quan
 
-- [Run tests](/guide/quality/run-tests/)
-- [Case: Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Chạy test](/guide/quality/run-tests/)
+- [Case: sửa Bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## References
+## Nguồn tham chiếu
 
-- stormzhang testing and quality chapters
-- CodexGuide developer workflows
+- Chương test và chất lượng của stormzhang
+- Quy trình nhà phát triển CodexGuide
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified run tests, define done, fix-a-bug-with-verification, and command rules chapters; this page focuses on the stable test pattern of fail first, minimal implementation to pass.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / IDE  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương chạy test, định nghĩa hoàn thành, sửa Bug kèm kiểm chứng và quy tắc lệnh đã kiểm chứng của sổ tay; nội dung trang tập trung phương pháp test ổn định “để test thất bại trước, rồi dẫn dắt pass bằng triển khai tối thiểu”.  
+**Kiểm chứng gần nhất:** 2026-07-26

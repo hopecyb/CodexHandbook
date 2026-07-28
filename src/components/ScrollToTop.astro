@@ -17,7 +17,9 @@ const scrollLabel =
 							? 'Nach oben'
 							: locale === 'pt'
 								? 'Voltar ao topo'
-								: 'Back to top';
+								: locale === 'vi'
+									? 'Lên đầu trang'
+									: 'Back to top';
 ---
 
 <button type="button" class="scroll-to-top" aria-label={scrollLabel} hidden>

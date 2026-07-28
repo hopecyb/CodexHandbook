@@ -1,216 +1,216 @@
 ---
-title: Choosing the Right Mechanism
-description: A decision framework for where temporary prompts, AGENTS.md, memory, Skills, and MCP belong.
+title: Chọn cơ chế phù hợp
+description: Prompt tạm, AGENTS.md, bộ nhớ, Skill, MCP nên đặt tầng nào — một khung phán đoán nói rõ.
 locale: vi
-source_locale: en
-source_revision: e6e6e54
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many team problems come from **putting the same information in the wrong place**: rules that belong in the repo go into chat, reusable workflows that should be Skills get stuffed into `AGENTS.md`, and read-only data access is handed to a high-privilege MCP.
+Nhiều vấn đề nhóm thường là **đặt cùng một thông tin sai chỗ**: quy tắc đáng viết vào kho thì bỏ vào chat, quy trình đáng làm Skill thì nhét vào `AGENTS.md`, dữ liệu đáng nối chỉ đọc thì lại cấp MCP quyền cao.
 
-This page focuses on a practical question:
+Ở đây quan tâm hơn một câu hỏi thực tế:
 
-> When you realize “this will keep happening,” which layer should you sink it into?
+> Khi bạn phát hiện “việc này sau này còn lặp lại”, nên hạ nó xuống tầng nào?
 
-## Quick Table
+## Bảng ngắn
 
-| Mechanism | Best for |
+| Cơ chế | Phù hợp nhất đặt gì |
 |---|---|
-| One-off prompt | Goals, constraints, and acceptance criteria for this task only |
-| `AGENTS.md` | Repo-level collaboration rules and long-term constraints |
-| Memory | Personal preferences or a small set of non-sensitive, cross-session repeated facts |
-| Skill | Reusable workflows, checklists, and specialized playbooks |
-| MCP | Access to external tools, data sources, and system capabilities |
+| Prompt một lần | Mục tiêu, ràng buộc, tiêu chuẩn nghiệm thu chỉ hiệu lực cho tác vụ lần này |
+| `AGENTS.md` | Quy tắc cộng tác cấp kho và ràng buộc dài hạn |
+| Bộ nhớ | Sở thích cá nhân hoặc ít sự kiện không nhạy cảm, lặp qua phiên |
+| Skill | Quy trình tái sử dụng được, danh sách kiểm tra, lối chuyên biệt |
+| MCP | Truy cập công cụ ngoài, nguồn dữ liệu và năng lực hệ thống |
 
-If this table is not enough, keep reading.
+Nếu bảng này chưa đủ, đọc tiếp bên dưới.
 
-## Five-Step Decision Method
+## Phương pháp phán đoán năm bước
 
-### 1. Information that applies only to the current task
+### 1. Thông tin chỉ hiệu lực với tác vụ hiện tại
 
-Put this kind of information in **this prompt** first.
+Loại thông tin này ưu tiên đặt trong **Prompt lần này**.
 
-Good fits:
+Phù hợp:
 
-- “Only change `docs/` this time; do not touch code”
-- “Output a Chinese summary and end with one question to confirm”
-- “Analyze the cause first; do not change files immediately”
+- “Lần này chỉ sửa `docs/`, đừng đụng mã”
+- “Xuất tóm tắt tiếng Việt, cuối kèm một câu hỏi chờ xác nhận”
+- “Phân tích nguyên nhân trước, đừng sửa tệp ngay”
 
-Poor fits:
+Không phù hợp:
 
-- The team always requires `pnpm test`
-- Repo no-go directories
-- Every PR review must follow the same template
+- Nhóm dài hạn đều yêu cầu `pnpm test`
+- Kho cấm sửa thư mục
+- Mỗi lần rà soát PR đều xuất theo cùng một mẫu
 
-Those long-term rules should sink further down.
+Loại quy tắc dài hạn này nên tiếp tục hạ xuống.
 
-### 2. Is this a project collaboration rule or a personal habit?
+### 2. Đây là quy tắc cộng tác dự án, hay thói quen cá nhân?
 
-If it is something **every collaborator should know**, put it in [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+Nếu là **quy tắc mọi cộng tác viên đều nên biết**, đưa vào [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
 
-For example:
+Ví dụ:
 
-- Test, lint, and build commands
-- Which directories must not be touched
-- Commit message or PR acceptance rules
-- Special conventions for different subdirectories in a monorepo
+- Lệnh kiểm thử, lint, build
+- Thư mục nào không được đụng
+- Thông điệp commit hoặc quy tắc nghiệm thu PR
+- Quy chuẩn đặc biệt của thư mục con khác nhau trong monorepo
 
-If it is only **your preference**—for example, “explain in Chinese” or “conclusion first, then details”—[memory](/guide/customization/memories-and-persistent-context/) or personal configuration is a better fit.
+Nếu chỉ là **sở thích của bạn**, ví dụ “giải thích bằng tiếng Việt”, “đưa kết luận trước rồi mới chi tiết”, phù hợp hơn đưa vào [bộ nhớ](/guide/customization/memories-and-persistent-context/) hoặc cấu hình cá nhân.
 
-Use this rule of thumb:
+Có thể phán đoán theo kinh nghiệm:
 
-- If it should go through PR review, prefer the repo
-- If others not seeing it is fine, consider the personal layer
+- Cần vào PR review thì ưu tiên vào kho
+- Người khác không thấy cũng không sao mới cân nhắc tầng cá nhân
 
-### 3. Is this a “rule” or a “procedure”?
+### 3. Đây là “quy tắc”, hay “bước”?
 
-Many docs are hard to use because they mix rules and steps.
+Nhiều tài liệu khó dùng vì trộn quy tắc và bước.
 
-| If it is… | Better fit |
+| Nếu nó thuộc… | Phù hợp hơn |
 |---|---|
-| “Do not push directly to main” | `AGENTS.md` |
-| “When reviewing, check tests first, then risk, then regression” | Skill |
-| “Run these 4 commands before release” | Skill or script |
-| “Only allow read-only issue data access” | MCP + permission configuration |
+| “Đừng push thẳng lên main” | `AGENTS.md` |
+| “Khi Review xem kiểm thử trước, rồi rủi ro, rồi hồi quy” | Skill |
+| “Trước phát hành chạy 4 lệnh này” | Skill hoặc script |
+| “Chỉ cho phép truy cập dữ liệu issue chỉ đọc” | MCP + cấu hình quyền |
 
-When deciding, focus on these two points:
+Khi phán đoán nắm hai điểm này trước:
 
-- **Rules** answer “what is allowed and what is not”
-- **Steps** answer “how this kind of work is usually done”
+- **Quy tắc** trả lời “làm được gì, không được làm gì”
+- **Bước** trả lời “loại việc này thường làm thế nào”
 
-Reusable steps usually fit better as a [Skill](/skills/overview/).
+Bước tái sử dụng được thường phù hợp hơn làm [Skill](/skills/overview/).
 
-## Common Combinations, Not Either/Or
+## Tổ hợp thường gặp, không phải chọn một trong hai
 
-Mature teams usually do not use only one mechanism; they combine them.
+Nhóm chín thường không chỉ dùng một cơ chế, mà tổ hợp.
 
-### Combination 1: `AGENTS.md` + Skill
+### Tổ hợp 1: `AGENTS.md` + Skill
 
-Good for: code review, release checks, incident triage.
+Phù hợp: rà soát mã, kiểm phát hành, xử lý sự cố.
 
-Division of labor:
+Phân công:
 
-- `AGENTS.md` holds hard constraints: no auto-merge, which checks must run
-- Skill holds the process: how to review, what template to output, how to grade issues
+- `AGENTS.md` viết ràng buộc cứng: không tự merge, phải chạy những kiểm nào
+- Skill viết quy trình: rà thế nào, xuất theo mẫu nào, phân cấp vấn đề thế nào
 
-### Combination 2: Skill + MCP
+### Tổ hợp 2: Skill + MCP
 
-Good for: reading tickets, querying databases, pulling design files, generating weekly reports.
+Phù hợp: đọc ticket, tra DB, kéo bản thiết kế, sinh báo tuần.
 
-Division of labor:
+Phân công:
 
-- Skill defines execution order and output format
-- MCP provides “what can be connected to, queried, and changed”
+- Skill định nghĩa thứ tự thực thi và định dạng đầu ra
+- MCP cung cấp “nối được đâu, tra được gì, sửa được gì”
 
-You can think of them separately:
+Có thể xem tách:
 
-> A Skill is like a work instruction; MCP is like the toolbox you plug in.
+> Skill như sổ hướng dẫn thao tác, MCP như hộp công cụ nối vào.
 
-### Combination 3: `AGENTS.md` + memory
+### Tổ hợp 3: `AGENTS.md` + bộ nhớ
 
-Good for: stable team rules with different personal expression habits.
+Phù hợp: quy tắc nhóm ổn định, nhưng mỗi người thói diễn đạt khác.
 
-Division of labor:
+Phân công:
 
-- `AGENTS.md` holds shared team norms
-- Memory keeps personal preferences such as language, explanation style, and default output structure
+- `AGENTS.md` viết quy chuẩn chung của nhóm
+- Bộ nhớ giữ sở thích cá nhân, như ngôn ngữ, phong cách giải thích, cấu trúc đầu ra mặc định
 
-Do not do it the other way around. Team rules should not live only in one person’s memory.
+Đừng làm ngược. Quy tắc nhóm không nên chỉ tồn tại trong bộ nhớ của một người.
 
-## A More Practical Decision Matrix
+## Một ma trận phán đoán thực dụng hơn
 
-| Question | Yes | No |
+| Câu hỏi | Có | Không |
 |---|---|---|
-| Affects only the current task? | Prompt | Keep deciding |
-| Everyone should follow it? | `AGENTS.md` / project configuration | Keep deciding |
-| A repeatable workflow? | Skill | Keep deciding |
-| Needs live external data or actions? | MCP | Keep deciding |
-| Only a personal long-term preference? | Memory / user configuration | Prompt |
+| Chỉ ảnh hưởng tác vụ hiện tại? | Prompt | Tiếp tục phán đoán |
+| Mọi người đều nên tuân? | `AGENTS.md` / cấu hình dự án | Tiếp tục phán đoán |
+| Là quy trình lặp được? | Skill | Tiếp tục phán đoán |
+| Cần dữ liệu hoặc thao tác ngoài thời gian thực? | MCP | Tiếp tục phán đoán |
+| Chỉ là sở thích dài hạn cá nhân? | Bộ nhớ / cấu hình người dùng | Prompt |
 
-When a requirement lands in two columns at once, that usually means you should **split layers** instead of forcing everything into one place.
+Khi một nhu cầu rơi đồng thời hai cột, thường nghĩa nên **tách tầng**, chứ không nhét cứng cùng một chỗ.
 
-## Three Typical Examples
+## Ba ví dụ điển hình
 
-### Example 1: The team keeps forgetting regression tests
+### Ví dụ 1: Nhóm hay quên chạy kiểm thử hồi quy
 
-Do not only say “remember to run tests” in chat.
+Đừng chỉ nói trong nhóm “nhớ chạy kiểm thử”.
 
-A steadier approach:
+Cách ổn hơn:
 
-1. Write in `AGENTS.md`: “business-logic changes must run `pnpm test`”
-2. If the flow is complex, add a test-execution Skill
-3. Use CI as the final backstop
+1. Trong `AGENTS.md` ghi rõ “liên quan thay đổi logic nghiệp vụ phải chạy `pnpm test`”
+2. Nếu quy trình phức tạp, bổ sung thêm Skill thực thi kiểm thử
+3. Trong CI làm lưới cuối
 
-### Example 2: Every PR review should follow the same output format
+### Ví dụ 2: Mỗi lần PR review muốn Codex xuất theo cùng định dạng
 
-Do not paste the whole template every time.
+Đừng mỗi lần dán cả đoạn mẫu.
 
-A steadier approach:
+Cách ổn hơn:
 
-1. Turn the output structure into a Skill
-2. In `description`, make clear “use when the user says review, audit, or pre-merge check”
-3. If the team uses it uniformly, add the Skill path to project docs
+1. Làm cấu trúc đầu ra thành Skill
+2. Trong `description` viết rõ “khi người dùng nói review, rà soát, kiểm trước merge thì dùng”
+3. Nếu nhóm dùng thống nhất, đưa đường dẫn Skill vào tài liệu dự án
 
-### Example 3: Need to read Linear tickets before changing code
+### Ví dụ 3: Cần đọc ticket Linear rồi sửa mã
 
-Do not paste API tokens into the conversation.
+Đừng dán API token vào hội thoại.
 
-A steadier approach:
+Cách ổn hơn:
 
-1. Connect Linear through MCP
-2. Default to read-only permissions
-3. If you want a fixed flow, use a Skill to require “read ticket first, then code, then propose a plan”
+1. Dùng MCP nối Linear
+2. Mặc định quyền chỉ đọc
+3. Nếu muốn thành quy trình cố định, dùng Skill quy định “đọc ticket trước, rồi xem mã, rồi đưa phương án”
 
-## Easiest Pitfalls
+## Hố dễ dẫm nhất
 
-### Turning `AGENTS.md` into an encyclopedia
+### Viết `AGENTS.md` thành bách khoa toàn thư
 
-The result is that hard constraints are not visible, and the commands and no-go areas that matter most get buried. `AGENTS.md` works better when it is short, hard, and executable.
+Kết quả ràng buộc cứng không nổi, lệnh và vùng cấm thật sự quan trọng bị nhấn chìm. `AGENTS.md` phù hợp hơn ngắn, cứng, thực thi được.
 
-### Using a Skill as a “universal junk drawer”
+### Coi Skill là “hộp đựng vạn năng”
 
-One Skill that holds review, release, debugging, and daily reports becomes hard to trigger and hard to maintain.
+Một Skill vừa nhét review, phát hành, gỡ lỗi, viết báo ngày — cuối cùng vừa khó kích hoạt vừa khó duy trì.
 
-### Treating MCP as the default answer
+### Coi MCP là câu trả lời mặc định
 
-If the repo already has the information, you do not need an external tool just to look “advanced.” MCP is capability extension, not a complexity reward.
+Thông tin đọc thẳng từ kho được thì không cần vì “cao cấp” mà nối thêm công cụ ngoài. MCP là mở rộng năng lực, không phải phần thưởng độ phức tạp.
 
-### Letting memory carry team facts
+### Để bộ nhớ mang sự kiện nhóm
 
-Whoever’s account remembers it owns the rule; when they leave or change machines, the rule disappears. That information should go back to the repo.
+Ai nhớ trên tài khoản người đó; người đó rời hoặc đổi máy thì quy tắc biến mất. Loại thông tin này nên quay về kho.
 
-## Recommended Rollout Order
+## Thứ tự triển khai khuyến nghị
 
-If the team is still messy, you can converge in this order:
+Nếu nhóm giờ còn loạn, có thể hội tụ theo thứ tự:
 
-1. Write a minimum viable `AGENTS.md` first
-2. Turn flows repeated three or more times into Skills
-3. Introduce MCP only when you truly need external systems
-4. Finally organize personal memory and preferences
+1. Viết một `AGENTS.md` tối thiểu dùng được trước
+2. Quy trình lặp từ ba lần trở lên hội tụ thành Skill
+3. Chỉ khi thật sự cần hệ thống ngoài mới đưa MCP
+4. Cuối cùng mới gom bộ nhớ và sở thích cá nhân
 
-This makes it easier to stabilize **collaboration consensus** first, then expand capabilities.
+Như vậy dễ ổn định **đồng thuận cộng tác** trước, rồi dần mở năng lực.
 
-## Further Reading
+## Đọc thêm
 
-- [What Is AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/)
-- [Skills Overview](/skills/overview/)
-- [MCP Overview](/skills/mcp/mcp-overview/)
-- [Choosing an Extension Method](/skills/choosing-an-extension-method/)
+- [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/)
+- [Bộ nhớ và ngữ cảnh bền](/guide/customization/memories-and-persistent-context/)
+- [Tổng quan Skills](/skills/overview/)
+- [Tổng quan MCP](/skills/mcp/mcp-overview/)
+- [Chọn cách mở rộng](/skills/choosing-an-extension-method/)
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex official documentation (per current version)
-- freestylefly/CodexGuide AGENTS/Skill organization approach
-- KimYx0207 *AI-Coding-Guide-Zh* Codex extension and automation topics
+- Tài liệu chính thức OpenAI Codex (lấy phiên bản hiện tại làm chuẩn)
+- Tư duy tổ chức AGENTS/Skill của freestylefly/CodexGuide
+- Chuyên đề mở rộng và tự động hóa trong mục lục Codex của KimYx0207《AI-Coding-Guide-Zh》
 - stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
 - [codex.bozhouai.com](https://codex.bozhouai.com/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s verified `AGENTS.md`, context, Skills, MCP, and quality chapters; this page keeps only the stable decision framework that temporary requirements, project rules, personal preferences, workflow packaging, and external capabilities should be stored in separate layers.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương `AGENTS.md`, ngữ cảnh, Skills, MCP và chất lượng đã kiểm chứng trong sổ tay; trang này chỉ giữ khung phán đoán ổn định “yêu cầu tạm, quy tắc dự án, sở thích cá nhân, đóng gói quy trình, năng lực ngoài nên đặt theo tầng”.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,120 +1,122 @@
 ---
-title: Browser tool
-description: Letting Codex open pages, inspect UI state, and verify frontend behavior—capabilities and boundaries.
+title: Công cụ trình duyệt
+description: Để Codex mở trang web, kiểm trạng thái UI và kiểm chứng hành vi frontend — năng lực và ranh giới.
 locale: vi
-source_locale: en
-source_revision: 34490c2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **browser tool** lets the Agent access real pages in a controlled environment: read the DOM, capture screenshots, sometimes perform simple interactions. Good for frontend acceptance, doc link checks, and design comparison—not a substitute for security audits or casual production admin use.
+**Công cụ trình duyệt** cho phép Agent truy cập trang web thật trong môi trường được kiểm soát: đọc DOM, chụp màn hình, đôi khi cũng tương tác đơn giản. Nó phù hợp nghiệm thu frontend, kiểm liên kết tài liệu, đối chiếu bản thiết kế; không phù hợp thay kiểm toán bảo mật, cũng không nên dùng để tùy tiện thao tác backend production.
 
-It differs from search: search finds information; the browser tool actually opens the page.
+Nó và tìm kiếm là hai loại công cụ khác nhau: tìm kiếm dùng để tìm thông tin trang web; công cụ trình duyệt dùng để thật sự mở trang.
 
-## Problems it helps with
+## Nó phù hợp giải quyết vấn đề gì
 
-Common questions:
+Loại công cụ này thường dùng cho:
 
-- What does this page actually look like right now?
-- What happens when I click this button?
-- Does this layout break at a real viewport width?
+- Trang này giờ thật sự trông thế nào
+- Nút này bấm xuống sẽ xảy ra gì
+- Bố cục ở độ rộng thật có bị hỏng không
 
-Code review or text alone often is not enough—you need the page open.
+Loại câu hỏi này chỉ đọc mã hoặc xem mô tả chữ thường chưa đủ; vẫn phải mở thật trang.
 
-## What's covered
+## Nội dung trang này
 
-- What the browser tool can and cannot do
-- How it differs from web search and Computer Use
-- Safe authorization and constraints
+- Công cụ trình duyệt làm được gì, không làm được gì
+- Khác với tìm kiếm web và Computer Use thế nào
+- Ủy quyền và ràng buộc an toàn thế nào
 
-## Capability overview
+## Tổng quan năng lực
 
-| Good fit | Poor fit |
+| Phù hợp | Không phù hợp |
 |---|---|
-| Open local dev server pages for layout | Bulk crawl sites restricted by ToS |
-| Verify public doc links are not 404 | Auto-login on unauthorized systems |
-| Compare static page to implementation | Replace full E2E test frameworks |
-| Read visible page text for debugging | Sites with heavy CAPTCHA |
+| Mở trang dev server cục bộ xem bố cục | Crawl hàng loạt site bị ToS hạn chế |
+| Kiểm liên kết tài liệu công khai 404 | Tự đăng nhập hệ thống chưa được ủy quyền |
+| Đối chiếu trang tĩnh với hiện thực | Thay khung kiểm thử E2E đầy đủ |
+| Đọc văn bản hiển thị trên trang hỗ trợ gỡ lỗi | Xử lý site cần xác minh người–máy phức tạp |
 
-Background: [tool selection](/guide/tools/tool-selection/)
+Nền chọn công cụ: [Chọn công cụ](/guide/tools/tool-selection/)
 
-## Comparison with other tools
+## So sánh với công cụ khác
 
-| Tool | Input | Output |
+| Công cụ | Đầu vào | Đầu ra |
 |---|---|---|
-| Web search | Query | Summary and links |
-| Browser | URL / local address | Page structure, screenshots, interaction results |
-| Computer Use | Full-screen GUI | Any app operation (heavier, more sensitive) |
+| Tìm kiếm web | Từ khóa truy vấn | Tóm tắt và liên kết |
+| Trình duyệt | URL / địa chỉ cục bộ | Cấu trúc trang, ảnh chụp, kết quả tương tác |
+| Computer Use | GUI cả màn hình | Thao tác ứng dụng bất kỳ (nặng hơn, nhạy hơn) |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Not a replacement for automated testing
+### 1. Công cụ trình duyệt không thay thế kiểm thử tự động
 
-It can inspect pages, screenshot, and click some interactions—it does not replace a full test system.
+Nó giúp bạn kiểm trang, chụp màn hình, bấm vài tương tác, nhưng không thay hệ thống kiểm thử đầy đủ.
 
-### 2. Page loads ≠ page is correct
+### 2. Trang mở được không bằng trang không có vấn đề
 
-Loading only proves existence; layout, copy, interaction, and links still need review.
+Mở được chỉ nói “trang tồn tại”; bố cục, văn bản, tương tác, liên kết đúng hay không vẫn phải xem tiếp.
 
-### 3. When to use it?
+### 3. Khi nào nên dùng?
 
-Typical cases:
+Tình huống phổ biến nhất:
 
-- Local layout issues
-- 404 link checks
-- Rough design alignment
-- Confirming "code looks right but does the real page?"
+- Xem trang cục bộ có vấn đề bố cục không
+- Kiểm liên kết có 404 không
+- Đối chiếu hướng lớn giữa trang và bản thiết kế
+- Xác nhận “mã trông đúng, nhưng trang thật có đúng không”
 
-## Decision criteria
+## Tiêu chuẩn phán đoán
 
-If your question is:
+Nếu câu hỏi của bạn đang hỏi:
 
-- "What does it actually render as?"
-- "What is visible on the page?"
-- "What feedback appears after this interaction?"
+- “Render thật trông thế nào”
+- “Trên trang thật sự thấy gì”
+- “Tương tác này bấm xong trang phản hồi gì”
 
-The browser tool usually beats pure text analysis.
+thì công cụ trình duyệt thường phù hợp hơn phân tích thuần văn bản.
 
-## Recommended workflow
+## Quy trình khuyến nghị
 
-1. **Local frontend**: run `npm run dev`, then provide `http://localhost:PORT/path`
-2. **Specific task**: "Check login form overflow at 375px width"—not "look at the website"
-3. **State boundaries**: no external network, no submitting forms to production
-4. **Acceptance**: compare with [verify artifacts](/guide/quality/verify-artifacts/) and screenshots
+1. **Frontend cục bộ**: chạy `npm run dev` trước, rồi đưa `http://localhost:PORT/path`
+2. **Nói rõ tác vụ**: «Kiểm form đăng nhập ở độ rộng 375px có bị tràn không», chứ không «xem trang web»
+3. **Viết rõ ranh giới**: cấm truy cập mạng ngoài, cấm gửi form tới production
+4. **Nghiệm thu**: đối chiếu [Kiểm chứng artifact](/guide/quality/verify-artifacts/) và ảnh chụp
 
-## Example prompt
+## Cách viết dùng trực tiếp được
+
+Có thể yêu cầu vậy:
 
 ```text
-Only visit http://localhost:4321/guide/foundations/local-vs-cloud/ and check above-the-fold layout and hero image appearance.
-Do not access the public internet or submit any forms.
-If you find issues, provide screenshot evidence and fix suggestions.
+Chỉ truy cập http://localhost:4321/guide/foundations/local-vs-cloud/ , kiểm bố cục màn đầu và cảm giác hình tiêu đề.
+Đừng truy cập mạng ngoài, đừng gửi bất kỳ form nào.
+Nếu phát hiện vấn đề, hãy đưa căn cứ ảnh chụp và đề xuất sửa.
 ```
 
-## Security boundaries
+## Ranh giới an toàn
 
-- Default assumption: browser can reach **everything your machine/environment can**—including internal admin
-- Declare in task: `localhost only` or an allowlist of domains
-- Do not run untrusted repo tasks in a browser profile logged into personal accounts
-- Cloud browser policy follows [Cloud environments](/guide/web-and-cloud/cloud-environments/) and network rules
+- Mặc định giả định trình duyệt có thể truy cập **mọi thứ máy hoặc môi trường của bạn truy cập được** — gồm cả admin nội bộ
+- Trong tác vụ khai báo: `chỉ truy cập localhost` hoặc danh sách trắng tên miền được phép
+- Đừng chạy tác vụ kho không đáng tin trong cấu hình trình duyệt đã đăng nhập tài khoản cá nhân
+- Chính sách trình duyệt môi trường Cloud do [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/) và chính sách mạng quyết định
 
-Approvals: [permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Khái niệm phê duyệt: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Production URL without read-only limits
-- Treating screenshots as "tests passed" without automated tests
-- Using web search when real rendering check is needed
+- Đưa URL production mà không hạn chế chỉ đọc
+- Coi ảnh chụp trình duyệt là «kiểm thử đã qua» mà không chạy kiểm thử tự động
+- Trộn với tìm kiếm web: tìm kiếm không thay kiểm render thật
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] Access scope fixed in prompt
-- [ ] Key visual issues have screenshots or clear text
-- [ ] Consistent with unit/E2E results—or documented known gaps
+- [ ] Phạm vi truy cập đã khóa cứng trong prompt
+- [ ] Vấn đề hình ảnh then chốt có ảnh chụp hoặc mô tả chữ
+- [ ] Khớp kết luận kiểm thử đơn vị/E2E hoặc khác biệt đã biết đã ghi lại
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Codex (version and permission dependent)  
-**Verification basis:** OpenAI Help Center currently documents built-in browser in the desktop App—open pages in Work or Codex, switch tabs, download files, annotation mode, per-site approval. This page focuses on use cases, distinction from search/Computer Use, and security boundaries.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / Codex (tùy phiên bản và quyền)  
+**Căn cứ kiểm chứng:** OpenAI Help Center hiện đã có hướng dẫn trình duyệt tích hợp trong App máy tính, xác nhận có thể mở trang trong Work hoặc Codex, chuyển tab, tải tệp, dùng chế độ chú thích, và phê duyệt truy cập theo từng site. Nội dung trang tập trung vào tình huống phù hợp của công cụ trình duyệt, khác biệt với tìm kiếm/Computer Use và ranh giới an toàn.  
+**Kiểm chứng gần nhất:** 2026-07-26

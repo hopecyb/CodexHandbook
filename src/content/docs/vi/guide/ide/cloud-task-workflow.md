@@ -1,111 +1,113 @@
 ---
-title: Cloud tasks in the IDE
-description: Delegating Cloud tasks from the IDE, following status, and reviewing remote output.
+title: Tác vụ Cloud trong IDE
+description: Ủy thác tác vụ Cloud từ IDE, theo dõi trạng thái và rà soát đầu ra từ xa.
 locale: vi
-source_locale: en
-source_revision: 9e4d19c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Some IDE integrations let you **delegate tasks to Cloud**. Work runs in a standardized remote environment while you keep editing locally or walk away. The flow matches pure Cloud/Web—only the entry point is in the editor.
+Một số tích hợp IDE hỗ trợ **ủy thác tác vụ lên Cloud**. Tác vụ chạy trong môi trường chuẩn hóa từ xa; bạn có thể tiếp tục sửa local, hoặc rời máy. Quy trình giống Cloud/Web thuần, chỉ khác lối vào nằm phía trình soạn thảo.
 
-## What's covered
+## Nội dung
 
-- When to send a Cloud task from the IDE vs purely local
-- What to prepare before and after delegation
-- Bringing remote diffs back for local review
+- Khi nào gửi tác vụ Cloud từ IDE thay vì thuần local
+- Trước và sau ủy thác cần chuẩn bị gì
+- Cách đưa diff từ xa về rà soát local
 
-## Good fits
+## Tình huống phù hợp
 
-| Prefer Cloud | Stay local |
+| Phù hợp Cloud | Giữ local |
 |---|---|
-| Heavy installs, hard-to-reproduce environments | Quick two-line edits |
-| Need branch push / open PR | GitHub not connected |
-| Long runs with phone approval notifications | Uncommitted sensitive drafts on machine |
+| Cài phụ thuộc nặng, môi trường khó tái hiện | Sửa nhanh vài dòng |
+| Cần push nhánh / mở PR | Chưa kết nối GitHub |
+| Chạy lâu, muốn thông báo phê duyệt trên điện thoại | Có bản nháp nhạy cảm chưa commit trên máy |
 
-Concept: [local vs cloud](/guide/foundations/local-vs-cloud/)
+Khái niệm: [Local và Cloud](/guide/foundations/local-vs-cloud/)
 
-## When this workflow helps
+## Quy trình này phù hợp khi nào
 
-Common pattern:
+Loại quy trình này thường gặp khi:
 
-- You work in the IDE habitually
-- But the task runs better in a remote environment
+- Bạn quen làm việc trong IDE
+- Nhưng bản thân tác vụ chạy trong môi trường từ xa hợp hơn
 
-You still work in the IDE; execution has moved remote.
+Tức là bạn vẫn làm trong IDE, nhưng môi trường thực thi đã chuyển sang từ xa.
 
-## Prerequisites
+## Điều kiện tiên quyết
 
-- [ ] [GitHub connected](/guide/web-and-cloud/connect-github/)
-- [ ] Cloud [environment](/guide/web-and-cloud/cloud-environments/) and [Secrets](/guide/web-and-cloud/secrets-and-variables/) configured if needed
-- [ ] Local changes committed or explicitly "remote branch is source of truth"
+- [ ] [GitHub đã kết nối](/guide/web-and-cloud/connect-github/)
+- [ ] [Môi trường](/guide/web-and-cloud/cloud-environments/) Cloud và [Secrets](/guide/web-and-cloud/secrets-and-variables/) đã cấu hình (nếu tác vụ cần)
+- [ ] Thay đổi local đã commit hoặc nêu rõ «lấy nhánh từ xa làm chuẩn»
 
-**The IDE cannot make Cloud see unpushed commits on your machine.**
+**IDE không thay thế Cloud trong việc truy cập commit chưa push trên máy bạn.**
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. "Run in Cloud" from the IDE carries everything on my machine
+### 1. Trong IDE bấm «chạy trên Cloud» — nó tự mang theo mọi thứ trên máy?
 
-No.  
-Remote tasks see the remote repo, remote environment, and what you explicitly attach.
+Không.  
+Tác vụ từ xa thấy vẫn là kho từ xa, môi trường từ xa, và nội dung bạn giao rõ cho nó.
 
-### 2. Because the entry is in the IDE, it behaves like a local task
+### 2. Lối vào nằm trong IDE — vậy gần giống tác vụ local?
 
-Not quite.  
-Launch location is IDE; execution boundary, environment, and visibility are still Cloud rules.
+Cũng khác.  
+Vị trí khởi nằm trong IDE, nhưng biên thực thi, môi trường và nội dung nhìn thấy vẫn là bộ Cloud.
 
-### 3. Remote completion equals reviewed and approved
+### 3. Cloud chạy xong không có nghĩa đã rà soát xong
 
-Remote done only means it finished there—not that local review, tests, and sign-off are complete.
+Hoàn thành từ xa chỉ nghĩa tác vụ đã chạy xong ở đó — không nghĩa review local, kiểm thử và xác nhận cuối đã xong.
 
-## Recommended flow
+## Quy trình khuyến nghị
 
 ```text
-1. Write task in IDE (goal, branch, constraints, acceptance)
-2. Choose "Run in Cloud" or equivalent (per product UI)
-3. Confirm plan (if plan mode enabled)
-4. Leave or keep working locally → check progress in notifications/panel
-5. When remote finishes: review diff in Web/App → open PR or pull branch locally
-6. Run tests locally + human review → merge
+1. Trong IDE viết rõ mô tả tác vụ (mục tiêu, nhánh, ràng buộc, nghiệm thu)
+2. Chọn «chạy trên Cloud» hoặc lối vào tương đương (theo UI sản phẩm)
+3. Xác nhận kế hoạch (nếu bật chế độ plan)
+4. Rời máy hoặc tiếp tục làm local → xem tiến độ qua thông báo/bảng
+5. Sau khi từ xa xong: xem diff trên Web/App → mở PR hoặc pull nhánh về local
+6. Chạy kiểm thử local + review thủ công → merge
 ```
 
-PR details: [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Chi tiết mở PR: [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## A practical first-time sequence
+## Một thứ tự thường dùng
 
-1. Confirm local changes committed—or intentionally excluded
-2. Confirm GitHub, Secrets, branch ready
-3. Delegate with clear goal, scope, and acceptance
-4. Review diff when remote completes
-5. Add local tests and human review
+Lần đầu gửi tác vụ Cloud từ IDE, có thể theo thứ tự:
 
-The core difference from local IDE tasks: execution environment is remote.
+1. Xác nhận thay đổi local đã commit hay cố ý không mang theo
+2. Xác nhận GitHub, Secrets, nhánh đã sẵn
+3. Khởi tác vụ với mục tiêu, phạm vi và tiêu chí nghiệm thu rõ
+4. Từ xa xong thì quay lại xem diff
+5. Local bổ sung kiểm thử và rà soát thủ công
 
-## Relation to desktop App delegation
+Khác biệt cốt lõi giữa tác vụ Cloud và local trong IDE nằm ở môi trường thực thi có phải từ xa hay không.
 
-[Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/) in the desktop App share the same Cloud backend; difference is mainly **entry UI and attached context** (IDE may include current selection summary).
+## Quan hệ với ủy thác trên ứng dụng Desktop
 
-## Security boundaries
+[Tác vụ local và Cloud](/guide/desktop-app/local-and-cloud-tasks/) của Desktop App và ủy thác IDE dùng chung backend Cloud; khác chủ yếu ở **UI lối vào và đính kèm ngữ cảnh** (IDE có thể kèm tóm tắt vùng chọn hiện tại).
 
-- Cloud task permissions bounded by GitHub connection scope and org policy
-- Do not paste production keys in task descriptions; use [Secrets](/guide/web-and-cloud/secrets-and-variables/)
-- Still require [human review](/guide/web-and-cloud/code-review/) before merge
+## Biên an toàn
 
-## Common mistakes
+- Quyền tác vụ Cloud bị ràng buộc bởi phạm vi kết nối GitHub và chính sách tổ chức
+- Không dán khóa production vào mô tả tác vụ; dùng [Secrets](/guide/web-and-cloud/secrets-and-variables/)
+- Trước khi merge vẫn phải [rà soát thủ công](/guide/web-and-cloud/code-review/)
 
-- Keep editing the same file locally after delegation → conflicts with remote branch
-- No branch name → remote pushes to a shared branch
-- Treat Cloud output as "accepted" and skip CI
+## Lỗi thường gặp
 
-## References
+- Ủy thác xong vẫn sửa cùng tệp trên máy → xung đột với nhánh từ xa
+- Không ghi tên nhánh → từ xa push thẳng nhánh dùng chung
+- Coi đầu ra Cloud là «đã nghiệm thu» rồi bỏ qua CI
 
-- stormzhang `10-cloud.md`, `09-ide.md`
+## Nguồn tham khảo
+
+- `10-cloud.md`, `09-ide.md` của stormzhang
 - KimYx0207 CX-10 Cloud
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE / Cloud  
-**Review note:** This page describes IDE-to-Cloud delegation, diff handoff, and local follow-up as concrete current behavior; official docs do not yet verify that IDE Cloud delegation experience line by line—better `outdated` until formal IDE/Cloud documentation is available.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** IDE / Cloud  
+**Ghi chú tái kiểm:** Trang này viết «ủy thác trực tiếp tác vụ Cloud từ IDE, đưa diff về, theo dõi local» như năng lực và quy trình tiện ích hiện tại khá cụ thể, nhưng tài liệu chính thức hiện hành chưa đủ để chứng minh từng hình thái trải nghiệm ủy thác Cloud trong IDE; trước khi bổ sung tài liệu IDE/Cloud chính thức nên gắn `outdated`.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,52 +1,51 @@
 ---
-title: Build a website
-description: A prototype case from requirements to a previewable page.
+title: Xây website
+description: Case dựng nguyên mẫu từ yêu cầu đến trang có thể xem trước.
 locale: vi
-source_locale: en
-source_revision: e8865aa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Build a website
+# Xây website
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Creators / developers |
+| Đối tượng | Người sáng tạo / nhà phát triển |
 | Client | App / IDE |
-| Estimated time | 2–4 hours |
+| Thời gian ước tính | 2–4 giờ |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Build a locally previewable static page or small site from simple requirements.
+**Mục tiêu:** Dựa trên yêu cầu đơn giản, dựng trang tĩnh hoặc site nhỏ có thể xem trước cục bộ.
 
-**Success criteria:** Opens in a browser, styling matches the description, no unrelated file changes.
+**Tiêu chí thành công:** Mở được trong trình duyệt, kiểu dáng khớp mô tả, không sửa tệp không liên quan.
 
-## 2. Recommended prompt
+## 2. Prompt đề xuất
 
 ```text
-Goal: Build a single-page landing page for [product/event] with a title, three features, and a CTA button.
-Tech: HTML + CSS (or the project's existing framework), mobile-friendly.
-Constraints: Only change page-related files under src/; do not add new dependencies unless I approve.
-Acceptance: pnpm dev can preview; screenshot or notes explaining main sections.
-Give a wireframe plan first; wait for my confirmation before writing code.
+Mục tiêu: Làm landing page một trang cho 【sản phẩm/sự kiện】, gồm tiêu đề, ba đặc điểm, nút CTA.
+Kỹ thuật: HTML + CSS (hoặc framework sẵn có của dự án), thân thiện mobile.
+Ràng buộc: Chỉ sửa tệp liên quan trang dưới src/; không thêm dependency mới trừ khi tôi phê duyệt.
+Nghiệm thu: pnpm dev xem trước được; kèm ảnh chụp mô tả các khối chính.
+Trước hết đưa kế hoạch wireframe; đợi tôi xác nhận rồi mới viết code.
 ```
 
-## 3. Verification
+## 3. Kiểm chứng
 
-- Preview locally at each breakpoint
-- Check for accidental changes to config or lock files
+- Xem trước cục bộ ở các breakpoint
+- Kiểm tra có vô tình sửa cấu hình hoặc lockfile không
 
-## 4. Related
+## 4. Liên quan
 
-- [Create template](/prompts/templates/create/)
-- [Artifact-first work](/cases/workflows/artifact-first-work/)
-
+- [Mẫu tạo](/prompts/templates/create/)
+- [Làm việc ưu tiên Artifact](/cases/workflows/artifact-first-work/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include frontend build scenarios such as "Get from idea to proof of concept," "Build responsive front-end designs," and "Deploy an app or website"; this page limits the example to a small site or landing page prototype, requiring wireframes first, scoped changes, and browser preview for acceptance.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm các kịch bản dựng frontend như “Get from idea to proof of concept”, “Build responsive front-end designs”, “Deploy an app or website”; ví dụ trang này giới hạn ở nguyên mẫu site nhỏ hoặc landing page, yêu cầu wireframe trước, hạn chế phạm vi sửa, nghiệm thu bằng xem trước trên trình duyệt.  
+**Kiểm chứng gần nhất:** 2026-07-26

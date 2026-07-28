@@ -1,138 +1,138 @@
 ---
-title: Team Rules Policy
-description: Layer governance of command and path rules across organization, repo, and individual—reviewable and rollback-friendly.
+title: Chiến lược quy tắc nhóm
+description: Phân tầng quản trị quy tắc lệnh và đường dẫn giữa tổ chức, kho và cá nhân — rà được, rollback được.
 locale: vi
-source_locale: en
-source_revision: e90f23a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When teams use Codex, **rules policy** answers: which constraints are company-wide, which the repo maintains, and whether individuals may relax anything. This chapter is the governance view of [Command Rules](/guide/customization/rules/command-rules/) and [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/).
+Khi nhóm dùng Codex, **chiến lược quy tắc** trả lời: ràng buộc nào cả công ty thống nhất, ràng buộc nào giao kho duy trì, cá nhân còn nới được không. Chương này là góc quản trị của [Quy tắc lệnh](/guide/customization/rules/command-rules/) và [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/).
 
-## Contents
+## Nội dung
 
-- Organization managed policy vs project rules vs personal preferences
-- How rule changes go through review and release
-- Coordination with `AGENTS.md`, Hooks, and CI
+- Chiến lược quản trị tổ chức vs quy tắc dự án vs sở thích cá nhân
+- Thay đổi quy tắc đi rà soát và phát hành thế nào
+- Phối hợp với `AGENTS.md`, Hooks, CI
 
-## What Team Rules Policy Does
+## Vai trò chiến lược quy tắc nhóm
 
-Team rules policy answers: which boundaries the company sets, which the project sets, and which are personal habit.
+Chiến lược quy tắc nhóm trả lời: ranh giới nào nên công ty thống nhất, ranh giới nào dự án tự định, ranh giới nào chỉ là thói cá nhân.
 
-If this layering is unclear, you often get:
+Nếu phân tầng này không rõ, dễ xuất hiện hai vấn đề:
 
-- Rules that should be team-wide living on one person’s machine
-- Temporary personal convenience mistaken for team standard
+- Quy tắc đáng thống nhất cả nhóm chỉ sống trên máy một người
+- Cài đặt cá nhân tạm tiện bị hiểu nhầm thành chuẩn nhóm
 
-## Who This Is For
+## Phù hợp ai
 
-| Role | Focus |
+| Vai trò | Điểm quan tâm |
 |---|---|
-| Engineering lead | Baseline deny, audit requirements |
-| Repo maintainer | Project allowlist, test commands |
-| Individual developer | Local supplement within policy |
+| Phụ trách kỹ thuật | Deny đường cơ sở, yêu cầu kiểm toán |
+| Người duy trì kho | Allowlist dự án, lệnh kiểm thử |
+| Lập trình viên cá nhân | Bổ sung máy cục bộ trong phạm vi chiến lược cho phép |
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### Team rules do not need maximum uniformity
+### Quy tắc nhóm không nhất thiết càng thống nhất càng tốt
 
-Some boundaries should be organization-wide, such as high-risk deny.
+Một số ranh giới đúng nên thống nhất cả tổ chức, ví dụ deny rủi ro cao.
 
-Forcing every repo into identical rules causes another problem: rules too loose or too tight—eventually nobody trusts them.
+Nhưng nếu ép mọi kho thành y hệt nhau, cũng mang vấn đề khác: quy tắc quá rộng hoặc quá hẹp, cuối cùng không ai thật sự tin.
 
-The point is separating organization, project, and personal layers—not making all rules look the same.
+Vậy trọng tâm là phân rõ ranh giới tầng tổ chức, dự án và cá nhân, không phải làm mọi quy tắc một kiểu.
 
-### Personal supplements must not weaken team bottom lines
+### Bổ sung cá nhân không nên làm yếu đường cơ sở nhóm
 
-You may add convenience on your machine, but not bypass organization or team bottom lines.
+Bạn có thể trên máy mình bổ sung cài đặt tiện, nhưng tiền đề là đừng vòng đường cơ sở nhóm hoặc tổ chức đã định.
 
-Otherwise it looks like “faster locally” while planting mines for collaboration.
+Nếu không, bề ngoài “máy cục bộ hiệu quả hơn”, thực tế đang gài mìn cho cộng tác.
 
-## Recommended Layering Model
+## Mô hình phân tầng khuyến nghị
 
 ```text
-L1 Organization managed (Managed)     → cannot be overridden by project/individual
-L2 Team template repo                 → rules snippets new repos inherit
-L3 Project rules + AGENTS.md          → Git PR review
-L4 Personal configuration             → local only; must not weaken L1
-L5 Single-task prompt                 → temporary tightening OK; temporary relaxation limited by L1
+L1 Quản trị tổ chức (Managed)     → Dự án/cá nhân không phủ được
+L2 Kho mẫu nhóm                   → Đoạn rules kho mới kế thừa
+L3 Rules dự án + AGENTS.md        → Rà Git PR
+L4 Cấu hình cá nhân               → Chỉ máy cục bộ, không được làm yếu L1
+L5 Prompt tác vụ một lần          → Siết tạm được, nới tạm chịu hạn chế L1
 ```
 
-Compare with [AGENTS.md Scope](/guide/customization/agents-md/scope-and-precedence/): **rules lean toward execution enforcement; AGENTS.md leans toward behavior description**; they should agree—do not write contradictory requirements in two places.
+Đối chiếu nhớ với [Phạm vi AGENTS.md](/guide/customization/agents-md/scope-and-precedence/): **quy tắc nghiêng enforcement thực thi, AGENTS.md nghiêng mô tả hành vi**; hai bên nên nhất quán, đừng mỗi bên viết một bộ yêu cầu mâu thuẫn.
 
-## Basic Practice
+## Cách làm cơ bản
 
-1. **Write the “never allowed” list first** (deny): `git push --force`, read `~/.ssh`, POST repo content to the public internet
-2. **Then the “daily allowed” list** (allow): tests, lint, read-only git
-3. **Deploy L1 via management** (if the organization enables Managed configuration)
-4. **Each service/monorepo subpackage** may add L3 but must not conflict with L1
-5. **Quarterly review**: “false block” and “false allow” from approval logs flow back into rules PRs
+1. **Viết trước danh sách «tuyệt đối không cho phép»** (deny): `git push --force`, đọc `~/.ssh`, POST công cộng nội dung kho
+2. **Rồi viết danh sách «hàng ngày cho phép»** (allow): kiểm thử, lint, git chỉ đọc
+3. **Quản trị phát hành L1** (nếu tổ chức đã bật Managed configuration)
+4. **Mỗi dịch vụ/gói con Monorepo** có thể bổ sung L3, nhưng không xung đột L1
+5. **Rà quý**: «chặn nhầm» và «cho nhầm» lặp trong nhật ký phê duyệt chảy lại PR quy tắc
 
-## Recommended Workflow: Rule Changes
+## Quy trình khuyến nghị: thay đổi quy tắc
 
 ```text
-Proposal (issue or RFC) → security/platform review → PR changing rule files
-    → trial typical tasks in staging repo → merge → announcement + handbook update
+Đề xuất (issue hoặc RFC) → Review bảo mật/nền tảng → PR sửa tệp quy tắc
+    → Thử chạy tác vụ điển hình trên kho staging → Gộp → Thông báo + cập nhật trang sổ tay
 ```
 
-Large changes (e.g. allowing outbound network) should update [Hooks audit](/skills/hooks/hooks-overview/) and [acceptable use](/guide/team-enterprise/governance/acceptable-use/) together.
+Thay đổi lớn (ví dụ mở ra mạng) nên cập nhật đồng bộ [Kiểm toán Hooks](/skills/hooks/hooks-overview/) và [acceptable use](/guide/team-enterprise/governance/acceptable-use/).
 
-## Alignment with Hooks and CI
+## Khớp với Hooks, CI
 
-| Mechanism | Role |
+| Cơ chế | Vai trò |
 |---|---|
-| Rules | Allow/deny before execution |
-| Hooks | Complex validation, logging, compliance format |
-| CI | Merge gate; scripts aligned with local rules |
+| Quy tắc | Cho phép/từ chối trước thực thi |
+| Hooks | Kiểm phức tạp, nhật ký, định dạng tuân thủ |
+| CI | Cổng merge, script cùng nguồn với quy tắc cục bộ |
 
-Avoid three separate logics: prefer a **single source of truth** (e.g. `tools/codex-rules.json`) referenced by both CLI and CI.
+Tránh ba bộ logic mỗi bên viết một: ưu tiên **một nguồn sự thật** (như `tools/codex-rules.json`) được CLI và CI cùng tham chiếu.
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Verbal “do not push” only; rule files not updated
-- Personal machine relaxes sandbox; screenshot treated as “team standard”
-- Monorepo subprojects differ but share one overly broad global allowlist
-- Rule change without announcement; teammates suddenly hit many approval failures
+- Chỉ ước định miệng «đừng push», tệp quy tắc chưa cập nhật
+- Máy cá nhân nới Sandbox rồi lấy ảnh chụp làm «chuẩn nhóm»
+- Nhu cầu dự án con Monorepo khác nhau mà dùng chung một allowlist toàn cục quá rộng
+- Thay đổi quy tắc không thông báo, đồng đội đột nhiên nhiều phê duyệt thất bại
 
-## Which Layer a Rule Belongs On
+## Phán đoán quy tắc nên đặt tầng nào
 
-Ask:
+Xem ba câu hỏi:
 
-1. Is this a bottom line every repo must follow?
-2. Does this hold only for the current project?
-3. Is this only my personal convenience?
+1. Có phải đường cơ sở mọi kho phải giữ không
+2. Có phải chỉ đúng với dự án hiện tại không
+3. Có phải chỉ bổ sung cá nhân vì thuận tay không
 
-Usually:
+Thường tương ứng:
 
-- Organization layer
-- Project layer
-- Personal layer
+- Tầng tổ chức
+- Tầng dự án
+- Tầng cá nhân
 
-## Security Boundaries
+## Ranh giới an toàn
 
-- Rules cannot replace [threat model](/guide/team-enterprise/security/threat-model/) and incident response
-- For regulated data, rules need joint review with data classification and retention policy
-- Emergency bypass needs **audit record** and post-incident review
+- Quy tắc không thay [mô hình đe dọa](/guide/team-enterprise/security/threat-model/) và quy trình ứng phó sự cố
+- Khi liên quan dữ liệu bị giám sát, quy tắc cần review cùng phân cấp dữ liệu và chiến lược lưu giữ
+- Vòng khẩn cấp phải có **bản ghi kiểm toán** và rà sau sự việc
 
-## Acceptance Checklist
+## Danh sách nghiệm thu
 
-- [ ] You can diagram your organization’s L1–L3 division of labor
-- [ ] Repo rule files have clear owner and review requirements
-- [ ] No contradiction with `AGENTS.md`, Hooks, and CI
-- [ ] Channel for “false block” feedback (issue template or internal form)
+- [ ] Vẽ được phân công L1–L3 của tổ chức mình
+- [ ] Tệp quy tắc trong kho có owner rõ và yêu cầu review
+- [ ] Không mâu thuẫn với `AGENTS.md`, Hooks, CI
+- [ ] Có kênh xử lý phản hồi «chặn nhầm» (mẫu issue hoặc form nội bộ)
 
-The most important part of team rules policy is knowing who sets boundaries at which layer—then how to write the rules.
+Chiến lược quy tắc nhóm quan trọng nhất là phân rõ trước “ai định ranh giới tầng nào”, rồi mới quyết quy tắc viết thế nào.
 
-## References
+## Nguồn tham khảo
 
-- freestylefly/CodexGuide team governance and playbook
-- KimYx0207 enterprise security chapter
-- codex.bozhouai.com team configuration cases (task-type reference)
+- Quản trị nhóm và playbook freestylefly/CodexGuide
+- Chương bảo mật doanh nghiệp KimYx0207
+- Case cấu hình nhóm codex.bozhouai.com (tham khảo loại tác vụ)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App / Cloud (depending on organization features)  
-**Verification basis:** OpenAI’s current organization-level plugin, app, and permission materials still emphasize role access, action approval, managed configuration, and team-level control layering; this page abstracts rules policy into organization, project, and personal governance and requires rule changes to go through review and announcement—a stable governance practice summary.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App / Cloud (tùy chức năng tổ chức)  
+**Căn cứ kiểm chứng:** Tài liệu plugin, ứng dụng và quyền cấp tổ chức hiện tại của OpenAI vẫn nhấn mạnh phân tầng kiểm soát truy cập vai trò, phê duyệt hành động, cấu hình quản trị và kiểm soát cấp nhóm; trang này trừu tượng hóa chiến lược quy tắc thành mô hình quản trị tầng tổ chức, dự án, cá nhân, và yêu cầu thay đổi quy tắc đi rà soát và thông báo — thuộc tóm tắt thực hành quản trị ổn định.  
+**Kiểm chứng gần nhất:** 2026-07-26

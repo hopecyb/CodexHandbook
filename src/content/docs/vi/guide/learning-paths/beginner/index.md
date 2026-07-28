@@ -1,36 +1,36 @@
 ---
-title: Beginner path
-description: A shortest five-step route for first-time Codex users—from clear tasks to finishing a small project.
+title: Lộ trình người mới
+description: "Cho độc giả lần đầu dùng Codex một tuyến năm bước ngắn nhất: từ nói rõ Tác vụ đến hoàn thành dự án nhỏ đầu tiên."
 locale: vi
-source_locale: en
-source_revision: 135c0a5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When learning Codex for the first time, the blocker is often not one confusing page—it is not knowing where to start.
+Lần đầu học Codex, chỗ dễ kẹt thường không phải một bài không hiểu, mà không biết nên bắt đầu từ trang nào.
 
-This path is the shortest route for newcomers.
+Nhóm này là lộ trình ngắn nhất dành cho người mới.
 
-## Recommended order
+## Thứ tự khuyến nghị
 
-1. [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Work with files](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Review results](/guide/learning-paths/beginner/04-review-results/)
-5. [Complete your first small project](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Trò chuyện với Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Làm việc với tệp](/guide/learning-paths/beginner/02-work-with-files/)
+3. [Giao Tác vụ rõ ràng](/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Xem xét kết quả](/guide/learning-paths/beginner/04-review-results/)
+5. [Hoàn thành dự án nhỏ đầu tiên](/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Who this is for
+## Nhóm này phù hợp ai
 
-- Have not yet completed one full task loop reliably
-- Know Codex can do work but unsure how to practice first
-- Want "enough to be useful" before full terminology
+- Chưa chạy thông ổn định một vòng Tác vụ đầy đủ
+- Biết Codex làm được việc, nhưng không biết lần đầu nên luyện thế nào
+- Muốn học «phương pháp đủ dùng» trước, không phải học hết thuật ngữ
 
-The beginner path goal is not learning everything—it is completing one full loop.
+Mục tiêu lộ trình người mới không phải học hết, mà chạy thông vòng kín đầy đủ lần đầu.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked with this repo's current five-step beginner files, getting-started chapters, and beginner safety/check pages; this page only navigates reading order for newcomers.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với tệp lộ trình năm bước người mới, chương bắt đầu nhanh và các trang an toàn/kiểm tra nhập môn hiện tại trong kho này; trang chỉ đóng vai trò điều hướng «người mới nên đọc theo thứ tự nào trước».  
+**Kiểm chứng gần nhất:** 2026-07-26

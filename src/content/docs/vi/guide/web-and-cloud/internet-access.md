@@ -1,144 +1,144 @@
 ---
-title: Internet access
-description: Cloud outbound policy, dependency installs, and data-exfiltration risk—how to open only what you need.
+title: Truy cập Internet
+description: "Chính sách đi ra Cloud, cài dependency và rủi ro exfiltration dữ liệu — chỉ mở những gì cần."
 locale: vi
-source_locale: en
-source_revision: f513d7f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud tasks often need **outbound network access**: pulling npm/PyPI packages, calling APIs, cloning submodules. At the same time, internet access is a high-risk surface for **data exfiltration**—an Agent might send repo or Secret content to external services.
+Tác vụ Cloud thường cần **truy cập mạng đi ra**: kéo package npm/PyPI, gọi API, clone submodule. Đồng thời, truy cập Internet là bề mặt rủi ro cao cho **exfiltration dữ liệu** — Agent có thể gửi nội dung repo hoặc Secrets tới dịch vụ ngoài.
 
-## What's covered
+## Nội dung phủ
 
-- Whether Cloud environments can reach the internet by default
-- When to allow access and how to minimize exposure
-- How this fits with local sandbox and Secrets policy
+- Môi trường Cloud có tới Internet mặc định không
+- Khi nào cho phép truy cập và giảm thiểu phơi bày thế nào
+- Liên hệ với Sandbox cục bộ và chính sách Secrets
 
-## Basic boundary
+## Ranh giới cơ bản
 
-"Needs network" does not mean "open everything."
+«Cần mạng» không nghĩa là «mở hết».
 
-Many people frame it as binary:
+Nhiều người thấy nhị phân:
 
-- Either no network at all
-- Or full access for convenience
+- Hoặc không mạng gì cả
+- Hoặc truy cập đầy đủ vì tiện
 
-The usual approach is to grant only what the task needs—nothing extra.
+Cách làm thông thường là chỉ cấp những gì Tác vụ cần — không hơn.
 
-## Two layers of "network"
+## Hai tầng «mạng»
 
-| Layer | Meaning |
+| Tầng | Ý nghĩa |
 |---|---|
-| Cloud environment outbound | Whether the remote machine can reach the public internet or internal APIs |
-| Agent tool networking | In-session web search, curl, etc. (varies by client) |
+| Đi ra môi trường Cloud | Máy từ xa có tới Internet công cộng hoặc API nội bộ không |
+| Mạng công cụ Agent | Tìm kiếm web trong phiên, curl, v.v. (tùy client) |
 
-This page focuses on **Cloud environments**; general concepts: [sandbox and network](/guide/foundations/sandbox-and-network/).
+Trang này tập trung **môi trường Cloud**; khái niệm chung: [Sandbox và mạng](/guide/foundations/sandbox-and-network/).
 
-## Why local working does not imply Cloud works
+## Vì sao cục bộ chạy được không nghĩa Cloud chạy được
 
-Locally you might succeed because:
+Cục bộ bạn có thể thành công vì:
 
-- You are already logged into a service on your machine
-- You have `.npmrc`, SSH keys, or proxy config locally
-- You are on the company VPN
+- Đã kết nối dịch vụ trên máy
+- Có `.npmrc`, khóa SSH hoặc cấu hình proxy cục bộ
+- Đang trên VPN doanh nghiệp
 
-Cloud does not inherit those by default. "Works with `npm install` locally" does not imply Cloud can do the same.
+Cloud mặc định không kế thừa điều đó. «`npm install` cục bộ được» không nghĩa Cloud làm được tương tự.
 
-## Typical scenarios needing outbound access
+## Tình huống điển hình cần truy cập đi ra
 
-- Install dependencies: `npm install`, `pip install`, `go mod download`
-- Pull from private registries (needs [Secrets](/guide/web-and-cloud/secrets-and-variables/))
-- Call third-party APIs (payments, maps, LLM gateways, etc.)
-- Clone submodules or download build assets
+- Cài dependency: `npm install`, `pip install`, `go mod download`
+- Kéo từ registry riêng (cần [Secrets](/guide/web-and-cloud/secrets-and-variables/))
+- Gọi API bên thứ ba (thanh toán, bản đồ, cổng LLM, v.v.)
+- Clone submodule hoặc tải asset build
 
-## Decision principle
+## Nguyên tắc quyết định
 
-If a network action is not required for this task, do not open it first.
+Nếu hành động mạng không bắt buộc cho Tác vụ này, đừng mở trước.
 
-Examples:
+Ví dụ:
 
-- Package registries for installs: usually required
-- Random websites or extra downloads: usually not
+- Registry package để cài: thường bắt buộc
+- Trang web ngẫu nhiên hoặc tải thêm: thường không
 
-## Recommended strategy
+## Chiến lược khuyến nghị
 
-### Default tight, open on demand
+### Mặc định chặt, mở theo nhu cầu
 
-1. Confirm current network policy in [Cloud environments](/guide/web-and-cloud/cloud-environments/)
-2. List **required domains** (package managers, company APIs)—avoid "open entire internet"
-3. In `AGENTS.md`, document allowed URLs and forbid putting keys in prompts
-4. Validate with a test task: dependencies install; unrelated sites blocked (if fine-grained policy exists)
+1. Xác nhận chính sách mạng hiện tại trong [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/)
+2. Liệt kê **domain bắt buộc** (trình quản lý package, API doanh nghiệp) — tránh «mở cả Internet»
+3. Trong `AGENTS.md`, ghi URL được phép và cấm đặt key vào Prompt
+4. Kiểm chứng bằng Tác vụ thử: dependency cài được; site không liên quan bị chặn (nếu có chính sách tinh)
 
-### Split work with Secrets
+### Tách công việc với Secrets
 
-| Content | Where |
+| Nội dung | Ở đâu |
 |---|---|
-| API keys, tokens | Cloud Secrets—not in the repo |
-| Allowed API base URLs | Docs or env var names (not values) |
-| Proxy / mirror URLs | Team standard config |
+| API key, token | Secrets Cloud — không trong repo |
+| URL base API được phép | Tài liệu hoặc tên biến môi trường (không giá trị) |
+| URL proxy / mirror | Cấu hình chuẩn đội |
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Network access is only convenience, not security
+### 1. Truy cập mạng chỉ là tiện lợi, không phải bảo mật
 
-Once online, it is simultaneously:
+Một khi lên mạng, đồng thời là:
 
-- A dependency download problem
-- A credential usage problem
-- A data egress problem
+- Vấn đề tải dependency
+- Vấn đề dùng chứng chỉ
+- Vấn đề exfiltration dữ liệu
 
-### 2. Safe as long as Secrets are not in the prompt
+### 2. An toàn miễn Secrets không nằm trong Prompt
 
-If the environment can read Secrets and send results externally, risk remains.
+Nếu môi trường đọc được Secrets và gửi kết quả ra ngoài, rủi ro vẫn còn.
 
-### 3. Web search equals Cloud outbound
+### 3. Tìm kiếm web bằng đi ra Cloud
 
-One is remote-environment networking; the other is in-session tool networking—do not mix them when debugging.
+Một cái là mạng môi trường từ xa; cái kia là mạng công cụ trong phiên — đừng lẫn khi xử lý sự cố.
 
-### Data exfiltration safeguards
+### Biện pháp chống exfiltration dữ liệu
 
-- Do not put production database connection strings in task descriptions
-- Watch for attempts to send `.env` or key files externally
-- For untrusted repos on first Cloud run, try **no outbound or read-only sandbox**
+- Không đặt chuỗi kết nối DB production vào mô tả Tác vụ
+- Giám sát cố gắng gửi `.env` hoặc tệp khóa ra ngoài
+- Với repo không đáng tin lần chạy Cloud đầu, thử **không đi ra hoặc Sandbox chỉ đọc**
 
-## Aligning with local development
+## Căn chỉnh với phát triển cục bộ
 
-Local `curl` working does not mean Cloud can—common "red in Cloud" causes:
+`curl` cục bộ chạy được không nghĩa Cloud làm được — nguyên nhân phổ biến «đỏ trên Cloud»:
 
-| Symptom | Possible cause |
+| Triệu chứng | Nguyên nhân có thể |
 |---|---|
-| Dependency install fails | Outbound blocked or registry needs auth |
-| Submodule won't clone | SSH key not injected via Secrets |
-| Internal API timeout | Cloud not on company VPN |
+| Cài dependency fail | Đi ra bị chặn hoặc registry cần auth |
+| Submodule không clone | Khóa SSH chưa tiêm qua Secrets |
+| Timeout API nội bộ | Cloud không trên VPN doanh nghiệp |
 
-Mitigations: HTTPS + token, reachable mirrors, or document that Cloud cannot reach internal resources.
+Biện pháp: HTTPS + token, mirror truy cập được, hoặc ghi rõ Cloud không tới được tài nguyên nội bộ.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Globally opening outbound for convenience, then running unbounded tasks on repos with Secrets
-- Assuming Cloud shares your laptop's `.npmrc` (not pushed or not in Secrets)
-- Confusing "needs network" with "needs web search tool"
-- Only discovering missing local login state when install fails
+- Mở đi ra toàn cục vì tiện, rồi chạy Tác vụ không giới hạn trên repo có Secrets
+- Giả định Cloud chia sẻ `.npmrc` laptop (chưa push hoặc không trong Secrets)
+- Nhầm «cần mạng» với «cần công cụ tìm kiếm web»
+- Chỉ phát hiện thiếu trạng thái kết nối cục bộ khi cài fail
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Listed outbound domains/services required for Cloud tasks on this repo
-- [ ] Secrets configured and not committed to Git
-- [ ] Full install + test passed once on a test branch
-- [ ] Team knows what data must never appear in networked prompts
+- [ ] Đã liệt kê domain/dịch vụ đi ra bắt buộc cho Tác vụ Cloud trên repo này
+- [ ] Secrets đã cấu hình và không commit vào Git
+- [ ] Đã cài đầy đủ + kiểm thử đạt một lần trên nhánh thử
+- [ ] Đội biết dữ liệu nào không bao giờ được xuất hiện trong Prompt khi có mạng
 
-## References
+## Tham chiếu
 
-- OpenAI Codex Cloud network and security docs
+- Tài liệu mạng và bảo mật OpenAI Codex Cloud
 - stormzhang `10-cloud.md`, `19-security.md`
 - KimYx0207 CX-10, CX-11
-- codex.bozhouai.com Cloud sections
+- Các phần Cloud tại codex.bozhouai.com
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers default Cloud outbound behavior, domain policy, and fine-grained network controls—all highly product- and org-dependent; without strong current official network policy docs, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud  
+**Ghi chú đối chiếu:** Trang phủ hành vi đi ra Cloud mặc định, chính sách domain và kiểm soát mạng tinh — rất phụ thuộc sản phẩm và tổ chức; thiếu tài liệu chính sách mạng chính thức hiện hành đủ mạnh thì không nên đánh `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

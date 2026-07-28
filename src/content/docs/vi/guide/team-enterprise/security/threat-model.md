@@ -1,156 +1,156 @@
 ---
-title: Threat Model
-description: Main risk surfaces for Codex in team environments—data, tools, extensions, and supply chain.
+title: Mô hình mối đe dọa
+description: "Các bề mặt rủi ro chính của Codex trong môi trường đội — dữ liệu, công cụ, mở rộng và chuỗi cung ứng."
 locale: vi
-source_locale: en
-source_revision: 92050f1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A threat model means thinking about risk before it happens:
+Mô hình mối đe dọa nghĩa là nghĩ về rủi ro trước khi nó xảy ra:
 
-> **If Codex really connects to our code, commands, and external tools, what is most likely to go wrong?**
+> **Nếu Codex thật sự nối vào code, lệnh và công cụ ngoài của chúng ta, điều gì dễ đi sai nhất?**
 
-**Threat modeling** breaks that down. Codex is not “just another chat window”—it can **read code, run commands, call external tools**. This chapter maps main risk surfaces; controls live in [Permission matrix](/guide/reference/permission-matrix/) and [Sandbox](/guide/foundations/sandbox-and-network/).
+**Mô hình hóa mối đe dọa** tách điều đó. Codex không phải «chỉ thêm một cửa sổ chat» — nó có thể **đọc code, chạy lệnh, gọi công cụ ngoài**. Chương này map các bề mặt rủi ro chính; kiểm soát nằm ở [Ma trận quyền](/guide/reference/permission-matrix/) và [Sandbox](/guide/foundations/sandbox-and-network/).
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- Assets and trust boundaries
-- Typical threats and mitigation directions
-- How rules, Hooks, and CI divide responsibility
+- Tài sản và ranh giới tin cậy
+- Mối đe dọa điển hình và hướng giảm thiểu
+- Quy tắc, Hooks và CI phân trách nhiệm thế nào
 
-## Not only “security team” work
+## Không chỉ việc của «đội bảo mật»
 
-If you build, run platform, write docs, or lead projects, you care when teams:
+Nếu bạn xây dựng, vận hành nền tảng, viết tài liệu hoặc dẫn dự án, bạn quan tâm khi đội:
 
-- Give over-permissioned tokens to automation
-- Run high-risk actions on untrusted input
-- Do not know what data may leave the org
-- Add extensions for features without permissions and provenance
+- Trao token quyền quá cao cho tự động hóa
+- Chạy hành động rủi ro cao trên đầu vào không đáng tin
+- Không biết dữ liệu nào có thể rời tổ chức
+- Thêm mở rộng vì tính năng mà bỏ qua quyền và nguồn gốc
 
-Threat modeling helps set boundaries before incidents.
+Mô hình hóa mối đe dọa giúp cố định ranh giới trước sự cố.
 
-## Assets and boundaries
+## Tài sản và ranh giới
 
-| Asset | Examples |
+| Tài sản | Ví dụ |
 |---|---|
-| Source and IP | Private repos, unreleased designs |
-| Credentials | API keys, `.env`, cloud IAM |
-| User data | PII, customer ticket content |
-| Infrastructure | CI, production deploy pipelines |
+| Mã nguồn và IP | Repo riêng, thiết kế chưa công bố |
+| Chứng chỉ | API key, `.env`, IAM cloud |
+| Dữ liệu người dùng | PII, nội dung ticket khách hàng |
+| Hạ tầng | CI, pipeline deploy production |
 
-**Trust boundary:** model and extensions default on the **not fully trusted** side; human review and policy enforce at the boundary.
+**Ranh giới tin cậy:** mô hình và mở rộng mặc định ở phía **không hoàn toàn đáng tin**; review người và chính sách thực thi tại biên.
 
-## Two core questions
+## Hai câu hỏi trung tâm
 
-Before team-wide rollout, ask:
+Trước khi triển khai quy mô đội, hỏi:
 
-1. What must we not lose?
-2. What must Codex not do by mistake?
+1. Điều gì chúng ta không được phép mất?
+2. Codex không được phép làm nhầm điều gì?
 
-First identifies important assets; second identifies dangerous actions. Most controls wrap those two.
+Câu đầu xác định tài sản quan trọng; câu hai xác định hành động nguy hiểm. Hầu hết kiểm soát bao quanh hai điều này.
 
-## Scenario
+## Tình huống
 
-- Codex reads your private repo
-- Accesses a permissioned ticket system
-- Runs shell commands
-- Posts results back to comments
+- Codex đọc repo riêng của bạn
+- Truy cập hệ thống ticket có quyền
+- Chạy lệnh shell
+- Đăng kết quả vào bình luận
 
-Then watch for:
+Rồi chú ý:
 
-- Seeing what it should not
-- Doing what it should not
-- Taking internal information outside
+- Thấy điều không nên thấy
+- Làm điều không nên làm
+- Đưa thông tin nội bộ ra ngoài
 
-That framing turns threat modeling into a pre-launch risk checklist.
+Khung này biến mô hình hóa mối đe dọa thành checklist rủi ro trước khi ra mắt.
 
-## Threat overview
+## Tổng quan mối đe dọa
 
-| Threat | Description | Mitigation direction |
+| Mối đe dọa | Mô tả | Hướng giảm thiểu |
 |---|---|---|
-| Prompt injection | Malicious issue/web steers overreach | Input hygiene, read-only CI, [injection topic](/guide/team-enterprise/security/prompt-injection/) |
-| Over-permission | Token, sandbox too broad | Least privilege, branch protection |
-| Data exfiltration | Commands/MCP leak repo | Network policy, DLP, audit Hooks |
-| Malicious extension | Unreviewed Plugin/MCP | [Extension risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
-| Supply chain | Dependency/script tampering | Existing SCA, code review |
-| Misoperation | Agent drops DB, wrong push | Command deny, no-push CI |
+| Prompt injection | Issue/web độc hại định hướng quyền vượt mức | Vệ sinh đầu vào, CI chỉ đọc, [chủ đề injection](/guide/team-enterprise/security/prompt-injection/) |
+| Quyền quá mức | Token, Sandbox quá rộng | Quyền tối thiểu, bảo vệ nhánh |
+| Exfiltration dữ liệu | Lệnh/MCP lộ repo | Chính sách mạng, DLP, Hook kiểm toán |
+| Mở rộng độc hại | Plugin/MCP chưa review | [Rủi ro mở rộng](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Chuỗi cung ứng | Can thiệp dependency/script | SCA sẵn có, code review |
+| Thao tác sai | Agent drop DB, push nhầm | Deny lệnh, CI no-push |
 
-## When to prioritize in threat model
+## Khi nào ưu tiên trong mô hình mối đe dọa
 
-If a capability both:
+Nếu một năng lực vừa:
 
-- Touches important assets
-- Performs real actions
+- Chạm tài sản quan trọng
+- Thực thi hành động thật
 
-Examples: read private repos, call production APIs, write-capable MCP, auto-push code.
+Ví dụ: đọc repo riêng, gọi API production, MCP có ghi, tự push code.
 
-## Do not boil the ocean on day one
+## Đừng phủ hết ngày đầu
 
-Many teams try to write every policy at once and ship nothing.
+Nhiều đội cố viết cả chính sách một lúc rồi không ship gì.
 
-First rollout often needs only:
+Lần triển khai đầu thường chỉ cần:
 
-1. Top 3 asset classes
-2. Top 3 actions you fear most
-3. One direct control per item
+1. Top 3 lớp tài sản
+2. Top 3 hành động bạn sợ nhất
+3. Một kiểm soát trực tiếp cho mỗi mục
 
-Examples:
+Ví dụ:
 
-- Fear prod DB leak → limit prod creds and export paths
-- Fear wrong push to main → branch protection and approval
-- Fear issue/web steering → tighten external input and read-only review
+- Sợ lộ DB prod → hạn chế creds prod và đường xuất
+- Sợ push nhầm lên main → bảo vệ nhánh và phê duyệt
+- Sợ issue/web định hướng → siết đầu vào ngoài và review chỉ đọc
 
-Not complete—but more useful than an unread mega-doc.
+Chưa đầy đủ — nhưng hữu ích hơn một siêu tài liệu không ai đọc.
 
-## Recommended layered controls
+## Kiểm soát nhiều tầng khuyến nghị
 
 ```text
-L1 Identity and tenant (SSO, groups)
-L2 Org-managed config and model policy
-L3 Repo rules + AGENTS.md
-L4 Sandbox / approval / Hooks
-L5 Human review and branch protection
+L1 Danh tính và tenant (SSO, nhóm)
+L2 Cấu hình quản lý tổ chức và chính sách mô hình
+L3 Quy tắc repo + AGENTS.md
+L4 Sandbox / phê duyệt / Hooks
+L5 Review người và bảo vệ nhánh
 ```
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Training only, no technical controls
-- Assume “model is smart enough”
-- Production secrets on Agent-writable paths
-- Collapse all risk to “human review will catch it”
+- Chỉ đào tạo, không kiểm soát kỹ thuật
+- Giả định «mô hình đủ thông minh»
+- Secrets production trên đường Agent ghi được
+- Dồn hết rủi ro vào «review người sẽ bắt»
 
-## Minimum viable version
+## Phiên bản tối thiểu khả dụng
 
-Establish:
+Thiết lập:
 
-- High-risk actions need approval
-- Sensitive data denied by default
-- Automation read-only by default
+- Hành động rủi ro cao cần phê duyệt
+- Dữ liệu nhạy cảm deny mặc định
+- Tự động hóa chỉ đọc mặc định
 
-That already suppresses much team risk; refine governance later.
+Đã loại bỏ nhiều rủi ro đội; tinh chỉnh quản trị sau.
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Can list org Top 3 assets of concern
-- [ ] Each threat has control or accepted-risk record
-- [ ] Incident response contacts aligned
+- [ ] Liệt kê được Top 3 tài sản tổ chức đáng lo
+- [ ] Mỗi mối đe dọa có kiểm soát hoặc ghi nhận rủi ro chấp nhận
+- [ ] Liên hệ ứng phó sự cố đã căn chỉnh
 
-## Related
+## Liên quan
 
-- [Sensitive context](/guide/context/sensitive-context/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
+- [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
-## Reference sources
+## Nguồn tham chiếu
 
-- KimYx0207 enterprise security
-- OpenAI enterprise security whitepaper (official)
-- CodexGuide compliance practice
+- Bảo mật doanh nghiệp KimYx0207
+- White paper bảo mật doanh nghiệp OpenAI (chính thức)
+- Thực hành tuân thủ CodexGuide
 
 ---
 
-**Status:** verified  
-**Products:** Team / enterprise  
-**Verification basis:** OpenAI plugin, app, and integration docs still distinguish external data access, action permissions, approval requirements, and source-system boundaries; this page organizes team risk as assets, trust boundaries, typical threats, and layered controls—without depending on a specific product toggle.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** Đội / doanh nghiệp  
+**Cơ sở kiểm chứng:** Tài liệu plugin, ứng dụng và tích hợp OpenAI vẫn phân biệt truy cập dữ liệu ngoài, quyền hành động, yêu cầu phê duyệt và ranh giới hệ thống nguồn; trang tổ chức rủi ro đội thành tài sản, ranh giới tin cậy, mối đe dọa điển hình và kiểm soát nhiều tầng — không phụ thuộc một toggle sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

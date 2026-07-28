@@ -1,33 +1,33 @@
 ---
 title: Webhooks
-description: Event-driven integration—webhooks receive notifications; they do not replace workflow design.
+description: "Trang giải thích tích hợp kích hoạt theo sự kiện: Webhook nhận thông báo, không thay thế thiết kế quy trình."
 locale: vi
-source_locale: en
-source_revision: 790c6f2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-“Webhook” sounds abstract.  
-Simply: when something happens, a system actively notifies you.
+Từ `Webhook` nghe hơi trừu tượng.  
+Nói thẳng: khi có việc xảy ra, hệ thống chủ động gửi một thông báo cho bạn.
 
-In Codex integration, it answers “when an external event arrives, how do we trigger what comes next?”
+Trong tích hợp Codex, nó giải quyết «sự kiện bên ngoài tới → kích hoạt quy trình tiếp theo thế nào».
 
-## Section entry
+## Lối vào nhóm này
 
-- [Webhooks overview](/guide/developer-platform/webhooks/overview/)
+- [Tổng quan Webhooks](/guide/developer-platform/webhooks/overview/)
 
-## What this section covers
+## Nội dung nhóm
 
-- How external systems push events to you
-- What to wire after an event arrives
-- Why a webhook is only a trigger, not a full automation design
+- Hệ thống bên ngoài đẩy sự kiện cho bạn thế nào
+- Sau khi sự kiện tới, nối quy trình phía sau ra sao
+- Vì sao Webhook chỉ là bộ kích hoạt, không phải giải pháp tự động hóa đầy đủ
 
-A webhook is like a doorbell—it says “something happened”; you still connect the workflow.
+Webhook giống chuông cửa: báo «có việc xảy ra»; xử lý thế nào vẫn cần bạn nối quy trình.
 
 ---
 
-**Status:** verified  
-**Products:** API / Cloud  
-**Verification basis:** Cross-checked against current webhooks subsection structure and entry links in this repo; this page only describes webhooks as event triggers in integration, without fixing event fields or implementation contracts.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** API / Cloud  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với cấu trúc tiểu chương webhooks và liên kết lối vào hiện tại trong kho này; trang chỉ nêu vai trò «bộ kích hoạt sự kiện» của Webhook trong tích hợp, không cố định trường sự kiện hay chi tiết triển khai thành hợp đồng.  
+**Kiểm chứng gần nhất:** 2026-07-26

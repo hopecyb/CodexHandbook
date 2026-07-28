@@ -1,120 +1,120 @@
 ---
-title: Approvals and sandbox
-description: CLI approval policy for shell, disk, and network—and how sandbox limits Agent behavior.
+title: Phê duyệt và Sandbox
+description: Chiến lược phê duyệt yêu cầu shell, ghi đĩa và mạng trong CLI, và Sandbox hạn chế hành vi Agent thế nào.
 locale: vi
-source_locale: en
-source_revision: 4f30cb0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In CLI, Agents can **read files, write files, run shell, and possibly use the network**—approvals and sandbox are the safety valve between you and automation. Misconfiguration means constant prompts in interactive use—or runaway risk in unattended CI.
+Trong CLI, Agent có thể **đọc tệp, ghi tệp, chạy shell, có thể lên mạng** — phê duyệt và Sandbox là van an toàn giữa bạn và tự động hóa. Cấu hình sai dẫn tới: tương tác thì popup liên tục, hoặc CI không người canh thì rủi ro mất kiểm soát.
 
-## What's covered
+## Nội dung trang
 
-- What approval prompts are asking and how to choose
-- How sandbox tiers affect files and network
-- Aligning team policy across CLI and `AGENTS.md`
+- Popup phê duyệt đang hỏi gì, nên chọn thế nào
+- Mức Sandbox ảnh hưởng tệp và mạng ra sao
+- Nhóm đồng bộ chiến lược giữa CLI và `AGENTS.md` thế nào
 
-## What approvals and sandbox control
+## Phê duyệt và Sandbox mỗi thứ quản gì
 
-Remember:
+Có thể nhớ:
 
-- **Approval** asks: "Should this step continue?"
-- **Sandbox** limits: "Even if it continues, what can it touch?"
+- **Phê duyệt** hỏi bạn: «Bước này có tiếp tục không?»
+- **Sandbox** hạn chế nó: «Dù tiếp tục, tối đa chạm tới đâu?»
 
-Together they shape whether CLI feels conservative or overly permissive.
+Hai thứ phối hợp sẽ ảnh hưởng trực tiếp CLI dùng nghiêng bảo thủ hay biên mở quá rộng.
 
-Concept basics: [permissions and approvals](/guide/foundations/permissions-and-approvals/) · [sandbox and network](/guide/foundations/sandbox-and-network/)
+Nền khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/) · [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
 
-## When approvals fire
+## Phê duyệt xảy ra khi nào
 
-Typical triggers (product-dependent):
+Điểm kích hoạt điển hình (cụ thể theo sản phẩm):
 
-| Operation | Risk | Default tendency |
+| Loại thao tác | Rủi ro | Xu hướng mặc định |
 |---|---|---|
-| Write inside project | Medium | Often needs confirmation |
-| Write outside project | High | Reject or strict confirm |
-| Run shell | High | Confirm command contents |
-| Network / curl | High | Confirm target and data |
-| MCP tool call | Depends on server | Per-tool granularity |
+| Ghi tệp trong dự án | Trung bình | Thường cần xác nhận |
+| Ghi đường dẫn ngoài dự án | Cao | Nên từ chối hoặc xác nhận chặt |
+| Chạy shell | Cao | Xác nhận nội dung lệnh |
+| Lên mạng / curl | Cao | Xác nhận đích và dữ liệu |
+| Lời gọi công cụ MCP | Tùy máy chủ | Theo độ hạt của công cụ |
 
-In interactive mode you may get **once / session / deny** (names vary by version). **Do not choose "always allow" for commands you do not understand.**
+Khi tương tác bạn có tùy chọn kiểu **cho phép một lần / cho phép phiên / từ chối** (tên đổi theo phiên bản). **Đừng bấm «luôn cho phép» với lệnh chưa hiểu.**
 
-## Sandbox tiers (conceptual)
+## Mức Sandbox (khái niệm)
 
-| Intent | Good for |
+| Ý đồ mức | Phù hợp |
 |---|---|
-| Strict / read-only | Untrusted code review, read-only CI |
-| Standard | Daily dev repos |
-| Relaxed | Personal trusted environments per company policy |
+| Chặt / chỉ đọc | Rà mã không đáng tin, rà soát chỉ đọc trên CI |
+| Chuẩn | Kho phát triển hàng ngày |
+| Nới | Môi trường cá nhân đáng tin, và khớp chính sách công ty |
 
-Sandbox may limit:
+Sandbox có thể hạn chế:
 
-- Writable directory scope
-- Access to other projects under `$HOME`
-- Subprocess and network capability
+- Phạm vi thư mục được ghi
+- Có được truy cập dự án khác trong `$HOME` không
+- Năng lực tiến trình con và mạng
 
-Configuration: [CLI configuration](/guide/cli/configuration/) · matrix: [permission matrix](/guide/reference/permission-matrix/)
+Lối vào cấu hình: [Cấu hình CLI](/guide/cli/configuration/) · Ma trận: [Ma trận quyền](/guide/reference/permission-matrix/)
 
-## Interactive vs non-interactive
+## Tương tác vs không tương tác
 
-| Mode | Approval behavior |
+| Chế độ | Đặc điểm phê duyệt |
 |---|---|
-| Interactive `codex` | Human present; judge each request |
-| Non-interactive `exec` | No human; tighten sandbox + fixed prompt upfront |
+| Tương tác `codex` | Người có mặt, phán từng dòng được |
+| Không tương tác `exec` | Không có bạn — phải thắt Sandbox trước + Prompt cố định |
 
-CI must read: [non-interactive mode](/guide/cli/non-interactive-mode/) · [human approval patterns](/cases/workflows/human-approval-patterns/)
+CI bắt buộc đọc: [Chế độ không tương tác](/guide/cli/non-interactive-mode/) · [Mẫu phê duyệt thủ công](/cases/workflows/human-approval-patterns/)
 
-Recommended CI principles:
+Nguyên tắc CI khuyến nghị:
 
-- Read-only or limited write paths
-- Forbid arbitrary `curl` uploading repo contents
-- Non-zero exit on failure; retain logs
+- Chỉ đọc hoặc giới hạn đường dẫn ghi
+- Cấm `curl` tùy ý tải nội dung kho lên
+- Thất bại thì thoát khác 0, giữ nhật ký
 
-## Allow/deny rules
+## Với quy tắc allow/deny
 
-Projects can declare expected commands in [allow and deny patterns](/guide/customization/rules/allow-and-deny-patterns/). **Rules must match real product behavior** or Agents stay blocked—or become too open.
+Dự án có thể khai báo «lệnh dự kiến được» trong [Quy tắc cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/). **Quy tắc phải khớp hành vi sản phẩm thực**, nếu không Agent vẫn bị chặn hoặc ngược lại quá rộng.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Global "auto-approve all shell" then working on customer repos
-- Approving `sudo`, repo deletion, or `~/.ssh` changes by mistake
-- CI using the same relaxed config as your dev machine
-- Assuming sandbox replaces code review—it blocks mistakes, not malicious prompt injection
+- Trên máy local «tự phê duyệt mọi shell» rồi xử lý kho khách hàng
+- Lỡ bấm qua lệnh kiểu `sudo`, xóa DB, sửa `~/.ssh`
+- CI dùng cùng cấu hình nới như máy phát triển
+- Tưởng Sandbox thay được code review — nó chống thao tác nhầm, không chống prompt injection độc hại
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### Many prompts does not always mean misconfiguration
+### Popup nhiều không nhất thiết nghĩa cấu hình sai
 
-While learning CLI, more approvals can be safer—they force you to read each step.
+Nếu mới học CLI, phê duyệt hơi nhiều thường an toàn hơn — vì ép bạn hiểu từng bước đang làm gì.
 
-The real danger is approving without reading—not being asked too often.
+Điều thật sự đáng cảnh giác: bạn bắt đầu không xem nội dung mà bấm qua — chứ không phải nó hỏi nhiều.
 
-### Relaxing once does not make future runs safe
+### Nới một lần không nghĩa về sau đều an toàn
 
-Do not carry a wide-open profile from one convenient task into other repos and tasks.
+Có người lần đầu vì tiện đã nới quy tắc rất rộng, rồi mang cùng bộ cài sang kho khác, tác vụ khác.
 
-Security boundaries should follow task risk—not last time's convenience.
+Vấn đề: biên an toàn phải theo rủi ro tác vụ — không nên vì lần trước tiện mà mặc định lần này cũng ổn.
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] Can explain what the latest approval request would do
-- [ ] Know where to change sandbox tier and restart session
-- [ ] Team docs state forbidden commands and what may auto-pass
+- [ ] Giải thích được lần phê duyệt gần nhất đang làm gì
+- [ ] Biết chỗ đổi mức Sandbox và mở lại phiên
+- [ ] Tài liệu nhóm ghi rõ: lệnh nào cấm, lệnh nào dự kiến tự qua
 
-Starting conservative on CLI approvals and sandbox is usually steadier. Widen only when you know what you are opening.
+Giai đoạn đầu chỉnh phê duyệt và Sandbox CLI nghiêng bảo thủ thường ổn hơn. Khi thật sự biết mình đang nới gì, từ từ nới cũng chưa muộn.
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex CLI security and sandbox docs
-- stormzhang `17-permissions.md`, `19-security.md`
+- Tài liệu an toàn và Sandbox OpenAI Codex CLI
+- `17-permissions.md`, `19-security.md` của stormzhang
 - KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide sandbox approval topics
+- Chuyên đề phê duyệt Sandbox freestylefly/CodexGuide
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI  
-**Verification basis:** OpenAI Help Center CLI getting-started material still distinguishes approval modes for read/write, command execution, and sandbox/network boundaries; this page stays conceptual about interactive vs unattended risk without fixing button labels or mode names as facts.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI  
+**Căn cứ kiểm chứng:** Tài liệu nhập môn CLI hiện tại trên OpenAI Help Center vẫn phân biệt biên đọc/ghi, thực thi lệnh và Sandbox/mạng theo approval modes; trang này tập trung khái niệm phê duyệt và Sandbox, khác biệt rủi ro giữa tương tác và không người canh — không viết văn bản nút hay tên chế độ cụ thể thành sự thật cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

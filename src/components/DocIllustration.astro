@@ -13,7 +13,7 @@ const rawSegments = entryId.split('/').filter(Boolean);
 const segments = localeSegments.has(rawSegments[0] ?? '') ? rawSegments.slice(1) : rawSegments;
 
 const routeLocale = Astro.locals.starlightRoute?.locale ?? 'root';
-const uiLang: 'zh' | 'ja' | 'fr' | 'ko' | 'es' | 'de' | 'pt' | 'en' =
+const uiLang: 'zh' | 'ja' | 'fr' | 'ko' | 'es' | 'de' | 'pt' | 'vi' | 'en' =
 	routeLocale === 'root' || routeLocale === 'zh-tw'
 		? 'zh'
 		: routeLocale === 'ja'
@@ -28,7 +28,9 @@ const uiLang: 'zh' | 'ja' | 'fr' | 'ko' | 'es' | 'de' | 'pt' | 'en' =
 							? 'de'
 							: routeLocale === 'pt'
 								? 'pt'
-								: 'en';
+								: routeLocale === 'vi'
+									? 'vi'
+									: 'en';
 
 const moduleKey = segments[0] ?? 'guide';
 const topicKey = segments[1] ?? 'overview';
@@ -289,6 +291,37 @@ const moduleMapPt: Record<string, ModuleVisual> = {
 	},
 };
 
+const moduleMapVi: Record<string, ModuleVisual> = {
+	guide: {
+		label: 'Guide',
+		accent: '#f97316',
+		secondary: '#fed7aa',
+		glyph: '01',
+		orbit: ['Lộ trình', 'Quyền', 'Kiểm chứng'],
+	},
+	prompts: {
+		label: 'Prompts',
+		accent: '#0ea5e9',
+		secondary: '#bae6fd',
+		glyph: '02',
+		orbit: ['Mục tiêu', 'Giới hạn', 'Xong'],
+	},
+	skills: {
+		label: 'Skills',
+		accent: '#14b8a6',
+		secondary: '#99f6e4',
+		glyph: '03',
+		orbit: ['Luồng', 'Mở rộng', 'Tái sử dụng'],
+	},
+	cases: {
+		label: 'Cases',
+		accent: '#f43f5e',
+		secondary: '#fecdd3',
+		glyph: '04',
+		orbit: ['Tác vụ', 'Thực hiện', 'Đánh giá'],
+	},
+};
+
 const moduleMap =
 	uiLang === 'zh'
 		? moduleMapZh
@@ -304,7 +337,9 @@ const moduleMap =
 							? moduleMapDe
 							: uiLang === 'pt'
 								? moduleMapPt
-								: moduleMapEn;
+								: uiLang === 'vi'
+									? moduleMapVi
+									: moduleMapEn;
 
 const moduleVisual =
 	moduleMap[moduleKey] ??
@@ -328,7 +363,9 @@ const moduleVisual =
 									? ['Inhalt', 'Struktur', 'Kollab']
 									: uiLang === 'pt'
 										? ['Conteúdo', 'Estrutura', 'Colab']
-										: ['Content', 'Structure', 'Collab'],
+										: uiLang === 'vi'
+											? ['Nội dung', 'Cấu trúc', 'Cộng tác']
+											: ['Content', 'Structure', 'Collab'],
 	} satisfies ModuleVisual);
 
 const topicSeed = `${moduleKey}/${topicKey}/${title}`;
@@ -698,6 +735,49 @@ const hintMapPt: Record<string, PageHint> = {
 	},
 };
 
+const hintMapVi: Record<string, PageHint> = {
+	'local-vs-cloud': {
+		variant: 'split',
+		chips: ['Local', 'Cloud', 'Chọn tình huống'],
+		kicker: 'Chọn nơi chạy',
+	},
+	'files-tools-and-commands': {
+		variant: 'terminal',
+		chips: ['Tệp', 'Công cụ', 'Lệnh'],
+		kicker: 'Giới hạn hành động',
+	},
+	'permissions-and-approvals': {
+		variant: 'shield',
+		chips: ['Phê duyệt', 'Phạm vi', 'Xác nhận'],
+		kicker: 'Xác nhận trước thao tác rủi ro',
+	},
+	'sandbox-and-network': {
+		variant: 'shield',
+		chips: ['Sandbox', 'Mạng', 'Ranh giới rủi ro'],
+		kicker: 'Siết trước, mở sau',
+	},
+	'run-your-first-task': {
+		variant: 'flow',
+		chips: ['Mục tiêu', 'Giới hạn', 'Nghiệm thu'],
+		kicker: 'Bắt đầu bằng tác vụ nhỏ',
+	},
+	'review-the-result': {
+		variant: 'document',
+		chips: ['diff', 'Nghiệm thu', 'Sửa'],
+		kicker: 'Đừng chỉ tin «xong»',
+	},
+	'undo-and-recover': {
+		variant: 'flow',
+		chips: ['Hoàn tác', 'Khôi phục', 'Thử lại'],
+		kicker: 'Trước hết về trạng thái an toàn',
+	},
+	'context-and-files': {
+		variant: 'document',
+		chips: ['Ngữ cảnh', 'Tệp', 'Tập trung'],
+		kicker: 'Đưa đúng thông tin trong tầm tay',
+	},
+};
+
 const hintMap =
 	uiLang === 'zh'
 		? hintMapZh
@@ -713,7 +793,9 @@ const hintMap =
 							? hintMapDe
 							: uiLang === 'pt'
 								? hintMapPt
-								: hintMapEn;
+								: uiLang === 'vi'
+									? hintMapVi
+									: hintMapEn;
 
 const pageHint = hintMap[topicKey] ?? {
 	variant: 'document' as const,
@@ -799,16 +881,27 @@ const splitLabels =
 										bottomHint: 'Arquivos locais / tarefas longas / repos remotos',
 										ariaSuffix: 'ilustração do tema',
 									}
-								: {
-										yourComputer: 'Your computer',
-										remoteRunner: 'Remote runner',
-										howToChoose: 'How to choose',
-										byScenario: 'By task scenario',
-										fastIterate: 'Iterate fast',
-										longTasks: 'Long tasks keep going',
-										bottomHint: 'Local files / long tasks / remote repos',
-										ariaSuffix: 'topic illustration',
-									};
+								: uiLang === 'vi'
+									? {
+											yourComputer: 'Máy của bạn',
+											remoteRunner: 'Trình chạy từ xa',
+											howToChoose: 'Cách chọn',
+											byScenario: 'Theo tình huống tác vụ',
+											fastIterate: 'Lặp nhanh',
+											longTasks: 'Tác vụ dài vẫn chạy',
+											bottomHint: 'Tệp local / tác vụ dài / repo từ xa',
+											ariaSuffix: 'minh họa chủ đề',
+										}
+									: {
+											yourComputer: 'Your computer',
+											remoteRunner: 'Remote runner',
+											howToChoose: 'How to choose',
+											byScenario: 'By task scenario',
+											fastIterate: 'Iterate fast',
+											longTasks: 'Long tasks keep going',
+											bottomHint: 'Local files / long tasks / remote repos',
+											ariaSuffix: 'topic illustration',
+										};
 ---
 
 <figure class="doc-illustration" aria-label={`${title} ${splitLabels.ariaSuffix}`}>

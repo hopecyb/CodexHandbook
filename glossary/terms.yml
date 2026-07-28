@@ -11,6 +11,7 @@ terms:
     es: Agent
     de: Agent
     pt: Agent
+    vi: Agent
     keep_english: true
     note: Execution approach that calls tools and iterates toward a goal. Do not translate.
 
@@ -23,6 +24,7 @@ terms:
     es: Aprobación
     de: Freigabe
     pt: Aprovação
+    vi: Phê duyệt
     keep_english: false
     note: Human confirmation before high-risk operations.
 
@@ -35,6 +37,7 @@ terms:
     es: Tarea Cloud
     de: Cloud-Aufgabe
     pt: Tarefa Cloud
+    vi: Tác vụ Cloud
     keep_english: false
     note: Task executed in a cloud environment, not local sandbox.
 
@@ -47,6 +50,7 @@ terms:
     es: Compactación
     de: Komprimierung
     pt: Compactação
+    vi: Nén
     keep_english: false
     note: Summarizing long context to save window space.
 
@@ -59,6 +63,7 @@ terms:
     es: Contexto
     de: Kontext
     pt: Contexto
+    vi: Ngữ cảnh
     keep_english: false
     note: Information the model can currently use (files, conversation, project).
 
@@ -71,6 +76,7 @@ terms:
     es: Diff / diferencia
     de: Diff / Differenz
     pt: Diff / diferença
+    vi: Diff / khác biệt
     keep_english: false
     note: Before/after view of changes. Prefer "diff" in English UI copy.
 
@@ -83,6 +89,7 @@ terms:
     es: Hook
     de: Hook
     pt: Hook
+    vi: Hook
     keep_english: true
     note: Custom logic at lifecycle nodes (advanced). Product concept — keep English.
 
@@ -95,6 +102,7 @@ terms:
     es: MCP
     de: MCP
     pt: MCP
+    vi: MCP
     keep_english: true
     note: Model Context Protocol. Never translate.
 
@@ -107,6 +115,7 @@ terms:
     es: Plugin
     de: Plugin
     pt: Plugin
+    vi: Plugin
     keep_english: true
     note: Product extension package. Keep English.
 
@@ -119,6 +128,7 @@ terms:
     es: Prompt
     de: Prompt
     pt: Prompt
+    vi: Prompt
     keep_english: false
     note: Goal and requirements text given to an Agent.
 
@@ -131,6 +141,7 @@ terms:
     es: Sandbox
     de: Sandbox
     pt: Sandbox
+    vi: Sandbox
     keep_english: false
     note: Execution isolation that limits filesystem and network blast radius.
 
@@ -143,6 +154,7 @@ terms:
     es: Skill
     de: Skill
     pt: Skill
+    vi: Skill
     keep_english: true
     note: Reusable package of specialized instructions and resources. Product name.
 
@@ -155,6 +167,7 @@ terms:
     es: Tarea
     de: Aufgabe
     pt: Tarefa
+    vi: Tác vụ
     keep_english: false
     note: A goal-oriented work unit (may span multiple tool calls).
 
@@ -167,6 +180,7 @@ terms:
     es: Hilo / thread
     de: Thread
     pt: Thread
+    vi: Thread
     keep_english: false
     note: Continuous conversation and its accumulated context. Not an OS thread.
 
@@ -179,6 +193,7 @@ terms:
     es: Token
     de: Token
     pt: Token
+    vi: Token
     keep_english: true
     note: Unit used to measure text processed by the model.
 
@@ -191,6 +206,7 @@ terms:
     es: Herramienta
     de: Werkzeug
     pt: Ferramenta
+    vi: Công cụ
     keep_english: false
     note: Callable capability such as read file, run command, or search.
 
@@ -203,6 +219,7 @@ terms:
     es: Árbol de trabajo
     de: Arbeitsbaum
     pt: Árvore de trabalho
+    vi: Cây làm việc
     keep_english: false
     note: Isolated working directory for parallel experiments (git worktree).
 
@@ -215,6 +232,7 @@ terms:
     es: AGENTS.md
     de: AGENTS.md
     pt: AGENTS.md
+    vi: AGENTS.md
     keep_english: true
     note: Project instruction file name. Never translate.
 
@@ -227,6 +245,7 @@ terms:
     es: Hilo / sesión
     de: Thread / Sitzung
     pt: Thread / sessão
+    vi: Thread / phiên
     keep_english: false
     note: Beginner-facing alias for thread when explaining conversation continuity.
 
@@ -239,6 +258,7 @@ terms:
     es: Entorno Cloud
     de: Cloud-Umgebung
     pt: Ambiente Cloud
+    vi: Môi trường Cloud
     keep_english: false
     note: Remote runner configuration for cloud tasks.
 
@@ -251,6 +271,7 @@ terms:
     es: Profile
     de: Profile
     pt: Profile
+    vi: Profile
     keep_english: true
     note: Named configuration bundle in config.toml. Keep as product term.
 
@@ -263,6 +284,7 @@ terms:
     es: Subagent
     de: Subagent
     pt: Subagent
+    vi: Subagent
     keep_english: true
     note: Nested agent run delegated from a parent task.
 
@@ -275,6 +297,7 @@ terms:
     es: Verificación
     de: Überprüfung
     pt: Verificação
+    vi: Kiểm chứng
     keep_english: false
     note: Checking that artifacts and changes meet acceptance criteria.
 
@@ -287,6 +310,7 @@ terms:
     es: Artefacto / entregable
     de: Artefakt / Ergebnis
     pt: Artefato / entregável
+    vi: Artifact / sản phẩm đầu ra
     keep_english: false
     note: Generated output such as files, docs, or build results.
 
@@ -299,6 +323,7 @@ terms:
     es: Permiso
     de: Berechtigung
     pt: Permissão
+    vi: Quyền
     keep_english: false
     note: What Codex is allowed to do (filesystem, network, approvals).
 
@@ -311,6 +336,7 @@ terms:
     es: Razonamiento
     de: Reasoning / Schlussfolgern
     pt: Raciocínio
+    vi: Suy luận
     keep_english: false
     note: Model deliberation effort / reasoning mode.
 
@@ -323,6 +349,7 @@ terms:
     es: Modo no interactivo
     de: Nicht-interaktiver Modus
     pt: Modo não interativo
+    vi: Chế độ không tương tác
     keep_english: false
     note: codex exec and scripted runs without a live chat UI.
 
@@ -335,6 +362,7 @@ terms:
     es: Modo interactivo
     de: Interaktiver Modus
     pt: Modo interativo
+    vi: Chế độ tương tác
     keep_english: false
     note: Live chat / TUI session with the user.
 
@@ -347,6 +375,7 @@ terms:
     es: Traspaso
     de: Übergabe
     pt: Transferência
+    vi: Bàn giao
     keep_english: false
     note: Passing context so another session or person can resume work.
 
@@ -359,5 +388,6 @@ terms:
     es: Reorientación / guía
     de: Steuerung / Kurskorrektur
     pt: Reorientação / direcionamento
+    vi: Điều hướng / chỉnh hướng
     keep_english: false
     note: Redirecting an in-progress agent run without restarting from scratch.

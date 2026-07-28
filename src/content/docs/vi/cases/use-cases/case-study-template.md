@@ -1,83 +1,83 @@
 ---
-title: Case study template
-description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
+title: Mẫu case
+description: Cấu trúc thống nhất để viết và rút kinh nghiệm case Codex — thuận tiện nhóm đóng gói và so sánh.
 locale: vi
-source_locale: en
-source_revision: 985e88b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Copy this template to create a new case page or internal retro doc.
+Sao chép mẫu này để tạo trang case mới hoặc tài liệu rút kinh nghiệm nội bộ.
 
-Before copying, delete sections your actual readers and deliverables don't need.
+Trước khi sao chép, hãy xóa các đoạn không cần theo đối tượng và thành phẩm thực tế.
 
 ---
 
-## Metadata
+## Siêu dữ liệu
 
-| Field | Fill in |
+| Trường | Điền |
 |---|---|
-| Case title | |
-| Audience | Beginner / Developer / Creator / Team |
-| Client used | App / CLI / IDE / Cloud |
-| Estimated time | |
-| Verification date | YYYY-MM-DD |
+| Tiêu đề case | |
+| Đối tượng | Người mới / nhà phát triển / người sáng tạo / nhóm |
+| Client dùng | App / CLI / IDE / Cloud |
+| Thời gian ước tính | |
+| Ngày kiểm chứng | YYYY-MM-DD |
 
-## 1. Goal and context
+## 1. Mục tiêu và ngữ cảnh
 
-- **Business goal:** one sentence
-- **Success criteria:** observable and verifiable
-- **Out of scope:** explicit exclusions
+- **Mục tiêu nghiệp vụ:** Một câu
+- **Tiêu chí thành công:** Quan sát được, kiểm chứng được
+- **Ngoài phạm vi:** Mục loại trừ rõ ràng
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Account/permissions/repo state
-- Context files needed (`AGENTS.md`, designs, etc.)
-- Risks: data, production, secrets
+- Tài khoản / quyền / trạng thái kho
+- Tệp ngữ cảnh cần có (`AGENTS.md`, bản thiết kế…)
+- Rủi ro: dữ liệu, production, bí mật
 
-## 3. Workflow (EPXV)
+## 3. Quy trình (EPXV)
 
-### Explore
+### Khám phá
 
-- Input prompt (summary)
-- Key findings
+- Prompt đầu vào (tóm tắt)
+- Phát hiện then chốt
 
-### Plan
+### Lập kế hoạch
 
-- Step list
-- Human confirmation points
+- Danh sách bước
+- Điểm xác nhận của người
 
-### Execute
+### Thực thi
 
-- Actual change scope
-- Deviations from plan and why
+- Phạm vi thay đổi thực tế
+- Lệch kế hoạch và lý do
 
-### Verify
+### Kiểm chứng
 
-- Automated tests
-- Manual checks
-- Evidence (screenshots, logs, links)
+- Test tự động
+- Kiểm tra thủ công
+- Bằng chứng (ảnh chụp, log, liên kết)
 
-## 4. Failure and recovery
+## 4. Thất bại và phục hồi
 
-- What went wrong
-- How to undo or fix
-- What you'd change in prompts/config if you redid it
+- Gặp vấn đề gì
+- Cách hoàn tác hoặc sửa
+- Nếu làm lại sẽ đổi prompt/cấu hình thế nào
 
-## 5. Capture
+## 5. Đóng gói lại
 
-- Whether to write `AGENTS.md` / Skill / Automation
-- Three recommendations for the team
+- Có ghi vào `AGENTS.md` / Skill / Automation không
+- 3 gợi ý cho nhóm
 
-## 6. References
+## 6. Nguồn tham chiếu
 
-- Official doc links
-- Whether this case adapts an external tutorial (task type only)
+- Liên kết tài liệu chính thức
+- Case này có dựa trên hướng dẫn ngoài không (chỉ tham khảo loại tác vụ)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified EPXV workflow, failure recovery, project instructions, and case library structure; this page only provides a unified template for writing and retrospecting cases—not specific product behavior.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo quy trình EPXV đã kiểm chứng, phục hồi thất bại, hướng dẫn dự án và cấu trúc thư viện case của sổ tay; trang này chỉ cung cấp mẫu cấu trúc thống nhất để viết và rút kinh nghiệm case, không tuyên bố hành vi sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

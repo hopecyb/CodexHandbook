@@ -1,22 +1,22 @@
 ---
-title: templates/ directory
-description: Provide output templates and report skeletons inside a Skill.
+title: Thư mục templates/
+description: Cung cấp template đầu ra và khung báo cáo trong Skill.
 locale: vi
-source_locale: en
-source_revision: 8524d98
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`templates/` is not just for saving formatting time. Its practical job is stable Skill output without improvising every run.
+`templates/` không chỉ là thư mục"tiết kiệm chút thời gian trình bày". Tác dụng thực tế hơn là làm đầu ra của Skill ổn định hơn, không phải mỗi lần ứng biến.
 
-If `references/` is more about **what to consult on input**, `templates/` is more about **what the output should look like**. Fixed structure and easy review belong here.
+Nếu `references/` thiên về"tham chiếu gì lúc đầu vào", thì `templates/` thiên về "đầu ra trông thế nào". Kết quả cần cấu trúc cố định, dễ đối chiếu lại đều phù hợp đặt ở đây.
 
-# templates/ directory
+# Thư mục templates/
 
-`templates/` holds output formats the Skill reuses—review reports, changelog skeletons, research comparison tables, and similar.
+`templates/` chứa định dạng đầu ra mà Skill tái dùng khi chạy, ví dụ báo cáo review, khung changelog, bảng so sánh nghiên cứu.
 
-## Example
+## Ví dụ
 
 ```text
 review-skill/
@@ -25,68 +25,68 @@ review-skill/
     └── review-report.md
 ```
 
-In `SKILL.md`: "Output review conclusions using the structure in templates/review-report.md."
+Trong `SKILL.md` chỉ dẫn:"Xuất kết luận review theo cấu trúc templates/review-report.md."
 
-## What it does
+## Nó đang làm gì
 
-- `SKILL.md` owns the process
-- `templates/` owns how results look
+- `SKILL.md` chịu quy trình
+- `templates/` chịu hình dạng kết quả
 
-Or simply:
+Cũng có thể hiểu thẳng:
 
-- Skill decides **how to do it**
-- template decides **how to present it**
+- Skill quyết định"làm thế nào"
+- template quyết định"cuối cùng trình bày thế nào"
 
-That reduces two common problems:
+Điều này giảm hai vấn đề thường gặp:
 
-- Different structure every time
-- Information is there but hard to read, compare, or audit
+- Mỗi lần cấu trúc đầu ra khác nhau
+- Thông tin thì có, nhưng người khác khó đọc, khó so, khó đối chiếu lại
 
-## When templates are worth it
+## Khi nào đáng dùng `templates/`
 
-If you want similar-looking results every time, use a template—for example:
+Nếu bạn thấy một loại kết quả mỗi lần đều muốn trông gần giống nhau, thì phù hợp đặt template, ví dụ:
 
-- Review reports
-- Changelogs
-- Research comparison tables
-- Release checklists
+- Báo cáo review
+- changelog
+- Bảng so sánh nghiên cứu
+- Checklist phát hành
 
-Your first Skill does not need `templates/`.  
-Once you keep saying "output in this structure," extract it.
+Lần đầu làm Skill không nhất thiết phải có `templates/`.
+Nhưng hễ bắt đầu lặp lại"hãy xuất theo cấu trúc này", thì đáng tách riêng.
 
-## Difference from references/
+## Khác với references/
 
-| Directory | Focus |
+| Thư mục | Trọng tâm |
 |---|---|
-| `references/` | Input standards, rules, APIs |
-| `templates/` | Output format, report structure |
+| `references/` | Quy chuẩn đầu vào, quy tắc, API |
+| `templates/` | Định dạng đầu ra, cấu trúc báo cáo |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Templates are only for looks
+### 1. template chỉ để kết quả đẹp hơn
 
-They also make results more stable, comparable, and auditable.
+Không chỉ đẹp hơn — kết quả cũng ổn định hơn, dễ so sánh hơn, và tiện đối chiếu lại hơn.
 
-### 2. With a template, SKILL.md does not need output rules
+### 2. Có template rồi thì Skill không cần nói rõ yêu cầu đầu ra
 
-Still not true.
+Vẫn không được.
 
-`SKILL.md` should say when to use the template and which fields are required.
+`SKILL.md` vẫn nên nói khi nào dùng template, những trường nào bắt buộc điền.
 
-### 3. Every output deserves a template
+### 3. Mọi đầu ra đều đáng làm template
 
-Not always.
+Không nhất thiết.
 
-If output rarely repeats or structure varies a lot, forcing a template can constrain you.
+Nếu một loại kết quả gần như không lặp, hoặc cấu trúc mỗi lần khác nhiều, ép làm template đôi khi lại bó buộc.
 
-## When to add templates/
+## Khi nào đáng tạo riêng `templates/`
 
-If you have said "output in this structure" two or three times in a row, make `templates/`.
+Nếu liên tiếp hai ba lần đều lặp"xuất theo cấu trúc này", thì đáng làm thành `templates/`.
 
-The core value of `templates/` is stable output structure for reuse and review.
+Giá trị cốt lõi của `templates/` là làm cấu trúc đầu ra ổn định, sau đó cũng dễ tái dùng hơn.
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime supports guiding use of bundled files in skills; this page discusses stable output-template practice, not current client UI or install flows.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Runtime Codex hiện tại hỗ trợ hướng dẫn dùng file kèm trong kỹ năng; trang này bàn về cách viết template đầu ra ổn định, không phụ thuộc giao diện client hay quy trình cài đặt hiện tại.  
+**Kiểm chứng gần nhất:** 2026-07-26

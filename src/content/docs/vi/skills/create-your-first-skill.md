@@ -1,158 +1,158 @@
 ---
-title: Create your first Skill
-description: Build a committable pr-review Skill from scratch, with testing and team sharing.
+title: Tạo Skill đầu tiên
+description: Làm từ đầu một Skill pr-review có thể commit, gồm kiểm thử và chia sẻ nhóm.
 locale: vi
-source_locale: en
-source_revision: a3c057a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-If you can assign tasks but have not built a Skill yet, this page covers the basics of your first one.
+Nếu bạn đã biết giao Tác vụ nhưng chưa từng làm Skill thật, trang này nói cách làm cơ bản cho Skill đầu tiên.
 
-Spend 15–30 minutes on a **repo-reusable** Skill—often more direct than reading theory first. A small, well-bounded Skill is a good start.
+Dành 15–30 phút làm một Skill **tái dùng được trong repo** thường thẳng hơn đọc nhiều lý thuyết trước. Điểm bắt đầu tốt là một Skill nhỏ có ranh giới rõ.
 
-## Who this is for
+## Phù hợp với ai
 
-You can complete [your first task](/cases/first-task/) and are willing to experiment in a test repo.
+Đã chạy thông [Tác vụ đầu tiên](/cases/first-task/) và sẵn sàng thử trong repo kiểm thử.
 
-## Why start with `pr-review`
+## Vì sao nên bắt đầu từ `pr-review`
 
-It has several advantages:
+Nó có vài ưu điểm:
 
-- Input is relatively clear
-- Lower risk than "change code directly"
-- Easy to judge whether it works
-- Helps you learn triggers and boundary writing
+- Đầu vào tương đối rõ
+- Rủi ro thấp hơn"sửa code trực tiếp"
+- Dễ đánh giá dùng tốt hay không
+- Còn giúp bạn hiểu cách kích hoạt Skill và cách viết ranh giới
 
-It is a strong practice piece for turning a routine into something reusable.
+Rất phù hợp để luyện cách biến một quy trình làm việc thành thứ tái dùng được.
 
-## Target outcome
+## Kết quả mục tiêu
 
-A Skill under `.agents/skills/pr-review/` that produces structured review feedback on current changes.
+Có một Skill dưới `.agents/skills/pr-review/`, xuất ý kiến review có cấu trúc cho thay đổi hiện tại.
 
-## Minimum bar
+## Mục tiêu tối thiểu
 
-For a first Skill, aim for three things:
+Lần đầu làm Skill, có thể đạt ba việc này trước:
 
-1. It can be recognized
-2. It reliably runs one clear process
-3. It does not do dangerous actions on the side
+1. Được nhận diện
+2. Chạy ổn định một quy trình rõ ràng
+3. Không tự ý làm hành động nguy hiểm
 
-Once those are clear, iteration gets easier.
+Ba điểm này rõ rồi thì vòng lặp sau sẽ suôn hơn nhiều.
 
-## Steps
+## Các bước
 
-### 1. Create the directory
+### 1. Tạo thư mục
 
 ```bash
 mkdir -p .agents/skills/pr-review
 ```
 
-### 2. Write SKILL.md
+### 2. Viết SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review git diff; list blocking issues, test gaps, and style suggestions. Use when the user mentions review, audit, or pre-merge checks. Not for writing new features.
+description: Review git diff; liệt kê vấn đề chặn, khoảng trống kiểm thử và đề xuất phong cách. Dùng khi người dùng nhắc review, kiểm tra, kiểm tra trước merge. Không dùng để viết tính năng mới.
 ---
 
-# PR review
+# Review PR
 
-## Input
-- Default compare branch: main (or default branch if main does not exist)
+## Đầu vào
+- Nhánh so sánh mặc định: main (nếu không có thì dùng nhánh mặc định)
 
-## Process
-1. List changed files and change type (feature/fix/refactor/docs)
-2. For each logic change: missing tests? API break?
-3. Check for secrets, debug logs, oversized unrelated diff
-4. Output:
-   - 🔴 Blocking: must fix
-   - 🟡 Suggestion: should fix
-   - 🟢 Pass: meets AGENTS.md requirements
+## Quy trình
+1. Liệt kê file thay đổi và loại thay đổi (tính năng/sửa lỗi/refactor/tài liệu)
+2. Với mỗi thay đổi logic: thiếu kiểm thử không, phá API không
+3. Kiểm tra có khóa bí mật, log debug, diff lớn không liên quan không
+4. Xuất:
+   - 🔴 Chặn: phải sửa
+   - 🟡 Đề xuất: nên sửa
+   - 🟢 Đạt: đã thỏa yêu cầu AGENTS.md
 
-## Do not
-- Do not git push
-- Do not change public API without discussion
+## Cấm
+- Không git push
+- Không sửa public API chưa thảo luận
 ```
 
-### 3. Try locally
+### 3. Thử cục bộ
 
-Open the repo in Codex and try:
+Mở repo đó trong Codex, thử:
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Hãy review các thay đổi chưa commit hiện tại của tôi
 ```
 
-Or in natural language: "Review the diff the team way, focus on tests."
+Hoặc ngôn ngữ tự nhiên:"Review diff theo thói quen nhóm, tập trung vào kiểm thử."
 
-### 4. Test explicit first, then implicit
+### 4. Thử tường minh trước, ngầm sau
 
-Do not jump straight to auto-trigger.
+Nên chưa vội thử kích hoạt tự động.
 
-Suggested order:
+Có thể thử theo thứ tự:
 
-1. Explicit `$pr-review`
-2. Confirm process and output
-3. Try natural-language trigger
+1. Gọi tường minh bằng `$pr-review`
+2. Xác nhận quy trình và đầu ra ổn
+3. Rồi thử kích hoạt bằng ngôn ngữ tự nhiên
 
-That separates Skill content issues from weak `description` triggers.
+Dễ hơn để biết vấn đề nằm ở nội dung Skill hay điều kiện kích hoạt của `description` chưa rõ.
 
-### 5. Iterate description
+### 5. Lặp lại description
 
-If the model **never** auto-selects it, tighten or add trigger words in `description`. If it **over-triggers**, add "when not to use."
+Nếu model **không bao giờ tự chọn**, siết hoặc bổ sung từ kích hoạt trong `description`. Nếu **dùng nhầm quá nhiều**, thêm"khi nào không dùng".
 
-### 6. Commit for the team
+### 6. Commit để nhóm chia sẻ
 
 ```bash
 git add .agents/skills/pr-review
 git commit -m "docs: add pr-review skill for Codex"
 ```
 
-Add one line to team README or `AGENTS.md`: "Before merge, you can use `$pr-review`."
+Trong README nhóm hoặc `AGENTS.md` thêm một câu:"Trước khi merge có thể dùng `$pr-review`."
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. The first Skill should be as complete as possible
+### 1. Skill đầu tiên càng đầy đủ càng tốt
 
-Often the opposite. Smaller and more focused makes value easier to judge.
+Nhiều khi ngược lại. Skill đầu càng nhỏ, càng tập trung, càng dễ đánh giá nó có giá trị thật không.
 
-### 2. The point is not to sound "smart"
+### 2. Trọng tâm Skill không phải viết"thông minh"
 
-Clear **boundaries** matter more.
+Quan trọng hơn là viết **ranh giới rõ**.
 
-What it should and should not do beats sounding impressive.
+Nó nên làm gì và không nên làm gì quan trọng hơn"trông mạnh".
 
-### 3. "It runs" equals success
+### 3. Skill chạy được là thành công
 
-A useful Skill should also:
+Một Skill hữu ích ít nhất cần:
 
-- Be obvious to others when to use
-- Have stable output structure
-- Avoid dangerous side actions
+- Người khác hiểu khi nào nên dùng
+- Đầu ra có cấu trúc cố định
+- Không tự ý làm thao tác nguy hiểm
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] `$pr-review` runs without dangerous git operations
-- [ ] Output has tiered conclusions, not vague prose
-- [ ] `description` states trigger scenario in one sentence
-- [ ] Checked script needs against [permissions and sandbox](/guide/permissions-and-sandbox/) (this example has no scripts)
+- [ ] `$pr-review` chạy thông và không thực hiện thao tác git nguy hiểm
+- [ ] Đầu ra có kết luận phân cấp, không chung chung
+- [ ] `description` nói rõ kịch bản kích hoạt trong một câu
+- [ ] Đã đối chiếu [Quyền và Phê duyệt](/guide/permissions-and-sandbox/) về nhu cầu script (ví dụ này không có script)
 
-Starting with a small, steady Skill makes it easier to reuse a clear workflow reliably.
+Bắt đầu từ một Skill"nhỏ mà ổn"dễ hơn để tái dùng ổn định một quy trình rõ ràng.
 
-## Next steps
+## Bước tiếp theo
 
-- Turn [explore–plan–execute–verify](/prompts/templates/understand/) into a Skill
-- When you need GitHub API access, add [MCP](/skills/mcp/mcp-overview/)
+- Đóng [khám phá—lập kế hoạch—thực thi—Kiểm chứng](/prompts/templates/understand/) thành Skill
+- Khi cần nối GitHub API, mới đưa [MCP](/skills/mcp/mcp-overview/) vào
 
-## References
+## Nguồn tham chiếu
 
-- OpenAI Codex Skills official examples and `skill-creator` (if provided in your environment)
+- Ví dụ Skills chính thức của OpenAI Codex và `skill-creator` (nếu môi trường có)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Current Codex runtime still supports project skill directories, `SKILL.md` definitions, and explicit invocation for trial runs; this page is a stable first-Skill exercise.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở Kiểm chứng:** Runtime Codex hiện tại vẫn hỗ trợ thư mục kỹ năng trong dự án, định nghĩa kỹ năng bằng `SKILL.md`, và gọi tường minh để thử chạy; trang này là bài luyện ổn định cho Skill đầu tiên.  
+**Kiểm chứng gần nhất:** 2026-07-26

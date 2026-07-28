@@ -1,35 +1,35 @@
 ---
-title: Hook configuration examples
-description: Adaptable Hook config and script skeletons—secret scan, audit log, format validation.
+title: Ví dụ cấu hình Hook
+description: Khung cấu hình và script Hook có thể chỉnh — quét khóa, nhật ký kiểm toán, kiểm tra định dạng.
 locale: vi
-source_locale: en
-source_revision: 7448bb4
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When reading Hook examples, confirm what they defend against, then adapt to your environment.
+Khi xem ví dụ Hook, trước hết xác nhận nó muốn phòng gì, rồi chỉnh thành phiên bản phù hợp môi trường của bạn.
 
-This chapter provides **illustrative** config and scripts for team adaptation. Field names and paths follow [official documentation](https://developers.openai.com/codex) and local `codex --help`; try in an isolated repo before copying.
+Chương này cung cấp cấu hình và script **minh họa**, tiện nhóm chỉnh lại. Tên trường, đường dẫn lấy [tài liệu chính thức](https://developers.openai.com/codex) và `codex --help` cục bộ làm chuẩn; trước khi copy hãy thử trong repo cách ly.
 
-Prerequisites: [Hooks overview](/skills/hooks/hooks-overview/) · [Hook event types](/skills/hooks/hook-event-types/)
+Đọc trước: [Tổng quan Hooks](/skills/hooks/hooks-overview/) · [Loại sự kiện Hook](/skills/hooks/hook-event-types/)
 
-## Confirm scope before use
+## Trước khi dùng xác nhận phạm vi
 
-Do not treat these as copy-paste "standard answers."  
-Treat them as three patterns:
+Đừng coi các ví dụ này là"đáp án chuẩn"copy nguyên.  
+Hãy xem chúng như ba mẫu:
 
-- Log only
-- Block first
-- Light input check
+- Chỉ ghi
+- Chặn trước
+- Kiểm tra đầu vào nhẹ trước
 
-Understand the idea, then decide whether to extend.
+Xem ý tưởng trước, rồi quyết có mở rộng xuống không.
 
-## Example 1: Audit log after tool call (read-only)
+## Ví dụ 1: sau gọi công cụ ghi nhật ký kiểm toán (chỉ đọc)
 
-**Goal:** Record who wrote which paths when—do not write secrets to disk if redaction fails.
+**Mục tiêu:** ghi ai khi nào đã ghi những đường dẫn nào; nếu ẩn danh thất bại thì không ghi khóa xuống đĩa.
 
-`hooks.json` (illustrative):
+`hooks.json` (minh họa):
 
 ```json
 {
@@ -47,7 +47,7 @@ Understand the idea, then decide whether to extend.
 
 ```bash
 #!/usr/bin/env bash
-# stdin: JSON payload (structure per official docs)
+# stdin: JSON payload (cấu trúc theo chính thức)
 payload=$(cat)
 tool=$(echo "$payload" | jq -r '.tool // "unknown"')
 ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -55,13 +55,13 @@ echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
 exit 0
 ```
 
-**Acceptance:** After one file write, log has one line; script always exits 0.
+**Nghiệm thu:** sau một lần ghi file, nhật ký có một dòng; mã thoát script luôn là 0.
 
-Log-only examples are lowest risk—usually the best starting point.
+Loại ví dụ này chỉ ghi, không đổi hành vi — rủi ro thấp nhất, thường phù hợp làm điểm bắt đầu.
 
-## Example 2: Block suspected secrets before tool call
+## Ví dụ 2: trước gọi công cụ chặn khóa nghi vấn
 
-**Goal:** `block` when diff or write content matches AWS access key pattern.
+**Mục tiêu:** khi diff hoặc nội dung ghi khớp mẫu AWS access key thì `block`.
 
 ```json
 {
@@ -76,7 +76,7 @@ Log-only examples are lowest risk—usually the best starting point.
 }
 ```
 
-Core logic in `secret-scan.sh` (illustrative):
+Logic lõi `secret-scan.sh` (minh họa):
 
 ```bash
 #!/usr/bin/env bash
@@ -89,17 +89,17 @@ fi
 exit 0
 ```
 
-**Acceptance:** Test string with `AKIA` blocked; normal `git status` passes.
+**Nghiệm thu:** chuỗi thử chứa `AKIA` bị chặn; `git status` bình thường thì qua.
 
 :::caution
-Regex scanning has false positives/negatives—supplement only; real secrets should use secret scanners and pre-commit; see [sensitive context](/guide/context/sensitive-context/).
+Quét bằng regex có báo giả/sót — chỉ là lớp bổ sung; khóa thật nên đi secret scanner và pre-commit, xem [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/).
 :::
 
-Use block-style Hooks after you know you need to stop real actions. Starting with block makes debugging costlier.
+Loại ví dụ này thường dùng sau khi bạn đã chắc muốn chặn hành động thật. Bắt đầu thẳng từ Hook kiểu block thì chi phí điều tra cao hơn nhiều.
 
-## Example 3: Length and keyword policy on user prompt submit
+## Ví dụ 3: chiến lược độ dài và từ khóa khi gửi Prompt
 
-**Goal:** Reject obvious attempts to override system instructions (simplified).
+**Mục tiêu:** từ chối cụm rõ ràng định ghi đè hướng dẫn hệ thống (ví dụ đơn giản hóa).
 
 ```bash
 #!/usr/bin/env bash
@@ -115,79 +115,79 @@ fi
 exit 0
 ```
 
-**Acceptance:** Overlong and pattern hits fail; normal tasks pass.
+**Nghiệm thu:** quá dài và khớp mẫu thì thất bại; Tác vụ bình thường thì qua.
 
-At minimum:
+Loại ví dụ này ít nhất cần:
 
-- Can inspect input
-- Clear failure reason
-- Does not block normal requests excessively
+- Đọc được đầu vào
+- Đưa được lý do thất bại rõ
+- Không làm tổn thương yêu cầu bình thường quá mức
 
-## Same source as team rules
+## Đồng nguồn với quy tắc nhóm
 
-Extract "forbidden command substrings" into `tools/codex-policy.json` for Hooks and [command rules](/guide/customization/rules/command-rules/) to share—avoid maintaining two places.
+Trích"chuỗi con lệnh cấm"vào `tools/codex-policy.json`, để Hook và [quy tắc lệnh](/guide/customization/rules/command-rules/) cùng đọc, tránh bảo trì hai chỗ.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. If the example runs, it is production-ready
+### 1. Ví dụ chạy được là đưa thẳng production
 
-Examples teach structure and ideas—not drop-in production config.
+Giá trị ví dụ nằm ở cấu trúc và ý tưởng, không phải copy nguyên lên production.
 
-### 2. Block Hooks are more mature than log Hooks
+### 2. Hook kiểu block chưa chắc chín hơn kiểu log
 
-Many teams start with logs, confirm false positives and performance, then move to warn or block.
+Nhiều nhóm bắt đầu từ log, xác nhận báo giả và hiệu năng chấp nhận được rồi mới nâng lên warn hoặc block.
 
-### 3. Hook examples are only about script syntax
+### 3. Ví dụ Hook không chỉ để xem cách viết script
 
-Also consider:
+Chỉ xem script chưa đủ — còn phải xem:
 
-- Which event it attaches to
-- Failure strategy
-- Whether the team can explain why it blocks this way
+- Gắn sự kiện nào
+- Chiến lược thất bại là gì
+- Nhóm có giải thích được vì sao chặn vậy không
 
-## Testing Hooks
+## Kiểm thử Hook
 
 ```bash
-# Test script with fixture (illustrative)
+# Dùng fixture test script (minh họa)
 echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
 echo $?
 ```
 
-## Common progression
+## Thứ tự thường gặp
 
-Many teams follow:
+Nhiều nhóm tiến theo thứ tự:
 
-1. Read-only log Hook
-2. Warn Hook
-3. Block Hook
+1. Làm kiểu nhật ký chỉ đọc trước
+2. Rồi kiểu warn
+3. Rồi kiểu block
 
-That separates "logic is correct" from "team accepts blocking."
+Dễ hơn để tách"logic viết đúng"và"nhóm thật sự muốn để nó chặn".
 
-Hook examples are for learning structure—not copying verbatim into production.
+Ví dụ Hook chủ yếu để học ý tưởng và cấu trúc — không phù hợp chuyển nguyên vào môi trường chính thức.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Script missing `chmod +x`, fails silently
-- `timeout_ms` too short causes false blocks
-- Log path not writable breaks whole Hook chain
-- `curl` full payload outbound from Hook
+- Script thiếu `chmod +x`, thất bại im lặng
+- `timeout_ms` quá ngắn gây chặn nhầm
+- Đường nhật ký không ghi được khiến cả chuỗi Hook thất bại
+- Trong Hook `curl` gửi nguyên payload ra ngoài
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Each Hook has fixture tests
-- [ ] Failure strategy (block/warn) matches team policy
-- [ ] Config and scripts same repo, same PR review
-- [ ] Docs note verification date and applicable CLI version
+- [ ] Mỗi Hook có fixture test tương ứng
+- [ ] Chiến lược thất bại (block/warn) khớp chính sách nhóm
+- [ ] Cấu hình và script cùng repo, cùng PR review
+- [ ] Tài liệu ghi ngày Kiểm chứng và phiên bản CLI áp dụng
 
-## References
+## Nguồn tham chiếu
 
-- OpenAI Codex Hooks examples
-- freestylefly/CodexGuide audit configuration
+- Ví dụ OpenAI Codex Hooks
+- freestylefly/CodexGuide cấu hình kiểm toán
 - stormzhang `22-hooks.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Includes Hook config structure, event names, payload fields, and script examples—strongly tied to current implementation; lacks stable official public basis.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI / App(tùy phiên bản)  
+**Ghi chú tái Kiểm chứng:** Trang này gồm cấu trúc cấu hình Hook, tên sự kiện, trường payload và ví dụ script; các ví dụ phụ thuộc mạnh triển khai hiện tại, thiếu căn cứ công khai chính thức đủ ổn định.  
+**Kiểm chứng gần nhất:** 2026-07-26

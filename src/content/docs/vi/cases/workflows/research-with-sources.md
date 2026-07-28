@@ -1,76 +1,76 @@
 ---
-title: Research with sources
-description: Use Codex for search, comparison, and fact-checking—traceable sources and conclusions.
+title: Nghiên cứu có nguồn trích dẫn
+description: Dùng Codex để truy xuất, so sánh và kiểm tra sự thật — tạo nguồn và kết luận có thể truy vết.
 locale: vi
-source_locale: en
-source_revision: cc7038f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Research with sources** means every key conclusion can be traced to a specific source—official docs, papers, or repo files—not just an unsupported claim. It fits tech selection, competitive comparison, literature review, and policy interpretation.
+**Nghiên cứu có nguồn trích dẫn** yêu cầu mỗi kết luận then chốt quay về được nguồn cụ thể — tài liệu chính thức, bài báo hoặc tệp trong kho — chứ không chỉ một nhận định không căn cứ. Phù hợp chọn tech stack, so sánh đối thủ, tổng quan tài liệu, diễn giải chính sách.
 
-## What's covered
+## Trọng tâm trang này
 
-- When to use [web search](/guide/tools/web-search/) vs read-only repo work
-- How to require citation format and uncertainty labels
-- How this pairs with [validate sources](/guide/quality/validate-sources/)
+- Khi nào dùng [tìm kiếm web](/guide/tools/web-search/) vs chỉ đọc kho
+- Cách yêu cầu định dạng trích dẫn và đánh dấu độ không chắc
+- Phối hợp thế nào với bước [kiểm chứng nguồn](/guide/quality/validate-sources/)
 
-## Minimum viable approach
-
-```text
-Research "Rust vs Go for this repo's context":
-1. List evaluation dimensions first (performance, ecosystem, team familiarity)
-2. Attach source URL or @in-repo file path to each conclusion
-3. Mark unverifiable items as "to confirm"
-4. End with recommendation and open questions
-Do not change code.
-```
-
-## Recommended workflow
+## Cách làm tối thiểu dùng được
 
 ```text
-Define question and exclusions
-    → collect sources (search / read docs / MCP)
-    → comparison table + pros/cons
-    → label confidence and conflicting sources
-    → human decision or move to spec phase
+Nghiên cứu «độ phù hợp của Rust và Go trong ngữ cảnh kho này»:
+1. Trước hết liệt kê chiều đánh giá (hiệu năng, hệ sinh thái, độ quen của nhóm)
+2. Mỗi kết luận kèm URL nguồn hoặc đường dẫn tệp @trong kho
+3. Không kiểm chứng được thì ghi «cần xác nhận»
+4. Cuối cùng đưa khuyến nghị và câu hỏi mở
+Không sửa code.
 ```
 
-For long research, split across rounds—see [Long-running task management](/cases/workflows/long-running-task-management/).
+## Quy trình đề xuất
 
-## Common mistakes
+```text
+Định nghĩa vấn đề và mục loại trừ
+    → Thu thập nguồn (tìm kiếm / đọc tài liệu / MCP)
+    → Bảng so sánh + ưu nhược điểm
+    → Đánh dấu độ tin cậy và nguồn xung đột
+    → Người quyết hoặc chuyển sang giai đoạn đặc tả
+```
 
-- No URL required—output can't be rechecked
-- Mix outdated blogs with official docs without saying so
-- Treat research conclusions as implementation orders, skipping spec
-- Upload confidential data to unauthorized external tools
+Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ dài](/cases/workflows/long-running-task-management/).
 
-## Security boundaries
+## Lỗi thường gặp
 
-- Internal unpublished material must not leave via uncontrolled MCP
-- Volatile facts (pricing, versions, regional availability) need a [verification date](/guide/start-here/handbook-version-policy/)
+- Không yêu cầu URL, đầu ra không đối chiếu được
+- Trộn blog lỗi thời với tài liệu chính thức mà không ghi chú
+- Lấy kết luận nghiên cứu làm lệnh triển khai luôn, bỏ qua đặc tả
+- Tải tệp chứa dữ liệu mật lên công cụ ngoài chưa được ủy quyền
 
-## Acceptance checklist
+## Ranh giới an toàn
 
-- [ ] Key conclusions have at least one clickable or traceable source
-- [ ] Conflicting information is presented side by side
-- [ ] "Uncertain" items are listed, not disguised as facts
-- [ ] Sensitive data does not appear in prompts or logs
+- Tài liệu nội bộ chưa công bố không được gửi ra ngoài qua MCP không kiểm soát
+- Sự thật dễ đổi như giá, phiên bản, khả dụng theo vùng phải ghi [ngày kiểm chứng](/guide/start-here/handbook-version-policy/)
 
-## Related chapters
+## Checklist nghiệm thu
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [ ] Mỗi kết luận có ít nhất một nguồn bấm được hoặc truy vết được
+- [ ] Thông tin xung đột đã trình bày song song
+- [ ] Mục «không chắc» đã liệt kê, không ngụy trang thành sự thật
+- [ ] Dữ liệu nhạy cảm không xuất hiện trong prompt hoặc log
 
-## References
+## Chương liên quan
 
-- CodexGuide research and citation methods
-- stormzhang search and verification chapters
+- [Xử lý độ không chắc](/guide/quality/handle-uncertainty/)
+- [Case: refactor tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+
+## Nguồn tham chiếu
+
+- Phương pháp nghiên cứu và trích dẫn của CodexGuide
+- Chương tìm kiếm và kiểm chứng của stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public web search and source-backed research capabilities, plus this handbook's verified web search, validate sources, handle uncertainty, and version policy chapters; this page confirms only the stable research method that key conclusions trace to sources and conflicts/uncertainty are explicit.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo năng lực Web search và nghiên cứu có nguồn công khai hiện tại trên OpenAI Developers, cùng các chương tìm kiếm web, kiểm chứng nguồn, xử lý độ không chắc và chính sách phiên bản đã kiểm chứng của sổ tay; trang này chỉ xác nhận phương pháp nghiên cứu ổn định “kết luận then chốt phải truy về được nguồn; xung đột và độ không chắc phải đánh dấu tường minh”.  
+**Kiểm chứng gần nhất:** 2026-07-26

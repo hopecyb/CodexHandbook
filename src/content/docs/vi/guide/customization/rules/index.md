@@ -1,34 +1,34 @@
 ---
-title: Rules
-description: Overview of allow/deny, command rules, and team policy—what to block, what to warn, and what to standardize.
+title: Quy tắc
+description: Trang mô tả allow/deny, quy tắc lệnh và chiến lược nhóm — phân rõ cái nào nên chặn, cái nào nên nhắc.
 locale: vi
-source_locale: en
-source_revision: 4faab45
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The rules group is easy for beginners to mistake for “writing a few more reminders for Codex.”
+Nhóm quy tắc dễ nhất để người mới hiểu nhầm thành “viết thêm một chút nhắc nhở cho Codex”.
 
-More accurately, rules answer: which actions are allowed by default, which to block, and which to enforce uniformly as a team standard.
+Hiểu chính xác hơn: quy tắc giải quyết “hành động nào mặc định cho phép, hành động nào phải chặn, hành động nào phải thống nhất theo chuẩn nhóm”.
 
-## Recommended Order
+## Thứ tự khuyến nghị
 
-1. [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Command Rules](/guide/customization/rules/command-rules/)
-3. [Team Rules](/guide/customization/rules/team-rules/)
+1. [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/)
+2. [Quy tắc lệnh](/guide/customization/rules/command-rules/)
+3. [Quy tắc nhóm](/guide/customization/rules/team-rules/)
 
-## What This Group Helps You Solve
+## Nhóm này giúp bạn giải quyết gì
 
-- Which actions should be blocked outright
-- Which limits belong in explicit rules instead of verbal reminders
-- How teams keep the same boundaries for similar risks
+- Hành động nào nên chặn thẳng
+- Hạn chế nào phù hợp viết thành quy tắc rõ, chứ không dựa nhắc miệng
+- Trong nhóm làm sao đảm bảo mọi người đối mặt rủi ro cùng loại với cùng một bộ ranh giới
 
-Rules exist to nail down boundaries so the system executes against them.
+Quy tắc để nói chết ranh giới, để hệ thống thực thi theo ranh giới.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked against this repo’s current rules subsection structure and entry links; this page only navigates by allow/deny, command rules, and team rules grouping and does not declare specific rule implementation or default blocking behavior.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với cấu trúc chương con rules hiện tại của kho và liên kết lối vào; trang này chỉ đảm nhận vai trò “điều hướng theo nhóm allow/deny, quy tắc lệnh, quy tắc nhóm”, không tự tuyên bố hiện thực quy tắc cụ thể hoặc hành vi chặn mặc định.  
+**Kiểm chứng gần nhất:** 2026-07-26

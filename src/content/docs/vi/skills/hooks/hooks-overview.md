@@ -1,133 +1,133 @@
 ---
-title: Hooks overview
-description: Insert validation, logging, and audit at Agent key points—supplement team security and compliance.
+title: Tổng quan Hooks
+description: Chèn kiểm tra, nhật ký và kiểm toán tại nút then chốt của Agent — bổ sung bảo mật và tuân thủ nhóm.
 locale: vi
-source_locale: en
-source_revision: 720b503
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Simply put, a Hook automatically inserts a check or log at a key point.
+Nói ngắn: Hook là tự động chèn một lớp kiểm tra hoặc ghi nhận tại nút then chốt.
 
-**Hooks** let you run custom logic at fixed nodes in the Codex execution chain—for example pre-commit secret scans, MCP call logging, or blocking dangerous commands. They supplement policy and observability from [approvals and sandbox](/guide/cli/approvals-and-sandbox/).
+**Hooks** cho phép bạn chạy logic tùy chỉnh tại nút cố định trên chuỗi thực thi Codex — ví dụ quét khóa trước khi commit, ghi lời gọi MCP, chặn lệnh nguy hiểm. Chúng bổ sung chính sách và khả năng quan sát của [Phê duyệt và Sandbox](/guide/cli/approvals-and-sandbox/).
 
-## Contents
+## Nội dung
 
-- How Hooks differ from Skills and MCP
-- Typical team use cases
-- Security principles when designing Hooks
+- Khác biệt giữa Hooks với Skill, MCP
+- Use case nhóm điển hình
+- Nguyên tắc bảo mật khi thiết kế Hook
 
-## Why teams use Hooks
+## Vì sao nhóm dùng Hook
 
-Even if you will not write Hooks yourself, know what teams use them for:
+Dù tạm thời chưa tự viết Hook, cũng nên biết nhóm thường dùng nó để làm gì:
 
-- Why some actions get an extra gate at a key point
-- Why people say "this check is a Hook, not a Skill"
-- Why some rules live on system nodes instead of in prompts
+- Vì sao một số hành động bị chặn thêm tại điểm then chốt
+- Vì sao nhóm nói"kiểm tra này không phải Skill, là Hook"
+- Vì sao một số quy tắc không viết trong Prompt mà viết trên nút hệ thống
 
-Many "why is there an extra check here?" moments in teams are Hooks.
+Nhiều câu"vì sao ở đây thêm một lớp kiểm tra"trong nhóm, phía sau thực ra là Hook.
 
-Compare options: [Choosing an extension method](/skills/choosing-an-extension-method/)
+Đối chiếu chọn cách: [Cách chọn phương thức mở rộng](/skills/choosing-an-extension-method/)
 
-## What Hooks do
+## Hooks làm gì
 
-| Phase (conceptual) | What a Hook can do |
+| Giai đoạn (khái niệm) | Hook có thể làm |
 |---|---|
-| Before tool call | Reject commands with `rm -rf`, leaking `.env`, etc. |
-| After tool call | Write audit logs to SIEM |
-| Session end | Summarize changed files |
-| Before PR create | Check issue number format |
+| Trước khi gọi công cụ | Từ chối lệnh chứa `rm -rf`, lộ `.env` |
+| Sau khi gọi công cụ | Ghi nhật ký kiểm toán vào SIEM |
+| Kết thúc phiên | Tổng hợp danh sách file thay đổi |
+| Trước khi tạo PR | Kiểm tra định dạng số issue |
 
-## How to tell Hook from Skill
+## Phân biệt với Skill thế nào
 
-- **Skill**: Tell Codex "for this kind of task, follow this workflow"
-- **Hook**: Tell the system "at this node, run an automatic check first"
+- **Skill**: nói với Codex"gặp loại Tác vụ này thì làm theo quy trình nào"
+- **Hook**: nói với hệ thống"đến nút này thì tự kiểm trước"
 
-They solve different problems:
+Chúng giải quyết vấn đề khác nhau:
 
-- Skill = workflow instructions
-- Hook = gate or observation point on the process
+- Skill thiên về mô tả workflow
+- Hook thiên về cổng kiểm soát hoặc điểm quan sát trên quy trình
 
-Exact event names and config format: [official Hooks documentation](https://developers.openai.com/codex).
+Tên sự kiện và định dạng cấu hình lấy [tài liệu Hooks chính thức](https://developers.openai.com/codex) làm chuẩn.
 
-## Compared to Skill / MCP
+## Khác với Skill / MCP
 
 | | Hooks | Skill | MCP |
 |---|---|---|---|
-| Trigger | System events | User or model invocation | Tool requests |
-| Purpose | Policy, audit | Workflow instructions | External systems |
-| Maintainer | Platform/team infra | Product or engineering | Integration developers |
+| Kích hoạt | Sự kiện hệ thống | Người dùng hoặc model gọi | Yêu cầu công cụ |
+| Mục đích | Chính sách, kiểm toán | Mô tả workflow | Hệ thống ngoài |
+| Ai bảo trì | Hạ tầng nền tảng/nhóm | Nhóm sản phẩm hoặc kỹ thuật | Nhà phát triển tích hợp |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Hooks replace approval and sandbox
+### 1. Hook thay được Phê duyệt và Sandbox
 
-Hooks are a supplemental check layer—not the only security boundary.
+Hook thuộc lớp kiểm tra bổ sung, không nên xem là ranh giới bảo mật duy nhất.
 
-### 2. More Hooks means safer
+### 2. Càng nhiều Hook càng an toàn
 
-Too many slow, heavy, opaque Hooks slow the flow and make debugging painful.
+Quá nhiều Hook chậm, nặng, khó hiểu chỉ khiến quy trình nghẽn và điều tra đau hơn.
 
-### 3. Hooks are not for complex logic
+### 3. Hook không phù hợp mang logic phức tạp
 
-Hooks fit work that is:
+Hook phù hợp hơn cho:
 
-- Fast
-- Deterministic
-- Easy to test
+- Nhanh
+- Xác định
+- Dễ kiểm thử
 
-Do not add another layer of heavy reasoning here.
+Đừng bọc thêm một lớp suy luận phức tạp ở đây.
 
-## Recommended team use cases
+## Use case nhóm khuyến nghị
 
-1. **Secret leak detection**: Block when diff matches AWS key patterns
-2. **License header check**: Warn when new files lack company copyright notice
-3. **Compliance logging**: Who, when, write actions on which repo (redacted)
-4. **Align with CI**: Local Hook rules share source with GitHub Action when possible
+1. **Phát hiện lộ khóa**: trong diff xuất hiện mẫu AWS key thì chặn
+2. **Kiểm tra header giấy phép**: file mới thiếu tuyên bố bản quyền công ty thì cảnh báo
+3. **Nhật ký tuân thủ**: ai, khi nào, trên repo nào thực hiện thao tác ghi (đã ẩn danh)
+4. **Khớp CI**: quy tắc Hook local và GitHub Action càng đồng nguồn càng tốt
 
-## When Hooks fit
+## Khi nào phù hợp dùng Hook
 
-A check belongs in a Hook if:
+Nếu một kiểm tra thỏa hai điều sau, rất phù hợp đưa vào Hook:
 
-- It always happens at the same node
-- People should not have to remember it manually every time
+- Luôn xảy ra tại nút cố định
+- Không nên dựa vào người mỗi lần nhớ thủ công
 
-Examples: sensitive data scan, naming validation, audit records.
+Ví dụ: quét thông tin nhạy cảm, kiểm tra đặt tên, ghi kiểm toán.
 
-## Design principles
+## Nguyên tắc thiết kế
 
-- **Fast**: Hook timeouts slow every tool call
-- **Deterministic**: Avoid calling an LLM inside a Hook
-- **Testable**: Unit-test Hook scripts with fixed input
-- **Disableable**: Team can bypass in emergencies (with audit)
+- **Nhanh**: Hook hết thời gian sẽ kéo chậm mỗi lần gọi công cụ
+- **Xác định**: tránh gọi LLM thêm trong Hook
+- **Kiểm thử được**: unit test script Hook bằng đầu vào cố định
+- **Tắt được**: khẩn cấp nhóm có thể bypass (kèm kiểm toán)
 
-Security angle: roadmap `11-team-enterprise`; personal users often start with read-only log Hooks.
+Góc nhìn bảo mật tham khảo lộ trình `11-team-enterprise`; người dùng cá nhân thường bắt đầu từ Hook nhật ký chỉ đọc là đủ.
 
-Hooks fit automatic checks at system key points. They are not workflow instructions and do not replace approval.
+Hook phù hợp đặt trên nút then chốt hệ thống để tự kiểm. Nó không phải mô tả workflow, cũng không thay được Phê duyệt.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Hook scripts with network write access become a new attack surface
-- Rules duplicate and contradict `AGENTS.md`
-- Hook config not versioned—teammates' environments diverge
+- Script Hook bản thân có Quyền ghi mạng, thành bề mặt tấn công mới
+- Trùng và mâu thuẫn với quy tắc `AGENTS.md`
+- Cấu hình Hook chưa quản lý phiên bản, môi trường đồng nghiệp lệch nhau
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Can name the one Hook scenario your team needs most
-- [ ] Clear error message to developers when Hook fails
-- [ ] Config included in code review
+- [ ] Nói được một kịch bản Hook nhóm cần nhất
+- [ ] Khi Hook thất bại có thông báo lỗi rõ cho developer
+- [ ] Cấu hình đưa vào code review
 
-## References
+## Nguồn tham chiếu
 
-- OpenAI Codex Hooks documentation
+- Tài liệu OpenAI Codex Hooks
 - stormzhang `22-hooks.md`
 - KimYx0207 CX-08
-- freestylefly/CodexGuide audit and compliance
+- freestylefly/CodexGuide kiểm toán và tuân thủ
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** This page depends on current Hook capability, typical nodes, and team governance; official public docs lack enough detail—needs rewrite for current clients.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI / App(tùy phiên bản)  
+**Ghi chú tái Kiểm chứng:** Trang này phụ thuộc mô tả hiện trạng về năng lực Hook, nút điển hình và cách quản trị nhóm; tài liệu công khai chính thức hỗ trợ các chi tiết này chưa đủ, cần viết lại theo client hiện hành.  
+**Kiểm chứng gần nhất:** 2026-07-26

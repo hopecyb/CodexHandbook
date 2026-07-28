@@ -1,72 +1,72 @@
 ---
-title: Codex guide
-description: Understand Codex, choose a client, complete your first task, and learn permissions, context, and verification.
+title: Hướng dẫn Codex
+description: "Nhận biết Codex, chọn client, hoàn thành tác vụ đầu tiên, và hiểu quyền, ngữ cảnh cùng kiểm chứng."
 locale: vi
-source_locale: en
-source_revision: 8858fca
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Codex guide
+# Hướng dẫn Codex
 
-This section helps you understand what Codex is, what it is good for, and how to move from first use to a stable workflow.
+Ở đây giúp bạn hiểu Codex là gì, phù hợp làm gì, và cách chuyển dần từ lần dùng đầu tiên sang quy trình làm việc ổn định.
 
-If this is your first time opening the handbook, do not treat it as a book to read cover to cover. Use it as a map from first steps toward fluency.
+Nếu bạn lần đầu mở cẩm nang này, đừng coi nó như một cuốn sách phải đọc từ đầu đến cuối. Coi nó như một bản đồ lộ trình «từ lần đầu bắt tay đến dần dùng quen» sẽ tự nhiên hơn.
 
-You do not need every term, product, and workflow upfront. Find your current stage and proceed in order.
+Bạn không cần hiểu hết mọi thuật ngữ, sản phẩm và quy trình trước. Tìm giai đoạn bạn đang ở trước, rồi đi tiếp theo thứ tự là được.
 
-## What this section covers
+## Phần này sẽ nói gì
 
-- Where to start on first contact with Codex
-- Which client to pick first
-- What to learn after your first task
-- Where to return for permissions, context, and verification questions
+- Lần đầu tiếp xúc Codex, nên xem chỗ nào
+- Tôi nên chọn client nào trước
+- Xong tác vụ đầu tiên rồi, bước tiếp theo nên bổ sung năng lực gì
+- Khi gặp vấn đề về quyền, ngữ cảnh, kiểm chứng thì quay lại chương nào
 
-## Recommended order
+## Thứ tự gợi ý
 
-1. [Start here](/guide/start-here/) — shortest path for new readers
-2. [What is Codex](/guide/start-here/what-is-codex/)
-3. [Choose your client](/guide/choose-your-client/)
-4. [Complete your first task](/cases/first-task/)
-5. [Permissions and sandbox](/guide/permissions-and-sandbox/)
-6. [Context and files](/guide/context-and-files/)
-7. [Verification](/guide/verification/)
-8. When stuck, see [Troubleshooting](/guide/troubleshooting/)
+1. [Bắt đầu từ đây](/guide/start-here/) — đường ngắn nhất cho độc giả mới
+2. [Codex là gì](/guide/start-here/what-is-codex/)
+3. [Chọn client](/guide/choose-your-client/)
+4. [Hoàn thành tác vụ đầu tiên](/cases/first-task/)
+5. [Quyền và Sandbox](/guide/permissions-and-sandbox/)
+6. [Ngữ cảnh và tệp](/guide/context-and-files/)
+7. [Kiểm chứng](/guide/verification/)
+8. Gặp vấn đề xem [Xử lý sự cố](/guide/troubleshooting/)
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. I should read the entire handbook before starting
+### 1. Tôi nên đọc hết cả cẩm nang rồi mới bắt đầu dùng
 
-For most people, a better rhythm is:
+Với hầu hết người, nhịp phù hợp hơn là:
 
-- Learn basic safety and collaboration first
-- Run one small task
-- Return with real questions
+- Hiểu trước cách an toàn và cộng tác cơ bản nhất
+- Chạy thông một tác vụ nhỏ trước
+- Rồi mang vấn đề thật quay lại đọc bổ sung
 
-### 2. So many chapters means I am not ready yet
+### 2. Nhiều chương thế này nghĩa là tôi giờ chưa phù hợp để bắt đầu
 
-Many chapters exist for later lookup—not because you must master everything on day one.
+Nhiều chương là để sau này bạn có chỗ quay lại tra — không có nghĩa ngay từ đầu phải nắm hết.
 
-### 3. I only need one client, so the rest does not matter
+### 3. Tôi chỉ cần chọn một client, phía sau nội dung khác đều không liên quan đến tôi
 
-The client is just the entry point; permissions, context, and verification recur across all of them.
+Client chỉ khác lối vào — nhiều khái niệm cốt lõi như quyền, ngữ cảnh, kiểm chứng sẽ xuất hiện lặp lại trên mọi đầu cuối.
 
-## Product entry points
+## Lối vào sản phẩm
 
 - [Desktop App](/guide/desktop-app/)
 - [CLI](/guide/cli/)
-- [IDE extension](/guide/ide/)
-- [Web and Cloud](/guide/web-and-cloud/)
+- [Phần mở rộng IDE](/guide/ide/)
+- [Web và Cloud](/guide/web-and-cloud/)
 
-## More topics
+## Thêm chuyên đề
 
-- [Foundations](/guide/foundations/)
-- [Getting started](/guide/getting-started/)
-- [Learning paths](/guide/learning-paths/)
-- [Customization](/guide/customization/)
-- [Reference](/guide/reference/)
-- [Team and enterprise](/guide/team-enterprise/)
-- [Developer platform](/guide/developer-platform/)
+- [Khái niệm nền tảng](/guide/foundations/)
+- [Bắt đầu nhanh](/guide/getting-started/)
+- [Lộ trình học](/guide/learning-paths/)
+- [Tùy chỉnh cá nhân hóa](/guide/customization/)
+- [Tài liệu tham chiếu](/guide/reference/)
+- [Nhóm và doanh nghiệp](/guide/team-enterprise/)
+- [Nền tảng nhà phát triển](/guide/developer-platform/)
 
-Use this guide to find "what should I read next"—usually more useful than trying to learn all of Codex at once.
+Dùng hướng dẫn này để tìm «bây giờ bước tiếp theo tôi nên xem gì» trước — thường hữu ích hơn cố học hết cả Codex trong một lần.

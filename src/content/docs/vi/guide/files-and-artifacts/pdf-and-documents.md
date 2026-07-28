@@ -1,118 +1,121 @@
 ---
-title: PDF and Documents
-description: Scope, tools, and verification when Codex reads, summarizes, or generates PDFs and long documents.
+title: PDF và tài liệu
+description: Phạm vi, công cụ và điểm nghiệm thu khi để Codex đọc, tóm tắt hoặc tạo tài liệu dạng PDF.
 locale: vi
-source_locale: en
-source_revision: b882355
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-PDFs are common for specs, papers, scans, and exported reports. Unlike plain text, PDFs are **structurally complex, large, and hard to diff**—they need explicit task design.
+PDF thường dùng cho quy chuẩn, bài báo, bản quét và báo cáo xuất. Khác văn bản thuần, PDF **cấu trúc phức tạp, dung lượng lớn, khó diff**, cần ước định cách làm tác vụ riêng.
 
-Most PDF issues: incomplete structure understanding or scope that is too broad.
+Khi giao PDF cho Codex, vấn đề phổ biến nhất là hiểu cấu trúc không đủ, hoặc phạm vi bạn đưa quá lớn.
 
-## What this page covers
+## Nội dung trang này
 
-- How to have the Agent “read” PDF content correctly
-- Format and path conventions when generating or updating PDFs
-- Verification beyond “file exists”
+- Làm sao để Agent «đọc» đúng nội dung PDF
+- Ước định dạng và đường dẫn khi tạo hoặc sửa PDF
+- Khi nghiệm thu tránh «trông như có tệp nhưng mở không được»
 
-## Why PDFs are tricky
+## Vì sao PDF đặc biệt dễ có vấn đề
 
-PDFs may combine:
+PDF phiền hơn tệp văn bản vì có thể đồng thời chứa:
 
-- Scanned images
-- Multi-column layout
-- Headers and footers
-- Tables
-- Mixed images and text
+- Ảnh quét
+- Bố cục nhiều cột
+- Đầu trang chân trang
+- Bảng
+- Ảnh và chữ lẫn nhau
 
-Clearer scope (“which section, what output”) usually means better results.
+Vậy càng nói rõ “xem đoạn nào, cần kết quả gì”, hiệu quả thường càng ổn.
 
-## Reading PDFs
+## Đọc PDF
 
-### Recommended approach
+### Cách làm khuyến nghị
 
-1. **Specify path**: `docs/spec.pdf` or @ reference (per client support)
-2. **State the goal**: summary, compare a chapter, extract table data
-3. **Page or section**: limit scope on long docs to save context
-4. **Sensitive content**: contracts, ID scans—follow [Sensitive context](/guide/context/sensitive-context/)
+1. **Chỉ rõ đường dẫn tệp**: `docs/spec.pdf` hoặc tham chiếu @ (tùy client hỗ trợ)
+2. **Nói cần gì**: tóm tắt, đối chiếu một chương, trích dữ liệu bảng
+3. **Số trang hoặc chương**: tài liệu dài giới hạn phạm vi, tiết kiệm ngữ cảnh
+4. **Nội dung nhạy cảm**: hợp đồng, quét CCCD v.v. đi theo quy trình [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
 
-### Limits
+### Giới hạn
 
-- Scanned PDFs may need OCR; spot-check results
-- Complex layout, columns, footnotes may lose structure
-- Do not stuff huge PDFs into one task—segment or convert to Markdown outline first
+- PDF bản quét có thể cần OCR; kết quả sai cần rút mẫu thủ công
+- Bố cục phức tạp, nhiều cột, chú thích dễ mất cấu trúc
+- PDF rất lớn đừng nhét cả tệp vào một tác vụ; xử lý từng đoạn, hoặc chuyển trước thành dàn ý Markdown
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Whole PDF ≠ reliable key points
+### 1. Quăng cả PDF vào cũng chưa chắc rút trọng tâm ổn định được
 
-For long, complex, or scanned PDFs:
+Nếu PDF dài, cấu trúc phức tạp, còn lẫn trang quét, cách ổn hơn vẫn là:
 
-- Specify range
-- Specify task
-- Process in segments
+- Chỉ định phạm vi
+- Chỉ định tác vụ
+- Xử lý từng đoạn
 
-### 2. Scanned vs text PDFs differ a lot
+### 2. PDF bản quét khác rất nhiều so với PDF văn bản thường
 
-Scans rely on OCR; OCR errors propagate to summaries and extractions.
+Bản quét thường phải qua OCR trước; OCR một khi sai, tóm tắt, trích xuất và phán đoán sau cũng có thể lệch theo.
 
-### 3. PDF file exists ≠ done
+### 3. Tạo ra một tệp PDF không bằng đã hoàn thành
 
-Also verify:
+Bạn còn phải xác nhận:
 
-- Opens correctly
-- No garbled text
-- Page count, TOC, tables correct
-- CJK fonts embedded if needed
+- Có mở được không
+- Chữ có loạn không
+- Số trang, mục lục, bảng có đúng không
+- Font chữ Trung/Việt có thật sự được nhúng không
 
-## Generating or updating PDFs
+## Tạo hoặc cập nhật PDF
 
-| Approach | Fits |
+| Cách | Phù hợp |
 |---|---|
-| Compile from Markdown/LaTeX | Technical docs, reports (reproducible) |
-| Print from HTML | Simple layout |
-| Library generation (e.g. reportlab) | Programmatic tickets, labels |
+| Biên dịch từ Markdown/LaTeX | Tài liệu kỹ thuật, báo cáo (tái hiện được) |
+| In từ HTML | Bố cục đơn giản |
+| Sinh bằng thư viện (như reportlab) | Hóa đơn, nhãn theo chương trình |
 
-In the prompt specify:
+Trong Prompt viết rõ:
 
-- Output path and filename
-- Page size, language, fonts (CJK PDFs especially)
-- Whether to commit (large binaries often artifact or release)
+- Đường dẫn xuất và tên tệp
+- Kích thước trang, ngôn ngữ, yêu cầu font (PDF tiếng Trung/Việt đặc biệt chú ý nhúng font)
+- Có commit Git không (nhị phân lớn thường dùng artifact hoặc release)
 
-## Copy-paste prompt pattern
+## Cách viết áp dụng trực tiếp
+
+Có thể yêu cầu:
 
 ```text
-Read only pages 12–18 of `docs/spec.pdf` and extract acceptance criteria.
-Do not summarize the whole document.
-If OCR or layout is uncertain, say so explicitly.
+Chỉ đọc trang 12-18 của `docs/spec.pdf`, trích tiêu chuẩn nghiệm thu trong đó.
+Đừng tóm tắt cả tài liệu.
+Nếu OCR hoặc nhận dạng bố cục chưa chắc, hãy đánh dấu rõ.
 ```
 
-## Repo policy
+## Với chiến lược kho
 
-- Large PDFs: **Git LFS** or out of repo
-- When diff is unreadable, verify by **opening file** + [Verify artifacts](/guide/quality/verify-artifacts/)
-- Generated outputs: [Verifying generated artifacts](/guide/files-and-artifacts/generated-artifacts/)
+- PDF nhị phân lớn cân nhắc **Git LFS** hoặc không vào kho
+- Khi diff không đọc được, nghiệm thu bằng **mở tệp** + đối chiếu [Kiểm chứng artifact](/guide/quality/verify-artifacts/)
+- Danh sách vật tạo ra xem [Nghiệm thu artifact tạo ra](/guide/files-and-artifacts/generated-artifacts/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- “Change one word in PDF” without editable source (`.md` / `.tex`)
-- Confidential PDF in public repo then Cloud processing
-- Accept on “file exists” without opening
+- Yêu cầu «sửa một chữ trong PDF» mà không cung cấp nguồn chỉnh sửa được (`.md` / `.tex`)
+- Đặt PDF mật vào kho công khai rồi để Cloud xử lý
+- Chưa mở nghiệm thu, chỉ xem «tệp tồn tại»
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] PDF opens in target reader/print environment
-- [ ] Page count, TOC, key tables match expectation
-- [ ] Repo size and LFS policy meet team norms
+- [ ] PDF mở được trong trình đọc/môi trường in mục tiêu
+- [ ] Số trang, mục lục, bảng then chốt khớp kỳ vọng
+- [ ] Dung lượng kho và chính sách LFS khớp quy chuẩn nhóm
 
-For PDFs, narrower scope is steadier. After generation, open and confirm content—not just presence.
+Xử lý PDF thì phạm vi càng rõ càng ổn. Sau khi tạo PDF, đừng chỉ xem tệp có hay không; còn phải xác nhận mở bình thường và nội dung thật sự đúng.
+
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, sensitive-context, and image/file handling pages; stable principles: limit scope, watch OCR/layout error, open and verify after generation.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, kiểm chứng artifact, ngữ cảnh nhạy cảm và xử lý ảnh/tệp đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý ổn định “PDF nên giới hạn phạm vi, cảnh giác sai OCR/bố cục, sau khi tạo phải mở thật để nghiệm thu”.  
+**Kiểm chứng gần nhất:** 2026-07-26

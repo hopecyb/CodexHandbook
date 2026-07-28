@@ -1,97 +1,97 @@
 ---
-title: Developer Platform
-description: Embed Codex into your engineering stack with SDK, non-interactive CLI, and CI/CD—for integration developers.
+title: Nền tảng dành cho nhà phát triển
+description: "Tích hợp Codex vào hệ thống kỹ thuật bằng SDK, CLI chế độ không tương tác và CI/CD — dành cho nhà phát triển tích hợp."
 sidebar:
   order: 50
 locale: vi
-source_locale: en
-source_revision: 15f28d4
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **Developer Platform** is for people who want to **productize** Codex into pipelines: custom apps, batch review, release gates, internal developer portals. For everyday “write a prompt to fix a bug,” start with [Getting started](/guide/getting-started/).
+**Nền tảng dành cho nhà phát triển** dành cho người muốn **sản phẩm hóa** Codex vào pipeline: ứng dụng tùy chỉnh, review hàng loạt, cổng phát hành, cổng thông tin nội bộ. Việc hàng ngày kiểu «viết một Prompt để sửa bug» vẫn bắt đầu từ [Bắt đầu nhanh](/guide/getting-started/).
 
-This chapter is not about day-to-day Codex usage—it is about wiring Codex into your own systems.
+Chương này không nói về cách dùng Codex hàng ngày, mà về cách nối Codex vào hệ thống của bạn.
 
-It is aimed at scenarios like:
+Nó nghiêng về các tình huống như:
 
-- Running tasks automatically in CI
-- Integrating Codex into your backend or internal tools
-- Making Codex part of team workflows
+- Muốn chạy Tác vụ tự động trong CI
+- Muốn gắn Codex vào backend hoặc công cụ nội bộ
+- Muốn biến Codex thành một phần quy trình làm việc của đội
 
-## What this chapter covers
+## Chương này sẽ nói gì
 
-- The boundary between the developer platform and end-user product docs
-- Typical integration architecture
-- Chapter navigation and roadmap
+- Ranh giới giữa nền tảng nhà phát triển và sổ tay người dùng cuối
+- Kiến trúc tích hợp điển hình
+- Điều hướng chương và lộ trình
 
-## How this relates to product docs
+## Phân công với sổ tay sản phẩm
 
-| Reader question | Where to go |
+| Câu hỏi của người đọc | Đi đâu |
 |---|---|
-| How to run `codex` in the terminal | [CLI product guide](/guide/cli/) |
-| How to exec review in CI | [Non-interactive mode](/guide/cli/non-interactive-mode/) + CI in this chapter |
-| How to embed an Agent in your app | [SDK overview](/guide/developer-platform/sdk-overview/) |
-| Permissions and security model | [Human approval patterns](/cases/workflows/human-approval-patterns/) |
+| Cách chạy `codex` trong terminal | [Sổ tay sản phẩm CLI](/guide/cli/) |
+| Cách exec review trong CI | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) + CI trong chương này |
+| Cách nhúng Agent vào App nội bộ | [Tổng quan SDK](/guide/developer-platform/sdk-overview/) |
+| Mô hình quyền và bảo mật | [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) |
 
-## Typical architecture (conceptual)
+## Kiến trúc điển hình (khái niệm)
 
 ```text
-Your system (CI / internal platform / SaaS)
-        ↓ API or CLI
-Codex (model + tools + policy)
+Hệ thống của bạn (CI / nền tảng nội bộ / SaaS)
+        ↓ API hoặc CLI
+Codex (mô hình + công cụ + chính sách)
         ↓
-Git provider / tickets / artifact store
+Nhà cung cấp Git / ticket / kho artifact
 ```
 
-## Design principles
+## Nguyên tắc thiết kế
 
-1. **Idempotent and retryable**: repeated review of the same PR should yield comparable results
-2. **Least privilege**: CI tokens read-only or scoped to specific repos
-3. **Observable**: retain prompt version, model, diff artifacts
-4. **Human-in-the-loop**: auto comments ≠ auto merge
+1. **Idempotent và có thể thử lại**: review cùng một PR nhiều lần nên so sánh được
+2. **Quyền tối thiểu**: token CI chỉ đọc hoặc giới hạn theo repo
+3. **Có thể quan sát**: giữ phiên bản Prompt, mô hình, artifact Diff
+4. **Phân công người–máy**: bình luận tự động ≠ merge tự động
 
-## Chapter navigation
+## Điều hướng chương
 
-| Topic | Pages |
+| Chủ đề | Trang |
 |---|---|
-| SDK | [SDK overview](/guide/developer-platform/sdk-overview/) |
-| Non-interactive | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Structured output](/guide/developer-platform/non-interactive/structured-output/) · [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Overview](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [Tổng quan SDK](/guide/developer-platform/sdk-overview/) |
+| Không tương tác | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/) · [Mã thoát và thử lại](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Tổng quan](/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/) |
 
-For more on `codex-sdk/`, `app-server/`, and `architecture-patterns/`, see the [chapter outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
+Thêm về `codex-sdk/`, `app-server/`, `architecture-patterns/` xem [dàn ý chương](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Do I have to learn this chapter to really use Codex?
+### 1. Tôi có bắt buộc học chương này mới thật sự biết dùng Codex?
 
-If you mainly want to get started with Codex first, you can read this chapter later.
+Nếu hiện tại bạn chỉ muốn dùng được Codex trước, chương này có thể đọc sau.
 
-### 2. How does this relate to CLI / App / IDE?
+### 2. Nó liên hệ thế nào với CLI / App / IDE?
 
-Think of it this way:
+Có thể hiểu như sau:
 
-- **App / CLI / IDE**: entry points where you or your team use Codex directly
-- **Developer platform**: embedding Codex into other systems and workflows
+- **App / CLI / IDE**: lối vào để bạn hoặc đội dùng Codex trực tiếp
+- **Nền tảng nhà phát triển**: bạn nhúng Codex vào hệ thống và quy trình khác
 
-### 3. What is most valuable to read first in this chapter?
+### 3. Lần đầu đọc chương này, trang nào đáng xem nhất?
 
-If you only want a conceptual overview, start with [SDK overview](/guide/developer-platform/sdk-overview/) and how it relates to [non-interactive mode](/guide/cli/non-interactive-mode/).
+Nếu chỉ cần nắm khái niệm, ưu tiên [Tổng quan SDK](/guide/developer-platform/sdk-overview/) và mối quan hệ với [chế độ không tương tác](/guide/cli/non-interactive-mode/).
 
-The developer platform chapter is about wiring Codex into systems. For your first hands-on use of Codex, read the getting-started content first.
+Chương nền tảng nhà phát triển nói về «cách nối Codex vào hệ thống». Lần đầu dùng Codex thực tế, hãy đọc nội dung nhập môn trước.
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex API / SDK official documentation
-- KimYx0207 developer chapter
-- stormzhang CI and automation tutorials
-- codex.bozhouai.com engineering case studies
+- Tài liệu chính thức OpenAI Codex API / SDK
+- Chương nhà phát triển KimYx0207
+- Hướng dẫn CI và tự động hóa stormzhang
+- Case kỹ thuật hóa tại codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Products:** API / CLI / Cloud  
-**Verification basis:** Cross-checked against the current developer-platform chapter structure, navigation entries, and related CLI/CI/SDK pages in this repo; this page only describes the stable split that the developer platform targets engineering integration, without claiming specific parameters or runtime behavior.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** API / CLI / Cloud  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với cấu trúc chương developer-platform hiện tại, các lối vào điều hướng và các trang CLI/CI/SDK liên quan trong kho này; trang chỉ làm rõ phân công ổn định rằng nền tảng nhà phát triển hướng tới tích hợp kỹ thuật, không tuyên bố tham số hay hành vi runtime cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

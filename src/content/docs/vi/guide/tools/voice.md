@@ -1,110 +1,112 @@
 ---
-title: Voice input and output
-description: When to use voice with Codex, limitations, and privacy considerations.
+title: Nhập và xuất giọng nói
+description: Tình huống, giới hạn và lưu ý riêng tư khi tương tác với Codex bằng giọng nói.
 locale: vi
-source_locale: en
-source_revision: d38b775
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Some Codex clients support **voice**: speak a task or hear a reply summary. Good when your hands are busy or you want to dictate ideas quickly—**not** for reading secrets aloud or replacing written acceptance records.
+Một số client Codex hỗ trợ **giọng nói**: bạn nói tác vụ, hoặc nghe tóm tắt phản hồi. Nó phù hợp khi hai tay đang bận, muốn nói nhanh ý tưởng; **không** phù hợp đọc to khóa bí mật, cũng không thay bản ghi nghiệm thu bằng văn bản.
 
-Voice fits direction, background, and quick follow-up; precise, searchable, reviewable details still belong in text.
+Giọng nói phù hợp hơn để nêu hướng, bổ sung nền hoặc theo dõi nhanh; khi liên quan chi tiết chính xác, tìm kiếm được, rà lại được, vẫn phải quay về chữ.
 
-## What's covered
+## Nội dung trang này
 
-- Task shapes that suit voice
-- How voice pairs with written prompts
-- Privacy and accuracy notes
+- Giọng nói phù hợp hình thái tác vụ nào
+- Phối hợp với Prompt chữ thế nào
+- Lưu ý riêng tư và độ chính xác
 
-## Use cases
+## Tình huống phù hợp
 
-| Good fit | Poor fit |
+| Phù hợp | Không phù hợp |
 |---|---|
-| High-level goals, brainstorming | Instructions precise to variable names |
-| Short mobile follow-ups | Reading API keys or passwords aloud |
-| Accessibility needs | Specs that must be searchable and diffable |
+| Nói mục tiêu tầng cao, brainstorm | Lệnh mã chính xác tới tên biến |
+| Theo dõi ngắn trên mobile | Đọc API key, mật khẩu |
+| Nhu cầu accessibility | Tài liệu quy chuẩn cần tìm kiếm được, diff được |
 
-After speaking, ask Codex to **repeat its understanding** or produce a written plan for your confirmation. See [ask for a plan](/prompts/ask-for-a-plan/).
+Sau khi nói miệng, nên để Codex **nhắc lại hiểu biết** hoặc tạo kế hoạch chữ, rồi bạn xác nhận. Xem [Yêu cầu kế hoạch](/prompts/ask-for-a-plan/).
 
-## What voice is good for
+## Giọng nói phù hợp làm gì
 
-Strengths:
+Ưu điểm chính của giọng nói:
 
-- Fast
-- Hands-free
-- Dumping ideas from your head
+- Nhanh
+- Đỡ dùng tay
+- Phù hợp đổ ý trong đầu ra trước
 
-Weak spots:
+Vấn đề thường gặp:
 
-- Dropped words
-- Misheard terms
-- Poor fit for exact paths, variable names, CLI flags
+- Dễ sót chữ
+- Dễ nghe sai
+- Không phù hợp mang đường dẫn chính xác, tên biến, tham số dòng lệnh
 
-Common pattern: speak direction, then confirm in writing.
+Cách thường gặp là nói hướng trước, rồi bổ sung thành chữ để xác nhận.
 
-## Usage tips
+## Gợi ý dùng
 
-1. Quiet environment, short sentences; state goal / constraints / done criteria in segments
-2. For file paths and branch names, **type** or have the Agent spell them back
-3. For sensitive work, disable cloud voice processing if a local/disable option exists
-4. Keep important decisions in text on issues or PRs
+1. Môi trường yên, câu ngắn, nói từng đoạn rõ «mục tiêu / ràng buộc / tiêu chuẩn hoàn thành»
+2. Khi liên quan đường dẫn tệp, tên nhánh thì **đổi sang gõ** hoặc để Agent nhắc lại chính tả
+3. Dự án nhạy cảm thì tắt xử lý giọng nói đám mây (nếu sản phẩm có tùy chọn cục bộ/tắt)
+4. Quyết định quan trọng giữ bản ghi chữ trong issue hoặc PR
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Voice replaces typing entirely?
+### 1. Giọng nói có thay hoàn toàn gõ chữ?
 
-No. Prefer typing for:
+Không.  
+Những nội dung sau tốt nhất vẫn gõ:
 
-- File paths
-- Branch names
-- Commands
-- Parameters
-- Acceptance criteria
+- Đường dẫn tệp
+- Tên nhánh
+- Lệnh
+- Tham số
+- Tiêu chuẩn nghiệm thu
 
-### 2. More detail spoken ≠ fewer errors
+### 2. Nói càng nhiều càng chi tiết chưa chắc càng ít lỗi
 
-Long unstructured speech can scatter the point.
+Nói dài mà không có cấu trúc, ngược lại dễ làm phân tán trọng tâm.
 
-### 3. Voice summary replaces reviewing results?
+### 3. Phản hồi giọng nói có thay được rà soát kết quả?
 
-No.  
-Summaries help orientation; confirming changes, files, diffs, and tests still requires text and artifacts.
+Không.  
+Tóm tắt giọng nói giúp bạn nắm đại ý nhanh, nhưng khi xác nhận thay đổi, tệp, diff, kết quả kiểm thử, vẫn phải quay về chữ và bản thân artifact.
 
-## Useful speaking order
+## Một thứ tự nói thường dùng
 
-When starting with voice:
+Khi muốn nêu tác vụ bằng giọng nói trước, có thể nói theo thứ tự:
 
-1. What I want done
-2. What not to do
-3. How to verify when finished
+1. Tôi muốn làm gì
+2. Đừng làm gì
+3. Xong thì kiểm thế nào
 
-Then ask for a written version to confirm.
+Nói xong, để nó gom thành bản chữ để bạn xác nhận.
 
-## Privacy
+## Riêng tư
 
-- Voice may be transcribed in the cloud—do not read customer PII or credentials
-- Mind bystanders in public spaces
-- Team policy may forbid voice on confidential codenames
+- Giọng nói có thể qua chuyển viết đám mây; đừng đọc PII khách hàng, chứng chỉ
+- Nơi công cộng chú ý người quanh nghe
+- Chính sách nhóm có thể cấm chức năng dạng ghi âm xử lý tên mã mật
 
-## Relation to multimodal input
+## Quan hệ với đa phương thức
 
-- **Image input**: mockups, screenshots → [prompting with images](/prompts/prompting-with-images/)
-- **Voice input**: this page
-- **Output**: still mainly code, files, text diffs; voice summary does not replace review
+- **Ảnh đầu vào**: bản thiết kế, ảnh chụp → [Prompt kèm ảnh](/prompts/prompting-with-images/)
+- **Giọng nói đầu vào**: trang này
+- **Đầu ra**: vẫn chủ yếu là mã, tệp, diff chữ; tóm tắt giọng nói không thay rà soát
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Long unstructured speech; Agent misses constraints
-- Accepting large code changes via voice without reading diff
-- Describing unsanitized production incidents aloud
+- Nói dài không cấu trúc, Agent sót ràng buộc
+- Dùng giọng nói chấp nhận thay đổi mã số lượng lớn mà không xem diff
+- Trong giọng nói mô tả chi tiết sự cố production chưa khử nhạy cảm
 
-Voice helps you start and follow up—not replace precise instructions, sensitive handling, or final acceptance.
+Giọng nói phù hợp khởi động và theo dõi; không phù hợp thay lệnh chính xác, xử lý thông tin nhạy cảm và nghiệm thu cuối.
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Desktop Voice (plan and workspace settings dependent)  
-**Verification basis:** OpenAI Help Center articles on ChatGPT Voice and ChatGPT Work and Codex state Voice can work with Work/Codex in the desktop App to start tasks, follow progress, and coordinate work; availability depends on plan, workspace settings, and version. This page focuses on use cases, privacy, and "speak then confirm in writing."  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / Desktop Voice (tùy gói và cài đặt workspace)  
+**Căn cứ kiểm chứng:** OpenAI Help Center hiện tại《ChatGPT Voice》và《ChatGPT Work and Codex》đều nói rõ: Voice có thể phối hợp Work / Codex trong App máy tính để khởi động tác vụ, theo dõi tiến độ và phối hợp công việc; năng lực và khả dụng chịu ảnh hưởng gói, cài đặt workspace và phiên bản. Nội dung trang tập trung vào tình huống phù hợp của giọng nói, lưu ý riêng tư và phương pháp “nói miệng rồi quay về chữ xác nhận”.  
+**Kiểm chứng gần nhất:** 2026-07-26

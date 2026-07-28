@@ -1,91 +1,91 @@
 ---
-title: Specification-driven work
-description: Write an acceptance-ready spec first, then have Codex implement to plan—good for clear delivery tasks.
+title: Làm việc theo đặc tả
+description: Viết rõ đặc tả nghiệm thu được trước, rồi để Codex triển khai theo kế hoạch — phù hợp tác vụ giao có nhu cầu rõ.
 locale: vi
-source_locale: en
-source_revision: 91c65d9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Specification-driven** work means preparing a short spec before large file changes—goals, scope, interfaces, and acceptance criteria. It can follow [Brainstorm before building](/cases/workflows/brainstorm-before-building/), or go straight into [EPXV](/cases/workflows/explore-plan-execute-verify/) with already-clarified requirements.
+**Làm việc theo đặc tả** là trước khi sửa nhiều tệp, chuẩn bị một đặc tả ngắn ghi rõ mục tiêu, phạm vi, giao diện và tiêu chí nghiệm thu. Có thể nối sau [brainstorm](/cases/workflows/brainstorm-before-building/), hoặc trực tiếp vào [EPXV](/cases/workflows/explore-plan-execute-verify/) với nhu cầu đã làm rõ.
 
-## What's covered
+## Trọng tâm trang này
 
-- How detailed the spec needs to be
-- How to keep Codex on-spec without scope creep
-- How specs relate to PR descriptions and issues
+- Đặc tả cần chi tiết đến đâu là đủ
+- Cách để Codex làm theo đặc tả mà không tự mở rộng scope
+- Quan hệ giữa đặc tả với mô tả PR và issue
 
-## Minimum viable spec template
+## Mẫu đặc tả tối thiểu dùng được
 
 ```markdown
-## Goal
-One sentence of user value
+## Mục tiêu
+Một câu giá trị cho người dùng
 
-## Scope
-- In scope: …
-- Out of scope: …
+## Phạm vi
+- Bao gồm: …
+- Không gồm: …
 
-## Interface / behavior
-- Inputs / outputs / error cases
+## Giao diện/hành vi
+- Đầu vào / đầu ra / tình huống lỗi
 
-## Acceptance criteria
-- [ ] Automatically verifiable items
-- [ ] Items requiring human check
+## Tiêu chí nghiệm thu
+- [ ] Mục kiểm chứng tự động được
+- [ ] Mục cần người kiểm
 
-## Constraints
-- Modules that must not change, performance, compatibility
+## Ràng buộc
+- Module không được sửa, hiệu năng, tương thích
 ```
 
-Put the template in repo `docs/specs/` or an issue body and `@` reference it in tasks.
+Có thể đặt mẫu vào `docs/specs/` của kho hoặc thân issue, rồi `@` trong tác vụ.
 
-## Recommended workflow
+## Quy trình đề xuất
 
 ```text
-① Draft spec (Codex can help; human reviews)
-② Confirm spec → reply "execute to spec"
-③ Execute step by step against acceptance items
-④ Spec changes must explicitly bump version or changelog
+① Soạn đặc tả (Codex hỗ trợ được, người duyệt)
+② Xác nhận đặc tả → trả lời «thực thi theo đặc tả»
+③ Thực thi từng bước, mỗi bước đối chiếu mục nghiệm thu
+④ Đổi đặc tả phải đổi phiên bản hoặc changelog tường minh
 ```
 
-Prompt example:
+Ví dụ prompt:
 
 ```text
-Read @docs/specs/export-csv.md. First list implementation plan and risks against the spec;
-do not add features not in the spec. Wait for my confirmation before writing code.
+Đọc @docs/specs/export-csv.md. Trước hết đối chiếu đặc tả để liệt kê kế hoạch triển khai và rủi ro;
+Không thêm tính năng chưa ghi trong đặc tả. Đợi tôi xác nhận rồi mới viết code.
 ```
 
-## Pairing with test-driven work
+## Phối hợp với làm việc theo test
 
-Acceptance items in the spec should be **testable** where possible; write tests first when you can—see [Test-driven work](/cases/workflows/test-driven-work/).
+Mục nghiệm thu trong đặc tả nên **kiểm thử được** càng nhiều càng tốt; cái viết thành test được thì viết test trước — xem [làm việc theo test](/cases/workflows/test-driven-work/).
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Spec as long as a design doc—key constraints get buried
-- Scope quietly grows during execution without updating the spec
-- Vague acceptance ("more usable") leads to arguments
-- Spec conflicts with `AGENTS.md` architecture conventions
+- Đặc tả dài như tài liệu thiết kế, ràng buộc then chốt lại tìm không ra
+- Trong lúc thực thi phạm vi âm thầm phình, mà không cập nhật đặc tả
+- Tiêu chí nghiệm thu mơ hồ («dùng dễ hơn») gây tranh cãi
+- Đặc tả xung đột với quy ước kiến trúc trong `AGENTS.md`
 
-## Security boundaries
+## Ranh giới an toàn
 
-- External API calls only when the spec explicitly allows network-related implementation
-- PII field handling must be called out in the spec
+- Chỉ khi đặc tả ghi «cho phép gọi API ngoài» mới ủy quyền triển khai liên quan mạng
+- Xử lý trường liên quan PII phải đánh dấu trong đặc tả
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Out-of-scope items explicitly excluded
-- [ ] At least 3 checkable acceptance criteria
-- [ ] Human or written confirmation before execution
-- [ ] Changes synced back to the spec file
+- [ ] Mục ngoài phạm vi đã loại trừ rõ
+- [ ] Ít nhất 3 tiêu chí nghiệm thu kiểm được
+- [ ] Trước thực thi có xác nhận của người hoặc bằng văn bản
+- [ ] Thay đổi đã đồng bộ về tệp đặc tả
 
-## References
+## Nguồn tham chiếu
 
-- KimYx0207 requirements and task decomposition chapters
-- freestylefly/CodexGuide spec and acceptance checklists
+- Chương phân rã nhu cầu và tác vụ của KimYx0207
+- Đặc tả và checklist nghiệm thu freestylefly/CodexGuide
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified brainstorm, EPXV, test-driven, and `AGENTS.md` chapters; content is limited to the stable pattern of writing acceptance-ready specs first, then executing to spec.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương brainstorm, EPXV, làm việc theo test và `AGENTS.md` đã kiểm chứng của sổ tay; nội dung trang giới hạn ở cách làm ổn định “viết đặc tả nghiệm thu được trước, rồi thực thi theo đặc tả”.  
+**Kiểm chứng gần nhất:** 2026-07-26

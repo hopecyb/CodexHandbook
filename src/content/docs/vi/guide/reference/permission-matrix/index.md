@@ -1,151 +1,151 @@
 ---
-title: Permission Matrix
-description: Conceptual map of Codex action types, approval points, and product differences.
+title: Ma trận quyền
+description: "Bản đồ khái niệm các loại thao tác Codex, điểm phê duyệt và khác biệt sản phẩm."
 locale: vi
-source_locale: en
-source_revision: be5c1b7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The permission matrix helps everyday users too: why the same sentence gets different reactions in different Codex entry points.
+Ma trận quyền cũng giúp người dùng hàng ngày: vì sao cùng một câu nhận phản ứng khác nhau tùy lối vào Codex.
 
-Different **actions** trigger different approval and sandbox behavior per **product entry**. This matrix aligns teams on “what must a human explicitly allow.” It is a **risk and behavior reference**, not legal compliance text. Defaults per [official documentation](https://developers.openai.com/codex) and org-managed policy.
+Các **thao tác** khác nhau kích hoạt hành vi phê duyệt và Sandbox khác nhau theo **lối vào sản phẩm**. Ma trận này căn chỉnh đội về «điều người phải tường minh cho phép». Đây là **tham chiếu rủi ro và hành vi**, không phải văn bản tuân thủ pháp lý. Mặc định theo [tài liệu chính thức](https://developers.openai.com/codex) và chính sách quản lý tổ chức.
 
-## What the table is for
+## Bảng dùng để làm gì
 
-When approval, limits, or rejection appear, people often think:
+Khi phê duyệt, giới hạn hoặc từ chối xuất hiện, người ta thường nghĩ:
 
-- Model is broken
-- I phrased it wrong
-- It worked yesterday
+- Mô hình hỏng
+- Tôi diễn đạt sai
+- Hôm qua còn chạy được
 
-Much of that is entry, policy, and risk level—not your wording alone.
+Phần lớn là lối vào, chính sách và mức rủi ro — không chỉ cách bạn diễn đạt.
 
-## Core idea
+## Ý tưởng trung tâm
 
-Not every “do this for me” carries the same risk.
+Không phải mọi «làm giúp tôi việc này» mang cùng rủi ro.
 
-Examples:
+Ví dụ:
 
-- Read a file
-- Edit a file
-- Run a command
-- Reach the network
+- Đọc một tệp
+- Sửa một tệp
+- Chạy một lệnh
+- Tới mạng
 - Push code
 
-Same sentence shape—different risk—so products add different approval, limits, and blocks.
+Cùng hình câu — rủi ro khác — nên sản phẩm thêm phê duyệt, giới hạn và chặn khác nhau.
 
-Conceptual base: [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Nền khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
 
-## Action risk tiers
+## Mức rủi ro thao tác
 
-| Tier | Example actions | Default expectation |
+| Mức | Thao tác ví dụ | Kỳ vọng mặc định |
 |---|---|---|
-| L0 read | Read in-repo text, search code | Usually automatic |
-| L1 write | Edit project files, format | Often confirm or auto in sandbox |
-| L2 execute | shell, package manager, tests | Often confirm |
-| L3 network | curl, npm registry, API | Strict confirm or deny |
-| L4 out of bounds | Write outside project, git push, drop DB | Block or strong confirm |
-| L5 GUI | Computer Use, system dialogs | Highest sensitivity; often off |
+| L0 đọc | Đọc văn bản trong repo, tìm code | Thường tự động |
+| L1 ghi | Sửa tệp dự án, định dạng | Thường xác nhận hoặc tự động trong Sandbox |
+| L2 thực thi | shell, trình quản lý package, kiểm thử | Thường xác nhận |
+| L3 mạng | curl, registry npm, API | Xác nhận chặt hoặc deny |
+| L4 ngoài giới hạn | Ghi ngoài dự án, git push, drop DB | Chặn hoặc xác nhận mạnh |
+| L5 GUI | Computer Use, hộp thoại hệ thống | Nhạy cảm tối đa; thường tắt |
 
-## How to read it
+## Cách đọc
 
-1. What class of action is this task?
-2. Will that class usually be blocked in this entry?
-3. Add detail, wait for approval, or pick a lighter entry?
+1. Tác vụ này thuộc lớp thao tác nào?
+2. Lớp đó thường bị chặn trong lối vào này không?
+3. Thêm chi tiết, chờ phê duyệt, hay chọn lối nhẹ hơn?
 
-Use it to preview before you start.
+Dùng để xem trước trước khi bắt đầu.
 
-## Matrix (conceptual — typical defaults)
+## Ma trận (khái niệm — mặc định điển hình)
 
-**Y** = usually needs explicit consent or policy limit · **A** = may auto under trusted config · **—** = version/policy dependent · **N** = usually not allowed
+**Y** = thường cần đồng ý tường minh hoặc giới hạn chính sách · **A** = có thể tự động dưới cấu hình đáng tin · **—** = tùy phiên bản/chính sách · **N** = thường không cho phép
 
-| Action | Desktop App | CLI interactive | IDE | Cloud |
+| Thao tác | App máy tính | CLI tương tác | IDE | Cloud |
 |---|---|---|---|---|
-| Read repo files | A | A | A | A |
-| Write in-repo files | Y/A | Y | Y/A | Y/A |
-| Run test commands | Y/A | Y | Y/A | Y/A |
-| Install global dependencies | Y | Y | Y | Y |
-| Access public internet | Y | Y | Y | Y |
-| Read sensitive files like `.env` | Y | Y | Y | Y |
+| Đọc tệp repo | A | A | A | A |
+| Ghi tệp trong repo | Y/A | Y | Y/A | Y/A |
+| Chạy lệnh kiểm thử | Y/A | Y | Y/A | Y/A |
+| Cài dependency global | Y | Y | Y | Y |
+| Truy cập Internet công cộng | Y | Y | Y | Y |
+| Đọc tệp nhạy cảm như `.env` | Y | Y | Y | Y |
 | `git commit` | Y | Y | Y | Y |
 | `git push` | Y | Y | Y | Y |
-| Write outside project | N/Y | N/Y | N/Y | N |
-| MCP third-party tools | Y | Y | Y | Y |
-| Browser open URL | Y | — | — | Y |
+| Ghi ngoài dự án | N/Y | N/Y | N/Y | N |
+| Công cụ MCP bên thứ ba | Y | Y | Y | Y |
+| Trình duyệt mở URL | Y | — | — | Y |
 | Computer Use | Y/— | — | — | — |
 
-Notes:
+Ghi chú:
 
-- **Cloud** runs in remote sandbox—no access to your laptop filesystem
-- **IDE** similar to App; approval UI differs
-- **Managed policy** can force all Y or N
+- **Cloud** chạy trong Sandbox từ xa — không truy cập filesystem laptop
+- **IDE** tương tự App; UI phê duyệt khác
+- **Chính sách quản lý** có thể ép mọi thứ thành Y hoặc N
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Feasibility is not only “will the model try”
+### 1. Tính khả thi không chỉ là «mô hình sẽ thử»
 
-Often: entry allowance, policy, permissions.
+Thường là: allowance lối vào, chính sách, quyền.
 
-### 2. Cloud is not automatically freer or safer
+### 2. Cloud không tự động tự do hơn hoặc an toàn hơn
 
-Safety depends on sandbox, network, Secrets, branch protection, approval together.
+An toàn phụ thuộc Sandbox, mạng, Secrets, bảo vệ nhánh, phê duyệt cùng lúc.
 
-### 3. Written rules do not remove risk alone
+### 3. Quy tắc viết không một mình xóa rủi ro
 
-Docs, approval policy, technical limits, and human review often combine.
+Tài liệu, chính sách phê duyệt, giới hạn kỹ thuật và review người thường kết hợp.
 
-### 4. Blocked ≠ you did something wrong
+### 4. Bị chặn ≠ bạn làm sai gì
 
-Often: higher risk step, wrong entry for the job, or needs explicit approval / lighter approach.
+Thường là: bước rủi ro cao hơn, lối vào không phù hợp việc, hoặc cần phê duyệt tường minh / cách tiếp cận nhẹ hơn.
 
-## How config and docs land
+## Config và tài liệu áp dụng thế nào
 
-| Mechanism | Role |
+| Cơ chế | Vai trò |
 |---|---|
-| Sandbox mode | Limits L3/L4 even if Agent “wants” to |
-| Approval policy | Whether L1–L3 prompts |
-| `AGENTS.md` | Project prohibitions (e.g. no push) |
-| Branch protection | GitHub blocks unreviewed merge |
-| Hooks | Pre-commit checks (see Hooks roadmap) |
+| Chế độ Sandbox | Giới hạn L3/L4 dù Agent «muốn» |
+| Chính sách phê duyệt | L1–L3 có prompt không |
+| `AGENTS.md` | Điều cấm dự án (vd. không push) |
+| Bảo vệ nhánh | GitHub chặn merge chưa review |
+| Hooks | Kiểm tra pre-commit (xem lộ trình Hooks) |
 
-[Human approval patterns](/cases/workflows/human-approval-patterns/) · [Configuration reference](/guide/reference/configuration-reference/)
+[Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) · [Tham chiếu cấu hình](/guide/reference/configuration-reference/)
 
-## When to raise caution
+## Khi nào nâng mức thận trọng
 
-If an action:
+Nếu một thao tác:
 
-- Modifies files
-- Runs commands
-- Reaches the network
-- Touches sensitive data
-- Sends results outside the repo
+- Sửa tệp
+- Chạy lệnh
+- Tới mạng
+- Chạm dữ liệu nhạy cảm
+- Gửi kết quả ra ngoài repo
 
-You may not need the L-number—know it is past casual-read risk.
+Không cần số L — biết nó vượt rủi ro đọc thông thường.
 
-The matrix is a preview tool: why this step might block, whether to be more careful, or choose a lighter path.
+Ma trận là công cụ xem trước: vì sao bước này có thể chặn, cần thận trọng hơn, hoặc chọn đường nhẹ hơn.
 
-## Team policy examples
+## Ví dụ chính sách đội
 
-| Scenario | Suggestion |
+| Tình huống | Gợi ý |
 |---|---|
-| Open-source practice repo | Standard sandbox + allow test commands |
-| Company monorepo | Strict + no push + human PR review |
-| CI `codex exec` | Read-only or scoped dir + no push |
-| Cloud production-related | Minimal Secrets + branch protection |
+| Repo luyện tập mã nguồn mở | Sandbox chuẩn + cho phép lệnh kiểm thử |
+| Monorepo doanh nghiệp | Chặt + không push + review PR người |
+| CI `codex exec` | Chỉ đọc hoặc dir scoped + không push |
+| Cloud gắn production | Secrets tối thiểu + bảo vệ nhánh |
 
-## Common myths
+## Hiểu nhầm phổ biến
 
-| Myth | Fact |
+| Hiểu nhầm | Sự thật |
 |---|---|
-| “Cloud is safer” | Depends on secrets, review, network policy |
-| “IDE won’t run shell” | May run via Agent tools |
-| “Doc says no push so never push” | Need sandbox + Git permissions + human review |
+| «Cloud an toàn hơn» | Phụ thuộc secrets, review, chính sách mạng |
+| «IDE sẽ không chạy shell» | Có thể chạy qua công cụ Agent |
+| «Tài liệu nói không push nên không bao giờ push» | Cần Sandbox + quyền Git + review người |
 
 ---
 
-**Status:** outdated  
-**Products:** App / CLI / IDE / Cloud  
-**Review note:** Risk tier framing still useful, but matrix assumes many per-entry defaults and approval points without current official per-entry permission matrix documentation—do not mark `review` or `verified`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Ghi chú đối chiếu:** Khung mức rủi ro vẫn hữu ích, nhưng ma trận giả định nhiều mặc định theo lối vào và điểm phê duyệt mà thiếu tài liệu ma trận quyền theo lối vào chính thức hiện hành — không đánh `review` hoặc `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

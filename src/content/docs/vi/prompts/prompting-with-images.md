@@ -1,172 +1,186 @@
 ---
-title: Prompting with images
-description: How to ask when giving Codex screenshots, designs, or whiteboard photos.
+title: Prompt với hình ảnh
+description: Khi đưa Codex ảnh chụp màn hình, bản thiết kế hoặc ảnh bảng trắng, hỏi thế nào để dễ nhận kết quả thực thi được.
 locale: vi
-source_locale: en
-source_revision: fb0c011
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many "look at this image" tasks fail not because the model didn't see—it got an image **without being told what to look for**.
+Nhiều tác vụ «xem hình rồi làm» thất bại không phải vì mô hình không thấy—mà vì chỉ đưa hình, **không nói muốn nó nhìn gì trong hình**.
 
-Image prompting should establish three things:
+Trọng tâm của Prompt hình ảnh là giúp Codex lập ba điểm:
 
-1. What the image is
-2. Where you want attention
-3. What task the output should serve
+1. Hình này là gì
+2. Bạn muốn nó chú ý chỗ nào
+3. Đầu ra cuối cùng phục vụ tác vụ gì
 
-## When image prompts help
+## Tình huống phù hợp Prompt hình ảnh
 
-| Scenario | What the image provides |
+| Tình huống | Vai trò hình ảnh |
 |---|---|
-| UI bug triage | Abnormal location and state |
-| Design implementation | Layout, hierarchy, spacing, mood reference |
-| Docs from screenshots | Interface-based explanations or tutorials |
-| Whiteboard / flowchart cleanup | Hand-drawn → structured description |
-| Current vs. expected | Differences without guessing requirements |
+| Điều tra UI bug | Để Codex thấy vị trí và trạng thái bất thường |
+| Khôi phục thiết kế | Cung cấp layout, phân cấp, khoảng cách, không khí tham chiếu |
+| Giải thích ảnh chụp trong tài liệu | Để nó viết hướng dẫn hoặc tutorial dựa trên giao diện |
+| Sắp xếp bảng trắng / sơ đồ | Chuyển hình viết tay thành mô tả có cấu trúc |
+| So sánh hiện tại với kỳ vọng | Giúp nhận diện khác biệt thay vì đoán yêu cầu |
 
-When the task is about appearance, position, or visual state, images often beat long text; when it's about business rules, images are supporting evidence.
+Nếu trọng tâm là «ngoại hình, vị trí, trạng thái thị giác», hình thường hiệu quả hơn đoạn chữ dài; nếu trọng tâm là «quy tắc nghiệp vụ», hình chủ yếu là bằng chứng hỗ trợ.
 
-## Four-part image prompt structure
+## Cấu trúc bốn đoạn của Prompt hình ảnh
 
-Keep structure like text prompts:
+Khuyến nghị giữ cấu trúc giống Prompt chữ:
 
-### 1. Image identity
+### 1. Danh tính hình ảnh
 
-What it is and where it came from.
+Nói hình này là gì, đến từ đâu.
 
-```text
-This is a screenshot of the production login page, from iPhone 14 Safari.
-```
-
-### 2. Focus area
-
-Point at what matters—don't end with "find the problem yourself."
+Ví dụ:
 
 ```text
-Focus on spacing between the bottom button and the input, and layout when the keyboard is open.
+Đây là ảnh chụp trang đăng nhập production hiện tại, từ Safari trên iPhone 14.
 ```
 
-### 3. Task goal
+### 2. Vùng chú ý
 
-Analyze, reproduce, edit code, write docs, output a comparison table.
+Chỉ rõ bạn muốn nó nhìn đâu; đừng dừng ở «tự tìm vấn đề».
+
+Ví dụ:
 
 ```text
-Analyze likely causes first; don't edit code yet. List 2–3 most relevant frontend files.
+Tập trung khoảng cách giữa nút dưới cùng và ô nhập, cùng thay đổi layout khi bàn phím bật lên.
 ```
 
-### 4. Output format
+### 3. Mục tiêu tác vụ
 
-What you want back—avoid vague essays.
+Nói bạn muốn nó làm gì: phân tích, tái hiện, sửa code, viết hướng dẫn, xuất bảng so sánh.
+
+Ví dụ:
 
 ```text
-Output:
-1. What you observe in the image
-2. Likely causes
-3. Files to inspect
-4. Additional screenshots you need from me
+Phân tích nguyên nhân có thể trước; chưa sửa code. Đưa 2–3 tệp frontend liên quan nhất.
 ```
 
-## Three common templates
+### 4. Định dạng đầu ra
 
-### 1. Find the problem in the image
+Nói bạn muốn kết quả gì, tránh nói chung chung.
+
+Ví dụ:
 
 ```text
-I uploaded a screenshot of the current page. Focus on the red-box area.
-Describe the anomaly first, then list 2–3 likely causes.
-Don't modify code yet.
+Đầu ra:
+1. Hiện tượng bạn quan sát được trong hình
+2. Nguyên nhân có thể
+3. Tệp nên kiểm tra
+4. Ảnh chụp bổ sung bạn còn cần từ tôi
 ```
 
-### 2. Implement from the image
+## Ba mẫu thường dùng
+
+### 1. Xem hình tìm vấn đề
 
 ```text
-I uploaded the target design.
-Summarize page structure, key components, responsive points, and visual style from this image.
-If you implement, keep structure and hierarchy consistent; don't add features on your own.
+Tôi tải lên ảnh chụp trang hiện tại. Tập trung vùng khung đỏ.
+Mô tả bất thường bạn quan sát trước, rồi liệt kê 2–3 nguyên nhân có thể.
+Chưa sửa code.
 ```
 
-### 3. Current vs. expected
+### 2. Triển khai theo hình
 
 ```text
-I'll upload two images: current result and desired result.
-Compare layout, text hierarchy, spacing, and interaction cues; give fix priority.
+Tôi tải lên bản thiết kế mục tiêu.
+Dựa trên hình, tóm tắt cấu trúc trang, component then chốt, điểm responsive và phong cách thị giác.
+Nếu bắt đầu triển khai, ưu tiên giữ cấu trúc và phân cấp khớp; đừng tự thêm chức năng.
 ```
 
-## Text that makes images more accurate
-
-Images often lack runtime context—add:
-
-- device or browser
-- hover / focus / error states
-- scroll position
-- current vs. target
-- whether to follow an existing design system
-
-"Works on desktop Chrome; only broken on iOS Safari" often beats another screenshot.
-
-## Best way to supply multiple images
-
-### Pair them
-
-Useful patterns:
-
-- current + expected
-
-or:
-
-- normal + broken
-
-Don't upload a pile of unlabeled images and let Codex guess order.
-
-### Label each image's role
+### 3. So sánh hiện tại vs kỳ vọng
 
 ```text
-Image 1: desktop current
-Image 2: mobile current
-Image 3: design target
+Tôi sẽ tải hai hình: hình 1 là hiệu ứng hiện tại, hình 2 là kỳ vọng.
+So sánh khác biệt về layout, phân cấp chữ, khoảng cách và gợi ý tương tác; đưa mức ưu tiên sửa.
 ```
 
-Easier to map relationships.
+## Muốn nó nhìn chính xác hơn, cần bổ sung chữ gì
 
-## Common image prompt mistakes
+Hình thường thiếu ngữ cảnh chạy, nên các thông tin sau rất hữu ích:
 
-### "Just do it like this"
+- Thiết bị hoặc trình duyệt
+- Trạng thái hiện tại có gồm hover / focus / lỗi không
+- Vị trí cuộn trang
+- Đây là «hiệu ứng hiện tại» hay «hiệu ứng mục tiêu»
+- Có khôi phục theo design system sẵn có không
 
-Codex infers all requirements from the image—including details you didn't care about.
+Ví dụ câu «Chrome desktop bình thường, chỉ iOS Safari lỗi» thường có giá trị hơn thêm một ảnh chụp.
 
-### Crop without context
+## Nhiều hình nên đưa thế nào
 
-A partial shot shows the problem spot but not page state, responsive behavior, or modal context.
+### Làm «đầu vào theo cặp»
 
-### Design as full spec
+Cách dùng tốt:
 
-Designs show appearance—not data sources, edge cases, or interaction logic. Add business rules in text.
+- Hình hiện tại
+- Hình kỳ vọng
 
-### Image replaces acceptance
+Hoặc:
 
-Even design-driven work needs real page, diff, breakpoints, and usability. Images are input—not proof of done.
+- Trạng thái bình thường
+- Trạng thái bất thường
 
-## Related pages
+Đừng tải một loạt hình không chú thích và để Codex tự đoán thứ tự.
 
-- Upload and manage images: [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- Generate new images: [Image generation](/guide/tools/image-generation/)
-- Complete task structure: [Task anatomy](/prompts/task-anatomy/)
-- Analyze before editing: [Ask for a plan first](/prompts/ask-for-a-plan/)
+### Gắn vai trò cho mỗi hình
 
-## Practical tip
-
-For "design review" style reading, ask for **observation**, then **judgment**, then **recommendation**:
+Ví dụ:
 
 ```text
-Only describe what you observe in the image—no conclusions yet.
-Then hypothesize the most likely causes.
-Finally suggest modification directions.
+Hình 1: Hiệu ứng hiện tại desktop
+Hình 2: Hiệu ứng hiện tại mobile
+Hình 3: Hiệu ứng mục tiêu theo bản thiết kế
 ```
 
-Clearer than "help me fix" and easier to continue from.
+Như vậy dễ hơn để nó nối quan hệ tương ứng.
 
-## Reference sources
+## Lỗi dễ mắc nhất với Prompt hình ảnh
+
+### Chỉ nói «làm theo cái này»
+
+Codex sẽ cố suy ngược mọi yêu cầu từ hình, và thường coi cả chi tiết bạn không quan tâm thành bắt buộc.
+
+### Chỉ đưa cục bộ, không có ngữ cảnh
+
+Ảnh chụp cục bộ thấy được điểm vấn đề, nhưng chưa chắc biết đây là trạng thái trang nào, có chịu ảnh hưởng responsive không, có phải cảnh lớp phủ không.
+
+### Coi bản thiết kế như đặc tả đầy đủ
+
+Bản thiết kế diễn đạt ngoại hình, nhưng chưa chắc diễn đạt nguồn dữ liệu, điều kiện biên, logic tương tác. Quy tắc nghiệp vụ vẫn cần chữ bổ sung.
+
+### Lầm tưởng hình thay được nghiệm thu
+
+Dù triển khai theo hình, cuối cùng vẫn phải xem trang thật, diff, hành vi breakpoint và khả dụng. Hình là đầu vào, không phải kết quả nghiệm thu.
+
+## Kết hợp với trang khác thế nào
+
+- Tải lên và quản lý tệp hình: [Hình ảnh và ảnh chụp](/guide/files-and-artifacts/images-and-screenshots/)
+- Cần tạo hình mới: [Tạo hình ảnh](/guide/tools/image-generation/)
+- Cần nêu tác vụ đủ: [Cấu trúc tác vụ](/prompts/task-anatomy/)
+- Cần phân tích trước khi làm: [Xin kế hoạch trước](/prompts/ask-for-a-plan/)
+
+## Một kinh nghiệm thực dụng
+
+Nếu muốn Codex «xem hình như review thiết kế», hãy để nó **quan sát** trước, rồi **phán đoán**, cuối cùng mới **đề xuất**.
+
+Ví dụ:
+
+```text
+Chỉ mô tả hiện tượng quan sát được trong hình trước; chưa kết luận.
+Sau đó suy đoán nguyên nhân khả dĩ nhất.
+Cuối cùng đưa hướng sửa đề xuất.
+```
+
+Thường rõ hơn một câu «giúp tôi sửa», và dễ tiếp tục hơn về sau.
+
+## Nguồn tham khảo
 
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
@@ -174,7 +188,7 @@ Clearer than "help me fix" and easier to continue from.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Structure, scenarios, and cautions rechecked against OpenAI official image input and file upload materials; body no longer depends on unofficial scenario sources and omits UI details that need per-version verification.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / Cloud  
+**Cơ sở kiểm chứng:** Đã rà lại cấu trúc, tình huống và lưu ý theo tài liệu chính thức OpenAI về đầu vào hình ảnh và tải tệp; nội dung không còn phụ thuộc nguồn tình huống ngoài chính thức, và không giữ chi tiết giao diện cần đối chiếu từng phiên bản.  
+**Kiểm chứng gần nhất:** 2026-07-26

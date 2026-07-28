@@ -1,58 +1,59 @@
 ---
-title: Diagnose template
-description: Find root cause before discussing fixes.
+title: Mẫu chẩn đoán
+description: Định vị nguyên nhân gốc trước khi bàn sửa.
 locale: vi
-source_locale: en
-source_revision: 1c4bf6a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Diagnose template
+# Mẫu chẩn đoán
 
-A common diagnose mistake: you say "investigate first" but still expect an immediate fix.
+Hiểu lầm thường gặp của tác vụ chẩn đoán: miệng nói «kiểm tra trước» nhưng vẫn mặc định để nó sửa luôn.
 
-This template separates finding cause from editing code.
+Trọng tâm mẫu chẩn đoán là tách «tìm nguyên nhân» khỏi «bắt tay sửa».
 
-## Template
+## Mẫu
 
 ```text
-Symptom: 【error message, failing test, user report】
-Context: 【recent changes, environment, repro steps】
-Inputs: @【logs/tests/relevant code】
-Constraints: Do not change code yet; list 2–3 likely root causes and how to verify each.
-Output:
-1. Most likely root cause (with evidence)
-2. Executable verification steps (commands or checkpoints)
-3. If verified, draft fix plan (wait for my confirmation before executing)
+Hiện tượng: 【thông báo lỗi, kiểm thử fail, báo cáo người dùng】
+Bối cảnh: 【thay đổi gần đây, môi trường, bước tái hiện】
+Đầu vào: @【log/kiểm thử/code liên quan】
+Ràng buộc: Chưa sửa code; liệt kê 2–3 nguyên nhân gốc có thể và cách kiểm chứng.
+Đầu ra:
+1. Nguyên nhân gốc khả dĩ nhất (kèm bằng chứng)
+2. Bước kiểm chứng thực thi được (lệnh hoặc checkpoint)
+3. Nếu kiểm chứng pass, bản nháp kế hoạch sửa (chờ tôi xác nhận rồi mới thực thi)
 ```
 
-## When to use this template
+## Khi nào phù hợp mẫu này
 
-- Bug not yet localized
-- Tests red but layer unknown
-- Complex suspected issue—don't want guess-and-patch
+- Bug chưa định vị
+- Kiểm thử đỏ nhưng chưa biết lớp nào hỏng
+- Bạn nghi vấn đề phức tạp, không muốn để nó đoán sửa luôn
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Diagnosis is slow—just fix it
+### 1. Chẩn đoán chậm quá, sửa thẳng còn hơn
 
-Much rework comes from skipping diagnosis.
+Nhiều lần làm lại chính vì bỏ qua chẩn đoán.
 
-### 2. Listing 2–3 causes is verbose
+### 2. Liệt kê 2–3 nguyên nhân gốc có dài dòng quá không
 
-It shows whether reasoning is grounded or random.
+Không—ngược lại giúp bạn thấy nó có đang đoán bừa không.
 
-The diagnose template requires explaining why it's broken before how to fix it.
+Mẫu chẩn đoán yêu cầu nó nói vì sao hỏng trước, rồi mới bàn cách sửa.
 
-## Related
+## Liên quan
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Fix a bug case](/cases/fix-a-bug/)
+- [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/)
+- [Case sửa Bug](/cases/fix-a-bug/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a diagnose-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu chẩn đoán; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

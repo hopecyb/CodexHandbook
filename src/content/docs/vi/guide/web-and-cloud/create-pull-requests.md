@@ -1,120 +1,120 @@
 ---
-title: Create Pull Request
-description: From Cloud tasks to reviewable PRs—descriptions, scope, and human merge gates.
+title: Tạo Pull Request
+description: "Từ Tác vụ Cloud tới PR có thể review — mô tả, phạm vi và cổng merge của người."
 locale: vi
-source_locale: en
-source_revision: e679e5f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-On your first Cloud workflow, the task may be "done" while changes are not yet in a state that's easy to inspect and discuss. On teams, that handoff usually happens through a **Pull Request**.
+Trong quy trình Cloud lần đầu, Tác vụ có thể «xong» trong khi thay đổi chưa ở trạng thái dễ kiểm tra và thảo luận. Trong đội, bước chuyển này thường qua một **Pull Request**.
 
-A PR is a reviewable change proposal.
+PR là đề xuất thay đổi có thể review.
 
-It centralizes what changed, why, and how it was tested—where Cloud deliverables land for the team.
+Nó tập trung điều gì đã đổi, vì sao và đã Kiểm chứng thế nào — nơi đầu ra Cloud đến với đội.
 
-## What's covered
+## Nội dung phủ
 
-- End-to-end expectations from Cloud task to PR
-- What PR descriptions should include for humans and CI
-- When not to auto-open a PR
+- Kỳ vọng đầu-cuối từ Tác vụ Cloud tới PR
+- Mô tả PR cần gồm gì cho người và CI
+- Khi nào không nên mở PR tự động
 
-## When to open a PR
+## Khi nào mở PR
 
-If others need to see the change, CI must run, or the work must merge to the main branch, do not stop at "branch updated"—move to a **reviewable PR**.
+Nếu người khác cần thấy thay đổi, CI cần chạy, hoặc công việc cần merge vào nhánh chính, đừng dừng ở «nhánh đã cập nhật» — chuyển sang **PR có thể review**.
 
-## Recommended workflow
-
-```text
-Connect GitHub → clarify issue/goal → Cloud task (confirm plan) → push branch → open PR → human review + CI → merge
-```
-
-Prerequisite: [Connect GitHub](/guide/web-and-cloud/connect-github/)
-
-## Why auto-merge is not the default
-
-PRs exist to give people and automation a checkpoint—not only to upload code.
-
-Common pattern:
-
-- Codex can help open the PR
-- A human decides whether to merge
-
-That preserves a safety gate even if the task drifted.
-
-## Task prompt essentials
+## Quy trình khuyến nghị
 
 ```text
-Goal: Fix the login timeout described in #42
-Branch: fix/42-login-timeout
-Scope: packages/auth and related tests only
-Done: Open PR to main; do not merge
-PR description must include: reason, change summary, test commands and results, risks and rollback
+Kết nối GitHub → làm rõ issue/mục tiêu → Tác vụ Cloud (xác nhận kế hoạch) → push nhánh → mở PR → review người + CI → merge
 ```
 
-Aligned with [define done](/prompts/define-done/) and [task anatomy](/prompts/task-anatomy/).
+Tiền đề: [Kết nối GitHub](/guide/web-and-cloud/connect-github/)
 
-## A good PR answers four questions
+## Vì sao tự merge không phải mặc định
 
-1. Why did you make this change?
-2. What exactly changed?
-3. How did you verify it?
-4. What risks, limits, or gaps remain?
+PR tồn tại để người và tự động hóa có điểm kiểm soát — không chỉ để upload code.
 
-Without those, reviewers must reconstruct context themselves.
+Mẫu phổ biến:
 
-## PR quality checklist
+- Codex có thể giúp mở PR
+- Người quyết định có merge không
 
-- [ ] Title states **what** changed, not "update code"
-- [ ] Links the issue number
-- [ ] CI passes or explains known failures
-- [ ] Diff size is acceptable; split oversized PRs
-- [ ] No secrets, no unrelated formatting storms
-- [ ] Screenshots or logs for UI/behavior changes
+Điều này giữ cổng an toàn dù Tác vụ đã lệch hướng.
 
-## Human gate
+## Điểm cốt lõi Prompt Tác vụ
 
-Even if Codex opens the PR, **merge** should default to a human (or a controlled bot under branch protection):
+```text
+Mục tiêu: Sửa timeout đăng nhập mô tả trong #42
+Nhánh: fix/42-login-timeout
+Phạm vi: chỉ packages/auth và kiểm thử liên quan
+Xong: Mở PR tới main; không merge
+Mô tả PR phải gồm: lý do, tóm tắt thay đổi, lệnh và kết quả kiểm thử, rủi ro và rollback
+```
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+Căn chỉnh với [định nghĩa hoàn thành](/prompts/define-done/) và [cấu trúc Tác vụ](/prompts/task-anatomy/).
 
-## Common misconceptions
+## Một PR tốt trả lời bốn câu hỏi
 
-### 1. Stuffing unrelated changes into one PR
+1. Vì sao bạn làm thay đổi này?
+2. Chính xác điều gì đã đổi?
+3. Bạn Kiểm chứng thế nào?
+4. Còn rủi ro, giới hạn hoặc khoảng trống nào?
 
-Hard to review and hard to revert.
+Không có chúng, người review phải tự dựng lại Ngữ cảnh.
 
-### 2. Saying "fixed" without how you verified
+## Checklist chất lượng PR
 
-Reviewers cannot tell "tested" from "probably fine."
+- [ ] Tiêu đề nêu **điều gì** đã đổi, không phải «cập nhật code»
+- [ ] Liên kết số issue
+- [ ] CI đạt hoặc giải thích fail đã biết
+- [ ] Kích thước Diff chấp nhận được; tách PR quá lớn
+- [ ] Không secrets, không bão định dạng không liên quan
+- [ ] Ảnh chụp hoặc log cho thay đổi UI/hành vi
 
-### 3. Letting Codex touch main directly
+## Cổng người
 
-May work for solo experiments; too risky for shared repos.
+Dù Codex mở PR, **merge** mặc định phải do người (hoặc bot được kiểm soát dưới bảo vệ nhánh):
 
-## Review automation
+Xem [mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
-- Use a Skill or `codex exec` in CI for **supplementary review comments**
-- Auto-merge needs separate governance—not the beginner default path
+## Hiểu nhầm thường gặp
 
-KimYx0207 CX-10 covers Review/PR; confirm capabilities against official docs.
+### 1. Nhét thay đổi không liên quan vào một PR
 
-## Common mistakes
+Khó review và khó hoàn tác.
 
-- One PR with multiple unrelated features
-- Description says "AI-generated changes" with no test notes
-- Merging to main without review
+### 2. Nói «đã sửa» mà không nói Kiểm chứng thế nào
 
-## Further reading
+Người review không phân được «đã kiểm thử» và «có lẽ ổn».
 
-- [GitHub integration](/guide/integrations/github/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Desktop App: diffs and comments](/guide/desktop-app/diffs-comments-and-review/)
+### 3. Để Codex đụng thẳng main
+
+Có thể được với thí nghiệm solo; quá rủi ro với repo dùng chung.
+
+## Tự động hóa review
+
+- Dùng Skill hoặc `codex exec` trong CI cho **bình luận review bổ trợ**
+- Tự merge cần quản trị riêng — không phải đường mặc định cho người mới
+
+KimYx0207 CX-10 phủ Review/PR; xác nhận năng lực với tài liệu chính thức.
+
+## Lỗi thường gặp
+
+- Một PR với nhiều tính năng không liên quan
+- Mô tả nói «thay đổi do AI sinh» không có ghi chú kiểm thử
+- Merge vào main không qua review
+
+## Đọc thêm
+
+- [Tích hợp GitHub](/guide/integrations/github/)
+- [Xem xét Diff](/guide/quality/review-diffs/)
+- [App máy tính: Diff và bình luận](/guide/desktop-app/diffs-comments-and-review/)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / Web  
-**Review note:** "Cloud output goes to a PR for human review" remains sound, but this page describes PR entry points, automation behavior, and Cloud delivery rhythm concretely; without line-by-line verification of current official PR and Cloud GitHub integration, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud / Web  
+**Ghi chú đối chiếu:** «Đầu ra Cloud vào PR để người review» vẫn đúng, nhưng trang mô tả cụ thể lối vào PR, hành vi tự động hóa và nhịp giao hàng Cloud; chưa đối chiếu từng dòng với tích hợp PR và GitHub Cloud chính thức hiện hành thì không nên đánh `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

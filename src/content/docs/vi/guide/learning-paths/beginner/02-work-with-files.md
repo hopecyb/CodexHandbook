@@ -1,33 +1,59 @@
 ---
-title: Work with Files
-description: Have Codex read and write files within a clear scope.
+title: Làm việc với tệp
+description: Để Codex đọc/ghi tệp trong phạm vi đã nêu rõ.
 locale: vi
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: b704295
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+## Mục tiêu bước này
 
-## Goal for this step
+Chỉ định tên tệp, hoàn thành một lần chỉnh sửa có kiểm soát.
 
-Name a specific file and complete one controlled edit.
+Từ bước này, Tác vụ chuyển từ «chỉ chat» sang «thật sự để nó đụng tệp»; trọng tâm cũng từ nêu mục tiêu sang kiểm soát phạm vi.
 
-## Exercise
+## Bài luyện
 
 ```text
-Edit only hello.md: add a date comment at the top (today's date).
-Do not change other files and do not run commands.
-When done, list the lines you changed.
+Chỉ sửa hello.md: thêm một dòng chú thích ngày ở đầu văn bản (ngày hôm nay).
+Không sửa tệp khác, không chạy lệnh.
+Xong hãy liệt kê các dòng bạn đã đổi.
 ```
 
-Review the diff before accepting. Related: [File and folder context](/guide/context/file-and-folder-context/)
+Kiểm tra Diff rồi mới chấp nhận. Liên quan: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
 
-Next: [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
+## Trọng tâm luyện
+
+Ở đây chủ yếu xem ba việc:
+
+- Chỉ định chỉ sửa tệp nào
+- Chỉ định không làm hành động phụ nào
+- Sau khi xong yêu cầu nó nói rõ thay đổi
+
+Ba việc này hợp lại chính là năng lực «chỉnh sửa có kiểm soát» cơ bản nhất.
+
+## Hiểu nhầm thường gặp
+
+### 1. Chỉ sửa một tệp nhỏ chẳng có ý nghĩa
+
+Phạm vi càng nhỏ, bạn càng dễ thấy nó có vượt ranh giới không.
+
+### 2. Đã viết tên tệp thì chắc chắn nó không đụng chỗ khác
+
+Cũng không thể nghĩ hoàn toàn như vậy.
+
+Vì vậy phía sau còn phải phối hợp kiểm tra Diff.
+
+Lần đầu đụng tệp, trọng tâm không phải sửa nhiều, mà để ranh giới thay đổi rõ và dễ kiểm tra.
+
+Bước tiếp: [Giao Tác vụ rõ ràng](/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp/thư mục, kiểm tra kết quả và lộ trình người mới đã kiểm chứng trong sổ tay; nội dung giới hạn ở phương pháp luyện ổn định «làm một lần chỉnh sửa có kiểm soát trong phạm vi rõ».  
+**Kiểm chứng gần nhất:** 2026-07-26

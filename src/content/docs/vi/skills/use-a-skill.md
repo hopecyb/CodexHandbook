@@ -1,93 +1,94 @@
 ---
-title: Use a Skill
-description: Explicit and implicit Skill triggers, and how to write a good description.
+title: Dùng Skill
+description: Kích hoạt Skill tường minh và ngầm, cùng điểm then chốt khi viết description.
 locale: vi
-source_locale: en
-source_revision: 63ea4c8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A common early mistake is thinking "once installed, it just works." Using a Skill means having Codex follow a pre-written workflow.
+Khi mới làm quen Skill, hiểu lầm thường gặp là"cài xong là nó tự có hiệu lực". Dùng Skill nghĩa là để Codex làm việc theo một bộ quy trình đã viết sẵn.
 
-A Skill can be **named explicitly** or **chosen automatically** when the scene fits. Knowing both avoids debugging dead ends.
+Skill vừa có thể được bạn **chỉ tên tường minh**, vừa có thể được model **tự chọn** trong kịch bản phù hợp. Phân biệt hai cách kích hoạt giúp giảm vòng lặp điều tra.
 
-# Use a Skill
+# Dùng Skill
 
-## Trigger modes
+## Cách kích hoạt
 
-1. **Explicit**: In supported environments, call with `$skill-name` (name matches frontmatter `name`)
-2. **Implicit**: The model judges whether the task fits `description` semantically
+1. **Tường minh**: trong môi trường hỗ trợ, gọi bằng `$skill-name` (tên khớp `name` trong frontmatter)
+2. **Ngầm**: model dựa trên ngữ nghĩa `description` để quyết định Tác vụ hiện tại có phù hợp không
 
-## Telling the two apart
+## Phân biệt hai cách kích hoạt
 
-- **Explicit**: You directly say "use this Skill"
-- **Implicit**: You do not name it, but your task reads like its intended scenario
+- **Kích hoạt tường minh**: bạn nói thẳng"dùng Skill này"
+- **Kích hoạt ngầm**: bạn không chỉ tên, nhưng mô tả Tác vụ rất giống kịch bản áp dụng của nó
 
-When first trying Skills, prefer **explicit** triggers. That makes it easier to see:
+Khi mới thử Skill, nên ưu tiên **kích hoạt tường minh**. Như vậy dễ hơn để biết:
 
-- Whether the Skill was recognized
-- Whether behavior matches expectations
-- Whether name and description are correct
+- Skill đã được nhận diện chưa
+- Hành vi có đúng kỳ vọng không
+- Tên và mô tả có viết đúng không
 
-## Examples
+## Ví dụ
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Hãy review các thay đổi chưa commit hiện tại của tôi
 ```
 
-Or in natural language: "Review the diff the team way, focus on tests."
+Hoặc ngôn ngữ tự nhiên:"Review diff theo thói quen nhóm, tập trung vào kiểm thử."
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. I wrote a Skill, so it will always auto-trigger
+### 1. Viết Skill xong là chắc chắn tự kích hoạt
 
-Auto-trigger depends on a clear `description` and whether the task looks like its scenario.
+Kích hoạt tự động phụ thuộc `description` có rõ không, và Tác vụ hiện tại có đủ giống kịch bản áp dụng không.
 
-### 2. Natural language and `$name` always behave the same
+### 2. Kích hoạt bằng ngôn ngữ tự nhiên và `$name` luôn giống nhau
 
-They do not.
+Hai cách không nhất thiết giống hệt.
 
-`$name` is explicit—good for verification and forcing use. Natural language is convenient but the model may pick the wrong Skill or none at all.
+`$name` rõ ràng hơn, phù hợp kiểm tra và buộc dùng. Ngôn ngữ tự nhiên tiện hơn, nhưng đôi khi model chọn nhầm Skill hoặc không dùng.
 
-### 3. If a Skill does not trigger, the Skill must be broken
+### 3. Skill không kích hoạt thì chắc chắn nó có lỗi
 
-It might also be:
+Cũng có thể chỉ là:
 
-- Wrong name
-- `description` too broad
-- Task wording missing trigger keywords
+- Tên sai
+- `description` quá chung
+- Mô tả Tác vụ không trúng từ kích hoạt
 
-When debugging, check not only "is the file there?" but "does it read like something that would be selected?"
+Khi điều tra đừng chỉ nhìn"file có tồn tại không", hãy xem"nó có giống một công cụ sẽ được chọn không".
 
-## Suggested test order
+## Thứ tự kiểm thử thường dùng
 
-To get one clean run:
+Nếu muốn chạy thông một lần, có thể thử:
 
-1. Call explicitly with `$skill-name`
-2. Check output matches expectations
-3. Adjust `description`
-4. Test whether natural language triggers it
+1. Gọi tường minh bằng `$skill-name` trước
+2. Xem đầu ra có đúng kỳ vọng không
+3. Rồi chỉnh `description`
+4. Cuối cùng mới thử xem ngôn ngữ tự nhiên có kích hoạt được không
 
-That separates "Skill content is wrong" from "auto-trigger conditions are weak."
+Cách này tách"Skill bản thân có vấn đề"và"điều kiện kích hoạt tự động chưa viết tốt".
 
-## Writing a good description
+## Viết description tốt
 
-- State when to use and when not to use
-- Include keywords users might say (review, release, changelog)
-- Avoid vague "help the user write code"
-- Put core trigger scenarios **first** (Skill list has a character budget)
+- Nói rõ"khi nào dùng"và"khi nào không dùng"
+- Gồm từ khóa người dùng có thể nói (review, phát hành, changelog)
+- Tránh câu chung chung kiểu"giúp người dùng viết code"
+- Đặt kịch bản kích hoạt cốt lõi ở **đầu** (danh sách Skill có ngân sách ký tự)
 
-## Is the description clear enough?
+## Đánh giá description có rõ không
 
-A useful bar: after reading `description`, you know when to use it and when not to.
+Một tiêu chuẩn hay dùng:  
+Đọc xong câu `description` này là biết"khi nào nên dùng, khi nào đừng dùng".
 
-If it still sounds like "does everything," it is probably too broad.
+Nếu đọc xong vẫn thấy"có vẻ làm được mọi thứ", thì thường là quá chung.
 
-More concepts: [Skills overview](/skills/overview/).
+Thêm khái niệm: [Tổng quan Skills](/skills/overview/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still supports explicit skill references and automatic matching when appropriate; OpenAI Help "Skills in ChatGPT" also confirms Skills are used automatically when helpful. This page focuses on triggers and writing principles.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Runtime Codex hiện tại vẫn hỗ trợ tham chiếu tường minh theo tên kỹ năng và khớp tự động trong kịch bản phù hợp; OpenAI Help"Skills in ChatGPT"cũng xác nhận Skills được dùng tự động khi hữu ích. Trang này tập trung cách kích hoạt và nguyên tắc viết.  
+**Kiểm chứng gần nhất:** 2026-07-26

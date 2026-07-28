@@ -1,17 +1,17 @@
 ---
-title: Choosing an extension method
-description: Decision tree from prompts to Automations—avoid using extensions for their own sake.
+title: Cách chọn phương thức mở rộng
+description: Cây quyết định từ Prompt đến Automations — tránh"dùng cho có".
 locale: vi
-source_locale: en
-source_revision: 28b4e9b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-More extension mechanisms mean higher cost when you pick the wrong one. This page helps you decide whether you need a Plugin or MCP before you install.
+Cơ chế mở rộng càng nhiều, chọn sai càng tốn. Trang này giúp bạn, trước khi cài Plugin hoặc viết MCP, quyết xem có thật sự cần không.
 
-These names get mixed up most often:
+Những tên dễ lẫn nhất:
 
 - Prompt
 - AGENTS.md
@@ -20,86 +20,86 @@ These names get mixed up most often:
 - Plugin
 - Automation
 
-All extend Codex—but sometimes a prompt is enough; sometimes you need something heavier.
+Cùng là"mở rộng Codex", đôi khi một câu Prompt là đủ, đôi khi mới cần cơ chế nặng hơn.
 
-## Decision tree
+## Cây quyết định
 
 ```text
-Will the task repeat ≥3 times?
-├─ No → Use prompts + @ references
-└─ Yes → Need persistent rules?
-    ├─ Yes → Put in AGENTS.md
-    └─ No → Fixed, describable flow?
-        ├─ Yes → Build a Skill
-        └─ No → Need external systems?
-            ├─ Yes → Evaluate MCP (read-only first)
-            └─ No → Need unattended runs?
-                ├─ Yes → Automations + human gate
-                └─ No → Keep Skill + manual trigger
+Tác vụ sẽ lặp ≥3 lần?
+├─ Không → dùng tốt Prompt + @ tham chiếu là đủ
+└─ Có → cần quy tắc bền vững?
+    ├─ Có → viết vào AGENTS.md
+    └─ Không → quy trình cố định và mô tả được?
+        ├─ Có → làm Skill
+        └─ Không → cần đọc hệ thống ngoài?
+            ├─ Có → đánh giá MCP (ưu tiên chỉ đọc)
+            └─ Không → cần chạy không người trực?
+                ├─ Có → Automations + cổng kiểm soát thủ công
+                └─ Không → giữ Skill + kích hoạt thủ công
 ```
 
-Team needs to distribute multiple Skills + MCP? Consider **Plugin** at the end of the paths above.
+Nhóm cần phân phối thống nhất nhiều Skill + MCP? Ở cuối các nhánh trên, cân nhắc **Plugin**.
 
-## Scenario mapping
+## Đối chiếu kịch bản
 
-| Scenario | Suggested combo |
+| Kịch bản | Tổ hợp khuyến nghị |
 |---|---|
-| Unify test and commit standards | AGENTS.md |
-| Pre-merge review checklist every time | Skill `pr-review` |
-| Pull ticket context from Linear | MCP + task prompt |
-| Weekly dependency report | Automation → open issue |
-| Secret scan before commit | Hooks (enterprise) or CI |
-| One-click tooling for new hires | Plugin (after security review) |
+| Thống nhất quy chuẩn kiểm thử và commit | AGENTS.md |
+| Checklist review trước mỗi lần merge | Skill `pr-review` |
+| Lấy Ngữ cảnh ticket từ Linear | MCP + Prompt Tác vụ |
+| Báo cáo dependency hàng tuần | Automation → mở issue |
+| Quét khóa bí mật trước commit | Hooks (doanh nghiệp) hoặc CI |
+| Newbie một lần cài đủ bộ công cụ | Plugin (qua kiểm tra bảo mật) |
 
-## Cost dimensions
+## Chiều chi phí
 
-| Mechanism | Authoring cost | Maintenance cost | Security risk |
+| Cơ chế | Chi phí viết | Chi phí bảo trì | Rủi ro bảo mật |
 |---|---|---|---|
-| Prompt | Low | Low | Low |
-| AGENTS.md | Medium | Medium | Low |
-| Skill | Medium | Medium | Low–medium |
-| MCP | High | High | Medium–high |
-| Plugin | Low (off-the-shelf) / high (custom) | Medium | Medium–high |
-| Automations | High | High | High |
+| Prompt | Thấp | Thấp | Thấp |
+| AGENTS.md | Trung bình | Trung bình | Thấp |
+| Skill | Trung bình | Trung bình | Thấp–trung bình |
+| MCP | Cao | Cao | Trung bình–cao |
+| Plugin | Thấp (dùng sẵn) / cao (tự làm) | Trung bình | Trung bình–cao |
+| Automations | Cao | Cao | Cao |
 
-## Anti-patterns
+## Phản mẫu
 
-- **Skill sprawl**: dozens of Skills with descriptions competing for matches
-- **MCP as hammer**: API where `git` would do
-- **Automation without acceptance**: scheduled code changes with nobody reviewing diffs
-- **Reinventing wheels**: custom MCP when an official Connector exists
+- **Skill phình to**: cài hàng chục Skill, description tranh khớp lẫn nhau
+- **MCP như búa vạn năng**: việc vốn dùng `git` được vẫn cứng nối API
+- **Tự động hóa không nghiệm thu**: hẹn giờ sửa code nhưng không ai xem diff
+- **Làm lại bánh xe**: đã có Connector chính thức vẫn tự dựng MCP
 
-## FAQ
+## Câu hỏi thường gặp
 
-### 1. Should I install Plugins and MCP from day one?
+### 1. Có phải ngay từ đầu nên cài Plugin, nối MCP?
 
-Many problems are solved with prompts, scope control, and `AGENTS.md` first.
+Nhiều vấn đề chỉ cần dùng tốt Prompt, kiểm soát phạm vi và `AGENTS.md` là giải quyết được.
 
-### 2. How do I read this tree?
+### 2. Đọc cây quyết định này thế nào?
 
-One principle: start light; add weight only when needed.
+Một nguyên tắc là đủ: nhẹ trước, chưa đủ mới nặng thêm.
 
-### 3. Where do most people start?
+### 3. Lần đầu thường bắt đầu từ loại nào?
 
-Usually one of:
+Phần lớn rơi vào ba loại:
 
 - Prompt
 - `AGENTS.md`
 - Skill
 
-You often do not need MCP or unattended automation on day one.
+Thường chưa cần ngay MCP hay tự động hóa không người trực.
 
-What matters is fit with the problem—not how advanced the mechanism looks.
+Quan trọng không phải cơ chế cao cấp đến đâu, mà nó có khớp vấn đề hiện tại không.
 
-## Further reading
+## Đọc thêm
 
-- [Capability map](/skills/capability-map/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
-- [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/) (roadmap page)
+- [Bản đồ năng lực mở rộng](/skills/capability-map/)
+- [Mẫu Phê duyệt thủ công](/cases/workflows/human-approval-patterns/)
+- [Đóng quy trình thành Skill](/cases/workflows/turn-a-workflow-into-a-skill/)(trang lộ trình)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** This decision tree touches current Automations, Plugins, MCP, and official Connector boundaries; those product surfaces change quickly and public material as of 2026-07-26 is not enough to stabilize the whole page.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Ghi chú tái Kiểm chứng:** Cây quyết định trang này chạm ranh giới và phạm vi áp dụng hiện tại của Automations, Plugins, MCP và Connector chính thức; các hình thái sản phẩm vẫn đổi nhanh, tài liệu công khai hiện có chưa đủ để nâng đỡ ổn định toàn trang.  
+**Kiểm chứng gần nhất:** 2026-07-26

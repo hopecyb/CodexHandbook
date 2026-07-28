@@ -1,69 +1,70 @@
 ---
-title: Automate template
-description: Repeatable tasks and reusable flows.
+title: Mẫu tự động hóa
+description: Tác vụ lặp và quy trình tái sử dụng.
 locale: vi
-source_locale: en
-source_revision: 4291cd1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Automate template
+# Mẫu tự động hóa
 
-A common automate mistake: focus on "can it run automatically" without:
+Hiểu lầm thường gặp của tác vụ tự động hóa: chỉ nghĩ «có chạy tự động được không», mà chưa nghĩ:
 
-- what happens on failure
-- who sees results
-- whether it can stop safely
+- Thất bại thì sao
+- Ai sẽ thấy kết quả
+- Lỗi thì có dừng an toàn được không
 
-This template emphasizes control when things go wrong.
+Mẫu tự động hóa có trọng điểm: khi tác vụ lỗi vẫn phải kiểm soát được.
 
-## Template
+## Mẫu
 
 ```text
-Goal: Automate 【repeatable task】 as 【script/Skill/scheduled job】.
-Trigger: 【manual / schedule / CI】
-Inputs: 【data sources, config files】
-Constraints:
-- Clear exit codes and log locations on failure
-- No hardcoded secrets; use environment variables
-- Provide dry-run mode
-Acceptance:
-- Expected output on 【sample input】
-- Docs for how to run and troubleshoot
+Mục tiêu: Tự động hóa 【tác vụ lặp】 thành 【script/Skill/tác vụ định kỳ】.
+Kích hoạt: 【thủ công / định kỳ / CI】
+Đầu vào: 【nguồn dữ liệu, tệp cấu hình】
+Ràng buộc:
+- Khi thất bại: mã thoát và vị trí log rõ ràng
+- Không hard-code khóa bí mật; dùng biến môi trường
+- Cung cấp chế độ dry-run
+Nghiệm thu:
+- Trên 【đầu vào ví dụ】 xuất kết quả kỳ vọng
+- Tài liệu nêu cách chạy và gỡ rối
 ```
 
-## When to use this template
+## Khi nào phù hợp mẫu này
 
-- Repeatable tasks with clear rules
-- Flows to script or schedule
-- Adding dry-run, logs, and exit codes as guardrails
+- Tác vụ lặp có quy tắc rõ
+- Quy trình cần script hóa hoặc chạy định kỳ
+- Muốn bổ sung trước các hàng rào dry-run, log, mã thoát
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Automation removes human judgment
+### 1. Tự động hóa = bỏ hết phán đoán của người
 
-Many practical automations only check, summarize, or draft.
+Nhiều tự động hóa dễ triển khai thực tế chỉ là kiểm tra tự động, tổng hợp tự động, mở bản nháp tự động.
 
-### 2. One successful run means ready to automate
+### 2. Chạy thông một lần là tự động hóa được
 
-For long-running automation, also add:
+Để thành tự động hóa chạy lâu dài còn cần bổ sung:
 
-- logs
-- exit codes
+- Log
+- Mã thoát
 - dry-run
-- troubleshooting docs
+- Hướng dẫn gỡ rối
 
-The automate template aims for safe, sustained operation.
+Giá trị của mẫu tự động hóa là để nó chạy lâu dài và an toàn.
 
-## Related
+## Liên quan
 
-- [Long-running tasks](/prompts/long-running-tasks/)
-- [Automate a daily report case](/cases/automate-a-daily-report/)
+- [Prompt cho tác vụ dài](/prompts/long-running-tasks/)
+- [Case tự động hóa báo cáo ngày](/cases/automate-a-daily-report/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an automate-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu tự động hóa; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

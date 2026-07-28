@@ -1,89 +1,89 @@
 ---
-title: Choose your Codex client
-description: Making your first choice among App, CLI, IDE, and Cloud.
+title: Chọn client Codex
+description: Lựa chọn lần đầu giữa App, CLI, IDE, Cloud.
+locale: vi
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 2
-locale: vi
-source_locale: en
-source_revision: 88e1b18
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-Seeing `App / CLI / IDE / Cloud` for the first time, many people stall on "which one do I install?"
+Lần đầu thấy các từ `App / CLI / IDE / Cloud`, nhiều người bị kẹt ở «rốt cuộc tôi nên cài cái nào».
 
-Picking the wrong first entry is not fatal—start with something workable and add others later.
+Lần đầu chưa chọn được lối vào phù hợp nhất với mình cũng không đến mức đi không tiếp được. Dùng trước một cái thuận tay — phía sau bổ sung cái khác cũng được.
 
-## A direct way to choose
+## Một cách chọn trực tiếp
 
-Without strong preference:
+Nếu giờ không có thiên hướng mạnh, có thể chọn như sau:
 
-- **First time**: desktop App
-- **You live in the terminal**: CLI
-- **You code mainly in VS Code / JetBrains**: IDE extension
-- **You already need GitHub cloud repos or long remote tasks**: look at Cloud
+- **Lần đầu dùng**: chọn Desktop App
+- **Bạn vốn dùng terminal hàng ngày**: chọn CLI
+- **Bạn chủ yếu viết mã trong VS Code / JetBrains**: chọn phần mở rộng IDE
+- **Bạn đã rõ cần nối kho đám mây GitHub hoặc chạy tác vụ dài**: rồi mới xem Cloud
 
-## What each entry is
+## Các lối vào này lần lượt là gì
 
-| Entry | Think of it as |
+| Lối vào | Bạn có thể hiểu nó là |
 |---|---|
-| Desktop App | Graphical console—tasks, diffs, approvals |
-| CLI | Codex in the terminal—for command-line users |
-| IDE extension | Assistant inside the editor—edit while you read code |
-| Cloud | Remote task execution—for repo collaboration and long runs |
+| Desktop App | Bảng điều khiển đồ họa — phù hợp xem tác vụ, xem Diff, bấm phê duyệt |
+| CLI | Codex trong terminal — phù hợp người dùng dòng lệnh |
+| Phần mở rộng IDE | Trợ lý nhúng trong trình soạn thảo — phù hợp vừa xem mã vừa sửa |
+| Cloud | Cách chạy tác vụ từ xa — phù hợp cộng tác kho và tác vụ dài |
 
-| If you… | Choose |
+| Nếu bạn… | Chọn |
 |---|---|
-| First time; want clear diffs and review | **Desktop App** (recommended default) |
-| Prefer terminal and scripts | **CLI** |
-| Mostly edit in an editor | **IDE extension** |
-| Need GitHub cloud environment / long tasks | **Cloud** (read overview first) |
+| Lần đầu dùng, muốn thấy rõ Diff và rà soát | **Desktop App** (mặc định gợi ý) |
+| Quen terminal, cần viết script | **CLI** |
+| Chủ yếu sửa mã trong trình soạn thảo | **Phần mở rộng IDE** |
+| Cần nối môi trường đám mây GitHub / tác vụ dài | **Cloud** (đọc tổng quan trước) |
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Choosing a client is too technical to bother with now
+### 1. Chọn client quá kỹ thuật, có thể bỏ qua trước
 
-It is practical—it shapes whether your first experience feels clear or opaque.
+Bước này rất thực tế — vì nó trực tiếp quyết định trải nghiệm lần đầu của bạn có xuôi hay không.
 
-### 2. Pick the most "pro" looking option
+### 2. Cái nào trông chuyên nghiệp nhất thì nên dùng cái đó trước
 
-First time, pick the entry where process and results are easiest to see—not the most hardcore one.
+Lần đầu phù hợp hơn chọn lối vào «dễ hiểu quy trình và kết quả nhất» — đừng đuổi theo cái cứng nhất.
 
-## Why desktop App first for beginners
+## Vì sao tôi gợi ý dùng Desktop App trước
 
-Friendlier for newcomers because:
+Với người mới, Desktop App thân thiện hơn ở chỗ:
 
-- Easier to see what it did
-- Permission requests are visible
-- Tasks, diffs, and projects feel more concrete
-- Easier to pause and inspect when something goes wrong
+- Bạn dễ thấy hơn nó đã làm gì
+- Khi nào nó xin quyền thì một nhìn là rõ
+- Các khái niệm Diff, tác vụ, dự án trực quan hơn
+- Khi lỗi cũng dễ dừng lại kiểm tra hơn
 
-Unless you clearly prefer terminal, desktop App is often the better start.
+Nếu bạn không thiên về terminal rõ ràng, Desktop App thường phù hợp hơn.
 
-## You can use multiple entries later
+## Sau này bạn có thể dùng đồng thời nhiều lối vào
 
-Not a permanent four-way choice.
+Đây không phải chọn một trong bốn, cũng không phải gắn chặt lâu dài.
 
-Many people later combine:
+Nhiều người phía sau phối hợp như sau:
 
-- Desktop App for tasks and review
-- CLI for batch operations
-- IDE extension while coding
+- Hàng ngày dùng Desktop App xem tác vụ và rà soát thay đổi
+- Cần thao tác hàng loạt thì dùng CLI
+- Khi chủ yếu viết mã thì chuyển sang phần mở rộng IDE
 
-First choice is only a starting point.
+Lần chọn đầu chỉ là điểm xuất phát.
 
-## If you want less friction
+## Nếu muốn ít loay hoay
 
-1. Install [desktop App](/guide/getting-started/install-desktop-app/)
-2. Run [your first task](/guide/getting-started/run-your-first-task/)
-3. Add CLI or IDE once comfortable
+1. Cài trước [Desktop App](/guide/getting-started/install-desktop-app/)
+2. Chạy một vòng [tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
+3. Dùng đã quen rồi mới cân nhắc CLI hoặc IDE
 
-Full comparison: [feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep practice projects in the same directory** to compare clients fairly.
+Đối chiếu đầy đủ xem [So sánh tính năng](/guide/reference/feature-comparison/). Có thể cài nhiều client; **giữ cùng một thư mục cho dự án luyện tập** — như vậy tiện hơn khi so đi so lại.
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** OpenAI Developers homepage currently presents Codex, desktop workflows, and developer entry together; this page offers first-time path advice without fixing a rigid capability matrix or treating clients as mutually exclusive products.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện đồng thời trình bày Codex, quy trình desktop và lối vào nhà phát triển; trang này thuộc gợi ý lộ trình lần đầu bắt tay, và không viết các lối vào khác nhau thành ma trận năng lực cố định hay sản phẩm loại trừ lẫn nhau.  
+**Kiểm chứng gần nhất:** 2026-07-26

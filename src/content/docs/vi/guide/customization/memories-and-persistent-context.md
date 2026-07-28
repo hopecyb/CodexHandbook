@@ -1,121 +1,121 @@
 ---
-title: Memories and Persistent Context
-description: How Codex remembers preferences and facts across sessions—capabilities, boundaries, and team norms.
+title: Bộ nhớ và ngữ cảnh bền
+description: Codex nhớ sở thích và sự kiện qua phiên thế nào — năng lực, ranh giới và quy chuẩn nhóm.
 locale: vi
-source_locale: en
-source_revision: cf8f791
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Some Codex clients support **Memory**: keeping preferences or facts you confirm across multiple turns for later sessions. It complements `AGENTS.md` and project configuration, but it **cannot** replace versioned team norms.
+Một số client Codex hỗ trợ **bộ nhớ (Memory)**: giữ sở thích hoặc sự kiện bạn đã xác nhận qua nhiều vòng hội thoại sang phiên sau. Nó bổ sung với `AGENTS.md` và cấu hình dự án, nhưng **không** thay quy chuẩn nhóm đã phiên bản hóa.
 
-## Contents
+## Nội dung
 
-- What memory should and should not store
-- Precedence versus AGENTS.md, the Memories feature, and project instructions
-- How individuals and teams should manage memory content
+- Bộ nhớ lưu gì, không lưu gì
+- Ưu tiên với AGENTS.md, tính năng Memories, chỉ thị dự án
+- Cá nhân và nhóm quản lý nội dung bộ nhớ thế nào
 
-## What Memory Is Good For
+## Bộ nhớ phù hợp dùng để làm gì
 
-Think of memory as: **Codex helping you remember things you always have to repeat but are not worth re-explaining every time.**
+Có thể hiểu bộ nhớ là: **Codex giúp bạn nhớ những việc luôn phải nói lại, nhưng không đáng kể lại mỗi lần.**
 
-For example:
+Ví dụ:
 
-- You prefer explanations in Chinese
-- You like conclusion first, then details
-- In a project, which directory “backend” refers to by default
+- Bạn quen giải thích bằng tiếng Việt
+- Bạn thích đưa kết luận trước rồi mới chi tiết
+- Trong một dự án “backend” mặc định chỉ thư mục nào
 
-It is closer to “personal long-term preferences and a few stable facts,” not a project manual or a secret vault.
+Nó giống hơn “sở thích dài hạn cá nhân và ít sự kiện ổn định”, không phải sổ hướng dẫn dự án, cũng không phải két bí mật.
 
-## What Memory Should Store
+## Bộ nhớ phù hợp lưu gì
 
-| Good fit | Poor fit |
+| Phù hợp | Không phù hợp |
 |---|---|
-| Personal coding preferences (comment language, indentation habits) | Production keys, tokens |
-| Repeated project aliases (“backend means `services/api`”) | Changing sprint task status |
-| Non-sensitive facts you explicitly say “please remember” | Team norms that belong in Git |
+| Sở thích mã hóa cá nhân (ngôn ngữ chú thích, thói thụt lề) | Khóa production, token |
+| Bí danh dự án phải giải thích lặp («backend chỉ `services/api`») | Trạng thái tác vụ sprint hay đổi |
+| Sự kiện không nhạy cảm bạn nói rõ «hãy nhớ» | Quy chuẩn nhóm nên viết trong Git |
 
-Team-level norms should go into **`AGENTS.md` or project configuration** for review and newcomer onboarding. See [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/).
+Quy chuẩn cấp nhóm nên vào **`AGENTS.md` hoặc cấu hình dự án**, để review và onboarding người mới. Xem [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/).
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### Memory does not “remember everything forever for you”
+### Bộ nhớ không “nhớ vĩnh viễn mọi thứ giúp bạn”
 
-Many people assume that once they said something, Codex will remember it completely, permanently, and stably afterward.
+Nhiều người lầm rằng nói một lần là Codex sau này sẽ nhớ đủ, ổn định mãi.
 
-A more accurate view: memory is an auxiliary layer that reduces repetition, but it cannot replace documentation and formal information in the repo.
+Hiểu chính xác hơn: bộ nhớ là lớp phụ trợ để giảm giải thích lặp, không thay tài liệu và thông tin chính thức trong kho.
 
-### Memory is not for team consensus
+### Bộ nhớ không phù hợp mang đồng thuận nhóm
 
-If only your account’s memory knows a rule, others cannot see it and it cannot be reviewed.
+Nếu một quy tắc chỉ bộ nhớ trên tài khoản bạn biết, người khác không thấy, cũng không review được.
 
-That content should go back to:
+Loại nội dung này nên quay về:
 
 - `AGENTS.md`
-- Project documentation
-- Configuration files
+- Tài liệu dự án
+- Tệp cấu hình
 
-### Memory is not for sensitive information
+### Bộ nhớ không phải chỗ lưu thông tin nhạy cảm
 
-Even if a client supports memory, you should not store:
+Dù client nào đó hỗ trợ bộ nhớ, cũng không nên để:
 
-- tokens
-- Customer data
-- Internal accounts
-- Unreleased business information
+- token
+- dữ liệu khách hàng
+- tài khoản nội bộ
+- thông tin nghiệp vụ chưa công bố
 
-in it long term.
+cho nó lưu dài hạn.
 
-## Comparison with Related Mechanisms
+## So sánh với cơ chế liên quan
 
-| Mechanism | Who can see it | How it changes |
+| Cơ chế | Ai thấy | Cách thay đổi |
 |---|---|---|
-| One-off prompt | Current task | You type it |
-| Memory | Usually only your account/workspace | Confirm in conversation or manage in settings |
-| `AGENTS.md` | All repo collaborators | Git PR |
-| Project configuration | By configuration layer | Files + managed policy |
+| Prompt một lần | Tác vụ hiện tại | Bạn gõ |
+| Bộ nhớ | Thường chỉ tài khoản/workspace của bạn | Xác nhận trong hội thoại hoặc quản lý trang cài đặt |
+| `AGENTS.md` | Mọi cộng tác viên kho | Git PR |
+| Cấu hình dự án | Theo tầng cấu hình | Tệp + chiến lược quản trị |
 
-## Recommended Usage
+## Cách dùng khuyến nghị
 
-1. **Write into the repo first**: test commands, directory structure, no push—these should not live only in memory
-2. **Use memory for personal preferences**: such as “explain in Chinese” or “diff comments in English”
-3. **Clean up regularly**: delete stale memory after major architecture changes
-4. **Sensitive projects**: disable or limit memory to avoid cross-project context leakage
+1. **Viết vào kho trước**: lệnh kiểm thử, cấu trúc thư mục, cấm push — những thứ này không nên chỉ tồn tại trong bộ nhớ
+2. **Bộ nhớ đặt sở thích cá nhân**: như «giải thích bằng tiếng Việt», «bình luận diff bằng tiếng Anh»
+3. **Dọn định kỳ**: kiến trúc dự án đổi lớn thì xóa bộ nhớ lỗi thời
+4. **Dự án nhạy cảm**: tắt hoặc hạn chế bộ nhớ, tránh rò ngữ cảnh xuyên dự án
 
-## How to Decide Whether Something Belongs in Memory
+## Phán đoán có nên lưu vào bộ nhớ không
 
-If you are unsure whether a piece of information should go into memory, ask yourself:
+Nếu chưa chắc một thông tin có nên vào bộ nhớ, tự hỏi:
 
-1. Is this a preference I often repeat personally?
-2. Is this a fact that stays relatively stable for a while?
-3. Would collaboration be unaffected if others cannot see this information?
+1. Có phải sở thích cá nhân tôi thường phải nói lại không
+2. Có phải sự kiện tương đối ổn định trong thời gian ngắn không
+3. Thông tin này dù người khác không thấy cũng không ảnh hưởng cộng tác nhóm không
 
-If all three lean toward “yes,” memory is a better fit.
+Ba câu càng gần “có”, càng phù hợp vào bộ nhớ.
 
-## Security Boundaries
+## Ranh giới an toàn
 
-- Do not let memory become a **secret channel** that bypasses `AGENTS.md` prohibitions
-- Do not store customer data, credentials, or unreleased financial information in memory
-- Enterprise environments may disable memory—follow managed policy
+- Đừng để bộ nhớ thành **kênh bí mật** vòng qua mục cấm của `AGENTS.md`
+- Đừng lưu trong bộ nhớ dữ liệu khách hàng, chứng chỉ, thông tin tài chính chưa công bố
+- Môi trường doanh nghiệp có thể tắt bộ nhớ — tuân chiến lược quản trị
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Putting “this week’s epic list” only in memory, invisible to collaborators
-- Not updating either side when memory conflicts with `AGENTS.md`
-- Assuming memory means “the model always remembers the whole repo”
+- Chỉ đặt «danh sách epic tuần này» trong bộ nhớ, cộng tác viên không thấy
+- Bộ nhớ xung đột với `AGENTS.md` mà không cập nhật bên nào
+- Lầm tưởng bộ nhớ bằng «mô hình nhớ mãi cả kho»
 
-Memory is best for “personal preferences and a few stable facts you always repeat”; it is not a substitute for repo documentation, team rules, or sensitive information management.
+Bộ nhớ phù hợp nhất lưu “sở thích cá nhân luôn phải nói lại và ít sự kiện ổn định”, không phù hợp thay tài liệu kho, quy tắc nhóm và quản lý thông tin nhạy cảm.
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex memory documentation (per version)
+- Tài liệu memory OpenAI Codex (lấy phiên bản làm chuẩn)
 - stormzhang `19-memory.md`
-- codex.bozhouai.com memory chapter (structure reference)
+- Chương bộ nhớ codex.bozhouai.com (tham khảo cấu trúc)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI (depending on version)  
-**Verification basis:** Cross-checked against OpenAI Help Center’s current official ChatGPT Memory description and this handbook’s verified project instructions, personal preferences, and security boundary chapters; page content is limited to the stable principle that memory suits personal preferences and a few stable facts and does not replace repo rules or sensitive information management.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI (tùy phiên bản)  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với hướng dẫn chính thức hiện tại của OpenAI Help Center về ChatGPT Memory, cùng các chương chỉ thị dự án, sở thích cá nhân và ranh giới an toàn đã kiểm chứng trong sổ tay; nội dung trang giới hạn ở nguyên tắc ổn định “bộ nhớ phù hợp sở thích cá nhân và ít sự kiện ổn định, không thay quy tắc kho và quản lý thông tin nhạy cảm”.  
+**Kiểm chứng gần nhất:** 2026-07-26

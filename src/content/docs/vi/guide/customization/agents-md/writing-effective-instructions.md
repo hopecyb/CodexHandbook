@@ -1,162 +1,162 @@
 ---
-title: Writing Effective Project Instructions
-description: AGENTS.md writing checklist—short, hard, executable, verifiable.
+title: Viết chỉ thị dự án tốt
+description: Danh sách viết AGENTS.md — ngắn, cứng, thực thi được, kiểm chứng được.
 locale: vi
-source_locale: en
-source_revision: bc73096
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-Effective project instructions are closer to a **checklist**. The goal is for Codex to make fewer predictable mistakes on the first try.
+Chỉ thị dự án hiệu quả gần hơn với **danh sách kiểm tra**. Mục tiêu là để Codex lần thử đầu đã ít mắc lỗi có thể tiên đoán.
 
-When writing project instructions for the first time, a common problem is many ideas but unclear key constraints.
+Lần đầu viết chỉ thị dự án, vấn đề thường gặp là ý tưởng viết nhiều, ràng buộc then chốt thật sự lại chưa đủ rõ.
 
-## Contents
+## Nội dung
 
-- What project instructions should look like
-- What “short, hard, executable” means
-- Patterns that most confuse Codex and humans
+- Chỉ thị dự án nên trông thế nào
+- “Ngắn, cứng, thực thi được” nghĩa là gì
+- Cách viết nào dễ nhất để Codex và người đều không hiểu
 
-## Recommended Structure
+## Cấu trúc khuyến nghị
 
 ```md
-# Project Instructions
+# Chỉ thị dự án
 
-## Quick Start (3–5 lines)
-Install, dev server, most common test command
+## Bắt đầu nhanh (3–5 dòng)
+Cài đặt, máy chủ phát triển, lệnh kiểm thử dùng nhiều nhất
 
-## Must Follow
-Numbered list of non-negotiable rules
+## Phải tuân
+Đánh số liệt kê quy tắc không được vi phạm
 
-## Code and Directories
-Naming, placement, dependency conventions
+## Mã và thư mục
+Đặt tên, vị trí đặt, ước định dependency
 
-## Definition of Done
-What counts as “ready to commit”
+## Định nghĩa hoàn thành
+Thế nào là «có thể commit»
 
-## Prohibited
-Explicitly state what not to do
+## Mục cấm
+Viết rõ đừng làm gì
 ```
 
-## Writing Principles
+## Nguyên tắc viết
 
-### 1. Front-load hard constraints
+### 1. Đặt ràng buộc cứng lên trước
 
-Put “must” and “must not” near the top of the file. When context is limited, the model weights the beginning higher—the same logic as [Context Priority](/guide/context/context-priority/).
+Đặt «phải», «cấm» ở phần đầu tệp. Khi ngữ cảnh hữu hạn, mô hình trọng đầu cao hơn — cùng logic với [Ưu tiên ngữ cảnh](/guide/context/context-priority/).
 
-### 2. Commands should be copy-pasteable
+### 2. Lệnh sao chép được
 
-Write **real runnable** commands, not “run the tests”:
+Viết lệnh **thật sự chạy được**, đừng viết «chạy kiểm thử một cái»:
 
 ```md
-# Good
+# Tốt
 pnpm test --filter @app/web
 
-# Poor
-Make sure tests pass
+# Kém
+Đảm bảo kiểm thử qua
 ```
 
-### 3. Verifiable definition of done
+### 3. Tiêu chuẩn hoàn thành kiểm chứng được
 
 ```md
-## Definition of Done
-- `pnpm lint` and `pnpm test` pass with no failures
-- New APIs have corresponding unit tests
-- User-visible changes include manual test steps (browser + mobile)
+## Định nghĩa hoàn thành
+- `pnpm lint` và `pnpm test` không thất bại
+- API mới có kiểm thử đơn vị tương ứng
+- Thay đổi người dùng thấy kèm bước kiểm thủ công (trình duyệt + mobile)
 ```
 
-### 4. Keep “why” to one sentence when possible
+### 4. Giải thích «vì sao» cố gắng nén trong một câu
 
 ```md
-- Do not edit `generated/`: code-generated; manual edits are overwritten on next build
+- Đừng sửa `generated/`: do sinh mã, sửa tay sẽ bị ghi đè lần build sau
 ```
 
-Long background should link to formal `docs/`.
+Nền quá dài nên liên kết tài liệu chính thức trong `docs/`.
 
-## What “Good Instructions” Mean
+## “Chỉ thị tốt” nghĩa là gì
 
-Good instructions let humans and Codex quickly grasp:
+Chỉ thị tốt để người và Codex nhanh nắm:
 
-- What to do first
-- What not to do
-- What “done” looks like
+- Làm gì trước
+- Không được làm gì
+- Đạt mức nào mới tính hoàn thành
 
-If after reading you still do not know which command to run first, what not to touch, or how to know you are finished, it is not useful enough yet.
+Nếu đọc xong vẫn không biết chạy lệnh gì trước, chỗ nào không được đụng, thế nào mới tính xong — nghĩa là chưa đủ dùng.
 
-## Team Playbook Snippet Example
+## Ví dụ đoạn playbook nhóm
 
 ```md
-## PR and Git
-- Branch naming: `feat/`, `fix/`, `docs/` prefixes
-- One PR does one thing; large refactors get their own PR
-- Human review of the diff is required before merge, even if Codex ran tests
+## PR và Git
+- Đặt tên nhánh: tiền tố `feat/`, `fix/`, `docs/`
+- Một PR chỉ làm một việc; tái cấu trúc phạm vi lớn mở PR riêng
+- Trước merge phải có người rà diff, dù Codex đã chạy kiểm thử
 
-## Working with Codex
-- For large tasks, ask for “a plan first; wait for my confirmation before changing code”
-- For database migrations, output migration SQL for human review first
+## Cộng tác với Codex
+- Tác vụ lớn yêu cầu trước «đưa kế hoạch, chờ tôi xác nhận rồi mới sửa mã»
+- Liên quan migration DB thì xuất SQL migration trước để người rà
 ```
 
-## Common Mistakes
+## Lỗi thường gặp
 
-| Mistake | Consequence |
+| Lỗi | Hậu quả |
 |---|---|
-| Piling on framework encyclopedia | Key test commands ignored |
-| Contradictory rules | Model picks one at random |
-| Vague lines like “be elegant” | Cannot verify |
-| Keys or internal URLs included | Leak risk |
+| Chất bách khoa khung | Lệnh kiểm thử then chốt bị bỏ qua |
+| Quy tắc mâu thuẫn nhau | Mô hình chọn ngẫu nhiên một cái thực thi |
+| Chỉ có lời rỗng kiểu «phải thanh lịch» | Không nghiệm thu được |
+| Chứa khóa hoặc URL nội bộ | Rủi ro lộ |
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. More detail is not always better
+### 1. Chỉ thị không phải càng chi tiết càng tốt
 
-Too scattered, too long, too encyclopedic—and high-priority rules get drowned out.
+Quá phân tán, quá dài, quá giống bách khoa sẽ nhấn chìm quy tắc ưu tiên cao thật sự.
 
-### 2. Does “follow conventions” count as an instruction?
+### 2. Chỉ viết “chú ý quy chuẩn” cũng tính chỉ thị?
 
-Usually not executable enough.  
-Better to give:
+Loại câu này thường chưa thực thi được.  
+Cách viết phù hợp hơn là đưa thẳng:
 
-- Real commands
-- Explicit directories
-- Concrete completion criteria
+- Lệnh thật
+- Thư mục rõ
+- Tiêu chuẩn hoàn thành cụ thể
 
-### 3. Can background and execution rules be mixed freely?
+### 3. Mô tả nền và quy tắc thực thi có trộn tùy ý?
 
-Not recommended.  
-Better:
+Cũng không khuyến nghị.  
+Cách phù hợp hơn:
 
-- Rules up front
-- Background compressed to one line
-- Longer explanation in docs
+- Quy tắc đặt trước
+- Nền nén thành một câu
+- Giải thích dài hơn đặt vào docs
 
-## When Rewriting, Start Here
+## Khi viết lại nắm các điểm này trước
 
-If you have a scattered project instruction doc, tighten it this way:
+Nếu bạn có bản chỉ thị dự án viết rất phân tán, thu theo cách:
 
-1. Move “must/must not” to the front
-2. Turn vague language into concrete commands or checks
-3. Shorten long background; replace with links
-4. Provide a minimal definition of done
+1. Đưa “phải/cấm” lên trước
+2. Đổi lời rỗng thành lệnh cụ thể hoặc mục kiểm
+3. Rút ngắn nền dài, đổi thành liên kết
+4. Đưa một bộ định nghĩa hoàn thành tối thiểu
 
-Good project instructions are not about volume—they make key constraints, key commands, and completion criteria clear enough to execute directly.
+Chỉ thị dự án tốt không nằm ở viết nhiều, mà ở ràng buộc then chốt, lệnh then chốt và tiêu chuẩn hoàn thành đủ rõ để thực thi trực tiếp.
 
-## Maintenance Rhythm
+## Nhịp duy trì
 
-- **Update** `AGENTS.md` whenever CI commands change
-- Quarterly review: remove obsolete rules
-- First onboarding step for new members: read AGENTS.md and complete “Quick Start”
+- Mỗi lần lệnh CI đổi thì **cập nhật đồng bộ** `AGENTS.md`
+- Rà quý: xóa quy tắc đã lỗi thời
+- Mục đầu onboarding thành viên mới: đọc AGENTS.md và chạy thông «Bắt đầu nhanh»
 
-## Further Reading
+## Đọc thêm
 
-- [Project Instructions](/guide/customization/project-instructions/)
-- [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- [Define Done](/prompts/define-done/)
+- [Mô tả dự án](/guide/customization/project-instructions/)
+- [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
+- [Định nghĩa hoàn thành](/prompts/define-done/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this repo’s current `AGENTS.md` series, context, and workflow chapters; this page only states stable writing principles and maintenance rhythm for project instructions and does not treat any one client’s implementation details as a long-term promise.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với loạt trang `AGENTS.md` hiện tại của kho, các chương ngữ cảnh và quy trình; trang này chỉ nói nguyên tắc viết ổn định và nhịp duy trì của chỉ thị dự án, không viết chi tiết hiện thực của một client thành cam kết dài hạn.  
+**Kiểm chứng gần nhất:** 2026-07-26

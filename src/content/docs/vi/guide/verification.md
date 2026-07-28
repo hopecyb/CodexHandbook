@@ -1,102 +1,104 @@
 ---
-title: Verification
-description: Review diffs, run tests, validate sources, and define done.
+title: Kiểm chứng
+description: Rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa tiêu chí hoàn thành.
+locale: vi
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 17
-locale: vi
-source_locale: en
-source_revision: 705b1f4
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Verification
+# Kiểm chứng
 
-A common beginner mistake: **treating "Codex said it is done" as actually done.**
+Nhiều người mới lần đầu dùng Codex, sai dễ nhất là **thấy nó nói đã xong thì coi như thật sự đã xong**.
 
-Verification means judging results against your requirements—not against the model's claim.
+Kiểm chứng chính là: không nhìn nó nói thế nào — mà nhìn kết quả có thật sự thỏa yêu cầu của bạn không.
 
-Codex output must be checkable. Verification is not optional—it closes every task loop.
+Đầu ra của Codex phải kiểm tra được. Kiểm chứng không phải bước tùy chọn — mà là một phần của vòng khép kín mỗi tác vụ.
 
-## What verification asks
+## Kiểm chứng thực sự đang xem gì
 
-Whether you are changing code, writing docs, or researching, the same question remains:
+Dù bạn đang sửa mã, viết tài liệu hay tra cứu — cuối cùng đều phải trả lời cùng một câu hỏi:
 
-> **Is this "close enough" or actually ready to deliver?**
+> **Việc này bây giờ rốt cuộc là «trông gần đúng», hay «đã giao được»?**
 
-Much rework happens because:
+Nhiều lần làm lại không phải vì model hoàn toàn làm sai, mà vì:
 
-- Wrong places were changed
-- Work was half-finished
-- Sources were claimed but not reliable
-- A page loads but the flow does not work
-- Docs exist but a newcomer cannot follow them
+- Sửa vào chỗ không nên sửa
+- Sửa sót một nửa
+- Nói đã tra tài liệu, nhưng nguồn không đáng tin
+- Trang mở được, nhưng quy trình thực tế chưa chạy thông
+- Tài liệu viết ra rồi, nhưng người mới không làm theo được
 
-Verification **keeps risk before delivery**.
+Vì vậy vai trò của kiểm chứng là **khóa rủi ro trước khi giao hàng**.
 
-## Common pitfalls
+## Hiểu nhầm thường gặp
 
-### 1. "It runs" equals done
+### 1. Chỉ cần chạy được là tính hoàn thành
 
-Running only means no immediate crash—not:
+«Chạy được» chỉ nói nó chưa báo lỗi ngay — không có nghĩa:
 
-- Correct logic
-- Correct scope
-- No regressions
-- Match to your intended outcome
+- Logic đúng
+- Phạm vi đúng
+- Không đưa hồi quy
+- Khớp kết quả bạn vốn cần
 
-### 2. "I verified" in the model's reply is enough
+### 2. Model tự nói «đã kiểm chứng» thì có thể yên tâm
 
-Check **what** was verified:
+Bạn phải xem nó **thật sự đã làm kiểm chứng gì**. Ví dụ:
 
-- Tests actually run?
-- Diff actually read?
-- Artifacts actually opened?
-- Sources traceable?
+- Có thật sự chạy kiểm thử không
+- Có thật sự đọc Diff không
+- Có thật sự mở artifact để kiểm không
+- Có đưa nguồn truy được không
 
-### 3. Verification is only for programmers
+### 3. Chỉ lập trình viên mới cần kiểm chứng?
 
-Writing, spreadsheets, config, docs, and PR descriptions all need verification—methods differ.
+Viết bài, làm bảng, tạo cấu hình, sắp xếp tài liệu, viết mô tả PR — đều cần kiểm chứng. Chỉ khác cách kiểm chứng.
 
-## If you lack a process, try this order
+## Nếu chưa có quy trình riêng, có thể kiểm theo thứ tự này
 
-1. Is the result on-topic?
-2. Is change scope too large?
-3. Run whatever checks can be automated
-4. Human pass: would you ship this?
+Nếu giờ bạn chưa có quy trình riêng, có thể dùng thứ tự này trước:
 
-Think of it as:
+1. Xem kết quả có lệch chủ đề không
+2. Xem phạm vi thay đổi có quá lớn không
+3. Chạy các kiểm tra tự động được
+4. Cuối cùng nhìn bằng góc người — có giao được không
 
-- **Direction**
-- **Scope**
-- **Machine checks**
-- **Human willingness to accept**
+Có thể hiểu là:
 
-## Core topics
+- **Hướng có đúng không**
+- **Sửa có nhiều không**
+- **Máy đã kiểm chưa**
+- **Người thật sự dám nhận không**
 
-- [Review diffs](/guide/quality/review-diffs/) — read diffs; confirm scope and risk
-- [Run tests](/guide/quality/run-tests/) — automated regression
-- [Verify artifacts](/guide/quality/verify-artifacts/) — docs, config, generated output
-- [Validate sources](/guide/quality/validate-sources/) — traceable research conclusions
-- [Handle uncertainty](/guide/quality/handle-uncertainty/) — when the model is unsure
-- [Definition of done](/guide/quality/definition-of-done/) — what "finished" means
+## Chủ đề cốt lõi
 
-## Verification emphasis by task type
+- [Rà soát Diff](/guide/quality/review-diffs/) — đọc Diff, xác nhận phạm vi và rủi ro
+- [Chạy kiểm thử](/guide/quality/run-tests/) — hồi quy tự động
+- [Kiểm chứng artifact](/guide/quality/verify-artifacts/) — tài liệu, cấu hình, sản phẩm tạo ra
+- [Kiểm chứng nguồn](/guide/quality/validate-sources/) — kết luận dạng nghiên cứu truy được
+- [Xử lý bất định](/guide/quality/handle-uncertainty/) — khi model không chắc thì sao
+- [Định nghĩa hoàn thành](/guide/quality/definition-of-done/) — thế nào gọi là «đã xong»
 
-- **Code changes**: diff, tests, manual critical path
-- **Documentation**: right audience, working links, steps you can follow
-- **Research**: real, current sources; conclusions within evidence
-- **Config or scripts**: environment assumptions, permission scope, recovery if it fails
+## Tác vụ khác nhau, trọng tâm kiểm chứng khác nhau
 
-Unsure where to start: default to [definition of done](/guide/quality/definition-of-done/).
+- **Sửa mã**: xem Diff, rồi chạy kiểm thử, rồi qua tay các đường then chốt
+- **Viết tài liệu**: xem có phù hợp độc giả mục tiêu không, liên kết dùng được không, bước có thật sự làm theo được không
+- **Làm nghiên cứu**: xem nguồn có thật không, có mới không, kết luận có vượt bằng chứng không
+- **Tạo cấu hình hoặc script**: xem tiền đề môi trường, phạm vi quyền, cách khôi phục sau khi thất bại
 
-Verification confirms the result is usable, trustworthy, and shippable.
+Nếu không biết nên bắt đầu từ mục nào, mặc định đọc [Định nghĩa hoàn thành](/guide/quality/definition-of-done/).
 
-How to write acceptance in prompts: [define done](/prompts/define-done/). End-to-end examples: [cases](/cases/).
+Kiểm chứng là để xác nhận kết quả này thật sự dùng được, dám dùng, giao đi được.
+
+Cách viết tiêu chí nghiệm thu trong Prompt xem [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/). Case đầu-cuối xem [Case thực chiến](/cases/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers homepage still emphasizes building, testing, reviewing, and delivering changes with Codex; this page splits verification into review diffs, run tests, validate sources, and definition of done—cross-checked with in-site quality chapters.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện vẫn nhấn mạnh dùng Codex để xây, kiểm thử, rà soát và giao thay đổi; trang này tách kiểm chứng thành rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa hoàn thành — đã đối chiếu chéo với các chương chất lượng nội bộ.  
+**Kiểm chứng gần nhất:** 2026-07-26

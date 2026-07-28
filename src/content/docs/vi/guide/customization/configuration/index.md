@@ -1,33 +1,33 @@
 ---
-title: Configuration
-description: Overview of configuration files and profiles—what behavior belongs in configuration and what does not.
+title: Cấu hình
+description: Trang mô tả tệp cấu hình và profiles — phân rõ hành vi nào nên vào cấu hình, hành vi nào không.
 locale: vi
-source_locale: en
-source_revision: 5485bff
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you see the “configuration” group, it is easy to think it is only about parameter names.
+Lần đầu thấy nhóm “cấu hình”, dễ tưởng nó chỉ nói một đống tên tham số.
 
-It mainly solves one thing: how Codex should work by default, instead of saying it temporarily every time.
+Nó chủ yếu giải quyết một việc: để Codex mặc định làm việc theo cách nào, chứ không phải mỗi lần tạm nói lại.
 
-## Recommended Order
+## Thứ tự khuyến nghị
 
-1. [Configuration Basics](/guide/customization/configuration/config-basics/)
+1. [Cơ bản cấu hình](/guide/customization/configuration/config-basics/)
 2. [Profiles](/guide/customization/configuration/profiles/)
 
-## What This Group Addresses
+## Nhóm này giải quyết vấn đề gì
 
-- Which preferences belong in configuration files
-- When to split multiple profiles
-- Why some limits should go to rules or approval, not configuration notes alone
+- Sở thích nào phù hợp viết vào tệp cấu hình
+- Khi nào nên tách nhiều profile
+- Vì sao một số hạn chế nên giao quy tắc hoặc phê duyệt, chứ không chỉ dựa ghi chú cấu hình
 
-Configuration suits default behavior and stable preferences; it does not replace approval, rules, and project instructions.
+Cấu hình phù hợp hơn đặt hành vi mặc định và sở thích ổn định; không phù hợp thay phê duyệt, quy tắc và mô tả dự án.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked against this repo’s current configuration subsection structure and entry links; this page only states the grouping principle that configuration handles default behavior and stable preferences and cannot replace approval and project rules, without volatile config key details.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với cấu trúc chương con configuration hiện tại của kho và liên kết lối vào; trang này chỉ nói nguyên tắc nhóm “cấu hình chịu hành vi mặc định và sở thích ổn định, không thay phê duyệt và quy tắc dự án”, không gồm chi tiết khóa cấu hình dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

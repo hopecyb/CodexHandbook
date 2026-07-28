@@ -1,109 +1,109 @@
 ---
-title: Acceptable Use Policy
-description: Team-level agreement on what Codex may and may not do—aligned with technical controls and training.
+title: Chính sách sử dụng chấp nhận được
+description: "Thỏa thuận cấp đội về Codex được làm gì và không được làm gì — căn chỉnh với kiểm soát kỹ thuật và đào tạo."
 locale: vi
-source_locale: en
-source_revision: '3075e12'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-An **Acceptable Use Policy (AUP)** turns “can we use Codex for this?” into org consensus instead of individual judgment. It complements the [threat model](/guide/team-enterprise/security/threat-model/): threat model covers risk; AUP covers **behavior boundaries**.
+Một **Chính sách sử dụng chấp nhận được (AUP)** biến «có được dùng Codex cho việc này không?» thành đồng thuận tổ chức thay vì phán đoán cá nhân. Nó bổ sung [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/): mô hình mối đe dọa bao rủi ro; AUP bao **ranh giới hành vi**.
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- Topics an AUP should cover
-- Linking HR/compliance and technical controls
-- Starter clause outline (requires legal localization)
+- Chủ đề một AUP nên phủ
+- Nối HR/tuân thủ với kiểm soát kỹ thuật
+- Dàn ý điều khoản khởi đầu (cần bản địa hóa pháp lý)
 
-## What an AUP governs
+## AUP quản trị cái gì
 
-Even if technically possible, is it allowed on our team?
+Dù kỹ thuật làm được, trong đội chúng ta có được phép không?
 
-It does not replace technical policy—it states boundaries people can read and follow.
+Nó không thay thế chính sách kỹ thuật — nó nêu ranh giới người có thể đọc và tuân theo.
 
 :::caution
-The following is an **educational outline**, not legal advice. Legal and compliance review required before publication.
+Phần sau là **dàn ý giáo dục**, không phải tư vấn pháp lý. Cần pháp chế và tuân thủ xem xét trước khi công bố.
 :::
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### AUP matters to practitioners
+### AUP quan trọng với người thực hành
 
-Not only “paperwork.” Daily questions include:
+Không chỉ «giấy tờ». Câu hỏi hàng ngày gồm:
 
-- What data must not go to Codex
-- When human review is required
-- Which extensions and external connections are off-limits
+- Dữ liệu nào không được đưa vào Codex
+- Khi nào bắt buộc review của người
+- Mở rộng và kết nối ngoài nào bị cấm
 
-### Policy without enforcement decays
+### Chính sách không thực thi sẽ suy yếu
 
-If policy says “production changes need approval” but tools allow bypass, the AUP stops working.
+Nếu chính sách nói «thay đổi prod cần phê duyệt» nhưng công cụ cho phép lách, AUP không còn tác dụng.
 
-AUP must align with training, permissions, config, and audit—not length alone.
+AUP phải căn chỉnh với đào tạo, quyền, cấu hình và kiểm toán — không chỉ độ dài văn bản.
 
-## Recommended topics
+## Chủ đề khuyến nghị
 
-| Topic | Points |
+| Chủ đề | Điểm |
 |---|---|
-| Permitted use | Development, docs, research, internal automation |
-| Prohibited use | Unauthorized access, harassment, bypassing security |
-| Data classification | Which repos/data allowed; customer PII rules |
-| Output responsibility | Human review before merge; no legal/medical advice externally |
-| Extensions | Approved Plugin/MCP list only |
-| Accounts | No shared personal seats; revoke on offboarding |
-| Incidents | How to report suspicious behavior |
+| Sử dụng được phép | Phát triển, tài liệu, nghiên cứu, tự động hóa nội bộ |
+| Sử dụng bị cấm | Truy cập trái phép, quấy rối, lách bảo mật |
+| Phân loại dữ liệu | Repo/dữ liệu nào được phép; quy tắc PII khách hàng |
+| Trách nhiệm đầu ra | Review người trước merge; không tư vấn pháp lý/y tế ra ngoài |
+| Mở rộng | Chỉ danh sách Plugin/MCP được phê duyệt |
+| Tài khoản | Không chia sẻ ghế cá nhân; thu hồi khi offboarding |
+| Sự cố | Cách báo cáo hành vi đáng ngờ |
 
-## Basic structure
+## Cấu trúc cơ bản
 
-1. **Purpose and scope**
-2. **Permitted scenarios** (link [Capability map](/guide/start-here/codex-capability-map/))
-3. **Prohibited scenarios**
-4. **Data and confidentiality**
-5. **Human oversight** (merge, production changes)
-6. **Consequences** (reference employee handbook)
-7. **Contacts and revision date**
+1. **Mục tiêu và phạm vi**
+2. **Tình huống được phép** (liên kết [Bản đồ năng lực](/guide/start-here/codex-capability-map/))
+3. **Tình huống bị cấm**
+4. **Dữ liệu và bảo mật**
+5. **Giám sát của người** (merge, thay đổi production)
+6. **Hậu quả** (tham chiếu sổ tay nhân viên)
+7. **Liên hệ và ngày rà soát**
 
-## Aligning with technical controls
+## Căn chỉnh với kiểm soát kỹ thuật
 
-| AUP clause | Technical implementation |
+| Điều khoản AUP | Triển khai kỹ thuật |
 |---|---|
-| No source exfiltration | Network policy, MCP approval |
-| Production changes need approval | Branch protection, deny `git push` |
-| Approved models only | Org-managed configuration |
+| Không exfiltrate mã nguồn | Chính sách mạng, phê duyệt MCP |
+| Thay đổi prod cần phê duyệt | Bảo vệ nhánh, deny `git push` |
+| Chỉ mô hình được phê duyệt | Cấu hình quản lý tổ chức |
 
-## Common mistakes
+## Lỗi thường gặp
 
-- AUP published, no training
-- Policy contradicts tool reality (forbidden but allowed)
-- Years without update as features evolve (Computer Use, etc.)
+- Công bố AUP, không đào tạo
+- Chính sách mâu thuẫn thực tế công cụ (cấm nhưng vẫn cho phép)
+- Nhiều năm không cập nhật trong khi tính năng đổi (Computer Use, v.v.)
 
-## Is an AUP effective?
+## AUP có hiệu quả không?
 
-Ask:
+Hỏi:
 
-1. Does it answer real team boundaries?
-2. Can it map to training, config, or approval flows?
-3. On violation, can the team detect and respond?
+1. Nó có trả lời ranh giới thật của đội không?
+2. Có map được sang đào tạo, cấu hình hoặc quy trình phê duyệt không?
+3. Khi vi phạm, đội có phát hiện và ứng phó được không?
 
-More “yes” → more likely effective.
+Càng nhiều «có» → càng có khả năng hiệu quả.
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Onboarding includes AUP acknowledgment
-- [ ] No conflict with [Team rules](/guide/customization/rules/team-rules/)
-- [ ] Review yearly or on major feature releases
+- [ ] Onboarding gồm xác nhận đã nhận AUP
+- [ ] Không xung đột với [Quy tắc đội](/guide/customization/rules/team-rules/)
+- [ ] Rà soát hàng năm hoặc khi phát hành tính năng lớn
 
-An AUP’s value is clear team boundaries for Codex use—and alignment with actual controls.
+Giá trị của AUP là ranh giới đội rõ cho việc dùng Codex — và căn chỉnh với kiểm soát thật.
 
-## Reference sources
+## Nguồn tham chiếu
 
-- KimYx0207 enterprise policy chapter
-- freestylefly/CodexGuide team governance
+- Chương chính sách doanh nghiệp KimYx0207
+- Quản trị đội freestylefly/CodexGuide
 
 ---
 
-**Status:** verified  
-**Products:** Organization / team  
-**Verification basis:** OpenAI enterprise docs still emphasize role access, action permissions, and source-system boundaries for plugins and apps; this page defines AUP as organizational behavior boundary with “educational outline, legal localization required”—not an official policy template.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** Tổ chức / đội  
+**Cơ sở kiểm chứng:** Tài liệu doanh nghiệp OpenAI vẫn nhấn mạnh truy cập theo vai trò, quyền hành động và ranh giới hệ thống nguồn cho plugin và ứng dụng; trang định nghĩa AUP là ranh giới hành vi tổ chức kèm «dàn ý giáo dục, cần bản địa hóa pháp lý» — không phải mẫu chính sách chính thức.  
+**Kiểm chứng gần nhất:** 2026-07-26

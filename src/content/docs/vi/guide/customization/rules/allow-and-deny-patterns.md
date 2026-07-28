@@ -1,119 +1,119 @@
 ---
-title: Allow and Deny Rules
-description: Constrain what the Agent can run with command and path rules—personal habits and team bottom lines.
+title: Quy tắc cho phép và từ chối
+description: Dùng quy tắc lệnh và đường dẫn để ràng buộc thao tác Agent thực thi được — thói cá nhân và đường cơ sở nhóm.
 locale: vi
-source_locale: en
-source_revision: 0a6b562
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Rules** declare in configuration or project files which shell commands, paths, and tool calls are **allowed or denied**, reducing manual approval each time while preventing dangerous automation.
+**Rules (quy tắc)** trong cấu hình hoặc tệp dự án khai báo lệnh shell, đường dẫn, gọi công cụ nào **cho phép hoặc cấm**, giảm mỗi lần bấm phê duyệt thủ công, đồng thời ngăn thao tác nguy hiểm tự động hóa.
 
-## Contents
+## Nội dung
 
-- How Allow / Deny rules work
-- Relationship with sandbox, approval dialogs, and `AGENTS.md`
-- Team rule examples
+- Quy tắc Allow / Deny hoạt động thế nào
+- Quan hệ với Sandbox, hộp thoại phê duyệt, `AGENTS.md`
+- Ví dụ quy tắc nhóm
 
-## What Rules Actually Do
+## Quy tắc thật sự đang làm gì
 
-If “rules” feels abstract, start here: agree in advance what Codex may and may not do, instead of judging and clicking approve every time.
+Nếu cảm thấy từ “quy tắc” hơi trừu tượng, có thể coi trước là: ước định trước Codex việc nào làm được, việc nào không, đừng mỗi lần dựa phán đoán lâm thời và bấm phê duyệt tay.
 
-Their value is mainly twofold:
+Giá trị chính có hai loại:
 
-- Reduce low-risk operations you confirm daily anyway
-- Block high-risk operations that should not run automatically
+- Giảm thao tác rủi ro thấp vốn xảy ra mỗi ngày nhưng luôn phải xác nhận lặp
+- Chặn trước thao tác rủi ro cao không nên xảy ra tự động
 
-## Rule Types (Conceptual)
+## Loại quy tắc (khái niệm)
 
-| Type | Example |
+| Loại | Ví dụ |
 |---|---|
-| Command allowlist | Allow `npm test`, `git status` |
-| Command denylist | Deny `rm -rf`, `curl \| bash` |
-| Paths | Deny writing `../`, deny reading `~/.ssh` |
-| Network | Deny outbound or allow only registry domains |
+| Allowlist lệnh | Cho phép `npm test`, `git status` |
+| Denylist lệnh | Cấm `rm -rf`, `curl \| bash` |
+| Đường dẫn | Cấm ghi `../`, cấm đọc `~/.ssh` |
+| Mạng | Cấm ra mạng hoặc chỉ cho phép tên miền registry |
 
-Compare with [Permission Matrix](/guide/reference/permission-matrix/): rules are **configurable** enforcement; the matrix describes **typical defaults**.
+Đối chiếu [Ma trận quyền](/guide/reference/permission-matrix/): quy tắc là enforcement **cấu hình được**, ma trận mô tả **mặc định điển hình**.
 
-## Recommended Layering
+## Phân tầng khuyến nghị
 
 ```text
-Organization managed policy (cannot override)
+Chiến lược quản trị tổ chức (không phủ được)
     ↓
-Project rules + AGENTS.md (Git review)
+Rules dự án + AGENTS.md (rà Git)
     ↓
-Personal allowlist supplement (local only)
+Bổ sung allowlist cá nhân (chỉ máy cục bộ)
     ↓
-Single-task prompt constraints
+Ràng buộc Prompt tác vụ một lần
 ```
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### Rules are not only for fewer dialogs
+### Quy tắc không chỉ để ít bật hộp thoại
 
-Many people first hear “allowlist” and think the goal is fewer popups.
+Nhiều người lần đầu nghe allowlist, bản năng nghĩ mục tiêu là ít hộp thoại, ít ngắt.
 
-Fewer popups is only part of it; more important is allowing low-risk actions and blocking high-risk ones.
+Ít hộp thoại chỉ là một phần; quan trọng hơn là thông thao tác rủi ro thấp, chặn thao tác rủi ro cao.
 
-### Rules are not the sandbox
+### Quy tắc không bằng Sandbox
 
-Sandbox limits “how far you can reach”; rules agree “which actions should not happen in principle.”
+Sandbox hạn chế “tối đa chạm được đâu”; quy tắc ước định “hành động nào về nguyên tắc không nên làm”.
 
-Use both; do not pick one to replace the other.
+Hai thứ tốt nhất dùng cùng, chứ không chọn một thay cái kia.
 
-### Team bottom lines cannot live on one person’s machine
+### Đường cơ sở nhóm không nên chỉ đặt trên máy một người
 
-If only your local rules know “no push” or “do not touch `.env`,” others can still step in.
+Nếu chỉ quy tắc máy bạn biết “cấm push”, “cấm đụng `.env`”, người khác vẫn có thể dẫm vào.
 
-Team bottom lines should live where they can be reviewed.
+Đường cơ sở nhóm nên cố đặt ở chỗ rà được.
 
-## Team Example (Illustrative—not copy-paste ready)
+## Ví dụ nhóm (minh họa, không copy dùng ngay)
 
-**Allow:**
+**Cho phép:**
 
-- Package manager install of **in-project** dependencies
-- Test scripts from documentation
+- Trình quản lý gói cài dependency **trong dự án**
+- Chạy script kiểm thử trong tài liệu
 
-**Deny:**
+**Từ chối:**
 
 - `git push`, `git reset --hard`
-- Read/write `.env*` (unless explicit task)
-- POST requests to the public internet containing repo content
+- Đọc/ghi `.env*` (trừ tác vụ tường minh)
+- POST công cộng chứa nội dung kho
 
-Rules should live in team-reviewable files, not verbal agreement alone.
+Quy tắc nên viết trong tệp nhóm review được, không chỉ ước định miệng.
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Allowlist too broad (allowing `bash` is like allowing everything)
-- Only deny, no allow—still too many approvals
-- Rules contradict `AGENTS.md`
+- Allowlist quá rộng (cho phép `bash` tương đương cho phép hết)
+- Chỉ deny không allow, phê duyệt vẫn quá nhiều
+- Quy tắc mâu thuẫn `AGENTS.md`
 
-## Getting Started
+## Gợi ý khởi đầu
 
-When organizing rules, you do not need a full policy on day one. These two steps are enough:
+Khi mới gom quy tắc, không cần làm chiến lược đầy đủ ngay. Hai bước này đã đủ dùng:
 
-1. List 3–5 daily, low-risk commands explicitly
-2. List a few high-risk actions you never want automated
+1. Liệt kê rõ 3 đến 5 lệnh chạy thường mỗi ngày, rủi ro thấp
+2. Liệt kê rõ vài hành động rủi ro cao tuyệt đối không muốn tự thực thi
 
-Run the minimum boundary first; refine later.
+Chạy thông ranh giới tối thiểu trước, rồi dần tinh chỉnh.
 
-## Security Boundaries
+## Ranh giới an toàn
 
-- Rules **cannot** replace code review and branch protection
-- Malicious prompts may try to bypass rules—keep sandbox defaults strict
-- Rule changes go through PR; treat like CI changes
+- Quy tắc **không** thay code review và bảo vệ nhánh
+- Prompt độc hại có thể dụ Agent thử vòng quy tắc — giữ Sandbox mặc định nghiêm
+- Thay đổi quy tắc đi PR, đối xử như sửa CI
 
-Good allow/deny rules state in advance which actions are reasonable and which should not happen.
+Quy tắc allow/deny tốt là nói rõ trước hành động nào hợp lý, hành động nào không nên xảy ra.
 
-## References
+## Nguồn tham khảo
 
 - stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permission configuration chapter
+- Chương cấu hình quyền KimYx0207
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex/plugin permission documentation continues to emphasize layering among read/write actions, approval, source boundaries, and role-based access control; this page does not declare specific rule file syntax and explains allow/deny as an execution-boundary pattern, distinct from sandbox, approval, and team review flows.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App  
+**Căn cứ kiểm chứng:** Tài liệu quyền Codex/plugin hiện tại của OpenAI liên tục nhấn mạnh tư duy phân tầng hành động đọc/ghi, phê duyệt, ranh giới nguồn và kiểm soát truy cập vai trò; trang này không tuyên bố cú pháp tệp quy tắc cụ thể, mà giải thích allow/deny như một mẫu ranh giới thực thi, và phân biệt với Sandbox, phê duyệt và quy trình rà nhóm.  
+**Kiểm chứng gần nhất:** 2026-07-26

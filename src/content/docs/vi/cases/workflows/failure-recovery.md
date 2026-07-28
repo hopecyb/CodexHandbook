@@ -1,94 +1,94 @@
 ---
-title: Failure recovery
-description: When tasks drift, tests go red, or context runs out—how to roll back safely and continue.
+title: Phục hồi thất bại
+description: Khi tác vụ lệch hướng, test đỏ hoặc ngữ cảnh hết — cách hoàn tác an toàn rồi tiếp tục.
 locale: vi
-source_locale: en
-source_revision: 12fa1a5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Failure recovery** covers how to stabilize the situation after a task goes off track or stops mid-way. This chapter gives repeatable **detect → stop loss → recover → postmortem** steps—pair with [Undo and recover](/guide/getting-started/undo-and-recover/) and [Long-running task management](/cases/workflows/long-running-task-management/).
+**Phục hồi thất bại** nói về việc sau khi tác vụ lệch hoặc bị ngắt, làm sao giữ hiện trường rồi tiếp tục tiến. Chương này đưa bộ bước **phát hiện → chặn thiệt hại → phục hồi → rút kinh nghiệm** có thể lặp lại; dùng kèm [hoàn tác và phục hồi](/guide/getting-started/undo-and-recover/) cũng như [quản lý tác vụ dài](/cases/workflows/long-running-task-management/).
 
-## What this page covers
+## Trọng tâm trang này
 
-- When to `git stash`, revert commits, or open a new thread
-- How to package failure info into the next prompt
-- How teams record recurring issues
+- Khi nào nên `git stash`, hoàn commit, mở Thread mới
+- Cách đưa thông tin thất bại vào prompt vòng sau
+- Nhóm ghi nhận vấn đề tái diễn thế nào
 
-## Failure signals
+## Tín hiệu thất bại
 
-| Signal | Possible action |
+| Tín hiệu | Hành động có thể |
 |---|---|
-| Tests failing widely | Stop execution; narrow diff |
-| Wrong directory/branch | Undo; re-`@` correct path |
-| Plan and implementation diverge badly | Return to explore or plan |
-| Context too long, constraints forgotten | New thread + summary handoff |
-| Approvals/rules repeatedly rejected | Check if rules conflict with task |
+| Test thất bại diện rộng | Dừng thực thi, thu hẹp diff |
+| Sửa sai thư mục/nhánh | Hoàn tác, `@` lại đường dẫn đúng |
+| Kế hoạch và triển khai lệch nặng | Quay lại giai đoạn khám phá hoặc kế hoạch |
+| Ngữ cảnh quá dài, quên ràng buộc | Thread mới + bàn giao tóm tắt |
+| Phê duyệt/quy tắc từ chối lặp | Kiểm tra quy tắc và tác vụ có mâu thuẫn không |
 
-## Minimum viable recovery flow
-
-```text
-1. Stop further changes (explicitly say "do not write code yet")
-2. Save state: git status / stash / record thread ID
-3. Summarize in 5 bullets or fewer: goal, done so far, failure symptom, hypothesis
-4. Choose: roll back / narrow scope / continue in new thread
-5. On success, write to AGENTS.md or case postmortem
-```
-
-Prompt example:
+## Quy trình phục hồi tối thiểu dùng được
 
 ```text
-Current changes caused 12 test failures. Do not keep fixing yet.
-List files affected by the last 3 commits, suggest minimal rollback point,
-and give a smaller fix plan.
+1. Dừng sửa tiếp (nói rõ «chưa viết code»)
+2. Lưu hiện trạng: git status / stash / ghi thread ID
+3. Tóm tắt trong tối đa 5 điểm: mục tiêu, đã làm, hiện tượng thất bại, giả thuyết
+4. Chọn: hoàn tác / thu hẹp phạm vi / Thread mới tiếp tục
+5. Thành công thì ghi vào AGENTS.md hoặc rút kinh nghiệm case
 ```
 
-## Recommended workflow
+Ví dụ prompt:
 
 ```text
-Detect (tests / human / CI)
-    → Stop loss (stop writing, isolate branch)
-    → Diagnose (see "diagnose before fixing")
-    → Small-step retry
-    → Capture lessons
+Thay đổi hiện tại làm 12 test thất bại. Chưa sửa tiếp.
+Liệt kê tệp bị ảnh hưởng bởi 3 commit gần nhất, đề xuất điểm hoàn tác tối thiểu,
+và đưa một kế hoạch sửa nhỏ hơn.
 ```
 
-Multi-agent: see [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)—on failure, clarify which sub-task owns rollback.
+## Quy trình đề xuất
 
-## Common mistakes
+```text
+Phát hiện (test/người/CI)
+    → Chặn thiệt hại (dừng viết, cô lập nhánh)
+    → Chẩn đoán (xem «chẩn đoán trước khi sửa»)
+    → Thử lại bước nhỏ
+    → Rút kinh nghiệm đóng gói
+```
 
-- Stack patches in the wrong direction
-- Don't save failure logs—new thread repeats same error
-- Force `git push` to salvage
-- Don't distinguish environment (local vs Cloud)—recovery steps invalid
+Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/): khi thất bại phải rõ tác vụ con nào chịu trách nhiệm hoàn tác.
 
-## Safety boundaries
+## Lỗi thường gặp
 
-- Recovery itself constrained by [command rules](/guide/customization/rules/command-rules/)
-- Production incidents: roll back first, root cause later—don't let Agent fix production data directly
+- Trên hướng sai còn «thêm một chút» chồng patch
+- Không lưu log thất bại, Thread mới lặp cùng lỗi
+- Ép `git push` để cứu tình
+- Không phân biệt môi trường (cục bộ vs Cloud) khiến bước phục hồi vô hiệu
 
-## Acceptance checklist
+## Ranh giới an toàn
 
-- [ ] Can explain chosen recovery strategy and why
-- [ ] Repo back to buildable/testable state
-- [ ] Failure cause and lesson recorded (issue or AGENTS.md)
-- [ ] If new thread needed, key constraint summary included
+- Bản thân thao tác phục hồi cũng chịu [quy tắc lệnh](/guide/customization/rules/command-rules/)
+- Sự cố production: hoàn tác trước rồi phân tích nguyên nhân gốc; không để Agent nối thẳng production sửa dữ liệu
 
-## Related chapters
+## Checklist nghiệm thu
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Handoff and resume](/guide/agent-work/handoff-and-resume/)
-- [Error reference](/guide/reference/error-reference/)
+- [ ] Giải thích được chiến lược phục hồi đã chọn và lý do
+- [ ] Kho trở lại trạng thái build/test được
+- [ ] Nguyên nhân thất bại và bài học đã ghi (issue hoặc AGENTS.md)
+- [ ] Nếu cần Thread mới, có tóm tắt ràng buộc then chốt
 
-## Reference sources
+## Chương liên quan
 
-- freestylefly/CodexGuide postmortems and playbook
-- stormzhang troubleshooting chapters
+- [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/)
+- [Bàn giao và tiếp tục](/guide/agent-work/handoff-and-resume/)
+- [Tham chiếu lỗi](/guide/reference/error-reference/)
+
+## Nguồn tham chiếu
+
+- Rút kinh nghiệm và playbook freestylefly/CodexGuide
+- Chương gỡ lỗi của stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified handoff and resume, diagnose, command rules, and error reference chapters in this handbook; this page describes general failure stop-loss and continue methods—not treating one client's recovery button or command as fixed rules.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương bàn giao và phục hồi, chẩn đoán, quy tắc lệnh và tham chiếu lỗi đã kiểm chứng của sổ tay; trang này mô tả phương pháp chung để chặn thiệt hại khi thất bại rồi tiếp tục, không lấy nút hoặc lệnh phục hồi của một phía làm quy tắc cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

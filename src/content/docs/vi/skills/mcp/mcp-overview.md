@@ -1,133 +1,133 @@
 ---
-title: MCP overview
-description: Model Context Protocol—let Codex connect safely to external tools and data sources.
+title: Tổng quan MCP
+description: Model Context Protocol — để Codex nối an toàn công cụ và nguồn dữ liệu ngoài.
 locale: vi
-source_locale: en
-source_revision: c63cc21
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-MCP is a standard way for Codex to connect to external tools and data sources.
+MCP là cách nối chuẩn để Codex nối công cụ và nguồn dữ liệu ngoài.
 
-If you want Codex to query Jira, read a knowledge base, access internal APIs, or operate a controlled tool, you need a mechanism for **how to connect, what can be called, and how permissions are managed**. **MCP (Model Context Protocol)** addresses that.
+Ví dụ bạn muốn Codex tra Jira, đọc knowledge base, gọi API nội bộ, thao tác một công cụ được kiểm soát — cần cơ chế"nối thế nào, gọi được gì, Quyền quản ra sao". **MCP(Model Context Protocol)** chính là để giải quyết việc đó.
 
-## Contents
+## Nội dung
 
-- What problem MCP solves: Codex cannot reach real systems alone
-- Division of labor with Skill and Plugin
-- Why MCP must be part of security governance
+- MCP giải quyết vấn đề"Codex với không tới hệ thống thật"
+- Phân công với Skill, Plugin
+- Vì sao MCP phải đưa vào quản trị bảo mật
 
-## What it is not
+## Trước hết phân biệt nó không phải gì
 
-MCP is not:
+MCP không phải:
 
-- Pasting account passwords directly to Codex
-- Letting the model connect however it wants
-- Making any third-party service implicitly trusted
+- Để bạn dán thẳng tài khoản mật khẩu cho Codex
+- Để model"muốn nối sao cũng được"
+- Để mọi dịch vụ bên thứ ba mặc định đáng tin
 
-It is a normalized wiring path so connecting external systems is more controllable and auditable.
+Nó là cách nối chuẩn hóa, để việc nối hệ thống ngoài kiểm soát và kiểm toán được hơn.
 
-## Core concepts
+## Khái niệm cốt lõi
 
 ```text
-Codex  ←→  MCP client  ←→  MCP server  ←→  External system
+Codex  ←→  MCP client  ←→  MCP server  ←→  hệ thống ngoài
 ```
 
-| Component | Role |
+| Thành phần | Vai trò |
 |---|---|
-| MCP server | Exposes a set of tools (e.g. `search_issues`, `get_user`) |
-| Configuration | Tells Codex how to start/connect to the server |
-| Tool calls | Model picks tools in a task; you often approve |
+| MCP server | Expose một nhóm công cụ (như `search_issues`, `get_user`) |
+| Cấu hình | Nói với Codex cách khởi động/nối server |
+| Gọi công cụ | Model chọn công cụ trong Tác vụ, thường cần bạn Phê duyệt |
 
-MCP does **not** provide business logic. Your server implements read/write rules; Codex picks which tool to use in the task.
+MCP **không cung cấp** logic nghiệp vụ bản thân. Server của bạn triển khai quy tắc đọc/ghi; Codex chịu chọn công cụ nào trong Tác vụ.
 
-## Where MCP sits
+## Vị trí của MCP
 
-Skill is more like an "operator manual"; MCP handles "tool interfaces."
+Skill thiên về"sổ tay thao tác"; MCP xử lý"giao diện công cụ".
 
-- Skill explains steps
-- MCP hands certain external tools to Codex
+- Skill chịu nói các bước
+- MCP chịu đưa một số công cụ ngoài vào tay Codex
 
-They often appear together:  
-Skill defines the flow; a step in the flow calls an MCP tool.
+Nhiều khi hai thứ xuất hiện cùng:  
+Skill quy định quy trình trước, một bước trong quy trình rồi gọi công cụ MCP.
 
-## Relationship to Skill and Plugin
+## Quan hệ với Skill, Plugin
 
 | | MCP | Skill | Plugin |
 |---|---|---|---|
-| Nature | Tool protocol | Workflow instructions | Distribution package |
-| Typical content | API wrappers | Steps and standards | Skill + MCP + app connectors |
-| Maintainer | You or third-party server | You or team | Publisher |
+| Bản chất | Giao thức công cụ | Mô tả workflow | Gói phân phối |
+| Nội dung điển hình | Bọc API | Bước và quy chuẩn | Skill + MCP + connector ứng dụng |
+| Ai bảo trì | Bạn hoặc server bên thứ ba | Bạn hoặc nhóm | Nhà phát hành |
 
-Common combo: **Skill defines flow**, a step **calls MCP tools** to fetch ticket lists.
+Tổ hợp thường gặp: **Skill quy định quy trình**, một bước trong quy trình **gọi công cụ MCP** để kéo danh sách ticket.
 
-## When to consider MCP
+## Khi nào cân nhắc MCP
 
-If the task only needs read/write inside the current repo, you usually do not need MCP.  
-If it must touch real systems **outside** the repo, start evaluating MCP, APIs, or other controlled integrations.
+Nếu Tác vụ chỉ cần đọc/ghi file trong repo hiện tại, thường không cần MCP.  
+Nếu Tác vụ cần chạm hệ thống thật"ngoài repo", nên bắt đầu cân nhắc MCP, API hoặc cách tích hợp được kiểm soát khác.
 
-## Use cases
+## Kịch bản phù hợp
 
-| Good for MCP | Poor for MCP |
+| Phù hợp MCP | Không phù hợp MCP |
 |---|---|
-| Query Linear/Jira tickets | Pure in-repo code changes |
-| Read-only docs/knowledge base | Simple `curl` with no reuse need |
-| Controlled internal tools | Unaudited high-privilege production DB writes |
+| Tra ticket Linear/Jira | Chỉ sửa code trong repo |
+| Chỉ đọc tài liệu/knowledge base | Dùng `curl` đơn giản và không cần tái dùng |
+| Công cụ nội bộ được kiểm soát | Ghi thư viện production quyền cao không kiểm toán |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. MCP means Codex can do anything
+### 1. Chỉ cần nối MCP là Codex làm được mọi thứ
 
-It can only do what the MCP server exposes and what those tools allow.
+Nó làm được gì phụ thuộc server MCP thực sự expose những công cụ nào, và các công cụ đó cho phép làm gì.
 
-### 2. MCP is technical only, not security
+### 2. MCP chỉ là vấn đề tích hợp kỹ thuật, không phải bảo mật
 
-Once MCP touches real systems, it is also:
+Một khi MCP nối hệ thống thật, nó đồng thời trở thành:
 
-- Permissions
-- Data exposure
-- Audit
-- Supply chain
+- Vấn đề Quyền
+- Vấn đề lộ dữ liệu
+- Vấn đề kiểm toán
+- Vấn đề chuỗi cung ứng
 
-### 3. With MCP, no Skill or docs needed
+### 3. Có MCP rồi thì không cần viết Skill hoặc tài liệu
 
-Still needed. MCP solves "can call tools," not "which flow to follow or when not to call."
+Vẫn cần. MCP giải"có gọi được công cụ không", không giải"nên gọi theo quy trình nào, trường hợp nào không nên gọi".
 
-## Security boundaries
+## Ranh giới bảo mật
 
-- **Least privilege**: read-only, scoped projects, scoped IPs
-- **Credentials**: OAuth or short-lived tokens—not in prompt, not in Git
-- **Human approval**: writes, bulk deletes, outbound messages should be reviewed
-- **Supply chain**: connect only trusted servers; review third-party MCP source
+- **Quyền tối thiểu**: chỉ đọc, giới hạn dự án, giới hạn IP
+- **Thông tin xác thực**: OAuth hoặc token ngắn hạn — không vào Prompt, không vào Git
+- **Phê duyệt thủ công**: thao tác ghi, xóa hàng loạt, gửi tin ra ngoài nên có đối chiếu lại
+- **Chuỗi cung ứng**: chỉ nối server đáng tin, review mã nguồn MCP bên thứ ba
 
-Enterprise: roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
+Kịch bản doanh nghiệp xem lộ trình `11-team-enterprise/security/plugin-and-mcp-risk`.
 
-## Onboarding order
+## Thứ tự nối
 
-1. Read official MCP docs; confirm current client config format
-2. Start with a **read-only** official or community example server
-3. Verify a single tool call in a test project
-4. Connect real systems with a runbook
+1. Đọc tài liệu MCP chính thức, xác nhận định dạng cấu hình client hiện tại
+2. Bắt đầu từ một server ví dụ chính thức hoặc cộng đồng **chỉ đọc**
+3. Kiểm chứng lời gọi một công cụ trong dự án thử
+4. Rồi nối hệ thống thật và viết sổ tay vận hành
 
-Steps: [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
+Bước thao tác: [Nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Over-permissive MCP server "for convenience"
-- Treating MCP as Skill replacement (flow still belongs in Skill or AGENTS.md)
-- MCP config changes not in code review
+- Cho MCP server Quyền quá cao"cho tiện phát triển"
+- Coi MCP là thay thế Skill (mô tả quy trình vẫn nên viết trong Skill hoặc AGENTS.md)
+- Đổi cấu hình không đưa vào code review
 
-## References
+## Nguồn tham chiếu
 
 - [Model Context Protocol](https://modelcontextprotocol.io/)
-- OpenAI Codex MCP documentation
+- Tài liệu OpenAI Codex MCP
 - KimYx0207 CX-05; stormzhang `20-mcp.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Conceptual content mixed with judgments about "client config format" and "approval behavior"; as of 2026-07-26 public official basis is insufficient for full verification.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Ghi chú tái Kiểm chứng:** Trang này dù có nội dung khái niệm nhưng kèm phán đoán triển khai hiện tại như"định dạng cấu hình client""hành vi Phê duyệt"; đến 2026-07-26, căn cứ chính thức công khai chưa đủ để chuẩn hóa toàn bộ.  
+**Kiểm chứng gần nhất:** 2026-07-26

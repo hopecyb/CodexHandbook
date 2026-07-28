@@ -1,139 +1,139 @@
 ---
-title: AGENTS.md in a Monorepo
-description: Example patterns for placing project instructions, scope, and test commands in a single-repo multi-package structure.
+title: AGENTS.md trong Monorepo
+description: Mẫu đặt chỉ thị dự án, phạm vi và lệnh kiểm thử trong cấu trúc một kho nhiều gói.
 locale: vi
-source_locale: en
-source_revision: 6342ab4
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In a monorepo with multiple apps, shared packages, and different stacks—a single giant `AGENTS.md` makes it easy for the Agent to **edit the wrong package** or run the wrong tests. This page gives a reusable **layered instruction** pattern (example—trim for your repo).
+Trong Monorepo nhiều app, gói chia sẻ, stack kỹ thuật khác nhau cùng tồn tại — một `AGENTS.md` khổng lồ dễ để Agent **sửa nhầm gói** hoặc chạy nhầm kiểm thử. Trang này đưa mẫu **mô tả phân tầng** tái sử dụng được (ví dụ, hãy cắt theo kho).
 
-## What This Page Covers
+## Trang này sẽ nói gì
 
-- How root and subpackages divide instruction writing
-- How to align @ files and path constraints with package boundaries
-- Consistency with CI / Cloud environment commands
+- Gốc và gói con phân công viết chỉ thị thế nào
+- Làm sao để ràng buộc @ tệp và đường dẫn khớp ranh giới gói
+- Khớp lệnh môi trường CI / Cloud
 
-## Why Layered Instructions Matter More Here
+## Vì sao loại kho này càng cần mô tả phân tầng
 
-If a normal repo is one house, a monorepo is a building.
+Nếu kho thường như một căn nhà, monorepo giống hơn một tòa nhà.
 
-Different rooms, residents, and rules.  
-If you only post one very long notice at the entrance, Codex often hits two problems:
+Trong tòa có phòng khác nhau, cư dân khác nhau, quy tắc khác nhau.  
+Lúc đó nếu chỉ dán một tờ tổng dài ở cửa lớn, Codex dễ gặp hai vấn đề:
 
-- Sees everything but does not know which layer applies now
-- Intended to change one package but touches elsewhere
+- Thấy hết nhưng không biết tầng hiện tại nên tuân cái nào
+- Rõ ràng chỉ muốn sửa một gói, kết quả tiện tay đụng chỗ khác
 
-The point is to make rules follow directory boundaries clearly—not mechanically add more `AGENTS.md` files.
+Trọng tâm là để quy tắc rõ theo ranh giới thư mục, chứ không máy móc viết thêm vài bản `AGENTS.md`.
 
-## Recommended Structure (Example)
+## Cấu trúc khuyến nghị (ví dụ)
 
 ```text
 repo-root/
-  AGENTS.md              # Global: branch policy, commit conventions, prohibitions
-  apps/web/AGENTS.md     # Frontend: framework, test commands, routing conventions
-  apps/api/AGENTS.md     # Backend: API style, migration discipline
-  packages/shared/       # Link from root only, or short sub-note
+  AGENTS.md              # Toàn cục: chiến lược nhánh, quy chuẩn commit, mục cấm
+  apps/web/AGENTS.md     # Frontend: khung, lệnh kiểm thử, ước định routing
+  apps/api/AGENTS.md     # Backend: phong cách API, kỷ luật migration
+  packages/shared/       # Có thể chỉ liên kết trong tài liệu gốc, hoặc mô tả con ngắn
 ```
 
-Root `AGENTS.md` should include:
+`AGENTS.md` gốc nên gồm:
 
-- Directories the Agent **must not** modify (e.g. `infra/prod/`)
-- **Owner or doc links** for each subpackage
-- Global install command: `pnpm install` at root
+- Thư mục nào **cấm** Agent sửa (như `infra/prod/`)
+- **Người phụ trách hoặc liên kết tài liệu** của từng gói con
+- Lệnh cài toàn cục: `pnpm install` chạy ở gốc
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. As directories grow, do not pile everything at the root
+### 1. Thư mục nhiều lên, đừng chất hết mô tả vào gốc
 
-Many first monorepo instruction attempts put all constraints in root `AGENTS.md`.
+Nhiều người lần đầu làm chỉ thị monorepo, bản năng nhét mọi ràng buộc vào `AGENTS.md` gốc.
 
-Result:
+Kết quả:
 
-- Very long file
-- Rules relevant to the current task do not stand out
-- Subpackage-specific conventions get buried
+- Tệp rất dài
+- Quy tắc thật sự liên quan tác vụ hiện tại không nổi
+- Ước định đặc biệt của gói con dễ bị nhấn chìm
 
-Steadier practice: global consensus at root; local special rules in subpackages.
+Cách ổn hơn thường là: gốc viết đồng thuận toàn cục, gói con viết quy tắc đặc biệt cục bộ.
 
-### Subpackage notes narrow mistaken edits—they do not duplicate root rules
+### Vai trò mô tả gói con là thu hẹp phạm vi sửa nhầm, không phải lặp quy tắc gốc
 
-If `apps/web` and `apps/api` differ in dev commands, test commands, and constraints, writing those differences in each directory helps Codex avoid wrong paths.
+Nếu lệnh phát triển, lệnh kiểm thử, cách ràng buộc của `apps/web` và `apps/api` đều khác, thì viết khác biệt đó trong thư mục riêng của chúng ngược lại giúp Codex ít đi đường vòng hơn.
 
-## Subpackage AGENTS.md Template Snippet
+## Đoạn mẫu AGENTS.md gói con
 
 ```markdown
-## Scope
-Modify only `apps/web/**` unless the task explicitly requires cross-package changes.
+## Phạm vi
+Chỉ sửa `apps/web/**`, trừ khi tác vụ yêu cầu rõ thay đổi xuyên gói.
 
-## Development
-- Install: `pnpm install` at repo root
-- Dev: `pnpm --filter web dev`
-- Test: `pnpm --filter web test`
-- Type check: `pnpm --filter web typecheck`
+## Phát triển
+- Cài: ở gốc kho `pnpm install`
+- Phát triển: `pnpm --filter web dev`
+- Kiểm thử: `pnpm --filter web test`
+- Kiểm kiểu: `pnpm --filter web typecheck`
 
-## Dependencies
-Import shared types from `@acme/shared`; do not copy-paste.
+## Dependency
+Kiểu chia sẻ import từ `@acme/shared`, không sao chép dán.
 ```
 
-## Task Prompt Coordination
+## Phối hợp Prompt tác vụ
 
-For cross-package refactors, **list paths explicitly**:
+Khi tái cấu trúc xuyên gói **liệt kê tường minh đường dẫn**:
 
 ```text
-Goal: use new API client in apps/web
-Allowed changes: apps/web/**, packages/api-client/**
-Prohibited: change apps/api server directly
-Acceptance: pnpm --filter web test && pnpm --filter api-client test
+Mục tiêu: Trong apps/web dùng API client mới
+Cho phép sửa: apps/web/**, packages/api-client/**
+Cấm: Sửa thẳng phía server apps/api
+Nghiệm thu: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-See [File and Folder Context](/guide/context/file-and-folder-context/)
+Xem [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
 
-## Cloud and CI
+## Cloud và CI
 
-Monorepos on Cloud often fail from **install not at root** or wrong filter. In root `AGENTS.md`, state:
+Monorepo trên Cloud thường thất bại vì **chưa cài ở gốc** hoặc filter sai. Trong `AGENTS.md` gốc ghi rõ:
 
-- Default working directory is repo root
-- Filter commands for single-package tasks
-- Cache strategy (if using turborepo/nx, note task graph)
+- Thư mục làm việc mặc định là gốc kho
+- Lệnh filter của tác vụ một gói
+- Chiến lược cache (nếu dùng turborepo/nx, ghi đồ thị tác vụ)
 
-[Cloud Environments](/guide/web-and-cloud/cloud-environments/)
+[Môi trường Cloud](/guide/web-and-cloud/cloud-environments/)
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Instructions only in `apps/web`; Agent changes lockfile at root
-- Inconsistent test commands per subpackage, undocumented
-- Subpackage AGENTS.md conflicts with root doc
+- Chỉ viết mô tả ở `apps/web`, Agent lại sửa lung tung lockfile ở gốc
+- Lệnh kiểm thử các gói con không nhất quán và chưa tài liệu hóa
+- AGENTS.md gói con xung đột tài liệu gốc
 
-## Root vs Subpackage: How to Decide
+## Phán đoán nên viết ở gốc hay thư mục gói con
 
-When unsure whether a note belongs at root or subpackage, ask:
+Nếu chưa chắc một mô tả nên viết ở gốc hay thư mục gói con, hỏi trước:
 
-1. Is this consensus every package must follow?
-2. Does this hold only for one directory?
-3. If this rule is in the wrong place, will the Agent edit the wrong scope?
+1. Có phải đồng thuận mọi gói đều phải tuân không
+2. Có phải chỉ đúng với một thư mục không
+3. Quy tắc này nếu đặt sai chỗ có khiến Agent sửa sai phạm vi không
 
-Closer to (1) → root; closer to (2) and (3) → subpackage.
+Gần điều 1 hơn thì vào gốc; gần điều 2, 3 hơn thì phù hợp vào thư mục gói con.
 
-## Acceptance Checklist
+## Danh sách nghiệm thu
 
-- [ ] Root and at least one subpackage each have readable scope notes
-- [ ] Any package can run its test command alone
-- [ ] Cross-package tasks state allowed paths in the prompt
+- [ ] Gốc và gói con ít nhất mỗi bên có một mô tả scope đọc được
+- [ ] Bất kỳ gói nào cũng chạy thông lệnh kiểm thử riêng
+- [ ] Tác vụ xuyên gói trong Prompt viết rõ đường dẫn cho phép
 
-AGENTS.md in a monorepo does not need to be centralized; “global consensus” and “directory-local rules” each belong in the right place.
+AGENTS.md trong Monorepo không cần tập trung một cục; cách phù hợp hơn là để “đồng thuận toàn cục” và “quy tắc cục bộ thư mục” mỗi thứ đặt đúng chỗ.
 
-## References
+## Nguồn tham khảo
 
-- freestylefly/CodexGuide monorepo playbook
-- codex.bozhouai.com large-repo chapter
-- stormzhang monorepo and Git practices
+- Playbook monorepo freestylefly/CodexGuide
+- Chương kho lớn codex.bozhouai.com
+- Thực hành monorepo và Git stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s current `AGENTS.md`, file/folder context, and Cloud environment chapters; page content is limited to monorepo layered instruction example patterns and command organization, without treating specific product entry points or managed implementation as fixed contracts.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương `AGENTS.md`, ngữ cảnh thư mục tệp và môi trường Cloud hiện tại của sổ tay; nội dung trang giới hạn ở mẫu mô tả phân tầng monorepo và phương pháp tổ chức lệnh, không coi lối vào sản phẩm cụ thể hoặc hiện thực quản trị là hợp đồng cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

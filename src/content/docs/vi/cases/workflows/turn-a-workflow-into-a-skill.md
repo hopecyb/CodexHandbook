@@ -1,80 +1,80 @@
 ---
-title: Turn a workflow into a Skill
-description: The third repeat of the same flow deserves a Skill—trigger, instructions, and acceptance in one place.
+title: Đóng gói quy trình thành Skill
+description: Quy trình lặp lần thứ ba đáng viết thành Skill — tích hợp kích hoạt, hướng dẫn và nghiệm thu.
 locale: vi
-source_locale: en
-source_revision: cc48744
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When the same class of task (release checks, doc sync, security scans) is done **a third time** by copy-pasting prompts, consider a [Skill](/skills/overview/). This chapter bridges [workflow methods](/cases/workflows/) and the extension system.
+Khi cùng loại tác vụ (kiểm tra phát hành, đồng bộ tài liệu, quét bảo mật) **lần thứ ba** vẫn hoàn thành bằng copy-paste prompt, nên cân nhắc [Skill](/skills/overview/). Chương này nối [phương pháp quy trình](/cases/workflows/) với hệ mở rộng.
 
-## What this page solves
+## Trang này giải quyết gì
 
-- When to upgrade from a prompt template to a Skill
-- What a Skill should include (instructions, resources, scripts)
-- How to share and version with the team
+- Khi nào nâng mẫu prompt thành Skill
+- Skill nên gồm những phần nào (hướng dẫn, tài nguyên, script)
+- Cách chia sẻ và phiên bản hóa với nhóm
 
-## Signals worth capturing
+## Tín hiệu nên đóng gói
 
-- Fixed steps + fixed acceptance checklist
-- Needs repo templates or scripts
-- Multiple people need consistent behavior
-- You want the model to **automatically recall** the flow on relevant tasks
+- Bước cố định + checklist nghiệm thu cố định
+- Cần tham chiếu mẫu hoặc script trong kho
+- Nhiều người cần hành vi nhất quán
+- Muốn model **tự nhớ** quy trình khi gặp tác vụ liên quan
 
-Skip capture for: one-off exploration, small fixes tightly bound to that day's context.
+Không cần đóng gói: khám phá một lần, sửa nhỏ phụ thuộc mạnh ngữ cảnh ngày hôm đó.
 
-## Minimum viable approach
+## Cách làm tối thiểu dùng được
 
-1. **Write SKILL.md clearly**: when to trigger, inputs/outputs, prohibitions
-2. **Attach `references/`**: checklists, sample diffs
-3. **Optional `scripts/`**: repeatable verification commands (aligned with [command rules](/guide/customization/rules/command-rules/))
-4. **Mention the Skill name** in repo README or AGENTS.md
-5. **Trial 2–3 runs**, then mark `verified`
+1. **Viết rõ SKILL.md:** khi nào kích hoạt, đầu vào đầu ra, mục cấm
+2. **Kèm `references/`:** checklist, ví dụ diff
+3. **Tùy chọn `scripts/`:** lệnh kiểm chứng chạy lại được (khớp [quy tắc lệnh](/guide/customization/rules/command-rules/))
+4. **Nhắc tên Skill** trong README kho hoặc AGENTS.md
+5. **Thử chạy 2–3 lần**, rồi gắn `verified`
 
-Getting started: [Create your first Skill](/skills/create-your-first-skill/)
+Nhập môn: [tạo Skill đầu tiên](/skills/create-your-first-skill/)
 
-## Recommended workflow
+## Quy trình đề xuất
 
 ```text
-Extract prompt and acceptance from a successful case
-    → trim to Skill body (drop casual wording, keep constraints)
-    → add trigger description ("before merge", "before release")
-    → team PR review
-    → place in repo examples/, team plugin, or internal skill library
+Từ case thành công rút prompt và mục nghiệm thu
+    → Cắt gọn thành thân Skill (bỏ khẩu ngữ, giữ ràng buộc)
+    → Thêm mô tả kích hoạt («trước merge», «trước phát hành»)
+    → Nhóm PR review
+    → Ghi vào thư mục examples/ theo quy ước kho, plugin nhóm hoặc thư viện skill nội bộ
 ```
 
-Compare with [Turn a flow into automation](/skills/automations/scheduled-tasks/): Skills are **interactive guidance**; Automations are **scheduled/unattended**.
+So với [biến quy trình thành tự động hóa](/skills/automations/scheduled-tasks/): Skill nghiêng về **hướng dẫn tương tác**; Automation nghiêng về **theo lịch / không người trông**.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Skill longer than reading `AGENTS.md`
-- No acceptance checklist—execution quality drifts
-- Scripts need local secrets with no SECURITY note
-- Duplicates and contradicts Hooks rules
+- Skill quá dài, đọc còn mệt hơn `AGENTS.md`
+- Không có checklist nghiệm thu, chất lượng thực thi trôi
+- Script cần bí mật máy cục bộ mà không ghi SECURITY
+- Trùng và mâu thuẫn với quy tắc Hooks
 
-## Security boundaries
+## Ranh giới an toàn
 
-- See [Skill security and versioning](/skills/security/)
-- Team Skills belong on the extension approval list (see [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Xem [bảo mật và phiên bản Skill](/skills/security/)
+- Skill nhóm nên vào danh sách phê duyệt mở rộng (xem [rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] New teammate can complete the task using only the Skill
-- [ ] Trigger conditions clear; low false-trigger rate
-- [ ] Version or CHANGELOG for team-level Skills
-- [ ] Cross-links to source workflow docs
+- [ ] Đồng nghiệp mới chỉ nhờ Skill hoàn thành được một lần tác vụ
+- [ ] Điều kiện kích hoạt rõ, ít kích hoạt nhầm
+- [ ] Có phiên bản hoặc CHANGELOG (cấp nhóm)
+- [ ] Liên kết chéo với tài liệu quy trình nguồn
 
-## References
+## Nguồn tham chiếu
 
-- KimYx0207 Skills chapters
-- stormzhang `20-skills.md`
-- In-repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) and [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
+- Chương Skills của KimYx0207
+- `20-skills.md` của stormzhang
+- [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) và [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md) trong kho
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public "Save workflows as skills" use cases, plus this handbook's verified Skills, automation, command rules, and extension risk chapters; content is limited to stable guidance on when to capture repeated flows as Skills and how to organize instructions and acceptance.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases “Save workflows as skills” công khai hiện tại trên OpenAI Developers, cùng các chương Skills, tự động hóa, quy tắc lệnh và rủi ro mở rộng đã kiểm chứng của sổ tay; nội dung trang giới hạn ở phương pháp ổn định “khi nào đóng gói quy trình lặp thành Skill, cách tổ chức hướng dẫn và nghiệm thu”.  
+**Kiểm chứng gần nhất:** 2026-07-26

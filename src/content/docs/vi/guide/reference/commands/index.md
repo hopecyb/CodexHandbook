@@ -1,149 +1,149 @@
 ---
-title: CLI Command Reference
-description: Common Codex CLI subcommands and flags—learning index, not a substitute for official docs.
+title: Tham chiếu lệnh CLI
+description: "Lệnh con và flag Codex CLI phổ biến — chỉ mục học, không thay tài liệu chính thức."
 locale: vi
-source_locale: en
-source_revision: 1383fbe
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Command reference helps you pick an entry point—not memorize every flag:
+Tham chiếu lệnh giúp chọn lối vào — không phải thuộc mọi flag:
 
-> **Should I use interactive entry or a one-shot command?**
+> **Tôi nên dùng lối tương tác hay lệnh một lần?**
 
-This page indexes common **Codex CLI** entry points for search and comparison. **Names, flags, and defaults change by version**—run `codex --help` and subcommand `--help`, and follow [OpenAI Codex documentation](https://developers.openai.com/codex).
+Trang này lập chỉ mục các lối vào **Codex CLI** phổ biến để tìm và so sánh. **Tên, flag và mặc định đổi theo phiên bản** — chạy `codex --help` và `--help` của lệnh con, và theo [tài liệu OpenAI Codex](https://developers.openai.com/codex).
 
-## When to use this page
+## Khi nào dùng trang này
 
-- Interactive vs one-shot command
-- Chat-style vs script-style task
-- You know CLI is right but not which entry
+- Lệnh tương tác vs một lần
+- Tác vụ kiểu chat vs kiểu script
+- Bạn biết CLI phù hợp nhưng chưa biết lối nào
 
-## Entry choice
+## Chọn lối vào
 
-- Chat while you work: `codex`
-- One task, result when done: `codex exec`
+- Chat trong khi làm việc: `codex`
+- Một Tác vụ, kết quả khi xong: `codex exec`
 
-For new CLI users, that split solves most entry questions.
+Với người mới CLI, phân chia này giải hầu hết câu hỏi lối vào.
 
-## Command overview (illustrative)
+## Tổng quan lệnh (minh họa)
 
-| Entry | Purpose | Detail |
+| Lối vào | Mục tiêu | Chi tiết |
 |---|---|---|
-| `codex` | Interactive TUI session | [Interactive mode](/guide/cli/interactive-mode/) |
-| `codex exec` (or equivalent) | Non-interactive single/pipeline task | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
-| Configuration | Read/write user/project config | [CLI configuration](/guide/cli/configuration/) |
+| `codex` | Phiên TUI tương tác | [Chế độ tương tác](/guide/cli/interactive-mode/) |
+| `codex exec` (hoặc tương đương) | Tác vụ không tương tác một lần/pipeline | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) |
+| Cấu hình | Đọc/ghi config người dùng/dự án | [Cấu hình CLI](/guide/cli/configuration/) |
 
-:::caution[Version-sensitive]
-Parameter names below reflect common community docs—**may not match your installed CLI**. Re-check `--help` after upgrades.
+:::caution[Nhạy cảm phiên bản]
+Tên tham số dưới đây phản ánh tài liệu cộng đồng phổ biến — **có thể không khớp CLI bạn đã cài**. Đối chiếu lại `--help` sau khi nâng cấp.
 :::
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. You do not need to memorize everything
+### 1. Không cần thuộc hết
 
-Know which entry class fits the task; look up flags when needed.
+Biết lớp lối vào nào phù hợp Tác vụ; tra flag khi cần.
 
-### 2. `codex exec` is not just “advanced `codex`”
+### 2. `codex exec` không chỉ là «`codex` nâng cao»
 
-It targets unattended scripts and CI—not a stronger chat mode.
+Nó hướng tới script và CI không giám sát — không phải chế độ chat mạnh hơn.
 
-### 3. Seeing a flag ≠ you should use it now
+### 3. Thấy một flag ≠ bạn phải dùng ngay
 
-Many flags depend on version, environment, and security policy—understand intent first.
+Nhiều flag phụ thuộc phiên bản, môi trường và chính sách bảo mật — hiểu ý định trước.
 
-### 4. Command reference ≠ tutorial
+### 4. Tham chiếu lệnh ≠ tutorial
 
-It is:
+Nó là:
 
-- An entry map
-- A parameter index
-- A pointer to deeper pages
+- Bản đồ lối vào
+- Chỉ mục tham số
+- Con trỏ tới trang sâu hơn
 
-## Interactive mode (conceptual)
+## Chế độ tương tác (khái niệm)
 
 ```bash
-# Start interactive session at repo root (illustrative)
+# Khởi động phiên tương tác tại gốc repo (minh họa)
 codex
 
-# Common in-session actions (per TUI)
-# - Enter task description
-# - / slash commands → see slash-commands page
-# - Approve shell / file write requests
+# Hành động phổ biến trong phiên (theo TUI)
+# - Nhập mô tả Tác vụ
+# - Lệnh gạch chéo / → xem trang slash-commands
+# - Phê duyệt yêu cầu shell / ghi tệp
 ```
 
-Slash commands: [Slash command reference](/guide/reference/slash-commands/)
+Lệnh gạch chéo: [Tham chiếu lệnh gạch chéo](/guide/reference/slash-commands/)
 
-## Entry decision flow
+## Luồng quyết định lối vào
 
-1. Run `codex --help`
-2. Choose interactive or `exec`
-3. For a subcommand, read its `--help`
+1. Chạy `codex --help`
+2. Chọn tương tác hoặc `exec`
+3. Với lệnh con, đọc `--help` của nó
 
-Avoid drowning in the full flag table on day one.
+Tránh chìm trong bảng flag đầy đủ ngày đầu.
 
-## Quick start
+## Bắt đầu nhanh
 
 1. `codex --help`
-2. Chat while working → `codex`
-3. CI or scripts → study `codex exec`
+2. Chat khi làm việc → `codex`
+3. CI hoặc script → nghiên cứu `codex exec`
 
-## Non-interactive exec (conceptual)
+## Exec không tương tác (khái niệm)
 
 ```bash
-# Working directory and one-shot prompt (illustrative)
-codex exec --cwd /path/to/repo "Your complete task description"
+# Thư mục làm việc và Prompt một lần (minh họa)
+codex exec --cwd /path/to/repo "Mô tả Tác vụ đầy đủ của bạn"
 
-# Common intents (flag names per official docs)
-# --cwd          working directory
-# --model        pin model
-# --sandbox      sandbox policy
-# --approval     approval policy (critical unattended)
-# stdin pipe     read prompt from file or upstream command
+# Ý định phổ biến (tên flag theo tài liệu chính thức)
+# --cwd          thư mục làm việc
+# --model        ghim mô hình
+# --sandbox      chính sách Sandbox
+# --approval     chính sách phê duyệt (then chốt khi không giám sát)
+# stdin pipe     đọc Prompt từ tệp hoặc lệnh phía trước
 ```
 
-Security: [Human approval patterns](/cases/workflows/human-approval-patterns/)
+Bảo mật: [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
-## Configuration and auth (conceptual)
+## Cấu hình và auth (khái niệm)
 
-| Action | Notes |
+| Hành động | Ghi chú |
 |---|---|
-| Sign in | Same as [Sign-in and authentication](/guide/getting-started/sign-in-and-authentication/) |
-| Config files | User/project level—see [Configuration reference](/guide/reference/configuration-reference/) |
-| MCP | [Connect MCP](/skills/mcp/connect-an-mcp-server/) |
+| Đăng nhập | Giống [Đăng nhập và xác thực](/guide/getting-started/sign-in-and-authentication/) |
+| Tệp cấu hình | Cấp người dùng/dự án — xem [Tham chiếu cấu hình](/guide/reference/configuration-reference/) |
+| MCP | [Kết nối MCP](/skills/mcp/connect-an-mcp-server/) |
 
-## Exit codes and automation
+## Mã thoát và tự động hóa
 
-Non-interactive mode usually uses **exit codes** for CI:
+Chế độ không tương tác thường dùng **mã thoát** cho CI:
 
-- `0`: completed per agreement
-- Non-`0`: failure or needs human—check stderr/logs
+- `0`: hoàn thành theo thỏa thuận
+- Khác `0`: thất bại hoặc cần người — kiểm stderr/log
 
-CLI command pages help you pick entry and intent—not memorize parameters.
+Trang lệnh CLI giúp chọn lối vào và ý định — không thuộc tham số.
 
-Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/).
+Đừng bỏ qua stderr trong CI; giữ log cho [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/).
 
-## vs in-chat slash commands
+## vs lệnh gạch chéo trong chat
 
-| | `codex` terminal | In-session `/` |
+| | Terminal `codex` | `/` trong phiên |
 |---|---|---|
-| Docs | This page + product guide | [slash-commands](/guide/reference/slash-commands/) |
-| Best for | Scripts, CI | Interactive exploration |
+| Tài liệu | Trang này + hướng dẫn sản phẩm | [slash-commands](/guide/reference/slash-commands/) |
+| Phù hợp | Script, CI | Khám phá tương tác |
 
-## Troubleshooting
+## Xử lý sự cố
 
-| Symptom | See |
+| Triệu chứng | Xem |
 |---|---|
-| Command not found | [Install CLI](/guide/getting-started/install-cli/) |
-| Config not applied | [CLI configuration](/guide/cli/configuration/) |
-| Approval blocks CI | Tighten prompt + read-only sandbox |
+| Không tìm thấy lệnh | [Cài CLI](/guide/getting-started/install-cli/) |
+| Config không áp dụng | [Cấu hình CLI](/guide/cli/configuration/) |
+| Phê duyệt chặn CI | Siết Prompt + Sandbox chỉ đọc |
 
-[CLI troubleshooting](/guide/cli/troubleshooting/)
+[Xử lý sự cố CLI](/guide/cli/troubleshooting/)
 
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** Written as an entry map but still centers `codex`, `codex exec`, in-session `/`, and parameter intent—high-churn CLI details; restore `verified` after latest official command documentation.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI  
+**Ghi chú đối chiếu:** Viết như bản đồ lối vào nhưng vẫn tập trung `codex`, `codex exec`, `/` trong phiên và ý định tham số — chi tiết CLI biến động cao; khôi phục `verified` sau tài liệu lệnh chính thức mới nhất.  
+**Kiểm chứng gần nhất:** 2026-07-26

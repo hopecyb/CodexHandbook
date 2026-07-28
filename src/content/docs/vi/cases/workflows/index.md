@@ -1,66 +1,66 @@
 ---
-title: Workflow methods
-description: Repeatable collaboration methods—not tied to a single product UI, emphasizing checkpoints and acceptance.
+title: Phương pháp quy trình
+description: Phương pháp cộng tác có thể lặp lại — không gắn một giao diện sản phẩm duy nhất; nhấn mạnh điểm kiểm tra và nghiệm thu.
 locale: vi
-source_locale: en
-source_revision: 89115b8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-[Prompts](/prompts/) teach you how to **say** things; workflows teach you how to **organize a whole task**. Methods in this chapter apply to App, CLI, IDE, and Cloud.
+[Prompt](/prompts/) dạy bạn cách **nói**; quy trình dạy bạn cách **tổ chức cả một việc**. Phương pháp chương này áp dụng cho App, CLI, IDE và Cloud.
 
-## Why workflows matter
+## Vì sao cần quy trình
 
-External tutorials often tell a "one conversation solves it" story; real projects more often look like:
+Hướng dẫn ngoài thường kể «một cuộc hội thoại là xong»; dự án thực tế thường là:
 
 ```text
-Explore → Plan → Execute → Verify → (possibly) handoff or automation
+Khám phá → Lập kế hoạch → Thực thi → Kiểm chứng → (có thể) bàn giao hoặc tự động hóa
 ```
 
-Without checkpoints, you risk: editing the wrong directory, skipping tests, mistaken merges, losing conclusions when context runs out.
+Không có điểm kiểm tra thì dễ: sửa sai thư mục, quên chạy test, merge nhầm, ngữ cảnh hết rồi mất kết luận.
 
-## Core workflows
+## Quy trình cốt lõi
 
-| Workflow | What it solves |
+| Quy trình | Giải quyết vấn đề gì |
 |---|---|
-| [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/) | General main path; fits most tasks |
-| [Brainstorm before building](/cases/workflows/brainstorm-before-building/) | Diverge and converge when approach is unclear |
-| [Specification-driven work](/cases/workflows/specification-driven-work/) | Write acceptance spec before implementation |
-| [Test-driven work](/cases/workflows/test-driven-work/) | Tests first drive implementation |
-| [Human approval patterns](/cases/workflows/human-approval-patterns/) | When to stop, approve, or reject |
-| [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/) | Avoid "guess and patch" |
-| [Review before merge](/cases/workflows/review-before-merge/) | Structured review before PR merge |
-| [Research with sources](/cases/workflows/research-with-sources/) | Search, compare, and source verification |
-| [Artifact-first work](/cases/workflows/artifact-first-work/) | Agree on deliverables first, then derive steps |
-| [Multi-agent coordination](/cases/workflows/multi-agent-coordination/) | Parallel work and division of labor |
-| [Long-running task management](/cases/workflows/long-running-task-management/) | Cross-session checkpoints and exit conditions |
-| [Failure recovery](/cases/workflows/failure-recovery/) | Roll back when off track or tests go red |
-| [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Write repeated flows as Skills |
+| [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/) | Chuỗi chính dùng chung, phù hợp hầu hết tác vụ |
+| [Brainstorm trước rồi mới làm](/cases/workflows/brainstorm-before-building/) | Phân tán và hội tụ khi phương án chưa chốt |
+| [Làm việc theo đặc tả](/cases/workflows/specification-driven-work/) | Viết đặc tả nghiệm thu được trước rồi mới triển khai |
+| [Làm việc theo test](/cases/workflows/test-driven-work/) | Test trước dẫn dắt triển khai |
+| [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) | Khi nào dừng, khi nào duyệt, khi nào từ chối |
+| [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/) | Tránh «đoán rồi sửa» |
+| [Review trước khi merge](/cases/workflows/review-before-merge/) | Review có cấu trúc trước khi merge PR |
+| [Nghiên cứu có nguồn trích dẫn](/cases/workflows/research-with-sources/) | Truy xuất, so sánh và kiểm chứng nguồn |
+| [Ưu tiên Artifact](/cases/workflows/artifact-first-work/) | Thỏa thuận thành phẩm trước rồi suy ngược bước |
+| [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/) | Song song và phân công |
+| [Quản lý tác vụ dài](/cases/workflows/long-running-task-management/) | Điểm kiểm tra xuyên phiên và điều kiện thoát |
+| [Phục hồi thất bại](/cases/workflows/failure-recovery/) | Hoàn tác khi lệch hướng hoặc test đỏ |
+| [Đóng gói thành Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Viết quy trình lặp lại thành Skill |
 
-## Other chapters related to workflows
+## Chương khác liên quan quy trình
 
-- Quality: [Core capabilities · Quality and verification](/guide/quality/)
-- Agent: [Planning](/guide/agent-work/planning/), [Subagents](/guide/agent-work/subagents/)
-- Capture: [Skills](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- Cases: [Use cases library](/cases/use-cases/)
+- Chất lượng: [năng lực cốt lõi · chất lượng và kiểm chứng](/guide/quality/)
+- Agent: [lập kế hoạch](/guide/agent-work/planning/), [Subagent](/guide/agent-work/subagents/)
+- Đóng gói: [Skill](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+- Case: [thư viện kịch bản và case](/cases/use-cases/)
 
-## Design principles
+## Nguyên tắc thiết kế
 
-1. **Each phase has an artifact**: plan, diff, test report, decision record
-2. **Default to small steps**: reviewable increments beat one huge change
-3. **Failures recoverable**: know how to undo and fork a thread to continue
-4. **Capture when possible**: third repetition of a flow → Skill or template
+1. **Mỗi giai đoạn có sản phẩm đầu ra:** kế hoạch, diff, báo cáo test, biên bản quyết định
+2. **Mặc định bước nhỏ:** tăng dần review được tốt hơn một thay đổi khổng lồ
+3. **Thất bại phục hồi được:** biết cách hoàn tác, cách fork Thread để tiếp tục
+4. **Đóng gói được thì đóng gói:** quy trình lặp lần thứ ba viết thành Skill hoặc mẫu
 
-## Reference sources
+## Nguồn tham chiếu
 
-- freestylefly/CodexGuide workflows and playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com fourth article standard workflows
+- Quy trình và playbook freestylefly/CodexGuide
+- `14-workflows.md` của stormzhang
+- Quy trình chuẩn phần bốn trên codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified prompts, quality, agent work, and Skills chapters in this handbook; this page only provides method navigation and phase checkpoint guidance—not treating specific client flows as long-term contracts.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương prompt, chất lượng, làm việc Agent và Skills đã kiểm chứng của sổ tay; trang này chỉ đảm nhận điều hướng phương pháp và điểm kiểm tra theo giai đoạn, không viết quy trình client cụ thể thành hợp đồng dài hạn.  
+**Kiểm chứng gần nhất:** 2026-07-26

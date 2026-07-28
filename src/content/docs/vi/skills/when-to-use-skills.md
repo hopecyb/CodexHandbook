@@ -1,88 +1,88 @@
 ---
-title: When to use Skills
-description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
+title: Khi nào dùng Skills
+description: Quyết định Tác vụ có nên đóng thành Skill, và phân công với lệnh slash, MCP.
 locale: vi
-source_locale: en
-source_revision: f4b5554
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you first encounter Skills, a common question is: is this worth packaging as a Skill?
+Khi mới làm quen Skill, câu hỏi thường gặp là: việc này có đáng làm thành một Skill riêng không.
 
-If everything becomes a Skill, things get heavy; if you never capture repeatable flows, you keep re-explaining the same steps by hand. This page helps you decide when to solidify a workflow.
+Nếu cái gì cũng thành Skill, hệ thống ngày càng nặng; nếu đáng đóng mà không đóng, bạn sẽ mãi lặp lại cùng một lời thủ công. Phần này giúp bạn quyết khi nào nên cố định quy trình.
 
-# When to use Skills
+# Khi nào dùng Skills
 
-## Good candidates for a Skill
+## Phù hợp đóng thành Skill
 
-- The same flow has been repeated manually a third time
-- You need a detailed checklist but do not want it in context every time
-- You want the model to auto-enable based on `description`
-- The team needs a shared, versioned workflow
+- Cùng một quy trình đã bị lặp thủ công lần thứ ba
+- Cần checklist chi tiết nhưng không muốn chiếm hết Ngữ cảnh mỗi lần
+- Muốn model tự quyết khi nào bật theo `description`
+- Nhóm cần workflow chia sẻ và có phiên bản
 
-## Conditions that make a Skill worthwhile
+## Điều kiện phù hợp làm Skill
 
-If a task meets both of these, a Skill is worth considering:
+Nếu một Tác vụ thỏa đồng thời hai điều sau, rất đáng cân nhắc làm Skill:
 
-- You will do it again
-- You want the next run to be as consistent as possible
+- Bạn sẽ làm lại trong tương lai
+- Bạn muốn lần sau cách làm càng giống càng tốt
 
-Many Skills end up in scenarios like:
+Nhiều Skill cuối cùng rơi vào các kịch bản:
 
-- Reviewing diffs
-- Generating changelogs
-- Pre-release checks
-- Documentation publish flows
+- Review diff
+- Sinh changelog
+- Kiểm tra trước phát hành
+- Quy trình phát hành tài liệu
 
-These tasks are not complex, but they reuse well.
+Các Tác vụ này không phức tạp, nhưng rất hợp để tái dùng.
 
-## Poor fits
+## Ít phù hợp
 
-- One-off tasks that never repeat
-- Very short commands you remember (consider a slash command)
-- Needs live external state that changes very fast (consider MCP)
+- Tác vụ một lần, chưa từng lặp
+- Lệnh cố định cực ngắn mà bạn nhớ (cân nhắc lệnh slash)
+- Cần trạng thái hệ thống ngoài theo thời gian thực và thay đổi rất nhanh (cân nhắc MCP)
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Important tasks should always become Skills
+### 1. Tác vụ quan trọng thì phải làm Skill
 
-Important does not mean reusable.  
-A one-off special task may only add maintenance burden as a Skill.
+Quan trọng không đồng nghĩa phù hợp tái dùng.  
+Nếu đó là Tác vụ đặc biệt một lần, làm Skill có thể chỉ tăng gánh bảo trì.
 
-### 2. More Skills is better
+### 2. Càng nhiều Skill càng tốt
 
-Too many Skills with fuzzy boundaries make the model misuse them and the team harder to maintain.
+Quá nhiều Skill ranh giới mờ khiến model dùng nhầm và nhóm khó bảo trì hơn.
 
-### 3. If it connects to external systems, start with a Skill
+### 3. Chỉ cần nối hệ thống ngoài là nên làm Skill trước
 
-External access is often an MCP problem; the Skill owns the **process**—how to connect still depends on MCP.
+Nhiều khi kết nối hệ thống ngoài thiên về MCP hơn; Skill chịu trách nhiệm"quy trình", còn cách kết nối vẫn cần MCP.
 
-## How to try before committing
+## Có thể thử thế nào
 
-If you are unsure a workflow is worth capturing:
+Nếu chưa chắc một quy trình có đáng đóng, hãy thử vài lần:
 
-1. Do it manually two or three times
-2. Notice whether you repeat the same check order each time
-3. If yes, turn it into a Skill
+1. Làm thủ công hai đến ba lần
+2. Quan sát xem mỗi lần có lặp cùng thứ tự kiểm tra không
+3. Nếu câu trả lời là"có", hãy thu thành Skill
 
-Skills built this way are sturdier because they come from real repetition, not upfront design.
+Skill làm theo cách này vững hơn vì đến từ sự lặp thật, không phải thiết kế trên giấy.
 
-## Compared to other extension methods
+## So với các cách mở rộng khác
 
-| Method | Best for |
+| Cách | Phù hợp |
 |---|---|
-| Skill | Reusable flows, progressive disclosure |
-| MCP | External APIs and data sources |
-| Hooks | Auto-run at specific events |
-| `AGENTS.md` | Project-wide standing conventions |
+| Skill | Quy trình tái dùng, tiết lộ dần |
+| MCP | Kết nối API và nguồn dữ liệu ngoài |
+| Hooks | Tự chạy tại điểm sự kiện cụ thể |
+| `AGENTS.md` | Quy ước thường trú cấp dự án |
 
-Skills are best for flows that repeat, need consistency, and you do not want to re-explain every time.
+Skill phù hợp hơn để đóng những quy trình"sẽ lặp, cần nhất quán, và không muốn giải thích lại mỗi lần".
 
-For extension choice, see [Choosing an extension method](/skills/choosing-an-extension-method/). For workflow capture, see [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Chọn cách mở rộng: [Cách chọn phương thức mở rộng](/skills/choosing-an-extension-method/). Đóng workflow: [Biến quy trình thành Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Help "Skills in ChatGPT" confirms Skills are reusable, shareable workflows; current Codex runtime also matches skills by name and description. This page is selection guidance, not volatile UI.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** OpenAI Help"Skills in ChatGPT"xác nhận Skill là workflow tái sử dụng, chia sẻ được; runtime Codex hiện tại cũng khớp theo tên và mô tả kỹ năng. Trang này chủ yếu là nguyên tắc chọn, không phụ thuộc giao diện hay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

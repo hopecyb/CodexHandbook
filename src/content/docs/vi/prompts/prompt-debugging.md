@@ -1,101 +1,102 @@
 ---
-title: Prompt debugging
-description: How to locate prompt problems when results drift.
+title: Gỡ lỗi Prompt
+description: Khi kết quả lệch, định vị vấn đề Prompt thế nào.
 locale: vi
-source_locale: en
-source_revision: 6b34687
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When results are wrong, common causes include:
+Khi kết quả sai, nguyên nhân thường gặp gồm:
 
-- goal not written as a checkable outcome
-- constraints unclear
-- context incomplete or stale
-- task too large without asking for a plan first
+- Mục tiêu chưa viết thành kết quả có thể kiểm tra
+- Ràng buộc chưa rõ
+- Ngữ cảnh thiếu hoặc lỗi thời
+- Tác vụ quá lớn mà chưa xin kế hoạch trước
 
-Prompt debugging finds which layer of information was lost.
+Trọng tâm gỡ lỗi Prompt là tìm xem lớp thông tin nào bị mất.
 
-## Locate the problem first
+## Định vị vấn đề nằm ở đâu trước
 
-When output drifts, you don't always need to start over. Find which layer failed:
+Khi kết quả lệch, không nhất thiết làm lại hết. Định vị lớp lỗi trước thường tiết kiệm hơn:
 
-1. unclear goal?
-2. scope out of control?
-3. insufficient context?
-4. task too big?
-5. wrong tool path chosen?
+1. Mục tiêu không rõ?
+2. Phạm vi mất kiểm soát?
+3. Ngữ cảnh không đủ?
+4. Tác vụ quá lớn?
+5. Hay bản thân hướng công cụ đã chọn sai?
 
-## When results are wrong, ask in order:
+## Khi kết quả sai, hỏi theo thứ tự:
 
-1. Is the goal checkable?
-2. Are constraints clear? Did the Agent see them?
-3. Is context stale or conflicting? (compaction / old thread)
-4. Should you have asked for a plan first?
-5. Wrong tools? (network when it shouldn't, etc.)
+1. Mục tiêu có kiểm tra được không?
+2. Ràng buộc đã viết rõ chưa? Agent có thấy không?
+3. Ngữ cảnh có lỗi thời hoặc xung đột không? (nén / Thread cũ)
+4. Có nên xin kế hoạch trước không?
+5. Công cụ có chọn sai không? (không nên lên mạng mà lại lên mạng)
 
-## What each question checks
+## Mỗi mục đang kiểm gì
 
-### 1. Is the goal checkable?
+### 1. Mục tiêu có kiểm tra được không
 
-Vague goals like "optimize a bit" commonly produce drift.
+Nếu mục tiêu vốn mơ hồ như «tối ưu một chút», kết quả lệch rất thường gặp.
 
-### 2. Are constraints clear?
+### 2. Ràng buộc đã viết rõ chưa
 
-Much "overdoing" comes from not stating where to stop—not from inability.
+Nhiều vấn đề «làm quá tay» không phải vì nó hoàn toàn không biết làm, mà vì bạn chưa nói «chỉ được làm đến đâu».
 
-### 3. Is context stale or conflicting?
+### 3. Ngữ cảnh có lỗi thời hoặc xung đột không
 
-Especially in long threads:
+Đặc biệt trong Thread dài, dễ xuất hiện:
 
-- you said A earlier
-- later you added B
-- the Agent holds a mixed state
+- Trước nói A
+- Sau bổ sung B
+- Hiện nó nhận trạng thái hỗn hợp
 
-### 4. Should you have asked for a plan first?
+### 4. Có nên xin kế hoạch trước không
 
-Large tasks executed directly often deviate more than planned work.
+Tác vụ lớn thì thực thi thẳng thường lệch dễ hơn so với xin kế hoạch trước.
 
-### 5. Wrong tools?
+### 5. Công cụ có chọn sai không
 
-Local code focus but it searched the web; or you wanted cited research but it answered from memory.
+Ví dụ bạn muốn nó tập trung code local mà nó lại tìm mạng ngoài; hoặc bạn muốn nghiên cứu kèm trích dẫn mà nó chỉ trả lời theo ấn tượng.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Bad results mean the whole prompt is trash
+### 1. Kết quả sai nghĩa là cả Prompt hỏng hết
 
-Often you only need a small addition:
+Nhiều khi chỉ cần bổ sung một đoạn nhỏ:
 
-- explicit acceptance
-- narrower scope
-- plan before execution
+- Làm rõ nghiệm thu
+- Thu hẹp phạm vi
+- Yêu cầu xuất kế hoạch trước
 
-### 2. Debugging means making the prompt longer
+### 2. Gỡ lỗi là cứ viết Prompt dài hơn
 
-Sometimes delete noise and keep only the critical boundaries.
+Đôi khi cần xóa nhiễu, chỉ giữ ranh giới then chốt nhất.
 
-### 3. Longer threads are better because more context
+### 3. Thread càng lâu càng tốt vì ngữ cảnh nhiều hơn
 
-Very long threads: old constraints, stale facts, compaction residue can interfere.
+Thread quá lâu thì ràng buộc cũ, thông tin lỗi thời, dư thừa sau nén đều có thể bắt đầu nhiễu.
 
-## A usable recovery sequence
+## Thứ tự khắc phục đủ dùng
 
-To pull work back on track:
+Nếu muốn kéo vấn đề về đúng hướng trước:
 
-1. Rewrite goal to be checkable
-2. Add "only change here, don't change there"
-3. If the task is large, require a plan first
-4. If still messy, shrink to single file or single repro
-5. If still stuck, new thread with key boundaries restated
+1. Viết lại mục tiêu cho kiểm tra được
+2. Bổ sung «chỉ sửa đâu, không sửa đâu»
+3. Nếu tác vụ lớn, yêu cầu kế hoạch trước
+4. Nếu vẫn loạn, thu về tái hiện một tệp hoặc một vấn đề
+5. Vẫn không được thì mở Thread mới và nêu lại ranh giới then chốt
 
-Core idea: find which critical information wasn't conveyed—not keep complicating the wording.
+Cốt lõi gỡ lỗi Prompt là tìm lớp thông tin then chốt nào chưa được truyền đúng—không phải viết câu phức tạp hơn.
 
-If it still fails, shrink to a single-file repro or open a new thread and restate constraints.
+Nếu vẫn thất bại, thu hẹp về tái hiện một tệp, hoặc mở Thread mới nêu lại ràng buộc.
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains prompt debugging only; in-site links and recovery sequence were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả tư duy gỡ lỗi Prompt; liên kết nội bộ và thứ tự gỡ lỗi đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

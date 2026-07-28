@@ -1,22 +1,22 @@
 ---
-title: scripts/ and tests
-description: Add deterministic scripts to a Skill and verify their behavior.
+title: scripts/ và kiểm thử
+description: Thêm script xác định vào Skill và Kiểm chứng hành vi của chúng.
 locale: vi
-source_locale: en
-source_revision: c4f1381
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Early on, it is tempting to put everything in `SKILL.md`. That works for simple flows, but once a step must run **stably, repeatedly, and verifiably**, scripts beat prose.
+Khi mới làm Skill, cách thường gặp là nhét hết vào `SKILL.md`. Quy trình đơn giản thì được, nhưng hễ một bước cần chạy **ổn định, lặp lại, Kiểm chứng được**, script đáng tin hơn mô tả thuần chữ.
 
-Hand fixed actions to scripts; leave judgment and collaboration to the Skill.
+Hành động cố định giao cho script; phán đoán và quy trình cộng tác để Skill lo.
 
-# scripts/ and tests
+# scripts/ và kiểm thử
 
-When a step must run deterministically (run tests, generate diff, validate format), provide a script under `scripts/` and document when to call it in `SKILL.md`.
+Khi một bước phải chạy xác định (chạy test, sinh diff, kiểm tra định dạng), hãy cung cấp script trong `scripts/` và nói rõ trong `SKILL.md` khi nào gọi.
 
-## Example
+## Ví dụ
 
 ```text
 my-skill/
@@ -25,61 +25,61 @@ my-skill/
     └── run-checks.sh
 ```
 
-## When to consider scripts/
+## Khi nào nên cân nhắc `scripts/`
 
-If a step matches any of these, scripts are a strong choice:
+Nếu một bước thỏa bất kỳ điều nào sau, nên ưu tiên cân nhắc script:
 
-- Should run exactly the same every time
-- Exit code itself carries meaning
-- Natural-language description would be verbose
-- You want reuse in CI or other tools later
+- Mỗi lần phải chạy hoàn toàn giống nhau
+- Mã thoát bản thân đã mang nghĩa
+- Mô tả bằng ngôn ngữ tự nhiên sẽ rất dài dòng
+- Bạn muốn sau này CI hoặc công cụ khác cũng tái dùng được
 
-Actions like "run checks," "generate diff," "validate format," and "export report on a fixed schedule" fit scripts well.
+Các hành động như"chạy kiểm tra""sinh diff""xác minh định dạng""xuất báo cáo cố định"đều phù hợp đưa vào script.
 
-## Testing suggestions
+## Gợi ý kiểm thử
 
-- Run scripts manually in a practice repo; confirm exit codes and output
-- Trigger end-to-end via the Skill; confirm scripts are called as expected
-- Team scenario: verify scripts still work in CI or pre-commit
+- Chạy thủ công script trong repo luyện tập, xác nhận mã thoát và đầu ra
+- Dùng Skill kích hoạt quy trình end-to-end, kiểm tra có gọi script đúng kỳ vọng không
+- Kịch bản nhóm: Kiểm chứng trong CI hoặc pre-commit rằng script vẫn dùng được
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Scripts make Skills complex, so avoid them
+### 1. Viết script rồi Skill sẽ phức tạp, nên đừng dùng
 
-If a script stabilizes a flaky step, the whole thing often gets simpler.
+Nếu script cố định được một bước vốn rất không ổn định, tổng thể ngược lại đơn giản hơn.
 
-### 2. If a script runs locally, the Skill is fine
+### 2. Script chạy local được thì Skill chắc chắn ổn
 
-Also check:
+Còn phải xem:
 
-- Whether the Skill triggers it correctly
-- Whether approval policy blocks it
-- Whether it still works in team environments or CI
+- Skill có kích hoạt đúng không
+- Chính sách Phê duyệt có chặn không
+- Trong môi trường nhóm hoặc CI còn chạy bình thường không
 
-### 3. "Testing the Skill" means testing the script
+### 3. "Kiểm thử Skill"chỉ là kiểm thử script
 
-Not enough.
+Không đủ.
 
-Script tests one action;  
-Skill tests when to call, how to call, and whether output matches expectations.
+Script kiểm một hành động;  
+Skill còn phải kiểm"khi nào gọi, gọi thế nào, đầu ra có đúng kỳ vọng không".
 
-## Suggested verification order
+## Thứ tự Kiểm chứng thường gặp
 
-When starting out:
+Khi mới bắt đầu, có thể theo thứ tự:
 
-1. Run the script alone
-2. Check exit code and output clarity
-3. Run full flow through the Skill once
-4. Test again in a realistic environment
+1. Chạy script riêng trước
+2. Xem mã thoát và đầu ra có rõ không
+3. Rồi để Skill gọi một vòng quy trình đầy đủ
+4. Rồi đo lại ở chỗ gần môi trường thật hơn
 
-That separates "script is broken" from "Skill integration is wrong."
+Dễ hơn để tách"script bản thân hỏng"và"cách tích hợp Skill không đúng".
 
-Do not rely on prose alone for actions that must repeat reliably. Get scripts working first, then confirm Skill invocation.
+Hành động chạy lặp ổn định đừng chỉ dựa mô tả chữ. Chạy thông script trước, rồi xác nhận Skill gọi không có vấn đề.
 
-Scripts inherit the current approval policy; see [command rules](/guide/customization/rules/command-rules/) and [Skill security](/skills/security/).
+Script kế thừa chính sách Phê duyệt hiện tại; xem [quy tắc lệnh](/guide/customization/rules/command-rules/) và [bảo mật Skill](/skills/security/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime allows skills to work with scripts and deterministic commands; this page's principle—script stable actions, Skill constrains flow—matches current capability.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Runtime Codex hiện tại cho phép kỹ năng kết hợp script và lệnh xác định; trang này nhấn mạnh nguyên tắc"hành động ổn định thì script hóa, quy trình vẫn do Skill ràng buộc", khớp năng lực hiện hành.  
+**Kiểm chứng gần nhất:** 2026-07-26

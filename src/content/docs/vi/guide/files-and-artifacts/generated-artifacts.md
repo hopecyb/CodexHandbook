@@ -1,112 +1,121 @@
 ---
-title: Verifying Generated Artifacts
-description: Systematically accept files, reports, and build outputs that Codex creates or exports.
+title: Nghiệm thu artifact tạo ra
+description: Nghiệm thu có hệ thống tệp, báo cáo và artifact build mà Codex tạo mới hoặc xuất.
 locale: vi
-source_locale: en
-source_revision: af56e40
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When an Agent finishes, it may create reports, scripts, static sites, test data, and other **generated artifacts**. They may not go through your usual code review path—so they need their own verification habit.
+Khi Agent hoàn thành tác vụ có thể tạo mới báo cáo, script, site tĩnh, dữ liệu kiểm thử và các **artifact** khác. Chúng chưa chắc đi qua đường rà soát mã bạn quen, nên cần thói quen nghiệm thu riêng.
 
-New files from Codex are not automatically ready to use.
+Tệp do Codex mới tạo không nghĩa đã có thể dùng thẳng.
 
-## What this page covers
+## Nội dung trang này
 
-- How verifying generated artifacts differs from “editing existing code”
-- Checklists
-- When to reject or redo
+- Khác biệt nghiệm thu giữa artifact và «sửa mã hiện có»
+- Danh sách kiểm tra
+- Khi nào từ chối, yêu cầu làm lại
 
-## Artifact types
+## Loại artifact
 
-| Type | Verification focus |
+| Loại | Trọng tâm nghiệm thu |
 |---|---|
-| Scripts `.sh` `.py` | Executable, safe, idempotent |
-| Reports `.md` `.html` | Factual accuracy, valid links |
-| Build output `dist/` | Should it be gitignored? |
-| Test fixtures | No real PII |
-| Config templates | No default weak passwords |
+| Script `.sh` `.py` | Chạy được, vô hại, idempotent |
+| Báo cáo `.md` `.html` | Sự kiện chính xác, liên kết hiệu lực |
+| Đầu ra build `dist/` | Có nên gitignore không |
+| Fixture kiểm thử | Không có PII thật |
+| Mẫu cấu hình | Không mật khẩu yếu mặc định |
 
-## What “generated artifact” means here
+## “Artifact” ở đây là gì
 
-- Files Codex newly wrote
-- Reports it exported
-- Pages, directories, or packages it built
+“Artifact” ở đây là:
 
-Unlike “changed a few lines of existing code,” these are easy to overlook.
+- Tệp nó viết mới giúp bạn
+- Báo cáo nó xuất giúp bạn
+- Trang, thư mục hoặc gói nó build giúp bạn
 
-## Verification flow
+Những thứ này khác “chỉ sửa vài dòng mã hiện có”, vì dễ hơn để bạn bỏ qua nội dung thật.
+
+## Quy trình nghiệm thu
 
 ```text
-1. Open the artifact (do not rely on Agent summary alone)
-2. Compare to “definition of done” in the task
-3. Run related tests or preview commands
-4. Check path, permissions, size
-5. Decide: accept / partial edit / discard and redo
+1. Mở artifact (đừng chỉ xem tóm tắt chữ của Agent)
+2. Đối chiếu «định nghĩa hoàn thành» trong tác vụ
+3. Chạy lệnh kiểm thử hoặc xem trước liên quan
+4. Kiểm đường dẫn, quyền, dung lượng
+5. Quyết định: nhận / sửa cục bộ / bỏ làm lại
 ```
 
-Methods: [Verify artifacts](/guide/quality/verify-artifacts/), [Definition of done](/guide/quality/definition-of-done/)
+Phương pháp: [Kiểm chứng artifact](/guide/quality/verify-artifacts/), [Định nghĩa hoàn thành](/guide/quality/definition-of-done/)
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. “Done” in chat still requires opening files
+### 1. Nó nói “đã xong” vẫn phải xem artifact thật
 
-Summaries say what the Agent *thought* it did—not what actually landed on disk.
+Tóm tắt chỉ nói “nó nghĩ mình đã làm gì”, không thay bạn mở tệp xác nhận “artifact thật trông thế nào”.
 
-### 2. New files are not automatically safer than edits
+### 2. Tệp mới chưa chắc an toàn hơn sửa tệp cũ
 
-They can still have wrong content, extra dependencies, leaked info, or huge files that should not be committed.
+Tệp mới cũng có thể có:
 
-### 3. “Runs locally” ≠ worth committing
+- Nội dung sai
+- Dependency thừa
+- Lộ thông tin
+- Tệp lớn không nên commit vào kho
 
-Some outputs are for local temp use only—not Git.
+### 3. Chỉ cần chạy ra được chưa chắc đáng commit
 
-## Relationship to Git
+Một số artifact chỉ phù hợp dùng tạm cục bộ, không phù hợp vào Git.
 
-- Clarify what **should be committed** vs `.gitignore`
-- Avoid megabytes of build cache in one PR
-- Large artifacts: CI artifact or external storage
+## Quan hệ với Git
 
-## Practical verification order
+- Nói rõ artifact nào **nên commit**, cái nào nên `.gitignore`
+- Tránh một PR lẫn megabytes cache build
+- Artifact lớn dùng CI artifact hoặc lưu trữ ngoài
 
-1. Confirm what was generated
-2. Open the most important artifact
-3. Check it is in allowed directories
-4. Decide if it belongs in the repo
-5. Accept, edit, or redo
+## Thứ tự nghiệm thu thường dùng
 
-## Untrusted artifacts
+Nếu vừa nhận một lô artifact, có thể xem theo thứ tự:
 
-For untrusted repos or externally driven tasks:
+1. Xác nhận đã tạo những tệp gì
+2. Mở artifact then chốt nhất
+3. Xem có rơi trong thư mục được phép không
+4. Xem có nên commit vào kho không
+5. Rồi quyết nhận, sửa hay làm lại
 
-- Read scripts before executing
-- Watch for `curl | bash`, obfuscated payloads
-- Preview in sandbox or container
+## Artifact không đáng tin
 
-Generated does not mean verified—open, validate, and know whether it should be committed.
+Với tác vụ kho không đáng tin hoặc dữ liệu ngoài dẫn dắt:
 
-## Common mistakes
+- Đọc script trước rồi mới chạy
+- Cảnh giác `curl | bash`, payload làm rối
+- Xem trước trong Sandbox hoặc container
 
-- Bullet summary only; never open files
-- Commit one-off debug output to main
-- HTML reports with tracking pixels or unreviewed external scripts
+Artifact không chỉ xem “đã tạo”. Ít nhất phải mở xem, kiểm chứng, và biết có nên commit không.
 
-## Acceptance checklist
+## Lỗi thường gặp
 
-- [ ] Every new file path is within allowed scope
-- [ ] Main content opened and skimmed
-- [ ] Automated checks (lint/test/link check) run
-- [ ] No secrets, no stray generated directories
+- Chỉ xem bullet summary của Agent mà không mở tệp
+- Commit đầu ra gỡ lỗi một lần vào main
+- Báo cáo HTML chứa pixel theo dõi hoặc script liên kết ngoài chưa rà
 
-## Reference sources
+## Danh sách nghiệm thu
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- external-source-integration case acceptance requirements
+- [ ] Mỗi đường dẫn tệp mới trong phạm vi cho phép
+- [ ] Mở và quét nội dung chính
+- [ ] Kiểm tự động (lint/test/link check) đã chạy
+- [ ] Không secrets, không thư mục sinh thừa
+
+## Nguồn tham khảo
+
+- [Xử lý sự không chắc chắn](/guide/quality/handle-uncertainty/)
+- Yêu cầu nghiệm thu case external-source-integration
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified verify-artifacts, definition-of-done, handle-uncertainty, and file-artifact pages; focuses on stable method: generated ≠ deliverable, must open and verify, clarify commit policy.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương kiểm chứng artifact, định nghĩa hoàn thành, xử lý sự không chắc chắn và artifact tệp đã kiểm chứng trong sổ tay; trang này tập trung phương pháp nghiệm thu ổn định “tạo không bằng giao được, phải mở nghiệm thu, nói rõ có nên commit”.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,106 +1,109 @@
 ---
-title: Constraints and boundaries
-description: Limit what can change, style rules, and forbidden actions.
+title: Định nghĩa ràng buộc
+description: Giới hạn phạm vi được sửa, phong cách và điều cấm.
 locale: vi
-source_locale: en
-source_revision: d18b013
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many tasks fail not because the goal was missing entirely, but because **boundaries were unclear**.
+Nhiều tác vụ thất bại không phải vì hoàn toàn không nêu mục tiêu, mà vì **ranh giới không rõ**.
 
-You say "help me fix this page" and Codex might read it as:
+Bạn nói «giúp tôi sửa trang này», Codex có thể hiểu thành:
 
-- copy only
-- copy plus styles
-- components too
-- add dependencies
+- Chỉ sửa copy
+- Có thể sửa style tiện tay
+- Có thể đụng component
+- Có thể thêm dependency
 
-When you only wanted "this paragraph of copy, don't touch structure."
+Trong khi bạn muốn có thể chỉ là «chỉ sửa đoạn copy này, không được đụng cấu trúc».
 
-Constraints answer: where does this stop, and what is absolutely off limits?
+Ràng buộc trả lời: việc này dừng ở đâu, tuyệt đối không được đụng gì.
 
-## What this covers
+## Nội dung
 
-It mainly helps avoid:
+Nó chủ yếu giúp tránh:
 
-- changing more than asked
-- unauthorized actions
-- edits at layers you didn't intend
-- "done" outcomes with too much collateral change
+- Sửa thừa tiện tay
+- Thao tác vượt quyền
+- Đụng lớp bạn không định cho đụng
+- Trông như xong nhưng cái giá quá lớn
 
-## Common constraints
+## Ràng buộc thường dùng
 
-Constraints answer: "what must never happen?"
+Ràng buộc trả lời: «Những việc nào tuyệt đối không được làm?»
 
-- only listed files/directories
-- don't change API contracts / don't change the database
-- don't add new dependencies
-- don't make network requests
-- keep existing formatter configuration
+- Chỉ sửa tệp/thư mục đã liệt kê
+- Không đổi hợp đồng API / không đổi cơ sở dữ liệu
+- Không thêm dependency mới
+- Không phát yêu cầu mạng
+- Giữ cấu hình công cụ format hiện có
 
-## Goal vs. constraints
+## Phân biệt «mục tiêu» và «ràng buộc»
 
-- **Goal:** what you want it to achieve
-- **Constraints:** lines it must not cross while doing it
+- **Mục tiêu**: bạn muốn nó làm thành gì
+- **Ràng buộc**: khi làm việc đó, không được vượt những đường nào
 
-Example:
-
-```text
-Goal: Make the homepage hero copy clearer
-Constraints: Don't change layout, don't add dependencies, don't change CTA behavior
-```
-
-Without constraints, "make it clearer" often becomes a much larger redesign.
-
-## Common misconceptions
-
-### 1. Constraints make results worse
-
-Clear constraints often produce results closer to what you actually want—they cut detours.
-
-### 2. "Don't change too much" is enough
-
-Too vague.
-
-More useful:
-
-- only `src/content/docs/...`
-- don't change components
-- don't change APIs
-- don't install dependencies
-
-### 3. Constraints only matter for high-risk tasks
-
-Small tasks need them too—one vague sentence easily expands the scope.
-
-## A usable skeleton
+Ví dụ:
 
 ```text
-Constraints:
-- Only change 【directory/file】
-- Don't change 【components / API / database / config】
-- Don't add dependencies
-- Ask when information is insufficient; don't guess
+Mục tiêu: Sửa copy Hero trang chủ cho rõ hơn
+Ràng buộc: Không đổi layout, không thêm dependency, không đổi hành vi CTA
 ```
 
-## When to write constraints more finely
+Khi thiếu ràng buộc, Codex rất dễ hiểu «làm rõ hơn» thành một nhiệm vụ cải tiến lớn hơn.
 
-Be explicit when:
+## Hiểu lầm thường gặp
 
-- legacy codebase with heavy baggage
-- you want a local patch only
-- hard team rules on style or architecture
-- permissions, network, or dependency installs are involved
+### 1. Ràng buộc có làm kết quả kém đi không
 
-Goal tells Codex what to do; constraints tell it where to stop.
+Nhiều khi ràng buộc rõ lại khiến kết quả sát nhu cầu thật hơn, vì ít đi đường vòng.
 
-Write permission boundaries with constraints to reduce "while I'm here" overreach. See also [Define done](/prompts/define-done/) and [Permissions and sandbox](/guide/permissions-and-sandbox/).
+### 2. «Đừng sửa quá nhiều» đã tính là ràng buộc
+
+Cách nói đó quá mơ hồ.
+
+Hữu ích hơn là:
+
+- Chỉ sửa `src/content/docs/...`
+- Không sửa component
+- Không sửa API
+- Không cài dependency
+
+### 3. Chỉ tác vụ rủi ro cao mới cần ràng buộc
+
+Tác vụ nhỏ cũng cần, vì lúc đó dễ nói yêu cầu mơ hồ một câu và để nó tự mở rộng.
+
+## Một cách viết đủ dùng
+
+Nếu tạm chưa biết viết thế nào, dùng khung này trước:
+
+```text
+Ràng buộc:
+- Chỉ sửa 【thư mục/tệp】
+- Không sửa 【component / API / cơ sở dữ liệu / cấu hình】
+- Không thêm dependency
+- Khi thiếu thông tin: hỏi trước, đừng đoán
+```
+
+## Khi nào cần viết ràng buộc chi tiết hơn
+
+Những tình huống sau nên nêu ràng buộc rõ:
+
+- Dự án cũ, nợ kỹ thuật nhiều
+- Bạn chỉ muốn vá cục bộ
+- Nhóm có yêu cầu cứng về phong cách hoặc kiến trúc
+- Liên quan quyền, mạng, cài dependency
+
+Mục tiêu bảo Codex làm gì; ràng buộc bảo nó dừng ở đâu.
+
+Ranh giới quyền nên viết cùng ràng buộc, giảm vượt quyền «tiện tay». Trang liên quan: [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/) và [Quyền và Sandbox](/guide/permissions-and-sandbox/).
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains constraint and boundary writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách viết ràng buộc và ranh giới; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

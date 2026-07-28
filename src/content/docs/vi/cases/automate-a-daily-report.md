@@ -1,50 +1,49 @@
 ---
-title: Automate a daily report
-description: Turn repetitive summarization into a reusable script or Skill.
+title: Tự động hóa báo cáo hàng ngày
+description: Cố định công việc tổng hợp lặp lại thành script hoặc Skill có thể tái sử dụng.
 locale: vi
-source_locale: en
-source_revision: 4c3433d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Automate a daily report
+# Tự động hóa báo cáo hàng ngày
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Teams |
+| Đối tượng | Nhóm |
 | Client | CLI |
-| Estimated time | 1–2 hours (first version) |
+| Thời gian ước tính | 1–2 giờ (bản đầu) |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Automatically generate daily summaries of changes, test results, and todo lists.
+**Mục tiêu:** Mỗi ngày tự động tạo tóm tắt thay đổi, kết quả test và danh sách việc cần làm.
 
-**Success criteria:** One command or Skill produces Markdown in a fixed format; failures have clear exit codes.
+**Tiêu chí thành công:** Một lệnh hoặc Skill tạo được Markdown định dạng cố định; thất bại có mã thoát rõ ràng.
 
-## 2. Reference pattern
+## 2. Mẫu tham chiếu
 
-The team already has a similar case: [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/).
+Nhóm đã có case tương tự: [kiểm tra liên kết tài liệu theo lịch](/cases/use-cases/team-automation/scheduled-link-check/).
 
-## 3. Recommended prompt
+## 3. Prompt đề xuất
 
 ```text
-Goal: Generate a daily report Markdown for yesterday through today.
-Content: git log summary, CI status (if readable), open PR list.
-Output: reports/daily-YYYY-MM-DD.md
-Constraints: Read-only git; do not push; provide scripts/generate-daily.sh for repeat runs.
+Mục tiêu: Tạo Markdown báo cáo hàng ngày từ hôm qua đến nay.
+Nội dung: tóm tắt git log, trạng thái CI (nếu đọc được), danh sách PR mở.
+Đầu ra: reports/daily-YYYY-MM-DD.md
+Ràng buộc: Chỉ đọc git; không push; cung cấp scripts/generate-daily.sh để chạy lại dễ dàng.
 ```
 
-## 4. Capture for reuse
+## 4. Đóng gói lại
 
-- [Automation Skill example](/skills/examples/automation-skill/)
-- [Scheduled tasks](/skills/automations/scheduled-tasks/)
-
+- [Ví dụ Skill tự động hóa](/skills/examples/automation-skill/)
+- [Tác vụ theo lịch](/skills/automations/scheduled-tasks/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include repeatable automation scenarios such as "Automate bug triage" and "Turn feedback into actions"; this page defines the daily report as "fixed-format Markdown + clear exit code + reusable script or Skill"—a stable automation workflow pattern, not dependent on any specific integration.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm các kịch bản tự động hóa lặp lại như “Automate bug triage”, “Turn feedback into actions”; trang này định nghĩa báo cáo hàng ngày là “Markdown định dạng cố định + mã thoát rõ + script/Skill tái sử dụng được” — mô hình quy trình tự động hóa ổn định, không phụ thuộc một tích hợp cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

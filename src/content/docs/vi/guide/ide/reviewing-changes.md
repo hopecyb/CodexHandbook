@@ -1,99 +1,99 @@
 ---
-title: Reviewing changes in the IDE
-description: Reading diffs, commenting, and accepting or rejecting Codex suggestions in the editor.
+title: Rà soát thay đổi trong IDE
+description: Đọc diff, bình luận và chấp nhận/từ chối gợi ý Codex trong trình soạn thảo.
 locale: vi
-source_locale: en
-source_revision: c5f9bb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-IDE review sits between inline completion and full PR review: changes often appear directly in the editor or a side diff view. This page explains how to accept results safely.
+Trải nghiệm rà soát của tiện ích IDE nằm giữa «bổ sung nội dòng» và «review PR đầy đủ»: thay đổi thường hiện trực tiếp trong trình soạn thảo hoặc view diff bên. Trang này nói cách chấp nhận kết quả an toàn.
 
-In the IDE, do not treat "one-click accept" as the default even when a change looks ready.
+Khi thấy một đoạn «có thể chấp nhận ngay» trong IDE, cũng đừng coi «chấp nhận một lần» là thao tác mặc định.
 
-## What's covered
+## Nội dung trang
 
-- Common IDE review UI patterns
-- Accept, reject, and partial-accept strategy
-- Connecting to Git, tests, and PR workflow
+- Hình thái UI rà soát thường gặp trong IDE
+- Chiến lược chấp nhận, từ chối, chấp nhận một phần
+- Nối với Git, kiểm thử, quy trình PR
 
-## Review flow
+## Quy trình rà soát
 
-1. **Scope**: which files changed? unexpected deletes or formatting storms?
-2. **Logic**: branches, error handling, edge cases
-3. **Security**: secrets, injection, privilege escalation, dependency tampering
-4. **Verification**: project tests / lint (IDE terminal or task scripts)
-5. **Decision**: accept, request changes, or undo and resend task
+1. **Xem phạm vi**: những tệp nào đổi? Có xóa hoặc bão định dạng không được yêu cầu không
+2. **Đọc logic**: nhánh điều kiện, xử lý lỗi, biên
+3. **Kiểm an toàn**: khóa, injection, leo thang quyền, đầu độc phụ thuộc
+4. **Chạy kiểm chứng**: kiểm thử / lint theo ước định dự án (terminal IDE hoặc script tác vụ)
+5. **Quyết định**: chấp nhận, yêu cầu sửa, hoặc hoàn tác rồi gửi lại tác vụ
 
-Methodology: [review diffs](/guide/quality/review-diffs/)
+Phương pháp luận: [Rà soát diff](/guide/quality/review-diffs/)
 
-## IDE-specific actions (conceptual)
+## Thao tác riêng IDE (khái niệm)
 
-| Action | Suggestion |
+| Thao tác | Gợi ý |
 |---|---|
-| Inline diff / ghost text | Read block by block; avoid accept-all |
-| Accept single file | Start with lowest-risk file (e.g. tests) |
-| Reject and retry | Follow up: "change only X, do not touch Y" |
-| Git integration | After accept, still `git diff` before commit |
+| Inline diff / văn bản bóng | Xem rõ từng khối rồi mới chấp nhận — tránh chấp nhận hết một lần |
+| Chấp nhận từng tệp | Chấp nhận trước tệp rủi ro thấp nhất (ví dụ kiểm thử) |
+| Từ chối và thử lại | Trong follow-up nói «chỉ sửa X, đừng đụng Y» |
+| Tích hợp Git | Sau chấp nhận vẫn dùng `git diff` kiểm lại rồi mới commit |
 
-[Desktop App diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/) is fuller; IDE review is **lightweight and high-frequency**.
+[Diff, bình luận và rà soát](/guide/desktop-app/diffs-comments-and-review/) của Desktop App đầy đủ hơn; phía IDE lấy rà soát **nhẹ, tần suất cao** làm chính.
 
-## Recommended prompt habits
+## Thói quen Prompt khuyến nghị
 
-State up front:
+Trước khi bắt đầu tác vụ, ghi:
 
-- Allowed path globs
-- Forbidden: `git push`, changing lockfile (unless explicitly requested)
-- On completion: list change summary; **do not auto-commit**
+- Glob đường dẫn được phép sửa
+- Cấm: `git push`, sửa lockfile (trừ khi yêu cầu rõ)
+- Khi hoàn thành: liệt kê tóm tắt thay đổi, **không tự commit**
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+Xem [Mẫu phê duyệt thủ công](/cases/workflows/human-approval-patterns/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Trusting a green test icon without running tests yourself
-- Hiding logic changes inside a large auto-format diff
-- Push immediately after accept, skipping PR / branch protection
+- Tin biểu tượng kiểm thử xanh nhưng chưa tự chạy
+- Giấu thay đổi logic trong diff tự định dạng lớn
+- Chấp nhận xong push thẳng, chưa qua PR / bảo vệ nhánh
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] `git status` matches expected files
-- [ ] Tests pass (local or CI)
-- [ ] No `.env`, tokens, or debug `console.log` left behind
-- [ ] Commit message written or confirmed by you
+- [ ] `git status` khớp tệp kỳ vọng
+- [ ] Kiểm thử qua (local hoặc CI)
+- [ ] Không còn `.env`, token, `console.log` debug dư
+- [ ] Thông điệp commit do bạn viết hoặc xác nhận
 
-## Common questions
+## Câu hỏi thường gặp
 
-### 1. Inline suggestions look small—safe to accept?
+### 1. Gợi ý nội dòng trông nhỏ — nhận thẳng được không?
 
-Do not make that a habit.
+Tốt nhất đừng thành thói quen.
 
-Many issues are not about size—they are about "small enough that nobody looked closely."
+Nhiều vấn đề không nằm ở «thay đổi lớn», mà ở «trông nhỏ nên không xem kỹ».
 
-### 2. Not confident reviewing logic—what helps most?
+### 2. Tôi chưa giỏi rà logic — xem gì trước hữu ích nhất?
 
-These three checks already add value:
+Xem ba việc này đã rất đáng:
 
-- Correct files changed?
-- Anything deleted that should stay?
-- Obvious debug residue or style drift?
+- Có phải tệp bạn muốn không
+- Có xóa thứ không nên xóa không
+- Có dư debug rõ hoặc lệch phong cách không
 
-### 3. Does accept mean done?
+### 3. Chấp nhận xong có bằng hoàn thành?
 
-Not yet.
+Chưa.
 
-Accept only puts changes in your working tree—you still verify and decide whether to commit.
+Chấp nhận chỉ đưa thay đổi vào không gian làm việc của bạn; sau đó còn kiểm chứng, rồi quyết định có commit không.
 
-"Accept" in the IDE is a mid-step, not final acceptance.
+«Chấp nhận thay đổi» trong IDE chỉ là thao tác giữa chừng, không phải nghiệm thu cuối.
 
-## References
+## Nguồn tham khảo
 
-- [Verification and human review](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
+- [Kiểm chứng và rà soát thủ công](/guide/foundations/verification-and-human-review/)
+- `09-ide.md` của stormzhang
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page depends on whether the IDE extension currently offers inline diff, side diff, accept/reject per block, etc.; current official public material cannot verify each UI capability—do not mark `verified` until newer extension docs are available.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** IDE  
+**Ghi chú tái kiểm:** Trang này phụ thuộc việc tiện ích IDE hiện có cung cấp inline diff, diff bên, gợi ý chấp nhận/từ chối theo khối hay không — tài liệu chính thức công khai hiện chưa đủ để xác nhận từng năng lực giao diện; trước khi bổ sung tài liệu tiện ích phiên bản mới không nên gắn `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

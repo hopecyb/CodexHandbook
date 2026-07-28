@@ -1,130 +1,136 @@
 ---
-title: Tables and Spreadsheets
-description: Read, clean, analyze, and export CSV, Excel, and tabular data—without breaking structure or encoding.
+title: Bảng và bảng tính
+description: Đọc, làm sạch, phân tích và xuất dữ liệu dạng CSV, Excel và bảng — tránh phá cấu trúc và mã hóa.
 locale: vi
-source_locale: en
-source_revision: 2664ff7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Spreadsheet tasks are a classic silent-failure category: delimiter, encoding, headers, formulas, or date format—one mistake breaks everything downstream.
+Tác vụ bảng là điển hình dễ sai thầm lặng: dấu phân cách, mã hóa, tiêu đề cột, công thức và định dạng ngày — sai một cái là downstream sập hết.
 
-## What this page covers
+## Nội dung trang này
 
-- Safe read/write of CSV / Excel with Codex
-- Prompt structure for data analysis tasks
-- Verifying counts and numbers
+- Làm sao để Codex đọc/ghi CSV / Excel an toàn
+- Cấu trúc Prompt cho tác vụ phân tích dữ liệu
+- Nghiệm thu số và số dòng thế nào
 
-## Format choice
+## Chọn định dạng
 
-| Format | Pros | Watch out |
+| Định dạng | Ưu điểm | Chú ý |
 |---|---|---|
-| CSV | Text-diffable, universal | Encoding (UTF-8 BOM), delimiter, quoting |
-| TSV | Fewer comma conflicts | Same as CSV |
-| XLSX | Multiple sheets, formulas | Binary, hard diff; use libraries |
-| Google Sheets | Collaboration | Often via MCP or CSV export |
+| CSV | Văn bản diff được, phổ biến | Mã hóa (UTF-8 BOM), dấu phân cách, thoát dấu ngoặc |
+| TSV | Ít xung đột dấu phẩy | Giống CSV |
+| XLSX | Nhiều sheet, công thức | Nhị phân, khó diff; dùng thư viện đọc/ghi |
+| Google Sheets | Cộng tác | Thường qua MCP hoặc xuất CSV |
 
-Small data for Git: **prefer CSV/TSV**. Complex reports: **source CSV + script to generate XLSX**.
+Dữ liệu nhỏ, cần vào Git: **ưu tiên CSV/TSV**. Báo cáo phức tạp: **nguồn CSV + script sinh XLSX**.
 
-Three questions:
+Xem ba điểm này trước:
 
-- Need diff, traceability, reproducibility: CSV / TSV
-- Deliver to Excel users: export XLSX
-- Do not confuse “view format” with “best processing format”
+- Cần diff được, truy vết được, tái hiện được: ưu tiên CSV / TSV
+- Cần giao cho người quen Excel: rồi mới xuất XLSX
+- Đừng gộp “định dạng xem cuối” với “định dạng nguồn phù hợp xử lý tự động nhất” thành một việc
 
-## Read and analyze
+## Đọc và phân tích
 
-Recommended prompt shape:
+Cấu trúc Prompt khuyến nghị:
 
 ```text
-File: data/sales_2025.csv
-Encoding: UTF-8
-Task: Summarize revenue by region, output summary.csv
-Constraints: Do not modify source; treat blanks as 0; two decimal places
-Verification: Print first 5 rows + total row count
+Tệp: data/sales_2025.csv
+Mã hóa: UTF-8
+Tác vụ: Tổng hợp revenue theo region, xuất summary.csv
+Ràng buộc: Không sửa tệp gốc; giá trị trống xử lý như 0; giữ hai chữ số thập phân
+Nghiệm thu: In 5 dòng đầu + tổng số dòng
 ```
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Ngữ cảnh: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
 
-## Why spreadsheets fail quietly
+## Vì sao tác vụ bảng đặc biệt dễ sai thầm
 
-Common traps:
+Nhưng chỗ thật sự dễ có vấn đề thường là:
 
-- Dates as text vs date
-- Blanks as 0 vs skip vs error
-- Which column is the unique key
-- Rounding for decimals and currency
-- Whether source file may change
+- Ngày bị coi là văn bản hay ngày
+- Giá trị trống tính 0, bỏ qua, hay báo lỗi
+- Cột nào mới là định danh duy nhất
+- Số thập phân và tiền có làm tròn không
+- Tệp gốc có được sửa không
 
-Without clarity, Codex may “finish” with unreliable results.
+Nếu những điều này không nói rõ, Codex cũng có thể “trông như đã xong” nhưng kết quả không đáng tin.
 
-## Write and clean
+## Ghi và làm sạch
 
-- Specify **column names, order, types** (dates as ISO 8601)
-- Batch large tables to avoid memory blowups
-- Deduplication and merge keys in the task—do not let Agent guess “primary key”
+- Nói rõ **tên cột, thứ tự, kiểu** (ngày dùng ISO 8601)
+- Bảng lớn xử lý theo lô, tránh tải một lần hết bộ nhớ
+- Khóa khử trùng, gộp viết vào mô tả tác vụ; đừng để Agent đoán «khóa chính»
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Opens in Excel ≠ correct
+### 1. Chỉ cần cuối cùng mở được tệp là xử lý đúng
 
-“Opens” and “data intact” are different.
+Sai.
 
-### 2. Looks fine in Excel ≠ fine downstream
+Trong tác vụ kiểu bảng, “mở được” và “dữ liệu chưa bị làm hỏng” là hai việc khác nhau.
 
-Errors may appear only when another system consumes:
+### 2. Trong Excel nhìn ổn chưa chắc ổn
 
-- Wrong encoding
-- Column order changed
-- Numeric types changed
-- Formulas baked to values
+Một số lỗi chỉ lộ khi hệ thống sau tiêu thụ, ví dụ:
 
-### 3. Let Agent decide blanks, dates, keys
+- Mã hóa sai
+- Thứ tự cột đổi
+- Kiểu số đổi
+- Công thức bị ghi cứng thành kết quả
 
-Usually avoid—explicit rules are steadier.
+### 3. Để Agent tự phán đoán giá trị trống, ngày, khóa chính là được
 
-## Five things to state for spreadsheet tasks
+Thường không khuyến nghị.
 
-1. Input file
-2. Output filename
-3. Columns to keep, aggregate, or clean
-4. Blanks, dates, duplicates handling
-5. How to verify results
+Các quy tắc loại này càng rõ, kết quả càng ổn.
 
-Much steadier than “clean up this Excel.”
+## Khi giao tác vụ bảng, nói rõ những điều này
 
-Python: `pandas`; Node: `csv-parse` / `xlsx`—document project standard in `AGENTS.md`.
+Cố nói yêu cầu thành 5 việc:
 
-## Verification
+1. Tệp đầu vào là gì
+2. Tệp đầu ra tên gì
+3. Cột nào giữ, tổng hợp hoặc làm sạch
+4. Giá trị trống, ngày, trùng xử lý thế nào
+5. Kiểm chứng kết quả thế nào
 
-- Row counts and totals cross-check against source
-- Open Excel and confirm dates are not stored as numbers wrongly
-- [Verify artifacts](/guide/quality/verify-artifacts/): sample comparison
+Ổn định hơn nhiều so với chỉ nói “giúp tôi chỉnh Excel này”.
 
-For spreadsheets, clarity on columns, types, rules, and acceptance matters most.
+Nếu dùng Python: `pandas` đọc/ghi; nếu dùng Node: `csv-parse` / `xlsx` v.v. — ước định thư viện chuẩn dự án trong `AGENTS.md`.
 
-## Common mistakes
+## Với kiểm chứng
 
-- CSV garbled in Excel (missing BOM or wrong encoding)
-- Float totals without rounding rules
-- Edit formulas in Excel without reproducible script
+- Số dòng, tổng có đối chiếu chéo với dữ liệu nguồn không
+- Mở Excel xem ngày có bị coi là số không
+- [Kiểm chứng artifact](/guide/quality/verify-artifacts/): so sánh rút mẫu
 
-## Acceptance checklist
+Trong tác vụ bảng, quan trọng hơn là nói rõ cột, kiểu, quy tắc và nghiệm thu.
 
-- [ ] Column names and types match downstream contract
-- [ ] Totals/samples match manual or SQL check
-- [ ] Source file not overwritten unexpectedly (or change visible in diff)
+## Lỗi thường gặp
 
-## Reference sources
+- Excel mở CSV tiếng Trung/Việt loạn mã (thiếu BOM hoặc sai mã hóa)
+- Sai số tổng hợp dấu phẩy động chưa nói làm tròn
+- Sửa công thức trong Excel mà không lưu thành script tái hiện được
 
-- stormzhang data processing tutorials
-- codex.bozhouai.com spreadsheet task templates
-- [Define constraints](/prompts/constraints-and-boundaries/)
+## Danh sách nghiệm thu
+
+- [ ] Tên cột và kiểu khớp ước định phía tiêu thụ downstream
+- [ ] Tổng/rút mẫu khớp kiểm thủ công hoặc SQL
+- [ ] Tệp gốc không bị ghi đè ngoài ý muốn (hoặc thay đổi thấy được trong diff)
+
+## Nguồn tham khảo
+
+- Tutorial xử lý dữ liệu stormzhang
+- Mẫu tác vụ bảng codex.bozhouai.com
+- [Định nghĩa ràng buộc](/prompts/constraints-and-boundaries/)
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, constraints pages; stable principle: explicitly state columns, types, blanks, dates, verification—not a single library as the only implementation.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, kiểm chứng artifact, ranh giới ràng buộc đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý bảng ổn định “cột, kiểu, giá trị trống, ngày, cách nghiệm thu đều nên nói tường minh”, không coi một thư viện hay nền tảng là hiện thực duy nhất.  
+**Kiểm chứng gần nhất:** 2026-07-26

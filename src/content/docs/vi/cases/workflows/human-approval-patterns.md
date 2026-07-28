@@ -1,90 +1,90 @@
 ---
-title: Human approval patterns
-description: When to approve, reject, or pause Codex—and how to write those rules clearly.
+title: Mẫu phê duyệt của người
+description: Khi nào phê duyệt, từ chối hoặc yêu cầu Codex dừng, và cách viết rõ các quy tắc đó.
 locale: vi
-source_locale: en
-source_revision: f8c7a3b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Approval keeps irreversible actions for humans. This page summarizes common patterns.
+Vai trò của phê duyệt là để người quyết các thao tác không đảo ngược được. Trang này sắp xếp vài cách làm phổ biến.
 
-## Approval tiers
-
-```text
-Auto-safe zone (read, analyze, plan)
-    ↓
-Prompt-confirm zone (write files, run commands, network)
-    ↓
-Mandatory human zone (push, delete data, send externally, change production config)
-```
-
-Specific dialog behavior varies by [product entry](/guide/); principles are the same.
-
-## Pattern 1: Plan first, execute later
+## Phân tầng phê duyệt
 
 ```text
-Rule: Do not modify repo files until I say "approve plan."
+Vùng an toàn tự động (đọc, phân tích, kế hoạch)
+    ↓
+Vùng nhắc xác nhận (ghi tệp, chạy lệnh, lên mạng)
+    ↓
+Vùng bắt buộc người (push, xóa dữ liệu, gửi ra ngoài, sửa cấu hình production)
 ```
 
-Good for: unfamiliar codebase, production-related, large diff.
+Hành vi hộp thoại cụ thể khác theo [lối vào sản phẩm](/guide/); nguyên tắc thì giống nhau.
 
-## Pattern 2: Command whitelist
+## Mẫu một: Kế hoạch trước, thực thi sau
 
-In [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) write:
+```text
+Quy tắc: Chưa thấy tôi «phê duyệt kế hoạch» thì không được sửa tệp trong kho.
+```
+
+Phù hợp: chưa quen codebase, liên quan production, diff lớn.
+
+## Mẫu hai: Lệnh whitelist
+
+Trong [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) ghi rõ:
 
 ```md
-Allowed without asking again: pnpm test, pnpm lint, git status, git diff
-Must confirm each time: git push, npm publish, database migrate
+Cho phép không cần hỏi lại: pnpm test, pnpm lint, git status, git diff
+Mỗi lần phải xác nhận: git push, npm publish, database migrate
 ```
 
-When conflicting with hosted policy, **stricter** wins.
+Khi xung đột với chính sách quản trị, lấy bên **nghiêm hơn**.
 
-## Pattern 3: Two-phase merge
+## Mẫu ba: Merge hai giai đoạn
 
-1. Codex opens draft PR or local branch
-2. Human CI + review, then merge
+1. Codex mở draft PR hoặc nhánh cục bộ
+2. Người + CI + review đạt rồi mới merge
 
-Cloud: see [Create pull requests](/guide/web-and-cloud/create-pull-requests/).
+Kịch bản Cloud xem [tạo Pull Request](/guide/web-and-cloud/create-pull-requests/).
 
-## Pattern 4: Read-only recon
+## Mẫu bốn: Thám sát chỉ đọc
 
 ```text
-This round read-only: may read files, run tests, curl local API;
-no disk writes or git commit.
+Vòng này chỉ đọc: được đọc tệp, chạy test, curl API cục bộ;
+Cấm ghi đĩa và git commit.
 ```
 
-For audit, learning unfamiliar projects, production diagnosis.
+Dùng cho audit, học dự án lạ, chẩn đoán sự cố production.
 
-## When to reject and restart
+## Khi nào từ chối và làm lại
 
-| Signal | Suggestion |
+| Tín hiệu | Gợi ý |
 |---|---|
-| Plan doesn't match goal | Reject execution; request revised plan |
-| Scope creep | Stop; split task |
-| Tests skipped | Reject merge; require verification |
-| Cannot explain a command | Reject; require explanation |
+| Kế hoạch lệch mục tiêu | Từ chối thực thi, yêu cầu sửa kế hoạch |
+| Phạm vi thay đổi lan rộng | Dừng, tách tác vụ |
+| Test bị bỏ qua | Từ chối merge, yêu cầu bổ sung kiểm chứng |
+| Không giải thích được một lệnh | Từ chối, yêu cầu giải thích |
 
-## Relation to Automations
+## Quan hệ với Automations
 
-Unattended tasks should still design human confirmation points—see [Scheduled and background tasks](/skills/automations/scheduled-tasks/).
+Tác vụ không người trông cũng phải giữ điểm xác nhận của người khi thiết kế; xem [tác vụ theo lịch và nền](/skills/automations/scheduled-tasks/).
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Long-term "always allow" without remembering risk
-- Approval theater—don't read diff
-- Verbal "don't mess up" instead of explicit mode
+- Lâu dài tick «luôn cho phép» rồi quên rủi ro
+- Phê duyệt hình thức, không đọc diff
+- Dùng miệng «đừng lung tung» thay cho mẫu rõ ràng
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Approval mode declared before task starts
-- [ ] High-risk ops have second-person review or CI gate
-- [ ] Team has unified policy for `git push` and similar commands
+- [ ] Trước khi bắt đầu tác vụ đã tuyên bố dùng mẫu phê duyệt nào
+- [ ] Thao tác rủi ro cao có người thứ hai review hoặc CI chặn
+- [ ] Nhóm có chính sách thống nhất cho lệnh như `git push`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current official guidance on autonomy / approval boundaries, and verified approval, command rules, PR, and automation chapters in this handbook; this page only confirms stable collaboration principles—which actions auto-continue vs pause for human approval.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo hướng dẫn mô hình chính thức hiện tại về autonomy / approval boundaries trên OpenAI Developers, cùng các chương phê duyệt, quy tắc lệnh, PR và tự động hóa đã kiểm chứng của sổ tay; trang này chỉ xác nhận nguyên tắc cộng tác ổn định “thao tác nào được tự tiếp tục, thao tác nào phải dừng để người duyệt”.  
+**Kiểm chứng gần nhất:** 2026-07-26

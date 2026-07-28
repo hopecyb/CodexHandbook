@@ -1,36 +1,36 @@
 ---
-title: Connect an MCP server
-description: Configure, authenticate, verify, and troubleshoot—safely connect your first MCP tool.
+title: Nối máy chủ MCP
+description: Cấu hình, xác thực, Kiểm chứng và gỡ lỗi — nối an toàn công cụ MCP đầu tiên.
 locale: vi
-source_locale: en
-source_revision: 346252d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-This page focuses on connection and verification; protocol details and server development are in official MCP docs.
+Trang này tập trung quy trình nối và Kiểm chứng; chi tiết giao thức và phát triển server xem tài liệu MCP chính thức.
 
-## Before you start
+## Trước khi bắt đầu
 
-- [ ] Understand security boundaries in [MCP overview](/skills/mcp/mcp-overview/)
-- [ ] Have a read-only or sandbox test account
-- [ ] Confirm current Codex client version supports MCP (official docs)
+- [ ] Đã hiểu ranh giới bảo mật trong [Tổng quan MCP](/skills/mcp/mcp-overview/)
+- [ ] Có tài khoản thử chỉ đọc hoặc môi trường Sandbox
+- [ ] Xác nhận phiên bản client Codex hiện tại hỗ trợ MCP (theo tài liệu chính thức)
 
-## Recommended flow
+## Quy trình khuyến nghị
 
-### 1. Choose server type
+### 1. Chọn loại server
 
-| Type | Notes | Risk |
+| Loại | Ghi chú | Rủi ro |
 |---|---|---|
-| Local stdio server | Process on your machine | Medium: process permissions = your user |
-| Remote HTTP/SSE | Hosted service | Medium–high: needs TLS, token rotation |
+| Server stdio cục bộ | Khởi động process trên máy | Trung bình: Quyền process = Quyền user của bạn |
+| HTTP/SSE từ xa | Dịch vụ được host | Trung bình–cao: cần TLS, xoay token |
 
-For first connection, start with an **official example or read-only local server**.
+Lần đầu nối, nên bắt đầu từ **ví dụ chính thức hoặc server cục bộ chỉ đọc**.
 
-### 2. Add configuration
+### 2. Thêm cấu hình
 
-Config location varies by CLI/App; commonly user- or project-level `mcp` block. Illustrative structure (**field names per official docs**):
+Vị trí cấu hình khác nhau giữa CLI/App; thường là khối cấu hình `mcp` cấp user hoặc dự án. Cấu trúc minh họa (**tên trường theo tài liệu chính thức**):
 
 ```json
 {
@@ -39,67 +39,67 @@ Config location varies by CLI/App; commonly user- or project-level `mcp` block. 
       "command": "npx",
       "args": ["-y", "@example/mcp-server"],
       "env": {
-        "API_TOKEN": "Read from environment variable—do not hard-code in repo"
+        "API_TOKEN": "đọc từ biến môi trường, đừng hard-code trong repo"
       }
     }
   }
 }
 ```
 
-Principles:
+Nguyên tắc:
 
-- Inject secrets via environment variables or a secrets manager
-- Config changes go through Git review (except secrets)
+- Khóa tiêm bằng biến môi trường hoặc trình quản lý khóa
+- Đổi cấu hình đi Git review (trừ secrets)
 
-### 3. Restart or reload client
+### 3. Khởi động lại hoặc nạp lại client
 
-After MCP config changes, usually restart the Codex session so the server list refreshes.
+Sau khi sửa cấu hình MCP thường cần khởi động lại phiên Codex để danh sách server làm mới.
 
-### 4. Verify tools are visible
+### 4. Kiểm chứng công cụ hiện diện
 
-In a task, explicitly ask:
+Trong Tác vụ yêu cầu rõ:
 
 ```text
-List currently available MCP tools (names and one-line descriptions only).
-Then call one test tool read-only and show the result.
-Do not perform write operations.
+Liệt kê các công cụ MCP hiện khả dụng (chỉ cần tên và một câu mô tả).
+Rồi gọi một công cụ thử theo cách chỉ đọc và hiện kết quả.
+Không thực hiện thao tác ghi.
 ```
 
-### 5. Try in small steps
+### 5. Thử từng bước nhỏ
 
-Pick a real but low-risk task, e.g.: "Use MCP to fetch ticket #123 title only; do not change status."
+Chọn một Tác vụ thật nhưng rủi ro thấp, ví dụ:"Dùng MCP tra tiêu đề ticket #123, đừng đổi trạng thái."
 
-## Auth modes
+## Chế độ xác thực
 
-| Mode | Fit |
+| Chế độ | Phù hợp |
 |---|---|
-| API Key / PAT | Personal dev; rotate regularly |
-| OAuth | User-level auth; good for SaaS |
-| No-auth local | Local mock only; do not expose to network |
+| API Key / PAT | Phát triển cá nhân, xoay định kỳ |
+| OAuth | Ủy quyền cấp user, phù hợp SaaS |
+| Local không xác thực | Chỉ mock trên máy, đừng lộ ra mạng |
 
-On failure check: expired token, env var not passed into process, corporate proxy blocking.
+Khi thất bại kiểm: token hết hạn, biến môi trường chưa truyền vào, proxy công ty chặn.
 
-## Debugging checklist
+## Checklist gỡ lỗi
 
-| Symptom | Possible cause |
+| Hiện tượng | Nguyên nhân có thể |
 |---|---|
-| Empty tool list | Wrong config path, process failed to start |
-| Call timeout | Network, VPN, server down |
-| Permission denied | Insufficient token scope |
-| Model never calls tools | Task did not ask; or tool description unclear |
+| Danh sách công cụ trống | Sai đường cấu hình, process khởi động thất bại |
+| Gọi hết thời gian | Mạng, VPN, server sập |
+| Quyền bị từ chối | Scope token không đủ |
+| Model không bao giờ gọi công cụ | Mô tả Tác vụ không yêu cầu; hoặc description công cụ không rõ |
 
-## Working with approval
+## Phối hợp với Phê duyệt
 
-First call to an unfamiliar tool may prompt confirmation—that is expected. Do not encourage "always allow all MCP writes" in team policy.
+Lần đầu gọi công cụ lạ, client có thể hiện xác nhận — đây là hành vi kỳ vọng. Đừng khuyến khích trong quy chuẩn nhóm"cho phép vĩnh viễn mọi thao tác ghi MCP".
 
-## References
+## Nguồn tham chiếu
 
-- OpenAI Codex MCP configuration documentation
-- modelcontextprotocol.io server examples
+- Tài liệu cấu hình OpenAI Codex MCP
+- Ví dụ server trên modelcontextprotocol.io
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Directly describes current MCP server configuration, reload, and verification steps—highly version- and client-sensitive; not suitable for `verified` yet.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Ghi chú tái Kiểm chứng:** Trang này mô tả trực tiếp cấu hình server MCP hiện tại, nạp lại và bước Kiểm chứng; các bước này rất nhạy với phiên bản và triển khai client, tạm chưa nên đánh `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

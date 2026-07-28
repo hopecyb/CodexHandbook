@@ -1,92 +1,92 @@
 ---
-title: 'Case study: Fix a bug with verification'
-description: From failing test to minimal fix and regression—the most common developer loop.
+title: "Case: sửa Bug kèm kiểm chứng"
+description: Từ test thất bại đến sửa tối thiểu và hồi quy — vòng lặp phổ biến nhất của nhà phát triển.
 locale: vi
-source_locale: en
-source_revision: bb1102f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Developers |
-| Client | CLI or IDE (local repo) |
-| Estimated time | 30–60 minutes |
-| Verification date | 2026-07-25 |
+| Đối tượng | Nhà phát triển |
+| Client | CLI hoặc IDE (kho cục bộ) |
+| Thời gian ước tính | 30–60 phút |
+| Ngày kiểm chứng | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Fix a regression bug already caught by unit tests, and add tests to prevent recurrence.
+**Mục tiêu:** Sửa một bug hồi quy đã bị unit test bắt, và bổ sung test để không tái diễn.
 
-**Success criteria:**
+**Tiêu chí thành công:**
 
-- Originally failing test passes
-- Full test suite still green
-- Diff touches only necessary files
+- Test thất bại ban đầu pass
+- Toàn bộ test vẫn xanh
+- Diff chỉ liên quan tệp cần thiết
 
-**Out of scope:** Large refactors, major dependency upgrades.
+**Ngoài phạm vi:** Refactor lớn, nâng dependency major.
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Clone repo, `pnpm install` (or per `AGENTS.md`)
-- Confirm local repro: `pnpm test -- path/to/failing.test.ts`
-- Branch: `fix/issue-123-short-desc`
+- Clone kho, `pnpm install` (hoặc theo `AGENTS.md`)
+- Xác nhận tái hiện thất bại cục bộ: `pnpm test -- path/to/failing.test.ts`
+- Nhánh: `fix/issue-123-short-desc`
 
-## 3. Workflow
+## 3. Quy trình
 
-### Explore
-
-```text
-Do not change code yet. Read failing test @tests/auth/login.test.ts and implementation @src/auth/login.ts;
-explain failure in 5 bullets or fewer, citing assertions and stack line numbers.
-```
-
-### Plan
+### Khám phá
 
 ```text
-Give a fix plan: which files change, whether new tests are needed, how to verify.
-Wait for my "execute" before changing code.
+Chưa sửa code. Đọc test thất bại @tests/auth/login.test.ts và triển khai @src/auth/login.ts,
+nêu nguyên nhân thất bại trong tối đa 5 điểm, trích assertion và số dòng stack.
 ```
 
-### Execute
+### Lập kế hoạch
 
 ```text
-Execute plan steps 1–2. After each step run only related tests.
+Đưa kế hoạch sửa: sửa tệp nào, có cần test mới không, cách kiểm chứng.
+Đợi tôi trả lời «thực thi» rồi mới sửa code.
 ```
 
-### Verify
+### Thực thi
 
 ```text
-Run full test suite; summarize diff for my review; do not git push.
+Thực thi bước 1–2 của kế hoạch. Sau mỗi bước chỉ chạy test liên quan.
 ```
 
-Human: read diff, confirm no unrelated changes, check per [Review diffs](/guide/quality/review-diffs/).
+### Kiểm chứng
 
-## 4. Failure and recovery
+```text
+Chạy toàn bộ bộ test; tóm tắt diff để tôi review; không git push.
+```
 
-| Issue | Action |
+Người: đọc diff, xác nhận không có thay đổi không liên quan, kiểm theo [review diff](/guide/quality/review-diffs/).
+
+## 4. Thất bại và phục hồi
+
+| Vấn đề | Xử lý |
 |---|---|
-| New failures after fix | `git stash` or revert commit; narrow change |
-| Wrong root cause | Return to explore; request new hypothesis |
-| Flaky test | Stabilize test before fixing business logic |
+| Sửa xong lại gây thất bại mới | `git stash` hoặc hoàn commit, thu hẹp thay đổi |
+| Đoán sai nguyên nhân gốc | Quay lại khám phá, yêu cầu giả thuyết mới |
+| Test flaky | Ổn định test trước rồi mới sửa logic nghiệp vụ |
 
-## 5. Capture
+## 5. Đóng gói lại
 
-- If this bug class repeats, add a convention in `AGENTS.md`
-- Optional `$regression-guard` Skill: run critical test list before merge
+- Nếu loại bug này lặp lại, thêm một quy ước vào `AGENTS.md`
+- Có thể tách Skill `$regression-guard`: trước merge chạy danh sách test then chốt
 
-## 6. Related chapters
+## 6. Chương liên quan
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Developer learning path](/guide/learning-paths/developer/)
-- [Run tests](/guide/quality/run-tests/)
+- [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/)
+- [Lộ trình nhà phát triển](/guide/learning-paths/developer/)
+- [Chạy test](/guide/quality/run-tests/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified diagnose, run tests, review diffs, and developer path chapters; content is limited to the stable development loop from failing test to minimal fix and regression verification.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / IDE  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương chẩn đoán, chạy test, review diff và lộ trình nhà phát triển đã kiểm chứng của sổ tay; nội dung trang giới hạn ở case vòng lặp phát triển ổn định “từ test thất bại đến sửa tối thiểu và kiểm chứng hồi quy”.  
+**Kiểm chứng gần nhất:** 2026-07-26

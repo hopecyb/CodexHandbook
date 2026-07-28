@@ -1,63 +1,62 @@
 ---
-title: Write an article
-description: Full technical writing flow from topic selection through outline, draft, and fact-checking.
+title: Viết bài
+description: Quy trình viết kỹ thuật đầy đủ từ chọn đề đến dàn ý, bản thảo và kiểm tra sự thật.
 locale: vi
-source_locale: en
-source_revision: 9c9a32e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Write an article
+# Viết bài
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Creators |
+| Đối tượng | Người sáng tạo nội dung |
 | Client | App / CLI |
-| Estimated time | 1–2 hours |
+| Thời gian ước tính | 1–2 giờ |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Produce a publishable technical article draft.
+**Mục tiêu:** Tạo bản thảo bài kỹ thuật có thể xuất bản.
 
-**Success criteria:** Complete structure, verifiable facts, style matches audience.
+**Tiêu chí thành công:** Cấu trúc đầy đủ, sự thật đối chiếu được, phong cách khớp đối tượng.
 
-## 2. Workflow (EPXV)
+## 2. Quy trình (EPXV)
 
-### Explore
-
-```text
-Topic: [article topic]
-Audience: [beginners/developers]
-Give 3 optional angles and an outline first; do not write the body.
-```
-
-### Plan
-
-After confirming the outline:
+### Khám phá
 
 ```text
-Write section 1 per outline, ~300 words; pause after for my tone confirmation.
+Chủ đề: 【chủ đề bài】
+Đối tượng: 【người mới / nhà phát triển】
+Trước hết đưa 3 góc nhìn và dàn ý tùy chọn; chưa viết thân bài.
 ```
 
-### Execute
+### Lập kế hoạch
 
-Write section by section—avoid generating the full article in one pass (hard to revise).
+Sau khi xác nhận dàn ý:
 
-### Verify
+```text
+Viết theo mục 1 của dàn ý, khoảng 300 chữ; xong thì dừng để tôi xác nhận giọng văn.
+```
 
-- Manually verify links, version numbers, commands still valid
-- Optional: solidify flow with [Writing Skill](/skills/examples/writing-skill/)
+### Thực thi
 
-## 3. Capture for reuse
+Viết từng mục; tránh sinh cả bài một lần khiến khó sửa.
 
-Repeated writing can be packaged as `article-writer` Skill; see [Creator path](/guide/learning-paths/creator/).
+### Kiểm chứng
 
+- Người đối chiếu liên kết, số phiên bản, lệnh còn hiệu lực
+- Tùy chọn: dùng [Skill viết](/skills/examples/writing-skill/) để cố định quy trình
+
+## 3. Đóng gói lại
+
+Viết lặp lại có thể đóng gói Skill `article-writer`; xem [lộ trình người sáng tạo](/guide/learning-paths/creator/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Learn a new concept," emphasizing organizing complex material into auditable learning or explanatory output; this page's writing flow—angles and outline first, section-by-section drafting, then manual verification of links, versions, and commands—is a stable writing collaboration pattern.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Learn a new concept”, nhấn mạnh sắp xếp tài liệu phức tạp thành đầu ra học tập hoặc giải thích có thể đối chiếu; quy trình viết trang này giới hạn ở “trước góc nhìn và dàn ý, rồi viết từng đoạn, cuối cùng người đối chiếu liên kết, phiên bản và lệnh” — mô hình cộng tác viết ổn định.  
+**Kiểm chứng gần nhất:** 2026-07-26

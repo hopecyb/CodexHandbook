@@ -1,83 +1,83 @@
 ---
-title: Review before merge
-description: Structured diff and risk review with Codex before merge—clear human–machine roles.
+title: Review trước khi merge
+description: Trước khi merge, dùng Codex làm review diff và rủi ro có cấu trúc — phân công người-máy rõ.
 locale: vi
-source_locale: en
-source_revision: e8e66da
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Review before merge** puts [quality and verification](/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not replace human merge decisions.
+**Review trước khi merge** là đặt [chất lượng và kiểm chứng](/guide/quality/) vào quy trình Git: trước khi merge PR, dùng Codex kiểm tra diff, test, bảo mật và đặc tả có khớp không. Comment tự động không thay cho merge tự động.
 
-## What's covered
+## Trọng tâm trang này
 
-- Local review vs Cloud/CI review roles
-- What dimensions review prompts should cover
-- When human final sign-off is required
+- Phân công review cục bộ vs Cloud/CI
+- Prompt review nên phủ những chiều nào
+- Khi nào bắt buộc người ký cuối
 
-## Minimum viable approach
+## Cách làm tối thiểu dùng được
 
-**Local (author self-check)**
+**Cục bộ (tác giả tự kiểm)**
 
 ```text
-Compare current branch diff to main (do not change code yet):
-1. Is it outside issue scope?
-2. Obvious security risks (secrets, injection, permissions)?
-3. Missing tests or docs?
-Output a checklist with P0/P1 labels.
+So sánh diff nhánh hiện tại với main (chưa sửa code):
+1. Có vượt phạm vi issue không
+2. Có rủi ro bảo mật rõ (bí mật, injection, quyền) không
+3. Có thiếu test hoặc tài liệu không
+Xuất checklist, gắn P0/P1.
 ```
 
-**CI (team gate)**
+**CI (cổng nhóm)**
 
-- Fixed prompt version + read-only token
-- Results in PR comment or check run
-- See [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Phiên bản prompt cố định + token chỉ đọc
+- Kết quả ghi vào PR comment hoặc check run
+- Xem [tự động hóa code review](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## Recommended review dimensions
+## Chiều review đề xuất
 
-| Dimension | Focus |
+| Chiều | Điểm chú ý |
 |---|---|
-| Correctness | Logic, edge cases, error handling |
-| Tests | Coverage for new behavior |
-| Security | Secrets, injection, dependency vulnerability signals |
-| Maintainability | Naming, duplication, public API |
-| Spec | Alignment with issue/spec doc |
+| Tính đúng | Logic, biên, xử lý lỗi |
+| Test | Hành vi mới có bao phủ không |
+| Bảo mật | Bí mật, injection, manh mối lỗ hổng dependency |
+| Bảo trì | Đặt tên, trùng lặp, API công khai |
+| Đặc tả | Khớp issue/tài liệu đặc tả |
 
-Pair with [Review diffs](/guide/quality/review-diffs/); high-risk items follow [Human approval patterns](/cases/workflows/human-approval-patterns/).
+Có thể dùng kèm [review diff](/guide/quality/review-diffs/); mục rủi ro cao đi [mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/).
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Model only says "LGTM" with no specifics
-- Unsanitized full PR description pasted into CI prompt (injection risk)
-- Review passes but CI tests never ran
-- Auto-merge bot enabled with no branch protection
+- Chỉ để model nói «LGTM» không căn cứ cụ thể
+- Dán nguyên mô tả PR chưa khử vào CI prompt (rủi ro injection)
+- Review đạt nhưng CI chưa chạy test
+- Bot merge tự động bật mà không bảo vệ nhánh
 
-## Security boundaries
+## Ranh giới an toàn
 
-- Review uses read-only permissions; fixes belong in **new commits** triggered by humans
-- Do not log user PII or secrets in review logs
+- Review dùng quyền chỉ đọc; sửa nên ở **commit mới** do người kích hoạt
+- Không ghi PII người dùng hoặc bí mật vào log review
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Review output traces to specific files/lines
-- [ ] P0 issues block merge or are fixed
-- [ ] Aligned with team review checklist
-- [ ] Human maintainer has final say on disputed items
+- [ ] Đầu ra review truy được về tệp/dòng cụ thể
+- [ ] Vấn đề P0 đã chặn merge hoặc đã sửa
+- [ ] Khớp checklist review của nhóm
+- [ ] Maintainer người có quyết định cuối với mục tranh cãi
 
-## Related chapters
+## Chương liên quan
 
-- [Cloud code review](/guide/web-and-cloud/code-review/)
-- [Create pull requests](/guide/web-and-cloud/create-pull-requests/)
+- [Code review Cloud](/guide/web-and-cloud/code-review/)
+- [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## References
+## Nguồn tham chiếu
 
-- KimYx0207 Review/PR chapters
-- codex.bozhouai.com Git/GitHub workflow material
+- Chương Review/PR của KimYx0207
+- Quy trình Git/GitHub trên codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public code review / pull request use cases, plus this handbook's verified quality, diff review, and Cloud chapters; this page confirms only stable principles for structured pre-merge review, read-only review, and human final sign-off.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases code review / pull request công khai hiện tại trên OpenAI Developers, cùng các chương chất lượng, review diff và Cloud đã kiểm chứng của sổ tay; trang này chỉ xác nhận nguyên tắc ổn định “review có cấu trúc trước merge, review chỉ đọc và người ký cuối”.  
+**Kiểm chứng gần nhất:** 2026-07-26

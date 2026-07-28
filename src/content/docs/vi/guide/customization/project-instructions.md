@@ -1,106 +1,106 @@
 ---
-title: Project Instructions
-description: Project-level context beyond AGENTS.md—how README, docs, and conversation references divide labor.
+title: Mô tả dự án
+description: Ngữ cảnh cấp dự án ngoài AGENTS.md — phân công README, docs và tham chiếu hội thoại.
 locale: vi
-source_locale: en
-source_revision: 743eaaf
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-“Project instructions” are the **static context** Codex uses to understand a repo, not limited to a single file format.
+«Mô tả dự án» là **ngữ cảnh tĩnh** để Codex hiểu kho, không giới hạn một định dạng tệp.
 
-## Contents
+## Nội dung
 
-- Besides `AGENTS.md`, where else should project-level information live
-- How README, docs, and script files divide labor
-- What belongs in the repo versus what should stay only in the current conversation
+- Ngoài `AGENTS.md`, thông tin cấp dự án còn nên đặt ở đâu
+- README, docs, tệp script phân công thế nào
+- Thông tin nào phù hợp viết vào kho, thông tin nào chỉ phù hợp giữ trong hội thoại hiện tại
 
-## Components of Project Context
+## Thành phần ngữ cảnh dự án
 
-| Source | Role |
+| Nguồn | Vai trò |
 |---|---|
-| `AGENTS.md` | Collaboration rules and commands (authoritative: AGENTS series in this chapter) |
-| `README.md` | What the project is and how to start it |
-| `docs/` | Architecture, ADRs, runbooks |
-| Dependencies and scripts | Executable truth in `package.json`, `Makefile`, and similar |
+| `AGENTS.md` | Quy tắc cộng tác và lệnh (thẩm quyền: loạt AGENTS chương này) |
+| `README.md` | Dự án là gì, khởi động thế nào |
+| `docs/` | Kiến trúc, ADR, sổ vận hành |
+| Dependency và script | Sự thật thực thi được như `package.json`, `Makefile` |
 
-Codex reads these materials with tools; the key is a **single source of truth**—startup commands in the README must actually work.
+Codex sẽ kết hợp công cụ đọc các tài liệu này; then chốt là để **sự thật duy nhất**, lệnh khởi động README viết phải chạy được.
 
-## Basic Practice
+## Cách làm cơ bản
 
-1. Ensure the root `README.md` has four sections: purpose, install, development, test
-2. Sink **instructions you repeat to Codex** into `AGENTS.md`
-3. In tasks, use `@` to point at specific files instead of pasting full text:
+1. Đảm bảo `README.md` gốc có bốn đoạn: mục đích, cài đặt, phát triển, kiểm thử
+2. Hạ **mô tả lặp lại cho Codex** xuống `AGENTS.md`
+3. Trong tác vụ dùng `@` chỉ tệp cụ thể, đừng dán cả bài:
 
 ```text
-Fix the null pointer in @src/auth/login.ts per test requirements in @AGENTS.md.
-See @docs/auth-flow.md for related design.
+Theo yêu cầu kiểm thử của @AGENTS.md, sửa null pointer trong @src/auth/login.ts.
+Thiết kế liên quan xem @docs/auth-flow.md
 ```
 
-## Why It Matters
+## Vì sao quan trọng
 
-Common situations include:
+Tình huống thường gặp gồm:
 
-- README says one thing
-- docs say another
-- The command that actually runs is hidden in `package.json`
+- README viết một bộ
+- docs viết bộ khác
+- Lệnh thật sự chạy được giấu trong `package.json`
 
-Then not only people get confused—Codex does too. The point is to keep “project truth” in the repo as concentrated and consistent as possible.
+Lúc đó không chỉ người rối, Codex cũng rối. Trọng tâm là để “sự thật dự án” trong kho càng tập trung, càng nhất quán càng tốt.
 
-## Division of Labor with “Conversation Context”
+## Phân công với «ngữ cảnh hội thoại»
 
-- **Project instructions**: relatively stable for months
-- **Conversation context**: this task’s goal, constraints, and intermediate conclusions
+- **Mô tả dự án**: tương đối ổn định trong vài tháng
+- **Ngữ cảnh hội thoại**: mục tiêu lần này, ràng buộc, kết luận giữa chừng
 
-In long tasks, if a rule keeps coming up, **write it back** to `AGENTS.md` or `docs/` instead of copy-pasting across ten threads. See [Keep Context Focused](/guide/context/keep-context-focused/).
+Trong tác vụ dài nếu thấy một quy tắc bị nhắc lặp, nên **ghi lại** vào `AGENTS.md` hoặc `docs/`, chứ không sao chép dán trong mười thread. Xem [Giữ ngữ cảnh tập trung](/guide/context/keep-context-focused/).
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Outdated README; Codex runs wrong commands
-- Stuffing all documentation into one giant `CONTEXT.md` that nobody maintains
-- Putting sensitive information in public repo documentation
+- README lỗi thời, Codex thao tác theo lệnh sai
+- Nhét mọi tài liệu vào một `CONTEXT.md` khổng lồ, không ai duy trì
+- Thông tin nhạy cảm đặt trong mô tả kho công khai
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. If I explain clearly in chat, messy repo docs are fine
+### 1. Chỉ cần tôi giải thích rõ trong hội thoại, tài liệu kho loạn một chút cũng được
 
-That may work short term; long term it gets worse.
+Ngắn hạn có lẽ tạm được, dài hạn càng loạn.
 
-Next time you explain again, and others never see what you said this time.
+Vì lần sau bạn còn phải giải thích lại, người khác cũng không thấy lần này bạn đã nói gì.
 
-### 2. Can `AGENTS.md` solve every project-instruction problem?
+### 2. `AGENTS.md` giải quyết mọi vấn đề mô tả dự án
 
-No.
+Cũng không.
 
-`AGENTS.md` suits rules and collaboration constraints better than replacing project introduction, architecture background, and full run instructions.
+`AGENTS.md` phù hợp hơn quy tắc và ràng buộc cộng tác, không phù hợp thay giới thiệu dự án, nền kiến trúc và hướng dẫn vận hành đầy đủ.
 
-### 3. More documentation is always better
+### 3. Tài liệu càng nhiều càng tốt
 
-What matters more:
+Quan trọng hơn là:
 
-- Clear division of labor
-- Consistent content
-- Key commands that actually run
+- Phân công rõ
+- Nội dung nhất quán
+- Lệnh then chốt chạy được
 
-## Suggested Division of Labor
+## Gợi ý phân công
 
-- `README.md`: what the project is, how to start, how to test
-- `AGENTS.md`: collaboration rules, no-go areas, definition of done
-- `docs/`: longer background, architecture, process documentation
-- Scripts and config files: executable truth
+- `README.md`: dự án là gì, khởi động thế nào, kiểm thử thế nào
+- `AGENTS.md`: quy tắc cộng tác, vùng cấm, định nghĩa hoàn thành
+- `docs/`: nền dài hơn, kiến trúc, mô tả quy trình
+- Script và tệp cấu hình: sự thật thực thi được
 
-The point of project instructions is to help Codex and humans find the same “repo truth.” Document count itself is not the goal.
+Trọng tâm mô tả dự án là để Codex và người dễ tìm cùng một “sự thật kho”. Số lượng tài liệu bản thân không phải trọng tâm.
 
-## Acceptance Checklist
+## Danh sách nghiệm thu
 
-- [ ] Someone who freshly clones the repo (or Codex) can run tests from README + AGENTS.md
-- [ ] Task prompts rely mainly on @ references, avoiding repeated long background
+- [ ] Người (hoặc Codex) clone kho mới có thể chạy thông kiểm thử theo README + AGENTS.md
+- [ ] Prompt tác vụ lấy tham chiếu @ làm chính, tránh lặp nền dài
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public description of project context and file collaboration, and this handbook’s verified project context, files, and workflow chapters; page content keeps only the stable division of labor among README, `AGENTS.md`, `docs/`, and task conversation.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về ngữ cảnh dự án và cách cộng tác tệp, cùng các chương ngữ cảnh dự án, tệp và quy trình đã kiểm chứng trong sổ tay; nội dung trang chỉ giữ nguyên tắc phân công ổn định giữa README, `AGENTS.md`, `docs/` và hội thoại tác vụ.  
+**Kiểm chứng gần nhất:** 2026-07-26

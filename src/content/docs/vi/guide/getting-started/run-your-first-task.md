@@ -1,120 +1,122 @@
 ---
-title: Run your first task
-description: Complete a small change with a clear prompt.
+title: Chạy tác vụ đầu tiên
+description: Dùng Prompt rõ ràng để hoàn thành một thay đổi nhỏ.
 locale: vi
-source_locale: en
-source_revision: 0e6c1c3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The example below defaults to the **desktop App**; CLI/IDE can use the same prompt.
 
-Many people try to make Codex “build a full website” or “refactor the whole project” on the first run. That often goes out of control quickly.
+Ví dụ dưới đây mặc định **Desktop App**; CLI/IDE cũng dùng được cùng một đoạn Prompt.
 
-A small first task is safer. Completing the full loop once matters more than starting big.
+Nhiều người lần đầu dùng Codex muốn ngay lập tức bảo nó «làm cả một website» hoặc «refactor cả dự án». Như vậy rất dễ mất kiểm soát ngay.
 
-## Why keep the first task this small
+Tác vụ lần đầu làm nhỏ hơn sẽ ổn hơn. Chạy thông cả bộ quy trình quan trọng hơn làm lớn ngay từ đầu.
 
-A good first task usually meets all three:
+## Vì sao tác vụ lần đầu nên chọn nhỏ như vậy
 
-- Small change scope
-- Result you can check at a glance
-- Easy to undo if something goes wrong
+Tác vụ lần đầu tốt nhất thỏa ba điều kiện này:
 
-So this page uses a tiny practice example.
+- Phạm vi thay đổi nhỏ
+- Kết quả một nhìn là kiểm được
+- Dù làm sai cũng dễ hoàn tác
 
-## Example task
+Vì vậy ở đây dùng một ví dụ luyện tập rất nhỏ.
 
-In your practice project, tell Codex:
+## Ví dụ tác vụ
 
-```text
-Goal: Append a section "Today's practice" at the end of hello.md with a three-item bullet list.
-Constraints: Only modify hello.md; do not delete existing content; do not make network requests.
-Acceptance: The file ends with that heading and exactly three list items.
-If information is missing, ask me first—do not guess.
-```
-
-## What each part of the prompt does
-
-This prompt separates several critical pieces:
-
-- **Goal**: what to do
-- **Constraints**: what must not be changed
-- **Acceptance**: how to know it is done
-- **Ask me first if information is missing**: stop it from guessing
-
-This is not a fixed template—it just makes the parts that are easiest to leave vague explicit.
-
-## Common misconceptions
-
-### 1. A bigger first task teaches you more
-
-The first run is about completing the full loop, not doing the biggest possible job.
-
-### 2. Once the prompt is written, let it improvise
-
-On the first task, watch three things:
-
-- Whether scope stays within bounds
-- Whether it is editing the files you named
-- Whether the result matches acceptance
-
-### 3. If it gets the first task wrong, I must be doing it wrong
-
-The first task is supposed to include:
-
-- Spotting what went wrong
-- Pointing out the problem
-- Knowing how to roll it back
-
-## While it runs
-
-1. Ask for a short plan first (or request one yourself)
-2. When approving file writes, confirm paths are correct
-3. When done, go to [Review the result](/guide/getting-started/review-the-result/)
-
-## Suggested order
-
-Follow these five steps:
-
-1. Pick a safe practice project
-2. Give a small task that touches only one file
-3. Before approving, check what it will change
-4. After it finishes, check scope and results
-5. If you are unhappy, undo or steer with a precise correction
-
-After these five steps, the collaboration rhythm feels much clearer.
-
-## What to check when it finishes
-
-Focus on three things:
-
-1. Did it only change `hello.md`?
-2. Does the end of the file really contain that new section?
-3. Are there exactly three list items?
-
-If all three pass, the small first task basically worked.
-
-## If it got it wrong
-
-Getting it wrong the first time is normal. You can continue like this:
+Trong dự án luyện tập nói với Codex:
 
 ```text
-You changed too much. Revert edits to other files and keep only the hello.md changes.
+Mục tiêu: ở cuối hello.md thêm một mục «Bài luyện hôm nay», gồm danh sách ba dòng điểm chính.
+Ràng buộc: chỉ sửa hello.md; đừng xóa nội dung đã có; đừng chạy yêu cầu mạng.
+Nghiệm thu: cuối tệp xuất hiện tiêu đề đó và đúng ba mục danh sách.
+Nếu thiếu thông tin hãy hỏi tôi trước, đừng đoán.
 ```
 
-Or:
+## Vai trò từng phần của Prompt
+
+Đoạn Prompt này tách rõ vài việc then chốt:
+
+- **Mục tiêu**: nói cho nó cần làm gì
+- **Ràng buộc**: nói cho nó không được sửa lung tung chỗ nào
+- **Nghiệm thu**: nói cho nó «thế nào mới tính là xong»
+- **Nếu thiếu thông tin hãy hỏi tôi trước**: ngăn nó tự ý đoán
+
+Đây không phải mẫu cố định — chỉ là viết rõ phần dễ nói mơ hồ nhất.
+
+## Hiểu nhầm thường gặp
+
+### 1. Tác vụ lần đầu càng lớn càng học được bản lĩnh thật
+
+Lần đầu quan trọng hơn là đi một vòng khép kín đầy đủ — không phải một hơi làm việc lớn.
+
+### 2. Prompt đã viết ra rồi thì phía sau giao cho nó tự phát huy
+
+Trong tác vụ lần đầu, trọng tâm là giữ mắt vào ba việc:
+
+- Phạm vi có vượt không
+- Nó có đang làm trên tệp bạn nói không
+- Kết quả cuối có khớp nghiệm thu không
+
+### 3. Lần đầu làm sai nghĩa là tôi không biết dùng
+
+Tác vụ lần đầu vốn gồm các nội dung sau:
+
+- Phát hiện chỗ nào chưa đúng
+- Chỉ ra được vấn đề
+- Biết cách để nó thu lại
+
+## Lưu ý khi thực thi
+
+1. Để nó đưa kế hoạch ngắn (hoặc bạn chủ động yêu cầu kế hoạch)
+2. Khi phê duyệt ghi tệp, xác nhận đường dẫn đúng
+3. Xong rồi vào [Kiểm tra kết quả](/guide/getting-started/review-the-result/)
+
+## Thứ tự thực thi
+
+Có thể đi theo 5 bước này:
+
+1. Chọn một dự án luyện tập an toàn
+2. Giao một tác vụ nhỏ chỉ sửa một tệp
+3. Trước khi phê duyệt, nhìn rõ nó muốn đụng chỗ nào
+4. Xong rồi kiểm tra phạm vi và kết quả
+5. Không hài lòng thì hoàn tác hoặc tiếp tục chỉnh hướng chính xác
+
+5 bước này đi xong, bạn sẽ quen hơn một chút với nhịp cộng tác tổng thể.
+
+## Xong rồi bạn nên kiểm tra gì
+
+Trọng tâm xem ba việc này:
+
+1. Nó có chỉ sửa `hello.md` không
+2. Cuối tệp có thật sự thêm mục đó không
+3. Số mục danh sách có đúng ba không
+
+Ba mục đều đúng thì tác vụ nhỏ lần này về cơ bản đã chạy xuôi.
+
+## Nếu nó làm sai
+
+Lần đầu làm sai rất bình thường. Bạn có thể tiếp tục như sau:
 
 ```text
-Do not make more edits. Tell me exactly what you changed just now.
+Bạn sửa thừa rồi. Hãy hoàn tác thay đổi trên các tệp khác, chỉ giữ sửa đổi trên hello.md.
 ```
 
-Prompting basics: [Prompt basics](/prompts/basics/).
+Hoặc:
+
+```text
+Tạm đừng sửa tiếp. Cho tôi biết vừa rồi bạn đã sửa những chỗ nào.
+```
+
+Nguyên lý Prompt: [Cơ bản về Prompt](/prompts/basics/).
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương cơ bản Prompt, kiểm tra kết quả, hoàn tác/khôi phục và dự án luyện tập liên quan đã được kiểm chứng trong cẩm nang hiện tại; nội dung trang giới hạn ở phương pháp luyện tập ổn định «lần đầu chỉ làm tác vụ phạm vi nhỏ, kiểm tra được, hoàn tác được».  
+**Kiểm chứng gần nhất:** 2026-07-26

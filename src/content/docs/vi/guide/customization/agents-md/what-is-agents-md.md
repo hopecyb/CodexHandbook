@@ -1,138 +1,138 @@
 ---
-title: What Is AGENTS.md
-description: Project-level persistent instruction file—a "collaboration contract" for Codex, not an architecture encyclopedia.
+title: AGENTS.md là gì
+description: Tệp chỉ thị bền cấp dự án — «hợp đồng cộng tác» cho Codex, không phải bách khoa kiến trúc.
 locale: vi
-source_locale: en
-source_revision: 7e393ee
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-`AGENTS.md` is a **Markdown project instruction** file in the repo (or a subdirectory). Codex reads it when entering the project to align on coding style, test requirements, commit conventions, and no-go areas.
+`AGENTS.md` là **chỉ thị dự án Markdown** đặt trong kho (hoặc thư mục con); Codex đọc khi vào dự án đó để khớp phong cách mã hóa, yêu cầu kiểm thử, quy chuẩn commit và vùng cấm.
 
-Think of `AGENTS.md` as instructions for “how Codex should work with this project.”
+Có thể hiểu `AGENTS.md` là sổ hướng dẫn “dự án này muốn Codex phối hợp thế nào”.
 
-It is not an advanced architecture document or a complete handbook for new human hires; it is project collaboration rules for Codex.
+Nó không phải tài liệu kiến trúc nâng cao, cũng không phải sổ tay đầy đủ cho nhân viên mới, mà là quy tắc cộng tác dự án cho Codex.
 
-## One Core Concept
+## Một khái niệm cốt lõi
 
-Treat it as a **condensed new-hire handbook**: only “how to work in this repo,” not company history.
+Coi nó là **bản rút gọn sổ onboarding đồng nghiệp mới**: chỉ viết «trong kho này làm việc thế nào», không viết lịch sử phát triển công ty.
 
-| Good fit for AGENTS.md | Poor fit |
+| Phù hợp viết vào AGENTS.md | Không phù hợp viết |
 |---|---|
-| How to run tests, lint, build | Full API docs (link to formal docs) |
-| Directory conventions, naming style | Thousands of lines of historical design decisions |
-| Prohibitions (e.g. do not change `main`, do not commit secrets) | Temporary needs that differ every task |
-| Commit messages, PR checklists | Personal preferences unrelated to code |
+| Cách chạy kiểm thử, lint, build | Tài liệu API đầy đủ (nên liên kết tài liệu chính thức) |
+| Ước định thư mục, phong cách đặt tên | Hàng nghìn dòng quyết định thiết kế lịch sử |
+| Mục cấm (như đừng sửa `main`, đừng commit khóa) | Nhu cầu tạm khác nhau mỗi tác vụ |
+| Thông điệp commit, danh sách kiểm tra PR | Sở thích cá nhân không liên quan mã |
 
-## Minimum Viable Practice
+## Cách làm tối thiểu dùng được
 
-Create `AGENTS.md` at the repo root:
+Tạo `AGENTS.md` ở gốc kho:
 
 ```md
-# Project Instructions
+# Chỉ thị dự án
 
-## Build and Test
-- Install: `pnpm install`
-- Test: `pnpm test` (must run after logic changes)
-- Type check: `pnpm typecheck`
+## Build và kiểm thử
+- Cài: `pnpm install`
+- Kiểm thử: `pnpm test` (sau khi sửa logic phải chạy)
+- Kiểm kiểu: `pnpm typecheck`
 
-## Code Style
-- Use TypeScript strict mode
-- New components go in `src/components/`, filenames PascalCase
+## Phong cách mã
+- Dùng TypeScript chế độ nghiêm
+- Component mới đặt trong `src/components/`, tên tệp PascalCase
 
-## Prohibited
-- Do not modify `pnpm-lock.yaml` unless dependencies change
-- Do not commit `.env` or API keys
-- Do not run `git push` without confirmation
+## Cấm
+- Đừng sửa `pnpm-lock.yaml` trừ khi dependency đổi
+- Đừng commit `.env` hoặc API key
+- Chưa xác nhận đừng chạy `git push`
 
-## Definition of Done
-- Related tests pass
-- No new lint errors
-- Describe verification steps in the PR description
+## Định nghĩa hoàn thành
+- Kiểm thử liên quan qua
+- Không lỗi lint mới
+- Trong mô tả PR nói rõ bước kiểm chứng
 ```
 
-After saving, in a new task write only **this task’s delta**, for example: “Fix login page layout on Safari; accept per AGENTS.md.”
+Sau khi lưu, trong tác vụ mới chỉ cần viết **khác biệt lần này**, ví dụ: «Sửa vấn đề bố cục trang đăng nhập trên Safari, nghiệm thu theo AGENTS.md.»
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Do I have to repeat these rules manually every time?
+### 1. Mỗi lần tôi còn phải nói lại các quy tắc này thủ công?
 
-Usually not.  
-That is one reason `AGENTS.md` exists:
-put **stable project rules** there so you do not re-explain them every new task.
+Thường không cần.  
+Đó chính là một ý nghĩa của `AGENTS.md`:
+đặt **quy tắc dự án ổn định không đổi** vào đó, tránh mỗi lần mở tác vụ mới phải kể lại.
 
-### 2. If I write it, will Codex always follow it 100%?
+### 2. Có phải “tôi viết rồi, Codex chắc chắn làm đúng 100%”?
 
-`AGENTS.md` matters, but it still works together with:
+`AGENTS.md` rất quan trọng, nhưng vẫn phải làm việc cùng:
 
-- Explicit requirements in this task
-- Product permissions and approval mechanisms
-- Sandbox, network, and team policy
+- Yêu cầu rõ trong tác vụ lần này của bạn
+- Cơ chế quyền và phê duyệt của sản phẩm
+- Sandbox, mạng và chiến lược nhóm
 
-More accurately, it helps alignment; it is not a universal enforcer.
+Nói chính xác hơn, nó giúp khớp, nhưng không phải bộ ép buộc vạn năng.
 
-### 3. If I am not a programmer, do I still need to care about this file?
+### 3. Nếu tôi không phải lập trình viên, còn cần quan tâm tệp này không?
 
-You need the basic idea.  
-Even if you do not write code yourself, as long as you have Codex working on a project over time, `AGENTS.md` reduces repeated explanation and drift.
+Cần hiểu khái niệm cơ bản.  
+Dù bạn không tự viết mã, miễn bạn để Codex liên tục xử lý một dự án, `AGENTS.md` vẫn giúp giảm giải thích lặp và lệch hướng.
 
-## Where to Put It
+## Đặt ở đâu
 
-| Location | Scope |
+| Vị trí | Phạm vi |
 |---|---|
-| Repo root `AGENTS.md` | Default for the whole project |
-| Subdirectory `AGENTS.md` | That directory and subpaths (common in monorepos) |
-| User-level notes | Personal configuration or global preferences—do not mix with project instructions |
+| `AGENTS.md` gốc kho | Mặc định hiệu lực cả dự án |
+| `AGENTS.md` thư mục con | Thư mục đó và đường dẫn con (monorepo thường gặp) |
+| Mô tả cấp người dùng | Dùng cấu hình cá nhân hoặc sở thích toàn cục; đừng trộn với chỉ thị dự án |
 
-Scope and conflict handling: [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/).
+Xử lý phạm vi và xung đột xem [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/).
 
-## Difference from Skills and Slash Commands
+## Khác với Skill và lệnh slash
 
-| Mechanism | Essence | Typical use |
+| Cơ chế | Bản chất | Mục đích điển hình |
 |---|---|---|
-| AGENTS.md | Persistent, passive project rules | Style, tests, no-go areas |
-| Skill | Reusable workflow package (`SKILL.md`) | Release checklist, specialized review flow |
-| Slash command | Shortcut you trigger actively | `/review`, one-off workflows |
+| AGENTS.md | Quy tắc dự án bền, thụ động | Phong cách, kiểm thử, vùng cấm |
+| Skill | Gói quy trình tái sử dụng (`SKILL.md`) | Danh sách phát hành, quy trình rà soát chuyên biệt |
+| Lệnh slash | Lối tắt bạn chủ động kích hoạt | `/review`, quy trình một lần |
 
-Use `AGENTS.md` for project rules; **repeatable, shareable step sets** fit better as a [Skill](/skills/overview/).
+Quy tắc dự án dùng `AGENTS.md`; **bộ bước lặp được, chia sẻ được** phù hợp hơn làm [Skill](/skills/overview/).
 
-## How to Decide Where to Write Something
+## Phán đoán nên viết ở đâu
 
-If unsure where a sentence belongs, use this rule:
+Nếu chưa chắc một câu nên viết ở đâu, dùng quy tắc:
 
-- **This rule holds long term**: better in `AGENTS.md`
-- **This is special for this task only**: in the current task prompt
-- **This is a reusable procedure**: consider a Skill
+- **Quy tắc này dài hạn đều đúng**: phù hợp hơn viết vào `AGENTS.md`
+- **Chỉ là yêu cầu đặc biệt của tác vụ lần này**: viết trong Prompt tác vụ hiện tại
+- **Đây là bộ bước tái sử dụng lặp được**: cân nhắc làm Skill
 
-For example:
+Ví dụ:
 
-- “This repo validates with `pnpm test`” → `AGENTS.md`
-- “Only change the login page this time; do not touch registration” → current task
-- “Run the same check flow before every release” → better as a Skill
+- “Kho này thống nhất dùng `pnpm test` để kiểm chứng” -> phù hợp `AGENTS.md`
+- “Lần này chỉ sửa trang đăng nhập, đừng đụng trang đăng ký” -> phù hợp viết trong tác vụ hiện tại
+- “Trước mỗi lần phát hành đều chạy cùng một quy trình kiểm” -> phù hợp hơn làm Skill
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- File too long; the model only reads the first part—**put hard constraints in the first 30 lines**
-- Writing high-risk instructions like “always auto push,” conflicting with [Permissions and Approvals](/guide/foundations/permissions-and-approvals/)
-- Nobody on the team maintains it; docs disagree with real script commands
+- Tệp quá dài, mô hình chỉ đọc nửa đầu — **đặt ràng buộc cứng trong 30 dòng đầu**
+- Viết chỉ thị rủi ro cao kiểu «mãi tự push», xung đột với [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
+- Nhóm không ai duy trì, tài liệu không khớp lệnh script thật
 
-## Security Boundaries
+## Ranh giới an toàn
 
-`AGENTS.md` **cannot replace** sandbox and approval. Even if you write “feel free to run any command,” the product may still require confirmation; team-managed policy can tighten further.
+`AGENTS.md` **không thay** Sandbox và phê duyệt. Dù viết «có thể tùy ý chạy lệnh», sản phẩm vẫn có thể yêu cầu bạn xác nhận; chiến lược quản trị nhóm có thể siết thêm.
 
-`AGENTS.md` tells Codex how this project usually works—not what to do in this specific task.
+`AGENTS.md` chịu trách nhiệm nói với Codex “dự án này thường làm việc thế nào”, không thay bạn mô tả lần này cụ thể cần làm gì.
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex project context documentation
+- Mô tả ngữ cảnh dự án OpenAI Codex
 - freestylefly/CodexGuide: `docs/advanced/02-agents-md.md`
 - stormzhang/ai-coding-guide: `codex/11-agents-md.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public description of project context, task boundaries, and approval/sandbox constraints; page content is limited to purpose, boundaries, and common patterns for `AGENTS.md`, without unverified mandatory precedence details.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về ngữ cảnh dự án, ranh giới tác vụ và ràng buộc phê duyệt/Sandbox; nội dung trang giới hạn ở mục đích, ranh giới và cách viết thường gặp của `AGENTS.md`, không gồm chi tiết ưu tiên bắt buộc chưa chứng minh.  
+**Kiểm chứng gần nhất:** 2026-07-26

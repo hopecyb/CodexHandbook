@@ -1,28 +1,28 @@
 ---
-title: Skill examples
-description: Entry points for writing, review, research, and automation Skill examples.
+title: Ví dụ Skill
+description: 'Lối vào bốn loại ví dụ Skill: viết, review, nghiên cứu, tự động hóa.'
 locale: vi
-source_locale: en
-source_revision: 67efdb3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Skill examples
+# Ví dụ Skill
 
-These examples are best for studying structure, then adapting to your project and team constraints.
+Các ví dụ này phù hợp hơn để quan sát cấu trúc, rồi chỉnh theo ràng buộc dự án và nhóm của bạn.
 
-| Example | Description |
+| Ví dụ | Ghi chú |
 |---|---|
-| [Writing Skill](/skills/examples/writing-skill/) | Structured long-form writing workflow |
-| [Review Skill](/skills/examples/review-skill/) | PR / diff review (full example) |
-| [Research Skill](/skills/examples/research-skill/) | Research output with citations |
-| [Automation Skill](/skills/examples/automation-skill/) | Repeat tasks and scheduled flows |
+| [Skill viết](/skills/examples/writing-skill/) | Quy trình viết bài dài có cấu trúc |
+| [Skill review](/skills/examples/review-skill/) | Review PR / diff (ví dụ đầy đủ) |
+| [Skill nghiên cứu](/skills/examples/research-skill/) | Đầu ra khảo sát kèm trích dẫn |
+| [Skill tự động hóa](/skills/examples/automation-skill/) | Tác vụ lặp và quy trình hẹn giờ |
 
-Related: [Create your first Skill](/skills/create-your-first-skill/).
+Trang liên quan: [Tạo Skill đầu tiên](/skills/create-your-first-skill/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Navigation page only; listed writing, review, research, and automation examples are common workflow types current Codex/Skills can carry.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Trang này là trang điều hướng ví dụ; các ví dụ viết, review, nghiên cứu, tự động hóa liệt kê đều thuộc loại workflow thường gặp mà Codex/Skills hiện tại có thể mang.  
+**Kiểm chứng gần nhất:** 2026-07-26

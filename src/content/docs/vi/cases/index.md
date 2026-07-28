@@ -1,37 +1,37 @@
 ---
-title: Case studies
-description: Learn Codex's full execute, review, and reuse flow through real tasks.
+title: Case thực chiến
+description: Học quy trình thực thi, kiểm tra và tái sử dụng đầy đủ của Codex qua các tác vụ thực tế.
 locale: vi
-source_locale: en
-source_revision: fd76a75
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Case studies
+# Case thực chiến
 
-Case studies show how to go from a real goal through prompting, execution, review, verification, and reuse.
+Case thực chiến cho thấy cách xuất phát từ một mục tiêu thực tế để hoàn thành prompt, thực thi, kiểm tra, kiểm chứng và tái sử dụng.
 
-## Case format
+## Định dạng case
 
-Each case should include goal, preparation materials, recommended prompts, execution process, human checkpoints, verification methods, failure handling, and reusable templates. To write a new case, see [Case study template](/cases/use-cases/case-study-template/).
+Mỗi case nên gồm mục tiêu, tài liệu chuẩn bị, prompt đề xuất, quy trình thực thi, điểm kiểm tra của người, cách kiểm chứng, xử lý thất bại và mẫu có thể tái sử dụng. Để viết case mới, xem [mẫu case](/cases/use-cases/case-study-template/).
 
-## Getting started and general
+## Bắt đầu và dùng chung
 
-- [First task](/cases/first-task/)
-- [Understand a codebase](/cases/understand-a-codebase/)
-- [Coordinate multiple agents](/cases/coordinate-multiple-agents/)
+- [Tác vụ đầu tiên](/cases/first-task/)
+- [Hiểu codebase](/cases/understand-a-codebase/)
+- [Phối hợp nhiều Agent](/cases/coordinate-multiple-agents/)
 
-## Creation and office work
+## Sáng tạo và văn phòng
 
-- [Write an article](/cases/write-an-article/)
-- [Build a website](/cases/build-a-website/)
-- [Create a slide deck](/cases/create-a-slide-deck/)
-- [Analyze a spreadsheet](/cases/analyze-a-spreadsheet/)
+- [Viết bài](/cases/write-an-article/)
+- [Xây website](/cases/build-a-website/)
+- [Tạo slide](/cases/create-a-slide-deck/)
+- [Phân tích bảng tính](/cases/analyze-a-spreadsheet/)
 
-## Development and collaboration
+## Phát triển và cộng tác
 
-- [Fix a bug](/cases/fix-a-bug/)
-- [Review a PR](/cases/review-a-pr/)
-- [Research with sources](/cases/research-with-sources/)
-- [Automate a daily report](/cases/automate-a-daily-report/)
+- [Sửa Bug](/cases/fix-a-bug/)
+- [Review PR](/cases/review-a-pr/)
+- [Nghiên cứu có nguồn trích dẫn](/cases/research-with-sources/)
+- [Tự động hóa báo cáo hàng ngày](/cases/automate-a-daily-report/)

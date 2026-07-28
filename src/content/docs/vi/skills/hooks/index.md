@@ -1,50 +1,50 @@
 ---
 title: Hooks
-description: Add checks, logs, and blocks at fixed execution points—when to block vs log.
+description: Thêm kiểm tra, nhật ký và chặn tại điểm thực thi cố định — khi nào nên chặn, khi nào nên ghi.
 locale: vi
-source_locale: en
-source_revision: 38cc806
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A Hook automatically inserts a check or log at a fixed moment.
+Hook là tự động chèn một lớp kiểm tra hoặc ghi nhận tại một thời điểm cố định.
 
-It handles checks, logging, and interception at process nodes—not defining how the task itself should run.
+Nó xử lý kiểm tra, ghi nhận và chặn tại nút quy trình — không chịu trách nhiệm định nghĩa Tác vụ bản thân làm thế nào.
 
-## Contents
+## Nội dung
 
-This section mainly answers three questions:
+Nhóm này chủ yếu trả lời 3 câu hỏi:
 
-- When should I trigger a Hook?
-- Am I trying to prevent problems or only record them?
-- How do I start Hook configuration in a low-risk way?
+- Rốt cuộc nên kích hoạt Hook khi nào
+- Bạn muốn ngăn vấn đề xảy ra, hay chỉ ghi nhận
+- Lần đầu cấu hình Hook, bắt đầu từ cách rủi ro thấp thế nào
 
-## Reading order
+## Thứ tự đọc
 
-1. [Hooks overview](/skills/hooks/hooks-overview/): Separate Hook from Skill and MCP first
-2. [Hook event types](/skills/hooks/hook-event-types/): Know whether to attach before, after, or at session start/end
-3. [Hook configuration examples](/skills/hooks/hooks-examples/): Three common patterns—log only / block first / light input check
+1. [Tổng quan Hooks](/skills/hooks/hooks-overview/): trước hết phân biệt Hook khác Skill, MCP
+2. [Loại sự kiện Hook](/skills/hooks/hook-event-types/): biết nên gắn trước, sau, hay đầu/cuối phiên
+3. [Ví dụ cấu hình Hook](/skills/hooks/hooks-examples/): xem ba cách viết thường gặp"chỉ ghi / chặn trước / kiểm tra đầu vào nhẹ"
 
-## Configuration order
+## Thứ tự cấu hình
 
-Do not start with the strictest block policy. A better order:
+Không nên ngay từ đầu lên chiến lược chặn nghiêm nhất. Thứ tự phù hợp hơn:
 
-1. `log` first
-2. Then `warn`
-3. Then `block`
+1. Làm `log` trước
+2. Rồi `warn`
+3. Rồi `block`
 
-That makes it easier to verify:
+Như vậy dễ hơn để kiểm trước:
 
-- Events are wired correctly
-- False positives are acceptable
-- Performance does not slow daily use
+- Sự kiện gắn đúng chưa
+- Báo giả nhiều không
+- Hiệu năng có kéo chậm dùng hàng ngày không
 
-Think of a Hook as a small gate on a process node—for check, log, or block.
+Hook có thể xem như một cổng nhỏ gắn trên nút quy trình — dùng để kiểm tra, ghi nhận hoặc chặn.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Hook support surface, event model, and configuration entry points depend heavily on client version; as of 2026-07-26 official public material is insufficient to stabilize this section—marked `outdated`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI / App(tùy phiên bản)  
+**Ghi chú tái Kiểm chứng:** Phạm vi hỗ trợ, mô hình sự kiện và lối vào cấu hình của Hooks phụ thuộc mạnh phiên bản client hiện tại; đến 2026-07-26, tài liệu công khai chính thức chưa đủ để chuẩn hóa ổn định nhóm này, tạm đánh `outdated`.  
+**Kiểm chứng gần nhất:** 2026-07-26

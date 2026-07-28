@@ -1,69 +1,69 @@
 ---
-title: 'Case study: Competitive feature matrix'
-description: Source-backed research and table output—a workflow non-engineers can reuse.
+title: "Case: bảng so sánh tính năng đối thủ"
+description: Nghiên cứu có trích dẫn và đầu ra bảng — quy trình người không phải kỹ sư cũng tái sử dụng được.
 locale: vi
-source_locale: en
-source_revision: 1b56977
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Product, ops, researchers |
-| Client | App or CLI |
-| Estimated time | 45 minutes |
-| Verification date | 2026-07-25 |
+| Đối tượng | Sản phẩm, vận hành, nhà nghiên cứu |
+| Client | App hoặc CLI |
+| Thời gian ước tính | 45 phút |
+| Ngày kiểm chứng | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Produce a comparison table for 3–5 competitors (features, pricing signals, fit), with a source for each conclusion.
+**Mục tiêu:** Tạo bảng so sánh 3–5 đối thủ (tính năng, manh mối giá, kịch bản phù hợp); mỗi kết luận kèm nguồn.
 
-**Success criteria:**
+**Tiêu chí thành công:**
 
-- Markdown table + "to confirm" labels
-- No fabricated prices or version numbers
-- No internal secrets in outward-facing docs
+- Bảng Markdown + đánh dấu «cần xác nhận»
+- Không bịa giá và số phiên bản
+- Không ghi bí mật nội bộ vào tài liệu công khai
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Define comparison dimensions upfront (in prompt or `@brief.md`)
-- Enable [web search](/guide/tools/web-search/) (if the product supports it)
+- Làm rõ chiều so sánh (viết sẵn trong prompt hoặc `@brief.md`)
+- Bật [tìm kiếm web](/guide/tools/web-search/) (nếu sản phẩm hỗ trợ)
 
-## 3. Workflow
+## 3. Quy trình
 
-Follow [Research with sources](/cases/workflows/research-with-sources/):
+Theo [nghiên cứu có nguồn trích dẫn](/cases/workflows/research-with-sources/):
 
 ```text
-Compare "team collaboration" features for vendors A/B/C:
-1–2 sentences per dimension + source URL;
-prefer official docs over blogs;
-mark price "to confirm" if unverifiable;
-output markdown table; do not change other repo files.
+So sánh tính năng «cộng tác nhóm» của ba bên A/B/C:
+Mỗi chiều 1–2 câu giải thích + URL nguồn;
+Tài liệu chính thức ưu tiên hơn blog;
+Giá không kiểm chứng được thì ghi «cần xác nhận»;
+Xuất bảng markdown; không sửa tệp khác trong kho.
 ```
 
-**Verification:** Human opens 3 URLs; check dates against [verification policy](/guide/start-here/handbook-version-policy/).
+**Kiểm chứng:** Người mở 3 URL; kiểm ngày tháng với [chính sách kiểm chứng](/guide/start-here/handbook-version-policy/).
 
-## 4. Failure and recovery
+## 4. Thất bại và phục hồi
 
-- Conflicting sources: present both; don't force a single story
-- Context too long: split into "A vs B first, then add C"
+- Nguồn xung đột: yêu cầu trình bày song song hai cách nói, không ép thống nhất
+- Ngữ cảnh quá dài: tách thành «trước A vs B, rồi thêm C»
 
-## 5. Capture
+## 5. Đóng gói lại
 
-- Save comparison table template to team template dir or knowledge base
-- Optional Skill: `source-backed-research`
+- Đóng gói mẫu bảng so sánh vào thư mục mẫu hoặc knowledge base của nhóm
+- Có thể thành Skill: `source-backed-research`
 
-## 6. Related chapters
+## 6. Chương liên quan
 
-- [Artifact-first work](/cases/workflows/artifact-first-work/)
-- [Validate sources](/guide/quality/validate-sources/)
+- [Ưu tiên Artifact](/cases/workflows/artifact-first-work/)
+- [Kiểm chứng nguồn](/guide/quality/validate-sources/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified research-with-sources, web search, validate sources, and version policy chapters; content is limited to the stable research case structure for a source-backed competitive matrix—specific prices or product versions are not fixed.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương nghiên cứu có trích dẫn, tìm kiếm web, kiểm chứng nguồn và chính sách phiên bản đã kiểm chứng của sổ tay; nội dung trang giới hạn ở cấu trúc case nghiên cứu ổn định “tạo bảng so sánh đối thủ có nguồn”, không đóng cứng giá hay phiên bản sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

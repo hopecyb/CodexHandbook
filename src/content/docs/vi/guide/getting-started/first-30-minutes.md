@@ -1,104 +1,105 @@
 ---
-title: First 30 minutes
-description: A 30-minute path you can follow on day one.
+title: Lộ trình ba mươi phút đầu
+description: Lộ trình 30 phút có thể tham khảo trực tiếp khi lần đầu bắt tay.
 locale: vi
-source_locale: en
-source_revision: fcb3195
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-If you just installed Codex and are not sure how to start day one, follow this path.
+Vừa cài xong, chưa biết ngày đầu nên bắt đầu thế nào — có thể đi theo lộ trình này.
 
-The goal of the first 30 minutes is to complete one full loop.
+Mục tiêu ba mươi phút đầu là chạy thông vòng khép kín lần đầu.
 
-| Time | What to do |
+| Thời gian | Việc cần làm |
 |---|---|
-| 0–5 min | Read [Safety checklist](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 min | [Install desktop App](/guide/getting-started/install-desktop-app/) and [sign in](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 min | [Create practice project](/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Run your first task](/guide/getting-started/run-your-first-task/) and review |
-| 25–30 min | Open [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/) to enter the beginner path |
+| 0–5 phút | Đọc [Checklist an toàn](/guide/getting-started/beginner-safety-checklist/) |
+| 5–10 phút | [Cài Desktop App](/guide/getting-started/install-desktop-app/) và [đăng nhập](/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 phút | [Tạo dự án luyện tập](/guide/getting-started/create-your-first-project/) |
+| 15–25 phút | [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/) và kiểm tra |
+| 25–30 phút | Mở [Trò chuyện với Codex](/guide/learning-paths/beginner/01-talk-to-codex/) để vào lộ trình người mới |
 
-## What these 30 minutes should achieve
+## 30 phút này cần hoàn thành gì
 
-You do not need to learn every feature. Get this chain working:
+Nửa giờ này không cần học hết mọi tính năng — chạy thông chuỗi sau là đủ:
 
-- You can enter the product
-- You can point Codex at a real directory
-- You can see a result
-- You can decide whether to accept it
+- Vào được sản phẩm
+- Để Codex làm việc trên một thư mục thật
+- Thấy được kết quả
+- Phán đoán được kết quả có đáng chấp nhận không
 
-Once that chain works, learning CLI, IDE, Cloud, Skills, and automation gets easier.
+Chuỗi này chạy thông rồi, học CLI, IDE, Cloud, Skill, tự động hóa sẽ nhẹ hơn.
 
-## What each block should finish
+## Mỗi đoạn thời gian cần hoàn thành gì
 
-### 0 to 5 minutes
+### 0 đến 5 phút
 
-You do not need to memorize concepts. Know these:
+Không cần thuộc khái niệm — biết các việc sau là đủ:
 
-- Do not practice on a production repository
-- Prepare an experiment environment you can undo
-- You must check results yourself
+- Đừng lấy kho production để luyện tay ngay
+- Cần chuẩn bị môi trường thí nghiệm có thể hoàn tác
+- Kết quả phải tự kiểm tra
 
-### 5 to 10 minutes
+### 5 đến 10 phút
 
-Do not over-study settings. Just get into the product and sign in.
+Bước này không cần nghiên cứu nhiều cài đặt — trước hết vào được sản phẩm và đăng nhập bình thường.
 
-### 10 to 15 minutes
+### 10 đến 15 phút
 
-Prepare a small directory you understand so you can observe changes. Do not rush to build a full project.
+Bước này chuẩn bị trước một thư mục nhỏ bạn hiểu được, để dễ quan sát thay đổi — đừng vội dựng dự án đầy đủ.
 
-### 15 to 25 minutes
+### 15 đến 25 phút
 
-Confirm:
+Đoạn này cần xác nhận:
 
-- It actually ran a task
-- You can understand the result
-- You know where to follow up, edit, or undo
+- Nó thật sự đã thực thi một tác vụ
+- Bạn hiểu được kết quả
+- Bạn biết chỗ nào có thể hỏi tiếp, sửa hoặc hoàn tác
 
-### 25 to 30 minutes
+### 25 đến 30 phút
 
-Connect “first success” to the learning path so you do not stop after one try.
+Bước này nối «lần thành công đầu tiên» vào lộ trình học phía sau — tránh dùng một lần rồi dừng.
 
-## Common misconceptions and blockers
+## Hiểu nhầm và chỗ kẹt thường gặp
 
-### 1. The first task is too large
+### 1. Chọn tác vụ đầu tiên quá lớn
 
-Keep the first job tiny, for example:
+Lần đầu tốt nhất chỉ làm việc rất nhỏ, ví dụ:
 
-- Change a short piece of copy
-- Add a small page
-- Fix a small issue whose location you already know
+- Sửa một đoạn copy
+- Thêm một trang nhỏ
+- Sửa một vấn đề nhỏ mà bạn đã biết vị trí
 
-Do not ask it to “refactor the whole project” on day one.
+Đừng ngay từ đầu bảo nó «refactor cả dự án».
 
-### 2. Spending the whole half hour on concepts without doing anything
+### 2. Dành hết thời gian nghiên cứu khái niệm, không thực sự làm
 
-Understanding matters, but for beginners a real “I actually used it” experience matters more.
+Hiểu đương nhiên quan trọng, nhưng với người mới, trước hết có một lần trải nghiệm «tôi thật sự đã dùng được» quan trọng hơn.
 
-### 3. Seeing a result and stopping without review
+### 3. Thấy kết quả là kết thúc ngay, không rà lại
 
-The more valuable habit from the first 30 minutes is: even for a tiny task, check the result once.
+Thói quen đáng hình thành hơn trong 30 phút đầu: dù tác vụ nhỏ đến đâu cũng kiểm tra kết quả một lần.
 
-## Done criteria
+## Dấu hiệu hoàn thành
 
-If after 30 minutes you have done these four things, this round is complete:
+Nếu sau 30 phút bạn đã làm được 4 việc sau, vòng này tính là xong:
 
-1. You know which directory you operated on
-2. You ran at least one real task
-3. You looked at the result, not only the reply
-4. You know which page to learn next
+1. Biết mình đang thao tác trên thư mục nào
+2. Đã chạy ít nhất một tác vụ thật
+3. Đã xem kết quả chứ không chỉ xem phản hồi
+4. Biết bước tiếp theo nên học trang nào
 
-## If you get stuck
+## Nếu bị kẹt
 
-Go to the [Troubleshooting index](/guide/reference/troubleshooting/). If a concept is unclear, go back to [Prerequisites](/guide/start-here/prerequisites/) and [Local vs cloud](/guide/foundations/local-vs-cloud/).
+Trước hết vào [Chỉ mục xử lý sự cố](/guide/reference/troubleshooting/). Nếu chỉ là khái niệm chưa hiểu, cũng có thể quay lại [Cần gì trước khi bắt đầu](/guide/start-here/prerequisites/) và [Local và đám mây](/guide/foundations/local-vs-cloud/).
 
-In the first half hour, completing one loop of “assign a task, see the result, judge it yourself” is already worth it.
+Trong ba mươi phút đầu, tự tay hoàn thành một vòng «giao tác vụ, xem kết quả, tự phán đoán» đã rất đáng.
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với các chương checklist an toàn, dự án luyện tập, tác vụ đầu tiên, kiểm tra kết quả và lộ trình người mới đã được kiểm chứng trong cẩm nang hiện tại; trang này chỉ cung cấp lộ trình bắt tay ổn định «nửa giờ đầu chạy thông vòng khép kín trước».  
+**Kiểm chứng gần nhất:** 2026-07-26

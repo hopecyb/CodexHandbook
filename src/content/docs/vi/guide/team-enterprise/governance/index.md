@@ -1,36 +1,36 @@
 ---
-title: Governance
-description: Policies, boundaries, and org rules—what is allowed, what is not, and who is accountable.
+title: Quản trị
+description: "Trang giải thích chính sách, ranh giới và quy tắc tổ chức — nêu rõ được làm gì, không được làm gì, ai chịu trách nhiệm."
 locale: vi
-source_locale: en
-source_revision: 829dd90
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In the Codex context, governance is mainly two things: what the team allows, and who handles problems when they arise.
+Đặt quản trị vào ngữ cảnh Codex chủ yếu là hai việc: đội cho phép dùng thế nào, khi có sự cố ai xử lý.
 
-That affects:
+Điều này ảnh hưởng trực tiếp:
 
-- Which extensions can connect
-- Which tasks can be automated
-- When human approval is mandatory
+- Có nối một số mở rộng không
+- Tác vụ nào được tự động hóa
+- Tình huống nào bắt buộc Phê duyệt của người
 
-## Section entry
+## Lối vào nhóm này
 
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Chính sách sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
 
-## What these pages answer
+## Nhóm trang này chủ yếu trả lời gì
 
-- How to write org boundaries as clear rules
-- What should not be left to individual judgment
-- Why “everyone knows” is usually not enough
+- Viết ranh giới tổ chức thành quy tắc rõ thế nào
+- Việc gì không nên để cá nhân tự phán
+- Vì sao «đồng thuận mặc định ai cũng hiểu» thường không đủ
 
-Governance pages exist to state high-risk boundaries upfront—not leave teams guessing.
+Trang quản trị quan trọng hơn ở chỗ viết rõ ranh giới rủi ro cao trước, đừng để đội đoán.
 
 ---
 
-**Status:** verified  
-**Products:** Team / enterprise scenarios  
-**Verification basis:** OpenAI enterprise plugin/app docs still treat role access, action permissions, approval, and source-system boundaries as governance prerequisites; this page defines the governance section role and entry only—does not claim specific org controls are on by default.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** Bối cảnh đội / doanh nghiệp  
+**Cơ sở kiểm chứng:** Mô tả plugin và ứng dụng cấp doanh nghiệp OpenAI hiện vẫn lấy truy cập theo vai trò, quyền hành động, phê duyệt và ranh giới quyền hệ thống nguồn làm tiền đề quản trị; trang chỉ định nghĩa vai trò và lối vào nhóm trang quản trị, không tuyên bố một kiểm soát tổ chức nào đã bật mặc định.  
+**Kiểm chứng gần nhất:** 2026-07-26

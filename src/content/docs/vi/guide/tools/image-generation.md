@@ -1,114 +1,124 @@
 ---
-title: Image generation
-description: Generating or editing images in Codex tasks—prompts, formats, and acceptance.
+title: Tạo ảnh
+description: Tạo hoặc chỉnh ảnh trong tác vụ Codex — Prompt, định dạng và nghiệm thu.
 locale: vi
-source_locale: en
-source_revision: 3271bcc
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Codex can invoke **image generation** in some scenarios: illustration drafts, icon sketches, UI concept art, diagrams. Treat output as **artifacts to verify**—not production brand assets ready to ship.
+Trong một số tình huống, Codex có thể gọi năng lực **tạo ảnh**: minh họa, bản nháp icon, sơ đồ khái niệm UI, sơ đồ. Kết quả tạo ra nên xem là **artifact chờ nghiệm thu**, không phải tài sản thương hiệu đưa lên production ngay.
 
-Good for visual drafts—not final deliverables.
+Nó phù hợp đưa bản nháp hình trước; không phù hợp coi thẳng là sản phẩm cuối.
 
-## What's covered
+## Nội dung trang này
 
-- When to generate in Codex vs professional tools
-- How to write image prompts and constraints
-- Copyright, brand, and file management
+- Khi nào tạo ảnh trong Codex vs dùng công cụ chuyên nghiệp
+- Cách viết Prompt ảnh và ràng buộc
+- Bản quyền, thương hiệu và quản lý tệp
 
-## Use cases
+## Tình huống phù hợp
 
-| Good fit | Poor fit |
+| Phù hợp | Không phù hợp |
 |---|---|
-| Blog image drafts, internal doc diagrams | External materials under strict brand guidelines |
-| Quick UI layout exploration | Pixel-perfect design handoff |
-| Tutorial example icons | Real-person likeness without authorization |
+| Bản nháp ảnh blog, sơ đồ tài liệu nội bộ | Vật liệu đối ngoại bị ràng buộc brand book nghiêm ngặt |
+| Khám phá nhanh không khí bố cục UI | Giao thiết kế cần khớp pixel |
+| Icon ví dụ trong tutorial | Cảnh có chân dung người thật chưa được ủy quyền |
 
-Complements [prompting with images](/prompts/prompting-with-images/): that page covers **input** images; this page covers **output** images.
+Bổ sung với [Prompt kèm ảnh](/prompts/prompting-with-images/): trang đó nói ảnh **đầu vào**; trang này nói ảnh **đầu ra**.
 
-## What image generation is for
+## Tạo ảnh phù hợp làm gì
 
-Better at:
+Tạo ảnh phù hợp hơn với:
 
-- Quick direction
-- Visualizing a concept
-- Draft assets for articles, docs, prototypes
+- Đưa hướng nhanh
+- Giúp bạn thấy một khái niệm hình ảnh
+- Cho bài viết, tài liệu, prototype một bản phác dùng tạm được
 
-Not a substitute for:
+Các mục đích sau không phù hợp giao thẳng kết quả tạo:
 
-- Official brand materials
-- Precise design specs
-- Final published visuals without review
+- Giả vờ đây là vật liệu thương hiệu chính thức
+- Giả vờ đây là bản thiết kế chính xác
+- Giả vờ đây là hình cuối có thể phát hành đối ngoại ngay
 
-## Recommended workflow
+## Quy trình khuyến nghị
 
-1. State purpose, aspect ratio, style keywords (avoid piled trademark style names)
-2. Request output format (PNG/SVG if supported) and save path
-3. After generation, [verify artifacts](/guide/quality/verify-artifacts/): open file, check resolution and readability
-4. Design or legal review before external publication
+1. Nói rõ mục đích, tỷ lệ kích thước, từ khóa phong cách (tránh chất đống tên phong cách xâm phạm)
+2. Yêu cầu định dạng đầu ra (PNG/SVG nếu hỗ trợ) và đường dẫn lưu
+3. Sau khi tạo, [kiểm chứng artifact](/guide/quality/verify-artifacts/): mở tệp, kiểm độ phân giải và khả năng đọc
+4. Trước phát hành đối ngoại, để thiết kế hoặc pháp lý rà lại
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Looks good = ready to use?
+### 1. Chỉ cần hình đẹp là dùng được?
 
-Also check:
+Bạn còn phải xem:
 
-- Fit for purpose
-- Weird details
-- Garbled text
-- Style match with content
+- Cảnh có khớp mục đích không
+- Chi tiết có kỳ dị không
+- Chữ có loạn không
+- Phong cách có khớp nội dung của bạn không
 
-### 2. "Generate an image for me" is enough?
+### 2. Chỉ cần một câu “giúp tôi tạo một tấm ảnh” là đủ?
 
-Usually specify:
+Thường chưa đủ.  
+Ít nhất phải nói rõ:
 
-- Purpose
-- Landscape, portrait, or square
-- Style direction
-- Whether text should appear
-- File format
+- Mục đích
+- Khổ hoặc tỷ lệ kích thước
+- Hướng phong cách
+- Có cần chữ không
+- Định dạng tệp
 
-### 3. Replaces designers?
+### 3. Tạo ảnh có thay được nhà thiết kế?
 
-Closer to exploration, content illustration, and concept sketching—not strict design delivery.
+Nó gần hơn với:
 
-## Prompt structure
+- Công cụ khám phá giai đoạn đầu
+- Công cụ ảnh minh họa nội dung
+- Công cụ phác thảo khái niệm
 
-1. What the image is for
-2. Landscape, portrait, or square
-3. Mood and palette
-4. Text yes/no
-5. How you will verify after output
+chứ không phải thay thế giao thiết kế nghiêm ngặt.
 
-## Files and repository
+## Có thể viết thế nào
 
-- Large images in `assets/` or CDN; watch Git size
-- In PR, note generation prompt and model version (internal audit)
-- See [images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
+Có thể yêu cầu theo cấu trúc:
 
-## Safety and compliance
+1. Ảnh này dùng để làm gì
+2. Cần ngang, dọc hay vuông
+3. Muốn khí chất và màu sắc thế nào
+4. Có xuất hiện chữ không
+5. Sau khi xuất bạn định kiểm thế nào
 
-- Do not generate misleading content with sensitive marks, fake IDs, or unauthorized likenesses
-- Enterprise policy may ban certain subjects; follow [acceptable use](https://openai.com/policies/) and internal rules
+## Tệp và kho
 
-## References
+- Ảnh lớn đặt `assets/` hoặc CDN, đánh giá dung lượng Git
+- Trong PR nói rõ Prompt tạo và phiên bản mô hình (kiểm toán nội bộ)
+- Xem [Hình ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/)
+
+## An toàn và tuân thủ
+
+- Đừng tạo nội dung gây hiểu nhầm chứa dấu hiệu nhạy cảm, giấy tờ giả, chân dung người khác
+- Chính sách doanh nghiệp có thể cấm một số chủ đề; tuân thủ [chấp nhận sử dụng](https://openai.com/policies/) và quy định nội bộ
+
+## Nguồn tham khảo
 
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Committing uncompressed 4K images
-- Passing generated images off as photos or official logos
-- Omitting "no text" constraint → garbled captions
+- Commit thẳng ảnh 4K chưa nén vào kho
+- Dùng ảnh tạo giả ảnh chụp thật hoặc logo chính thức
+- Không ràng buộc «không chữ» trong Prompt dẫn tới phụ đề loạn
 
-Image generation is for direction and drafts; ship externally only after formal artifact review.
+Tạo ảnh phù hợp đưa hướng và bản nháp trước; khi giao đối ngoại vẫn phải nghiệm thu theo chuẩn artifact chính thức.
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Cloud (version dependent)  
-**Verification basis:** Reviewed against official OpenAI image generation and editing materials for use cases, prompt guidance, and conservative "draft first, formal assets need review" conclusion.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / Cloud (tùy phiên bản)  
+**Căn cứ kiểm chứng:** Đã rà lại tình huống phù hợp, cách viết Prompt và ranh giới nghiệm thu theo tài liệu tạo và chỉnh ảnh chính thức của OpenAI; phần thân giữ kết luận thận trọng “ưu tiên bản nháp, artifact chính thức cần rà lại”.  
+**Kiểm chứng gần nhất:** 2026-07-26

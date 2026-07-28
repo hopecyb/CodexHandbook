@@ -1,91 +1,91 @@
 ---
-title: 'Case study: Scheduled documentation link check'
-description: Non-interactive Codex or CI to scan for dead site links—a team automation starter case.
+title: "Case: kiểm tra liên kết tài liệu theo lịch"
+description: Dùng Codex không tương tác hoặc CI quét liên kết chết trong site — case nhập môn tự động hóa nhóm.
 locale: vi
-source_locale: en
-source_revision: f7b153b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Team maintainers, technical writers |
+| Đối tượng | Maintainer nhóm, Technical Writer |
 | Client | CLI + GitHub Actions |
-| Estimated time | 45–90 minutes (including first CI setup) |
-| Verification date | 2026-07-25 |
+| Thời gian ước tính | 45–90 phút (kể cả cấu hình CI lần đầu) |
+| Ngày kiểm chứng | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Weekly automatic check of in-site links and key external links; report dead links via PR or issue.
+**Mục tiêu:** Mỗi tuần tự kiểm tra liên kết trong site tài liệu và liên kết ngoài then chốt; báo cáo liên kết chết bằng PR hoặc issue.
 
-**Success criteria:**
+**Tiêu chí thành công:**
 
-- CI or scheduled workflow runs repeatably
-- Structured dead-link list (file, line, URL)
-- No unrelated file changes, no push
+- CI hoặc workflow theo lịch chạy lại được
+- Xuất danh sách liên kết chết có cấu trúc (tệp, số dòng, URL)
+- Không sửa tệp không liên quan, không push
 
-**Out of scope:** Full-site crawl, logged-in pages, performance testing.
+**Ngoài phạm vi:** Crawler cả site, trang sau đăng nhập, kiểm thử hiệu năng.
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Docs site source in a Git repo (e.g. this handbook `src/content/docs/`)
-- Existing `npm run build` or link-check script (optional)
-- Read-only `GITHUB_TOKEN` and `OPENAI_API_KEY` in org secrets
+- Mã nguồn site tài liệu trong kho Git (ví dụ sổ tay này `src/content/docs/`)
+- Đã có `npm run build` hoặc script link checker (tùy chọn)
+- `GITHUB_TOKEN` chỉ đọc và `OPENAI_API_KEY` đặt trong org secrets
 
-## 3. Workflow
+## 3. Quy trình
 
-### Explore
-
-```text
-Read @src/content/docs/ and existing package.json scripts.
-List whether link check exists; if not, suggest minimal approach: markdown internal links + sample official doc externals.
-Do not change files.
-```
-
-### Plan
+### Khám phá
 
 ```text
-Give plan: prompt file path, CI workflow name, structured JSON output fields.
-Wait for my confirmation before creating files.
+Đọc @src/content/docs/ và scripts hiện có trong package.json.
+Liệt kê hiện có link check chưa; nếu chưa, đề xuất phương án tối thiểu: liên kết nội bộ markdown + lấy mẫu liên kết ngoài tài liệu chính thức.
+Không sửa tệp.
 ```
 
-### Execute
+### Lập kế hoạch
 
-- Add `prompts/ci/link-check.md`
-- Add `.github/workflows/docs-link-check.yml` (illustrative—see [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Use [codex exec](/guide/developer-platform/non-interactive/codex-exec/) or plain script + Codex for secondary classification
+```text
+Đưa kế hoạch: đường dẫn tệp prompt, tên CI workflow, các trường JSON đầu ra có cấu trúc.
+Đợi tôi xác nhận rồi mới tạo tệp.
+```
 
-### Verify
+### Thực thi
 
-- Local `codex exec` once
-- CI manual `workflow_dispatch`
-- Insert a dead link on purpose; confirm `pass: false`
+- Thêm `prompts/ci/link-check.md`
+- Thêm `.github/workflows/docs-link-check.yml` (minh họa, xem [script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Dùng [codex exec](/guide/developer-platform/non-interactive/codex-exec/) hoặc script thuần + Codex phân loại lần hai
 
-## 4. Failure and recovery
+### Kiểm chứng
 
-| Issue | Action |
+- Chạy `codex exec` cục bộ một lần
+- CI thủ công `workflow_dispatch`
+- Cố ý chèn liên kết chết, xác nhận `pass: false`
+
+## 4. Thất bại và phục hồi
+
+| Vấn đề | Xử lý |
 |---|---|
-| External site temporary 503 | Distinguish hard dead links vs soft failures in prompt |
-| JSON parse failure | Tighten [structured output](/guide/developer-platform/non-interactive/structured-output/) constraints |
-| Quota exhausted | Switch to weekly schedule + incremental checks |
+| Site ngoài tạm 503 | Phân biệt liên kết chết cứng và thất bại mềm; định nghĩa trong prompt |
+| Parse JSON thất bại | Thắt chặt ràng buộc [đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/) |
+| Hết hạn mức | Đổi lịch tuần + kiểm tra tăng dần |
 
-## 5. Capture
+## 5. Đóng gói lại
 
-- After third successful run, capture as Skill: `docs-link-audit`
-- Team [command rules](/guide/customization/rules/team-rules/) allow `npm run build` and read-only git
+- Sau lần thứ ba chạy thông thì đóng gói Skill: `docs-link-audit`
+- [Quy tắc lệnh](/guide/customization/rules/team-rules/) của nhóm cho phép `npm run build` và git chỉ đọc
 
-## 6. Related chapters
+## 6. Chương liên quan
 
-- [Long-running task management](/cases/workflows/long-running-task-management/)
-- [Automations scheduled tasks](/skills/automations/scheduled-tasks/)
-- [Team learning path](/guide/learning-paths/team/)
+- [Quản lý tác vụ dài](/cases/workflows/long-running-task-management/)
+- [Tác vụ theo lịch Automations](/skills/automations/scheduled-tasks/)
+- [Lộ trình nhóm](/guide/learning-paths/team/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified non-interactive mode, scripts and pipelines, structured output, team rules, and automation chapters; content is limited to the stable team automation case of scheduled link checks, structured reports, and failure stop conditions.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương chế độ không tương tác, script và pipeline, đầu ra có cấu trúc, quy tắc nhóm và tự động hóa đã kiểm chứng của sổ tay; nội dung trang giới hạn ở case tự động hóa nhóm ổn định “kiểm tra liên kết theo lịch, báo cáo có cấu trúc và dừng khi thất bại”.  
+**Kiểm chứng gần nhất:** 2026-07-26

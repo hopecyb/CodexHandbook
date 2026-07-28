@@ -1,57 +1,56 @@
 ---
-title: Coordinate multiple agents
-description: A collaboration case for parallel exploration, divided execution, and merging results.
+title: Phối hợp nhiều Agent
+description: Case cộng tác khám phá song song, phân công thực thi và gộp kết quả.
 locale: vi
-source_locale: en
-source_revision: a99435a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Coordinate multiple agents
+# Phối hợp nhiều Agent
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Developers / teams |
-| Client | Desktop App |
-| Estimated time | Depends on task |
+| Đối tượng | Nhà phát triển / nhóm |
+| Client | App máy tính |
+| Thời gian ước tính | Tùy tác vụ |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Split parallelizable sub-problems across multiple agents; humans merge conclusions.
+**Mục tiêu:** Tách các bài toán con có thể song song giao cho nhiều Agent; người gộp kết luận.
 
-**Success criteria:** Each sub-agent has a clear completion definition; no two agents edit the same files.
+**Tiêu chí thành công:** Mỗi Subagent có định nghĩa hoàn thành riêng, không cùng ghi đè một tệp.
 
-## 2. Recommended patterns
+## 2. Mẫu đề xuất
 
-### Parallel exploration, human selects approach
+### Khám phá song song, người chọn
 
 ```text
-Agent 1: Pros, cons, and effort for plan A
-Agent 2: Pros, cons, and effort for plan B
-(You choose; single agent executes)
+Agent 1: Ưu nhược điểm và khối lượng công việc của phương án A
+Agent 2: Ưu nhược điểm và khối lượng công việc của phương án B
+(Sau khi bạn chọn, một Agent duy nhất thực thi)
 ```
 
-### Worktree isolation
+### Cô lập bằng worktree
 
-Different agents work in different [git worktrees](/guide/desktop-app/worktrees/) on different branches; humans merge at the end.
+Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/guide/desktop-app/worktrees/) khác nhau; cuối cùng người gộp.
 
-## 3. Coordination rules (recommended in AGENTS.md)
+## 3. Quy tắc phối hợp (nên ghi vào AGENTS.md)
 
-- Each agent has explicit directory boundaries
-- No parallel `git push`
-- Run CI before merging
+- Mỗi Agent có ranh giới thư mục rõ ràng
+- Cấm `git push` song song
+- Chạy CI thống nhất trước khi gộp
 
-## 4. Related
+## 4. Liên quan
 
-- [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)
-- [Subagents](/guide/agent-work/subagents/)
-
+- [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/)
+- [Subagent](/guide/agent-work/subagents/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Help Center's current Codex plan materials still describe parallel Codex agents in the Desktop App, built-in worktree support, and cloud delegation; this page summarizes collaboration patterns—parallel exploration, directory-boundary isolation, avoiding parallel push, human merge of conclusions—not dependent on any single UI flow.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Tài liệu kế hoạch Codex hiện tại trên OpenAI Help Center vẫn nêu App máy tính hỗ trợ nhiều Codex agents song song, hỗ trợ worktree tích hợp và ủy thác đám mây; trang này chỉ tóm tắt mô hình cộng tác “khám phá song song, cô lập ranh giới thư mục, tránh push song song, người gộp kết luận”, không phụ thuộc một luồng UI duy nhất.  
+**Kiểm chứng gần nhất:** 2026-07-26

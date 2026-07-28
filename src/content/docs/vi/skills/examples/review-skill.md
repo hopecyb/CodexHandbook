@@ -1,49 +1,49 @@
 ---
-title: 'Example: Review Skill'
-description: pr-review-based Skill example for team reuse or adaptation.
+title: 'Ví dụ: Skill review'
+description: Ví dụ Skill dựa trên pr-review — phù hợp nhóm tái dùng hoặc chỉnh sửa.
 locale: vi
-source_locale: en
-source_revision: fba9c2b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Review Skill
+# Ví dụ: Skill review
 
-This example matches `pr-review` in [Create your first Skill](/skills/create-your-first-skill/)—adjust for your team.
+Ví dụ này tương ứng `pr-review` trong [Tạo Skill đầu tiên](/skills/create-your-first-skill/) — có thể chỉnh theo nhu cầu nhóm.
 
 ## SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review git diff; list blocking issues, test gaps, and style suggestions. Use when the user mentions review, audit, or pre-merge checks. Not for writing new features.
+description: Review git diff; liệt kê vấn đề chặn, khoảng trống kiểm thử và đề xuất phong cách. Dùng khi người dùng nhắc review, kiểm tra, kiểm tra trước merge. Không dùng để viết tính năng mới.
 ---
 
-# PR review
+# Review PR
 
-## Input
-- Default compare branch: main (or default branch if main does not exist)
+## Đầu vào
+- Nhánh so sánh mặc định: main (nếu không có thì dùng nhánh mặc định)
 
-## Process
-1. List changed files and change type (feature/fix/refactor/docs)
-2. For each logic change: missing tests? API break?
-3. Check for secrets, debug logs, oversized unrelated diff
-4. Output: 🔴 blocking / 🟡 suggestion / 🟢 pass
+## Quy trình
+1. Liệt kê file thay đổi và loại thay đổi (tính năng/sửa lỗi/refactor/tài liệu)
+2. Với mỗi thay đổi logic: thiếu kiểm thử không, phá API không
+3. Kiểm tra có khóa bí mật, log debug, diff lớn không liên quan không
+4. Xuất: 🔴 Chặn / 🟡 Đề xuất / 🟢 Đạt
 
-## Do not
-- Do not git push
-- Do not change public API without discussion
+## Cấm
+- Không git push
+- Không sửa public API chưa thảo luận
 ```
 
-## Try it
+## Thử dùng
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Hãy review các thay đổi chưa commit hiện tại của tôi
 ```
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Reviewing diffs with structured conclusions remains a typical Codex use case; this page provides an illustrative `SKILL.md` skeleton, not a volatile UI dependency.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Review diff và xuất kết luận có cấu trúc vẫn là kịch bản dùng điển hình của Codex hiện tại; trang này cung cấp khung `SKILL.md` minh họa, không phụ thuộc giao diện hay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,40 +1,40 @@
 ---
-title: 'Example: Automation Skill'
-description: Package repeat checks or report generation as a Skill.
+title: 'Ví dụ: Skill tự động hóa'
+description: Đóng kiểm tra lặp hoặc sinh báo cáo thành Skill.
 locale: vi
-source_locale: en
-source_revision: aa00f2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Automation Skill
+# Ví dụ: Skill tự động hóa
 
-## SKILL.md skeleton
+## Khung SKILL.md
 
 ```md
 ---
 name: daily-report
-description: Summarize yesterday's changes, test results, and todos into daily report Markdown. Use when the user wants a daily report, standup material, or progress summary.
+description: Tổng hợp thay đổi hôm qua, kết quả kiểm thử và việc cần làm thành Markdown báo cáo ngày. Dùng khi người dùng muốn báo cáo ngày, tài liệu standup, tổng hợp tiến độ.
 ---
 
-## Process
-1. Read git log (specified time range) and CI status summary
-2. List completed items, blockers, tomorrow's plan
-3. Output to reports/daily-YYYY-MM-DD.md
-4. Do not send email or messages unless I explicitly ask
+## Quy trình
+1. Đọc git log (khoảng thời gian chỉ định) và tóm tắt trạng thái CI
+2. Liệt kê mục hoàn thành, mục bị chặn, kế hoạch ngày mai
+3. Xuất ra reports/daily-YYYY-MM-DD.md
+4. Không gửi email hoặc tin nhắn trừ khi tôi yêu cầu rõ
 
 ## scripts/
-- scripts/collect-metrics.sh (optional)
+- scripts/collect-metrics.sh(tùy chọn)
 ```
 
-## Related
+## Liên quan
 
-- [Automate a daily report case](/cases/automate-a-daily-report/)
-- [Scheduled tasks](/skills/automations/scheduled-tasks/)
+- [Case tự động hóa báo cáo ngày](/cases/automate-a-daily-report/)
+- [Tác vụ hẹn giờ](/skills/automations/scheduled-tasks/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative skeleton for repeat summary Skills—stable workflow pattern Codex/Skills can carry, not tied to a specific automation entry point.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Trang này cung cấp khung minh họa cho Skill kiểu tổng hợp lặp — vẫn thuộc mẫu workflow ổn định mà Codex/Skills hiện tại có thể mang, không gắn lối vào tự động hóa cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

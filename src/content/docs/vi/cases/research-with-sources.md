@@ -1,76 +1,76 @@
 ---
-title: Research with sources
-description: Use Codex for search, comparison, and fact-checking—outputs with traceable sources and conclusions.
+title: Nghiên cứu có nguồn trích dẫn
+description: Dùng Codex để truy xuất, so sánh và kiểm tra sự thật — tạo nguồn và kết luận có thể truy vết.
 locale: vi
-source_locale: en
-source_revision: dbaa231
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Research with sources** emphasizes that conclusions must trace back to **sources** (official docs, papers, repo files), not model confidence. Suitable for tech selection, competitive comparison, literature review, policy interpretation.
+**Nghiên cứu có nguồn trích dẫn** nhấn mạnh: kết luận phải quay về được **nguồn** (tài liệu chính thức, bài báo, tệp trong kho), chứ không phải mô hình tự tin bịa. Phù hợp chọn tech stack, so sánh đối thủ, tổng quan tài liệu, diễn giải chính sách.
 
-## What this page covers
+## Trang này giải quyết gì
 
-- When to use [web search](/guide/tools/web-search/) vs read-only repo
-- How to require citation format and uncertainty labels
-- Connection to [Validate sources](/guide/quality/validate-sources/)
+- Khi nào dùng [tìm kiếm web](/guide/tools/web-search/) vs chỉ đọc kho
+- Cách yêu cầu định dạng trích dẫn và đánh dấu độ không chắc
+- Nối với [kiểm chứng nguồn](/guide/quality/validate-sources/)
 
-## Minimum viable approach
-
-```text
-Research "Rust vs Go suitability for this repo's scenario":
-1. List evaluation dimensions first (performance, ecosystem, team familiarity)
-2. Each conclusion cites source URL or @in-repo file path
-3. Mark unverifiable items as "to confirm"
-4. End with recommendation and open questions
-Do not change code.
-```
-
-## Recommended workflow
+## Cách làm tối thiểu dùng được
 
 ```text
-Define problem and exclusions
-    → Collect sources (search / read docs / MCP)
-    → Comparison table + pros and cons
-    → Label confidence and conflicting sources
-    → Human decision or move to spec phase
+Nghiên cứu «độ phù hợp của Rust và Go trong ngữ cảnh kho này»:
+1. Trước hết liệt kê chiều đánh giá (hiệu năng, hệ sinh thái, độ quen của nhóm)
+2. Mỗi kết luận kèm URL nguồn hoặc đường dẫn tệp @trong kho
+3. Không kiểm chứng được thì ghi «cần xác nhận»
+4. Cuối cùng đưa khuyến nghị và câu hỏi mở
+Không sửa code.
 ```
 
-For long research tasks, split across rounds—see [Long-running tasks](/prompts/long-running-tasks/).
+## Quy trình đề xuất
 
-## Common mistakes
+```text
+Định nghĩa vấn đề và mục loại trừ
+    → Thu thập nguồn (tìm kiếm / đọc tài liệu / MCP)
+    → Bảng so sánh + ưu nhược điểm
+    → Đánh dấu độ tin cậy và nguồn xung đột
+    → Người quyết hoặc chuyển sang giai đoạn đặc tả
+```
 
-- No URL requirement—output cannot be audited
-- Mix outdated blogs with official docs without noting it
-- Treat research conclusions as implementation instructions, skipping spec
-- Upload confidential files to unauthorized external tools
+Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ dài](/prompts/long-running-tasks/).
 
-## Safety boundaries
+## Lỗi thường gặp
 
-- Internal unpublished material must not be sent via uncontrolled MCP
-- Volatile facts (price, version, regional availability) must note [verification date](/guide/start-here/handbook-version-policy/)
+- Không yêu cầu URL, đầu ra không đối chiếu được
+- Trộn blog lỗi thời với tài liệu chính thức mà không ghi chú
+- Lấy kết luận nghiên cứu làm lệnh triển khai luôn, bỏ qua đặc tả
+- Tải tệp chứa dữ liệu mật lên công cụ ngoài chưa được ủy quyền
 
-## Acceptance checklist
+## Ranh giới an toàn
 
-- [ ] Key conclusions have at least one clickable or traceable source
-- [ ] Conflicting information is presented side by side
-- [ ] "Uncertain" items are listed, not disguised as facts
-- [ ] Sensitive data does not appear in prompts or logs
+- Tài liệu nội bộ chưa công bố không được gửi ra ngoài qua MCP không kiểm soát
+- Sự thật dễ đổi như giá, phiên bản, khả dụng theo vùng phải ghi [ngày kiểm chứng](/guide/start-here/handbook-version-policy/)
 
-## Related chapters
+## Checklist nghiệm thu
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [ ] Mỗi kết luận có ít nhất một nguồn bấm được hoặc truy vết được
+- [ ] Thông tin xung đột đã trình bày song song
+- [ ] Mục «không chắc» đã liệt kê, không ngụy trang thành sự thật
+- [ ] Dữ liệu nhạy cảm không xuất hiện trong prompt hoặc log
 
-## Reference sources
+## Chương liên quan
 
-- CodexGuide research and citation methods
-- stormzhang search and verification chapters
+- [Xử lý độ không chắc](/guide/quality/handle-uncertainty/)
+- [Case: refactor tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+
+## Nguồn tham chiếu
+
+- Phương pháp nghiên cứu và trích dẫn của CodexGuide
+- Chương tìm kiếm và kiểm chứng của stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Learn a new concept," emphasizing turning dense material into auditable learning or research output; this page also requires each conclusion to cite a URL or repo file path and explicitly mark items to confirm—consistent with current "research with sources" best practices.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Learn a new concept”, nhấn mạnh chuyển tài liệu dày đặc thành đầu ra học tập hoặc nghiên cứu có thể đối chiếu; trang này đồng thời yêu cầu mỗi kết luận kèm URL hoặc đường dẫn tệp trong kho, và ghi rõ mục cần xác nhận — khớp thực hành tốt “nghiên cứu có nguồn” hiện tại.  
+**Kiểm chứng gần nhất:** 2026-07-26

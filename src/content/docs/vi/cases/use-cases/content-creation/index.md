@@ -1,30 +1,30 @@
 ---
-title: Content creation
-description: Entry for docs, articles, and content-asset cases—focus on review, rewriting, and artifact verification.
+title: Sáng tạo nội dung
+description: Lối vào case về tài liệu, bài viết và tài sản nội dung — trọng tâm review, viết lại và nghiệm thu Artifact.
 locale: vi
-source_locale: en
-source_revision: 1e7006a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Content-creation cases focus on this scenario:
+Case sáng tạo nội dung chủ yếu nhìn kịch bản kiểu:
 
-> **When you need publishable, reviewable content, how can Codex help?**
+> **Khi cần giao một nội dung có thể xuất bản và review được, Codex phối hợp thế nào.**
 
-## Cases in this group
+## Lối vào nhóm này
 
-- [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refactor site tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## What this group emphasizes
+## Trọng tâm nhóm này
 
-- How to change multi-file content in batches
-- How to avoid rewrite that only "expands" copy
-- How build, review, and human check form a closed loop
+- Nội dung nhiều tệp sửa theo lô thế nào
+- Viết lại copy thế nào để tránh chỉ «mở rộng dài hơn»
+- Build, review, đối chiếu tạo vòng lặp ra sao
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current content-creation case entry and related content-artifact/review chapters; this page only describes what the content-creation case group covers and where to enter.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo lối vào case content-creation hiện tại của kho và các chương Artifact nội dung/review liên quan; trang này chỉ nêu vấn đề và lối vào của nhóm case sáng tạo nội dung.  
+**Kiểm chứng gần nhất:** 2026-07-26

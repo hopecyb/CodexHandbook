@@ -1,107 +1,107 @@
 ---
-title: Team & Enterprise
-description: Adoption, standards, governance, and security for scaling Codex without losing control.
+title: Đội và doanh nghiệp
+description: "Áp dụng, chuẩn mực, quản trị và bảo mật — để Codex triển khai quy mô lớn mà không mất kiểm soát."
 sidebar:
   order: 70
 locale: vi
-source_locale: en
-source_revision: fe1265c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **Team & Enterprise** chapter is for engineering leads, platform, and security teams—moving Codex from individual productivity to something teams can manage, audit, and learn from. Pair with [Learning path · Team](/guide/learning-paths/team/); this chapter leans governance and rollout.
+Chương **Đội và doanh nghiệp** hướng tới engineering lead, đội nền tảng và bảo mật — trọng tâm là đưa Codex từ dùng cá nhân sang đội quản được, kiểm toán được, rút kinh nghiệm được. Đọc kèm [Lộ trình học · Đội](/guide/learning-paths/team/); chương này nghiêng về quản trị và triển khai.
 
-If you are still solo or learning basics, you can read this later. It focuses on boundaries, process, and accountability when many people use Codex together.
+Nếu hiện bạn còn dùng cá nhân hoặc đang làm quen cách dùng cơ bản, chương này có thể để sau. Ở đây chủ yếu bàn khi nhiều người cùng dùng, ranh giới, quy trình và trách nhiệm sắp xếp thế nào.
 
-Key questions:
+Ở đây chủ yếu liên quan các câu hỏi:
 
-- Who can use it
-- What scope is allowed
-- How to trace incidents
-- How high-risk extensions are approved
+- Ai được dùng
+- Phạm vi làm được đến đâu
+- Khi sự cố thì lần theo thế nào
+- Phê duyệt mở rộng rủi ro cao thế nào
 
-## What this chapter covers
+## Nội dung chương
 
-- Path from small-team pilot to org rollout
-- Security, compliance, and extension (Plugin/MCP) risk
-- Cross-links to other handbook sections
+- Đường từ thí điểm đội nhỏ đến lan tỏa tổ chức
+- Rủi ro bảo mật, tuân thủ và mở rộng (Plugin/MCP)
+- Tham chiếu chéo tới các chương khác trong sổ tay
 
-## Who should read
+## Ai nên đọc
 
-| Role | Start with |
+| Vai trò | Đề xuất đọc trước |
 |---|---|
-| EM / lead | [Threat model](/guide/team-enterprise/security/threat-model/) · [Acceptable use](/guide/team-enterprise/governance/acceptable-use/) |
-| Platform engineering | [Team rules](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Security | [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
+| EM / phụ trách | [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) · [Sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/) |
+| Platform engineering | [Quy tắc đội](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
+| Bảo mật | [Rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
 
-## Governance model (conceptual)
+## Mô hình quản trị (khái niệm)
 
 ```text
-Policy (org-managed, AUP)
+Chính sách (quản lý tổ chức, AUP)
     ↓
-Standards (AGENTS.md, approved extension list)
+Chuẩn mực (AGENTS.md, danh sách mở rộng được phê duyệt)
     ↓
-Enforcement (rules, sandbox, Hooks, CI)
+Thực thi (quy tắc, Sandbox, Hooks, CI)
     ↓
-Observation (audit, metrics, retrospectives)
+Quan sát (kiểm toán, chỉ số, rút kinh nghiệm)
 ```
 
-## Chapter navigation (starter)
+## Điều hướng chương (bắt đầu)
 
-| Topic | Pages |
+| Chủ đề | Trang |
 |---|---|
-| Security | [Threat model](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
-| Governance | [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/) |
+| Bảo mật | [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) · [Rủi ro Plugin/MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
+| Quản trị | [Chính sách sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/) |
 
-Roadmap will add adoption, administration, deployment-patterns, etc.—see [chapter outline](/docs/planning/chapter-outline.md) (repo planning doc).
+Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. — xem [chapter-outline](/docs/planning/chapter-outline.md) (tài liệu quy hoạch kho).
 
-## Relationship to customization
+## Quan hệ với cấu hình cá nhân hóa
 
-- Org-managed layer in [AGENTS.md precedence](/guide/customization/agents-md/scope-and-precedence/)
-- [Team rules policy](/guide/customization/rules/team-rules/)
+- Tầng quản lý tổ chức trong [độ ưu tiên AGENTS.md](/guide/customization/agents-md/scope-and-precedence/)
+- [Chính sách quy tắc đội](/guide/customization/rules/team-rules/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Buy seats without training and standards
-- Personal relaxed sandbox becomes org default
-- Approve all community Plugins without a list
+- Chỉ mua ghế ngồi mà không đào tạo và chuẩn mực
+- Sandbox cá nhân nới lỏng trở thành mặc định tổ chức
+- Phê duyệt mọi Plugin cộng đồng không có danh sách
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Written AUP or equivalent policy
-- [ ] Approval process for high-risk extensions
-- [ ] Clear incident contacts (security/platform)
+- [ ] Có AUP bằng văn bản hoặc chính sách tương đương
+- [ ] Có quy trình phê duyệt cho mở rộng rủi ro cao
+- [ ] Liên hệ sự cố rõ (bảo mật/nền tảng)
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Solo user—need this chapter now?
+### 1. Tôi đang dùng một mình — có cần xem chương này không?
 
-Not necessarily deep reading yet.  
-But know: once Codex is a team system, problems are not only “how to prompt.”
+Không nhất thiết phải đọc sâu ngay.  
+Nhưng nên biết: một khi Codex từ công cụ cá nhân thành hệ thống đội, vấn đề không còn chỉ là viết Prompt thế nào.
 
-### 2. Why so much audit, governance, policy?
+### 2. Vì sao ở đây cứ nói kiểm toán, quản trị, chính sách?
 
-At team scale, boundaries blur over time—that is the risk.
+Trong môi trường đội, rủi ro lớn hơn là nhiều người dùng lâu dài khiến ranh giới ngày càng mơ hồ.
 
-### 3. First conceptual pass—read what?
+### 3. Lần đầu chỉ muốn nắm khái niệm — xem gì trước?
 
-Start with:
+Có thể xem trước:
 
-- [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Chính sách sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
 
-If you care about personal onboarding first, defer this chapter until team rollout, permissions, or risk control.
+Nếu hiện bạn chủ yếu quan tâm bắt đầu cá nhân, chương này có thể để sau; khi bắt đầu lan tỏa đội, quản lý quyền hoặc kiểm soát rủi ro hãy quay lại.
 
-## Reference sources
+## Nguồn tham chiếu
 
-- KimYx0207 security and enterprise chapters
-- freestylefly/CodexGuide team playbook
-- stormzhang security tutorials
+- Chương bảo mật và doanh nghiệp KimYx0207
+- Playbook đội freestylefly/CodexGuide
+- Hướng dẫn bảo mật stormzhang
 
 ---
 
-**Status:** verified  
-**Products:** Organization / team features (plan-dependent)  
-**Verification basis:** OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** Bản tổ chức / tính năng đội (tùy gói)  
+**Cơ sở kiểm chứng:** Trung tâm trợ giúp và tài liệu plugin/ứng dụng OpenAI hiện vẫn nhấn mạnh triển khai Codex/ChatGPT đội cần truy cập theo vai trò, bật plugin, phê duyệt hành động, ranh giới dữ liệu và trách nhiệm kiểm toán ở tầng quản trị. Trang này chỉ là điều hướng chương đội và doanh nghiệp, tập trung mô hình quản trị và thứ tự đọc, không gắn đường dẫn UI quản trị cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

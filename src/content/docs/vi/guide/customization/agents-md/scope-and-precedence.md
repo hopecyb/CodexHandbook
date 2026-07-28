@@ -1,115 +1,117 @@
 ---
-title: AGENTS.md Scope and Precedence
-description: Multiple files, monorepos, and who wins between project rules and conversation prompts.
+title: Phạm vi và ưu tiên AGENTS.md
+description: Nhiều tệp, monorepo và «quy tắc dự án vs Prompt hội thoại» — ai nói đúng.
 locale: vi
-source_locale: en
-source_revision: 9e4097e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-When multiple `AGENTS.md` files, configuration files, and the current conversation coexist, you need clarity on **which rule applies**.
+Khi nhiều `AGENTS.md`, tệp cấu hình và hội thoại hiện tại cùng tồn tại, cần làm rõ **quy tắc nào hiệu lực**.
 
-This page is about: when two rules look different, which one should you follow?
+Ở đây nói: khi hai quy tắc trông khác nhau, thật sự nên nghe ai.
 
-## Precedence Overview
+## Tổng quan ưu tiên
 
 ```text
-Managed organization policy > nearer-directory AGENTS.md > repo-root AGENTS.md > user configuration > current conversation
+Chiến lược tổ chức quản trị > AGENTS.md thư mục nearer > AGENTS.md gốc kho > cấu hình người dùng > hội thoại hiện tại
 ```
 
-“Nearer” means the subdirectory file **closer to the current working path**. For example, when working under `packages/web/AGENTS.md`, that file merges with the root file; on conflict, **the subdirectory wins**.
+«nearer» chỉ tệp thư mục con **gần đường dẫn làm việc hiện tại hơn**. Ví dụ khi làm việc dưới `packages/web/AGENTS.md`, tệp đó gộp với tệp gốc; khi xung đột **thư mục con ưu tiên**.
 
-## How to Understand “Closer Wins”
+## Hiểu “gần hơn thì ưu tiên” thế nào
 
-Think of it as:
+Có thể coi:
 
-- Root rules are “whole-repo default law”
-- Subdirectory rules are “special notes for this local area”
+- Quy tắc gốc như “luật mặc định cả kho”
+- Quy tắc thư mục con như “ghi chú đặc biệt của vùng cục bộ này”
 
-So rules closer to where you are working are usually more specific and should take priority.
+Vậy quy tắc càng gần vị trí làm việc hiện tại thường càng cụ thể, cũng càng nên ưu tiên.
 
-## Relationship with Conversation Prompts
+## Quan hệ với Prompt hội thoại
 
-| Source | Persistence | Good for |
+| Nguồn | Độ bền | Phù hợp viết gì |
 |---|---|---|
-| AGENTS.md | Cross-session, versioned | Team consensus, build commands, no-go areas |
-| Task prompt | This session only | This task’s goal, scope, deadline |
-| @ file reference | Session context boost | Specific implementation files, design files |
+| AGENTS.md | Qua phiên, quản lý phiên bản được | Đồng thuận nhóm, lệnh build, vùng cấm |
+| Prompt tác vụ | Chỉ phiên này | Mục tiêu lần này, phạm vi, hạn thời gian |
+| Tham chiếu tệp @ | Tăng ngữ cảnh phiên này | Tệp hiện thực cụ thể, bản thiết kế |
 
-**Do not** paste the entire `AGENTS.md` into chat repeatedly; if you must emphasize one item, reference it in one line: “Follow test requirements in AGENTS.md; additionally do not change `legacy/` this time.”
+**Đừng** trong hội thoại dán lặp cả `AGENTS.md`; nếu phải nhấn một mục, nhắc một câu: «Tuân yêu cầu kiểm thử trong AGENTS.md; lần này thêm đừng sửa thư mục `legacy/`.»
 
-## Monorepo Pattern
+## Mẫu Monorepo
 
 ```text
 repo/
-├── AGENTS.md              # Whole repo: package manager, CI, security
+├── AGENTS.md              # Chung cả kho: trình quản lý gói, CI, bảo mật
 ├── apps/
 │   └── web/
-│       └── AGENTS.md      # Frontend: component library, E2E commands
+│       └── AGENTS.md      # Frontend: thư viện component, lệnh E2E
 └── packages/
     └── api/
-        └── AGENTS.md      # Backend: database migration conventions
+        └── AGENTS.md      # Backend: ước định migration DB
 ```
 
-Principles:
+Nguyên tắc:
 
-- **Root file**: 10–20 hard rules shared across the repo
-- **Subpackage files**: commands and directory notes specific to that package only
-- Avoid three files that are 80% duplicate—put shared content at the root; subpackages write only deltas
+- **Tệp gốc**: 10–20 quy tắc cứng chia sẻ cả kho
+- **Tệp gói con**: chỉ lệnh và mô tả thư mục đặc thù gói đó
+- Tránh ba tệp trùng 80% — nội dung trùng đặt gốc, gói con chỉ viết phần tăng
 
-## Boundary with Personal Preferences
+## Ranh giới với sở thích cá nhân
 
-Personal habits (theme, default model, local paths) belong in **user configuration**; do not put them in the team repo’s `AGENTS.md` or collaborators get hurt by mistake.
+Thói cá nhân (chủ đề, mô hình mặc định, đường dẫn máy cục bộ) đặt **cấu hình người dùng**, đừng viết vào `AGENTS.md` kho nhóm, nếu không cộng tác viên bị hại nhầm.
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. What I say in the current conversation is newest, so it has highest priority
+### 1. Câu nói trong hội thoại hiện tại chắc mới nhất nên ưu tiên cũng cao nhất
 
-Conversation is for “extra requirements this time,” not for casually overriding team or organization hard rules.
+Hội thoại phù hợp bổ sung “yêu cầu thêm lần này”, nhưng không bằng có thể tùy phủ quy tắc cứng cấp nhóm hoặc tổ chức.
 
-### 2. Subdirectory `AGENTS.md` is just copying root rules
+### 2. `AGENTS.md` thư mục con là sao chép một bản quy tắc gốc
 
-It should not be.
+Cũng không nên vậy.
 
-Better practice:
+Cách phù hợp hơn:
 
-- Root rules hold what is common
-- Subdirectories write only deltas and exceptions
+- Quy tắc gốc viết phần chung
+- Thư mục con chỉ viết phần tăng và ngoại lệ
 
-### 3. Knowing the order alone is not enough
+### 3. Chỉ nhớ thứ tự vẫn chưa đủ
 
-You also need to know:
+Chưa đủ.
 
-- Which kind of information belongs on which layer
-- Why one layer wins on conflict
+Quan trọng hơn là bạn biết:
 
-## How to Judge on Conflict
+- Loại thông tin nào nên đặt tầng nào
+- Khi xung đột vì sao lấy một tầng làm chuẩn
 
-When two rules seem to conflict, check in this order:
+## Khi xung đột phán đoán thế nào
 
-1. Which is closer to the current working directory
-2. Which is a long-term project rule versus a temporary addition for this time only
-3. Whether organization or managed policy restricts from above
+Khi thấy hai quy tắc trông xung đột, xem theo thứ tự:
 
-On rule conflict, usually prefer the layer that is closer, harder, and more explicit—do not assume “the latest sentence” always wins.
+1. Mục nào gần thư mục làm việc hiện tại hơn
+2. Mục nào là quy tắc dự án dài hạn, mục nào chỉ bổ sung tạm lần này
+3. Có chiến lược tổ chức hoặc quản trị ở tầng cao hơn hạn chế trực tiếp không
 
-## Common Mistakes
+Khi quy tắc xung đột, thường ưu tiên tầng gần hơn, cứng hơn, rõ hơn; đừng mặc định “câu mới nhất” chắc thắng.
 
-- Subdirectory `AGENTS.md` contradicts the root file without saying which wins
-- Putting sensitive keys in `AGENTS.md` and committing to Git—use secret management and environment variables
-- Expecting a “temporary relaxation” in conversation to override team-managed policy (usually not possible)
+## Lỗi thường gặp
 
-## Acceptance Checklist
+- `AGENTS.md` thư mục con mâu thuẫn tệp gốc mà không nói lấy ai làm chuẩn
+- Viết khóa nhạy cảm vào `AGENTS.md` rồi commit Git — nên dùng quản lý khóa và biến môi trường
+- Kỳ vọng «nới tạm» trong hội thoại phủ chiến lược quản trị nhóm (thường không làm được)
 
-- [ ] Root `AGENTS.md` and subpackage files have a clear division of labor
-- [ ] Clear awareness that conflicting rules favor the subdirectory
-- [ ] Task prompts write only deltas, not a full copy of the project manual
+## Danh sách nghiệm thu
+
+- [ ] `AGENTS.md` gốc và tệp gói con phân công rõ
+- [ ] Có ý thức rõ «thư mục con ưu tiên» với quy tắc xung đột
+- [ ] Prompt tác vụ chỉ viết phần tăng, không sao chép cả sổ tay dự án
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Review note:** This page currently states precedence among `AGENTS.md`, user configuration, and the current conversation as an overly fixed linear order; actual precedence may differ across clients, organization-managed capabilities, and runtime environments. It needs a rewrite after official current sources are added.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Ghi chú rà lại:** Trang này hiện viết ưu tiên của `AGENTS.md`, cấu hình người dùng và hội thoại hiện tại thành thứ tự tuyến tính quá chắc chắn, nhưng precedence thật của client khác nhau, năng lực quản trị tổ chức và môi trường chạy có thể khác; cần bổ sung căn cứ chính thức hiện tại rồi viết lại.  
+**Kiểm chứng gần nhất:** 2026-07-26

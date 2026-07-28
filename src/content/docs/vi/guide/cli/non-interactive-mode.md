@@ -1,85 +1,122 @@
 ---
-title: Non-Interactive Mode
-description: Run Codex without a TTY—suited for CI, cron jobs, and automation pipelines.
+title: Chế độ không tương tác
+description: Tích hợp bằng codex exec và pipeline script — phù hợp CI, tác vụ định kỳ và pipeline tự động.
 locale: vi
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: d619904
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Non-interactive mode lets Codex complete tasks **without a TTY conversation**—the entry point for embedding the agent in scripts and CI.
 
-## What this page covers
+Chế độ không tương tác để Codex hoàn thành tác vụ **không cần hội thoại TTY** — là lối vào để nhà phát triển nối Agent vào script và CI.
 
-- When to use non-interactive vs an interactive `codex` session
-- Extra safety and approval requirements when unattended
-- Relationship to [CLI configuration](/guide/cli/configuration/)
+Nói ngắn: chế độ không tương tác không phải chat qua lại, mà giao tác vụ một lần để nó thực thi.
 
-## Good fits
+Nó giống một lần gọi kiểu lệnh hơn.
 
-| Good fit | Poor fit |
+## Nội dung trang
+
+- Khi nào dùng không tương tác thay vì phiên tương tác `codex`
+- Yêu cầu thêm về an toàn và phê duyệt khi không người canh
+- Quan hệ với [cấu hình](/guide/cli/configuration/)
+
+## Tình huống áp dụng
+
+| Phù hợp | Không phù hợp |
 |---|---|
-| Fixed review prompts in CI | Needs multi-turn clarification |
-| Nightly doc link checks | Exploratory refactors |
-| Template-based codegen | High-ambiguity product decisions |
+| Trong CI chạy Prompt rà soát cố định | Cần nhiều vòng làm rõ nhu cầu |
+| Kiểm liên kết tài liệu nightly | Refactor khám phá |
+| Sinh mã theo mẫu định sẵn | Quyết định sản phẩm nhiều nghĩa |
 
-## Core idea
+## Khái niệm cốt lõi
 
-Non-interactive runs typically:
+Thực thi không tương tác thường:
 
-1. Take a **complete task** from args or stdin
-2. Run in a specified working directory
-3. Exit with a status code for success/failure
-4. Emit logs or structured output for downstream steps
+1. Nhận **mô tả tác vụ đầy đủ** từ tham số hoặc stdin
+2. Chạy trong thư mục làm việc chỉ định
+3. Dùng mã thoát biểu thị thành công / thất bại
+4. Xuất nhật ký hoặc kết quả có cấu trúc cho bước sau tiêu thụ
 
-**Command names and flags follow official CLI docs** (often `codex exec` or equivalent); re-check `--help` after upgrades.
+**Tên lệnh và tham số lấy theo tài liệu CLI chính thức** (thường là `codex exec` hoặc lệnh con tương đương); nâng cấp CLI rồi nên kiểm lại `--help`.
 
-## Minimal example (illustrative)
+## Ví dụ tối thiểu dùng được (minh họa)
 
 ```bash
-# Repo root, read-only review (flags per official docs)
-codex exec --cwd . "List security risks in diff vs main; do not modify files"
+# Ở thư mục gốc kho, rà soát chỉ đọc (minh họa — tham số theo chính thức)
+codex exec --cwd . "Liệt kê rủi ro bảo mật trong diff so với main, không sửa tệp"
 ```
 
-Tips:
+Gợi ý thực hành:
 
-- `cd` to a clean worktree in shell scripts
-- Store prompts in versioned `prompts/` files or heredocs
-- Fail CI on non-zero exit codes
+- Trong shell script hãy `cd` vào bản làm việc sạch trước
+- Chuỗi tác vụ viết vào heredoc hoặc tệp `prompts/` có phiên bản
+- Bắt mã thoát; thất bại thì CI đánh đỏ
 
-## Safety
+## Thiết kế an toàn
 
-Unattended = **no one to click reject**:
+Không người canh = **không có bạn ở đó để bấm từ chối**:
 
-| Principle | Practice |
+| Nguyên tắc | Cách làm |
 |---|---|
-| Least privilege | Read-only tokens, tight sandbox |
-| No push | CI opens PRs or uploads artifacts only |
-| Fixed prompts | Never concatenate unsanitized PR text (injection risk) |
-| Audit | Keep logs and diff artifacts |
+| Quyền tối thiểu | Token chỉ đọc, Sandbox hạn chế |
+| Không push | CI chỉ mở PR hoặc tải artifact |
+| Prompt cố định | Cấm nối thẳng văn bản chưa khử từ mô tả PR (rủi ro injection) |
+| Kiểm toán | Giữ nhật ký và artifact diff |
 
-See [Human approval patterns](/cases/workflows/human-approval-patterns/).
+Xem [Mẫu phê duyệt thủ công](/cases/workflows/human-approval-patterns/) và lộ trình `08-developer-platform/non-interactive/`.
 
-## Interactive vs non-interactive
+## So với chế độ tương tác
 
-| | Interactive | Non-interactive |
+| | Chế độ tương tác | Chế độ không tương tác |
 |---|---|---|
-| Entry | `codex` TUI | `exec` / pipes |
-| Human in the loop | Strong | Weak—design upfront |
-| Learning | Yes | No |
-| CI | No | Yes |
+| Lối vào | `codex` TUI | `exec` / pipeline |
+| Người trong vòng | Mạnh | Yếu — cần thiết kế trước |
+| Phù hợp học | Có | Không |
+| Phù hợp CI | Không | Có |
 
-Interactive usage: [CLI interactive mode](/guide/cli/interactive-mode/)
+Cách dùng tương tác: [Chế độ tương tác CLI](/guide/cli/interactive-mode/)
 
-## Common mistakes
+## Hiểu nhầm thường gặp
 
-- Pasting a long chat history into a single exec
-- Production credentials and write access in CI
-- Unpinned CLI version causing sudden pipeline drift
+### 1. Không tương tác hiệu quả hơn — vậy phải học nó trước?
+
+Không khuyến nghị.
+
+Với người lần đầu dùng, chế độ không tương tác thường quá nhanh và cứng — giữa chừng gần như không còn chỗ làm rõ qua lại.
+
+### 2. Khác biệt lớn nhất với chế độ tương tác là gì?
+
+Có thể xem trực tiếp:
+
+- **Chế độ tương tác**: giữa chừng còn hỏi, còn sửa, còn phê duyệt
+- **Chế độ không tương tác**: giống thực thi một lần, phù hợp quy trình đã định sẵn
+
+### 3. Khi nào tạm thời đừng đụng nó?
+
+Nếu bạn vẫn ở các giai đoạn này, nên tạm chưa đụng:
+
+- Chưa quen Prompt viết thế nào
+- Chưa biết nghiệm thu kết quả ra sao
+- Chưa có phán đoán cơ bản về phê duyệt, Sandbox, quyền
+
+Chế độ không tương tác phù hợp tự động hóa, ít phù hợp lần đầu mò. Quen chế độ tương tác trước rồi mới nói nối vào script.
+
+## Lỗi thường gặp
+
+- Nhồi nguyên lịch sử hội thoại dài từ phiên tương tác vào một lần exec
+- CI dùng thông tin đăng nhập production và quyền ghi
+- Không cố định phiên bản CLI → pipeline đột nhiên đổi hành vi
+
+## Nguồn tham khảo
+
+- Tài liệu OpenAI Codex CLI
+- `28-noninteractive.md` của stormzhang
+- KimYx0207 CX-12
 
 ---
 
-**Status:** review  
-**Applies to:** CLI  
-**Last verified:** 2026-07-25
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI  
+**Ghi chú tái kiểm:** Trang này vẫn lấy `codex exec` và cách tích hợp không tương tác liên quan làm lõi, nhưng hiện chưa có căn cứ chính thức hiện hành đủ mạnh để xác nhận từng lối vào lệnh, tham số và hành vi; trước khi bổ sung tài liệu không tương tác CLI mới nhất nên gắn `outdated`.  
+**Kiểm chứng gần nhất:** 2026-07-26

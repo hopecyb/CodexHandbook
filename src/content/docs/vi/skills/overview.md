@@ -1,126 +1,126 @@
 ---
-title: Skills overview
-description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
+title: Tổng quan Skills
+description: Dùng SKILL.md để dạy Codex workflow tái sử dụng — viết một lần, gọi khi cần.
 locale: vi
-source_locale: en
-source_revision: 9d68601
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
+**Skill** là một thư mục chứa `SKILL.md` (có thể kèm script và tài liệu tham chiếu), đóng gói một quy trình cố định thành năng lực mà Codex có thể **gọi tự động hoặc tường minh**.
 
-It fits workflows that have already repeated and will likely repeat again.
+Nó phù hợp để chứa những cách làm đã lặp lại và sẽ tiếp tục được tái sử dụng.
 
-## Core concepts
+## Khái niệm cốt lõi
 
-### How it differs from slash commands
+### Khác với lệnh slash
 
-| | Slash command | Skill |
+| | Lệnh slash | Skill |
 |---|---|---|
-| Trigger | You type `/xxx` | You can call with `$name`, or the model matches by description |
-| Context | Usually expands immediately | **Progressive disclosure**: only name + description by default; full text loads when selected |
-| Best for | Fixed, high-frequency entries you remember | Long flows, documentation-heavy work, letting the model decide when to use it |
+| Kích hoạt | Bạn gõ `/xxx` | Bạn có thể gọi `$name`, hoặc model khớp theo mô tả |
+| Ngữ cảnh | Thường mở rộng ngay | **Tiết lộ dần**: lúc thường chỉ chiếm tên + mô tả; chọn rồi mới đọc toàn bộ |
+| Phù hợp | Lối vào cố định, tần suất cao, bạn nhớ được | Quy trình dài, cần tài liệu, muốn model tự quyết khi nào dùng |
 
-### Progressive disclosure
+### Tiết lộ dần
 
-At startup, Codex only sees each Skill's **name, description, and path**; it loads the full `SKILL.md` only when it decides to use the Skill. So the body can include detailed checklists without filling the context window.
+Khi Codex khởi động, nó chỉ thấy **name, description, đường dẫn** của mỗi Skill; chỉ khi quyết định dùng mới tải toàn bộ `SKILL.md`. Vì vậy phần thân có thể viết checklist chi tiết mà không lo chiếm hết Ngữ cảnh.
 
-Note: the Skill list has an **initial character budget** (a small fraction of context). Put core trigger scenarios at the **front** of `description` so truncation does not break matching.
+Lưu ý: danh sách Skill có **ngân sách ký tự ban đầu** (một phần nhỏ của Ngữ cảnh). Hãy đặt kịch bản kích hoạt cốt lõi của `description` ở **đầu**, tránh bị cắt cụt rồi khớp thất bại.
 
-## Skill directory structure
+## Cấu trúc thư mục Skill
 
 ```text
 my-skill/
-├── SKILL.md          # Required
-├── scripts/          # Optional: deterministic steps
-└── references/       # Optional: long reference docs
+├── SKILL.md          # bắt buộc
+├── scripts/          # tùy chọn: bước xác định
+└── references/       # tùy chọn: tài liệu tham chiếu dài
 ```
 
-Minimal `SKILL.md` example:
+Ví dụ tối thiểu `SKILL.md`:
 
 ```md
 ---
 name: pr-review
-description: Review the diff of the current branch against main; flag risks and test gaps. Use when the user asks for review, PR review, or pre-merge checks.
+description: Review diff của nhánh hiện tại so với main, đánh dấu rủi ro và khoảng trống kiểm thử. Dùng khi người dùng yêu cầu review, review PR hoặc kiểm tra trước khi merge.
 ---
 
-## Steps
-1. Get the diff against main
-2. Classify by file: logic errors, security, performance, tests
-3. Output a tiered list: blocking / suggestion / nit
-4. Do not auto push or merge
+## Các bước
+1. Lấy diff so với main
+2. Phân loại theo file: lỗi logic, bảo mật, hiệu năng, kiểm thử
+3. Xuất danh sách phân cấp: chặn / đề xuất / nit
+4. Không tự động push hoặc merge
 ```
 
-## Where to store Skills
+## Vị trí lưu trữ
 
-| Type | Typical location | Notes |
+| Loại | Vị trí điển hình | Ghi chú |
 |---|---|---|
-| Project Skill | `.agents/skills/<name>/` | Lives in the repo; shared by the team |
-| User Skill | User skills directory (see official docs) | Personal, cross-project |
-| Official curated | Installed via installer | Path managed by installer; do not mix with hand-written dirs |
+| Skill dự án | `.agents/skills/<name>/` | Theo repo, chia sẻ nhóm |
+| Skill người dùng | Thư mục skills của người dùng (xem tài liệu chính thức) | Cá nhân, đa dự án |
+| Tuyển chọn chính thức | Cài qua installer | Đường dẫn do installer quản lý; đừng lẫn với thư mục tự viết |
 
-**Do not** copy outdated tutorial paths or fictional `trigger:` fields; follow the [official Skills documentation](https://developers.openai.com/codex/skills).
+**Đừng** copy đường dẫn sai hoặc trường `trigger:` hư cấu từ tutorial cũ; lấy [tài liệu Skills chính thức](https://developers.openai.com/codex/skills) làm chuẩn.
 
-## How Skills are triggered
+## Cách kích hoạt
 
-1. **Explicit**: In supported environments, call with `$skill-name` (name matches frontmatter `name`)
-2. **Implicit**: The model judges whether the task fits `description` semantically
+1. **Tường minh**: trong môi trường hỗ trợ, gọi bằng `$skill-name` (tên khớp `name` trong frontmatter)
+2. **Ngầm**: model dựa trên ngữ nghĩa `description` để quyết định Tác vụ hiện tại có phù hợp không
 
-Tips for writing `description`:
+Điểm then chốt khi viết `description`:
 
-- State clearly when to use and when not to use
-- Include keywords users might say (review, release, changelog)
-- Avoid vague phrases like "help the user write code"
+- Nói rõ"khi nào dùng"và"khi nào không dùng"
+- Gồm từ khóa người dùng có thể nói (review, phát hành, changelog)
+- Tránh câu chung chung kiểu"giúp người dùng viết code"
 
-## Recommended workflow
+## Workflow khuyến nghị
 
-1. Notice a workflow has repeated several times
-2. Draft `SKILL.md` with plain-text steps first
-3. Try `$name` and implicit matching on a small task
-4. Add `scripts/` when you need determinism
-5. Commit to `.agents/skills/` and open a PR for the team
+1. Phát hiện một quy trình đã lặp lại vài lần
+2. Soạn `SKILL.md`, trước hết chỉ bước bằng chữ
+3. Thử `$name` và khớp ngầm trên Tác vụ nhỏ
+4. Khi cần tính xác định, bổ sung `scripts/`
+5. Commit vào `.agents/skills/` và mở PR cho nhóm
 
-Hands-on practice: [Create your first Skill](/skills/create-your-first-skill/)
+Thực hành: [Tạo Skill đầu tiên](/skills/create-your-first-skill/)
 
-## Common questions
+## Thắc mắc thường gặp
 
-### 1. How is a Skill different from a prompt?
+### 1. Skill khác Prompt thế nào?
 
-- **Prompt**: What you say for this task only
-- **Skill**: A reusable workflow for similar tasks later
+- **Prompt**: lời bạn nói tạm thời cho Tác vụ lần này
+- **Skill**: bộ quy trình có thể tái dùng cho Tác vụ tương tự sau này
 
-### 2. Do I need to learn to write Skills from day one?
+### 2. Có phải học viết Skill ngay từ đầu không?
 
-No. Get ordinary tasks right first; when a flow repeats many times, consider turning it into a Skill.
+Không. Hãy nói rõ Tác vụ thường trước; khi một quy trình lặp rất nhiều lần, mới cân nhắc đóng thành Skill.
 
-### 3. Is it the same as a slash command?
+### 3. Nó có giống lệnh slash không?
 
-Not exactly. Slash commands are more like shortcuts; Skills are workflow packages with full instructions and steps.
+Không hoàn toàn giống. Lệnh slash giống lối vào tắt; Skill giống gói công việc kèm hướng dẫn và quy trình đầy đủ.
 
-Skills are not required to get started—they shine when you organize flows that keep coming back.
+Skill không phải thứ bắt buộc lúc mới bắt đầu — phù hợp hơn để sắp xếp những quy trình đã xuất hiện lặp lại.
 
-## Security boundaries
+## Ranh giới bảo mật
 
-- Scripts and MCP calls inside a Skill inherit the current approval policy
-- Do not hard-code secrets in Skills; use environment variables or MCP auth
-- Teams should review third-party Skills like dependencies
+- Script và lời gọi MCP trong Skill kế thừa chính sách Phê duyệt hiện tại
+- Đừng hard-code khóa trong Skill; dùng biến môi trường hoặc xác thực MCP
+- Nhóm nên review Skill bên thứ ba như review dependency
 
-## Common mistakes
+## Lỗi thường gặp
 
-- `description` too long or too broad—never triggers or triggers wrongly
-- One Skill cramming ten unrelated flows
-- Replacing clear steps with scripts that are hard to maintain
+- `description` quá dài hoặc quá chung, dẫn đến không bao giờ kích hoạt hoặc kích hoạt nhầm
+- Nhét mười quy trình không liên quan vào một Skill
+- Dùng script thay cho bước vốn có thể mô tả rõ bằng chữ, khó bảo trì
 
-## References
+## Nguồn tham chiếu
 
-- OpenAI Codex Skills documentation
-- KimYx0207 CX-06; stormzhang `22-skills.md`
+- Tài liệu OpenAI Codex Skills
+- KimYx0207 CX-06;stormzhang `22-skills.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Consistent with current Codex runtime Skill loading (`SKILL.md`, on-demand full skill file) and OpenAI Help "Skills in ChatGPT" defining Skills as reusable workflows; this page focuses on concepts and directory layout, not volatile UI.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở Kiểm chứng:** Quy tắc nạp Skill của runtime Codex hiện tại (`SKILL.md`, đọc file kỹ năng đầy đủ khi cần) khớp định nghĩa Skill như workflow tái sử dụng trong OpenAI Help"Skills in ChatGPT"; trang này tập trung khái niệm và tổ chức thư mục, không phụ thuộc UI hay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

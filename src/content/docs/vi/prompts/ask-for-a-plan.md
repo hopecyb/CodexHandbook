@@ -1,159 +1,159 @@
 ---
-title: Ask for a plan first
-description: Before Codex edits, have it explain steps, risks, and how to verify.
+title: Xin kế hoạch trước
+description: Trước khi Codex chỉnh sửa, hãy để nó nêu rõ các bước, rủi ro và cách kiểm chứng.
 locale: vi
-source_locale: en
-source_revision: df516b9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many problems aren't impossible—they started **too fast**. "Help me fix this" blends exploration, planning, and execution, leaving you to accept whatever shows up in the diff.
+Nhiều vấn đề không phải không làm được—chỉ là **bắt đầu quá nhanh**. Một câu «giúp tôi sửa» dễ trộn khám phá, lập kế hoạch và thực thi; cuối cùng bạn chỉ còn nghiệm thu thụ động trong diff.
 
-A better move: ask for a plan first instead of lengthening the requirement forever.
+Lúc này cách hiệu quả hơn là yêu cầu kế hoạch trước, thay vì viết yêu cầu ngày càng dài.
 
-## When you should ask for a plan
+## Khi nào nhất định phải xin kế hoạch trước
 
-| Scenario | Why |
+| Tình huống | Vì sao |
 |---|---|
-| Cross-file or cross-module work | Easy to hit unrelated areas |
-| You're unfamiliar with the codebase | Confirm scope before edits |
-| Requirements still shifting | Surface disagreements early |
-| You must approve before execution | Separate "authorization to run" from "thinking out loud" |
-| High-risk actions | See rollback and verification up front |
+| Xuyên nhiều tệp hoặc mô-đun | Dễ đụng nhầm vùng không liên quan |
+| Bạn chưa quen codebase | Xác nhận trước phạm vi nó hiểu |
+| Yêu cầu còn dao động | Để bất đồng lộ ra sớm |
+| Cần phê duyệt rồi mới thực thi | Tách «ủy quyền thực thi» khỏi «thảo luận hướng» |
+| Liên quan thao tác rủi ro cao | Xem trước phương án rollback và kiểm chứng |
 
-A single typo or one-line copy tweak may not need a formal plan—but if going wrong would hurt, pause first.
+Typo nhỏ hoặc sửa copy đơn điểm chưa hẳn cần kế hoạch chính thức, nhưng cứ khi bạn thấy «làm lệch sẽ rất phiền», đáng dừng lại trước.
 
-## What a good plan should include
+## Một kế hoạch tốt tối thiểu nên có gì
 
-Even a minimal plan should cover:
+Bản tối thiểu cũng nên phủ bốn mục:
 
-1. Steps
-2. Files or scope involved
-3. Risks or open questions
-4. How each step will be verified
+1. Các bước
+2. Tệp hoặc phạm vi liên quan
+3. Rủi ro hoặc điểm cần xác nhận
+4. Cách kiểm chứng từng bước
 
-Without item 4, it's a todo list—not an executable, verifiable plan.
+Thiếu mục 4 thì gần như chỉ còn «danh sách việc», chưa phải kế hoạch có thể nghiệm thu.
 
-## Three common phrasings
+## Ba cách hỏi thường dùng
 
-### Minimal
-
-```text
-Don't change code yet. Give me a 3–5 step plan: which files you'll touch and how each step will be verified.
-```
-
-Fits when you know the direction and only want the breakdown.
-
-### Recommended
+### Bản tối giản
 
 ```text
-Don't execute yet. Based on the current repo, give me a plan that includes:
-1. Your understanding of the goal
-2. Numbered steps
-3. Files or directories involved
-4. Risks and open questions
-5. Verification approach
-
-Do not modify files until I reply "execute the plan."
+Chưa sửa code. Trước hết đưa kế hoạch 3–5 bước: sẽ sửa tệp nào, mỗi bước kiểm chứng thế nào.
 ```
 
-Fits daily dev, doc refactors, prompt rewrites, config changes.
+Phù hợp: bạn đã biết hướng đại thể, chỉ muốn xem nó sẽ tách thế nào.
 
-### High-risk
+### Bản khuyến nghị
 
 ```text
-Don't make changes yet. Produce a plan and separately explain:
-- Which step is most likely to cause regressions
-- How to roll back if it fails
-- Which operations need my confirmation
-- Which tests or manual checks prove completion
+Chưa thực thi. Dựa trên kho hiện tại, đưa kế hoạch gồm:
+1. Hiểu mục tiêu
+2. Các bước có đánh số
+3. Tệp hoặc thư mục liên quan
+4. Rủi ro và mục cần xác nhận
+5. Cách kiểm chứng
+
+Trước khi tôi trả lời «thực thi theo kế hoạch», đừng sửa tệp.
 ```
 
-Fits production issues, permission config, automation scripts, cross-module refactors.
+Phù hợp: phát triển hàng ngày, chỉnh tài liệu, viết lại Prompt, điều chỉnh cấu hình.
 
-## Plans shouldn't be long for length's sake
-
-You want something **you can approve, steer, and execute**—not a lengthy proposal.
-
-Check whether the plan is usable:
-
-- Can you say "skip step 2, do something else instead"?
-- Can you see which critical areas will move?
-- Do you know how to verify before starting?
-
-If not, it's not specific enough.
-
-## How to steer a plan
-
-You don't need to rewrite the whole thing—guide it like you'd guide a colleague.
-
-Common steering lines:
+### Bản rủi ro cao
 
 ```text
-Keep steps 1 and 2; drop step 3.
-Split database changes into a separate step.
-Read-only analysis first—no implementation yet.
-Add regression tests and rollback to the plan.
+Chưa thay đổi gì. Trước hết xuất kế hoạch và nêu riêng:
+- Bước nào dễ gây hồi quy nhất
+- Nếu thất bại thì rollback thế nào
+- Thao tác nào cần tôi xác nhận
+- Kiểm thử hoặc kiểm tra thủ công nào chứng minh đã xong
 ```
 
-This saves context versus "start over" and pulls results back on track.
+Phù hợp: sự cố production, cấu hình quyền, script tự động hóa, tái cấu trúc xuyên mô-đun.
 
-## Benefits vs. jumping straight in
+## Kế hoạch không phải càng dài càng tốt
 
-| Plan first | Start immediately |
+Bạn cần một sản phẩm trung gian **có thể phê duyệt, chỉnh hướng và thực thi**—không phải một đề án dài.
+
+Đánh giá kế hoạch có dùng được không bằng ba điểm:
+
+- Bạn có nói rõ được «bỏ bước 2, đổi sang cách khác» không
+- Bạn có nhìn ra ngay vùng then chốt nó sẽ đụng không
+- Bạn có biết cách nghiệm thu trước khi bắt đầu không
+
+Nếu chưa được, kế hoạch vẫn chưa đủ cụ thể.
+
+## Bạn có thể phê duyệt kế hoạch thế nào
+
+Không cần viết lại cả đoạn—chỉ cần định hướng như dẫn đồng nghiệp.
+
+Câu dẫn thường dùng:
+
+```text
+Giữ bước 1 và 2, bỏ bước 3.
+Tách thay đổi cơ sở dữ liệu thành một bước riêng.
+Chỉ phân tích chỉ-đọc trước, chưa vào triển khai.
+Bổ sung kiểm thử hồi quy và phương án rollback vào kế hoạch.
+```
+
+Cách này tiết kiệm ngữ cảnh hơn «làm lại từ đầu», và dễ kéo kết quả về đúng hướng.
+
+## So với «bắt đầu làm luôn», lợi ích là gì
+
+| Xin kế hoạch trước | Bắt đầu luôn |
 |---|---|
-| Catch misunderstandings early | Often discover wrong direction after edits |
-| Easier approval and collaboration | You only see the final diff |
-| Natural split into subtasks | Multiple goals get mashed together |
-| Verification visible upfront | Tests remembered only at the end |
+| Phát hiện hiểu nhầm sớm | Thường sau khi sửa xong mới thấy lệch hướng |
+| Thuận phê duyệt và cộng tác | Bạn chỉ xem thụ động diff cuối |
+| Dễ tách thành tác vụ con | Dễ trộn nhiều mục tiêu |
+| Cách kiểm chứng hiện rõ sớm | Thường đến cuối mới nhớ kiểm thử |
 
-Many workflows separate exploration and planning. See [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/).
+Nhiều workflow tách riêng «khám phá» và «kế hoạch». Xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/).
 
-## Where plans go wrong
+## Vấn đề dễ gặp nhất ở kế hoạch
 
-### Actions without boundaries
+### Chỉ có hành động, không có ranh giới
 
-e.g. "update docs and improve structure" with no directories to touch or modules to avoid—the plan tends to grow.
+Ví dụ «cập nhật tài liệu và tối ưu cấu trúc» nhưng không nói sửa thư mục nào, không đụng mô-đun nào. Kế hoạch kiểu này dễ phình to.
 
-### Implementation without verification
+### Chỉ có triển khai, không có kiểm chứng
 
-e.g. "change component logic, update styles, commit" with no proof behavior still works.
+Ví dụ «sửa logic component, cập nhật style, commit» nhưng không viết cách chứng minh hành vi không hỏng.
 
-### Task list without open questions
+### Chỉ có danh sách việc, không có mục cần xác nhận
 
-Good plans admit uncertainty instead of pretending every assumption holds.
+Kế hoạch tốt thừa nhận sự không chắc chắn; không giả vờ mọi tiền đề đã đứng vững.
 
-## Recommended pairings
+## Nên kết hợp với
 
-- Formal execution flow: [Planning](/guide/agent-work/planning/)
-- Reusable plan structure: [Task anatomy](/prompts/task-anatomy/)
-- Mid-run steering: [Progress and steering](/guide/agent-work/progress-and-steering/)
-- Clear acceptance: [Define done](/prompts/define-done/)
+- Cần chuỗi thực thi chính thức: [Lập kế hoạch](/guide/agent-work/planning/)
+- Cần viết kế hoạch tái sử dụng được: [Cấu trúc tác vụ](/prompts/task-anatomy/)
+- Cần chỉnh hướng giữa chừng: [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/)
+- Cần định nghĩa nghiệm thu rõ: [Định nghĩa hoàn thành](/prompts/define-done/)
 
-## A useful team convention
+## Một thỏa thuận nội bộ nhóm rất hữu dụng
 
-In `AGENTS.md` you can state:
+Bạn có thể ghi rõ trong `AGENTS.md`:
 
 ```md
-- For changes touching 3+ files, produce a plan first
-- Don't run destructive commands without confirmation
-- Plans must include verification
+- Thay đổi liên quan từ 3 tệp trở lên: xuất kế hoạch trước
+- Không chạy lệnh phá hủy khi chưa xác nhận
+- Kế hoạch phải ghi cách kiểm chứng
 ```
 
-Then "plan first" becomes default practice—not a one-off reminder.
+Như vậy «xin kế hoạch trước» không còn là nhắc tạm thời, mà thành mặc định của nhóm.
 
-## Reference sources
+## Nguồn tham khảo
 
-- Plan-and-execute patterns in OpenAI Codex official documentation
-- Task design and collaboration practices from freestylefly/CodexGuide
-- Codex workflow chapters in KimYx0207's AI-Coding-Guide-Zh
-- Practical execution methods from stormzhang's Codex series
+- Tư duy kế hoạch và thực thi trong tài liệu chính thức OpenAI Codex
+- Thực hành thiết kế tác vụ và cộng tác của freestylefly/CodexGuide
+- Các chương workflow Codex trong KimYx0207《AI-Coding-Guide-Zh》
+- Phương pháp thực thi thực chiến trong series Codex của stormzhang
 - [codex.bozhouai.com](https://codex.bozhouai.com/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains plan-first collaboration only; in-site links and example structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả phương pháp cộng tác «xuất kế hoạch trước»; liên kết nội bộ và cấu trúc ví dụ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

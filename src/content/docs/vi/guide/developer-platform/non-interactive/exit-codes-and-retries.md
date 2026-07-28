@@ -1,67 +1,67 @@
 ---
-title: Exit Codes and Retries
-description: Interpret codex exec success and failure in pipelines—when to retry vs fail fast.
+title: Mã thoát và thử lại
+description: "Đọc đúng thành bại của `codex exec` trong pipeline — khi nào thử lại, khi nào fail ngay."
 locale: vi
-source_locale: en
-source_revision: afcb9be
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-CI relies on **process exit codes** to judge step success. This page covers common semantics for [codex exec](/guide/developer-platform/non-interactive/codex-exec/), retry strategy, and idempotent design.
+CI dựa vào **mã thoát tiến trình** để phán bước thành hay bại. Chương này giải thích ngữ nghĩa thường gặp của [codex exec](/guide/developer-platform/non-interactive/codex-exec/), chiến lược thử lại và thiết kế idempotent.
 
-## What this page covers
+## Nội dung trang này
 
-- Exit codes vs business “review did not pass”
-- Whether to retry 429/network errors
-- Avoiding duplicate side effects on retry
+- Khác biệt giữa mã thoát và «review không đạt» về nghiệp vụ
+- Có thử lại lỗi kiểu 429/mạng không
+- Cách tránh thực thi trùng gây tác dụng phụ
 
-## What exit codes tell you
+## Mã thoát đang nói gì với bạn
 
-If this is new, think of an exit code as a short result left for scripts and CI when a task finishes.
+Nếu lần đầu gặp nội dung này, hãy hiểu «mã thoát» là kết quả ngắn chương trình để lại cho script và CI sau khi Tác vụ chạy xong.
 
-It usually does not explain much—it only tells the pipeline:
+Thường nó không giải thích nhiều, chỉ báo cho pipeline:
 
-- Success this time
-- Or failure
+- Lần này tính thành công
+- Hay tính thất bại
 
-“Retry” answers a different question: should this failure stop immediately, or is another attempt worth it?
+Còn «thử lại» trả lời câu khác: lần fail này nên dừng ngay, hay đáng cho thêm một cơ hội.
 
 :::note
-The exact exit code table follows official CLI docs; the table below is **design guidance** for integration.
+Bảng mã thoát cụ thể lấy theo tài liệu CLI chính thức; bảng dưới đây là **nguyên tắc thiết kế** khi tích hợp.
 :::
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### Not all failures are the same
+### Fail không chỉ có một loại
 
-Beginners often treat every non-`0` as one kind of failure.
+Nhiều người mới hiểu mọi khác `0` đều cùng một loại fail.
 
-At minimum, distinguish:
+Thực tế ít nhất cần phân:
 
-- Task crashed
-- Policy or sandbox blocked it
-- External service had a transient issue
-- Run succeeded but review conclusion was “fail”
+- Bản thân Tác vụ sập
+- Chính sách hoặc Sandbox chặn
+- Dịch vụ ngoài tạm thời lỗi
+- Nó chạy thành công, chỉ là kết luận review «không đạt»
 
-Each needs different handling—not blanket retry.
+Cách xử lý khác nhau, không thể tất cả đều thử lại.
 
-### “Auto retry” is not automatically more reliable
+### «Tự thử lại» ≠ ổn định hơn
 
-If the failure will not disappear on retry—permissions, policy blocks, bad prompt—retry only wastes time and quota.
+Nếu nguyên nhân fail vốn không biến mất nhờ thử lại — quyền thiếu, quy tắc chặn, Prompt sai — thì thử lại chỉ tốn thời gian và quota.
 
-## Recommended semantics (conceptual)
+## Ngữ nghĩa khuyến nghị (khái niệm)
 
-| Situation | Suggested handling |
+| Tình huống | Xử lý đề xuất |
 |---|---|
-| `0` | Task completed and met success criteria in the prompt |
-| Non-`0` with policy/sandbox denial in logs | **Do not** blindly retry; fix config or prompt |
-| Non-`0` with API 429/5xx | Limited exponential backoff retries |
-| P0 issues found but execution succeeded | Use [structured output](/guide/developer-platform/non-interactive/structured-output/) `pass: false` + wrapper script `exit 1` |
+| `0` | Tác vụ hoàn thành và thỏa tiêu chí thành công trong Prompt |
+| Khác `0` và log có từ chối policy/sandbox | **Không** thử lại mù quáng; sửa cấu hình hoặc Prompt |
+| Khác `0` và API 429/5xx | Thử lại có giới hạn, exponential backoff |
+| Phát hiện vấn đề P0 nhưng thực thi thành công | Dùng `pass: false` của [đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/) + script `exit 1` |
 
-“Found a security issue” should not rely on a crash—**explicitly** set `pass: false` in JSON and let a wrapper script choose the exit code.
+«Phát hiện vấn đề bảo mật» không nên dựa vào exception kiểu sập, mà phải **tường minh** `pass: false` trong JSON và để script bọc quyết định mã thoát.
 
-## Retry template (bash)
+## Mẫu thử lại (bash)
 
 ```bash
 max=3
@@ -80,54 +80,54 @@ done
 exit 1
 ```
 
-Align “do not retry” codes with official docs and branch in `case`.
+Căn mã «không thử lại» với tài liệu chính thức rồi ghi vào nhánh `case`.
 
-## Idempotency and side effects
+## Idempotent và tác dụng phụ
 
-| Risk | Mitigation |
+| Rủi ro | Giảm thiểu |
 |---|---|
-| Duplicate PR comments | Use check run id or “update if bot comment exists” |
-| Duplicate file writes | exec defaults to read-only review; writes in separate job + human gate |
-| Duplicate notifications | Webhook with dedupe key |
+| Bình luận PR trùng | Dùng check run id hoặc «đã có bình luận bot thì cập nhật» |
+| Ghi tệp trùng | Exec mặc định review chỉ đọc; ghi ở job riêng + cổng người |
+| Gửi thông báo trùng | Webhook thông báo mang dedupe key |
 
-## When unsure
+## Khi chưa chắc thì phán thế nào
 
-Ask:
+Nếu không chắc loại fail nào nên thử lại, hỏi trước:
 
-1. Does this look like a transient external glitch?
-2. On retry, could we duplicate comments, writes, or notifications?
-3. Is the real fix config, prompt, or permissions?
+1. Lỗi này có giống dao động ngoài tạm thời không
+2. Dù chạy lại, có sinh bình luận/ghi/thông báo trùng không
+3. Nguyên nhân fail thực ra có cần người sửa cấu hình, Prompt hoặc quyền không
 
-Closer to (1): limited retry may help. Closer to (2) or (3): stop and fix root cause.
+Gần điều 1 hơn mới phù hợp thử lại có giới hạn; gần điều 2, 3 hơn thì nên dừng xử lý gốc rễ.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Ignoring exit codes; CI always green
-- Infinite retry on policy errors, burning quota
-- Retry without fixed prompt/git sha, incomparable results
+- Bỏ qua mã thoát, CI luôn green
+- Thử lại vô hạn lỗi chính sách, đốt quota
+- Thử lại không ghim Prompt/git sha, kết quả không so sánh được
 
-First separate “temporary fault” from “retry will not help,” then decide whether to retry. Not every failure deserves another run.
+Hãy phân «đây là sự cố tạm thời, hay vốn không tốt hơn nhờ thử lại», rồi mới quyết định thử lại. Không phải mọi fail đều đáng chạy lại.
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] CI fails on non-zero exit codes
-- [ ] Retry count and backoff have upper bounds
-- [ ] “Review failed” vs “run crashed” are distinguishable
-- [ ] Logs retain enough detail for troubleshooting
+- [ ] CI fail với mã thoát khác 0
+- [ ] Số lần thử lại và backoff có trần
+- [ ] Phân biệt được review «không đạt» và «chạy sập»
+- [ ] Log giữ đủ thông tin để lần lỗi
 
-## Related
+## Chương liên quan
 
-- [Error reference](/guide/reference/error-reference/)
-- [Failure recovery](/cases/workflows/failure-recovery/)
+- [Tham chiếu lỗi](/guide/reference/error-reference/)
+- [Phục hồi sau thất bại](/cases/workflows/failure-recovery/)
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI API retry guidance (conceptual)
-- stormzhang CI troubleshooting
+- Hướng dẫn thử lại OpenAI API (khái niệm)
+- Xử lý lỗi CI stormzhang
 
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** This page gives reasonable engineering advice on exit codes and retries, but examples assume specific exit semantics (e.g. `code=2`) and `codex exec` behavior without strong current official backing; restore `verified` after new CLI docs are checked.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI  
+**Ghi chú đối chiếu:** Trang đưa khuyến nghị kỹ thuật hợp lý về mã thoát và thử lại, nhưng ví dụ chứa ngữ nghĩa mã thoát cụ thể (như `code=2`) và giả định hành vi `codex exec`; các chi tiết này hiện thiếu căn cứ chính thức hiện hành đủ mạnh, cần xác minh với tài liệu CLI mới rồi mới đổi lại `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

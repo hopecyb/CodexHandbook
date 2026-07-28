@@ -1,76 +1,78 @@
 ---
-title: Webhooks Overview
-description: Connect Codex task state to internal systems via HTTP callbacks—events, signatures, and idempotency.
+title: Tổng quan Webhook
+description: "Dùng HTTP callback để nối trạng thái Tác vụ Codex vào hệ thống nội bộ — sự kiện, chữ ký và idempotent."
 locale: vi
-source_locale: en
-source_revision: d96d87e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Webhooks** let Codex or Cloud send HTTP callbacks when task state changes—driving ticket updates, Slack notifications, or internal approval UIs. This chapter is the event-integration entry for the [developer platform](/guide/developer-platform/).
+**Webhook** cho phép bạn, khi trạng thái Tác vụ Codex hoặc Cloud thay đổi, gửi HTTP callback tới dịch vụ của mình để cập nhật ticket, thông báo Slack hoặc bàn Phê duyệt nội bộ. Chương này là lối vào tích hợp sự kiện của [nền tảng nhà phát triển](/guide/developer-platform/).
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- Webhooks vs polling with the SDK
-- Common events and payload fields (conceptual)
-- Signature verification, replay, and idempotency
+- Lựa chọn giữa Webhook và polling SDK
+- Sự kiện và trường payload thường gặp (khái niệm)
+- Xác minh chữ ký, replay và idempotent
 
-## What it does
+## Hiểu trước nó đang làm gì
 
-If webhooks are new: when task state changes, Codex notifies your system instead of you polling “is it done yet?”
+Nếu lần đầu gặp Webhook, hãy hiểu: mỗi khi trạng thái Tác vụ đổi, Codex chủ động báo hệ thống của bạn, thay vì bạn cứ hỏi đi hỏi lại «xong chưa».
 
-Best when something else must happen after a task ends.
+Nó phù hợp khi «Tác vụ vừa kết thúc, còn hành động hệ thống khác cần nối tiếp».
 
 :::note
-Webhook paths, event names, and signature algorithms follow [official API docs](https://developers.openai.com/codex).
+Đường dẫn Webhook, tên sự kiện và thuật toán chữ ký lấy theo [tài liệu API chính thức](https://developers.openai.com/codex).
 :::
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### Webhooks are not the default for all automation
+### Webhook không phải câu trả lời mặc định cho mọi tự động hóa
 
-For a single `codex exec`, exit codes are usually enough—no webhook needed.
+Nếu chỉ chạy một lần `codex exec` và xem mã thoát là đủ, thường không cần Webhook.
 
-Webhooks fit better:
+Webhook phù hợp hơn với:
 
-- Long tasks
-- Multi-step orchestration
-- Notifying or driving other systems when done
+- Tác vụ dài
+- Điều phối nhiều bước
+- Sau khi Tác vụ kết thúc còn phải thông báo hoặc kích hoạt hệ thống khác
 
-### Receiving a callback does not mean trust it
+### Nhận callback chưa nghĩa là tin ngay được
 
-Without signature verification, idempotency, and timeout handling, you risk forged requests, duplicate delivery, or instability.
+Nhiều người mới coi Webhook là «tin chính thức, dùng trực tiếp được».
 
-## When to use webhooks
+Nhưng nếu không xác minh chữ ký, idempotent và xử lý timeout, có thể bị request giả, gửi trùng hoặc dao động hệ thống kéo ra vấn đề.
 
-| Fits | Does not fit |
+## Khi nào dùng Webhook
+
+| Phù hợp | Không phù hợp |
 |---|---|
-| Task-complete notifications to internal systems | Strong real-time token streaming |
-| Integration with existing event buses | Simple cron that only needs `exec` exit codes |
-| Multi-step flows (complete → trigger deploy) | No public endpoint and no queue |
+| Thông báo nội bộ khi Tác vụ hoàn thành | Cần stream từng chữ thời gian thực mạnh |
+| Tích hợp bus sự kiện sẵn có | Cron đơn giản chỉ cần mã thoát `exec` |
+| Điều phối nhiều bước (xong → kích hoạt deploy) | Không có endpoint public và không muốn dùng hàng đợi |
 
-Simple pipelines: [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) only. Productized multi-tenant services often combine **SDK + Webhook**.
+Pipeline đơn giản có thể chỉ dùng [Script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/); dịch vụ đa tenant sản phẩm hóa thường kết hợp **SDK + Webhook**.
 
-## Typical events (conceptual)
+## Sự kiện điển hình (khái niệm)
 
-| Event | Use |
+| Sự kiện | Công dụng |
 |---|---|
-| `task.completed` | Fetch results, update PR status |
-| `task.failed` | Alert, retry queue |
-| `task.needs_approval` | Push to human approval UI |
-| `review.posted` | Sync code review conclusions |
+| `task.completed` | Lấy kết quả, cập nhật trạng thái PR |
+| `task.failed` | Cảnh báo, hàng đợi thử lại |
+| `task.needs_approval` | Đẩy tới UI Phê duyệt của người |
+| `review.posted` | Đồng bộ kết luận review mã |
 
-Payload should include: `task_id`, status, timestamp, repo/project id; **avoid** full prompts in webhook body if they contain PII.
+Payload nên có: `task_id`, trạng thái, timestamp, định danh repo/dự án; **tránh** đặt Prompt đầy đủ trong webhook body nếu có PII.
 
-## Minimum receiver requirements
+## Yêu cầu tối thiểu phía nhận
 
-1. **HTTPS** endpoint; verify official signature header (e.g. `X-Signature` + HMAC)
-2. **Idempotency**: process each `event_id` once
-3. **Fast 2xx**: heavy logic in async queue
-4. **Log redaction**: no keys or full user input
+1. Endpoint **HTTPS**, xác minh header chữ ký chính thức (ví dụ `X-Signature` + HMAC)
+2. **Idempotent**: cùng `event_id` chỉ xử lý một lần
+3. **2xx nhanh**: logic nặng đưa hàng đợi bất đồng bộ
+4. **Làm sạch log**: không ghi khóa bí mật và toàn bộ đầu vào người dùng
 
-Sketch (pseudocode):
+Minh họa (giả mã):
 
 ```python
 def handle(request):
@@ -82,50 +84,50 @@ def handle(request):
     return 200
 ```
 
-## Relationship to CI
+## Quan hệ với CI
 
-- In-CI `codex exec` usually **does not** need webhooks—exit codes suffice
-- Cloud long tasks and mobile approval scenarios fit webhooks to internal systems
+- Trong CI, `codex exec` thường **không cần** webhook; mã thoát là đủ
+- Tác vụ Cloud dài, Phê duyệt trên mobile phù hợp hơn để webhook đẩy vào hệ thống nội bộ
 
-## Common mistakes
+## Lỗi thường gặp
 
-- No signature verification; forged callbacks
-- Handler exceeds platform timeout → duplicate delivery
-- Synchronous second Codex run inside webhook handler
-- Webhook URL exposed in client frontend
+- Không xác minh chữ ký, callback giả
+- Xử lý vượt timeout nền tảng gây gửi trùng
+- Trong handler webhook chạy đồng bộ lần Codex thứ hai
+- Phơi URL webhook trên frontend client
 
-## How to decide
+## Cách phán có nên dùng không
 
-Ask:
+Nếu chưa chắc cảnh hiện tại có cần Webhook, hỏi trước:
 
-1. Do I need proactive notification on task state changes?
-2. After a task ends, is there a system-level next step to automate?
-3. Do I have a backend that can safely receive HTTP callbacks?
+1. Tôi có cần được chủ động báo khi trạng thái Tác vụ đổi không
+2. Sau Tác vụ, có bước hệ thống tiếp theo cần tự động nối không
+3. Tôi đã có backend nhận HTTP callback an toàn chưa
 
-More “yes” answers → webhooks matter more.
+Càng nhiều câu «có», Webhook càng có ý nghĩa.
 
-## Security boundaries
+## Ranh giới bảo mật
 
-- See [Threat model](/guide/team-enterprise/security/threat-model/) and [Acceptable use](/guide/team-enterprise/governance/acceptable-use/)
-- Rotate webhook secrets on an ops calendar
+- Xem [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) và [Sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
+- Đưa rotate webhook secret vào lịch vận hành
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Signature failure returns 4xx
-- [ ] Idempotency table or dedupe key implemented
-- [ ] Async worker and DLQ configured
-- [ ] Aligned with [structured output](/guide/developer-platform/non-interactive/structured-output/) field conventions
+- [ ] Xác minh chữ ký thất bại trả 4xx
+- [ ] Đã có bảng idempotent hoặc dedupe key
+- [ ] Worker bất đồng bộ và DLQ (dead letter) đã cấu hình
+- [ ] Thống nhất với quy ước trường [đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/)
 
-Webhooks connect task state changes to other systems—after signature verification, idempotency, and async handling are in place.
+Webhook phù hợp nối thay đổi trạng thái Tác vụ vào hệ thống khác; đồng thời hãy làm tốt trước xác minh chữ ký, idempotent và xử lý bất đồng bộ.
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex / Cloud API event documentation
-- KimYx0207 integration chapter
+- Tài liệu sự kiện OpenAI Codex / Cloud API
+- Chương tích hợp KimYx0207
 
 ---
 
-**Status:** verified  
-**Products:** API / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ public developer-platform and event-driven integration guidance, plus verified Webhooks section, CI/CD, structured output, and team security pages in this handbook; confirms stable principles: webhooks for status notification, receivers must verify signatures, enforce idempotency, and process asynchronously.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** API / Cloud  
+**Cơ sở kiểm chứng:** Đã đối chiếu với mô tả công khai hiện tại của OpenAI Developers về nền tảng nhà phát triển và tích hợp hướng sự kiện, cùng các trang nhóm Webhooks, CI/CD, đầu ra có cấu trúc và ranh giới bảo mật đội đã kiểm chứng trong sổ tay; trang chỉ xác nhận nguyên tắc tích hợp ổn định rằng Webhook phù hợp thông báo trạng thái, phía nhận nên xác minh chữ ký, idempotent và xử lý bất đồng bộ.  
+**Kiểm chứng gần nhất:** 2026-07-26

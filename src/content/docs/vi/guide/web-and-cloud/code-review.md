@@ -1,151 +1,151 @@
 ---
-title: Cloud code review
-description: Reviewing diffs, PRs, and automated review suggestions from Cloud tasks.
+title: Review mã Cloud
+description: "Xem xét Diff, PR và gợi ý review tự động từ Tác vụ Cloud."
 locale: vi
-source_locale: en
-source_revision: f609c3e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud can produce changes for you, but it does not take merge responsibility on your behalf.
+Cloud có thể tạo thay đổi giúp bạn, nhưng không nhận trách nhiệm merge thay bạn.
 
-After a Cloud task finishes, **human review** remains the last gate before merge. This page explains how to review remote Agent output and connect it with GitHub PRs, CI, and Skill-based review.
+Sau khi Tác vụ Cloud kết thúc, **review của người** vẫn là cổng cuối trước merge. Trang này giải thích cách xem đầu ra Agent từ xa và nối với PR GitHub, CI và review bằng Skill.
 
-## What's covered
+## Nội dung phủ
 
-- How Cloud PR review differs from local PR review
-- Review checklists and common risk points
-- Using Codex to assist review without giving up accountability
+- Review PR Cloud khác review PR cục bộ thế nào
+- Checklist review và điểm rủi ro thường gặp
+- Dùng Codex hỗ trợ review mà không bỏ trách nhiệm
 
-## Why Cloud review needs extra attention
+## Vì sao review Cloud cần chú ý thêm
 
-Remote Agents are more likely to:
+Agent từ xa dễ hơn:
 
-- Touch unrelated files while "fixing" something
-- Produce large lockfile or generated-file diffs due to environment differences
-- Show tests as run without covering critical logic
-- Write polished PR descriptions you have not verified
+- Đụng tệp không liên quan khi «sửa» gì đó
+- Sinh Diff lockfile hoặc tệp sinh lớn vì khác môi trường
+- Cho thấy đã chạy kiểm thử mà không phủ logic quan trọng
+- Viết mô tả PR lịch sự mà bạn chưa Kiểm chứng
 
-Cloud review is not lighter—it needs sharper focus.
+Review Cloud không nhẹ hơn — cần tập trung sắc hơn.
 
-## Where review sits in the flow
+## Review nằm đâu trong luồng
 
 ```text
-Cloud task completes → push branch → open PR
+Tác vụ Cloud xong → push nhánh → mở PR
         ↓
-CI runs (tests, lint, security scans)
+CI chạy (kiểm thử, lint, quét bảo mật)
         ↓
-Human reviews diff + optional Agent-assisted review
+Người xem Diff + review hỗ trợ Agent tùy chọn
         ↓
-Approve merge (subject to branch protection)
+Phê duyệt merge (dưới bảo vệ nhánh)
 ```
 
-Opening PRs: [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Mở PR: [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## Minimum bar before full review
+## Thanh tối thiểu trước review đầy đủ
 
-Before a deep pass, confirm at least four things:
+Trước khi đi sâu, xác nhận ít nhất bốn việc:
 
-1. Did the change scope drift?
-2. Was critical logic actually changed as intended?
-3. Were tests or verification really run?
-4. Were sensitive data or dangerous changes introduced?
+1. Phạm vi thay đổi có lệch không?
+2. Logic quan trọng có đổi đúng như dự kiến không?
+3. Kiểm thử hoặc Kiểm chứng có thật sự chạy không?
+4. Có đưa dữ liệu nhạy cảm hoặc thay đổi nguy hiểm không?
 
-Until those are confirmed, "task done" is not "safe to merge."
+Chưa xác nhận thì «Tác vụ xong» chưa phải «an toàn để merge».
 
-## Human review checklist
+## Checklist review người
 
-Aligned with [review diffs](/guide/quality/review-diffs/); Cloud adds extra focus:
+Căn chỉnh với [xem xét Diff](/guide/quality/review-diffs/); Cloud thêm trọng tâm:
 
-| Check | Why |
+| Kiểm tra | Vì sao |
 |---|---|
-| Unrelated files changed | Remote Agent may "refactor while here" |
-| Lockfile / generated files | Environment differences cause large diffs |
-| New dependency sources | Supply chain risk |
-| Tests actually cover new logic | Agent may write empty tests |
-| Permission and auth changes | Privilege escalation, hard-coded tokens |
-| Matches issue scope | Prevent scope creep |
+| Tệp không liên quan bị đổi | Agent từ xa có thể «refactor nhân tiện» |
+| Lockfile / tệp sinh | Khác môi trường gây Diff lớn |
+| Nguồn dependency mới | Rủi ro chuỗi cung ứng |
+| Kiểm thử thật phủ logic mới | Agent có thể viết kiểm thử rỗng |
+| Thay đổi quyền và auth | Leo thang đặc quyền, token hard-code |
+| Khớp phạm vi issue | Ngăn mở rộng phạm vi |
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. CI green means ready to merge
+### 1. CI xanh nghĩa là sẵn sàng merge
 
-CI only means "these automated checks did not fail." Whether requirements were understood, scope stayed correct, and risk is acceptable still needs human judgment.
+CI chỉ nghĩa «các kiểm tra tự động này không fail». Yêu cầu đã hiểu đúng, phạm vi còn đúng và rủi ro chấp nhận được vẫn cần phán đoán người.
 
-### 2. A complete PR description means I can skim the diff
+### 2. Mô tả PR đầy đủ nghĩa là có thể lướt Diff
 
-No.
+Không.
 
-Descriptions help you get context faster; they do not verify facts for you.
+Mô tả giúp lấy Ngữ cảnh nhanh hơn; không Kiểm chứng sự thật giúp bạn.
 
-### 3. Running Codex review again equals done
+### 3. Chạy lại review Codex là xong
 
-Assisted review is useful, but accountability stays with people.
+Review hỗ trợ hữu ích, nhưng trách nhiệm vẫn thuộc người.
 
-## Using Codex to assist review (not replace you)
+## Dùng Codex hỗ trợ review (không thay bạn)
 
-Acceptable:
+Chấp nhận được:
 
-- Run a `$pr-review` Skill locally or in Cloud on a new PR (see [Create a Skill](/skills/create-your-first-skill/))
-- Ask for opinions grouped as blockers / suggestions / nits
-- **You** confirm each blocker
+- Chạy Skill `$pr-review` cục bộ hoặc Cloud trên PR mới (xem [Tạo Skill đầu tiên](/skills/create-your-first-skill/))
+- Yêu cầu ý kiến nhóm dạng blocker / gợi ý / nit
+- **Bạn** xác nhận từng blocker
 
-Not acceptable:
+Không chấp nhận:
 
-- Merging without reading the diff because the Agent said it looks fine
-- Letting the Agent approve a protected branch on its own
+- Merge mà không đọc Diff vì Agent nói trông ổn
+- Để Agent một mình phê duyệt nhánh được bảo vệ
 
-See [verification and human review](/guide/foundations/verification-and-human-review/)
+Xem [Kiểm chứng và review của người](/guide/foundations/verification-and-human-review/)
 
-## Suggested review order
+## Thứ tự review đề xuất
 
-1. PR title and description—confirm the goal
-2. Main logic diff
-3. Tests, generated files, config
-4. Automated comments and follow-up suggestions
+1. Tiêu đề và mô tả PR — xác nhận mục tiêu
+2. Diff logic chính
+3. Kiểm thử, tệp sinh, cấu hình
+4. Bình luận tự động và gợi ý theo dõi
 
-This avoids drowning in noise upfront.
+Tránh chìm trong nhiễu ngay từ đầu.
 
-## Driving revisions from review comments
+## Đẩy sửa từ bình luận review
 
-After review comments land on a PR:
+Sau khi bình luận review tới PR:
 
-1. Start a new Cloud or local task: "Address only the following review comments; do not expand scope"
-2. Attach comment links or numbers
-3. Push new commits to the same PR
-4. Re-run CI and skim the incremental diff
+1. Khởi động Tác vụ Cloud hoặc cục bộ mới: «Chỉ xử lý các bình luận review sau; không mở rộng phạm vi»
+2. Đính kèm liên kết hoặc số bình luận
+3. Push commit mới trên cùng PR
+4. Chạy lại CI và lướt Diff gia tăng
 
-On GitHub: [GitHub integration](/guide/integrations/github/)
+Trên GitHub: [tích hợp GitHub](/guide/integrations/github/)
 
-## Combining with Automations
+## Kết hợp với Automations
 
-- Run a review Skill automatically when a PR opens (comment only, no merge)
-- See [scheduled and triggered tasks](/skills/automations/scheduled-tasks/)
+- Tự chạy Skill review khi PR mở (chỉ bình luận, không merge)
+- Xem [Tác vụ theo lịch và kích hoạt](/skills/automations/scheduled-tasks/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Skipping security review because Cloud is "isolated"
-- Merging a huge diff because "CI is green"
-- Pasting unsanitized production logs into review comments
-- Treating "I did not spot issues" as "there are no issues"
+- Bỏ qua review bảo mật vì Cloud «cô lập»
+- Merge Diff lớn vì «CI xanh»
+- Dán log production chưa làm sạch vào bình luận review
+- Coi «tôi không thấy vấn đề» là «không có vấn đề»
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] CI is green and you understand any retry history
-- [ ] At least one person read the main logic diff
-- [ ] Scope matches the issue/task description
-- [ ] No Secrets committed to the repo
+- [ ] CI xanh và bạn hiểu lịch sử thử lại
+- [ ] Ít nhất một người đã đọc Diff logic chính
+- [ ] Phạm vi khớp mô tả issue/Tác vụ
+- [ ] Không commit Secrets vào repo
 
-## References
+## Tham chiếu
 
 - stormzhang `26-git-github.md`
-- KimYx0207 Review/PR sections
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- Các phần Review/PR KimYx0207
+- [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / GitHub  
-**Review note:** The principle that Cloud output still needs human review holds, but this page describes Cloud PRs, auto-open PR behavior, remote review rhythm, and notifications as a concrete current workflow; those integration shapes change quickly and need a rewrite against the latest official flow.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud / GitHub  
+**Ghi chú đối chiếu:** Nguyên tắc đầu ra Cloud vẫn cần review người vẫn đứng vững, nhưng trang mô tả PR Cloud, hành vi mở PR tự động, nhịp review từ xa và thông báo như quy trình cụ thể hiện hành; các hình thức tích hợp này đổi nhanh và cần viết lại theo luồng chính thức mới nhất.  
+**Kiểm chứng gần nhất:** 2026-07-26

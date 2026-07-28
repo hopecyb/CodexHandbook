@@ -1,79 +1,85 @@
 ---
-title: Contributing
-description: How to contribute guides, cases, prompt examples, and translations—process and quality standards.
+title: Đóng góp
+description: Cách đóng góp nội dung, case, ví dụ Prompt và bản dịch cho sổ tay — quy trình và chuẩn chất lượng.
 sidebar:
   order: 80
 locale: vi
-source_locale: en
-source_revision: 110f6ba
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Codex Handbook** is a community-maintained documentation site. We welcome fixes, new pages, reproducible cases, and prompt examples in [examples/](/examples/README.md).
+**Sổ tay hướng dẫn Codex** là trang tài liệu do cộng đồng duy trì. Hoan nghênh sửa lỗi, bổ sung trang, thêm case tái hiện được và ví dụ Prompt trong [examples/](/examples/README.md).
 
-## What this page covers
+## Nội dung trang này
 
-- Contribution types and entry points
-- Writing and verification standards
-- PR and release expectations
+- Loại đóng góp và lối vào
+- Chuẩn viết và kiểm chứng
+- Kỳ vọng PR và phát hành
 
-## What helps most
+## Đóng góp nào có giá trị nhất
 
-If you notice:
+Nếu bạn thấy trên trang có:
 
-- Sections you cannot follow as a newcomer
-- Nav entries with thin content
-- Outdated commands, screenshots, or explanations
+- Chỗ bản thân đọc không hiểu
+- Mục lục có lối vào nhưng nội dung chưa dẫn đường đủ
+- Lệnh, ảnh chụp, mô tả đã lỗi thời
 
-—that is already a high-value contribution signal.
+thì đó đã là manh mối đóng góp rất có giá trị.
 
-You do not need to be the domain expert first. Many improvements come from first-time readers saying “this assumes I already know X.”
+Bạn không cần trở thành “người hiểu nhất lĩnh vực” rồi mới bắt đầu giúp. Nhiều cải tiến thật sự hữu ích đến đúng từ người lần đầu dùng, chỉ ra “chỗ này mặc định bạn đã biết, nhưng tôi thật sự chưa hiểu”.
 
-## Contribution types
+## Loại đóng góp
 
-| Type | Description | Guide |
+| Loại | Mô tả | Hướng dẫn |
 |---|---|---|
-| Fix / small edit | Typos, links, one outdated sentence | Direct PR |
-| New guide page | Chapter body under `src/content/docs/` | [Write a guide](/guide/contributing/write-a-guide/) |
-| Case study | `src/content/docs/cases/` | [Case template](/cases/use-cases/case-study-template/) |
-| Prompt example | `examples/prompts/` | [Add a prompt example](/guide/contributing/add-a-prompt-example/) |
-| Technical verification | Mark `verified`, update dates | [Verify technical content](/guide/contributing/verify-technical-content/) |
-| Translation | `en/`, `zh-tw/`, etc. | Roadmap M6; stabilize source first |
+| Sửa/chỉnh nhỏ | Chính tả, liên kết, một câu lỗi thời | PR trực tiếp |
+| Trang hướng dẫn mới | Nội dung chương dưới `src/content/docs/` | [Viết trang hướng dẫn](/guide/contributing/write-a-guide/) |
+| Case | `src/content/docs/cases/` | [Mẫu case](/cases/use-cases/case-study-template/) |
+| Ví dụ Prompt | `examples/prompts/` | [Thêm ví dụ Prompt](/guide/contributing/add-a-prompt-example/) |
+| Kiểm chứng kỹ thuật | Đánh dấu `verified`, cập nhật ngày | [Kiểm chứng nội dung kỹ thuật](/guide/contributing/verify-technical-content/) |
+| Bản dịch | `en/`, `zh-tw/`, v.v. | Lộ trình M6; ổn định nguồn trước |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### Contributing ≠ writing a whole chapter
+### Đóng góp không đồng nghĩa phải viết mới cả một chương lớn
 
-Valuable contributions include:
+Nhiều người lần đầu tham gia nghĩ “đóng góp” phải bổ sung cả bộ nội dung nặng.
 
-- A paragraph that helps beginners
-- Fixing misleading wording
-- A missing nav entry
-- Downgrading or dating outdated commands
+Thật ra những việc sau đều rất có giá trị:
 
-### “Not an expert” ≠ useless feedback
+- Bổ sung một đoạn giải thích để người mới hiểu
+- Sửa một diễn đạt gây hiểu nhầm
+- Bổ sung một lối vào mục lục bị thiếu
+- Hạ cấp hoặc ghi ngày lệnh lỗi thời
 
-If your audience includes beginners, where you get stuck is signal—if you make it specific and improve the text, not only “confusing.”
+### “Tôi không phải chuyên gia” không bằng “phản hồi của tôi vô dụng”
 
-## Core principles
+Nếu độc giả mục tiêu vốn gồm người mới, chỗ bạn bị kẹt khi đọc chính là tín hiệu giá trị cao.
 
-1. **Simplified Chinese `root` is source** (unless stated otherwise)
-2. **Do not copy** external tutorials verbatim; see [External source integration plan](/docs/planning/external-source-integration.md)
-3. **Volatile facts** need `Last verified` dates
-4. **Every sidebar slug** needs a markdown file or `npm run build` fails
-5. New pages must update `astro.config.mjs` sidebar
+Chỉ cần: nói cụ thể vấn đề, và cố bổ sung thành diễn đạt rõ hơn, chứ không chỉ để lại câu “chỗ này không hiểu”.
 
-## First contribution path
+## Nguyên tắc cơ bản
 
-1. Pick something you actually got stuck on
-2. Decide: copy fix, new page, example, or verify outdated info
-3. Change one focused slice—but explain reader context
-4. Run build so site structure stays valid
+1. **Tiếng Trung giản thể `root` là nguồn** (trừ khi có ghi chú khác)
+2. **Không sao chép** nguyên văn tutorial bên ngoài; tham khảo [kế hoạch tích hợp nguồn ngoài](/docs/planning/external-source-integration.md)
+3. **Sự kiện dễ thay đổi** phải ghi ngày `Kiểm chứng gần nhất`
+4. **Mỗi sidebar slug** phải có markdown tương ứng, nếu không `npm run build` thất bại
+5. Trang mới phải cập nhật đồng bộ sidebar trong `astro.config.mjs`
 
-Smaller scoped PRs review faster than whole-chapter rewrites.
+## Lần đóng góp đầu, có thể bắt đầu vậy
 
-## Local development
+Nếu là lần đầu đóng góp, thứ tự vào ổn nhất là:
+
+1. Chọn một điểm bạn vừa thật sự bị kẹt
+2. Phán đoán thuộc sửa văn bản, bổ sung trang, bổ sung ví dụ hay kiểm chứng thông tin lỗi thời
+3. Chỉ sửa khối nhỏ đó, nhưng nói rõ tiền đề và góc nhìn độc giả
+4. Chạy build, xác nhận không làm hỏng cấu trúc site
+
+Cách này dễ thành công hơn và dễ được review hơn so với lao vào sửa cả chương ngay.
+
+## Phát triển cục bộ
 
 ```bash
 source ~/.nvm/nvm.sh && nvm use 22
@@ -81,27 +87,27 @@ pnpm install
 pnpm dev
 ```
 
-Before merge:
+Trước khi gộp chạy:
 
 ```bash
 npm run build
 ```
 
-## Code of conduct
+## Quy tắc ứng xử
 
-- Respect others’ work; discuss ideas not people
-- No real keys or customer data
-- Large refactors: issue or RFC first
+- Tôn trọng công sức người khác; thảo luận việc, không công kích người
+- Không gửi khóa bí mật thật, dữ liệu khách hàng
+- Trước tái cấu trúc phạm vi lớn, thảo luận issue hoặc RFC trước
 
-A first contribution does not need to be huge—clarify one real beginner pain point and pass build.
+Đóng góp đầu không cần viết nhiều. Làm rõ một chỗ thật sự làm người mới bị kẹt, rồi xác nhận qua được kiểm chứng build, đã rất có giá trị.
 
-## Related links
+## Liên kết liên quan
 
-- Repository: <https://github.com/hopecyb/CodexHandbook>
-- [Chapter outline](/docs/planning/chapter-outline.md) (planning)
+- Kho: <https://github.com/hopecyb/CodexHandbook>
+- [Dàn ý chương](/docs/planning/chapter-outline.md) (dùng cho lập kế hoạch)
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked repo directory structure, sidebar maintenance, page status system, and contribution flow; handbook maintenance rules—not volatile Codex UI behavior.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Căn cứ kiểm chứng:** Đã rà từng mục theo cấu trúc thư mục hiện tại của kho, cách duy trì sidebar, hệ trạng thái trang và quy trình đóng góp; nội dung trang thuộc quy tắc duy trì sổ tay, không phụ thuộc hành vi UI dễ thay đổi của một client Codex nào.  
+**Kiểm chứng gần nhất:** 2026-07-26

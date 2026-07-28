@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/vi/">Đọc trực tuyến</a>
   ·
-  <a href="./src/content/docs/guide/index.md">Hướng dẫn cho người mới</a>
+  <a href="./src/content/docs/vi/guide/start-here/index.md">Bắt đầu tại đây</a>
   ·
   <a href="./docs/planning/content-architecture.md">Kiến trúc nội dung</a>
   ·
@@ -72,11 +72,11 @@ Nếu bạn mới bắt đầu với Codex, kho lưu trữ và trang web này l�
 
 Chúng tôi khuyên bắt đầu theo thứ tự:
 
-1. [Hướng dẫn — trang chủ](./src/content/docs/guide/index.md)
-2. [Ngữ cảnh và tệp](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Cases](./src/content/docs/cases/index.md)
+1. [Bắt đầu tại đây](./src/content/docs/vi/guide/start-here/index.md)
+2. [Ngữ cảnh](./src/content/docs/vi/guide/context/index.md)
+3. [Prompts](./src/content/docs/vi/prompts/index.md)
+4. [Skills](./src/content/docs/vi/skills/index.md)
+5. [Cases](./src/content/docs/vi/cases/index.md)
 
 Lộ trình này dành cho người mới với Codex — giúp xây dựng nền tảng vững trước khi vào thực hành.
 
@@ -110,10 +110,10 @@ Hiểu quy trình end-to-end qua tác vụ thực: đọc code, sửa bug, viế
 | Liên kết | Mục đích |
 | --- | --- |
 | [Đọc trực tuyến](https://codexhandbook.com/vi/) | Duyệt toàn bộ sổ tay trên website |
-| [Hướng dẫn](./src/content/docs/guide/index.md) | Hiểu lộ trình sử dụng Codex từ đầu |
-| [Prompts](./src/content/docs/prompts/index.md) | Học mô tả tác vụ và ranh giới rõ ràng |
-| [Skills](./src/content/docs/skills/index.md) | Chuyển kinh nghiệm thành năng lực tái sử dụng |
-| [Cases](./src/content/docs/cases/index.md) | Hiểu quy trình end-to-end qua tác vụ thực |
+| [Hướng dẫn](./src/content/docs/vi/guide/start-here/index.md) | Hiểu lộ trình sử dụng Codex từ đầu |
+| [Prompts](./src/content/docs/vi/prompts/index.md) | Học mô tả tác vụ và ranh giới rõ ràng |
+| [Skills](./src/content/docs/vi/skills/index.md) | Chuyển kinh nghiệm thành năng lực tái sử dụng |
+| [Cases](./src/content/docs/vi/cases/index.md) | Hiểu quy trình end-to-end qua tác vụ thực |
 | [Ví dụ](./examples/README.md) | Tái sử dụng prompts và tài sản mẫu |
 | [Kiến trúc nội dung](./docs/planning/content-architecture.md) | Nắm thiết kế thông tin của toàn site |
 | [Dàn ý chương](./docs/planning/chapter-outline.md) | Xem phạm vi chủ đề |
@@ -122,17 +122,17 @@ Hiểu quy trình end-to-end qua tác vụ thực: đọc code, sửa bug, viế
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # Hướng dẫn, client, quyền, xác minh
-├── src/content/docs/prompts/    # Phương pháp prompt và diễn đạt tác vụ
-├── src/content/docs/skills/     # Thiết kế, sử dụng và quản trị Skills
-├── src/content/docs/cases/      # Case tác vụ thực tế
+├── src/content/docs/vi/guide/   # Hướng dẫn, client, quyền, xác minh
+├── src/content/docs/vi/prompts/ # Phương pháp prompt và diễn đạt tác vụ
+├── src/content/docs/vi/skills/  # Thiết kế, sử dụng và quản trị Skills
+├── src/content/docs/vi/cases/   # Case tác vụ thực tế
 ├── examples/                    # Prompts sao chép được và ví dụ mở rộng
 ├── docs/planning/               # Lập kế hoạch và bảo trì nội dung
 ```
 
 ## Phát triển local
 
-Dự án dùng [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) để xây site tài liệu. Nội dung chính ở `src/content/docs/`.
+Dự án dùng [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) để xây site tài liệu. Nội dung tiếng Việt nằm ở `src/content/docs/vi/`.
 
 Yêu cầu:
 
@@ -151,6 +151,14 @@ Build site tĩnh:
 ```bash
 pnpm build
 ```
+
+Theo dõi tiến độ dịch tiếng Việt:
+
+```bash
+pnpm i18n:status -- --locale vi
+```
+
+Nội dung tiếng Việt nằm ở `src/content/docs/vi/` (bản phản chiếu của nguồn tiếng Trung giản thể). Thuật ngữ: [`glossary/vi.md`](./glossary/vi.md). Tính đến 2026-07-28, độ phủ trang tiếng Việt là **100%** (tất cả `translation_status: draft`; chờ review ngôn ngữ/kỹ thuật).
 
 ## Nguyên tắc
 

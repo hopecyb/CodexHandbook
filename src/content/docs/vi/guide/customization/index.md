@@ -1,128 +1,128 @@
 ---
-title: Customization and Project Configuration
-description: Personal preferences, AGENTS.md, configuration, and rule precedence—so Codex keeps working your way over time.
+title: Cá nhân hóa và cấu hình dự án
+description: Sở thích cá nhân, AGENTS.md, cấu hình và ưu tiên quy tắc — để Codex lâu dài làm việc theo cách của bạn.
 sidebar:
   order: 40
 locale: vi
-source_locale: en
-source_revision: 8fa97f5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-Codex does not rely only on “how you ask this time”; it also relies on **persistent configuration** to remember your conventions and your team’s. This chapter mainly separates what should stay in the conversation from what should sink into the project.
+Codex không chỉ dựa vào “lần này hỏi thế nào”, mà còn dựa vào **cấu hình bền** để nhớ ước định của bạn và nhóm. Chương này chủ yếu phân biệt yêu cầu nào nên giữ trong hội thoại, yêu cầu nào nên hạ xuống dự án.
 
-If you have started repeating the same things—such as “don’t touch this directory,” “run tests first,” or “use this model by default”—this chapter addresses that kind of problem.
+Nếu bạn đã bắt đầu lặp lại cùng một câu, ví dụ “đừng sửa thư mục này”, “chạy kiểm thử trước”, “mặc định dùng mô hình này”, chương này đang xử lý loại vấn đề đó.
 
-## Contents
+## Nội dung
 
-- Who overrides whom among personal preferences, project instructions, team rules, and temporary prompts
-- What belongs in `AGENTS.md` and what does not
-- Which layer owns configuration files and approval/sandbox policy
+- Sở thích cá nhân, mô tả dự án, quy tắc nhóm, Prompt tạm — **ai phủ ai**
+- `AGENTS.md` nên viết gì, không nên viết gì
+- Tệp cấu hình và chiến lược phê duyệt/Sandbox quản ở tầng nào
 
-## Who This Is For
+## Phù hợp ai
 
-| Reader | Start here |
+| Độc giả | Đề xuất đọc trước |
 |---|---|
-| Just got your first task working | [Project Instructions](/guide/customization/project-instructions/) |
-| Want to codify collaboration norms in the repo | [What Is AGENTS.md](/guide/customization/agents-md/what-is-agents-md/) |
-| Want consistent CLI/App behavior | [Configuration Basics](/guide/customization/configuration/config-basics/) |
+| Vừa chạy thông tác vụ đầu | [Mô tả dự án](/guide/customization/project-instructions/) |
+| Muốn cố định quy chuẩn cộng tác trong kho | [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/) |
+| Muốn thống nhất hành vi CLI/App | [Cơ bản cấu hình](/guide/customization/configuration/config-basics/) |
 
-## What This Chapter Addresses
+## Chương này đang xử lý gì
 
-After using Codex for a while, many people run into the same kind of problem: they have written plenty of rules, but things do not feel fully effective, or different places contradict each other.
+Nhiều người sau một thời gian dùng Codex gặp cùng một loại vấn đề: quy tắc viết không ít, nhưng luôn cảm giác chưa hoàn toàn hiệu lực, hoặc chỗ khác nhau xung đột nhau.
 
-This chapter is mainly about how to layer collaboration rules well:
+Chương này chủ yếu thảo luận cách đặt quy tắc cộng tác theo tầng:
 
-- What is my personal habit
-- What is a shared repo rule
-- What is an organization-level hard boundary
-- What is only a temporary requirement for this task
+- Cái nào là thói quen cá nhân của tôi
+- Cái nào là quy tắc kho chia sẻ
+- Cái nào là ranh giới cứng cấp tổ chức
+- Cái nào chỉ là yêu cầu tạm của tác vụ lần này
 
-When layering is unclear, it is easy to end up with “wrote a lot, but it did not take effect when it should have.”
+Khi phân tầng không rõ, dễ xuất hiện “viết nhiều nhưng lúc cần hiệu lực thì không hiệu lực”.
 
-## Common Layers (Conceptual)
+## Phân tầng thường gặp (khái niệm)
 
-Understanding the layers helps avoid the confusion of “I wrote rules but they did not apply.” Different clients, organization-managed capabilities, and version implementations may differ, but you can usually start with the layers below:
+Hiểu phân tầng giúp tránh bối rối «đã viết quy tắc mà không hiệu lực». Client khác nhau, năng lực quản trị tổ chức và hiện thực phiên bản có thể khác, nhưng thường có thể hiểu trước theo vài tầng dưới:
 
 ```text
-1. Organization/team managed policy (if deployed)
-2. Project-level AGENTS.md / project instructions (in the repo)
-3. User-level configuration and preferences (local machine, e.g. ~/.codex)
-4. Temporary requirements and @ references in the current task
+1. Chiến lược quản trị tổ chức/nhóm (nếu đã phát hành)
+2. AGENTS.md / chỉ thị dự án cấp dự án (trong kho)
+3. Cấu hình và sở thích cấp người dùng (máy cục bộ ~/.codex v.v.)
+4. Yêu cầu tạm và tham chiếu @ trong tác vụ hiện tại
 ```
 
-**Principle:** The closer something is to “organization-mandated,” the less it should be casually relaxed by a single task; the closer it is to “the current task,” the more flexible it is—and the easier it is to lose when the session ends. For actual precedence, follow the current client and official documentation.
+**Nguyên tắc:** càng gần «bắt buộc tổ chức» càng không nên bị tác vụ đơn nới lỏng tùy ý; càng gần «tác vụ hiện tại» càng linh hoạt, cũng càng dễ mất khi phiên kết thúc. Precedence cụ thể lấy client hiện tại và tài liệu chính thức làm chuẩn.
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. If I can write prompts, I do not need long-term configuration?
+### 1. Chỉ cần tôi viết được Prompt là không cần cấu hình dài hạn?
 
-For short tasks that may barely suffice, but once you start ongoing collaboration, you increasingly want to sink repeated requirements downward.
+Tác vụ ngắn có lẽ tạm đủ, nhưng một khi bắt đầu cộng tác liên tục, bạn sẽ càng muốn hạ yêu cầu lặp xuống.
 
-### 2. Can I just put every rule into `AGENTS.md`?
+### 2. Mọi quy tắc nhét vào `AGENTS.md` là được?
 
-Not really.  
-Some things fit better in:
+Cũng sai.  
+Có thứ phù hợp hơn đặt ở:
 
-- Personal preferences
-- Configuration files
-- Organization-managed policy
-- The current task prompt
+- Sở thích cá nhân
+- Tệp cấu hình
+- Chiến lược quản trị tổ chức
+- Prompt tác vụ hiện tại
 
-### 3. More configuration is not always better
+### 3. Cấu hình không phải càng nhiều càng tốt
 
-When configuration is scattered, rules are too long, and layers are messy, both people and tools have a harder time knowing what to follow.
+Cấu hình quá phân tán, quy tắc quá dài, tầng quá loạn, ngược lại dễ để người và công cụ đều không rõ nên nghe ai.
 
-## Chapter Navigation
+## Điều hướng chương này
 
-| Topic | Pages |
+| Chủ đề | Trang |
 |---|---|
-| AGENTS.md | [Overview](/guide/customization/agents-md/what-is-agents-md/) · [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/) · [Writing Effective Instructions](/guide/customization/agents-md/writing-effective-instructions/) |
-| Project instructions | [Project Instructions](/guide/customization/project-instructions/) |
-| Memory | [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/) |
-| Mechanism selection | [Choosing the Right Mechanism](/guide/customization/choosing-the-right-mechanism/) |
-| Configuration | [Configuration Basics](/guide/customization/configuration/config-basics/) · [Profiles](/guide/customization/configuration/profiles/) |
-| Personal preferences | [Personal Preferences](/guide/customization/personal-preferences/) |
-| Rules | [Allow and Deny](/guide/customization/rules/allow-and-deny-patterns/) · [Command Rules](/guide/customization/rules/command-rules/) · [Team Policy](/guide/customization/rules/team-rules/) |
-| Examples | [AGENTS.md in a Monorepo](/guide/customization/examples/monorepo-agents-md/) |
+| AGENTS.md | [Tổng quan](/guide/customization/agents-md/what-is-agents-md/) · [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/) · [Viết chỉ thị dự án tốt](/guide/customization/agents-md/writing-effective-instructions/) |
+| Chỉ thị dự án | [Mô tả dự án](/guide/customization/project-instructions/) |
+| Bộ nhớ | [Bộ nhớ và ngữ cảnh bền](/guide/customization/memories-and-persistent-context/) |
+| Chọn cơ chế | [Chọn cơ chế phù hợp](/guide/customization/choosing-the-right-mechanism/) |
+| Tệp cấu hình | [Cơ bản cấu hình](/guide/customization/configuration/config-basics/) · [Profile](/guide/customization/configuration/profiles/) |
+| Sở thích cá nhân | [Sở thích cá nhân](/guide/customization/personal-preferences/) |
+| Quy tắc | [Cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/) · [Quy tắc lệnh](/guide/customization/rules/command-rules/) · [Chiến lược nhóm](/guide/customization/rules/team-rules/) |
+| Ví dụ | [AGENTS.md trong Monorepo](/guide/customization/examples/monorepo-agents-md/) |
 
-Rules coverage has started; more configuration detail pages will be added as the customization module grows.
+Chi tiết Rules đã bắt đầu; các trang cấu hình chi tiết hơn sẽ bổ sung theo module tùy chỉnh.
 
-## Suggested Order
+## Thứ tự đề xuất
 
-When you are organizing Codex collaboration rules for the first time, you can follow this order:
+Lần đầu hệ thống hóa quy tắc cộng tác Codex, có thể theo thứ tự:
 
-1. Organize project rules first
-2. Then add `AGENTS.md`
-3. Then separate personal preferences
-4. Finally handle configuration files and finer rule controls
+1. Gom quy tắc dự án trước
+2. Rồi bổ sung `AGENTS.md`
+3. Rồi tách sở thích cá nhân
+4. Cuối cùng mới xử lý tệp cấu hình và kiểm soát quy tắc chi tiết hơn
 
-This is less chaotic than changing a pile of config keys right away.
+Ổn hơn so với lao vào sửa đống khóa cấu hình ngay.
 
-Rules do not need to be numerous; putting them in the right place matters more.
+Quy tắc không cần nhiều; đặt đúng chỗ quan trọng hơn.
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Stuffing a long architecture document into `AGENTS.md`, drowning out key constraints
-- Repeating team norms in chat without committing them to the repo, so collaborators get inconsistent experiences
-- Relaxing the sandbox on your personal machine while assuming teammates in a shared repo have the same permissions
+- Nhét tài liệu kiến trúc dài vào `AGENTS.md`, ràng buộc then chốt bị nhấn chìm
+- Trong hội thoại lặp lại quy chuẩn nhóm mà không commit vào kho, trải nghiệm cộng tác viên không nhất quán
+- Máy cá nhân nới Sandbox, nhưng trong kho chia sẻ giả định đồng đội cũng có cùng quyền
 
-## Acceptance Checklist
+## Danh sách nghiệm thu
 
-- [ ] You can explain the priority of the four configuration layers
-- [ ] The repo has a short `AGENTS.md` (or equivalent project instructions)
-- [ ] Sensitive operations still go through approval instead of relying on text rules to “scare” the model
+- [ ] Nói được ưu tiên của bốn tầng cấu hình
+- [ ] Trong kho có một `AGENTS.md` ngắn (hoặc chỉ thị dự án tương đương)
+- [ ] Thao tác nhạy cảm vẫn đi phê duyệt, không trông chờ quy tắc chữ «doạ» mô hình
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex documentation: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Community practice structure references: freestylefly/CodexGuide AGENTS.md topics, stormzhang/ai-coding-guide `11-agents-md.md`
+- Tài liệu OpenAI Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
+- Tham khảo cấu trúc thực hành cộng đồng: chuyên đề AGENTS.md freestylefly/CodexGuide, stormzhang/ai-coding-guide `11-agents-md.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI’s current Help Center and Codex configuration materials still clearly describe layering among user-level `~/.codex` configuration, organization-managed capabilities, and project-level collaboration instructions; this page rewrites “precedence” as a more conservative common layering description to avoid writing specific implementation details as absolute rules.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Tài liệu trung tâm trợ giúp và cấu hình liên quan Codex hiện tại của OpenAI vẫn khẳng định tồn tại phân tầng cấu hình cấp người dùng `~/.codex`, năng lực quản trị cấp tổ chức và mô tả cộng tác cấp dự án; trang này đã viết lại “ưu tiên” thành mô tả phân tầng thường gặp thận trọng hơn, tránh viết chi tiết hiện thực cụ thể thành quy tắc tuyệt đối.  
+**Kiểm chứng gần nhất:** 2026-07-26

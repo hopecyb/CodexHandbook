@@ -1,105 +1,110 @@
 ---
-title: Text and Code Files
-description: Have Codex read and write source, config, and documentation text files correctly.
+title: Tệp văn bản và mã
+description: Để Codex đọc/ghi đúng nguồn, cấu hình và tệp văn bản dạng tài liệu.
 locale: vi
-source_locale: en
-source_revision: d8290a9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Most development work is **text and code files**: source, tests, config, Markdown. This page covers scoping changes, keeping style consistent, and merging safely.
+Phần lớn tác vụ phát triển rơi vào **tệp văn bản và mã**: nguồn, kiểm thử, cấu hình, Markdown. Trang này nói cách giới hạn phạm vi, giữ phong cách nhất quán và gộp an toàn.
 
-The key is changing the right places the right way—without extra collateral edits.
+Khi để Codex sửa tệp văn bản hoặc mã, then chốt là sửa đúng chỗ, đúng cách, và đừng tiện tay sửa thêm.
 
-## What this page covers
+## Nội dung trang này
 
-- Correct paths and encoding
-- Organizing multi-file edits
-- Coordinating with formatters and linters
+- Làm sao để thay đổi rơi đúng đường dẫn và mã hóa
+- Cách tổ chức chỉnh sửa nhiều tệp
+- Phối hợp với formatter, linter
 
-## File types and notes
+## Loại tệp và điểm chú ý
 
-| Type | Notes |
+| Loại | Chú ý |
 |---|---|
-| Source `.ts` `.py` etc. | Follow `AGENTS.md` and existing patterns |
-| Config `.json` `.yaml` `.toml` | Easy to break structure; require valid syntax |
-| Docs `.md` | Relative links, mixed-language conventions |
-| Generated code | Clarify commit vs gitignore |
+| Nguồn `.ts` `.py` v.v. | Tuân theo `AGENTS.md` và mẫu hiện có |
+| Cấu hình `.json` `.yaml` `.toml` | Dễ phá cấu trúc; yêu cầu cú pháp hợp lệ |
+| Tài liệu `.md` | Đường dẫn liên kết tương đối, quy ước lẫn ngôn ngữ |
+| Mã sinh | Ghi rõ có nên commit hay gitignore |
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Ngữ cảnh: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
 
-## Why these files go wrong
+## Vì sao loại tệp này dễ có vấn đề nhất
 
-Often:
+Chỗ thật sự dễ sai thường là:
 
-- Writes to wrong files
-- Rewrites large areas for a small fix
-- Style diverges from project norms
-- Config syntax broken quietly
+- Viết vào tệp không nên viết
+- Để sửa một chút nội dung mà tiện tay viết lại cả khối lớn
+- Phong cách không khớp cách viết hiện có của dự án
+- Cú pháp tệp cấu hình bị âm thầm phá
 
-## Recommended prompt structure
+## Cấu trúc Prompt khuyến nghị
 
 ```text
-Goal: <one line>
-Allowed edits: <path glob>
-Forbidden: lockfile, unrelated directories
-Style: match <example file>
-Done when: list changed files + run <test command>
+Mục tiêu: <một câu>
+Cho phép sửa: <đường dẫn glob>
+Cấm: sửa lockfile, sửa thư mục không liên quan
+Phong cách: khớp <tệp ví dụ>
+Hoàn thành: liệt kê tệp đã đổi + chạy <lệnh kiểm thử>
 ```
 
-See [Task anatomy](/prompts/task-anatomy/)
+Xem [Cấu trúc tác vụ tốt](/prompts/task-anatomy/)
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. “Fix this file” alone is usually thin
+### 1. Chỉ đưa một câu “giúp tôi sửa tệp này”
 
-Add:
+Thông tin loại tác vụ này thường chưa đủ.
 
-- Allowed files
-- Off-limits files
-- Style reference
-- How to verify
+Bạn nên bổ sung thêm:
 
-### 2. Config is not “just text”
+- Cho phép sửa tệp nào
+- Đừng đụng tệp nào
+- Phong cách tham chiếu ai
+- Xong thì kiểm chứng thế nào
 
-`.json`, `.yaml`, `.toml` often fail on structure, indentation, syntax.
+### 2. Tệp cấu hình không khác văn bản thường
 
-### 3. Bigger change ≠ faster
+Không thể xem vậy.
 
-Small, explainable, reviewable edits beat sweeping “while I’m here” refactors.
+Với `.json`, `.yaml`, `.toml`, vấn đề phổ biến hơn là cấu trúc, thụt lề, cú pháp bị phá.
 
-## Encoding and line endings
+### 3. Sửa càng toàn diện càng đỡ việc
 
-- Default **UTF-8**; declare special encodings in `AGENTS.md`
-- Match `.editorconfig` / `prettier` to avoid whole-file newline diffs
-- Large files: @ specific functions, not full rewrite
+Nhiều khi thay đổi “phạm vi nhỏ, giải thích được, dễ rà” ổn hơn “tối ưu tiện tay diện rộng”.
 
-## If you fear scope creep
+## Mã hóa và xuống dòng
 
-Require:
+- Mặc định **UTF-8**; dự án mã hóa đặc biệt nên khai trong `AGENTS.md`
+- Khớp `.editorconfig` / `prettier`, tránh cả tệp diff vì ký tự xuống dòng
+- Tệp lớn sửa theo đoạn: @ hàm cụ thể chứ không viết lại cả tệp
 
-1. List affected files first
-2. Minimal change for this task only
-3. Verification steps after edit
+## Khi lo nó sửa nhiều, có thể hạn chế vậy
 
-## Review focus
+Nếu lo nó sửa nhiều, yêu cầu thẳng ba việc:
 
-- [Review diffs](/guide/quality/review-diffs/): logic, scope, deletions
-- [Run tests](/guide/quality/run-tests/)
-- No unimplemented `TODO` placeholders left behind
+1. Nói trước sẽ ảnh hưởng tệp nào
+2. Chỉ sửa phạm vi tối thiểu tác vụ hiện tại cần
+3. Liệt kê hành động kiểm chứng sau khi sửa
 
-## Common mistakes
+## Điểm rà soát
 
-- “Refactor the whole project” → hundreds of files
-- Text edit on binary or minified files
-- Doc links as absolute paths → 404 on site
+- [Rà soát diff](/guide/quality/review-diffs/): logic, phạm vi, xóa
+- [Chạy kiểm thử](/guide/quality/run-tests/)
+- Vô tình đưa `TODO` chỗ giữ chỗ chưa hiện thực
 
-Text and code edits fail when scope sprawls and review is hard. State scope, style, and verification up front.
+## Lỗi thường gặp
+
+- «Tái cấu trúc cả dự án» dẫn tới hàng trăm tệp đổi
+- Ép sửa văn bản trên tệp nhị phân hoặc đã minify
+- Liên kết tài liệu viết đường dẫn tuyệt đối gây 404 nội bộ
+
+Tệp văn bản và mã sợ nhất là sửa vừa nhiều vừa phân tán, lại khó rà. Nói rõ phạm vi, phong cách và cách kiểm chứng thì sau này đỡ vòng lại nhiều.
+
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, task anatomy, review-diffs, and run-tests pages; stable principle: scope paths, match style, state verification.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương ngữ cảnh tệp và thư mục, cấu trúc tác vụ tốt, rà soát diff và chạy kiểm thử đã kiểm chứng trong sổ tay; trang này chỉ xác nhận nguyên tắc xử lý tệp văn bản/mã ổn định “giới hạn đường dẫn, giữ phong cách, nói rõ cách kiểm chứng trước”.  
+**Kiểm chứng gần nhất:** 2026-07-26

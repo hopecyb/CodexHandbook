@@ -1,63 +1,64 @@
 ---
-title: Understand template
-description: Build shared understanding before making changes.
+title: Mẫu hiểu
+description: Lập nhận thức chung trước khi thay đổi.
 locale: vi
-source_locale: en
-source_revision: d714793
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Understand template
+# Mẫu hiểu
 
-Many tasks stall because there's no shared baseline understanding yet.
+Nhiều tác vụ kẹt vì chưa lập được hiểu biết chung tối thiểu.
 
-The understand template fits "figure it out first, then decide next steps."
+Mẫu hiểu phù hợp tác vụ «hiểu trước, rồi mới quyết bước tiếp».
 
-## Template
+## Mẫu
 
 ```text
-Goal: Understand 【topic/module/codebase area】 to prepare for subsequent 【implementation/changes/review】.
-Context: 【project type, stack, related issue】
-Inputs: 【@file paths, doc links, screenshots】
-Constraints: Read-only analysis; do not modify any files; do not run destructive commands.
-Output:
-1. 5–8 bullets on core concepts or module responsibilities
-2. The 3 files/directories most relevant to 【goal】 and why
-3. Three open questions to confirm
-Acceptance: I can decide the next task scope from your output.
+Mục tiêu: Hiểu 【chủ đề/mô-đun/vùng codebase】, chuẩn bị cho 【triển khai/sửa/review】 sau này.
+Bối cảnh: 【loại dự án, tech stack, issue liên quan】
+Đầu vào: 【@đường dẫn tệp, liên kết tài liệu, ảnh chụp】
+Ràng buộc: Chỉ phân tích chỉ-đọc; không sửa bất kỳ tệp nào; không chạy lệnh phá hủy.
+Đầu ra:
+1. Dùng 5–8 mục giải thích khái niệm cốt lõi hoặc trách nhiệm mô-đun
+2. Đánh dấu 3 tệp/thư mục liên quan nhất tới 【mục tiêu】 và lý do
+3. Liệt kê 3 câu hỏi còn cần xác nhận
+Nghiệm thu: Tôi có thể dựa trên đầu ra để quyết phạm vi tác vụ tiếp theo.
 ```
 
-## When to use this template
+## Khi nào phù hợp mẫu này
 
-- New to a codebase
-- Exploring unfamiliar module
-- Mapping related scope before editing
+- Mới nhận codebase
+- Xem một mô-đun lạ
+- Trước khi sửa, muốn nắm phạm vi liên quan
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Understand tasks are just "summarize this"
+### 1. Tác vụ hiểu không chỉ là «để nó tóm tắt»
 
-Also ask for:
+Còn cần nó chỉ ra:
 
-- which files matter most
-- what's still unclear
-- where to start next
+- Những tệp nào liên quan nhất
+- Chỗ nào vẫn chưa rõ
+- Bước tiếp nên bắt đầu từ đâu
 
-### 2. More detail in the understand phase is always better
+### 2. Giai đoạn hiểu không phải càng chi tiết càng tốt
 
-Clear main line beats digging every detail immediately.
+Làm rõ mạch chính trước quan trọng hơn đào hết mọi chi tiết một lần.
 
-The understand template helps narrow the next task scope.
+Giá trị của mẫu hiểu là giúp bạn thu hẹp phạm vi tác vụ tiếp theo trước.
 
-## Related
+## Liên quan
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Understand a codebase case](/cases/understand-a-codebase/)
+- [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
+- [Case hiểu codebase](/cases/understand-a-codebase/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an understand-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu hiểu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

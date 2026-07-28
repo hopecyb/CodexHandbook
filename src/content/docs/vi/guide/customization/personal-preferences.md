@@ -1,116 +1,116 @@
 ---
-title: Personal Preferences
-description: User-level configuration, default models, and UI habits—without polluting team conventions in the repo.
+title: Sở thích cá nhân
+description: Cấu hình cấp người dùng, mô hình mặc định và thói giao diện — tránh làm bẩn ước định nhóm trong kho.
 locale: vi
-source_locale: en
-source_revision: d363b82
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Personal preferences** are settings on your machine that apply across projects: default model, theme, approval habits, personal Skill paths, and so on. Unlike `AGENTS.md` in the repo, personal preferences should **not** assume teammates are the same.
+**Sở thích cá nhân** là cài đặt hiệu lực xuyên dự án trên máy bạn: mô hình mặc định, chủ đề, thói phê duyệt, đường dẫn Skill cá nhân, v.v. Khác `AGENTS.md` trong kho, sở thích cá nhân **không nên** giả định đồng đội giống vậy.
 
-## Contents
+## Nội dung
 
-- What belongs in the personal layer versus the project layer
-- How to pair with [Profiles](/guide/customization/configuration/profiles/) to switch scenarios
-- How to avoid leaking relaxed personal settings into team repos
+- Cái gì nên đặt tầng cá nhân, cái gì nên đặt tầng dự án
+- Phối hợp với [Profile](/guide/customization/configuration/profiles/) để chuyển tình huống thế nào
+- Tránh cài đặt lỏng cá nhân rò vào kho nhóm
 
-Priority overview: [Customization](/guide/customization/) · [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/)
+Tổng quan ưu tiên: [Cấu hình cá nhân hóa](/guide/customization/) · [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/)
 
-## Why Separate This Layer
+## Vì sao cần tách tầng này
 
-Many people mix these at first:
+Nhiều người hay trộn những thứ này:
 
-- How I personally like to work
-- What this repo requires
-- What the company or team mandates
+- Tôi cá nhân thích dùng thế nào
+- Kho này yêu cầu làm thế nào
+- Công ty hoặc nhóm bắt buộc làm thế nào
 
-If you do not separate them, you later get:
+Nhưng ba loại không tách thì sau dễ:
 
-- Your local setup feels smooth, but teammates cannot reproduce it
-- You think rules are active when only your machine is compensating
-- You bring relaxed settings into a more serious project
+- Máy bạn rất thuận, đồng đội hoàn toàn tái hiện không được
+- Bạn tưởng quy tắc đã hiệu lực, thật ra chỉ máy bạn đang đỡ
+- Bạn mang cài đặt lỏng vào dự án nghiêm ngặt hơn
 
-## What Belongs in Personal Preferences
+## Nội dung phù hợp đặt ở sở thích cá nhân
 
-| Content | Example |
+| Nội dung | Ví dụ |
 |---|---|
-| Default model and reasoning tier | Personal machine performance and plan |
-| UI theme, font, notifications | Desktop App [Settings](/guide/desktop-app/settings/) |
-| Personal MCP (private tools) | Local read-only database (authorize carefully) |
-| Personal Skill library path | No conflict with team Plugin |
-| Terminal aliases, `codex` launch directory habits | See [CLI Configuration](/guide/cli/configuration/) |
+| Mô hình mặc định và mức suy luận | Hiệu năng máy cá nhân và gói |
+| Chủ đề UI, font, thông báo | [Cài đặt](/guide/desktop-app/settings/) App máy tính |
+| MCP cá nhân (công cụ riêng) | DB cục bộ chỉ đọc (thận trọng ủy quyền) |
+| Đường dẫn thư viện Skill cá nhân | Không xung đột Plugin nhóm |
+| Alias terminal, thói thư mục khởi động `codex` | Xem [Cấu hình CLI](/guide/cli/configuration/) |
 
-## Team Content That Should Not Live Only in the Personal Layer
+## Nội dung nhóm không nên chỉ đặt tầng cá nhân
 
-- Code style, test commands, directory structure → **project `AGENTS.md`**
-- Mandatory sandbox policy → **project configuration or organization management**
-- Compliance requirements for customer repos → **documentation + CI**, not personal memory alone
+- Phong cách mã, lệnh kiểm thử, cấu trúc thư mục → **`AGENTS.md` dự án**
+- Chiến lược Sandbox bắt buộc → **cấu hình dự án hoặc quản trị tổ chức**
+- Yêu cầu tuân thủ kho khách hàng → **tài liệu + CI**, không dựa bộ nhớ cá nhân
 
-## Recommended Practices
+## Thực hành khuyến nghị
 
-1. **Separate work/personal Profiles**: use a strict Profile for customer projects; practice projects can be relaxed
-2. **Read project rules when entering a new repo**, then decide whether to temporarily override personal defaults
-3. **Clean up regularly**: personal MCP and Skills; remove unused third-party sources
-4. When changing machines or reinstalling, export a configuration checklist (without secret values)
+1. **Tách Profile công việc / cá nhân**: dự án khách dùng Profile nghiêm, dự án luyện có thể lỏng
+2. **Vào kho mới đọc quy tắc dự án trước**, rồi quyết có tạm phủ mặc định cá nhân không
+3. **Dọn định kỳ** MCP và Skill cá nhân, gỡ nguồn bên thứ ba không còn dùng
+4. Đổi máy hoặc cài lại thì xuất danh sách cấu hình (không gồm giá trị khóa)
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### 1. What I usually like is not always a good global default
+### 1. Cách làm bạn quen hàng ngày chưa chắc phù hợp đặt mặc định toàn cục
 
-If your default habits are relaxed, they may be inappropriate in customer or team projects.
+Nếu thói mặc định khá lỏng, sang dự án khách hoặc dự án nhóm có thể không phù hợp.
 
-### 2. Personal preferences and project rules are basically the same?
+### 2. Sở thích cá nhân và quy tắc dự án gần giống nhau?
 
-They differ a lot.  
-Personal preferences are “I am used to working this way”; project rules are “everyone in this repo should try to work this way.”
+Khác nhiều.  
+Sở thích cá nhân là “tôi quen vậy”; quy tắc dự án là “kho này mọi người nên cố vậy”.
 
-### 3. “My machine is fine” is not enough to judge whether the setup is reasonable
+### 3. Chỉ nhìn máy mình ổn chưa đủ để phán cài đặt này hợp lý
 
-Better criteria:
+Chuẩn phù hợp hơn:
 
-- Does not pollute the repo
-- Does not depend on defaults only you know
-- Does not cause harm when switching to a strict project
+- Không làm bẩn kho
+- Không phụ thuộc giá trị mặc định chỉ mình bạn biết
+- Chuyển sang dự án nghiêm không gây hại nhầm
 
-## How to Decide Whether Something Belongs in the Personal Layer
+## Phán đoán có nên đặt tầng cá nhân
 
-When unsure whether a setting belongs in the personal layer, ask:
+Khi chưa chắc một cài đặt có nên đặt tầng cá nhân, tự hỏi:
 
-1. Is this a habit only I care about?
-2. Will it affect others reproducing results?
-3. Is it appropriate to carry into every project?
+1. Có phải thói quen chỉ mình tôi quan tâm?
+2. Nó có ảnh hưởng người khác tái hiện kết quả không?
+3. Nó có phù hợp mang vào mọi dự án không?
 
-If questions 2 or 3 lean dangerous, do not set it as a global default lightly.
+Nếu câu 2 hoặc 3 nghiêng nguy hiểm, đừng dễ đặt mặc định toàn cục.
 
-Personal preferences exist to make your own workflow feel natural; they are not a backstop for team rules, and you should not dump relaxed settings into every project.
+Sở thích cá nhân để bạn dùng vừa tay hơn, không thay lưới quy tắc nhóm, cũng đừng mang cài đặt lỏng một cục vào mọi dự án.
 
-## And the Memory Feature
+## Với tính năng bộ nhớ
 
-If the product offers “memory” or persistent preferences, see [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/). Memory suits stable habits; **project-specific constraints should still come from repo files**.
+Nếu sản phẩm có «bộ nhớ» hoặc sở thích bền, xem [Bộ nhớ và ngữ cảnh bền](/guide/customization/memories-and-persistent-context/). Bộ nhớ phù hợp thói ổn định; **ràng buộc đặc thù dự án vẫn lấy tệp kho làm chuẩn**.
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Hard-coding a company API key in personal configuration
-- Globally auto-approving shell on your machine while handling customer code
-- Teammates clone the repo and complain “rules do not work”—because rules were never committed
+- Viết cứng API key công ty trong cấu hình cá nhân
+- Tự phê duyệt shell toàn cục cá nhân khi xử lý mã khách hàng
+- Đồng đội clone kho rồi phàn nàn «quy tắc không hiệu lực» — quy tắc chưa bao giờ được commit
 
-## Acceptance Checklist
+## Danh sách nghiệm thu
 
-- [ ] You can give one example each for personal vs project vs organization layers
-- [ ] You have configured at least one strict Profile for a customer project
-- [ ] No personal secrets in the repo
+- [ ] Nói được mỗi một ví dụ của ba tầng cá nhân vs dự án vs tổ chức
+- [ ] Ít nhất cấu hình Profile nghiêm cho một dự án khách
+- [ ] Trong kho không có khóa cá nhân
 
-## References
+## Nguồn tham khảo
 
-- freestylefly/CodexGuide personal and team configuration
+- Cấu hình cá nhân và nhóm freestylefly/CodexGuide
 - stormzhang `18-config.md`
 - KimYx0207 CX-04
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked against this handbook’s currently verified project instructions, Profiles, settings division of labor, and security boundary chapters; this page only states the stable layering principle that personal habits should not pollute team repo rules and does not treat any one client’s current settings UI as a fixed contract.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với các chương chỉ thị dự án, Profiles, phân công cài đặt và ranh giới an toàn đã kiểm chứng trong sổ tay; trang này chỉ nói nguyên tắc phân tầng ổn định “thói quen cá nhân không nên làm bẩn quy tắc kho nhóm”, không viết giao diện cài đặt hiện tại của một client thành hợp đồng cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

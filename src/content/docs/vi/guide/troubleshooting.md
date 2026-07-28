@@ -1,70 +1,70 @@
 ---
-title: Troubleshooting
-description: Route symptoms to the right tutorial and product pages.
+title: Xử lý sự cố
+description: Định vị theo triệu chứng tới hướng dẫn và trang sản phẩm tương ứng.
+locale: vi
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 18
-locale: vi
-source_locale: en
-source_revision: 2dd393f
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-If something is already broken but you are unsure which category it falls into, start here.
+Nếu đã có vấn đề nhưng chưa biết thuộc loại nào — có thể vào từ trang này.
 
-You do not need to diagnose CLI vs IDE vs Cloud vs permissions vs prompting first. Classify by symptom, then open the right chapter.
+Bạn không cần ngay từ đầu phán đoán là vấn đề CLI, IDE, Cloud, quyền hay Prompt. Phân loại theo triệu chứng trước, rồi vào chương tương ứng.
 
-## What you can do here
+## Ở đây làm được gì
 
-- Where to triage when something fails
-- Minimal starting point when you cannot classify the error
-- Problems that are install, permissions, context, or task-description issues
+- Khi có vấn đề nên phân luồng đi đâu trước
+- Khi không phán đoán được loại lỗi, tối thiểu nên bắt đầu xử lý thế nào
+- Những vấn đề nào thuộc cài đặt, quyền, ngữ cảnh hoặc mô tả tác vụ
 
-# Troubleshooting
+# Xử lý sự cố
 
-| Symptom | Go to |
+| Triệu chứng | Đi tới |
 |---|---|
-| Install failure | [Desktop troubleshooting](/guide/desktop-app/troubleshooting/) · [CLI troubleshooting](/guide/cli/troubleshooting/) · [IDE troubleshooting](/guide/ide/troubleshooting/) |
-| Login/auth failure | [Sign-in](/guide/getting-started/sign-in-and-authentication/) |
-| Unsure which client | [Choose your client](/guide/choose-your-client/) · [Feature comparison](/guide/reference/feature-comparison/) |
-| Bad or out-of-scope results | [First task case](/cases/first-task/) · [Prompt debugging](/prompts/prompt-debugging/) · [Undo](/guide/getting-started/undo-and-recover/) |
-| Context confusion | [Keep context focused](/guide/context/keep-context-focused/) |
-| Permissions/sandbox questions | [Permissions and sandbox](/guide/permissions-and-sandbox/) |
+| Cài đặt thất bại | [Xử lý sự cố desktop](/guide/desktop-app/troubleshooting/) · [Xử lý sự cố CLI](/guide/cli/troubleshooting/) · [Xử lý sự cố IDE](/guide/ide/troubleshooting/) |
+| Đăng nhập/xác thực thất bại | [Đăng nhập](/guide/getting-started/sign-in-and-authentication/) |
+| Không biết chọn client nào | [Chọn client](/guide/choose-your-client/) · [So sánh tính năng](/guide/reference/feature-comparison/) |
+| Kết quả vượt phạm vi / rất tệ | [Case tác vụ đầu tiên](/cases/first-task/) · [Gỡ lỗi Prompt](/prompts/prompt-debugging/) · [Hoàn tác](/guide/getting-started/undo-and-recover/) |
+| Ngữ cảnh rối | [Giữ tập trung](/guide/context/keep-context-focused/) |
+| Thắc mắc về quyền/Sandbox | [Quyền và Sandbox](/guide/permissions-and-sandbox/) |
 
-## When you do not know where to look
+## Cách phân khi không biết bắt đầu từ đâu
 
-On first troubleshooting pass, pick one:
+Khi xử lý sự cố lần đầu, có thể phán đoán trước mình thuộc loại nào:
 
-- Cannot start at all
-- Starts but errors mid-run
-- No error, but wrong results
-- Not an error—unclear entry or how to task
+- Cơ bản không bắt đầu được
+- Bắt đầu được nhưng giữa đường báo lỗi
+- Không báo lỗi nhưng kết quả sai
+- Không phải báo lỗi — mà không biết chọn lối vào hoặc không biết giao tác vụ
 
-Sorting into these four speeds up the rest.
+Phân vào bốn loại này trước — định vị phía sau thường nhanh hơn nhiều.
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Troubleshooting requires expert terminology first
+### 1. Xử lý sự cố chắc chắn phải biết thuật ngữ rất chuyên trước
 
-No.
+Không cần.
 
-First pass is about broad category—not memorizing jargon.
+Lần đầu xử lý sự cố quan trọng hơn là phân vấn đề vào nhóm lớn trước — không phải thuộc thuật ngữ trước.
 
-### 2. No error message means not a troubleshooting problem
+### 2. Chỉ cần không báo lỗi là không thuộc vấn đề xử lý sự cố
 
-"Wrong results," "keeps drifting," and "do not know how to start" all belong here too.
+«Kết quả sai», «luôn lệch hướng», «không biết bắt đầu thế nào» — cũng đều thuộc vấn đề cần phân luồng.
 
-### 3. When stuck, click random pages
+### 3. Khi lỗi nên ngay lập tức bấm lung tung thêm nhiều trang để thử
 
-Usually better to pause, classify the problem, then open one targeted page.
+Thường không bằng dừng lại một chút, phán đoán trước mình thuộc loại vấn đề nào, rồi mới tới trang tương ứng.
 
-Triage before repair.
+Xử lý sự cố phân loại trước — không nhất thiết phải bắt đầu sửa ngay.
 
-More reference: [FAQ](/guide/reference/faq/) · [Error reference](/guide/reference/error-reference/) · [Official Codex docs](https://developers.openai.com/codex)
+Thêm tham chiếu: [FAQ](/guide/reference/faq/) · [Tham chiếu lỗi](/guide/reference/error-reference/) · [Tài liệu Codex chính thức](https://developers.openai.com/codex)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Symptom routing only to install, login, permissions, context, and result-quality chapters; linked paths checked; page does not depend on specific error codes, versions, or UI copy.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ đảm nhận vai trò phân luồng theo triệu chứng tới các chương cài đặt, đăng nhập, quyền, ngữ cảnh và chất lượng kết quả; đường dẫn các chương được liên kết đã kiểm từng mục, và trang không phụ thuộc mã lỗi cụ thể, số phiên bản hay văn bản giao diện.  
+**Kiểm chứng gần nhất:** 2026-07-26

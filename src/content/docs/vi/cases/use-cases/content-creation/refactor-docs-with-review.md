@@ -1,84 +1,84 @@
 ---
-title: Refactor docs with review
-description: Case study—batch link and section updates in an Astro/Starlight docs project; small diffs and build verification.
+title: Refactor site tài liệu kèm review
+description: "Case: cập nhật hàng loạt liên kết và chương trong dự án tài liệu Astro/Starlight — diff nhỏ từng bước, kiểm chứng bằng build."
 locale: vi
-source_locale: en
-source_revision: 9c6c087
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This case demonstrates a **content engineering** task: multi-file Markdown, sidebar config, build verification. The stack matches this handbook, but the pattern applies to any static site.
+Case này minh họa tác vụ **kỹ thuật nội dung**: Markdown nhiều tệp, cấu hình sidebar, kiểm chứng build. Tech stack giống sổ tay này, nhưng kịch bản chuyển được sang mọi static site.
 
-## Metadata
+## Siêu dữ liệu
 
-| Item | Value |
+| Mục | Giá trị |
 |---|---|
-| Domain | Content creation / docs engineering |
-| Entry | CLI or IDE |
-| Risk | Medium (many links and navigation) |
-| Duration | 1–3 hours (depends on scale) |
+| Lĩnh vực | Sáng tạo nội dung / kỹ thuật tài liệu |
+| Lối vào | CLI hoặc IDE |
+| Rủi ro | Trung bình (nhiều liên kết và điều hướng) |
+| Thời lượng | 1–3 giờ (tùy quy mô) |
 
-Template reference: [Case study template](/cases/use-cases/case-study-template/)
+Giải thích mẫu: [mẫu case](/cases/use-cases/case-study-template/)
 
-## Background
+## Ngữ cảnh
 
-After adding a new handbook chapter, you need to:
+Sau khi site tài liệu thêm một chương, cần:
 
-1. Update `astro.config` sidebar slugs
-2. Fix in-page relative links
-3. `npm run build` with zero errors
+1. Cập nhật slug sidebar trong `astro.config`
+2. Sửa liên kết tương đối trong bài
+3. `npm run build` không lỗi
 
-Humans often miss slugs; this fits Agent **checklist execution + build verification**.
+Người dễ sót slug; phù hợp để Agent **làm theo checklist + nghiệm thu bằng build**.
 
-## Preparation
+## Chuẩn bị
 
-- [ ] Clean git branch
-- [ ] Local `npm run build` works
-- [ ] List new page paths and target sidebar positions
+- [ ] Nhánh git sạch
+- [ ] Cục bộ chạy được `npm run build`
+- [ ] Liệt kê đường dẫn trang mới và vị trí sidebar mục tiêu
 
-## Task prompt (example)
+## Prompt tác vụ (ví dụ)
 
 ```text
-Goal: add environment-variables.md under 12-reference and wire it into sidebar and index links.
-Constraints: only change src/content/docs and astro.config.mjs; do not upgrade dependencies.
-Acceptance: npm run build succeeds; no dead links.
-Steps: config first, then md, then update 12-reference/index.md.
+Mục tiêu: Thêm environment-variables.md cho 12-reference và nối vào sidebar cùng liên kết index.
+Ràng buộc: Chỉ sửa src/content/docs và astro.config.mjs; không nâng dependency.
+Nghiệm thu: npm run build thành công; không liên kết chết.
+Bước: Sửa config trước, rồi viết md, cuối cùng cập nhật 12-reference/index.md.
 ```
 
-## Execution notes
+## Điểm thực thi
 
-- **Config before content**: avoids missing-slug build errors
-- Commit in batches of 3–5 files for easier review
-- Use [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/)
+- **Config trước, nội dung sau:** tránh build báo missing slug
+- Mỗi lô 3–5 tệp thì commit, dễ review
+- Dùng [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
 
-## Checks
+## Kiểm tra
 
-- [ ] Every sidebar slug has a matching file
-- [ ] Internal links follow relative path conventions
-- [ ] Build log has no Starlight warnings (if team requires zero warnings)
+- [ ] Mỗi mục sidebar có tệp tương ứng với slug
+- [ ] Liên kết trong site theo quy ước đường dẫn tương đối
+- [ ] Log build không có cảnh báo Starlight (nếu nhóm yêu cầu zero warning)
 
-## Failure recovery
+## Phục hồi thất bại
 
-| Issue | Action |
+| Vấn đề | Xử lý |
 |---|---|
-| Sidebar slug error | Fix slug or add md per astro docs |
-| Dead link | `grep` target path; fix link or add page |
-| Build OOM | Change in batches; increase Node memory locally |
+| Lỗi Sidebar slug | Đối chiếu tài liệu Astro để sửa slug hoặc bổ sung md |
+| Liên kết chết | `grep` đường dẫn mục tiêu; sửa liên kết hoặc bổ sung trang |
+| Build OOM | Sửa theo lô; tăng bộ nhớ Node cục bộ |
 
-## Retro
+## Rút kinh nghiệm
 
-- Third similar "new chapter + sidebar" task should become a Skill
-- Check off ROADMAP items so docs and plan stay aligned
+- Lần thứ ba cùng kiểu «chương mới + sidebar» nên đóng gói thành Skill
+- Đánh dấu mục hoàn thành trên ROADMAP, tránh tài liệu lệch kế hoạch
 
-## References
+## Nguồn tham chiếu
 
-- This repo's actual M2 docs iteration flow
-- codex.bozhouai.com docs maintenance case (structural reference)
+- Quy trình iteration tài liệu M2 thực tế của kho này
+- Case bảo trì tài liệu trên codex.bozhouai.com (tham khảo cấu trúc)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified content artifacts, EPXV, build verification, and case template chapters; content is limited to the stable content-engineering case of small multi-file doc-site edits, build verification, and failure recovery.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / IDE  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương Artifact nội dung, EPXV, nghiệm thu build và mẫu case đã kiểm chứng của sổ tay; nội dung trang giới hạn ở case kỹ thuật nội dung ổn định “sửa site tài liệu nhiều tệp từng bước nhỏ, kiểm chứng build và phục hồi thất bại”.  
+**Kiểm chứng gần nhất:** 2026-07-26

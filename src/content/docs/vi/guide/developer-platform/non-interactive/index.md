@@ -1,35 +1,35 @@
 ---
-title: Non-Interactive Mode
-description: Batch jobs, scripts, and pipelines—understand what tasks fit first, then commands and output design.
+title: Chế độ không tương tác
+description: "Trang giải thích cho batch, script và pipeline: hiểu nó phù hợp Tác vụ nào trước, rồi mới xem lệnh và thiết kế đầu ra."
 locale: vi
-source_locale: en
-source_revision: d52e702
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people first hear “non-interactive mode” and think of it as “Codex without chat.”
+Nhiều người lần đầu thấy «chế độ không tương tác» hiểu thành «bản Codex thường không có giao diện chat».
 
-Non-interactive mode is for putting Codex in scripts, CI, or batch jobs so one command completes one stable task.
+Chế độ không tương tác phù hợp hơn khi đặt Codex vào script, CI hoặc batch, để nó hoàn thành một việc ổn định theo một lệnh.
 
-## Recommended order
+## Thứ tự khuyến nghị
 
 1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [Structured output](/guide/developer-platform/non-interactive/structured-output/)
-4. [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+2. [Script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [Đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/)
+4. [Mã thoát và thử lại](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## What this section solves
+## Nhóm này giải quyết tốt nhất vấn đề gì
 
-- Turning one task into a CLI step
-- Letting CI judge success, failure, and retry
-- Making output easy for downstream scripts
+- Làm thế nào biến một Tác vụ thành bước dòng lệnh
+- Làm thế nào để CI phán thành công, thất bại, cần thử lại
+- Làm thế nào để đầu ra dễ được script phía sau tiếp tục xử lý
 
-It fits when scripts and pipelines need stable handoff—not back-and-forth chat.
+Nó phù hợp để script và pipeline nhận kết quả ổn định, không phù hợp để trò chuyện đi lại chậm rãi.
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** Cross-checked against the current non-interactive subsection structure and entry links in this repo; this page only groups “non-interactive mode fits scripts, batch, and pipelines” without promising specific command flags.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / API / Cloud  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với cấu trúc tiểu chương non-interactive và liên kết lối vào hiện tại trong kho này; trang chỉ đóng vai trò giải thích nhóm rằng chế độ không tương tác phù hợp script, batch và pipeline, không cam kết riêng tham số lệnh cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

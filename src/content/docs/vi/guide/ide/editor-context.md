@@ -1,94 +1,95 @@
 ---
-title: Editor context
-description: How the IDE extension passes open files, workspace, and project rules to Codex.
+title: Ngữ cảnh trình soạn thảo
+description: Tiện ích IDE đưa tệp mở, không gian làm việc và quy tắc dự án cho Codex thế nào.
 locale: vi
-source_locale: en
-source_revision: 9ef52a0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In the IDE, Codex gets more than your prompt—it automatically receives **editor state**. That is the IDE's core advantage over CLI. Understanding where context comes from avoids "the file is open but it ignored it" frustration.
+Trong IDE, Codex không chỉ đọc Prompt của bạn mà còn tự nhận **trạng thái trình soạn thảo**. Đây là lợi thế cốt lõi của IDE so với CLI. Hiểu ngữ cảnh đến từ đâu giúp tránh cảm giác thất vọng «đã mở tệp mà nó không thấy».
 
-IDE Codex does not only read what you type—it also references what you are looking at in the editor.
+Codex trong IDE không chỉ nhìn bạn nói gì, mà còn tham chiếu nội dung bạn đang xem trong trình soạn thảo.
 
-## What's covered
+## Nội dung trang
 
-- What context the IDE attaches automatically
-- How that stacks with @ files, selection, and AGENTS.md
-- Reducing noise and improving hit rate
+- IDE tự kèm những ngữ cảnh nào
+- Chồng lên tệp @, vùng chọn, AGENTS.md thế nào
+- Cách giảm nhiễu, tăng tỷ lệ trúng
 
-## Context sources (conceptual layers)
+## Nguồn ngữ cảnh (phân tầng khái niệm)
 
-| Source | Who controls | Typical content |
+| Nguồn | Ai kiểm soát | Nội dung điển hình |
 |---|---|---|
-| Workspace root | Folder you opened | Project layout, `AGENTS.md`, config files |
-| Open files | Editor tabs | Source you are editing |
-| Selection | Highlighted code | Function, error snippet |
-| Explicit @ | Paths you @ in chat | Cross-directory files, docs |
-| Project rules | `AGENTS.md` etc. in repo | Coding standards, test commands |
+| Thư mục gốc không gian làm việc | Thư mục bạn mở | Cấu trúc dự án, `AGENTS.md`, tệp cấu hình |
+| Tệp đang mở | Tab trình soạn thảo | Mã nguồn đang sửa |
+| Vùng chọn | Mã bạn tô sáng | Hàm, đoạn lỗi |
+| @ tường minh | Đường dẫn bạn @ trong hội thoại | Tệp xuyên thư mục, tài liệu |
+| Quy tắc dự án | `AGENTS.md` trong kho, v.v. | Quy ước mã, lệnh kiểm thử |
 
-Priority and conflicts: [context priority](/guide/context/context-priority/).
+Xử lý ưu tiên và xung đột: [Ưu tiên ngữ cảnh](/guide/context/context-priority/).
 
-## Recommended workflow
+## Quy trình khuyến nghị
 
-1. **Open the repo root as workspace**, not a subfolder only (monorepo exceptions per team docs)
-2. For local edits, **select relevant code** then describe the task → [selection and open files](/guide/ide/selected-code-and-open-files/)
-3. For cross-module work, @ key files—do not assume "it will search on its own"
-4. In long sessions, [compact context](/guide/context/compaction/) or start a new thread periodically
+1. **Mở kho bằng thư mục gốc không gian làm việc**, đừng chỉ mở thư mục con (monorepo ngoại lệ theo tài liệu nhóm)
+2. Khi sửa logic cục bộ, **chọn mã liên quan trước** rồi mô tả tác vụ → [Vùng chọn và tệp mở](/guide/ide/selected-code-and-open-files/)
+3. Tác vụ xuyên mô-đun dùng `@` nêu tên tệp then chốt, đừng giả định «nó tự tìm được»
+4. Phiên dài định kỳ [nén ngữ cảnh](/guide/context/compaction/) hoặc mở thread mới
 
-## Difference from CLI
+## Khác biệt với CLI
 
-| | IDE extension | CLI |
+| | Tiện ích IDE | CLI |
 |---|---|---|
-| File awareness | Strong (open files in context) | Needs `--cwd` and tool reads |
-| Selection | Native | Paste or specify paths |
-| Best for | Line-level edits, explaining code | Scripts, CI, headless environments |
+| Nhận biết tệp | Mạnh (mở là ngữ cảnh) | Cần `--cwd` và công cụ đọc đĩa |
+| Vùng chọn | Hỗ trợ gốc | Cần dán hoặc chỉ đường dẫn |
+| Phù hợp | Sửa cấp dòng, giải thích mã | Script, CI, môi trường không GUI |
 
-## Common questions
+## Câu hỏi thường gặp
 
-### 1. The file is open—why didn't it change what I expected?
+### 1. Đã mở tệp — vì sao vẫn không sửa như ý?
 
-"Open" does not mean "focus is obvious."
+Vì «đã mở tệp» không nhất thiết bằng «trọng tâm đủ rõ».
 
-If the task scope is still vague, it may read other material or miss the snippet you care about.
+Nếu phạm vi tác vụ vẫn mơ hồ, nó vẫn có thể xem nội dung liên quan khác, hoặc không nắm đoạn bạn quan tâm nhất.
 
-### 2. More open files = better?
+### 2. Mở càng nhiều tệp càng tốt?
 
-Too many unrelated open files add noise and dilute focus.
+Mở quá nhiều tệp không liên quan khiến ngữ cảnh ồn, trọng tâm bị pha loãng.
 
-### 3. Automatic context means I can skip a clear task description?
+### 3. IDE tự có ngữ cảnh — vậy tôi không cần viết rõ nữa?
 
-Context helps; it does not replace stating goal, constraints, and done criteria.
+Ngữ cảnh tự động hữu ích, nhưng không thay thế mô tả tác vụ.  
+Mục tiêu, hạn chế và tiêu chí hoàn thành vẫn cần bạn nói rõ.
 
-IDE context assists—it does not guess for you. Tighter file scope usually means steadier results.
+Ngữ cảnh IDE giúp bạn, nhưng không đoán thay bạn; phạm vi tệp càng chuẩn, kết quả thường càng ổn.
 
-## Sensitive information
+## Thông tin nhạy cảm
 
-Do not leave `.env` with secrets pinned open; see [sensitive context](/guide/context/sensitive-context/).
+Đừng để `.env` chứa khóa mở lâu ở tiền cảnh trình soạn thảo; xem [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/).
 
-Redact logs and customer data before pasting; the IDE does not judge compliance for you.
+Nhật ký, dữ liệu khách hàng hãy khử nhận dạng trước khi dán; IDE không tự phán đoán tuân thủ giúp bạn.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Expecting `AGENTS.md` in single-file mode without a workspace
-- Opening many large unrelated files, filling the context window
-- Saying "this function" without selecting or @-mentioning the file
+- Ở chế độ một tệp (không không gian làm việc) mà kỳ vọng đọc `AGENTS.md`
+- Mở hàng chục tệp lớn không liên quan, chiếm cửa sổ ngữ cảnh
+- Chỉ nói miệng «hàm này» mà chưa chọn, chưa @ tệp
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] Workspace root is correct
-- [ ] 1–3 task-relevant files opened or @-mentioned
-- [ ] Test commands in `AGENTS.md` match IDE terminal usage
+- [ ] Thư mục gốc không gian làm việc đúng
+- [ ] 1–3 tệp liên quan tác vụ đã mở hoặc @
+- [ ] Lệnh kiểm thử trong `AGENTS.md` khớp terminal IDE
 
-## References
+## Nguồn tham khảo
 
-- [File and folder context](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
+- [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+- `09-ide.md` của stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** IDE  
-**Verification basis:** OpenAI Help Center still positions the IDE extension as a primary entry paired with local tools; this page does not assume specific editor buttons—it summarizes workspace, open files, selection, @ files, and project rules as stable IDE context methodology.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** IDE  
+**Căn cứ kiểm chứng:** OpenAI Help Center hiện vẫn xếp IDE extension là một trong các lối vào chính phối hợp công cụ local; trang này không giả định nút trình soạn thảo cụ thể, mà tóm tắt phương pháp ổn định: không gian làm việc, tệp mở, vùng chọn, tệp `@` và quy tắc dự án cùng tạo thành ngữ cảnh IDE.  
+**Kiểm chứng gần nhất:** 2026-07-26

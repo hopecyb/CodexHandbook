@@ -1,98 +1,98 @@
 ---
-title: Permissions and sandbox
-description: Understanding approvals, execution isolation, and network boundaries for safe Codex use.
+title: Quyền và Sandbox
+description: Hiểu phê duyệt, cô lập thực thi và ranh giới truy cập mạng để dùng Codex an toàn.
+locale: vi
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 14
-locale: vi
-source_locale: en
-source_revision: '8321753'
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Permissions and sandbox
+# Quyền và Sandbox
 
-Codex should not perform high-risk actions without consent. **Approvals** are the key gate in human–agent collaboration; **sandbox** limits what filesystem and system capabilities the Agent can reach.
+Codex không nên thực thi thao tác rủi ro cao khi chưa được đồng ý. **Phê duyệt** là cánh cổng then chốt trong cộng tác người–máy; **Sandbox** giới hạn hệ tệp và một phần năng lực hệ thống mà Agent chạm tới được.
 
-## What's covered
+## Nội dung trang này
 
-Many people treat permissions, approvals, sandbox, and network access as the same "security settings."
+Nhiều người lần đầu thấy các từ «quyền», «phê duyệt», «Sandbox», «truy cập mạng» cứ tưởng chúng gần giống nhau — dù sao cũng thuộc cài đặt an toàn.
 
-The risky confusion: you think you only allowed it to continue—but you may have opened file writes, shell, or outbound network at once.
+Chỗ dễ sinh vấn đề nhất chính là sự nhầm lẫn này: bạn tưởng mình chỉ cho phép nó tiếp tục thực thi — thực tế có thể đồng thời mở ranh giới ghi tệp, chạy lệnh hoặc truy cập mạng ngoài.
 
-This page separates the concepts so you know what each confirmation actually releases.
+Trang này tách các khái niệm này ra, giúp bạn phán đoán mỗi lần xác nhận thực sự đã mở cái gì.
 
-## Separate the concepts
+## Phân biệt các khái niệm này trước
 
-Think of them as:
+Có thể tách như sau:
 
-- **Approval**: whether it must ask you first
-- **Sandbox**: even if allowed, what it can touch at most
-- **Network access**: whether information can leave or be pulled from outside
+- **Phê duyệt**: có cần hỏi bạn một câu trước không
+- **Sandbox**: dù muốn làm thì tối đa chạm tới đâu
+- **Truy cập mạng**: có mang thông tin ra ngoài, hoặc kéo thứ gì từ ngoài về được không
 
-They interact—but they are not the same thing.
+Chúng cùng ảnh hưởng kết quả — nhưng không phải một chuyện.
 
-## What you usually need to care about
+## Bạn thường cần quan tâm
 
-- Read/write outside the current project path
-- Whether network is allowed
-- Whether specific shell commands are allowed
-- Whether the team enforces mandatory policy (managed config)
+- Có cho phép đọc/ghi đường dẫn ngoài dự án hiện tại không
+- Có cho phép lên mạng không
+- Có cho phép thực thi lệnh shell cụ thể không
+- Nhóm có phát hành chính sách bắt buộc không (cấu hình quản trị)
 
-## Sandbox and network
+## Sandbox và mạng
 
-**Sandbox** reduces accidental blast radius. **Network access** is another risk layer: exfiltrating sensitive prompt content or pulling untrusted data.
+**Sandbox** giảm mặt phẳng thao tác nhầm. **Truy cập mạng** là một tầng rủi ro riêng: có thể làm lộ thông tin nhạy cảm trong nội dung Prompt, hoặc kéo về dữ liệu không đáng tin.
 
-When starting out:
+Khi mới dùng, thường có thể xử lý theo hướng này:
 
-1. For first practice, disable unnecessary network or allow only what you clearly need
-2. Do not put production secrets in practice projects
-3. When you see "needs network / write sensitive path," pause, read, then approve
+1. Lần luyện đầu tắt mạng không cần thiết, hoặc chỉ cho phép truy cập thật sự cần
+2. Đừng đưa khóa production vào dự án luyện tập
+3. Thấy yêu cầu «cần ra mạng / cần ghi đường dẫn nhạy cảm» thì dừng lại đọc hiểu rồi mới phê duyệt
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### A prompt does not always mean danger
+### Cửa sổ bật lên không có nghĩa chắc chắn nguy hiểm
 
-Many normal operations trigger approval:
+Nhiều thao tác bình thường cũng kích hoạt phê duyệt, ví dụ:
 
-- Installing dependencies
-- Writing outside project directory
-- Opening browser or system apps
-- Accessing external sites or APIs
+- Cài dependency
+- Ghi vào thư mục ngoài dự án
+- Mở trình duyệt hoặc ứng dụng hệ thống
+- Truy cập website hoặc API bên ngoài
 
-Judge whether the step is **required for the current task**—not only whether a dialog appeared.
+Thứ thật sự cần phán đoán là: **bước này có phải việc tác vụ hiện tại vốn cần không.** Không thể chỉ nhìn cửa sổ có hiện hay không.
 
-### No prompt does not mean zero risk
+### Không có cửa sổ cũng không bằng hoàn toàn không rủi ro
 
-If sandbox already allows an action—or you previously relaxed rules—Codex may not ask again.
+Nếu Sandbox hiện tại vốn đã cho phép một loại thao tác, hoặc trước đó bạn đã nới quy tắc — Codex có thể không hỏi lại.
 
-Do not rely only on "was there a dialog"; check how the environment is configured.
+Vì vậy không thể chỉ dựa vào «có hộp gợi ý hay không» để phán đoán rủi ro — còn phải xem chính môi trường hiện tại được cấu hình thế nào.
 
-## When you see a permission request
+## Khi thấy yêu cầu quyền, có thể phán đoán theo các bước sau
 
-Ask three questions:
+Mỗi lần thấy yêu cầu liên quan quyền, có thể tự hỏi trước ba việc:
 
-1. Is this step necessary to finish the current task?
-2. Does the data or path exceed what I expected?
-3. If it goes wrong, do I know how to undo or recover?
+1. Bước này có bắt buộc để hoàn thành tác vụ hiện tại không
+2. Dữ liệu hoặc đường dẫn nó muốn chạm có vượt kỳ vọng vốn có của tôi không
+3. Dù thực thi sai, tôi có biết cách hoàn tác hoặc khắc phục không
 
-If you cannot answer two of three, do not approve—ask Codex why the step is needed.
+Nếu trong ba điều này có hai điều trả lời không được — đừng phê duyệt trước, để Codex giải thích vì sao cần bước này trước.
 
-## Layered guide
+## Giải thích theo tầng
 
-| Layer | What it covers | Where to read |
+| Tầng | Viết gì | Đọc ở đâu |
 |---|---|---|
-| Concepts (this page) | Why approvals and isolation matter | — |
-| Product differences | How each client prompts | [CLI approvals and sandbox](/guide/cli/approvals-and-sandbox/) · [Desktop App settings](/guide/desktop-app/settings/) |
-| Prompt strategy | Declaring boundaries in tasks | [Constraints and boundaries](/prompts/constraints-and-boundaries/) |
+| Khái niệm (trang này) | Vì sao cần phê duyệt và cô lập | — |
+| Khác biệt sản phẩm | Mỗi lối vào hiện xác nhận thế nào | [Phê duyệt và Sandbox CLI](/guide/cli/approvals-and-sandbox/) · [Cài đặt Desktop App](/guide/desktop-app/settings/) |
+| Chiến lược Prompt | Cách khai báo ranh giới quyền trong tác vụ | [Ràng buộc và biên](/prompts/constraints-and-boundaries/) |
 
-Official policy and defaults may change—verify at [OpenAI Codex](https://developers.openai.com/codex).
+Chính sách chính thức và giá trị mặc định có thể thay đổi — hãy đối chiếu [OpenAI Codex](https://developers.openai.com/codex).
 
-Approval asks whether to continue; sandbox limits how far continuing can go. Read both together for clearer boundaries.
+Phê duyệt đang hỏi bạn «có tiếp tục không»; Sandbox đang giới hạn «dù tiếp tục thì tối đa làm được đến đâu». Nhìn hai tầng này cùng lúc thì ranh giới mới rõ hơn.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers still provides official Codex entry; this page explains approvals, sandbox, and network as distinct boundaries and points to product chapters without claiming current defaults or exact permission matrices.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** OpenAI Developers hiện vẫn cung cấp lối vào Codex chính thức; trang này chỉ giải thích phê duyệt, Sandbox, truy cập mạng thuộc các ranh giới an toàn khác nhau, và dẫn độc giả tới các chương sản phẩm để xem hành vi cụ thể — không tuyên bố giá trị mặc định hiện tại hay ma trận quyền chính xác.  
+**Kiểm chứng gần nhất:** 2026-07-26

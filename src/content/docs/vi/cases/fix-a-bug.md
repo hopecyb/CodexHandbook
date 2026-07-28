@@ -1,92 +1,92 @@
 ---
-title: Fix a bug
-description: From failing test to minimal fix and regression—the most common developer loop.
+title: Sửa Bug
+description: Từ test thất bại đến sửa tối thiểu và hồi quy — vòng lặp phổ biến nhất của nhà phát triển.
 locale: vi
-source_locale: en
-source_revision: d9001be
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Developers |
-| Client | CLI or IDE (local repo) |
-| Estimated time | 30–60 minutes |
-| Verified date | 2026-07-25 |
+| Đối tượng | Nhà phát triển |
+| Client | CLI hoặc IDE (kho cục bộ) |
+| Thời gian ước tính | 30–60 phút |
+| Ngày kiểm chứng | 2026-07-25 |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Fix a regression bug already caught by unit tests, and add tests to prevent recurrence.
+**Mục tiêu:** Sửa một bug hồi quy đã bị unit test bắt, và bổ sung test để không tái diễn.
 
-**Success criteria:**
+**Tiêu chí thành công:**
 
-- Original failing test passes
-- Full test suite still green
-- Diff only touches necessary files
+- Test thất bại ban đầu pass
+- Toàn bộ test vẫn xanh
+- Diff chỉ liên quan tệp cần thiết
 
-**Out of scope:** Large refactors, major dependency upgrades.
+**Ngoài phạm vi:** Refactor lớn, nâng dependency major.
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Clone repo, `pnpm install` (or per `AGENTS.md`)
-- Confirm local reproduction: `pnpm test -- path/to/failing.test.ts`
-- Branch: `fix/issue-123-short-desc`
+- Clone kho, `pnpm install` (hoặc theo `AGENTS.md`)
+- Xác nhận tái hiện thất bại cục bộ: `pnpm test -- path/to/failing.test.ts`
+- Nhánh: `fix/issue-123-short-desc`
 
-## 3. Workflow
+## 3. Quy trình
 
-### Explore
-
-```text
-Do not change code yet. Read failing test @tests/auth/login.test.ts and implementation @src/auth/login.ts;
-explain the failure in 5 bullets or fewer, citing assertions and stack line numbers.
-```
-
-### Plan
+### Khám phá
 
 ```text
-Give a fix plan: which files to change, whether new tests are needed, how to verify.
-Wait for my reply "execute" before changing code.
+Chưa sửa code. Đọc test thất bại @tests/auth/login.test.ts và triển khai @src/auth/login.ts,
+nêu nguyên nhân thất bại trong tối đa 5 điểm, trích assertion và số dòng stack.
 ```
 
-### Execute
+### Lập kế hoạch
 
 ```text
-Execute plan steps 1–2. After each step, run only related tests.
+Đưa kế hoạch sửa: sửa tệp nào, có cần test mới không, cách kiểm chứng.
+Đợi tôi trả lời «thực thi» rồi mới sửa code.
 ```
 
-### Verify
+### Thực thi
 
 ```text
-Run the full test suite; summarize diff for my review; do not git push.
+Thực thi bước 1–2 của kế hoạch. Sau mỗi bước chỉ chạy test liên quan.
 ```
 
-Human: Read the diff, confirm no unrelated changes, check per [Review diffs](/guide/quality/review-diffs/).
+### Kiểm chứng
 
-## 4. Failure and recovery
+```text
+Chạy toàn bộ bộ test; tóm tắt diff để tôi review; không git push.
+```
 
-| Issue | Action |
+Người: đọc diff, xác nhận không có thay đổi không liên quan, kiểm theo [review diff](/guide/quality/review-diffs/).
+
+## 4. Thất bại và phục hồi
+
+| Vấn đề | Xử lý |
 |---|---|
-| New failures after fix | `git stash` or revert commit; narrow the change |
-| Wrong root cause | Return to explore; request new hypothesis |
-| Flaky test | Stabilize test before fixing business logic |
+| Sửa xong lại gây thất bại mới | `git stash` hoặc hoàn commit, thu hẹp thay đổi |
+| Đoán sai nguyên nhân gốc | Quay lại khám phá, yêu cầu giả thuyết mới |
+| Test flaky | Ổn định test trước rồi mới sửa logic nghiệp vụ |
 
-## 5. Capture for reuse
+## 5. Đóng gói lại
 
-- If this bug type recurs, add a convention in `AGENTS.md`
-- Extract `$regression-guard` Skill: run critical test list before merge
+- Nếu loại bug này lặp lại, thêm một quy ước vào `AGENTS.md`
+- Có thể tách Skill `$regression-guard`: trước merge chạy danh sách test then chốt
 
-## 6. Related chapters
+## 6. Chương liên quan
 
-- [Understand a codebase](/cases/understand-a-codebase/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Run tests](/guide/quality/run-tests/)
+- [Hiểu codebase](/cases/understand-a-codebase/)
+- [Review diff](/guide/quality/review-diffs/)
+- [Chạy test](/guide/quality/run-tests/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' homepage currently still describes Codex as usable for fixing defects, running tests, and reviewing changes; this page focuses on the stable engineering loop—reproduce failure first, minimal fix, add tests, regression verification—not dependent on any specific framework or product UI.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / IDE  
+**Căn cứ kiểm chứng:** Trang chủ OpenAI Developers hiện vẫn mô tả Codex dùng để sửa lỗi, chạy test và review thay đổi; ví dụ trang này tập trung vòng lặp kỹ thuật ổn định “tái hiện thất bại trước, sửa tối thiểu, bổ sung test và kiểm chứng hồi quy”, không phụ thuộc framework hay giao diện sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

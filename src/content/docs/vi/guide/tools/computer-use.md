@@ -1,142 +1,148 @@
 ---
 title: Computer Use
-description: Advanced GUI control via screen and input devices—use cases, risks, and approvals.
+description: Năng lực nâng cao thao tác GUI qua màn hình và thiết bị nhập — tình huống, rủi ro và phê duyệt.
 locale: vi
-source_locale: en
-source_revision: 9d8ea0c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Computer Use** lets the Agent view the screen, move the pointer, and type—beyond browser or terminal alone. Most powerful capability; **highest risk and approval requirements**.
+**Computer Use** cho phép Agent xem màn hình, di chuyển con trỏ, gõ chữ như người — không chỉ giới hạn trình duyệt hoặc terminal. Năng lực mạnh nhất, **yêu cầu rủi ro và phê duyệt cũng cao nhất**.
 
-Computer Use operates at screen, mouse, and keyboard layer—different from browser and terminal tools—so enable it carefully.
+Computer Use tác động trực tiếp ở lớp màn hình, chuột, bàn phím; khác loại với công cụ trình duyệt và terminal, nên càng cần bật thận trọng.
 
-## What's covered
+## Nội dung trang này
 
-- How Computer Use differs from browser and terminal
-- Tasks worth enabling it for
-- Safeguards for individuals and teams
+- Phân công giữa Computer Use với trình duyệt và terminal
+- Tác vụ nào đáng bật
+- Cá nhân và nhóm phòng vệ thế nào
 
-## Capability boundaries
+## Ranh giới năng lực
 
-| Layer | Typical ability |
+| Lớp | Năng lực điển hình |
 |---|---|
-| Terminal | Shell, scripts, CLI programs |
-| Browser | Web DOM, limited interaction |
-| Computer Use | Desktop apps, system dialogs, multi-window workflows |
+| Terminal | Shell, script, chương trình CLI |
+| Trình duyệt | DOM trang web, tương tác hạn chế |
+| Computer Use | Ứng dụng desktop, hộp thoại hệ thống, quy trình nhiều cửa sổ |
 
-## How it differs
+## Nó khác công cụ khác thế nào
 
-Think of it as:
+Có thể phân biệt với công cụ khác vậy:
 
-- Acting across the whole desktop
-- Switching between multiple windows
-- Clicking real buttons and system dialogs
+- Làm việc trên cả desktop
+- Chuyển giữa nhiều cửa sổ
+- Bấm nút thật và hộp thoại hệ thống
 
-So the surface area of UI and information it can touch is usually larger.
+Vì vậy, phạm vi giao diện và thông tin nó chạm thường cũng lớn hơn.
 
-Good for:
+Phù hợp:
 
-- Repetitive click flows in demo software without APIs (under supervision)
-- Copying data across apps (when compliant)
-- Verifying desktop App behavior itself
+- Luồng bấm lặp lại trong phần mềm demo không có API (cần bạn giám sát)
+- Sao chép dữ liệu xuyên ứng dụng (trong điều kiện tuân thủ)
+- Kiểm chứng hành vi của chính App desktop
 
-Poor fit for:
+Không phù hợp:
 
-- Everyday coding (IDE + terminal is faster)
-- Unattended production operations
-- Bypassing security software or DRM
+- Viết mã hàng ngày (IDE + terminal hiệu quả hơn)
+- Thao tác production không người trực
+- Vòng qua phần mềm bảo mật hoặc DRM
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Stronger capability = default choice?
+### 1. Năng lực mạnh hơn thì có nên ưu tiên dùng?
 
-Worth it mainly when:
+Chỉ trong các trường hợp sau giá trị mới rõ hơn:
 
-- The task truly involves desktop GUI
-- No lighter, safer tool can do the job
+- Tác vụ thật sự liên quan GUI desktop
+- Không có công cụ nhẹ hơn, an toàn hơn hoàn thành được
 
-### 2. Watching means low risk?
+### 2. Chỉ cần tôi nhìn là không còn rủi ro?
 
-Human presence helps, but you can still:
+Có người bên cạnh an toàn hơn, nhưng vẫn có thể:
 
-- Mis-click confirm dialogs
-- Open windows that should stay closed
-- Pull sensitive on-screen info into the workflow
+- Bấm nhầm hộp xác nhận
+- Mở cửa sổ không nên mở
+- Đưa thông tin nhạy cảm trên màn hình vào quy trình
 
-### 3. Replaces all GUI automation?
+### 3. Nó có thay được mọi tự động hóa GUI?
 
-Better for ad hoc help, flow verification, and API-less GUI steps—not stable long-running unattended production automation.
+Nó phù hợp hỗ trợ tạm thời, kiểm quy trình, xử lý bước GUI không có API; không phù hợp làm phương án tự động hóa production ổn định, dài hạn, không người trực.
 
-## Risk model
+## Mô hình rủi ro
 
-Computer Use is close to **handing keyboard and mouse to the Agent**:
+Computer Use gần như tương đương **giao bàn phím chuột cho Agent**:
 
-- Can open mail, chat, file manager
-- May mis-click confirmation dialogs
-- Screen may show sensitive notifications
+- Có thể mở email, chat, trình quản lý tệp
+- Có thể bấm nhầm hộp thoại xác nhận
+- Màn hình có thể chứa thông tin nhạy cảm trong thông báo
 
-Required reading: [permissions and approvals](/guide/foundations/permissions-and-approvals/), [sandbox and network](/guide/foundations/sandbox-and-network/)
+Bắt buộc đọc: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/), [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
 
-## When to consider it
+## Phán đoán có nên dùng không
 
-Usually unnecessary for:
+Khi mục tiêu chỉ là những việc sau, thường không cần Computer Use trước:
 
-- Editing code
-- Running tests
-- Viewing web pages
-- Research
+- Sửa mã
+- Chạy kiểm thử
+- Xem trang web
+- Tra tài liệu
 
-Consider when you must:
+Phần lớn có thể hoàn thành bằng công cụ nhẹ hơn.
 
-- Operate desktop applications
-- Span multiple GUI windows
-- Reach UI neither browser nor terminal can
+Nếu tác vụ thuộc các trường hợp sau, mới cân nhắc bật:
 
-## Recommended usage
+- Phải thao tác ứng dụng desktop
+- Phải xuyên nhiều cửa sổ GUI
+- Phải xử lý giao diện mà trình duyệt và terminal đều không với tới
 
-1. **Dedicated environment**: VM or secondary user; no private windows on screen
-2. **Minimize task**: "Verify formula in Calculator" not "handle all my email"
-3. **Human in the loop**: stay visible; ready to interrupt
-4. **Recording/logs**: team retrospectives (recordings may contain sensitive data)
-5. **Post-task check**: filesystem, clipboard, open applications
+mới đáng cân nhắc nghiêm túc.
 
-Enterprise may disable by default—follow managed policy.
+## Cách dùng khuyến nghị
 
-## vs browser tool
+1. **Môi trường riêng**: máy ảo hoặc tài khoản người dùng phụ, không có cửa sổ riêng tư trên màn hình
+2. **Thu nhỏ tác vụ**: «Xác minh công thức trong Calculator» chứ không «giúp tôi xử lý mọi email»
+3. **Người trong vòng**: giữ hiển thị, sẵn sàng ngắt bất cứ lúc nào
+4. **Ghi hình/nhật ký**: dùng để nhóm review (chú ý ghi hình cũng chứa thông tin nhạy cảm)
+5. **Kiểm sau khi xong**: hệ thống tệp, clipboard, ứng dụng đang mở
 
-```text
-Only need a web page?        → browser tool
-Need apps outside IDE?       → Computer Use (more caution)
-Only code and tests?         → terminal + file tools
-```
+Môi trường doanh nghiệp có thể tắt mặc định; lấy chính sách quản trị làm chuẩn.
 
-See [tool selection](/guide/tools/tool-selection/)
-
-## Example prompt
+## Chọn với công cụ trình duyệt
 
 ```text
-Only operate Calculator and the local test app. Do not open mail, chat, file manager, or any production admin UI.
-If a system confirmation appears, stop and explain before continuing.
+Chỉ cần xem trang web?          → Công cụ trình duyệt
+Cần thao tác ứng dụng ngoài IDE? → Computer Use (thận trọng hơn)
+Chỉ cần sửa mã chạy kiểm thử?   → Terminal + công cụ tệp
 ```
 
-## Common mistakes
+Xem [Chọn công cụ](/guide/tools/tool-selection/)
 
-- Computer Use on main desktop with untrusted projects
-- Continuing while 2FA, banking, or customer data is on screen
-- Treating GUI automation as full test strategy
+## Cách viết áp dụng trực tiếp
 
-## Acceptance checklist
+Có thể viết:
 
-- [ ] Enabled only in isolated environment
-- [ ] Prompt lists allowed apps and prohibitions
-- [ ] Post-task check: no unexpected files/network
-- [ ] Org policy allows the capability
+```text
+Chỉ cho phép thao tác Calculator và ứng dụng kiểm thử cục bộ; đừng mở email, phần mềm chat, trình quản lý tệp hay bất kỳ backend production nào.
+Nếu xuất hiện hộp xác nhận hệ thống, dừng lại giải thích trước rồi mới tiếp.
+```
+
+## Lỗi thường gặp
+
+- Chạy Computer Use của dự án không đáng tin trên desktop chính
+- Màn hình còn 2FA, ngân hàng, dữ liệu khách hàng mà vẫn tiếp tục tác vụ
+- Coi tự động hóa GUI là chiến lược kiểm thử đầy đủ
+
+## Danh sách nghiệm thu
+
+- [ ] Chỉ bật trong môi trường cách ly
+- [ ] Prompt ghi rõ ứng dụng được phép thao tác và mục cấm
+- [ ] Sau tác vụ kiểm không có tệp/kết nối mạng ngoài ý muốn
+- [ ] Chính sách tổ chức cho phép năng lực này
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Codex (version, region, and permission dependent)  
-**Verification basis:** OpenAI Help Center materials on Codex plans and desktop capabilities still list Computer Use; Business release notes confirm Codex Computer Use on Windows from 2026-05-29. This page summarizes risk model, use cases, and approval boundaries—not claiming universal default availability.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / Codex (tùy phiên bản, khu vực và quyền)  
+**Căn cứ kiểm chứng:** Tài liệu hiện tại của OpenAI Help Center về kế hoạch Codex và năng lực desktop vẫn coi Computer Use là một chức năng liên quan Codex; ghi chú phát hành Business cũng xác nhận từ 2026-05-29 Codex trên Windows hỗ trợ Computer Use. Bài này chỉ tóm tắt mô hình rủi ro, tình huống phù hợp và ranh giới phê duyệt, không tuyên bố mọi nền tảng hoặc tài khoản mặc định đều dùng được.  
+**Kiểm chứng gần nhất:** 2026-07-26

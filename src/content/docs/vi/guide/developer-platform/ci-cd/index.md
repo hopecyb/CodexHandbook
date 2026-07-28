@@ -1,32 +1,34 @@
 ---
 title: CI/CD
-description: Connect Codex to continuous integration and release workflows—start with low-risk automation.
+description: Tích hợp Codex vào quy trình tích hợp liên tục và phát hành — bắt đầu từ tự động hóa rủi ro thấp.
 locale: vi
-source_locale: en
-source_revision: ff62c2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When wiring Codex into CI/CD, the most common mistake is trying to make it auto-edit, auto-push, and auto-merge from day one.
+Khi nối Codex vào CI/CD, vấn đề phổ biến nhất thường là:
 
-The more common approach is to start read-only: suggestions and reports only.
+Muốn ngay từ đầu để nó tự sửa, tự đẩy, tự merge.
 
-## Section entry
+Cách làm phổ biến hơn là để nó chỉ đọc, chỉ góp ý, chỉ tạo báo cáo trước.
 
-- [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+## Lối vào nhóm này
 
-## What this section covers
+- [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/)
 
-- Structured review at the PR stage
-- Let automation find issues and suggest fixes first
-- Keep high-risk actions behind human approval
+## Nội dung nhóm
 
-Connecting Codex in CI/CD usually means low-risk assistance first, then deciding what is worth delegating.
+- Review có cấu trúc ở giai đoạn PR
+- Để tự động hóa làm «phát hiện vấn đề» và «đưa gợi ý» trước
+- Giữ hành động rủi ro cao cho Phê duyệt của người
+
+Nối Codex trong CI/CD thường bắt đầu bằng hỗ trợ rủi ro thấp, rồi mới quyết định hành động nào đáng trao quyền.
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** Cross-checked against the current CI/CD subsection structure and code review automation entry in this repo; content is limited to the stable principle of low-risk assistance in CI/CD before delegating actions.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / API / Cloud  
+**Cơ sở kiểm chứng:** Đã đối chiếu chéo với cấu trúc tiểu chương CI/CD và lối vào tự động hóa review mã hiện tại trong kho này; nội dung giới hạn ở nguyên tắc ổn định «hỗ trợ rủi ro thấp trong CI/CD trước, rồi mới quyết định trao quyền».  
+**Kiểm chứng gần nhất:** 2026-07-26

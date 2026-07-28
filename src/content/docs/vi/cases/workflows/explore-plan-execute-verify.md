@@ -1,101 +1,101 @@
 ---
-title: Explore—plan—execute—verify
-description: Codex's default main workflow—four phase checkpoints, steadier than "one shot."
+title: Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng
+description: Quy trình chính dùng chung của Codex — bốn giai đoạn điểm kiểm tra, ổn hơn «một bước xong».
 locale: vi
-source_locale: en
-source_revision: 395ebda
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This is the handbook's recommended default workflow—from "not sure how yet" to "ready to merge."
+Đây là quy trình mặc định sổ tay khuyến nghị, phù hợp đi từ “chưa rõ làm thế nào” tới “có thể merge”.
 
-## Four phases overview
-
-```text
-① Explore   → Understand current state, scope, risks
-② Plan      → Steps, files, acceptance criteria (large tasks need your confirmation)
-③ Execute   → Change code/docs/config in small steps
-④ Verify    → Tests, diff review, check against definition of done
-```
-
-Do not skip ①② and jump to ③—that often becomes "guess and patch." See [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/).
-
-## ① Explore
-
-**Goal:** Describe current state before deciding what to change.
-
-Prompt example:
+## Tổng quan bốn giai đoạn
 
 ```text
-Do not change code yet. Read @src/auth/ and related tests; list:
-1. Current login flow
-2. Files possibly related to Safari layout bug
-3. One point you're unsure about and need me to confirm
+① Khám phá Explore   → Làm rõ hiện trạng, phạm vi, rủi ro
+② Kế hoạch Plan      → Bước, tệp, tiêu chí nghiệm thu (tác vụ lớn cần bạn xác nhận)
+③ Thực thi Execute   → Sửa code/tài liệu/cấu hình, commit bước nhỏ
+④ Kiểm chứng Verify  → Test, review diff, đối chiếu «định nghĩa hoàn thành»
 ```
 
-Output: problem statement, impact scope, items to confirm.
+Đừng bỏ ①② nhảy thẳng ③ — dễ thành “đoán rồi sửa”. Xem [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/).
 
-## ② Plan
+## ① Khám phá
 
-**Goal:** A reviewable step checklist.
+**Mục tiêu:** Nói rõ hiện trạng trước, rồi mới quyết cách sửa.
+
+Ví dụ prompt:
 
 ```text
-Based on the exploration above, give a plan: numbered steps, involved files, how to verify each step.
-Do not write code until I reply "execute per plan."
+Chưa sửa code. Đọc @src/auth/ và test liên quan, nêu bằng danh sách:
+1. Luồng đăng nhập hiện tại
+2. Tệp có thể liên quan tới bug layout Safari
+3. Điểm bạn chưa chắc, cần tôi xác nhận
 ```
 
-Large or high-risk changes need confirmation first. Small tasks can agree "plan under 3 steps can auto-execute"—write that in [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Đầu ra: phát biểu vấn đề, phạm vi ảnh hưởng, mục cần xác nhận.
 
-## ③ Execute
+## ② Kế hoạch
 
-**Goal:** Keep changes small and reversible.
+**Mục tiêu:** Checklist bước có thể review.
 
-- Focus on one sub-goal at a time
-- Prefer paths covered by tests
-- If plan diverges, **return to ②** instead of forcing ahead
+```text
+Dựa trên khám phá vừa rồi, đưa kế hoạch: số bước, tệp liên quan, mỗi bước kiểm chứng thế nào.
+Trước khi tôi trả lời «thực thi theo kế hoạch» thì chưa viết code.
+```
 
-Guide phrase: "Execute step 2; if the plan must change, stop and explain first."
+Tác vụ lớn hoặc thay đổi rủi ro cao phải chờ xác nhận. Tác vụ nhỏ có thể thỏa thuận “kế hoạch không quá 3 bước thì tự thực thi”, rồi ghi vào [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
 
-## ④ Verify
+## ③ Thực thi
 
-**Goal:** Prove definition of done is met.
+**Mục tiêu:** Giữ thay đổi bước nhỏ, hoàn tác được.
 
-| Verification type | Approach |
+- Mỗi lần tập trung một mục tiêu con
+- Ưu tiên đường đi test bao phủ được
+- Gặp vấn đề ngoài kế hoạch thì **quay lại ②**, đừng cố xông
+
+Câu dẫn: «Thực thi bước 2; nếu cần đổi kế hoạch thì dừng và giải thích trước.»
+
+## ④ Kiểm chứng
+
+**Mục tiêu:** Chứng minh «định nghĩa hoàn thành» đã thỏa.
+
+| Loại kiểm chứng | Cách làm |
 |---|---|
-| Automated | Unit tests, lint, type check |
-| Manual | Read diff, hand-test critical paths |
-| Artifacts | Screenshots, log snippets, API responses |
+| Tự động | Unit test, lint, kiểm tra kiểu |
+| Thủ công | Đọc diff, thử tay đường then chốt |
+| Artifact | Ảnh chụp, đoạn log, phản hồi API |
 
-See [Definition of done](/prompts/define-done/) and [Run tests](/guide/quality/run-tests/) for checklists.
+Checklist liên quan xem [định nghĩa hoàn thành](/prompts/define-done/) và [chạy test](/guide/quality/run-tests/).
 
-## Trim by task size
+## Cắt theo quy mô tác vụ
 
-| Size | Explore | Plan | Execute | Verify |
+| Quy mô | Khám phá | Kế hoạch | Thực thi | Kiểm chứng |
 |---|---|---|---|---|
-| Typo fix | Can skip | 1 verbal step | Short | lint |
-| Single-file bug | Light | 3–5 steps | Medium | tests + diff |
-| Cross-module feature | Required | Written plan + confirm | Phased | Full tests + hand-test |
-| Production incident | Diagnose first | Rollback plan first | Tiny steps | Monitoring + postmortem |
+| Sửa typo | Có thể bỏ | 1 bước miệng | Ngắn | lint |
+| Bug một tệp | Nhẹ | 3–5 bước | Trung bình | test + diff |
+| Tính năng xuyên module | Bắt buộc | Kế hoạch viết + xác nhận | Theo giai đoạn | Test đầy đủ + thử tay |
+| Sự cố production | Ưu tiên chẩn đoán | Phương án hoàn tác trước | Bước cực nhỏ | Giám sát + rút kinh nghiệm |
 
-## EPXV case template
+## Với mẫu case EPXV
 
-Teams can embed the four phases in [case study template](/cases/use-cases/case-study-template/) and PR descriptions for shared language.
+Nhóm có thể ghi bốn giai đoạn vào [mẫu case](/cases/use-cases/case-study-template/) và mô tả PR, tạo ngôn ngữ thống nhất.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Plan stays in your head—execution drifts
-- Verification is only "looks like it runs"
-- Insufficient explore—wrong module changed
+- Kế hoạch chỉ ở trong đầu, giai đoạn thực thi lệch hướng
+- Kiểm chứng chỉ làm «trông như chạy được»
+- Khám phá thiếu dẫn tới sửa sai module
 
-## Reference sources
+## Nguồn tham chiếu
 
-- CodexGuide task design and verification methods
-- Orange Book "full chain from requirements to delivery"
+- Phương pháp thiết kế tác vụ và kiểm chứng của CodexGuide
+- «Chuỗi đầy đủ từ nhu cầu đến bàn giao» trong sách da cam
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, diagnose, definition of done, run tests, and `AGENTS.md` pages in this handbook; content limited to four-phase collaboration main path and checkpoints—no volatile product parameters or entry details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các trang lập kế hoạch, chẩn đoán, định nghĩa hoàn thành, chạy test và `AGENTS.md` đã kiểm chứng của sổ tay; nội dung trang giới hạn ở chuỗi cộng tác chính bốn giai đoạn và điểm kiểm tra, không gồm tham số sản phẩm hay chi tiết lối vào dễ đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

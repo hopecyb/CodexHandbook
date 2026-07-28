@@ -1,30 +1,30 @@
 ---
-title: Research and learning
-description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
+title: Nghiên cứu và học
+description: Lối vào case khảo sát, so sánh và học có nguồn — trọng tâm truy xuất, trích dẫn và ranh giới kết luận.
 locale: vi
-source_locale: en
-source_revision: d446512
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Research tasks differ from ordinary Q&A in one way:
+Khác biệt lớn nhất giữa tác vụ nghiên cứu và «hỏi-đáp» thường là:
 
-> **You want not just an answer, but how it was reached and whether it's reliable.**
+> **Bạn không chỉ muốn một câu trả lời, còn muốn biết câu trả lời đến từ đâu và đáng tin đến đâu.**
 
-## Cases in this group
+## Lối vào nhóm này
 
-- [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Bảng so sánh tính năng đối thủ](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
-## What this group emphasizes
+## Trọng tâm nhóm này
 
-- How to require sources and citations
-- Turning "I think" into "what I found in evidence"
-- Keeping conclusions within what the material actually supports
+- Cách yêu cầu nguồn và trích dẫn
+- Cách biến «tôi nghĩ» thành «bằng chứng tôi tra được»
+- Cách hạn chế kết luận không vượt quá những gì tư liệu tự hỗ trợ được
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current research-and-learning case entry and source-backed research / validate sources chapters; this page only navigates the research case group and highlights focus areas.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo lối vào case research-and-learning hiện tại của kho và các chương nghiên cứu có nguồn/kiểm chứng nguồn; trang này chỉ đảm nhận điều hướng và gợi ý trọng tâm cho nhóm case nghiên cứu.  
+**Kiểm chứng gần nhất:** 2026-07-26

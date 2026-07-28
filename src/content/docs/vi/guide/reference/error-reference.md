@@ -1,160 +1,160 @@
 ---
-title: Error Reference
-description: Learning index of common errors, exit codes, and failure modes—points to troubleshooting, not official support.
+title: Tham chiếu lỗi
+description: "Chỉ mục học lỗi thường gặp, mã thoát và dạng thất bại — trỏ tới xử lý sự cố, không thay hỗ trợ chính thức."
 locale: vi
-source_locale: en
-source_revision: 489737c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people stare at one English line and guess. Classifying the problem first usually works better.
+Nhiều người cố định một dòng tiếng Anh rồi đoán. Phân loại vấn đề trước thường hiệu quả hơn.
 
-Decide if it looks like **auth, permissions, environment, network, or task logic**. This page summarizes frequent messages and next steps—not a complete error dictionary; latest behavior is official docs and client output.
+Quyết định nó giống **auth, quyền, môi trường, mạng hay logic Tác vụ**. Trang này tóm tắt thông báo thường gặp và bước tiếp — không phải từ điển lỗi đầy đủ; hành vi mới nhất = tài liệu chính thức và đầu ra client.
 
-## How to read an error
+## Cách đọc một lỗi
 
-1. Keyword class: auth, permissions, environment, network, context
-2. Stage: startup, install, execution, push, output
-3. Jump to the matching topic page
+1. Lớp từ khóa: auth, quyền, môi trường, mạng, ngữ cảnh
+2. Bước: khởi động, cài, chạy, push, đầu ra
+3. Nhảy tới trang chủ đề tương ứng
 
-Often faster than guessing.
+Thường nhanh hơn đoán.
 
-Global index: [Troubleshooting](/guide/reference/troubleshooting/)
+Chỉ mục toàn cục: [Xử lý sự cố](/guide/reference/troubleshooting/)
 
-## Authentication and account
+## Xác thực và tài khoản
 
-| Message or symptom | Likely cause | Next step |
+| Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| Authentication failed / 401 | Expired token, not signed in | [Sign-in and authentication](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | Org disabled feature or model | Contact admin; [Account and access](/guide/getting-started/account-plans-and-access/) |
-| Rate limit / 429 | Too frequent or quota | Retry later; check plan usage |
+| Authentication failed / 401 | Token hết hạn, chưa đăng nhập | [Đăng nhập và xác thực](/guide/getting-started/sign-in-and-authentication/) |
+| Chính sách tổ chức | Org tắt tính năng hoặc mô hình | Liên hệ admin; [Tài khoản và truy cập](/guide/getting-started/account-plans-and-access/) |
+| Rate limit / 429 | Quá thường xuyên hoặc hết quota | Thử lại sau; kiểm mức dùng gói |
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Long error ≠ harder problem
+### 1. Lỗi dài ≠ vấn đề khó hơn
 
-Useful signal is often one short keyword in a long stack.
+Tín hiệu hữu ích thường là từ khóa ngắn trong stack dài.
 
-### 2. Non-zero exit ≠ model cannot do the task
+### 2. Exit khác không ≠ mô hình không làm được Tác vụ
 
-May be permissions, network, output format, or task failure conditions.
+Có thể là quyền, mạng, định dạng đầu ra hoặc điều kiện thất bại Tác vụ.
 
-### 3. 401 / 403 / 429 differ
+### 3. 401 / 403 / 429 khác nhau
 
-- `401`: authentication problem
-- `403`: authenticated but not allowed
-- `429`: too fast—retry later
+- `401`: vấn đề xác thực
+- `403`: đã xác thực nhưng không được phép
+- `429`: quá nhanh — thử lại sau
 
-### 4. Last line is not always the root cause
+### 4. Dòng cuối không luôn là gốc rễ
 
-Earlier lines may show step, file, command, or underlying reason.
+Các dòng trước có thể cho thấy bước, tệp, lệnh hoặc lý do nền.
 
-## CLI and commands
+## CLI và lệnh
 
-| Message or symptom | Likely cause | Next step |
+| Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| command not found: codex | Not installed or PATH | [Install CLI](/guide/getting-started/install-cli/) |
-| Config parse error | TOML/YAML syntax | [CLI configuration](/guide/cli/configuration/) |
-| Permission denied (write) | Sandbox or approval denial | [Approvals and sandbox](/guide/cli/approvals-and-sandbox/) |
-| Non-zero exit (exec) | Task failed or completion criteria unmet | Check stderr; tighten prompt |
+| command not found: codex | Chưa cài hoặc PATH | [Cài CLI](/guide/getting-started/install-cli/) |
+| Config parse error | Cú pháp TOML/YAML | [Cấu hình CLI](/guide/cli/configuration/) |
+| Permission denied (write) | Deny Sandbox hoặc phê duyệt | [Phê duyệt và Sandbox](/guide/cli/approvals-and-sandbox/) |
+| Exit khác không (exec) | Tác vụ fail hoặc chưa đạt tiêu chí hoàn thành | Kiểm stderr; siết Prompt |
 
-## Five categories
+## Năm hạng mục
 
-| Category | Check |
+| Hạng mục | Kiểm |
 |---|---|
-| Auth | Account, token, sign-in |
-| Permissions | Approval, sandbox, repo access |
-| Environment | Install, PATH, config, dependencies |
-| Network | Egress, proxy, remote reachability |
-| Task logic | Prompt, input files, output requirements |
+| Auth | Tài khoản, token, đăng nhập |
+| Quyền | Phê duyệt, Sandbox, truy cập repo |
+| Môi trường | Cài đặt, PATH, cấu hình, dependency |
+| Mạng | Egress, proxy, truy cập từ xa |
+| Logic Tác vụ | Prompt, tệp đầu vào, yêu cầu đầu ra |
 
-Classify first—direction stays clearer.
+Phân loại trước — hướng rõ hơn.
 
-## How to use this page
+## Cách dùng trang này
 
-Treat it as a triage table—not a full dictionary:
+Coi như bảng phân loại — không phải từ điển đầy đủ:
 
-- Spot keyword
-- Find category
-- Open detailed troubleshooting page
+- Nhận từ khóa
+- Tìm hạng mục
+- Mở trang xử lý sự cố chi tiết
 
-Or translate to plain questions:
+Hoặc dịch thành câu hỏi đơn giản:
 
-- Not signed in?
-- No permission?
-- Command not installed?
-- Network unreachable?
-- Unclear instructions to Codex?
+- Chưa đăng nhập?
+- Không có quyền?
+- Lệnh chưa cài?
+- Mạng không tới?
+- Chỉ dẫn cho Codex mơ hồ?
 
-Use this page to land in the right category when unsure.
+Dùng trang này để tới đúng hạng mục khi chưa chắc.
 
-## Permissions and sandbox
+## Quyền và Sandbox
 
-| Message or symptom | Likely cause | Next step |
+| Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| User rejected tool call | You or policy rejected action | Confirm if approval was right; or change task |
-| Sandbox violation | Path or command out of bounds | [Sandbox and network](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Egress blocked | Cloud: [Internet access](/guide/web-and-cloud/internet-access/) |
+| User rejected tool call | Bạn hoặc chính sách từ chối hành động | Xác nhận phê duyệt có đúng không; hoặc đổi Tác vụ |
+| Sandbox violation | Đường dẫn hoặc lệnh ngoài giới hạn | [Sandbox và mạng](/guide/foundations/sandbox-and-network/) |
+| Network access denied | Egress bị chặn | Cloud: [Truy cập Internet](/guide/web-and-cloud/internet-access/) |
 
-## Cloud and GitHub
+## Cloud và GitHub
 
-| Message or symptom | Likely cause | Next step |
+| Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| Repository access denied | Insufficient OAuth scope | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Repo name, permissions, network | [Cloud troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Wrong name or scope | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Branch protection | [Create pull requests](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Scope OAuth không đủ | [Kết nối GitHub](/guide/web-and-cloud/connect-github/) |
+| Clone failed | Tên repo, quyền, mạng | [Xử lý sự cố Cloud](/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Tên hoặc phạm vi sai | [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Bảo vệ nhánh | [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/) |
 
-## MCP and extensions
+## MCP và mở rộng
 
-| Message or symptom | Likely cause | Next step |
+| Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| MCP server failed to start | Command path, missing dependency | [Connect MCP](/skills/mcp/connect-an-mcp-server/) |
-| Tool timeout | Slow or down external API | Retry; check MCP logs |
-| Unknown tool | Config/server version mismatch | Restart session; update config |
+| MCP server failed to start | Đường dẫn lệnh, thiếu dependency | [Kết nối MCP](/skills/mcp/connect-an-mcp-server/) |
+| Tool timeout | API ngoài chậm hoặc down | Thử lại; kiểm log MCP |
+| Unknown tool | Config/phiên bản máy chủ không tương thích | Khởi động lại phiên; cập nhật config |
 
-## Context and model
+## Ngữ cảnh và mô hình
 
-| Message or symptom | Likely cause | Next step |
+| Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| Context length exceeded | Conversation or @ files too large | [Compaction](/guide/context/compaction/) · narrow scope |
-| Model not available | Region or plan limitation | [Models and reasoning](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Hội thoại hoặc tệp @ quá lớn | [Nén](/guide/context/compaction/) · thu hẹp phạm vi |
+| Model not available | Hạn chế vùng hoặc gói | [Mô hình và suy luận](/guide/foundations/models-and-reasoning/) |
 
-## Using this page
+## Dùng trang này
 
-1. **Copy key phrase** into client or handbook search
-2. Follow table to topic checklist
-3. Still stuck: keep full log; see [Official resources](/guide/reference/official-resources/)
+1. **Copy cụm then chốt** vào tìm kiếm client hoặc sổ tay
+2. Theo bảng tới checklist chủ đề
+3. Vẫn kẹt: giữ log đầy đủ; xem [Tài nguyên chính thức](/guide/reference/official-resources/)
 
-## Help others help you
+## Giúp người khác giúp bạn
 
-Include:
+Gồm:
 
-- Client type and version (App / CLI / IDE / Cloud)
-- Operating system
-- Full error text (redacted)
-- Non-interactive? CI?
+- Loại và phiên bản client (App / CLI / IDE / Cloud)
+- Hệ điều hành
+- Văn bản lỗi đầy đủ (đã làm sạch)
+- Không tương tác? CI?
 
-## Troubleshooting order
+## Thứ tự xử lý sự cố
 
-1. Screenshot or copy full error—not only last line
-2. Classify before guessing technical detail
-3. Recall what changed recently
-4. Change one variable and retry once
-5. Then ask with full context
+1. Chụp màn hình hoặc copy lỗi đầy đủ — không chỉ dòng cuối
+2. Phân loại trước khi đoán chi tiết kỹ thuật
+3. Nhớ gần đây đã đổi gì
+4. Đổi một biến và thử lại một lần
+5. Rồi hỏi kèm ngữ cảnh đầy đủ
 
-Avoid mixing multiple changes.
+Tránh trộn nhiều thay đổi.
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex support documentation
-- stormzhang FAQ and troubleshooting chapters
-- KimYx0207 failure compendium (verify against official)
+- Tài liệu hỗ trợ OpenAI Codex
+- Chương FAQ và xử lý sự cố stormzhang
+- Tổng hợp thất bại KimYx0207 (đối chiếu với chính thức)
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Positioned as error triage index, not full dictionary; five categories cross-checked with current CLI, Cloud, permissions, and configuration chapters—no fixed error code table required.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Định vị là chỉ mục phân loại lỗi, không phải từ điển đầy đủ; năm hạng mục đã đối chiếu chéo với các chương CLI, Cloud, quyền và cấu hình hiện tại — không yêu cầu bảng mã lỗi cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

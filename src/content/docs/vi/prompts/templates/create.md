@@ -1,73 +1,74 @@
 ---
-title: Create template
-description: Build features, documents, or artifacts from scratch.
+title: Mẫu tạo
+description: Triển khai từ đầu chức năng, bản thảo hoặc Artifact.
 locale: vi
-source_locale: en
-source_revision: f7e4caa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Create template
+# Mẫu tạo
 
-From-scratch tasks often fail in two ways:
+Tác vụ tạo từ đầu dễ gặp hai vấn đề:
 
-- big goal, no boundaries
-- not enough information but generation starts anyway
+- Mục tiêu lớn nhưng không có ranh giới
+- Thông tin chưa đủ mà đã vội để Codex bắt đầu sinh
 
-The create template states deliverable, audience, and constraints before work begins.
+Mẫu tạo cố định Artifact, mục đích dùng và ràng buộc trước, rồi mới bắt đầu.
 
-## Template
+## Mẫu
 
 ```text
-Goal: Create 【artifact name】 for 【purpose/audience】.
-Context: 【existing conventions, design style, dependency limits】
-Inputs: 【spec, sketch, reference @files】
-Constraints:
-- Only modify/create within 【path scope】
-- Do not introduce 【exclusions】
-- Require my approval before 【high-risk operations】
-Acceptance:
-- 【observable result 1】
-- 【observable result 2】
-- Provide self-test steps
-If information is insufficient, list assumptions and ask me—don't guess.
+Mục tiêu: Tạo 【tên Artifact】 dùng cho 【mục đích/người dùng】.
+Bối cảnh: 【quy ước sẵn có, phong cách thiết kế, giới hạn dependency】
+Đầu vào: 【đặc tả, phác thảo, tham chiếu @tệp】
+Ràng buộc:
+- Chỉ sửa/tạo trong 【phạm vi đường dẫn】
+- Không đưa vào 【mục loại trừ】
+- Thao tác rủi ro cao: chỉ chạy sau khi tôi phê duyệt
+Nghiệm thu:
+- 【kết quả quan sát được 1】
+- 【kết quả quan sát được 2】
+- Cung cấp bước tự kiểm
+Nếu thiếu thông tin, liệt kê giả định và hỏi tôi trước; đừng đoán.
 ```
 
-## When to use this template
+## Khi nào phù hợp mẫu này
 
-- New page, component, script, or document from zero
-- You know what to produce but haven't started
-- You want scope stated before building
+- Làm từ đầu một trang, component, script hoặc tài liệu
+- Bạn đã biết cần giao gì nhưng chưa bắt tay
+- Bạn muốn nêu rõ phạm vi tạo trước khi làm
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Create tasks mean "free rein"
+### 1. Tác vụ tạo = để nó tự do phát huy
 
-From-scratch work especially needs:
+Tạo từ đầu càng cần nói rõ:
 
-- who it's for
-- what it's for
-- style or technical paths that are off limits
+- Cho ai dùng
+- Dùng để làm gì
+- Phong cách hoặc hướng kỹ thuật nào không được đụng
 
-### 2. Context is optional decoration
+### 2. Bối cảnh chỉ là trang trí tùy chọn
 
-For create tasks, context often steers the entire deliverable.
+Với tác vụ tạo, bối cảnh thường định hướng toàn bộ Artifact.
 
-### 3. "Looks good" as acceptance
+### 3. Nghiệm thu viết «trông ổn» vẫn chưa đủ
 
-Hard to judge whether you're actually done.
+Như vậy cuối cùng rất khó phán đã xong thật chưa.
 
-In create tasks, the riskiest move is starting before "what to build and for whom" is clear.
+Trong tác vụ tạo, tình huống dễ lỗi nhất là chưa nói rõ «làm gì, cho ai dùng» đã bắt đầu luôn.
 
-## Related
+## Liên quan
 
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Define done](/prompts/define-done/)
+- [Công việc dẫn bởi đặc tả](/cases/workflows/specification-driven-work/)
+- [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a create-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu tạo; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

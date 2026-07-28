@@ -1,27 +1,27 @@
 ---
 title: Prompts
-description: Learn how to state tasks, context, inputs, constraints, and acceptance criteria clearly.
+description: Học cách nêu rõ tác vụ, bối cảnh, đầu vào, ràng buộc và tiêu chí nghiệm thu.
 locale: vi
-source_locale: en
-source_revision: dcd0d82
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 # Prompts
 
-The prompts module focuses on how to express tasks clearly so Codex knows the goal, context, boundaries, and definition of done.
+Mô-đun Prompts tập trung vào cách diễn đạt tác vụ rõ ràng, để Codex biết mục tiêu, ngữ cảnh, ranh giới và tiêu chí hoàn thành.
 
-## Recommended order
+## Thứ tự khuyến nghị
 
-1. [Prompt basics](/prompts/basics/)
-2. [Ask for a plan first](/prompts/ask-for-a-plan/)
-3. [Task anatomy](/prompts/task-anatomy/)
-4. [Goals and context](/prompts/goals-and-context/)
-5. [Constraints and boundaries](/prompts/constraints-and-boundaries/)
-6. [Define done](/prompts/define-done/)
-7. [Prompting with images](/prompts/prompting-with-images/)
-8. [Long-running tasks](/prompts/long-running-tasks/)
-9. [Prompt debugging](/prompts/prompt-debugging/)
-10. [Anti-patterns](/prompts/anti-patterns/)
-11. Use [prompt templates](/prompts/templates/) for common task types
+1. [Cơ bản về Prompt](/prompts/basics/)
+2. [Xin kế hoạch trước](/prompts/ask-for-a-plan/)
+3. [Cấu trúc tác vụ](/prompts/task-anatomy/)
+4. [Mục tiêu và ngữ cảnh](/prompts/goals-and-context/)
+5. [Ràng buộc và ranh giới](/prompts/constraints-and-boundaries/)
+6. [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/)
+7. [Prompt với hình ảnh](/prompts/prompting-with-images/)
+8. [Prompt cho tác vụ dài](/prompts/long-running-tasks/)
+9. [Gỡ lỗi Prompt](/prompts/prompt-debugging/)
+10. [Phản mẫu](/prompts/anti-patterns/)
+11. Dùng [mẫu Prompt](/prompts/templates/) cho các tác vụ thường gặp

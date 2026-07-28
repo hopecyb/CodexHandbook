@@ -1,38 +1,38 @@
 ---
-title: 'Example: Research Skill'
-description: Example research Skill with citations and "needs confirmation" markers.
+title: 'Ví dụ: Skill nghiên cứu'
+description: Ví dụ Skill khảo sát kèm trích dẫn và dấu"cần xác nhận".
 locale: vi
-source_locale: en
-source_revision: c37acf0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Research Skill
+# Ví dụ: Skill nghiên cứu
 
-## SKILL.md skeleton
+## Khung SKILL.md
 
 ```md
 ---
 name: source-backed-research
-description: Technical research and comparison tables with URL/file path citations. Use when the user needs selection, competitive analysis, or literature review.
+description: Khảo sát kỹ thuật và bảng so sánh kèm trích dẫn URL/đường dẫn file. Dùng khi người dùng cần chọn giải pháp, phân tích cạnh tranh, tổng quan tài liệu.
 ---
 
-## Process
-1. Clarify research question and exclusions
-2. List evaluation dimensions (3–5)
-3. Attach a source to each conclusion; mark unverifiable items "needs confirmation"
-4. Output comparison table + recommendation + open questions
-5. Do not change code
+## Quy trình
+1. Làm rõ câu hỏi nghiên cứu và mục loại trừ
+2. Liệt kê chiều đánh giá (3–5 mục)
+3. Mỗi kết luận kèm nguồn; không Kiểm chứng được thì đánh"cần xác nhận"
+4. Xuất bảng so sánh + khuyến nghị + câu hỏi mở
+5. Không sửa code
 ```
 
-## Related
+## Liên quan
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Research template](/prompts/templates/research/)
+- [Case nghiên cứu](/cases/research-with-sources/)
+- [Template nghiên cứu](/prompts/templates/research/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative research Skill skeleton emphasizing citations and "needs confirmation" markers—consistent with general Codex/Skills workflow usage.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Trang này là khung Skill nghiên cứu minh họa, nhấn mạnh trích dẫn nguồn và dấu cần xác nhận — khớp cách dùng workflow chung của Codex/Skills hiện tại.  
+**Kiểm chứng gần nhất:** 2026-07-26

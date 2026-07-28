@@ -1,137 +1,137 @@
 ---
-title: Secrets and environment variables
-description: Safely injecting API keys, tokens, and non-sensitive config into Cloud.
+title: Secrets và biến môi trường
+description: "Tiêm an toàn API key, token và cấu hình không nhạy cảm vào Cloud."
 locale: vi
-source_locale: en
-source_revision: 4c6c8f1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud tasks often need private APIs, package registries, or databases. Credentials should be injected via **Secrets and environment variables**—not written into code, prompts, issues, chat logs, or Git history.
+Tác vụ Cloud thường cần API riêng, registry package hoặc cơ sở dữ liệu. Chứng chỉ phải được tiêm qua **Secrets và biến môi trường** — không viết vào code, Prompt, issue, log chat hoặc lịch sử Git.
 
-## What's covered
+## Nội dung phủ
 
-- Secrets vs ordinary environment variables
-- How to configure in Cloud console / repo settings
-- Relationship to GitHub Actions Secrets
+- Secrets vs biến môi trường thông thường
+- Cách cấu hình trong console Cloud / cài đặt repo
+- Quan hệ với Secrets GitHub Actions
 
-## Secret vs environment variable
+## Secret vs biến môi trường
 
-A simple split:
+Một phân chia đơn giản:
 
-- **Secret**: values that must not be visible to others—API keys, DB passwords, private keys
-- **Environment variable**: configuration the program reads—some sensitive, some not
+- **Secret**: giá trị người khác không được thấy — API key, mật khẩu DB, khóa riêng
+- **Biến môi trường**: cấu hình chương trình đọc — một số nhạy cảm, một số không
 
-Not every env var is a Secret, but Secrets should use secure injection—not hard-coded values.
+Không phải mọi biến môi trường đều là Secret, nhưng Secret phải dùng tiêm an toàn — không hard-code.
 
-## Conceptual distinction
+## Phân biệt khái niệm
 
-| Type | Examples | Storage requirements |
+| Loại | Ví dụ | Yêu cầu lưu trữ |
 |---|---|---|
-| **Secret** | API key, private key, DB password | Encrypted, masked in UI, not in logs |
-| **Variable** | `NODE_ENV=production`, feature flags | May be non-encrypted; still avoid leaking business strategy |
-| **Repo `.env`** | Local development | **Do not commit**; Cloud uses console Secrets instead |
+| **Secret** | API key, khóa riêng, mật khẩu DB | Mã hóa, che trong UI, không vào log |
+| **Biến** | `NODE_ENV=production`, feature flag | Có thể không mã hóa; vẫn tránh lộ chiến lược nghiệp vụ |
+| **Repo `.env`** | Phát triển cục bộ | **Không commit**; Cloud dùng Secrets console |
 
-Sensitive context overview: [sensitive context](/guide/context/sensitive-context/)
+Tổng quan Ngữ cảnh nhạy cảm: [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. "I'll paste the key just once—how bad can it be?"
+### 1. «Tôi chỉ dán key một lần — rủi ro gì?»
 
-High risk. Once a key appears in:
+Rủi ro cao. Một khi key xuất hiện trong:
 
-- Conversation
-- Issues
-- PR descriptions
-- Shell history
-- Git commits
+- Hội thoại
+- Issue
+- Mô tả PR
+- Lịch sử shell
+- Commit Git
 
-it can spread via logs, notifications, screenshots, history, and collaborators.
+nó có thể lan qua log, thông báo, ảnh chụp, lịch sử và cộng tác viên.
 
-### 2. "I'll commit `.env` so Cloud can read it"
+### 2. «Tôi sẽ commit `.env` để Cloud đọc được»
 
-`.env` is for local dev, not version control. In Cloud, prefer platform Secret management.
+`.env` dành cho dev cục bộ, không phải kiểm soát phiên bản. Trong Cloud, ưu tiên quản lý Secrets của nền tảng.
 
-### 3. "Secret name doesn't matter if the value is right"
+### 3. «Tên Secret không quan trọng nếu giá trị đúng»
 
-Many failures are naming/scope issues:
+Nhiều fail là vấn đề đặt tên/phạm vi:
 
-- Typos
-- Wrong scope
-- Code reads a different variable name
+- Gõ sai
+- Phạm vi sai
+- Code đọc tên biến khác
 
-Keep names consistent across docs, code, and Cloud settings.
+Giữ tên thống nhất giữa tài liệu, code và cài đặt Cloud.
 
-## Configuration principles
+## Nguyên tắc cấu hình
 
-1. **Least privilege**: each Secret only enough for one class of task
-2. **Isolate by repo/environment**: separate staging and production
-3. **Rotation**: refresh tokens periodically; accept old tasks may fail
-4. **Audit**: track who added/changed Secrets (team process)
-5. **Never echo**: task logs and PR comments must not print Secret values
+1. **Quyền tối thiểu**: mỗi Secret chỉ đủ cho một lớp Tác vụ
+2. **Cô lập theo repo/môi trường**: tách staging và production
+3. **Xoay vòng**: đổi token định kỳ; chấp nhận Tác vụ cũ có thể fail
+4. **Kiểm toán**: lần theo ai thêm/sửa Secrets (quy trình đội)
+5. **Không bao giờ echo**: log Tác vụ và bình luận PR không được hiện giá trị Secret
 
-## Minimal setup flow
+## Luồng cấu hình tối thiểu
 
-1. List external services the task must reach
-2. Provision only necessary Secrets—avoid full production access on day one
-3. Document required Secret **names** in docs—not values
-4. Run a test task to confirm read access
-5. Proceed with real work
+1. Liệt kê dịch vụ ngoài Tác vụ cần tới
+2. Cấp chỉ Secrets cần thiết — tránh quyền production đầy đủ ngày đầu
+3. Ghi **tên** Secret cần thiết trong tài liệu — không ghi giá trị
+4. Chạy Tác vụ thử để xác nhận đọc được
+5. Mới làm việc thật
 
-## Recommended workflow
+## Quy trình khuyến nghị
 
 ```text
-1. Add Secret in Cloud / GitHub settings (UPPER_SNAKE names, e.g. NPM_TOKEN)
-2. In AGENTS.md note "NPM_TOKEN required for private packages"—no value
-3. Start Cloud task; confirm env can read (on failure check name and scope)
-4. Align GitHub Actions Secrets naming with Cloud for easier documentation
+1. Thêm Secret trong Cloud / cài đặt GitHub (tên UPPER_SNAKE, vd. NPM_TOKEN)
+2. Trong AGENTS.md ghi «cần NPM_TOKEN cho package riêng» — không ghi giá trị
+3. Khởi động Tác vụ Cloud; xác nhận env đọc được (fail thì kiểm tên và phạm vi)
+4. Căn chỉnh đặt tên Secrets GitHub Actions với Cloud để tài liệu dễ hơn
 ```
 
-With [GitHub integration](/guide/integrations/github/), prefer platform-native Secrets over having the Agent copy keys from issue bodies.
+Với [tích hợp GitHub](/guide/integrations/github/), ưu tiên Secrets gốc của nền tảng thay vì để Agent copy key từ thân issue.
 
-## When to treat something as a Secret
+## Khi nào coi là Secret
 
-If unsure, ask:
+Nếu chưa chắc, hỏi:
 
-- Would leakage cause financial, data, permission, or business harm?
+- Rò rỉ có gây thiệt hại tài chính, dữ liệu, quyền hoặc nghiệp vụ không?
 
-If yes, it must not appear in public docs, prompts, chat, or the repo.
+Nếu có, nó không được xuất hiện trong tài liệu công khai, Prompt, chat hoặc repo.
 
-## Internet access and Secrets
+## Truy cập Internet và Secrets
 
-Some tasks need outbound package pulls or API calls:
+Một số Tác vụ cần pull package đi ra hoặc gọi API:
 
-- Outbound policy follows org security rules
-- Even with outbound access, do not paste Bearer tokens in prompts
-- Default deny production Secret access for untrusted repos
+- Chính sách đi ra theo quy tắc bảo mật tổ chức
+- Dù có truy cập đi ra, không dán Bearer token vào Prompt
+- Mặc định từ chối truy cập Secret production với repo không đáng tin
 
-## Common mistakes
+## Lỗi thường gặp
 
-| Mistake | Risk |
+| Lỗi | Rủi ro |
 |---|---|
-| Committing `.env` | Permanent leak |
-| Pasting keys in issues/task descriptions | Spread via logs and notifications |
-| Production Secrets on experiments | Accidental production changes |
-| Secret name mismatch with code | Silent task failure |
-| Admin token for convenience | Uncontrolled blast radius |
+| Commit `.env` | Rò rỉ vĩnh viễn |
+| Dán key vào issue/mô tả Tác vụ | Lan qua log và thông báo |
+| Secrets production trên thí nghiệm | Thay đổi production ngoài ý muốn |
+| Tên Secret không khớp code | Tác vụ fail im lặng |
+| Token admin vì tiện | Bán kính ảnh hưởng không kiểm soát |
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] No hard-coded keys in repo (use secret scanner)
-- [ ] Cloud Secret names match documentation
-- [ ] Failure logs do not contain Secret plaintext
-- [ ] Offboarding/rotation process defined
+- [ ] Không hard-code key trong repo (dùng máy quét secrets)
+- [ ] Tên Secret Cloud khớp tài liệu
+- [ ] Log fail không chứa plaintext Secrets
+- [ ] Quy trình offboarding/xoay vòng đã định
 
-## References
+## Tham chiếu
 
 - OpenAI Codex Cloud secrets
 - stormzhang `16-security.md`, `10-cloud.md`
-- KimYx0207 security and enterprise sections (verify facts against official docs)
+- Các phần bảo mật và doanh nghiệp KimYx0207 (đối chiếu sự thật với tài liệu chính thức)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page describes Cloud Secret placement, repo scope, and GitHub Actions Secrets relationships concretely, but lacks strong current official Secrets documentation to verify each claim; better marked `outdated` until formal sources are available.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud  
+**Ghi chú đối chiếu:** Trang mô tả cụ thể vị trí Secrets Cloud, phạm vi repo và quan hệ với Secrets GitHub Actions, nhưng thiếu tài liệu Secrets chính thức hiện hành đủ mạnh để xác minh từng khẳng định; nên đánh `outdated` đến khi có nguồn chính thức.  
+**Kiểm chứng gần nhất:** 2026-07-26

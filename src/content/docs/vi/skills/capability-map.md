@@ -1,94 +1,89 @@
 ---
-title: Capability map
-description: How Skill, MCP, Plugin, Hooks, slash commands, and AGENTS.md relate.
+title: Bản đồ năng lực mở rộng
+description: Quan hệ giữa Skill, MCP, Plugin, Hooks, lệnh slash và AGENTS.md.
 locale: vi
-source_locale: en
-source_revision: 671a22f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-There are many extension mechanisms, and they are easy to confuse. This page explains how they relate—not installation steps.
+Cơ chế mở rộng không ít và thật sự dễ lẫn. Trang này chỉ nói quan hệ giữa chúng, không mở bước cài đặt.
 
-## Relationship diagram
+## Sơ đồ quan hệ
 
 ```text
                     ┌─────────────────┐
-                    │  Your task goal  │
+                    │ Mục tiêu Tác vụ của bạn │
                     └────────┬────────┘
                              │
          ┌───────────────────┼───────────────────┐
          ▼                   ▼                   ▼
    ┌───────────┐      ┌─────────────┐     ┌──────────────┐
-   │ AGENTS.md │      │ Prompt/template│     │ Slash command │
-   │ Persistent │      │ This task only │     │ You trigger   │
-   │ rules      │      │                │     │               │
+   │ AGENTS.md │      │ Prompt/template │     │ Lệnh slash      │
+   │ Quy tắc bền vững │      │ Tác vụ lần này │     │ Bạn chủ động kích hoạt │
    └───────────┘      └─────────────┘     └──────────────┘
          │                   │                   │
          └───────────────────┼───────────────────┘
                              ▼
                     ┌─────────────────┐
                     │      Skill       │
-                    │ Reusable workflow │
-                    │ package          │
+                    │ Gói workflow tái dùng │
                     └────────┬────────┘
                              │
               ┌──────────────┼──────────────┐
               ▼              ▼              ▼
         ┌──────────┐  ┌──────────┐  ┌─────────────┐
         │   MCP    │  │  Hooks   │  │  Scripts    │
-        │ External │  │ Audit/   │  │ Scripts in  │
-        │ tools    │  │ validate │  │ Skill       │
+        │ Công cụ ngoài │  │ Kiểm tra kiểm toán │  │ Script trong Skill │
         └──────────┘  └──────────┘  └─────────────┘
                              │
                              ▼
                     ┌─────────────────┐
                     │     Plugin       │
-                    │ Distribute &     │
-                    │ bundle           │
+                    │ Phân phối và đóng gói tổ hợp │
                     └────────┬────────┘
                              ▼
                     ┌─────────────────┐
                     │  Automations     │
-                    │ Unattended/      │
-                    │ scheduled        │
+                    │ Không người trực / hẹn giờ │
                     └─────────────────┘
 ```
 
-## Comparison table
+## Bảng so sánh
 
-| | Who triggers | Persistence | External systems | Team distribution |
+| | Ai kích hoạt | Độ bền | Nối hệ thống ngoài | Phân phối nhóm |
 |---|---|---|---|---|
-| AGENTS.md | Auto-loaded | High (Git) | Easy |
-| Prompt | You | Low | Hard |
-| Slash command | You | Medium | Product-dependent |
-| Skill | You or model match | High | Easy (directory/Git) |
-| MCP | Model calls tools | Config-level | Needs governance |
-| Plugin | Effective after install | High | Official/team channels |
-| Hooks | System events | Config-level | Common in enterprise |
-| Automations | Time/events | Config-level | Needs approval flow |
+| AGENTS.md | Tự nạp | Cao (Git) | Dễ |
+| Prompt | Bạn | Thấp | Khó |
+| Lệnh slash | Bạn | Trung bình | Tùy sản phẩm |
+| Skill | Bạn hoặc model khớp | Cao | Dễ (thư mục/Git) |
+| MCP | Model gọi công cụ | Cấp cấu hình | Cần quản trị |
+| Plugin | Sau cài có hiệu lực tổng hợp | Cao | Kênh chính thức/nhóm |
+| Hooks | Sự kiện hệ thống | Cấp cấu hình | Doanh nghiệp hay gặp |
+| Automations | Thời gian/sự kiện | Cấp cấu hình | Cần luồng Phê duyệt |
 
-## Common mappings
+## Quan hệ thường gặp
 
-| Need | Suggested choice |
+| Nhu cầu | Gợi ý chọn |
 |---|---|
-| Unify code style and test commands | AGENTS.md |
-| Standardize "review PR" workflow | Skill |
-| Read Jira/Linear tickets | MCP |
-| Ship one integration pack to the whole team | Plugin |
-| Scan for secrets before every commit | Hooks |
-| Auto-draft weekly report every Monday | Automations (+ human publish) |
+| Thống nhất phong cách code và lệnh kiểm thử | AGENTS.md |
+| Chuẩn hóa quy trình"review PR" | Skill |
+| Đọc ticket Jira/Linear | MCP |
+| Cài một bộ tích hợp cho cả nhóm | Plugin |
+| Quét khóa bí mật trước mỗi lần commit | Hooks |
+| Thứ Hai hàng tuần tự sinh bản nháp báo cáo tuần | Automations (+ phát hành thủ công) |
 
-For detailed branching logic, see [Choosing an extension method](/skills/choosing-an-extension-method/).
+Logic nhánh chi tiết: [Cách chọn phương thức mở rộng](/skills/choosing-an-extension-method/).
 
-## Not tied to one product surface
+## Không phụ thuộc lối vào sản phẩm
 
-These mechanisms are **not** bound to a single UI: CLI, desktop App, and IDE may differ in Skill/MCP support—see [feature comparison](/guide/reference/feature-comparison/) and official docs.
+Các cơ chế này **không gắn** một giao diện duy nhất: mức hỗ trợ Skill/MCP của CLI, Desktop App, IDE có thể khác nhau — lấy [đối chiếu tính năng](/guide/reference/feature-comparison/) và tài liệu chính thức làm chuẩn.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** This page draws Skill, MCP, Plugin, Hooks, and Automations as a fixed relationship diagram and implies current support tiers; those boundaries and entry points are not fully covered in official public material as of 2026-07-26 and need a rewrite for current products.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Ghi chú tái Kiểm chứng:** Trang này vẽ Skill, MCP, Plugin, Hooks, Automations thành sơ đồ quan hệ cố định và ngầm hàm cấp hỗ trợ hiện tại; các ranh giới và lối vào này trong tài liệu công khai chính thức ngày 2026-07-26 chưa phủ đủ, cần viết lại theo sản phẩm hiện hành.  
+**Kiểm chứng gần nhất:** 2026-07-26

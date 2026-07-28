@@ -1,82 +1,84 @@
 ---
-title: Local vs cloud
-description: Compare local tasks and Cloud tasks and when to use each.
+title: Local và đám mây
+description: Đối chiếu tình huống phù hợp của tác vụ local và tác vụ Cloud.
 locale: vi
-source_locale: en
-source_revision: 877a261
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-“Local” and “cloud” can sound technical. Simply: local means work on your own computer; cloud means work on a remote machine.
 
-If you just want to start using Codex, **local** is usually the easier first choice.
+«Local» và «đám mây» nghe như thuật ngữ kỹ thuật — nói đơn giản: local là làm việc trên máy của bạn; đám mây là làm việc trên máy từ xa.
 
-| | Local task | Cloud task |
+Nếu chỉ muốn bắt đầu dùng Codex trước, thường chọn **local** sẽ đỡ hơn.
+
+| | Tác vụ local | Tác vụ Cloud |
 |---|---|---|
-| Where it runs | Your machine / local environment | Cloud environment |
-| Best for | Fast iteration, local files, debugging with local secrets | Remote repos, long tasks, standardized environments |
-| Watch for | Local permissions and accidental edits | Environment setup, secret injection, network policy |
+| Vị trí chạy | Máy / môi trường local của bạn | Môi trường đám mây |
+| Phù hợp | Lặp nhanh, tệp máy local, gỡ lỗi cần khóa máy local | Kết nối kho từ xa, tác vụ dài, môi trường chuẩn hóa |
+| Lưu ý | Quyền máy local và rủi ro sửa nhầm | Cấu hình môi trường, tiêm khóa, chính sách mạng |
 
-## How they feel
+## Cảm giác khi dùng
 
-Roughly:
+Hai bên đại khái như sau:
 
-- **Local task**: you sit at your computer and Codex helps edit the current project
-- **Cloud task**: you hand the work to a remote workstation and let it keep running there
+- **Tác vụ local**: như bạn ngồi trước máy mình, Codex cùng sửa dự án hiện tại
+- **Tác vụ Cloud**: như giao việc cho một máy làm việc từ xa, để nó chạy tiếp ở đó
 
-The difference is not only location. It also includes:
+Khác biệt không chỉ là «vị trí khác» — còn gồm:
 
-- Which files are reachable
-- Whether it can use software and environments already on your machine
-- How long a task can run
-- Whether the team needs a shared environment
+- Truy cập được tệp nào
+- Có dùng trực tiếp phần mềm và môi trường sẵn có trên máy bạn không
+- Tác vụ chạy được bao lâu
+- Nhóm có cần môi trường thống nhất không
 
-## Why many beginners start local
+## Vì sao nhiều người mới bắt đầu từ local trước
 
-Local is easier to understand and easier to inspect.
+Vì local dễ hiểu hơn, cũng dễ kiểm tra hơn.
 
-- You know the files are on your computer
-- It is easier to open the project, check results, and fix by hand
-- Undo paths are clearer when something goes wrong
+- Bạn biết tệp nằm trên máy mình
+- Bạn dễ mở dự án, xem kết quả, sửa tay hơn
+- Khi lỗi, đường hoàn tác rõ hơn
 
-For a first run, completing the task loop matters more than going to the cloud immediately.
+Với người lần đầu bắt tay, chạy thông vòng khép kín của tác vụ trước quan trọng hơn việc lên đám mây ngay từ đầu.
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Cloud is not automatically more advanced or more “formal”
+### 1. Đám mây chưa chắc cao cấp hơn, cũng chưa chắc phù hợp công việc chính thức hơn
 
-If the job is editing a local project, looking at local files, and iterating quickly, local is more direct.
+Nếu tác vụ của bạn là sửa dự án local, xem tệp máy local, thử vài lần nhanh — local trực tiếp hơn.
 
-### 2. Is local somehow less “professional”?
+### 2. Local có «không chuyên nghiệp» không?
 
-A lot of real development happens locally. Whether to use cloud depends on the task type, not on how advanced it feels.
+Nhiều công việc phát triển thực tế vốn hoàn thành trên local. Có dùng đám mây hay không chủ yếu nhìn loại tác vụ — đừng lấy «cảm giác cao cấp» làm tiêu chí phán đoán.
 
-### 3. How should I choose?
+### 3. Tôi nên chọn thế nào
 
-Use this rule of thumb:
+Có thể phán đoán như sau:
 
-- **Editing an existing project on your computer**: choose local
-- **Long-running work, leave-it-running jobs, or remote repo environments**: then consider cloud
+- **Sửa dự án sẵn có trên máy bạn**: chọn local
+- **Tác vụ rất dài, muốn treo chạy, muốn nối môi trường kho từ xa**: rồi mới cân nhắc đám mây
 
-## If you are unsure
+## Khi chưa chắc thì chọn thế nào
 
-If you still cannot tell them apart: if it can be done locally, do not rush to the cloud.
+Nếu giờ vẫn chưa phân biệt được, có thể theo quy tắc này: làm được trên local thì đừng vội lên đám mây.
 
-Switch to Cloud when you actually need:
+Đợi thật sự gặp các nhu cầu sau rồi mới chuyển sang Cloud:
 
-- Very long task time
-- A shared standardized environment
-- Remote repos or remote resources
-- Not to occupy your local machine
+- Thời gian tác vụ rất dài
+- Cần môi trường thống nhất
+- Cần kết nối kho từ xa hoặc tài nguyên xa
+- Không muốn chiếm máy local
 
-Many beginners start with **local + desktop App**. Cloud details: [Web and Cloud overview](/guide/web-and-cloud/). Switching in the App: [Local and cloud tasks](/guide/desktop-app/local-and-cloud-tasks/).
+Nhiều người mới bắt đầu từ **local + Desktop App**. Chi tiết Cloud xem [Tổng quan Web và Cloud](/guide/web-and-cloud/). Chuyển đổi trong App xem [Tác vụ local và đám mây](/guide/desktop-app/local-and-cloud-tasks/).
 
-Local is better for understanding the flow and making small changes. Cloud is better for longer, more standardized, more remote-collaborative work.
+Local phù hợp hơn để hiểu quy trình trước và sửa thứ nhỏ. Đám mây phù hợp hơn với tác vụ dài hơn, chuẩn hóa hơn, cộng tác từ xa nhiều hơn.
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** OpenAI Help Center hiện hành 《Using Codex with your ChatGPT plan》 vẫn phân biệt rõ «local workflows run on your device» và «cloud tasks run in OpenAI-managed environments»; 《ChatGPT Work and Codex》 cũng xác nhận Work trên web/mobile chạy trên đám mây. Trang này chỉ tóm tắt tình huống phù hợp và sự cân nhắc của tác vụ local với đám mây — không gắn gói cụ thể hay chi tiết lối vào.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,125 +1,127 @@
 ---
-title: Verify Technical Content
-description: How to mark pages verified—in reproduction steps, official sources, and dates.
+title: Kiểm chứng nội dung kỹ thuật
+description: Cách đánh dấu trang là verified, gồm bước tái hiện, căn cứ chính thức và ngày tháng.
 locale: vi
-source_locale: en
-source_revision: 5fadcc9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Commands, permissions, pricing, and product features change. **Verification** means readers who follow the doc today get predictable results.
+Trong sổ tay, lệnh, quyền, giá, tính năng sản phẩm thay đổi theo phiên bản. **Kiểm chứng** đảm bảo khi độc giả làm theo tài liệu, kết quả có thể kỳ vọng được.
 
-## What this page covers
+## Nội dung trang này
 
-Many first-time doc contributors confuse “looks fine to me” with “verified.”
+Nhiều người lần đầu tham gia duy trì tài liệu coi “tôi nhìn không thấy vấn đề” là “đã kiểm chứng rồi”.
 
-For a technical handbook:
+Nhưng với sổ tay kỹ thuật, hai việc này khác nhau nhiều:
 
-- The first is subjective
-- The second means you tried it on current version, environment, and steps
+- Cái trước chỉ là chủ quan thấy giống đúng
+- Cái sau nghĩa là bạn đã thật sự thử với phiên bản hiện tại, môi trường hiện tại, bước hiện tại
 
-This page explains upgrading “seems right” to “evidence it still works.”
+Ở đây giải quyết cách nâng “trông đúng” thành “có bằng chứng chứng minh giờ vẫn đúng”.
 
-## What verification checks
+## “Kiểm chứng” đang kiểm gì
 
-Not only prose—confirm a reader can do it **today**.
+“Kiểm chứng nội dung kỹ thuật” có thể hiểu là: không chỉ kiểm chữ có trôi không, mà xác nhận độc giả làm theo thì hôm nay thật sự vẫn làm ra được.
 
-Especially important because:
+Việc này đặc biệt quan trọng vì nhiều nội dung không ổn định mãi, ví dụ:
 
-- Commands change
-- Menu locations move
-- Permission defaults shift
-- Product capabilities and regions evolve
+- Lệnh sẽ đổi
+- Vị trí menu sẽ đổi
+- Giá trị mặc định của quyền sẽ điều chỉnh
+- Năng lực sản phẩm và phạm vi khả dụng sẽ cập nhật
 
-Verification prevents readers following stale docs into traps.
+Vậy kiểm chứng không phải sạch sẽ biên tập thái quá, mà tránh độc giả làm theo tài liệu cũ rồi dính hố.
 
-## Status meanings
+## Ý nghĩa trạng thái
 
-| Status | Meaning |
+| Trạng thái | Ý nghĩa |
 |---|---|
-| `planned` | Planned, not yet written |
-| `draft` | In progress, not finalized |
-| `review` | Complete, awaiting second pass |
-| `verified` | Checked per stated basis |
-| `outdated` | Product changed; needs update |
-| `archived` | Historical; not in main nav |
+| `planned` | Đã lập kế hoạch, chưa viết |
+| `draft` | Đang viết, chưa chốt đầy đủ |
+| `review` | Nội dung xong, chờ rà lại |
+| `verified` | Đã kiểm chứng theo căn cứ đánh dấu |
+| `outdated` | Sản phẩm đổi, cần cập nhật |
+| `archived` | Giữ lịch sử, không vào điều hướng chính |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### `verified` means evidence, not confidence
+### `verified` nghĩa là có bằng chứng, không chỉ là tự tin
 
-Not a tone—it is an evidence state.
+Nó không phải kiểu giọng văn, mà là trạng thái bằng chứng.
 
-Mark `verified` only after reproduction, official cross-check, and scope/date alignment.
+Chỉ khi bạn thật sự tái hiện, đối chiếu căn cứ chính thức, xác nhận phạm vi trang và ngày khớp, mới phù hợp đánh dấu `verified`.
 
-### Community articles inform topics, not facts
+### Bài cộng đồng giúp bạn hiểu, nhưng không thay kiểm chứng sự kiện
 
-CodexGuide, AI-Coding-Guide-Zh, etc. help you see what to cover.
+Như CodexGuide, AI-Coding-Guide-Zh hoặc tài liệu cộng đồng khác rất hợp để giúp bạn thấy nên bổ sung chủ đề nào.
 
-For:
+Nhưng một khi liên quan:
 
-- Command names
-- Permission behavior
-- Product entry points
-- Pricing, quotas, regional differences
+- Tên lệnh
+- Hành vi quyền
+- Lối vào sản phẩm
+- Giá, hạn ngạch, khác biệt khu vực
 
-—use official docs or live behavior.
+vẫn phải quay về tài liệu chính thức hoặc kết quả chạy thật hiện tại.
 
-### Verification is not one sentence at a time
+### Kiểm chứng không phải chỉ nhìn từng câu
 
-Sentences may each look fine while the whole path fails:
+Đôi khi mỗi câu đơn lẻ không sao, nhưng nối lại thì không đứng vững, ví dụ:
 
-- Products mismatch page scope
-- Step order wrong
-- Unstated assumptions
-- Title promises more than body verified
+- Sản phẩm áp dụng không khớp trang thực tế
+- Thứ tự bước sai
+- Tiền đề mặc định không viết ra
+- Tiêu đề hứa nhiều hơn phạm vi thân bài thật sự đã kiểm
 
-Verify the **full operational path**.
+Vậy phải kiểm theo “cả chuỗi thao tác”, không chỉ quét mặt chữ.
 
-## Verification checklist
+## Danh sách kiểm chứng
 
-1. **State scope**: product (App/CLI/IDE/Cloud), OS, CLI version
-2. **Reproduce step by step**: from zero or clean worktree
-3. **Official basis**: at least one OpenAI doc or Help Center link
-4. **Community sources**: CodexGuide / KimYx0207 etc. for topics only—facts from official
-5. **Update date**: footer `Last verified: YYYY-MM-DD`
-6. **Independent review**: `verified` ideally confirmed by someone other than author
+1. **Ghi rõ phạm vi**: sản phẩm (App/CLI/IDE/Cloud), OS, số phiên bản CLI
+2. **Tái hiện từng bước**: làm theo từ đầu hoặc worktree sạch
+3. **Căn cứ chính thức**: ít nhất một liên kết tài liệu chính thức OpenAI hoặc trung tâm trợ giúp
+4. **Nguồn cộng đồng**: nếu tham khảo CodexGuide / KimYx0207 v.v., chỉ lấy chủ đề; sự kiện lấy chính thức làm chuẩn
+5. **Cập nhật ngày**: chân trang `Kiểm chứng gần nhất: YYYY-MM-DD`
+6. **Rà độc lập**: `verified` khuyến nghị người thứ hai không phải tác giả xác nhận
 
-## Verification order
+## Thứ tự kiểm chứng
 
-1. Confirm product, entry, scenario
-2. Walk the documented steps
-3. Cross-check volatile facts with official docs
-4. Downgrade uncertain or unreproduced parts
-5. Update status and date last
+Thứ tự sau dễ nhất để không sót:
 
-Prefer `review` over premature `verified`.
+1. Xác nhận trước trang nói sản phẩm nào, lối vào nào, tình huống nào
+2. Đi lại từ đầu các bước trong bài
+3. Đối chiếu tài liệu chính thức với thông tin dễ thay đổi
+4. Hạ cấp chỗ chưa chắc, chưa tái hiện được
+5. Cuối cùng mới cập nhật trạng thái và ngày
 
-## Volatile information
+Thà giữ `review` trước, đừng viết `verified` sớm khi bằng chứng chưa đủ.
 
-Re-check quarterly or on major releases:
+## Thông tin dễ thay đổi
 
-- Command and subcommand names, flags
-- Default permissions and sandbox behavior
-- Plans, model names, regional availability
-- MCP/Hook event names
+Các mục sau phải kiểm lại mỗi quý hoặc theo phát hành major:
 
-## On failure
+- Tên lệnh và lệnh con, flags
+- Mặc định quyền và hành vi Sandbox
+- Gói, tên mô hình, khả dụng theo khu vực
+- Tên sự kiện MCP/Hook
 
-- Downgrade to `review`, `draft`, or `outdated` as appropriate
-- In PR, note which step disagrees with official docs
-- Large drift: open issue labeled `outdated`
+## Khi thất bại
 
-## Related
+- Hạ cấp theo thực tế thành `review`, `draft` hoặc `outdated`
+- Trong PR nói rõ bước nào không khớp chính thức
+- Lệch lớn thì mở issue gắn `outdated`
 
-- [Handbook version policy](/guide/start-here/handbook-version-policy/)
-- [Official resources](/guide/reference/official-resources/)
+## Liên quan
 
-`verified` means checked against stated current basis with traceable evidence—not author gut feel alone.
+- [Chính sách phiên bản sổ tay](/guide/start-here/handbook-version-policy/)
+- [Tài nguyên chính thức](/guide/reference/official-resources/)
+
+`verified` nghĩa là “đã kiểm chứng thật theo căn cứ đánh dấu hiện tại, và có căn cứ truy được”. Chỉ dựa vào tác giả tự thấy đáng tin thì chưa đủ.
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked handbook status system, completed review practice, and official-first principle; describes internal standards for promoting pages to `verified` and when to downgrade.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với hệ trạng thái hiện tại của sổ tay, thực hành rà nhiều đợt đã hoàn thành và nguyên tắc ưu tiên chính thức; trang này mô tả chuẩn kiểm chứng nội bộ và nguyên tắc hạ cấp khi nâng trang lên `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

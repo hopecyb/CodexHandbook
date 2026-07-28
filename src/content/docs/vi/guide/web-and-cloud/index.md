@@ -1,58 +1,58 @@
 ---
-title: Web and Cloud (overview)
-description: Entry navigation for Cloud tasks, environments, Secrets, and PR review.
+title: Web và Cloud (tổng quan)
+description: "Điều hướng lối vào cho Tác vụ Cloud, môi trường, Secrets và review PR."
 sidebar:
   order: 13
 locale: vi
-source_locale: en
-source_revision: 73d5ce7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud fits running tasks in a **standardized remote environment**, connecting GitHub, and producing PRs. Start with [local vs cloud](/guide/foundations/local-vs-cloud/) and read [official Cloud documentation](https://developers.openai.com/codex).
+Cloud phù hợp chạy Tác vụ trong **môi trường từ xa chuẩn hóa**, nối GitHub và tạo PR. Trước khi bắt đầu có thể xem [Cục bộ và đám mây](/guide/foundations/local-vs-cloud/), và đọc [tài liệu Cloud chính thức](https://developers.openai.com/codex).
 
-Tasks do not run on your laptop—they continue in a remote environment.
+Tác vụ không chạy trên máy bạn, mà tiếp tục chạy trong môi trường từ xa.
 
-Typical scenarios:
+Tình huống kiểu này thường gặp khi:
 
-- Long-running tasks
-- You do not want to babysit your machine
-- You need remote repo and PR workflows directly
+- Tác vụ chạy lâu
+- Bạn không muốn canh máy cục bộ
+- Cần nối trực tiếp repo từ xa và quy trình PR
 
-Cloud is not always the first thing you touch, but once you work with remote repos, PRs, and async long tasks, you will likely use it.
+Cloud không nhất thiết là phần tiếp xúc đầu tiên, nhưng khi bắt đầu làm việc với repo từ xa, PR và Tác vụ dài bất đồng bộ, hầu như sẽ dùng tới.
 
-## Section navigation
+## Điều hướng chương
 
-| Phase | Page |
+| Giai đoạn | Trang |
 |---|---|
-| Connect | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Environment | [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
-| Credentials | [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Output | [Create Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Quality | [Cloud code review](/guide/web-and-cloud/code-review/) |
-| Collaboration | [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) |
-| Network | [Internet access](/guide/web-and-cloud/internet-access/) |
-| Troubleshooting | [Cloud troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Integration | [GitHub integration](/guide/integrations/github/) |
+| Kết nối | [Kết nối GitHub](/guide/web-and-cloud/connect-github/) |
+| Môi trường | [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/) |
+| Chứng chỉ | [Secrets và biến môi trường](/guide/web-and-cloud/secrets-and-variables/) |
+| Đầu ra | [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/) |
+| Chất lượng | [Review mã Cloud](/guide/web-and-cloud/code-review/) |
+| Hợp tác | [Ủy thác và theo dõi](/guide/web-and-cloud/delegate-and-follow-up/) |
+| Mạng | [Truy cập Internet](/guide/web-and-cloud/internet-access/) |
+| Xử lý sự cố | [Xử lý sự cố Cloud](/guide/web-and-cloud/troubleshooting/) |
+| Tích hợp | [Tích hợp GitHub](/guide/integrations/github/) |
 
-Start Cloud tasks from the desktop App: [Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/). Delegate from IDE: [IDE Cloud tasks](/guide/ide/cloud-task-workflow/).
+Khởi tạo Tác vụ Cloud từ App máy tính: [Tác vụ cục bộ và Cloud](/guide/desktop-app/local-and-cloud-tasks/). Ủy thác từ IDE: [Tác vụ Cloud IDE](/guide/ide/cloud-task-workflow/).
 
-## Suggested reading order
+## Thứ tự đọc đề xuất
 
-On first contact with Cloud:
+Lần đầu tiếp xúc Cloud, có thể đọc theo thứ tự này:
 
-1. [Connect GitHub](/guide/web-and-cloud/connect-github/)
-2. [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/)
-3. PR, code review, and collaboration flows
+1. [Kết nối GitHub](/guide/web-and-cloud/connect-github/)
+2. [Secrets và biến môi trường](/guide/web-and-cloud/secrets-and-variables/)
+3. Quy trình PR, review mã và hợp tác
 
-Understanding how it connects to repos, permissions, and secrets saves effort before diving into automation.
+Nhìn rõ «nó nối repo thế nào, lấy quyền thế nào, xử lý khóa bí mật thế nào» trước, rồi mới xem chi tiết tự động hóa sẽ đỡ tốn sức hơn.
 
-Cloud is for remote repo work that continues after you leave your machine—not simply "local workflow in a browser."
+Cloud phù hợp xử lý Tác vụ repo từ xa tiếp tục chạy khi rời máy cục bộ, không chỉ là chuyển quy trình cục bộ lên trang web.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This navigation page still has structural value, but it depends on high-churn capabilities—GitHub connection, Secrets, PRs, mobile follow-up, network access; mark `outdated` until each subpage is aligned with current official Cloud docs.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud  
+**Ghi chú đối chiếu:** Trang này với tư cách điều hướng Cloud vẫn có giá trị cấu trúc, nhưng các năng lực phụ thuộc như kết nối GitHub, Secrets, PR, theo dõi trên mobile và truy cập mạng đều thuộc vùng sản phẩm biến động cao; trước khi bổ sung từng trang theo tài liệu Cloud chính thức hiện hành, phù hợp hơn đánh dấu `outdated`.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,108 +1,109 @@
 ---
-title: GitHub integration
-description: Repo connection, PRs, review, and CI—where Codex sits in GitHub workflows.
+title: Tích hợp GitHub
+description: Nối kho, PR, Review và CI — vị trí của Codex trong quy trình GitHub.
 locale: vi
-source_locale: en
-source_revision: bbdd6af
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-GitHub is Codex's most common collaboration surface: Cloud tasks, PR review, Actions, and local push all share branches and permissions.
 
-This page explains how Codex plugs into repos, branches, PRs, and review.
+GitHub là mặt cộng tác mã phổ biến nhất của Codex: tác vụ Cloud, rà soát PR, Actions và push cục bộ đều quanh cùng một bộ nhánh và quyền.
 
-Even if you are not a senior developer, start with what it handles:
+Ở đây chủ yếu nói Codex nối vào quy trình cộng tác “kho mã, nhánh, PR, Review” thế nào.
 
-- Where code lives
-- How changes are proposed for others to see
-- How review and merge happen
+Dù bạn không phải lập trình viên kỳ cựu, cũng có thể xem trước nó chủ yếu xử lý mấy loại việc:
 
-## Capability map
+- Mã đặt ở đâu
+- Thay đổi đề xuất cho người khác xem thế nào
+- Rà soát và gộp xảy ra thế nào
 
-| Capability | Typical entry | Handbook location |
+## Bản đồ năng lực
+
+| Năng lực | Lối vào điển hình | Vị trí sổ tay |
 |---|---|---|
-| Connect remote repo | Cloud settings | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Cloud code changes → PR | Cloud task | [Create Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Local diff review | Desktop App / IDE | [Diffs and comments](/guide/desktop-app/diffs-comments-and-review/) |
-| Run Codex in CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
-| Auto PR review comments | Actions + exec | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
+| Nối kho từ xa | Cài đặt Cloud | [Nối GitHub](/guide/web-and-cloud/connect-github/) |
+| Sửa mã Cloud mở PR | Tác vụ Cloud | [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/) |
+| Rà soát diff cục bộ | App máy tính / IDE | [Diff và bình luận](/guide/desktop-app/diffs-comments-and-review/) |
+| Chạy Codex trong CI | GitHub Actions | Lộ trình `08-developer-platform/ci-cd/` |
+| PR tự bình luận rà soát | Actions + exec | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) |
 
-## Recommended team norms
+## Quy chuẩn nhóm khuyến nghị
 
 ```md
-## GitHub × Codex (can go in AGENTS.md)
+## GitHub × Codex (có thể đưa vào AGENTS.md)
 
-- Protect main by default; Codex pushes feature branches only
-- PR must link issue; description includes test notes
-- Codex must not merge PRs unless release bot is explicitly authorized
-- Secrets in GitHub Secrets / environment secrets—not in prompts
+- Bảo vệ nhánh mặc định main; Codex chỉ đẩy nhánh feature
+- PR phải liên kết issue; mô tả gồm giải thích kiểm thử
+- Cấm Codex merge PR, trừ khi release bot ủy quyền rõ
+- Khóa dùng GitHub Secrets / secrets môi trường, không vào Prompt
 ```
 
-## Cloud vs local Git
+## Cloud vs Git cục bộ
 
-| | Local clone | Cloud |
+| | Clone cục bộ | Cloud |
 |---|---|---|
-| Code source | Your machine's workspace | Remote clone |
-| Unpushed commits | Visible | Not visible—push first |
-| Environment | Your Node/system versions | Configured environment image |
-| Best for | Daily development | Async long tasks, standardized builds |
+| Nguồn mã | Workspace trên máy bạn | Clone từ xa |
+| Commit chưa push | Thấy được | Không thấy, cần push trước |
+| Môi trường | Phiên bản Node/hệ thống của bạn | Ảnh môi trường đã cấu hình |
+| Phù hợp | Phát triển hàng ngày | Tác vụ dài bất đồng bộ, build chuẩn hóa |
 
-## Review workflow
+## Quy trình Review
 
-1. Codex or human opens PR
-2. Human reads diff (or `$pr-review` Skill)
-3. CI runs tests
-4. Comment-driven revisions—new Codex task "address review comments only"
-5. Human merges
+1. Codex hoặc người mở PR
+2. Người đọc diff (hoặc Skill `$pr-review`)
+3. CI chạy kiểm thử
+4. Bình luận dẫn sửa — có thể dùng tác vụ Codex mới «chỉ xử lý review comment»
+5. Người merge
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. GitHub integration ≠ "Codex develops for me automatically"
+### 1. Tích hợp GitHub không bằng “để Codex tự phát triển thay tôi”
 
-More common uses:
+Mục đích phổ biến hơn:
 
-- Read repo context
-- Help organize diffs or review
-- Assist opening PRs and fixing comments
+- Đọc ngữ cảnh kho
+- Giúp gom diff hoặc review
+- Hỗ trợ mở PR, sửa bình luận
 
-### 2. Unfamiliar with PR and Review?
+### 2. Tôi chưa hiểu lắm các từ PR, Review thì sao?
 
-Roughly:
+Có thể hiểu thô trước:
 
-- **PR**: formally propose your changes for others to see
-- **Review**: others inspect those changes
+- **PR**: đưa thay đổi của bạn ra chính thức, chờ người khác xem
+- **Review**: người khác đến kiểm các thay đổi đó
 
-That level is enough for most of this page.
+Biết tầng này là đủ đọc phần lớn nội dung trang.
 
-### 3. On first contact, separate three things
+### 3. Lần đầu tiếp xúc tích hợp GitHub, quan trọng nhất là phân rõ việc này
 
-Not tokens or Actions first—but:
+Phân rõ trước không phải token, cũng không phải Actions, mà là:
 
-> **Local changes, cloud repo, and PR review are not the same thing.**
+> **Thay đổi cục bộ, kho Cloud, rà soát PR — ba thứ không phải một.**
 
-GitHub integration is about fitting Codex into existing code collaboration.
+Trọng tâm tích hợp GitHub là để Codex nối vào quy trình cộng tác mã hiện có.
 
-## Security
+## An toàn
 
-- Minimize GitHub Token scope
-- Stay cautious with sensitive Actions patterns like `pull_request_target` (injection surface)
-- Extra isolation for automation on fork PRs
+- Thu nhỏ tối đa scope GitHub Token
+- Giữ cảnh giác với mẫu Actions nhạy cảm như `pull_request_target` (mặt tiêm)
+- Chạy tự động hóa trên Fork PR cần chiến lược cách ly thêm
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Cloud task assumes unpushed local changes exist
-- Letting Codex execute unsanitized instructions in PR descriptions (prompt injection)
-- Mixing formatting and feature changes in one PR
+- Tác vụ Cloud giả định thay đổi cục bộ chưa commit vẫn tồn tại
+- Để Codex thực thi lệnh chưa khử độc trong mô tả PR (tiêm Prompt)
+- Cùng một PR trộn định dạng và thay đổi chức năng
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex GitHub integration documentation
+- Tài liệu tích hợp GitHub OpenAI Codex
 - KimYx0207 CX-10; stormzhang `26-git-github.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** OpenAI Developers Codex use cases still include "Review GitHub pull requests"; Help Center plugin/integration guidance emphasizes external repo access depends on underlying app permissions, role access, and action boundaries. This page summarizes collaboration placement and local vs Cloud code visibility differences—not a fixed capability matrix.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** Cloud / App / CLI  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại của OpenAI Developers vẫn gồm “Review GitHub pull requests”; hướng dẫn plugin và tích hợp của OpenAI Help Center cũng liên tục nhấn mạnh: truy cập kho ngoài phụ thuộc quyền app nền, truy cập vai trò và ranh giới hành động. Trang này chỉ tóm tắt vị trí cộng tác của kho GitHub, nhánh, PR, Review và CI, cùng khác biệt về khả năng thấy mã giữa cục bộ và Cloud.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,22 +1,22 @@
 ---
-title: references/ directory
-description: Organize long reference docs in a Skill for progressive disclosure.
+title: Thư mục references/
+description: Tổ chức tài liệu tham chiếu dài trong Skill để tiết lộ dần.
 locale: vi
-source_locale: en
-source_revision: 9e8387d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`references/` holds long material you do not need to expand every time—so the main flow stays short and clear.
+`references/` phù hợp để chứa tài liệu dài không cần mở ngay mỗi lần, tránh quy trình chính vừa dài vừa loạn.
 
-It is not just "extra files"; it is material that is **not always needed immediately but matters at a specific step**, loaded when needed.
+Nó không chỉ là"nhét thêm vài tài liệu", mà còn để tách những tài liệu **không phải lần nào cũng phải đọc ngay, nhưng ở một bước nào đó thật sự hữu ích**, chỉ đọc khi cần.
 
-# references/ directory
+# Thư mục references/
 
-When `SKILL.md` grows too long, move detailed standards, API notes, and checklists to `references/` and reference them from steps as needed.
+Khi thân `SKILL.md` quá dài, hãy chuyển quy chuẩn chi tiết, mô tả API, checklist sang `references/`, rồi trích dẫn khi cần trong các bước.
 
-## Example
+## Ví dụ
 
 ```text
 my-skill/
@@ -26,63 +26,63 @@ my-skill/
     └── api-contracts.md
 ```
 
-In `SKILL.md`:
+Trong `SKILL.md` viết:
 
 ```md
-When reviewing code style, read references/style-guide.md and check against its rules.
+Khi review phong cách code, đọc references/style-guide.md và kiểm tra theo các quy tắc trong đó.
 ```
 
-## What it does
+## Nó đang làm gì
 
-- `SKILL.md` owns the main line
-- `references/` owns "open when needed" material
+- `SKILL.md` chịu quy trình chính
+- `references/` chịu"tài liệu mở khi cần"
 
-Or simply:
+Cũng có thể hiểu thẳng:
 
-- `SKILL.md` is the work instruction
-- `references/` is the reference shelf
+- `SKILL.md` là hướng dẫn công việc
+- `references/` là tủ tài liệu
 
-Readers are not buried in background on first read; details are there when needed.
+Như vậy đọc Skill không bị đoạn nền dài đè trước; khi cần chi tiết vẫn tìm được căn cứ.
 
-## When to split out references/
+## Khi nào đáng tách `references/`
 
-Consider splitting when `SKILL.md` has:
+Nếu trong `SKILL.md` bắt đầu xuất hiện các trường hợp sau, có thể cân nhắc tách:
 
-- A large standards block eating space every time
-- Multiple reference topics mixed together
-- Background breaking the main flow so first read loses the thread
+- Một đoạn quy chuẩn lớn mỗi lần đều chiếm chỗ
+- Nhiều tài liệu tham chiếu chủ đề khác nhau trộn chung
+- Quy trình chính bị tài liệu nền cắt ngang, lần đầu khó nắm mạch chính
 
-Your first Skill does not need `references/`.  
-Common order: **get it working, split when content actually grows.**
+Lần đầu làm Skill không nhất thiết phải có `references/`.  
+Thứ tự thường gặp là **chạy thông trước, rồi khi nội dung thật sự dài mới tách ra**.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. references/ is not just copying content elsewhere
+### 1. `references/` không chỉ là copy nội dung ra ngoài một chút
 
-Its job is keeping the main flow short, clear, and runnable first.
+Vai trò quan trọng hơn là giữ quy trình chính ngắn, rõ, chạy thông được trước.
 
-### 2. More reference files is not always better
+### 2. Tài liệu tham chiếu không nhất thiết càng nhiều càng tốt
 
-Dumping everything into `references/` just moves clutter across files.
+Nếu nhét hết vào `references/`, cuối cùng chỉ là chuyển sự hỗn loạn từ một file sang nhiều file.
 
-### 3. With references/, SKILL.md can be very thin
+### 3. Có `references/` rồi thì `SKILL.md` có thể viết rất sơ sài
 
-The main process should still live in `SKILL.md` so first-time readers know how to execute.
+Quy trình chính vẫn nên ở `SKILL.md`, nếu không người khác lần đầu đọc vẫn không biết cách thực thi.
 
-## Principles
+## Nguyên tắc
 
-- Main flow stays in `SKILL.md`; references load on demand
-- One file, one topic—easier maintenance
-- Avoid repeating SKILL.md steps inside references
+- Quy trình chính giữ trong `SKILL.md`, tài liệu tham chiếu tải khi cần
+- Mỗi file tập trung một chủ đề, dễ bảo trì
+- Tránh lặp lại các bước đã có trong SKILL.md bên trong references
 
-## What belongs in references/
+## Khi nào đưa vào `references/`
 
-If content answers "**what rules apply**," it usually fits `references/`; if it answers "**what step comes next**," keep it in the main flow.
+Nếu một đoạn trả lời"**làm theo quy tắc nào**", thường phù hợp hơn khi đưa vào `references/`; nếu trả lời "**làm bước nào trước**", nên giữ trong quy trình chính.
 
-`references/` shortens the main flow and expands detail when needed.
+`references/` dùng để rút ngắn quy trình chính; khi cần chi tiết mới mở rộng.
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime explicitly uses on-demand reads of skill body and related material; this page describes stable documentation organization for `references/`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Runtime Codex hiện tại rõ ràng đọc thân kỹ năng và tài liệu liên quan khi cần; phần giải thích `references/` trên trang này thuộc nguyên tắc tổ chức tài liệu ổn định.  
+**Kiểm chứng gần nhất:** 2026-07-26

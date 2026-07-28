@@ -1,124 +1,126 @@
 ---
-title: IDE extension settings
-description: Model, approvals, context, and extension behavior configuration in the IDE.
+title: Cài đặt tiện ích IDE
+description: Lối vào cấu hình mô hình, phê duyệt, ngữ cảnh và hành vi tiện ích trong IDE.
 locale: vi
-source_locale: en
-source_revision: 3f51326
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-IDE extension settings connect **personal preferences** and **project rules**: which model, how strict approvals are, whether open files attach automatically, etc. Aligned with global [configuration basics](/guide/customization/configuration/config-basics/); this page focuses on common editor options.
+Cài đặt tiện ích IDE nối **sở thích cá nhân** với **quy tắc dự án**: chọn mô hình nào, phê duyệt chặt đến đâu, có tự kèm tệp mở không, v.v. Khớp với [cơ bản cấu hình](/guide/customization/configuration/config-basics/) toàn cục; trang này nghiêng về tùy chọn thường gặp trong trình soạn thảo.
 
-## What's covered
+## Nội dung trang
 
-- IDE settings vs user config vs `AGENTS.md`
-- Settings developers adjust most often
-- How teams align defaults
+- Phân công cài đặt IDE vs cấu hình người dùng vs `AGENTS.md`
+- Mục nhà phát triển chỉnh nhiều nhất
+- Nhóm đồng bộ giá trị mặc định thế nào
 
-## What these settings control
+## Các cài đặt này thực sự quản gì
 
-IDE settings are closer to: **default habits when Codex works with you in the editor**.
+Cài đặt IDE gần hơn với: **thói quen mặc định khi Codex phối hợp với bạn trong trình soạn thảo**.
 
-They answer questions like:
+Nó xử lý các câu hỏi kiểu:
 
-- Default model
-- Default approval strictness
-- Whether to auto-attach current file and selection
+- Mặc định dùng mô hình nào
+- Mặc định thắt phê duyệt chặt đến đâu
+- Mặc định có tự mang tệp hiện tại, vùng chọn vào không
 
-They do not define project rules—they shape whether the editor feels smooth and predictable.
+Nó không định nghĩa bản thân quy tắc dự án, mà quyết định khi dùng trong trình soạn thảo có thuận tay, có ổn định không.
 
-## Configuration layers (review)
+## Tầng cấu hình (ôn lại)
 
-| Layer | Examples | Priority |
+| Tầng | Ví dụ | Ưu tiên |
 |---|---|---|
-| Org managed policy | Forbid relaxing sandbox | Highest |
-| Project `AGENTS.md` / project config | Test commands, directory conventions | High |
-| IDE extension settings UI | Default model, panel layout | Medium |
-| Single-task prompt | "No network this time" | Task-level |
+| Chính sách quản lý tổ chức | Cấm nới Sandbox | Cao nhất |
+| `AGENTS.md` / cấu hình dự án | Lệnh kiểm thử, ước định thư mục | Cao |
+| UI cài đặt tiện ích IDE | Mô hình mặc định, bố cục bảng | Trung bình |
+| Prompt tác vụ một lần | «Lần này không lên mạng» | Cấp tác vụ |
 
-See [scope and precedence](/guide/customization/agents-md/scope-and-precedence/)
+Xem [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/)
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### IDE settings are not project standards
+### Cài đặt IDE không phải quy chuẩn dự án
 
-Do not confuse "how I like my editor configured" with "how this project should work."
+Nhiều người nhầm «mặc định trong trình soạn thảo của tôi» thành «dự án này phải làm vậy».
 
-- Editor settings → personal UX
-- `AGENTS.md` and project config → team agreement
+Cách phân rõ hơn:
 
-Related but not the same.
+- Cài đặt trình soạn thảo nghiêng trải nghiệm cá nhân
+- `AGENTS.md` và cấu hình dự án nghiêng đồng thuận nhóm
 
-### More automatic context is not always better
+Hai thứ liên quan, nhưng không cùng một việc.
 
-Auto-attaching current file, selection, and tabs helps until it dilutes the task focus.
+### Tự kèm ngữ cảnh — không phải càng nhiều càng tốt
 
-"Enough" beats "open everything."
+Tự mang tệp hiện tại, vùng chọn, tab mở đúng là tiện; nhưng tự nhồi quá nhiều cũng làm nhạt trọng tâm tác vụ.
 
-## Commonly adjusted settings (conceptual)
+Tiêu chuẩn thực tế hơn là đủ dùng — không cần theo đuổi «mở càng nhiều càng mạnh».
 
-### Model and reasoning
+## Cài đặt thường chỉnh (khái niệm)
 
-Affects speed vs quality on hard tasks. Teams can note recommended model tier in README so everyone does not debug different defaults.
+### Mô hình và suy luận
 
-### Approvals and sandbox
+Ảnh hưởng tốc độ phản hồi và chất lượng tác vụ phức tạp. Dự án nhóm có thể ghi trong README «mức mô hình khuyến nghị», tránh mỗi người mặc định khác khiến khó tái hiện vấn đề.
 
-Maps to [permissions and approvals](/guide/foundations/permissions-and-approvals/):
+### Phê duyệt và Sandbox
 
-- Beginners: keep default or stricter
-- Trusted repos: relax carefully; do not mix with production secrets directories
+Tương ứng [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/):
 
-CLI and IDE should share the **same security baseline**; CLI: [CLI configuration](/guide/cli/configuration/).
+- Người mới: giữ mặc định hoặc chặt hơn
+- Kho đáng tin: nới thận trọng, và không trộn với thư mục secrets production
 
-### Context behavior
+CLI và IDE nên dùng **cùng đường cơ sở an toàn**; CLI xem [Cấu hình CLI](/guide/cli/configuration/).
 
-Some extensions configure:
+### Hành vi ngữ cảnh
 
-- Auto-include current file / selection
-- Read `AGENTS.md`
-- Context window options (version-dependent)
+Một số tiện ích có thể cấu hình:
 
-Too much auto-context adds noise; see [keep context focused](/guide/context/keep-context-focused/).
+- Có tự gồm tệp / vùng chọn hiện tại không
+- Có đọc `AGENTS.md` không
+- Tùy chọn liên quan cửa sổ ngữ cảnh (theo phiên bản)
 
-### Login and account
+Quá nhiều ngữ cảnh tự động tăng nhiễu; xem [Giữ ngữ cảnh tập trung](/guide/context/keep-context-focused/).
 
-Shared with [sign-in and authentication](/guide/getting-started/sign-in-and-authentication/); restart extension session after switching accounts.
+### Đăng nhập và tài khoản
 
-## Team alignment
+Dùng chung với [Đăng nhập và xác thực](/guide/getting-started/sign-in-and-authentication/); đổi tài khoản rồi khởi động lại phiên tiện ích.
 
-1. Put **must-match** items in the repo (`AGENTS.md` + optional project config)
-2. Keep **personal habits** in IDE settings—not in Git
-3. New member onboarding: check extension version per [IDE installation](/guide/ide/installation/)
+## Đồng bộ nhóm
 
-## First-time focus
+1. Mục **phải thống nhất** viết vào kho (`AGENTS.md` + cấu hình dự án tùy chọn)
+2. **Thói quen cá nhân** để trong cài đặt IDE, không commit vào Git
+3. Onboarding thành viên mới: đối chiếu [Cài đặt IDE](/guide/ide/installation/) kiểm tra phiên bản tiện ích
 
-On first setup, check three categories:
+## Lần đầu xem những gì
 
-1. Model and reasoning tier
-2. Approval / security
-3. Automatic context
+Lần đầu cấu hình tiện ích IDE, có thể chỉ xem ba nhóm:
 
-Tuning these covers most real-world friction.
+1. Mô hình và mức suy luận
+2. Liên quan phê duyệt / an toàn
+3. Liên quan ngữ cảnh tự động
 
-## Troubleshooting
+Chỉnh xuôi ba nhóm này gần như phủ hầu hết vấn đề dùng thực tế.
 
-| Symptom | Check |
+## Xử lý sự cố
+
+| Hiện tượng | Kiểm tra |
 |---|---|
-| Settings not applying | Org policy override? Reload window? |
-| Differs from CLI | Compare [configuration reference](/guide/reference/configuration-reference/) |
-| Extension unresponsive | [IDE troubleshooting](/guide/ide/troubleshooting/) |
+| Cài đặt không có hiệu lực | Có bị chính sách tổ chức ghi đè không; có cần tải lại cửa sổ không |
+| Hành vi khác CLI | Đối chiếu [Tham chiếu cấu hình](/guide/reference/configuration-reference/) |
+| Tiện ích không phản hồi | [Xử lý sự cố IDE](/guide/ide/troubleshooting/) |
 
-IDE settings are how you and Codex cooperate in the editor; project rules are a separate layer—do not mix them up.
+Cài đặt IDE giống «bạn phối hợp với Codex trong trình soạn thảo thế nào»; quy tắc dự án viết ra sao là tầng khác — đừng trộn.
 
-## References
+## Nguồn tham khảo
 
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`, `09-ide.md`
+- `18-config.md`, `09-ide.md` của stormzhang
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page covers IDE setting entries, auto-context, approval preferences, and org overrides—names and UI change frequently; lacks strong official settings documentation to support the full page.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** IDE  
+**Ghi chú tái kiểm:** Trang này xoay quanh mục cài đặt tiện ích IDE, ngữ cảnh tự động, sở thích phê duyệt và ghi đè tổ chức, nhưng lối vào và tên gọi dễ đổi theo phiên bản tiện ích; hiện thiếu tài liệu cài đặt chính thức đủ mạnh để chống đỡ cả trang.  
+**Kiểm chứng gần nhất:** 2026-07-26

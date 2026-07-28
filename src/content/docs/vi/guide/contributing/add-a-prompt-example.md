@@ -1,50 +1,50 @@
 ---
-title: Add a Prompt Example
-description: Submit reproducible prompts to examples/prompts with metadata and acceptance criteria.
+title: Thêm ví dụ Prompt
+description: Gửi Prompt tái hiện được vào examples/prompts, kèm siêu dữ liệu và tiêu chuẩn nghiệm thu.
 locale: vi
-source_locale: en
-source_revision: 48a7e2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Prompt examples live at repo root [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), linked from handbook pages. Design spec: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Ví dụ Prompt nằm ở [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) gốc kho, được nội dung sổ tay liên kết. Quy chuẩn thiết kế xem [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
 
-## What this page covers
+## Nội dung trang này
 
-Common blockers:
+Các điểm kẹt thường gặp gồm:
 
-- What makes a prompt “worth including”
-- What format lets others reuse it
+- Không biết “Prompt thế nào mới đáng thu thập”
+- Không biết viết theo định dạng nào để người khác tái sử dụng trực tiếp được
 
-This page explains how to submit something **others can try, learn from, and reproduce**.
+Trang này giải quyết cách gửi một ví dụ **người khác thật sự thử được, học được, tái hiện được**.
 
-## Inclusion criteria
+## Tiêu chuẩn thu thập
 
-We collect reproducible examples with context, boundaries, and acceptance criteria—not inspiration snippets.
+Ở đây thu “ví dụ tái hiện được kèm ngữ cảnh, ranh giới và tiêu chuẩn nghiệm thu”, không phải mảnh cảm hứng.
 
-A solid example answers:
+Một ví dụ Prompt đạt yêu cầu ít nhất trả lời ba việc:
 
-- When to use it
-- Exactly what to say
-- How to judge success afterward
+- Khi nào dùng
+- Cụ thể nói thế nào
+- Dùng xong phán đoán thế nào là đã làm tốt
 
-Clever one-liners without prerequisites or verification are notes—not examples.
+Nếu chỉ là đoạn nghe thông minh mà người khác không biết tiền đề, cũng không biết nghiệm thu thế nào, nó giống ghi chú hơn ví dụ.
 
-## File naming
+## Đặt tên tệp
 
 ```text
 examples/prompts/<category>/<slug>.md
 ```
 
-`category` examples: `development`, `research`, `meta-workflows`, `team`.
+Ví dụ `category`: `development`, `research`, `meta-workflows`, `team`.
 
-## Required metadata (YAML frontmatter)
+## Siêu dữ liệu bắt buộc (YAML frontmatter)
 
 ```yaml
 ---
 id: prompt.fix-bug-with-tests
-title: Fix Bug and Add Tests
+title: Sửa Bug và bổ sung kiểm thử
 content_type: prompt
 audience: [beginner, developer]
 difficulty: beginner
@@ -55,72 +55,82 @@ last_verified: YYYY-MM-DD
 ---
 ```
 
-## Required body sections
+## Các mục bắt buộc trong thân bài
 
-1. **Use case**
-2. **Prerequisites** (permissions, branch, context files)
-3. **Recommended prompt** (full, copy-paste ready)
-4. **Acceptance criteria** (checklist, objectively verifiable)
-5. **Common failure modes**
-6. **Related handbook pages** (links to `src/content/docs/`)
+1. **Tình huống dùng**
+2. **Chuẩn bị trước khi dùng** (quyền, nhánh, tệp ngữ cảnh)
+3. **Prompt bản khuyến nghị** (đầy đủ, sao chép được)
+4. **Tiêu chuẩn nghiệm thu** (danh sách, kiểm khách quan được)
+5. **Cách thất bại thường gặp**
+6. **Trang sổ tay liên quan** (liên kết tới `src/content/docs/`)
 
-Optional: minimal variant, teaching breakdown, replaceable variables.
+Tùy chọn: bản tối giản, phân tích bản dạy học, biến có thể thay.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### Do not bury the prompt
+### Đừng để trọng tâm bị phân tán
 
-Background and theory are fine—but put the **copy-paste prompt** up front, then prerequisites and failures, then explanation.
+Một số người đóng góp viết rất nhiều nền, lý thuyết, giải thích mở rộng, còn Prompt thật sự sao chép dùng được lại ẩn giữa bài.
 
-### Used once ≠ complete example
+Cách viết ổn hơn:
 
-Readers do not share your implicit assumptions. State:
+- Viết đủ Prompt bản khuyến nghị trước
+- Rồi bổ sung tiền đề, biến và cách thất bại
+- Cuối cùng mới bổ sung nội dung giải thích
 
-- Which product entry
-- Required files, screenshots, or context
-- Whether edits, commands, or network are assumed allowed
+### Tự dùng một lần chưa phải ví dụ đầy đủ
 
-### No real secrets in examples
+Bạn biết lúc đó đầu mặc định những tiền đề nào, nhưng độc giả không biết.
 
-Real tokens, accounts, internal URLs, or customer data do not belong in a public repo.
+Vậy phải viết các tiền đề đó ra, ví dụ:
 
-Teach the method—not your production environment.
+- Áp dụng lối vào sản phẩm nào
+- Cần những tệp, ảnh chụp hoặc ngữ cảnh nào
+- Có mặc định cho phép sửa tệp, chạy lệnh, lên mạng không
 
-## Acceptance criteria example
+### Đừng viết thông tin nhạy cảm thật vào ví dụ
+
+Nếu ví dụ chứa token thật, tài khoản, liên kết nội bộ hoặc thông tin khách hàng, ví dụ đó không phù hợp kho công khai.
+
+Ví dụ dạy phương pháp, không phải lộ môi trường production của bạn.
+
+## Ví dụ tiêu chuẩn nghiệm thu
 
 ```markdown
-## Acceptance criteria
+## Tiêu chuẩn nghiệm thu
 
-- [ ] Previously failing test passes
-- [ ] Agreed test suite passes
-- [ ] Diff only touches task-related files
-- [ ] No `git push` executed
+- [ ] Kiểm thử thất bại ban đầu đã qua
+- [ ] Bộ kiểm thử trong phạm vi đã thỏa thuận đã qua
+- [ ] Diff chỉ liên quan tệp của tác vụ
+- [ ] Không chạy git push
 ```
 
-## Quality bar
+## Ngưỡng chất lượng
 
-- Clear goal and definition of done
-- Permission and security boundaries stated
-- No real keys or PII
-- `verified` status needs [independent verification](/guide/contributing/verify-technical-content/)
+- Mục tiêu và định nghĩa hoàn thành rõ
+- Có mô tả quyền và ranh giới an toàn
+- Không chứa khóa bí mật thật và PII
+- Trạng thái `verified` cần [kiểm chứng độc lập](/guide/contributing/verify-technical-content/)
 
-## Submission flow
+## Quy trình gửi
 
-1. Identify the real task class this solves
-2. Write a copy-paste prompt
-3. State minimum prerequisites and boundaries
-4. Define what success looks like
-5. Check for secrets and correct directory
+Thứ tự sau thường ổn hơn:
 
-## PR checklist
+1. Xác định ví dụ này giải quyết loại tác vụ thật nào
+2. Viết một bản Prompt người khác sao chép trực tiếp được
+3. Đưa điều kiện tiên quyết và ranh giới tối thiểu cần thiết
+4. Viết rõ “thế nào là thành công”
+5. Cuối cùng kiểm có lộ thông tin nhạy cảm không, có đặt sai thư mục không
 
-- [ ] New file path indexed in `examples/README.md` if index is maintained
-- [ ] At least one case or workflow page links to the example (optional but recommended)
+## Kiểm tra PR
 
-A good prompt example lets someone reproduce and get a similar outcome.
+- [ ] Đường dẫn tệp mới đã có trong chỉ mục `examples/README.md` (nếu đang duy trì chỉ mục)
+- [ ] Ít nhất một trang case hoặc quy trình liên kết tới ví dụ này (tùy chọn nhưng khuyến nghị)
+
+Một ví dụ Prompt tốt phải để người khác làm theo tái hiện được và nhận kết quả gần tương tự.
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Căn cứ kiểm chứng:** Đã rà từng mục theo thư mục `examples/` hiện tại của kho, frontmatter ví dụ, cách lập chỉ mục và quy trình đóng góp; yêu cầu trang đã khớp cấu trúc liên kết case/quy trình hiện có, không phụ thuộc hành vi dễ thay đổi của một client Codex nào.  
+**Kiểm chứng gần nhất:** 2026-07-26

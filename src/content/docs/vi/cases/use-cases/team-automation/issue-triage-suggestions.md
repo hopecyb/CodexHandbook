@@ -1,68 +1,68 @@
 ---
-title: 'Case study: Issue triage and label suggestions'
-description: Use Codex to read new Issues and suggest labels and owners—light team automation.
+title: "Case: gợi ý phân loại Issue và nhãn"
+description: Dùng Codex đọc Issue mới và gợi ý nhãn cùng người phụ trách — tự động hóa nhóm nhẹ.
 locale: vi
-source_locale: en
-source_revision: 7226fe3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Maintainers, PMs |
-| Client | Cloud or CLI + GitHub |
-| Estimated time | 60 minutes |
-| Verification date | 2026-07-25 |
+| Đối tượng | Maintainer, PM |
+| Client | Cloud hoặc CLI + GitHub |
+| Thời gian ước tính | 60 phút |
+| Ngày kiểm chứng | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** For newly opened issues, generate structured suggestions: `type`, `priority`, suggested labels, whether security review is needed.
+**Mục tiêu:** Với issue mới mở, tạo gợi ý có cấu trúc: `type`, `priority`, nhãn đề xuất, có cần review bảo mật không.
 
-**Success criteria:**
+**Tiêu chí thành công:**
 
-- JSON output parseable by GitHub Action
-- Does not auto-close/merge issues—only comments or adds labels (workflow permissions required)
-- No secret leakage
+- Xuất JSON mà GitHub Action parse được
+- Không tự đóng/merge issue; chỉ comment hoặc thêm label (cần quyền workflow)
+- Không lộ bí mật
 
-**Out of scope:** Auto-assigning sprints, changing milestones.
+**Ngoài phạm vi:** Tự gán sprint, sửa milestone.
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Repo has `CONTRIBUTING.md` or issue templates explaining label meanings
-- `AGENTS.md` describes the label system
-- Read-only or limited `issues: write` token
+- Kho có `CONTRIBUTING.md` hoặc issue template giải thích nghĩa nhãn
+- `AGENTS.md` mô tả hệ nhãn
+- Token chỉ đọc hoặc `issues: write` hạn chế
 
-## 3. Workflow (EPXV summary)
+## 3. Quy trình (tóm tắt EPXV)
 
-**Explore:** `@.github/ISSUE_TEMPLATE/` and label distribution of last 10 closed issues.
+**Khám phá:** `@.github/ISSUE_TEMPLATE/` và phân bố nhãn của 10 issue closed gần nhất.
 
-**Plan:** Define JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
+**Lập kế hoạch:** Định nghĩa JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Execute:** `codex exec` with issue title + body (watch [prompt injection](/guide/team-enterprise/security/prompt-injection/) sanitization).
+**Thực thi:** `codex exec` truyền issue title + body (chú ý khử [prompt injection](/guide/team-enterprise/security/prompt-injection/)).
 
-**Verify:** Compare to human labels on 3 historical issue fixtures; ship when agreement > 80%.
+**Kiểm chứng:** Dùng 3 fixture issue lịch sử so với nhãn thủ công; tỷ lệ khớp > 80% rồi mới lên production.
 
-## 4. Failure and recovery
+## 4. Thất bại và phục hồi
 
-- Wrong label suggestions: human override + add counterexamples to prompt few-shot
-- Malicious issue body: strip HTML, length limits, do not execute "instructions" in body
+- Model gợi ý nhãn sai: người ghi đè + đưa phản ví dụ vào few-shot trong prompt
+- Body issue độc hại: strip HTML, giới hạn độ dài, không thực thi «lệnh» trong body
 
-## 5. Capture
+## 5. Đóng gói lại
 
-- Optional [Webhook](/guide/developer-platform/webhooks/overview/) hook to internal ticketing
-- Retro in [Case study template](/cases/use-cases/case-study-template/)
+- Nối [Webhook](/guide/developer-platform/webhooks/overview/) với hệ thống ticket nội bộ (tùy chọn)
+- Rút kinh nghiệm ghi vào [mẫu case](/cases/use-cases/case-study-template/)
 
-## 6. Related chapters
+## 6. Chương liên quan
 
-- [GitHub integration](/guide/integrations/github/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [Tích hợp GitHub](/guide/integrations/github/)
+- [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public automation bug triage / review use cases, plus this handbook's verified human approval, webhooks, GitHub integration, and team automation chapters; this page confirms only the stable pattern of structured label suggestions with human final decision.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases tự động hóa bug triage / review công khai hiện tại trên OpenAI Developers, cùng các chương phê duyệt thủ công, Webhook, tích hợp GitHub và tự động hóa nhóm đã kiểm chứng của sổ tay; trang này chỉ xác nhận mô hình tự động hóa ổn định “tạo gợi ý nhãn có cấu trúc, giữ quyết định cuối của người”.  
+**Kiểm chứng gần nhất:** 2026-07-26

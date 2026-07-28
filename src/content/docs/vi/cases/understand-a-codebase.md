@@ -1,53 +1,52 @@
 ---
-title: Understand a codebase
-description: Read-only exploration of unfamiliar repos to build an actionable mental map.
+title: Hiểu codebase
+description: Khám phá kho mã lạ ở chế độ chỉ đọc để xây bản đồ nhận thức có thể hành động.
 locale: vi
-source_locale: en
-source_revision: fdd9043
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Understand a codebase
+# Hiểu codebase
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Developers |
+| Đối tượng | Nhà phát triển |
 | Client | CLI / IDE |
-| Estimated time | 30–60 minutes |
+| Thời gian ước tính | 30–60 phút |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Before changing code, understand module boundaries, entry points, and risk areas.
+**Mục tiêu:** Trước khi sửa, làm rõ ranh giới module, điểm vào và vùng rủi ro.
 
-**Success criteria:** You can explain the main path from "request to response" or "command to output" to someone else.
+**Tiêu chí thành công:** Có thể giải thích cho người khác đường đi chính «từ request đến response» hoặc «từ lệnh đến đầu ra».
 
-## 2. Recommended prompt
+## 2. Prompt đề xuất
 
 ```text
-Do not change code yet. Read @src/ and @README; explain in 8 bullets or fewer:
-1. Project purpose and tech stack
-2. Main directory responsibilities
-3. Start/test entry points
-4. 3 files most relevant to [my goal]
-5. 3 questions for me to confirm
+Chưa sửa code. Đọc @src/ và @README, nêu trong tối đa 8 điểm:
+1. Mục đích dự án và tech stack
+2. Trách nhiệm các thư mục chính
+3. Điểm vào khởi chạy/kiểm thử
+4. 3 tệp liên quan nhất tới 【mục tiêu của tôi】
+5. 3 câu hỏi cần tôi xác nhận
 ```
 
-## 3. Verification
+## 3. Kiểm chứng
 
-- Spot-check against actual `package.json` / entry files
-- Write conclusions into an issue or `AGENTS.md` summary
+- Đối chiếu mẫu với `package.json` / tệp entry thực tế
+- Ghi kết luận vào issue hoặc tóm tắt `AGENTS.md`
 
-## 4. Related
+## 4. Liên quan
 
-- [Understand template](/prompts/templates/understand/)
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-
+- [Mẫu hiểu codebase](/prompts/templates/understand/)
+- [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Understand large codebases," focusing on tracing main paths, identifying key modules, and quickly locating relevant files; this page's read-only exploration example aligns with the current official positioning.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Use cases Codex hiện tại trên OpenAI Developers vẫn gồm “Understand large codebases”, trọng tâm là theo dõi đường đi chính, nhận diện module then chốt và nhanh chóng định vị tệp liên quan; ví dụ trang này thuộc kịch bản khám phá chỉ đọc, khớp định vị hiện tại của tài liệu chính thức.  
+**Kiểm chứng gần nhất:** 2026-07-26

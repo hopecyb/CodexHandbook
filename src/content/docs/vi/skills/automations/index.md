@@ -1,56 +1,56 @@
 ---
 title: Automations
-description: Scheduled, event-driven, and background runs—what to automate vs what needs human review.
+description: Hẹn giờ, sự kiện và chạy nền — nói gì phù hợp tự động hóa, gì phải đối chiếu lại thủ công.
 locale: vi
-source_locale: en
-source_revision: 570f1ec
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`Automations` is about running repeat tasks automatically—not making Codex "smarter."
+`Automations` chủ yếu nói Tác vụ lặp chạy tự động thế nào — không bàn"làm Codex thông minh hơn".
 
-This section focuses on:
+Nhóm này quan tâm hơn:
 
-- Which tasks are worth automating
-- Where automation should stop for human review
-- How to design failure, alerts, and rollback
+- Tác vụ nào đáng chạy tự động
+- Chạy tự động đến bước nào thì nên dừng chờ người
+- Thất bại, cảnh báo, rollback thiết kế thế nào
 
-## How to decide
+## Trọng tâm quyết định
 
-You do not need to automate every repeat task on day one.
+Khi mới làm quen tự động hóa, không cần ngay từ đầu giao hết việc lặp cho nó.
 
-Decide in this order:
+Có thể quyết theo thứ tự:
 
-1. Is it **repeatable, rule-clear, and easy to verify**?
-2. Can it stay read-only, advisory only, or draft-PR only?
-3. Only then consider fully unattended runs
+1. Trước hết quyết việc này có **lặp, quy tắc rõ, kết quả dễ nghiệm thu** không
+2. Rồi quyết nó có thể chỉ đọc, chỉ đề xuất, chỉ mở PR nháp không
+3. Rồi mới cân nhắc hoàn toàn không người trực
 
-## Entry in this section
+## Lối vào nhóm này
 
-- [Scheduled and background tasks](/skills/automations/scheduled-tasks/): What automation tasks are, triggers, exit conditions, human review points
+- [Tác vụ hẹn giờ và nền](/skills/automations/scheduled-tasks/): hiểu thế nào là Tác vụ tự động hóa, cách kích hoạt, điều kiện thoát và điểm đối chiếu lại thủ công
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. If it repeats, automate it
+### 1. Chỉ cần lặp là chắc chắn nên tự động hóa
 
-If judgment still depends heavily on people, automating too early often causes more problems.
+Nếu Tác vụ dù lặp nhưng tiêu chuẩn phán đoán vẫn phụ thuộc người nhiều, tự động hóa quá sớm ngược lại dễ sinh vấn đề.
 
-### 2. Automation should eliminate human confirmation
+### 2. Tự động hóa nên bỏ luôn xác nhận thủ công
 
-Much value already comes from:
+Nhiều tự động hóa chỉ cần đạt các mức sau đã có giá trị:
 
-- Automatic checks
-- Automatic summaries
-- Automatic issue / draft PR creation
+- Tự kiểm tra
+- Tự tổng hợp
+- Tự mở issue / mở PR nháp
 
-Do not push results straight to main.
+Đừng đẩy thẳng kết quả lên nhánh chính.
 
-Automation fits tasks that repeat, have clear rules, and produce checkable results. For judgment-heavy work, keep human review in the loop.
+Tự động hóa phù hợp hơn với Tác vụ"lặp, quy tắc rõ, kết quả dễ kiểm". Gặp việc phụ thuộc phán đoán, giữ đối chiếu lại thủ công trong quy trình thường ổn hơn.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** This section assumes currently available Automations capability and entry points; official public material on Codex automation surfaces is still incomplete as of 2026-07-26—not stable enough to verify.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud / App / CLI  
+**Ghi chú tái Kiểm chứng:** Nội dung nhóm này mặc định có năng lực và lối vào Automations hiện dùng được, nhưng tài liệu công khai chính thức về bề mặt tự động hóa Codex vẫn chưa đủ; đến 2026-07-26 tạm chưa nên chuẩn hóa ổn định.  
+**Kiểm chứng gần nhất:** 2026-07-26

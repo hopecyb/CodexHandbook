@@ -1,56 +1,56 @@
 ---
 title: Plugins
-description: Team distribution of extensions—Plugins are a packaging layer, not a new capability type.
+description: Trang giải thích phân phối năng lực mở rộng cho nhóm — trước hết phân biệt đây là lớp đóng gói, không phải loại năng lực hoàn toàn mới.
 locale: vi
-source_locale: en
-source_revision: f7ad9b9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Plugins mainly solve how to ship and manage a set of extensions for others to install.
+Plugin chủ yếu giải quyết: làm sao đưa một nhóm năng lực mở rộng cho người khác cài và quản lý.
 
-They focus on:
+Nó thiên về:
 
-- Packaging
-- Distribution
-- Upgrades
-- Permission governance
+- Đóng gói
+- Phân phối
+- Nâng cấp
+- Quản trị Quyền
 
-They are not a separate new capability type.
+Nó không phải một loại năng lực hoàn toàn mới được phát minh riêng.
 
-## When this section applies
+## Kịch bản phù hợp
 
-Mainly two situations:
+Nhóm này chủ yếu hướng tới hai tình huống:
 
-- You are about to ship one extension pack to the whole team
-- You want to judge whether a plugin is worth installing
+- Bạn chuẩn bị phát thống nhất một bộ năng lực mở rộng cho nhóm
+- Bạn muốn quyết một plugin có đáng cài không
 
-For personal learning, one overview page is often enough.
+Nếu chỉ học cá nhân, hiểu một trang khái niệm thường đã đủ.
 
-## Entry in this section
+## Lối vào nhóm này
 
-- [Plugins overview](/skills/plugins/plugins-overview/): How Plugin relates to Skill and MCP, and why it is a distribution layer
+- [Tổng quan Plugins](/skills/plugins/plugins-overview/): hiểu quan hệ Plugin với Skill, MCP, và vì sao nó giống lớp phân phối hơn
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Installing a Plugin is automatically safe
+### 1. Cài Plugin rồi tự động an toàn
 
-A Plugin only makes capabilities easier to distribute—not implicitly trusted or low-permission.
+Plugin chỉ giúp phát năng lực tiện hơn — không có nghĩa mặc định đáng tin, cũng không có nghĩa mặc định Quyền thấp.
 
-### 2. More features means worth installing
+### 2. Chức năng nhiều là đáng cài
 
-Better to check first:
+Đáng xem trước hơn:
 
-- Is the source trustworthy?
-- How wide are permissions?
-- Can the team upgrade, roll back, and audit?
+- Nguồn có đáng tin không
+- Phạm vi Quyền lớn không
+- Nhóm có nâng cấp, rollback, kiểm toán được không
 
-A Plugin is a distribution pack for extensions—not a replacement for Skill or MCP.
+Plugin giống gói phân phối năng lực mở rộng hơn — cũng không phải thay thế Skill hoặc MCP.
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI  
-**Verification basis:** Plugin catalog, install policy, and surface support are still evolving; this section states those details too fixedly—marked `outdated` pending rewrite for current Plugin catalog.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** App / CLI  
+**Ghi chú tái Kiểm chứng:** Thư mục plugin, chiến lược cài và bề mặt hỗ trợ hiện tại vẫn đang tiến hóa; nhóm giải thích này viết các chi tiết quá cố định nên tạm đổi thành `outdated`, chờ viết lại theo thư mục Plugin hiện hành.  
+**Kiểm chứng gần nhất:** 2026-07-26

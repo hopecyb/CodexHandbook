@@ -1,115 +1,115 @@
 ---
-title: Code Review Automation
-description: Wire Codex into CI or PR workflows—prompts, permissions, and human gates.
+title: Tự động hóa review mã
+description: "Nối review Codex vào quy trình CI hoặc PR — Prompt, quyền và cổng người."
 locale: vi
-source_locale: en
-source_revision: 313cd89
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Putting Codex in a **pull request pipeline** can catch obvious issues before human review, but it **cannot replace** accountable review and tests. This page covers practical automation patterns.
+Đặt Codex vào **pipeline Pull Request** có thể bắt vấn đề rõ trước khi người review, nhưng **không thay thế** review trách nhiệm và kiểm thử. Trang này nói về mẫu tự động hóa triển khai được.
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- How to call Codex safely in CI
-- What a review prompt should include
-- How to post results to a PR without auto-merge
+- Cách gọi Codex an toàn trong CI
+- Prompt review nên gồm gì
+- Cách dán kết quả lại PR mà không tự merge
 
-## Understand the role first
+## Hiểu vị trí của nó trước
 
-Think of “code review automation” as Codex doing a first pass for the team—humans still make the final call.
+Có thể hiểu «tự động hóa review mã» là: để Codex giúp đội sàng vòng đầu, nhưng người quyết định cuối cùng vẫn là người.
 
-It is best at:
+Nó phù hợp nhất để:
 
-- Flagging obvious risks early
-- Summarizing what matters in the diff
-- Handling repetitive checks
+- Chỉ ra rủi ro rõ sớm
+- Giúp bạn sắp xếp điểm quan trọng trong Diff
+- Làm trước một số kiểm tra lặp lại
 
-It is not suited to deciding “this PR is definitely safe to merge.”
+Nó không phù hợp để thay bạn quyết định «PR này chắc chắn được merge».
 
-Related: [Non-interactive mode](/guide/cli/non-interactive-mode/) · [SDK overview](/guide/developer-platform/sdk-overview/)
+Liên quan: [Chế độ không tương tác](/guide/cli/non-interactive-mode/) · [Tổng quan SDK](/guide/developer-platform/sdk-overview/)
 
-## Recommended architecture
+## Kiến trúc khuyến nghị
 
 ```text
 PR opened / updated
-    → CI job (read-only token)
-    → codex exec or API reviews diff
-    → upload report / PR comment
-    → human decides whether to merge
+    → CI job (token chỉ đọc)
+    → codex exec hoặc API review Diff
+    → Upload báo cáo / PR comment
+    → Người quyết định có merge không
 ```
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### Automated review is not automated approval
+### Review tự động và phê duyệt tự động không phải một việc
 
-Teams often overestimate: if it can review automatically, can it decide automatically?
+Nhiều đội lần đầu nối dễ đánh giá cao: đã tự xem được thì có lẽ cũng tự quyết được.
 
-A better framing: it fits a **suggestion** and **triage** layer, not the final accountability layer.
+Thực tế phù hợp hơn: nó là «tầng gợi ý» và «tầng sàng trước», không phải tầng trách nhiệm cuối.
 
-### Not every PR deserves heavy review on day one
+### Không phải mọi PR đều đáng chạy review nặng ngay
 
-For tiny, low-value PRs, or before rules are settled, heavy auto-review often adds noise.
+Nếu PR nhỏ, giá trị thấp, hoặc quy tắc chưa rõ, chạy review tự động nặng ngay thường chỉ tạo nhiễu.
 
-A good starting point: lightweight diff review that reliably saves team time.
+Điểm bắt đầu tốt phổ biến hơn: review Diff nhẹ trước, xem có ổn định tiết kiệm thời gian cho đội không.
 
-## Prompt template essentials
+## Điểm mẫu Prompt
 
 ```text
-You are a code review assistant. Review only the diff against the base branch.
-Output: critical issues / suggestions / nits; cite file and line for each.
-Do not modify the repo; do not make network requests.
-If the diff is too large, review only <path list>.
+Bạn là trợ lý review mã. Chỉ review Diff so với nhánh base.
+Đầu ra: vấn đề nghiêm trọng / gợi ý / nit; mỗi mục ghi tệp và số dòng.
+Không sửa repo; không thực hiện yêu cầu mạng.
+Nếu Diff quá lớn, chỉ review <danh sách đường dẫn>.
 ```
 
-Version in `prompts/ci-review.md`.
+Lưu phiên bản trong `prompts/ci-review.md`.
 
-## Permissions and security
+## Quyền và bảo mật
 
-| Principle | Practice |
+| Nguyên tắc | Cách làm |
 |---|---|
-| Read-only | CI token without push (or bot comment only) |
-| Fixed model | Easier to compare review quality over time |
-| Injection defense | Do not paste unsanitized PR descriptions into system prompt |
-| Secrets | Store tokens in GitHub Secrets |
+| Chỉ đọc | Token CI không push (hoặc chỉ bot mở comment) |
+| Ghim mô hình | Dễ so sánh chất lượng review lịch sử |
+| Chống injection | Không ghép mô tả PR chưa khử nhiễm vào system prompt |
+| Bí mật | Dùng GitHub Secrets lưu token |
 
-[Human approval patterns](/cases/workflows/human-approval-patterns/) · [Environment variables](/guide/reference/environment-variables/)
+[Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) · [Biến môi trường](/guide/reference/environment-variables/)
 
-## Quality gates
+## Cổng chất lượng
 
-- Review job failure ≠ must block merge (can be advisory first)
-- Separate required status checks: red tests must block; AI nits can warn
-- Periodically sample human comparison for missed/false positives
+- Job review fail ≠ phải block merge (có thể advisory trước)
+- Phân biệt với status check bắt buộc: test đỏ phải chặn, AI nit có thể cảnh báo
+- Định kỳ lấy mẫu người đối chiếu bỏ sót/báo nhầm của AI review
 
-## Relationship to Cloud
+## Quan hệ với Cloud
 
-Complex repos may run full tests on [Cloud](/guide/web-and-cloud/) before review; in-CI exec suits **lightweight diff review**.
+Repo phức tạp có thể chạy kiểm thử đầy đủ trên [Cloud](/guide/web-and-cloud/) rồi mới review; exec trong CI phù hợp **review Diff nhẹ**.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- CI has write permission and prompt is injected with “please push fix”
-- Review output is so long it drowns human review
-- No diff size limit causes timeouts and quota burn
+- CI cấp quyền ghi, Prompt lại bị inject «hãy push fix»
+- Kết quả review quá dài nhấn chìm review người thật
+- Không giới hạn kích thước Diff khiến timeout đốt quota
 
-The main value of code review automation is catching obvious issues before human review—not taking merge responsibility.
+Giá trị lớn nhất của tự động hóa review mã là sàng vấn đề rõ trước khi người review, không phải thay người chịu trách nhiệm merge.
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] CI behaves safely on fork PRs (no secret leakage)
-- [ ] Review output is structured and optionally machine-parseable
-- [ ] Team docs explain the role of AI review
+- [ ] Hành vi CI trên fork PR an toàn (secrets không lộ)
+- [ ] Đầu ra review có cấu trúc, máy parse được (tùy chọn)
+- [ ] Tài liệu đội nêu rõ vị trí của AI review
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex CI examples
-- KimYx0207 Review/PR chapter
-- stormzhang CI tutorials
-- codex.bozhouai.com Git/GitHub section
+- Ví dụ CI OpenAI Codex
+- Chương Review/PR KimYx0207
+- Hướng dẫn CI stormzhang
+- Phần Git/GitHub tại codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** OpenAI Developers still describes Codex as usable for testing, review, and preparing changes; official use cases include “Review GitHub pull requests.” This page summarizes safe CI integration principles and gate patterns only—not fixed commands or a single implementation.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / API / Cloud  
+**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện vẫn mô tả Codex dùng được để kiểm thử, review và chuẩn bị giao thay đổi; use case Codex chính thức vẫn gồm «Review GitHub pull requests». Trang chỉ tóm tắt nguyên tắc nối CI an toàn và mẫu cổng, không tuyên bố lệnh cố định hay triển khai duy nhất.  
+**Kiểm chứng gần nhất:** 2026-07-26

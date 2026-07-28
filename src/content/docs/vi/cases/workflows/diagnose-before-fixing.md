@@ -1,77 +1,77 @@
 ---
-title: Diagnose before fixing
-description: Production issues and stubborn bugs—build an evidence chain before changing code.
+title: Chẩn đoán trước khi sửa
+description: Sự cố production và bug cứng đầu — dựng chuỗi bằng chứng trước, rồi mới động dao.
 locale: vi
-source_locale: en
-source_revision: 35b00c6
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Asking Codex to fix a bug immediately usually means high rework. The diagnose workflow emphasizes: **symptoms → hypotheses → evidence → minimal fix**.
+Để Codex sửa bug ngay từ đầu, tỷ lệ làm lại thường cao. Quy trình chẩn đoán nhấn mạnh hơn: **triệu chứng → giả thuyết → bằng chứng → sửa tối thiểu**.
 
-## When to use
+## Khi nào dùng
 
-- Test failure cause unclear
-- Production alerts, user reports "intermittent" issues
-- Problem persists after last fix
+- Nguyên nhân test thất bại chưa rõ
+- Cảnh báo production, người dùng báo «thỉnh thoảng»
+- Lần sửa trước rồi vấn đề vẫn còn
 
-## Steps
+## Các bước
 
-### 1. Freeze changes
-
-```text
-Do not change business code yet. List: reproduction steps, relevant logs, recent related commits.
-```
-
-### 2. Narrow scope
-
-- Bisect: which commit introduced it?
-- Isolate: minimal repro repo or test case
-
-### 3. Form hypotheses
-
-Ask Codex to output:
+### 1. Đóng băng thay đổi
 
 ```text
-Hypothesis A: … Verification: …
-Hypothesis B: … Verification: …
+Chưa sửa code nghiệp vụ. Liệt kê: bước tái hiện, log liên quan, commit liên quan gần đây.
 ```
 
-### 4. Verify hypotheses (read-only first)
+### 2. Thu hẹp phạm vi
 
-Run targeted tests, add temporary logs (discardable branch), read monitoring.
+- Chia đôi: commit nào đưa vào?
+- Cô lập: kho hoặc test case tái hiện tối thiểu
 
-### 5. Minimal fix
+### 3. Hình thành giả thuyết
 
-Fix one root cause at a time; avoid "while I'm here" refactors.
-
-### 6. Regression verification
-
-Original failing case + adjacent scenarios + test preventing recurrence.
-
-## Prompt template
+Yêu cầu Codex xuất:
 
 ```text
-Follow "diagnose before fixing":
-1. Read @path/to/failing-test and implementation; explain failure (cite stack line numbers)
-2. Give 2 hypotheses and how to verify read-only
-3. After I confirm a hypothesis, write the fix; after fix run only related tests
+Giả thuyết A: … Cách kiểm chứng: …
+Giả thuyết B: … Cách kiểm chứng: …
 ```
 
-## Relation to EPXV
+### 4. Kiểm chứng giả thuyết (ưu tiên chỉ đọc)
 
-Diagnosis is a deeper **Explore** phase; at Plan, also document "how to roll back if hypothesis is wrong."
+Chạy test có mục tiêu, thêm log tạm (nhánh có thể bỏ), đọc giám sát.
 
-## Common mistakes
+### 5. Sửa tối thiểu
 
-- Changing code without reproduction
-- One patch fixing three issues—hard to review
-- Removing temporary logs without adding permanent tests
+Một lần chỉ sửa một nguyên nhân gốc; tránh «tiện tay refactor».
+
+### 6. Kiểm chứng hồi quy
+
+Case thất bại gốc + kịch bản lân cận + test chống tái diễn.
+
+## Mẫu prompt
+
+```text
+Theo «chẩn đoán trước khi sửa»:
+1. Đọc @path/to/failing-test và triển khai, giải thích nguyên nhân thất bại (trích số dòng stack)
+2. Đưa 2 giả thuyết và cách kiểm chứng chỉ đọc
+3. Tôi xác nhận giả thuyết rồi mới viết bản sửa; sau sửa chỉ chạy test liên quan
+```
+
+## Quan hệ với EPXV
+
+Chẩn đoán có thể xem là bản sâu hơn của giai đoạn **khám phá**; sang giai đoạn kế hoạch còn phải viết rõ “nếu giả thuyết sai thì hoàn tác thế nào”.
+
+## Lỗi thường gặp
+
+- Chưa tái hiện đã sửa code
+- Một patch sửa đồng thời ba vấn đề, không review được
+- Xóa log tạm mà không bổ sung test lâu dài
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, quality, and failure recovery chapters in this handbook; this page only confirms the stable diagnose method—evidence chain first, then minimal fix—not dependent on specific product client implementation.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương lập kế hoạch, chất lượng và phục hồi thất bại đã kiểm chứng của sổ tay; trang này chỉ xác nhận phương pháp chẩn đoán ổn định “dựng chuỗi bằng chứng trước, rồi sửa tối thiểu”, không phụ thuộc triển khai phía sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

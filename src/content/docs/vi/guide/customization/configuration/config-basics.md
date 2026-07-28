@@ -1,142 +1,142 @@
 ---
-title: Configuration Basics
-description: Codex config file locations, common settings, and intro to approval, sandbox, and model settings.
+title: Cơ bản cấu hình
+description: Vị trí tệp cấu hình Codex, mục thường dùng và nhập môn cài đặt phê duyệt/Sandbox/mô hình.
 locale: vi
-source_locale: en
-source_revision: '8848e58'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-Configuration lets you **unify Codex behavior** on your machine or in a project without repeating model, approval level, or sandbox policy every session.
+Tệp cấu hình để bạn trên máy hoặc trong dự án **thống nhất hành vi Codex**, không cần mỗi phiên lặp lại cài mô hình, mức phê duyệt hoặc chiến lược Sandbox.
 
-## On This Page
+## Nội dung trang này
 
-- Where configuration lives; how project-level and user-level stack
-- What people change most: model, approval, sandbox, default working directory
-- Boundary with `AGENTS.md`: configuration manages “capability switches”; AGENTS manages “how to write code in this project”
+- Cấu hình đặt ở đâu, cấp dự án và cấp người dùng chồng thế nào
+- Mục nào hay sửa nhất: mô hình, phê duyệt, Sandbox, thư mục làm việc mặc định
+- Ranh giới với `AGENTS.md`: cấu hình quản «công tắc năng lực», AGENTS quản «dự án viết mã thế nào»
 
-## What Configuration Actually Controls
+## Cấu hình thật sự đang quản gì
 
-Configuration is closer to Codex’s **default working habits**.
+Cấu hình gần hơn với **thói làm việc mặc định** của Codex.
 
-For example:
+Ví dụ:
 
-- Which model to use by default
-- How tight security boundaries are by default
-- Which directory to work in by default
+- Mặc định dùng mô hình nào
+- Mặc định siết ranh giới an toàn chặt bao nhiêu
+- Mặc định làm việc trong thư mục nào
 
-It is not a temporary requirement for one task—it is how work usually starts.
+Nó không quản yêu cầu tạm của một tác vụ, mà là hầu hết trường hợp mặc định bắt đầu làm việc thế nào.
 
-## Configuration Layers
+## Tầng cấu hình
 
-| Layer | Typical location | Content |
+| Tầng | Vị trí điển hình | Nội dung |
 |---|---|---|
-| User | Configuration under `~/.codex/` (exact filenames per official docs) | Default model, personal approval habits |
-| Project | Config snippets in the repo or Codex-related project files | Team-shared sandbox/tool policy |
-| Managed | Organization deployment | Mandatory items individuals cannot override |
+| Cấp người dùng | Cấu hình dưới `~/.codex/` (tên tệp cụ thể lấy tài liệu chính thức) | Mô hình mặc định, thói phê duyệt cá nhân |
+| Cấp dự án | Đoạn cấu hình trong kho hoặc tệp dự án liên quan `codex` | Chiến lược Sandbox/công cụ nhóm chia sẻ |
+| Quản trị | Tổ chức phát hành | Mục bắt buộc cá nhân không phủ được |
 
-**Volatile facts** (paths, field names, TOML keys)—follow [OpenAI Codex documentation](https://developers.openai.com/codex); this page describes concepts and how to decide.
+**Sự kiện dễ thay đổi** (đường dẫn, tên trường, khóa TOML) lấy [tài liệu OpenAI Codex](https://developers.openai.com/codex) làm chuẩn; trang này mô tả khái niệm và cách quyết định.
 
-## Common Misconceptions
+## Hiểu lầm thường gặp
 
-### More configuration is not more professional
+### Cấu hình không phải càng nhiều càng chuyên nghiệp
 
-Many people want to configure everything at first.
+Nhiều người lần đầu tiếp xúc tệp cấu hình, bản năng muốn cấu hết mọi thứ cấu được.
 
-For beginners, usually a few high-frequency settings are enough:
+Nhưng với người mới, thường cố định vài cài đặt tần suất cao là đủ, ví dụ:
 
-- Default model
-- Default approval/sandbox policy
-- Default working directory
+- Mô hình mặc định
+- Chiến lược phê duyệt/Sandbox mặc định
+- Thư mục làm việc mặc định
 
-Stabilizing these first is usually better than studying every field at once.
+Cố định các mục này trước thường phù hợp hơn nghiên cứu hết mọi trường một lần.
 
-### Configuration is not project rules
+### Cấu hình không bằng quy tắc dự án
 
-If a requirement is “every collaborator should follow it,” it usually belongs in `AGENTS.md` or project docs, not only on your machine.
+Nếu một yêu cầu là “mọi cộng tác viên đều nên tuân”, thường phù hợp viết vào `AGENTS.md` hoặc tài liệu dự án hơn chỉ giữ trong cấu hình máy bạn.
 
-For example:
+Ví dụ:
 
-- Which checks before commit
-- Which directories must not change
-- Which tasks must not auto-push
+- Trước commit chạy những kiểm nào
+- Thư mục nào không được sửa
+- Loại tác vụ nào không được tự push
 
-These should not rely only on personal configuration.
+Những thứ này không nên chỉ dựa cấu hình cá nhân duy trì.
 
-## Common Configuration Intents
+## Ý định cấu hình hay sửa
 
-### Model and reasoning
+### Mô hình và suy luận
 
-- Daily development: balance speed and quality
-- Complex refactors: stronger reasoning model (if your plan supports it)
-- Scripts/CI: fixed model for reproducibility
+- Phát triển hàng ngày: cân bằng tốc độ và chất lượng
+- Tái cấu trúc phức tạp: mô hình suy luận mạnh hơn (nếu gói hỗ trợ)
+- Script/CI: khóa mô hình để tái hiện dễ hơn
 
-Concept background: [Models and Reasoning](/guide/foundations/models-and-reasoning/)
+Nền khái niệm: [Mô hình và suy luận](/guide/foundations/models-and-reasoning/)
 
-### Approval and sandbox
+### Phê duyệt và Sandbox
 
-| Intent | Configuration direction |
+| Ý định | Hướng cấu hình |
 |---|---|
-| Beginner / untrusted repo | Stricter approval; limit network and write scope |
-| Trusted personal project | Reduce interruption within safe bounds |
-| Enterprise repo | Follow managed policy; do not relax on your own |
+| Người mới/kho không tin | Phê duyệt nghiêm hơn, hạn chế mạng và phạm vi ghi đĩa |
+| Dự án cá nhân đáng tin | Có thể giảm ngắt trong điều kiện an toàn |
+| Kho doanh nghiệp | Tuân chiến lược quản trị, không tự nới |
 
-Concept background: [Permissions and Approvals](/guide/foundations/permissions-and-approvals/), [Sandbox and Network](/guide/foundations/sandbox-and-network/)
+Nền khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/), [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
 
-### CLI and App consistency
+### Nhất quán CLI và App
 
-The same account on CLI and desktop App should aim for the **same security baseline**—avoid “full CLI permissions, strict App” double standards.
+Cùng tài khoản trên CLI và App máy tính nên theo đuổi **cùng đường cơ sở an toàn**, tránh thói đôi chuẩn «CLI full quyền, App nghiêm».
 
-## Minimum Viable Practice
+## Cách làm tối thiểu dùng được
 
-1. Read the official “Configuration” section; confirm file paths for your version
-2. Change one thing only—for example default sandbox mode; observe a week before tuning
-3. Put team-shared items in repo docs; keep personal preferences local
-4. In `AGENTS.md`, write “recommended way to use Codex with this project,” not a full copy of configuration
+1. Đọc chương «Configuration» chính thức, xác nhận đường dẫn tệp phiên bản hiện tại
+2. Chỉ sửa một mục: ví dụ chế độ Sandbox mặc định, quan sát một tuần rồi chỉnh
+3. Mục nhóm chia sẻ viết vào tài liệu kho; sở thích cá nhân giữ máy cục bộ
+4. Trong `AGENTS.md` viết «khuyến nghị dùng Codex với dự án này thế nào», chứ không sao chép cả cấu hình
 
-## How to Decide Where Something Goes
+## Phán đoán nên đặt ở đâu
 
-If unsure whether something belongs in configuration, `AGENTS.md`, or the task prompt, ask:
+Nếu chưa chắc một thứ nên vào cấu hình, `AGENTS.md` hay Prompt tác vụ, xem các câu hỏi:
 
-1. Is this a default habit for most tasks?
-2. Is this a preference only I care about?
-3. Is this a rule the whole project should share?
+1. Đây có phải thói mặc định hầu hết tác vụ đều dùng không
+2. Đây có phải sở thích chỉ mình tôi quan tâm không
+3. Đây có phải quy tắc cả dự án đều nên cùng tuân không
 
-Usually:
+Hầu hết trường hợp:
 
-- Default habits → configuration
-- Personal preferences → personal layer
-- Team consensus → repo
+- Thói mặc định → vào cấu hình
+- Sở thích cá nhân → giữ tầng cá nhân
+- Đồng thuận nhóm → vào kho
 
-## Relation to CLI Topics
+## Quan hệ với chuyên đề CLI
 
-- Interactive use: [CLI Interactive Mode](/guide/cli/interactive-mode/)
-- Non-interactive and scripts: [Non-Interactive Mode](/guide/cli/non-interactive-mode/)
-- Configuration detail: [CLI Configuration](/guide/cli/configuration/) · [Configuration Reference](/guide/reference/configuration-reference/)
+- Cách dùng tương tác: [Chế độ tương tác CLI](/guide/cli/interactive-mode/)
+- Không tương tác và script: [Chế độ không tương tác](/guide/cli/non-interactive-mode/)
+- Mở rộng chi tiết cấu hình: [Cấu hình CLI](/guide/cli/configuration/) · [Tham chiếu mục cấu hình](/guide/reference/configuration-reference/)
 
-## Common Mistakes
+## Lỗi thường gặp
 
-- Turning off all approval for convenience while opening a project in a production data directory
-- Putting API keys in configuration and committing to Git
-- Docs list config keys that do not match the installed version (no review after CLI upgrade)
+- Để đỡ việc tắt hết phê duyệt, lại mở dự án trong thư mục dữ liệu production
+- Viết API key vào tệp cấu hình rồi commit Git
+- Khóa cấu hình tài liệu viết không khớp phiên bản cài (nâng CLI rồi chưa rà lại)
 
-## Security Boundaries
+## Ranh giới an toàn
 
-Configuration may include **path allowlists, network policy, MCP server lists**—before changing, imagine “could a malicious prompt abuse this setting?” In enterprise environments, administrators should deploy; individuals should not bypass managed policy.
+Tệp cấu hình có thể chứa **danh sách trắng đường dẫn, chiến lược mạng, danh sách máy chủ MCP** — trước khi đổi hãy tưởng tượng «Prompt độc hại có lợi dụng cấu hình này không». Môi trường doanh nghiệp nên do quản trị viên phát hành; cá nhân đừng vòng chiến lược quản trị.
 
-Configuration suits defaults you would otherwise repeat almost every time; you do not need every rule in configuration files.
+Cấu hình phù hợp hơn đặt những mục mặc định bạn gần như mỗi lần đều chọn lại; không cần nhét mọi quy tắc vào tệp cấu hình.
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex configuration documentation
+- Tài liệu cấu hình OpenAI Codex
 - stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 project instruction permission configuration (facts need official verification)
+- KimYx0207 CX-04 cấu hình quyền chỉ thị dự án (sự kiện cần rà chính thức)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI Help Center configuration materials still directly use `~/.codex/config.toml` and `~/.codex/.env`, and note that desktop App/IDE may need a restart to read these settings; this page avoids binding volatile key names and keeps only the stable framework of user-level configuration, managed policy, and common intents such as model/approval/sandbox.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App  
+**Căn cứ kiểm chứng:** Tài liệu cấu hình hiện tại của OpenAI Help Center vẫn dùng trực tiếp `~/.codex/config.toml` và `~/.codex/.env`, và nói App máy tính/IDE có thể cần khởi động lại mới đọc các cài đặt này; nội dung trang đồng thời tránh khóa tên dễ thay đổi, chỉ giữ khung ổn định “cấu hình cấp người dùng, chiến lược quản trị, ý định cấu hình thường gặp như mô hình/phê duyệt/Sandbox”.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,105 +1,105 @@
 ---
-title: Plugin and MCP Risk
-description: What extensions can access, how teams approve and monitor—unified risk view for Skills, Plugins, and MCP.
+title: Rủi ro Plugin và MCP
+description: "Mở rộng truy cập được gì, đội phê duyệt và giám sát thế nào — góc nhìn rủi ro thống nhất cho Skills, Plugin và MCP."
 locale: vi
-source_locale: en
-source_revision: a102da3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Plugins** and **MCP servers** connect Codex to external systems: tickets, databases, internal APIs. More capability means a larger [threat model](/guide/team-enterprise/security/threat-model/) surface for exfiltration and overreach. Read with [MCP overview](/skills/mcp/mcp-overview/) and [Plugins overview](/skills/plugins/plugins-overview/).
+**Plugin** và **máy chủ MCP** nối Codex với hệ thống ngoài: ticket, cơ sở dữ liệu, API nội bộ. Nhiều năng lực hơn nghĩa là bề mặt [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) rộng hơn cho exfiltration và quyền vượt mức. Đọc kèm [Tổng quan MCP](/skills/mcp/mcp-overview/) và [Tổng quan Plugin](/skills/plugins/plugins-overview/).
 
-You do not need perfect definitions on day one. Core point: connecting Codex externally increases capability and risk.
+Ngày đầu không cần định nghĩa hoàn hảo. Điểm trung tâm: nối Codex ra ngoài vừa tăng năng lực vừa tăng rủi ro.
 
-Whether it is called Plugin or MCP, ask:
+Dù gọi là Plugin hay MCP, hãy hỏi:
 
-- What can it read
-- What can it write
-- Who approves
-- How incidents are traced
+- Nó đọc được gì
+- Nó ghi được gì
+- Ai phê duyệt
+- Sự cố lần theo thế nào
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- Extension risk categories
-- Approval lists and version pinning
-- Isolation during debug and incidents
+- Phân loại rủi ro mở rộng
+- Danh sách phê duyệt và ghim phiên bản
+- Cô lập khi debug và sự cố
 
-## Risk categories
+## Phân loại rủi ro
 
-| Type | Example | Control |
+| Loại | Ví dụ | Kiểm soát |
 |---|---|---|
-| Data read | MCP reads customer DB | Read-only account, row-level permissions |
-| Data write | Auto-close tickets, change config | Human approval, dual confirmation |
-| Network | Arbitrary outbound | Egress allowlist |
-| Credentials | OAuth token on disk | Secret management, short-lived tokens |
-| Supply chain | Third-party server update tampering | Pin version, hash lock |
+| Đọc dữ liệu | MCP đọc DB khách hàng | Tài khoản chỉ đọc, quyền theo hàng |
+| Ghi dữ liệu | Tự đóng ticket, đổi cấu hình | Phê duyệt của người, xác nhận kép |
+| Mạng | Outbound tùy ý | Danh sách cho phép egress |
+| Chứng chỉ | Token OAuth trên đĩa | Quản lý secrets, token ngắn hạn |
+| Chuỗi cung ứng | Can thiệp cập nhật máy chủ bên thứ ba | Ghim phiên bản, khóa hash |
 
-## Team approval flow (recommended)
+## Quy trình phê duyệt đội (khuyến nghị)
 
 ```text
-Request (purpose, data class, permissions) → security/architecture review
-    → enter “approved list” repo or internal directory
-    → pin version + owner
-    → quarterly or major-upgrade re-review
+Yêu cầu (mục tiêu, lớp dữ liệu, quyền) → review bảo mật/kiến trúc
+    → đưa vào repo «danh sách được phê duyệt» hoặc thư mục nội bộ
+    → ghim phiên bản + người sở hữu
+    → review lại theo quý hoặc khi nâng cấp lớn
 ```
 
-Experimental personal MCP **should not** share production repo tokens.
+MCP thí nghiệm cá nhân **không nên** chia sẻ token repo production.
 
-## Minimum practices
+## Thực hành tối thiểu
 
-1. **Deny by default** unlisted remote MCP installs
-2. **Local MCP** may still read the whole disk—dedicated OS user or container
-3. **Logs**: tool name and parameter summary (redacted)—see [Hook audit](/skills/hooks/hooks-examples/)
-4. **Skill vs MCP**: Skill describes flow, MCP performs external calls—permissions union; apply strictest policy
+1. **Deny mặc định** cài MCP từ xa không có trong danh sách
+2. **MCP cục bộ** vẫn có thể đọc cả đĩa — dùng user OS riêng hoặc container
+3. **Log**: tên công cụ và tóm tắt tham số (đã làm sạch) — xem [Hook kiểm toán](/skills/hooks/hooks-examples/)
+4. **Skill vs MCP**: Skill mô tả quy trình, MCP thực thi gọi ngoài — hợp quyền; áp dụng chính sách chặt hơn
 
-## Common mistakes
+## Lỗi thường gặp
 
-- “Official marketplace” = “security reviewed”
-- Dev and prod share one MCP OAuth app
-- `DEBUG=*` in debug dumps tokens into CI logs
+- «Marketplace chính thức» = «đã review bảo mật»
+- Dev và prod dùng chung một app OAuth MCP
+- `DEBUG=*` khi debug đổ token vào log CI
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Plugin vs MCP unclear—does it matter early?
+### 1. Plugin vs MCP còn mơ hồ — sớm có quan trọng không?
 
-Not much at first.
+Đầu tiên không nhiều.
 
-Both connect Codex to external systems—permissions and risk apply either way.
+Cả hai đều nối Codex với hệ thống ngoài — quyền và rủi ro áp dụng cho cả hai.
 
-### 2. Why “read-only first”?
+### 2. Vì sao «chỉ đọc trước»?
 
-Read-only usually means:
+Chỉ đọc thường nghĩa là:
 
-- Easier pilot
-- Easier to prove value
-- Lower blast radius on mistakes
+- Thí điểm dễ hơn
+- Chứng minh giá trị dễ hơn
+- Bán kính nổ nhỏ hơn khi lỗi
 
-### 3. Install and forget?
+### 3. Cài xong rồi quên?
 
-Even convenient features need:
+Dù tính năng tiện vẫn cần:
 
-- What data it accesses
-- Whether it writes back
-- How credentials are managed
+- Nó truy cập dữ liệu nào
+- Có ghi ngược không
+- Chứng chỉ quản lý thế nào
 
-For external extensions: permissions and boundaries before feature strength.
+Với mở rộng ngoài: quyền và ranh giới trước sức mạnh tính năng.
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Written approval list or equivalent process
-- [ ] Each production MCP has owner and data classification
-- [ ] Consistent with [Skill security](/skills/security/) policy
+- [ ] Có danh sách phê duyệt bằng văn bản hoặc quy trình tương đương
+- [ ] Mỗi MCP production có người sở hữu và phân loại dữ liệu
+- [ ] Thống nhất với chính sách [Bảo mật Skill](/skills/security/)
 
-## Reference sources
+## Nguồn tham chiếu
 
-- KimYx0207 MCP/Plugin security
-- stormzhang MCP chapter
-- [Debugging MCP](/skills/mcp/debugging-mcp/)
+- Bảo mật MCP/Plugin KimYx0207
+- Chương MCP stormzhang
+- [Gỡ lỗi MCP](/skills/mcp/debugging-mcp/)
 
 ---
 
-**Status:** verified  
-**Products:** CLI / App / Cloud  
-**Verification basis:** OpenAI Help Center plugin docs still emphasize app/plugin capability constrained by role access, action control, confirmation, domain/source boundaries, and underlying source permissions; mapped here to unified Plugin/MCP risk view with read-only first, version pinning, owners, and approval lists.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App / Cloud  
+**Cơ sở kiểm chứng:** Tài liệu plugin Help Center OpenAI vẫn nhấn mạnh năng lực app/plugin bị ràng buộc bởi truy cập theo vai trò, kiểm soát hành động, xác nhận, ranh giới domain/nguồn và quyền nguồn bên dưới; map ở đây thành góc nhìn rủi ro thống nhất Plugin/MCP với chỉ đọc trước, ghim phiên bản, người sở hữu và danh sách phê duyệt.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,60 +1,59 @@
 ---
-title: First task
-description: Complete a small change with a clear prompt and learn how to review results.
+title: Tác vụ đầu tiên
+description: Dùng prompt rõ ràng để hoàn thành một thay đổi nhỏ và học cách kiểm tra kết quả.
 locale: vi
-source_locale: en
-source_revision: 4063d54
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# First task
+# Tác vụ đầu tiên
 
-The example below assumes the **Desktop App** by default; CLI/IDE can use the same prompt.
+Ví dụ sau mặc định dùng **App máy tính**; CLI/IDE cũng có thể dùng cùng một đoạn prompt.
 
-## Meta information
+## Siêu dữ liệu
 
-| Field | Content |
+| Trường | Nội dung |
 |---|---|
-| Audience | Beginners |
-| Client | Desktop App (recommended) |
-| Estimated time | 15–20 minutes |
+| Đối tượng | Người mới bắt đầu |
+| Client | App máy tính (khuyến nghị) |
+| Thời gian ước tính | 15–20 phút |
 
-## 1. Goal and background
+## 1. Mục tiêu và ngữ cảnh
 
-**Goal:** Complete a safe file edit in a practice project.
+**Mục tiêu:** Hoàn thành một lần chỉnh sửa tệp an toàn trong dự án luyện tập.
 
-**Success criteria:** Only the specified file is modified, the result matches the acceptance description, and you can read the diff.
+**Tiêu chí thành công:** Chỉ sửa tệp được chỉ định, kết quả khớp mô tả nghiệm thu, và bạn đọc được diff.
 
-## 2. Preparation
+## 2. Chuẩn bị
 
-- Client installed and signed in
-- Practice project created (with `hello.md` or similar file)
+- Đã cài client và đăng nhập
+- Đã tạo dự án luyện tập (có `hello.md` hoặc tệp tương tự)
 
-## 3. Recommended prompt
+## 3. Prompt đề xuất
 
 ```text
-Goal: Append a section "Today's practice" at the end of hello.md with a three-item bullet list.
-Constraints: Only modify hello.md; do not delete existing content; do not run network requests.
-Acceptance: The heading and exactly three list items appear at the end of the file.
-If information is insufficient, ask me first; do not guess.
+Mục tiêu: Ở cuối hello.md, thêm một mục «Luyện tập hôm nay» với danh sách ba điểm chính.
+Ràng buộc: Chỉ sửa hello.md; không xóa nội dung hiện có; không chạy yêu cầu mạng.
+Nghiệm thu: Cuối tệp xuất hiện tiêu đề đó và đúng ba mục danh sách.
+Nếu thiếu thông tin, hãy hỏi tôi trước; đừng đoán.
 ```
 
-## 4. Execution and review
+## 4. Thực thi và kiểm tra
 
-1. Ask for a short plan first (or request one yourself)
-2. When approving file writes, confirm the path is correct
-3. After completion, check the diff against each acceptance criterion
+1. Trước hết yêu cầu nó đưa kế hoạch ngắn (hoặc bạn chủ động yêu cầu kế hoạch)
+2. Khi phê duyệt ghi tệp, xác nhận đường dẫn đúng
+3. Sau khi xong, đối chiếu từng tiêu chí nghiệm thu với diff
 
-## 5. Next steps
+## 5. Bước tiếp theo
 
-- [Prompt basics](/prompts/basics/)
-- [Verification](/guide/verification/)
-- [Start here](/guide/start-here/)
-
+- [Cơ bản về prompt](/prompts/basics/)
+- [Kiểm chứng](/guide/verification/)
+- [Bắt đầu từ đây](/guide/start-here/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page is a low-risk introductory exercise within the handbook: limited to editing one file, no network access, requiring you to read the diff and check each acceptance criterion. Related prerequisite chapters (installation, practice project, verification) have been cross-checked; content does not depend on specific product version details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Trang này là bài luyện tập nội bộ rủi ro thấp của sổ tay: giới hạn chỉ sửa một tệp, cấm mạng, yêu cầu đọc được diff và kiểm tra từng tiêu chí nghiệm thu; các chương tiền đề liên quan (cài đặt, dự án luyện tập, kiểm chứng) đã đối chiếu chéo; nội dung không phụ thuộc chi tiết phiên bản sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

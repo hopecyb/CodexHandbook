@@ -1,85 +1,86 @@
 ---
-title: Define done
-description: Write checkable completion conditions.
+title: Định nghĩa tiêu chí hoàn thành
+description: Viết điều kiện hoàn thành có thể kiểm tra.
 locale: vi
-source_locale: en
-source_revision: 61ae3f2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people state what they want but not what "done enough" looks like. Then whether the work is finished becomes a matter of feel.
+Nhiều người nêu tác vụ chỉ nói «tôi muốn gì», nhưng không nói rõ «làm đến mức nào thì xong». Kết quả là đã hoàn thành hay chưa chỉ còn cảm giác.
 
-Definition of done is how you plan to verify the result.
+Tiêu chí hoàn thành chính là cách bạn chuẩn bị nghiệm thu kết quả.
 
-Acceptance criteria must be **observable**:
+Tiêu chí nghiệm thu phải **quan sát được**:
 
-- Weak: "code quality improved"
-- Strong: "`npm test` passes; `Button` supports `disabled`; Storybook screenshots match the design"
+- Kém: «chất lượng code tốt hơn»
+- Tốt: «`npm test` pass; component `Button` hỗ trợ `disabled`; ảnh chụp Storybook khớp thiết kế»
 
-## Why tasks often end without a clear "done"
+## Vì sao nhiều tác vụ cuối cùng không nói rõ đã xong chưa
 
-Often goal and definition of done are blended.
+Nhiều khi mục tiêu và tiêu chí hoàn thành bị trộn.
 
-- **Goal:** the outcome you want
-- **Definition of done:** how you confirm that outcome was reached
+- **Mục tiêu**: bạn muốn kết quả gì
+- **Tiêu chí hoàn thành**: bạn xác nhận thế nào rằng kết quả đó thật sự đạt
 
-"Fix this bug" is a goal;  
-"reproducible fix, related tests pass, no new console errors" is closer to definition of done.
+Ví dụ «sửa bug này» là mục tiêu;  
+«có thể tái hiện ổn định bản sửa, kiểm thử liên quan pass, không thêm lỗi console mới» mới gần tiêu chí hoàn thành.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. If it looks roughly right, it's done
+### 1. Kết quả trông gần đúng là xong
 
-This bites hardest on small tasks. "Roughly right" often misses tests, edge cases, and side effects.
+Ở tác vụ nhỏ đây là hố dễ nhất. «Trông gần đúng» thường bỏ sót kiểm thử, biên và tác dụng phụ.
 
-### 2. Definition of done is praising the result in more words
+### 2. Tiêu chí hoàn thành là viết thêm vài câu khen kết quả
 
-Definition of done must be checkable—not a victory speech.
+Tiêu chí hoàn thành phải kiểm tra được, không phải viết như phát biểu tổng kết.
 
-### 3. Build passing equals done
+### 3. Build pass là xong
 
-Not necessarily.
+Không nhất thiết.
 
-Build passing is usually one checkpoint, not proof that:
+Build pass thường chỉ là một checkpoint, không có nghĩa:
 
-- behavior is correct
-- scope wasn't exceeded
-- copy fits the audience
-- sources were verified
+- Chức năng thật sự đúng
+- Phạm vi không vượt
+- Copy phù hợp độc giả
+- Nguồn đã được kiểm chứng
 
-## A common way to write it
+## Một cách viết thường dùng
 
-If you're unsure, pick from these three types:
+Nếu tạm chưa biết viết, chọn từ 3 nhóm này:
 
-- **Functional check:** does behavior match expectation?
-- **Technical check:** build / test / lint pass?
-- **Scope check:** only agreed areas changed?
+- **Kiểm chức năng**: hành vi kết quả có đúng kỳ vọng không
+- **Kiểm kỹ thuật**: build / test / lint có pass không
+- **Kiểm phạm vi**: có chỉ sửa đúng phạm vi đã thỏa thuận không
 
-For example:
+Ví dụ:
 
 ```text
-Acceptance criteria:
-- Only edit docs homepage copy; don't change layout or components
-- `pnpm build` passes
-- Hero copy is easier for beginners; no assumed jargon on first visit
+Tiêu chí nghiệm thu:
+- Chỉ sửa copy trang chủ docs; không đổi layout và component
+- `pnpm build` pass
+- Copy màn hình đầu dễ hiểu hơn với người mới; không mặc định độc giả đã biết thuật ngữ
 ```
 
-## A quick self-check
+## Cách tự kiểm
 
-After writing, ask:
+Sau khi viết, hỏi mình một câu:
 
-> **If someone else had this list, could they judge pass or fail?**
+> **Nếu giao cho người khác bây giờ, họ có thể dựa vào đây để phán «đạt» hay «không đạt» không?**
 
-If not, it's probably still too vague.
+Nếu không, thường vẫn còn quá mơ hồ.
 
-Bottom line: don't let "is it done?" depend on guessing.
+Tóm lại: đừng để «đã xong chưa» chỉ còn đoán.
 
-Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/guide/verification/)
+Đưa lệnh kiểm chứng vào tiêu chuẩn thì Agent mới dễ chủ động chạy: [Chạy kiểm thử](/guide/verification/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains acceptance and definition-of-done writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách viết nghiệm thu và tiêu chí hoàn thành; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

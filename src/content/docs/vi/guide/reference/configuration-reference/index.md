@@ -1,216 +1,216 @@
 ---
-title: Configuration Reference
-description: Conceptual index of Codex user- and project-level configuration keys—paths and fields per official docs.
+title: Tham chiếu cấu hình
+description: "Chỉ mục khái niệm các khóa cấu hình Codex cấp người dùng và dự án — đường dẫn và trường lấy theo tài liệu chính thức."
 locale: vi
-source_locale: en
-source_revision: 04c61aa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Configuration reference pages can overwhelm with keys, layers, and overrides. Start with one question:
+Trang tham chiếu cấu hình có thể choáng với khóa, tầng và ghi đè. Bắt đầu bằng một câu hỏi:
 
-> **What should be configuration—and what should not?**
+> **Điều gì nên là cấu hình — và điều gì không nên?**
 
-Config files often unify **model, sandbox, approval, MCP** behavior. This page is a **conceptual index**; file paths and TOML/YAML keys must follow [OpenAI Codex documentation](https://developers.openai.com/codex) and your installed version.
+Tệp cấu hình thường thống nhất hành vi **mô hình, Sandbox, phê duyệt, MCP**. Trang này là **chỉ mục khái niệm**; đường dẫn tệp và khóa TOML/YAML phải theo [tài liệu OpenAI Codex](https://developers.openai.com/codex) và phiên bản bạn đã cài.
 
-## A decision principle
+## Một nguyên tắc quyết định
 
-Config holds things that **should affect behavior long term**. Usually not:
+Cấu hình chứa điều **nên ảnh hưởng hành vi dài hạn**. Thường không phải:
 
 - Secrets
-- Full team rule prose
-- One-off task instructions
+- Văn xuôi đầy đủ quy tắc đội
+- Chỉ dẫn Tác vụ một lần
 
-Three buckets:
+Ba ngăn:
 
-- **Long-term behavior preferences** → config
-- **Specific task requirements** → prompt / `AGENTS.md` / Skill
-- **Secrets** → environment variables or Secret store
+- **Ưu tiên hành vi dài hạn** → cấu hình
+- **Yêu cầu Tác vụ cụ thể** → Prompt / `AGENTS.md` / Skill
+- **Secrets** → biến môi trường hoặc Secret store
 
-Unsure? Are you changing Codex’s long-term habits or describing this task?
+Do dự? Bạn đang đổi thói quen dài hạn của Codex hay mô tả Tác vụ này?
 
-- Long-term habits → config
-- This task → prompt, `AGENTS.md`, or task description
+- Thói quen dài hạn → cấu hình
+- Tác vụ này → Prompt, `AGENTS.md` hoặc mô tả Tác vụ
 
-## Configuration layers
+## Tầng cấu hình
 
-| Layer | Location (conceptual) | Typical content |
+| Tầng | Vị trí (khái niệm) | Nội dung điển hình |
 |---|---|---|
-| User | `~/.codex/` etc. | Default model, personal approval habits |
-| Project | Config in repo | Team sandbox, MCP list |
-| Environment variables | Shell / CI injection | Keys, temporary switches |
-| Managed | Org-provisioned | Non-overridable mandatory policy |
+| Người dùng | `~/.codex/` v.v. | Mô hình mặc định, thói quen phê duyệt cá nhân |
+| Dự án | Config trong repo | Sandbox đội, danh sách MCP |
+| Biến môi trường | Tiêm shell / CI | Khóa, công tắc tạm |
+| Quản lý | Cấp phát tổ chức | Chính sách bắt buộc không hủy được |
 
-## What each layer manages
+## Mỗi tầng quản gì
 
-- **User**: your personal defaults
-- **Project**: shared defaults for this repo
-- **Environment variables**: runtime-injected values
-- **Managed policy**: org-fixed boundaries you cannot override locally
+- **Người dùng**: mặc định cá nhân của bạn
+- **Dự án**: mặc định dùng chung cho repo này
+- **Biến môi trường**: giá trị tiêm lúc chạy
+- **Chính sách quản lý**: ranh giới tổ chức đã cố định, bạn không hủy cục bộ được
 
-You do not need precedence memorized on day one—know what each layer is for:
+Ngày đầu không cần thuộc độ ưu tiên — biết mỗi tầng dùng để làm gì:
 
-- User: “how I personally like to work”
-- Project: “how this repo wants everyone to work”
-- Environment: “values for this run”
-- Managed: “org already decided”
+- Người dùng: «tôi thích làm việc thế nào»
+- Dự án: «repo này muốn mọi người làm việc thế nào»
+- Môi trường: «giá trị cho lần chạy này»
+- Quản lý: «tổ chức đã quyết rồi»
 
-Intro: [Config basics](/guide/customization/configuration/config-basics/) · CLI focus: [CLI configuration](/guide/cli/configuration/)
+Giới thiệu: [Cơ bản cấu hình](/guide/customization/configuration/config-basics/) · Trọng tâm CLI: [Cấu hình CLI](/guide/cli/configuration/)
 
-## Configuration domains (conceptual)
+## Lĩnh vực cấu hình (khái niệm)
 
-### Model and reasoning
+### Mô hình và suy luận
 
-| Intent | Notes |
+| Ý định | Ghi chú |
 |---|---|
-| Default model | Model ID for new sessions |
-| Reasoning strength | Complexity tier if supported |
-| Sampling (temperature, etc.) | Usually default; pin for scripts |
+| Mô hình mặc định | Model ID cho phiên mới |
+| Sức suy luận | Mức phức tạp nếu hỗ trợ |
+| Sampling (temperature, v.v.) | Thường mặc định; ghim cho script |
 
-Background: [Models and reasoning](/guide/foundations/models-and-reasoning/)
+Ngữ cảnh: [Mô hình và suy luận](/guide/foundations/models-and-reasoning/)
 
-### Sandbox and network
+### Sandbox và mạng
 
-| Intent | Notes |
+| Ý định | Ghi chú |
 |---|---|
-| Filesystem scope | Writable paths, write outside project |
-| Network access | Deny / restricted / allow |
-| Egress domains | Allowlist if supported |
+| Phạm vi filesystem | Đường dẫn ghi được, ghi ngoài dự án |
+| Truy cập mạng | Deny / hạn chế / allow |
+| Domain egress | Danh sách cho phép nếu hỗ trợ |
 
-Background: [Sandbox and network](/guide/foundations/sandbox-and-network/)
+Ngữ cảnh: [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
 
-### Approval policy
+### Chính sách phê duyệt
 
-| Intent | Notes |
+| Ý định | Ghi chú |
 |---|---|
-| Before shell | Always ask / trust list / auto (high risk) |
-| Before file write | Same |
-| MCP tool calls | Per server or tool granularity |
+| Trước shell | Luôn hỏi / danh sách tin cậy / tự động (rủi ro cao) |
+| Trước ghi tệp | Tương tự |
+| Gọi công cụ MCP | Độ chi tiết theo máy chủ hoặc công cụ |
 
-Background: [Permissions and approvals](/guide/foundations/permissions-and-approvals/) · Matrix: [Permission matrix](/guide/reference/permission-matrix/)
+Ngữ cảnh: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/) · Ma trận: [Ma trận quyền](/guide/reference/permission-matrix/)
 
-### Workspace and CLI
+### Workspace và CLI
 
-| Intent | Notes |
+| Ý định | Ghi chú |
 |---|---|
-| Default `cwd` | Startup directory |
-| Non-interactive defaults | exec approval and sandbox |
-| Log level | Raise for troubleshooting |
+| `cwd` mặc định | Thư mục khởi động |
+| Mặc định không tương tác | phê duyệt và Sandbox exec |
+| Mức log | Tăng khi xử lý sự cố |
 
-### MCP servers
+### Máy chủ MCP
 
-| Intent | Notes |
+| Ý định | Ghi chú |
 |---|---|
-| Server list | Command, URL, transport |
-| Env injection | Bound to MCP process—not in Git |
+| Danh sách máy chủ | Lệnh, URL, transport |
+| Tiêm env | Gắn tiến trình MCP — không vào Git |
 
-[Connect MCP](/skills/mcp/connect-an-mcp-server/)
+[Kết nối MCP](/skills/mcp/connect-an-mcp-server/)
 
-### IDE / App extension
+### Extension IDE / App
 
-Some settings live only in extension UI; may share user config backend with CLI—per product docs.
+Một số cài đặt chỉ sống trong UI extension; có thể chia sẻ backend cấu hình người dùng với CLI — theo tài liệu sản phẩm.
 
-[IDE settings](/guide/ide/settings/) · [Desktop App settings](/guide/desktop-app/settings/)
+[Cài đặt IDE](/guide/ide/settings/) · [Cài đặt App máy tính](/guide/desktop-app/settings/)
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Not everything belongs in config
+### 1. Không phải mọi thứ thuộc cấu hình
 
-Often better in:
+Thường tốt hơn trong:
 
 - `AGENTS.md`
-- Environment variables
+- Biến môi trường
 - Skill
-- Current task description
+- Mô tả Tác vụ hiện tại
 
-Config is not a junk drawer.
+Cấu hình không phải thùng chứa vạn năng.
 
-### 2. You do not need every key on day one
+### 2. Ngày đầu không cần mọi khóa
 
-Most people start with:
+Hầu hết bắt đầu với:
 
-- Model
+- Mô hình
 - Sandbox
-- Approval
+- Phê duyệt
 - MCP
 
-Those four cover most early questions.
+Bốn cái này phủ hầu hết câu hỏi ban đầu.
 
-### 3. Project config replaces team docs?
+### 3. Cấu hình dự án thay tài liệu đội?
 
-Config expresses system defaults—not “why and when not to.”
+Cấu hình thể hiện mặc định hệ thống — không phải «vì sao và khi nào không».
 
-### 4. Official keys are many—learn four first
+### 4. Khóa chính thức nhiều — học bốn cái trước
 
-- Default model
-- Sandbox scope
-- Approval policy
-- MCP connections
+- Mô hình mặc định
+- Phạm vi Sandbox
+- Chính sách phê duyệt
+- Kết nối MCP
 
-## vs environment variables
+## vs biến môi trường
 
-| Type | Where |
+| Loại | Ở đâu |
 |---|---|
-| API key, token | Environment variable or secret manager |
-| Non-sensitive switches | Environment variable or config |
-| Coding conventions | `AGENTS.md`, not config |
+| API key, token | Biến môi trường hoặc trình quản lý secrets |
+| Công tắc không nhạy cảm | Biến môi trường hoặc cấu hình |
+| Quy ước code | `AGENTS.md`, không cấu hình |
 
-## Should this go in config?
+## Có nên vào cấu hình không?
 
-Four questions:
+Bốn câu hỏi:
 
-1. Should it apply long term by default?
-2. Is it sensitive?
-3. Personal habit or shared project rule?
-4. Adjusting system behavior or describing this task?
+1. Nên áp dụng mặc định dài hạn?
+2. Có nhạy cảm không?
+3. Thói quen cá nhân hay quy tắc dự án dùng chung?
+4. Điều chỉnh hành vi hệ thống hay mô tả Tác vụ này?
 
-## When adjusting behavior
+## Khi điều chỉnh hành vi
 
-1. Long-term default or one-off task?
-2. Sensitive or ordinary?
-3. Personal or shared?
+1. Mặc định dài hạn hay Tác vụ một lần?
+2. Nhạy cảm hay thông thường?
+3. Cá nhân hay dùng chung?
 
-Then place in config, env, `AGENTS.md`, Skill, or current prompt.
+Rồi đặt vào cấu hình, env, `AGENTS.md`, Skill hoặc Prompt hiện tại.
 
-## Common scenarios
+## Tình huống phổ biến
 
-| Goal | Usually |
+| Mục tiêu | Thường |
 |---|---|
-| Pin a model long term | User or project config |
-| Team wants tests before edits | `AGENTS.md` |
-| This task: only `docs/` | Current prompt |
-| API key / token | Environment or Secret |
-| Connect an MCP | Project config + env |
+| Ghim một mô hình dài hạn | Cấu hình người dùng hoặc dự án |
+| Đội muốn kiểm thử trước khi sửa | `AGENTS.md` |
+| Tác vụ này: chỉ `docs/` | Prompt hiện tại |
+| API key / token | Môi trường hoặc Secret |
+| Kết nối một MCP | Cấu hình dự án + env |
 
-Easier than staring at key lists.
+Dễ hơn cố định danh sách khóa.
 
-Cloud Secrets: [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/)
+Secrets Cloud: [Secrets và biến môi trường](/guide/web-and-cloud/secrets-and-variables/)
 
-## Change discipline
+## Kỷ luật thay đổi
 
-1. Change one config class at a time; observe a week
-2. Project-level changes via PR review
-3. After CLI upgrade, read official migration notes
-4. Never commit secrets in config files
+1. Đổi một lớp cấu hình một lúc; quan sát một tuần
+2. Thay đổi cấp dự án qua review PR
+3. Sau nâng cấp CLI, đọc ghi chú migration chính thức
+4. Không bao giờ commit secrets vào tệp cấu hình
 
-Config is for long-term defaults—not secrets, task prose, or team rule essays.
+Cấu hình dành cho mặc định dài hạn — không secrets, văn xuôi Tác vụ hay thử quy tắc đội.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Doc key names mismatch old CLI
-- Personal relaxed sandbox used on customer repos
-- Config contradicts `AGENTS.md` (config allows, doc forbids)
+- Tên khóa tài liệu không khớp CLI cũ
+- Sandbox cá nhân nới lỏng dùng trên repo khách hàng
+- Cấu hình mâu thuẫn `AGENTS.md` (config cho phép, tài liệu cấm)
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex configuration reference
+- Tham chiếu cấu hình OpenAI Codex
 - stormzhang `18-config.md`
 - KimYx0207 CX-04
 
 ---
 
-**Status:** verified  
-**Products:** CLI / App / IDE  
-**Verification basis:** OpenAI Help Center still documents user-level carriers like `~/.codex/config.toml` and `~/.codex/.env`; this page is explicitly a conceptual index—does not fix specific key names, path precedence, or legacy fields—so `verified` is appropriate.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App / IDE  
+**Cơ sở kiểm chứng:** Help Center OpenAI vẫn ghi các carrier cấp người dùng như `~/.codex/config.toml` và `~/.codex/.env`; trang tường minh là chỉ mục khái niệm — không cố định tên khóa cụ thể, độ ưu tiên đường dẫn hoặc trường legacy — nên `verified` phù hợp.  
+**Kiểm chứng gần nhất:** 2026-07-26

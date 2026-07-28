@@ -1,129 +1,131 @@
 ---
-title: Structured Output
-description: Make exec produce machine-parseable results for downstream steps, dashboards, and gates.
+title: Đầu ra có cấu trúc
+description: "Để `exec` tạo kết quả máy parse được — cho bước sau, dashboard và cổng kiểm soát."
 locale: vi
-source_locale: en
-source_revision: 6a3b81e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many first automations assume Codex will return “reasonable-looking prose.” Fine for humans; awkward for scripts.
+Nhiều người lần đầu tự động hóa mặc định để Codex xuất một đoạn «nghe hợp lý». Người đọc còn ổn; script thì không thân thiện.
 
-Structured output solves a direct problem: Codex returns results in a format you specify.
+Đầu ra có cấu trúc giải quyết vấn đề rất thẳng: để Codex trả kết quả đúng định dạng bạn quy định.
 
-If a non-interactive task only emits free text, downstream steps struggle to judge pass/fail, issue count, or severity. Structured output makes results easier for machines to consume.
+Tác vụ không tương tác nếu chỉ xuất văn bản tự do, phía sau khó tự phán «đạt hay fail», «phát hiện bao nhiêu vấn đề», «mức nghiêm trọng thế nào». Đầu ra có cấu trúc khiến kết quả phù hợp hơn để máy tiếp tục xử lý.
 
-## What this page covers
+## Nội dung trang này
 
-- When to require JSON / Markdown tables / fixed fields
-- Defining schema in prompts
-- Fallback when parsing fails
+- Khi nào yêu cầu JSON / bảng Markdown / trường cố định
+- Cách định nghĩa schema trong Prompt
+- Chiến lược hạ cấp khi parse thất bại
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### Structured output is for the next step
+### Đầu ra có cấu trúc để bước tiếp theo bắt được
 
-JSON and schema are not engineering pedantry—they matter when scripts judge outcomes, bots post comments, or dashboards display results. You need stable shape, not guesswork each run.
+Nhiều người hiểu JSON, schema như chứng bệnh kỹ thuật.
 
-### Stable format ≠ reliable conclusions
+Lý do thực tế hơn: nếu bước sau cần script phán thành bại, bot đăng bình luận, dashboard hiển thị kết quả, bạn cần định dạng ổn định, không phải để chương trình đoán bạn đang nói gì mỗi lần.
 
-Structured output guarantees shape, not correct understanding.
+### Định dạng ổn định ≠ kết luận đáng tin
 
-It solves the output interface—not task definition and verification.
+Đầu ra có cấu trúc chỉ đảm bảo «trông đúng như yêu cầu», không tự đảm bảo hiểu Tác vụ đúng.
 
-## A simple split
+Nó giải quyết giao diện đầu ra, không thay thế định nghĩa Tác vụ và Kiểm chứng kết quả.
 
-- Free text: for humans
-- Structured output: for programs
+## Một phân biệt trực tiếp
 
-If the next step is `jq`, scripts, dashboards, gate rules, or auto-comment bots, do not rely on free-form natural language alone.
+- Văn bản tự do: phù hợp người đọc
+- Đầu ra có cấu trúc: phù hợp chương trình đọc
 
-## Minimal approach
+Nếu bước sau là `jq`, script, dashboard, quy tắc cổng, bot bình luận tự động nhận kết quả, bạn không nên chỉ dựa vào ngôn ngữ tự nhiên tùy hứng.
 
-Fix format requirements at the end of the prompt:
+## Cách làm tối thiểu dùng được
+
+Cố định yêu cầu định dạng cuối Prompt:
 
 ```text
-…(task body)…
+…(nội dung Tác vụ)…
 
-Output requirements:
-- Emit only one JSON object, no markdown code fences
-- Fields: {"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
-- If no issues, findings is an empty array
+Yêu cầu đầu ra:
+- Chỉ xuất một đối tượng JSON, không hàng rào mã markdown
+- Trường: {"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
+- Nếu không có vấn đề, findings là mảng rỗng
 ```
 
-Shell parsing (sketch):
+Parse shell (minh họa):
 
 ```bash
 result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
-## Common pitfalls
+## Bẫy thường gặp
 
-### 1. “Output JSON” but not “only JSON”
+### 1. Chỉ nói «xuất JSON», không nói «chỉ được xuất JSON»
 
-A preamble before the JSON breaks parsers.
+Kết quả mô hình mở đầu bằng lời giải thích rồi mới JSON — parse hỏng.
 
-### 2. Field names change day to day
+### 2. Hôm nay một tên trường, mai một tên trường
 
-Once scripts depend on fields, treat schema as an interface.
+Script đã phụ thuộc trường nào thì phải bảo trì schema như giao diện, không sửa tùy tiện.
 
-### 3. Expecting structure to fix vague tasks
+### 3. Muốn đầu ra có cấu trúc giải quyết mọi mơ hồ
 
-It stabilizes format. If the task is unclear, JSON will just be consistently wrong.
+Nó giải quyết «định dạng ổn định». Nếu Tác vụ vốn định nghĩa không rõ, JSON cũng chỉ ổn định xuất kết quả mơ hồ.
 
-## Recommended workflow
+## Quy trình khuyến nghị
 
 ```text
-Define schema (version v1)
-    → prompt references schema file @schemas/review-output.json
-    → exec run
-    → jq / custom validator
-    → exit 1 on failure
+Định nghĩa schema (số phiên bản v1)
+    → Prompt tham chiếu tệp schema @schemas/review-output.json
+    → Chạy exec
+    → jq / validator tùy chỉnh kiểm tra
+    → Không đạt thì exit 1
 ```
 
-For large output, require a file path field; Agent writes to `artifacts/`, CI uploads artifact.
+Đầu ra lớn có thể yêu cầu ghi đường dẫn tệp; Agent ghi vào `artifacts/`, CI upload artifact.
 
-## How to decide
+## Cách phán đoán
 
-If the next consumer is a program, prefer structure.  
-If the result is mainly for human reading and discussion, free text is often fine.
+Nếu kết quả cần «chương trình bước sau» tiêu thụ tiếp, hãy cấu trúc hóa.  
+Nếu kết quả chủ yếu để người đọc và thảo luận, văn bản tự do thường tự nhiên hơn.
 
-Whenever results feed another program, ask Codex to return agreed fields consistently.
+Chỉ cần kết quả còn phải giao tiếp cho chương trình xử lý, hãy để Codex trả ổn định theo trường đã hẹn.
 
-## Compared to SDK
+## So với SDK
 
 | | CLI + JSON prompt | SDK |
 |---|---|---|
-| Integration cost | Low | Medium |
-| Type safety | Convention + validation | SDK types |
-| Best for | CI scripts | Multi-tenant services |
+| Chi phí tích hợp | Thấp | Trung bình |
+| An toàn kiểu | Theo thỏa thuận + kiểm tra | Có thể dùng kiểu SDK |
+| Phù hợp | Script CI | Dịch vụ đa tenant |
 
-See [SDK overview](/guide/developer-platform/sdk-overview/).
+Xem [Tổng quan SDK](/guide/developer-platform/sdk-overview/).
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Model adds explanation text; JSON parse fails—emphasize “JSON only” in prompt
-- Schema change without version bump; old CI mis-parses
-- Secrets in JSON fields logged
-- No explicit exit behavior on parse failure
+- Đầu ra mô hình lẫn chữ giải thích khiến parse JSON fail — nhấn mạnh «chỉ JSON» trong Prompt
+- Đổi schema không tăng phiên bản, CI cũ parse sai
+- Đưa khóa bí mật vào trường JSON rồi ghi log
+- Không thiết kế hành vi thoát rõ khi parse fail
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Schema file or documented fields exist
-- [ ] CI fails explicitly on parse failure
-- [ ] Sample output in `fixtures/` for regression
-- [ ] Aligned with [exit codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/) strategy
+- [ ] Có tệp schema hoặc trường được ghi tài liệu
+- [ ] CI fail rõ ràng khi parse fail
+- [ ] Giữ mẫu đầu ra trong `fixtures/` để hồi quy
+- [ ] Thống nhất với chiến lược [mã thoát](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI structured outputs general practice (conceptual alignment)
-- KimYx0207 automation output chapter
+- Thực hành chung OpenAI structured outputs (căn chỉnh khái niệm)
+- Chương đầu ra tự động hóa KimYx0207
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API  
-**Verification basis:** OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / API  
+**Cơ sở kiểm chứng:** Tài liệu mô hình/so sánh OpenAI API hiện tại vẫn liệt kê năng lực `Structured outputs`; nội dung trang giới hạn ở thực hành chung «thiết kế giao diện đầu ra ổn định cho Tác vụ không tương tác»; schema JSON, kiểm tra và hạ cấp trong ví dụ thuộc mô tả mẫu kỹ thuật.  
+**Kiểm chứng gần nhất:** 2026-07-26

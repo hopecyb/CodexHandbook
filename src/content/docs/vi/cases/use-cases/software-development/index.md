@@ -1,30 +1,30 @@
 ---
-title: Software development
-description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
+title: Phát triển phần mềm
+description: Lối vào case sửa code, sửa bug, bổ sung kiểm chứng — trọng tâm kiểm soát phạm vi, test và hoàn tác.
 locale: vi
-source_locale: en
-source_revision: 050fe4a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Software development cases focus on this question:
+Case phát triển phần mềm chủ yếu nhìn vấn đề kiểu:
 
-> **How does Codex change real repos accurately, reviewably, and verifiably?**
+> **Codex sửa trong kho thực tế thế nào để đúng, review được, và sau khi sửa còn kiểm chứng được.**
 
-## Cases in this group
+## Lối vào nhóm này
 
-- [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Sửa bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## What this group emphasizes
+## Trọng tâm nhóm này
 
-- How to state task scope clearly
-- Why verification and rollback paths matter from the start
-- Avoiding "while I'm here" extra changes in real development
+- Cách nói rõ phạm vi tác vụ
+- Vì sao đường kiểm chứng và hoàn tác phải nghĩ từ đầu
+- Trong phát triển thực tế, tránh «tiện tay sửa thêm»
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current software-development case entry and development workflow, run tests, and rollback chapters; this page only describes the development case group entry and focus areas.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo lối vào case software-development hiện tại của kho và các chương quy trình phát triển, chạy test, hoàn tác liên quan; trang này chỉ nêu lối vào và trọng tâm của nhóm case phát triển.  
+**Kiểm chứng gần nhất:** 2026-07-26

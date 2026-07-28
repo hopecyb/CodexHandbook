@@ -1,41 +1,41 @@
 ---
-title: 'Example: Writing Skill'
-description: Turn research, outline, draft, and polish into a repeatable writing workflow.
+title: 'Ví dụ: Skill viết'
+description: Gom nghiên cứu, dàn ý, bản thảo, chỉnh sửa thành một quy trình viết tái dùng được.
 locale: vi
-source_locale: en
-source_revision: '6446139'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Writing Skill
+# Ví dụ: Skill viết
 
-## SKILL.md skeleton
+## Khung SKILL.md
 
 ```md
 ---
 name: article-writer
-description: Write technical articles from an outline—in research, draft, and polish. Use when the user wants a blog post, tutorial, or article.
+description: Viết bài kỹ thuật theo dàn ý — gồm nghiên cứu, bản thảo và chỉnh sửa. Dùng khi người dùng muốn viết blog, hướng dẫn, bài đăng.
 ---
 
-## Process
-1. Confirm audience, length, tone, and prohibitions
-2. If material is missing, list outline and mark gaps to fill
-3. Write section by section; confirm direction after key sections if needed
-4. After full draft, fact-check and link-check
-5. Output final draft to specified path
+## Quy trình
+1. Xác nhận đối tượng, độ dài, giọng điệu và mục cấm
+2. Nếu thiếu tư liệu, liệt kê dàn ý trước và đánh dấu điểm cần bổ sung
+3. Viết theo mục; khi cần, xác nhận hướng sau các đoạn then chốt
+4. Sau khi xong toàn bài, kiểm tra sự kiện và liên kết
+5. Xuất bản cuối cùng ra đường dẫn chỉ định
 
-## Do not
-- Do not fabricate citations or data
-- Do not publish to external platforms without approval
+## Cấm
+- Không bịa trích dẫn hoặc dữ liệu
+- Không đăng lên nền tảng ngoài khi chưa được phê duyệt
 ```
 
-## Related
+## Liên quan
 
-- [Write an article case](/cases/write-an-article/)
+- [Case viết bài](/cases/write-an-article/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative `SKILL.md` skeleton organizing writing steps and prohibitions—fits current Skills definition as reusable workflow.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Trang này là khung `SKILL.md` minh họa, tổ chức bước và mục cấm quanh quy trình viết — khớp định nghĩa Skills như workflow tái dùng hiện tại.  
+**Kiểm chứng gần nhất:** 2026-07-26

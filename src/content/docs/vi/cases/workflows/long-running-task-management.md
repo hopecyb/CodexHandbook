@@ -1,83 +1,83 @@
 ---
-title: Long-running task management
-description: Large tasks across hours or sessions—checkpoints, compaction, delegation, and exit conditions.
+title: Quản lý tác vụ dài
+description: Tác vụ lớn xuyên nhiều giờ hoặc nhiều phiên — điểm kiểm tra, nén, ủy thác và điều kiện thoát.
 locale: vi
-source_locale: en
-source_revision: 67e4f30
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Long tasks often run into the same problems: **context fills up**, **people step away**, **direction drifts**, and **it's unclear when to stop**. This page applies [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/) to scenarios that span hours or multiple sessions.
+Vấn đề phổ biến của tác vụ dài: **ngữ cảnh đầy**, **người phải rời**, **hướng bị trôi**, **không biết khi nào dừng**. Trang này đặt [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/) vào kịch bản vài giờ thậm chí nhiều phiên.
 
-## What's covered
+## Trọng tâm trang này
 
-- When to split tasks vs delegate to Cloud
-- What to write in checkpoints and status notes
-- Exit conditions for automated long runs
+- Khi nào tách tác vụ, khi nào ủy thác Cloud
+- Điểm kiểm tra và ghi trạng thái viết gì
+- Điều kiện thoát của tác vụ dài tự động hóa
 
-Related: [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Liên quan: [ủy thác và theo dõi](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
 
-## Signals of a long task
+## Tín hiệu tác vụ dài
 
-- Expected machine time over 30 minutes
-- Multiple subsystems or >20 files involved
-- Waiting on human feedback or external APIs
-- Full E2E / performance test runs required
+- Ước tính hơn 30 phút thời gian máy
+- Liên quan nhiều hệ thống con hoặc >20 tệp
+- Cần chờ phản hồi người hoặc API ngoài
+- Cần chạy E2E / kiểm thử hiệu năng đầy đủ
 
-If any apply, write the plan first—don't chat straight through to the end.
+Khi thỏa bất kỳ điều kiện nào, nên viết kế hoạch trước, đừng chat một mạch đến cuối.
 
-## Three-phase management
+## Quản lý ba giai đoạn
 
-### 1. Freeze the plan
+### 1. Đóng băng kế hoạch
 
-Produce a written plan: scope, non-goals, milestones, acceptance commands. Get human sign-off before large-scale execution.
+Xuất kế hoạch viết: phạm vi, phi mục tiêu, milestone, lệnh nghiệm thu. Người xác nhận rồi mới thực thi quy mô lớn.
 
-[Planning](/guide/agent-work/planning/) · [Subagents](/guide/agent-work/subagents/)
+[Lập kế hoạch](/guide/agent-work/planning/) · [Subagent](/guide/agent-work/subagents/)
 
-### 2. Checkpoints
+### 2. Điểm kiểm tra
 
-After each milestone:
+Mỗi khi xong milestone:
 
-- Commit or stash a reviewable increment
-- Update `PROGRESS.md` or an issue comment: what finished, what's next, blockers
-- When context is full, use [compaction](/guide/context/compaction/) or start a new session + link the progress file
+- Commit hoặc stash phần tăng dần review được
+- Cập nhật `PROGRESS.md` hoặc comment issue: đã xong gì, bước tiếp, mục chặn
+- Khi ngữ cảnh đầy, dùng [nén](/guide/context/compaction/) hoặc mở phiên mới + liên kết tệp tiến độ
 
-### 3. Wrap up or delegate
+### 3. Kết thúc hoặc ủy thác
 
-- When local capacity runs out → [Cloud delegation](/guide/web-and-cloud/delegate-and-follow-up/)
-- For ongoing monitoring → Automation + explicit **max iterations / deadline**
+- Cục bộ không chứa nổi → [ủy thác Cloud](/guide/web-and-cloud/delegate-and-follow-up/)
+- Cần giám sát liên tục → Automation + **max iterations / deadline** rõ ràng
 
-## Exit conditions (required for automation)
+## Điều kiện thoát (bắt buộc với tự động hóa)
 
-| Condition | Description |
+| Điều kiện | Mô tả |
 |---|---|
-| Time limit | Alert if no progress in 4h |
-| Iteration limit | Stop after 3 failures on the same test |
-| Human gate | Must @ someone before changing production config |
-| Success criteria | Tests green + PR opened |
+| Trần thời gian | 4h không tiến triển thì cảnh báo |
+| Trần vòng lặp | Cùng một test thất bại 3 lần thì dừng |
+| Cổng người | Trước khi sửa cấu hình production phải @ người |
+| Điều kiện thành công | Test xanh + PR mở |
 
-## Common mistakes
+## Lỗi thường gặp
 
-- No PROGRESS file—duplicate work after switching sessions
-- Long task with no non-goals; Agent "tidies the whole repo" on the side
-- Cloud task left unapproved overnight
+- Không có tệp PROGRESS, đổi phiên rồi làm lại
+- Tác vụ dài không đặt phi mục tiêu, Agent tiện tay «dọn cả kho»
+- Tác vụ Cloud treo cả đêm không người phê duyệt
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Plan document exists before the long task starts
-- [ ] At least two checkpoints have reviewable diffs
-- [ ] You know how to pause, resume, or hand off
+- [ ] Trước khi bắt đầu tác vụ dài đã có tài liệu kế hoạch
+- [ ] Ít nhất hai điểm kiểm tra có diff review được
+- [ ] Biết cách tạm dừng, phục hồi hoặc bàn giao
 
-## References
+## Nguồn tham chiếu
 
-- codex.bozhouai.com long-task and standard workflow material
-- freestylefly/CodexGuide task capture
-- stormzhang `14-workflows.md`
+- Tác vụ dài và quy trình chuẩn trên codex.bozhouai.com
+- Đóng gói tác vụ freestylefly/CodexGuide
+- `14-workflows.md` của stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public use cases for long-horizon goals and long-task collaboration, plus this handbook's verified handoff/resume, planning, compaction, and delegation chapters; this page covers only stable methods for checkpoints, handoff, and exit conditions on long tasks.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo use cases công khai hiện tại về mục tiêu dài hạn và cộng tác tác vụ dài trên OpenAI Developers, cùng các chương bàn giao phục hồi, lập kế hoạch, nén và ủy thác đã kiểm chứng của sổ tay; trang này chỉ mô tả phương pháp ổn định về điểm kiểm tra, bàn giao và điều kiện thoát của tác vụ dài.  
+**Kiểm chứng gần nhất:** 2026-07-26

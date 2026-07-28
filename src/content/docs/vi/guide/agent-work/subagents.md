@@ -1,134 +1,136 @@
 ---
-title: Subagents
-description: Delegating subtasks to isolated context—when to split, how to hand off, how to accept.
+title: Subagent
+description: Ủy thác tác vụ con cho ngữ cảnh độc lập — khi nào tách, bàn giao thế nào, nghiệm thu thế nào.
 locale: vi
-source_locale: en
-source_revision: 85bd361
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A **Subagent** is an **independent work unit** the main Agent starts for a specific subproblem—relatively isolated context, results summarized back to the main thread.
 
-Think of it as handing a clearly bounded small task to an assistant who only focuses on that piece. Value is not "cooler"—it is cleaner focus, easier parallelism.
+**Subagent** là **đơn vị làm việc độc lập** mà Agent chính khởi động cho một vấn đề con cụ thể; nó có ngữ cảnh tương đối cách ly, hoàn thành rồi tổng hợp kết quả về thread chính.
 
-## Core concept
+Có thể hiểu Subagent là: giao một tác vụ nhỏ rõ ràng cho một trợ lý chỉ tập trung vào việc đó. Giá trị không nằm ở “ngầu hơn”, mà ở “sạch hơn, tập trung hơn, dễ song song hơn”.
 
-| Main Agent | Subagent |
+## Một khái niệm cốt lõi
+
+| Agent chính | Subagent |
 |---|---|
-| Holds global goal and user conversation | Focuses on one subtask |
-| Context includes full history | Cleaner context for deep dive |
-| Coordinates and merges results | Executes exploration, retrieval, specialized implementation |
+| Giữ mục tiêu toàn cục và hội thoại với người dùng | Tập trung vào một tác vụ con |
+| Ngữ cảnh gồm lịch sử đầy đủ | Ngữ cảnh sạch hơn, phù hợp đào sâu |
+| Phối hợp và gộp kết quả | Thực thi khám phá, truy xuất, hiện thực chuyên biệt |
 
-vs [parallel Agents](/guide/desktop-app/parallel-agents/): subagents are usually **delegated by the main Agent**, not multiple windows you open manually (product implementations may overlap—follow current UI).
+Khác với [Agent song song](/guide/desktop-app/parallel-agents/): Subagent thường là đơn vị tác vụ do **Agent chính chủ động ủy thác**, chứ không phải người dùng tự mở nhiều cửa sổ (hiện thực sản phẩm có thể chồng lấn; lấy UI hiện tại làm chuẩn).
 
-## When splitting pays off
+## Khi nào đáng tách
 
-Not every large task needs a split—consider it when:
+Không phải tác vụ lớn là phải tách, mà khi bạn thấy:
 
-- A subproblem needs its own deep dive
-- That subproblem is a different kind of work than the main line
-- You want an independent conclusion before continuing
+- Một vấn đề con bản thân cần đào sâu riêng
+- Vấn đề con đó không cùng loại công việc với dòng chính
+- Bạn muốn nó đưa kết luận độc lập trước rồi mới quay về
 
-Then a subagent usually beats the main thread juggling global and local detail at once.
+Lúc đó tách thành Subagent thường ổn hơn để thread chính vừa lo toàn cục vừa lo chi tiết.
 
-## Use cases
+## Tình huống phù hợp
 
-| Good fit | Poor fit |
+| Phù hợp | Không phù hợp |
 |---|---|
-| Targeted search: "how does auth module validate token" in a large repo | Needs ongoing back-and-forth clarification with you |
-| Parallel research on two technical options | Subtasks need mutually exclusive edits to the same file |
-| Long read-only analysis without polluting main context | No clear deliverable—"just look around" |
+| Trong kho lớn, tìm có hướng «module xác thực kiểm tra token thế nào» | Cần liên tục hỏi lại người dùng để làm rõ yêu cầu |
+| Nghiên cứu song song hai phương án kỹ thuật | Tác vụ con phụ thuộc mạnh việc sửa loại trừ trên cùng một tệp |
+| Phân tích chỉ đọc lâu, tránh làm bẩn ngữ cảnh chính | «Xem tạm» không có artifact giao rõ |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. More subagents is not always better
+### 1. Subagent không phải càng nhiều càng tốt
 
-Too many adds cost:
+Tách quá nhiều mang chi phí mới:
 
-- More results to read
-- Conflicting conclusions
-- Coordination overhead may exceed benefit
+- Bạn phải đọc nhiều kết quả trả về hơn
+- Các Subagent khác nhau có thể kết luận xung đột
+- Chi phí phối hợp có thể cao hơn lợi ích
 
-### 2. Complex task → always subagents?
+### 2. Chỉ cần tác vụ phức tạp là nên tách Subagent ngay?
 
-Not if tightly coupled and needs frequent confirmation—main thread may be cheaper.
+Không nhất thiết.  
+Nếu vấn đề gắn chặt, cần xác nhận với bạn thường xuyên, đẩy thẳng trên thread chính lại tiết kiệm hơn.
 
-### 3. Can subagents also make all the edits?
+### 3. Subagent có thể tiện tay làm hết thay đổi giúp tôi?
 
-Depends on delegation—but safer default:
+Có làm được hay không tùy cách bạn ủy thác; nhưng cách mặc định ổn hơn là:
 
-- Subagent does read-only analysis, comparison, localization
-- Main thread decides whether to modify after reading conclusions
+- Để Subagent làm phân tích chỉ đọc, so sánh, định vị trước
+- Thread chính xem xong kết luận rồi mới quyết có vào sửa hay không
 
-## Recommended workflow
+## Quy trình khuyến nghị
 
-### 1. Main Agent writes subtask contract
+### 1. Agent chính viết rõ hợp đồng tác vụ con
 
 ```text
-Subtask: read-only analysis of session refresh logic in packages/auth.
-Deliverable: summary within 1 page + key file paths + risks.
-Forbidden: change any file; do not push.
+Tác vụ con: Phân tích chỉ đọc logic làm mới session trong packages/auth.
+Giao: Tóm tắt trong 1 trang + đường dẫn tệp then chốt + điểm rủi ro.
+Cấm: Sửa bất kỳ tệp nào, đừng push.
 ```
 
-What matters is clarifying four things:
+Ở đây quan trọng không phải định dạng, mà viết rõ 4 việc:
 
-- Exactly what it owns
-- What output looks like
-- Disallowed actions
-- Who decides after return
+- Nó thật sự chỉ chịu trách nhiệm gì
+- Đầu ra phải trông như thế nào
+- Hành động nào không được làm
+- Sau khi trả về ai quyết
 
-### 2. Subagent executes and returns structured result
+### 2. Subagent thực thi và trả kết quả có cấu trúc
 
-Expected format:
+Định dạng kỳ vọng:
 
 ```text
-## Conclusion
-## Evidence (file:line)
-## Suggested next steps
-## Open questions
+## Kết luận
+## Bằng chứng (tệp:số dòng)
+## Bước tiếp theo đề xuất
+## Vấn đề chưa giải quyết
 ```
 
-### 3. Main Agent merges and decides
+### 3. Agent chính gộp và quyết định
 
-Main thread (or you) picks a path, then enters execution per [explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/).
+Thread chính (hoặc bạn) quyết chọn đường nào, rồi vào giai đoạn thực thi của [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/).
 
-### 4. Acceptance
+### 4. Nghiệm thu
 
-- Can subagent output be verified independently (open files and check)?
-- Did it modify repo without permission?
-- If multiple subagents conflict, is that called out?
+- Đầu ra Subagent có kiểm chứng độc lập được không (mở tệp đối chiếu được)
+- Có vượt quyền sửa kho không
+- Khi nhiều Subagent xung đột kết luận, đã đánh dấu chưa
 
-## When to consider splitting
+## Có thể phán đoán theo vài điều kiện này
 
-If a subtask meets two of three:
+Nếu một tác vụ con thỏa 2 trong 3 điều sau, có thể cân nhắc tách:
 
-1. Can be described independently
-2. Has clear deliverable
-3. Does not need constant sharing of fine-grained context with main thread
+1. Có thể mô tả độc lập
+2. Có artifact giao rõ
+3. Không cần thường xuyên chia sẻ cùng một đống ngữ cảnh vụn với thread chính
 
-## With Skills and MCP
+## Phối hợp với Skill và MCP
 
-- **Skill**: standard deliverable format for subtasks (e.g. security review checklist)
-- **MCP**: subagent read-only queries external tickets; main Agent synthesizes
+- **Skill**: định nghĩa định dạng giao chuẩn của tác vụ con (ví dụ danh sách rà soát bảo mật)
+- **MCP**: Subagent truy vấn chỉ đọc ticket bên ngoài; Agent chính tổng hợp quyết định
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Subagent scope too large—becomes second main Agent
-- No structured return—main thread re-reads long logs
-- Multiple subagents editing same directory concurrently
+- Phạm vi Subagent quá lớn, thành Agent chính thứ hai
+- Không yêu cầu trả về có cấu trúc, thread chính phải đọc lại nhật ký dài
+- Nhiều Subagent sửa cùng một thư mục cùng lúc
 
-Subagents fit subproblems with clear boundaries, clear deliverables, and independent completion—not duplicating the entire main task.
+Subagent phù hợp nhất với vấn đề con “ranh giới rõ, giao rõ, hoàn thành độc lập được”; không phù hợp để copy lại cả tác vụ chính.
 
-## Further reading
+## Đọc thêm
 
-- [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)
-- [Handoff and resume](/guide/agent-work/handoff-and-resume/)
+- [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/)
+- [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
 - KimYx0207 CX-08; stormzhang `21-subagents.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked with OpenAI Developers public material on multi-agent, long-running, and parallel workflows; this page confirms stable principles—isolated subtasks, clear boundaries, explicit deliverables—while UI and scheduling details remain non-contractual "per current product."  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với mô tả công khai hiện tại của OpenAI Developers về multi-agent, tác vụ dài hạn và quy trình song song; trang này chỉ xác nhận nguyên tắc ổn định “tác vụ con độc lập, ranh giới rõ, giao rõ”; chỗ liên quan UI hiện tại hoặc hiện thực điều phối cụ thể đều giữ diễn đạt không mang tính hợp đồng theo kiểu “lấy sản phẩm hiện tại làm chuẩn”.  
+**Kiểm chứng gần nhất:** 2026-07-26

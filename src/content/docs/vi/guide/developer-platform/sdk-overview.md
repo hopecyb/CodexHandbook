@@ -1,97 +1,97 @@
 ---
-title: SDK Overview
-description: Start Codex tasks from your application via the official SDK—authentication, sessions, and error-handling concepts.
+title: Tổng quan SDK
+description: "Khởi tạo Tác vụ Codex trong ứng dụng qua SDK chính thức — khái niệm xác thực, phiên và xử lý lỗi."
 locale: vi
-source_locale: en
-source_revision: 578f7f1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The SDK (name and language per [official docs](https://developers.openai.com/codex)) lets you create tasks, poll status, and fetch results from **your own service**, not only via the terminal TUI.
+SDK (tên và ngôn ngữ lấy theo [tài liệu chính thức](https://developers.openai.com/codex)) cho phép bạn tạo Tác vụ, polling trạng thái, lấy kết quả trong **dịch vụ của chính bạn**, thay vì chỉ dựa vào TUI terminal.
 
-If “SDK” is new to you, think of it as a development toolkit for programs to call Codex—not a UI you click through.
+Nếu lần đầu thấy «SDK», hãy hiểu đó là bộ công cụ để chương trình gọi Codex, không phải giao diện để người bấm từng bước.
 
-In other words, it fits when **your system calls Codex**. For one-off tasks, you usually do not need the SDK yet.
+Nói cách khác, nó phù hợp khi «hệ thống của bạn gọi Codex». Nếu chỉ tạm giao một Tác vụ, thường chưa cần SDK.
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- When to use the SDK vs CLI `exec`
-- Authentication and tenant isolation
-- How to pair with webhooks and queues
+- Khi nào dùng SDK thay vì CLI `exec`
+- Xác thực và cô lập tenant
+- Cách phối hợp với Webhook và hàng đợi
 
-Platform overview: [Developer platform](/guide/developer-platform/)
+Tổng quan nền tảng: [Nền tảng dành cho nhà phát triển](/guide/developer-platform/)
 
 ## SDK vs CLI
 
 | | SDK | CLI `exec` |
 |---|---|---|
-| Integration point | Backend services, internal tools | Shell, GitHub Actions |
-| State management | Your code owns it | Process exit code |
-| Best for | Multi-tenant products, custom UI | Simple pipelines |
+| Vị trí tích hợp | Backend, công cụ nội bộ | Shell, GitHub Actions |
+| Quản lý trạng thái | Code của bạn chịu trách nhiệm | Mã thoát tiến trình |
+| Phù hợp | Sản phẩm đa tenant, UI tùy chỉnh | Pipeline đơn giản |
 
-Many teams use **CLI in CI, SDK in product**.
+Nhiều đội **CI dùng CLI, sản phẩm dùng SDK**.
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. What is the difference between SDK and CLI?
+### 1. SDK và CLI khác nhau thế nào
 
-Roughly:
+Có thể hiểu đại khái như sau:
 
-- **CLI**: humans or scripts call from the terminal
-- **SDK**: you write code to embed Codex in your service
+- **CLI**: người hoặc script gọi trong terminal
+- **SDK**: bạn viết code, nhúng năng lực Codex vào dịch vụ của mình
 
-### 2. Should I learn the SDK first?
+### 2. Tôi có nên học SDK trước không
 
-Usually not.
+Thường thì không.
 
-If you mainly want to learn Codex, local entry points and interactive CLI are usually a better first step.
+Nếu chỉ muốn học dùng Codex trước, lối vào cục bộ và chế độ tương tác CLI thường phù hợp hơn làm bước đầu.
 
-### 3. When is the SDK worth it?
+### 3. Khi nào SDK mới đáng dùng
 
-When you start hitting needs like:
+Ví dụ khi bạn bắt đầu cần:
 
-- Triggering Codex tasks from your product
-- Managing task state and results yourself
-- Building custom UI, permissions, and workflows
+- Khởi tạo Tác vụ Codex trong sản phẩm nội bộ
+- Tự quản lý trạng thái và kết quả Tác vụ
+- Làm UI, quyền và quy trình tùy chỉnh
 
-The SDK fits “connecting systems programmatically,” not as the main entry for first-time Codex users.
+SDK phù hợp «nối hệ thống cho chương trình», không phù hợp làm lối vào chính lần đầu dùng Codex.
 
-## Core concepts (language-agnostic)
+## Khái niệm cốt lõi (độc lập ngôn ngữ)
 
-1. **Authentication**: org API key or OAuth delegation—follow least scope
-2. **Task / thread**: one user request maps to a traceable ID
-3. **Tool policy**: server-side sandbox and approval aligned with clients
-4. **Results**: message history, file diffs, artifact URLs (per API)
-5. **Errors**: distinguish retryable (429) from non-retryable (400)
+1. **Xác thực**: API key tổ chức hoặc OAuth ủy quyền — tuân theo scope tối thiểu
+2. **Tác vụ / Thread**: mỗi yêu cầu người dùng có ID theo dõi được
+3. **Chiến lược công cụ**: máy chủ chỉ định Sandbox và Phê duyệt, thống nhất với client
+4. **Kết quả**: lịch sử tin nhắn, Diff tệp, URL artifact (tùy API)
+5. **Lỗi**: phân biệt có thể thử lại (429) và không thử lại (400)
 
-Error index: [Error reference](/guide/reference/error-reference/)
+Chỉ mục lỗi: [Tham chiếu lỗi và thông báo](/guide/reference/error-reference/)
 
-## Minimal integration checklist
+## Checklist tích hợp tối thiểu
 
-- [ ] Trial on staging with a read-only repo
-- [ ] Log redaction; do not log full user prompts if they contain PII
-- [ ] Timeout and cancel: abort when the user leaves the page
-- [ ] Pin SDK and model IDs
+- [ ] Thử trên staging với repo chỉ đọc
+- [ ] Làm sạch log; không ghi đầy đủ Prompt người dùng nếu có PII
+- [ ] Timeout và hủy: người dùng rời trang thì dừng được Tác vụ
+- [ ] Ghim phiên bản SDK và model ID
 
-## Connecting to CI/CD
+## Nối với CI/CD
 
-The SDK can trigger Cloud or remote runners, or CI can callback your service to update PR status. Example patterns: [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/).
+SDK kích hoạt Cloud hoặc remote runner, hoặc CI gọi ngược dịch vụ của bạn để cập nhật trạng thái PR. Mẫu ví dụ xem [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/).
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Using browser session cookies as API keys
-- No concurrency limits, spiking quota under load
-- Auto-merging PRs produced by the SDK
+- Dùng session cookie trên trình duyệt người dùng làm API key
+- Không giới hạn đồng thời, đỉnh lưu lượng làm hết quota
+- Tự động merge PR do SDK tạo ra
 
-## Reference sources
+## Nguồn tham chiếu
 
 - OpenAI Codex SDK reference
-- KimYx0207 developer integration chapter
+- Chương tích hợp nhà phát triển KimYx0207
 
 ---
 
-**Status:** verified  
-**Products:** API  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public Codex API/model and developer-platform use cases, plus verified developer-platform overview, CI/CD, and non-interactive chapters in this handbook; this page only confirms the stable split that the SDK fits programmatic integration, state management, and custom UI.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** API  
+**Cơ sở kiểm chứng:** Đã đối chiếu với mô tả công khai hiện tại của OpenAI Developers về Codex API/mô hình và use case nền tảng nhà phát triển, cùng các chương nền tảng, CI/CD và chế độ không tương tác đã kiểm chứng trong sổ tay này; trang chỉ xác nhận nguyên tắc phân công ổn định rằng SDK phù hợp tích hợp theo chương trình, quản lý trạng thái và UI tùy chỉnh.  
+**Kiểm chứng gần nhất:** 2026-07-26

@@ -1,61 +1,62 @@
 ---
-title: Review template
-description: Structured review of diffs and change risk.
+title: Mẫu review
+description: Review có cấu trúc về diff và rủi ro thay đổi.
 locale: vi
-source_locale: en
-source_revision: b70db08
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Review template
+# Mẫu review
 
-Review tasks often derail when they become "I'll fix it for you."
+Chỗ dễ lệch nhất của tác vụ review là ngay từ đầu biến thành «tiện tay sửa giúp bạn».
 
-Find problems first, then decide whether to change—steadier flow.
+Tìm vấn đề trước, rồi mới quyết có sửa hay không—ổn định hơn.
 
-## Template
+## Mẫu
 
 ```text
-Review the diff against 【main/target branch】; do not change code yet.
-Dimensions:
-1. Beyond 【issue/spec】 scope?
-2. Logic errors, edge cases, error handling
-3. Security (secrets, injection, permissions)
-4. Tests and docs aligned with changes?
-Output a graded list: 🔴 blocking / 🟡 suggestion / 🟢 pass, each with file and line.
+Hãy review diff hiện tại so với 【main/nhánh mục tiêu】; chưa sửa code.
+Chiều:
+1. Có vượt phạm vi 【issue/đặc tả】 không
+2. Lỗi logic, biên, xử lý lỗi
+3. Bảo mật (khóa bí mật, injection, quyền)
+4. Kiểm thử và tài liệu có khớp thay đổi không
+Xuất danh sách phân cấp: 🔴 Chặn / 🟡 Đề xuất / 🟢 Đạt; mỗi mục kèm tệp và số dòng.
 ```
 
-## When to use this template
+## Khi nào phù hợp mẫu này
 
-- PR review
-- Diff review
-- Risk review of doc or config changes
+- Review PR
+- Review diff
+- Review rủi ro một vòng thay đổi tài liệu hoặc cấu hình
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Review means "give some opinions"
+### 1. Review là để nó góp vài ý kiến
 
-More precisely: find issues along a fixed structure.
+Chính xác hơn: để nó tìm vấn đề theo cấu trúc.
 
-### 2. No obvious bugs equals pass
+### 2. Không có bug rõ là đạt
 
-Also check:
+Review còn nên xem:
 
-- scope creep
-- tests and docs coverage
-- security and boundary issues
+- Có vượt phạm vi không
+- Kiểm thử và tài liệu có theo kịp không
+- Có vấn đề bảo mật và biên không
 
-The review template surfaces risk by dimension—not vague "good or bad."
+Trọng tâm mẫu review là lật rủi ro theo chiều cố định—không phải đánh giá chung «hay hay dở».
 
-## Related
+## Liên quan
 
-- [Review before merge](/cases/workflows/review-before-merge/)
-- [Review a PR case](/cases/review-a-pr/)
+- [Review trước khi merge](/cases/workflows/review-before-merge/)
+- [Case review PR](/cases/review-a-pr/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a review-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu review; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

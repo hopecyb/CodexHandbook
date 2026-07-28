@@ -1,123 +1,131 @@
 ---
-title: Write a Guide Page
-description: Structure, frontmatter, and cross-link conventions for new handbook guides.
+title: Viết trang hướng dẫn
+description: Cấu trúc, frontmatter và quy ước liên kết chéo cho nội dung sổ tay mới.
 locale: vi
-source_locale: en
-source_revision: 78da82d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This page explains how to add or revise **guide-style** pages in `src/content/docs/` (not pure cases or pure reference tables).
+Trang này giải thích cách thêm hoặc viết lại trang **kiểu hướng dẫn** trong `src/content/docs/` (không phải case thuần, không phải bảng tham chiếu thuần).
 
-## What this page covers
+## Nội dung trang này
 
-Common blockers:
+Các điểm kẹt thường gặp gồm:
 
-- What a guide page should look like
-- Tutorial vs policy vs index summary
-- How to actually help newcomers
+- Không biết một trang hướng dẫn nên trông thế nào
+- Không chắc mình đang viết “tutorial”, “quy chuẩn”, hay “tóm tắt mục lục”
+- Không biết viết thế nào mới thật sự giúp người mới
 
-## Role of a guide page
+Ở đây tách các vấn đề đó để bạn viết được trang hướng dẫn dễ duy trì sau này và độc giả cũng đọc hiểu.
 
-A guide is not “dump information.” It should move readers from “I know this topic exists” to “I know when to use it, what to read first, and what to avoid.”
+## Vai trò của trang hướng dẫn
 
-Not only a bullet list or command sheet—it should show next steps.
+“Trang hướng dẫn” ở đây không phải chất đống tài liệu là xong. Nó phải giúp độc giả từ “tôi biết chủ đề này tồn tại” đến “tôi đại khái biết khi nào dùng, xem gì trước, tránh hố nào”.
+
+Vậy thường nó không chỉ là danh sách kiến thức, cũng không chỉ là danh sách lệnh, mà còn phải để độc giả biết bước tiếp theo đi đâu.
 
 ## Frontmatter
 
 ```yaml
 ---
-title: Page title
-description: One sentence on what problem this page solves
+title: Tiêu đề trang
+description: Một câu nói rõ vấn đề trang này giải quyết
 ---
 ```
 
-Optional unified footer (match existing pages):
+Có thể dùng chân trang thống nhất ở cuối (khớp trang hiện có):
 
 ```markdown
 ---
 
-**Status:** planned | draft | review | verified | outdated | archived
-**Products:** App / CLI / IDE / Cloud
-**Last verified:** YYYY-MM-DD
+**Trạng thái:** planned | draft | review | verified | outdated | archived
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud
+**Kiểm chứng gần nhất:** YYYY-MM-DD
 ```
 
-## Recommended structure
+## Cấu trúc khuyến nghị
 
-Per [external source integration template](/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, recommended page template), common sections:
+Chọn mục theo [mẫu tích hợp nguồn ngoài](/docs/planning/external-source-integration.md#6-推荐页面模板), tổ hợp thường gặp:
 
-- What problem the page solves
-- Who it is for
-- Minimal viable approach
-- Recommended workflow
-- Common mistakes
-- Security boundaries
-- Acceptance checklist
-- Reference sources
+- Trang giải quyết vấn đề gì
+- Phù hợp ai
+- Cách làm tối thiểu dùng được
+- Quy trình khuyến nghị
+- Lỗi thường gặp
+- Ranh giới an toàn
+- Danh sách nghiệm thu
+- Nguồn tham khảo
 
-Product how-tos may be step-heavy; concept pages may use tables and diagrams.
+Trang thao tác sản phẩm có thể nghiêng về bước; trang khái niệm có thể nghiêng về bảng và sơ đồ.
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### Not every page is an encyclopedia
+### Không phải trang nào cũng viết thành bách khoa
 
-Lead with:
+Lần đầu viết trang hướng dẫn, dễ nhét hết mọi thứ biết vào, kết quả trọng tâm lại mất.
 
-- Main problem
-- What readers misunderstand
-- One usable approach or decision rule
+Cách viết phổ biến hơn:
 
-Better for newcomers than every detail at once.
+- Nói trước trang chủ yếu giải quyết vấn đề gì
+- Rồi nói độc giả dễ hiểu nhầm gì nhất
+- Rồi đưa một cách làm hoặc cách phán đoán đủ dùng
 
-### Write for readers, not only yourself
+Thường giúp người mới hơn là nhồi hết chi tiết một lần.
 
-Bridge for first-time visitors:
+### Không chỉ nghĩ mình viết được, còn phải nghĩ người khác đọc thế nào
 
-- Who it is for
-- What they can solve after reading
-- What to grab first for a quick start
+Bạn biết ngữ cảnh, nhưng độc giả lần đầu không biết.
 
-### Guides do not replace official docs
+Vậy cần cố bổ sung cầu nối:
 
-Community handbook helps understanding and landing—but volatile facts need official verification.
+- Trang phù hợp ai
+- Đọc xong nên giải quyết được gì
+- Nếu chỉ muốn bắt đầu trước, nắm điểm nào trước
 
-## Cross-links
+### Trang hướng dẫn không thay thế tài liệu chính thức
 
-- Internal links use root paths: `/cases/workflows/explore-plan-execute-verify/`
-- Link to authoritative pages; avoid long duplication
-- Register new pages in chapter `index.md` and `astro.config.mjs` sidebar
+Sổ tay cộng đồng giúp độc giả hiểu, nối và áp dụng, nhưng sự kiện hay thay đổi vẫn phải quay về tài liệu chính thức để kiểm chứng.
 
-## Tone
+## Liên kết chéo
 
-- Simplified Chinese is source; English translations follow source structure
-- Acknowledge uncertainty (“per official documentation”)
-- Avoid “magic prompt” narrative
+- Liên kết nội bộ dùng đường dẫn gốc: `/cases/workflows/explore-plan-execute-verify/`
+- Liên kết tới trang có thẩm quyền, tránh lặp đoạn dài
+- Trang mới đăng ký trong `index.md` của chương và sidebar `astro.config.mjs`
 
-## Writing order
+## Giọng văn
 
-1. What problem does this page solve?
-2. What do readers misunderstand or skip?
-3. Minimal approach, workflow, or decision rule
-4. Cross-links and reference sources
+- Tiếng Việt, hướng tới người thực hành
+- Thừa nhận sự không chắc chắn («lấy tài liệu chính thức làm chuẩn»)
+- Không dùng câu chuyện «Prompt vạn năng»
 
-## Verification
+## Thứ tự viết
 
-Before PR, read [Verify technical content](/guide/contributing/verify-technical-content/). Commands, pricing, permissions, etc. must be re-checked.
+Có thể viết theo thứ tự:
 
-A good guide tells first-time readers why the page exists, what to read first, and where to go next—not only “all the facts.”
+1. Viết trước trang thật sự giải quyết vấn đề gì
+2. Rồi viết điểm độc giả dễ hiểu nhầm hoặc nhảy bước
+3. Rồi bổ sung cách làm tối thiểu, quy trình hoặc cách phán đoán
+4. Cuối cùng bổ sung liên kết chéo và nguồn tham khảo
 
-## Reference sources format
+## Kiểm chứng
+
+Trước khi gửi PR, đọc [Kiểm chứng nội dung kỹ thuật](/guide/contributing/verify-technical-content/). Lệnh, giá, quyền và thông tin dễ thay đổi khác phải rà lại.
+
+Trang hướng dẫn tốt không nằm ở “viết đủ tài liệu”, mà ở chỗ để độc giả lần đầu biết trang vì sao tồn tại, xem gì trước, bước tiếp theo đi đâu.
+
+## Cách viết nguồn tham khảo
 
 ```markdown
-## Reference sources
+## Nguồn tham khảo
 
-- OpenAI Codex official documentation
-- Community structure reference: CodexGuide (topics only, not verbatim)
+- Tài liệu chính thức OpenAI Codex
+- Tham khảo cấu trúc cộng đồng: CodexGuide (chỉ chủ đề, không nguyên văn)
 ```
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked current doc frontmatter, footer status system, cross-link habits, and sidebar maintenance; describes writing conventions—not specific product version details.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Căn cứ kiểm chứng:** Đã rà theo frontmatter tài liệu hiện tại của kho, hệ trạng thái chân trang, thói quen liên kết chéo và cách duy trì sidebar; trang này mô tả quy chuẩn viết và gợi ý cấu trúc nội dung sổ tay, không phụ thuộc chi tiết phiên bản sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

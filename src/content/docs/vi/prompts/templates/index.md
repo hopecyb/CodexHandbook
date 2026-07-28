@@ -1,68 +1,70 @@
 ---
-title: Prompt templates
-description: Reusable prompt skeletons by task type—understand, create, change, diagnose, review, research, automate.
+title: Mẫu Prompt
+description: Khung Prompt tái sử dụng theo loại tác vụ—hiểu, tạo, sửa, chẩn đoán, review, nghiên cứu, tự động hóa.
 locale: vi
-source_locale: en
-source_revision: e24d44b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Prompt templates
+# Mẫu Prompt
 
-People often react two ways to "templates":
+Khi thấy «mẫu», phản ứng thường có hai kiểu:
 
-- templates feel too rigid, so they skip them
-- or they copy verbatim without knowing what to customize
+- Hoặc thấy mẫu quá cứng, không muốn dùng
+- Hoặc copy nguyên xi, kết quả không phân biệt được chỗ nào cần sửa
 
-Templates mainly help you not drop key sections—they don't think for you.
+Vai trò chính của mẫu là giúp bạn ít bỏ sót đoạn then chốt—không thay bạn suy nghĩ.
 
-Template pages preserve task structure, not the one true answer.
+Mục tiêu trang mẫu là giữ cấu trúc tác vụ, không thay bạn tạo đáp án duy nhất đúng.
 
-## How to use templates
+## Cách dùng mẫu
 
-1. Pick the closest template type
-2. Replace `【】` placeholders with your real task
-3. Delete irrelevant sections
-4. Add constraints and acceptance specific to this run
+Có thể dùng như sau:
 
-Templates are scaffolding, not answer keys.
+1. Chọn loại mẫu gần tác vụ nhất
+2. Thay nội dung placeholder `【】` bằng tác vụ thật của bạn
+3. Xóa đoạn không liên quan
+4. Bổ sung ràng buộc và nghiệm thu riêng của lần này
 
-| Template | When to use |
+Mẫu giống giàn giáo hơn là đáp án chuẩn.
+
+| Mẫu | Tình huống phù hợp |
 |---|---|
-| [Understand](/prompts/templates/understand/) | Read codebase, docs, or materials to build shared understanding first |
-| [Create](/prompts/templates/create/) | Build features, documents, or artifacts from scratch |
-| [Change](/prompts/templates/change/) | Iterate on something that already exists |
-| [Diagnose](/prompts/templates/diagnose/) | Find root cause before changing code |
-| [Review](/prompts/templates/review/) | Review diffs, PRs, or document changes |
-| [Research](/prompts/templates/research/) | Investigation and comparison with citations |
-| [Automate](/prompts/templates/automate/) | Repeatable tasks, scripts, unattended flows |
+| [Hiểu](/prompts/templates/understand/) | Đọc codebase, tài liệu hoặc tư liệu; lập nhận thức trước |
+| [Tạo](/prompts/templates/create/) | Triển khai từ đầu chức năng, bản thảo hoặc Artifact |
+| [Sửa](/prompts/templates/change/) | Lặp lại thay đổi trên nền hiện có |
+| [Chẩn đoán](/prompts/templates/diagnose/) | Định vị nguyên nhân gốc; chưa sửa code |
+| [Review](/prompts/templates/review/) | Review diff, PR hoặc thay đổi tài liệu |
+| [Nghiên cứu](/prompts/templates/research/) | Khảo sát và so sánh kèm trích dẫn |
+| [Tự động hóa](/prompts/templates/automate/) | Tác vụ lặp, script và quy trình không người trực |
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Templates are copy-paste artifacts
+### 1. Mẫu là để copy nguyên xi
 
-Without editing placeholders and trimming sections, templates hollow out the task.
+Nếu không sửa placeholder và không xóa đoạn không liên quan, mẫu phản lại làm tác vụ trống rỗng.
 
-### 2. Using a template automatically makes prompts "professional"
+### 2. Chỉ cần dùng mẫu thì Prompt tự nhiên chuyên nghiệp
 
-Templates preserve structure—they don't decide:
+Mẫu chỉ giúp giữ cấu trúc; không thay bạn quyết:
 
-- the real goal
-- where constraints should land
-- how acceptance should read
+- Mục tiêu thật là gì
+- Ràng buộc nên vạch đến đâu
+- Nghiệm thu nên viết thế nào
 
-### 3. More template is better
+### 3. Mẫu càng đầy càng tốt
 
-For beginners, "enough but not bloated" is fine.
+Với người mới, mẫu «đủ dùng nhưng không phình» là được.
 
-Pick the right type first, then adapt it—don't treat the template itself as the task.
+Chọn đúng loại mẫu trước, rồi sửa thành tác vụ của bạn; đừng coi bản thân mẫu là tác vụ.
 
-Writing principles: [Prompt basics](/prompts/basics/) and [Task anatomy](/prompts/task-anatomy/).
+Nguyên tắc viết xem [Cơ bản về Prompt](/prompts/basics/) và [Cấu trúc tác vụ](/prompts/task-anatomy/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains template usage only; in-site links and template categories were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ mô tả cách dùng mẫu; liên kết nội bộ và phân loại mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

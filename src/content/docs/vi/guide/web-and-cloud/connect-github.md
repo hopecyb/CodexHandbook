@@ -1,101 +1,101 @@
 ---
-title: Connect GitHub
-description: Connecting Codex Cloud to GitHub repos—permissions, branches, and environments.
+title: Kết nối GitHub
+description: "Nối Codex Cloud với repo GitHub — quyền, nhánh và môi trường."
 locale: vi
-source_locale: en
-source_revision: 610e94e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-After you connect GitHub, Codex can clone repos, create branches, push, and open PRs in a **remote environment**—the prerequisite for Cloud workflows.
+Sau khi kết nối GitHub, Codex có thể clone repo, tạo nhánh, push và mở PR trong **môi trường từ xa** — tiền đề cho quy trình Cloud.
 
-## What's covered
+## Nội dung phủ
 
-- Why connection is needed and which permissions to grant
-- Pre- and post-connection checklists
-- How this differs from local desktop tasks
+- Vì sao cần kết nối và nên cấp quyền nào
+- Checklist trước và sau khi kết nối
+- Khác gì với Tác vụ cục bộ trên máy tính
 
-## Relationship diagram
+## Sơ đồ quan hệ
 
 ```text
-Your GitHub repository
-    ↕ (OAuth / GitHub App—product-dependent)
-Codex Cloud environment
+Repository GitHub của bạn
+    ↕ (OAuth / GitHub App — tùy sản phẩm)
+Môi trường Codex Cloud
     ↕
-Cloud tasks you start in Web/App
+Tác vụ Cloud bạn khởi động trên Web/App
 ```
 
-The local [desktop App](/guide/desktop-app/) can still edit your machine's clone directly; Cloud fits **standardized environments, running while away from your desk, and mobile approvals**. See [local vs cloud](/guide/foundations/local-vs-cloud/).
+[App máy tính](/guide/desktop-app/) cục bộ vẫn có thể sửa trực tiếp bản clone trên máy; Cloud phù hợp **môi trường chuẩn hóa, chạy khi không ngồi máy và Phê duyệt trên mobile**. Xem [cục bộ và đám mây](/guide/foundations/local-vs-cloud/).
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. I already have the repo locally—why connect GitHub again?
+### 1. Tôi đã có repo cục bộ — vì sao lại phải kết nối GitHub?
 
-Cloud tasks see the remote repository, not your local copy.
+Tác vụ Cloud thấy repository từ xa, không phải bản sao cục bộ của bạn.
 
-### 2. Once connected, can Codex see all my local changes?
+### 2. Một khi đã kết nối, Codex thấy mọi thay đổi cục bộ?
 
-Unpushed local changes are usually invisible to Cloud.  
-That is a frequent point of confusion.
+Thay đổi cục bộ chưa push thường vô hình với Cloud.  
+Đây là điểm dễ nhầm phổ biến.
 
-### 3. What matters most when connecting?
+### 3. Khi kết nối, điều gì quan trọng nhất?
 
-Confirm first:
+Xác nhận trước:
 
-- Whether repo scope is too broad
-- How branch protection is set
-- Whether secrets are stored in Cloud's secure configuration, not in the repo
+- Phạm vi repo có quá rộng không
+- Bảo vệ nhánh cấu hình thế nào
+- Secrets có lưu trong cấu hình bảo mật Cloud, không phải trong repo không
 
-After connection, Cloud sees the remote repo—not unpushed state on your laptop.
+Sau khi kết nối, Cloud thấy repo từ xa — không phải trạng thái chưa push trên laptop.
 
-## Pre-connection checklist
+## Checklist trước khi kết nối
 
-- [ ] You have push access to the target repo (or use a fork strategy if you only need PRs)
-- [ ] Branch protection is understood: is direct push to main blocked?
-- [ ] Secrets are not in the repo; Cloud uses [Secrets configuration](/guide/web-and-cloud/secrets-and-variables/)
-- [ ] Your organization allows third-party GitHub integrations
+- [ ] Bạn có quyền push tới repo đích (hoặc dùng chiến lược fork nếu chỉ cần PR)
+- [ ] Hiểu bảo vệ nhánh: push thẳng lên main bị chặn?
+- [ ] Secrets không nằm trong repo; Cloud dùng [cấu hình Secrets](/guide/web-and-cloud/secrets-and-variables/)
+- [ ] Tổ chức cho phép tích hợp GitHub bên thứ ba
 
-## Recommended steps (conceptual)
+## Các bước khuyến nghị (khái niệm)
 
-1. Open **GitHub connection** in Codex Web/Cloud settings
-2. Choose organization and repo scope (**minimize the repo list**)
-3. Read OAuth permission text: usually read code and open PRs; write access depends on the task
-4. Run a small Cloud task on a test repo to validate
-5. After success, set default branch and environment variables if needed
+1. Mở **kết nối GitHub** trong cài đặt Codex Web/Cloud
+2. Chọn tổ chức và phạm vi repo (**thu nhỏ danh sách repo**)
+3. Đọc văn bản quyền OAuth: thường đọc code và mở PR; quyền ghi tùy Tác vụ
+4. Chạy một Tác vụ Cloud nhỏ trên repo thử để xác nhận
+5. Thành công rồi mới đặt nhánh mặc định và biến môi trường nếu cần
 
-Exact UI and buttons depend on the current product.
+UI và nút cụ thể tùy sản phẩm hiện tại.
 
-## Permissions and security
+## Quyền và bảo mật
 
-| Practice | Why |
+| Thực hành | Vì sao |
 |---|---|
-| Use a dedicated machine user or bot account (teams) | Audit trail and offboarding |
-| Do not authorize all private repos | Smaller blast radius |
-| Enable branch protection + required review | Cloud output still passes human review |
-| Periodically audit connected repos | Disconnect retired projects |
+| Dùng tài khoản máy hoặc bot riêng (đội) | Đường kiểm toán và offboarding |
+| Không ủy quyền mọi repo riêng | Bán kính ảnh hưởng nhỏ hơn |
+| Bật bảo vệ nhánh + review bắt buộc | Đầu ra Cloud vẫn qua review người |
+| Định kỳ kiểm toán repo đã kết nối | Ngắt kết nối dự án đã rút |
 
-## Common tasks after connection
+## Tác vụ thường gặp sau khi kết nối
 
-- Implement an issue remotely → [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
-- PR review and follow-up → [GitHub](/guide/integrations/github/) integration
-- Combine with [Automations](/skills/automations/scheduled-tasks/)
+- Triển khai issue từ xa → [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
+- Review PR và theo dõi → tích hợp [GitHub](/guide/integrations/github/)
+- Kết hợp với [Automations](/skills/automations/scheduled-tasks/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Connecting a personal GitHub account to production org repos with personal policies
-- Assuming Cloud can access unpushed commits on your machine
-- Running unbounded tasks on a large monorepo on the first try
+- Kết nối tài khoản GitHub cá nhân với repo org production kèm chính sách cá nhân
+- Giả định Cloud truy cập được commit chưa push trên máy
+- Lần đầu thử đã chạy Tác vụ không giới hạn trên monorepo lớn
 
-## References
+## Tham chiếu
 
-- OpenAI Codex Cloud / GitHub integration docs
+- Tài liệu tích hợp OpenAI Codex Cloud / GitHub
 - KimYx0207 CX-10, CX-11
 - stormzhang `26-git-github.md`, `10-cloud.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / Web  
-**Review note:** This page depends on current GitHub connection flows, authorization models, repo scope settings, and Cloud UI entry points—high-churn integration details that need current official connection docs before returning to `verified`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud / Web  
+**Ghi chú đối chiếu:** Trang phụ thuộc luồng kết nối GitHub hiện tại, mẫu ủy quyền, cài đặt phạm vi repo và lối vào UI Cloud — chi tiết tích hợp biến động cao cần tài liệu kết nối chính thức hiện hành trước khi trả về `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

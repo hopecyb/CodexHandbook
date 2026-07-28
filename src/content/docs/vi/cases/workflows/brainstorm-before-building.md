@@ -1,95 +1,95 @@
 ---
-title: Brainstorm before building
-description: Structured exploration to converge on an approach before code or long-form writing—reduces rework.
+title: Brainstorm trước rồi mới làm
+description: Trước khi viết code hoặc bài dài, dùng khám phá có cấu trúc để hội tụ phương án — giảm làm lại.
 locale: vi
-source_locale: en
-source_revision: b64945f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Brainstorm before building** fits tasks where the goal is fuzzy or multiple approaches exist: new features, redesigns, content topics, tech selection. It connects to the ① Explore phase of [explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/), but emphasizes **diverge and converge** rather than immediately reading code and editing files.
+**Brainstorm trước rồi mới làm** phù hợp tác vụ mục tiêu mơ hồ, phương án không chỉ một: tính năng mới, redesign, chọn đề nội dung, chọn tech. Nối với giai đoạn ① khám phá của [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/), nhưng nhấn mạnh **phân tán và hội tụ**, chứ không đọc code sửa tệp ngay.
 
-## What this page covers
+## Trang này giải quyết gì
 
-- When brainstorm is worth it vs going straight to EPXV
-- How to bound divergence and avoid empty chat
-- Artifacts: option table, decision record, next-step plan
+- Khi nào đáng brainstorm trước, khi nào EPXV thẳng
+- Cách hạn chế phạm vi phân tán, tránh tán chuyện
+- Đầu ra: bảng lựa chọn, biên bản quyết định, kế hoạch bước tiếp
 
-## Who it's for
+## Phù hợp ai
 
-| Scenario | Example |
+| Kịch bản | Ví dụ |
 |---|---|
-| Product / feature | "Add export for users—three UI options" |
-| Content | "Who is this tutorial for, how to structure it" |
-| Technical | "Queue vs cron for scheduled tasks" |
+| Sản phẩm/tính năng | «Thêm xuất dữ liệu cho người dùng, có ba kiểu UI» |
+| Nội dung | «Tutorial này hướng tới ai, cấu trúc chia thế nào» |
+| Kỹ thuật | «Dùng queue hay cron cho tác vụ theo lịch» |
 
-## Minimum viable approach
+## Cách làm tối thiểu dùng được
 
-**Phase A — Diverge (time-boxed)**
-
-```text
-Do not change any files yet. For "export CSV" requirement, list 3 implementation paths:
-each with pros/cons, involved modules, estimated effort (S/M/L).
-Do not pick a final approach.
-```
-
-**Phase B — Converge**
+**Giai đoạn A — Phân tán (giới hạn thời gian)**
 
 ```text
-From the table above, recommend 1 default and 1 backup;
-note 2 decision points I must confirm (format, permissions).
+Chưa sửa bất kỳ tệp nào. Với nhu cầu «xuất CSV», liệt kê 3 đường triển khai:
+Mỗi đường ghi ưu nhược, module liên quan, khối lượng ước tính (S/M/L).
+Chưa chọn phương án cuối.
 ```
 
-**Phase C — Enter planning**
-
-After confirmation, proceed to [specification-driven work](/cases/workflows/specification-driven-work/) or EPXV ② Plan.
-
-## Recommended workflow
+**Giai đoạn B — Hội tụ**
 
 ```text
-State constraints (time, stack, what cannot change)
-    → Diverge 3–5 options (no code)
-    → Rank by value / risk / cost
-    → Human picks direction or requests more info
-    → Written plan + execute
+Theo bảng trên, khuyến nghị 1 phương án mặc định và 1 dự phòng;
+Nêu 2 điểm quyết định cần tôi xác nhận (định dạng, quyền).
 ```
 
-Set a **time box**: e.g. complete divergence in 15 minutes to prevent drift.
+**Giai đoạn C — Vào kế hoạch**
 
-## Common mistakes
+Sau xác nhận, nối [làm việc theo đặc tả](/cases/workflows/specification-driven-work/) hoặc ② kế hoạch của EPXV.
 
-- Treating brainstorm as execution—model starts editing files—use "do not change yet" constraint
-- Too many options without ranking—decision fatigue
-- Rejected options not recorded—same debate two weeks later
-- Skipping constraints—beautiful plan but not feasible
+## Quy trình đề xuất
 
-## Safety boundaries
+```text
+Làm rõ ràng buộc (thời gian, tech stack, phần không được sửa)
+    → Phân tán 3–5 lựa chọn (cấm viết code)
+    → Xếp theo «giá trị / rủi ro / chi phí»
+    → Người chọn hướng hoặc yêu cầu bổ sung thông tin
+    → Kế hoạch viết + thực thi
+```
 
-- Brainstorm may still read sensitive files—use `@` to scope references precisely
-- Compliance/privacy options need human legal/security review—not model-only decisions
+Đặt **timebox**: ví dụ hoàn thành phân tán trong 15 phút, tránh thảo luận trôi.
 
-## Acceptance checklist
+## Lỗi thường gặp
 
-- [ ] At least 2 viable options with clear recommendation
-- [ ] Decision points marked, awaiting human confirmation
-- [ ] No unauthorized repo writes
-- [ ] Next step can connect to written plan
+- Coi brainstorm là thực thi, model đã bắt đầu sửa tệp — ràng buộc bằng «chưa sửa»
+- Quá nhiều lựa chọn không xếp hạng, mệt quyết định
+- Không ghi phương án đã loại, hai tuần sau tranh lại
+- Bỏ qua ràng buộc, phương án đẹp nhưng không triển khai được
 
-## Related chapters
+## Ranh giới an toàn
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Ask for a plan](/prompts/ask-for-a-plan/)
+- Giai đoạn brainstorm vẫn có thể đọc tệp nhạy cảm — dùng `@` chỉ rõ phạm vi
+- Phương án liên quan tuân thủ, riêng tư cần người pháp lý/bảo mật review; không chỉ model quyết
 
-## Reference sources
+## Checklist nghiệm thu
 
-- CodexGuide requirement clarification and option comparison
-- codex.bozhouai.com task templates and topic selection methods
+- [ ] Ít nhất 2 lựa chọn khả thi và khuyến nghị rõ
+- [ ] Điểm quyết định đã đánh dấu, chờ người xác nhận
+- [ ] Không ghi kho ngoài ủy quyền
+- [ ] Bước tiếp nối được kế hoạch viết
+
+## Chương liên quan
+
+- [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
+- [Làm việc theo đặc tả](/cases/workflows/specification-driven-work/)
+- [Yêu cầu kế hoạch](/prompts/ask-for-a-plan/)
+
+## Nguồn tham chiếu
+
+- Làm rõ nhu cầu và so sánh phương án của CodexGuide
+- Mẫu tác vụ và phương pháp chọn đề trên codex.bozhouai.com
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified EPXV, planning, specification-driven, and prompts chapters in this handbook; this page only describes the stable collaboration method—diverge first, converge, then plan—not dependent on specific product entry details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo các chương EPXV, lập kế hoạch, làm việc theo đặc tả và prompt đã kiểm chứng của sổ tay; trang này chỉ mô tả phương pháp cộng tác ổn định “phân tán trước, hội tụ sau, rồi vào kế hoạch”, không phụ thuộc chi tiết lối vào sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

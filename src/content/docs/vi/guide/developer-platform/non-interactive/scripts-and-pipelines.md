@@ -1,56 +1,58 @@
 ---
-title: Scripts and Pipelines
-description: Orchestrate codex exec in shell, Makefile, and GitHub Actions—repeatable and auditable.
+title: Script và pipeline
+description: "Điều phối `codex exec` trong shell, Makefile và GitHub Actions — lặp lại được, kiểm toán được."
 locale: vi
-source_locale: en
-source_revision: c359901
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This is about turning Codex from a one-off action into **steps your team can rerun, audit, and hand off**.
+Ở đây nói về cách biến Codex từ thao tác tạm thời thành bước tự động hóa mà **đội có thể chạy lại, khi lỗi thì lần ra được, người khác cũng tiếp quản được**.
 
-Scripts fix the flow; pipelines repeat it on schedule or on events.
+Nói ngắn: script cố định quy trình; pipeline lặp lại theo quy tắc.
 
-This page shows how to embed [codex exec](/guide/developer-platform/non-interactive/codex-exec/) in shell, Makefile, or CI pipelines.
+Chương này giải thích cách nhúng [codex exec](/guide/developer-platform/non-interactive/codex-exec/) vào shell, Makefile hoặc pipeline CI.
 
-## What this page covers
+## Nội dung trang này
 
-- Local scripts vs CI jobs
-- Managing prompts and secrets
-- Combining with [code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Phân công giữa script local và CI job
+- Cách quản lý Prompt và khóa bí mật
+- Kết hợp với [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## What this solves
+## Ở đây giải quyết gì
 
-“Scripts and pipelines” turns “I did this manually today” into “the team can reliably do the same thing later.”
+«Script và pipeline» chủ yếu biến «hôm nay tôi làm tay một lần» thành «đội sau này đều làm lại ổn định theo cùng cách».
 
-Three priorities:
+Vì vậy ở đây coi trọng ba việc:
 
-- Repeatable
-- Auditable
-- Handoff-friendly
+- Lặp lại được
+- Kiểm toán được
+- Bàn giao được
 
-## Why teams avoid pasting prompts into CI UI
+## Vì sao nhiều đội không «dán Prompt thẳng vào trang CI»
 
-Hard to maintain:
+Vì khó bảo trì:
 
-- New owners do not know the original design
-- Logic changes cannot go through normal code review
-- Failures are hard to attribute to prompt vs environment vs script
+- Người khác tiếp quản không biết lúc đầu thiết kế thế nào
+- Đổi một chỗ logic không đi được code review bình thường
+- Tác vụ fail khó biết Prompt đổi, môi trường đổi, hay script đổi
 
-Putting prompts, scripts, and rules in Git is version control for automation.
+Đưa Prompt, script và quy tắc vào Git chính là «quản lý phiên bản» cho quy trình tự động.
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### Automation values stability, not speed first
+### Tự động hóa coi trọng ổn định, không phải càng sớm càng tốt
 
-Many teams string everything together before prompts stabilize, success criteria are clear, or permissions are tight—then debugging gets painful.
+Nhiều người lần đầu tự động hóa vội nối cả bộ quy trình.
 
-### Scripts fix the approach
+Nhưng nếu Prompt còn đổi thường xuyên, tiêu chí thành công chưa rõ, ranh giới quyền chưa siết, càng sớm tự động hóa càng khó lần lỗi sau này.
 
-A good script turns steps people memorize into files everyone can read and review.
+### Script phù hợp hơn để cố định cách làm
 
-## Minimal shell snippet
+Một script tốt biến bước dựa vào trí nhớ người thành tệp ai cũng đọc được và review được.
+
+## Đoạn Shell tối thiểu dùng được
 
 ```bash
 #!/usr/bin/env bash
@@ -61,19 +63,19 @@ PROMPT_FILE="prompts/ci/security-review.md"
 codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
-Keep `prompts/ci/security-review.md` in Git; changes go through review.
+Đưa `prompts/ci/security-review.md` vào Git; thay đổi đi review.
 
-## Habits worth forming first
+## Thói quen đáng nuôi trước nhất
 
-Do not aim for “everything at once.” Fix these three first:
+Lần đầu tự động hóa, đừng theo đuổi «toàn diện»; hãy cố định ba thứ dưới đây trước:
 
-1. Where prompt files live
-2. What the entry script is called
-3. How success and failure are judged
+1. Tệp Prompt đặt ở đâu
+2. Script lối vào tên gì
+3. Thành công và thất bại phán thế nào
 
-Then adding logs, schema, and notifications is much easier.
+Sau đó thêm log, schema, thông báo sẽ thuận hơn nhiều.
 
-## GitHub Actions sketch
+## Minh họa GitHub Actions
 
 ```yaml
 jobs:
@@ -88,7 +90,7 @@ jobs:
           fetch-depth: 0
       - name: Install Codex CLI
         run: |
-          # Pin version per official install docs
+          # Ghim số phiên bản; lấy theo tài liệu cài đặt chính thức
           npm install -g @openai/codex@<pinned-version>
       - name: Run review
         env:
@@ -98,56 +100,56 @@ jobs:
 ```
 
 :::caution
-Adjust install method and permission scopes to org security requirements; **do not** echo secrets in workflows.
+Cách cài và phạm vi quyền trong ví dụ phải chỉnh theo yêu cầu bảo mật tổ chức; **không** `echo` khóa bí mật trong workflow.
 :::
 
-## Recommended layers
+## Quy trình khuyến nghị
 
-| Layer | Content |
+| Tầng | Nội dung |
 |---|---|
 | Repo | `prompts/`, `tools/run-codex.sh` |
-| CI | Read-only checkout, pinned CLI, upload log artifacts |
-| Callback | Optional [Webhook](/guide/developer-platform/webhooks/overview/) to update internal systems |
+| CI | Checkout chỉ đọc, CLI ghim phiên bản, upload log artifact |
+| Callback | Tùy chọn [Webhook](/guide/developer-platform/webhooks/overview/) cập nhật hệ thống nội bộ |
 
-## How to decide
+## Cách phán đoán
 
-Good candidates for scripts or pipelines:
+Nếu việc nào thỏa hai điều sau, rất phù hợp vào script hoặc pipeline:
 
-- You do it repeatedly
-- You want each run to follow the same approach
+- Bạn sẽ làm lại nhiều lần
+- Bạn muốn mỗi lần làm càng thống nhất càng tốt
 
-Examples: PR review, change summaries, security scans, doc checks.
+Ví dụ: review PR, tóm tắt thay đổi, quét bảo mật, kiểm tra tài liệu.
 
-Do not rush “full auto” before the flow is stable; script first, then pipeline, is usually safer.
+Đừng vội «toàn tự động» khi quy trình chưa ổn; cố định cách làm thành script rồi mới nối pipeline thường ổn định hơn.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Dynamic prompt from `${{ github.event.pull_request.body }}` without escaping (injection)
-- No concurrency control on the same PR, duplicate runs burn quota
-- Works locally, CI missing deps (no `npm ci`)
-- Success = “finished” with no structured conclusion parsing
-- Automation granted write permission too early
+- Nối động Prompt `${{ github.event.pull_request.body }}` chưa escape (injection)
+- Cùng PR không kiểm soát đồng thời, chạy trùng tốn quota
+- Local chạy được, CI thiếu dependency (chưa `npm ci`)
+- Tiêu chí thành công chỉ là «chạy xong», không parse kết luận có cấu trúc
+- Tự động hóa ngay từ đầu trao quyền ghi quá cao
 
-## Security boundaries
+## Ranh giới bảo mật
 
-- CI token least privilege; no `git push` unless a separate approval job
-- Fork PR workflows with secrets need security review (`pull_request_target`)
+- Token CI quyền tối thiểu; cấm `git push` trừ khi có job Phê duyệt độc lập
+- Workflow trên fork PR thận trọng với khóa (dùng `pull_request_target` cần đánh giá bảo mật)
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Prompts and scripts are versioned in Git
-- [ ] CI failure blocks merge when policy requires
-- [ ] Artifact retention meets compliance
-- [ ] Matches local `make review` behavior
+- [ ] Prompt và script có phiên bản trong Git
+- [ ] CI fail sẽ chặn merge (nếu chính sách yêu cầu)
+- [ ] Chính sách giữ artifact phù hợp tuân thủ
+- [ ] Hành vi thống nhất với `make review` local
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex + GitHub integration docs
-- codex.bozhouai.com automation chapter
+- Tài liệu tích hợp OpenAI Codex + GitHub
+- Chương tự động hóa tại codex.bozhouai.com
 
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** The principle of versioning prompts, scripts, and pipelines in Git still holds, but examples depend on `codex exec`, CLI install, and GitHub Actions wiring—high-churn details; restore `verified` after current official pipeline docs are added.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI  
+**Ghi chú đối chiếu:** Nguyên tắc «đưa Prompt, script và pipeline vào Git để review» vẫn đứng vững, nhưng ví dụ phụ thuộc `codex exec`, cách cài CLI và cách nối GitHub Actions cụ thể — đều là chi tiết triển khai biến động cao; bổ sung tài liệu pipeline chính thức hiện hành rồi mới khôi phục `verified`.  
+**Kiểm chứng gần nhất:** 2026-07-26

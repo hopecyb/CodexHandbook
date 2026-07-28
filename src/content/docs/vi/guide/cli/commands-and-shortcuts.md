@@ -1,138 +1,145 @@
 ---
-title: Commands and shortcuts
-description: CLI subcommands, in-session actions, and keyboard habits—product-oriented; full flags in reference.
+title: Lệnh và lối tắt
+description: Lệnh con CLI, thao tác trong phiên và thói quen bàn phím — hướng dẫn theo sản phẩm; tham số đầy đủ xem khu tham chiếu.
 locale: vi
-source_locale: en
-source_revision: a179c75
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Terminal efficiency comes from three areas: **how you launch**, **in-session shortcuts**, and **pairing with scripts/editors**. This page covers habits; flag tables live in [CLI command reference](/guide/reference/commands/) and [keyboard shortcuts](/guide/reference/keyboard-shortcuts/).
+Hiệu quả trong terminal đến từ ba khối: **cách khởi**, **thao tác tắt trong phiên**, **phối hợp với script/trình soạn thảo**. Trang này nói cách dùng và thói quen; bảng tham số xem [Tham chiếu lệnh CLI](/guide/reference/commands/) và [Phím tắt](/guide/reference/keyboard-shortcuts/).
 
-## What's covered
+## Nội dung trang
 
-- When to use `codex` vs `codex exec`
-- Common in-session operation types
-- Turning repeats into aliases or scripts
+- Khi nào dùng `codex` và khi nào dùng `codex exec`
+- Trong phiên tương tác có những loại thao tác phổ biến nào
+- Cách đóng cứng thao tác lặp thành alias hoặc script
 
-## Start by distinguishing
+## Phân rõ gì trước
 
-Many newcomers assume "commands and shortcuts" means memorizing syntax and flags.
+Nhiều người mới lần đầu thấy CLI dễ nghĩ «lệnh và lối tắt» là học thuộc cú pháp, học thuộc tham số.
 
-More practical: distinguish three modes:
+Thực tế hơn là phân rõ ba việc trước:
 
-- **Chat while working**
-- **One-shot task to completion**
-- **Shortening actions you repeat**
+- Bạn đang **vừa chat vừa làm**
+- Hay muốn nó **chạy xong một tác vụ một lần**
+- Hay chỉ muốn rút ngắn vài thao tác hay lặp
 
-That clarity usually picks the right command.
+Phân rõ rồi thì chọn lệnh nào sẽ rõ hơn nhiều.
 
-## Command entry overview
+## Tổng quan lối vào lệnh
 
-| Goal | Entry | Details |
+| Việc bạn muốn | Lối vào | Chi tiết |
 |---|---|---|
-| Chat and edit interactively | `codex` interactive TUI | [Interactive mode](/guide/cli/interactive-mode/) |
-| CI / pipeline one-shot | `codex exec` (or equivalent) | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
-| Change defaults | Config files | [CLI configuration](/guide/cli/configuration/) |
+| Vừa chat vừa sửa mã | `codex` TUI tương tác | [Chế độ tương tác](/guide/cli/interactive-mode/) |
+| Tác vụ một lần CI / pipeline | `codex exec` (hoặc tương đương) | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) |
+| Đổi hành vi mặc định | Tệp cấu hình | [Cấu hình CLI](/guide/cli/configuration/) |
 
 :::note
-Subcommand names change by version—trust `codex --help`.
+Tên lệnh con đổi theo phiên bản — lấy theo `codex --help`.
 :::
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### `codex` and `codex exec` are not beginner vs pro
+### `codex` và `codex exec` không phải một thấp một cao
 
-Not "simple mode" vs "expert mode."
+Nhiều người hiểu thành:
 
-Practical split:
+- Một là chế độ đơn giản
+- Một là chế độ chuyên nghiệp
 
-- `codex` when you are present to steer
-- `codex exec` when the task is defined upfront for a one-shot run
+Cách phân thực dụng hơn:
 
-### More shortcuts is not better early on
+- `codex` phù hợp bạn có mặt, vừa xem vừa điều hướng
+- `codex exec` phù hợp bạn nói rõ tác vụ trước, để nó chạy theo quy trình một lần
 
-Master first:
+### Lối tắt không phải càng nhiều càng tốt
 
-- Starting a session
-- Discovering `/` commands in your environment
-- Exit, restart, change directory
+Lúc đầu không cần nhớ hết mọi phím tắt và lệnh `/`.
 
-That is enough to start.
+Nắm trước:
 
-## In-session "shortcuts"
+- Cách khởi phiên
+- Cách xem môi trường hiện tại hỗ trợ lệnh `/` nào
+- Cách thoát, mở lại, đổi thư mục
 
-Exact keys and `/` commands vary by version; categories are stable:
+Biết vài việc này là đủ dùng.
 
-### Input and history
+## «Tắt» trong phiên tương tác
 
-- Multiline input: product-specific newline combo (often `Shift+Enter` or editor mode)
-- Recall last task: terminal history or in-session history if available
+Khóa và lệnh `/` cụ thể khác nhau theo phiên bản, nhưng hạng mục ổn định:
 
-### Slash commands
+### Nhập và lịch sử
 
-Typing `/` at the prompt triggers built-in flows (review, compact context, etc.). **Do not memorize a frozen list**—use `/` completion in your environment. Learning-oriented taxonomy: [slash commands reference](/guide/reference/slash-commands/).
+- Nhập nhiều dòng: dùng tổ hợp xuống dòng theo hướng dẫn sản phẩm (thường `Shift+Enter` hoặc chế độ trình soạn)
+- Xem lại tác vụ trước: lịch sử terminal hoặc lịch sử trong phiên (nếu có)
 
-### Approvals
+### Lệnh slash
 
-When the Agent requests shell or file writes, the UI prompts approve/deny/always allow (if offered). Read [approvals and sandbox](/guide/cli/approvals-and-sandbox/) before unattended use.
+Gõ `/` tại dấu nhắc có thể kích hoạt quy trình tích hợp (rà soát, nén ngữ cảnh, v.v.). **Đừng học thuộc danh sách chết** — lấy theo hoàn thành `/` của môi trường hiện tại. Phân loại học: [Tra cứu lệnh slash](/guide/reference/slash-commands/).
 
-## Shell-layer shortcuts (recommended)
+### Liên quan phê duyệt
 
-Wrap "enter project + start Codex" to avoid wrong-directory mistakes:
+Khi Agent yêu cầu chạy shell hoặc ghi tệp, giao diện tương tác sẽ hỏi phê duyệt / từ chối / luôn cho phép (nếu có). Trước khi không người canh hãy đọc [Phê duyệt và Sandbox](/guide/cli/approvals-and-sandbox/).
+
+## Lối tắt tầng Shell (khuyến nghị)
+
+Viết hàm «vào dự án + khởi Codex» để giảm sai thư mục:
 
 ```bash
-# ~/.zshrc example (adjust as needed)
+# Ví dụ ~/.zshrc (sửa theo nhu cầu)
 cx() {
   cd "$1" || return 1
   codex
 }
 ```
 
-Non-interactive review can be a script with prompt in `prompts/review.md` for version control.
+Rà soát không tương tác có thể gói thành script, Prompt để trong `prompts/review.md` — dễ quản phiên bản.
 
-## Learning path
+## Có thể quen theo thứ tự này
 
-1. Start `codex` in the correct directory
-2. Learn when `codex exec` fits
-3. Wrap frequent actions in aliases, functions, or scripts
+Mới dùng CLI, có thể quen theo:
 
-Avoid over-abstracting before the base tool feels natural.
+1. Khởi `codex` trong đúng thư mục trước
+2. Rồi phán khi nào nên dùng `codex exec`
+3. Cuối cùng thu thao tác tần suất cao thành alias, hàm hoặc script
 
-## vs IDE / App
+Như vậy ít bị «công cụ chưa quen đã bọc thêm một lớp» ngay từ đầu.
 
-| | CLI | IDE extension |
+## Phân công với IDE / App
+
+| | CLI | Tiện ích IDE |
 |---|---|---|
-| Context | `--cwd`, @ files (version-dependent) | Open files, selection |
-| Best for | Scripts, SSH remote, pure terminal | Edit while viewing diff |
-| Shortcuts | Terminal keys + `/` | Editor command palette |
+| Ngữ cảnh | `--cwd`, tệp @ (tùy phiên bản) | Tệp mở, mã chọn |
+| Phù hợp | Script, SSH từ xa, thuần terminal | Vừa sửa vừa xem diff |
+| Lối tắt | Phím terminal + `/` | Bảng lệnh trình soạn thảo |
 
-IDE: [local task workflow](/guide/ide/local-task-workflow/)
+IDE: [Quy trình tác vụ local](/guide/ide/local-task-workflow/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Starting in wrong directory, editing neighbor project
-- Running in-app `/review` as a terminal subcommand in external shell
-- Pasting unreviewed third-party "magic prompts" into interactive session
+- Khởi sai thư mục, sửa sang dự án bên cạnh
+- Coi `/review` trong ứng dụng là lệnh con terminal rồi chạy ngoài shell
+- Dán Prompt «vạn năng» bên thứ ba chưa rà vào phiên tương tác
 
-You do not need every command and shortcut on day one. Clarify "chat while working" vs "run once" and command choice gets simpler.
+Đừng vội học thuộc mọi lệnh và phím tắt. Phân rõ «tôi đang vừa chat vừa làm, hay để nó chạy một lần» thì chọn lệnh sẽ đơn giản hơn nhiều.
 
-## Acceptance checklist
+## Danh sách nghiệm thu
 
-- [ ] Can start interactive session at repo root
-- [ ] Know where to find `/` commands for your version
-- [ ] Can write a minimal read-only `codex exec` task (if available)
+- [ ] Khởi được phiên tương tác ở thư mục gốc kho đích
+- [ ] Biết chỗ xem lệnh `/` mà phiên bản hiện tại hỗ trợ
+- [ ] Viết được một tác vụ chỉ đọc `codex exec` tối thiểu (nếu môi trường có)
 
-## References
+## Nguồn tham khảo
 
-- OpenAI Codex CLI documentation
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
+- Tài liệu OpenAI Codex CLI
+- `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md` của stormzhang
 - KimYx0207 CX-03, CX-12
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI  
-**Review note:** Covers `codex`, `codex exec`, `/` command categories, and session shortcuts—details that shift by version; lacks strong current official command/shortcut documentation to verify; needs rewrite before verification.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI  
+**Ghi chú tái kiểm:** Trang này liên quan `codex`, `codex exec`, hạng mục lệnh `/` và thao tác tắt trong phiên — chi tiết tương tác CLI dễ đổi theo phiên bản; hiện thiếu tài liệu lệnh/lối tắt chính thức hiện hành đủ mạnh để chống đỡ các mô tả này — cần viết lại rồi mới kiểm chứng.  
+**Kiểm chứng gần nhất:** 2026-07-26

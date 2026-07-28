@@ -1,68 +1,68 @@
 ---
-title: Multi-agent coordination
-description: Parallel exploration, divided execution, and merging results—when to split and how to verify.
+title: Phối hợp nhiều Agent
+description: Khám phá song song, phân công thực thi và gộp kết quả — khi nào tách, cách nghiệm thu.
 locale: vi
-source_locale: en
-source_revision: 55224d7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Multi-agent setups fit parallel, loosely coupled sub-problems. They do not fit two agents editing the same file with no coordinator.
+Nhiều Agent phù hợp bài toán con song song được, ít gắn kết; không phù hợp cùng sửa một tệp khi không ai điều phối.
 
-## When to split
+## Khi nào tách
 
-| Good fit | Poor fit |
+| Phù hợp | Không phù hợp |
 |---|---|
-| Frontend styling + backend API contract researched in parallel | Two people changing the same function |
-| One runs tests while another writes docs | Shared mutable state with no locking |
-| Explore multiple implementation options | Strong sequential dependency not yet mapped |
+| Song song khảo sát style frontend + hợp đồng API backend | Hai người sửa cùng một hàm |
+| Một chạy test, một viết tài liệu | Trạng thái dùng chung có thể đổi mà không khóa |
+| Khám phá nhiều phương án triển khai | Phụ thuộc tuần tự mạnh chưa làm rõ |
 
-Product capabilities: [Parallel agents](/guide/desktop-app/parallel-agents/), [Subagents](/guide/agent-work/subagents/).
+Năng lực sản phẩm xem [Agent song song](/guide/desktop-app/parallel-agents/), [Subagent](/guide/agent-work/subagents/).
 
-## Coordination patterns
+## Mẫu cộng tác
 
-### Pattern A: Parallel exploration, human picks
-
-```text
-Agent 1: pros/cons and effort for option A
-Agent 2: pros/cons and effort for option B
-You: pick one, then open a single Agent to execute
-```
-
-### Pattern B: Pipeline
+### Mẫu A: Khám phá song song, người chọn
 
 ```text
-Explore Agent → output plan → Execute Agent (new thread with plan summary)
+Agent 1: Ưu nhược điểm và khối lượng công việc của phương án A
+Agent 2: Ưu nhược điểm và khối lượng công việc của phương án B
+Bạn: Chọn một, rồi mở một Agent duy nhất thực thi
 ```
 
-Use [handoff and resume](/guide/agent-work/handoff-and-resume/) to pass structured summaries—don't paste entire chats.
+### Mẫu B: Pipeline
 
-### Pattern C: Worktree isolation
+```text
+Agent khám phá → xuất kế hoạch → Agent thực thi (Thread mới, kèm tóm tắt kế hoạch)
+```
 
-Different Agents edit different branches in separate [git worktrees](/guide/desktop-app/worktrees/); humans merge at the end.
+Dùng [bàn giao và tiếp tục](/guide/agent-work/handoff-and-resume/) để truyền tóm tắt có cấu trúc; đừng dán cả đoạn chat.
 
-## Coordination rules (recommended in AGENTS.md)
+### Mẫu C: Cô lập bằng worktree
 
-- Each Agent has explicit directory boundaries
-- No parallel `git push`
-- Run CI once before merge
-- Conflicts resolved by humans—don't let Agents guess
+Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/guide/desktop-app/worktrees/) khác nhau; cuối cùng người gộp.
 
-## Acceptance
+## Quy tắc phối hợp (nên ghi vào AGENTS.md)
 
-- [ ] Each sub-Agent has its own definition of done
-- [ ] Full test suite passes after merge
-- [ ] Diffs trace back to the corresponding sub-task description
+- Mỗi Agent có ranh giới thư mục rõ ràng
+- Cấm `git push` song song
+- Chạy CI thống nhất trước khi gộp
+- Xung đột do người giải; không để Agent đoán
 
-## Common mistakes
+## Nghiệm thu
 
-- Three parallel Agents editing `package.json`
-- No rollup step—unclear whose conclusion to follow
+- [ ] Mỗi Subagent có «định nghĩa hoàn thành» riêng
+- [ ] Sau gộp, test đầy đủ pass
+- [ ] Diff truy được về mô tả tác vụ con tương ứng
+
+## Lỗi thường gặp
+
+- Ba Agent song song cùng sửa `package.json`
+- Không có bước tổng hợp, không biết nghe kết luận ai
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public multi-agent / subagent material, plus this handbook's verified subagent, handoff/resume, and parallel-work chapters; content is limited to stable methods for when to split, how to isolate boundaries, and how humans roll up and verify—not fixed contracts for current beta or UI entry points.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo giải thích công khai hiện tại về multi-agent / subagents trên OpenAI Developers, cùng các chương Subagent, bàn giao phục hồi và làm việc song song đã kiểm chứng của sổ tay; nội dung trang giới hạn ở phương pháp ổn định “khi nào tách, cách cô lập ranh giới, cách người tổng hợp nghiệm thu”, không viết beta hiện tại hay lối vào UI thành hợp đồng cố định.  
+**Kiểm chứng gần nhất:** 2026-07-26

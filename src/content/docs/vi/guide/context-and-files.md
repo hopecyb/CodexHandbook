@@ -1,88 +1,91 @@
 ---
-title: Context and files
-description: Managing projects, files, conversation context, and common input types.
+title: Ngữ cảnh và tệp
+description: Quản lý ngữ cảnh dự án, tệp, hội thoại, cùng các loại đầu vào phổ biến.
+locale: vi
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 15
-locale: vi
-source_locale: en
-source_revision: 31bde45
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Context and files
+# Ngữ cảnh và tệp
 
-**Context** is what Codex can see, reference, and act on at this moment.
+Ngữ cảnh là thông tin Codex ở khoảnh khắc này thấy được, tham khảo được, và có thể dựa vào đó để hành động.
 
-You may know exactly what you want, but if key material is missing, work drifts—same as a new teammate without the right background. Poor context management drowns even good prompts in noise.
+Bạn trong đầu đã nghĩ rất rõ, nhưng đối phương chưa thấy tài liệu then chốt — nên làm lệch.  
+Với Codex cũng vậy. Quản không tốt ngữ cảnh, Prompt hay đến mấy cũng bị nhiễu nhấn chìm.
 
-## What context includes
+## Ngữ cảnh gồm gì
 
-Think of what a new colleague would need in a group chat:
+Có thể coi như thông tin mà đồng nghiệp mới vừa vào nhóm chat sẽ dựa vào:
 
-- Your task instructions—the current question
-- Files you open for it—background material
-- Repo rule docs—team agreements
-- Conversation history—memory of this task
+- Yêu cầu tác vụ bạn gửi cho nó — là vấn đề hiện tại
+- Tệp bạn mở cho nó xem — là tài liệu nền
+- Tài liệu quy tắc trong kho — là thỏa thuận nhóm
+- Hội thoại lịch sử — là bộ nhớ của nó về tác vụ lần này
 
-Together, that is the context Codex is using.
+Những thứ đó cộng lại chính là ngữ cảnh nó đang dựa vào.
 
-## Common failure modes
+## Nguồn vấn đề phổ biến
 
-Many "it misunderstood again" cases are context problems:
+Nhiều gốc rễ của «vì sao nó lại hiểu sai nữa» không phải model quá kém — mà là ngữ cảnh có vấn đề, ví dụ:
 
-- Too little information—it guesses
-- Too much information—focus is lost
-- You assumed it knew a file but never pointed to it
-- Long old threads—early detail no longer relevant
+- Đưa quá ít thông tin — nó chỉ còn cách đoán
+- Đưa quá nhiều thông tin — trọng tâm bị nhấn chìm
+- Bạn tưởng nó biết tệp này, nhưng thực ra chưa nói rõ cho nó
+- Bạn chat theo hội thoại cũ quá lâu — thông tin sớm đã không còn tập trung
 
-One simple standard for this page:
+Trọng tâm trang này là một tiêu chuẩn đơn giản:
 
-> **Show what truly matters; keep irrelevant material out of the way.**
+> **Để nó thấy thông tin thật sự liên quan — đừng để thông tin không liên quan chiếm chỗ.**
 
-## Context management
+## Quản lý ngữ cảnh
 
-- [Project context](/guide/context/project-context/) — `AGENTS.md`, repo conventions
-- [File and folder context](/guide/context/file-and-folder-context/) — @ references and scope
-- [Conversation context](/guide/context/conversation-context/) — threads and compaction
-- [Keep context focused](/guide/context/keep-context-focused/) — avoid unrelated noise
-- [Sensitive context](/guide/context/sensitive-context/) — secrets and privacy
+- [Ngữ cảnh dự án](/guide/context/project-context/) — `AGENTS.md`, thỏa thuận kho
+- [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/) — tham chiếu @ và phạm vi
+- [Ngữ cảnh hội thoại](/guide/context/conversation-context/) — Thread và nén
+- [Giữ tập trung](/guide/context/keep-context-focused/) — tránh nhiễu không liên quan
+- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/) — khóa và quyền riêng tư
 
-How to organize background in prompts: [goals and context](/prompts/goals-and-context/).
+Cách tổ chức bối cảnh trong Prompt xem [Mục tiêu và ngữ cảnh](/prompts/goals-and-context/).
 
-## Files and artifacts
+## Tệp và artifact
 
-Besides telling Codex what to do, you often need to **show it things**:
+Ngoài «nói cho nó cần làm gì», bạn còn thường cần «cho nó xem thứ gì đó».
 
-- Code or documents
-- Screenshots
-- PDFs
-- Spreadsheets
-- Presentations
+«Thứ gì đó» ở đây có thể là:
 
-Different file types imply different read patterns, prompting, and acceptance checks.
+- Một đoạn mã hoặc tài liệu
+- Một ảnh chụp màn hình
+- Một PDF
+- Một bảng biểu
+- Một bản thuyết trình
 
-## Files and artifacts
+Loại tệp khác nhau thì cách Codex đọc, cách hỏi phù hợp, và cách nghiệm thu cũng có khác biệt.
 
-- [Text and code files](/guide/files-and-artifacts/text-and-code-files/)
-- [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDFs and documents](/guide/files-and-artifacts/pdf-and-documents/)
-- [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [Presentations](/guide/files-and-artifacts/presentations/)
+## Tệp và artifact
 
-## Suggested reading order
+- [Tệp văn bản và mã](/guide/files-and-artifacts/text-and-code-files/)
+- [Ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF và tài liệu](/guide/files-and-artifacts/pdf-and-documents/)
+- [Bảng và bảng tính](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Bản thuyết trình](/guide/files-and-artifacts/presentations/)
 
-No need to read everything at once:
+## Thứ tự đọc gợi ý
 
-1. [File and folder context](/guide/context/file-and-folder-context/) — what files to show
-2. [Keep context focused](/guide/context/keep-context-focused/) — avoid scattering the task
-3. Read file-type chapters matching what you are working with
+Không cần đọc hết một hơi. Có thể đọc theo thứ tự này:
 
-Context is the pile of information Codex judges from—get it right and results are easier to get right.
+1. Đọc trước [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/) — hiểu «nên để nó xem những tệp nào»
+2. Rồi đọc [Giữ tập trung](/guide/context/keep-context-focused/) — tránh chat tác vụ đến mức phân tán
+3. Theo loại tài liệu đang cầm trên tay, rồi đọc chương tệp tương ứng
+
+Ngữ cảnh chính là đống thông tin Codex đang cầm khi phán đoán; đưa đúng thì kết quả cũng dễ làm đúng hơn.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Navigation and methodology page; framework that task requirements, file material, project rules, and conversation history form context cross-checked with current context and file-handling chapters—not dependent on volatile UI details.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này là tổng quan điều hướng và phương pháp nội bộ; khung «yêu cầu tác vụ, tài liệu tệp, quy tắc dự án, hội thoại lịch sử cùng cấu thành ngữ cảnh» đã đối chiếu chéo từng mục với các chương ngữ cảnh và xử lý tệp hiện tại, không phụ thuộc chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

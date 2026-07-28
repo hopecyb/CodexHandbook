@@ -1,55 +1,56 @@
 ---
-title: Research template
-description: Investigation and comparison with citations.
+title: Mẫu nghiên cứu
+description: Khảo sát và so sánh kèm trích dẫn.
 locale: vi
-source_locale: en
-source_revision: b0f8d5e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Research template
+# Mẫu nghiên cứu
 
-Research differs from ordinary Q&A: you want answers **and** where they came from.
+Khác biệt giữa tác vụ nghiên cứu và hỏi đáp thường là: bạn không chỉ cần câu trả lời, còn cần câu trả lời đến từ đâu.
 
-## Template
+## Mẫu
 
 ```text
-Research question: 【one sentence】
-Evaluation dimensions: 【list 3–5 items】
-Constraints:
-- Each conclusion must cite source URL or @in-repo path
-- Mark unverifiable items as 「pending confirmation」
-- Do not change code
-Output: comparison table + recommendation + open questions
+Câu hỏi nghiên cứu: 【một câu】
+Chiều đánh giá: 【liệt kê 3–5 mục】
+Ràng buộc:
+- Mỗi kết luận kèm URL nguồn hoặc đường dẫn @trong kho
+- Không kiểm chứng được thì đánh dấu «cần xác nhận»
+- Không sửa code
+Đầu ra: Bảng so sánh + khuyến nghị + câu hỏi mở
 ```
 
-## When to use this template
+## Khi nào phù hợp mẫu này
 
-- Product or solution comparison
-- Latest capabilities, rules, or differences
-- Conclusions you can audit later
+- So sánh sản phẩm/phương án
+- Tra cứu năng lực, quy tắc hoặc khác biệt mới nhất
+- Cần kết luận có thể quay lại đối chiếu
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Research means polished summary
+### 1. Nghiên cứu là để nó tóm tắt nghe ổn hơn
 
-Sources, boundaries, and pending items matter more.
+Trong nghiên cứu, quan trọng hơn là nguồn, ranh giới và mục cần xác nhận.
 
-### 2. Must give a definite answer even when evidence is thin
+### 2. Không tra được cũng phải đưa đáp án chắc chắn
 
-Marking 「pending confirmation」 beats false certainty.
+Trong tác vụ nghiên cứu, đánh dấu rõ «cần xác nhận» có giá trị hơn giả vờ chắc chắn.
 
-Key constraint: every major conclusion traceable to a source—not just pretty formatting.
+Mẫu nghiên cứu có một ràng buộc then chốt: mỗi kết luận quan trọng phải truy được nguồn—không chỉ nhìn định dạng có đầy đủ không.
 
-## Related
+## Liên quan
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Verification](/guide/verification/)
+- [Case nghiên cứu kèm nguồn](/cases/research-with-sources/)
+- [Kiểm chứng](/guide/verification/)
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a research-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này cung cấp mẫu tác vụ kiểu nghiên cứu; liên kết nội bộ và cấu trúc mẫu đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

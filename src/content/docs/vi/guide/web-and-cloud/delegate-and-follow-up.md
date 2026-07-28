@@ -1,136 +1,136 @@
 ---
-title: Delegate and follow up
-description: Hand tasks to Cloud from App, IDE, or phone—and review, approve, and iterate after you leave your desk.
+title: Ủy thác và theo dõi
+description: "Giao Tác vụ cho Cloud từ App, IDE hoặc điện thoại — rồi xem xét, phê duyệt và lặp lại sau khi rời bàn làm việc."
 locale: vi
-source_locale: en
-source_revision: 8ccb103
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Delegation** sends a task to Cloud to run in a remote environment; **follow-up** is checking progress, adding context, approving risky steps, and requesting changes while a task runs or after it finishes. This is the core workflow for making progress away from your desk.
+**Ủy thác** gửi một Tác vụ sang Cloud chạy trong môi trường từ xa; **theo dõi** là kiểm tiến độ, bổ sung Ngữ cảnh, phê duyệt bước rủi ro và yêu cầu chỉnh sửa trong hoặc sau Tác vụ. Đây là quy trình trung tâm để tiến triển khi xa bàn làm việc.
 
-## What's covered
+## Nội dung phủ
 
-- When to delegate to Cloud instead of running locally
-- Differences across entry points
-- How to follow up effectively and avoid "fire and forget"
+- Khi nào ủy thác Cloud thay vì chạy cục bộ
+- Khác biệt theo lối vào
+- Theo dõi hiệu quả và tránh «gửi rồi quên»
 
-## How this flow works
+## Luồng này hoạt động thế nào
 
-Cloud tasks usually look like:
+Tác vụ Cloud thường giống:
 
-- You explain the task clearly
-- It runs remotely
-- You may need to add constraints or approve mid-flight
-- After completion you still review diffs, PRs, and decide next steps
+- Bạn giải thích Tác vụ rõ
+- Nó chạy từ xa
+- Giữa chừng bạn có thể cần thêm ràng buộc hoặc phê duyệt
+- Sau khi xong, bạn vẫn xem Diff, PR và quyết định bước tiếp
 
-Cloud only moves execution off your machine—you still own follow-up and decisions.
+Cloud chỉ chuyển thực thi khỏi máy bạn — bạn vẫn giữ trách nhiệm theo dõi và quyết định.
 
-## Who it's for
+## Dành cho ai
 
-| Scenario | Suggestion |
+| Tình huống | Gợi ý |
 |---|---|
-| Long builds/tests | Delegate to Cloud; keep working locally |
-| Commute / between meetings | Check status on phone; approve critical steps |
-| Standardized environment needed | Cloud + [environment config](/guide/web-and-cloud/cloud-environments/) |
-| Quick local experimentation | Prefer [desktop App](/guide/desktop-app/) or [IDE](/guide/ide/local-task-workflow/) |
+| Build/kiểm thử dài | Ủy thác Cloud; tiếp tục làm việc cục bộ |
+| Trên đường / giữa họp | Kiểm trạng thái trên điện thoại; phê duyệt bước quan trọng |
+| Cần môi trường chuẩn hóa | Cloud + [cấu hình môi trường](/guide/web-and-cloud/cloud-environments/) |
+| Thí nghiệm cục bộ nhanh | Ưu tiên [App máy tính](/guide/desktop-app/) hoặc [IDE](/guide/ide/local-task-workflow/) |
 
-## When delegation makes sense
+## Khi nào ủy thác có ý nghĩa
 
-If unsure:
+Nếu chưa chắc:
 
-- Still iterating and want to steer live: stay local
-- Long runtime, want to walk away, or need a shared environment: delegate to Cloud
+- Vẫn đang lặp và muốn điều hướng trực tiếp: ở lại cục bộ
+- Runtime dài, muốn rời đi, hoặc cần môi trường dùng chung: ủy thác Cloud
 
-## Pre-delegation checklist
+## Checklist trước khi ủy thác
 
-- [ ] [GitHub connected](/guide/web-and-cloud/connect-github/); branch strategy is clear
-- [ ] Task description includes goal, scope, prohibitions, and acceptance (see [task anatomy](/prompts/task-anatomy/))
-- [ ] Required unpushed local commits are pushed—or do the work locally instead
-- [ ] Secrets and [outbound access](/guide/web-and-cloud/internet-access/) are ready
+- [ ] [GitHub đã kết nối](/guide/web-and-cloud/connect-github/); chiến lược nhánh rõ
+- [ ] Mô tả Tác vụ gồm mục tiêu, phạm vi, điều cấm và nghiệm thu (xem [cấu trúc Tác vụ](/prompts/task-anatomy/))
+- [ ] Commit cục bộ cần thiết đã push — hoặc làm việc cục bộ
+- [ ] Secrets và [truy cập đi ra](/guide/web-and-cloud/internet-access/) sẵn sàng
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. After delegating, I can ignore it
+### 1. Ủy thác xong là có thể bỏ qua
 
-That wastes the most time. The later you catch drift, the more rework.
+Điều này lãng phí nhiều thời gian nhất. Phát hiện lệch càng muộn, làm lại càng lớn.
 
-### 2. Follow-up means "nudge for status"
+### 2. Theo dõi nghĩa là «hỏi trạng thái»
 
-More valuable follow-up:
+Theo dõi hữu ích hơn:
 
-- Fill missing context
-- Narrow scope
-- Reject unsafe operations
-- Request fixes after completion
+- Bổ sung Ngữ cảnh thiếu
+- Thu hẹp phạm vi
+- Từ chối thao tác không an toàn
+- Yêu cầu sửa sau khi xong
 
-### 3. Delegation vs local is either/or
+### 3. Ủy thác vs cục bộ là hoặc/hoặc
 
-A common real pattern:  
-**explore locally → delegate the long run → finish locally.**
+Mẫu thực tế phổ biến:  
+**khám phá cục bộ → ủy thác chạy dài → hoàn thiện cục bộ.**
 
-## Delegation by entry point (conceptual)
+## Ủy thác theo lối vào (khái niệm)
 
-| Entry | Characteristics |
+| Lối vào | Đặc điểm |
 |---|---|
-| [Desktop App · local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/) | Same project view; switch local/Cloud |
-| [IDE · Cloud tasks](/guide/ide/cloud-task-workflow/) | Carries editor selection and open-file context |
-| Web / mobile | Light status, approvals, short follow-ups |
+| [App máy tính · Tác vụ cục bộ và Cloud](/guide/desktop-app/local-and-cloud-tasks/) | Cùng khung dự án; chuyển cục bộ/Cloud |
+| [IDE · Tác vụ Cloud](/guide/ide/cloud-task-workflow/) | Mang lựa chọn editor và Ngữ cảnh tệp đang mở |
+| Web / mobile | Trạng thái nhẹ, Phê duyệt, theo dõi ngắn |
 
-Buttons and naming depend on the current product.
+Nút và tên tùy sản phẩm hiện tại.
 
-## Recommended follow-up rhythm
+## Nhịp theo dõi khuyến nghị
 
 ```text
-Delegate → confirm environment started → (optional) check logs mid-flight
-    → approve risky steps → on completion review diff/PR
-    → if unsatisfied: add instructions or start a follow-up task
+Ủy thác → xác nhận môi trường đã khởi động → (tùy chọn) xem log đang chạy
+    → phê duyệt bước rủi ro → khi xong xem Diff/PR
+    → nếu chưa hài lòng: thêm chỉ dẫn hoặc khởi động Tác vụ theo dõi
 ```
 
-A practical minimum:  
-**After sending, look once mid-flight and once at the end.**
+Tối thiểu thực dụng:  
+**Sau khi gửi, nhìn một lần khi đang chạy và một lần khi xong.**
 
-### Mid-flight intervention
+### Can thiệp giữa chừng
 
-- **Add context**: if files or constraints were missing, say so in a follow-up message to preserve history
-- **Narrow scope**: if drifting, say "stop changing X; only do Y"
-- **Approve**: see [human approval patterns](/cases/workflows/human-approval-patterns/)—prefer slow and explicit over bulk-approving unknown shell
+- **Bổ sung Ngữ cảnh**: nếu thiếu tệp hoặc ràng buộc, nói trong tin theo dõi để giữ lịch sử
+- **Thu hẹp phạm vi**: nếu lệch, nói «dừng sửa X; chỉ làm Y»
+- **Phê duyệt**: xem [mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) — ưu tiên chậm và tường minh hơn phê duyệt hàng loạt shell lạ
 
-### After completion
+### Sau khi xong
 
-- Review diff in the [create PR](/guide/web-and-cloud/create-pull-requests/) flow
-- Validate with [Cloud code review](/guide/web-and-cloud/code-review/) or local branch checkout
-- Need more changes: delegate again on the same PR or take over locally
+- Xem Diff trong luồng [tạo PR](/guide/web-and-cloud/create-pull-requests/)
+- Kiểm chứng bằng [review mã Cloud](/guide/web-and-cloud/code-review/) hoặc checkout nhánh cục bộ
+- Cần thêm thay đổi: ủy thác lại trên cùng PR hoặc tiếp tục cục bộ
 
-## Notifications
+## Thông báo
 
-Enable [desktop notifications](/guide/desktop-app/notifications/) or mobile push so tasks do not stall waiting for approval. Teams should agree who can approve production-related repos and when.
+Bật [thông báo máy tính](/guide/desktop-app/notifications/) hoặc push mobile để Tác vụ không kẹt chờ Phê duyệt. Đội nên thỏa thuận ai được phê duyệt repo liên quan production và khi nào.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Vague delegation leading to large unrequested refactors
-- Half-done local edits while Cloud starts from remote main
-- Never checking mid-flight; discovering wrong direction at the end
-- "LGTM" on a PR without running tests
-- Treating "remote execution" as "remote responsibility"
+- Ủy thác mơ hồ dẫn tới refactor lớn không yêu cầu
+- Sửa cục bộ dở dang trong khi Cloud bắt đầu từ main từ xa
+- Không bao giờ kiểm giữa chừng; đến cuối mới thấy sai hướng
+- «LGTM» trên PR mà không chạy kiểm thử
+- Coi «thực thi từ xa» là «trách nhiệm từ xa»
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Successfully started and completed one Cloud task from at least one entry point
-- [ ] Added an effective constraint while the task was running
-- [ ] Produced a PR or branch reviewed by a human diff pass
+- [ ] Đã khởi động và hoàn thành thành công một Tác vụ Cloud từ ít nhất một lối vào
+- [ ] Đã thêm ràng buộc hiệu quả trong khi Tác vụ chạy
+- [ ] Đã tạo PR hoặc nhánh được người xem Diff qua
 
-## References
+## Tham chiếu
 
-- OpenAI Codex Cloud task docs
+- Tài liệu Tác vụ OpenAI Codex Cloud
 - stormzhang `10-cloud.md`, `27-mobile.md`
 - KimYx0207 CX-10
-- codex.bozhouai.com App/Cloud collaboration sections
+- Các phần hợp tác App/Cloud tại codex.bozhouai.com
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / App / IDE / Mobile  
-**Review note:** This page depends on current product behavior for starting or following Cloud tasks from App, IDE, Web, and phone—capabilities that have changed quickly; align line by line with official docs before upgrading from `outdated`.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud / App / IDE / Mobile  
+**Ghi chú đối chiếu:** Trang phụ thuộc hành vi sản phẩm hiện tại để khởi động hoặc theo dõi Tác vụ Cloud từ App, IDE, Web và điện thoại — năng lực đổi nhanh; căn chỉnh từng dòng với tài liệu chính thức trước khi thoát `outdated`.  
+**Kiểm chứng gần nhất:** 2026-07-26

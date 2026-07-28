@@ -1,96 +1,96 @@
 ---
-title: Skill anatomy
-description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
+title: Cấu trúc Skill
+description: Vai trò và ví dụ của SKILL.md, references/, templates/, scripts/.
 locale: vi
-source_locale: en
-source_revision: '31950e9'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you open a Skill directory, folders look familiar—but it is not always obvious why they are laid out this way.
+Lần đầu nhìn thư mục Skill, cảm giác thường là"thư mục thì quen, nhưng không biết vì sao xếp vậy".
 
-This page explains how to separate main flow, long docs, templates, and scripts instead of stuffing everything into one file.
+Trang này giải thích cách tách"quy trình chính, mô tả dài, template, script"ra các chỗ khác nhau, tránh nhét hết vào một file.
 
-That makes reading, editing, and reuse easier and avoids a mess as you grow.
+Như vậy dễ đọc, sửa và tái dùng hơn, cũng ít bị viết càng lúc càng loạn.
 
-# Skill anatomy
+# Cấu trúc Skill
 
-## Directory layout
+## Cấu trúc thư mục
 
 ```text
 my-skill/
-├── SKILL.md          # Required
-├── scripts/          # Optional: deterministic steps
-├── references/       # Optional: long reference docs
-└── templates/        # Optional: output templates
+├── SKILL.md          # bắt buộc
+├── scripts/          # tùy chọn: bước xác định
+├── references/       # tùy chọn: tài liệu tham chiếu dài
+└── templates/        # tùy chọn: template đầu ra
 ```
 
-## What each layer does
+## Mỗi tầng làm gì
 
-- `SKILL.md`: Main manual—what it is, when to use it, what steps to follow
-- `references/`: Long reference shelf; do not cram all background into the main file
-- `templates/`: Output skeletons so you are not improvising every time
-- `scripts/`: Hand deterministic steps to scripts instead of only natural language
+- `SKILL.md`: hướng dẫn chính — nói với Codex"đây là gì, khi nào dùng, làm theo bước nào"
+- `references/`: tủ tài liệu dài — không nhét hết kiến thức nền vào file chính
+- `templates/`: khung đầu ra sẵn — tránh mỗi lần ứng biến
+- `scripts/`: bước chạy được xác định giao cho script — đừng chỉ dựa mô tả ngôn ngữ tự nhiên
 
-At first you may only need `SKILL.md`.  
-Split out `references/`, `templates/`, and `scripts/` when things actually get complex.
+Ban đầu thậm chí chỉ cần một `SKILL.md`.  
+Sau này thật sự phức tạp hơn mới tách `references/`, `templates/`, `scripts/`.
 
-## Minimal SKILL.md example
+## Ví dụ tối thiểu SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review the diff of the current branch against main; flag risks and test gaps. Use when the user asks for review, PR review, or pre-merge checks.
+description: Review diff của nhánh hiện tại so với main, đánh dấu rủi ro và khoảng trống kiểm thử. Dùng khi người dùng yêu cầu review, review PR hoặc kiểm tra trước khi merge.
 ---
 
-## Steps
-1. Get the diff against main
-2. Classify by file: logic errors, security, performance, tests
-3. Output tiered list: blocking / suggestion / nit
-4. Do not auto push or merge
+## Các bước
+1. Lấy diff so với main
+2. Phân loại theo file: lỗi logic, bảo mật, hiệu năng, kiểm thử
+3. Xuất danh sách phân cấp: chặn / đề xuất / nit
+4. Không tự động push hoặc merge
 ```
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. You must create every directory on day one
+### 1. Ngay từ đầu phải dựng đủ mọi thư mục
 
-Many good Skills start with only `SKILL.md` and grow other dirs as reuse increases.
+Nhiều Skill tốt ban đầu chỉ có một `SKILL.md`; sau khi tái dùng nhiều lần mới dần tách thư mục khác.
 
-### 2. references/ is just for "more content"
+### 2. `references/` chỉ để nhét thêm nội dung
 
-The point is moving long material you should not always load into the main flow.
+Trọng tâm không phải"nhét nhiều", mà là đưa mô tả dài không nên luôn chiếm chú ý quy trình chính sang chỗ chỉ đọc khi cần.
 
-### 3. Avoid scripts if you can
+### 3. `scripts/` càng tránh càng tốt
 
-If a step should be stable, deterministic, and repeatable, a script is often more reliable than repeated natural-language description.
+Nếu một bước vốn phải ổn định, xác định, lặp lại được, viết script thường đáng tin hơn cứ mô tả bằng ngôn ngữ tự nhiên.
 
-## Directory roles
+## Vai trò từng thư mục
 
-| Directory | Purpose |
+| Thư mục | Mục đích |
 |---|---|
-| `SKILL.md` | Main flow, triggers, prohibitions |
-| `references/` | Long docs, standards, API notes |
-| `templates/` | Output format, report skeleton |
-| `scripts/` | Deterministic commands and checks |
+| `SKILL.md` | Quy trình chính, điều kiện kích hoạt, mục cấm |
+| `references/` | Tài liệu dài, chuẩn mực, mô tả API |
+| `templates/` | Định dạng đầu ra, khung báo cáo |
+| `scripts/` | Lệnh và kiểm tra xác định |
 
-## When to split directories
+## Khi nào tách thư mục
 
-Ask in this order:
+Có thể quyết theo thứ tự:
 
-1. Is the main flow too long to read in one pass?
-2. Is there a large block of material not needed every time?
-3. Is there a fixed output format you repeat?
-4. Is there a step stable enough to script?
+1. Quy trình chính đã quá dài, lần đầu đọc không nổi chưa
+2. Có đoạn tài liệu lớn không phải lần nào cũng cần xem không
+3. Có định dạng đầu ra cố định bị lặp không
+4. Có bước đã ổn định đến mức phù hợp script hóa không
 
-If one or two answers are yes, start splitting.
+Nếu trong bốn câu có một hai câu"có", có thể bắt đầu tách.
 
-Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
+Có thể dùng `SKILL.md` chạy thông trước, rồi khi thật sự phức tạp mới dần tách tài liệu, template và script ra.
 
-Full exercise: [Create your first Skill](/skills/create-your-first-skill/).
+Thực hành đầy đủ: [Tạo Skill đầu tiên](/skills/create-your-first-skill/).
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still centers skills on `SKILL.md` with optional scripts and references; this page covers directory roles, not volatile product entry points.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở Kiểm chứng:** Hướng dẫn kỹ năng runtime Codex hiện tại vẫn lấy `SKILL.md` làm file lõi và cho phép mở rộng script cùng tài liệu tham chiếu khi cần; trang này tập trung phân vai thư mục, không gắn lối vào sản phẩm hay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

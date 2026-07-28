@@ -1,86 +1,87 @@
 ---
-title: Choose your Codex client
-description: Pick App, CLI, IDE, or Cloud for your first time.
+title: Chọn client Codex
+description: Lựa chọn lần đầu giữa App, CLI, IDE, Cloud.
 locale: vi
-source_locale: en
-source_revision: d578df0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you see `App / CLI / IDE / Cloud`, the usual question is: which one should I use?
+Lần đầu thấy các từ `App / CLI / IDE / Cloud`, câu hỏi phổ biến là: rốt cuộc nên dùng cái nào.
 
-Do not overthink the first choice. Start with an easy entry point and add others later.
+Lần chọn đầu không cần nghĩ nặng. Bắt đầu từ một lối vào dễ bắt tay trước — phía sau bổ sung cái khác cũng được.
 
-## Direct picks
+## Chọn trực tiếp
 
-If you have no strong preference:
+Nếu giờ không có thiên hướng mạnh, có thể chọn như sau:
 
-- **First time**: choose the desktop App
-- **You live in the terminal**: choose CLI
-- **You mostly write code in VS Code / JetBrains**: choose the IDE extension
-- **You already need GitHub cloud repos or long-running tasks**: look at Cloud
+- **Lần đầu dùng**: chọn Desktop App
+- **Bạn vốn dùng terminal hàng ngày**: chọn CLI
+- **Bạn chủ yếu viết mã trong VS Code / JetBrains**: chọn phần mở rộng IDE
+- **Bạn đã rõ cần nối kho đám mây GitHub hoặc chạy tác vụ dài**: xem Cloud
 
-## What each entry point is
+## Các lối vào này lần lượt là gì
 
-| Entry | Think of it as |
+| Lối vào | Có thể hiểu trực tiếp là |
 |---|---|
-| Desktop App | A graphical console for tasks, diffs, and approvals |
-| CLI | Codex in the terminal, for command-line users |
-| IDE extension | An assistant inside the editor, for edit-while-you-read |
-| Cloud | Remote task execution for repo collaboration and long jobs |
+| Desktop App | Bảng điều khiển đồ họa — phù hợp xem tác vụ, xem Diff, bấm phê duyệt |
+| CLI | Codex trong terminal — phù hợp người dùng dòng lệnh |
+| Phần mở rộng IDE | Trợ lý nhúng trong trình soạn thảo — phù hợp vừa xem mã vừa sửa |
+| Cloud | Cách chạy tác vụ từ xa — phù hợp cộng tác kho và tác vụ dài |
 
-## Choose by your situation
+## Chọn theo tình huống hiện tại
 
-| If you… | Choose |
+| Nếu bạn… | Chọn |
 |---|---|
-| Are new and want clear diffs and review | **Desktop App** |
-| Live in the terminal and want scripts | **CLI** |
-| Mostly edit code in an editor | **IDE extension** |
-| Need GitHub cloud environments / long tasks | **Cloud** (read the overview first) |
+| Lần đầu dùng, muốn thấy rõ Diff và rà soát | **Desktop App** |
+| Quen terminal, cần viết script | **CLI** |
+| Chủ yếu sửa mã trong trình soạn thảo | **Phần mở rộng IDE** |
+| Cần nối môi trường đám mây GitHub / tác vụ dài | **Cloud** (đọc tổng quan trước) |
 
-## Why beginners often start with the desktop App
+## Điểm xuất phát phổ biến của Desktop App
 
-For first-time users, the desktop App has clear advantages:
+Với người mới, Desktop App có vài lợi ích rõ:
 
-- Easier to see what it did
-- Clear when it asks for permissions
-- Diffs, tasks, and projects feel more concrete
-- Easier to pause and inspect when something goes wrong
+- Dễ thấy hơn nó đã làm gì
+- Khi nào nó xin quyền thì một nhìn là rõ
+- Các khái niệm Diff, tác vụ, dự án trực quan hơn
+- Khi lỗi cũng dễ dừng lại kiểm tra hơn
 
-If you do not strongly prefer the terminal, the desktop App is usually the lighter start.
+Nếu bạn không thiên về terminal rõ ràng, dùng Desktop App thường nhẹ hơn.
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. These four entry points are four completely different products
+### 1. Bốn lối vào này là bốn sản phẩm hoàn toàn khác nhau
 
-They share the same core capabilities. The differences are mostly interaction style and fit for a scenario.
+Chúng vẫn dùng cùng một bộ năng lực — khác biệt chính ở cách thao tác và tình huống phù hợp.
 
-### 2. I must pick the perfect one the first time or I will regret it
+### 2. Lần đầu phải chọn đúng một phát, không thì sau này rất phiền
 
-The first choice is a starting point, not a lifelong decision.
+Lần chọn đầu chỉ là điểm xuất phát, không phải quyết định cả đời.
 
-### 3. I can only ever use one entry point
+### 3. Sau này tôi chỉ được cố định một lối vào
 
-Many people later combine them:
+Nhiều người phía sau phối hợp như sau:
 
-- Desktop App for reviewing tasks and changes day to day
-- CLI for batch operations
-- IDE extension when mainly writing code
+- Hàng ngày dùng Desktop App xem tác vụ và rà soát thay đổi
+- Cần thao tác hàng loạt thì dùng CLI
+- Khi chủ yếu viết mã thì chuyển sang phần mở rộng IDE
 
-## Suggested start order
+## Thứ tự bắt đầu
 
-1. Install the [desktop App](/guide/getting-started/install-desktop-app/)
-2. Run through [your first task](/guide/getting-started/run-your-first-task/)
-3. Once that feels comfortable, consider CLI or IDE
+1. Cài trước [Desktop App](/guide/getting-started/install-desktop-app/)
+2. Chạy một vòng [tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
+3. Dùng đã quen rồi mới cân nhắc CLI hoặc IDE
 
-Full comparison: [Feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep the same practice directory** so experiences are easy to compare.
+Đối chiếu đầy đủ: [So sánh tính năng](/guide/reference/feature-comparison/). Có thể cài nhiều client; **giữ cùng một thư mục cho dự án luyện tập** để dễ đối chiếu trải nghiệm.
 
-Do not rush to decide which is “more professional.” Pick the entry where process and results are easiest to understand.
+Lần đầu đừng vội so «cái nào chuyên nghiệp hơn». Chọn lối vào dễ hiểu quy trình và kết quả nhất là được.
 
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE  
+**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện đồng thời trình bày Codex, quy trình desktop và lối vào nhà phát triển; kết luận trang này thuộc gợi ý chọn theo tình huống lần đầu bắt tay, và đã tránh viết App / CLI / IDE / Cloud như các sản phẩm loại trừ lẫn nhau hoặc năng lực hoàn toàn khác.  
+**Kiểm chứng gần nhất:** 2026-07-26

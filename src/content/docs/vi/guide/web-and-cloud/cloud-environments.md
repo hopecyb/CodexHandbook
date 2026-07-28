@@ -1,154 +1,154 @@
 ---
-title: Cloud environments
-description: What Codex Cloud remote run environments include, their lifecycle, and team configuration essentials.
+title: Môi trường Cloud
+description: "Thành phần, vòng đời và điểm cấu hình đội của môi trường chạy từ xa Codex Cloud."
 locale: vi
-source_locale: en
-source_revision: a893a77
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A **Cloud environment** is the worker machine Codex uses when running tasks remotely.
+Một **môi trường Cloud** là máy worker Codex dùng khi chạy Tác vụ từ xa.
 
-It directly affects outcomes—including the OS, language versions, toolchain, network policy, and which repository branch is checked out. This page mainly answers a common question:
+Nó ảnh hưởng trực tiếp kết quả — gồm OS, phiên bản ngôn ngữ, chuỗi công cụ, chính sách mạng và nhánh repository nào được checkout. Trang này chủ yếu trả lời một câu hỏi phổ biến:
 
-> **Why does it work locally but fail in Cloud?**
+> **Vì sao cục bộ chạy được nhưng Cloud fail?**
 
-## What's covered
+## Nội dung phủ
 
-- How Cloud environments differ from your local dev machine
-- How environments bind to GitHub repos and branches
-- How teams maintain reproducible Cloud configuration
+- Môi trường Cloud khác máy dev cục bộ thế nào
+- Môi trường gắn với repo và nhánh GitHub thế nào
+- Đội giữ cấu hình Cloud tái lập được thế nào
 
-## Start with these three points
+## Bắt đầu từ ba điểm này
 
-Keep these in mind first:
+Giữ trước trong đầu:
 
-- Cloud does not "read everything on your current computer"—it only sees what exists in the remote environment
-- Cloud tasks still face real-world constraints: dependencies, version mismatches, and whether the network can reach what they need
-- Anything you have not committed or pushed locally is invisible to Cloud by default
+- Cloud không «đọc hết máy hiện tại của bạn» — chỉ thấy những gì tồn tại trong môi trường từ xa
+- Tác vụ Cloud vẫn gặp ràng buộc thế giới thật: dependency, lệch phiên bản và mạng có tới được thứ cần không
+- Mọi thứ bạn chưa commit hoặc push cục bộ mặc định vô hình với Cloud
 
-Think of Cloud as switching to a different machine to do the work.
+Hãy coi Cloud như chuyển sang máy khác để làm việc.
 
-## Core concepts
+## Khái niệm nền
 
 ```text
-GitHub repo (a branch)
+Repo GitHub (một nhánh)
         ↓ clone / checkout
-Cloud environment instance (container or VM—product-dependent)
+Instance môi trường Cloud (container hoặc VM — tùy sản phẩm)
         ↓
-Agent runs the task: install deps, change code, test, push
+Agent chạy Tác vụ: cài deps, sửa code, kiểm thử, push
 ```
 
-Use together with [Connect GitHub](/guide/web-and-cloud/connect-github/); the environment **cannot** access unpushed commits on your laptop.
+Dùng kèm [Kết nối GitHub](/guide/web-and-cloud/connect-github/); môi trường **không thể** truy cập commit chưa push trên laptop.
 
-## Local vs Cloud
+## Cục bộ vs Cloud
 
-- **Local tasks**: Codex works around your current machine, in front of you
-- **Cloud tasks**: Codex runs on a remote machine you delegate to
+- **Tác vụ cục bộ**: Codex làm quanh máy hiện tại của bạn, trước mặt bạn
+- **Tác vụ Cloud**: Codex chạy trên máy từ xa bạn ủy thác
 
-That gap is a common source of confusion when you first use Cloud:
+Khoảng cách này là nguồn nhầm lẫn phổ biến lần đầu dùng Cloud:
 
-- "Why can't it see the file I just changed locally?"
-- "Why doesn't it have that globally installed tool on my machine?"
-- "Why can't it reach the database I run locally?"
+- «Vì sao nó không thấy tệp tôi vừa sửa cục bộ?»
+- «Vì sao nó không có công cụ tôi cài global trên máy?»
+- «Vì sao nó không tới được DB tôi đang chạy cục bộ?»
 
-Most of the time, **that remote machine simply does not have those things**—the issue is the environment itself.
+Phần lớn lúc **máy từ xa đó đơn giản không có những thứ đó** — vấn đề là bản thân môi trường.
 
-## What an environment includes (conceptual)
+## Một môi trường gồm gì (khái niệm)
 
-| Component | Description |
+| Thành phần | Mô tả |
 |---|---|
-| Base image | OS, common build tools |
-| Runtime | Node, Python, Go, etc. (depends on image and task) |
-| Working directory | Path to the cloned repo |
-| Network policy | Whether outbound access is allowed and which domains |
-| Credential injection | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
+| Image nền | OS, công cụ build phổ biến |
+| Runtime | Node, Python, Go, v.v. (tùy image và Tác vụ) |
+| Thư mục làm việc | Đường dẫn repo đã clone |
+| Chính sách mạng | Có cho phép đi ra và domain nào |
+| Tiêm chứng chỉ | [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/) |
 
-For concrete image lists and customization, see [official Cloud documentation](https://developers.openai.com/codex).
+Danh sách image cụ thể và tùy chỉnh xem [tài liệu Cloud chính thức](https://developers.openai.com/codex).
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Assuming Cloud automatically inherits your local environment
+### 1. Giả định Cloud tự kế thừa môi trường cục bộ
 
-It does not.
+Không.
 
-Node, Python, Homebrew, Chrome, or database clients on your machine do not appear in Cloud just because they exist locally.
+Node, Python, Homebrew, Chrome hoặc client DB trên máy bạn không xuất hiện trong Cloud chỉ vì chúng có cục bộ.
 
-### 2. Assuming pushing the repo means everything is ready
+### 2. Giả định push repo nghĩa là mọi thứ sẵn sàng
 
-Repository code is only the starting point. Whether a task succeeds also depends on:
+Code repository chỉ là điểm xuất phát. Thành công Tác vụ còn phụ thuộc:
 
-- How dependencies are installed
-- What commands start or test the project
-- Which Secrets are required
-- Whether network policy allows access to external resources
+- Dependency cài thế nào
+- Lệnh nào khởi động hoặc kiểm thử dự án
+- Secrets nào bắt buộc
+- Chính sách mạng có cho tới tài nguyên ngoài không
 
-### 3. Assuming Cloud failure means Codex cannot do the task
+### 3. Giả định Cloud fail nghĩa Codex không làm được Tác vụ
 
-Many Cloud failures are misconfigured environments, not inability to complete the work.
+Nhiều fail Cloud là môi trường cấu hình sai, không phải không làm được việc.
 
-A sensible troubleshooting order:
+Thứ tự xử lý sự cố hợp lý:
 
-1. Is the repo and branch correct?
-2. Are dependencies and runtime versions correct?
-3. Are Secrets and network access available?
-4. Is the task prompt clear enough?
+1. Repo và nhánh đúng chưa?
+2. Dependency và phiên bản runtime đúng chưa?
+3. Secrets và truy cập mạng sẵn chưa?
+4. Prompt Tác vụ đủ rõ chưa?
 
-## Recommended setup flow
+## Luồng cấu hình khuyến nghị
 
-1. Complete your first Cloud task in a **test repo** and record dependency install commands
-2. Put repeatable steps in repo docs (`README`, `AGENTS.md`, or official environment config files)
-3. Configure [Secrets](/guide/web-and-cloud/secrets-and-variables/) (private registry, API keys)
-4. Confirm [internet access](/guide/web-and-cloud/internet-access/) policy meets security requirements
-5. Validate the issue → PR loop with the same environment template
+1. Hoàn thành Tác vụ Cloud đầu trong **repo thử** và ghi lệnh cài dependency
+2. Đưa bước tái lập vào tài liệu repo (`README`, `AGENTS.md`, hoặc tệp cấu hình môi trường chính thức)
+3. Cấu hình [Secrets](/guide/web-and-cloud/secrets-and-variables/) (registry riêng, API key)
+4. Xác nhận chính sách [truy cập Internet](/guide/web-and-cloud/internet-access/) khớp yêu cầu bảo mật
+5. Kiểm chứng vòng issue → PR với cùng mẫu môi trường
 
-## When Cloud is a good fit
+## Khi nào Cloud là lựa chọn tốt
 
-Use this framing:
+Dùng khung này:
 
-- Changing a project on your machine and wanting immediate feedback: start local
-- Long-running tasks, a shared team environment, or remote GitHub workflows: use Cloud
+- Đổi dự án trên máy và muốn phản hồi ngay: bắt đầu cục bộ
+- Tác vụ dài, môi trường đội dùng chung, hoặc quy trình GitHub từ xa: dùng Cloud
 
-If your local workflow is not smooth yet, do not rush to turn every problem into a "Cloud configuration problem."
+Nếu quy trình cục bộ chưa trôi, đừng vội biến mọi vấn đề thành «vấn đề cấu hình Cloud».
 
-## Aligning with local
+## Căn chỉnh với cục bộ
 
-Avoid "green locally, red in Cloud":
+Tránh «xanh cục bộ, đỏ Cloud»:
 
-| Practice | Why |
+| Thực hành | Vì sao |
 |---|---|
-| Pin dependency versions (lockfile) | Reproducible installs |
-| Document install and test commands in `AGENTS.md` | Agent does not guess |
-| Keep Node/Python versions close between CI and Cloud | Less version drift |
-| Use Git LFS or build-time downloads for large files | Controlled clone size |
+| Ghim phiên bản dependency (lockfile) | Cài đặt tái lập được |
+| Ghi install và lệnh kiểm thử trong `AGENTS.md` | Agent không đoán |
+| Giữ phiên bản Node/Python gần giữa CI và Cloud | Ít lệch phiên bản hơn |
+| Dùng Git LFS hoặc tải khi build cho tệp lớn | Kích thước clone kiểm soát được |
 
-## Lifecycle
+## Vòng đời
 
-A typical Cloud task:
+Tác vụ Cloud điển hình:
 
-1. **Create or reuse** an environment instance
-2. **Prepare**: clone, checkout branch, install dependencies
-3. **Execute**: Agent changes code, runs commands
-4. **Output**: branch push, PR, log artifacts
-5. **Destroy or recycle** (policy varies by product)
+1. **Tạo hoặc tái sử dụng** instance môi trường
+2. **Chuẩn bị**: clone, checkout nhánh, cài dependency
+3. **Chạy**: Agent sửa code, chạy lệnh
+4. **Đầu ra**: push nhánh, PR, artifact log
+5. **Hủy hoặc tái chế** (chính sách tùy sản phẩm)
 
-For long tasks, follow up via [desktop App notifications](/guide/desktop-app/notifications/) or mobile.
+Với Tác vụ dài, theo dõi qua [thông báo App máy tính](/guide/desktop-app/notifications/) hoặc mobile.
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Assuming Cloud pre-installs your entire private monorepo toolchain
-- Depending on `localhost` services (database, mock API) without providing them in the environment
-- Running unbounded tasks on a production repo on the first try
-- Misreading an environment problem as a model capability problem
+- Giả định Cloud pre-install cả chuỗi công cụ monorepo riêng của bạn
+- Phụ thuộc dịch vụ `localhost` (DB, API mock) mà không cung cấp trong môi trường
+- Lần đầu thử đã chạy Tác vụ không giới hạn trên repo production
+- Hiểu vấn đề môi trường thành vấn đề năng lực mô hình
 
-## Security boundaries
+## Ranh giới bảo mật
 
-- Treat the environment as **semi-trusted**: still require code review and branch protection
-- Inject production database connection strings only via Secrets, never in prompts
-- Periodically clean up unused environment templates and Secrets
+- Coi môi trường là **bán đáng tin**: vẫn yêu cầu code review và bảo vệ nhánh
+- Chỉ tiêm chuỗi kết nối DB production qua Secrets, không bao giờ trong Prompt
+- Định kỳ dọn mẫu môi trường và Secrets không dùng
 
-## References
+## Tham chiếu
 
 - OpenAI Codex Cloud environments
 - stormzhang `10-cloud.md`
@@ -156,7 +156,7 @@ For long tasks, follow up via [desktop App notifications](/guide/desktop-app/not
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers environment instance shape, lifecycle, templates, and GitHub branch binding—details we cannot fully confirm against strong current official documentation; it should not be marked `verified` until formal Cloud environment docs are available.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** Cloud  
+**Ghi chú đối chiếu:** Trang phủ hình dạng instance môi trường, vòng đời, mẫu và gắn nhánh GitHub — chi tiết chúng ta chưa xác nhận đầy đủ với tài liệu Cloud chính thức hiện hành đủ mạnh; không nên đánh `verified` đến khi có tài liệu môi trường Cloud chính thức.  
+**Kiểm chứng gần nhất:** 2026-07-26

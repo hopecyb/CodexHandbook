@@ -1,170 +1,170 @@
 ---
-title: Environment Variables
-description: Purpose, layering, and security of Codex-related environment variables—supplement to configuration reference.
+title: Biến môi trường
+description: "Công dụng, tầng và bảo mật của biến môi trường liên quan Codex — bổ sung cho tham chiếu cấu hình."
 locale: vi
-source_locale: en
-source_revision: 041e8dd
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Environment variables sit at two extremes: “too low level” or “dump everything here.” Simply: they pass values into programs at runtime—especially secrets and switches.
+Biến môi trường thường bị đẩy về hai cực: «quá thấp tầng» hoặc «nhét hết vào đó». Nói ngắn: chúng truyền giá trị cho chương trình lúc chạy — đặc biệt secrets và công tắc.
 
-Use them to **inject keys, override switches, adapt CI** without writing secrets into config files or Git. Conceptual index; exact names per [official docs](https://developers.openai.com/codex) and `codex --help`.
+Dùng chúng để **tiêm khóa, ghi đè công tắc, thích ứng CI** mà không viết secret vào tệp cấu hình hoặc Git. Chỉ mục khái niệm; tên chính xác theo [tài liệu chính thức](https://developers.openai.com/codex) và `codex --help`.
 
-## What this page covers
+## Trang này sẽ nói gì
 
-- What belongs in env vars vs config files
-- User, project, Cloud Secrets, CI division
-- Common naming and leakage risks
+- Điều gì thuộc biến môi trường vs tệp cấu hình
+- Phân chia người dùng, dự án, Secrets Cloud, CI
+- Đặt tên phổ biến và rủi ro rò rỉ
 
-## Decision rule
+## Quy tắc quyết định
 
-Prefer environment variables if any apply:
+Ưu tiên biến môi trường nếu một trong các điều sau đúng:
 
-- Must not go in Git
-- Varies by machine, user, or environment
-- Only needed for this run
+- Không được vào Git
+- Đổi theo máy, người dùng hoặc môi trường
+- Chỉ cần cho lần chạy này
 
-Hence tokens, temporary switches, and CI injection often use env—not hardcoded files.
+Vì vậy token, công tắc tạm và tiêm CI thường dùng env — không tệp hard-code.
 
-Config concepts: [Configuration reference](/guide/reference/configuration-reference/); Cloud: [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/).
+Khái niệm cấu hình: [Tham chiếu cấu hình](/guide/reference/configuration-reference/); Cloud: [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/).
 
-## Good fits for environment variables
+## Lựa chọn tốt cho biến môi trường
 
-| Type | Example intent | Do not |
+| Loại | Ý định ví dụ | Không |
 |---|---|---|
-| Auth token | API key, GitHub PAT | Commit to repo |
-| Temporary switch | Debug log level | Long-term business config |
-| CI injection | Read-only review mode | Production write token |
-| MCP child process | Third-party service key | Plaintext in `AGENTS.md` |
+| Token auth | API key, PAT GitHub | Commit vào repo |
+| Công tắc tạm | Mức log debug | Cấu hình nghiệp vụ dài hạn |
+| Tiêm CI | Chế độ review chỉ đọc | Token ghi production |
+| Tiến trình con MCP | Khóa dịch vụ bên thứ ba | Plaintext trong `AGENTS.md` |
 
-## Not a universal drawer
+## Không phải ngăn kéo vạn năng
 
-Avoid “if it fits, env it.”
+Tránh «cái gì nhét được thì env».
 
-- **Sensitive, runtime-specific**: environment variables
-- **Long-term team agreement**: config or docs
-- **Workflow rules**: `AGENTS.md` or Skill
+- **Nhạy cảm, đặc thù runtime**: biến môi trường
+- **Thỏa thuận đội dài hạn**: cấu hình hoặc tài liệu
+- **Quy tắc quy trình làm việc**: `AGENTS.md` hoặc Skill
 
-Easier troubleshooting later.
+Xử lý sự cố sau dễ hơn.
 
-## What `.env` is
+## `.env` là gì
 
-`.env` is not another config center—it is a common way tools **batch-load environment variables** for local dev.
+`.env` không phải trung tâm cấu hình khác — là cách phổ biến để công cụ **tải hàng loạt biến môi trường** cho dev cục bộ.
 
-- Environment variable = the value
-- `.env` = a local container for those values
+- Biến môi trường = giá trị
+- `.env` = hộp chứa cục bộ cho các giá trị đó
 
-So:
+Vì vậy:
 
-- Convenient ≠ secure
-- `.env.example` shows names—not real secrets
-- Production/CI usually uses platform Secret managers
+- Tiện ≠ an toàn
+- `.env.example` hiện tên — không phải secret thật
+- Production/CI thường dùng trình quản lý Secret của nền tảng
 
-## Poor fits for env-only
+## Lựa chọn xấu nếu chỉ dùng env
 
-- Coding standards, directory layout → `AGENTS.md`
-- Team default model → project config (non-secret parts)
-- Complex allowlists → [Rules](/guide/customization/rules/allow-and-deny-patterns/)
+- Chuẩn code, cấu trúc thư mục → `AGENTS.md`
+- Mô hình mặc định đội → cấu hình dự án (phần không secret)
+- Danh sách cho phép phức tạp → [Quy tắc](/guide/customization/rules/allow-and-deny-patterns/)
 
-## Common misconceptions
+## Hiểu nhầm thường gặp
 
-### 1. Env vars are not for all configuration
+### 1. Biến môi trường không phải cho mọi cấu hình
 
-Good for values—not full team rules and long prose.
+Tốt cho giá trị — không phải quy tắc đội đầy đủ và văn xuôi dài.
 
-### 2. `.env` on disk ≠ safe
+### 2. `.env` trên đĩa ≠ an toàn
 
-Committed, screenshared, or logged `.env` still leaks.
+`.env` bị commit, chia sẻ ảnh chụp hoặc ghi log vẫn rò.
 
-### 3. `unset` ≠ risk gone
+### 3. `unset` ≠ rủi ro đã hết
 
-May remain in shell history, child processes, logs, files, screenshots.
+Có thể còn trong lịch sử shell, tiến trình con, log, tệp, ảnh chụp.
 
-### 4. Local `.env` pattern ≠ production pattern
+### 4. Mẫu `.env` cục bộ ≠ mẫu production
 
-CI/Cloud/managed platforms usually:
+CI/Cloud/nền tảng quản lý thường dùng:
 
-- Configure Secrets in console
-- Inject at runtime
-- Keep real values out of repo files
+- Cấu hình Secrets trong console
+- Tiêm lúc chạy
+- Giữ giá trị thật ngoài tệp repo
 
-## Layering and priority (conceptual)
+## Tầng và độ ưu tiên (khái niệm)
 
 ```text
-Org mandatory policy (if any)
-    ↓ overrides
-Shell / CI injected environment variables
-    ↓ merges with config files (per official rules)
-User / project config files
+Chính sách bắt buộc tổ chức (nếu có)
+    ↓ ghi đè
+Biến môi trường tiêm shell / CI
+    ↓ hợp nhất với tệp cấu hình (theo quy tắc chính thức)
+Tệp cấu hình người dùng / dự án
 ```
 
-When the same key is set in multiple places, follow **official priority**; for troubleshooting print effective config or check logs.
+Khi cùng khóa định nghĩa ở nhiều chỗ, theo **độ ưu tiên chính thức**; khi xử lý sự cố in cấu hình hiệu lực hoặc kiểm log.
 
-## Practical decision order
+## Thứ tự quyết định thực dụng
 
-1. Is it sensitive?
-2. Local only or CI/Cloud?
-3. Long-lived or this run only?
-4. Local env, CI Secret, or Cloud Secret?
+1. Có nhạy cảm không?
+2. Chỉ cục bộ hay CI/Cloud?
+3. Dài hạn hay chỉ lần chạy này?
+4. Env cục bộ, Secret CI hay Secret Cloud?
 
-Reduces “right value, wrong place.”
+Giảm «giá trị đúng, chỗ sai».
 
-## Common scenarios
+## Tình huống phổ biến
 
-| Scenario | Safer approach |
+| Tình huống | Cách an toàn hơn |
 |---|---|
-| Local third-party API debug | Local env or `.env`, gitignored |
-| Team shared example | Commit `.env.example`, not real values |
-| GitHub Actions / CI | Platform Secrets |
-| Cloud task calls private service | Cloud Secret |
-| MCP server needs key | Parent env or Secret injection |
+| Debug API bên thứ ba cục bộ | Env cục bộ hoặc `.env`, đã gitignore |
+| Mẫu chia sẻ đội | Commit `.env.example`, không giá trị thật |
+| GitHub Actions / CI | Secrets nền tảng |
+| Tác vụ Cloud gọi dịch vụ riêng | Secret Cloud |
+| Máy chủ MCP cần khóa | Env cha hoặc tiêm Secret |
 
-Rule of thumb: real keys should not live as plain repo file content long term.
+Quy tắc thực nghiệm: khóa thật không nên sống lâu dài dưới dạng nội dung tệp repo plaintext.
 
-## Typical uses
+## Cách dùng điển hình
 
-### Local development
+### Phát triển cục bộ
 
-Export personal token in `~/.zshrc` or direnv `.envrc`—**do not commit** `.env`.
+Export token cá nhân trong `~/.zshrc` hoặc direnv `.envrc` — **không commit** `.env`.
 
-### CLI non-interactive
+### CLI không tương tác
 
-CI injects via secret store then runs `codex exec`. See [Non-interactive mode](/guide/cli/non-interactive-mode/).
+CI tiêm qua secret store rồi chạy `codex exec`. Xem [Chế độ không tương tác](/guide/cli/non-interactive-mode/).
 
-### MCP servers
+### Máy chủ MCP
 
-MCP processes often inherit parent env; reference `$VAR` in config instead of hardcoding. See [Connect MCP](/skills/mcp/connect-an-mcp-server/).
+Tiến trình MCP thường kế thừa env cha; tham chiếu `$VAR` trong config thay vì hard-code. Xem [Kết nối MCP](/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 
-Repo-level Secrets in Cloud console; names match task references.
+Secrets cấp repo trong console Cloud; tên khớp tham chiếu Tác vụ.
 
-Environment variables fit values that change, are sensitive, or are needed only at runtime—not long-term rules or documentation.
+Biến môi trường phù hợp giá trị đổi, nhạy cảm hoặc chỉ cần lúc chạy — không phải quy tắc dài hạn hoặc tài liệu.
 
-## Security checklist
+## Checklist bảo mật
 
-- [ ] `.env` in `.gitignore`
-- [ ] Redact tokens before logging
-- [ ] Rotate leaked keys
-- [ ] Least-privilege scopes (read-only CI token, etc.)
+- [ ] `.env` trong `.gitignore`
+- [ ] Làm sạch token trước khi ghi log
+- [ ] Xoay vòng khóa bị lộ
+- [ ] Scope quyền tối thiểu (token CI chỉ đọc, v.v.)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Real keys in committed `.env.example`
-- Visible `export` during screen share
-- Assume `unset` makes child processes safe—check process tree
+- Khóa thật trong `.env.example` đã commit
+- `export` lộ khi chia sẻ màn hình
+- Giả định `unset` làm tiến trình con an toàn — kiểm cây tiến trình
 
-## Reference sources
+## Nguồn tham chiếu
 
-- OpenAI Codex configuration / environment documentation
+- Tài liệu cấu hình / môi trường OpenAI Codex
 - stormzhang `18-config.md`
 - KimYx0207 CX-04
 
 ---
 
-**Status:** verified  
-**Products:** CLI / App / IDE / Cloud  
-**Verification basis:** OpenAI Help Center still documents `~/.codex/.env`, CI/runtime injection, and platform Secrets; page focuses on stable principles—which values belong in env, what does not, `.env` as local container—without fixing a variable name list.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** CLI / App / IDE / Cloud  
+**Cơ sở kiểm chứng:** Help Center OpenAI vẫn ghi `~/.codex/.env`, tiêm CI/runtime và Secrets nền tảng; trang tập trung nguyên tắc ổn định — giá trị nào thuộc env, cái gì không, `.env` như hộp chứa cục bộ — không cố định danh sách tên biến.  
+**Kiểm chứng gần nhất:** 2026-07-26

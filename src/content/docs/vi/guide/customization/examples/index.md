@@ -1,32 +1,32 @@
 ---
-title: Examples
-description: Learn how configuration and AGENTS.md should be written from real examples, not abstract principles alone.
+title: Ví dụ
+description: Hiểu cấu hình và AGENTS.md nên viết thế nào qua ví dụ thật, không chỉ xem nguyên tắc trừu tượng.
 locale: vi
-source_locale: en
-source_revision: da72647
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many principles make sense in isolation but are hard to apply in your own repo.
+Nhiều nguyên tắc nhìn riêng đều hiểu, nhưng đến kho mình lại không biết hạ thế nào.
 
-This group shows “how others wrote it” so you can turn abstract rules into concrete patterns.
+Vai trò nhóm này là cho bạn xem “người khác viết thế nào”, giúp biến quy tắc trừu tượng thành cách viết cụ thể hơn.
 
-## Entries in This Group
+## Lối vào nhóm này
 
-- [AGENTS.md in a Monorepo](/guide/customization/examples/monorepo-agents-md/)
+- [AGENTS.md trong Monorepo](/guide/customization/examples/monorepo-agents-md/)
 
-## When to Read This Group
+## Nhóm này phù hợp xem khi nào nhất
 
-- You understand what AGENTS.md is but do not know how to start writing
-- You know you need rules but are unsure about directory layers and scope
-- You want a real sample first, then adapt it for your project
+- Bạn đã hiểu AGENTS.md là gì, nhưng chưa biết hạ bút
+- Bạn biết cần cấu quy tắc, nhưng chưa chắc tầng thư mục và phạm vi viết thế nào
+- Bạn muốn xem một mẫu thật trước, rồi sửa thành bản dự án mình
 
-Example pages are for reference thinking—not for blind copy-paste.
+Trang ví dụ phù hợp hơn để tham khảo tư duy, không phù hợp copy nguyên.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this repo’s current customization examples grouping and index structure; this page only serves as “example navigation and how to use examples,” without volatile product parameters or version behavior.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã rà theo cấu trúc nhóm ví dụ customization hiện tại của kho và trang lối vào; trang này chỉ đảm nhận “điều hướng ví dụ và cách dùng”, không gồm tham số sản phẩm hoặc hành vi phiên bản dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26

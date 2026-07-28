@@ -1,41 +1,90 @@
 ---
-title: Handbook version policy
-description: Content status, verification dates, and how updates are maintained.
+title: Chính sách phiên bản cẩm nang
+description: Giải thích trạng thái nội dung, ngày kiểm chứng và cách cập nhật liên tục.
 locale: vi
-source_locale: en
-source_revision: 38c89a8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 8
 ---
 
-## Continuous updates
 
-This handbook is **not** permanently frozen to a single Codex version number. The product changes; pages use status and verification dates to signal trustworthiness.
+## Cập nhật liên tục
 
-## Page status
+Cẩm nang này không gắn với một số phiên bản Codex duy nhất để đóng băng lâu dài. Sản phẩm sẽ thay đổi, nên các trang dùng trạng thái và ngày kiểm chứng để đánh dấu mức độ tin cậy hiện tại.
 
-| Status | Meaning |
+## Nội dung
+
+- Vì sao cẩm nang này không thể giả định mãi không đổi
+- Cách đọc trạng thái và ngày kiểm chứng ở cuối trang
+- Khi xung đột với tài liệu chính thức thì tin ai
+
+## Trạng thái trang
+
+| Trạng thái | Ý nghĩa |
 |---|---|
-| planned | Planned, not yet written |
-| draft | In progress |
-| review | Content complete, pending review |
-| verified | Checked against cited sources |
-| outdated | Needs update after product changes |
-| archived | Kept for history, not in main navigation |
+| planned | Đã lên kế hoạch, chưa viết |
+| draft | Đang viết |
+| review | Nội dung xong, chờ rà soát lại |
+| verified | Đã kiểm chứng theo cơ sở đã ghi |
+| outdated | Sau thay đổi sản phẩm cần cập nhật |
+| archived | Giữ lịch sử, không vào điều hướng chính |
 
-## Three footer lines
+## Cách đọc trạng thái trang
 
-During the MVP, each page ends with: **Status / Applicable products / Last verified**. Content that goes stale quickly (installation, accounts, permissions, models) should link to official documentation.
+- `planned`: chưa viết
+- `draft`: đang viết, nhưng chưa ổn định
+- `review`: phần chính đã thành hình, nhưng còn cần rà soát lại
+- `verified`: đã kiểm chứng theo cơ sở đã ghi
+- `outdated`: trước đây có thể đúng, nhưng giờ cần cảnh giác lỗi thời
+- `archived`: giữ để tham khảo, không coi là nội dung dòng chính hiện tại
 
-## Official sources
+## Ba dòng cuối trang
 
-Product behavior follows OpenAI documentation: [https://developers.openai.com/codex](https://developers.openai.com/codex). This repository is a community guide; if it conflicts with official docs, official docs win—issues are welcome.
+Ở giai đoạn MVP, mỗi trang ghi cuối trang: **Trạng thái / Sản phẩm áp dụng / Kiểm chứng gần nhất**. Nội dung dễ lỗi thời (cài đặt, tài khoản, quyền, model) nên kèm liên kết chính thức.
+
+## Cơ sở chính thức
+
+Hành vi sản phẩm lấy tài liệu OpenAI làm chuẩn: [https://developers.openai.com/codex](https://developers.openai.com/codex). Kho này là hướng dẫn cộng đồng; nếu xung đột với chính thức, lấy chính thức làm chuẩn và hoan nghênh mở issue.
+
+## Hiểu nhầm thường gặp
+
+### 1. Chỉ cần ghi vào cẩm nang là nghĩa là lâu dài không đổi
+
+Đặc biệt các nội dung sau dễ thay đổi nhất:
+
+- Cách cài đặt
+- Quy trình đăng nhập và tài khoản
+- Quyền, model, mục cấu hình
+- Hành vi Cloud và lối vào sản phẩm
+
+### 2. `review` không có nghĩa là không được xem
+
+`review` nghĩa là nội dung chính đã có, nhưng chưa tới mức xác nhận mạnh nhất — không phải không được tham khảo.
+
+### 3. Khi cẩm nang cộng đồng xung đột với tài liệu chính thức, không được tin mỗi bên một nửa
+
+Có thể phân như sau:
+
+- Hiểu và giải thích lộ trình xem cẩm nang
+- Hành vi mới nhất và cách viết tham số xem chính thức
+
+## Cách phán đoán một trang có đáng tin không
+
+Nếu lo một trang đã lỗi thời, xem ba việc này:
+
+1. Trạng thái cuối trang là `review`, `verified` hay `outdated`
+2. Ngày kiểm chứng gần nhất cách hiện tại xa không
+3. Đang nói khái niệm, hay đang nói cài đặt, cấu hình, quyền — những thứ dễ đổi
+
+Phàm liên quan hành vi, tham số và quy tắc mới nhất, cuối cùng đều phải lấy tài liệu chính thức hiện hành làm chuẩn.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Đã đối chiếu với hệ thống 6 trạng thái hiện dùng của cẩm nang, quy tắc ghi chú chân trang và nguyên tắc ưu tiên tài liệu chính thức; trang này giải thích chính sách phiên bản nội bộ và cách đọc, không phụ thuộc tham số phiên bản sản phẩm cụ thể.  
+**Kiểm chứng gần nhất:** 2026-07-26

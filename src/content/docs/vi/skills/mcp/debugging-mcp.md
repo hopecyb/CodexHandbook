@@ -1,90 +1,90 @@
 ---
-title: Debugging MCP connections
-description: Systematic troubleshooting when MCP servers fail to start, tools time out, or results look wrong.
+title: Gỡ lỗi kết nối MCP
+description: Các bước điều tra hệ thống khi MCP server không khởi động, công cụ hết thời gian hoặc kết quả bất thường.
 locale: vi
-source_locale: en
-source_revision: f45a7ae
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-MCP brings external systems into Codex. Failures often fall into three buckets: **process won't start**, **auth wrong**, **tool logic or timeout**. This page gives a check order so you are not guessing at config.
+MCP đưa hệ thống ngoài vào Codex. Khi thất bại thường có ba loại: **process không lên**, **xác thực sai**, **logic công cụ hoặc hết thời gian**. Trang này đưa thứ tự kiểm, tránh cứ sửa cấu hình thử vận may.
 
-## Contents
+## Nội dung trang này
 
-- Minimal reproduction for MCP issues
-- Log and configuration checklist
-- When to suspect the server implementation vs Codex
+- Cách tái hiện tối thiểu vấn đề MCP
+- Checklist đối chiếu nhật ký và cấu hình
+- Khi nào nghi triển khai server chứ không phải Codex
 
-Related: [MCP overview](/skills/mcp/mcp-overview/) · [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
+Trang liên quan: [Tổng quan MCP](/skills/mcp/mcp-overview/) · [Nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/)
 
-## Triage flow
+## Quy trình phân loại
 
 ```text
-1. Can the server start alone in a terminal?
-2. Is config JSON/TOML syntax and path correct?
-3. Are environment variables visible inside the MCP process?
-4. Was the Codex session restarted to load new config?
-5. Does a single tool call timeout or have bad parameters?
+1. Server có khởi động riêng trong terminal không?
+2. Cú pháp và đường dẫn JSON/TOML cấu hình đúng chưa?
+3. Biến môi trường có hiện trong process MCP không?
+4. Phiên Codex đã khởi động lại để nạp cấu hình mới chưa?
+5. Lời gọi một công cụ có hết thời gian / sai tham số không?
 ```
 
-## Startup failures
+## Khởi động thất bại
 
-| Check | Notes |
+| Mục kiểm | Ghi chú |
 |---|---|
-| Command path | Is `npx`, `uvx`, absolute path on PATH? |
-| Dependency versions | Node/Python versions meet MCP server requirements? |
-| Manual run | Run command + args from config in shell |
-| Transport | stdio vs HTTP/SSE matches docs? |
+| Đường lệnh | `npx`, `uvx`, đường tuyệt đối có trong PATH không |
+| Phiên bản dependency | Node/Python có thỏa yêu cầu MCP server không |
+| Chạy thủ công | Copy command + args trong cấu hình rồi chạy trong shell |
+| Cách truyền tải | stdio vs HTTP/SSE có khớp tài liệu không |
 
-## Auth failures
+## Xác thực thất bại
 
-- API key injected via environment variable (not in repo)
-- OAuth MCP may need re-authorization when expired
-- Corporate proxy blocking MCP outbound
+- API key có tiêm qua biến môi trường không (không ghi vào repo)
+- MCP kiểu OAuth có hết hạn cần ủy quyền lại không
+- Proxy công ty có chặn MCP ra ngoài không
 
-Environment variable index: [environment variables](/guide/reference/environment-variables/)
+Chỉ mục biến môi trường: [biến môi trường](/guide/reference/environment-variables/)
 
-## Abnormal tool calls
+## Gọi công cụ bất thường
 
-| Symptom | Possible cause |
+| Hiện tượng | Nguyên nhân có thể |
 |---|---|
-| Tool not found | Server version vs client schema mismatch |
-| Timeout | Slow external API; increase timeout or optimize query |
-| Empty result | Wrong parameter names; check MCP server logs |
-| Garbled text | Non–UTF-8 encoding |
+| Tool not found | Phiên bản server và schema client không khớp |
+| Timeout | API ngoài chậm; tăng timeout hoặc tối ưu truy vấn |
+| Kết quả trống | Sai tên tham số; xem nhật ký MCP server |
+| Ký tự loạn | Encoding không phải UTF-8 |
 
-In prompt, ask Agent to **print tool return structure** (redacted) for debugging.
+Trong Prompt yêu cầu Agent **in cấu trúc trả về của công cụ** (đã ẩn danh) để gỡ lỗi.
 
-## Safe debugging habits
+## Thói quen gỡ lỗi an toàn
 
-- Use **test tenant** API keys, not production
-- Do not paste full tokens into chat logs
-- If MCP is suspicious, disconnect immediately and rotate keys
+- Dùng API key **tenant thử**, không dùng production
+- Nhật ký gỡ lỗi đừng dán nguyên token vào chat
+- Nghi MCP độc hại thì ngắt ngay và xoay khóa
 
-Error index: [error reference](/guide/reference/error-reference/)
+Chỉ mục lỗi: [tham chiếu lỗi và thông báo](/guide/reference/error-reference/)
 
-## Common mistakes
+## Lỗi thường gặp
 
-- Config changed but Codex session not restarted
-- Inconsistent MCP config in IDE vs CLI
-- MCP server log level always debug; screenshots submitted with secrets
+- Sửa cấu hình không khởi động lại phiên Codex
+- IDE và CLI mỗi bên một cấu hình MCP lệch nhau
+- Mức nhật ký MCP server mãi để debug rồi nộp screenshot có khóa
 
-## Acceptance checklist
+## Checklist nghiệm thu
 
-- [ ] Can start MCP server independently in terminal
-- [ ] At least one read-only tool call succeeded
-- [ ] Team standard MCP config template documented
+- [ ] Khởi động độc lập MCP server trong terminal được
+- [ ] Gọi thành công ít nhất một công cụ chỉ đọc
+- [ ] Ghi template cấu hình MCP chuẩn của nhóm
 
-## References
+## Nguồn tham chiếu
 
-- Model Context Protocol spec and debugging guide
+- Đặc tả Model Context Protocol và hướng dẫn gỡ lỗi
 - KimYx0207 CX-07
 - stormzhang `21-mcp.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / IDE / App  
-**Verification basis:** Troubleshooting depends on how current Codex clients load, display, and invoke MCP tools—high change risk; needs rewrite against current docs.  
-**Last verified:** 2026-07-26
+**Trạng thái:** outdated  
+**Sản phẩm áp dụng:** CLI / IDE / App  
+**Ghi chú tái Kiểm chứng:** Các bước điều tra trang này phụ thuộc client Codex hiện tại nạp, hiện và gọi công cụ MCP thế nào; phần này rủi ro thay đổi cao, cần viết lại theo tài liệu hiện hành.  
+**Kiểm chứng gần nhất:** 2026-07-26

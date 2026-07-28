@@ -1,98 +1,100 @@
 ---
-title: Files and Artifacts
-description: How Codex reads and writes file types, manages generated outputs, and what to verify.
+title: Tệp và artifact
+description: Codex đọc/ghi các loại tệp thế nào, quản lý vật tạo ra và điểm nghiệm thu.
 sidebar:
   order: 30
 locale: vi
-source_locale: en
-source_revision: f66e0f0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Codex often produces **file changes in the repo** or **new artifacts** (docs, images, config). This section covers best practices by file type so you do not end up with “generated but unusable.”
+Đầu ra cốt lõi của Codex thường là **thay đổi tệp trong kho** hoặc **artifact mới tạo** (tài liệu, ảnh, cấu hình). Chuyên đề này nói thực hành tốt nhất theo loại tệp, tránh “đã tạo nhưng không dùng được”.
 
-“Files” are not all the same—different types need different instructions and verification.
+Cùng là “tệp”, loại khác nhau cần cách giao và nghiệm thu khác nhau.
 
-“Edit code,” “handle spreadsheets,” “generate screenshots,” and “export slides” all look like file tasks, but failure modes differ.
+“Sửa mã”, “xử lý bảng”, “tạo ảnh chụp”, “xuất PPT” đều trông như tác vụ tệp, nhưng chỗ dễ sai nhất không giống nhau.
 
-## Section navigation
+## Điều hướng chương
 
-| Topic | Page |
+| Chủ đề | Trang |
 |---|---|
-| Code and text | [Text and code files](/guide/files-and-artifacts/text-and-code-files/) |
-| Screenshots and design input | [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF and long documents | [PDF and documents](/guide/files-and-artifacts/pdf-and-documents/) |
-| Tabular data | [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| Slides | [Presentations](/guide/files-and-artifacts/presentations/) |
-| Agent outputs | [Generated artifacts](/guide/files-and-artifacts/generated-artifacts/) |
+| Mã và văn bản | [Tệp văn bản và mã](/guide/files-and-artifacts/text-and-code-files/) |
+| Ảnh chụp và đầu vào thiết kế | [Hình ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF và tài liệu dài | [PDF và tài liệu](/guide/files-and-artifacts/pdf-and-documents/) |
+| Dữ liệu bảng | [Bảng và bảng tính](/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| Slide | [Bài trình bày](/guide/files-and-artifacts/presentations/) |
+| Đầu ra của Agent | [Nghiệm thu artifact tạo ra](/guide/files-and-artifacts/generated-artifacts/) |
 
-General method: [Verify artifacts](/guide/quality/verify-artifacts/).
+Phương pháp chung xem [Kiểm chứng artifact](/guide/quality/verify-artifacts/).
 
-## What this chapter covers
+## Chương này nói gì
 
-Three themes:
+Chương này chủ yếu nói ba việc:
 
-- How to describe the task clearly
-- Where things silently go wrong
-- How to verify at the end
+- Bạn nên giao tác vụ rõ thế nào
+- Nó dễ âm thầm sai ở chỗ nào
+- Cuối cùng bạn nên nghiệm thu thế nào
 
-It is operational guidance by file type—not a feature list.
+Vậy nó giống bộ hướng dẫn thao tác tách theo loại tệp hơn là danh sách tính năng thuần.
 
-## Unified principles
+## Nguyên tắc thống nhất
 
-1. **Explicit paths**: output path and naming in the prompt
-2. **Format conventions**: extension, encoding (UTF-8), line endings match the project
-3. **Size awareness**: large binaries stay out of Git, or use LFS/CDN
-4. **Human verification**: generated ≠ done; see [Definition of done](/guide/quality/definition-of-done/)
-5. **Sensitive data**: see [Sensitive context](/guide/context/sensitive-context/)
+1. **Đường dẫn rõ**: trong Prompt viết rõ đường dẫn xuất và đặt tên
+2. **Ước định dạng**: phần mở rộng, mã hóa (UTF-8), ký tự xuống dòng khớp dự án
+3. **Ý thức dung lượng**: nhị phân lớn không vào Git, hoặc dùng LFS/CDN
+4. **Nghiệm thu thủ công**: tạo ≠ hoàn thành; đối chiếu [Định nghĩa hoàn thành](/guide/quality/definition-of-done/)
+5. **Dữ liệu nhạy cảm**: xem [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. File exists ≠ task complete
+### 1. Tệp đã tạo ra không bằng tác vụ đã hoàn thành
 
-Problems are often not “was it generated?” but:
+Nhiều tác vụ kiểu tệp vấn đề không nằm ở “có tạo chưa”, mà ở:
 
-- Correct format?
-- Accurate content?
-- Right path?
-- Usable downstream?
+- Định dạng đúng không
+- Nội dung chính xác không
+- Đường dẫn đúng không
+- Downstream còn dùng tiếp được không
 
-### 2. All file types need the same instructions?
+### 2. Cách giao các loại tệp gần giống nhau?
 
-No.
+Cũng khác.  
+Ví dụ:
 
-- Code: scope, logic, tests
-- Spreadsheets: columns, types, aggregation rules
-- Images: visual content and dimensions
-- Docs: structure, tone, facts
+- Tệp mã quan tâm phạm vi, logic và kiểm thử hơn
+- Bảng quan tâm cột, kiểu và quy tắc tổng hợp hơn
+- Ảnh quan tâm nội dung hình và kích thước hơn
+- Tài liệu quan tâm cấu trúc, giọng và sự kiện hơn
 
-### 3. “Opens fine” means good enough?
+### 3. Chỉ cần cuối cùng mở được là ổn?
 
-Opening is the minimum—not necessarily ready to commit, publish, or deliver.
+Không thể nghĩ vậy.  
+“Mở được” chỉ là bước nền tảng nhất, không nghĩa đã phù hợp commit, phát hành hoặc giao hàng.
 
-## Suggested reading order
+## Thứ tự đọc đề xuất
 
-First time using Codex on files:
+Lần đầu dùng Codex xử lý tệp, có thể xem theo thứ tự:
 
-1. Pick the file type closest to your task
-2. Read common failure modes for that type
-3. Read the matching verification approach
+1. Tìm loại tệp giống tác vụ hiện tại nhất
+2. Xem loại đó dễ sai ở chỗ nào
+3. Rồi xem cách nghiệm thu tương ứng
 
-Easier than reading the whole chapter at once.
+Như vậy không dễ bị cả chương thông tin đè ngay từ đầu.
 
-## Relationship to tools
+## Quan hệ với công cụ
 
-- Read/write files: file tools + terminal
-- View images: [Prompting with images](/prompts/prompting-with-images/)
-- View pages: [Browser tool](/guide/tools/browser/)
-- Generate images: [Image generation](/guide/tools/image-generation/)
+- Đọc/ghi tệp: công cụ tệp + terminal
+- Xem ảnh: [Prompt kèm ảnh](/prompts/prompting-with-images/)
+- Xem trang: [Công cụ trình duyệt](/guide/tools/browser/)
+- Tạo ảnh: [Tạo ảnh](/guide/tools/image-generation/)
 
-File tasks often fail quietly—format, rules, or content drift while the file “exists.”
+Trong tác vụ kiểu tệp, rất thường gặp kết quả đã tạo ra nhưng định dạng, quy tắc hoặc nội dung đã âm thầm lệch.
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against current files-and-artifacts subsection structure and verified verify-artifacts, definition-of-done, sensitive-context, and image-related pages; stable principle: choose instructions and verification by file type.  
-**Last verified:** 2026-07-26
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Căn cứ kiểm chứng:** Đã đối chiếu chéo với cấu trúc chương con files-and-artifacts hiện tại của kho, cùng các chương kiểm chứng artifact, định nghĩa hoàn thành, ngữ cảnh nhạy cảm và ảnh đã kiểm chứng trong sổ tay; trang này chỉ nói nguyên tắc ổn định chọn cách giao và nghiệm thu theo loại tệp.  
+**Kiểm chứng gần nhất:** 2026-07-26

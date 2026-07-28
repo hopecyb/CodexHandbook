@@ -1,108 +1,109 @@
 ---
-title: Prompt basics
-description: The basic building blocks of a good prompt.
+title: Cơ bản về Prompt
+description: Các thành phần cơ bản của một Prompt tốt.
 locale: vi
-source_locale: en
-source_revision: c4dbe07
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you're new to prompting, it's easy to focus on whether your wording sounds "advanced."  
-For Codex, what matters is whether you've made these things clear:
+Khi mới học Prompt, dễ tập trung vào việc câu chữ có nghe «nâng cao» hay không.  
+Với Codex, điều quan trọng vẫn là đã nói rõ những điểm sau chưa:
 
-- What you actually want it to do
-- Where it can act and where it cannot
-- What counts as done
-- When uncertain—ask first, investigate first, or stop first
+- Bạn thực sự muốn nó làm gì
+- Được chạm đến đâu, không được chạm đến đâu
+- Thế nào là xong
+- Khi không chắc: hỏi trước, tra cứu trước, hay dừng trước
 
-A good prompt's job is to make task boundaries clear. It doesn't need to read like a spell.
+Trọng tâm của Prompt tốt là làm rõ ranh giới tác vụ; không cần viết như thần chú.
 
-## What this covers
+## Nội dung
 
-It mainly helps you avoid these common problems:
+Nó chủ yếu giúp bạn tránh các vấn đề thường gặp:
 
-- Goals so vague the result is just "optimize it a bit"
-- No scope stated, so Codex changes more than you intended
-- No acceptance criteria, so you end up judging by feel
-- No instruction when information is missing, so it starts guessing
+- Mục tiêu quá mơ hồ, kết quả chỉ còn «tối ưu một chút»
+- Không nêu phạm vi, Codex sửa nhiều hơn ý bạn
+- Không nêu nghiệm thu, cuối cùng chỉ đánh giá theo cảm giác
+- Thiếu hướng dẫn khi thông tin thiếu, nên nó bắt đầu đoán
 
-## What you can treat a prompt as
+## Có thể nhìn Prompt như thế nào
 
-Think of a prompt as a task ticket.  
-A solid ticket should at least answer:
+Hãy xem Prompt như một phiếu tác vụ.  
+Một phiếu đạt yêu cầu ít nhất phải trả lời:
 
-- What to do
-- Why
-- What materials to use
-- What not to touch
-- What "passing" looks like
+- Làm gì
+- Vì sao
+- Dùng nguyên liệu gì
+- Không được đụng gì
+- Làm đến mức nào thì đạt
 
-If none of that is clear, polished sentences won't fix it.
+Nếu những điểm này chưa rõ, câu chữ hay đến mấy cũng không cứu được.
 
-## Three levels (the example library follows these too)
+## Ba cấp độ viết (kho ví dụ cũng dùng chung)
 
-- **Minimal:** when the goal is already crystal clear
-- **Recommended:** goal, context, inputs, constraints, acceptance, permissions
-- **Teaching:** explains why each section exists
+- **Bản tối giản**: dùng khi mục tiêu đã rất rõ
+- **Bản khuyến nghị**: gồm mục tiêu, bối cảnh, đầu vào, ràng buộc, nghiệm thu, quyền
+- **Bản giảng dạy**: giải thích vì sao mỗi đoạn tồn tại
 
-## Common misconceptions
+## Hiểu lầm thường gặp
 
-### 1. Longer prompts are better
+### 1. Prompt càng dài càng tốt
 
-Relevance matters.  
-A long block of irrelevant background dilutes the boundaries that actually matter.
+Điều quan trọng là liên quan.  
+Một đoạn bối cảnh không liên quan dài dễ làm loãng ranh giới thật sự quan trọng.
 
-### 2. If the goal is stated, everything else is optional
+### 2. Chỉ cần nêu mục tiêu, phần còn lại có thể bỏ
 
-Goal-only prompts often miss:
+Chỉ viết mục tiêu dễ bỏ sót:
 
-- Scope of changes
-- Style constraints
-- How to verify
-- What to do when uncertain
+- Phạm vi thay đổi
+- Ràng buộc phong cách
+- Cách nghiệm thu
+- Làm gì khi không chắc
 
-### 3. Prompts are mainly for "teaching the model how to think"
+### 3. Prompt chủ yếu là «dạy mô hình cách nghĩ»
 
-For beginners, a more practical view: prompts reduce misunderstanding.
+Với người mới, cách hiểu thực tế hơn: Prompt là để giảm hiểu nhầm.
 
-## A minimal structure that works
+## Một khung tối thiểu đủ dùng
 
-If you don't want to learn everything at once, start with these four lines:
+Nếu chưa muốn học nhiều cùng lúc, hãy bắt đầu với 4 câu này:
 
 ```text
-Goal: what I want you to do
-Scope: where you can change things
-Acceptance: what counts as done
-When uncertain: ask first, don't guess
+Mục tiêu: Tôi muốn bạn làm gì
+Phạm vi: Bạn chỉ được sửa chỗ nào
+Nghiệm thu: Làm đến mức nào thì hoàn thành
+Khi không chắc: Hỏi trước, đừng đoán
 ```
 
-That's already much clearer than "help me optimize this."
+Đã rõ hơn nhiều so với một câu «giúp tôi tối ưu».
 
-## When minimal is enough vs. when full is safer
+## Khi nào dùng bản tối giản, khi nào dùng bản đầy đủ
 
-### Minimal fits
+### Bản tối giản phù hợp khi
 
-- Small single-file edits
-- Very specific goals
-- You know the repo and task well
+- Sửa nhỏ trong một tệp
+- Mục tiêu rất cụ thể
+- Bạn quen kho và tác vụ hiện tại
 
-### Recommended is safer
+### Bản khuyến nghị ổn định hơn khi
 
-- Changes across multiple files
-- You're unfamiliar with the project
-- Higher risk
-- Approvals, tests, or review required
+- Xuyên nhiều tệp
+- Bạn chưa quen dự án
+- Rủi ro cao hơn
+- Cần phê duyệt, kiểm thử hoặc rà soát
 
-For most beginners, practicing the **recommended** version first is usually the safer path.
+Với hầu hết người mới, luyện từ **bản khuyến nghị** thường ổn định hơn.
 
-The core of a good prompt is reducing guessing, drift, and overreach.
+Cốt lõi của Prompt tốt là giảm đoán, lệch hướng và vượt ranh giới.
 
-See examples in [Run your first task](/cases/first-task/) and [Task anatomy](/prompts/task-anatomy/).
+Ví dụ xem [Chạy tác vụ đầu tiên](/cases/first-task/) và [Cấu trúc tác vụ tốt](/prompts/task-anatomy/).
+
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page covers only general prompting methods; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Trạng thái:** verified  
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
+**Cơ sở kiểm chứng:** Trang này chỉ đề cập phương pháp Prompt chung; liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
+**Kiểm chứng gần nhất:** 2026-07-26
