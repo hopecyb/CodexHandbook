@@ -24,10 +24,6 @@ translated_at: 2026-07-26
 
 **Success criteria:** One command or Skill produces Markdown in a fixed format; failures have clear exit codes.
 
-## 2. Reference pattern
-
-The team already has a similar case: [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/).
-
 ## 3. Recommended prompt
 
 ```text

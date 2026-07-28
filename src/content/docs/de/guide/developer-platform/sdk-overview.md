@@ -85,10 +85,7 @@ Das SDK triggert Cloud oder Remote-Runner, oder CI ruft Ihren Dienst zurück, um
 - Vom SDK erzeugte PRs automatisch mergen
 
 ## Quellen
-
 - OpenAI Codex SDK Reference
-- KimYx0207 Entwicklerintegrationskapitel
-
 ---
 
 **Status:** verified  

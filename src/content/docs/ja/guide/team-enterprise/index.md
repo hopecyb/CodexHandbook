@@ -90,12 +90,6 @@ adoption、administration、deployment-patterns などは [chapter-outline](/doc
 
 個人入門が主なら後回し。チーム展開、権限管理、リスク制御のときに戻ってください。
 
-## 参考
-
-- KimYx0207 セキュリティとエンタープライズ章
-- freestylefly/CodexGuide チーム playbook
-- stormzhang セキュリティチュートリアル
-
 ---
 
 **状態：** verified  

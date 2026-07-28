@@ -10,7 +10,6 @@ translated_at: 2026-07-28
 
 Al crear el primer proyecto de práctica, es tentador usar de inmediato el proyecto formal que tienes a mano. Parece más cómodo; el riesgo también es mayor.
 
-
 ## Práctica recomendada
 
 1. Crea una carpeta, por ejemplo `codex-practice/`
@@ -59,7 +58,6 @@ Si vas a crear uno ahora, cumple al menos estos 4 puntos:
 4. Los cambios se entienden de un vistazo
 
 El primer proyecto de práctica no tiene que parecer un entorno de producción. Que sea seguro, simple y fácil de recuperar si te equivocas basta.
-
 
 ---
 

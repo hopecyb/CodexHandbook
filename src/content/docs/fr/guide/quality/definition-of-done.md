@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Exemple de définition de terminé minimale personnelle :
 
 - [ ] Diff examiné
@@ -18,7 +17,6 @@ Exemple de définition de terminé minimale personnelle :
 - [ ] Issues de suivi notées
 
 La version équipe s'étendra dans les jalons de gouvernance ultérieurs.
-
 
 ---
 

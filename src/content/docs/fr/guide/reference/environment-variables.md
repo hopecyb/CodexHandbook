@@ -157,11 +157,7 @@ Les variables d'environnement conviennent aux valeurs qui changent, sont sensibl
 - Supposer `unset` rend les processus enfants sûrs — vérifier l'arborescence de processus
 
 ## Sources de référence
-
 - Documentation configuration / environnement OpenAI Codex
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Statut :** vérifié  

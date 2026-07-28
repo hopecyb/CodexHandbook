@@ -9,11 +9,9 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Compaction drops detail. Key constraints, acceptance criteria, and file allowlists should be **re-stated** after compaction, or written in project instructions.
 
 Conceptual overview: [Tokens, context, and compaction](/guide/foundations/tokens-context-and-compaction/)
-
 
 ---
 

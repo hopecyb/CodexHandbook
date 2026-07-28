@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 There are many extension mechanisms, and they are easy to confuse. This page explains how they relate—not installation steps.
 
 ## Relationship diagram

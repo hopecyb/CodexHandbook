@@ -55,7 +55,6 @@ translated_at: 2026-07-28
 - [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
 - [코드베이스 이해 사례](/cases/understand-a-codebase/)
 
-
 ---
 
 **상태:** verified  

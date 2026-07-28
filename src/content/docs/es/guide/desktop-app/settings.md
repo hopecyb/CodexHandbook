@@ -49,7 +49,6 @@ Puede deberse a:
 
 La primera vez que mires la página de ajustes, entiende primero los límites de seguridad y las opciones de avisos; el resto de detalles puede esperar.
 
-
 ---
 
 **Estado:** outdated  

@@ -150,12 +150,7 @@ Tiên đề của Agent song song vẫn là: các tác vụ độc lập với n
 4. [Quy trình cộng tác đa Agent](/cases/workflows/multi-agent-coordination/)
 
 ## Nguồn tham khảo
-
 - Tài liệu liên quan đa tác vụ / cộng tác tác vụ của OpenAI Codex
-- Ý tưởng cộng tác tác vụ trong thư mục Codex của KimYx0207
-- `21-subagents.md` của stormzhang
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Trạng thái:** outdated  

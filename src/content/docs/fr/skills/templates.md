@@ -52,13 +52,6 @@ Si vous voulez toujours la même forme :
 Pas obligatoire au premier Skill.  
 Dès que vous répétez « sors selon cette structure », extrayez un template.
 
-## vs references/
-
-| Répertoire | Accent |
-|---|---|
-| `references/` | normes d'entrée, règles, API |
-| `templates/` | format de sortie, structure de rapport |
-
 ## Idées reçues
 
 ### 1. template = cosmétique

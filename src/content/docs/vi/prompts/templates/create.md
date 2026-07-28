@@ -65,7 +65,6 @@ Trong tác vụ tạo, tình huống dễ lỗi nhất là chưa nói rõ «làm
 - [Công việc dẫn bởi đặc tả](/cases/workflows/specification-driven-work/)
 - [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/)
 
-
 ---
 
 **Trạng thái:** verified  

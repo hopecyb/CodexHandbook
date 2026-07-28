@@ -140,11 +140,7 @@ Lado GitHub: [Integração com GitHub](/guide/integrations/github/)
 - [ ] Sem Secrets no repo
 
 ## Fontes de referência
-
-- stormzhang `26-git-github.md`
-- Capítulos Review/PR de KimYx0207
 - [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **Estado:** outdated  

@@ -109,7 +109,6 @@ Páginas relacionadas:
 2. [Terminologia para iniciantes](/guide/start-here/terminology-for-beginners/)
 3. [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **Status:** verified  

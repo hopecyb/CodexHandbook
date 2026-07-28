@@ -125,12 +125,6 @@ Monorepo는 Cloud에서 **루트 설치를 빼먹거나** filter 오류로 자�
 
 Monorepo의 AGENTS.md는 무조건 한곳에 모을 필요가 없습니다. “전역 합의”와 “디렉터리 국소 규칙”을 각각 맞는 위치에 두는 편이 낫습니다.
 
-## 참고 출처
-
-- freestylefly/CodexGuide monorepo playbook
-- codex.bozhouai.com 대형 저장소 장
-- stormzhang monorepo와 Git 실천
-
 ---
 
 **상태:** verified  

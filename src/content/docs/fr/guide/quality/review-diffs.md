@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Lors de la lecture d'un Diff, demandez-vous :
 
 1. Seuls les chemins autorisés ont-ils changé ?
@@ -17,7 +16,6 @@ Lors de la lecture d'un Diff, demandez-vous :
 4. Y a-t-il des secrets ou des restes de débogage ?
 
 Vue côté produit : [Diff, commentaires et revue](/guide/desktop-app/diffs-comments-and-review/)
-
 
 ---
 

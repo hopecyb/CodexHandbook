@@ -98,11 +98,9 @@ description: 向 Codex 提供截图、设计稿，并管理任务中的图像文
 - [敏感上下文](/guide/context/sensitive-context/)
 
 ## 参考来源
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## 验收
 
 对「按图实现」类任务：

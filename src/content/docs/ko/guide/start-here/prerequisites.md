@@ -64,11 +64,9 @@ translated_at: 2026-07-28
 - 공식 설치·제품 변경은 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 기준으로 합니다
 
 ## 참고 출처
-
 - OpenAI Academy: Getting started with ChatGPT
 - OpenAI Academy: Using ChatGPT
 - OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
-
 ## 흔한 시작 순서
 
 이 순서로 가면 됩니다.
@@ -80,7 +78,6 @@ translated_at: 2026-07-28
 5. 결과를 확인한 뒤 다음을 정합니다
 
 시작 전에는 안전하고 작은 범위·되돌릴 수 있는 환경에서 첫 작업을 끝내는 편이, 개념을 한꺼번에 채우는 것보다 수월합니다.
-
 
 ---
 

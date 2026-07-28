@@ -79,7 +79,6 @@ Full comparison: [Feature comparison](/guide/reference/feature-comparison/). You
 
 Do not rush to decide which is “more professional.” Pick the entry where process and results are easiest to understand.
 
-
 ---
 
 **Status:** verified  

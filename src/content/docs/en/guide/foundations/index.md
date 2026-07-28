@@ -28,7 +28,6 @@ This section establishes concepts used across the handbook. Product UI differenc
 
 When you're done, continue to [Getting started](/guide/getting-started/).
 
-
 ---
 
 **Status:** review  

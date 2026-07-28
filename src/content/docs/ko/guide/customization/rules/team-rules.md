@@ -124,12 +124,6 @@ L5 단발 작업 prompt         → 임시 조이기는 가능, 임시 완화는
 
 팀 규칙 정책에서 가장 중요한 것은 “누가 어느 계층의 경계를 정하는지”를 먼저 나눈 뒤, 규칙을 어떻게 쓸지 정하는 것입니다.
 
-## 참고 출처
-
-- freestylefly/CodexGuide 팀 거버넌스와 playbook
-- KimYx0207 기업 보안 장
-- codex.bozhouai.com 팀 설정 사례(작업 유형 참고)
-
 ---
 
 **상태:** verified  

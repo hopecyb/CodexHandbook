@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 「プロジェクト説明」は Codex がリポジトリを理解するための**静的コンテキスト**で、単一ファイル形式に限りません。
 
 ## 内容

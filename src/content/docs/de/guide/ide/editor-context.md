@@ -18,18 +18,6 @@ Codex in der IDE schaut nicht nur auf deine Worte, sondern auch darauf, was im E
 - Wie @-Dateien, Auswahl und AGENTS.md sich überlagern
 - Wie Rauschen senken und Trefferquote erhöhen
 
-## Kontextquellen (Schichten)
-
-| Quelle | Wer steuert | Typischer Inhalt |
-|---|---|---|
-| Workspace-Wurzel | Ordner, den du öffnest | Projektstruktur, `AGENTS.md`, Konfiguration |
-| Aktuell geöffnete Datei | Editor-Tabs | Quellcode in Bearbeitung |
-| Auswahl | von dir hervorgehobener Code | Funktion, Fehlerausschnitt |
-| Explizites @ | Pfade, die du im Gespräch @-nimmst | Dateien über Verzeichnisse, Docs |
-| Projektregeln | `AGENTS.md` usw. im Repo | Coding-Standards, Testbefehle |
-
-Priorität und Konflikte: [Kontext-Priorität](/guide/context/context-priority/).
-
 ## Empfohlener Workflow
 
 1. **Repository über die Workspace-Wurzel öffnen**, nicht nur einen Unterordner (Monorepo-Ausnahmen laut Team-Doku)
@@ -83,10 +71,7 @@ Logs und Kundendaten vor dem Einfügen anonymisieren; die IDE entscheidet Compli
 - [ ] Testbefehle in `AGENTS.md` stimmen mit IDE-Terminal überein
 
 ## Quellen
-
 - [Datei- und Ordner-Kontext](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Status:** verified  

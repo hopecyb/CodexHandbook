@@ -118,12 +118,6 @@ Quy tắc lệnh không phải đang “nhớ lệnh”, mà đang phân rõ l�
 - [Phê duyệt và Sandbox CLI](/guide/cli/approvals-and-sandbox/)
 - [Ma trận quyền](/guide/reference/permission-matrix/)
 
-## Nguồn tham khảo
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- Chương quyền và cấu hình KimYx0207
-- Playbook nhóm freestylefly/CodexGuide
-
 ---
 
 **Trạng thái:** verified  

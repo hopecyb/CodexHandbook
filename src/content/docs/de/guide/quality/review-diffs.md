@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Diff“ meint: welche Stellen Codex diesmal wirklich geändert hat.
 
 Viele schauen bei der ersten Abnahme nur die Zusammenfassung an, nicht die reale Änderung.  
@@ -62,7 +61,6 @@ Beim ersten Diff:
 4. Ob Stil und Namen passen
 
 Zuerst sehen, was wirklich geändert wurde — dann entscheiden, ob Sie das Ergebnis annehmen.
-
 
 ---
 

@@ -21,7 +21,6 @@ When conversation or files grow too large, the system may **compact**: keep summ
 
 This page is concepts; `05` is how to manage them.
 
-
 ---
 
 **Status:** review  

@@ -83,12 +83,7 @@ Para formarte el concepto, prioriza [Resumen del SDK](/guide/developer-platform/
 Este capítulo habla de «cómo enchufar Codex en el sistema». Para el primer uso práctico, empieza por el contenido de primeros pasos.
 
 ## Fuentes de referencia
-
 - Documentación oficial de la API / SDK de OpenAI Codex
-- Capítulos para desarrolladores de KimYx0207
-- Tutoriales de CI y automatización de stormzhang
-- Casos de ingeniería de codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

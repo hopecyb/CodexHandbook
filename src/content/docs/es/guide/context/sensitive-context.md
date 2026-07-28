@@ -109,7 +109,6 @@ Trátalo según el nivel de riesgo:
 
 Al resolver problemas, por defecto da solo «la información mínima necesaria para depurar»; si se puede anonimizar, anonimiza; si se puede usar un marcador de posición, úsalo.
 
-
 ---
 
 **Estado:** verified  

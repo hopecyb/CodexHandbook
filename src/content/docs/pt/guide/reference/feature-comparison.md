@@ -73,7 +73,6 @@ Muitos fazem isto:
 
 Escolher por cenário de uso costuma ser mais fiável do que olhar só quantas funcionalidades há.
 
-
 ---
 
 **Estado:** outdated  

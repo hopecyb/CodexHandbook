@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 A **worktree** lets you try changes in an isolated directory with less impact on your main workspace (especially when using Git worktrees).
 
 ## When to use
@@ -21,7 +20,6 @@ A **worktree** lets you try changes in an isolated directory with less impact on
 
 - The practice project is already isolated enough
 - You are not comfortable with Git yet: finish serial tasks in the practice directory first
-
 
 ---
 

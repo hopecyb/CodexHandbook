@@ -49,7 +49,6 @@ Mögliche Gründe:
 
 Beim ersten Blick auf Einstellungen zuerst Sicherheitsgrenzen und Hinweise verstehen — Details später.
 
-
 ---
 
 **Status:** outdated  

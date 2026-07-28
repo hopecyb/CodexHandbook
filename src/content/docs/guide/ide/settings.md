@@ -109,10 +109,7 @@ CLI 与 IDE 应使用**同一安全基线**；CLI 详见 [CLI 配置](/guide/cli
 IDE 设置更像“你在编辑器里怎么和 Codex 配合”；项目规则怎么写，是另一层事情，别混在一起。
 
 ## 参考来源
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`、`09-ide.md`
-
 ---
 
 **状态：** outdated  

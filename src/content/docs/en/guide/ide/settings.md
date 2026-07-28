@@ -112,10 +112,7 @@ Tuning these covers most real-world friction.
 IDE settings are how you and Codex cooperate in the editor; project rules are a separate layer—do not mix them up.
 
 ## References
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`, `09-ide.md`
-
 ---
 
 **Status:** outdated  

@@ -201,13 +201,7 @@ Cela facilite la stabilisation du **consensus de collaboration** d'abord, puis l
 - [Choisir une méthode d'extension](/skills/choosing-an-extension-method/)
 
 ## Références
-
 - Documentation officielle OpenAI Codex (selon la version actuelle)
-- Approche d'organisation AGENTS/Skill de freestylefly/CodexGuide
-- KimYx0207 *AI-Coding-Guide-Zh* sujets extension et automatisation Codex
-- stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Statut :** vérifié  

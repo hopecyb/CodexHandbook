@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 The desktop App is the default entry for beginners: visualize projects, tasks, diffs, and approvals.
 
 ## In this chapter
@@ -26,7 +25,6 @@ The desktop App is the default entry for beginners: visualize projects, tasks, d
 - [Troubleshooting](/guide/desktop-app/troubleshooting/)
 
 Getting started: [Install the desktop App](/guide/getting-started/install-desktop-app/)
-
 
 ---
 

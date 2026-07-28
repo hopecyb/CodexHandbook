@@ -118,12 +118,6 @@ allow/deny가 “원칙적으로 무엇을 할 수 있는지”를 정한다면,
 - [CLI 승인과 샌드박스](/guide/cli/approvals-and-sandbox/)
 - [권한 매트릭스](/guide/reference/permission-matrix/)
 
-## 참고 출처
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 권한·설정 장
-- freestylefly/CodexGuide 팀 playbook
-
 ---
 
 **상태:** verified  

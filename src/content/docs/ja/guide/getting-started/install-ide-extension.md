@@ -40,7 +40,6 @@ IDE 拡張をインストールしたら、現在のエディタとワークス�
 
 次：[IDE ローカルタスクワークフロー](/guide/ide/local-task-workflow/)。トラブルシューティング：[IDE トラブルシューティング](/guide/ide/troubleshooting/)。
 
-
 ---
 
 **状態：** outdated  

@@ -69,7 +69,6 @@ description: 完成登录并确认身份与权限状态。
 
 认证细节与安全提示以官方为准：[https://developers.openai.com/codex](https://developers.openai.com/codex)。失败时查 [故障排查索引](/guide/reference/troubleshooting/)。
 
-
 ---
 
 **状态：** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Sandbox“ und „Netzwerk“ sind zwei verschiedene Dinge: Die Sandbox begrenzt, wohin es greifen darf; das Netzwerk begrenzt, wohin es verbinden darf.
 
 Die **Sandbox** begrenzt Dateisystem und Teile der Systemfähigkeiten, die der Agent erreichen kann, und verkleinert die Fläche für Fehlbedienung. **Netzwerkzugriff** ist eine weitere Risikoebene: Sensible Informationen aus dem Prompt können abfließen, oder unzuverlässige Daten können hereinkommen.
@@ -66,7 +65,6 @@ Beide Türen sind nicht nur technische Einstellungen — sie sind deine Risikost
 Produktseitige Einstiege: Desktop-App [Einstellungen](/guide/desktop-app/settings/); offizielle Details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Am Anfang lieber etwas enger begrenzen, als alle Türen zu öffnen, bevor du die Risiken verstehst.
-
 
 ---
 

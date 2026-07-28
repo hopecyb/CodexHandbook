@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Los PDF se usan a menudo para especificaciones, papers, escaneos e informes exportados. A diferencia del texto plano, un PDF tiene **estructura compleja, mucho tamaño y un diff difícil**; conviene acordar por separado cómo encarar la tarea.
 
 Al entregar un PDF a Codex, lo más habitual es una comprensión incompleta de la estructura o un alcance demasiado grande.

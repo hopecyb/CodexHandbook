@@ -107,7 +107,6 @@ Je mehr geändert, desto schwerer zu sagen, ab welchem Schritt es schiefging.
 
 Kontextfokus heißt nicht weniger reden — gültige Infos behalten, Unwichtiges rechtzeitig streichen. Chaotischer Kontext → schiefe Ausführung.
 
-
 ---
 
 **Status:** verified  

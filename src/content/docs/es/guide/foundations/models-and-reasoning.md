@@ -59,7 +59,6 @@ Lo más importante es juzgar: si esta Tarea merece el tiempo y el coste extra de
 
 Este handbook no se ata a un nombre comercial de modelo concreto. Usa la lista actual de tu cliente y [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Estado:** verified  

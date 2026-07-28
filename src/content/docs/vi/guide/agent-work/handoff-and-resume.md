@@ -86,7 +86,6 @@ Như vậy tránh phụ thuộc ngữ cảnh cũ đã nén, thiếu hoặc méo.
 
 Bàn giao tốt không phải kể lại lịch sử, mà để người mở tác vụ lần sau biết ngay: đang ở đâu, bước tiếp theo làm gì, xong thì kiểm thế nào.
 
-
 ---
 
 **Trạng thái:** verified  

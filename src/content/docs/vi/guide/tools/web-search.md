@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Tìm kiếm web phù hợp bổ sung sự kiện, không phù hợp thay bạn đưa kết luận cuối cùng.
 
 Phù hợp: tra tài liệu công khai, mã lỗi, ghi chú phiên bản. Không phù hợp: coi kết quả tìm kiếm là kết luận pháp lý/y tế cuối cùng.
@@ -76,7 +75,6 @@ Hãy tìm kiếm trước và ưu tiên nguồn chính thức; khi đưa kết l
 ```
 
 Tìm kiếm cho bạn manh mối và nguồn; cuối cùng vẫn phải quay lại nguyên văn để đối chiếu.
-
 
 ---
 

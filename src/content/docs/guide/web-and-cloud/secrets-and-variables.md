@@ -121,11 +121,7 @@ Cloud 任务常需要访问私有 API、包仓库或数据库。这里用到的�
 - [ ] 离职/轮换流程已定义
 
 ## 参考来源
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`、`10-cloud.md`
-- KimYx0207 安全与企业章节（事实需官方复核）
-
 ---
 
 **状态：** outdated  

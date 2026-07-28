@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 「프로젝트 설명」은 Codex가 저장소를 이해하는 **정적 컨텍스트**이며, 단일 파일 형식에 한정되지 않습니다.
 
 ## 내용

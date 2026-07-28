@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 A pesquisa Web serve para complementar factos — não para substituir a sua conclusão final.
 
 Adequado: consultar documentação pública, códigos de erro, notas de versão. Inadequado: tratar o resultado da pesquisa como conclusão jurídica/médica final.
@@ -76,7 +75,6 @@ Pesquise primeiro e priorize fontes oficiais; ao dar conclusões, anexe ligaçõ
 ```
 
 A pesquisa dá pistas e fontes; no fim ainda tem de voltar ao original para conferir.
-
 
 ---
 

@@ -8,11 +8,9 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Suivez les instructions CLI sur [https://developers.openai.com/codex](https://developers.openai.com/codex) pour installer et mettre à jour. Après l'installation, confirmez que la commande est dans votre `PATH` et terminez l'authentification.
 
 Voir aussi : [Installer la CLI](/guide/getting-started/install-cli/)
-
 
 ---
 

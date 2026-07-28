@@ -92,7 +92,6 @@ Gặp từ lạ thì quay lại tra, rồi đọc tiếp là được.
 
 Lần đầu đọc cẩm nang, coi các từ này như gợi ý là đủ. Biết chúng chỉ cái gì đại khái thực tế hơn là cố thuộc hết ngay từ đầu.
 
-
 ---
 
 **Trạng thái:** verified  

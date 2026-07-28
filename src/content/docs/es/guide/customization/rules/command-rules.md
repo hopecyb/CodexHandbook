@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Las **reglas de comandos** se centran en «qué comandos puede ejecutar el Agent y con qué parámetros». Son la forma más habitual de [reglas de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/), y suelen escribirse en configuración o archivos de reglas que el equipo puede revisar.
 
 ## Qué cubre esta página
@@ -118,12 +117,6 @@ Las reglas de comandos no «memorizan comandos»; separan cuáles son acciones c
 - [Política de reglas de equipo](/guide/customization/rules/team-rules/)
 - [Aprobación y Sandbox en CLI](/guide/cli/approvals-and-sandbox/)
 - [Matriz de permisos](/guide/reference/permission-matrix/)
-
-## Referencias
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- Capítulos de permisos y configuración de KimYx0207
-- Playbook de equipo de freestylefly/CodexGuide
 
 ---
 

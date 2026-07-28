@@ -48,7 +48,6 @@ Quan trọng hơn là bạn nói rõ được:
 
 Giá trị của dự án nhỏ đầu tiên không nằm ở tác phẩm lớn cỡ nào, mà ở chỗ bạn đã đi hết một vòng hợp tác đầy đủ.
 
-
 ---
 
 **Trạng thái:** verified  

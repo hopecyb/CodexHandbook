@@ -53,7 +53,6 @@ Trọng tâm mẫu review là lật rủi ro theo chiều cố định—không 
 - [Review trước khi merge](/cases/workflows/review-before-merge/)
 - [Case review PR](/cases/review-a-pr/)
 
-
 ---
 
 **Trạng thái:** verified  

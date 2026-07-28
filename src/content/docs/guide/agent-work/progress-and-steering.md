@@ -152,7 +152,6 @@ description: 执行途中发现方向偏了，如何用短指令把 Codex 拉回
 - 需要把任务拆给别人：见 [子 Agent](/guide/agent-work/subagents/)
 - 任务中断后再继续：见 [交接与恢复](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **状态：** verified  

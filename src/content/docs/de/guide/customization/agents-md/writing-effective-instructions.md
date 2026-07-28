@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Gute Projektanweisungen ähneln eher einer **Checkliste**. Ziel: Codex macht beim ersten Versuch weniger vorhersehbare Fehler.
 
 Beim ersten Entwurf schreiben viele viele Ideen — die wirklich kritischen Constraints bleiben unklar.

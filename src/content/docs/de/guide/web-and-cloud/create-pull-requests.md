@@ -98,8 +98,6 @@ Für Solo-Experimente vielleicht ein Schritt weniger — für Kollaborationsrepo
 - Skill oder CI-`codex exec` für **ergänzende Review-Kommentare**
 - Auto-Merge braucht eigene Governance — nicht Einsteiger-Default
 
-KimYx0207 CX-10 zu Review/PR; konkrete Fähigkeiten offiziell nachprüfen.
-
 ## Häufige Fehler
 
 - PR mit mehreren unzusammenhängenden Features

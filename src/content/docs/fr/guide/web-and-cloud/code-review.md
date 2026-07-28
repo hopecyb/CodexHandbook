@@ -138,11 +138,7 @@ Sur GitHub : [intégration GitHub](/guide/integrations/github/)
 - [ ] Pas de Secrets commités dans le repo
 
 ## Références
-
-- stormzhang `26-git-github.md`
-- KimYx0207 sections Review/PR
 - [Patterns d'Approbation humaine](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **Statut :** obsolète  

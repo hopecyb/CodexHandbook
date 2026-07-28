@@ -114,12 +114,6 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 - [CLI 承認とサンドボックス](/guide/cli/approvals-and-sandbox/)
 - [権限マトリクス](/guide/reference/permission-matrix/)
 
-## 参考
-
-- stormzhang `15-permissions.md`、`18-config.md`
-- KimYx0207 権限と設定章
-- freestylefly/CodexGuide チーム playbook
-
 ---
 
 **状態：** verified  

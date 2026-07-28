@@ -107,7 +107,6 @@ Nach Risiko:
 
 Beim Problemlösen Default: nur **minimale nötige Debug-Info**; anonymisieren wo möglich, Platzhalter wo möglich.
 
-
 ---
 
 **Status:** verified  

@@ -109,10 +109,7 @@ Artifact không chỉ xem “đã tạo”. Ít nhất phải mở xem, kiểm c
 - [ ] Không secrets, không thư mục sinh thừa
 
 ## Nguồn tham khảo
-
 - [Xử lý sự không chắc chắn](/guide/quality/handle-uncertainty/)
-- Yêu cầu nghiệm thu case external-source-integration
-
 ---
 
 **Trạng thái:** verified  

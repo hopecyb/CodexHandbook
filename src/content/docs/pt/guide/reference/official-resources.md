@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Este manual é um guia comunitário de código aberto. Comportamento do produto, pacotes de instalação e planos são definidos pelo oficial:
 
 - Documentação para desenvolvedores Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
@@ -71,7 +70,6 @@ Estas, mais fiável o oficial:
 3. Se chocarem, prevalece o oficial
 
 Assim a direção fica mais clara e pisas menos informação caducada.
-
 
 ---
 

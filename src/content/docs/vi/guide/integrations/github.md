@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 GitHub là mặt cộng tác mã phổ biến nhất của Codex: tác vụ Cloud, rà soát PR, Actions và push cục bộ đều quanh cùng một bộ nhánh và quyền.
 
 Ở đây chủ yếu nói Codex nối vào quy trình cộng tác “kho mã, nhánh, PR, Review” thế nào.
@@ -97,10 +96,7 @@ Trọng tâm tích hợp GitHub là để Codex nối vào quy trình cộng tá
 - Cùng một PR trộn định dạng và thay đổi chức năng
 
 ## Nguồn tham khảo
-
 - Tài liệu tích hợp GitHub OpenAI Codex
-- KimYx0207 CX-10; stormzhang `26-git-github.md`
-
 ---
 
 **Trạng thái:** verified  

@@ -81,11 +81,6 @@ En escenarios multi-Agent, ver [Coordinación multi-Agent](/cases/workflows/mult
 - [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
 - [Referencia de errores](/guide/reference/error-reference/)
 
-## Fuentes de referencia
-
-- Retrospectivas y playbooks de freestylefly/CodexGuide
-- Capítulos de depuración de stormzhang
-
 ---
 
 **Estado:** verified  

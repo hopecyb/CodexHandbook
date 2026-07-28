@@ -52,12 +52,6 @@ Without checkpoints, you risk: editing the wrong directory, skipping tests, mist
 3. **Failures recoverable**: know how to undo and fork a thread to continue
 4. **Capture when possible**: third repetition of a flow → Skill or template
 
-## Reference sources
-
-- freestylefly/CodexGuide workflows and playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com fourth article standard workflows
-
 ---
 
 **Status:** verified  

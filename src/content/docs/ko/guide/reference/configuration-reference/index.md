@@ -219,11 +219,7 @@ Cloud Secrets：[Secrets와 환경 변수](/guide/web-and-cloud/secrets-and-vari
 - `AGENTS.md` 지시와 모순(설정은 허용인데 문서는 금지)
 
 ## 참고 출처
-
 - OpenAI Codex configuration reference
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **상태：** verified  

@@ -30,11 +30,6 @@ This handbook is **not** permanently frozen to a single Codex version number. Th
 
 During the MVP, each page ends with: **Status / Applicable products / Last verified**. Content that goes stale quickly (installation, accounts, permissions, models) should link to official documentation.
 
-## Official sources
-
-Product behavior follows OpenAI documentation: [https://developers.openai.com/codex](https://developers.openai.com/codex). This repository is a community guide; if it conflicts with official docs, official docs win—issues are welcome.
-
-
 ---
 
 **Status:** review  

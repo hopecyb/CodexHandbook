@@ -143,11 +143,7 @@ Thiết lập:
 - [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
 ## Nguồn tham chiếu
-
-- Bảo mật doanh nghiệp KimYx0207
 - White paper bảo mật doanh nghiệp OpenAI (chính thức)
-- Thực hành tuân thủ CodexGuide
-
 ---
 
 **Trạng thái:** verified  

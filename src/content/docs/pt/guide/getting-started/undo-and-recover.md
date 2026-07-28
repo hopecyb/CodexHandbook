@@ -64,7 +64,6 @@ Estas práticas reduzem claramente a chance de «alterar errado e ficar difícil
 
 Errar em si não é terrível. Continuar alterando sem ver o alcance da mudança é o que complica mais.
 
-
 ---
 
 **Status:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La búsqueda web sirve para complementar hechos; no sirve para que te dé directamente la conclusión final.
 
 Adecuada para: consultar documentación pública, códigos de error, notas de versión. No adecuada para: tomar el resultado de búsqueda como conclusión legal/médica definitiva.
@@ -76,7 +75,6 @@ Busca primero y prioriza fuentes oficiales; al dar una conclusión, adjunta enla
 ```
 
 La búsqueda te da pistas y fuentes; al final hay que volver al original a contrastar.
-
 
 ---
 

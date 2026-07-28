@@ -61,7 +61,6 @@ Si tienes poco tiempo, sigue este orden:
 
 La revisión humana deja la decisión final en quien de verdad responde por el resultado.
 
-
 ---
 
 **Estado:** verified  

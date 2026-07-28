@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ví dụ dưới đây mặc định **Desktop App**; CLI/IDE cũng dùng được cùng một đoạn Prompt.
 
 Nhiều người lần đầu dùng Codex muốn ngay lập tức bảo nó «làm cả một website» hoặc «refactor cả dự án». Như vậy rất dễ mất kiểm soát ngay.
@@ -112,7 +111,6 @@ Tạm đừng sửa tiếp. Cho tôi biết vừa rồi bạn đã sửa những
 ```
 
 Nguyên lý Prompt: [Cơ bản về Prompt](/prompts/basics/).
-
 
 ---
 

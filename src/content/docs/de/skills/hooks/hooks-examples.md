@@ -178,11 +178,7 @@ Hook-Beispiele zum Lernen von Idee und Struktur — nicht 1:1 in Produktion.
 - [ ] Doku mit Prüfdatum und CLI-Version
 
 ## Quellen
-
 - OpenAI Codex Hooks-Beispiele
-- freestylefly/CodexGuide Audit-Konfig
-- stormzhang `22-hooks.md`
-
 ---
 
 **Status:** outdated  

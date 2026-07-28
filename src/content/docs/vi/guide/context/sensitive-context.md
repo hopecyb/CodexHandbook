@@ -109,7 +109,6 @@ Xử lý theo mức rủi ro:
 
 Khi giải quyết vấn đề, mặc định chỉ đưa «thông tin tối thiểu cần để lần»; khử nhận dạng được thì khử, placeholder được thì dùng placeholder.
 
-
 ---
 
 **Trạng thái:** verified  

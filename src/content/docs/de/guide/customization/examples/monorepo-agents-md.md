@@ -125,12 +125,6 @@ Eher 1 → Root; eher 2/3 → Subpaket.
 
 AGENTS.md im Monorepo muss nicht maximal zentral sein; besser „globaler Konsens“ und „lokale Verzeichnisregeln“ am richtigen Ort.
 
-## Quellen
-
-- freestylefly/CodexGuide Monorepo-Playbook
-- codex.bozhouai.com Kapitel große Repos
-- stormzhang Monorepo- und Git-Praxis
-
 ---
 
 **Status:** verified  

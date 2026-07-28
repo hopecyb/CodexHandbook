@@ -40,7 +40,6 @@ Com a extensão IDE instalada, confirme ainda que ela aparece e funciona no edit
 
 Em seguida: [Fluxo de Tarefa local no IDE](/guide/ide/local-task-workflow/). Problemas: [Problemas no IDE](/guide/ide/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

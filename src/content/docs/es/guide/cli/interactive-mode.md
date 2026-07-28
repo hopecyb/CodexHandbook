@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El «modo interactivo» es conversar ida y vuelta con Codex en la terminal: explica, ejecuta y, cuando hace falta, espera tu confirmación.
 
 También es uno de los usos habituales de la CLI.
@@ -53,7 +52,6 @@ La primera vez puedes hacer una Tarea pequeña así:
 - Al terminar, pídele que explique qué cambió
 
 El modo interactivo de la CLI es una Tarea conversacional en la terminal. El directorio debe ser el correcto y el Prompt, claro.
-
 
 ---
 

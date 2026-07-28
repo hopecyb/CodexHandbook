@@ -123,10 +123,6 @@ Loại ví dụ này ít nhất cần:
 - Đưa được lý do thất bại rõ
 - Không làm tổn thương yêu cầu bình thường quá mức
 
-## Đồng nguồn với quy tắc nhóm
-
-Trích"chuỗi con lệnh cấm"vào `tools/codex-policy.json`, để Hook và [quy tắc lệnh](/guide/customization/rules/command-rules/) cùng đọc, tránh bảo trì hai chỗ.
-
 ## Hiểu lầm thường gặp
 
 ### 1. Ví dụ chạy được là đưa thẳng production
@@ -180,11 +176,7 @@ Ví dụ Hook chủ yếu để học ý tưởng và cấu trúc — không ph�
 - [ ] Tài liệu ghi ngày Kiểm chứng và phiên bản CLI áp dụng
 
 ## Nguồn tham chiếu
-
 - Ví dụ OpenAI Codex Hooks
-- freestylefly/CodexGuide cấu hình kiểm toán
-- stormzhang `22-hooks.md`
-
 ---
 
 **Trạng thái:** outdated  

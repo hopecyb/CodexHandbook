@@ -96,7 +96,6 @@ Zuerst zum [Fehlerbehebungs-Index](/guide/reference/troubleshooting/). Nur Konze
 
 In den ersten 30 Minuten lohnt schon ein handfester Kreislauf „Aufgabe stellen, Ergebnis sehen, selbst urteilen“.
 
-
 ---
 
 **Status:** verified  

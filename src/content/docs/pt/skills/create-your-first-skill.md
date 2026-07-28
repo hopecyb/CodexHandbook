@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Se você já sabe atribuir Tarefas, mas ainda não fez um Skill de verdade, esta página cobre o básico do primeiro Skill.
 
 Em 15–30 minutos, faça um Skill **reutilizável no repositório** — costuma ser mais direto do que ler muita teoria. Um bom ponto de partida é um Skill pequeno, com limites bem claros.
@@ -147,9 +146,7 @@ Começar com um Skill «pequeno e estável» facilita reutilizar um roteiro de t
 - Quando precisar da API do GitHub, introduza [MCP](/skills/mcp/mcp-overview/)
 
 ## Fontes
-
 - Exemplos oficiais OpenAI Codex Skills e `skill-creator` (se o ambiente fornecer)
-
 ---
 
 **Status:** verified  

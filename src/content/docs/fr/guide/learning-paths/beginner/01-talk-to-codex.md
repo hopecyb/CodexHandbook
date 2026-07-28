@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objectif de cette étape
 
 Utilisez des phrases complètes pour expliquer **ce que vous voulez** et **ce que vous ne voulez pas** — pas un seul mot vague.
@@ -28,7 +27,6 @@ Ne modifiez aucun fichier.
 - Les demandes vagues obtiennent des réponses vagues
 
 Suite : [Travailler avec les fichiers](/guide/learning-paths/beginner/02-work-with-files/) · Concepts : [Bases du Prompt](/prompts/basics/)
-
 
 ---
 

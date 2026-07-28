@@ -81,11 +81,6 @@ Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/cases/workflows/mul
 - [Bàn giao và tiếp tục](/guide/agent-work/handoff-and-resume/)
 - [Tham chiếu lỗi](/guide/reference/error-reference/)
 
-## Nguồn tham chiếu
-
-- Rút kinh nghiệm và playbook freestylefly/CodexGuide
-- Chương gỡ lỗi của stormzhang
-
 ---
 
 **Trạng thái:** verified  

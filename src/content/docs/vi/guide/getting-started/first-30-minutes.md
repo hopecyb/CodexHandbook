@@ -96,7 +96,6 @@ Trước hết vào [Chỉ mục xử lý sự cố](/guide/reference/troublesho
 
 Trong ba mươi phút đầu, tự tay hoàn thành một vòng «giao tác vụ, xem kết quả, tự phán đoán» đã rất đáng.
 
-
 ---
 
 **Trạng thái:** verified  

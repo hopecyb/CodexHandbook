@@ -24,7 +24,6 @@ Un **Agent** ne s'arrête pas à un tour de questions-réponses. Il : comprend l
 - Skill / Plugin / MCP : étendent **ce qu'il peut faire** et **à quoi il se connecte** — chapitres avancés à suivre ; voir la [carte des capacités](/guide/start-here/codex-capability-map/) pour les différences
 - Approbation humaine : voir [Permissions et Approbations](/guide/foundations/permissions-and-approvals/)
 
-
 ---
 
 **Statut :** review  

@@ -59,7 +59,6 @@ A causa raiz mais comum na resolução de problemas IDE costuma ser área de tra
 
 Documentação oficial: [OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Estado:** verified  

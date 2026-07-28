@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Su mayor diferencia frente a un chatbot normal es que actúa mediante **Herramientas**.
 
 Los archivos son donde cambia cosas; los comandos, cómo actúa; las Herramientas, la puerta para poner manos a la obra.
@@ -96,7 +95,6 @@ Siguiente lectura recomendada:
 1. [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
 2. [Sandbox y red](/guide/foundations/sandbox-and-network/)
 3. [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

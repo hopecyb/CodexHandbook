@@ -59,7 +59,6 @@ Wichtiger ist die Frage: Lohnt es sich diesmal, für „etwas mehr Nachdenken“
 
 Dieses Handbook bindet keinen Modell-Marketingnamen. Maßgeblich sind die aktuelle Liste in deinem Client und [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** verified  

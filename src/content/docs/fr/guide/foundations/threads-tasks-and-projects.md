@@ -20,7 +20,6 @@ La formulation produit peut varier légèrement ; ce handbook utilise :
 - Pour les longues Tâches, définissez phases et points de contrôle — voir [Prompting pour longues Tâches](/prompts/long-running-tasks/)
 - Pour continuer entre sessions, rédigez un résumé de passation — voir [Passation et reprise](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Statut :** review  

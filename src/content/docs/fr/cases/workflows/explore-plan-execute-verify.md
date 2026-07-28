@@ -88,11 +88,6 @@ Les équipes peuvent intégrer les quatre phases dans le [modèle de cas](/cases
 - La vérification se limite à « ça a l'air de tourner »
 - Exploration insuffisante — mauvais module modifié
 
-## Sources de référence
-
-- CodexGuide — conception de tâches et méthodes de vérification
-- Livre orange « chaîne complète de la demande à la livraison »
-
 ---
 
 **Statut :** verified  

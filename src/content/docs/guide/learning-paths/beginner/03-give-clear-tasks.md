@@ -3,7 +3,6 @@ title: 给出清晰任务
 description: 用目标、背景、约束、验收标准组织提示词。
 ---
 
-
 ## 本步目标
 
 按稳定框架写一条提示词。
@@ -42,7 +41,6 @@ description: 用目标、背景、约束、验收标准组织提示词。
 清晰任务的关键，在于目标、限制和完成标准同时出现。
 
 下一步：[审查结果](/guide/learning-paths/beginner/04-review-results/)
-
 
 ---
 

@@ -53,7 +53,6 @@ Na resolução de problemas da CLI, distinguir instalação, login, Permissão o
 
 Documentação oficial: [OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Estado:** verified  

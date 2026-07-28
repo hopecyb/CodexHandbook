@@ -100,11 +100,6 @@ Khác biệt cốt lõi giữa tác vụ Cloud và local trong IDE nằm ở mô
 - Không ghi tên nhánh → từ xa push thẳng nhánh dùng chung
 - Coi đầu ra Cloud là «đã nghiệm thu» rồi bỏ qua CI
 
-## Nguồn tham khảo
-
-- `10-cloud.md`, `09-ide.md` của stormzhang
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **Trạng thái:** outdated  

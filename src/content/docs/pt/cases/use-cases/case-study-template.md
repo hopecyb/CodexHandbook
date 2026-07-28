@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Copie este modelo para criar uma nova página de caso ou um documento interno de retrospectiva.
 
 Antes de copiar, elimine as secções desnecessárias conforme o público e o entregável reais.
@@ -72,10 +71,8 @@ Antes de copiar, elimine as secções desnecessárias conforme o público e o en
 - 3 sugestões para a equipa
 
 ## 6. Fontes de referência
-
 - Ligações à documentação oficial
 - Se este caso foi adaptado de um tutorial externo (apenas o tipo de tarefa como referência)
-
 ---
 
 **Estado:** verified  

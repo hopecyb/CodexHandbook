@@ -82,11 +82,6 @@ translated_at: 2026-07-28
 - [스펙 주도 작업](/cases/workflows/specification-driven-work/)
 - [계획 요청하기](/prompts/ask-for-a-plan/)
 
-## 참고 출처
-
-- CodexGuide 요구 명확화와 방안 비교
-- codex.bozhouai.com 작업 템플릿과 주제 선정 방법
-
 ---
 
 **상태:** verified  

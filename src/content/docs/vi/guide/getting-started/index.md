@@ -10,7 +10,6 @@ sidebar:
   order: 4
 ---
 
-
 Mục tiêu là hoàn thành tác vụ đầu tiên trong **dự án luyện tập an toàn**, và học kiểm tra, chấp nhận, sửa hoặc hoàn tác.
 
 Mặc định đi **Desktop App**. Nếu bạn quen terminal hoặc trình soạn thảo hơn, trang cài đặt vẫn áp dụng — ví dụ tác vụ đầu tiên sẽ ghi chú khác biệt.
@@ -72,7 +71,6 @@ Có thể đi theo vòng khép kín tối thiểu này:
 6. Học hoàn tác hoặc chỉnh sửa
 
 Vòng này chạy thông rồi, học nội dung phức tạp hơn sẽ nhẹ hơn.
-
 
 ---
 

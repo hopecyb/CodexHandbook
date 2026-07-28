@@ -96,12 +96,7 @@ Agent-Arbeit misst, ob die Aufgabe in Planung, Ausführung, Korrektur und Abschl
 - Subaufgaben ohne Grenzen — Hauptthread chaotischer
 
 ## Quellen
-
 - Offizielle OpenAI-Codex-Hinweise zu Aufgabenkollaboration und Ausführung
-- freestylefly/CodexGuide: kollaborative Aufgabenpraxis
-- KimYx0207《AI-Coding-Guide-Zh》Codex-Workflow
-- stormzhang: Subaufgaben und Automatisierung
-
 ---
 
 **Status:** verified  

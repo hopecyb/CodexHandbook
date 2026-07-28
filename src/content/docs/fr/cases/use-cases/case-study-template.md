@@ -71,10 +71,8 @@ Avant de copier, supprimez les sections inutiles selon le public réel et le liv
 - 3 conseils pour l'équipe
 
 ## 6. Sources de référence
-
 - Liens vers la documentation officielle
 - Si le cas s'inspire d'un tutoriel externe (type de tâche uniquement)
-
 ---
 
 **Statut :** verified  

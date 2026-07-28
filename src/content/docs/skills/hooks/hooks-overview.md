@@ -114,12 +114,7 @@ Hook 适合放在系统关键节点上做自动检查。它不是工作流说明
 - [ ] 配置纳入代码审查
 
 ## 参考来源
-
 - OpenAI Codex Hooks 文档
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide 审计与合规
-
 ---
 
 **状态：** outdated  

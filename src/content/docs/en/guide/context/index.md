@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Context is the information the model can **effectively use right now**. Poor context management drowns even the best prompts in noise.
 
 - [Project context](/guide/context/project-context/)
@@ -19,7 +18,6 @@ Context is the information the model can **effectively use right now**. Poor con
 - [Compaction](/guide/context/compaction/)
 - [Keep context focused](/guide/context/keep-context-focused/)
 - [Sensitive context](/guide/context/sensitive-context/)
-
 
 ---
 

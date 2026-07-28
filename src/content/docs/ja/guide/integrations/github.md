@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 GitHub は Codex にとって最も一般的なコード協業面です。Cloud タスク、PR レビュー、Actions、ローカル push は、同じブランチと権限の上で動きます。
 
 ここでは、Codex が「コードリポジトリ、ブランチ、PR、Review」の協業フローにどう接続するかを説明します。
@@ -97,10 +96,7 @@ GitHub 連携の要点は、Codex を既存のコード協業フローに接続�
 - 1 つの PR にフォーマット変更と機能変更を混ぜる
 
 ## 参考ソース
-
 - OpenAI Codex GitHub 連携ドキュメント
-- KimYx0207 CX-10；stormzhang `26-git-github.md`
-
 ---
 
 **状態：** verified  

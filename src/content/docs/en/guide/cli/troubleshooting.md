@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 | Symptom | Try first |
 |---|---|
 | command not found | Check install and PATH |
@@ -16,7 +15,6 @@ translated_at: 2026-07-25
 | Editing files in the wrong directory | Confirm current working directory |
 
 Official: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
 
 ---
 

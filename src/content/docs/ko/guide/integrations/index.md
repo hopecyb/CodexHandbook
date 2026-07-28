@@ -194,13 +194,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 - 클라우드 저장소 협업: [Web와 Cloud](/guide/web-and-cloud/)
 
 ## 참고 출처
-
 - OpenAI Codex 공식 통합·개발자 문서
-- KimYx0207《AI-Coding-Guide-Zh》Codex 통합·자동화 관련 장
-- stormzhang `26-git-github.md`와 자동화 장
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **상태:** verified  

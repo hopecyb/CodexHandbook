@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Khi nhiều `AGENTS.md`, tệp cấu hình và hội thoại hiện tại cùng tồn tại, cần làm rõ **quy tắc nào hiệu lực**.
 
 Ở đây nói: khi hai quy tắc trông khác nhau, thật sự nên nghe ai.

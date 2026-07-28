@@ -149,11 +149,7 @@ MCP プロセスは親プロセス環境を継承しがち。設定では値を�
 - `unset` 後も子プロセスが安全と仮定——プロセスツリーを確認
 
 ## 参考
-
 - OpenAI Codex configuration / environment ドキュメント
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **状態：** verified  

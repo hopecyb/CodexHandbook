@@ -45,7 +45,6 @@ Beim ersten systematischen Durchgang:
 
 Wiederkehrender Punkt: Kontext hängt davon ab, «was es diesmal wirklich gesehen hat». Meinst du, es «sollte» es wissen, hast es aber nicht bereitgestellt — dann zählt es nicht.
 
-
 ---
 
 **Status:** verified  

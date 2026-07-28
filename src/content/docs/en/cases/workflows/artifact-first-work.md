@@ -58,11 +58,6 @@ For visual artifacts, request screenshots or preview notes—see [Verify artifac
 - [ ] Links / TOC / frontmatter valid
 - [ ] Meets [Definition of done](/prompts/define-done/)
 
-## Reference sources
-
-- codex.bozhouai.com docs and template tasks
-- KimYx0207 content output workflows
-
 ---
 
 **Status:** verified  

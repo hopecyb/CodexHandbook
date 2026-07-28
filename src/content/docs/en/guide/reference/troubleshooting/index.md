@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 | Symptom | Go to |
 |---|---|
 | Installation failed | [Desktop troubleshooting](/guide/desktop-app/troubleshooting/) · [CLI troubleshooting](/guide/cli/troubleshooting/) · [IDE troubleshooting](/guide/ide/troubleshooting/) |
@@ -18,7 +17,6 @@ translated_at: 2026-07-25
 | Permissions / sandbox questions | [Permissions](/guide/foundations/permissions-and-approvals/) · [Sandbox](/guide/foundations/sandbox-and-network/) |
 
 Official support and docs: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
 
 ---
 

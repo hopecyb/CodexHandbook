@@ -19,7 +19,6 @@ Vérifiez avant de commencer :
 
 Concepts : [Permissions et Approbations](/guide/foundations/permissions-and-approvals/) · [Bac à sable et réseau](/guide/foundations/sandbox-and-network/).
 
-
 ---
 
 **Statut :** review  

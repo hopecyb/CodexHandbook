@@ -118,12 +118,6 @@ As regras de comandos não «memorizam comandos» — distinguem ações quotidi
 - [Aprovação e Sandbox no CLI](/guide/cli/approvals-and-sandbox/)
 - [Matriz de Permissões](/guide/reference/permission-matrix/)
 
-## Referências
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- Capítulos de Permissões e configuração KimYx0207
-- Playbook de equipa freestylefly/CodexGuide
-
 ---
 
 **Estado:** verificado  

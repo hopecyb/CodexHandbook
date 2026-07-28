@@ -102,7 +102,6 @@ Si necesitas otros archivos, dime primero por qué y luego continúa.
 
 Señalar a Codex el alcance de archivos es reducir conjeturas, ruido y cambios erróneos.
 
-
 ---
 
 **Estado:** verified  

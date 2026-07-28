@@ -24,10 +24,6 @@ translated_at: 2026-07-28
 
 **成功基準：** 1 コマンドまたは Skill で固定形式の Markdown を出力できること。失敗時に明確な終了コードがあること。
 
-## 2. 参考パラダイム
-
-チームに既存の類似ケースあり：[定期ドキュメントリンクチェック](/cases/use-cases/team-automation/scheduled-link-check/)。
-
 ## 3. 推奨プロンプト
 
 ```text

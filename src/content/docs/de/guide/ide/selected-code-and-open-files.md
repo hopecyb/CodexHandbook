@@ -83,10 +83,7 @@ Produktseite: [Änderungen in der IDE prüfen](/guide/ide/reviewing-changes/)
 | Alle Vorschläge annehmen ohne Diff | Stil-Drift oder Sicherheitslücken |
 
 ## Quellen
-
 - [Einschränkungen definieren](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Status:** verified  

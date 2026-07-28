@@ -16,7 +16,6 @@ Lorsque les résultats dépassent la portée ou que la qualité est faible :
 
 La prévention vaut mieux que la récupération : petite portée de fichiers, interdictions explicites, plan avant exécution.
 
-
 ---
 
 **Statut :** review  

@@ -99,12 +99,7 @@ diff が大きい場合は <パス一覧> だけレビュー。
 - [ ] チーム文書で AI レビューの位置づけを説明
 
 ## 参考
-
 - OpenAI Codex CI 例
-- KimYx0207 Review/PR 章
-- stormzhang CI チュートリアル
-- codex.bozhouai.com Git/GitHub 篇
-
 ---
 
 **状態：** verified  

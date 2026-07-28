@@ -63,11 +63,6 @@ Tarefas de investigação longas devem ser divididas em várias rondas; ver [ges
 - [Lidar com incerteza](/guide/quality/handle-uncertainty/)
 - [Caso: refatorar documentação com revisão](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## Fontes de referência
-
-- Métodos de investigação e citação do CodexGuide
-- Capítulos de pesquisa e verificação de stormzhang
-
 ---
 
 **Estado:** verified  

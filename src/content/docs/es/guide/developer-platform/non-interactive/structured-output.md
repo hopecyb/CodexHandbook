@@ -119,10 +119,7 @@ Véase [Resumen del SDK](/guide/developer-platform/sdk-overview/).
 - [ ] Alineado con la estrategia de [códigos de salida](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Fuentes de referencia
-
 - Prácticas generales de structured outputs de OpenAI (alineación conceptual)
-- Capítulos de salida automatizada de KimYx0207
-
 ---
 
 **Estado:** verified  

@@ -93,11 +93,7 @@ Découper en plusieurs Automations + [Reprise et transfert](/guide/agent-work/ha
 - [ ] L'équipe connaît le compte bot et les règles d'approbation
 
 ## Sources de référence
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - Documentation officielle OpenAI Codex Cloud / Automations
-
 ---
 
 **Statut :** obsolète  

@@ -93,12 +93,6 @@ Puedes empezar por:
 
 Si ahora te importa sobre todo el arranque personal, deja este capítulo para más adelante; vuelve cuando empieces la adopción en equipo, la gestión de Permisos o el control de riesgos.
 
-## Fuentes de referencia
-
-- Capítulos de seguridad y empresa de KimYx0207
-- Playbook de equipo de freestylefly/CodexGuide
-- Tutoriales de seguridad de stormzhang
-
 ---
 
 **Estado:** verified  

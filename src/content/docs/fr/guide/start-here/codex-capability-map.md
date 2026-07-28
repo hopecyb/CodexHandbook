@@ -22,18 +22,6 @@ Objectifs et Prompts
             → Gouvernance d'équipe (jalons ultérieurs)
 ```
 
-## Modules et chapitres de référence
-
-| Capacité | Emplacement de référence |
-|---|---|
-| Modèles, Agent, Permissions, Bac à sable | [Fondamentaux](/guide/foundations/) |
-| Comment utiliser chaque point d'entrée | [Guides produit](/guide/) |
-| Prompting, Contexte, outils, qualité | [Capacités principales](/guide/) |
-| Ordre de lecture | [Parcours d'apprentissage](/guide/learning-paths/) |
-
-Les capacités d'extension (Skills, Plugins, MCP, Hooks) sont nommées au niveau conceptuel dans le MVP ; l'enseignement systématique arrive dans les jalons ultérieurs. Ne mélangez pas cette carte d'extension avec les comparaisons produit : cette page concerne **quoi apprendre** ; la [comparaison des fonctionnalités](/guide/reference/feature-comparison/) concerne **quel point d'entrée a quoi**.
-
-
 ---
 
 **Statut :** review  

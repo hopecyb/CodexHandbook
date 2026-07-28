@@ -96,10 +96,7 @@ GitHub integration is about fitting Codex into existing code collaboration.
 - Mixing formatting and feature changes in one PR
 
 ## References
-
 - OpenAI Codex GitHub integration documentation
-- KimYx0207 CX-10; stormzhang `26-git-github.md`
-
 ---
 
 **Status:** verified  

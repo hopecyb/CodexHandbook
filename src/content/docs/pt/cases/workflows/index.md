@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Os [prompts](/prompts/) ensinam a **dizer**; os fluxos de trabalho ensinam a **organizar um assunto completo**. Os métodos deste capítulo aplicam-se a App, CLI, IDE e Cloud.
 
 ## Porque precisa de um fluxo de trabalho
@@ -52,12 +51,6 @@ Sem checkpoints, é fácil alterar o diretório errado, saltar testes, fundir po
 2. **Passos pequenos por omissão:** incrementos revíveis valem mais do que uma alteração enorme de uma só vez
 3. **Falhas recuperáveis:** saber como desfazer e como fazer fork da thread para continuar
 4. **Consolidar quando possível:** à terceira repetição, escrever o fluxo como Skill ou modelo
-
-## Fontes de referência
-
-- freestylefly/CodexGuide fluxos e playbooks
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com quarta parte — fluxos padrão
 
 ---
 

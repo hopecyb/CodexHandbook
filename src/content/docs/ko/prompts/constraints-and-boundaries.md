@@ -100,7 +100,6 @@ translated_at: 2026-07-28
 
 권한 경계는 제약과 함께 써서 “손쉬운” 월권을 줄이세요. 관련 페이지: [완료 기준 정의](/prompts/define-done/), [권한과 샌드박스](/guide/permissions-and-sandbox/).
 
-
 ---
 
 **상태:** verified  

@@ -109,10 +109,7 @@ Artefatos não se julgam só por «já gerados». Pelo menos abra, verifique e s
 - [ ] Sem secrets, sem diretórios gerados a mais
 
 ## Referências
-
 - [Lidar com incerteza](/guide/quality/handle-uncertainty/)
-- Requisitos de aceitação do caso external-source-integration
-
 ---
 
 **Estado:** verificado  

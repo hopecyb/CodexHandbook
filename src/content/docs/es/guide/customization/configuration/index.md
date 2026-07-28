@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La primera vez que ves el grupo «configuración», es fácil pensar que solo habla de un montón de nombres de parámetros.
 
 En realidad resuelve una cosa: cómo debe trabajar Codex por defecto, sin tener que repetirlo cada vez de forma temporal.

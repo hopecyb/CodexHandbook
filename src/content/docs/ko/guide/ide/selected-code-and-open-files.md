@@ -83,10 +83,7 @@ Prompt: 모듈 경계, 수정 금지 디렉터리 명시
 | diff를 읽지 않고 제안 전부 수락 | 스타일 드리프트나 보안 취약점 |
 
 ## 참고 출처
-
 - [제약 정의](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **상태:** verified  

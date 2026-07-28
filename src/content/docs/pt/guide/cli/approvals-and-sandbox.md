@@ -106,12 +106,7 @@ O problema: a fronteira de segurança deve seguir o risco da Tarefa; não deve a
 No início, manter Aprovação e Sandbox da CLI mais conservadores costuma ser mais estável. Quando souber de verdade o que está a abrir, afrouxe pouco a pouco.
 
 ## Fontes de referência
-
 - Documentação de segurança e Sandbox da OpenAI Codex CLI
-- stormzhang `17-permissions.md`, `19-security.md`
-- KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide, tópico Sandbox e Aprovação
-
 ---
 
 **Estado:** verified  

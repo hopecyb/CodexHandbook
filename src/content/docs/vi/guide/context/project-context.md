@@ -119,7 +119,6 @@ Thường nên chìm xuống trước:
 
 Mọi mô tả lần sau khả năng cao còn dùng đều đáng chìm vào ngữ cảnh dự án — không cần gõ lại mỗi lần.
 
-
 ---
 
 **Trạng thái:** verified  

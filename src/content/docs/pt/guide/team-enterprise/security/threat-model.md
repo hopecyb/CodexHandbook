@@ -145,11 +145,7 @@ Com isso já se podem baixar muitos riscos de equipa. A governação mais fina p
 - [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
 
 ## Fontes de referência
-
-- Segurança empresarial de KimYx0207
 - Livro branco de segurança empresarial da OpenAI (oficial)
-- Práticas de conformidade de CodexGuide
-
 ---
 
 **Estado:** verified  

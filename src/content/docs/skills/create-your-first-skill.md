@@ -3,7 +3,6 @@ title: 创建第一个 Skill
 description: 从零做一个可提交的 pr-review Skill，含测试与团队共享步骤。
 ---
 
-
 如果你已经会下任务，但还没真正做过 Skill，这页说的是第一个 Skill 的基本做法。
 
 用 15–30 分钟做一个**能在仓库里复用**的 Skill，通常比先读大量理论更直接。比较好的起点，是一个边界很清楚的小 Skill。
@@ -142,9 +141,7 @@ git commit -m "docs: add pr-review skill for Codex"
 - 需要接 GitHub API 时，再引入 [MCP](/skills/mcp/mcp-overview/)
 
 ## 参考来源
-
 - OpenAI Codex Skills 官方示例与 `skill-creator`（若环境提供）
-
 ---
 
 **状态：** verified  

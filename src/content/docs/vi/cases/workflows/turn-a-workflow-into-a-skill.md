@@ -67,11 +67,7 @@ So với [biến quy trình thành tự động hóa](/skills/automations/schedu
 - [ ] Liên kết chéo với tài liệu quy trình nguồn
 
 ## Nguồn tham chiếu
-
-- Chương Skills của KimYx0207
-- `20-skills.md` của stormzhang
 - [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) và [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md) trong kho
-
 ---
 
 **Trạng thái:** verified  

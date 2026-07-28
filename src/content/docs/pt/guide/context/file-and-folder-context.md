@@ -102,7 +102,6 @@ Se precisar de outros ficheiros, diga-me primeiro porquê e só depois continue.
 
 Indicar o alcance de ficheiros ao Codex é reduzir adivinhação, ruído e alterações erradas.
 
-
 ---
 
 **Estado:** verified  

@@ -32,7 +32,6 @@ The main text is written for **readers unfamiliar with the terminal and Agents**
 
 Next step: [Choose your path](/guide/start-here/choose-your-path/).
 
-
 ---
 
 **Status:** review  

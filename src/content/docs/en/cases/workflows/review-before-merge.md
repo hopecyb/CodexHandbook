@@ -70,11 +70,6 @@ Pair with [Review diffs](/guide/quality/review-diffs/); high-risk items follow [
 - [Cloud code review](/guide/web-and-cloud/code-review/)
 - [Create pull requests](/guide/web-and-cloud/create-pull-requests/)
 
-## References
-
-- KimYx0207 Review/PR chapters
-- codex.bozhouai.com Git/GitHub workflow material
-
 ---
 
 **Status:** verified  

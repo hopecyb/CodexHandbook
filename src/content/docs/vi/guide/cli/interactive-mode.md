@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Chế độ tương tác» nghĩa là bạn trò chuyện qua lại với Codex trong terminal; nó giải thích, thực thi, và khi cần sẽ chờ bạn xác nhận.
 
 Đây cũng là một cách dùng CLI phổ biến.
@@ -53,7 +52,6 @@ Lần đầu có thể làm tác vụ nhỏ kiểu:
 - Xong để nó nói đã sửa gì
 
 Chế độ tương tác CLI chính là chạy một luồng tác vụ dạng hội thoại trong terminal. Thư mục phải đúng, Prompt cũng phải rõ.
-
 
 ---
 

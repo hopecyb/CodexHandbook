@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Wenn du Aufgaben schon verteilst, aber noch keinen echten Skill gebaut hast, zeigt diese Seite den Grundablauf.
 
 In 15–30 Minuten einen **im Repo wiederverwendbaren** Skill zu bauen hilft oft mehr als lange Theorie. Guter Start: ein kleiner Skill mit klaren Grenzen.
@@ -147,9 +146,7 @@ Ein „kleiner, stabiler“ Skill macht klare Arbeitsmuster leichter wiederverwe
 - Bei GitHub-API-Bedarf [MCP](/skills/mcp/mcp-overview/) einbinden
 
 ## Quellen
-
 - Offizielle OpenAI-Codex-Skills-Beispiele und `skill-creator` (falls vorhanden)
-
 ---
 
 **Status:** verified  

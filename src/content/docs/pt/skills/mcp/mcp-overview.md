@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 MCP é um padrão de conexão para o Codex ligar ferramentas e fontes de dados externas.
 
 Se você quer que o Codex consulte Jira, leia uma base de conhecimento, acesse APIs internas ou opere uma ferramenta controlada, precisa de um mecanismo para **como conectar, o que pode chamar e como gerir Permissão**. **MCP (Model Context Protocol)** resolve isso.
@@ -120,11 +119,8 @@ Passos práticos: [Conectar um servidor MCP](/skills/mcp/connect-an-mcp-server/)
 - Mudança de configuração fora da revisão de código
 
 ## Fontes
-
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - Documentação OpenAI Codex MCP
-- KimYx0207 CX-05; stormzhang `20-mcp.md`
-
 ---
 
 **Status:** outdated  

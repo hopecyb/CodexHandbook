@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo deste passo
 
 Na pasta de prática, entrega um artefato pequeno e completo — por exemplo uma página `practice-report.md`:
@@ -48,7 +47,6 @@ Mais importante é conseguires explicar:
 - Que capacidade queres completar a seguir
 
 O valor do primeiro projeto pequeno não está no tamanho da peça — está em teres fechado um ciclo completo de colaboração.
-
 
 ---
 

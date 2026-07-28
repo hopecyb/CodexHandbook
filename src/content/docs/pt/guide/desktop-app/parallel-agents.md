@@ -150,12 +150,7 @@ A premissa dos Agents em paralelo continua a ser: Tarefas independentes, aceitá
 4. [Fluxo de coordenação multi-Agent](/cases/workflows/multi-agent-coordination/)
 
 ## Fontes de referência
-
 - Documentação da OpenAI Codex sobre multitasking e colaboração entre Tarefas
-- Abordagens de colaboração de Tarefas no diretório Codex de KimYx0207
-- `21-subagents.md` de stormzhang
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Estado:** outdated  

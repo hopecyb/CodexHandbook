@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Definición de hecho» es directo: dejar claro de antemano hasta dónde hay que llegar para que esta vez cuente como realmente terminado.
 
 Sin ese paso, lo habitual es:
@@ -79,7 +78,6 @@ Criterios de hecho:
 ```
 
 La «definición de hecho» aclara sobre todo «hasta dónde hay que llegar para darlo por terminado», para que tu juicio y el de Codex no diverjan.
-
 
 ---
 

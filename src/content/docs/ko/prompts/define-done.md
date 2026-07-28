@@ -77,7 +77,6 @@ translated_at: 2026-07-28
 
 검증 명령을 기준에 넣으면 Agent가 더 적극적으로 실행합니다: [테스트 실행](/guide/verification/)
 
-
 ---
 
 **상태:** verified  

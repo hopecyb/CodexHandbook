@@ -74,7 +74,6 @@ O ponto central continua sendo: confirmar que a identidade está correta e que v
 
 Detalhes de autenticação e avisos de segurança seguem o oficial: [https://developers.openai.com/codex](https://developers.openai.com/codex). Em falha, consulte o [índice de solução de problemas](/guide/reference/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

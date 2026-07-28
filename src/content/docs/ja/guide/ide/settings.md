@@ -114,10 +114,7 @@ IDE 拡張を初めて設定するときは、次の 3 類だけ見れば十分�
 IDE 設定は「エディター内で Codex とどう協業するか」に近く、プロジェクトルールの書き方は別レイヤーです。混同しないでください。
 
 ## 参考ソース
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`、`09-ide.md`
-
 ---
 
 **状態：** outdated  

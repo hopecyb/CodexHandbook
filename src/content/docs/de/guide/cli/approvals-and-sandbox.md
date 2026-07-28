@@ -106,12 +106,7 @@ Sicherheitsgrenzen folgen dem Aufgabenrisiko — nicht der Bequemlichkeit der le
 Am Anfang CLI-Freigabe und Sandbox eher konservativ. Erst lockern, wenn du weißt, was du öffnest.
 
 ## Quellen
-
 - OpenAI-Codex-CLI-Sicherheits- und Sandbox-Dokumentation
-- stormzhang `17-permissions.md`, `19-security.md`
-- KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide Sandbox-Freigabe-Thema
-
 ---
 
 **Status:** verified  

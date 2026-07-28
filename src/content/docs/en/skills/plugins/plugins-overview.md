@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 A Plugin is like an installer package: it bundles pre-configured extensions for others to install.
 
 **Plugin** packages Skills, MCP servers, app integrations, and more into **installable, updatable, governable** units—especially "one person configures, whole team reuses."
@@ -90,7 +89,7 @@ Extensions the team can maintain, reclaim, and audit suit long-term enablement.
 
 ## Compared to Claude Code / other ecosystems
 
-"Plugin" means different things across products. Compare: **what is bundled, permission model, open source auditable or not**—see [feature comparison](/guide/reference/feature-comparison/) and KimYx0207 CX-14 (facts need re-check).
+"Plugin" means different things across products. Compare: **what is bundled, permission model, open source auditable or not**—see [feature comparison](/guide/reference/feature-comparison/).
 
 ## Common mistakes
 
@@ -99,10 +98,7 @@ Extensions the team can maintain, reclaim, and audit suit long-term enablement.
 - Experimental Plugin enabled in production repo
 
 ## References
-
 - OpenAI Codex Plugins documentation
-- KimYx0207 CX-07; stormzhang `23-plugins.md`
-
 ---
 
 **Status:** outdated  

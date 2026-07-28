@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ein **Agent** arbeitet fortlaufend um ein Ziel herum: Ziel verstehen → Werkzeug wählen → Ergebnis beobachten → nächsten Schritt anpassen — bis fertig oder bis du eingreifen musst.
 
 Gewöhnliche KI wirkt eher wie jemand, der Fragen beantwortet; ein Agent eher wie jemand, der nach Auftrag Schritt für Schritt weitermacht.
@@ -55,7 +54,6 @@ Am Anfang lohnt sich parallel:
 - Menschliche Freigabe: siehe [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
 
 Das Besondere am Agent: Er kann um ein Ziel herum mehrere Schritte am Stück machen — nicht nur einen Textabschnitt zurückgeben.
-
 
 ---
 

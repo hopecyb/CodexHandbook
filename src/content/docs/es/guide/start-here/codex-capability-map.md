@@ -79,7 +79,6 @@ No hace falta leer página a página el directorio del sitio. Puedes seguir este
 
 Mapa general de extensiones: [Mapa de capacidades de extensión](/skills/capability-map/). Comparación de productos: [Comparación de funciones](/guide/reference/feature-comparison/). Las diferencias entre entradas están en la página de comparación.
 
-
 ---
 
 **Estado:** verified  

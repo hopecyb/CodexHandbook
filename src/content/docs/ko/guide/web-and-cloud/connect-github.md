@@ -88,11 +88,7 @@ GitHub를 연결한 뒤 Cloud가 보는 것은 원격 저장소이지, 컴퓨터
 - 처음부터 대형 monorepo에서 제한 없는 작업을 돌림
 
 ## 참고 출처
-
 - OpenAI Codex Cloud / GitHub 통합 문서
-- KimYx0207 CX-10、CX-11
-- stormzhang `26-git-github.md`、`10-cloud.md`
-
 ---
 
 **상태：** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Terminal tích hợp tiện để xem đầu ra lệnh Agent chạy, hoặc tự chạy lệnh kiểm chứng.
 
 Không cần rời ứng dụng Desktop, bạn vẫn thấy quá trình và kết quả chạy lệnh tại đây.
@@ -45,7 +44,6 @@ Có thể chú ý:
 Được, nhưng điều kiện là bạn hiểu nó sẽ làm gì — đặc biệt đừng chạy lại mù quáng trên production.
 
 Terminal tích hợp đặt thẳng quá trình kiểm chứng ra trước mặt, cũng giúp bạn quen dần dòng lệnh đang làm gì.
-
 
 ---
 

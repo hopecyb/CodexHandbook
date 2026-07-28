@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Un **Profile (perfil de configuración)** te permite guardar un conjunto con nombre (modelo + Sandbox + aprobación, etc.) y cambiar de escenario con un clic, sin ajustar a mano cada vez.
 
 ## Qué cubre esta página
@@ -98,10 +97,7 @@ Con eso ya cubres la mayoría de los casos habituales.
 El valor de Profile es cambiar rápido, en escenarios de riesgo distintos, a una combinación por defecto que ya has pensado.
 
 ## Referencias
-
-- stormzhang `18-config.md`
 - Documentación de profiles de OpenAI Codex
-
 ---
 
 **Estado:** desactualizado  

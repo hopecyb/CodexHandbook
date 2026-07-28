@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo deste passo
 
 Indica o nome do ficheiro e conclui uma edição controlada.
@@ -50,7 +49,6 @@ Por isso a seguir também precisas de verificar o Diff.
 Na primeira vez que mexes em ficheiros, o importante não é alterar muito — é ter o limite claro e fácil de verificar.
 
 Seguinte: [Dar Tarefas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
-
 
 ---
 

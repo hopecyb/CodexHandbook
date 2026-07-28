@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Statut MVP : cette page est un aperçu. Les cinq étapes complètes seront ajoutées dans un jalon ultérieur.
 
 ## Lire maintenant
@@ -20,7 +19,6 @@ translated_at: 2026-07-28
 ## Étapes prévues (plan)
 
 Comprendre la base de code → corriger et implémenter → tester et examiner → flux automatisés → développement multi-Agent
-
 
 ---
 

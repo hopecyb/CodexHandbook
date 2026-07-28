@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 “Định nghĩa hoàn thành” nghĩa rất thẳng: nói trước phải đạt đến mức nào thì lần này mới thật sự xong.
 
 Nếu thiếu bước này, tình huống thường gặp là:
@@ -79,7 +78,6 @@ Tiêu chuẩn hoàn thành:
 ```
 
 “Định nghĩa hoàn thành” chủ yếu làm rõ “phải đạt mức nào mới tính là xong”, để phán đoán của bạn và Codex không lệch nhau.
-
 
 ---
 

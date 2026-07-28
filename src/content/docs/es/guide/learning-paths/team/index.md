@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Estado MVP: esta página es un resumen. Contenidos en profundidad sobre instrucciones compartidas, gobernanza y métricas llegan en hitos posteriores (incluida la parte 11).
 
 Si te preocupa más cómo estabilizar el uso de Codex en el equipo, puedes empezar por esta ruta.
@@ -63,7 +62,6 @@ Esta ruta prioriza límites, reglas y aceptación, no disparar primero el volume
 ## Pasos planificados (esquema)
 
 Instrucciones compartidas → Permisos y gobernanza → Flujos estandarizados → Calidad y seguridad → Adopción y métricas
-
 
 ---
 

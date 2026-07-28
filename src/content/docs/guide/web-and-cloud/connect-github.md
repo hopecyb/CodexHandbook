@@ -3,7 +3,6 @@ title: 连接 GitHub
 description: 把 Codex Cloud 与 GitHub 仓库对接——权限、分支与环境。
 ---
 
-
 连接 GitHub 后，Codex 可在**远程环境**克隆仓库、开分支、推送与开 PR，这是 Cloud 工作流的前提。
 
 ## 内容
@@ -84,11 +83,7 @@ Cloud 任务看的是远程仓库，不是你本机那份仓库。
 - 首次就在大型 monorepo 上跑无限制任务
 
 ## 参考来源
-
 - OpenAI Codex Cloud / GitHub 集成文档
-- KimYx0207 CX-10、CX-11
-- stormzhang `26-git-github.md`、`10-cloud.md`
-
 ---
 
 **状态：** outdated  

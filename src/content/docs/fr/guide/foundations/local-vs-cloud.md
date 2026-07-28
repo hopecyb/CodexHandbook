@@ -74,7 +74,6 @@ Beaucoup de débutants commencent par **local + App de bureau**. Détails Cloud 
 
 Le local convient mieux pour comprendre le flux et faire de petits changements. Cloud convient mieux pour un travail plus long, plus standardisé et plus collaboratif à distance.
 
-
 ---
 
 **Statut :** verified  

@@ -122,12 +122,7 @@ Activa [notificaciones de escritorio](/guide/desktop-app/notifications/) o push 
 - [ ] Produce PR o rama, y pasó por revisión humana del diff
 
 ## Fuentes de referencia
-
 - Documentación de Tareas de OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `27-mobile.md`
-- KimYx0207 CX-10
-- Capítulos de colaboración App/Cloud de codex.bozhouai.com
-
 ---
 
 **Estado:** outdated  

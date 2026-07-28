@@ -92,10 +92,8 @@ En cas d'échec vérifier : Token expiré, variable d'environnement non passée 
 Le premier appel à un outil inconnu peut demander confirmation — c'est attendu. Ne encouragez pas « toujours autoriser toutes les écritures MCP » dans la politique d'équipe.
 
 ## Sources de référence
-
 - Documentation de configuration MCP OpenAI Codex
 - Exemples de serveurs modelcontextprotocol.io
-
 ---
 
 **Statut :** obsolète  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Cuando no hay información suficiente, confirma primero y luego continúa.
 
 Una de las situaciones más molestas al usar Codex es que complete la información que falta con una respuesta que «parece razonable».
@@ -87,7 +86,6 @@ Si hay varias interpretaciones posibles, lista primero los puntos de los que no 
 ```
 
 Lo más problemático es tratar la conjetura como hecho y seguir avanzando.
-
 
 ---
 

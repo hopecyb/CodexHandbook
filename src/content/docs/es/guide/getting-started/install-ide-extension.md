@@ -40,7 +40,6 @@ Tras instalar la extensión IDE, confirma además que aparece y funciona en tu e
 
 Siguiente: [flujo de Tareas locales en el IDE](/guide/ide/local-task-workflow/). Resolución de problemas: [resolución de problemas del IDE](/guide/ide/troubleshooting/).
 
-
 ---
 
 **Estado:** outdated  

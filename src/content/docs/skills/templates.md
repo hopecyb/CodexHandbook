@@ -49,13 +49,6 @@ review-skill/
 第一次做 Skill 时，不一定非要有 `templates/`。
 但只要开始反复说“请按这个结构输出”，就值得把它单独抽出来。
 
-## 与 references/ 的区别
-
-| 目录 | 侧重 |
-|---|---|
-| `references/` | 输入规范、规则、API |
-| `templates/` | 输出格式、报告结构 |
-
 ## 常见误区
 
 ### 1. template 只是让结果更好看

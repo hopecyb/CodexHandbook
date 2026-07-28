@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Notifications are for:
 
 - Long tasks finishing
@@ -17,7 +16,6 @@ Notifications are for:
 - Failures or follow-up needed
 
 Allow necessary notifications in system settings so tasks do not stall unnoticed in the background. Notification capabilities for automation will expand in later chapters; this page covers in-App task alerts only.
-
 
 ---
 

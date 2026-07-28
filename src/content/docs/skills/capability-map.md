@@ -3,7 +3,6 @@ title: 扩展能力地图
 description: Skill、MCP、Plugin、Hooks、斜杠命令与 AGENTS.md 的关系说明。
 ---
 
-
 扩展机制不少，也确实容易混淆。这页只讲它们之间的关系，不展开安装步骤。
 
 ## 关系示意

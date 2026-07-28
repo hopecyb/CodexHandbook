@@ -39,7 +39,6 @@ description: 在 App 中切换本地与 Cloud 执行。
 
 桌面 App 里如果本地就能完成，通常用本地；任务更长、更偏远程，或者需要统一环境时，再考虑 Cloud。
 
-
 ---
 
 **状态：** verified  

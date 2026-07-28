@@ -138,11 +138,7 @@ GitHub-Seite: [GitHub-Integration](/guide/integrations/github/)
 - [ ] Keine Secrets im Repo
 
 ## Quellen
-
-- stormzhang `26-git-github.md`
-- KimYx0207 Review/PR-Kapitel
 - [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **Status:** outdated  

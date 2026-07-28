@@ -58,11 +58,6 @@ Para artefatos visuais, peça capturas ou notas de pré-visualização; ver [ver
 - [ ] Ligações / sumário / frontmatter válidos
 - [ ] Cumpre [definir concluído](/prompts/define-done/)
 
-## Fontes de referência
-
-- codex.bozhouai.com tarefas de documentação e modelos
-- KimYx0207 fluxo de produção de conteúdo
-
 ---
 
 **Estado:** verified  

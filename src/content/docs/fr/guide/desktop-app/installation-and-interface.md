@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Pour les étapes d'installation, voir [Installer l'App de bureau](/guide/getting-started/install-desktop-app/) et [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 ## Zones de l'interface (disposition logique)
@@ -22,7 +21,6 @@ Les libellés exacts changent selon la version — faites correspondre ce que vo
 5. **Paramètres et compte** : modèle, Permissions, notifications, et plus
 
 Conseil première fois : trouvez où saisir les Prompts et où approuver les modifications de fichiers.
-
 
 ---
 

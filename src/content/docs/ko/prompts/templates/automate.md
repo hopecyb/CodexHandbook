@@ -61,7 +61,6 @@ translated_at: 2026-07-28
 - [장시간 작업 프롬프트](/prompts/long-running-tasks/)
 - [일일 보고서 자동화 사례](/cases/automate-a-daily-report/)
 
-
 ---
 
 **상태:** verified  

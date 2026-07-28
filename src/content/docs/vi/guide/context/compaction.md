@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Nén ngữ cảnh» có thể hiểu: hội thoại quá dài thì hệ thống rút nội dung trước thành bản ngắn hơn để tiếp tục giữ. Mục đích là để tác vụ còn chạy tiếp được; cái giá là **chi tiết có thể mất.**
 
 ## Vì sao ảnh hưởng kết quả
@@ -75,7 +74,6 @@ Cách này ổn hơn tiếp tục dựa vào cả chuỗi hội thoại dài.
 Tầng khái niệm: [Token, ngữ cảnh và nén](/guide/foundations/tokens-context-and-compaction/)
 
 Trong tác vụ dài, hạn chế then chốt đừng chỉ nói một lần; sau nén, quy tắc quan trọng đáng chủ động nhắc lại.
-
 
 ---
 

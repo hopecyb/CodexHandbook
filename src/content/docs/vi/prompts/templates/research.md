@@ -47,7 +47,6 @@ Mẫu nghiên cứu có một ràng buộc then chốt: mỗi kết luận quan 
 - [Case nghiên cứu kèm nguồn](/cases/research-with-sources/)
 - [Kiểm chứng](/guide/verification/)
 
-
 ---
 
 **Trạng thái:** verified  

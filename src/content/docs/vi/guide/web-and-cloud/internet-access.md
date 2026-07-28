@@ -132,9 +132,6 @@ Biện pháp: HTTPS + token, mirror truy cập được, hoặc ghi rõ Cloud kh
 ## Tham chiếu
 
 - Tài liệu mạng và bảo mật OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `19-security.md`
-- KimYx0207 CX-10, CX-11
-- Các phần Cloud tại codex.bozhouai.com
 
 ---
 

@@ -136,11 +136,7 @@ Hook 타임아웃이나 크래시 시 **기본은 안전**이어야 합니다. �
 - [ ] 설정이 코드 검토에 포함됨
 
 ## 참고 출처
-
 - OpenAI Codex Hooks 참고
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-
 ---
 
 **상태:** outdated  

@@ -54,7 +54,6 @@ description: 选择模型与推理强度时要考虑的因素。
 
 本手册不绑定某一模型营销名。以你客户端当前列表与 [https://developers.openai.com/codex](https://developers.openai.com/codex) 为准。
 
-
 ---
 
 **状态：** verified  

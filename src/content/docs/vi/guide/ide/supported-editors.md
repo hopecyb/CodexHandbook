@@ -106,11 +106,7 @@ Khi chưa chắc, hỏi vài câu:
 Nhiều khi chọn tiện ích IDE chỉ vì công việc chính vốn đã nằm trong trình soạn thảo.
 
 ## Nguồn tham khảo
-
 - Tài liệu OpenAI Codex IDE
-- `09-ide.md` của stormzhang
-- KimYx0207 CX-08 IDE
-
 ---
 
 **Trạng thái:** outdated  

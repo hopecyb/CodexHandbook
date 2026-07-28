@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 MCP là cách nối chuẩn để Codex nối công cụ và nguồn dữ liệu ngoài.
 
 Ví dụ bạn muốn Codex tra Jira, đọc knowledge base, gọi API nội bộ, thao tác một công cụ được kiểm soát — cần cơ chế"nối thế nào, gọi được gì, Quyền quản ra sao". **MCP(Model Context Protocol)** chính là để giải quyết việc đó.
@@ -120,11 +119,8 @@ Bước thao tác: [Nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/)
 - Đổi cấu hình không đưa vào code review
 
 ## Nguồn tham chiếu
-
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - Tài liệu OpenAI Codex MCP
-- KimYx0207 CX-05; stormzhang `20-mcp.md`
-
 ---
 
 **Trạng thái:** outdated  

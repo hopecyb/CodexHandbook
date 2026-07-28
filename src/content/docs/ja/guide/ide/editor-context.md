@@ -83,10 +83,7 @@ IDE のコンテキストは助けますが、推測はしません。ファイ�
 - [ ] `AGENTS.md` のテストコマンドが IDE ターミナルと一致している
 
 ## 参考ソース
-
 - [ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
-
 ---
 
 **状態：** verified  

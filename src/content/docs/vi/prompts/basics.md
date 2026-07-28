@@ -100,7 +100,6 @@ Cốt lõi của Prompt tốt là giảm đoán, lệch hướng và vượt ran
 
 Ví dụ xem [Chạy tác vụ đầu tiên](/cases/first-task/) và [Cấu trúc tác vụ tốt](/prompts/task-anatomy/).
 
-
 ---
 
 **Trạng thái:** verified  

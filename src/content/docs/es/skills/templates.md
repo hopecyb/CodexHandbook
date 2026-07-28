@@ -54,13 +54,6 @@ Si quieres que cierto tipo de resultado se parezca cada vez, encaja una plantill
 En el primer Skill no hace falta tener `templates/`.
 Pero en cuanto empieces a repetir «por favor, emite según esta estructura», conviene sacarlo aparte.
 
-## Diferencia con references/
-
-| Directorio | Enfoque |
-|---|---|
-| `references/` | Normas de entrada, reglas, APIs |
-| `templates/` | Formato de salida, estructura de informes |
-
 ## Errores frecuentes
 
 ### 1. La template solo hace el resultado más bonito

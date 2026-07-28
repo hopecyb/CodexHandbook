@@ -20,7 +20,6 @@ Les modèles de langage **prédisent une sortie plausible suivante** à partir d
 
 Les moteurs de recherche renvoient surtout des pages web existantes ; Codex est plus proche d'**appeler des outils et générer des changements exécutables** sous votre objectif. Les deux exigent que vous jugiez la fiabilité.
 
-
 ---
 
 **Statut :** review  

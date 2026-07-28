@@ -9,11 +9,9 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 State test commands in your prompt's acceptance criteria. If the repo has no tests, at minimum require: start/build commands succeed, or provide manual verification steps.
 
 "Done" without verification is only a feeling of done.
-
 
 ---
 

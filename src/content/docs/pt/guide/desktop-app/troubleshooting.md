@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ao resolver problemas, investigue pela ordem do mais provável e do mais fácil de tratar.
 
 | Sintoma | Experimente primeiro |
@@ -45,7 +44,6 @@ Primeiro reduza o alcance do problema:
 - Se for preciso, abra uma Thread nova
 
 Resolva primeiro as causas mais comuns e fáceis de corrigir; não complique demais logo no início.
-
 
 ---
 

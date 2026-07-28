@@ -136,11 +136,7 @@ Ví dụ đầy đủ: [Ví dụ cấu hình Hook](/skills/hooks/hooks-examples/
 - [ ] Cấu hình đưa vào code review
 
 ## Nguồn tham chiếu
-
 - Tham chiếu OpenAI Codex Hooks
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-
 ---
 
 **Trạng thái:** outdated  

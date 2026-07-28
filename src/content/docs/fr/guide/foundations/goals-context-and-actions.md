@@ -24,7 +24,6 @@ Les chapitres de prompting développent ces quatre éléments en cadre stable �
 > Actions : Peut modifier ce fichier ; ne pas installer de dépendances.  
 > Acceptation : Après ouverture du fichier, les titres vont de H1 à H3 sans niveau sauté.
 
-
 ---
 
 **Statut :** review  

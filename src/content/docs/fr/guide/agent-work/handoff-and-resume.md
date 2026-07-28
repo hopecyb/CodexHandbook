@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Un résumé de transfert doit inclure :
 
 - Objectif et état actuel
@@ -18,7 +17,6 @@ Un résumé de transfert doit inclure :
 - Comment vérifier
 
 Coller le résumé dans un nouveau fil avant de continuer — ne pas compter sur l'ancienne conversation compressée.
-
 
 ---
 

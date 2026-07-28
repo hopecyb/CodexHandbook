@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## このステップの目標
 
 「ざっと見て通す」を、固定のチェック動作に変えることです。
@@ -46,7 +45,6 @@ review の習慣を早く身につけるほど、後で結果を盲信しにく�
 結果のレビューは余分な動作ではなく、利用プロセスの一部です。
 
 次のステップ：[最初の小さなプロジェクトを完了する](/guide/learning-paths/beginner/05-complete-first-project/)
-
 
 ---
 

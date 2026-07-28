@@ -82,10 +82,7 @@ IDE 扩展的审查体验介于「行内补全」与「完整 PR review」之间
 IDE 里的“接受改动”只是中间动作，不是最后验收。
 
 ## 参考来源
-
 - [验证与人工复核](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **状态：** outdated  

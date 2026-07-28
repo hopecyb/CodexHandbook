@@ -88,7 +88,6 @@ Bei Unsicherheit: zuerst Verständnis und Scope nennen, dann handeln
 
 Diese Struktur reduziert Raten und macht Abnahme direkter. Abschnitte kannst du kürzen — aber was du streichst, fehlt als Information.
 
-
 ---
 
 **Status:** verified  

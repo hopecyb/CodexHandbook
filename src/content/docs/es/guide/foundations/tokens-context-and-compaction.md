@@ -62,7 +62,6 @@ Si te preocupa que se olviden requisitos clave, puedes:
 
 Aquí van los conceptos. Cómo controlarlos en la práctica, en el `05`.
 
-
 ---
 
 **Estado:** verified  

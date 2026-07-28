@@ -69,12 +69,6 @@ Tras cada hito:
 - [ ] Al menos dos puntos de control con diff revisable
 - [ ] Se sabe cómo pausar, reanudar o traspasar
 
-## Fuentes de referencia
-
-- Tareas largas y flujos estándar de codex.bozhouai.com
-- Captura de tareas de freestylefly/CodexGuide
-- `14-workflows.md` de stormzhang
-
 ---
 
 **Estado:** verified  

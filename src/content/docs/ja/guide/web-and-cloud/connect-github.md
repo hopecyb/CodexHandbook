@@ -88,11 +88,7 @@ GitHub に接続した後、Cloud が見るのはリモートリポジトリで�
 - 初回から大規模 monorepo で無制限タスクを実行している
 
 ## 参考ソース
-
 - OpenAI Codex Cloud / GitHub 統合ドキュメント
-- KimYx0207 CX-10、CX-11
-- stormzhang `26-git-github.md`、`10-cloud.md`
-
 ---
 
 **状態：** outdated  

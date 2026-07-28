@@ -106,11 +106,6 @@ allowlist를 처음 들으면 목표를 “팝업·중단을 줄이는 것”으
 
 좋은 allow/deny 규칙은, 어떤 동작이 합리적이고 어떤 동작이 일어나면 안 되는지 미리 분명히 말해 둡니다.
 
-## 참고 출처
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 권한 설정 장
-
 ---
 
 **상태:** verified  

@@ -87,10 +87,7 @@ IDE에서 “바로 수락할 수 있는 변경”을 봐도, 「한 번에 수�
 IDE의 “변경 수락”은 중간 동작이지, 최종 검수가 아닙니다.
 
 ## 참고 출처
-
 - [검증과 사람 검토](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **상태:** outdated  

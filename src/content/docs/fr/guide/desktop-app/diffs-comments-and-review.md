@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Flux de revue
 
 1. Ouvrez la vue Diff et parcourez fichier par fichier
@@ -17,7 +16,6 @@ translated_at: 2026-07-28
 4. Acceptez, rejetez ou demandez des modifications
 
 Méthode : [Examiner les Diff](/guide/quality/review-diffs/)
-
 
 ---
 

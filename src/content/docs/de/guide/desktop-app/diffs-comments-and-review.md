@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Überprüfungsablauf
 
 1. Diff-Ansicht öffnen und dateiweise browsen
@@ -73,7 +72,6 @@ Kommentare müssen nicht vollständig sein. Wertvoller sind Typen wie:
 Solche Kommentare treiben die nächste Korrektur besser voran als nur „da ist ein Problem“.
 
 Auf dieser Seite lohnt sich vor allem der wiederholte Blick auf die Diff-Ansicht.
-
 
 ---
 

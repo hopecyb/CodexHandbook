@@ -136,11 +136,7 @@ Hook のタイムアウトやクラッシュは**デフォルトで安全に**�
 - [ ] 設定がコードレビューに含まれる
 
 ## 参考ソース
-
 - OpenAI Codex Hooks リファレンス
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-
 ---
 
 **状態：** outdated  

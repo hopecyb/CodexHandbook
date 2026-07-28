@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Interaktiver Modus“ heißt: Du redest im Terminal hin und her mit Codex — es erklärt, führt aus und wartet bei Bedarf auf deine Bestätigung.
 
 Das ist eine der gängigen CLI-Nutzungen.
@@ -53,7 +52,6 @@ Kleine erste Aufgabe:
 - danach erklären lassen, was geändert wurde
 
 CLI-Interaktivmodus = dialogischer Aufgabenfluss im Terminal. Verzeichnis stimmen, Prompt klar halten.
-
 
 ---
 

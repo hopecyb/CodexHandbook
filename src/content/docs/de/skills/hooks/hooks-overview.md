@@ -119,12 +119,7 @@ Hooks gehören an kritische Systemknoten für Auto-Checks. Sie sind keine Workfl
 - [ ] Konfig in Code-Review
 
 ## Quellen
-
 - OpenAI Codex Hooks-Dokumentation
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide Audit & Compliance
-
 ---
 
 **Status:** outdated  

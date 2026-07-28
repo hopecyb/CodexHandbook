@@ -47,7 +47,6 @@ Desktop App cài xong rồi, xác nhận mở, đăng nhập, thấy lối vào 
 
 Nếu thất bại: xem [Xử lý sự cố Desktop App](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **Trạng thái:** outdated  

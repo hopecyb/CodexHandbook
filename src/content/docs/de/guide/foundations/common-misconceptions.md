@@ -75,7 +75,6 @@ Codex ist stark — in klaren Zielen und Grenzen noch besser. Verständnis und U
 
 Als Nächstes: [Schnellstart](/guide/getting-started/).
 
-
 ---
 
 **Status:** verified  

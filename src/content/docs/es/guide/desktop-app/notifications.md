@@ -42,7 +42,6 @@ No tiene por qué fallar de inmediato, pero es más fácil que ocurra:
 
 Si las apagas todas, es más fácil perderse estos cambios de estado.
 
-
 ---
 
 **Estado:** outdated  

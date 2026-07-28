@@ -22,7 +22,6 @@ Connectez-vous via votre client choisi selon les invites à l'écran. Vous pouve
 
 Les détails d'authentification et les conseils de sécurité suivent la doc officielle : [https://developers.openai.com/codex](https://developers.openai.com/codex). En cas d'échec, consultez l'[index de dépannage](/guide/reference/troubleshooting/).
 
-
 ---
 
 **Statut :** review  

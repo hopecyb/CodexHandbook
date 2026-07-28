@@ -98,11 +98,7 @@ description: App、CLI TUI 与 IDE 扩展中常见快捷键的学习向索引—
 快捷键不是考试范围。把最常打断你的那几个动作用顺，通常就够用了。
 
 ## 参考来源
-
 - 各产品 Settings / Keyboard shortcuts 官方页
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **状态：** outdated  

@@ -145,11 +145,7 @@ Lange Aufgaben: [Desktop-App-Benachrichtigungen](/guide/desktop-app/notification
 - Unbenutzte Environment-Templates und Secrets regelmäßig aufräumen
 
 ## Quellen
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10, CX-11
-
 ---
 
 **Status:** outdated  

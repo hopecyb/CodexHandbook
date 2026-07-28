@@ -59,11 +59,9 @@ sidebar:
 - 官方安装与产品变更以 [https://developers.openai.com/codex](https://developers.openai.com/codex) 为准
 
 ## 参考来源
-
 - OpenAI Academy: Getting started with ChatGPT
 - OpenAI Academy: Using ChatGPT
 - OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
-
 ## 一个常见起步顺序
 
 可以按这个顺序来：
@@ -75,7 +73,6 @@ sidebar:
 5. 检查结果，再决定下一步
 
 开始前，在安全、小范围、可撤回的环境里跑通第一个任务，比先补一大堆概念更省劲。
-
 
 ---
 

@@ -79,7 +79,6 @@ Du musst nicht die gesamte Site-Navigation Seite für Seite lesen. Du kannst so 
 
 Gesamtkarte zur Erweiterungsauswahl: [Erweiterungs-Fähigkeitskarte](/skills/capability-map/). Produktvergleich: [Funktionsvergleich](/guide/reference/feature-comparison/). Unterschiede zwischen Einstiegen stehen auf der Vergleichsseite.
 
-
 ---
 
 **Status:** verified  

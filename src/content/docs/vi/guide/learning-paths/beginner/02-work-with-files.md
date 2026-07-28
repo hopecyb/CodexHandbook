@@ -50,7 +50,6 @@ Lần đầu đụng tệp, trọng tâm không phải sửa nhiều, mà để 
 
 Bước tiếp: [Giao Tác vụ rõ ràng](/guide/learning-paths/beginner/03-give-clear-tasks/)
 
-
 ---
 
 **Trạng thái:** verified  

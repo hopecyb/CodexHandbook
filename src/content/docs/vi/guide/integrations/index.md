@@ -194,13 +194,7 @@ Lần đầu làm tích hợp, để Codex giúp bạn “xem” và “đề xu
 - Cộng tác kho Cloud: xem [Web và Cloud](/guide/web-and-cloud/)
 
 ## Nguồn tham khảo
-
 - Tài liệu tích hợp và lập trình viên chính thức OpenAI Codex
-- Chương tích hợp và tự động hóa Codex trong KimYx0207《AI-Coding-Guide-Zh》
-- stormzhang `26-git-github.md` và chương tự động hóa
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **Trạng thái:** verified  

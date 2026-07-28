@@ -115,12 +115,7 @@ Khi người dùng gọi tường minh bằng `$name`, ý định rõ; khi **mod
 - Chưa đọc `SKILL.md` đã tin hành vi của nó
 
 ## Nguồn tham chiếu
-
 - Hướng dẫn bảo mật OpenAI Codex Skills
-- KimYx0207 CX-05-CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **Trạng thái:** verified  

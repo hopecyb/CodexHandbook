@@ -121,10 +121,7 @@ Cuantas más respuestas sean «sí», más sentido tiene el Webhook.
 El Webhook sirve para enchufar cambios de estado de Tarea a otros sistemas; antes hay que dejar bien firma, idempotencia y procesamiento asíncrono.
 
 ## Fuentes de referencia
-
 - Documentación de eventos de la API OpenAI Codex / Cloud
-- Capítulos de integración de KimYx0207
-
 ---
 
 **Estado:** verified  

@@ -39,7 +39,6 @@ Si vous voulez vous lancer tout de suite, allez directement à [Les 30 première
 
 Chaque sujet a une page de référence ; les parcours et études de cas utilisent des résumés avec des liens pour éviter la duplication.
 
-
 ---
 
 **Statut :** review  

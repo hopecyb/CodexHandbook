@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 本ハンドブックはコミュニティのオープンガイドです。製品挙動、インストールパッケージ、プランは公式を基準にしてください。
 
 - Codex 開発者ドキュメント：[https://developers.openai.com/codex](https://developers.openai.com/codex)

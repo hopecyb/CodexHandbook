@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Quy trình rà soát
 
 1. Mở view diff, duyệt theo tệp
@@ -73,7 +72,6 @@ Khi viết bình luận cũng không cần cầu toàn. Đáng giá hơn là cá
 Loại bình luận này dễ đẩy bước sửa tiếp theo hơn chỉ nói «có vấn đề».
 
 Trên trang này, thứ thật sự đáng xem đi xem lại vẫn là view diff.
-
 
 ---
 

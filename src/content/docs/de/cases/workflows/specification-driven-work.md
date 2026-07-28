@@ -78,11 +78,6 @@ Akzeptanzpunkte in der Spezifikation möglichst **testbar** halten; was sich als
 - [ ] Vor der Ausführung menschliche oder schriftliche Bestätigung
 - [ ] Änderungen zurück in die Spezifikationsdatei synchronisiert
 
-## Referenzquellen
-
-- KimYx0207 Kapitel zu Anforderungen und Aufgabenzerlegung
-- freestylefly/CodexGuide Spezifikation und Abnahme-Checklisten
-
 ---
 
 **Status:** verified  

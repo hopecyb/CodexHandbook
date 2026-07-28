@@ -55,7 +55,7 @@ Solo cuando de verdad has reproducido, contrastado bases oficiales y confirmado 
 
 ### Los artículos de la comunidad ayudan a entender, pero no sustituyen la verificación de hechos
 
-Materiales como CodexGuide, AI-Coding-Guide-Zh u otras fuentes de la comunidad sirven bien para descubrir qué temas conviene completar.
+Artículos comunitarios u otras fuentes de la comunidad sirven bien para descubrir qué temas conviene completar.
 
 Pero cuando se trata de:
 
@@ -82,7 +82,7 @@ Así que hay que verificar por «cadena completa de operación», no solo escane
 1. **Marcar el alcance**: producto (App/CLI/IDE/Cloud), OS, número de versión de CLI
 2. **Reproducir paso a paso**: seguir desde cero o desde un worktree limpio
 3. **Base oficial**: al menos un enlace a documentación oficial de OpenAI o al centro de ayuda
-4. **Fuentes de la comunidad**: si te apoyas en CodexGuide / KimYx0207, etc., solo como referencia temática; los hechos prevalecen oficiales
+4. **Fuentes de la comunidad**: si te apoyas en materiales comunitarios, solo como referencia temática; los hechos prevalecen oficiales
 5. **Actualizar la fecha**: pie `Última verificación: YYYY-MM-DD`
 6. **Revisión independiente**: para `verified` se recomienda confirmación de una segunda persona distinta del autor
 
@@ -119,7 +119,6 @@ Lo siguiente hay que reverificar cada trimestre o con cada major:
 - [Recursos oficiales](/guide/reference/official-resources/)
 
 `verified` significa «verificado de verdad según la base actual anotada, y hay base que se puede rastrear». Que el autor solo «sienta que es fiable» no basta.
-
 
 ---
 

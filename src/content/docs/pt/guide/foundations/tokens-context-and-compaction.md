@@ -62,7 +62,6 @@ Se temer que exigências-chave sejam esquecidas, faça isto:
 
 Aqui ficam os conceitos. O controle concreto pode seguir no `05`.
 
-
 ---
 
 **Status:** verified  

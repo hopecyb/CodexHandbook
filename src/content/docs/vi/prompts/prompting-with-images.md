@@ -181,11 +181,9 @@ Cuối cùng đưa hướng sửa đề xuất.
 Thường rõ hơn một câu «giúp tôi sửa», và dễ tiếp tục hơn về sau.
 
 ## Nguồn tham khảo
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **Trạng thái:** verified  

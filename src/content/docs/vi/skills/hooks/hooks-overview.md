@@ -119,12 +119,7 @@ Hook phù hợp đặt trên nút then chốt hệ thống để tự kiểm. N�
 - [ ] Cấu hình đưa vào code review
 
 ## Nguồn tham chiếu
-
 - Tài liệu OpenAI Codex Hooks
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide kiểm toán và tuân thủ
-
 ---
 
 **Trạng thái:** outdated  

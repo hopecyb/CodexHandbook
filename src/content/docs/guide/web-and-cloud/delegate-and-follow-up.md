@@ -117,12 +117,7 @@ Cloud 只是把执行地点换到远程，后面的跟进和判断还得靠你�
 - [ ] 产出 PR 或分支，且经过人工 diff 审查
 
 ## 参考来源
-
 - OpenAI Codex Cloud 任务文档
-- stormzhang `10-cloud.md`、`27-mobile.md`
-- KimYx0207 CX-10
-- codex.bozhouai.com App/云端协作章节
-
 ---
 
 **状态：** outdated  

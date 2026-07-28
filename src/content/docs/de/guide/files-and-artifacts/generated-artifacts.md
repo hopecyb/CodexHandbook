@@ -107,10 +107,7 @@ Artefakte nicht nur als „schon generiert“ werten — mindestens öffnen, pr�
 - [ ] Keine Secrets, keine überflüssigen Generierungsverzeichnisse
 
 ## Quellen
-
 - [Unsicherheit handhaben](/guide/quality/handle-uncertainty/)
-- Abnahmeanforderungen aus external-source-integration-Fällen
-
 ---
 
 **Status:** verified  

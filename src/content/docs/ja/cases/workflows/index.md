@@ -52,12 +52,6 @@ translated_at: 2026-07-28
 3. **失敗から回復可能**：取り消し方法、スレッドをフォークして続行する方法を知っている
 4. **蓄積できるものは蓄積する**：3 回目の繰り返しフローは Skill またはテンプレートに書く
 
-## 参考出典
-
-- freestylefly/CodexGuide ワークフローと playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com 第 4 篇 標準ワークフロー
-
 ---
 
 **状態：** verified  

@@ -181,11 +181,9 @@ Por último, propone la dirección del cambio.
 Suele ser más claro que un «ayúdame a arreglarlo» y más fácil de continuar.
 
 ## Fuentes de referencia
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **Estado:** verified  

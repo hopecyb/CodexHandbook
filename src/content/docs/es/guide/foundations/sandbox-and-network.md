@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Sandbox» y «red» son en realidad dos cosas: el Sandbox limita a dónde puede tocar; la red, a dónde puede conectarse.
 
 El **Sandbox** limita el sistema de archivos y parte de las capacidades del sistema a las que puede llegar el Agent, y reduce la superficie de errores. El **acceso a la red** es otra capa de riesgo: puede filtrar información sensible del Prompt o traer datos no fiables.
@@ -66,7 +65,6 @@ Ninguna es solo un ajuste técnico; también es tu forma de controlar el riesgo.
 Entrada de ajustes en el producto: App de escritorio [Ajustes](/guide/desktop-app/settings/); detalles oficiales: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Al empezar, mejor restringir un poco de más que abrir todas las puertas cuando aún no entiendes el riesgo.
-
 
 ---
 

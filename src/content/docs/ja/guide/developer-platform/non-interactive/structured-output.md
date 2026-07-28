@@ -114,10 +114,7 @@ schema 定義（バージョン v1）
 - [ ] [終了コード](/guide/developer-platform/non-interactive/exit-codes-and-retries/) 方針と一致
 
 ## 参考
-
 - OpenAI structured outputs 一般実践（概念整合）
-- KimYx0207 自動化出力章
-
 ---
 
 **状態：** verified  

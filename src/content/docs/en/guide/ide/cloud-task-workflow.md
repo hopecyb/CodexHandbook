@@ -98,11 +98,6 @@ The core difference from local IDE tasks: execution environment is remote.
 - No branch name → remote pushes to a shared branch
 - Treat Cloud output as "accepted" and skip CI
 
-## References
-
-- stormzhang `10-cloud.md`, `09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **Status:** outdated  

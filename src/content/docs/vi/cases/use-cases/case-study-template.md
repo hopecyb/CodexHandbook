@@ -71,10 +71,8 @@ Trước khi sao chép, hãy xóa các đoạn không cần theo đối tượng
 - 3 gợi ý cho nhóm
 
 ## 6. Nguồn tham chiếu
-
 - Liên kết tài liệu chính thức
 - Case này có dựa trên hướng dẫn ngoài không (chỉ tham khảo loại tác vụ)
-
 ---
 
 **Trạng thái:** verified  

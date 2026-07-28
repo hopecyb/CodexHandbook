@@ -79,7 +79,6 @@ Skills, MCP, Hooks, 자동화는 강력하지만, 효율 확대와 규모 있는
 
 확장 선정 총도는 [확장 능력 지도](/skills/capability-map/)를, 제품 대조는 [기능 비교](/guide/reference/feature-comparison/)를 보세요. 입구별 능력 차이는 기능 비교 페이지에 둡니다.
 
-
 ---
 
 **상태:** verified  

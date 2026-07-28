@@ -19,7 +19,6 @@ Dans un terminal, exécutez la commande de version ou d'aide (sous-commandes exa
 
 Détails : [Mode interactif CLI](/guide/cli/interactive-mode/). Dépannage : [Dépannage CLI](/guide/cli/troubleshooting/).
 
-
 ---
 
 **Statut :** review  

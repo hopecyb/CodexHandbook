@@ -74,7 +74,6 @@ Trọng tâm vẫn là xác nhận bạn đang dùng đúng danh tính, và đã
 
 Chi tiết xác thực và gợi ý an toàn lấy chính thức làm chuẩn: [https://developers.openai.com/codex](https://developers.openai.com/codex). Khi thất bại xem [Chỉ mục xử lý sự cố](/guide/reference/troubleshooting/).
 
-
 ---
 
 **Trạng thái:** outdated  

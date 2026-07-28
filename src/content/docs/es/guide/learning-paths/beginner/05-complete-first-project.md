@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo de este paso
 
 Entrega en el directorio de práctica un producto pequeño y completo, por ejemplo una página `practice-report.md`:
@@ -48,7 +47,6 @@ Más importante es poder explicar:
 - Qué capacidad quieres reforzar a continuación
 
 El valor del primer proyecto pequeño no está en el tamaño de la obra, sino en haber cerrado un ciclo completo de colaboración.
-
 
 ---
 

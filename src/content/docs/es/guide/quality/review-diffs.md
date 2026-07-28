@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Diff» es lo que Codex cambió realmente esta vez.
 
 En la primera aceptación, mucha gente solo mira el resumen que escribió, no el cambio real.  
@@ -62,7 +61,6 @@ La primera vez que miras un diff, puedes seguir este orden:
 4. Luego si estilo y nombres encajan
 
 Primero aclara qué cambió realmente; luego decide según el contenido si aceptas este resultado.
-
 
 ---
 

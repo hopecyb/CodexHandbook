@@ -132,11 +132,7 @@ IDE: [Quy trình tác vụ local](/guide/ide/local-task-workflow/)
 - [ ] Viết được một tác vụ chỉ đọc `codex exec` tối thiểu (nếu môi trường có)
 
 ## Nguồn tham khảo
-
 - Tài liệu OpenAI Codex CLI
-- `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md` của stormzhang
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **Trạng thái:** outdated  

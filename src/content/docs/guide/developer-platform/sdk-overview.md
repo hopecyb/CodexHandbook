@@ -80,10 +80,7 @@ SDK 触发 Cloud 或远程 runner，或由 CI 回调你的服务更新 PR 状态
 - 自动合并 SDK 产出的 PR
 
 ## 参考来源
-
 - OpenAI Codex SDK reference
-- KimYx0207 开发者集成章节
-
 ---
 
 **状态：** verified  

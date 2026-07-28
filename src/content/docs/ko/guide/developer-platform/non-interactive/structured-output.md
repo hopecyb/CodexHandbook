@@ -119,10 +119,7 @@ schema 정의(버전 v1)
 - [ ] [종료 코드](/guide/developer-platform/non-interactive/exit-codes-and-retries/) 전략과 일치
 
 ## 참고 출처
-
 - OpenAI structured outputs 일반 실천(개념 정렬)
-- KimYx0207 자동화 출력 장
-
 ---
 
 **상태：** verified  

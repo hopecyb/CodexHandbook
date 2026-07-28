@@ -103,10 +103,8 @@ Codex는 일부 장면에서 **이미지 생성** 능력을 호출할 수 있습
 - 기업 정책이 일부 소재를 금지할 수 있음 — [acceptable use](https://openai.com/policies/)와 내부 규정을 따름
 
 ## 참고 출처
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## 흔한 실수
 
 - 압축하지 않은 4K 그림을 바로 저장소에 커밋

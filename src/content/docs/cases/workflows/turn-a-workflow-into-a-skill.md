@@ -62,11 +62,7 @@ description: 第三次重复的流程值得写成 Skill——触发、说明与�
 - [ ] 与源工作流文档交叉链接
 
 ## 参考来源
-
-- KimYx0207 Skills 章节
-- stormzhang `20-skills.md`
 - 仓库内 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) 与 [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
-
 ---
 
 **状态：** verified  

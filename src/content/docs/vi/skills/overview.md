@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Skill** là một thư mục chứa `SKILL.md` (có thể kèm script và tài liệu tham chiếu), đóng gói một quy trình cố định thành năng lực mà Codex có thể **gọi tự động hoặc tường minh**.
 
 Nó phù hợp để chứa những cách làm đã lặp lại và sẽ tiếp tục được tái sử dụng.
@@ -114,10 +113,7 @@ Skill không phải thứ bắt buộc lúc mới bắt đầu — phù hợp h�
 - Dùng script thay cho bước vốn có thể mô tả rõ bằng chữ, khó bảo trì
 
 ## Nguồn tham chiếu
-
 - Tài liệu OpenAI Codex Skills
-- KimYx0207 CX-06;stormzhang `22-skills.md`
-
 ---
 
 **Trạng thái:** verified  

@@ -42,7 +42,6 @@ Pode não haver problema imediato, mas fica mais fácil:
 
 Se desligar todas as notificações, é mais fácil perder estas mudanças de estado.
 
-
 ---
 
 **Estado:** outdated  

@@ -65,7 +65,6 @@ Am riskantesten: starten, bevor „was“ und „für wen“ klar sind.
 - [Spezifikationsgetriebenes Arbeiten](/cases/workflows/specification-driven-work/)
 - [Fertigstellungsstandard definieren](/prompts/define-done/)
 
-
 ---
 
 **Status:** verified  

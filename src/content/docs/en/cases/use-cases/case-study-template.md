@@ -71,10 +71,8 @@ Before copying, delete sections your actual readers and deliverables don't need.
 - Three recommendations for the team
 
 ## 6. References
-
 - Official doc links
 - Whether this case adapts an external tutorial (task type only)
-
 ---
 
 **Status:** verified  

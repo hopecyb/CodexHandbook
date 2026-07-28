@@ -157,7 +157,6 @@ translated_at: 2026-07-28
 - 작업을 남에게 나눔: [Subagent](/guide/agent-work/subagents/)
 - 작업이 끊긴 뒤 계속: [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **상태:** verified  

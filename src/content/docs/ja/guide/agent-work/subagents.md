@@ -125,7 +125,6 @@ translated_at: 2026-07-28
 
 - [マルチ Agent 協業](/cases/workflows/multi-agent-coordination/)
 - [引き継ぎと再開](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08；stormzhang `21-subagents.md`
 
 ---
 

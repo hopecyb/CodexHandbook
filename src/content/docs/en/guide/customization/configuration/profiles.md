@@ -97,10 +97,7 @@ That already covers most common cases.
 Profiles help you quickly switch to a default combination you have already thought through for different risk scenarios.
 
 ## References
-
-- stormzhang `18-config.md`
 - OpenAI Codex profiles documentation
-
 ---
 
 **Status:** outdated  

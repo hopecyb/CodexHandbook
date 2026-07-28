@@ -8,14 +8,12 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 - [Examiner les Diff](/guide/quality/review-diffs/)
 - [Exécuter des tests](/guide/quality/run-tests/)
 - [Vérifier les Artefacts](/guide/quality/verify-artifacts/)
 - [Valider les sources](/guide/quality/validate-sources/)
 - [Gérer l'incertitude](/guide/quality/handle-uncertainty/)
 - [Définition de terminé](/guide/quality/definition-of-done/)
-
 
 ---
 

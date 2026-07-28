@@ -119,12 +119,7 @@ Hook은 시스템 핵심 노드에 두어 자동 검사하기에 적합합니다
 - [ ] 설정이 코드 검토에 포함됨
 
 ## 참고 출처
-
 - OpenAI Codex Hooks 문서
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide 감사와 컴플라이언스
-
 ---
 
 **상태:** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Agent** sẽ liên tục làm quanh mục tiêu: hiểu mục tiêu → chọn công cụ → quan sát kết quả → điều chỉnh bước tiếp theo, cho đến khi hoàn thành hoặc cần bạn can thiệp.
 
 AI thông thường giống người trả lời câu hỏi; Agent giống người nhận việc rồi làm từng bước.
@@ -55,7 +54,6 @@ Khi mới dùng, nên đọc đồng thời:
 - Phê duyệt thủ công: xem [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
 
 Đặc điểm của Agent là nó có thể liên tục làm vài bước quanh mục tiêu — không chỉ trả bạn một đoạn chữ.
-
 
 ---
 

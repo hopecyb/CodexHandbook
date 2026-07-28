@@ -97,10 +97,7 @@ Cela couvre déjà la plupart des cas courants.
 Les Profiles aident à basculer rapidement vers une combinaison par défaut que vous avez déjà pensée pour différents scénarios de risque.
 
 ## Références
-
-- stormzhang `18-config.md`
 - Documentation profiles OpenAI Codex
-
 ---
 
 **Statut :** obsolète  

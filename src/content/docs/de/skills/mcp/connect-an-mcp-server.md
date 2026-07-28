@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Fokus: Verbindungs- und Verifikationsablauf. Protokolldetails und Server-Entwicklung: offizielle MCP-Doku.
 
 ## Vor dem Start
@@ -93,10 +92,8 @@ Bei Fehlern: Token abgelaufen, Env nicht durchgereicht, Firmenproxy blockiert.
 Beim ersten Aufruf unbekannter Werkzeuge kann der Client nachfragen — erwartet. In Teamregeln nicht „alle MCP-Schreibaktionen dauerhaft erlauben“ fördern.
 
 ## Quellen
-
 - OpenAI Codex MCP-Konfigurationsdokumentation
 - Server-Beispiele auf modelcontextprotocol.io
-
 ---
 
 **Status:** outdated  

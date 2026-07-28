@@ -64,7 +64,6 @@ Diese Praktiken senken die Chance, dass Fehler schwer aufräumbar werden:
 
 Fehler selbst sind nicht schlimm. Ohne klaren Änderungsumfang weiterzuändern — das wird unangenehm.
 
-
 ---
 
 **Status:** verified  

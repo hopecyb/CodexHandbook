@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 > MVP status: this page is an overview. The full five steps will be added in a later milestone.
 
 ## Read now
@@ -19,7 +18,6 @@ translated_at: 2026-07-25
 ## Planned steps (outline)
 
 Understand the codebase → fix and implement → test and review → automated workflows → multi-Agent development
-
 
 ---
 

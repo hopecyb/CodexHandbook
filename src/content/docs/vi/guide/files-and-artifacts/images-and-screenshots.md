@@ -103,11 +103,9 @@ Hãy tập trung xem vùng tiêu đề màn đầu và khoảng cách nút.
 - [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
 
 ## Nguồn tham khảo
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## Nghiệm thu
 
 Với tác vụ kiểu «làm theo hình»:
@@ -123,7 +121,6 @@ Với tác vụ kiểu «làm theo hình»:
 - Giả định mô hình đọc được liên kết Figma mà không xuất
 
 Ảnh chụp tốt không chỉ là “có ảnh”. Ảnh rõ, trọng tâm rõ, kỳ vọng cũng rõ thì tác vụ mới dễ làm đúng.
-
 
 ---
 

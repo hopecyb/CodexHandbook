@@ -9,9 +9,7 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 For non-code deliverables: open the file, check links, compare against design, read the copy aloud. For pages: preview on a real device or in a browser—not just the generated code.
-
 
 ---
 

@@ -67,11 +67,7 @@ Compare com [transformar o fluxo em automatização](/skills/automations/schedul
 - [ ] Ligação cruzada com a documentação do fluxo de origem
 
 ## Fontes de referência
-
-- Capítulos Skills de KimYx0207
-- stormzhang `20-skills.md`
 - No repositório: [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) e [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
-
 ---
 
 **Estado:** verified  

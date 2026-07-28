@@ -45,7 +45,6 @@ Na primeira leitura sistemática, pode seguir esta ordem:
 
 Este capítulo insiste nisto: o Contexto depende do que «ele realmente viu desta vez». Se acha que deveria saber, mas nesta ocasião não lhe forneceu, isso não conta como Contexto.
 
-
 ---
 
 **Estado:** verified  

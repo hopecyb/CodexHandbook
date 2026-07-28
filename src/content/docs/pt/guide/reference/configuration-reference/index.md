@@ -219,11 +219,7 @@ A configuração é para comportamento por omissão a longo prazo, não para val
 - Contradição com instruções de `AGENTS.md` (a configuração permite o que o documento proíbe)
 
 ## Fontes de referência
-
 - OpenAI Codex configuration reference
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Estado:** verified  

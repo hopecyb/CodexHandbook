@@ -77,11 +77,7 @@ prompt에서 Agent에게 **도구 반환 구조를 출력**(마스킹)하도록 
 - [ ] 팀 표준 MCP 설정 템플릿을 기록함
 
 ## 참고 출처
-
 - Model Context Protocol 규격과 디버깅 가이드
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **상태:** outdated  

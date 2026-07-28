@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ein **Skill** ist ein Verzeichnis mit `SKILL.md` (optional Skripte und Referenzen), das einen festen Ablauf zu einer Fähigkeit packt, die Codex **automatisch oder explizit** aufrufen kann.
 
 Er eignet sich für Methoden, die schon wiederholt vorkamen und weiter wiederverwendet werden sollen.
@@ -114,10 +113,7 @@ Skills sind kein Muss zum Start — sie eignen sich, um wiederkehrende Abläufe 
 - Skripte statt klar beschreibbarer Schritte → schwer wartbar
 
 ## Quellen
-
 - OpenAI Codex Skills-Dokumentation
-- KimYx0207 CX-06; stormzhang `22-skills.md`
-
 ---
 
 **Status:** verified  

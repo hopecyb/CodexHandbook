@@ -114,10 +114,7 @@ IDE 확장을 처음 구성할 때는 세 종류만 보세요.
 IDE 설정은 “에디터에서 Codex와 어떻게 맞출지”에 가깝습니다. 프로젝트 규칙을 어떻게 쓸지는 다른 층이니 섞지 마세요.
 
 ## 참고 출처
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`, `09-ide.md`
-
 ---
 
 **상태:** outdated  

@@ -120,12 +120,6 @@ Monorepo は Cloud で**ルート未インストール**や filter 誤りで失�
 
 Monorepo の `AGENTS.md` は一味に集中させる必要はない。「グローバル合意」と「ディレクトリ局所ルール」を適切な場所に置くのが適切です。
 
-## 参考
-
-- freestylefly/CodexGuide monorepo playbook
-- codex.bozhouai.com 大型リポジトリ章
-- stormzhang monorepo と Git 実践
-
 ---
 
 **状態：** verified  

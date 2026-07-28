@@ -143,10 +143,7 @@ Não apresses «tudo automático» antes de o fluxo se estabilizar; primeiro fix
 - [ ] O comportamento coincide com o `make review` local
 
 ## Fontes de referência
-
 - Documentação de integração OpenAI Codex + GitHub
-- Capítulos de automatização de codex.bozhouai.com
-
 ---
 
 **Estado:** outdated  

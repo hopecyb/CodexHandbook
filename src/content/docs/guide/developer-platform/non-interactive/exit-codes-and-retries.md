@@ -116,10 +116,7 @@ exit 1
 - [失败恢复](/cases/workflows/failure-recovery/)
 
 ## 参考来源
-
 - OpenAI API 重试指南（概念）
-- stormzhang CI 排错
-
 ---
 
 **状态：** outdated  

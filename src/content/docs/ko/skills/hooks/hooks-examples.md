@@ -123,10 +123,6 @@ exit 0
 - 분명한 실패 이유를 줄 수 있음
 - 정상 요청을 너무 심하게 오탐하지 않음
 
-## 팀 규칙과 같은 출처
-
-「금지 명령 부분 문자열」을 `tools/codex-policy.json`으로 추출해 Hook과 [명령 규칙](/guide/customization/rules/command-rules/)이 함께 읽게 하면, 두 곳에서 따로 유지하지 않아도 됩니다.
-
 ## 흔한 오해
 
 ### 1. 예시가 돌아가면 바로 프로덕션에 올려도 된다
@@ -180,11 +176,7 @@ Hook 예시는 사고방식과 구조를 배우는 용도이며, 정식 환경�
 - [ ] 문서에 검증 날짜와 적용 CLI 버전이 적혀 있음
 
 ## 참고 출처
-
 - OpenAI Codex Hooks 예시
-- freestylefly/CodexGuide 감사 설정
-- stormzhang `22-hooks.md`
-
 ---
 
 **상태:** outdated  

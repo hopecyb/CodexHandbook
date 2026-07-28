@@ -96,7 +96,6 @@ Allez à l'[index de dépannage](/guide/reference/troubleshooting/). Si un conce
 
 Dans la première demi-heure, compléter une boucle « assigner une Tâche, voir le résultat, le juger vous-même » vaut déjà le coup.
 
-
 ---
 
 **Statut :** verified  

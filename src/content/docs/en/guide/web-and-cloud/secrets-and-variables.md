@@ -124,11 +124,7 @@ Some tasks need outbound package pulls or API calls:
 - [ ] Offboarding/rotation process defined
 
 ## References
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`, `10-cloud.md`
-- KimYx0207 security and enterprise sections (verify facts against official docs)
-
 ---
 
 **Status:** outdated  

@@ -150,12 +150,7 @@ Voraussetzung für parallele Agenten bleibt: Aufgaben sind unabhängig und einze
 4. [Multi-Agent-Koordinations-Workflow](/cases/workflows/multi-agent-coordination/)
 
 ## Quellen
-
 - OpenAI-Codex-Dokumentation zu Multi-Task / Aufgabenkollaboration
-- Aufgabenkollaborations-Ideen im Codex-Verzeichnis von KimYx0207
-- stormzhang `21-subagents.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Status:** outdated  

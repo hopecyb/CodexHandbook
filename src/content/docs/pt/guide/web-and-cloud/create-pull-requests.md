@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Na primeira vez com o fluxo Cloud, costuma acontecer que a Tarefa já terminou mas a alteração ainda não está num estado fácil de rever e discutir. Em colaboração de equipa, esse passo costuma ser o **Pull Request**.
 
 Um PR é um pedido de alteração que se pode rever.
@@ -98,8 +97,6 @@ Numa experiência pessoal talvez poupe um passo; num repo colaborativo o risco �
 
 - Podes usar um Skill ou `codex exec` em CI para **comentários de revisão complementares**
 - O merge automático precisa de uma política de governação à parte; não está na rota por omissão de principiantes
-
-KimYx0207 CX-10 trata Review/PR; as capacidades concretas são definidas pelo oficial.
 
 ## Erros frequentes
 

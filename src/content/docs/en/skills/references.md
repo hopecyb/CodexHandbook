@@ -45,7 +45,6 @@ Or simply:
 Readers are not buried in background on first read; details are there when needed.
 
 ## When to split out references/
-
 Consider splitting when `SKILL.md` has:
 
 - A large standards block eating space every time
@@ -54,7 +53,6 @@ Consider splitting when `SKILL.md` has:
 
 Your first Skill does not need `references/`.  
 Common order: **get it working, split when content actually grows.**
-
 ## Common misconceptions
 
 ### 1. references/ is not just copying content elsewhere
@@ -75,11 +73,6 @@ The main process should still live in `SKILL.md` so first-time readers know how 
 - One file, one topic—easier maintenance
 - Avoid repeating SKILL.md steps inside references
 
-## What belongs in references/
-
-If content answers "**what rules apply**," it usually fits `references/`; if it answers "**what step comes next**," keep it in the main flow.
-
-`references/` shortens the main flow and expands detail when needed.
 ---
 
 **Status:** verified  

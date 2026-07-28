@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-
 这一部分把整本手册会反复用到的基础概念放在一起。产品界面差异写在 [产品手册](/guide/)；提示词技法写在 [核心能力](/guide/)。
 
 这组内容主要解释 Codex 怎么工作，以及怎么和它协作。
@@ -62,7 +61,6 @@ sidebar:
 5. [验证与人工复核](/guide/foundations/verification-and-human-review/)
 
 把这几页看明白，已经够支撑日常使用了。
-
 
 ---
 

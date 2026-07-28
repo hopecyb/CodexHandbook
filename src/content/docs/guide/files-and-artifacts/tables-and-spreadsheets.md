@@ -118,11 +118,7 @@ description: CSV、Excel 与表格类数据的读取、清洗、分析与导出�
 - [ ] 原文件未被意外覆盖（或变更在 diff 中可见）
 
 ## 参考来源
-
-- stormzhang 数据处理教程
-- codex.bozhouai.com 表格任务模板
 - [定义约束](/prompts/constraints-and-boundaries/)
-
 ---
 
 **状态：** verified  

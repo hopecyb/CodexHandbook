@@ -112,7 +112,6 @@ Ne faites plus de modifications. Dites-moi exactement ce que vous venez de chang
 
 Bases du prompting : [Bases du Prompt](/prompts/basics/).
 
-
 ---
 
 **Statut :** verified  

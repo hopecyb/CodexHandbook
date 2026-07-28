@@ -106,12 +106,7 @@ Vấn đề: biên an toàn phải theo rủi ro tác vụ — không nên vì l
 Giai đoạn đầu chỉnh phê duyệt và Sandbox CLI nghiêng bảo thủ thường ổn hơn. Khi thật sự biết mình đang nới gì, từ từ nới cũng chưa muộn.
 
 ## Nguồn tham khảo
-
 - Tài liệu an toàn và Sandbox OpenAI Codex CLI
-- `17-permissions.md`, `19-security.md` của stormzhang
-- KimYx0207 CX-04, CX-13
-- Chuyên đề phê duyệt Sandbox freestylefly/CodexGuide
-
 ---
 
 **Trạng thái:** verified  

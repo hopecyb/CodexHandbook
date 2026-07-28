@@ -102,12 +102,6 @@ Bietet das Produkt „Erinnerung“ oder persistente Vorlieben, siehe [Erinnerun
 - [ ] Mindestens ein Kundenprojekt mit strengem Profile konfiguriert
 - [ ] Keine persönlichen Geheimnisse im Repo
 
-## Quellen
-
-- freestylefly/CodexGuide: persönliche und Team-Konfiguration
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Status:** verified  

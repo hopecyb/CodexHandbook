@@ -201,13 +201,7 @@ API Token を会話に貼らない。
 - [拡張方式の選び方](/skills/choosing-an-extension-method/)
 
 ## 参考
-
 - OpenAI Codex 公式ドキュメント（現行バージョンを基準に）
-- freestylefly/CodexGuide の AGENTS/Skill 整理思路
-- KimYx0207《AI-Coding-Guide-Zh》Codex ディレクトリの拡張・自動化トピック
-- stormzhang `11-agents-md.md`、`19-memory.md`、`20-mcp.md`、`22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **状態：** verified  

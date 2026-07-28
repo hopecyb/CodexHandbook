@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 ## Review workflow
 
 1. Open the diff view and browse file by file
@@ -18,7 +17,6 @@ translated_at: 2026-07-26
 4. Accept, reject, or request changes
 
 Method: [Review diffs](/guide/quality/review-diffs/)
-
 
 ---
 

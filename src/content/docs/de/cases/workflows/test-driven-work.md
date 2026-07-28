@@ -73,11 +73,6 @@ Kombinieren mit [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-b
 - [Tests ausführen](/guide/quality/run-tests/)
 - [Fall: Bug-Fix mit Überprüfung](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## Referenzquellen
-
-- stormzhang Kapitel zu Tests und Qualität
-- CodexGuide Entwickler-Workflows
-
 ---
 
 **Status:** verified  

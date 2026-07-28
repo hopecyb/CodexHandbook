@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Installationsschritte: [Desktop-App installieren](/guide/getting-started/install-desktop-app/) und [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Beim ersten Öffnen der Desktop-App erscheinen viele Informationen gleichzeitig.
@@ -48,7 +47,6 @@ Maßgeblich ist der aktuelle Text deiner Version.
 Hier geht es um logische Bereiche, nicht um konkrete Buttonnamen.
 
 Finde zuerst „Aufgabe eingeben“, „Änderungen sehen“ und „freigeben“ — den Rest lernst du im Gebrauch.
-
 
 ---
 

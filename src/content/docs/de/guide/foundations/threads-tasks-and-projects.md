@@ -58,7 +58,6 @@ Der Thread ist ein Behälter; die Aufgabe ist konkrete Arbeit darin.
 
 Das Projekt entscheidet, wo es arbeitet; der Thread, welche Historie es mitträgt; die Aufgabe, was diesmal fertig werden soll.
 
-
 ---
 
 **Status:** verified  

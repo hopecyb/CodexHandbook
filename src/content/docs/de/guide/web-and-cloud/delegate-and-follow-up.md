@@ -119,12 +119,7 @@ Mindestens: **einmal mittendrin + einmal am Ende**.
 - [ ] PR oder Branch mit Menschen-Diff-Review
 
 ## Quellen
-
 - OpenAI Codex Cloud Task-Dokumentation
-- stormzhang `10-cloud.md`, `27-mobile.md`
-- KimYx0207 CX-10
-- App/Cloud-Kollaborationskapitel auf codex.bozhouai.com
-
 ---
 
 **Status:** outdated  

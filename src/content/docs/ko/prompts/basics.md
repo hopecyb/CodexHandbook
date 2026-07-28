@@ -100,7 +100,6 @@ Codex에게는 다음이 분명한지가 더 중요합니다.
 
 예시는 [첫 작업 실행](/cases/first-task/)과 [좋은 작업의 구조](/prompts/task-anatomy/)를 참고하세요.
 
-
 ---
 
 **상태:** verified  

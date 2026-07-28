@@ -3,7 +3,6 @@ title: 处理文件
 description: 让 Codex 在明确范围内读写文件。
 ---
 
-
 ## 本步目标
 
 指定文件名，完成一次受控编辑。
@@ -45,7 +44,6 @@ description: 让 Codex 在明确范围内读写文件。
 第一次动文件时，重点不是改得多，而是让改动边界清楚、也方便检查。
 
 下一步：[给出清晰任务](/guide/learning-paths/beginner/03-give-clear-tasks/)
-
 
 ---
 

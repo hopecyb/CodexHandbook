@@ -18,7 +18,6 @@ Codex speeds you up—it **does not** remove acceptance. Minimum review:
 
 "Looks right" is not an acceptance criterion.
 
-
 ---
 
 **Status:** review  

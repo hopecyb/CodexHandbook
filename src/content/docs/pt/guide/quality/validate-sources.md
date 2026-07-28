@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Sempre que a conclusão depender de factos externos, não aceite só a conclusão — peça também as fontes.
 
 Exija ao Agent:
@@ -43,7 +42,6 @@ Pelo menos abra e confirme:
 - Já está desatualizada
 
 Em Tarefas de investigação, a fonte é parte da credibilidade da conclusão.
-
 
 ---
 

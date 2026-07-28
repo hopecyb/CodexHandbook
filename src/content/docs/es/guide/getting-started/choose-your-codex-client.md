@@ -78,7 +78,6 @@ Comparación completa: [comparación de funciones](/guide/reference/feature-comp
 
 La primera vez no hace falta comparar «cuál es más profesional». Elige la entrada donde más fácil veas el proceso y el resultado.
 
-
 ---
 
 **Estado:** verified  

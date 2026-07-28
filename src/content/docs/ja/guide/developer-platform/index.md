@@ -81,12 +81,7 @@ Git プロバイダ / チケット / アーティファクトリポジトリ
 開発者プラットフォーム章は「Codex をシステムに接続する」話。初めて Codex に触れるなら、先の入門を見てください。
 
 ## 参考
-
 - OpenAI Codex API / SDK 公式ドキュメント
-- KimYx0207 開発者章
-- stormzhang CI と自動化チュートリアル
-- codex.bozhouai.com 工程化事例
-
 ---
 
 **状態：** verified  

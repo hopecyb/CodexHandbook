@@ -81,11 +81,6 @@ Bei Multi-Agent: siehe [Multi-Agent-Koordination](/cases/workflows/multi-agent-c
 - [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
 - [Fehlerreferenz](/guide/reference/error-reference/)
 
-## Referenzquellen
-
-- freestylefly/CodexGuide Retro und Playbooks
-- stormzhang Troubleshooting-Kapitel
-
 ---
 
 **Status:** verified  

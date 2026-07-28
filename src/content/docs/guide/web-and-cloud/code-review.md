@@ -135,11 +135,7 @@ GitHub 侧：[GitHub 集成](/guide/integrations/github/)
 - [ ] 无 Secrets 进入仓库
 
 ## 参考来源
-
-- stormzhang `26-git-github.md`
-- KimYx0207 Review/PR 章节
 - [人工审批模式](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **状态：** outdated  

@@ -126,8 +126,6 @@ Một số Tác vụ cần pull package đi ra hoặc gọi API:
 ## Tham chiếu
 
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`, `10-cloud.md`
-- Các phần bảo mật và doanh nghiệp KimYx0207 (đối chiếu sự thật với tài liệu chính thức)
 
 ---
 

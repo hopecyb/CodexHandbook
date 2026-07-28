@@ -20,7 +20,6 @@ translated_at: 2026-07-26
 
 The goal of the first task is learning the workflow—not shipping business work. Isolation keeps the cost of mistakes near zero.
 
-
 ---
 
 **Status:** review  

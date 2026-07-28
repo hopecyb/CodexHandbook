@@ -126,11 +126,7 @@ Algunas Tareas necesitan salir a red para bajar paquetes o llamar APIs:
 - [ ] Proceso de salida/rotación definido
 
 ## Fuentes de referencia
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`, `10-cloud.md`
-- Capítulos de seguridad y empresa de KimYx0207 (hechos sujetos a contraste oficial)
-
 ---
 
 **Estado:** outdated  

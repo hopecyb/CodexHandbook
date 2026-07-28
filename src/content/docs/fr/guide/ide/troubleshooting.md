@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Symptôme | Essayer d'abord |
 |---|---|
 | Extension non réactive | Mettre à jour l'extension et l'éditeur ; vérifier les logs de l'hôte d'extension |
@@ -16,7 +15,6 @@ translated_at: 2026-07-28
 | Mauvais Contexte | Confirmer la racine de l'espace de travail ouvert |
 
 Officiel : [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
 
 ---
 

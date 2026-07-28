@@ -3,7 +3,6 @@ title: 定时与后台任务
 description: Automations——在触发条件下无人值守运行 Codex，必须设计审批与退出条件。
 ---
 
-
 **Automations** 让 Codex 在**时间表、仓库事件或外部触发**下自动执行任务，例如依赖更新检查、文档同步、周期性健康扫描。
 
 ## 本页内容
@@ -89,11 +88,7 @@ description: Automations——在触发条件下无人值守运行 Codex，必�
 - [ ] 团队知晓 bot 账号与审批规则
 
 ## 参考来源
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - OpenAI Codex Cloud / Automations 官方说明
-
 ---
 
 **状态：** outdated  

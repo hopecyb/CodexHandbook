@@ -10,7 +10,6 @@ sidebar:
   order: 3
 ---
 
-
 Phần này gom các khái niệm nền tảng mà cả cẩm nang sẽ dùng đi dùng lại. Khác biệt giao diện sản phẩm viết ở [Cẩm nang sản phẩm](/guide/); kỹ thuật Prompt viết ở [Năng lực cốt lõi](/guide/).
 
 Nhóm nội dung này chủ yếu giải thích Codex làm việc thế nào, và cách cộng tác với nó.
@@ -67,7 +66,6 @@ Nếu không muốn đọc hết cả chương một mạch, có thể đọc tr
 5. [Kiểm chứng và rà soát thủ công](/guide/foundations/verification-and-human-review/)
 
 Hiểu rõ vài trang này đã đủ đỡ việc dùng hàng ngày.
-
 
 ---
 

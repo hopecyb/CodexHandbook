@@ -141,10 +141,7 @@ jobs:
 - [ ] ローカル `make review` と挙動が一致
 
 ## 参考
-
 - OpenAI Codex + GitHub 統合ドキュメント
-- codex.bozhouai.com 自動化章
-
 ---
 
 **状態：** outdated  

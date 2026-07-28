@@ -121,10 +121,7 @@ First separate “temporary fault” from “retry will not help,” then decide
 - [Failure recovery](/cases/workflows/failure-recovery/)
 
 ## Reference sources
-
 - OpenAI API retry guidance (conceptual)
-- stormzhang CI troubleshooting
-
 ---
 
 **Status:** outdated  

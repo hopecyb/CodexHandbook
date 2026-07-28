@@ -114,10 +114,7 @@ Si esas tres categorías están en orden, ya cubres la mayoría de problemas rea
 Los ajustes del IDE se parecen más a «cómo colaboras con Codex en el editor»; cómo se escriben las reglas del proyecto es otra capa — no las mezcles.
 
 ## Fuentes de referencia
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`, `09-ide.md`
-
 ---
 
 **Estado:** outdated  

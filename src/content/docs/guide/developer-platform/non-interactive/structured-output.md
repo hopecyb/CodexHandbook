@@ -114,10 +114,7 @@ echo "$result" | jq -e '.pass == true'
 - [ ] 与 [退出码](/guide/developer-platform/non-interactive/exit-codes-and-retries/) 策略一致
 
 ## 参考来源
-
 - OpenAI structured outputs 通用实践（概念对齐）
-- KimYx0207 自动化输出章节
-
 ---
 
 **状态：** verified  

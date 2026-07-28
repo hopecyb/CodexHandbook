@@ -8,11 +8,9 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > MVP : aperçu uniquement.
 
 Codex peut s'intégrer à GitHub, Slack, Linear et d'autres outils pour connecter les Tâches à votre workflow existant. Lors du choix des intégrations, demandez d'abord : les données quittent-elles le périmètre de l'org, qui peut déclencher les Agents, et comment les échecs sont audités. Détails : documentation officielle des intégrations sur [https://developers.openai.com/codex](https://developers.openai.com/codex).
-
 
 ---
 

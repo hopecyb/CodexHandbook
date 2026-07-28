@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objectif de cette étape
 
 Nommez un fichier spécifique et réalisez une modification contrôlée.
@@ -24,7 +23,6 @@ Une fois terminé, listez les lignes que vous avez modifiées.
 Examinez le Diff avant d'accepter. Lié : [Contexte fichier et dossier](/guide/context/file-and-folder-context/)
 
 Suite : [Donner des Tâches claires](/guide/learning-paths/beginner/03-give-clear-tasks/)
-
 
 ---
 

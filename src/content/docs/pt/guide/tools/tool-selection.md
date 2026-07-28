@@ -90,7 +90,6 @@ Priorize ficheiros e terminal; não pesquise na rede; se precisar do browser par
 
 Escolha primeiro a Ferramenta mínima e mais alinhada com a Tarefa — não comece pela de maior superfície de impacto.
 
-
 ---
 
 **Estado:** verificado  

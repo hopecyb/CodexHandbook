@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Las **preferencias personales** son ajustes de tu máquina que valen entre proyectos: modelo por defecto, tema, hábitos de aprobación, rutas de Skills personales, etc. A diferencia de `AGENTS.md` en el repositorio, las preferencias personales **no** deben asumir que los compañeros tienen las mismas.
 
 ## Contenido
@@ -32,16 +31,6 @@ Si no se separan, después es fácil que pase:
 - En tu máquina todo fluye, pero los compañeros no pueden reproducirlo
 - Crees que la regla ya aplica, cuando en realidad solo te está cubriendo tu máquina
 - Llevas ajustes permisivos a un proyecto más serio
-
-## Qué encaja en preferencias personales
-
-| Contenido | Ejemplo |
-|---|---|
-| Modelo por defecto y nivel de razonamiento | Rendimiento de tu máquina y plan |
-| Tema de UI, fuente, notificaciones | [Ajustes](/guide/desktop-app/settings/) de la App de escritorio |
-| MCP personal (herramientas privadas) | Solo lectura a una base de datos local (autoriza con cuidado) |
-| Rutas de tu biblioteca de Skills | Sin conflicto con Plugins del equipo |
-| Alias de terminal, directorio de arranque de `codex` | Ver [configuración CLI](/guide/cli/configuration/) |
 
 ## Contenido de equipo que no debe vivir solo en la capa personal
 
@@ -102,12 +91,6 @@ Si el producto ofrece «memoria» o preferencias persistentes, ver [Memorias y c
 - [ ] Puedes dar un ejemplo de cada capa: personal vs proyecto vs organización
 - [ ] Has configurado al menos un Profile estricto para un proyecto de cliente
 - [ ] No hay secretos personales dentro del repositorio
-
-## Referencias
-
-- freestylefly/CodexGuide: configuración personal y de equipo
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
 
 ---
 

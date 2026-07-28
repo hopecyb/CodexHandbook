@@ -140,11 +140,7 @@ GitHub 側：[GitHub 統合](/guide/integrations/github/)
 - [ ] Secrets がリポジトリに入っていない
 
 ## 参考ソース
-
-- stormzhang `26-git-github.md`
-- KimYx0207 Review/PR 章
 - [人間承認パターン](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **状態：** outdated  

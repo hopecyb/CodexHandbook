@@ -121,10 +121,7 @@ Je mehr „ja“, desto sinnvoller der Webhook.
 Webhooks bringen Aufgabenstatus in andere Systeme — zuerst Signaturprüfung, Idempotenz und asynchrone Verarbeitung absichern.
 
 ## Quellen
-
 - OpenAI Codex / Cloud API Event-Dokumentation
-- KimYx0207 Integrationskapitel
-
 ---
 
 **Status:** verified  

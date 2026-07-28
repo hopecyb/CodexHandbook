@@ -63,11 +63,6 @@ Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ
 - [Xử lý độ không chắc](/guide/quality/handle-uncertainty/)
 - [Case: refactor tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## Nguồn tham chiếu
-
-- Phương pháp nghiên cứu và trích dẫn của CodexGuide
-- Chương tìm kiếm và kiểm chứng của stormzhang
-
 ---
 
 **Trạng thái:** verified  

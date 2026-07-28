@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 After starting an interactive session:
 
 1. Launch in the project directory (or set the working directory per docs)
@@ -16,7 +15,6 @@ After starting an interactive session:
 4. Use `/` shortcuts (if available) to manage the session—check current CLI help
 
 Prompting guidance still applies: [Prompting](/prompts/)
-
 
 ---
 

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Besoin | Préférer |
 |---|---|
 | Éditer des fichiers dans le dépôt | Outils fichier |
@@ -17,7 +16,6 @@ translated_at: 2026-07-28
 | Voir l'état réel d'une page | Navigateur (avancé) |
 
 Énoncez les outils autorisés et interdits dans votre Prompt pour réduire l'accès réseau non autorisé ou l'installation de dépendances.
-
 
 ---
 

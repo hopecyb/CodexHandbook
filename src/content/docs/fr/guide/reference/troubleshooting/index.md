@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Symptôme | Aller à |
 |---|---|
 | Installation échouée | [Dépannage App de bureau](/guide/desktop-app/troubleshooting/) · [Dépannage CLI](/guide/cli/troubleshooting/) · [Dépannage IDE](/guide/ide/troubleshooting/) |
@@ -19,7 +18,6 @@ translated_at: 2026-07-28
 | Questions permissions / bac à sable | [Permissions](/guide/foundations/permissions-and-approvals/) · [Bac à sable](/guide/foundations/sandbox-and-network/) |
 
 Support et docs officiels : [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
 
 ---
 

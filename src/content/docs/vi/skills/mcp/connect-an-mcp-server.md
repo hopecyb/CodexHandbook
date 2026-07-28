@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Trang này tập trung quy trình nối và Kiểm chứng; chi tiết giao thức và phát triển server xem tài liệu MCP chính thức.
 
 ## Trước khi bắt đầu
@@ -93,10 +92,8 @@ Khi thất bại kiểm: token hết hạn, biến môi trường chưa truyền
 Lần đầu gọi công cụ lạ, client có thể hiện xác nhận — đây là hành vi kỳ vọng. Đừng khuyến khích trong quy chuẩn nhóm"cho phép vĩnh viễn mọi thao tác ghi MCP".
 
 ## Nguồn tham chiếu
-
 - Tài liệu cấu hình OpenAI Codex MCP
 - Ví dụ server trên modelcontextprotocol.io
-
 ---
 
 **Trạng thái:** outdated  

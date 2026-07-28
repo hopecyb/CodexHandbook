@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Un **Agent** avanza de forma continua hacia un objetivo: entenderlo → elegir Herramientas → observar el resultado → ajustar el siguiente paso, hasta terminar o hasta que tú intervengas.
 
 La IA normal se parece más a alguien que responde preguntas; un Agent, a alguien que, al recibir una Tarea, la lleva paso a paso.
@@ -55,7 +54,6 @@ Al empezar, conviene leer a la vez:
 - Aprobación humana: ver [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
 
 Lo propio de un Agent es que puede dar varios pasos seguidos alrededor de un objetivo, no solo devolverte un párrafo.
-
 
 ---
 

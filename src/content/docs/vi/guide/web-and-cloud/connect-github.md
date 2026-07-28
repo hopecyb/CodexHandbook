@@ -90,8 +90,6 @@ UI và nút cụ thể tùy sản phẩm hiện tại.
 ## Tham chiếu
 
 - Tài liệu tích hợp OpenAI Codex Cloud / GitHub
-- KimYx0207 CX-10, CX-11
-- stormzhang `26-git-github.md`, `10-cloud.md`
 
 ---
 

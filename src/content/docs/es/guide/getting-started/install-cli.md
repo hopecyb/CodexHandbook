@@ -54,7 +54,6 @@ Con la CLI instalada, el terminal actual debería encontrarla y tú poder comple
 
 Interacción detallada: [modo interactivo de la CLI](/guide/cli/interactive-mode/). Resolución de problemas: [resolución de problemas de la CLI](/guide/cli/troubleshooting/).
 
-
 ---
 
 **Estado:** outdated  

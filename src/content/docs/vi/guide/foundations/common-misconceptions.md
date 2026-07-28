@@ -75,7 +75,6 @@ Codex rất mạnh, nhưng đặt trong mục tiêu và ranh giới rõ ràng th
 
 Bước tiếp theo: [Bắt đầu nhanh](/guide/getting-started/).
 
-
 ---
 
 **Trạng thái:** verified  

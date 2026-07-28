@@ -97,11 +97,7 @@ La plupart des clients permettent rebinder. Les équipes peuvent documenter des 
 Les raccourcis ne sont pas un examen — fluidifiez les actions qui vous interrompent le plus.
 
 ## Sources de référence
-
 - Page officielle Paramètres / Raccourcis clavier de chaque produit
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **Statut :** obsolète  

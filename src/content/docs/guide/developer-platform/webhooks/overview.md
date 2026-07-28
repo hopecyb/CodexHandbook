@@ -116,10 +116,7 @@ def handle(request):
 Webhook 适合把任务状态变化接进别的系统，同时要先把签名校验、幂等和异步处理这些基础做好。
 
 ## 参考来源
-
 - OpenAI Codex / Cloud API 事件文档
-- KimYx0207 集成章节
-
 ---
 
 **状态：** verified  

@@ -42,7 +42,6 @@ IDE 확장이 정말 준비됐는지는, 현재 에디터와 워크스페이스�
 
 상세 단계는 [IDE 확장 설치](/guide/getting-started/install-ide-extension/)를 참고하세요. 공식 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
 
-
 ---
 
 **상태:** outdated  

@@ -90,7 +90,6 @@ Si te reconoces en esto, vale la pena leerlo:
 
 Siguiente paso: [Elige tu ruta](/guide/start-here/choose-your-path/).
 
-
 ---
 
 **Estado:** verified  

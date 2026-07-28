@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Après le démarrage d'une session interactive :
 
 1. Lancez dans le répertoire du projet (ou définissez le répertoire de travail selon la doc)
@@ -17,7 +16,6 @@ Après le démarrage d'une session interactive :
 4. Utilisez les raccourcis `/` (si disponibles) pour gérer la session — consultez l'aide CLI actuelle
 
 Les conseils de Prompt s'appliquent toujours : [Prompting](/prompts/)
-
 
 ---
 

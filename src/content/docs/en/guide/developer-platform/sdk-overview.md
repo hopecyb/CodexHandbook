@@ -85,10 +85,7 @@ The SDK can trigger Cloud or remote runners, or CI can callback your service to 
 - Auto-merging PRs produced by the SDK
 
 ## Reference sources
-
 - OpenAI Codex SDK reference
-- KimYx0207 developer integration chapter
-
 ---
 
 **Status:** verified  

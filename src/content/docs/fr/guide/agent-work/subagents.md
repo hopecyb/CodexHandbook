@@ -124,7 +124,6 @@ Les sous-agents conviennent aux sous-problèmes avec limites claires, livrables 
 
 - [Coordination multi-agents](/cases/workflows/multi-agent-coordination/)
 - [Transfert et reprise](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08 ; stormzhang `21-subagents.md`
 
 ---
 

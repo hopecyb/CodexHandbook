@@ -104,10 +104,7 @@ Agent 完成任务时可能新建报告、脚本、静态站点、测试数据�
 - [ ] 无 secrets、无多余生成目录
 
 ## 参考来源
-
 - [处理不确定性](/guide/quality/handle-uncertainty/)
-- external-source-integration 案例验收要求
-
 ---
 
 **状态：** verified  

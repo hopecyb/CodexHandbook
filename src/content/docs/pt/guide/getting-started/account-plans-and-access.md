@@ -54,7 +54,6 @@ Conta utilizável é só o primeiro passo; depois ainda há plano e política de
 
 Esta página não lista tabela de preços (envelhece rápido). Use as páginas oficiais de conta e cobrança.
 
-
 ---
 
 **Status:** outdated  

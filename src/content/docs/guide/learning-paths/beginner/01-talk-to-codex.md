@@ -3,7 +3,6 @@ title: 与 Codex 对话
 description: 练习用自然语言说明目标与限制。
 ---
 
-
 ## 本步目标
 
 用完整句子说明 **你要什么** 和 **不要什么**，不要只丢几个词。
@@ -44,7 +43,6 @@ description: 练习用自然语言说明目标与限制。
 只读、解释、总结这类任务，同样需要边界。
 
 下一步：[处理文件](/guide/learning-paths/beginner/02-work-with-files/) · 原理：[提示词基础](/prompts/basics/)
-
 
 ---
 

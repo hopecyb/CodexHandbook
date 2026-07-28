@@ -72,7 +72,6 @@ description: 写出可检查的完成条件。
 
 把验证命令写进标准，Agent 才更可能主动去跑：[运行测试](/guide/verification/)
 
-
 ---
 
 **状态：** verified  

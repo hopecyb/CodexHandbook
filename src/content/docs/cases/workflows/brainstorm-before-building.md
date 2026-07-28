@@ -77,11 +77,6 @@ description: 在写代码或长文之前，用结构化探索收敛方案——�
 - [规格驱动工作](/cases/workflows/specification-driven-work/)
 - [询问计划](/prompts/ask-for-a-plan/)
 
-## 参考来源
-
-- CodexGuide 需求澄清与方案对比
-- codex.bozhouai.com 任务模板与选题方法
-
 ---
 
 **状态：** verified  

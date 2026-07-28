@@ -56,7 +56,6 @@ Loại câu này đặc biệt hữu ích với thread dài.
 
 Ngữ cảnh vừa xung đột, tốt nhất chỉ định thẳng «lần này nghe cái nào». Chính sách bắt buộc của nhóm cũng có thể cao hơn sở thích cá nhân.
 
-
 ---
 
 **Trạng thái:** verified  

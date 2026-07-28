@@ -96,12 +96,7 @@ Agent ワークの本質は、計画・実行・軌道修正・仕上げの各�
 - サブタスクを分けるとき境界を渡さず、メインスレッドがますます乱れる
 
 ## 参考
-
 - OpenAI Codex 公式のタスク協業・実行説明
-- freestylefly/CodexGuide の協業型タスク実践
-- KimYx0207『AI-Coding-Guide-Zh』Codex ワークフロー章
-- stormzhang のサブタスク・自動化実践
-
 ---
 
 **状態：** verified  

@@ -59,7 +59,6 @@ translated_at: 2026-07-28
 
 이 핸드북은 특정 모델 마케팅 이름에 묶이지 않습니다. 클라이언트 현재 목록과 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 기준으로 하세요.
 
-
 ---
 
 **상태:** verified  

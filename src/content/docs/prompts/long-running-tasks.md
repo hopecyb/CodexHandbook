@@ -72,7 +72,6 @@ description: 拆分阶段、检查点与交接信息。
 
 配合：[进度与引导](/guide/agent-work/progress-and-steering/) · [交接与恢复](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **状态：** verified  

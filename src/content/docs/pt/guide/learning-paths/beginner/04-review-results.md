@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo deste passo
 
 Troca «olhar de relance e seguir» por ações de verificação fixas.
@@ -46,7 +45,6 @@ O plano só ajuda — ainda tens de ver se toca em âmbito que não deveria.
 Rever o resultado não é um extra: faz parte do processo de uso.
 
 Seguinte: [Concluir o primeiro projeto pequeno](/guide/learning-paths/beginner/05-complete-first-project/)
-
 
 ---
 

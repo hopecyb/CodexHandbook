@@ -88,11 +88,6 @@ Teams can embed the four phases in [case study template](/cases/use-cases/case-s
 - Verification is only "looks like it runs"
 - Insufficient explore—wrong module changed
 
-## Reference sources
-
-- CodexGuide task design and verification methods
-- Orange Book "full chain from requirements to delivery"
-
 ---
 
 **Status:** verified  

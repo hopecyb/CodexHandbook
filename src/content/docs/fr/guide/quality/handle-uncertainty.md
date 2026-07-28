@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Indiquez dans votre Prompt :
 
 ```text
@@ -16,7 +15,6 @@ Lorsque l'information est insuffisante, demandez d'abord ; n'inventez pas de che
 ```
 
 Si une fabrication apparaît : arrêtez, corrigez les faits, démarrez un nouveau Fil si nécessaire.
-
 
 ---
 

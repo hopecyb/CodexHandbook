@@ -46,7 +46,6 @@ Xem xét kết quả không phải hành động phụ; nó vốn là một ph�
 
 Bước tiếp: [Hoàn thành dự án nhỏ đầu tiên](/guide/learning-paths/beginner/05-complete-first-project/)
 
-
 ---
 
 **Trạng thái:** verified  

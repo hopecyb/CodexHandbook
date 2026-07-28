@@ -69,12 +69,6 @@ translated_at: 2026-07-28
 - [ ] 최소 두 검사 지점에 검토 가능한 diff가 있음
 - [ ] 일시중지, 복구, 인계 방법을 알고 있음
 
-## 참고 출처
-
-- codex.bozhouai.com 긴 작업과 표준 워크플로
-- freestylefly/CodexGuide 작업 정착
-- stormzhang `14-workflows.md`
-
 ---
 
 **상태:** verified  

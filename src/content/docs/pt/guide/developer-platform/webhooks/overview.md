@@ -121,10 +121,7 @@ Quanto mais respostas forem «sim», mais sentido tem o Webhook.
 O Webhook serve para ligar mudanças de estado de Tarefa a outros sistemas; antes há que deixar bem assinatura, idempotência e processamento assíncrono.
 
 ## Fontes de referência
-
 - Documentação de eventos da API OpenAI Codex / Cloud
-- Capítulos de integração de KimYx0207
-
 ---
 
 **Estado:** verified  

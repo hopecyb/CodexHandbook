@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 The terminal is powerful and dangerous. Principles:
 
 - Read commands before approving
@@ -15,7 +14,6 @@ The terminal is powerful and dangerous. Principles:
 - Include verification commands in acceptance criteria
 
 Product entry point: [Integrated terminal](/guide/desktop-app/integrated-terminal/)
-
 
 ---
 

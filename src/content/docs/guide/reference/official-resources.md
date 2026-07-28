@@ -3,7 +3,6 @@ title: 官方资源
 description: OpenAI / Codex 官方文档与入口链接。
 ---
 
-
 本手册是社区开源指南。产品行为、安装包与套餐以官方为准：
 
 - Codex 开发者文档：[https://developers.openai.com/codex](https://developers.openai.com/codex)
@@ -66,7 +65,6 @@ description: OpenAI / Codex 官方文档与入口链接。
 3. 如果两边冲突，以官方为准
 
 这样方向会更清楚，也能少踩到过期信息。
-
 
 ---
 

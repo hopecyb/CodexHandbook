@@ -151,11 +151,7 @@ codex exec --cwd . "읽기 전용：현재 브랜치와 main의 diff를 비교�
 - [종료 코드와 재시도](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## 참고 출처
-
 - OpenAI Codex CLI 문서
-- KimYx0207 비대화형 장
-- stormzhang CI 튜토리얼
-
 ---
 
 **상태：** outdated  

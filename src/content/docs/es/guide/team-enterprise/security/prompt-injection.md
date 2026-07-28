@@ -130,11 +130,8 @@ Las «órdenes de operación» de fuentes no del todo confiables no deben hereda
 - [ ] Alineado con el [uso aceptable](/guide/team-enterprise/governance/acceptable-use/)
 
 ## Fuentes de referencia
-
 - OWASP LLM Top 10 (Prompt Injection)
-- Capítulos de seguridad de KimYx0207
 - Guía oficial de seguridad de OpenAI
-
 ---
 
 **Estado:** verified  

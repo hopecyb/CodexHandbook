@@ -12,7 +12,6 @@ Antes do primeiro uso, pergunte a si: «Se ele errar, o custo será alto demais?
 
 Esta lista existe para reduzir o risco do primeiro uso.
 
-
 Antes de começar, marque:
 
 - [ ] Estou usando um diretório de prática descartável — não o repositório de produção
@@ -44,7 +43,6 @@ Na primeira vez, os problemas mais comuns são:
 Dá para aprender enquanto usa — mas passar por estes itens da lista antes de começar fica mais estável.
 
 No primeiro uso do Codex, baixar o custo do erro primeiro deixa o resto bem mais leve.
-
 
 ---
 

@@ -145,12 +145,6 @@ Esa división suele ahorrar tiempo y facilita sujetar la calidad al final.
 - [ ] Se abre en el entorno de reproducción objetivo sin tipografía rota
 - [ ] Los datos clave se pueden rastrear hasta el archivo fuente
 
-## Referencias
-
-- Casos de presentación e informes de codex.bozhouai.com
-- Capítulos de creación de contenido de stormzhang
-- Prácticas de la comunidad tipo baoyu-slide-deck (referencia de estructura)
-
 ---
 
 **Estado:** verificado  

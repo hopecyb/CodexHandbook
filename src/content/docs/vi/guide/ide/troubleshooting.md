@@ -59,7 +59,6 @@ Nguyên nhân gốc phổ biến nhất khi xử lý sự cố IDE thường là
 
 Giải thích chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Trạng thái:** verified  

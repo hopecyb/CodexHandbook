@@ -123,11 +123,7 @@ Bei Tabellen zählen Spalten, Typen, Regeln und Abnahme klarer als „irgendwie 
 - [ ] Original nicht versehentlich überschrieben (oder Diff sichtbar)
 
 ## Quellen
-
-- stormzhang Datenverarbeitung
-- codex.bozhouai.com Tabellen-Templates
 - [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
-
 ---
 
 **Status:** verified  

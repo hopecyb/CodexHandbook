@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex sollte riskante Operationen nicht ohne Zustimmung ausführen. **Freigabe** ist das Tor in der Mensch-Maschine-Zusammenarbeit.
 
 Könnte Codex beliebige Dateien lesen, ungehindert online gehen und beliebig Befehle ausführen, wäre der Preis bei falschem Aufgabenverständnis hoch.
@@ -72,7 +71,6 @@ In der Regel nicht. Du kannst ablehnen und es einen sichereren Weg weitermachen 
 Offizielle Politiken und Defaults können sich ändern — prüfe [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Freigabe stellt sicher, dass „darf es das?“ am Ende immer bei dir bleibt.
-
 
 ---
 

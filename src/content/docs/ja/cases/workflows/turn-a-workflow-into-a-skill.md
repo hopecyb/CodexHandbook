@@ -67,11 +67,7 @@ translated_at: 2026-07-28
 - [ ] 元ワークフロードキュメントへの相互リンク
 
 ## 参考
-
-- KimYx0207 Skills 章
-- stormzhang `20-skills.md`
 - リポジトリ内 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) と [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
-
 ---
 
 **状態：** verified  

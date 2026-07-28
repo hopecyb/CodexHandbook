@@ -10,7 +10,6 @@ sidebar:
   order: 4
 ---
 
-
 O objetivo é completar a primeira Tarefa num **projeto de prática seguro** e aprender a verificar, aceitar, modificar ou desfazer.
 
 O padrão é o **App desktop**. Se você prefere terminal ou editor, as páginas de instalação ainda valem; o exemplo da primeira Tarefa indica as diferenças.
@@ -72,8 +71,6 @@ Dá para seguir este ciclo mínimo:
 6. Aprender a desfazer ou corrigir
 
 Depois que este ciclo fechar, aprender conteúdo mais complexo fica mais leve.
-
-
 
 ---
 

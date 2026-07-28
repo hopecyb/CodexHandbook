@@ -92,7 +92,6 @@ Bei unbekannten Wörtern kurz nachschlagen und weiterlesen.
 
 Beim ersten Lesen reichen diese Wörter als Hinweise. Ungefähr wissen, worauf sie zeigen, ist praktischer als alles sofort auswendig zu lernen.
 
-
 ---
 
 **Status:** verified  

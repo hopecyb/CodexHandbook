@@ -44,7 +44,6 @@ Quando começar a encontrar situações como:
 
 O worktree é uma ferramenta avançada de isolamento, não um requisito para começar com o Codex.
 
-
 ---
 
 **Estado:** outdated  

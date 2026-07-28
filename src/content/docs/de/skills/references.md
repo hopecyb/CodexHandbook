@@ -45,7 +45,6 @@ Oder:
 So wird der Skill nicht von Hintergrundtext erdrückt; Details bleiben auffindbar.
 
 ## Wann `references/` lohnt
-
 Wenn in `SKILL.md` auftritt:
 
 - Lange Normen belegen jedes Mal Platz
@@ -54,7 +53,6 @@ Wenn in `SKILL.md` auftritt:
 
 Beim ersten Skill ist `references/` optional.  
 Üblich: **zuerst durchziehen, bei Länge auslagern**.
-
 ## Häufige Missverständnisse
 
 ### 1. `references/` ist nicht nur „Inhalt etwas rauskopieren“
@@ -75,12 +73,6 @@ Der Hauptablauf bleibt in `SKILL.md` — sonst weiß niemand beim ersten Lesen, 
 - Eine Datei, ein Thema — wartbar
 - In references keine bereits in SKILL.md stehenden Schritte wiederholen
 
-## Wann in `references/`?
-
-Antwortet der Inhalt auf „**nach welchen Regeln?**“ → eher `references/`.  
-Antwortet er auf „**welcher Schritt zuerst?**“ → Hauptablauf.
-
-`references/` verkürzt den Hauptablauf und öffnet Details bei Bedarf.
 ---
 
 **Status:** verified  

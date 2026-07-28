@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 The desktop App may support multiple Agents or tasks in parallel. Good for exploring independent sub-problems at once.
 
 ## Caveats
@@ -19,7 +18,6 @@ The desktop App may support multiple Agents or tasks in parallel. Good for explo
 - Beginners should succeed serially first, then try parallel runs
 
 Related: [Progress and steering](/guide/agent-work/progress-and-steering/)
-
 
 ---
 

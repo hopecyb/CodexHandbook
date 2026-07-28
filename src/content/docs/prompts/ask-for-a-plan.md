@@ -139,13 +139,7 @@ description: 在 Codex 动手之前，先让它把步骤、风险和验证方式
 这样“先要计划”就不再是临时提醒，而会变成团队默认做法。
 
 ## 参考来源
-
 - OpenAI Codex 官方文档中的计划与执行思路
-- freestylefly/CodexGuide 的任务设计与协作实践
-- KimYx0207《AI-Coding-Guide-Zh》Codex 工作流相关章节
-- stormzhang Codex 系列中的实战执行方法
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **状态：** verified  

@@ -23,7 +23,6 @@ Sign in through your chosen client per on-screen prompts. You may see:
 
 Authentication details and security guidance follow official docs: [https://developers.openai.com/codex](https://developers.openai.com/codex). On failure, see the [Troubleshooting index](/guide/reference/troubleshooting/).
 
-
 ---
 
 **Status:** review  

@@ -219,11 +219,7 @@ La configuración es para comportamiento por defecto a largo plazo, no para valo
 - Contradicción con instrucciones de `AGENTS.md` (la configuración permite lo que el documento prohíbe)
 
 ## Fuentes de referencia
-
 - OpenAI Codex configuration reference
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Estado:** verified  

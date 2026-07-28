@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Plugin은 설치 패키지로 볼 수 있습니다. 이미 구성된 확장 능력 세트를 묶어 남이 바로 설치하게 합니다.
 
 **Plugin(플러그인/커넥터)**은 Skill, MCP 서버, 앱 통합 등을 **설치·업데이트·거버넌스 가능한** 단위로 패키징합니다. 「한 사람이 설정하고 팀 전체가 재사용」에 특히 적합합니다.
@@ -90,7 +89,7 @@ Plugin은 능력을 더 편하게 배포할 뿐, 권한이 본래부터 안전�
 
 ## Claude Code / 다른 생태계와 비교
 
-제품마다 「Plugin」 의미가 완전히 같지 않습니다. 비교할 때는 **무엇을 패키징했는지, 권한 모델, 오픈소스 감사 가능 여부**를 보세요. [기능 대조](/guide/reference/feature-comparison/)와 KimYx0207 CX-14(사실은 재검증 필요).
+제품마다 「Plugin」 의미가 완전히 같지 않습니다. 비교할 때는 **무엇을 패키징했는지, 권한 모델, 오픈소스 감사 가능 여부**를 보세요. [기능 대조](/guide/reference/feature-comparison/).
 
 ## 흔한 실수
 
@@ -99,10 +98,7 @@ Plugin은 능력을 더 편하게 배포할 뿐, 권한이 본래부터 안전�
 - 프로덕션 저장소에서 실험적 Plugin 활성화
 
 ## 참고 출처
-
 - OpenAI Codex Plugins 문서
-- KimYx0207 CX-07; stormzhang `23-plugins.md`
-
 ---
 
 **상태:** outdated  

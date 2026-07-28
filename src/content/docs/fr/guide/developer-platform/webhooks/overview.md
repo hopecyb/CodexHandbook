@@ -119,10 +119,7 @@ Plus de réponses « oui » → les webhooks comptent plus.
 Les webhooks connectent les changements d'état de tâche aux autres systèmes — après que vérification de signature, idempotence et traitement async sont en place.
 
 ## Sources de référence
-
 - Documentation événements API OpenAI Codex / Cloud
-- Chapitre intégration KimYx0207
-
 ---
 
 **Statut :** vérifié  

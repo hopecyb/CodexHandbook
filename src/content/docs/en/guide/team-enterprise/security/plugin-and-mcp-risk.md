@@ -92,11 +92,7 @@ For external extensions: permissions and boundaries before feature strength.
 - [ ] Consistent with [Skill security](/skills/security/) policy
 
 ## Reference sources
-
-- KimYx0207 MCP/Plugin security
-- stormzhang MCP chapter
 - [Debugging MCP](/skills/mcp/debugging-mcp/)
-
 ---
 
 **Status:** verified  

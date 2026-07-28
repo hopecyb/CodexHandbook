@@ -180,11 +180,7 @@ Hook 例は主に考え方と構造の学習用。正式環境へそのまま移
 - [ ] ドキュメントに検証日と対象 CLI バージョンを記載
 
 ## 参考ソース
-
 - OpenAI Codex Hooks 例
-- freestylefly/CodexGuide 監査設定
-- stormzhang `22-hooks.md`
-
 ---
 
 **状態：** outdated  

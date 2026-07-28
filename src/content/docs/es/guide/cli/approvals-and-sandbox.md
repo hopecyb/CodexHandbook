@@ -106,12 +106,7 @@ El problema: el límite de seguridad debe seguir el riesgo de la Tarea; no debe 
 Al principio, dejar Aprobación y Sandbox de la CLI un poco conservadores suele ser más estable. Cuando sepas de verdad qué estás abriendo, relajar poco a poco aún llega a tiempo.
 
 ## Fuentes de referencia
-
 - Documentación de seguridad y Sandbox de OpenAI Codex CLI
-- stormzhang `17-permissions.md`, `19-security.md`
-- KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide — tema Sandbox y Aprobación
-
 ---
 
 **Estado:** verified  

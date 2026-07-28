@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Zones de configuration typiques (noms selon l'interface) :
 
 - Modèle par défaut et niveau de Raisonnement
@@ -17,7 +16,6 @@ Zones de configuration typiques (noms selon l'interface) :
 - Apparence et préférences d'édition
 
 La configuration gérée par l'équipe peut remplacer les paramètres personnels. Doc officielle : [https://developers.openai.com/codex](https://developers.openai.com/codex). Concepts : [Permissions et Approbations](/guide/foundations/permissions-and-approvals/)
-
 
 ---
 

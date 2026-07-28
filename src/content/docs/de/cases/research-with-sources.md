@@ -63,11 +63,6 @@ Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalte
 - [Mit Unsicherheit umgehen](/guide/quality/handle-uncertainty/)
 - [Fall: Docs refactoren und prüfen](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## Referenzquellen
-
-- CodexGuide-Methoden zu Recherche und Zitation
-- stormzhang-Kapitel zu Suche und Überprüfung
-
 ---
 
 **Status:** verified  

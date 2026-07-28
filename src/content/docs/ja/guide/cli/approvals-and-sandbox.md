@@ -106,12 +106,7 @@ CLI を学び始めたばかりなら、承認が多い方が安全なことも�
 最初は CLI の承認とサンドボックスを保守的にする方が安定します。何を広げているか本当に理解してから、少しずつ緩めれば十分です。
 
 ## 参考ソース
-
 - OpenAI Codex CLI セキュリティとサンドボックス資料
-- stormzhang `17-permissions.md`、`19-security.md`
-- KimYx0207 CX-04、CX-13
-- freestylefly/CodexGuide サンドボックス承認特集
-
 ---
 
 **状態：** verified  

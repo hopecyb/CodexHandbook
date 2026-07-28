@@ -144,13 +144,7 @@ Podem declarar no `AGENTS.md`:
 Assim «pedir um plano primeiro» deixa de ser lembrete avulso e passa a ser o padrão da equipa.
 
 ## Fontes de referência
-
 - Ideias de plano e execução na documentação oficial do OpenAI Codex
-- Práticas de desenho de tarefas e colaboração em freestylefly/CodexGuide
-- Capítulos de fluxo Codex em KimYx0207《AI-Coding-Guide-Zh》
-- Métodos práticos da série Codex de stormzhang
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Estado:** verified  

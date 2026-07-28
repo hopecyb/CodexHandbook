@@ -73,11 +73,6 @@ TDD에 따르세요: 먼저 @src/foo.ts 의 「빈 입력은 [] 반환」에 대
 - [테스트 실행하기](/guide/quality/run-tests/)
 - [사례: 검증이 있는 Bug 수정](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## 참고 출처
-
-- stormzhang 테스트와 품질 장
-- CodexGuide 개발자 워크플로
-
 ---
 
 **상태:** verified  

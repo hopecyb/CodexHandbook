@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 Mid-task steering template:
 
 ```text
@@ -15,7 +14,6 @@ Stop at the current step. Keep A and B; undo the direction of changes to C; next
 ```
 
 Small corrections save more context than starting over.
-
 
 ---
 

@@ -115,15 +115,9 @@ Trước khi gửi PR, đọc [Kiểm chứng nội dung kỹ thuật](/guide/co
 
 Trang hướng dẫn tốt không nằm ở “viết đủ tài liệu”, mà ở chỗ để độc giả lần đầu biết trang vì sao tồn tại, xem gì trước, bước tiếp theo đi đâu.
 
-## Cách viết nguồn tham khảo
-
-```markdown
 ## Nguồn tham khảo
-
 - Tài liệu chính thức OpenAI Codex
-- Tham khảo cấu trúc cộng đồng: CodexGuide (chỉ chủ đề, không nguyên văn)
 ```
-
 ---
 
 **Trạng thái:** verified  

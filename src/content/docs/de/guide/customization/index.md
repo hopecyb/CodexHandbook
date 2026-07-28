@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex stützt sich nicht nur darauf, „wie Sie diesmal fragen“, sondern auch auf **persistente Konfiguration**, um Ihre und die Team-Vereinbarungen zu merken. Dieses Kapitel trennt vor allem, welche Anforderungen im Gespräch bleiben und welche ins Projekt wandern sollen.
 
 Wenn Sie dieselben Sätze schon wiederholen — etwa „dieses Verzeichnis nicht anfassen“, „zuerst Tests laufen lassen“ oder „standardmäßig dieses Modell verwenden“ — behandelt dieses Kapitel genau solche Fälle.
@@ -116,10 +115,7 @@ Regeln müssen nicht zahlreich sein — der richtige Ort zählt mehr.
 - [ ] Sensible Operationen weiterhin über Freigabe laufen lassen — nicht auf Textregeln setzen, die das Modell „einschüchtern“
 
 ## Quellen
-
 - OpenAI-Codex-Dokumentation: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Community-Praxisstruktur: freestylefly/CodexGuide AGENTS.md-Spezial, stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **Status:** verified  

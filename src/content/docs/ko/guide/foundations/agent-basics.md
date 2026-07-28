@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Agent**는 목표를 중심으로 계속 앞으로 갑니다. 목표 이해 → 도구 선택 → 결과 관찰 → 다음 조정, 완료되거나 당신 개입이 필요할 때까지.
 
 일반 AI는 질문에 답하는 사람에 가깝고, Agent는 일을 받은 뒤 한 걸음씩 밀어가는 사람에 가깝습니다.
@@ -55,7 +54,6 @@ translated_at: 2026-07-28
 - 사람 승인: [권한과 승인](/guide/foundations/permissions-and-approvals/)
 
 Agent의 특징은 목표를 중심으로 몇 단계를 연속으로 한다는 것이며, 한 단락만 답하는 것이 아닙니다.
-
 
 ---
 

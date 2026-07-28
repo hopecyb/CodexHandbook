@@ -66,7 +66,6 @@ Prompt kiểu sửa ngoài «sửa gì» còn phải nói rõ «chỉ được s
 - [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/)
 - [Ràng buộc và ranh giới](/prompts/constraints-and-boundaries/)
 
-
 ---
 
 **Trạng thái:** verified  

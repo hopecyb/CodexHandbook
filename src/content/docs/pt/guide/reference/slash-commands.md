@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Na primeira vez que se veem os slash commands, muita gente pensa que são jargão a memorizar. Pensa neles como um conjunto de entradas rápidas que podes apontar de propósito: compreende-se melhor.
 
 Costumam servir para entrar depressa num modo fixo ou num fluxo integrado. Os slash commands (`/command`) relacionam-se com as chamadas `$name` de [Skill](/skills/overview/), mas não são o mesmo. A lista concreta **muda com produto e versão**; antes de usar, olha o autocompletar `/` do cliente e a documentação oficial.

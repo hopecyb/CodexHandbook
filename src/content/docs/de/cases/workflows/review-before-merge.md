@@ -70,11 +70,6 @@ Kombinierbar mit [Diffs prüfen](/guide/quality/review-diffs/); Hochrisiko-Punkt
 - [Cloud Code Review](/guide/web-and-cloud/code-review/)
 - [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/)
 
-## Referenzquellen
-
-- KimYx0207 Review/PR-Kapitel
-- codex.bozhouai.com Git/GitHub-Workflows
-
 ---
 
 **Status:** verified  

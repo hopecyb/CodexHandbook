@@ -123,11 +123,7 @@ En tareas tabulares, lo más importante es dejar claros columnas, tipos, reglas 
 - [ ] El archivo original no se sobrescribió por accidente (o el cambio es visible en el diff)
 
 ## Referencias
-
-- Tutoriales de tratamiento de datos de stormzhang
-- Plantillas de tareas tabulares de codex.bozhouai.com
 - [Definir restricciones](/prompts/constraints-and-boundaries/)
-
 ---
 
 **Estado:** verificado  

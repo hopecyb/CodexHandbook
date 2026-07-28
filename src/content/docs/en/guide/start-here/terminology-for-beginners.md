@@ -30,7 +30,6 @@ For a fuller glossary, see the [Glossary](/guide/reference/glossary/). Here are 
 
 When you hit an unfamiliar term, return here or to the glossary before continuing.
 
-
 ---
 
 **Status:** review  

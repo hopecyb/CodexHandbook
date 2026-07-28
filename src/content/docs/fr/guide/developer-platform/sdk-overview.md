@@ -85,10 +85,7 @@ Le SDK peut déclencher Cloud ou runners distants, ou la CI peut callback votre 
 - Auto-merge des PR produits par le SDK
 
 ## Sources de référence
-
 - Référence SDK OpenAI Codex
-- Chapitre intégration développeur KimYx0207
-
 ---
 
 **Statut :** vérifié  

@@ -126,11 +126,7 @@ Algumas Tarefas precisam de sair à rede para descarregar pacotes ou chamar APIs
 - [ ] Processo de saída/rotação definido
 
 ## Fontes de referência
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`, `10-cloud.md`
-- Capítulos de segurança e empresa de KimYx0207 (factos sujeitos a contraste oficial)
-
 ---
 
 **Estado:** outdated  

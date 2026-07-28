@@ -42,7 +42,6 @@ IDE 확장을 설치한 뒤에는, 현재 편집기와 작업 공간에서 정�
 
 이어서: [IDE 로컬 작업 워크플로](/guide/ide/local-task-workflow/). 문제 해결: [IDE 문제 해결](/guide/ide/troubleshooting/).
 
-
 ---
 
 **상태:** outdated  

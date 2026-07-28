@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Web-Suche ergänzt Fakten — sie ersetzt nicht Ihre finale Schlussfolgerung.
 
 Geeignet: öffentliche Doku, Fehlercodes, Versionshinweise. Nicht geeignet: Suchergebnis als finale Rechts-/Medizinentscheidung.
@@ -72,7 +71,6 @@ Zuerst suchen und offizielle Quellen bevorzugen; bei Schlussfolgerungen klickbar
 ```
 
 Suche liefert Spuren und Quellen — am Ende zurück zum Original.
-
 
 ---
 

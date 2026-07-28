@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 `AGENTS.md` ist eine **Markdown-Projektanweisung** im Repo (oder Unterverzeichnis). Codex liest sie beim Betreten des Projekts, um Coding-Stil, Testanforderungen, Commit-Normen und Tabuzonen auszurichten.
 
 Stellen Sie sich `AGENTS.md` als Anleitung vor, „wie dieses Projekt mit Codex zusammenarbeiten will“.
@@ -124,11 +123,7 @@ Beispiele:
 `AGENTS.md` sagt Codex, „wie dieses Projekt üblicherweise arbeitet“ — nicht, was Sie genau diesmal tun wollen.
 
 ## Quellen
-
 - OpenAI-Codex: Projektkontext
-- freestylefly/CodexGuide: `docs/advanced/02-agents-md.md`
-- stormzhang/ai-coding-guide: `codex/11-agents-md.md`
-
 ---
 
 **Status:** verified  

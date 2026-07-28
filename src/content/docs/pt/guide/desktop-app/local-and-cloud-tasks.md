@@ -44,7 +44,6 @@ Situações comuns:
 
 Na App de desktop, se o local basta, use o local; se a Tarefa for mais longa, mais remota ou precisar de ambiente unificado, considere Cloud.
 
-
 ---
 
 **Estado:** verified  

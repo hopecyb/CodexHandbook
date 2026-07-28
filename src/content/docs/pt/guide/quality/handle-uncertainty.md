@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Quando a informação não chega, confirme primeiro e só depois continue.
 
 Uma das situações mais problemáticas com o Codex é ele preencher informação em falta com uma resposta que *parece* razoável.
@@ -87,7 +86,6 @@ Se houver várias interpretações possíveis, liste primeiro os pontos de incer
 ```
 
 O pior é tratar a adivinhação como facto e avançar.
-
 
 ---
 

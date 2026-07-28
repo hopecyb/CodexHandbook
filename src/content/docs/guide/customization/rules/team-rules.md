@@ -119,12 +119,6 @@ L5 单次任务 prompt         → 临时收紧可以，临时放宽受 L1 限�
 
 团队规则策略最重要的，是先分清“谁来定哪一层的边界”，再决定规则怎么写。
 
-## 参考来源
-
-- freestylefly/CodexGuide 团队治理与 playbook
-- KimYx0207 企业安全章节
-- codex.bozhouai.com 团队配置案例（任务类型参考）
-
 ---
 
 **状态：** verified  

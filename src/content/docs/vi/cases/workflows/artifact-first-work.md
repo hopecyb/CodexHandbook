@@ -58,11 +58,6 @@ Artifact trực quan có thể yêu cầu ảnh chụp hoặc mô tả xem trư�
 - [ ] Liên kết / mục lục / Frontmatter hợp lệ
 - [ ] Khớp [định nghĩa hoàn thành](/prompts/define-done/)
 
-## Nguồn tham chiếu
-
-- Tác vụ tài liệu và mẫu trên codex.bozhouai.com
-- Quy trình tạo nội dung KimYx0207
-
 ---
 
 **Trạng thái:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 CLI 구성은 **기본 모델, 작업 디렉터리, 승인 엄격도, MCP 서버** 등을 정합니다. [구성 기초](/guide/customization/configuration/config-basics/) 개념과 일치하며, 이 페이지는 터미널 사용자가 자주 바꾸는 항목에 초점을 둡니다.
 
 ## 이 페이지의 내용
@@ -115,10 +114,7 @@ CLI는 shell 실행·디스크 쓰기·네트워크 전에 물을 수 있습니�
 CLI 구성을 “기본 작업 습관”으로 보고, **거의 매번 반복해 고르는** 것만 고정하세요. 고급 능력은 나중에 보완해도 됩니다.
 
 ## 참고 출처
-
 - OpenAI Codex CLI configuration
-- stormzhang `18-config.md`
-
 ---
 
 **상태:** verified  

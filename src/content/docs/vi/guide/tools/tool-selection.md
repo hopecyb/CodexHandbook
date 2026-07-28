@@ -90,7 +90,6 @@ Có thể bổ sung trong tác vụ:
 
 Chọn trước công cụ nhỏ nhất, sát tác vụ nhất; đừng ngay từ đầu dùng loại ảnh hưởng phạm vi lớn nhất.
 
-
 ---
 
 **Trạng thái:** verified  

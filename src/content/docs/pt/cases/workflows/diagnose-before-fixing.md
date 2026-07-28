@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Pedir ao Codex para corrigir o bug de imediato costuma gerar muita retrabalho. O fluxo de diagnóstico enfatiza: **sintoma → hipótese → evidência → correção mínima**.
 
 ## Quando usar

@@ -22,7 +22,6 @@ Codex agit sur le monde réel via des **outils** :
 
 Les points d'entrée diffèrent dans les panneaux d'outils et l'UX de confirmation ; voir chaque guide produit pour les détails.
 
-
 ---
 
 **Statut :** review  

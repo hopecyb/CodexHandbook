@@ -72,10 +72,7 @@ Schritte: Zuerst Config, dann md, zuletzt 12-reference/index.md aktualisieren.
 - ROADMAP-Punkte abhaken, damit Docs und Plan nicht auseinanderlaufen
 
 ## Referenzquellen
-
 - Tatsächlicher M2-Docs-Iterationsablauf dieses Repos
-- codex.bozhouai.com Docs-Wartungsfall (strukturelle Referenz)
-
 ---
 
 **Status:** verified  

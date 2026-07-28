@@ -63,11 +63,6 @@ translated_at: 2026-07-28
 - [不確実性の扱い](/guide/quality/handle-uncertainty/)
 - [ケース：ドキュメントのリファクタリングとレビュー](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## 参考出典
-
-- CodexGuide リサーチと引用方法
-- stormzhang 検索と検証章
-
 ---
 
 **状態：** verified  

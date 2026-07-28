@@ -78,11 +78,6 @@ Les critères d'acceptation de la spec doivent être **testables** autant que po
 - [ ] Confirmation humaine ou écrite avant l'exécution
 - [ ] Modifications resynchronisées dans le fichier de spec
 
-## Sources de référence
-
-- KimYx0207 — chapitres besoins et décomposition de tâches
-- freestylefly/CodexGuide — specs et listes d'acceptation
-
 ---
 
 **Statut :** verified  

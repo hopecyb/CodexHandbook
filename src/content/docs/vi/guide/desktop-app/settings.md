@@ -49,7 +49,6 @@ Có thể vì:
 
 Lần đầu xem trang cài đặt, hiểu rõ biên an toàn và tùy chọn nhắc trước, rồi mới xét chi tiết khác.
 
-
 ---
 
 **Trạng thái:** outdated  

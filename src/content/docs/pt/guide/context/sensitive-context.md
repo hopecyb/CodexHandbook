@@ -109,7 +109,6 @@ Trate por nível de risco:
 
 Ao resolver problemas, por defeito dê só a **informação mínima necessária para investigar**; se puder desensibilizar, desensibilize; se puder usar placeholder, use.
 
-
 ---
 
 **Estado:** verified  

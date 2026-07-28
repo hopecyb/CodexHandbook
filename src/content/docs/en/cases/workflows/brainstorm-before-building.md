@@ -82,11 +82,6 @@ Set a **time box**: e.g. complete divergence in 15 minutes to prevent drift.
 - [Specification-driven work](/cases/workflows/specification-driven-work/)
 - [Ask for a plan](/prompts/ask-for-a-plan/)
 
-## Reference sources
-
-- CodexGuide requirement clarification and option comparison
-- codex.bozhouai.com task templates and topic selection methods
-
 ---
 
 **Status:** verified  

@@ -82,11 +82,6 @@ Fija un **timebox**: por ejemplo, terminar la divergencia en 15 minutos para evi
 - [Trabajo impulsado por especificación](/cases/workflows/specification-driven-work/)
 - [Pedir un plan](/prompts/ask-for-a-plan/)
 
-## Fuentes de referencia
-
-- Aclaración de requisitos y comparación de opciones de CodexGuide
-- Plantillas de tareas y métodos de selección de tema de codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

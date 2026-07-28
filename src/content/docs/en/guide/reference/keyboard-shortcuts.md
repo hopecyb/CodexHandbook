@@ -97,11 +97,7 @@ Most clients allow rebinding. Teams may document **recommended** bindings—not 
 Shortcuts are not an exam—smooth the actions that interrupt you most.
 
 ## Reference sources
-
 - Each product Settings / Keyboard shortcuts official page
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **Status:** outdated  

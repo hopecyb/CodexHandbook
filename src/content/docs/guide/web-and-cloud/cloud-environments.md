@@ -144,11 +144,7 @@ Agent 执行任务：安装依赖、改代码、测试、推送
 - 定期清理不再使用的环境模板与 Secrets
 
 ## 参考来源
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10、CX-11
-
 ---
 
 **状态：** outdated  

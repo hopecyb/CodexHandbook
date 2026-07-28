@@ -132,11 +132,7 @@ IDE：[ローカルタスクワークフロー](/guide/ide/local-task-workflow/)
 - [ ] 最小の読み取り専用 `codex exec` タスクを 1 本書ける（環境が提供する場合）
 
 ## 参考ソース
-
 - OpenAI Codex CLI ドキュメント
-- stormzhang `08-cli.md`、`12-slash-commands.md`、`35-cheatsheet.md`
-- KimYx0207 CX-03、CX-12
-
 ---
 
 **状態：** outdated  

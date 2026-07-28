@@ -78,7 +78,6 @@ Comparação completa: [Comparação de recursos](/guide/reference/feature-compa
 
 Na primeira vez, não corra para comparar «qual é mais profissional». Escolha a entrada em que é mais fácil ver o processo e o resultado.
 
-
 ---
 
 **Status:** verified  

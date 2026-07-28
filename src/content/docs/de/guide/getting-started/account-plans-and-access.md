@@ -54,7 +54,6 @@ Konto verfügbar ist nur Schritt eins — danach Tarif und Organisationszugang.
 
 Diese Seite listet keine Preistabelle (veraltet schnell). Maßgeblich: offizielle Konto- und Abrechnungsseiten.
 
-
 ---
 
 **Status:** outdated  

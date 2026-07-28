@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Automations** lassen Codex unter **Zeitplan, Repo-Ereignissen oder externen Triggern** Aufgaben ausführen — z. B. Dependency-Checks, Doc-Sync, periodische Health-Scans.
 
 ## Inhalt
@@ -94,11 +93,7 @@ In mehrere Automations + [Übergabe und Fortsetzen](/guide/agent-work/handoff-an
 - [ ] Team kennt Bot-Account und Freigabe-Regeln
 
 ## Quellen
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - Offizielle OpenAI Codex Cloud / Automations-Hinweise
-
 ---
 
 **Status:** outdated  

@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 When reading a diff, ask:
 
 1. Were only allowed paths changed?
@@ -18,7 +17,6 @@ When reading a diff, ask:
 4. Any secrets or debug leftovers?
 
 Product-side view: [Diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/)
-
 
 ---
 

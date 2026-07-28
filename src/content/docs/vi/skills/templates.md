@@ -54,13 +54,6 @@ Nếu bạn thấy một loại kết quả mỗi lần đều muốn trông g�
 Lần đầu làm Skill không nhất thiết phải có `templates/`.
 Nhưng hễ bắt đầu lặp lại"hãy xuất theo cấu trúc này", thì đáng tách riêng.
 
-## Khác với references/
-
-| Thư mục | Trọng tâm |
-|---|---|
-| `references/` | Quy chuẩn đầu vào, quy tắc, API |
-| `templates/` | Định dạng đầu ra, cấu trúc báo cáo |
-
 ## Hiểu lầm thường gặp
 
 ### 1. template chỉ để kết quả đẹp hơn

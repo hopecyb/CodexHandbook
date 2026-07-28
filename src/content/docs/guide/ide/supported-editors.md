@@ -101,11 +101,7 @@ IDE 扩展：编辑中 → 小步修改 → 内联审查 → 本地测试
 很多时候选 IDE 扩展，只是因为主要工作本来就在编辑器里。
 
 ## 参考来源
-
 - OpenAI Codex IDE 文档
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **状态：** outdated  

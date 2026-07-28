@@ -82,11 +82,6 @@ Defina uma **caixa de tempo**: por exemplo, concluir a divergência em 15 minuto
 - [Trabalho orientado por especificação](/cases/workflows/specification-driven-work/)
 - [Pedir um plano](/prompts/ask-for-a-plan/)
 
-## Fontes de referência
-
-- Clarificação de requisitos e comparação de opções do CodexGuide
-- Métodos de modelos de tarefa e seleção de temas em codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

@@ -63,7 +63,6 @@ Se não souberes que percurso seguir, usa isto:
 
 O percurso decide o que ler a seguir segundo «o problema mais importante agora».
 
-
 ---
 
 **Estado:** verified  

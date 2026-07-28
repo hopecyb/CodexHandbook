@@ -52,12 +52,6 @@ Sans points de contrôle, les risques sont nombreux : modifier le mauvais réper
 3. **Échecs récupérables** : savoir annuler et forker un fil pour continuer
 4. **Capitaliser quand c'est possible** : à la troisième répétition d'un flux, en faire un Skill ou un modèle
 
-## Sources de référence
-
-- freestylefly/CodexGuide — flux de travail et playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com — quatrième article sur les flux standard
-
 ---
 
 **Statut :** verified  

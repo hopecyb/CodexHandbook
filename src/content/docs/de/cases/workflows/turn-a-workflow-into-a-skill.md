@@ -67,11 +67,7 @@ Vergleich mit [Abläufe automatisieren](/skills/automations/scheduled-tasks/): S
 - [ ] Querverlinkung zum Quell-Workflow-Dokument
 
 ## Referenzquellen
-
-- KimYx0207 Skills-Kapitel
-- stormzhang `20-skills.md`
 - Im Repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) und [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
-
 ---
 
 **Status:** verified  

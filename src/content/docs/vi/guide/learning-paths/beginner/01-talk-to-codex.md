@@ -50,7 +50,6 @@ Tác vụ chỉ đọc, giải thích, tóm tắt cũng cần ranh giới.
 
 Bước tiếp: [Làm việc với tệp](/guide/learning-paths/beginner/02-work-with-files/) · Nguyên lý: [Cơ bản về Prompt](/prompts/basics/)
 
-
 ---
 
 **Trạng thái:** verified  

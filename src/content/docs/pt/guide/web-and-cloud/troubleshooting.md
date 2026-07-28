@@ -144,11 +144,7 @@ Costuma poupar mais tempo do que continuar a adivinhar no ambiente remoto.
 Problemas locais de CLI/IDE/App: [Referência · Diagnóstico](/guide/reference/troubleshooting/). Esta página só cobre a cadeia **específica de Cloud**.
 
 ## Fontes de referência
-
 - Documentação de suporte OpenAI Codex Cloud
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10～CX-11
-
 ---
 
 **Estado:** outdated  

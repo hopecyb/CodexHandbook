@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Depois de alterar, precisa de alguma forma de confirmar que não partiu nada de forma óbvia.
 
 Essa «prova» pode ser testes automáticos, um build bem-sucedido, ou um conjunto claro de passos de Verificação manual.
@@ -72,7 +71,6 @@ Diga-me que Verificações correu de facto; se não puder correr, explique a raz
 ```
 
 A Verificação pode ser leve, mas não pode faltar; senão «acabado» dificilmente se sustenta.
-
 
 ---
 

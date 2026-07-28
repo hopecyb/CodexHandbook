@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Do not provide to Codex (practice or production):
 
 - API keys, passwords, session cookies
@@ -17,7 +16,6 @@ Do not provide to Codex (practice or production):
 - Internal unpublished materials contractually prohibited from external sharing
 
 Use placeholders: `YOUR_API_KEY`. If leaked, rotate credentials per your organization's process.
-
 
 ---
 

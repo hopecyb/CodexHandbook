@@ -148,11 +148,7 @@ codex exec --cwd . "只读：对比当前分支与 main 的 diff，列出 3 个�
 - [退出码与重试](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## 参考来源
-
 - OpenAI Codex CLI 文档
-- KimYx0207 非交互章节
-- stormzhang CI 教程
-
 ---
 
 **状态：** outdated  

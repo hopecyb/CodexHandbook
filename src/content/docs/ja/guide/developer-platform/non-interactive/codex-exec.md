@@ -147,11 +147,7 @@ codex exec --cwd . "読み取り専用：現在ブランチと main の diff を
 - [終了コードと再試行](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## 参考
-
 - OpenAI Codex CLI ドキュメント
-- KimYx0207 非対話章
-- stormzhang CI チュートリアル
-
 ---
 
 **状態：** outdated  

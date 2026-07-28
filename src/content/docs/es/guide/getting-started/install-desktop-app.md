@@ -47,7 +47,6 @@ Cuando la App de escritorio esté instalada, confirma que puedes abrirla, inicia
 
 Si falla: consulta [resolución de problemas de la App de escritorio](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **Estado:** outdated  

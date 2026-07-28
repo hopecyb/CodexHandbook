@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Algunos clientes de Codex admiten **memoria (Memory)**: conservar preferencias o hechos que confirmaste en varios turnos para sesiones posteriores. Complementa `AGENTS.md` y la configuración del proyecto, pero **no** sustituye las normas de equipo versionadas.
 
 ## Contenido
@@ -107,11 +106,7 @@ Solo si las tres se acercan a «sí» conviene meterla en memoria.
 La memoria encaja mejor con «preferencias personales que siempre hay que repetir y unos pocos hechos estables»; no sustituye la documentación del repositorio, las reglas de equipo ni la gestión de información sensible.
 
 ## Referencias
-
 - Documentación de memoria de OpenAI Codex (según versión)
-- stormzhang `19-memory.md`
-- Capítulo de memoria de codex.bozhouai.com (referencia de estructura)
-
 ---
 
 **Estado:** verificado  

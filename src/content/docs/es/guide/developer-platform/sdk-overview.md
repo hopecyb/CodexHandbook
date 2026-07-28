@@ -85,10 +85,7 @@ El SDK puede disparar Cloud o un runner remoto, o CI puede llamar a tu servicio 
 - Hacer merge automático de PRs generados por el SDK
 
 ## Fuentes de referencia
-
 - Referencia del SDK de OpenAI Codex
-- Capítulos de integración para desarrolladores de KimYx0207
-
 ---
 
 **Estado:** verified  

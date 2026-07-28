@@ -32,16 +32,6 @@ If you do not separate them, you later get:
 - You think rules are active when only your machine is compensating
 - You bring relaxed settings into a more serious project
 
-## What Belongs in Personal Preferences
-
-| Content | Example |
-|---|---|
-| Default model and reasoning tier | Personal machine performance and plan |
-| UI theme, font, notifications | Desktop App [Settings](/guide/desktop-app/settings/) |
-| Personal MCP (private tools) | Local read-only database (authorize carefully) |
-| Personal Skill library path | No conflict with team Plugin |
-| Terminal aliases, `codex` launch directory habits | See [CLI Configuration](/guide/cli/configuration/) |
-
 ## Team Content That Should Not Live Only in the Personal Layer
 
 - Code style, test commands, directory structure → **project `AGENTS.md`**
@@ -101,12 +91,6 @@ If the product offers “memory” or persistent preferences, see [Memories and 
 - [ ] You can give one example each for personal vs project vs organization layers
 - [ ] You have configured at least one strict Profile for a customer project
 - [ ] No personal secrets in the repo
-
-## References
-
-- freestylefly/CodexGuide personal and team configuration
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
 
 ---
 

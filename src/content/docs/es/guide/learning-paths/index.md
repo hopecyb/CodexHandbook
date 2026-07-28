@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Las rutas de aprendizaje **solo organizan el orden de lectura**; no duplican los manuales de producto ni los artículos largos de capacidades.
 
 Al ver por primera vez el capítulo «Rutas de aprendizaje», puede parecer una capa más de índice. En realidad responde a: qué tipo de usuario eres ahora y en qué orden conviene leer a continuación.
@@ -63,7 +62,6 @@ Si no sabes qué ruta tomar, elige así:
 - Te preocupa cómo desplegar en el equipo y controlar riesgos: [Ruta para equipos](/guide/learning-paths/team/)
 
 Las rutas de aprendizaje deciden qué leer a continuación según el problema más importante ahora.
-
 
 ---
 

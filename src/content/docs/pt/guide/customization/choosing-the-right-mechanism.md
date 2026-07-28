@@ -201,13 +201,7 @@ Assim estabiliza primeiro o **consenso de colaboração** e depois amplia capaci
 - [Como escolher o método de extensão](/skills/choosing-an-extension-method/)
 
 ## Referências
-
 - Documentação oficial OpenAI Codex (conforme a versão atual)
-- Organização AGENTS/Skill em freestylefly/CodexGuide
-- Temas de extensão e automação no diretório Codex de KimYx0207《AI-Coding-Guide-Zh》
-- stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Estado:** verificado  

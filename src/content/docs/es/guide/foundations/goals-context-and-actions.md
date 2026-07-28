@@ -87,7 +87,6 @@ Eso es más claro que solo escribir «ayúdame con este problema».
 
 Una Tarea estable al menos deja claros el objetivo, el Contexto, los límites de acción y la forma de aceptación.
 
-
 ---
 
 **Estado:** verified  

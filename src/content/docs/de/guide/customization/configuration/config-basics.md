@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Config-Dateien lassen Codex-Verhalten lokal oder im Projekt **vereinheitlichen**, ohne Modell, Freigabestufe oder Sandbox-Richtlinie in jeder Session neu zu setzen.
 
 ## Inhalt dieser Seite
@@ -129,11 +128,7 @@ Config kann **Pfad-Allowlists, Netzwerkrichtlinien, MCP-Serverlisten** enthalten
 Config eignet sich für Defaults, die Sie fast jedes Mal erneut wählen würden — nicht dafür, alle Regeln in die Config-Datei zu stopfen.
 
 ## Quellen
-
 - OpenAI-Codex-Konfigurationsdokumentation
-- stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 Projektanweisungen und Berechtigungskonfiguration (Fakten offiziell nachprüfen)
-
 ---
 
 **Status:** verified  

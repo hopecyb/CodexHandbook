@@ -97,7 +97,6 @@ Go to the [Troubleshooting index](/guide/reference/troubleshooting/). If a conce
 
 In the first half hour, completing one loop of “assign a task, see the result, judge it yourself” is already worth it.
 
-
 ---
 
 **Status:** verified  

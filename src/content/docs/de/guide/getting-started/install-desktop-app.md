@@ -47,7 +47,6 @@ Desktop-App installiert: Zuerst Öffnen, Login und Einstieg bestätigen — dann
 
 Bei Fehlern: [Desktop-App-Fehlerbehebung](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

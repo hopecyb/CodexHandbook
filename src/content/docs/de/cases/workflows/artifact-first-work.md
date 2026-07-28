@@ -58,11 +58,6 @@ Bei visuellen Artefakten Screenshots oder Vorschaubeschreibungen verlangen; sieh
 - [ ] Links / Verzeichnisse / Frontmatter sind gültig
 - [ ] Entspricht [Done definieren](/prompts/define-done/)
 
-## Referenzquellen
-
-- codex.bozhouai.com Docs- und Vorlagenaufgaben
-- KimYx0207 Content-Produktions-Workflows
-
 ---
 
 **Status:** verified  

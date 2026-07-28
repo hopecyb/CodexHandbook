@@ -81,11 +81,6 @@ translated_at: 2026-07-28
 - [인수인계와 복구](/guide/agent-work/handoff-and-resume/)
 - [오류 참고](/guide/reference/error-reference/)
 
-## 참고 출처
-
-- freestylefly/CodexGuide 회고와 playbook
-- stormzhang 트러블슈팅 장
-
 ---
 
 **상태:** verified  

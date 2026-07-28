@@ -106,12 +106,7 @@ CLI를 막 배우기 시작하면 승인이 많은 편이 오히려 안전합니
 시작 단계에서는 CLI 승인과 샌드박스를 보수적으로 두는 편이 더 안정적입니다. 무엇을 여는지 정말 안 뒤에 조금씩 완화해도 늦지 않습니다.
 
 ## 참고 출처
-
 - OpenAI Codex CLI 보안·샌드박스 문서
-- stormzhang `17-permissions.md`, `19-security.md`
-- KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide 샌드박스 승인 특집
-
 ---
 
 **상태:** verified  

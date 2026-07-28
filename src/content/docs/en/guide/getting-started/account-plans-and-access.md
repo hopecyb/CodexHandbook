@@ -19,7 +19,6 @@ Before using Codex you need a valid OpenAI account and **product access** allowe
 
 This page does not list pricing (it goes stale quickly). Use official account and billing pages.
 
-
 ---
 
 **Status:** review  

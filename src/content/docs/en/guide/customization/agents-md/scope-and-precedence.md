@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 When multiple `AGENTS.md` files, configuration files, and the current conversation coexist, you need clarity on **which rule applies**.
 
 This page is about: when two rules look different, which one should you follow?
@@ -58,10 +57,6 @@ Principles:
 - **Root file**: 10–20 hard rules shared across the repo
 - **Subpackage files**: commands and directory notes specific to that package only
 - Avoid three files that are 80% duplicate—put shared content at the root; subpackages write only deltas
-
-## Boundary with Personal Preferences
-
-Personal habits (theme, default model, local paths) belong in **user configuration**; do not put them in the team repo’s `AGENTS.md` or collaborators get hurt by mistake.
 
 ## Common Misconceptions
 

@@ -23,7 +23,6 @@ Codex acts on the real world through **tools**:
 
 Entry points differ in tool panels and confirmation UX; see each product guide for details.
 
-
 ---
 
 **Status:** review  

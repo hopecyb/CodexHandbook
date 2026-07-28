@@ -80,7 +80,6 @@ translated_at: 2026-07-28
 
 전체 대조는 [기능 비교](/guide/reference/feature-comparison/)를 보세요. 여러 클라이언트를 설치해도 됩니다. **연습 프로젝트는 같은 디렉터리를 유지**하면 오가며 비교하기 쉽습니다.
 
-
 ---
 
 **상태:** verified  

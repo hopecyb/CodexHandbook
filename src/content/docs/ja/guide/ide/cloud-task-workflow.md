@@ -100,11 +100,6 @@ IDE の Cloud タスクとローカルタスクの違いの核心は、実行環
 - ブランチ名を書かず、リモートが共有ブランチに直接 push
 - Cloud の成果物を「検証済み」とみなし CI をスキップ
 
-## 参考ソース
-
-- stormzhang `10-cloud.md`、`09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **状態：** outdated  

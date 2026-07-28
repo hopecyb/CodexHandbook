@@ -181,11 +181,9 @@ Codex が図から要件を全部逆算し、気にしていない細部まで�
 「直して」より明確で、次の作業に進みやすいです。
 
 ## 参考
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **状態：** verified  

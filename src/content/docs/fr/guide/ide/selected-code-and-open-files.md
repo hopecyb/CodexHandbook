@@ -81,10 +81,7 @@ Page produit : [Revoir les changements IDE](/guide/ide/reviewing-changes/)
 | Tout accepter sans lire le diff | Dérive de style ou problèmes de sécurité |
 
 ## Références
-
 - [Contraintes et limites](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Statut :** vérifié  

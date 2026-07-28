@@ -125,12 +125,7 @@ Cloud 任务常需要**出网**：拉取 npm/PyPI 包、访问 API、克隆子�
 - [ ] 团队知晓哪些数据禁止出现在联网 prompt 中
 
 ## 参考来源
-
 - OpenAI Codex Cloud 网络与安全文档
-- stormzhang `10-cloud.md`、`19-security.md`
-- KimYx0207 CX-10、CX-11
-- codex.bozhouai.com 云端章节
-
 ---
 
 **状态：** outdated  

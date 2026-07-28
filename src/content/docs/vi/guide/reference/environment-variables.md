@@ -157,11 +157,7 @@ Biến môi trường phù hợp giá trị đổi, nhạy cảm hoặc chỉ c�
 - Giả định `unset` làm tiến trình con an toàn — kiểm cây tiến trình
 
 ## Nguồn tham chiếu
-
 - Tài liệu cấu hình / môi trường OpenAI Codex
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Trạng thái:** verified  

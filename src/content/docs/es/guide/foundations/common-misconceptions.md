@@ -75,7 +75,6 @@ Codex es potente, pero funciona mejor dentro de un objetivo y unos límites clar
 
 Siguiente paso: [Primeros pasos](/guide/getting-started/).
 
-
 ---
 
 **Estado:** verified  

@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El Agent usa **herramientas** para leer archivos, ejecutar comandos, buscar en la red, abrir el navegador, etc. Elegir bien la herramienta y escribir claros los límites reduce salidas no autorizadas a la red o cambios excesivos.
 
 Aquí «herramienta» son las capacidades que Codex invoca al ejecutar de verdad una tarea. No todas las tareas se completan solo con diálogo.  

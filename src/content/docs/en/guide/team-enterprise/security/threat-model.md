@@ -143,11 +143,7 @@ That already suppresses much team risk; refine governance later.
 - [Human approval patterns](/cases/workflows/human-approval-patterns/)
 
 ## Reference sources
-
-- KimYx0207 enterprise security
 - OpenAI enterprise security whitepaper (official)
-- CodexGuide compliance practice
-
 ---
 
 **Status:** verified  

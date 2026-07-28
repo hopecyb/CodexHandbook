@@ -83,12 +83,7 @@ If you only want a conceptual overview, start with [SDK overview](/guide/develop
 The developer platform chapter is about wiring Codex into systems. For your first hands-on use of Codex, read the getting-started content first.
 
 ## Reference sources
-
 - OpenAI Codex API / SDK official documentation
-- KimYx0207 developer chapter
-- stormzhang CI and automation tutorials
-- codex.bozhouai.com engineering case studies
-
 ---
 
 **Status:** verified  

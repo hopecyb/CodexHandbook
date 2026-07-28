@@ -73,11 +73,6 @@ description: 先写清可验收的规格，再让 Codex 按计划实现——适
 - [ ] 执行前有人工或书面确认
 - [ ] 变更已同步回规格文件
 
-## 参考来源
-
-- KimYx0207 需求与任务分解章节
-- freestylefly/CodexGuide 规格与验收清单
-
 ---
 
 **状态：** verified  

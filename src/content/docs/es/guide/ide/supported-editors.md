@@ -106,11 +106,7 @@ Si la mayoría de respuestas es «sí», empieza por la extensión IDE.
 A menudo eliges la extensión IDE simplemente porque el trabajo principal ya está en el editor.
 
 ## Fuentes de referencia
-
 - Documentación IDE de OpenAI Codex
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **Estado:** outdated  

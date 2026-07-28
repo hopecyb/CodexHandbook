@@ -123,11 +123,7 @@ Trong tác vụ bảng, quan trọng hơn là nói rõ cột, kiểu, quy tắc 
 - [ ] Tệp gốc không bị ghi đè ngoài ý muốn (hoặc thay đổi thấy được trong diff)
 
 ## Nguồn tham khảo
-
-- Tutorial xử lý dữ liệu stormzhang
-- Mẫu tác vụ bảng codex.bozhouai.com
 - [Định nghĩa ràng buộc](/prompts/constraints-and-boundaries/)
-
 ---
 
 **Trạng thái:** verified  

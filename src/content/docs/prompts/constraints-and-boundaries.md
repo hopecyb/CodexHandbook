@@ -95,7 +95,6 @@ description: 限制可改范围、风格与禁止事项。
 
 权限边界最好和约束一起写，减少“顺手”越权。相关页见 [定义完成标准](/prompts/define-done/) 和 [权限与沙箱](/guide/permissions-and-sandbox/)。
 
-
 ---
 
 **状态：** verified  

@@ -75,7 +75,6 @@ sidebar:
 
 完整对照见 [功能对照](/guide/reference/feature-comparison/)。可以装多个客户端；**练习项目保持同一目录**，这样更方便来回比较。
 
-
 ---
 
 **状态：** verified  

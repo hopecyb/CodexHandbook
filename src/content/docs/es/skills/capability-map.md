@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Hay muchos mecanismos de extensión y es fácil confundirlos. Esta página solo explica cómo se relacionan, sin pasos de instalación.
 
 ## Esquema de relaciones

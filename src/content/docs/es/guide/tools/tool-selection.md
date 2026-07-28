@@ -90,7 +90,6 @@ Prioriza archivos y terminal; no busques en la red. Si necesitas el navegador pa
 
 Elige primero la herramienta mínima y más cercana a la tarea; no empieces por la de mayor superficie de impacto.
 
-
 ---
 
 **Estado:** verificado  

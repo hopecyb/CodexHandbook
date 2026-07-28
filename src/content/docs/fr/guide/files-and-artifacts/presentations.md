@@ -139,12 +139,6 @@ Images : [Images et captures d'écran](/guide/files-and-artifacts/images-and-scr
 - [ ] S'ouvre dans l'environnement cible sans rupture de police
 - [ ] Données clés traçables vers les fichiers source
 
-## Sources de référence
-
-- Cas présentation codex.bozhouai.com
-- Chapitres création de contenu stormzhang
-- Pratique communautaire baoyu-slide-deck (référence de structure)
-
 ---
 
 **Statut :** vérifié  

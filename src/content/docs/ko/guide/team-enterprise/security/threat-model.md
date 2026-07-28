@@ -145,11 +145,7 @@ L5 사람 review와 브랜치 보호
 - [사람 승인 패턴](/cases/workflows/human-approval-patterns/)
 
 ## 참고 출처
-
-- KimYx0207 엔터프라이즈 보안
 - OpenAI 엔터프라이즈 보안 백서(공식)
-- CodexGuide 컴플라이언스 실천
-
 ---
 
 **상태：** verified  

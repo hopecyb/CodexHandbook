@@ -72,10 +72,7 @@ Bước: Sửa config trước, rồi viết md, cuối cùng cập nhật 12-re
 - Đánh dấu mục hoàn thành trên ROADMAP, tránh tài liệu lệch kế hoạch
 
 ## Nguồn tham chiếu
-
 - Quy trình iteration tài liệu M2 thực tế của kho này
-- Case bảo trì tài liệu trên codex.bozhouai.com (tham khảo cấu trúc)
-
 ---
 
 **Trạng thái:** verified  

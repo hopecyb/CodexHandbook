@@ -67,11 +67,7 @@ translated_at: 2026-07-28
 - [ ] 원본 워크플로 문서와 교차 링크
 
 ## 참고 출처
-
-- KimYx0207 Skills 장
-- stormzhang `20-skills.md`
 - 저장소 내 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md)와 [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
-
 ---
 
 **상태:** verified  

@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Muita gente, ao usar o Codex, concentra-se em «consegue fazer?» e ignora outra pergunta: depois de feito, como confirmar que desta vez se pode mesmo aceitar?
 
 É isso que este grupo trata. Qualidade e Verificação existem para evitar «parece concluído, mas ainda não está estável».
@@ -32,7 +31,6 @@ Na primeira leitura, pode seguir esta ordem:
 4. Veja [Definição de concluído](/guide/quality/definition-of-done/) — clarifique «quando é que está mesmo concluído»
 
 Sem verificação, «concluído» muitas vezes é só parecer concluído por agora.
-
 
 ---
 

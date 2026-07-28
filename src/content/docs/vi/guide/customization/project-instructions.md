@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Mô tả dự án» là **ngữ cảnh tĩnh** để Codex hiểu kho, không giới hạn một định dạng tệp.
 
 ## Nội dung

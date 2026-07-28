@@ -103,7 +103,6 @@ Nói xong, để nó gom thành bản chữ để bạn xác nhận.
 
 Giọng nói phù hợp khởi động và theo dõi; không phù hợp thay lệnh chính xác, xử lý thông tin nhạy cảm và nghiệm thu cuối.
 
-
 ---
 
 **Trạng thái:** verified  

@@ -68,11 +68,6 @@ description: 先定义或补齐失败测试，再驱动实现——让 Codex 的
 - [运行测试](/guide/quality/run-tests/)
 - [案例：带验证的 Bug 修复](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## 参考来源
-
-- stormzhang 测试与质量章节
-- CodexGuide 开发者工作流
-
 ---
 
 **状态：** verified  

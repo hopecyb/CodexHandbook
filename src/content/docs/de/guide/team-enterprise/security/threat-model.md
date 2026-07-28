@@ -143,11 +143,7 @@ Damit sinken viele Teamrisiken schon. Feine Governance kann nachziehen.
 - [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 
 ## Quellen
-
-- KimYx0207 Enterprise Security
 - OpenAI Enterprise Security Whitepaper (offiziell)
-- CodexGuide Compliance-Praxis
-
 ---
 
 **Status:** verified  

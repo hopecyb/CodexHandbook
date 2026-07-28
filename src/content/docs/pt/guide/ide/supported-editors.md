@@ -106,11 +106,7 @@ Se a maioria das respostas for «sim», comece pela extensão IDE.
 Muitas vezes escolhe-se a extensão IDE simplesmente porque o trabalho principal já está no editor.
 
 ## Fontes de referência
-
 - Documentação IDE do OpenAI Codex
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **Estado:** outdated  

@@ -149,11 +149,7 @@ Cloud를 처음 쓸 때 흔한 혼란도 여기서 옵니다.
 - 쓰지 않는 환경 템플릿과 Secrets를 주기적으로 정리하세요
 
 ## 참고 출처
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10、CX-11
-
 ---
 
 **상태：** outdated  

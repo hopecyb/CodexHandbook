@@ -66,7 +66,6 @@ Neben „was ändern“ muss klar sein: „nur bis wohin“.
 - [Fertigstellungsstandard definieren](/prompts/define-done/)
 - [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
 
-
 ---
 
 **Status:** verified  

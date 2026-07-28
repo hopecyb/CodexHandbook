@@ -97,10 +97,7 @@ Profile을 막 쓰기 시작하면 이렇게 하세요.
 Profile의 가치는 위험 장면마다, 이미 정리해 둔 기본 조합으로 빠르게 전환하는 데 있습니다.
 
 ## 참고 출처
-
-- stormzhang `18-config.md`
 - OpenAI Codex profiles 문서
-
 ---
 
 **상태:** outdated  

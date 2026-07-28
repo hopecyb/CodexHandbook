@@ -17,7 +17,6 @@ Available models and "reasoning / thinking" tiers change with product updates. B
 
 This handbook doesn't lock to a specific model marketing name. Use your client's current list and [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** review  

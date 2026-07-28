@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 If you can assign tasks but have not built a Skill yet, this page covers the basics of your first one.
 
 Spend 15–30 minutes on a **repo-reusable** Skill—often more direct than reading theory first. A small, well-bounded Skill is a good start.
@@ -147,9 +146,7 @@ Starting with a small, steady Skill makes it easier to reuse a clear workflow re
 - When you need GitHub API access, add [MCP](/skills/mcp/mcp-overview/)
 
 ## References
-
 - OpenAI Codex Skills official examples and `skill-creator` (if provided in your environment)
-
 ---
 
 **Status:** verified  

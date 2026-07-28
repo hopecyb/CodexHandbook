@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Vários Agents adequam-se a subproblemas paralelizados e de baixo acoplamento — não a alterar o mesmo ficheiro em simultâneo sem coordenação humana.
 
 ## Quando dividir

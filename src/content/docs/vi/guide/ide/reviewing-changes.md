@@ -87,10 +87,7 @@ Chấp nhận chỉ đưa thay đổi vào không gian làm việc của bạn; 
 «Chấp nhận thay đổi» trong IDE chỉ là thao tác giữa chừng, không phải nghiệm thu cuối.
 
 ## Nguồn tham khảo
-
 - [Kiểm chứng và rà soát thủ công](/guide/foundations/verification-and-human-review/)
-- `09-ide.md` của stormzhang
-
 ---
 
 **Trạng thái:** outdated  

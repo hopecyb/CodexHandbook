@@ -47,7 +47,6 @@ translated_at: 2026-07-28
 - [출처 있는 연구 사례](/cases/research-with-sources/)
 - [검증](/guide/verification/)
 
-
 ---
 
 **상태:** verified  

@@ -143,7 +143,6 @@ Wichtige Kollaborationsgewohnheit:
 - Korrektur unterwegs: [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/)
 - Langfristige Normen: [Was ist AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
 
-
 ---
 
 **Status:** verified  

@@ -106,11 +106,7 @@ IDE 拡張：編集中 → 小さな修正 → インラインレビュー → �
 IDE 拡張を選ぶ理由の多くは、そもそも主な作業がエディター内にあるからです。
 
 ## 参考ソース
-
 - OpenAI Codex IDE ドキュメント
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **状態：** outdated  

@@ -129,7 +129,6 @@ Este orden suele ser más estable:
 
 Un buen ejemplo de prompt debería permitir que otros lo reproduzcan directamente y obtengan un resultado cercano.
 
-
 ---
 
 **Estado:** verificado  

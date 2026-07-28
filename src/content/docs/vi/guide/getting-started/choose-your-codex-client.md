@@ -78,7 +78,6 @@ Nhiều người phía sau phối hợp như sau:
 
 Lần đầu đừng vội so «cái nào chuyên nghiệp hơn». Chọn lối vào dễ hiểu quy trình và kết quả nhất là được.
 
-
 ---
 
 **Trạng thái:** verified  

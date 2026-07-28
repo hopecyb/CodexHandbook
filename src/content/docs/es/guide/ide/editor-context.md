@@ -83,10 +83,7 @@ Anonimiza logs y datos de clientes antes de pegarlos; el IDE no juzga por ti el 
 - [ ] Los comandos de test de `AGENTS.md` coinciden con la terminal del IDE
 
 ## Fuentes de referencia
-
 - [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Estado:** verified  

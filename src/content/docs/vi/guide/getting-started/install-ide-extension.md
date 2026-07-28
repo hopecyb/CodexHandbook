@@ -40,7 +40,6 @@ Phần mở rộng IDE cài xong rồi, còn phải xác nhận nó xuất hiệ
 
 Tiếp theo: [Quy trình tác vụ local IDE](/guide/ide/local-task-workflow/). Xử lý sự cố: [Xử lý sự cố IDE](/guide/ide/troubleshooting/).
 
-
 ---
 
 **Trạng thái:** outdated  

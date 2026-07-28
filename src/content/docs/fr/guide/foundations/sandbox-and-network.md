@@ -18,7 +18,6 @@ Le **Bac à sable** limite les parties du système de fichiers et du système qu
 
 Paramètres produit : App de bureau [Paramètres](/guide/desktop-app/settings/) ; détails officiels : [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Statut :** review  

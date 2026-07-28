@@ -154,11 +154,7 @@ Unklar wohin: zuerst mit dieser Seite in die Großklasse.
 Vermeidet vermischte Änderungen; anderen hilft die Lokalisierung.
 
 ## Quellen
-
 - OpenAI Codex Support-Dokumentation
-- stormzhang FAQ- und Troubleshooting-Kapitel
-- KimYx0207 Fehler-Sammlung (offiziell nachprüfen)
-
 ---
 
 **Status:** verified  

@@ -47,7 +47,6 @@ Codex를 처음 쓰고 터미널을 먼저 다루고 싶지 않다면, 데스크
 
 실패 시: [데스크톱 App 문제 해결](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **상태:** outdated  

@@ -53,7 +53,6 @@ CLI-Fehlerbehebung: zuerst Installation, Login, Berechtigung oder Verzeichnis â€
 
 Official: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** verified  

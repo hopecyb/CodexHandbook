@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 A configuração da CLI decide o **modelo predefinido, o diretório de trabalho, a severidade da Aprovação, os servidores MCP**, etc. Coincide conceptualmente com as [bases de configuração](/guide/customization/configuration/config-basics/); esta página centra-se no que os utilizadores de terminal mais costumam alterar.
 
 ## Conteúdo desta página
@@ -115,10 +114,7 @@ Mais: [Resolução de problemas na CLI](/guide/cli/troubleshooting/)
 Trate a configuração da CLI como «hábitos de trabalho predefinidos» e fixe só o que **quase sempre repetiria**. Capacidades avançadas podem ficar para depois.
 
 ## Fontes de referência
-
 - OpenAI Codex CLI configuration
-- stormzhang `18-config.md`
-
 ---
 
 **Estado:** verified  

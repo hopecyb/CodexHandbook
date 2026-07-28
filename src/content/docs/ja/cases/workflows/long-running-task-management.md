@@ -69,12 +69,6 @@ translated_at: 2026-07-28
 - [ ] 少なくとも 2 チェックポイントでレビュー可能な diff がある
 - [ ] 一時停止・再開・引き継ぎの方法が分かっている
 
-## 参考
-
-- codex.bozhouai.com の長時間タスクと標準ワークフロー資料
-- freestylefly/CodexGuide のタスクキャプチャ
-- stormzhang `14-workflows.md`
-
 ---
 
 **状態：** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Nếu bạn đã biết giao Tác vụ nhưng chưa từng làm Skill thật, trang này nói cách làm cơ bản cho Skill đầu tiên.
 
 Dành 15–30 phút làm một Skill **tái dùng được trong repo** thường thẳng hơn đọc nhiều lý thuyết trước. Điểm bắt đầu tốt là một Skill nhỏ có ranh giới rõ.
@@ -147,9 +146,7 @@ Bắt đầu từ một Skill"nhỏ mà ổn"dễ hơn để tái dùng ổn đ�
 - Khi cần nối GitHub API, mới đưa [MCP](/skills/mcp/mcp-overview/) vào
 
 ## Nguồn tham chiếu
-
 - Ví dụ Skills chính thức của OpenAI Codex và `skill-creator` (nếu môi trường có)
-
 ---
 
 **Trạng thái:** verified  

@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 The integrated terminal helps you see command output from the Agent or run verification commands yourself.
 
 ## Tips
@@ -17,7 +16,6 @@ The integrated terminal helps you see command output from the Agent or run verif
 - Put verification commands in the prompt’s acceptance criteria
 - Do not paste production secrets into the integrated terminal
 - Do not manually rerun commands you do not understand against production
-
 
 ---
 

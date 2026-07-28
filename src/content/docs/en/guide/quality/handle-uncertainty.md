@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 State in your prompt:
 
 ```text
@@ -17,7 +16,6 @@ When information is insufficient, ask first; do not invent file paths, APIs, or 
 ```
 
 If fabrication appears: stop, correct the facts, start a new thread if needed.
-
 
 ---
 

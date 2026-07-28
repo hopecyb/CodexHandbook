@@ -61,7 +61,6 @@ Giá trị của mẫu tự động hóa là để nó chạy lâu dài và an t
 - [Prompt cho tác vụ dài](/prompts/long-running-tasks/)
 - [Case tự động hóa báo cáo ngày](/cases/automate-a-daily-report/)
 
-
 ---
 
 **Trạng thái:** verified  

@@ -55,7 +55,7 @@ Marquer `verified` seulement après reproduction, vérification croisée officie
 
 ### Les articles communautaires informent les sujets, pas les faits
 
-CodexGuide, AI-Coding-Guide-Zh, etc. aident à voir quoi couvrir.
+Les articles communautaires aident à voir quoi couvrir.
 
 Pour :
 
@@ -82,7 +82,7 @@ Vérifier le **chemin opérationnel complet**.
 1. **Indiquer le périmètre** : produit (App/CLI/IDE/Cloud), OS, version CLI
 2. **Reproduire étape par étape** : depuis zéro ou worktree propre
 3. **Base officielle** : au moins un lien doc OpenAI ou Help Center
-4. **Sources communautaires** : CodexGuide / KimYx0207 etc. pour les sujets seulement — faits depuis l'officiel
+4. **Sources communautaires** : articles communautaires pour les sujets seulement — faits depuis l'officiel
 5. **Mettre à jour la date** : pied de page `Dernière vérification : YYYY-MM-DD`
 6. **Revue indépendante** : `verified` idéalement confirmé par quelqu'un autre que l'auteur
 

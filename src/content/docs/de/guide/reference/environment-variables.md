@@ -166,11 +166,7 @@ Env-Vars für Veränderliches, Sensibles, Laufzeit-Nötiges — nicht für Langz
 - Nach `unset` Kindprozesse für sicher halten — Prozessbaum prüfen
 
 ## Quellen
-
 - OpenAI Codex configuration / environment-Dokumentation
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Status:** verified  

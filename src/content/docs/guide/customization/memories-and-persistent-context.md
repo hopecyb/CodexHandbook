@@ -103,11 +103,7 @@ description: Codex 如何跨会话记住偏好与事实——能力、边界与�
 记忆最适合存“总要重复说的个人偏好和少量稳定事实”，不适合替代仓库文档、团队规则和敏感信息管理。
 
 ## 参考来源
-
 - OpenAI Codex memory 文档（以版本为准）
-- stormzhang `19-memory.md`
-- codex.bozhouai.com 记忆章节（结构参考）
-
 ---
 
 **状态：** verified  

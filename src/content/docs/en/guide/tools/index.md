@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 MVP condensed pages:
 
 - [Tool selection](/guide/tools/tool-selection/)
@@ -15,7 +14,6 @@ MVP condensed pages:
 - [Web search](/guide/tools/web-search/)
 
 Browser, Computer Use, image and voice, etc. are deferred.
-
 
 ---
 

@@ -82,7 +82,6 @@ Hầu hết phản mẫu Prompt không phải vì «diễn đạt kém», mà v�
 
 Có thể thay từ mơ hồ bằng cấu trúc: mục tiêu + ràng buộc + nghiệm thu.
 
-
 ---
 
 **Trạng thái:** verified  

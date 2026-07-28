@@ -108,11 +108,7 @@ Si les trois penchent vers « oui », la mémoire est un meilleur choix.
 La mémoire convient le mieux aux « préférences personnelles et quelques faits stables que vous répétez toujours » ; ce n'est pas un substitut à la documentation du dépôt, aux règles d'équipe ou à la gestion des informations sensibles.
 
 ## Références
-
 - Documentation mémoire OpenAI Codex (selon version)
-- stormzhang `19-memory.md`
-- Chapitre mémoire codex.bozhouai.com (référence de structure)
-
 ---
 
 **Statut :** vérifié  

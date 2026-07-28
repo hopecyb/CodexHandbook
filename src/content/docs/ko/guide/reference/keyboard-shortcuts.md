@@ -103,11 +103,7 @@ translated_at: 2026-07-28
 단축키는 시험 범위가 아닙니다. 가장 자주 리듬을 끊는 동작만 익히면 보통 충분합니다.
 
 ## 참고 출처
-
 - 각 제품 Settings / Keyboard shortcuts 공식 페이지
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **상태：** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Cuando coexisten varios `AGENTS.md`, archivos de configuración y la conversación actual, hay que aclarar **qué regla aplica**.
 
 Aquí se trata de: cuando dos reglas parecen distintas, ¿a cuál hay que hacer caso?
@@ -58,10 +57,6 @@ Principios:
 - **Archivo raíz**: 10–20 reglas duras compartidas por todo el repo
 - **Archivos de subpaquete**: solo comandos y notas de directorio propias de ese paquete
 - Evita tres archivos con un 80 % de repetición — lo repetido va en la raíz; el subpaquete solo escribe el incremento
-
-## Límite con preferencias personales
-
-Los hábitos personales (tema, modelo por defecto, rutas locales) van en la **configuración de usuario**, no en el `AGENTS.md` del repositorio del equipo; si no, perjudicas a los colaboradores.
 
 ## Malentendidos habituales
 

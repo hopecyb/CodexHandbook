@@ -73,11 +73,6 @@ Combínalo con [Diagnosticar antes de corregir](/cases/workflows/diagnose-before
 - [Ejecutar tests](/guide/quality/run-tests/)
 - [Caso: corregir un bug con verificación](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## Fuentes de referencia
-
-- Capítulos de tests y calidad de stormzhang
-- Flujo de desarrollador de CodexGuide
-
 ---
 
 **Estado:** verified  

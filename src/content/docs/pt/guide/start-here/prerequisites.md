@@ -64,11 +64,9 @@ Para a maioria dos iniciantes, começar pelo **App desktop** é mais leve: a int
 - Instalação oficial e mudanças de produto: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## Fontes de referência
-
 - OpenAI Academy: Getting started with ChatGPT
 - OpenAI Academy: Using ChatGPT
 - OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
-
 ## Uma ordem comum de início
 
 Você pode seguir esta ordem:
@@ -80,7 +78,6 @@ Você pode seguir esta ordem:
 5. Verificar o resultado e decidir o próximo passo
 
 Antes de começar, completar a primeira Tarefa num ambiente seguro, pequeno e reversível economiza mais esforço do que acumular um monte de conceitos.
-
 
 ---
 

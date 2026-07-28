@@ -119,12 +119,7 @@ Hooks fit automatic checks at system key points. They are not workflow instructi
 - [ ] Config included in code review
 
 ## References
-
 - OpenAI Codex Hooks documentation
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide audit and compliance
-
 ---
 
 **Status:** outdated  

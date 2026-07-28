@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 O terminal integrado facilita ver a saída dos comandos que o Agent corre, ou executar você mesmo comandos de Verificação.
 
 Sem sair da App de desktop, também vê aqui o processo e o resultado dos comandos.
@@ -45,7 +44,6 @@ Preste atenção a:
 Sim, desde que compreenda o que faz — sobretudo não volte a correr às cegas em produção.
 
 O terminal integrado mostra o processo de Verificação de forma direta e também ajuda a familiarizar-se gradualmente com o que a linha de comando está a fazer.
-
 
 ---
 

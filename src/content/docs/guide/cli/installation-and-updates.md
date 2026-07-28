@@ -50,7 +50,6 @@ CLI 安装完成，不是命令跑过一次就算，而是你当前终端能稳�
 也可对照：[安装 CLI](/guide/getting-started/install-cli/)
 官方安装与升级说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
 
-
 ---
 
 **状态：** outdated  

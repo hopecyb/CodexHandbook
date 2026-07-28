@@ -151,11 +151,7 @@ Nối với [Script và pipeline](/guide/developer-platform/non-interactive/scri
 - [Mã thoát và thử lại](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Nguồn tham chiếu
-
 - Tài liệu OpenAI Codex CLI
-- Chương chế độ không tương tác KimYx0207
-- Hướng dẫn CI stormzhang
-
 ---
 
 **Trạng thái:** outdated  

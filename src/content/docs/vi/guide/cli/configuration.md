@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Cấu hình CLI quyết định **mô hình mặc định, thư mục làm việc, độ chặt phê duyệt, máy chủ MCP**, v.v. Khớp khái niệm với [cơ bản cấu hình](/guide/customization/configuration/config-basics/); trang này nghiêng về mục người dùng terminal hay chỉnh.
 
 ## Nội dung trang
@@ -115,10 +114,7 @@ Thêm: [Xử lý sự cố CLI](/guide/cli/troubleshooting/)
 Coi cấu hình CLI là «thói quen làm việc mặc định» là được — chỉ cố định những thứ bạn **gần như mỗi lần đều chọn lại**. Năng lực nâng cao bổ sung sau cũng kịp.
 
 ## Nguồn tham khảo
-
 - OpenAI Codex CLI configuration
-- `18-config.md` của stormzhang
-
 ---
 
 **Trạng thái:** verified  

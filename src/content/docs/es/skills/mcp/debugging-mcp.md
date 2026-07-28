@@ -77,11 +77,7 @@ En el Prompt, pide al Agent que **imprima la estructura devuelta por la herramie
 - [ ] El equipo tiene una plantilla estándar de configuración MCP
 
 ## Fuentes de referencia
-
 - Especificación y guía de depuración de Model Context Protocol
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **Estado:** desactualizado  

@@ -123,10 +123,6 @@ Au minimum :
 - Raison d'échec claire
 - Ne bloque pas excessivement les requêtes normales
 
-## Même source que les règles d'équipe
-
-Extrayez les « sous-chaînes de commandes interdites » dans `tools/codex-policy.json` pour que Hooks et [règles de commandes](/guide/customization/rules/command-rules/) partagent la source — évitez deux endroits de maintenance.
-
 ## Idées reçues courantes
 
 ### 1. Si l'exemple fonctionne, il est prêt pour la production
@@ -180,11 +176,7 @@ Les exemples Hook servent à apprendre la structure — pas à copier mot pour m
 - [ ] Docs indiquent date de vérification et version CLI applicable
 
 ## Sources de référence
-
 - Exemples OpenAI Codex Hooks
-- freestylefly/CodexGuide configuration d'audit
-- stormzhang `22-hooks.md`
-
 ---
 
 **Statut :** obsolète  

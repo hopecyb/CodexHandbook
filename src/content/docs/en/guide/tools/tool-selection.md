@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 | Need | Prefer |
 |---|---|
 | Edit files in the repo | File tools |
@@ -16,7 +15,6 @@ translated_at: 2026-07-25
 | See real page state | Browser (advanced) |
 
 State allowed and forbidden tools in your prompt to reduce unauthorized network access or dependency installs.
-
 
 ---
 

@@ -18,7 +18,6 @@ Avant d'utiliser Codex, vous avez besoin d'un compte OpenAI valide et d'un **acc
 
 Cette page ne liste pas les tarifs (cela vieillit vite). Utilisez les pages officielles de compte et de facturation.
 
-
 ---
 
 **Statut :** review  

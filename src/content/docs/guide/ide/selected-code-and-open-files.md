@@ -78,10 +78,7 @@ Prompt：说明模块边界、禁止改动的目录
 | 接受全部建议未读 diff | 引入风格漂移或安全漏洞 |
 
 ## 参考来源
-
 - [定义约束](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **状态：** verified  

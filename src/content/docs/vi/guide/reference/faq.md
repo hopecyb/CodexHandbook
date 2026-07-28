@@ -79,7 +79,6 @@ Nếu kẹt mà chưa chắc nên tới trang nào, dùng như sau:
 
 Thường đỡ tốn sức hơn lật qua lại thanh bên.
 
-
 ---
 
 **Trạng thái:** verified  

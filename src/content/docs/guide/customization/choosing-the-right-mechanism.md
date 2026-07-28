@@ -196,13 +196,7 @@ description: 临时提示、AGENTS.md、记忆、Skill、MCP 该放哪一层，�
 - [扩展方式怎么选](/skills/choosing-an-extension-method/)
 
 ## 参考来源
-
 - OpenAI Codex 官方文档（以当前版本为准）
-- freestylefly/CodexGuide 的 AGENTS/Skill 组织思路
-- KimYx0207《AI-Coding-Guide-Zh》Codex 目录中的扩展与自动化专题
-- stormzhang `11-agents-md.md`、`19-memory.md`、`20-mcp.md`、`22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **状态：** verified  

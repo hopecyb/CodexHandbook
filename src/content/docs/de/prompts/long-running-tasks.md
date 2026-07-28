@@ -77,7 +77,6 @@ Besser: Jede Phase kann stoppen und geprüft werden — nicht alles in einem Rut
 
 Dazu: [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/) · [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Status:** verified  

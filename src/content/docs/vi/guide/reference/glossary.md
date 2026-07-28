@@ -62,7 +62,6 @@ Có thể xử lý như sau:
 
 Như vậy ít bị một thuật ngữ làm đứt nhịp đọc cả trang quá lâu.
 
-
 ---
 
 **Trạng thái:** verified  

@@ -82,11 +82,6 @@ translated_at: 2026-07-28
 - [仕様駆動の作業](/cases/workflows/specification-driven-work/)
 - [計画を求める](/prompts/ask-for-a-plan/)
 
-## 参考出典
-
-- CodexGuide 要件明確化と案の比較
-- codex.bozhouai.com タスクテンプレートと選題方法
-
 ---
 
 **状態：** verified  

@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Khi dùng Codex, nhiều người chỉ tập trung vào “nó có làm được không”, mà bỏ qua câu hỏi khác: sau khi làm xong, làm sao xác nhận lần này thật sự có thể nhận?
 
 Nhóm nội dung này nói đúng việc đó. Làm chất lượng và kiểm chứng là để tránh trạng thái “trông như đã xong, nhưng chưa ổn”.
@@ -32,7 +31,6 @@ Lần đầu xem, có thể đọc theo thứ tự này:
 4. Xem [Định nghĩa hoàn thành](/guide/quality/definition-of-done/), làm rõ “thế nào mới thật sự là hoàn thành”
 
 Nếu không kiểm tra, “hoàn thành” nhiều khi chỉ tạm thời trông như đã xong.
-
 
 ---
 

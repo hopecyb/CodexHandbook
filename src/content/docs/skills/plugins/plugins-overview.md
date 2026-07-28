@@ -3,7 +3,6 @@ title: Plugins 概述
 description: 打包 Skills、MCP 与应用连接器，方便团队统一分发和管理。
 ---
 
-
 Plugin 可以看成一个安装包：它把一组已经配好的扩展能力打包给别人直接装。
 
 **Plugin（插件/连接器）** 会把 Skill、MCP 服务器、应用集成等内容打包成**可安装、可更新、可治理**的单元，特别适合“一个人配置好，全团队复用”。
@@ -85,7 +84,7 @@ Plugin 只是更方便地分发能力，不代表权限天然安全。你还是�
 
 ## 与 Claude Code / 其他生态对比
 
-不同产品的「Plugin」含义不完全相同。对比时看：**打包了什么、权限模型、是否开源可审计**——见 [功能对照](/guide/reference/feature-comparison/) 与 KimYx0207 CX-14（事实需复核）。
+不同产品的「Plugin」含义不完全相同。对比时看：**打包了什么、权限模型、是否开源可审计**——见 [功能对照](/guide/reference/feature-comparison/)。
 
 ## 常见错误
 
@@ -94,10 +93,7 @@ Plugin 只是更方便地分发能力，不代表权限天然安全。你还是�
 - 生产仓库启用实验性 Plugin
 
 ## 参考来源
-
 - OpenAI Codex Plugins 文档
-- KimYx0207 CX-07；stormzhang `23-plugins.md`
-
 ---
 
 **状态：** outdated  

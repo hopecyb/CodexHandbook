@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Un **worktree** vous permet d'essayer des changements dans un répertoire isolé avec moins d'impact sur votre espace de travail principal (surtout avec les worktrees Git).
 
 ## Quand l'utiliser
@@ -20,7 +19,6 @@ Un **worktree** vous permet d'essayer des changements dans un répertoire isolé
 
 - Le projet d'entraînement est déjà assez isolé
 - Vous n'êtes pas à l'aise avec Git : terminez d'abord les Tâches en série dans le répertoire d'entraînement
-
 
 ---
 

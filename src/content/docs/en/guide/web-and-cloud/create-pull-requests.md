@@ -98,8 +98,6 @@ May work for solo experiments; too risky for shared repos.
 - Use a Skill or `codex exec` in CI for **supplementary review comments**
 - Auto-merge needs separate governance—not the beginner default path
 
-KimYx0207 CX-10 covers Review/PR; confirm capabilities against official docs.
-
 ## Common mistakes
 
 - One PR with multiple unrelated features

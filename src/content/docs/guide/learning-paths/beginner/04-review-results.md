@@ -3,7 +3,6 @@ title: 审查结果
 description: 建立检查 diff、运行验证和追问的习惯。
 ---
 
-
 ## 本步目标
 
 把「看一眼就过」改成固定检查动作。
@@ -41,7 +40,6 @@ description: 建立检查 diff、运行验证和追问的习惯。
 审查结果不是额外动作，它本来就是使用过程的一部分。
 
 下一步：[完成第一个小项目](/guide/learning-paths/beginner/05-complete-first-project/)
-
 
 ---
 

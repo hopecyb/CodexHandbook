@@ -58,11 +58,6 @@ Pour les livrables visuels, demander des captures d'écran ou des notes d'aperç
 - [ ] Liens / table des matières / frontmatter valides
 - [ ] Conforme à la [Définition de terminé](/prompts/define-done/)
 
-## Sources de référence
-
-- codex.bozhouai.com — tâches de documentation et modèles
-- KimYx0207 — flux de travail de production de contenu
-
 ---
 
 **Statut :** verified  

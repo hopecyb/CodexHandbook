@@ -70,11 +70,6 @@ Có thể dùng kèm [review diff](/guide/quality/review-diffs/); mục rủi ro
 - [Code review Cloud](/guide/web-and-cloud/code-review/)
 - [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## Nguồn tham chiếu
-
-- Chương Review/PR của KimYx0207
-- Quy trình Git/GitHub trên codex.bozhouai.com
-
 ---
 
 **Trạng thái:** verified  

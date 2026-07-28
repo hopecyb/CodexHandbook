@@ -41,7 +41,6 @@ Giai đoạn đầu hãy phân rõ hai chế độ:
 
 Nếu chỉ thử lần đầu, thường dùng chế độ tương tác thuận tay hơn. Khi cần tự động hóa rồi hãy xem chế độ không tương tác.
 
-
 ---
 
 **Trạng thái:** verified  

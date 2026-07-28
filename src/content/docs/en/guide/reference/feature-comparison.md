@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 The table below is for learning purposes; actual capabilities depend on the current product.
 
 | Capability | Desktop App | CLI | IDE | Cloud |
@@ -20,7 +19,6 @@ The table below is for learning purposes; actual capabilities depend on the curr
 | Mobile approval follow-up | Depends on notifications/remote | Weak | Weak | Depends on product |
 
 Selection guide: [Choose your Codex client](/guide/getting-started/choose-your-codex-client/)
-
 
 ---
 

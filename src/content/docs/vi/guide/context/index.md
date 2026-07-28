@@ -45,7 +45,6 @@ Lần đầu xem có hệ thống, gợi ý thứ tự:
 
 Chương này nhấn đi nhấn lại: ngữ cảnh phụ thuộc «lần này nó thật sự thấy gì». Nếu bạn nghĩ nó nên biết, nhưng lần này chưa cung cấp, thì không tính là ngữ cảnh.
 
-
 ---
 
 **Trạng thái:** verified  

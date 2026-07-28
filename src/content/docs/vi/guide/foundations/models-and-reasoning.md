@@ -59,7 +59,6 @@ Quan trọng hơn là phán đoán: lần tác vụ này có đáng trả thêm 
 
 Cẩm nang này không gắn với tên marketing của một model cụ thể. Lấy danh sách hiện tại trên client của bạn và [https://developers.openai.com/codex](https://developers.openai.com/codex) làm chuẩn.
 
-
 ---
 
 **Trạng thái:** verified  

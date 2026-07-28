@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 ## Goal for this step
 
 Deliver a small but complete artifact in your practice directory—for example, a one-page `practice-report.md`:
@@ -20,7 +19,6 @@ Deliver a small but complete artifact in your practice directory—for example, 
 
 - Revisit the [capability map](/guide/start-here/codex-capability-map/)
 - Go deeper into the [desktop App](/guide/desktop-app/) or [prompting](/prompts/)
-
 
 ---
 

@@ -42,7 +42,6 @@ Para saber si la extensión IDE está de verdad lista, mira si puedes invocarlo 
 
 Pasos detallados en [Instalar la extensión IDE](/guide/getting-started/install-ide-extension/). Documentación oficial: [OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Estado:** outdated  

@@ -56,7 +56,6 @@ Na primeira prática, verifique nesta ordem:
 
 No aceite, o ponto central é confirmar se desta vez dá para receber o resultado com tranquilidade.
 
-
 ---
 
 **Status:** verified  

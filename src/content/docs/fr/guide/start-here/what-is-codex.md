@@ -41,7 +41,6 @@ La documentation produit officielle se trouve sur [OpenAI Codex](https://develop
 
 Consultez la [comparaison des fonctionnalités](/guide/reference/feature-comparison/) pour un tableau côte à côte. Pour les relations entre concepts, voir la [carte des capacités](/guide/start-here/codex-capability-map/).
 
-
 ---
 
 **Statut :** review  

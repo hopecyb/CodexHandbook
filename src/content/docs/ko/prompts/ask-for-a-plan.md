@@ -144,13 +144,7 @@ translated_at: 2026-07-28
 이렇게 하면 “먼저 계획”이 임시 알림이 아니라 팀 기본값이 됩니다.
 
 ## 참고 출처
-
 - OpenAI Codex 공식 문서의 계획·실행 사고방식
-- freestylefly/CodexGuide의 작업 설계·협업 실천
-- KimYx0207《AI-Coding-Guide-Zh》Codex 워크플로 관련 장
-- stormzhang Codex 시리즈의 실전 실행 방법
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **상태:** verified  

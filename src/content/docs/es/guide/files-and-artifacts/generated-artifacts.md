@@ -109,10 +109,7 @@ Un artefacto no basta con «ya se generó». Al menos hay que abrirlo, verificar
 - [ ] Sin secrets ni directorios generados de más
 
 ## Referencias
-
 - [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/)
-- Requisitos de aceptación de casos en external-source-integration
-
 ---
 
 **Estado:** verificado  

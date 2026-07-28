@@ -79,7 +79,6 @@ Não precisa ler página a página pelo sumário do site. Pode seguir esta ordem
 
 Mapa geral de escolha de extensões: [Mapa de capacidades de extensão](/skills/capability-map/). Comparação de produtos: [Comparação de recursos](/guide/reference/feature-comparison/). Diferenças de capacidade entre entradas ficam na página de comparação.
 
-
 ---
 
 **Status:** verified  

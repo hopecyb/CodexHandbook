@@ -106,11 +106,7 @@ IDE 확장: 편집 중 → 작은 수정 → 인라인 검토 → 로컬 테스�
 많은 경우 IDE 확장을 고르는 이유는, 주요 작업이 원래 에디터에 있기 때문입니다.
 
 ## 참고 출처
-
 - OpenAI Codex IDE 문서
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **상태:** outdated  

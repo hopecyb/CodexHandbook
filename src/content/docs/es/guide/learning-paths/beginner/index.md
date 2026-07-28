@@ -28,7 +28,6 @@ Este conjunto es la ruta más corta preparada para principiantes.
 
 El objetivo de la ruta para principiantes no es aprenderlo todo, sino cerrar el primer ciclo completo.
 
-
 ---
 
 **Estado:** verified  

@@ -97,10 +97,7 @@ Như vậy đã phủ hầu hết trường hợp thường gặp.
 Giá trị của Profile nằm ở việc giúp bạn trong các tình huống rủi ro khác nhau nhanh chuyển sang một tổ hợp mặc định đã nghĩ rõ.
 
 ## Nguồn tham khảo
-
-- stormzhang `18-config.md`
 - Tài liệu profiles OpenAI Codex
-
 ---
 
 **Trạng thái:** outdated  

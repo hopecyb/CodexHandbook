@@ -159,11 +159,9 @@ Enfin direction de modification suggérée.
 Plus clair qu'un « corrige » seul.
 
 ## Sources
-
 - OpenAI Help Center : ChatGPT Image Inputs FAQ
 - OpenAI Academy : Working with files in ChatGPT
 - OpenAI API Developer Quickstart : Analyze images and files
-
 ---
 
 **Statut :** verified  

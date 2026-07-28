@@ -83,12 +83,7 @@ Git 제공자 / 이슈 / 아티팩트 저장소
 개발자 플랫폼 장은 “Codex를 시스템에 어떻게 연결할까”를 다룹니다. Codex를 처음 쓸 때는 앞쪽 입문 내용을 먼저 보세요.
 
 ## 참고 출처
-
 - OpenAI Codex API / SDK 공식 문서
-- KimYx0207 개발자 장
-- stormzhang CI와 자동화 튜토리얼
-- codex.bozhouai.com 엔지니어링 사례
-
 ---
 
 **상태：** verified  

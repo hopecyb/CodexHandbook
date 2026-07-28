@@ -56,7 +56,6 @@ Frases deste tipo são especialmente úteis em Threads longas.
 
 Quando o Contexto conflita, o melhor é indicar logo «desta vez, ouça qual». Políticas obrigatórias da equipa também podem prevalecer sobre preferências pessoais.
 
-
 ---
 
 **Estado:** verified  

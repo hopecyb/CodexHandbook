@@ -96,12 +96,7 @@ Làm việc với Agent coi trọng hơn việc tác vụ có thể liên tục 
 - Tách tác vụ con mà không đưa ranh giới, cuối cùng thread chính càng rối
 
 ## Nguồn tham khảo
-
 - Hướng dẫn cộng tác và thực thi tác vụ chính thức của OpenAI Codex
-- Thực hành tác vụ cộng tác của freestylefly/CodexGuide
-- Chương quy trình Codex trong KimYx0207《AI-Coding-Guide-Zh》
-- Thực hành tác vụ con và tự động hóa của stormzhang
-
 ---
 
 **Trạng thái:** verified  

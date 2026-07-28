@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Wenn mehrere `AGENTS.md`, Config-Dateien und der aktuelle Dialog gleichzeitig existieren, muss klar sein, **welche Regel gilt**.
 
 Thema hier: Wenn zwei Regeln auseinanderlaufen — wem folgen?

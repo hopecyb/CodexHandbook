@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Os passos de instalação estão em [Instalar a App de desktop](/guide/getting-started/install-desktop-app/) e em [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Ao abrir a App de desktop pela primeira vez, a interface mostra muita informação de uma vez.

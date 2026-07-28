@@ -121,10 +121,7 @@ def handle(request):
 Webhook은 작업 상태 변화를 다른 시스템에 연결하는 데 맞습니다. 다만 서명 검증, 멱등, 비동기 처리 같은 기초를 먼저 갖추세요.
 
 ## 참고 출처
-
 - OpenAI Codex / Cloud API 이벤트 문서
-- KimYx0207 통합 장
-
 ---
 
 **상태：** verified  

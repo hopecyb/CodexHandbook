@@ -110,12 +110,7 @@ Plugin 可把 Skill 打包统一分发：[Plugins 概述](/skills/plugins/plugin
 - 看都没看 `SKILL.md` 就直接信任它的行为
 
 ## 参考来源
-
 - OpenAI Codex Skills 安全指引
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **状态：** verified  

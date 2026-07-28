@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Há muitos mecanismos de extensão, e é fácil confundir. Esta página explica as relações — não os passos de instalação.
 
 ## Diagrama de relação

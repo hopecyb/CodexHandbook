@@ -50,7 +50,6 @@ translated_at: 2026-07-28
 - [먼저 진단한 뒤 수정](/cases/workflows/diagnose-before-fixing/)
 - [버그 수정 사례](/cases/fix-a-bug/)
 
-
 ---
 
 **상태:** verified  

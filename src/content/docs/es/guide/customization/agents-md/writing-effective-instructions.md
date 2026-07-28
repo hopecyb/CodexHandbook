@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Las instrucciones de proyecto eficaces se parecen más a una **lista de verificación**. El objetivo es que Codex cometa menos errores previsibles en el primer intento.
 
 La primera vez que se escriben, el problema habitual es que hay muchas ideas, pero las restricciones realmente clave no quedan claras.

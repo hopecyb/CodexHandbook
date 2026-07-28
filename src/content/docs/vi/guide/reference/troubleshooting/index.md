@@ -34,7 +34,6 @@ Thường sẽ rơi vào trang tương ứng nhanh hơn.
 
 Hỗ trợ và tài liệu chính thức: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
-
 ---
 
 **Trạng thái:** verified  

@@ -54,13 +54,6 @@ Wenn Ergebnisse jedes Mal ähnlich aussehen sollen:
 Beim ersten Skill optional.  
 Sobald du wiederholt „bitte in dieser Struktur ausgeben“ sagst, lohnt die Extraktion.
 
-## Unterschied zu references/
-
-| Verzeichnis | Fokus |
-|---|---|
-| `references/` | Eingabe-Normen, Regeln, APIs |
-| `templates/` | Ausgabeformat, Report-Struktur |
-
 ## Häufige Irrtümer
 
 ### 1. Templates nur fürs Aussehen

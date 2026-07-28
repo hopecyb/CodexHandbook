@@ -144,8 +144,6 @@ Vấn đề cục bộ CLI/IDE/App: [Tham chiếu · Xử lý sự cố](/guide/
 ## Tham chiếu
 
 - Tài liệu hỗ trợ OpenAI Codex Cloud
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10～CX-11
 
 ---
 

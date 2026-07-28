@@ -147,11 +147,7 @@ Gồm:
 Tránh trộn nhiều thay đổi.
 
 ## Nguồn tham chiếu
-
 - Tài liệu hỗ trợ OpenAI Codex
-- Chương FAQ và xử lý sự cố stormzhang
-- Tổng hợp thất bại KimYx0207 (đối chiếu với chính thức)
-
 ---
 
 **Trạng thái:** verified  

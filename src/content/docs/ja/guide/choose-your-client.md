@@ -80,7 +80,6 @@ translated_at: 2026-07-28
 
 完全な対照表は [機能対照](/guide/reference/feature-comparison/)。複数クライアントを入れても構いません。**練習プロジェクトは同じディレクトリに保つ**と、比較しやすくなります。
 
-
 ---
 
 **状態：** verified  

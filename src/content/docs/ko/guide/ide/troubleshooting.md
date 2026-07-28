@@ -59,7 +59,6 @@ IDE 문제의 가장 흔한 원인은 워크스페이스·로그인 상태·컨�
 
 공식 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
 
-
 ---
 
 **상태:** verified  

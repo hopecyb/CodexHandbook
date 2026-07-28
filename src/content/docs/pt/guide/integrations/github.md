@@ -96,10 +96,7 @@ O ponto da integração com GitHub é conectar o Codex ao fluxo de colaboração
 - Misturar formatação e mudança funcional no mesmo PR
 
 ## Fontes
-
 - Documentação de integração GitHub do OpenAI Codex
-- KimYx0207 CX-10; stormzhang `26-git-github.md`
-
 ---
 
 **Status:** verified  

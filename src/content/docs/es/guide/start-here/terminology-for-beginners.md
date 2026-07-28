@@ -92,7 +92,6 @@ Cuando aparezca una palabra nueva, consulta y sigue leyendo.
 
 En la primera lectura, trátalos como pistas. Saber más o menos a qué apuntan es más realista que memorizarlos todos de entrada.
 
-
 ---
 
 **Estado:** verified  

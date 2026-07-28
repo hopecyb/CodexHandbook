@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Estado MVP: esta página é uma visão geral. Conteúdo aprofundado sobre documentação partilhada, governação e métricas virá em marcos posteriores (incluindo a parte 11).
 
 Se te preocupas sobretudo com a equipa usar o Codex de forma mais estável, podes começar por este percurso.
@@ -63,7 +62,6 @@ Este percurso valoriza limites, regras e aceitação — não só empurrar o vol
 ## Passos planeados (esquema)
 
 Documentação partilhada → Permissões e governação → Fluxos padronizados → Qualidade e segurança → Divulgação e métricas
-
 
 ---
 

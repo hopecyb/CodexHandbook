@@ -101,7 +101,6 @@ Nếu lo nó sửa nhiều, yêu cầu thẳng ba việc:
 
 Tệp văn bản và mã sợ nhất là sửa vừa nhiều vừa phân tán, lại khó rà. Nói rõ phạm vi, phong cách và cách kiểm chứng thì sau này đỡ vòng lại nhiều.
 
-
 ---
 
 **Trạng thái:** verified  

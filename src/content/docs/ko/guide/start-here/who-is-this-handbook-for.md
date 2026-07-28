@@ -90,7 +90,6 @@ translated_at: 2026-07-28
 
 다음 단계: [경로 고르기](/guide/start-here/choose-your-path/).
 
-
 ---
 
 **상태:** verified  

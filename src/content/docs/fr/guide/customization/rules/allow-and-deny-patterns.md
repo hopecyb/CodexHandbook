@@ -106,11 +106,6 @@ Exécuter d'abord la frontière minimale ; affiner plus tard.
 
 De bonnes règles allow/deny indiquent à l'avance quelles actions sont raisonnables et quelles ne devraient pas arriver.
 
-## Références
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 chapitre configuration des permissions
-
 ---
 
 **Statut :** vérifié  

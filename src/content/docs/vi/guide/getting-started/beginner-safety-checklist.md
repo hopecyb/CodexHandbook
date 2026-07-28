@@ -12,7 +12,6 @@ Trước lần dùng đầu tiên, có thể tự hỏi một câu: «Nếu nó 
 
 Checklist này nhằm hạ rủi ro của lần dùng đầu tiên.
 
-
 Trước khi bắt đầu đánh dấu:
 
 - [ ] Tôi đang dùng thư mục luyện tập có thể bỏ, không phải kho production
@@ -44,7 +43,6 @@ Vấn đề phổ biến hơn lần đầu là:
 Có thể vừa dùng vừa học — nhưng vài mục trong checklist này, duyệt qua trước khi bắt đầu sẽ ổn hơn.
 
 Lần đầu dùng Codex, hạ chi phí lỗi trước — phía sau sẽ nhẹ hơn nhiều.
-
 
 ---
 

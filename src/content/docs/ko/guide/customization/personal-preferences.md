@@ -102,12 +102,6 @@ translated_at: 2026-07-28
 - [ ] 고객 프로젝트 하나 이상에 엄격 Profile을 둠
 - [ ] 저장소 안에 개인 키가 없음
 
-## 참고 출처
-
-- freestylefly/CodexGuide 개인·팀 설정
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **상태:** verified  

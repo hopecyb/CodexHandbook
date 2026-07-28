@@ -114,10 +114,7 @@ Chỉnh xuôi ba nhóm này gần như phủ hầu hết vấn đề dùng thự
 Cài đặt IDE giống «bạn phối hợp với Codex trong trình soạn thảo thế nào»; quy tắc dự án viết ra sao là tầng khác — đừng trộn.
 
 ## Nguồn tham khảo
-
 - OpenAI Codex IDE settings
-- `18-config.md`, `09-ide.md` của stormzhang
-
 ---
 
 **Trạng thái:** outdated  

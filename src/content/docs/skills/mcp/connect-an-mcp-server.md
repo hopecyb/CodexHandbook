@@ -3,7 +3,6 @@ title: 连接 MCP 服务器
 description: 配置、鉴权、验证与排障，安全接入第一个 MCP 工具。
 ---
 
-
 本页侧重连接和验证流程；协议细节与服务器开发见官方 MCP 文档。
 
 ## 开始前
@@ -88,10 +87,8 @@ description: 配置、鉴权、验证与排障，安全接入第一个 MCP 工�
 首次调用陌生工具时，客户端可能弹出确认——这是预期行为。不要在团队规范中鼓励「永久允许所有 MCP 写操作」。
 
 ## 参考来源
-
 - OpenAI Codex MCP 配置文档
 - modelcontextprotocol.io 服务器示例
-
 ---
 
 **状态：** outdated  

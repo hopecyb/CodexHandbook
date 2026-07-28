@@ -10,7 +10,6 @@ sidebar:
   order: 10
 ---
 
-
 Die Desktop-App ist der Standardeinstieg für Einsteiger: Projekte, Aufgaben, Diffs und Freigaben werden sichtbar.
 
 Wer die Kommandozeile oder IDE-Erweiterungen noch nicht kennt, findet hier oft den leichteren Einstieg.

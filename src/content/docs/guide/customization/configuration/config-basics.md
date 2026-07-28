@@ -3,7 +3,6 @@ title: 配置基础
 description: Codex 配置文件位置、常用项与审批/沙盒/模型设置入门。
 ---
 
-
 配置文件让你在本机或项目中**统一 Codex 行为**，而不必每个会话重复设置模型、审批级别或沙盒策略。
 
 ## 本页内容
@@ -124,11 +123,7 @@ description: Codex 配置文件位置、常用项与审批/沙盒/模型设置�
 配置更适合放那些你几乎每次都会重复选择的默认项，不必把所有规则都塞进配置文件。
 
 ## 参考来源
-
 - OpenAI Codex 配置文档
-- stormzhang/ai-coding-guide：`codex/18-config.md`
-- KimYx0207 CX-04 项目指令权限配置（事实需官方复核）
-
 ---
 
 **状态：** verified  

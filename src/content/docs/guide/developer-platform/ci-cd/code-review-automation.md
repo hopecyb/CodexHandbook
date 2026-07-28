@@ -96,12 +96,7 @@ PR opened / updated
 - [ ] 团队文档说明 AI 审查的定位
 
 ## 参考来源
-
 - OpenAI Codex CI 示例
-- KimYx0207 Review/PR 章节
-- stormzhang CI 教程
-- codex.bozhouai.com Git/GitHub 篇
-
 ---
 
 **状态：** verified  

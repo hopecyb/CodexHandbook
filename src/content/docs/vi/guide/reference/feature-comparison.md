@@ -73,7 +73,6 @@ Nhiều người đi như sau:
 
 Chọn theo tình huống dùng thường đáng tin hơn chỉ nhìn số lượng tính năng.
 
-
 ---
 
 **Trạng thái:** outdated  

@@ -93,11 +93,7 @@ Com extensões externas, olha primeiro Permissões e limites; depois, se a funç
 - [ ] Alinhado com a política de [segurança de Skill](/skills/security/)
 
 ## Fontes de referência
-
-- Segurança MCP/Plugin de KimYx0207
-- Capítulo MCP de stormzhang
 - [Depurar MCP](/skills/mcp/debugging-mcp/)
-
 ---
 
 **Estado:** verified  

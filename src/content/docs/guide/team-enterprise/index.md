@@ -88,12 +88,6 @@ sidebar:
 
 如果你当前主要关心个人上手，这章可以先放后面；等开始做团队推广、权限管理或风险控制时再回来。
 
-## 参考来源
-
-- KimYx0207 安全与企业章节
-- freestylefly/CodexGuide 团队 playbook
-- stormzhang 安全教程
-
 ---
 
 **状态：** verified  

@@ -113,7 +113,6 @@ Do not make more edits. Tell me exactly what you changed just now.
 
 Prompting basics: [Prompt basics](/prompts/basics/).
 
-
 ---
 
 **Status:** verified  

@@ -125,12 +125,6 @@ Mais perto de 1 → raiz; mais perto de 2 ou 3 → subpacote.
 
 Num monorepo, AGENTS.md não precisa de estar tudo concentrado; o melhor é «consenso global» e «regras locais de diretório» cada um no sítio certo.
 
-## Referências
-
-- Playbook monorepo freestylefly/CodexGuide
-- Capítulo de repositórios grandes em codex.bozhouai.com
-- Práticas monorepo e Git de stormzhang
-
 ---
 
 **Estado:** verificado  

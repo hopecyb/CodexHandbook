@@ -94,10 +94,8 @@ Closer to exploration, content illustration, and concept sketching—not strict 
 - Enterprise policy may ban certain subjects; follow [acceptable use](https://openai.com/policies/) and internal rules
 
 ## References
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## Common mistakes
 
 - Committing uncompressed 4K images

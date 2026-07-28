@@ -139,12 +139,6 @@ Images: [Images and screenshots](/guide/files-and-artifacts/images-and-screensho
 - [ ] Opens in target environment without font breakage
 - [ ] Key data traceable to source files
 
-## Reference sources
-
-- codex.bozhouai.com presentation cases
-- stormzhang content creation chapters
-- baoyu-slide-deck community practice (structure reference)
-
 ---
 
 **Status:** verified  

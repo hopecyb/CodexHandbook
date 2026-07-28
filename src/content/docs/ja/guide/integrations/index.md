@@ -194,13 +194,7 @@ Slack、メール、企業 IM など。
 - クラウドリポジトリ協業： [Web と Cloud](/guide/web-and-cloud/)
 
 ## 参考ソース
-
 - OpenAI Codex 公式連携・開発者ドキュメント
-- KimYx0207《AI-Coding-Guide-Zh》Codex 連携・自動化関連章
-- stormzhang `26-git-github.md` と自動化章
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **状態：** verified  

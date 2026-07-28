@@ -44,7 +44,6 @@ Merece la pena cuando empiezas a encontrarte con esto:
 
 El worktree es una herramienta de aislamiento avanzada, no un requisito para empezar con Codex.
 
-
 ---
 
 **Estado:** outdated  

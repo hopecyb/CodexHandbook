@@ -55,7 +55,6 @@ Tiêu chuẩn thực tế hơn: terminal hiện tại tìm được nó, và b�
 Cũng có thể đối chiếu: [Cài đặt CLI](/guide/getting-started/install-cli/)  
 Hướng dẫn cài và nâng cấp chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Trạng thái:** outdated  

@@ -119,10 +119,7 @@ Siehe [SDK-Überblick](/guide/developer-platform/sdk-overview/).
 - [ ] Strategie konsistent mit [Exit-Codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Quellen
-
 - Allgemeine Praxis zu OpenAI Structured Outputs (Konzeptangleichung)
-- KimYx0207 Automatisierungs-Ausgabe-Kapitel
-
 ---
 
 **Status:** verified  

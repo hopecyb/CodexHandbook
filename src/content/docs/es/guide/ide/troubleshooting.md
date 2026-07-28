@@ -59,7 +59,6 @@ La causa raíz más habitual en resolución de problemas del IDE es workspace, e
 
 Documentación oficial: [OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Estado:** verified  

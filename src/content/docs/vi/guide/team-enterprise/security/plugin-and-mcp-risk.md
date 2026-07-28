@@ -92,11 +92,7 @@ Với mở rộng ngoài: quyền và ranh giới trước sức mạnh tính n�
 - [ ] Thống nhất với chính sách [Bảo mật Skill](/skills/security/)
 
 ## Nguồn tham chiếu
-
-- Bảo mật MCP/Plugin KimYx0207
-- Chương MCP stormzhang
 - [Gỡ lỗi MCP](/skills/mcp/debugging-mcp/)
-
 ---
 
 **Trạng thái:** verified  

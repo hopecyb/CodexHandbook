@@ -56,7 +56,6 @@ En la primera práctica, puedes revisar así:
 
 En la aceptación, lo esencial es confirmar si este resultado se puede recibir con tranquilidad.
 
-
 ---
 
 **Estado:** verified  

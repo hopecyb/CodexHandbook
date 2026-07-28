@@ -69,12 +69,6 @@ Mỗi khi xong milestone:
 - [ ] Ít nhất hai điểm kiểm tra có diff review được
 - [ ] Biết cách tạm dừng, phục hồi hoặc bàn giao
 
-## Nguồn tham chiếu
-
-- Tác vụ dài và quy trình chuẩn trên codex.bozhouai.com
-- Đóng gói tác vụ freestylefly/CodexGuide
-- `14-workflows.md` của stormzhang
-
 ---
 
 **Trạng thái:** verified  

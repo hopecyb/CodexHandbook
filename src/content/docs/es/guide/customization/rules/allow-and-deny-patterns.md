@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Las **Rules (reglas)** declaran en la configuración o en archivos del proyecto qué comandos shell, rutas y llamadas a herramientas están **permitidos o prohibidos**, para reducir clics de aprobación manual y a la vez impedir que se automaticen operaciones peligrosas.
 
 ## Contenido
@@ -106,11 +105,6 @@ Primero haz funcionar el límite mínimo; luego refina.
 - Cambia las reglas por PR, como si cambiaras CI
 
 Una buena regla allow/deny deja claro de antemano qué acciones son razonables y cuáles no deberían ocurrir.
-
-## Referencias
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- Capítulos de configuración de permisos de KimYx0207
 
 ---
 

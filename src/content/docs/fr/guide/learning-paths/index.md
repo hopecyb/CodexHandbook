@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Les parcours d'apprentissage **organisent uniquement l'ordre de lecture** — ils ne dupliquent pas les manuels produit longs ni les sujets de capacité.
 
 ## Parcours MVP disponibles
@@ -25,7 +24,6 @@ Les parcours d'apprentissage **organisent uniquement l'ordre de lecture** — il
 - [Créateur](/guide/learning-paths/creator/)
 - [Développeur](/guide/learning-paths/developer/)
 - [Équipe](/guide/learning-paths/team/)
-
 
 ---
 

@@ -114,10 +114,7 @@ Sind diese drei stimmig, decken sie die meisten echten Nutzungsprobleme ab.
 IDE-Einstellungen = „wie du im Editor mit Codex zusammenarbeitest“; Projektregeln sind eine andere Schicht — nicht vermischen.
 
 ## Quellen
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`, `09-ide.md`
-
 ---
 
 **Status:** outdated  

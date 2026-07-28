@@ -103,10 +103,8 @@ Puedes pedir con esta estructura:
 - La política empresarial puede prohibir ciertos temas; cumple el [uso aceptable](https://openai.com/policies/) y las normas internas
 
 ## Referencias
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## Errores frecuentes
 
 - Hacer commit de imágenes 4K sin comprimir

@@ -122,12 +122,7 @@ Cloud는 실행 장소만 원격으로 바꿉니다. 이후 후속과 판단은 
 - [ ] PR 또는 브랜치를 내고, 사람이 diff를 검토함
 
 ## 참고 출처
-
 - OpenAI Codex Cloud 작업 문서
-- stormzhang `10-cloud.md`、`27-mobile.md`
-- KimYx0207 CX-10
-- codex.bozhouai.com App/클라우드 협업 장
-
 ---
 
 **상태：** outdated  

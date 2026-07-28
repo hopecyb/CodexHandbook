@@ -74,7 +74,6 @@ Skills、MCP、Hooks、自动化当然都很强，但它们解决的更多是效
 
 扩展选型总图见 [扩展能力地图](/skills/capability-map/)，产品对照见 [功能对照](/guide/reference/feature-comparison/)。不同入口的能力差异放在功能对照页。
 
-
 ---
 
 **状态：** verified  

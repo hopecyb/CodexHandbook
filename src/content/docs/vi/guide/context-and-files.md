@@ -29,7 +29,6 @@ Có thể coi như thông tin mà đồng nghiệp mới vừa vào nhóm chat s
 Những thứ đó cộng lại chính là ngữ cảnh nó đang dựa vào.
 
 ## Nguồn vấn đề phổ biến
-
 Nhiều gốc rễ của «vì sao nó lại hiểu sai nữa» không phải model quá kém — mà là ngữ cảnh có vấn đề, ví dụ:
 
 - Đưa quá ít thông tin — nó chỉ còn cách đoán
@@ -40,7 +39,6 @@ Nhiều gốc rễ của «vì sao nó lại hiểu sai nữa» không phải mo
 Trọng tâm trang này là một tiêu chuẩn đơn giản:
 
 > **Để nó thấy thông tin thật sự liên quan — đừng để thông tin không liên quan chiếm chỗ.**
-
 ## Quản lý ngữ cảnh
 
 - [Ngữ cảnh dự án](/guide/context/project-context/) — `AGENTS.md`, thỏa thuận kho

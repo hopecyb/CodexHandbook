@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo de este paso
 
 Sustituye «mirar un momento y dar por bueno» por una comprobación fija.
@@ -46,7 +45,6 @@ El plan solo ayuda; sigues teniendo que ver si toca un alcance que no debía.
 Revisar el resultado no es un paso extra: forma parte del uso.
 
 Siguiente: [Completar el primer proyecto pequeño](/guide/learning-paths/beginner/05-complete-first-project/)
-
 
 ---
 

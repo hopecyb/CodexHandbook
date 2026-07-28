@@ -124,7 +124,6 @@ Subagents fit subproblems with clear boundaries, clear deliverables, and indepen
 
 - [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)
 - [Handoff and resume](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08; stormzhang `21-subagents.md`
 
 ---
 

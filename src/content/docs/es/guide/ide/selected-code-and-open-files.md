@@ -83,10 +83,7 @@ En el producto: [Revisar cambios en el IDE](/guide/ide/reviewing-changes/)
 | Aceptar todas las sugerencias sin leer el diff | Deriva de estilo o vulnerabilidades de seguridad |
 
 ## Fuentes de referencia
-
 - [Definir restricciones](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Estado:** verified  

@@ -92,11 +92,7 @@ Pour les extensions externes : permissions et frontières avant la force des fon
 - [ ] Cohérent avec la politique [Sécurité Skill](/skills/security/)
 
 ## Sources de référence
-
-- Sécurité MCP/Plugin KimYx0207
-- Chapitre MCP stormzhang
 - [Débogage MCP](/skills/mcp/debugging-mcp/)
-
 ---
 
 **Statut :** vérifié  

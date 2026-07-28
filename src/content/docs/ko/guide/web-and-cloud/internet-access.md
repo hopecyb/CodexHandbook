@@ -130,12 +130,7 @@ Cloud 작업은 종종 **출망**이 필요합니다. npm/PyPI 패키지 받기,
 - [ ] 팀이 네트워킹 프롬프트에 넣으면 안 되는 데이터를 앎
 
 ## 참고 출처
-
 - OpenAI Codex Cloud 네트워크와 보안 문서
-- stormzhang `10-cloud.md`、`19-security.md`
-- KimYx0207 CX-10、CX-11
-- codex.bozhouai.com 클라우드 장
-
 ---
 
 **상태：** outdated  

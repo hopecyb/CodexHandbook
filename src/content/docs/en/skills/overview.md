@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
 
 It fits workflows that have already repeated and will likely repeat again.
@@ -114,10 +113,7 @@ Skills are not required to get started—they shine when you organize flows that
 - Replacing clear steps with scripts that are hard to maintain
 
 ## References
-
 - OpenAI Codex Skills documentation
-- KimYx0207 CX-06; stormzhang `22-skills.md`
-
 ---
 
 **Status:** verified  

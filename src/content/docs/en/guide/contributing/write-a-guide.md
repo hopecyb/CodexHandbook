@@ -107,15 +107,9 @@ Before PR, read [Verify technical content](/guide/contributing/verify-technical-
 
 A good guide tells first-time readers why the page exists, what to read first, and where to go next—not only “all the facts.”
 
-## Reference sources format
-
-```markdown
 ## Reference sources
-
 - OpenAI Codex official documentation
-- Community structure reference: CodexGuide (topics only, not verbatim)
 ```
-
 ---
 
 **Status:** verified  

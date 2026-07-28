@@ -144,11 +144,7 @@ Cloud の条件を 2 ラウンド連続で調べており、タスク自体が�
 CLI/IDE/App のローカル問題は [リファレンス · トラブルシューティング](/guide/reference/troubleshooting/) を参照。本ページは **Cloud 固有**のチェーンのみをカバーします。
 
 ## 参考ソース
-
 - OpenAI Codex Cloud サポートドキュメント
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10～CX-11
-
 ---
 
 **状態：** outdated  

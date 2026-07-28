@@ -98,11 +98,9 @@ Ne pas inférer la logique métier depuis les captures — mise en page et visue
 - [Contexte sensible](/guide/context/sensitive-context/)
 
 ## Sources de référence
-
 - OpenAI Help Center : FAQ ChatGPT Image Inputs
 - OpenAI Academy : Working with files in ChatGPT
 - OpenAI API Developer Quickstart : Analyze images and files
-
 ## Vérification
 
 Pour les Tâches « implémenter depuis image » :

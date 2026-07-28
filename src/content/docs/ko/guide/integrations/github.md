@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 GitHub는 Codex가 가장 흔히 쓰는 코드 협업 면입니다. Cloud 작업, PR 심사, Actions, 로컬 push가 같은 브랜치·권한 세트를 중심으로 돕니다.
 
 여기서 주로 말하는 것은, Codex가 “코드 저장소, 브랜치, PR, Review” 협업 흐름에 어떻게 붙는지입니다.
@@ -97,10 +96,7 @@ GitHub 통합의 핵심은 Codex를 기존 코드 협업 흐름에 붙이는 것
 - 같은 PR에 포맷과 기능 변경을 섞음
 
 ## 참고 출처
-
 - OpenAI Codex GitHub 통합 문서
-- KimYx0207 CX-10; stormzhang `26-git-github.md`
-
 ---
 
 **상태:** verified  

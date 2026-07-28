@@ -132,11 +132,7 @@ IDE: [로컬 작업 워크플로](/guide/ide/local-task-workflow/)
 - [ ] 최소 `codex exec` 읽기 전용 작업을 쓸 수 있음(환경이 제공하면)
 
 ## 참고 출처
-
 - OpenAI Codex CLI 문서
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **상태:** outdated  

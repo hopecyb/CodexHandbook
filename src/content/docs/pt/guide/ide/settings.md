@@ -114,10 +114,7 @@ Com estas três afinadas, já cobre a maioria dos problemas reais de uso.
 As definições IDE são mais «como colabora com o Codex no editor»; como escrever as regras do projeto é outra camada — não misture as duas.
 
 ## Fontes de referência
-
 - OpenAI Codex IDE settings
-- stormzhang `18-config.md`, `09-ide.md`
-
 ---
 
 **Estado:** outdated  

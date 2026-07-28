@@ -130,12 +130,7 @@ Dirección de solución: HTTPS + token, mirror alcanzable, o documentar que Clou
 - [ ] El equipo sabe qué datos no deben aparecer en Prompts con red
 
 ## Fuentes de referencia
-
 - Documentación de red y seguridad de OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `19-security.md`
-- KimYx0207 CX-10, CX-11
-- Capítulos Cloud de codex.bozhouai.com
-
 ---
 
 **Estado:** outdated  

@@ -90,11 +90,7 @@ translated_at: 2026-07-28
 - [ ] [Skill セキュリティ](/skills/security/) 政策と一致
 
 ## 参考
-
-- KimYx0207 MCP/Plugin セキュリティ
-- stormzhang MCP 章
 - [MCP デバッグ](/skills/mcp/debugging-mcp/)
-
 ---
 
 **状態：** verified  

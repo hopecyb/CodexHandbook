@@ -121,10 +121,7 @@ Zuerst klären: temporärer Ausfall oder durch Retry nicht heilbar — dann ents
 - [Fehlerwiederherstellung](/cases/workflows/failure-recovery/)
 
 ## Quellen
-
 - OpenAI API Retry-Leitfaden (Konzept)
-- stormzhang CI-Troubleshooting
-
 ---
 
 **Status:** outdated  

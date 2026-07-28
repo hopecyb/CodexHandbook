@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Diese Vorlage kopieren, um eine neue Fallseite oder ein internes Retro-Dokument anzulegen.
 
 Vor dem Kopieren Abschnitte streichen, die für Leser und Liefergegenstand irrelevant sind.
@@ -72,10 +71,8 @@ Vor dem Kopieren Abschnitte streichen, die für Leser und Liefergegenstand irrel
 - 3 Empfehlungen an das Team
 
 ## 6. Referenzquellen
-
 - Links zu offiziellen Docs
 - Ob dieser Fall externe Tutorials nur als Aufgabentyp adaptiert
-
 ---
 
 **Status:** verified  

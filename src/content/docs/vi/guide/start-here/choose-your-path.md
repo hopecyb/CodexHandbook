@@ -64,7 +64,6 @@ Khi chưa chắc, có thể phán đoán theo thứ tự sau:
 
 Bắt đầu từ lối vào gần vấn đề hiện tại nhất là được — điều chỉnh sau vẫn kịp.
 
-
 ---
 
 **Trạng thái:** verified  

@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 Typical flow:
 
 1. Open relevant files and select the code or passage to discuss
@@ -16,7 +15,6 @@ Typical flow:
 4. After accepting, run your tests / preview
 
 Context tips: [File and folder context](/guide/context/file-and-folder-context/)
-
 
 ---
 

@@ -7,13 +7,11 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 - [Planning](/guide/agent-work/planning/)
 - [Progress and steering](/guide/agent-work/progress-and-steering/)
 - [Handoff and resume](/guide/agent-work/handoff-and-resume/)
 
 Sub-Agents, parallel orchestration, etc. are deferred.
-
 
 ---
 

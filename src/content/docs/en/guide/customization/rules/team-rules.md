@@ -124,12 +124,6 @@ Usually:
 
 The most important part of team rules policy is knowing who sets boundaries at which layer—then how to write the rules.
 
-## References
-
-- freestylefly/CodexGuide team governance and playbook
-- KimYx0207 enterprise security chapter
-- codex.bozhouai.com team configuration cases (task-type reference)
-
 ---
 
 **Status:** verified  

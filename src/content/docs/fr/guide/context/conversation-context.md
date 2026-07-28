@@ -8,11 +8,9 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Un seul Fil accumule : vos instructions, la sortie intermédiaire des outils, d'anciennes conclusions. L'avantage est la continuité ; l'inconvénient, des contraintes obsolètes qui influencent encore les étapes suivantes.
 
 Lors d'un changement de sujet → démarrez un nouveau Fil et collez un résumé des contraintes toujours applicables.
-
 
 ---
 

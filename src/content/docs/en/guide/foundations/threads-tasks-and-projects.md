@@ -21,7 +21,6 @@ Product wording may vary slightly; this handbook uses:
 - For long tasks, define phases and checkpoints—see [Prompting for long tasks](/prompts/long-running-tasks/)
 - To continue across sessions, write a handoff summary—see [Handoff and resume](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Status:** review  

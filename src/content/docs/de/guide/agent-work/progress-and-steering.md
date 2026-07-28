@@ -149,7 +149,6 @@ Bei Drift unterwegs: kurz „was behalten, was stoppen, was als Nächstes nur“
 - An andere delelegieren: [Subagents](/guide/agent-work/subagents/)
 - Nach Unterbrechung weiter: [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Status:** verified  

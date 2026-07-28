@@ -123,11 +123,7 @@ Python이면 `pandas`로 읽고 쓰고, Node면 `csv-parse` / `xlsx` 등 — `AG
 - [ ] 원본이 우연히 덮이지 않음(또는 변경이 diff에 보임)
 
 ## 참고 출처
-
-- stormzhang 데이터 처리 튜토리얼
-- codex.bozhouai.com 표 작업 템플릿
 - [제약 정의](/prompts/constraints-and-boundaries/)
-
 ---
 
 **상태:** verified  

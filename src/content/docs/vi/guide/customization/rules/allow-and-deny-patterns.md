@@ -106,11 +106,6 @@ Chạy thông ranh giới tối thiểu trước, rồi dần tinh chỉnh.
 
 Quy tắc allow/deny tốt là nói rõ trước hành động nào hợp lý, hành động nào không nên xảy ra.
 
-## Nguồn tham khảo
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- Chương cấu hình quyền KimYx0207
-
 ---
 
 **Trạng thái:** verified  

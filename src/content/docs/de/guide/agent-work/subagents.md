@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ein **Subagent** ist eine vom Haupt-Agent für ein Teilproblem gestartete **unabhängige Arbeitseinheit** mit relativ isoliertem Kontext; Ergebnisse fließen in den Hauptthread zurück.
 
 Stellen Sie sich vor: eine klare Kleinaufgabe an einen Assistenten, der nur darauf schaut. Wert nicht „cooler“, sondern „sauberer, fokussierter, leichter parallel“.
@@ -128,7 +127,6 @@ Subagents passen zu „klare Grenze, klare Lieferung, unabhängig machbar“ —
 
 - [Multi-Agent-Kollaboration](/cases/workflows/multi-agent-coordination/)
 - [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08; stormzhang `21-subagents.md`
 
 ---
 

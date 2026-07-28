@@ -143,11 +143,7 @@ L5 人の review とブランチ保護
 - [人工承認パターン](/cases/workflows/human-approval-patterns/)
 
 ## 参考
-
-- KimYx0207 エンタープライズセキュリティ
 - OpenAI エンタープライズセキュリティホワイトペーパー（公式）
-- CodexGuide コンプライアンス実践
-
 ---
 
 **状態：** verified  

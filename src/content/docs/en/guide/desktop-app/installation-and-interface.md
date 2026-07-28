@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 For installation steps, see [Install the desktop App](/guide/getting-started/install-desktop-app/) and [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 ## Interface areas (logical layout)
@@ -23,7 +22,6 @@ Exact labels change by version—match what you see on screen:
 5. **Settings and account**: model, permissions, notifications, and more
 
 First-time tip: find where to type prompts and where to approve file changes.
-
 
 ---
 

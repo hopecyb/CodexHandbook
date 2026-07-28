@@ -101,7 +101,6 @@ Antes de ejecutar un comando, explica el propósito, si escribe archivos, si sal
 
 Antes de ejecutar, confirma qué va a cambiar ese comando.
 
-
 ---
 
 **Estado:** verificado  

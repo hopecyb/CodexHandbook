@@ -10,7 +10,6 @@ translated_at: 2026-07-28
 
 Khi tạo dự án luyện tập lần đầu, rất dễ muốn lấy thẳng dự án chính thức đang có để thử. Trông có vẻ đỡ việc — rủi ro cũng cao hơn.
 
-
 ## Cách làm gợi ý
 
 1. Tạo thư mục mới, ví dụ `codex-practice/`
@@ -59,7 +58,6 @@ Nếu giờ phải tạo một dự án luyện tập, ít nhất thỏa 4 đi�
 4. Thay đổi một nhìn là hiểu
 
 Dự án luyện tập lần đầu không cần giống môi trường production. An toàn, đơn giản, làm sai cũng dễ thu lại là đủ.
-
 
 ---
 

@@ -3,7 +3,6 @@ title: 沙箱与网络
 description: 理解执行隔离、网络访问与风险边界。
 ---
 
-
 “沙箱”和“网络”说的其实是两件事：沙箱限制它能碰哪里，网络限制它能连到哪里。
 
 **沙箱** 限制 Agent 能触达的文件系统与部分系统能力，降低误操作面。**网络访问** 另算一层风险：可能外泄提示内容中的敏感信息，或拉取不可信数据。
@@ -61,7 +60,6 @@ description: 理解执行隔离、网络访问与风险边界。
 产品侧设置入口见桌面 App [设置](/guide/desktop-app/settings/)；官方细节见 [https://developers.openai.com/codex](https://developers.openai.com/codex)。
 
 刚开始用时，宁可先多限制一点，也别在还没看懂风险的时候一下把门全打开。
-
 
 ---
 

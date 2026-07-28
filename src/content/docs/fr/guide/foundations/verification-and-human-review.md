@@ -17,7 +17,6 @@ Codex vous accélère — il **ne supprime pas** l'acceptation. Revue minimale :
 
 « Ça a l'air correct » n'est pas un critère d'acceptation.
 
-
 ---
 
 **Statut :** review  

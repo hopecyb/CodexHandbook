@@ -3,7 +3,6 @@ title: MCP 概述
 description: Model Context Protocol，让 Codex 安全连接外部工具与数据源。
 ---
 
-
 MCP 是一套标准接法，用来让 Codex 接外部工具和数据源。
 
 比如你希望 Codex 能查 Jira、读知识库、访问内部 API、操作某个受控工具，就需要一套“怎么连、能调什么、权限怎么管”的机制。**MCP（Model Context Protocol）** 就是在解决这件事。
@@ -115,11 +114,8 @@ Skill 先规定流程，流程里的某一步再调用 MCP 工具。
 - 配置变更不纳入代码审查
 
 ## 参考来源
-
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - OpenAI Codex MCP 文档
-- KimYx0207 CX-05；stormzhang `20-mcp.md`
-
 ---
 
 **状态：** outdated  

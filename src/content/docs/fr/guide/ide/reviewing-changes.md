@@ -87,10 +87,7 @@ Accepter met seulement les changements dans votre arbre de travail — vous Vér
 « Accepter » dans l'IDE est une étape intermédiaire, pas l'acceptation finale.
 
 ## Références
-
 - [Vérification et revue humaine](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Statut :** obsolète  

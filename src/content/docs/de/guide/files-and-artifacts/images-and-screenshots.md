@@ -101,11 +101,9 @@ Keine Geschäftslogik aus dem Screenshot raten — nur Visual und Layout.
 - [Sensibler Kontext](/guide/context/sensitive-context/)
 
 ## Quellen
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## Abnahme
 
 Bei „nach Bild umsetzen“:

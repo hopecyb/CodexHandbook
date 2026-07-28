@@ -118,12 +118,6 @@ Befehlsregeln „merken“ keine Befehle — sie trennen Alltag von Aktionen, di
 - [CLI-Freigabe und Sandbox](/guide/cli/approvals-and-sandbox/)
 - [Berechtigungsmatrix](/guide/reference/permission-matrix/)
 
-## Quellen
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 Kapitel Berechtigungen und Config
-- freestylefly/CodexGuide Team-Playbook
-
 ---
 
 **Status:** verified  

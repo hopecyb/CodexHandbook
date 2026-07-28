@@ -58,11 +58,6 @@ translated_at: 2026-07-28
 - [ ] 링크/목차/Frontmatter가 유효
 - [ ] [완료 정의](/prompts/define-done/)를 충족
 
-## 참고 출처
-
-- codex.bozhouai.com 문서와 템플릿 작업
-- KimYx0207 콘텐츠 산출 워크플로
-
 ---
 
 **상태:** verified  

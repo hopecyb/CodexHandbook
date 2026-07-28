@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Subagent** là **đơn vị làm việc độc lập** mà Agent chính khởi động cho một vấn đề con cụ thể; nó có ngữ cảnh tương đối cách ly, hoàn thành rồi tổng hợp kết quả về thread chính.
 
 Có thể hiểu Subagent là: giao một tác vụ nhỏ rõ ràng cho một trợ lý chỉ tập trung vào việc đó. Giá trị không nằm ở “ngầu hơn”, mà ở “sạch hơn, tập trung hơn, dễ song song hơn”.
@@ -126,7 +125,6 @@ Subagent phù hợp nhất với vấn đề con “ranh giới rõ, giao rõ, h
 
 - [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/)
 - [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08; stormzhang `21-subagents.md`
 
 ---
 

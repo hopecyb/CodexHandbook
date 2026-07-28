@@ -85,10 +85,7 @@ SDK가 Cloud나 원격 runner를 트리거하거나, CI가 내 서비스를 콜�
 - SDK가 만든 PR을 자동 머지하는 것
 
 ## 참고 출처
-
 - OpenAI Codex SDK reference
-- KimYx0207 개발자 통합 장
-
 ---
 
 **상태：** verified  

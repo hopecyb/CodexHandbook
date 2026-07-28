@@ -201,13 +201,7 @@ So stabilisieren Sie zuerst den **Kollaborationskonsens**, dann erweitern Sie F�
 - [Erweiterungsmethode wählen](/skills/choosing-an-extension-method/)
 
 ## Quellen
-
 - Offizielle OpenAI-Codex-Dokumentation (jeweils aktuelle Version)
-- freestylefly/CodexGuide: Organisationsideen zu AGENTS/Skill
-- KimYx0207《AI-Coding-Guide-Zh》Codex: Erweiterung und Automatisierung
-- stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Status:** verified  

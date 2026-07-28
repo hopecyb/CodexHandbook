@@ -71,10 +71,8 @@ Antes de copiarla, elimina las secciones que no necesites según el lector y el 
 - 3 recomendaciones para el equipo
 
 ## 6. Fuentes de referencia
-
 - Enlaces a documentación oficial
 - Si este caso se adapta de un tutorial externo (solo el tipo de tarea)
-
 ---
 
 **Estado:** verified  

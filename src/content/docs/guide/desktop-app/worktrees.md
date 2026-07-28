@@ -39,7 +39,6 @@ description: 用隔离工作树并行试验改动。
 
 worktree 是进阶隔离工具，不是上手 Codex 时的必需项。
 
-
 ---
 
 **状态：** outdated  

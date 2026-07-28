@@ -74,7 +74,6 @@ Wichtig bleibt: richtige Identität und die Fähigkeit, Projekte zu erstellen un
 
 Auth-Details und Sicherheitshinweise: [https://developers.openai.com/codex](https://developers.openai.com/codex). Bei Fehlern: [Fehlerbehebungs-Index](/guide/reference/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

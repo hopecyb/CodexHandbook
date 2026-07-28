@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Local» và «đám mây» nghe như thuật ngữ kỹ thuật — nói đơn giản: local là làm việc trên máy của bạn; đám mây là làm việc trên máy từ xa.
 
 Nếu chỉ muốn bắt đầu dùng Codex trước, thường chọn **local** sẽ đỡ hơn.
@@ -74,7 +73,6 @@ Nếu giờ vẫn chưa phân biệt được, có thể theo quy tắc này: l�
 Nhiều người mới bắt đầu từ **local + Desktop App**. Chi tiết Cloud xem [Tổng quan Web và Cloud](/guide/web-and-cloud/). Chuyển đổi trong App xem [Tác vụ local và đám mây](/guide/desktop-app/local-and-cloud-tasks/).
 
 Local phù hợp hơn để hiểu quy trình trước và sửa thứ nhỏ. Đám mây phù hợp hơn với tác vụ dài hơn, chuẩn hóa hơn, cộng tác từ xa nhiều hơn.
-
 
 ---
 

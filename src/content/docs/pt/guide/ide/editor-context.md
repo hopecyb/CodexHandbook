@@ -18,18 +18,6 @@ No IDE, o Codex não olha só para o que diz: também usa o que está a ver no e
 - Como se sobrepõe a ficheiros `@`, seleção e `AGENTS.md`
 - Como reduzir ruído e melhorar a taxa de acerto
 
-## Fontes de Contexto (camadas conceptuais)
-
-| Fonte | Quem controla | Conteúdo típico |
-|---|---|---|
-| Raiz da área de trabalho | A pasta que abriu | Estrutura do projeto, `AGENTS.md`, ficheiros de configuração |
-| Ficheiro aberto atual | Separadores do editor | Código-fonte em edição |
-| Seleção | O código que destacou | Função, fragmento de erro |
-| `@` explícito | Os caminhos que `@` na conversa | Ficheiros noutros diretórios, documentação |
-| Regras do projeto | `AGENTS.md` etc. no repositório | Normas de código, comandos de teste |
-
-Prioridade e conflitos: [Prioridade do Contexto](/guide/context/context-priority/).
-
 ## Fluxo recomendado
 
 1. **Abra o repositório pela raiz da área de trabalho**; não abra só uma subpasta (exceções em monorepos conforme a documentação da equipa)
@@ -83,10 +71,7 @@ Antes de colar registos ou dados de clientes, desensibilize; o IDE não julga co
 - [ ] Comandos de teste em `AGENTS.md` alinhados com o terminal do IDE
 
 ## Fontes de referência
-
 - [Contexto de ficheiros e pastas](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Estado:** verified  

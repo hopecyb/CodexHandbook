@@ -54,7 +54,6 @@ CLI をインストールしたら、現在のターミナルがそれを見つ�
 
 詳細な対話は [CLI 対話モード](/guide/cli/interactive-mode/)。トラブルシューティング：[CLI トラブルシューティング](/guide/cli/troubleshooting/)。
 
-
 ---
 
 **状態：** outdated  

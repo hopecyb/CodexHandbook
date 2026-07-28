@@ -58,7 +58,6 @@ Lộ trình này coi trọng hơn nói rõ nhu cầu và kiểm tra được k�
 
 Nghiên cứu và chọn đề → Viết và biên tập → Hình ảnh và demo → Website và nguyên mẫu → Quy trình nội dung tái sử dụng được
 
-
 ---
 
 **Trạng thái:** verified  

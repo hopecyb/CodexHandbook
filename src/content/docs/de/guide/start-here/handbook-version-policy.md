@@ -10,7 +10,6 @@ sidebar:
   order: 8
 ---
 
-
 ## Laufende Aktualisierung
 
 Dieses Handbook ist nicht langfristig an eine einzelne Codex-Versionsnummer gebunden. Das Produkt ändert sich — deshalb markieren Seiten Status und Prüfdatum, wie verlässlich der Stand gerade ist.
@@ -80,7 +79,6 @@ Wenn du fürchtest, eine Seite sei veraltet, prüfe drei Dinge:
 3. Geht es um Konzepte — oder um Installation, Konfiguration, Berechtigungen (schnell veränderlich)?
 
 Bei aktuellem Verhalten, Parametern und Regeln gilt am Ende immer die aktuelle offizielle Dokumentation.
-
 
 ---
 

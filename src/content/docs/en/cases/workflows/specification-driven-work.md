@@ -78,11 +78,6 @@ Acceptance items in the spec should be **testable** where possible; write tests 
 - [ ] Human or written confirmation before execution
 - [ ] Changes synced back to the spec file
 
-## References
-
-- KimYx0207 requirements and task decomposition chapters
-- freestylefly/CodexGuide spec and acceptance checklists
-
 ---
 
 **Status:** verified  

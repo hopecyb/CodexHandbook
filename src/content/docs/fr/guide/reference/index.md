@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Court, précis, consultable. MVP inclut :
 
 - [Glossaire](/guide/reference/glossary/)
@@ -18,7 +17,6 @@ Court, précis, consultable. MVP inclut :
 - [Ressources officielles](/guide/reference/official-resources/)
 
 La référence complète commandes/config est reportée.
-
 
 ---
 

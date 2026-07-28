@@ -139,11 +139,7 @@ Cloud 跑完但结果不可用：
 CLI/IDE/App 本地问题见 [参考资料 · 故障排查](/guide/reference/troubleshooting/)。本页只覆盖 **Cloud 特有**链路。
 
 ## 参考来源
-
 - OpenAI Codex Cloud 支持文档
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10～CX-11
-
 ---
 
 **状态：** outdated  

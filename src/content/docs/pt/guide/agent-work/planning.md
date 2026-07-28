@@ -143,7 +143,6 @@ Se na execução a premissa mudar, volte ao plano — não force. Ver [Progresso
 - Correção a meio: [Progresso e reorientação](/guide/agent-work/progress-and-steering/)
 - Normas de longo prazo: [O que é AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
 
-
 ---
 
 **Estado:** verificado  

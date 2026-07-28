@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Compactação de Contexto» pode entender-se assim: quando a conversa fica demasiado longa, o sistema reduz o conteúdo anterior a uma versão mais curta e continua a mantê-la. O objetivo é a Tarefa poder continuar; o custo é que **detalhes podem perder-se.**
 
 ## Por que isto afeta o resultado
@@ -75,7 +74,6 @@ Isto é mais estável do que continuar a depender da conversa longa inteira.
 Camada conceptual: [Token, Contexto e compactação](/guide/foundations/tokens-context-and-compaction/)
 
 Em Tarefas longas, as restrições mais importantes não se dizem só uma vez; depois da compactação, regras importantes valem a pena ser ditas outra vez de propósito.
-
 
 ---
 

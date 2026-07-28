@@ -143,7 +143,6 @@ Si durante la ejecución cambia la premisa, vuelve al plan; no fuerces. Ver [Pro
 - Necesitas corregir a mitad de camino: ver [Progreso y reorientación](/guide/agent-work/progress-and-steering/)
 - Necesitas normas a largo plazo: ver [Qué es AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
 
-
 ---
 
 **Estado:** verificado  

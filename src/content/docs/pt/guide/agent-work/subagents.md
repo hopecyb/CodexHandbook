@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Um **Subagent** é uma **unidade de trabalho independente** que o Agent principal arranca para um subproblema concreto, com Contexto relativamente isolado; no fim, resume o resultado na Thread principal.
 
 Pode entender o Subagent assim: entregar uma subtarefa clara a um assistente que só se foca nisso. O valor não é «mais cool», e sim «mais limpo, mais focado, mais fácil de paralelizar».
@@ -126,7 +125,6 @@ O Subagent encaixa melhor em subproblemas com «limite claro, entrega clara, con
 
 - [Coordenação multi-Agent](/cases/workflows/multi-agent-coordination/)
 - [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08; stormzhang `21-subagents.md`
 
 ---
 

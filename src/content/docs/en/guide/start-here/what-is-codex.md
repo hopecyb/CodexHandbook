@@ -42,7 +42,6 @@ Official product documentation is at [OpenAI Codex](https://developers.openai.co
 
 See the [feature comparison](/guide/reference/feature-comparison/) for a side-by-side table. For how concepts relate, see the [capability map](/guide/start-here/codex-capability-map/).
 
-
 ---
 
 **Status:** review  

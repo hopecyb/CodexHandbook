@@ -149,11 +149,7 @@ Agent がタスクを実行：依存関係のインストール、コード変�
 - 使われなくなった環境テンプレートと Secrets を定期的にクリーンアップ
 
 ## 参考ソース
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10、CX-11
-
 ---
 
 **状態：** outdated  

@@ -125,12 +125,6 @@ Gần điều 1 hơn thì vào gốc; gần điều 2, 3 hơn thì phù hợp v�
 
 AGENTS.md trong Monorepo không cần tập trung một cục; cách phù hợp hơn là để “đồng thuận toàn cục” và “quy tắc cục bộ thư mục” mỗi thứ đặt đúng chỗ.
 
-## Nguồn tham khảo
-
-- Playbook monorepo freestylefly/CodexGuide
-- Chương kho lớn codex.bozhouai.com
-- Thực hành monorepo và Git stormzhang
-
 ---
 
 **Trạng thái:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex에게 바로 bug를 고치라고 하면 재작업률이 보통 높습니다. 진단 워크플로는 더 강조합니다: **증상 → 가설 → 증거 → 최소 수정**.
 
 ## 언제 쓰는가

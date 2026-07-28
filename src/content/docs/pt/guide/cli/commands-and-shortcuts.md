@@ -132,11 +132,7 @@ Não tenha pressa em decorar todos os comandos e atalhos. Perceba primeiro se «
 - [ ] Consegue escrever uma Tarefa mínima só de leitura com `codex exec` (se o ambiente oferecer)
 
 ## Fontes de referência
-
 - Documentação da OpenAI Codex CLI
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **Estado:** outdated  

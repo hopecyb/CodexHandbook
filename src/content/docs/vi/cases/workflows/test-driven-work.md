@@ -73,11 +73,6 @@ Kết hợp [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-
 - [Chạy test](/guide/quality/run-tests/)
 - [Case: sửa Bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## Nguồn tham chiếu
-
-- Chương test và chất lượng của stormzhang
-- Quy trình nhà phát triển CodexGuide
-
 ---
 
 **Trạng thái:** verified  

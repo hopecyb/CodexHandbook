@@ -77,11 +77,7 @@ prompt で Agent に**ツール戻り値の構造を表示**（マスキング�
 - [ ] チーム標準の MCP 設定テンプレートを記録
 
 ## 参考ソース
-
 - Model Context Protocol 仕様とデバッグガイド
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **状態：** outdated  

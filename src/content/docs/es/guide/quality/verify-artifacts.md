@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Aquí «artefacto» es el contenido que entrega finalmente la tarea, por ejemplo:
 
 - Un documento
@@ -89,7 +88,6 @@ Puedes seguir este orden:
 3. Luego mira problemas pequeños de experiencia
 
 Que se ejecute solo dice que la base no está rota; si se puede entregar aún depende del efecto de uso final.
-
 
 ---
 

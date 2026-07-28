@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo de este paso
 
 Usa oraciones completas para decir **qué quieres** y **qué no quieres**; no te limites a unas pocas palabras.
@@ -49,7 +48,6 @@ Si ni siquiera las Tareas de solo lectura se formulan con claridad, las Tareas d
 Las Tareas de solo lectura, explicación o resumen también necesitan límites.
 
 Siguiente: [Trabajar con archivos](/guide/learning-paths/beginner/02-work-with-files/) · Conceptos: [Fundamentos del Prompt](/prompts/basics/)
-
 
 ---
 

@@ -55,7 +55,7 @@ Mark `verified` only after reproduction, official cross-check, and scope/date al
 
 ### Community articles inform topics, not facts
 
-CodexGuide, AI-Coding-Guide-Zh, etc. help you see what to cover.
+Community articles can help you see what to cover.
 
 For:
 
@@ -82,7 +82,7 @@ Verify the **full operational path**.
 1. **State scope**: product (App/CLI/IDE/Cloud), OS, CLI version
 2. **Reproduce step by step**: from zero or clean worktree
 3. **Official basis**: at least one OpenAI doc or Help Center link
-4. **Community sources**: CodexGuide / KimYx0207 etc. for topics only—facts from official
+4. **Community sources**: community articles for topics only—facts from official
 5. **Update date**: footer `Last verified: YYYY-MM-DD`
 6. **Independent review**: `verified` ideally confirmed by someone other than author
 

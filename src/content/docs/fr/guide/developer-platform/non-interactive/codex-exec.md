@@ -151,11 +151,7 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 - [Codes de sortie et retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Sources de référence
-
 - Documentation CLI OpenAI Codex
-- Chapitre non interactif KimYx0207
-- Tutoriels CI stormzhang
-
 ---
 
 **Statut :** obsolète  

@@ -121,10 +121,7 @@ exit 1
 - [실패 복구](/cases/workflows/failure-recovery/)
 
 ## 참고 출처
-
 - OpenAI API 재시도 가이드(개념)
-- stormzhang CI 장애 분석
-
 ---
 
 **상태：** outdated  

@@ -96,12 +96,7 @@ Agent 작업은 계획·실행·궤도 수정·마무리 안에서 작업이 올
 - 하위 작업을 나눌 때 경계를 주지 않아 메인 스레드가 더 어지러움
 
 ## 참고 출처
-
 - OpenAI Codex 공식 작업 협업·실행 설명
-- freestylefly/CodexGuide의 협업형 작업 실천
-- KimYx0207《AI-Coding-Guide-Zh》Codex 워크플로 장
-- stormzhang 하위 작업·자동화 실천
-
 ---
 
 **상태:** verified  

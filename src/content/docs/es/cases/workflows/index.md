@@ -52,12 +52,6 @@ Sin puntos de control es fácil: tocar el directorio equivocado, no ejecutar tes
 3. **Fallos recuperables:** saber cómo deshacer y cómo hacer fork del hilo para continuar
 4. **Capturar lo repetible:** la tercera repetición de un proceso se escribe como Skill o plantilla
 
-## Fuentes de referencia
-
-- Flujos y playbooks de freestylefly/CodexGuide
-- `14-workflows.md` de stormzhang
-- Flujo estándar del artículo 4 de codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

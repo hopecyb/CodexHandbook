@@ -55,7 +55,7 @@ Só marque `verified` quando você de fato reproduziu, confrontou a base oficial
 
 ### Artigos da comunidade ajudam a entender, mas não substituem a Verificação factual
 
-Fontes como CodexGuide, AI-Coding-Guide-Zh ou outros materiais comunitários são ótimas para descobrir temas a complementar.
+Artigos comunitários ou outros materiais comunitários ajudam a descobrir temas a complementar.
 
 Mas quando envolve:
 
@@ -82,7 +82,7 @@ Verifique pela «cadeia operacional completa», não só pelo literal.
 1. **Marcar o escopo**: produto (App/CLI/IDE/Cloud), SO, versão do CLI
 2. **Reproduzir passo a passo**: seguir do zero ou de um worktree limpo
 3. **Base oficial**: pelo menos um link da documentação ou do help center da OpenAI
-4. **Fontes da comunidade**: se usar CodexGuide / KimYx0207 etc., só como referência de tema; fatos pela oficial
+4. **Fontes da comunidade**: se usar materiais comunitários, só como referência de tema; fatos pela oficial
 5. **Atualizar a data**: rodapé `Última verificação: YYYY-MM-DD`
 6. **Revisão independente**: `verified` deve, de preferência, ser confirmado por segunda pessoa (não o autor)
 

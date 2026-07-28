@@ -86,7 +86,6 @@ So vermeiden Sie Abhängigkeit von komprimiertem, lückenhaftem oder verzerrtem 
 
 Gute Übergabe erzählt keine Historie — sie sagt der nächsten Öffnung sofort: wo, was als Nächstes, wie prüfen.
 
-
 ---
 
 **Status:** verified  

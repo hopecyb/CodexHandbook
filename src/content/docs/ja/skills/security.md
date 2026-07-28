@@ -113,12 +113,7 @@ Skill が長期に多人で使われるなら「誰かが DM でパスを送っ�
 - `SKILL.md` を読まず挙動を信頼
 
 ## 参考
-
 - OpenAI Codex Skills セキュリティガイダンス
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **状態：** verified  

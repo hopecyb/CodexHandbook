@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Cuantos más mecanismos de extensión hay, más cuesta elegir mal. Esta página ayuda a decidir si hace falta un Plugin o MCP antes de instalarlos.
 
 Los nombres que más se mezclan:

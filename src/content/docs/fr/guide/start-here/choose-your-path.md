@@ -38,7 +38,6 @@ Vous pouvez entrer par **rôle**, **Tâche** ou **produit**. Les trois parcours 
 
 Vous ne savez pas lequel choisir ? Commencez par [Choisir votre client Codex](/guide/getting-started/choose-your-codex-client/) et la [comparaison des fonctionnalités](/guide/reference/feature-comparison/).
 
-
 ---
 
 **Statut :** review  

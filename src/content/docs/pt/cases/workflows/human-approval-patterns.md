@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 A aprovação serve para deixar operações irreversíveis na decisão humana. Esta página reúne algumas práticas comuns.
 
 ## Camadas de aprovação

@@ -74,7 +74,6 @@ Lo importante es confirmar que usas la identidad correcta y que ya puedes crear 
 
 Los detalles de autenticación y las advertencias de seguridad se rigen por la documentación oficial: [https://developers.openai.com/codex](https://developers.openai.com/codex). Si falla, consulta el [índice de resolución de problemas](/guide/reference/troubleshooting/).
 
-
 ---
 
 **Estado:** outdated  

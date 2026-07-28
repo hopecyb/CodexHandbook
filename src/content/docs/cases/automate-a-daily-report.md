@@ -19,10 +19,6 @@ description: 把重复汇总工作固化为可复用脚本或 Skill。
 
 **成功标准：** 一条命令或 Skill 可产出固定格式 Markdown；失败有明确退出码。
 
-## 2. 参考范式
-
-团队已有类似案例：[定时文档链接检查](/cases/use-cases/team-automation/scheduled-link-check/)。
-
 ## 3. 推荐提示词
 
 ```text

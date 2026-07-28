@@ -122,12 +122,7 @@ Cloud は実行場所をリモートに変えるだけで、その後のフォ�
 - [ ] PR またはブランチが成果物としてあり、人の diff レビューを経ている
 
 ## 参考ソース
-
 - OpenAI Codex Cloud タスクドキュメント
-- stormzhang `10-cloud.md`、`27-mobile.md`
-- KimYx0207 CX-10
-- codex.bozhouai.com App/クラウドコラボレーション章
-
 ---
 
 **状態：** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Hängt eine Schlussfolgerung von externen Fakten ab, nehmen Sie nicht nur das Ergebnis — sondern auch die Quelle.
 
 Vom Agent verlangen:
@@ -43,7 +42,6 @@ Mindestens öffnen und prüfen:
 - Ist sie veraltet
 
 In Recherche-Aufgaben ist die Quelle selbst Teil der Glaubwürdigkeit.
-
 
 ---
 

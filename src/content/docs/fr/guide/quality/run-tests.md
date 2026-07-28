@@ -8,11 +8,9 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Indiquez les commands de test dans les critères d'acceptation de votre Prompt. Si le dépôt n'a pas de tests, exigez au minimum : les commands de démarrage/build réussissent, ou fournissez des étapes de Vérification manuelle.
 
 « Terminé » sans Vérification n'est qu'un sentiment de terminé.
-
 
 ---
 

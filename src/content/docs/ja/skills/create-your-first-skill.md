@@ -138,9 +138,7 @@ git commit -m "docs: add pr-review skill for Codex"
 - GitHub API が必要なら [MCP](/skills/mcp/mcp-overview/) を導入
 
 ## 参考
-
 - OpenAI Codex Skills 公式例と `skill-creator`（環境が提供する場合）
-
 ---
 
 **状態：** verified  

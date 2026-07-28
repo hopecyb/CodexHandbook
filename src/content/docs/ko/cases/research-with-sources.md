@@ -63,11 +63,6 @@ translated_at: 2026-07-28
 - [불확실성 다루기](/guide/quality/handle-uncertainty/)
 - [사례: 문서 리팩터와 검토](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## 참고 출처
-
-- CodexGuide 리서치와 인용 방법
-- stormzhang 검색과 검증 장
-
 ---
 
 **상태:** verified  

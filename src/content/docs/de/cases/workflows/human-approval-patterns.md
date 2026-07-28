@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Freigabe hält irreversible Aktionen beim Menschen. Diese Seite fasst gängige Muster zusammen.
 
 ## Freigabe-Schichten

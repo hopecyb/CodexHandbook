@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 A handoff summary should include:
 
 - Goal and current state
@@ -17,7 +16,6 @@ A handoff summary should include:
 - How to verify
 
 Paste the summary in a new thread before continuing—don't rely on compressed old conversation.
-
 
 ---
 

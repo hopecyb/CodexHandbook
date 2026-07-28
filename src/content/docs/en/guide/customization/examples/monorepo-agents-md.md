@@ -125,12 +125,6 @@ Closer to (1) → root; closer to (2) and (3) → subpackage.
 
 AGENTS.md in a monorepo does not need to be centralized; “global consensus” and “directory-local rules” each belong in the right place.
 
-## References
-
-- freestylefly/CodexGuide monorepo playbook
-- codex.bozhouai.com large-repo chapter
-- stormzhang monorepo and Git practices
-
 ---
 
 **Status:** verified  

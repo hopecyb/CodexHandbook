@@ -117,11 +117,7 @@ Pour les tableurs, la clarté sur colonnes, types, règles et acceptation compte
 - [ ] Fichier source non écrasé accidentellement (ou changement visible dans le diff)
 
 ## Sources de référence
-
-- Tutoriels traitement de données stormzhang
-- Modèles de Tâches tableur codex.bozhouai.com
 - [Définir les contraintes](/prompts/constraints-and-boundaries/)
-
 ---
 
 **Statut :** vérifié  

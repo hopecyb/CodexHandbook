@@ -53,7 +53,6 @@ CLI 문제 해결은 설치·로그인·권한·디렉터리 중 어디인지 �
 
 공식 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
 
-
 ---
 
 **상태:** verified  

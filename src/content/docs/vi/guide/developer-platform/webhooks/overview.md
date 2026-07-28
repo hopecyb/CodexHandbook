@@ -121,10 +121,7 @@ Càng nhiều câu «có», Webhook càng có ý nghĩa.
 Webhook phù hợp nối thay đổi trạng thái Tác vụ vào hệ thống khác; đồng thời hãy làm tốt trước xác minh chữ ký, idempotent và xử lý bất đồng bộ.
 
 ## Nguồn tham chiếu
-
 - Tài liệu sự kiện OpenAI Codex / Cloud API
-- Chương tích hợp KimYx0207
-
 ---
 
 **Trạng thái:** verified  

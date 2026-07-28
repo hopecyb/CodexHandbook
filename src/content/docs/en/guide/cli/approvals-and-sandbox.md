@@ -106,12 +106,7 @@ Security boundaries should follow task risk—not last time's convenience.
 Starting conservative on CLI approvals and sandbox is usually steadier. Widen only when you know what you are opening.
 
 ## References
-
 - OpenAI Codex CLI security and sandbox docs
-- stormzhang `17-permissions.md`, `19-security.md`
-- KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide sandbox approval topics
-
 ---
 
 **Status:** verified  

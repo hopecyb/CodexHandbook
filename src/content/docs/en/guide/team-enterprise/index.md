@@ -93,12 +93,6 @@ Start with:
 
 If you care about personal onboarding first, defer this chapter until team rollout, permissions, or risk control.
 
-## Reference sources
-
-- KimYx0207 security and enterprise chapters
-- freestylefly/CodexGuide team playbook
-- stormzhang security tutorials
-
 ---
 
 **Status:** verified  

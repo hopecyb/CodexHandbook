@@ -83,10 +83,7 @@ IDE 拡張は**小さく、高精度**の変更に向いています。コード
 | diff を読まずに提案をすべて受け入れ | スタイルの漂移やセキュリティ上の穴 |
 
 ## 参考ソース
-
 - [制約の定義](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **状態：** verified  

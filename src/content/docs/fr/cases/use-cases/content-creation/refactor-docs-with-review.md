@@ -72,10 +72,7 @@ Acceptation : npm run build réussit ; aucun lien mort.
 - Cocher les éléments terminés dans ROADMAP pour éviter le décalage doc/plan
 
 ## Sources de référence
-
 - Flux réel d'itération documentaire M2 de ce dépôt
-- Cas de maintenance documentaire codex.bozhouai.com (référence de structure)
-
 ---
 
 **Statut :** verified  

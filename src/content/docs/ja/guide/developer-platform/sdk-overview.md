@@ -79,10 +79,7 @@ SDK が Cloud やリモート runner を起動、または CI があなたのサ
 - SDK 出力 PR を自動マージ
 
 ## 参考
-
 - OpenAI Codex SDK reference
-- KimYx0207 開発者統合章
-
 ---
 
 **状態：** verified  

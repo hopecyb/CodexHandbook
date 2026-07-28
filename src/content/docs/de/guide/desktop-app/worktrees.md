@@ -44,7 +44,6 @@ Wenn du in solche Situationen kommst:
 
 Der Arbeitsbaum ist ein fortgeschrittenes Isolationswerkzeug, kein Pflichtbestandteil beim Einstieg in Codex.
 
-
 ---
 
 **Status:** outdated  

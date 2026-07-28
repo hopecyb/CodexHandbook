@@ -83,7 +83,6 @@ Jedes Wissen hat genau eine autoritative Seite; Pfade und Fallbeispiele nutzen Z
 
 Dieses Kapitel erklärt vor allem Reihenfolge und Grenzen in der Startphase und benennt früh ein paar offensichtliche Risiken.
 
-
 ---
 
 **Status:** verified  

@@ -52,12 +52,6 @@ Không có điểm kiểm tra thì dễ: sửa sai thư mục, quên chạy test
 3. **Thất bại phục hồi được:** biết cách hoàn tác, cách fork Thread để tiếp tục
 4. **Đóng gói được thì đóng gói:** quy trình lặp lần thứ ba viết thành Skill hoặc mẫu
 
-## Nguồn tham chiếu
-
-- Quy trình và playbook freestylefly/CodexGuide
-- `14-workflows.md` của stormzhang
-- Quy trình chuẩn phần bốn trên codex.bozhouai.com
-
 ---
 
 **Trạng thái:** verified  

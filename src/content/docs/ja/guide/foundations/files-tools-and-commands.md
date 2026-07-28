@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 普通のチャットボットとの最大の違いは、**ツール** を通じて実際に作業することです。
 
 ファイルは変更の対象、コマンドは動作の手段、ツールは手を動かすための入口です。
@@ -96,7 +95,6 @@ Codex は「言う」だけではなく、ファイル、コマンド、ツー�
 1. [権限と承認](/guide/foundations/permissions-and-approvals/)
 2. [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
 3. [最初のタスクを実行する](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

@@ -63,11 +63,6 @@ For long research, split across rounds—see [Long-running task management](/cas
 - [Handle uncertainty](/guide/quality/handle-uncertainty/)
 - [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## References
-
-- CodexGuide research and citation methods
-- stormzhang search and verification chapters
-
 ---
 
 **Status:** verified  

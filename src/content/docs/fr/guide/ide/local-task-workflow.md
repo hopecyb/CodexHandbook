@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Flux typique :
 
 1. Ouvrez les fichiers pertinents et sélectionnez le code ou le passage à discuter
@@ -17,7 +16,6 @@ Flux typique :
 4. Après acceptation, lancez vos tests / aperçu
 
 Conseils de Contexte : [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/)
-
 
 ---
 

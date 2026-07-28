@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Le terminal intégré vous aide à voir la sortie des commands de l'Agent ou à exécuter vous-même des commands de Vérification.
 
 ## Conseils
@@ -16,7 +15,6 @@ Le terminal intégré vous aide à voir la sortie des commands de l'Agent ou à 
 - Mettez les commands de Vérification dans les critères d'acceptation du Prompt
 - Ne collez pas de secrets de production dans le terminal intégré
 - Ne relancez pas manuellement des commands que vous ne comprenez pas contre la production
-
 
 ---
 

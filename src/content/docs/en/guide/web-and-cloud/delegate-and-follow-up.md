@@ -122,12 +122,7 @@ Enable [desktop notifications](/guide/desktop-app/notifications/) or mobile push
 - [ ] Produced a PR or branch reviewed by a human diff pass
 
 ## References
-
 - OpenAI Codex Cloud task docs
-- stormzhang `10-cloud.md`, `27-mobile.md`
-- KimYx0207 CX-10
-- codex.bozhouai.com App/Cloud collaboration sections
-
 ---
 
 **Status:** outdated  

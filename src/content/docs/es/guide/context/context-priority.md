@@ -56,7 +56,6 @@ Ese tipo de frase es especialmente útil en hilos largos.
 
 En cuanto el Contexto choque, lo mejor es indicar «esta vez se escucha cuál». Las políticas obligatorias del equipo también pueden estar por encima de las preferencias personales.
 
-
 ---
 
 **Estado:** verified  

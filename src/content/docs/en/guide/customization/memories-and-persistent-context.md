@@ -108,11 +108,7 @@ If all three lean toward “yes,” memory is a better fit.
 Memory is best for “personal preferences and a few stable facts you always repeat”; it is not a substitute for repo documentation, team rules, or sensitive information management.
 
 ## References
-
 - OpenAI Codex memory documentation (per version)
-- stormzhang `19-memory.md`
-- codex.bozhouai.com memory chapter (structure reference)
-
 ---
 
 **Status:** verified  

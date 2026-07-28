@@ -86,7 +86,6 @@ Assim evita depender de Contexto antigo já comprimido, omisso ou deformado.
 
 Boa Transferência não é recontar a história — é fazer quem abrir a Tarefa da próxima vez saber de imediato: onde está, o que fazer a seguir, como verificar no fim.
 
-
 ---
 
 **Estado:** verificado  

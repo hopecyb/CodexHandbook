@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Plugin pode ser visto como um pacote de instalação: empacota um conjunto de extensões já configuradas para outros instalarem direto.
 
 **Plugin (plugin/conector)** empacota Skills, servidores MCP, integrações de app etc. em unidades **instaláveis, atualizáveis e governáveis** — especialmente útil quando «uma pessoa configura, a equipe inteira reutiliza».
@@ -90,7 +89,7 @@ Só extensões que a equipe consegue manter, revogar e auditar cabem no longo pr
 
 ## Comparação com Claude Code / outros ecossistemas
 
-«Plugin» não significa exatamente a mesma coisa em cada produto. Ao comparar, olhe: **o que empacota, modelo de Permissão, se é open source auditável** — veja [comparação de recursos](/guide/reference/feature-comparison/) e KimYx0207 CX-14 (fatos precisam de reconfirmação).
+«Plugin» não significa exatamente a mesma coisa em cada produto. Ao comparar, olhe: **o que empacota, modelo de Permissão, se é open source auditável** — veja [comparação de recursos](/guide/reference/feature-comparison/).
 
 ## Erros comuns
 
@@ -99,10 +98,7 @@ Só extensões que a equipe consegue manter, revogar e auditar cabem no longo pr
 - Ativar Plugin experimental em repositório de produção
 
 ## Fontes
-
 - Documentação OpenAI Codex Plugins
-- KimYx0207 CX-07; stormzhang `23-plugins.md`
-
 ---
 
 **Status:** outdated  

@@ -145,12 +145,7 @@ description: 同时推进多个 Agent 任务，避免把自己拖进合并冲突
 4. [多 Agent 协作工作流](/cases/workflows/multi-agent-coordination/)
 
 ## 参考来源
-
 - OpenAI Codex 多任务/任务协作相关文档
-- KimYx0207 Codex 目录中的任务协作思路
-- stormzhang `21-subagents.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **状态：** outdated  

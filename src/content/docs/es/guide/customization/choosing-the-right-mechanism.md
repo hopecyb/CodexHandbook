@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El problema de muchos equipos suele ser **poner la misma información en el lugar equivocado**: reglas que deberían estar en el repositorio van al chat, flujos que deberían ser un Skill se meten en `AGENTS.md`, y datos que deberían conectarse solo lectura reciben un MCP de alto permiso.
 
 Aquí importa una pregunta práctica:
@@ -202,13 +201,7 @@ Así es más fácil estabilizar primero el **consenso de colaboración** y ampli
 - [Cómo elegir el método de extensión](/skills/choosing-an-extension-method/)
 
 ## Referencias
-
 - Documentación oficial de OpenAI Codex (según la versión actual)
-- Enfoque de organización AGENTS/Skill de freestylefly/CodexGuide
-- Temas de extensión y automatización en el directorio Codex de KimYx0207《AI-Coding-Guide-Zh》
-- stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Estado:** verificado  

@@ -82,11 +82,6 @@ Làm rõ ràng buộc (thời gian, tech stack, phần không được sửa)
 - [Làm việc theo đặc tả](/cases/workflows/specification-driven-work/)
 - [Yêu cầu kế hoạch](/prompts/ask-for-a-plan/)
 
-## Nguồn tham chiếu
-
-- Làm rõ nhu cầu và so sánh phương án của CodexGuide
-- Mẫu tác vụ và phương pháp chọn đề trên codex.bozhouai.com
-
 ---
 
 **Trạng thái:** verified  

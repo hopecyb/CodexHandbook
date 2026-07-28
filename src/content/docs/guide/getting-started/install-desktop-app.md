@@ -42,7 +42,6 @@ description: 安装并打开 Codex 桌面应用。
 
 若失败：见 [桌面 App 排障](/guide/desktop-app/troubleshooting/)。
 
-
 ---
 
 **状态：** outdated  

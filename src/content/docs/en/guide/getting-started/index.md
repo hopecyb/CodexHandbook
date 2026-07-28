@@ -27,7 +27,6 @@ Short on time: [First 30 minutes](/guide/getting-started/first-30-minutes/) · r
 
 Installation steps change with versions—also check [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** review  

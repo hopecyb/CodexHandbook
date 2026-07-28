@@ -103,11 +103,9 @@ Não adivinhe lógica de negócio a partir do ecrã; trate só visual e layout.
 - [Contexto sensível](/guide/context/sensitive-context/)
 
 ## Referências
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## Aceitação
 
 Para Tarefas «implementar segundo a imagem»:

@@ -167,11 +167,9 @@ Finally suggest modification directions.
 Clearer than "help me fix" and easier to continue from.
 
 ## Reference sources
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **Status:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Aqui, «Artefato» é o que a Tarefa entrega no fim, por exemplo:
 
 - Um documento
@@ -89,7 +88,6 @@ Pode seguir esta ordem:
 3. Veja problemas pequenos na camada de experiência
 
 Conseguir correr só diz que a base não partiu; poder entregar ainda depende do efeito de uso final.
-
 
 ---
 

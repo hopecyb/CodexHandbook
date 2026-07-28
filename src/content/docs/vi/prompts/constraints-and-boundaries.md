@@ -100,7 +100,6 @@ Mục tiêu bảo Codex làm gì; ràng buộc bảo nó dừng ở đâu.
 
 Ranh giới quyền nên viết cùng ràng buộc, giảm vượt quyền «tiện tay». Trang liên quan: [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/) và [Quyền và Sandbox](/guide/permissions-and-sandbox/).
 
-
 ---
 
 **Trạng thái:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 インストール手順は [デスクトップ App のインストール](/guide/getting-started/install-desktop-app/) と [https://developers.openai.com/codex](https://developers.openai.com/codex) を参照してください。
 
 デスクトップ App を開いた直後は、画面上に多くの情報が同時に表示されます。
@@ -48,7 +47,6 @@ translated_at: 2026-07-28
 ここで説明しているのは論理領域であり、具体的なボタン名ではありません。
 
 まず「タスク入力」「変更確認」「承認」の 3 つを見つけ、使いながら慣れていきましょう。
-
 
 ---
 

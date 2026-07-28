@@ -3,7 +3,6 @@ title: 什么是 AGENTS.md
 description: 项目级持久指令文件——给 Codex 的「协作合同」，不是架构百科。
 ---
 
-
 `AGENTS.md` 是放在仓库（或子目录）里的 **Markdown 项目指令**，Codex 在进入该项目时会读取，用来对齐编码风格、测试要求、提交规范和禁区。
 
 可以把 `AGENTS.md` 理解成“这个项目希望 Codex 怎么配合”的说明书。
@@ -120,11 +119,7 @@ description: 项目级持久指令文件——给 Codex 的「协作合同」，
 `AGENTS.md` 负责告诉 Codex“这个项目平时怎么做事”，而不是替你描述这一次具体要做什么。
 
 ## 参考来源
-
 - OpenAI Codex 项目上下文说明
-- freestylefly/CodexGuide：`docs/advanced/02-agents-md.md`
-- stormzhang/ai-coding-guide：`codex/11-agents-md.md`
-
 ---
 
 **状态：** verified  

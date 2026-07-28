@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Las imágenes permiten al Agent **ver** problemas de interfaz, intención de diseño o bocetos de pizarra. Esta página cubre la entrada (imágenes que aportas) y la gestión de archivos de imagen en el repositorio; para generar imágenes nuevas, ver [Generación de imágenes](/guide/tools/image-generation/).
 
 Al encargar una tarea con capturas, conviene que sepa dónde mirar y por qué ahí hay un problema.
@@ -104,11 +103,9 @@ No adivines lógica de negocio a partir de la captura; solo trata lo visual y el
 - [Contexto sensible](/guide/context/sensitive-context/)
 
 ## Referencias
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## Aceptación
 
 Para tareas del tipo «implementar según la imagen»:

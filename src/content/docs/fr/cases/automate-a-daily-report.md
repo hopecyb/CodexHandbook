@@ -24,10 +24,6 @@ translated_at: 2026-07-28
 
 **Critères de succès :** Une commande ou un Skill produit un Markdown au format fixe ; en cas d'échec, code de sortie explicite.
 
-## 2. Référence
-
-L'équipe dispose déjà d'un cas similaire : [Vérification planifiée des liens de documentation](/cases/use-cases/team-automation/scheduled-link-check/).
-
 ## 3. Prompt recommandé
 
 ```text

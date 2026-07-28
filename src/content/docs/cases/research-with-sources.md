@@ -58,11 +58,6 @@ description: 用 Codex 做检索、比较与事实核验——产出可追溯的
 - [处理不确定性](/guide/quality/handle-uncertainty/)
 - [案例：文档重构与审查](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## 参考来源
-
-- CodexGuide 研究与引用方法
-- stormzhang 搜索与核验章节
-
 ---
 
 **状态：** verified  

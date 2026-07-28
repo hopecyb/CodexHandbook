@@ -149,11 +149,7 @@ For long tasks, follow up via [desktop App notifications](/guide/desktop-app/not
 - Periodically clean up unused environment templates and Secrets
 
 ## References
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10, CX-11
-
 ---
 
 **Status:** outdated  

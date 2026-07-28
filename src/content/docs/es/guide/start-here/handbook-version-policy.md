@@ -10,7 +10,6 @@ sidebar:
   order: 8
 ---
 
-
 ## Actualización continua
 
 Este handbook no se congela a largo plazo a un número de versión concreto de Codex. El producto cambia, así que cada página marca su fiabilidad actual con un estado y una fecha de verificación.
@@ -80,7 +79,6 @@ Si te preocupa que una página esté desactualizada, mira estas tres cosas:
 3. Si habla de conceptos, o de instalación, configuración y permisos, que cambian con facilidad
 
 Cuando se trate del comportamiento, parámetros y reglas más recientes, al final manda la documentación oficial actual.
-
 
 ---
 

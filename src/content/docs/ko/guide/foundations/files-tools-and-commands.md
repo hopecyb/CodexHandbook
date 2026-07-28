@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 일반 챗봇과의 가장 큰 차이는 **도구**로 일을 한다는 점입니다.
 
 파일은 고치는 장소이고, 명령은 동작을 하는 방식이며, 도구는 손을 대는 입구입니다.
@@ -96,7 +95,6 @@ Codex는 「말하기」만이 아니라 파일·명령·도구로 실제로 손
 1. [권한과 승인](/guide/foundations/permissions-and-approvals/)
 2. [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
 3. [첫 작업 실행](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

@@ -10,7 +10,6 @@ sidebar:
   order: 4
 ---
 
-
 Ziel: In einem **sicheren Übungsprojekt** die erste Aufgabe abschließen und prüfen, annehmen, anpassen oder rückgängig machen lernen.
 
 Standardweg: **Desktop-App**. Wenn du eher Terminal oder Editor gewohnt bist, gelten die Installationsseiten trotzdem — das Beispiel zur ersten Aufgabe weist Unterschiede aus.
@@ -72,7 +71,6 @@ Minimaler Kreislauf:
 6. Rückgängig oder korrigieren lernen
 
 Wenn dieser Kreislauf sitzt, fällt komplexerer Stoff leichter.
-
 
 ---
 

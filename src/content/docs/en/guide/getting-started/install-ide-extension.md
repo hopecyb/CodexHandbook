@@ -15,7 +15,6 @@ translated_at: 2026-07-26
 
 Next: [IDE local task workflow](/guide/ide/local-task-workflow/). Troubleshooting: [IDE troubleshooting](/guide/ide/troubleshooting/).
 
-
 ---
 
 **Status:** review  

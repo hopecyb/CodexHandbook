@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 L'App de bureau est le point d'entrée par défaut pour les débutants : visualiser projets, Tâches, Diff et Approbations.
 
 ## Dans ce chapitre
@@ -25,7 +24,6 @@ L'App de bureau est le point d'entrée par défaut pour les débutants : visuali
 - [Dépannage](/guide/desktop-app/troubleshooting/)
 
 Premiers pas : [Installer l'App de bureau](/guide/getting-started/install-desktop-app/)
-
 
 ---
 

@@ -83,7 +83,6 @@ Cada conhecimento tem uma página autoritativa; caminhos e casos usam resumos co
 
 Esta seção explica principalmente a ordem e os limites do começo, e também antecipa alguns riscos evidentes.
 
-
 ---
 
 **Status:** verified  

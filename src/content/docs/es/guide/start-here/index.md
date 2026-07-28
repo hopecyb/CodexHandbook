@@ -83,7 +83,6 @@ Cada tema tiene una página canónica; las rutas y los casos usan resúmenes con
 
 Esta sección explica el orden y los límites del arranque, y adelanta varios riesgos claros.
 
-
 ---
 
 **Estado:** verified  

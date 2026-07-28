@@ -123,11 +123,7 @@ Python なら `pandas` で読み書き。Node なら `csv-parse` / `xlsx` など
 - [ ] 元ファイルが意図せず上書きされていない（または diff で見える）
 
 ## 参考資料
-
-- stormzhang データ処理チュートリアル
-- codex.bozhouai.com 表タスクテンプレート
 - [制約の定義](/prompts/constraints-and-boundaries/)
-
 ---
 
 **状態：** verified  

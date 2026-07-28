@@ -124,12 +124,6 @@ Typisch:
 
 Teamregel-Strategie beginnt damit zu klären, **wer welche Schicht setzt** — dann erst, wie Regeln geschrieben werden.
 
-## Quellen
-
-- freestylefly/CodexGuide Team-Governance und Playbook
-- KimYx0207 Unternehmenssicherheit
-- codex.bozhouai.com Team-Config-Fälle (Aufgabenarten als Referenz)
-
 ---
 
 **Status:** verified  

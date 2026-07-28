@@ -181,11 +181,9 @@ Codex가 “디자인 리뷰처럼 이미지를 보기”를 원한다면, 먼�
 보통 “고쳐 줘”보다 분명하고, 이후 작업도 이어가기 쉽습니다.
 
 ## 참고 출처
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **상태:** verified  

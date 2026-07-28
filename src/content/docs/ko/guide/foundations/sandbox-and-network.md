@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 「샌드박스」와 「네트워크」는 사실 두 가지입니다. 샌드박스는 어디에 닿을 수 있는지, 네트워크는 어디에 연결할 수 있는지를 제한합니다.
 
 **샌드박스**는 Agent가 닿을 수 있는 파일 시스템과 일부 시스템 능력을 제한해 오조작 면을 줄입니다. **네트워크 접근**은 또 다른 위험 층입니다. 프롬프트의 민감 정보가 유출되거나, 신뢰할 수 없는 데이터를 가져올 수 있습니다.
@@ -66,7 +65,6 @@ translated_at: 2026-07-28
 제품 측 설정 입구는 데스크톱 App [설정](/guide/desktop-app/settings/)을, 공식 세부는 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 보세요.
 
 처음에는 위험을 아직 모를 때 문을 한꺼번에 열지 말고, 조금 더 제한하는 편이 낫습니다.
-
 
 ---
 

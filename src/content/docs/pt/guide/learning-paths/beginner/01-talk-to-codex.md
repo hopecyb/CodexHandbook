@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo deste passo
 
 Explica em frases completas **o que queres** e **o que não queres** — não lances só algumas palavras.
@@ -49,7 +48,6 @@ Se nem Tarefas só de leitura ficam claras, Tarefas de alteração desviam-se ai
 Leitura, explicação e resumo também precisam de limites.
 
 Seguinte: [Trabalhar com ficheiros](/guide/learning-paths/beginner/02-work-with-files/) · Princípio: [Fundamentos de Prompt](/prompts/basics/)
-
 
 ---
 

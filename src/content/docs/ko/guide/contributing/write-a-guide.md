@@ -115,15 +115,9 @@ PR 전에 [기술 내용 검증](/guide/contributing/verify-technical-content/)�
 
 좋은 가이드 페이지는 “자료를 다 썼는지”가 아니라, 처음 온 독자가 왜 있는지·먼저 무엇을 볼지·다음에 어디로 갈지를 알게 하는 데 있습니다.
 
-## 참고 출처 쓰기
-
-```markdown
 ## 참고 출처
-
 - OpenAI Codex 공식 문서
-- 커뮤니티 구조 참고: CodexGuide(주제만, 원문 아님)
 ```
-
 ---
 
 **상태:** verified  

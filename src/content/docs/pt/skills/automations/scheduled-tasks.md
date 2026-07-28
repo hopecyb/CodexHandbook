@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Automations** fazem o Codex executar Tarefas automaticamente sob **agenda, eventos de repositório ou triggers externos** — por exemplo checagem de atualização de dependências, sync de docs, scan periódico de saúde.
 
 ## Conteúdo desta página
@@ -94,11 +93,7 @@ Divida em várias Automations + [transferência e retomada](/guide/agent-work/ha
 - [ ] Equipe conhece a conta bot e as regras de Aprovação
 
 ## Fontes
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - Documentação oficial OpenAI Codex Cloud / Automations
-
 ---
 
 **Status:** outdated  

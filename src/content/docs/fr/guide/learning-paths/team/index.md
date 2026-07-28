@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Statut MVP : cette page est un aperçu. Instructions partagées, gouvernance et métriques seront développées dans les jalons ultérieurs (y compris la Partie 11).
 
 ## Lire maintenant
@@ -20,7 +19,6 @@ translated_at: 2026-07-28
 ## Étapes prévues (plan)
 
 Instructions partagées → Permissions et gouvernance → flux standardisés → qualité et sécurité → déploiement et métriques
-
 
 ---
 

@@ -34,7 +34,6 @@ Así suele caer antes en la página correcta.
 
 Soporte y documentación oficiales: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
-
 ---
 
 **Estado:** verified  

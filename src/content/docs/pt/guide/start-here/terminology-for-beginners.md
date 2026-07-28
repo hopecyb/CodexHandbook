@@ -92,7 +92,6 @@ Quando aparecer uma palavra nova, consulte aqui e continue lendo.
 
 Na primeira leitura do handbook, trate estes termos como pistas. Saber aproximadamente o que significam é mais prático do que memorizar tudo de início.
 
-
 ---
 
 **Status:** verified  

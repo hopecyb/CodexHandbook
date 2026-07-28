@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Término | Definición |
 |---|---|
 | Agent | Forma de ejecución que llama Herramientas y avanza por iteración hacia un objetivo |
@@ -62,7 +61,6 @@ Puedes hacer esto:
 3. Ir a la página temática para la explicación completa
 
 Así un término no interrumpe demasiado el ritmo de lectura.
-
 
 ---
 

@@ -73,11 +73,6 @@ Combine with [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/):
 - [Run tests](/guide/quality/run-tests/)
 - [Case: Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## References
-
-- stormzhang testing and quality chapters
-- CodexGuide developer workflows
-
 ---
 
 **Status:** verified  

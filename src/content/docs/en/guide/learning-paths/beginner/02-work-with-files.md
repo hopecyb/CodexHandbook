@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 ## Goal for this step
 
 Name a specific file and complete one controlled edit.
@@ -23,7 +22,6 @@ When done, list the lines you changed.
 Review the diff before accepting. Related: [File and folder context](/guide/context/file-and-folder-context/)
 
 Next: [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
-
 
 ---
 

@@ -95,7 +95,6 @@ description: 好提示词的基本组成。
 
 示例见 [运行第一次任务](/cases/first-task/) 与 [好任务的结构](/prompts/task-anatomy/)。
 
-
 ---
 
 **状态：** verified  

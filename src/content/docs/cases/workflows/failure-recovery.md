@@ -76,11 +76,6 @@ description: 任务跑偏、测试变红或上下文耗尽时——如何安全�
 - [交接与恢复](/guide/agent-work/handoff-and-resume/)
 - [错误参考](/guide/reference/error-reference/)
 
-## 参考来源
-
-- freestylefly/CodexGuide 复盘与 playbook
-- stormzhang 排错章节
-
 ---
 
 **状态：** verified  

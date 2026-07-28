@@ -64,11 +64,9 @@ Für die meisten Anfänger ist die **Desktop-App** entspannter: Die Oberfläche 
 - Offizielle Installation und Produktänderungen: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## Quellen
-
 - OpenAI Academy: Getting started with ChatGPT
 - OpenAI Academy: Using ChatGPT
 - OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
-
 ## Eine typische Startreihenfolge
 
 So kannst du vorgehen:
@@ -80,7 +78,6 @@ So kannst du vorgehen:
 5. Ergebnis prüfen und den nächsten Schritt entscheiden
 
 Vor dem Start: Die erste Aufgabe in einer sicheren, kleinen, rücknehmbaren Umgebung durchziehen ist effizienter, als zuerst einen Berg an Konzepten nachzuholen.
-
 
 ---
 

@@ -70,11 +70,6 @@ Pode combinar com [rever diffs](/guide/quality/review-diffs/); itens de alto ris
 - [Revisão de código Cloud](/guide/web-and-cloud/code-review/)
 - [Criar Pull Requests](/guide/web-and-cloud/create-pull-requests/)
 
-## Fontes de referência
-
-- Capítulos Review/PR de KimYx0207
-- Fluxos Git/GitHub em codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

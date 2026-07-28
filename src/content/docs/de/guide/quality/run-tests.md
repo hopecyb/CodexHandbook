@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Nach der Änderung braucht es einen Weg zu bestätigen, dass nichts Offensichtliches kaputt ist.
 
 Dieser „Beweis“ kann automatische Tests sein, ein erfolgreicher Build oder klare manuelle Schritte.
@@ -70,7 +69,6 @@ Sagen Sie, welche Überprüfungen Sie wirklich ausgeführt haben; wenn nicht mö
 ```
 
 Überprüfung darf leicht sein, aber nicht fehlen — sonst hält „fertig“ kaum.
-
 
 ---
 

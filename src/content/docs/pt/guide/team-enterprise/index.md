@@ -93,12 +93,6 @@ Podes começar por:
 
 Se o foco atual é o arranque individual, deixa este capítulo para depois; volta quando fores fazer adoção em equipa, gestão de Permissões ou controlo de risco.
 
-## Fontes de referência
-
-- Capítulos de segurança e empresa de KimYx0207
-- Playbook de equipa freestylefly/CodexGuide
-- Tutoriais de segurança de stormzhang
-
 ---
 
 **Estado:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Skill** é um diretório que contém `SKILL.md` (opcionalmente scripts e material de referência). Empacota um fluxo fixo em uma capacidade que o Codex pode **chamar automaticamente ou de forma explícita**.
 
 Serve para métodos de trabalho que já se repetem e continuarão sendo reutilizados.
@@ -114,10 +113,7 @@ Skill não é obrigatório no começo; serve melhor para organizar fluxos que j�
 - Usar scripts no lugar de passos que poderiam ser descritos com clareza — difícil de manter
 
 ## Fontes
-
 - Documentação OpenAI Codex Skills
-- KimYx0207 CX-06; stormzhang `22-skills.md`
-
 ---
 
 **Status:** verified  

@@ -143,10 +143,7 @@ Nicht vollautomatisieren, solange der Ablauf noch instabil ist; zuerst als Skrip
 - [ ] Verhalten konsistent mit lokalem `make review`
 
 ## Quellen
-
 - OpenAI Codex + GitHub-Integrationsdokumentation
-- Automatisierungskapitel auf codex.bozhouai.com
-
 ---
 
 **Status:** outdated  

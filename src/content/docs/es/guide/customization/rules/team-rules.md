@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Al usar Codex en equipo, la **política de reglas** responde: qué restricciones unifica toda la empresa, cuáles mantiene el repositorio y si el individuo aún puede relajarlas. Este capítulo es la perspectiva de gobernanza de [reglas de comandos](/guide/customization/rules/command-rules/) y [patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Contenido
@@ -124,12 +123,6 @@ Suele corresponder a:
 - [ ] Hay un canal para feedback de «bloqueos falsos» (plantilla de issue o formulario interno)
 
 Lo más importante de la política de reglas de equipo es aclarar primero «quién fija el límite de cada capa» y luego decidir cómo escribir las reglas.
-
-## Referencias
-
-- Gobernanza de equipo y playbook de freestylefly/CodexGuide
-- Capítulos de seguridad empresarial de KimYx0207
-- Casos de configuración de equipo en codex.bozhouai.com (referencia de tipos de tarea)
 
 ---
 

@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Be explicit about relevant paths:
 
 ```text
@@ -17,7 +16,6 @@ Please read only src/components/Button.tsx and its test file. Do not scan the en
 ```
 
 Opening too many irrelevant files wastes context and introduces false associations. In the IDE, verify the current workspace root is correct.
-
 
 ---
 

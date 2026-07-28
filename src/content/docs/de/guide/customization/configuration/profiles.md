@@ -97,10 +97,7 @@ Damit sind die meisten Fälle abgedeckt.
 Profile lohnt sich, weil Sie in unterschiedlichen Risikoszenarien schnell zu einer durchdachten Default-Kombination wechseln.
 
 ## Quellen
-
-- stormzhang `18-config.md`
 - OpenAI-Codex-Profiles-Dokumentation
-
 ---
 
 **Status:** outdated  

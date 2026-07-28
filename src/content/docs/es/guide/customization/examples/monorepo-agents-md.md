@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 En un monorepo conviven varias apps, paquetes compartidos y stacks distintos: un `AGENTS.md` gigante hace que el Agent **cambie el paquete equivocado** o ejecute el test equivocado. Esta página ofrece un patrón reutilizable de **explicación por capas** (ejemplo; adáptalo a tu repositorio).
 
 ## Qué cubre esta página
@@ -125,12 +124,6 @@ Si se parece más a la 1 → raíz; si a la 2 o 3 → mejor en el subpaquete.
 - [ ] Las tareas entre paquetes dejan claras en el prompt las rutas permitidas
 
 En un monorepo, AGENTS.md no necesita concentrarse a toda costa; lo más adecuado es que el «consenso global» y las «reglas locales de directorio» vivan cada uno en su sitio.
-
-## Referencias
-
-- Playbook de monorepo de freestylefly/CodexGuide
-- Capítulo de repositorios grandes de codex.bozhouai.com
-- Prácticas de monorepo y Git de stormzhang
 
 ---
 

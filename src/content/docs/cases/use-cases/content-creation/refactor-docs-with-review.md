@@ -67,10 +67,7 @@ description: 案例：在 Astro/Starlight 文档项目中批量更新链接与�
 - ROADMAP 勾选完成项，避免文档与计划脱节
 
 ## 参考来源
-
 - 本仓库实际 M2 文档迭代流程
-- codex.bozhouai.com 文档维护案例（结构参考）
-
 ---
 
 **状态：** verified  

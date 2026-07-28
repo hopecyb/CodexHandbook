@@ -63,7 +63,6 @@ Lộ trình này coi trọng hơn ranh giới, quy tắc và nghiệm thu, chứ
 
 Hướng dẫn dùng chung → Quyền và quản trị → Quy trình chuẩn hóa → Chất lượng và bảo mật → Lan tỏa và đo lường
 
-
 ---
 
 **Trạng thái:** verified  

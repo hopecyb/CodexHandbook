@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Bei der Fehlerbehebung zuerst die wahrscheinlichsten und einfachsten Ursachen prüfen.
 
 | Symptom | Zuerst versuchen |
@@ -45,7 +44,6 @@ Zuerst den Rahmen enger ziehen:
 - bei Bedarf neuen Thread starten
 
 Fehlerbehebung beginnt bei den häufigsten, leichtesten Ursachen — nicht bei der komplexesten Theorie.
-
 
 ---
 

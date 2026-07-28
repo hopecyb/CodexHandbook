@@ -44,7 +44,6 @@ Khi bắt đầu gặp các tình huống này thì đáng học:
 
 Worktree là công cụ cô lập nâng cao, không phải mục bắt buộc khi mới dùng Codex.
 
-
 ---
 
 **Trạng thái:** outdated  

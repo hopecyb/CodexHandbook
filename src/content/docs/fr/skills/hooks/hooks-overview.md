@@ -119,12 +119,7 @@ Les Hooks conviennent aux vérifications automatiques aux points clés du systè
 - [ ] Config incluse en revue de code
 
 ## Sources de référence
-
 - Documentation OpenAI Codex Hooks
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide audit et conformité
-
 ---
 
 **Statut :** obsolète  

@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El valor de las integraciones de Codex no es solo conectar una herramienta más: es meter al Agent en las cadenas de colaboración que ya usas — hosting de código, flujo de tickets, notificaciones, plataformas internas, bases de conocimiento.
 
 Antes de empezar, merece la pena aclarar:
@@ -195,13 +194,7 @@ En la primera integración, dejar que Codex te ayude a «ver» y «sugerir» sue
 - Colaboración en repositorios Cloud: ver [Web y Cloud](/guide/web-and-cloud/)
 
 ## Referencias
-
 - Documentación oficial de OpenAI Codex sobre integraciones y desarrolladores
-- Capítulos de integración y automatización Codex en *AI-Coding-Guide-Zh* de KimYx0207
-- Capítulos `26-git-github.md` y de automatización de stormzhang
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **Estado:** verificado  

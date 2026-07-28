@@ -88,11 +88,7 @@ Exact UI and buttons depend on the current product.
 - Running unbounded tasks on a large monorepo on the first try
 
 ## References
-
 - OpenAI Codex Cloud / GitHub integration docs
-- KimYx0207 CX-10, CX-11
-- stormzhang `26-git-github.md`, `10-cloud.md`
-
 ---
 
 **Status:** outdated  

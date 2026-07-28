@@ -53,7 +53,6 @@ Kern der Review-Vorlage: Risiken entlang fester Dimensionen aufdecken — kein v
 - [Review vor dem Merge](/cases/workflows/review-before-merge/)
 - [PR-Review-Fall](/cases/review-a-pr/)
 
-
 ---
 
 **Status:** verified  

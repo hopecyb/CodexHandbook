@@ -59,7 +59,6 @@ Häufigste Ursachen der IDE-Fehlerbehebung: Workspace, Login oder Kontextquelle 
 
 Official: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** verified  

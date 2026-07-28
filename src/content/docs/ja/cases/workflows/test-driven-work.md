@@ -73,11 +73,6 @@ TDD に従ってください：まず @src/foo.ts の「空入力は [] を返�
 - [テストの実行](/guide/quality/run-tests/)
 - [ケース：検証付き Bug 修正](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## 参考出典
-
-- stormzhang テストと品質章
-- CodexGuide 開発者ワークフロー
-
 ---
 
 **状態：** verified  

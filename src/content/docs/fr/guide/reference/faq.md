@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Q : Quel client utiliser en premier ?**  
 R : Application de bureau. Voir [Choisir votre client](/guide/getting-started/choose-your-codex-client/).
 
@@ -23,7 +22,6 @@ R : La doc officielle l'emporte : [https://developers.openai.com/codex](https://
 
 **Q : Où sont les parcours complets créateur/développeur/équipe ?**  
 R : Vue d'ensemble MVP uniquement. Voir [Parcours d'apprentissage](/guide/learning-paths/).
-
 
 ---
 

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 More extension mechanisms mean higher cost when you pick the wrong one. This page helps you decide whether you need a Plugin or MCP before you install.
 
 These names get mixed up most often:

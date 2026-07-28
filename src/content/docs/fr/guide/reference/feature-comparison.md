@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Le tableau ci-dessous est pour l'apprentissage ; les capacités réelles dépendent du produit actuel.
 
 | Capacité | App de bureau | CLI | IDE | Cloud |
@@ -21,7 +20,6 @@ Le tableau ci-dessous est pour l'apprentissage ; les capacités réelles dépend
 | Suivi approbation mobile | Selon notifications/remote | Faible | Faible | Selon produit |
 
 Guide de sélection : [Choisir votre client Codex](/guide/getting-started/choose-your-codex-client/)
-
 
 ---
 

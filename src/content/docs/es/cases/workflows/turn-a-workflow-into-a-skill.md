@@ -67,11 +67,7 @@ Comparación con [Convertir un proceso en automatización](/skills/automations/s
 - [ ] Enlace cruzado con el documento del flujo de origen
 
 ## Fuentes de referencia
-
-- Capítulos de Skills de KimYx0207
-- `20-skills.md` de stormzhang
 - [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) y [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md) del repo
-
 ---
 
 **Estado:** verified  

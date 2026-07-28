@@ -170,11 +170,7 @@ Las variables de entorno encajan en valores que cambian, son sensibles o solo ha
 - Asumir que tras `unset` los subprocesos siguen seguros — hay que mirar el árbol de procesos
 
 ## Fuentes de referencia
-
 - Documentación de configuration / environment de OpenAI Codex
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Estado:** verified  

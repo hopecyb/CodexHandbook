@@ -85,10 +85,7 @@ SDK kích hoạt Cloud hoặc remote runner, hoặc CI gọi ngược dịch v�
 - Tự động merge PR do SDK tạo ra
 
 ## Nguồn tham chiếu
-
 - OpenAI Codex SDK reference
-- Chương tích hợp nhà phát triển KimYx0207
-
 ---
 
 **Trạng thái:** verified  

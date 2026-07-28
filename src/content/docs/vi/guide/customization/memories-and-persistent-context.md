@@ -108,11 +108,7 @@ Ba câu càng gần “có”, càng phù hợp vào bộ nhớ.
 Bộ nhớ phù hợp nhất lưu “sở thích cá nhân luôn phải nói lại và ít sự kiện ổn định”, không phù hợp thay tài liệu kho, quy tắc nhóm và quản lý thông tin nhạy cảm.
 
 ## Nguồn tham khảo
-
 - Tài liệu memory OpenAI Codex (lấy phiên bản làm chuẩn)
-- stormzhang `19-memory.md`
-- Chương bộ nhớ codex.bozhouai.com (tham khảo cấu trúc)
-
 ---
 
 **Trạng thái:** verified  

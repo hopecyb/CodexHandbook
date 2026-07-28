@@ -77,7 +77,6 @@ Kurz: „fertig?“ darf kein Rätselraten sein.
 
 Schreib Verifikationsbefehle in den Standard — dann führt der Agent sie eher aus: [Tests ausführen](/guide/verification/)
 
-
 ---
 
 **Status:** verified  

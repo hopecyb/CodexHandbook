@@ -128,12 +128,7 @@ Richtung: HTTPS + Token, erreichbare Mirrors, oder Doku: Cloud unterstützt inte
 - [ ] Team weiß, welche Daten nicht in vernetzte Prompts gehören
 
 ## Quellen
-
 - OpenAI Codex Cloud Netz- und Security-Dokumentation
-- stormzhang `10-cloud.md`, `19-security.md`
-- KimYx0207 CX-10, CX-11
-- Cloud-Kapitel auf codex.bozhouai.com
-
 ---
 
 **Status:** outdated  

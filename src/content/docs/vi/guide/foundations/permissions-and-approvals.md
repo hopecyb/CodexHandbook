@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex không nên thực thi thao tác rủi ro cao khi chưa được đồng ý. **Phê duyệt** là cánh cổng trong cộng tác người–máy.
 
 Nếu Codex có thể đọc bất kỳ tệp nào, tùy ý lên mạng, tùy ý chạy lệnh — một khi hiểu sai tác vụ, cái giá sẽ rất cao.
@@ -72,7 +71,6 @@ Thường thì không. Bạn có thể từ chối, rồi để nó đổi cách
 Chính sách chính thức và giá trị mặc định có thể thay đổi — hãy đối chiếu [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Vai trò của phê duyệt là để việc «được phép làm hay không» luôn do bạn quyết định.
-
 
 ---
 

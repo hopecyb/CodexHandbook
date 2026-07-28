@@ -106,11 +106,6 @@ Minimale Grenze zuerst glattziehen, dann verfeinern.
 
 Gute Allow-/Deny-Regeln machen vorab klar, welche Aktionen vernünftig sind und welche nicht vorkommen sollten.
 
-## Quellen
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 Kapitel Berechtigungskonfiguration
-
 ---
 
 **Status:** verified  

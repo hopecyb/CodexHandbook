@@ -10,7 +10,6 @@ translated_at: 2026-07-28
 
 Na primeira vez que cria o projeto de prática, é tentador testar direto no projeto oficial que já tem em mãos. Parece mais prático — e o risco também é maior.
 
-
 ## Prática recomendada
 
 1. Crie uma pasta nova, por exemplo `codex-practice/`
@@ -59,7 +58,6 @@ Se for criar um agora, atenda pelo menos a estas 4 condições:
 4. Mudanças fáceis de entender de relance
 
 O primeiro projeto de prática não precisa parecer produção. Seguro, simples e fácil de reverter se errar já basta.
-
 
 ---
 

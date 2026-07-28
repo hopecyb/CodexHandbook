@@ -109,10 +109,7 @@ Codex が新しく作ったファイルだからといって、そのまま使�
 - [ ] secrets や余分な生成ディレクトリがない
 
 ## 参考資料
-
 - [不確実性の扱い](/guide/quality/handle-uncertainty/)
-- external-source-integration ケースの検証要件
-
 ---
 
 **状態：** verified  

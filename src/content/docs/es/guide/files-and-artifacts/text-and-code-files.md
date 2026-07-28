@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La mayoría de las tareas de desarrollo caen en **archivos de texto y código**: fuente, tests, configuración, Markdown. Esta página explica cómo limitar el alcance, mantener el estilo coherente y fusionar con seguridad.
 
 Al hacer que Codex cambie texto o código, lo clave es cambiar el sitio correcto, de la forma correcta, y no tocar de más.

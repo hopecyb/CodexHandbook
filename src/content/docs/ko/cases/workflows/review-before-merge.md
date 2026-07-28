@@ -70,11 +70,6 @@ checklist를 출력하고 P0/P1을 표시하세요.
 - [Cloud 코드 검토](/guide/web-and-cloud/code-review/)
 - [Pull Request 만들기](/guide/web-and-cloud/create-pull-requests/)
 
-## 참고 출처
-
-- KimYx0207 Review/PR 장
-- codex.bozhouai.com Git/GitHub 워크플로
-
 ---
 
 **상태:** verified  

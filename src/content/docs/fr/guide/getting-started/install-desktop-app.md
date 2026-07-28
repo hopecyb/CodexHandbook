@@ -20,7 +20,6 @@ translated_at: 2026-07-28
 
 Si l'installation échoue : [Dépannage App de bureau](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **Statut :** review  

@@ -20,7 +20,6 @@ translated_at: 2026-07-26
 
 Next step: [Getting started](/guide/getting-started/).
 
-
 ---
 
 **Status:** review  

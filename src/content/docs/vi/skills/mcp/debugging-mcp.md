@@ -77,11 +77,7 @@ Chỉ mục lỗi: [tham chiếu lỗi và thông báo](/guide/reference/error-r
 - [ ] Ghi template cấu hình MCP chuẩn của nhóm
 
 ## Nguồn tham chiếu
-
 - Đặc tả Model Context Protocol và hướng dẫn gỡ lỗi
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **Trạng thái:** outdated  

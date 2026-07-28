@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 As «instruções do projeto» são o **Contexto estático** com que o Codex compreende o repositório; não se limitam a um único formato de ficheiro.
 
 ## Conteúdo

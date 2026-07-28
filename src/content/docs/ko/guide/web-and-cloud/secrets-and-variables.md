@@ -126,11 +126,7 @@ Cloud 작업은 사설 API, 패키지 저장소, 데이터베이스에 접근해
 - [ ] 퇴사/로테이션 프로세스가 정의됨
 
 ## 참고 출처
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`、`10-cloud.md`
-- KimYx0207 보안과 엔터프라이즈 장(사실은 공식 재검토 필요)
-
 ---
 
 **상태：** outdated  

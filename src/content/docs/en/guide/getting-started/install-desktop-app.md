@@ -21,7 +21,6 @@ translated_at: 2026-07-26
 
 If install fails: [Desktop App troubleshooting](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **Status:** review  

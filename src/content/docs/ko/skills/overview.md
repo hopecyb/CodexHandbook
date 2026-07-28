@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Skill**은 `SKILL.md`를 담은 디렉터리(스크립트와 참고 자료를 추가할 수 있음)로, 고정된 절차를 Codex가 **자동 또는 명시적으로 호출**할 수 있는 능력으로 패키징한 것입니다.
 
 이미 반복되었고 앞으로도 계속 쓸 작업 방식을 담기에 적합합니다.
@@ -114,10 +113,7 @@ Skill은 시작에 필수인 요소가 아니라, 이미 반복되는 절차를 
 - 분명하게 서술할 수 있는 단계를 스크립트로 대체해 유지보수가 어려워짐
 
 ## 참고 출처
-
 - OpenAI Codex Skills 문서
-- KimYx0207 CX-06; stormzhang `22-skills.md`
-
 ---
 
 **상태:** verified  

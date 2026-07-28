@@ -83,7 +83,6 @@ Das Ziel bestimmt die Lieferung; der Hintergrund ergänzt das Warum.
 
 Verwandt: Projektweiten Kontext in [Projektkontext](/guide/context/project-context/) ablegen, statt lange Wiederholungen in jedem Prompt.
 
-
 ---
 
 **Status:** verified  

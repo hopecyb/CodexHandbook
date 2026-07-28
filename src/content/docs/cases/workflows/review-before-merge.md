@@ -65,11 +65,6 @@ description: 在 merge 之前用 Codex 做结构化 diff 与风险审查——�
 - [Cloud 代码审查](/guide/web-and-cloud/code-review/)
 - [创建 Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## 参考来源
-
-- KimYx0207 Review/PR 章节
-- codex.bozhouai.com Git/GitHub 工作流
-
 ---
 
 **状态：** verified  

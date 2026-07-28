@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Modo interativo» significa conversar com o Codex no terminal, num vai-e-vem: ele explica, executa e, quando preciso, espera a sua confirmação.
 
 É também um dos usos comuns da CLI.
@@ -53,7 +52,6 @@ Na primeira vez, faça uma Tarefa pequena assim:
 - No fim, peça-lhe para explicar o que mudou
 
 O modo interativo da CLI é um fluxo de Tarefa conversacional no terminal. O diretório tem de estar certo e o Prompt também claro.
-
 
 ---
 

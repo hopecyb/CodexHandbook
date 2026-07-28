@@ -58,7 +58,6 @@ A Thread é como um recipiente; a Tarefa é um trabalho concreto dentro do recip
 
 O projeto define onde ele age; a Thread define que histórico ele carrega; a Tarefa define o que deve concluir desta vez.
 
-
 ---
 
 **Status:** verified  

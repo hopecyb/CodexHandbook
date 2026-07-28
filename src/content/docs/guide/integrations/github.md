@@ -3,7 +3,6 @@ title: GitHub 集成
 description: 仓库连接、PR、Review 与 CI——Codex 在 GitHub 工作流中的位置。
 ---
 
-
 GitHub 是 Codex 最常见的代码协作面：Cloud 任务、PR 审查、Actions 与本地 push 都围绕同一套分支与权限。
 
 这里主要说 Codex 怎么接入“代码仓库、分支、PR、Review”这套协作流程。
@@ -92,10 +91,7 @@ GitHub 集成的重点，是让 Codex 接入现有的代码协作流程。
 - 同一 PR 混合格式化与功能改动
 
 ## 参考来源
-
 - OpenAI Codex GitHub 集成文档
-- KimYx0207 CX-10；stormzhang `26-git-github.md`
-
 ---
 
 **状态：** verified  

@@ -119,10 +119,7 @@ Xem [Tổng quan SDK](/guide/developer-platform/sdk-overview/).
 - [ ] Thống nhất với chiến lược [mã thoát](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Nguồn tham chiếu
-
 - Thực hành chung OpenAI structured outputs (căn chỉnh khái niệm)
-- Chương đầu ra tự động hóa KimYx0207
-
 ---
 
 **Trạng thái:** verified  

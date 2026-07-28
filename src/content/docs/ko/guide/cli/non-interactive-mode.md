@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 비대화형 모드는 Codex가 **TTY 대화 없이** 작업을 마치게 하며, 개발자가 Agent를 스크립트와 CI에 연결하는 입구입니다.
 
 간단히 말해, 비대화형 모드는 주고 채팅이 아니라 작업을 한 번에 넘겨 실행하는 방식입니다.
@@ -109,11 +108,7 @@ codex exec --cwd . "main 대비 diff의 보안 위험을 나열하고, 파일은
 - CLI 버전을 고정하지 않아 파이프라인 동작이 갑자기 바뀜
 
 ## 참고 출처
-
 - OpenAI Codex CLI 문서
-- stormzhang `28-noninteractive.md`
-- KimYx0207 CX-12
-
 ---
 
 **상태:** outdated  

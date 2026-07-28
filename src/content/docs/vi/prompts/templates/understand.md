@@ -55,7 +55,6 @@ Giá trị của mẫu hiểu là giúp bạn thu hẹp phạm vi tác vụ ti�
 - [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
 - [Case hiểu codebase](/cases/understand-a-codebase/)
 
-
 ---
 
 **Trạng thái:** verified  

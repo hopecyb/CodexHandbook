@@ -100,10 +100,8 @@ Kein Ersatz für strenge Designlieferung.
 - Unternehmenspolicy kann Themen verbieten; [Acceptable Use](https://openai.com/policies/) und interne Regeln
 
 ## Quellen
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## Häufige Fehler
 
 - Unkomprimierte 4K-Bilder ins Repo

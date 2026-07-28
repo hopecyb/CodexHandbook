@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 O Codex não deve executar operações de alto risco sem consentimento. A **Aprovação** é a trava na colaboração humano–máquina.
 
 Se o Codex pudesse ler qualquer arquivo, acessar a rede à vontade e rodar comandos à vontade, o custo de entender mal a Tarefa seria alto.
@@ -72,7 +71,6 @@ Em geral, não. Você pode recusar e pedir que ele continue de um jeito mais seg
 Políticas oficiais e valores padrão podem mudar; confira [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 O papel da Aprovação é manter a decisão de «pode ou não pode» sempre com você.
-
 
 ---
 

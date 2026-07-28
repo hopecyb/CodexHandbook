@@ -40,7 +40,6 @@ IDE-Erweiterung installiert: Noch bestätigen, dass sie in deinem aktuellen Edit
 
 Weiter: [IDE-Workflow für lokale Aufgaben](/guide/ide/local-task-workflow/). Fehlerbehebung: [IDE-Fehlerbehebung](/guide/ide/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

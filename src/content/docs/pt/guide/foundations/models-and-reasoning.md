@@ -59,7 +59,6 @@ O mais importante é julgar: esta Tarefa vale pagar mais tempo e custo por «pen
 
 Este handbook não se vincula a nomes de marketing de modelos. Use a lista atual do seu cliente e [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** verified  

@@ -61,7 +61,6 @@ Bei wenig Zeit in dieser Reihenfolge:
 
 Menschliche Kontrolle lässt die letzte Entscheidung bei der Person, die für das Ergebnis verantwortlich ist.
 
-
 ---
 
 **Status:** verified  

@@ -66,7 +66,6 @@ translated_at: 2026-07-28
 - [완료 기준 정의](/prompts/define-done/)
 - [제약과 경계](/prompts/constraints-and-boundaries/)
 
-
 ---
 
 **상태:** verified  

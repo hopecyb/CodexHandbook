@@ -83,7 +83,6 @@ Mục tiêu quyết định giao gì; bối cảnh bổ sung vì sao phải làm
 
 Liên quan: bối cảnh cấp dự án có thể gửi xuống [Ngữ cảnh dự án](/guide/context/project-context/), tránh lặp đoạn dài trong mọi Prompt.
 
-
 ---
 
 **Trạng thái:** verified  

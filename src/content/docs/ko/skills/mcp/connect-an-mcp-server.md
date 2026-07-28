@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 이 페이지는 연결과 검증 절차에 초점을 둡니다. 프로토콜 세부와 서버 개발은 공식 MCP 문서를 참고하세요.
 
 ## 시작 전
@@ -93,10 +92,8 @@ MCP 설정을 바꾼 뒤에는 보통 Codex 세션을 재시작해 서버 목록
 낯선 도구를 처음 호출할 때 클라이언트가 확인을 띄울 수 있습니다. 예상된 동작입니다. 팀 규범에서 「모든 MCP 쓰기 작업을 영구 허용」을 권장하지 마세요.
 
 ## 참고 출처
-
 - OpenAI Codex MCP 설정 문서
 - modelcontextprotocol.io 서버 예시
-
 ---
 
 **상태:** outdated  

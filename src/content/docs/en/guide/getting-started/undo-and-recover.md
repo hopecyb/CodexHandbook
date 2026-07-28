@@ -17,7 +17,6 @@ When results go out of scope or quality is poor:
 
 Prevention beats recovery: small file scope, explicit prohibitions, plan before execute.
 
-
 ---
 
 **Status:** review  

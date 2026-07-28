@@ -47,7 +47,6 @@ Com o App desktop instalado, confirme primeiro que abre, faz login e mostra a en
 
 Se falhar: veja [Problemas no App desktop](/guide/desktop-app/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

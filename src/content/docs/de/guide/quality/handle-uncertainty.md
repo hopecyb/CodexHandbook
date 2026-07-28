@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Reicht die Information nicht: zuerst klären, dann weiter.
 
 Einer der unangenehmsten Fälle mit Codex: fehlende Informationen werden zu scheinbar vernünftigen Antworten aufgefüllt.  
@@ -87,7 +86,6 @@ Gibt es mehrere mögliche Interpretationen, listen Sie zuerst die Unsicherheiten
 ```
 
 Schlimmer als fehlende Information: Vermutung als Fakt weitertragen.
-
 
 ---
 

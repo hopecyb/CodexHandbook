@@ -88,7 +88,6 @@ Khi không chắc: Nêu hiểu biết và phạm vi thay đổi trước, rồi 
 
 Cấu trúc này chủ yếu để giảm đoán và làm nghiệm thu trực tiếp hơn. Có thể cắt bớt mẫu theo nhu cầu, nhưng bỏ đoạn nào thì chấp nhận mất phần thông tin đó.
 
-
 ---
 
 **Trạng thái:** verified  

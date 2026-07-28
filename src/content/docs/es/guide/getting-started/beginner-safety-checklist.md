@@ -12,7 +12,6 @@ Antes del primer uso, pregúntate: «Si se equivoca, ¿pagaré un precio demasia
 
 Esta lista existe para bajar el riesgo del primer uso.
 
-
 Marca antes de empezar:
 
 - [ ] Uso un directorio de práctica descartable, no un repositorio de producción
@@ -44,7 +43,6 @@ Los problemas más frecuentes la primera vez son:
 Puedes aprender usándolo, pero pasar por estos puntos antes de empezar es más seguro.
 
 La primera vez con Codex, baja primero el coste de equivocarte; después todo será más fácil.
-
 
 ---
 

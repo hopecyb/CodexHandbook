@@ -132,11 +132,7 @@ Nicht alle Befehle und Shortcuts auswendig. Erst klären: „Gespräch am Änder
 - [ ] Eine minimale nur-lesen-`codex exec`-Aufgabe schreiben können (falls Umgebung das bietet)
 
 ## Quellen
-
 - OpenAI-Codex-CLI-Dokumentation
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **Status:** outdated  

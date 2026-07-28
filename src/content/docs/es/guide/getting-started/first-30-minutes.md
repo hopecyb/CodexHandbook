@@ -96,7 +96,6 @@ Ve primero al [índice de resolución de problemas](/guide/reference/troubleshoo
 
 En los primeros 30 minutos, completar con tus manos un ciclo de «plantear Tarea, ver resultado, juzgar tú mismo» ya vale mucho.
 
-
 ---
 
 **Estado:** verified  

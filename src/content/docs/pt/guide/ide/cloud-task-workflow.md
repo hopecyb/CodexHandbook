@@ -100,11 +100,6 @@ As [Tarefas locais e Cloud](/guide/desktop-app/local-and-cloud-tasks/) da App de
 - Não indicar o nome do ramo e fazer push direto para um ramo partilhado
 - Tratar o resultado Cloud como «já aceite» e saltar o CI
 
-## Fontes de referência
-
-- stormzhang `10-cloud.md`, `09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **Estado:** outdated  

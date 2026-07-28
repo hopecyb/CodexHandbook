@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Personal minimum definition of done example:
 
 - [ ] Diff reviewed
@@ -19,7 +18,6 @@ Personal minimum definition of done example:
 - [ ] Follow-up issues noted
 
 Team version will expand in later governance milestones.
-
 
 ---
 

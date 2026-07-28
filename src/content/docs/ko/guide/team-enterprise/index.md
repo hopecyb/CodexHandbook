@@ -93,12 +93,6 @@ translated_at: 2026-07-28
 
 개인 입문이 주 관심이면 이 장은 나중에 두고, 팀 확산·권한 관리·위험 통제를 시작할 때 돌아오세요.
 
-## 참고 출처
-
-- KimYx0207 보안과 엔터프라이즈 장
-- freestylefly/CodexGuide 팀 playbook
-- stormzhang 보안 튜토리얼
-
 ---
 
 **상태：** verified  

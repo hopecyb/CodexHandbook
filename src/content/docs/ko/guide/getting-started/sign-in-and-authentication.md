@@ -76,7 +76,6 @@ translated_at: 2026-07-28
 
 인증 세부와 보안 안내는 공식을 기준으로 합니다: [https://developers.openai.com/codex](https://developers.openai.com/codex). 실패 시 [문제 해결 색인](/guide/reference/troubleshooting/)을 보세요.
 
-
 ---
 
 **상태:** outdated  

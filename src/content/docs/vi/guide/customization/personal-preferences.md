@@ -102,12 +102,6 @@ Nếu sản phẩm có «bộ nhớ» hoặc sở thích bền, xem [Bộ nhớ 
 - [ ] Ít nhất cấu hình Profile nghiêm cho một dự án khách
 - [ ] Trong kho không có khóa cá nhân
 
-## Nguồn tham khảo
-
-- Cấu hình cá nhân và nhóm freestylefly/CodexGuide
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Trạng thái:** verified  

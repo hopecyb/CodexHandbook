@@ -8,13 +8,11 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 - [Planification](/guide/agent-work/planning/)
 - [Progression et pilotage](/guide/agent-work/progress-and-steering/)
 - [Transfert et reprise](/guide/agent-work/handoff-and-resume/)
 
 Sous-Agents, orchestration parallèle, etc. sont reportés.
-
 
 ---
 

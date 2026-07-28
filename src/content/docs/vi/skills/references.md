@@ -45,7 +45,6 @@ Cũng có thể hiểu thẳng:
 Như vậy đọc Skill không bị đoạn nền dài đè trước; khi cần chi tiết vẫn tìm được căn cứ.
 
 ## Khi nào đáng tách `references/`
-
 Nếu trong `SKILL.md` bắt đầu xuất hiện các trường hợp sau, có thể cân nhắc tách:
 
 - Một đoạn quy chuẩn lớn mỗi lần đều chiếm chỗ
@@ -54,7 +53,6 @@ Nếu trong `SKILL.md` bắt đầu xuất hiện các trường hợp sau, có 
 
 Lần đầu làm Skill không nhất thiết phải có `references/`.  
 Thứ tự thường gặp là **chạy thông trước, rồi khi nội dung thật sự dài mới tách ra**.
-
 ## Hiểu lầm thường gặp
 
 ### 1. `references/` không chỉ là copy nội dung ra ngoài một chút
@@ -75,11 +73,6 @@ Quy trình chính vẫn nên ở `SKILL.md`, nếu không người khác lần �
 - Mỗi file tập trung một chủ đề, dễ bảo trì
 - Tránh lặp lại các bước đã có trong SKILL.md bên trong references
 
-## Khi nào đưa vào `references/`
-
-Nếu một đoạn trả lời"**làm theo quy tắc nào**", thường phù hợp hơn khi đưa vào `references/`; nếu trả lời "**làm bước nào trước**", nên giữ trong quy trình chính.
-
-`references/` dùng để rút ngắn quy trình chính; khi cần chi tiết mới mở rộng.
 ---
 
 **Trạng thái:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Diff» é o que o Codex alterou desta vez, de facto.
 
 Na primeira aceitação, muita gente só lê o resumo que ele escreveu e não vê as alterações reais.  
@@ -62,7 +61,6 @@ Na primeira leitura do diff:
 4. Depois se estilo e nomenclatura estão coerentes
 
 Primeiro veja claramente o que foi alterado de facto; depois decida se aceita o resultado.
-
 
 ---
 

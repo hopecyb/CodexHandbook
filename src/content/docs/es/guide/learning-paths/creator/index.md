@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Estado MVP: esta página es un resumen. Los cinco pasos completos (investigación, escritura, imágenes y presentaciones, prototipos web, flujos reutilizables) se completarán en hitos posteriores.
 
 Si quieres usar Codex sobre todo para contenido, y no para cambiar código, puedes empezar por esta ruta.
@@ -58,7 +57,6 @@ Esta ruta prioriza formular bien la demanda y poder comprobar el resultado.
 ## Pasos planificados (esquema)
 
 Investigación y temas → Escritura y edición → Imágenes y presentaciones → Web y prototipos → Flujos de contenido reutilizables
-
 
 ---
 

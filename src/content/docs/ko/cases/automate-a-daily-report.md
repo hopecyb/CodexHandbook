@@ -24,10 +24,6 @@ translated_at: 2026-07-28
 
 **성공 기준:** 한 명령 또는 Skill로 고정 형식 Markdown을 산출하고, 실패 시 명확한 종료 코드가 있어야 합니다.
 
-## 2. 참고 패러다임
-
-팀에 유사한 사례가 있습니다: [예약 문서 링크 검사](/cases/use-cases/team-automation/scheduled-link-check/).
-
 ## 3. 권장 프롬프트
 
 ```text

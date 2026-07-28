@@ -69,12 +69,6 @@ Nach jedem Meilenstein:
 - [ ] Mindestens zwei Prüfpunkte mit prüfbarem Diff
 - [ ] Klar, wie pausieren, fortsetzen oder übergeben wird
 
-## Referenzquellen
-
-- codex.bozhouai.com lange Aufgaben und Standard-Workflows
-- freestylefly/CodexGuide Aufgaben-Verstetigung
-- stormzhang `14-workflows.md`
-
 ---
 
 **Status:** verified  

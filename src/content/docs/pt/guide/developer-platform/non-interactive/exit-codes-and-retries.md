@@ -121,10 +121,7 @@ Primeiro distingue «é uma falha temporária ou não melhorará ao repetir?» e
 - [Recuperação perante falhas](/cases/workflows/failure-recovery/)
 
 ## Fontes de referência
-
 - Guia de retries da API da OpenAI (conceito)
-- Depuração de CI de stormzhang
-
 ---
 
 **Estado:** outdated  

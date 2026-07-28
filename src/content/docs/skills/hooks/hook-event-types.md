@@ -131,11 +131,7 @@ Hook 超时或崩溃应**默认安全**：生产环境倾向 block 或 fail clos
 - [ ] 配置纳入代码审查
 
 ## 参考来源
-
 - OpenAI Codex Hooks 参考
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-
 ---
 
 **状态：** outdated  

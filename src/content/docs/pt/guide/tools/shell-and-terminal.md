@@ -101,7 +101,6 @@ Antes de correr um comando, explique o propósito, se escreve ficheiros, se liga
 
 Antes de correr, confirme o que este comando vai alterar.
 
-
 ---
 
 **Estado:** verificado  

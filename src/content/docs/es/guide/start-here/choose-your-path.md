@@ -64,7 +64,6 @@ Cuando dudes, juzga en este orden:
 
 Empieza por la entrada más cercana a tu problema actual; luego puedes ajustar.
 
-
 ---
 
 **Estado:** verified  

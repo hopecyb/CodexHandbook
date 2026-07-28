@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Os ficheiros de configuração permitem **unificar o comportamento do Codex** na máquina ou no projeto, sem repetir em cada sessão o modelo, o nível de Aprovação ou a política de Sandbox.
 
 ## Conteúdo desta página
@@ -129,11 +128,7 @@ Os ficheiros de configuração podem incluir **listas brancas de caminhos, polí
 A configuração serve melhor para defaults que quase sempre escolhe de novo; não precisa de meter todas as regras no ficheiro de configuração.
 
 ## Referências
-
 - Documentação de configuração OpenAI Codex
-- stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 configuração de Permissões de instruções de projeto (factos a rever com a documentação oficial)
-
 ---
 
 **Estado:** verificado  

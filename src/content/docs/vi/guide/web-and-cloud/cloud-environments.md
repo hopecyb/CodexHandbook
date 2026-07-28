@@ -151,8 +151,6 @@ Với Tác vụ dài, theo dõi qua [thông báo App máy tính](/guide/desktop-
 ## Tham chiếu
 
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10, CX-11
 
 ---
 

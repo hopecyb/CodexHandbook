@@ -64,12 +64,6 @@ description: 跨小时或多会话的大任务——检查点、压缩、委托�
 - [ ] 至少两个检查点有可审查 diff
 - [ ] 知道如何暂停、恢复或移交
 
-## 参考来源
-
-- codex.bozhouai.com 长任务与标准工作流
-- freestylefly/CodexGuide 任务沉淀
-- stormzhang `14-workflows.md`
-
 ---
 
 **状态：** verified  

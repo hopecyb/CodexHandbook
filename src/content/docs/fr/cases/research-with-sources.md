@@ -63,11 +63,6 @@ Pour les longues recherches, découper en plusieurs tours ; voir [Gestion des t�
 - [Gérer l'incertitude](/guide/quality/handle-uncertainty/)
 - [Cas : refactorisation de documentation avec revue](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## Sources de référence
-
-- CodexGuide — méthodes de recherche et de citation
-- stormzhang — chapitres recherche et vérification
-
 ---
 
 **Statut :** verified  

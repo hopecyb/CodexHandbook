@@ -82,11 +82,6 @@ Constraints klar machen (Zeit, Tech-Stack, unveränderliche Teile)
 - [Spezifikationsgetriebene Arbeit](/cases/workflows/specification-driven-work/)
 - [Einen Plan erfragen](/prompts/ask-for-a-plan/)
 
-## Referenzquellen
-
-- CodexGuide Anforderungsklärung und Optionsvergleich
-- codex.bozhouai.com Aufgabenvorlagen und Themenmethoden
-
 ---
 
 **Status:** verified  

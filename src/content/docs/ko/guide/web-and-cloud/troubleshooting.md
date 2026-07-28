@@ -144,11 +144,7 @@ Cloud 조건을 정리하는 데만 두 라운드가 연속되고, 작업 자체
 CLI/IDE/App 로컬 문제는 [참고 자료 · 장애 분석](/guide/reference/troubleshooting/)을 보세요. 이 페이지는 **Cloud 고유** 링크만 다룹니다.
 
 ## 참고 출처
-
 - OpenAI Codex Cloud 지원 문서
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10～CX-11
-
 ---
 
 **상태：** outdated  

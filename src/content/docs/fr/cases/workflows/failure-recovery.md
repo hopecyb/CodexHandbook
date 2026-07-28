@@ -81,11 +81,6 @@ Multi-Agent : voir [Coordination multi-Agent](/cases/workflows/multi-agent-coord
 - [Transfert et reprise](/guide/agent-work/handoff-and-resume/)
 - [Référence des erreurs](/guide/reference/error-reference/)
 
-## Sources de référence
-
-- freestylefly/CodexGuide — post-mortems et playbook
-- stormzhang — chapitres de dépannage
-
 ---
 
 **Statut :** verified  

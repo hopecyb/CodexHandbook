@@ -90,7 +90,6 @@ sidebar:
 
 次のステップ：[パスを選ぶ](/guide/start-here/choose-your-path/)。
 
-
 ---
 
 **状態：** verified  

@@ -109,7 +109,6 @@ Weiterführende Seiten:
 2. [Begriffe für Anfänger](/guide/start-here/terminology-for-beginners/)
 3. [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **Status:** verified  

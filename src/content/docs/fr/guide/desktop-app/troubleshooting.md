@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Symptôme | Essayez d'abord |
 |---|---|
 | Impossible d'installer ou d'ouvrir | Vérifiez les prérequis système et l'installateur officiel ; redémarrez et réessayez |
@@ -18,7 +17,6 @@ translated_at: 2026-07-28
 | Changements inattendus | Resserrez les contraintes, démarrez un nouveau Fil, vérifiez le Contexte |
 
 Toujours bloqué : [https://developers.openai.com/codex](https://developers.openai.com/codex) et l'[index de dépannage](/guide/reference/troubleshooting/).
-
 
 ---
 

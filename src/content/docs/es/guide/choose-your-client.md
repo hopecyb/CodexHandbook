@@ -80,7 +80,6 @@ La primera elección es solo el punto de partida.
 
 Comparación completa: [comparación de funciones](/guide/reference/feature-comparison/). Puedes instalar varios clientes; **mantén el mismo directorio en el proyecto de práctica** para comparar con más facilidad.
 
-
 ---
 
 **Estado:** verified  

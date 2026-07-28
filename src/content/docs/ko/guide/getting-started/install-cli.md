@@ -54,7 +54,6 @@ CLI를 설치한 뒤, 현재 터미널이 그것을 찾고, 인증도 이어갈 
 
 상세 상호작용은 [CLI 대화형 모드](/guide/cli/interactive-mode/). 문제 해결: [CLI 문제 해결](/guide/cli/troubleshooting/).
 
-
 ---
 
 **상태:** outdated  

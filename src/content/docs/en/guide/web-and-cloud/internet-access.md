@@ -130,12 +130,7 @@ Mitigations: HTTPS + token, reachable mirrors, or document that Cloud cannot rea
 - [ ] Team knows what data must never appear in networked prompts
 
 ## References
-
 - OpenAI Codex Cloud network and security docs
-- stormzhang `10-cloud.md`, `19-security.md`
-- KimYx0207 CX-10, CX-11
-- codex.bozhouai.com Cloud sections
-
 ---
 
 **Status:** outdated  

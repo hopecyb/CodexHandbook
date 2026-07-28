@@ -54,13 +54,6 @@ Se um tipo de resultado deve sempre parecer parecido, use template — por exemp
 No primeiro Skill, `templates/` não é obrigatório.  
 Mas assim que você começar a repetir «saia neste formato», vale extrair.
 
-## Diferença em relação a references/
-
-| Diretório | Foco |
-|---|---|
-| `references/` | Normas de entrada, regras, API |
-| `templates/` | Formato de saída, estrutura de relatório |
-
 ## Equívocos comuns
 
 ### 1. Template só deixa o resultado «mais bonito»

@@ -101,12 +101,7 @@ The main value of code review automation is catching obvious issues before human
 - [ ] Team docs explain the role of AI review
 
 ## Reference sources
-
 - OpenAI Codex CI examples
-- KimYx0207 Review/PR chapter
-- stormzhang CI tutorials
-- codex.bozhouai.com Git/GitHub section
-
 ---
 
 **Status:** verified  

@@ -130,12 +130,7 @@ Cloud はこれらの条件を自動的に引き継ぎません。「ローカ�
 - [ ] チームがネットワーク付きプロンプトに置いてはいけないデータを把握している
 
 ## 参考ソース
-
 - OpenAI Codex Cloud ネットワークとセキュリティドキュメント
-- stormzhang `10-cloud.md`、`19-security.md`
-- KimYx0207 CX-10、CX-11
-- codex.bozhouai.com クラウド章
-
 ---
 
 **状態：** outdated  

@@ -44,7 +44,6 @@ translated_at: 2026-07-28
 
 worktree は応用の隔離ツールであり、Codex を始めるうえでの必須項目ではありません。
 
-
 ---
 
 **状態：** outdated  

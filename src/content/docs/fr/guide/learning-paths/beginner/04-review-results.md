@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objectif de cette étape
 
 Remplacer « jeter un œil et approuver » par une routine de revue fixe.
@@ -20,7 +19,6 @@ Listes de contrôle : [Examiner le résultat](/guide/getting-started/review-the-
 Donnez délibérément un Prompt vague facile à dépasser ; observez le plan. Rejetez les étapes hors portée, resserrez les contraintes et relancez.
 
 Suite : [Terminer votre premier petit projet](/guide/learning-paths/beginner/05-complete-first-project/)
-
 
 ---
 

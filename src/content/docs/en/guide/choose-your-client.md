@@ -80,7 +80,6 @@ First choice is only a starting point.
 
 Full comparison: [feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep practice projects in the same directory** to compare clients fairly.
 
-
 ---
 
 **Status:** verified  

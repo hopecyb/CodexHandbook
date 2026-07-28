@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El **Codex Handbook** es un sitio de documentación mantenido por la comunidad. Se aceptan correcciones de errores, páginas nuevas, casos reproducibles y ejemplos de prompt en [examples/](/examples/README.md).
 
 ## Contenido de esta página

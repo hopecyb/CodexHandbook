@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Al usar Codex, mucha gente se centra en «¿puede hacerlo?» y deja de lado otra pregunta: una vez hecho, ¿cómo confirmas que esta vez sí se puede aceptar?
 
 Eso es lo que trata este grupo. Hacer calidad y verificación sirve para evitar «parece terminado, pero aún no está estable».
@@ -32,7 +31,6 @@ La primera vez, puedes leer en este orden:
 4. Mira [Definición de hecho](/guide/quality/definition-of-done/) y aclara «qué cuenta como realmente terminado»
 
 Sin comprobación, «hecho» muchas veces solo parece hecho de momento.
-
 
 ---
 

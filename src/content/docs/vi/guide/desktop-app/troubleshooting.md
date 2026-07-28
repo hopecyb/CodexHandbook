@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Khi xử lý sự cố, lần theo thứ tự nguyên nhân dễ xảy ra và dễ xử lý nhất.
 
 | Triệu chứng | Thử trước |
@@ -45,7 +44,6 @@ Thu hẹp phạm vi vấn đề trước:
 - Khi cần thì mở thread mới
 
 Xử lý sự cố hãy xếp nguyên nhân phổ biến và dễ sửa trước — không cần nghĩ phức tạp ngay từ đầu.
-
 
 ---
 

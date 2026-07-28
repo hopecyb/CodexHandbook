@@ -75,7 +75,6 @@ Many beginners start with **local + desktop App**. Cloud details: [Web and Cloud
 
 Local is better for understanding the flow and making small changes. Cloud is better for longer, more standardized, more remote-collaborative work.
 
-
 ---
 
 **Status:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 [프롬프트](/prompts/)는 **어떻게 말할지**를 가르칩니다. 워크플로는 **한 일을 어떻게 조직할지**를 가르칩니다. 이 장의 방법은 App, CLI, IDE, Cloud에 적용됩니다.
 
 ## 왜 워크플로가 필요한가
@@ -52,12 +51,6 @@ translated_at: 2026-07-28
 2. **기본은 작은 걸음**: 검토 가능한 증분이 한 번의 거대한 변경보다 낫습니다
 3. **실패는 복구 가능해야 함**: 어떻게 취소할지, 어떻게 스레드를 fork해 이어갈지 알아야 합니다
 4. **정착할 수 있으면 정착**: 세 번째 반복되는 흐름은 Skill 또는 템플릿으로 씁니다
-
-## 참고 출처
-
-- freestylefly/CodexGuide 워크플로와 playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com 네 번째 표준 워크플로
 
 ---
 

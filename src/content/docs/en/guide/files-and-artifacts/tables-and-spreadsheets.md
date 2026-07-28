@@ -117,11 +117,7 @@ For spreadsheets, clarity on columns, types, rules, and acceptance matters most.
 - [ ] Source file not overwritten unexpectedly (or change visible in diff)
 
 ## Reference sources
-
-- stormzhang data processing tutorials
-- codex.bozhouai.com spreadsheet task templates
 - [Define constraints](/prompts/constraints-and-boundaries/)
-
 ---
 
 **Status:** verified  

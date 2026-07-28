@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 | Term | Definition |
 |---|---|
 | Agent | An execution approach that calls tools and iterates toward a goal |
@@ -26,7 +25,6 @@ translated_at: 2026-07-25
 | Worktree | An isolated working directory for parallel experiments |
 
 Beginner version: [Terminology for beginners](/guide/start-here/terminology-for-beginners/)
-
 
 ---
 

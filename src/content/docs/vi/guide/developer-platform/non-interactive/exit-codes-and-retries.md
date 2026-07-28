@@ -121,10 +121,7 @@ Hãy phân «đây là sự cố tạm thời, hay vốn không tốt hơn nhờ
 - [Phục hồi sau thất bại](/cases/workflows/failure-recovery/)
 
 ## Nguồn tham chiếu
-
 - Hướng dẫn thử lại OpenAI API (khái niệm)
-- Xử lý lỗi CI stormzhang
-
 ---
 
 **Trạng thái:** outdated  

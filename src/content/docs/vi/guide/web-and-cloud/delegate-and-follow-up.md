@@ -124,9 +124,6 @@ Bật [thông báo máy tính](/guide/desktop-app/notifications/) hoặc push mo
 ## Tham chiếu
 
 - Tài liệu Tác vụ OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `27-mobile.md`
-- KimYx0207 CX-10
-- Các phần hợp tác App/Cloud tại codex.bozhouai.com
 
 ---
 

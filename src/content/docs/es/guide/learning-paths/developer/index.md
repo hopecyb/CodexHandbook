@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Estado MVP: esta página es un resumen. Los cinco pasos completos se completarán en hitos posteriores.
 
 Si quieres usar Codex sobre todo para cambiar código, entender proyectos y corregir problemas, puedes empezar por esta ruta.
@@ -56,7 +55,6 @@ Esta ruta prioriza cambios controlables y resultados verificables, no solo «que
 ## Pasos planificados (esquema)
 
 Entender el repositorio → Corrección e implementación → Pruebas y revisión → Flujos automatizados → Desarrollo multi-Agent
-
 
 ---
 

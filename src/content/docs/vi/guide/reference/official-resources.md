@@ -71,7 +71,6 @@ Các câu hỏi kiểu dưới đây, xem chính thức đáng tin hơn:
 
 Hướng sẽ rõ hơn và ít giẫm phải thông tin hết hạn.
 
-
 ---
 
 **Trạng thái:** verified  

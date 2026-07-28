@@ -42,7 +42,6 @@ Nicht sofort kaputt — aber häufiger:
 
 Ohne Benachrichtigungen verpasst du Statuswechsel leichter.
 
-
 ---
 
 **Status:** outdated  

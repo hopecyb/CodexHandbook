@@ -126,11 +126,7 @@ Cloud タスクはプライベート API、パッケージリポジトリ、デ�
 - [ ] 退職/ローテーションプロセスが定義済み
 
 ## 参考ソース
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`、`10-cloud.md`
-- KimYx0207 セキュリティとエンタープライズ章（事実は公式で再検証が必要）
-
 ---
 
 **状態：** outdated  

@@ -47,7 +47,6 @@ Chìa khóa của Tác vụ rõ là mục tiêu, hạn chế và tiêu chí hoà
 
 Bước tiếp: [Xem xét kết quả](/guide/learning-paths/beginner/04-review-results/)
 
-
 ---
 
 **Trạng thái:** verified  

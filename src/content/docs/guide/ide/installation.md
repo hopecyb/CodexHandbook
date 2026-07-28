@@ -37,7 +37,6 @@ IDE 更依赖“你当前打开了什么文件、什么工程”。
 
 详细步骤见 [安装 IDE 扩展](/guide/getting-started/install-ide-extension/)。官方说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
 
-
 ---
 
 **状态：** outdated  

@@ -89,7 +89,7 @@ Les extensions que l'équipe peut maintenir, récupérer et auditer conviennent 
 
 ## Comparé à Claude Code / autres écosystèmes
 
-« Plugin » signifie des choses différentes selon les produits. Comparer : **ce qui est regroupé, modèle de permissions, open source auditable ou non** — voir [comparaison des fonctionnalités](/guide/reference/feature-comparison/) et KimYx0207 CX-14 (faits à revérifier).
+« Plugin » signifie des choses différentes selon les produits. Comparer : **ce qui est regroupé, modèle de permissions, open source auditable ou non** — voir [comparaison des fonctionnalités](/guide/reference/feature-comparison/).
 
 ## Erreurs courantes
 
@@ -98,10 +98,7 @@ Les extensions que l'équipe peut maintenir, récupérer et auditer conviennent 
 - Plugin expérimental activé dans dépôt de production
 
 ## Sources de référence
-
 - Documentation Plugins OpenAI Codex
-- KimYx0207 CX-07 ; stormzhang `23-plugins.md`
-
 ---
 
 **Statut :** obsolète  

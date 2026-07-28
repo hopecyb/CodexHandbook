@@ -56,7 +56,6 @@ Khi luyện lần đầu, có thể kiểm theo thứ tự này:
 
 Khi nghiệm thu, chủ yếu là xác nhận lần kết quả này có yên tâm nhận không.
 
-
 ---
 
 **Trạng thái:** verified  

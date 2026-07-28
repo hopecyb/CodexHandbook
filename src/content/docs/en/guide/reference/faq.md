@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 **Q: Which client should I use first?**  
 A: Desktop App. See [Choose your client](/guide/getting-started/choose-your-codex-client/).
 
@@ -22,7 +21,6 @@ A: Official docs win: [https://developers.openai.com/codex](https://developers.o
 
 **Q: Where are the full creator/developer/team paths?**  
 A: MVP overview only. See [Learning paths](/guide/learning-paths/).
-
 
 ---
 

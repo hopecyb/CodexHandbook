@@ -147,11 +147,7 @@ Include:
 Avoid mixing multiple changes.
 
 ## Reference sources
-
 - OpenAI Codex support documentation
-- stormzhang FAQ and troubleshooting chapters
-- KimYx0207 failure compendium (verify against official)
-
 ---
 
 **Status:** verified  

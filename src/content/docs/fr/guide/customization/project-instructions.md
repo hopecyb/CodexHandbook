@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Les « instructions projet » sont le **contexte statique** que Codex utilise pour comprendre un dépôt, pas limité à un seul format de fichier.
 
 ## Contenu

@@ -29,7 +29,6 @@ Stell dir Infos vor, auf die ein neuer Kollege in einem Chat angewiesen wäre:
 Zusammen ist das der Kontext, auf den es sich stützt.
 
 ## Typische Fehlerquellen
-
 Viele „warum hat es das schon wieder falsch verstanden?“-Fälle kommen nicht von einem „dummen“ Modell, sondern von Kontextproblemen, z. B.:
 
 - Zu wenig Information → es muss raten
@@ -40,7 +39,6 @@ Viele „warum hat es das schon wieder falsch verstanden?“-Fälle kommen nicht
 Der einfache Maßstab dieser Seite:
 
 > **Lass es wirklich relevante Information sehen — und irrelevante nicht den Platz stehlen.**
-
 ## Kontextmanagement
 
 - [Projektkontext](/guide/context/project-context/) — `AGENTS.md`, Repo-Vereinbarungen
@@ -82,7 +80,6 @@ Nicht alles auf einmal. Diese Reihenfolge hilft:
 3. Je nach Materialtyp die passende Datei-Kapitelseite
 
 Kontext ist der Informationshaufen, den Codex beim Urteilen griffbereit hat; richtig gegeben, werden Ergebnisse leichter richtig.
-
 
 ---
 

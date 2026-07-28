@@ -87,10 +87,7 @@ Aceitar só coloca as mudanças na área de trabalho; a seguir ainda tem de veri
 No IDE, «aceitar mudanças» é só um passo intermédio, não a aceitação final.
 
 ## Fontes de referência
-
 - [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Estado:** outdated  

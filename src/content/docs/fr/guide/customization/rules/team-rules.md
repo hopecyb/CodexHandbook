@@ -124,12 +124,6 @@ Généralement :
 
 La partie la plus importante de la politique de règles d'équipe est de savoir qui définit les frontières à quelle couche — puis comment écrire les règles.
 
-## Références
-
-- Gouvernance d'équipe et playbook freestylefly/CodexGuide
-- KimYx0207 chapitre sécurité entreprise
-- Cas de configuration d'équipe codex.bozhouai.com (référence de type de tâche)
-
 ---
 
 **Statut :** vérifié  

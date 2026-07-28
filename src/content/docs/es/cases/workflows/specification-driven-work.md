@@ -78,11 +78,6 @@ Los criterios de aceptación de la especificación deberían ser, en la medida d
 - [ ] Confirmación humana o escrita antes de ejecutar
 - [ ] Los cambios se sincronizan de vuelta al archivo de especificación
 
-## Fuentes de referencia
-
-- Capítulos de requisitos y descomposición de tareas de KimYx0207
-- Especificaciones y checklists de aceptación de freestylefly/CodexGuide
-
 ---
 
 **Estado:** verified  

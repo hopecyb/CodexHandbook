@@ -10,7 +10,6 @@ sidebar:
   order: 3
 ---
 
-
 Esta parte reúne os conceitos básicos que o handbook inteiro usa com frequência. Diferenças de interface de produto ficam em [Guias de produto](/guide/); técnicas de Prompt ficam em [Capacidades principais](/guide/).
 
 Este conjunto explica principalmente como o Codex funciona e como colaborar com ele.
@@ -67,7 +66,6 @@ Se não quiser ler o capítulo de uma vez, comece por estas páginas:
 5. [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
 
 Entender estas páginas já basta para o uso cotidiano.
-
 
 ---
 

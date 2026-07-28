@@ -75,7 +75,6 @@ Codex는 강하지만, 명확한 목표와 경계 안에서 더 잘 쓰이며, �
 
 다음 단계: [빠른 시작](/guide/getting-started/).
 
-
 ---
 
 **상태:** verified  

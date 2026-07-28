@@ -98,8 +98,6 @@ Có thể được với thí nghiệm solo; quá rủi ro với repo dùng chun
 - Dùng Skill hoặc `codex exec` trong CI cho **bình luận review bổ trợ**
 - Tự merge cần quản trị riêng — không phải đường mặc định cho người mới
 
-KimYx0207 CX-10 phủ Review/PR; xác nhận năng lực với tài liệu chính thức.
-
 ## Lỗi thường gặp
 
 - Một PR với nhiều tính năng không liên quan

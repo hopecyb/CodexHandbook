@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Sandbox» và «mạng» thực ra nói về hai việc: Sandbox giới hạn nó được chạm chỗ nào; mạng giới hạn nó được kết nối tới đâu.
 
 **Sandbox** giới hạn hệ tệp và một phần năng lực hệ thống mà Agent chạm tới được, giảm mặt phẳng thao tác nhầm. **Truy cập mạng** là một tầng rủi ro riêng: có thể làm lộ thông tin nhạy cảm trong nội dung Prompt, hoặc kéo về dữ liệu không đáng tin.
@@ -66,7 +65,6 @@ Hai cánh cửa không chỉ là thiết lập kỹ thuật — cũng là cách 
 Lối vào thiết lập phía sản phẩm xem [Cài đặt](/guide/desktop-app/settings/) của Desktop App; chi tiết chính thức xem [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Khi mới dùng, thà hạn chế nhiều hơn một chút trước — đừng mở hết cửa khi chưa hiểu rủi ro.
-
 
 ---
 

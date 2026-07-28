@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Termo | Definição |
 |---|---|
 | Agent | Forma de execução que chama Ferramentas e avança por iteração até um objetivo |
@@ -62,7 +61,6 @@ Podes fazer isto:
 3. Ir à página temática para a explicação completa
 
 Assim um termo não interrompe demasiado o ritmo de leitura.
-
 
 ---
 

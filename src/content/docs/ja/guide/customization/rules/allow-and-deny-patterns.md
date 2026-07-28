@@ -100,11 +100,6 @@ allowlist の目的を「割り込み削減」とだけ考えがちです。低�
 
 良い allow/deny ルールは、どの動作が妥当で、どれが起きてほしくないかを事前に明確にすることです。
 
-## 参考
-
-- stormzhang `15-permissions.md`、`18-config.md`
-- KimYx0207 権限設定章
-
 ---
 
 **状態：** verified  

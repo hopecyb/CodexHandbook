@@ -149,11 +149,7 @@ Pour les Tâches longues, suivre via [notifications App de bureau](/guide/deskto
 - Nettoyer périodiquement les modèles d'environnement et Secrets non utilisés
 
 ## Références
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10, CX-11
-
 ---
 
 **Statut :** obsolète  

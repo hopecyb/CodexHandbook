@@ -96,12 +96,7 @@ O trabalho do Agent valoriza sobretudo se a Tarefa continua a avançar na direç
 - Dividir subtarefas sem limites — a Thread principal fica mais confusa
 
 ## Referências
-
 - Explicações oficiais OpenAI Codex sobre colaboração e execução de Tarefas
-- Práticas de Tarefas colaborativas freestylefly/CodexGuide
-- Capítulos de fluxo de trabalho Codex em KimYx0207《AI-Coding-Guide-Zh》
-- Práticas de subtarefas e automação stormzhang
-
 ---
 
 **Estado:** verificado  

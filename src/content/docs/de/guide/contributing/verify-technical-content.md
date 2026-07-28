@@ -55,7 +55,7 @@ Nur nach Reproduktion, Abgleich mit offiziellen Belegen, passendem Umfang und Da
 
 ### Community-Artikel helfen verstehen, ersetzen keine Faktenprüfung
 
-CodexGuide, AI-Coding-Guide-Zh usw. helfen Themen zu finden.
+Community-Artikel helfen, Themen zu finden.
 
 Aber bei:
 
@@ -82,7 +82,7 @@ Als **ganze Operationskette** prüfen, nicht nur Wortlaut.
 1. **Umfang nennen**: Produkt (App/CLI/IDE/Cloud), OS, CLI-Version
 2. **Schrittweise reproduzieren**: von Null oder sauberem Worktree
 3. **Offizieller Beleg**: mindestens ein OpenAI-Docs- oder Help-Center-Link
-4. **Community-Quellen**: CodexGuide / KimYx0207 usw. nur Themenreferenz; Fakten offiziell
+4. **Community-Quellen**: Community-Artikel nur als Themenreferenz; Fakten offiziell
 5. **Datum**: Footer `Zuletzt geprüft: YYYY-MM-DD`
 6. **Unabhängiges Review**: `verified` idealerweise zweite Person ≠ Autor
 

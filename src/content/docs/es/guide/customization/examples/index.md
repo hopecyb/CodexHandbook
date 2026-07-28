@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Muchos principios se entienden al leerlos, pero al llegar a tu propio repositorio no sabes cómo aterrizarlos.
 
 La función de este grupo es mostrarte «cómo lo escriben otros», para convertir reglas abstractas en formas de escritura más concretas.

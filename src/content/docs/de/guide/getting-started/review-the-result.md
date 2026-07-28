@@ -56,7 +56,6 @@ Beim ersten Üben so:
 
 Bei der Abnahme geht es vor allem darum, ob du das Ergebnis beruhigt annehmen kannst.
 
-
 ---
 
 **Status:** verified  

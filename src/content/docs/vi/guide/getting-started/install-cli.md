@@ -54,7 +54,6 @@ CLI cài xong rồi, terminal hiện tại nên tìm thấy nó, và bạn cũng
 
 Tương tác chi tiết xem [Chế độ tương tác CLI](/guide/cli/interactive-mode/). Xử lý sự cố: [Xử lý sự cố CLI](/guide/cli/troubleshooting/).
 
-
 ---
 
 **Trạng thái:** outdated  

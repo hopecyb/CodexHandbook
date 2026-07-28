@@ -97,11 +97,7 @@ Hầu hết client cho phép gán lại. Đội có thể ghi liên kết **khuy
 Phím tắt không phải kỳ thi — làm mượt hành động làm đứt nhịp bạn nhiều nhất.
 
 ## Nguồn tham chiếu
-
 - Trang Cài đặt / Phím tắt chính thức của từng sản phẩm
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **Trạng thái:** outdated  

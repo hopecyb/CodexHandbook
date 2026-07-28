@@ -81,11 +81,6 @@ translated_at: 2026-07-28
 - [引き継ぎと再開](/guide/agent-work/handoff-and-resume/)
 - [エラー参照](/guide/reference/error-reference/)
 
-## 参考
-
-- freestylefly/CodexGuide の事後分析とプレイブック
-- stormzhang トラブルシューティング章
-
 ---
 
 **状態：** verified  

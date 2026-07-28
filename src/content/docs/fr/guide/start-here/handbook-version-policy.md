@@ -29,11 +29,6 @@ Ce handbook **n'est pas** figé de façon permanente sur un numéro de version C
 
 Pendant le MVP, chaque page se termine par : **Statut / Produits concernés / Dernière vérification**. Le contenu qui vieillit rapidement (installation, comptes, Permissions, modèles) doit renvoyer vers la documentation officielle.
 
-## Sources officielles
-
-Le comportement produit suit la documentation OpenAI : [https://developers.openai.com/codex](https://developers.openai.com/codex). Ce dépôt est un guide communautaire ; en cas de conflit avec la doc officielle, la doc officielle prime — les issues sont les bienvenues.
-
-
 ---
 
 **Statut :** review  

@@ -147,11 +147,7 @@ Inclure :
 Éviter mélanger plusieurs changements.
 
 ## Sources de référence
-
 - Documentation support OpenAI Codex
-- Chapitres FAQ et dépannage stormzhang
-- Compendium d'échecs KimYx0207 (vérifier contre officiel)
-
 ---
 
 **Statut :** vérifié  

@@ -77,11 +77,7 @@ Fehlerindex: [Fehler- und Hinweisreferenz](/guide/reference/error-reference/)
 - [ ] Team-Standard-MCP-Konfigvorlage dokumentiert
 
 ## Quellen
-
 - Model Context Protocol Spezifikation und Debug-Guide
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **Status:** outdated  

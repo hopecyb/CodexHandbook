@@ -67,7 +67,6 @@ Suchmaschinen liefern vor allem bestehende Webseiten; Codex wirkt eher so, dass 
 
 Am nützlichsten wird ein Sprachmodell, wenn genug Kontext da ist — dann kann es schnell entlang deines Ziels weiterarbeiten.
 
-
 ---
 
 **Status:** verified  

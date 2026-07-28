@@ -121,10 +121,7 @@ Séparer d'abord « panne temporaire » de « retry n'aidera pas », puis décid
 - [Récupération après échec](/cases/workflows/failure-recovery/)
 
 ## Sources de référence
-
 - Orientations retry API OpenAI (conceptuel)
-- Dépannage CI stormzhang
-
 ---
 
 **Statut :** obsolète  

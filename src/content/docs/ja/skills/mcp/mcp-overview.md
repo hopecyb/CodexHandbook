@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 MCP は標準的な接続方式で、Codex が外部ツールとデータソースに接続します。
 
 Codex に Jira 検索、ナレッジベース読み取り、内部 API アクセス、特定の制御されたツール操作をさせたい場合、「どう接続するか、何を呼べるか、権限をどう管理するか」の仕組みが必要です。**MCP（Model Context Protocol）** はそれを解決します。
@@ -120,11 +119,8 @@ Skill がフローを規定し、フローの某ステップで MCP ツールを
 - 設定変更をコードレビューに含めない
 
 ## 参考ソース
-
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - OpenAI Codex MCP ドキュメント
-- KimYx0207 CX-05；stormzhang `20-mcp.md`
-
 ---
 
 **状態：** outdated  

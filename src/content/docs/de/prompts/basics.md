@@ -100,7 +100,6 @@ Der Kern eines guten Prompts: weniger Raten, weniger Abschweifen, weniger Grenzv
 
 Beispiele: [Erste Aufgabe ausführen](/cases/first-task/) und [Aufgabenstruktur](/prompts/task-anatomy/).
 
-
 ---
 
 **Status:** verified  

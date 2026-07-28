@@ -145,13 +145,7 @@ In `AGENTS.md` kannst du festschreiben:
 Dann ist „zuerst Plan“ keine Ad-hoc-Erinnerung mehr, sondern Team-Default.
 
 ## Quellen
-
 - Plan- und Ausführungsansätze in der offiziellen OpenAI-Codex-Dokumentation
-- Aufgaben- und Kollaborationspraxis aus freestylefly/CodexGuide
-- Codex-Workflow-Kapitel in KimYx0207《AI-Coding-Guide-Zh》
-- Praktische Ausführungsmethoden aus der stormzhang-Codex-Serie
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Status:** verified  

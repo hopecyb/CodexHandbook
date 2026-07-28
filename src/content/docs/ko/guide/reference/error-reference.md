@@ -160,11 +160,7 @@ translated_at: 2026-07-28
 여러 변화를 한꺼번에 섞지 않게 하고, 다른 사람도 위치를 찾기 쉬워집니다.
 
 ## 참고 출처
-
 - OpenAI Codex 지원 문서
-- stormzhang FAQ와 장애 분석 장
-- KimYx0207 장애 모음(공식 재검토 필요)
-
 ---
 
 **상태：** verified  

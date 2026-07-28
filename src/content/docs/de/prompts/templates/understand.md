@@ -55,7 +55,6 @@ Wert der Verstehen-Vorlage: den Scope der nächsten Aufgabe zuerst eingrenzen.
 - [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
 - [Codebase verstehen (Fall)](/cases/understand-a-codebase/)
 
-
 ---
 
 **Status:** verified  

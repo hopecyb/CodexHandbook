@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Chừng nào kết luận phụ thuộc sự kiện bên ngoài, đừng chỉ nhận kết luận — hãy nhận luôn nguồn.
 
 Yêu cầu Agent:
@@ -43,7 +42,6 @@ Nhưng những nội dung sau đặc biệt đáng yêu cầu nguồn:
 - Đã lỗi thời chưa
 
 Trong tác vụ nghiên cứu, bản thân nguồn là một phần độ tin cậy của kết luận.
-
 
 ---
 

@@ -41,7 +41,6 @@ In Phase eins zuerst diese beiden Modi unterscheiden:
 
 Zum ersten Ausprobieren meist interaktiv; Automatisierung später mit dem nicht-interaktiven Modus.
 
-
 ---
 
 **Status:** verified  

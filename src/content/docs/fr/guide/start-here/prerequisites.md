@@ -28,7 +28,6 @@ sidebar:
 - Vous n'avez pas besoin de maîtriser Git ou un langage de programmation d'abord
 - Vous n'avez pas besoin d'installer tous les clients à la fois ; le MVP par défaut commence avec l'App de bureau
 
-
 ---
 
 **Statut :** review  

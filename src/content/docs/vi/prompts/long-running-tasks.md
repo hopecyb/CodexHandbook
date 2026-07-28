@@ -77,7 +77,6 @@ Cách phù hợp hơn là mỗi đoạn có thể dừng để kiểm, chứ kh�
 
 Kết hợp: [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/) · [Bàn giao và phục hồi](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Trạng thái:** verified  

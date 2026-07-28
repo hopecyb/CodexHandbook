@@ -83,12 +83,7 @@ Für den Konzeptüberblick zuerst [SDK-Überblick](/guide/developer-platform/sdk
 Dieses Kapitel behandelt „wie man Codex in Systeme einbindet“. Für den ersten Einstieg in Codex bleiben die früheren Einsteigerseiten maßgeblich.
 
 ## Quellen
-
 - Offizielle OpenAI-Codex-API-/SDK-Dokumentation
-- KimYx0207 Entwicklerkapitel
-- stormzhang CI- und Automatisierungs-Tutorials
-- Engineering-Beispiele auf codex.bozhouai.com
-
 ---
 
 **Status:** verified  

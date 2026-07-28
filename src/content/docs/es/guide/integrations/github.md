@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 GitHub es la cara de colaboración de código más habitual de Codex: tareas Cloud, revisión de PR, Actions y push local giran en torno al mismo conjunto de ramas y permisos.
 
 Aquí se habla sobre todo de cómo Codex se conecta al flujo de colaboración de «repositorio, ramas, PR, Review».
@@ -97,10 +96,7 @@ El foco de la integración con GitHub es meter a Codex en el flujo de colaboraci
 - Mezclar en el mismo PR formateo y cambio funcional
 
 ## Referencias
-
 - Documentación de integración GitHub de OpenAI Codex
-- KimYx0207 CX-10; stormzhang `26-git-github.md`
-
 ---
 
 **Estado:** verificado  

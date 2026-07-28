@@ -55,7 +55,6 @@ El criterio práctico es: la terminal actual lo encuentra y ya puedes autenticar
 También puedes contrastar: [Instalar la CLI](/guide/getting-started/install-cli/)
 Instalación y actualización oficiales: [OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Estado:** outdated  

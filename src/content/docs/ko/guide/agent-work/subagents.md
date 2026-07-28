@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Subagent**는 메인 Agent가 특정 하위 문제를 위해 시작하는 **독립 작업 단위**입니다. 상대적으로 격리된 컨텍스트를 갖고, 완료 후 결과를 메인 스레드로 모아 줍니다.
 
 Subagent를 “분명한 작은 작업을, 그 일만 보는 조수에게 따로 맡기는 것”으로 이해하세요. 가치는 “더 멋짐”이 아니라 “더 깨끗하고, 더 집중되며, 병행하기 쉬움”에 있습니다.
@@ -126,7 +125,6 @@ Subagent는 “경계가 분명하고, 납품이 명확하며, 독립 완료 가
 
 - [다중 Agent 협업](/cases/workflows/multi-agent-coordination/)
 - [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08; stormzhang `21-subagents.md`
 
 ---
 

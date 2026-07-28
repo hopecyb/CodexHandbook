@@ -31,7 +31,6 @@ Le texte principal est rédigé pour des **lecteurs peu familiers avec le termin
 
 Étape suivante : [Choisir votre parcours](/guide/start-here/choose-your-path/).
 
-
 ---
 
 **Statut :** review  

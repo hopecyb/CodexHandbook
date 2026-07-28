@@ -123,11 +123,7 @@ Em Tarefas de tabelas, o mais importante é clarificar colunas, tipos, regras e 
 - [ ] O ficheiro original não foi sobrescrito por acidente (ou a alteração é visível no diff)
 
 ## Referências
-
-- Tutoriais de tratamento de dados stormzhang
-- Modelos de Tarefas de tabelas em codex.bozhouai.com
 - [Definir restrições](/prompts/constraints-and-boundaries/)
-
 ---
 
 **Estado:** verificado  

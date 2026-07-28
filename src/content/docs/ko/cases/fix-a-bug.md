@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## 메타 정보
 
 | 필드 | 내용 |

@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 ## Projects
 
 - Add a practice directory or repository root
@@ -22,7 +21,6 @@ translated_at: 2026-07-26
 - Approve or reject when prompted
 
 Concept reference: [Threads, tasks, and projects](/guide/foundations/threads-tasks-and-projects/)
-
 
 ---
 

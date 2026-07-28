@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Das folgende Beispiel geht von der **Desktop-App** aus; CLI/IDE können denselben Prompt nutzen.
 
 Viele wollen beim ersten Mal Codex gleich „eine komplette Website bauen“ oder „das ganze Projekt refaktorieren“ lassen — das gerät leicht außer Kontrolle.
@@ -112,7 +111,6 @@ Oder:
 ```
 
 Prompt-Prinzipien: [Prompt-Grundlagen](/prompts/basics/).
-
 
 ---
 

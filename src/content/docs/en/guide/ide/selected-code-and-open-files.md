@@ -81,10 +81,7 @@ Product page: [IDE reviewing changes](/guide/ide/reviewing-changes/)
 | Accept all without reading diff | Style drift or security issues |
 
 ## References
-
 - [Constraints and boundaries](/prompts/constraints-and-boundaries/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Status:** verified  

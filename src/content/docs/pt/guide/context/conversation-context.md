@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Contexto da conversa» significa: o que disse antes com o Codex na mesma Tarefa continua a influenciar o que vem a seguir. Ajuda — e também traz risco.
 
 ## Por que é útil
@@ -90,7 +89,6 @@ A partir de agora discutimos só a revisão da página inicial. O conteúdo ante
 ```
 
 A mesma Thread prolonga a memória — e também arrasta bagagem antiga. Quando o tema muda, feche ativamente.
-
 
 ---
 

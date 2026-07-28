@@ -61,7 +61,6 @@ Wert der Vorlage: langfristig und sicher laufen lassen.
 - [Prompts für lange Aufgaben](/prompts/long-running-tasks/)
 - [Täglichen Report automatisieren (Fall)](/cases/automate-a-daily-report/)
 
-
 ---
 
 **Status:** verified  

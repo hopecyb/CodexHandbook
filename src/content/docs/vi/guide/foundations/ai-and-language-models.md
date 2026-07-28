@@ -67,7 +67,6 @@ Công cụ tìm kiếm chủ yếu trả về trang web có sẵn; Codex giống
 
 Chỗ mô hình ngôn ngữ hữu ích hơn là: khi đã có đủ ngữ cảnh, nó có thể nhanh chóng làm tiếp theo mục tiêu của bạn.
 
-
 ---
 
 **Trạng thái:** verified  

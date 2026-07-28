@@ -136,9 +136,7 @@ Commencer petit et stable facilite la réutilisation d'une routine claire.
 - API GitHub → [MCP](/skills/mcp/mcp-overview/)
 
 ## Sources
-
 - Exemples officiels Codex Skills et `skill-creator` (si fourni)
-
 ---
 
 **Statut :** verified  

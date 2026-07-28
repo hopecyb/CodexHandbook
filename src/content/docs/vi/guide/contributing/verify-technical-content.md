@@ -55,7 +55,7 @@ Chỉ khi bạn thật sự tái hiện, đối chiếu căn cứ chính thức,
 
 ### Bài cộng đồng giúp bạn hiểu, nhưng không thay kiểm chứng sự kiện
 
-Như CodexGuide, AI-Coding-Guide-Zh hoặc tài liệu cộng đồng khác rất hợp để giúp bạn thấy nên bổ sung chủ đề nào.
+Bài viết cộng đồng hoặc tài liệu cộng đồng khác rất hợp để giúp bạn thấy nên bổ sung chủ đề nào.
 
 Nhưng một khi liên quan:
 
@@ -82,7 +82,7 @@ Vậy phải kiểm theo “cả chuỗi thao tác”, không chỉ quét mặt 
 1. **Ghi rõ phạm vi**: sản phẩm (App/CLI/IDE/Cloud), OS, số phiên bản CLI
 2. **Tái hiện từng bước**: làm theo từ đầu hoặc worktree sạch
 3. **Căn cứ chính thức**: ít nhất một liên kết tài liệu chính thức OpenAI hoặc trung tâm trợ giúp
-4. **Nguồn cộng đồng**: nếu tham khảo CodexGuide / KimYx0207 v.v., chỉ lấy chủ đề; sự kiện lấy chính thức làm chuẩn
+4. **Nguồn cộng đồng**: nếu tham khảo tài liệu cộng đồng, chỉ lấy chủ đề; sự kiện lấy chính thức làm chuẩn
 5. **Cập nhật ngày**: chân trang `Kiểm chứng gần nhất: YYYY-MM-DD`
 6. **Rà độc lập**: `verified` khuyến nghị người thứ hai không phải tác giả xác nhận
 

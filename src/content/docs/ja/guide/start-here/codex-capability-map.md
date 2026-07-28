@@ -79,7 +79,6 @@ Skills、MCP、Hooks、自動化は確かに強力ですが、解決するのは
 
 拡張の選定マップは [拡張能力マップ](/skills/capability-map/)、製品対照は [機能対照](/guide/reference/feature-comparison/)。各入口の能力差は機能対照ページに記載。
 
-
 ---
 
 **状態：** verified  

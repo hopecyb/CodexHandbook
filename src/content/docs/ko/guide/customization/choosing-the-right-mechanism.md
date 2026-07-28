@@ -201,13 +201,7 @@ API token을 대화에 붙여 넣지 마세요.
 - [확장 방식 고르기](/skills/choosing-an-extension-method/)
 
 ## 참고 출처
-
 - OpenAI Codex 공식 문서(현재 버전 기준)
-- freestylefly/CodexGuide의 AGENTS/Skill 조직 관점
-- KimYx0207《AI-Coding-Guide-Zh》Codex 목차의 확장·자동화 특집
-- stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **상태:** verified  

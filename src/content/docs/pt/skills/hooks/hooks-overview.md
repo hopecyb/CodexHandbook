@@ -119,12 +119,7 @@ Hook serve a checagens automáticas nos nós-chave do sistema. Não é instruç�
 - [ ] Configuração entra na revisão de código
 
 ## Fontes
-
 - Documentação OpenAI Codex Hooks
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide auditoria e conformidade
-
 ---
 
 **Status:** outdated  

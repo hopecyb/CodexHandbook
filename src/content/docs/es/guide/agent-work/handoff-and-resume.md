@@ -86,7 +86,6 @@ Así evitas depender de un contexto viejo ya compactado, incompleto o deformado.
 
 Un buen traspaso no es recontar la historia; es hacer que quien abra la tarea la próxima vez sepa al instante: dónde estás, qué hacer después y cómo verificar al terminar.
 
-
 ---
 
 **Estado:** verificado  

@@ -61,7 +61,6 @@ Nếu thời gian có hạn, có thể theo thứ tự này:
 
 Vai trò của rà soát thủ công là để lần gật đầu cuối cùng thuộc về người thật sự chịu trách nhiệm về kết quả.
 
-
 ---
 
 **Trạng thái:** verified  

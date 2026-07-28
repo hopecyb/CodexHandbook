@@ -69,12 +69,6 @@ A cada marco concluído:
 - [ ] Pelo menos dois checkpoints com diffs revíveis
 - [ ] Saber como pausar, retomar ou transferir
 
-## Fontes de referência
-
-- Tarefas longas e fluxos padrão em codex.bozhouai.com
-- Consolidação de tarefas em freestylefly/CodexGuide
-- stormzhang `14-workflows.md`
-
 ---
 
 **Estado:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 非対話モードでは、Codex が **TTY 会話なし** でタスクを完了できます。Agent をスクリプトや CI に接続する入口です。
 
 要するに、非対話モードは往復チャットではなく、タスクを一度に渡して実行する方式です。  
@@ -108,11 +107,7 @@ codex exec --cwd . "main との diff からセキュリティリスクを列挙�
 - CLI バージョンを固定せず、パイプラインの挙動が突然変わる
 
 ## 参考ソース
-
 - OpenAI Codex CLI ドキュメント
-- stormzhang `28-noninteractive.md`
-- KimYx0207 CX-12
-
 ---
 
 **状態：** outdated  

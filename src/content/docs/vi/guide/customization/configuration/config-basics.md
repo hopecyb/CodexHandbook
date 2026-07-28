@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Tệp cấu hình để bạn trên máy hoặc trong dự án **thống nhất hành vi Codex**, không cần mỗi phiên lặp lại cài mô hình, mức phê duyệt hoặc chiến lược Sandbox.
 
 ## Nội dung trang này
@@ -129,11 +128,7 @@ Tệp cấu hình có thể chứa **danh sách trắng đường dẫn, chiến
 Cấu hình phù hợp hơn đặt những mục mặc định bạn gần như mỗi lần đều chọn lại; không cần nhét mọi quy tắc vào tệp cấu hình.
 
 ## Nguồn tham khảo
-
 - Tài liệu cấu hình OpenAI Codex
-- stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 cấu hình quyền chỉ thị dự án (sự kiện cần rà chính thức)
-
 ---
 
 **Trạng thái:** verified  

@@ -106,12 +106,7 @@ Les limites de sécurité doivent suivre le risque de la Tâche — pas la commo
 Commencer conservateur sur les Approbations et le Bac à sable CLI est généralement plus stable. Élargissez seulement quand vous savez ce que vous ouvrez.
 
 ## Références
-
 - Docs sécurité et Bac à sable CLI OpenAI Codex
-- stormzhang `17-permissions.md`, `19-security.md`
-- KimYx0207 CX-04, CX-13
-- freestylefly/CodexGuide sujets Approbation Bac à sable
-
 ---
 
 **Statut :** vérifié  

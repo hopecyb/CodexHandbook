@@ -3,7 +3,6 @@ title: 文件、工具与命令
 description: 说明 Codex 如何读写文件、运行命令和使用工具。
 ---
 
-
 它和普通聊天机器人最大的区别，在于它会通过 **工具** 去做事。
 
 文件是它改东西的地方，命令是它做动作的方式，工具是它动手的入口。
@@ -91,7 +90,6 @@ Codex 不只是会“说”，它会通过文件、命令和工具真的动手�
 1. [权限与审批](/guide/foundations/permissions-and-approvals/)
 2. [沙箱与网络](/guide/foundations/sandbox-and-network/)
 3. [运行第一次任务](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

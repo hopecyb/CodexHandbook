@@ -141,10 +141,7 @@ Ne précipitez pas « full auto » avant que le flux soit stable ; script d'abor
 - [ ] Correspond au comportement local `make review`
 
 ## Sources de référence
-
 - Docs intégration OpenAI Codex + GitHub
-- Chapitre automatisation codex.bozhouai.com
-
 ---
 
 **Statut :** obsolète  

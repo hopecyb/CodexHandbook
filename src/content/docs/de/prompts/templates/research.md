@@ -47,7 +47,6 @@ Zentrale Regel: jede wichtige Schlussfolgerung muss zur Quelle zurückführbar s
 - [Recherche mit Quellen (Fall)](/cases/research-with-sources/)
 - [Überprüfung](/guide/verification/)
 
-
 ---
 
 **Status:** verified  

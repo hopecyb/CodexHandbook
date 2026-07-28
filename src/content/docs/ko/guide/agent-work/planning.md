@@ -141,7 +141,6 @@ DB 변경은 독립 단계로 쪼개세요.
 - 중간 궤도 수정이 필요하면: [진행과 유도](/guide/agent-work/progress-and-steering/)
 - 장기 규범이 필요하면: [AGENTS.md란](/guide/customization/agents-md/what-is-agents-md/)
 
-
 ---
 
 **상태:** verified  

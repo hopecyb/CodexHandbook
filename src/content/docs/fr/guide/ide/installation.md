@@ -8,9 +8,7 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Voir [Installer l'extension IDE](/guide/getting-started/install-ide-extension/) et [https://developers.openai.com/codex](https://developers.openai.com/codex).
-
 
 ---
 

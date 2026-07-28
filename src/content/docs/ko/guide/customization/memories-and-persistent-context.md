@@ -106,11 +106,7 @@ translated_at: 2026-07-28
 기억은 “자꾸 반복하는 개인 선호와 소량의 안정적 사실”에 가장 잘 맞으며, 저장소 문서·팀 규칙·민감 정보 관리를 대체하기엔 맞지 않습니다.
 
 ## 참고 출처
-
 - OpenAI Codex memory 문서(버전 기준)
-- stormzhang `19-memory.md`
-- codex.bozhouai.com 기억 장(구조 참고)
-
 ---
 
 **상태:** verified  

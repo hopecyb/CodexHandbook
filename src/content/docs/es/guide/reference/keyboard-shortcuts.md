@@ -103,11 +103,7 @@ La mayoría de clientes permiten cambiar bindings en ajustes. El equipo puede do
 Los atajos no son materia de examen. Usar con fluidez los pocos que más te interrumpen suele bastar.
 
 ## Fuentes de referencia
-
 - Páginas oficiales de Settings / Keyboard shortcuts de cada producto
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **Estado:** outdated  

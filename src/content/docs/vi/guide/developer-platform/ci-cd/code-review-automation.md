@@ -101,12 +101,7 @@ Giá trị lớn nhất của tự động hóa review mã là sàng vấn đề
 - [ ] Tài liệu đội nêu rõ vị trí của AI review
 
 ## Nguồn tham chiếu
-
 - Ví dụ CI OpenAI Codex
-- Chương Review/PR KimYx0207
-- Hướng dẫn CI stormzhang
-- Phần Git/GitHub tại codex.bozhouai.com
-
 ---
 
 **Trạng thái:** verified  

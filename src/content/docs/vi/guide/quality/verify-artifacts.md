@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 “Artifact” ở đây là nội dung cuối cùng mà tác vụ giao lại, ví dụ:
 
 - Một bài tài liệu
@@ -89,7 +88,6 @@ Có thể kiểm theo thứ tự này:
 3. Xem còn vấn đề nhỏ ở lớp trải nghiệm không
 
 Chạy được chỉ nói nền tảng chưa hỏng; có giao được hay không còn phải xem hiệu quả sử dụng cuối cùng.
-
 
 ---
 

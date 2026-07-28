@@ -103,10 +103,8 @@ Có thể yêu cầu theo cấu trúc:
 - Chính sách doanh nghiệp có thể cấm một số chủ đề; tuân thủ [chấp nhận sử dụng](https://openai.com/policies/) và quy định nội bộ
 
 ## Nguồn tham khảo
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## Lỗi thường gặp
 
 - Commit thẳng ảnh 4K chưa nén vào kho
@@ -114,7 +112,6 @@ Có thể yêu cầu theo cấu trúc:
 - Không ràng buộc «không chữ» trong Prompt dẫn tới phụ đề loạn
 
 Tạo ảnh phù hợp đưa hướng và bản nháp trước; khi giao đối ngoại vẫn phải nghiệm thu theo chuẩn artifact chính thức.
-
 
 ---
 

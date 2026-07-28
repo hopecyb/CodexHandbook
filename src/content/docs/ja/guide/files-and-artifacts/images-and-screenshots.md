@@ -103,11 +103,9 @@ translated_at: 2026-07-28
 - [機密コンテキスト](/guide/context/sensitive-context/)
 
 ## 参考資料
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## 検証
 
 「図どおりに実装」系タスクでは：

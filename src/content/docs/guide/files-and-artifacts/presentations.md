@@ -140,12 +140,6 @@ description: 幻灯片与演示稿的生成、改版与导出——结构、母�
 - [ ] 在目标播放环境打开无字体错乱
 - [ ] 关键数据可追溯到源文件
 
-## 参考来源
-
-- codex.bozhouai.com 演示与汇报案例
-- stormzhang 内容创作相关章节
-- baoyu-slide-deck 类社区实践（结构参考）
-
 ---
 
 **状态：** verified  

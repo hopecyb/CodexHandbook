@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 Learning paths **only organize reading order**—they do not duplicate long-form product manuals or capability topics.
 
 ## MVP paths available
@@ -24,7 +23,6 @@ Learning paths **only organize reading order**—they do not duplicate long-form
 - [Creator](/guide/learning-paths/creator/)
 - [Developer](/guide/learning-paths/developer/)
 - [Team](/guide/learning-paths/team/)
-
 
 ---
 

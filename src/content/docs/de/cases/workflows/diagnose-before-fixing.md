@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex sofort zum Bugfixen zu bringen, führt oft zu hoher Nacharbeit. Der Diagnose-Workflow betont: **Symptom → Hypothese → Evidenz → minimale Korrektur**.
 
 ## Wann verwenden

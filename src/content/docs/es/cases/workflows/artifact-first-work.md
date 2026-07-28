@@ -58,11 +58,6 @@ Para artefactos visuales puedes pedir capturas o notas de previsualización; ver
 - [ ] Enlaces / índice / frontmatter válidos
 - [ ] Cumple [Definir terminado](/prompts/define-done/)
 
-## Fuentes de referencia
-
-- Tareas de docs y plantillas de codex.bozhouai.com
-- Flujo de producción de contenido de KimYx0207
-
 ---
 
 **Estado:** verified  

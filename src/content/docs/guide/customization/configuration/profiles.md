@@ -92,10 +92,7 @@ CLI 细节：[CLI 配置](/guide/cli/configuration/)
 Profile 的价值在于让你在不同风险场景下，快速切到一套已经想清楚的默认组合。
 
 ## 参考来源
-
-- stormzhang `18-config.md`
 - OpenAI Codex profiles 文档
-
 ---
 
 **状态：** outdated  

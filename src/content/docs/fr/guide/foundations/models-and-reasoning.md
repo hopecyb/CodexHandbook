@@ -16,7 +16,6 @@ Les modèles disponibles et les niveaux de « Raisonnement / thinking » évolue
 
 Ce handbook ne se verrouille pas sur un nom marketing de modèle spécifique. Utilisez la liste actuelle de votre client et [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Statut :** review  

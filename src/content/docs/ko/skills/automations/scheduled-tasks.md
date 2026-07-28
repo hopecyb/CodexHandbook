@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Automations**는 Codex가 **일정표, 저장소 이벤트, 외부 트리거**에서 작업을 자동 실행하게 합니다. 예: 의존성 업데이트 검사, 문서 동기화, 주기적 헬스 스캔.
 
 ## 이 페이지 내용
@@ -94,11 +93,7 @@ translated_at: 2026-07-28
 - [ ] 팀이 bot 계정과 승인 규칙을 알고 있음
 
 ## 참고 출처
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - OpenAI Codex Cloud / Automations 공식 설명
-
 ---
 
 **상태:** outdated  

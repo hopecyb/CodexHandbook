@@ -106,11 +106,7 @@ Nähern sich alle drei Antworten „ja“, passt Erinnerung eher.
 Erinnerung eignet sich am besten für „persönliche Vorlieben und wenige stabile Fakten, die man sonst wiederholt“ — nicht als Ersatz für Repo-Doku, Teamregeln und Geheimnisverwaltung.
 
 ## Quellen
-
 - OpenAI-Codex-Memory-Dokumentation (versionabhängig)
-- stormzhang `19-memory.md`
-- codex.bozhouai.com Erinnerungs-Kapitel (Strukturreferenz)
-
 ---
 
 **Status:** verified  

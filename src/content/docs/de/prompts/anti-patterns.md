@@ -83,7 +83,6 @@ Die meisten Prompt-Anti-Patterns scheitern nicht an „schlechtem Stil“, sonde
 
 Ersetze vage Wörter direkt durch Struktur: Ziel + Constraints + Abnahme.
 
-
 ---
 
 **Status:** verified  

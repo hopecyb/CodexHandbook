@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Si la conclusión depende de hechos externos, no aceptes solo la conclusión: pide también las fuentes.
 
 Exige al Agent:
@@ -43,7 +42,6 @@ Al menos abre y confirma:
 - Si ya está desactualizada
 
 En tareas de investigación, la fuente es parte de la credibilidad de la conclusión.
-
 
 ---
 

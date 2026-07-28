@@ -100,10 +100,8 @@ Généré ne signifie pas vérifié — ouvrir, valider et savoir s'il doit êtr
 - [ ] Pas de secrets, pas de répertoires générés errants
 
 ## Sources de référence
-
 - [Gérer l'incertitude](/guide/quality/handle-uncertainty/)
 - exigences d'acceptation cas intégration sources externes
-
 ---
 
 **Statut :** vérifié  

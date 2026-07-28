@@ -95,11 +95,6 @@ IDE 云端任务和本地任务的区别，核心就在执行环境是不是远�
 - 未写分支名，远程直接推共享分支
 - 把 Cloud 产出当「已验收」跳过 CI
 
-## 参考来源
-
-- stormzhang `10-cloud.md`、`09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **状态：** outdated  

@@ -101,12 +101,7 @@ diff가 너무 크면 <경로 목록>만 리뷰하세요.
 - [ ] 팀 문서에 AI 리뷰의 위치가 명시됨
 
 ## 참고 출처
-
 - OpenAI Codex CI 예시
-- KimYx0207 Review/PR 장
-- stormzhang CI 튜토리얼
-- codex.bozhouai.com Git/GitHub 편
-
 ---
 
 **상태：** verified  

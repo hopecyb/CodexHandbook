@@ -90,7 +90,6 @@ Offizielle Politiken und Defaults können sich ändern — prüfe [OpenAI Codex]
 
 Freigabe fragt „soll es weiter?“; Sandbox begrenzt „auch wenn weiter — wie weit höchstens?“. Beide Schichten zusammen machen die Grenze klarer.
 
-
 ---
 
 **Status:** verified  

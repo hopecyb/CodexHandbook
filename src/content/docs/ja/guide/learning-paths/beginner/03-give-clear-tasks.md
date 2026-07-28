@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## このステップの目標
 
 安定した枠組みで 1 つのプロンプトを書くことです。
@@ -47,7 +46,6 @@ translated_at: 2026-07-28
 明確なタスクの鍵は、目標、制限、完了基準が同時に現れることです。
 
 次のステップ：[結果をレビューする](/guide/learning-paths/beginner/04-review-results/)
-
 
 ---
 

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Automations** は Codex を**スケジュール、リポジトリイベント、外部トリガー**で自動実行します。例：依存更新チェック、ドキュメント同期、定期ヘルススキャン。
 
 ## 本ページの内容
@@ -94,11 +93,7 @@ translated_at: 2026-07-28
 - [ ] チームが bot アカウントと承認ルールを把握
 
 ## 参考ソース
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - OpenAI Codex Cloud / Automations 公式説明
-
 ---
 
 **状態：** outdated  

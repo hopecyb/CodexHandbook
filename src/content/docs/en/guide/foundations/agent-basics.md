@@ -25,7 +25,6 @@ An **Agent** doesn't end with one Q&A turn. It: understands the goal → chooses
 - Skill / Plugin / MCP: extend **what it can do** and **what it connects to**—advanced chapters to follow; see the [capability map](/guide/start-here/codex-capability-map/) for how they differ
 - Human approval: see [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
 
-
 ---
 
 **Status:** review  

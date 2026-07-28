@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo de este paso
 
 Escribe un Prompt siguiendo un marco estable.
@@ -47,7 +46,6 @@ Sin aceptación, es más difícil saber si el resultado «no está terminado» o
 La clave de una Tarea clara es que objetivo, límites y criterios de finalización aparezcan juntos.
 
 Siguiente: [Revisar resultados](/guide/learning-paths/beginner/04-review-results/)
-
 
 ---
 

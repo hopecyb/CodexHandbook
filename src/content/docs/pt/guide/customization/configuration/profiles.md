@@ -97,10 +97,7 @@ Isto já cobre a maioria dos casos comuns.
 O valor do Profile é mudar depressa, em cenários de risco diferentes, para uma combinação predefinida já pensada.
 
 ## Referências
-
-- stormzhang `18-config.md`
 - Documentação OpenAI Codex sobre profiles
-
 ---
 
 **Estado:** desatualizado  

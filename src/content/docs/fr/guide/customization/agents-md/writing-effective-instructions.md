@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Des instructions projet efficaces ressemblent à une **liste de contrôle**. L'objectif est que Codex fasse moins d'erreurs prévisibles dès la première tentative.
 
 Lors de la première écriture d'instructions projet, un problème courant est beaucoup d'idées mais des contraintes clés floues.

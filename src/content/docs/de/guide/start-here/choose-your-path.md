@@ -64,7 +64,6 @@ Bei Unsicherheit kannst du so entscheiden:
 
 Starte am Einstieg, der deiner aktuellen Frage am nächsten ist — Anpassen geht später immer noch.
 
-
 ---
 
 **Status:** verified  

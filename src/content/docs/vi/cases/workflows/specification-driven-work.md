@@ -78,11 +78,6 @@ Mục nghiệm thu trong đặc tả nên **kiểm thử được** càng nhiề
 - [ ] Trước thực thi có xác nhận của người hoặc bằng văn bản
 - [ ] Thay đổi đã đồng bộ về tệp đặc tả
 
-## Nguồn tham chiếu
-
-- Chương phân rã nhu cầu và tác vụ của KimYx0207
-- Đặc tả và checklist nghiệm thu freestylefly/CodexGuide
-
 ---
 
 **Trạng thái:** verified  

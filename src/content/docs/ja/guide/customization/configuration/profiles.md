@@ -91,10 +91,7 @@ Profile を切っても、すべてのタスクが絶対安全・絶対適切に
 Profile の価値は、リスクシーンごとに、すでに考え抜いたデフォルト組み合わせへ素早く切り替えることです。
 
 ## 参考
-
-- stormzhang `18-config.md`
 - OpenAI Codex profiles ドキュメント
-
 ---
 
 **状態：** outdated  

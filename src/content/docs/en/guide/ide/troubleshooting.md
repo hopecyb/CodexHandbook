@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 | Symptom | Try first |
 |---|---|
 | Extension unresponsive | Update extension and editor; check extension host logs |
@@ -15,7 +14,6 @@ translated_at: 2026-07-25
 | Wrong context | Confirm the opened workspace root |
 
 Official: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
 
 ---
 

@@ -102,11 +102,7 @@ translated_at: 2026-07-28
 メモリは「繰り返す個人好みと少量の安定事実」向き。リポジトリ文書、チームルール、機密情報管理の代替ではありません。
 
 ## 参考
-
 - OpenAI Codex memory ドキュメント（バージョンを基準に）
-- stormzhang `19-memory.md`
-- codex.bozhouai.com メモリ章（構造参考）
-
 ---
 
 **状態：** verified  

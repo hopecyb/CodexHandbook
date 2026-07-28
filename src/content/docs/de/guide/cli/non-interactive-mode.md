@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Der nicht-interaktive Modus lässt Codex Aufgaben **ohne TTY-Dialog** erledigen — Einstieg für Entwickler, die den Agenten in Skripte und CI einbinden.
 
 Kurz: kein Hin-und-her-Chat, sondern einmalige Übergabe der Aufgabe zur Ausführung.
@@ -109,11 +108,7 @@ Nicht-interaktiv passt zur Automatisierung, nicht zum ersten Tasten. Zuerst Inte
 - CLI-Version nicht pinnen → Pipeline ändert sich plötzlich
 
 ## Quellen
-
 - OpenAI-Codex-CLI-Dokumentation
-- stormzhang `28-noninteractive.md`
-- KimYx0207 CX-12
-
 ---
 
 **Status:** outdated  

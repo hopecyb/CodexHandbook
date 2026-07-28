@@ -54,13 +54,6 @@ If you want similar-looking results every time, use a template—for example:
 Your first Skill does not need `templates/`.  
 Once you keep saying "output in this structure," extract it.
 
-## Difference from references/
-
-| Directory | Focus |
-|---|---|
-| `references/` | Input standards, rules, APIs |
-| `templates/` | Output format, report structure |
-
 ## Common misconceptions
 
 ### 1. Templates are only for looks

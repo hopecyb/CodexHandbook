@@ -151,11 +151,7 @@ Por isso muitas equipas o ligam atrás de `make review`, GitHub Actions, cron ou
 - [Códigos de saída e retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Fontes de referência
-
 - Documentação do CLI OpenAI Codex
-- Capítulos não interativos de KimYx0207
-- Tutoriais de CI de stormzhang
-
 ---
 
 **Estado:** outdated  

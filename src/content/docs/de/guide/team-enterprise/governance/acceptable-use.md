@@ -100,11 +100,6 @@ Je mehr „ja“, desto wahrscheinlicher echte Wirkung.
 
 Der Wert einer AUP: Codex-Nutzungsgrenzen klar schreiben und mit realen Kontrollen abstimmen.
 
-## Quellen
-
-- KimYx0207 Enterprise-Policy-Kapitel
-- freestylefly/CodexGuide Team-Governance
-
 ---
 
 **Status:** verified  

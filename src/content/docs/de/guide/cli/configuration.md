@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 CLI-Konfiguration steuert **Default-Modell, Arbeitsverzeichnis, Freigabestrenge, MCP-Server** usw. Konzeptuell wie [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/); Fokus hier auf häufige Terminal-Anpassungen.
 
 ## Inhalt dieser Seite
@@ -115,10 +114,7 @@ Mehr: [CLI-Fehlerbehebung](/guide/cli/troubleshooting/)
 CLI-Config = „Default-Arbeitsgewohnheiten“ — nur das fixieren, was du **fast jedes Mal wieder wählst**. Fortgeschrittenes später.
 
 ## Quellen
-
 - OpenAI Codex CLI configuration
-- stormzhang `18-config.md`
-
 ---
 
 **Status:** verified  

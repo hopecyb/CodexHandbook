@@ -118,12 +118,6 @@ Command rules are not “memorizing commands”—they separate daily actions fr
 - [CLI Approval and Sandbox](/guide/cli/approvals-and-sandbox/)
 - [Permission Matrix](/guide/reference/permission-matrix/)
 
-## References
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permissions and configuration chapter
-- freestylefly/CodexGuide team playbook
-
 ---
 
 **Status:** verified  

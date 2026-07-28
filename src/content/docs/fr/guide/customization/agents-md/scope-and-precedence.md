@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Lorsque plusieurs fichiers `AGENTS.md`, des fichiers de configuration et la conversation actuelle coexistent, il faut clarifier **quelle règle s'applique**.
 
 Cette page traite de : quand deux règles semblent différentes, quelle suivre ?
@@ -58,10 +57,6 @@ Principes :
 - **Fichier racine** : 10–20 règles strictes partagées dans le dépôt
 - **Fichiers sous-paquets** : commandes et notes de répertoire propres à ce paquet uniquement
 - Éviter trois fichiers 80 % dupliqués — mettre le contenu partagé à la racine ; les sous-paquets écrivent uniquement les deltas
-
-## Frontière avec les préférences personnelles
-
-Les habitudes personnelles (thème, modèle par défaut, chemins locaux) appartiennent à la **configuration utilisateur** ; ne les mettez pas dans le `AGENTS.md` de l'équipe ou les collaborateurs en pâtiront par erreur.
 
 ## Idées reçues courantes
 

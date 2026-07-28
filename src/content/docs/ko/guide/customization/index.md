@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex는 “이번엔 어떻게 물을지”에만 의존하지 않습니다. **지속 설정**으로 당신과 팀의 약속을 기억합니다. 이 장에서는 어떤 요구를 대화에 남기고, 어떤 요구를 프로젝트에 내려둘지 구분합니다.
 
 이미 “이 디렉터리는 건드리지 마”, “먼저 테스트 돌려”, “기본으로 이 모델 써”처럼 같은 말을 반복하고 있다면, 이 장이 다루는 문제입니다.
@@ -116,10 +115,7 @@ Codex 협업 규칙을 처음 체계적으로 정리할 때는 이 순서가 좋
 - [ ] 민감 작업은 여전히 승인으로 가며, 글자 규칙이 모델을 “겁주어” 막아주기를 기대하지 않음
 
 ## 참고 출처
-
 - OpenAI Codex 문서: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- 커뮤니티 실무 구조 참고: freestylefly/CodexGuide AGENTS.md 특집, stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **상태:** verified  

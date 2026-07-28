@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo deste passo
 
 Escreve um Prompt segundo um enquadramento estável.
@@ -47,7 +46,6 @@ Sem aceitação, fica mais difícil saber se «não acabou» ou se «só não go
 O essencial de uma Tarefa clara é objetivo, limites e critérios de conclusão aparecerem juntos.
 
 Seguinte: [Rever resultados](/guide/learning-paths/beginner/04-review-results/)
-
 
 ---
 

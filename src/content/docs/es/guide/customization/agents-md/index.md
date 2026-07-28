@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La primera vez que mucha gente ve `AGENTS.md`, lo entiende como «otro prompt más largo».
 
 `AGENTS.md` no es una descripción de tarea de una sola vez; son reglas de colaboración que viven en el proyecto y aplican a largo plazo.

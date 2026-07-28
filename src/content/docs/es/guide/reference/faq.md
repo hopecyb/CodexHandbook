@@ -79,7 +79,6 @@ Si estás atascado y no sabes a qué página ir:
 
 Suele costar menos que ir y venir por la barra lateral.
 
-
 ---
 
 **Estado:** verified  

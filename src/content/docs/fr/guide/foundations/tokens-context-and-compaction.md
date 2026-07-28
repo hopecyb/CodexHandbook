@@ -20,7 +20,6 @@ Quand la conversation ou les fichiers deviennent trop volumineux, le système pe
 
 Cette page est conceptuelle ; `05` explique comment les gérer.
 
-
 ---
 
 **Statut :** review  

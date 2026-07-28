@@ -87,10 +87,7 @@ Aceptar solo mete el cambio en tu área de trabajo; después hay que verificar y
 En el IDE, «aceptar el cambio» es un paso intermedio, no la aceptación final.
 
 ## Fuentes de referencia
-
 - [Verificación y revisión humana](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Estado:** outdated  

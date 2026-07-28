@@ -53,7 +53,6 @@ Khi xử lý sự cố CLI, phân rõ đây là vấn đề cài đặt, đăng 
 
 Giải thích chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Trạng thái:** verified  

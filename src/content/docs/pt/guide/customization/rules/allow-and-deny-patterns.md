@@ -106,11 +106,6 @@ Primeiro estabilize a fronteira mínima; depois refine.
 
 Boas regras allow/deny deixam claro de antemão que ações são razoáveis e quais não devem ocorrer.
 
-## Referências
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- Capítulos de configuração de Permissões KimYx0207
-
 ---
 
 **Estado:** verificado  

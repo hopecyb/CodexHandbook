@@ -139,8 +139,6 @@ Trên GitHub: [tích hợp GitHub](/guide/integrations/github/)
 
 ## Tham chiếu
 
-- stormzhang `26-git-github.md`
-- Các phần Review/PR KimYx0207
 - [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
 
 ---

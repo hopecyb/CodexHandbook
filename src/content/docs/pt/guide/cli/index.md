@@ -41,7 +41,6 @@ Na primeira fase, distinga estes dois modos:
 
 Se for só a experimentar pela primeira vez, o modo interativo costuma ser mais fluido. Quando precisar de automação, passe ao modo não interativo.
 
-
 ---
 
 **Estado:** verified  

@@ -80,7 +80,6 @@ Le premier choix n'est qu'un point de départ.
 
 Comparaison complète : [comparaison des fonctionnalités](/guide/reference/feature-comparison/). Vous pouvez installer plusieurs clients ; **gardez les projets d'entraînement dans le même répertoire** pour comparer les clients équitablement.
 
-
 ---
 
 **Statut :** vérifié  

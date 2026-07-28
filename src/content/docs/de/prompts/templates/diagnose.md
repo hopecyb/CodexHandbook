@@ -50,7 +50,6 @@ Die Vorlage verlangt zuerst, warum es kaputt ist — dann erst, wie ändern.
 - [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/)
 - [Bug-Fix-Fall](/cases/fix-a-bug/)
 
-
 ---
 
 **Status:** verified  

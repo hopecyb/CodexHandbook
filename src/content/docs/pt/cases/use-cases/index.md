@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 A biblioteca de casos responde: «**Com este tipo de objetivo real, como é a experiência de percorrer o Codex de ponta a ponta?**» Complementa as páginas de produto isoladas.
 
 ## Caso vs tutorial

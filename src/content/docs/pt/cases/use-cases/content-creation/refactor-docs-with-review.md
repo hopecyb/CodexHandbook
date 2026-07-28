@@ -72,10 +72,7 @@ Passos: alterar config primeiro, depois escrever o md, por fim atualizar 12-refe
 - Marcar itens concluídos no ROADMAP para evitar desfasamento entre documentação e plano
 
 ## Fontes de referência
-
 - Fluxo real de iteração M2 da documentação neste repositório
-- Casos de manutenção de docs em codex.bozhouai.com (referência de estrutura)
-
 ---
 
 **Estado:** verified  

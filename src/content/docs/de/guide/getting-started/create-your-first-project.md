@@ -10,7 +10,6 @@ translated_at: 2026-07-28
 
 Beim ersten Übungsprojekt greifen viele direkt zum echten Projekt — wirkt effizient, ist riskanter.
 
-
 ## Empfohlenes Vorgehen
 
 1. Neuen Ordner anlegen, z. B. `codex-practice/`
@@ -59,7 +58,6 @@ Mindestens diese 4 Punkte:
 4. Änderungen auf einen Blick verständlich
 
 Das erste Übungsprojekt muss nicht wie Produktion wirken. Sicher, einfach, bei Fehlern leicht zurücknehmbar — das reicht.
-
 
 ---
 

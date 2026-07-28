@@ -145,11 +145,7 @@ Con eso ya se pueden bajar muchos riesgos de equipo. La gobernanza más fina pue
 - [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/)
 
 ## Fuentes de referencia
-
-- Seguridad empresarial de KimYx0207
 - Libro blanco de seguridad empresarial de OpenAI (oficial)
-- Prácticas de cumplimiento de CodexGuide
-
 ---
 
 **Estado:** verified  

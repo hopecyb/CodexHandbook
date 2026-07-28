@@ -100,11 +100,6 @@ IDE Cloud 작업과 로컬 작업의 핵심 차이는 실행 환경이 원격인
 - 브랜치 이름을 쓰지 않아 원격이 공유 브랜치에 바로 push
 - Cloud 산출을 「이미 검수됨」으로 보고 CI를 건너뜀
 
-## 참고 출처
-
-- stormzhang `10-cloud.md`, `09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **상태:** outdated  

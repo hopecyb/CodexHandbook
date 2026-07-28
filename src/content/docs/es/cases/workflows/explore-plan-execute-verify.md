@@ -88,11 +88,6 @@ El equipo puede volcar las cuatro fases en la [plantilla de caso](/cases/use-cas
 - Verificar solo «parece que arranca»
 - Explorar poco y tocar el módulo equivocado
 
-## Fuentes de referencia
-
-- Métodos de diseño y verificación de tareas de CodexGuide
-- Cadena completa «de requisito a entrega» del libro naranja
-
 ---
 
 **Estado:** verified  

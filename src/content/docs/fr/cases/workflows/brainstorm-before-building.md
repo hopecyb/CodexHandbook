@@ -82,11 +82,6 @@ Fixer une **limite de temps** : par exemple, terminer la divergence en 15 minute
 - [Travail piloté par la spécification](/cases/workflows/specification-driven-work/)
 - [Demander un plan](/prompts/ask-for-a-plan/)
 
-## Sources de référence
-
-- CodexGuide — clarification des besoins et comparaison d'options
-- codex.bozhouai.com — modèles de tâches et méthodes de sélection de sujets
-
 ---
 
 **Statut :** verified  

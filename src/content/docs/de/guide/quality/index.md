@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Viele fokussieren bei Codex auf „kann es das erzeugen?“ und übersehen die andere Frage: Wie bestätigen wir danach, dass wir das Ergebnis wirklich annehmen können?
 
 Genau darum geht es in dieser Gruppe. Qualität und Überprüfung sollen verhindern, dass etwas „fertig aussieht“, aber noch nicht stabil ist.
@@ -32,7 +31,6 @@ Beim ersten Durchgang:
 4. [Definition of Done](/guide/quality/definition-of-done/) — wann es wirklich fertig ist
 
 Ohne Prüfung ist „fertig“ oft nur vorübergehend so aussehend.
-
 
 ---
 

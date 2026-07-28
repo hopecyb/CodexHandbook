@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 **Automations** để Codex tự thực thi Tác vụ dưới **lịch, sự kiện repo hoặc kích hoạt ngoài** — ví dụ kiểm tra cập nhật dependency, đồng bộ tài liệu, quét sức khỏe định kỳ.
 
 ## Nội dung trang này
@@ -94,11 +93,7 @@ Tách thành nhiều đoạn Automation + [bàn giao và tiếp tục](/guide/ag
 - [ ] Nhóm biết tài khoản bot và quy tắc Phê duyệt
 
 ## Nguồn tham chiếu
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - Giải thích chính thức OpenAI Codex Cloud / Automations
-
 ---
 
 **Trạng thái:** outdated  

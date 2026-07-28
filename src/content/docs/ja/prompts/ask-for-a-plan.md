@@ -144,13 +144,7 @@ DB 変更は別ステップに分けて。
 こうすると「先に計画」が一時的な注意ではなく、チームのデフォルトになります。
 
 ## 参考
-
 - OpenAI Codex 公式ドキュメントの計画・実行の考え方
-- freestylefly/CodexGuide のタスク設計・協業の実践
-- KimYx0207『AI-Coding-Guide-Zh』Codex ワークフロー関連章
-- stormzhang Codex シリーズの実践的手法
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **状態：** verified  

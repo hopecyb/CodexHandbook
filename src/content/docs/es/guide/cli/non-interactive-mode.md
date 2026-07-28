@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El modo no interactivo permite que Codex complete Tareas **sin diálogo TTY**: es la entrada para que los desarrolladores enganchen el Agent a scripts y CI.
 
 En resumen: el modo no interactivo no es chat de ida y vuelta, sino entregar la Tarea de una vez para que la ejecute.
@@ -109,11 +108,7 @@ El modo no interactivo encaja con automatización, no tanto con el primer tanteo
 - No fijar la versión de la CLI y que el pipeline cambie de comportamiento de golpe
 
 ## Fuentes de referencia
-
 - Documentación de OpenAI Codex CLI
-- stormzhang `28-noninteractive.md`
-- KimYx0207 CX-12
-
 ---
 
 **Estado:** outdated  

@@ -119,11 +119,8 @@ Entreprise : roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
 - Changements de config MCP hors revue de code
 
 ## Sources de référence
-
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - Documentation MCP OpenAI Codex
-- KimYx0207 CX-05 ; stormzhang `20-mcp.md`
-
 ---
 
 **Statut :** obsolète  

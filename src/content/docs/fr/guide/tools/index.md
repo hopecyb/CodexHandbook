@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Pages condensées MVP :
 
 - [Sélection d'outils](/guide/tools/tool-selection/)
@@ -16,7 +15,6 @@ Pages condensées MVP :
 - [Recherche web](/guide/tools/web-search/)
 
 Navigateur, Computer Use, image et voix, etc. sont reportés.
-
 
 ---
 

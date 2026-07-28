@@ -87,10 +87,7 @@ Accept only puts changes in your working tree—you still verify and decide whet
 "Accept" in the IDE is a mid-step, not final acceptance.
 
 ## References
-
 - [Verification and human review](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Status:** outdated  

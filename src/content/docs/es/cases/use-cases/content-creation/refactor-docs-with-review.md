@@ -72,10 +72,7 @@ Pasos: primero config, luego el md, por último actualizar 12-reference/index.md
 - Marca ítems del ROADMAP al completarlos para que docs y plan no se desalineen
 
 ## Fuentes de referencia
-
 - Flujo real de iteración M2 de docs de este repo
-- Casos de mantenimiento de docs de codex.bozhouai.com (referencia de estructura)
-
 ---
 
 **Estado:** verified  

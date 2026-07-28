@@ -138,11 +138,7 @@ On GitHub: [GitHub integration](/guide/integrations/github/)
 - [ ] No Secrets committed to the repo
 
 ## References
-
-- stormzhang `26-git-github.md`
-- KimYx0207 Review/PR sections
 - [Human approval patterns](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **Status:** outdated  

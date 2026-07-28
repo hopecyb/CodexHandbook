@@ -70,11 +70,6 @@ translated_at: 2026-07-28
 - [Cloud コードレビュー](/guide/web-and-cloud/code-review/)
 - [Pull Request の作成](/guide/web-and-cloud/create-pull-requests/)
 
-## 参考出典
-
-- KimYx0207 Review/PR 章
-- codex.bozhouai.com Git/GitHub ワークフロー
-
 ---
 
 **状態：** verified  

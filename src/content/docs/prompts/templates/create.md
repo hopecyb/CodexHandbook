@@ -60,7 +60,6 @@ description: 从零实现功能、文稿或产物。
 - [规格驱动工作](/cases/workflows/specification-driven-work/)
 - [定义完成标准](/prompts/define-done/)
 
-
 ---
 
 **状态：** verified  

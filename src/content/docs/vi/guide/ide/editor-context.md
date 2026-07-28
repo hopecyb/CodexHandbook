@@ -18,18 +18,6 @@ Codex trong IDE không chỉ nhìn bạn nói gì, mà còn tham chiếu nội d
 - Chồng lên tệp @, vùng chọn, AGENTS.md thế nào
 - Cách giảm nhiễu, tăng tỷ lệ trúng
 
-## Nguồn ngữ cảnh (phân tầng khái niệm)
-
-| Nguồn | Ai kiểm soát | Nội dung điển hình |
-|---|---|---|
-| Thư mục gốc không gian làm việc | Thư mục bạn mở | Cấu trúc dự án, `AGENTS.md`, tệp cấu hình |
-| Tệp đang mở | Tab trình soạn thảo | Mã nguồn đang sửa |
-| Vùng chọn | Mã bạn tô sáng | Hàm, đoạn lỗi |
-| @ tường minh | Đường dẫn bạn @ trong hội thoại | Tệp xuyên thư mục, tài liệu |
-| Quy tắc dự án | `AGENTS.md` trong kho, v.v. | Quy ước mã, lệnh kiểm thử |
-
-Xử lý ưu tiên và xung đột: [Ưu tiên ngữ cảnh](/guide/context/context-priority/).
-
 ## Quy trình khuyến nghị
 
 1. **Mở kho bằng thư mục gốc không gian làm việc**, đừng chỉ mở thư mục con (monorepo ngoại lệ theo tài liệu nhóm)
@@ -83,10 +71,7 @@ Nhật ký, dữ liệu khách hàng hãy khử nhận dạng trước khi dán;
 - [ ] Lệnh kiểm thử trong `AGENTS.md` khớp terminal IDE
 
 ## Nguồn tham khảo
-
 - [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
-- `09-ide.md` của stormzhang
-
 ---
 
 **Trạng thái:** verified  

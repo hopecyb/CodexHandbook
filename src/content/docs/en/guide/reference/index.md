@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 Short, accurate, searchable. MVP includes:
 
 - [Glossary](/guide/reference/glossary/)
@@ -17,7 +16,6 @@ Short, accurate, searchable. MVP includes:
 - [Official resources](/guide/reference/official-resources/)
 
 Full command/config reference is deferred.
-
 
 ---
 

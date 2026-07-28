@@ -145,12 +145,6 @@ Diese Teilung spart Zeit und hält Qualität.
 - [ ] In Ziel-Playback-Umgebung ohne Schriftchaos
 - [ ] Kritische Daten auf Quelldateien rückführbar
 
-## Quellen
-
-- codex.bozhouai.com Präsentations- und Berichtsfälle
-- stormzhang Content-Creation
-- baoyu-slide-deck Community-Praxis (Strukturreferenz)
-
 ---
 
 **Status:** verified  

@@ -32,16 +32,6 @@ Se estas três classes não forem separadas, depois aparece facilmente:
 - Pensa que a regra já está em vigor, mas na verdade só a sua máquina a cobre
 - Leva definições permissivas para projetos mais sérios
 
-## O que cabe nas preferências pessoais
-
-| Conteúdo | Exemplos |
-|---|---|
-| Modelo predefinido e nível de raciocínio | Desempenho da máquina e plano de conta |
-| Tema da UI, tipografia, notificações | [Definições](/guide/desktop-app/settings/) da App de ambiente de trabalho |
-| MCP pessoal (Ferramentas privadas) | Base de dados local só de leitura (autorize com cuidado) |
-| Caminho da biblioteca de Skills pessoais | Sem conflito com Plugins da equipa |
-| Aliases de terminal, hábitos de diretório de arranque do `codex` | Ver [Configuração CLI](/guide/cli/configuration/) |
-
 ## Conteúdo de equipa que não deve ficar só na camada pessoal
 
 - Estilo de código, comandos de teste, estrutura de diretórios → **`AGENTS.md` do projeto**
@@ -101,12 +91,6 @@ Se o produto oferecer «memória» ou preferências persistentes, veja [Memória
 - [ ] Consegue dar um exemplo de cada uma das três camadas: pessoal vs projeto vs organização
 - [ ] Configurou pelo menos um Profile estrito para um projeto de cliente
 - [ ] Não há segredos pessoais dentro do repositório
-
-## Referências
-
-- freestylefly/CodexGuide configuração pessoal e de equipa
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
 
 ---
 

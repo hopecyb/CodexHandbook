@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Esta página foca em conexão e Verificação; detalhes do protocolo e desenvolvimento de servidor estão na documentação oficial de MCP.
 
 ## Antes de começar
@@ -93,10 +92,8 @@ Em falha, confira: token expirado, variável de ambiente não injetada, proxy co
 Na primeira chamada a uma ferramenta desconhecida, o cliente pode pedir confirmação — isso é esperado. Não incentive nas normas da equipe «permitir para sempre todas as escritas MCP».
 
 ## Fontes
-
 - Documentação de configuração OpenAI Codex MCP
 - Exemplos de servidor em modelcontextprotocol.io
-
 ---
 
 **Status:** outdated  

@@ -100,7 +100,6 @@ Das Ziel sagt Codex, was zu tun ist; Constraints sagen, wo Schluss ist.
 
 Berechtigungsgrenzen am besten zusammen mit Constraints schreiben, damit „nebenbei“ weniger übergreift. Siehe [Fertigstellungsstandard definieren](/prompts/define-done/) und [Berechtigungen und Sandbox](/guide/permissions-and-sandbox/).
 
-
 ---
 
 **Status:** verified  

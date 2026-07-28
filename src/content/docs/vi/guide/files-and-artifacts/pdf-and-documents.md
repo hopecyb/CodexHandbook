@@ -112,7 +112,6 @@ Nếu OCR hoặc nhận dạng bố cục chưa chắc, hãy đánh dấu rõ.
 
 Xử lý PDF thì phạm vi càng rõ càng ổn. Sau khi tạo PDF, đừng chỉ xem tệp có hay không; còn phải xác nhận mở bình thường và nội dung thật sự đúng.
 
-
 ---
 
 **Trạng thái:** verified  

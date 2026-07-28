@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 설치 단계는 [데스크톱 App 설치](/guide/getting-started/install-desktop-app/)와 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 참고하세요.
 
 데스크톱 App을 처음 열면 화면에 정보가 한꺼번에 나타납니다.
@@ -48,7 +47,6 @@ translated_at: 2026-07-28
 여기서 말하는 것은 논리 영역이지, 구체적 버튼 이름이 아닙니다.
 
 “작업 입력”, “변경 확인”, “승인” 세 가지를 먼저 찾은 뒤, 쓰면서 익히면 됩니다.
-
 
 ---
 

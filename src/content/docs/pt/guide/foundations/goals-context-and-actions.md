@@ -87,7 +87,6 @@ Isso é bem mais claro do que só escrever «ajude a resolver este problema».
 
 Uma Tarefa mais estável precisa, no mínimo, deixar claros o objetivo, o Contexto, os limites de ação e a forma de aceite.
 
-
 ---
 
 **Status:** verified  

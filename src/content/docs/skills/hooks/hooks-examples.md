@@ -175,11 +175,7 @@ Hook 示例主要是拿来学思路和结构的，不适合原样搬进正式环
 - [ ] 文档注明核验日期与适用 CLI 版本
 
 ## 参考来源
-
 - OpenAI Codex Hooks 示例
-- freestylefly/CodexGuide 审计配置
-- stormzhang `22-hooks.md`
-
 ---
 
 **状态：** outdated  

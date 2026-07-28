@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 CLI 設定は **デフォルトモデル、作業ディレクトリ、承認の厳しさ、MCP サーバー** などを決めます。[設定の基礎](/guide/customization/configuration/config-basics/) と概念は同じで、本ページはターミナルユーザーがよく触る項目に焦点を当てます。
 
 ## 本ページの内容
@@ -115,10 +114,7 @@ CLI は shell 実行、書き込み、ネットワーク接続の前に確認す
 CLI 設定は「デフォルトの働き方」と考え、**ほぼ毎回同じ選択をするものだけ** 固定すれば十分です。高度な能力は後から足しても遅くありません。
 
 ## 参考ソース
-
 - OpenAI Codex CLI configuration
-- stormzhang `18-config.md`
-
 ---
 
 **状態：** verified  

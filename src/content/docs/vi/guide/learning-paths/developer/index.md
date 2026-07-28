@@ -56,7 +56,6 @@ Lộ trình này coi trọng hơn thay đổi kiểm soát được, kết quả
 
 Hiểu codebase → Sửa và triển khai → Kiểm thử và review → Quy trình tự động hóa → Phát triển đa Agent
 
-
 ---
 
 **Trạng thái:** verified  

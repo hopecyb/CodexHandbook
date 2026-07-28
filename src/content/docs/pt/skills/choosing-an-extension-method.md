@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Com tantas extensões, o custo de escolher o método errado sobe. Esta página ajuda a decidir se você precisa de Plugin ou MCP antes de instalar.
 
 Os nomes que mais se misturam:

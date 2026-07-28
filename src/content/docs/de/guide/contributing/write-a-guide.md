@@ -113,15 +113,9 @@ Vor dem PR [Technische Inhalte prüfen](/guide/contributing/verify-technical-con
 
 Gute Guide-Seiten gewinnen nicht durch „alles voll“ — sondern dadurch, dass Erstleser wissen, warum die Seite existiert, was zuerst und wohin als Nächstes.
 
-## Quellen schreiben
-
-```markdown
 ## Quellen
-
 - Offizielle OpenAI-Codex-Dokumentation
-- Community-Strukturreferenz: CodexGuide (nur Themen, kein Originaltext)
 ```
-
 ---
 
 **Status:** verified  

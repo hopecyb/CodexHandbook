@@ -90,7 +90,6 @@ Bei diesen Bedürfnissen lohnt sich das Handbook:
 
 Als Nächstes: [Deinen Pfad wählen](/guide/start-here/choose-your-path/).
 
-
 ---
 
 **Status:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Khi thông tin chưa đủ, hãy xác nhận trước rồi mới tiếp tục.
 
 Một trong những tình huống khó chịu nhất khi dùng Codex là nó lấp chỗ trống bằng câu trả lời trông hợp lý.  
@@ -87,7 +86,6 @@ Nếu có nhiều cách hiểu khả dĩ, hãy liệt kê trước những đi�
 ```
 
 Tình huống phiền hơn là lấy phỏng đoán làm sự thật rồi đẩy tiếp.
-
 
 ---
 

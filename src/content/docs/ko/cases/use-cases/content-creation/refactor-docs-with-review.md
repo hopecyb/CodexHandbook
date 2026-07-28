@@ -72,10 +72,7 @@ translated_at: 2026-07-28
 - ROADMAP에서 완료 항목을 체크해 문서와 계획이 어긋나지 않게
 
 ## 참고 출처
-
 - 이 저장소의 실제 M2 문서 반복 흐름
-- codex.bozhouai.com 문서 유지 사례(구조 참고)
-
 ---
 
 **상태:** verified  

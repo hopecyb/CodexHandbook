@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 L'App de bureau peut prendre en charge plusieurs Agents ou Tâches en parallèle. Utile pour explorer des sous-problèmes indépendants simultanément.
 
 ## Mises en garde
@@ -18,7 +17,6 @@ L'App de bureau peut prendre en charge plusieurs Agents ou Tâches en parallèle
 - Les débutants devraient réussir en série d'abord, puis essayer le parallèle
 
 Lié : [Progression et orientation](/guide/agent-work/progress-and-steering/)
-
 
 ---
 

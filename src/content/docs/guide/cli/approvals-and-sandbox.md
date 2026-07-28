@@ -101,12 +101,7 @@ CI 必读：[非交互模式](/guide/cli/non-interactive-mode/) · [人工审批
 开始阶段把 CLI 审批和沙盒调得偏保守，通常更稳。等你真的知道自己在放开什么，再一点点放宽也不迟。
 
 ## 参考来源
-
 - OpenAI Codex CLI 安全与沙盒文档
-- stormzhang `17-permissions.md`、`19-security.md`
-- KimYx0207 CX-04、CX-13
-- freestylefly/CodexGuide 沙盒审批专题
-
 ---
 
 **状态：** verified  

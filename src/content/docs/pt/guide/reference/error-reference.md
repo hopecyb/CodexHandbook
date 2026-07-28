@@ -160,11 +160,7 @@ Se ainda não souberes aonde olhar, usa esta página para classificar o problema
 Assim evitas misturar várias alterações, e a outros resulta mais fácil ajudar-te a localizar.
 
 ## Fontes de referência
-
 - Documentação de suporte OpenAI Codex
-- Capítulos FAQ e de diagnóstico de stormzhang
-- Coleção de falhas de KimYx0207 (sujeita a contraste oficial)
-
 ---
 
 **Estado:** verified  

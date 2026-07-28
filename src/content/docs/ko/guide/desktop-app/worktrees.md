@@ -44,7 +44,6 @@ translated_at: 2026-07-28
 
 worktree는 고급 격리 도구이며, Codex를 처음 쓸 때 필수 항목은 아닙니다.
 
-
 ---
 
 **상태:** outdated  

@@ -119,12 +119,7 @@ Hook はシステムの重要ノードで自動チェックするのに向きま
 - [ ] 設定がコードレビューに含まれる
 
 ## 参考ソース
-
 - OpenAI Codex Hooks ドキュメント
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- freestylefly/CodexGuide 監査とコンプライアンス
-
 ---
 
 **状態：** outdated  

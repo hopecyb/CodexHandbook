@@ -98,11 +98,9 @@ Do not infer business logic from screenshots—layout and visuals only.
 - [Sensitive context](/guide/context/sensitive-context/)
 
 ## Reference sources
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## Verification
 
 For “implement from image” tasks:

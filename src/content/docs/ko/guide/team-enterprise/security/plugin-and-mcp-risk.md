@@ -93,11 +93,7 @@ translated_at: 2026-07-28
 - [ ] [Skill 보안](/skills/security/) 정책과 일치
 
 ## 참고 출처
-
-- KimYx0207 MCP/Plugin 보안
-- stormzhang MCP 장
 - [MCP 디버깅](/skills/mcp/debugging-mcp/)
-
 ---
 
 **상태：** verified  

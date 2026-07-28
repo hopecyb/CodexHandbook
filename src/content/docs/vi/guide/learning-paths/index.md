@@ -63,7 +63,6 @@ Nếu chưa chắc đi lộ trình nào, chọn theo cách này:
 
 Lộ trình học chính là quyết định đọc gì tiếp theo theo «vấn đề quan trọng nhất lúc này».
 
-
 ---
 
 **Trạng thái:** verified  

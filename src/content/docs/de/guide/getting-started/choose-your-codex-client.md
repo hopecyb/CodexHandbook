@@ -78,7 +78,6 @@ Vollständiger Vergleich: [Funktionsvergleich](/guide/reference/feature-comparis
 
 Beim ersten Mal nicht „welcher ist professioneller“ vergleichen. Nimm den Einstieg, bei dem Prozess und Ergebnis am leichtesten verständlich sind.
 
-
 ---
 
 **Status:** verified  

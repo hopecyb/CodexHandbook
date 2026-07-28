@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Die Fallbibliothek beantwortet: «**Wie fühlt sich ein kompletter Codex-Durchlauf bei diesem realen Ziel an?**» und ergänzt einzelne Produktbeschreibungen.
 
 ## Fall vs. Tutorial

@@ -69,12 +69,6 @@ After each milestone:
 - [ ] At least two checkpoints have reviewable diffs
 - [ ] You know how to pause, resume, or hand off
 
-## References
-
-- codex.bozhouai.com long-task and standard workflow material
-- freestylefly/CodexGuide task capture
-- stormzhang `14-workflows.md`
-
 ---
 
 **Status:** verified  

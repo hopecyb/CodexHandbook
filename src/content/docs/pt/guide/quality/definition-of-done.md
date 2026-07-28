@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Definição de concluído» é direto: declarar de antemão até que ponto conta como realmente concluído desta vez.
 
 Sem este passo, o comum é:
@@ -79,7 +78,6 @@ Critérios de conclusão:
 ```
 
 A «definição de concluído» clarifica sobretudo «até que ponto conta como acabado», para o seu juízo e o do Codex não divergirem.
-
 
 ---
 

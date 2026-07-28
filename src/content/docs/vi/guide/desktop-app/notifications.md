@@ -42,7 +42,6 @@ Không nhất thiết lỗi ngay, nhưng dễ hơn khi:
 
 Tắt hết thông báo khiến bạn dễ bỏ lỡ các thay đổi trạng thái này.
 
-
 ---
 
 **Trạng thái:** outdated  

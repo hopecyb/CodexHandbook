@@ -115,12 +115,7 @@ Explicit `$name` calls are clear; for **model auto-selection**, limit available 
 - Trusting behavior without reading `SKILL.md`
 
 ## References
-
 - OpenAI Codex Skills security guidance
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **Status:** verified  

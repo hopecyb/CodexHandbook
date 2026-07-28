@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El trabajo con Agent se centra en cómo llevar una tarea hasta un **estado de finalización verificable**. Cuándo planificar primero, cuándo dividir subtareas, cuándo corregir a mitad de camino y cuándo hacer un traspaso y retomar: eso es lo que trata este capítulo.
 
 Este capítulo habla de formas de colaboración, no de una función aislada.
@@ -97,12 +96,7 @@ El trabajo con Agent valora más si la tarea puede avanzar de forma continua en 
 - Al dividir subtareas, no dar límites, y que el hilo principal acabe más caótico
 
 ## Referencias
-
 - Documentación oficial de OpenAI Codex sobre colaboración y ejecución de tareas
-- Prácticas de tareas colaborativas de freestylefly/CodexGuide
-- Capítulo de flujos de trabajo Codex en *AI-Coding-Guide-Zh* de KimYx0207
-- Prácticas de subtareas y automatización de stormzhang
-
 ---
 
 **Estado:** verificado  

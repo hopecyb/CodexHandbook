@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Los pasos de instalación están en [Instalar la App de escritorio](/guide/getting-started/install-desktop-app/) y en [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Al abrir la App de escritorio por primera vez, la interfaz muestra bastante información a la vez.
@@ -48,7 +47,6 @@ Toma como referencia el texto de tu versión actual.
 Aquí hablamos de zonas lógicas, no de nombres concretos de botones.
 
 Localiza primero «introducir Tarea», «ver cambios» y «aprobar»; el resto se aprende con el uso.
-
 
 ---
 

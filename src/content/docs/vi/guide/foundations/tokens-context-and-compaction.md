@@ -62,7 +62,6 @@ Nếu lo yêu cầu then chốt bị quên, có thể làm các việc sau:
 
 Ở đây nói khái niệm trước. Cách kiểm soát cụ thể có thể xem tiếp phần `05`.
 
-
 ---
 
 **Trạng thái:** verified  

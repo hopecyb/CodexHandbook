@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Cơ chế mở rộng không ít và thật sự dễ lẫn. Trang này chỉ nói quan hệ giữa chúng, không mở bước cài đặt.
 
 ## Sơ đồ quan hệ

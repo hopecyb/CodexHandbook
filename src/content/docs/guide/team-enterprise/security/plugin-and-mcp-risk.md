@@ -88,11 +88,7 @@ description: 扩展能访问什么、团队如何批准与监控——Skills、P
 - [ ] 与 [Skill 安全](/skills/security/) 政策一致
 
 ## 参考来源
-
-- KimYx0207 MCP/Plugin 安全
-- stormzhang MCP 章节
 - [调试 MCP](/skills/mcp/debugging-mcp/)
-
 ---
 
 **状态：** verified  

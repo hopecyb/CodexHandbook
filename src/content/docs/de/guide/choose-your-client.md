@@ -80,7 +80,6 @@ Die erste Wahl ist nur der Startpunkt.
 
 Vollständiger Vergleich: [Funktionsvergleich](/guide/reference/feature-comparison/). Mehrere Clients sind ok; **Übungsprojekt im selben Verzeichnis halten**, damit Vergleiche leichtfallen.
 
-
 ---
 
 **Status:** verified  

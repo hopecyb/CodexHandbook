@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Le terminal est puissant et dangereux. Principes :
 
 - Lisez les commandes avant d'approuver
@@ -16,7 +15,6 @@ Le terminal est puissant et dangereux. Principes :
 - Incluez des commandes de Vérification dans les critères d'acceptation
 
 Point d'entrée produit : [Terminal intégré](/guide/desktop-app/integrated-terminal/)
-
 
 ---
 

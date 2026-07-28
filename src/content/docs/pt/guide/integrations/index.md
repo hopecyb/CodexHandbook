@@ -194,13 +194,7 @@ Na primeira integração, deixar o Codex «ver» e «sugerir» costuma ser mais 
 - Colaboração em repositório na nuvem: ver [Web e Cloud](/guide/web-and-cloud/)
 
 ## Fontes
-
 - Documentação oficial de integrações e desenvolvedores do OpenAI Codex
-- Capítulos de integração e automação Codex em KimYx0207《AI-Coding-Guide-Zh》
-- stormzhang `26-git-github.md` e capítulos de automação
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **Status:** verified  

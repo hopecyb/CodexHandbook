@@ -3,7 +3,6 @@ title: 非交互模式
 description: 用 codex exec 与脚本管道集成——适合 CI、定时任务与自动化流水线。
 ---
 
-
 非交互模式让 Codex **无需 TTY 对话**即可完成任务，是开发者把 Agent 接进脚本和 CI 的入口。
 
 简单说，非交互模式不是来回聊天，而是把任务一次性交给它执行。
@@ -104,11 +103,7 @@ codex exec --cwd . "列出相对 main 的 diff 中的安全风险，不要修改
 - 未固定 CLI 版本导致流水线突然行为变化
 
 ## 参考来源
-
 - OpenAI Codex CLI 文档
-- stormzhang `28-noninteractive.md`
-- KimYx0207 CX-12
-
 ---
 
 **状态：** outdated  

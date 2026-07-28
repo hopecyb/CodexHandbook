@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex không chỉ dựa vào “lần này hỏi thế nào”, mà còn dựa vào **cấu hình bền** để nhớ ước định của bạn và nhóm. Chương này chủ yếu phân biệt yêu cầu nào nên giữ trong hội thoại, yêu cầu nào nên hạ xuống dự án.
 
 Nếu bạn đã bắt đầu lặp lại cùng một câu, ví dụ “đừng sửa thư mục này”, “chạy kiểm thử trước”, “mặc định dùng mô hình này”, chương này đang xử lý loại vấn đề đó.
@@ -116,10 +115,7 @@ Quy tắc không cần nhiều; đặt đúng chỗ quan trọng hơn.
 - [ ] Thao tác nhạy cảm vẫn đi phê duyệt, không trông chờ quy tắc chữ «doạ» mô hình
 
 ## Nguồn tham khảo
-
 - Tài liệu OpenAI Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Tham khảo cấu trúc thực hành cộng đồng: chuyên đề AGENTS.md freestylefly/CodexGuide, stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **Trạng thái:** verified  

@@ -58,11 +58,6 @@ translated_at: 2026-07-28
 - [ ] リンク/目次/Frontmatter が有効
 - [ ] [完了の定義](/prompts/define-done/) に合致する
 
-## 参考出典
-
-- codex.bozhouai.com ドキュメントとテンプレートタスク
-- KimYx0207 コンテンツ成果ワークフロー
-
 ---
 
 **状態：** verified  

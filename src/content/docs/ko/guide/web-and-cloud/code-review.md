@@ -140,11 +140,7 @@ GitHub 측：[GitHub 통합](/guide/integrations/github/)
 - [ ] Secrets가 저장소에 들어가지 않음
 
 ## 참고 출처
-
-- stormzhang `26-git-github.md`
-- KimYx0207 Review/PR 장
 - [사람 승인 패턴](/cases/workflows/human-approval-patterns/)
-
 ---
 
 **상태：** outdated  

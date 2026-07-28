@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Este é o fluxo de trabalho predefinido recomendado por este manual — adequado desde «ainda não sei como fazer» até «pode fundir».
 
 ## Visão geral das quatro fases
@@ -88,11 +87,6 @@ A equipa pode escrever as quatro fases no [modelo de caso](/cases/use-cases/case
 - Plano só na cabeça — a execução desvia-se
 - Verificar só se «parece que corre»
 - Exploração insuficiente — módulo errado alterado
-
-## Fontes de referência
-
-- Métodos de desenho de tarefas e verificação do CodexGuide
-- Livro Laranja «da necessidade à entrega»
 
 ---
 

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Das integrierte Terminal macht Befehlsausgaben des Agenten sichtbar — oder du führst selbst Überprüfungsbefehle aus.
 
 Ohne die Desktop-App zu verlassen siehst du hier Ablauf und Ergebnis von Befehlen.
@@ -45,7 +44,6 @@ Achte auf:
 Ja — vorausgesetzt, du verstehst, was sie tun, und führst sie nicht blind in Produktion erneut aus.
 
 Das integrierte Terminal legt den Überprüfungsprozess offen und hilft dir, schrittweise zu verstehen, was die Kommandozeile tut.
-
 
 ---
 

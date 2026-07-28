@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Symptôme | Essayer d'abord |
 |---|---|
 | command not found | Vérifier l'installation et le PATH |
@@ -17,7 +16,6 @@ translated_at: 2026-07-28
 | Édition de fichiers dans le mauvais répertoire | Confirmer le répertoire de travail actuel |
 
 Officiel : [https://developers.openai.com/codex](https://developers.openai.com/codex)
-
 
 ---
 

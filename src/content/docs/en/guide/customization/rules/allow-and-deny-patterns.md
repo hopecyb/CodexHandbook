@@ -106,11 +106,6 @@ Run the minimum boundary first; refine later.
 
 Good allow/deny rules state in advance which actions are reasonable and which should not happen.
 
-## References
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permission configuration chapter
-
 ---
 
 **Status:** verified  

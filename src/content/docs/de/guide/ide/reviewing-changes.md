@@ -87,10 +87,7 @@ Annehmen legt Änderungen nur in deinen Arbeitsbereich — danach verifizieren u
 „Änderung annehmen“ in der IDE ist ein Zwischenschritt, keine finale Abnahme.
 
 ## Quellen
-
 - [Verifikation und menschliche Überprüfung](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Status:** outdated  

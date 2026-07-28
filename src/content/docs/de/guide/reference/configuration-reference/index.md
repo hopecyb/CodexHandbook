@@ -217,11 +217,7 @@ Config für langfristige Defaults — nicht Sensitive, nicht Ersatz für Aufgabe
 - Widerspruch zu `AGENTS.md` (Config erlaubt, Doku verbietet)
 
 ## Quellen
-
 - OpenAI Codex configuration reference
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Status:** verified  

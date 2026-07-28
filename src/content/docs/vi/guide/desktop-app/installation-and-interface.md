@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Các bước cài đặt xem [Cài đặt ứng dụng Desktop](/guide/getting-started/install-desktop-app/) và [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Vừa mở ứng dụng Desktop, giao diện sẽ hiện nhiều thông tin cùng lúc.
@@ -48,7 +47,6 @@ Lấy văn bản thực của phiên bản bạn đang dùng làm chuẩn.
 Ở đây nói về vùng logic, không phải tên nút cụ thể.
 
 Tìm được ba việc «nhập tác vụ», «xem thay đổi», «phê duyệt» rồi thì vừa dùng vừa quen dần.
-
 
 ---
 

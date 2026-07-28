@@ -21,7 +21,6 @@ Language models **predict plausible next output** from the text, files, and tool
 
 Search engines mainly return existing web pages; Codex is closer to **calling tools and generating executable changes** under your goal. Both require you to judge trustworthiness.
 
-
 ---
 
 **Status:** review  

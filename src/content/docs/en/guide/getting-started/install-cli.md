@@ -20,7 +20,6 @@ In a terminal, run the version or help command (exact subcommands per official d
 
 Details: [CLI interactive mode](/guide/cli/interactive-mode/). Troubleshooting: [CLI troubleshooting](/guide/cli/troubleshooting/).
 
-
 ---
 
 **Status:** review  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Estado MVP: esta página é uma visão geral. Os cinco passos completos (pesquisa, escrita, imagens e demos, protótipo de site, fluxos reutilizáveis) serão completados em marcos posteriores.
 
 Se queres usar o Codex sobretudo para conteúdo — não para alterar código — podes começar por este percurso.
@@ -58,7 +57,6 @@ Este percurso valoriza mais pedido claro e resultado verificável.
 ## Passos planeados (esquema)
 
 Pesquisa e tema → Escrita e edição → Imagens e demos → Site e protótipo → Fluxo de conteúdo reutilizável
-
 
 ---
 

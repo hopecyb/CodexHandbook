@@ -157,11 +157,7 @@ Environment variables fit values that change, are sensitive, or are needed only 
 - Assume `unset` makes child processes safe—check process tree
 
 ## Reference sources
-
 - OpenAI Codex configuration / environment documentation
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Status:** verified  

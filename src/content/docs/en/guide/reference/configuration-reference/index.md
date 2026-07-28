@@ -203,11 +203,7 @@ Config is for long-term defaults—not secrets, task prose, or team rule essays.
 - Config contradicts `AGENTS.md` (config allows, doc forbids)
 
 ## Reference sources
-
 - OpenAI Codex configuration reference
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Status:** verified  

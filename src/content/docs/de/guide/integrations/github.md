@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 GitHub ist die häufigste Code-Kollaborationsfläche für Codex: Cloud-Aufgaben, PR-Review, Actions und lokaler Push teilen Branches und Berechtigungen.
 
 Hier: Wie Codex in „Repo, Branch, PR, Review“ einsteigt.
@@ -97,10 +96,7 @@ GitHub-Integration schließt Codex an bestehende Code-Kollaboration an.
 - Derselbe PR mischt Formatierung und Feature-Änderung
 
 ## Quellen
-
 - OpenAI-Codex-GitHub-Integrationsdokumentation
-- KimYx0207 CX-10; stormzhang `26-git-github.md`
-
 ---
 
 **Status:** verified  

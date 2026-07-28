@@ -138,10 +138,7 @@ jobs:
 - [ ] 与本地 `make review` 行为一致
 
 ## 参考来源
-
 - OpenAI Codex + GitHub 集成文档
-- codex.bozhouai.com 自动化章节
-
 ---
 
 **状态：** outdated  

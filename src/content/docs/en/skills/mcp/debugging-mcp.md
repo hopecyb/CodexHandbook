@@ -77,11 +77,7 @@ Error index: [error reference](/guide/reference/error-reference/)
 - [ ] Team standard MCP config template documented
 
 ## References
-
 - Model Context Protocol spec and debugging guide
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **Status:** outdated  

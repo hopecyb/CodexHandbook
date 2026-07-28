@@ -109,7 +109,6 @@ Các trang liên quan có thể xem tiếp:
 2. [Thuật ngữ cho người mới](/guide/start-here/terminology-for-beginners/)
 3. [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **Trạng thái:** verified  

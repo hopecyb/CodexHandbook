@@ -88,11 +88,6 @@ Nhóm có thể ghi bốn giai đoạn vào [mẫu case](/cases/use-cases/case-s
 - Kiểm chứng chỉ làm «trông như chạy được»
 - Khám phá thiếu dẫn tới sửa sai module
 
-## Nguồn tham chiếu
-
-- Phương pháp thiết kế tác vụ và kiểm chứng của CodexGuide
-- «Chuỗi đầy đủ từ nhu cầu đến bàn giao» trong sách da cam
-
 ---
 
 **Trạng thái:** verified  

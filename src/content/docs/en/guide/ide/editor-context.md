@@ -18,18 +18,6 @@ IDE Codex does not only read what you type—it also references what you are loo
 - How that stacks with @ files, selection, and AGENTS.md
 - Reducing noise and improving hit rate
 
-## Context sources (conceptual layers)
-
-| Source | Who controls | Typical content |
-|---|---|---|
-| Workspace root | Folder you opened | Project layout, `AGENTS.md`, config files |
-| Open files | Editor tabs | Source you are editing |
-| Selection | Highlighted code | Function, error snippet |
-| Explicit @ | Paths you @ in chat | Cross-directory files, docs |
-| Project rules | `AGENTS.md` etc. in repo | Coding standards, test commands |
-
-Priority and conflicts: [context priority](/guide/context/context-priority/).
-
 ## Recommended workflow
 
 1. **Open the repo root as workspace**, not a subfolder only (monorepo exceptions per team docs)
@@ -82,10 +70,7 @@ Redact logs and customer data before pasting; the IDE does not judge compliance 
 - [ ] Test commands in `AGENTS.md` match IDE terminal usage
 
 ## References
-
 - [File and folder context](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Status:** verified  

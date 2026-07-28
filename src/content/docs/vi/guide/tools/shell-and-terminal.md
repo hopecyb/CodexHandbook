@@ -101,7 +101,6 @@ Trước khi chạy lệnh hãy nói rõ mục đích, có ghi tệp không, có
 
 Trước khi chạy, xác nhận lệnh này sẽ thay đổi chỗ nào.
 
-
 ---
 
 **Trạng thái:** verified  

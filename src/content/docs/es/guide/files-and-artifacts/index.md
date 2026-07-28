@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La producción central de Codex suele ser **cambios de archivos en el repositorio** o **artefactos recién generados** (documentos, imágenes, configuración). Este tema explica las mejores prácticas por tipo de archivo, para evitar «se generó pero no sirve».
 
 Aunque todos sean «archivos», cada tipo pide una forma distinta de encargar la tarea y de aceptarla.

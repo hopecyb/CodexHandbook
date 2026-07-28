@@ -144,13 +144,7 @@ Puedes dejarlo explícito en `AGENTS.md`:
 Así «pedir un plan primero» deja de ser un recordatorio puntual y pasa a ser la práctica por defecto del equipo.
 
 ## Fuentes de referencia
-
 - Enfoque de plan y ejecución en la documentación oficial de OpenAI Codex
-- Prácticas de diseño de tareas y colaboración de freestylefly/CodexGuide
-- Capítulos de flujo Codex en KimYx0207《AI-Coding-Guide-Zh》
-- Métodos de ejecución práctica en la serie Codex de stormzhang
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Estado:** verified  

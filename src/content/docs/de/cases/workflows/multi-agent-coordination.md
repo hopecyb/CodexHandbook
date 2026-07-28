@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Mehrere Agents eignen sich für parallelisierbare, lose gekoppelte Teilprobleme — nicht dafür, ohne Koordination dieselbe Datei gleichzeitig zu ändern.
 
 ## Wann zerlegen

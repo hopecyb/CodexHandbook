@@ -143,10 +143,7 @@ Ví dụ: review PR, tóm tắt thay đổi, quét bảo mật, kiểm tra tài 
 - [ ] Hành vi thống nhất với `make review` local
 
 ## Nguồn tham chiếu
-
 - Tài liệu tích hợp OpenAI Codex + GitHub
-- Chương tự động hóa tại codex.bozhouai.com
-
 ---
 
 **Trạng thái:** outdated  

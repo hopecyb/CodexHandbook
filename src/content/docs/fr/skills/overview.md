@@ -113,10 +113,7 @@ Les Skills ne sont pas obligatoires au départ — ils organisent les flux rép�
 - scripts à la place d'étapes claires → maintenance difficile
 
 ## Sources
-
 - Documentation OpenAI Codex Skills
-- KimYx0207 CX-06 ; stormzhang `22-skills.md`
-
 ---
 
 **Statut :** verified  

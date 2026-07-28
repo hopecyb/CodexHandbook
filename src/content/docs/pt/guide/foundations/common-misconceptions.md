@@ -75,7 +75,6 @@ O Codex é forte, mas funciona melhor dentro de objetivos e limites claros — e
 
 Próximo passo: [Começar a usar](/guide/getting-started/).
 
-
 ---
 
 **Status:** verified  

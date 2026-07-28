@@ -55,7 +55,6 @@ CLI 설치 완료는 명령을 한 번 실행한 것으로 끝나지 않습니�
 대조: [CLI 설치](/guide/getting-started/install-cli/)  
 공식 설치·업그레이드 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
 
-
 ---
 
 **상태:** outdated  

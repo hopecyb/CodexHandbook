@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Definition of Done“ heißt schlicht: Vorab sagen, bis zu welchem Grad etwas als wirklich fertig gilt.
 
 Ohne diesen Schritt passiert oft:
@@ -79,7 +78,6 @@ Fertigstellungsstandards:
 ```
 
 „Definition of Done“ macht vor allem klar, bis wohin „fertig“ reicht — damit Ihre und Codex’ Einschätzung nicht auseinanderlaufen.
-
 
 ---
 

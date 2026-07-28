@@ -93,12 +93,6 @@ Commencer par :
 
 Si vous préférez l'onboarding personnel d'abord, reporter ce chapitre jusqu'au déploiement équipe, permissions ou contrôle des risques.
 
-## Sources de référence
-
-- Chapitres sécurité et entreprise KimYx0207
-- Playbook d'équipe freestylefly/CodexGuide
-- Tutoriels sécurité stormzhang
-
 ---
 
 **Statut :** vérifié  

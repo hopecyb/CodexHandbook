@@ -112,12 +112,7 @@ Skill partagé long terme :
 - confiance sans lire `SKILL.md`
 
 ## Sources
-
 - OpenAI Codex Skills — sécurité
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **Statut :** verified  

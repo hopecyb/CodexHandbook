@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 | Symptom | Try first |
 |---|---|
 | Cannot install or open | Check system requirements and the official installer; restart and retry |
@@ -19,7 +18,6 @@ translated_at: 2026-07-26
 | Changes not as expected | Tighten constraints, start a new thread, check context |
 
 Still stuck: [https://developers.openai.com/codex](https://developers.openai.com/codex) and the [troubleshooting index](/guide/reference/troubleshooting/).
-
 
 ---
 

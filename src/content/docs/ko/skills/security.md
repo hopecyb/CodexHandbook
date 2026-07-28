@@ -115,12 +115,7 @@ Skill이 장기적으로 여러 사람에게 재사용된다면 「누가 DM으�
 - `SKILL.md`를 읽지도 않고 동작을 바로 신뢰
 
 ## 참고 출처
-
 - OpenAI Codex Skills 보안 지침
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **상태:** verified  

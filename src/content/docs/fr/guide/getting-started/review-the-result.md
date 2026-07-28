@@ -17,7 +17,6 @@ translated_at: 2026-07-28
 
 Plus de méthodes : [Examiner les Diff](/guide/quality/review-diffs/).
 
-
 ---
 
 **Statut :** review  

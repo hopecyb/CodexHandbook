@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 `AGENTS.md` là **chỉ thị dự án Markdown** đặt trong kho (hoặc thư mục con); Codex đọc khi vào dự án đó để khớp phong cách mã hóa, yêu cầu kiểm thử, quy chuẩn commit và vùng cấm.
 
 Có thể hiểu `AGENTS.md` là sổ hướng dẫn “dự án này muốn Codex phối hợp thế nào”.
@@ -125,11 +124,7 @@ Ví dụ:
 `AGENTS.md` chịu trách nhiệm nói với Codex “dự án này thường làm việc thế nào”, không thay bạn mô tả lần này cụ thể cần làm gì.
 
 ## Nguồn tham khảo
-
 - Mô tả ngữ cảnh dự án OpenAI Codex
-- freestylefly/CodexGuide: `docs/advanced/02-agents-md.md`
-- stormzhang/ai-coding-guide: `codex/11-agents-md.md`
-
 ---
 
 **Trạng thái:** verified  

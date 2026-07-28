@@ -101,11 +101,7 @@ translated_at: 2026-07-28
 ショートカットは試験範囲ではありません。最も操作を妨げる数個を慣れさせれば通常十分です。
 
 ## 参考
-
 - 各製品 Settings / Keyboard shortcuts 公式ページ
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **状態：** outdated  

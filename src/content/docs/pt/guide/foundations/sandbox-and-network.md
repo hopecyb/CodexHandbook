@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Sandbox» e «rede» são duas coisas distintas: o Sandbox limita *onde* ele pode tocar; a rede limita *aonde* ele pode se conectar.
 
 O **Sandbox** restringe o sistema de arquivos e parte das capacidades de sistema que o Agent alcança, reduzindo a superfície de erro. O **acesso à rede** é outra camada de risco: pode vazar informação sensível no Prompt ou puxar dados não confiáveis.
@@ -66,7 +65,6 @@ As duas não são só configuração técnica — também são o seu jeito de co
 Configuração no produto: App desktop [Configurações](/guide/desktop-app/settings/); detalhes oficiais: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 No começo, prefira restringir um pouco mais a abrir todas as portas de uma vez sem entender o risco.
-
 
 ---
 

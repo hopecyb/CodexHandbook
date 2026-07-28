@@ -78,11 +78,6 @@ translated_at: 2026-07-28
 - [ ] 실행 전에 사람 또는 서면 확인이 있음
 - [ ] 변경이 스펙 파일에 동기화됨
 
-## 참고 출처
-
-- KimYx0207 요구와 작업 분해 장
-- freestylefly/CodexGuide 스펙과 인수 체크리스트
-
 ---
 
 **상태:** verified  

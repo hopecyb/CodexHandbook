@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex は「今回どう聞くか」だけでなく、**永続的な設定**によってあなたとチームの約束を覚えます。この章では、どの要求を会話に残し、どれをプロジェクトに沈めるかを主に区別します。
 
 「このディレクトリは触らない」「先にテストを走らせる」「デフォルトでこのモデルを使う」など、同じことを繰り返し言い始めたら、この章が扱う問題です。
@@ -115,10 +114,7 @@ Codex の協業ルールを初めて体系的に整理するときは、次の�
 - [ ] 機密操作は承認フローに任せ、文字ルールでモデルを「脅す」つもりにしない
 
 ## 参考
-
 - OpenAI Codex ドキュメント：[https://developers.openai.com/codex](https://developers.openai.com/codex)
-- コミュニティ実践の構造参考：freestylefly/CodexGuide AGENTS.md トピック、stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **状態：** verified  

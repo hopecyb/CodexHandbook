@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Je mehr Erweiterungsmechanismen, desto teurer die falsche Wahl. Diese Seite hilft, vor Plugin-Installation oder MCP-Schreiben zu prüfen, ob es nötig ist.
 
 Leicht vermischt:

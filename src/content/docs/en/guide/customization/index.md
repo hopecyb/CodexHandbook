@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 Codex does not rely only on “how you ask this time”; it also relies on **persistent configuration** to remember your conventions and your team’s. This chapter mainly separates what should stay in the conversation from what should sink into the project.
 
 If you have started repeating the same things—such as “don’t touch this directory,” “run tests first,” or “use this model by default”—this chapter addresses that kind of problem.
@@ -116,10 +115,7 @@ Rules do not need to be numerous; putting them in the right place matters more.
 - [ ] Sensitive operations still go through approval instead of relying on text rules to “scare” the model
 
 ## References
-
 - OpenAI Codex documentation: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Community practice structure references: freestylefly/CodexGuide AGENTS.md topics, stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **Status:** verified  

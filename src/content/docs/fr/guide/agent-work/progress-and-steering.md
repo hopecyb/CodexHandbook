@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Modèle de pilotage en cours de Tâche :
 
 ```text
@@ -16,7 +15,6 @@ Arrêter à l'étape actuelle. Garder A et B ; annuler la direction des changeme
 ```
 
 Les petites corrections sauvent plus de Contexte que recommencer.
-
 
 ---
 

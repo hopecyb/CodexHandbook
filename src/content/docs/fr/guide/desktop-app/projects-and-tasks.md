@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Projets
 
 - Ajoutez un répertoire d'entraînement ou une racine de dépôt
@@ -21,7 +20,6 @@ translated_at: 2026-07-28
 - Approuvez ou rejetez lorsque demandé
 
 Référence conceptuelle : [Fils, Tâches et projets](/guide/foundations/threads-tasks-and-projects/)
-
 
 ---
 

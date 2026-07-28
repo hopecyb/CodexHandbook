@@ -122,11 +122,7 @@ Manche Aufgaben brauchen Outbound für Packages/APIs:
 - [ ] Austritt-/Rotationsprozess definiert
 
 ## Quellen
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`, `10-cloud.md`
-- KimYx0207 Security-/Enterprise-Kapitel (Fakten offiziell nachprüfen)
-
 ---
 
 **Status:** outdated  

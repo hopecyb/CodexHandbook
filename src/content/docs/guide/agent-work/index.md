@@ -91,12 +91,7 @@ Agent 工作更看重任务能不能在计划、执行、纠偏和收尾这几�
 - 拆子任务时不给边界，最后主线程反而更乱
 
 ## 参考来源
-
 - OpenAI Codex 官方任务协作与执行说明
-- freestylefly/CodexGuide 的协作式任务实践
-- KimYx0207《AI-Coding-Guide-Zh》Codex 工作流章节
-- stormzhang 子任务与自动化实践
-
 ---
 
 **状态：** verified  

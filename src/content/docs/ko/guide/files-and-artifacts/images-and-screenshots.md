@@ -103,11 +103,9 @@ translated_at: 2026-07-28
 - [민감 컨텍스트](/guide/context/sensitive-context/)
 
 ## 참고 출처
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ## 검증
 
 「그림대로 구현」형 작업:

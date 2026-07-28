@@ -181,11 +181,9 @@ Por fim sugira a direção da alteração.
 Costuma ser mais claro do que «ajuda-me a corrigir», e facilita o passo seguinte.
 
 ## Fontes de referência
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **Estado:** verified  

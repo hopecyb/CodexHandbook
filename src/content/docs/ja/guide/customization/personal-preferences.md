@@ -101,12 +101,6 @@ translated_at: 2026-07-28
 - [ ] 少なくとも一つの顧客プロジェクトに厳格 Profile を設定
 - [ ] リポジトリ内に個人の秘密鍵がない
 
-## 参考
-
-- freestylefly/CodexGuide 個人とチーム設定
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **状態：** verified  

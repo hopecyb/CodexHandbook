@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Chỉ thị dự án hiệu quả gần hơn với **danh sách kiểm tra**. Mục tiêu là để Codex lần thử đầu đã ít mắc lỗi có thể tiên đoán.
 
 Lần đầu viết chỉ thị dự án, vấn đề thường gặp là ý tưởng viết nhiều, ràng buộc then chốt thật sự lại chưa đủ rõ.

@@ -100,11 +100,7 @@ If mostly yes, start with the IDE extension.
 Often you pick the IDE extension simply because that is where you already work.
 
 ## References
-
 - OpenAI Codex IDE documentation
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **Status:** outdated  

@@ -125,11 +125,7 @@ You do not need every command and shortcut on day one. Clarify "chat while worki
 - [ ] Can write a minimal read-only `codex exec` task (if available)
 
 ## References
-
 - OpenAI Codex CLI documentation
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **Status:** outdated  

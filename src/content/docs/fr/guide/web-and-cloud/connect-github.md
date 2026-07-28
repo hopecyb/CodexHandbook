@@ -88,11 +88,7 @@ L'UI et les boutons exacts dépendent du produit actuel.
 - Exécuter des Tâches non bornées sur un grand monorepo dès le premier essai
 
 ## Références
-
 - Documentation intégration OpenAI Codex Cloud / GitHub
-- KimYx0207 CX-10, CX-11
-- stormzhang `26-git-github.md`, `10-cloud.md`
-
 ---
 
 **Statut :** obsolète  

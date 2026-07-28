@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ne fournissez pas à Codex (entraînement ou production) :
 
 - Clés API, mots de passe, cookies de session
@@ -16,7 +15,6 @@ Ne fournissez pas à Codex (entraînement ou production) :
 - Documents internes non publiés interdits de partage externe par contrat
 
 Utilisez des placeholders : `YOUR_API_KEY`. En cas de fuite, faites pivoter les identifiants selon le processus de votre organisation.
-
 
 ---
 

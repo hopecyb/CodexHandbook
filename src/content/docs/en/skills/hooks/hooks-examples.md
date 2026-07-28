@@ -123,10 +123,6 @@ At minimum:
 - Clear failure reason
 - Does not block normal requests excessively
 
-## Same source as team rules
-
-Extract "forbidden command substrings" into `tools/codex-policy.json` for Hooks and [command rules](/guide/customization/rules/command-rules/) to share—avoid maintaining two places.
-
 ## Common misconceptions
 
 ### 1. If the example runs, it is production-ready
@@ -180,11 +176,7 @@ Hook examples are for learning structure—not copying verbatim into production.
 - [ ] Docs note verification date and applicable CLI version
 
 ## References
-
 - OpenAI Codex Hooks examples
-- freestylefly/CodexGuide audit configuration
-- stormzhang `22-hooks.md`
-
 ---
 
 **Status:** outdated  

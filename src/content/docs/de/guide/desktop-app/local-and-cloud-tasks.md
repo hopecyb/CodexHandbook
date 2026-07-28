@@ -44,7 +44,6 @@ Häufige Fälle:
 
 Reicht lokal in der Desktop-App, bleib lokal; bei längeren, remote-lastigen oder umgebungsgebundenen Aufgaben eher Cloud.
 
-
 ---
 
 **Status:** verified  

@@ -102,7 +102,6 @@ Nếu còn cần tệp khác, nói trước vì sao cần, rồi mới tiếp t�
 
 Chỉ phạm vi tệp cho Codex chính là giảm đoán, nhiễu và sửa nhầm.
 
-
 ---
 
 **Trạng thái:** verified  

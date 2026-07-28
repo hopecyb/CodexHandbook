@@ -150,12 +150,7 @@ translated_at: 2026-07-28
 4. [다중 Agent 협업 워크플로](/cases/workflows/multi-agent-coordination/)
 
 ## 참고 출처
-
 - OpenAI Codex 다중 작업/작업 협업 관련 문서
-- KimYx0207 Codex 디렉터리의 작업 협업 아이디어
-- stormzhang `21-subagents.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **상태:** outdated  

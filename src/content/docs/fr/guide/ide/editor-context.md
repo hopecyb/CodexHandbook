@@ -82,10 +82,7 @@ Rédigez logs et données clients avant de coller ; l'IDE ne juge pas la conform
 - [ ] Les commandes de test dans `AGENTS.md` correspondent à l'usage terminal IDE
 
 ## Références
-
 - [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/)
-- stormzhang `09-ide.md`
-
 ---
 
 **Statut :** vérifié  

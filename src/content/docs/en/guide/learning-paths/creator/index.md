@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 > MVP status: this page is an overview. The full five steps (research, writing, images and decks, website prototypes, reusable workflows) will be added in a later milestone.
 
 ## Read now
@@ -19,7 +18,6 @@ translated_at: 2026-07-25
 ## Planned steps (outline)
 
 Research and topics → writing and editing → images and presentations → websites and prototypes → reusable content workflows
-
 
 ---
 

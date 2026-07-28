@@ -109,10 +109,7 @@ Agent가 작업을 마칠 때 보고서, 스크립트, 정적 사이트, 테스�
 - [ ] secrets 없음, 불필요 생성 디렉터리 없음
 
 ## 참고 출처
-
 - [불확실성 다루기](/guide/quality/handle-uncertainty/)
-- external-source-integration 사례 검증 요구
-
 ---
 
 **상태:** verified  

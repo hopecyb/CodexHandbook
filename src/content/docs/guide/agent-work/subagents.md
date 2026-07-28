@@ -3,7 +3,6 @@ title: 子 Agent
 description: 把子任务委托给独立上下文——何时拆、如何交接、如何验收。
 ---
 
-
 **子 Agent（Subagent）** 是主 Agent 为特定子问题启动的**独立工作单元**，拥有相对隔离的上下文，完成后将结果汇总回主线程。
 
 可以把子 Agent 理解成：把一个明确的小任务，单独交给一个只关注这件事的助手。它的价值不在“更酷”，而在“更干净、更专注、更容易并行”。
@@ -121,7 +120,6 @@ description: 把子任务委托给独立上下文——何时拆、如何交接�
 
 - [多 Agent 协作](/cases/workflows/multi-agent-coordination/)
 - [交接与恢复](/guide/agent-work/handoff-and-resume/)
-- KimYx0207 CX-08；stormzhang `21-subagents.md`
 
 ---
 

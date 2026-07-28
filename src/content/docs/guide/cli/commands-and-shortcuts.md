@@ -127,11 +127,7 @@ IDE：[本地任务工作流](/guide/ide/local-task-workflow/)
 - [ ] 能写一条最小的 `codex exec` 只读任务（若环境提供）
 
 ## 参考来源
-
 - OpenAI Codex CLI 文档
-- stormzhang `08-cli.md`、`12-slash-commands.md`、`35-cheatsheet.md`
-- KimYx0207 CX-03、CX-12
-
 ---
 
 **状态：** outdated  

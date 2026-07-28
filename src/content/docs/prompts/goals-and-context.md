@@ -78,7 +78,6 @@ description: 让 Codex 知道要完成什么以及为何重要。
 
 相关：项目级背景可沉到 [项目上下文](/guide/context/project-context/)，避免每条提示重复长篇。
 
-
 ---
 
 **状态：** verified  

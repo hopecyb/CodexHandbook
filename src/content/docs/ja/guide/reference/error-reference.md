@@ -149,11 +149,7 @@ translated_at: 2026-07-28
 複数変更を混ぜない。他人も定位しやすくなります。
 
 ## 参考
-
 - OpenAI Codex サポートドキュメント
-- stormzhang FAQ とトラブルシュート章
-- KimYx0207 障害合集（公式で再確認）
-
 ---
 
 **状態：** verified  

@@ -119,10 +119,7 @@ More “yes” answers → webhooks matter more.
 Webhooks connect task state changes to other systems—after signature verification, idempotency, and async handling are in place.
 
 ## Reference sources
-
 - OpenAI Codex / Cloud API event documentation
-- KimYx0207 integration chapter
-
 ---
 
 **Status:** verified  

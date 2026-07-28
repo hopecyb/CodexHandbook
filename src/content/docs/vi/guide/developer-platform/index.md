@@ -83,12 +83,7 @@ Nếu chỉ cần nắm khái niệm, ưu tiên [Tổng quan SDK](/guide/develop
 Chương nền tảng nhà phát triển nói về «cách nối Codex vào hệ thống». Lần đầu dùng Codex thực tế, hãy đọc nội dung nhập môn trước.
 
 ## Nguồn tham chiếu
-
 - Tài liệu chính thức OpenAI Codex API / SDK
-- Chương nhà phát triển KimYx0207
-- Hướng dẫn CI và tự động hóa stormzhang
-- Case kỹ thuật hóa tại codex.bozhouai.com
-
 ---
 
 **Trạng thái:** verified  

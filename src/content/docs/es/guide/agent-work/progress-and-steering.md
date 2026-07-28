@@ -157,7 +157,6 @@ Cuando detectas desviación en la ejecución, puedes usar una instrucción corta
 - Necesitas delegar la tarea a otros: ver [Subagents](/guide/agent-work/subagents/)
 - Continuar tras interrumpir la tarea: ver [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Estado:** verificado  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 여러 Agent는 병렬 가능하고 결합도가 낮은 하위 문제에 적합하며, 조율 없이 같은 파일을 동시에 고치는 데는 적합하지 않습니다.
 
 ## 언제 나누는가

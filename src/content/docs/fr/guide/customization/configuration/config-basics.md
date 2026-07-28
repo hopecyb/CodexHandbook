@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La configuration permet d'**unifier le comportement de Codex** sur votre machine ou dans un projet sans répéter le modèle, le niveau d'approbation ou la politique de bac à sable à chaque session.
 
 ## Sur cette page
@@ -129,11 +128,7 @@ La configuration peut inclure **listes d'autorisation de chemins, politique rés
 La configuration convient aux défauts que vous répéteriez presque à chaque fois ; vous n'avez pas besoin de chaque règle dans les fichiers de configuration.
 
 ## Références
-
 - Documentation de configuration OpenAI Codex
-- stormzhang/ai-coding-guide : `codex/18-config.md`
-- KimYx0207 CX-04 configuration des permissions d'instructions projet (les faits nécessitent une vérification officielle)
-
 ---
 
 **Statut :** vérifié  

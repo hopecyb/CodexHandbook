@@ -124,12 +124,6 @@ Thường tương ứng:
 
 Chiến lược quy tắc nhóm quan trọng nhất là phân rõ trước “ai định ranh giới tầng nào”, rồi mới quyết quy tắc viết thế nào.
 
-## Nguồn tham khảo
-
-- Quản trị nhóm và playbook freestylefly/CodexGuide
-- Chương bảo mật doanh nghiệp KimYx0207
-- Case cấu hình nhóm codex.bozhouai.com (tham khảo loại tác vụ)
-
 ---
 
 **Trạng thái:** verified  

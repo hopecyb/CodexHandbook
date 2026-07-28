@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 ## Goal for this step
 
 Use complete sentences to explain **what you want** and **what you do not want**—not a single vague word.
@@ -27,7 +26,6 @@ Do not modify any files.
 - Vague requests get vague answers
 
 Next: [Work with files](/guide/learning-paths/beginner/02-work-with-files/) · Concepts: [Prompt basics](/prompts/basics/)
-
 
 ---
 

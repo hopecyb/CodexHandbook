@@ -74,7 +74,6 @@ translated_at: 2026-07-28
 
 認証の詳細とセキュリティヒントは公式が基準：[https://developers.openai.com/codex](https://developers.openai.com/codex)。失敗時は [トラブルシューティング索引](/guide/reference/troubleshooting/) を確認。
 
-
 ---
 
 **状態：** outdated  

@@ -63,11 +63,6 @@ Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas l
 - [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/)
 - [Caso: refactorizar documentación con revisión](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## Fuentes de referencia
-
-- Métodos de investigación y citas de CodexGuide
-- Capítulos de búsqueda y verificación de stormzhang
-
 ---
 
 **Estado:** verified  

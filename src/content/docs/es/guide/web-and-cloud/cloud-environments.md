@@ -147,11 +147,7 @@ Las Tareas largas se pueden seguir con [notificaciones de la App de escritorio](
 - Limpia periódicamente plantillas de entorno y Secrets en desuso
 
 ## Fuentes de referencia
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10, CX-11
-
 ---
 
 **Estado:** outdated  

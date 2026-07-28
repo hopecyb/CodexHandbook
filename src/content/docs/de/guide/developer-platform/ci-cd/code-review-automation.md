@@ -101,12 +101,7 @@ Der größte Nutzen der Code-Review-Automatisierung: vor dem Menschen-Review off
 - [ ] Team-Dokumentation klärt die Rolle von AI-Review
 
 ## Quellen
-
 - OpenAI Codex CI-Beispiele
-- KimYx0207 Review/PR-Kapitel
-- stormzhang CI-Tutorials
-- Git/GitHub-Teil auf codex.bozhouai.com
-
 ---
 
 **Status:** verified  

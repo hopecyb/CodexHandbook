@@ -144,13 +144,7 @@ In `AGENTS.md` you can state:
 Then "plan first" becomes default practice—not a one-off reminder.
 
 ## Reference sources
-
 - Plan-and-execute patterns in OpenAI Codex official documentation
-- Task design and collaboration practices from freestylefly/CodexGuide
-- Codex workflow chapters in KimYx0207's AI-Coding-Guide-Zh
-- Practical execution methods from stormzhang's Codex series
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Status:** verified  

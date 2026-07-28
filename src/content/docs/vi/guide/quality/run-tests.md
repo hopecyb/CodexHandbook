@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Sau khi sửa xong, cần có cách nào đó để xác nhận nó không bị hỏng rõ ràng.
 
 “Bằng chứng” này có thể là kiểm thử tự động, build thành công, hoặc một nhóm bước kiểm tra thủ công rõ ràng.
@@ -72,7 +71,6 @@ Hãy cho tôi biết bạn thực sự đã chạy những kiểm chứng nào; 
 ```
 
 Kiểm chứng có thể rất nhẹ, nhưng không được thiếu; nếu không, “làm xong” khó đứng vững.
-
 
 ---
 

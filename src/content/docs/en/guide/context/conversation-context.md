@@ -9,11 +9,9 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 A single thread accumulates: your instructions, intermediate tool output, old conclusions. The upside is continuity; the downside is stale constraints still influencing later steps.
 
 When switching topics → start a new thread and paste a summary of constraints that still apply.
-
 
 ---
 

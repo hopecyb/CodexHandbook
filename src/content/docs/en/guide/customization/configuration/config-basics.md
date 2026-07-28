@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 Configuration lets you **unify Codex behavior** on your machine or in a project without repeating model, approval level, or sandbox policy every session.
 
 ## On This Page
@@ -129,11 +128,7 @@ Configuration may include **path allowlists, network policy, MCP server lists**â
 Configuration suits defaults you would otherwise repeat almost every time; you do not need every rule in configuration files.
 
 ## References
-
 - OpenAI Codex configuration documentation
-- stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 project instruction permission configuration (facts need official verification)
-
 ---
 
 **Status:** verified  

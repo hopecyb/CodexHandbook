@@ -136,11 +136,7 @@ Ejemplos completos: [Ejemplos de configuración de Hook](/skills/hooks/hooks-exa
 - [ ] La configuración entra en revisión de código
 
 ## Fuentes de referencia
-
 - Referencia de OpenAI Codex Hooks
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-
 ---
 
 **Estado:** desactualizado  

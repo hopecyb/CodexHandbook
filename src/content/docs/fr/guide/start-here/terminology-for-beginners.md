@@ -29,7 +29,6 @@ Pour un glossaire plus complet, consultez le [Glossaire](/guide/reference/glossa
 
 Lorsque vous rencontrez un terme inconnu, revenez ici ou au glossaire avant de continuer.
 
-
 ---
 
 **Statut :** review  

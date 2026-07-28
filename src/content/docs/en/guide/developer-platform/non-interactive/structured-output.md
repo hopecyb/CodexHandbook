@@ -117,10 +117,7 @@ See [SDK overview](/guide/developer-platform/sdk-overview/).
 - [ ] Aligned with [exit codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/) strategy
 
 ## Reference sources
-
 - OpenAI structured outputs general practice (conceptual alignment)
-- KimYx0207 automation output chapter
-
 ---
 
 **Status:** verified  

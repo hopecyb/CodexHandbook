@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Typical configuration areas (names follow the UI):
 
 - Default model and reasoning tier
@@ -18,7 +17,6 @@ Typical configuration areas (names follow the UI):
 - Appearance and editing preferences
 
 Team-managed configuration may override personal settings. Official docs: [https://developers.openai.com/codex](https://developers.openai.com/codex). Concepts: [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
-
 
 ---
 

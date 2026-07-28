@@ -41,7 +41,6 @@ En la primera fase, distingue estos dos modos:
 
 Si es la primera prueba, suele ir mejor el modo interactivo. Cuando necesites automatizar, mira entonces el modo no interactivo.
 
-
 ---
 
 **Estado:** verified  

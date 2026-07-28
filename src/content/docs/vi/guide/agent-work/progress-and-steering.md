@@ -157,7 +157,6 @@ Khi phát hiện lệch trong thực thi, dùng lệnh ngắn nói rõ “giữ 
 - Cần tách tác vụ cho người khác: xem [Subagent](/guide/agent-work/subagents/)
 - Tác vụ gián đoạn rồi tiếp tục: xem [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Trạng thái:** verified  

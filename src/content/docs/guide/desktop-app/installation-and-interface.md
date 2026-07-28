@@ -3,7 +3,6 @@ title: 安装与界面
 description: 桌面 App 安装后的主要界面区域。
 ---
 
-
 安装步骤见 [安装桌面 App](/guide/getting-started/install-desktop-app/) 与 [https://developers.openai.com/codex](https://developers.openai.com/codex)。
 
 刚打开桌面 App 时，界面里会同时出现不少信息。
@@ -43,7 +42,6 @@ description: 桌面 App 安装后的主要界面区域。
 这里说的是逻辑区域，不是具体按钮名字。
 
 先把“输入任务”“看改动”“做批准”这三件事找到，后面边用边熟悉就行。
-
 
 ---
 

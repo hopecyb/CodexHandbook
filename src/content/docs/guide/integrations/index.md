@@ -189,13 +189,7 @@ Codex 的集成价值，不只是多连一个工具，也在于把 Agent 放进�
 - 云端仓库协作：见 [Web 与 Cloud](/guide/web-and-cloud/)
 
 ## 参考来源
-
 - OpenAI Codex 官方集成与开发者文档
-- KimYx0207《AI-Coding-Guide-Zh》Codex 集成与自动化相关章节
-- stormzhang `26-git-github.md` 与自动化章节
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **状态：** verified  

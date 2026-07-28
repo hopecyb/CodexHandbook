@@ -147,11 +147,7 @@ As Tarefas longas podem seguir-se com [notificações da App de ambiente de trab
 - Limpa periodicamente templates de ambiente e Secrets em desuso
 
 ## Fontes de referência
-
 - OpenAI Codex Cloud environments
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10, CX-11
-
 ---
 
 **Estado:** outdated  

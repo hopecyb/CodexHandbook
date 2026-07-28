@@ -103,10 +103,8 @@ Codex は一部のシナリオで**画像生成**能力を呼び出せます。�
 - 企業ポリシーで特定の題材が禁止されている場合がある。[Acceptable Use](https://openai.com/policies/) と社内規定に従う
 
 ## 参考資料
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## よくあるミス
 
 - 未圧縮の 4K 画像をそのままリポジトリにコミット

@@ -10,7 +10,6 @@ sidebar:
   order: 3
 ---
 
-
 Dieser Teil bündelt die Grundlagenbegriffe, die das ganze Handbook immer wieder nutzt. Unterschiede der Produkt-UI stehen im [Produkthandbuch](/guide/); Prompt-Techniken in den [Kernfähigkeiten](/guide/).
 
 Hier geht es vor allem darum, wie Codex arbeitet — und wie du mit ihm zusammenarbeitest.
@@ -67,7 +66,6 @@ Wenn du das Kapitel nicht in einem Rutsch lesen willst, starte mit diesen Seiten
 5. [Überprüfung und menschliche Kontrolle](/guide/foundations/verification-and-human-review/)
 
 Diese Seiten zu verstehen reicht schon für den Alltagseinsatz.
-
 
 ---
 

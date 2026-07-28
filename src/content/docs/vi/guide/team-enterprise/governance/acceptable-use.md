@@ -96,11 +96,6 @@ Càng nhiều «có» → càng có khả năng hiệu quả.
 
 Giá trị của AUP là ranh giới đội rõ cho việc dùng Codex — và căn chỉnh với kiểm soát thật.
 
-## Nguồn tham chiếu
-
-- Chương chính sách doanh nghiệp KimYx0207
-- Quản trị đội freestylefly/CodexGuide
-
 ---
 
 **Trạng thái:** verified  

@@ -79,7 +79,6 @@ Không cần đọc hết từng trang theo mục lục site. Có thể đi theo
 
 Sơ đồ chọn mở rộng tổng thể xem [Bản đồ năng lực mở rộng](/skills/capability-map/); đối chiếu sản phẩm xem [So sánh tính năng](/guide/reference/feature-comparison/). Khác biệt năng lực giữa các lối vào nằm ở trang so sánh tính năng.
 
-
 ---
 
 **Trạng thái:** verified  

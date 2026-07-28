@@ -150,12 +150,7 @@ translated_at: 2026-07-28
 4. [マルチ Agent 協業ワークフロー](/cases/workflows/multi-agent-coordination/)
 
 ## 参考ソース
-
 - OpenAI Codex のマルチタスク／タスク協業関連ドキュメント
-- KimYx0207 Codex ディレクトリのタスク協業の考え方
-- stormzhang `21-subagents.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **状態：** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 This page focuses on connection and verification; protocol details and server development are in official MCP docs.
 
 ## Before you start
@@ -93,10 +92,8 @@ On failure check: expired token, env var not passed into process, corporate prox
 First call to an unfamiliar tool may prompt confirmation—that is expected. Do not encourage "always allow all MCP writes" in team policy.
 
 ## References
-
 - OpenAI Codex MCP configuration documentation
 - modelcontextprotocol.io server examples
-
 ---
 
 **Status:** outdated  

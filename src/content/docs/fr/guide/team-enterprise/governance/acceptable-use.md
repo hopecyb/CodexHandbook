@@ -96,11 +96,6 @@ Plus de « oui » → plus probablement efficace.
 
 La valeur d'une AUP est des frontières d'équipe claires pour l'usage Codex — et l'alignement avec les contrôles réels.
 
-## Sources de référence
-
-- Chapitre politique entreprise KimYx0207
-- Gouvernance d'équipe freestylefly/CodexGuide
-
 ---
 
 **Statut :** vérifié  

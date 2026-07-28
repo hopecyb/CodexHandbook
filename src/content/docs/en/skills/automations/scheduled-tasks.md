@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 **Automations** let Codex run tasks automatically on a **schedule, repo events, or external triggers**—for example dependency update checks, doc sync, periodic health scans.
 
 ## Contents
@@ -94,11 +93,7 @@ Split into multiple Automations + [handoff and resume](/guide/agent-work/handoff
 - [ ] Team knows bot account and approval rules
 
 ## References
-
-- KimYx0207 CX-09 Automations
-- stormzhang `27-automation.md`
 - OpenAI Codex Cloud / Automations official documentation
-
 ---
 
 **Status:** outdated  

@@ -64,7 +64,6 @@ Các cách làm sau sẽ hạ rõ xác suất «sửa sai rồi khó thu dọn»
 
 Làm sai bản thân không đáng sợ. Chưa nhìn rõ phạm vi thay đổi đã sửa tiếp mới phiền hơn.
 
-
 ---
 
 **Trạng thái:** verified  

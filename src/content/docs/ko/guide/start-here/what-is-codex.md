@@ -109,7 +109,6 @@ Codex를 조수로 쓰면 됩니다. 책임까지 넘기지 마세요.
 2. [초보자를 위한 용어](/guide/start-here/terminology-for-beginners/)
 3. [첫 작업 실행](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **상태:** verified  

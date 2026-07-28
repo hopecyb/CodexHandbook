@@ -59,7 +59,6 @@ IDE トラブルシューティングで最も多い根本原因は、ワーク�
 
 公式ドキュメントは [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
 
-
 ---
 
 **状態：** verified  

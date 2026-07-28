@@ -28,7 +28,6 @@ Codex should not perform high-risk operations without consent. **Approval** is a
 
 Official policy and defaults may change—check [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** review  

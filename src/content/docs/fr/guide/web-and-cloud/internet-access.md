@@ -130,12 +130,7 @@ Mesures : HTTPS + token, miroirs accessibles, ou documenter que Cloud ne peut at
 - [ ] L'équipe sait quelles données ne doivent jamais apparaître dans les Prompts en réseau
 
 ## Références
-
 - Documentation réseau et sécurité OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `19-security.md`
-- KimYx0207 CX-10, CX-11
-- codex.bozhouai.com sections Cloud
-
 ---
 
 **Statut :** obsolète  

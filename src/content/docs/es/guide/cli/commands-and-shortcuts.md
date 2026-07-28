@@ -132,11 +132,7 @@ No hace falta memorizar de golpe todos los comandos y atajos. Primero aclara «�
 - [ ] Puedes escribir una Tarea de solo lectura mínima con `codex exec` (si el entorno lo ofrece)
 
 ## Fuentes de referencia
-
 - Documentación de OpenAI Codex CLI
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **Estado:** outdated  

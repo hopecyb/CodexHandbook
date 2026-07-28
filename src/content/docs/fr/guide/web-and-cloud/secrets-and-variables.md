@@ -124,11 +124,7 @@ Certaines Tâches nécessitent des pulls de packages sortants ou des appels API 
 - [ ] Processus de départ/rotation défini
 
 ## Références
-
 - OpenAI Codex Cloud secrets
-- stormzhang `16-security.md`, `10-cloud.md`
-- KimYx0207 sections sécurité et entreprise (vérifier les faits contre la doc officielle)
-
 ---
 
 **Statut :** obsolète  

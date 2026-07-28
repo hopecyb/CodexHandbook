@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Projektanweisungen“ sind der **statische Kontext**, mit dem Codex das Repo versteht — nicht auf ein Dateiformat beschränkt.
 
 ## Inhalt

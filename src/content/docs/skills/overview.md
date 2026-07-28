@@ -3,7 +3,6 @@ title: Skills 概述
 description: 用 SKILL.md 把可复用工作流教给 Codex，写一次，按需调用。
 ---
 
-
 **Skill** 是一个包含 `SKILL.md` 的目录（可加脚本与参考资料），把一套固定流程打包成 Codex 能**自动或显式调用**的能力。
 
 它适合承载那些已经重复出现、以后还会继续复用的做事方法。
@@ -109,10 +108,7 @@ Skill 不是起步必需品，更适合拿来整理那些已经反复出现的�
 - 用脚本替代本可清晰描述的步骤，难以维护
 
 ## 参考来源
-
 - OpenAI Codex Skills 文档
-- KimYx0207 CX-06；stormzhang `22-skills.md`
-
 ---
 
 **状态：** verified  

@@ -39,7 +39,6 @@ You can enter by **role**, **task**, or **product**. All three paths converge on
 
 Not sure which to pick? Start with [Choose your Codex client](/guide/getting-started/choose-your-codex-client/) and the [feature comparison](/guide/reference/feature-comparison/).
 
-
 ---
 
 **Status:** review  

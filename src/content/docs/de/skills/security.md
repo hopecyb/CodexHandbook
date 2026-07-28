@@ -114,12 +114,7 @@ Bei explizitem `$name` ist die Absicht klar; bei **automatischer Modell-Wahl** i
 - `SKILL.md` ungelesen vertrauen
 
 ## Quellen
-
 - OpenAI Codex Skills-Sicherheitsleitfaden
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **Status:** verified  

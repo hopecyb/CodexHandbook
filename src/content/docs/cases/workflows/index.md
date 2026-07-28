@@ -3,7 +3,6 @@ title: 工作流方法
 description: 可重复的协作方法——不绑定单一产品界面，强调检查点与验收。
 ---
 
-
 [提示词](/prompts/) 教你怎么**说**；工作流教你怎么**组织一整件事**。本章方法适用于 App、CLI、IDE 与 Cloud。
 
 ## 为什么需要工作流
@@ -47,12 +46,6 @@ description: 可重复的协作方法——不绑定单一产品界面，强调�
 2. **默认小步**：可审查的增量优于一次巨大改动
 3. **失败可恢复**：知道如何撤销、如何 fork 线程继续
 4. **能沉淀就沉淀**：第三次重复的流程写成 Skill 或模板
-
-## 参考来源
-
-- freestylefly/CodexGuide 工作流与 playbook
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com 第四篇标准工作流
 
 ---
 

@@ -49,7 +49,6 @@ CLI 装好以后，当前终端应该能找到它，你也能继续完成认证�
 
 详细交互见 [CLI 交互模式](/guide/cli/interactive-mode/)。排障：[CLI 排障](/guide/cli/troubleshooting/)。
 
-
 ---
 
 **状态：** outdated  

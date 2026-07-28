@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 A maior diferença em relação a um chatbot comum é que ele age por meio de **Ferramentas**.
 
 Arquivos são onde ele altera coisas; comandos são como ele executa ações; Ferramentas são a porta de entrada para agir.
@@ -96,7 +95,6 @@ Próximas leituras sugeridas:
 1. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
 2. [Sandbox e rede](/guide/foundations/sandbox-and-network/)
 3. [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

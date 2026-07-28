@@ -12,7 +12,6 @@ Vor der ersten Nutzung kannst du dich fragen: „Wenn es falsch liegt — zahle 
 
 Diese Liste soll das Risiko der ersten Nutzung drücken.
 
-
 Vor dem Start abhaken:
 
 - [ ] Ich nutze ein wegwerfbares Übungsverzeichnis — kein Produktions-Repo
@@ -44,7 +43,6 @@ Häufigere Erstprobleme:
 Beim Nutzen lernen ist ok — diese Punkte vor dem Start einmal durchzugehen ist stabiler.
 
 Erste Codex-Nutzung: Fehlerkosten zuerst niedrig halten — danach wird alles leichter.
-
 
 ---
 

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Tras el cambio, hace falta alguna forma de confirmar que no se rompió nada de forma evidente.
 
 Esa «prueba» puede ser un test automático, un build correcto o un conjunto claro de pasos de verificación manual.
@@ -72,7 +71,6 @@ Dime qué verificaciones ejecutaste realmente; si no puedes ejecutarlas, explica
 ```
 
 La verificación puede ser ligera, pero no puede faltar; si no, «terminado» cuesta de sostener.
-
 
 ---
 

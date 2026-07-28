@@ -70,11 +70,6 @@ Puede combinarse con [Revisar diffs](/guide/quality/review-diffs/); los ítems d
 - [Code review en Cloud](/guide/web-and-cloud/code-review/)
 - [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/)
 
-## Fuentes de referencia
-
-- Capítulos Review/PR de KimYx0207
-- Flujos Git/GitHub de codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

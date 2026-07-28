@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Los ejemplos siguientes asumen la **App de escritorio**; CLI/IDE pueden usar el mismo Prompt.
 
 Muchas personas, en la primera vez con Codex, quieren pedirle «haz un sitio web completo» o «refactoriza todo el proyecto». Así es fácil perder el control de golpe.
@@ -112,7 +111,6 @@ No sigas cambiando. Dime qué lugares acabas de modificar.
 ```
 
 Fundamentos del Prompt: [bases del Prompt](/prompts/basics/).
-
 
 ---
 

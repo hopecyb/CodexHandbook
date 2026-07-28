@@ -93,12 +93,6 @@ Zum Beispiel:
 
 Für den persönlichen Einstieg später; bei Team-Rollout, Berechtigungsverwaltung oder Risikokontrolle zurückkommen.
 
-## Quellen
-
-- KimYx0207 Security- und Enterprise-Kapitel
-- freestylefly/CodexGuide Team-Playbook
-- stormzhang Security-Tutorials
-
 ---
 
 **Status:** verified  

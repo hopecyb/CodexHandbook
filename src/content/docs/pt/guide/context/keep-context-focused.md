@@ -107,7 +107,6 @@ Quanto mais altera, mais difícil fica depois julgar em que passo começou o des
 
 Focar o Contexto não é falar menos: é deixar a informação que ainda vale e cortar a tempo o que já não importa. Contexto confuso → execução fácil de desviar.
 
-
 ---
 
 **Estado:** verified  

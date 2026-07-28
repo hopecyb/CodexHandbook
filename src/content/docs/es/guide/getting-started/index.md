@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El objetivo es completar la primera Tarea en un **proyecto de práctica seguro**, y aprender a revisar, aceptar, modificar o deshacer.
 
 Por defecto usa la **App de escritorio**. Si prefieres el terminal o el editor, las páginas de instalación siguen aplicando; el ejemplo de la primera Tarea indicará las diferencias.
@@ -72,7 +71,6 @@ Puedes seguir este ciclo mínimo:
 6. Aprende a deshacer o corregir
 
 Cuando este ciclo funcione, aprender contenidos más complejos será más fácil.
-
 
 ---
 

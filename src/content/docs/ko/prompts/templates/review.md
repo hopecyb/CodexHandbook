@@ -53,7 +53,6 @@ translated_at: 2026-07-28
 - [병합 전 검토](/cases/workflows/review-before-merge/)
 - [PR 검토 사례](/cases/review-a-pr/)
 
-
 ---
 
 **상태:** verified  

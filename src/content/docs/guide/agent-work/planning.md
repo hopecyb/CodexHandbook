@@ -138,7 +138,6 @@ description: 让 Codex 先把步骤、风险和验证讲清楚，再决定要不
 - 需要中途纠偏：见 [进度与引导](/guide/agent-work/progress-and-steering/)
 - 需要长期规范：见 [什么是 AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
 
-
 ---
 
 **状态：** verified  

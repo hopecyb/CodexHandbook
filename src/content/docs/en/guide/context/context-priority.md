@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Common conflicts: project instructions vs. current prompt vs. old conversation. Practical principles:
 
 1. **Current task prompt** takes priority for this session's scope
@@ -17,7 +16,6 @@ Common conflicts: project instructions vs. current prompt vs. old conversation. 
 3. When you find a conflict, state explicitly: "This message overrides previous instructions about X"
 
 Team-enforced policies may override personal preferences (covered in later governance chapters).
-
 
 ---
 

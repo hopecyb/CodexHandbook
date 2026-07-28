@@ -157,7 +157,6 @@ Quando detetar desvio na execução, use instruções curtas: «o que manter, o 
 - Dividir a Tarefa: [Subagents](/guide/agent-work/subagents/)
 - Continuar após interrupção: [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **Estado:** verificado  

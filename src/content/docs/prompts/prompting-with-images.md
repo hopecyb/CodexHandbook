@@ -176,11 +176,9 @@ description: 给 Codex 截图、设计稿、白板图时，怎样提问更容易
 这通常比一句“帮我修”更清楚，后面也更容易往下做。
 
 ## 参考来源
-
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
-
 ---
 
 **状态：** verified  

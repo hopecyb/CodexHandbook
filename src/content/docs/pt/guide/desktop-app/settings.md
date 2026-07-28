@@ -49,7 +49,6 @@ Pode ser porque:
 
 Na primeira visita à página de definições, compreenda primeiro as opções de fronteira de segurança e de avisos; o resto pode ficar para depois.
 
-
 ---
 
 **Estado:** outdated  

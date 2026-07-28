@@ -203,11 +203,7 @@ La config est pour les défauts à long terme — pas secrets, prose de tâche o
 - Config contredit `AGENTS.md` (config permet, doc interdit)
 
 ## Sources de référence
-
 - Référence de configuration OpenAI Codex
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Statut :** vérifié  

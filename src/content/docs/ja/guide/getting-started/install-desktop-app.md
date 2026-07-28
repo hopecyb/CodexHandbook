@@ -47,7 +47,6 @@ Codex を初めて使い、まずターミナルをいじりたくない場合�
 
 失敗時：[デスクトップ App トラブルシューティング](/guide/desktop-app/troubleshooting/)。
 
-
 ---
 
 **状態：** outdated  

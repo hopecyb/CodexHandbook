@@ -42,7 +42,6 @@ Ob die IDE-Erweiterung wirklich steht, siehst du daran, ob du sie im aktuellen E
 
 Details: [IDE-Erweiterung installieren](/guide/getting-started/install-ide-extension/). Official: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** outdated  

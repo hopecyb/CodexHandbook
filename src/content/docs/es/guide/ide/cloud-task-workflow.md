@@ -100,11 +100,6 @@ Las [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/) de la Ap
 - No indicar el nombre de rama y empujar directamente a una rama compartida
 - Tratar el resultado de Cloud como «ya aceptado» y saltarse el CI
 
-## Fuentes de referencia
-
-- stormzhang `10-cloud.md`, `09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **Estado:** outdated  

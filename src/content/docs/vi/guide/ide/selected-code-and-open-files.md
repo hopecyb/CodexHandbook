@@ -83,10 +83,7 @@ Phía sản phẩm: [Rà soát thay đổi trong IDE](/guide/ide/reviewing-chang
 | Chấp nhận hết gợi ý chưa đọc diff | Đưa vào lệch phong cách hoặc lỗ hổng bảo mật |
 
 ## Nguồn tham khảo
-
 - [Định nghĩa ràng buộc](/prompts/constraints-and-boundaries/)
-- `09-ide.md` của stormzhang
-
 ---
 
 **Trạng thái:** verified  

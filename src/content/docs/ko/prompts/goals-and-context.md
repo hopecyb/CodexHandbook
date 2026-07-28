@@ -83,7 +83,6 @@ translated_at: 2026-07-28
 
 관련: 프로젝트 수준 배경은 [프로젝트 컨텍스트](/guide/context/project-context/)에 두고, 매 프롬프트마다 긴 글을 반복하지 마세요.
 
-
 ---
 
 **상태:** verified  

@@ -143,7 +143,6 @@ Nếu trong thực thi phát hiện tiền đề đổi, hãy quay lại kế ho
 - Cần chỉnh hướng giữa chừng: xem [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/)
 - Cần quy tắc dài hạn: xem [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/)
 
-
 ---
 
 **Trạng thái:** verified  

@@ -45,7 +45,6 @@ Ou, de forma direta:
 Assim a leitura do Skill não começa soterrada por background; e quando precisar de detalhe, há base.
 
 ## Quando vale extrair `references/`
-
 Se `SKILL.md` começar a mostrar estes sinais, considere separar:
 
 - Um bloco grande de normas ocupa espaço toda vez
@@ -54,7 +53,6 @@ Se `SKILL.md` começar a mostrar estes sinais, considere separar:
 
 No primeiro Skill, `references/` não é obrigatório.  
 A ordem comum é **fazer funcionar primeiro e extrair quando o conteúdo realmente alongar**.
-
 ## Equívocos comuns
 
 ### 1. `references/` não é só «copiar um pouco do conteúdo para fora»
@@ -75,11 +73,6 @@ O fluxo principal ainda deve permanecer em `SKILL.md`; senão, na primeira leitu
 - Um arquivo, um tema — facilita a manutenção
 - Não repita em references os passos que já estão em SKILL.md
 
-## O que colocar em `references/`
-
-Se o trecho responde «**com que regras fazer**», em geral cabe melhor em `references/`; se responde «**qual passo vem primeiro**», deve ficar no fluxo principal.
-
-`references/` encurta o fluxo principal e só abre o detalhe quando necessário.
 ---
 
 **Status:** verified  

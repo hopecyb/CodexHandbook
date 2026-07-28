@@ -124,12 +124,6 @@ Normalmente corresponde a:
 
 O mais importante na política de regras de equipa é clarificar primeiro «quem define a fronteira de cada camada» e só depois como escrever as regras.
 
-## Referências
-
-- Governação de equipa e playbook freestylefly/CodexGuide
-- Capítulos de segurança empresarial KimYx0207
-- Casos de configuração de equipa em codex.bozhouai.com (referência de tipos de Tarefa)
-
 ---
 
 **Estado:** verificado  

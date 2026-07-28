@@ -14,7 +14,6 @@ translated_at: 2026-07-28
 
 Suite : [Flux de Tâche locale IDE](/guide/ide/local-task-workflow/). Dépannage : [Dépannage IDE](/guide/ide/troubleshooting/).
 
-
 ---
 
 **Statut :** review  

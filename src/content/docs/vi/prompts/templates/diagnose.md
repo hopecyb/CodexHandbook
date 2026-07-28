@@ -50,7 +50,6 @@ Mẫu chẩn đoán yêu cầu nó nói vì sao hỏng trước, rồi mới bà
 - [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/)
 - [Case sửa Bug](/cases/fix-a-bug/)
 
-
 ---
 
 **Trạng thái:** verified  

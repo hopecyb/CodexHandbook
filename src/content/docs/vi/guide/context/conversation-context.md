@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Ngữ cảnh hội thoại» nghĩa là: những gì bạn và Codex đã nói trước trong cùng một tác vụ sẽ tiếp tục ảnh hưởng phần sau. Nó hữu ích, cũng có rủi ro.
 
 ## Vì sao hữu ích
@@ -90,7 +89,6 @@ Từ đây chỉ thảo luận đổi trang chủ. Nội dung trước về API 
 ```
 
 Cùng một thread giúp bạn nối trí nhớ, nhưng cũng mang theo gánh cũ. Chủ đề vừa đổi thì nên chủ động thu hẹp.
-
 
 ---
 

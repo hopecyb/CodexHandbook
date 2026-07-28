@@ -104,7 +104,6 @@ Codex 是 OpenAI 提供的 **AI 编程与工作 Agent**。你给它一个目标�
 2. [给初学者的术语](/guide/start-here/terminology-for-beginners/)
 3. [运行第一次任务](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **状态：** verified  

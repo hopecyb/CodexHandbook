@@ -44,7 +44,6 @@ Các tình huống thường gặp:
 
 Trong Desktop App, nếu local làm được thì thường dùng local; khi tác vụ dài hơn, nghiêng về từ xa, hoặc cần môi trường thống nhất thì mới cân nhắc Cloud.
 
-
 ---
 
 **Trạng thái:** verified  

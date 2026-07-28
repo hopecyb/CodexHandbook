@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 > Estado MVP: esta página é uma visão geral. Os cinco passos completos serão completados em marcos posteriores.
 
 Se queres usar o Codex sobretudo para alterar código, compreender projetos e corrigir problemas, podes começar por este percurso.
@@ -56,7 +55,6 @@ Este percurso valoriza alterações controláveis e resultados verificáveis —
 ## Passos planeados (esquema)
 
 Compreender o código → Correção e implementação → Testes e revisão → Fluxos automatizados → Desenvolvimento multi-Agent
-
 
 ---
 

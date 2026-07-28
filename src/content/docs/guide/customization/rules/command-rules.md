@@ -113,12 +113,6 @@ description: 用命令级 allow/deny 约束 shell 与工具调用——比口头
 - [CLI 审批与沙盒](/guide/cli/approvals-and-sandbox/)
 - [权限矩阵](/guide/reference/permission-matrix/)
 
-## 参考来源
-
-- stormzhang `15-permissions.md`、`18-config.md`
-- KimYx0207 权限与配置章节
-- freestylefly/CodexGuide 团队 playbook
-
 ---
 
 **状态：** verified  

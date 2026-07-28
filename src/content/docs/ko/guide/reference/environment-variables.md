@@ -170,11 +170,7 @@ MCP 프로세스는 종종 부모 프로세스 환경을 상속합니다. 설정
 - `unset` 후 하위 프로세스가 안전하다고 가정——프로세스 트리를 확인해야 함
 
 ## 참고 출처
-
 - OpenAI Codex configuration / environment 문서
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **상태：** verified  

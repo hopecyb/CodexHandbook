@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | 用語 | 定義 |
 |---|---|
 | Agent | 目標に向かってツールを呼びながら反復推进する実行方式 |

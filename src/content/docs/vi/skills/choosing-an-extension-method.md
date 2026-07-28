@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Cơ chế mở rộng càng nhiều, chọn sai càng tốn. Trang này giúp bạn, trước khi cài Plugin hoặc viết MCP, quyết xem có thật sự cần không.
 
 Những tên dễ lẫn nhất:

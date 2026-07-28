@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 [Prompts](/prompts/) zeigen, wie man **formulieren** soll; Workflows zeigen, wie man **eine ganze Sache organisiert**. Die Methoden in diesem Kapitel gelten für App, CLI, IDE und Cloud.
 
 ## Warum Workflows nötig sind
@@ -52,12 +51,6 @@ Ohne Prüfpunkte entstehen leicht: falsche Verzeichnisse, keine Tests, Fehl-Merg
 2. **Standardmäßig kleine Schritte**: prüfbare Inkremente schlagen eine riesige Änderung
 3. **Fehler sind wiederherstellbar**: wissen, wie man rückgängig macht und Threads forkt, um weiterzumachen
 4. **Verstetigen, was sich wiederholt**: beim dritten Mal als Skill oder Vorlage schreiben
-
-## Referenzquellen
-
-- freestylefly/CodexGuide Workflows und Playbooks
-- stormzhang `14-workflows.md`
-- codex.bozhouai.com Teil 4 Standard-Workflows
 
 ---
 

@@ -3,7 +3,6 @@ title: Agent 基础
 description: 解释 Agent 如何围绕目标调用工具并迭代推进。
 ---
 
-
 **Agent** 会围绕目标持续往下做：理解目标 → 选择工具 → 观察结果 → 调整下一步，直到完成或需要你介入。
 
 普通 AI 更像回答问题的人，Agent 更像接到任务后会一步步往下做的人。
@@ -50,7 +49,6 @@ description: 解释 Agent 如何围绕目标调用工具并迭代推进。
 - 人工审批：见 [权限与审批](/guide/foundations/permissions-and-approvals/)
 
 Agent 的特点，是它能围绕目标连续做几步事，不只是回你一段话。
-
 
 ---
 

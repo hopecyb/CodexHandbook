@@ -27,7 +27,6 @@ Cette section établit les concepts utilisés dans tout le handbook. Les différ
 
 Une fois terminé, poursuivez avec [Premiers pas](/guide/getting-started/).
 
-
 ---
 
 **Statut :** review  

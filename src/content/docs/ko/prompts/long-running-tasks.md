@@ -77,7 +77,6 @@ translated_at: 2026-07-28
 
 연계: [진행과 유도](/guide/agent-work/progress-and-steering/) · [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
 
-
 ---
 
 **상태:** verified  

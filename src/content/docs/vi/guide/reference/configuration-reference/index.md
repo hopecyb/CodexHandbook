@@ -203,11 +203,7 @@ Cấu hình dành cho mặc định dài hạn — không secrets, văn xuôi T�
 - Cấu hình mâu thuẫn `AGENTS.md` (config cho phép, tài liệu cấm)
 
 ## Nguồn tham chiếu
-
 - Tham chiếu cấu hình OpenAI Codex
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **Trạng thái:** verified  

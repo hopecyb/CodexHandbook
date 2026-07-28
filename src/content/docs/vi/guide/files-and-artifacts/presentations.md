@@ -145,12 +145,6 @@ Phân công vậy thường tiết kiệm thời gian hơn, cuối cùng cũng d
 - [ ] Mở trong môi trường phát mục tiêu không loạn font
 - [ ] Dữ liệu then chốt truy được về tệp nguồn
 
-## Nguồn tham khảo
-
-- Case trình bày và báo cáo codex.bozhouai.com
-- Chương sáng tạo nội dung liên quan của stormzhang
-- Thực hành cộng đồng kiểu baoyu-slide-deck (tham khảo cấu trúc)
-
 ---
 
 **Trạng thái:** verified  

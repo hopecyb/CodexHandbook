@@ -80,7 +80,6 @@ A primeira escolha é só o ponto de partida.
 
 Comparação completa: [Comparação de recursos](/guide/reference/feature-comparison/). Você pode instalar vários clientes; **mantenha o projeto de prática no mesmo diretório** para comparar com facilidade.
 
-
 ---
 
 **Status:** verified  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Demandez à l'Agent :
 
 ```text
@@ -16,7 +15,6 @@ Joignez une URL source ou une référence pour chaque fait clé ; marquez claire
 ```
 
 Puis cliquez et vérifiez vous-même. Capacité de recherche : [Recherche web](/guide/tools/web-search/)
-
 
 ---
 

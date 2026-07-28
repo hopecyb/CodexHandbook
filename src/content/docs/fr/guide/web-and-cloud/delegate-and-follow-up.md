@@ -122,12 +122,7 @@ Activer [notifications de bureau](/guide/desktop-app/notifications/) ou push mob
 - [ ] Produit une PR ou branche revue par un passage humain de diff
 
 ## Références
-
 - Documentation Tâches OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `27-mobile.md`
-- KimYx0207 CX-10
-- codex.bozhouai.com sections App/Cloud collaboration
-
 ---
 
 **Statut :** obsolète  

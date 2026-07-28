@@ -64,11 +64,9 @@ Codex を始めるとき、多くの人がつまずくのは技術的背景で�
 - 公式のインストールと製品変更は [https://developers.openai.com/codex](https://developers.openai.com/codex) が基準
 
 ## 参考ソース
-
 - OpenAI Academy: Getting started with ChatGPT
 - OpenAI Academy: Using ChatGPT
 - OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
-
 ## 一般的なスタート順序
 
 次の順序で進められます。
@@ -80,7 +78,6 @@ Codex を始めるとき、多くの人がつまずくのは技術的背景で�
 5. 結果を確認し、次のステップを決める
 
 始める前に、安全で小規模、取り消し可能な環境で最初のタスクを通す方が、大量の概念を先に詰め込むより楽です。
-
 
 ---
 

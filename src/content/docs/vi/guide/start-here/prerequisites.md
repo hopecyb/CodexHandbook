@@ -64,11 +64,9 @@ Với hầu hết người mới, bắt đầu từ **Desktop App** sẽ nhẹ h
 - Cài đặt chính thức và thay đổi sản phẩm lấy [https://developers.openai.com/codex](https://developers.openai.com/codex) làm chuẩn
 
 ## Nguồn tham chiếu
-
 - OpenAI Academy: Getting started with ChatGPT
 - OpenAI Academy: Using ChatGPT
 - OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
-
 ## Một thứ tự khởi đầu phổ biến
 
 Có thể làm theo thứ tự này:
@@ -80,7 +78,6 @@ Có thể làm theo thứ tự này:
 5. Kiểm tra kết quả, rồi quyết định bước tiếp theo
 
 Trước khi bắt đầu, chạy thông tác vụ đầu tiên trong môi trường an toàn, phạm vi nhỏ, có thể hoàn tác — tiết kiệm sức hơn là nhồi một đống khái niệm trước.
-
 
 ---
 

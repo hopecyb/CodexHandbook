@@ -109,7 +109,6 @@ Codex をアシスタントとして使い、責任は一緒に渡さない。
 2. [初心者向け用語](/guide/start-here/terminology-for-beginners/)
 3. [最初のタスクを実行する](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **状態：** verified  

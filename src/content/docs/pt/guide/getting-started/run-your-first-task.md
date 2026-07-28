@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 O exemplo abaixo assume o **App desktop** por padrão; CLI/IDE podem usar o mesmo Prompt.
 
 Muita gente, na primeira vez com o Codex, quer pedir de cara «faça um site completo» ou «refatore o projeto inteiro». Assim é fácil perder o controle de uma vez.
@@ -112,7 +111,6 @@ Não continue alterando. Diga-me o que você alterou agora há pouco.
 ```
 
 Princípios de Prompt: [Fundamentos de Prompt](/prompts/basics/).
-
 
 ---
 

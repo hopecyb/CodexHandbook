@@ -98,10 +98,8 @@ Codex 可在部分场景调用**图像生成**能力：插图、图标草稿、U
 - 企业政策可能禁止某些题材；遵守 [可接受使用](https://openai.com/policies/) 与内部规定
 
 ## 参考来源
-
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
-
 ## 常见错误
 
 - 直接提交未压缩的 4K 图进仓库

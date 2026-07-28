@@ -118,12 +118,6 @@ Les règles de commandes ne sont pas « mémoriser les commandes » — elles s�
 - [Approbation et bac à sable CLI](/guide/cli/approvals-and-sandbox/)
 - [Matrice des permissions](/guide/reference/permission-matrix/)
 
-## Références
-
-- stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 chapitre permissions et configuration
-- Playbook d'équipe freestylefly/CodexGuide
-
 ---
 
 **Statut :** vérifié  

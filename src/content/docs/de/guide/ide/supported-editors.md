@@ -106,11 +106,7 @@ Meist „ja“ → mit der IDE-Erweiterung starten.
 Oft wählst du die IDE-Erweiterung einfach, weil die Hauptarbeit ohnehin im Editor liegt.
 
 ## Quellen
-
 - OpenAI-Codex-IDE-Dokumentation
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **Status:** outdated  

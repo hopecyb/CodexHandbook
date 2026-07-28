@@ -141,10 +141,7 @@ Do not rush “full auto” before the flow is stable; script first, then pipeli
 - [ ] Matches local `make review` behavior
 
 ## Reference sources
-
 - OpenAI Codex + GitHub integration docs
-- codex.bozhouai.com automation chapter
-
 ---
 
 **Status:** outdated  

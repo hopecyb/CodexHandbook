@@ -165,11 +165,7 @@ MCP 进程常继承父进程环境；在配置中引用 `$VAR` 而非写死值�
 - 假设 `unset` 后子进程仍安全——需查进程树
 
 ## 参考来源
-
 - OpenAI Codex configuration / environment 文档
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **状态：** verified  

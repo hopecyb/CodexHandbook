@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 O **Agent** continua trabalhando em torno do objetivo: entender o objetivo → escolher Ferramentas → observar o resultado → ajustar o próximo passo, até concluir ou precisar da sua intervenção.
 
 A IA comum se parece mais com alguém que responde perguntas; o Agent se parece mais com alguém que, ao receber a Tarefa, avança passo a passo.
@@ -55,7 +54,6 @@ No começo, leia também:
 - Aprovação humana: veja [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
 
 A característica do Agent é conseguir fazer vários passos seguidos em torno do objetivo — não só devolver um parágrafo.
-
 
 ---
 

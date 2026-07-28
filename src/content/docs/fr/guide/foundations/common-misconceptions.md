@@ -19,7 +19,6 @@ translated_at: 2026-07-28
 
 Étape suivante : [Premiers pas](/guide/getting-started/).
 
-
 ---
 
 **Statut :** review  

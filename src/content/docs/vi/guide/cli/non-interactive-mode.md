@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Chế độ không tương tác để Codex hoàn thành tác vụ **không cần hội thoại TTY** — là lối vào để nhà phát triển nối Agent vào script và CI.
 
 Nói ngắn: chế độ không tương tác không phải chat qua lại, mà giao tác vụ một lần để nó thực thi.
@@ -109,11 +108,7 @@ Chế độ không tương tác phù hợp tự động hóa, ít phù hợp l�
 - Không cố định phiên bản CLI → pipeline đột nhiên đổi hành vi
 
 ## Nguồn tham khảo
-
 - Tài liệu OpenAI Codex CLI
-- `28-noninteractive.md` của stormzhang
-- KimYx0207 CX-12
-
 ---
 
 **Trạng thái:** outdated  

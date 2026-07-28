@@ -117,10 +117,7 @@ exit 1
 - [失敗回復](/cases/workflows/failure-recovery/)
 
 ## 参考
-
 - OpenAI API 再試行ガイド（概念）
-- stormzhang CI トラブルシュート
-
 ---
 
 **状態：** outdated  

@@ -98,11 +98,6 @@ La différence centrale avec les Tâches IDE locales : l'environnement d'exécut
 - Pas de nom de branche → le distant pousse sur une branche partagée
 - Traiter la sortie Cloud comme « acceptée » et sauter la CI
 
-## Références
-
-- stormzhang `10-cloud.md`, `09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **Statut :** obsolète  

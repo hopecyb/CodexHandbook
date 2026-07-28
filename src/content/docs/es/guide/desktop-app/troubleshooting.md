@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Al resolver problemas, investiga en el orden de lo más probable y más fácil de arreglar.
 
 | Síntoma | Prueba primero |
@@ -45,7 +44,6 @@ Primero acota el problema:
 - Si hace falta, abre un hilo nuevo
 
 En resolución de problemas, empieza por las causas más comunes y fáciles de corregir; no hace falta complicarlo desde el principio.
-
 
 ---
 

@@ -78,12 +78,7 @@ Git 提供商 / 工单 / 制品库
 开发者平台这一章讲的是“怎么把 Codex 接进系统”。第一次上手用 Codex，还是先看前面的入门内容。
 
 ## 参考来源
-
 - OpenAI Codex API / SDK 官方文档
-- KimYx0207 开发者章节
-- stormzhang CI 与自动化教程
-- codex.bozhouai.com 工程化案例
-
 ---
 
 **状态：** verified  

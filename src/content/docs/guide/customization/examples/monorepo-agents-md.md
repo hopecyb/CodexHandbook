@@ -120,12 +120,6 @@ Monorepo 在 Cloud 上常因**未在根安装**或 filter 错误而失败。在�
 
 Monorepo 里的 AGENTS.md 不需要一味集中；更合适的做法，是让“全局共识”和“目录局部规则”各自放在合适的位置。
 
-## 参考来源
-
-- freestylefly/CodexGuide monorepo playbook
-- codex.bozhouai.com 大型仓库章节
-- stormzhang monorepo 与 Git 实践
-
 ---
 
 **状态：** verified  

@@ -115,15 +115,9 @@ Antes do PR, leia [Verificar conteúdo técnico](/guide/contributing/verify-tech
 
 Uma boa página de guia não se mede por «material completo», e sim por o leitor da primeira vez saber porque a página existe, o que ver primeiro e para onde ir a seguir.
 
-## Como escrever referências
-
-```markdown
 ## Referências
-
 - Documentação oficial OpenAI Codex
-- Referência de estrutura comunitária: CodexGuide (só tema, não texto original)
 ```
-
 ---
 
 **Estado:** verificado  

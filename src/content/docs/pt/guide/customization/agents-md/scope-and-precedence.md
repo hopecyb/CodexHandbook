@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Quando existem vários `AGENTS.md`, ficheiros de configuração e a conversa atual ao mesmo tempo, é preciso saber **qual regra se aplica**.
 
 Aqui trata-se disto: quando duas regras parecem diferentes, a quem se obedece.
@@ -58,10 +57,6 @@ Princípios:
 - **Ficheiro da raiz**: 10–20 regras rígidas partilhadas por todo o repositório
 - **Ficheiros de subpacote**: só comandos e notas de diretório próprios desse pacote
 - Evite três ficheiros com 80% de repetição — o comum na raiz; o subpacote só o incremento
-
-## Limite com preferências pessoais
-
-Hábitos pessoais (tema, modelo predefinido, caminhos locais) vão para a **configuração de utilizador**, não para o `AGENTS.md` do repositório da equipa — senão os colaboradores sofrem danos colaterais.
 
 ## Mal-entendidos habituais
 

@@ -109,7 +109,6 @@ Páginas relacionadas:
 2. [Terminología para principiantes](/guide/start-here/terminology-for-beginners/)
 3. [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/)
 
-
 ---
 
 **Estado:** verified  

@@ -73,11 +73,6 @@ lancez les tests pour confirmer l'échec, puis modifiez l'implémentation ; à c
 - [Lancer les tests](/guide/quality/run-tests/)
 - [Cas : Corriger un bug avec vérification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## Sources de référence
-
-- stormzhang — chapitres tests et qualité
-- CodexGuide — flux de travail développeur
-
 ---
 
 **Statut :** verified  

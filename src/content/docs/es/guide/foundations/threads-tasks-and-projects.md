@@ -58,7 +58,6 @@ El hilo es como un contenedor; la Tarea es un trabajo concreto dentro de ese con
 
 El proyecto decide dónde trabaja; el hilo, qué historial recuerda; la Tarea, qué debe completar esta vez.
 
-
 ---
 
 **Estado:** verified  

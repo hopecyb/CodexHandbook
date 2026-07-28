@@ -100,11 +100,7 @@ Si surtout oui, commencez par l'extension IDE.
 Souvent vous choisissez l'extension IDE simplement parce que c'est là que vous travaillez déjà.
 
 ## Références
-
 - Documentation IDE OpenAI Codex
-- stormzhang `09-ide.md`
-- KimYx0207 CX-08 IDE
-
 ---
 
 **Statut :** obsolète  

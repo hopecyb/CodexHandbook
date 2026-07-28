@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Der größte Unterschied zu gewöhnlichen Chatbots: Es handelt über **Werkzeuge**.
 
 Dateien sind der Ort, an dem es etwas ändert; Befehle sind die Art, wie es Aktionen ausführt; Werkzeuge sind der Einstieg zum Handeln.
@@ -96,7 +95,6 @@ Als Nächstes empfohlen:
 1. [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
 2. [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
 3. [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

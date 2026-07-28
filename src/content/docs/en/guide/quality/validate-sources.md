@@ -9,7 +9,6 @@ translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-
 Ask the Agent:
 
 ```text
@@ -17,7 +16,6 @@ Attach a source URL or reference for each key fact; clearly mark anything uncert
 ```
 
 Then click through and verify yourself. Search capability: [Web search](/guide/tools/web-search/)
-
 
 ---
 

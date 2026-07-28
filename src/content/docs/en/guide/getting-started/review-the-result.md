@@ -18,7 +18,6 @@ translated_at: 2026-07-26
 
 More methods: [Review diffs](/guide/quality/review-diffs/).
 
-
 ---
 
 **Status:** review  

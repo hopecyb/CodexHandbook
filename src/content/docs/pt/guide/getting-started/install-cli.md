@@ -54,7 +54,6 @@ Com o CLI instalado, o terminal atual deve encontrá-lo e você deve conseguir s
 
 Interação detalhada: [Modo interativo do CLI](/guide/cli/interactive-mode/). Problemas: [Problemas no CLI](/guide/cli/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

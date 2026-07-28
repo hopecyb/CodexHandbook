@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objectif de cette étape
 
 Livrer un petit Artefact complet dans votre répertoire d'entraînement — par exemple, une page unique `practice-report.md` :
@@ -21,7 +20,6 @@ Livrer un petit Artefact complet dans votre répertoire d'entraînement — par 
 
 - Revisitez la [carte des capacités](/guide/start-here/codex-capability-map/)
 - Approfondissez l'[App de bureau](/guide/desktop-app/) ou le [prompting](/prompts/)
-
 
 ---
 

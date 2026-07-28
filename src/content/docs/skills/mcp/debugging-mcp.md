@@ -72,11 +72,7 @@ MCP 把外部系统接进 Codex。失败时常见三类：**进程起不来**、
 - [ ] 记录团队标准 MCP 配置模板
 
 ## 参考来源
-
 - Model Context Protocol 规范与调试指南
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **状态：** outdated  

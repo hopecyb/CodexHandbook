@@ -58,7 +58,6 @@ Thread như một container; tác vụ là một lần làm việc cụ thể tr
 
 Dự án quyết định nó làm việc ở đâu; Thread quyết định nó nhớ lịch sử nào; tác vụ quyết định lần này cần hoàn thành gì.
 
-
 ---
 
 **Trạng thái:** verified  

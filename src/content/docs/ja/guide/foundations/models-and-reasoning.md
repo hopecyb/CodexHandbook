@@ -59,7 +59,6 @@ translated_at: 2026-07-28
 
 本ハンドブックは特定のモデル名に依存しません。クライアントの現在の一覧と [https://developers.openai.com/codex](https://developers.openai.com/codex) を基準にしてください。
 
-
 ---
 
 **状態：** verified  

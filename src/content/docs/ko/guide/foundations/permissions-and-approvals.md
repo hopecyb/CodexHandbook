@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승인**은 사람·Agent 협업의 게이트입니다.
 
 어떤 파일이든 읽고, 마음대로 네트워크에 연결하고, 마음대로 명령을 실행할 수 있다면, 작업을 잘못 이해했을 때 대가가 큽니다.
@@ -72,7 +71,6 @@ Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승�
 공식 정책과 기본값은 바뀔 수 있으니 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 확인하세요.
 
 승인의 역할은 「할 수 있는지」를 항상 당신이 결정하게 하는 것입니다.
-
 
 ---
 

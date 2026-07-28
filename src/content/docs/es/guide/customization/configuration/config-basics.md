@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Los archivos de configuración te permiten **unificar el comportamiento de Codex** en tu máquina o en el proyecto, sin repetir en cada sesión el modelo, el nivel de aprobación o la política de Sandbox.
 
 ## Contenido de esta página
@@ -129,11 +128,7 @@ Los archivos de configuración pueden incluir **listas blancas de rutas, políti
 La configuración encaja mejor con opciones por defecto que casi siempre eliges; no hace falta meter todas las reglas en el archivo de configuración.
 
 ## Referencias
-
 - Documentación de configuración de OpenAI Codex
-- stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 configuración de permisos de instrucciones de proyecto (hechos sujetos a revisión oficial)
-
 ---
 
 **Estado:** verificado  

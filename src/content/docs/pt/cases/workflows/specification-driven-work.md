@@ -78,11 +78,6 @@ Os itens de aceitação na especificação devem ser, tanto quanto possível, **
 - [ ] Confirmação humana ou escrita antes da execução
 - [ ] Alterações sincronizadas de volta para o ficheiro de especificação
 
-## Fontes de referência
-
-- Capítulos de requisitos e decomposição de tarefas de KimYx0207
-- Especificação e listas de aceitação de freestylefly/CodexGuide
-
 ---
 
 **Estado:** verified  

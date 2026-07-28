@@ -61,7 +61,6 @@ Se o tempo for curto, siga esta ordem:
 
 O papel da revisão humana é deixar a decisão final com quem realmente responde pelo resultado.
 
-
 ---
 
 **Status:** verified  

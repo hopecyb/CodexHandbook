@@ -54,7 +54,6 @@ CLI installiert: Das aktuelle Terminal sollte es finden, und du kannst die Authe
 
 Interaktion im Detail: [CLI-Interaktivmodus](/guide/cli/interactive-mode/). Fehlerbehebung: [CLI-Fehlerbehebung](/guide/cli/troubleshooting/).
 
-
 ---
 
 **Status:** outdated  

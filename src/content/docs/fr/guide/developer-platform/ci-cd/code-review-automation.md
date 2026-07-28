@@ -101,12 +101,7 @@ La valeur principale de l'automatisation de revue de code est de détecter les p
 - [ ] La doc d'équipe explique le rôle de la revue IA
 
 ## Sources de référence
-
 - Exemples CI OpenAI Codex
-- Chapitre Review/PR KimYx0207
-- Tutoriels CI stormzhang
-- Section Git/GitHub codex.bozhouai.com
-
 ---
 
 **Statut :** vérifié  

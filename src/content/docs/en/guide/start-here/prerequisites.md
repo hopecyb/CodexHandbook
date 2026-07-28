@@ -29,7 +29,6 @@ sidebar:
 - You don't need to master Git or any programming language first
 - You don't need every client installed at once; the MVP default starts with the desktop App
 
-
 ---
 
 **Status:** review  

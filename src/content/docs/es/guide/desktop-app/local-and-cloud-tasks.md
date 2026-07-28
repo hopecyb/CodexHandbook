@@ -44,7 +44,6 @@ Situaciones habituales:
 
 En la App de escritorio, si lo local basta, usa local; cuando la Tarea sea más larga, más remota o necesites un entorno unificado, entonces considera Cloud.
 
-
 ---
 
 **Estado:** verified  

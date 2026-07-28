@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Khác biệt lớn nhất so với chatbot thông thường là nó sẽ làm việc qua **công cụ**.
 
 Tệp là chỗ nó sửa thứ gì đó; lệnh là cách nó thực hiện hành động; công cụ là lối vào để nó bắt tay làm.
@@ -96,7 +95,6 @@ Bước tiếp theo nên đọc:
 1. [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
 2. [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
 3. [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
-
 
 ---
 

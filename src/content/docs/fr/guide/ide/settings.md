@@ -112,10 +112,7 @@ Les ajuster couvre la plupart des frictions réelles.
 Les paramètres IDE sont comment vous et Codex coopérez dans l'éditeur ; les règles de projet sont une couche séparée — ne les mélangez pas.
 
 ## Références
-
 - Paramètres IDE OpenAI Codex
-- stormzhang `18-config.md`, `09-ide.md`
-
 ---
 
 **Statut :** obsolète  

@@ -3,7 +3,6 @@ title: 权限与审批
 description: 解释 Codex 何时需要你批准操作。
 ---
 
-
 Codex 不应在未获同意时执行高风险操作。**审批** 是人机协作里的那道闸门。
 
 如果 Codex 能直接读任何文件、随便联网、随便运行命令，那它一旦理解错任务，代价会很高。
@@ -67,7 +66,6 @@ Codex 不应在未获同意时执行高风险操作。**审批** 是人机协作
 官方策略与默认值可能变化，请核对 [https://developers.openai.com/codex](https://developers.openai.com/codex)。
 
 审批的作用，是让“能不能做”这件事始终由你决定。
-
 
 ---
 

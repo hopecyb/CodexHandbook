@@ -87,7 +87,6 @@ Rõ hơn nhiều so với chỉ viết một câu «giúp tôi xử lý vấn đ
 
 Một tác vụ ổn định hơn ít nhất phải nói rõ mục tiêu, ngữ cảnh, ranh giới hành động và cách nghiệm thu.
 
-
 ---
 
 **Trạng thái:** verified  

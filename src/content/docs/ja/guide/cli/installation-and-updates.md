@@ -55,7 +55,6 @@ CLI のインストール完了とは、一度コマンドが走ったことで�
 関連：[CLI のインストール](/guide/getting-started/install-cli/)  
 公式のインストール・アップグレード説明は [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
 
-
 ---
 
 **状態：** outdated  

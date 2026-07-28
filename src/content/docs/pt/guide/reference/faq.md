@@ -79,7 +79,6 @@ Se estás travado e não sabes a que página ir:
 
 Costuma custar menos do que ir e vir pela barra lateral.
 
-
 ---
 
 **Estado:** verified  

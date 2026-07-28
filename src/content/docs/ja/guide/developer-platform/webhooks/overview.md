@@ -117,10 +117,7 @@ def handle(request):
 Webhook はタスク状態変化を別システムに接続する向き。署名検証、冪等、非同期処理の基礎を先に整えること。
 
 ## 参考
-
 - OpenAI Codex / Cloud API イベントドキュメント
-- KimYx0207 統合章
-
 ---
 
 **状態：** verified  

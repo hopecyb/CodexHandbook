@@ -101,11 +101,7 @@ Die meisten Clients erlauben Umbinden in Settings. Teams können **empfohlene Bi
 Shortcuts sind kein Prüfungsstoff. Die Aktionen, die Sie am häufigsten unterbrechen, flüssig machen reicht meist.
 
 ## Quellen
-
 - Offizielle Settings / Keyboard-shortcuts-Seiten der Produkte
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **Status:** outdated  

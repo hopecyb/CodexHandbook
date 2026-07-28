@@ -151,11 +151,7 @@ Por eso muchos equipos lo enganchan detrás de `make review`, GitHub Actions, cr
 - [Códigos de salida y reintentos](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Fuentes de referencia
-
 - Documentación del CLI de OpenAI Codex
-- Capítulos no interactivos de KimYx0207
-- Tutoriales de CI de stormzhang
-
 ---
 
 **Estado:** outdated  

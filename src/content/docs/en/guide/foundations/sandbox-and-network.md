@@ -19,7 +19,6 @@ The **sandbox** limits which parts of the filesystem and system an Agent can tou
 
 Product settings: desktop App [Settings](/guide/desktop-app/settings/); official details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Status:** review  

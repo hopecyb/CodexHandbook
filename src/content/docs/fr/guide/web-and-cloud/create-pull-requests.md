@@ -98,8 +98,6 @@ Peut fonctionner pour des expériences solo ; trop risqué pour des repos partag
 - Utiliser un Skill ou `codex exec` dans CI pour des **commentaires de revue complémentaires**
 - L'auto-fusion nécessite une gouvernance séparée — pas le chemin par défaut pour débutants
 
-KimYx0207 CX-10 couvre Review/PR ; confirmer les capacités contre la doc officielle.
-
 ## Erreurs courantes
 
 - Une PR avec plusieurs fonctionnalités non liées

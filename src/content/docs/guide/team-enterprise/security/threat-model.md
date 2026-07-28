@@ -140,11 +140,7 @@ L5 人工 review 与分支保护
 - [人工审批模式](/cases/workflows/human-approval-patterns/)
 
 ## 参考来源
-
-- KimYx0207 企业安全
 - OpenAI 企业安全白皮书（官方）
-- CodexGuide 合规实践
-
 ---
 
 **状态：** verified  

@@ -180,11 +180,7 @@ Exemplos de Hook servem para aprender ideia e estrutura — não para copiar int
 - [ ] Docs anotam data da Verificação e versão do CLI aplicável
 
 ## Fontes
-
 - Exemplos OpenAI Codex Hooks
-- freestylefly/CodexGuide configuração de auditoria
-- stormzhang `22-hooks.md`
-
 ---
 
 **Status:** outdated  

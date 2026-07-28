@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 설정 파일은 로컬이나 프로젝트에서 **Codex 동작을 통일**하게 해, 세션마다 모델·승인 수준·샌드박스 정책을 다시 고르지 않아도 됩니다.
 
 ## 이 페이지 내용
@@ -129,11 +128,7 @@ translated_at: 2026-07-28
 설정은 거의 매번 반복해서 고르는 기본 항목에 맞고, 모든 규칙을 설정 파일에 쑤셔 넣을 필요는 없습니다.
 
 ## 참고 출처
-
 - OpenAI Codex 설정 문서
-- stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 프로젝트 지침·권한 설정(사실은 공식 재확인 필요)
-
 ---
 
 **상태:** verified  

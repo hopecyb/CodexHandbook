@@ -107,7 +107,6 @@ Sửa càng nhiều, sau càng khó phán bước nào bắt đầu lệch.
 
 Tập trung ngữ cảnh không phải nói ít, mà giữ thông tin còn hiệu lực, kịp thu phần đã không quan trọng. Ngữ cảnh vừa rối, thực thi sau dễ lệch.
 
-
 ---
 
 **Trạng thái:** verified  

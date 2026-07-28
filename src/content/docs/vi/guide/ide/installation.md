@@ -42,7 +42,6 @@ IDE phụ thuộc nhiều hơn vào «bạn đang mở tệp gì, dự án gì»
 
 Các bước chi tiết: [Cài đặt tiện ích IDE](/guide/getting-started/install-ide-extension/). Giải thích chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Trạng thái:** outdated  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-26
 ---
 
-
 Effective project instructions are closer to a **checklist**. The goal is for Codex to make fewer predictable mistakes on the first try.
 
 When writing project instructions for the first time, a common problem is many ideas but unclear key constraints.

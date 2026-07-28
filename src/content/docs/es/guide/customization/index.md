@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Codex no depende solo de «cómo preguntas esta vez»; también usa una **configuración persistente** para recordar tus convenciones y las del equipo. Este capítulo separa principalmente lo que debe quedarse en la conversación de lo que debe anclarse en el proyecto.
 
 Si has empezado a repetir las mismas cosas —como «no toques este directorio», «ejecuta primero los tests» o «usa este modelo por defecto»—, este capítulo trata ese tipo de problema.
@@ -116,10 +115,7 @@ Las reglas no necesitan ser muchas; lo importante es ponerlas en el sitio correc
 - [ ] Las operaciones sensibles siguen pasando por aprobación, en lugar de confiar en que las reglas de texto «asusten» al modelo
 
 ## Referencias
-
 - Documentación OpenAI Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-- Referencias de estructura de práctica comunitaria: temas AGENTS.md de freestylefly/CodexGuide, stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **Estado:** verificado  

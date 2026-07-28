@@ -45,7 +45,6 @@ También puedes pensarlo así:
 Así, al leer el Skill no te aplastan de entrada grandes bloques de contexto, y cuando necesitas detalle tienes base.
 
 ## Cuándo merece la pena sacar `references/`
-
 Si en `SKILL.md` empiezan a pasar estas cosas, considera separar:
 
 - Un bloque largo de normas ocupa espacio cada vez
@@ -54,7 +53,6 @@ Si en `SKILL.md` empiezan a pasar estas cosas, considera separar:
 
 En el primer Skill no hace falta tener `references/`.  
 El orden habitual es **hacerlo funcionar primero y separarlo cuando el contenido de verdad se alargue**.
-
 ## Malentendidos habituales
 
 ### 1. `references/` no es solo copiar un poco de contenido fuera
@@ -75,11 +73,6 @@ El flujo principal debe seguir en `SKILL.md`; si no, la primera lectura no deja 
 - Un archivo, un tema, para facilitar el mantenimiento
 - Evita repetir en references los pasos que ya están en SKILL.md
 
-## Qué poner en `references/`
-
-Si un bloque responde a «**según qué reglas**», suele ir mejor en `references/`; si responde a «**qué paso va primero**», debe quedarse en el flujo principal.
-
-`references/` sirve para acortar el flujo principal y desplegar el detalle solo cuando haga falta.
 ---
 
 **Estado:** verificado  

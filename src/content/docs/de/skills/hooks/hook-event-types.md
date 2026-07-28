@@ -136,11 +136,7 @@ Vollständige Beispiele: [Hook-Konfigurationsbeispiele](/skills/hooks/hooks-exam
 - [ ] Konfig in Code-Review
 
 ## Quellen
-
 - OpenAI Codex Hooks-Referenz
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-
 ---
 
 **Status:** outdated  

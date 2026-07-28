@@ -70,11 +70,6 @@ Produire une checklist avec étiquettes P0/P1.
 - [Revue de code Cloud](/guide/web-and-cloud/code-review/)
 - [Créer des pull requests](/guide/web-and-cloud/create-pull-requests/)
 
-## Sources de référence
-
-- KimYx0207 — chapitres Review/PR
-- codex.bozhouai.com — flux Git/GitHub
-
 ---
 
 **Statut :** verified  

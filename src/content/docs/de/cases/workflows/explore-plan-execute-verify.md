@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Das ist der in diesem Handbuch empfohlene Standard-Workflow — von „noch unklar, wie“ bis „merge-fähig“.
 
 ## Überblick der vier Phasen
@@ -88,11 +87,6 @@ Teams können die vier Phasen in die [Fallvorlage](/cases/use-cases/case-study-t
 - Plan nur im Kopf, Ausführung driftet
 - Überprüfung nur als «sieht so aus, als liefe es»
 - Zu wenig Erkundung → falsches Modul geändert
-
-## Referenzquellen
-
-- CodexGuide Methoden zu Aufgabendesign und Überprüfung
-- Orange Book «Vollständige Kette von Anforderung bis Lieferung»
 
 ---
 

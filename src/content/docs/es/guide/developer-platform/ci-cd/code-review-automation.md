@@ -101,12 +101,7 @@ Lo más valioso de la automatización de revisión es filtrar problemas evidente
 - [ ] Documentación del equipo que aclare el papel de la revisión IA
 
 ## Fuentes de referencia
-
 - Ejemplos de CI de OpenAI Codex
-- Capítulos Review/PR de KimYx0207
-- Tutoriales de CI de stormzhang
-- Sección Git/GitHub de codex.bozhouai.com
-
 ---
 
 **Estado:** verified  

@@ -72,10 +72,7 @@ Steps: config first, then md, then update 12-reference/index.md.
 - Check off ROADMAP items so docs and plan stay aligned
 
 ## References
-
 - This repo's actual M2 docs iteration flow
-- codex.bozhouai.com docs maintenance case (structural reference)
-
 ---
 
 **Status:** verified  

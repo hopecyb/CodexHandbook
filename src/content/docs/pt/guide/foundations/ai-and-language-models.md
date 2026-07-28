@@ -67,7 +67,6 @@ O mecanismo de busca devolve sobretudo páginas já existentes; o Codex se parec
 
 Onde o modelo de linguagem é mais útil: depois de receber Contexto suficiente, ele consegue seguir rápido o seu objetivo e continuar o trabalho.
 
-
 ---
 
 **Status:** verified  

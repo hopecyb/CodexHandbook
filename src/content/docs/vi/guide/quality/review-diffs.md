@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 “Diff” nói về những chỗ Codex lần này thực sự đã sửa.
 
 Nhiều người lần đầu nghiệm thu chỉ đọc tóm tắt nó viết, không xem thay đổi thật.  
@@ -62,7 +61,6 @@ Lần đầu xem diff, có thể theo thứ tự này:
 4. Xem phong cách và tên gọi có hài hòa không
 
 Trước hết làm rõ nó thực sự đã đổi gì, rồi mới quyết định có nhận kết quả lần này hay không.
-
 
 ---
 

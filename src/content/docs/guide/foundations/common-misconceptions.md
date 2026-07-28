@@ -70,7 +70,6 @@ Codex 很强，但放在明确目标和边界里更好用，不会替你省掉�
 
 下一步：[快速上手](/guide/getting-started/)。
 
-
 ---
 
 **状态：** verified  

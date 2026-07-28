@@ -64,7 +64,6 @@ Estas prácticas bajan mucho la probabilidad de «equivocarse y no poder arregla
 
 Equivocarse no es terrible. Seguir cambiando sin ver el alcance del Diff sí lo es.
 
-
 ---
 
 **Estado:** verified  

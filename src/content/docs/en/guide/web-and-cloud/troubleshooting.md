@@ -142,11 +142,7 @@ Usually faster than guessing in the remote environment.
 CLI/IDE/App local issues: [Reference · Troubleshooting](/guide/reference/troubleshooting/). This page covers **Cloud-specific** paths only.
 
 ## References
-
 - OpenAI Codex Cloud support docs
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10～CX-11
-
 ---
 
 **Status:** outdated  

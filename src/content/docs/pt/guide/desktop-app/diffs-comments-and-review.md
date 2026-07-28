@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Fluxo de revisão
 
 1. Abra a vista de Diff e navegue por ficheiro
@@ -73,7 +72,6 @@ Não precisa de comentários exaustivos. Estas categorias têm mais valor:
 Este tipo de comentário impulsiona a correção seguinte melhor do que só dizer «há um problema».
 
 Nesta página, o que realmente vale a pena rever com atenção continua a ser a vista de Diff.
-
 
 ---
 

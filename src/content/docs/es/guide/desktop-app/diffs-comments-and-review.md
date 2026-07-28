@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Flujo de revisión
 
 1. Abre la vista de diff y navega por archivos
@@ -73,7 +72,6 @@ Al comentar no hace falta ser exhaustivo. Estas son las más útiles:
 Ese tipo de comentario empuja mejor la corrección siguiente que limitarse a decir «hay un problema».
 
 En esta página, lo que realmente merece mirarse una y otra vez es la vista de diff.
-
 
 ---
 

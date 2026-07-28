@@ -45,7 +45,6 @@ Si lo lees de forma sistemática por primera vez, este orden suele funcionar:
 
 Este capítulo insiste una y otra vez: el Contexto depende de «qué ha visto realmente esta vez». Si crees que debería saberlo pero no se lo has proporcionado, no cuenta como Contexto.
 
-
 ---
 
 **Estado:** verified  

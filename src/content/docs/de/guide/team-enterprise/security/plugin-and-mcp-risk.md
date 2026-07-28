@@ -93,11 +93,7 @@ Bei Externerweiterungen zuerst Rechte und Grenzen, dann Feature-Stärke.
 - [ ] Konsistent mit [Skill-Security](/skills/security/)
 
 ## Quellen
-
-- KimYx0207 MCP/Plugin-Security
-- stormzhang MCP-Kapitel
 - [MCP debuggen](/skills/mcp/debugging-mcp/)
-
 ---
 
 **Status:** verified  

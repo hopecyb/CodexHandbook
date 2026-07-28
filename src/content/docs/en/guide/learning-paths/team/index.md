@@ -7,7 +7,6 @@ translation_status: draft
 translated_at: 2026-07-25
 ---
 
-
 > MVP status: this page is an overview. Shared instructions, governance, and metrics will be expanded in later milestones (including Part 11).
 
 ## Read now
@@ -19,7 +18,6 @@ translated_at: 2026-07-25
 ## Planned steps (outline)
 
 Shared instructions → permissions and governance → standardized workflows → quality and security → rollout and metrics
-
 
 ---
 

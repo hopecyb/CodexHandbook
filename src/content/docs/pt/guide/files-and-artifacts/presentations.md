@@ -145,12 +145,6 @@ Esta divisão costuma poupar tempo e facilitar o controlo de qualidade.
 - [ ] Abre no ambiente de apresentação alvo sem fontes erradas
 - [ ] Dados-chave rastreáveis até ao ficheiro-fonte
 
-## Referências
-
-- Casos de apresentações e relatórios em codex.bozhouai.com
-- Capítulos de criação de conteúdo stormzhang
-- Práticas comunitárias tipo baoyu-slide-deck (referência de estrutura)
-
 ---
 
 **Estado:** verificado  

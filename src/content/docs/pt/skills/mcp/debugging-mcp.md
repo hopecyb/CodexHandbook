@@ -77,11 +77,7 @@ No Prompt, peça ao Agent para **imprimir a estrutura retornada pela ferramenta*
 - [ ] Registrou o template padrão de configuração MCP da equipe
 
 ## Fontes
-
 - Especificação e guia de debug do Model Context Protocol
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **Status:** outdated  

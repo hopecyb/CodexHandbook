@@ -48,7 +48,6 @@ CLI 排障时，先分清这是安装问题、登录问题、权限问题，还�
 
 官方说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
 
-
 ---
 
 **状态：** verified  

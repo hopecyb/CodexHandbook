@@ -100,11 +100,6 @@ Se as três se aproximam de «sim», a política tem mais probabilidade de ser r
 
 O valor da AUP é escrever com clareza os limites de uso do Codex na equipa e alinhá-los com os controlos reais.
 
-## Fontes de referência
-
-- Capítulos de política empresarial de KimYx0207
-- Governação de equipa de freestylefly/CodexGuide
-
 ---
 
 **Estado:** verified  

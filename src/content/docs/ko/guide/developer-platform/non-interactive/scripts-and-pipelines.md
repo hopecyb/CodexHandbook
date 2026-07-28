@@ -143,10 +143,7 @@ jobs:
 - [ ] 로컬 `make review` 동작과 일치
 
 ## 참고 출처
-
 - OpenAI Codex + GitHub 통합 문서
-- codex.bozhouai.com 자동화 장
-
 ---
 
 **상태：** outdated  

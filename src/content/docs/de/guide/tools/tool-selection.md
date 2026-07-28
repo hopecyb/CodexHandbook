@@ -86,7 +86,6 @@ Bevorzugt Datei und Terminal; keine Netzsuche. Browser nur nach Begründung, wen
 
 Zuerst das kleinste, aufgabennahe Werkzeug — nicht sofort das mit größtem Wirkungsradius.
 
-
 ---
 
 **Status:** verified  

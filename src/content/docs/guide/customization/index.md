@@ -5,7 +5,6 @@ sidebar:
   order: 40
 ---
 
-
 Codex 不只靠“这一次怎么问”，还靠**持久化配置**记住你和团队的约定。本章主要区分哪些要求该留在对话里，哪些该沉到项目里。
 
 如果你已经开始反复说同样的话，比如“别改这个目录”“先跑测试”“默认用这个模型”，这一章就在处理这类问题。
@@ -111,10 +110,7 @@ Rules 细目已起步；更多配置细页会随自定义模块持续补充。
 - [ ] 敏感操作仍走审批，而不是指望文字规则「吓住」模型
 
 ## 参考来源
-
 - OpenAI Codex 文档：[https://developers.openai.com/codex](https://developers.openai.com/codex)
-- 社区实践结构参考：freestylefly/CodexGuide AGENTS.md 专题、stormzhang/ai-coding-guide `11-agents-md.md`
-
 ---
 
 **状态：** verified  

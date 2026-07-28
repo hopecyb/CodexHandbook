@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Viele Erweiterungsmechanismen — leicht zu verwechseln. Hier nur die Beziehungen, keine Installationsschritte.
 
 ## Beziehungsskizze

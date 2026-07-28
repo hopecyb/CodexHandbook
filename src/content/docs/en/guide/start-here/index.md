@@ -40,7 +40,6 @@ If you want to jump in right away, go straight to [First 30 minutes](/guide/gett
 
 Each topic has one authoritative page; paths and case studies use summaries with links to avoid duplication.
 
-
 ---
 
 **Status:** review  

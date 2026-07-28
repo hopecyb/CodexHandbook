@@ -101,11 +101,6 @@ description: 用命令与路径规则约束 Agent 能执行的操作——个人
 
 好的 allow/deny 规则，是提前把哪些动作合理、哪些动作不该发生说清楚。
 
-## 参考来源
-
-- stormzhang `15-permissions.md`、`18-config.md`
-- KimYx0207 权限配置章节
-
 ---
 
 **状态：** verified  

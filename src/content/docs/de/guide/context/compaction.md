@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Kontextkomprimierung“: Wird das Gespräch zu lang, kürzt das System Früheres zu einer kürzeren Fassung und behält sie. Zweck: Aufgabe fortsetzbar; Preis: **Details können verloren gehen.**
 
 ## Warum das Ergebnisse beeinflusst
@@ -75,7 +74,6 @@ Stabiler als die ganze lange Konversation weiter zu verlassen.
 Konzept: [Token, Kontext und Komprimierung](/guide/foundations/tokens-context-and-compaction/)
 
 In langen Aufgaben: kritische Grenzen nicht nur einmal sagen; nach Komprimierung wichtige Regeln aktiv wiederholen.
-
 
 ---
 

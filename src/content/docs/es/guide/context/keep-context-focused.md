@@ -107,7 +107,6 @@ Cuanto más cambias, más difícil es luego saber en qué paso empezó el desví
 
 Enfocar el Contexto no es hablar menos: es dejar la información que aún vale y retirar a tiempo lo que ya no importa. Si el Contexto se embrolla, la ejecución posterior se desvía con facilidad.
 
-
 ---
 
 **Estado:** verified  

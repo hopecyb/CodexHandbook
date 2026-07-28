@@ -106,11 +106,7 @@ Só quando as três respostas se aproximam de «sim» é que a memória é adequ
 A memória serve melhor para «preferências pessoais que se repetem e alguns factos estáveis»; não substitui documentação do repositório, regras de equipa nem a gestão de informação sensível.
 
 ## Referências
-
 - Documentação de memória OpenAI Codex (conforme a versão)
-- stormzhang `19-memory.md`
-- Capítulo de memória de codex.bozhouai.com (referência de estrutura)
-
 ---
 
 **Estado:** verificado  

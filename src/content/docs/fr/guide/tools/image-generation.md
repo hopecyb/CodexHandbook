@@ -94,10 +94,8 @@ Plus proche de l'exploration, illustration de contenu et esquisse conceptuelle �
 - La politique entreprise peut interdire certains sujets ; suivez [usage acceptable](https://openai.com/policies/) et règles internes
 
 ## Références
-
 - Centre d'aide OpenAI : Images dans ChatGPT
 - OpenAI Academy : Créer des images avec ChatGPT
-
 ## Erreurs courantes
 
 - Committer des images 4K non compressées

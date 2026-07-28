@@ -115,12 +115,7 @@ Quando o usuário chama `$name` de forma explícita, a intenção é clara; quan
 - Confiar no comportamento sem ler `SKILL.md`
 
 ## Fontes
-
 - Orientações de segurança OpenAI Codex Skills
-- KimYx0207 CX-05～CX-06
-- stormzhang `20-skills.md`
-- freestylefly/CodexGuide Skill playbook
-
 ---
 
 **Status:** verified  

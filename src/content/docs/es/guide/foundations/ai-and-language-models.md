@@ -67,7 +67,6 @@ Un motor de búsqueda devuelve sobre todo páginas existentes; Codex se parece m
 
 Lo más útil del modelo de lenguaje es que, con Contexto suficiente, puede seguir trabajando rápido en la dirección de tu objetivo.
 
-
 ---
 
 **Estado:** verified  

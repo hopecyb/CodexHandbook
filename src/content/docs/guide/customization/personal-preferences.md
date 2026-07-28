@@ -97,12 +97,6 @@ description: 用户级配置、默认模型与界面习惯，避免污染仓库�
 - [ ] 至少为一个客户项目配置严格 Profile
 - [ ] 仓库内无个人密钥
 
-## 参考来源
-
-- freestylefly/CodexGuide 个人与团队配置
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **状态：** verified  

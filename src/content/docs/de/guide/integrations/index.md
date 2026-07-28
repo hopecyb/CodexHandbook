@@ -194,13 +194,7 @@ Erste Integration: Codex zuerst „sehen“ und „vorschlagen“ lassen — lei
 - Cloud-Repo-Kollaboration: [Web und Cloud](/guide/web-and-cloud/)
 
 ## Quellen
-
 - Offizielle OpenAI-Codex-Integrations- und Entwicklerdokumentation
-- KimYx0207《AI-Coding-Guide-Zh》Codex-Integration und Automatisierung
-- stormzhang `26-git-github.md` und Automatisierung
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
-
 ---
 
 **Status:** verified  

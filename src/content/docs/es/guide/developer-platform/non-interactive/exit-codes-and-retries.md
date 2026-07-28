@@ -121,10 +121,7 @@ Primero distingue «¿es un fallo temporal o no mejorará al reintentar?» y lue
 - [Recuperación ante fallos](/cases/workflows/failure-recovery/)
 
 ## Fuentes de referencia
-
 - Guía de reintentos de la API de OpenAI (concepto)
-- Depuración de CI de stormzhang
-
 ---
 
 **Estado:** outdated  

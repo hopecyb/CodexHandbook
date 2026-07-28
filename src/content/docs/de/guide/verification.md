@@ -96,7 +96,6 @@ Unklar, womit starten? Standard: [Fertig-Definition](/guide/quality/definition-o
 
 Wie Abnahmekriterien im Prompt stehen: [Fertigkriterien definieren](/prompts/define-done/). End-to-End-Fälle: [Praxisbeispiele](/cases/).
 
-
 ---
 
 **Status:** verified  

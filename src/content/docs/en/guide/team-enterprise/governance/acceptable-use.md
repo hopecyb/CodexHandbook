@@ -96,11 +96,6 @@ More “yes” → more likely effective.
 
 An AUP’s value is clear team boundaries for Codex use—and alignment with actual controls.
 
-## Reference sources
-
-- KimYx0207 enterprise policy chapter
-- freestylefly/CodexGuide team governance
-
 ---
 
 **Status:** verified  

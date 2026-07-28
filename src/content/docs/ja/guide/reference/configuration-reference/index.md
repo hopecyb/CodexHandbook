@@ -200,11 +200,7 @@ Cloud Secrets：[Secrets と環境変数](/guide/web-and-cloud/secrets-and-varia
 - `AGENTS.md` 指示と矛盾（設定は許可、文書は禁止）
 
 ## 参考
-
 - OpenAI Codex configuration reference
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
-
 ---
 
 **状態：** verified  

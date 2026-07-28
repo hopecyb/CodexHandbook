@@ -122,12 +122,7 @@ Ativa [notificações de ambiente de trabalho](/guide/desktop-app/notifications/
 - [ ] Produz PR ou branch, e passou por revisão humana do Diff
 
 ## Fontes de referência
-
 - Documentação de Tarefas OpenAI Codex Cloud
-- stormzhang `10-cloud.md`, `27-mobile.md`
-- KimYx0207 CX-10
-- Capítulos de colaboração App/Cloud de codex.bozhouai.com
-
 ---
 
 **Estado:** outdated  

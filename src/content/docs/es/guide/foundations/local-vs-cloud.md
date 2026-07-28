@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 «Local» y «Cloud» suenan a jerga técnica; en corto: local es trabajar en tu propio ordenador; Cloud, en una máquina remota.
 
 Si solo quieres empezar a usar Codex, suele ser más sencillo empezar por **local**.
@@ -74,7 +73,6 @@ Cuando de verdad encuentres estas necesidades, pasa a Cloud:
 Muchos principiantes empiezan con **local + App de escritorio**. Detalles de Cloud: [Resumen de Web y Cloud](/guide/web-and-cloud/). Cambio dentro de la App: [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/).
 
 Local encaja mejor para entender el flujo y hacer cambios pequeños. Cloud, para Tareas más largas, más estandarizadas y con más colaboración remota.
-
 
 ---
 

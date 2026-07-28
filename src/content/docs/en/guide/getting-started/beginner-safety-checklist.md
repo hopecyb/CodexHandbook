@@ -20,7 +20,6 @@ Check before you start:
 
 Concepts: [Permissions and approvals](/guide/foundations/permissions-and-approvals/) · [Sandbox and network](/guide/foundations/sandbox-and-network/).
 
-
 ---
 
 **Status:** review  

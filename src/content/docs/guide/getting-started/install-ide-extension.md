@@ -35,7 +35,6 @@ IDE 扩展装好后，还要确认它能在你当前编辑器和工作区里正�
 
 接着：[IDE 本地任务工作流](/guide/ide/local-task-workflow/)。排障：[IDE 排障](/guide/ide/troubleshooting/)。
 
-
 ---
 
 **状态：** outdated  

@@ -77,7 +77,6 @@ Tóm lại: đừng để «đã xong chưa» chỉ còn đoán.
 
 Đưa lệnh kiểm chứng vào tiêu chuẩn thì Agent mới dễ chủ động chạy: [Chạy kiểm thử](/guide/verification/)
 
-
 ---
 
 **Trạng thái:** verified  

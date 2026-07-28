@@ -53,7 +53,6 @@ CLI トラブルシューティングでは、インストール、ログイン�
 
 公式説明は [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
 
-
 ---
 
 **状態：** verified  

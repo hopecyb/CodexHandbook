@@ -67,11 +67,7 @@ Compare with [Turn a flow into automation](/skills/automations/scheduled-tasks/)
 - [ ] Cross-links to source workflow docs
 
 ## References
-
-- KimYx0207 Skills chapters
-- stormzhang `20-skills.md`
 - In-repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) and [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
-
 ---
 
 **Status:** verified  

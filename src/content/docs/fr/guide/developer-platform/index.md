@@ -83,12 +83,7 @@ Si vous voulez seulement une vue conceptuelle, commencez par [Vue d'ensemble SDK
 Le chapitre plateforme développeur traite le câblage de Codex dans les systèmes. Pour votre première utilisation pratique de Codex, lisez d'abord le contenu premiers pas.
 
 ## Sources de référence
-
 - Documentation officielle API / SDK OpenAI Codex
-- Chapitre développeur KimYx0207
-- Tutoriels CI et automatisation stormzhang
-- Études de cas d'ingénierie codex.bozhouai.com
-
 ---
 
 **Statut :** vérifié  

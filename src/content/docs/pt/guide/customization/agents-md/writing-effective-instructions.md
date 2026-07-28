@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Instruções de projeto eficazes aproximam-se de uma **checklist**. O objetivo é o Codex cometer menos erros previsíveis já na primeira tentativa.
 
 Na primeira redação, o problema comum é ter muitas ideias escritas, mas restrições realmente críticas pouco claras.

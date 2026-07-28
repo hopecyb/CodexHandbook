@@ -151,11 +151,7 @@ That is why many teams wire it behind `make review`, GitHub Actions, cron, or in
 - [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Reference sources
-
 - OpenAI Codex CLI documentation
-- KimYx0207 non-interactive chapter
-- stormzhang CI tutorials
-
 ---
 
 **Status:** outdated  

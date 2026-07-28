@@ -53,11 +53,6 @@ description: 先约定最终产物形态与路径，再反推步骤——适合�
 - [ ] 链接/目录/Frontmatter 有效
 - [ ] 符合 [定义完成](/prompts/define-done/)
 
-## 参考来源
-
-- codex.bozhouai.com 文档与模板任务
-- KimYx0207 内容产出工作流
-
 ---
 
 **状态：** verified  

@@ -3,7 +3,6 @@ title: 本地与云端
 description: 对比本地任务与 Cloud 任务的适用场景。
 ---
 
-
 “本地”“云端”听起来像技术名词，简单说，本地是在你自己的电脑上做事，云端是在远程机器上做事。
 
 如果只是想先把 Codex 用起来，通常先选 **本地** 更省事。
@@ -69,7 +68,6 @@ description: 对比本地任务与 Cloud 任务的适用场景。
 很多初学者会从 **本地 + 桌面 App** 开始。Cloud 细节见 [Web 与 Cloud 概述](/guide/web-and-cloud/)。在 App 内切换见 [本地与云端任务](/guide/desktop-app/local-and-cloud-tasks/)。
 
 本地更适合先看懂流程、改小东西。云端更适合更长、更标准化、远程协作更多的任务。
-
 
 ---
 

@@ -78,7 +78,6 @@ Comparaison complète : [Comparaison des fonctionnalités](/guide/reference/feat
 
 Ne vous précipitez pas pour décider lequel est « plus professionnel ». Choisissez l'entrée où processus et résultats sont les plus faciles à comprendre.
 
-
 ---
 
 **Statut :** verified  

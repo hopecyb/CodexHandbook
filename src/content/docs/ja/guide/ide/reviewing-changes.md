@@ -87,10 +87,7 @@ IDE で「そのまま受け入れられる変更」が見えても、「一括�
 IDE の「変更を受け入れる」は中間アクションであり、最終検証ではありません。
 
 ## 参考ソース
-
 - [検証と手動レビュー](/guide/foundations/verification-and-human-review/)
-- stormzhang `09-ide.md`
-
 ---
 
 **状態：** outdated  

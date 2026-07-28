@@ -93,12 +93,6 @@ Có thể xem trước:
 
 Nếu hiện bạn chủ yếu quan tâm bắt đầu cá nhân, chương này có thể để sau; khi bắt đầu lan tỏa đội, quản lý quyền hoặc kiểm soát rủi ro hãy quay lại.
 
-## Nguồn tham chiếu
-
-- Chương bảo mật và doanh nghiệp KimYx0207
-- Playbook đội freestylefly/CodexGuide
-- Hướng dẫn bảo mật stormzhang
-
 ---
 
 **Trạng thái:** verified  

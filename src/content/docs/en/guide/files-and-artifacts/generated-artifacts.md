@@ -100,10 +100,7 @@ Generated does not mean verified—open, validate, and know whether it should be
 - [ ] No secrets, no stray generated directories
 
 ## Reference sources
-
 - [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- external-source-integration case acceptance requirements
-
 ---
 
 **Status:** verified  

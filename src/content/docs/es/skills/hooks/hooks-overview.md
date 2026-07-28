@@ -119,12 +119,7 @@ El Hook encaja en nodos clave del sistema para comprobaciones automáticas. No e
 - [ ] La configuración entra en revisión de código
 
 ## Fuentes de referencia
-
 - Documentación de OpenAI Codex Hooks
-- stormzhang `22-hooks.md`
-- KimYx0207 CX-08
-- Auditoría y cumplimiento de freestylefly/CodexGuide
-
 ---
 
 **Estado:** desactualizado  

@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 `AGENTS.md` はリポジトリ（またはサブディレクトリ）に置く **Markdown プロジェクト指示**です。Codex がそのプロジェクトに入ると読み、コーディングスタイル、テスト要求、コミット規範、禁止事項を揃えます。
 
 「このプロジェクトで Codex にどう協力してほしいか」の説明書と考えてください。
@@ -122,11 +121,7 @@ translated_at: 2026-07-28
 `AGENTS.md` は Codex に「このプロジェクトでは普段どう動くか」を伝えるもの。今回具体的に何をするかの代替ではありません。
 
 ## 参考
-
 - OpenAI Codex プロジェクトコンテキスト説明
-- freestylefly/CodexGuide：`docs/advanced/02-agents-md.md`
-- stormzhang/ai-coding-guide：`codex/11-agents-md.md`
-
 ---
 
 **状態：** verified  

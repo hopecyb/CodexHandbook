@@ -56,7 +56,6 @@ Besonders nützlich in langen Threads.
 
 Bei Kontextkonflikt: „diesmal dieser Anweisung folgen“ festlegen. Team-Pflichtstrategien können persönliche Vorlieben überstimmen.
 
-
 ---
 
 **Status:** verified  

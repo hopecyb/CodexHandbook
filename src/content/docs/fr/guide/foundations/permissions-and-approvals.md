@@ -27,7 +27,6 @@ Codex ne doit pas effectuer d'opérations à haut risque sans consentement. L'**
 
 La politique officielle et les valeurs par défaut peuvent changer — consultez [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Statut :** review  

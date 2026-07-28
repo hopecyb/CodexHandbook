@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Plugin có thể xem như một gói cài: nó đóng một nhóm năng lực mở rộng đã cấu hình sẵn để người khác cài trực tiếp.
 
 **Plugin(plugin/connector)** đóng gói Skill, MCP server, tích hợp ứng dụng... thành đơn vị **cài được, cập nhật được, quản trị được** — đặc biệt phù hợp"một người cấu hình xong, cả nhóm tái dùng".
@@ -90,7 +89,7 @@ Chỉ những mở rộng nhóm bảo trì, thu hồi, kiểm toán được m�
 
 ## So với Claude Code / hệ sinh thái khác
 
-"Plugin"ở các sản phẩm khác không hoàn toàn cùng nghĩa. Khi so hãy xem: **đóng gói gì, mô hình Quyền, có mã nguồn mở để kiểm toán không** — xem [đối chiếu tính năng](/guide/reference/feature-comparison/) và KimYx0207 CX-14 (sự kiện cần tái Kiểm chứng).
+"Plugin"ở các sản phẩm khác không hoàn toàn cùng nghĩa. Khi so hãy xem: **đóng gói gì, mô hình Quyền, có mã nguồn mở để kiểm toán không** — xem [đối chiếu tính năng](/guide/reference/feature-comparison/).
 
 ## Lỗi thường gặp
 
@@ -99,10 +98,7 @@ Chỉ những mở rộng nhóm bảo trì, thu hồi, kiểm toán được m�
 - Bật Plugin thử nghiệm trên repo production
 
 ## Nguồn tham chiếu
-
 - Tài liệu OpenAI Codex Plugins
-- KimYx0207 CX-07; stormzhang `23-plugins.md`
-
 ---
 
 **Trạng thái:** outdated  

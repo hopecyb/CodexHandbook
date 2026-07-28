@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 이미 작업을 내릴 수는 있지만 아직 Skill을 실제로 만들어 본 적이 없다면, 이 페이지는 첫 Skill의 기본 방법을 다룹니다.
 
 15–30분 안에 **저장소에서 재사용 가능한** Skill을 하나 만드는 편이, 이론을 많이 읽는 것보다 보통 더 직접적입니다. 좋은 출발점은 경계가 분명한 작은 Skill입니다.
@@ -147,9 +146,7 @@ git commit -m "docs: add pr-review skill for Codex"
 - GitHub API가 필요하면 [MCP](/skills/mcp/mcp-overview/)를 도입하기
 
 ## 참고 출처
-
 - OpenAI Codex Skills 공식 예시와 `skill-creator`(환경에서 제공되는 경우)
-
 ---
 
 **상태:** verified  

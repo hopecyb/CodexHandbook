@@ -142,11 +142,7 @@ Spart Rätselraten in der Remote-Umgebung.
 Lokale CLI/IDE/App-Probleme: [Referenz · Troubleshooting](/guide/reference/troubleshooting/). Diese Seite nur **Cloud-spezifische** Kette.
 
 ## Quellen
-
 - OpenAI Codex Cloud Support-Dokumentation
-- stormzhang `10-cloud.md`
-- KimYx0207 CX-10–CX-11
-
 ---
 
 **Status:** outdated  

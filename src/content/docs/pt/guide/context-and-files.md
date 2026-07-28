@@ -29,7 +29,6 @@ Dá para ver como a informação de que um colega novo no grupo dependeria:
 Somados, isso é o Contexto de que ele depende agora.
 
 ## Fontes comuns de problema
-
 Muitos «por que ele entendeu errado de novo» não vêm de o modelo ser «burro» — e sim de Contexto problemático, por exemplo:
 
 - Pouca informação: ele só pode adivinhar
@@ -40,7 +39,6 @@ Muitos «por que ele entendeu errado de novo» não vêm de o modelo ser «burro
 O ponto desta página é um critério simples:
 
 > **Deixe-o ver a informação realmente relevante; não deixe o irrelevante ocupar o lugar.**
-
 ## Gestão de Contexto
 
 - [Contexto do projeto](/guide/context/project-context/) — `AGENTS.md`, convenções do repositório

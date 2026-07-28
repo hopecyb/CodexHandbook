@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 ## Objetivo de este paso
 
 Indica el nombre del archivo y completa una edición controlada.
@@ -50,7 +49,6 @@ Por eso hay que combinarlo con la revisión del diff.
 La primera vez que se mueven archivos, lo importante no es cuánto se cambia, sino que el límite del cambio sea claro y fácil de comprobar.
 
 Siguiente: [Dar Tareas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
-
 
 ---
 

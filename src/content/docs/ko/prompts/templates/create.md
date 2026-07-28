@@ -65,7 +65,6 @@ translated_at: 2026-07-28
 - [명세 주도 작업](/cases/workflows/specification-driven-work/)
 - [완료 기준 정의](/prompts/define-done/)
 
-
 ---
 
 **상태:** verified  

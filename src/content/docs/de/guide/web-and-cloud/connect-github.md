@@ -88,11 +88,7 @@ Buttons und UI richten sich nach dem aktuellen Produkt.
 - Erste Aufgabe unbeschränkt auf großem Monorepo
 
 ## Quellen
-
 - OpenAI Codex Cloud / GitHub-Integrationsdokumentation
-- KimYx0207 CX-10, CX-11
-- stormzhang `26-git-github.md`, `10-cloud.md`
-
 ---
 
 **Status:** outdated  

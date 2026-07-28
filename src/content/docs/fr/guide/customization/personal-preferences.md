@@ -32,16 +32,6 @@ Si vous ne les séparez pas, vous obtenez plus tard :
 - Vous croyez que les règles sont actives quand seule votre machine compense
 - Vous apportez des paramètres relaxés dans un projet plus sérieux
 
-## Ce qui appartient aux préférences personnelles
-
-| Contenu | Exemple |
-|---|---|
-| Modèle par défaut et niveau de raisonnement | Performance de la machine personnelle et plan |
-| Thème UI, police, notifications | App de bureau [Paramètres](/guide/desktop-app/settings/) |
-| MCP personnel (outils privés) | Base de données locale en lecture seule (autoriser avec prudence) |
-| Chemin de bibliothèque Skill personnelle | Pas de conflit avec le Plugin d'équipe |
-| Alias terminal, habitudes de répertoire de lancement `codex` | Voir [Configuration CLI](/guide/cli/configuration/) |
-
 ## Contenu d'équipe qui ne devrait pas vivre uniquement dans la couche personnelle
 
 - Style de code, commandes de test, structure de répertoires → **`AGENTS.md` projet**
@@ -101,12 +91,6 @@ Si le produit offre « mémoire » ou préférences persistantes, voir [Mémoire
 - [ ] Vous pouvez donner un exemple pour chaque couche personnelle, projet et organisation
 - [ ] Vous avez configuré au moins un Profile strict pour un projet client
 - [ ] Aucun secret personnel dans le dépôt
-
-## Références
-
-- Configuration personnelle et d'équipe freestylefly/CodexGuide
-- stormzhang `18-config.md`
-- KimYx0207 CX-04
 
 ---
 

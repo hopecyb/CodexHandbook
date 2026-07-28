@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Artefakt“ meint hier das, was die Aufgabe am Ende liefert, zum Beispiel:
 
 - ein Dokument
@@ -87,7 +86,6 @@ Nach Abschluss bitte aus Sicht des finalen Artefakts selbst prüfen und sagen, w
 3. Kleine Experience-Probleme suchen
 
 Lauffähigkeit heißt nur, die Basis hält; Lieferbarkeit hängt am finalen Nutzungseffekt.
-
 
 ---
 

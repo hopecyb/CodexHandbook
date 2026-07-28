@@ -10,7 +10,6 @@ sidebar:
   order: 8
 ---
 
-
 ## Cập nhật liên tục
 
 Cẩm nang này không gắn với một số phiên bản Codex duy nhất để đóng băng lâu dài. Sản phẩm sẽ thay đổi, nên các trang dùng trạng thái và ngày kiểm chứng để đánh dấu mức độ tin cậy hiện tại.
@@ -80,7 +79,6 @@ Nếu lo một trang đã lỗi thời, xem ba việc này:
 3. Đang nói khái niệm, hay đang nói cài đặt, cấu hình, quyền — những thứ dễ đổi
 
 Phàm liên quan hành vi, tham số và quy tắc mới nhất, cuối cùng đều phải lấy tài liệu chính thức hiện hành làm chuẩn.
-
 
 ---
 

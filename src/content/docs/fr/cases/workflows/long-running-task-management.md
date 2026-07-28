@@ -69,12 +69,6 @@ Après chaque jalon :
 - [ ] Au moins deux points de contrôle avec des diffs vérifiables
 - [ ] Savoir comment mettre en pause, reprendre ou transférer
 
-## Sources de référence
-
-- codex.bozhouai.com — tâches longues et flux standard
-- freestylefly/CodexGuide — capitalisation de tâches
-- stormzhang `14-workflows.md`
-
 ---
 
 **Statut :** verified  

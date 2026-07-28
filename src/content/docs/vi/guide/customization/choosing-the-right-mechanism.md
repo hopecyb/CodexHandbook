@@ -201,13 +201,7 @@ Như vậy dễ ổn định **đồng thuận cộng tác** trước, rồi d�
 - [Chọn cách mở rộng](/skills/choosing-an-extension-method/)
 
 ## Nguồn tham khảo
-
 - Tài liệu chính thức OpenAI Codex (lấy phiên bản hiện tại làm chuẩn)
-- Tư duy tổ chức AGENTS/Skill của freestylefly/CodexGuide
-- Chuyên đề mở rộng và tự động hóa trong mục lục Codex của KimYx0207《AI-Coding-Guide-Zh》
-- stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Trạng thái:** verified  

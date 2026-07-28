@@ -144,13 +144,7 @@ Bạn có thể ghi rõ trong `AGENTS.md`:
 Như vậy «xin kế hoạch trước» không còn là nhắc tạm thời, mà thành mặc định của nhóm.
 
 ## Nguồn tham khảo
-
 - Tư duy kế hoạch và thực thi trong tài liệu chính thức OpenAI Codex
-- Thực hành thiết kế tác vụ và cộng tác của freestylefly/CodexGuide
-- Các chương workflow Codex trong KimYx0207《AI-Coding-Guide-Zh》
-- Phương pháp thực thi thực chiến trong series Codex của stormzhang
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Trạng thái:** verified  

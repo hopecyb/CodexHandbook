@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El «Contexto de la conversación» significa: lo que tú y Codex habéis dicho antes en la misma Tarea sigue influyendo después. Ayuda, y también trae riesgo.
 
 ## Por qué es útil
@@ -90,7 +89,6 @@ A partir de aquí solo hablamos del rediseño de la home. El contenido anterior 
 ```
 
 El mismo hilo te ayuda a prolongar la memoria, pero también arrastra el lastre antiguo. En cuanto cambie el tema, hay que cerrar de forma activa.
-
 
 ---
 

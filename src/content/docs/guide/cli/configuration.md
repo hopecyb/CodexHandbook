@@ -3,7 +3,6 @@ title: CLI 配置
 description: 模型、沙盒、审批与 MCP——在终端里统一 Codex 行为。
 ---
 
-
 CLI 配置决定**默认模型、工作目录、审批严格度、MCP 服务器**等。与 [配置基础](/guide/customization/configuration/config-basics/) 概念一致，本页侧重终端用户常改项。
 
 ## 本页内容
@@ -110,10 +109,7 @@ CLI 可能在执行 shell、写盘、联网前询问。团队应在 `AGENTS.md` 
 把 CLI 配置当成“默认工作习惯”来看就行，只固定那些你**几乎每次都会重复选**的东西。高级能力后面再补也来得及。
 
 ## 参考来源
-
 - OpenAI Codex CLI configuration
-- stormzhang `18-config.md`
-
 ---
 
 **状态：** verified  

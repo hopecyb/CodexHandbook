@@ -77,11 +77,7 @@ Index d'erreurs : [référence d'erreurs](/guide/reference/error-reference/)
 - [ ] Modèle de config MCP standard d'équipe documenté
 
 ## Sources de référence
-
 - Spécification Model Context Protocol et guide de débogage
-- KimYx0207 CX-07
-- stormzhang `21-mcp.md`
-
 ---
 
 **Statut :** obsolète  

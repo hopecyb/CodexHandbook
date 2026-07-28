@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Ein Plugin ist ein Installationspaket: vorkonfigurierte Erweiterungen zum direkten Installieren durch andere.
 
 **Plugin (Plugin/Connector)** bündelt Skills, MCP-Server, App-Integrationen zu einer **installierbaren, aktualisierbaren, steuerbaren** Einheit — ideal, wenn eine Person konfiguriert und das Team wiederverwendet.
@@ -90,7 +89,7 @@ Langfristig nur Erweiterungen, die das Team warten, zurückziehen und auditieren
 
 ## Vergleich zu Claude Code / anderen Ökosystemen
 
-„Plugin“ meint in Produkten Unterschiedliches. Beim Vergleich: **was paketiert, Berechtigungsmodell, open source auditierbar?** — siehe [Funktionsvergleich](/guide/reference/feature-comparison/) und KimYx0207 CX-14 (Fakten nachprüfen).
+„Plugin“ meint in Produkten Unterschiedliches. Beim Vergleich: **was paketiert, Berechtigungsmodell, open source auditierbar?** — siehe [Funktionsvergleich](/guide/reference/feature-comparison/).
 
 ## Häufige Fehler
 
@@ -99,10 +98,7 @@ Langfristig nur Erweiterungen, die das Team warten, zurückziehen und auditieren
 - Experimentelle Plugins im Produktions-Repo
 
 ## Quellen
-
 - OpenAI Codex Plugins-Dokumentation
-- KimYx0207 CX-07; stormzhang `23-plugins.md`
-
 ---
 
 **Status:** outdated  

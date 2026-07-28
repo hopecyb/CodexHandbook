@@ -42,7 +42,6 @@ description: 带引用的调研与对比。
 - [带引用的研究案例](/cases/research-with-sources/)
 - [验证](/guide/verification/)
 
-
 ---
 
 **状态：** verified  

@@ -34,7 +34,6 @@ Goals and prompts
 
 Extension capabilities (Skills, Plugins, MCP, Hooks) are named at a conceptual level in the MVP; systematic teaching comes in later milestones. Don't mix this extension map with product comparisons: this page is about **what to learn**; the [feature comparison](/guide/reference/feature-comparison/) is about **which entry point has what**.
 
-
 ---
 
 **Status:** review  

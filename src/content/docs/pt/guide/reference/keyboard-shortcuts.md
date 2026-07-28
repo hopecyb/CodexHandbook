@@ -103,11 +103,7 @@ A maioria dos clientes permite mudar bindings nas definições. A equipa pode do
 Os atalhos não são matéria de exame. Usar com fluidez os poucos que mais te interrompem costuma bastar.
 
 ## Fontes de referência
-
 - Páginas oficiais de Settings / Keyboard shortcuts de cada produto
-- stormzhang `35-cheatsheet.md`
-- KimYx0207 CX-03
-
 ---
 
 **Estado:** outdated  

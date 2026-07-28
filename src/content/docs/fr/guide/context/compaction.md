@@ -8,11 +8,9 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 La compaction abandonne le détail. Les contraintes clés, critères d'acceptation et listes de fichiers autorisés doivent être **réénoncés** après compaction, ou écrits dans les instructions de projet.
 
 Aperçu conceptuel : [Tokens, Contexte et compaction](/guide/foundations/tokens-context-and-compaction/)
-
 
 ---
 

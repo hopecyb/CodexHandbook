@@ -19,7 +19,6 @@ translated_at: 2026-07-28
 
 L'objectif de la première Tâche est d'apprendre le flux de travail — pas de livrer du travail métier. L'isolement garde le coût des erreurs proche de zéro.
 
-
 ---
 
 **Statut :** review  

@@ -25,7 +25,6 @@ Prompting chapters expand these four into a stable framework—see [Anatomy of a
 > Actions: May edit this file; do not install dependencies.  
 > Acceptance: After opening the file, headings run H1 through H3 with no skipped levels.
 
-
 ---
 
 **Status:** review  

@@ -26,7 +26,6 @@ Peu de temps : [Les 30 premières minutes](/guide/getting-started/first-30-minut
 
 Les étapes d'installation évoluent avec les versions — consultez aussi [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-
 ---
 
 **Statut :** review  

@@ -80,7 +80,6 @@ Lần chọn đầu chỉ là điểm xuất phát.
 
 Đối chiếu đầy đủ xem [So sánh tính năng](/guide/reference/feature-comparison/). Có thể cài nhiều client; **giữ cùng một thư mục cho dự án luyện tập** — như vậy tiện hơn khi so đi so lại.
 
-
 ---
 
 **Trạng thái:** verified  

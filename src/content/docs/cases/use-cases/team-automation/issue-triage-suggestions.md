@@ -3,7 +3,6 @@ title: 案例：Issue 分流与标签建议
 description: 用 Codex 阅读新 Issue 并建议标签与负责人——轻量团队自动化。
 ---
 
-
 ## 元信息
 
 | 字段 | 内容 |

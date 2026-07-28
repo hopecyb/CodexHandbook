@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 | Terme | Définition |
 |---|---|
 | Agent | Approche d'exécution qui appelle des outils et itère vers un objectif |
@@ -27,7 +26,6 @@ translated_at: 2026-07-28
 | Worktree | Répertoire de travail isolé pour expériences parallèles |
 
 Version débutant : [Terminologie pour débutants](/guide/start-here/terminology-for-beginners/)
-
 
 ---
 

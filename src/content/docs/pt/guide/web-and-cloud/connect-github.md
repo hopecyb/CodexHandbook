@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Depois de ligar o GitHub, o Codex pode clonar o repo num **ambiente remoto**, abrir branches, fazer push e abrir PRs: é o pré-requisito do fluxo Cloud.
 
 ## Conteúdo
@@ -89,11 +88,7 @@ Botões e interface conforme o produto atual.
 - Na primeira tentativa, correr Tarefas sem limite num monorepo grande
 
 ## Fontes de referência
-
 - Documentação de integração OpenAI Codex Cloud / GitHub
-- KimYx0207 CX-10, CX-11
-- stormzhang `26-git-github.md`, `10-cloud.md`
-
 ---
 
 **Estado:** outdated  

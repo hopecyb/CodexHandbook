@@ -10,7 +10,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 이 파트는 핸드북 전체에서 반복되는 기초 개념을 한곳에 둡니다. 제품 UI 차이는 [제품 매뉴얼](/guide/)에, 프롬프트 기법은 [핵심 역량](/guide/)에 둡니다.
 
 여기에서는 Codex가 어떻게 작동하는지, 그리고 어떻게 협업하는지를 주로 설명합니다.
@@ -67,7 +66,6 @@ translated_at: 2026-07-28
 5. [검증과 사람 검토](/guide/foundations/verification-and-human-review/)
 
 이 몇 페이지만 이해해도 일상 사용을 지탱하기에 충분합니다.
-
 
 ---
 

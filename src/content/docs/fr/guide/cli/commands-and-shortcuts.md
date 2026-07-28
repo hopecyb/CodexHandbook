@@ -125,11 +125,7 @@ Pas besoin de chaque commande et raccourci le premier jour. Clarifiez « discute
 - [ ] Peut écrire une Tâche `codex exec` minimale en lecture seule (si disponible)
 
 ## Références
-
 - Documentation CLI OpenAI Codex
-- stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
-- KimYx0207 CX-03, CX-12
-
 ---
 
 **Statut :** obsolète  

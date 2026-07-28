@@ -144,13 +144,7 @@ Dans `AGENTS.md`, vous pouvez écrire :
 « Demander un plan d'abord » devient alors la norme, pas un rappel ponctuel.
 
 ## Sources de référence
-
 - Documentation officielle OpenAI Codex — planification et exécution
-- freestylefly/CodexGuide — conception de tâches et collaboration
-- KimYx0207《AI-Coding-Guide-Zh》— workflows Codex
-- série stormzhang Codex — exécution pratique
-- [codex.bozhouai.com](https://codex.bozhouai.com/)
-
 ---
 
 **Statut :** verified  

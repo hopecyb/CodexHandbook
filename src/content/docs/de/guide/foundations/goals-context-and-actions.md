@@ -87,7 +87,6 @@ Das ist klarer als nur „Hilf mir mit dem Problem“.
 
 Eine stabile Aufgabe nennt mindestens Ziel, Kontext, Aktionsgrenzen und Abnahmeweise klar.
 
-
 ---
 
 **Status:** verified  

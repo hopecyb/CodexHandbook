@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 El grupo de reglas es el que más fácil confunden los principiantes con «escribirle a Codex unas cuantas recordatorios más».
 
 Es más preciso entenderlo así: las reglas resuelven «qué acciones se permiten por defecto, cuáles hay que bloquear y cuáles deben seguir un estándar de equipo unificado».

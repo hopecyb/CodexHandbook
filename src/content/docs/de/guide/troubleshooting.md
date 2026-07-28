@@ -62,7 +62,6 @@ Fehlerbehebung heißt zuerst klassifizieren — nicht sofort „reparieren“.
 
 Mehr: [FAQ](/guide/reference/faq/) · [Fehlerreferenz](/guide/reference/error-reference/) · [Offizielle Codex-Doku](https://developers.openai.com/codex)
 
-
 ---
 
 **Status:** verified  

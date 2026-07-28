@@ -151,11 +151,7 @@ Deshalb hängen Teams ihn oft hinter `make review`, GitHub Actions, Cron oder in
 - [Exit-Codes und Retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Quellen
-
 - OpenAI Codex CLI-Dokumentation
-- KimYx0207 Nicht-interaktives Kapitel
-- stormzhang CI-Tutorials
-
 ---
 
 **Status:** outdated  

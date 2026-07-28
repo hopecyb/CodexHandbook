@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 „Gesprächskontext“ meint: Was du und Codex früher in derselben Aufgabe gesagt haben, wirkt weiter auf das Folgende. Das hilft — und birgt Risiko.
 
 ## Warum es nützt
@@ -90,7 +89,6 @@ Ab jetzt nur die Startseiten-Überarbeitung. Frühere Backend-API-Inhalte nicht 
 ```
 
 Derselbe Thread trägt Erinnerung — und alten Ballast. Bei Themenwechsel aktiv schließen.
-
 
 ---
 

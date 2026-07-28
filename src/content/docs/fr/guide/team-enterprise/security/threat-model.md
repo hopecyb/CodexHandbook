@@ -143,11 +143,7 @@ Cela supprime déjà beaucoup de risque d'équipe ; affiner la gouvernance plus 
 - [Modèles d'approbation humaine](/cases/workflows/human-approval-patterns/)
 
 ## Sources de référence
-
-- Sécurité entreprise KimYx0207
 - Livre blanc sécurité entreprise OpenAI (officiel)
-- Pratique conformité CodexGuide
-
 ---
 
 **Statut :** vérifié  

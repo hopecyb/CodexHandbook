@@ -34,7 +34,6 @@ Assim costumas cair mais depressa na página certa.
 
 Suporte e documentação oficiais: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
-
 ---
 
 **Estado:** verified  

@@ -100,11 +100,6 @@ Der Kernunterschied IDE-Cloud vs. lokal: Ist die Ausführungsumgebung remote?
 - Kein Branchname → Remote pusht auf gemeinsamen Branch
 - Cloud-Output als „abgenommen“ nehmen und CI überspringen
 
-## Quellen
-
-- stormzhang `10-cloud.md`, `09-ide.md`
-- KimYx0207 CX-10 Cloud
-
 ---
 
 **Status:** outdated  

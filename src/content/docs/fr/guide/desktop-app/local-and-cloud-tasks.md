@@ -8,7 +8,6 @@ translation_status: draft
 translated_at: 2026-07-28
 ---
 
-
 Choisissez où une Tâche s'exécute dans l'App :
 
 - **Local** : fichiers et environnement de votre machine — itération rapide
@@ -17,7 +16,6 @@ Choisissez où une Tâche s'exécute dans l'App :
 Concepts : [Local vs Cloud](/guide/foundations/local-vs-cloud/) · Aperçu : [Web et Cloud](/guide/web-and-cloud/)
 
 Avant de basculer, confirmez si des secrets doivent apparaître dans cet environnement et si la politique réseau le permet.
-
 
 ---
 
