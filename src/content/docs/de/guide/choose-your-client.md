@@ -1,89 +1,89 @@
 ---
-title: Choose your Codex client
-description: Making your first choice among App, CLI, IDE, and Cloud.
+title: Codex-Client wählen
+description: "Zwischen App, CLI, IDE und Cloud die erste Wahl treffen."
+locale: de
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 2
-locale: de
-source_locale: en
-source_revision: 88e1b18
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-Seeing `App / CLI / IDE / Cloud` for the first time, many people stall on "which one do I install?"
+Beim ersten Blick auf `App / CLI / IDE / Cloud` stecken viele bei „welchen soll ich installieren?“ fest.
 
-Picking the wrong first entry is not fatal—start with something workable and add others later.
+Auch wenn der erste Einstieg nicht perfekt passt, kommst du weiter. Nimm zuerst einen, der sich gut anfühlt — den Rest später.
 
-## A direct way to choose
+## Eine direkte Wahl
 
-Without strong preference:
+Ohne starke Präferenz so:
 
-- **First time**: desktop App
-- **You live in the terminal**: CLI
-- **You code mainly in VS Code / JetBrains**: IDE extension
-- **You already need GitHub cloud repos or long remote tasks**: look at Cloud
+- **Erstes Mal**: Desktop-App
+- **Du arbeitest ohnehin täglich im Terminal**: CLI
+- **Du schreibst vor allem in VS Code / JetBrains**: IDE-Erweiterung
+- **Du brauchst klar GitHub-Cloud-Repos oder lange Aufgaben**: dann Cloud
 
-## What each entry is
+## Was die Einstiege sind
 
-| Entry | Think of it as |
+| Einstieg | So kannst du ihn verstehen |
 |---|---|
-| Desktop App | Graphical console—tasks, diffs, approvals |
-| CLI | Codex in the terminal—for command-line users |
-| IDE extension | Assistant inside the editor—edit while you read code |
-| Cloud | Remote task execution—for repo collaboration and long runs |
+| Desktop-App | Grafische Konsole — Aufgaben, Diffs, Freigaben sehen und klicken |
+| CLI | Codex im Terminal — für Kommandozeilen-Nutzer |
+| IDE-Erweiterung | Assistent im Editor — Code ansehen und gleichzeitig ändern |
+| Cloud | Aufgaben remote ausführen — Repo-Kollaboration und lange Läufe |
 
-| If you… | Choose |
+| Wenn du… | Wähle |
 |---|---|
-| First time; want clear diffs and review | **Desktop App** (recommended default) |
-| Prefer terminal and scripts | **CLI** |
-| Mostly edit in an editor | **IDE extension** |
-| Need GitHub cloud environment / long tasks | **Cloud** (read overview first) |
+| Zum ersten Mal nutzt und Diffs sowie Review klar sehen willst | **Desktop-App** (Standardempfehlung) |
+| Terminal gewohnt bist und Skripte schreiben willst | **CLI** |
+| Vor allem im Editor Code änderst | **IDE-Erweiterung** |
+| GitHub-Cloud-Umgebung / lange Aufgaben brauchst | **Cloud** (zuerst Überblick lesen) |
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Choosing a client is too technical to bother with now
+### 1. Client-Wahl ist zu technisch — erst überspringen
 
-It is practical—it shapes whether your first experience feels clear or opaque.
+Dieser Schritt ist sehr praktisch: Er entscheidet mit, ob die erste Erfahrung rund läuft.
 
-### 2. Pick the most "pro" looking option
+### 2. Was am professionellsten wirkt, zuerst nutzen
 
-First time, pick the entry where process and results are easiest to see—not the most hardcore one.
+Beim ersten Mal besser den Einstieg, bei dem Prozess und Ergebnis am leichtesten verständlich sind — nicht dem härtesten hinterherjagen.
 
-## Why desktop App first for beginners
+## Warum zuerst die Desktop-App
 
-Friendlier for newcomers because:
+Für Anfänger ist die Desktop-App freundlicher, weil:
 
-- Easier to see what it did
-- Permission requests are visible
-- Tasks, diffs, and projects feel more concrete
-- Easier to pause and inspect when something goes wrong
+- Du leichter siehst, was es getan hat
+- Wann es Berechtigungen anfragt, klar ist
+- Diff, Aufgabe, Projekt anschaulicher sind
+- Bei Fehlern leichter anhalten und prüfen geht
 
-Unless you clearly prefer terminal, desktop App is often the better start.
+Ohne klare Terminal-Präferenz passt die Desktop-App oft besser.
 
-## You can use multiple entries later
+## Später mehrere Einstiege parallel
 
-Not a permanent four-way choice.
+Das ist keine Vier-aus-einer-Wahl und keine langfristige Bindung.
 
-Many people later combine:
+Viele kombinieren später:
 
-- Desktop App for tasks and review
-- CLI for batch operations
-- IDE extension while coding
+- Alltag: Desktop-App für Aufgaben und Änderungsreview
+- Massenoperationen: CLI
+- Hauptsächlich Code: IDE-Erweiterung
 
-First choice is only a starting point.
+Die erste Wahl ist nur der Startpunkt.
 
-## If you want less friction
+## Weniger Aufwand
 
-1. Install [desktop App](/guide/getting-started/install-desktop-app/)
-2. Run [your first task](/guide/getting-started/run-your-first-task/)
-3. Add CLI or IDE once comfortable
+1. Zuerst [Desktop-App](/guide/getting-started/install-desktop-app/) installieren
+2. Einmal die [erste Aufgabe](/guide/getting-started/run-your-first-task/) durchlaufen
+3. Wenn das sitzt: CLI oder IDE erwägen
 
-Full comparison: [feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep practice projects in the same directory** to compare clients fairly.
+Vollständiger Vergleich: [Funktionsvergleich](/guide/reference/feature-comparison/). Mehrere Clients sind ok; **Übungsprojekt im selben Verzeichnis halten**, damit Vergleiche leichtfallen.
 
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** OpenAI Developers homepage currently presents Codex, desktop workflows, and developer entry together; this page offers first-time path advice without fixing a rigid capability matrix or treating clients as mutually exclusive products.  
-**Last verified:** 2026-07-26
+**Geeignete Produkte:** App / CLI / IDE  
+**Überprüfungsgrundlage:** Die OpenAI-Developers-Startseite zeigt Codex, Desktop-Workflows und Entwickler-Einstiege parallel; diese Seite ist eine Pfadempfehlung für den ersten Einstieg und stellt Einstiege nicht als feste Fähigkeitsmatrix oder sich ausschließende Produkte dar.  
+**Zuletzt überprüft:** 2026-07-26

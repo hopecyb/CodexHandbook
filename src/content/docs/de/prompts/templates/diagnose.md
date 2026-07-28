@@ -1,58 +1,59 @@
 ---
-title: Diagnose template
-description: Find root cause before discussing fixes.
+title: Diagnostizieren-Vorlage
+description: Zuerst Ursache finden, dann Fix besprechen.
 locale: de
-source_locale: en
-source_revision: 1c4bf6a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Diagnose template
+# Diagnostizieren-Vorlage
 
-A common diagnose mistake: you say "investigate first" but still expect an immediate fix.
+Typischer Irrtum bei Diagnose: man sagt „erst prüfen“, meint aber stillschweigend „direkt fixen“.
 
-This template separates finding cause from editing code.
+Kern der Diagnostizieren-Vorlage: „Ursache finden“ und „fixen“ trennen.
 
-## Template
+## Vorlage
 
 ```text
-Symptom: 【error message, failing test, user report】
-Context: 【recent changes, environment, repro steps】
-Inputs: @【logs/tests/relevant code】
-Constraints: Do not change code yet; list 2–3 likely root causes and how to verify each.
-Output:
-1. Most likely root cause (with evidence)
-2. Executable verification steps (commands or checkpoints)
-3. If verified, draft fix plan (wait for my confirmation before executing)
+Phänomen: 【Fehlermeldung, fehlgeschlagener Test, Nutzerbericht】
+Hintergrund: 【kürzliche Änderungen, Umgebung, Repro-Schritte】
+Eingaben: @【Logs/Tests/relevanter Code】
+Constraints: Noch keinen Code ändern; 2–3 mögliche Ursachen inkl. Überprüfungsmethode.
+Ausgabe:
+1. Wahrscheinlichste Ursache (mit Evidenz)
+2. Ausführbare Überprüfungsschritte (Befehle oder Checkpoints)
+3. Falls bestätigt: Fix-Plan-Entwurf (erst nach meiner Freigabe ausführen)
 ```
 
-## When to use this template
+## Wann diese Vorlage passt
 
-- Bug not yet localized
-- Tests red but layer unknown
-- Complex suspected issue—don't want guess-and-patch
+- Bug noch nicht lokalisiert
+- Tests rot, Schicht unklar
+- komplex vermutet — kein Rate-Fix gewünscht
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Diagnosis is slow—just fix it
+### 1. Diagnose zu langsam — lieber direkt ändern
 
-Much rework comes from skipping diagnosis.
+Viel Nacharbeit kommt vom Überspringen der Diagnose.
 
-### 2. Listing 2–3 causes is verbose
+### 2. 2–3 Ursachen auflisten sei zu weitschweifig
 
-It shows whether reasoning is grounded or random.
+Im Gegenteil: so siehst du, ob geraten wird.
 
-The diagnose template requires explaining why it's broken before how to fix it.
+Die Vorlage verlangt zuerst, warum es kaputt ist — dann erst, wie ändern.
 
-## Related
+## Verwandt
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Fix a bug case](/cases/fix-a-bug/)
+- [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/)
+- [Bug-Fix-Fall](/cases/fix-a-bug/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a diagnose-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Diagnose-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

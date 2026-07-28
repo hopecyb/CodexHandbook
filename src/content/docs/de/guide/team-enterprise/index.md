@@ -1,107 +1,107 @@
 ---
-title: Team & Enterprise
-description: Adoption, standards, governance, and security for scaling Codex without losing control.
+title: Team und Enterprise
+description: Adoption, Standards, Verwaltung und Sicherheits-Governance — Codex skalieren, ohne die Kontrolle zu verlieren.
 sidebar:
   order: 70
 locale: de
-source_locale: en
-source_revision: fe1265c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **Team & Enterprise** chapter is for engineering leads, platform, and security teams—moving Codex from individual productivity to something teams can manage, audit, and learn from. Pair with [Learning path · Team](/guide/learning-paths/team/); this chapter leans governance and rollout.
+Das Kapitel **Team und Enterprise** richtet sich an Engineering-Leads, Plattform- und Sicherheitsteams: Codex von persönlich nutzbar zu teamfähig, auditierbar und nachvollziehbar machen. Zusammen mit [Lernpfad · Team](/guide/learning-paths/team/) liegt der Fokus hier auf Governance und Rollout.
 
-If you are still solo or learning basics, you can read this later. It focuses on boundaries, process, and accountability when many people use Codex together.
+Bei persönlicher Nutzung oder noch beim Einüben der Grundlagen können Sie dieses Kapitel später lesen. Hier geht es darum, wie bei vielen Nutzern Grenzen, Abläufe und Verantwortung geklärt werden.
 
-Key questions:
+Typische Fragen:
 
-- Who can use it
-- What scope is allowed
-- How to trace incidents
-- How high-risk extensions are approved
+- Wer darf nutzen
+- In welchem Umfang
+- Wie Vorfälle nachverfolgen
+- Wie risikoträchtige Erweiterungen freigeben
 
-## What this chapter covers
+## Inhalt dieses Kapitels
 
-- Path from small-team pilot to org rollout
-- Security, compliance, and extension (Plugin/MCP) risk
-- Cross-links to other handbook sections
+- Weg vom kleinen Team-Pilot zur Organisationsausweitung
+- Sicherheit, Compliance und Erweiterungsrisiken (Plugin/MCP)
+- Querverweise zu anderen Handbuchkapiteln
 
-## Who should read
+## Für wen
 
-| Role | Start with |
+| Rolle | Zuerst lesen |
 |---|---|
-| EM / lead | [Threat model](/guide/team-enterprise/security/threat-model/) · [Acceptable use](/guide/team-enterprise/governance/acceptable-use/) |
-| Platform engineering | [Team rules](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Security | [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
+| EM / Lead | [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/) · [Acceptable Use](/guide/team-enterprise/governance/acceptable-use/) |
+| Plattform-Engineering | [Team-Regeln](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
+| Security | [Plugin- und MCP-Risiken](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt Injection](/guide/team-enterprise/security/prompt-injection/) |
 
-## Governance model (conceptual)
+## Governance-Modell (Konzept)
 
 ```text
-Policy (org-managed, AUP)
+Policy (Organisationsverwaltung, AUP)
     ↓
-Standards (AGENTS.md, approved extension list)
+Standards (AGENTS.md, freigegebene Erweiterungsliste)
     ↓
-Enforcement (rules, sandbox, Hooks, CI)
+Durchsetzung (Regeln, Sandbox, Hooks, CI)
     ↓
-Observation (audit, metrics, retrospectives)
+Beobachtung (Audit, Metriken, Retros)
 ```
 
-## Chapter navigation (starter)
+## Navigation (Start)
 
-| Topic | Pages |
+| Thema | Seite |
 |---|---|
-| Security | [Threat model](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
-| Governance | [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/) |
+| Sicherheit | [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP-Risiken](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt Injection](/guide/team-enterprise/security/prompt-injection/) |
+| Governance | [Acceptable-Use-Policy](/guide/team-enterprise/governance/acceptable-use/) |
 
-Roadmap will add adoption, administration, deployment-patterns, etc.—see [chapter outline](/docs/planning/chapter-outline.md) (repo planning doc).
+Die Roadmap ergänzt adoption, administration, deployment-patterns u. a.; siehe [chapter-outline](/docs/planning/chapter-outline.md) (Repo-Planungsdokument).
 
-## Relationship to customization
+## Verhältnis zur Personalisierung
 
-- Org-managed layer in [AGENTS.md precedence](/guide/customization/agents-md/scope-and-precedence/)
-- [Team rules policy](/guide/customization/rules/team-rules/)
+- Organisationsschicht in [AGENTS.md-Priorität](/guide/customization/agents-md/scope-and-precedence/)
+- [Team-Regelstrategie](/guide/customization/rules/team-rules/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Buy seats without training and standards
-- Personal relaxed sandbox becomes org default
-- Approve all community Plugins without a list
+- Sitze kaufen ohne Training und Standards
+- Persönliche Sandbox-Lockerung als Organisationsdefault
+- Alle Community-Plugins ohne Liste freigeben
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Written AUP or equivalent policy
-- [ ] Approval process for high-risk extensions
-- [ ] Clear incident contacts (security/platform)
+- [ ] Schriftliche AUP oder gleichwertige Policy
+- [ ] Freigabeprozess für risikoträchtige Erweiterungen
+- [ ] Klare Incident-Kontakte (Security/Plattform)
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Solo user—need this chapter now?
+### 1. Ich nutze allein — brauche ich dieses Kapitel?
 
-Not necessarily deep reading yet.  
-But know: once Codex is a team system, problems are not only “how to prompt.”
+Nicht unbedingt jetzt tief.  
+Aber wissen: Wird Codex vom persönlichen Werkzeug zum Teamsystem, reicht „wie schreibe ich Prompts“ nicht mehr.
 
-### 2. Why so much audit, governance, policy?
+### 2. Warum immer Audit, Governance, Policy?
 
-At team scale, boundaries blur over time—that is the risk.
+Im Team verwässern Grenzen, wenn viele langfristig zusammen nutzen.
 
-### 3. First conceptual pass—read what?
+### 3. Zum Konzeptaufbau zuerst was lesen?
 
-Start with:
+Zum Beispiel:
 
-- [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Plugin- und MCP-Risiken](/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Acceptable-Use-Policy](/guide/team-enterprise/governance/acceptable-use/)
 
-If you care about personal onboarding first, defer this chapter until team rollout, permissions, or risk control.
+Für den persönlichen Einstieg später; bei Team-Rollout, Berechtigungsverwaltung oder Risikokontrolle zurückkommen.
 
-## Reference sources
+## Quellen
 
-- KimYx0207 security and enterprise chapters
-- freestylefly/CodexGuide team playbook
-- stormzhang security tutorials
+- KimYx0207 Security- und Enterprise-Kapitel
+- freestylefly/CodexGuide Team-Playbook
+- stormzhang Security-Tutorials
 
 ---
 
 **Status:** verified  
-**Products:** Organization / team features (plan-dependent)  
-**Verification basis:** OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Organisations-/Teamfunktionen (je nach Plan)  
+**Prüfgrundlage:** OpenAI Help Center und Plugin-/App-Dokumentation betonen weiterhin RollenZugriff, Plugin-Freigabe, Aktions-Freigabe, Datengrenzen und Audit-Verantwortung für Team-Rollouts; diese Seite navigiert nur und fokussiert Governance-Modell und Leseordnung, ohne konkrete Admin-Pfade zu binden.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,36 +1,36 @@
 ---
-title: Connect an MCP server
-description: Configure, authenticate, verify, and troubleshoot—safely connect your first MCP tool.
+title: MCP-Server verbinden
+description: Konfiguration, Auth, Verifikation und Troubleshooting — erstes MCP-Werkzeug sicher anbinden.
 locale: de
-source_locale: en
-source_revision: 346252d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-This page focuses on connection and verification; protocol details and server development are in official MCP docs.
+Fokus: Verbindungs- und Verifikationsablauf. Protokolldetails und Server-Entwicklung: offizielle MCP-Doku.
 
-## Before you start
+## Vor dem Start
 
-- [ ] Understand security boundaries in [MCP overview](/skills/mcp/mcp-overview/)
-- [ ] Have a read-only or sandbox test account
-- [ ] Confirm current Codex client version supports MCP (official docs)
+- [ ] Sicherheitsgrenzen in [MCP-Überblick](/skills/mcp/mcp-overview/) verstanden
+- [ ] Testkonto nur-lesen oder Sandbox
+- [ ] Aktuelle Codex-Client-Version unterstützt MCP (laut offizieller Doku)
 
-## Recommended flow
+## Empfohlener Ablauf
 
-### 1. Choose server type
+### 1. Servertyp wählen
 
-| Type | Notes | Risk |
+| Typ | Hinweis | Risiko |
 |---|---|---|
-| Local stdio server | Process on your machine | Medium: process permissions = your user |
-| Remote HTTP/SSE | Hosted service | Medium–high: needs TLS, token rotation |
+| Lokaler stdio-Server | Prozess auf dem Rechner | mittel: Prozessrechte = deine Nutzerrechte |
+| Remote HTTP/SSE | Gehosteter Dienst | mittel–hoch: TLS, Token-Rotation nötig |
 
-For first connection, start with an **official example or read-only local server**.
+Erster Anschluss: **offizielles Beispiel oder nur-lesen lokaler Server**.
 
-### 2. Add configuration
+### 2. Konfiguration hinzufügen
 
-Config location varies by CLI/App; commonly user- or project-level `mcp` block. Illustrative structure (**field names per official docs**):
+Ort je nach CLI/App; oft Nutzer- oder Projekt-`mcp`-Block. Struktur illustrativ (**Feldnamen laut offizieller Doku**):
 
 ```json
 {
@@ -39,67 +39,67 @@ Config location varies by CLI/App; commonly user- or project-level `mcp` block. 
       "command": "npx",
       "args": ["-y", "@example/mcp-server"],
       "env": {
-        "API_TOKEN": "Read from environment variable—do not hard-code in repo"
+        "API_TOKEN": "Aus Umgebungsvariable lesen, nicht im Repo hardcoden"
       }
     }
   }
 }
 ```
 
-Principles:
+Prinzipien:
 
-- Inject secrets via environment variables or a secrets manager
-- Config changes go through Git review (except secrets)
+- Secrets über Umgebungsvariablen oder Secret Manager
+- Konfigänderungen per Git-Review (außer Secrets)
 
-### 3. Restart or reload client
+### 3. Client neu starten oder neu laden
 
-After MCP config changes, usually restart the Codex session so the server list refreshes.
+Nach MCP-Konfig meist Codex-Sitzung neu starten, damit die Serverliste aktualisiert.
 
-### 4. Verify tools are visible
+### 4. Werkzeuge sichtbar prüfen
 
-In a task, explicitly ask:
+In der Aufgabe klar verlangen:
 
 ```text
-List currently available MCP tools (names and one-line descriptions only).
-Then call one test tool read-only and show the result.
-Do not perform write operations.
+Liste die aktuell verfügbaren MCP-Werkzeuge (nur Name und ein Satz Erklärung).
+Rufe dann ein Testwerkzeug nur lesend auf und zeige das Ergebnis.
+Keine Schreibaktionen.
 ```
 
-### 5. Try in small steps
+### 5. Kleine Schritte ausprobieren
 
-Pick a real but low-risk task, e.g.: "Use MCP to fetch ticket #123 title only; do not change status."
+Echte, risikoarme Aufgabe, z. B.: „Mit MCP den Titel von Ticket #123 holen, Status nicht ändern.“
 
-## Auth modes
+## Auth-Modi
 
-| Mode | Fit |
+| Modus | Geeignet für |
 |---|---|
-| API Key / PAT | Personal dev; rotate regularly |
-| OAuth | User-level auth; good for SaaS |
-| No-auth local | Local mock only; do not expose to network |
+| API Key / PAT | Persönliche Entwicklung, regelmäßig rotieren |
+| OAuth | Nutzer-Autorisierung, SaaS |
+| Unauth lokal | Nur lokales Mock, nicht ins Netz |
 
-On failure check: expired token, env var not passed into process, corporate proxy blocking.
+Bei Fehlern: Token abgelaufen, Env nicht durchgereicht, Firmenproxy blockiert.
 
-## Debugging checklist
+## Debug-Checkliste
 
-| Symptom | Possible cause |
+| Symptom | Mögliche Ursache |
 |---|---|
-| Empty tool list | Wrong config path, process failed to start |
-| Call timeout | Network, VPN, server down |
-| Permission denied | Insufficient token scope |
-| Model never calls tools | Task did not ask; or tool description unclear |
+| Werkzeugliste leer | Falscher Konfigpfad, Prozessstart fehlgeschlagen |
+| Aufruf-Timeout | Netz, VPN, Server down |
+| Berechtigung verweigert | Token-Scope zu klein |
+| Modell ruft nie Werkzeuge | Aufgabe verlangt es nicht; oder Werkzeug-`description` unklar |
 
-## Working with approval
+## Zusammenspiel mit Freigabe
 
-First call to an unfamiliar tool may prompt confirmation—that is expected. Do not encourage "always allow all MCP writes" in team policy.
+Beim ersten Aufruf unbekannter Werkzeuge kann der Client nachfragen — erwartet. In Teamregeln nicht „alle MCP-Schreibaktionen dauerhaft erlauben“ fördern.
 
-## References
+## Quellen
 
-- OpenAI Codex MCP configuration documentation
-- modelcontextprotocol.io server examples
+- OpenAI Codex MCP-Konfigurationsdokumentation
+- Server-Beispiele auf modelcontextprotocol.io
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Directly describes current MCP server configuration, reload, and verification steps—highly version- and client-sensitive; not suitable for `verified` yet.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE  
+**Nachprüfhinweis:** Beschreibt aktuelle MCP-Server-Konfig, Reload und Verifikation — stark versions- und clientabhängig; vorerst nicht `verified`.  
+**Zuletzt geprüft:** 2026-07-26

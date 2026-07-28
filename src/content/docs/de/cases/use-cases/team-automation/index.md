@@ -1,29 +1,29 @@
 ---
-title: Team automation
-description: Entry for in-team repetitive automation cases—triggers, notifications, approvals, and stop conditions.
+title: Team-Automatisierung
+description: Einstieg zu Fällen für wiederkehrende Teamaufgaben — Fokus auf Trigger, Benachrichtigung, Freigabe und Stoppbedingungen.
 locale: de
-source_locale: en
-source_revision: e8adb70
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Team automation cases are easy to overbuild. A safer framing: hand repetitive, rule-clear actions to automation; keep human judgment everywhere else.
+Bei Team-Automatisierung ist Übereifer häufig. Besser: klare, wiederholbare Aktionen automatisieren und den Rest menschlicher Beurteilung überlassen.
 
-## Cases in this group
+## Einstieg dieser Gruppe
 
-- [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Issue triage suggestions](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [Geplante Dokumentenlink-Prüfung](/cases/use-cases/team-automation/scheduled-link-check/)
+- [Issue-Triage-Vorschläge](/cases/use-cases/team-automation/issue-triage-suggestions/)
 
-## What this group emphasizes
+## Schwerpunkte dieser Gruppe
 
-- What belongs fully automated vs suggestion-only
-- How to alert and stop on failure or anomaly
-- Why "auto-open draft PR" is usually safer than "auto-edit main"
+- Was vollautomatisch laufen darf und was nur Vorschläge liefern soll
+- Wie bei Fehlern oder Anomalien alarmieren und stoppen
+- Warum «automatisch Draft-PR öffnen» meist stabiler ist als «automatisch den Hauptbranch ändern»
 
 ---
 
 **Status:** verified  
-**Applicable products:** Cloud / CLI / App  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current team-automation case entry and automation/approval boundary chapters; this page only navigates the team automation case group—not specific automation capability limits.
+**Geeignete Produkte:** Cloud / CLI / App  
+**Prüfgrundlage:** Kreuzgeprüft gegen den aktuellen team-automation-Falleinstieg dieses Repos sowie Kapitel zu Automatisierung und Freigabegrenzen. Diese Seite dient nur der Navigation der Team-Automatisierungs-Fallgruppe und verspricht keine konkreten Automatisierungsgrenzen.  
+**Zuletzt geprüft:** 2026-07-26

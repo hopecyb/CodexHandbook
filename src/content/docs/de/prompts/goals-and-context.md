@@ -1,89 +1,92 @@
 ---
-title: Goals and context
-description: Tell Codex what to accomplish and why it matters.
+title: Ziele und Kontext liefern
+description: Codex wissen lassen, was fertig werden soll und warum es zählt.
 locale: de
-source_locale: en
-source_revision: '2138057'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many prompts look information-rich but still miss two things:
+Viele Prompts wirken informativ, lassen aber genau diese zwei Punkte unklar:
 
-- What outcome you actually want
-- Why you're doing it this way
+- Welches Ergebnis willst du wirklich?
+- Warum soll es so gemacht werden?
 
-Goal explains what to deliver; context explains why.
+Das Ziel sagt „was soll entstehen“, der Hintergrund „warum so“.
 
-**Goal:** state the final deliverable, not a vague wish.  
-"Make the site better" → "Change the homepage primary button copy to … and keep existing style class names."
+**Ziel** beschreibt das End-Artefakt, keine vagen Wünsche.  
+„Website besser machen“ → „Homepage-Hauptbutton-Text ändern zu … und bestehende CSS-Klassen behalten“.
 
-**Context:** fill in what the reader knows but the Agent needs—stack, audience, deadline reason, known pitfalls.
+**Hintergrund** ergänzt Stand, den Leser nicht kennen, den der Agent aber braucht: Tech-Stack, Zielgruppe, Deadline-Grund, bekannte Fallen.
 
-## Why goal and context shouldn't be mixed
+## Warum Ziel und Hintergrund nicht vermischen
 
-Context without goal reads like a situation report with no deliverable.  
-Goal without context invites a solution that's technically possible but wrong for your situation.
+Nur Hintergrund ohne Ziel: Codex liest eine Lagebeschreibung und weiß nicht, was es liefern soll.  
+Nur Ziel ohne Hintergrund: Es wählt oft „technisch möglich“, aber nicht passend zu deinem Szenario.
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Goal means "I want to improve things"
+### 1. Ziel = „ich möchte etwas verbessern“
 
-That's a wish, not a goal.
+Das ist Wunsch, kein Ziel.
 
-A clearer goal usually states:
+Ein klareres Ziel nennt meist:
 
-- what to change
-- what end state you want
-- what must stay the same
+- was geändert wird
+- in welchen Zustand
+- was unverändert bleiben muss
 
-### 2. More context is always better
+### 2. Mehr Hintergrund ist immer besser
 
-Valuable context is what **you know but Codex doesn't**, and what **changes decisions**.
+Wertvoll ist, was **du weißt, Codex aber nicht** — und was Entscheidungen beeinflusst.
 
-### 3. Only technical context counts
+### 3. Nur technischer Kontext zählt als Hintergrund
 
-Not only technical context.
+Nicht nur Technik.
 
-These can also matter:
+Auch relevant:
 
-- who the audience is
-- why there's a deadline
-- known pitfalls
-- team constraints
+- wer die Leser sind
+- warum die Deadline
+- bekannte Fallen
+- Team-Constraints
 
-## A usable minimal form
+## Eine brauchbare Formulierung
 
-```text
-Goal: change X to Y
-Context: why, who it's for, what's blocking you now
-```
-
-Example:
+Für eine erste brauchbare Version:
 
 ```text
-Goal: Make the docs homepage hero copy easier for beginners to understand, keeping the existing structure
-Context: Current copy assumes readers already know many terms; first-time visitors face a high barrier
+Ziel: Was soll wie geändert werden
+Hintergrund: Warum, für wen, wo es gerade hakt
 ```
 
-## How to check if it's clear enough
+Zum Beispiel:
 
-For goal, check:
+```text
+Ziel: Docs-Homepage-First-Screen für Einsteiger verständlicher, Struktur behalten
+Hintergrund: Aktueller Text setzt viele Fachbegriffe voraus; Einstiegsschwelle beim Erstbesuch ist hoch
+```
 
-- can you see the outcome?
-- can you sense the scope?
+## Wie du prüfst, ob es klar genug ist
 
-For context, check:
+Beim Ziel zwei Fragen:
 
-- will this actually change how it works?
+- Ist das Ergebnis erkennbar?
+- Ist der Scope spürbar?
 
-Goal decides what to deliver; context explains why.
+Beim Hintergrund eine Frage:
 
-Related: project-level background can live in [project context](/guide/context/project-context/) so you don't repeat long blocks in every prompt.
+- Beeinflusst diese Info wirklich, wie es vorgeht?
+
+Das Ziel bestimmt die Lieferung; der Hintergrund ergänzt das Warum.
+
+Verwandt: Projektweiten Kontext in [Projektkontext](/guide/context/project-context/) ablegen, statt lange Wiederholungen in jedem Prompt.
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains goal and context writing only; in-site links and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur Ziel- und Hintergrund-Formulierung; interne Links und Beispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

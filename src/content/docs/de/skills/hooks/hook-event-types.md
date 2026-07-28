@@ -1,149 +1,149 @@
 ---
-title: Hook event types
-description: Hook trigger points in the Codex execution chain—for validation, logs, and blocks at the right stage.
+title: Hook-Ereignistypen
+description: Hook-Auslösepunkte in der Codex-Ausführungskette — Validierung, Logs und Block an der richtigen Phase.
 locale: de
-source_locale: en
-source_revision: '6802e43'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This section is about **when** the same check should fire.
+Hier geht es darum, wann derselbe Check greifen soll.
 
-**Hook events** are when the system calls your configured logic at fixed nodes. Understanding event types lets you implement "audit and validate" from [Hooks overview](/skills/hooks/hooks-overview/) without slowing every tool call.
+**Hook-Ereignisse** sind die Zeitpunkte, an denen das System deine konfigurierte Logik aufruft. Nur mit klarem Ereignistyp landen „Audit und Validierung“ aus dem [Hooks-Überblick](/skills/hooks/hooks-overview/) in der Konfig — ohne jeden Werkzeugaufruf zu bremsen.
 
-## Contents
+## Inhalt
 
-- Common event phases and use cases
-- How events divide work with [command rules](/guide/customization/rules/command-rules/)
-- Performance and failure strategy when configuring
+- Häufige Ereignisphasen und Einsatzfälle
+- Teilung mit [Befehlsregeln](/guide/customization/rules/command-rules/)
+- Performance und Fehlschlag-Strategie bei der Konfiguration
 
-## One decision principle
+## Ein Entscheidungsprinzip
 
-Do not start with "can this Hook do it?"  
-Ask: do you want to stop something **before** it happens, or record it **after**?
+Nicht zuerst fragen „kann dieser Hook das?“  
+Sondern: Willst du **vor** der Aktion stoppen oder **danach** aufzeichnen?
 
-Many misplaced Hooks fail because timing was wrong.
+Viele falsch platzierte Hooks scheitern am Timing.
 
 :::note
-**Event names and fields follow [official Hooks documentation](https://developers.openai.com/codex).** The table below is conceptual grouping—after CLI upgrades, check `--help` and release notes.
+**Ereignisnamen und Felder richten sich nach der [offiziellen Hooks-Dokumentation](https://developers.openai.com/codex).** Die Tabelle ist konzeptionell gruppiert; nach CLI-Upgrade `--help` und Release Notes prüfen.
 :::
 
-## Event groups (conceptual)
+## Ereignisgruppen (Konzept)
 
-| Phase | Typical events (conceptual) | Good for |
+| Phase | Typische Ereignisse (Konzeptnamen) | Geeignet für |
 |---|---|---|
-| Session | `session.start` / `session.end` | Environment checks, summarize changes, audit footer |
-| Before tool | `tool.call.before` / `pre_tool_use` | Block dangerous commands, scan secret patterns |
-| After tool | `tool.call.after` / `post_tool_use` | Structured logs, metrics, redacted archive |
-| Prompt | `user_prompt.submit` | Policy scan injection, length limits |
-| Artifact | `artifact.create` | License headers, file type allowlist |
-| Integration | `pr.before_create` (if supported) | Issue numbers, changelog format |
+| Sitzung | `session.start` / `session.end` | Umgebungscheck, Änderungszusammenfassung, Audit-Fußnote |
+| Vor Werkzeug | `tool.call.before` / `pre_tool_use` | Gefährliche Befehle blockieren, Secret-Muster scannen |
+| Nach Werkzeug | `tool.call.after` / `post_tool_use` | Strukturiertes Log, Metriken, maskiertes Archiv |
+| Prompt | `user_prompt.submit` | Policy-Scan, Längenlimit |
+| Artefakt | `artifact.create` | Lizenzkopf, Dateityp-Whitelist |
+| Integration | `pr.before_create` (falls unterstützt) | Issue-Nummer, Changelog-Format |
 
-Do not hang the same logic on multiple events—pick the **earliest point that can block**.
+Dieselbe Logik nicht an mehreren Ereignissen doppelt hängen — den **frühsten Block-Punkt** wählen.
 
-## How to read these phases
+## Phasen verstehen
 
-- **Session**: Task start or end
-- **Before tool**: Command or tool not executed yet
-- **After tool**: Action happened—log, summarize, re-check
-- **Prompt**: Right after user content is submitted
-- **Artifact**: Right after a file or result is created
+- **Sitzung**: Aufgabe startet oder endet
+- **Vor Werkzeug**: Befehl/Werkzeug noch nicht ausgeführt
+- **Nach Werkzeug**: Aktion geschehen — loggen, zusammenfassen, nachprüfen
+- **Prompt**: Nutzerinhalt gerade eingereicht
+- **Artefakt**: Datei/Ergebnis gerade erzeugt
 
-Understand at this level first; memorizing every event name can wait.
+Zuerst diese Ebene, Ereignisnamen später.
 
-## Relationship to the rules engine
+## Bezug zur Regel-Engine
 
 ```text
-User prompt → (optional) prompt Hook
-    → Model proposes tool call
-    → Rules engine allow/deny
-    → (optional) pre_tool Hook → execute → post_tool Hook
+Nutzer-Prompt → (optional) Prompt-Hook
+    → Modell schlägt Werkzeugaufruf vor
+    → Regel-Engine allow/deny
+    → (optional) pre_tool-Hook → Ausführen → post_tool-Hook
 ```
 
-- **Rules**: Declarative, fast—known command patterns
-- **Hook**: Imperative scripts—complex policy and external systems
+- **Regeln**: deklarativ, schnell, bekannte Befehlsmuster
+- **Hooks**: imperative Skripte, komplexe Politik und externe Systeme
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. If it can be checked, before vs after does not matter
+### 1. Vorher oder nachher — egal, solange geprüft wird
 
-It matters a lot.
+Großer Unterschied.
 
-To **prevent side effects**, attach as early as possible.  
-If you only discover the problem in `post_tool`, it is often too late.
+Nebenwirkungen verhindern → möglichst früh.  
+Erst in `post_tool` finden ist oft zu spät.
 
-### 2. More granular events means more professional config
+### 2. Mehr/feinere Ereignisse = professioneller
 
-Prefer "few and precise"—get the logic on the right single point first.
+Besser „wenig und treffsicher“ — einen passenden Punkt richtig setzen.
 
-### 3. Hook event types are just technical detail
+### 3. Ereignistypen sind nur Technikdetails
 
-They directly affect:
+Sie bestimmen:
 
-- Whether risk is stopped in time
-- Whether logs are useful
-- Whether the whole interaction slows down
+- Ob Risiko rechtzeitig gestoppt wird
+- Ob Logs nützlich sind
+- Ob die Interaktion langsam wird
 
-## Failure strategies
+## Fehlschlag-Strategie
 
-| Strategy | When to use |
+| Strategie | Wann |
 |---|---|
-| `block` | Security violation, hard compliance |
-| `warn` | Style, advisory checks |
-| `log` | Observe only, no block |
+| `block` | Sicherheitsverstoß, harte Compliance |
+| `warn` | Stil, Empfehlungschecks |
+| `log` | Nur beobachten, nicht blockieren |
 
-Hook timeout or crash should default **safe**: production tends toward block or fail closed, with errors logged for investigation.
+Bei Timeout/Crash **sicherheitshalber**: Produktion eher block oder fail-closed, Fehler für Diagnose loggen.
 
-## When unsure where to attach
+## Unsicher, wohin hängen?
 
-Simplified rules:
+Vereinfacht:
 
-- Stop dangerous action: prefer pre-events
-- Record what happened: prefer post-events
-- Opening checks or closing summaries: session events
+- Gefährliche Aktion stoppen → Pre-Ereignisse
+- Aufzeichnen, was passiert ist → Post-Ereignisse
+- Opening-Check oder Closing-Summary → Sitzungsereignisse
 
-That covers most configuration cases.
+Reicht für die meisten Konfigs.
 
-## Minimal configuration approach
+## Minimale Konfig-Idee
 
-1. Pick one event (start with `post_tool` read-only logging)
-2. Script stdin receives JSON payload (tool name, argument summary, working directory)
-3. Exit code `0` pass, non-`0` per policy block/warn
-4. Unit test: run script with fixed JSON fixture
+1. Ein Ereignis wählen (Start: `post_tool` nur Read-Log)
+2. Skript liest JSON-Payload von stdin (Werkzeugname, Argument-Zusammenfassung, Arbeitsverzeichnis)
+3. Exit `0` = ok, sonst nach Strategie block/warn
+4. Unit-Test: festes JSON-Fixture
 
-Decide whether you are blocking or recording, then pick the event.
+Erst klären: stoppen oder aufzeichnen — dann das Ereignis wählen.
 
-Full examples: [Hook configuration examples](/skills/hooks/hooks-examples/).
+Vollständige Beispiele: [Hook-Konfigurationsbeispiele](/skills/hooks/hooks-examples/).
 
-## Common mistakes
+## Häufige Fehler
 
-- Blocking in `post_tool` what should block in `pre_tool` (side effects already happened)
-- LLM or slow network inside Hook, killing interactivity
-- Payload contains secrets written to plaintext logs
-- Hook not versioned—teammate environments diverge
+- In `post_tool` blockieren, was `pre_tool` gehört (Nebenwirkung schon da)
+- LLM oder langsames Netz im Hook → Interaktion tot
+- Payload mit Secrets in Klartext-Logs
+- Hook nicht versioniert → abweichende Team-Umgebungen
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Hook script permissions should be ≤ monitored Agent permissions
-- See [recommended team Hook use cases](/skills/hooks/hooks-overview/#recommended-team-use-cases) and [threat model](/guide/team-enterprise/security/threat-model/)
+- Hook-Skript-Berechtigung ≤ überwachter Agent-Berechtigung
+- Siehe [Team-Hook-Fälle](/skills/hooks/hooks-overview/#empfohlene-team-fälle) und [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/)
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Can name your team's most common event and why
-- [ ] Readable error on failure
-- [ ] Script has unit tests or fixtures
-- [ ] Config in code review
+- [ ] Häufigstes Team-Ereignis und Begründung nennen
+- [ ] Lesbare Fehlermeldung bei Fehlschlag
+- [ ] Skript mit Unit-Tests oder Fixtures
+- [ ] Konfig in Code-Review
 
-## References
+## Quellen
 
-- OpenAI Codex Hooks reference
+- OpenAI Codex Hooks-Referenz
 - stormzhang `22-hooks.md`
 - KimYx0207 CX-08
 
 ---
 
 **Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Core content is Hook event grouping, payload, and failure strategy—high-churn implementation detail; official public material as of 2026-07-26 is insufficient to mark stable.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / App (versionsabhängig)  
+**Nachprüfhinweis:** Kern sind Ereignisgruppen, Payload und Fehlschlag-Strategie — volatile Implementierungsdetails; öffentliche Quellen reichen am 2026-07-26 nicht für „stabil“.  
+**Zuletzt geprüft:** 2026-07-26

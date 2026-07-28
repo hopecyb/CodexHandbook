@@ -1,154 +1,150 @@
 ---
-title: Cloud environments
-description: What Codex Cloud remote run environments include, their lifecycle, and team configuration essentials.
+title: Cloud-Umgebungen
+description: Aufbau, Lebenszyklus und Team-Konfiguration der Remote-Laufumgebung von Codex Cloud.
 locale: de
-source_locale: en
-source_revision: a893a77
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A **Cloud environment** is the worker machine Codex uses when running tasks remotely.
+Eine **Cloud-Umgebung** ist die Arbeitsmaschine, auf der Codex Remote-Aufgaben ausführt.
 
-It directly affects outcomes—including the OS, language versions, toolchain, network policy, and which repository branch is checked out. This page mainly answers a common question:
+Sie beeinflusst Ergebnisse direkt: OS, Sprachversionen, Toolchain, Netzwerkpolicy und welcher Repo-Branch vorliegt. Diese Schicht erklärt vor allem:
 
-> **Why does it work locally but fail in Cloud?**
+> **Warum läuft es lokal, in Cloud aber nicht?**
 
-## What's covered
+## Inhalt
 
-- How Cloud environments differ from your local dev machine
-- How environments bind to GitHub repos and branches
-- How teams maintain reproducible Cloud configuration
+- Unterschiede Cloud-Umgebung vs. lokaler Dev-Rechner
+- Bindung an GitHub-Repo und Branch
+- Wie Teams reproduzierbare Cloud-Konfiguration pflegen
 
-## Start with these three points
+## Zuerst diese Punkte
 
-Keep these in mind first:
+- Cloud „liest nicht alles auf Ihrem Rechner“ — nur was in der Remote-Umgebung liegt
+- Auch Cloud braucht Abhängigkeiten, passende Versionen und Netz
+- Uncommittetes / ungepushstes Lokal sieht Cloud default nicht
 
-- Cloud does not "read everything on your current computer"—it only sees what exists in the remote environment
-- Cloud tasks still face real-world constraints: dependencies, version mismatches, and whether the network can reach what they need
-- Anything you have not committed or pushed locally is invisible to Cloud by default
+Stellen Sie sich Cloud als **andere Maschine** vor.
 
-Think of Cloud as switching to a different machine to do the work.
-
-## Core concepts
+## Kernkonzept
 
 ```text
-GitHub repo (a branch)
+GitHub-Repo (Branch)
         ↓ clone / checkout
-Cloud environment instance (container or VM—product-dependent)
+Cloud-Umgebungsinstanz (Container oder VM，produktspezifisch)
         ↓
-Agent runs the task: install deps, change code, test, push
+Agent führt Aufgabe aus: Abhängigkeiten, Code, Tests, Push
 ```
 
-Use together with [Connect GitHub](/guide/web-and-cloud/connect-github/); the environment **cannot** access unpushed commits on your laptop.
+Zusammen mit [GitHub verbinden](/guide/web-and-cloud/connect-github/); die Umgebung **kann keine** ungepushsten Notebook-Commits sehen.
 
-## Local vs Cloud
+## Lokal vs. Cloud
 
-- **Local tasks**: Codex works around your current machine, in front of you
-- **Cloud tasks**: Codex runs on a remote machine you delegate to
+- **Lokale Aufgabe**: Codex arbeitet vor Ihren Augen auf diesem Rechner
+- **Cloud-Aufgabe**: Codex arbeitet auf einer Remote-Maschine
 
-That gap is a common source of confusion when you first use Cloud:
+Typische Erstverwirrung:
 
-- "Why can't it see the file I just changed locally?"
-- "Why doesn't it have that globally installed tool on my machine?"
-- "Why can't it reach the database I run locally?"
+- „Warum sieht es meine gerade geänderten lokalen Dateien nicht?“
+- „Warum fehlt das global installierte Tool von meinem Laptop?“
+- „Warum kommt es nicht an meine lokale DB?“
 
-Most of the time, **that remote machine simply does not have those things**—the issue is the environment itself.
+Meist: **Die Remote-Maschine hat das schlicht nicht.**
 
-## What an environment includes (conceptual)
+## Was die Umgebung enthält (Konzept)
 
-| Component | Description |
+| Bestandteil | Erklärung |
 |---|---|
-| Base image | OS, common build tools |
-| Runtime | Node, Python, Go, etc. (depends on image and task) |
-| Working directory | Path to the cloned repo |
-| Network policy | Whether outbound access is allowed and which domains |
-| Credential injection | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
+| Basisimage | OS, gängige Build-Tools |
+| Runtime | Node, Python, Go usw. (Image/Aufgabe) |
+| Arbeitsverzeichnis | Pfad nach dem Clone |
+| Netzwerkpolicy | Outbound erlaubt? Welche Domains? |
+| Credential-Injection | [Secrets und Variablen](/guide/web-and-cloud/secrets-and-variables/) |
 
-For concrete image lists and customization, see [official Cloud documentation](https://developers.openai.com/codex).
+Image-Listen und Customizing: [offizielle Cloud-Dokumentation](https://developers.openai.com/codex).
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Assuming Cloud automatically inherits your local environment
+### 1. Cloud erbt automatisch die lokale Umgebung
 
-It does not.
+Nein.
 
-Node, Python, Homebrew, Chrome, or database clients on your machine do not appear in Cloud just because they exist locally.
+Lokal installiertes Node, Python, Homebrew, Chrome, DB-Clients erscheinen nicht „weil lokal vorhanden“.
 
-### 2. Assuming pushing the repo means everything is ready
+### 2. Repo gepusht = alles bereit
 
-Repository code is only the starting point. Whether a task succeeds also depends on:
+Code ist nur der Start; Erfolg hängt ab von:
 
-- How dependencies are installed
-- What commands start or test the project
-- Which Secrets are required
-- Whether network policy allows access to external resources
+- Abhängigkeitsinstallation
+- Start-/Testbefehlen
+- benötigten Secrets
+- Netzwerkpolicy für externe Ressourcen
 
-### 3. Assuming Cloud failure means Codex cannot do the task
+### 3. Cloud-Fehler = Codex kann es nicht
 
-Many Cloud failures are misconfigured environments, not inability to complete the work.
+Oft fehlt die Umgebung — nicht die Aufgabe.
 
-A sensible troubleshooting order:
+Reihenfolge:
 
-1. Is the repo and branch correct?
-2. Are dependencies and runtime versions correct?
-3. Are Secrets and network access available?
-4. Is the task prompt clear enough?
+1. Repo und Branch korrekt?
+2. Abhängigkeiten und Runtime-Versionen korrekt?
+3. Secrets und Netz verfügbar?
+4. Aufgaben-Prompt klar?
 
-## Recommended setup flow
+## Empfohlener Konfigurationsablauf
 
-1. Complete your first Cloud task in a **test repo** and record dependency install commands
-2. Put repeatable steps in repo docs (`README`, `AGENTS.md`, or official environment config files)
-3. Configure [Secrets](/guide/web-and-cloud/secrets-and-variables/) (private registry, API keys)
-4. Confirm [internet access](/guide/web-and-cloud/internet-access/) policy meets security requirements
-5. Validate the issue → PR loop with the same environment template
+1. Erste Cloud-Aufgabe im **Testrepo**, Installationsbefehle notieren
+2. Wiederkehrendes in Repo-Doku (`README`, `AGENTS.md` oder unterstützte Environment-Dateien)
+3. [Secrets](/guide/web-and-cloud/secrets-and-variables/) (private Registry, API-Keys)
+4. [Internetzugriff](/guide/web-and-cloud/internet-access/) an Sicherheitsanforderungen prüfen
+5. Mit demselben Template Issue → PR-Kreislauf verifizieren
 
-## When Cloud is a good fit
+## Wann Cloud
 
-Use this framing:
+- Nur lokales Projekt, sofort Ergebnis: zuerst lokal
+- Lange Läufe, einheitliche Team-Umgebung, Remote-GitHub: Cloud
 
-- Changing a project on your machine and wanting immediate feedback: start local
-- Long-running tasks, a shared team environment, or remote GitHub workflows: use Cloud
+Wenn der lokale Flow noch wackelt, nicht vorschnell zum „Cloud-Config-Problem“ eskalieren.
 
-If your local workflow is not smooth yet, do not rush to turn every problem into a "Cloud configuration problem."
+## Mit lokal abstimmen
 
-## Aligning with local
+„Lokal grün, Cloud rot“ vermeiden:
 
-Avoid "green locally, red in Cloud":
-
-| Practice | Why |
+| Praxis | Grund |
 |---|---|
-| Pin dependency versions (lockfile) | Reproducible installs |
-| Document install and test commands in `AGENTS.md` | Agent does not guess |
-| Keep Node/Python versions close between CI and Cloud | Less version drift |
-| Use Git LFS or build-time downloads for large files | Controlled clone size |
+| Abhängigkeitsversionen locken (lockfile) | Reproduzierbare Installation |
+| Install- und Testbefehle in `AGENTS.md` | Agent rät nicht |
+| CI und Cloud ähnliche Node/Python-Versionen | Weniger Drift |
+| Große Dateien via Git LFS oder Build-Download | Clone-Größe steuerbar |
 
-## Lifecycle
+## Lebenszyklus
 
-A typical Cloud task:
+Typische Cloud-Aufgabe:
 
-1. **Create or reuse** an environment instance
-2. **Prepare**: clone, checkout branch, install dependencies
-3. **Execute**: Agent changes code, runs commands
-4. **Output**: branch push, PR, log artifacts
-5. **Destroy or recycle** (policy varies by product)
+1. Instanz **erstellen/wiederverwenden**
+2. **Vorbereiten**: clone, Branch checkout, Abhängigkeiten
+3. **Ausführen**: Agent ändert Code, läuft Befehle
+4. **Output**: Branch-Push, PR, Log-Artifacts
+5. **Zerstören oder recyclen** (produktspezifisch)
 
-For long tasks, follow up via [desktop App notifications](/guide/desktop-app/notifications/) or mobile.
+Lange Aufgaben: [Desktop-App-Benachrichtigungen](/guide/desktop-app/notifications/) oder Mobile Follow-up.
 
-## Common mistakes
+## Häufige Fehler
 
-- Assuming Cloud pre-installs your entire private monorepo toolchain
-- Depending on `localhost` services (database, mock API) without providing them in the environment
-- Running unbounded tasks on a production repo on the first try
-- Misreading an environment problem as a model capability problem
+- Annehmen, Cloud habe die komplette Toolchain des privaten Monorepos
+- `localhost`-Dienste (DB, Mock-API) ohne Bereitstellung in der Umgebung
+- Erste Aufgabe unbeschränkt auf Produktionsrepo
+- Umgebungsproblem als Modellfähigkeitsproblem missverstehen
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Treat the environment as **semi-trusted**: still require code review and branch protection
-- Inject production database connection strings only via Secrets, never in prompts
-- Periodically clean up unused environment templates and Secrets
+- Umgebung als **halbvertrauenswürdig**: weiterhin Code Review und Branch Protection
+- Produktions-DB-Strings nur über Secrets, nicht im Prompt
+- Unbenutzte Environment-Templates und Secrets regelmäßig aufräumen
 
-## References
+## Quellen
 
 - OpenAI Codex Cloud environments
 - stormzhang `10-cloud.md`
@@ -157,6 +153,6 @@ For long tasks, follow up via [desktop App notifications](/guide/desktop-app/not
 ---
 
 **Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers environment instance shape, lifecycle, templates, and GitHub branch binding—details we cannot fully confirm against strong current official documentation; it should not be marked `verified` until formal Cloud environment docs are available.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Cloud  
+**Prüfhinweis:** Betrifft Instanzform, Lebenszyklus, Templates und Branch-Bindung — ohne starke aktuelle offizielle Detailbelege nicht `verified`.  
+**Zuletzt geprüft:** 2026-07-26

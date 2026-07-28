@@ -1,109 +1,109 @@
 ---
-title: Configuration Profiles
-description: Named configuration sets to switch model, sandbox, and approval combinations—one each for development, review, and CI.
+title: Konfigurations-Profiles
+description: "Benannte Config-Profile für Modell-, Sandbox- und Freigabe-Kombinationen — Entwicklung, Review, CI je eines."
 locale: de
-source_locale: en
-source_revision: 22573f8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Profile** lets you save a named set of configuration (model + sandbox + approval, etc.) and switch scenarios in one step instead of changing settings manually each time.
+**Profile (Konfigurationsprofil)** speichert eine benannte Kombination (Modell + Sandbox + Freigabe usw.) und wechselt Szenarien mit einem Klick — ohne jedes Mal manuell umzustellen.
 
-## What This Page Covers
+## Was diese Seite behandelt
 
-- Profile versus “changing default configuration”
-- Common ways to split Profiles
-- How teams share Profile definitions
+- Unterschied zwischen Profile und „Default-Config ändern“
+- Übliche Profile-Aufteilungen
+- Wie Teams Profile-Definitionen teilen
 
-## What Profiles Control
+## Was Profile steuert
 
-If “configuration” is default working habits, **Profile** is “a preset bundle for a scenario.”
+Wenn „Config“ die Default-Arbeitsgewohnheit ist, ist **Profile** „ein voreingestelltes Paket für ein Szenario“.
 
-Think of it as:
+Stellen Sie sich vor:
 
-- One set for daily development
-- One for untrusted repos
-- One for read-only review
-- One for CI automated tasks
+- Alltag: ein Satz
+- Unvertraute Repos: ein Satz
+- Nur-Lese-Review: ein Satz
+- CI-Aufgaben: noch ein Satz
 
-So you do not retune a pile of switches every time.
+Dann müssen Sie nicht jedes Mal Dutzende Schalter drehen.
 
-## Typical Profile Examples
+## Typische Profile-Beispiele
 
-| Profile name | Intent | Traits (conceptual) |
+| Profile-Name | Absicht | Merkmale (konzeptuell) |
 |---|---|---|
-| `daily` | Daily development | Balanced model, standard sandbox |
-| `strict` | Untrusted repo | Strong approval, limited network |
-| `review-only` | Read-only review | No disk write or read-only |
-| `ci` | Pipeline | Fixed model, non-interactive, no push |
+| `daily` | Alltag | Ausgewogenes Modell, Standard-Sandbox |
+| `strict` | Unvertrautes Repo | Starke Freigabe, Netz eingeschränkt |
+| `review-only` | Nur lesen | Schreibverbot oder nur Lesen |
+| `ci` | Pipeline | Festes Modell, nicht-interaktiv, kein Push |
 
-Specific fields: [Configuration Reference](/guide/reference/configuration-reference/).
+Konkrete Felder: [Konfigurationsreferenz](/guide/reference/configuration-reference/).
 
-## Usage (Conceptual)
+## Nutzung (konzeptuell)
 
-1. Confirm Profile syntax in official docs (may relate to `[profiles.name]` in `config.toml` or equivalent)
-2. Create and name a Profile
-3. Specify at launch: `codex --profile strict` (command per `--help`)
-4. Note in README: “contributors recommended `daily`; CI uses `ci`”
+1. In der offiziellen Doku die Profile-Syntax bestätigen (oft `[profiles.name]` in `config.toml` oder gleichwertig)
+2. Profile anlegen und benennen
+3. Beim Start angeben: `codex --profile strict` (Befehl laut `--help`)
+4. In README notieren: „Beitragende: `daily`; CI: `ci`“
 
-CLI detail: [CLI Configuration](/guide/cli/configuration/)
+CLI-Details: [CLI-Konfiguration](/guide/cli/configuration/)
 
-## Common Misconceptions
+## Häufige Missverständnisse
 
-### More Profiles is not more flexible
+### Mehr Profiles sind nicht automatisch flexibler
 
-Many people want a Profile for every tiny scenario and end up with a dozen names they cannot tell apart.
+Viele legen zuerst für jedes Mini-Szenario ein Profile an — zehn Namen, niemand merkt sich die Unterschiede.
 
-Usually keep 2–4 most-used ones:
+Meist reichen 2 bis 4 häufigste:
 
-- Daily development
-- Strict mode
-- Read-only review
+- Alltag
+- Streng
+- Nur-Lese-Review
 - CI
 
-Enough to separate risk boundaries clearly.
+Hauptsache, Risikogrenzen klar getrennt.
 
-### Profile is not a substitute for thinking
+### Profile ersetzt kein Denken
 
-Switching to a Profile does not make every task absolutely safe or appropriate.
+Ein Profile zu wählen heißt nicht, dass jede Aufgabe danach absolut sicher oder passend ist.
 
-It only moves you to a common starting state; each task still needs the current repo and risk judgment.
+Es setzt nur den „üblichen Startzustand“; die konkrete Aufgabe braucht weiterhin Repo- und Risikourteil.
 
-## Division of Labor with AGENTS.md
+## Arbeitsteilung mit AGENTS.md
 
 | | Profile | AGENTS.md |
 |---|---|---|
-| Controls | Capability switches, model, sandbox | How to write this project |
-| Commit to Git | Optional (project-level profile snippet) | Yes |
-| Personal/team | Personal profile local; team profile should be PR | Team |
+| Steuert | Fähigkeitsschalter, Modell, Sandbox | Wie in diesem Projekt geschrieben wird |
+| Nach Git | Optional (projektweite Profile-Fragmente) | Ja |
+| Person/Team | Persönlich lokal; Team-Profiles per PR | Team |
 
-## Common Mistakes
+## Häufige Fehler
 
-- Ten Profiles per repo that nobody maintains
-- `ci` Profile still allows `git push`
-- Profile names disagree with docs; newcomers use the wrong one
+- Zehn Profiles pro Repo, niemand pflegt sie
+- `ci`-Profile erlaubt weiterhin `git push`
+- Profile-Namen weichen von der Doku ab — Neue nehmen das Falsche
 
-## Getting Started
+## Einstiegsempfehlung
 
-When starting with Profiles:
+Beim Start mit Profiles:
 
-1. Keep one `daily` as default
-2. Add `strict` for unfamiliar or high-risk repos
-3. If the team automates, add `ci` separately
+1. Ein `daily` als Default behalten
+2. Ein `strict` für unbekannte oder riskante Repos ergänzen
+3. Bei Automatisierung ein separates `ci` hinzufügen
 
-That already covers most common cases.
+Damit sind die meisten Fälle abgedeckt.
 
-Profiles help you quickly switch to a default combination you have already thought through for different risk scenarios.
+Profile lohnt sich, weil Sie in unterschiedlichen Risikoszenarien schnell zu einer durchdachten Default-Kombination wechseln.
 
-## References
+## Quellen
 
 - stormzhang `18-config.md`
-- OpenAI Codex profiles documentation
+- OpenAI-Codex-Profiles-Dokumentation
 
 ---
 
 **Status:** outdated  
-**Applicable products:** CLI / App  
-**Review note:** This page states `Profile`, `codex --profile`, and shared profile structure too concretely; currently verifiable official material is insufficient to show these usages are broadly valid in present versions. It should not be marked `verified` until formal documentation support is added.  
-**Last verified:** 2026-07-26
+**Gilt für:** CLI / App  
+**Nachprüfhinweis:** Diese Seite beschreibt `Profile`, `codex --profile` und geteilte Profile-Strukturen zu konkret; die aktuell nachprüfbaren offiziellen Quellen reichen nicht, um diese Nutzung in der jetzigen Version als allgemein etabliert zu belegen — vor `verified` formale Doku-Belege nachziehen.  
+**Zuletzt geprüft:** 2026-07-26

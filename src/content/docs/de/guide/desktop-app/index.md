@@ -1,34 +1,96 @@
 ---
-title: Desktop App
-description: Installation, interface, and day-to-day workflows for the desktop App.
+title: Desktop-App
+description: Installation, Oberfläche und tägliche Workflows der Desktop-App.
 locale: de
-source_locale: en
-source_revision: 9aae765
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 
-The desktop App is the default entry for beginners: visualize projects, tasks, diffs, and approvals.
+Die Desktop-App ist der Standardeinstieg für Einsteiger: Projekte, Aufgaben, Diffs und Freigaben werden sichtbar.
 
-## In this chapter
+Wer die Kommandozeile oder IDE-Erweiterungen noch nicht kennt, findet hier oft den leichteren Einstieg.
 
-- [Installation and interface](/guide/desktop-app/installation-and-interface/)
-- [Projects and tasks](/guide/desktop-app/projects-and-tasks/)
-- [Parallel Agents](/guide/desktop-app/parallel-agents/)
-- [Worktrees](/guide/desktop-app/worktrees/)
-- [Diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/)
-- [Integrated terminal](/guide/desktop-app/integrated-terminal/)
-- [Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/)
-- [Notifications](/guide/desktop-app/notifications/)
-- [Settings](/guide/desktop-app/settings/)
-- [Troubleshooting](/guide/desktop-app/troubleshooting/)
+Sie ist mehr als „nur chatten“: Projekte, Änderungen, Freigaben und Überprüfung liegen in derselben sichtbaren Oberfläche.
 
-Getting started: [Install the desktop App](/guide/getting-started/install-desktop-app/)
+## In diesem Kapitel
 
+- Welche Aktionen in der Desktop-App du zuerst lernen solltest
+- Welche Funktionen für Einsteiger zuerst sinnvoll sind und was später kommen kann
+- Wohin du bei Änderungen, Freigaben und Fehlersuche schaust
+
+## Diese drei Dinge zuerst erkennen
+
+Du musst nicht alle Funktionen auf einmal lernen.  
+Erkenne zuerst diese drei Kernaktionen:
+
+1. Wo du eine Aufgabe eingibst
+2. Wo du Änderungen siehst
+3. Wo du Aktionen freigibst oder ablehnst
+
+Wenn diese drei Schritte klappen, hast du bereits eine grundlegende Aufgaben-Schleife geschlossen.
+
+## Häufige Missverständnisse
+
+### 1. Ist die Desktop-App nur eine grafische Hülle um die CLI?
+
+Sie macht mehrere zentrale Schritte der Zusammenarbeit sichtbar:
+
+- aktuelle Aufgabe
+- Plan und Werkzeugaufrufe
+- Dateiänderungen
+- Freigabeaktionen
+- Ergebnisüberprüfung
+
+### 2. Muss ich alle Buttons verstehen, bevor ich anfange?
+
+Am Anfang reicht es, zu erkennen:
+
+- wo Aufgaben eingegeben werden
+- wo das Diff liegt
+- wo Freigabe / Ablehnung liegt
+
+### 3. Geeignet für Einsteiger — also ungeeignet für echte Arbeit?
+
+Viele echte Arbeiten lassen sich ebenfalls in der Desktop-App erledigen, besonders wenn dir visuelle Überprüfung und transparente Abläufe wichtig sind.
+
+## Empfohlene Reihenfolge
+
+Beim ersten Einsatz der Desktop-App kannst du so vorgehen:
+
+1. Installieren und die Oberfläche erkennen
+2. Das richtige Projekt wählen
+3. Eine kleine Aufgabe starten
+4. Die Änderungen ansehen
+5. Freigeben und Ablehnen lernen
+6. Danach fortgeschrittene Fähigkeiten wie parallele Agenten, Arbeitsbäume und Cloud-Aufgaben
+
+Das ist meist entspannter, als sofort alle Funktionen zu studieren.
+
+## Dieses Kapitel
+
+- [Installation und Oberfläche](/guide/desktop-app/installation-and-interface/)
+- [Projekte und Aufgaben](/guide/desktop-app/projects-and-tasks/)
+- [Parallele Agenten](/guide/desktop-app/parallel-agents/)
+- [Arbeitsbäume](/guide/desktop-app/worktrees/)
+- [Diff, Kommentare und Überprüfung](/guide/desktop-app/diffs-comments-and-review/)
+- [Integriertes Terminal](/guide/desktop-app/integrated-terminal/)
+- [Lokale und Cloud-Aufgaben](/guide/desktop-app/local-and-cloud-tasks/)
+- [Benachrichtigungen](/guide/desktop-app/notifications/)
+- [Einstellungen](/guide/desktop-app/settings/)
+- [Fehlerbehebung](/guide/desktop-app/troubleshooting/)
+
+Einstieg: [Desktop-App installieren](/guide/getting-started/install-desktop-app/)
+
+Die Desktop-App eignet sich gut, um die Grundzusammenarbeit mit Codex zuerst durchzuspielen — CLI und fortgeschrittenere Workflows können später folgen.
 
 ---
 
-**Status:** review  
-**Applies to:** App  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** App  
+**Prüfgrundlage:** Die aktuellen OpenAI-Help-Center-Artikel «Moving to the new ChatGPT desktop app» und «ChatGPT Work and Codex» stellen klar, dass die Desktop-Anwendung Chat/Work und Codex enthält und Codex eine eigene Ansicht behält; diese Seite dient nur als Kapitelnavigation der Desktop-App und fokussiert die drei Grundaktionen Aufgabe eingeben, Änderungen sehen und freigeben.  
+**Zuletzt geprüft:** 2026-07-26

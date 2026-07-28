@@ -1,86 +1,86 @@
 ---
-title: Test-driven work
-description: Define or add failing tests first, then drive implementation—objective acceptance for Codex changes.
+title: Testgetriebene Arbeit
+description: Zuerst fehlschlagende Tests definieren oder ergänzen, dann die Implementierung treiben — damit Codex-Änderungen objektiv abnehmbar sind.
 locale: de
-source_locale: en
-source_revision: fa65f8d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Test-driven work** (TDD or "tests first") means making tests fail first, then minimal implementation to pass. It fits repos with test infrastructure and links directly to cases like [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Testgetriebene Arbeit** (TDD oder „Tests zuerst“) lässt Tests zuerst fehlschlagen und bringt sie dann mit minimaler Implementierung zum Bestehen. Geeignet für Codebasen mit vorhandener Testinfrastruktur und eng verwandt mit Szenarien wie [Bug-Fix mit Überprüfung](/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
-## What's covered
+## Schwerpunkte dieser Seite
 
-- When to require "write/run tests first"
-- How to prompt Codex not to skip test steps
-- Rollback strategy when tests fail
+- Wann «zuerst Tests schreiben/ausführen» verlangt werden soll
+- Wie man Codex daran hindert, Testschritte zu überspringen
+- Rückzugstrategie bei Testfehlschlägen
 
-## Who it's for
+## Für wen geeignet
 
-- Repos with unit/integration tests
-- Regression bugs, API behavior changes, refactors
+- Repositories mit Unit-/Integrationstests
+- Regressions-Bugs, API-Verhaltensänderungen, Refactorings
 
-Poor fits: prototypes without tests, one-off copy on marketing sites. Use [EPXV](/cases/workflows/explore-plan-execute-verify/) with manual verification instead.
+Ungeeignet: Prototypen ohne Testinfrastruktur, einmalige Änderungen an reinen Textseiten. Dafür eher [EPXV](/cases/workflows/explore-plan-execute-verify/) mit manueller Überprüfung.
 
-## Minimum viable approach
+## Minimal brauchbares Vorgehen
 
 ```text
-1. Write a failing test for expected behavior (or point to an existing failure)
-2. Implement only the minimum code to pass that test
-3. Run the related test suite, then the full suite
-4. Do not delete assertions or mock away real logic just to pass
+1. Für das gewünschte Verhalten einen fehlschlagenden Test schreiben (oder den vorhandenen Fehlschlag nennen)
+2. Nur den minimalen Code implementieren, der diesen Test grün macht
+3. Relevante Testsuite, dann Vollsuite ausführen
+4. Assertions nicht löschen und echte Logik nicht wegmocken, nur um Tests zu bestehen
 ```
 
 Prompt:
 
 ```text
-TDD: first write a failing test for "empty input returns []" in @src/foo.ts;
-run tests to confirm failure, then change implementation; run only the related test file each step.
+Nach TDD: Zuerst einen fehlschlagenden Test für «leere Eingabe gibt [] zurück» in @src/foo.ts schreiben;
+Test ausführen und Fehlschlag bestätigen, danach Implementierung ändern; pro Schritt nur die relevanten Testdateien.
 ```
 
-## Recommended workflow
+## Empfohlener Workflow
 
-| Phase | Output |
+| Phase | Artefakt |
 |---|---|
-| Red | Failing test + explanation of failure |
-| Green | Minimal implementation + passing tests |
-| Refactor | Clean up under test protection (optional separate step) |
+| Rot | Fehlschlagender Test + Erklärung der Ursache |
+| Grün | Minimale Implementierung + Tests bestanden |
+| Refactor | Code unter Testschutz aufräumen (optional eigener Schritt) |
 
-Combine with [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/): read failing assertions and stack first, then change implementation.
+Kombinieren mit [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/): zuerst fehlschlagende Assertion und Stack lesen, dann Implementierung anfassen.
 
-## Common mistakes
+## Häufige Fehler
 
-- Claiming done without running tests
-- Changing tests to match wrong implementation
-- Running one test but claiming full green
-- Full slow E2E on every iteration—use `-t` or file-level filters
+- Fertig melden, ohne Tests gelaufen zu haben
+- Tests anpassen, damit eine falsche Implementierung besteht
+- Nur einen Test laufen lassen und «alles grün» behaupten
+- Bei langsamen E2E-Suites immer Volläufe — `-t` oder Dateifilter nutzen
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Test commands must stay within [command rules](/guide/customization/rules/command-rules/)
-- Integration tests hitting production APIs must be forbidden in spec or use mocks
+- Testbefehle müssen im Rahmen der [Befehlsregeln](/guide/customization/rules/command-rules/) liegen
+- Integrationstests, die Produktions-APIs treffen, müssen in der Spezifikation verboten oder auf Mocks umgestellt werden
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Evidence of fail→pass tests (logs or CI)
-- [ ] Full or agreed-scope test suite passes
-- [ ] Diff has no unrelated test deletions
-- [ ] Aligned with [Define done](/prompts/define-done/)
+- [ ] Evidenz für Fehlschlag→Bestehen (Logs oder CI)
+- [ ] Vollsuite oder vereinbarter Umfang bestanden
+- [ ] Diff enthält keine unrelated Testlöschungen
+- [ ] Konsistent mit [Done definieren](/prompts/define-done/)
 
-## Related chapters
+## Verwandte Kapitel
 
-- [Run tests](/guide/quality/run-tests/)
-- [Case: Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Tests ausführen](/guide/quality/run-tests/)
+- [Fall: Bug-Fix mit Überprüfung](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## References
+## Referenzquellen
 
-- stormzhang testing and quality chapters
-- CodexGuide developer workflows
+- stormzhang Kapitel zu Tests und Qualität
+- CodexGuide Entwickler-Workflows
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified run tests, define done, fix-a-bug-with-verification, and command rules chapters; this page focuses on the stable test pattern of fail first, minimal implementation to pass.
+**Geeignete Produkte:** CLI / IDE  
+**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Tests ausführen, Definition of Done, Bug-Fix mit Überprüfung und Befehlsregeln. Der Inhalt fokussiert die stabile Testmethode „zuerst fehlschlagen lassen, dann mit minimaler Implementierung grün machen“.  
+**Zuletzt geprüft:** 2026-07-26

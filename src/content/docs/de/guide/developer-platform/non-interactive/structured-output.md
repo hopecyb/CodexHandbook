@@ -1,129 +1,131 @@
 ---
-title: Structured Output
-description: Make exec produce machine-parseable results for downstream steps, dashboards, and gates.
+title: Strukturierte Ausgabe
+description: 'exec so gestalten, dass Ergebnisse maschinenlesbar sind — für Folgeschritte, Dashboards und Gates.'
 locale: de
-source_locale: en
-source_revision: 6a3b81e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many first automations assume Codex will return “reasonable-looking prose.” Fine for humans; awkward for scripts.
+Beim ersten Automatisieren lassen viele Codex „einen vernünftig klingenden Text“ ausgeben. Für Menschen ok — für Skripte nicht.
 
-Structured output solves a direct problem: Codex returns results in a format you specify.
+Strukturierte Ausgabe löst ein klares Problem: Codex soll im von Ihnen festgelegten Format antworten.
 
-If a non-interactive task only emits free text, downstream steps struggle to judge pass/fail, issue count, or severity. Structured output makes results easier for machines to consume.
+Ohne strukturierte Ausgabe bei nicht-interaktiven Aufgaben ist freier Text für Downstream schwer: „bestanden oder nicht“, „wie viele Findings“, „welche Schwere“. Strukturierte Ausgabe macht Ergebnisse für Maschinen weiterverarbeitbar.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- When to require JSON / Markdown tables / fixed fields
-- Defining schema in prompts
-- Fallback when parsing fails
+- Wann JSON / Markdown-Tabelle / feste Felder verlangen
+- Wie Schema im Prompt definiert wird
+- Fallback bei Parse-Fehlern
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### Structured output is for the next step
+### Strukturierte Ausgabe dient dem nächsten Schritt
 
-JSON and schema are not engineering pedantry—they matter when scripts judge outcomes, bots post comments, or dashboards display results. You need stable shape, not guesswork each run.
+JSON und Schema klingen nach Ingenieurspedanterie.
 
-### Stable format ≠ reliable conclusions
+Praktisch: Wenn Folgeskripte Erfolg/Fehler entscheiden, Bots kommentieren oder Dashboards anzeigen, brauchen Sie stabile Formate — nicht jedes Mal Rätselraten.
 
-Structured output guarantees shape, not correct understanding.
+### Stabile Form ≠ zuverlässige Schlussfolgerung
 
-It solves the output interface—not task definition and verification.
+Strukturierte Ausgabe garantiert nur „sieht aus wie gefordert“, nicht dass die Aufgabe richtig verstanden wurde.
 
-## A simple split
+Sie löst die Schnittstelle — ersetzt weder Aufgabendefinition noch Ergebnis-Überprüfung.
 
-- Free text: for humans
-- Structured output: for programs
+## Direkte Unterscheidung
 
-If the next step is `jq`, scripts, dashboards, gate rules, or auto-comment bots, do not rely on free-form natural language alone.
+- Freier Text: für Menschen
+- Strukturierte Ausgabe: für Programme
 
-## Minimal approach
+Wenn als Nächstes `jq`, Skripte, Dashboards, Gate-Regeln oder Kommentar-Bots drankommen, reicht freie Sprache nicht.
 
-Fix format requirements at the end of the prompt:
+## Minimal nutzbares Vorgehen
+
+Am Prompt-Ende Format festnageln:
 
 ```text
-…(task body)…
+…(Aufgabenkörper)…
 
-Output requirements:
-- Emit only one JSON object, no markdown code fences
-- Fields: {"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
-- If no issues, findings is an empty array
+Ausgabeanforderung:
+- Nur ein JSON-Objekt, keine Markdown-Codefences
+- Felder: {"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
+- Ohne Probleme: findings als leeres Array
 ```
 
-Shell parsing (sketch):
+Shell-Parsing (Skizze):
 
 ```bash
 result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
-## Common pitfalls
+## Typische Fallstricke
 
-### 1. “Output JSON” but not “only JSON”
+### 1. Nur „gib JSON aus“, nicht „nur JSON“
 
-A preamble before the JSON breaks parsers.
+Das Modell erklärt erst, dann JSON — Parsing bricht.
 
-### 2. Field names change day to day
+### 2. Heute ein Feldname, morgen ein anderer
 
-Once scripts depend on fields, treat schema as an interface.
+Hängt ein Skript an einem Feld, ist das Schema eine Schnittstelle — nicht freihändig ändern.
 
-### 3. Expecting structure to fix vague tasks
+### 3. Strukturierte Ausgabe soll alle Unklarheiten lösen
 
-It stabilizes format. If the task is unclear, JSON will just be consistently wrong.
+Sie löst „Format stabil“. Ist die Aufgabe unklar, liefert JSON nur stabil verwirrte Ergebnisse.
 
-## Recommended workflow
+## Empfohlener Workflow
 
 ```text
-Define schema (version v1)
-    → prompt references schema file @schemas/review-output.json
-    → exec run
-    → jq / custom validator
-    → exit 1 on failure
+Schema definieren (Version v1)
+    → Prompt referenziert Schema-Datei @schemas/review-output.json
+    → exec ausführen
+    → jq / eigener Validator prüfen
+    → bei Fehlschlag exit 1
 ```
 
-For large output, require a file path field; Agent writes to `artifacts/`, CI uploads artifact.
+Bei großer Ausgabe Dateipfad-Feld verlangen; Agent schreibt nach `artifacts/`, CI lädt Artifact hoch.
 
-## How to decide
+## Wann strukturieren
 
-If the next consumer is a program, prefer structure.  
-If the result is mainly for human reading and discussion, free text is often fine.
+Wenn das Ergebnis vom „nächsten Programm“ weiterverarbeitet wird — strukturieren.  
+Wenn Menschen lesen und diskutieren — freier Text ist oft natürlicher.
 
-Whenever results feed another program, ask Codex to return agreed fields consistently.
+Sobald Programme folgen, soll Codex vereinbarte Felder stabil liefern.
 
-## Compared to SDK
+## Vergleich mit SDK
 
-| | CLI + JSON prompt | SDK |
+| | CLI + JSON-Prompt | SDK |
 |---|---|---|
-| Integration cost | Low | Medium |
-| Type safety | Convention + validation | SDK types |
-| Best for | CI scripts | Multi-tenant services |
+| Integrationsaufwand | niedrig | mittel |
+| Typsicherheit | Konvention + Validierung | SDK-Typen möglich |
+| Geeignet | CI-Skripte | Multi-Tenant-Dienste |
 
-See [SDK overview](/guide/developer-platform/sdk-overview/).
+Siehe [SDK-Überblick](/guide/developer-platform/sdk-overview/).
 
-## Common mistakes
+## Häufige Fehler
 
-- Model adds explanation text; JSON parse fails—emphasize “JSON only” in prompt
-- Schema change without version bump; old CI mis-parses
-- Secrets in JSON fields logged
-- No explicit exit behavior on parse failure
+- Erklärungstext um JSON → Parse-Fehler — im Prompt „nur JSON“ betonen
+- Schema geändert ohne Versionsbump → alte CI falsch parst
+- Secrets in JSON-Feldern in Logs zurückspielen
+- Kein klares Exit-Verhalten bei Parse-Fehlern
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Schema file or documented fields exist
-- [ ] CI fails explicitly on parse failure
-- [ ] Sample output in `fixtures/` for regression
-- [ ] Aligned with [exit codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/) strategy
+- [ ] Schema-Datei oder dokumentierte Felder
+- [ ] CI schlägt bei Parse-Fehler explizit fehl
+- [ ] Beispielausgaben in `fixtures/` für Regression
+- [ ] Strategie konsistent mit [Exit-Codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## Reference sources
+## Quellen
 
-- OpenAI structured outputs general practice (conceptual alignment)
-- KimYx0207 automation output chapter
+- Allgemeine Praxis zu OpenAI Structured Outputs (Konzeptangleichung)
+- KimYx0207 Automatisierungs-Ausgabe-Kapitel
 
 ---
 
 **Status:** verified  
-**Products:** CLI / API  
-**Verification basis:** OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / API  
+**Prüfgrundlage:** OpenAI-API-Modell-/Vergleichsdokumentation listet weiterhin `Structured outputs`; Inhalt begrenzt auf die allgemeine Praxis „stabile Ausgabeschnittstelle für nicht-interaktive Aufgaben“; JSON-Schema, Validierung und Fallback sind Engineering-Muster.  
+**Zuletzt geprüft:** 2026-07-26

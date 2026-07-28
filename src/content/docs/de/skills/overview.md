@@ -1,126 +1,126 @@
 ---
-title: Skills overview
-description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
+title: Skills-Überblick
+description: Mit SKILL.md wiederverwendbare Workflows an Codex vermitteln — einmal schreiben, bei Bedarf aufrufen.
 locale: de
-source_locale: en
-source_revision: 9d68601
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
+Ein **Skill** ist ein Verzeichnis mit `SKILL.md` (optional Skripte und Referenzen), das einen festen Ablauf zu einer Fähigkeit packt, die Codex **automatisch oder explizit** aufrufen kann.
 
-It fits workflows that have already repeated and will likely repeat again.
+Er eignet sich für Methoden, die schon wiederholt vorkamen und weiter wiederverwendet werden sollen.
 
-## Core concepts
+## Kernkonzepte
 
-### How it differs from slash commands
+### Unterschied zu Slash-Befehlen
 
-| | Slash command | Skill |
+| | Slash-Befehl | Skill |
 |---|---|---|
-| Trigger | You type `/xxx` | You can call with `$name`, or the model matches by description |
-| Context | Usually expands immediately | **Progressive disclosure**: only name + description by default; full text loads when selected |
-| Best for | Fixed, high-frequency entries you remember | Long flows, documentation-heavy work, letting the model decide when to use it |
+| Auslöser | Du tippst `/xxx` | Du rufst `$name` auf, oder das Modell matched die Beschreibung |
+| Kontext | Wird in der Regel sofort expandiert | **Progressive Disclosure**: sonst nur Name + Beschreibung, vollständiger Text erst bei Auswahl |
+| Geeignet für | Feste, häufige Einstiege, die du dir merkst | Lange Abläufe mit Doku, bei denen das Modell selbst entscheiden soll, wann sie passen |
 
-### Progressive disclosure
+### Progressive Disclosure
 
-At startup, Codex only sees each Skill's **name, description, and path**; it loads the full `SKILL.md` only when it decides to use the Skill. So the body can include detailed checklists without filling the context window.
+Beim Start sieht Codex nur **name, description und Pfad** jedes Skills; die vollständige `SKILL.md` wird erst geladen, wenn der Skill genutzt wird. Deshalb kannst du ausführliche Checklisten schreiben, ohne den Kontext zu füllen.
 
-Note: the Skill list has an **initial character budget** (a small fraction of context). Put core trigger scenarios at the **front** of `description` so truncation does not break matching.
+Hinweis: Die Skill-Liste hat ein **initiales Zeichenbudget** (ein kleiner Teil des Kontexts). Schreib die zentralen Auslöseszenarien in der `description` **ganz nach vorne**, sonst scheitert das Matching nach dem Abschneiden.
 
-## Skill directory structure
+## Skill-Verzeichnisstruktur
 
 ```text
 my-skill/
-├── SKILL.md          # Required
-├── scripts/          # Optional: deterministic steps
-└── references/       # Optional: long reference docs
+├── SKILL.md          # Pflicht
+├── scripts/          # Optional: deterministische Schritte
+└── references/       # Optional: lange Referenzdokumente
 ```
 
-Minimal `SKILL.md` example:
+Minimales `SKILL.md`-Beispiel:
 
 ```md
 ---
 name: pr-review
-description: Review the diff of the current branch against main; flag risks and test gaps. Use when the user asks for review, PR review, or pre-merge checks.
+description: "Prüft den Diff des aktuellen Branchs gegenüber main, markiert Risiken und Testlücken. Nutzen, wenn der Nutzer Review, PR-Prüfung oder Checks vor dem Merge verlangt."
 ---
 
-## Steps
-1. Get the diff against main
-2. Classify by file: logic errors, security, performance, tests
-3. Output a tiered list: blocking / suggestion / nit
-4. Do not auto push or merge
+## Schritte
+1. Diff gegenüber main holen
+2. Nach Dateien klassifizieren: Logikfehler, Sicherheit, Performance, Tests
+3. Gestufte Liste ausgeben: Blocker / Empfehlung / Nit
+4. Nicht automatisch pushen oder mergen
 ```
 
-## Where to store Skills
+## Speicherorte
 
-| Type | Typical location | Notes |
+| Typ | Typischer Ort | Hinweis |
 |---|---|---|
-| Project Skill | `.agents/skills/<name>/` | Lives in the repo; shared by the team |
-| User Skill | User skills directory (see official docs) | Personal, cross-project |
-| Official curated | Installed via installer | Path managed by installer; do not mix with hand-written dirs |
+| Projekt-Skill | `.agents/skills/<name>/` | Folgt dem Repo, Team-Sharing |
+| Nutzer-Skill | Nutzer-Skills-Verzeichnis (siehe offizielle Doku) | Persönlich, projektübergreifend |
+| Offizielle Auswahl | Über Installer | Pfad vom Installer verwaltet; nicht mit handgeschriebenen Verzeichnissen vermischen |
 
-**Do not** copy outdated tutorial paths or fictional `trigger:` fields; follow the [official Skills documentation](https://developers.openai.com/codex/skills).
+**Nicht** veraltete Tutorial-Pfade oder fiktive `trigger:`-Felder übernehmen; maßgeblich ist die [offizielle Skills-Dokumentation](https://developers.openai.com/codex/skills).
 
-## How Skills are triggered
+## Auslösearten
 
-1. **Explicit**: In supported environments, call with `$skill-name` (name matches frontmatter `name`)
-2. **Implicit**: The model judges whether the task fits `description` semantically
+1. **Explizit**: In unterstützten Umgebungen mit `$skill-name` aufrufen (Name = Frontmatter-`name`)
+2. **Implizit**: Das Modell entscheidet anhand der `description`-Semantik, ob die Aufgabe passt
 
-Tips for writing `description`:
+Tipps für gute `description`-Texte:
 
-- State clearly when to use and when not to use
-- Include keywords users might say (review, release, changelog)
-- Avoid vague phrases like "help the user write code"
+- Klar machen, „wann nutzen“ und „wann nicht“
+- Schlüsselwörter einbauen, die Nutzer sagen könnten (review, Release, changelog)
+- Leere Phrasen wie „hilft dem Nutzer beim Codieren“ vermeiden
 
-## Recommended workflow
+## Empfohlener Workflow
 
-1. Notice a workflow has repeated several times
-2. Draft `SKILL.md` with plain-text steps first
-3. Try `$name` and implicit matching on a small task
-4. Add `scripts/` when you need determinism
-5. Commit to `.agents/skills/` and open a PR for the team
+1. Merken, dass ein Ablauf schon mehrmals wiederholt wurde
+2. `SKILL.md` entwerfen — zuerst reine Textschritte
+3. An kleinen Aufgaben `$name` und implizites Matching testen
+4. Bei Bedarf Determinismus mit `scripts/` ergänzen
+5. Nach `.agents/skills/` committen und als PR ans Team geben
 
-Hands-on practice: [Create your first Skill](/skills/create-your-first-skill/)
+Übung: [Ersten Skill erstellen](/skills/create-your-first-skill/)
 
-## Common questions
+## Häufige Verwirrung
 
-### 1. How is a Skill different from a prompt?
+### 1. Worin unterscheiden sich Skill und Prompt?
 
-- **Prompt**: What you say for this task only
-- **Skill**: A reusable workflow for similar tasks later
+- **Prompt**: Was du für diese Aufgabe gerade sagst
+- **Skill**: Ein Ablauf, den ähnliche Aufgaben später wiederverwenden können
 
-### 2. Do I need to learn to write Skills from day one?
+### 2. Muss ich Skills gleich am Anfang lernen?
 
-No. Get ordinary tasks right first; when a flow repeats many times, consider turning it into a Skill.
+Nein. Zuerst normale Aufgaben klar formulieren; erst wenn ein Ablauf oft wiederholt wird, als Skill absichern.
 
-### 3. Is it the same as a slash command?
+### 3. Sind Skills und Slash-Befehle dasselbe?
 
-Not exactly. Slash commands are more like shortcuts; Skills are workflow packages with full instructions and steps.
+Nicht ganz. Slash-Befehle sind eher Kurz-Einstiege; Skills eher Arbeitspakete mit voller Anleitung und Ablauf.
 
-Skills are not required to get started—they shine when you organize flows that keep coming back.
+Skills sind kein Muss zum Start — sie eignen sich, um wiederkehrende Abläufe zu ordnen.
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Scripts and MCP calls inside a Skill inherit the current approval policy
-- Do not hard-code secrets in Skills; use environment variables or MCP auth
-- Teams should review third-party Skills like dependencies
+- Skripte und MCP-Aufrufe in Skills erben die aktuelle Freigabe-Politik
+- Keine Secrets im Skill hardcoden; Umgebungsvariablen oder MCP-Auth nutzen
+- Teams sollten Drittanbieter-Skills wie Abhängigkeiten prüfen
 
-## Common mistakes
+## Häufige Fehler
 
-- `description` too long or too broad—never triggers or triggers wrongly
-- One Skill cramming ten unrelated flows
-- Replacing clear steps with scripts that are hard to maintain
+- `description` zu lang oder zu vage → nie oder falsch ausgelöst
+- Einen Skill mit zehn unzusammenhängenden Abläufen überladen
+- Skripte statt klar beschreibbarer Schritte → schwer wartbar
 
-## References
+## Quellen
 
-- OpenAI Codex Skills documentation
+- OpenAI Codex Skills-Dokumentation
 - KimYx0207 CX-06; stormzhang `22-skills.md`
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Consistent with current Codex runtime Skill loading (`SKILL.md`, on-demand full skill file) and OpenAI Help "Skills in ChatGPT" defining Skills as reusable workflows; this page focuses on concepts and directory layout, not volatile UI.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE  
+**Prüfgrundlage:** Die aktuellen Codex-Laufzeitregeln zum Laden von Skills (`SKILL.md`, vollständige Skill-Datei bei Bedarf) und die OpenAI-Help-Definition von Skills als wiederverwendbare Workflows in „Skills in ChatGPT“ stimmen überein; diese Seite fokussiert Konzepte und Verzeichnisorganisation und hängt nicht an volatiler UI.  
+**Zuletzt geprüft:** 2026-07-26

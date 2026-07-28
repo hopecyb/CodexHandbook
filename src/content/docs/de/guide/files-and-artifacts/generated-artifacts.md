@@ -1,112 +1,119 @@
 ---
-title: Verifying Generated Artifacts
-description: Systematically accept files, reports, and build outputs that Codex creates or exports.
+title: Generierte Artefakte abnehmen
+description: "Von Codex neu angelegte oder exportierte Dateien, Reports und Build-Artefakte systematisch abnehmen."
 locale: de
-source_locale: en
-source_revision: af56e40
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When an Agent finishes, it may create reports, scripts, static sites, test data, and other **generated artifacts**. They may not go through your usual code review path—so they need their own verification habit.
+Beim Aufgabenabschluss kann der Agent Reports, Skripte, Static Sites, Testdaten usw. als **Artefakte** neu anlegen. Sie laufen oft nicht über Ihren gewohnten Code-Review-Pfad — eigene Abnahmegewohnheit nötig.
 
-New files from Codex are not automatically ready to use.
+Neu generiert heißt nicht automatisch einsatzbereit.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- How verifying generated artifacts differs from “editing existing code”
-- Checklists
-- When to reject or redo
+- Abnahmeunterschied zu „bestehenden Code ändern“
+- Checkliste
+- Wann ablehnen und neu verlangen
 
-## Artifact types
+## Artefakttypen
 
-| Type | Verification focus |
+| Typ | Abnahme-Fokus |
 |---|---|
-| Scripts `.sh` `.py` | Executable, safe, idempotent |
-| Reports `.md` `.html` | Factual accuracy, valid links |
-| Build output `dist/` | Should it be gitignored? |
-| Test fixtures | No real PII |
-| Config templates | No default weak passwords |
+| Skripte `.sh` `.py` | ausführbar, harmlos, idempotent |
+| Reports `.md` `.html` | Fakten korrekt, Links gültig |
+| Build-Output `dist/` | ob gitignore |
+| Test-Fixtures | kein echtes PII |
+| Config-Templates | keine Default-Schwachpasswörter |
 
-## What “generated artifact” means here
+## Was „Artefakt“ hier meint
 
-- Files Codex newly wrote
-- Reports it exported
-- Pages, directories, or packages it built
+- neu geschriebene Dateien
+- exportierte Reports
+- gebaute Seiten, Verzeichnisse oder Pakete
 
-Unlike “changed a few lines of existing code,” these are easy to overlook.
+Anders als „ein paar Zeilen bestehenden Code“ — Inhalt wird leichter übersehen.
 
-## Verification flow
+## Abnahmeprozess
 
 ```text
-1. Open the artifact (do not rely on Agent summary alone)
-2. Compare to “definition of done” in the task
-3. Run related tests or preview commands
-4. Check path, permissions, size
-5. Decide: accept / partial edit / discard and redo
+1. Artefakt öffnen (nicht nur Agent-Textzusammenfassung)
+2. Gegen «Definition of Done» der Aufgabe
+3. Relevante Tests oder Preview-Befehle
+4. Pfad, Berechtigungen, Volumen prüfen
+5. Entscheiden: annehmen / lokal ändern / verwerfen und neu
 ```
 
-Methods: [Verify artifacts](/guide/quality/verify-artifacts/), [Definition of done](/guide/quality/definition-of-done/)
+Methoden: [Artefakte überprüfen](/guide/quality/verify-artifacts/), [Definition of Done](/guide/quality/definition-of-done/)
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. “Done” in chat still requires opening files
+### 1. „Fertig“ gesagt — trotzdem echtes Artefakt ansehen
 
-Summaries say what the Agent *thought* it did—not what actually landed on disk.
+Zusammenfassung sagt, was der Agent *denkt* getan zu haben — ersetzt nicht das Öffnen.
 
-### 2. New files are not automatically safer than edits
+### 2. Neue Datei ≠ sicherer als Änderung
 
-They can still have wrong content, extra dependencies, leaked info, or huge files that should not be committed.
+Neue Dateien können ebenso:
 
-### 3. “Runs locally” ≠ worth committing
+- falschen Inhalt
+- überflüssige Dependencies
+- Leaks
+- zu große Dateien, die nicht ins Repo gehören
 
-Some outputs are for local temp use only—not Git.
+### 3. Läuft ≠ wert, zu committen
 
-## Relationship to Git
+Manches Artefakt nur lokal temporär — nicht für Git.
 
-- Clarify what **should be committed** vs `.gitignore`
-- Avoid megabytes of build cache in one PR
-- Large artifacts: CI artifact or external storage
+## Bezug zu Git
 
-## Practical verification order
+- Klar: welche Artefakte **committen**, welche `.gitignore`
+- Keine Megabyte Build-Caches in einem PR
+- Große Artefakte: CI Artifact oder externer Speicher
 
-1. Confirm what was generated
-2. Open the most important artifact
-3. Check it is in allowed directories
-4. Decide if it belongs in the repo
-5. Accept, edit, or redo
+## Übliche Abnahmereihenfolge
 
-## Untrusted artifacts
+Bei frischen Artefakten:
 
-For untrusted repos or externally driven tasks:
+1. Welche Dateien entstanden
+2. Das kritischste öffnen
+3. Liegt es im erlaubten Verzeichnis
+4. Soll es ins Repo
+5. Annehmen, ändern oder neu
 
-- Read scripts before executing
-- Watch for `curl | bash`, obfuscated payloads
-- Preview in sandbox or container
+## Untrusted Artefakte
 
-Generated does not mean verified—open, validate, and know whether it should be committed.
+Bei untrusted Repos oder extern datengetriebenen Aufgaben:
 
-## Common mistakes
+- Skript zuerst lesen, dann ausführen
+- Vorsicht vor `curl | bash`, obfuscated Payloads
+- Preview in Sandbox oder Container
 
-- Bullet summary only; never open files
-- Commit one-off debug output to main
-- HTML reports with tracking pixels or unreviewed external scripts
+Artefakte nicht nur als „schon generiert“ werten — mindestens öffnen, prüfen, wissen ob committen.
 
-## Acceptance checklist
+## Häufige Fehler
 
-- [ ] Every new file path is within allowed scope
-- [ ] Main content opened and skimmed
-- [ ] Automated checks (lint/test/link check) run
-- [ ] No secrets, no stray generated directories
+- Nur Agent-Bullet-Summary, Datei nicht öffnen
+- Einmalige Debug-Ausgabe nach main committen
+- HTML-Reports mit Tracking-Pixel oder ungeprüften Fremdskripten
 
-## Reference sources
+## Abnahmeliste
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- external-source-integration case acceptance requirements
+- [ ] Jeder neue Dateipfad im erlaubten Bereich
+- [ ] Hauptinhalt geöffnet und überflogen
+- [ ] Automation (lint/test/link check) gelaufen
+- [ ] Keine Secrets, keine überflüssigen Generierungsverzeichnisse
+
+## Quellen
+
+- [Unsicherheit handhaben](/guide/quality/handle-uncertainty/)
+- Abnahmeanforderungen aus external-source-integration-Fällen
 
 ---
 
 **Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified verify-artifacts, definition-of-done, handle-uncertainty, and file-artifact pages; focuses on stable method: generated ≠ deliverable, must open and verify, clarify commit policy.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Artefaktprüfung, Definition of Done, Unsicherheit und Datei-Artefakten; Fokus „Generieren ≠ lieferbar, öffnen und abnehmen, commit-Klarheit“.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,72 +1,75 @@
 ---
-title: Change template
-description: Bounded iteration on existing work.
+title: Ändern-Vorlage
+description: Begrenzte Iteration auf Bestehendem.
 locale: de
-source_locale: en
-source_revision: abd9706
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Change template
+# Ändern-Vorlage
 
-For "change a little on what already exists."
+Diese Vorlage passt zu „auf Bestehendem etwas ändern“.
 
-Change tasks should state edit boundaries first.
+Bei Änderungsaufgaben zuerst die Änderungsgrenzen klar machen.
 
-## Template
+## Vorlage
 
 ```text
-Goal: On 【existing feature/file】, complete 【specific change】.
-Context: 【why changing, blast radius】
-Inputs: @【relevant file paths】
+Ziel: An 【bestehender Funktion/Datei】 【konkrete Änderung】 umsetzen.
+Hintergrund: 【warum, Impact-Bereich】
+Eingaben: @【relevante Dateipfade】
 Constraints:
-- Keep 【API/style/behavior】 unchanged unless I explicitly allow
-- Minimal diff; no unrelated refactors
-- After each step, run only 【relevant tests】
-Acceptance:
-- 【behavior change description】
-- Related tests pass
-- Diff touches only necessary files
+- 【API/Stil/Verhalten】 unverändert, außer ich erlaube es ausdrücklich
+- Minimaler Diff, kein irrelevantes Refactoring
+- Nach jedem Schritt nur 【relevante Tests】
+Abnahme:
+- 【Beschreibung der Verhaltensänderung】
+- relevante Tests bestanden
+- Diff betrifft nur nötige Dateien
 ```
 
-## When to use this template
+## Wann diese Vorlage passt
 
-- Edit existing page or component
-- Fix a specific bug
-- Tweak copy, interaction, or config
-- Emphasize "only this part—no drive-by refactors"
+- bestehende Seite/Komponente ändern
+- klaren Bug fixen
+- Text, Interaktion oder Config fein justieren
+- betonen: „nur diesen Block, kein Nebenbei-Refactor“
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Change is simpler than create, so write less
+### 1. Ändern ist einfacher als Erstellen — also weniger schreiben
 
-Change tasks hit old code, old constraints, and hidden dependencies—boundaries matter more.
+Änderungen treffen Altcode, alte Constraints und versteckte Abhängigkeiten — Grenzen sind wichtiger.
 
-### 2. "Minimal diff" means fewer lines
+### 2. „Minimaler Diff“ = ein paar Zeilen weniger
 
-Minimal diff means **only what directly serves the goal**.
+„Minimaler Diff“ heißt: **nur das, was direkt zum Ziel gehört**.
 
-### 3. "Keep existing behavior" is enough
+### 3. „Bestehendes Verhalten behalten“ reicht allein
 
-Also state what counts as "existing behavior."
+Besser nachlegen: was genau als „bestehendes Verhalten“ zählt.
 
-## What this template prevents
+## Wogegen die Vorlage schützt
 
-- changing too much
-- changing the wrong thing
-- editing layers you didn't authorize
+Vor allem:
 
-Change prompts need "what to change" and "where changes are allowed."
+- zu viel geändert
+- falsch geändert
+- Schichten ohne Freigabe angefasst
 
-## Related
+Neben „was ändern“ muss klar sein: „nur bis wohin“.
 
-- [Define done](/prompts/define-done/)
-- [Constraints and boundaries](/prompts/constraints-and-boundaries/)
+## Verwandt
+
+- [Fertigstellungsstandard definieren](/prompts/define-done/)
+- [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a change-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Änderungsaufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

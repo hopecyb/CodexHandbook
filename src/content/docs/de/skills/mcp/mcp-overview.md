@@ -1,133 +1,133 @@
 ---
-title: MCP overview
-description: Model Context Protocol—let Codex connect safely to external tools and data sources.
+title: MCP-Überblick
+description: Model Context Protocol — Codex sicher mit externen Werkzeugen und Datenquellen verbinden.
 locale: de
-source_locale: en
-source_revision: c63cc21
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-MCP is a standard way for Codex to connect to external tools and data sources.
+MCP ist ein Standardanschluss für externe Werkzeuge und Datenquellen.
 
-If you want Codex to query Jira, read a knowledge base, access internal APIs, or operate a controlled tool, you need a mechanism for **how to connect, what can be called, and how permissions are managed**. **MCP (Model Context Protocol)** addresses that.
+Soll Codex Jira abfragen, Wissensbasen lesen, interne APIs nutzen oder kontrollierte Werkzeuge bedienen, braucht es „wie verbinden, was aufrufbar, wie Berechtigungen steuern“. **MCP (Model Context Protocol)** adressiert genau das.
 
-## Contents
+## Inhalt
 
-- What problem MCP solves: Codex cannot reach real systems alone
-- Division of labor with Skill and Plugin
-- Why MCP must be part of security governance
+- MCP löst „Codex erreicht echte Systeme nicht“
+- Teilung mit Skill und Plugin
+- Warum MCP in Sicherheits-Governance gehört
 
-## What it is not
+## Was es nicht ist
 
-MCP is not:
+MCP ist nicht:
 
-- Pasting account passwords directly to Codex
-- Letting the model connect however it wants
-- Making any third-party service implicitly trusted
+- Konten/Passwörter direkt an Codex kleben
+- Das Modell „verbindet, wie es will“
+- Jeder Drittanbieterdienst standardmäßig vertrauenswürdig
 
-It is a normalized wiring path so connecting external systems is more controllable and auditable.
+Es ist eine normierte Anschlussweise — steuerbarer und auditierbarer.
 
-## Core concepts
+## Kernkonzepte
 
 ```text
-Codex  ←→  MCP client  ←→  MCP server  ←→  External system
+Codex  ←→  MCP-Client  ←→  MCP-Server  ←→  externes System
 ```
 
-| Component | Role |
+| Komponente | Rolle |
 |---|---|
-| MCP server | Exposes a set of tools (e.g. `search_issues`, `get_user`) |
-| Configuration | Tells Codex how to start/connect to the server |
-| Tool calls | Model picks tools in a task; you often approve |
+| MCP-Server | Exponiert Werkzeuge (z. B. `search_issues`, `get_user`) |
+| Konfiguration | Wie Codex den Server startet/verbindet |
+| Werkzeugaufruf | Modell wählt Werkzeuge in der Aufgabe — oft mit deiner Freigabe |
 
-MCP does **not** provide business logic. Your server implements read/write rules; Codex picks which tool to use in the task.
+MCP liefert **keine** Geschäftslogik. Der Server implementiert Lese-/Schreibregeln; Codex wählt in der Aufgabe das Werkzeug.
 
-## Where MCP sits
+## Position von MCP
 
-Skill is more like an "operator manual"; MCP handles "tool interfaces."
+Skill ≈ Bedienungsanleitung; MCP ≈ Werkzeugschnittstelle.
 
-- Skill explains steps
-- MCP hands certain external tools to Codex
+- Skill erklärt Schritte
+- MCP reicht externe Werkzeuge an Codex
 
-They often appear together:  
-Skill defines the flow; a step in the flow calls an MCP tool.
+Oft zusammen:  
+Skill definiert den Ablauf; ein Schritt ruft ein MCP-Werkzeug auf.
 
-## Relationship to Skill and Plugin
+## Bezug zu Skill und Plugin
 
 | | MCP | Skill | Plugin |
 |---|---|---|---|
-| Nature | Tool protocol | Workflow instructions | Distribution package |
-| Typical content | API wrappers | Steps and standards | Skill + MCP + app connectors |
-| Maintainer | You or third-party server | You or team | Publisher |
+| Wesen | Werkzeugprotokoll | Workflow-Anleitung | Verteilungspaket |
+| Typischer Inhalt | API-Kapselung | Schritte und Normen | Skill + MCP + App-Connector |
+| Wer pflegt | du oder Drittanbieter-Server | du oder Team | Publisher |
 
-Common combo: **Skill defines flow**, a step **calls MCP tools** to fetch ticket lists.
+Häufig: **Skill definiert Ablauf**, Schritt **ruft MCP-Werkzeug** für Ticketliste.
 
-## When to consider MCP
+## Wann MCP erwägen
 
-If the task only needs read/write inside the current repo, you usually do not need MCP.  
-If it must touch real systems **outside** the repo, start evaluating MCP, APIs, or other controlled integrations.
+Nur Repo-Dateien lesen/schreiben → meist kein MCP.  
+Systeme „außerhalb des Repos“ → MCP, API oder andere kontrollierte Integration prüfen.
 
-## Use cases
+## Einsatzfälle
 
-| Good for MCP | Poor for MCP |
+| MCP geeignet | MCP ungeeignet |
 |---|---|
-| Query Linear/Jira tickets | Pure in-repo code changes |
-| Read-only docs/knowledge base | Simple `curl` with no reuse need |
-| Controlled internal tools | Unaudited high-privilege production DB writes |
+| Linear/Jira-Tickets abfragen | Reine Repo-Codeänderungen |
+| Docs/Wissensbasis nur lesen | Einfaches `curl` ohne Wiederverwendung reicht |
+| Kontrollierte interne Tools | Schreibzugriff auf Produktions-DB ohne Audit |
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. MCP means Codex can do anything
+### 1. Mit MCP kann Codex alles
 
-It can only do what the MCP server exposes and what those tools allow.
+Abhängig von exponierten Werkzeugen und deren Erlaubnissen.
 
-### 2. MCP is technical only, not security
+### 2. MCP ist nur Technik, keine Sicherheit
 
-Once MCP touches real systems, it is also:
+Sobald echte Systeme verbunden sind:
 
-- Permissions
-- Data exposure
+- Berechtigung
+- Datenexposition
 - Audit
-- Supply chain
+- Lieferkette
 
-### 3. With MCP, no Skill or docs needed
+### 3. Mit MCP entfallen Skill und Doku
 
-Still needed. MCP solves "can call tools," not "which flow to follow or when not to call."
+Nein. MCP = „kann Werkzeuge aufrufen“; nicht „nach welchem Ablauf / wann nicht“.
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- **Least privilege**: read-only, scoped projects, scoped IPs
-- **Credentials**: OAuth or short-lived tokens—not in prompt, not in Git
-- **Human approval**: writes, bulk deletes, outbound messages should be reviewed
-- **Supply chain**: connect only trusted servers; review third-party MCP source
+- **Least Privilege**: nur lesen, Projekt begrenzt, IP begrenzt
+- **Credentials**: OAuth oder Kurzzeit-Token — nicht in Prompt, nicht in Git
+- **Menschliche Freigabe**: Schreibaktionen, Massenlöschen, externe Nachrichten → Überprüfung
+- **Lieferkette**: Nur vertrauenswürdige Server; Drittanbieter-MCP-Quellcode prüfen
 
-Enterprise: roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
+Enterprise: Roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
 
-## Onboarding order
+## Anbindungsreihenfolge
 
-1. Read official MCP docs; confirm current client config format
-2. Start with a **read-only** official or community example server
-3. Verify a single tool call in a test project
-4. Connect real systems with a runbook
+1. Offizielle MCP-Doku: aktuelles Client-Konfigformat
+2. Mit **nur-lesen**-Beispielserver (offiziell/Community) starten
+3. In Testprojekt einzelnen Werkzeugaufruf prüfen
+4. Dann echte Systeme + Runbook
 
-Steps: [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
+Schritte: [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Over-permissive MCP server "for convenience"
-- Treating MCP as Skill replacement (flow still belongs in Skill or AGENTS.md)
-- MCP config changes not in code review
+- MCP-Server „zur Entwicklung“ zu hohe Berechtigung
+- MCP als Skill-Ersatz (Ablauf bleibt in Skill oder AGENTS.md)
+- Konfigänderungen ohne Code-Review
 
-## References
+## Quellen
 
 - [Model Context Protocol](https://modelcontextprotocol.io/)
-- OpenAI Codex MCP documentation
+- OpenAI Codex MCP-Dokumentation
 - KimYx0207 CX-05; stormzhang `20-mcp.md`
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Conceptual content mixed with judgments about "client config format" and "approval behavior"; as of 2026-07-26 public official basis is insufficient for full verification.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE  
+**Nachprüfhinweis:** Konzeptuell plus „Client-Konfigformat“ und Freigabe-Verhalten; bis 2026-07-26 reichen öffentliche Quellen nicht für volle Freigabe.  
+**Zuletzt geprüft:** 2026-07-26

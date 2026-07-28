@@ -1,151 +1,161 @@
 ---
-title: Permission Matrix
-description: Conceptual map of Codex action types, approval points, and product differences.
+title: Berechtigungsmatrix
+description: 'Konzeptuelle Gegenüberstellung von Codex-Operationstypen, Freigabepunkten und Produktdifferenzen.'
 locale: de
-source_locale: en
-source_revision: be5c1b7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The permission matrix helps everyday users too: why the same sentence gets different reactions in different Codex entry points.
+Die **Berechtigungsmatrix** hilft auch normalen Nutzern: Warum reagiert Codex bei derselben Formulierung an verschiedenen Einstiegen anders?
 
-Different **actions** trigger different approval and sandbox behavior per **product entry**. This matrix aligns teams on “what must a human explicitly allow.” It is a **risk and behavior reference**, not legal compliance text. Defaults per [official documentation](https://developers.openai.com/codex) and org-managed policy.
+Unterschiedliche **Operationen** lösen an unterschiedlichen **Produkteinstiegen** unterschiedliche Freigabe- und Sandbox-Verhalten aus. Die Matrix hilft Teams abzustimmen, „was Menschen explizit freigeben müssen“ — **Risiko- und Verhaltensvergleich**, keine Compliance-Vorschrift. Defaults: [offizielle Docs](https://developers.openai.com/codex) und Organisationspolicies.
 
-## What the table is for
+## Was die Tabelle zeigt
 
-When approval, limits, or rejection appear, people often think:
+Bei Freigabe, Limit oder Ablehnung denken viele zuerst:
 
-- Model is broken
-- I phrased it wrong
-- It worked yesterday
+- Modell kaputt
+- Formulierung falsch
+- Gestern ging es, heute nicht
 
-Much of that is entry, policy, and risk level—not your wording alone.
+Oft liegt der Unterschied an Einstieg, Policy und Risikostufe.
 
-## Core idea
+## Kernpunkt
 
-Not every “do this for me” carries the same risk.
+Nicht jedes „hilf mir damit“ hat dasselbe Risiko.
 
-Examples:
+Zum Beispiel:
 
-- Read a file
-- Edit a file
-- Run a command
-- Reach the network
-- Push code
+- Eine Datei lesen
+- Eine Datei ändern
+- Einen Befehl ausführen
+- Ins Netz
+- Code pushen
 
-Same sentence shape—different risk—so products add different approval, limits, and blocks.
+Alles „Aufgabe ausführen“ — Risiko nicht dieselbe Stufe. Deshalb Freigaben, Limits und Blocks an verschiedenen Stellen.
 
-Conceptual base: [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Grundlagen: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
 
-## Action risk tiers
+## Operationsrisikostufen
 
-| Tier | Example actions | Default expectation |
+| Stufe | Beispiele | Typische Erwartung |
 |---|---|---|
-| L0 read | Read in-repo text, search code | Usually automatic |
-| L1 write | Edit project files, format | Often confirm or auto in sandbox |
-| L2 execute | shell, package manager, tests | Often confirm |
-| L3 network | curl, npm registry, API | Strict confirm or deny |
-| L4 out of bounds | Write outside project, git push, drop DB | Block or strong confirm |
-| L5 GUI | Computer Use, system dialogs | Highest sensitivity; often off |
+| L0 Lesen | Projekttext lesen, Code suchen | Meist automatisch |
+| L1 Schreiben | Projektdateien ändern, formatieren | Oft Bestätigung oder auto in Sandbox |
+| L2 Ausführen | Shell, Package-Manager, Tests | Oft Bestätigung |
+| L3 Outbound | curl, npm registry, API | Strenge Bestätigung oder Verbot |
+| L4 Overreach | Pfade außerhalb, git push, DB löschen | Block oder starke Bestätigung |
+| L5 GUI | Computer Use, Systemdialoge | Höchste Sensibilität, oft default aus |
 
-## How to read it
+## Lesart
 
-1. What class of action is this task?
-2. Will that class usually be blocked in this entry?
-3. Add detail, wait for approval, or pick a lighter entry?
+Nicht jedes Feld pauken. Nutzen:
 
-Use it to preview before you start.
+- Operationsklasse der aktuellen Aufgabe bestimmen
+- Ob der aktuelle Einstieg typischerweise blockiert
+- Ob Erklärung nachreichen, auf Freigabe warten oder Einstieg wechseln
 
-## Matrix (conceptual — typical defaults)
+Auch als Vorab-Einschätzung.
 
-**Y** = usually needs explicit consent or policy limit · **A** = may auto under trusted config · **—** = version/policy dependent · **N** = usually not allowed
+## Matrix (Konzept — typische Defaults)
 
-| Action | Desktop App | CLI interactive | IDE | Cloud |
+**Y** = oft explizite Zustimmung oder Policy-Limit · **A** = auto bei vertrauenswürdiger Config · **—** = version/policyabhängig · **N** = meist nicht erlaubt
+
+| Operation | Desktop-App | CLI interaktiv | IDE | Cloud |
 |---|---|---|---|---|
-| Read repo files | A | A | A | A |
-| Write in-repo files | Y/A | Y | Y/A | Y/A |
-| Run test commands | Y/A | Y | Y/A | Y/A |
-| Install global dependencies | Y | Y | Y | Y |
-| Access public internet | Y | Y | Y | Y |
-| Read sensitive files like `.env` | Y | Y | Y | Y |
+| Repo-Dateien lesen | A | A | A | A |
+| Dateien im Repo schreiben | Y/A | Y | Y/A | Y/A |
+| Testbefehle | Y/A | Y | Y/A | Y/A |
+| Globale Abhängigkeiten installieren | Y | Y | Y | Y |
+| Öffentliches Netz | Y | Y | Y | Y |
+| Sensitive Dateien wie `.env` lesen | Y | Y | Y | Y |
 | `git commit` | Y | Y | Y | Y |
 | `git push` | Y | Y | Y | Y |
-| Write outside project | N/Y | N/Y | N/Y | N |
-| MCP third-party tools | Y | Y | Y | Y |
-| Browser open URL | Y | — | — | Y |
+| Pfade außerhalb des Projekts | N/Y | N/Y | N/Y | N |
+| MCP-Drittanbieter-Tools | Y | Y | Y | Y |
+| Browser-URL öffnen | Y | — | — | Y |
 | Computer Use | Y/— | — | — | — |
 
-Notes:
+Hinweise:
 
-- **Cloud** runs in remote sandbox—no access to your laptop filesystem
-- **IDE** similar to App; approval UI differs
-- **Managed policy** can force all Y or N
+- **Cloud** läuft in Remote-Sandbox — kein Laptop-Dateisystem
+- **IDE** ähnlich App, andere Freigabe-UI
+- **Managed Policy** kann alles auf Y oder N zwingen
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Feasibility is not only “will the model try”
+### 1. Ob es geht, hängt nicht nur vom Modell ab
 
-Often: entry allowance, policy, permissions.
+Oft:
 
-### 2. Cloud is not automatically freer or safer
+- Erlaubt der Einstieg es?
+- Lässt die Policy durch?
+- Reichen die Rechte?
 
-Safety depends on sandbox, network, Secrets, branch protection, approval together.
+### 2. Cloud nicht automatisch freier oder sicherer
 
-### 3. Written rules do not remove risk alone
+Sicherheit hängt an Sandbox, Netz, Secrets, Branch Protection und Freigabe zusammen.
 
-Docs, approval policy, technical limits, and human review often combine.
+### 3. Regeln schreiben ≠ Risiko verschwindet
 
-### 4. Blocked ≠ you did something wrong
+Doku-Regeln, Freigabe-Policy, Techniklimits und Menschen-Review oft zusammen.
 
-Often: higher risk step, wrong entry for the job, or needs explicit approval / lighter approach.
+### 4. Blockiert ≠ Sie haben falsch gemacht
 
-## How config and docs land
+Oft:
 
-| Mechanism | Role |
+- Dieser Schritt ist riskanter
+- Einstieg ungeeignet
+- Klarere Freigabe oder leichtere Variante nötig
+
+## Config und Doku umsetzen
+
+| Mechanismus | Wirkung |
 |---|---|
-| Sandbox mode | Limits L3/L4 even if Agent “wants” to |
-| Approval policy | Whether L1–L3 prompts |
-| `AGENTS.md` | Project prohibitions (e.g. no push) |
-| Branch protection | GitHub blocks unreviewed merge |
-| Hooks | Pre-commit checks (see Hooks roadmap) |
+| Sandbox-Modus | Begrenzt L3/L4 auch wenn Agent „will“ |
+| Freigabe-Policy | Ob L1–L3 Popups zeigen |
+| `AGENTS.md` | Projektverbote (z. B. kein Push) |
+| Branch Protection | GitHub blockiert ungeprüfte Merges |
+| Hooks | Checks vor Commit (siehe Hooks-Roadmap) |
 
-[Human approval patterns](/cases/workflows/human-approval-patterns/) · [Configuration reference](/guide/reference/configuration-reference/)
+[Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) · [Konfigurationsreferenz](/guide/reference/configuration-reference/)
 
-## When to raise caution
+## Wann vorsichtiger werden
 
-If an action:
+Bei einer der folgenden Eigenschaften:
 
-- Modifies files
-- Runs commands
-- Reaches the network
-- Touches sensitive data
-- Sends results outside the repo
+- Ändert Dateien
+- Führt Befehle aus
+- Geht ins Netz
+- Berührt sensible Daten
+- Sendet Ergebnisse aus dem Repo
 
-You may not need the L-number—know it is past casual-read risk.
+L-Nummer nicht nötig — aber: nicht mehr „kurz drüberschauen“-Risiko.
 
-The matrix is a preview tool: why this step might block, whether to be more careful, or choose a lighter path.
+Die Matrix ist ein Vorhersagewerkzeug: warum blockiert, ob vorsichtiger, oder leichtere Variante.
 
-## Team policy examples
+## Teamstrategien (Beispiele)
 
-| Scenario | Suggestion |
+| Szenario | Empfehlung |
 |---|---|
-| Open-source practice repo | Standard sandbox + allow test commands |
-| Company monorepo | Strict + no push + human PR review |
-| CI `codex exec` | Read-only or scoped dir + no push |
-| Cloud production-related | Minimal Secrets + branch protection |
+| Open-Source-Übungsrepo | Standard-Sandbox + Testbefehle erlaubt |
+| Firmen-Monorepo | Streng + kein Push + PR mit Menschen-Review |
+| CI `codex exec` | Read-only oder begrenztes Verzeichnis + kein Push |
+| Cloud produktionsnah | Secrets minimal + Branch Protection |
 
-## Common myths
+## Häufige Irrtümer
 
-| Myth | Fact |
+| Irrtum | Tatsache |
 |---|---|
-| “Cloud is safer” | Depends on secrets, review, network policy |
-| “IDE won’t run shell” | May run via Agent tools |
-| “Doc says no push so never push” | Need sandbox + Git permissions + human review |
+| «Cloud ist sicherer» | Hängt an Secrets, Review, Netzpolicy |
+| «IDE führt kein Shell aus» | Kann über Agent-Tools |
+| «Verbot Push in Doku = kein Push» | Braucht Sandbox + Git-Rechte + Menschen-Review |
 
 ---
 
 **Status:** outdated  
-**Products:** App / CLI / IDE / Cloud  
-**Review note:** Risk tier framing still useful, but matrix assumes many per-entry defaults and approval points without current official per-entry permission matrix documentation—do not mark `review` or `verified`.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfhinweis:** Risikostufen-Idee nützlich; Matrix mit vielen Annahmen zu Defaults, Freigabepunkten und Fähigkeiten je Einstieg — ohne aktuelle offizielle Per-Einstieg-Matrix nicht `review`/`verified`.  
+**Zuletzt geprüft:** 2026-07-26

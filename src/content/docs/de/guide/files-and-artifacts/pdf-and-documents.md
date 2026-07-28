@@ -1,118 +1,118 @@
 ---
-title: PDF and Documents
-description: Scope, tools, and verification when Codex reads, summarizes, or generates PDFs and long documents.
+title: PDF und Dokumente
+description: "Umfang, Werkzeuge und Abnahme, wenn Codex PDF-Dokumente liest, zusammenfasst oder erzeugt."
 locale: de
-source_locale: en
-source_revision: b882355
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-PDFs are common for specs, papers, scans, and exported reports. Unlike plain text, PDFs are **structurally complex, large, and hard to diff**—they need explicit task design.
+PDFs dienen Spezifikationen, Papieren, Scans und Exportberichten. Anders als Reiner Text: PDF ist **strukturell komplex, groß, schwer zu diffen** — Aufgabenweise separat vereinbaren.
 
-Most PDF issues: incomplete structure understanding or scope that is too broad.
+Häufige Probleme: unvollständiges Strukturverständnis oder zu großer Umfang.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- How to have the Agent “read” PDF content correctly
-- Format and path conventions when generating or updating PDFs
-- Verification beyond “file exists”
+- Wie der Agent PDF-Inhalt richtig „liest“
+- Format- und Pfadvereinbarungen beim Erzeugen/Ändern
+- Abnahme: „Datei da“ ≠ „öffnet und stimmt“
 
-## Why PDFs are tricky
+## Warum PDF besonders knifflig ist
 
-PDFs may combine:
+PDF kann gleichzeitig enthalten:
 
-- Scanned images
-- Multi-column layout
-- Headers and footers
-- Tables
-- Mixed images and text
+- Scan-Bilder
+- Mehrspalten-Layout
+- Kopf-/Fußzeilen
+- Tabellen
+- Bild-Text-Mischung
 
-Clearer scope (“which section, what output”) usually means better results.
+Je klarer „welchen Abschnitt, welches Ergebnis“, desto stabiler.
 
-## Reading PDFs
+## PDF lesen
 
-### Recommended approach
+### Empfohlenes Vorgehen
 
-1. **Specify path**: `docs/spec.pdf` or @ reference (per client support)
-2. **State the goal**: summary, compare a chapter, extract table data
-3. **Page or section**: limit scope on long docs to save context
-4. **Sensitive content**: contracts, ID scans—follow [Sensitive context](/guide/context/sensitive-context/)
+1. **Pfad nennen**: `docs/spec.pdf` oder @-Verweis (clientabhängig)
+2. **Ziel sagen**: Zusammenfassung, Kapitelabgleich, Tabellenextraktion
+3. **Seiten oder Kapitel**: lange Docs begrenzen, Kontext sparen
+4. **Sensibel**: Verträge, Ausweise usw. über [sensiblen Kontext](/guide/context/sensitive-context/)
 
-### Limits
+### Grenzen
 
-- Scanned PDFs may need OCR; spot-check results
-- Complex layout, columns, footnotes may lose structure
-- Do not stuff huge PDFs into one task—segment or convert to Markdown outline first
+- Scan-PDFs brauchen oft OCR — Stichproben manuell
+- Komplexe Layouts, Mehrspalten, Fußnoten verlieren Struktur leicht
+- Riesige PDFs nicht in einer Aufgabe — abschnittsweise oder zuerst Markdown-Gliederung
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Whole PDF ≠ reliable key points
+### 1. Ganzes PDF reinwerfen ≠ stabile Extraktion der Schwerpunkte
 
-For long, complex, or scanned PDFs:
+Bei Länge, komplexer Struktur, Scan-Seiten:
 
-- Specify range
-- Specify task
-- Process in segments
+- Umfang begrenzen
+- Aufgabe spezifizieren
+- abschnittsweise
 
-### 2. Scanned vs text PDFs differ a lot
+### 2. Scan-PDF ≠ Text-PDF
 
-Scans rely on OCR; OCR errors propagate to summaries and extractions.
+Scans hängen oft an OCR; OCR-Fehler ziehen Zusammenfassung, Extraktion und Urteil mit.
 
-### 3. PDF file exists ≠ done
+### 3. PDF-Datei erzeugt ≠ fertig
 
-Also verify:
+Prüfen:
 
-- Opens correctly
-- No garbled text
-- Page count, TOC, tables correct
-- CJK fonts embedded if needed
+- Öffnet sich
+- Kein Zeichensatz-Chaos
+- Seiten, Inhaltsverzeichnis, Tabellen korrekt
+- CJK-/chinesische Schriften wirklich eingebettet
 
-## Generating or updating PDFs
+## PDF erzeugen oder aktualisieren
 
-| Approach | Fits |
+| Weg | Geeignet für |
 |---|---|
-| Compile from Markdown/LaTeX | Technical docs, reports (reproducible) |
-| Print from HTML | Simple layout |
-| Library generation (e.g. reportlab) | Programmatic tickets, labels |
+| Aus Markdown/LaTeX kompilieren | Tech-Docs, Reports (reproduzierbar) |
+| Aus HTML drucken | einfache Layouts |
+| Bibliothek (z. B. reportlab) | programmatische Belege, Labels |
 
-In the prompt specify:
+Im Prompt klar:
 
-- Output path and filename
-- Page size, language, fonts (CJK PDFs especially)
-- Whether to commit (large binaries often artifact or release)
+- Ausgabepfad und Dateiname
+- Seitenformat, Sprache, Schrift (bei CJK-PDF: Einbettung)
+- Ob nach Git (große Binärdateien oft Artifact/Release)
 
-## Copy-paste prompt pattern
+## Direkt nutzbare Formulierung
 
 ```text
-Read only pages 12–18 of `docs/spec.pdf` and extract acceptance criteria.
-Do not summarize the whole document.
-If OCR or layout is uncertain, say so explicitly.
+Bitte nur Seiten 12–18 von `docs/spec.pdf` lesen und Abnahmekriterien extrahieren.
+Nicht das ganze Dokument zusammenfassen.
+Bei OCR- oder Layout-Unsicherheit klar markieren.
 ```
 
-## Repo policy
+## Repo-Strategie
 
-- Large PDFs: **Git LFS** or out of repo
-- When diff is unreadable, verify by **opening file** + [Verify artifacts](/guide/quality/verify-artifacts/)
-- Generated outputs: [Verifying generated artifacts](/guide/files-and-artifacts/generated-artifacts/)
+- Große Binär-PDFs: **Git LFS** oder nicht ins Repo
+- Unlesbarer Diff: Abnahme durch **Öffnen** + [Artefakte überprüfen](/guide/quality/verify-artifacts/)
+- Generiertes: [Generierte Artefakte abnehmen](/guide/files-and-artifacts/generated-artifacts/)
 
-## Common mistakes
+## Häufige Fehler
 
-- “Change one word in PDF” without editable source (`.md` / `.tex`)
-- Confidential PDF in public repo then Cloud processing
-- Accept on “file exists” without opening
+- „Ein Wort im PDF ändern“ ohne editierbare Quelle (`.md` / `.tex`)
+- Vertrauliche PDFs ins öffentliche Repo und dann Cloud
+- Nur „Datei existiert“ prüfen, nicht öffnen
 
-## Acceptance checklist
+## Abnahmeliste
 
-- [ ] PDF opens in target reader/print environment
-- [ ] Page count, TOC, key tables match expectation
-- [ ] Repo size and LFS policy meet team norms
+- [ ] PDF im Ziel-Reader/Druckumgebung öffnbar
+- [ ] Seiten, TOC, kritische Tabellen wie erwartet
+- [ ] Repo-Volumen und LFS-Policy teamkonform
 
-For PDFs, narrower scope is steadier. After generation, open and confirm content—not just presence.
+Bei PDF: je klarer der Umfang, desto stabiler. Nach dem Erzeugen nicht nur „Datei da“ — öffnen und Inhalt prüfen.
 
 ---
 
 **Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, sensitive-context, and image/file handling pages; stable principles: limit scope, watch OCR/layout error, open and verify after generation.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Dateikontext, Artefaktprüfung, sensiblem Kontext und Dateiverarbeitung; bestätigt nur „PDF begrenzen, OCR/Layout-Fehler beachten, nach Erzeugung wirklich öffnen“.  
+**Zuletzt geprüft:** 2026-07-26

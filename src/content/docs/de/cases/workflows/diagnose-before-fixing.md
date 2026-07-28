@@ -1,77 +1,78 @@
 ---
-title: Diagnose before fixing
-description: Production issues and stubborn bugs—build an evidence chain before changing code.
+title: Zuerst diagnostizieren, dann fixen
+description: "Produktionsprobleme und hartnäckige Bugs — zuerst eine Beweiskette aufbauen, dann eingreifen."
 locale: de
-source_locale: en
-source_revision: 35b00c6
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Asking Codex to fix a bug immediately usually means high rework. The diagnose workflow emphasizes: **symptoms → hypotheses → evidence → minimal fix**.
 
-## When to use
+Codex sofort zum Bugfixen zu bringen, führt oft zu hoher Nacharbeit. Der Diagnose-Workflow betont: **Symptom → Hypothese → Evidenz → minimale Korrektur**.
 
-- Test failure cause unclear
-- Production alerts, user reports "intermittent" issues
-- Problem persists after last fix
+## Wann verwenden
 
-## Steps
+- Testfehlerursache unklar
+- Produktionsalarme, Nutzer melden «sporadisch»
+- Problem bleibt nach dem letzten Fix bestehen
 
-### 1. Freeze changes
+## Schritte
 
-```text
-Do not change business code yet. List: reproduction steps, relevant logs, recent related commits.
-```
-
-### 2. Narrow scope
-
-- Bisect: which commit introduced it?
-- Isolate: minimal repro repo or test case
-
-### 3. Form hypotheses
-
-Ask Codex to output:
+### 1. Änderungen einfrieren
 
 ```text
-Hypothesis A: … Verification: …
-Hypothesis B: … Verification: …
+Ändere vorerst keinen Geschäftscode. Auflisten: Reproduktionsschritte, relevante Logs, kürzlich verwandte Commits.
 ```
 
-### 4. Verify hypotheses (read-only first)
+### 2. Umfang verkleinern
 
-Run targeted tests, add temporary logs (discardable branch), read monitoring.
+- Bisection: Welcher Commit hat es eingeführt?
+- Isolation: Minimales Reproduktions-Repository oder Testfall
 
-### 5. Minimal fix
+### 3. Hypothesen bilden
 
-Fix one root cause at a time; avoid "while I'm here" refactors.
-
-### 6. Regression verification
-
-Original failing case + adjacent scenarios + test preventing recurrence.
-
-## Prompt template
+Von Codex verlangen:
 
 ```text
-Follow "diagnose before fixing":
-1. Read @path/to/failing-test and implementation; explain failure (cite stack line numbers)
-2. Give 2 hypotheses and how to verify read-only
-3. After I confirm a hypothesis, write the fix; after fix run only related tests
+Hypothese A: … Überprüfungsweise: …
+Hypothese B: … Überprüfungsweise: …
 ```
 
-## Relation to EPXV
+### 4. Hypothesen prüfen (bevorzugt nur lesend)
 
-Diagnosis is a deeper **Explore** phase; at Plan, also document "how to roll back if hypothesis is wrong."
+Gezielte Tests ausführen, temporäre Logs (wegwerfbarer Branch), Monitoring lesen.
 
-## Common mistakes
+### 5. Minimale Korrektur
 
-- Changing code without reproduction
-- One patch fixing three issues—hard to review
-- Removing temporary logs without adding permanent tests
+Nur eine Root Cause pro Durchgang; «nebenbei refactoren» vermeiden.
+
+### 6. Regressionsüberprüfung
+
+Ursprünglich fehlgeschlagener Fall + Nachbarszenarien + Tests gegen Wiederauftreten.
+
+## Prompt-Vorlage
+
+```text
+Nach «zuerst diagnostizieren, dann fixen»:
+1. Lies @path/to/failing-test und die Implementierung, erkläre die Fehlerursache (Stack-Zeilennummern zitieren)
+2. Gib 2 Hypothesen und wie sie nur lesend überprüft werden
+3. Nach meiner Bestätigung der Hypothese den Fix schreiben; danach nur relevante Tests laufen lassen
+```
+
+## Verhältnis zu EPXV
+
+Diagnose ist eine vertiefte **Erkunden**-Phase; in der Planungsphase muss auch klar sein, wie man zurückrollt, wenn die Hypothese falsch war.
+
+## Häufige Fehler
+
+- Code ändern, bevor reproduziert
+- Ein Patch für drei Probleme zugleich → nicht reviewbar
+- Temporäre Logs löschen, ohne dauerhafte Tests nachzuziehen
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, quality, and failure recovery chapters in this handbook; this page only confirms the stable diagnose method—evidence chain first, then minimal fix—not dependent on specific product client implementation.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Planung, Qualität und Fehlerwiederherstellung. Diese Seite bestätigt nur die stabile Diagnosemethode „zuerst Beweiskette, dann minimale Korrektur“ und hängt nicht an einer konkreten Produkt-Client-Implementierung.  
+**Zuletzt geprüft:** 2026-07-26

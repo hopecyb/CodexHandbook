@@ -1,106 +1,109 @@
 ---
-title: Constraints and boundaries
-description: Limit what can change, style rules, and forbidden actions.
+title: Constraints definieren
+description: Änderbaren Scope, Stil und Verbote eingrenzen.
 locale: de
-source_locale: en
-source_revision: d18b013
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many tasks fail not because the goal was missing entirely, but because **boundaries were unclear**.
+Viele Aufgaben scheitern nicht, weil das Ziel fehlt — sondern weil **Grenzen unklar** sind.
 
-You say "help me fix this page" and Codex might read it as:
+Sagst du „hilf mir, diese Seite zu ändern“, kann Codex das so verstehen:
 
-- copy only
-- copy plus styles
-- components too
-- add dependencies
+- nur Text ändern
+- Styles nebenbei anfassen
+- Komponenten anfassen
+- Dependencies hinzufügen
 
-When you only wanted "this paragraph of copy, don't touch structure."
+Du wolltest vielleicht nur: „nur diesen Textabschnitt, Struktur nicht anfassen“.
 
-Constraints answer: where does this stop, and what is absolutely off limits?
+Constraints beantworten: Bis wohin geht die Aufgabe — und was darf absolut nicht berührt werden.
 
-## What this covers
+## Inhalt
 
-It mainly helps avoid:
+Sie helfen vor allem gegen:
 
-- changing more than asked
-- unauthorized actions
-- edits at layers you didn't intend
-- "done" outcomes with too much collateral change
+- nebenbei zu viel ändern
+- Überschreiten von Berechtigungen
+- Eingriffe in Schichten, die du nicht anfassen wolltest
+- scheinbar fertig, aber zu hohem Preis
 
-## Common constraints
+## Häufige Constraints
 
-Constraints answer: "what must never happen?"
+Constraints beantworten: „Was darf absolut nicht passieren?“
 
-- only listed files/directories
-- don't change API contracts / don't change the database
-- don't add new dependencies
-- don't make network requests
-- keep existing formatter configuration
+- Nur gelistete Dateien/Verzeichnisse ändern
+- Keine API-Verträge / keine Datenbank ändern
+- Keine neuen Dependencies
+- Keine Netzwerkanfragen
+- Bestehende Formatter-Konfiguration behalten
 
-## Goal vs. constraints
+## Ziel vs. Constraint
 
-- **Goal:** what you want it to achieve
-- **Constraints:** lines it must not cross while doing it
+- **Ziel**: was es erreichen soll
+- **Constraint**: welche Linien es dabei nicht überschreiten darf
 
-Example:
+Zum Beispiel:
 
 ```text
-Goal: Make the homepage hero copy clearer
-Constraints: Don't change layout, don't add dependencies, don't change CTA behavior
+Ziel: Homepage-Hero-Text klarer machen
+Constraints: kein Layout, keine neuen Dependencies, kein CTA-Verhalten ändern
 ```
 
-Without constraints, "make it clearer" often becomes a much larger redesign.
+Ohne Constraints versteht Codex „klarer machen“ leicht als größeren Redesign-Auftrag.
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Constraints make results worse
+### 1. Constraints engen zu stark ein und verschlechtern das Ergebnis
 
-Clear constraints often produce results closer to what you actually want—they cut detours.
+Oft bringen klare Constraints das Ergebnis näher an den echten Bedarf — weniger Umwege.
 
-### 2. "Don't change too much" is enough
+### 2. „Nicht zu viel ändern“ reicht als Constraint
 
-Too vague.
+Zu vage.
 
-More useful:
+Nützlicher:
 
-- only `src/content/docs/...`
-- don't change components
-- don't change APIs
-- don't install dependencies
+- nur `src/content/docs/...`
+- keine Komponenten
+- keine Interfaces
+- keine Dependencies installieren
 
-### 3. Constraints only matter for high-risk tasks
+### 3. Constraints nur bei Hochrisiko-Aufgaben
 
-Small tasks need them too—one vague sentence easily expands the scope.
+Auch kleine Aufgaben brauchen sie — gerade dann rutscht leicht eine vage Anforderung durch und der Scope wächst.
 
-## A usable skeleton
+## Eine brauchbare Formulierung
+
+Wenn unklar, starte mit diesem Gerüst:
 
 ```text
 Constraints:
-- Only change 【directory/file】
-- Don't change 【components / API / database / config】
-- Don't add dependencies
-- Ask when information is insufficient; don't guess
+- Nur 【Verzeichnis/Datei】 ändern
+- Nicht ändern: 【Komponenten / API / DB / Config】
+- Keine neuen Dependencies
+- Bei fehlenden Infos zuerst fragen, nicht raten
 ```
 
-## When to write constraints more finely
+## Wann Constraints detaillierter sein sollten
 
-Be explicit when:
+Besonders dann klar schreiben:
 
-- legacy codebase with heavy baggage
-- you want a local patch only
-- hard team rules on style or architecture
-- permissions, network, or dependency installs are involved
+- Altprojekte mit viel Altlast
+- Nur lokale Patches gewünscht
+- Harte Team-Vorgaben zu Stil/Architektur
+- Berechtigungen, Netz, Dependency-Installation
 
-Goal tells Codex what to do; constraints tell it where to stop.
+Das Ziel sagt Codex, was zu tun ist; Constraints sagen, wo Schluss ist.
 
-Write permission boundaries with constraints to reduce "while I'm here" overreach. See also [Define done](/prompts/define-done/) and [Permissions and sandbox](/guide/permissions-and-sandbox/).
+Berechtigungsgrenzen am besten zusammen mit Constraints schreiben, damit „nebenbei“ weniger übergreift. Siehe [Fertigstellungsstandard definieren](/prompts/define-done/) und [Berechtigungen und Sandbox](/guide/permissions-and-sandbox/).
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains constraint and boundary writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur Constraint- und Grenzformulierung; interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

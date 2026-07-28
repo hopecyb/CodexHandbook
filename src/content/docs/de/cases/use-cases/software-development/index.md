@@ -1,30 +1,30 @@
 ---
-title: Software development
-description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
+title: Softwareentwicklung
+description: Einstieg zu Fällen für Codeänderungen, Bugfixes und ergänzte Überprüfung — Fokus auf Scope-Kontrolle, Tests und Rollback.
 locale: de
-source_locale: en
-source_revision: 050fe4a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Software development cases focus on this question:
+Softwareentwicklungsfälle drehen sich um:
 
-> **How does Codex change real repos accurately, reviewably, and verifiably?**
+> **Wie Codex in einem realen Repository präzise, reviewbar und nachprüfbar ändert.**
 
-## Cases in this group
+## Einstieg dieser Gruppe
 
-- [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Bug-Fix mit Überprüfung](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## What this group emphasizes
+## Schwerpunkte dieser Gruppe
 
-- How to state task scope clearly
-- Why verification and rollback paths matter from the start
-- Avoiding "while I'm here" extra changes in real development
+- Aufgabenumfang klar formulieren
+- Warum Überprüfung und Rollback-Pfad von Anfang an klar sein müssen
+- Im echten Entwicklungsalltag «nebenbei Mehrarbeit» vermeiden
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current software-development case entry and development workflow, run tests, and rollback chapters; this page only describes the development case group entry and focus areas.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen den aktuellen software-development-Falleinstieg dieses Repos sowie verwandte Kapitel zu Entwicklungs-Workflows, Tests und Rollback. Diese Seite erklärt nur Einstieg und Fokus der Entwickler-Fallgruppe.  
+**Zuletzt geprüft:** 2026-07-26

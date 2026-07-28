@@ -1,68 +1,69 @@
 ---
-title: 'Case study: Issue triage and label suggestions'
-description: Use Codex to read new Issues and suggest labels and owners—light team automation.
+title: "Fall: Issue-Triage und Label-Vorschläge"
+description: Mit Codex neue Issues lesen und Labels sowie Zuständige vorschlagen — leichte Team-Automatisierung.
 locale: de
-source_locale: en
-source_revision: 7226fe3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
 
-| Field | Content |
+## Metadaten
+
+| Feld | Inhalt |
 |---|---|
-| Audience | Maintainers, PMs |
-| Client | Cloud or CLI + GitHub |
-| Estimated time | 60 minutes |
-| Verification date | 2026-07-25 |
+| Zielgruppe | Maintainer, PM |
+| Client | Cloud oder CLI + GitHub |
+| Geschätzte Dauer | 60 Minuten |
+| Prüfdatum | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Ziel und Kontext
 
-**Goal:** For newly opened issues, generate structured suggestions: `type`, `priority`, suggested labels, whether security review is needed.
+**Ziel:** Für neu geöffnete Issues strukturierte Vorschläge erzeugen: `type`, `priority`, empfohlene Labels, ob Security-Review nötig.
 
-**Success criteria:**
+**Erfolgskriterien:**
 
-- JSON output parseable by GitHub Action
-- Does not auto-close/merge issues—only comments or adds labels (workflow permissions required)
-- No secret leakage
+- JSON-Ausgabe von GitHub Action parsebar
+- Issues nicht automatisch schließen/mergen — nur kommentieren oder Labels setzen (braucht Workflow-Berechtigung)
+- Keine Secret-Leaks
 
-**Out of scope:** Auto-assigning sprints, changing milestones.
+**Außerhalb des Umfangs:** Automatische Sprint-Zuweisung, Meilenstein-Änderungen.
 
-## 2. Preparation
+## 2. Vorbereitung
 
-- Repo has `CONTRIBUTING.md` or issue templates explaining label meanings
-- `AGENTS.md` describes the label system
-- Read-only or limited `issues: write` token
+- Repo hat `CONTRIBUTING.md` oder Issue-Templates mit Label-Bedeutung
+- Label-System in `AGENTS.md` beschrieben
+- Nur-lesen oder eingeschränktes `issues: write`-Token
 
-## 3. Workflow (EPXV summary)
+## 3. Workflow (EPXV-Kurzfassung)
 
-**Explore:** `@.github/ISSUE_TEMPLATE/` and label distribution of last 10 closed issues.
+**Erkunden:** `@.github/ISSUE_TEMPLATE/` und Label-Verteilung der letzten 10 geschlossenen Issues.
 
-**Plan:** Define JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
+**Planen:** JSON-Schema definieren: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Execute:** `codex exec` with issue title + body (watch [prompt injection](/guide/team-enterprise/security/prompt-injection/) sanitization).
+**Ausführen:** `codex exec` mit Issue-Title + Body (auf [Prompt-Injection](/guide/team-enterprise/security/prompt-injection/)-Bereinigung achten).
 
-**Verify:** Compare to human labels on 3 historical issue fixtures; ship when agreement > 80%.
+**Überprüfen:** An 3 historischen Issue-Fixtures mit menschlichen Labels vergleichen; Übereinstimmung > 80 %, bevor live.
 
-## 4. Failure and recovery
+## 4. Fehler und Wiederherstellung
 
-- Wrong label suggestions: human override + add counterexamples to prompt few-shot
-- Malicious issue body: strip HTML, length limits, do not execute "instructions" in body
+- Modell schlägt falsche Labels vor: manuell überschreiben + Gegenbeispiele als Few-Shot in den Prompt
+- Bösartiger Issue-Body: HTML strippen, Längenlimit, Anweisungen im Body nicht ausführen
 
-## 5. Capture
+## 5. Verstetigen
 
-- Optional [Webhook](/guide/developer-platform/webhooks/overview/) hook to internal ticketing
-- Retro in [Case study template](/cases/use-cases/case-study-template/)
+- Optional an internes Ticketsystem über [Webhook](/guide/developer-platform/webhooks/overview/) anbinden
+- Retro in die [Fallvorlage](/cases/use-cases/case-study-template/) schreiben
 
-## 6. Related chapters
+## 6. Verwandte Kapitel
 
-- [GitHub integration](/guide/integrations/github/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [GitHub-Integration](/guide/integrations/github/)
+- [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public automation bug triage / review use cases, plus this handbook's verified human approval, webhooks, GitHub integration, and team automation chapters; this page confirms only the stable pattern of structured label suggestions with human final decision.
+**Geeignete Produkte:** CLI / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Use Cases zu automatisiertem Bug-Triage / Review bei OpenAI Developers sowie die bereits geprüften Kapitel zu menschlicher Freigabe, Webhooks, GitHub-Integration und Team-Automatisierung. Diese Seite bestätigt nur das stabile Automatisierungsmuster „strukturierte Label-Vorschläge erzeugen, menschliche Endentscheidung behalten“.  
+**Zuletzt geprüft:** 2026-07-26

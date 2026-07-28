@@ -1,90 +1,91 @@
 ---
-title: Human approval patterns
-description: When to approve, reject, or pause Codex—and how to write those rules clearly.
+title: Muster für menschliche Freigabe
+description: Wann freigeben, ablehnen oder Codex anhalten — und wie man diese Regeln klar formuliert.
 locale: de
-source_locale: en
-source_revision: f8c7a3b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Approval keeps irreversible actions for humans. This page summarizes common patterns.
 
-## Approval tiers
+Freigabe hält irreversible Aktionen beim Menschen. Diese Seite fasst gängige Muster zusammen.
 
-```text
-Auto-safe zone (read, analyze, plan)
-    ↓
-Prompt-confirm zone (write files, run commands, network)
-    ↓
-Mandatory human zone (push, delete data, send externally, change production config)
-```
-
-Specific dialog behavior varies by [product entry](/guide/); principles are the same.
-
-## Pattern 1: Plan first, execute later
+## Freigabe-Schichten
 
 ```text
-Rule: Do not modify repo files until I say "approve plan."
+Automatisch sichere Zone (lesen, analysieren, planen)
+    ↓
+Bestätigungszone (Dateien schreiben, Befehle ausführen, Netz)
+    ↓
+Zwang zum Menschen (push, Daten löschen, nach außen senden, Produktionsconfig ändern)
 ```
 
-Good for: unfamiliar codebase, production-related, large diff.
+Konkrete Dialoge variieren je nach [Produkteinstieg](/guide/); das Prinzip ist gleich.
 
-## Pattern 2: Command whitelist
+## Muster 1: Zuerst planen, dann ausführen
 
-In [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) write:
+```text
+Regel: Ohne meine «Plan freigeben»-Antwort dürfen keine Repository-Dateien geändert werden.
+```
+
+Geeignet: unbekannte Codebasis, produktionsnah, großer Diff.
+
+## Muster 2: Befehl-Whitelist
+
+In [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) festhalten:
 
 ```md
-Allowed without asking again: pnpm test, pnpm lint, git status, git diff
-Must confirm each time: git push, npm publish, database migrate
+Ohne Nachfrage erlaubt: pnpm test, pnpm lint, git status, git diff
+Jedes Mal bestätigen: git push, npm publish, Datenbank-Migrationen
 ```
 
-When conflicting with hosted policy, **stricter** wins.
+Bei Konflikt mit Hosting-Policy gilt die **strengere** Regel.
 
-## Pattern 3: Two-phase merge
+## Muster 3: Zweistufiges Mergen
 
-1. Codex opens draft PR or local branch
-2. Human CI + review, then merge
+1. Codex öffnet Draft-PR oder lokalen Branch
+2. Mensch merged nach CI + Review
 
-Cloud: see [Create pull requests](/guide/web-and-cloud/create-pull-requests/).
+Cloud-Szenarien: [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/).
 
-## Pattern 4: Read-only recon
+## Muster 4: Nur-lesen-Aufklärung
 
 ```text
-This round read-only: may read files, run tests, curl local API;
-no disk writes or git commit.
+Diese Runde nur lesen: Dateien lesen, Tests laufen lassen, lokale API curl’en;
+Schreiben auf Disk und git commit verboten.
 ```
 
-For audit, learning unfamiliar projects, production diagnosis.
+Für Audits, Lernen fremder Projekte, Diagnose von Produktionsproblemen.
 
-## When to reject and restart
+## Wann ablehnen und neu starten
 
-| Signal | Suggestion |
+| Signal | Empfehlung |
 |---|---|
-| Plan doesn't match goal | Reject execution; request revised plan |
-| Scope creep | Stop; split task |
-| Tests skipped | Reject merge; require verification |
-| Cannot explain a command | Reject; require explanation |
+| Plan passt nicht zum Ziel | Ausführung ablehnen, Planüberarbeitung verlangen |
+| Änderungsumfang wächst | Stoppen, Aufgabe zerlegen |
+| Tests übersprungen | Merge ablehnen, Überprüfung nachfordern |
+| Ein Befehl ist unerklärlich | Ablehnen, Erklärung verlangen |
 
-## Relation to Automations
+## Verhältnis zu Automations
 
-Unattended tasks should still design human confirmation points—see [Scheduled and background tasks](/skills/automations/scheduled-tasks/).
+Auch unbeaufsichtigte Aufgaben brauchen bei Design menschliche Bestätigungspunkte; siehe [Geplante und Hintergrundaufgaben](/skills/automations/scheduled-tasks/).
 
-## Common mistakes
+## Häufige Fehler
 
-- Long-term "always allow" without remembering risk
-- Approval theater—don't read diff
-- Verbal "don't mess up" instead of explicit mode
+- Dauerhaft «immer erlauben» anhaken und Risiken vergessen
+- Freigabe als Formsache, Diff nicht lesen
+- Mündliches «nicht übertreiben» statt klarer Muster
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Approval mode declared before task starts
-- [ ] High-risk ops have second-person review or CI gate
-- [ ] Team has unified policy for `git push` and similar commands
+- [ ] Vor Aufgabenstart erklärt, welches Freigabemuster gilt
+- [ ] Hochrisiko-Aktionen haben Zweit-Review oder CI-Gate
+- [ ] Team hat einheitliche Policy für `git push` & Co.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current official guidance on autonomy / approval boundaries, and verified approval, command rules, PR, and automation chapters in this handbook; this page only confirms stable collaboration principles—which actions auto-continue vs pause for human approval.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle offizielle Leitlinien zu Autonomy / Approval Boundaries bei OpenAI Developers sowie die bereits geprüften Kapitel zu Freigabe, Befehlsregeln, PR und Automatisierung. Diese Seite bestätigt nur das stabile Kollaborationsprinzip „welche Aktionen automatisch weiterlaufen und welche für Menschen stoppen“.  
+**Zuletzt geprüft:** 2026-07-26

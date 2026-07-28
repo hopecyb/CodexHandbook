@@ -1,142 +1,137 @@
 ---
 title: Computer Use
-description: Advanced GUI control via screen and input devices—use cases, risks, and approvals.
+description: "Fortgeschrittene GUI-Bedienung über Bildschirm und Eingabegeräte — Szenarien, Risiken und Freigabe."
 locale: de
-source_locale: en
-source_revision: 9d8ea0c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Computer Use** lets the Agent view the screen, move the pointer, and type—beyond browser or terminal alone. Most powerful capability; **highest risk and approval requirements**.
+**Computer Use** lässt den Agent wie ein Mensch Bildschirm sehen, Zeiger bewegen, tippen — nicht nur Browser oder Terminal. Stärkste Fähigkeit, **höchstes Risiko und strengste Freigabe**.
 
-Computer Use operates at screen, mouse, and keyboard layer—different from browser and terminal tools—so enable it carefully.
+Wirkt auf Bildschirm, Maus, Tastatur — andere Klasse als Browser und Terminal; vorsichtig aktivieren.
 
-## What's covered
+## Inhalt dieser Seite
 
-- How Computer Use differs from browser and terminal
-- Tasks worth enabling it for
-- Safeguards for individuals and teams
+- Arbeitsteilung mit Browser und Terminal
+- Welche Aufgaben die Aktivierung lohnen
+- Absicherung für Personen und Teams
 
-## Capability boundaries
+## Fähigkeitsgrenzen
 
-| Layer | Typical ability |
+| Schicht | Typische Fähigkeit |
 |---|---|
-| Terminal | Shell, scripts, CLI programs |
-| Browser | Web DOM, limited interaction |
-| Computer Use | Desktop apps, system dialogs, multi-window workflows |
+| Terminal | Shell, Skripte, CLI |
+| Browser | Web-DOM, begrenzte Interaktion |
+| Computer Use | Desktop-Apps, Systemdialoge, Multi-Fenster |
 
-## How it differs
+## Unterschied zu anderen Werkzeugen
 
-Think of it as:
+Unterscheidung:
 
-- Acting across the whole desktop
-- Switching between multiple windows
-- Clicking real buttons and system dialogs
+- Arbeit auf dem ganzen Desktop
+- Wechsel zwischen Fenstern
+- Echte Buttons und System-Popups
 
-So the surface area of UI and information it can touch is usually larger.
+Reichweite von UI und Informationen meist größer.
 
-Good for:
+Geeignet:
 
-- Repetitive click flows in demo software without APIs (under supervision)
-- Copying data across apps (when compliant)
-- Verifying desktop App behavior itself
+- Wiederholte Klicks in Software ohne API (unter Aufsicht)
+- Daten zwischen Apps kopieren (unter Compliance)
+- Verhalten der Desktop-App selbst prüfen
 
-Poor fit for:
+Nicht geeignet:
 
-- Everyday coding (IDE + terminal is faster)
-- Unattended production operations
-- Bypassing security software or DRM
+- Alltagscode (IDE + Terminal effizienter)
+- Unbeaufsichtigte Produktionsoperationen
+- Security-Software oder DRM umgehen
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Stronger capability = default choice?
+### 1. Stärker = bevorzugt?
 
-Worth it mainly when:
+Wert klarer wenn:
 
-- The task truly involves desktop GUI
-- No lighter, safer tool can do the job
+- Aufgabe wirklich Desktop-GUI
+- Kein leichteres, sichereres Werkzeug reicht
 
-### 2. Watching means low risk?
+### 2. Ich schaue zu = kein Risiko?
 
-Human presence helps, but you can still:
+Sicheres, aber möglich:
 
-- Mis-click confirm dialogs
-- Open windows that should stay closed
-- Pull sensitive on-screen info into the workflow
+- Falscher Klick auf Bestätigen
+- Falsches Fenster
+- Sensible Screen-Infos in den Ablauf
 
-### 3. Replaces all GUI automation?
+### 3. Ersatz für alle GUI-Automation?
 
-Better for ad hoc help, flow verification, and API-less GUI steps—not stable long-running unattended production automation.
+Besser temporäre Hilfe, Flow-Prüfung, GUI-Schritte ohne API — nicht stabile, langfristige, unbeaufsichtigte Produktionsautomation.
 
-## Risk model
+## Risikomodell
 
-Computer Use is close to **handing keyboard and mouse to the Agent**:
+Fast wie **Tastatur und Maus dem Agent geben**:
 
-- Can open mail, chat, file manager
-- May mis-click confirmation dialogs
-- Screen may show sensitive notifications
+- Mail, Chat, Dateimanager öffnen
+- Bestätigungsdialoge falsch klicken
+- Notifications mit Sensiblem auf dem Screen
 
-Required reading: [permissions and approvals](/guide/foundations/permissions-and-approvals/), [sandbox and network](/guide/foundations/sandbox-and-network/)
+Pflicht: [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/), [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
 
-## When to consider it
+## Ob nutzen
 
-Usually unnecessary for:
+Nur Code, Tests, Webseite, Recherche → meist leichteres Werkzeug zuerst.
 
-- Editing code
-- Running tests
-- Viewing web pages
-- Research
+Erwägen wenn:
 
-Consider when you must:
+- Desktop-App muss bedient werden
+- Mehrere GUI-Fenster
+- UI, die Browser und Terminal nicht erreichen
 
-- Operate desktop applications
-- Span multiple GUI windows
-- Reach UI neither browser nor terminal can
+## Empfohlene Nutzung
 
-## Recommended usage
+1. **Dedizierte Umgebung**: VM oder Nebenkonto, keine Privacy-Fenster
+2. **Aufgabe minimal**: „Formel im Calculator prüfen“ nicht „alle Mails“
+3. **Human-in-the-loop**: sichtbar, jederzeit unterbrechbar
+4. **Aufnahme/Log**: Team-Retros (Aufnahmen auch sensibel)
+5. **Danach prüfen**: Dateisystem, Clipboard, offene Apps
 
-1. **Dedicated environment**: VM or secondary user; no private windows on screen
-2. **Minimize task**: "Verify formula in Calculator" not "handle all my email"
-3. **Human in the loop**: stay visible; ready to interrupt
-4. **Recording/logs**: team retrospectives (recordings may contain sensitive data)
-5. **Post-task check**: filesystem, clipboard, open applications
+Unternehmen können default deaktivieren — Managed Policy.
 
-Enterprise may disable by default—follow managed policy.
-
-## vs browser tool
+## Wahl vs. Browser
 
 ```text
-Only need a web page?        → browser tool
-Need apps outside IDE?       → Computer Use (more caution)
-Only code and tests?         → terminal + file tools
+Nur Webseite?           → Browser-Werkzeug
+App außerhalb IDE?      → Computer Use (vorsichtiger)
+Nur Code + Tests?       → Terminal + Dateiwerkzeug
 ```
 
-See [tool selection](/guide/tools/tool-selection/)
+Siehe [Werkzeugwahl](/guide/tools/tool-selection/)
 
-## Example prompt
+## Direkt nutzbare Formulierung
 
 ```text
-Only operate Calculator and the local test app. Do not open mail, chat, file manager, or any production admin UI.
-If a system confirmation appears, stop and explain before continuing.
+Nur Calculator und lokale Test-App; keine Mail, Chat, Dateimanager, Produktions-Backends.
+Bei System-Bestätigung zuerst stoppen und erklären, dann weiter.
 ```
 
-## Common mistakes
+## Häufige Fehler
 
-- Computer Use on main desktop with untrusted projects
-- Continuing while 2FA, banking, or customer data is on screen
-- Treating GUI automation as full test strategy
+- Computer Use untrusted Projekts auf dem Hauptdesktop
+- 2FA, Bank, Kundendaten auf dem Screen und weiter
+- GUI-Automation als volle Teststrategie
 
-## Acceptance checklist
+## Abnahmeliste
 
-- [ ] Enabled only in isolated environment
-- [ ] Prompt lists allowed apps and prohibitions
-- [ ] Post-task check: no unexpected files/network
-- [ ] Org policy allows the capability
+- [ ] Nur in isolierter Umgebung
+- [ ] Prompt: erlaubte Apps und Verbote
+- [ ] Nach Aufgabe keine unerwarteten Dateien/Netzverbindungen
+- [ ] Organisationspolicy erlaubt die Fähigkeit
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / Codex (version, region, and permission dependent)  
-**Verification basis:** OpenAI Help Center materials on Codex plans and desktop capabilities still list Computer Use; Business release notes confirm Codex Computer Use on Windows from 2026-05-29. This page summarizes risk model, use cases, and approval boundaries—not claiming universal default availability.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / Codex (Version, Region, Berechtigung)  
+**Prüfgrundlage:** OpenAI Help Center führt Computer Use weiterhin als Codex-bezogene Fähigkeit; Business-Release: ab 2026-05-29 Computer Use unter Windows. Hier nur Risikomodell, Szenarien und Freigabegrenzen — nicht „überall default verfügbar“.  
+**Zuletzt geprüft:** 2026-07-26

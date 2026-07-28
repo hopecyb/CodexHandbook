@@ -1,105 +1,109 @@
 ---
-title: Text and Code Files
-description: Have Codex read and write source, config, and documentation text files correctly.
+title: Text- und Codedateien
+description: "Quellcode, Config und Dokument-Textdateien mit Codex korrekt lesen und schreiben."
 locale: de
-source_locale: en
-source_revision: d8290a9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Most development work is **text and code files**: source, tests, config, Markdown. This page covers scoping changes, keeping style consistent, and merging safely.
+Die meisten Entwicklungsaufgaben landen bei **Text- und Codedateien**: Quellcode, Tests, Config, Markdown. Diese Seite: Umfang begrenzen, Stil halten, sicher mergen.
 
-The key is changing the right places the right way—without extra collateral edits.
+Wenn Codex Text oder Code ändert: am richtigen Ort, auf die richtige Weise — und nicht nebenbei zu viel.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- Correct paths and encoding
-- Organizing multi-file edits
-- Coordinating with formatters and linters
+- Änderungen auf korrektem Pfad und Encoding landen lassen
+- Mehrdatei-Edits organisieren
+- Abstimmung mit Formatter und Linter
 
-## File types and notes
+## Dateitypen und Hinweise
 
-| Type | Notes |
+| Typ | Achtung |
 |---|---|
-| Source `.ts` `.py` etc. | Follow `AGENTS.md` and existing patterns |
-| Config `.json` `.yaml` `.toml` | Easy to break structure; require valid syntax |
-| Docs `.md` | Relative links, mixed-language conventions |
-| Generated code | Clarify commit vs gitignore |
+| Quellcode `.ts` `.py` usw. | `AGENTS.md` und bestehende Muster folgen |
+| Config `.json` `.yaml` `.toml` | Struktur leicht kaputt; gültige Syntax verlangen |
+| Dokumente `.md` | Relative Links, gemischtsprachige Konventionen |
+| Generierter Code | Ob committen oder gitignore klarstellen |
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Kontext: [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
 
-## Why these files go wrong
+## Warum diese Dateien oft scheitern
 
-Often:
+Typische Problemstellen:
 
-- Writes to wrong files
-- Rewrites large areas for a small fix
-- Style diverges from project norms
-- Config syntax broken quietly
+- Falsche Datei beschrieben
+- Für eine kleine Änderung große Flächen umgeschrieben
+- Stil weicht vom Projekt ab
+- Config-Syntax still kaputt
 
-## Recommended prompt structure
+## Empfohlene Prompt-Struktur
 
 ```text
-Goal: <one line>
-Allowed edits: <path glob>
-Forbidden: lockfile, unrelated directories
-Style: match <example file>
-Done when: list changed files + run <test command>
+Ziel: <ein Satz>
+Erlaubt: <Pfad-Glob>
+Verboten: Lockfile, irrelevante Verzeichnisse
+Stil: wie <Beispieldatei>
+Fertig: geänderte Dateien listen + <Testbefehl> ausführen
 ```
 
-See [Task anatomy](/prompts/task-anatomy/)
+Siehe [Anatomie guter Aufgaben](/prompts/task-anatomy/)
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. “Fix this file” alone is usually thin
+### 1. Nur „ändere bitte diese Datei“
 
-Add:
+Meist zu wenig Information.
 
-- Allowed files
-- Off-limits files
-- Style reference
-- How to verify
+Besser ergänzen:
 
-### 2. Config is not “just text”
+- Welche Dateien erlaubt
+- Welche nicht anfassen
+- Stil-Referenz
+- Wie danach prüfen
 
-`.json`, `.yaml`, `.toml` often fail on structure, indentation, syntax.
+### 2. Config = normaler Text
 
-### 3. Bigger change ≠ faster
+Nein.
 
-Small, explainable, reviewable edits beat sweeping “while I’m here” refactors.
+Bei `.json`, `.yaml`, `.toml` scheitern oft Struktur, Einrückung, Syntax.
 
-## Encoding and line endings
+### 3. Je umfassender, desto sparsamer
 
-- Default **UTF-8**; declare special encodings in `AGENTS.md`
-- Match `.editorconfig` / `prettier` to avoid whole-file newline diffs
-- Large files: @ specific functions, not full rewrite
+Oft stabiler: „kleiner Umfang, erklärbar, reviewbar“ statt „nebenbei groß flächig optimieren“.
 
-## If you fear scope creep
+## Encoding und Zeilenenden
 
-Require:
+- Default **UTF-8**; Sonderfälle in `AGENTS.md` deklarieren
+- An `.editorconfig` / `prettier` halten — ganze Datei-Diffs wegen Zeilenenden vermeiden
+- Große Dateien abschnittsweise: @ auf konkrete Funktionen, nicht ganze Datei umschreiben
 
-1. List affected files first
-2. Minimal change for this task only
-3. Verification steps after edit
+## Wenn zu viel Änderung droht
 
-## Review focus
+Direkt verlangen:
 
-- [Review diffs](/guide/quality/review-diffs/): logic, scope, deletions
-- [Run tests](/guide/quality/run-tests/)
-- No unimplemented `TODO` placeholders left behind
+1. Zuerst sagen, welche Dateien betroffen sind
+2. Nur den Minimalumfang der Aufgabe
+3. Überprüfungsschritte nach Abschluss listen
 
-## Common mistakes
+## Review-Schwerpunkte
 
-- “Refactor the whole project” → hundreds of files
-- Text edit on binary or minified files
-- Doc links as absolute paths → 404 on site
+- [Diffs prüfen](/guide/quality/review-diffs/): Logik, Umfang, Löschungen
+- [Tests ausführen](/guide/quality/run-tests/)
+- Unbeabsichtigte `TODO`-Platzhalter ohne Umsetzung
 
-Text and code edits fail when scope sprawls and review is hard. State scope, style, and verification up front.
+## Häufige Fehler
+
+- „Ganzes Projekt refactoren“ → Hunderte Dateien
+- Binär- oder Minified-Dateien als Text erzwingen
+- Absolute Dokumentlinks → interne 404
+
+Text und Code scheitern oft an zu viel, zu verstreut, schwer reviewbar. Umfang, Stil und Überprüfung klar sagen spart viele Runden.
 
 ---
 
 **Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, task anatomy, review-diffs, and run-tests pages; stable principle: scope paths, match style, state verification.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Datei-/Ordnerkontext, Aufgabenanatomie, Diff-Review und Tests; diese Seite bestätigt nur das stabile Prinzip „Pfade begrenzen, Stil halten, Überprüfung vorab klären“.  
+**Zuletzt geprüft:** 2026-07-26

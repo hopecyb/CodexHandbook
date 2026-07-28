@@ -1,98 +1,99 @@
 ---
-title: Permissions and sandbox
-description: Understanding approvals, execution isolation, and network boundaries for safe Codex use.
+title: Berechtigungen und Sandbox
+description: "Freigabe, Ausführungsisolation und Netzwerkgrenzen verstehen — Codex sicher nutzen."
+locale: de
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 14
-locale: de
-source_locale: en
-source_revision: '8321753'
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Permissions and sandbox
+# Berechtigungen und Sandbox
 
-Codex should not perform high-risk actions without consent. **Approvals** are the key gate in human–agent collaboration; **sandbox** limits what filesystem and system capabilities the Agent can reach.
+Codex sollte riskante Operationen nicht ohne Zustimmung ausführen. **Freigabe** ist das zentrale Tor der Mensch-Maschine-Zusammenarbeit; die **Sandbox** begrenzt Dateisystem und Teile der Systemfähigkeiten, die der Agent erreichen kann.
 
-## What's covered
+## Inhalt dieser Seite
 
-Many people treat permissions, approvals, sandbox, and network access as the same "security settings."
+Viele, die „Berechtigung“, „Freigabe“, „Sandbox“ und „Netzwerkzugriff“ zum ersten Mal sehen, halten sie für ungefähr dasselbe — alles Sicherheitseinstellungen.
 
-The risky confusion: you think you only allowed it to continue—but you may have opened file writes, shell, or outbound network at once.
+Genau diese Vermischung ist riskant: Du denkst, du erlaubst nur „weiter“ — und öffnest dabei gleichzeitig Grenzen für Dateischreiben, Befehle oder externes Netz.
 
-This page separates the concepts so you know what each confirmation actually releases.
+Diese Seite trennt die Begriffe, damit du bei jeder Bestätigung weißt, was wirklich freigegeben wird.
 
-## Separate the concepts
+## Diese Begriffe zuerst trennen
 
-Think of them as:
+So kannst du sie aufteilen:
 
-- **Approval**: whether it must ask you first
-- **Sandbox**: even if allowed, what it can touch at most
-- **Network access**: whether information can leave or be pulled from outside
+- **Freigabe**: Soll es dich zuerst fragen?
+- **Sandbox**: Selbst wenn es will — wohin darf es höchstens greifen?
+- **Netzwerkzugriff**: Darf Information nach draußen — oder von draußen geholt werden?
 
-They interact—but they are not the same thing.
+Sie wirken gemeinsam aufs Ergebnis — sind aber nicht dasselbe.
 
-## What you usually need to care about
+## Worauf du meist achten solltest
 
-- Read/write outside the current project path
-- Whether network is allowed
-- Whether specific shell commands are allowed
-- Whether the team enforces mandatory policy (managed config)
+- Darf es Pfade außerhalb des aktuellen Projekts lesen/schreiben?
+- Darf es online gehen?
+- Darf es bestimmte Shell-Befehle ausführen?
+- Hat das Team verpflichtende Politiken ausgegeben (Managed Config)?
 
-## Sandbox and network
+## Sandbox und Netzwerk
 
-**Sandbox** reduces accidental blast radius. **Network access** is another risk layer: exfiltrating sensitive prompt content or pulling untrusted data.
+Die **Sandbox** verkleinert die Fläche für Fehlbedienung. **Netzwerkzugriff** ist eine weitere Risikoebene: Sensible Prompt-Inhalte können abfließen, oder unzuverlässige Daten können hereinkommen.
 
-When starting out:
+Am Anfang oft so:
 
-1. For first practice, disable unnecessary network or allow only what you clearly need
-2. Do not put production secrets in practice projects
-3. When you see "needs network / write sensitive path," pause, read, then approve
+1. Erste Übung: unnötiges Netz aus oder nur klar benötigten Zugriff erlauben
+2. Keine Produktions-Secrets in Übungsprojekte
+3. Bei „ins Netz / sensible Pfade schreiben“ erst verstehen, dann freigeben
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### A prompt does not always mean danger
+### Ein Dialog heißt nicht automatisch Gefahr
 
-Many normal operations trigger approval:
+Viele normale Operationen lösen Freigabe aus, z. B.:
 
-- Installing dependencies
-- Writing outside project directory
-- Opening browser or system apps
-- Accessing external sites or APIs
+- Abhängigkeiten installieren
+- Außerhalb des Projekts schreiben
+- Browser oder System-Apps öffnen
+- Externe Websites oder APIs anfassen
 
-Judge whether the step is **required for the current task**—not only whether a dialog appeared.
+Entscheidend ist: **Braucht der aktuelle Schritt diese Aktion wirklich?** Nicht nur, ob ein Dialog erscheint.
 
-### No prompt does not mean zero risk
+### Kein Dialog = kein Risiko
 
-If sandbox already allows an action—or you previously relaxed rules—Codex may not ask again.
+Erlaubt die aktuelle Sandbox eine Operationsklasse schon, oder hast du Regeln früher gelockert, fragt Codex vielleicht nicht erneut.
 
-Do not rely only on "was there a dialog"; check how the environment is configured.
+Risiko nur am Dialog festzumachen reicht nicht — auch die Umgebungskonfiguration zählen.
 
-## When you see a permission request
+## Bei Berechtigungsanfragen so urteilen
 
-Ask three questions:
+Bei jeder berechtigungsbezogenen Anfrage drei Fragen:
 
-1. Is this step necessary to finish the current task?
-2. Does the data or path exceed what I expected?
-3. If it goes wrong, do I know how to undo or recover?
+1. Ist dieser Schritt für die aktuelle Aufgabe nötig?
+2. Gehen Daten oder Pfade über das hinaus, was ich erwartet habe?
+3. Weiß ich bei Fehlern, wie ich rückgängig mache oder nachbessere?
 
-If you cannot answer two of three, do not approve—ask Codex why the step is needed.
+Fehlen zwei von drei Antworten: Nicht freigeben — zuerst erklären lassen, warum dieser Schritt nötig ist.
 
-## Layered guide
+## Schichten
 
-| Layer | What it covers | Where to read |
+| Schicht | Inhalt | Wo lesen |
 |---|---|---|
-| Concepts (this page) | Why approvals and isolation matter | — |
-| Product differences | How each client prompts | [CLI approvals and sandbox](/guide/cli/approvals-and-sandbox/) · [Desktop App settings](/guide/desktop-app/settings/) |
-| Prompt strategy | Declaring boundaries in tasks | [Constraints and boundaries](/prompts/constraints-and-boundaries/) |
+| Konzept (diese Seite) | Warum Freigabe und Isolation nötig sind | — |
+| Produktunterschiede | Wie Einstiege Bestätigungen zeigen | [CLI Freigaben und Sandbox](/guide/cli/approvals-and-sandbox/) · [Desktop-App-Einstellungen](/guide/desktop-app/settings/) |
+| Prompt-Strategie | Wie du Berechtigungsgrenzen in der Aufgabe angibst | [Einschränkungen und Grenzen](/prompts/constraints-and-boundaries/) |
 
-Official policy and defaults may change—verify at [OpenAI Codex](https://developers.openai.com/codex).
+Offizielle Politiken und Defaults können sich ändern — prüfe [OpenAI Codex](https://developers.openai.com/codex).
 
-Approval asks whether to continue; sandbox limits how far continuing can go. Read both together for clearer boundaries.
+Freigabe fragt „soll es weiter?“; Sandbox begrenzt „auch wenn weiter — wie weit höchstens?“. Beide Schichten zusammen machen die Grenze klarer.
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers still provides official Codex entry; this page explains approvals, sandbox, and network as distinct boundaries and points to product chapters without claiming current defaults or exact permission matrices.  
-**Last verified:** 2026-07-26
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Überprüfungsgrundlage:** OpenAI Developers stellt weiterhin den offiziellen Codex-Einstieg bereit; diese Seite erklärt nur, dass Freigabe, Sandbox und Netzwerkzugriff unterschiedliche Sicherheitsgrenzen sind, und verweist auf Produktkapitel für konkretes Verhalten — ohne aktuelle Defaults oder eine präzise Berechtigungsmatrix zu behaupten.  
+**Zuletzt überprüft:** 2026-07-26

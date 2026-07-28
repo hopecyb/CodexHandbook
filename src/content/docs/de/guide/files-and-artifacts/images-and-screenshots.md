@@ -1,127 +1,130 @@
 ---
-title: Images and Screenshots
-description: Provide screenshots and design inputs to Codex; manage image files in tasks.
+title: Bilder und Screenshots
+description: "Screenshots und Designs an Codex geben und Bilddateien in Aufgaben verwalten."
 locale: de
-source_locale: en
-source_revision: 79bbcdd
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Images let the Agent **see** UI issues, design intent, or whiteboard sketches. This page covers input (images you provide) and image files in the repo; for generating new images see [Image generation](/guide/tools/image-generation/).
+Bilder lassen den Agent UI-Probleme, Designabsicht oder Whiteboard-Skizzen **sehen**. Diese Seite: Input (Ihre Bilder) und Bildverwaltung im Repo; neue Bilder erzeugen: [Bildgenerierung](/guide/tools/image-generation/).
 
-When tasking with screenshots, say what to look at and why it matters.
+Bei Screenshot-Aufgaben: klar sagen, wohin geschaut werden soll und warum dort ein Problem liegt.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- How to attach screenshots effectively
-- Using design exports / Figma
-- Image size in repo and context
+- Screenshots möglichst wirksam anhängen
+- Design-/Figma-Exports nutzen
+- Volumen von Bildern in Repo und Kontext
 
-## Input image scenarios
+## Szenarien für Bild-Input
 
-| Scenario | Approach |
+| Szenario | Vorgehen |
 |---|---|
-| UI bug | Screenshot + text marking the problem area |
-| Design implementation | Exported PNG + breakpoints and component library |
-| Architecture whiteboard | Clear photo or export + legend |
-| Error dialog | Full error text visible—not a cropped corner |
+| UI-Bug | Screenshot + Textmarkierung der Anomalie |
+| Design-Umsetzung | PNG-Export + Breakpoints und Komponentenbibliothek |
+| Architektur-Whiteboard | klares Foto/Export + Legende |
+| Fehlerdialog | vollständiger Fehlertext, nicht nur eine Ecke |
 
-Deep dive: [Prompting with images](/prompts/prompting-with-images/)
+Vertiefung: [Prompting mit Bildern](/prompts/prompting-with-images/)
 
-## What images actually add
+## Was Bilder wirklich ergänzen
 
-Best for information that is hard in words alone:
+Wertvoll, wo Text schwer beschreibt:
 
-- How layout is wrong
-- Where a button is squeezed
-- What a dialog says
+- Wie schief das Layout wirklich ist
+- Wohin der Button gequetscht ist
+- Was der Dialog genau sagt
 
-Images do not automatically tell Codex:
+Bilder sagen Codex aber nicht automatisch:
 
-- What you care about most
-- Expected change
-- Whether this is “current” or “target”
+- Welchen Bereich Sie am meisten meinen
+- Wie geändert werden soll
+- Ob „Ist-Zustand“ oder „Soll-Zustand“
 
-Pair images with a direct sentence.
+Deshalb meist ein klarer Begleitsatz nötig.
 
-## Quality requirements
+## Qualitätsanforderungen
 
-- **Resolution**: text readable; avoid blurry thumbnails
-- **Crop**: remove irrelevant desktop, sensitive notification bar
-- **Annotation**: arrows/circles OK—repeat key points in text
-- **Multiple images**: pair “current / expected”
+- **Auflösung**: Text lesbar, keine unscharfen Thumbnails
+- **Zuschnitt**: irrelevanter Desktop, sensible Notification-Leisten weg
+- **Annotation**: Pfeile/Kreise ok, kritische Punkte zusätzlich in Text
+- **Mehrere Bilder**: als „Ist / Soll“-Paare hochladen
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Screenshot ≠ automatic understanding
+### 1. Screenshot gesendet ≠ Problem automatisch verstanden
 
-Screenshots are evidence—you still need:
+Visueller Beleg ja — trotzdem ergänzen:
 
-- Where the problem is
-- What you want changed
-- Which image is current vs target
+- Wo das Problem
+- Was gewünscht
+- Welche Ist, welche Soll
 
-### 2. Bigger is not always better
+### 2. Größer = immer klarer?
 
-Huge originals add noise and bloat repo/context.
+Zu große Originale:
 
-### 3. Design image alone is not enough
+- zu viel Irrelevantes
+- Repo-/Kontextvolumen schwer
 
-For “implement from design,” also specify:
+### 3. Nur Designbild reicht nicht
 
-- Breakpoints
-- Component constraints
-- What is fixed vs flexible
+Bei „nach Bild umsetzen“ besser:
 
-## Images in the repo
+- Breakpoint-Anforderungen
+- Komponentenconstraints
+- Was frei, was nicht
 
-| Practice | Why |
+## Bilder im Repo
+
+| Praxis | Grund |
 |---|---|
-| Unified `assets/` or `docs/images/` | Easier maintenance |
-| WebP/compression | Control clone size |
-| Meaningful filenames | `login-form-mobile.png` not `image1.png` |
-| Alt text (in docs) | Accessibility |
+| Einheitlich `assets/` oder `docs/images/` | Wartbar |
+| WebP/Kompression | Clone-Volumen |
+| Sinnvolle Dateinamen | `login-form-mobile.png` statt `image1.png` |
+| Alt-Text (in Docs) | Barrierefreiheit |
 
-## Copy-paste prompt pattern
+## Direkt nutzbare Formulierung
 
 ```text
-First image is current page, second is desired result.
-Focus on hero title area and button spacing.
-Do not infer business logic from screenshots—layout and visuals only.
+Bild 1 = aktuelle Seite, Bild 2 = gewünschter Effekt.
+Bitte Fokus auf Hero-Titelbereich und Button-Abstände.
+Keine Geschäftslogik aus dem Screenshot raten — nur Visual und Layout.
 ```
 
-## Privacy and security
+## Privacy und Sicherheit
 
-- Screenshots may contain customer data, internal URLs, tokens—redact first
-- Do not send config screens with secrets to untrusted tasks
-- [Sensitive context](/guide/context/sensitive-context/)
+- Screenshots können Kundendaten, interne URLs, Token enthalten — zuerst schwärzen
+- Keine Config-UIs mit Secrets an untrusted Aufgaben
+- [Sensibler Kontext](/guide/context/sensitive-context/)
 
-## Reference sources
+## Quellen
 
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
 
-## Verification
+## Abnahme
 
-For “implement from image” tasks:
+Bei „nach Bild umsetzen“:
 
-1. Side-by-side compare implementation and reference (or [Browser tool](/guide/tools/browser/))
-2. Check responsive and dark mode if required
-3. [Verify artifacts](/guide/quality/verify-artifacts/)
+1. Umsetzung und Referenz nebeneinander (oder Seite mit [Browser-Werkzeug](/guide/tools/browser/) öffnen)
+2. Responsive und Dark Mode prüfen (falls gefordert)
+3. [Artefakte überprüfen](/guide/quality/verify-artifacts/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Design only, no interaction notes
-- Commit 4K originals
-- Assume model reads Figma links without export
+- Nur Design, keine Interaktionshinweise
+- 4K-Original direkt committen
+- Annehmen, das Modell liest Figma-Links ohne Export
 
-Good screenshots are clear image, clear focus, clear expectation—not just “there is a picture.”
+Gute Screenshots sind mehr als „Bild da“. Bild klar, Fokus klar, Erwartung klar — dann trifft die Aufgabe eher.
 
 ---
 
 **Status:** verified  
-**Products:** App / Cloud  
-**Verification basis:** Cross-checked against OpenAI official image input and file upload materials for screenshot upload, annotation, file size, and privacy; no version-specific UI steps retained in body.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / Cloud  
+**Prüfgrundlage:** Geprüft gegen offizielle OpenAI-Materialien zu Bild-Input und Datei-Upload (Upload, Fokusmarkierung, Volumen, Privacy); keine versionsgebundenen UI-Schritte im Text.  
+**Zuletzt geprüft:** 2026-07-26

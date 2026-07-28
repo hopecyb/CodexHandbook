@@ -1,216 +1,216 @@
 ---
-title: Choosing the Right Mechanism
-description: A decision framework for where temporary prompts, AGENTS.md, memory, Skills, and MCP belong.
+title: Den richtigen Mechanismus wählen
+description: "Temporärer Prompt, AGENTS.md, Erinnerung, Skill, MCP — wohin gehört welche Schicht; ein Entscheidungsrahmen."
 locale: de
-source_locale: en
-source_revision: e6e6e54
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many team problems come from **putting the same information in the wrong place**: rules that belong in the repo go into chat, reusable workflows that should be Skills get stuffed into `AGENTS.md`, and read-only data access is handed to a high-privilege MCP.
+Viele Teamprobleme entstehen, weil **dieselbe Information am falschen Ort** landet: Repo-Regeln landen im Chat, Skill-taugliche Abläufe in `AGENTS.md`, und Daten, die nur lesend angebunden werden sollten, bekommen ein hochprivilegiertes MCP.
 
-This page focuses on a practical question:
+Hier geht es um eine praktische Frage:
 
-> When you realize “this will keep happening,” which layer should you sink it into?
+> Wenn Sie merken „das wird wiederkehren“, auf welche Schicht soll es wandern?
 
-## Quick Table
+## Kurztabelle
 
-| Mechanism | Best for |
+| Mechanismus | Am besten geeignet für |
 |---|---|
-| One-off prompt | Goals, constraints, and acceptance criteria for this task only |
-| `AGENTS.md` | Repo-level collaboration rules and long-term constraints |
-| Memory | Personal preferences or a small set of non-sensitive, cross-session repeated facts |
-| Skill | Reusable workflows, checklists, and specialized playbooks |
-| MCP | Access to external tools, data sources, and system capabilities |
+| Einmal-Prompt | Ziel, Constraints und Abnahmekriterien nur für diese Aufgabe |
+| `AGENTS.md` | Repo-weite Kollaborationsregeln und langfristige Constraints |
+| Erinnerung | Persönliche Vorlieben oder wenige nicht-sensible, sessionübergreifende Fakten |
+| Skill | Wiederverwendbare Workflows, Checklisten, Spezialroutinen |
+| MCP | Zugriff auf externe Werkzeuge, Datenquellen und Systemfähigkeiten |
 
-If this table is not enough, keep reading.
+Reicht die Tabelle nicht, lesen Sie weiter.
 
-## Five-Step Decision Method
+## Fünf-Schritte-Entscheidung
 
-### 1. Information that applies only to the current task
+### 1. Information gilt nur für die aktuelle Aufgabe
 
-Put this kind of information in **this prompt** first.
+Solche Informationen gehören zuerst in den **aktuellen Prompt**.
 
-Good fits:
+Geeignet:
 
-- “Only change `docs/` this time; do not touch code”
-- “Output a Chinese summary and end with one question to confirm”
-- “Analyze the cause first; do not change files immediately”
+- „Diesmal nur `docs/` ändern, keinen Code anfassen“
+- „Deutsche Zusammenfassung ausgeben, am Ende eine offene Frage“
+- „Zuerst Ursachen analysieren, Dateien nicht sofort ändern“
 
-Poor fits:
+Nicht geeignet:
 
-- The team always requires `pnpm test`
-- Repo no-go directories
-- Every PR review must follow the same template
+- Das Team verlangt langfristig `pnpm test`
+- Verzeichnisse, die im Repo nicht geändert werden dürfen
+- Jede PR-Prüfung folgt derselben Ausgabevorlage
 
-Those long-term rules should sink further down.
+Solche langfristigen Regeln sollten weiter „absinken“.
 
-### 2. Is this a project collaboration rule or a personal habit?
+### 2. Projekt-Kollaborationsregel oder persönliche Gewohnheit?
 
-If it is something **every collaborator should know**, put it in [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+Geht es um **Regeln, die alle Mitwirkenden kennen sollten**, gehört das in [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
 
-For example:
+Zum Beispiel:
 
-- Test, lint, and build commands
-- Which directories must not be touched
-- Commit message or PR acceptance rules
-- Special conventions for different subdirectories in a monorepo
+- Test-, Lint- und Build-Befehle
+- Welche Verzeichnisse unantastbar sind
+- Commit-Message- oder PR-Abnahmeregeln
+- Spezialnormen in Monorepo-Unterverzeichnissen
 
-If it is only **your preference**—for example, “explain in Chinese” or “conclusion first, then details”—[memory](/guide/customization/memories-and-persistent-context/) or personal configuration is a better fit.
+Geht es nur um **Ihre Vorlieben** — etwa „Erklärung auf Deutsch“, „zuerst Fazit, dann Details“ — passen [Erinnerung](/guide/customization/memories-and-persistent-context/) oder persönliche Konfiguration besser.
 
-Use this rule of thumb:
+Faustregel:
 
-- If it should go through PR review, prefer the repo
-- If others not seeing it is fine, consider the personal layer
+- Was in die PR-Review gehört → bevorzugt ins Repo
+- Was andere nicht sehen müssen → erst dann die persönliche Schicht erwägen
 
-### 3. Is this a “rule” or a “procedure”?
+### 3. „Regel“ oder „Schritte“?
 
-Many docs are hard to use because they mix rules and steps.
+Viele Dokumente funktionieren schlecht, weil Regeln und Schritte vermischt sind.
 
-| If it is… | Better fit |
+| Wenn es … ist | Besser geeignet |
 |---|---|
-| “Do not push directly to main” | `AGENTS.md` |
-| “When reviewing, check tests first, then risk, then regression” | Skill |
-| “Run these 4 commands before release” | Skill or script |
-| “Only allow read-only issue data access” | MCP + permission configuration |
+| „Nicht direkt nach main pushen“ | `AGENTS.md` |
+| „Bei Review zuerst Tests, dann Risiken, dann Regression“ | Skill |
+| „Vor dem Release diese 4 Befehle“ | Skill oder Skript |
+| „Nur Lesezugriff auf Issue-Daten“ | MCP + Berechtigungskonfiguration |
 
-When deciding, focus on these two points:
+Zuerst diese beiden Punkte greifen:
 
-- **Rules** answer “what is allowed and what is not”
-- **Steps** answer “how this kind of work is usually done”
+- **Regeln** beantworten „was darf / was darf nicht“
+- **Schritte** beantworten „wie macht man so etwas üblicherweise“
 
-Reusable steps usually fit better as a [Skill](/skills/overview/).
+Wiederverwendbare Schritte eignen sich meist besser als [Skill](/skills/overview/).
 
-## Common Combinations, Not Either/Or
+## Häufige Kombinationen statt Entweder-oder
 
-Mature teams usually do not use only one mechanism; they combine them.
+Reife Teams nutzen selten nur einen Mechanismus — sie kombinieren.
 
-### Combination 1: `AGENTS.md` + Skill
+### Kombination 1: `AGENTS.md` + Skill
 
-Good for: code review, release checks, incident triage.
+Geeignet: Code-Review, Release-Checks, Incident-Triage.
 
-Division of labor:
+Aufteilung:
 
-- `AGENTS.md` holds hard constraints: no auto-merge, which checks must run
-- Skill holds the process: how to review, what template to output, how to grade issues
+- `AGENTS.md` schreibt harte Constraints: kein Auto-Merge, welche Checks Pflicht sind
+- Skill schreibt den Ablauf: wie prüfen, nach welchem Template ausgeben, wie Probleme einstufen
 
-### Combination 2: Skill + MCP
+### Kombination 2: Skill + MCP
 
-Good for: reading tickets, querying databases, pulling design files, generating weekly reports.
+Geeignet: Tickets lesen, Datenbank abfragen, Designs holen, Wochenberichte erzeugen.
 
-Division of labor:
+Aufteilung:
 
-- Skill defines execution order and output format
-- MCP provides “what can be connected to, queried, and changed”
+- Skill definiert Reihenfolge und Ausgabeformat
+- MCP liefert „wohin verbinden, was lesen, was ändern“
 
-You can think of them separately:
+Getrennt denken:
 
-> A Skill is like a work instruction; MCP is like the toolbox you plug in.
+> Skill ist die Arbeitsanweisung, MCP der angeschlossene Werkzeugkasten.
 
-### Combination 3: `AGENTS.md` + memory
+### Kombination 3: `AGENTS.md` + Erinnerung
 
-Good for: stable team rules with different personal expression habits.
+Geeignet: Teamregeln sind stabil, Ausdrucksgewohnheiten unterscheiden sich.
 
-Division of labor:
+Aufteilung:
 
-- `AGENTS.md` holds shared team norms
-- Memory keeps personal preferences such as language, explanation style, and default output structure
+- `AGENTS.md` schreibt gemeinsame Teamnormen
+- Erinnerung hält persönliche Vorlieben: Sprache, Erklärstil, Standard-Ausgabe struktur
 
-Do not do it the other way around. Team rules should not live only in one person’s memory.
+Nicht umkehren. Teamregeln dürfen nicht nur in einer privaten Erinnerung leben.
 
-## A More Practical Decision Matrix
+## Praktischere Entscheidungsmatrix
 
-| Question | Yes | No |
+| Frage | Ja | Nein |
 |---|---|---|
-| Affects only the current task? | Prompt | Keep deciding |
-| Everyone should follow it? | `AGENTS.md` / project configuration | Keep deciding |
-| A repeatable workflow? | Skill | Keep deciding |
-| Needs live external data or actions? | MCP | Keep deciding |
-| Only a personal long-term preference? | Memory / user configuration | Prompt |
+| Betrifft nur die aktuelle Aufgabe? | Prompt | Weiter prüfen |
+| Sollen alle das einhalten? | `AGENTS.md` / Projektkonfiguration | Weiter prüfen |
+| Wiederholbarer Ablauf? | Skill | Weiter prüfen |
+| Braucht Live-Daten oder externe Aktionen? | MCP | Weiter prüfen |
+| Nur langfristige persönliche Vorliebe? | Erinnerung / Benutzerkonfiguration | Prompt |
 
-When a requirement lands in two columns at once, that usually means you should **split layers** instead of forcing everything into one place.
+Landet eine Anforderung in beiden Spalten, heißt das meist: **Schichten trennen**, nicht alles an einem Ort stopfen.
 
-## Three Typical Examples
+## Drei typische Beispiele
 
-### Example 1: The team keeps forgetting regression tests
+### Beispiel 1: Das Team vergisst Regressionstests
 
-Do not only say “remember to run tests” in chat.
+Nicht nur im Chat „bitte Tests laufen lassen“ sagen.
 
-A steadier approach:
+Stabiler:
 
-1. Write in `AGENTS.md`: “business-logic changes must run `pnpm test`”
-2. If the flow is complex, add a test-execution Skill
-3. Use CI as the final backstop
+1. In `AGENTS.md` festschreiben: „Bei Geschäftslogik-Änderungen `pnpm test` ausführen“
+2. Bei komplexem Ablauf einen Test-Skill ergänzen
+3. CI als letzte Absicherung
 
-### Example 2: Every PR review should follow the same output format
+### Beispiel 2: Bei jeder PR-Review soll Codex dasselbe Format ausgeben
 
-Do not paste the whole template every time.
+Nicht jedes Mal die ganze Vorlage einfügen.
 
-A steadier approach:
+Stabiler:
 
-1. Turn the output structure into a Skill
-2. In `description`, make clear “use when the user says review, audit, or pre-merge check”
-3. If the team uses it uniformly, add the Skill path to project docs
+1. Ausgabe struktur als Skill
+2. In der `description` klarstellen: „bei review, Prüfung, Pre-Merge-Check verwenden“
+3. Bei Team-Standard den Skill-Pfad in die Projektdoku aufnehmen
 
-### Example 3: Need to read Linear tickets before changing code
+### Beispiel 3: Linear-Ticket lesen und dann Code ändern
 
-Do not paste API tokens into the conversation.
+Keine API-Token in den Chat kleben.
 
-A steadier approach:
+Stabiler:
 
-1. Connect Linear through MCP
-2. Default to read-only permissions
-3. If you want a fixed flow, use a Skill to require “read ticket first, then code, then propose a plan”
+1. Linear per MCP anbinden
+2. Standard: nur Lese-Berechtigung
+3. Für feste Abläufe per Skill: „zuerst Ticket, dann Code, dann Vorschlag“
 
-## Easiest Pitfalls
+## Typische Fallen
 
-### Turning `AGENTS.md` into an encyclopedia
+### `AGENTS.md` zur Enzyklopädie machen
 
-The result is that hard constraints are not visible, and the commands and no-go areas that matter most get buried. `AGENTS.md` works better when it is short, hard, and executable.
+Harte Constraints verschwinden; wichtige Befehle und Tabuzonen gehen unter. `AGENTS.md` sollte kurz, hart und ausführbar sein.
 
-### Using a Skill as a “universal junk drawer”
+### Skill als „Universalschublade“
 
-One Skill that holds review, release, debugging, and daily reports becomes hard to trigger and hard to maintain.
+Ein Skill für Review, Release, Debug und Tagesbericht zugleich — schwer auszulösen und schwer zu pflegen.
 
-### Treating MCP as the default answer
+### MCP als Standardantwort
 
-If the repo already has the information, you do not need an external tool just to look “advanced.” MCP is capability extension, not a complexity reward.
+Was direkt aus dem Repo lesbar ist, braucht kein externes Werkzeug „der Eleganz wegen“. MCP erweitert Fähigkeiten — es ist kein Komplexitätspreis.
 
-### Letting memory carry team facts
+### Erinnerung als Träger von Teamfakten
 
-Whoever’s account remembers it owns the rule; when they leave or change machines, the rule disappears. That information should go back to the repo.
+Wer es auf dem Konto speichert, verliert die Regel beim Weggang oder Gerätewechsel. Solche Informationen gehören zurück ins Repo.
 
-## Recommended Rollout Order
+## Empfohlene Einführungsreihenfolge
 
-If the team is still messy, you can converge in this order:
+Wenn das Team noch unordentlich ist, so konvergieren:
 
-1. Write a minimum viable `AGENTS.md` first
-2. Turn flows repeated three or more times into Skills
-3. Introduce MCP only when you truly need external systems
-4. Finally organize personal memory and preferences
+1. Zuerst eine minimal nutzbare `AGENTS.md`
+2. Abläufe, die dreimal wiederkehren, zu Skills verdichten
+3. MCP nur bei echtem Bedarf an externe Systeme
+4. Zuletzt persönliche Erinnerungen und Vorlieben sortieren
 
-This makes it easier to stabilize **collaboration consensus** first, then expand capabilities.
+So stabilisieren Sie zuerst den **Kollaborationskonsens**, dann erweitern Sie Fähigkeiten.
 
-## Further Reading
+## Weiterlesen
 
-- [What Is AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/)
-- [Skills Overview](/skills/overview/)
-- [MCP Overview](/skills/mcp/mcp-overview/)
-- [Choosing an Extension Method](/skills/choosing-an-extension-method/)
+- [Was ist AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+- [Erinnerungen und persistenter Kontext](/guide/customization/memories-and-persistent-context/)
+- [Skills-Überblick](/skills/overview/)
+- [MCP-Überblick](/skills/mcp/mcp-overview/)
+- [Erweiterungsmethode wählen](/skills/choosing-an-extension-method/)
 
-## References
+## Quellen
 
-- OpenAI Codex official documentation (per current version)
-- freestylefly/CodexGuide AGENTS/Skill organization approach
-- KimYx0207 *AI-Coding-Guide-Zh* Codex extension and automation topics
+- Offizielle OpenAI-Codex-Dokumentation (jeweils aktuelle Version)
+- freestylefly/CodexGuide: Organisationsideen zu AGENTS/Skill
+- KimYx0207《AI-Coding-Guide-Zh》Codex: Erweiterung und Automatisierung
 - stormzhang `11-agents-md.md`, `19-memory.md`, `20-mcp.md`, `22-skills.md`
 - [codex.bozhouai.com](https://codex.bozhouai.com/)
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s verified `AGENTS.md`, context, Skills, MCP, and quality chapters; this page keeps only the stable decision framework that temporary requirements, project rules, personal preferences, workflow packaging, and external capabilities should be stored in separate layers.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen die bereits verifizierten Kapitel zu `AGENTS.md`, Kontext, Skills, MCP und Qualität; diese Seite behält nur den stabilen Entscheidungsrahmen „temporäre Anforderungen, Projektregeln, persönliche Vorlieben, Ablaufkapselung und externe Fähigkeiten gehören in Schichten“.  
+**Zuletzt geprüft:** 2026-07-26

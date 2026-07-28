@@ -1,38 +1,38 @@
 ---
-title: 'Example: Research Skill'
-description: Example research Skill with citations and "needs confirmation" markers.
+title: "Beispiel: Forschungs-Skill"
+description: Recherche-Skill mit Quellenangaben und „zu bestätigen“-Markierungen.
 locale: de
-source_locale: en
-source_revision: c37acf0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Research Skill
+# Beispiel: Forschungs-Skill
 
-## SKILL.md skeleton
+## SKILL.md-Skelett
 
 ```md
 ---
 name: source-backed-research
-description: Technical research and comparison tables with URL/file path citations. Use when the user needs selection, competitive analysis, or literature review.
+description: "Technische Recherche und Vergleichstabellen mit URL-/Dateipfad-Quellen. Nutzen bei Auswahl, Wettbewerbsanalyse oder Literaturübersicht."
 ---
 
-## Process
-1. Clarify research question and exclusions
-2. List evaluation dimensions (3–5)
-3. Attach a source to each conclusion; mark unverifiable items "needs confirmation"
-4. Output comparison table + recommendation + open questions
-5. Do not change code
+## Ablauf
+1. Forschungsfrage und Ausschlüsse klären
+2. Bewertungsdimensionen listen (3–5)
+3. Jeder Schluss mit Quelle; nicht prüfbar → „zu bestätigen“
+4. Vergleichstabelle + Empfehlung + offene Fragen
+5. Keinen Code ändern
 ```
 
-## Related
+## Verwandt
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Research template](/prompts/templates/research/)
+- [Recherche-Fall](/cases/research-with-sources/)
+- [Recherche-Vorlage](/prompts/templates/research/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative research Skill skeleton emphasizing citations and "needs confirmation" markers—consistent with general Codex/Skills workflow usage.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Illustratives Forschungs-Skill-Skelett mit Quellen und „zu bestätigen“; passt zu gängigen Codex/Skills-Workflows.  
+**Zuletzt geprüft:** 2026-07-26

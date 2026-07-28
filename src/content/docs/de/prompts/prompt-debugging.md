@@ -1,101 +1,102 @@
 ---
-title: Prompt debugging
-description: How to locate prompt problems when results drift.
+title: Prompt-Debugging
+description: Bei abweichenden Ergebnissen Prompt-Probleme eingrenzen.
 locale: de
-source_locale: en
-source_revision: 6b34687
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When results are wrong, common causes include:
+Wenn das Ergebnis nicht passt, oft weil:
 
-- goal not written as a checkable outcome
-- constraints unclear
-- context incomplete or stale
-- task too large without asking for a plan first
+- Ziel nicht als prüfbares Ergebnis geschrieben
+- Constraints unklar
+- Kontext unvollständig oder veraltet
+- Aufgabe zu groß, ohne zuerst Plan zu verlangen
 
-Prompt debugging finds which layer of information was lost.
+Prompt-Debugging heißt: herausfinden, **welche Informationsebene fehlt**.
 
-## Locate the problem first
+## Zuerst lokalisieren
 
-When output drifts, you don't always need to start over. Find which layer failed:
+Bei Abweichung nicht sofort alles neu schreiben. Erst die Ebene finden:
 
-1. unclear goal?
-2. scope out of control?
-3. insufficient context?
-4. task too big?
-5. wrong tool path chosen?
+1. Ziel unklar?
+2. Scope außer Kontrolle?
+3. Kontext unzureichend?
+4. Aufgabe zu groß?
+5. Oder falsche Werkzeugroute?
 
-## When results are wrong, ask in order:
+## Bei falschem Ergebnis der Reihe nach:
 
-1. Is the goal checkable?
-2. Are constraints clear? Did the Agent see them?
-3. Is context stale or conflicting? (compaction / old thread)
-4. Should you have asked for a plan first?
-5. Wrong tools? (network when it shouldn't, etc.)
+1. Ist das Ziel prüfbar?
+2. Sind Constraints klar? Hat der Agent sie gesehen?
+3. Ist der Kontext veraltet oder widersprüchlich? (Komprimierung / alter Thread)
+4. Sollte zuerst ein Plan kommen?
+5. Falsches Werkzeug? (nicht online gehen, aber online gegangen)
 
-## What each question checks
+## Was jede Frage prüft
 
-### 1. Is the goal checkable?
+### 1. Ist das Ziel prüfbar
 
-Vague goals like "optimize a bit" commonly produce drift.
+Sehr vage Ziele wie „optimieren“ führen oft zu Abweichung.
 
-### 2. Are constraints clear?
+### 2. Sind Constraints klar
 
-Much "overdoing" comes from not stating where to stop—not from inability.
+Viele „zu weit gegangen“-Fälle: nicht Unfähigkeit, sondern fehlendes „nur bis hier“.
 
-### 3. Is context stale or conflicting?
+### 3. Kontext veraltet oder widersprüchlich
 
-Especially in long threads:
+Besonders in langen Threads:
 
-- you said A earlier
-- later you added B
-- the Agent holds a mixed state
+- früher A gesagt
+- später B ergänzt
+- aktuell: Mischzustand
 
-### 4. Should you have asked for a plan first?
+### 4. Zuerst Plan verlangen?
 
-Large tasks executed directly often deviate more than planned work.
+Große Aufgaben: Direktausführung weicht häufiger ab als Plan zuerst.
 
-### 5. Wrong tools?
+### 5. Falsches Werkzeug
 
-Local code focus but it searched the web; or you wanted cited research but it answered from memory.
+Soll lokal bleiben, sucht aber im Netz; soll Quellenforschung, antwortet aus dem Bauch.
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Bad results mean the whole prompt is trash
+### 1. Falsches Ergebnis = ganzer Prompt weg
 
-Often you only need a small addition:
+Oft reicht ein Nachtrag:
 
-- explicit acceptance
-- narrower scope
-- plan before execution
+- Abnahme klarstellen
+- Scope verkleinern
+- zuerst Plan verlangen
 
-### 2. Debugging means making the prompt longer
+### 2. Debugging = Prompt immer länger machen
 
-Sometimes delete noise and keep only the critical boundaries.
+Manchmal musst du Rauschen streichen und nur die relevanten Grenzen lassen.
 
-### 3. Longer threads are better because more context
+### 3. Je länger der Thread, desto besser (mehr Kontext)
 
-Very long threads: old constraints, stale facts, compaction residue can interfere.
+Zu lange Threads: alte Constraints, veraltete Infos und Reste nach Komprimierung stören.
 
-## A usable recovery sequence
+## Eine brauchbare Korrekturfolge
 
-To pull work back on track:
+Zurück auf Kurs:
 
-1. Rewrite goal to be checkable
-2. Add "only change here, don't change there"
-3. If the task is large, require a plan first
-4. If still messy, shrink to single file or single repro
-5. If still stuck, new thread with key boundaries restated
+1. Ziel neu schreiben — prüfbar
+2. „Nur hier / nicht dort“ ergänzen
+3. Bei großer Aufgabe zuerst Plan verlangen
+4. Wenn weiter chaotisch: auf eine Datei oder ein Repro verkleinern
+5. Sonst: neuen Thread, kritische Grenzen neu nennen
 
-Core idea: find which critical information wasn't conveyed—not keep complicating the wording.
+Kern des Prompt-Debuggings: welche kritische Info nicht korrekt ankam — nicht die Formulierung immer komplexer machen.
 
-If it still fails, shrink to a single-file repro or open a new thread and restate constraints.
+Bleibt es falsch: auf Einzeldatei-Repro verkleinern oder Thread neu mit Constraints.
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains prompt debugging only; in-site links and recovery sequence were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur Prompt-Debugging-Denken; interne Links und die Korrekturfolge wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

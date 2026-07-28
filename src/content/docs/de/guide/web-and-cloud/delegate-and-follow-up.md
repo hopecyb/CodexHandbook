@@ -1,136 +1,133 @@
 ---
-title: Delegate and follow up
-description: Hand tasks to Cloud from App, IDE, or phone—and review, approve, and iterate after you leave your desk.
+title: Delegieren und nachverfolgen
+description: 'Aufgaben aus App, IDE oder Handy an Cloud übergeben und nach dem Verlassen des Rechners Status, Freigabe und Iteration fortsetzen.'
 locale: de
-source_locale: en
-source_revision: 8ccb103
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Delegation** sends a task to Cloud to run in a remote environment; **follow-up** is checking progress, adding context, approving risky steps, and requesting changes while a task runs or after it finishes. This is the core workflow for making progress away from your desk.
+**Delegieren** heißt: Aufgabe an Cloud in der Remote-Umgebung. **Nachverfolgen** heißt: während oder nach dem Lauf Fortschritt sehen, Kontext nachreichen, riskante Aktionen freigeben, Änderungen verlangen. Kernworkflow für „außerhalb des Arbeitsplatzes weiterkommen“.
 
-## What's covered
+## Inhalt
 
-- When to delegate to Cloud instead of running locally
-- Differences across entry points
-- How to follow up effectively and avoid "fire and forget"
+- Wann Cloud statt lokal
+- Unterschiede der Delegations-Einstiege
+- Effektives Follow-up statt „rauswerfen und vergessen“
 
-## How this flow works
+## So läuft der Flow
 
-Cloud tasks usually look like:
+Cloud-Aufgaben ähneln:
 
-- You explain the task clearly
-- It runs remotely
-- You may need to add constraints or approve mid-flight
-- After completion you still review diffs, PRs, and decide next steps
+- Aufgabe klar erklären
+- Remote-Lauf starten
+- Unterwegs ggf. Einschränkung oder Freigabe
+- Am Ende Diff/PR prüfen und entscheiden
 
-Cloud only moves execution off your machine—you still own follow-up and decisions.
+Cloud wechselt nur den Ausführungsort — Follow-up und Urteil bleiben bei Ihnen.
 
-## Who it's for
+## Für wen
 
-| Scenario | Suggestion |
+| Szenario | Empfehlung |
 |---|---|
-| Long builds/tests | Delegate to Cloud; keep working locally |
-| Commute / between meetings | Check status on phone; approve critical steps |
-| Standardized environment needed | Cloud + [environment config](/guide/web-and-cloud/cloud-environments/) |
-| Quick local experimentation | Prefer [desktop App](/guide/desktop-app/) or [IDE](/guide/ide/local-task-workflow/) |
+| Langer Build/Test | An Cloud; lokal anderes |
+| Pendeln / Meeting-Pause | Handy: Status, kritische Schritte freigeben |
+| Standardisierte Umgebung | Cloud + [Umgebungskonfiguration](/guide/web-and-cloud/cloud-environments/) |
+| Schnelles lokales Ausprobieren | [Desktop-App](/guide/desktop-app/) oder [IDE](/guide/ide/local-task-workflow/) |
 
-## When delegation makes sense
+## Wann delegieren
 
-If unsure:
+- Noch viel Ausprobieren, live steuern: zuerst lokal
+- Lange Läufe, Laptop verlassen, einheitliche Umgebung: Cloud
 
-- Still iterating and want to steer live: stay local
-- Long runtime, want to walk away, or need a shared environment: delegate to Cloud
+## Vor dem Delegieren
 
-## Pre-delegation checklist
+- [ ] [GitHub verbunden](/guide/web-and-cloud/connect-github/), Branch-Strategie klar
+- [ ] Beschreibung mit Ziel, Scope, Verboten, Abnahme ([Anatomie einer guten Aufgabe](/prompts/task-anatomy/))
+- [ ] Nötige ungepushte lokale Commits zuerst pushen oder lokal belassen
+- [ ] Secrets / [Outbound](/guide/web-and-cloud/internet-access/) bereit
 
-- [ ] [GitHub connected](/guide/web-and-cloud/connect-github/); branch strategy is clear
-- [ ] Task description includes goal, scope, prohibitions, and acceptance (see [task anatomy](/prompts/task-anatomy/))
-- [ ] Required unpushed local commits are pushed—or do the work locally instead
-- [ ] Secrets and [outbound access](/guide/web-and-cloud/internet-access/) are ready
+## Häufige Missverständnisse
 
-## Common misconceptions
+### 1. Delegiert = nicht mehr hinschauen
 
-### 1. After delegating, I can ignore it
+Teuer: je später schiefe Richtung entdeckt, desto mehr Rework.
 
-That wastes the most time. The later you catch drift, the more rework.
+### 2. Follow-up = „nur mal nach dem Status fragen“
 
-### 2. Follow-up means "nudge for status"
+Wertvoller:
 
-More valuable follow-up:
+- Fehlenden Kontext nachreichen
+- Scope einengen
+- Riskante Aktionen ablehnen
+- Nach Abschluss Nacharbeit verlangen
 
-- Fill missing context
-- Narrow scope
-- Reject unsafe operations
-- Request fixes after completion
+### 3. Delegieren und lokal sind Gegensätze
 
-### 3. Delegation vs local is either/or
+Häufig:  
+**Lokal explorieren → lange Läufe delegieren → lokal abschließen.**
 
-A common real pattern:  
-**explore locally → delegate the long run → finish locally.**
+## Einstiege (Konzept)
 
-## Delegation by entry point (conceptual)
-
-| Entry | Characteristics |
+| Einstieg | Merkmale |
 |---|---|
-| [Desktop App · local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/) | Same project view; switch local/Cloud |
-| [IDE · Cloud tasks](/guide/ide/cloud-task-workflow/) | Carries editor selection and open-file context |
-| Web / mobile | Light status, approvals, short follow-ups |
+| [Desktop-App · Lokal und Cloud](/guide/desktop-app/local-and-cloud-tasks/) | Im selben Projekt lokal/Cloud wechseln |
+| [IDE · Cloud-Aufgaben](/guide/ide/cloud-task-workflow/) | Mit Selektion und offenen Dateien als Kontext |
+| Web / Mobile | Leichtes Ansehen, Freigabe, kurze Follow-ups |
 
-Buttons and naming depend on the current product.
+Buttons und Namen produktspezifisch.
 
-## Recommended follow-up rhythm
+## Empfohlener Follow-up-Rhythmus
 
 ```text
-Delegate → confirm environment started → (optional) check logs mid-flight
-    → approve risky steps → on completion review diff/PR
-    → if unsatisfied: add instructions or start a follow-up task
+Delegieren → Umgebung gestartet bestätigen → (optional) Logs mittendrin
+    → Riskante Aktionen freigeben → Fertig Diff/PR prüfen
+    → Unzufrieden: Nachricht anhängen oder neue Follow-up-Aufgabe
 ```
 
-A practical minimum:  
-**After sending, look once mid-flight and once at the end.**
+Mindestens: **einmal mittendrin + einmal am Ende**.
 
-### Mid-flight intervention
+### Währenddessen
 
-- **Add context**: if files or constraints were missing, say so in a follow-up message to preserve history
-- **Narrow scope**: if drifting, say "stop changing X; only do Y"
-- **Approve**: see [human approval patterns](/cases/workflows/human-approval-patterns/)—prefer slow and explicit over bulk-approving unknown shell
+- **Kontext nachreichen**: fehlende Dateien/Grenzen — Follow-up statt Neustart mit Historienverlust
+- **Scope einengen**: „Stoppe X, nur Y“
+- **Freigabe**: [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) — lieber einen Schritt langsamer als unbekannte Shells batch-approven
 
-### After completion
+### Danach
 
-- Review diff in the [create PR](/guide/web-and-cloud/create-pull-requests/) flow
-- Validate with [Cloud code review](/guide/web-and-cloud/code-review/) or local branch checkout
-- Need more changes: delegate again on the same PR or take over locally
+- Diff im [PR-Flow](/guide/web-and-cloud/create-pull-requests/) prüfen
+- [Cloud-Code-Review](/guide/web-and-cloud/code-review/) oder lokalen Branch-Checkout
+- Weiter: gleiche PR neu delegieren oder lokal übernehmen
 
-## Notifications
+## Mit Benachrichtigungen
 
-Enable [desktop notifications](/guide/desktop-app/notifications/) or mobile push so tasks do not stall waiting for approval. Teams should agree who can approve production-related repos and when.
+[Desktop-Notifications](/guide/desktop-app/notifications/) oder Mobile-Push — sonst hängen Aufgaben an fehlender Freigabe. Team-Regel: wann jemand Prod-Repos freigeben kann.
 
-## Common mistakes
+## Häufige Fehler
 
-- Vague delegation leading to large unrequested refactors
-- Half-done local edits while Cloud starts from remote main
-- Never checking mid-flight; discovering wrong direction at the end
-- "LGTM" on a PR without running tests
-- Treating "remote execution" as "remote responsibility"
+- Vage Delegation → Cloud „versteht“ großes Refactoring
+- Lokal halb geändert ungepusht, Cloud startet von remote main
+- Nie mittendrin schauen — am Ende falsche Richtung, ganze Umgebungswaste
+- PR nur „LGTM“ ohne Tests
+- „Remote ausgeführt“ = „Remote verantwortlich“
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Successfully started and completed one Cloud task from at least one entry point
-- [ ] Added an effective constraint while the task was running
-- [ ] Produced a PR or branch reviewed by a human diff pass
+- [ ] Mindestens ein Einstieg: Cloud-Aufgabe gestartet und abgeschlossen
+- [ ] Währenddessen eine wirksame Einschränkung nachgereicht
+- [ ] PR oder Branch mit Menschen-Diff-Review
 
-## References
+## Quellen
 
-- OpenAI Codex Cloud task docs
+- OpenAI Codex Cloud Task-Dokumentation
 - stormzhang `10-cloud.md`, `27-mobile.md`
 - KimYx0207 CX-10
-- codex.bozhouai.com App/Cloud collaboration sections
+- App/Cloud-Kollaborationskapitel auf codex.bozhouai.com
 
 ---
 
 **Status:** outdated  
-**Applicable products:** Cloud / App / IDE / Mobile  
-**Review note:** This page depends on current product behavior for starting or following Cloud tasks from App, IDE, Web, and phone—capabilities that have changed quickly; align line by line with official docs before upgrading from `outdated`.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Cloud / App / IDE / Mobile  
+**Prüfhinweis:** Abhängig von aktuellen App-/IDE-/Web-/Mobile-Delegationen; Cross-Device-Follow-up ändert sich schnell — vor `verified` an offizielle Docs angleichen.  
+**Zuletzt geprüft:** 2026-07-26

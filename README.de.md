@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/de/">Online lesen</a>
   ·
-  <a href="./src/content/docs/guide/index.md">Einsteiger-Leitfaden</a>
+  <a href="./src/content/docs/de/guide/start-here/index.md">Hier starten</a>
   ·
   <a href="./docs/planning/content-architecture.md">Inhaltsarchitektur</a>
   ·
@@ -72,11 +72,11 @@ Für vollständige Navigation, Suche, Kapitelstruktur und laufende Updates bevor
 
 Wir empfehlen diese Reihenfolge:
 
-1. [Leitfaden — Start](./src/content/docs/guide/index.md)
-2. [Kontext und Dateien](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Fälle](./src/content/docs/cases/index.md)
+1. [Hier starten](./src/content/docs/de/guide/start-here/index.md)
+2. [Kontext](./src/content/docs/de/guide/context/index.md)
+3. [Prompts](./src/content/docs/de/prompts/index.md)
+4. [Skills](./src/content/docs/de/skills/index.md)
+5. [Fälle](./src/content/docs/de/cases/index.md)
 
 Dieser Pfad ist für Codex-Neulinge — er hilft, eine stabile Grundlage aufzubauen, bevor du in die Praxis gehst.
 
@@ -110,10 +110,10 @@ End-to-End-Workflows durch echte Aufgaben verstehen: Code lesen, Bugs beheben, D
 | Link | Zweck |
 | --- | --- |
 | [Online lesen](https://codexhandbook.com/de/) | Das vollständige Handbuch auf der Website durchsuchen |
-| [Leitfaden](./src/content/docs/guide/index.md) | Codex-Nutzungspfade von Grund auf verstehen |
-| [Prompts](./src/content/docs/prompts/index.md) | Aufgaben und Grenzen klar beschreiben |
-| [Skills](./src/content/docs/skills/index.md) | Erfahrung in wiederverwendbare Fähigkeiten verwandeln |
-| [Fälle](./src/content/docs/cases/index.md) | End-to-End-Workflows durch echte Aufgaben sehen |
+| [Leitfaden](./src/content/docs/de/guide/start-here/index.md) | Codex-Nutzungspfade von Grund auf verstehen |
+| [Prompts](./src/content/docs/de/prompts/index.md) | Aufgaben und Grenzen klar beschreiben |
+| [Skills](./src/content/docs/de/skills/index.md) | Erfahrung in wiederverwendbare Fähigkeiten verwandeln |
+| [Fälle](./src/content/docs/de/cases/index.md) | End-to-End-Workflows durch echte Aufgaben sehen |
 | [Beispiele](./examples/README.md) | Prompts und Beispiel-Assets direkt wiederverwenden |
 | [Inhaltsarchitektur](./docs/planning/content-architecture.md) | Die Informationsarchitektur der Website verstehen |
 | [Kapitelübersicht](./docs/planning/chapter-outline.md) | Themenabdeckung ansehen |
@@ -122,17 +122,17 @@ End-to-End-Workflows durch echte Aufgaben verstehen: Code lesen, Bugs beheben, D
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # Einstieg, Clients, Berechtigungen, Verifizierung
-├── src/content/docs/prompts/    # Prompt-Methoden und Aufgabenformulierung
-├── src/content/docs/skills/     # Skills-Design, Nutzung und Governance
-├── src/content/docs/cases/      # Echte Aufgabenfälle
+├── src/content/docs/de/guide/   # Einstieg, Clients, Berechtigungen, Verifizierung
+├── src/content/docs/de/prompts/ # Prompt-Methoden und Aufgabenformulierung
+├── src/content/docs/de/skills/  # Skills-Design, Nutzung und Governance
+├── src/content/docs/de/cases/   # Echte Aufgabenfälle
 ├── examples/                    # Kopierbare Prompts und erweiterte Beispiele
 ├── docs/planning/               # Inhaltsplanung und Wartung
 ```
 
 ## Lokale Entwicklung
 
-Dieses Projekt nutzt [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) für die Dokumentations-Website. Hauptinhalt liegt in `src/content/docs/`.
+Dieses Projekt nutzt [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) für die Dokumentations-Website. Der deutsche Inhalt liegt in `src/content/docs/de/`.
 
 Anforderungen:
 
@@ -151,6 +151,14 @@ Statische Website bauen:
 ```bash
 pnpm build
 ```
+
+Fortschritt der deutschen Übersetzung prüfen:
+
+```bash
+pnpm i18n:status -- --locale de
+```
+
+Der deutsche Inhalt liegt in `src/content/docs/de/` (Spiegel der Quelle in vereinfachtem Chinesisch). Glossar: [`glossary/de.md`](./glossary/de.md). Stand 2026-07-28: deutsche Seitenabdeckung **100%** (alle `translation_status: draft`; sprachliche/technische Review ausstehend).
 
 ## Prinzipien
 

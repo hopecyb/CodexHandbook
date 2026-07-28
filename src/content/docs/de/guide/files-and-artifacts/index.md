@@ -1,98 +1,100 @@
 ---
-title: Files and Artifacts
-description: How Codex reads and writes file types, manages generated outputs, and what to verify.
+title: Dateien und Artefakte
+description: "Wie Codex Dateitypen liest/schreibt, Generiertes verwaltet und abnimmt."
 sidebar:
   order: 30
 locale: de
-source_locale: en
-source_revision: f66e0f0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Codex often produces **file changes in the repo** or **new artifacts** (docs, images, config). This section covers best practices by file type so you do not end up with “generated but unusable.”
+Die Kernausgabe von Codex sind oft **Dateiänderungen im Repo** oder **neu erzeugte Artefakte** (Dokumente, Bilder, Config). Dieses Thema beschreibt Best Practices je Dateityp — gegen „generiert, aber unbrauchbar“.
 
-“Files” are not all the same—different types need different instructions and verification.
+Auch „Datei“ heißt: unterschiedliche Typen brauchen unterschiedliche Auftrag- und Abnahmemethoden.
 
-“Edit code,” “handle spreadsheets,” “generate screenshots,” and “export slides” all look like file tasks, but failure modes differ.
+„Code ändern“, „Tabelle bearbeiten“, „Screenshot erzeugen“, „PPT exportieren“ wirken alle wie Dateiaufgaben — die typischen Fehlerstellen unterscheiden sich.
 
-## Section navigation
+## Kapitel-Navigation
 
-| Topic | Page |
+| Thema | Seite |
 |---|---|
-| Code and text | [Text and code files](/guide/files-and-artifacts/text-and-code-files/) |
-| Screenshots and design input | [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF and long documents | [PDF and documents](/guide/files-and-artifacts/pdf-and-documents/) |
-| Tabular data | [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| Slides | [Presentations](/guide/files-and-artifacts/presentations/) |
-| Agent outputs | [Generated artifacts](/guide/files-and-artifacts/generated-artifacts/) |
+| Code und Text | [Text- und Codedateien](/guide/files-and-artifacts/text-and-code-files/) |
+| Screenshots und Design-Input | [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF und Langdokumente | [PDF und Dokumente](/guide/files-and-artifacts/pdf-and-documents/) |
+| Tabellendaten | [Tabellen und Spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| Folien | [Präsentationen](/guide/files-and-artifacts/presentations/) |
+| Agent-Ausgaben | [Generierte Artefakte abnehmen](/guide/files-and-artifacts/generated-artifacts/) |
 
-General method: [Verify artifacts](/guide/quality/verify-artifacts/).
+Allgemeine Methode: [Artefakte überprüfen](/guide/quality/verify-artifacts/).
 
-## What this chapter covers
+## Worum es in diesem Kapitel geht
 
-Three themes:
+Drei Dinge:
 
-- How to describe the task clearly
-- Where things silently go wrong
-- How to verify at the end
+- Wie Sie die Aufgabe klar stellen
+- Wo still und leise Fehler entstehen
+- Wie Sie am Ende abnehmen
 
-It is operational guidance by file type—not a feature list.
+Eher Bedienungsanleitung nach Dateityp — keine reine Feature-Liste.
 
-## Unified principles
+## Einheitliche Prinzipien
 
-1. **Explicit paths**: output path and naming in the prompt
-2. **Format conventions**: extension, encoding (UTF-8), line endings match the project
-3. **Size awareness**: large binaries stay out of Git, or use LFS/CDN
-4. **Human verification**: generated ≠ done; see [Definition of done](/guide/quality/definition-of-done/)
-5. **Sensitive data**: see [Sensitive context](/guide/context/sensitive-context/)
+1. **Pfad klar**: Ausgabe pfad und Namensgebung im Prompt
+2. **Format vereinbaren**: Extension, Encoding (UTF-8), Zeilenenden wie im Projekt
+3. **Volumenbewusst**: große Binärdateien nicht ins Git — oder LFS/CDN
+4. **Menschliche Abnahme**: Generieren ≠ fertig; Abgleich mit [Definition of Done](/guide/quality/definition-of-done/)
+5. **Sensible Daten**: siehe [Sensibler Kontext](/guide/context/sensitive-context/)
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. File exists ≠ task complete
+### 1. Datei erzeugt ≠ Aufgabe erledigt
 
-Problems are often not “was it generated?” but:
+Oft liegt das Problem nicht an „ob generiert“, sondern:
 
-- Correct format?
-- Accurate content?
-- Right path?
-- Usable downstream?
+- Format richtig?
+- Inhalt korrekt?
+- Pfad richtig?
+- Downstream weiter nutzbar?
 
-### 2. All file types need the same instructions?
+### 2. Auftrag für alle Dateitypen gleich?
 
-No.
+Nein.  
+Zum Beispiel:
 
-- Code: scope, logic, tests
-- Spreadsheets: columns, types, aggregation rules
-- Images: visual content and dimensions
-- Docs: structure, tone, facts
+- Code: Umfang, Logik, Tests
+- Tabellen: Spalten, Typen, Aggregationsregeln
+- Bilder: visueller Inhalt, Größe
+- Dokumente: Struktur, Ton, Fakten
 
-### 3. “Opens fine” means good enough?
+### 3. „Öffnet sich“ = in Ordnung?
 
-Opening is the minimum—not necessarily ready to commit, publish, or deliver.
+Nein.  
+„Öffnet sich“ ist nur die Basis — nicht automatisch commit-/release-/lieferbereit.
 
-## Suggested reading order
+## Empfohlene Lesereihenfolge
 
-First time using Codex on files:
+Beim ersten Dateieinsatz mit Codex:
 
-1. Pick the file type closest to your task
-2. Read common failure modes for that type
-3. Read the matching verification approach
+1. Den Dateityp finden, der Ihrer Aufgabe am nächsten kommt
+2. Typische Fehlerstellen dieses Typs lesen
+3. Passende Abnahme lesen
 
-Easier than reading the whole chapter at once.
+So überfordert Sie das ganze Kapitel nicht auf einmal.
 
-## Relationship to tools
+## Bezug zu Werkzeugen
 
-- Read/write files: file tools + terminal
-- View images: [Prompting with images](/prompts/prompting-with-images/)
-- View pages: [Browser tool](/guide/tools/browser/)
-- Generate images: [Image generation](/guide/tools/image-generation/)
+- Dateien lesen/schreiben: Dateiwerkzeug + Terminal
+- Bilder ansehen: [Prompting mit Bildern](/prompts/prompting-with-images/)
+- Seiten ansehen: [Browser-Werkzeug](/guide/tools/browser/)
+- Bilder erzeugen: [Bildgenerierung](/guide/tools/image-generation/)
 
-File tasks often fail quietly—format, rules, or content drift while the file “exists.”
+Bei Dateiaufgaben ist oft schon etwas erzeugt — Format, Regeln oder Inhalt sind aber still abgewichen.
 
 ---
 
 **Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against current files-and-artifacts subsection structure and verified verify-artifacts, definition-of-done, sensitive-context, and image-related pages; stable principle: choose instructions and verification by file type.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen Struktur der files-and-artifacts-Unterkapitel sowie verifizierte Kapitel zu Artefaktprüfung, Definition of Done, sensiblem Kontext und Bildern; diese Seite erklärt nur das stabile Prinzip „Auftrag und Abnahme nach Dateityp wählen“.  
+**Zuletzt geprüft:** 2026-07-26

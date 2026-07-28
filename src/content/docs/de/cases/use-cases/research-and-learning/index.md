@@ -1,30 +1,30 @@
 ---
-title: Research and learning
-description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
+title: Recherche und Lernen
+description: Einstieg zu Recherche-, Vergleichs- und Lernfällen mit Quellen — Fokus auf Suche, Zitation und Grenzen der Schlussfolgerung.
 locale: de
-source_locale: en
-source_revision: d446512
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Research tasks differ from ordinary Q&A in one way:
+Der größte Unterschied zwischen Recherche und gewöhnlichem «Fragen und Antworten»:
 
-> **You want not just an answer, but how it was reached and whether it's reliable.**
+> **Du willst nicht nur eine Antwort, sondern wissen, woher sie kommt und wie belastbar sie ist.**
 
-## Cases in this group
+## Einstieg dieser Gruppe
 
-- [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Wettbewerbs-Feature-Matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
-## What this group emphasizes
+## Schwerpunkte dieser Gruppe
 
-- How to require sources and citations
-- Turning "I think" into "what I found in evidence"
-- Keeping conclusions within what the material actually supports
+- Quellen und Zitate verlangen
+- «Ich denke» in «Ich habe Evidenz gefunden» verwandeln
+- Schlussfolgerungen auf das beschränken, was die Quellen tragen
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current research-and-learning case entry and source-backed research / validate sources chapters; this page only navigates the research case group and highlights focus areas.
+**Geeignete Produkte:** App / CLI / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen den aktuellen research-and-learning-Falleinstieg dieses Repos sowie Kapitel zu Recherche mit Quellen / Quellenvalidierung. Diese Seite dient nur der Navigation und den Fokus-Hinweisen der Recherche-Fallgruppe.  
+**Zuletzt geprüft:** 2026-07-26

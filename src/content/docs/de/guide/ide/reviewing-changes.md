@@ -1,99 +1,99 @@
 ---
-title: Reviewing changes in the IDE
-description: Reading diffs, commenting, and accepting or rejecting Codex suggestions in the editor.
+title: Änderungen in der IDE prüfen
+description: Diff im Editor lesen, kommentieren und Codex-Vorschläge annehmen oder ablehnen.
 locale: de
-source_locale: en
-source_revision: c5f9bb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-IDE review sits between inline completion and full PR review: changes often appear directly in the editor or a side diff view. This page explains how to accept results safely.
+Die Überprüfung in der IDE-Erweiterung liegt zwischen „Inline-Completion“ und „vollständigem PR-Review“: Änderungen erscheinen oft direkt im Editor oder in der seitlichen Diff-Ansicht. Diese Seite erklärt, wie du Ergebnisse sicher annimmst.
 
-In the IDE, do not treat "one-click accept" as the default even when a change looks ready.
+Auch bei „direkt annehmbaren“ Änderungen in der IDE: „Alles annehmen“ nicht zur Default-Aktion machen.
 
-## What's covered
+## Inhalt dieser Seite
 
-- Common IDE review UI patterns
-- Accept, reject, and partial-accept strategy
-- Connecting to Git, tests, and PR workflow
+- Häufige Überprüfungs-UI in der IDE
+- Strategien für Annehmen, Ablehnen, teilweise Annehmen
+- Anschluss an Git, Tests und PR-Ablauf
 
-## Review flow
+## Überprüfungsablauf
 
-1. **Scope**: which files changed? unexpected deletes or formatting storms?
-2. **Logic**: branches, error handling, edge cases
-3. **Security**: secrets, injection, privilege escalation, dependency tampering
-4. **Verification**: project tests / lint (IDE terminal or task scripts)
-5. **Decision**: accept, request changes, or undo and resend task
+1. **Rahmen sehen:** Welche Dateien? Unerbetene Löschungen oder Formatierungsstürme?
+2. **Logik lesen:** Verzweigungen, Fehlerbehandlung, Randfälle
+3. **Sicherheit prüfen:** Geheimnisse, Injection, Rechteausweitung, Dependency-Poisoning
+4. **Verifizieren:** vereinbarte Tests / Lint (IDE-Terminal oder Task-Skript)
+5. **Entscheiden:** annehmen, Nachbesserung verlangen oder rückgängig und Aufgabe neu stellen
 
-Methodology: [review diffs](/guide/quality/review-diffs/)
+Methodik: [Diffs prüfen](/guide/quality/review-diffs/)
 
-## IDE-specific actions (conceptual)
+## IDE-spezifische Operationen (Konzept)
 
-| Action | Suggestion |
+| Operation | Empfehlung |
 |---|---|
-| Inline diff / ghost text | Read block by block; avoid accept-all |
-| Accept single file | Start with lowest-risk file (e.g. tests) |
-| Reject and retry | Follow up: "change only X, do not touch Y" |
-| Git integration | After accept, still `git diff` before commit |
+| Inline-Diff / Ghost-Text | Blockweise lesen, dann annehmen — kein Ein-Klick-Alles |
+| Einzeldatei annehmen | zuerst risikoärmste Dateien (z. B. Tests) |
+| Ablehnen und erneut | Im Follow-up: «Nur X ändern, Y nicht anfassen» |
+| Git-Integration | Nach Annahme mit `git diff` nachprüfen, dann committen |
 
-[Desktop App diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/) is fuller; IDE review is **lightweight and high-frequency**.
+[Diff, Kommentare und Überprüfung](/guide/desktop-app/diffs-comments-and-review/) der Desktop-App ist vollständiger; IDE-Seite bleibt **leicht und hochfrequent**.
 
-## Recommended prompt habits
+## Empfohlene Prompt-Gewohnheiten
 
-State up front:
+Vor Aufgabenstart festschreiben:
 
-- Allowed path globs
-- Forbidden: `git push`, changing lockfile (unless explicitly requested)
-- On completion: list change summary; **do not auto-commit**
+- erlaubte Pfad-Globs
+- verboten: `git push`, Lockfile ändern (außer explizit verlangt)
+- am Ende: Änderungszusammenfassung listen, **nicht automatisch committen**
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+Siehe [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Trusting a green test icon without running tests yourself
-- Hiding logic changes inside a large auto-format diff
-- Push immediately after accept, skipping PR / branch protection
+- Grünes Test-Icon vertrauen, ohne selbst gelaufen zu haben
+- Logikänderungen in großen Auto-Format-Diffs verstecken
+- Nach Annahme direkt pushen, ohne PR / Branch-Schutz
 
-## Acceptance checklist
+## Abnahmeliste
 
-- [ ] `git status` matches expected files
-- [ ] Tests pass (local or CI)
-- [ ] No `.env`, tokens, or debug `console.log` left behind
-- [ ] Commit message written or confirmed by you
+- [ ] `git status` entspricht erwarteten Dateien
+- [ ] Tests bestanden (lokal oder CI)
+- [ ] Kein `.env`, Token oder Debug-`console.log` übrig
+- [ ] Commit-Message von dir geschrieben oder bestätigt
 
-## Common questions
+## Häufige Fragen
 
-### 1. Inline suggestions look small—safe to accept?
+### 1. Inline-Vorschlag wirkt klein — einfach annehmen?
 
-Do not make that a habit.
+Besser keine solche Gewohnheit.
 
-Many issues are not about size—they are about "small enough that nobody looked closely."
+Viele Probleme liegen nicht an „großer Änderung“, sondern an „wirkt klein, also nicht ernst gelesen“.
 
-### 2. Not confident reviewing logic—what helps most?
+### 2. Logik-Review fällt mir schwer — was zuerst?
 
-These three checks already add value:
+Diese drei Punkte sind schon wertvoll:
 
-- Correct files changed?
-- Anything deleted that should stay?
-- Obvious debug residue or style drift?
+- Sind es die gewünschten Dateien?
+- Wurde Unerwünschtes gelöscht?
+- Offensichtliche Debug-Reste oder Stil-Drift?
 
-### 3. Does accept mean done?
+### 3. Angenommen = fertig?
 
-Not yet.
+Noch nicht.
 
-Accept only puts changes in your working tree—you still verify and decide whether to commit.
+Annehmen legt Änderungen nur in deinen Arbeitsbereich — danach verifizieren und erst dann committen.
 
-"Accept" in the IDE is a mid-step, not final acceptance.
+„Änderung annehmen“ in der IDE ist ein Zwischenschritt, keine finale Abnahme.
 
-## References
+## Quellen
 
-- [Verification and human review](/guide/foundations/verification-and-human-review/)
+- [Verifikation und menschliche Überprüfung](/guide/foundations/verification-and-human-review/)
 - stormzhang `09-ide.md`
 
 ---
 
 **Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page depends on whether the IDE extension currently offers inline diff, side diff, accept/reject per block, etc.; current official public material cannot verify each UI capability—do not mark `verified` until newer extension docs are available.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** IDE  
+**Prüfhinweis:** Diese Seite hängt an konkreten Überprüfungs-UIs (Inline-Diff, seitliches Diff, Annehmen/Ablehnen von Blöcken); aktuelle öffentliche Official-Quellen reichen nicht für Punkt-für-Punkt-Bestätigung — bis zur neuen Erweiterungsdokumentation nicht `verified`.  
+**Zuletzt geprüft:** 2026-07-26

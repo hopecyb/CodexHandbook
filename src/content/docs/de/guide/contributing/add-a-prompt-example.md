@@ -1,50 +1,50 @@
 ---
-title: Add a Prompt Example
-description: Submit reproducible prompts to examples/prompts with metadata and acceptance criteria.
+title: Prompt-Beispiel hinzufügen
+description: "Reproduzierbare Prompts unter examples/prompts einreichen — mit Metadaten und Abnahmekriterien."
 locale: de
-source_locale: en
-source_revision: 48a7e2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Prompt examples live at repo root [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), linked from handbook pages. Design spec: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Prompt-Beispiele liegen im Repo-Root unter [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), verknüpft aus dem Handbuchtext. Design: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
 
-## What this page covers
+## Inhalt dieser Seite
 
-Common blockers:
+Typische Stolperstellen:
 
-- What makes a prompt “worth including”
-- What format lets others reuse it
+- Unklar, welcher Prompt „aufnahmefähig“ ist
+- Unklar, welches Format Wiederverwendung ermöglicht
 
-This page explains how to submit something **others can try, learn from, and reproduce**.
+Ziel: ein Beispiel einreichen, das andere **probieren, lernen und reproduzieren** können.
 
-## Inclusion criteria
+## Aufnahmekriterien
 
-We collect reproducible examples with context, boundaries, and acceptance criteria—not inspiration snippets.
+Wir nehmen „reproduzierbare Beispiele mit Kontext, Grenzen und Abnahme“ — keine Inspiration-Schnipsel.
 
-A solid example answers:
+Ein brauchbares Prompt-Beispiel beantwortet mindestens:
 
-- When to use it
-- Exactly what to say
-- How to judge success afterward
+- Wann nutzen
+- Wie genau formulieren
+- Wie danach urteilen, ob es geklappt hat
 
-Clever one-liners without prerequisites or verification are notes—not examples.
+Klingt nur klug, ohne Prämissen und Abnahme → eher Notiz als Beispiel.
 
-## File naming
+## Dateinamen
 
 ```text
 examples/prompts/<category>/<slug>.md
 ```
 
-`category` examples: `development`, `research`, `meta-workflows`, `team`.
+`category`-Beispiele: `development`, `research`, `meta-workflows`, `team`.
 
-## Required metadata (YAML frontmatter)
+## Pflicht-Metadaten (YAML-Frontmatter)
 
 ```yaml
 ---
 id: prompt.fix-bug-with-tests
-title: Fix Bug and Add Tests
+title: Bug beheben und Tests ergänzen
 content_type: prompt
 audience: [beginner, developer]
 difficulty: beginner
@@ -55,72 +55,82 @@ last_verified: YYYY-MM-DD
 ---
 ```
 
-## Required body sections
+## Pflichtabschnitte im Text
 
-1. **Use case**
-2. **Prerequisites** (permissions, branch, context files)
-3. **Recommended prompt** (full, copy-paste ready)
-4. **Acceptance criteria** (checklist, objectively verifiable)
-5. **Common failure modes**
-6. **Related handbook pages** (links to `src/content/docs/`)
+1. **Nutzungsszenario**
+2. **Vorbereitung** (Berechtigungen, Branch, Kontextdateien)
+3. **Empfohlener Prompt** (vollständig kopierbar)
+4. **Abnahmekriterien** (Checkliste, objektiv prüfbar)
+5. **Häufige Fehlwege**
+6. **Verwandte Handbuchseiten** (Links nach `src/content/docs/`)
 
-Optional: minimal variant, teaching breakdown, replaceable variables.
+Optional: Minimalversion, didaktische Zerlegung, austauschbare Variablen.
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### Do not bury the prompt
+### Fokus nicht zerstreuen
 
-Background and theory are fine—but put the **copy-paste prompt** up front, then prerequisites and failures, then explanation.
+Mancher schreibt viel Hintergrund und Theorie — der kopierbare Prompt verschwindet in der Mitte.
 
-### Used once ≠ complete example
+Stabiler:
 
-Readers do not share your implicit assumptions. State:
+- Empfohlenen Prompt zuerst vollständig
+- Dann Prämissen, Variablen, Fehlwege
+- Erklärung zuletzt
 
-- Which product entry
-- Required files, screenshots, or context
-- Whether edits, commands, or network are assumed allowed
+### Einmal selbst genutzt ≠ vollständiges Beispiel
 
-### No real secrets in examples
+Sie kennen Ihre Default-Prämissen — Leser nicht.
 
-Real tokens, accounts, internal URLs, or customer data do not belong in a public repo.
+Prämissen schreiben, z. B.:
 
-Teach the method—not your production environment.
+- Welcher Produkteinstieg
+- Welche Dateien, Screenshots, Kontext
+- Ob Dateiänderung, Befehle, Netz default erlaubt
 
-## Acceptance criteria example
+### Keine echten Sensiblen im Beispiel
+
+Echte Tokens, Konten, Intranet-Links, Kundendaten → ungeeignet fürs öffentliche Repo.
+
+Beispiel lehrt Methode — nicht Ihre Produktionsumgebung.
+
+## Abnahmekriterien-Beispiel
 
 ```markdown
-## Acceptance criteria
+## Abnahmekriterien
 
-- [ ] Previously failing test passes
-- [ ] Agreed test suite passes
-- [ ] Diff only touches task-related files
-- [ ] No `git push` executed
+- [ ] Ursprünglich fehlgeschlagener Test grün
+- [ ] Vereinbarter Testsuite-Umfang grün
+- [ ] Diff nur aufgabenbezogene Dateien
+- [ ] Kein git push
 ```
 
-## Quality bar
+## Qualitätsschwelle
 
-- Clear goal and definition of done
-- Permission and security boundaries stated
-- No real keys or PII
-- `verified` status needs [independent verification](/guide/contributing/verify-technical-content/)
+- Ziel und Definition of Done klar
+- Berechtigungs- und Sicherheitsgrenzen erklärt
+- Keine echten Secrets und kein PII
+- Status `verified` braucht [unabhängige Prüfung](/guide/contributing/verify-technical-content/)
 
-## Submission flow
+## Einreichungsablauf
 
-1. Identify the real task class this solves
-2. Write a copy-paste prompt
-3. State minimum prerequisites and boundaries
-4. Define what success looks like
-5. Check for secrets and correct directory
+Stabil:
 
-## PR checklist
+1. Welche echte Aufgabenklasse löst das Beispiel
+2. Version schreiben, die andere direkt kopieren
+3. Minimale Voraussetzungen und Grenzen
+4. Klar: „was zählt als Erfolg“
+5. Sensibles und falsches Verzeichnis prüfen
 
-- [ ] New file path indexed in `examples/README.md` if index is maintained
-- [ ] At least one case or workflow page links to the example (optional but recommended)
+## PR-Check
 
-A good prompt example lets someone reproduce and get a similar outcome.
+- [ ] Neuer Pfad in `examples/README.md`-Index (falls gepflegt)
+- [ ] Mindestens eine Fall- oder Workflow-Seite verlinkt (optional, empfohlen)
+
+Ein gutes Prompt-Beispiel lässt andere direkt reproduzieren und ähnliche Ergebnisse erzielen.
 
 ---
 
 **Status:** verified  
-**Verification basis:** Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior.  
-**Last verified:** 2026-07-26
+**Prüfgrundlage:** Gegen aktuelles `examples/`-Verzeichnis, Beispiel-Frontmatter, Index und Beitragsprozess geprüft; Anforderungen an Fall-/Workflow-Links ausgerichtet, ohne volatile Client-Verhalten.  
+**Zuletzt geprüft:** 2026-07-26

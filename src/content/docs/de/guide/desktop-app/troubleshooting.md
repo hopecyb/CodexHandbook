@@ -1,27 +1,55 @@
 ---
-title: Desktop App Troubleshooting
-description: Common fixes for install, sign-in, and task failures.
+title: Desktop-App Fehlerbehebung
+description: Häufige Behandlung bei Installation, Anmeldung und Aufgabenfehlern.
 locale: de
-source_locale: en
-source_revision: c6a2494
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-| Symptom | Try first |
+Bei der Fehlerbehebung zuerst die wahrscheinlichsten und einfachsten Ursachen prüfen.
+
+| Symptom | Zuerst versuchen |
 |---|---|
-| Cannot install or open | Check system requirements and the official installer; restart and retry |
-| Cannot sign in | Check network, account permissions, SSO; clear session and sign in again |
-| Project files not visible | Confirm the correct folder is added and system file permissions are granted |
-| Task stuck waiting for approval | Return to the task view and handle pending approval requests |
-| Changes not as expected | Tighten constraints, start a new thread, check context |
+| Installation / Öffnen scheitert | Systemanforderungen und Official-Installer prüfen; neu starten und erneut versuchen |
+| Anmeldung scheitert | Netzwerk, Kontorechte, SSO prüfen; Sitzung leeren und neu anmelden |
+| Projektdateien unsichtbar | Korrekten Ordner und System-Dateiberechtigungen prüfen |
+| Aufgabe wartet dauernd auf Freigabe | In die Aufgabenansicht zurück und ausstehende Freigaben bearbeiten |
+| Änderungen passen nicht | Einschränkungen verschärfen, neuen Thread starten, Kontext prüfen |
 
-Still stuck: [https://developers.openai.com/codex](https://developers.openai.com/codex) and the [troubleshooting index](/guide/reference/troubleshooting/).
+Weiterhin fehlgeschlagen: [https://developers.openai.com/codex](https://developers.openai.com/codex) und [Fehlerbehebungsindex](/guide/reference/troubleshooting/).
+
+## Häufige Missverständnisse
+
+### 1. Bedeutet jedes Problem einen schweren Bedienfehler?
+
+Viele Fälle sind nur:
+
+- falscher Pfad
+- fehlende Freigabe
+- Aufgabe wartet auf deine Bestätigung
+- Kontext ist bereits durcheinander geraten
+
+### 2. „Dateien unsichtbar“ — was zuerst vermuten?
+
+Zuerst Projektverzeichnis und Berechtigungen, nicht Modellfähigkeit.
+
+### 3. „Änderungen passen nicht“ — wie retten?
+
+Zuerst den Rahmen enger ziehen:
+
+- Umfang neu erklären
+- klar sagen, was falsch ist
+- bei Bedarf neuen Thread starten
+
+Fehlerbehebung beginnt bei den häufigsten, leichtesten Ursachen — nicht bei der komplexesten Theorie.
 
 
 ---
 
-**Status:** review  
-**Applies to:** App  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** App  
+**Prüfgrundlage:** Aktuelle OpenAI-Desktop-Hilfe deckt weiterhin Installation, Anmeldung, Projektzugriff und lokale Dateiberechtigungen ab; diese Seite leitet Symptome zu Installation, Anmeldung, Berechtigungen, wartender Freigabe und Kontextumfang — ein stabiler Einstieg in die Fehlerbehebung.  
+**Zuletzt geprüft:** 2026-07-26

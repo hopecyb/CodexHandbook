@@ -1,94 +1,95 @@
 ---
-title: Editor context
-description: How the IDE extension passes open files, workspace, and project rules to Codex.
+title: Editor-Kontext
+description: Wie die IDE-Erweiterung geöffnete Dateien, Workspace und Projektregeln an Codex übergibt.
 locale: de
-source_locale: en
-source_revision: 9ef52a0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In the IDE, Codex gets more than your prompt—it automatically receives **editor state**. That is the IDE's core advantage over CLI. Understanding where context comes from avoids "the file is open but it ignored it" frustration.
+In der IDE liest Codex nicht nur deinen Prompt, sondern erhält automatisch **Editorzustand**. Das ist der Kernvorteil gegenüber der CLI. Wer versteht, woher Kontext kommt, vermeidet Frustration vom Typ „Datei ist offen, und es sieht sie trotzdem nicht“.
 
-IDE Codex does not only read what you type—it also references what you are looking at in the editor.
+Codex in der IDE schaut nicht nur auf deine Worte, sondern auch darauf, was im Editor gerade sichtbar ist.
 
-## What's covered
+## Inhalt dieser Seite
 
-- What context the IDE attaches automatically
-- How that stacks with @ files, selection, and AGENTS.md
-- Reducing noise and improving hit rate
+- Welchen Kontext die IDE automatisch mitschickt
+- Wie @-Dateien, Auswahl und AGENTS.md sich überlagern
+- Wie Rauschen senken und Trefferquote erhöhen
 
-## Context sources (conceptual layers)
+## Kontextquellen (Schichten)
 
-| Source | Who controls | Typical content |
+| Quelle | Wer steuert | Typischer Inhalt |
 |---|---|---|
-| Workspace root | Folder you opened | Project layout, `AGENTS.md`, config files |
-| Open files | Editor tabs | Source you are editing |
-| Selection | Highlighted code | Function, error snippet |
-| Explicit @ | Paths you @ in chat | Cross-directory files, docs |
-| Project rules | `AGENTS.md` etc. in repo | Coding standards, test commands |
+| Workspace-Wurzel | Ordner, den du öffnest | Projektstruktur, `AGENTS.md`, Konfiguration |
+| Aktuell geöffnete Datei | Editor-Tabs | Quellcode in Bearbeitung |
+| Auswahl | von dir hervorgehobener Code | Funktion, Fehlerausschnitt |
+| Explizites @ | Pfade, die du im Gespräch @-nimmst | Dateien über Verzeichnisse, Docs |
+| Projektregeln | `AGENTS.md` usw. im Repo | Coding-Standards, Testbefehle |
 
-Priority and conflicts: [context priority](/guide/context/context-priority/).
+Priorität und Konflikte: [Kontext-Priorität](/guide/context/context-priority/).
 
-## Recommended workflow
+## Empfohlener Workflow
 
-1. **Open the repo root as workspace**, not a subfolder only (monorepo exceptions per team docs)
-2. For local edits, **select relevant code** then describe the task → [selection and open files](/guide/ide/selected-code-and-open-files/)
-3. For cross-module work, @ key files—do not assume "it will search on its own"
-4. In long sessions, [compact context](/guide/context/compaction/) or start a new thread periodically
+1. **Repository über die Workspace-Wurzel öffnen**, nicht nur einen Unterordner (Monorepo-Ausnahmen laut Team-Doku)
+2. Bei lokaler Logik **zuerst relevanten Code auswählen**, dann Aufgabe beschreiben → [Auswahl und geöffnete Dateien](/guide/ide/selected-code-and-open-files/)
+3. Bei modulübergreifenden Aufgaben Dateien per `@` nennen — nicht annehmen „es findet sie schon“
+4. Lange Sitzungen regelmäßig [Kontext komprimieren](/guide/context/compaction/) oder neuen Thread öffnen
 
-## Difference from CLI
+## Unterschied zur CLI
 
-| | IDE extension | CLI |
+| | IDE-Erweiterung | CLI |
 |---|---|---|
-| File awareness | Strong (open files in context) | Needs `--cwd` and tool reads |
-| Selection | Native | Paste or specify paths |
-| Best for | Line-level edits, explaining code | Scripts, CI, headless environments |
+| Dateiwahrnehmung | stark (offen = Kontext) | braucht `--cwd` und Werkzeuge zum Lesen |
+| Auswahl | native Unterstützung | Einfügen oder Pfad angeben |
+| Geeignet | Zeilenänderungen, Code erklären | Skripte, CI, Umgebungen ohne GUI |
 
-## Common questions
+## Häufige Fragen
 
-### 1. The file is open—why didn't it change what I expected?
+### 1. Datei ist offen — warum ändert es trotzdem nicht wie gedacht?
 
-"Open" does not mean "focus is obvious."
+„Datei offen“ heißt nicht „Schwerpunkt klar genug“.
 
-If the task scope is still vague, it may read other material or miss the snippet you care about.
+Bei unklarem Aufgabenrahmen schaut es ggf. weiter auf andere Inhalte oder verfehlt den Ausschnitt, der dich interessiert.
 
-### 2. More open files = better?
+### 2. Je mehr Dateien offen, desto besser?
 
-Too many unrelated open files add noise and dilute focus.
+Zu viele irrelevante Dateien machen den Kontext laut und verdünnen den Fokus.
 
-### 3. Automatic context means I can skip a clear task description?
+### 3. Automatischer Kontext — muss ich dann weniger klar schreiben?
 
-Context helps; it does not replace stating goal, constraints, and done criteria.
+Automatischer Kontext hilft, ersetzt aber keine Aufgabenbeschreibung.  
+Ziel, Grenzen und Fertigkriterien musst du trotzdem sagen.
 
-IDE context assists—it does not guess for you. Tighter file scope usually means steadier results.
+IDE-Kontext hilft, rät aber nicht für dich; je präziser der Dateirahmen, desto stabiler meist das Ergebnis.
 
-## Sensitive information
+## Sensible Informationen
 
-Do not leave `.env` with secrets pinned open; see [sensitive context](/guide/context/sensitive-context/).
+`.env` mit Geheimnissen nicht dauerhaft im Vordergrund offen lassen; siehe [Sensibler Kontext](/guide/context/sensitive-context/).
 
-Redact logs and customer data before pasting; the IDE does not judge compliance for you.
+Logs und Kundendaten vor dem Einfügen anonymisieren; die IDE entscheidet Compliance nicht für dich.
 
-## Common mistakes
+## Häufige Fehler
 
-- Expecting `AGENTS.md` in single-file mode without a workspace
-- Opening many large unrelated files, filling the context window
-- Saying "this function" without selecting or @-mentioning the file
+- Im Einzeldateimodus (ohne Workspace) `AGENTS.md` erwarten
+- Dutzende irrelevante große Dateien öffnen und das Kontextfenster füllen
+- Nur „diese Funktion“ sagen, ohne Auswahl und ohne @-Datei
 
-## Acceptance checklist
+## Abnahmeliste
 
-- [ ] Workspace root is correct
-- [ ] 1–3 task-relevant files opened or @-mentioned
-- [ ] Test commands in `AGENTS.md` match IDE terminal usage
+- [ ] Workspace-Wurzel korrekt
+- [ ] 1–3 aufgabenrelevante Dateien geöffnet oder @
+- [ ] Testbefehle in `AGENTS.md` stimmen mit IDE-Terminal überein
 
-## References
+## Quellen
 
-- [File and folder context](/guide/context/file-and-folder-context/)
+- [Datei- und Ordner-Kontext](/guide/context/file-and-folder-context/)
 - stormzhang `09-ide.md`
 
 ---
 
 **Status:** verified  
-**Applicable products:** IDE  
-**Verification basis:** OpenAI Help Center still positions the IDE extension as a primary entry paired with local tools; this page does not assume specific editor buttons—it summarizes workspace, open files, selection, @ files, and project rules as stable IDE context methodology.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** IDE  
+**Prüfgrundlage:** OpenAI Help Center führt die IDE-Erweiterung weiterhin als Hauptzugang mit lokalen Werkzeugen; diese Seite nimmt keine konkreten Editor-Buttons an, sondern fasst die stabile Methode zusammen: Workspace, geöffnete Dateien, Auswahl, `@`-Dateien und Projektregeln bilden gemeinsam den IDE-Kontext.  
+**Zuletzt geprüft:** 2026-07-26

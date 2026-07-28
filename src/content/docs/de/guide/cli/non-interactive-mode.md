@@ -1,85 +1,122 @@
 ---
-title: Non-Interactive Mode
-description: Run Codex without a TTY—suited for CI, cron jobs, and automation pipelines.
+title: Nicht-interaktiver Modus
+description: "Mit codex exec und Skript-Pipelines integrieren — geeignet für CI, Cron und Automatisierung."
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: d619904
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Non-interactive mode lets Codex complete tasks **without a TTY conversation**—the entry point for embedding the agent in scripts and CI.
 
-## What this page covers
+Der nicht-interaktive Modus lässt Codex Aufgaben **ohne TTY-Dialog** erledigen — Einstieg für Entwickler, die den Agenten in Skripte und CI einbinden.
 
-- When to use non-interactive vs an interactive `codex` session
-- Extra safety and approval requirements when unattended
-- Relationship to [CLI configuration](/guide/cli/configuration/)
+Kurz: kein Hin-und-her-Chat, sondern einmalige Übergabe der Aufgabe zur Ausführung.
 
-## Good fits
+Eher ein befehlsartiger Aufruf.
 
-| Good fit | Poor fit |
+## Inhalt dieser Seite
+
+- Wann nicht-interaktiv statt `codex`-Interaktivsitzung
+- Extra-Anforderungen an Sicherheit und Freigabe ohne Aufsicht
+- Bezug zur [Konfiguration](/guide/cli/configuration/)
+
+## Geeignete Szenarien
+
+| Geeignet | Ungeeignet |
 |---|---|
-| Fixed review prompts in CI | Needs multi-turn clarification |
-| Nightly doc link checks | Exploratory refactors |
-| Template-based codegen | High-ambiguity product decisions |
+| Feste Review-Prompts in CI | Mehrfache Klärung der Anforderungen nötig |
+| Nightly-Dokumentlink-Checks | Explorative Refactors |
+| Codegenerierung mit vordefinierten Templates | Hochambivalente Produktentscheidungen |
 
-## Core idea
+## Kernkonzept
 
-Non-interactive runs typically:
+Nicht-interaktive Ausführung typischerweise:
 
-1. Take a **complete task** from args or stdin
-2. Run in a specified working directory
-3. Exit with a status code for success/failure
-4. Emit logs or structured output for downstream steps
+1. **Vollständige Aufgabenbeschreibung** aus Argumenten oder stdin
+2. Lauf im angegebenen Arbeitsverzeichnis
+3. Exit-Code für Erfolg/Fehler
+4. Logs oder strukturierte Ergebnisse für Downstream
 
-**Command names and flags follow official CLI docs** (often `codex exec` or equivalent); re-check `--help` after upgrades.
+**Befehlsnamen und Parameter laut Official-CLI-Dokumentation** (häufig `codex exec` oder Äquivalent); nach CLI-Upgrade `--help` erneut prüfen.
 
-## Minimal example (illustrative)
+## Minimales Beispiel (schematisch)
 
 ```bash
-# Repo root, read-only review (flags per official docs)
-codex exec --cwd . "List security risks in diff vs main; do not modify files"
+# Im Repo-Wurzelverzeichnis, nur-lesen-Review (schematisch, Parameter laut Official)
+codex exec --cwd . "Sicherheitsrisiken im Diff relativ zu main listen, keine Dateien ändern"
 ```
 
-Tips:
+Praxis:
 
-- `cd` to a clean worktree in shell scripts
-- Store prompts in versioned `prompts/` files or heredocs
-- Fail CI on non-zero exit codes
+- Im Shell-Skript zuerst `cd` in eine saubere Arbeitskopie
+- Aufgabenstring in Heredoc oder versionierte `prompts/`-Datei
+- Exit-Code erfassen, bei Fehler CI rot markieren
 
-## Safety
+## Sicherheitsdesign
 
-Unattended = **no one to click reject**:
+Unbeaufsichtigt = **niemand tippt Ablehnen**:
 
-| Principle | Practice |
+| Prinzip | Vorgehen |
 |---|---|
-| Least privilege | Read-only tokens, tight sandbox |
-| No push | CI opens PRs or uploads artifacts only |
-| Fixed prompts | Never concatenate unsanitized PR text (injection risk) |
-| Audit | Keep logs and diff artifacts |
+| Minimale Rechte | Nur-lesen-Token, eingeschränkte Sandbox |
+| Kein Push | CI öffnet nur PR oder lädt Artifact hoch |
+| Feste Prompts | Keinen unbereinigten PR-Beschreibungstext direkt einfügen (Injection-Risiko) |
+| Audit | Logs und Diff-Artifacts behalten |
 
-See [Human approval patterns](/cases/workflows/human-approval-patterns/).
+Siehe [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) und Roadmap `08-developer-platform/non-interactive/`.
 
-## Interactive vs non-interactive
+## Vergleich zum interaktiven Modus
 
-| | Interactive | Non-interactive |
+| | Interaktiv | Nicht-interaktiv |
 |---|---|---|
-| Entry | `codex` TUI | `exec` / pipes |
-| Human in the loop | Strong | Weak—design upfront |
-| Learning | Yes | No |
-| CI | No | Yes |
+| Einstieg | `codex` TUI | `exec` / Pipeline |
+| Mensch in der Schleife | stark | schwach, vorher planen |
+| Zum Lernen | ja | nein |
+| Für CI | nein | ja |
 
-Interactive usage: [CLI interactive mode](/guide/cli/interactive-mode/)
+Interaktiv: [CLI interaktiver Modus](/guide/cli/interactive-mode/)
 
-## Common mistakes
+## Häufige Missverständnisse
 
-- Pasting a long chat history into a single exec
-- Production credentials and write access in CI
-- Unpinned CLI version causing sudden pipeline drift
+### 1. Nicht-interaktiv ist effizienter — zuerst lernen?
+
+Nicht empfohlen.
+
+Für Erstnutzer ist nicht-interaktiv oft zu schnell und zu starr — wenig Raum für Zwischenklärung.
+
+### 2. Größter Unterschied zum Interaktivmodus?
+
+Kern:
+
+- **Interaktiv:** zwischendurch fragen, steuern, freigeben
+- **Nicht-interaktiv:** eher einmalige Ausführung, für vordefinierte Abläufe
+
+### 3. Wann vorerst weglassen?
+
+In diesen Phasen besser nicht:
+
+- Prompts noch unsicher
+- Ergebnisabnahme noch unklar
+- Grundurteil zu Freigabe, Sandbox, Berechtigungen fehlt
+
+Nicht-interaktiv passt zur Automatisierung, nicht zum ersten Tasten. Zuerst Interaktivmodus beherrschen, dann Skripte.
+
+## Häufige Fehler
+
+- Lange Interaktiv-Gesprächsgeschichte 1:1 in einmaliges exec stopfen
+- CI mit Produktionscredentials und Schreibrechten
+- CLI-Version nicht pinnen → Pipeline ändert sich plötzlich
+
+## Quellen
+
+- OpenAI-Codex-CLI-Dokumentation
+- stormzhang `28-noninteractive.md`
+- KimYx0207 CX-12
 
 ---
 
-**Status:** review  
-**Applies to:** CLI  
-**Last verified:** 2026-07-25
+**Status:** outdated  
+**Anwendbare Produkte:** CLI  
+**Prüfhinweis:** Diese Seite dreht sich um `codex exec` und nicht-interaktive Integration; aktuelle Official-Belege reichen nicht für Punkt-für-Punkt-Bestätigung von Einstieg, Parametern und Verhalten — bis zur aktuellen CLI-Nicht-Interaktiv-Dokumentation besser `outdated`.  
+**Zuletzt geprüft:** 2026-07-26

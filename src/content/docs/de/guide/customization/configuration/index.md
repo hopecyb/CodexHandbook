@@ -1,33 +1,33 @@
 ---
-title: Configuration
-description: Overview of configuration files and profiles—what behavior belongs in configuration and what does not.
+title: Konfiguration
+description: "Einstiegsseite zu Config und Profiles: welche Verhaltensweisen in die Config gehören — und welche nicht."
 locale: de
-source_locale: en
-source_revision: 5485bff
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you see the “configuration” group, it is easy to think it is only about parameter names.
+Beim ersten Blick auf die Gruppe „Konfiguration“ wirkt es oft, als ginge es nur um Parameternamen.
 
-It mainly solves one thing: how Codex should work by default, instead of saying it temporarily every time.
+Eigentlich geht es um eines: Codex soll standardmäßig auf eine bestimmte Weise arbeiten — ohne dass Sie es jedes Mal neu sagen.
 
-## Recommended Order
+## Empfohlene Reihenfolge
 
-1. [Configuration Basics](/guide/customization/configuration/config-basics/)
+1. [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/)
 2. [Profiles](/guide/customization/configuration/profiles/)
 
-## What This Group Addresses
+## Welche Probleme diese Gruppe löst
 
-- Which preferences belong in configuration files
-- When to split multiple profiles
-- Why some limits should go to rules or approval, not configuration notes alone
+- Welche Vorlieben in Config-Dateien gehören
+- Wann mehrere Profiles sinnvoll sind
+- Warum manche Einschränkungen an Regeln oder Freigabe gehören — nicht nur an Config-Kommentare
 
-Configuration suits default behavior and stable preferences; it does not replace approval, rules, and project instructions.
+Config eignet sich für Standardverhalten und stabile Vorlieben — nicht als Ersatz für Freigabe, Regeln und Projektanweisungen.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked against this repo’s current configuration subsection structure and entry links; this page only states the grouping principle that configuration handles default behavior and stable preferences and cannot replace approval and project rules, without volatile config key details.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE  
+**Prüfgrundlage:** Kreuzgeprüft gegen Struktur und Einstiegslinks der aktuellen configuration-Unterkapitel; diese Seite erklärt nur das Gruppierungsprinzip „Config trägt Standardverhalten und stabile Vorlieben, ersetzt keine Freigabe und Projektregeln“ und enthält keine volatilen Config-Key-Details.  
+**Zuletzt geprüft:** 2026-07-26

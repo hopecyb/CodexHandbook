@@ -1,53 +1,52 @@
 ---
-title: Understand a codebase
-description: Read-only exploration of unfamiliar repos to build an actionable mental map.
+title: Eine Codebasis verstehen
+description: Unbekannte Repositories nur lesend erkunden und eine handlungsfähige mentale Karte aufbauen.
 locale: de
-source_locale: en
-source_revision: fdd9043
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Understand a codebase
+# Eine Codebasis verstehen
 
-## Meta information
+## Metadaten
 
-| Field | Content |
+| Feld | Inhalt |
 |---|---|
-| Audience | Developers |
+| Zielgruppe | Entwickler |
 | Client | CLI / IDE |
-| Estimated time | 30–60 minutes |
+| Geschätzte Dauer | 30–60 Minuten |
 
-## 1. Goal and background
+## 1. Ziel und Kontext
 
-**Goal:** Before changing code, understand module boundaries, entry points, and risk areas.
+**Ziel:** Vor Änderungen Modulgrenzen, Einstiegspunkte und Risikobereiche klären.
 
-**Success criteria:** You can explain the main path from "request to response" or "command to output" to someone else.
+**Erfolgskriterien:** Du kannst anderen den Hauptpfad «von Request zu Response» oder «von Befehl zu Ausgabe» erklären.
 
-## 2. Recommended prompt
+## 2. Empfohlener Prompt
 
 ```text
-Do not change code yet. Read @src/ and @README; explain in 8 bullets or fewer:
-1. Project purpose and tech stack
-2. Main directory responsibilities
-3. Start/test entry points
-4. 3 files most relevant to [my goal]
-5. 3 questions for me to confirm
+Ändere vorerst keinen Code. Lies @src/ und @README und erkläre in höchstens 8 Punkten:
+1. Zweck des Projekts und Tech-Stack
+2. Aufgaben der wichtigsten Verzeichnisse
+3. Start-/Test-Einstiegspunkte
+4. Die 3 Dateien, die für 【mein Ziel】 am relevantesten sind
+5. 3 Fragen, die ich bestätigen soll
 ```
 
-## 3. Verification
+## 3. Überprüfung
 
-- Spot-check against actual `package.json` / entry files
-- Write conclusions into an issue or `AGENTS.md` summary
+- Gegen die tatsächliche `package.json` / Einstiegsdateien stichprobenartig prüfen
+- Schlussfolgerungen in ein Issue oder eine `AGENTS.md`-Zusammenfassung schreiben
 
-## 4. Related
+## 4. Verwandt
 
-- [Understand template](/prompts/templates/understand/)
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-
+- [Verstehen-Vorlage](/prompts/templates/understand/)
+- [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Understand large codebases," focusing on tracing main paths, identifying key modules, and quickly locating relevant files; this page's read-only exploration example aligns with the current official positioning.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin „Understand large codebases“; Fokus ist das Verfolgen des Hauptpfads, das Erkennen zentraler Module und das schnelle Finden relevanter Dateien. Das Beispiel auf dieser Seite ist ein nur lesendes Erkundungsszenario und entspricht der aktuellen offiziellen Positionierung.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,34 +1,34 @@
 ---
-title: Rules
-description: Overview of allow/deny, command rules, and team policy—what to block, what to warn, and what to standardize.
+title: Regeln
+description: "Einstiegsseite zu allow/deny, Befehlsregeln und Teamrichtlinien — was blockieren, was nur erinnern."
 locale: de
-source_locale: en
-source_revision: 4faab45
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The rules group is easy for beginners to mistake for “writing a few more reminders for Codex.”
+Die Gruppe „Regeln“ wird von Einsteigern leicht als „noch ein paar Erinnerungen für Codex“ missverstanden.
 
-More accurately, rules answer: which actions are allowed by default, which to block, and which to enforce uniformly as a team standard.
+Genauer: Regeln klären, welche Aktionen standardmäßig erlaubt sind, welche blockiert werden und welche einheitlich nach Teamstandard laufen.
 
-## Recommended Order
+## Empfohlene Reihenfolge
 
-1. [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Command Rules](/guide/customization/rules/command-rules/)
-3. [Team Rules](/guide/customization/rules/team-rules/)
+1. [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/)
+2. [Befehlsregeln](/guide/customization/rules/command-rules/)
+3. [Teamregeln](/guide/customization/rules/team-rules/)
 
-## What This Group Helps You Solve
+## Was diese Gruppe hilft zu lösen
 
-- Which actions should be blocked outright
-- Which limits belong in explicit rules instead of verbal reminders
-- How teams keep the same boundaries for similar risks
+- Welche Aktionen direkt verhindert werden sollten
+- Welche Einschränkungen als klare Regeln taugen — nicht nur mündlich
+- Wie das Team bei gleichen Risiken dieselbe Grenze hat
 
-Rules exist to nail down boundaries so the system executes against them.
+Regeln sollen Grenzen festmachen und das System danach ausführen lassen.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked against this repo’s current rules subsection structure and entry links; this page only navigates by allow/deny, command rules, and team rules grouping and does not declare specific rule implementation or default blocking behavior.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen Struktur und Einstiegslinks der aktuellen rules-Unterkapitel; diese Seite navigiert nur nach allow/deny, Befehlsregeln und Teamregeln und behauptet keine konkreten Regelimplementierungen oder Default-Blockierverhalten.  
+**Zuletzt geprüft:** 2026-07-26

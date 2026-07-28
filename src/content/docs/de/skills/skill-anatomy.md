@@ -1,96 +1,94 @@
 ---
-title: Skill anatomy
-description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
+title: Skill-Aufbau
+description: Rollen von SKILL.md, references/, templates/ und scripts/ mit Beispielen.
 locale: de
-source_locale: en
-source_revision: '31950e9'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you open a Skill directory, folders look familiar—but it is not always obvious why they are laid out this way.
+Beim ersten Blick auf ein Skill-Verzeichnis kennt man die Ordner oft, weiß aber nicht, warum sie so liegen.
 
-This page explains how to separate main flow, long docs, templates, and scripts instead of stuffing everything into one file.
+Diese Seite zeigt, wie du Hauptablauf, lange Erklärungen, Vorlagen und Skripte trennst — statt alles in eine Datei zu stopfen.
 
-That makes reading, editing, and reuse easier and avoids a mess as you grow.
+Das erleichtert Lesen, Ändern und Wiederverwenden und verhindert Chaos.
 
-# Skill anatomy
+# Skill-Aufbau
 
-## Directory layout
+## Verzeichnisstruktur
 
 ```text
 my-skill/
-├── SKILL.md          # Required
-├── scripts/          # Optional: deterministic steps
-├── references/       # Optional: long reference docs
-└── templates/        # Optional: output templates
+├── SKILL.md          # Pflicht
+├── scripts/          # Optional: deterministische Schritte
+├── references/       # Optional: lange Referenzdokumente
+└── templates/        # Optional: Ausgabevorlagen
 ```
 
-## What each layer does
+## Was jede Ebene tut
 
-- `SKILL.md`: Main manual—what it is, when to use it, what steps to follow
-- `references/`: Long reference shelf; do not cram all background into the main file
-- `templates/`: Output skeletons so you are not improvising every time
-- `scripts/`: Hand deterministic steps to scripts instead of only natural language
+- `SKILL.md`: Hauptanleitung — was es ist, wann nutzen, welche Schritte
+- `references/`: langer Materialschrank — nicht alles Hintergrundwissen in die Hauptdatei
+- `templates/`: fertige Ausgabe-Skelette — kein Improvisieren jedes Mal
+- `scripts/`: deterministische Schritte als Skript, nicht nur natürliche Sprache
 
-At first you may only need `SKILL.md`.  
-Split out `references/`, `templates/`, and `scripts/` when things actually get complex.
+Am Anfang reicht oft nur `SKILL.md`.  
+Bei echter Komplexität `references/`, `templates/`, `scripts/` nachziehen.
 
-## Minimal SKILL.md example
+## Minimales SKILL.md-Beispiel
 
 ```md
 ---
 name: pr-review
-description: Review the diff of the current branch against main; flag risks and test gaps. Use when the user asks for review, PR review, or pre-merge checks.
+description: "Prüft den Diff des aktuellen Branchs gegenüber main, markiert Risiken und Testlücken. Nutzen, wenn der Nutzer Review, PR-Prüfung oder Checks vor dem Merge verlangt."
 ---
 
-## Steps
-1. Get the diff against main
-2. Classify by file: logic errors, security, performance, tests
-3. Output tiered list: blocking / suggestion / nit
-4. Do not auto push or merge
+## Schritte
+1. Diff gegenüber main holen
+2. Nach Dateien klassifizieren: Logikfehler, Sicherheit, Performance, Tests
+3. Gestufte Liste ausgeben: Blocker / Empfehlung / Nit
+4. Nicht automatisch pushen oder mergen
 ```
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. You must create every directory on day one
+### 1. Alle Verzeichnisse von Anfang an anlegen
 
-Many good Skills start with only `SKILL.md` and grow other dirs as reuse increases.
+Viele gute Skills starten nur mit `SKILL.md` und wachsen mit der Wiederverwendung.
 
-### 2. references/ is just for "more content"
+### 2. `references/` nur „mehr Inhalt“
 
-The point is moving long material you should not always load into the main flow.
+Es geht nicht um Menge, sondern darum, lange Erklärungen erst bei Bedarf zu laden.
 
-### 3. Avoid scripts if you can
+### 3. `scripts/` möglichst vermeiden
 
-If a step should be stable, deterministic, and repeatable, a script is often more reliable than repeated natural-language description.
+Wenn ein Schritt stabil, deterministisch und wiederholbar sein soll, ist ein Skript oft zuverlässiger als reine Prosa.
 
-## Directory roles
+## Rollen der Verzeichnisse
 
-| Directory | Purpose |
+| Verzeichnis | Zweck |
 |---|---|
-| `SKILL.md` | Main flow, triggers, prohibitions |
-| `references/` | Long docs, standards, API notes |
-| `templates/` | Output format, report skeleton |
-| `scripts/` | Deterministic commands and checks |
+| `SKILL.md` | Hauptablauf, Auslösebedingungen, Verbote |
+| `references/` | Lange Docs, Normen, API-Hinweise |
+| `templates/` | Ausgabeformat, Report-Skelett |
+| `scripts/` | Deterministische Befehle und Checks |
 
-## When to split directories
+## Wann Verzeichnisse aufteilen
 
-Ask in this order:
+1. Ist der Hauptablauf schon zu lang zum ersten Lesen?
+2. Gibt es große Materialblöcke, die nicht jedes Mal nötig sind?
+3. Wiederholt sich ein festes Ausgabeformat?
+4. Ist ein Schritt stabil genug für Skriptisierung?
 
-1. Is the main flow too long to read in one pass?
-2. Is there a large block of material not needed every time?
-3. Is there a fixed output format you repeat?
-4. Is there a step stable enough to script?
+Bei ein bis zwei „Ja“ kannst du aufteilen.
 
-If one or two answers are yes, start splitting.
+Zuerst mit `SKILL.md` durchziehen; bei Komplexität Material, Vorlagen und Skripte schrittweise auslagern.
 
-Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
-
-Full exercise: [Create your first Skill](/skills/create-your-first-skill/).
+Übung: [Ersten Skill erstellen](/skills/create-your-first-skill/).
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still centers skills on `SKILL.md` with optional scripts and references; this page covers directory roles, not volatile product entry points.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Die aktuelle Codex-Laufzeit nutzt weiterhin `SKILL.md` als Kern und erlaubt bei Bedarf Skripte und Referenzen; diese Seite fokussiert Verzeichnisrollen und bindet keine volatilen Produkteinstiege.  
+**Zuletzt geprüft:** 2026-07-26

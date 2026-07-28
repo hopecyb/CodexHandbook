@@ -1,32 +1,34 @@
 ---
 title: CI/CD
-description: Connect Codex to continuous integration and release workflows—start with low-risk automation.
+description: Codex in Continuous Integration und Release-Abläufe einbinden — zuerst mit risikoarmer Automatisierung.
 locale: de
-source_locale: en
-source_revision: ff62c2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When wiring Codex into CI/CD, the most common mistake is trying to make it auto-edit, auto-push, and auto-merge from day one.
+Beim Anschluss von Codex an CI/CD scheitert es oft hier:
 
-The more common approach is to start read-only: suggestions and reports only.
+Man will sofort automatisches Ändern, Pushen und Mergen.
 
-## Section entry
+Üblicher ist: zuerst nur lesen, nur vorschlagen, nur Berichte erzeugen.
 
-- [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+## Einstieg in diese Gruppe
 
-## What this section covers
+- [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
 
-- Structured review at the PR stage
-- Let automation find issues and suggest fixes first
-- Keep high-risk actions behind human approval
+## Inhalt dieser Gruppe
 
-Connecting Codex in CI/CD usually means low-risk assistance first, then deciding what is worth delegating.
+- Strukturierte Reviews in der PR-Phase
+- Automatisierung zuerst für „Probleme finden“ und „Vorschläge geben“
+- Risikoträchtige Aktionen weiterhin der menschlichen Freigabe überlassen
+
+In CI/CD Codex zuerst als risikoarme Unterstützung einsetzen — und erst danach entscheiden, welche Aktionen mehr Rechte verdienen.
 
 ---
 
 **Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** Cross-checked against the current CI/CD subsection structure and code review automation entry in this repo; content is limited to the stable principle of low-risk assistance in CI/CD before delegating actions.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / API / Cloud  
+**Prüfgrundlage:** Gegen die aktuelle CI/CD-Unterstruktur und den Einstieg zur Code-Review-Automatisierung abgeglichen; Inhalt auf das stabile Prinzip „zuerst risikoarme Unterstützung in CI/CD, dann Rechte erweitern“ begrenzt.  
+**Zuletzt geprüft:** 2026-07-26

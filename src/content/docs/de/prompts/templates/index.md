@@ -1,68 +1,68 @@
 ---
-title: Prompt templates
-description: Reusable prompt skeletons by task type—understand, create, change, diagnose, review, research, automate.
+title: Prompt-Vorlagen
+description: 'Wiederverwendbare Prompt-Gerüste nach Aufgabentyp — Verstehen, Erstellen, Ändern, Diagnostizieren, Review, Recherchieren, Automatisieren.'
 locale: de
-source_locale: en
-source_revision: e24d44b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Prompt templates
+# Prompt-Vorlagen
 
-People often react two ways to "templates":
+Bei „Vorlage“ gibt es oft zwei Reaktionen:
 
-- templates feel too rigid, so they skip them
-- or they copy verbatim without knowing what to customize
+- zu starr, will man nicht nutzen
+- 1:1 kopieren, ohne zu wissen, was ersetzt werden muss
 
-Templates mainly help you not drop key sections—they don't think for you.
+Vorlagen helfen vor allem, kritische Abschnitte nicht zu vergessen — sie denken nicht für dich.
 
-Template pages preserve task structure, not the one true answer.
+Ziel der Vorlagenseiten: Aufgabenstruktur halten, nicht die einzig richtige Antwort erzeugen.
 
-## How to use templates
+## So nutzt du Vorlagen
 
-1. Pick the closest template type
-2. Replace `【】` placeholders with your real task
-3. Delete irrelevant sections
-4. Add constraints and acceptance specific to this run
+1. Typ wählen, der der Aufgabe am nächsten kommt
+2. Platzhalter `【】` durch deine echte Aufgabe ersetzen
+3. Irrelevante Abschnitte streichen
+4. Aufgabenspezifische Constraints und Abnahme ergänzen
 
-Templates are scaffolding, not answer keys.
+Vorlagen sind Gerüst, keine Musterlösung.
 
-| Template | When to use |
+| Vorlage | Wann |
 |---|---|
-| [Understand](/prompts/templates/understand/) | Read codebase, docs, or materials to build shared understanding first |
-| [Create](/prompts/templates/create/) | Build features, documents, or artifacts from scratch |
-| [Change](/prompts/templates/change/) | Iterate on something that already exists |
-| [Diagnose](/prompts/templates/diagnose/) | Find root cause before changing code |
-| [Review](/prompts/templates/review/) | Review diffs, PRs, or document changes |
-| [Research](/prompts/templates/research/) | Investigation and comparison with citations |
-| [Automate](/prompts/templates/automate/) | Repeatable tasks, scripts, unattended flows |
+| [Verstehen](/prompts/templates/understand/) | Codebase, Docs oder Material lesen — zuerst Orientierung |
+| [Erstellen](/prompts/templates/create/) | Feature, Text oder Artefakt von null |
+| [Ändern](/prompts/templates/change/) | Iterative Änderungen auf Bestehendem |
+| [Diagnostizieren](/prompts/templates/diagnose/) | Ursache finden, noch keinen Code ändern |
+| [Review](/prompts/templates/review/) | Diff, PR oder Doc-Änderungen prüfen |
+| [Recherchieren](/prompts/templates/research/) | Recherche und Vergleich mit Quellen |
+| [Automatisieren](/prompts/templates/automate/) | Wiederholaufgaben, Skripte, unbeaufsichtigte Flows |
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Templates are copy-paste artifacts
+### 1. Vorlage = 1:1 kopieren
 
-Without editing placeholders and trimming sections, templates hollow out the task.
+Ohne Platzhalter-Ersatz und ohne Streichen irrelevanter Abschnitte wird die Aufgabe leer.
 
-### 2. Using a template automatically makes prompts "professional"
+### 2. Vorlage allein macht den Prompt „professionell“
 
-Templates preserve structure—they don't decide:
+Die Vorlage hält Struktur — entscheidet aber nicht:
 
-- the real goal
-- where constraints should land
-- how acceptance should read
+- echtes Ziel
+- wo Constraints liegen
+- wie Abnahme geschrieben wird
 
-### 3. More template is better
+### 3. Je vollständiger die Vorlage, desto besser
 
-For beginners, "enough but not bloated" is fine.
+Für Einsteiger: „ausreichend, nicht aufgebläht“.
 
-Pick the right type first, then adapt it—don't treat the template itself as the task.
+Zuerst den richtigen Typ wählen, dann zur eigenen Aufgabe machen — die Vorlage selbst ist nicht die Aufgabe.
 
-Writing principles: [Prompt basics](/prompts/basics/) and [Task anatomy](/prompts/task-anatomy/).
+Schreibprinzipien: [Prompt-Grundlagen](/prompts/basics/) und [Aufgabenstruktur](/prompts/task-anatomy/).
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains template usage only; in-site links and template categories were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur die Nutzung von Vorlagen; interne Links und Vorlagenkategorien wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

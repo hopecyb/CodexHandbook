@@ -1,86 +1,87 @@
 ---
-title: Choose your Codex client
-description: Pick App, CLI, IDE, or Cloud for your first time.
+title: Codex-Client wählen
+description: "Zwischen App, CLI, IDE und Cloud die erste Wahl treffen."
 locale: de
-source_locale: en
-source_revision: d578df0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you see `App / CLI / IDE / Cloud`, the usual question is: which one should I use?
+Beim ersten Blick auf `App / CLI / IDE / Cloud` ist die typische Frage: Welchen davon?
 
-Do not overthink the first choice. Start with an easy entry point and add others later.
+Die erste Wahl muss nicht schwer wiegen. Starte mit einem leicht zugänglichen Einstieg — den Rest kannst du später ergänzen.
 
-## Direct picks
+## Direkt wählen
 
-If you have no strong preference:
+Ohne starke Präferenz so:
 
-- **First time**: choose the desktop App
-- **You live in the terminal**: choose CLI
-- **You mostly write code in VS Code / JetBrains**: choose the IDE extension
-- **You already need GitHub cloud repos or long-running tasks**: look at Cloud
+- **Erstes Mal**: Desktop-App
+- **Du arbeitest ohnehin täglich im Terminal**: CLI
+- **Du schreibst vor allem in VS Code / JetBrains**: IDE-Erweiterung
+- **Du brauchst klar GitHub-Cloud-Repos oder lange Aufgaben**: Cloud ansehen
 
-## What each entry point is
+## Was die Einstiege sind
 
-| Entry | Think of it as |
+| Einstieg | Kurz verstanden als |
 |---|---|
-| Desktop App | A graphical console for tasks, diffs, and approvals |
-| CLI | Codex in the terminal, for command-line users |
-| IDE extension | An assistant inside the editor, for edit-while-you-read |
-| Cloud | Remote task execution for repo collaboration and long jobs |
+| Desktop-App | Grafische Konsole — Aufgaben, Diffs, Freigaben sehen und klicken |
+| CLI | Codex im Terminal — für Kommandozeilen-Nutzer |
+| IDE-Erweiterung | Assistent im Editor — Code ansehen und gleichzeitig ändern |
+| Cloud | Aufgaben remote ausführen — Repo-Kollaboration und lange Läufe |
 
-## Choose by your situation
+## Nach aktueller Lage wählen
 
-| If you… | Choose |
+| Wenn du… | Wähle |
 |---|---|
-| Are new and want clear diffs and review | **Desktop App** |
-| Live in the terminal and want scripts | **CLI** |
-| Mostly edit code in an editor | **IDE extension** |
-| Need GitHub cloud environments / long tasks | **Cloud** (read the overview first) |
+| Zum ersten Mal nutzt und Diffs sowie Review klar sehen willst | **Desktop-App** |
+| Terminal gewohnt bist und Skripte schreiben willst | **CLI** |
+| Vor allem im Editor Code änderst | **IDE-Erweiterung** |
+| GitHub-Cloud-Umgebung / lange Aufgaben brauchst | **Cloud** (zuerst Überblick lesen) |
 
-## Why beginners often start with the desktop App
+## Warum oft die Desktop-App
 
-For first-time users, the desktop App has clear advantages:
+Für Anfänger hat die Desktop-App klare Vorteile:
 
-- Easier to see what it did
-- Clear when it asks for permissions
-- Diffs, tasks, and projects feel more concrete
-- Easier to pause and inspect when something goes wrong
+- Leichter sichtbar, was es getan hat
+- Wann es Berechtigungen anfragt, ist klar
+- Diff, Aufgabe, Projekt sind anschaulicher
+- Bei Fehlern leichter anhalten und prüfen
 
-If you do not strongly prefer the terminal, the desktop App is usually the lighter start.
+Ohne klare Terminal-Präferenz ist die Desktop-App oft entspannter.
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. These four entry points are four completely different products
+### 1. Die vier Einstiege sind vier völlig verschiedene Produkte
 
-They share the same core capabilities. The differences are mostly interaction style and fit for a scenario.
+Sie nutzen denselben Fähigkeitskern — Unterschiede liegen vor allem in Bedienung und Szenario.
 
-### 2. I must pick the perfect one the first time or I will regret it
+### 2. Die erste Wahl muss für immer stimmen
 
-The first choice is a starting point, not a lifelong decision.
+Die erste Wahl ist Startpunkt, keine Lebensentscheidung.
 
-### 3. I can only ever use one entry point
+### 3. Später nur noch ein Einstieg erlaubt
 
-Many people later combine them:
+Viele kombinieren später:
 
-- Desktop App for reviewing tasks and changes day to day
-- CLI for batch operations
-- IDE extension when mainly writing code
+- Alltag: Desktop-App für Aufgaben und Änderungsreview
+- Massenoperationen: CLI
+- Hauptsächlich Code: IDE-Erweiterung
 
-## Suggested start order
+## Startreihenfolge
 
-1. Install the [desktop App](/guide/getting-started/install-desktop-app/)
-2. Run through [your first task](/guide/getting-started/run-your-first-task/)
-3. Once that feels comfortable, consider CLI or IDE
+1. Zuerst [Desktop-App](/guide/getting-started/install-desktop-app/) installieren
+2. Einmal die [erste Aufgabe](/guide/getting-started/run-your-first-task/) durchlaufen
+3. Wenn das sitzt: CLI oder IDE erwägen
 
-Full comparison: [Feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep the same practice directory** so experiences are easy to compare.
+Vollständiger Vergleich: [Funktionsvergleich](/guide/reference/feature-comparison/). Mehrere Clients sind ok; **Übungsprojekt im selben Verzeichnis halten**, damit Vergleiche leichtfallen.
 
-Do not rush to decide which is “more professional.” Pick the entry where process and results are easiest to understand.
+Beim ersten Mal nicht „welcher ist professioneller“ vergleichen. Nimm den Einstieg, bei dem Prozess und Ergebnis am leichtesten verständlich sind.
 
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Geeignete Produkte:** App / CLI / IDE  
+**Überprüfungsgrundlage:** Die OpenAI-Developers-Startseite zeigt Codex, Desktop-Workflows und Entwickler-Einstiege parallel; die Schlussfolgerung dieser Seite ist eine szenariobasierte Erstauswahl und vermeidet, App / CLI / IDE / Cloud als sich ausschließende oder fähigkeitsfremde Produkte darzustellen.  
+**Zuletzt überprüft:** 2026-07-26

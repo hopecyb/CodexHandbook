@@ -1,55 +1,56 @@
 ---
-title: Research template
-description: Investigation and comparison with citations.
+title: Recherchieren-Vorlage
+description: Recherche und Vergleich mit Quellenangaben.
 locale: de
-source_locale: en
-source_revision: b0f8d5e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Research template
+# Recherchieren-Vorlage
 
-Research differs from ordinary Q&A: you want answers **and** where they came from.
+Recherche unterscheidet sich von normalem Q&A: du willst nicht nur die Antwort, sondern woher sie kommt.
 
-## Template
+## Vorlage
 
 ```text
-Research question: 【one sentence】
-Evaluation dimensions: 【list 3–5 items】
+Forschungsfrage: 【ein Satz】
+Bewertungsdimensionen: 【3–5 Punkte】
 Constraints:
-- Each conclusion must cite source URL or @in-repo path
-- Mark unverifiable items as 「pending confirmation」
-- Do not change code
-Output: comparison table + recommendation + open questions
+- Jede Schlussfolgerung mit Quellen-URL oder @Pfad im Repo
+- Nicht Verifizierbares als „zu bestätigen“ markieren
+- Keinen Code ändern
+Ausgabe: Vergleichstabelle + Empfehlung + offene Fragen
 ```
 
-## When to use this template
+## Wann diese Vorlage passt
 
-- Product or solution comparison
-- Latest capabilities, rules, or differences
-- Conclusions you can audit later
+- Produkt-/Optionsvergleich
+- aktuelle Fähigkeiten, Regeln oder Unterschiede prüfen
+- Schlussfolgerungen später nachprüfbar brauchen
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Research means polished summary
+### 1. Recherche = „etwas ordentlich zusammenfassen“
 
-Sources, boundaries, and pending items matter more.
+Wichtiger: Quellen, Grenzen und offene Punkte.
 
-### 2. Must give a definite answer even when evidence is thin
+### 2. Auch ohne Fund eine sichere Antwort geben
 
-Marking 「pending confirmation」 beats false certainty.
+Bei Recherche ist „zu bestätigen“ wertvoller als Scheinsicherheit.
 
-Key constraint: every major conclusion traceable to a source—not just pretty formatting.
+Zentrale Regel: jede wichtige Schlussfolgerung muss zur Quelle zurückführbar sein — nicht nur die Form stimmen.
 
-## Related
+## Verwandt
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Verification](/guide/verification/)
+- [Recherche mit Quellen (Fall)](/cases/research-with-sources/)
+- [Überprüfung](/guide/verification/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a research-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Recherche-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

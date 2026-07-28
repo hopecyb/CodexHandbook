@@ -1,83 +1,84 @@
 ---
-title: Case study template
-description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
+title: Fallvorlage
+description: Einheitliche Struktur zum Schreiben und Retrospektieren von Codex-Fällen — erleichtert Team-Verstetigung und Vergleich.
 locale: de
-source_locale: en
-source_revision: 985e88b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Copy this template to create a new case page or internal retro doc.
 
-Before copying, delete sections your actual readers and deliverables don't need.
+Diese Vorlage kopieren, um eine neue Fallseite oder ein internes Retro-Dokument anzulegen.
+
+Vor dem Kopieren Abschnitte streichen, die für Leser und Liefergegenstand irrelevant sind.
 
 ---
 
-## Metadata
+## Metadaten
 
-| Field | Fill in |
+| Feld | Ausfüllen |
 |---|---|
-| Case title | |
-| Audience | Beginner / Developer / Creator / Team |
-| Client used | App / CLI / IDE / Cloud |
-| Estimated time | |
-| Verification date | YYYY-MM-DD |
+| Falltitel | |
+| Zielgruppe | Einsteiger / Entwickler / Autoren / Teams |
+| Client | App / CLI / IDE / Cloud |
+| Geschätzte Dauer | |
+| Prüfdatum | YYYY-MM-DD |
 
-## 1. Goal and context
+## 1. Ziel und Kontext
 
-- **Business goal:** one sentence
-- **Success criteria:** observable and verifiable
-- **Out of scope:** explicit exclusions
+- **Geschäftsziel:** Ein Satz
+- **Erfolgskriterien:** beobachtbar, überprüfbar
+- **Außerhalb des Umfangs:** klare Ausschlüsse
 
-## 2. Preparation
+## 2. Vorbereitung
 
-- Account/permissions/repo state
-- Context files needed (`AGENTS.md`, designs, etc.)
-- Risks: data, production, secrets
+- Account / Berechtigungen / Repository-Status
+- Benötigte Kontext-Dateien (`AGENTS.md`, Designs usw.)
+- Risiken: Daten, Produktion, Secrets
 
 ## 3. Workflow (EPXV)
 
-### Explore
+### Erkunden
 
-- Input prompt (summary)
-- Key findings
+- Eingabe-Prompt (Zusammenfassung)
+- Zentrale Erkenntnisse
 
-### Plan
+### Planen
 
-- Step list
-- Human confirmation points
+- Schrittliste
+- Menschliche Bestätigungspunkte
 
-### Execute
+### Ausführen
 
-- Actual change scope
-- Deviations from plan and why
+- Tatsächlicher Änderungsumfang
+- Abweichungen vom Plan und Gründe
 
-### Verify
+### Überprüfen
 
-- Automated tests
-- Manual checks
-- Evidence (screenshots, logs, links)
+- Automatische Tests
+- Manuelle Prüfung
+- Evidenz (Screenshots, Logs, Links)
 
-## 4. Failure and recovery
+## 4. Fehler und Wiederherstellung
 
-- What went wrong
-- How to undo or fix
-- What you'd change in prompts/config if you redid it
+- Welche Probleme auftraten
+- Wie rückgängig gemacht oder korrigiert
+- Was am Prompt/Config beim nächsten Mal anders wäre
 
-## 5. Capture
+## 5. Verstetigen
 
-- Whether to write `AGENTS.md` / Skill / Automation
-- Three recommendations for the team
+- Ob in `AGENTS.md` / Skill / Automation geschrieben
+- 3 Empfehlungen an das Team
 
-## 6. References
+## 6. Referenzquellen
 
-- Official doc links
-- Whether this case adapts an external tutorial (task type only)
+- Links zu offiziellen Docs
+- Ob dieser Fall externe Tutorials nur als Aufgabentyp adaptiert
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified EPXV workflow, failure recovery, project instructions, and case library structure; this page only provides a unified template for writing and retrospecting cases—not specific product behavior.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften EPXV-Workflows, Fehlerwiederherstellung, Projektanweisungen und Fallbibliotheksstruktur. Diese Seite liefert nur die einheitliche Vorlage zum Schreiben und Retrospektieren von Fällen und behauptet kein konkretes Produktverhalten.  
+**Zuletzt geprüft:** 2026-07-26

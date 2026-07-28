@@ -1,123 +1,129 @@
 ---
-title: Write a Guide Page
-description: Structure, frontmatter, and cross-link conventions for new handbook guides.
+title: Guide-Seite schreiben
+description: "Struktur, Frontmatter und Cross-Link-Konventionen für neue Handbuchtexte."
 locale: de
-source_locale: en
-source_revision: 78da82d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This page explains how to add or revise **guide-style** pages in `src/content/docs/` (not pure cases or pure reference tables).
+Diese Seite: Wie Sie unter `src/content/docs/` **Guide-Seiten** anlegen oder umschreiben (keine reinen Fallstudien, keine reinen Referenztabellen).
 
-## What this page covers
+## Inhalt dieser Seite
 
-Common blockers:
+Typische Stolperstellen:
 
-- What a guide page should look like
-- Tutorial vs policy vs index summary
-- How to actually help newcomers
+- Unklar, wie eine Guide-Seite aussehen soll
+- Unsicher, ob „Tutorial“, „Norm“ oder „Inhaltsverzeichnis-Zusammenfassung“
+- Unklar, was Einsteigern wirklich hilft
 
-## Role of a guide page
+Hier getrennt — für wartbare, lesbare Guides.
 
-A guide is not “dump information.” It should move readers from “I know this topic exists” to “I know when to use it, what to read first, and what to avoid.”
+## Rolle der Guide-Seite
 
-Not only a bullet list or command sheet—it should show next steps.
+Nicht „Material stapeln“. Sie soll von „Thema existiert“ zu „wann nutzen, was zuerst lesen, welche Fallen“ führen.
+
+Also nicht nur Wissensliste oder Befehlsliste — sondern nächster Schritt klar.
 
 ## Frontmatter
 
 ```yaml
 ---
-title: Page title
-description: One sentence on what problem this page solves
+title: Seitentitel
+description: In einem Satz, welches Problem die Seite löst
 ---
 ```
 
-Optional unified footer (match existing pages):
+Optional einheitlicher Footer (wie bestehende Seiten):
 
 ```markdown
 ---
 
 **Status:** planned | draft | review | verified | outdated | archived
-**Products:** App / CLI / IDE / Cloud
-**Last verified:** YYYY-MM-DD
+**Gilt für:** App / CLI / IDE / Cloud
+**Zuletzt geprüft:** YYYY-MM-DD
 ```
 
-## Recommended structure
+## Empfohlene Struktur
 
-Per [external source integration template](/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, recommended page template), common sections:
+Abschnitte nach [External-Source-Integrations-Template](/docs/planning/external-source-integration.md#6-推荐页面模板); häufig:
 
-- What problem the page solves
-- Who it is for
-- Minimal viable approach
-- Recommended workflow
-- Common mistakes
-- Security boundaries
-- Acceptance checklist
-- Reference sources
+- Welches Problem die Seite löst
+- Für wen
+- Minimal nutzbares Vorgehen
+- Empfohlener Workflow
+- Häufige Fehler
+- Sicherheitsgrenzen
+- Abnahmeliste
+- Quellen
 
-Product how-tos may be step-heavy; concept pages may use tables and diagrams.
+Produktbedienseiten eher Schritte; Konzeptseiten eher Tabellen und Diagramme.
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### Not every page is an encyclopedia
+### Nicht jede Seite als Enzyklopädie
 
-Lead with:
+Beim ersten Schreiben alles reinpacken — Fokus geht verloren.
 
-- Main problem
-- What readers misunderstand
-- One usable approach or decision rule
+Stabiler:
 
-Better for newcomers than every detail at once.
+- Zuerst Hauptproblem
+- Dann typische Missverständnisse
+- Dann brauchbares Vorgehen oder Entscheidungsverfahren
 
-### Write for readers, not only yourself
+Hilft Einsteigern oft mehr als alle Details auf einmal.
 
-Bridge for first-time visitors:
+### Nicht nur schreiben, was Sie wissen — wie andere lesen
 
-- Who it is for
-- What they can solve after reading
-- What to grab first for a quick start
+Sie kennen den Kontext; Erstleser nicht.
 
-### Guides do not replace official docs
+Brücken bewusst:
 
-Community handbook helps understanding and landing—but volatile facts need official verification.
+- Für wen die Seite
+- Was nach dem Lesen lösbar sein soll
+- Was zuerst greifen, wenn nur Einstieg
 
-## Cross-links
+### Guide ersetzt keine offizielle Doku
 
-- Internal links use root paths: `/cases/workflows/explore-plan-execute-verify/`
-- Link to authoritative pages; avoid long duplication
-- Register new pages in chapter `index.md` and `astro.config.mjs` sidebar
+Community hilft verstehen, verbinden, landen — flüchtige Fakten weiter an der offiziellen Doku prüfen.
 
-## Tone
+## Cross-Links
 
-- Simplified Chinese is source; English translations follow source structure
-- Acknowledge uncertainty (“per official documentation”)
-- Avoid “magic prompt” narrative
+- Interne Links mit Root-Pfad: `/cases/workflows/explore-plan-execute-verify/`
+- Auf Autoritätsseiten verlinken, große Duplikate vermeiden
+- Neue Seite in Kapitel-`index.md` und `astro.config.mjs`-Sidebar eintragen
 
-## Writing order
+## Ton
 
-1. What problem does this page solve?
-2. What do readers misunderstand or skip?
-3. Minimal approach, workflow, or decision rule
-4. Cross-links and reference sources
+- Technisches Deutsch für Praktiker
+- Unsicherheit anerkennen („laut offizieller Doku“)
+- Keine „Wunder-Prompt“-Erzählung
 
-## Verification
+## Schreibreihenfolge
 
-Before PR, read [Verify technical content](/guide/contributing/verify-technical-content/). Commands, pricing, permissions, etc. must be re-checked.
+1. Welches Problem löst die Seite
+2. Was Leser leicht missverstehen oder überspringen
+3. Minimal nutzbares Vorgehen, Workflow oder Entscheidung
+4. Zuletzt Cross-Links und Quellen
 
-A good guide tells first-time readers why the page exists, what to read first, and where to go next—not only “all the facts.”
+## Prüfung
 
-## Reference sources format
+Vor dem PR [Technische Inhalte prüfen](/guide/contributing/verify-technical-content/) lesen. Befehle, Preise, Berechtigungen usw. nachprüfen.
+
+Gute Guide-Seiten gewinnen nicht durch „alles voll“ — sondern dadurch, dass Erstleser wissen, warum die Seite existiert, was zuerst und wohin als Nächstes.
+
+## Quellen schreiben
 
 ```markdown
-## Reference sources
+## Quellen
 
-- OpenAI Codex official documentation
-- Community structure reference: CodexGuide (topics only, not verbatim)
+- Offizielle OpenAI-Codex-Dokumentation
+- Community-Strukturreferenz: CodexGuide (nur Themen, kein Originaltext)
 ```
 
 ---
 
 **Status:** verified  
-**Verification basis:** Cross-checked current doc frontmatter, footer status system, cross-link habits, and sidebar maintenance; describes writing conventions—not specific product version details.  
-**Last verified:** 2026-07-26
+**Prüfgrundlage:** Gegen aktuelles Frontmatter, Footer-Status, Cross-Link-Gewohnheiten und Sidebar-Pflege geprüft; Schreibnorm und Strukturvorschläge, ohne produktversionsabhängige Details.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,105 +1,106 @@
 ---
-title: Plugin and MCP Risk
-description: What extensions can access, how teams approve and monitor—unified risk view for Skills, Plugins, and MCP.
+title: Plugin- und MCP-Risiken
+description: 'Was Erweiterungen erreichen können und wie Teams freigeben und überwachen — einheitliche Risikosicht auf Skills, Plugins und MCP.'
 locale: de
-source_locale: en
-source_revision: a102da3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Plugins** and **MCP servers** connect Codex to external systems: tickets, databases, internal APIs. More capability means a larger [threat model](/guide/team-enterprise/security/threat-model/) surface for exfiltration and overreach. Read with [MCP overview](/skills/mcp/mcp-overview/) and [Plugins overview](/skills/plugins/plugins-overview/).
+**Plugins** und **MCP-Server** verbinden Codex mit externen Systemen: Tickets, Datenbanken, interne APIs. Je stärker die Fähigkeit, desto größer Exfiltration und Overreach im [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/). Zusammen lesen mit [MCP-Überblick](/skills/mcp/mcp-overview/) und [Plugins-Überblick](/skills/plugins/plugins-overview/).
 
-You do not need perfect definitions on day one. Core point: connecting Codex externally increases capability and risk.
+Beim ersten Kontakt nicht sofort Definitionen pauken. Ein Punkt reicht: Sobald Codex externe Systeme erreicht, wachsen Fähigkeit und Risiko gemeinsam.
 
-Whether it is called Plugin or MCP, ask:
+Ob Plugin oder MCP — die Kernfragen ähneln sich:
 
-- What can it read
-- What can it write
-- Who approves
-- How incidents are traced
+- Was kann es lesen
+- Was kann es ändern
+- Wer gibt frei
+- Wie nachverfolgen bei Vorfällen
 
-## What this page covers
+## Inhalt
 
-- Extension risk categories
-- Approval lists and version pinning
-- Isolation during debug and incidents
+- Risikoklassen von Erweiterungen
+- Freigabeliste und Versionspinning
+- Isolation bei Debug und Incidents
 
-## Risk categories
+## Risikoklassen
 
-| Type | Example | Control |
+| Typ | Beispiel | Kontrolle |
 |---|---|---|
-| Data read | MCP reads customer DB | Read-only account, row-level permissions |
-| Data write | Auto-close tickets, change config | Human approval, dual confirmation |
-| Network | Arbitrary outbound | Egress allowlist |
-| Credentials | OAuth token on disk | Secret management, short-lived tokens |
-| Supply chain | Third-party server update tampering | Pin version, hash lock |
+| Daten lesen | MCP liest Kunden-DB | Read-only-Konto, Row-Level-Rechte |
+| Daten schreiben | Tickets auto-schließen, Config ändern | Menschliche Freigabe, Double-Confirm |
+| Netz | Beliebige Externverbindungen | Egress-Allowlist |
+| Credentials | OAuth-Token auf Disk | Secret-Management, kurzlebige Tokens |
+| Lieferkette | Drittanbieter-Server-Update poisoned | Feste Version, Hash-Pin |
 
-## Team approval flow (recommended)
+## Empfohlener Team-Freigabeprozess
 
 ```text
-Request (purpose, data class, permissions) → security/architecture review
-    → enter “approved list” repo or internal directory
-    → pin version + owner
-    → quarterly or major-upgrade re-review
+Antrag (Zweck, Datenklasse, Rechte) → Security/Architektur-Review
+    → Eintrag in «Freigabeliste»-Repo oder internes Verzeichnis
+    → Versionsnummer + Owner fixieren
+    → Quartalsweise oder bei Major-Upgrade erneut prüfen
 ```
 
-Experimental personal MCP **should not** share production repo tokens.
+Experimentelle persönliche MCPs **nicht** mit demselben Token wie Produktionsrepos.
 
-## Minimum practices
+## Minimale Praxis
 
-1. **Deny by default** unlisted remote MCP installs
-2. **Local MCP** may still read the whole disk—dedicated OS user or container
-3. **Logs**: tool name and parameter summary (redacted)—see [Hook audit](/skills/hooks/hooks-examples/)
-4. **Skill vs MCP**: Skill describes flow, MCP performs external calls—permissions union; apply strictest policy
+1. **Default deny** für Remote-MCPs außerhalb der Liste
+2. **Lokales MCP** kann trotzdem die ganze Disk lesen — eigener OS-User oder Container
+3. **Logs**: Tool-Name und Parameterzusammenfassung (redaktiert); siehe [Hook-Audit](/skills/hooks/hooks-examples/)
+4. **Skill vs. MCP**: Skill beschreibt Ablauf, MCP macht Externzugriff — Rechte als Schnittmenge, strengste Policy
 
-## Common mistakes
+## Häufige Fehler
 
-- “Official marketplace” = “security reviewed”
-- Dev and prod share one MCP OAuth app
-- `DEBUG=*` in debug dumps tokens into CI logs
+- „Offizieller Marketplace“ = „sicherheitstechnisch reviewed“
+- Dev und Prod teilen dieselbe MCP-OAuth-App
+- Debug mit `DEBUG=*` schreibt Tokens in CI-Logs
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Plugin vs MCP unclear—does it matter early?
+### 1. Plugin und MCP noch unklar — macht das was?
 
-Not much at first.
+In Phase eins wenig.
 
-Both connect Codex to external systems—permissions and risk apply either way.
+Gemeinsam:  
+Beide bringen Codex an externe Systeme — Rechte und Risiko zählen.
 
-### 2. Why “read-only first”?
+### 2. Warum immer „Read-only zuerst“?
 
-Read-only usually means:
+Read-only heißt meist:
 
-- Easier pilot
-- Easier to prove value
-- Lower blast radius on mistakes
+- leichterer Pilot
+- schnellerer Nutzennachweis
+- geringerer Fehlerpreis
 
-### 3. Install and forget?
+### 3. Einmal installiert = bedenkenlos?
 
-Even convenient features need:
+Auch bei bequemen Features fragen:
 
-- What data it accesses
-- Whether it writes back
-- How credentials are managed
+- Welche Daten erreicht es
+- Schreibt es zurück
+- Wie werden Credentials verwaltet
 
-For external extensions: permissions and boundaries before feature strength.
+Bei Externerweiterungen zuerst Rechte und Grenzen, dann Feature-Stärke.
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Written approval list or equivalent process
-- [ ] Each production MCP has owner and data classification
-- [ ] Consistent with [Skill security](/skills/security/) policy
+- [ ] Schriftliche Freigabeliste oder gleichwertiger Prozess
+- [ ] Jedes Produktions-MCP hat Owner und Datenklasse
+- [ ] Konsistent mit [Skill-Security](/skills/security/)
 
-## Reference sources
+## Quellen
 
-- KimYx0207 MCP/Plugin security
-- stormzhang MCP chapter
-- [Debugging MCP](/skills/mcp/debugging-mcp/)
+- KimYx0207 MCP/Plugin-Security
+- stormzhang MCP-Kapitel
+- [MCP debuggen](/skills/mcp/debugging-mcp/)
 
 ---
 
 **Status:** verified  
-**Products:** CLI / App / Cloud  
-**Verification basis:** OpenAI Help Center plugin docs still emphasize app/plugin capability constrained by role access, action control, confirmation, domain/source boundaries, and underlying source permissions; mapped here to unified Plugin/MCP risk view with read-only first, version pinning, owners, and approval lists.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / App / Cloud  
+**Prüfgrundlage:** OpenAI Help Center Plugin-Dokumentation betont weiterhin gemeinsame Begrenzung von App/Plugin-Fähigkeiten durch RollenZugriff, Aktionskontrolle, Bestätigung, Domain-/Quellgrenzen und darunterliegende Quellsystemrechte; diese Seite mappt das auf eine einheitliche Plugin-/MCP-Risikosicht mit Read-only-first, Versionspin, klarem Owner und Freigabeliste.  
+**Zuletzt geprüft:** 2026-07-26

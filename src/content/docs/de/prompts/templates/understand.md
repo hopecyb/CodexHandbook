@@ -1,63 +1,64 @@
 ---
-title: Understand template
-description: Build shared understanding before making changes.
+title: Verstehen-Vorlage
+description: Zuerst Orientierung aufbauen, dann ändern.
 locale: de
-source_locale: en
-source_revision: d714793
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Understand template
+# Verstehen-Vorlage
 
-Many tasks stall because there's no shared baseline understanding yet.
+Viele Aufgaben stocken, weil noch kein gemeinsames Mindestverständnis da ist.
 
-The understand template fits "figure it out first, then decide next steps."
+Die Verstehen-Vorlage passt zu „erst begreifen, dann den nächsten Schritt entscheiden“.
 
-## Template
+## Vorlage
 
 ```text
-Goal: Understand 【topic/module/codebase area】 to prepare for subsequent 【implementation/changes/review】.
-Context: 【project type, stack, related issue】
-Inputs: 【@file paths, doc links, screenshots】
-Constraints: Read-only analysis; do not modify any files; do not run destructive commands.
-Output:
-1. 5–8 bullets on core concepts or module responsibilities
-2. The 3 files/directories most relevant to 【goal】 and why
-3. Three open questions to confirm
-Acceptance: I can decide the next task scope from your output.
+Ziel: 【Thema/Modul/Codebereich】 verstehen, Vorbereitung für spätere 【Implementierung/Änderung/Review】.
+Hintergrund: 【Projekttyp, Tech-Stack, relevantes Issue】
+Eingaben: 【@Dateipfade, Doc-Links, Screenshots】
+Constraints: Nur lesende Analyse, keine Dateien ändern; keine destruktiven Befehle.
+Ausgabe:
+1. 5–8 Punkte zu Kernkonzepten oder Modulrollen
+2. Die 3 zum 【Ziel】 relevantesten Dateien/Verzeichnisse und warum
+3. 3 offene Klärungsfragen
+Abnahme: Anhand der Ausgabe kann ich den Scope der nächsten Aufgabe festlegen.
 ```
 
-## When to use this template
+## Wann diese Vorlage passt
 
-- New to a codebase
-- Exploring unfamiliar module
-- Mapping related scope before editing
+- neues Codebase übernehmen
+- unbekanntes Modul anschauen
+- vor dem Ändern Abhängigkeiten klären
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Understand tasks are just "summarize this"
+### 1. Verstehen = „einfach zusammenfassen lassen“
 
-Also ask for:
+Es soll auch nennen:
 
-- which files matter most
-- what's still unclear
-- where to start next
+- welche Dateien am relevantesten sind
+- was noch unklar ist
+- wo der nächste Einstieg liegt
 
-### 2. More detail in the understand phase is always better
+### 2. Verstehen-Phase: je detaillierter, desto besser
 
-Clear main line beats digging every detail immediately.
+Zuerst die Hauptlinie klären — wichtiger als alles auf einmal auszugraben.
 
-The understand template helps narrow the next task scope.
+Wert der Verstehen-Vorlage: den Scope der nächsten Aufgabe zuerst eingrenzen.
 
-## Related
+## Verwandt
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Understand a codebase case](/cases/understand-a-codebase/)
+- [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
+- [Codebase verstehen (Fall)](/cases/understand-a-codebase/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an understand-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Verstehen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

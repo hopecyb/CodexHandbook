@@ -1,33 +1,58 @@
 ---
-title: Work with Files
-description: Have Codex read and write files within a clear scope.
+title: Mit Dateien arbeiten
+description: Codex Dateien in einem klaren Bereich lesen und schreiben lassen.
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: b704295
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+## Ziel dieses Schritts
 
-## Goal for this step
+Dateiname angeben und eine kontrollierte Bearbeitung abschließen.
 
-Name a specific file and complete one controlled edit.
+Ab hier wird aus „nur chatten“ „wirklich Dateien anfassen“ — der Fokus wechselt von Zielbeschreibung zu Bereichskontrolle.
 
-## Exercise
+## Übung
 
 ```text
-Edit only hello.md: add a date comment at the top (today's date).
-Do not change other files and do not run commands.
-When done, list the lines you changed.
+Bearbeite nur hello.md: Am Anfang eine Datumszeile (heutiges Datum) als Kommentar einfügen.
+Keine anderen Dateien ändern, keine Befehle ausführen.
+Danach die geänderten Zeilen auflisten.
 ```
 
-Review the diff before accepting. Related: [File and folder context](/guide/context/file-and-folder-context/)
+Diff prüfen, dann annehmen. Verwandt: [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
 
-Next: [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
+## Übungsfokus
 
+Drei Dinge:
+
+- Nur welche Datei ändern
+- Welche Extra-Aktionen nicht
+- Danach Änderungen klar benennen lassen
+
+Zusammen: grundlegende „kontrollierte Bearbeitung“.
+
+## Häufige Missverständnisse
+
+### 1. Eine kleine Datei lohnt sich nicht
+
+Je kleiner der Bereich, desto leichter sehen Sie Grenzverletzungen.
+
+### 2. Mit Dateiname rührt es nichts anderes an
+
+Nicht blind darauf vertrauen.
+
+Deshalb danach Diff prüfen.
+
+Beim ersten Dateieingriff zählt nicht Menge, sondern klare Änderungsgrenze und Prüfbarkeit.
+
+Weiter: [Klare Aufgaben geben](/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** App / CLI / IDE  
+**Prüfgrundlage:** Gegen geprüfte Datei-/Ordnerkontext-, Ergebnisprüfungs- und Einsteigerpfad-Seiten abgeglichen; Inhalt auf „eine kontrollierte Bearbeitung im klaren Bereich“ begrenzt.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,149 +1,151 @@
 ---
-title: CLI Command Reference
-description: Common Codex CLI subcommands and flags—learning index, not a substitute for official docs.
+title: CLI-Befehlsreferenz
+description: 'Kurzreferenz gängiger Codex-CLI-Unterbefehle und Parameter — Lernindex, kein Ersatz für die offizielle Dokumentation.'
 locale: de
-source_locale: en
-source_revision: 1383fbe
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Command reference helps you pick an entry point—not memorize every flag:
+Die Befehlsreferenz hilft vor allem beim Einstieg entscheiden — Parameter nicht sofort pauken:
 
-> **Should I use interactive entry or a one-shot command?**
+> **Interaktiver Einstieg oder einmaliger Befehls-Einstieg?**
 
-This page indexes common **Codex CLI** entry points for search and comparison. **Names, flags, and defaults change by version**—run `codex --help` and subcommand `--help`, and follow [OpenAI Codex documentation](https://developers.openai.com/codex).
+Diese Seite sammelt gängige **Codex-CLI**-Einstiege zum Suchen und Vergleichen. **Namen, Parameter und Defaults ändern sich mit der Version** — vor dem Ausführen `codex --help` und Unterbefehl-`--help`; maßgeblich [OpenAI Codex Docs](https://developers.openai.com/codex).
 
-## When to use this page
+## Wann nutzen
 
-- Interactive vs one-shot command
-- Chat-style vs script-style task
-- You know CLI is right but not which entry
+- Interaktiv oder einmaliger Befehl?
+- Chat-artige Bedienung oder skriptartige Ausführung?
+- CLI klar, aber welche Einstiegsklasse?
 
-## Entry choice
+## Einstiegswahl
 
-- Chat while you work: `codex`
-- One task, result when done: `codex exec`
+- Parallel schauen, chatten, fixen: `codex`
+- Aufgabe einmal abgeben, Ergebnis zurück: `codex exec`
 
-For new CLI users, that split solves most entry questions.
+Für CLI-Einsteiger löst das die meisten Einstiegsfragen.
 
-## Command overview (illustrative)
+## Befehlsüberblick (illustrativ)
 
-| Entry | Purpose | Detail |
+| Einstieg | Nutzen | Details |
 |---|---|---|
-| `codex` | Interactive TUI session | [Interactive mode](/guide/cli/interactive-mode/) |
-| `codex exec` (or equivalent) | Non-interactive single/pipeline task | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
-| Configuration | Read/write user/project config | [CLI configuration](/guide/cli/configuration/) |
+| `codex` | Interaktive TUI-Sitzung | [Interaktiver Modus](/guide/cli/interactive-mode/) |
+| `codex exec` (oder Äquivalent) | Nicht-interaktive Einzel-/Pipeline-Aufgabe | [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) |
+| Config-bezogen | Nutzer-/Projektkonfiguration lesen/schreiben | [CLI-Konfiguration](/guide/cli/configuration/) |
 
-:::caution[Version-sensitive]
-Parameter names below reflect common community docs—**may not match your installed CLI**. Re-check `--help` after upgrades.
+:::caution[Versionsempfindlich]
+Parameternamen unten sind gängige Community-Schreibweisen und **stimmen nicht zwingend mit Ihrer CLI überein**. Nach Upgrades `--help` erneut prüfen.
 :::
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. You do not need to memorize everything
+### 1. Nicht alle Befehle merken
 
-Know which entry class fits the task; look up flags when needed.
+Zuerst wissen, welche Einstiegsklasse passt — Rest live per `--help`.
 
-### 2. `codex exec` is not just “advanced `codex`”
+### 2. `codex exec` ist nicht einfach „stärkeres `codex`“
 
-It targets unattended scripts and CI—not a stronger chat mode.
+Eher unüberwacht, Skript, CI — nicht nur „stärkerer“ interaktiver Einstieg.
 
-### 3. Seeing a flag ≠ you should use it now
+### 3. Parameter sehen ≠ sofort drehen
 
-Many flags depend on version, environment, and security policy—understand intent first.
+Viele hängen an Version, Umgebung und Security-Policy — Absicht verstehen, dann entscheiden.
 
-### 4. Command reference ≠ tutorial
+### 4. Befehlsreferenz ≠ Bedienungstutorial
 
-It is:
+Sie ist:
 
-- An entry map
-- A parameter index
-- A pointer to deeper pages
+- Einstiegskarte
+- Parameterindex
+- Umschlagplatz „welche Seite detaillierter?“
 
-## Interactive mode (conceptual)
+## Interaktiver Modus (Konzept)
 
 ```bash
-# Start interactive session at repo root (illustrative)
+# Interaktive Sitzung am Repo-Root starten (illustrativ)
 codex
 
-# Common in-session actions (per TUI)
-# - Enter task description
-# - / slash commands → see slash-commands page
-# - Approve shell / file write requests
+# Typische Sitzungsaktionen (laut TUI)
+# - Aufgabenbeschreibung eingeben
+# - / Slash-Befehle → siehe slash-commands
+# - Shell- / Schreibdatei-Freigaben
 ```
 
-Slash commands: [Slash command reference](/guide/reference/slash-commands/)
+Slash: [Slash-Befehle](/guide/reference/slash-commands/)
 
-## Entry decision flow
+## Einstiegsentscheidung
 
-1. Run `codex --help`
-2. Choose interactive or `exec`
-3. For a subcommand, read its `--help`
+1. Zuerst `codex --help`
+2. Dann interaktiv oder `exec`
+3. Bei konkretem Unterbefehl dessen `--help`
 
-Avoid drowning in the full flag table on day one.
+So stecken Sie nicht sofort in der ganzen Parametertabelle fest.
 
-## Quick start
+## Schnellstart
 
 1. `codex --help`
-2. Chat while working → `codex`
-3. CI or scripts → study `codex exec`
+2. Parallel arbeiten → `codex`
+3. CI/Skript → `codex exec` vertiefen
 
-## Non-interactive exec (conceptual)
+Leichter als sofort Parameterdetails.
+
+## Nicht-interaktives exec (Konzept)
 
 ```bash
-# Working directory and one-shot prompt (illustrative)
-codex exec --cwd /path/to/repo "Your complete task description"
+# Arbeitsverzeichnis und einmaliger Prompt (illustrativ)
+codex exec --cwd /path/to/repo "Ihre vollständige Aufgabenbeschreibung"
 
-# Common intents (flag names per official docs)
-# --cwd          working directory
-# --model        pin model
-# --sandbox      sandbox policy
-# --approval     approval policy (critical unattended)
-# stdin pipe     read prompt from file or upstream command
+# Häufige Absichten (Parameternamen offiziell)
+# --cwd          Arbeitsverzeichnis
+# --model        festes Modell
+# --sandbox      Sandbox-Policy
+# --approval     Freigabe-Policy (besonders unüberwacht)
+# stdin-Pipe     Prompt aus Datei oder Upstream
 ```
 
-Security: [Human approval patterns](/cases/workflows/human-approval-patterns/)
+Sicherheit: [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 
-## Configuration and auth (conceptual)
+## Config und Auth (Konzept)
 
-| Action | Notes |
+| Aktion | Erklärung |
 |---|---|
-| Sign in | Same as [Sign-in and authentication](/guide/getting-started/sign-in-and-authentication/) |
-| Config files | User/project level—see [Configuration reference](/guide/reference/configuration-reference/) |
-| MCP | [Connect MCP](/skills/mcp/connect-an-mcp-server/) |
+| Login | Wie [Anmelden und Authentifizierung](/guide/getting-started/sign-in-and-authentication/) |
+| Config-Dateien | Nutzer-/Projektebene: [Konfigurationsreferenz](/guide/reference/configuration-reference/) |
+| MCP | [MCP verbinden](/skills/mcp/connect-an-mcp-server/) |
 
-## Exit codes and automation
+## Exit-Codes und Automatisierung
 
-Non-interactive mode usually uses **exit codes** for CI:
+Nicht-interaktiv nutzt meist **Exit-Codes** für CI:
 
-- `0`: completed per agreement
-- Non-`0`: failure or needs human—check stderr/logs
+- `0`: Aufgabe wie vereinbart fertig
+- Nicht-`0`: Fehler oder menschliche Intervention — Log-Artifacts prüfen
 
-CLI command pages help you pick entry and intent—not memorize parameters.
+CLI-Befehlssseite: Einstiege und Absichten — nicht Parameter pauken.
 
-Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/).
+Stderr in CI nicht ignorieren; Logs für [Diagnose zuerst](/cases/workflows/diagnose-before-fixing/) behalten.
 
-## vs in-chat slash commands
+## Unterschied zu Chat-Slash
 
-| | `codex` terminal | In-session `/` |
+| | Terminal `codex` | Sitzung `/` |
 |---|---|---|
-| Docs | This page + product guide | [slash-commands](/guide/reference/slash-commands/) |
-| Best for | Scripts, CI | Interactive exploration |
+| Doku | Diese Seite + Produkthandbuch | [slash-commands](/guide/reference/slash-commands/) |
+| Geeignet | Skripte, CI | Interaktives Explorieren |
 
 ## Troubleshooting
 
-| Symptom | See |
+| Phänomen | Wohin |
 |---|---|
-| Command not found | [Install CLI](/guide/getting-started/install-cli/) |
-| Config not applied | [CLI configuration](/guide/cli/configuration/) |
-| Approval blocks CI | Tighten prompt + read-only sandbox |
+| Befehl fehlt | [CLI installieren](/guide/getting-started/install-cli/) |
+| Config greift nicht | [CLI-Konfiguration](/guide/cli/configuration/) |
+| Freigabe blockiert CI | Prompt straffen + Read-only-Sandbox |
 
-[CLI troubleshooting](/guide/cli/troubleshooting/)
+[CLI-Troubleshooting](/guide/cli/troubleshooting/)
 
 ---
 
 **Status:** outdated  
-**Products:** CLI  
-**Review note:** Written as an entry map but still centers `codex`, `codex exec`, in-session `/`, and parameter intent—high-churn CLI details; restore `verified` after latest official command documentation.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI  
+**Prüfhinweis:** Als Einstiegskarte geschrieben, aber Kern um `codex`, `codex exec`, Sitzungs-`/` und Parameterabsichten — hochvolatile CLI-Details; nach aktueller offizieller Befehlsdoku wieder `verified`.  
+**Zuletzt geprüft:** 2026-07-26

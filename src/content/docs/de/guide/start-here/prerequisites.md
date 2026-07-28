@@ -1,36 +1,90 @@
 ---
-title: Prerequisites
-description: Account, device, practice project, and safety baseline.
+title: Was du vor dem Start brauchst
+description: "Konto, Gerät, Übungsprojekt und Sicherheitsgrundlinie."
 locale: de
-source_locale: en
-source_revision: 126e55a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 5
 ---
 
-## Required
+Die meisten stecken bei Codex nicht an mangelndem Technikhintergrund fest — sondern daran, wie der erste Schritt gelingt.
 
-1. **Working OpenAI / Codex access** (account and plan per official documentation)
-2. **A computer where you can install the desktop App, CLI, or IDE extension**
-3. **A disposable practice directory** (don't try your first run on a production repository)
-4. **Willingness to check results**: accept, edit, or undo—not blindly merge
+## Unbedingt nötig
 
-## Recommended
+1. **Zugang zu OpenAI / Codex** (Konto und Tarif gemäß offizieller Angaben)
+2. **Einen Rechner**, auf dem Desktop-App, CLI oder IDE-Erweiterung laufen können
+3. **Ein wegwerfbares Übungsverzeichnis** (nicht den ersten Versuch im Produktions-Repo machen)
+4. **Bereitschaft, Ergebnisse zu prüfen**: annehmen, anpassen oder rückgängig machen — nicht blind mergen
 
-- Read the [Beginner safety checklist](/guide/getting-started/beginner-safety-checklist/) first
-- Understand [Permissions and approvals](/guide/foundations/permissions-and-approvals/) and [Sandbox and network](/guide/foundations/sandbox-and-network/)
-- For official installation and product changes, see [https://developers.openai.com/codex](https://developers.openai.com/codex)
+Von diesen vier Punkten werden 3 und 4 am leichtesten übersehen.
 
-## Not required
+- Ein Übungsverzeichnis macht Ausprobieren deutlich entspannter
+- Ob du Ergebnisse prüfst, entscheidet, ob der Versuch steuerbar bleibt
 
-- You don't need to master Git or any programming language first
-- You don't need every client installed at once; the MVP default starts with the desktop App
+## Was du vorher nicht brauchst
+
+Das Folgende ist **keine harte Einstiegshürde**:
+
+- Du musst Git nicht schon beherrschen
+- Du musst nicht schon viel Code schreiben können
+- Du musst Modelle, Kontext, Sandbox und Freigabe nicht von Anfang an im Detail verstehen
+- Du musst nicht alle Clients auf einmal installieren
+
+Zuerst die erste Aufgabe durchziehen und Konzepte danach nachziehen, ist deutlich entspannter.
+
+## Häufige Missverständnisse
+
+### 1. Du musst nicht die ganze Doku lesen, bevor du startest
+
+Viele starten so:
+
+1. Eine sehr kleine Aufgabe erledigen
+2. Danach passende Konzepte nachlesen
+3. Bei Problemen wieder in die Doku schauen
+
+### 2. Starte nicht mit dem echten Projekt
+
+Am Anfang besser:
+
+- Ein wegwerfbares kleines Verzeichnis
+- Eine kleine Aufgabe, deren Ergebnis du beurteilen kannst
+- Eine Umgebung, in der Fehler keinen Schaden anrichten
+
+### 3. Du musst CLI, IDE und App nicht auf einmal lernen
+
+Für die meisten Anfänger ist die **Desktop-App** entspannter: Die Oberfläche ist anschaulicher, und Projekte, Aufgaben sowie Änderungen sind leichter sichtbar.
+
+## Empfehlungen
+
+- Zuerst die [Sicherheits-Checkliste für Anfänger](/guide/getting-started/beginner-safety-checklist/) lesen
+- [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/) sowie [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/) kennenlernen
+- Offizielle Installation und Produktänderungen: [https://developers.openai.com/codex](https://developers.openai.com/codex)
+
+## Quellen
+
+- OpenAI Academy: Getting started with ChatGPT
+- OpenAI Academy: Using ChatGPT
+- OpenAI Help Center: ChatGPT macOS app - File Uploads and Photos
+
+## Eine typische Startreihenfolge
+
+So kannst du vorgehen:
+
+1. Zugang bestätigen
+2. Einen Client installieren
+3. Ein Übungsverzeichnis vorbereiten
+4. Eine sehr kleine Aufgabe ausführen
+5. Ergebnis prüfen und den nächsten Schritt entscheiden
+
+Vor dem Start: Die erste Aufgabe in einer sicheren, kleinen, rücknehmbaren Umgebung durchziehen ist effizienter, als zuerst einen Berg an Konzepten nachzuholen.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Überprüfungsgrundlage:** Die Empfehlungen zu Zugang, Client-Vorbereitung und Übungsumgebung wurden anhand offizieller OpenAI-Einstiegs- und Datei-Upload-Unterlagen geprüft; der Text hält langfristig gültige Startprinzipien fest und hängt nicht von feinkörnigen Installationsschritten ab.  
+**Zuletzt überprüft:** 2026-07-26

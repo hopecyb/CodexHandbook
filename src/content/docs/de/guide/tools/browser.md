@@ -1,120 +1,120 @@
 ---
-title: Browser tool
-description: Letting Codex open pages, inspect UI state, and verify frontend behavior—capabilities and boundaries.
+title: Browser-Werkzeug
+description: "Webseiten öffnen, UI-Status prüfen und Frontend-Verhalten verifizieren — Fähigkeiten und Grenzen."
 locale: de
-source_locale: en
-source_revision: 34490c2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **browser tool** lets the Agent access real pages in a controlled environment: read the DOM, capture screenshots, sometimes perform simple interactions. Good for frontend acceptance, doc link checks, and design comparison—not a substitute for security audits or casual production admin use.
+Das **Browser-Werkzeug** lässt den Agent in kontrollierter Umgebung echte Seiten öffnen: DOM lesen, Screenshots, manchmal einfache Interaktion. Geeignet für Frontend-Abnahme, Doku-Link-Checks, Designabgleich — nicht als Security-Audit und nicht für beliebiges Produktions-Admin.
 
-It differs from search: search finds information; the browser tool actually opens the page.
+Anders als Suche: Suche findet Infos; Browser öffnet wirklich.
 
-## Problems it helps with
+## Welche Probleme es löst
 
-Common questions:
+Typisch:
 
-- What does this page actually look like right now?
-- What happens when I click this button?
-- Does this layout break at a real viewport width?
+- Wie sieht die Seite jetzt aus
+- Was passiert beim Klick
+- Layout bei echter Breite kaputt?
 
-Code review or text alone often is not enough—you need the page open.
+Code lesen oder Textbeschreibungen reichen oft nicht — Seite wirklich öffnen.
 
-## What's covered
+## Inhalt dieser Seite
 
-- What the browser tool can and cannot do
-- How it differs from web search and Computer Use
-- Safe authorization and constraints
+- Was das Browser-Werkzeug kann und nicht kann
+- Unterschied zu Web-Suche und Computer Use
+- Sicher autorisieren und einschränken
 
-## Capability overview
+## Fähigkeitsüberblick
 
-| Good fit | Poor fit |
+| Geeignet | Nicht geeignet |
 |---|---|
-| Open local dev server pages for layout | Bulk crawl sites restricted by ToS |
-| Verify public doc links are not 404 | Auto-login on unauthorized systems |
-| Compare static page to implementation | Replace full E2E test frameworks |
-| Read visible page text for debugging | Sites with heavy CAPTCHA |
+| Lokalen Dev-Server für Layout öffnen | Massencrawling ToS-beschränkter Sites |
+| Öffentliche Doku-Links auf 404 prüfen | Auto-Login auf unautorisierten Systemen |
+| Statische Seite vs. Umsetzung | Ersatz für volles E2E-Framework |
+| Sichtbaren Text zur Debug-Hilfe | Sites mit komplexer Human-Verification |
 
-Background: [tool selection](/guide/tools/tool-selection/)
+Auswahlhintergrund: [Werkzeugwahl](/guide/tools/tool-selection/)
 
-## Comparison with other tools
+## Vergleich mit anderen Werkzeugen
 
-| Tool | Input | Output |
+| Werkzeug | Input | Output |
 |---|---|---|
-| Web search | Query | Summary and links |
-| Browser | URL / local address | Page structure, screenshots, interaction results |
-| Computer Use | Full-screen GUI | Any app operation (heavier, more sensitive) |
+| Web-Suche | Query | Zusammenfassung und Links |
+| Browser | URL / lokal | Seitenstruktur, Screenshot, Interaktionsergebnis |
+| Computer Use | Ganzes GUI | Beliebige App-Bedienung (schwerer, sensibler) |
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Not a replacement for automated testing
+### 1. Kein Ersatz für Automatisierungstests
 
-It can inspect pages, screenshot, and click some interactions—it does not replace a full test system.
+Hilft prüfen, screenshotten, etwas klicken — ersetzt kein Testsystem.
 
-### 2. Page loads ≠ page is correct
+### 2. Öffnet sich ≠ in Ordnung
 
-Loading only proves existence; layout, copy, interaction, and links still need review.
+Öffnen heißt nur „Seite existiert“; Layout, Text, Interaktion, Links weiter prüfen.
 
-### 3. When to use it?
+### 3. Wann nutzen?
 
-Typical cases:
+Häufig:
 
-- Local layout issues
-- 404 link checks
-- Rough design alignment
-- Confirming "code looks right but does the real page?"
+- Lokales Layout prüfen
+- Links auf 404
+- Grober Abgleich Seite vs. Design
+- „Code sieht richtig aus — echte Seite auch?“
 
-## Decision criteria
+## Entscheidungskriterium
 
-If your question is:
+Fragen Sie:
 
-- "What does it actually render as?"
-- "What is visible on the page?"
-- "What feedback appears after this interaction?"
+- „Wie rendert es wirklich?“
+- „Was sieht man auf der Seite?“
+- „Was meldet die Seite nach dem Klick?“
 
-The browser tool usually beats pure text analysis.
+Dann oft besser als reine Textanalyse.
 
-## Recommended workflow
+## Empfohlener Workflow
 
-1. **Local frontend**: run `npm run dev`, then provide `http://localhost:PORT/path`
-2. **Specific task**: "Check login form overflow at 375px width"—not "look at the website"
-3. **State boundaries**: no external network, no submitting forms to production
-4. **Acceptance**: compare with [verify artifacts](/guide/quality/verify-artifacts/) and screenshots
+1. **Lokales Frontend**: zuerst `npm run dev`, dann `http://localhost:PORT/path`
+2. **Aufgabe klar**: „Login-Formular bei 375px Overflow?“ statt „schau die Seite an“
+3. **Grenzen**: kein Outbound, kein Formular an Produktion
+4. **Abnahme**: [Artefakte überprüfen](/guide/quality/verify-artifacts/) und Screenshots
 
-## Example prompt
+## Direkt nutzbare Formulierung
 
 ```text
-Only visit http://localhost:4321/guide/foundations/local-vs-cloud/ and check above-the-fold layout and hero image appearance.
-Do not access the public internet or submit any forms.
-If you find issues, provide screenshot evidence and fix suggestions.
+Nur http://localhost:4321/guide/foundations/local-vs-cloud/ — Hero-Layout und Cover-Look prüfen.
+Kein Outbound, keine Formulare absenden.
+Bei Problemen Screenshot-Beleg und Änderungsvorschlag.
 ```
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Default assumption: browser can reach **everything your machine/environment can**—including internal admin
-- Declare in task: `localhost only` or an allowlist of domains
-- Do not run untrusted repo tasks in a browser profile logged into personal accounts
-- Cloud browser policy follows [Cloud environments](/guide/web-and-cloud/cloud-environments/) and network rules
+- Default: Browser erreicht **alles, was Maschine/Umgebung erreicht** — inkl. Intranet-Admin
+- Im Prompt: `nur localhost` oder Domain-Allowlist
+- Keine untrusted-Repo-Aufgaben in Browserprofilen mit persönlichem Login
+- Cloud-Browser-Policy: [Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/) und Netzrichtlinie
 
-Approvals: [permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Freigabe: [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Production URL without read-only limits
-- Treating screenshots as "tests passed" without automated tests
-- Using web search when real rendering check is needed
+- Produktions-URL ohne Read-only-Grenze
+- Browser-Screenshot als „Test bestanden“ ohne Automation
+- Mit Web-Suche verwechseln: Suche ersetzt kein echtes Rendering
 
-## Acceptance checklist
+## Abnahmeliste
 
-- [ ] Access scope fixed in prompt
-- [ ] Key visual issues have screenshots or clear text
-- [ ] Consistent with unit/E2E results—or documented known gaps
+- [ ] Zugriffsradius im Prompt festgeschrieben
+- [ ] Kritische visuelle Probleme mit Screenshot oder Text
+- [ ] Konsistent mit Unit/E2E oder bekannte Differenz dokumentiert
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / Codex (version and permission dependent)  
-**Verification basis:** OpenAI Help Center currently documents built-in browser in the desktop App—open pages in Work or Codex, switch tabs, download files, annotation mode, per-site approval. This page focuses on use cases, distinction from search/Computer Use, and security boundaries.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / Codex (versions- und berechtigungsabhängig)  
+**Prüfgrundlage:** OpenAI Help Center beschreibt eingebauten Desktop-App-Browser (Work/Codex: Tabs, Download, Annotation, seitenweise Freigabe). Fokus: Szenarien, Unterschied zu Suche/Computer Use, Sicherheitsgrenzen.  
+**Zuletzt geprüft:** 2026-07-26

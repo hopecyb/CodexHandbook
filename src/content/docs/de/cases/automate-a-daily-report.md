@@ -1,50 +1,49 @@
 ---
-title: Automate a daily report
-description: Turn repetitive summarization into a reusable script or Skill.
+title: Einen Tagesbericht automatisieren
+description: Wiederkehrende Zusammenfassungsarbeit als wiederverwendbares Skript oder Skill verfestigen.
 locale: de
-source_locale: en
-source_revision: 4c3433d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Automate a daily report
+# Einen Tagesbericht automatisieren
 
-## Meta information
+## Metadaten
 
-| Field | Content |
+| Feld | Inhalt |
 |---|---|
-| Audience | Teams |
+| Zielgruppe | Teams |
 | Client | CLI |
-| Estimated time | 1–2 hours (first version) |
+| Geschätzte Dauer | 1–2 Stunden (erste Version) |
 
-## 1. Goal and background
+## 1. Ziel und Kontext
 
-**Goal:** Automatically generate daily summaries of changes, test results, and todo lists.
+**Ziel:** Täglich automatisch Änderungszusammenfassung, Testergebnisse und Todo-Liste erzeugen.
 
-**Success criteria:** One command or Skill produces Markdown in a fixed format; failures have clear exit codes.
+**Erfolgskriterien:** Ein Befehl oder Skill liefert Markdown in festem Format; bei Fehlern gibt es einen klaren Exit-Code.
 
-## 2. Reference pattern
+## 2. Referenzmuster
 
-The team already has a similar case: [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/).
+Das Team hat bereits einen ähnlichen Fall: [Geprüfte Dokumentenlinks zeitgesteuert](/cases/use-cases/team-automation/scheduled-link-check/).
 
-## 3. Recommended prompt
+## 3. Empfohlener Prompt
 
 ```text
-Goal: Generate a daily report Markdown for yesterday through today.
-Content: git log summary, CI status (if readable), open PR list.
-Output: reports/daily-YYYY-MM-DD.md
-Constraints: Read-only git; do not push; provide scripts/generate-daily.sh for repeat runs.
+Ziel: Markdown-Tagesbericht von gestern bis jetzt erzeugen.
+Inhalt: git-log-Zusammenfassung, CI-Status (falls lesbar), Liste offener PRs.
+Ausgabe: reports/daily-YYYY-MM-DD.md
+Einschränkungen: Nur lesend auf git; kein push; scripts/generate-daily.sh bereitstellen, damit der Lauf wiederholbar ist.
 ```
 
-## 4. Capture for reuse
+## 4. Verstetigen
 
-- [Automation Skill example](/skills/examples/automation-skill/)
-- [Scheduled tasks](/skills/automations/scheduled-tasks/)
-
+- [Beispiel Automatisierungs-Skill](/skills/examples/automation-skill/)
+- [Geplante Aufgaben](/skills/automations/scheduled-tasks/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include repeatable automation scenarios such as "Automate bug triage" and "Turn feedback into actions"; this page defines the daily report as "fixed-format Markdown + clear exit code + reusable script or Skill"—a stable automation workflow pattern, not dependent on any specific integration.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin wiederholbare Automatisierungsszenarien wie „Automate bug triage“ und „Turn feedback into actions“. Diese Seite definiert den Tagesbericht als „Markdown in festem Format + klarer Exit-Code + wiederverwendbares Skript oder Skill“ — ein stabiles Automatisierungs-Workflow-Muster, das nicht von einer einzelnen Integration abhängt.  
+**Zuletzt geprüft:** 2026-07-26

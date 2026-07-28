@@ -1,49 +1,49 @@
 ---
-title: 'Example: Review Skill'
-description: pr-review-based Skill example for team reuse or adaptation.
+title: "Beispiel: Review-Skill"
+description: Skill-Beispiel auf Basis von pr-review — zur Team-Wiederverwendung oder Anpassung.
 locale: de
-source_locale: en
-source_revision: fba9c2b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Review Skill
+# Beispiel: Review-Skill
 
-This example matches `pr-review` in [Create your first Skill](/skills/create-your-first-skill/)—adjust for your team.
+Entspricht `pr-review` in [Ersten Skill erstellen](/skills/create-your-first-skill/) — nach Teambedarf anpassen.
 
 ## SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review git diff; list blocking issues, test gaps, and style suggestions. Use when the user mentions review, audit, or pre-merge checks. Not for writing new features.
+description: "Prüft den git Diff, listet Blocker, Testlücken und Stilhinweise. Nutzen, wenn der Nutzer Review, Prüfung oder Checks vor dem Merge erwähnt. Nicht für neue Features."
 ---
 
-# PR review
+# PR-Review
 
-## Input
-- Default compare branch: main (or default branch if main does not exist)
+## Eingabe
+- Standard-Vergleichsbranch: main (sonst Default-Branch)
 
-## Process
-1. List changed files and change type (feature/fix/refactor/docs)
-2. For each logic change: missing tests? API break?
-3. Check for secrets, debug logs, oversized unrelated diff
-4. Output: 🔴 blocking / 🟡 suggestion / 🟢 pass
+## Ablauf
+1. Geänderte Dateien und Typen listen (Feature/Fix/Refactor/Docs)
+2. Pro Logikänderung: fehlen Tests? API-Bruch?
+3. Prüfen auf Secrets, Debug-Logs, zu große irrelevante Diffs
+4. Ausgabe: 🔴 Blocker / 🟡 Empfehlung / 🟢 OK
 
-## Do not
-- Do not git push
-- Do not change public API without discussion
+## Verboten
+- Kein git push
+- Keine unbesprochenen öffentlichen APIs ändern
 ```
 
-## Try it
+## Ausprobieren
 
 ```text
-$pr-review Please review my current uncommitted changes
+$pr-review Bitte prüfe meine aktuellen uncommitteten Änderungen
 ```
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Reviewing diffs with structured conclusions remains a typical Codex use case; this page provides an illustrative `SKILL.md` skeleton, not a volatile UI dependency.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diff prüfen und strukturierte Schlüsse ausgeben bleibt typisches Codex-Szenario; diese Seite liefert ein illustratives `SKILL.md`-Skelett, keine volatile UI.  
+**Zuletzt geprüft:** 2026-07-26

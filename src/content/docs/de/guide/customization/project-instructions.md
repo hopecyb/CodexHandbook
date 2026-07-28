@@ -1,106 +1,106 @@
 ---
-title: Project Instructions
-description: Project-level context beyond AGENTS.md—how README, docs, and conversation references divide labor.
+title: Projektanweisungen
+description: "Projektkontext jenseits von AGENTS.md: Rollenverteilung von README, docs und Dialogverweisen."
 locale: de
-source_locale: en
-source_revision: 743eaaf
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-“Project instructions” are the **static context** Codex uses to understand a repo, not limited to a single file format.
+„Projektanweisungen“ sind der **statische Kontext**, mit dem Codex das Repo versteht — nicht auf ein Dateiformat beschränkt.
 
-## Contents
+## Inhalt
 
-- Besides `AGENTS.md`, where else should project-level information live
-- How README, docs, and script files divide labor
-- What belongs in the repo versus what should stay only in the current conversation
+- Wo projektbezogene Informationen außer `AGENTS.md` liegen sollten
+- Wie README, docs und Skriptdateien die Arbeit teilen
+- Was ins Repo gehört und was nur im aktuellen Dialog bleiben sollte
 
-## Components of Project Context
+## Bestandteile des Projektkontexts
 
-| Source | Role |
+| Quelle | Rolle |
 |---|---|
-| `AGENTS.md` | Collaboration rules and commands (authoritative: AGENTS series in this chapter) |
-| `README.md` | What the project is and how to start it |
-| `docs/` | Architecture, ADRs, runbooks |
-| Dependencies and scripts | Executable truth in `package.json`, `Makefile`, and similar |
+| `AGENTS.md` | Kollaborationsregeln und Befehle (Autorität: AGENTS-Serie in diesem Kapitel) |
+| `README.md` | Was das Projekt ist, wie man startet |
+| `docs/` | Architektur, ADR, Runbooks |
+| Abhängigkeiten und Skripte | Ausführbare Wahrheit: `package.json`, `Makefile` usw. |
 
-Codex reads these materials with tools; the key is a **single source of truth**—startup commands in the README must actually work.
+Codex liest diese Materialien mit Werkzeugen; entscheidend ist **eine einzige Wahrheit**. Die Startbefehle im README müssen wirklich laufen.
 
-## Basic Practice
+## Grundvorgehen
 
-1. Ensure the root `README.md` has four sections: purpose, install, development, test
-2. Sink **instructions you repeat to Codex** into `AGENTS.md`
-3. In tasks, use `@` to point at specific files instead of pasting full text:
+1. Im Root-`README.md` vier Abschnitte: Zweck, Installation, Entwicklung, Tests
+2. **Wiederholt an Codex gerichtete Hinweise** in `AGENTS.md` versenken
+3. In Aufgaben mit `@` auf konkrete Dateien zeigen, statt Volltext einzufügen:
 
 ```text
-Fix the null pointer in @src/auth/login.ts per test requirements in @AGENTS.md.
-See @docs/auth-flow.md for related design.
+Nach den Testanforderungen in @AGENTS.md den Nullzeiger in @src/auth/login.ts beheben.
+Design siehe @docs/auth-flow.md
 ```
 
-## Why It Matters
+## Warum das zählt
 
-Common situations include:
+Häufig:
 
-- README says one thing
-- docs say another
-- The command that actually runs is hidden in `package.json`
+- README sagt A
+- docs sagen B
+- die wirklich lauffähigen Befehle stecken in `package.json`
 
-Then not only people get confused—Codex does too. The point is to keep “project truth” in the repo as concentrated and consistent as possible.
+Dann verwirren sich Menschen und Codex. Ziel: die „Repo-Wahrheit“ möglichst zentral und konsistent halten.
 
-## Division of Labor with “Conversation Context”
+## Abgrenzung zum Gesprächskontext
 
-- **Project instructions**: relatively stable for months
-- **Conversation context**: this task’s goal, constraints, and intermediate conclusions
+- **Projektanweisungen**: über Monate relativ stabil
+- **Gesprächskontext**: Ziel, Constraints und Zwischenfazits dieser Aufgabe
 
-In long tasks, if a rule keeps coming up, **write it back** to `AGENTS.md` or `docs/` instead of copy-pasting across ten threads. See [Keep Context Focused](/guide/context/keep-context-focused/).
+Taucht eine Regel in langen Aufgaben immer wieder auf, **zurückschreiben** nach `AGENTS.md` oder `docs/` — nicht in zehn Threads kopieren. Siehe [Kontext fokussiert halten](/guide/context/keep-context-focused/).
 
-## Common Mistakes
+## Häufige Fehler
 
-- Outdated README; Codex runs wrong commands
-- Stuffing all documentation into one giant `CONTEXT.md` that nobody maintains
-- Putting sensitive information in public repo documentation
+- Veraltetes README — Codex folgt falschen Befehlen
+- Alles in ein riesiges `CONTEXT.md` stopfen, das niemand pflegt
+- Sensible Informationen in öffentlichen Repo-Hinweisen
 
-## Common Misconceptions
+## Häufige Missverständnisse
 
-### 1. If I explain clearly in chat, messy repo docs are fine
+### 1. Solange ich es im Chat erkläre, darf die Repo-Doku chaotisch sein
 
-That may work short term; long term it gets worse.
+Kurzfristig vielleicht. Langfristig wird es schlimmer.
 
-Next time you explain again, and others never see what you said this time.
+Beim nächsten Mal erklären Sie alles erneut — und andere sehen, was Sie diesmal gesagt haben, nicht.
 
-### 2. Can `AGENTS.md` solve every project-instruction problem?
+### 2. `AGENTS.md` löst jedes Projekt-Dokumentationsproblem
 
-No.
+Nein.
 
-`AGENTS.md` suits rules and collaboration constraints better than replacing project introduction, architecture background, and full run instructions.
+`AGENTS.md` eignet sich für Regeln und Kollaborationsconstraints — nicht als Ersatz für Projektorientierung, Architekturhintergrund und vollständige Betriebsanleitungen.
 
-### 3. More documentation is always better
+### 3. Mehr Dokumentation ist besser
 
-What matters more:
+Wichtiger:
 
-- Clear division of labor
-- Consistent content
-- Key commands that actually run
+- klare Aufteilung
+- konsistenter Inhalt
+- kritische Befehle lauffähig
 
-## Suggested Division of Labor
+## Aufteilungsempfehlung
 
-- `README.md`: what the project is, how to start, how to test
-- `AGENTS.md`: collaboration rules, no-go areas, definition of done
-- `docs/`: longer background, architecture, process documentation
-- Scripts and config files: executable truth
+- `README.md`: Was das Projekt ist, Start, Tests
+- `AGENTS.md`: Kollaborationsregeln, Tabuzonen, Definition of Done
+- `docs/`: Längerer Hintergrund, Architektur, Prozessbeschreibungen
+- Skripte und Config: ausführbare Wahrheit
 
-The point of project instructions is to help Codex and humans find the same “repo truth.” Document count itself is not the goal.
+Projektanweisungen sollen Codex und Menschen dieselbe „Repo-Wahrheit“ finden lassen. Die Dokumentmenge an sich ist Nebensache.
 
-## Acceptance Checklist
+## Abnahmeliste
 
-- [ ] Someone who freshly clones the repo (or Codex) can run tests from README + AGENTS.md
-- [ ] Task prompts rely mainly on @ references, avoiding repeated long background
+- [ ] Nach Clone können Mensch (oder Codex) Tests mit README + AGENTS.md zum Laufen bringen
+- [ ] Aufgabenprompts arbeiten vor allem mit @-Verweisen, ohne lange Hintergründe zu wiederholen
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public description of project context and file collaboration, and this handbook’s verified project context, files, and workflow chapters; page content keeps only the stable division of labor among README, `AGENTS.md`, `docs/`, and task conversation.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle OpenAI-Developers-Hinweise zu Projektkontext und Dateikollaboration sowie verifizierte Kapitel zu Projektkontext, Dateien und Workflows; Inhalt beschränkt auf die stabile Aufteilung von README, `AGENTS.md`, `docs/` und Aufgabendialog.  
+**Zuletzt geprüft:** 2026-07-26

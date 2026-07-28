@@ -1,92 +1,93 @@
 ---
-title: Fix a bug
-description: From failing test to minimal fix and regression—the most common developer loop.
+title: Einen Bug beheben
+description: "Vom fehlgeschlagenen Test zur minimalen Korrektur und Regression — das häufigste Entwickler-Schleifenbeispiel."
 locale: de
-source_locale: en
-source_revision: d9001be
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Meta information
 
-| Field | Content |
+## Metadaten
+
+| Feld | Inhalt |
 |---|---|
-| Audience | Developers |
-| Client | CLI or IDE (local repo) |
-| Estimated time | 30–60 minutes |
-| Verified date | 2026-07-25 |
+| Zielgruppe | Entwickler |
+| Client | CLI oder IDE (lokales Repository) |
+| Geschätzte Dauer | 30–60 Minuten |
+| Prüfdatum | 2026-07-25 |
 
-## 1. Goal and background
+## 1. Ziel und Kontext
 
-**Goal:** Fix a regression bug already caught by unit tests, and add tests to prevent recurrence.
+**Ziel:** Einen Regressions-Bug beheben, der bereits durch einen Unit-Test gefangen wurde, und Tests ergänzen, damit er nicht wiederkommt.
 
-**Success criteria:**
+**Erfolgskriterien:**
 
-- Original failing test passes
-- Full test suite still green
-- Diff only touches necessary files
+- Der ursprünglich fehlgeschlagene Test besteht
+- Die gesamte Testsuite bleibt grün
+- Der Diff betrifft nur notwendige Dateien
 
-**Out of scope:** Large refactors, major dependency upgrades.
+**Außerhalb des Umfangs:** Großes Refactoring, Major-Upgrades von Abhängigkeiten.
 
-## 2. Preparation
+## 2. Vorbereitung
 
-- Clone repo, `pnpm install` (or per `AGENTS.md`)
-- Confirm local reproduction: `pnpm test -- path/to/failing.test.ts`
+- Repository klonen, `pnpm install` (oder gemäß `AGENTS.md`)
+- Lokale Reproduktion des Fehlers bestätigen: `pnpm test -- path/to/failing.test.ts`
 - Branch: `fix/issue-123-short-desc`
 
 ## 3. Workflow
 
-### Explore
+### Erkunden
 
 ```text
-Do not change code yet. Read failing test @tests/auth/login.test.ts and implementation @src/auth/login.ts;
-explain the failure in 5 bullets or fewer, citing assertions and stack line numbers.
+Ändere vorerst keinen Code. Lies den fehlgeschlagenen Test @tests/auth/login.test.ts und die Implementierung @src/auth/login.ts,
+erkläre in höchstens 5 Punkten die Fehlerursache und zitiere Assertion sowie Stack-Zeilennummern.
 ```
 
-### Plan
+### Planen
 
 ```text
-Give a fix plan: which files to change, whether new tests are needed, how to verify.
-Wait for my reply "execute" before changing code.
+Gib einen Fix-Plan: welche Dateien ändern, ob neue Tests nötig sind, wie überprüfen.
+Warte auf meine Antwort «Ausführen», bevor du Code änderst.
 ```
 
-### Execute
+### Ausführen
 
 ```text
-Execute plan steps 1–2. After each step, run only related tests.
+Führe Plan-Schritte 1–2 aus. Nach jedem Schritt nur die relevanten Tests laufen lassen.
 ```
 
-### Verify
+### Überprüfen
 
 ```text
-Run the full test suite; summarize diff for my review; do not git push.
+Vollständige Testsuite ausführen; Diff zur Review zusammenfassen; kein git push.
 ```
 
-Human: Read the diff, confirm no unrelated changes, check per [Review diffs](/guide/quality/review-diffs/).
+Manuell: Diff lesen, unrelated Änderungen ausschließen, gemäß [Diffs prüfen](/guide/quality/review-diffs/) kontrollieren.
 
-## 4. Failure and recovery
+## 4. Fehler und Wiederherstellung
 
-| Issue | Action |
+| Problem | Vorgehen |
 |---|---|
-| New failures after fix | `git stash` or revert commit; narrow the change |
-| Wrong root cause | Return to explore; request new hypothesis |
-| Flaky test | Stabilize test before fixing business logic |
+| Nach dem Fix neue Fehlschläge | `git stash` oder Commit zurücksetzen, Änderungsumfang verkleinern |
+| Falsche Root-Cause-Annahme | Zurück zur Erkundung, neue Hypothese verlangen |
+| Flaky Tests | Zuerst Tests stabilisieren, dann Geschäftslogik reparieren |
 
-## 5. Capture for reuse
+## 5. Verstetigen
 
-- If this bug type recurs, add a convention in `AGENTS.md`
-- Extract `$regression-guard` Skill: run critical test list before merge
+- Wenn solche Bugs wiederholt auftreten, eine Regel in `AGENTS.md` ergänzen
+- Optional `$regression-guard`-Skill extrahieren: vor dem Merge kritische Testliste ausführen
 
-## 6. Related chapters
+## 6. Verwandte Kapitel
 
-- [Understand a codebase](/cases/understand-a-codebase/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Run tests](/guide/quality/run-tests/)
+- [Eine Codebasis verstehen](/cases/understand-a-codebase/)
+- [Diffs prüfen](/guide/quality/review-diffs/)
+- [Tests ausführen](/guide/quality/run-tests/)
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' homepage currently still describes Codex as usable for fixing defects, running tests, and reviewing changes; this page focuses on the stable engineering loop—reproduce failure first, minimal fix, add tests, regression verification—not dependent on any specific framework or product UI.
+**Geeignete Produkte:** CLI / IDE  
+**Prüfgrundlage:** Die OpenAI-Developers-Startseite beschreibt Codex weiterhin als geeignet zum Beheben von Defekten, Ausführen von Tests und Prüfen von Änderungen. Das Beispiel auf dieser Seite fokussiert den stabilen Engineering-Kreislauf „zuerst Fehlschlag reproduzieren, minimale Korrektur, Tests ergänzen und Regression prüfen“ und hängt nicht an einem bestimmten Framework oder einer Produkt-UI.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,46 +1,73 @@
 ---
-title: Choose your path
-description: Pick a reading route by role, task, or product entry point.
+title: Deinen Pfad wählen
+description: "Wähle den Leseweg nach Rolle, Aufgabe und Produkteinstieg."
 locale: de
-source_locale: en
-source_revision: 225091b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 4
 ---
 
-You can enter by **role**, **task**, or **product**. All three paths converge on the same authoritative pages.
+Du kannst nach **Rolle**, **Aufgabe** oder **Produkt** einsteigen. Alle drei Wege führen am Ende zu denselben Kernseiten — nur der Startpunkt unterscheidet sich.
 
-## By role
+Es gibt viele Einstiege; wähle zuerst den, der deiner aktuellen Frage am nächsten kommt.
 
-- [Beginner five steps](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP complete)
-- [Creator path overview](/guide/learning-paths/creator/)
-- [Developer path overview](/guide/learning-paths/developer/)
-- [Team path overview](/guide/learning-paths/team/)
+## Nach Rolle
 
-## By task
+- [Fünf Schritte für Anfänger](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP vollständig)
+- [Überblick Creator-Pfad](/guide/learning-paths/creator/)
+- [Überblick Entwickler-Pfad](/guide/learning-paths/developer/)
+- [Überblick Team-Pfad](/guide/learning-paths/team/)
 
-| You want to… | Start with |
+## Nach Aufgabe
+
+| Du willst… | Zuerst lesen |
 |---|---|
-| Understand Codex and terminology | [Foundations](/guide/foundations/) |
-| Run through once today | [Getting started](/guide/getting-started/) |
-| Write better prompts | [Prompting](/prompts/) |
-| Learn to check results | [Quality and verification](/guide/quality/) |
-| Look up comparisons and troubleshooting | [Reference](/guide/reference/) |
+| Codex und Begriffe verstehen | [Grundlagen](/guide/foundations/) |
+| Heute einmal durchlaufen | [Schnellstart](/guide/getting-started/) |
+| Gute Prompts schreiben | [Prompts](/prompts/) |
+| Ergebnisse prüfen lernen | [Qualität und Überprüfung](/guide/quality/) |
+| Vergleiche und Fehlerbehebung | [Referenz](/guide/reference/) |
 
-## By product
+## Nach Produkt
 
-- Default: [Desktop App](/guide/desktop-app/)
+- [Desktop-App](/guide/desktop-app/)
 - Terminal: [CLI](/guide/cli/)
 - Editor: [IDE](/guide/ide/)
-- Cloud overview: [Web and Cloud](/guide/web-and-cloud/)
+- Cloud-Überblick: [Web und Cloud](/guide/web-and-cloud/)
 
-Not sure which to pick? Start with [Choose your Codex client](/guide/getting-started/choose-your-codex-client/) and the [feature comparison](/guide/reference/feature-comparison/).
+Wenn du unsicher bist, schau dir [Codex-Client wählen](/guide/getting-started/choose-your-codex-client/) und den [Funktionsvergleich](/guide/reference/feature-comparison/) an.
+
+## Häufige Missverständnisse
+
+### 1. Am Anfang musst du dich nicht scharf einordnen
+
+Praktischer ist die Frage: Willst du gerade grundlegende Bedienung lernen — oder zuerst eine konkrete Aufgabe lösen?
+
+### 2. Du musst nicht nur einen der drei Einstiege wählen
+
+Die drei Wege sind verschiedene Einstiege, kein Entweder-oder. Erst über die Aufgabe starten und später über das Produkt nachziehen, ist üblich.
+
+### 3. Falscher Pfad heißt nicht „von vorne anfangen“
+
+Pfade sparen Umwege — sie sind kein Kurs, den du zwingend der Reihe nach absitzen musst.
+
+## Wenn du unsicher bist
+
+Bei Unsicherheit kannst du so entscheiden:
+
+1. Erste Aufgabe noch nicht durchgelaufen → zuerst den [Anfänger-Pfad](/guide/learning-paths/beginner/)
+2. Du weißt schon, was du tun willst → über die Aufgabe-Tabelle einsteigen
+3. Du weißt schon, in welchem Einstieg du arbeitest → zum entsprechenden Produktkapitel
+
+Starte am Einstieg, der deiner aktuellen Frage am nächsten ist — Anpassen geht später immer noch.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Überprüfungsgrundlage:** Diese Seite erklärt nur die Methode, Lesepfade nach Rolle, Aufgabe und Produkteinstieg zu wählen; interne Links und Pfad-Gruppierungen wurden geprüft, und der Text hängt nicht von schnell veränderlichen Produktdetails ab.  
+**Zuletzt überprüft:** 2026-07-26

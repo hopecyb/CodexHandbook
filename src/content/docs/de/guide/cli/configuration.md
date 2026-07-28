@@ -1,69 +1,127 @@
 ---
-title: CLI Configuration
-description: Models, sandbox, approvals, and MCP—unify Codex behavior in the terminal.
+title: CLI-Konfiguration
+description: Modell, Sandbox, Freigabe und MCP — Codex-Verhalten im Terminal vereinheitlichen.
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: cfd37ab
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-CLI configuration sets **default model, working directory, approval strictness, MCP servers**, and more. Same concepts as [Configuration basics](/guide/customization/configuration/config-basics/); this page focuses on what terminal users change often.
 
-## Where config lives
+CLI-Konfiguration steuert **Default-Modell, Arbeitsverzeichnis, Freigabestrenge, MCP-Server** usw. Konzeptuell wie [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/); Fokus hier auf häufige Terminal-Anpassungen.
 
-| Layer | Purpose |
+## Inhalt dieser Seite
+
+Viele denken bei CLI-Konfiguration zuerst an „ein fortgeschrittenes Einstellungs-Panel“. Das erzeugt zwei Missverständnisse:
+
+- ohne Config geht’s — und dann dieselben Einstellungen bei jedem Start manuell wiederholen
+- mehr Config = professioneller — und persönliche Vorlieben, Teamregeln und Experimente landen an einem Ort, schwer zu debuggen
+
+Hier vor allem: **Was langfristig fixieren, was nur temporär ändern.**
+
+## Was CLI-Konfiguration steuert
+
+Denk an „Default-Arbeitsgewohnheiten von Codex im Terminal“.
+
+- Modell: wer standardmäßig die Arbeit macht
+- Sandbox und Freigabe: wie weit standardmäßig, wo du nicken musst
+- Arbeitsverzeichnis: in welchem Projekt standardmäßig
+- MCP und Erweiterungen: welche externen Fähigkeiten standardmäßig
+
+Ohne Config arbeitet Codex trotzdem — du wiederholst nur häufiger dieselben Entscheidungen.
+
+## Wo liegt Konfiguration
+
+| Schicht | Zweck |
 |---|---|
-| User | Personal defaults across projects |
-| Project | Shared team policy (review before commit) |
-| Environment variables | CI secrets and toggles |
+| Benutzerebene | persönliche Defaults, projektübergreifend |
+| Projektebene | geteilte Teamstrategie (vor Commit prüfen) |
+| Umgebungsvariablen | CI injiziert Secrets und Schalter |
 
-**Paths and filenames** change with CLI versions—see [official docs](https://developers.openai.com/codex). Often a `config.toml` under the user config directory.
+**Pfade und Dateinamen** ändern sich mit der CLI-Version — laut [Official-Dokumentation](https://developers.openai.com/codex). Häufig `config.toml` oder Äquivalent unter dem Benutzerverzeichnis.
 
-## Common settings
+## Häufige Missverständnisse
 
-### Default model and reasoning
+### Nicht alles gehört ins Projekt
 
-Affects speed, cost, and success on hard tasks. Scripting should **pin a model** for comparable logs.
+Einsteiger mischen oft „mein Default-Modell“, „mein lokaler Pfad“ und „Team-Freigabestrategie“.
 
-### Sandbox and network
+Klarer:
 
-| Intent | Notes |
+- persönliche Langzeitvorlieben → Benutzerebene
+- Repo-weit konsistent → Projektebene
+- nur CI/Skript/einmaliger Lauf → Umgebungsvariablen
+
+### Config ≠ Rechte sofort weit offen
+
+Eine Strategie in der Config heißt nicht, dass alle Aktionen bedingungslos durchlaufen. Produkt-Einstieg, Laufumgebung, Managed Policy und Aufgabeninhalt wirken mit.
+
+Config ist eher Default-Tendenz, kein Dauerprivileg.
+
+## Häufig geänderte Punkte
+
+### Default-Modell und Reasoning-Stärke
+
+Beeinflusst Tempo, Kosten und Erfolg komplexer Aufgaben. In Skripten **Modell fixieren**, damit Logs vergleichbar bleiben.
+
+### Sandbox und Netz
+
+| Absicht | Hinweis |
 |---|---|
-| Strict | Untrusted repos |
-| Standard | Daily development |
-| Relaxed | Trusted personal machines only, per company policy |
+| streng | unvertrauenswürdige Repos |
+| Standard | Alltag |
+| gelockert | nur persönliche vertrauenswürdige Umgebung, unternehmenskonform |
 
-Concepts: [Sandbox and network](/guide/foundations/sandbox-and-network/)
+Konzept: [Sandbox und Netz](/guide/foundations/sandbox-and-network/)
 
-### Approval policy
+### Freigabestrategie
 
-The CLI may ask before shell, disk writes, or network. Teams should document expected auto-approvals in `AGENTS.md`—only effective when aligned with product behavior.
+CLI kann vor Shell, Schreiben, Netz fragen. Teams sollten in `AGENTS.md` schreiben, welche Befehle erwartbar auto-durchlaufen — wirksam nur bei Übereinstimmung mit echtem Produktverhalten.
 
-### MCP server list
+### MCP-Serverliste
 
-Shared with [Connect an MCP server](/skills/mcp/connect-an-mcp-server/); restart sessions after changes.
+Gemeinsam mit [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/); nach Änderung Sitzung neu starten.
 
-## Align project and CLI
+## Ausreichende Konfigurationsreihenfolge
 
-Avoid “works in App, fails in CI”:
+Am Anfang nicht alle Felder. Diese Reihenfolge ist leichter:
 
-1. Document minimum CLI version in README
-2. Keep only **team-agreed** keys in project config
-3. Never commit secrets
+1. Häufigstes Modell fixieren
+2. Default-Arbeitsverzeichnis = aktuelles Projekt?
+3. Freigabe und Sandbox: konservativ oder gelockert?
+4. Dann erst MCP, Automatisierung, fortgeschrittene Erweiterungen
 
-## Troubleshooting
+Die ersten zwei sind Alltag; die letzten zwei eher Risikosteuerung.
 
-| Symptom | Check |
+## Projekt und CLI angleichen
+
+«App läuft, CI scheitert» vermeiden:
+
+1. Im README empfohlene Mindest-CLI-Version
+2. Projektebene nur **Teamkonsens**
+3. Secrets nie ins Repo
+
+## Fehlerbehebung
+
+| Phänomen | Prüfen |
 |---|---|
-| Config ignored | Wrong layer; restart session |
-| MCP not loaded | JSON/TOML syntax, paths |
-| Too many approvals | Sandbox mode and allowlists |
+| Config wirkt nicht | falsche Schicht? Neustart nötig? |
+| MCP nicht geladen | JSON/TOML-Syntax, Pfade |
+| Freigabe zu häufig | Sandbox-Modus und Allowlist |
 
-More: [CLI troubleshooting](/guide/cli/troubleshooting/)
+Mehr: [CLI-Fehlerbehebung](/guide/cli/troubleshooting/)
+
+CLI-Config = „Default-Arbeitsgewohnheiten“ — nur das fixieren, was du **fast jedes Mal wieder wählst**. Fortgeschrittenes später.
+
+## Quellen
+
+- OpenAI Codex CLI configuration
+- stormzhang `18-config.md`
 
 ---
 
-**Status:** review  
-**Applies to:** CLI  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** CLI  
+**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-Config-Materialien nutzen weiterhin `~/.codex/config.toml` und `~/.codex/.env` als prüfbare Beispiele; diese Seite bindet keine konkreten Feldnamen, sondern fasst Absicht, Schichten und Risikogrenzen zusammen — daher als Konzeptseite `verified`.  
+**Zuletzt geprüft:** 2026-07-26

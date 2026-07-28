@@ -1,139 +1,139 @@
 ---
-title: AGENTS.md in a Monorepo
-description: Example patterns for placing project instructions, scope, and test commands in a single-repo multi-package structure.
+title: AGENTS.md in einem Monorepo
+description: "Beispielmuster für Projektanweisungen, Geltungsbereich und Testbefehle in Single-Repo-Multi-Package-Strukturen."
 locale: de
-source_locale: en
-source_revision: 6342ab4
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-In a monorepo with multiple apps, shared packages, and different stacks—a single giant `AGENTS.md` makes it easy for the Agent to **edit the wrong package** or run the wrong tests. This page gives a reusable **layered instruction** pattern (example—trim for your repo).
+In Monorepos koexistieren mehrere Apps, Shared Packages und Stacks — eine riesige `AGENTS.md` lässt den Agent leicht **das falsche Paket ändern** oder den falschen Test laufen. Diese Seite zeigt ein wiederverwendbares **geschichtetes Hinweis**-Muster (Beispiel, auf Ihr Repo zuschneiden).
 
-## What This Page Covers
+## Was diese Seite behandelt
 
-- How root and subpackages divide instruction writing
-- How to align @ files and path constraints with package boundaries
-- Consistency with CI / Cloud environment commands
+- Wie Root und Subpakete Anweisungen aufteilen
+- Wie @-Dateien und Pfadconstraints zu Paketgrenzen passen
+- Konsistenz mit CI-/Cloud-Umgebungsbefehlen
 
-## Why Layered Instructions Matter More Here
+## Warum solche Repos geschichtete Hinweise brauchen
 
-If a normal repo is one house, a monorepo is a building.
+Ist ein normales Repo wie ein Haus, ist ein Monorepo eher ein Gebäude.
 
-Different rooms, residents, and rules.  
-If you only post one very long notice at the entrance, Codex often hits two problems:
+Verschiedene Räume, Bewohner, Regeln.  
+Nur am Eingang einen überlangen Gesamtzettel zu kleben, führt bei Codex oft zu:
 
-- Sees everything but does not know which layer applies now
-- Intended to change one package but touches elsewhere
+- Alles sichtbar, aber unklar, welche Schicht jetzt gilt
+- Nur ein Paket ändern wollen — und versehentlich anderswo mitändern
 
-The point is to make rules follow directory boundaries clearly—not mechanically add more `AGENTS.md` files.
+Regeln sollen mit Verzeichnisgrenzen klarer werden — nicht mechanisch mehr `AGENTS.md`-Kopien.
 
-## Recommended Structure (Example)
+## Empfohlene Struktur (Beispiel)
 
 ```text
 repo-root/
-  AGENTS.md              # Global: branch policy, commit conventions, prohibitions
-  apps/web/AGENTS.md     # Frontend: framework, test commands, routing conventions
-  apps/api/AGENTS.md     # Backend: API style, migration discipline
-  packages/shared/       # Link from root only, or short sub-note
+  AGENTS.md              # Global: Branch-Strategie, Commit-Normen, Verbote
+  apps/web/AGENTS.md     # Frontend: Framework, Testbefehle, Routing-Konventionen
+  apps/api/AGENTS.md     # Backend: API-Stil, Migrationsdisziplin
+  packages/shared/       # Nur Root-Link oder kurze Sub-Hinweise
 ```
 
-Root `AGENTS.md` should include:
+Root-`AGENTS.md` sollte enthalten:
 
-- Directories the Agent **must not** modify (e.g. `infra/prod/`)
-- **Owner or doc links** for each subpackage
-- Global install command: `pnpm install` at root
+- Welche Verzeichnisse der Agent **nicht** ändern darf (z. B. `infra/prod/`)
+- Owner oder Doku-Links der Subpakete
+- Globale Installation: `pnpm install` im Root
 
-## Common Misconceptions
+## Häufige Missverständnisse
 
-### 1. As directories grow, do not pile everything at the root
+### 1. Bei mehr Verzeichnissen nicht alles in die Root stopfen
 
-Many first monorepo instruction attempts put all constraints in root `AGENTS.md`.
+Viele packen beim ersten Monorepo-Versuch alle Constraints in die Root-`AGENTS.md`.
 
-Result:
+Folge:
 
-- Very long file
-- Rules relevant to the current task do not stand out
-- Subpackage-specific conventions get buried
+- Datei wird lang
+- Für die aktuelle Aufgabe relevante Regeln treten nicht hervor
+- Spezielle Subpaket-Konventionen gehen unter
 
-Steadier practice: global consensus at root; local special rules in subpackages.
+Stabiler: Root = globaler Konsens, Subpakete = lokale Sonderregeln.
 
-### Subpackage notes narrow mistaken edits—they do not duplicate root rules
+### Subpaket-Hinweise verkleinern Fehländerungsradius — sie wiederholen keine Root-Regeln
 
-If `apps/web` and `apps/api` differ in dev commands, test commands, and constraints, writing those differences in each directory helps Codex avoid wrong paths.
+Unterscheiden sich Dev-/Testbefehle und Constraints von `apps/web` und `apps/api`, helfen die Differenzen in den jeweiligen Verzeichnissen Codex, Umwege zu vermeiden.
 
-## Subpackage AGENTS.md Template Snippet
+## Subpaket-AGENTS.md-Vorlagenausschnitt
 
 ```markdown
-## Scope
-Modify only `apps/web/**` unless the task explicitly requires cross-package changes.
+## Geltungsbereich
+Nur `apps/web/**` ändern, außer die Aufgabe verlangt ausdrücklich paketübergreifend.
 
-## Development
-- Install: `pnpm install` at repo root
+## Entwicklung
+- Installation: im Repo-Root `pnpm install`
 - Dev: `pnpm --filter web dev`
-- Test: `pnpm --filter web test`
-- Type check: `pnpm --filter web typecheck`
+- Tests: `pnpm --filter web test`
+- Typcheck: `pnpm --filter web typecheck`
 
-## Dependencies
-Import shared types from `@acme/shared`; do not copy-paste.
+## Abhängigkeiten
+Shared Types aus `@acme/shared` importieren, nicht kopieren.
 ```
 
-## Task Prompt Coordination
+## Aufgaben-Prompt abstimmen
 
-For cross-package refactors, **list paths explicitly**:
+Bei paketübergreifenden Refactors **Pfade explizit listen**:
 
 ```text
-Goal: use new API client in apps/web
-Allowed changes: apps/web/**, packages/api-client/**
-Prohibited: change apps/api server directly
-Acceptance: pnpm --filter web test && pnpm --filter api-client test
+Ziel: in apps/web den neuen API-Client nutzen
+Erlaubt: apps/web/**, packages/api-client/**
+Verboten: apps/api-Server direkt ändern
+Abnahme: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-See [File and Folder Context](/guide/context/file-and-folder-context/)
+Siehe [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
 
-## Cloud and CI
+## Cloud und CI
 
-Monorepos on Cloud often fail from **install not at root** or wrong filter. In root `AGENTS.md`, state:
+Monorepos scheitern in der Cloud oft an **fehlender Root-Installation** oder falschen Filtern. In der Root-`AGENTS.md` festhalten:
 
-- Default working directory is repo root
-- Filter commands for single-package tasks
-- Cache strategy (if using turborepo/nx, note task graph)
+- Standard-Arbeitsverzeichnis = Repo-Root
+- Filter-Befehle für Ein-Paket-Aufgaben
+- Caching-Strategie (bei turborepo/nx Task-Graph nennen)
 
-[Cloud Environments](/guide/web-and-cloud/cloud-environments/)
+[Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/)
 
-## Common Mistakes
+## Häufige Fehler
 
-- Instructions only in `apps/web`; Agent changes lockfile at root
-- Inconsistent test commands per subpackage, undocumented
-- Subpackage AGENTS.md conflicts with root doc
+- Nur `apps/web` dokumentiert — Agent ändert trotzdem Root-Lockfile
+- Testbefehle der Subpakete inkonsistent und undokumentiert
+- Subpaket-AGENTS.md widerspricht Root-Doku
 
-## Root vs Subpackage: How to Decide
+## Root oder Subpaket
 
-When unsure whether a note belongs at root or subpackage, ask:
+Unsicher? Fragen:
 
-1. Is this consensus every package must follow?
-2. Does this hold only for one directory?
-3. If this rule is in the wrong place, will the Agent edit the wrong scope?
+1. Müssen alle Pakete das einhalten?
+2. Gilt das nur für ein Verzeichnis?
+3. Würde die falsche Schicht den Agent den Geltungsbereich falsch wählen lassen?
 
-Closer to (1) → root; closer to (2) and (3) → subpackage.
+Eher 1 → Root; eher 2/3 → Subpaket.
 
-## Acceptance Checklist
+## Abnahmeliste
 
-- [ ] Root and at least one subpackage each have readable scope notes
-- [ ] Any package can run its test command alone
-- [ ] Cross-package tasks state allowed paths in the prompt
+- [ ] Root und Subpakete haben je mindestens eine lesbare Scope-Erklärung
+- [ ] Jedes Paket kann Testbefehle allein zum Laufen bringen
+- [ ] Paketübergreifende Aufgaben listen erlaubte Pfade im Prompt
 
-AGENTS.md in a monorepo does not need to be centralized; “global consensus” and “directory-local rules” each belong in the right place.
+AGENTS.md im Monorepo muss nicht maximal zentral sein; besser „globaler Konsens“ und „lokale Verzeichnisregeln“ am richtigen Ort.
 
-## References
+## Quellen
 
-- freestylefly/CodexGuide monorepo playbook
-- codex.bozhouai.com large-repo chapter
-- stormzhang monorepo and Git practices
+- freestylefly/CodexGuide Monorepo-Playbook
+- codex.bozhouai.com Kapitel große Repos
+- stormzhang Monorepo- und Git-Praxis
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against this handbook’s current `AGENTS.md`, file/folder context, and Cloud environment chapters; page content is limited to monorepo layered instruction example patterns and command organization, without treating specific product entry points or managed implementation as fixed contracts.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle Kapitel zu `AGENTS.md`, Datei-/Ordnerkontext und Cloud-Umgebungen; Inhalt beschränkt auf Beispielmuster geschichteter Monorepo-Hinweise und Befehlsorganisation — keine festen Verträge zu Produkteinstiegen oder Managed-Implementierungen.  
+**Zuletzt geprüft:** 2026-07-26

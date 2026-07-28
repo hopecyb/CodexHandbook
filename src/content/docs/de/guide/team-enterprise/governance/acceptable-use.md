@@ -1,109 +1,113 @@
 ---
-title: Acceptable Use Policy
-description: Team-level agreement on what Codex may and may not do—aligned with technical controls and training.
+title: Acceptable-Use-Policy
+description: Auf Team-Ebene vereinbaren, was Codex darf und was nicht — abgestimmt mit Technik und Training.
 locale: de
-source_locale: en
-source_revision: '3075e12'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-An **Acceptable Use Policy (AUP)** turns “can we use Codex for this?” into org consensus instead of individual judgment. It complements the [threat model](/guide/team-enterprise/security/threat-model/): threat model covers risk; AUP covers **behavior boundaries**.
+Eine **Acceptable-Use-Policy (AUP)** schreibt „darf Codex das?“ als Organisationskonsens — statt nur persönliches Urteil. Sie ergänzt das [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/): dort Risiko, hier **Verhaltensgrenzen**.
 
-## What this page covers
+## Inhalt
 
-- Topics an AUP should cover
-- Linking HR/compliance and technical controls
-- Starter clause outline (requires legal localization)
+- Themen, die eine AUP abdecken sollte
+- Anschluss an HR/Compliance und technische Kontrollen
+- Beispielklauseln zum Entwurf (juristisch lokalisieren)
 
-## What an AUP governs
+## Was die AUP steuert
 
-Even if technically possible, is it allowed on our team?
+Auch wenn es technisch geht: Ist es in unserem Team erlaubt?
 
-It does not replace technical policy—it states boundaries people can read and follow.
+Sie ersetzt keine technischen Policies — sie macht Organisationsgrenzen verständlich und durchsetzbar.
 
 :::caution
-The following is an **educational outline**, not legal advice. Legal and compliance review required before publication.
+Nachfolgendes ist ein **pädagogischer Umriss**, keine Rechtsberatung. Vor formaler Veröffentlichung Legal und Compliance einbinden.
 :::
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### AUP matters to practitioners
+### Die AUP betrifft auch die Linie
 
-Not only “paperwork.” Daily questions include:
+Viele sehen Policy-Dokumente als Formalität ohne Bezug zur täglichen Arbeit.
 
-- What data must not go to Codex
-- When human review is required
-- Which extensions and external connections are off-limits
+Im Alltag tauchen aber genau diese Fragen auf:
 
-### Policy without enforcement decays
+- Welche Daten dürfen nicht an Codex
+- Welche Szenarien brauchen menschliche Überprüfung
+- Welche Erweiterungen und Externverbindungen sind tabu
 
-If policy says “production changes need approval” but tools allow bypass, the AUP stops working.
+Also nicht nur Legal-Text — praktische Nutzungsgrenze.
 
-AUP must align with training, permissions, config, and audit—not length alone.
+### Policy schreiben ≠ Team hält sich daran
 
-## Recommended topics
+Steht „Produktionsänderungen brauchen Freigabe“, Tools umgehen das aber default, wird die Policy schnell wirkungslos.
 
-| Topic | Points |
+Wichtiger: AUP mit Training, Berechtigungen, Config und Audit verzahnen — nicht nur vollständig klingen.
+
+## Empfohlene Themen
+
+| Thema | Kernpunkte |
 |---|---|
-| Permitted use | Development, docs, research, internal automation |
-| Prohibited use | Unauthorized access, harassment, bypassing security |
-| Data classification | Which repos/data allowed; customer PII rules |
-| Output responsibility | Human review before merge; no legal/medical advice externally |
-| Extensions | Approved Plugin/MCP list only |
-| Accounts | No shared personal seats; revoke on offboarding |
-| Incidents | How to report suspicious behavior |
+| Erlaubte Nutzung | Entwicklung, Doku, Recherche, interne Automatisierung |
+| Verbotene Nutzung | Unautorisierter Zugriff, Belästigung, Umgehung von Sicherheitskontrollen |
+| Datenklassifikation | Welche Repos/Daten; Regeln zu Kunden-PII |
+| Output-Verantwortung | Merge nach Menschen-Review; Output nicht als Rechts-/Medizinberatung nach außen |
+| Erweiterungen | Nur Plugins/MCP auf der Freigabeliste |
+| Konten | Keine geteilten persönlichen Sitze; Rücknahme bei Austritt |
+| Incident | Meldeweg für verdächtiges Verhalten |
 
-## Basic structure
+## Grundstruktur
 
-1. **Purpose and scope**
-2. **Permitted scenarios** (link [Capability map](/guide/start-here/codex-capability-map/))
-3. **Prohibited scenarios**
-4. **Data and confidentiality**
-5. **Human oversight** (merge, production changes)
-6. **Consequences** (reference employee handbook)
-7. **Contacts and revision date**
+1. **Zweck und Geltungsbereich**
+2. **Erlaubte Szenarien** (Link zur [Fähigkeitskarte](/guide/start-here/codex-capability-map/))
+3. **Verbotene Szenarien**
+4. **Daten und Vertraulichkeit**
+5. **Menschliche Aufsicht** (Merge, Produktionsänderungen)
+6. **Folgen bei Verstößen** (bestehendes Mitarbeiterhandbuch)
+7. **Kontakte und Aktualisierungsdatum**
 
-## Aligning with technical controls
+## Abgleich mit technischen Kontrollen
 
-| AUP clause | Technical implementation |
+| AUP-Klausel | Technische Umsetzung |
 |---|---|
-| No source exfiltration | Network policy, MCP approval |
-| Production changes need approval | Branch protection, deny `git push` |
-| Approved models only | Org-managed configuration |
+| Kein Exfiltrate von Quellcode | Netzwerkpolicy, MCP-Freigabe |
+| Produktionsänderungen brauchen Freigabe | Branch Protection, `git push` deny |
+| Nur freigegebene Modelle | Organisationskonfiguration |
 
-## Common mistakes
+## Häufige Fehler
 
-- AUP published, no training
-- Policy contradicts tool reality (forbidden but allowed)
-- Years without update as features evolve (Computer Use, etc.)
+- AUP fertig, niemand trainiert
+- Losgelöst von der technischen Reality (Policy verbietet, Tool erlaubt)
+- Jahre unverändert, trotz neuer Features (z. B. Computer Use)
 
-## Is an AUP effective?
+## Wann eine AUP wirksam ist
 
-Ask:
+Fragen:
 
-1. Does it answer real team boundaries?
-2. Can it map to training, config, or approval flows?
-3. On violation, can the team detect and respond?
+1. Beantwortet sie echte Nutzungsgrenzen des Teams?
+2. Landet sie in Training, Config oder Freigabeprozessen?
+3. Weiß das Team bei Verstößen, wie erkennen und handeln?
 
-More “yes” → more likely effective.
+Je mehr „ja“, desto wahrscheinlicher echte Wirkung.
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Onboarding includes AUP acknowledgment
-- [ ] No conflict with [Team rules](/guide/customization/rules/team-rules/)
-- [ ] Review yearly or on major feature releases
+- [ ] Onboarding enthält AUP-Bestätigung
+- [ ] Kein Widerspruch zu [Team-Regeln](/guide/customization/rules/team-rules/)
+- [ ] Jährlich oder bei Major-Features erneut prüfen
 
-An AUP’s value is clear team boundaries for Codex use—and alignment with actual controls.
+Der Wert einer AUP: Codex-Nutzungsgrenzen klar schreiben und mit realen Kontrollen abstimmen.
 
-## Reference sources
+## Quellen
 
-- KimYx0207 enterprise policy chapter
-- freestylefly/CodexGuide team governance
+- KimYx0207 Enterprise-Policy-Kapitel
+- freestylefly/CodexGuide Team-Governance
 
 ---
 
 **Status:** verified  
-**Products:** Organization / team  
-**Verification basis:** OpenAI enterprise docs still emphasize role access, action permissions, and source-system boundaries for plugins and apps; this page defines AUP as organizational behavior boundary with “educational outline, legal localization required”—not an official policy template.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Organisation / Team  
+**Prüfgrundlage:** Aktuelle OpenAI-Enterprise-Dokumentation betont weiterhin rollen- und berechtigungsgebundene Verwaltung von Plugins, Apps, externen Aktionen und Quellsystemzugriff; diese Seite definiert AUP klar als Organisations-Verhaltensgrenze und behält „pädagogischer Umriss, Legal lokalisieren“ bei — kein offizielles Policy-Template.  
+**Zuletzt geprüft:** 2026-07-26

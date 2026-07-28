@@ -1,91 +1,92 @@
 ---
-title: 'Case study: Scheduled documentation link check'
-description: Non-interactive Codex or CI to scan for dead site links—a team automation starter case.
+title: "Fall: Geplante Dokumentenlink-Prüfung"
+description: Mit nicht-interaktivem Codex oder CI tote Links in der Site scannen — Einstiegsfall Team-Automatisierung.
 locale: de
-source_locale: en
-source_revision: f7b153b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
 
-| Field | Content |
+## Metadaten
+
+| Feld | Inhalt |
 |---|---|
-| Audience | Team maintainers, technical writers |
+| Zielgruppe | Team-Maintainer, Technical Writer |
 | Client | CLI + GitHub Actions |
-| Estimated time | 45–90 minutes (including first CI setup) |
-| Verification date | 2026-07-25 |
+| Geschätzte Dauer | 45–90 Minuten (inkl. erster CI-Einrichtung) |
+| Prüfdatum | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Ziel und Kontext
 
-**Goal:** Weekly automatic check of in-site links and key external links; report dead links via PR or issue.
+**Ziel:** Wöchentlich automatisch interne und kritische externe Docs-Links prüfen; tote Links per PR oder Issue melden.
 
-**Success criteria:**
+**Erfolgskriterien:**
 
-- CI or scheduled workflow runs repeatably
-- Structured dead-link list (file, line, URL)
-- No unrelated file changes, no push
+- CI oder geplanter Workflow wiederholbar
+- Strukturierte Liste toter Links (Datei, Zeile, URL)
+- Keine unrelated Dateiänderungen, kein Push
 
-**Out of scope:** Full-site crawl, logged-in pages, performance testing.
+**Außerhalb des Umfangs:** Vollsite-Crawler, Seiten hinter Login, Performance-Tests.
 
-## 2. Preparation
+## 2. Vorbereitung
 
-- Docs site source in a Git repo (e.g. this handbook `src/content/docs/`)
-- Existing `npm run build` or link-check script (optional)
-- Read-only `GITHUB_TOKEN` and `OPENAI_API_KEY` in org secrets
+- Docs-Quellen im Git-Repo (z. B. `src/content/docs/` dieses Handbuchs)
+- Vorhandenes `npm run build` oder Link-Checker-Skript (optional)
+- Nur-lesendes `GITHUB_TOKEN` und `OPENAI_API_KEY` in Org-Secrets
 
 ## 3. Workflow
 
-### Explore
+### Erkunden
 
 ```text
-Read @src/content/docs/ and existing package.json scripts.
-List whether link check exists; if not, suggest minimal approach: markdown internal links + sample official doc externals.
-Do not change files.
+Lies @src/content/docs/ und vorhandene package.json-Scripts.
+Liste, ob es bereits einen Link-Check gibt; falls nicht, minimale Option vorschlagen: Markdown-Internlinks + Stichprobe offizieller Docs-Externlinks.
+Keine Dateien ändern.
 ```
 
-### Plan
+### Planen
 
 ```text
-Give plan: prompt file path, CI workflow name, structured JSON output fields.
-Wait for my confirmation before creating files.
+Plan liefern: Prompt-Dateipfad, CI-Workflow-Name, Felder der strukturierten JSON-Ausgabe.
+Nach meiner Bestätigung Dateien anlegen.
 ```
 
-### Execute
+### Ausführen
 
-- Add `prompts/ci/link-check.md`
-- Add `.github/workflows/docs-link-check.yml` (illustrative—see [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Use [codex exec](/guide/developer-platform/non-interactive/codex-exec/) or plain script + Codex for secondary classification
+- `prompts/ci/link-check.md` hinzufügen
+- `.github/workflows/docs-link-check.yml` hinzufügen (Skizze, siehe [Skripte und Pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- [codex exec](/guide/developer-platform/non-interactive/codex-exec/) oder reines Skript + Codex zur Nachklassifikation
 
-### Verify
+### Überprüfen
 
-- Local `codex exec` once
-- CI manual `workflow_dispatch`
-- Insert a dead link on purpose; confirm `pass: false`
+- Einmal lokal `codex exec`
+- CI manuell per `workflow_dispatch`
+- Absichtlich toten Link einfügen, `pass: false` bestätigen
 
-## 4. Failure and recovery
+## 4. Fehler und Wiederherstellung
 
-| Issue | Action |
+| Problem | Vorgehen |
 |---|---|
-| External site temporary 503 | Distinguish hard dead links vs soft failures in prompt |
-| JSON parse failure | Tighten [structured output](/guide/developer-platform/non-interactive/structured-output/) constraints |
-| Quota exhausted | Switch to weekly schedule + incremental checks |
+| Externer Site temporär 503 | Harte tote Links vs. weiche Fehler im Prompt unterscheiden |
+| JSON-Parse fehlgeschlagen | Constraints für [strukturierte Ausgabe](/guide/developer-platform/non-interactive/structured-output/) verschärfen |
+| Quota erschöpft | Auf wöchentlich + inkrementelle Prüfung umstellen |
 
-## 5. Capture
+## 5. Verstetigen
 
-- After third successful run, capture as Skill: `docs-link-audit`
-- Team [command rules](/guide/customization/rules/team-rules/) allow `npm run build` and read-only git
+- Nach dem dritten erfolgreichen Lauf als Skill `docs-link-audit` verstetigen
+- In den [Team-Befehlsregeln](/guide/customization/rules/team-rules/) `npm run build` und nur-lesendes Git erlauben
 
-## 6. Related chapters
+## 6. Verwandte Kapitel
 
-- [Long-running task management](/cases/workflows/long-running-task-management/)
-- [Automations scheduled tasks](/skills/automations/scheduled-tasks/)
-- [Team learning path](/guide/learning-paths/team/)
+- [Lange Aufgaben verwalten](/cases/workflows/long-running-task-management/)
+- [Automations geplante Aufgaben](/skills/automations/scheduled-tasks/)
+- [Lernpfad für Teams](/guide/learning-paths/team/)
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified non-interactive mode, scripts and pipelines, structured output, team rules, and automation chapters; content is limited to the stable team automation case of scheduled link checks, structured reports, and failure stop conditions.
+**Geeignete Produkte:** CLI  
+**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu nicht-interaktivem Modus, Skripten und Pipelines, strukturierter Ausgabe, Team-Regeln und Automatisierung. Der Inhalt beschränkt sich auf den stabilen Team-Automatisierungsfall „geplante Link-Prüfung, strukturierter Report und Stopp bei Fehlern“.  
+**Zuletzt geprüft:** 2026-07-26

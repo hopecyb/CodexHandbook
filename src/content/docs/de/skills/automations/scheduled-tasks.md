@@ -1,107 +1,107 @@
 ---
-title: Scheduled and background tasks
-description: Automations—run Codex unattended under triggers; design approval and exit conditions.
+title: Geplante und Hintergrundaufgaben
+description: Automations — Codex unbeaufsichtigt unter Triggern; Freigabe und Exit-Bedingungen planen.
 locale: de
-source_locale: en
-source_revision: 792f487
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-**Automations** let Codex run tasks automatically on a **schedule, repo events, or external triggers**—for example dependency update checks, doc sync, periodic health scans.
+**Automations** lassen Codex unter **Zeitplan, Repo-Ereignissen oder externen Triggern** Aufgaben ausführen — z. B. Dependency-Checks, Doc-Sync, periodische Health-Scans.
 
-## Contents
+## Inhalt
 
-- When automation is worth it vs when humans must stay in the loop
-- Four design areas: trigger, execution, notification, failure
-- Relationship to Cloud tasks and local CLI scripts
+- Wann Automation lohnt, wann Mensch in der Schleife bleiben muss
+- Vier Designpunkte: Trigger, Ausführung, Benachrichtigung, Fehlschlag
+- Bezug zu Cloud-Aufgaben und lokalen CLI-Skripten
 
-## Compared to manual tasks
+## Vergleich zu manuellen Aufgaben
 
-| | Manual task | Automation |
+| | Manuelle Aufgabe | Automation |
 |---|---|---|
-| Start | You initiate | Schedule/event |
-| Supervision | You can interrupt anytime | Needs notifications and logs |
-| Risk | You judge on the spot | Errors may spread in bulk |
-| Fit | Exploration, refactors | Repeatable, rule-clear work |
+| Start | du startest | Scheduler/Ereignis |
+| Aufsicht | jederzeit unterbrechbar | braucht Benachrichtigung und Logs |
+| Risiko | du urteilst live | Fehler können massenhaft streuen |
+| Geeignet | Exploration, Refactor | Wiederholt, regelklar |
 
-## Safe automation design
+## Sicheres Automations-Design
 
-### 1. Clear trigger conditions
+### 1. Trigger klar
 
 ```text
-Good: Every Monday 09:00, check dead links under docs/
-Bad: Continuously watch and auto-edit code
+Gut: Jeden Montag 09:00 tote Links unter docs/ prüfen
+Schlecht: Dauerhaft überwachen und Code automatisch ändern
 ```
 
-### 2. Least privilege
+### 2. Least Privilege
 
-- Read-only scans beat auto-commit
-- If auto-opening PRs, use dedicated bot account and branch protection
+- Nur-lesen-Scan vor Auto-Commit
+- Bei Auto-PR: dedizierter Bot-Account und Branch-Schutz
 
-### 3. Exit conditions
+### 3. Exit-Bedingungen
 
-- Pause after N consecutive failures
-- Escalate to human when diff exceeds line threshold
-- Abort when touching `AGENTS.md` forbidden directories
+- Nach N Fehlschlägen in Folge pausieren
+- Diff über Zeilenschwelle → Mensch
+- Bei Treffer auf in `AGENTS.md` verbotene Verzeichnisse abbrechen
 
-### 4. Notifications
+### 4. Benachrichtigung
 
-- Slack/email/mobile: complete, fail, needs approval
-- Retain logs for audit
+- Slack/Mail/Mobil: fertig, fehlgeschlagen, Freigabe nötig
+- Logs für Audit behalten
 
-### 5. Human review points
+### 5. Menschliche Überprüfungspunkte
 
-| Can be fully automatic | Needs human |
+| Vollautomatisch möglich | Mensch nötig |
 |---|---|
-| Generate draft PR | Merge to main |
-| List outdated dependencies | Upgrade major versions |
-| Sync public docs | Publish external announcements |
+| Draft-PR erzeugen | Nach main mergen |
+| Veraltete Dependencies listen | Major-Version upgraden |
+| Öffentliche Docs syncen | Externe Ankündigung veröffentlichen |
 
-## Typical patterns
+## Typische Muster
 
-### Periodic maintenance
+### Periodische Wartung
 
-- Vulnerability report on dependencies → open issue, do not edit lockfile directly
-- Remind when translation files drift from source copy
+- Dependency-Vuln-Report → Issue, Lockfile nicht direkt ändern
+- Übersetzung vs. Quelltext-Diff-Hinweis
 
-### Event-driven
+### Ereignisgetrieben
 
-- New PR opened → run review Skill (comment suggestions, no push)
-- Issue labeled `bug` → draft reproduction steps
+- Neuer PR → Review-Skill (Kommentar-Vorschläge, kein Push)
+- Issue-Label `bug` → Repro-Schritte-Entwurf
 
-### Long-running tasks
+### Lange Aufgaben
 
-Split into multiple Automations + [handoff and resume](/guide/agent-work/handoff-and-resume/) to avoid single context exhaustion.
+In mehrere Automations + [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/) teilen — Kontext nicht in einem Lauf erschöpfen.
 
-## Relationship to Cloud / CLI
+## Bezug zu Cloud / CLI
 
-- **Cloud**: Remote automation deep with GitHub
-- **CLI + cron/CI**: Internal network, custom pipelines
-- Choice: [local vs cloud](/guide/foundations/local-vs-cloud/) and [web and cloud](/guide/web-and-cloud/)
+- **Cloud**: Remote-Automation mit tiefer GitHub-Integration
+- **CLI + cron/CI**: Intranet, eigene Pipelines
+- Auswahl: [Lokal vs. Cloud](/guide/foundations/local-vs-cloud/) und [Web und Cloud](/guide/web-and-cloud/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Automation `git push` directly to main
-- No failure alerts—repo silently rots
-- Schedule exploratory tasks—wastes quota and hard to verify
+- Automation `git push` direkt auf Hauptbranch
+- Kein Fehlschlag-Alarm → stilles Repo-Verfallen
+- Explorative Aufgaben zeitgesteuert — Quota verschwenden, schwer abnehmbar
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Trigger, permissions, notifications, exit conditions documented
-- [ ] Full cycle rehearsed once in fork or test repo
-- [ ] Team knows bot account and approval rules
+- [ ] Trigger, Berechtigungen, Benachrichtigung, Exit dokumentiert
+- [ ] Ein voller Zyklus in Fork/Test-Repo geübt
+- [ ] Team kennt Bot-Account und Freigabe-Regeln
 
-## References
+## Quellen
 
 - KimYx0207 CX-09 Automations
 - stormzhang `27-automation.md`
-- OpenAI Codex Cloud / Automations official documentation
+- Offizielle OpenAI Codex Cloud / Automations-Hinweise
 
 ---
 
 **Status:** outdated  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** Describes scheduled, event-driven, and background automation as current product capability; triggers and governance still change quickly—public official basis incomplete.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Cloud / App / CLI  
+**Nachprüfhinweis:** Beschreibt aktuelle zeitgesteuerte, ereignisgetriebene und Hintergrund-Ausführung; Trigger-Einstiege und Governance ändern sich leicht, öffentliche Grundlage unvollständig.  
+**Zuletzt geprüft:** 2026-07-26

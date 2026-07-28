@@ -1,120 +1,122 @@
 ---
-title: Run your first task
-description: Complete a small change with a clear prompt.
+title: Erste Aufgabe ausführen
+description: "Mit klaren Prompts eine kleine Änderung abschließen."
 locale: de
-source_locale: en
-source_revision: 0e6c1c3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The example below defaults to the **desktop App**; CLI/IDE can use the same prompt.
 
-Many people try to make Codex “build a full website” or “refactor the whole project” on the first run. That often goes out of control quickly.
+Das folgende Beispiel geht von der **Desktop-App** aus; CLI/IDE können denselben Prompt nutzen.
 
-A small first task is safer. Completing the full loop once matters more than starting big.
+Viele wollen beim ersten Mal Codex gleich „eine komplette Website bauen“ oder „das ganze Projekt refaktorieren“ lassen — das gerät leicht außer Kontrolle.
 
-## Why keep the first task this small
+Eine kleine erste Aufgabe ist stabiler. Den kompletten Ablauf durchzuziehen zählt mehr als sofort Großes.
 
-A good first task usually meets all three:
+## Warum die erste Aufgabe so klein sein sollte
 
-- Small change scope
-- Result you can check at a glance
-- Easy to undo if something goes wrong
+Die erste Aufgabe sollte idealerweise:
 
-So this page uses a tiny practice example.
+- kleinen Änderungsumfang haben
+- auf einen Blick prüfbar sein
+- bei Fehlern leicht rückgängig zu machen sein
 
-## Example task
+Deshalb hier ein sehr kleines Übungsbeispiel.
 
-In your practice project, tell Codex:
+## Beispielaufgabe
 
-```text
-Goal: Append a section "Today's practice" at the end of hello.md with a three-item bullet list.
-Constraints: Only modify hello.md; do not delete existing content; do not make network requests.
-Acceptance: The file ends with that heading and exactly three list items.
-If information is missing, ask me first—do not guess.
-```
-
-## What each part of the prompt does
-
-This prompt separates several critical pieces:
-
-- **Goal**: what to do
-- **Constraints**: what must not be changed
-- **Acceptance**: how to know it is done
-- **Ask me first if information is missing**: stop it from guessing
-
-This is not a fixed template—it just makes the parts that are easiest to leave vague explicit.
-
-## Common misconceptions
-
-### 1. A bigger first task teaches you more
-
-The first run is about completing the full loop, not doing the biggest possible job.
-
-### 2. Once the prompt is written, let it improvise
-
-On the first task, watch three things:
-
-- Whether scope stays within bounds
-- Whether it is editing the files you named
-- Whether the result matches acceptance
-
-### 3. If it gets the first task wrong, I must be doing it wrong
-
-The first task is supposed to include:
-
-- Spotting what went wrong
-- Pointing out the problem
-- Knowing how to roll it back
-
-## While it runs
-
-1. Ask for a short plan first (or request one yourself)
-2. When approving file writes, confirm paths are correct
-3. When done, go to [Review the result](/guide/getting-started/review-the-result/)
-
-## Suggested order
-
-Follow these five steps:
-
-1. Pick a safe practice project
-2. Give a small task that touches only one file
-3. Before approving, check what it will change
-4. After it finishes, check scope and results
-5. If you are unhappy, undo or steer with a precise correction
-
-After these five steps, the collaboration rhythm feels much clearer.
-
-## What to check when it finishes
-
-Focus on three things:
-
-1. Did it only change `hello.md`?
-2. Does the end of the file really contain that new section?
-3. Are there exactly three list items?
-
-If all three pass, the small first task basically worked.
-
-## If it got it wrong
-
-Getting it wrong the first time is normal. You can continue like this:
+Im Übungsprojekt zu Codex sagen:
 
 ```text
-You changed too much. Revert edits to other files and keep only the hello.md changes.
+Ziel: Am Ende von hello.md einen Abschnitt «Heutige Übung» mit einer dreizeiligen Stichpunktliste anhängen.
+Einschränkungen: Nur hello.md ändern; bestehende Inhalte nicht löschen; keine Netzwerkanfragen.
+Abnahme: Am Dateiende erscheinen diese Überschrift und genau drei Listeneinträge.
+Fehlen Informationen, frag zuerst nach — nicht raten.
 ```
 
-Or:
+## Wofür die Prompt-Teile da sind
+
+Dieser Prompt trennt wichtige Punkte klar:
+
+- **Ziel**: Was tun
+- **Einschränkungen**: Was nicht wild ändern
+- **Abnahme**: Wann es „fertig“ ist
+- **Fehlen Infos, frag nach**: Verhindert eigenmächtiges Raten
+
+Kein festes Template — nur die Teile, die sonst leicht unklar bleiben, klar geschrieben.
+
+## Häufige Missverständnisse
+
+### 1. Je größer die erste Aufgabe, desto mehr „echtes Können“
+
+Beim ersten Mal zählt der komplette Kreislauf — nicht, alles auf einmal groß zu machen.
+
+### 2. Prompt geschrieben — danach dem Modell freigeben
+
+In der ersten Aufgabe besonders auf drei Dinge achten:
+
+- Umfang überschritten?
+- Arbeitet es an den genannten Dateien?
+- Erfüllt das Ergebnis die Abnahme?
+
+### 3. Erster Fehler = ich kann es nicht
+
+Zur ersten Aufgabe gehört auch:
+
+- Merken, was schiefging
+- Das Problem benennen können
+- Wissen, wie man es zurückholen lässt
+
+## Während der Ausführung
+
+1. Kurzen Plan verlangen (oder selbst einfordern)
+2. Beim Freigeben von Dateischreiben den Pfad prüfen
+3. Danach zu [Ergebnis prüfen](/guide/getting-started/review-the-result/)
+
+## Ausführungsreihenfolge
+
+Diese 5 Schritte:
+
+1. Sicheres Übungsprojekt wählen
+2. Kleine Aufgabe mit nur einer Datei geben
+3. Vor der Freigabe klar sehen, was es anfassen will
+4. Danach Umfang und Ergebnis prüfen
+5. Unzufrieden → rückgängig oder präzise nachsteuern
+
+Nach diesen 5 Schritten sitzt der Kollaborationsrhythmus schon besser.
+
+## Was du danach prüfen solltest
+
+Drei Punkte:
+
+1. Hat es nur `hello.md` geändert?
+2. Steht der Abschnitt wirklich am Dateiende?
+3. Sind es genau drei Listeneinträge?
+
+Wenn alle drei stimmen, ist diese kleine Aufgabe im Kern gelaufen.
+
+## Wenn es falsch lag
+
+Fehler beim ersten Mal sind normal. So kannst du weitermachen:
 
 ```text
-Do not make more edits. Tell me exactly what you changed just now.
+Du hast zu viel geändert. Nimm Änderungen an anderen Dateien zurück und behalte nur die Änderungen an hello.md.
 ```
 
-Prompting basics: [Prompt basics](/prompts/basics/).
+Oder:
+
+```text
+Ändere erst nichts weiter. Sag mir, was du gerade geändert hast.
+```
+
+Prompt-Prinzipien: [Prompt-Grundlagen](/prompts/basics/).
 
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Geeignete Produkte:** App / CLI / IDE  
+**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Prompt-Grundlagen, Ergebnis prüfen, Rückgängig/Wiederherstellen und Übungsprojekt abgeglichen; der Inhalt beschränkt sich auf die stabile Übungsmethode „erste Aufgabe klein, prüfbar, rücknehmbar“.  
+**Zuletzt überprüft:** 2026-07-26

@@ -1,120 +1,120 @@
 ---
-title: Create Pull Request
-description: From Cloud tasks to reviewable PRs—descriptions, scope, and human merge gates.
+title: Pull Request erstellen
+description: 'Von der Cloud-Aufgabe zum reviewbaren PR — Beschreibung, Umfang und menschliches Merge-Gate.'
 locale: de
-source_locale: en
-source_revision: e679e5f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-On your first Cloud workflow, the task may be "done" while changes are not yet in a state that's easy to inspect and discuss. On teams, that handoff usually happens through a **Pull Request**.
+Beim ersten Cloud-Workflow ist die Aufgabe oft fertig — die Änderung aber noch nicht in einem Zustand zum Prüfen und Diskutieren. In der Teamkollaboration übernimmt das der **Pull Request**.
 
-A PR is a reviewable change proposal.
+Ein PR ist ein reviewbarer Änderungsantrag.
 
-It centralizes what changed, why, and how it was tested—where Cloud deliverables land for the team.
+Er bündelt was geändert wurde, warum, und ob getestet — an einem Ort. Cloud-Aufgaben landen für das Team oft hier.
 
-## What's covered
+## Inhalt
 
-- End-to-end expectations from Cloud task to PR
-- What PR descriptions should include for humans and CI
-- When not to auto-open a PR
+- End-to-End-Erwartung von Cloud-Aufgabe zu PR
+- Was die PR-Beschreibung für Mensch und CI enthalten sollte
+- Wann kein Auto-PR
 
-## When to open a PR
+## Wann einen PR öffnen
 
-If others need to see the change, CI must run, or the work must merge to the main branch, do not stop at "branch updated"—move to a **reviewable PR**.
+Wenn andere reviewen, CI laufen oder Merge in den Hauptbranch nötig ist: nicht bei „Branch ist fertig“ stehen bleiben — weiter zum **reviewbaren PR**.
 
-## Recommended workflow
+## Empfohlener Workflow
 
 ```text
-Connect GitHub → clarify issue/goal → Cloud task (confirm plan) → push branch → open PR → human review + CI → merge
+GitHub verbinden → Issue/Ziel klar → Cloud-Aufgabe (Plan bestätigen) → Branch pushen → PR öffnen → Menschen-Review + CI → Merge
 ```
 
-Prerequisite: [Connect GitHub](/guide/web-and-cloud/connect-github/)
+Voraussetzung: [GitHub verbinden](/guide/web-and-cloud/connect-github/)
 
-## Why auto-merge is not the default
+## Warum nicht sofort Auto-Merge
 
-PRs exist to give people and automation a checkpoint—not only to upload code.
+Der PR lässt Mensch und System prüfen — er ist mehr als „Code hochschieben“.
 
-Common pattern:
+Üblich:
 
-- Codex can help open the PR
-- A human decides whether to merge
+- Codex kann den PR öffnen
+- Menschen entscheiden über Merge
 
-That preserves a safety gate even if the task drifted.
+So bleibt bei schiefer Richtung noch eine Prüfung.
 
-## Task prompt essentials
+## Prompt-Punkte für die Aufgabe
 
 ```text
-Goal: Fix the login timeout described in #42
+Ziel: Login-Timeout aus #42 beheben
 Branch: fix/42-login-timeout
-Scope: packages/auth and related tests only
-Done: Open PR to main; do not merge
-PR description must include: reason, change summary, test commands and results, risks and rollback
+Umfang: nur packages/auth und zugehörige Tests
+Fertig: PR gegen main öffnen, nicht mergen
+PR-Beschreibung muss enthalten: Ursache, Änderungszusammenfassung, Testbefehle und Ergebnisse, Risiko und Rollback
 ```
 
-Aligned with [define done](/prompts/define-done/) and [task anatomy](/prompts/task-anatomy/).
+Konsistent mit [Done definieren](/prompts/define-done/) und [Anatomie einer guten Aufgabe](/prompts/task-anatomy/).
 
-## A good PR answers four questions
+## Eine gute PR beantwortet mindestens vier Fragen
 
-1. Why did you make this change?
-2. What exactly changed?
-3. How did you verify it?
-4. What risks, limits, or gaps remain?
+1. Warum diese Änderung?
+2. Was genau wurde geändert?
+3. Wie verifiziert?
+4. Welche Risiken, Limits oder Lücken bleiben?
 
-Without those, reviewers must reconstruct context themselves.
+Fehlen diese Punkte, muss der Reviewer Kontext nachholen.
 
-## PR quality checklist
+## PR-Qualitätscheckliste
 
-- [ ] Title states **what** changed, not "update code"
-- [ ] Links the issue number
-- [ ] CI passes or explains known failures
-- [ ] Diff size is acceptable; split oversized PRs
-- [ ] No secrets, no unrelated formatting storms
-- [ ] Screenshots or logs for UI/behavior changes
+- [ ] Titel sagt „was“, nicht „Code aktualisiert“
+- [ ] Issue-Nummer verknüpft
+- [ ] CI grün oder bekannte Fehler erklärt
+- [ ] Diff-Größe im Teamrahmen; sonst splitten
+- [ ] Keine Secrets, kein Formatierungssturm
+- [ ] Screenshots/Logs bei UI-/Verhaltensänderungen
 
-## Human gate
+## Menschliches Gate
 
-Even if Codex opens the PR, **merge** should default to a human (or a controlled bot under branch protection):
+Auch wenn Codex PRs öffnen kann: **Merge** default durch Menschen (oder kontrollierter Bot + Branch Protection):
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+Siehe [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Stuffing unrelated changes into one PR
+### 1. Mehrere unzusammenhängende Änderungen in einem PR
 
-Hard to review and hard to revert.
+Schwer zu lesen und zurückzurollen.
 
-### 2. Saying "fixed" without how you verified
+### 2. Nur „behoben“, ohne Verifikation
 
-Reviewers cannot tell "tested" from "probably fine."
+Unklar, ob wirklich getestet oder „sollte passen“.
 
-### 3. Letting Codex touch main directly
+### 3. Codex direkt auf den Hauptbranch
 
-May work for solo experiments; too risky for shared repos.
+Für Solo-Experimente vielleicht ein Schritt weniger — für Kollaborationsrepos zu riskant.
 
-## Review automation
+## Mit Review-Automatisierung
 
-- Use a Skill or `codex exec` in CI for **supplementary review comments**
-- Auto-merge needs separate governance—not the beginner default path
+- Skill oder CI-`codex exec` für **ergänzende Review-Kommentare**
+- Auto-Merge braucht eigene Governance — nicht Einsteiger-Default
 
-KimYx0207 CX-10 covers Review/PR; confirm capabilities against official docs.
+KimYx0207 CX-10 zu Review/PR; konkrete Fähigkeiten offiziell nachprüfen.
 
-## Common mistakes
+## Häufige Fehler
 
-- One PR with multiple unrelated features
-- Description says "AI-generated changes" with no test notes
-- Merging to main without review
+- PR mit mehreren unzusammenhängenden Features
+- Beschreibung „AI-generierte Änderung“ ohne Testangaben
+- Direkt auf main mergen und Review umgehen
 
-## Further reading
+## Weiterlesen
 
-- [GitHub integration](/guide/integrations/github/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Desktop App: diffs and comments](/guide/desktop-app/diffs-comments-and-review/)
+- [GitHub-Integration](/guide/integrations/github/)
+- [Diffs reviewen](/guide/quality/review-diffs/)
+- [Desktop-App: Diff und Kommentare](/guide/desktop-app/diffs-comments-and-review/)
 
 ---
 
 **Status:** outdated  
-**Applicable products:** Cloud / Web  
-**Review note:** "Cloud output goes to a PR for human review" remains sound, but this page describes PR entry points, automation behavior, and Cloud delivery rhythm concretely; without line-by-line verification of current official PR and Cloud GitHub integration, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Cloud / Web  
+**Prüfhinweis:** „Cloud-Output in PR, dann Menschen-Review“ bleibt solide; konkrete PR-Einstiege, Automatisierung und Cloud-Takt brauchen Abgleich mit aktuellen offiziellen PR-/GitHub-Integrationsdetails vor `verified`.  
+**Zuletzt geprüft:** 2026-07-26

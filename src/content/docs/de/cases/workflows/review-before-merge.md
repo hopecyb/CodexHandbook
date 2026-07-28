@@ -1,83 +1,83 @@
 ---
-title: Review before merge
-description: Structured diff and risk review with Codex before merge—clear human–machine roles.
+title: Prüfung vor dem Merge
+description: Vor dem Merge mit Codex strukturierte Diff- und Risikoprüfung — klare Arbeitsteilung Mensch/Maschine.
 locale: de
-source_locale: en
-source_revision: e8e66da
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Review before merge** puts [quality and verification](/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not replace human merge decisions.
+**Prüfung vor dem Merge** bringt [Qualität und Überprüfung](/guide/quality/) in den Git-Ablauf: Vor dem PR-Merge prüft Codex Diff, Tests, Sicherheit und Spezifikationskonsistenz. Automatische Kommentare ersetzen kein automatisches Mergen.
 
-## What's covered
+## Schwerpunkte dieser Seite
 
-- Local review vs Cloud/CI review roles
-- What dimensions review prompts should cover
-- When human final sign-off is required
+- Arbeitsteilung lokale Prüfung vs. Cloud/CI-Prüfung
+- Welche Dimensionen der Prüf-Prompt abdecken soll
+- Wann menschliche Endfreigabe Pflicht ist
 
-## Minimum viable approach
+## Minimal brauchbares Vorgehen
 
-**Local (author self-check)**
+**Lokal (Autoren-Selbstcheck)**
 
 ```text
-Compare current branch diff to main (do not change code yet):
-1. Is it outside issue scope?
-2. Obvious security risks (secrets, injection, permissions)?
-3. Missing tests or docs?
-Output a checklist with P0/P1 labels.
+Vergleiche den Diff des aktuellen Branches mit main (noch keinen Code ändern):
+1. Geht der Umfang über das Issue hinaus?
+2. Gibt es offensichtliche Sicherheitsrisiken (Secrets, Injection, Berechtigungen)?
+3. Fehlen Tests oder Dokumentation?
+Ausgabe als Checklist mit P0/P1.
 ```
 
-**CI (team gate)**
+**CI (Team-Gate)**
 
-- Fixed prompt version + read-only token
-- Results in PR comment or check run
-- See [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Feste Prompt-Version + nur-lesendes Token
+- Ergebnis als PR-Comment oder Check Run
+- Siehe [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## Recommended review dimensions
+## Empfohlene Prüfdimensionen
 
-| Dimension | Focus |
+| Dimension | Fokus |
 |---|---|
-| Correctness | Logic, edge cases, error handling |
-| Tests | Coverage for new behavior |
-| Security | Secrets, injection, dependency vulnerability signals |
-| Maintainability | Naming, duplication, public API |
-| Spec | Alignment with issue/spec doc |
+| Korrektheit | Logik, Grenzen, Fehlerbehandlung |
+| Tests | Ist neues Verhalten abgedeckt? |
+| Sicherheit | Secrets, Injection, Hinweise auf Dependency-Lücken |
+| Wartbarkeit | Namensgebung, Duplikate, öffentliche API |
+| Spezifikation | Konsistent mit Issue/Spezifikationsdokument |
 
-Pair with [Review diffs](/guide/quality/review-diffs/); high-risk items follow [Human approval patterns](/cases/workflows/human-approval-patterns/).
+Kombinierbar mit [Diffs prüfen](/guide/quality/review-diffs/); Hochrisiko-Punkte über [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/).
 
-## Common mistakes
+## Häufige Fehler
 
-- Model only says "LGTM" with no specifics
-- Unsanitized full PR description pasted into CI prompt (injection risk)
-- Review passes but CI tests never ran
-- Auto-merge bot enabled with no branch protection
+- Modell sagt nur «LGTM» ohne konkrete Begründung
+- Unbereinigte volle PR-Beschreibung in CI-Prompt (Injection-Risiko)
+- Prüfung bestanden, aber CI-Tests nicht gelaufen
+- Auto-Merge-Bot ohne Branch Protection
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Review uses read-only permissions; fixes belong in **new commits** triggered by humans
-- Do not log user PII or secrets in review logs
+- Prüfung mit nur-lesenden Berechtigungen; Fixes in **neuem Commit** durch Menschen auslösen
+- Keine Nutzer-PII oder Secrets in Prüflogs
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Review output traces to specific files/lines
-- [ ] P0 issues block merge or are fixed
-- [ ] Aligned with team review checklist
-- [ ] Human maintainer has final say on disputed items
+- [ ] Prüfausgabe auf konkrete Dateien/Zeilen zurückführbar
+- [ ] P0-Probleme blockieren den Merge oder sind behoben
+- [ ] Abgestimmt mit der Team-Review-Checklist
+- [ ] Maintainer entscheidet strittige Punkte endgültig
 
-## Related chapters
+## Verwandte Kapitel
 
-- [Cloud code review](/guide/web-and-cloud/code-review/)
-- [Create pull requests](/guide/web-and-cloud/create-pull-requests/)
+- [Cloud Code Review](/guide/web-and-cloud/code-review/)
+- [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/)
 
-## References
+## Referenzquellen
 
-- KimYx0207 Review/PR chapters
-- codex.bozhouai.com Git/GitHub workflow material
+- KimYx0207 Review/PR-Kapitel
+- codex.bozhouai.com Git/GitHub-Workflows
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public code review / pull request use cases, plus this handbook's verified quality, diff review, and Cloud chapters; this page confirms only stable principles for structured pre-merge review, read-only review, and human final sign-off.
+**Geeignete Produkte:** CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Use Cases zu Code Review / Pull Requests bei OpenAI Developers sowie die bereits geprüften Kapitel zu Qualität, Diff-Prüfung und Cloud. Diese Seite bestätigt nur die stabilen Prinzipien „strukturierte Prüfung vor dem Merge, nur-lesende Prüfung und menschliche Endfreigabe“.  
+**Zuletzt geprüft:** 2026-07-26

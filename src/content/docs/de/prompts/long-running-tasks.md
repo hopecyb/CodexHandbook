@@ -1,85 +1,86 @@
 ---
-title: Long-running tasks
-description: Phases, checkpoints, and handoff information.
+title: Prompts für lange Aufgaben
+description: 'Phasen aufteilen, Checkpoints und Übergabeinformationen.'
 locale: de
-source_locale: en
-source_revision: 672cd09
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Long tasks often fail like this:
+Lange Aufgaben scheitern oft so:
 
-- too much in one go
-- no checkpoints midway
-- constraints fighting each other in a long thread
+- zu viel auf einmal
+- keine Checkpoints unterwegs
+- Thread wird lang, Constraints widersprechen sich
 
-The point isn't a longer prompt—it's splitting into phased substeps with checkpoints.
+Entscheidend ist nicht ein längerer Prompt, sondern die Zerlegung in kleine Phasen mit Checkpoints.
 
-Break long work into phases, each with acceptance:
-
-```text
-Phase 1: Research and list options only (no code changes)
-Phase 2: Minimal implementation
-Phase 3: Add tests and run …
-Stop after each phase for my confirmation.
-```
-
-## Why long tasks drift
-
-They usually mix:
-
-- understanding the problem
-- designing a solution
-- implementing changes
-- running verification
-- writing handoff notes
-
-Doing it all in one shot raises risk noticeably.
-
-## Common misconceptions
-
-### 1. Long tasks are just short tasks with more detail
-
-Long tasks need **phased management**, not only more background.
-
-### 2. Listing phases isn't enough
-
-Each phase needs a clear exit, e.g.:
-
-- options only, no code
-- minimal implementation only
-- tests and verification only
-
-### 3. One thread to the end is always better
-
-Handoff, summary, and a fresh thread often clarify more.
-
-## A usable phased split
-
-For long work, try four phases:
-
-1. Research: understand, don't touch code
-2. Plan: steps, risks, verification
-3. Execute: minimal changes
-4. Verify: run checks, write conclusions, prepare handoff
-
-## A practical phrasing
+Lange Aufgabe in Phasen, jede mit Abnahme:
 
 ```text
-Phase 1: Research and list options; no code changes; wait for my confirmation
-Phase 2: Minimal changes only; report impact after each batch
-Phase 3: Add verification and run relevant checks
-Phase 4: Summarize changes, risks, and follow-up recommendations
+Phase 1: Nur recherchieren und Optionen listen (kein Code)
+Phase 2: Minimale Änderung umsetzen
+Phase 3: Tests ergänzen und ausführen……
+Nach jeder Phase stoppen und auf meine Bestätigung warten.
 ```
 
-Better to stop and check each segment than finish everything in one breath.
+## Warum lange Aufgaben leicht abdriften
 
-See also: [Progress and steering](/guide/agent-work/progress-and-steering/) · [Handoff and resume](/guide/agent-work/handoff-and-resume/)
+Sie enthalten oft mehrere Arbeitstypen zugleich:
+
+- Problem verstehen
+- Lösung entwerfen
+- Änderungen umsetzen
+- Überprüfung ausführen
+- Übergabenotiz schreiben
+
+Alles in einem „mach fertig“ erhöht das Risiko deutlich.
+
+## Häufige Missverständnisse
+
+### 1. Lange Aufgabe = kurze Aufgabe nur ausführlicher geschrieben
+
+Lange Aufgaben brauchen **Phasensteuerung**, nicht nur mehr Hintergrund.
+
+### 2. Phasen auflisten reicht nicht
+
+Jede Phase braucht einen klaren Ausgang, z. B.:
+
+- nur Plan, kein Code
+- nur Minimalumsetzung
+- nur Tests und Überprüfung
+
+### 3. Ein Thread bis zum Ende ist immer besser
+
+Bei sehr langen Aufgaben sind Übergabe, Zusammenfassung und neuer Thread oft klarer.
+
+## Ein brauchbarer Phasenansatz
+
+Vier Blöcke:
+
+1. Recherche: verstehen, noch nicht handeln
+2. Plan: Schritte, Risiken, Überprüfung
+3. Ausführung: minimale Änderung
+4. Überprüfung: Checks, Fazit, Übergabe vorbereiten
+
+## Eine praktischere Formulierung
+
+```text
+Phase 1: Recherchieren und Optionen listen, kein Code, auf Bestätigung warten
+Phase 2: Nur minimale Änderung, danach Impact melden
+Phase 3: Überprüfung ergänzen und relevante Checks laufen lassen
+Phase 4: Änderungen, Risiken und Folgeempfehlungen zusammenfassen
+```
+
+Besser: Jede Phase kann stoppen und geprüft werden — nicht alles in einem Rutsch.
+
+Dazu: [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/) · [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains long-task splitting and handoff only; in-site links and phase examples were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur Zerlegung und Übergabe langer Aufgaben; interne Links und Phasenbeispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

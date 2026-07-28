@@ -1,108 +1,109 @@
 ---
-title: GitHub integration
-description: Repo connection, PRs, review, and CI—where Codex sits in GitHub workflows.
+title: GitHub-Integration
+description: "Repo-Anbindung, PR, Review und CI — Codex in GitHub-Workflows."
 locale: de
-source_locale: en
-source_revision: bbdd6af
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-GitHub is Codex's most common collaboration surface: Cloud tasks, PR review, Actions, and local push all share branches and permissions.
 
-This page explains how Codex plugs into repos, branches, PRs, and review.
+GitHub ist die häufigste Code-Kollaborationsfläche für Codex: Cloud-Aufgaben, PR-Review, Actions und lokaler Push teilen Branches und Berechtigungen.
 
-Even if you are not a senior developer, start with what it handles:
+Hier: Wie Codex in „Repo, Branch, PR, Review“ einsteigt.
 
-- Where code lives
-- How changes are proposed for others to see
-- How review and merge happen
+Auch ohne Senior-Dev-Hintergrund zuerst:
 
-## Capability map
+- Wo liegt der Code
+- Wie werden Änderungen zur Ansicht vorgeschlagen
+- Wie laufen Review und Merge
 
-| Capability | Typical entry | Handbook location |
+## Fähigkeitskarte
+
+| Fähigkeit | Typischer Einstieg | Handbuch |
 |---|---|---|
-| Connect remote repo | Cloud settings | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Cloud code changes → PR | Cloud task | [Create Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Local diff review | Desktop App / IDE | [Diffs and comments](/guide/desktop-app/diffs-comments-and-review/) |
-| Run Codex in CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
-| Auto PR review comments | Actions + exec | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
+| Remote-Repo verbinden | Cloud-Einstellungen | [GitHub verbinden](/guide/web-and-cloud/connect-github/) |
+| Cloud: Code ändern, PR öffnen | Cloud-Aufgabe | [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/) |
+| Lokal Diff prüfen | Desktop-App / IDE | [Diffs und Kommentare](/guide/desktop-app/diffs-comments-and-review/) |
+| Codex in CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
+| PR Auto-Review-Kommentar | Actions + exec | [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) |
 
-## Recommended team norms
+## Empfohlene Teamnorm
 
 ```md
-## GitHub × Codex (can go in AGENTS.md)
+## GitHub × Codex (kann in AGENTS.md)
 
-- Protect main by default; Codex pushes feature branches only
-- PR must link issue; description includes test notes
-- Codex must not merge PRs unless release bot is explicitly authorized
-- Secrets in GitHub Secrets / environment secrets—not in prompts
+- Default Branch-Schutz main; Codex nur Feature-Branches pushen
+- PR muss Issue verlinken; Beschreibung mit Testnachweis
+- Codex mergt keine PRs, außer Release-Bot klar autorisiert
+- Secrets: GitHub Secrets / Environment Secrets — nicht in den Prompt
 ```
 
-## Cloud vs local Git
+## Cloud vs. lokales Git
 
-| | Local clone | Cloud |
+| | Lokaler Clone | Cloud |
 |---|---|---|
-| Code source | Your machine's workspace | Remote clone |
-| Unpushed commits | Visible | Not visible—push first |
-| Environment | Your Node/system versions | Configured environment image |
-| Best for | Daily development | Async long tasks, standardized builds |
+| Codequelle | Arbeitsbereich auf Ihrer Maschine | Remote-Clone |
+| Ungepushte Commits | Sichtbar | Unsichtbar — zuerst push |
+| Umgebung | Ihre Node-/Systemversion | Konfiguriertes Image |
+| Geeignet | Alltag | Asynchrone Langaufgaben, Standard-Builds |
 
-## Review workflow
+## Review-Workflow
 
-1. Codex or human opens PR
-2. Human reads diff (or `$pr-review` Skill)
-3. CI runs tests
-4. Comment-driven revisions—new Codex task "address review comments only"
-5. Human merges
+1. Codex oder Mensch öffnet PR
+2. Mensch liest Diff (oder `$pr-review`-Skill)
+3. CI läuft Tests
+4. Kommentare treiben Revision — neue Codex-Aufgabe „nur Review-Kommentare“
+5. Mensch mergt
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. GitHub integration ≠ "Codex develops for me automatically"
+### 1. GitHub-Integration ≠ „Codex entwickelt automatisch für mich“
 
-More common uses:
+Häufiger:
 
-- Read repo context
-- Help organize diffs or review
-- Assist opening PRs and fixing comments
+- Repo-Kontext lesen
+- Diff oder Review ordnen
+- Beim Öffnen von PRs und Beheben von Kommentaren helfen
 
-### 2. Unfamiliar with PR and Review?
+### 2. PR / Review noch unklar?
 
-Roughly:
+Grob:
 
-- **PR**: formally propose your changes for others to see
-- **Review**: others inspect those changes
+- **PR**: Ihre Änderung formell zur Ansicht vorschlagen
+- **Review**: Andere prüfen die Änderung
 
-That level is enough for most of this page.
+Reicht für den Großteil dieser Seite.
 
-### 3. On first contact, separate three things
+### 3. Beim ersten Kontakt zuerst trennen
 
-Not tokens or Actions first—but:
+Nicht zuerst Token oder Actions — sondern:
 
-> **Local changes, cloud repo, and PR review are not the same thing.**
+> **Lokale Änderung, Cloud-Repo und PR-Review sind drei verschiedene Dinge.**
 
-GitHub integration is about fitting Codex into existing code collaboration.
+GitHub-Integration schließt Codex an bestehende Code-Kollaboration an.
 
-## Security
+## Sicherheit
 
-- Minimize GitHub Token scope
-- Stay cautious with sensitive Actions patterns like `pull_request_target` (injection surface)
-- Extra isolation for automation on fork PRs
+- GitHub-Token-Scope minimal
+- Vorsicht bei sensiblen Actions-Mustern wie `pull_request_target` (Injection)
+- Automation auf Fork-PRs braucht extra Isolation
 
-## Common mistakes
+## Häufige Fehler
 
-- Cloud task assumes unpushed local changes exist
-- Letting Codex execute unsanitized instructions in PR descriptions (prompt injection)
-- Mixing formatting and feature changes in one PR
+- Cloud-Aufgabe nimmt ungepushte lokale Änderungen an
+- Codex führt unbereinigte Anweisungen in PR-Beschreibungen aus (Prompt-Injection)
+- Derselbe PR mischt Formatierung und Feature-Änderung
 
-## References
+## Quellen
 
-- OpenAI Codex GitHub integration documentation
+- OpenAI-Codex-GitHub-Integrationsdokumentation
 - KimYx0207 CX-10; stormzhang `26-git-github.md`
 
 ---
 
 **Status:** verified  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** OpenAI Developers Codex use cases still include "Review GitHub pull requests"; Help Center plugin/integration guidance emphasizes external repo access depends on underlying app permissions, role access, and action boundaries. This page summarizes collaboration placement and local vs Cloud code visibility differences—not a fixed capability matrix.  
-**Last verified:** 2026-07-26
+**Gilt für:** Cloud / App / CLI  
+**Prüfgrundlage:** OpenAI Developers Codex-Use-Cases enthalten weiterhin „Review GitHub pull requests“; Help Center zu Plugins/Integrationen betont Repo-Zugriff über App-Berechtigungen, Rollen und Aktionsgrenzen. Seite fasst Kollaborationsposition von Repo, Branch, PR, Review, CI sowie Sichtbarkeitsunterschied lokal vs. Cloud zusammen.  
+**Zuletzt geprüft:** 2026-07-26

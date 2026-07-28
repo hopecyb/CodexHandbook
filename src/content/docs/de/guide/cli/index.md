@@ -1,23 +1,50 @@
 ---
 title: CLI
-description: Minimum viable guide for the command-line entry.
+description: Minimale Einstiegsbeschreibung für den Kommandozeilen-Zugang.
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 848029a
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
+sidebar:
+  order: 11
 ---
 
+Die CLI eignet sich für Terminalnutzer sowie Skript- und CI-Integration.
 
-The CLI suits terminal users and scripts. MVP covers install, interactive mode, and troubleshooting only; non-interactive/`exec` and full command reference come in later milestones.
+„CLI“ beim ersten Mal: Einstieg ohne GUI — direkte Zusammenarbeit mit Codex im Terminal.
 
-- [Installation and updates](/guide/cli/installation-and-updates/)
-- [Interactive mode](/guide/cli/interactive-mode/)
-- [Troubleshooting](/guide/cli/troubleshooting/)
+Typische Szenarien:
+
+- wer die Kommandozeile gewohnt ist
+- wer mit Skripten koppeln will
+- wer CI/Automatisierung anbinden will
+
+Für Einsteiger ohne Terminalkenntnis ist die CLI keine Pflicht-Erste-Station; kennst du aber `cd`, `ls` und Befehle im Projektverzeichnis, ist sie sehr effizient.
+
+- [Installation und Updates](/guide/cli/installation-and-updates/)
+- [Interaktiver Modus](/guide/cli/interactive-mode/)
+- [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/)
+- [CLI-Konfiguration](/guide/cli/configuration/)
+- [Befehle und Shortcuts](/guide/cli/commands-and-shortcuts/)
+- [Freigabe und Sandbox](/guide/cli/approvals-and-sandbox/)
+- [Fehlerbehebung](/guide/cli/troubleshooting/)
+
+Vollständige Befehlsreferenz: [CLI-Befehlsreferenz](/guide/reference/commands/).
+
+## Was beim ersten Einsatz trennen
+
+In Phase eins zuerst diese beiden Modi unterscheiden:
+
+1. **Interaktiver Modus:** wie ein Gespräch mit Codex im Terminal
+2. **Nicht-interaktiver Modus:** Codex als Befehl in Skripten oder CI
+
+Zum ersten Ausprobieren meist interaktiv; Automatisierung später mit dem nicht-interaktiven Modus.
 
 
 ---
 
-**Status:** review  
-**Applies to:** CLI  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** CLI  
+**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-CLI-Einstiegsmaterialien beschreiben die Codex-CLI weiterhin als Terminal-Einstieg und unterscheiden interaktive Nutzung von stärker automatisierten Workflows; diese Seite ist nur Kapitelnavigation und skizziert interaktiv vs. nicht-interaktiv ohne konkrete Parameter oder Installationsbefehle.  
+**Zuletzt geprüft:** 2026-07-26

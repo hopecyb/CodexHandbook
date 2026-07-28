@@ -1,94 +1,93 @@
 ---
-title: Capability map
-description: How Skill, MCP, Plugin, Hooks, slash commands, and AGENTS.md relate.
+title: Fähigkeitenkarte
+description: Beziehungen von Skill, MCP, Plugin, Hooks, Slash-Befehlen und AGENTS.md.
 locale: de
-source_locale: en
-source_revision: 671a22f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-There are many extension mechanisms, and they are easy to confuse. This page explains how they relate—not installation steps.
+Viele Erweiterungsmechanismen — leicht zu verwechseln. Hier nur die Beziehungen, keine Installationsschritte.
 
-## Relationship diagram
+## Beziehungsskizze
 
 ```text
                     ┌─────────────────┐
-                    │  Your task goal  │
+                    │  Dein Aufgabenziel │
                     └────────┬────────┘
                              │
          ┌───────────────────┼───────────────────┐
          ▼                   ▼                   ▼
    ┌───────────┐      ┌─────────────┐     ┌──────────────┐
-   │ AGENTS.md │      │ Prompt/template│     │ Slash command │
-   │ Persistent │      │ This task only │     │ You trigger   │
-   │ rules      │      │                │     │               │
+   │ AGENTS.md │      │ Prompt/Vorlage │   │ Slash-Befehl │
+   │ Dauerregeln│     │ Diese Aufgabe │   │ Du löst aus  │
    └───────────┘      └─────────────┘     └──────────────┘
          │                   │                   │
          └───────────────────┼───────────────────┘
                              ▼
                     ┌─────────────────┐
                     │      Skill       │
-                    │ Reusable workflow │
-                    │ package          │
+                    │ Wiederverwendbares │
+                    │ Workflow-Paket   │
                     └────────┬────────┘
                              │
               ┌──────────────┼──────────────┐
               ▼              ▼              ▼
         ┌──────────┐  ┌──────────┐  ┌─────────────┐
         │   MCP    │  │  Hooks   │  │  Scripts    │
-        │ External │  │ Audit/   │  │ Scripts in  │
-        │ tools    │  │ validate │  │ Skill       │
+        │ Externe  │  │ Audit/   │  │ Skripte im  │
+        │ Werkzeuge│  │ Prüfung  │  │ Skill       │
         └──────────┘  └──────────┘  └─────────────┘
                              │
                              ▼
                     ┌─────────────────┐
                     │     Plugin       │
-                    │ Distribute &     │
-                    │ bundle           │
+                    │ Verteilung &     │
+                    │ Kombi-Paket      │
                     └────────┬────────┘
                              ▼
                     ┌─────────────────┐
                     │  Automations     │
-                    │ Unattended/      │
-                    │ scheduled        │
+                    │ Unbeaufsichtigt/ │
+                    │ zeitgesteuert    │
                     └─────────────────┘
 ```
 
-## Comparison table
+## Vergleichstabelle
 
-| | Who triggers | Persistence | External systems | Team distribution |
+| | Wer löst aus | Persistenz | Externe Systeme | Team-Verteilung |
 |---|---|---|---|---|
-| AGENTS.md | Auto-loaded | High (Git) | Easy |
-| Prompt | You | Low | Hard |
-| Slash command | You | Medium | Product-dependent |
-| Skill | You or model match | High | Easy (directory/Git) |
-| MCP | Model calls tools | Config-level | Needs governance |
-| Plugin | Effective after install | High | Official/team channels |
-| Hooks | System events | Config-level | Common in enterprise |
-| Automations | Time/events | Config-level | Needs approval flow |
+| AGENTS.md | Auto-Laden | hoch (Git) | leicht |
+| Prompt | du | niedrig | schwer |
+| Slash-Befehl | du | mittel | produktabhängig |
+| Skill | du oder Modell-Match | hoch | leicht (Verzeichnis/Git) |
+| MCP | Modell ruft Werkzeug | Konfig-Ebene | braucht Governance |
+| Plugin | nach Installation kombiniert | hoch | offizielle/Team-Kanäle |
+| Hooks | Systemereignis | Konfig-Ebene | oft Enterprise |
+| Automations | Zeit/Ereignis | Konfig-Ebene | braucht Freigabe-Flow |
 
-## Common mappings
+## Typische Zuordnung
 
-| Need | Suggested choice |
+| Bedarf | Empfehlung |
 |---|---|
-| Unify code style and test commands | AGENTS.md |
-| Standardize "review PR" workflow | Skill |
-| Read Jira/Linear tickets | MCP |
-| Ship one integration pack to the whole team | Plugin |
-| Scan for secrets before every commit | Hooks |
-| Auto-draft weekly report every Monday | Automations (+ human publish) |
+| Einheitlicher Stil und Testbefehle | AGENTS.md |
+| „PR prüfen“ standardisieren | Skill |
+| Jira/Linear-Tickets lesen | MCP |
+| Teamweit ein Integrationspaket | Plugin |
+| Secret-Scan vor jedem Commit | Hooks |
+| Montags Wochenbericht-Entwurf | Automations (+ menschliche Veröffentlichung) |
 
-For detailed branching logic, see [Choosing an extension method](/skills/choosing-an-extension-method/).
+Verzweigungslogik: [Erweiterungsmethode wählen](/skills/choosing-an-extension-method/).
 
-## Not tied to one product surface
+## Unabhängig vom Produkteinstieg
 
-These mechanisms are **not** bound to a single UI: CLI, desktop App, and IDE may differ in Skill/MCP support—see [feature comparison](/guide/reference/feature-comparison/) and official docs.
+Diese Mechanismen sind **nicht** an eine Oberfläche gebunden: CLI, Desktop-App und IDE können Skills/MCP unterschiedlich unterstützen — siehe [Funktionsvergleich](/guide/reference/feature-comparison/) und offizielle Hinweise.
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** This page draws Skill, MCP, Plugin, Hooks, and Automations as a fixed relationship diagram and implies current support tiers; those boundaries and entry points are not fully covered in official public material as of 2026-07-26 and need a rewrite for current products.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE  
+**Nachprüfhinweis:** Die Seite zeichnet Skill, MCP, Plugin, Hooks und Automations als feste Beziehungen und impliziert Support-Ebenen; Grenzen und Einstiege sind in öffentlichen Quellen vom 2026-07-26 unvollständig — nach aktuellem Produkt neu schreiben.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,104 +1,105 @@
 ---
-title: First 30 minutes
-description: A 30-minute path you can follow on day one.
+title: Route für die ersten 30 Minuten
+description: "Eine 30-Minuten-Route zum direkten Einstieg."
 locale: de
-source_locale: en
-source_revision: fcb3195
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-If you just installed Codex and are not sure how to start day one, follow this path.
+Frisch installiert und unklar, wie Tag eins starten soll? Diese Route hilft.
 
-The goal of the first 30 minutes is to complete one full loop.
+Ziel der ersten 30 Minuten: Den ersten Kreislauf durchziehen.
 
-| Time | What to do |
+| Zeit | Was tun |
 |---|---|
-| 0–5 min | Read [Safety checklist](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 min | [Install desktop App](/guide/getting-started/install-desktop-app/) and [sign in](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 min | [Create practice project](/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Run your first task](/guide/getting-started/run-your-first-task/) and review |
-| 25–30 min | Open [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/) to enter the beginner path |
+| 0–5 Min. | [Sicherheits-Checkliste](/guide/getting-started/beginner-safety-checklist/) lesen |
+| 5–10 Min. | [Desktop-App installieren](/guide/getting-started/install-desktop-app/) und [anmelden](/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 Min. | [Übungsprojekt anlegen](/guide/getting-started/create-your-first-project/) |
+| 15–25 Min. | [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/) und prüfen |
+| 25–30 Min. | [Mit Codex sprechen](/guide/learning-paths/beginner/01-talk-to-codex/) öffnen und in den Anfänger-Pfad einsteigen |
 
-## What these 30 minutes should achieve
+## Was diese 30 Minuten leisten sollen
 
-You do not need to learn every feature. Get this chain working:
+Nicht alle Funktionen lernen — diese Kette durchziehen:
 
-- You can enter the product
-- You can point Codex at a real directory
-- You can see a result
-- You can decide whether to accept it
+- Ins Produkt kommen
+- Codex an einem echten Verzeichnis arbeiten lassen
+- Ergebnis sehen
+- Entscheiden, ob annehmen lohnt
 
-Once that chain works, learning CLI, IDE, Cloud, Skills, and automation gets easier.
+Sitzt diese Kette, fallen CLI, IDE, Cloud, Skills und Automatisierung leichter.
 
-## What each block should finish
+## Was jede Zeitspanne leisten soll
 
-### 0 to 5 minutes
+### 0 bis 5 Minuten
 
-You do not need to memorize concepts. Know these:
+Keine Konzepte auswendig — nur wissen:
 
-- Do not practice on a production repository
-- Prepare an experiment environment you can undo
-- You must check results yourself
+- Nicht im Produktions-Repo üben
+- Rücknehmbare Experimentierumgebung vorbereiten
+- Ergebnisse selbst prüfen
 
-### 5 to 10 minutes
+### 5 bis 10 Minuten
 
-Do not over-study settings. Just get into the product and sign in.
+Nicht viele Einstellungen studieren — erst normal ins Produkt kommen und anmelden.
 
-### 10 to 15 minutes
+### 10 bis 15 Minuten
 
-Prepare a small directory you understand so you can observe changes. Do not rush to build a full project.
+Zuerst ein kleines, verständliches Verzeichnis für sichtbare Änderungen — kein komplettes Projekt nötig.
 
-### 15 to 25 minutes
+### 15 bis 25 Minuten
 
-Confirm:
+Bestätigen:
 
-- It actually ran a task
-- You can understand the result
-- You know where to follow up, edit, or undo
+- Es hat wirklich eine Aufgabe ausgeführt
+- Du verstehst das Ergebnis
+- Du weißt, wo nachfragen, ändern oder rückgängig möglich ist
 
-### 25 to 30 minutes
+### 25 bis 30 Minuten
 
-Connect “first success” to the learning path so you do not stop after one try.
+Den „ersten Erfolg“ an den weiteren Lernpfad anschließen — nicht nach einmaligem Nutzen stehenbleiben.
 
-## Common misconceptions and blockers
+## Häufige Missverständnisse und Stolperstellen
 
-### 1. The first task is too large
+### 1. Erste Aufgabe zu groß gewählt
 
-Keep the first job tiny, for example:
+Beim ersten Mal besser Kleines, z. B.:
 
-- Change a short piece of copy
-- Add a small page
-- Fix a small issue whose location you already know
+- Einen Textabschnitt ändern
+- Eine kleine Seite ergänzen
+- Ein kleines Problem beheben, dessen Ort du schon kennst
 
-Do not ask it to “refactor the whole project” on day one.
+Nicht sofort „das ganze Projekt refaktorieren“.
 
-### 2. Spending the whole half hour on concepts without doing anything
+### 2. Die ganze Zeit Konzepte studieren, ohne zu handeln
 
-Understanding matters, but for beginners a real “I actually used it” experience matters more.
+Verstehen zählt — für Anfänger zählt aber zuerst die Erfahrung „ich habe es wirklich genutzt“.
 
-### 3. Seeing a result and stopping without review
+### 3. Ergebnis sehen und sofort aufhören — ohne Nachprüfung
 
-The more valuable habit from the first 30 minutes is: even for a tiny task, check the result once.
+In den ersten 30 Minuten lohnt die Gewohnheit: Auch bei kleiner Aufgabe einmal prüfen.
 
-## Done criteria
+## Fertig-Kennzeichen
 
-If after 30 minutes you have done these four things, this round is complete:
+Nach 30 Minuten gelten diese 4 Punkte als „diese Runde fertig“:
 
-1. You know which directory you operated on
-2. You ran at least one real task
-3. You looked at the result, not only the reply
-4. You know which page to learn next
+1. Du weißt, in welchem Verzeichnis du arbeitest
+2. Mindestens eine echte Aufgabe ist gelaufen
+3. Du hast das Ergebnis gesehen — nicht nur die Antwort
+4. Du weißt, welche Seite als Nächstes kommt
 
-## If you get stuck
+## Wenn du feststeckst
 
-Go to the [Troubleshooting index](/guide/reference/troubleshooting/). If a concept is unclear, go back to [Prerequisites](/guide/start-here/prerequisites/) and [Local vs cloud](/guide/foundations/local-vs-cloud/).
+Zuerst zum [Fehlerbehebungs-Index](/guide/reference/troubleshooting/). Nur Konzept unklar → zurück zu [Was du vor dem Start brauchst](/guide/start-here/prerequisites/) und [Lokal und Cloud](/guide/foundations/local-vs-cloud/).
 
-In the first half hour, completing one loop of “assign a task, see the result, judge it yourself” is already worth it.
+In den ersten 30 Minuten lohnt schon ein handfester Kreislauf „Aufgabe stellen, Ergebnis sehen, selbst urteilen“.
 
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Geeignete Produkte:** App / CLI / IDE  
+**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Sicherheits-Checkliste, Übungsprojekt, erste Aufgabe, Ergebnisprüfung und Anfänger-Pfad abgeglichen; diese Seite liefert nur die stabile Einstiegsroute „erste halbe Stunde zuerst den Kreislauf durchziehen“.  
+**Zuletzt überprüft:** 2026-07-26

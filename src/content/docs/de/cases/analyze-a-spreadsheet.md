@@ -1,50 +1,49 @@
 ---
-title: Analyze a spreadsheet
-description: Upload or reference tabular data for summarization and insights.
+title: Eine Tabelle analysieren
+description: Tabellendaten hochladen oder referenzieren und Zusammenfassungen sowie Insights erzeugen.
 locale: de
-source_locale: en
-source_revision: c9b511c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Analyze a spreadsheet
+# Eine Tabelle analysieren
 
-## Meta information
+## Metadaten
 
-| Field | Content |
+| Feld | Inhalt |
 |---|---|
-| Audience | Creators / business |
+| Zielgruppe | Autoren / Business |
 | Client | App |
-| Estimated time | 30–60 minutes |
+| Geschätzte Dauer | 30–60 Minuten |
 
-## 1. Goal and background
+## 1. Ziel und Kontext
 
-**Goal:** Clean, summarize, and suggest visualizations for CSV/Excel data.
+**Ziel:** CSV/Excel bereinigen, zusammenfassen und Visualisierungsvorschläge liefern.
 
-**Success criteria:** Conclusions are reproducible; key numbers trace back to original rows/columns.
+**Erfolgskriterien:** Schlussfolgerungen sind reproduzierbar; zentrale Zahlen lassen sich auf Zeilen/Spalten der Originaltabelle zurückführen.
 
-## 2. Recommended prompt
+## 2. Empfohlener Prompt
 
 ```text
-Input: @data/sales-q1.csv
-Goal: Summarize sales by region, period-over-period change, and Top 3 products; flag outliers.
-Constraints: Do not modify the original file; output summary.md and optional chart notes.
-Acceptance: Every number in summary notes the calculation method or referenced column name.
+Eingabe: @data/sales-q1.csv
+Ziel: Umsatz nach Region zusammenfassen, Veränderung gegenüber Vorperiode, Top-3-Produkte; Ausreißer markieren.
+Einschränkungen: Originaldatei nicht ändern; Ausgabe summary.md und optional Chart-Beschreibung.
+Akzeptanz: Jede Zahl in summary mit Berechnungsweg oder Spaltennamen versehen.
 ```
 
-## 3. Verification
+## 3. Überprüfung
 
-- Spot-check 2–3 summary numbers
-- Confirm no PII is written to logs or sent externally
+- 2–3 Summenwerte stichprobenartig nachrechnen
+- Sicherstellen, dass keine PII in Logs oder nach außen geschrieben wird
 
-## 4. Related
+## 4. Verwandt
 
-- [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
-
+- [Tabellen und Spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Query tabular data" and "Clean and prepare messy data"; this page focuses on read-only cleaning, summarization, and anomaly analysis of CSV/Excel, requiring key numbers to trace back to original fields—consistent with current official scenarios.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Die aktuellen Codex-Use-Cases bei OpenAI Developers enthalten weiterhin „Query tabular data“ und „Clean and prepare messy data“. Das Beispiel auf dieser Seite fokussiert auf nur lesendes Bereinigen, Zusammenfassen und Anomalieanalyse von CSV/Excel und verlangt, dass zentrale Zahlen auf Felder der Originaltabelle zurückführbar sind — im Einklang mit den aktuellen offiziellen Szenarien.  
+**Zuletzt geprüft:** 2026-07-26

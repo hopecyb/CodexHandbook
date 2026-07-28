@@ -1,36 +1,36 @@
 ---
-title: Beginner path
-description: A shortest five-step route for first-time Codex users—from clear tasks to finishing a small project.
+title: Einsteigerpfad
+description: Für den ersten Codex-Kontakt die kürzeste Fünf-Schritte-Route — von klaren Aufgaben bis zum ersten kleinen Projekt.
 locale: de
-source_locale: en
-source_revision: 135c0a5
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When learning Codex for the first time, the blocker is often not one confusing page—it is not knowing where to start.
+Beim ersten Lernen von Codex scheitert es oft nicht an einer unverstandenen Seite, sondern daran, nicht zu wissen, wo man anfängt.
 
-This path is the shortest route for newcomers.
+Diese Gruppe ist der kürzeste Pfad für Einsteiger.
 
-## Recommended order
+## Empfohlene Reihenfolge
 
-1. [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Work with files](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Review results](/guide/learning-paths/beginner/04-review-results/)
-5. [Complete your first small project](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Mit Codex sprechen](/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Mit Dateien arbeiten](/guide/learning-paths/beginner/02-work-with-files/)
+3. [Klare Aufgaben geben](/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Ergebnisse prüfen](/guide/learning-paths/beginner/04-review-results/)
+5. [Erstes kleines Projekt abschließen](/guide/learning-paths/beginner/05-complete-first-project/)
 
-## Who this is for
+## Für wen
 
-- Have not yet completed one full task loop reliably
-- Know Codex can do work but unsure how to practice first
-- Want "enough to be useful" before full terminology
+- Noch keinen stabilen, vollständigen Aufgabenzyklus
+- Wissen, dass Codex arbeiten kann, aber nicht, wie man zuerst übt
+- Zuerst „brauchbare Methode“, nicht die volle Terminologie
 
-The beginner path goal is not learning everything—it is completing one full loop.
+Ziel des Einsteigerpfads ist nicht Vollständigkeit, sondern den ersten vollständigen Kreislauf durchzuziehen.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked with this repo's current five-step beginner files, getting-started chapters, and beginner safety/check pages; this page only navigates reading order for newcomers.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE  
+**Prüfgrundlage:** Gegen die fünf Einsteiger-Schritte, Getting-Started und Einstiegs-/Sicherheitsseiten abgeglichen; nur Navigation „in welcher Reihenfolge Einsteiger lesen“.  
+**Zuletzt geprüft:** 2026-07-26

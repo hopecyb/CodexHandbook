@@ -1,56 +1,56 @@
 ---
 title: Plugins
-description: Team distribution of extensions—Plugins are a packaging layer, not a new capability type.
+description: Team-Verteilung von Erweiterungen — Plugin ist die Paketschicht, keine neue Fähigkeitsart.
 locale: de
-source_locale: en
-source_revision: f7ad9b9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Plugins mainly solve how to ship and manage a set of extensions for others to install.
+Plugin löst vor allem: wie man Erweiterungen an andere zur Installation und Verwaltung gibt.
 
-They focus on:
+Schwerpunkt:
 
-- Packaging
-- Distribution
-- Upgrades
-- Permission governance
+- Paketieren
+- Verteilen
+- Upgraden
+- Berechtigungs-Governance
 
-They are not a separate new capability type.
+Keine neu erfundene Fähigkeitsart.
 
-## When this section applies
+## Einsatzszenarien
 
-Mainly two situations:
+Diese Gruppe zielt auf:
 
-- You are about to ship one extension pack to the whole team
-- You want to judge whether a plugin is worth installing
+- Dem Team einheitlich ein Erweiterungspaket geben
+- Entscheiden, ob ein Plugin lohnt
 
-For personal learning, one overview page is often enough.
+Nur persönliches Lernen: oft reicht eine Konzeptseite.
 
-## Entry in this section
+## Einstieg dieser Gruppe
 
-- [Plugins overview](/skills/plugins/plugins-overview/): How Plugin relates to Skill and MCP, and why it is a distribution layer
+- [Plugins-Überblick](/skills/plugins/plugins-overview/): Plugin vs. Skill vs. MCP — und warum eher Verteilungsschicht
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Installing a Plugin is automatically safe
+### 1. Installiertes Plugin = automatisch sicher
 
-A Plugin only makes capabilities easier to distribute—not implicitly trusted or low-permission.
+Plugin macht Verteilung bequemer — nicht standardmäßig vertrauenswürdig oder least-privilege.
 
-### 2. More features means worth installing
+### 2. Mehr Features = lohnt sich zu installieren
 
-Better to check first:
+Zuerst prüfen:
 
-- Is the source trustworthy?
-- How wide are permissions?
-- Can the team upgrade, roll back, and audit?
+- Quelle vertrauenswürdig?
+- Berechtigungs-Scope groß?
+- Kann das Team upgraden, rollbacken, auditieren?
 
-A Plugin is a distribution pack for extensions—not a replacement for Skill or MCP.
+Plugin ist ein Verteilungspaket für Erweiterungen — kein Ersatz für Skill oder MCP.
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI  
-**Verification basis:** Plugin catalog, install policy, and surface support are still evolving; this section states those details too fixedly—marked `outdated` pending rewrite for current Plugin catalog.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI  
+**Nachprüfhinweis:** Plugin-Katalog, Installationspolitik und Oberflächen-Support entwickeln sich weiter; die Gruppe fixiert Details zu stark — vorerst `outdated`, nach aktuellem Plugin-Katalog neu schreiben.  
+**Zuletzt geprüft:** 2026-07-26

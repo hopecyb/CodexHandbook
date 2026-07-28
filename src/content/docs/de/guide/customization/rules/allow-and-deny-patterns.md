@@ -1,119 +1,119 @@
 ---
-title: Allow and Deny Rules
-description: Constrain what the Agent can run with command and path rules—personal habits and team bottom lines.
+title: Erlauben und Ablehnen
+description: "Mit Befehls- und Pfadregeln Agent-Operationen einschränken — persönliche Gewohnheiten und Team-Untergrenzen."
 locale: de
-source_locale: en
-source_revision: 0a6b562
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Rules** declare in configuration or project files which shell commands, paths, and tool calls are **allowed or denied**, reducing manual approval each time while preventing dangerous automation.
+**Rules (Regeln)** deklarieren in Config oder Projektdateien, welche Shell-Befehle, Pfade und Werkzeugaufrufe **erlaubt oder verboten** sind — weniger manuelle Freigabe-Klicks, zugleich weniger automatisierte Gefahr.
 
-## Contents
+## Inhalt
 
-- How Allow / Deny rules work
-- Relationship with sandbox, approval dialogs, and `AGENTS.md`
-- Team rule examples
+- Wie Allow-/Deny-Regeln funktionieren
+- Verhältnis zu Sandbox, Freigabe-Dialogen und `AGENTS.md`
+- Teamregel-Beispiele
 
-## What Rules Actually Do
+## Was Regeln tun
 
-If “rules” feels abstract, start here: agree in advance what Codex may and may not do, instead of judging and clicking approve every time.
+Klingt „Regel“ abstrakt, denken Sie zuerst: Vorab vereinbaren, was Codex tun darf und was nicht — statt jedes Mal ad hoc zu urteilen und freizugeben.
 
-Their value is mainly twofold:
+Zwei Hauptnutzen:
 
-- Reduce low-risk operations you confirm daily anyway
-- Block high-risk operations that should not run automatically
+- Weniger wiederkehrende, aber immer wieder bestätigte Niedrigrisiko-Aktionen
+- Hochrisiko-Aktionen vorab abfangen, die nicht automatisch laufen sollen
 
-## Rule Types (Conceptual)
+## Regeltypen (konzeptuell)
 
-| Type | Example |
+| Typ | Beispiel |
 |---|---|
-| Command allowlist | Allow `npm test`, `git status` |
-| Command denylist | Deny `rm -rf`, `curl \| bash` |
-| Paths | Deny writing `../`, deny reading `~/.ssh` |
-| Network | Deny outbound or allow only registry domains |
+| Befehls-Allowlist | `npm test`, `git status` erlauben |
+| Befehls-Denylist | `rm -rf`, `curl \| bash` verbieten |
+| Pfad | Kein Schreiben nach `../`, kein Lesen von `~/.ssh` |
+| Netzwerk | Kein Outbound oder nur Registry-Domains |
 
-Compare with [Permission Matrix](/guide/reference/permission-matrix/): rules are **configurable** enforcement; the matrix describes **typical defaults**.
+Abgleich mit der [Berechtigungsmatrix](/guide/reference/permission-matrix/): Regeln sind **konfigurierbares** Enforcement; die Matrix beschreibt **übliche Defaults**.
 
-## Recommended Layering
+## Empfohlene Schichtung
 
 ```text
-Organization managed policy (cannot override)
+Organisations-Managed-Policy (nicht überschreibbar)
     ↓
-Project rules + AGENTS.md (Git review)
+Projekt-Rules + AGENTS.md (Git-Review)
     ↓
-Personal allowlist supplement (local only)
+Persönliche Allowlist-Ergänzung (nur lokal)
     ↓
-Single-task prompt constraints
+Constraints im Einmal-Aufgaben-Prompt
 ```
 
-## Common Misconceptions
+## Häufige Missverständnisse
 
-### Rules are not only for fewer dialogs
+### Regeln sind nicht nur „weniger Dialoge“
 
-Many people first hear “allowlist” and think the goal is fewer popups.
+Viele hören Allowlist und denken zuerst: weniger Popups, weniger Unterbrechung.
 
-Fewer popups is only part of it; more important is allowing low-risk actions and blocking high-risk ones.
+Weniger Dialoge sind nur ein Teil — wichtiger: Niedrigrisiko durchlassen, Hochrisiko stoppen.
 
-### Rules are not the sandbox
+### Regeln sind keine Sandbox
 
-Sandbox limits “how far you can reach”; rules agree “which actions should not happen in principle.”
+Sandbox begrenzt „wie weit man höchstens greifen darf“; Regeln vereinbaren „welche Aktionen grundsätzlich nicht laufen sollen“.
 
-Use both; do not pick one to replace the other.
+Beides zusammen nutzen — nicht eines als Ersatz für das andere.
 
-### Team bottom lines cannot live on one person’s machine
+### Team-Untergrenzen dürfen nicht nur lokal leben
 
-If only your local rules know “no push” or “do not touch `.env`,” others can still step in.
+Kennt nur Ihre lokale Regel „kein Push“, „kein `.env`“, können andere trotzdem reintreten.
 
-Team bottom lines should live where they can be reviewed.
+Team-Untergrenzen gehören möglichst dorthin, wo Review möglich ist.
 
-## Team Example (Illustrative—not copy-paste ready)
+## Teambeispiel (schematisch, nicht Copy-Paste)
 
-**Allow:**
+**Erlauben:**
 
-- Package manager install of **in-project** dependencies
-- Test scripts from documentation
+- Paketmanager installiert Abhängigkeiten **im Projekt**
+- Dokumentierte Testskripte ausführen
 
-**Deny:**
+**Ablehnen:**
 
 - `git push`, `git reset --hard`
-- Read/write `.env*` (unless explicit task)
-- POST requests to the public internet containing repo content
+- Lesen/Schreiben von `.env*` (außer explizite Aufgabe)
+- Öffentliche POST-Requests mit Repo-Inhalt
 
-Rules should live in team-reviewable files, not verbal agreement alone.
+Regeln gehören in team-reviewbare Dateien — nicht nur mündliche Absprachen.
 
-## Common Mistakes
+## Häufige Fehler
 
-- Allowlist too broad (allowing `bash` is like allowing everything)
-- Only deny, no allow—still too many approvals
-- Rules contradict `AGENTS.md`
+- Allowlist zu weit (`bash` erlauben ≈ alles erlauben)
+- Nur Deny, kein Allow — weiterhin zu viele Freigaben
+- Widerspruch zu `AGENTS.md`
 
-## Getting Started
+## Einstiegsempfehlung
 
-When organizing rules, you do not need a full policy on day one. These two steps are enough:
+Keine komplette Policy auf einmal. Zwei Schritte reichen zum Start:
 
-1. List 3–5 daily, low-risk commands explicitly
-2. List a few high-risk actions you never want automated
+1. 3–5 täglich laufende, risikearme Befehle klar listen
+2. Einige absolut unerwünschte Hochrisiko-Aktionen klar listen
 
-Run the minimum boundary first; refine later.
+Minimale Grenze zuerst glattziehen, dann verfeinern.
 
-## Security Boundaries
+## Sicherheitsgrenzen
 
-- Rules **cannot** replace code review and branch protection
-- Malicious prompts may try to bypass rules—keep sandbox defaults strict
-- Rule changes go through PR; treat like CI changes
+- Regeln **ersetzen** Code-Review und Branch-Schutz **nicht**
+- Bösartige Prompts können den Agent zu Umgehungsversuchen verleiten — Sandbox-Default streng halten
+- Regeländerungen per PR, wie CI-Änderungen behandeln
 
-Good allow/deny rules state in advance which actions are reasonable and which should not happen.
+Gute Allow-/Deny-Regeln machen vorab klar, welche Aktionen vernünftig sind und welche nicht vorkommen sollten.
 
-## References
+## Quellen
 
 - stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permission configuration chapter
+- KimYx0207 Kapitel Berechtigungskonfiguration
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex/plugin permission documentation continues to emphasize layering among read/write actions, approval, source boundaries, and role-based access control; this page does not declare specific rule file syntax and explains allow/deny as an execution-boundary pattern, distinct from sandbox, approval, and team review flows.  
-**Last verified:** 2026-07-26
+**Gilt für:** CLI / App  
+**Prüfgrundlage:** Aktuelle OpenAI-Codex-/Plugin-Berechtigungsdokumentation betont weiterhin Schichtung von Lese-/Schreibaktionen, Freigabe, Quellengrenzen und rollenbasiertem Zugriff; diese Seite behauptet keine konkrete Regelsyntax, sondern erklärt Allow/Deny als Enforcement-Grenzmuster und trennt sie von Sandbox, Freigabe und Team-Review.  
+**Zuletzt geprüft:** 2026-07-26

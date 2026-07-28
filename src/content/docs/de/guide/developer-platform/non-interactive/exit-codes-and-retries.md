@@ -1,67 +1,67 @@
 ---
-title: Exit Codes and Retries
-description: Interpret codex exec success and failure in pipelines—when to retry vs fail fast.
+title: Exit-Codes und Retries
+description: 'In Pipelines Erfolg und Fehler von codex exec korrekt lesen — wann retryen, wann sofort fehlschlagen.'
 locale: de
-source_locale: en
-source_revision: afcb9be
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-CI relies on **process exit codes** to judge step success. This page covers common semantics for [codex exec](/guide/developer-platform/non-interactive/codex-exec/), retry strategy, and idempotent design.
+CI entscheidet am **Prozess-Exit-Code** über Erfolg/Fehler. Dieses Kapitel erklärt gängige Semantik von [codex exec](/guide/developer-platform/non-interactive/codex-exec/), Retry-Strategien und Idempotenz.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- Exit codes vs business “review did not pass”
-- Whether to retry 429/network errors
-- Avoiding duplicate side effects on retry
+- Unterschied Exit-Code vs. fachlich „Review nicht bestanden“
+- Ob 429/Netzfehler retryen
+- Wie Seiteneffekte bei Wiederholung vermeiden
 
-## What exit codes tell you
+## Was der Exit-Code wirklich sagt
 
-If this is new, think of an exit code as a short result left for scripts and CI when a task finishes.
+Beim ersten Kontakt: Der Exit-Code ist das kurze Ergebnis, das Programm nach dem Lauf an Skript und CI übergibt.
 
-It usually does not explain much—it only tells the pipeline:
+Meist ohne lange Erklärung:
 
-- Success this time
-- Or failure
+- diesmal Erfolg
+- oder Fehler
 
-“Retry” answers a different question: should this failure stop immediately, or is another attempt worth it?
+„Retry“ beantwortet etwas anderes: Sofort stoppen — oder noch eine Chance geben?
 
 :::note
-The exact exit code table follows official CLI docs; the table below is **design guidance** for integration.
+Konkrete Exit-Code-Tabellen richten sich nach der offiziellen CLI-Dokumentation; die Tabelle unten sind **Designprinzipien** für die Integration.
 :::
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### Not all failures are the same
+### Fehler ist nicht gleich Fehler
 
-Beginners often treat every non-`0` as one kind of failure.
+Anfänger behandeln jedes Nicht-`0` gleich.
 
-At minimum, distinguish:
+Mindestens unterscheiden:
 
-- Task crashed
-- Policy or sandbox blocked it
-- External service had a transient issue
-- Run succeeded but review conclusion was “fail”
+- Aufgabe ist abgestürzt
+- Policy oder Sandbox hat gestoppt
+- Externer Dienst war vorübergehend gestört
+- Lauf erfolgreich, aber Review-Fazit „nicht bestanden“
 
-Each needs different handling—not blanket retry.
+Behandlung unterscheidet sich — nicht alles retryen.
 
-### “Auto retry” is not automatically more reliable
+### „Auto-Retry“ heißt nicht stabiler
 
-If the failure will not disappear on retry—permissions, policy blocks, bad prompt—retry only wastes time and quota.
+Verschwindet die Ursache durch Retry nicht (fehlende Rechte, Regelblock, schlechter Prompt), verschwendet Retry nur Zeit und Quote.
 
-## Recommended semantics (conceptual)
+## Empfohlene Semantik (Konzept)
 
-| Situation | Suggested handling |
+| Situation | Empfohlene Behandlung |
 |---|---|
-| `0` | Task completed and met success criteria in the prompt |
-| Non-`0` with policy/sandbox denial in logs | **Do not** blindly retry; fix config or prompt |
-| Non-`0` with API 429/5xx | Limited exponential backoff retries |
-| P0 issues found but execution succeeded | Use [structured output](/guide/developer-platform/non-interactive/structured-output/) `pass: false` + wrapper script `exit 1` |
+| `0` | Aufgabe fertig und Prompt-Erfolgskriterien erfüllt |
+| Nicht-`0` und Log mit Policy-/Sandbox-Ablehnung | **Nicht** blind retryen — Config oder Prompt fixen |
+| Nicht-`0` und API 429/5xx | Begrenzt mit exponentiellem Backoff retryen |
+| P0 gefunden, Ausführung aber OK | [Strukturierte Ausgabe](/guide/developer-platform/non-interactive/structured-output/) mit `pass: false` + Skript `exit 1` |
 
-“Found a security issue” should not rely on a crash—**explicitly** set `pass: false` in JSON and let a wrapper script choose the exit code.
+„Sicherheitsproblem gefunden“ sollte nicht über Crash-Exceptions laufen, sondern **explizit** als `pass: false` im JSON; das Wrapper-Skript setzt den Exit-Code.
 
-## Retry template (bash)
+## Retry-Vorlage (bash)
 
 ```bash
 max=3
@@ -80,54 +80,54 @@ done
 exit 1
 ```
 
-Align “do not retry” codes with official docs and branch in `case`.
+Nicht-retrybare Codes an der offiziellen Dokumentation ausrichten und in `case`-Zweige schreiben.
 
-## Idempotency and side effects
+## Idempotenz und Seiteneffekte
 
-| Risk | Mitigation |
+| Risiko | Abmilderung |
 |---|---|
-| Duplicate PR comments | Use check run id or “update if bot comment exists” |
-| Duplicate file writes | exec defaults to read-only review; writes in separate job + human gate |
-| Duplicate notifications | Webhook with dedupe key |
+| Doppelte PR-Kommentare | Check-Run-ID oder „vorhandenen Bot-Kommentar aktualisieren“ |
+| Doppeltes Schreiben | exec standardmäßig Read-only-Review; Schreibjobs separat + menschliches Gate |
+| Doppelte Benachrichtigungen | Webhook-Benachrichtigungen mit Dedupe-Key |
 
-## When unsure
+## Wenn unsicher
 
-Ask:
+Fragen Sie:
 
-1. Does this look like a transient external glitch?
-2. On retry, could we duplicate comments, writes, or notifications?
-3. Is the real fix config, prompt, or permissions?
+1. Wirkt der Fehler wie vorübergehende externe Schwankung?
+2. Erzeugt ein erneuter Lauf doppelte Kommentare, Writes oder Notifications?
+3. Liegt die Ursache eher an Config, Prompt oder Berechtigungen, die Menschen ändern müssen?
 
-Closer to (1): limited retry may help. Closer to (2) or (3): stop and fix root cause.
+Näher an 1 → begrenzter Retry; näher an 2/3 → stoppen und Ursache beheben.
 
-## Common mistakes
+## Häufige Fehler
 
-- Ignoring exit codes; CI always green
-- Infinite retry on policy errors, burning quota
-- Retry without fixed prompt/git sha, incomparable results
+- Exit-Code ignorieren, CI immer green
+- Policy-Fehler endlos retryen und Quote verbrennen
+- Beim Retry Prompt/git-sha nicht fixiert → Ergebnisse unvergleichbar
 
-First separate “temporary fault” from “retry will not help,” then decide whether to retry. Not every failure deserves another run.
+Zuerst klären: temporärer Ausfall oder durch Retry nicht heilbar — dann entscheiden. Nicht jeder Fehler verdient einen zweiten Lauf.
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] CI fails on non-zero exit codes
-- [ ] Retry count and backoff have upper bounds
-- [ ] “Review failed” vs “run crashed” are distinguishable
-- [ ] Logs retain enough detail for troubleshooting
+- [ ] CI scheitert bei Nicht-0
+- [ ] Retry-Anzahl und Backoff begrenzt
+- [ ] „Review nicht bestanden“ und „Lauf abgestürzt“ unterscheidbar
+- [ ] Logs mit genug Diagnoseinformation
 
-## Related
+## Verwandte Kapitel
 
-- [Error reference](/guide/reference/error-reference/)
-- [Failure recovery](/cases/workflows/failure-recovery/)
+- [Fehlerreferenz](/guide/reference/error-reference/)
+- [Fehlerwiederherstellung](/cases/workflows/failure-recovery/)
 
-## Reference sources
+## Quellen
 
-- OpenAI API retry guidance (conceptual)
-- stormzhang CI troubleshooting
+- OpenAI API Retry-Leitfaden (Konzept)
+- stormzhang CI-Troubleshooting
 
 ---
 
 **Status:** outdated  
-**Products:** CLI  
-**Review note:** This page gives reasonable engineering advice on exit codes and retries, but examples assume specific exit semantics (e.g. `code=2`) and `codex exec` behavior without strong current official backing; restore `verified` after new CLI docs are checked.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI  
+**Prüfhinweis:** Sinnvolle Engineering-Empfehlungen zu Exit-Codes und Retries; Beispiele mit konkreter Semantik (z. B. `code=2`) und Annahmen zu `codex exec` brauchen stärkere aktuelle CLI-Grundlage, bevor wieder `verified`.  
+**Zuletzt geprüft:** 2026-07-26

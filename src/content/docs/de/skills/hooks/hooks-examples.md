@@ -1,35 +1,35 @@
 ---
-title: Hook configuration examples
-description: Adaptable Hook config and script skeletons—secret scan, audit log, format validation.
+title: Hook-Konfigurationsbeispiele
+description: Anpassbare Hook-Konfig und Skript-Skelette — Secret-Scan, Audit-Log, Formatprüfung.
 locale: de
-source_locale: en
-source_revision: 7448bb4
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When reading Hook examples, confirm what they defend against, then adapt to your environment.
+Bei Hook-Beispielen zuerst klären, was sie verhindern sollen — dann an die eigene Umgebung anpassen.
 
-This chapter provides **illustrative** config and scripts for team adaptation. Field names and paths follow [official documentation](https://developers.openai.com/codex) and local `codex --help`; try in an isolated repo before copying.
+Kapitel mit **illustrativen** Konfigs und Skripten. Feldnamen und Pfade: [offizielle Doku](https://developers.openai.com/codex) und lokales `codex --help`; vor dem Kopieren in isoliertem Repo testen.
 
-Prerequisites: [Hooks overview](/skills/hooks/hooks-overview/) · [Hook event types](/skills/hooks/hook-event-types/)
+Vorab: [Hooks-Überblick](/skills/hooks/hooks-overview/) · [Hook-Ereignistypen](/skills/hooks/hook-event-types/)
 
-## Confirm scope before use
+## Vor Nutzung den Scope klären
 
-Do not treat these as copy-paste "standard answers."  
-Treat them as three patterns:
+Keine „Standardantwort zum Blindkopieren“.  
+Drei Muster:
 
-- Log only
-- Block first
-- Light input check
+- Nur aufzeichnen
+- Zuerst blockieren
+- Leichte Eingabeprüfung
 
-Understand the idea, then decide whether to extend.
+Zuerst Idee, dann ggf. erweitern.
 
-## Example 1: Audit log after tool call (read-only)
+## Beispiel 1: Nach Werkzeugaufruf Audit-Log (nur lesen)
 
-**Goal:** Record who wrote which paths when—do not write secrets to disk if redaction fails.
+**Ziel:** Wer wann welche Pfade geschrieben hat — ohne Secrets bei fehlgeschlagener Maskierung zu speichern.
 
-`hooks.json` (illustrative):
+`hooks.json` (illustrativ):
 
 ```json
 {
@@ -47,7 +47,7 @@ Understand the idea, then decide whether to extend.
 
 ```bash
 #!/usr/bin/env bash
-# stdin: JSON payload (structure per official docs)
+# stdin: JSON-Payload (Struktur laut offizieller Doku)
 payload=$(cat)
 tool=$(echo "$payload" | jq -r '.tool // "unknown"')
 ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
@@ -55,13 +55,13 @@ echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
 exit 0
 ```
 
-**Acceptance:** After one file write, log has one line; script always exits 0.
+**Abnahme:** Nach einem Dateischreiben eine Logzeile; Exit-Code immer 0.
 
-Log-only examples are lowest risk—usually the best starting point.
+Nur Aufzeichnen, kein Verhaltenswechsel — niedrigstes Risiko, guter Start.
 
-## Example 2: Block suspected secrets before tool call
+## Beispiel 2: Vor Werkzeugaufruf vermutete Secrets blockieren
 
-**Goal:** `block` when diff or write content matches AWS access key pattern.
+**Ziel:** Diff oder Schreibinhalt matched AWS-Access-Key-Muster → `block`.
 
 ```json
 {
@@ -76,7 +76,7 @@ Log-only examples are lowest risk—usually the best starting point.
 }
 ```
 
-Core logic in `secret-scan.sh` (illustrative):
+Kernlogik `secret-scan.sh` (illustrativ):
 
 ```bash
 #!/usr/bin/env bash
@@ -89,17 +89,17 @@ fi
 exit 0
 ```
 
-**Acceptance:** Test string with `AKIA` blocked; normal `git status` passes.
+**Abnahme:** Teststring mit `AKIA` wird blockiert; normales `git status` geht durch.
 
 :::caution
-Regex scanning has false positives/negatives—supplement only; real secrets should use secret scanners and pre-commit; see [sensitive context](/guide/context/sensitive-context/).
+Regex-Scans haben Fehlalarme/Lücken — nur Ergänzung; echte Secrets über Secret Scanner und pre-commit, siehe [sensitiver Kontext](/guide/context/sensitive-context/).
 :::
 
-Use block-style Hooks after you know you need to stop real actions. Starting with block makes debugging costlier.
+Solche Beispiele erst, wenn echte Aktionen gestoppt werden sollen. Direkt mit Block-Hooks starten erhöht den Debug-Aufwand.
 
-## Example 3: Length and keyword policy on user prompt submit
+## Beispiel 3: Länge und Schlüsselwörter beim Prompt-Submit
 
-**Goal:** Reject obvious attempts to override system instructions (simplified).
+**Ziel:** Offensichtliche Versuche, Systemanweisungen zu überschreiben, ablehnen (vereinfacht).
 
 ```bash
 #!/usr/bin/env bash
@@ -115,79 +115,77 @@ fi
 exit 0
 ```
 
-**Acceptance:** Overlong and pattern hits fail; normal tasks pass.
+**Abnahme:** Überlänge und Treffer scheitern; normale Aufgaben gehen durch.
 
-At minimum:
+Mindestens:
 
-- Can inspect input
-- Clear failure reason
-- Does not block normal requests excessively
+- Eingabe lesen können
+- Klare Fehlermeldung
+- Normale Requests nicht massiv falsch treffen
 
-## Same source as team rules
+## Mit Teamregeln aus einer Quelle
 
-Extract "forbidden command substrings" into `tools/codex-policy.json` for Hooks and [command rules](/guide/customization/rules/command-rules/) to share—avoid maintaining two places.
+Verbotene Befehlsteilstrings nach `tools/codex-policy.json` ziehen — Hook und [Befehlsregeln](/guide/customization/rules/command-rules/) lesen gemeinsam, Doppelpflege vermeiden.
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. If the example runs, it is production-ready
+### 1. Läuft das Beispiel, kann es in Produktion
 
-Examples teach structure and ideas—not drop-in production config.
+Wert: Struktur und Idee — nicht Blind-Go-Live.
 
-### 2. Block Hooks are more mature than log Hooks
+### 2. Block-Hooks sind „reifere“ Log-Hooks
 
-Many teams start with logs, confirm false positives and performance, then move to warn or block.
+Viele Teams starten mit Log, prüfen Fehlalarme und Performance, dann warn oder block.
 
-### 3. Hook examples are only about script syntax
+### 3. Beispiele sind nur Skript-Schreibstil
 
-Also consider:
+Auch sehen:
 
-- Which event it attaches to
-- Failure strategy
-- Whether the team can explain why it blocks this way
+- An welches Ereignis gehängt
+- Welche Fehlschlag-Strategie
+- Kann das Team erklären, warum so gestoppt wird
 
-## Testing Hooks
+## Hook testen
 
 ```bash
-# Test script with fixture (illustrative)
+# Skript mit Fixture (illustrativ)
 echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
 echo $?
 ```
 
-## Common progression
+## Typische Reihenfolge
 
-Many teams follow:
+1. Read-only-Log
+2. Warn
+3. Block
 
-1. Read-only log Hook
-2. Warn Hook
-3. Block Hook
+So trennst du „Logik richtig“ von „Team will wirklich blockieren“.
 
-That separates "logic is correct" from "team accepts blocking."
+Hook-Beispiele zum Lernen von Idee und Struktur — nicht 1:1 in Produktion.
 
-Hook examples are for learning structure—not copying verbatim into production.
+## Häufige Fehler
 
-## Common mistakes
+- Skript ohne `chmod +x` → stilles Scheitern
+- `timeout_ms` zu kurz → Fehlblock
+- Log-Pfad nicht schreibbar → ganze Hook-Kette scheitert
+- Im Hook volles Payload per `curl` nach außen
 
-- Script missing `chmod +x`, fails silently
-- `timeout_ms` too short causes false blocks
-- Log path not writable breaks whole Hook chain
-- `curl` full payload outbound from Hook
+## Abnahme-Checkliste
 
-## Acceptance checklist
+- [ ] Jeder Hook hat Fixture-Tests
+- [ ] Fehlschlag-Strategie (block/warn) = Teampolitik
+- [ ] Konfig und Skript im selben Repo, selber PR-Review
+- [ ] Doku mit Prüfdatum und CLI-Version
 
-- [ ] Each Hook has fixture tests
-- [ ] Failure strategy (block/warn) matches team policy
-- [ ] Config and scripts same repo, same PR review
-- [ ] Docs note verification date and applicable CLI version
+## Quellen
 
-## References
-
-- OpenAI Codex Hooks examples
-- freestylefly/CodexGuide audit configuration
+- OpenAI Codex Hooks-Beispiele
+- freestylefly/CodexGuide Audit-Konfig
 - stormzhang `22-hooks.md`
 
 ---
 
 **Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Includes Hook config structure, event names, payload fields, and script examples—strongly tied to current implementation; lacks stable official public basis.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / App (versionsabhängig)  
+**Nachprüfhinweis:** Enthält Hook-Konfigstruktur, Ereignisnamen, Payload-Felder und Skriptbeispiele — stark implementationsabhängig, ohne stabile öffentliche Grundlage.  
+**Zuletzt geprüft:** 2026-07-26

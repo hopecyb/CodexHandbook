@@ -1,110 +1,114 @@
 ---
-title: Keyboard Shortcuts
-description: Learning index of common shortcuts in App, CLI TUI, and IDE extension—per your installed version.
+title: Tastenkürzel
+description: 'Lernindex gängiger Shortcuts in App, CLI-TUI und IDE-Erweiterung — aktuelle Version maßgeblich.'
 locale: de
-source_locale: en
-source_revision: e49492c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Shortcuts vary a lot by **client and version**. This page groups by **intent** so you can ask “is there a faster way?”—check in-product help or settings for exact bindings.
+Shortcuts unterscheiden sich stark nach **Client und Version**. Diese Seite ordnet nach **Absicht** — ob es einen schnelleren Weg gibt; konkrete Tasten in Hilfe oder Settings des Produkts.
 
-You do not need every shortcut on day one. Smoothing the actions that interrupt flow is enough.
+Nicht alles auf einmal lernen. Die wenigen Aktionen, die den Rhythmus am häufigsten unterbrechen, reibungslos zu machen, reicht oft.
 
 :::caution
-Table below is **illustrative**, not a complete binding list. Keys may change after upgrades.
+Tabelle unten ist **illustrativ**, keine vollständige Bindungstabelle. Nach Updates können Tasten wechseln.
 :::
 
-## Intent index
+## Index nach Absicht
 
-| Intent | Desktop App (illustrative) | CLI TUI (illustrative) | IDE extension (illustrative) |
+| Absicht | Desktop-App (illustrativ) | CLI-TUI (illustrativ) | IDE-Erweiterung (illustrativ) |
 |---|---|---|---|
-| New task/session | `Cmd/Ctrl+N` or sidebar | Exit/re-enter / new thread command | Command palette “Codex” |
-| Send message | `Enter` / `Cmd+Enter` | Per product docs | Panel send |
-| Newline without send | `Shift+Enter` | Per TUI | Per panel |
-| Open command palette | `Cmd/Ctrl+K` class | `/` slash commands | `Cmd/Ctrl+Shift+P` |
-| Search history | Sidebar search | In-session search if any | Chat history |
-| Approve tool call | Panel button | `y` / arrows (per TUI) | Notification or inline button |
-| Reject | Panel button | `n` | Inline reject |
+| Neue Aufgabe/Sitzung | `Cmd/Ctrl+N` oder Seitenleiste | Neu starten / neuer Thread-Befehl | Befehlspalette «Codex» |
+| Nachricht senden | `Enter` / `Cmd+Enter` | laut Produktdoku | Senden im Panel |
+| Zeilenumbruch ohne Senden | `Shift+Enter` | je TUI | je Panel |
+| Befehlspalette | `Cmd/Ctrl+K`-ähnlich | `/` Slash | `Cmd/Ctrl+Shift+P` |
+| Historie suchen | Seitenleisten-Suche | Sitzungssuche (falls vorhanden) | Chat-Historie |
+| Werkzeugaufruf freigeben | Panel-Button | `y` / Pfeiltasten (je TUI) | Notification oder Inline |
+| Ablehnen | Panel-Button | `n` | Inline ablehnen |
 
-**Follow your installed version’s UI.**
+**Maßgeblich: UI Ihrer installierten Version.**
 
-## Actions worth learning first
+## Welche Aktionen zuerst
 
-Shortcuts reduce friction when you:
+Shortcuts reduzieren vor allem:
 
-- Hunt for Send
-- Accidentally send when you wanted newline
-- Fumble approving tools
-- Cannot find how to start a new task
+- Senden und erst den Button suchen
+- Umbruch und versehentlich senden
+- Freigabe und hektisches Klicken
+- Neue Aufgabe und unklarer Einstieg
 
-Prioritize:
+Statt alles zu pauken — zuerst diese 4:
 
-- Send / newline
-- New task
-- Command palette
-- Approve / reject
+- Senden / Umbruch
+- Neue Aufgabe
+- Befehlspalette
+- Freigeben / Ablehnen
 
-## Slash commands vs keyboard
+## Slash vs. Tastatur
 
-- **Slash commands**: `/review`, `/help`, etc.—see [Slash command reference](/guide/reference/slash-commands/)
-- **Shortcuts**: UI actions without typing
+- **Slash-Befehle**: `/review`, `/help` … — [Slash-Befehle](/guide/reference/slash-commands/)
+- **Shortcuts**: UI-Aktion ohne Text
 
-Combine: `Cmd+K` to focus input, then `/review`.
+Kombinierbar: zuerst `Cmd+K` Fokus, dann `/review`.
 
-## CLI terminal users
+## CLI-Terminalnutzer
 
-- **Ctrl+C** to interrupt runaway output (mind unsaved state)
-- tmux split: Codex beside `git diff`
-- Shell alias for common `codex exec`—see [Commands and shortcuts](/guide/cli/commands-and-shortcuts/)
+- **Ctrl+C** zum Abbrechen außer Kontrolle (Vorsicht: ungespeicherter Zustand?)
+- Terminal-Multiplexer (tmux): Codex und `git diff` nebeneinander
+- Häufiges `codex exec` als Shell-Alias — [Befehle und Shortcuts](/guide/cli/commands-and-shortcuts/)
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. No need to master shortcuts before using Codex
+### 1. Shortcuts pauken vor dem Nutzen?
 
-Smooth the few actions you repeat most.
+Die häufigsten Aktionen flüssig machen senkt die Kosten stark.
 
-### 2. Others’ muscle memory is not your bar
+### 2. Andere sind flüssig = ich bin ungeschickt?
 
-Shortcuts come with practice—not an onboarding gate.
+Shortcuts sind Muskelgedächtnis nach Familiarität — keine Einstiegshürde.
 
-### 3. Clients need not share identical bindings
+### 3. Alle Clients auf dieselben Tasten zwingen?
 
-Know whether an action has a shortcut, where to view/change keys, and which actions are worth binding first.
+Wichtiger zu wissen:
 
-## First five to learn
+- Gibt es einen Shortcut für die Aktion?
+- Wo nachschlagen und umbinden?
+- Welche Aktionen lohnen zuerst
 
-1. Send
-2. Newline without send
-3. Command palette
-4. Approve or reject
-5. New task
+## Am Anfang diese fünf
 
-Add more as you go.
+1. Wie senden
+2. Wie Umbruch ohne Senden
+3. Wie Befehlspalette
+4. Wie freigeben oder ablehnen
+5. Wie neue Aufgabe
 
-## IDE users
+Sind diese fünf flüssig, weitere Shortcuts nebenbei.
 
-- Bind “explain selection with Codex” to a comfortable key
-- Use editor diff and go-to-definition—less copy-paste
+## IDE-Nutzer
 
-[IDE settings](/guide/ide/settings/) · [Selected code and open files](/guide/ide/selected-code-and-open-files/)
+- «Ausgewählten Code mit Codex erklären» auf bequeme Taste legen
+- Mit nativem Diff und Go-to-Definition — weniger Copy-Paste
 
-## Accessibility and customization
+[IDE-Einstellungen](/guide/ide/settings/) · [Ausgewählter Code und offene Dateien](/guide/ide/selected-code-and-open-files/)
 
-Most clients allow rebinding. Teams may document **recommended** bindings—not require uniformity.
+## Barrierefreiheit und Anpassung
 
-Shortcuts are not an exam—smooth the actions that interrupt you most.
+Die meisten Clients erlauben Umbinden in Settings. Teams können **empfohlene Bindungen** dokumentieren — ohne Zwang zur Einheitlichkeit.
 
-## Reference sources
+Shortcuts sind kein Prüfungsstoff. Die Aktionen, die Sie am häufigsten unterbrechen, flüssig machen reicht meist.
 
-- Each product Settings / Keyboard shortcuts official page
+## Quellen
+
+- Offizielle Settings / Keyboard-shortcuts-Seiten der Produkte
 - stormzhang `35-cheatsheet.md`
 - KimYx0207 CX-03
 
 ---
 
 **Status:** outdated  
-**Products:** App / CLI / IDE  
-**Review note:** Despite “illustrative” disclaimers, body assumes specific client shortcuts, send behavior, palette keys, and approval keys—highly version- and platform-dependent without strong unified official shortcut documentation.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE  
+**Prüfhinweis:** Mehrfach als illustrativ gekennzeichnet, enthält aber Annahmen zu aktuellen Client-Shortcuts, Senden, Palette und Freigabetasten — stark versions-/plattformabhängig; ohne starke einheitliche offizielle Shortcut-Doku.  
+**Zuletzt geprüft:** 2026-07-26

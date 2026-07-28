@@ -1,91 +1,91 @@
 ---
-title: Specification-driven work
-description: Write an acceptance-ready spec first, then have Codex implement to plan—good for clear delivery tasks.
+title: Spezifikationsgetriebene Arbeit
+description: Zuerst eine abnahmefähige Spezifikation schreiben, dann Codex nach Plan umsetzen lassen — geeignet für klar umrissene Lieferaufgaben.
 locale: de
-source_locale: en
-source_revision: 91c65d9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Specification-driven** work means preparing a short spec before large file changes—goals, scope, interfaces, and acceptance criteria. It can follow [Brainstorm before building](/cases/workflows/brainstorm-before-building/), or go straight into [EPXV](/cases/workflows/explore-plan-execute-verify/) with already-clarified requirements.
+**Spezifikationsgetrieben** heißt: Vor vielen Dateiänderungen eine kurze Spezifikation anlegen — Ziel, Umfang, Schnittstellen und Akzeptanzkriterien. Kann nach [Brainstorming](/cases/workflows/brainstorm-before-building/) folgen oder bei bereits geklärten Anforderungen direkt in [EPXV](/cases/workflows/explore-plan-execute-verify/) einsteigen.
 
-## What's covered
+## Schwerpunkte dieser Seite
 
-- How detailed the spec needs to be
-- How to keep Codex on-spec without scope creep
-- How specs relate to PR descriptions and issues
+- Wie detailliert die Spezifikation sein muss
+- Wie Codex an der Spezifikation bleibt und den Scope nicht eigenmächtig erweitert
+- Verhältnis von Spezifikation zu PR-Beschreibung und Issue
 
-## Minimum viable spec template
+## Minimal brauchbare Spezifikationsvorlage
 
 ```markdown
-## Goal
-One sentence of user value
+## Ziel
+Ein Satz Nutzerwert
 
-## Scope
-- In scope: …
-- Out of scope: …
+## Umfang
+- Enthalten: …
+- Nicht enthalten: …
 
-## Interface / behavior
-- Inputs / outputs / error cases
+## Schnittstelle/Verhalten
+- Eingabe / Ausgabe / Fehlerfälle
 
-## Acceptance criteria
-- [ ] Automatically verifiable items
-- [ ] Items requiring human check
+## Akzeptanzkriterien
+- [ ] Automatisch überprüfbare Punkte
+- [ ] Manuell zu prüfende Punkte
 
 ## Constraints
-- Modules that must not change, performance, compatibility
+- Unveränderliche Module, Performance, Kompatibilität
 ```
 
-Put the template in repo `docs/specs/` or an issue body and `@` reference it in tasks.
+Vorlage in `docs/specs/` oder im Issue-Body ablegen und in der Aufgabe mit `@` referenzieren.
 
-## Recommended workflow
+## Empfohlener Workflow
 
 ```text
-① Draft spec (Codex can help; human reviews)
-② Confirm spec → reply "execute to spec"
-③ Execute step by step against acceptance items
-④ Spec changes must explicitly bump version or changelog
+① Spezifikation entwerfen (Codex kann helfen, Mensch prüft)
+② Spezifikation bestätigen → mit «nach Spezifikation ausführen» antworten
+③ Schrittweise ausführen, jeden Schritt an Akzeptanzpunkten messen
+④ Spezifikationsänderungen müssen Versionsnummer oder Changelog explizit aktualisieren
 ```
 
-Prompt example:
+Beispiel-Prompt:
 
 ```text
-Read @docs/specs/export-csv.md. First list implementation plan and risks against the spec;
-do not add features not in the spec. Wait for my confirmation before writing code.
+Lies @docs/specs/export-csv.md. Zuerst Implementierungsplan und Risiken gegen die Spezifikation auflisten;
+Funktionen, die nicht in der Spezifikation stehen, nicht hinzufügen. Nach meiner Bestätigung Code schreiben.
 ```
 
-## Pairing with test-driven work
+## Zusammenspiel mit testgetriebener Arbeit
 
-Acceptance items in the spec should be **testable** where possible; write tests first when you can—see [Test-driven work](/cases/workflows/test-driven-work/).
+Akzeptanzpunkte in der Spezifikation möglichst **testbar** halten; was sich als Test schreiben lässt, zuerst als Test — siehe [Testgetriebene Arbeit](/cases/workflows/test-driven-work/).
 
-## Common mistakes
+## Häufige Fehler
 
-- Spec as long as a design doc—key constraints get buried
-- Scope quietly grows during execution without updating the spec
-- Vague acceptance ("more usable") leads to arguments
-- Spec conflicts with `AGENTS.md` architecture conventions
+- Spezifikation so lang wie ein Design-Doc → zentrale Constraints gehen unter
+- Scope wächst während der Ausführung still, Spezifikation bleibt unverändert
+- Vage Akzeptanz («besser nutzbar») führt zu Debatten
+- Spezifikation widerspricht Architekturregeln in `AGENTS.md`
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- External API calls only when the spec explicitly allows network-related implementation
-- PII field handling must be called out in the spec
+- Nur was die Spezifikation als «externe API erlaubt» ausweist, darf netzbezogene Implementierung autorisieren
+- Umgang mit PII-Feldern muss in der Spezifikation gekennzeichnet sein
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Out-of-scope items explicitly excluded
-- [ ] At least 3 checkable acceptance criteria
-- [ ] Human or written confirmation before execution
-- [ ] Changes synced back to the spec file
+- [ ] Out-of-Scope-Punkte klar ausgeschlossen
+- [ ] Mindestens 3 prüfbare Akzeptanzkriterien
+- [ ] Vor der Ausführung menschliche oder schriftliche Bestätigung
+- [ ] Änderungen zurück in die Spezifikationsdatei synchronisiert
 
-## References
+## Referenzquellen
 
-- KimYx0207 requirements and task decomposition chapters
-- freestylefly/CodexGuide spec and acceptance checklists
+- KimYx0207 Kapitel zu Anforderungen und Aufgabenzerlegung
+- freestylefly/CodexGuide Spezifikation und Abnahme-Checklisten
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified brainstorm, EPXV, test-driven, and `AGENTS.md` chapters; content is limited to the stable pattern of writing acceptance-ready specs first, then executing to spec.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen die bereits geprüften Kapitel zu Brainstorming, EPXV, testgetriebener Arbeit und `AGENTS.md`. Der Inhalt beschränkt sich auf die stabile Arbeitsweise „zuerst abnahmefähige Spezifikation, dann nach Spezifikation ausführen“.  
+**Zuletzt geprüft:** 2026-07-26

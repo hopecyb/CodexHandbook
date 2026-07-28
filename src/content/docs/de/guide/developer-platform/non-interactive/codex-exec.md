@@ -1,164 +1,164 @@
 ---
 title: codex exec
-description: Non-interactive execution entry—dispatch a complete task once in scripts and CI.
+description: 'Einstieg in die nicht-interaktive Ausführung — in Skripten und CI einmalig eine vollständige Aufgabe starten.'
 locale: de
-source_locale: en
-source_revision: 2905be8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-If interactive `codex` is chat-while-you-work, **`codex exec`** is closer to handing off a one-shot job and getting a result when it finishes.
+Wenn interaktives `codex` nebenher plaudert und arbeitet, gibt **`codex exec`** die Aufgabe einmal ab und liefert am Ende Ergebnis oder Fehlerstatus.
 
-It is the core of [non-interactive mode](/guide/cli/non-interactive-mode/): no back-and-forth chat, no mid-run clarification—the process ends with a result or failure. This chapter targets [developer platform](/guide/developer-platform/) integrators and readers wiring Codex into scripts or CI for the first time.
+Es ist der Kern des [Nicht-interaktiven Modus](/guide/cli/non-interactive-mode/): kein Hin und Her, kein Nachfragen mittendrin — der Prozess endet mit Ergebnis oder Fehler. Dieses Kapitel richtet sich an Integratoren der [Entwicklerplattform](/guide/developer-platform/) und an alle, die Codex zum ersten Mal in Skripte oder CI bringen wollen.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- How `exec` differs from interactive `codex`
-- Minimal command shape and working directory
-- Approval and sandbox requirements when unattended
+- Unterschiede zwischen `exec` und interaktivem `codex`
+- Minimale Befehlsform und Arbeitsverzeichnis
+- Anforderungen an Freigabe und Sandbox ohne Aufsicht
 
-## What `exec` does
+## Was `exec` macht
 
-Think of `codex exec` as:
+`codex exec` lässt sich so verstehen:
 
-- Issuing a one-time work order
-- Running to completion and returning a result
+- einmaligen Arbeitsauftrag ausstellen
+- nach Abschluss Ergebnis zurückgeben
 
-Once the instructions are set, it runs accordingly, returns the outcome, and exits.
+Steht der Auftrag klar, läuft er danach; am Ende bekommen Sie das Ergebnis und der Prozess endet.
 
-So it fits when:
+Am besten geeignet, wenn:
 
-- Task boundaries are fixed
-- No mid-run clarification is needed
-- You want repeatable execution later
+- die Aufgabengrenzen feststehen
+- keine Klärung mittendrin nötig ist
+- Sie später stabil wiederholen wollen
 
-## Why it exists
+## Warum es existiert
 
-You do not chat with Codex in CI, and you do not expect it to stop ten times to ask questions.
+In CI chatten Sie nicht mit Codex und erwarten nicht, zehnmal nachgefragt zu werden.
 
-Typical `codex exec` uses:
+Typische Einsatzfelder für `codex exec`:
 
-- Code review automation
-- Scheduled jobs
-- Batch scripts
-- Single analysis or generation steps in a pipeline
+- Code-Review-Automatisierung
+- Cron-Jobs
+- Batch-Skripte
+- Einzelschritte Analyse/Generierung in Pipelines
 
-It fits when **task boundaries are already clear**; if you are still exploring, interactive mode is usually better.
+Es passt zu Szenarien, in denen die **Aufgabengrenze klar ist**; bei unklarem Explorieren ist der Interaktive Modus meist besser.
 
 :::note
-**Command names and flags follow the official CLI.** After upgrades, run `codex --help` and `codex exec --help`.
+**Befehlsnamen und Parameter richten sich nach der offiziellen CLI.** Nach Upgrades `codex --help` und `codex exec --help` prüfen.
 :::
 
-## Minimal viable approach
+## Minimal nutzbares Vorgehen
 
 ```bash
 cd /path/to/repo
-codex exec --cwd . "Read-only: compare current branch diff to main, list top 3 security risks, do not modify files"
+codex exec --cwd . "Nur lesen: Diff zwischen aktuellem Branch und main vergleichen, 3 höchste Sicherheitsrisiken auflisten, keine Dateien ändern"
 ```
 
-Principles:
+Prinzipien:
 
-- In shell scripts, `cd` to a clean worktree first
-- Put prompts in versioned `prompts/` or heredocs to avoid shell escaping issues
-- In CI, judge pass/fail by **exit code**
+- Im Shell-Skript zuerst in einen sauberen Worktree `cd`
+- Prompt in versioniertem `prompts/` oder Heredoc — Shell-Escaping-Fehler vermeiden
+- In CI Erfolg/Fehler am **Exit-Code** festmachen
 
-## Easy-to-miss reality
+## Leicht übersehene Realität
 
-In interactive mode you can say “that is not what I meant.”  
-In `exec`, **if the first prompt is wrong, the whole run can go off track**.
+Im Interaktiven Modus können Sie noch „so war das nicht gemeint“ nachschieben.  
+Im `exec`-Modus kann **ein falscher erster Prompt** die ganze Runde schiefgehen.
 
-When writing `exec` prompts, be more explicit than usual about:
+Schreiben Sie `exec`-Prompts deshalb klarer als sonst:
 
-- What to do
-- What not to do
-- Output format
-- What counts as done
-- How to fail when things go wrong
+- Was tun
+- Was nicht tun
+- Ausgabeformat
+- Was „fertig“ bedeutet
+- Wie bei Fehler beendet werden soll
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### `exec` fits fixed tasks
+### `exec` eignet sich für feste Aufgaben
 
-Many people treat it as “advanced CLI mode.”
+Viele sehen darin zuerst den „fortgeschrittenen CLI-Modus“.
 
-More accurate: it is for **stable, repeatable** runs.
+Genauer: Er eignet sich zum **stabilen Wiederholen**.
 
-### Short prompts are not always clear prompts
+### Kurz heißt nicht klar
 
-In interactive mode, vague wording can be fixed later.
+Im Interaktiven Modus können Sie unklar starten und nachbessern.
 
-In `exec`, a short prompt that omits boundaries, limits, and success criteria is often not elegant—it is risky.
+Im `exec` führt ein kurzer Prompt ohne Grenzen, Einschränkungen und Erfolgskriterien oft nicht zu Eleganz, sondern zu Kontrollverlust.
 
-## Recommended workflow
+## Empfohlener Workflow
 
 ```text
-Prepare repo (checkout, install, read-only token)
-    → Pin prompt version (git sha)
+Repo vorbereiten (checkout, install, Read-only-Token)
+    → Prompt-Version fixieren (git sha)
     → codex exec
-    → Collect stdout / artifacts
-    → Non-zero exit fails CI; do not retry forever
+    → stdout / Artifact sammeln
+    → bei Nicht-0 CI fehlschlagen lassen, nicht endlos retryen
 ```
 
-See [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/).
+Anschluss an [Skripte und Pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/).
 
-## What to treat it as
+## Wofür man es halten kann
 
-- A scriptable one-shot task command
-- Suitable for scripts, CI, or cron
+- einmaliger, skriptfähiger Aufgabenbefehl
+- geeignet für Skripte, CI oder Cron
 
-That is why many teams wire it behind `make review`, GitHub Actions, cron, or internal platform buttons.
+Deshalb hängen Teams ihn oft hinter `make review`, GitHub Actions, Cron oder interne Plattform-Buttons.
 
-## Compared to interactive mode
+## Vergleich mit dem Interaktiven Modus
 
-| | Interactive `codex` | `codex exec` |
+| | `codex` interaktiv | `codex exec` |
 |---|---|---|
-| Clarification | Multi-turn | Must be clear upfront |
-| Approval | Human present | Tighten policy beforehand |
-| Best for | Learning, exploration | CI, cron |
+| Nachfragen | Mehrere Runden möglich | Muss einmal klar sein |
+| Freigabe | Mensch anwesend | Vorab Policy straffen |
+| Geeignet | Lernen, Explorieren | CI, Cron |
 
-## When unsure
+## Wenn Sie unsicher sind
 
-- Still exploring requirements, may change your mind often: prefer interactive mode
-- Task is a template you want to run repeatedly: use `codex exec`
+- Anforderungen noch unklar, häufige Kurskorrekturen: Interaktiver Modus
+- Aufgabe als Vorlage fix, nur stabil wiederholen: `codex exec`
 
-`codex exec` fits tasks that are already clear and worth repeating; if you are still thinking out loud, do not rush it into non-interactive flows.
+`codex exec` passt am besten zu „schon klar gesagt, später wiederholen“; wenn Sie noch umdenken, nicht vorschnell in den Nicht-interaktiven Ablauf zwängen.
 
-## Common mistakes
+## Häufige Fehler
 
-- Stuffing long chat history into a single exec
-- CI uses write token and prompt includes unsanitized PR body
-- Unpinned CLI version breaks pipelines suddenly
-- Ignoring non-zero exit codes and marking green
-- Forcing complex human-judgment tasks into unattended runs
+- Lange Chat-Historie in einen einzelnen exec stopfen
+- CI mit Schreib-Token und unbereinigtem PR-Body im Prompt
+- CLI-Version nicht fixiert → plötzliche Pipeline-Fehler
+- Nicht-null Exit-Code ignorieren und trotzdem green markieren
+- Komplexe Aufgaben mit menschlicher Beurteilung unüberwacht erzwingen
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- Unattended = weaker [human approval](/cases/workflows/human-approval-patterns/); default read-only
-- See [Security credentials](/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (cross-reference in same chapter)
+- Unüberwacht = abgeschwächte [menschliche Freigabe](/cases/workflows/human-approval-patterns/), Standard Read-only
+- Siehe [Berechtigungen und Sicherheit](/guide/developer-platform/ci-cd/code-review-automation/#berechtigungen-und-sicherheit) (Querverweis im gleichen Kapitel)
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Local and CI use the same prompt file
-- [ ] Exit codes handled correctly in CI
-- [ ] Logs contain no keys or PII
-- [ ] Sandbox and rules match or are stricter than interactive dev
+- [ ] Lokal und CI dieselbe Prompt-Datei
+- [ ] Exit-Codes von CI korrekt ausgewertet
+- [ ] Logs ohne Secrets und PII
+- [ ] Sandbox und Regeln gleich streng oder strenger als in der interaktiven Entwicklung
 
-## Related
+## Verwandte Kapitel
 
-- [CLI non-interactive mode](/guide/cli/non-interactive-mode/)
-- [Structured output](/guide/developer-platform/non-interactive/structured-output/)
-- [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [CLI Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/)
+- [Strukturierte Ausgabe](/guide/developer-platform/non-interactive/structured-output/)
+- [Exit-Codes und Retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## Reference sources
+## Quellen
 
-- OpenAI Codex CLI documentation
-- KimYx0207 non-interactive chapter
-- stormzhang CI tutorials
+- OpenAI Codex CLI-Dokumentation
+- KimYx0207 Nicht-interaktives Kapitel
+- stormzhang CI-Tutorials
 
 ---
 
 **Status:** outdated  
-**Products:** CLI  
-**Review note:** This page gives useful guidance on `codex exec`, `--cwd`, and non-interactive integration, but lacks strong current official documentation to confirm command entry, flags, and behavior line by line; do not mark `verified` until latest CLI docs are aligned.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI  
+**Prüfhinweis:** Diese Seite liefert nützliche Ideen zu `codex exec`, `--cwd` und nicht-interaktiver Integration, aber es fehlt ausreichend starke aktuelle offizielle Dokumentation, um Befehlsentry, Parameter und Verhaltensdetails zeilenweise zu bestätigen; vor `verified` aktuelle CLI-Grundlage nachziehen.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,60 +1,59 @@
 ---
-title: First task
-description: Complete a small change with a clear prompt and learn how to review results.
+title: Erste Aufgabe
+description: Mit einem klaren Prompt eine kleine Änderung abschließen und das Ergebnis prüfen lernen.
 locale: de
-source_locale: en
-source_revision: 4063d54
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# First task
+# Erste Aufgabe
 
-The example below assumes the **Desktop App** by default; CLI/IDE can use the same prompt.
+Das folgende Beispiel geht standardmäßig von der **Desktop-App** aus; CLI und IDE können denselben Prompt verwenden.
 
-## Meta information
+## Metadaten
 
-| Field | Content |
+| Feld | Inhalt |
 |---|---|
-| Audience | Beginners |
-| Client | Desktop App (recommended) |
-| Estimated time | 15–20 minutes |
+| Zielgruppe | Einsteiger |
+| Client | Desktop-App (empfohlen) |
+| Geschätzte Dauer | 15–20 Minuten |
 
-## 1. Goal and background
+## 1. Ziel und Kontext
 
-**Goal:** Complete a safe file edit in a practice project.
+**Ziel:** In einem Übungsprojekt eine sichere Dateiänderung durchführen.
 
-**Success criteria:** Only the specified file is modified, the result matches the acceptance description, and you can read the diff.
+**Erfolgskriterien:** Nur die angegebene Datei wird geändert, das Ergebnis entspricht der Akzeptanzbeschreibung, und du kannst den Diff lesen.
 
-## 2. Preparation
+## 2. Vorbereitung
 
-- Client installed and signed in
-- Practice project created (with `hello.md` or similar file)
+- Client installiert und angemeldet
+- Übungsprojekt angelegt (mit `hello.md` oder einer ähnlichen Datei)
 
-## 3. Recommended prompt
+## 3. Empfohlener Prompt
 
 ```text
-Goal: Append a section "Today's practice" at the end of hello.md with a three-item bullet list.
-Constraints: Only modify hello.md; do not delete existing content; do not run network requests.
-Acceptance: The heading and exactly three list items appear at the end of the file.
-If information is insufficient, ask me first; do not guess.
+Ziel: Am Ende von hello.md einen Abschnitt «Heutige Übung» mit einer Liste aus drei Stichpunkten anhängen.
+Einschränkungen: Nur hello.md ändern; vorhandenen Inhalt nicht löschen; keine Netzwerkanfragen ausführen.
+Akzeptanz: Am Dateiende erscheinen die Überschrift und genau drei Listeneinträge.
+Wenn Informationen fehlen, frag mich zuerst; rate nicht.
 ```
 
-## 4. Execution and review
+## 4. Ausführung und Prüfung
 
-1. Ask for a short plan first (or request one yourself)
-2. When approving file writes, confirm the path is correct
-3. After completion, check the diff against each acceptance criterion
+1. Zuerst einen kurzen Plan anfordern (oder selbst danach fragen)
+2. Bei der Freigabe zum Schreiben von Dateien den Pfad bestätigen
+3. Danach den Diff Zeile für Zeile mit den Akzeptanzkriterien abgleichen
 
-## 5. Next steps
+## 5. Nächste Schritte
 
-- [Prompt basics](/prompts/basics/)
-- [Verification](/guide/verification/)
-- [Start here](/guide/start-here/)
-
+- [Prompt-Grundlagen](/prompts/basics/)
+- [Überprüfung](/guide/verification/)
+- [Hier starten](/guide/start-here/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page is a low-risk introductory exercise within the handbook: limited to editing one file, no network access, requiring you to read the diff and check each acceptance criterion. Related prerequisite chapters (installation, practice project, verification) have been cross-checked; content does not depend on specific product version details.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite ist eine risikoarme Einstiegsübung im Handbuch: beschränkt auf das Ändern einer einzelnen Datei, ohne Netz, mit der Anforderung, den Diff zu lesen und jedes Akzeptanzkriterium zu prüfen. Die zugehörigen Vorkapitel (Installation, Übungsprojekt, Überprüfung) wurden kreuzgeprüft; der Inhalt hängt nicht von produktspezifischen Versionsdetails ab.  
+**Zuletzt geprüft:** 2026-07-26

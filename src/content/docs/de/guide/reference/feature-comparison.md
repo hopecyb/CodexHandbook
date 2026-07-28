@@ -1,30 +1,77 @@
 ---
-title: Feature comparison
-description: Capability comparison across App, CLI, IDE, and Cloud.
+title: Funktionsvergleich
+description: 'Fähigkeitsvergleich von App, CLI, IDE und Cloud.'
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 93e89e8
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+Diese Tabelle dient Lernen und Auswahl; konkrete Fähigkeiten richten sich nach dem aktuellen Produkt.
 
-The table below is for learning purposes; actual capabilities depend on the current product.
+Sie zeigt vor allem, welcher Einstieg zu welcher Nutzung passt.
 
-| Capability | Desktop App | CLI | IDE | Cloud |
+| Fähigkeit | Desktop-App | CLI | IDE | Cloud |
 |---|---|---|---|---|
-| Beginner-friendly visual review | Strong | Medium | Medium | Medium |
-| Terminal / script integration | Medium | Strong | Medium | Medium |
-| Inline editor context | Medium | Weak | Strong | Medium |
-| Remote standardized environment | Depends on integration | Depends on usage | Depends on usage | Strong |
-| Parallel tasks / worktrees | Common | Depends on workflow | Depends on workflow | Depends on product |
-| Mobile approval follow-up | Depends on notifications/remote | Weak | Weak | Depends on product |
+| Visuales Review für Einsteiger | stark | mittel | mittel | mittel |
+| Terminal-/Skriptintegration | mittel | stark | mittel | mittel |
+| Editor-Inline-Kontext | mittel | schwach | stark | mittel |
+| Remote standardisierte Umgebung | je Integration | je Nutzung | je Nutzung | stark |
+| Parallele Aufgaben / Arbeitsbaum | üblich | je Workflow | je Workflow | je Produkt |
+| Skills / MCP / Plugin | üblich | üblich | je Version | je Produkt |
+| Freigabe unterwegs nachverfolgen | je Notification/Remote | schwach | schwach | je Produkt |
 
-Selection guide: [Choose your Codex client](/guide/getting-started/choose-your-codex-client/)
+Auswahlhilfe: [Codex-Client wählen](/guide/getting-started/choose-your-codex-client/)
 
+## Häufige Missverständnisse
+
+### 1. Mehr Features ≠ besser zum Einstieg
+
+Zuerst die benötigte Nutzungsart — nicht Feature-Anzahl.
+
+### 2. Nicht alle vier Einstiege sofort lernen
+
+Einen nutzbaren Einstieg reicht.
+
+### 3. Nach Ihrer Arbeitsweise wählen
+
+- Am intuitivsten, gut zu reviewen → Desktop-App
+- Terminal-Gewohnheit → CLI
+- Meist im Editor → IDE
+- Remote-Repos, lange Aufgaben → Cloud
+
+### 4. Falscher Einstieg ist korrigierbar
+
+Nicht überbewerten.  
+Erst starten, später wechseln.
+
+## Wenn unsicher
+
+1. Wo arbeiten Sie meist: Desktop, Terminal, Editor oder Browser?
+2. Wichtiger: klar sehen, oder Skripte/Code/Remote?
+3. Erst lernen oder schon Dauerworkflow?
+
+Häufiger Weg:
+
+- Zuerst Desktop-App für den Rhythmus
+- Dann CLI oder IDE nach Gewohnheit
+- Cloud bei Remote-Langaufgaben
+
+## Schnellwahl
+
+| Aktueller Bedarf | Zuerst eher |
+|---|---|
+| Klar sehen, was es tut | Desktop-App |
+| Terminal und Skripte gewohnt | CLI |
+| Meiste Zeit Code schreiben | IDE |
+| Remote laufen, standardisierter | Cloud |
+
+Nach Szenario wählen ist oft zuverlässiger als Feature-Zählen.
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Status:** outdated  
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfhinweis:** Kern ist eine Stärken-/Eignungstabelle; parallele Aufgaben, Arbeitsbaum, Skills/MCP/Plugin, mobiles Follow-up ändern sich schnell und fehlen starke offizielle Einzelbelege — vor konservativerer Fassung nicht `verified`.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,115 +1,115 @@
 ---
-title: Code Review Automation
-description: Wire Codex into CI or PR workflows—prompts, permissions, and human gates.
+title: Code-Review-Automatisierung
+description: 'Codex-Review in CI- oder PR-Abläufe einbinden — Prompt, Berechtigungen und menschliche Gates.'
 locale: de
-source_locale: en
-source_revision: 313cd89
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Putting Codex in a **pull request pipeline** can catch obvious issues before human review, but it **cannot replace** accountable review and tests. This page covers practical automation patterns.
+Codex in die **Pull-Request-Pipeline** zu legen, kann vor dem Menschen-Review offensichtliche Probleme fangen — **ersetzt** aber weder verantwortliches Review noch Tests. Diese Seite beschreibt umsetzbare Automatisierungsmuster.
 
-## What this page covers
+## Was diese Seite behandelt
 
-- How to call Codex safely in CI
-- What a review prompt should include
-- How to post results to a PR without auto-merge
+- Wie man Codex in CI sicher aufruft
+- Was ein Review-Prompt enthalten sollte
+- Wie Ergebnisse als PR-Kommentar landen, ohne automatisch zu mergen
 
-## Understand the role first
+## Zuerst die Rolle verstehen
 
-Think of “code review automation” as Codex doing a first pass for the team—humans still make the final call.
+„Code-Review-Automatisierung“ heißt: Codex macht die erste Runde Vorsortierung — die Entscheidung bleibt beim Menschen.
 
-It is best at:
+Am besten geeignet für:
 
-- Flagging obvious risks early
-- Summarizing what matters in the diff
-- Handling repetitive checks
+- Offensichtliche Risiken früh markieren
+- Schwerpunkte im Diff strukturieren
+- Wiederkehrende Checks vorwegnehmen
 
-It is not suited to deciding “this PR is definitely safe to merge.”
+Nicht geeignet, um allein zu entscheiden „dieser PR darf gemerged werden“.
 
-Related: [Non-interactive mode](/guide/cli/non-interactive-mode/) · [SDK overview](/guide/developer-platform/sdk-overview/)
+Verwandt: [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) · [SDK-Überblick](/guide/developer-platform/sdk-overview/)
 
-## Recommended architecture
+## Empfohlene Architektur
 
 ```text
 PR opened / updated
-    → CI job (read-only token)
-    → codex exec or API reviews diff
-    → upload report / PR comment
-    → human decides whether to merge
+    → CI job (Read-only-Token)
+    → codex exec oder API prüft Diff
+    → Bericht / PR-Kommentar hochladen
+    → Mensch entscheidet über Merge
 ```
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### Automated review is not automated approval
+### Automatisches Review und automatische Freigabe sind nicht dasselbe
 
-Teams often overestimate: if it can review automatically, can it decide automatically?
+Beim ersten Anschluss überschätzen Teams oft: Wenn es automatisch lesen kann, kann es auch automatisch entscheiden.
 
-A better framing: it fits a **suggestion** and **triage** layer, not the final accountability layer.
+Realistischer: Es eignet sich als Vorschlags- und Vorsortierungsschicht — nicht als letzte Verantwortungsschicht.
 
-### Not every PR deserves heavy review on day one
+### Nicht jeder PR verdient sofort ein schweres Review
 
-For tiny, low-value PRs, or before rules are settled, heavy auto-review often adds noise.
+Bei kleinen, wenig wertvollen PRs oder unklaren Regeln erzeugt schweres Auto-Review oft nur Rauschen.
 
-A good starting point: lightweight diff review that reliably saves team time.
+Ein guter Start: leichtes Diff-Review und prüfen, ob es dem Team wirklich Zeit spart.
 
-## Prompt template essentials
+## Prompt-Vorlage — Kernpunkte
 
 ```text
-You are a code review assistant. Review only the diff against the base branch.
-Output: critical issues / suggestions / nits; cite file and line for each.
-Do not modify the repo; do not make network requests.
-If the diff is too large, review only <path list>.
+Du bist ein Code-Review-Assistent. Prüfe nur den Diff relativ zum Base-Branch.
+Ausgabe: kritische Probleme / Vorschläge / nit; je Eintrag Datei und Zeile.
+Kein Repository ändern; keine Netzwerkanfragen.
+Bei zu großem Diff nur <Pfadliste> prüfen.
 ```
 
-Version in `prompts/ci-review.md`.
+Versioniert unter `prompts/ci-review.md` ablegen.
 
-## Permissions and security
+## Berechtigungen und Sicherheit
 
-| Principle | Practice |
+| Prinzip | Vorgehen |
 |---|---|
-| Read-only | CI token without push (or bot comment only) |
-| Fixed model | Easier to compare review quality over time |
-| Injection defense | Do not paste unsanitized PR descriptions into system prompt |
-| Secrets | Store tokens in GitHub Secrets |
+| Read-only | CI-Token ohne Push (oder nur Bot-Kommentare) |
+| Festes Modell | Vergleichbarkeit der Review-Qualität über die Zeit |
+| Injection-Schutz | Unbereinigte PR-Beschreibung nicht in den System-Prompt mischen |
+| Secrets | Token in GitHub Secrets speichern |
 
-[Human approval patterns](/cases/workflows/human-approval-patterns/) · [Environment variables](/guide/reference/environment-variables/)
+[Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) · [Umgebungsvariablen](/guide/reference/environment-variables/)
 
-## Quality gates
+## Qualitätsgates
 
-- Review job failure ≠ must block merge (can be advisory first)
-- Separate required status checks: red tests must block; AI nits can warn
-- Periodically sample human comparison for missed/false positives
+- Fehlgeschlagener Review-Job ≠ Merge muss blockieren (zuerst advisory möglich)
+- Von erforderlichen Status Checks trennen: rote Tests blockieren, AI-nits warnen
+- Regelmäßig manuell mit AI-Review vergleichen (False Negatives / False Positives)
 
-## Relationship to Cloud
+## Verhältnis zu Cloud
 
-Complex repos may run full tests on [Cloud](/guide/web-and-cloud/) before review; in-CI exec suits **lightweight diff review**.
+Komplexe Repos können in [Cloud](/guide/web-and-cloud/) erst voll testen und dann reviewen; `exec` in CI eignet sich für **leichtes Diff-Review**.
 
-## Common mistakes
+## Häufige Fehler
 
-- CI has write permission and prompt is injected with “please push fix”
-- Review output is so long it drowns human review
-- No diff size limit causes timeouts and quota burn
+- CI mit Schreibrechten und Prompt, der zu „bitte Push den Fix“ injiziert wird
+- Review-Ausgabe so lang, dass Menschen-Review untergeht
+- Diff-Größe nicht begrenzt → Timeout und Quotenverbrauch
 
-The main value of code review automation is catching obvious issues before human review—not taking merge responsibility.
+Der größte Nutzen der Code-Review-Automatisierung: vor dem Menschen-Review offensichtliche Probleme aussortieren — nicht die Merge-Verantwortung ersetzen.
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] CI behaves safely on fork PRs (no secret leakage)
-- [ ] Review output is structured and optionally machine-parseable
-- [ ] Team docs explain the role of AI review
+- [ ] CI-Verhalten bei Fork-PRs ist sicher (keine Secret-Leaks)
+- [ ] Review-Ausgabe strukturiert und optional maschinenlesbar
+- [ ] Team-Dokumentation klärt die Rolle von AI-Review
 
-## Reference sources
+## Quellen
 
-- OpenAI Codex CI examples
-- KimYx0207 Review/PR chapter
-- stormzhang CI tutorials
-- codex.bozhouai.com Git/GitHub section
+- OpenAI Codex CI-Beispiele
+- KimYx0207 Review/PR-Kapitel
+- stormzhang CI-Tutorials
+- Git/GitHub-Teil auf codex.bozhouai.com
 
 ---
 
 **Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** OpenAI Developers still describes Codex as usable for testing, review, and preparing changes; official use cases include “Review GitHub pull requests.” This page summarizes safe CI integration principles and gate patterns only—not fixed commands or a single implementation.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / API / Cloud  
+**Prüfgrundlage:** OpenAI Developers beschreibt Codex weiterhin für Testen, Review und die Vorbereitung von Änderungen; offizielle Use Cases enthalten weiterhin „Review GitHub pull requests“. Diese Seite fasst nur sichere CI-Anbindung und Gate-Muster zusammen und behauptet weder feste Befehle noch eine einzige Implementierung.  
+**Zuletzt geprüft:** 2026-07-26

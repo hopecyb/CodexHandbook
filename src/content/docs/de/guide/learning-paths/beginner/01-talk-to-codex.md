@@ -1,37 +1,57 @@
 ---
-title: Talk to Codex
-description: Practice stating goals and constraints in natural language.
+title: Mit Codex sprechen
+description: Mit natürlicher Sprache Ziele und Grenzen üben.
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: d10c573
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+## Ziel dieses Schritts
 
-## Goal for this step
+In vollständigen Sätzen sagen, **was Sie wollen** und **was nicht** — nicht nur ein paar Wörter hinwerfen.
 
-Use complete sentences to explain **what you want** and **what you do not want**—not a single vague word.
+Beim ersten Gespräch behandeln viele Codex wie eine Suchleiste und werfen Keywords. Dieser Schritt bricht die Gewohnheit.
 
-## Exercise
+## Übung
 
-Tell your practice project:
+Zum Übungsprojekt sagen:
 
 ```text
-In three sentences, explain which files are in the current folder and what each file roughly does.
-Do not modify any files.
+Erkläre in drei Sätzen, welche Dateien im aktuellen Ordner liegen und wofür jede ungefähr da ist.
+Ändere keine Dateien.
 ```
 
-## What you learn
+## Was hier geübt wird
 
-- Read-only tasks still need an explicit “do not modify”
-- Vague requests get vague answers
+Zwei Grundfähigkeiten — nicht „schönere Prompts“:
 
-Next: [Work with files](/guide/learning-paths/beginner/02-work-with-files/) · Concepts: [Prompt basics](/prompts/basics/)
+- Ziel vollständig sagen
+- Grenzen klar sagen
 
+Auch bei Read-only-Aufgaben am besten explizit „keine Dateien ändern“.
+
+## Was Sie lernen
+
+- Auch Read-only braucht „nicht ändern“
+- Vage Anfragen → vage Antworten
+
+## Häufige Missverständnisse
+
+### 1. Die Übung ist zu einfach
+
+Wenn schon Read-only unklar bleibt, laufen Änderungsaufgaben später leichter schief.
+
+### 2. Grenzen nur bei Dateiänderungen
+
+Auch Lesen, Erklären, Zusammenfassen brauchen Grenzen.
+
+Weiter: [Mit Dateien arbeiten](/guide/learning-paths/beginner/02-work-with-files/) · Grundlagen: [Prompt-Grundlagen](/prompts/basics/)
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** App / CLI / IDE  
+**Prüfgrundlage:** Gegen geprüfte Prompt-Grundlagen, Einstiegssicherheit und Einsteigerpfad abgeglichen; trainiert nur die stabile Methode „Ziele und Grenzen in vollständigen Sätzen“.  
+**Zuletzt geprüft:** 2026-07-26

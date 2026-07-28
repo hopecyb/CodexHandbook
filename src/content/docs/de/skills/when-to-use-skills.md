@@ -1,88 +1,88 @@
 ---
-title: When to use Skills
-description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
+title: Wann Skills einsetzen
+description: Entscheiden, ob eine Aufgabe als Skill lohnt — und wie Skills, Slash-Befehle und MCP sich teilen.
 locale: de
-source_locale: en
-source_revision: f4b5554
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you first encounter Skills, a common question is: is this worth packaging as a Skill?
+Beim Einstieg in Skills lautet die typische Frage: Lohnt es sich, genau das als eigenen Skill zu bauen?
 
-If everything becomes a Skill, things get heavy; if you never capture repeatable flows, you keep re-explaining the same steps by hand. This page helps you decide when to solidify a workflow.
+Alles zum Skill zu machen wird schwer; was man absichern sollte und nicht absichert, wiederholt man endlos manuell. Hier geht es vor allem darum, wann Abläufe festgeschrieben werden sollten.
 
-# When to use Skills
+# Wann Skills einsetzen
 
-## Good candidates for a Skill
+## Gut als Skill geeignet
 
-- The same flow has been repeated manually a third time
-- You need a detailed checklist but do not want it in context every time
-- You want the model to auto-enable based on `description`
-- The team needs a shared, versioned workflow
+- Derselbe Ablauf wird zum dritten Mal manuell wiederholt
+- Braucht eine detaillierte Checkliste, soll aber nicht jedes Mal den Kontext füllen
+- Das Modell soll anhand der `description` selbst entscheiden, wann der Skill greift
+- Das Team braucht geteilte, versionierte Workflows
 
-## Conditions that make a Skill worthwhile
+## Wann sich ein Skill lohnt
 
-If a task meets both of these, a Skill is worth considering:
+Wenn eine Aufgabe beides erfüllt, lohnt sich ein Skill oft:
 
-- You will do it again
-- You want the next run to be as consistent as possible
+- Du wirst sie wieder tun
+- Du willst beim nächsten Mal möglichst gleich vorgehen
 
-Many Skills end up in scenarios like:
+Viele Skills landen in diesen Szenarien:
 
-- Reviewing diffs
-- Generating changelogs
-- Pre-release checks
-- Documentation publish flows
+- Diff prüfen
+- Changelog erzeugen
+- Checks vor dem Release
+- Dokumentations-Release-Abläufe
 
-These tasks are not complex, but they reuse well.
+Diese Aufgaben sind nicht komplex, aber gut wiederverwendbar.
 
-## Poor fits
+## Weniger geeignet
 
-- One-off tasks that never repeat
-- Very short commands you remember (consider a slash command)
-- Needs live external state that changes very fast (consider MCP)
+- Einmalige, nie wiederholte Aufgaben
+- Sehr kurze, merkbare Festbefehle (eher Slash-Befehl)
+- Braucht Echtzeit-Status externer Systeme mit hoher Änderungsrate (eher MCP)
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Important tasks should always become Skills
+### 1. Wichtige Aufgaben müssen Skills werden
 
-Important does not mean reusable.  
-A one-off special task may only add maintenance burden as a Skill.
+Wichtig ≠ wiederverwendbar.  
+Bei einer einmaligen Sonderaufgabe erhöht ein Skill oft nur den Wartungsaufwand.
 
-### 2. More Skills is better
+### 2. Mehr Skills sind besser
 
-Too many Skills with fuzzy boundaries make the model misuse them and the team harder to maintain.
+Zu viele Skills mit unklaren Grenzen führen zu Fehlauswahl und erschweren die Teamwartung.
 
-### 3. If it connects to external systems, start with a Skill
+### 3. Sobald ein externes System angebunden werden kann, zuerst Skill
 
-External access is often an MCP problem; the Skill owns the **process**—how to connect still depends on MCP.
+Externe Anbindung ist oft ein MCP-Thema. Skills tragen den „Ablauf“; die Verbindung zum externen System bleibt MCP.
 
-## How to try before committing
+## So kannst du testen
 
-If you are unsure a workflow is worth capturing:
+Wenn unklar ist, ob ein Ablauf sich lohnt:
 
-1. Do it manually two or three times
-2. Notice whether you repeat the same check order each time
-3. If yes, turn it into a Skill
+1. Zwei- bis dreimal manuell durchziehen
+2. Prüfen, ob jedes Mal dieselbe Prüf-Reihenfolge kommt
+3. Bei „ja“ zum Skill verdichten
 
-Skills built this way are sturdier because they come from real repetition, not upfront design.
+Solche Skills sind robuster, weil sie aus echter Wiederholung kommen, nicht aus Spekulation.
 
-## Compared to other extension methods
+## Vergleich mit anderen Erweiterungen
 
-| Method | Best for |
+| Methode | Geeignet für |
 |---|---|
-| Skill | Reusable flows, progressive disclosure |
-| MCP | External APIs and data sources |
-| Hooks | Auto-run at specific events |
-| `AGENTS.md` | Project-wide standing conventions |
+| Skill | Wiederverwendbare Abläufe, Progressive Disclosure |
+| MCP | Externe APIs und Datenquellen |
+| Hooks | Automatische Ausführung an Ereignispunkten |
+| `AGENTS.md` | Projektweite Dauerregeln |
 
-Skills are best for flows that repeat, need consistency, and you do not want to re-explain every time.
+Skills eignen sich für Abläufe, die „sich wiederholen, konsistent sein sollen und nicht jedes Mal neu erklärt werden müssen“.
 
-For extension choice, see [Choosing an extension method](/skills/choosing-an-extension-method/). For workflow capture, see [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Auswahl der Erweiterungsmethode: [Erweiterungsmethode wählen](/skills/choosing-an-extension-method/). Workflow absichern: [Ablauf zum Skill machen](/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Help "Skills in ChatGPT" confirms Skills are reusable, shareable workflows; current Codex runtime also matches skills by name and description. This page is selection guidance, not volatile UI.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** OpenAI Help „Skills in ChatGPT“ bestätigt Skills als wiederverwendbare, teilbare Workflows; die aktuelle Codex-Laufzeit matched Skills nach Name und Beschreibung. Diese Seite ist vor allem Auswahlprinzip und hängt nicht an volatiler UI.  
+**Zuletzt geprüft:** 2026-07-26

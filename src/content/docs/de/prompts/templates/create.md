@@ -1,73 +1,74 @@
 ---
-title: Create template
-description: Build features, documents, or artifacts from scratch.
+title: Erstellen-Vorlage
+description: Feature, Text oder Artefakt von null umsetzen.
 locale: de
-source_locale: en
-source_revision: f7e4caa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Create template
+# Erstellen-Vorlage
 
-From-scratch tasks often fail in two ways:
+Bei Aufgaben von null treten oft zwei Probleme auf:
 
-- big goal, no boundaries
-- not enough information but generation starts anyway
+- großes Ziel ohne Grenzen
+- noch zu wenig Info, aber Codex soll schon generieren
 
-The create template states deliverable, audience, and constraints before work begins.
+Die Erstellen-Vorlage klärt Artefakt, Zweck und Constraints, bevor es losgeht.
 
-## Template
+## Vorlage
 
 ```text
-Goal: Create 【artifact name】 for 【purpose/audience】.
-Context: 【existing conventions, design style, dependency limits】
-Inputs: 【spec, sketch, reference @files】
+Ziel: 【Artefaktname】 erstellen für 【Zweck/Nutzer】.
+Hintergrund: 【bestehende Konventionen, Designstil, Dependency-Limits】
+Eingaben: 【Spec, Skizze, Referenz-@Dateien】
 Constraints:
-- Only modify/create within 【path scope】
-- Do not introduce 【exclusions】
-- Require my approval before 【high-risk operations】
-Acceptance:
-- 【observable result 1】
-- 【observable result 2】
-- Provide self-test steps
-If information is insufficient, list assumptions and ask me—don't guess.
+- Nur ändern/erstellen in 【Pfad-Scope】
+- Nicht einführen: 【Ausschlüsse】
+- 【Hochrisiko-Aktionen】 erst nach meiner Freigabe
+Abnahme:
+- 【beobachtbares Ergebnis 1】
+- 【beobachtbares Ergebnis 2】
+- Selbsttest-Schritte angeben
+Bei fehlenden Infos: Annahmen listen und fragen — nicht raten.
 ```
 
-## When to use this template
+## Wann diese Vorlage passt
 
-- New page, component, script, or document from zero
-- You know what to produce but haven't started
-- You want scope stated before building
+- Seite, Komponente, Skript oder Doc von null
+- du weißt, was entstehen soll, hast aber noch nicht begonnen
+- Scope der Erstellung soll klar sein, bevor generiert wird
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Create tasks mean "free rein"
+### 1. Erstellen = „freie Hand“
 
-From-scratch work especially needs:
+Von null brauchst du besonders:
 
-- who it's for
-- what it's for
-- style or technical paths that are off limits
+- für wen
+- wozu
+- welche Stil-/Techniklinien tabu sind
 
-### 2. Context is optional decoration
+### 2. Hintergrund ist nur Dekoration
 
-For create tasks, context often steers the entire deliverable.
+Bei Erstellen beeinflusst Hintergrund oft die Richtung des Artefakts direkt.
 
-### 3. "Looks good" as acceptance
+### 3. Abnahme „sieht gut aus“ reicht nicht
 
-Hard to judge whether you're actually done.
+Dann wird „fertig?“ schwer entscheidbar.
 
-In create tasks, the riskiest move is starting before "what to build and for whom" is clear.
+Am riskantesten: starten, bevor „was“ und „für wen“ klar sind.
 
-## Related
+## Verwandt
 
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Define done](/prompts/define-done/)
+- [Spezifikationsgetriebenes Arbeiten](/cases/workflows/specification-driven-work/)
+- [Fertigstellungsstandard definieren](/prompts/define-done/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a create-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite liefert eine Vorlage für Erstellen-Aufgaben; interne Links und Vorlagenstruktur wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

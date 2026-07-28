@@ -1,96 +1,97 @@
 ---
-title: Task anatomy
-description: Goal, context, inputs, constraints, acceptance, and permission boundaries.
+title: Aufgabenstruktur
+description: 'Ziel, Hintergrund, Eingaben, Constraints, Abnahme und Berechtigungsgrenzen.'
 locale: de
-source_locale: en
-source_revision: '7709575'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you ask for something, it's easy to scatter information—lots of material, unclear focus, and more room for Codex to misread you.
+Bei vielen Infos zerfallen Anforderungen leicht: viel Material, unklarer Fokus — und Codex missversteht leichter.
 
-Here is a common set of parts in a well-structured task.
+Hier die typischen Bausteine einer Aufgabe.
 
-## Task structure
+## Aufgabenstruktur
 
-Organize along this order:
+Organisiere in dieser Reihenfolge:
 
-- What the outcome is
-- Why you're doing it
-- What materials are needed
-- Where the boundaries are
-- How to judge completion
+- Was ist das Ergebnis?
+- Warum wird es gebraucht?
+- Welche Materialien braucht es?
+- Wo liegen die Grenzen?
+- Wie wird Fertigstellung beurteilt?
 
-The order isn't fixed, but once these are clear the task is much steadier.
+Die Reihenfolge muss nicht starr sein — wenn diese Punkte klar sind, wird die Aufgabe deutlich stabiler.
 
-## Recommended template
-
-```text
-Goal: … (what the final deliverable is)
-Context: … (why it matters, current state)
-Inputs: … (relevant files/links/pasted content)
-Constraints: … (what can change, style, forbidden actions)
-Acceptance criteria: … (checkable completion conditions)
-Permission boundaries: … (network, dependencies, config changes)
-When information is insufficient: ask first, don't guess.
-```
-
-## What each section does
-
-- **Goal:** prevents tasks that have actions but no outcome
-- **Context:** helps Codex understand why you're doing it this way
-- **Inputs:** hands over files, links, and assets it actually needs to see
-- **Constraints:** prevents overreach and "while I'm here" edits
-- **Acceptance criteria:** turns "is it done?" into something checkable
-- **Permission boundaries:** states upfront whether network, dependencies, or config are allowed
-
-## Common misconceptions
-
-### 1. Every section must be filled in full
-
-This template is closer to a checklist than a form.  
-Some tasks don't need long context, but skipping sections removes judgment inputs.
-
-### 2. Goal and acceptance are not the same thing
-
-They are different.
-
-- **Goal** is what you want to get
-- **Acceptance** is how you verify it really happened
-
-### 3. Inputs means paste everything you have
-
-More input isn't better—relevance matters.  
-The key is handing over what it **must** read.
-
-## Minimal task template
-
-For a usable first version, shrink to:
+## Empfohlene Vorlage
 
 ```text
-Goal: turn X into Y
-Inputs: relevant files or pages are here
-Constraints: only change here, don't touch that
-Acceptance: how I check you actually finished
-When uncertain: ask
+Ziel: …… (was ist das End-Artefakt)
+Hintergrund: …… (warum wichtig, aktueller Stand)
+Eingaben: …… (relevante Dateien/Links/eingefügter Inhalt)
+Constraints: …… (änderbarer Scope, Stil, Verbote)
+Abnahmekriterien: …… (prüfbare Fertigstellungsbedingungen)
+Berechtigungsgrenzen: …… (Netzwerk? Dependencies installieren? Config ändern?)
+Bei fehlenden Infos: zuerst fragen, nicht raten.
 ```
 
-## Example
+## Rolle jedes Abschnitts
+
+- **Ziel**: verhindert reine Aktionen ohne Ergebnis
+- **Hintergrund**: hilft Codex zu verstehen, warum so
+- **Eingaben**: liefert Dateien, Links und Material, die wirklich nötig sind
+- **Constraints**: verhindert Grenzverletzung und „nebenbei mitändern“
+- **Abnahmekriterien**: macht „fertig?“ prüfbar
+- **Berechtigungsgrenzen**: klärt Netz, Dependencies, Config im Voraus
+
+## Häufige Missverständnisse
+
+### 1. Jeder Abschnitt muss voll sein
+
+Die Vorlage ist eher Checkliste als Lückentext.  
+Manche Aufgaben brauchen keinen langen Hintergrund — aber ohne ihn fehlt auch ein Teil der Entscheidungsgrundlage.
+
+### 2. Ziel und Abnahme sind dasselbe
+
+Nicht dasselbe.
+
+- **Ziel**: welches Ergebnis du willst
+- **Abnahme**: wie du prüfst, dass es wirklich erreicht ist
+
+### 3. Eingaben = möglichst viel Material einfügen
+
+Nicht mehr ist besser — relevant zählt.  
+Ziel: „Muss-Material“ klar übergeben.
+
+## Minimale Aufgabenvorlage
+
+Wenn du zuerst eine brauchbare Kurzfassung willst:
 
 ```text
-Goal: Make the docs homepage hero copy easier for beginners to understand
-Inputs: src/content/docs/guide/index.md
-Constraints: Only edit this one file; don't change styles or add components
-Acceptance: Keep existing structure; copy is more conversational; pnpm build passes
-When uncertain: State your understanding and scope of changes before editing
+Ziel: Was soll wie werden
+Eingaben: relevante Dateien oder Seiten hier
+Constraints: nur hier ändern, das nicht anfassen
+Abnahme: wie prüfe ich, dass du fertig bist
+Bei Unsicherheit: zuerst fragen
 ```
 
-This structure mainly reduces guessing and makes acceptance direct. Templates can be trimmed—but accept what information you lose when you drop a section.
+## Beispiel
+
+```text
+Ziel: Docs-Homepage First-Screen-Text für Einsteiger verständlicher machen
+Eingaben: src/content/docs/guide/index.md
+Constraints: nur diese Datei, kein Style, keine neuen Komponenten
+Abnahme: Struktur behalten; Text umgangssprachlicher; pnpm build ok
+Bei Unsicherheit: zuerst Verständnis und Scope nennen, dann handeln
+```
+
+Diese Struktur reduziert Raten und macht Abnahme direkter. Abschnitte kannst du kürzen — aber was du streichst, fehlt als Information.
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains task structure only; examples and in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur Methoden zur Aufgabenstruktur; Beispiele und interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

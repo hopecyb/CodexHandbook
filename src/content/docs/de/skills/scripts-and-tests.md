@@ -1,22 +1,22 @@
 ---
-title: scripts/ and tests
-description: Add deterministic scripts to a Skill and verify their behavior.
+title: scripts/ und Tests
+description: Deterministische Skripte im Skill ergänzen und ihr Verhalten prüfen.
 locale: de
-source_locale: en
-source_revision: c4f1381
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Early on, it is tempting to put everything in `SKILL.md`. That works for simple flows, but once a step must run **stably, repeatedly, and verifiably**, scripts beat prose.
+Am Anfang landet oft alles in `SKILL.md`. Bei einfachen Abläufen okay — sobald ein Schritt **stabil, wiederholt und prüfbar** laufen muss, sind Skripte zuverlässiger als reine Prosa.
 
-Hand fixed actions to scripts; leave judgment and collaboration to the Skill.
+Feste Aktionen → Skript; Urteil und Koordination → Skill.
 
-# scripts/ and tests
+# scripts/ und Tests
 
-When a step must run deterministically (run tests, generate diff, validate format), provide a script under `scripts/` and document when to call it in `SKILL.md`.
+Muss ein Schritt deterministisch laufen (Tests, Diff erzeugen, Format prüfen), gehört das Skript nach `scripts/`, und `SKILL.md` sagt, wann es aufgerufen wird.
 
-## Example
+## Beispiel
 
 ```text
 my-skill/
@@ -25,61 +25,59 @@ my-skill/
     └── run-checks.sh
 ```
 
-## When to consider scripts/
+## Wann `scripts/` prüfen
 
-If a step matches any of these, scripts are a strong choice:
+Wenn ein Schritt eines davon erfüllt:
 
-- Should run exactly the same every time
-- Exit code itself carries meaning
-- Natural-language description would be verbose
-- You want reuse in CI or other tools later
+- Jedes Mal identisch ausführen
+- Exit-Code ist bedeutsam
+- Natürliche Sprache würde sehr weitschweifig
+- Wiederverwendung in CI oder anderen Tools gewünscht
 
-Actions like "run checks," "generate diff," "validate format," and "export report on a fixed schedule" fit scripts well.
+„Checks laufen“, „Diff erzeugen“, „Format prüfen“, „Report fest exportieren“ — typische Skript-Kandidaten.
 
-## Testing suggestions
+## Test-Empfehlungen
 
-- Run scripts manually in a practice repo; confirm exit codes and output
-- Trigger end-to-end via the Skill; confirm scripts are called as expected
-- Team scenario: verify scripts still work in CI or pre-commit
+- Skript im Übungs-Repo manuell laufen lassen: Exit-Code und Ausgabe prüfen
+- Skill end-to-end auslösen: erwarteter Skript-Aufruf?
+- Team: Skript in CI oder pre-commit weiter nutzbar halten
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Scripts make Skills complex, so avoid them
+### 1. Skripte machen den Skill nur komplexer
 
-If a script stabilizes a flaky step, the whole thing often gets simpler.
+Wenn ein Skript einen instabilen Schritt fixiert, wird das Ganze oft einfacher.
 
-### 2. If a script runs locally, the Skill is fine
+### 2. Lokal laufendes Skript = Skill okay
 
-Also check:
+Noch prüfen:
 
-- Whether the Skill triggers it correctly
-- Whether approval policy blocks it
-- Whether it still works in team environments or CI
+- Löst der Skill es korrekt aus?
+- Blockiert die Freigabe-Politik?
+- Läuft es im Team oder in CI?
 
-### 3. "Testing the Skill" means testing the script
+### 3. „Skill testen“ = Skript testen
 
-Not enough.
+Zu wenig.
 
-Script tests one action;  
-Skill tests when to call, how to call, and whether output matches expectations.
+Skript testet eine Aktion;  
+der Skill muss „wann / wie aufrufen / erwartete Ausgabe“ prüfen.
 
-## Suggested verification order
+## Typische Prüf-Reihenfolge
 
-When starting out:
+1. Skript allein
+2. Exit-Code und Ausgabe klar?
+3. Skill einmal den vollen Ablauf
+4. Noch einmal in realistischerer Umgebung
 
-1. Run the script alone
-2. Check exit code and output clarity
-3. Run full flow through the Skill once
-4. Test again in a realistic environment
+So trennst du „Skript kaputt“ von „Skill-Integration falsch“.
 
-That separates "script is broken" from "Skill integration is wrong."
+Stabile, wiederholbare Aktionen nicht nur in Prosa belassen. Zuerst Skript durchziehen, dann Skill-Aufruf prüfen.
 
-Do not rely on prose alone for actions that must repeat reliably. Get scripts working first, then confirm Skill invocation.
-
-Scripts inherit the current approval policy; see [command rules](/guide/customization/rules/command-rules/) and [Skill security](/skills/security/).
+Skripte erben die aktuelle Freigabe-Politik; siehe [Befehlsregeln](/guide/customization/rules/command-rules/) und [Skill-Sicherheit](/skills/security/).
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime allows skills to work with scripts and deterministic commands; this page's principle—script stable actions, Skill constrains flow—matches current capability.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Die aktuelle Codex-Laufzeit erlaubt Skills mit Skripten und deterministischen Befehlen; das Prinzip „stabile Aktionen skripten, Ablauf bleibt Skill-gesteuert“ passt zur aktuellen Fähigkeit.  
+**Zuletzt geprüft:** 2026-07-26

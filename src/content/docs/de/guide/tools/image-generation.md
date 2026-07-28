@@ -1,114 +1,120 @@
 ---
-title: Image generation
-description: Generating or editing images in Codex tasks—prompts, formats, and acceptance.
+title: Bildgenerierung
+description: "Bilder in Codex-Aufgaben erzeugen oder bearbeiten — Prompt, Format und Abnahme."
 locale: de
-source_locale: en
-source_revision: 3271bcc
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Codex can invoke **image generation** in some scenarios: illustration drafts, icon sketches, UI concept art, diagrams. Treat output as **artifacts to verify**—not production brand assets ready to ship.
+Codex kann in manchen Szenarien **Bildgenerierung** aufrufen: Illustrationen, Icon-Entwürfe, UI-Konzeptbilder, Schemata. Ergebnis = **abzunehmendes Artefakt**, kein sofort live-fähiges Brand-Asset.
 
-Good for visual drafts—not final deliverables.
+Geeignet für visuelle Entwürfe — nicht als finales Lieferobjekt.
 
-## What's covered
+## Inhalt dieser Seite
 
-- When to generate in Codex vs professional tools
-- How to write image prompts and constraints
-- Copyright, brand, and file management
+- Wann in Codex erzeugen vs. Profi-Tools
+- Bild-Prompt und Constraints schreiben
+- Copyright, Brand, Dateiverwaltung
 
-## Use cases
+## Geeignete Szenarien
 
-| Good fit | Poor fit |
+| Geeignet | Nicht geeignet |
 |---|---|
-| Blog image drafts, internal doc diagrams | External materials under strict brand guidelines |
-| Quick UI layout exploration | Pixel-perfect design handoff |
-| Tutorial example icons | Real-person likeness without authorization |
+| Blog-Bildentwurf, interne Doku-Schemata | Externe Assets unter strengem Brand Manual |
+| Schnelle UI-Layout-Atmosphäre | Pixelgenaue Designlieferung |
+| Beispiel-Icons in Tutorials | Unautorisierte Personenporträts |
 
-Complements [prompting with images](/prompts/prompting-with-images/): that page covers **input** images; this page covers **output** images.
+Komplementär zu [Prompting mit Bildern](/prompts/prompting-with-images/): dort **Input**-Bilder; hier **Output**-Bilder.
 
-## What image generation is for
+## Wofür Bildgenerierung taugt
 
-Better at:
+Geeignet:
 
-- Quick direction
-- Visualizing a concept
-- Draft assets for articles, docs, prototypes
+- Schnell Richtung finden
+- Visuelles Konzept sehen
+- Artikel, Doku, Prototyp mit brauchbarem Sketch
 
-Not a substitute for:
+Nicht direkt:
 
-- Official brand materials
-- Precise design specs
-- Final published visuals without review
+- Als formales Brand-Material ausgeben
+- Als präzises Designfile ausgeben
+- Als finales externes Visual ausgeben
 
-## Recommended workflow
+## Empfohlener Workflow
 
-1. State purpose, aspect ratio, style keywords (avoid piled trademark style names)
-2. Request output format (PNG/SVG if supported) and save path
-3. After generation, [verify artifacts](/guide/quality/verify-artifacts/): open file, check resolution and readability
-4. Design or legal review before external publication
+1. Zweck, Seitenverhältnis, Stilkeywords (keine Markenstil-Namen stapeln)
+2. Format (PNG/SVG falls unterstützt) und Speicherpfad
+3. Danach [Artefakte überprüfen](/guide/quality/verify-artifacts/): öffnen, Auflösung, Lesbarkeit
+4. Vor externem Release Design oder Legal
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Looks good = ready to use?
+### 1. Schön = nutzbar?
 
-Also check:
+Prüfen:
 
-- Fit for purpose
-- Weird details
-- Garbled text
-- Style match with content
+- Passt zum Zweck
+- Seltsame Details
+- Text-Chaos
+- Stil zum Inhalt
 
-### 2. "Generate an image for me" is enough?
+### 2. „Mach ein Bild“ reicht?
 
-Usually specify:
+Meist nicht. Mindestens:
 
-- Purpose
-- Landscape, portrait, or square
-- Style direction
-- Whether text should appear
-- File format
+- Zweck
+- Quer/Hoch/Quadrat
+- Stilrichtung
+- Ob Text
+- Dateiformat
 
-### 3. Replaces designers?
+### 3. Ersetzt Designer?
 
-Closer to exploration, content illustration, and concept sketching—not strict design delivery.
+Näher:
 
-## Prompt structure
+- Frühes Explorationstool
+- Content-Bildtool
+- Konzept-Sketch-Tool
 
-1. What the image is for
-2. Landscape, portrait, or square
-3. Mood and palette
-4. Text yes/no
-5. How you will verify after output
+Kein Ersatz für strenge Designlieferung.
 
-## Files and repository
+## So formulieren
 
-- Large images in `assets/` or CDN; watch Git size
-- In PR, note generation prompt and model version (internal audit)
-- See [images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
+1. Wofür das Bild
+2. Quer, hoch oder quadratisch
+3. Atmosphäre und Farben
+4. Ob Text
+5. Wie Sie danach prüfen
 
-## Safety and compliance
+## Dateien und Repo
 
-- Do not generate misleading content with sensitive marks, fake IDs, or unauthorized likenesses
-- Enterprise policy may ban certain subjects; follow [acceptable use](https://openai.com/policies/) and internal rules
+- Große Bilder in `assets/` oder CDN, Git-Volumen prüfen
+- Im PR Prompt und Modellversion (interne Audit)
+- Siehe [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/)
 
-## References
+## Sicherheit und Compliance
+
+- Keine irreführenden Inhalte mit sensiblen Marken, gefälschten Ausweisen, fremden Porträts
+- Unternehmenspolicy kann Themen verbieten; [Acceptable Use](https://openai.com/policies/) und interne Regeln
+
+## Quellen
 
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
 
-## Common mistakes
+## Häufige Fehler
 
-- Committing uncompressed 4K images
-- Passing generated images off as photos or official logos
-- Omitting "no text" constraint → garbled captions
+- Unkomprimierte 4K-Bilder ins Repo
+- Generiertes Bild als Foto oder offizielles Logo ausgeben
+- Kein „kein Text“ im Prompt → Müll-Untertitel
 
-Image generation is for direction and drafts; ship externally only after formal artifact review.
+Bildgenerierung: Richtung und Entwurf zuerst; externe Lieferung nach formalen Artefaktstandards.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / Cloud (version dependent)  
-**Verification basis:** Reviewed against official OpenAI image generation and editing materials for use cases, prompt guidance, and conservative "draft first, formal assets need review" conclusion.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / Cloud (versionsabhängig)  
+**Prüfgrundlage:** Gegen offizielle OpenAI-Bildgenerierungs- und -edit-Materialien geprüft (Szenarien, Prompt, Abnahme); konservativ „Entwurf zuerst, formale Artefakte brauchen Review“.  
+**Zuletzt geprüft:** 2026-07-26

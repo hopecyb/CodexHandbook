@@ -1,130 +1,136 @@
 ---
-title: Tables and Spreadsheets
-description: Read, clean, analyze, and export CSV, Excel, and tabular data—without breaking structure or encoding.
+title: Tabellen und Spreadsheets
+description: "CSV, Excel und Tabellendaten lesen, bereinigen, analysieren und exportieren — Struktur und Encoding schützen."
 locale: de
-source_locale: en
-source_revision: 2664ff7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Spreadsheet tasks are a classic silent-failure category: delimiter, encoding, headers, formulas, or date format—one mistake breaks everything downstream.
+Tabellenaufgaben scheitern oft still: Trennzeichen, Encoding, Header, Formeln oder Datumsformate — ein Fehler, Downstream bricht.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- Safe read/write of CSV / Excel with Codex
-- Prompt structure for data analysis tasks
-- Verifying counts and numbers
+- CSV / Excel sicher mit Codex lesen und schreiben
+- Prompt-Struktur für Datenanalyse
+- Zahlen und Zeilenanzahl abnehmen
 
-## Format choice
+## Formatwahl
 
-| Format | Pros | Watch out |
+| Format | Vorteil | Achtung |
 |---|---|---|
-| CSV | Text-diffable, universal | Encoding (UTF-8 BOM), delimiter, quoting |
-| TSV | Fewer comma conflicts | Same as CSV |
-| XLSX | Multiple sheets, formulas | Binary, hard diff; use libraries |
-| Google Sheets | Collaboration | Often via MCP or CSV export |
+| CSV | Text, diffbar, universell | Encoding (UTF-8 BOM), Delimiter, Quote-Escaping |
+| TSV | weniger Komma-Konflikte | wie CSV |
+| XLSX | Mehrblatt, Formeln | binär, Diff schwer; per Bibliothek |
+| Google Sheets | Kollaboration | oft via MCP oder CSV-Export |
 
-Small data for Git: **prefer CSV/TSV**. Complex reports: **source CSV + script to generate XLSX**.
+Kleine Daten, ins Git: **CSV/TSV bevorzugen**. Komplexe Reports: **Quell-CSV + Skript für XLSX**.
 
-Three questions:
+Zuerst drei Punkte:
 
-- Need diff, traceability, reproducibility: CSV / TSV
-- Deliver to Excel users: export XLSX
-- Do not confuse “view format” with “best processing format”
+- Diffbar, nachvollziehbar, reproduzierbar → CSV / TSV
+- Excel-gewohnte Empfänger → dann XLSX exportieren
+- „Finale Ansichtsformat“ und „beste Quellformat für Automatisierung“ nicht vermischen
 
-## Read and analyze
+## Lesen und analysieren
 
-Recommended prompt shape:
+Empfohlene Prompt-Struktur:
 
 ```text
-File: data/sales_2025.csv
+Datei: data/sales_2025.csv
 Encoding: UTF-8
-Task: Summarize revenue by region, output summary.csv
-Constraints: Do not modify source; treat blanks as 0; two decimal places
-Verification: Print first 5 rows + total row count
+Aufgabe: revenue nach region aggregieren, summary.csv ausgeben
+Constraint: Original nicht ändern; Leere als 0; zwei Dezimalstellen
+Abnahme: erste 5 Zeilen + Gesamtzeilenanzahl ausgeben
 ```
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Kontext: [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
 
-## Why spreadsheets fail quietly
+## Warum Tabellen still scheitern
 
-Common traps:
+Typische Problemstellen:
 
-- Dates as text vs date
-- Blanks as 0 vs skip vs error
-- Which column is the unique key
-- Rounding for decimals and currency
-- Whether source file may change
+- Datum als Text oder als Datum
+- Leere: 0, überspringen oder Fehler
+- Welche Spalte ist Unique Key
+- Rundung von Dezimalen und Beträgen
+- Darf das Original geändert werden
 
-Without clarity, Codex may “finish” with unreliable results.
+Ohne Klarheit wirkt es „fertig“, ist aber unzuverlässig.
 
-## Write and clean
+## Schreiben und bereinigen
 
-- Specify **column names, order, types** (dates as ISO 8601)
-- Batch large tables to avoid memory blowups
-- Deduplication and merge keys in the task—do not let Agent guess “primary key”
+- **Spaltennamen, Reihenfolge, Typen** klar (Datum ISO 8601)
+- Große Tabellen batchen — nicht alles in den Speicher
+- Dedup und Merge-Keys in die Aufgabe — Agent nicht „Primärschlüssel“ raten lassen
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### 1. Opens in Excel ≠ correct
+### 1. Datei öffnet sich = Verarbeitung korrekt
 
-“Opens” and “data intact” are different.
+Nein.
 
-### 2. Looks fine in Excel ≠ fine downstream
+„Öffnet sich“ und „Daten nicht kaputt“ sind zwei Dinge.
 
-Errors may appear only when another system consumes:
+### 2. In Excel sieht es gut aus = ok
 
-- Wrong encoding
-- Column order changed
-- Numeric types changed
-- Formulas baked to values
+Manche Fehler zeigen sich erst beim Downstream:
 
-### 3. Let Agent decide blanks, dates, keys
+- falsches Encoding
+- Spaltenreihenfolge geändert
+- Zahlentypen geändert
+- Formeln zu Werten eingefroren
 
-Usually avoid—explicit rules are steadier.
+### 3. Agent entscheidet Leere, Datum, Primärschlüssel
 
-## Five things to state for spreadsheet tasks
+Meist nicht empfehlen.
 
-1. Input file
-2. Output filename
-3. Columns to keep, aggregate, or clean
-4. Blanks, dates, duplicates handling
-5. How to verify results
+Je klarer diese Regeln, desto stabiler.
 
-Much steadier than “clean up this Excel.”
+## Tabellenaufgaben so stellen
 
-Python: `pandas`; Node: `csv-parse` / `xlsx`—document project standard in `AGENTS.md`.
+Möglichst diese 5 Punkte:
 
-## Verification
+1. Welche Eingabedatei
+2. Welcher Ausgabename
+3. Welche Spalten behalten, aggregieren, bereinigen
+4. Umgang mit Leere, Datum, Duplikaten
+5. Wie Ergebnis prüfen
 
-- Row counts and totals cross-check against source
-- Open Excel and confirm dates are not stored as numbers wrongly
-- [Verify artifacts](/guide/quality/verify-artifacts/): sample comparison
+Stabiler als „Excel bitte aufräumen“.
 
-For spreadsheets, clarity on columns, types, rules, and acceptance matters most.
+Python: `pandas`; Node: `csv-parse` / `xlsx` usw. — Standardbibliotheken in `AGENTS.md` vereinbaren.
 
-## Common mistakes
+## Mit Überprüfung
 
-- CSV garbled in Excel (missing BOM or wrong encoding)
-- Float totals without rounding rules
-- Edit formulas in Excel without reproducible script
+- Zeilenanzahl und Summen gegen Quelle
+- In Excel prüfen, ob Daten als Zahlen missverstanden
+- [Artefakte überprüfen](/guide/quality/verify-artifacts/): Stichproben
 
-## Acceptance checklist
+Bei Tabellen zählen Spalten, Typen, Regeln und Abnahme klarer als „irgendwie fertig“.
 
-- [ ] Column names and types match downstream contract
-- [ ] Totals/samples match manual or SQL check
-- [ ] Source file not overwritten unexpectedly (or change visible in diff)
+## Häufige Fehler
 
-## Reference sources
+- Excel öffnet CSV mit chinesischem Moji-Bake (fehlendes BOM / falsches Encoding)
+- Float-Summen ohne Rundungsregel
+- Formeln in Excel ändern ohne reproduzierbares Skript
 
-- stormzhang data processing tutorials
-- codex.bozhouai.com spreadsheet task templates
-- [Define constraints](/prompts/constraints-and-boundaries/)
+## Abnahmeliste
+
+- [ ] Spaltennamen und Typen passen zum Downstream
+- [ ] Summen/Stichproben stimmen mit Mensch oder SQL
+- [ ] Original nicht versehentlich überschrieben (oder Diff sichtbar)
+
+## Quellen
+
+- stormzhang Datenverarbeitung
+- codex.bozhouai.com Tabellen-Templates
+- [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
 
 ---
 
 **Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, constraints pages; stable principle: explicitly state columns, types, blanks, dates, verification—not a single library as the only implementation.  
-**Last verified:** 2026-07-26
+**Gilt für:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen verifizierte Kapitel zu Dateikontext, Artefaktprüfung und Constraints; bestätigt nur „Spalten, Typen, Leere, Datum, Abnahme explizit“ — keine Bibliothek/Plattform als einziges Implementierung.  
+**Zuletzt geprüft:** 2026-07-26

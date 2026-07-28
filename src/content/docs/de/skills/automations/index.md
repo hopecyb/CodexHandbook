@@ -1,56 +1,56 @@
 ---
 title: Automations
-description: Scheduled, event-driven, and background runs—what to automate vs what needs human review.
+description: Zeitgesteuert, ereignisgetrieben, im Hintergrund — was automatisieren, was menschlich prüfen.
 locale: de
-source_locale: en
-source_revision: 570f1ec
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`Automations` is about running repeat tasks automatically—not making Codex "smarter."
+`Automations` behandelt, wie wiederholte Aufgaben automatisch laufen — nicht „Codex schlauer machen“.
 
-This section focuses on:
+Fokus dieser Gruppe:
 
-- Which tasks are worth automating
-- Where automation should stop for human review
-- How to design failure, alerts, and rollback
+- Welche Aufgaben lohnen Auto-Lauf
+- Wo Auto-Lauf stoppen und auf Menschen warten
+- Fehler, Alarme, Rollback gestalten
 
-## How to decide
+## Entscheidungsschwerpunkt
 
-You do not need to automate every repeat task on day one.
+Beim Einstieg nicht gleich jede Wiederholung abgeben.
 
-Decide in this order:
+Reihenfolge:
 
-1. Is it **repeatable, rule-clear, and easy to verify**?
-2. Can it stay read-only, advisory only, or draft-PR only?
-3. Only then consider fully unattended runs
+1. Ist die Sache **wiederholt, regelklar, Ergebnis gut abnehmbar**?
+2. Kann sie nur lesen, nur vorschlagen, nur Draft-PR öffnen?
+3. Erst dann voll unbeaufsichtigt erwägen
 
-## Entry in this section
+## Einstieg dieser Gruppe
 
-- [Scheduled and background tasks](/skills/automations/scheduled-tasks/): What automation tasks are, triggers, exit conditions, human review points
+- [Geplante und Hintergrundaufgaben](/skills/automations/scheduled-tasks/): Was eine Automations-Aufgabe ist, Trigger, Exit-Bedingungen, menschliche Überprüfungspunkte
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. If it repeats, automate it
+### 1. Wiederholt → muss automatisiert werden
 
-If judgment still depends heavily on people, automating too early often causes more problems.
+Wenn Kriterien noch stark menschlich sind, macht frühe Automation eher Probleme.
 
-### 2. Automation should eliminate human confirmation
+### 2. Automation soll menschliche Bestätigung sparen
 
-Much value already comes from:
+Oft schon wertvoll:
 
-- Automatic checks
-- Automatic summaries
-- Automatic issue / draft PR creation
+- Auto-Check
+- Auto-Zusammenfassung
+- Auto Issue / Draft-PR
 
-Do not push results straight to main.
+Nicht direkt auf den Hauptbranch pushen.
 
-Automation fits tasks that repeat, have clear rules, and produce checkable results. For judgment-heavy work, keep human review in the loop.
+Automation passt zu „wiederholt, regelklar, gut prüfbar“. Bei urteilsabhängigen Dingen menschliche Überprüfung im Ablauf belassen.
 
 ---
 
 **Status:** outdated  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** This section assumes currently available Automations capability and entry points; official public material on Codex automation surfaces is still incomplete as of 2026-07-26—not stable enough to verify.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Cloud / App / CLI  
+**Nachprüfhinweis:** Gruppe setzt aktuelle Automations-Fähigkeit und Einstiege voraus; öffentliche Codex-Automations-Oberfläche ist unvollständig — bis 2026-07-26 nicht als stabil freigeben.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,56 +1,58 @@
 ---
-title: Scripts and Pipelines
-description: Orchestrate codex exec in shell, Makefile, and GitHub Actions—repeatable and auditable.
+title: Skripte und Pipelines
+description: 'codex exec in Shell, Makefile und GitHub Actions orchestrieren — wiederholbar und auditierbar.'
 locale: de
-source_locale: en
-source_revision: c359901
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This is about turning Codex from a one-off action into **steps your team can rerun, audit, and hand off**.
+Hier geht es darum, Codex von einer einmaligen Ad-hoc-Aktion in **Schritte zu verwandeln, die das Team wiederholen, bei Problemen nachverfolgen und übergeben kann**.
 
-Scripts fix the flow; pipelines repeat it on schedule or on events.
+Kurz: Skripte fixieren den Ablauf; Pipelines wiederholen ihn nach Regeln.
 
-This page shows how to embed [codex exec](/guide/developer-platform/non-interactive/codex-exec/) in shell, Makefile, or CI pipelines.
+Dieses Kapitel zeigt, wie Sie [codex exec](/guide/developer-platform/non-interactive/codex-exec/) in Shell, Makefile oder CI-Pipelines einbetten.
 
-## What this page covers
+## Inhalt dieser Seite
 
-- Local scripts vs CI jobs
-- Managing prompts and secrets
-- Combining with [code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Arbeitsteilung lokales Skript vs. CI-Job
+- Verwaltung von Prompt und Secrets
+- Kombination mit [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## What this solves
+## Welches Problem wird gelöst
 
-“Scripts and pipelines” turns “I did this manually today” into “the team can reliably do the same thing later.”
+„Skripte und Pipelines“ machen aus „heute habe ich das manuell so gemacht“ ein „das Team kann es künftig auf dieselbe Weise stabil wiederholen“.
 
-Three priorities:
+Drei Dinge zählen besonders:
 
-- Repeatable
-- Auditable
-- Handoff-friendly
+- Wiederholbarkeit
+- Auditierbarkeit
+- Übergabefähigkeit
 
-## Why teams avoid pasting prompts into CI UI
+## Warum viele Teams Prompts nicht direkt in die CI-UI kleben
 
-Hard to maintain:
+Das ist schwer wartbar:
 
-- New owners do not know the original design
-- Logic changes cannot go through normal code review
-- Failures are hard to attribute to prompt vs environment vs script
+- Neue Personen wissen nicht, wie es ursprünglich gedacht war
+- Logikänderungen gehen nicht sauber durch Code Review
+- Bei Fehlern ist unklar, ob Prompt, Umgebung oder Skript geändert wurde
 
-Putting prompts, scripts, and rules in Git is version control for automation.
+Prompt, Skript und Regeln in Git zu legen heißt: der Automatisierung Versionskontrolle geben.
 
-## Common misconceptions
+## Häufige Missverständnisse
 
-### Automation values stability, not speed first
+### Automatisierung braucht Stabilität, nicht „je früher desto besser“
 
-Many teams string everything together before prompts stabilize, success criteria are clear, or permissions are tight—then debugging gets painful.
+Beim ersten Automatisieren wollen viele sofort die ganze Kette verdrahten.
 
-### Scripts fix the approach
+Wenn Prompt noch oft wechselt, Erfolgskriterien unklar und Berechtigungsgrenzen wackelig sind, macht frühe Automatisierung das Debugging später schwerer.
 
-A good script turns steps people memorize into files everyone can read and review.
+### Skripte fixieren Vorgehen
 
-## Minimal shell snippet
+Ein gutes Skript macht Schritte, die sonst im Kopf stecken, zu Dateien, die jeder lesen und reviewen kann.
+
+## Minimal nutzbares Shell-Fragment
 
 ```bash
 #!/usr/bin/env bash
@@ -61,19 +63,19 @@ PROMPT_FILE="prompts/ci/security-review.md"
 codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
-Keep `prompts/ci/security-review.md` in Git; changes go through review.
+`prompts/ci/security-review.md` ins Git; Änderungen über Review.
 
-## Habits worth forming first
+## Gewohnheiten, die sich zuerst lohnen
 
-Do not aim for “everything at once.” Fix these three first:
+Beim ersten Automatisieren nicht „groß und vollständig“ anstreben — zuerst diese drei Dinge fixieren:
 
-1. Where prompt files live
-2. What the entry script is called
-3. How success and failure are judged
+1. Wo liegt die Prompt-Datei
+2. Wie heißt das Einstiegsskript
+3. Wie werden Erfolg und Fehler erkannt
 
-Then adding logs, schema, and notifications is much easier.
+Danach fallen Logs, Schema und Benachrichtigungen leichter.
 
-## GitHub Actions sketch
+## GitHub-Actions-Skizze
 
 ```yaml
 jobs:
@@ -88,7 +90,7 @@ jobs:
           fetch-depth: 0
       - name: Install Codex CLI
         run: |
-          # Pin version per official install docs
+          # Version pinnten; offizielle Installationsdokumentation maßgeblich
           npm install -g @openai/codex@<pinned-version>
       - name: Run review
         env:
@@ -98,56 +100,56 @@ jobs:
 ```
 
 :::caution
-Adjust install method and permission scopes to org security requirements; **do not** echo secrets in workflows.
+Installationsweg und Permission-Scopes im Beispiel an die Sicherheitsanforderungen der Organisation anpassen; Secrets **nicht** im Workflow echoen.
 :::
 
-## Recommended layers
+## Empfohlener Workflow
 
-| Layer | Content |
+| Ebene | Inhalt |
 |---|---|
 | Repo | `prompts/`, `tools/run-codex.sh` |
-| CI | Read-only checkout, pinned CLI, upload log artifacts |
-| Callback | Optional [Webhook](/guide/developer-platform/webhooks/overview/) to update internal systems |
+| CI | Read-only-Checkout, feste CLI, Log-Artifact hochladen |
+| Callback | optional [Webhook](/guide/developer-platform/webhooks/overview/) für interne Systeme |
 
-## How to decide
+## Wann es passt
 
-Good candidates for scripts or pipelines:
+Wenn beides zutrifft, eignet sich Skript oder Pipeline:
 
-- You do it repeatedly
-- You want each run to follow the same approach
+- Sie wiederholen es oft
+- Sie wollen jedes Mal möglichst dasselbe Vorgehen
 
-Examples: PR review, change summaries, security scans, doc checks.
+Beispiele: PR-Review, Änderungszusammenfassung, Security-Scan, Dokumentationschecks.
 
-Do not rush “full auto” before the flow is stable; script first, then pipeline, is usually safer.
+Nicht vollautomatisieren, solange der Ablauf noch instabil ist; zuerst als Skript fixieren, dann in die Pipeline — meist robuster.
 
-## Common mistakes
+## Häufige Fehler
 
-- Dynamic prompt from `${{ github.event.pull_request.body }}` without escaping (injection)
-- No concurrency control on the same PR, duplicate runs burn quota
-- Works locally, CI missing deps (no `npm ci`)
-- Success = “finished” with no structured conclusion parsing
-- Automation granted write permission too early
+- Dynamisches Zusammenfügen von `${{ github.event.pull_request.body }}` ohne Escaping (Injection)
+- Keine Concurrency-Kontrolle am selben PR → doppelte Läufe, Quotenverbrauch
+- Lokal OK, CI fehlt Abhängigkeit (kein `npm ci`)
+- Erfolgskriterium nur „gelaufen“, ohne strukturierte Auswertung
+- Zu hohe Schreibrechte von Anfang an
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- CI token least privilege; no `git push` unless a separate approval job
-- Fork PR workflows with secrets need security review (`pull_request_target`)
+- CI-Token Least Privilege; kein `git push`, außer in einem separat freigegebenen Job
+- Workflows bei Fork-PRs vorsichtig mit Secrets (`pull_request_target` braucht Security Review)
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Prompts and scripts are versioned in Git
-- [ ] CI failure blocks merge when policy requires
-- [ ] Artifact retention meets compliance
-- [ ] Matches local `make review` behavior
+- [ ] Prompt und Skript versioniert in Git
+- [ ] CI-Fehler blockiert Merge (falls Policy es verlangt)
+- [ ] Artifact-Retention entspricht Compliance
+- [ ] Verhalten konsistent mit lokalem `make review`
 
-## Reference sources
+## Quellen
 
-- OpenAI Codex + GitHub integration docs
-- codex.bozhouai.com automation chapter
+- OpenAI Codex + GitHub-Integrationsdokumentation
+- Automatisierungskapitel auf codex.bozhouai.com
 
 ---
 
 **Status:** outdated  
-**Products:** CLI  
-**Review note:** The principle of versioning prompts, scripts, and pipelines in Git still holds, but examples depend on `codex exec`, CLI install, and GitHub Actions wiring—high-churn details; restore `verified` after current official pipeline docs are added.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI  
+**Prüfhinweis:** Das Prinzip „Prompt, Skript und Pipeline über Git reviewen“ bleibt gültig; Beispiele hängen an `codex exec`, CLI-Installation und konkreten GitHub-Actions-Anbindungen — hochflüchtige Implementierungsdetails. Nach aktuellem offiziellem Pipeline-Stand wieder auf `verified` setzen.  
+**Zuletzt geprüft:** 2026-07-26

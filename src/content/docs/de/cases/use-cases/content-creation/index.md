@@ -1,30 +1,30 @@
 ---
-title: Content creation
-description: Entry for docs, articles, and content-asset cases—focus on review, rewriting, and artifact verification.
+title: Content-Erstellung
+description: Einstieg zu Fällen für Docs, Artikel und Content-Assets — Fokus auf Prüfung, Umschreiben und Artefakt-Abnahme.
 locale: de
-source_locale: en
-source_revision: 1e7006a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Content-creation cases focus on this scenario:
+Fälle zur Content-Erstellung drehen sich um:
 
-> **When you need publishable, reviewable content, how can Codex help?**
+> **Wenn eine veröffentlichungs- und prüfbare Content-Lieferung ansteht — wie kann Codex mitwirken?**
 
-## Cases in this group
+## Einstieg dieser Gruppe
 
-- [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Dokumentationssite mit Prüfung refactoren](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## What this group emphasizes
+## Schwerpunkte dieser Gruppe
 
-- How to change multi-file content in batches
-- How to avoid rewrite that only "expands" copy
-- How build, review, and human check form a closed loop
+- Mehrdatei-Inhalte in Batches ändern
+- Copy so umschreiben, dass es nicht nur «aufbläht»
+- Build, Prüfung und Gegenprüfung als Kreislauf
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current content-creation case entry and related content-artifact/review chapters; this page only describes what the content-creation case group covers and where to enter.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen den aktuellen content-creation-Falleinstieg dieses Repos und verwandte Kapitel zu Content-Artefakten/Prüfung. Diese Seite erklärt nur Fokus und Einstieg der Content-Fallgruppe.  
+**Zuletzt geprüft:** 2026-07-26

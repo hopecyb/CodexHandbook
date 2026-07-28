@@ -1,80 +1,80 @@
 ---
-title: Turn a workflow into a Skill
-description: The third repeat of the same flow deserves a Skill—trigger, instructions, and acceptance in one place.
+title: Einen Workflow als Skill verfestigen
+description: "Beim dritten Mal lohnt sich ein Skill — Trigger, Anleitung und Abnahme in einem Paket."
 locale: de
-source_locale: en
-source_revision: cc48744
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When the same class of task (release checks, doc sync, security scans) is done **a third time** by copy-pasting prompts, consider a [Skill](/skills/overview/). This chapter bridges [workflow methods](/cases/workflows/) and the extension system.
+Wenn dieselbe Aufgabenklasse (Release-Check, Docs-Sync, Security-Scan) **zum dritten Mal** per Copy-Paste-Prompt erledigt wird, ist ein [Skill](/skills/overview/) fällig. Dieses Kapitel verbindet [Workflow-Methoden](/cases/workflows/) mit dem Erweiterungssystem.
 
-## What this page solves
+## Welches Problem löst diese Seite
 
-- When to upgrade from a prompt template to a Skill
-- What a Skill should include (instructions, resources, scripts)
-- How to share and version with the team
+- Wann von Prompt-Vorlage zu Skill upgraden
+- Welche Teile ein Skill braucht (Anleitung, Ressourcen, Skripte)
+- Wie Teams teilen und versionieren
 
-## Signals worth capturing
+## Signale für Verstetigung
 
-- Fixed steps + fixed acceptance checklist
-- Needs repo templates or scripts
-- Multiple people need consistent behavior
-- You want the model to **automatically recall** the flow on relevant tasks
+- Feste Schritte + feste Abnahme-Checkliste
+- Referenz auf Vorlagen oder Skripte im Repository nötig
+- Mehrere Personen brauchen konsistentes Verhalten
+- Das Modell soll den Ablauf bei verwandten Aufgaben **automatisch erinnern**
 
-Skip capture for: one-off exploration, small fixes tightly bound to that day's context.
+Nicht verstetigen: einmalige Erkundung, kleine Fixes stark abhängig vom Tageskontext.
 
-## Minimum viable approach
+## Minimal brauchbares Vorgehen
 
-1. **Write SKILL.md clearly**: when to trigger, inputs/outputs, prohibitions
-2. **Attach `references/`**: checklists, sample diffs
-3. **Optional `scripts/`**: repeatable verification commands (aligned with [command rules](/guide/customization/rules/command-rules/))
-4. **Mention the Skill name** in repo README or AGENTS.md
-5. **Trial 2–3 runs**, then mark `verified`
+1. **SKILL.md klar schreiben**: Wann triggern, Ein-/Ausgabe, Verbote
+2. **`references/` anhängen**: Checklist, Beispiel-Diff
+3. **Optional `scripts/`**: wiederholbare Überprüfungsbefehle (konsistent mit [Befehlsregeln](/guide/customization/rules/command-rules/))
+4. **Skill-Namen in README oder AGENTS.md erwähnen**
+5. **2–3 Probeläufe**, dann als `verified` markieren
 
-Getting started: [Create your first Skill](/skills/create-your-first-skill/)
+Einstieg: [Ersten Skill erstellen](/skills/create-your-first-skill/)
 
-## Recommended workflow
+## Empfohlener Workflow
 
 ```text
-Extract prompt and acceptance from a successful case
-    → trim to Skill body (drop casual wording, keep constraints)
-    → add trigger description ("before merge", "before release")
-    → team PR review
-    → place in repo examples/, team plugin, or internal skill library
+Aus erfolgreichem Fall Prompt und Abnahmepunkte extrahieren
+    → Auf Skill-Text kürzen (Umgangssprache raus, Constraints behalten)
+    → Trigger-Beschreibung («vor Merge», «vor Release»)
+    → Team-PR-Review
+    → In vereinbartes examples/-Verzeichnis, Team-Plugin oder interne Skill-Bibliothek
 ```
 
-Compare with [Turn a flow into automation](/skills/automations/scheduled-tasks/): Skills are **interactive guidance**; Automations are **scheduled/unattended**.
+Vergleich mit [Abläufe automatisieren](/skills/automations/scheduled-tasks/): Skills sind eher **interaktive Anleitung**; Automations eher **zeitgesteuert / unbeaufsichtigt**.
 
-## Common mistakes
+## Häufige Fehler
 
-- Skill longer than reading `AGENTS.md`
-- No acceptance checklist—execution quality drifts
-- Scripts need local secrets with no SECURITY note
-- Duplicates and contradicts Hooks rules
+- Skill länger als `AGENTS.md` zu lesen
+- Keine Abnahme-Checkliste → Qualitätsdrift
+- Skripte brauchen lokale Secrets ohne SECURITY-Hinweis
+- Widerspruch zu Hook-Regeln
 
-## Security boundaries
+## Sicherheitsgrenzen
 
-- See [Skill security and versioning](/skills/security/)
-- Team Skills belong on the extension approval list (see [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Siehe [Skill-Sicherheit und Versionierung](/skills/security/)
+- Team-Skills in die Freigabeliste für Erweiterungen aufnehmen (siehe [Plugin- und MCP-Risiko](/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] New teammate can complete the task using only the Skill
-- [ ] Trigger conditions clear; low false-trigger rate
-- [ ] Version or CHANGELOG for team-level Skills
-- [ ] Cross-links to source workflow docs
+- [ ] Neue Kolleg:innen schaffen eine Aufgabe allein mit dem Skill
+- [ ] Trigger klar, Fehlauslösungen selten
+- [ ] Version oder CHANGELOG (Team-Ebene)
+- [ ] Querverlinkung zum Quell-Workflow-Dokument
 
-## References
+## Referenzquellen
 
-- KimYx0207 Skills chapters
+- KimYx0207 Skills-Kapitel
 - stormzhang `20-skills.md`
-- In-repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) and [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
+- Im Repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) und [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public "Save workflows as skills" use cases, plus this handbook's verified Skills, automation, command rules, and extension risk chapters; content is limited to stable guidance on when to capture repeated flows as Skills and how to organize instructions and acceptance.
+**Geeignete Produkte:** App / CLI / IDE  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Use Cases „Save workflows as skills“ bei OpenAI Developers sowie die bereits geprüften Kapitel zu Skills, Automatisierung, Befehlsregeln und Erweiterungsrisiken. Der Inhalt beschränkt sich auf stabile Methoden „wann wiederkehrende Abläufe als Skill verstetigen und wie Anleitung plus Abnahme organisieren“.  
+**Zuletzt geprüft:** 2026-07-26

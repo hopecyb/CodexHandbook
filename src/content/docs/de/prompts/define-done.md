@@ -1,85 +1,86 @@
 ---
-title: Define done
-description: Write checkable completion conditions.
+title: Fertigstellungsstandard definieren
+description: Prüfbare Fertigstellungsbedingungen formulieren.
 locale: de
-source_locale: en
-source_revision: 61ae3f2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people state what they want but not what "done enough" looks like. Then whether the work is finished becomes a matter of feel.
+Viele nennen „was ich will“, aber nicht „wann es fertig genug ist“. Ob wirklich fertig, bleibt dann Gefühlssache.
 
-Definition of done is how you plan to verify the result.
+Der Fertigstellungsstandard ist deine geplante Ergebnisprüfung.
 
-Acceptance criteria must be **observable**:
+Abnahmekriterien müssen **beobachtbar** sein:
 
-- Weak: "code quality improved"
-- Strong: "`npm test` passes; `Button` supports `disabled`; Storybook screenshots match the design"
+- Schlecht: „Codequalität verbessern“
+- Gut: „`npm test` bestanden; `Button` unterstützt `disabled`; Storybook-Screenshot entspricht Design“
 
-## Why tasks often end without a clear "done"
+## Warum oft unklar bleibt, ob fertig
 
-Often goal and definition of done are blended.
+Oft vermischen sich Ziel und Fertigstellungsstandard.
 
-- **Goal:** the outcome you want
-- **Definition of done:** how you confirm that outcome was reached
+- **Ziel**: welches Ergebnis du willst
+- **Fertigstellungsstandard**: wie du bestätigst, dass es erreicht ist
 
-"Fix this bug" is a goal;  
-"reproducible fix, related tests pass, no new console errors" is closer to definition of done.
+„Diesen Bug fixen“ ist Ziel;  
+„Fix stabil reproduzierbar, relevante Tests grün, keine neuen Console-Errors“ ist näher am Fertigstellungsstandard.
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. If it looks roughly right, it's done
+### 1. „Sieht ungefähr richtig aus“ = fertig
 
-This bites hardest on small tasks. "Roughly right" often misses tests, edge cases, and side effects.
+Bei kleinen Aufgaben oft die Falle. „Ungefähr“ übersieht Tests, Randfälle und Nebenwirkungen.
 
-### 2. Definition of done is praising the result in more words
+### 2. Fertigstellungsstandard = Ergebnis loben
 
-Definition of done must be checkable—not a victory speech.
+Er muss prüfbar sein — kein Abschlussstatement.
 
-### 3. Build passing equals done
+### 3. Build grün = fertig
 
-Not necessarily.
+Nicht unbedingt.
 
-Build passing is usually one checkpoint, not proof that:
+Build ist oft nur ein Checkpoint, nicht:
 
-- behavior is correct
-- scope wasn't exceeded
-- copy fits the audience
-- sources were verified
+- Funktion wirklich korrekt
+- Scope eingehalten
+- Text passend für Leser
+- Quellen geprüft
 
-## A common way to write it
+## Eine gängige Schreibweise
 
-If you're unsure, pick from these three types:
+Wenn unklar, wähle aus diesen 3 Typen:
 
-- **Functional check:** does behavior match expectation?
-- **Technical check:** build / test / lint pass?
-- **Scope check:** only agreed areas changed?
+- **Funktionscheck**: Verhalten wie erwartet?
+- **Technikcheck**: Build / Tests / Lint ok?
+- **Scope-Check**: nur vereinbarter Bereich geändert?
 
-For example:
+Zum Beispiel:
 
 ```text
-Acceptance criteria:
-- Only edit docs homepage copy; don't change layout or components
-- `pnpm build` passes
-- Hero copy is easier for beginners; no assumed jargon on first visit
+Abnahmekriterien:
+- Nur Docs-Homepage-Text, kein Layout/keine Komponenten
+- `pnpm build` bestanden
+- First-Screen für Einsteiger; setzt keine Fachbegriffe voraus
 ```
 
-## A quick self-check
+## Prüffrage
 
-After writing, ask:
+Nach dem Schreiben:
 
-> **If someone else had this list, could they judge pass or fail?**
+> **Könnte eine andere Person damit „bestanden“ oder „nicht bestanden“ entscheiden?**
 
-If not, it's probably still too vague.
+Wenn nicht, ist es meist noch zu vage.
 
-Bottom line: don't let "is it done?" depend on guessing.
+Kurz: „fertig?“ darf kein Rätselraten sein.
 
-Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/guide/verification/)
+Schreib Verifikationsbefehle in den Standard — dann führt der Agent sie eher aus: [Tests ausführen](/guide/verification/)
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains acceptance and definition-of-done writing only; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite erklärt nur Abnahme- und Fertigstellungsstandards; interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

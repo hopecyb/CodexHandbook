@@ -1,40 +1,40 @@
 ---
-title: 'Example: Automation Skill'
-description: Package repeat checks or report generation as a Skill.
+title: "Beispiel: Automations-Skill"
+description: Wiederholte Checks oder Report-Erzeugung als Skill kapseln.
 locale: de
-source_locale: en
-source_revision: aa00f2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Automation Skill
+# Beispiel: Automations-Skill
 
-## SKILL.md skeleton
+## SKILL.md-Skelett
 
 ```md
 ---
 name: daily-report
-description: Summarize yesterday's changes, test results, and todos into daily report Markdown. Use when the user wants a daily report, standup material, or progress summary.
+description: "Fasst gestrige Änderungen, Testergebnisse und Todos zu einer Tagesbericht-Markdown zusammen. Nutzen bei Tagesbericht, Stand-up-Material oder Fortschrittsübersicht."
 ---
 
-## Process
-1. Read git log (specified time range) and CI status summary
-2. List completed items, blockers, tomorrow's plan
-3. Output to reports/daily-YYYY-MM-DD.md
-4. Do not send email or messages unless I explicitly ask
+## Ablauf
+1. git log (Zeitraum) und CI-Status-Zusammenfassung lesen
+2. Erledigtes, Blocker, Plan für morgen listen
+3. Nach reports/daily-YYYY-MM-DD.md schreiben
+4. Keine E-Mails/Nachrichten, außer ich verlange es ausdrücklich
 
 ## scripts/
 - scripts/collect-metrics.sh (optional)
 ```
 
-## Related
+## Verwandt
 
-- [Automate a daily report case](/cases/automate-a-daily-report/)
-- [Scheduled tasks](/skills/automations/scheduled-tasks/)
+- [Täglicher Report automatisieren](/cases/automate-a-daily-report/)
+- [Geplante Aufgaben](/skills/automations/scheduled-tasks/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative skeleton for repeat summary Skills—stable workflow pattern Codex/Skills can carry, not tied to a specific automation entry point.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Illustratives Skelett für wiederholte Zusammenfassungs-Skills; stabiles Workflow-Muster unter Codex/Skills, ohne konkreten Automations-Einstieg.  
+**Zuletzt geprüft:** 2026-07-26

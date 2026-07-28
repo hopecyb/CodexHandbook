@@ -1,90 +1,90 @@
 ---
-title: Debugging MCP connections
-description: Systematic troubleshooting when MCP servers fail to start, tools time out, or results look wrong.
+title: MCP-Verbindungen debuggen
+description: Systematische Schritte bei Server-Startproblemen, Timeouts oder seltsamen Ergebnissen.
 locale: de
-source_locale: en
-source_revision: f45a7ae
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-MCP brings external systems into Codex. Failures often fall into three buckets: **process won't start**, **auth wrong**, **tool logic or timeout**. This page gives a check order so you are not guessing at config.
+MCP bringt externe Systeme in Codex. Bei Fehlern oft drei Klassen: **Prozess startet nicht**, **Auth falsch**, **Werkzeuglogik oder Timeout**. Diese Seite gibt eine Prüf-Reihenfolge — statt Konfig zu raten.
 
-## Contents
+## Inhalt
 
-- Minimal reproduction for MCP issues
-- Log and configuration checklist
-- When to suspect the server implementation vs Codex
+- MCP-Probleme minimal reproduzieren
+- Log- und Konfig-Checkliste
+- Wann eher Server-Implementierung als Codex verdächtig ist
 
-Related: [MCP overview](/skills/mcp/mcp-overview/) · [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
+Verwandt: [MCP-Überblick](/skills/mcp/mcp-overview/) · [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/)
 
-## Triage flow
+## Triage-Ablauf
 
 ```text
-1. Can the server start alone in a terminal?
-2. Is config JSON/TOML syntax and path correct?
-3. Are environment variables visible inside the MCP process?
-4. Was the Codex session restarted to load new config?
-5. Does a single tool call timeout or have bad parameters?
+1. Startet der Server allein im Terminal?
+2. JSON/TOML-Syntax und Pfade korrekt?
+3. Sind Umgebungsvariablen im MCP-Prozess sichtbar?
+4. Codex-Sitzung neu gestartet und neue Konfig geladen?
+5. Einzelner Werkzeugaufruf: Timeout oder Parameterfehler?
 ```
 
-## Startup failures
+## Start fehlgeschlagen
 
-| Check | Notes |
+| Check | Hinweis |
 |---|---|
-| Command path | Is `npx`, `uvx`, absolute path on PATH? |
-| Dependency versions | Node/Python versions meet MCP server requirements? |
-| Manual run | Run command + args from config in shell |
-| Transport | stdio vs HTTP/SSE matches docs? |
+| Befehlspfad | `npx`, `uvx`, Absolutpfad in PATH? |
+| Dependency-Versionen | Node/Python erfüllt MCP-Server-Anforderungen? |
+| Manuell laufen | command + args aus der Konfig in der Shell |
+| Transport | stdio vs. HTTP/SSE wie in der Doku? |
 
-## Auth failures
+## Auth fehlgeschlagen
 
-- API key injected via environment variable (not in repo)
-- OAuth MCP may need re-authorization when expired
-- Corporate proxy blocking MCP outbound
+- API-Key über Env (nicht im Repo)
+- OAuth-MCP abgelaufen → neu autorisieren
+- Firmenproxy blockiert MCP-Outbound
 
-Environment variable index: [environment variables](/guide/reference/environment-variables/)
+Env-Index: [Umgebungsvariablen](/guide/reference/environment-variables/)
 
-## Abnormal tool calls
+## Werkzeugaufruf anomal
 
-| Symptom | Possible cause |
+| Symptom | Mögliche Ursache |
 |---|---|
-| Tool not found | Server version vs client schema mismatch |
-| Timeout | Slow external API; increase timeout or optimize query |
-| Empty result | Wrong parameter names; check MCP server logs |
-| Garbled text | Non–UTF-8 encoding |
+| Tool not found | Server-Version vs. Client-Schema mismatched |
+| Timeout | Externe API langsam; Timeout erhöhen oder Query optimieren |
+| Leeres Ergebnis | Falsche Parameternamen; MCP-Server-Logs prüfen |
+| Zeichensalat | Encoding nicht UTF-8 |
 
-In prompt, ask Agent to **print tool return structure** (redacted) for debugging.
+Im Prompt den Agent bitten, **die Struktur der Werkzeugantwort** (maskiert) zu drucken.
 
-## Safe debugging habits
+## Sichere Debug-Gewohnheiten
 
-- Use **test tenant** API keys, not production
-- Do not paste full tokens into chat logs
-- If MCP is suspicious, disconnect immediately and rotate keys
+- **Test-Tenant**-API-Key, nicht Produktion
+- Keine vollen Tokens in Chat-Logs
+- Bei Verdacht auf bösartiges MCP sofort trennen und Keys rotieren
 
-Error index: [error reference](/guide/reference/error-reference/)
+Fehlerindex: [Fehler- und Hinweisreferenz](/guide/reference/error-reference/)
 
-## Common mistakes
+## Häufige Fehler
 
-- Config changed but Codex session not restarted
-- Inconsistent MCP config in IDE vs CLI
-- MCP server log level always debug; screenshots submitted with secrets
+- Konfig ändern, Codex-Sitzung nicht neu starten
+- IDE und CLI mit inkonsistenten MCP-Konfigs
+- MCP-Server dauerhaft auf debug, Screenshots mit Secrets
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Can start MCP server independently in terminal
-- [ ] At least one read-only tool call succeeded
-- [ ] Team standard MCP config template documented
+- [ ] MCP-Server allein im Terminal startbar
+- [ ] Mindestens ein nur-lesen-Werkzeug erfolgreich
+- [ ] Team-Standard-MCP-Konfigvorlage dokumentiert
 
-## References
+## Quellen
 
-- Model Context Protocol spec and debugging guide
+- Model Context Protocol Spezifikation und Debug-Guide
 - KimYx0207 CX-07
 - stormzhang `21-mcp.md`
 
 ---
 
 **Status:** outdated  
-**Applicable products:** CLI / IDE / App  
-**Verification basis:** Troubleshooting depends on how current Codex clients load, display, and invoke MCP tools—high change risk; needs rewrite against current docs.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** CLI / IDE / App  
+**Nachprüfhinweis:** Troubleshooting hängt daran, wie der aktuelle Codex-Client MCP lädt, anzeigt und aufruft — hohes Änderungsrisiko; nach aktueller Doku neu prüfen.  
+**Zuletzt geprüft:** 2026-07-26

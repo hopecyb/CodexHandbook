@@ -1,102 +1,105 @@
 ---
-title: Verification
-description: Review diffs, run tests, validate sources, and define done.
+title: Überprüfung
+description: "Diffs prüfen, Tests ausführen, Quellen validieren und Fertigkriterien definieren."
+locale: de
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 17
-locale: de
-source_locale: en
-source_revision: 705b1f4
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Verification
+# Überprüfung
 
-A common beginner mistake: **treating "Codex said it is done" as actually done.**
+Der häufigste Anfängerfehler beim ersten Codex-Einsatz: **„fertig“ zu glauben, nur weil es „fertig“ sagt**.
 
-Verification means judging results against your requirements—not against the model's claim.
+Überprüfung heißt: Nicht danach urteilen, was es sagt — sondern danach, ob das Ergebnis deine Anforderungen wirklich erfüllt.
 
-Codex output must be checkable. Verification is not optional—it closes every task loop.
+Codex-Ausgaben müssen prüfbar sein. Überprüfung ist kein optionaler Schritt — sie gehört zu jedem Aufgabenkreislauf.
 
-## What verification asks
+## Was Überprüfung wirklich prüft
 
-Whether you are changing code, writing docs, or researching, the same question remains:
+Ob Code, Doku oder Recherche — am Ende dieselbe Frage:
 
-> **Is this "close enough" or actually ready to deliver?**
+> **Ist das jetzt „sieht ungefähr so aus“ — oder „kann geliefert werden“?**
 
-Much rework happens because:
+Viele Nacharbeiten kommen nicht davon, dass das Modell alles falsch gemacht hat, sondern davon, dass:
 
-- Wrong places were changed
-- Work was half-finished
-- Sources were claimed but not reliable
-- A page loads but the flow does not work
-- Docs exist but a newcomer cannot follow them
+- Unerwünschte Stellen geändert wurden
+- Die Hälfte fehlt
+- Es „Quellen geprüft“ behauptet, die Quellen aber unzuverlässig sind
+- Die Seite öffnet, der Ablauf aber nicht durchläuft
+- Doku da ist, aber Anfänger nicht danach handeln können
 
-Verification **keeps risk before delivery**.
+Überprüfung **hält Risiko vor der Lieferung zurück**.
 
-## Common pitfalls
+## Häufige Irrwege
 
-### 1. "It runs" equals done
+### 1. Läuft = fertig
 
-Running only means no immediate crash—not:
+„Läuft“ heißt nur: kein sofortiger Fehler — nicht:
 
-- Correct logic
-- Correct scope
-- No regressions
-- Match to your intended outcome
+- Logik korrekt
+- Umfang korrekt
+- Keine Regression
+- Entspricht dem gewünschten Ergebnis
 
-### 2. "I verified" in the model's reply is enough
+### 2. Das Modell sagt „überprüft“ = entspannt bleiben
 
-Check **what** was verified:
+Schau, **welche Überprüfung es wirklich gemacht hat**. Zum Beispiel:
 
-- Tests actually run?
-- Diff actually read?
-- Artifacts actually opened?
-- Sources traceable?
+- Tests wirklich gelaufen?
+- Diff wirklich gelesen?
+- Artefakt wirklich geöffnet und geprüft?
+- Nachvollziehbare Quellen angegeben?
 
-### 3. Verification is only for programmers
+### 3. Überprüfung nur für Programmierer?
 
-Writing, spreadsheets, config, docs, and PR descriptions all need verification—methods differ.
+Artikel schreiben, Tabellen machen, Konfiguration erzeugen, Material ordnen, PR-Beschreibungen — alles braucht Überprüfung. Nur die Methode unterscheidet sich.
 
-## If you lack a process, try this order
+## Wenn du noch keinen eigenen Ablauf hast
 
-1. Is the result on-topic?
-2. Is change scope too large?
-3. Run whatever checks can be automated
-4. Human pass: would you ship this?
+Dann diese Reihenfolge:
 
-Think of it as:
+1. Ergebnis thematisch daneben?
+2. Änderungsumfang zu groß?
+3. Automatische Checks laufen lassen
+4. Zum Schluss menschlich: lieferbar?
 
-- **Direction**
-- **Scope**
-- **Machine checks**
-- **Human willingness to accept**
+Anders gesagt:
 
-## Core topics
+- **Richtung ok?**
+- **Zu viel geändert?**
+- **Maschine geprüft?**
+- **Mensch traut sich, es anzunehmen?**
 
-- [Review diffs](/guide/quality/review-diffs/) — read diffs; confirm scope and risk
-- [Run tests](/guide/quality/run-tests/) — automated regression
-- [Verify artifacts](/guide/quality/verify-artifacts/) — docs, config, generated output
-- [Validate sources](/guide/quality/validate-sources/) — traceable research conclusions
-- [Handle uncertainty](/guide/quality/handle-uncertainty/) — when the model is unsure
-- [Definition of done](/guide/quality/definition-of-done/) — what "finished" means
+## Kernthemen
 
-## Verification emphasis by task type
+- [Diffs prüfen](/guide/quality/review-diffs/) — Diff lesen, Umfang und Risiko bestätigen
+- [Tests ausführen](/guide/quality/run-tests/) — automatische Regression
+- [Artefakte prüfen](/guide/quality/verify-artifacts/) — Doku, Konfiguration, Generiertes
+- [Quellen validieren](/guide/quality/validate-sources/) — Recherche-Schlussfolgerungen nachvollziehbar
+- [Unsicherheit handhaben](/guide/quality/handle-uncertainty/) — wenn das Modell unsicher ist
+- [Fertig-Definition](/guide/quality/definition-of-done/) — was „fertig“ heißt
 
-- **Code changes**: diff, tests, manual critical path
-- **Documentation**: right audience, working links, steps you can follow
-- **Research**: real, current sources; conclusions within evidence
-- **Config or scripts**: environment assumptions, permission scope, recovery if it fails
+## Unterschiedliche Aufgaben, unterschiedliche Schwerpunkte
 
-Unsure where to start: default to [definition of done](/guide/quality/definition-of-done/).
+- **Code ändern**: Diff, dann Tests, dann kritische Pfade manuell
+- **Doku schreiben**: Passt zur Zielgruppe? Links ok? Schritte wirklich nachmachbar?
+- **Recherche**: Quellen echt und aktuell? Schlussfolgerung über Evidenz hinaus?
+- **Konfiguration oder Skripte erzeugen**: Umgebungsvoraussetzungen, Berechtigungsumfang, Wiederherstellung nach Fehlern
 
-Verification confirms the result is usable, trustworthy, and shippable.
+Unklar, womit starten? Standard: [Fertig-Definition](/guide/quality/definition-of-done/).
 
-How to write acceptance in prompts: [define done](/prompts/define-done/). End-to-end examples: [cases](/cases/).
+Überprüfung bestätigt: Dieses Ergebnis ist nutzbar, vertrauenswürdig und abgabefähig.
+
+Wie Abnahmekriterien im Prompt stehen: [Fertigkriterien definieren](/prompts/define-done/). End-to-End-Fälle: [Praxisbeispiele](/cases/).
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers homepage still emphasizes building, testing, reviewing, and delivering changes with Codex; this page splits verification into review diffs, run tests, validate sources, and definition of done—cross-checked with in-site quality chapters.  
-**Last verified:** 2026-07-26
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Überprüfungsgrundlage:** Die OpenAI-Developers-Startseite betont weiterhin Bau, Test, Review und Lieferung von Änderungen mit Codex; diese Seite zerlegt Überprüfung in Diff-Prüfung, Tests, Quellenvalidierung und Fertig-Definition und wurde mit den Qualitätskapiteln der Site abgeglichen.  
+**Zuletzt überprüft:** 2026-07-26

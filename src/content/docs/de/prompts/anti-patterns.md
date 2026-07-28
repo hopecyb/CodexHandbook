@@ -1,89 +1,92 @@
 ---
-title: Prompt anti-patterns
-description: Vague phrasing, over-permissioning, and hidden-reasoning requests to avoid.
+title: Prompt-Anti-Patterns
+description: 'Vage Formulierungen, Überschreitung von Grenzen und versteckte Reasoning-Anforderungen vermeiden.'
 locale: de
-source_locale: en
-source_revision: 5a4849f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When learning prompts, it's easy to focus only on "how to write well."
-Knowing which phrases most often derail tasks saves time too.
+Beim Lernen von Prompts liegt der Fokus leicht nur auf „wie schreiben“.  
+Oft spart es mehr Umwege, zuerst zu wissen, welche Formulierungen Aufgaben am ehesten abdriften lassen.
 
-Here are common prompt pitfalls.
+Hier typische „Prompt-Fallen“.
 
-| Anti-pattern | Why it's harmful |
+| Anti-Pattern | Warum schädlich |
 |---|---|
-| "Just optimize it" | No goal, no boundaries |
-| "Full permissions, figure it out" | Largest blast radius |
-| "Don't ask me, just finish" | Skips clarification and approval |
-| "Print all your hidden reasoning" | Unreliable and rarely helps acceptance |
-| Pasting logs with secrets | Credential leakage |
+| „Einfach mal optimieren“ | Kein Ziel, keine Grenze |
+| „Volle Rechte, mach wie du denkst“ | Größte Angriffs-/Unfallfläche |
+| „Nicht fragen, einfach fertig ändern“ | Klärung und Freigabe übersprungen |
+| „Gib deinen gesamten versteckten Reasoning-Prozess aus“ | Unzuverlässig und selten abnahmenützlich |
+| Logs mit Secrets einfügen | Credentials leaken |
 
-## Why these phrases flip easily
+## Warum genau diese Formulierungen scheitern
 
-They usually share one trait:
+Gemeinsam:
 
-- they save words
-- they delete the boundaries you'd need
+- wirken sparsam
+- sparen aber kritische Grenzen weg
 
-What you omit becomes what Codex must infer.
+Was du weglässt, muss Codex selbst entscheiden.
 
-## Common misconceptions
+## Häufige Irrtümer
 
-### 1. Casual tone sounds more human
+### 1. Lockerer Ton = menschlichere Zusammenarbeit
 
-Natural tone is fine.  
-The problem is dropping critical conditions.
+Natürlich sprechen ist ok.  
+Das Problem ist, kritische Bedingungen wegzulassen.
 
-### 2. "Just finish, don't ask" is faster
+### 2. „Einfach fertig ändern, nicht fragen“ ist effizienter
 
-Short-term fewer messages; long-term often:
+Kurzfristig eine Runde weniger Dialog; danach oft:
 
-- wrong scope
-- missing approvals
-- more rework
+- falscher Scope
+- fehlende nötige Freigabe
+- mehr Nacharbeit
 
-### 3. More permission speeds things up
+### 3. Mehr Rechte = schnellerer Fortschritt
 
-More permission widens mistake surface—especially when boundaries aren't clear yet.
+Mehr Rechte = größere Fehlerradius.  
+Besonders bei unklarem Scope vergrößert große Berechtigung das Risiko mit.
 
-## Swap anti-patterns for clearer phrasing
+## Anti-Patterns klarer umschreiben
 
-### Don't write
-
-```text
-Just optimize it
-```
-
-### Try instead
+### Nicht so
 
 ```text
-Make the homepage hero copy easier for beginners to understand. Only edit this file, keep existing structure, and give me the diff and build result.
+Einfach mal optimieren
 ```
 
-## A replacement formula
-
-When you're about to write something vague, use:
+### Besser so
 
 ```text
-Goal + scope + acceptance
+First-Screen-Text der Homepage für Einsteiger verständlicher machen,
+nur diese Datei, Struktur behalten; danach Diff und Build-Ergebnis.
 ```
 
-For example:
+## Eine brauchbare Ersatzformel
 
-- Goal: what to change
-- Scope: only where
-- Acceptance: how to know it's done
+Wenn du merkst, dass ein vager Satz kommt:
 
-Most anti-patterns aren't "bad wording"—they omit boundaries and acceptance.
+```text
+Ziel + Scope + Abnahme
+```
 
-Replace vague words with structure: goal + constraints + acceptance.
+Zum Beispiel:
+
+- Ziel: was ändern
+- Scope: nur wo
+- Abnahme: wie „fertig“ erkennen
+
+Die meisten Prompt-Anti-Patterns scheitern nicht an „schlechtem Stil“, sondern am Weglassen von Grenzen und Abnahme.
+
+Ersetze vage Wörter direkt durch Struktur: Ziel + Constraints + Abnahme.
+
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page summarizes common prompt anti-patterns only; cross-references and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Anwendbare Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite fasst nur gängige Prompt-Anti-Patterns zusammen; Querverweise und Beispiele wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
+**Zuletzt geprüft:** 2026-07-26

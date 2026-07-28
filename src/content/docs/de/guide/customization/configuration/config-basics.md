@@ -1,142 +1,142 @@
 ---
-title: Configuration Basics
-description: Codex config file locations, common settings, and intro to approval, sandbox, and model settings.
+title: Konfigurationsgrundlagen
+description: "Ort der Codex-Config, häufige Optionen und Einstieg in Freigabe, Sandbox und Modell."
 locale: de
-source_locale: en
-source_revision: '8848e58'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-Configuration lets you **unify Codex behavior** on your machine or in a project without repeating model, approval level, or sandbox policy every session.
+Config-Dateien lassen Codex-Verhalten lokal oder im Projekt **vereinheitlichen**, ohne Modell, Freigabestufe oder Sandbox-Richtlinie in jeder Session neu zu setzen.
 
-## On This Page
+## Inhalt dieser Seite
 
-- Where configuration lives; how project-level and user-level stack
-- What people change most: model, approval, sandbox, default working directory
-- Boundary with `AGENTS.md`: configuration manages “capability switches”; AGENTS manages “how to write code in this project”
+- Wo Config liegt, wie Projekt- und Benutzerebene sich überlagern
+- Was am häufigsten geändert wird: Modell, Freigabe, Sandbox, Standard-Arbeitsverzeichnis
+- Grenze zu `AGENTS.md`: Config steuert „Fähigkeitsschalter“, AGENTS steuert „wie in diesem Projekt Code geschrieben wird“
 
-## What Configuration Actually Controls
+## Was Config eigentlich steuert
 
-Configuration is closer to Codex’s **default working habits**.
+Config ist näher an den **Standard-Arbeitsgewohnheiten** von Codex.
 
-For example:
+Zum Beispiel:
 
-- Which model to use by default
-- How tight security boundaries are by default
-- Which directory to work in by default
+- Welches Modell standardmäßig
+- Wie eng die Sicherheitsgrenzen standardmäßig
+- In welchem Verzeichnis standardmäßig gearbeitet wird
 
-It is not a temporary requirement for one task—it is how work usually starts.
+Es steuert nicht die temporären Anforderungen einer einzelnen Aufgabe, sondern wie die Arbeit meist beginnt.
 
-## Configuration Layers
+## Config-Schichten
 
-| Layer | Typical location | Content |
+| Schicht | Typischer Ort | Inhalt |
 |---|---|---|
-| User | Configuration under `~/.codex/` (exact filenames per official docs) | Default model, personal approval habits |
-| Project | Config snippets in the repo or Codex-related project files | Team-shared sandbox/tool policy |
-| Managed | Organization deployment | Mandatory items individuals cannot override |
+| Benutzer | Config unter `~/.codex/` (Dateinamen laut offizieller Doku) | Standardmodell, persönliche Freigabegewohnheiten |
+| Projekt | Config-Fragmente im Repo oder `codex`-bezogene Projektdateien | Team-geteilte Sandbox-/Werkzeug-Richtlinien |
+| Managed | Von der Organisation ausgerollt | Pflichtfelder, die Personen nicht überschreiben dürfen |
 
-**Volatile facts** (paths, field names, TOML keys)—follow [OpenAI Codex documentation](https://developers.openai.com/codex); this page describes concepts and how to decide.
+**Flüchtige Fakten** (Pfade, Feldnamen, TOML-Keys) richten Sie nach der [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex); diese Seite beschreibt Konzepte und Entscheidungsweise.
 
-## Common Misconceptions
+## Häufige Missverständnisse
 
-### More configuration is not more professional
+### Mehr Config ist nicht professioneller
 
-Many people want to configure everything at first.
+Beim ersten Kontakt wollen viele alles konfigurieren, was geht.
 
-For beginners, usually a few high-frequency settings are enough:
+Für Einsteiger reichen oft wenige Hochfrequenz-Einstellungen:
 
-- Default model
-- Default approval/sandbox policy
-- Default working directory
+- Standardmodell
+- Standard-Freigabe-/Sandbox-Richtlinie
+- Standard-Arbeitsverzeichnis
 
-Stabilizing these first is usually better than studying every field at once.
+Diese zuerst stabil setzen ist meist besser, als sofort alle Felder zu erforschen.
 
-### Configuration is not project rules
+### Config ist keine Projektregel
 
-If a requirement is “every collaborator should follow it,” it usually belongs in `AGENTS.md` or project docs, not only on your machine.
+Soll „alle Mitwirkenden das einhalten“, gehört es meist in `AGENTS.md` oder Projektdoku — nicht nur in Ihre lokale Config.
 
-For example:
+Zum Beispiel:
 
-- Which checks before commit
-- Which directories must not change
-- Which tasks must not auto-push
+- Welche Checks vor dem Commit
+- Welche Verzeichnisse unantastbar
+- Welche Aufgabenarten kein Auto-Push
 
-These should not rely only on personal configuration.
+Das darf nicht nur auf persönlicher Config ruhen.
 
-## Common Configuration Intents
+## Häufig geänderte Config-Absichten
 
-### Model and reasoning
+### Modell und Reasoning
 
-- Daily development: balance speed and quality
-- Complex refactors: stronger reasoning model (if your plan supports it)
-- Scripts/CI: fixed model for reproducibility
+- Alltag: Tempo und Qualität ausbalancieren
+- Komplexe Refactors: stärkeres Reasoning-Modell (falls Tarif erlaubt)
+- Skripte/CI: festes Modell für Reproduzierbarkeit
 
-Concept background: [Models and Reasoning](/guide/foundations/models-and-reasoning/)
+Hintergrund: [Modelle und Reasoning](/guide/foundations/models-and-reasoning/)
 
-### Approval and sandbox
+### Freigabe und Sandbox
 
-| Intent | Configuration direction |
+| Absicht | Config-Richtung |
 |---|---|
-| Beginner / untrusted repo | Stricter approval; limit network and write scope |
-| Trusted personal project | Reduce interruption within safe bounds |
-| Enterprise repo | Follow managed policy; do not relax on your own |
+| Einsteiger / unvertrautes Repo | Strengere Freigabe, Netzwerk und Schreibbereich einschränken |
+| Vertrautes Privatprojekt | Unter Sicherheitsvoraussetzungen weniger Unterbrechungen |
+| Unternehmens-Repo | Managed Policy folgen, nicht selbst lockern |
 
-Concept background: [Permissions and Approvals](/guide/foundations/permissions-and-approvals/), [Sandbox and Network](/guide/foundations/sandbox-and-network/)
+Hintergrund: [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/), [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
 
-### CLI and App consistency
+### CLI- und App-Konsistenz
 
-The same account on CLI and desktop App should aim for the **same security baseline**—avoid “full CLI permissions, strict App” double standards.
+Dasselbe Konto sollte in CLI und Desktop-App dieselbe **Sicherheitsgrundlinie** anstreben — vermeiden Sie „CLI Vollzugriff, App streng“.
 
-## Minimum Viable Practice
+## Minimal nutzbares Vorgehen
 
-1. Read the official “Configuration” section; confirm file paths for your version
-2. Change one thing only—for example default sandbox mode; observe a week before tuning
-3. Put team-shared items in repo docs; keep personal preferences local
-4. In `AGENTS.md`, write “recommended way to use Codex with this project,” not a full copy of configuration
+1. Offizielles „Configuration“-Kapitel lesen, Dateipfade der aktuellen Version bestätigen
+2. Nur eine Sache ändern — z. B. Standard-Sandbox-Modus — eine Woche beobachten, dann nachjustieren
+3. Team-geteilte Punkte in Repo-Doku, persönliche Vorlieben lokal
+4. In `AGENTS.md` schreiben „wie Codex mit diesem Projekt empfohlen genutzt wird“ — nicht die ganze Config kopieren
 
-## How to Decide Where Something Goes
+## Wohin gehört was
 
-If unsure whether something belongs in configuration, `AGENTS.md`, or the task prompt, ask:
+Unsicher, ob etwas in Config, `AGENTS.md` oder Aufgaben-Prompt gehört? Fragen:
 
-1. Is this a default habit for most tasks?
-2. Is this a preference only I care about?
-3. Is this a rule the whole project should share?
+1. Ist das eine Default-Gewohnheit für die meisten Aufgaben?
+2. Ist das nur meine persönliche Vorliebe?
+3. Ist das eine Regel, die das ganze Projekt teilen soll?
 
-Usually:
+Meist:
 
-- Default habits → configuration
-- Personal preferences → personal layer
-- Team consensus → repo
+- Default-Gewohnheit → Config
+- Persönliche Vorliebe → persönliche Schicht
+- Teamkonsens → Repo
 
-## Relation to CLI Topics
+## Bezug zu CLI-Themen
 
-- Interactive use: [CLI Interactive Mode](/guide/cli/interactive-mode/)
-- Non-interactive and scripts: [Non-Interactive Mode](/guide/cli/non-interactive-mode/)
-- Configuration detail: [CLI Configuration](/guide/cli/configuration/) · [Configuration Reference](/guide/reference/configuration-reference/)
+- Interaktiv: [CLI-Interaktionsmodus](/guide/cli/interactive-mode/)
+- Nicht-interaktiv und Skripte: [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/)
+- Config-Details: [CLI-Konfiguration](/guide/cli/configuration/) · [Konfigurationsreferenz](/guide/reference/configuration-reference/)
 
-## Common Mistakes
+## Häufige Fehler
 
-- Turning off all approval for convenience while opening a project in a production data directory
-- Putting API keys in configuration and committing to Git
-- Docs list config keys that do not match the installed version (no review after CLI upgrade)
+- Alle Freigaben abschalten und Projekte in Produktionsdatenverzeichnissen öffnen
+- API-Keys in Config schreiben und committen
+- Dokumentierte Config-Keys passen nicht zur installierten Version (nach CLI-Upgrade nicht nachgeprüft)
 
-## Security Boundaries
+## Sicherheitsgrenzen
 
-Configuration may include **path allowlists, network policy, MCP server lists**—before changing, imagine “could a malicious prompt abuse this setting?” In enterprise environments, administrators should deploy; individuals should not bypass managed policy.
+Config kann **Pfad-Allowlists, Netzwerkrichtlinien, MCP-Serverlisten** enthalten — vor Änderungen fragen: „Kann ein bösartiger Prompt diese Config ausnutzen?“ In Unternehmen rollen Admins aus; Managed Policy nicht umgehen.
 
-Configuration suits defaults you would otherwise repeat almost every time; you do not need every rule in configuration files.
+Config eignet sich für Defaults, die Sie fast jedes Mal erneut wählen würden — nicht dafür, alle Regeln in die Config-Datei zu stopfen.
 
-## References
+## Quellen
 
-- OpenAI Codex configuration documentation
+- OpenAI-Codex-Konfigurationsdokumentation
 - stormzhang/ai-coding-guide: `codex/18-config.md`
-- KimYx0207 CX-04 project instruction permission configuration (facts need official verification)
+- KimYx0207 CX-04 Projektanweisungen und Berechtigungskonfiguration (Fakten offiziell nachprüfen)
 
 ---
 
 **Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI Help Center configuration materials still directly use `~/.codex/config.toml` and `~/.codex/.env`, and note that desktop App/IDE may need a restart to read these settings; this page avoids binding volatile key names and keeps only the stable framework of user-level configuration, managed policy, and common intents such as model/approval/sandbox.  
-**Last verified:** 2026-07-26
+**Gilt für:** CLI / App  
+**Prüfgrundlage:** Aktuelle OpenAI-Help-Center-Config-Materialien nutzen weiterhin `~/.codex/config.toml` und `~/.codex/.env` und erwähnen, dass Desktop-App/IDE ggf. Neustart brauchen; diese Seite vermeidet volatile Key-Namen und behält den stabilen Rahmen „Benutzerconfig, Managed Policy, gängige Absichten zu Modell/Freigabe/Sandbox“.  
+**Zuletzt geprüft:** 2026-07-26

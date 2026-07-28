@@ -1,76 +1,76 @@
 ---
-title: Research with sources
-description: Use Codex for search, comparison, and fact-checking—traceable sources and conclusions.
+title: Recherche mit Quellen
+description: Mit Codex suchen, vergleichen und Fakten prüfen — nachvollziehbare Quellen und Schlussfolgerungen liefern.
 locale: de
-source_locale: en
-source_revision: cc7038f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Research with sources** means every key conclusion can be traced to a specific source—official docs, papers, or repo files—not just an unsupported claim. It fits tech selection, competitive comparison, literature review, and policy interpretation.
+**Recherche mit Quellen** verlangt, dass jede zentrale Schlussfolgerung auf eine konkrete Quelle zurückgeht — etwa offizielle Docs, Papers oder Repository-Dateien — statt einer unbegründeten Aussage. Geeignet für Technikauswahl, Wettbewerbsvergleiche, Literaturreviews und Policy-Interpretation.
 
-## What's covered
+## Schwerpunkte dieser Seite
 
-- When to use [web search](/guide/tools/web-search/) vs read-only repo work
-- How to require citation format and uncertainty labels
-- How this pairs with [validate sources](/guide/quality/validate-sources/)
+- Wann [Websuche](/guide/tools/web-search/) vs. nur lesendes Repository
+- Wie Zitationsformat und Unsicherheitskennzeichnung verlangt werden
+- Zusammenspiel mit [Quellen validieren](/guide/quality/validate-sources/)
 
-## Minimum viable approach
-
-```text
-Research "Rust vs Go for this repo's context":
-1. List evaluation dimensions first (performance, ecosystem, team familiarity)
-2. Attach source URL or @in-repo file path to each conclusion
-3. Mark unverifiable items as "to confirm"
-4. End with recommendation and open questions
-Do not change code.
-```
-
-## Recommended workflow
+## Minimal brauchbares Vorgehen
 
 ```text
-Define question and exclusions
-    → collect sources (search / read docs / MCP)
-    → comparison table + pros/cons
-    → label confidence and conflicting sources
-    → human decision or move to spec phase
+Untersuche «Eignung von Rust vs. Go für die Szenarien dieses Repositories»:
+1. Zuerst Bewertungsdimensionen auflisten (Performance, Ökosystem, Teamvertrautheit)
+2. Jede Schlussfolgerung mit Quell-URL oder @Pfad zu einer Datei im Repository versehen
+3. Nicht Überprüfbares als «zu bestätigen» markieren
+4. Am Ende Empfehlung und offene Fragen geben
+Keinen Code ändern.
 ```
 
-For long research, split across rounds—see [Long-running task management](/cases/workflows/long-running-task-management/).
+## Empfohlener Workflow
 
-## Common mistakes
+```text
+Problem und Ausschlüsse definieren
+    → Quellen sammeln (Suche / Docs lesen / MCP)
+    → Vergleichstabelle + Vor-/Nachteile
+    → Konfidenz und widersprüchliche Quellen kennzeichnen
+    → Manuell entscheiden oder in die Spezifikationsphase gehen
+```
 
-- No URL required—output can't be rechecked
-- Mix outdated blogs with official docs without saying so
-- Treat research conclusions as implementation orders, skipping spec
-- Upload confidential data to unauthorized external tools
+Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalten](/cases/workflows/long-running-task-management/).
 
-## Security boundaries
+## Häufige Fehler
 
-- Internal unpublished material must not leave via uncontrolled MCP
-- Volatile facts (pricing, versions, regional availability) need a [verification date](/guide/start-here/handbook-version-policy/)
+- Keine URL verlangen → Ergebnis nicht nachprüfbar
+- Veraltete Blogposts und offizielle Docs vermischen, ohne das zu kennzeichnen
+- Rechercheergebnisse direkt als Implementierungsanweisung nutzen und die Spezifikation überspringen
+- Dateien mit vertraulichen Daten an nicht freigegebene externe Tools hochladen
 
-## Acceptance checklist
+## Sicherheitsgrenzen
 
-- [ ] Key conclusions have at least one clickable or traceable source
-- [ ] Conflicting information is presented side by side
-- [ ] "Uncertain" items are listed, not disguised as facts
-- [ ] Sensitive data does not appear in prompts or logs
+- Interne, unveröffentlichte Materialien dürfen nicht über unkontrolliertes MCP nach außen gehen
+- Schnell wechselnde Fakten wie Preise, Versionen oder regionale Verfügbarkeit müssen mit [Prüfdatum](/guide/start-here/handbook-version-policy/) gekennzeichnet werden
 
-## Related chapters
+## Abnahme-Checkliste
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [ ] Jede Schlussfolgerung hat mindestens eine klickbare oder nachvollziehbare Quelle
+- [ ] Widersprüchliche Informationen sind nebeneinander dargestellt
+- [ ] «Unklare» Punkte sind aufgelistet und nicht als Fakten getarnt
+- [ ] Sensible Daten erscheinen weder im Prompt noch in Logs
 
-## References
+## Verwandte Kapitel
 
-- CodexGuide research and citation methods
-- stormzhang search and verification chapters
+- [Mit Unsicherheit umgehen](/guide/quality/handle-uncertainty/)
+- [Fall: Docs refactoren und prüfen](/cases/use-cases/content-creation/refactor-docs-with-review/)
+
+## Referenzquellen
+
+- CodexGuide-Methoden zu Recherche und Zitation
+- stormzhang-Kapitel zu Suche und Überprüfung
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public web search and source-backed research capabilities, plus this handbook's verified web search, validate sources, handle uncertainty, and version policy chapters; this page confirms only the stable research method that key conclusions trace to sources and conflicts/uncertainty are explicit.
+**Geeignete Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Kreuzgeprüft gegen aktuelle öffentliche Fähigkeiten zu Websuche und Recherche mit Quellen bei OpenAI Developers sowie die bereits geprüften Kapitel zu Websuche, Quellenvalidierung, Umgang mit Unsicherheit und Versionspolicy. Diese Seite bestätigt nur die stabile Recherchemethode „zentrale Schlussfolgerungen müssen auf Quellen zurückführbar sein; Konflikte und Unsicherheit explizit kennzeichnen“.  
+**Zuletzt geprüft:** 2026-07-26

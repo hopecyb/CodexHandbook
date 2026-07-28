@@ -1,25 +1,65 @@
 ---
-title: Review the result
-description: Read changes, verify output, and decide to accept or revise.
+title: Ergebnis prüfen
+description: "Änderungen lesen, Artefakte validieren und annehmen oder anpassen."
 locale: de
-source_locale: en
-source_revision: 50c0356
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Review checklist
+Nach der Aufgabe überspringen viele Anfänger diesen Schritt.
 
-1. **Read the diff**: Did only allowed files change?
-2. **Open the artifact**: Does content meet acceptance criteria?
-3. **Iterate**: If it's close, refine with follow-up prompts—not a full restart
-4. **Decide**: accept / edit manually / [undo](/guide/getting-started/undo-and-recover/)
+Wer Codex stabiler nutzen will, muss **Ergebnisse prüfen** können.
 
-More methods: [Review diffs](/guide/quality/review-diffs/).
+Nicht nur „fertig“ glauben — ansehen, was wirklich geändert wurde und ob es dem entspricht, was du wolltest.
+
+## Prüfliste
+
+1. **Diff ansehen**: Nur erlaubte Dateien geändert?
+2. **Artefakt öffnen**: Inhalt erfüllt Abnahmekriterien?
+3. **Nachsteuern**: Fehlt nur wenig — präzises Feedback nachliefern
+4. **Entscheiden**: Annehmen / manuell ändern / [rückgängig](/guide/getting-started/undo-and-recover/)
+
+Mehr Methoden: [Diffs prüfen](/guide/quality/review-diffs/).
+
+## Häufig übersehen
+
+### 1. Nur die Zusammenfassung lesen, nicht die echten Änderungen
+
+Codex kann Zusammenfassungen flüssig schreiben — entscheidend bleibt:
+
+- Falsche Dateien?
+- Unautorisierte Stellen mitgeändert?
+- Ergebnis wirklich abnahmereif?
+
+### 2. „Passt ungefähr“ → direkt annehmen
+
+„Ungefähr“ hinterlässt oft kleine Fallen.  
+Fehlt nur wenig: Lieber einen präzisen Nachsatz — nicht stillschweigend hinnehmen.
+
+### 3. Merken, dass es nicht passt — aber nicht wissen, wie man es sagt
+
+So kannst du weitermachen:
+
+```text
+Das Ergebnis ist nah dran, aber zwei Punkte fehlen noch: 1) … 2) … Bitte nur diese zwei Punkte korrigieren, sonst nichts anfassen.
+```
+
+## Prüfreihenfolge
+
+Beim ersten Üben so:
+
+1. **Umfang**: Welche Dateien geändert?
+2. **Ergebnis**: Seite, Doku, Code-Ausgabe wie gefordert?
+3. **Nebenwirkungen**: Überflüssige Änderungen oder neue Fehler?
+
+Bei der Abnahme geht es vor allem darum, ob du das Ergebnis beruhigt annehmen kannst.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Geeignete Produkte:** App / CLI / IDE  
+**Überprüfungsgrundlage:** Gegen die im Handbook bereits geprüften Kapitel Diffs prüfen, Fertig-Definition und Rückgängig/Wiederherstellen abgeglichen; Fokus dieser Seite ist die stabile Prüfmethode „Umfang, Ergebnis, Nebenwirkungen — dann entscheiden, ob annehmen“.  
+**Zuletzt überprüft:** 2026-07-26

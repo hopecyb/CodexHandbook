@@ -1,25 +1,55 @@
 ---
-title: Integrated Terminal
-description: Use the in-App terminal alongside tasks.
+title: Integriertes Terminal
+description: Terminal in der App nutzen und mit Aufgaben kombinieren.
 locale: de
-source_locale: en
-source_revision: a28b29d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-The integrated terminal helps you see command output from the Agent or run verification commands yourself.
+Das integrierte Terminal macht Befehlsausgaben des Agenten sichtbar — oder du führst selbst Überprüfungsbefehle aus.
 
-## Tips
+Ohne die Desktop-App zu verlassen siehst du hier Ablauf und Ergebnis von Befehlen.
 
-- Put verification commands in the prompt’s acceptance criteria
-- Do not paste production secrets into the integrated terminal
-- Do not manually rerun commands you do not understand against production
+Am Anfang lohnt der Blick auf:
+
+- was genau ausgeführt wurde
+- warum es „Überprüfung bestanden“ sagt
+- warum ein Schritt fehlgeschlagen ist
+
+## Hinweise bei der Nutzung
+
+- „Überprüfungsbefehl“ in die Abnahmekriterien des Prompts schreiben
+- Keine Produktionsgeheimnisse ins integrierte Terminal einfügen
+- Unverstandene Befehle nicht blind in der Produktionsumgebung erneut ausführen
+
+## Häufige Missverständnisse
+
+### 1. Muss ich Terminal können, um die Desktop-App zu nutzen?
+
+Viele Basisaufgaben brauchen keine eigenen Befehle von dir.  
+Du solltest aber wissen, wofür der Terminalbereich da ist — sonst bist du beim Nachprüfen ratlos.
+
+### 2. Bei großer Textausgabe: worauf achten?
+
+Achte auf:
+
+- offensichtliche Fehler
+- welcher Befehl lief
+- ob es am Ende Erfolg, Fehler oder Teilerfolg war
+
+### 3. Darf ich seine Befehle kopieren und selbst nochmal laufen lassen?
+
+Ja — vorausgesetzt, du verstehst, was sie tun, und führst sie nicht blind in Produktion erneut aus.
+
+Das integrierte Terminal legt den Überprüfungsprozess offen und hilft dir, schrittweise zu verstehen, was die Kommandozeile tut.
 
 
 ---
 
-**Status:** review  
-**Applies to:** App  
-**Last verified:** 2026-07-25
+**Status:** outdated  
+**Anwendbare Produkte:** App  
+**Prüfhinweis:** Diese Seite setzt eine stabile integrierte Terminal-Erfahrung in der Desktop-App voraus; aktuelle offizielle Quellen bestätigen vor allem, dass Codex mit lokalen Ordnern, Repositories, Terminals und Entwicklerwerkzeugen arbeitet, ohne die konkrete UI-Form hier ausreichend zu stützen.  
+**Zuletzt geprüft:** 2026-07-26

@@ -1,34 +1,34 @@
 ---
-title: Security
-description: Team-level risks, attack surface, and defenses—understand where risk lives before controls.
+title: Sicherheit
+description: 'Erläuterungsseite zu teamweiten Risiken, Angriffsflächen und Schutzideen — zuerst verstehen, wo Risiken liegen, dann Kontrollen.'
 locale: de
-source_locale: en
-source_revision: e394719
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Jumping into security detail without framing can leave you with vocabulary but not “what we are defending against.”
+Springt man in dieser Gruppe direkt in Detailseiten, bleiben oft nur lose Begriffe — ohne zu wissen, wogegen sie schützen.
 
-This section reads clearer as: where risk comes from → what layer to block or review.
+Besser in der Reihenfolge „woher kommt das Risiko → welche Schicht blockieren/prüfen“.
 
-## Recommended order
+## Empfohlene Reihenfolge
 
-1. [Threat model](/guide/team-enterprise/security/threat-model/)
-2. [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Prompt injection](/guide/team-enterprise/security/prompt-injection/)
+1. [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/)
+2. [Plugin- und MCP-Risiken](/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Prompt Injection](/guide/team-enterprise/security/prompt-injection/)
 
-## Who should start here
+## Für wen zuerst
 
-- Team expanding Codex usage
-- You are adding third-party extensions, external tools, or shared rules
-- You need risks that “be careful” alone cannot fix
+- Das Team will den Nutzungsumfang erweitern
+- Drittanbieter-Erweiterungen, externe Werkzeuge oder geteilte Regeln kommen dazu
+- Sie wollen wissen, welche Risiken „seid vorsichtig“ allein nicht lösen
 
-Security pages help identify what must be controlled by system boundaries.
+Fokus der Sicherheitsseiten: Risiken finden, die Systemgrenzen brauchen — nicht nur Appelle.
 
 ---
 
 **Status:** verified  
-**Products:** Team / enterprise scenarios  
-**Verification basis:** OpenAI plugin, app, and integration docs continue to emphasize risks from external connections, action permissions, source access, and approval boundaries; this page is security section navigation ordered threat model → Plugin/MCP → prompt injection.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Team- / Enterprise-Szenarien  
+**Prüfgrundlage:** Aktuelle OpenAI-Dokumentation zu Plugins, Apps und Integrationen betont Risiken aus Externverbindungen, Aktionsrechten, Quellsystemzugriff und Freigabegrenzen; diese Seite navigiert nur und ordnet Bedrohungsmodell → Plugin/MCP → Prompt Injection.  
+**Zuletzt geprüft:** 2026-07-26

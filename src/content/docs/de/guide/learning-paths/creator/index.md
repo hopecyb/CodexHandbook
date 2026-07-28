@@ -1,29 +1,66 @@
 ---
-title: Creator Path (Overview)
-description: Overview of content-creation routes; detailed steps to follow.
+title: Creator-Pfad (Überblick)
+description: Überblick der Route für Content-Erstellung; tiefe Schritte folgen später.
 locale: de
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 0e829ce
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+> MVP-Status: Diese Seite ist ein Überblick. Die vollständigen fünf Schritte (Recherche, Schreiben, Bild & Demo, Website-Prototyp, wiederverwendbare Workflows) folgen in späteren Meilensteinen.
 
-> MVP status: this page is an overview. The full five steps (research, writing, images and decks, website prototypes, reusable workflows) will be added in a later milestone.
+Wenn Sie Codex vor allem für Inhalte nutzen wollen — nicht zum Code ändern — starten Sie hier.
 
-## Read now
+## Geeignet wenn
 
-- [Prompting](/prompts/): write creative tasks clearly
-- [Verify artifacts](/guide/quality/verify-artifacts/): check drafts and pages
-- [Desktop App](/guide/desktop-app/): the main entry for non-terminal users
+- Artikel, Dokus, Skriptinhalte schreiben
+- Bild/Text, Folien, Seitenprototypen erstellen
+- Die Methode „Anforderung klar + Ergebnis prüfbar“ einüben
 
-## Planned steps (outline)
+## Jetzt lesen
 
-Research and topics → writing and editing → images and presentations → websites and prototypes → reusable content workflows
+- [Prompts](/prompts/): Kreativaufgaben klar formulieren
+- [Artefakte verifizieren](/guide/quality/verify-artifacts/): Texte und Seiten prüfen
+- [Desktop-App](/guide/desktop-app/): Haupteinstieg für Nicht-Terminal-Nutzer
 
+## Häufige Missverständnisse
+
+### 1. Creator-Pfad = „lass es für mich schreiben“
+
+Das reicht nicht.
+
+Wichtiger:
+
+- Ziel, Zielgruppe, Stil klar sagen
+- Beurteilen, ob generierter Content brauchbar ist
+- Mehrere Runden nicht abschweifen lassen
+
+### 2. Ich bin kein Programmierer — Verifikation unnötig
+
+Content ist keine Ausnahme.
+
+Content braucht ebenfalls Überprüfung — Fokus anders: Struktur, Ton, Fakten, Format, Lieferwirkung.
+
+## Empfohlene Leseordnung
+
+Zum Starten:
+
+1. [Prompt-Grundlagen](/prompts/basics/)
+2. [Prompt-Vorlagen](/prompts/templates/)
+3. [Präsentationen](/guide/files-and-artifacts/presentations/)
+4. [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/)
+5. [Artefakte verifizieren](/guide/quality/verify-artifacts/)
+
+Diese Route betont klare Anforderungen und prüfbare Ergebnisse.
+
+## Geplante Schritte (Outline)
+
+Recherche & Themenwahl → Schreiben & Editieren → Bild & Demo → Website & Prototyp → wiederverwendbare Content-Workflows
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Anwendbare Produkte:** App / CLI / IDE  
+**Prüfgrundlage:** Gegen aktuelle Creative-Einstiege, Prompts, Dateien/Artefakte und Verifikation abgeglichen; erklärt nur „was Creator jetzt zuerst lesen“, ohne Produktgrenzen zu behaupten.  
+**Zuletzt geprüft:** 2026-07-26

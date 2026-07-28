@@ -1,27 +1,27 @@
 ---
 title: Prompts
-description: Learn how to state tasks, context, inputs, constraints, and acceptance criteria clearly.
+description: 'Lerne, Aufgaben, Hintergrund, Eingaben, Constraints und Abnahmekriterien klar zu formulieren.'
 locale: de
-source_locale: en
-source_revision: dcd0d82
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 # Prompts
 
-The prompts module focuses on how to express tasks clearly so Codex knows the goal, context, boundaries, and definition of done.
+Das Prompt-Modul zeigt, wie du Aufgaben klar ausdrückst, damit Codex Ziel, Kontext, Grenzen und Fertigstellungsstandard kennt.
 
-## Recommended order
+## Empfohlene Reihenfolge
 
-1. [Prompt basics](/prompts/basics/)
-2. [Ask for a plan first](/prompts/ask-for-a-plan/)
-3. [Task anatomy](/prompts/task-anatomy/)
-4. [Goals and context](/prompts/goals-and-context/)
-5. [Constraints and boundaries](/prompts/constraints-and-boundaries/)
-6. [Define done](/prompts/define-done/)
-7. [Prompting with images](/prompts/prompting-with-images/)
-8. [Long-running tasks](/prompts/long-running-tasks/)
-9. [Prompt debugging](/prompts/prompt-debugging/)
-10. [Anti-patterns](/prompts/anti-patterns/)
-11. Use [prompt templates](/prompts/templates/) for common task types
+1. [Prompt-Grundlagen](/prompts/basics/)
+2. [Zuerst einen Plan verlangen](/prompts/ask-for-a-plan/)
+3. [Aufgabenstruktur](/prompts/task-anatomy/)
+4. [Ziele und Kontext](/prompts/goals-and-context/)
+5. [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
+6. [Fertigstellungsstandard definieren](/prompts/define-done/)
+7. [Prompts mit Bildern](/prompts/prompting-with-images/)
+8. [Prompts für lange Aufgaben](/prompts/long-running-tasks/)
+9. [Prompt-Debugging](/prompts/prompt-debugging/)
+10. [Anti-Patterns](/prompts/anti-patterns/)
+11. Nutze [Prompt-Vorlagen](/prompts/templates/) für häufige Aufgabentypen

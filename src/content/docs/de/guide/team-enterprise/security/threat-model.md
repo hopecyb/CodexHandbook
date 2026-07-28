@@ -1,156 +1,156 @@
 ---
-title: Threat Model
-description: Main risk surfaces for Codex in team environments—data, tools, extensions, and supply chain.
+title: Bedrohungsmodell
+description: 'Wesentliche Risikoflächen von Codex in Teameumgebungen — Daten, Werkzeuge, Erweiterungen und Lieferkette.'
 locale: de
-source_locale: en
-source_revision: 92050f1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A threat model means thinking about risk before it happens:
+„Bedrohungsmodell“ heißt: Risiken vorher denken:
 
-> **If Codex really connects to our code, commands, and external tools, what is most likely to go wrong?**
+> **Wenn Codex wirklich an unseren Code, unsere Befehle und externe Werkzeuge angebunden ist — was kann am ehesten schiefgehen?**
 
-**Threat modeling** breaks that down. Codex is not “just another chat window”—it can **read code, run commands, call external tools**. This chapter maps main risk surfaces; controls live in [Permission matrix](/guide/reference/permission-matrix/) and [Sandbox](/guide/foundations/sandbox-and-network/).
+Ein **Bedrohungsmodell** zerlegt das. Codex ist nicht „noch ein Chatfenster“ — es kann **Code lesen, Befehle ausführen, externe Werkzeuge aufrufen**. Dieses Kapitel legt die Hauptflächen aus; konkrete Kontrollen folgen in [Berechtigungsmatrix](/guide/reference/permission-matrix/) und [Sandbox](/guide/foundations/sandbox-and-network/).
 
-## What this page covers
+## Inhalt
 
-- Assets and trust boundaries
-- Typical threats and mitigation directions
-- How rules, Hooks, and CI divide responsibility
+- Assets und Vertrauensgrenzen
+- Typische Bedrohungen und Milderungsrichtungen
+- Arbeitsteilung mit Regeln, Hooks und CI
 
-## Not only “security team” work
+## Warum das nicht „nur Security“ ist
 
-If you build, run platform, write docs, or lead projects, you care when teams:
+Als Entwickler, Plattform, Doku oder Projektlead betrifft es Sie direkt. Typische Team-Probleme:
 
-- Give over-permissioned tokens to automation
-- Run high-risk actions on untrusted input
-- Do not know what data may leave the org
-- Add extensions for features without permissions and provenance
+- Zu mächtige Tokens an Automatisierung geben
+- Agent auf unvertrauenswürdigen Eingaben riskante Aktionen ausführen lassen
+- Nicht wissen, welche Daten sichtbar bzw. exportierbar sind
+- Erweiterungen nur nach Feature wählen, nicht nach Rechten und Herkunft
 
-Threat modeling helps set boundaries before incidents.
+Wert des Bedrohungsmodells: Grenzen klären, bevor etwas passiert.
 
-## Assets and boundaries
+## Assets und Grenzen
 
-| Asset | Examples |
+| Asset | Beispiele |
 |---|---|
-| Source and IP | Private repos, unreleased designs |
-| Credentials | API keys, `.env`, cloud IAM |
-| User data | PII, customer ticket content |
-| Infrastructure | CI, production deploy pipelines |
+| Quellcode und IP | Private Repos, unveröffentlichte Designs |
+| Credentials | API-Keys, `.env`, Cloud-IAM |
+| Nutzerdaten | PII, Kunden-Ticketinhalte |
+| Infrastruktur | CI, Produktions-Deploy-Pipelines |
 
-**Trust boundary:** model and extensions default on the **not fully trusted** side; human review and policy enforce at the boundary.
+**Vertrauensgrenze:** Modell und Erweiterungen stehen default auf der **nicht voll vertrauenswürdigen** Seite; Menschen-Review und Policy enforcen an der Grenze.
 
-## Two core questions
+## Zwei Kernfragen
 
-Before team-wide rollout, ask:
+Vor jeder teamweiten Anbindung:
 
-1. What must we not lose?
-2. What must Codex not do by mistake?
+1. Was fürchten wir am meisten zu verlieren?
+2. Was fürchten wir am meisten, dass Codex falsch tut?
 
-First identifies important assets; second identifies dangerous actions. Most controls wrap those two.
+Frage 1 → wichtige Assets; Frage 2 → gefährliche Aktionen. Viele Kontrollstrategien drehen sich darum.
 
-## Scenario
+## Ein Szenario
 
-- Codex reads your private repo
-- Accesses a permissioned ticket system
-- Runs shell commands
-- Posts results back to comments
+- Codex kann Ihr privates Repo lesen
+- kann ein berechtigtes Ticketsystem erreichen
+- kann Shell-Befehle ausführen
+- kann Ergebnisse zurück in Kommentare schreiben
 
-Then watch for:
+Dann lohnen sich Fragen wie:
 
-- Seeing what it should not
-- Doing what it should not
-- Taking internal information outside
+- Sieht es Unerlaubtes?
+- Tut es Unerlaubtes?
+- Trägt es interne Informationen nach außen?
 
-That framing turns threat modeling into a pre-launch risk checklist.
+Auf dieser Ebene wird das Bedrohungsmodell zur Risiko-Checkliste vor dem Go-live.
 
-## Threat overview
+## Bedrohungsüberblick
 
-| Threat | Description | Mitigation direction |
+| Bedrohung | Beschreibung | Milderung |
 |---|---|---|
-| Prompt injection | Malicious issue/web steers overreach | Input hygiene, read-only CI, [injection topic](/guide/team-enterprise/security/prompt-injection/) |
-| Over-permission | Token, sandbox too broad | Least privilege, branch protection |
-| Data exfiltration | Commands/MCP leak repo | Network policy, DLP, audit Hooks |
-| Malicious extension | Unreviewed Plugin/MCP | [Extension risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
-| Supply chain | Dependency/script tampering | Existing SCA, code review |
-| Misoperation | Agent drops DB, wrong push | Command deny, no-push CI |
+| Prompt Injection | Böswillige Issues/Seiten zu Overreach | Eingabe bereinigen, Read-only-CI, [Injection-Thema](/guide/team-enterprise/security/prompt-injection/) |
+| Überrechte | Token, Sandbox zu weit | Least Privilege, Branch Protection |
+| Datenexfiltration | Befehle/MCP exportieren Repo-Inhalt | Netzwerkpolicy, DLP, Audit-Hooks |
+| Böswillige Erweiterungen | Ungeprüfte Plugins/MCP | [Erweiterungsrisiken](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Lieferkette | Abhängigkeiten und Skript-Poisoning | Mit bestehendem SCA und Code Review |
+| Fehlbedienung | Agent löscht DB, falscher Push | Command deny, CI ohne Push |
 
-## When to prioritize in threat model
+## Wann priorisieren
 
-If a capability both:
+Wenn eine Fähigkeit beides erfüllt, gehört sie früh ins Modell:
 
-- Touches important assets
-- Performs real actions
+- Sie erreicht wichtige Assets
+- Sie führt echte Aktionen aus
 
-Examples: read private repos, call production APIs, write-capable MCP, auto-push code.
+Beispiele: private Repos lesen, Produktions-APIs, schreibende MCPs, automatischer Code-Push.
 
-## Do not boil the ocean on day one
+## Beim ersten Rollout nicht alles auf einmal
 
-Many teams try to write every policy at once and ship nothing.
+Viele wollen sofort alle Docs, Prozesse und Policies — und landen bei nichts.
 
-First rollout often needs only:
+Zum ersten Codex-Anschluss oft genug:
 
-1. Top 3 asset classes
-2. Top 3 actions you fear most
-3. One direct control per item
+1. Top-3 wichtigste Asset-Klassen listen
+2. Top-3 Aktionen listen, die der Agent nicht falsch machen soll
+3. Für jede der 6 eine direkte Kontrolle
 
-Examples:
+Zum Beispiel:
 
-- Fear prod DB leak → limit prod creds and export paths
-- Fear wrong push to main → branch protection and approval
-- Fear issue/web steering → tighten external input and read-only review
+- Angst vor Prod-Datenleak → Prod-Credentials und Exportpfade zuerst einschränken
+- Angst vor Push auf main → Branch Protection und Freigabe
+- Angst vor Issue/Web-Ablenkung → externe Eingaben und Read-only-Review straffen
 
-Not complete—but more useful than an unread mega-doc.
+Unvollständig — oft nützlicher als ein großes Dokument, dem niemand folgt.
 
-## Recommended layered controls
+## Empfohlene Schichten
 
 ```text
-L1 Identity and tenant (SSO, groups)
-L2 Org-managed config and model policy
-L3 Repo rules + AGENTS.md
-L4 Sandbox / approval / Hooks
-L5 Human review and branch protection
+L1 Identität und Tenant (SSO, Gruppen)
+L2 Organisationskonfiguration und Modellpolicy
+L3 Repo-Rules + AGENTS.md
+L4 Sandbox / Freigabe / Hooks
+L5 Menschen-Review und Branch Protection
 ```
 
-## Common mistakes
+## Häufige Fehler
 
-- Training only, no technical controls
-- Assume “model is smart enough”
-- Production secrets on Agent-writable paths
-- Collapse all risk to “human review will catch it”
+- Nur trainieren, keine technischen Kontrollen
+- Annehmen, das Modell sei „klug genug“
+- Produktionsschlüssel auf vom Agent beschreibbaren Pfaden
+- Alles auf „Menschen-Review reicht“ reduzieren
 
-## Minimum viable version
+## Minimalversion
 
-Establish:
+Zuerst diese drei:
 
-- High-risk actions need approval
-- Sensitive data denied by default
-- Automation read-only by default
+- Risikoaktionen brauchen Freigabe
+- Hochsensible Daten default nicht geben
+- Automatisierung default Read-only
 
-That already suppresses much team risk; refine governance later.
+Damit sinken viele Teamrisiken schon. Feine Governance kann nachziehen.
 
-## Acceptance checklist
+## Abnahme-Checkliste
 
-- [ ] Can list org Top 3 assets of concern
-- [ ] Each threat has control or accepted-risk record
-- [ ] Incident response contacts aligned
+- [ ] Top-3 Assets der Organisation benennbar
+- [ ] Jede Bedrohung mit Kontrolle oder dokumentierter Risikoakzeptanz
+- [ ] Incident-Kontakte abgestimmt
 
-## Related
+## Verwandte Kapitel
 
-- [Sensitive context](/guide/context/sensitive-context/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [Sensibler Kontext](/guide/context/sensitive-context/)
+- [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 
-## Reference sources
+## Quellen
 
-- KimYx0207 enterprise security
-- OpenAI enterprise security whitepaper (official)
-- CodexGuide compliance practice
+- KimYx0207 Enterprise Security
+- OpenAI Enterprise Security Whitepaper (offiziell)
+- CodexGuide Compliance-Praxis
 
 ---
 
 **Status:** verified  
-**Products:** Team / enterprise  
-**Verification basis:** OpenAI plugin, app, and integration docs still distinguish external data access, action permissions, approval requirements, and source-system boundaries; this page organizes team risk as assets, trust boundaries, typical threats, and layered controls—without depending on a specific product toggle.  
-**Last verified:** 2026-07-26
+**Anwendbare Produkte:** Team / Enterprise  
+**Prüfgrundlage:** Aktuelle OpenAI-Hinweise zu Plugins, Apps und Integrationen trennen weiterhin Externzugriff, Aktionsrechte, Freigabeanforderungen und Quellsystemgrenzen; diese Seite verdichtet Teamrisikoflächen zu Assets, Vertrauensgrenzen, typischen Bedrohungen und Schichtenkontrollen — ohne Abhängigkeit von einem konkreten Produktschalter.  
+**Zuletzt geprüft:** 2026-07-26
