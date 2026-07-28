@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/fr/">Lire en ligne</a>
   ·
-  <a href="./src/content/docs/guide/index.md">Guide pour débutants</a>
+  <a href="./src/content/docs/fr/guide/start-here/index.md">Commencer ici</a>
   ·
   <a href="./docs/planning/content-architecture.md">Architecture du contenu</a>
   ·
@@ -72,11 +72,11 @@ Pour la navigation complète, la recherche, l’organisation des chapitres et le
 
 Nous recommandons cet ordre :
 
-1. [Guide — accueil](./src/content/docs/guide/index.md)
-2. [Contexte et fichiers](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Cas](./src/content/docs/cases/index.md)
+1. [Commencer ici](./src/content/docs/fr/guide/start-here/index.md)
+2. [Contexte](./src/content/docs/fr/guide/context/index.md)
+3. [Prompts](./src/content/docs/fr/prompts/index.md)
+4. [Skills](./src/content/docs/fr/skills/index.md)
+5. [Cas pratiques](./src/content/docs/fr/cases/index.md)
 
 Ce parcours est conçu pour les nouveaux utilisateurs de Codex : il vous aide à construire une base solide avant la pratique.
 
@@ -110,10 +110,10 @@ Comprendre les flux de travail complets via des tâches réelles : lecture de co
 | Lien | Usage |
 | --- | --- |
 | [Lire en ligne](https://codexhandbook.com/fr/) | Parcourir le manuel complet sur le site |
-| [Guide](./src/content/docs/guide/index.md) | Comprendre les parcours d’utilisation de Codex |
-| [Prompts](./src/content/docs/prompts/index.md) | Décrire clairement les tâches et les limites |
-| [Skills](./src/content/docs/skills/index.md) | Transformer l’expérience en capacités réutilisables |
-| [Cas](./src/content/docs/cases/index.md) | Flux de bout en bout via des tâches réelles |
+| [Guide](./src/content/docs/fr/guide/start-here/index.md) | Comprendre les parcours d’utilisation de Codex |
+| [Prompts](./src/content/docs/fr/prompts/index.md) | Décrire clairement les tâches et les limites |
+| [Skills](./src/content/docs/fr/skills/index.md) | Transformer l’expérience en capacités réutilisables |
+| [Cas pratiques](./src/content/docs/fr/cases/index.md) | Flux de bout en bout via des tâches réelles |
 | [Exemples](./examples/README.md) | Réutiliser prompts et actifs d’exemple |
 | [Architecture du contenu](./docs/planning/content-architecture.md) | Comprendre la conception informationnelle du site |
 | [Plan des chapitres](./docs/planning/chapter-outline.md) | Voir la couverture des sujets |
@@ -122,17 +122,17 @@ Comprendre les flux de travail complets via des tâches réelles : lecture de co
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # Guide, clients, permissions, vérification
-├── src/content/docs/prompts/    # Méthodes de prompts et expression des tâches
-├── src/content/docs/skills/     # Conception, utilisation et gouvernance des Skills
-├── src/content/docs/cases/      # Cas de tâches réelles
+├── src/content/docs/fr/guide/   # Guide, clients, permissions, vérification
+├── src/content/docs/fr/prompts/ # Méthodes de prompts et expression des tâches
+├── src/content/docs/fr/skills/  # Conception, utilisation et gouvernance des Skills
+├── src/content/docs/fr/cases/   # Cas de tâches réelles
 ├── examples/                    # Prompts copiables et exemples étendus
 ├── docs/planning/               # Planification et maintenance du contenu
 ```
 
 ## Développement local
 
-Ce projet utilise [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) pour le site de documentation. Le contenu principal se trouve dans `src/content/docs/`.
+Ce projet utilise [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) pour le site de documentation. Le contenu français se trouve dans `src/content/docs/fr/`.
 
 Prérequis :
 
@@ -151,6 +151,14 @@ Construire le site statique :
 ```bash
 pnpm build
 ```
+
+Suivre la couverture de traduction française :
+
+```bash
+pnpm i18n:status -- --locale fr
+```
+
+Le contenu français se trouve sous `src/content/docs/fr/` (miroir de la source en chinois simplifié). Glossaire : [`glossary/fr.md`](./glossary/fr.md). Au 2026-07-28, la couverture française est de **100 %** (`translation_status: draft`, revue linguistique / technique à venir).
 
 ## Principes
 

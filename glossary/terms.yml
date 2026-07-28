@@ -6,6 +6,8 @@ terms:
     en: Agent
     zh-CN: Agent
     ja: Agent
+    fr: Agent
+    ko: Agent
     keep_english: true
     note: Execution approach that calls tools and iterates toward a goal. Do not translate.
 
@@ -13,6 +15,8 @@ terms:
     en: Approval
     zh-CN: 审批
     ja: 承認
+    fr: Approbation
+    ko: 승인
     keep_english: false
     note: Human confirmation before high-risk operations.
 
@@ -20,6 +24,8 @@ terms:
     en: Cloud task
     zh-CN: Cloud 任务
     ja: Cloud タスク
+    fr: Tâche Cloud
+    ko: Cloud 작업
     keep_english: false
     note: Task executed in a cloud environment, not local sandbox.
 
@@ -27,6 +33,8 @@ terms:
     en: Compaction
     zh-CN: 压缩
     ja: 圧縮
+    fr: Compression
+    ko: 압축
     keep_english: false
     note: Summarizing long context to save window space.
 
@@ -34,6 +42,8 @@ terms:
     en: Context
     zh-CN: 上下文
     ja: コンテキスト
+    fr: Contexte
+    ko: 컨텍스트
     keep_english: false
     note: Information the model can currently use (files, conversation, project).
 
@@ -41,6 +51,8 @@ terms:
     en: Diff
     zh-CN: 差异 / diff
     ja: diff / 差分
+    fr: Diff / écart
+    ko: diff / 차이
     keep_english: false
     note: Before/after view of changes. Prefer "diff" in English UI copy.
 
@@ -48,6 +60,8 @@ terms:
     en: Hook
     zh-CN: Hook
     ja: Hook
+    fr: Hook
+    ko: Hook
     keep_english: true
     note: Custom logic at lifecycle nodes (advanced). Product concept — keep English.
 
@@ -55,6 +69,8 @@ terms:
     en: MCP
     zh-CN: MCP
     ja: MCP
+    fr: MCP
+    ko: MCP
     keep_english: true
     note: Model Context Protocol. Never translate.
 
@@ -62,6 +78,8 @@ terms:
     en: Plugin
     zh-CN: Plugin
     ja: Plugin
+    fr: Plugin
+    ko: Plugin
     keep_english: true
     note: Product extension package. Keep English.
 
@@ -69,6 +87,8 @@ terms:
     en: Prompt
     zh-CN: 提示词
     ja: プロンプト
+    fr: Prompt
+    ko: 프롬프트
     keep_english: false
     note: Goal and requirements text given to an Agent.
 
@@ -76,6 +96,8 @@ terms:
     en: Sandbox
     zh-CN: 沙箱
     ja: サンドボックス
+    fr: Bac à sable
+    ko: 샌드박스
     keep_english: false
     note: Execution isolation that limits filesystem and network blast radius.
 
@@ -83,6 +105,8 @@ terms:
     en: Skill
     zh-CN: Skill
     ja: Skill
+    fr: Skill
+    ko: Skill
     keep_english: true
     note: Reusable package of specialized instructions and resources. Product name.
 
@@ -90,6 +114,8 @@ terms:
     en: Task
     zh-CN: 任务
     ja: タスク
+    fr: Tâche
+    ko: 작업
     keep_english: false
     note: A goal-oriented work unit (may span multiple tool calls).
 
@@ -97,6 +123,8 @@ terms:
     en: Thread
     zh-CN: 线程
     ja: スレッド
+    fr: Fil / thread
+    ko: 스레드
     keep_english: false
     note: Continuous conversation and its accumulated context. Not an OS thread.
 
@@ -104,6 +132,8 @@ terms:
     en: Token
     zh-CN: Token
     ja: Token
+    fr: Token
+    ko: Token
     keep_english: true
     note: Unit used to measure text processed by the model.
 
@@ -111,6 +141,8 @@ terms:
     en: Tool
     zh-CN: 工具
     ja: ツール
+    fr: Outil
+    ko: 도구
     keep_english: false
     note: Callable capability such as read file, run command, or search.
 
@@ -118,6 +150,8 @@ terms:
     en: Worktree
     zh-CN: 工作树
     ja: 作業ツリー
+    fr: Arbre de travail
+    ko: 작업 트리
     keep_english: false
     note: Isolated working directory for parallel experiments (git worktree).
 
@@ -125,6 +159,8 @@ terms:
     en: AGENTS.md
     zh-CN: AGENTS.md
     ja: AGENTS.md
+    fr: AGENTS.md
+    ko: AGENTS.md
     keep_english: true
     note: Project instruction file name. Never translate.
 
@@ -132,6 +168,8 @@ terms:
     en: Thread / session
     zh-CN: 线程 / 会话
     ja: スレッド / セッション
+    fr: Fil / session
+    ko: 스레드 / 세션
     keep_english: false
     note: Beginner-facing alias for thread when explaining conversation continuity.
 
@@ -139,6 +177,8 @@ terms:
     en: Cloud environment
     zh-CN: Cloud 环境
     ja: Cloud 環境
+    fr: Environnement Cloud
+    ko: Cloud 환경
     keep_english: false
     note: Remote runner configuration for cloud tasks.
 
@@ -146,6 +186,8 @@ terms:
     en: Profile
     zh-CN: Profile
     ja: Profile
+    fr: Profile
+    ko: Profile
     keep_english: true
     note: Named configuration bundle in config.toml. Keep as product term.
 
@@ -153,6 +195,8 @@ terms:
     en: Subagent
     zh-CN: Subagent
     ja: Subagent
+    fr: Subagent
+    ko: Subagent
     keep_english: true
     note: Nested agent run delegated from a parent task.
 
@@ -160,6 +204,8 @@ terms:
     en: Verification
     zh-CN: 核验 / 验证
     ja: 検証
+    fr: Vérification
+    ko: 검증
     keep_english: false
     note: Checking that artifacts and changes meet acceptance criteria.
 
@@ -167,6 +213,8 @@ terms:
     en: Artifact
     zh-CN: 产物 / 制品
     ja: 成果物
+    fr: Artefact / livrable
+    ko: 산출물
     keep_english: false
     note: Generated output such as files, docs, or build results.
 
@@ -174,6 +222,8 @@ terms:
     en: Permission
     zh-CN: 权限
     ja: 権限
+    fr: Permission
+    ko: 권한
     keep_english: false
     note: What Codex is allowed to do (filesystem, network, approvals).
 
@@ -181,6 +231,8 @@ terms:
     en: Reasoning
     zh-CN: 推理
     ja: 推論
+    fr: Raisonnement
+    ko: 추론
     keep_english: false
     note: Model deliberation effort / reasoning mode.
 
@@ -188,6 +240,8 @@ terms:
     en: Non-interactive mode
     zh-CN: 非交互模式
     ja: 非対話モード
+    fr: Mode non interactif
+    ko: 비대화형 모드
     keep_english: false
     note: codex exec and scripted runs without a live chat UI.
 
@@ -195,6 +249,8 @@ terms:
     en: Interactive mode
     zh-CN: 交互模式
     ja: 対話モード
+    fr: Mode interactif
+    ko: 대화형 모드
     keep_english: false
     note: Live chat / TUI session with the user.
 
@@ -202,6 +258,8 @@ terms:
     en: Handoff
     zh-CN: 交接
     ja: 引き継ぎ
+    fr: Passation
+    ko: 인수인계
     keep_english: false
     note: Passing context so another session or person can resume work.
 
@@ -209,5 +267,7 @@ terms:
     en: Steering
     zh-CN: 引导 / 纠偏
     ja: 軌道修正 / 誘導
+    fr: Pilotage / recentrage
+    ko: 궤도 수정 / 유도
     keep_english: false
     note: Redirecting an in-progress agent run without restarting from scratch.

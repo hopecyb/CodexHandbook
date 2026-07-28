@@ -1,0 +1,125 @@
+---
+title: Manuel Codex
+head:
+  - tag: title
+    content: Manuel Codex
+description: Codex Handbook transforme les bases du produit, le prompting, les Skills et des cas réels en méthodes réutilisables pour décrire les tâches, guider l'exécution et vérifier les résultats.
+template: splash
+editUrl: false
+lastUpdated: false
+locale: fr
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
+hero:
+  title: Transformez vos idées en résultats <br /> avec Codex
+  tagline: Des bases du produit et des Prompts clairs aux Skills réutilisables et aux retours d'expérience concrets — transformez chaque tâche en une méthode que vous pouvez exécuter, vérifier et transmettre.
+  image:
+    html: |
+      <div class="home-hero-art" aria-hidden="true">
+        <span class="home-hero-art__halo"></span>
+        <span class="home-hero-art__panel home-hero-art__panel--back"></span>
+        <span class="home-hero-art__panel home-hero-art__panel--mid"></span>
+        <span class="home-hero-art__shelf"></span>
+        <div class="home-hero-art__book">
+          <img src="/icon-512.png" alt="" />
+        </div>
+        <div class="home-hero-art__note home-hero-art__note--guide">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="home-hero-art__note home-hero-art__note--check">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+  actions:
+    - text: Commencer ici
+      icon: right-arrow
+      link: /fr/guide/start-here/
+    - text: Voir sur GitHub
+      icon: external
+      variant: minimal
+      link: https://github.com/hopecyb/CodexHandbook
+---
+
+import AboutHandbook from '../../../components/AboutHandbook.astro';
+
+<section class="home-section home-section-lead" aria-label="Positionnement du handbook">
+	<p>Codex est bien plus qu'un outil qui modifie du code. Il peut vous aider à comprendre des documents, générer du contenu, construire des prototypes, traiter des fichiers, examiner des modifications, automatiser des tâches répétitives et servir de partenaire d'exécution dans la collaboration en équipe.</p>
+	<p>Ce handbook est organisé en quatre modules — guide produit, prompting, Skills et cas réels — afin que les lecteurs de tous niveaux trouvent leur prochaine étape.</p>
+</section>
+
+<section class="home-section" aria-labelledby="modules-heading">
+	<div class="section-heading">
+		<p>Quatre modules</p>
+		<h2 id="modules-heading">Commencer par module</h2>
+	</div>
+	<div class="module-grid">
+		<a class="module-card" href="/fr/guide/">
+			<strong>Guide Codex</strong>
+			<span>Installez les clients, comprenez les Permissions, réalisez votre première Tâche.</span>
+		</a>
+		<a class="module-card" href="/fr/prompts/">
+			<strong>Prompts</strong>
+			<span>Clarifiez objectifs, Contexte, contraintes et critères d'acceptation — avec des modèles copiables.</span>
+		</a>
+		<a class="module-card" href="/fr/skills/">
+			<strong>Skills</strong>
+			<span>Emballez des méthodes répétables ; étendez avec Plugins, MCP et Hooks.</span>
+		</a>
+		<a class="module-card" href="/fr/cases/">
+			<strong>Cas</strong>
+			<span>Apprenez à partir de tâches réelles — corrections de bugs, rédaction, automatisation et plus.</span>
+		</a>
+	</div>
+</section>
+
+<section class="home-section" aria-labelledby="paths-heading">
+	<div class="section-heading">
+		<p>Choisissez votre parcours</p>
+		<h2 id="paths-heading">Commencez par votre objectif</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/fr/guide/learning-paths/beginner/01-talk-to-codex/">
+			<strong>Débutant</strong>
+			<span>Découvrez Codex, réalisez votre première Tâche et apprenez à inspecter et annuler les résultats.</span>
+		</a>
+		<a class="path-card" href="/fr/guide/learning-paths/creator/">
+			<strong>Créateur</strong>
+			<span>Guides de démarrage et modèles pour la recherche, la rédaction, les images, les présentations et la publication. (Étapes supplémentaires à venir.)</span>
+		</a>
+		<a class="path-card" href="/fr/guide/learning-paths/developer/">
+			<strong>Développeur</strong>
+			<span>Comprenez les bases de code, implémentez des fonctionnalités, exécutez des tests, examinez les modifications et gérez les tâches complexes. (Étapes supplémentaires à venir.)</span>
+		</a>
+		<a class="path-card" href="/fr/guide/learning-paths/team/">
+			<strong>Équipe</strong>
+			<span>Instructions partagées, limites de Permission, standards de qualité et automatisation d'équipe. (Étapes supplémentaires à venir.)</span>
+		</a>
+	</div>
+</section>
+
+<section class="home-section home-map" aria-labelledby="map-heading">
+	<div class="section-heading">
+		<p>Carte des capacités</p>
+		<h2 id="map-heading">Les capacités que vous maîtriserez étape par étape</h2>
+	</div>
+	<ul>
+		<li><span>01</span> Rédiger des Prompts de Tâche avec des objectifs clairs, des limites explicites et des résultats vérifiables</li>
+		<li><span>02</span> Gérer fichiers, Contexte, terminal, navigateur et documents externes</li>
+		<li><span>03</span> Étendre Codex avec Skills, Plugins, MCP et Hooks</li>
+		<li><span>04</span> Organiser les longues Tâches, la collaboration multi-Agent, les rétrospectives et les passations</li>
+		<li><span>05</span> Établir sécurité, Vérification et gouvernance en contexte personnel et d'équipe</li>
+	</ul>
+</section>
+
+<AboutHandbook title="Collaboration ouverte">
+
+Le handbook est rédigé en chinois simplifié comme langue source. Des versions en chinois traditionnel, anglais, français, japonais, coréen et d'autres suivront. Le contenu est étiqueté avec le statut, les dates de vérification et les produits concernés — afin que les lecteurs sachent ce qu'ils peuvent suivre directement et ce qui mérite une seconde lecture.
+
+[Parcourir les parcours d'apprentissage](/fr/guide/learning-paths/)
+
+</AboutHandbook>

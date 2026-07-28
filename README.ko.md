@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/ko/">온라인 읽기</a>
   ·
-  <a href="./src/content/docs/guide/index.md">초보자 가이드</a>
+  <a href="./src/content/docs/ko/guide/start-here/index.md">여기서 시작</a>
   ·
   <a href="./docs/planning/content-architecture.md">콘텐츠 구조</a>
   ·
@@ -72,11 +72,11 @@ Codex를 처음 알게 된다면, 이 저장소와 웹사이트가 첫 출발점
 
 다음 순서로 시작하는 것을 권장합니다:
 
-1. [Guide 홈](./src/content/docs/guide/index.md)
-2. [컨텍스트와 파일](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Cases](./src/content/docs/cases/index.md)
+1. [여기서 시작](./src/content/docs/ko/guide/start-here/index.md)
+2. [컨텍스트](./src/content/docs/ko/guide/context/index.md)
+3. [프롬프트](./src/content/docs/ko/prompts/index.md)
+4. [Skills](./src/content/docs/ko/skills/index.md)
+5. [실전 사례](./src/content/docs/ko/cases/index.md)
 
 Codex를 처음 접하는 사람에게 적합한 경로로, 실전에 들어가기 전에 안정적인 기초를 쌓을 수 있습니다.
 
@@ -110,10 +110,10 @@ Skills 설계·사용·유지·거버넌스를 학습하고, 한 번의 성공�
 | 링크 | 용도 |
 | --- | --- |
 | [온라인 읽기](https://codexhandbook.com/ko/) | 웹사이트에서 전체 핸드북 탐색 |
-| [Guide](./src/content/docs/guide/index.md) | Codex 사용 경로를 처음부터 이해 |
-| [Prompts](./src/content/docs/prompts/index.md) | 작업과 경계를 명확히 설명하는 방법 학습 |
-| [Skills](./src/content/docs/skills/index.md) | 경험을 재사용 가능한 역량으로 축적 |
-| [Cases](./src/content/docs/cases/index.md) | 실제 작업으로 엔드투엔드 워크플로 이해 |
+| [가이드](./src/content/docs/ko/guide/start-here/index.md) | Codex 사용 경로를 처음부터 이해 |
+| [프롬프트](./src/content/docs/ko/prompts/index.md) | 작업과 경계를 명확히 설명하는 방법 학습 |
+| [Skills](./src/content/docs/ko/skills/index.md) | 경험을 재사용 가능한 역량으로 축적 |
+| [실전 사례](./src/content/docs/ko/cases/index.md) | 실제 작업으로 엔드투엔드 워크플로 이해 |
 | [Examples](./examples/README.md) | 프롬프트와 예제 자산을 직접 재사용 |
 | [콘텐츠 구조](./docs/planning/content-architecture.md) | 사이트 정보 설계를 빠르게 이해 |
 | [챕터 개요](./docs/planning/chapter-outline.md) | 주제 범위 확인 |
@@ -122,17 +122,17 @@ Skills 설계·사용·유지·거버넌스를 학습하고, 한 번의 성공�
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # 입문 가이드, 클라이언트, 권한, 검증
-├── src/content/docs/prompts/    # 프롬프트 방법과 작업 표현
-├── src/content/docs/skills/     # Skills 설계, 사용, 거버넌스
-├── src/content/docs/cases/      # 실제 작업 사례
+├── src/content/docs/ko/guide/   # 입문 가이드, 클라이언트, 권한, 검증
+├── src/content/docs/ko/prompts/ # 프롬프트 방법과 작업 표현
+├── src/content/docs/ko/skills/  # Skills 설계, 사용, 거버넌스
+├── src/content/docs/ko/cases/   # 실제 작업 사례
 ├── examples/                    # 복사 가능한 프롬프트와 확장 예제
 ├── docs/planning/               # 콘텐츠 계획 및 유지보수 자료
 ```
 
 ## 로컬 개발
 
-이 프로젝트는 [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)로 문서 사이트를 구축합니다. 본문은 `src/content/docs/`에 있습니다.
+이 프로젝트는 [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)로 문서 사이트를 구축합니다. 한국어 본문은 `src/content/docs/ko/`에 있습니다.
 
 환경 요구사항:
 
@@ -151,6 +151,14 @@ pnpm dev
 ```bash
 pnpm build
 ```
+
+한국어 번역 진행 상황 확인:
+
+```bash
+pnpm i18n:status -- --locale ko
+```
+
+한국어 본문은 `src/content/docs/ko/`(중국어 간체 소스 `src/content/docs/`의 미러)에 있습니다. 용어집: [`glossary/ko.md`](./glossary/ko.md). 2026-07-28 기준 한국어 페이지 커버리지는 **100%**(모두 `translation_status: draft`, 언어·기술 리뷰 대기).
 
 ## 프로젝트 원칙
 

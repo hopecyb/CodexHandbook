@@ -11,6 +11,7 @@ import {
 	getSiteLang,
 	mainNavItems,
 	pickLabel,
+	uiLabels,
 } from '../utils/siteNav';
 
 const locale = Astro.locals.starlightRoute.locale ?? 'root';
@@ -29,7 +30,7 @@ function isModuleActive(href: string) {
 	return getActiveModule(Astro.url.pathname, normalizedLocale) === moduleDir;
 }
 
-const footerLabel = lang === 'zh-CN' ? '站点页脚' : 'Site footer';
+const footerLabel = pickLabel(uiLabels.siteFooter, lang);
 ---
 
 <footer class="site-footer print:hidden" aria-label={footerLabel}>

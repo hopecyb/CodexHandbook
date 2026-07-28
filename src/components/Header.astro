@@ -8,7 +8,7 @@ import SocialIcons from 'virtual:starlight/components/SocialIcons';
 import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
 import { getActiveModule } from '../utils/activeModule';
 import { localizedUrl } from '../utils/localizedUrl';
-import { getSiteLang, mainNavItems, pickLabel } from '../utils/siteNav';
+import { getSiteLang, mainNavItems, pickLabel, uiLabels } from '../utils/siteNav';
 
 const shouldRenderSearch =
 	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
@@ -31,7 +31,7 @@ function isActive(prefix: string) {
 	<div class="title-wrapper sl-flex">
 		<SiteTitle />
 	</div>
-	<nav class="main-nav sl-hidden md:sl-flex print:hidden" aria-label={lang === 'zh-CN' ? '主导航' : 'Main navigation'}>
+	<nav class="main-nav sl-hidden md:sl-flex print:hidden" aria-label={pickLabel(uiLabels.mainNav, lang)}>
 		{
 			mainNavItems.map((item) => (
 				<a

@@ -1,0 +1,19 @@
+---
+title: Planning
+description: Plan first, then execute.
+locale: pt
+source_locale: en
+translation_status: fallback
+translated_at: '2026-07-28'
+source_revision: 224e8be
+---
+
+
+A plan should include: steps, files involved, risks, verification approach. You approve the plan—not just the "start" button. See [Ask for a plan](/prompts/ask-for-a-plan/)
+
+
+---
+
+**Status:** review  
+**Applicable products:** App / CLI / IDE / Cloud  
+**Last verified:** 2026-07-25
