@@ -1,129 +1,131 @@
 ---
-title: Structured Output
-description: Make exec produce machine-parseable results for downstream steps, dashboards, and gates.
+title: Saída estruturada
+description: Fazer o exec produzir resultados parseáveis por máquina — para passos seguintes, painéis e portões de qualidade.
 locale: pt
-source_locale: en
-source_revision: 6a3b81e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many first automations assume Codex will return “reasonable-looking prose.” Fine for humans; awkward for scripts.
+Na primeira automatização, muita gente deixa o Codex escrever um parágrafo «que soa razoável». Serve para uma pessoa ler; não tanto para um script.
 
-Structured output solves a direct problem: Codex returns results in a format you specify.
+A saída estruturada resolve algo direto: o Codex devolver o resultado no formato que defines.
 
-If a non-interactive task only emits free text, downstream steps struggle to judge pass/fail, issue count, or severity. Structured output makes results easier for machines to consume.
+Se uma Tarefa não interativa só produz texto livre, o passo seguinte tem dificuldade em decidir automaticamente «passou ou falhou?», «quantos achados?», «que gravidade?». A saída estruturada torna o resultado mais apto a um programa continuar a processar.
 
-## What this page covers
+## Conteúdo desta página
 
-- When to require JSON / Markdown tables / fixed fields
-- Defining schema in prompts
-- Fallback when parsing fails
+- Quando pedir JSON / tabela Markdown / campos fixos
+- Como definir o schema no Prompt
+- Estratégia de degradação se o parse falhar
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### Structured output is for the next step
+### A saída estruturada existe para o passo seguinte se encaixar
 
-JSON and schema are not engineering pedantry—they matter when scripts judge outcomes, bots post comments, or dashboards display results. You need stable shape, not guesswork each run.
+Muita gente ouve JSON e schema e toma por mania de engenharia.
 
-### Stable format ≠ reliable conclusions
+A razão prática: se o passo seguinte é um script que julga sucesso/falha, um bot que comenta ou um painel que mostra resultados, precisas de um formato estável — não que o programa adivinhe cada vez o que estás a dizer.
 
-Structured output guarantees shape, not correct understanding.
+### Formato estável ≠ conclusão fiável
 
-It solves the output interface—not task definition and verification.
+A saída estruturada só garante que «parece o que pediste»; não garante que a Tarefa foi bem compreendida.
 
-## A simple split
+Resolve a interface de saída; não substitui a definição da Tarefa nem a Verificação do resultado.
 
-- Free text: for humans
-- Structured output: for programs
+## Uma distinção direta
 
-If the next step is `jq`, scripts, dashboards, gate rules, or auto-comment bots, do not rely on free-form natural language alone.
+- Texto livre: para pessoas
+- Saída estruturada: para programas
 
-## Minimal approach
+Se o passo seguinte é `jq`, um script, um painel, um portão de qualidade ou um bot de comentários, não deves depender só de linguagem natural livre.
 
-Fix format requirements at the end of the prompt:
+## Prática mínima utilizável
+
+No fim do Prompt, fixa o formato:
 
 ```text
-…(task body)…
+…(corpo da Tarefa)…
 
-Output requirements:
-- Emit only one JSON object, no markdown code fences
-- Fields: {"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
-- If no issues, findings is an empty array
+Requisitos de saída:
+- Só um objeto JSON, sem cercas de código markdown
+- Campos: {"pass": boolean, "findings": [{"severity":"P0|P1|P2", "file":"", "message":""}]}
+- Se não houver problemas, findings é um array vazio
 ```
 
-Shell parsing (sketch):
+Parse em Shell (esquema):
 
 ```bash
 result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
-## Common pitfalls
+## Armadilhas frequentes
 
-### 1. “Output JSON” but not “only JSON”
+### 1. Dizer «saída JSON» sem dizer «só JSON»
 
-A preamble before the JSON breaks parsers.
+O modelo explica primeiro e depois dá o JSON: o parse falha.
 
-### 2. Field names change day to day
+### 2. Um nome de campo hoje, outro amanhã
 
-Once scripts depend on fields, treat schema as an interface.
+Se o script depende de um campo, trata o schema como interface — não o mudes à ligeira.
 
-### 3. Expecting structure to fix vague tasks
+### 3. Querer que a saída estruturada resolva toda a vaguidade
 
-It stabilizes format. If the task is unclear, JSON will just be consistently wrong.
+Resolve «formato estável». Se a Tarefa em si está mal definida, o JSON só emitirá de forma estável um resultado confuso.
 
-## Recommended workflow
+## Fluxo de trabalho recomendado
 
 ```text
-Define schema (version v1)
-    → prompt references schema file @schemas/review-output.json
-    → exec run
-    → jq / custom validator
-    → exit 1 on failure
+Definir schema (versão v1)
+    → O Prompt referencia o ficheiro de schema @schemas/review-output.json
+    → Executar exec
+    → Validar com jq / validador próprio
+    → Se não passar, exit 1
 ```
 
-For large output, require a file path field; Agent writes to `artifacts/`, CI uploads artifact.
+Com saídas grandes podes pedir um campo de caminho de ficheiro; o Agent escreve em `artifacts/` e a CI sobe o artifact.
 
-## How to decide
+## Como julgar
 
-If the next consumer is a program, prefer structure.  
-If the result is mainly for human reading and discussion, free text is often fine.
+Se o resultado o consome «o programa seguinte», estrutura.  
+Se é sobretudo para ler e discutir, o texto livre costuma ser mais natural.
 
-Whenever results feed another program, ask Codex to return agreed fields consistently.
+Enquanto o resultado tiver de continuar a ser processado por um programa, faz o Codex devolvê-lo com campos acordados e estáveis.
 
-## Compared to SDK
+## Comparação com o SDK
 
-| | CLI + JSON prompt | SDK |
+| | CLI + Prompt JSON | SDK |
 |---|---|---|
-| Integration cost | Low | Medium |
-| Type safety | Convention + validation | SDK types |
-| Best for | CI scripts | Multi-tenant services |
+| Custo de integração | Baixo | Médio |
+| Segurança de tipos | Por convenção + validação | Tipos do SDK |
+| Adequado | Scripts de CI | Serviços multi-tenant |
 
-See [SDK overview](/guide/developer-platform/sdk-overview/).
+Ver [Visão geral do SDK](/guide/developer-platform/sdk-overview/).
 
-## Common mistakes
+## Erros frequentes
 
-- Model adds explanation text; JSON parse fails—emphasize “JSON only” in prompt
-- Schema change without version bump; old CI mis-parses
-- Secrets in JSON fields logged
-- No explicit exit behavior on parse failure
+- O modelo mistura texto explicativo e o JSON falha — enfatiza «só JSON» no Prompt
+- Mudança de schema sem subir versão; CI antiga faz parse mal
+- Meter secrets em campos JSON que voltam aos logs
+- Sem comportamento de saída claro perante falha de parse
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Schema file or documented fields exist
-- [ ] CI fails explicitly on parse failure
-- [ ] Sample output in `fixtures/` for regression
-- [ ] Aligned with [exit codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/) strategy
+- [ ] Há ficheiro de schema ou campos documentados
+- [ ] A CI falha de forma explícita se o parse falhar
+- [ ] Saídas de exemplo em `fixtures/` para regressão
+- [ ] Alinhado com a estratégia de [códigos de saída](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## Reference sources
+## Fontes de referência
 
-- OpenAI structured outputs general practice (conceptual alignment)
-- KimYx0207 automation output chapter
+- Práticas gerais de structured outputs da OpenAI (alinhamento conceptual)
+- Capítulos de saída automatizada de KimYx0207
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API  
-**Verification basis:** OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** CLI / API  
+**Base de verificação:** A documentação atual de modelos/comparação da API da OpenAI continua a listar a capacidade `Structured outputs`; o conteúdo limita-se à prática geral de «desenhar uma interface de saída estável para Tarefas não interativas»; o schema JSON, a validação e a degradação do exemplo são padrões de engenharia.  
+**Última verificação:** 2026-07-26

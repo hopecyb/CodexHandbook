@@ -1,155 +1,157 @@
 ---
-title: Cloud troubleshooting
-description: Symptom index for GitHub connection, environments, Secrets, outbound access, and PR issues.
+title: Diagnóstico Cloud
+description: Índice de falhas habituais em ligação GitHub, ambiente, Secrets, saída à rede e PR.
 locale: pt
-source_locale: en
-source_revision: bf88d3a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When Cloud fails, rerunning usually does not fix the root cause.
+Quando o Cloud falha, voltar a executar quase nunca ataca a causa raiz.
 
-Cloud issues often sit in **permissions, environment differences, credentials, or network**. This page routes symptoms to the right topic so you do not blindly retry in chat.
+Os problemas Cloud costumam estar em quatro camadas: **Permissão, diferença de ambiente, credenciais ou rede**. Esta página aponta por sintoma ao tema correspondente, para não fazer retry às cegas no chat.
 
-## What's covered
+## Conteúdo
 
-- What to check first when a task fails
-- How Cloud troubleshooting differs from local
-- When to step back to local small-step validation
+- Perante uma falha de Tarefa, que tipo de causa olhar primeiro
+- Divisão com o diagnóstico local
+- Quando voltar a validar em local a passos pequenos
 
-## Check conditions first
+## O que olhar primeiro
 
-If "Cloud red, local green," check runtime conditions first.
+Se aparecer «Cloud vermelho, local verde», prioriza as condições de execução.
 
-Common causes:
+Causas habituais:
 
-- Remote environment differs from local
-- Cloud cannot see unpushed local work
-- Secrets misconfigured
-- Network or permissions restricted
+- O ambiente remoto não é como o local
+- O Cloud não vê o que não fizeste push em local
+- O Secret não está bem configurado
+- Rede ou Permissões restritas
 
-Verify prerequisites before blaming the task itself.
+Ao diagnosticar, olha primeiro se se cumprem as condições; depois, se a Tarefa em si tem problema.
 
-## Quick triage
+## Triagem rápida
 
-| Symptom | Check first |
+| Sintoma | Olha primeiro |
 |---|---|
-| Cannot connect to repo / 403 | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Dependency install fails | [Internet access](/guide/web-and-cloud/internet-access/) · [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
-| Private package / API 401 | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Task stuck waiting | [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) · pending approval? |
-| Local commit invisible to Cloud | Pushed? Cloud does not read unpushed local commits |
-| Cannot open PR or push | Branch protection · [Create PR](/guide/web-and-cloud/create-pull-requests/) |
-| Tests red in Cloud, green locally | Version/env alignment in [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
+| Não liga o repo / 403 | [Ligar o GitHub](/guide/web-and-cloud/connect-github/) |
+| Falha ao instalar dependências | [Acesso à Internet](/guide/web-and-cloud/internet-access/) · [Ambiente Cloud](/guide/web-and-cloud/cloud-environments/) |
+| Pacote privado / API 401 | [Secrets e variáveis](/guide/web-and-cloud/secrets-and-variables/) |
+| A Tarefa fica à espera | [Delegar e acompanhar](/guide/web-and-cloud/delegate-and-follow-up/) · pendente de Aprovação? |
+| Há commit em local, o Cloud não o vê | Já há push? O Cloud não lê conteúdo local sem push |
+| Não abre PR ou não faz push | Proteção de branches · [Criar PR](/guide/web-and-cloud/create-pull-requests/) |
+| Testes vermelhos no Cloud, verdes em local | Tabela de alinhamento de versão/ambiente em [Ambiente Cloud](/guide/web-and-cloud/cloud-environments/) |
 
-## Troubleshooting order
+## Ordem de diagnóstico
 
-1. Correct repo and branch?
-2. Sufficient permissions and authorization?
-3. Environment and dependencies in place?
-4. Secrets and network working?
-5. Task description missing key constraints?
+Podes seguir esta ordem:
 
-Clearing these beats rerunning immediately.
+1. Repo e branch corretos?
+2. Permissões e autorização suficientes?
+3. Ambiente e dependências completos?
+4. Secret e rede funcionam?
+5. Falta alguma restrição-chave na descrição da Tarefa?
 
-## Connection and permissions
+Esvaziar estas camadas primeiro costuma ser mais efetivo do que voltar a correr.
 
-**Symptom:** OAuth succeeds but task cannot clone.
+## Ligação e Permissões
 
-**Check:**
+**Fenómeno:** OAuth correto mas a Tarefa não pode fazer clone.
 
-1. Authorization scope includes target org/repo
-2. Repo archived or GitHub App restrictions enabled
-3. Personal account connected to org repo requiring SSO
+**Verifica:**
 
-**Symptom:** push rejected.
+1. Se o alcance de autorização inclui a organização/repo alvo
+2. Se o repo está archived ou há restrições de GitHub App
+3. Se usas uma conta pessoal contra um repo que exige SSO da org
 
-**Check:** branch protection, required review, attempt to push directly to `main`
+**Fenómeno:** push rejeitado.
 
-## Common misconceptions
+**Verifica:** proteção de branches, required review, se tentaste push direto a `main`
 
-### 1. Install-stage errors are always dependency problems
+## Mal-entendidos frequentes
 
-Could also be network, auth, Secrets, or private registry permissions.
+### 1. Um erro na fase de instalação é sempre um problema de dependências?
 
-### 2. Local green means code is fine and Cloud is flaky
+Também pode ser rede, autenticação, Secret ou Permissão do registry privado.
 
-Often means:  
-**your local environment has prerequisites Cloud lacks.**
+### 2. Se corre em local, o código está bem e o Cloud «falha às vezes»?
 
-### 3. Stuck task means the model is thinking
+Muitas vezes significa:  
+**o teu ambiente local tem precondições que o Cloud não tem.**
 
-Could be:
+### 3. Uma Tarefa pendurada é o modelo «a pensar»?
 
-- Waiting for approval
-- Waiting on network
-- Waiting for environment startup
-- Task scope too large
+Também pode ser:
 
-## Environment and dependencies
+- À espera de Aprovação
+- À espera de rede
+- À espera do arranque do ambiente
+- A executar uma Tarefa de alcance demasiado amplo
 
-**Symptom:** `command not found` (node, python, etc.).
+## Ambiente e dependências
 
-**Check:** base image includes required runtime; `AGENTS.md` documents version and install commands.
+**Fenómeno:** `command not found` (node, python, etc.).
 
-**Symptom:** lockfile conflict or install timeout.
+**Verifica:** se a imagem base inclui o runtime necessário; se em `AGENTS.md` estão versão e comando de instalação.
 
-**Check:** outbound policy; registry mirrors; dependencies requiring VPN (Cloud usually not on internal network)
+**Fenómeno:** conflito de lockfile ou timeout de instalação.
 
-## Secrets and variables
+**Verifica:** política de saída; mirror do registry; se a dependência precisa de VPN (o Cloud normalmente não está na intranet)
 
-**Symptom:** env vars empty at build time.
+## Secrets e variáveis
 
-**Check:**
+**Fenómeno:** variável de ambiente vazia no build.
 
-- Secret names match docs (case sensitivity common)
-- Configured in correct repo/environment scope
-- Accidentally pasted Secret in prompt and got redacted
+**Verifica:**
 
-More: [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/)
+- Se o nome do Secret coincide com a documentação (maiúsculas/minúsculas costumam importar)
+- Se está configurado no alcance correto de repo/ambiente
+- Se colaste o valor do Secret no Prompt e ficou desensibilizado
 
-## Hung tasks and timeouts
+Mais: [Secrets e variáveis](/guide/web-and-cloud/secrets-and-variables/)
 
-| Cause | Action |
+## Tarefa pendurada e timeout
+
+| Causa | Tratamento |
 |---|---|
-| Awaiting human approval | Approve or reject in App/phone |
-| Task too large | Split into smaller delegations |
-| Slow environment start | Cold start normal; if persistent, check official status page |
+| À espera de Aprovação humana | Aprovar ou recusar na App/telemóvel |
+| Tarefa demasiado grande | Partir em várias delegações pequenas |
+| Arranque lento do ambiente | O cold start na primeira vez é normal; se continuar lento, olha a página de estado oficial |
 
-Follow-up: [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/)
+Método de acompanhamento: [Delegar e acompanhar](/guide/web-and-cloud/delegate-and-follow-up/)
 
-## Output quality
+## Qualidade da entrega
 
-Cloud finished but result unusable:
+O Cloud terminou mas o resultado não serve:
 
-1. Compare against task description—missing acceptance criteria?
-2. Checkout same branch locally and run tests
-3. Add follow-up using [diagnose before fixing](/cases/workflows/diagnose-before-fixing/) instead of restarting whole task
+1. Contrasta se à descrição da Tarefa faltam critérios de aceitação
+2. Faz checkout local do mesmo branch e corre os testes
+3. Acrescenta acompanhamento com [Diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/), em vez de refazer toda a Tarefa
 
-## When to step back to local
+## Quando voltar primeiro a local
 
-If two rounds were spent on Cloud conditions instead of the task itself:
+Se levas duas rondas seguidas a diagnosticar condições Cloud em vez de avançar a Tarefa, volta primeiro a local:
 
-- Reproduce minimally locally
-- Document deps, commands, verification
-- Delegate to Cloud again
+- Faz a reprodução mínima em local
+- Escreve com clareza dependências, comandos e forma de Verificação
+- Volta a delegar ao Cloud
 
-Usually faster than guessing in the remote environment.
+Costuma poupar mais tempo do que continuar a adivinhar no ambiente remoto.
 
-## Relation to global troubleshooting index
+## Relação com o índice global de diagnóstico
 
-CLI/IDE/App local issues: [Reference · Troubleshooting](/guide/reference/troubleshooting/). This page covers **Cloud-specific** paths only.
+Problemas locais de CLI/IDE/App: [Referência · Diagnóstico](/guide/reference/troubleshooting/). Esta página só cobre a cadeia **específica de Cloud**.
 
-## References
+## Fontes de referência
 
-- OpenAI Codex Cloud support docs
+- Documentação de suporte OpenAI Codex Cloud
 - stormzhang `10-cloud.md`
 - KimYx0207 CX-10～CX-11
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** The triage framework helps, but it assumes current Cloud repo connection, Secrets, approval, network, and PR behavior; as Cloud and cross-client capabilities evolve, symptom-to-topic mapping needs a rewrite against latest official support docs.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** Cloud  
+**Nota de revisão:** O enquadramento de diagnóstico é útil, mas apoia-se em pressupostos atuais de ligação de repo Cloud, Secrets, Aprovação, rede e comportamento de PR; ao mudar o produto Cloud e as capacidades multiplataforma, o mapeamento de sintomas a páginas temáticas deve reescrever-se segundo a documentação oficial de suporte mais recente.  
+**Última verificação:** 2026-07-26

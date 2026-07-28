@@ -1,52 +1,51 @@
 ---
-title: Create a slide deck
-description: A case for generating a presentable deck from an outline.
+title: Criar uma apresentação
+description: Caso de geração de artefato — do esboço a um deck apresentável.
 locale: pt
-source_locale: en
-source_revision: d843765
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Create a slide deck
+# Criar uma apresentação
 
-## Meta information
+## Metadados
 
-| Field | Content |
+| Campo | Conteúdo |
 |---|---|
-| Audience | Creators |
-| Client | App |
-| Estimated time | 1–2 hours |
+| Público | Criadores |
+| Cliente | App |
+| Tempo estimado | 1–2 horas |
 
-## 1. Goal and background
+## 1. Objetivo e contexto
 
-**Goal:** Generate a well-structured presentation from a topic (Markdown/HTML/PPT, depending on environment capabilities).
+**Objetivo:** Gerar uma apresentação com estrutura clara a partir de um tema (Markdown/HTML/PPT, conforme as capacidades do ambiente).
 
-**Success criteria:** Slide count matches the outline; each slide's points are clear; no fabricated data.
+**Critérios de sucesso:** Número de diapositivos alinhado com o esboço, cada página com pontos claros de fala e sem dados inventados.
 
-## 2. Recommended prompt
+## 2. Prompt recomendado
 
 ```text
-Topic: [presentation topic]
-Audience: [listener background]
-Duration: [minutes]
-First give chapters and each slide's title + 3 bullet points; do not generate the final file.
-After confirmation, output to slides/ in format: [mdx/html/pptx].
-Constraints: Data must cite sources or be marked "example"; no outbound network requests unless approved.
+Tema: [tema da apresentação]
+Público: [contexto da audiência]
+Duração: [minutos]
+Primeiro dê secções e, por diapositivo, título + 3 pontos; não gere o ficheiro final ainda.
+Após confirmação, exporte para o diretório slides/, formato: [mdx/html/pptx].
+Restrições: dados devem citar fonte ou marcar «exemplo»; não fazer pedidos de rede externos sem aprovação.
 ```
 
-## 3. Verification
+## 3. Verificação
 
-- Read through each slide—can you present it in under a minute?
-- Verify chart and number sources
+- Ler cada diapositivo e confirmar se se apresenta em cerca de um minuto
+- Verificar a origem de gráficos e números
 
-## 4. Related
+## 4. Relacionado
 
-- [Presentations capability](/guide/files-and-artifacts/presentations/)
-
+- [Capacidades de apresentações](/guide/files-and-artifacts/presentations/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Generate slide decks," described as working with pptx files and image generation to produce presentations automatically; this page stays at the stable workflow layer—outline first, output per environment, numbers must cite sources or be marked as examples.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Os use cases atuais do Codex em OpenAI Developers ainda incluem “Generate slide decks”, descrito como manipular ficheiros pptx e combinar geração de imagens para criar apresentações; o conteúdo desta página mantém-se no fluxo estável «esboço primeiro, saída conforme o ambiente, números com fonte ou marcados como exemplo».  
+**Última verificação:** 2026-07-26

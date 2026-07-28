@@ -1,101 +1,102 @@
 ---
-title: Connect GitHub
-description: Connecting Codex Cloud to GitHub repos—permissions, branches, and environments.
+title: Ligar o GitHub
+description: Associar o Codex Cloud a repositórios GitHub — Permissões, branches e ambiente.
 locale: pt
-source_locale: en
-source_revision: 610e94e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-After you connect GitHub, Codex can clone repos, create branches, push, and open PRs in a **remote environment**—the prerequisite for Cloud workflows.
 
-## What's covered
+Depois de ligar o GitHub, o Codex pode clonar o repo num **ambiente remoto**, abrir branches, fazer push e abrir PRs: é o pré-requisito do fluxo Cloud.
 
-- Why connection is needed and which permissions to grant
-- Pre- and post-connection checklists
-- How this differs from local desktop tasks
+## Conteúdo
 
-## Relationship diagram
+- Porque é preciso ligar e que Permissões autorizar
+- Lista de verificação antes e depois de ligar
+- Divisão com as Tarefas locais de ambiente de trabalho
+
+## Diagrama de relação
 
 ```text
-Your GitHub repository
-    ↕ (OAuth / GitHub App—product-dependent)
-Codex Cloud environment
+O teu repositório GitHub
+    ↕ (OAuth / GitHub App, conforme o produto)
+Ambiente Cloud do Codex
     ↕
-Cloud tasks you start in Web/App
+Tarefas Cloud que lanças na Web/App
 ```
 
-The local [desktop App](/guide/desktop-app/) can still edit your machine's clone directly; Cloud fits **standardized environments, running while away from your desk, and mobile approvals**. See [local vs cloud](/guide/foundations/local-vs-cloud/).
+A [App de ambiente de trabalho](/guide/desktop-app/) local continua a poder editar o clone na tua máquina; o Cloud encaixa em **ambiente padronizado, continuar a correr longe do computador, Aprovar a partir do telemóvel**, etc. Ver [Local vs Cloud](/guide/foundations/local-vs-cloud/).
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. I already have the repo locally—why connect GitHub again?
+### 1. Já tenho o repo em local; porque ligar outra vez o GitHub?
 
-Cloud tasks see the remote repository, not your local copy.
+As Tarefas Cloud olham para o repo remoto, não para a cópia na tua máquina.
 
-### 2. Once connected, can Codex see all my local changes?
+### 2. Ligar o GitHub implica que vê todas as minhas alterações locais?
 
-Unpushed local changes are usually invisible to Cloud.  
-That is a frequent point of confusion.
+Alterações locais sem push, o Cloud normalmente não vê.  
+É um ponto de confusão habitual.
 
-### 3. What matters most when connecting?
+### 3. O que convém olhar ao ligar?
 
-Confirm first:
+Confirma primeiro:
 
-- Whether repo scope is too broad
-- How branch protection is set
-- Whether secrets are stored in Cloud's secure configuration, not in the repo
+- Se o alcance de repos não é demasiado amplo
+- Como está a proteção de branches
+- Se os secrets estão no sítio seguro do Cloud
 
-After connection, Cloud sees the remote repo—not unpushed state on your laptop.
+Depois de ligar o GitHub, o Cloud vê o repo remoto, não o estado local ainda sem push do teu computador.
 
-## Pre-connection checklist
+## Verificação prévia
 
-- [ ] You have push access to the target repo (or use a fork strategy if you only need PRs)
-- [ ] Branch protection is understood: is direct push to main blocked?
-- [ ] Secrets are not in the repo; Cloud uses [Secrets configuration](/guide/web-and-cloud/secrets-and-variables/)
-- [ ] Your organization allows third-party GitHub integrations
+- [ ] Tens Permissão de push no repo alvo (ou estratégia de fork se só precisas de PR)
+- [ ] Conheces as regras de proteção de branches: se proíbem push direto a main
+- [ ] Os secrets não estão no repo; o Cloud usa [configuração de Secrets](/guide/web-and-cloud/secrets-and-variables/)
+- [ ] A organização permite integrações de terceiros do GitHub
 
-## Recommended steps (conceptual)
+## Passos recomendados (conceito)
 
-1. Open **GitHub connection** in Codex Web/Cloud settings
-2. Choose organization and repo scope (**minimize the repo list**)
-3. Read OAuth permission text: usually read code and open PRs; write access depends on the task
-4. Run a small Cloud task on a test repo to validate
-5. After success, set default branch and environment variables if needed
+1. Na configuração do Codex Web/Cloud, abre **ligação GitHub**
+2. Escolhe organização e alcance de repos (**lista mínima possível**)
+3. Confirma a explicação de Permissões OAuth: costuma ser preciso ler código e abrir PRs; escrita conforme a Tarefa
+4. Lança uma Tarefa Cloud pequena num repo de teste
+5. Após o sucesso, configura branch por omissão e variáveis de ambiente (se aplicável)
 
-Exact UI and buttons depend on the current product.
+Botões e interface conforme o produto atual.
 
-## Permissions and security
+## Permissões e segurança
 
-| Practice | Why |
+| Prática | Motivo |
 |---|---|
-| Use a dedicated machine user or bot account (teams) | Audit trail and offboarding |
-| Do not authorize all private repos | Smaller blast radius |
-| Enable branch protection + required review | Cloud output still passes human review |
-| Periodically audit connected repos | Disconnect retired projects |
+| Utilizador de máquina ou conta bot dedicada (equipa) | Auditoria e recuperação ao sair |
+| Não autorizar todos os repos privados | Reduzir a superfície de erro |
+| Ativar proteção de branches + review obrigatória | A entrega do Cloud continua a passar por review humana |
+| Rever periodicamente a lista de repos ligados | Desligar a tempo projetos abandonados |
 
-## Common tasks after connection
+## Tarefas habituais após ligar
 
-- Implement an issue remotely → [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
-- PR review and follow-up → [GitHub](/guide/integrations/github/) integration
-- Combine with [Automations](/skills/automations/scheduled-tasks/)
+- Implementar um issue em remoto → [Criar Pull Request](/guide/web-and-cloud/create-pull-requests/)
+- Rever e acompanhar um PR → integração [GitHub](/guide/integrations/github/)
+- Combinar com [Automations](/skills/automations/scheduled-tasks/)
 
-## Common mistakes
+## Erros frequentes
 
-- Connecting a personal GitHub account to production org repos with personal policies
-- Assuming Cloud can access unpushed commits on your machine
-- Running unbounded tasks on a large monorepo on the first try
+- Ligar GitHub pessoal a repos da organização de produção com política pessoal
+- Assumir que o Cloud vê commits locais sem push
+- Na primeira tentativa, correr Tarefas sem limite num monorepo grande
 
-## References
+## Fontes de referência
 
-- OpenAI Codex Cloud / GitHub integration docs
+- Documentação de integração OpenAI Codex Cloud / GitHub
 - KimYx0207 CX-10, CX-11
 - stormzhang `26-git-github.md`, `10-cloud.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / Web  
-**Review note:** This page depends on current GitHub connection flows, authorization models, repo scope settings, and Cloud UI entry points—high-churn integration details that need current official connection docs before returning to `verified`.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** Cloud / Web  
+**Nota de revisão:** Esta página depende do método atual de ligação ao GitHub, do modelo de autorização, do alcance de repos e das entradas de botões no Cloud — informação de integração muito volátil; restaurar-se-á `verified` quando houver documentação oficial de ligação atualizada.  
+**Última verificação:** 2026-07-26

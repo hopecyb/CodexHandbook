@@ -1,38 +1,38 @@
 ---
-title: 'Example: Research Skill'
-description: Example research Skill with citations and "needs confirmation" markers.
+title: 'Exemplo: Skill de pesquisa'
+description: Exemplo de Skill de pesquisa com citações e marcadores «a confirmar».
 locale: pt
-source_locale: en
-source_revision: c37acf0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Example: Research Skill
+# Exemplo: Skill de pesquisa
 
-## SKILL.md skeleton
+## Esqueleto de SKILL.md
 
 ```md
 ---
 name: source-backed-research
-description: Technical research and comparison tables with URL/file path citations. Use when the user needs selection, competitive analysis, or literature review.
+description: Pesquisa técnica e tabelas de comparação com citações por URL/caminho de arquivo. Use quando o usuário precisar de seleção, análise competitiva ou revisão de literatura.
 ---
 
-## Process
-1. Clarify research question and exclusions
-2. List evaluation dimensions (3–5)
-3. Attach a source to each conclusion; mark unverifiable items "needs confirmation"
-4. Output comparison table + recommendation + open questions
-5. Do not change code
+## Fluxo
+1. Definir a pergunta de pesquisa e exclusões
+2. Listar dimensões de avaliação (3–5)
+3. Cada conclusão com fonte; o que não der para verificar, marcar «a confirmar»
+4. Emitir tabela de comparação + recomendação + perguntas em aberto
+5. Não alterar código
 ```
 
-## Related
+## Relacionado
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Research template](/prompts/templates/research/)
+- [Caso de pesquisa](/cases/research-with-sources/)
+- [Template de pesquisa](/prompts/templates/research/)
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Illustrative research Skill skeleton emphasizing citations and "needs confirmation" markers—consistent with general Codex/Skills workflow usage.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base da Verificação:** Esqueleto ilustrativo de Skill de pesquisa, com ênfase em citação de fontes e marcadores «a confirmar»; alinhado ao uso geral atual de Codex/Skills.  
+**Última Verificação:** 2026-07-26

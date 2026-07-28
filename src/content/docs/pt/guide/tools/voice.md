@@ -1,110 +1,111 @@
 ---
-title: Voice input and output
-description: When to use voice with Codex, limitations, and privacy considerations.
+title: Entrada e saída de voz
+description: Cenários, limitações e cuidados de privacidade ao interagir com o Codex por voz.
 locale: pt
-source_locale: en
-source_revision: d38b775
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Some Codex clients support **voice**: speak a task or hear a reply summary. Good when your hands are busy or you want to dictate ideas quickly—**not** for reading secrets aloud or replacing written acceptance records.
+Alguns clientes Codex suportam **voz**: você enuncia a Tarefa ou ouve um resumo da resposta. Serve para mãos ocupadas e ditado rápido de ideias — **não** para ler segredos em voz alta, nem substitui o registo escrito de aceitação.
 
-Voice fits direction, background, and quick follow-up; precise, searchable, reviewable details still belong in text.
+A voz encaixa melhor em direção, contexto suplementar ou follow-up rápido; detalhes precisos, pesquisáveis e revisáveis voltam ao texto.
 
-## What's covered
+## Conteúdo desta página
 
-- Task shapes that suit voice
-- How voice pairs with written prompts
-- Privacy and accuracy notes
+- Que formas de Tarefa a voz serve
+- Como combinar com o Prompt escrito
+- Cuidados de privacidade e precisão
 
-## Use cases
+## Cenários adequados
 
-| Good fit | Poor fit |
+| Adequado | Inadequado |
 |---|---|
-| High-level goals, brainstorming | Instructions precise to variable names |
-| Short mobile follow-ups | Reading API keys or passwords aloud |
-| Accessibility needs | Specs that must be searchable and diffable |
+| Ditado de objetivos de alto nível, brainstorming | Instruções de código precisas até ao nome da variável |
+| Follow-up breve em telemóvel | Ler em voz alta API keys ou palavras-passe |
+| Necessidades de acessibilidade | Documentação normativa que precisa de pesquisa e diff |
 
-After speaking, ask Codex to **repeat its understanding** or produce a written plan for your confirmation. See [ask for a plan](/prompts/ask-for-a-plan/).
+Após ditar, peça ao Codex para **repetir a compreensão** ou gerar um plano escrito, e só então confirme. Ver [Pedir um plano](/prompts/ask-for-a-plan/).
 
-## What voice is good for
+## Para que serve a voz
 
-Strengths:
+Principais vantagens:
 
-- Fast
-- Hands-free
-- Dumping ideas from your head
+- Rápida
+- Liberta as mãos
+- Adequada a descarregar primeiro as ideias da cabeça
 
-Weak spots:
+Problemas comuns:
 
-- Dropped words
-- Misheard terms
-- Poor fit for exact paths, variable names, CLI flags
+- Fácil omitir palavras
+- Fácil ouvir mal
+- Não adequada a caminhos precisos, nomes de variáveis, parâmetros de linha de comando
 
-Common pattern: speak direction, then confirm in writing.
+Prática comum: ditar primeiro a direção e depois complementar em texto para confirmar.
 
-## Usage tips
+## Sugestões de uso
 
-1. Quiet environment, short sentences; state goal / constraints / done criteria in segments
-2. For file paths and branch names, **type** or have the Agent spell them back
-3. For sensitive work, disable cloud voice processing if a local/disable option exists
-4. Keep important decisions in text on issues or PRs
+1. Ambiente calmo, frases curtas; diga por secções «objetivo / restrições / critérios de conclusão»
+2. Em caminhos de ficheiros e nomes de branches, **passe a escrever** ou peça ao Agent para repetir a ortografia
+3. Em projetos sensíveis, desative o processamento de voz na cloud (se o produto oferecer opção local/desativar)
+4. Em decisões importantes, conserve registo escrito em issue ou PR
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Voice replaces typing entirely?
+### 1. A voz pode substituir completamente a escrita?
 
-No. Prefer typing for:
+Não.  
+Estes conteúdos é melhor escrever:
 
-- File paths
-- Branch names
-- Commands
-- Parameters
-- Acceptance criteria
+- Caminhos de ficheiros
+- Nomes de branches
+- Comandos
+- Parâmetros
+- Critérios de aceitação
 
-### 2. More detail spoken ≠ fewer errors
+### 2. Quanto mais detalhado o ditado, menos erros?
 
-Long unstructured speech can scatter the point.
+Um ditado longo sem estrutura dispersa o essencial com mais facilidade.
 
-### 3. Voice summary replaces reviewing results?
+### 3. A resposta por voz substitui a revisão do resultado?
 
-No.  
-Summaries help orientation; confirming changes, files, diffs, and tests still requires text and artifacts.
+Não.  
+O resumo por voz ajuda a apanhar a ideia depressa; para confirmar alterações, ficheiros, diffs e resultados de testes, volte ao texto e aos Artefatos.
 
-## Useful speaking order
+## Ordem habitual de formulação
 
-When starting with voice:
+Ao pedir a Tarefa por voz:
 
-1. What I want done
-2. What not to do
-3. How to verify when finished
+1. O que quero fazer
+2. O que não fazer
+3. Como verificar no fim
 
-Then ask for a written version to confirm.
+Depois, peça-lhe para organizar numa versão escrita para confirmar.
 
-## Privacy
+## Privacidade
 
-- Voice may be transcribed in the cloud—do not read customer PII or credentials
-- Mind bystanders in public spaces
-- Team policy may forbid voice on confidential codenames
+- A voz pode passar por transcrição na cloud; não leia PII de clientes nem credenciais
+- Em locais públicos, atenção a quem ouve
+- Políticas de equipa podem proibir funções de gravação em nomes de código confidenciais
 
-## Relation to multimodal input
+## Relação com multimodalidade
 
-- **Image input**: mockups, screenshots → [prompting with images](/prompts/prompting-with-images/)
-- **Voice input**: this page
-- **Output**: still mainly code, files, text diffs; voice summary does not replace review
+- **Entrada de imagem**: mockups, ecrãs → [Prompt com imagens](/prompts/prompting-with-images/)
+- **Entrada de voz**: esta página
+- **Saída**: continua a centrar-se em código, ficheiros e diffs escritos; o resumo por voz não substitui a revisão
 
-## Common mistakes
+## Erros habituais
 
-- Long unstructured speech; Agent misses constraints
-- Accepting large code changes via voice without reading diff
-- Describing unsanitized production incidents aloud
+- Ditado longo sem estrutura; o Agent omite restrições
+- Aceitar por voz alterações de código em massa sem ver o diff
+- Descrever por voz detalhes de incidentes de produção sem desmascarar
 
-Voice helps you start and follow up—not replace precise instructions, sensitive handling, or final acceptance.
+A voz serve para arrancar e acompanhar — não para substituir instruções precisas, tratamento de informação sensível e aceitação final.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Desktop Voice (plan and workspace settings dependent)  
-**Verification basis:** OpenAI Help Center articles on ChatGPT Voice and ChatGPT Work and Codex state Voice can work with Work/Codex in the desktop App to start tasks, follow progress, and coordinate work; availability depends on plan, workspace settings, and version. This page focuses on use cases, privacy, and "speak then confirm in writing."  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / Desktop Voice (conforme plano e definições da área de trabalho)  
+**Base de verificação:** Os artigos atuais do OpenAI Help Center 《ChatGPT Voice》 e 《ChatGPT Work and Codex》 deixam claro: Voice pode combinar-se com Work / Codex na App de ambiente de trabalho para arrancar Tarefas, acompanhar progresso e coordenar trabalho; capacidades e disponibilidade dependem do plano, das definições da área de trabalho e da versão. Esta página foca cenários de voz, cuidados de privacidade e o método «após ditar, voltar ao texto para confirmar».  
+**Última verificação:** 2026-07-26

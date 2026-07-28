@@ -1,55 +1,55 @@
 ---
-title: Research template
-description: Investigation and comparison with citations.
+title: Template de pesquisa
+description: Investigação e comparação com citações.
 locale: pt
-source_locale: en
-source_revision: b0f8d5e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Research template
+# Template de pesquisa
 
-Research differs from ordinary Q&A: you want answers **and** where they came from.
+A diferença entre pesquisa e pergunta comum: você quer não só a resposta, mas de onde veio.
 
 ## Template
 
 ```text
-Research question: 【one sentence】
-Evaluation dimensions: 【list 3–5 items】
-Constraints:
-- Each conclusion must cite source URL or @in-repo path
-- Mark unverifiable items as 「pending confirmation」
-- Do not change code
-Output: comparison table + recommendation + open questions
+Pergunta de pesquisa: 【uma frase】
+Dimensões de avaliação: 【liste 3–5】
+Restrições:
+- cada conclusão com URL de fonte ou @caminho no repositório
+- o que não puder verificar, marque como «a confirmar»
+- não alterar código
+Saída: tabela comparativa + recomendação + perguntas em aberto
 ```
 
-## When to use this template
+## Quando usar este template
 
-- Product or solution comparison
-- Latest capabilities, rules, or differences
-- Conclusions you can audit later
+- Comparar produtos/abordagens
+- Verificar capacidades, regras ou diferenças recentes
+- Precisar de conclusões verificáveis depois
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Research means polished summary
+### 1. Pesquisar = resumir de forma «apresentável»
 
-Sources, boundaries, and pending items matter more.
+Na pesquisa importam mais fontes, limites e itens a confirmar.
 
-### 2. Must give a definite answer even when evidence is thin
+### 2. Se não encontrou, invente uma resposta firme
 
-Marking 「pending confirmation」 beats false certainty.
+Numa tarefa de pesquisa, marcar «a confirmar» vale mais do que fingir certeza.
 
-Key constraint: every major conclusion traceable to a source—not just pretty formatting.
+Restrição crítica deste template: cada conclusão importante tem de rastrear a uma fonte — não basta o formato parecer completo.
 
-## Related
+## Relacionado
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Verification](/guide/verification/)
+- [Caso: pesquisar com fontes](/cases/research-with-sources/)
+- [Verificação](/guide/verification/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a research-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página oferece um template de tarefas de pesquisa; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

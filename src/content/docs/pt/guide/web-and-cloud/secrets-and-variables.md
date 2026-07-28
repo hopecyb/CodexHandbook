@@ -1,137 +1,139 @@
 ---
-title: Secrets and environment variables
-description: Safely injecting API keys, tokens, and non-sensitive config into Cloud.
+title: Secrets e variáveis de ambiente
+description: Injetar com segurança API keys, tokens e variáveis de configuração não sensíveis no Cloud.
 locale: pt
-source_locale: en
-source_revision: 4c6c8f1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud tasks often need private APIs, package registries, or databases. Credentials should be injected via **Secrets and environment variables**—not written into code, prompts, issues, chat logs, or Git history.
+As Tarefas Cloud costumam precisar de aceder a APIs privadas, registries de pacotes ou bases de dados. Essas credenciais devem injetar-se com **Secrets e variáveis de ambiente**, não escrever-se em código, Prompt, issue, chat ou histórico de Git.
 
-## What's covered
+## Conteúdo
 
-- Secrets vs ordinary environment variables
-- How to configure in Cloud console / repo settings
-- Relationship to GitHub Actions Secrets
+- Diferença entre Secrets e variáveis de ambiente normais
+- Como configurá-las na consola Cloud / definições do repo
+- Relação com os Secrets de GitHub Actions
 
-## Secret vs environment variable
+## Distinguir Secret e variável de ambiente
 
-A simple split:
+Podes distinguir assim:
 
-- **Secret**: values that must not be visible to others—API keys, DB passwords, private keys
-- **Environment variable**: configuration the program reads—some sensitive, some not
+- **Secret**: valor que não deve ver-se à ligeira — API Key, palavra-passe de BD, chave privada
+- **Variável de ambiente**: configuração que o programa vê; algumas sensíveis, outras não
 
-Not every env var is a Secret, but Secrets should use secure injection—not hard-coded values.
+Nem toda a variável de ambiente é um Secret, mas os Secrets deveriam passar por um mecanismo de injeção seguro, não ir hardcoded.
 
-## Conceptual distinction
+## Distinção conceptual
 
-| Type | Examples | Storage requirements |
+| Tipo | Exemplo de conteúdo | Requisitos de armazenamento |
 |---|---|---|
-| **Secret** | API key, private key, DB password | Encrypted, masked in UI, not in logs |
-| **Variable** | `NODE_ENV=production`, feature flags | May be non-encrypted; still avoid leaking business strategy |
-| **Repo `.env`** | Local development | **Do not commit**; Cloud uses console Secrets instead |
+| **Secret** | API key, chave privada, palavra-passe de BD | Armazenamento cifrado, mascarado na UI, não em logs |
+| **Variável** | `NODE_ENV=production`, feature flags | Pode não cifrar-se; mesmo assim evita filtrar estratégia de negócio |
+| **`.env` no repo** | Uso em desenvolvimento local | **Não fazer commit**; no Cloud usa Secrets da consola |
 
-Sensitive context overview: [sensitive context](/guide/context/sensitive-context/)
+Princípio geral de Contexto sensível: [Contexto sensível](/guide/context/sensitive-context/)
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. "I'll paste the key just once—how bad can it be?"
+### 1. «Só colo a key um momento; não há problema, pois não?»
 
-High risk. Once a key appears in:
+O risco é alto. Assim que a colas em:
 
-- Conversation
-- Issues
-- PR descriptions
-- Shell history
-- Git commits
+- Conversação
+- Issue
+- Descrição do PR
+- Histórico de shell
+- Commit de Git
 
-it can spread via logs, notifications, screenshots, history, and collaborators.
+pode difundir-se por logs, notificações, capturas, histórico e outros colaboradores.
 
-### 2. "I'll commit `.env` so Cloud can read it"
+### 2. «Se a meter em `.env` e fizer commit, o Cloud lê-a, não?»
 
-`.env` is for local dev, not version control. In Cloud, prefer platform Secret management.
+`.env` serve mais para desenvolvimento local, não para entrar no controlo de versões. No Cloud, prioriza a gestão de Secrets da plataforma.
 
-### 3. "Secret name doesn't matter if the value is right"
+### 3. «O nome do Secret é indiferente enquanto o valor estiver correto»
 
-Many failures are naming/scope issues:
+Muitas falhas de Tarefa não estão no valor, mas em:
 
-- Typos
-- Wrong scope
-- Code reads a different variable name
+- Nome mal escrito
+- Alcance incorreto
+- O código lê outro nome de variável
 
-Keep names consistent across docs, code, and Cloud settings.
+Unifica o naming na documentação, código e definições Cloud.
 
-## Configuration principles
+## Princípios de configuração
 
-1. **Least privilege**: each Secret only enough for one class of task
-2. **Isolate by repo/environment**: separate staging and production
-3. **Rotation**: refresh tokens periodically; accept old tasks may fail
-4. **Audit**: track who added/changed Secrets (team process)
-5. **Never echo**: task logs and PR comments must not print Secret values
+1. **Privilégio mínimo**: cada Secret só basta para um tipo de Tarefa
+2. **Isolamento por repo/ambiente**: staging e production separados
+3. **Rotação**: atualiza tokens periodicamente; aceitar que Tarefas antigas falhem
+4. **Auditoria**: regista quem acrescentou/modificou que Secrets (processo de equipa)
+5. **Nunca eco**: logs de Tarefa e comentários de PR não devem imprimir valores de Secret
 
-## Minimal setup flow
+## Fluxo mínimo de configuração
 
-1. List external services the task must reach
-2. Provision only necessary Secrets—avoid full production access on day one
-3. Document required Secret **names** in docs—not values
-4. Run a test task to confirm read access
-5. Proceed with real work
+Podes seguir esta ordem:
 
-## Recommended workflow
+1. Lista que serviços externos a Tarefa precisa realmente
+2. Prepara só os Secrets necessários para esta Tarefa; não dês de entrada privilégios completos de produção
+3. Na documentação escreve «que nomes de Secret fazem falta», não os valores
+4. Corre uma Tarefa de teste e verifica a leitura
+5. Depois a Tarefa real
+
+## Fluxo de trabalho recomendado
 
 ```text
-1. Add Secret in Cloud / GitHub settings (UPPER_SNAKE names, e.g. NPM_TOKEN)
-2. In AGENTS.md note "NPM_TOKEN required for private packages"—no value
-3. Start Cloud task; confirm env can read (on failure check name and scope)
-4. Align GitHub Actions Secrets naming with Cloud for easier documentation
+1. Acrescentar Secret nas definições Cloud / GitHub (nome em SNAKE_CASE maiúsculas, p. ex. NPM_TOKEN)
+2. Em AGENTS.md indicar «faz falta NPM_TOKEN para instalar pacotes privados», sem o valor
+3. Lançar Tarefa Cloud e confirmar que o ambiente lê (se falhar, revê ortografia do nome e alcance)
+4. CI usa Secrets de GitHub Actions com naming alinhado ao do Cloud para documentar melhor
 ```
 
-With [GitHub integration](/guide/integrations/github/), prefer platform-native Secrets over having the Agent copy keys from issue bodies.
+Ao combinar com [Integração com GitHub](/guide/integrations/github/), prioriza Secrets nativos da plataforma; não deixes que o Agent copie chaves do body do issue.
 
-## When to treat something as a Secret
+## Quando tratá-lo como Secret
 
-If unsure, ask:
+Se não tiveres claro se um valor deve ser Secret, pergunta:
 
-- Would leakage cause financial, data, permission, or business harm?
+- Se se filtrar, implica risco de dinheiro, dados, Permissões ou negócio?
 
-If yes, it must not appear in public docs, prompts, chat, or the repo.
+Se a resposta for «sim», não deveria aparecer em documentação pública, Prompt, chat nem repo.
 
-## Internet access and Secrets
+## Acesso à Internet e Secrets
 
-Some tasks need outbound package pulls or API calls:
+Algumas Tarefas precisam de sair à rede para descarregar pacotes ou chamar APIs:
 
-- Outbound policy follows org security rules
-- Even with outbound access, do not paste Bearer tokens in prompts
-- Default deny production Secret access for untrusted repos
+- A política de saída é definida pelas normas de segurança da organização
+- Mesmo com saída, não coles Bearer tokens no Prompt
+- Em repos não fiáveis, proíbe por omissão ler Secrets de produção
 
-## Common mistakes
+## Erros frequentes
 
-| Mistake | Risk |
+| Erro | Risco |
 |---|---|
-| Committing `.env` | Permanent leak |
-| Pasting keys in issues/task descriptions | Spread via logs and notifications |
-| Production Secrets on experiments | Accidental production changes |
-| Secret name mismatch with code | Silent task failure |
-| Admin token for convenience | Uncontrolled blast radius |
+| Fazer commit de `.env` ao repo | Fuga permanente |
+| Colar a key em issue/descrição de Tarefa | Difusão por logs e notificações |
+| Usar Secret de produção em Tarefas experimentais | Operação errada sobre dados de produção |
+| Nome de Secret distinto do código | Falha silenciosa da Tarefa |
+| Por comodidade, dar um token com privilégios de admin | Superfície de descontrolo demasiado grande |
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] No hard-coded keys in repo (use secret scanner)
-- [ ] Cloud Secret names match documentation
-- [ ] Failure logs do not contain Secret plaintext
-- [ ] Offboarding/rotation process defined
+- [ ] Sem secrets hardcoded no repo (podes usar um secret scanner)
+- [ ] Lista de Cloud Secrets alinhada com os nomes da documentação
+- [ ] Logs de falhas de Tarefa sem texto em claro de Secrets
+- [ ] Processo de saída/rotação definido
 
-## References
+## Fontes de referência
 
 - OpenAI Codex Cloud secrets
 - stormzhang `16-security.md`, `10-cloud.md`
-- KimYx0207 security and enterprise sections (verify facts against official docs)
+- Capítulos de segurança e empresa de KimYx0207 (factos sujeitos a contraste oficial)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page describes Cloud Secret placement, repo scope, and GitHub Actions Secrets relationships concretely, but lacks strong current official Secrets documentation to verify each claim; better marked `outdated` until formal sources are available.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** Cloud  
+**Nota de revisão:** Esta página concreta bastante a localização de configuração de Cloud Secrets, o alcance por repo e a relação com Secrets de GitHub Actions, mas falta documentação oficial vigente de gestão de Secrets suficientemente sólida para o demonstrar item a item; até completar essa base, convém `outdated`.  
+**Última verificação:** 2026-07-26

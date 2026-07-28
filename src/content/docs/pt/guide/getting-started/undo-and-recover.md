@@ -1,24 +1,73 @@
 ---
-title: Undo and recover
-description: Safely roll back when results are unsatisfactory.
+title: Desfazer e recuperar
+description: Volte com segurança quando o resultado não satisfizer.
 locale: pt
-source_locale: en
-source_revision: '4595562'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When results go out of scope or quality is poor:
+Na primeira vez com o Codex, muita gente teme: se ele alterar errado, ainda consigo voltar?
 
-1. Use the client's undo / revert changes feature (per current UI)
-2. If the project uses Git: discard working tree changes your usual way (beginners can skip Git and rely on the practice directory)
-3. Start a new thread with tighter constraints and retry
+Na maioria dos casos, sim — mas é melhor reverter pelo método seguro.
 
-Prevention beats recovery: small file scope, explicit prohibitions, plan before execute.
+Quando o resultado ultrapassa o alcance ou a qualidade não serve:
+
+1. Use a capacidade de desfazer / restaurar mudanças do cliente (conforme a UI atual)
+2. Se o projeto estiver sob Git: descarte mudanças na área de trabalho do jeito que você conhece (iniciantes podem ainda não usar Git e depender do diretório de prática)
+3. Abra uma Thread nova, aperte as restrições e tente de novo
+
+Muitas vezes, reduzir o alcance de antemão economiza esforço — por exemplo mexer em poucos arquivos, escrever o que é proibido, ver o plano antes de executar.
+
+## Separar «desfazer» e «recuperar»
+
+- **Desfazer**: reverter a mudança insatisfatória de agora há pouco
+- **Recuperar**: trazer o projeto de volta a um estado que você confirma como seguro
+
+Se a prática for um arquivo pequeno, desfazer em geral não é difícil. Casos mais complicados:
+
+- Ele alterou mais de um arquivo
+- Você também alterou algumas coisas à mão depois
+- Você já não lembra qual parte quem alterou
+
+Pause novas alterações e reduza o alcance do impacto.
+
+## Ordem de tratamento quando a primeira vez der errado
+
+1. Pause novas alterações — não deixe o pânico fazer ele alterar ainda mais
+2. Confirme primeiro quais arquivos ele alterou
+3. Se o produto tiver desfazer, priorize o desfazer
+4. Se o projeto já estiver sob Git, use o método Git que você conhece para reverter
+5. De volta ao estado seguro, dê de novo uma instrução mais clara
+
+## Se não domina Git, comece assim
+
+Muitos iniciantes se assustam com «recuperar», achando que precisam dominar muitos comandos Git. No começo não precisa.
+
+Faça assim primeiro:
+
+- Pratique no diretório de prática
+- Deixe-o alterar só um arquivo pequeno por vez
+- Se o resultado não satisfizer, desfaça direto
+
+Quando for lidar com projetos oficiais, aí aprenda o rollback com Git de forma sistemática.
+
+## Prevenir importa mais do que remediar
+
+Estas práticas reduzem claramente a chance de «alterar errado e ficar difícil de limpar»:
+
+- Escrever com clareza «alterar só qual arquivo»
+- Pedir o plano antes de executar
+- Verificar a cada passo — não acumular muitas mudanças para olhar juntas
+- Confirmar antes de operações de alto risco
+
+Errar em si não é terrível. Continuar alterando sem ver o alcance da mudança é o que complica mais.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Produtos aplicáveis:** App / CLI / IDE  
+**Base de verificação:** Cruzado com os princípios de início já verificados deste handbook sobre Aprovação, revisão de resultado, recuperação após falha e Git/área de trabalho; esta página só confirma o método estável de «pausar, ver o alcance, priorizar desfazer e então voltar a um estado seguro» — sem tratar a entrada de desfazer de um cliente específico como contrato fixo.  
+**Última verificação:** 2026-07-26

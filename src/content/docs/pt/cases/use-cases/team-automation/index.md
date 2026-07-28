@@ -1,29 +1,29 @@
 ---
-title: Team automation
-description: Entry for in-team repetitive automation cases—triggers, notifications, approvals, and stop conditions.
+title: Automatização de equipa
+description: Entrada para casos de automatizar tarefas repetidas na equipa — foco em gatilhos, notificações, aprovação e condições de paragem.
 locale: pt
-source_locale: en
-source_revision: e8adb70
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Team automation cases are easy to overbuild. A safer framing: hand repetitive, rule-clear actions to automation; keep human judgment everywhere else.
+Casos de automatização de equipa tentam facilmente ir longe demais no entusiasmo. Uma leitura mais adequada: entregue-lhe ações repetidas e com regras claras; o resto continua com julgamento humano.
 
-## Cases in this group
+## Entradas deste grupo
 
-- [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Issue triage suggestions](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [Verificação agendada de ligações na documentação](/cases/use-cases/team-automation/scheduled-link-check/)
+- [Sugestões de triagem de Issues](/cases/use-cases/team-automation/issue-triage-suggestions/)
 
-## What this group emphasizes
+## Foco deste grupo
 
-- What belongs fully automated vs suggestion-only
-- How to alert and stop on failure or anomaly
-- Why "auto-open draft PR" is usually safer than "auto-edit main"
+- Que tarefas servem para automação total e quais só para sugestões
+- Como alertar e parar em falha ou anomalia
+- Porque «abrir automaticamente um draft PR» costuma ser mais estável do que «alterar automaticamente o ramo principal»
 
 ---
 
-**Status:** verified  
-**Applicable products:** Cloud / CLI / App  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current team-automation case entry and automation/approval boundary chapters; this page only navigates the team automation case group—not specific automation capability limits.
+**Estado:** verified  
+**Produtos aplicáveis:** Cloud / CLI / App  
+**Base de verificação:** Cruzado com a entrada atual de casos team-automation neste repositório e com capítulos de automatização e limites de aprovação; esta página só faz navegação do grupo de automatização de equipa, sem comprometer sozinha limites concretos de capacidade de automatização.  
+**Última verificação:** 2026-07-26

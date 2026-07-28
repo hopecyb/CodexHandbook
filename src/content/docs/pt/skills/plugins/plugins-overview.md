@@ -1,111 +1,111 @@
 ---
-title: Plugins overview
-description: Package Skills, MCP, and app connectors for unified team distribution and management.
+title: Visão geral de Plugins
+description: Empacote Skills, MCP e conectores de app para distribuição e gestão unificadas na equipe.
 locale: pt
-source_locale: en
-source_revision: 578ec7c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-A Plugin is like an installer package: it bundles pre-configured extensions for others to install.
+Plugin pode ser visto como um pacote de instalação: empacota um conjunto de extensões já configuradas para outros instalarem direto.
 
-**Plugin** packages Skills, MCP servers, app integrations, and more into **installable, updatable, governable** units—especially "one person configures, whole team reuses."
+**Plugin (plugin/conector)** empacota Skills, servidores MCP, integrações de app etc. em unidades **instaláveis, atualizáveis e governáveis** — especialmente útil quando «uma pessoa configura, a equipe inteira reutiliza».
 
-## Core difference
+## Diferença central
 
-| Standalone | Via Plugin |
+| Uso isolado | Via Plugin |
 |---|---|
-| Manually copy Skill directories | One-click install/upgrade |
-| Each person configures MCP JSON | Preconfigured servers and permission notes |
-| Docs scattered | Publisher provides manifest and release notes |
+| Copiar diretório Skill à mão | Instalar/atualizar com um clique |
+| Cada um configura MCP JSON | Servidores e notas de Permissão pré-definidos |
+| Docs espalhados | Publicador fornece inventário e notas de versão |
 
-Plugin is the **distribution and composition layer**. Capabilities still live in Skill, MCP, connectors—see [capability map](/skills/capability-map/).
+Plugin é **camada de distribuição e composição**. A capacidade em si continua em Skill, MCP e conectores — veja [Mapa de capacidades de extensão](/skills/capability-map/).
 
-## Plugin vs Skill vs MCP
+## Diferença entre Plugin, Skill e MCP
 
-Short version:
+Versão curta:
 
-- **Skill**: Tell Codex "follow these steps"
-- **MCP**: Tell Codex "these external tools are callable"
-- **Plugin**: Package the above for install and governance
+- **Skill**: diz ao Codex «quais passos seguir»
+- **MCP**: diz ao Codex «quais ferramentas externas pode chamar»
+- **Plugin**: empacota o acima para instalação e governança fáceis
 
-Much confusion comes from treating all three as the same thing.
+Muita confusão vem de tratar essas três camadas como a mesma coisa.
 
-## Typical composition
+## Composição típica
 
 ```text
-Plugin package
-├── Skills (optional)
-├── MCP server definitions (optional)
-├── App connectors / OAuth flows (optional)
-└── Metadata: version, permission declaration, changelog
+Pacote Plugin
+├── Skills (opcional)
+├── Definições de servidor MCP (opcional)
+├── Conectores de app / fluxo OAuth (opcional)
+└── Metadados: versão, declaração de Permissão, changelog
 ```
 
-## When to use Plugin
+## Quando usar Plugin
 
-| Use Plugin | Skip Plugin |
+| Use Plugin | Não use Plugin |
 |---|---|
-| Team-wide Figma/Linear/GitHub enhancement pack | Personal one-off script |
-| Need version management and rollback | Single `SKILL.md` is enough |
-| Enterprise allowlist extensions only | Experimental prototype |
+| Equipe instala unificada o pacote Figma/Linear/GitHub | Script pessoal único |
+| Precisa de versionamento e rollback | Um `SKILL.md` basta |
+| Empresa só permite extensões na whitelist | Protótipo em fase experimental |
 
-## When to care about Plugin
+## Quando se importar com Plugin
 
-- Personal learning, writing a few Skills: can wait
-- Shipping one extension pack to the team: time to care about Plugin
+- Só estudo pessoal, alguns Skills próprios: pode deixar para depois
+- Vai distribuir um kit unificado de extensões para a equipe: aí importa Plugin
 
-Plugin mainly solves **distribution and governance**—not a day-one Codex requirement.
+Plugin resolve sobretudo **distribuição e governança** — não é obrigatório no primeiro contato com o Codex.
 
-## Install and manage (conceptual)
+## Instalação e gestão (conceito)
 
-1. Choose Plugin from **official marketplace or team-approved list**
-2. Read permission notes: which repos, which SaaS
-3. After install, restart session; verify tools and Skill list
-4. Update regularly; try major versions in staging repo first
+1. Escolha Plugin no **marketplace oficial ou lista aprovada da equipe**
+2. Leia a declaração de Permissão: quais repositórios lê, quais SaaS acessa
+3. Após instalar, reinicie a sessão e valide a lista de ferramentas e Skills
+4. Atualize periodicamente; versões major, teste antes em repositório staging
 
-Exact buttons and commands follow current desktop App / CLI UI.
+Botões e comandos concretos seguem a UI atual do App desktop / CLI.
 
-## Common misconceptions
+## Equívocos comuns
 
-### 1. Installing a Plugin does not mean automatic safety
+### 1. Instalar Plugin ≠ automaticamente seguro
 
-Plugin only distributes capabilities more conveniently—not inherently safe permissions. Still check:
+Plugin só facilita a distribuição; não torna a Permissão segura por natureza. Ainda olhe:
 
-- What it can access
-- Whether it acts on your behalf externally
-- Whether the source is trustworthy
+- O que pode acessar
+- Se age em seu nome em ações externas
+- Se a origem é confiável
 
-### 2. Not everything installable is worth keeping
+### 2. Se dá para instalar, vale instalar
 
-Extensions the team can maintain, reclaim, and audit suit long-term enablement.
+Só extensões que a equipe consegue manter, revogar e auditar cabem no longo prazo.
 
-## Security and privacy
+## Segurança e privacidade
 
-- Install only trusted sources; review OAuth scopes Plugin requests
-- Separate "read design files" from "send messages on my behalf"
-- Revoke connector auth on offboarding or role change
-- Layer with [permissions and approvals](/guide/foundations/permissions-and-approvals/)—do not assume Plugin brings its own security
+- Instale só de fontes confiáveis; revise o OAuth scope pedido pelo Plugin
+- Distinga Permissão de «ler design» vs «enviar mensagem em seu nome»
+- Ao sair ou mudar de função, revogue autorização de conectores
+- Some a [Permissão e Aprovação](/guide/foundations/permissions-and-approvals/) — não assuma que Plugin traz segurança embutida
 
-## Compared to Claude Code / other ecosystems
+## Comparação com Claude Code / outros ecossistemas
 
-"Plugin" means different things across products. Compare: **what is bundled, permission model, open source auditable or not**—see [feature comparison](/guide/reference/feature-comparison/) and KimYx0207 CX-14 (facts need re-check).
+«Plugin» não significa exatamente a mesma coisa em cada produto. Ao comparar, olhe: **o que empacota, modelo de Permissão, se é open source auditável** — veja [comparação de recursos](/guide/reference/feature-comparison/) e KimYx0207 CX-14 (fatos precisam de reconfirmação).
 
-## Common mistakes
+## Erros comuns
 
-- One Plugin per tiny Skill—maintenance explodes
-- Never update after install—miss security fixes
-- Experimental Plugin enabled in production repo
+- Um Plugin para cada Skill pequeno — custo de manutenção explode
+- Instalar e nunca atualizar — perde correções de segurança
+- Ativar Plugin experimental em repositório de produção
 
-## References
+## Fontes
 
-- OpenAI Codex Plugins documentation
+- Documentação OpenAI Codex Plugins
 - KimYx0207 CX-07; stormzhang `23-plugins.md`
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI  
-**Verification basis:** OpenAI Help confirms Plugin bundles Skills, Apps, and app templates, but this page still describes overly specific install, upgrade, and governance flows beyond current stable public basis.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI  
+**Nota de revisão:** O OpenAI Help confirma Plugin como contêiner que empacota Skills, Apps e app templates, mas esta página ainda detalha demais instalação, upgrade e governança além da base pública estável.  
+**Última Verificação:** 2026-07-26

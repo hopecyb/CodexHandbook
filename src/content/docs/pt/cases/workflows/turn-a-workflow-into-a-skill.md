@@ -1,80 +1,80 @@
 ---
-title: Turn a workflow into a Skill
-description: The third repeat of the same flow deserves a Skill—trigger, instructions, and acceptance in one place.
+title: Consolidar um fluxo de trabalho como Skill
+description: Um fluxo repetido pela terceira vez merece um Skill — gatilho, instruções e aceitação num só pacote.
 locale: pt
-source_locale: en
-source_revision: cc48744
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When the same class of task (release checks, doc sync, security scans) is done **a third time** by copy-pasting prompts, consider a [Skill](/skills/overview/). This chapter bridges [workflow methods](/cases/workflows/) and the extension system.
+Quando o mesmo tipo de tarefa (verificação de release, sincronização de docs, scan de segurança) é concluído pela **terceira** vez com copy-paste de prompts, é altura de considerar um [Skill](/skills/overview/). Este capítulo liga [métodos de fluxo de trabalho](/cases/workflows/) ao sistema de extensões.
 
-## What this page solves
+## Que problema resolve esta página
 
-- When to upgrade from a prompt template to a Skill
-- What a Skill should include (instructions, resources, scripts)
-- How to share and version with the team
+- Quando promover um modelo de prompt a Skill
+- Que partes um Skill deve incluir (instruções, recursos, scripts)
+- Como partilhar e versionar com a equipa
 
-## Signals worth capturing
+## Sinais de que vale consolidar
 
-- Fixed steps + fixed acceptance checklist
-- Needs repo templates or scripts
-- Multiple people need consistent behavior
-- You want the model to **automatically recall** the flow on relevant tasks
+- Passos fixos + checklist de aceitação fixa
+- Necessidade de referenciar modelos ou scripts no repositório
+- Várias pessoas precisam do mesmo comportamento
+- Quer que o modelo **se lembre automaticamente** deste fluxo em tarefas relacionadas
 
-Skip capture for: one-off exploration, small fixes tightly bound to that day's context.
+Não precisa consolidar: exploração pontual; pequenas correções fortemente dependentes do contexto do dia.
 
-## Minimum viable approach
+## Prática mínima viável
 
-1. **Write SKILL.md clearly**: when to trigger, inputs/outputs, prohibitions
-2. **Attach `references/`**: checklists, sample diffs
-3. **Optional `scripts/`**: repeatable verification commands (aligned with [command rules](/guide/customization/rules/command-rules/))
-4. **Mention the Skill name** in repo README or AGENTS.md
-5. **Trial 2–3 runs**, then mark `verified`
+1. **Escrever SKILL.md com clareza:** quando dispara, entradas/saídas, proibições
+2. **Anexar `references/`:** checklist, exemplo de diff
+3. **Opcional `scripts/`:** comandos de verificação repetíveis (alinhados com [regras de comando](/guide/customization/rules/command-rules/))
+4. **Mencionar o nome do Skill** no README do repositório ou em AGENTS.md
+5. **Correr 2–3 vezes** e só depois marcar `verified`
 
-Getting started: [Create your first Skill](/skills/create-your-first-skill/)
+Começar: [criar o primeiro Skill](/skills/create-your-first-skill/)
 
-## Recommended workflow
+## Fluxo recomendado
 
 ```text
-Extract prompt and acceptance from a successful case
-    → trim to Skill body (drop casual wording, keep constraints)
-    → add trigger description ("before merge", "before release")
-    → team PR review
-    → place in repo examples/, team plugin, or internal skill library
+Extrair prompt e itens de aceitação de um caso bem-sucedido
+    → Reduzir ao corpo do Skill (remover oralidade; manter restrições)
+    → Acrescentar descrição de gatilho («antes de fundir», «antes de publicar»)
+    → Review em PR pela equipa
+    → Escrever no diretório examples/ acordado, plugin da equipa ou biblioteca interna de skills
 ```
 
-Compare with [Turn a flow into automation](/skills/automations/scheduled-tasks/): Skills are **interactive guidance**; Automations are **scheduled/unattended**.
+Compare com [transformar o fluxo em automatização](/skills/automations/scheduled-tasks/): Skill inclina-se a **orientação interativa**; Automation a **agendamento / sem supervisão**.
 
-## Common mistakes
+## Erros comuns
 
-- Skill longer than reading `AGENTS.md`
-- No acceptance checklist—execution quality drifts
-- Scripts need local secrets with no SECURITY note
-- Duplicates and contradicts Hooks rules
+- Skill demasiado longo — mais cansativo do que ler `AGENTS.md`
+- Sem checklist de aceitação — qualidade a derivar
+- Scripts que precisam de segredos locais sem nota SECURITY
+- Duplicação e conflito com regras de Hooks
 
-## Security boundaries
+## Limites de segurança
 
-- See [Skill security and versioning](/skills/security/)
-- Team Skills belong on the extension approval list (see [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Ver [segurança e versões de Skills](/skills/security/)
+- Skills da equipa devem entrar na lista de aprovação de extensões (ver [riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] New teammate can complete the task using only the Skill
-- [ ] Trigger conditions clear; low false-trigger rate
-- [ ] Version or CHANGELOG for team-level Skills
-- [ ] Cross-links to source workflow docs
+- [ ] Um colega novo consegue concluir uma tarefa só com o Skill
+- [ ] Condições de gatilho claras; disparos errados pouco frequentes
+- [ ] Há versão ou CHANGELOG (nível de equipa)
+- [ ] Ligação cruzada com a documentação do fluxo de origem
 
-## References
+## Fontes de referência
 
-- KimYx0207 Skills chapters
+- Capítulos Skills de KimYx0207
 - stormzhang `20-skills.md`
-- In-repo [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) and [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
+- No repositório: [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) e [`examples/README.md`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public "Save workflows as skills" use cases, plus this handbook's verified Skills, automation, command rules, and extension risk chapters; content is limited to stable guidance on when to capture repeated flows as Skills and how to organize instructions and acceptance.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE  
+**Base de verificação:** Cruzado com os use cases públicos atuais de OpenAI Developers «Save workflows as skills» e com os capítulos já verificados deste manual sobre Skills, automatização, regras de comando e riscos de extensões; o conteúdo limita-se ao método estável «quando consolidar um fluxo repetido como Skill e como organizar instruções e aceitação».  
+**Última verificação:** 2026-07-26

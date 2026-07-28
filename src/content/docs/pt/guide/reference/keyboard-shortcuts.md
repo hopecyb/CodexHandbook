@@ -1,110 +1,116 @@
 ---
-title: Keyboard Shortcuts
-description: Learning index of common shortcuts in App, CLI TUI, and IDE extension—per your installed version.
+title: Atalhos de teclado
+description: "Índice de aprendizagem de atalhos habituais na App, TUI do CLI e extensão IDE — conforme a versão atual."
 locale: pt
-source_locale: en
-source_revision: e49492c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Shortcuts vary a lot by **client and version**. This page groups by **intent** so you can ask “is there a faster way?”—check in-product help or settings for exact bindings.
+Os atalhos variam muito segundo **cliente e versão**. Esta página classifica-os por **intenção de operação**, para julgar se há uma forma mais rápida; a tecla concreta, na ajuda ou definições do produto.
 
-You do not need every shortcut on day one. Smoothing the actions that interrupt flow is enough.
+Não precisas de memorizá-los todos de uma vez. Usar com fluidez os poucos que mais interrompem o ritmo já ajuda muito.
 
 :::caution
-Table below is **illustrative**, not a complete binding list. Keys may change after upgrades.
+A tabela seguinte é **esquemática**, não uma tabela completa de bindings. Após atualizar, as teclas podem mudar.
 :::
 
-## Intent index
+## Índice de intenções gerais
 
-| Intent | Desktop App (illustrative) | CLI TUI (illustrative) | IDE extension (illustrative) |
+| Intenção | App de ambiente de trabalho (esquema) | TUI do CLI (esquema) | Extensão IDE (esquema) |
 |---|---|---|---|
-| New task/session | `Cmd/Ctrl+N` or sidebar | Exit/re-enter / new thread command | Command palette “Codex” |
-| Send message | `Enter` / `Cmd+Enter` | Per product docs | Panel send |
-| Newline without send | `Shift+Enter` | Per TUI | Per panel |
-| Open command palette | `Cmd/Ctrl+K` class | `/` slash commands | `Cmd/Ctrl+Shift+P` |
-| Search history | Sidebar search | In-session search if any | Chat history |
-| Approve tool call | Panel button | `y` / arrows (per TUI) | Notification or inline button |
-| Reject | Panel button | `n` | Inline reject |
+| Nova Tarefa/sessão | `Cmd/Ctrl+N` ou barra lateral | Sair e voltar a entrar / comando de nova Thread | Paleta de comandos «Codex» |
+| Enviar mensagem | `Enter` / `Cmd+Enter` | Conforme o produto | Enviar no painel |
+| Nova linha sem enviar | `Shift+Enter` | Conforme a TUI | Conforme o painel |
+| Abrir paleta de comandos | Tipo `Cmd/Ctrl+K` | Slash commands `/` | `Cmd/Ctrl+Shift+P` |
+| Procurar histórico | Pesquisa na barra lateral | Pesquisa na sessão (se existir) | Histórico do chat |
+| Aprovar chamada a Ferramenta | Botão do painel | `y` / setas (conforme a TUI) | Notificação ou botão em linha |
+| Recusar | Botão do painel | `n` | Recusa em linha |
 
-**Follow your installed version’s UI.**
+**Prevalece a UI da versão que tiveres instalada.**
 
-## Actions worth learning first
+## Que ações priorizar
 
-Shortcuts reduce friction when you:
+O valor dos atalhos está sobretudo em reduzir estes bloqueios:
 
-- Hunt for Send
-- Accidentally send when you wanted newline
-- Fumble approving tools
-- Cannot find how to start a new task
+- Querer enviar e ter de procurar o botão
+- Querer nova linha e enviar por engano
+- Querer Aprovar e fazê-lo aos tropeções
+- Querer abrir uma Tarefa nova e não saber a entrada
 
-Prioritize:
+Mais do que memorizar o conjunto completo, convém familiarizar-te primeiro com estas 4 classes:
 
-- Send / newline
-- New task
-- Command palette
-- Approve / reject
+- Enviar / nova linha
+- Nova Tarefa
+- Paleta de comandos
+- Aprovar / recusar
 
-## Slash commands vs keyboard
+## Slash commands vs teclado
 
-- **Slash commands**: `/review`, `/help`, etc.—see [Slash command reference](/guide/reference/slash-commands/)
-- **Shortcuts**: UI actions without typing
+- **Slash commands**: `/review`, `/help`, etc. — ver [Slash commands](/guide/reference/slash-commands/)
+- **Atalhos**: disparam uma ação de UI sem escrever texto
 
-Combine: `Cmd+K` to focus input, then `/review`.
+Podem combinar-se: primeiro `Cmd+K` para focar a entrada, depois `/review`.
 
-## CLI terminal users
+## Utilizadores de terminal CLI
 
-- **Ctrl+C** to interrupt runaway output (mind unsaved state)
-- tmux split: Codex beside `git diff`
-- Shell alias for common `codex exec`—see [Commands and shortcuts](/guide/cli/commands-and-shortcuts/)
+- Aprende **Ctrl+C** para interromper saída descontrolada (cuidado com interromper estado sem guardar)
+- Multiplexor de terminal (tmux) em ecrã partido: Codex de um lado, `git diff` do outro
+- Empacota `codex exec` habituais como alias de shell — ver [Comandos e atalhos](/guide/cli/commands-and-shortcuts/)
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. No need to master shortcuts before using Codex
+### 1. Não precisas de dominar os atalhos para começar a usar
 
-Smooth the few actions you repeat most.
+Usar com fluidez as poucas classes de ação que mais se disparam já baixa muito o custo.
 
-### 2. Others’ muscle memory is not your bar
+### 2. Outro usá-los com à-vontade não significa que tu sejas desajeitado agora
 
-Shortcuts come with practice—not an onboarding gate.
+Os atalhos são memória muscular que se forma com a familiaridade, não um limiar de entrada.
 
-### 3. Clients need not share identical bindings
+### 3. Não precisas de forçar as mesmas teclas em todos os clientes
 
-Know whether an action has a shortcut, where to view/change keys, and which actions are worth binding first.
+Mais importante é saber:
 
-## First five to learn
+- Se essa ação tem atalho
+- Onde ver e mudar bindings
+- Que ações merecem priorizar
 
-1. Send
-2. Newline without send
-3. Command palette
-4. Approve or reject
-5. New task
+## Ao começar, familiariza-te primeiro com estas
 
-Add more as you go.
+Ao começar:
 
-## IDE users
+1. Como enviar
+2. Como fazer nova linha sem enviar
+3. Como abrir a paleta de comandos
+4. Como Aprovar ou recusar
+5. Como abrir uma Tarefa nova
 
-- Bind “explain selection with Codex” to a comfortable key
-- Use editor diff and go-to-definition—less copy-paste
+Com essas 5 fluidas, o resto dos atalhos pode ir-se completando ao usar.
 
-[IDE settings](/guide/ide/settings/) · [Selected code and open files](/guide/ide/selected-code-and-open-files/)
+## Utilizadores de IDE
 
-## Accessibility and customization
+- Liga «explicar o código selecionado com Codex» a uma tecla cómoda
+- Combina com o Diff nativo do editor e «ir à definição» para menos copiar e colar
 
-Most clients allow rebinding. Teams may document **recommended** bindings—not require uniformity.
+[Definições do IDE](/guide/ide/settings/) · [Código selecionado e ficheiros abertos](/guide/ide/selected-code-and-open-files/)
 
-Shortcuts are not an exam—smooth the actions that interrupt you most.
+## Acessibilidade e personalização
 
-## Reference sources
+A maioria dos clientes permite mudar bindings nas definições. A equipa pode documentar **bindings recomendados**, sem exigir que todos coincidam.
 
-- Each product Settings / Keyboard shortcuts official page
+Os atalhos não são matéria de exame. Usar com fluidez os poucos que mais te interrompem costuma bastar.
+
+## Fontes de referência
+
+- Páginas oficiais de Settings / Keyboard shortcuts de cada produto
 - stormzhang `35-cheatsheet.md`
 - KimYx0207 CX-03
 
 ---
 
-**Status:** outdated  
-**Products:** App / CLI / IDE  
-**Review note:** Despite “illustrative” disclaimers, body assumes specific client shortcuts, send behavior, palette keys, and approval keys—highly version- and platform-dependent without strong unified official shortcut documentation.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** App / CLI / IDE  
+**Nota de revisão:** Embora declare várias vezes «esquema», o corpo continua a incluir pressupostos de atalhos atuais, forma de envio, paleta de comandos e teclas de Aprovação; dependem muito de versão e plataforma, e falta documentação oficial unificada de atalhos suficientemente sólida.  
+**Última verificação:** 2026-07-26

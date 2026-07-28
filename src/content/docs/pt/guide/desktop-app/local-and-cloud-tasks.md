@@ -1,26 +1,53 @@
 ---
-title: Local and Cloud Tasks
-description: Switch between local and Cloud execution in the App.
+title: Tarefas locais e Cloud
+description: Alternar execução local e Cloud na App.
 locale: pt
-source_locale: en
-source_revision: 3d2e5c8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+Aqui trata-se de onde a Tarefa corre na App de desktop: na máquina local ou num ambiente remoto.
 
-Choose where a task runs in the App:
+Na App, escolha o local de execução da Tarefa:
 
-- **Local**: your machine’s files and environment—fast iteration
-- **Cloud**: remote environment—good for connected repos and long tasks
+- **Local**: ficheiros e ambiente da máquina; iteração rápida
+- **Cloud**: ambiente na nuvem; adequado a repositórios remotos e Tarefas longas
 
-Concepts: [Local vs Cloud](/guide/foundations/local-vs-cloud/) · Overview: [Web and Cloud](/guide/web-and-cloud/)
+Conceitos: [Local e Cloud](/guide/foundations/local-vs-cloud/) · Visão geral: [Web e Cloud](/guide/web-and-cloud/)
 
-Before switching, confirm whether secrets should appear in that environment and whether network policy allows it.
+Antes de alternar, confirme: as chaves devem aparecer nesse ambiente? A política de rede permite?
+
+## Mal-entendidos frequentes
+
+### 1. Estou na App de desktop — por que ainda distinguir local e Cloud?
+
+Porque a App é só a entrada; não significa que todas as Tarefas corram na sua máquina.
+
+### 2. Qual escolher por defeito?
+
+Na maioria dos casos, comece pelo local, principalmente porque:
+
+- Os ficheiros estão no seu computador
+- Os resultados são mais fáceis de inspecionar
+- Em caso de erro, é mais fácil reverter
+
+### 3. Quando considerar Cloud?
+
+Situações comuns:
+
+- A Tarefa é longa
+- Precisa de ligar a um ambiente de repositório remoto
+- Precisa de um ambiente unificado
+- Não quer ocupar a máquina local
+
+Na App de desktop, se o local basta, use o local; se a Tarefa for mais longa, mais remota ou precisar de ambiente unificado, considere Cloud.
 
 
 ---
 
-**Status:** review  
-**Applies to:** App  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Produtos aplicáveis:** App  
+**Base de verificação:** A documentação atual do OpenAI Help Center (*ChatGPT Work and Codex* e *Using Codex with your ChatGPT plan*) distingue claramente local workflows e cloud tasks; esta página só resume, no contexto da App de desktop, o critério de que o local encaixa melhor com iteração rápida e Cloud com repositórios remotos e Tarefas longas.  
+**Última verificação:** 2026-07-26

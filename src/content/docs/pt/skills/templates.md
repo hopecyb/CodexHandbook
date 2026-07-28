@@ -1,22 +1,22 @@
 ---
-title: templates/ directory
-description: Provide output templates and report skeletons inside a Skill.
+title: Diretório templates/
+description: Forneça templates de saída e esqueletos de relatório no Skill.
 locale: pt
-source_locale: en
-source_revision: 8524d98
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`templates/` is not just for saving formatting time. Its practical job is stable Skill output without improvising every run.
+`templates/` não é só «economizar um pouco de formatação». O papel prático é deixar a saída do Skill mais estável, sem improvisar a estrutura toda vez.
 
-If `references/` is more about **what to consult on input**, `templates/` is more about **what the output should look like**. Fixed structure and easy review belong here.
+Se `references/` tende a «o que consultar na entrada», `templates/` tende a «como a saída deve parecer». Resultados com estrutura fixa e fáceis de revisar cabem bem aqui.
 
-# templates/ directory
+# Diretório templates/
 
-`templates/` holds output formats the Skill reuses—review reports, changelog skeletons, research comparison tables, and similar.
+`templates/` guarda formatos de saída reutilizados na execução do Skill — por exemplo relatório de revisão, esqueleto de changelog, tabela de comparação de pesquisa.
 
-## Example
+## Exemplo
 
 ```text
 review-skill/
@@ -25,68 +25,68 @@ review-skill/
     └── review-report.md
 ```
 
-In `SKILL.md`: "Output review conclusions using the structure in templates/review-report.md."
+Em `SKILL.md`, indique: «Emita a conclusão da revisão na estrutura de templates/review-report.md.»
 
-## What it does
+## O que faz
 
-- `SKILL.md` owns the process
-- `templates/` owns how results look
+- `SKILL.md` cuida do fluxo
+- `templates/` cuida da aparência do resultado
 
-Or simply:
+Ou:
 
-- Skill decides **how to do it**
-- template decides **how to present it**
+- Skill decide «como fazer»
+- template decide «como apresentar no fim»
 
-That reduces two common problems:
+Isso reduz dois problemas comuns:
 
-- Different structure every time
-- Information is there but hard to read, compare, or audit
+- Estrutura diferente a cada saída
+- A informação existe, mas é difícil de ler, comparar e revisar
 
-## When templates are worth it
+## Quando vale usar `templates/`
 
-If you want similar-looking results every time, use a template—for example:
+Se um tipo de resultado deve sempre parecer parecido, use template — por exemplo:
 
-- Review reports
-- Changelogs
-- Research comparison tables
-- Release checklists
+- Relatório de revisão
+- changelog
+- Tabela de comparação de pesquisa
+- Checklist de release
 
-Your first Skill does not need `templates/`.  
-Once you keep saying "output in this structure," extract it.
+No primeiro Skill, `templates/` não é obrigatório.  
+Mas assim que você começar a repetir «saia neste formato», vale extrair.
 
-## Difference from references/
+## Diferença em relação a references/
 
-| Directory | Focus |
+| Diretório | Foco |
 |---|---|
-| `references/` | Input standards, rules, APIs |
-| `templates/` | Output format, report structure |
+| `references/` | Normas de entrada, regras, API |
+| `templates/` | Formato de saída, estrutura de relatório |
 
-## Common misconceptions
+## Equívocos comuns
 
-### 1. Templates are only for looks
+### 1. Template só deixa o resultado «mais bonito»
 
-They also make results more stable, comparable, and auditable.
+Não é só estética: a saída fica mais estável, mais fácil de comparar e de revisar.
 
-### 2. With a template, SKILL.md does not need output rules
+### 2. Com template, o Skill não precisa esclarecer requisitos de saída
 
-Still not true.
+Também não.
 
-`SKILL.md` should say when to use the template and which fields are required.
+`SKILL.md` ainda deve dizer quando usar o template e quais campos são obrigatórios.
 
-### 3. Every output deserves a template
+### 3. Toda saída merece template
 
-Not always.
+Nem sempre.
 
-If output rarely repeats or structure varies a lot, forcing a template can constrain you.
+Se o resultado quase não se repete, ou a estrutura muda muito a cada vez, forçar template só atrapalha.
 
-## When to add templates/
+## Quando criar `templates/` à parte
 
-If you have said "output in this structure" two or three times in a row, make `templates/`.
+Se duas ou três vezes seguidas você repetir «saia nesta estrutura», vale virar `templates/`.
 
-The core value of `templates/` is stable output structure for reuse and review.
+O valor central de `templates/` é estrutura de saída estável e mais fácil de reutilizar.
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime supports guiding use of bundled files in skills; this page discusses stable output-template practice, not current client UI or install flows.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base da Verificação:** O runtime atual do Codex permite que Skills orientem o uso de arquivos anexos; esta página trata do padrão estável de template de saída, sem depender da UI ou do fluxo de instalação do cliente.  
+**Última Verificação:** 2026-07-26

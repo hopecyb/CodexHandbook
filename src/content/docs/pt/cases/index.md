@@ -1,37 +1,37 @@
 ---
-title: Case studies
-description: Learn Codex's full execute, review, and reuse flow through real tasks.
+title: Casos práticos
+description: Aprenda o fluxo completo de execução, revisão e reutilização do Codex através de tarefas reais.
 locale: pt
-source_locale: en
-source_revision: fd76a75
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Case studies
+# Casos práticos
 
-Case studies show how to go from a real goal through prompting, execution, review, verification, and reuse.
+Os casos práticos mostram como partir de um objetivo real e completar o prompt, a execução, a revisão, a verificação e a reutilização.
 
-## Case format
+## Formato do caso
 
-Each case should include goal, preparation materials, recommended prompts, execution process, human checkpoints, verification methods, failure handling, and reusable templates. To write a new case, see [Case study template](/cases/use-cases/case-study-template/).
+Cada caso deve incluir objetivo, materiais de preparação, prompt recomendado, processo de execução, pontos de controlo humanos, métodos de verificação, tratamento de falhas e modelo reutilizável. Para redigir um caso novo, consulte o [modelo de caso](/cases/use-cases/case-study-template/).
 
-## Getting started and general
+## Introdução e uso geral
 
-- [First task](/cases/first-task/)
-- [Understand a codebase](/cases/understand-a-codebase/)
-- [Coordinate multiple agents](/cases/coordinate-multiple-agents/)
+- [Primeira tarefa](/cases/first-task/)
+- [Compreender um código-base](/cases/understand-a-codebase/)
+- [Coordenar vários Agents](/cases/coordinate-multiple-agents/)
 
-## Creation and office work
+## Criação e produtividade
 
-- [Write an article](/cases/write-an-article/)
-- [Build a website](/cases/build-a-website/)
-- [Create a slide deck](/cases/create-a-slide-deck/)
-- [Analyze a spreadsheet](/cases/analyze-a-spreadsheet/)
+- [Escrever um artigo](/cases/write-an-article/)
+- [Criar um site](/cases/build-a-website/)
+- [Criar uma apresentação](/cases/create-a-slide-deck/)
+- [Analisar uma folha de cálculo](/cases/analyze-a-spreadsheet/)
 
-## Development and collaboration
+## Desenvolvimento e colaboração
 
-- [Fix a bug](/cases/fix-a-bug/)
-- [Review a PR](/cases/review-a-pr/)
-- [Research with sources](/cases/research-with-sources/)
-- [Automate a daily report](/cases/automate-a-daily-report/)
+- [Corrigir um bug](/cases/fix-a-bug/)
+- [Revisar um PR](/cases/review-a-pr/)
+- [Investigação com fontes](/cases/research-with-sources/)
+- [Automatizar um relatório diário](/cases/automate-a-daily-report/)

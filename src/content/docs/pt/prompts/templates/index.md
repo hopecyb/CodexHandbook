@@ -1,68 +1,70 @@
 ---
-title: Prompt templates
-description: Reusable prompt skeletons by task type—understand, create, change, diagnose, review, research, automate.
+title: Templates de Prompts
+description: Esqueletos reutilizáveis por tipo de tarefa — entender, criar, alterar, diagnosticar, rever, pesquisar, automatizar.
 locale: pt
-source_locale: en
-source_revision: e24d44b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Prompt templates
+# Templates de Prompts
 
-People often react two ways to "templates":
+Ao ver «template», duas reações são comuns:
 
-- templates feel too rigid, so they skip them
-- or they copy verbatim without knowing what to customize
+- achar o template demasiado rígido e não querer usá-lo
+- copiar à letra sem distinguir o que precisa de ser alterado
 
-Templates mainly help you not drop key sections—they don't think for you.
+A função principal do template é ajudar a não omitir blocos críticos — não pensar por si.
 
-Template pages preserve task structure, not the one true answer.
+O objetivo das páginas de template é preservar a estrutura da tarefa, não gerar a única resposta correta.
 
-## How to use templates
+## Como usar um template
 
-1. Pick the closest template type
-2. Replace `【】` placeholders with your real task
-3. Delete irrelevant sections
-4. Add constraints and acceptance specific to this run
+Pode seguir assim:
 
-Templates are scaffolding, not answer keys.
+1. Escolha o tipo de template mais próximo da tarefa
+2. Substitua o conteúdo em `【】` pela sua tarefa real
+3. Apague blocos irrelevantes
+4. Acrescente restrições e aceitação específicas desta tarefa
 
-| Template | When to use |
+O template é andaime, não resposta-padrão.
+
+| Template | Cenário |
 |---|---|
-| [Understand](/prompts/templates/understand/) | Read codebase, docs, or materials to build shared understanding first |
-| [Create](/prompts/templates/create/) | Build features, documents, or artifacts from scratch |
-| [Change](/prompts/templates/change/) | Iterate on something that already exists |
-| [Diagnose](/prompts/templates/diagnose/) | Find root cause before changing code |
-| [Review](/prompts/templates/review/) | Review diffs, PRs, or document changes |
-| [Research](/prompts/templates/research/) | Investigation and comparison with citations |
-| [Automate](/prompts/templates/automate/) | Repeatable tasks, scripts, unattended flows |
+| [Entender](/prompts/templates/understand/) | Ler código-base, docs ou material; construir compreensão primeiro |
+| [Criar](/prompts/templates/create/) | Implementar do zero uma função, texto ou artefato |
+| [Alterar](/prompts/templates/change/) | Iterar sobre o que já existe |
+| [Diagnosticar](/prompts/templates/diagnose/) | Localizar a causa-raiz; ainda sem alterar código |
+| [Rever](/prompts/templates/review/) | Rever diff, PR ou alterações de documentação |
+| [Pesquisar](/prompts/templates/research/) | Investigação e comparação com citações |
+| [Automatizar](/prompts/templates/automate/) | Tarefas repetidas, scripts e fluxos sem supervisão |
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Templates are copy-paste artifacts
+### 1. Template = copiar tal e qual
 
-Without editing placeholders and trimming sections, templates hollow out the task.
+Sem substituir placeholders nem apagar blocos irrelevantes, o template esvazia a tarefa.
 
-### 2. Using a template automatically makes prompts "professional"
+### 2. Usar template torna o Prompt «profissional» sozinho
 
-Templates preserve structure—they don't decide:
+O template só preserva estrutura; não decide por si:
 
-- the real goal
-- where constraints should land
-- how acceptance should read
+- qual é o objetivo real
+- até onde traçar restrições
+- como escrever a aceitação
 
-### 3. More template is better
+### 3. Quanto mais completo o template, melhor
 
-For beginners, "enough but not bloated" is fine.
+Para iniciantes, «suficiente sem inchado» basta.
 
-Pick the right type first, then adapt it—don't treat the template itself as the task.
+Escolha primeiro o tipo certo; depois adapte-o à sua tarefa — não trate o template em si como a tarefa.
 
-Writing principles: [Prompt basics](/prompts/basics/) and [Task anatomy](/prompts/task-anatomy/).
+Princípios de escrita: [Fundamentos de Prompts](/prompts/basics/) e [Anatomia de uma tarefa](/prompts/task-anatomy/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains template usage only; in-site links and template categories were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página só explica como usar templates; links e classificação foram revistos; o corpo não depende de factos voláteis do produto.

@@ -1,118 +1,120 @@
 ---
-title: PDF and Documents
-description: Scope, tools, and verification when Codex reads, summarizes, or generates PDFs and long documents.
+title: PDF e documentos
+description: Âmbito, Ferramentas e pontos de aceitação ao pedir ao Codex para ler, resumir ou gerar documentos PDF.
 locale: pt
-source_locale: en
-source_revision: b882355
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-PDFs are common for specs, papers, scans, and exported reports. Unlike plain text, PDFs are **structurally complex, large, and hard to diff**—they need explicit task design.
+Os PDF servem para especificações, papers, digitalizações e relatórios exportados. Ao contrário do texto puro, o PDF tem **estrutura complexa, volume grande e diff difícil** — precisa de uma forma de Tarefa própria.
 
-Most PDF issues: incomplete structure understanding or scope that is too broad.
+Ao entregar um PDF ao Codex, o problema mais comum é compreensão incompleta da estrutura, ou um âmbito demasiado amplo.
 
-## What this page covers
+## Conteúdo desta página
 
-- How to have the Agent “read” PDF content correctly
-- Format and path conventions when generating or updating PDFs
-- Verification beyond “file exists”
+- Como fazer o Agent «ler» corretamente o conteúdo do PDF
+- Acordos de formato e caminho ao gerar ou alterar PDF
+- Como evitar na aceitação «parece haver ficheiro mas não abre»
 
-## Why PDFs are tricky
+## Porque o PDF falha com mais facilidade
 
-PDFs may combine:
+O PDF é mais problemático que texto porque pode misturar:
 
-- Scanned images
-- Multi-column layout
-- Headers and footers
-- Tables
-- Mixed images and text
+- Imagens digitalizadas
+- Layout em várias colunas
+- Cabeçalhos e rodapés
+- Tabelas
+- Texto e imagens misturados
 
-Clearer scope (“which section, what output”) usually means better results.
+Quanto mais claro «que secção ver e que resultado quer», mais estável o efeito.
 
-## Reading PDFs
+## Ler PDF
 
-### Recommended approach
+### Prática recomendada
 
-1. **Specify path**: `docs/spec.pdf` or @ reference (per client support)
-2. **State the goal**: summary, compare a chapter, extract table data
-3. **Page or section**: limit scope on long docs to save context
-4. **Sensitive content**: contracts, ID scans—follow [Sensitive context](/guide/context/sensitive-context/)
+1. **Indique o caminho do ficheiro**: `docs/spec.pdf` ou referência @ (conforme o cliente)
+2. **Diga o que quer**: resumo, comparar um capítulo, extrair dados de tabelas
+3. **Páginas ou capítulos**: em documentos longos, limite o âmbito e poupe Contexto
+4. **Conteúdo sensível**: contratos, digitalizações de documentos de identidade → fluxo de [Contexto sensível](/guide/context/sensitive-context/)
 
-### Limits
+### Limitações
 
-- Scanned PDFs may need OCR; spot-check results
-- Complex layout, columns, footnotes may lose structure
-- Do not stuff huge PDFs into one task—segment or convert to Markdown outline first
+- PDF digitalizado pode precisar de OCR; resultados errados exigem amostragem humana
+- Layout complexo, várias colunas e notas de rodapé perdem estrutura com facilidade
+- PDF enorme: não meta o documento inteiro numa só Tarefa — processe por secções ou converta primeiro num esboço Markdown
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Whole PDF ≠ reliable key points
+### 1. Meter o PDF inteiro ≠ extrair o essencial de forma estável
 
-For long, complex, or scanned PDFs:
+Se o PDF for longo, com estrutura complexa e páginas digitalizadas, o mais estável continua a ser:
 
-- Specify range
-- Specify task
-- Process in segments
+- Indicar o âmbito
+- Indicar a Tarefa
+- Processar por secções
 
-### 2. Scanned vs text PDFs differ a lot
+### 2. PDF digitalizado e PDF de texto diferem muito
 
-Scans rely on OCR; OCR errors propagate to summaries and extractions.
+O digitalizado costuma depender primeiro de OCR; um erro de OCR desvia resumo, extração e juízo a seguir.
 
-### 3. PDF file exists ≠ done
+### 3. Gerar um ficheiro PDF ≠ já concluído
 
-Also verify:
+Ainda tem de confirmar:
 
-- Opens correctly
-- No garbled text
-- Page count, TOC, tables correct
-- CJK fonts embedded if needed
+- Se abre
+- Se o texto tem caracteres estranhos
+- Se páginas, índice e tabelas estão certos
+- Se as fontes (p. ex. CJK) estão mesmo embutidas
 
-## Generating or updating PDFs
+## Gerar ou atualizar PDF
 
-| Approach | Fits |
+| Método | Adequado para |
 |---|---|
-| Compile from Markdown/LaTeX | Technical docs, reports (reproducible) |
-| Print from HTML | Simple layout |
-| Library generation (e.g. reportlab) | Programmatic tickets, labels |
+| Compilar a partir de Markdown/LaTeX | Documentação técnica, relatórios (reproduzível) |
+| Imprimir a partir de HTML | Layout simples |
+| Geração por biblioteca (p. ex. reportlab) | Recibos, etiquetas programáticas |
 
-In the prompt specify:
+No Prompt declare:
 
-- Output path and filename
-- Page size, language, fonts (CJK PDFs especially)
-- Whether to commit (large binaries often artifact or release)
+- Caminho de saída e nome do ficheiro
+- Tamanho de página, idioma, requisitos de fonte (em PDF com CJK, atenção ao embedding de fontes)
+- Se faz commit no Git (binários grandes costumam ir para artifact ou release)
 
-## Copy-paste prompt pattern
+## Redação aplicável diretamente
+
+Pode pedir assim:
 
 ```text
-Read only pages 12–18 of `docs/spec.pdf` and extract acceptance criteria.
-Do not summarize the whole document.
-If OCR or layout is uncertain, say so explicitly.
+Leia só as páginas 12-18 de `docs/spec.pdf` e extraia os critérios de aceitação.
+Não resuma o documento inteiro.
+Se OCR ou reconhecimento de layout forem incertos, marque-os explicitamente.
 ```
 
-## Repo policy
+## Estratégia no repositório
 
-- Large PDFs: **Git LFS** or out of repo
-- When diff is unreadable, verify by **opening file** + [Verify artifacts](/guide/quality/verify-artifacts/)
-- Generated outputs: [Verifying generated artifacts](/guide/files-and-artifacts/generated-artifacts/)
+- PDF binários grandes: considere **Git LFS** ou fora do repositório
+- Quando o diff for ilegível, aceite **abrindo o ficheiro** + [Verificar Artefatos](/guide/quality/verify-artifacts/)
+- Lista de gerados: [Aceitação de Artefatos gerados](/guide/files-and-artifacts/generated-artifacts/)
 
-## Common mistakes
+## Erros habituais
 
-- “Change one word in PDF” without editable source (`.md` / `.tex`)
-- Confidential PDF in public repo then Cloud processing
-- Accept on “file exists” without opening
+- Pedir «alterar uma letra no PDF» sem fonte editável (`.md` / `.tex`)
+- Meter PDF confidencial num repositório público e processar em Cloud
+- Aceitar só por «o ficheiro existe», sem abrir
 
-## Acceptance checklist
+## Lista de verificação
 
-- [ ] PDF opens in target reader/print environment
-- [ ] Page count, TOC, key tables match expectation
-- [ ] Repo size and LFS policy meet team norms
+- [ ] O PDF abre no leitor/ambiente de impressão alvo
+- [ ] Páginas, índice e tabelas-chave correspondem ao esperado
+- [ ] Volume do repositório e política LFS cumprem a norma da equipa
 
-For PDFs, narrower scope is steadier. After generation, open and confirm content—not just presence.
+Com PDF, quanto mais claro o âmbito, mais estável. Depois de gerar, não veja só se o ficheiro existe — confirme que abre e que o conteúdo está certo.
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, verify-artifacts, sensitive-context, and image/file handling pages; stable principles: limit scope, watch OCR/layout error, open and verify after generation.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros, Verificar Artefatos, Contexto sensível e tratamento de imagens/ficheiros; esta página confirma só o princípio estável de «limitar o âmbito do PDF, desconfiar de erros de OCR/layout, abrir de facto após gerar».  
+**Última verificação:** 2026-07-26

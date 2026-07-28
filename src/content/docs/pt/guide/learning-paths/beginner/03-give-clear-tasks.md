@@ -1,29 +1,57 @@
 ---
-title: Give Clear Tasks
-description: Structure prompts with goals, context, constraints, and acceptance criteria.
+title: Dar Tarefas claras
+description: Organiza o Prompt com objetivo, contexto, restrições e critérios de aceitação.
 locale: pt
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 0eea33d
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-## Goal for this step
+## Objetivo deste passo
 
-Use a stable framework to write one “recommended” prompt.
+Escreve um Prompt segundo um enquadramento estável.
 
-See the framework: [Anatomy of a good task](/prompts/task-anatomy/)
+Detalhes do enquadramento: [Anatomia de uma boa Tarefa](/prompts/task-anatomy/)
 
-## Exercise
+Os dois passos anteriores centraram-se em «dizer a Tarefa com clareza»; este continua com «dizê-la de forma mais estável».
 
-Pick a small change (for example, tidy a list in `hello.md`) and write a prompt that includes: goal, context, inputs, constraints, acceptance criteria, and permission boundaries. Ask for a plan first, then allow execution.
+## Exercício
 
-Next: [Review results](/guide/learning-paths/beginner/04-review-results/)
+Escolhe uma alteração pequena (por exemplo organizar a lista em `hello.md`) e escreve com: objetivo, contexto, entradas, restrições, aceitação e limites de Permissão. Pede primeiro um plano; só depois permite executar.
+
+## Foco do exercício
+
+Não treinas o template em si — partes a Tarefa em blocos de informação estáveis:
+
+- O que fazer
+- Com base em que material
+- O que não fazer
+- O que conta como concluído
+
+Com estes blocos claros, Tarefas complexas costumam ficar mais estáveis.
+
+## Mal-entendidos frequentes
+
+### 1. Quanto mais curto, mais natural
+
+Natural não é necessariamente mais estável.
+
+Na primeira prática, um pouco mais de estrutura reduz mal-entendidos.
+
+### 2. Basta o objetivo; a aceitação pode ficar de fora
+
+Sem aceitação, fica mais difícil saber se «não acabou» ou se «só não gostaste do resultado».
+
+O essencial de uma Tarefa clara é objetivo, limites e critérios de conclusão aparecerem juntos.
+
+Seguinte: [Rever resultados](/guide/learning-paths/beginner/04-review-results/)
 
 
 ---
 
-**Status:** review  
-**Applies to:** App / CLI / IDE  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE  
+**Base de verificação:** Cruzado com anatomia de boa Tarefa, planeamento e percurso de principiante; esta página foca o treino estável de «escrever ao mesmo tempo objetivo, contexto, restrições e critérios de aceitação».  
+**Última verificação:** 2026-07-26

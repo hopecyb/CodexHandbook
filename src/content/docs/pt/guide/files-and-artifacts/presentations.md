@@ -1,153 +1,159 @@
 ---
-title: Presentations
-description: Generate and revise slides and decks—structure, masters, and speaker notes.
+title: Apresentações
+description: Gerar, rever e exportar diapositivos e decks — acordos de estrutura, master e notas de apresentação.
 locale: pt
-source_locale: en
-source_revision: b6c309e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Presentations (PPT, Keynote, Google Slides, Marp/Reveal, etc.) emphasize **narrative structure** and **visual consistency**. Agents excel at outlines and first drafts; masters and brand rules still need human review.
+Apresentações (PPT, Keynote, Google Slides, Marp/Reveal, etc.) valorizam **estrutura narrativa** e **consistência visual**. O Agent é forte em esboço e rascunho; master e normas de marca ainda precisam de revisão humana.
 
-With Codex, the most value is early structure, slide order, and story—final polish is still yours.
+Com o Codex em decks, o maior valor é montar primeiro estrutura, ordem de páginas e lógica de discurso; o fecho final continua consigo.
 
-## What this page covers
+## Conteúdo desta página
 
-- Recommended workflow for slides with Codex
-- Tradeoffs: `.pptx` vs Markdown slides
-- Avoiding “every slide looks different”
+- Fluxo de trabalho recomendado para diapositivos com o Codex
+- Escolhas entre formatos (`.pptx`, diapositivos Markdown)
+- Como evitar «cada página com estilo desligado»
 
-## Pick delivery format first
+## Defina primeiro o formato de entrega
 
-| Format | Fits |
+| Formato | Adequado para |
 |---|---|
-| Marp / Slidev / reveal.md | Developers, version control |
-| `.pptx` | Business reviews, sharing with clients |
-| Google Slides | Live collaboration (often via export or MCP) |
-| PDF export | Read-only distribution |
+| Marp / Slidev / reveal.md | Programadores; amigável a controlo de versões |
+| `.pptx` | Relatórios de negócio; partilha com clientes |
+| Google Slides | Colaboração em tempo real (muitas vezes via exportação ou MCP) |
+| Exportação PDF | Distribuição só de leitura |
 
-State format at the start so the Agent does not mix toolchains.
+No início da Tarefa, fixe o formato — evite misturar várias cadeias de Ferramentas.
 
-Choose by audience:
+Escolha pelo destinatário final:
 
-- Client, exec, colleagues who edit in Office: usually `.pptx`
-- Version with code: usually Markdown slides
-- Read-only handout: usually PDF export
+- Cliente, chefe ou colega que abre e edita → normalmente `.pptx`
+- Versionar junto com o código → normalmente diapositivos Markdown
+- Só versão de leitura → normalmente exportação PDF final
 
-## Recommended workflow
+## Fluxo de trabalho recomendado
 
 ```text
-1. Outline: audience, duration, 3–5 core messages
-2. Per slide: title + 3 bullets, speaker note bullets
-3. Pick tool, generate first draft
-4. Human pass: master, charts, data sources
-5. Export PDF, rehearse timing
+1. Esboço: audiência, duração, 3–5 mensagens centrais
+2. Título por página + 3 bullets; pontos-chave nas notas
+3. Escolher Ferramenta e gerar o rascunho
+4. Ajuste humano de master, gráficos e fontes de dados
+5. Exportar PDF e ensaiar com cronómetro
 ```
 
-Aligns with [Explore–plan–execute–verify](/cases/workflows/explore-plan-execute-verify/): approve outline before detail.
+Alinhado com [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/): aceite o esboço antes de preencher detalhes.
 
-## Why structure comes first
+## Porque controlar a estrutura primeiro
 
-Without structure, Codex may produce many slides with:
+Sem controlo de estrutura, o Codex facilmente espalha muitas páginas com:
 
-- Wrong order
-- Runaway page count
-- Each slide like a poster, not one deck
+- Ordem confusa
+- Número de páginas descontrolado
+- Cada página como um cartaz isolado, não o mesmo relatório
 
-Usually work in three layers:
+Costuma ser mais estável avançar nestas 3 camadas:
 
-1. What must this deck make clear?
-2. What is each slide’s one job?
-3. Then fill copy, chart notes, speaker notes
+1. Definir «o que esta apresentação tem de esclarecer»
+2. Definir «que mensagem central cada página carrega»
+3. Só depois deixar o Agent preencher texto, legendas de gráficos e notas
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Flashy slides ≠ clearer message
+### 1. PPT vistoso = comunicação mais forte?
 
-What matters:
+Muitas vezes o que realmente afeta a compreensão é:
 
-- Titles that state the point
-- Slide-to-slide progression
-- Sourced data
+- O título diz o essencial numa frase
+- Há relação de progressão entre páginas
+- Os dados têm fonte
 
-### 2. Full first draft ≠ no human review
+### 2. Se o Agent gera o rascunho inteiro, não precisa de revisão humana?
 
-Still human-check:
+Também não.  
+Revise sempre:
 
-- Brand and master
-- Key conclusions
-- Numbers and charts
-- External-facing versions
+- Marca e master da empresa
+- Conclusões-chave
+- Números e gráficos
+- Versão para envio externo
 
-### 3. More on a slide ≠ more clarity
+### 3. Página mais cheia = informação mais completa?
 
-Too many bullets, charts, and conclusions per slide hides the point.
+Normalmente fica mais difícil de apresentar.  
+Com demasiados bullets, figuras e conclusões numa página, a audiência não apanha o foco.
 
-## Practical order for Codex
+## Ordem habitual de produção
 
-1. Audience
-2. Duration
-3. Three takeaways you want
-4. Ask for outline first
-5. After outline approval, expand each slide
-6. Then speaker notes, visual requirements, export format
+Se quiser que o Codex faça um deck agora:
 
-Structure → copy → style is usually easier to control.
+1. Diga quem é a audiência
+2. Diga a duração
+3. Diga os 3 pontos que quer que fiquem
+4. Peça primeiro o esboço
+5. Com o esboço confirmado, expanda cada página
+6. Por fim acrescente notas, requisitos visuais e formato de exportação
 
-## Prompt essentials
+Nesta ordem costuma fechar melhor: primeiro estrutura, depois texto, por último estilo.
 
-- **Audience**: engineers vs executives → terminology depth
-- **Page cap**: prevents 80-slide noise
-- **Brand**: primary color, logo path, no clipart if policy says so
-- **Charts**: cite source files; updatable data not fake screenshots
+## Pontos-chave do Prompt
 
-Example tone:
+- **Audiência**: colegas técnicos vs gestão — profundidade de jargão
+- **Limite de páginas**: evitar 80 páginas de enchimento
+- **Marca**: cor principal, caminho do logo, proibir clipart (se a empresa tiver norma)
+- **Gráficos de dados**: indique o ficheiro-fonte; exija atualizável, não inventar a partir de ecrã
 
-> “Outline up to 10 slides for non-technical executives; one core conclusion per slide; add speaker notes last.”
+Também pode formular assim:
 
-Better than “make a great PPT.”
+> «Faça primeiro um esboço de no máximo 10 páginas; audiência de gestão não técnica; uma conclusão central por página; no fim acrescente notas.»
 
-Images: [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/); pure generation: [Image generation](/guide/tools/image-generation/).
+Isto costuma produzir uma versão mais trabalhável do que «faça um PPT impressionante».
 
-## Verification
+Necessidades de imagem: [Imagens e ecrãs](/guide/files-and-artifacts/images-and-screenshots/); só geração de imagens: [Geração de imagens](/guide/tools/image-generation/).
 
-- Readable font size at projection resolution
-- Animation restraint (hard to maintain if excessive)
-- Numbers match [Validate sources](/guide/quality/validate-sources/)
-- Speaker notes sufficient if needed
+## Aceitação
 
-## What to delegate vs own
+- Tamanho de letra legível na resolução do projetor
+- Animação moderada (demasiada animação é difícil de manter)
+- Números alinhados com [Validar fontes](/guide/quality/validate-sources/)
+- Notas suficientes (se necessárias)
 
-| Better for Codex | Better for humans |
+## O que entregar ao Codex e o que decidir você
+
+| Mais adequado ao Codex | Melhor decisão humana |
 |---|---|
-| Outline and slide breakdown | Final wording of conclusions |
-| Draft titles | Brand consistency |
-| Draft speaker notes | Sensitive data |
-| Chart caption drafts | External release versions |
+| Dividir o esboço em páginas | Formulação final das conclusões |
+| Rascunho de títulos | Consistência de marca |
+| Rascunho de notas | Dados sensíveis |
+| Texto de legendas de gráficos | Versão para publicação externa |
 
-## Common mistakes
+Esta divisão costuma poupar tempo e facilitar o controlo de qualidade.
 
-- No outline—“make a quarterly report deck”
-- Hand-edit `.pptx` repeatedly without Markdown source
-- Chart data inconsistent with repo CSV
-- One prompt decides structure, design, conclusions, and data definitions
+## Erros habituais
 
-## Acceptance checklist
+- Sem esboço, pedir direto «faça um PPT de relatório trimestral»
+- Alterar `.pptx` binário à mão repetidamente sem manter a fonte Markdown
+- Dados dos gráficos inconsistentes com o CSV do repositório
+- Pedir ao Agent para decidir de uma vez estrutura, design, conclusões e critérios de dados
 
-- [ ] Outline approved before full generation
-- [ ] Opens in target environment without font breakage
-- [ ] Key data traceable to source files
+## Lista de verificação
 
-## Reference sources
+- [ ] Esboço confirmado por humano antes de gerar o texto completo
+- [ ] Abre no ambiente de apresentação alvo sem fontes erradas
+- [ ] Dados-chave rastreáveis até ao ficheiro-fonte
 
-- codex.bozhouai.com presentation cases
-- stormzhang content creation chapters
-- baoyu-slide-deck community practice (structure reference)
+## Referências
+
+- Casos de apresentações e relatórios em codex.bozhouai.com
+- Capítulos de criação de conteúdo stormzhang
+- Práticas comunitárias tipo baoyu-slide-deck (referência de estrutura)
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified artifacts-first, validate-sources, images-and-screenshots, verify-artifacts pages; stable method: structure → copy → style and export.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre prioridade de Artefatos, Validar fontes, imagens/ecrãs e Verificar Artefatos; o conteúdo limita-se ao método estável «primeiro estrutura, depois texto, por último estilo e exportação».  
+**Última verificação:** 2026-07-26

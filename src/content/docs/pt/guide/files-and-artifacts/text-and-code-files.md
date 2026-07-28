@@ -1,105 +1,109 @@
 ---
-title: Text and Code Files
-description: Have Codex read and write source, config, and documentation text files correctly.
+title: Ficheiros de texto e código
+description: Fazer o Codex ler e escrever corretamente ficheiros de texto — código-fonte, configuração e documentação.
 locale: pt
-source_locale: en
-source_revision: d8290a9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Most development work is **text and code files**: source, tests, config, Markdown. This page covers scoping changes, keeping style consistent, and merging safely.
+A maioria das Tarefas de desenvolvimento cai em **ficheiros de texto e código**: código-fonte, testes, configuração, Markdown. Esta página explica como limitar o âmbito, manter o estilo e fazer merge com segurança.
 
-The key is changing the right places the right way—without extra collateral edits.
+Ao pedir ao Codex para alterar texto ou código, o essencial é alterar no sítio certo, da forma certa — e não alterar a mais de passagem.
 
-## What this page covers
+## Conteúdo desta página
 
-- Correct paths and encoding
-- Organizing multi-file edits
-- Coordinating with formatters and linters
+- Como fazer as alterações cair no caminho e encoding corretos
+- Como organizar edições em vários ficheiros
+- Coordenação com formatter e linter
 
-## File types and notes
+## Tipos de ficheiro e cuidados
 
-| Type | Notes |
+| Tipo | Cuidados |
 |---|---|
-| Source `.ts` `.py` etc. | Follow `AGENTS.md` and existing patterns |
-| Config `.json` `.yaml` `.toml` | Easy to break structure; require valid syntax |
-| Docs `.md` | Relative links, mixed-language conventions |
-| Generated code | Clarify commit vs gitignore |
+| Código-fonte `.ts` `.py` etc. | Seguir `AGENTS.md` e padrões existentes |
+| Configuração `.json` `.yaml` `.toml` | Fácil de partir a estrutura; exigir sintaxe válida |
+| Documentação `.md` | Caminhos relativos de ligações; normas de mistura PT/EN |
+| Código gerado | Indicar se deve ser submetido ou gitignore |
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Contexto: [Contexto de ficheiros e diretórios](/guide/context/file-and-folder-context/)
 
-## Why these files go wrong
+## Porque estes ficheiros falham com mais facilidade
 
-Often:
+Os pontos realmente problemáticos costumam ser:
 
-- Writes to wrong files
-- Rewrites large areas for a small fix
-- Style diverges from project norms
-- Config syntax broken quietly
+- Escrever num ficheiro que não se deveria
+- Para alterar um pouco, reescrever um bloco enorme
+- Estilo inconsistente com o projeto
+- Sintaxe de configuração partida em silêncio
 
-## Recommended prompt structure
+## Estrutura de Prompt recomendada
 
 ```text
-Goal: <one line>
-Allowed edits: <path glob>
-Forbidden: lockfile, unrelated directories
-Style: match <example file>
-Done when: list changed files + run <test command>
+Objetivo: <uma frase>
+Permitido alterar: <glob de caminhos>
+Proibido: alterar lockfile, diretórios irrelevantes
+Estilo: alinhado com <ficheiro de exemplo>
+Conclusão: listar ficheiros alterados + correr <comando de teste>
 ```
 
-See [Task anatomy](/prompts/task-anatomy/)
+Ver [Anatomia de uma boa Tarefa](/prompts/task-anatomy/)
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. “Fix this file” alone is usually thin
+### 1. Só dizer «ajude-me a alterar este ficheiro»
 
-Add:
+Normalmente falta informação.
 
-- Allowed files
-- Off-limits files
-- Style reference
-- How to verify
+É melhor acrescentar:
 
-### 2. Config is not “just text”
+- Que ficheiros pode alterar
+- Quais não tocar
+- Quem é a referência de estilo
+- Como verificar no fim
 
-`.json`, `.yaml`, `.toml` often fail on structure, indentation, syntax.
+### 2. Configuração e texto comum são a mesma coisa
 
-### 3. Bigger change ≠ faster
+Também não.
 
-Small, explainable, reviewable edits beat sweeping “while I’m here” refactors.
+Em `.json`, `.yaml`, `.toml`, o problema mais comum é estrutura, indentação ou sintaxe partidas.
 
-## Encoding and line endings
+### 3. Quanto mais abrangente a alteração, mais poupa trabalho
 
-- Default **UTF-8**; declare special encodings in `AGENTS.md`
-- Match `.editorconfig` / `prettier` to avoid whole-file newline diffs
-- Large files: @ specific functions, not full rewrite
+Muitas vezes, alterações «de âmbito pequeno, explicáveis, fáceis de rever» são mais estáveis do que «otimizações amplas de passagem».
 
-## If you fear scope creep
+## Encoding e fim de linha
 
-Require:
+- Predefinição **UTF-8**; projetos com encoding especial devem declarar em `AGENTS.md`
+- Alinhar com `.editorconfig` / `prettier`, para evitar diff de fim de linha no ficheiro inteiro
+- Ficheiros grandes: alterar por secções — @ a uma função concreta, não reescrever o ficheiro inteiro
 
-1. List affected files first
-2. Minimal change for this task only
-3. Verification steps after edit
+## Quando tem medo de alterar a mais, limite assim
 
-## Review focus
+Se tem medo de alterações a mais, exija estas três coisas:
 
-- [Review diffs](/guide/quality/review-diffs/): logic, scope, deletions
-- [Run tests](/guide/quality/run-tests/)
-- No unimplemented `TODO` placeholders left behind
+1. Declarar primeiro que ficheiros serão afetados
+2. Só o âmbito mínimo necessário à Tarefa atual
+3. Listar as ações de Verificação depois de alterar
 
-## Common mistakes
+## Pontos de revisão
 
-- “Refactor the whole project” → hundreds of files
-- Text edit on binary or minified files
-- Doc links as absolute paths → 404 on site
+- [Revisar diffs](/guide/quality/review-diffs/): lógica, âmbito, eliminações
+- [Correr testes](/guide/quality/run-tests/)
+- Introdução involuntária de `TODO` placeholder por implementar
 
-Text and code edits fail when scope sprawls and review is hard. State scope, style, and verification up front.
+## Erros habituais
+
+- «Refatorar o projeto inteiro» → centenas de ficheiros
+- Edição de texto forçada em binários ou ficheiros minificados
+- Ligações de documentação em caminho absoluto → 404 no site
+
+O pior em texto e código é alterar muito e de forma dispersa, difícil de rever. Com âmbito, estilo e Verificação claros, poupa muitas idas e voltas.
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Cross-checked against verified file/folder context, task anatomy, review-diffs, and run-tests pages; stable principle: scope paths, match style, state verification.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre Contexto de ficheiros/diretórios, anatomia de Tarefas, revisar diffs e correr testes; esta página confirma só o princípio estável de «limitar caminhos, manter estilo, clarificar Verificação» para ficheiros de texto/código.  
+**Última verificação:** 2026-07-26

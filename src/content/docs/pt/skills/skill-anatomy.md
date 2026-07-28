@@ -1,96 +1,96 @@
 ---
-title: Skill anatomy
-description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
+title: Anatomia de um Skill
+description: Papéis e exemplos de SKILL.md, references/, templates/ e scripts/.
 locale: pt
-source_locale: en
-source_revision: '31950e9'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you open a Skill directory, folders look familiar—but it is not always obvious why they are laid out this way.
+Na primeira vez que se olha um diretório Skill, a sensação comum é «reconheço as pastas, mas não sei por que estão assim».
 
-This page explains how to separate main flow, long docs, templates, and scripts instead of stuffing everything into one file.
+Esta página explica como separar «fluxo principal, documentação longa, templates e scripts», em vez de empilhar tudo num arquivo só.
 
-That makes reading, editing, and reuse easier and avoids a mess as you grow.
+Fica mais fácil de ler, alterar e reutilizar — e menos propenso a virar bagunça.
 
-# Skill anatomy
+# Anatomia de um Skill
 
-## Directory layout
+## Estrutura de diretórios
 
 ```text
 my-skill/
-├── SKILL.md          # Required
-├── scripts/          # Optional: deterministic steps
-├── references/       # Optional: long reference docs
-└── templates/        # Optional: output templates
+├── SKILL.md          # obrigatório
+├── scripts/          # opcional: passos determinísticos
+├── references/       # opcional: documentação longa de referência
+└── templates/        # opcional: templates de saída
 ```
 
-## What each layer does
+## O que cada camada faz
 
-- `SKILL.md`: Main manual—what it is, when to use it, what steps to follow
-- `references/`: Long reference shelf; do not cram all background into the main file
-- `templates/`: Output skeletons so you are not improvising every time
-- `scripts/`: Hand deterministic steps to scripts instead of only natural language
+- `SKILL.md`: manual principal — diga ao Codex «o que é, quando usar, quais passos»
+- `references/`: armário de material longo — não force todo o background no arquivo principal
+- `templates/`: esqueleto de saída pronto — evite improvisar a estrutura toda vez
+- `scripts/`: passos determinísticos vão para script — não dependa só de linguagem natural
 
-At first you may only need `SKILL.md`.  
-Split out `references/`, `templates/`, and `scripts/` when things actually get complex.
+No início, um único `SKILL.md` basta.  
+Quando realmente ficar complexo, aí separe `references/`, `templates/`, `scripts/`.
 
-## Minimal SKILL.md example
+## Exemplo mínimo de SKILL.md
 
 ```md
 ---
 name: pr-review
-description: Review the diff of the current branch against main; flag risks and test gaps. Use when the user asks for review, PR review, or pre-merge checks.
+description: Revisa o diff do branch atual em relação a main, marca riscos e lacunas de teste. Use quando o usuário pedir review, revisão de PR ou checagem antes do merge.
 ---
 
-## Steps
-1. Get the diff against main
-2. Classify by file: logic errors, security, performance, tests
-3. Output tiered list: blocking / suggestion / nit
-4. Do not auto push or merge
+## Passos
+1. Obter o diff em relação a main
+2. Classificar por arquivo: erro lógico, segurança, performance, testes
+3. Emitir lista por gravidade: bloqueante / sugestão / nit
+4. Não fazer push nem merge automaticamente
 ```
 
-## Common misconceptions
+## Equívocos comuns
 
-### 1. You must create every directory on day one
+### 1. Criar todos os diretórios desde o começo
 
-Many good Skills start with only `SKILL.md` and grow other dirs as reuse increases.
+Muitos bons Skills começam só com `SKILL.md`; outros diretórios aparecem conforme a reutilização cresce.
 
-### 2. references/ is just for "more content"
+### 2. `references/` existe só para «colocar mais conteúdo»
 
-The point is moving long material you should not always load into the main flow.
+O ponto não é «colocar mais», e sim tirar do fluxo principal o que não precisa ocupar atenção o tempo todo — ler sob demanda.
 
-### 3. Avoid scripts if you can
+### 3. Evite `scripts/` se puder
 
-If a step should be stable, deterministic, and repeatable, a script is often more reliable than repeated natural-language description.
+Se um passo já deve ser estável, determinístico e repetível, script costuma ser mais confiável do que descrever sempre em linguagem natural.
 
-## Directory roles
+## Papel de cada diretório
 
-| Directory | Purpose |
+| Diretório | Uso |
 |---|---|
-| `SKILL.md` | Main flow, triggers, prohibitions |
-| `references/` | Long docs, standards, API notes |
-| `templates/` | Output format, report skeleton |
-| `scripts/` | Deterministic commands and checks |
+| `SKILL.md` | Fluxo principal, condições de disparo, proibições |
+| `references/` | Documentos longos, normas, APIs |
+| `templates/` | Formato de saída, esqueleto de relatório |
+| `scripts/` | Comandos e checagens determinísticos |
 
-## When to split directories
+## Quando separar diretórios
 
-Ask in this order:
+Use esta ordem para decidir:
 
-1. Is the main flow too long to read in one pass?
-2. Is there a large block of material not needed every time?
-3. Is there a fixed output format you repeat?
-4. Is there a step stable enough to script?
+1. O fluxo principal já está longo demais para a primeira leitura?
+2. Há um bloco grande de material que não precisa ser lido toda vez?
+3. Há um formato de saída fixo que se repete?
+4. Algum passo já está estável o bastante para virar script?
 
-If one or two answers are yes, start splitting.
+Se um ou dois desses pontos forem «sim», comece a separar.
 
-Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
+Primeiro faça o `SKILL.md` funcionar; quando ficar complexo de verdade, extraia material, templates e scripts aos poucos.
 
-Full exercise: [Create your first Skill](/skills/create-your-first-skill/).
+Exercício completo: [Criar seu primeiro Skill](/skills/create-your-first-skill/).
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Current Codex runtime still centers skills on `SKILL.md` with optional scripts and references; this page covers directory roles, not volatile product entry points.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base da Verificação:** A documentação de Skills no runtime atual do Codex ainda tem `SKILL.md` como arquivo central e permite estender com scripts e referências sob demanda; esta página foca na divisão de responsabilidades dos diretórios, sem amarrar a entradas voláteis do produto.  
+**Última Verificação:** 2026-07-26

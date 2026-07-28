@@ -1,25 +1,60 @@
 ---
-title: Tools (condensed)
-description: Choose the right tool; MVP covers key pages only.
+title: Ferramentas
+description: Seleção de Ferramentas disponíveis ao Agent Codex e temas — terminal, pesquisa, browser, Computer Use, etc.
+sidebar:
+  order: 20
 locale: pt
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 0905c1a
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+O Agent usa **Ferramentas** para ler ficheiros, correr comandos, pesquisar na rede, abrir o browser, etc. Escolher a Ferramenta certa e clarificar limites reduz saída de rede não autorizada ou alterações excessivas.
 
-MVP condensed pages:
+Aqui, «Ferramenta» é a capacidade que o Codex chama de facto ao executar a Tarefa. Nem todas as Tarefas se resolvem só com diálogo.  
+Umas leem ficheiros, outras correm comandos, outras consultam páginas web, outras veem a página real.
 
-- [Tool selection](/guide/tools/tool-selection/)
-- [Shell and terminal](/guide/tools/shell-and-terminal/)
-- [Web search](/guide/tools/web-search/)
+## Porque conhecer as Ferramentas primeiro
 
-Browser, Computer Use, image and voice, etc. are deferred.
+No início, é fácil tratar o Codex como assistente de conversa puro.  
+Mas assim que permitir, pode:
 
+- Ler ficheiros do projeto
+- Alterar documentação ou código
+- Correr comandos no terminal
+- Pesquisar páginas web públicas
+- Abrir páginas locais para verificar o resultado
+
+As Ferramentas não são conhecimento adicional — são a base de segurança e eficiência.
+
+## Navegação do capítulo
+
+| Ferramenta | Página |
+|---|---|
+| Visão geral de seleção | [Seleção de Ferramentas](/guide/tools/tool-selection/) |
+| Terminal | [Shell e terminal](/guide/tools/shell-and-terminal/) |
+| Pesquisa | [Pesquisa Web](/guide/tools/web-search/) |
+| Páginas web | [Ferramenta de browser](/guide/tools/browser/) |
+| GUI | [Computer Use](/guide/tools/computer-use/) |
+| Imagens | [Geração de imagens](/guide/tools/image-generation/) |
+| Voz | [Entrada e saída de voz](/guide/tools/voice/) |
+
+Leitura/escrita de ficheiros e aceitação de Artefatos: [Ficheiros e Artefatos](/guide/files-and-artifacts/). Ferramentas de extensão entram via [MCP](/skills/mcp/mcp-overview/).
+
+## Ordem de leitura sugerida
+
+Na primeira leitura deste capítulo:
+
+1. [Seleção de Ferramentas](/guide/tools/tool-selection/) — que priorizar por tipo de Tarefa
+2. [Shell e terminal](/guide/tools/shell-and-terminal/) — riscos da execução de comandos
+3. Páginas de pesquisa, browser ou outras Ferramentas, conforme a Tarefa em mãos
+
+As Ferramentas determinam como o Codex age; cabe-lhe declarar quais pode usar e quais não.
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Estado:** verificado  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página é navegação do tema Ferramentas; as entradas de terminal, pesquisa, browser, Computer Use, imagens e voz foram cruzadas com o índice do site; o corpo só explica que «as Ferramentas afetam o âmbito de execução e o risco», sem declarar uma matriz fixa de suporte.  
+**Última verificação:** 2026-07-26

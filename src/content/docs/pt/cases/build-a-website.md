@@ -1,52 +1,51 @@
 ---
-title: Build a website
-description: A prototype case from requirements to a previewable page.
+title: Criar um site
+description: Caso de protótipo — dos requisitos a uma página pré-visualizável.
 locale: pt
-source_locale: en
-source_revision: e8865aa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Build a website
+# Criar um site
 
-## Meta information
+## Metadados
 
-| Field | Content |
+| Campo | Conteúdo |
 |---|---|
-| Audience | Creators / developers |
-| Client | App / IDE |
-| Estimated time | 2–4 hours |
+| Público | Criadores / programadores |
+| Cliente | App / IDE |
+| Tempo estimado | 2–4 horas |
 
-## 1. Goal and background
+## 1. Objetivo e contexto
 
-**Goal:** Build a locally previewable static page or small site from simple requirements.
+**Objetivo:** Com base em requisitos simples, criar uma página estática ou um site pequeno pré-visualizável localmente.
 
-**Success criteria:** Opens in a browser, styling matches the description, no unrelated file changes.
+**Critérios de sucesso:** Abre no browser, o estilo corresponde à descrição e não há alterações irrelevantes a ficheiros.
 
-## 2. Recommended prompt
+## 2. Prompt recomendado
 
 ```text
-Goal: Build a single-page landing page for [product/event] with a title, three features, and a CTA button.
-Tech: HTML + CSS (or the project's existing framework), mobile-friendly.
-Constraints: Only change page-related files under src/; do not add new dependencies unless I approve.
-Acceptance: pnpm dev can preview; screenshot or notes explaining main sections.
-Give a wireframe plan first; wait for my confirmation before writing code.
+Objetivo: criar uma landing page de uma página para [produto/evento], com título, três funcionalidades e botão CTA.
+Tecnologia: HTML + CSS (ou o framework já do projeto), amigável a dispositivos móveis.
+Restrições: alterar apenas ficheiros de página sob src/; não introduzir novas dependências sem a minha aprovação.
+Aceitação: pnpm dev permite pré-visualizar; descreva os blocos principais com capturas.
+Primeiro apresente o plano de wireframe; espere a minha confirmação antes de escrever código.
 ```
 
-## 3. Verification
+## 3. Verificação
 
-- Preview locally at each breakpoint
-- Check for accidental changes to config or lock files
+- Pré-visualizar localmente em vários breakpoints
+- Confirmar que configuração ou lockfiles não foram alterados por engano
 
-## 4. Related
+## 4. Relacionado
 
-- [Create template](/prompts/templates/create/)
-- [Artifact-first work](/cases/workflows/artifact-first-work/)
-
+- [Modelo de criação](/prompts/templates/create/)
+- [Trabalho orientado a artefatos](/cases/workflows/artifact-first-work/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include frontend build scenarios such as "Get from idea to proof of concept," "Build responsive front-end designs," and "Deploy an app or website"; this page limits the example to a small site or landing page prototype, requiring wireframes first, scoped changes, and browser preview for acceptance.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Os use cases atuais do Codex em OpenAI Developers ainda incluem “Get from idea to proof of concept”, “Build responsive front-end designs” e “Deploy an app or website”; o exemplo desta página limita-se a um protótipo de site pequeno ou landing page, exige wireframe primeiro, restringe o âmbito das alterações e valida com pré-visualização no browser.  
+**Última verificação:** 2026-07-26

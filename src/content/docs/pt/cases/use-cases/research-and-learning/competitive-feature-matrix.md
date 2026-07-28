@@ -1,69 +1,70 @@
 ---
-title: 'Case study: Competitive feature matrix'
-description: Source-backed research and table output—a workflow non-engineers can reuse.
+title: "Caso: matriz de comparação de funcionalidades"
+description: Investigação com citações e produção de tabelas — fluxo reutilizável também por leitores não técnicos.
 locale: pt
-source_locale: en
-source_revision: 1b56977
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
 
-| Field | Content |
+## Metadados
+
+| Campo | Conteúdo |
 |---|---|
-| Audience | Product, ops, researchers |
-| Client | App or CLI |
-| Estimated time | 45 minutes |
-| Verification date | 2026-07-25 |
+| Público | Produto, operações, investigadores |
+| Cliente | App ou CLI |
+| Tempo estimado | 45 minutos |
+| Data de verificação | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Objetivo e contexto
 
-**Goal:** Produce a comparison table for 3–5 competitors (features, pricing signals, fit), with a source for each conclusion.
+**Objetivo:** Produzir uma tabela de comparação de 3–5 concorrentes (funcionalidades, pistas de preços, cenários de uso), com fonte em cada conclusão.
 
-**Success criteria:**
+**Critérios de sucesso:**
 
-- Markdown table + "to confirm" labels
-- No fabricated prices or version numbers
-- No internal secrets in outward-facing docs
+- Tabela Markdown + marcação «a confirmar»
+- Sem inventar preços nem números de versão
+- Sem escrever segredos internos em documentação externa
 
-## 2. Preparation
+## 2. Preparação
 
-- Define comparison dimensions upfront (in prompt or `@brief.md`)
-- Enable [web search](/guide/tools/web-search/) (if the product supports it)
+- Clarificar dimensões de comparação (no prompt ou em `@brief.md` de antemão)
+- Ativar [pesquisa na web](/guide/tools/web-search/) (se o produto suportá-la)
 
-## 3. Workflow
+## 3. Fluxo de trabalho
 
-Follow [Research with sources](/cases/workflows/research-with-sources/):
+Seguir [investigação com fontes](/cases/workflows/research-with-sources/):
 
 ```text
-Compare "team collaboration" features for vendors A/B/C:
-1–2 sentences per dimension + source URL;
-prefer official docs over blogs;
-mark price "to confirm" if unverifiable;
-output markdown table; do not change other repo files.
+Compare as funcionalidades de «colaboração em equipa» de A/B/C:
+para cada dimensão, 1–2 frases + URL da fonte;
+documentação oficial tem prioridade sobre blogs;
+se o preço não for verificável, marque «a confirmar»;
+produza tabela markdown; não altere outros ficheiros do repositório.
 ```
 
-**Verification:** Human opens 3 URLs; check dates against [verification policy](/guide/start-here/handbook-version-policy/).
+**Verificação:** Abrir manualmente 3 URLs; verificar datas face à [política de verificação](/guide/start-here/handbook-version-policy/).
 
-## 4. Failure and recovery
+## 4. Falha e recuperação
 
-- Conflicting sources: present both; don't force a single story
-- Context too long: split into "A vs B first, then add C"
+- Fontes em conflito: exigir as duas versões em paralelo; não forçar unificação
+- Contexto demasiado longo: dividir em «primeiro A vs B, depois acrescentar C»
 
-## 5. Capture
+## 5. Consolidação
 
-- Save comparison table template to team template dir or knowledge base
-- Optional Skill: `source-backed-research`
+- Modelo da tabela de comparação no diretório de modelos ou base de conhecimento da equipa
+- Pode tornar-se Skill: `source-backed-research`
 
-## 6. Related chapters
+## 6. Capítulos relacionados
 
-- [Artifact-first work](/cases/workflows/artifact-first-work/)
-- [Validate sources](/guide/quality/validate-sources/)
+- [Artefato primeiro](/cases/workflows/artifact-first-work/)
+- [Validar fontes](/guide/quality/validate-sources/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified research-with-sources, web search, validate sources, and version policy chapters; content is limited to the stable research case structure for a source-backed competitive matrix—specific prices or product versions are not fixed.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI  
+**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre investigação com fontes, pesquisa na web, validação de fontes e política de versões; o conteúdo limita-se à estrutura estável do caso de investigação «produzir tabela de comparação de concorrentes com fontes», sem fixar preços ou versões de produto concretas.  
+**Última verificação:** 2026-07-26

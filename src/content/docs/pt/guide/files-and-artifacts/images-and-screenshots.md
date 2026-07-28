@@ -1,127 +1,132 @@
 ---
-title: Images and Screenshots
-description: Provide screenshots and design inputs to Codex; manage image files in tasks.
+title: Imagens e ecrãs
+description: Fornecer ecrãs e mockups ao Codex e gerir ficheiros de imagem nas Tarefas.
 locale: pt
-source_locale: en
-source_revision: 79bbcdd
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Images let the Agent **see** UI issues, design intent, or whiteboard sketches. This page covers input (images you provide) and image files in the repo; for generating new images see [Image generation](/guide/tools/image-generation/).
+As imagens permitem ao Agent **ver** problemas de interface, intenção de design ou esboços de quadro branco. Esta página cobre entrada (imagens que fornece) e gestão de ficheiros de imagem no repositório; para gerar imagens novas, veja [Geração de imagens](/guide/tools/image-generation/).
 
-When tasking with screenshots, say what to look at and why it matters.
+Ao encomendar com ecrãs, o ideal é ele saber onde olhar e porque há problema aí.
 
-## What this page covers
+## Conteúdo desta página
 
-- How to attach screenshots effectively
-- Using design exports / Figma
-- Image size in repo and context
+- Como anexar ecrãs com mais eficácia
+- Como usar mockups / exportações Figma
+- Problemas de volume de imagens no repositório e no Contexto
 
-## Input image scenarios
+## Cenários de imagem de entrada
 
-| Scenario | Approach |
+| Cenário | Prática |
 |---|---|
-| UI bug | Screenshot + text marking the problem area |
-| Design implementation | Exported PNG + breakpoints and component library |
-| Architecture whiteboard | Clear photo or export + legend |
-| Error dialog | Full error text visible—not a cropped corner |
+| Bug de UI | Ecrã + descrição textual da zona anormal |
+| Fidelidade ao design | Exportar PNG + indicar breakpoints e biblioteca de componentes |
+| Quadro branco de arquitetura | Foto nítida ou exportação + legenda |
+| Diálogo de erro | Texto de erro completo; evitar cortar só um canto |
 
-Deep dive: [Prompting with images](/prompts/prompting-with-images/)
+Profundidade: [Prompt com imagens](/prompts/prompting-with-images/)
 
-## What images actually add
+## O que a imagem realmente acrescenta
 
-Best for information that is hard in words alone:
+O valor máximo da imagem é mostrar o que o texto descreve mal, por exemplo:
 
-- How layout is wrong
-- Where a button is squeezed
-- What a dialog says
+- Como é que este layout ficou torto
+- Onde é que este botão ficou espremido
+- O que é que este diálogo escreve de facto
 
-Images do not automatically tell Codex:
+Mas a imagem sozinha não diz automaticamente ao Codex:
 
-- What you care about most
-- Expected change
-- Whether this is “current” or “target”
+- Em que bloco se foca mais
+- Como espera que altere
+- Se é «situação atual» ou «efeito desejado»
 
-Pair images with a direct sentence.
+Por isso a imagem costuma precisar de uma frase direta a acompanhar.
 
-## Quality requirements
+## Requisitos de qualidade
 
-- **Resolution**: text readable; avoid blurry thumbnails
-- **Crop**: remove irrelevant desktop, sensitive notification bar
-- **Annotation**: arrows/circles OK—repeat key points in text
-- **Multiple images**: pair “current / expected”
+- **Resolução**: texto legível; evitar miniaturas desfocadas
+- **Recorte**: remover ambiente de trabalho irrelevante e informação sensível da barra de notificações
+- **Anotação**: setas/círculos ok, mas repita os pontos-chave em texto
+- **Várias imagens**: carregar em pares «atual / esperado»
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Screenshot ≠ automatic understanding
+### 1. Enviar o ecrã ≠ ele compreende automaticamente o problema
 
-Screenshots are evidence—you still need:
+O ecrã dá evidência visual, mas é melhor acrescentar:
 
-- Where the problem is
-- What you want changed
-- Which image is current vs target
+- Onde está o problema
+- No que quer mudar
+- Qual é a atual e qual a alvo
 
-### 2. Bigger is not always better
+### 2. Quanto maior a imagem, melhor — nem sempre
 
-Huge originals add noise and bloat repo/context.
+Imagens originais demasiado grandes trazem dois problemas:
 
-### 3. Design image alone is not enough
+- Demasiada informação irrelevante
+- Volume do repositório ou do Contexto mais pesado
 
-For “implement from design,” also specify:
+### 3. Só a imagem de design ainda não chega
 
-- Breakpoints
-- Component constraints
-- What is fixed vs flexible
+Se for «implementar segundo a imagem», acrescente:
 
-## Images in the repo
+- Requisitos de breakpoints
+- Restrições de componentes
+- Onde pode improvisar e onde não
 
-| Practice | Why |
+## Imagens no repositório
+
+| Prática | Motivo |
 |---|---|
-| Unified `assets/` or `docs/images/` | Easier maintenance |
-| WebP/compression | Control clone size |
-| Meaningful filenames | `login-form-mobile.png` not `image1.png` |
-| Alt text (in docs) | Accessibility |
+| Diretório unificado `assets/` ou `docs/images/` | Mais fácil de manter |
+| WebP/compressão | Controlar o volume do clone |
+| Nomes com significado | `login-form-mobile.png` em vez de `image1.png` |
+| Texto alt (na documentação) | Acessibilidade |
 
-## Copy-paste prompt pattern
+## Redação aplicável diretamente
+
+Pode escrever assim:
 
 ```text
-First image is current page, second is desired result.
-Focus on hero title area and button spacing.
-Do not infer business logic from screenshots—layout and visuals only.
+A primeira imagem é a página atual; a segunda é o efeito desejado.
+Foque-se na zona do título do primeiro ecrã e no espaçamento dos botões.
+Não adivinhe lógica de negócio a partir do ecrã; trate só visual e layout.
 ```
 
-## Privacy and security
+## Privacidade e segurança
 
-- Screenshots may contain customer data, internal URLs, tokens—redact first
-- Do not send config screens with secrets to untrusted tasks
-- [Sensitive context](/guide/context/sensitive-context/)
+- Ecrãs podem conter dados de clientes, URLs internas, Tokens — mascara primeiro
+- Não envie ecrãs de configuração com segredos a Tarefas não fiáveis
+- [Contexto sensível](/guide/context/sensitive-context/)
 
-## Reference sources
+## Referências
 
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
 - OpenAI API Developer Quickstart: Analyze images and files
 
-## Verification
+## Aceitação
 
-For “implement from image” tasks:
+Para Tarefas «implementar segundo a imagem»:
 
-1. Side-by-side compare implementation and reference (or [Browser tool](/guide/tools/browser/))
-2. Check responsive and dark mode if required
-3. [Verify artifacts](/guide/quality/verify-artifacts/)
+1. Compare lado a lado implementação e imagem de referência (ou abra a página com a [Ferramenta de browser](/guide/tools/browser/))
+2. Verifique responsivo e modo escuro (se exigido)
+3. [Verificar Artefatos](/guide/quality/verify-artifacts/)
 
-## Common mistakes
+## Erros habituais
 
-- Design only, no interaction notes
-- Commit 4K originals
-- Assume model reads Figma links without export
+- Só mockup, sem descrição de interação
+- Commit direto de originais 4K
+- Assumir que o modelo lê ligações Figma sem exportar
 
-Good screenshots are clear image, clear focus, clear expectation—not just “there is a picture.”
+Um bom ecrã não é só «ter imagem». Imagem clara, foco claro, expectativa clara — a Tarefa acerta com mais facilidade.
 
 ---
 
-**Status:** verified  
-**Products:** App / Cloud  
-**Verification basis:** Cross-checked against OpenAI official image input and file upload materials for screenshot upload, annotation, file size, and privacy; no version-specific UI steps retained in body.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / Cloud  
+**Base de verificação:** Revista com materiais oficiais OpenAI sobre entrada de imagens e upload de ficheiros quanto a upload de ecrãs, anotações de foco, volume de ficheiros e cuidados de privacidade; o corpo não mantém passos de interface que exijam verificação versão a versão.  
+**Última verificação:** 2026-07-26

@@ -1,71 +1,71 @@
 ---
-title: Artifact-first work
-description: Agree on final artifact shape and path first, then derive steps—good for docs, config, reports, and other deliverables.
+title: Artefato primeiro
+description: Acordar primeiro a forma e o caminho do artefato final, depois derivar os passos — adequado a documentação, configuração, relatórios e entregáveis semelhantes.
 locale: pt
-source_locale: en
-source_revision: ea822b0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Artifact-first** means clarifying deliverable shape and location before Codex derives steps. It fits tasks with clear outputs—Markdown docs, OpenAPI, migration scripts, slide outlines—and can pair with [specification-driven work](/cases/workflows/specification-driven-work/).
+**Artefato primeiro** significa clarificar a forma e a localização do entregável antes de deixar o Codex derivar os passos. Adequado a tarefas com saída clara — documentos Markdown, OpenAPI, scripts de migração, esboços de apresentação — e pode combinar-se com [trabalho orientado por especificação](/cases/workflows/specification-driven-work/).
 
-## What this page covers
+## Foco desta página
 
-- How to describe artifact structure instead of process details
-- Consistency checks for multi-file deliverables
-- Alignment with [Files and artifacts](/guide/files-and-artifacts/) capabilities
+- Como descrever a estrutura do artefato em vez dos detalhes do processo
+- Verificação de consistência em artefatos multi-ficheiro
+- Alinhamento com as capacidades de [ficheiros e artefatos](/guide/files-and-artifacts/)
 
-## Minimum viable approach
-
-```text
-Target artifacts:
-- docs/api/auth.md (3 sections: overview, endpoints, error codes)
-- Style consistent with @docs/api/users.md
-
-Output outline and bullet points per section first; do not write full text;
-after I confirm, generate and self-check internal links.
-```
-
-## Recommended workflow
+## Prática mínima viável
 
 ```text
-Define artifact list (path + format + sample reference)
-    → Outline or skeleton files
-    → Human confirmation
-    → Fill content + cross-links
-    → Verify (lint, link check, preview)
+Artefato-alvo:
+- docs/api/auth.md (com 3 subsecções: visão geral, endpoints, códigos de erro)
+- Estilo consistente com @docs/api/users.md
+
+Primeiro produza o esboço do sumário e os pontos de cada secção; não escreva o texto completo;
+após a minha confirmação, gere e verifique se as ligações internas são válidas.
 ```
 
-For visual artifacts, request screenshots or preview notes—see [Verify artifacts](/guide/quality/verify-artifacts/).
+## Fluxo recomendado
 
-## Common mistakes
+```text
+Definir a lista de artefatos (caminho + formato + referência de exemplo)
+    → Esboço ou ficheiros-esqueleto
+    → Confirmação humana
+    → Preencher conteúdo + ligações cruzadas
+    → Verificar (lint, verificação de ligações, pré-visualização)
+```
 
-- Artifact paths don't match repo conventions (wrong directory)
-- Single file only, ignoring navigation and index updates
-- No sample reference—style feels disjointed
-- Binary artifacts (pptx/docx) without how to open and accept manually
+Para artefatos visuais, peça capturas ou notas de pré-visualização; ver [verificar artefatos](/guide/quality/verify-artifacts/).
 
-## Safety boundaries
+## Erros comuns
 
-- Generated content with third-party copyright needs human compliance review
-- Do not overwrite production config paths—produce on a branch or under `draft/` first
+- Caminho do artefato inconsistente com as convenções do repositório (diretório errado)
+- Gerar só um ficheiro e ignorar navegação e atualização do index
+- Não confrontar com o exemplo — estilo fragmentado
+- Artefatos binários (pptx/docx) sem explicar como o humano abre e aceita
 
-## Acceptance checklist
+## Limites de segurança
 
-- [ ] All declared files exist and open
-- [ ] Format matches reference sample
-- [ ] Links / TOC / frontmatter valid
-- [ ] Meets [Definition of done](/prompts/define-done/)
+- Se o gerado incluir conteúdo com direitos de terceiros, é necessária verificação humana de conformidade
+- Não sobrescrever caminhos de configuração de produção; produza primeiro num ramo ou sob `draft/`
 
-## Reference sources
+## Lista de aceitação
 
-- codex.bozhouai.com docs and template tasks
-- KimYx0207 content output workflows
+- [ ] Todos os ficheiros declarados existem e abrem
+- [ ] Formato consistente com o exemplo citado
+- [ ] Ligações / sumário / frontmatter válidos
+- [ ] Cumpre [definir concluído](/prompts/define-done/)
+
+## Fontes de referência
+
+- codex.bozhouai.com tarefas de documentação e modelos
+- KimYx0207 fluxo de produção de conteúdo
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified files and artifacts, definition of done, and verify artifacts chapters in this handbook; page content focuses on the stable method of agreeing on deliverables first, then deriving steps.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre ficheiros e artefatos, definição de concluído e verificação de artefatos; o conteúdo foca o método estável «acordar o entregável primeiro, depois derivar os passos».  
+**Última verificação:** 2026-07-26

@@ -1,49 +1,50 @@
 ---
-title: Scenarios and case library
-description: End-to-end real tasks—prep, execution, verification, failure recovery, and retrospectives.
+title: Cenários e biblioteca de casos
+description: Tarefas reais de ponta a ponta — preparação, execução, verificação, recuperação de falhas e retrospectiva.
 locale: pt
-source_locale: en
-source_revision: 6067c38
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The case library answers: **"What does running Codex end-to-end look like for this real goal?"** It complements single-topic product docs.
 
-## Cases vs tutorials
+A biblioteca de casos responde: «**Com este tipo de objetivo real, como é a experiência de percorrer o Codex de ponta a ponta?**» Complementa as páginas de produto isoladas.
 
-| | Getting-started tutorials | Case library |
+## Caso vs tutorial
+
+| | Tutorial introdutório | Biblioteca de casos |
 |---|---|---|
-| Goal | Learn a button/concept | Deliver a class of real outcome |
-| Structure | By product feature | By task type |
-| Failure handling | Often omitted | Must be included |
+| Objetivo | Aprender um botão/conceito | Entregar um tipo de resultado real |
+| Estrutura | Por funcionalidade do produto | Por tipo de tarefa |
+| Tratamento de falhas | Muitas vezes omitido | Obrigatório |
 
-## How to use
+## Como usar
 
-1. Pick the closest case (or use only its prep checklist)
-2. Cross-check [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/)
-3. After finishing, use the [case template](/cases/use-cases/case-study-template/) to retro—decide whether to capture as a Skill
+1. Escolha o caso mais próximo do seu objetivo (ou use só a «lista de preparação»)
+2. Confrontar com [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/)
+3. No fim, use o [modelo de caso](/cases/use-cases/case-study-template/) para retrospectiva e decida se consolida como Skill
 
-## Starter cases
+## Casos starter existentes
 
-| Domain | Case | Notes |
+| Domínio | Caso | Descrição |
 |---|---|---|
-| Software development | [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/) | Most common developer loop |
-| Content creation | [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/) | Multi-file docs and build verification |
-| Research and learning | [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/) | Source-backed research output |
-| Team automation | [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/) · [Issue triage suggestions](/cases/use-cases/team-automation/issue-triage-suggestions/) | Light CI and ticket automation |
+| Desenvolvimento de software | [Correção de bug com verificação](/cases/use-cases/software-development/fix-a-bug-with-verification/) | Ciclo mais comum para programadores |
+| Criação de conteúdo | [Refatorar um site de documentação com revisão](/cases/use-cases/content-creation/refactor-docs-with-review/) | Documentação multi-ficheiro e aceitação por build |
+| Investigação e aprendizagem | [Matriz de comparação de funcionalidades](/cases/use-cases/research-and-learning/competitive-feature-matrix/) | Resultado de investigação com fontes |
+| Automatização de equipa | [Verificação agendada de ligações na documentação](/cases/use-cases/team-automation/scheduled-link-check/) · [Sugestões de triagem de Issues](/cases/use-cases/team-automation/issue-triage-suggestions/) | Automatização leve de CI e tickets |
 
-Copyable prompts live in repo [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts). More domain cases will be added to this library over time.
+Prompts reutilizáveis em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) do repositório. Mais casos por domínio serão acrescentados a esta biblioteca.
 
-## Contribution directions
+## Direções de contribuição
 
-- Reproducible steps (repo, branch, commands)
-- Label applicable clients and verification date
-- Avoid unverifiable "first try success" narratives
+- Passos reproduzíveis (repositório, ramo, comandos)
+- Indicar cliente aplicável e data de verificação
+- Não escrever narrativas de «sucesso à primeira» impossíveis de verificar
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current case library structure, domain index pages, case template, and examples prompt entry; this page only navigates cases organized by real task type.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com a estrutura atual da biblioteca de casos neste repositório, páginas de entrada por domínio, modelo de caso e entrada de prompts em examples; esta página só faz navegação «organizar casos por tipo de tarefa real».  
+**Última verificação:** 2026-07-26

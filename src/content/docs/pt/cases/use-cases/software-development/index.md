@@ -1,30 +1,30 @@
 ---
-title: Software development
-description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
+title: Desenvolvimento de software
+description: Entrada para casos de alterar código, corrigir bugs e complementar verificação — foco em controlo de âmbito, testes e rollback.
 locale: pt
-source_locale: en
-source_revision: 050fe4a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Software development cases focus on this question:
+Os casos de desenvolvimento de software focam este tipo de problema:
 
-> **How does Codex change real repos accurately, reviewably, and verifiably?**
+> **Como o Codex altera com precisão num repositório real, de forma revível, e ainda verifica depois de alterar.**
 
-## Cases in this group
+## Entradas deste grupo
 
-- [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Correção de bug com verificação](/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
-## What this group emphasizes
+## Foco deste grupo
 
-- How to state task scope clearly
-- Why verification and rollback paths matter from the start
-- Avoiding "while I'm here" extra changes in real development
+- Como clarificar o âmbito da tarefa
+- Porque caminhos de verificação e rollback devem ser pensados desde o início
+- Como evitar «alterar mais um pouco de passagem» no desenvolvimento real
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current software-development case entry and development workflow, run tests, and rollback chapters; this page only describes the development case group entry and focus areas.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com a entrada atual de casos software-development neste repositório e com capítulos de fluxos de desenvolvimento, correr testes e rollback; esta página só explica entradas e focos do grupo de desenvolvimento.  
+**Última verificação:** 2026-07-26

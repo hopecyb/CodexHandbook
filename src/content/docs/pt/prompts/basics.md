@@ -1,108 +1,108 @@
 ---
-title: Prompt basics
-description: The basic building blocks of a good prompt.
+title: Fundamentos de Prompts
+description: Os elementos essenciais de um bom Prompt.
 locale: pt
-source_locale: en
-source_revision: c4dbe07
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you're new to prompting, it's easy to focus on whether your wording sounds "advanced."  
-For Codex, what matters is whether you've made these things clear:
+Ao começar com Prompts, é fácil focar em se a redação soa «avançada».  
+Para o Codex, o essencial é se você deixou claro isto:
 
-- What you actually want it to do
-- Where it can act and where it cannot
-- What counts as done
-- When uncertain—ask first, investigate first, or stop first
+- o que você quer exatamente que ele faça
+- até onde pode agir e o que não deve tocar
+- o que conta como concluído
+- perante a incerteza: perguntar primeiro, investigar primeiro ou parar primeiro
 
-A good prompt's job is to make task boundaries clear. It doesn't need to read like a spell.
+Um bom Prompt deixa claros os limites da tarefa; não precisa parecer um feitiço.
 
-## What this covers
+## Conteúdo
 
-It mainly helps you avoid these common problems:
+Serve sobretudo para evitar estes problemas habituais:
 
-- Goals so vague the result is just "optimize it a bit"
-- No scope stated, so Codex changes more than you intended
-- No acceptance criteria, so you end up judging by feel
-- No instruction when information is missing, so it starts guessing
+- objetivo tão vago que o resultado é só «otimize um pouco»
+- âmbito não indicado, então o Codex muda mais do que o previsto
+- sem critérios de aceitação, no fim só se julga a olho
+- sem instrução quando falta informação, então começa a adivinhar
 
-## What you can treat a prompt as
+## Como ver um Prompt
 
-Think of a prompt as a task ticket.  
-A solid ticket should at least answer:
+Pode vê-lo como um ticket de tarefa.  
+Um ticket aceitável responde pelo menos a:
 
-- What to do
-- Why
-- What materials to use
-- What not to touch
-- What "passing" looks like
+- o que fazer
+- por quê
+- com que materiais
+- o que não tocar
+- como se vê o «aprovado»
 
-If none of that is clear, polished sentences won't fix it.
+Se isso não estiver claro, nem as frases mais elegantes resolvem.
 
-## Three levels (the example library follows these too)
+## Três níveis de escrita (também na biblioteca de exemplos)
 
-- **Minimal:** when the goal is already crystal clear
-- **Recommended:** goal, context, inputs, constraints, acceptance, permissions
-- **Teaching:** explains why each section exists
+- **Versão mínima:** quando o objetivo já está muito claro
+- **Versão recomendada:** objetivo, contexto, entradas, restrições, aceitação, permissões
+- **Versão didática:** explica por que cada bloco existe
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Longer prompts are better
+### 1. Quanto mais longo o Prompt, melhor
 
-Relevance matters.  
-A long block of irrelevant background dilutes the boundaries that actually matter.
+O importante é a relevância.  
+Um bloco longo de contexto irrelevante dilui os limites de verdade.
 
-### 2. If the goal is stated, everything else is optional
+### 2. Com o objetivo basta; o resto pode omitir-se
 
-Goal-only prompts often miss:
+Só com o objetivo é fácil esquecer:
 
-- Scope of changes
-- Style constraints
-- How to verify
-- What to do when uncertain
+- o alcance da mudança
+- as restrições de estilo
+- como validar
+- o que fazer perante a incerteza
 
-### 3. Prompts are mainly for "teaching the model how to think"
+### 3. O Prompt serve sobretudo para «ensinar o modelo a pensar»
 
-For beginners, a more practical view: prompts reduce misunderstanding.
+Para quem começa, uma leitura mais útil: o Prompt reduz mal-entendidos.
 
-## A minimal structure that works
+## Uma estrutura mínima suficiente
 
-If you don't want to learn everything at once, start with these four lines:
+Se não quiser aprender tudo de uma vez, comece com estas 4 linhas:
 
 ```text
-Goal: what I want you to do
-Scope: where you can change things
-Acceptance: what counts as done
-When uncertain: ask first, don't guess
+Objetivo: o que quero que faças
+Alcance: o que podes modificar apenas
+Aceitação: como se vê o concluído
+Perante a incerteza: pergunta primeiro, não adivinhes
 ```
 
-That's already much clearer than "help me optimize this."
+Já é muito mais claro do que um «ajuda-me a otimizar isto».
 
-## When minimal is enough vs. when full is safer
+## Quando usar a versão mínima ou a completa
 
-### Minimal fits
+### A versão mínima encaixa
 
-- Small single-file edits
-- Very specific goals
-- You know the repo and task well
+- mudança pequena num único arquivo
+- objetivo muito concreto
+- você conhece bem o repositório e a tarefa
 
-### Recommended is safer
+### A versão recomendada é mais segura
 
-- Changes across multiple files
-- You're unfamiliar with the project
-- Higher risk
-- Approvals, tests, or review required
+- vários arquivos
+- projeto desconhecido
+- risco alto
+- é preciso aprovação, testes ou revisão
 
-For most beginners, practicing the **recommended** version first is usually the safer path.
+Para a maioria dos iniciantes, começar pela **versão recomendada** costuma ser mais prudente.
 
-The core of a good prompt is reducing guessing, drift, and overreach.
+O núcleo de um bom Prompt: menos suposições, menos desvios, menos extralimitação.
 
-See examples in [Run your first task](/cases/first-task/) and [Task anatomy](/prompts/task-anatomy/).
+Exemplos: [Primeira tarefa](/cases/first-task/) e [Anatomia de uma tarefa](/prompts/task-anatomy/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page covers only general prompting methods; in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página só trata métodos gerais de Prompt; os links internos foram revistos e o corpo não depende de factos voláteis (versão do produto, preços, interface, etc.).

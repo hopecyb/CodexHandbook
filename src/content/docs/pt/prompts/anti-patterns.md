@@ -1,89 +1,90 @@
 ---
-title: Prompt anti-patterns
-description: Vague phrasing, over-permissioning, and hidden-reasoning requests to avoid.
+title: Anti-patterns de Prompts
+description: Evite pedidos vagos, extralimitação e exigências de raciocínio oculto.
 locale: pt
-source_locale: en
-source_revision: 5a4849f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When learning prompts, it's easy to focus only on "how to write well."
-Knowing which phrases most often derail tasks saves time too.
+Ao aprender Prompts, é fácil focar só em «como escrever».  
+Muitas vezes, saber primeiro que formulações desviam a tarefa poupa mais desvios.
 
-Here are common prompt pitfalls.
+Aqui vão alguns «buracos» comuns de Prompt.
 
-| Anti-pattern | Why it's harmful |
+| Anti-pattern | Por que prejudica |
 |---|---|
-| "Just optimize it" | No goal, no boundaries |
-| "Full permissions, figure it out" | Largest blast radius |
-| "Don't ask me, just finish" | Skips clarification and approval |
-| "Print all your hidden reasoning" | Unreliable and rarely helps acceptance |
-| Pasting logs with secrets | Credential leakage |
+| «Otimize um pouco à vontade» | Sem objetivo, sem limites |
+| «Tem todas as permissões; faça como achar melhor» | Superfície de acidente máxima |
+| «Não me pergunte; altere tudo de uma vez» | Salta clarificação e aprovação |
+| «Imprima todo o seu raciocínio oculto» | Pouco fiável e em geral inútil para aceitação |
+| Colar logs com segredos | Fuga de credenciais |
 
-## Why these phrases flip easily
+## Por que estas frases falham com facilidade
 
-They usually share one trait:
+Têm um ponto em comum:
 
-- they save words
-- they delete the boundaries you'd need
+- parecem poupar palavras
+- na prática omitem os limites críticos
 
-What you omit becomes what Codex must infer.
+O que você omitiu torna-se o que o Codex tem de julgar sozinho.
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Casual tone sounds more human
+### 1. Falar de forma casual parece mais «colaboração humana»
 
-Natural tone is fine.  
-The problem is dropping critical conditions.
+Falar com naturalidade não é problema.  
+O problema maior é omitir condições críticas.
 
-### 2. "Just finish, don't ask" is faster
+### 2. «Altere tudo, não pergunte» é mais eficiente
 
-Short-term fewer messages; long-term often:
+No curto prazo poupa um turno; no médio prazo costuma dar:
 
-- wrong scope
-- missing approvals
-- more rework
+- alcance errado
+- aprovação necessária em falta
+- mais retrabalho no fim
 
-### 3. More permission speeds things up
+### 3. Mais permissão = avançar mais depressa
 
-More permission widens mistake surface—especially when boundaries aren't clear yet.
+Mais permissão também amplia a superfície de erro.  
+Sobretudo quando os limites da tarefa ainda não estão claros, permissão ampla só amplifica o risco.
 
-## Swap anti-patterns for clearer phrasing
+## Como trocar anti-patterns por formulações claras
 
-### Don't write
-
-```text
-Just optimize it
-```
-
-### Try instead
+### Não escreva assim
 
 ```text
-Make the homepage hero copy easier for beginners to understand. Only edit this file, keep existing structure, and give me the diff and build result.
+Otimize um pouco à vontade
 ```
 
-## A replacement formula
-
-When you're about to write something vague, use:
+### Pode começar assim
 
 ```text
-Goal + scope + acceptance
+Torne o texto da primeira tela da home mais compreensível para iniciantes; só este arquivo; mantenha a estrutura atual; no fim dê-me o diff e o resultado do build.
 ```
 
-For example:
+## Uma fórmula de substituição suficiente
 
-- Goal: what to change
-- Scope: only where
-- Acceptance: how to know it's done
+Quando sentir que vai escrever uma frase vaga, use:
 
-Most anti-patterns aren't "bad wording"—they omit boundaries and acceptance.
+```text
+Objetivo + Alcance + Aceitação
+```
 
-Replace vague words with structure: goal + constraints + acceptance.
+Por exemplo:
+
+- Objetivo: o que alterar
+- Alcance: só onde alterar
+- Aceitação: como julgar que terminou
+
+Na maioria dos anti-patterns de Prompt, o problema não é «má expressão» — é ter omitido limites críticos e critérios de aceitação.
+
+Substitua palavras vagas por estrutura: objetivo + restrições + aceitação.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page summarizes common prompt anti-patterns only; cross-references and example phrasing were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página só resume anti-patterns comuns de Prompt; referências cruzadas e exemplos foram revistos; o corpo não depende de factos voláteis do produto.

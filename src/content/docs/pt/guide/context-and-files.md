@@ -1,88 +1,91 @@
 ---
-title: Context and files
-description: Managing projects, files, conversation context, and common input types.
+title: Contexto e arquivos
+description: Gerencie projeto, arquivos, Contexto de conversa e tipos comuns de entrada.
+locale: pt
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 15
-locale: pt
-source_locale: en
-source_revision: 31bde45
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Context and files
+# Contexto e arquivos
 
-**Context** is what Codex can see, reference, and act on at this moment.
+Contexto é a informação que o Codex, neste momento, consegue ver, consultar e usar para agir.
 
-You may know exactly what you want, but if key material is missing, work drifts—same as a new teammate without the right background. Poor context management drowns even good prompts in noise.
+Você já tem tudo claro na cabeça, mas a outra parte não viu o material-chave — e desviou.  
+Com o Codex é igual. Se o Contexto estiver mal gerido, até o melhor Prompt afoga no ruído.
 
-## What context includes
+## O que o Contexto inclui
 
-Think of what a new colleague would need in a group chat:
+Dá para ver como a informação de que um colega novo no grupo dependeria:
 
-- Your task instructions—the current question
-- Files you open for it—background material
-- Repo rule docs—team agreements
-- Conversation history—memory of this task
+- Os requisitos da Tarefa que você enviou: o problema atual
+- Os arquivos que você abriu para ele: o material de fundo
+- Documentos de regras no repositório: acordos da equipe
+- O histórico da conversa: a memória dele desta Tarefa
 
-Together, that is the context Codex is using.
+Somados, isso é o Contexto de que ele depende agora.
 
-## Common failure modes
+## Fontes comuns de problema
 
-Many "it misunderstood again" cases are context problems:
+Muitos «por que ele entendeu errado de novo» não vêm de o modelo ser «burro» — e sim de Contexto problemático, por exemplo:
 
-- Too little information—it guesses
-- Too much information—focus is lost
-- You assumed it knew a file but never pointed to it
-- Long old threads—early detail no longer relevant
+- Pouca informação: ele só pode adivinhar
+- Informação demais: o essencial afoga
+- Você achou que ele conhecia o arquivo, mas nunca disse com clareza
+- Seguiu demais uma conversa antiga: a informação inicial já não está focada
 
-One simple standard for this page:
+O ponto desta página é um critério simples:
 
-> **Show what truly matters; keep irrelevant material out of the way.**
+> **Deixe-o ver a informação realmente relevante; não deixe o irrelevante ocupar o lugar.**
 
-## Context management
+## Gestão de Contexto
 
-- [Project context](/guide/context/project-context/) — `AGENTS.md`, repo conventions
-- [File and folder context](/guide/context/file-and-folder-context/) — @ references and scope
-- [Conversation context](/guide/context/conversation-context/) — threads and compaction
-- [Keep context focused](/guide/context/keep-context-focused/) — avoid unrelated noise
-- [Sensitive context](/guide/context/sensitive-context/) — secrets and privacy
+- [Contexto do projeto](/guide/context/project-context/) — `AGENTS.md`, convenções do repositório
+- [Contexto de arquivos e pastas](/guide/context/file-and-folder-context/) — referências @ e alcance
+- [Contexto da conversa](/guide/context/conversation-context/) — Thread e Compactação
+- [Manter o foco](/guide/context/keep-context-focused/) — evitar ruído irrelevante
+- [Contexto sensível](/guide/context/sensitive-context/) — chaves e privacidade
 
-How to organize background in prompts: [goals and context](/prompts/goals-and-context/).
+Como organizar o histórico no Prompt: [Objetivos e Contexto](/prompts/goals-and-context/).
 
-## Files and artifacts
+## Arquivos e Artefatos
 
-Besides telling Codex what to do, you often need to **show it things**:
+Além de «dizer o que fazer», você costuma precisar «mostrar coisas».
 
-- Code or documents
-- Screenshots
-- PDFs
-- Spreadsheets
-- Presentations
+Essas «coisas» podem ser:
 
-Different file types imply different read patterns, prompting, and acceptance checks.
+- Um trecho de código ou documento
+- Uma captura de tela
+- Um PDF
+- Uma planilha
+- Uma apresentação
 
-## Files and artifacts
+Tipos diferentes de arquivo mudam um pouco a forma de leitura do Codex, a forma adequada de perguntar e a forma de aceite.
 
-- [Text and code files](/guide/files-and-artifacts/text-and-code-files/)
-- [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDFs and documents](/guide/files-and-artifacts/pdf-and-documents/)
-- [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [Presentations](/guide/files-and-artifacts/presentations/)
+## Arquivos e Artefatos
 
-## Suggested reading order
+- [Arquivos de texto e código](/guide/files-and-artifacts/text-and-code-files/)
+- [Imagens e capturas](/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF e documentos](/guide/files-and-artifacts/pdf-and-documents/)
+- [Tabelas e planilhas](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Apresentações](/guide/files-and-artifacts/presentations/)
 
-No need to read everything at once:
+## Ordem de leitura sugerida
 
-1. [File and folder context](/guide/context/file-and-folder-context/) — what files to show
-2. [Keep context focused](/guide/context/keep-context-focused/) — avoid scattering the task
-3. Read file-type chapters matching what you are working with
+Não precisa ler tudo de uma vez. Pode seguir esta ordem:
 
-Context is the pile of information Codex judges from—get it right and results are easier to get right.
+1. Leia primeiro [Contexto de arquivos e pastas](/guide/context/file-and-folder-context/) — entenda «quais arquivos deixar ele ver»
+2. Depois [Manter o foco](/guide/context/keep-context-focused/) — evite dispersar a Tarefa na conversa
+3. Conforme o tipo de material em mãos, leia o capítulo de arquivo correspondente
+
+Contexto é o monte de informação que o Codex tem à mão ao julgar; se você der certo, o resultado também fica mais fácil de acertar.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Navigation and methodology page; framework that task requirements, file material, project rules, and conversation history form context cross-checked with current context and file-handling chapters—not dependent on volatile UI details.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página é visão geral de navegação e método do site; o framework «requisitos da Tarefa, material de arquivo, regras do projeto e histórico da conversa formam juntos o Contexto» foi cruzado item a item com os capítulos atuais de Contexto e de tratamento de arquivos, sem depender de detalhes voláteis de interface.  
+**Última verificação:** 2026-07-26

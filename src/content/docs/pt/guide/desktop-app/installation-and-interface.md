@@ -1,31 +1,57 @@
 ---
-title: Installation and Interface
-description: Main interface areas after installing the desktop App.
+title: Instalação e interface
+description: Principais zonas da interface da App de desktop após a instalação.
 locale: pt
-source_locale: en
-source_revision: 712c6ab
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-For installation steps, see [Install the desktop App](/guide/getting-started/install-desktop-app/) and [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Os passos de instalação estão em [Instalar a App de desktop](/guide/getting-started/install-desktop-app/) e em [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-## Interface areas (logical layout)
+Ao abrir a App de desktop pela primeira vez, a interface mostra muita informação de uma vez.
 
-Exact labels change by version—match what you see on screen:
+Não precisa mapear todas as zonas de imediato; reconheça primeiro as posições mais importantes.
 
-1. **Project / workspace selection**: the folder currently bound
-2. **Conversation / task area**: enter prompts and watch Agent progress
-3. **Changes / diff view**: review proposed edits
-4. **Terminal or logs** (if enabled): view command output
-5. **Settings and account**: model, permissions, notifications, and more
+## Zonas da interface (divisão lógica)
 
-First-time tip: find where to type prompts and where to approve file changes.
+Os nomes dos rótulos mudam com a versão; confira o texto real no ecrã:
 
+1. **Seleção de projeto / área de trabalho**: pasta ligada no momento
+2. **Zona de conversa / Tarefa**: introduzir o Prompt e acompanhar o progresso do Agent
+3. **Vista de mudanças / Diff**: rever as alterações propostas
+4. **Terminal ou registos** (se ativo): ver a saída dos comandos
+5. **Definições e conta**: modelo, Permissões, notificações, etc.
+
+No início, localize «onde introduzir a Tarefa» e «onde aprovar mudanças em ficheiros».
+
+## Mal-entendidos frequentes
+
+### 1. Não é preciso entender todos os painéis no início
+
+Basta reconhecer estes três blocos:
+
+- Onde introduzir a Tarefa
+- Onde ver as mudanças
+- Onde aprovar ou rejeitar
+
+### 2. Terminal, Diff e definições podem ficar para depois?
+
+Sim, pode aprender por etapas.  
+Mas convém familiarizar-se cedo com a vista de Diff, porque determina se consegue perceber o alcance das mudanças.
+
+### 3. E se a interface não coincidir com as capturas da documentação?
+
+Siga o texto da sua versão atual.  
+Aqui falamos de zonas lógicas, não de nomes concretos de botões.
+
+Encontre primeiro «introduzir Tarefa», «ver mudanças» e «aprovar»; o resto familiariza-se com o uso.
 
 ---
 
-**Status:** review  
-**Applies to:** App  
-**Last verified:** 2026-07-25
+**Estado:** outdated  
+**Produtos aplicáveis:** App  
+**Nota de revisão:** Em julho de 2026, a nova aplicação de desktop do ChatGPT continua a ajustar a navegação e o layout de Chat/Work/Codex; embora esta página tente descrever só «zonas lógicas», ainda se baseia na divisão de uma versão concreta da UI e deverá ser reescrita quando a interface estabilizar.  
+**Última verificação:** 2026-07-26

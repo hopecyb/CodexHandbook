@@ -1,34 +1,34 @@
 ---
-title: Rules
-description: Overview of allow/deny, command rules, and team policy—what to block, what to warn, and what to standardize.
+title: Regras
+description: Página de orientação sobre allow/deny, regras de comandos e política de equipa — o que bloquear e o que apenas lembrar.
 locale: pt
-source_locale: en
-source_revision: 4faab45
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The rules group is easy for beginners to mistake for “writing a few more reminders for Codex.”
+O grupo de regras é o que os principiantes mais confundem com «escrever mais uns avisos ao Codex».
 
-More accurately, rules answer: which actions are allowed by default, which to block, and which to enforce uniformly as a team standard.
+A compreensão mais correta: as regras resolvem «que ações são permitidas por defeito, quais bloquear e quais devem seguir o padrão unificado da equipa».
 
-## Recommended Order
+## Ordem recomendada
 
-1. [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Command Rules](/guide/customization/rules/command-rules/)
-3. [Team Rules](/guide/customization/rules/team-rules/)
+1. [Padrões de permitir e negar](/guide/customization/rules/allow-and-deny-patterns/)
+2. [Regras de comandos](/guide/customization/rules/command-rules/)
+3. [Regras de equipa](/guide/customization/rules/team-rules/)
 
-## What This Group Helps You Solve
+## Que problema este grupo ajuda a resolver
 
-- Which actions should be blocked outright
-- Which limits belong in explicit rules instead of verbal reminders
-- How teams keep the same boundaries for similar risks
+- Que ações devem ser bloqueadas diretamente
+- Que restrições encaixam melhor como regras explícitas do que como avisos orais
+- Como garantir que a equipa enfrenta o mesmo tipo de risco com a mesma fronteira
 
-Rules exist to nail down boundaries so the system executes against them.
+As regras existem para fechar a fronteira e fazer o sistema executá-la.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked against this repo’s current rules subsection structure and entry links; this page only navigates by allow/deny, command rules, and team rules grouping and does not declare specific rule implementation or default blocking behavior.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / CLI / Cloud  
+**Base de verificação:** Cruzada com a estrutura atual do subcapítulo rules e ligações de entrada neste repositório; esta página só navega por allow/deny, regras de comandos e regras de equipa, sem declarar implementações concretas de regras nem comportamentos de bloqueio predefinidos.  
+**Última verificação:** 2026-07-26

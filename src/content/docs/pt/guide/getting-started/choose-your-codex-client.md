@@ -1,86 +1,87 @@
 ---
-title: Choose your Codex client
-description: Pick App, CLI, IDE, or Cloud for your first time.
+title: Escolher o cliente Codex
+description: Faça a primeira escolha entre App, CLI, IDE e Cloud.
 locale: pt
-source_locale: en
-source_revision: d578df0
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The first time you see `App / CLI / IDE / Cloud`, the usual question is: which one should I use?
+Na primeira vez que vê `App / CLI / IDE / Cloud`, a dúvida comum é: qual usar?
 
-Do not overthink the first choice. Start with an easy entry point and add others later.
+Não precisa tratar a primeira escolha com peso demais. Comece por uma entrada fácil e complete as outras depois.
 
-## Direct picks
+## Escolha direta
 
-If you have no strong preference:
+Se agora não tem preferência forte, escolha assim:
 
-- **First time**: choose the desktop App
-- **You live in the terminal**: choose CLI
-- **You mostly write code in VS Code / JetBrains**: choose the IDE extension
-- **You already need GitHub cloud repos or long-running tasks**: look at Cloud
+- **Primeira vez**: App desktop
+- **Você já vive no terminal**: CLI
+- **Você programa sobretudo no VS Code / JetBrains**: extensão IDE
+- **Você já sabe que precisa ligar a repositórios Cloud no GitHub ou rodar Tarefas longas**: veja Cloud
 
-## What each entry point is
+## O que cada entrada é
 
-| Entry | Think of it as |
+| Entrada | Como entender diretamente |
 |---|---|
-| Desktop App | A graphical console for tasks, diffs, and approvals |
-| CLI | Codex in the terminal, for command-line users |
-| IDE extension | An assistant inside the editor, for edit-while-you-read |
-| Cloud | Remote task execution for repo collaboration and long jobs |
+| App desktop | Console gráfico; bom para ver Tarefas, Diff e clicar em Aprovação |
+| CLI | Codex no terminal; bom para usuários de linha de comando |
+| Extensão IDE | Assistente embutido no editor; bom para olhar código e alterar junto |
+| Cloud | Forma de rodar Tarefas remotamente; boa para colaboração em repositório e Tarefas longas |
 
-## Choose by your situation
+## Escolha conforme a situação atual
 
-| If you… | Choose |
+| Se você… | Escolha |
 |---|---|
-| Are new and want clear diffs and review | **Desktop App** |
-| Live in the terminal and want scripts | **CLI** |
-| Mostly edit code in an editor | **IDE extension** |
-| Need GitHub cloud environments / long tasks | **Cloud** (read the overview first) |
+| Está começando e quer ver Diff e revisão com clareza | **App desktop** |
+| Prefere terminal e quer escrever scripts | **CLI** |
+| Altera código sobretudo no editor | **Extensão IDE** |
+| Precisa de ambiente Cloud no GitHub / Tarefas longas | **Cloud** (leia a visão geral primeiro) |
 
-## Why beginners often start with the desktop App
+## Ponto de partida comum: App desktop
 
-For first-time users, the desktop App has clear advantages:
+Para iniciantes, o App desktop tem vantagens claras:
 
-- Easier to see what it did
-- Clear when it asks for permissions
-- Diffs, tasks, and projects feel more concrete
-- Easier to pause and inspect when something goes wrong
+- Mais fácil ver o que ele fez
+- Quando pede Permissão fica óbvio
+- Conceitos como Diff, Tarefa e projeto ficam mais intuitivos
+- Se algo der errado, é mais fácil parar e verificar
 
-If you do not strongly prefer the terminal, the desktop App is usually the lighter start.
+Se você não tem preferência clara pelo terminal, o App desktop costuma ser mais leve.
 
-## Common misconceptions
+## Mal-entendidos comuns
 
-### 1. These four entry points are four completely different products
+### 1. Estas quatro entradas são quatro produtos completamente diferentes
 
-They share the same core capabilities. The differences are mostly interaction style and fit for a scenario.
+Ainda usam o mesmo conjunto de capacidades; a diferença está sobretudo no modo de operação e nos cenários adequados.
 
-### 2. I must pick the perfect one the first time or I will regret it
+### 2. Na primeira vez preciso acertar de uma vez, senão depois complica
 
-The first choice is a starting point, not a lifelong decision.
+A primeira escolha é só o ponto de partida — não uma decisão vitalícia.
 
-### 3. I can only ever use one entry point
+### 3. Depois só posso usar uma entrada fixa
 
-Many people later combine them:
+Muita gente combina assim depois:
 
-- Desktop App for reviewing tasks and changes day to day
-- CLI for batch operations
-- IDE extension when mainly writing code
+- No dia a dia, App desktop para ver Tarefas e revisar mudanças
+- CLI quando precisa de operação em lote
+- Extensão IDE quando o foco é escrever código
 
-## Suggested start order
+## Ordem para começar
 
-1. Install the [desktop App](/guide/getting-started/install-desktop-app/)
-2. Run through [your first task](/guide/getting-started/run-your-first-task/)
-3. Once that feels comfortable, consider CLI or IDE
+1. Instale primeiro o [App desktop](/guide/getting-started/install-desktop-app/)
+2. Rode a [primeira Tarefa](/guide/getting-started/run-your-first-task/)
+3. Quando estiver confortável, considere CLI ou IDE
 
-Full comparison: [Feature comparison](/guide/reference/feature-comparison/). You can install multiple clients; **keep the same practice directory** so experiences are easy to compare.
+Comparação completa: [Comparação de recursos](/guide/reference/feature-comparison/). Você pode instalar vários clientes; **mantenha o projeto de prática no mesmo diretório** para comparar a experiência.
 
-Do not rush to decide which is “more professional.” Pick the entry where process and results are easiest to understand.
+Na primeira vez, não corra para comparar «qual é mais profissional». Escolha a entrada em que é mais fácil ver o processo e o resultado.
 
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE  
+**Base de verificação:** A página inicial da OpenAI Developers apresenta ao mesmo tempo Codex, fluxos desktop e entradas para desenvolvedores; as conclusões desta página são sugestões situacionais para o primeiro uso e evitam tratar App / CLI / IDE / Cloud como produtos mutuamente exclusivos ou de capacidades totalmente diferentes.  
+**Última verificação:** 2026-07-26

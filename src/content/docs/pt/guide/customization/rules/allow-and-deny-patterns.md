@@ -1,119 +1,119 @@
 ---
-title: Allow and Deny Rules
-description: Constrain what the Agent can run with command and path rules—personal habits and team bottom lines.
+title: Regras de permitir e negar
+description: Constranger com regras de comandos e caminhos as operações que o Agent pode executar — hábitos pessoais e linha de base da equipa.
 locale: pt
-source_locale: en
-source_revision: 0a6b562
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Rules** declare in configuration or project files which shell commands, paths, and tool calls are **allowed or denied**, reducing manual approval each time while preventing dangerous automation.
+As **Rules (regras)** declaram, em configuração ou ficheiros de projeto, que comandos shell, caminhos e chamadas a Ferramentas são **permitidos ou proibidos**, reduzindo cliques manuais de Aprovação e impedindo a automação de operações perigosas.
 
-## Contents
+## Conteúdo
 
-- How Allow / Deny rules work
-- Relationship with sandbox, approval dialogs, and `AGENTS.md`
-- Team rule examples
+- Como funcionam as regras Allow / Deny
+- Relação com Sandbox, diálogos de Aprovação e `AGENTS.md`
+- Exemplos de regras de equipa
 
-## What Rules Actually Do
+## O que as regras fazem de facto
 
-If “rules” feels abstract, start here: agree in advance what Codex may and may not do, instead of judging and clicking approve every time.
+Se a palavra «regra» parecer abstrata, veja-a assim: acordar de antemão o que o Codex pode e não pode fazer, em vez de depender sempre de juízo no momento e de cliques de aprovação.
 
-Their value is mainly twofold:
+O valor principal é de dois tipos:
 
-- Reduce low-risk operations you confirm daily anyway
-- Block high-risk operations that should not run automatically
+- Reduzir operações de baixo risco que acontecem todos os dias e exigem confirmação repetida
+- Bloquear de antemão operações de alto risco que não devem ocorrer automaticamente
 
-## Rule Types (Conceptual)
+## Tipos de regras (conceito)
 
-| Type | Example |
+| Tipo | Exemplos |
 |---|---|
-| Command allowlist | Allow `npm test`, `git status` |
-| Command denylist | Deny `rm -rf`, `curl \| bash` |
-| Paths | Deny writing `../`, deny reading `~/.ssh` |
-| Network | Deny outbound or allow only registry domains |
+| Allowlist de comandos | Permitir `npm test`, `git status` |
+| Denylist de comandos | Proibir `rm -rf`, `curl \| bash` |
+| Caminhos | Proibir escrita em `../`, proibir leitura de `~/.ssh` |
+| Rede | Proibir saída de rede ou permitir só domínios de registry |
 
-Compare with [Permission Matrix](/guide/reference/permission-matrix/): rules are **configurable** enforcement; the matrix describes **typical defaults**.
+Compare com a [matriz de Permissões](/guide/reference/permission-matrix/): as regras são enforcement **configurável**; a matriz descreve **defaults típicos**.
 
-## Recommended Layering
+## Camadas recomendadas
 
 ```text
-Organization managed policy (cannot override)
+Política gerida pela organização (não sobrescrevível)
     ↓
-Project rules + AGENTS.md (Git review)
+Rules do projeto + AGENTS.md (revisão Git)
     ↓
-Personal allowlist supplement (local only)
+Allowlist pessoal complementar (só nesta máquina)
     ↓
-Single-task prompt constraints
+Restrições do Prompt da Tarefa única
 ```
 
-## Common Misconceptions
+## Mal-entendidos habituais
 
-### Rules are not only for fewer dialogs
+### As regras não servem só para menos diálogos
 
-Many people first hear “allowlist” and think the goal is fewer popups.
+Na primeira vez com allowlist, muita gente pensa que o objetivo é menos diálogos e menos interrupções.
 
-Fewer popups is only part of it; more important is allowing low-risk actions and blocking high-risk ones.
+Menos diálogos é só uma parte; o mais importante é deixar passar ações de baixo risco e bloquear as de alto risco.
 
-### Rules are not the sandbox
+### Regras ≠ Sandbox
 
-Sandbox limits “how far you can reach”; rules agree “which actions should not happen in principle.”
+O Sandbox limita «até onde se pode chegar»; as regras acordam «que ações, em princípio, não se devem fazer».
 
-Use both; do not pick one to replace the other.
+O ideal é usá-los em conjunto, não escolher um em substituição do outro.
 
-### Team bottom lines cannot live on one person’s machine
+### A linha de base da equipa não pode viver só na máquina de alguém
 
-If only your local rules know “no push” or “do not touch `.env`,” others can still step in.
+Se só as regras da sua máquina sabem «proibir push» e «não tocar em `.env`», os outros ainda podem cair na armadilha.
 
-Team bottom lines should live where they can be reviewed.
+A linha de base da equipa deve ficar, tanto quanto possível, onde se pode fazer review.
 
-## Team Example (Illustrative—not copy-paste ready)
+## Exemplo de equipa (ilustrativo, não copiar e usar)
 
-**Allow:**
+**Permitir:**
 
-- Package manager install of **in-project** dependencies
-- Test scripts from documentation
+- Instalação de dependências **dentro do projeto** pelo gestor de pacotes
+- Execução de scripts de teste da documentação
 
-**Deny:**
+**Negar:**
 
 - `git push`, `git reset --hard`
-- Read/write `.env*` (unless explicit task)
-- POST requests to the public internet containing repo content
+- Leitura/escrita de `.env*` (salvo Tarefa explícita)
+- POST para a internet pública com conteúdo do repositório
 
-Rules should live in team-reviewable files, not verbal agreement alone.
+As regras devem estar em ficheiros que a equipa possa rever, não só em acordo oral.
 
-## Common Mistakes
+## Erros habituais
 
-- Allowlist too broad (allowing `bash` is like allowing everything)
-- Only deny, no allow—still too many approvals
-- Rules contradict `AGENTS.md`
+- Allowlist demasiado ampla (permitir `bash` ≈ permitir tudo)
+- Só deny sem allow; ainda há demasiada Aprovação
+- Regras em contradição com `AGENTS.md`
 
-## Getting Started
+## Sugestão de arranque
 
-When organizing rules, you do not need a full policy on day one. These two steps are enough:
+Ao organizar regras, não precisa de uma política completa de imediato. Estes dois passos já bastam:
 
-1. List 3–5 daily, low-risk commands explicitly
-2. List a few high-risk actions you never want automated
+1. Liste 3 a 5 comandos de baixo risco que corre todos os dias
+2. Liste algumas ações de alto risco que absolutamente não quer que corram automaticamente
 
-Run the minimum boundary first; refine later.
+Primeiro estabilize a fronteira mínima; depois refine.
 
-## Security Boundaries
+## Limites de segurança
 
-- Rules **cannot** replace code review and branch protection
-- Malicious prompts may try to bypass rules—keep sandbox defaults strict
-- Rule changes go through PR; treat like CI changes
+- As regras **não substituem** code review nem proteção de branches
+- Prompts maliciosos podem induzir o Agent a tentar contornar regras — mantenha o Sandbox estrito por defeito
+- Altere regras via PR, como se alterasse a CI
 
-Good allow/deny rules state in advance which actions are reasonable and which should not happen.
+Boas regras allow/deny deixam claro de antemão que ações são razoáveis e quais não devem ocorrer.
 
-## References
+## Referências
 
 - stormzhang `15-permissions.md`, `18-config.md`
-- KimYx0207 permission configuration chapter
+- Capítulos de configuração de Permissões KimYx0207
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / App  
-**Verification basis:** OpenAI’s current Codex/plugin permission documentation continues to emphasize layering among read/write actions, approval, source boundaries, and role-based access control; this page does not declare specific rule file syntax and explains allow/deny as an execution-boundary pattern, distinct from sandbox, approval, and team review flows.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** CLI / App  
+**Base de verificação:** A documentação atual OpenAI de Permissões de Codex/plugins continua a enfatizar a estratificação de ações de leitura/escrita, Aprovação, limites de origem e controlo de acesso por papel; esta página não declara sintaxe concreta de ficheiros de regras — interpreta allow/deny como um padrão de fronteira de execução e distingue-o de Sandbox, Aprovação e fluxos de revisão de equipa.  
+**Última verificação:** 2026-07-26

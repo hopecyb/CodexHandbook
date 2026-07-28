@@ -1,23 +1,48 @@
 ---
-title: IDE Extension
-description: Minimum viable guide for Codex in the editor.
+title: Extensão IDE
+description: Usar o Codex no editor — instalação, Contexto, Tarefas locais e Cloud, revisão e definições.
+sidebar:
+  order: 12
 locale: pt
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 20cd4c3
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+A extensão IDE convém quando **escreve e vê o Diff ao mesmo tempo**: abre ficheiros, seleciona código e descreve a Tarefa na barra lateral. Este capítulo cobre o percurso completo, desde a escolha até à revisão.
 
-The IDE extension fits work with open files and selections. MVP: install, local tasks, troubleshooting.
+Se costuma escrever código ou editar documentação no editor, o IDE costuma ser a entrada mais natural.
 
-- [Installation](/guide/ide/installation/)
-- [Local task workflow](/guide/ide/local-task-workflow/)
-- [Troubleshooting](/guide/ide/troubleshooting/)
+Traz diretamente o ficheiro aberto e a seleção atuais, por isso muitas Tarefas de «mudança de alcance reduzido» são mais fáceis de delimitar.
 
+## Navegação do capítulo
+
+| Tema | Página |
+|---|---|
+| Escolha | [Editores suportados](/guide/ide/supported-editors/) |
+| Instalação | [Instalação](/guide/ide/installation/) |
+| Contexto | [Contexto do editor](/guide/ide/editor-context/) · [Seleção e ficheiros abertos](/guide/ide/selected-code-and-open-files/) |
+| Fluxo de trabalho | [Tarefas locais](/guide/ide/local-task-workflow/) · [Tarefas Cloud](/guide/ide/cloud-task-workflow/) |
+| Qualidade | [Rever mudanças](/guide/ide/reviewing-changes/) |
+| Configuração | [Definições](/guide/ide/settings/) |
+| Resolução de problemas | [Resolução de problemas](/guide/ide/troubleshooting/) |
+
+Atalhos de início: [Instalar a extensão IDE](/guide/getting-started/install-ide-extension/) · [Escolher cliente](/guide/getting-started/choose-your-codex-client/)
+
+## Preste atenção a isto primeiro
+
+Na primeira vez, foque-se em três coisas:
+
+1. Usa como referência o ficheiro que tem aberto
+2. Pode delimitar o alcance com a seleção
+3. Depois de alterar, continua a ter de rever o Diff você mesmo
+
+A extensão IDE encaixa em Tarefas de «alcance pequeno, ir vendo e alterando», mas o controlo de alcance e a revisão continuam indispensáveis.
 
 ---
 
-**Status:** review  
-**Applies to:** IDE  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Produtos aplicáveis:** IDE  
+**Base de verificação:** O OpenAI Help Center (*Using Codex with your ChatGPT plan*) continua a confirmar a Codex IDE extension e situa-a junto da CLI e da App de desktop como cliente local; esta página só navega o capítulo IDE e destaca o fluxo estável de «ficheiro atual, seleção e revisão de Diff».  
+**Última verificação:** 2026-07-26

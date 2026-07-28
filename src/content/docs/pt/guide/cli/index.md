@@ -1,23 +1,50 @@
 ---
 title: CLI
-description: Minimum viable guide for the command-line entry.
+description: Explicação mínima útil da entrada pela linha de comando.
+sidebar:
+  order: 11
 locale: pt
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 848029a
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
+A CLI adequa-se a utilizadores de terminal e à integração com scripts e CI.
 
-The CLI suits terminal users and scripts. MVP covers install, interactive mode, and troubleshooting only; non-interactive/`exec` and full command reference come in later milestones.
+Na primeira vez que vê «CLI», pode entendê-la como a entrada para colaborar com o Codex diretamente no terminal, sem interface gráfica.
 
-- [Installation and updates](/guide/cli/installation-and-updates/)
-- [Interactive mode](/guide/cli/interactive-mode/)
-- [Troubleshooting](/guide/cli/troubleshooting/)
+Inclina-se para estes cenários:
+
+- Quem já usa a linha de comando
+- Quem quer ligar a scripts
+- Quem precisa de CI / automação
+
+Para iniciantes que não conhecem o terminal, a CLI não é a primeira paragem obrigatória; mas se já sabe o básico de `cd`, `ls` e correr comandos no diretório do projeto, é muito eficiente.
+
+- [Instalação e atualizações](/guide/cli/installation-and-updates/)
+- [Modo interativo](/guide/cli/interactive-mode/)
+- [Modo não interativo](/guide/cli/non-interactive-mode/)
+- [Configuração da CLI](/guide/cli/configuration/)
+- [Comandos e atalhos](/guide/cli/commands-and-shortcuts/)
+- [Aprovação e Sandbox](/guide/cli/approvals-and-sandbox/)
+- [Resolução de problemas](/guide/cli/troubleshooting/)
+
+Referência completa de comandos: [Referência de comandos da CLI](/guide/reference/commands/).
+
+## O que distinguir na primeira utilização
+
+Na primeira fase, distinga estes dois modos:
+
+1. **Modo interativo**: conversar diretamente com o Codex no terminal
+2. **Modo não interativo**: tratar o Codex como comando ligado a scripts ou CI
+
+Se for só a experimentar pela primeira vez, o modo interativo costuma ser mais fluido. Quando precisar de automação, passe ao modo não interativo.
 
 
 ---
 
-**Status:** review  
-**Applies to:** CLI  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Produtos aplicáveis:** CLI  
+**Base de verificação:** O material de introdução à CLI no OpenAI Help Center continua a descrever a Codex CLI como entrada de terminal e a distinguir uso interativo de fluxos de linha de comando mais automatizados; esta página só navega o capítulo CLI e resume os dois tipos de uso, sem amarrar parâmetros ou comandos de instalação concretos.  
+**Última verificação:** 2026-07-26

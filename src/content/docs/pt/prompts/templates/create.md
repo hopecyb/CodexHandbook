@@ -1,73 +1,73 @@
 ---
-title: Create template
-description: Build features, documents, or artifacts from scratch.
+title: Template de criação
+description: Implementar do zero uma função, um texto ou um artefato.
 locale: pt
-source_locale: en
-source_revision: f7e4caa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Create template
+# Template de criação
 
-From-scratch tasks often fail in two ways:
+Em tarefas de criação do zero, os dois problemas mais fáceis são:
 
-- big goal, no boundaries
-- not enough information but generation starts anyway
+- objetivo amplo sem limites
+- pouca informação, mas pressa para o Codex gerar já
 
-The create template states deliverable, audience, and constraints before work begins.
+O template de criação fixa primeiro o artefato, o uso e as restrições — e só depois começa.
 
 ## Template
 
 ```text
-Goal: Create 【artifact name】 for 【purpose/audience】.
-Context: 【existing conventions, design style, dependency limits】
-Inputs: 【spec, sketch, reference @files】
-Constraints:
-- Only modify/create within 【path scope】
-- Do not introduce 【exclusions】
-- Require my approval before 【high-risk operations】
-Acceptance:
-- 【observable result 1】
-- 【observable result 2】
-- Provide self-test steps
-If information is insufficient, list assumptions and ask me—don't guess.
+Objetivo: criar 【nome do artefato】 para 【uso/utilizadores】.
+Contexto: 【convenções existentes, estilo de design, limites de dependências】
+Entradas: 【especificação, esboço, referências @arquivos】
+Restrições:
+- modificar/criar só dentro de 【alcance de caminhos】
+- não introduzir 【exclusões】
+- operações de alto risco: executar após a minha aprovação
+Aceitação:
+- 【resultado observável 1】
+- 【resultado observável 2】
+- incluir passos de auto-teste
+Se faltar informação, liste hipóteses e pergunte; não adivinhe.
 ```
 
-## When to use this template
+## Quando usar este template
 
-- New page, component, script, or document from zero
-- You know what to produce but haven't started
-- You want scope stated before building
+- Criar do zero uma página, um componente, um script ou documentação
+- Já sabe o que entregar, mas ainda não começou
+- Quer delimitar o alcance da criação antes de agir
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Create tasks mean "free rein"
+### 1. Criar = carta branca
 
-From-scratch work especially needs:
+É preciso clarificar:
 
-- who it's for
-- what it's for
-- style or technical paths that are off limits
+- para quem
+- para que serve
+- que estilos ou stacks estão proibidos
 
-### 2. Context is optional decoration
+### 2. O contexto é só decoração opcional
 
-For create tasks, context often steers the entire deliverable.
+Na criação, o contexto costuma orientar toda a direção do artefato.
 
-### 3. "Looks good" as acceptance
+### 3. Aceitação = «que fique bem»
 
-Hard to judge whether you're actually done.
+Assim fica muito difícil julgar se realmente terminou.
 
-In create tasks, the riskiest move is starting before "what to build and for whom" is clear.
+O pior na criação: começar sem clarificar «o quê» e «para quem».
 
-## Related
+## Relacionado
 
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Define done](/prompts/define-done/)
+- [Trabalho guiado por especificação](/cases/workflows/specification-driven-work/)
+- [Definir o concluído](/prompts/define-done/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a create-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página oferece um template de tarefas de criação; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

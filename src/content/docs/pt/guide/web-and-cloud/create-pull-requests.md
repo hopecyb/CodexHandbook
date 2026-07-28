@@ -1,120 +1,121 @@
 ---
-title: Create Pull Request
-description: From Cloud tasks to reviewable PRs—descriptions, scope, and human merge gates.
+title: Criar Pull Request
+description: Da Tarefa Cloud a um PR revível — descrição, alcance e portão humano de merge.
 locale: pt
-source_locale: en
-source_revision: e679e5f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-On your first Cloud workflow, the task may be "done" while changes are not yet in a state that's easy to inspect and discuss. On teams, that handoff usually happens through a **Pull Request**.
 
-A PR is a reviewable change proposal.
+Na primeira vez com o fluxo Cloud, costuma acontecer que a Tarefa já terminou mas a alteração ainda não está num estado fácil de rever e discutir. Em colaboração de equipa, esse passo costuma ser o **Pull Request**.
 
-It centralizes what changed, why, and how it was tested—where Cloud deliverables land for the team.
+Um PR é um pedido de alteração que se pode rever.
 
-## What's covered
+Concentra o que mudou, porquê e se se testou, num sítio onde se pode fazer review. Quando uma Tarefa Cloud se entrega à equipa, também aterra aqui.
 
-- End-to-end expectations from Cloud task to PR
-- What PR descriptions should include for humans and CI
-- When not to auto-open a PR
+## Conteúdo
 
-## When to open a PR
+- Expectativa de extremo a extremo: de Tarefa Cloud a PR
+- O que a descrição do PR deve incluir para que pessoa e CI possam aceitar
+- Quando não abrir PR automaticamente
 
-If others need to see the change, CI must run, or the work must merge to the main branch, do not stop at "branch updated"—move to a **reviewable PR**.
+## Quando abrir um PR
 
-## Recommended workflow
+Se a alteração precisa que alguém a olhe, que a CI corra, ou que no fim se faça merge ao branch principal, não fiques em «já está alterado no branch»: avança até um **PR revível**.
+
+## Fluxo de trabalho recomendado
 
 ```text
-Connect GitHub → clarify issue/goal → Cloud task (confirm plan) → push branch → open PR → human review + CI → merge
+Ligar GitHub → clarificar issue/objetivo → Tarefa Cloud (confirmar plano) → push de branch → abrir PR → review humana + CI → merge
 ```
 
-Prerequisite: [Connect GitHub](/guide/web-and-cloud/connect-github/)
+Pré-requisito: [Ligar o GitHub](/guide/web-and-cloud/connect-github/)
 
-## Why auto-merge is not the default
+## Porque não convém merge automático de entrada
 
-PRs exist to give people and automation a checkpoint—not only to upload code.
+O papel do PR é deixar uma entrada de verificação para pessoas e sistemas, não só subir código.
 
-Common pattern:
+O habitual:
 
-- Codex can help open the PR
-- A human decides whether to merge
+- O Codex pode ajudar-te a abrir o PR
+- Uma pessoa decide se fazer merge
 
-That preserves a safety gate even if the task drifted.
+Assim, mesmo que a Tarefa se desvie, continua a haver uma revisão humana.
 
-## Task prompt essentials
+## Pontos-chave do Prompt da Tarefa
 
 ```text
-Goal: Fix the login timeout described in #42
+Objetivo: corrigir o timeout de login descrito em #42
 Branch: fix/42-login-timeout
-Scope: packages/auth and related tests only
-Done: Open PR to main; do not merge
-PR description must include: reason, change summary, test commands and results, risks and rollback
+Alcance: só packages/auth e testes relacionados
+Feito: abrir PR a main, não fazer merge
+A descrição do PR deve incluir: causa, resumo da alteração, comando de teste e resultado, riscos e rollback
 ```
 
-Aligned with [define done](/prompts/define-done/) and [task anatomy](/prompts/task-anatomy/).
+Alinhado com [Definir feito](/prompts/define-done/) e [Anatomia de uma boa Tarefa](/prompts/task-anatomy/).
 
-## A good PR answers four questions
+## Um bom PR responde pelo menos a quatro perguntas
 
-1. Why did you make this change?
-2. What exactly changed?
-3. How did you verify it?
-4. What risks, limits, or gaps remain?
+1. Porque alteraste isto?
+2. Que sítios concretos tocaste?
+3. Como o verificaste?
+4. Que riscos, limites ou casos não cobertos ficam?
 
-Without those, reviewers must reconstruct context themselves.
+Se a descrição não cobrir esses quatro pontos, quem revê tem de reconstruir o Contexto.
 
-## PR quality checklist
+## Lista de qualidade do PR
 
-- [ ] Title states **what** changed, not "update code"
-- [ ] Links the issue number
-- [ ] CI passes or explains known failures
-- [ ] Diff size is acceptable; split oversized PRs
-- [ ] No secrets, no unrelated formatting storms
-- [ ] Screenshots or logs for UI/behavior changes
+- [ ] O título diz «o que se fez», não «atualizar código»
+- [ ] Liga o número de issue
+- [ ] A CI passa ou explica a falha conhecida
+- [ ] O tamanho do Diff é aceitável para a equipa; se for enorme, partir o PR
+- [ ] Sem secrets nem tempestade de formato irrelevante
+- [ ] Capturas ou logs (alterações de UI/comportamento)
 
-## Human gate
+## Portão humano
 
-Even if Codex opens the PR, **merge** should default to a human (or a controlled bot under branch protection):
+Embora o Codex possa abrir o PR, o **merge** deveria fazê-lo por omissão uma pessoa (ou um bot controlado + proteção de branches):
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+Ver [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Stuffing unrelated changes into one PR
+### 1. Meter várias alterações não relacionadas num só PR
 
-Hard to review and hard to revert.
+Custa muito revê-lo e muito mais revertê-lo.
 
-### 2. Saying "fixed" without how you verified
+### 2. Só dizer «já está corrigido» sem dizer como se verificou
 
-Reviewers cannot tell "tested" from "probably fine."
+O outro não sabe se «de verdade o testaste» ou «parece que deveria estar bem».
 
-### 3. Letting Codex touch main directly
+### 3. Deixar que o Codex toque diretamente no branch principal
 
-May work for solo experiments; too risky for shared repos.
+Numa experiência pessoal talvez poupe um passo; num repo colaborativo o risco é demasiado alto.
 
-## Review automation
+## Com automatização de Review
 
-- Use a Skill or `codex exec` in CI for **supplementary review comments**
-- Auto-merge needs separate governance—not the beginner default path
+- Podes usar um Skill ou `codex exec` em CI para **comentários de revisão complementares**
+- O merge automático precisa de uma política de governação à parte; não está na rota por omissão de principiantes
 
-KimYx0207 CX-10 covers Review/PR; confirm capabilities against official docs.
+KimYx0207 CX-10 trata Review/PR; as capacidades concretas são definidas pelo oficial.
 
-## Common mistakes
+## Erros frequentes
 
-- One PR with multiple unrelated features
-- Description says "AI-generated changes" with no test notes
-- Merging to main without review
+- PR com várias funções não relacionadas
+- Descrição «alterações geradas por IA» sem explicação de testes
+- Merge direto a main saltando a review
 
-## Further reading
+## Leitura adicional
 
-- [GitHub integration](/guide/integrations/github/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Desktop App: diffs and comments](/guide/desktop-app/diffs-comments-and-review/)
+- [Integração com GitHub](/guide/integrations/github/)
+- [Rever Diffs](/guide/quality/review-diffs/)
+- [App de ambiente de trabalho: Diffs e comentários](/guide/desktop-app/diffs-comments-and-review/)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / Web  
-**Review note:** "Cloud output goes to a PR for human review" remains sound, but this page describes PR entry points, automation behavior, and Cloud delivery rhythm concretely; without line-by-line verification of current official PR and Cloud GitHub integration, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** Cloud / Web  
+**Nota de revisão:** «A entrega Cloud entra em PR e depois review humana» continua a ser um princípio sólido, mas esta página concreta demasiado a entrada de abrir PR, o comportamento automático e o ritmo de entrega Cloud; até contrastar item a item o fluxo oficial de PR e a integração Cloud/GitHub, não convém marcá-la como `verified`.  
+**Última verificação:** 2026-07-26

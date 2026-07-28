@@ -1,77 +1,78 @@
 ---
-title: Diagnose before fixing
-description: Production issues and stubborn bugs—build an evidence chain before changing code.
+title: Diagnosticar antes de corrigir
+description: Problemas de produção e bugs teimosos — construa primeiro a cadeia de evidências, só depois intervir.
 locale: pt
-source_locale: en
-source_revision: 35b00c6
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Asking Codex to fix a bug immediately usually means high rework. The diagnose workflow emphasizes: **symptoms → hypotheses → evidence → minimal fix**.
 
-## When to use
+Pedir ao Codex para corrigir o bug de imediato costuma gerar muita retrabalho. O fluxo de diagnóstico enfatiza: **sintoma → hipótese → evidência → correção mínima**.
 
-- Test failure cause unclear
-- Production alerts, user reports "intermittent" issues
-- Problem persists after last fix
+## Quando usar
 
-## Steps
+- Causa da falha de teste pouco clara
+- Alertas de produção, relatos de utilizadores «intermitentes»
+- O problema persiste após a última correção
 
-### 1. Freeze changes
+## Passos
 
-```text
-Do not change business code yet. List: reproduction steps, relevant logs, recent related commits.
-```
-
-### 2. Narrow scope
-
-- Bisect: which commit introduced it?
-- Isolate: minimal repro repo or test case
-
-### 3. Form hypotheses
-
-Ask Codex to output:
+### 1. Congelar alterações
 
 ```text
-Hypothesis A: … Verification: …
-Hypothesis B: … Verification: …
+Não altere código de negócio. Liste: passos de reprodução, logs relevantes, commits recentes relacionados.
 ```
 
-### 4. Verify hypotheses (read-only first)
+### 2. Reduzir o âmbito
 
-Run targeted tests, add temporary logs (discardable branch), read monitoring.
+- Bissecção: que commit introduziu?
+- Isolamento: repositório ou caso de teste de reprodução mínima
 
-### 5. Minimal fix
+### 3. Formular hipóteses
 
-Fix one root cause at a time; avoid "while I'm here" refactors.
-
-### 6. Regression verification
-
-Original failing case + adjacent scenarios + test preventing recurrence.
-
-## Prompt template
+Peça ao Codex:
 
 ```text
-Follow "diagnose before fixing":
-1. Read @path/to/failing-test and implementation; explain failure (cite stack line numbers)
-2. Give 2 hypotheses and how to verify read-only
-3. After I confirm a hypothesis, write the fix; after fix run only related tests
+Hipótese A: … Forma de verificar: …
+Hipótese B: … Forma de verificar: …
 ```
 
-## Relation to EPXV
+### 4. Verificar hipóteses (preferência só de leitura)
 
-Diagnosis is a deeper **Explore** phase; at Plan, also document "how to roll back if hypothesis is wrong."
+Correr testes direcionados, acrescentar logs temporários (ramo descartável), ler monitorização.
 
-## Common mistakes
+### 5. Correção mínima
 
-- Changing code without reproduction
-- One patch fixing three issues—hard to review
-- Removing temporary logs without adding permanent tests
+Corrigir uma causa raiz de cada vez; evite «refatorar de passagem».
+
+### 6. Verificação de regressão
+
+Caso de falha original + cenários adjacentes + testes para prevenir recorrência.
+
+## Modelo de prompt
+
+```text
+Siga «diagnosticar antes de corrigir»:
+1. Leia @path/to/failing-test e a implementação; explique a causa da falha (cite números de linha da stack)
+2. Dê 2 hipóteses e como as verificar só com leitura
+3. Após eu confirmar a hipótese, escreva a correção; depois da correção, corra apenas os testes relacionados
+```
+
+## Relação com EPXV
+
+O diagnóstico pode ver-se como uma versão aprofundada da fase **Explorar**; na fase de plano, escreva também «se a hipótese estiver errada, como recuar».
+
+## Erros comuns
+
+- Alterar código sem reproduzir
+- Um único patch a corrigir três problemas — impossível de rever
+- Remover logs temporários sem acrescentar testes permanentes
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against currently verified planning, quality, and failure recovery chapters in this handbook; this page only confirms the stable diagnose method—evidence chain first, then minimal fix—not dependent on specific product client implementation.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre planeamento, qualidade e recuperação de falhas; esta página confirma apenas o método estável de diagnóstico «cadeia de evidências primeiro, correção mínima depois», sem depender de implementações concretas de produto.  
+**Última verificação:** 2026-07-26

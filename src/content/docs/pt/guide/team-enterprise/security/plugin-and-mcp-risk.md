@@ -1,105 +1,106 @@
 ---
-title: Plugin and MCP Risk
-description: What extensions can access, how teams approve and monitor—unified risk view for Skills, Plugins, and MCP.
+title: Riscos de Plugin e MCP
+description: "A que podem aceder as extensões e como a equipa as aprova e monitoriza — um olhar unificado a Skills, Plugin e MCP."
 locale: pt
-source_locale: en
-source_revision: a102da3
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Plugins** and **MCP servers** connect Codex to external systems: tickets, databases, internal APIs. More capability means a larger [threat model](/guide/team-enterprise/security/threat-model/) surface for exfiltration and overreach. Read with [MCP overview](/skills/mcp/mcp-overview/) and [Plugins overview](/skills/plugins/plugins-overview/).
+Os **Plugin** e os **servidores MCP** ligam o Codex a sistemas externos: tickets, bases de dados, API internas. Quanto mais capacidade, maior é a superfície de fuga e abuso de privilégios do [modelo de ameaças](/guide/team-enterprise/security/threat-model/). Lê-o junto com [Visão geral de MCP](/skills/mcp/mcp-overview/) e [Visão geral de Plugins](/skills/plugins/plugins-overview/).
 
-You do not need perfect definitions on day one. Core point: connecting Codex externally increases capability and risk.
+Na primeira vez que vires estes termos, não precisas de memorizar definições. Fica com uma ideia: quando o Codex se liga a sistemas externos, a capacidade cresce e o risco também.
 
-Whether it is called Plugin or MCP, ask:
+Quer se chame Plugin ou MCP, a pergunta central é parecida:
 
-- What can it read
-- What can it write
-- Who approves
-- How incidents are traced
+- O que pode ler
+- O que pode alterar
+- Quem aprova
+- Como se rastreia um incidente
 
-## What this page covers
+## Conteúdo
 
-- Extension risk categories
-- Approval lists and version pinning
-- Isolation during debug and incidents
+- Classificação de riscos de extensões
+- Lista de Aprovação e fixação de versões
+- Isolamento em depuração e incidentes
 
-## Risk categories
+## Classificação de riscos
 
-| Type | Example | Control |
+| Tipo | Exemplo | Controlo |
 |---|---|---|
-| Data read | MCP reads customer DB | Read-only account, row-level permissions |
-| Data write | Auto-close tickets, change config | Human approval, dual confirmation |
-| Network | Arbitrary outbound | Egress allowlist |
-| Credentials | OAuth token on disk | Secret management, short-lived tokens |
-| Supply chain | Third-party server update tampering | Pin version, hash lock |
+| Leitura de dados | MCP lê a base de clientes | Conta só de leitura, permissões ao nível da linha |
+| Escrita de dados | Fechar tickets ou mudar configuração automaticamente | Aprovação humana, confirmação de dupla escrita |
+| Rede | Ligações externas arbitrárias | Allowlist de saída |
+| Credenciais | Token OAuth em disco | Custódia de secrets, tokens de curta duração |
+| Cadeia de fornecimento | Atualização envenenada de um server de terceiros | Versão fixa, bloqueio por hash |
 
-## Team approval flow (recommended)
+## Fluxo de Aprovação da equipa (recomendado)
 
 ```text
-Request (purpose, data class, permissions) → security/architecture review
-    → enter “approved list” repo or internal directory
-    → pin version + owner
-    → quarterly or major-upgrade re-review
+Pedido (uso, classificação de dados, Permissões) → review de segurança/arquitetura
+    → Entrada no repositório ou catálogo interno de «lista aprovada»
+    → Número de versão fixo + responsável
+    → Revisão trimestral ou ao subir major
 ```
 
-Experimental personal MCP **should not** share production repo tokens.
+Um MCP experimental pessoal **não deve** partilhar o mesmo token que o repositório de produção.
 
-## Minimum practices
+## Práticas mínimas
 
-1. **Deny by default** unlisted remote MCP installs
-2. **Local MCP** may still read the whole disk—dedicated OS user or container
-3. **Logs**: tool name and parameter summary (redacted)—see [Hook audit](/skills/hooks/hooks-examples/)
-4. **Skill vs MCP**: Skill describes flow, MCP performs external calls—permissions union; apply strictest policy
+1. **Negar por omissão** a instalação de MCP remotos fora da lista
+2. Um **MCP local** ainda pode ler todo o disco — usa um utilizador de SO dedicado ou um contentor
+3. **Registos**: nome da Ferramenta e resumo de parâmetros (sem dados sensíveis); ver [auditoria com Hook](/skills/hooks/hooks-examples/)
+4. **Divisão Skill / MCP**: o Skill descreve o fluxo; o MCP executa a ligação externa — a política mais estrita ganha ao unir Permissões
 
-## Common mistakes
+## Erros frequentes
 
-- “Official marketplace” = “security reviewed”
-- Dev and prod share one MCP OAuth app
-- `DEBUG=*` in debug dumps tokens into CI logs
+- «Mercado oficial» = «já revisto em segurança»
+- A mesma OAuth app de MCP para desenvolvimento e produção
+- Abrir `DEBUG=*` na depuração e despejar tokens em logs de CI
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Plugin vs MCP unclear—does it matter early?
+### 1. Ainda não distingo bem Plugin e MCP; importa?
 
-Not much at first.
+Na primeira fase, pouco.
 
-Both connect Codex to external systems—permissions and risk apply either way.
+O comum é:  
+ambos põem o Codex em contacto com sistemas externos, por isso há que pensar em Permissões e riscos.
 
-### 2. Why “read-only first”?
+### 2. Porque se insiste tanto em «só leitura primeiro»?
 
-Read-only usually means:
+Porque a só leitura costuma implicar:
 
-- Easier pilot
-- Easier to prove value
-- Lower blast radius on mistakes
+- Mais fácil de pilotar
+- Mais fácil de demonstrar valor
+- Menor custo se algo falhar
 
-### 3. Install and forget?
+### 3. Pode confiar-se nestas extensões logo após instalar?
 
-Even convenient features need:
+Mesmo que a função pareça cómoda, continua a perguntar:
 
-- What data it accesses
-- Whether it writes back
-- How credentials are managed
+- A que dados pode aceder
+- Se escreve de volta no sistema
+- Como se gerem as credenciais
 
-For external extensions: permissions and boundaries before feature strength.
+Com extensões externas, olha primeiro Permissões e limites; depois, se a função é potente.
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Written approval list or equivalent process
-- [ ] Each production MCP has owner and data classification
-- [ ] Consistent with [Skill security](/skills/security/) policy
+- [ ] Há lista de Aprovação escrita ou fluxo equivalente
+- [ ] Cada MCP de produção tem owner e classificação de dados
+- [ ] Alinhado com a política de [segurança de Skill](/skills/security/)
 
-## Reference sources
+## Fontes de referência
 
-- KimYx0207 MCP/Plugin security
-- stormzhang MCP chapter
-- [Debugging MCP](/skills/mcp/debugging-mcp/)
+- Segurança MCP/Plugin de KimYx0207
+- Capítulo MCP de stormzhang
+- [Depurar MCP](/skills/mcp/debugging-mcp/)
 
 ---
 
-**Status:** verified  
-**Products:** CLI / App / Cloud  
-**Verification basis:** OpenAI Help Center plugin docs still emphasize app/plugin capability constrained by role access, action control, confirmation, domain/source boundaries, and underlying source permissions; mapped here to unified Plugin/MCP risk view with read-only first, version pinning, owners, and approval lists.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** CLI / App / Cloud  
+**Base de verificação:** A documentação atual de plugins no OpenAI Help Center continua a enfatizar que a capacidade de app/plugin está limitada por acesso por papel, controlo de ações, requisitos de confirmação, limites de domínio/origem e Permissões do sistema de origem; esta página mapeia esses princípios a um olhar unificado de risco Plugin/MCP e defende só leitura primeiro, versão fixa, owner claro e lista de Aprovação.  
+**Última verificação:** 2026-07-26

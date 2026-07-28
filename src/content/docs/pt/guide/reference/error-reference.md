@@ -1,160 +1,173 @@
 ---
-title: Error Reference
-description: Learning index of common errors, exit codes, and failure modes—points to troubleshooting, not official support.
+title: Referência de erros e avisos
+description: Índice de aprendizagem de mensagens de erro habituais, códigos de saída e causas de falha — aponta a páginas de diagnóstico; não substitui o suporte oficial.
 locale: pt
-source_locale: en
-source_revision: 489737c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many people stare at one English line and guess. Classifying the problem first usually works better.
+Perante um erro, muita gente fica a olhar essa linha em inglês e tenta adivinhar. Classificar o problema primeiro costuma ser mais efetivo.
 
-Decide if it looks like **auth, permissions, environment, network, or task logic**. This page summarizes frequent messages and next steps—not a complete error dictionary; latest behavior is official docs and client output.
+Ao ver um erro, julga primeiro se parece um problema de **autenticação, Permissão, ambiente, rede ou lógica da Tarefa**. Esta página resume o sentido de mensagens frequentes e o passo seguinte; não é um dicionário completo de erros. O comportamento mais recente é definido pela documentação oficial e pela saída do cliente.
 
-## How to read an error
+## Como ler um erro ao vê-lo
 
-1. Keyword class: auth, permissions, environment, network, context
-2. Stage: startup, install, execution, push, output
-3. Jump to the matching topic page
+Perante um erro, faz primeiro estes três passos:
 
-Often faster than guessing.
+1. Olha a que classe pertence a palavra-chave: autenticação, Permissão, ambiente, rede, Contexto
+2. Olha em que fase ocorre: arranque, instalação, execução, push, saída
+3. Salta para a página temática correspondente a diagnosticar
 
-Global index: [Troubleshooting](/guide/reference/troubleshooting/)
+Costuma ser mais rápido do que adivinhar a causa.
 
-## Authentication and account
+Índice global: [Diagnóstico](/guide/reference/troubleshooting/)
 
-| Message or symptom | Likely cause | Next step |
+## Autenticação e conta
+
+| Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| Authentication failed / 401 | Expired token, not signed in | [Sign-in and authentication](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | Org disabled feature or model | Contact admin; [Account and access](/guide/getting-started/account-plans-and-access/) |
-| Rate limit / 429 | Too frequent or quota | Retry later; check plan usage |
+| Authentication failed / 401 | Token caducado, sem iniciar sessão | [Iniciar sessão e autenticação](/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | A organização desativa a função ou o modelo | Contacta o administrador; olha o plano em [Conta e acesso](/guide/getting-started/account-plans-and-access/) |
+| Rate limit / 429 | Demasiados pedidos ou quota | Tenta de novo mais tarde; olha o uso do plano |
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Long error ≠ harder problem
+### 1. Um erro longo não implica que o problema seja mais complexo
 
-Useful signal is often one short keyword in a long stack.
+Muitos erros longos só empilham Contexto; o útil costuma ser esse pequeno troço de palavras-chave.
 
-### 2. Non-zero exit ≠ model cannot do the task
+### 2. Um código de saída diferente de zero não implica que o modelo «não saiba fazê-lo»
 
-May be permissions, network, output format, or task failure conditions.
+Pode ser só:
 
-### 3. 401 / 403 / 429 differ
+- Sem Permissão
+- Sem rede
+- Formato de saída que não cumpre o requisito
+- A Tarefa em si disparou uma condição de falha
 
-- `401`: authentication problem
-- `403`: authenticated but not allowed
-- `429`: too fast—retry later
+### 3. 401 / 403 / 429 não são a mesma coisa
 
-### 4. Last line is not always the root cause
+Diferem muito:
 
-Earlier lines may show step, file, command, or underlying reason.
+- `401` costuma ser «não autenticado bem»
+- `403` costuma ser «sei quem és, mas não te deixo fazê-lo»
+- `429` costuma ser «vais demasiado depressa; volta mais tarde»
 
-## CLI and commands
+### 4. A última linha nem sempre é a mais importante
 
-| Message or symptom | Likely cause | Next step |
+Às vezes a última linha só é o «resumo final da falha»; a informação útil está umas linhas mais acima, por exemplo:
+
+- Que passo o disparou
+- Que ficheiro, comando ou Ferramenta falhou
+- Se há uma pista de causa mais original
+
+## CLI e comandos
+
+| Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| command not found: codex | Not installed or PATH | [Install CLI](/guide/getting-started/install-cli/) |
-| Config parse error | TOML/YAML syntax | [CLI configuration](/guide/cli/configuration/) |
-| Permission denied (write) | Sandbox or approval denial | [Approvals and sandbox](/guide/cli/approvals-and-sandbox/) |
-| Non-zero exit (exec) | Task failed or completion criteria unmet | Check stderr; tighten prompt |
+| command not found: codex | Não instalado ou PATH | [Instalar CLI](/guide/getting-started/install-cli/) |
+| Config parse error | Sintaxe TOML/YAML | [Configuração do CLI](/guide/cli/configuration/) |
+| Permission denied (write) | Sandbox ou Aprovação rejeitada | [Aprovações e Sandbox](/guide/cli/approvals-and-sandbox/) |
+| Código de saída diferente de zero (exec) | Falha de Tarefa ou critério de finalização não cumprido | Olha logs de stderr; endurece o Prompt |
 
-## Five categories
+## Classifica primeiro
 
-| Category | Check |
+Se não souberes por onde começar, divide o erro em 5 classes:
+
+| Classe | Olha primeiro |
 |---|---|
-| Auth | Account, token, sign-in |
-| Permissions | Approval, sandbox, repo access |
-| Environment | Install, PATH, config, dependencies |
-| Network | Egress, proxy, remote reachability |
-| Task logic | Prompt, input files, output requirements |
+| Autenticação | Conta, token, estado de início de sessão |
+| Permissão | Aprovação, Sandbox, Permissões do repo |
+| Ambiente | Instalação, PATH, configuração, dependências |
+| Rede | Saída, proxy, alcançabilidade de serviços remotos |
+| Lógica da Tarefa | Prompt, ficheiros de entrada, requisitos de saída |
 
-Classify first—direction stays clearer.
+Se chegares a classificá-lo assim, a direção de diagnóstico desvia-se menos.
 
-## How to use this page
+## Como usá-lo
 
-Treat it as a triage table—not a full dictionary:
+Usa-o como tabela de desvio de erros, não como dicionário completo:
 
-- Spot keyword
-- Find category
-- Open detailed troubleshooting page
+- Vês a palavra-chave
+- Encontras a classe correspondente
+- Vais à página de diagnóstico mais concreta
 
-Or translate to plain questions:
+Se ainda não perceberes, reformula o erro como uma pergunta mais direta:
 
-- Not signed in?
-- No permission?
-- Command not installed?
-- Network unreachable?
-- Unclear instructions to Codex?
+- Não iniciei sessão bem?
+- Sem Permissão?
+- Este comando nem sequer está instalado?
+- A rede não chega?
+- O requisito que dei ao Codex não estava claro?
 
-Use this page to land in the right category when unsure.
+Se ainda não souberes aonde olhar, usa esta página para classificar o problema numa categoria ampla.
 
-## Permissions and sandbox
+## Permissões e Sandbox
 
-| Message or symptom | Likely cause | Next step |
+| Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| User rejected tool call | You or policy rejected action | Confirm if approval was right; or change task |
-| Sandbox violation | Path or command out of bounds | [Sandbox and network](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Egress blocked | Cloud: [Internet access](/guide/web-and-cloud/internet-access/) |
+| User rejected tool call | Tu ou a política rejeitastes a operação | Confirma se deveria Aprovar-se; ou muda a Tarefa |
+| Sandbox violation | Caminho de escrita ou comando fora de alcance | [Sandbox e rede](/guide/foundations/sandbox-and-network/) |
+| Network access denied | Saída à rede proibida | Cloud: [Acesso à Internet](/guide/web-and-cloud/internet-access/) |
 
-## Cloud and GitHub
+## Cloud e GitHub
 
-| Message or symptom | Likely cause | Next step |
+| Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| Repository access denied | Insufficient OAuth scope | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Repo name, permissions, network | [Cloud troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Wrong name or scope | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Branch protection | [Create pull requests](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Alcance OAuth insuficiente | [Ligar o GitHub](/guide/web-and-cloud/connect-github/) |
+| Clone failed | Nome do repo, Permissão, rede | [Diagnóstico Cloud](/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Nome incorreto ou alcance | [Secrets e variáveis](/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Proteção de branches | [Criar PR](/guide/web-and-cloud/create-pull-requests/) |
 
-## MCP and extensions
+## MCP e extensões
 
-| Message or symptom | Likely cause | Next step |
+| Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| MCP server failed to start | Command path, missing dependency | [Connect MCP](/skills/mcp/connect-an-mcp-server/) |
-| Tool timeout | Slow or down external API | Retry; check MCP logs |
-| Unknown tool | Config/server version mismatch | Restart session; update config |
+| MCP server failed to start | Caminho do comando, dependências que faltam | [Ligar MCP](/skills/mcp/connect-an-mcp-server/) |
+| Tool timeout | API externa lenta ou caída | Retry; olhar logs de MCP |
+| Unknown tool | Configuração e versão do servidor inconsistentes | Reiniciar a sessão; atualizar a configuração |
 
-## Context and model
+## Contexto e modelo
 
-| Message or symptom | Likely cause | Next step |
+| Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| Context length exceeded | Conversation or @ files too large | [Compaction](/guide/context/compaction/) · narrow scope |
-| Model not available | Region or plan limitation | [Models and reasoning](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Conversação ou ficheiros @ demasiado grandes | [Compactação](/guide/context/compaction/) · reduzir o alcance |
+| Model not available | Região ou plano não o suportam | [Modelos e raciocínio](/guide/foundations/models-and-reasoning/) |
 
-## Using this page
+## Como usar esta página
 
-1. **Copy key phrase** into client or handbook search
-2. Follow table to topic checklist
-3. Still stuck: keep full log; see [Official resources](/guide/reference/official-resources/)
+1. **Copia a frase-chave** para a pesquisa do cliente ou deste manual
+2. Salta pela tabela à página temática e executa a lista de verificação
+3. Se continuar sem resolver: conserva o log completo e olha [Recursos oficiais](/guide/reference/official-resources/)
 
-## Help others help you
+## Ao reportar um problema, isto ajuda mais
 
-Include:
+- Tipo e versão do cliente (App / CLI / IDE / Cloud)
+- Sistema operativo
+- Texto completo do erro desensibilizado
+- Se é não interativo, se é CI
 
-- Client type and version (App / CLI / IDE / Cloud)
-- Operating system
-- Full error text (redacted)
-- Non-interactive? CI?
+## Ordem de depuração
 
-## Troubleshooting order
+1. Captura ou copia o erro completo; não só a última frase
+2. Classifica primeiro; não adivinhes detalhes técnicos de golpe
+3. Lembra o que acabaste de mudar
+4. Muda só uma variável e tenta de novo uma vez
+5. Se continuar a falhar, pergunta ou consulta o oficial com a informação completa
 
-1. Screenshot or copy full error—not only last line
-2. Classify before guessing technical detail
-3. Recall what changed recently
-4. Change one variable and retry once
-5. Then ask with full context
+Assim evitas misturar várias alterações, e a outros resulta mais fácil ajudar-te a localizar.
 
-Avoid mixing multiple changes.
+## Fontes de referência
 
-## Reference sources
-
-- OpenAI Codex support documentation
-- stormzhang FAQ and troubleshooting chapters
-- KimYx0207 failure compendium (verify against official)
+- Documentação de suporte OpenAI Codex
+- Capítulos FAQ e de diagnóstico de stormzhang
+- Coleção de falhas de KimYx0207 (sujeita a contraste oficial)
 
 ---
 
-**Status:** verified  
-**Products:** App / CLI / IDE / Cloud  
-**Verification basis:** Positioned as error triage index, not full dictionary; five categories cross-checked with current CLI, Cloud, permissions, and configuration chapters—no fixed error code table required.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página posiciona-se como «índice de desvio de erros», não como dicionário completo; o método de classificação são cinco classes —autenticação, Permissão, ambiente, rede, lógica da Tarefa— contrastadas com os capítulos atuais de CLI, Cloud, Permissões e configuração, sem depender de uma tabela fixa de códigos de erro.  
+**Última verificação:** 2026-07-26

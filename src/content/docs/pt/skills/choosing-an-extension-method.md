@@ -1,17 +1,17 @@
 ---
-title: Choosing an extension method
-description: Decision tree from prompts to Automations—avoid using extensions for their own sake.
+title: Como escolher o método de extensão
+description: Árvore de decisão do Prompt às Automations — evite estender «por estender».
 locale: pt
-source_locale: en
-source_revision: 28b4e9b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-More extension mechanisms mean higher cost when you pick the wrong one. This page helps you decide whether you need a Plugin or MCP before you install.
+Com tantas extensões, o custo de escolher o método errado sobe. Esta página ajuda a decidir se você precisa de Plugin ou MCP antes de instalar.
 
-These names get mixed up most often:
+Os nomes que mais se misturam:
 
 - Prompt
 - AGENTS.md
@@ -20,86 +20,86 @@ These names get mixed up most often:
 - Plugin
 - Automation
 
-All extend Codex—but sometimes a prompt is enough; sometimes you need something heavier.
+Tudo é «estender o Codex», mas às vezes um Prompt basta; às vezes só um mecanismo mais pesado resolve.
 
-## Decision tree
+## Árvore de decisão
 
 ```text
-Will the task repeat ≥3 times?
-├─ No → Use prompts + @ references
-└─ Yes → Need persistent rules?
-    ├─ Yes → Put in AGENTS.md
-    └─ No → Fixed, describable flow?
-        ├─ Yes → Build a Skill
-        └─ No → Need external systems?
-            ├─ Yes → Evaluate MCP (read-only first)
-            └─ No → Need unattended runs?
-                ├─ Yes → Automations + human gate
-                └─ No → Keep Skill + manual trigger
+A Tarefa se repete ≥3 vezes?
+├─ Não → Use bem Prompt + referências @
+└─ Sim → Precisa de regras persistentes?
+    ├─ Sim → Escreva em AGENTS.md
+    └─ Não → O fluxo é fixo e descrevível?
+        ├─ Sim → Faça um Skill
+        └─ Não → Precisa ler sistemas externos?
+            ├─ Sim → Avalie MCP (só leitura primeiro)
+            └─ Não → Precisa de operação sem supervisão?
+                ├─ Sim → Automations + portão humano
+                └─ Não → Mantenha Skill + disparo manual
 ```
 
-Team needs to distribute multiple Skills + MCP? Consider **Plugin** at the end of the paths above.
+A equipe precisa distribuir vários Skills + MCP de forma unificada? No fim desses caminhos, considere **Plugin**.
 
-## Scenario mapping
+## Correspondência por cenário
 
-| Scenario | Suggested combo |
+| Cenário | Combinação recomendada |
 |---|---|
-| Unify test and commit standards | AGENTS.md |
-| Pre-merge review checklist every time | Skill `pr-review` |
-| Pull ticket context from Linear | MCP + task prompt |
-| Weekly dependency report | Automation → open issue |
-| Secret scan before commit | Hooks (enterprise) or CI |
-| One-click tooling for new hires | Plugin (after security review) |
+| Unificar normas de teste e commit | AGENTS.md |
+| Checklist de revisão antes de cada merge | Skill `pr-review` |
+| Trazer Contexto de ticket do Linear | MCP + Prompt da Tarefa |
+| Relatório semanal de dependências | Automation → abrir issue |
+| Scan de segredos antes do commit | Hooks (empresa) ou CI |
+| Novatos instalam o kit completo com um clique | Plugin (após revisão de segurança) |
 
-## Cost dimensions
+## Dimensões de custo
 
-| Mechanism | Authoring cost | Maintenance cost | Security risk |
+| Mecanismo | Custo de escrita | Custo de manutenção | Risco de segurança |
 |---|---|---|---|
-| Prompt | Low | Low | Low |
-| AGENTS.md | Medium | Medium | Low |
-| Skill | Medium | Medium | Low–medium |
-| MCP | High | High | Medium–high |
-| Plugin | Low (off-the-shelf) / high (custom) | Medium | Medium–high |
-| Automations | High | High | High |
+| Prompt | Baixo | Baixo | Baixo |
+| AGENTS.md | Médio | Médio | Baixo |
+| Skill | Médio | Médio | Baixo–médio |
+| MCP | Alto | Alto | Médio–alto |
+| Plugin | Baixo (pronto) / alto (próprio) | Médio | Médio–alto |
+| Automations | Alto | Alto | Alto |
 
-## Anti-patterns
+## Anti-padrões
 
-- **Skill sprawl**: dozens of Skills with descriptions competing for matches
-- **MCP as hammer**: API where `git` would do
-- **Automation without acceptance**: scheduled code changes with nobody reviewing diffs
-- **Reinventing wheels**: custom MCP when an official Connector exists
+- **Inflação de Skills**: dezenas de Skills instalados, descriptions competindo no matching
+- **MCP como martelo**: forçar API onde `git` bastaria
+- **Automação sem aceite**: altera código no horário e ninguém olha o diff
+- **Reinvenção da roda**: Connector oficial já existe e ainda assim se cria MCP próprio
 
-## FAQ
+## Perguntas frequentes
 
-### 1. Should I install Plugins and MCP from day one?
+### 1. Devo instalar Plugin e conectar MCP desde o início?
 
-Many problems are solved with prompts, scope control, and `AGENTS.md` first.
+Muitos problemas se resolvem bem com Prompt, controle de escopo e `AGENTS.md`.
 
-### 2. How do I read this tree?
+### 2. Como ler esta árvore?
 
-One principle: start light; add weight only when needed.
+Um princípio basta: comece pelo leve; se não der, aumente o peso.
 
-### 3. Where do most people start?
+### 3. Na primeira vez, por onde costuma começar?
 
-Usually one of:
+Na maioria dos casos, nestes três:
 
 - Prompt
 - `AGENTS.md`
 - Skill
 
-You often do not need MCP or unattended automation on day one.
+Em geral ainda não precisa de MCP ou automação sem supervisão logo de cara.
 
-What matters is fit with the problem—not how advanced the mechanism looks.
+O ponto não é o quão avançado é o mecanismo, e sim se combina com o problema atual.
 
-## Further reading
+## Leitura adicional
 
-- [Capability map](/skills/capability-map/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
-- [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/) (roadmap page)
+- [Mapa de capacidades de extensão](/skills/capability-map/)
+- [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
+- [Consolidar um fluxo como Skill](/cases/workflows/turn-a-workflow-into-a-skill/) (página de roadmap)
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** This decision tree touches current Automations, Plugins, MCP, and official Connector boundaries; those product surfaces change quickly and public material as of 2026-07-26 is not enough to stabilize the whole page.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Nota de revisão:** A árvore envolve os limites atuais de Automations, Plugins, MCP e Connectors oficiais; essas formas de produto ainda mudam rápido, e o material público não sustenta julgamentos estáveis em toda a página.  
+**Última Verificação:** 2026-07-26

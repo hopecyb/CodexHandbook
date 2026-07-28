@@ -1,93 +1,95 @@
 ---
-title: Selection and open files
-description: Using selected code and open files to narrow IDE task scope precisely.
+title: Seleção e ficheiros abertos
+description: Usar código selecionado e ficheiros abertos para delimitar com precisão o alcance das Tarefas no IDE.
 locale: pt
-source_locale: en
-source_revision: 4310ee8
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The IDE extension excels at **small, high-precision** edits: select code, state intent, Codex changes nearby context. This page shows how selection and open files tighten scope and avoid editing the wrong place.
+A extensão IDE encaixa bem em mudanças de **alcance pequeno e alta precisão**: seleciona um trecho de código, explica a intenção e o Codex altera no Contexto próximo. Aqui o foco é como usar seleção e ficheiros abertos para apertar o alcance e evitar alterar o sítio errado.
 
-Selection tells Codex: focus here—do not expand scope on your own.
+A função da seleção é simples: dizer ao Codex para olhar sobretudo aqui, sem alargar o alcance por conta própria.
 
-## What's covered
+## Conteúdo desta página
 
-- Selection vs whole file vs @ path—when to use which
-- Organizing context for multi-file refactors
-- Reducing "it changed a bunch of unrelated files"
+- Como escolher entre seleção, ficheiro inteiro e caminho `@`
+- Como organizar o Contexto em refatorações multi-ficheiro
+- Como reduzir «alterou um monte de ficheiros irrelevantes»
 
-## Three ways to bound scope
+## Três formas de delimitar
 
-| Method | When | Example |
+| Forma | Quando usar | Exemplo |
 |---|---|---|
-| **Selection** | Single function, component, near stack trace | Select `parseUser()`, add null handling |
-| **Open files** | Multiple related spots in-file | Open `auth.ts` + `auth.test.ts` |
-| **@ path** | Cross-directory, not open | `@src/api/client.ts` align types with backend |
+| **Seleção** | Uma função, um componente, perto da stack de erro | Selecionar `parseUser()` e pedir tratamento de valores nulos |
+| **Ficheiro aberto** | Precisa de perceber várias relações no mesmo ficheiro | Abrir `auth.ts` + `auth.test.ts` |
+| **Caminho `@`** | Ficheiros noutros diretórios ou ainda não abertos | `@src/api/client.ts` alinhado com tipos do backend |
 
-Deeper concept: [file and folder context](/guide/context/file-and-folder-context/)
+Profundidade conceptual: [Contexto de ficheiros e pastas](/guide/context/file-and-folder-context/)
 
-## Minimum viable approach
+## Prática mínima útil
 
-1. Select the **smallest relevant snippet** (often 10–80 lines); state goal and [definition of done](/prompts/define-done/) in the prompt
-2. If callers matter, open or @ 1–2 upstream files
-3. Ask to "change only files related to X; list files before editing"
-4. Accept IDE diff block by block—not accept all
+1. Selecione o **menor fragmento relevante** (em geral 10–80 linhas) e, no Prompt, deixe claros o objetivo e a [definição de concluído](/prompts/define-done/)
+2. Se envolver chamadores, abra ou `@` mais 1–2 ficheiros a montante
+3. Peça «altere só ficheiros relacionados com X; liste os ficheiros a modificar antes de começar»
+4. Na vista de Diff do IDE, aceite bloco a bloco; não aceite tudo de uma vez
 
-## Multi-file tasks
+## Tarefas multi-ficheiro
 
 ```text
-Open: implementation + tests + type definitions
-Selection: optional—start from entry function
-Prompt: module boundaries, directories that must not change
+Abrir: ficheiro de implementação + ficheiro de teste + definições de tipo
+Seleção: opcional — comece pela função de entrada
+Prompt: indique as fronteiras do módulo e os diretórios proibidos
 ```
 
-Large refactors: prefer [desktop App worktrees](/guide/desktop-app/worktrees/) or [planning mode](/guide/agent-work/planning/). IDE fits finishing touches and small commits.
+Para refatorações grandes, prefira [árvores de trabalho na App de desktop](/guide/desktop-app/worktrees/) ou [modo de planeamento](/guide/agent-work/planning/). O IDE encaixa melhor no fecho e em commits pequenos.
 
-## Common questions
+## Dúvidas frequentes
 
-### 1. Must I always select?
+### 1. É obrigatório selecionar sempre?
 
-No—but if you know the focus is a small region, selection beats a vague "fix this function."
+Não. Mas se já sabe que o foco está num trecho pequeno, a seleção costuma ser mais estável do que só dizer «ajude a alterar esta função».
 
-### 2. More selected lines ≠ safer
+### 2. Selecionar mais não é necessariamente mais seguro
 
-Too large relaxes scope again; too small may miss needed context. Aim for "just enough."
+Selecionar demais afrouxa outra vez o alcance; selecionar de menos pode faltar Contexto necessário. O critério prático é «o suficiente».
 
-### 3. Open files vs @ paths?
+### 3. Qual a diferença entre ficheiro aberto e caminho `@`?
 
-- **Open files**: show what you are currently looking at
-- **@ paths**: explicitly name files that must be included
+Pode distinguir assim:
 
-Selection and open files exist to avoid dragging unrelated scope along.
+- **Ficheiro aberto**: deixa-o ver o que está a olhar agora
+- **Caminho `@`**: nomeia explicitamente um ficheiro que também tem de entrar
 
-## Pair with review
+Usar seleção e ficheiros abertos é, no fundo, evitar arrastar alcance irrelevante.
 
-Before accepting, check [review diffs](/guide/quality/review-diffs/):
+## Em conjunto com a revisão
 
-- Only agreed files changed?
-- Unexpected deletes outside selection?
-- Tests cover new branches?
+Antes de aceitar, confronte com [Rever Diff](/guide/quality/review-diffs/):
 
-Product page: [IDE reviewing changes](/guide/ide/reviewing-changes/)
+- Só mudaram os ficheiros acordados?
+- Há eliminações inesperadas fora da seleção?
+- Os testes cobrem os novos ramos?
 
-## Common mistakes
+No produto: [Rever mudanças no IDE](/guide/ide/reviewing-changes/)
 
-| Mistake | Consequence |
+## Erros comuns
+
+| Erro | Consequência |
 |---|---|
-| Select entire 1000-line file | Wasted context, oversized edits |
-| Zero selection, "optimize this" | Model expands scope |
-| Accept all without reading diff | Style drift or security issues |
+| Selecionar milhares de linhas de um ficheiro inteiro | Desperdício de Contexto, superfície de mudança demasiado ampla |
+| Zero seleção e só «otimize um pouco» | O modelo alarga o alcance por si |
+| Aceitar todas as sugestões sem ler o Diff | Introduz desvio de estilo ou falhas de segurança |
 
-## References
+## Fontes de referência
 
-- [Constraints and boundaries](/prompts/constraints-and-boundaries/)
+- [Definir restrições](/prompts/constraints-and-boundaries/)
 - stormzhang `09-ide.md`
 
 ---
 
-**Status:** verified  
-**Applicable products:** IDE  
-**Verification basis:** This page describes stable IDE scope control: selection, open files, and explicit @ paths—general context organization in the editor, not tied to a specific extension button name.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** IDE  
+**Base de verificação:** Esta página descreve o método mais estável de controlo de alcance na extensão IDE: a combinação de seleção, ficheiros abertos e caminhos `@` explícitos; trata-se de uma forma geral de organizar Contexto ao trabalhar com código no editor, sem depender do nome de um botão concreto da extensão.  
+**Última verificação:** 2026-07-26

@@ -1,68 +1,69 @@
 ---
-title: Multi-agent coordination
-description: Parallel exploration, divided execution, and merging results—when to split and how to verify.
+title: Colaboração multi-Agent
+description: Exploração em paralelo, divisão de execução e fusão de resultados — quando dividir e como aceitar.
 locale: pt
-source_locale: en
-source_revision: 55224d7
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Multi-agent setups fit parallel, loosely coupled sub-problems. They do not fit two agents editing the same file with no coordinator.
 
-## When to split
+Vários Agents adequam-se a subproblemas paralelizados e de baixo acoplamento — não a alterar o mesmo ficheiro em simultâneo sem coordenação humana.
 
-| Good fit | Poor fit |
+## Quando dividir
+
+| Adequado | Inadequado |
 |---|---|
-| Frontend styling + backend API contract researched in parallel | Two people changing the same function |
-| One runs tests while another writes docs | Shared mutable state with no locking |
-| Explore multiple implementation options | Strong sequential dependency not yet mapped |
+| Estilo frontend + contrato de API backend em pesquisa paralela | Duas pessoas a alterar a mesma função |
+| Um corre testes, outro escreve documentação | Estado partilhado mutável sem lock |
+| Explorar várias opções de implementação | Dependências sequenciais fortes ainda por clarificar |
 
-Product capabilities: [Parallel agents](/guide/desktop-app/parallel-agents/), [Subagents](/guide/agent-work/subagents/).
+Capacidades de produto em [Agents em paralelo](/guide/desktop-app/parallel-agents/) e [Subagents](/guide/agent-work/subagents/).
 
-## Coordination patterns
+## Padrões de colaboração
 
-### Pattern A: Parallel exploration, human picks
-
-```text
-Agent 1: pros/cons and effort for option A
-Agent 2: pros/cons and effort for option B
-You: pick one, then open a single Agent to execute
-```
-
-### Pattern B: Pipeline
+### Padrão A: exploração em paralelo, escolha humana
 
 ```text
-Explore Agent → output plan → Execute Agent (new thread with plan summary)
+Agent 1: prós, contras e esforço da opção A
+Agent 2: prós, contras e esforço da opção B
+Você: escolhe um e abre um único Agent para executar
 ```
 
-Use [handoff and resume](/guide/agent-work/handoff-and-resume/) to pass structured summaries—don't paste entire chats.
+### Padrão B: pipeline
 
-### Pattern C: Worktree isolation
+```text
+Agent de exploração → produz plano → Agent de execução (nova thread, com resumo do plano)
+```
 
-Different Agents edit different branches in separate [git worktrees](/guide/desktop-app/worktrees/); humans merge at the end.
+Use [transferência e retoma](/guide/agent-work/handoff-and-resume/) para passar um resumo estruturado — não cole a conversa inteira.
 
-## Coordination rules (recommended in AGENTS.md)
+### Padrão C: isolamento com árvores de trabalho
 
-- Each Agent has explicit directory boundaries
-- No parallel `git push`
-- Run CI once before merge
-- Conflicts resolved by humans—don't let Agents guess
+Agents diferentes alteram ramos diferentes em [git worktrees](/guide/desktop-app/worktrees/) distintos; a fusão final é humana.
 
-## Acceptance
+## Regras de coordenação (sugeridas em AGENTS.md)
 
-- [ ] Each sub-Agent has its own definition of done
-- [ ] Full test suite passes after merge
-- [ ] Diffs trace back to the corresponding sub-task description
+- Cada Agent com limites de diretório claros
+- Proibir `git push` em paralelo
+- Correr CI unificado antes de fundir
+- Conflitos resolvidos por humanos; Agents não adivinham
 
-## Common mistakes
+## Aceitação
 
-- Three parallel Agents editing `package.json`
-- No rollup step—unclear whose conclusion to follow
+- [ ] Cada sub-Agent tem «definição de concluído» própria
+- [ ] Após a fusão, a suíte completa passa
+- [ ] Diff rastreável à descrição da subtarefa correspondente
+
+## Erros comuns
+
+- Três Agents em paralelo a alterar `package.json`
+- Sem passo de síntese — não se sabe a quem ouvir
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current public multi-agent / subagent material, plus this handbook's verified subagent, handoff/resume, and parallel-work chapters; content is limited to stable methods for when to split, how to isolate boundaries, and how humans roll up and verify—not fixed contracts for current beta or UI entry points.
+**Estado:** verified  
+**Produtos aplicáveis:** App / Cloud  
+**Base de verificação:** Cruzado com a documentação pública atual de OpenAI Developers sobre multi-agent / subagents e com os capítulos já verificados deste manual sobre Subagents, transferência/retoma e trabalho em paralelo; o conteúdo limita-se ao método estável «quando dividir, como isolar limites, como sintetizar e aceitar com humanos», sem transformar beta ou entradas de UI atuais em contrato fixo.  
+**Última verificação:** 2026-07-26

@@ -1,36 +1,36 @@
 ---
-title: Connect an MCP server
-description: Configure, authenticate, verify, and troubleshoot—safely connect your first MCP tool.
+title: Conectar um servidor MCP
+description: Configure, autentique, valide e resolva problemas — conecte com segurança a primeira ferramenta MCP.
 locale: pt
-source_locale: en
-source_revision: 346252d
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-This page focuses on connection and verification; protocol details and server development are in official MCP docs.
+Esta página foca em conexão e Verificação; detalhes do protocolo e desenvolvimento de servidor estão na documentação oficial de MCP.
 
-## Before you start
+## Antes de começar
 
-- [ ] Understand security boundaries in [MCP overview](/skills/mcp/mcp-overview/)
-- [ ] Have a read-only or sandbox test account
-- [ ] Confirm current Codex client version supports MCP (official docs)
+- [ ] Entendeu os limites de segurança em [Visão geral de MCP](/skills/mcp/mcp-overview/)
+- [ ] Tem conta de teste só leitura ou em Sandbox
+- [ ] Confirmou que a versão atual do cliente Codex suporta MCP (documentação oficial)
 
-## Recommended flow
+## Fluxo recomendado
 
-### 1. Choose server type
+### 1. Escolher o tipo de servidor
 
-| Type | Notes | Risk |
+| Tipo | Descrição | Risco |
 |---|---|---|
-| Local stdio server | Process on your machine | Medium: process permissions = your user |
-| Remote HTTP/SSE | Hosted service | Medium–high: needs TLS, token rotation |
+| Servidor stdio local | Processo iniciado na máquina | Médio: Permissão do processo = Permissão do seu usuário |
+| HTTP/SSE remoto | Serviço hospedado | Médio-alto: precisa de TLS e rotação de token |
 
-For first connection, start with an **official example or read-only local server**.
+Na primeira conexão, comece por **exemplo oficial ou servidor local só leitura**.
 
-### 2. Add configuration
+### 2. Adicionar configuração
 
-Config location varies by CLI/App; commonly user- or project-level `mcp` block. Illustrative structure (**field names per official docs**):
+O local da configuração varia entre CLI/App; o comum é um bloco `mcp` no nível do usuário ou do projeto. Estrutura ilustrativa (**nomes de campos conforme a documentação oficial**):
 
 ```json
 {
@@ -39,67 +39,67 @@ Config location varies by CLI/App; commonly user- or project-level `mcp` block. 
       "command": "npx",
       "args": ["-y", "@example/mcp-server"],
       "env": {
-        "API_TOKEN": "Read from environment variable—do not hard-code in repo"
+        "API_TOKEN": "Ler de variável de ambiente; não hardcodeie no repositório"
       }
     }
   }
 }
 ```
 
-Principles:
+Princípios:
 
-- Inject secrets via environment variables or a secrets manager
-- Config changes go through Git review (except secrets)
+- Segredos via variável de ambiente ou gerenciador de segredos
+- Mudanças de configuração passam por revisão Git (exceto secrets)
 
-### 3. Restart or reload client
+### 3. Reiniciar ou recarregar o cliente
 
-After MCP config changes, usually restart the Codex session so the server list refreshes.
+Após alterar a configuração MCP, em geral é preciso reiniciar a sessão do Codex para atualizar a lista de servidores.
 
-### 4. Verify tools are visible
+### 4. Validar que as ferramentas estão visíveis
 
-In a task, explicitly ask:
+Na Tarefa, peça de forma explícita:
 
 ```text
-List currently available MCP tools (names and one-line descriptions only).
-Then call one test tool read-only and show the result.
-Do not perform write operations.
+Liste as ferramentas MCP disponíveis agora (só nome e uma frase de descrição).
+Depois chame uma ferramenta de teste em modo só leitura e mostre o resultado.
+Não execute operações de escrita.
 ```
 
-### 5. Try in small steps
+### 5. Experimentar em passos pequenos
 
-Pick a real but low-risk task, e.g.: "Use MCP to fetch ticket #123 title only; do not change status."
+Escolha uma Tarefa real e de baixo risco — por exemplo: «Use MCP para consultar o título do ticket #123; não altere o status.»
 
-## Auth modes
+## Modos de autenticação
 
-| Mode | Fit |
+| Modo | Adequado para |
 |---|---|
-| API Key / PAT | Personal dev; rotate regularly |
-| OAuth | User-level auth; good for SaaS |
-| No-auth local | Local mock only; do not expose to network |
+| API Key / PAT | Desenvolvimento pessoal, rotação periódica |
+| OAuth | Autorização no nível do usuário, adequado a SaaS |
+| Local sem autenticação | Só mock na máquina; não exponha na rede |
 
-On failure check: expired token, env var not passed into process, corporate proxy blocking.
+Em falha, confira: token expirado, variável de ambiente não injetada, proxy corporativo bloqueando.
 
-## Debugging checklist
+## Checklist de depuração
 
-| Symptom | Possible cause |
+| Sintoma | Possível causa |
 |---|---|
-| Empty tool list | Wrong config path, process failed to start |
-| Call timeout | Network, VPN, server down |
-| Permission denied | Insufficient token scope |
-| Model never calls tools | Task did not ask; or tool description unclear |
+| Lista de ferramentas vazia | Caminho de configuração errado, falha ao iniciar o processo |
+| Timeout na chamada | Rede, VPN, servidor fora do ar |
+| Permissão negada | Scope do token insuficiente |
+| Modelo nunca chama a ferramenta | A descrição da Tarefa não pediu; ou o description da ferramenta está pouco claro |
 
-## Working with approval
+## Coordenação com Aprovação
 
-First call to an unfamiliar tool may prompt confirmation—that is expected. Do not encourage "always allow all MCP writes" in team policy.
+Na primeira chamada a uma ferramenta desconhecida, o cliente pode pedir confirmação — isso é esperado. Não incentive nas normas da equipe «permitir para sempre todas as escritas MCP».
 
-## References
+## Fontes
 
-- OpenAI Codex MCP configuration documentation
-- modelcontextprotocol.io server examples
+- Documentação de configuração OpenAI Codex MCP
+- Exemplos de servidor em modelcontextprotocol.io
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Directly describes current MCP server configuration, reload, and verification steps—highly version- and client-sensitive; not suitable for `verified` yet.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE  
+**Nota de revisão:** Esta página descreve diretamente configuração, reload e Verificação atuais de servidor MCP; esses passos são muito sensíveis a versão e implementação do cliente — não marcar como `verified` por enquanto.  
+**Última Verificação:** 2026-07-26

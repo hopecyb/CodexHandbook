@@ -1,30 +1,30 @@
 ---
-title: Content creation
-description: Entry for docs, articles, and content-asset cases—focus on review, rewriting, and artifact verification.
+title: Criação de conteúdo
+description: Entrada para casos de documentação, artigos e ativos de conteúdo — foco em revisão, reescrita e aceitação de artefatos.
 locale: pt
-source_locale: en
-source_revision: 1e7006a
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Content-creation cases focus on this scenario:
+Os casos de criação de conteúdo focam este tipo de cenário:
 
-> **When you need publishable, reviewable content, how can Codex help?**
+> **Quando precisa de entregar conteúdo publicável e revível, como o Codex pode colaborar.**
 
-## Cases in this group
+## Entradas deste grupo
 
-- [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refatorar um site de documentação com revisão](/cases/use-cases/content-creation/refactor-docs-with-review/)
 
-## What this group emphasizes
+## Foco deste grupo
 
-- How to change multi-file content in batches
-- How to avoid rewrite that only "expands" copy
-- How build, review, and human check form a closed loop
+- Como alterar conteúdo multi-ficheiro em lotes
+- Como reescrever copy sem cair só em «expandir»
+- Como build, revisão e reauditoria formam um ciclo fechado
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current content-creation case entry and related content-artifact/review chapters; this page only describes what the content-creation case group covers and where to enter.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com a entrada atual de casos content-creation neste repositório e com capítulos relacionados de artefatos de conteúdo/revisão; esta página só explica os problemas e entradas do grupo de criação de conteúdo.  
+**Última verificação:** 2026-07-26

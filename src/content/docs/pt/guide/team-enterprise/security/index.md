@@ -1,34 +1,34 @@
 ---
-title: Security
-description: Team-level risks, attack surface, and defenses—understand where risk lives before controls.
+title: Segurança
+description: Página sobre riscos ao nível da equipa, superfície de ataque e ideias de proteção — compreende primeiro onde está o risco, depois as medidas.
 locale: pt
-source_locale: en
-source_revision: e394719
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Jumping into security detail without framing can leave you with vocabulary but not “what we are defending against.”
+Se entrares neste grupo direto pelas páginas de detalhe, é fácil memorizar nomes soltos sem saber o que estão a prevenir.
 
-This section reads clearer as: where risk comes from → what layer to block or review.
+É mais claro seguir a ordem «de onde vem o risco → que camada bloquear → que camada auditar».
 
-## Recommended order
+## Ordem recomendada
 
-1. [Threat model](/guide/team-enterprise/security/threat-model/)
-2. [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Prompt injection](/guide/team-enterprise/security/prompt-injection/)
+1. [Modelo de ameaças](/guide/team-enterprise/security/threat-model/)
+2. [Riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Injeção de Prompt](/guide/team-enterprise/security/prompt-injection/)
 
-## Who should start here
+## Quem deve ler primeiro
 
-- Team expanding Codex usage
-- You are adding third-party extensions, external tools, or shared rules
-- You need risks that “be careful” alone cannot fix
+- A equipa vai alargar o uso
+- Começas a ligar extensões de terceiros, Ferramentas externas ou regras partilhadas
+- Queres saber que riscos não se resolvem só com «pedir a todos que tenham cuidado»
 
-Security pages help identify what must be controlled by system boundaries.
+O foco das páginas de segurança é ajudar-te a identificar que riscos têm de ser controlados por limites de sistema.
 
 ---
 
-**Status:** verified  
-**Products:** Team / enterprise scenarios  
-**Verification basis:** OpenAI plugin, app, and integration docs continue to emphasize risks from external connections, action permissions, source access, and approval boundaries; this page is security section navigation ordered threat model → Plugin/MCP → prompt injection.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** Cenários de equipa / empresa  
+**Base de verificação:** A documentação atual de plugins, apps e integrações da OpenAI continua a sublinhar riscos de ligações externas, Permissões de ações, acesso a sistemas de origem e limites de Aprovação; esta página é só navegação do subcapítulo de segurança, na ordem modelo de ameaças → riscos Plugin/MCP → injeção de Prompt.  
+**Última verificação:** 2026-07-26

@@ -1,96 +1,96 @@
 ---
-title: Task anatomy
-description: Goal, context, inputs, constraints, acceptance, and permission boundaries.
+title: Anatomia de uma tarefa
+description: Objetivo, contexto, entradas, restrições, aceitação e limites de permissão.
 locale: pt
-source_locale: en
-source_revision: '7709575'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you ask for something, it's easy to scatter information—lots of material, unclear focus, and more room for Codex to misread you.
+Ao formular um pedido, muita informação dispersa o foco: sobra material, falta clareza, e o Codex mal-entende com mais facilidade.
 
-Here is a common set of parts in a well-structured task.
+Aqui estão os blocos habituais de uma tarefa.
 
-## Task structure
+## Estrutura da tarefa
 
-Organize along this order:
+Organize nesta ordem aproximada:
 
-- What the outcome is
-- Why you're doing it
-- What materials are needed
-- Where the boundaries are
-- How to judge completion
+- qual é o resultado
+- por que fazer
+- que materiais são necessários
+- onde estão os limites
+- como julgar a conclusão
 
-The order isn't fixed, but once these are clear the task is much steadier.
+A ordem não precisa ser rígida; com estes pontos claros, a tarefa fica bem mais estável.
 
-## Recommended template
-
-```text
-Goal: … (what the final deliverable is)
-Context: … (why it matters, current state)
-Inputs: … (relevant files/links/pasted content)
-Constraints: … (what can change, style, forbidden actions)
-Acceptance criteria: … (checkable completion conditions)
-Permission boundaries: … (network, dependencies, config changes)
-When information is insufficient: ask first, don't guess.
-```
-
-## What each section does
-
-- **Goal:** prevents tasks that have actions but no outcome
-- **Context:** helps Codex understand why you're doing it this way
-- **Inputs:** hands over files, links, and assets it actually needs to see
-- **Constraints:** prevents overreach and "while I'm here" edits
-- **Acceptance criteria:** turns "is it done?" into something checkable
-- **Permission boundaries:** states upfront whether network, dependencies, or config are allowed
-
-## Common misconceptions
-
-### 1. Every section must be filled in full
-
-This template is closer to a checklist than a form.  
-Some tasks don't need long context, but skipping sections removes judgment inputs.
-
-### 2. Goal and acceptance are not the same thing
-
-They are different.
-
-- **Goal** is what you want to get
-- **Acceptance** is how you verify it really happened
-
-### 3. Inputs means paste everything you have
-
-More input isn't better—relevance matters.  
-The key is handing over what it **must** read.
-
-## Minimal task template
-
-For a usable first version, shrink to:
+## Template recomendado
 
 ```text
-Goal: turn X into Y
-Inputs: relevant files or pages are here
-Constraints: only change here, don't touch that
-Acceptance: how I check you actually finished
-When uncertain: ask
+Objetivo: …… (qual é o artefato final)
+Contexto: …… (por que importa, estado atual)
+Entradas: …… (arquivos / links / conteúdo colado relevantes)
+Restrições: …… (alcance editável, estilo, proibições)
+Critérios de aceitação: …… (condições verificáveis de conclusão)
+Limites de permissão: …… (pode aceder à rede, instalar dependências, alterar configuração?)
+Se faltar informação: pergunte primeiro; não adivinhe.
 ```
 
-## Example
+## Função de cada bloco
+
+- **Objetivo:** evita tarefa só com ações, sem resultado
+- **Contexto:** ajuda o Codex a entender por que fazer assim
+- **Entradas:** entrega à mão os arquivos, links e materiais que ele precisa ver
+- **Restrições:** evita extralimitação e mudanças «de passagem»
+- **Critérios de aceitação:** torna «está feito?» verificável
+- **Limites de permissão:** deixa claro cedo se pode usar rede, instalar dependências ou alterar configuração
+
+## Mal-entendidos comuns
+
+### 1. Cada bloco tem de estar completo
+
+Este template é mais uma checklist do que um formulário.  
+Algumas tarefas não precisam de contexto longo — mas omiti-lo também remove parte da base de julgamento.
+
+### 2. Objetivo e aceitação não são a mesma coisa
+
+Não são.
+
+- **Objetivo** diz que resultado você quer
+- **Aceitação** diz como confirmar que esse resultado foi realmente atingido
+
+### 3. Entrada = colar um monte de material
+
+Mais não é melhor; relevância importa.  
+O essencial é entregar com clareza o «material obrigatório».
+
+## Template mínimo de tarefa
+
+Se quiser só uma versão utilizável, reduza assim:
 
 ```text
-Goal: Make the docs homepage hero copy easier for beginners to understand
-Inputs: src/content/docs/guide/index.md
-Constraints: Only edit this one file; don't change styles or add components
-Acceptance: Keep existing structure; copy is more conversational; pnpm build passes
-When uncertain: State your understanding and scope of changes before editing
+Objetivo: transformar X em Y
+Entradas: arquivos ou páginas relevantes estão aqui
+Restrições: só pode alterar isto; não tocar naquilo
+Aceitação: como verifico que terminou de verdade
+Perante a incerteza: pergunte primeiro
 ```
 
-This structure mainly reduces guessing and makes acceptance direct. Templates can be trimmed—but accept what information you lose when you drop a section.
+## Exemplo
+
+```text
+Objetivo: tornar o texto da primeira tela da home de docs mais compreensível para iniciantes
+Entradas: src/content/docs/guide/index.md
+Restrições: só este arquivo; não alterar estilos; não adicionar componentes
+Aceitação: manter a estrutura atual; tom mais oral; pnpm build passa
+Perante a incerteza: declare primeiro a sua compreensão e o alcance da mudança, depois aja
+```
+
+Esta estrutura reduz suposições e torna a aceitação mais direta. Pode enxugar o template — mas ao remover um bloco, aceite perder essa informação.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page explains task structure only; examples and in-site links were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página só descreve o método de estrutura de tarefa; exemplos e links internos foram revistos; o corpo não depende de factos voláteis do produto.

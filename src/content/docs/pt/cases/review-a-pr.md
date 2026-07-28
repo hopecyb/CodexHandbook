@@ -1,52 +1,51 @@
 ---
-title: Review a PR
-description: Use Codex for structured diff review before merge.
+title: Revisar um PR
+description: Use o Codex para uma revisão estruturada do diff antes de fundir.
 locale: pt
-source_locale: en
-source_revision: f4abfbb
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Review a PR
+# Revisar um PR
 
-## Meta information
+## Metadados
 
-| Field | Content |
+| Campo | Conteúdo |
 |---|---|
-| Audience | Developers / teams |
-| Client | CLI / IDE / Cloud |
-| Estimated time | 20–40 minutes |
+| Público | Programadores / equipas |
+| Cliente | CLI / IDE / Cloud |
+| Tempo estimado | 20–40 minutos |
 
-## 1. Goal and background
+## 1. Objetivo e contexto
 
-**Goal:** Before merge, catch scope creep, security risks, and test gaps.
+**Objetivo:** Antes de fundir, detetar alargamento de âmbito, riscos de segurança e lacunas de testes.
 
-**Success criteria:** Review output traces to specific files/lines; P0 items handled or merge blocked.
+**Critérios de sucesso:** A saída da revisão é rastreável a ficheiros/linhas concretas; P0 tratados ou a fusão bloqueada.
 
-## 2. Recommended prompt
+## 2. Prompt recomendado
 
 ```text
-Compare diff of current branch vs main (do not change code yet):
-1. Does it exceed issue scope?
-2. Obvious security risks (secrets, injection, permissions)?
-3. Missing tests or docs?
-Output checklist with P0/P1, include file paths.
+Compare o diff do ramo atual com main (não altere código ainda):
+1. Sai do âmbito do issue?
+2. Há riscos de segurança evidentes (segredos, injeção, permissões)?
+3. Faltam testes ou documentação?
+Produza uma checklist, marque P0/P1 e inclua caminhos de ficheiro.
 ```
 
-## 3. Team capture
+## 3. Consolidação na equipa
 
-- Use [`$pr-review`](/skills/examples/review-skill/) Skill
-- CI integration: [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Usar o Skill [`$pr-review`](/skills/examples/review-skill/)
+- Integração CI em [automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/)
 
-## 4. Related
+## 4. Relacionado
 
-- [Review template](/prompts/templates/review/)
-- [Review before merge](/cases/workflows/review-before-merge/)
-
+- [Modelo de revisão](/prompts/templates/review/)
+- [Revisão antes de fundir](/cases/workflows/review-before-merge/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Review GitHub pull requests," emphasizing catching regressions and potential issues before human review; this page only requires structured diff review with P0/P1 and file paths—not dependent on a specific UI or fixed command.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Os use cases atuais do Codex em OpenAI Developers ainda incluem “Review GitHub pull requests”, com ênfase em captar regressões e problemas potenciais antes da revisão humana; o exemplo desta página exige apenas revisão estruturada do diff, saída P0/P1 e caminhos de ficheiro, sem depender de UI ou comandos fixos.  
+**Última verificação:** 2026-07-26

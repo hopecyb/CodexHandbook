@@ -1,114 +1,123 @@
 ---
-title: Image generation
-description: Generating or editing images in Codex tasks—prompts, formats, and acceptance.
+title: Geração de imagens
+description: Gerar ou editar imagens em Tarefas Codex — Prompt, formato e aceitação.
 locale: pt
-source_locale: en
-source_revision: 3271bcc
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Codex can invoke **image generation** in some scenarios: illustration drafts, icon sketches, UI concept art, diagrams. Treat output as **artifacts to verify**—not production brand assets ready to ship.
+Em alguns cenários, o Codex pode chamar capacidades de **geração de imagens**: ilustrações, rascunhos de ícones, conceitos de UI, diagramas. O resultado deve tratar-se como **Artefato por aceitar**, não como ativo de marca pronto a publicar.
 
-Good for visual drafts—not final deliverables.
+Serve para dar primeiro um rascunho visual — não para tratar como produto final direto.
 
-## What's covered
+## Conteúdo desta página
 
-- When to generate in Codex vs professional tools
-- How to write image prompts and constraints
-- Copyright, brand, and file management
+- Quando gerar imagens no Codex vs usar Ferramentas profissionais
+- Como escrever o Prompt de imagem e as restrições
+- Direitos de autor, marca e gestão de ficheiros
 
-## Use cases
+## Cenários adequados
 
-| Good fit | Poor fit |
+| Adequado | Inadequado |
 |---|---|
-| Blog image drafts, internal doc diagrams | External materials under strict brand guidelines |
-| Quick UI layout exploration | Pixel-perfect design handoff |
-| Tutorial example icons | Real-person likeness without authorization |
+| Rascunhos de imagem para blog, diagramas de documentação interna | Materiais externos sujeitos a manual de marca rigoroso |
+| Explorar depressa o ambiente de layout de UI | Entrega de design com fidelidade ao pixel |
+| Ícones de exemplo em tutoriais | Cenas com retratos reais sem autorização |
 
-Complements [prompting with images](/prompts/prompting-with-images/): that page covers **input** images; this page covers **output** images.
+Complementa [Prompt com imagens](/prompts/prompting-with-images/): essa página trata de imagens de **entrada**; esta, de imagens de **saída**.
 
-## What image generation is for
+## Para que serve a geração de imagens
 
-Better at:
+A geração de imagens encaixa melhor em:
 
-- Quick direction
-- Visualizing a concept
-- Draft assets for articles, docs, prototypes
+- Dar direção depressa
+- Ajudá-lo a ver um conceito visual
+- Dar um esboço utilizável a artigos, documentação ou protótipos
 
-Not a substitute for:
+Estes usos não devem ir direto para o resultado gerado:
 
-- Official brand materials
-- Precise design specs
-- Final published visuals without review
+- Fingir que é material formal de marca
+- Fingir que é um mockup de design preciso
+- Fingir que é o visual final pronto a publicar
 
-## Recommended workflow
+## Fluxo de trabalho recomendado
 
-1. State purpose, aspect ratio, style keywords (avoid piled trademark style names)
-2. Request output format (PNG/SVG if supported) and save path
-3. After generation, [verify artifacts](/guide/quality/verify-artifacts/): open file, check resolution and readability
-4. Design or legal review before external publication
+1. Declare uso, proporção de tamanho, palavras-chave de estilo (evite empilhar nomes de estilos que violem direitos)
+2. Exija formato de saída (PNG/SVG se suportado) e caminho de gravação
+3. Após gerar, [Verificar Artefatos](/guide/quality/verify-artifacts/): abrir o ficheiro, verificar resolução e legibilidade
+4. Antes de publicação externa, revisão de design ou jurídica
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Looks good = ready to use?
+### 1. Imagem bonita = já pode usar?
 
-Also check:
+Ainda veja:
 
-- Fit for purpose
-- Weird details
-- Garbled text
-- Style match with content
+- O cenário corresponde ao uso
+- Há detalhes estranhos
+- O texto tem caracteres estranhos
+- O estilo combina com o seu conteúdo
 
-### 2. "Generate an image for me" is enough?
+### 2. Basta «gere-me uma imagem»?
 
-Usually specify:
+Muitas vezes não.  
+Clarifique pelo menos:
 
-- Purpose
-- Landscape, portrait, or square
-- Style direction
-- Whether text should appear
-- File format
+- Uso
+- Formato ou proporção
+- Direção de estilo
+- Se deve haver texto
+- Formato do ficheiro
 
-### 3. Replaces designers?
+### 3. A geração de imagens substitui o designer?
 
-Closer to exploration, content illustration, and concept sketching—not strict design delivery.
+Aproxima-se mais de:
 
-## Prompt structure
+- Ferramenta de exploração inicial
+- Ferramenta de imagem de apoio a conteúdo
+- Ferramenta de esboço conceptual
 
-1. What the image is for
-2. Landscape, portrait, or square
-3. Mood and palette
-4. Text yes/no
-5. How you will verify after output
+Não é substituto de entrega rigorosa de design.
 
-## Files and repository
+## Como escrever
 
-- Large images in `assets/` or CDN; watch Git size
-- In PR, note generation prompt and model version (internal audit)
-- See [images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
+Pode pedir nesta estrutura:
 
-## Safety and compliance
+1. Para que serve esta imagem
+2. Horizontal, vertical ou quadrada
+3. Que atmosfera e cores quer
+4. Se deve aparecer texto
+5. Como vai verificar após a saída
 
-- Do not generate misleading content with sensitive marks, fake IDs, or unauthorized likenesses
-- Enterprise policy may ban certain subjects; follow [acceptable use](https://openai.com/policies/) and internal rules
+## Ficheiros e repositório
 
-## References
+- Imagens grandes em `assets/` ou CDN; avalie o volume do Git
+- No PR, indique o Prompt de geração e a versão do modelo (auditoria interna)
+- Ver [Imagens e ecrãs](/guide/files-and-artifacts/images-and-screenshots/)
+
+## Segurança e conformidade
+
+- Não gere conteúdo enganoso com identificadores sensíveis, documentos falsos ou retratos de terceiros
+- Políticas empresariais podem proibir certos temas; cumpra [uso aceitável](https://openai.com/policies/) e regras internas
+
+## Referências
 
 - OpenAI Help Center: Images in ChatGPT
 - OpenAI Academy: Creating images with ChatGPT
 
-## Common mistakes
+## Erros habituais
 
-- Committing uncompressed 4K images
-- Passing generated images off as photos or official logos
-- Omitting "no text" constraint → garbled captions
+- Commit direto de imagens 4K sem compressão
+- Usar imagem gerada como se fosse foto real ou logo oficial
+- Não restringir «sem texto» no Prompt → legendas ilegíveis
 
-Image generation is for direction and drafts; ship externally only after formal artifact review.
+A geração de imagens serve melhor para direção e rascunhos; na entrega externa, continue a aceitar com o padrão de Artefato formal.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Cloud (version dependent)  
-**Verification basis:** Reviewed against official OpenAI image generation and editing materials for use cases, prompt guidance, and conservative "draft first, formal assets need review" conclusion.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / Cloud (conforme a versão)  
+**Base de verificação:** Revista com materiais oficiais OpenAI de geração e edição de imagens quanto a cenários, redação de Prompts e limites de aceitação; o corpo mantém a conclusão conservadora «rascunho primeiro; Artefato formal precisa de revisão».  
+**Última verificação:** 2026-07-26

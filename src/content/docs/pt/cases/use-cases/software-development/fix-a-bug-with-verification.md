@@ -1,92 +1,93 @@
 ---
-title: 'Case study: Fix a bug with verification'
-description: From failing test to minimal fix and regression—the most common developer loop.
+title: "Caso: correção de bug com verificação"
+description: Do teste em falha à correção mínima e regressão — o ciclo mais comum para programadores.
 locale: pt
-source_locale: en
-source_revision: bb1102f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-## Metadata
 
-| Field | Content |
+## Metadados
+
+| Campo | Conteúdo |
 |---|---|
-| Audience | Developers |
-| Client | CLI or IDE (local repo) |
-| Estimated time | 30–60 minutes |
-| Verification date | 2026-07-25 |
+| Público | Programadores |
+| Cliente | CLI ou IDE (repositório local) |
+| Tempo estimado | 30–60 minutos |
+| Data de verificação | 2026-07-25 |
 
-## 1. Goal and context
+## 1. Objetivo e contexto
 
-**Goal:** Fix a regression bug already caught by unit tests, and add tests to prevent recurrence.
+**Objetivo:** Corrigir um bug de regressão já capturado por um teste unitário e acrescentar testes para evitar reincidência.
 
-**Success criteria:**
+**Critérios de sucesso:**
 
-- Originally failing test passes
-- Full test suite still green
-- Diff touches only necessary files
+- O teste que falhava passa
+- A suíte completa continua verde
+- O diff envolve apenas ficheiros necessários
 
-**Out of scope:** Large refactors, major dependency upgrades.
+**Fora de âmbito:** Refatorações em larga escala; upgrades major de dependências.
 
-## 2. Preparation
+## 2. Preparação
 
-- Clone repo, `pnpm install` (or per `AGENTS.md`)
-- Confirm local repro: `pnpm test -- path/to/failing.test.ts`
-- Branch: `fix/issue-123-short-desc`
+- Clonar o repositório, `pnpm install` (ou conforme `AGENTS.md`)
+- Confirmar reprodução local da falha: `pnpm test -- path/to/failing.test.ts`
+- Ramo: `fix/issue-123-short-desc`
 
-## 3. Workflow
+## 3. Fluxo de trabalho
 
-### Explore
-
-```text
-Do not change code yet. Read failing test @tests/auth/login.test.ts and implementation @src/auth/login.ts;
-explain failure in 5 bullets or fewer, citing assertions and stack line numbers.
-```
-
-### Plan
+### Explorar
 
 ```text
-Give a fix plan: which files change, whether new tests are needed, how to verify.
-Wait for my "execute" before changing code.
+Não altere código. Leia o teste em falha @tests/auth/login.test.ts e a implementação @src/auth/login.ts;
+em no máximo 5 pontos, explique a causa da falha, citando asserções e números de linha da stack.
 ```
 
-### Execute
+### Planear
 
 ```text
-Execute plan steps 1–2. After each step run only related tests.
+Apresente o plano de correção: que ficheiros alterar, se são necessários novos testes e como verificar.
+Espere a minha resposta «executar» antes de alterar código.
 ```
 
-### Verify
+### Executar
 
 ```text
-Run full test suite; summarize diff for my review; do not git push.
+Execute os passos 1–2 do plano. Após cada passo, corra apenas os testes relacionados.
 ```
 
-Human: read diff, confirm no unrelated changes, check per [Review diffs](/guide/quality/review-diffs/).
+### Verificar
 
-## 4. Failure and recovery
+```text
+Corra a suíte completa de testes; resuma o diff para a minha review; não faça git push.
+```
 
-| Issue | Action |
+Humano: ler o diff, confirmar que não há alterações irrelevantes e seguir [rever diffs](/guide/quality/review-diffs/).
+
+## 4. Falha e recuperação
+
+| Problema | Tratamento |
 |---|---|
-| New failures after fix | `git stash` or revert commit; narrow change |
-| Wrong root cause | Return to explore; request new hypothesis |
-| Flaky test | Stabilize test before fixing business logic |
+| A correção introduz novas falhas | `git stash` ou reverter o commit; reduzir o âmbito da alteração |
+| Diagnóstico da causa raiz errado | Voltar à exploração e pedir novas hipóteses |
+| Teste flaky | Estabilizar o teste antes de corrigir a lógica de negócio |
 
-## 5. Capture
+## 5. Consolidação
 
-- If this bug class repeats, add a convention in `AGENTS.md`
-- Optional `$regression-guard` Skill: run critical test list before merge
+- Se este tipo de bug se repetir, acrescentar uma convenção em `AGENTS.md`
+- Pode extrair o Skill `$regression-guard`: correr a lista de testes críticos antes de fundir
 
-## 6. Related chapters
+## 6. Capítulos relacionados
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Developer learning path](/guide/learning-paths/developer/)
-- [Run tests](/guide/quality/run-tests/)
+- [Diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/)
+- [Percurso de aprendizagem do programador](/guide/learning-paths/developer/)
+- [Correr testes](/guide/quality/run-tests/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified diagnose, run tests, review diffs, and developer path chapters; content is limited to the stable development loop from failing test to minimal fix and regression verification.
+**Estado:** verified  
+**Produtos aplicáveis:** CLI / IDE  
+**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre diagnóstico, correr testes, rever diffs e percurso do programador; o conteúdo limita-se ao caso estável de ciclo de desenvolvimento «do teste em falha à correção mínima e verificação de regressão».  
+**Última verificação:** 2026-07-26

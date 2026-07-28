@@ -1,120 +1,122 @@
 ---
-title: Browser tool
-description: Letting Codex open pages, inspect UI state, and verify frontend behavior—capabilities and boundaries.
+title: Ferramenta de browser
+description: Fazer o Codex abrir páginas web, verificar o estado da UI e validar comportamento frontend — capacidades e limites.
 locale: pt
-source_locale: en
-source_revision: 34490c2
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **browser tool** lets the Agent access real pages in a controlled environment: read the DOM, capture screenshots, sometimes perform simple interactions. Good for frontend acceptance, doc link checks, and design comparison—not a substitute for security audits or casual production admin use.
+A **Ferramenta de browser** permite ao Agent aceder a páginas web reais num ambiente controlado: ler o DOM, fazer ecrãs e, por vezes, interações simples. Serve para aceitação frontend, verificação de ligações de documentação e comparação com mockups — não substitui auditoria de segurança, nem deve operar backends de produção à vontade.
 
-It differs from search: search finds information; the browser tool actually opens the page.
+É uma Ferramenta diferente da pesquisa: a pesquisa encontra informação na web; o browser abre a página de verdade.
 
-## Problems it helps with
+## Que problemas resolve
 
-Common questions:
+Costuma usar-se para:
 
-- What does this page actually look like right now?
-- What happens when I click this button?
-- Does this layout break at a real viewport width?
+- Como é que esta página está agora de facto
+- O que acontece ao clicar neste botão
+- O layout parte-se em larguras reais
 
-Code review or text alone often is not enough—you need the page open.
+Só ler código ou descrições textuais costuma não chegar — é preciso abrir a página de verdade.
 
-## What's covered
+## Conteúdo desta página
 
-- What the browser tool can and cannot do
-- How it differs from web search and Computer Use
-- Safe authorization and constraints
+- O que a Ferramenta de browser pode e não pode fazer
+- Diferença face a pesquisa Web e Computer Use
+- Como autorizar e restringir com segurança
 
-## Capability overview
+## Visão geral de capacidades
 
-| Good fit | Poor fit |
+| Adequado | Inadequado |
 |---|---|
-| Open local dev server pages for layout | Bulk crawl sites restricted by ToS |
-| Verify public doc links are not 404 | Auto-login on unauthorized systems |
-| Compare static page to implementation | Replace full E2E test frameworks |
-| Read visible page text for debugging | Sites with heavy CAPTCHA |
+| Abrir a página do dev server local e ver o layout | Crawling em massa de sites limitados pelos ToS |
+| Verificar 404 em ligações de documentação pública | Login automático em sistemas não autorizados |
+| Comparar página estática e implementação | Substituir um framework E2E completo |
+| Ler texto visível da página para ajudar no debug | Sites com verificação humana complexa |
 
-Background: [tool selection](/guide/tools/tool-selection/)
+Contexto de seleção: [Seleção de Ferramentas](/guide/tools/tool-selection/)
 
-## Comparison with other tools
+## Comparação com outras Ferramentas
 
-| Tool | Input | Output |
+| Ferramenta | Entrada | Saída |
 |---|---|---|
-| Web search | Query | Summary and links |
-| Browser | URL / local address | Page structure, screenshots, interaction results |
-| Computer Use | Full-screen GUI | Any app operation (heavier, more sensitive) |
+| Pesquisa Web | Termo de pesquisa | Resumos e ligações |
+| Browser | URL / endereço local | Estrutura da página, ecrãs, resultado da interação |
+| Computer Use | GUI do ecrã inteiro | Operação em qualquer aplicação (mais pesado, mais sensível) |
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Not a replacement for automated testing
+### 1. A Ferramenta de browser não substitui testes automatizados
 
-It can inspect pages, screenshot, and click some interactions—it does not replace a full test system.
+Pode ajudar a verificar a página, fazer ecrãs e clicar em algumas interações — não substitui um sistema de testes completo.
 
-### 2. Page loads ≠ page is correct
+### 2. A página abrir ≠ a página estar bem
 
-Loading only proves existence; layout, copy, interaction, and links still need review.
+Abrir só diz que «a página existe»; layout, texto, interação e ligações ainda precisam de verificação.
 
-### 3. When to use it?
+### 3. Em que situações usá-la?
 
-Typical cases:
+Cenários mais comuns:
 
-- Local layout issues
-- 404 link checks
-- Rough design alignment
-- Confirming "code looks right but does the real page?"
+- Ver se a página local tem problemas de layout
+- Verificar se ligações dão 404
+- Conferir se a página e o mockup coincidem em traços gerais
+- Confirmar se «o código parece certo e a página real também»
 
-## Decision criteria
+## Critério de juízo
 
-If your question is:
+Se a pergunta for:
 
-- "What does it actually render as?"
-- "What is visible on the page?"
-- "What feedback appears after this interaction?"
+- «Como fica a renderização real»
+- «O que se vê de facto na página»
+- «Que feedback a página dá depois deste clique»
 
-The browser tool usually beats pure text analysis.
+O browser costuma encaixar melhor do que análise só de texto.
 
-## Recommended workflow
+## Fluxo de trabalho recomendado
 
-1. **Local frontend**: run `npm run dev`, then provide `http://localhost:PORT/path`
-2. **Specific task**: "Check login form overflow at 375px width"—not "look at the website"
-3. **State boundaries**: no external network, no submitting forms to production
-4. **Acceptance**: compare with [verify artifacts](/guide/quality/verify-artifacts/) and screenshots
+1. **Frontend local**: primeiro `npm run dev`, depois dê `http://localhost:PORT/path`
+2. **Tarefa clara**: «verificar se o formulário de login overflow a 375px de largura», não «olhe a página»
+3. **Limites claros**: proibir acesso à internet externa; proibir submeter formulários para produção
+4. **Aceitação**: comparar com [Verificar Artefatos](/guide/quality/verify-artifacts/) e ecrãs
 
-## Example prompt
+## Redação aplicável diretamente
+
+Pode pedir assim:
 
 ```text
-Only visit http://localhost:4321/guide/foundations/local-vs-cloud/ and check above-the-fold layout and hero image appearance.
-Do not access the public internet or submit any forms.
-If you find issues, provide screenshot evidence and fix suggestions.
+Aceda só a http://localhost:4321/guide/foundations/local-vs-cloud/ e verifique o layout do primeiro ecrã e o aspeto da imagem de capa.
+Não aceda à internet externa; não submeta nenhum formulário.
+Se encontrar problemas, dê evidência em ecrã e sugestões de correção.
 ```
 
-## Security boundaries
+## Limites de segurança
 
-- Default assumption: browser can reach **everything your machine/environment can**—including internal admin
-- Declare in task: `localhost only` or an allowlist of domains
-- Do not run untrusted repo tasks in a browser profile logged into personal accounts
-- Cloud browser policy follows [Cloud environments](/guide/web-and-cloud/cloud-environments/) and network rules
+- Por defeito, assuma que o browser pode aceder a **tudo o que a sua máquina ou ambiente alcança** — incluindo admin de intranet
+- Na Tarefa declare: `só aceder a localhost` ou lista branca de domínios
+- Não corra Tarefas de repositórios não fiáveis numa configuração de browser já com sessão pessoal iniciada
+- A política de browser em Cloud é definida por [Ambientes Cloud](/guide/web-and-cloud/cloud-environments/) e pela política de rede
 
-Approvals: [permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Conceito de Aprovação: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/)
 
-## Common mistakes
+## Erros habituais
 
-- Production URL without read-only limits
-- Treating screenshots as "tests passed" without automated tests
-- Using web search when real rendering check is needed
+- Dar URL de produção sem restringir a só leitura
+- Tratar ecrã do browser como «teste passou» sem correr testes automatizados
+- Misturar com pesquisa Web: a pesquisa não substitui a verificação de renderização real
 
-## Acceptance checklist
+## Lista de verificação
 
-- [ ] Access scope fixed in prompt
-- [ ] Key visual issues have screenshots or clear text
-- [ ] Consistent with unit/E2E results—or documented known gaps
+- [ ] O âmbito de acesso está fixo no Prompt
+- [ ] Problemas visuais críticos têm ecrã ou descrição textual
+- [ ] Conclusões alinhadas com testes unitários/E2E, ou diferenças conhecidas registadas
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Codex (version and permission dependent)  
-**Verification basis:** OpenAI Help Center currently documents built-in browser in the desktop App—open pages in Work or Codex, switch tabs, download files, annotation mode, per-site approval. This page focuses on use cases, distinction from search/Computer Use, and security boundaries.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / Codex (conforme versão e Permissões)  
+**Base de verificação:** O OpenAI Help Center atual já publica a descrição do browser integrado na App de ambiente de trabalho: abrir páginas em Work ou Codex, mudar de separadores, descarregar ficheiros, usar modo de anotações e aprovar o acesso site a site. Esta página foca cenários adequados da Ferramenta de browser, diferença face a pesquisa/Computer Use e limites de segurança.  
+**Última verificação:** 2026-07-26

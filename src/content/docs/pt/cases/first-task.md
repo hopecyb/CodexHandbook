@@ -1,60 +1,59 @@
 ---
-title: First task
-description: Complete a small change with a clear prompt and learn how to review results.
+title: Primeira tarefa
+description: Conclua uma pequena alteração com um prompt claro e aprenda a rever o resultado.
 locale: pt
-source_locale: en
-source_revision: 4063d54
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# First task
+# Primeira tarefa
 
-The example below assumes the **Desktop App** by default; CLI/IDE can use the same prompt.
+Os exemplos abaixo pressupõem a **App de ambiente de trabalho**; o mesmo prompt funciona no CLI/IDE.
 
-## Meta information
+## Metadados
 
-| Field | Content |
+| Campo | Conteúdo |
 |---|---|
-| Audience | Beginners |
-| Client | Desktop App (recommended) |
-| Estimated time | 15–20 minutes |
+| Público | Principiantes |
+| Cliente | App de ambiente de trabalho (recomendado) |
+| Tempo estimado | 15–20 minutos |
 
-## 1. Goal and background
+## 1. Objetivo e contexto
 
-**Goal:** Complete a safe file edit in a practice project.
+**Objetivo:** Concluir uma alteração segura a um ficheiro num projeto de prática.
 
-**Success criteria:** Only the specified file is modified, the result matches the acceptance description, and you can read the diff.
+**Critérios de sucesso:** Alterar apenas o ficheiro indicado, o resultado corresponde à descrição de aceitação e consegue ler o diff.
 
-## 2. Preparation
+## 2. Preparação
 
-- Client installed and signed in
-- Practice project created (with `hello.md` or similar file)
+- Cliente instalado e sessão iniciada
+- Projeto de prática criado (com `hello.md` ou ficheiro semelhante)
 
-## 3. Recommended prompt
+## 3. Prompt recomendado
 
 ```text
-Goal: Append a section "Today's practice" at the end of hello.md with a three-item bullet list.
-Constraints: Only modify hello.md; do not delete existing content; do not run network requests.
-Acceptance: The heading and exactly three list items appear at the end of the file.
-If information is insufficient, ask me first; do not guess.
+Objetivo: no final de hello.md, acrescentar uma secção «Exercício de hoje» com uma lista de três pontos.
+Restrições: alterar apenas hello.md; não apagar conteúdo existente; não fazer pedidos de rede.
+Aceitação: o ficheiro termina com esse título e exatamente três itens de lista.
+Se faltar informação, pergunte-me primeiro — não invente.
 ```
 
-## 4. Execution and review
+## 4. Execução e revisão
 
-1. Ask for a short plan first (or request one yourself)
-2. When approving file writes, confirm the path is correct
-3. After completion, check the diff against each acceptance criterion
+1. Peça primeiro um plano breve (ou exija um plano)
+2. Ao aprovar a escrita do ficheiro, confirme que o caminho está correto
+3. No fim, verifique o diff ponto a ponto face aos critérios de aceitação
 
-## 5. Next steps
+## 5. Próximos passos
 
-- [Prompt basics](/prompts/basics/)
-- [Verification](/guide/verification/)
-- [Start here](/guide/start-here/)
-
+- [Fundamentos de prompts](/prompts/basics/)
+- [Verificação](/guide/verification/)
+- [Começar aqui](/guide/start-here/)
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page is a low-risk introductory exercise within the handbook: limited to editing one file, no network access, requiring you to read the diff and check each acceptance criterion. Related prerequisite chapters (installation, practice project, verification) have been cross-checked; content does not depend on specific product version details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página é um exercício de introdução de baixo risco no manual: altera apenas um ficheiro, proíbe rede, exige ler o diff e verificar ponto a ponto segundo os critérios de aceitação; os capítulos prévios (instalação, projeto de prática, verificação) foram cruzados; o conteúdo não depende de detalhes de versão de produto.  
+**Última verificação:** 2026-07-26

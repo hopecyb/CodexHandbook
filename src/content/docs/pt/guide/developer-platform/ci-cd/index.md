@@ -1,32 +1,34 @@
 ---
 title: CI/CD
-description: Connect Codex to continuous integration and release workflows—start with low-risk automation.
+description: Ligar o Codex a fluxos de integração contínua e release — começa por automatização de baixo risco.
 locale: pt
-source_locale: en
-source_revision: ff62c2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When wiring Codex into CI/CD, the most common mistake is trying to make it auto-edit, auto-push, and auto-merge from day one.
+Ao ligar o Codex a CI/CD, o problema mais comum costuma ser este:
 
-The more common approach is to start read-only: suggestions and reports only.
+Querer logo que altere, faça push e faça merge automaticamente.
 
-## Section entry
+A prática mais habitual é deixar primeiro que só leia, só sugira e só produza relatórios.
 
-- [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+## Entrada deste grupo
 
-## What this section covers
+- [Automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/)
 
-- Structured review at the PR stage
-- Let automation find issues and suggest fixes first
-- Keep high-risk actions behind human approval
+## Conteúdo deste grupo
 
-Connecting Codex in CI/CD usually means low-risk assistance first, then deciding what is worth delegating.
+- Fazer revisão estruturada na fase de PR
+- Deixar a automatização primeiro «encontrar problemas» e «dar sugestões»
+- Manter ações de alto risco sob Aprovação humana
+
+Em CI/CD, liga o Codex primeiro como auxílio de baixo risco; só depois decides que ações merecem mais autonomia.
 
 ---
 
-**Status:** verified  
-**Products:** CLI / API / Cloud  
-**Verification basis:** Cross-checked against the current CI/CD subsection structure and code review automation entry in this repo; content is limited to the stable principle of low-risk assistance in CI/CD before delegating actions.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** CLI / API / Cloud  
+**Base de verificação:** Cruzado com a estrutura atual do subcapítulo CI/CD e a entrada de automatização de revisão de código; o conteúdo limita-se ao princípio estável de «primeiro auxílio de baixo risco em CI/CD, depois decidir autonomia».  
+**Última verificação:** 2026-07-26

@@ -1,30 +1,30 @@
 ---
-title: Research and learning
-description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
+title: Investigação e aprendizagem
+description: Entrada para casos de pesquisa, comparação e aprendizagem com fontes — foco em recuperação, citação e limites das conclusões.
 locale: pt
-source_locale: en
-source_revision: d446512
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Research tasks differ from ordinary Q&A in one way:
+A maior diferença entre tarefas de investigação e um «Q&A» comum:
 
-> **You want not just an answer, but how it was reached and whether it's reliable.**
+> **Não quer só uma resposta — quer saber de onde veio e se é fiável.**
 
-## Cases in this group
+## Entradas deste grupo
 
-- [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Matriz de comparação de funcionalidades](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
-## What this group emphasizes
+## Foco deste grupo
 
-- How to require sources and citations
-- Turning "I think" into "what I found in evidence"
-- Keeping conclusions within what the material actually supports
+- Como exigir fontes e citações
+- Como transformar «acho que» em «encontrei esta evidência»
+- Como limitar conclusões ao que as fontes realmente sustentam
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this repo's current research-and-learning case entry and source-backed research / validate sources chapters; this page only navigates the research case group and highlights focus areas.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / Cloud  
+**Base de verificação:** Cruzado com a entrada atual de casos research-and-learning neste repositório e com capítulos de investigação com fontes / validação de fontes; esta página só faz navegação e destaques do grupo de investigação.  
+**Última verificação:** 2026-07-26

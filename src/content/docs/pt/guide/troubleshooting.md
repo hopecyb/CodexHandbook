@@ -1,70 +1,70 @@
 ---
-title: Troubleshooting
-description: Route symptoms to the right tutorial and product pages.
+title: Solução de problemas
+description: Localize o tutorial e a página de produto certos a partir do sintoma.
+locale: pt
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 18
-locale: pt
-source_locale: en
-source_revision: 2dd393f
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-If something is already broken but you are unsure which category it falls into, start here.
+Se já há um problema e você ainda não sabe a que categoria ele pertence, comece por esta página.
 
-You do not need to diagnose CLI vs IDE vs Cloud vs permissions vs prompting first. Classify by symptom, then open the right chapter.
+Não precisa julgar de cara se é CLI, IDE, Cloud, Permissão ou Prompt. Classifique pelo sintoma e depois entre no capítulo correspondente.
 
-## What you can do here
+## O que você pode fazer aqui
 
-- Where to triage when something fails
-- Minimal starting point when you cannot classify the error
-- Problems that are install, permissions, context, or task-description issues
+- Para onde ir primeiro quando algo der errado
+- Se não souber a categoria do erro, o mínimo para começar a investigar
+- Quais problemas são de instalação, Permissão, Contexto ou descrição da Tarefa
 
-# Troubleshooting
+# Solução de problemas
 
-| Symptom | Go to |
+| Sintoma | Ir para |
 |---|---|
-| Install failure | [Desktop troubleshooting](/guide/desktop-app/troubleshooting/) · [CLI troubleshooting](/guide/cli/troubleshooting/) · [IDE troubleshooting](/guide/ide/troubleshooting/) |
-| Login/auth failure | [Sign-in](/guide/getting-started/sign-in-and-authentication/) |
-| Unsure which client | [Choose your client](/guide/choose-your-client/) · [Feature comparison](/guide/reference/feature-comparison/) |
-| Bad or out-of-scope results | [First task case](/cases/first-task/) · [Prompt debugging](/prompts/prompt-debugging/) · [Undo](/guide/getting-started/undo-and-recover/) |
-| Context confusion | [Keep context focused](/guide/context/keep-context-focused/) |
-| Permissions/sandbox questions | [Permissions and sandbox](/guide/permissions-and-sandbox/) |
+| Instalação falhou | [Problemas no desktop](/guide/desktop-app/troubleshooting/) · [Problemas no CLI](/guide/cli/troubleshooting/) · [Problemas no IDE](/guide/ide/troubleshooting/) |
+| Login/autenticação falhou | [Entrar](/guide/getting-started/sign-in-and-authentication/) |
+| Não sabe qual cliente escolher | [Escolher o cliente](/guide/choose-your-client/) · [Comparação de recursos](/guide/reference/feature-comparison/) |
+| Resultado fora do alcance / muito ruim | [Caso da primeira Tarefa](/cases/first-task/) · [Depuração de Prompt](/prompts/prompt-debugging/) · [Desfazer](/guide/getting-started/undo-and-recover/) |
+| Contexto confuso | [Manter o foco](/guide/context/keep-context-focused/) |
+| Dúvidas de Permissão/Sandbox | [Permissões e Sandbox](/guide/permissions-and-sandbox/) |
 
-## When you do not know where to look
+## Como classificar quando não souber por onde começar
 
-On first troubleshooting pass, pick one:
+Na primeira investigação, julgue primeiro a qual tipo você pertence:
 
-- Cannot start at all
-- Starts but errors mid-run
-- No error, but wrong results
-- Not an error—unclear entry or how to task
+- Nem consegue começar
+- Consegue começar, mas erra no meio
+- Não há erro, mas o resultado está errado
+- Não é erro — é não saber escolher a entrada ou formular a Tarefa
 
-Sorting into these four speeds up the rest.
+Classificar nestes quatro tipos costuma acelerar muito a localização.
 
-## Common misconceptions
+## Mal-entendidos comuns
 
-### 1. Troubleshooting requires expert terminology first
+### 1. Investigar exige conhecer muita terminologia profissional
 
-No.
+Não.
 
-First pass is about broad category—not memorizing jargon.
+Na primeira vez, o importante é classificar o problema em grandes grupos — não decorar termos.
 
-### 2. No error message means not a troubleshooting problem
+### 2. Se não houver erro, não é problema de solução de problemas
 
-"Wrong results," "keeps drifting," and "do not know how to start" all belong here too.
+«Resultado errado», «sempre desvia», «não sei como começar» também precisam de triagem.
 
-### 3. When stuck, click random pages
+### 3. Ao errar, deve clicar em mais páginas à toa
 
-Usually better to pause, classify the problem, then open one targeted page.
+Em geral é melhor parar, julgar a categoria e só então ir à página correspondente.
 
-Triage before repair.
+Investigar começa por classificar — não precisa sair consertando de imediato.
 
-More reference: [FAQ](/guide/reference/faq/) · [Error reference](/guide/reference/error-reference/) · [Official Codex docs](https://developers.openai.com/codex)
+Mais referência: [FAQ](/guide/reference/faq/) · [Referência de erros](/guide/reference/error-reference/) · [Documentação oficial do Codex](https://developers.openai.com/codex)
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** Symptom routing only to install, login, permissions, context, and result-quality chapters; linked paths checked; page does not depend on specific error codes, versions, or UI copy.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página só faz a triagem por sintoma para capítulos de instalação, login, Permissão, Contexto e qualidade do resultado; os caminhos dos capítulos linkados foram checados item a item, e a página não depende de códigos de erro, números de versão ou textos de interface específicos.  
+**Última verificação:** 2026-07-26

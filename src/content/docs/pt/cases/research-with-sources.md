@@ -1,76 +1,76 @@
 ---
-title: Research with sources
-description: Use Codex for search, comparison, and fact-checking—outputs with traceable sources and conclusions.
+title: Investigação com fontes
+description: Use o Codex para pesquisa, comparação e verificação de factos — com fontes e conclusões rastreáveis.
 locale: pt
-source_locale: en
-source_revision: dbaa231
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Research with sources** emphasizes that conclusions must trace back to **sources** (official docs, papers, repo files), not model confidence. Suitable for tech selection, competitive comparison, literature review, policy interpretation.
+O fluxo de trabalho de **investigação com fontes** exige que as conclusões voltem a **fontes** (documentação oficial, artigos, ficheiros do repositório), e não a invenções confiante do modelo. Adequado a seleção tecnológica, comparação de concorrentes, revisão de literatura e interpretação de políticas.
 
-## What this page covers
+## Que problema resolve esta página
 
-- When to use [web search](/guide/tools/web-search/) vs read-only repo
-- How to require citation format and uncertainty labels
-- Connection to [Validate sources](/guide/quality/validate-sources/)
+- Quando usar [pesquisa na web](/guide/tools/web-search/) vs. repositório só de leitura
+- Como exigir formato de citação e marcação de incerteza
+- Ligação a [validar fontes](/guide/quality/validate-sources/)
 
-## Minimum viable approach
-
-```text
-Research "Rust vs Go suitability for this repo's scenario":
-1. List evaluation dimensions first (performance, ecosystem, team familiarity)
-2. Each conclusion cites source URL or @in-repo file path
-3. Mark unverifiable items as "to confirm"
-4. End with recommendation and open questions
-Do not change code.
-```
-
-## Recommended workflow
+## Prática mínima viável
 
 ```text
-Define problem and exclusions
-    → Collect sources (search / read docs / MCP)
-    → Comparison table + pros and cons
-    → Label confidence and conflicting sources
-    → Human decision or move to spec phase
+Investigue a «adequação de Rust vs Go neste repositório»:
+1. Liste primeiro as dimensões de avaliação (desempenho, ecossistema, familiaridade da equipa)
+2. Cada conclusão com URL da fonte ou caminho de ficheiro @no repositório
+3. O que não for verificável, marque como «a confirmar»
+4. Termine com recomendação e questões em aberto
+Não altere código.
 ```
 
-For long research tasks, split across rounds—see [Long-running tasks](/prompts/long-running-tasks/).
+## Fluxo recomendado
 
-## Common mistakes
+```text
+Definir o problema e exclusões
+    → Recolher fontes (pesquisa / ler docs / MCP)
+    → Tabela de comparação + prós e contras
+    → Marcar confiança e fontes em conflito
+    → Decisão humana ou passar à fase de especificação
+```
 
-- No URL requirement—output cannot be audited
-- Mix outdated blogs with official docs without noting it
-- Treat research conclusions as implementation instructions, skipping spec
-- Upload confidential files to unauthorized external tools
+Tarefas de investigação longas devem ser divididas em várias rondas; ver [gestão de tarefas longas](/prompts/long-running-tasks/).
 
-## Safety boundaries
+## Erros comuns
 
-- Internal unpublished material must not be sent via uncontrolled MCP
-- Volatile facts (price, version, regional availability) must note [verification date](/guide/start-here/handbook-version-policy/)
+- Não exigir URLs — o resultado não é reauditável
+- Misturar blogs desatualizados com documentação oficial sem o dizer
+- Tratar conclusões de investigação como instruções de implementação, saltando a especificação
+- Carregar ficheiros com dados confidenciais para ferramentas externas não autorizadas
 
-## Acceptance checklist
+## Limites de segurança
 
-- [ ] Key conclusions have at least one clickable or traceable source
-- [ ] Conflicting information is presented side by side
-- [ ] "Uncertain" items are listed, not disguised as facts
-- [ ] Sensitive data does not appear in prompts or logs
+- Material interno não público não deve sair por MCP não controlado
+- Factos voláteis (preços, versões, disponibilidade regional) devem marcar a [data de verificação](/guide/start-here/handbook-version-policy/)
 
-## Related chapters
+## Lista de aceitação
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [ ] Conclusões-chave têm pelo menos uma fonte clicável ou rastreável
+- [ ] Informação em conflito é apresentada em paralelo
+- [ ] Itens «incertos» estão listados, sem se fazerem passar por factos
+- [ ] Dados sensíveis não aparecem no prompt nem nos logs
 
-## Reference sources
+## Capítulos relacionados
 
-- CodexGuide research and citation methods
-- stormzhang search and verification chapters
+- [Lidar com incerteza](/guide/quality/handle-uncertainty/)
+- [Caso: refatorar documentação com revisão](/cases/use-cases/content-creation/refactor-docs-with-review/)
+
+## Fontes de referência
+
+- Métodos de investigação e citação do CodexGuide
+- Capítulos de pesquisa e verificação de stormzhang
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' current Codex use cases still include "Learn a new concept," emphasizing turning dense material into auditable learning or research output; this page also requires each conclusion to cite a URL or repo file path and explicitly mark items to confirm—consistent with current "research with sources" best practices.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Os use cases atuais do Codex em OpenAI Developers ainda incluem “Learn a new concept”, com ênfase em transformar material denso em aprendizagem ou investigação verificável; esta página exige ainda URL ou caminho de ficheiro do repositório em cada conclusão e marca explicitamente itens a confirmar — alinhado com as melhores práticas atuais de «investigação com fontes».  
+**Última verificação:** 2026-07-26

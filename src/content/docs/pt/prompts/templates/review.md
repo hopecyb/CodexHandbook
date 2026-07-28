@@ -1,61 +1,61 @@
 ---
-title: Review template
-description: Structured review of diffs and change risk.
+title: Template de revisão
+description: Revisão estruturada de diffs e riscos de mudança.
 locale: pt
-source_locale: en
-source_revision: b70db08
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Review template
+# Template de revisão
 
-Review tasks often derail when they become "I'll fix it for you."
+O desvio mais fácil numa tarefa de revisão é começar já a «corrigir por si».
 
-Find problems first, then decide whether to change—steadier flow.
+É mais seguro achar os problemas primeiro e só depois decidir se altera.
 
 ## Template
 
 ```text
-Review the diff against 【main/target branch】; do not change code yet.
-Dimensions:
-1. Beyond 【issue/spec】 scope?
-2. Logic errors, edge cases, error handling
-3. Security (secrets, injection, permissions)
-4. Tests and docs aligned with changes?
-Output a graded list: 🔴 blocking / 🟡 suggestion / 🟢 pass, each with file and line.
+Reveja o diff atual face a 【main/ramo-alvo】; não altere código ainda.
+Dimensões:
+1. Ultrapassa o alcance de 【issue/especificação】?
+2. Erros de lógica, limites, tratamento de erros
+3. Segurança (segredos, injeção, permissões)
+4. Testes e docs acompanham a mudança?
+Saída: lista classificada 🔴 bloqueante / 🟡 sugestão / 🟢 ok, cada item com arquivo e número de linha.
 ```
 
-## When to use this template
+## Quando usar este template
 
-- PR review
-- Diff review
-- Risk review of doc or config changes
+- Rever um PR
+- Rever um diff
+- Avaliar riscos de uma ronda de mudanças em docs ou configuração
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Review means "give some opinions"
+### 1. Revisão = pedir umas opiniões
 
-More precisely: find issues along a fixed structure.
+Mais precisamente: pedir que encontre problemas de forma estruturada.
 
-### 2. No obvious bugs equals pass
+### 2. Sem bug óbvio = aprovado
 
-Also check:
+A revisão também deve ver:
 
-- scope creep
-- tests and docs coverage
-- security and boundary issues
+- se ultrapassa o alcance
+- se testes e docs acompanharam
+- se há problemas de segurança e de limites
 
-The review template surfaces risk by dimension—not vague "good or bad."
+O foco deste template é trazer riscos à superfície por dimensões fixas — não avaliar de forma vaga se «está bom».
 
-## Related
+## Relacionado
 
-- [Review before merge](/cases/workflows/review-before-merge/)
-- [Review a PR case](/cases/review-a-pr/)
+- [Rever antes de fazer merge](/cases/workflows/review-before-merge/)
+- [Caso: rever um PR](/cases/review-a-pr/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a review-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página oferece um template de tarefas de revisão; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

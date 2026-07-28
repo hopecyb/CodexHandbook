@@ -1,76 +1,78 @@
 ---
-title: Webhooks Overview
-description: Connect Codex task state to internal systems via HTTP callbacks—events, signatures, and idempotency.
+title: Visão geral de Webhooks
+description: Ligar o estado de Tarefas Codex a sistemas internos com callbacks HTTP — eventos, assinatura e idempotência.
 locale: pt
-source_locale: en
-source_revision: d96d87e
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Webhooks** let Codex or Cloud send HTTP callbacks when task state changes—driving ticket updates, Slack notifications, or internal approval UIs. This chapter is the event-integration entry for the [developer platform](/guide/developer-platform/).
+Um **Webhook** permite-te, quando muda o estado de uma Tarefa Codex ou Cloud, enviar um callback HTTP ao teu próprio serviço e disparar atualizações de tickets, notificações Slack ou mesas de Aprovação internas. Este capítulo é a entrada de integração por eventos da [plataforma para desenvolvedores](/guide/developer-platform/).
 
-## What this page covers
+## O que esta página cobre
 
-- Webhooks vs polling with the SDK
-- Common events and payload fields (conceptual)
-- Signature verification, replay, and idempotency
+- Quando escolher Webhook face a polling com SDK
+- Eventos habituais e campos do payload (conceito)
+- Verificar assinatura, replay e idempotência
 
-## What it does
+## Primeiro compreende o que faz
 
-If webhooks are new: when task state changes, Codex notifies your system instead of you polling “is it done yet?”
+Se é a primeira vez com Webhooks, pensa assim: quando muda o estado da Tarefa, o Codex notifica o teu sistema, em vez de tu perguntares uma e outra vez «já está?».
 
-Best when something else must happen after a task ends.
+Encaixa quando «ao terminar a Tarefa ainda há que encadear outra ação de sistema».
 
 :::note
-Webhook paths, event names, and signature algorithms follow [official API docs](https://developers.openai.com/codex).
+Rota do Webhook, nomes de eventos e algoritmo de assinatura conforme a [documentação oficial da API](https://developers.openai.com/codex).
 :::
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### Webhooks are not the default for all automation
+### O Webhook não é a resposta por omissão a toda a automatização
 
-For a single `codex exec`, exit codes are usually enough—no webhook needed.
+Se só corres um `codex exec` e olhas o código de saída, normalmente não precisas de Webhook.
 
-Webhooks fit better:
+O Webhook encaixa melhor em:
 
-- Long tasks
-- Multi-step orchestration
-- Notifying or driving other systems when done
+- Tarefas longas
+- Orquestração multi-passo
+- Notificar ou disparar outros sistemas ao terminar
 
-### Receiving a callback does not mean trust it
+### Receber o callback ≠ poder confiar nele de imediato
 
-Without signature verification, idempotency, and timeout handling, you risk forged requests, duplicate delivery, or instability.
+Muitos principiantes tratam o Webhook como «mensagem oficial, pode usar-se tal qual».
 
-## When to use webhooks
+Sem verificação de assinatura, idempotência e tratamento de timeouts, podes acabar com pedidos falsificados, entregas duplicadas ou problemas por instabilidade do sistema.
 
-| Fits | Does not fit |
+## Quando usar Webhook
+
+| Adequado | Não adequado |
 |---|---|
-| Task-complete notifications to internal systems | Strong real-time token streaming |
-| Integration with existing event buses | Simple cron that only needs `exec` exit codes |
-| Multi-step flows (complete → trigger deploy) | No public endpoint and no queue |
+| Notificar sistemas internos ao completar a Tarefa | Precisas de streaming palavra a palavra em tempo forte |
+| Integrar com um bus de eventos existente | Um cron simples só precisa do código de saída de `exec` |
+| Orquestração multi-passo (completar → disparar deploy) | Sem endpoint alcançável da internet e sem querer usar fila |
 
-Simple pipelines: [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) only. Productized multi-tenant services often combine **SDK + Webhook**.
+Pipelines simples podem bastar com [Scripts e pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/); um serviço multi-tenant productizado costuma combinar **SDK + Webhook**.
 
-## Typical events (conceptual)
+## Eventos típicos (conceito)
 
-| Event | Use |
+| Evento | Uso |
 |---|---|
-| `task.completed` | Fetch results, update PR status |
-| `task.failed` | Alert, retry queue |
-| `task.needs_approval` | Push to human approval UI |
-| `review.posted` | Sync code review conclusions |
+| `task.completed` | Obter resultado, atualizar estado do PR |
+| `task.failed` | Alerta, fila de retries |
+| `task.needs_approval` | Empurrar para UI de Aprovação humana |
+| `review.posted` | Sincronizar a conclusão da revisão de código |
 
-Payload should include: `task_id`, status, timestamp, repo/project id; **avoid** full prompts in webhook body if they contain PII.
+O payload deveria incluir: `task_id`, estado, marca temporal, identificador de repo/projeto; **evita** pôr o Prompt completo no body do webhook se contiver PII.
 
-## Minimum receiver requirements
+## Requisitos mínimos do recetor
 
-1. **HTTPS** endpoint; verify official signature header (e.g. `X-Signature` + HMAC)
-2. **Idempotency**: process each `event_id` once
-3. **Fast 2xx**: heavy logic in async queue
-4. **Log redaction**: no keys or full user input
+1. Terminal **HTTPS**; verificar o cabeçalho de assinatura oficial (p. ex. `X-Signature` + HMAC)
+2. **Idempotência**: o mesmo `event_id` processa-se uma só vez
+3. **2xx rápido**: a lógica pesada para uma fila assíncrona
+4. **Logs desensibilizados**: não registar secrets nem a entrada completa do utilizador
 
-Sketch (pseudocode):
+Esquema (pseudocódigo):
 
 ```python
 def handle(request):
@@ -82,50 +84,50 @@ def handle(request):
     return 200
 ```
 
-## Relationship to CI
+## Relação com CI
 
-- In-CI `codex exec` usually **does not** need webhooks—exit codes suffice
-- Cloud long tasks and mobile approval scenarios fit webhooks to internal systems
+- Dentro de CI, `codex exec` costuma **não** precisar de webhook; basta o código de saída
+- Tarefas longas em Cloud e Aprovação a partir do telemóvel encaixam melhor com webhook para sistemas internos
 
-## Common mistakes
+## Erros frequentes
 
-- No signature verification; forged callbacks
-- Handler exceeds platform timeout → duplicate delivery
-- Synchronous second Codex run inside webhook handler
-- Webhook URL exposed in client frontend
+- Sem verificação de assinatura; callbacks falsificados
+- Processar além do timeout da plataforma e provocar reentregas
+- Correr um segundo Codex de forma síncrona no handler do webhook
+- Expor o URL do webhook no frontend do cliente
 
-## How to decide
+## Como decidir se usá-lo
 
-Ask:
+Se não tiveres claro o cenário, pergunta:
 
-1. Do I need proactive notification on task state changes?
-2. After a task ends, is there a system-level next step to automate?
-3. Do I have a backend that can safely receive HTTP callbacks?
+1. Preciso que me notifiquem de forma ativa quando muda o estado da Tarefa?
+2. Ao terminar, há um passo seguinte ao nível de sistema que deva encadear-se sozinho?
+3. Já tenho um backend que possa receber de forma segura callbacks HTTP?
 
-More “yes” answers → webhooks matter more.
+Quanto mais respostas forem «sim», mais sentido tem o Webhook.
 
-## Security boundaries
+## Limites de segurança
 
-- See [Threat model](/guide/team-enterprise/security/threat-model/) and [Acceptable use](/guide/team-enterprise/governance/acceptable-use/)
-- Rotate webhook secrets on an ops calendar
+- Ver [modelo de ameaças](/guide/team-enterprise/security/threat-model/) e [uso aceitável](/guide/team-enterprise/governance/acceptable-use/)
+- Inclui a rotação do segredo do webhook no calendário de operações
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Signature failure returns 4xx
-- [ ] Idempotency table or dedupe key implemented
-- [ ] Async worker and DLQ configured
-- [ ] Aligned with [structured output](/guide/developer-platform/non-interactive/structured-output/) field conventions
+- [ ] Falha de verificação de assinatura → 4xx
+- [ ] Tabela de idempotência ou chave de dedupe implementada
+- [ ] Worker assíncrono e DLQ (fila de letra morta) configurados
+- [ ] Convénio de campos alinhado com [saída estruturada](/guide/developer-platform/non-interactive/structured-output/)
 
-Webhooks connect task state changes to other systems—after signature verification, idempotency, and async handling are in place.
+O Webhook serve para ligar mudanças de estado de Tarefa a outros sistemas; antes há que deixar bem assinatura, idempotência e processamento assíncrono.
 
-## Reference sources
+## Fontes de referência
 
-- OpenAI Codex / Cloud API event documentation
-- KimYx0207 integration chapter
+- Documentação de eventos da API OpenAI Codex / Cloud
+- Capítulos de integração de KimYx0207
 
 ---
 
-**Status:** verified  
-**Products:** API / Cloud  
-**Verification basis:** Cross-checked against OpenAI Developers’ public developer-platform and event-driven integration guidance, plus verified Webhooks section, CI/CD, structured output, and team security pages in this handbook; confirms stable principles: webhooks for status notification, receivers must verify signatures, enforce idempotency, and process asynchronously.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** API / Cloud  
+**Base de verificação:** Cruzado com a documentação pública atual da OpenAI Developers sobre plataforma para desenvolvedores e integração orientada a eventos, e com as páginas verificadas de Webhooks, CI/CD, saída estruturada e limites de segurança de equipa; esta página só confirma o princípio estável de que o Webhook serve para notificar estado e que o recetor deve verificar assinatura, ser idempotente e processar de forma assíncrona.  
+**Última verificação:** 2026-07-26

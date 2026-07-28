@@ -1,99 +1,99 @@
 ---
-title: Reviewing changes in the IDE
-description: Reading diffs, commenting, and accepting or rejecting Codex suggestions in the editor.
+title: Rever mudanças no IDE
+description: Ler Diff, comentar e aceitar/rejeitar sugestões do Codex no editor.
 locale: pt
-source_locale: en
-source_revision: c5f9bb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-IDE review sits between inline completion and full PR review: changes often appear directly in the editor or a side diff view. This page explains how to accept results safely.
+A experiência de revisão da extensão IDE fica entre «completar linha a linha» e «review completa de PR»: as mudanças aparecem muitas vezes diretamente no editor ou na vista lateral de Diff. Esta página explica como aceitar resultados com segurança.
 
-In the IDE, do not treat "one-click accept" as the default even when a change looks ready.
+Mesmo perante uma mudança «pronta a aceitar» no IDE, não tome «aceitar com um clique» como ação predefinida.
 
-## What's covered
+## Conteúdo desta página
 
-- Common IDE review UI patterns
-- Accept, reject, and partial-accept strategy
-- Connecting to Git, tests, and PR workflow
+- Formas habituais de UI de revisão no IDE
+- Estratégias para aceitar, rejeitar e aceitar parcialmente
+- Ligação com Git, testes e fluxo de PR
 
-## Review flow
+## Fluxo de revisão
 
-1. **Scope**: which files changed? unexpected deletes or formatting storms?
-2. **Logic**: branches, error handling, edge cases
-3. **Security**: secrets, injection, privilege escalation, dependency tampering
-4. **Verification**: project tests / lint (IDE terminal or task scripts)
-5. **Decision**: accept, request changes, or undo and resend task
+1. **Ver o alcance**: que ficheiros mudaram? Há eliminações ou tempestades de formatação não pedidas?
+2. **Ler a lógica**: ramos condicionais, tratamento de erros, casos limite
+3. **Verificar segurança**: chaves, injeção, elevação de Permissões, envenenamento de dependências
+4. **Correr Verificação**: testes / lint acordados no projeto (no terminal do IDE ou em scripts de Tarefa)
+5. **Decidir**: aceitar, pedir alterações, ou anular e voltar a enviar a Tarefa
 
-Methodology: [review diffs](/guide/quality/review-diffs/)
+Metodologia: [Rever Diff](/guide/quality/review-diffs/)
 
-## IDE-specific actions (conceptual)
+## Operações típicas do IDE (conceito)
 
-| Action | Suggestion |
+| Operação | Sugestão |
 |---|---|
-| Inline diff / ghost text | Read block by block; avoid accept-all |
-| Accept single file | Start with lowest-risk file (e.g. tests) |
-| Reject and retry | Follow up: "change only X, do not touch Y" |
-| Git integration | After accept, still `git diff` before commit |
+| Diff inline / texto fantasma | Veja bloco a bloco antes de aceitar; evite aceitar tudo de uma vez |
+| Aceitar um ficheiro | Aceite primeiro o de menor risco (por exemplo testes) |
+| Rejeitar e tentar de novo | No follow-up, diga «altere só X, não mexa em Y» |
+| Integração com Git | Depois de aceitar, confira ainda com `git diff` antes do commit |
 
-[Desktop App diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/) is fuller; IDE review is **lightweight and high-frequency**.
+As funções de [Diff, comentários e revisão](/guide/desktop-app/diffs-comments-and-review/) da App de desktop são mais completas; no IDE, a revisão é sobretudo **leve e frequente**.
 
-## Recommended prompt habits
+## Hábitos recomendados de Prompt
 
-State up front:
+Antes de iniciar a Tarefa, inclua:
 
-- Allowed path globs
-- Forbidden: `git push`, changing lockfile (unless explicitly requested)
-- On completion: list change summary; **do not auto-commit**
+- Glob de caminhos permitidos
+- Proibido: `git push`, alterar lockfile (salvo pedido explícito)
+- Ao concluir: listar um resumo das mudanças, **sem commit automático**
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+Ver [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
 
-## Common mistakes
+## Erros comuns
 
-- Trusting a green test icon without running tests yourself
-- Hiding logic changes inside a large auto-format diff
-- Push immediately after accept, skipping PR / branch protection
+- Confiar no ícone verde de testes sem ter corrido pessoalmente
+- Esconder mudanças de lógica dentro de um Diff grande de formatação automática
+- Depois de aceitar, fazer push direto sem PR / proteção de ramo
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] `git status` matches expected files
-- [ ] Tests pass (local or CI)
-- [ ] No `.env`, tokens, or debug `console.log` left behind
-- [ ] Commit message written or confirmed by you
+- [ ] `git status` coincide com os ficheiros esperados
+- [ ] Testes passam (local ou CI)
+- [ ] Sem resíduos de `.env`, token ou `console.log` de depuração
+- [ ] A mensagem de commit foi escrita ou confirmada por si
 
-## Common questions
+## Dúvidas frequentes
 
-### 1. Inline suggestions look small—safe to accept?
+### 1. A sugestão inline parece pequena — posso aceitar já?
 
-Do not make that a habit.
+Melhor não criar esse hábito.
 
-Many issues are not about size—they are about "small enough that nobody looked closely."
+Muitos problemas não estão em «a mudança ser grande», mas em «parecer pequena e por isso ninguém olhou com atenção».
 
-### 2. Not confident reviewing logic—what helps most?
+### 2. Não sou forte a rever lógica — o que olhar primeiro que seja útil?
 
-These three checks already add value:
+Estas três coisas já têm muito valor:
 
-- Correct files changed?
-- Anything deleted that should stay?
-- Obvious debug residue or style drift?
+- São os ficheiros que pediu?
+- Apagou algo que não deveria?
+- Há resíduos evidentes de depuração ou desvio de estilo?
 
-### 3. Does accept mean done?
+### 3. Aceitar já equivale a concluir?
 
-Not yet.
+Ainda não.
 
-Accept only puts changes in your working tree—you still verify and decide whether to commit.
+Aceitar só coloca as mudanças na área de trabalho; a seguir ainda tem de verificar e decidir se faz commit.
 
-"Accept" in the IDE is a mid-step, not final acceptance.
+No IDE, «aceitar mudanças» é só um passo intermédio, não a aceitação final.
 
-## References
+## Fontes de referência
 
-- [Verification and human review](/guide/foundations/verification-and-human-review/)
+- [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
 - stormzhang `09-ide.md`
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page depends on whether the IDE extension currently offers inline diff, side diff, accept/reject per block, etc.; current official public material cannot verify each UI capability—do not mark `verified` until newer extension docs are available.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** IDE  
+**Nota de revisão:** Esta página depende de a extensão IDE oferecer atualmente Diff inline, Diff lateral, aceitar/rejeitar sugestões por bloco, etc.; o material oficial público vigente não basta para confirmar item a item essas capacidades de interface; até completar a documentação da nova extensão, não convém marcar como `verified`.  
+**Última verificação:** 2026-07-26

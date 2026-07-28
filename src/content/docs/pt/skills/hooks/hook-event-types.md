@@ -1,149 +1,149 @@
 ---
-title: Hook event types
-description: Hook trigger points in the Codex execution chain—for validation, logs, and blocks at the right stage.
+title: Tipos de evento Hook
+description: Pontos de disparo de Hook na cadeia de execução do Codex — validação, log e bloqueio na fase certa.
 locale: pt
-source_locale: en
-source_revision: '6802e43'
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-This section is about **when** the same check should fire.
+Aqui o tema é **quando** a mesma checagem deve disparar.
 
-**Hook events** are when the system calls your configured logic at fixed nodes. Understanding event types lets you implement "audit and validate" from [Hooks overview](/skills/hooks/hooks-overview/) without slowing every tool call.
+**Eventos Hook** são os momentos em que o sistema chama a lógica que você configurou em nós fixos. Entender os tipos de evento permite aplicar «auditoria e validação» de [Visão geral de Hooks](/skills/hooks/hooks-overview/) na configuração, sem atrasar cada chamada de ferramenta.
 
-## Contents
+## Conteúdo
 
-- Common event phases and use cases
-- How events divide work with [command rules](/guide/customization/rules/command-rules/)
-- Performance and failure strategy when configuring
+- Fases comuns de evento e cenários adequados
+- Divisão de trabalho com [regras de comando](/guide/customization/rules/command-rules/)
+- Performance e estratégia de falha na configuração
 
-## One decision principle
+## Um princípio de julgamento
 
-Do not start with "can this Hook do it?"  
-Ask: do you want to stop something **before** it happens, or record it **after**?
+Não comece perguntando «esse Hook consegue implementar?».  
+Pergunte primeiro: você quer barrar **antes** de acontecer, ou só registrar **depois**?
 
-Many misplaced Hooks fail because timing was wrong.
+Muitos Hooks no lugar errado falham porque o momento de disparo foi mal escolhido.
 
 :::note
-**Event names and fields follow [official Hooks documentation](https://developers.openai.com/codex).** The table below is conceptual grouping—after CLI upgrades, check `--help` and release notes.
+**Nomes de eventos e campos seguem a [documentação oficial de Hooks](https://developers.openai.com/codex).** A tabela abaixo é agrupamento conceitual; após atualizar o CLI, confira `--help` e release notes.
 :::
 
-## Event groups (conceptual)
+## Agrupamento de eventos (conceito)
 
-| Phase | Typical events (conceptual) | Good for |
+| Fase | Eventos típicos (nomes conceituais) | Adequado para |
 |---|---|---|
-| Session | `session.start` / `session.end` | Environment checks, summarize changes, audit footer |
-| Before tool | `tool.call.before` / `pre_tool_use` | Block dangerous commands, scan secret patterns |
-| After tool | `tool.call.after` / `post_tool_use` | Structured logs, metrics, redacted archive |
-| Prompt | `user_prompt.submit` | Policy scan injection, length limits |
-| Artifact | `artifact.create` | License headers, file type allowlist |
-| Integration | `pr.before_create` (if supported) | Issue numbers, changelog format |
+| Sessão | `session.start` / `session.end` | Checagem de ambiente, resumo de mudanças, nota final de auditoria |
+| Antes da ferramenta | `tool.call.before` / `pre_tool_use` | Bloquear comandos perigosos, scan de padrão de segredo |
+| Depois da ferramenta | `tool.call.after` / `post_tool_use` | Log estruturado, métricas, arquivo mascarado |
+| Prompt | `user_prompt.submit` | Scan de política, limite de comprimento |
+| Artefato | `artifact.create` | Cabeçalho de licença, whitelist de tipo de arquivo |
+| Integração | `pr.before_create` (se suportado) | Número de issue, formato de changelog |
 
-Do not hang the same logic on multiple events—pick the **earliest point that can block**.
+Não pendure a mesma lógica em vários eventos; escolha o ponto **mais cedo em que ainda dá para bloquear**.
 
-## How to read these phases
+## Como entender essas fases
 
-- **Session**: Task start or end
-- **Before tool**: Command or tool not executed yet
-- **After tool**: Action happened—log, summarize, re-check
-- **Prompt**: Right after user content is submitted
-- **Artifact**: Right after a file or result is created
+- **Sessão**: no início ou fim desta Tarefa
+- **Antes da ferramenta**: comando ou ferramenta ainda não executou de fato
+- **Depois da ferramenta**: a ação já aconteceu — dá para registrar, resumir, checar de novo
+- **Prompt**: assim que o conteúdo do usuário é enviado
+- **Artefato**: assim que arquivo ou resultado é gerado
 
-Understand at this level first; memorizing every event name can wait.
+Entenda nesse nível primeiro; não force memorizar nomes de evento.
 
-## Relationship to the rules engine
+## Relação com o motor de regras
 
 ```text
-User prompt → (optional) prompt Hook
-    → Model proposes tool call
-    → Rules engine allow/deny
-    → (optional) pre_tool Hook → execute → post_tool Hook
+Prompt do usuário → (opcional) Hook de prompt
+    → Modelo propõe chamada de ferramenta
+    → Motor de regras allow/deny
+    → (opcional) Hook pre_tool → execução → Hook post_tool
 ```
 
-- **Rules**: Declarative, fast—known command patterns
-- **Hook**: Imperative scripts—complex policy and external systems
+- **Regras**: declarativas, rápidas, adequadas a padrões de comando conhecidos
+- **Hook**: scripts imperativos, adequados a políticas complexas e sistemas externos
 
-## Common misconceptions
+## Equívocos comuns
 
-### 1. If it can be checked, before vs after does not matter
+### 1. Se dá para detectar, antes ou depois dá no mesmo
 
-It matters a lot.
+Dá muita diferença.
 
-To **prevent side effects**, attach as early as possible.  
-If you only discover the problem in `post_tool`, it is often too late.
+Se o objetivo é «impedir o efeito colateral», pendure o mais cedo possível.  
+Se a ação já terminou e só no `post_tool` você descobre o problema, em geral já é tarde.
 
-### 2. More granular events means more professional config
+### 2. Quanto mais eventos e mais fineza, mais profissional a configuração
 
-Prefer "few and precise"—get the logic on the right single point first.
+Na configuração, busque «poucos e precisos» — primeiro acerte a lógica no ponto mais adequado.
 
-### 3. Hook event types are just technical detail
+### 3. Tipo de evento Hook é só detalhe técnico
 
-They directly affect:
+Afeta diretamente:
 
-- Whether risk is stopped in time
-- Whether logs are useful
-- Whether the whole interaction slows down
+- Se o risco é barrado a tempo
+- Se o log é útil
+- Se a interação fica lenta
 
-## Failure strategies
+## Estratégia de falha
 
-| Strategy | When to use |
+| Estratégia | Quando usar |
 |---|---|
-| `block` | Security violation, hard compliance |
-| `warn` | Style, advisory checks |
-| `log` | Observe only, no block |
+| `block` | Violação de segurança, requisito rígido de conformidade |
+| `warn` | Estilo, checagens sugeridas |
+| `log` | Só observação, sem bloquear |
 
-Hook timeout or crash should default **safe**: production tends toward block or fail closed, with errors logged for investigation.
+Timeout ou crash de Hook deve ser **seguro por padrão**: em produção, tenda a block ou fail closed, e registre o erro para triagem.
 
-## When unsure where to attach
+## Se não souber onde pendurar
 
-Simplified rules:
+Regra simplificada:
 
-- Stop dangerous action: prefer pre-events
-- Record what happened: prefer post-events
-- Opening checks or closing summaries: session events
+- Quer impedir ação perigosa: priorize eventos anteriores
+- Quer registrar o que aconteceu: priorize eventos posteriores
+- Quer checagem de abertura ou resumo de fechamento: eventos de sessão
 
-That covers most configuration cases.
+Isso cobre a maioria dos cenários de configuração.
 
-## Minimal configuration approach
+## Ideia de configuração mínima
 
-1. Pick one event (start with `post_tool` read-only logging)
-2. Script stdin receives JSON payload (tool name, argument summary, working directory)
-3. Exit code `0` pass, non-`0` per policy block/warn
-4. Unit test: run script with fixed JSON fixture
+1. Escolha um evento (comece por log só leitura em `post_tool`)
+2. Script recebe payload JSON no stdin (nome da ferramenta, resumo de argumentos, diretório de trabalho)
+3. Código de saída `0` = ok; diferente de `0` = block/warn conforme a política
+4. Unit test: rode o script com fixture JSON fixa
 
-Decide whether you are blocking or recording, then pick the event.
+Primeiro deixe claro se quer barrar ou registrar; depois decida em qual evento o Hook deve pendurar.
 
-Full examples: [Hook configuration examples](/skills/hooks/hooks-examples/).
+Exemplos completos: [Exemplos de configuração de Hook](/skills/hooks/hooks-examples/).
 
-## Common mistakes
+## Erros comuns
 
-- Blocking in `post_tool` what should block in `pre_tool` (side effects already happened)
-- LLM or slow network inside Hook, killing interactivity
-- Payload contains secrets written to plaintext logs
-- Hook not versioned—teammate environments diverge
+- Bloquear em `post_tool` o que deveria estar em `pre_tool` (efeito colateral já ocorreu)
+- Chamar LLM ou rede lenta dentro do Hook — mata a interação
+- Payload do evento com segredo escrito em log em texto claro
+- Hook sem versionamento — ambientes da equipe inconsistentes
 
-## Security boundaries
+## Limites de segurança
 
-- Hook script permissions should be ≤ monitored Agent permissions
-- See [recommended team Hook use cases](/skills/hooks/hooks-overview/#recommended-team-use-cases) and [threat model](/guide/team-enterprise/security/threat-model/)
+- Permissão do script Hook deve ser ≤ Permissão do Agent monitorado
+- Veja [casos de equipe Hook](/skills/hooks/hooks-overview/#casos-recomendados-para-a-equipe) e [modelo de ameaça](/guide/team-enterprise/security/threat-model/)
 
-## Acceptance checklist
+## Checklist de aceite
 
-- [ ] Can name your team's most common event and why
-- [ ] Readable error on failure
-- [ ] Script has unit tests or fixtures
-- [ ] Config in code review
+- [ ] Consegue citar o evento mais usado da equipe e o motivo
+- [ ] Em falha, mensagem de erro legível
+- [ ] Script com unit test ou fixture
+- [ ] Configuração entra na revisão de código
 
-## References
+## Fontes
 
-- OpenAI Codex Hooks reference
+- Referência OpenAI Codex Hooks
 - stormzhang `22-hooks.md`
 - KimYx0207 CX-08
 
 ---
 
 **Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Core content is Hook event grouping, payload, and failure strategy—high-churn implementation detail; official public material as of 2026-07-26 is insufficient to mark stable.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** CLI / App (conforme a versão)  
+**Nota de revisão:** O núcleo desta página é agrupamento de eventos Hook, payload e estratégia de falha — detalhes de implementação de alta volatilidade; o material oficial público em 2026-07-26 não basta para marcar como estável.  
+**Última Verificação:** 2026-07-26

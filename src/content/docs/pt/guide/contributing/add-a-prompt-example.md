@@ -1,50 +1,50 @@
 ---
-title: Add a Prompt Example
-description: Submit reproducible prompts to examples/prompts with metadata and acceptance criteria.
+title: Adicionar um exemplo de Prompt
+description: Submeter Prompts reproduzíveis em examples/prompts, com metadados e critérios de aceitação.
 locale: pt
-source_locale: en
-source_revision: 48a7e2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Prompt examples live at repo root [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), linked from handbook pages. Design spec: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Os exemplos de Prompts ficam na raiz do repositório em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), referenciados pelo corpo do manual. Normas de desenho: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
 
-## What this page covers
+## Conteúdo desta página
 
-Common blockers:
+Pontos onde se costuma ficar preso:
 
-- What makes a prompt “worth including”
-- What format lets others reuse it
+- Não saber «que tipo de Prompt vale a pena incluir»
+- Não saber em que formato escrever para outros reutilizarem diretamente
 
-This page explains how to submit something **others can try, learn from, and reproduce**.
+Esta página resolve como submeter um exemplo que **outros possam mesmo experimentar, aprender e reproduzir**.
 
-## Inclusion criteria
+## Critérios de inclusão
 
-We collect reproducible examples with context, boundaries, and acceptance criteria—not inspiration snippets.
+Aqui entram «exemplos reproduzíveis com Contexto, limites e critérios de aceitação» — não fragmentos de inspiração.
 
-A solid example answers:
+Um exemplo de Prompt aceitável responde pelo menos a três coisas:
 
-- When to use it
-- Exactly what to say
-- How to judge success afterward
+- Quando usar
+- Como dizer em concreto
+- Depois de usar, como julgar se correu bem
 
-Clever one-liners without prerequisites or verification are notes—not examples.
+Se for só uma frase que parece inteligente, sem premissas nem aceitação, parece mais uma nota do que um exemplo.
 
-## File naming
+## Nomeação de ficheiros
 
 ```text
 examples/prompts/<category>/<slug>.md
 ```
 
-`category` examples: `development`, `research`, `meta-workflows`, `team`.
+Exemplos de `category`: `development`, `research`, `meta-workflows`, `team`.
 
-## Required metadata (YAML frontmatter)
+## Metadados obrigatórios (YAML frontmatter)
 
 ```yaml
 ---
 id: prompt.fix-bug-with-tests
-title: Fix Bug and Add Tests
+title: Corrigir Bug e acrescentar testes
 content_type: prompt
 audience: [beginner, developer]
 difficulty: beginner
@@ -55,72 +55,82 @@ last_verified: YYYY-MM-DD
 ---
 ```
 
-## Required body sections
+## Secções obrigatórias no corpo
 
-1. **Use case**
-2. **Prerequisites** (permissions, branch, context files)
-3. **Recommended prompt** (full, copy-paste ready)
-4. **Acceptance criteria** (checklist, objectively verifiable)
-5. **Common failure modes**
-6. **Related handbook pages** (links to `src/content/docs/`)
+1. **Cenário de uso**
+2. **Preparação** (Permissões, branch, ficheiros de Contexto)
+3. **Prompt recomendado** (completo e copiável)
+4. **Critérios de aceitação** (checklist, verificável objetivamente)
+5. **Formas comuns de falhar**
+6. **Páginas relacionadas do manual** (ligações a `src/content/docs/`)
 
-Optional: minimal variant, teaching breakdown, replaceable variables.
+Opcional: versão mínima, desmontagem pedagógica, variáveis substituíveis.
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### Do not bury the prompt
+### Não disperse o essencial
 
-Background and theory are fine—but put the **copy-paste prompt** up front, then prerequisites and failures, then explanation.
+Alguns contribuidores escrevem muito fundo, teoria e extensões, e o Prompt realmente copiável fica escondido no meio.
 
-### Used once ≠ complete example
+Mais estável:
 
-Readers do not share your implicit assumptions. State:
+- Escreva primeiro o Prompt recomendado completo
+- Depois premissas, variáveis e formas de falhar
+- Por fim conteúdo explicativo
 
-- Which product entry
-- Required files, screenshots, or context
-- Whether edits, commands, or network are assumed allowed
+### Usar uma vez ≠ exemplo completo
 
-### No real secrets in examples
+Você sabe que premissas tinha em mente; o leitor não.
 
-Real tokens, accounts, internal URLs, or customer data do not belong in a public repo.
+Escreva essas premissas, por exemplo:
 
-Teach the method—not your production environment.
+- A que entrada de produto se aplica
+- Que ficheiros, ecrãs ou Contexto precisa
+- Se por defeito permite alterar ficheiros, correr comandos, ligar à rede
 
-## Acceptance criteria example
+### Não meta informação sensível real no exemplo
+
+Se o exemplo tiver Tokens reais, contas, ligações internas ou dados de clientes, não serve para repositório público.
+
+O exemplo ensina o método — não expõe o seu ambiente de produção.
+
+## Exemplo de critérios de aceitação
 
 ```markdown
-## Acceptance criteria
+## Critérios de aceitação
 
-- [ ] Previously failing test passes
-- [ ] Agreed test suite passes
-- [ ] Diff only touches task-related files
-- [ ] No `git push` executed
+- [ ] O teste que falhava passa
+- [ ] A suite de testes do âmbito acordado passa
+- [ ] O diff só envolve ficheiros relacionados com a Tarefa
+- [ ] Não se executou git push
 ```
 
-## Quality bar
+## Limiar de qualidade
 
-- Clear goal and definition of done
-- Permission and security boundaries stated
-- No real keys or PII
-- `verified` status needs [independent verification](/guide/contributing/verify-technical-content/)
+- Objetivo e definição de concluído claros
+- Explicação de Permissões e limites de segurança
+- Sem segredos reais nem PII
+- Estado `verified` exige [Verificação independente](/guide/contributing/verify-technical-content/)
 
-## Submission flow
+## Fluxo de submissão
 
-1. Identify the real task class this solves
-2. Write a copy-paste prompt
-3. State minimum prerequisites and boundaries
-4. Define what success looks like
-5. Check for secrets and correct directory
+Ordem mais estável:
 
-## PR checklist
+1. Determine que tipo de Tarefa real este exemplo resolve
+2. Escreva uma versão de Prompt que outros possam copiar diretamente
+3. Dê as precondições e limites mínimos necessários
+4. Clarifique «o que conta como sucesso»
+5. Por fim verifique fugas de informação sensível e o diretório certo
 
-- [ ] New file path indexed in `examples/README.md` if index is maintained
-- [ ] At least one case or workflow page links to the example (optional but recommended)
+## Verificação do PR
 
-A good prompt example lets someone reproduce and get a similar outcome.
+- [ ] O caminho do ficheiro novo está no índice de `examples/README.md` (se o índice for mantido)
+- [ ] Pelo menos uma página de caso ou fluxo liga a este exemplo (opcional mas recomendado)
+
+Um bom exemplo de Prompt permite a outros reproduzir diretamente e obter um resultado próximo.
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Base de verificação:** Revista item a item com o diretório atual `examples/`, o frontmatter dos exemplos, a forma de indexação e o fluxo de contribuição; os requisitos da página alinham-se com a estrutura atual de ligações de casos/fluxos e não dependem de comportamentos voláteis de um cliente Codex.  
+**Última verificação:** 2026-07-26

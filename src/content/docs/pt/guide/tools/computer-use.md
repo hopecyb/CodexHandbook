@@ -1,142 +1,148 @@
 ---
 title: Computer Use
-description: Advanced GUI control via screen and input devices—use cases, risks, and approvals.
+description: Capacidade avançada de operar a GUI via ecrã e dispositivos de entrada — cenários, riscos e Aprovação.
 locale: pt
-source_locale: en
-source_revision: 9d8ea0c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Computer Use** lets the Agent view the screen, move the pointer, and type—beyond browser or terminal alone. Most powerful capability; **highest risk and approval requirements**.
+**Computer Use** permite ao Agent ver o ecrã, mover o ponteiro e escrever texto como uma pessoa — não se limita ao browser ou ao terminal. É a capacidade mais forte e também a que exige **mais risco e Aprovação**.
 
-Computer Use operates at screen, mouse, and keyboard layer—different from browser and terminal tools—so enable it carefully.
+O Computer Use atua na camada de ecrã, rato e teclado; não é a mesma classe que a Ferramenta de browser ou o terminal — por isso deve ativar-se com mais cuidado.
 
-## What's covered
+## Conteúdo desta página
 
-- How Computer Use differs from browser and terminal
-- Tasks worth enabling it for
-- Safeguards for individuals and teams
+- Divisão de papéis entre Computer Use, browser e terminal
+- Que Tarefas valem a pena ativar
+- Como pessoas e equipas se protegem
 
-## Capability boundaries
+## Limites de capacidade
 
-| Layer | Typical ability |
+| Camada | Capacidades típicas |
 |---|---|
-| Terminal | Shell, scripts, CLI programs |
-| Browser | Web DOM, limited interaction |
-| Computer Use | Desktop apps, system dialogs, multi-window workflows |
+| Terminal | Shell, scripts, programas CLI |
+| Browser | DOM da página web, interação limitada |
+| Computer Use | Aplicações de ambiente de trabalho, diálogos do sistema, fluxos multi-janela |
 
-## How it differs
+## Em que difere das outras Ferramentas
 
-Think of it as:
+Pode distinguí-lo assim:
 
-- Acting across the whole desktop
-- Switching between multiple windows
-- Clicking real buttons and system dialogs
+- Trabalhar em todo o ambiente de trabalho
+- Alternar entre várias janelas
+- Clicar em botões reais e diálogos do sistema
 
-So the surface area of UI and information it can touch is usually larger.
+Por isso o âmbito de interfaces e informação a que acede costuma ser maior.
 
-Good for:
+Adequado:
 
-- Repetitive click flows in demo software without APIs (under supervision)
-- Copying data across apps (when compliant)
-- Verifying desktop App behavior itself
+- Fluxos de cliques repetidos em software de demonstração sem API (com a sua supervisão)
+- Copiar dados entre aplicações (com conformidade)
+- Validar o comportamento da própria App de ambiente de trabalho
 
-Poor fit for:
+Inadequado:
 
-- Everyday coding (IDE + terminal is faster)
-- Unattended production operations
-- Bypassing security software or DRM
+- Escrever código no dia a dia (IDE + terminal é mais eficiente)
+- Operações de produção sem supervisão
+- Contornar software de segurança ou DRM
 
-## Common misconceptions
+## Mal-entendidos habituais
 
-### 1. Stronger capability = default choice?
+### 1. Mais capacidade = prioridade?
 
-Worth it mainly when:
+Só nestes casos o valor fica mais claro:
 
-- The task truly involves desktop GUI
-- No lighter, safer tool can do the job
+- A Tarefa envolve mesmo GUI de ambiente de trabalho
+- Não há Ferramenta mais leve e segura que a complete
 
-### 2. Watching means low risk?
+### 2. Se eu estiver a olhar, não há risco?
 
-Human presence helps, but you can still:
+Ter alguém ao lado é mais seguro, mas ainda pode ocorrer:
 
-- Mis-click confirm dialogs
-- Open windows that should stay closed
-- Pull sensitive on-screen info into the workflow
+- Clicar por engano numa caixa de confirmação
+- Abrir uma janela que não se deveria
+- Levar informação sensível do ecrã para o fluxo
 
-### 3. Replaces all GUI automation?
+### 3. Substitui toda a automação de GUI?
 
-Better for ad hoc help, flow verification, and API-less GUI steps—not stable long-running unattended production automation.
+Serve melhor para assistência temporária, validação de fluxos e passos de GUI sem API — não como automação de produção estável, de longo prazo e sem supervisão.
 
-## Risk model
+## Modelo de risco
 
-Computer Use is close to **handing keyboard and mouse to the Agent**:
+Computer Use quase equivale a **entregar teclado e rato ao Agent**:
 
-- Can open mail, chat, file manager
-- May mis-click confirmation dialogs
-- Screen may show sensitive notifications
+- Pode abrir correio, chat, gestor de ficheiros
+- Pode clicar por engano em diálogos de confirmação
+- O ecrã pode conter informação sensível nas notificações
 
-Required reading: [permissions and approvals](/guide/foundations/permissions-and-approvals/), [sandbox and network](/guide/foundations/sandbox-and-network/)
+Leitura obrigatória: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/), [Sandbox e rede](/guide/foundations/sandbox-and-network/)
 
-## When to consider it
+## Como decidir se deve usá-lo
 
-Usually unnecessary for:
+Se o objetivo for só:
 
-- Editing code
-- Running tests
-- Viewing web pages
-- Research
+- Alterar código
+- Correr testes
+- Ver páginas web
+- Consultar material
 
-Consider when you must:
+Em geral não precisa de Computer Use primeiro — Ferramentas mais leves bastam.
 
-- Operate desktop applications
-- Span multiple GUI windows
-- Reach UI neither browser nor terminal can
+Considere ativá-lo se a Tarefa for:
 
-## Recommended usage
+- Tem de operar uma aplicação de ambiente de trabalho
+- Tem de atravessar várias janelas GUI
+- Tem de tratar interfaces que browser e terminal não alcançam
 
-1. **Dedicated environment**: VM or secondary user; no private windows on screen
-2. **Minimize task**: "Verify formula in Calculator" not "handle all my email"
-3. **Human in the loop**: stay visible; ready to interrupt
-4. **Recording/logs**: team retrospectives (recordings may contain sensitive data)
-5. **Post-task check**: filesystem, clipboard, open applications
+Aí vale a pena considerá-lo a sério.
 
-Enterprise may disable by default—follow managed policy.
+## Forma de uso recomendada
 
-## vs browser tool
+1. **Ambiente dedicado**: máquina virtual ou conta de utilizador secundária; sem janelas privadas no ecrã
+2. **Tarefa mínima**: «verificar a fórmula no Calculator», não «trate todos os meus e-mails»
+3. **Humano no ciclo**: mantenha visível; esteja pronto a interromper
+4. **Gravação/logs**: para retrospectiva da equipa (atenção: a gravação também contém informação sensível)
+5. **Verificação no fim**: sistema de ficheiros, área de transferência, aplicações abertas
 
-```text
-Only need a web page?        → browser tool
-Need apps outside IDE?       → Computer Use (more caution)
-Only code and tests?         → terminal + file tools
-```
+Ambientes empresariais podem desativar por defeito; a política gerida manda.
 
-See [tool selection](/guide/tools/tool-selection/)
-
-## Example prompt
+## Escolha face à Ferramenta de browser
 
 ```text
-Only operate Calculator and the local test app. Do not open mail, chat, file manager, or any production admin UI.
-If a system confirmation appears, stop and explain before continuing.
+Só precisa de ver a página web?     → Ferramenta de browser
+Operar aplicações fora do IDE?      → Computer Use (com mais cautela)
+Só alterar código e correr testes?  → Terminal + Ferramentas de ficheiros
 ```
 
-## Common mistakes
+Ver [Seleção de Ferramentas](/guide/tools/tool-selection/)
 
-- Computer Use on main desktop with untrusted projects
-- Continuing while 2FA, banking, or customer data is on screen
-- Treating GUI automation as full test strategy
+## Redação aplicável diretamente
 
-## Acceptance checklist
+Pode escrever assim:
 
-- [ ] Enabled only in isolated environment
-- [ ] Prompt lists allowed apps and prohibitions
-- [ ] Post-task check: no unexpected files/network
-- [ ] Org policy allows the capability
+```text
+Só permitir operar Calculator e a aplicação de teste local; não abrir correio, chat, gestor de ficheiros nem qualquer backend de produção.
+Se aparecer uma caixa de confirmação do sistema, pare primeiro, explique e só depois continue.
+```
+
+## Erros habituais
+
+- Correr Computer Use de projetos não fiáveis no ambiente de trabalho principal
+- Continuar a Tarefa com 2FA, banco ou dados de clientes no ecrã
+- Tratar automação de GUI como estratégia completa de testes
+
+## Lista de verificação
+
+- [ ] Ativado só em ambiente isolado
+- [ ] O Prompt declara aplicações permitidas e proibições
+- [ ] Após a Tarefa, verificar ausência de ficheiros/ligações de rede inesperadas
+- [ ] A política da organização permite esta capacidade
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Codex (version, region, and permission dependent)  
-**Verification basis:** OpenAI Help Center materials on Codex plans and desktop capabilities still list Computer Use; Business release notes confirm Codex Computer Use on Windows from 2026-05-29. This page summarizes risk model, use cases, and approval boundaries—not claiming universal default availability.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / Codex (conforme versão, região e Permissões)  
+**Base de verificação:** Os materiais atuais do OpenAI Help Center sobre planos Codex e capacidades de ambiente de trabalho continuam a tratar Computer Use como funcionalidade relacionada com o Codex; as notas de lançamento Business também confirmam suporte a Computer Use no Windows a partir de 2026-05-29. Este texto só resume o modelo de risco, cenários adequados e limites de Aprovação, sem declarar disponibilidade predefinida em todas as plataformas ou contas.  
+**Última verificação:** 2026-07-26

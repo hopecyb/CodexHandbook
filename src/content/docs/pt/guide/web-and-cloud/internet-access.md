@@ -1,144 +1,144 @@
 ---
-title: Internet access
-description: Cloud outbound policy, dependency installs, and data-exfiltration risk—how to open only what you need.
+title: Acesso à Internet
+description: Política de saída do Ambiente Cloud, instalação de dependências e risco de fuga de dados — abrir o necessário e manter o limite.
 locale: pt
-source_locale: en
-source_revision: f513d7f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Cloud tasks often need **outbound network access**: pulling npm/PyPI packages, calling APIs, cloning submodules. At the same time, internet access is a high-risk surface for **data exfiltration**—an Agent might send repo or Secret content to external services.
+As Tarefas Cloud costumam precisar de **saída à rede**: descarregar pacotes npm/PyPI, chamar APIs, clonar submódulos. Ao mesmo tempo, o acesso à Internet é uma superfície de alto risco de **fuga de dados**, porque o Agent também pode levar conteúdo do repo ou de Secrets a serviços externos.
 
-## What's covered
+## Conteúdo
 
-- Whether Cloud environments can reach the internet by default
-- When to allow access and how to minimize exposure
-- How this fits with local sandbox and Secrets policy
+- Se o Ambiente Cloud pode aceder à Internet por omissão
+- Quando abrir e como minimizar a exposição
+- Combinação com Sandbox local e política de Secrets
 
-## Basic boundary
+## Limite básico
 
-"Needs network" does not mean "open everything."
+«Precisa de rede» não significa «deve ter rede sem limites».
 
-Many people frame it as binary:
+Muita gente vê isto como uma disjuntiva:
 
-- Either no network at all
-- Or full access for convenience
+- Ou não há rede de todo
+- Ou, por comodidade, se abre tudo
 
-The usual approach is to grant only what the task needs—nothing extra.
+O mais habitual é dar só a capacidade de rede que a Tarefa precisa, não a mais.
 
-## Two layers of "network"
+## Duas camadas de «rede»
 
-| Layer | Meaning |
+| Camada | Significado |
 |---|---|
-| Cloud environment outbound | Whether the remote machine can reach the public internet or internal APIs |
-| Agent tool networking | In-session web search, curl, etc. (varies by client) |
+| Saída do Ambiente Cloud | Se a máquina remota pode aceder à Internet pública ou APIs internas |
+| Ferramentas de rede do Agent | web search, curl, etc. na sessão (a política varia por cliente) |
 
-This page focuses on **Cloud environments**; general concepts: [sandbox and network](/guide/foundations/sandbox-and-network/).
+Esta página centra-se no **Ambiente Cloud**; conceitos gerais em [Sandbox e rede](/guide/foundations/sandbox-and-network/).
 
-## Why local working does not imply Cloud works
+## Que local possa não implica que o Cloud possa
 
-Locally you might succeed because:
+Em local podes ter rede porque:
 
-- You are already logged into a service on your machine
-- You have `.npmrc`, SSH keys, or proxy config locally
-- You are on the company VPN
+- Já iniciaste sessão em algum serviço
+- Tens `.npmrc`, chave SSH ou proxy local
+- Estás na VPN da empresa
 
-Cloud does not inherit those by default. "Works with `npm install` locally" does not imply Cloud can do the same.
+O Cloud não herda essas condições por omissão. Assim, «em local posso `npm install`» não implica «no Cloud também».
 
-## Typical scenarios needing outbound access
+## Cenários típicos que precisam de saída
 
-- Install dependencies: `npm install`, `pip install`, `go mod download`
-- Pull from private registries (needs [Secrets](/guide/web-and-cloud/secrets-and-variables/))
-- Call third-party APIs (payments, maps, LLM gateways, etc.)
-- Clone submodules or download build assets
+- Instalar dependências: `npm install`, `pip install`, `go mod download`
+- Puxar de um registry privado (faz falta [Secrets](/guide/web-and-cloud/secrets-and-variables/))
+- Chamar APIs de terceiros (pagamentos, mapas, gateway LLM, etc.)
+- Clonar submódulos ou descarregar recursos de build
 
-## Decision principle
+## Princípio de juízo
 
-If a network action is not required for this task, do not open it first.
+Se uma ação de rede não for imprescindível para completar esta Tarefa, não a abras primeiro.
 
-Examples:
+Por exemplo:
 
-- Package registries for installs: usually required
-- Random websites or extra downloads: usually not
+- Aceder à origem de pacotes para instalar dependências costuma ser necessário
+- Aceder a sites irrelevantes ou descarregar recursos extra «de passagem» costuma não o ser
 
-## Recommended strategy
+## Estratégia recomendada
 
-### Default tight, open on demand
+### Por omissão fechado; abrir conforme a necessidade
 
-1. Confirm current network policy in [Cloud environments](/guide/web-and-cloud/cloud-environments/)
-2. List **required domains** (package managers, company APIs)—avoid "open entire internet"
-3. In `AGENTS.md`, document allowed URLs and forbid putting keys in prompts
-4. Validate with a test task: dependencies install; unrelated sites blocked (if fine-grained policy exists)
+1. No [Ambiente Cloud](/guide/web-and-cloud/cloud-environments/), confirma a política de rede atual
+2. Lista os **domínios imprescindíveis** (gestor de pacotes, API da empresa); evita «abrir toda a rede»
+3. Em `AGENTS.md` indica: que URLs se permitem e proíbe escrever secrets no Prompt
+4. Valida com uma Tarefa de teste: pode instalar dependências, mas não sites irrelevantes (se o produto suporte política fina)
 
-### Split work with Secrets
+### Divisão com Secrets
 
-| Content | Where |
+| Conteúdo | Onde |
 |---|---|
-| API keys, tokens | Cloud Secrets—not in the repo |
-| Allowed API base URLs | Docs or env var names (not values) |
-| Proxy / mirror URLs | Team standard config |
+| API key, token | Cloud Secrets; não no repo |
+| Base URL de API permitida | Documentação ou nome de variável de ambiente (não o valor) |
+| Proxy / URL de mirror | Configuração padrão da equipa |
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Network access is only convenience, not security
+### 1. Poder sair à rede é «só mais cómodo», não um tema de segurança
 
-Once online, it is simultaneously:
+Assim que há rede, converte-se ao mesmo tempo em:
 
-- A dependency download problem
-- A credential usage problem
-- A data egress problem
+- Problema de download de dependências
+- Problema de uso de credenciais
+- Problema de saída de dados
 
-### 2. Safe as long as Secrets are not in the prompt
+### 2. «Se não colar o Secret no Prompt, estou totalmente a salvo»
 
-If the environment can read Secrets and send results externally, risk remains.
+Se o ambiente puder ler o Secret e além disso puder enviar resultados a um serviço externo, o risco continua a existir.
 
-### 3. Web search equals Cloud outbound
+### 3. web search e saída Cloud são a mesma coisa
 
-One is remote-environment networking; the other is in-session tool networking—do not mix them when debugging.
+Uma é capacidade de rede ao nível de ambiente remoto; a outra, ao nível de Ferramenta de sessão. Não as mistures ao diagnosticar.
 
-### Data exfiltration safeguards
+### Proteção perante fuga de dados
 
-- Do not put production database connection strings in task descriptions
-- Watch for attempts to send `.env` or key files externally
-- For untrusted repos on first Cloud run, try **no outbound or read-only sandbox**
+- Não ponhas a cadeia de ligação a BD de produção na descrição da Tarefa
+- Revê se o Agent tenta enviar `.env` ou conteúdo de ficheiros de secrets para o exterior
+- Na primeira Tarefa Cloud de um repo não fiável, **proíbe a saída ou experimenta em Sandbox só de leitura**
 
-## Aligning with local development
+## Alinhamento com o desenvolvimento local
 
-Local `curl` working does not mean Cloud can—common "red in Cloud" causes:
+Que local possa `curl` não implica que o Cloud possa — causas habituais de «Cloud vermelho»:
 
-| Symptom | Possible cause |
+| Fenómeno | Possível causa |
 |---|---|
-| Dependency install fails | Outbound blocked or registry needs auth |
-| Submodule won't clone | SSH key not injected via Secrets |
-| Internal API timeout | Cloud not on company VPN |
+| Falha ao instalar dependências | Saída proibida ou registry que requer autenticação |
+| Submódulo que não desce | Chave SSH não injetada em Secrets |
+| Timeout de API interna | Cloud não está na VPN da empresa |
 
-Mitigations: HTTPS + token, reachable mirrors, or document that Cloud cannot reach internal resources.
+Direção de solução: HTTPS + token, mirror alcançável, ou documentar que o Cloud não suporta recursos de intranet.
 
-## Common mistakes
+## Erros frequentes
 
-- Globally opening outbound for convenience, then running unbounded tasks on repos with Secrets
-- Assuming Cloud shares your laptop's `.npmrc` (not pushed or not in Secrets)
-- Confusing "needs network" with "needs web search tool"
-- Only discovering missing local login state when install fails
+- Abrir toda a saída «por comodidade» e correr Tarefas sem limite num repo de produção com Secrets
+- Assumir que o Cloud partilha o mesmo `.npmrc` que o portátil (sem push ou sem Secret)
+- Confundir «precisa de rede» com «precisa da Ferramenta web search»
+- Dar-se conta só ao falhar a instalação de que o Cloud não tem o estado de sessão local
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Listed outbound domains/services required for Cloud tasks on this repo
-- [ ] Secrets configured and not committed to Git
-- [ ] Full install + test passed once on a test branch
-- [ ] Team knows what data must never appear in networked prompts
+- [ ] Listar domínios/serviços de saída imprescindíveis para Tarefas Cloud desse repo
+- [ ] Secrets configurados e não commitados a Git
+- [ ] Num branch de teste, uma instalação + teste completo correto
+- [ ] A equipa sabe que dados não devem aparecer em Prompts com rede
 
-## References
+## Fontes de referência
 
-- OpenAI Codex Cloud network and security docs
+- Documentação de rede e segurança OpenAI Codex Cloud
 - stormzhang `10-cloud.md`, `19-security.md`
 - KimYx0207 CX-10, CX-11
-- codex.bozhouai.com Cloud sections
+- Capítulos Cloud de codex.bozhouai.com
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers default Cloud outbound behavior, domain policy, and fine-grained network controls—all highly product- and org-dependent; without strong current official network policy docs, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** Cloud  
+**Nota de revisão:** Esta página trata a capacidade de saída por omissão do Ambiente Cloud, a política de domínios e o controlo fino de rede, que dependem muito do produto e da configuração de segurança da organização; sem documentação oficial vigente de política de rede suficientemente sólida, não convém `verified`.  
+**Última verificação:** 2026-07-26

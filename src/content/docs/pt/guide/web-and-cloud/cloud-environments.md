@@ -1,154 +1,152 @@
 ---
-title: Cloud environments
-description: What Codex Cloud remote run environments include, their lifecycle, and team configuration essentials.
+title: Ambiente Cloud
+description: Composição, ciclo de vida e pontos de configuração de equipa do ambiente remoto de execução do Codex Cloud.
 locale: pt
-source_locale: en
-source_revision: a893a77
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-A **Cloud environment** is the worker machine Codex uses when running tasks remotely.
+O «Ambiente Cloud» é a máquina de trabalho que o Codex usa ao executar Tarefas em remoto.
 
-It directly affects outcomes—including the OS, language versions, toolchain, network policy, and which repository branch is checked out. This page mainly answers a common question:
+Afeta diretamente o resultado: sistema operativo, versões de linguagem, toolchain, política de rede e que branch do repo recebe. Esta camada responde sobretudo a:
 
-> **Why does it work locally but fail in Cloud?**
+> **Porque em local corre e no Cloud falha?**
 
-## What's covered
+## Conteúdo
 
-- How Cloud environments differ from your local dev machine
-- How environments bind to GitHub repos and branches
-- How teams maintain reproducible Cloud configuration
+- Diferenças entre o Ambiente Cloud e a máquina de desenvolvimento local
+- Como o ambiente se liga ao repo e ao branch de GitHub
+- Como a equipa mantém uma configuração Cloud reproduzível
 
-## Start with these three points
+## Olha primeiro estas três coisas
 
-Keep these in mind first:
+- O Cloud não «lê todo o teu computador atual»; só vê o que há no ambiente remoto
+- Ao correr a Tarefa, o Cloud também enfrenta dependências, versões e rede
+- O que não fizeste commit nem push em local, o Cloud por omissão não vê
 
-- Cloud does not "read everything on your current computer"—it only sees what exists in the remote environment
-- Cloud tasks still face real-world constraints: dependencies, version mismatches, and whether the network can reach what they need
-- Anything you have not committed or pushed locally is invisible to Cloud by default
+Podes pensar o Cloud como «mudar de máquina para trabalhar».
 
-Think of Cloud as switching to a different machine to do the work.
-
-## Core concepts
+## Conceito central
 
 ```text
-GitHub repo (a branch)
+Repo de GitHub (algum branch)
         ↓ clone / checkout
-Cloud environment instance (container or VM—product-dependent)
+Instância de Ambiente Cloud (contentor ou VM, conforme o produto)
         ↓
-Agent runs the task: install deps, change code, test, push
+O Agent executa a Tarefa: instalar dependências, alterar código, testar, push
 ```
 
-Use together with [Connect GitHub](/guide/web-and-cloud/connect-github/); the environment **cannot** access unpushed commits on your laptop.
+Combina com [Ligar o GitHub](/guide/web-and-cloud/connect-github/); o ambiente **não** pode aceder a commits do teu portátil sem push.
 
-## Local vs Cloud
+## Diferenças entre local e Cloud
 
-- **Local tasks**: Codex works around your current machine, in front of you
-- **Cloud tasks**: Codex runs on a remote machine you delegate to
+- **Tarefa local**: o Codex trabalha à tua frente, em torno do teu computador atual
+- **Tarefa Cloud**: envias o Codex a uma máquina remota
 
-That gap is a common source of confusion when you first use Cloud:
+Daí vêm as confusões habituais ao usar Cloud pela primeira vez:
 
-- "Why can't it see the file I just changed locally?"
-- "Why doesn't it have that globally installed tool on my machine?"
-- "Why can't it reach the database I run locally?"
+- «Porque não vê o ficheiro que acabei de alterar em local?»
+- «Porque não tem a Ferramenta instalada globalmente na minha máquina?»
+- «Porque não liga à base de dados que tenho aberta em local?»
 
-Most of the time, **that remote machine simply does not have those things**—the issue is the environment itself.
+Na maioria dos casos, **essa máquina remota simplesmente não tem essas coisas**; o problema está no ambiente.
 
-## What an environment includes (conceptual)
+## O que o ambiente inclui (camada conceptual)
 
-| Component | Description |
+| Componente | Explicação |
 |---|---|
-| Base image | OS, common build tools |
-| Runtime | Node, Python, Go, etc. (depends on image and task) |
-| Working directory | Path to the cloned repo |
-| Network policy | Whether outbound access is allowed and which domains |
-| Credential injection | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
+| Imagem base | OS, Ferramentas de build habituais |
+| Runtime | Node, Python, Go, etc. (conforme imagem e Tarefa) |
+| Diretório de trabalho | Caminho do repo após o clone |
+| Política de rede | Se se permite saída, a que domínios |
+| Injeção de credenciais | [Secrets e variáveis](/guide/web-and-cloud/secrets-and-variables/) |
 
-For concrete image lists and customization, see [official Cloud documentation](https://developers.openai.com/codex).
+Lista concreta de imagens e personalização conforme a [documentação oficial Cloud](https://developers.openai.com/codex).
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Assuming Cloud automatically inherits your local environment
+### 1. Acreditar que o Cloud herda automaticamente o teu ambiente local
 
-It does not.
+Não.
 
-Node, Python, Homebrew, Chrome, or database clients on your machine do not appear in Cloud just because they exist locally.
+Node, Python, Homebrew, Chrome ou o cliente de BD que tenhas em local não aparecem no Cloud «porque os tenhas tu».
 
-### 2. Assuming pushing the repo means everything is ready
+### 2. Acreditar que fazer push do repo basta para que tudo esteja pronto
 
-Repository code is only the starting point. Whether a task succeeds also depends on:
+O código do repo é só o ponto de partida; o sucesso também depende de:
 
-- How dependencies are installed
-- What commands start or test the project
-- Which Secrets are required
-- Whether network policy allows access to external resources
+- Como se instalam as dependências
+- Quais são os comandos de arranque ou teste
+- Que Secrets fazem falta
+- Se a política de rede permite recursos externos
 
-### 3. Assuming Cloud failure means Codex cannot do the task
+### 3. Acreditar que uma falha Cloud significa que o Codex «não serve»
 
-Many Cloud failures are misconfigured environments, not inability to complete the work.
+Muitas falhas Cloud são ambiente incompleto, não incapacidade de fazer a Tarefa.
 
-A sensible troubleshooting order:
+Ordem de diagnóstico:
 
-1. Is the repo and branch correct?
-2. Are dependencies and runtime versions correct?
-3. Are Secrets and network access available?
-4. Is the task prompt clear enough?
+1. Repo e branch corretos?
+2. Dependências e versões de runtime corretas?
+3. Secret e rede disponíveis?
+4. O Prompt da Tarefa está claro?
 
-## Recommended setup flow
+## Fluxo de configuração recomendado
 
-1. Complete your first Cloud task in a **test repo** and record dependency install commands
-2. Put repeatable steps in repo docs (`README`, `AGENTS.md`, or official environment config files)
-3. Configure [Secrets](/guide/web-and-cloud/secrets-and-variables/) (private registry, API keys)
-4. Confirm [internet access](/guide/web-and-cloud/internet-access/) policy meets security requirements
-5. Validate the issue → PR loop with the same environment template
+1. Completa a primeira Tarefa Cloud num **repo de teste** e regista os comandos de instalação de dependências
+2. Escreve os passos repetidos na documentação do repo (`README`, `AGENTS.md` ou o ficheiro de environment que o produto suporte)
+3. Configura [Secrets](/guide/web-and-cloud/secrets-and-variables/) (registry privado, API key)
+4. Confirma que a política de [acesso à Internet](/guide/web-and-cloud/internet-access/) cumpre os requisitos de segurança
+5. Com o mesmo template de ambiente, valida o ciclo issue → PR
 
-## When Cloud is a good fit
+## Quando convém Cloud
 
-Use this framing:
+Podes decidir assim:
 
-- Changing a project on your machine and wanting immediate feedback: start local
-- Long-running tasks, a shared team environment, or remote GitHub workflows: use Cloud
+- Só alteras o projeto na tua máquina e queres ver o resultado já: primeiro local
+- Queres deixar a Tarefa a correr, um ambiente unificado para a equipa ou ligar GitHub em remoto: então Cloud
 
-If your local workflow is not smooth yet, do not rush to turn every problem into a "Cloud configuration problem."
+Se o fluxo local ainda não está fluido, não precisas de converter o problema em «configuração Cloud» de golpe.
 
-## Aligning with local
+## Alinhamento com o ambiente local
 
-Avoid "green locally, red in Cloud":
+Para evitar «verde em local, vermelho no Cloud»:
 
-| Practice | Why |
+| Prática | Motivo |
 |---|---|
-| Pin dependency versions (lockfile) | Reproducible installs |
-| Document install and test commands in `AGENTS.md` | Agent does not guess |
-| Keep Node/Python versions close between CI and Cloud | Less version drift |
-| Use Git LFS or build-time downloads for large files | Controlled clone size |
+| Fixar versões de dependências (lockfile) | Instalação reproduzível |
+| Em `AGENTS.md`, escrever comandos de instalação e teste | O Agent não adivinha |
+| CI e Cloud com versões próximas de Node/Python | Menos deriva de versão |
+| Ficheiros grandes com Git LFS ou download no build | Tamanho de clone controlável |
 
-## Lifecycle
+## Ciclo de vida
 
-A typical Cloud task:
+Tarefa Cloud típica:
 
-1. **Create or reuse** an environment instance
-2. **Prepare**: clone, checkout branch, install dependencies
-3. **Execute**: Agent changes code, runs commands
-4. **Output**: branch push, PR, log artifacts
-5. **Destroy or recycle** (policy varies by product)
+1. **Criar/reutilizar** instância de ambiente
+2. **Preparar**: clone, checkout de branch, instalar dependências
+3. **Executar**: o Agent altera código e corre comandos
+4. **Entregar**: push de branch, PR, log artifact
+5. **Destruir ou recuperar** (a política varia conforme o produto)
 
-For long tasks, follow up via [desktop App notifications](/guide/desktop-app/notifications/) or mobile.
+As Tarefas longas podem seguir-se com [notificações da App de ambiente de trabalho](/guide/desktop-app/notifications/) ou a partir do telemóvel.
 
-## Common mistakes
+## Erros frequentes
 
-- Assuming Cloud pre-installs your entire private monorepo toolchain
-- Depending on `localhost` services (database, mock API) without providing them in the environment
-- Running unbounded tasks on a production repo on the first try
-- Misreading an environment problem as a model capability problem
+- Assumir que o Cloud já traz toda a toolchain do monorepo privado
+- Depender de serviços `localhost` (BD, mock API) sem os providenciar no ambiente
+- Na primeira tentativa, correr Tarefas sem limite no repo de produção
+- Confundir «problema de ambiente» com «problema de capacidade do modelo»
 
-## Security boundaries
+## Limites de segurança
 
-- Treat the environment as **semi-trusted**: still require code review and branch protection
-- Inject production database connection strings only via Secrets, never in prompts
-- Periodically clean up unused environment templates and Secrets
+- Trata o ambiente como **semi-fiável**: continua a ser preciso code review e proteção de branches
+- A cadeia de ligação a BD de produção só por Secrets, não no Prompt
+- Limpa periodicamente templates de ambiente e Secrets em desuso
 
-## References
+## Fontes de referência
 
 - OpenAI Codex Cloud environments
 - stormzhang `10-cloud.md`
@@ -156,7 +154,7 @@ For long tasks, follow up via [desktop App notifications](/guide/desktop-app/not
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers environment instance shape, lifecycle, templates, and GitHub branch binding—details we cannot fully confirm against strong current official documentation; it should not be marked `verified` until formal Cloud environment docs are available.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** Cloud  
+**Nota de revisão:** Esta página toca forma de instância, ciclo de vida, templates de ambiente e ligação a branches de GitHub — detalhes de implementação; falta documentação oficial vigente suficientemente sólida para os confirmar um a um; até completar materiais formais de ambiente Cloud, não convém `verified`.  
+**Última verificação:** 2026-07-26

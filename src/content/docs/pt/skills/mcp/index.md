@@ -1,50 +1,50 @@
 ---
 title: MCP
-description: Connect external tools and data sources—when MCP is actually needed.
+description: Páginas sobre conectar ferramentas e fontes de dados externas — quando MCP é realmente necessário.
 locale: pt
-source_locale: en
-source_revision: 73c3ee1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-`MCP` is a standard way for Codex to connect to external tools and data sources.
+`MCP` é um padrão de conexão: o Codex usa MCP para ligar ferramentas e fontes de dados externas.
 
-If Skill is more about "steps to do the work," MCP handles "bringing external tools in."
+Se Skill tende a «passos para fazer o trabalho», MCP trata de «trazer a ferramenta externa para dentro».
 
-## What this section covers
+## Conteúdo deste grupo
 
-- When you really need MCP
-- How to connect external systems without opening permissions too wide
-- What to check first when connection or calls fail
+- Em que situações MCP é realmente necessário
+- Como conectar sistemas externos sem abrir Permissão demais
+- Quando a conexão ou a chamada falha, quais classes de problema olhar primeiro
 
-## Recommended order
+## Ordem recomendada
 
-1. [MCP overview](/skills/mcp/mcp-overview/): Separate MCP from Skill and Plugin first
-2. [Connect an MCP server](/skills/mcp/connect-an-mcp-server/): Wire your first server by configuration
-3. [Debugging MCP](/skills/mcp/debugging-mcp/): When connection fails, tools missing, or permissions wrong
+1. [Visão geral de MCP](/skills/mcp/mcp-overview/): separe o papel de MCP, Skill e Plugin
+2. [Conectar um servidor MCP](/skills/mcp/connect-an-mcp-server/): conecte o primeiro servidor pela lógica de configuração
+3. [Depurar MCP](/skills/mcp/debugging-mcp/): o que fazer quando não conecta, a ferramenta não aparece ou a Permissão está errada
 
-## Common misconceptions
+## Equívocos comuns
 
-### 1. MCP makes Codex "all-powerful"
+### 1. Com MCP conectado, o Codex «faz tudo»
 
-What it can do depends entirely on which tools the MCP server exposes and what permissions those tools grant.
+O que ele pode fazer depende só das ferramentas que aquele servidor MCP expõe e de quanta Permissão essas ferramentas concedem.
 
-### 2. MCP is only a technical integration problem
+### 2. MCP é só um problema técnico de integração
 
-Once it touches real systems, it immediately becomes:
+Assim que conecta a sistemas reais, vira ao mesmo tempo:
 
-- A permissions problem
-- A data exposure problem
-- An audit problem
+- Problema de Permissão
+- Problema de exposição de dados
+- Problema de auditoria
 
-So this section covers not only "how to connect" but "how not to connect badly."
+Aqui não é só «como conectar», mas também «como não conectar de forma desordenada».
 
-MCP is worth it when the task must touch real systems outside the repo.
+MCP só vale a pena quando a Tarefa precisa tocar sistemas reais fora do repositório.
 
 ---
 
 **Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** This section covers how Codex currently connects MCP, config locations, and permission pairing; official public material has limited client detail—needs rewrite for current products.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE  
+**Nota de revisão:** Estas páginas envolvem a forma atual de integração MCP no Codex, o local de configuração e a combinação com Permissões; a documentação oficial pública cobre pouco o detalhe do cliente — precisa ser reescrita conforme o produto vigente.  
+**Última Verificação:** 2026-07-26

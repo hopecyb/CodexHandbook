@@ -1,170 +1,183 @@
 ---
-title: Environment Variables
-description: Purpose, layering, and security of Codex-related environment variables—supplement to configuration reference.
+title: Variáveis de ambiente
+description: Uso, camadas e segurança das variáveis de ambiente relacionadas com o Codex — índice complementar da referência de configuração.
 locale: pt
-source_locale: en
-source_revision: 041e8dd
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Environment variables sit at two extremes: “too low level” or “dump everything here.” Simply: they pass values into programs at runtime—especially secrets and switches.
+As «variáveis de ambiente» levam a dois extremos: ou se veem como algo muito de baixo nível, ou se acredita que toda a configuração cabe aí. Em claro: uma variável de ambiente é uma forma de entregar valores ao programa em tempo de execução, especialmente adequada para informação sensível e interruptores.
 
-Use them to **inject keys, override switches, adapt CI** without writing secrets into config files or Git. Conceptual index; exact names per [official docs](https://developers.openai.com/codex) and `codex --help`.
+Costumam usar-se para **injetar secrets, sobrescrever interruptores e adaptar CI**, sem escrever valores sensíveis no ficheiro de configuração ou em Git. Esta página é um índice conceptual; os nomes concretos de variáveis são definidos pela [documentação oficial](https://developers.openai.com/codex) e `codex --help`.
 
-## What this page covers
+## Conteúdo desta página
 
-- What belongs in env vars vs config files
-- User, project, Cloud Secrets, CI division
-- Common naming and leakage risks
+- O que deve ir em variáveis de ambiente e não no ficheiro de config
+- Como se dividem nível utilizador, nível projeto, Cloud Secrets e CI
+- Naming habitual e riscos de fuga
 
-## Decision rule
+## Critério de juízo
 
-Prefer environment variables if any apply:
+Se um valor cumprir qualquer destas, prioriza variável de ambiente:
 
-- Must not go in Git
-- Varies by machine, user, or environment
-- Only needed for this run
+- Não queres metê-lo em Git
+- Muda conforme máquina, utilizador ou ambiente
+- Só queres que aplique nesta execução
 
-Hence tokens, temporary switches, and CI injection often use env—not hardcoded files.
+Por isso tokens, interruptores temporários e injeções de CI costumam ir por variáveis de ambiente, não hardcoded.
 
-Config concepts: [Configuration reference](/guide/reference/configuration-reference/); Cloud: [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/).
+Conceitos de chaves de configuração: [Referência de configuração](/guide/reference/configuration-reference/); Cloud: [Secrets e variáveis](/guide/web-and-cloud/secrets-and-variables/).
 
-## Good fits for environment variables
+## O que encaixa em variáveis de ambiente
 
-| Type | Example intent | Do not |
+| Tipo | Intenção de exemplo | Não |
 |---|---|---|
-| Auth token | API key, GitHub PAT | Commit to repo |
-| Temporary switch | Debug log level | Long-term business config |
-| CI injection | Read-only review mode | Production write token |
-| MCP child process | Third-party service key | Plaintext in `AGENTS.md` |
+| Token de autenticação | API key, GitHub PAT | Fazer commit ao repo |
+| Interruptor temporário | Nível de log de depuração | Configuração de negócio a longo prazo |
+| Injeção de CI | Modo de revisão só de leitura | Token de escrita de produção |
+| Subprocesso MCP | Key de serviço de terceiros | Texto em claro em `AGENTS.md` |
 
-## Not a universal drawer
+## Não trates as variáveis de ambiente como uma gaveta universal
 
-Avoid “if it fits, env it.”
+Muitas equipas acabam em «se cabe, à variável de ambiente».
 
-- **Sensitive, runtime-specific**: environment variables
-- **Long-term team agreement**: config or docs
-- **Workflow rules**: `AGENTS.md` or Skill
+Mais estável é distinguir:
 
-Easier troubleshooting later.
+- **Valores sensíveis, diferenças em runtime**: variáveis de ambiente
+- **Acordos de equipa a longo prazo**: ficheiro de configuração ou documentação
+- **Regras de fluxo de trabalho**: `AGENTS.md` ou Skill
 
-## What `.env` is
+Assim, ao diagnosticar, também sabes melhor onde olhar.
 
-`.env` is not another config center—it is a common way tools **batch-load environment variables** for local dev.
+## O que é realmente `.env`
 
-- Environment variable = the value
-- `.env` = a local container for those values
+Na primeira vez com variáveis de ambiente, o primeiro que se encontra costuma ser um ficheiro `.env`. Aí também há mais mal-entendidos.
 
-So:
+`.env` não é outro centro de configuração. É só um método habitual que muitas Ferramentas oferecem para **carregar variáveis de ambiente em lote** em desenvolvimento local.
 
-- Convenient ≠ secure
-- `.env.example` shows names—not real secrets
-- Production/CI usually uses platform Secret managers
+Assim:
 
-## Poor fits for env-only
+- A variável de ambiente é «o valor em si»
+- `.env` é «um contentor habitual local para esses valores»
 
-- Coding standards, directory layout → `AGENTS.md`
-- Team default model → project config (non-secret parts)
-- Complex allowlists → [Rules](/guide/customization/rules/allow-and-deny-patterns/)
+Por tanto:
 
-## Common misconceptions
+- Que `.env` seja cómodo não implica que seja seguro
+- `.env.example` é para nomes de exemplo, não para secrets reais
+- Em produção ou CI, o habitual é um gestor de Secrets
 
-### 1. Env vars are not for all configuration
+## O que não convém resolver só com variáveis de ambiente
 
-Good for values—not full team rules and long prose.
+- Normas de código, estrutura de diretórios → `AGENTS.md`
+- Valores por omissão de modelo consensuados pela equipa → configuração de projeto (parte não secreta)
+- Allowlists complexas → [Regras](/guide/customization/rules/allow-and-deny-patterns/)
 
-### 2. `.env` on disk ≠ safe
+## Mal-entendidos frequentes
 
-Committed, screenshared, or logged `.env` still leaks.
+### 1. As variáveis de ambiente não servem para meter toda a configuração
 
-### 3. `unset` ≠ risk gone
+Servem bem para «valores»; não para carregar todo o conjunto de regras de equipa e explicações a longo prazo.
 
-May remain in shell history, child processes, logs, files, screenshots.
+### 2. Meter em `.env` já é seguro?
 
-### 4. Local `.env` pattern ≠ production pattern
+Se `.env` for commitado, se vir num ecrã partilhado ou se imprimir em logs, também se filtra.
 
-CI/Cloud/managed platforms usually:
+### 3. Após `unset` já não há risco?
 
-- Configure Secrets in console
-- Inject at runtime
-- Keep real values out of repo files
+O risco pode continuar em:
 
-## Layering and priority (conceptual)
+- Histórico de shell
+- Herança de subprocessos
+- Logs
+- Ficheiros ou capturas guardados antes
+
+### 4. Se em local uso `.env`, em produção basta passar outro `.env`?
+
+Muitas vezes não. Em CI, Cloud e plataformas geridas o habitual é:
+
+- Configurar o Secret na consola da plataforma
+- Injetar a variável de ambiente em runtime
+- Não deixar o valor real como ficheiro do repo
+
+## Camadas e prioridade (conceito)
 
 ```text
-Org mandatory policy (if any)
-    ↓ overrides
-Shell / CI injected environment variables
-    ↓ merges with config files (per official rules)
-User / project config files
+Política obrigatória da organização (se existir)
+    ↓ sobrescreve
+Variáveis de ambiente injetadas por Shell / CI
+    ↓ fundem-se com o ficheiro de configuração (regras concretas conforme o oficial)
+Ficheiro de config de nível utilizador / projeto
 ```
 
-When the same key is set in multiple places, follow **official priority**; for troubleshooting print effective config or check logs.
+Quando a mesma chave está em vários sítios, prevalece a **prioridade da documentação oficial**; ao diagnosticar, imprime a «configuração efetiva» ou olha os logs.
 
-## Practical decision order
+## Uma ordem de juízo habitual
 
-1. Is it sensitive?
-2. Local only or CI/Cloud?
-3. Long-lived or this run only?
-4. Local env, CI Secret, or Cloud Secret?
+Ao configurar pela primeira vez:
 
-Reduces “right value, wrong place.”
+1. É sensível este valor?
+2. É para uso local pessoal, ou para CI / Cloud?
+3. Há que conservá-lo a longo prazo, ou só existe nesta execução?
+4. Vai a variável de ambiente local, Secret de CI ou Secret de Cloud?
 
-## Common scenarios
+Assim é menos fácil o «o valor está correto, mas está no sítio errado».
 
-| Scenario | Safer approach |
+## Cenários habituais
+
+| Cenário | Prática mais estável |
 |---|---|
-| Local third-party API debug | Local env or `.env`, gitignored |
-| Team shared example | Commit `.env.example`, not real values |
-| GitHub Actions / CI | Platform Secrets |
-| Cloud task calls private service | Cloud Secret |
-| MCP server needs key | Parent env or Secret injection |
+| Depurar API de terceiros na máquina local | Variável de ambiente local ou `.env`, e ignorar no commit |
+| Exemplo de configuração partilhado pela equipa | Fazer commit de `.env.example`, não valores reais |
+| GitHub Actions / CI | Secret da plataforma |
+| Tarefa Cloud que chama um serviço privado | Cloud Secret |
+| Servidor MCP que precisa de ler uma key | Variável de ambiente do processo pai ou injeção de Secret |
 
-Rule of thumb: real keys should not live as plain repo file content long term.
+Se não tiveres claro: os secrets reais, na medida do possível, não deveriam ficar a longo prazo como conteúdo de ficheiro ordinário no repo.
 
-## Typical uses
+## Cenários de uso habituais
 
-### Local development
+### Desenvolvimento local
 
-Export personal token in `~/.zshrc` or direnv `.envrc`—**do not commit** `.env`.
+Exporta o token pessoal em `~/.zshrc` ou no `.envrc` de direnv — **não faças commit** de `.env`.
 
-### CLI non-interactive
+### CLI não interativo
 
-CI injects via secret store then runs `codex exec`. See [Non-interactive mode](/guide/cli/non-interactive-mode/).
+A CI injeta variáveis a partir do armazenamento de secrets e depois corre `codex exec`. Ver [Modo não interativo](/guide/cli/non-interactive-mode/).
 
-### MCP servers
+### Servidor MCP
 
-MCP processes often inherit parent env; reference `$VAR` in config instead of hardcoding. See [Connect MCP](/skills/mcp/connect-an-mcp-server/).
+O processo MCP costuma herdar o ambiente do pai; na configuração referencia `$VAR` em vez de hardcodificar. Ver [Ligar MCP](/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 
-Repo-level Secrets in Cloud console; names match task references.
+Os Secrets ao nível do repo configuram-se na consola Cloud; o nome deve coincidir com a referência dentro da Tarefa.
 
-Environment variables fit values that change, are sensitive, or are needed only at runtime—not long-term rules or documentation.
+As variáveis de ambiente encaixam em valores que mudam, são sensíveis ou só fazem falta em runtime; não carregam regras nem explicações a longo prazo.
 
-## Security checklist
+## Lista de segurança
 
-- [ ] `.env` in `.gitignore`
-- [ ] Redact tokens before logging
-- [ ] Rotate leaked keys
-- [ ] Least-privilege scopes (read-only CI token, etc.)
+- [ ] `.env` está em `.gitignore`
+- [ ] Desensibilizar tokens antes de imprimir logs
+- [ ] Rotacionar keys que se tenham filtrado
+- [ ] Scope de privilégio mínimo (token de CI só de leitura, etc.)
 
-## Common mistakes
+## Erros frequentes
 
-- Real keys in committed `.env.example`
-- Visible `export` during screen share
-- Assume `unset` makes child processes safe—check process tree
+- Preencher `.env.example` com keys reais e fazer commit
+- Fazer `export` de um token visível num ecrã partilhado
+- Assumir que após `unset` os subprocessos continuam seguros — há que olhar a árvore de processos
 
-## Reference sources
+## Fontes de referência
 
-- OpenAI Codex configuration / environment documentation
+- Documentação de configuration / environment OpenAI Codex
 - stormzhang `18-config.md`
 - KimYx0207 CX-04
 
 ---
 
-**Status:** verified  
-**Products:** CLI / App / IDE / Cloud  
-**Verification basis:** OpenAI Help Center still documents `~/.codex/.env`, CI/runtime injection, and platform Secrets; page focuses on stable principles—which values belong in env, what does not, `.env` as local container—without fixing a variable name list.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** CLI / App / IDE / Cloud  
+**Base de verificação:** A documentação de configuração atual do OpenAI Help Center continua a oferecer expressões modernas de `~/.codex/.env`, injeção em CI/runtime e Secrets de plataforma; esta página centra-se em princípios estáveis —que valores encaixam em variáveis de ambiente, quais não, e que `.env` é só um contentor local— sem fixar uma lista concreta de nomes de variáveis.  
+**Última verificação:** 2026-07-26

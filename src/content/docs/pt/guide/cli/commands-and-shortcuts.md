@@ -1,138 +1,145 @@
 ---
-title: Commands and shortcuts
-description: CLI subcommands, in-session actions, and keyboard habits—product-oriented; full flags in reference.
+title: Comandos e atalhos
+description: Subcomandos da CLI, operações na sessão e hábitos de teclado — explicação orientada ao produto; parâmetros completos na zona de referência.
 locale: pt
-source_locale: en
-source_revision: a179c75
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Terminal efficiency comes from three areas: **how you launch**, **in-session shortcuts**, and **pairing with scripts/editors**. This page covers habits; flag tables live in [CLI command reference](/guide/reference/commands/) and [keyboard shortcuts](/guide/reference/keyboard-shortcuts/).
+A eficiência no terminal vem de três blocos: **forma de arranque**, **atalhos dentro da sessão** e **coordenação com scripts/editores**. Esta página fala de uso e hábitos; tabelas de parâmetros em [Referência de comandos da CLI](/guide/reference/commands/) e [Atalhos de teclado](/guide/reference/keyboard-shortcuts/).
 
-## What's covered
+## Conteúdo desta página
 
-- When to use `codex` vs `codex exec`
-- Common in-session operation types
-- Turning repeats into aliases or scripts
+- Quando usar `codex` e quando usar `codex exec`
+- Que tipos de operação são comuns numa sessão interativa
+- Como solidificar operações repetidas em aliases ou scripts
 
-## Start by distinguishing
+## O que distinguir primeiro
 
-Many newcomers assume "commands and shortcuts" means memorizing syntax and flags.
+Muitos iniciantes, ao ver a CLI pela primeira vez, pensam que «comandos e atalhos» é decorar sintaxe e parâmetros.
 
-More practical: distinguish three modes:
+O mais prático é distinguir três coisas:
 
-- **Chat while working**
-- **One-shot task to completion**
-- **Shortening actions you repeat**
+- Está agora a **conversar enquanto faz**
+- Ou quer que **corra uma Tarefa de uma vez**
+- Ou só quer **encurtar ações que repete muitas vezes**
 
-That clarity usually picks the right command.
+Com isto claro, a escolha de muitos comandos fica bem mais simples.
 
-## Command entry overview
+## Vista geral das entradas de comando
 
-| Goal | Entry | Details |
+| O que quer fazer | Entrada | Detalhe |
 |---|---|---|
-| Chat and edit interactively | `codex` interactive TUI | [Interactive mode](/guide/cli/interactive-mode/) |
-| CI / pipeline one-shot | `codex exec` (or equivalent) | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
-| Change defaults | Config files | [CLI configuration](/guide/cli/configuration/) |
+| Conversar enquanto altera código | TUI interativa `codex` | [Modo interativo](/guide/cli/interactive-mode/) |
+| Tarefa pontual em CI / pipeline | `codex exec` (ou equivalente) | [Modo não interativo](/guide/cli/non-interactive-mode/) |
+| Alterar o comportamento predefinido | Ficheiro de configuração | [Configuração da CLI](/guide/cli/configuration/) |
 
 :::note
-Subcommand names change by version—trust `codex --help`.
+Os nomes dos subcomandos mudam com a versão; siga `codex --help`.
 :::
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### `codex` and `codex exec` are not beginner vs pro
+### `codex` e `codex exec` não são «simples» vs «profissional»
 
-Not "simple mode" vs "expert mode."
+Muita gente interpreta assim:
 
-Practical split:
+- Um é o modo simples
+- Outro é o modo profissional
 
-- `codex` when you are present to steer
-- `codex exec` when the task is defined upfront for a one-shot run
+Uma divisão mais útil:
 
-### More shortcuts is not better early on
+- `codex` adequa-se quando está presente e guia enquanto observa
+- `codex exec` adequa-se quando já descreveu a Tarefa com clareza e a deixa correr num fluxo de uma vez
 
-Master first:
+### Quanto mais atalhos, melhor? Não
 
-- Starting a session
-- Discovering `/` commands in your environment
-- Exit, restart, change directory
+No início, não precisa de memorizar todas as teclas e comandos `/`.
 
-That is enough to start.
+Domine primeiro:
 
-## In-session "shortcuts"
+- Como iniciar a sessão
+- Como ver que comandos `/` o ambiente atual suporta
+- Como sair, reabrir e mudar de diretório
 
-Exact keys and `/` commands vary by version; categories are stable:
+Com isto já basta.
 
-### Input and history
+## «Atalhos» na sessão interativa
 
-- Multiline input: product-specific newline combo (often `Shift+Enter` or editor mode)
-- Recall last task: terminal history or in-session history if available
+As teclas concretas e os comandos `/` diferem entre versões, mas as categorias são estáveis:
 
-### Slash commands
+### Entrada e histórico
 
-Typing `/` at the prompt triggers built-in flows (review, compact context, etc.). **Do not memorize a frozen list**—use `/` completion in your environment. Learning-oriented taxonomy: [slash commands reference](/guide/reference/slash-commands/).
+- Entrada multilinha: use a combinação de nova linha indicada pelo produto (comum: `Shift+Enter` ou modo editor)
+- Rever a Tarefa anterior: histórico do terminal ou histórico da sessão (se existir)
 
-### Approvals
+### Comandos de barra
 
-When the Agent requests shell or file writes, the UI prompts approve/deny/always allow (if offered). Read [approvals and sandbox](/guide/cli/approvals-and-sandbox/) before unattended use.
+No prompt, digite `/` para disparar fluxos internos (revisão, compactar Contexto, etc.). **Não decore a lista de cor** — siga a completação `/` do ambiente atual. Classificação para aprendizagem: [Consulta rápida de comandos de barra](/guide/reference/slash-commands/).
 
-## Shell-layer shortcuts (recommended)
+### Relacionados com Aprovação
 
-Wrap "enter project + start Codex" to avoid wrong-directory mistakes:
+Quando o Agent pede para correr shell ou escrever ficheiros, a interface interativa pede aprovar / rejeitar / permitir sempre (se existir). Antes de deixar sem supervisão, leia [Aprovação e Sandbox](/guide/cli/approvals-and-sandbox/).
+
+## Atalhos na camada Shell (recomendado)
+
+Escreva uma função «entrar no projeto + arrancar o Codex» para reduzir erros de diretório:
 
 ```bash
-# ~/.zshrc example (adjust as needed)
+# Exemplo ~/.zshrc (ajuste conforme precisar)
 cx() {
   cd "$1" || return 1
   codex
 }
 ```
 
-Non-interactive review can be a script with prompt in `prompts/review.md` for version control.
+A revisão não interativa pode encapsular-se num script, com o Prompt em `prompts/review.md`, para facilitar a gestão de versões.
 
-## Learning path
+## Pode familiarizar-se assim
 
-1. Start `codex` in the correct directory
-2. Learn when `codex exec` fits
-3. Wrap frequent actions in aliases, functions, or scripts
+No início com a CLI, siga esta ordem:
 
-Avoid over-abstracting before the base tool feels natural.
+1. Arranque `codex` no diretório certo
+2. Depois decida quando usar `codex exec`
+3. Por fim, transforme ações frequentes em alias, função ou script
 
-## vs IDE / App
+Assim evita cair logo em «ainda não domina a ferramenta e já a encapsulou noutra camada».
 
-| | CLI | IDE extension |
+## Divisão de papéis com IDE / App
+
+| | CLI | Extensão IDE |
 |---|---|---|
-| Context | `--cwd`, @ files (version-dependent) | Open files, selection |
-| Best for | Scripts, SSH remote, pure terminal | Edit while viewing diff |
-| Shortcuts | Terminal keys + `/` | Editor command palette |
+| Contexto | `--cwd`, ficheiros `@` (conforme a versão) | Ficheiros abertos, código selecionado |
+| Adequado a | Scripts, SSH remoto, terminal puro | Alterar enquanto vê o Diff |
+| Atalhos | Teclas do terminal + `/` | Paleta de comandos do editor |
 
-IDE: [local task workflow](/guide/ide/local-task-workflow/)
+IDE: [Fluxo de Tarefas locais](/guide/ide/local-task-workflow/)
 
-## Common mistakes
+## Erros comuns
 
-- Starting in wrong directory, editing neighbor project
-- Running in-app `/review` as a terminal subcommand in external shell
-- Pasting unreviewed third-party "magic prompts" into interactive session
+- Arrancar no diretório errado e alterar o projeto ao lado
+- Tratar `/review` da aplicação como subcomando do terminal e correr no shell externo
+- Colar na sessão interativa um «Prompt universal» de terceiros sem rever
 
-You do not need every command and shortcut on day one. Clarify "chat while working" vs "run once" and command choice gets simpler.
+Não tenha pressa em decorar todos os comandos e atalhos. Perceba primeiro se «agora é conversar enquanto faz» ou «deixar correr de uma vez» — a escolha do comando fica bem mais simples.
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Can start interactive session at repo root
-- [ ] Know where to find `/` commands for your version
-- [ ] Can write a minimal read-only `codex exec` task (if available)
+- [ ] Consegue iniciar uma sessão interativa na raiz do repositório alvo
+- [ ] Sabe onde consultar os comandos `/` suportados pela versão atual
+- [ ] Consegue escrever uma Tarefa mínima só de leitura com `codex exec` (se o ambiente oferecer)
 
-## References
+## Fontes de referência
 
-- OpenAI Codex CLI documentation
+- Documentação da OpenAI Codex CLI
 - stormzhang `08-cli.md`, `12-slash-commands.md`, `35-cheatsheet.md`
 - KimYx0207 CX-03, CX-12
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI  
-**Review note:** Covers `codex`, `codex exec`, `/` command categories, and session shortcuts—details that shift by version; lacks strong current official command/shortcut documentation to verify; needs rewrite before verification.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** CLI  
+**Nota de revisão:** Esta página envolve detalhes de interação da CLI que mudam facilmente com a versão — `codex`, `codex exec`, categorias de comandos `/` e atalhos na sessão; falta documentação oficial vigente de comandos/atalhos bastante sólida para sustentar estas descrições; é preciso reescrever e voltar a verificar.  
+**Última verificação:** 2026-07-26

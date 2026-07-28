@@ -1,102 +1,104 @@
 ---
-title: Verification
-description: Review diffs, run tests, validate sources, and define done.
+title: Verificação
+description: Revisar Diff, rodar testes, validar fontes e definir critérios de conclusão.
+locale: pt
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 17
-locale: pt
-source_locale: en
-source_revision: 705b1f4
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Verification
+# Verificação
 
-A common beginner mistake: **treating "Codex said it is done" as actually done.**
+O erro mais fácil na primeira vez com o Codex é **tratar «ele disse que terminou» como «terminou de verdade»**.
 
-Verification means judging results against your requirements—not against the model's claim.
+Verificação é: não olhar o que ele diz — olhar se o resultado realmente atende ao que você pediu.
 
-Codex output must be checkable. Verification is not optional—it closes every task loop.
+A saída do Codex precisa ser verificável. Verificação não é passo opcional — faz parte do fechamento de cada Tarefa.
 
-## What verification asks
+## O que a Verificação realmente olha
 
-Whether you are changing code, writing docs, or researching, the same question remains:
+Seja alterando código, escrevendo docs ou pesquisando, no fim você responde à mesma pergunta:
 
-> **Is this "close enough" or actually ready to deliver?**
+> **Isto agora está «mais ou menos parecido» — ou «já pode ser entregue»?**
 
-Much rework happens because:
+Muito retrabalho não vem de o modelo errar por completo, e sim de:
 
-- Wrong places were changed
-- Work was half-finished
-- Sources were claimed but not reliable
-- A page loads but the flow does not work
-- Docs exist but a newcomer cannot follow them
+- Alterar o que não deveria
+- Alterar só pela metade
+- Dizer que consultou fontes, mas as fontes não são confiáveis
+- A página abrir, mas o fluxo real não passar
+- A documentação existir, mas não servir para um iniciante seguir
 
-Verification **keeps risk before delivery**.
+Por isso o papel da Verificação é **fechar o risco antes da entrega**.
 
-## Common pitfalls
+## Equívocos comuns
 
-### 1. "It runs" equals done
+### 1. Se roda, está concluído
 
-Running only means no immediate crash—not:
+«Roda» só diz que não quebrou de imediato — não significa:
 
-- Correct logic
-- Correct scope
-- No regressions
-- Match to your intended outcome
+- Lógica correta
+- Alcance correto
+- Sem regressão
+- Conformidade com o resultado que você queria
 
-### 2. "I verified" in the model's reply is enough
+### 2. Se o modelo diz «já verifiquei», pode relaxar
 
-Check **what** was verified:
+Você precisa ver **que Verificação ele fez de fato**. Por exemplo:
 
-- Tests actually run?
-- Diff actually read?
-- Artifacts actually opened?
-- Sources traceable?
+- Rodou testes de verdade?
+- Leu o Diff de verdade?
+- Abriu o Artefato e checou de verdade?
+- Deu fontes rastreáveis?
 
-### 3. Verification is only for programmers
+### 3. Verificação é só para programadores?
 
-Writing, spreadsheets, config, docs, and PR descriptions all need verification—methods differ.
+Escrever artigos, montar tabelas, gerar configuração, organizar material, escrever descrição de PR — tudo precisa de Verificação. Só muda o método.
 
-## If you lack a process, try this order
+## Se ainda não tem um fluxo próprio, use esta ordem
 
-1. Is the result on-topic?
-2. Is change scope too large?
-3. Run whatever checks can be automated
-4. Human pass: would you ship this?
+Se ainda não tem fluxo próprio, comece por esta ordem:
 
-Think of it as:
+1. Ver se o resultado desviou do tema
+2. Ver se o alcance da mudança ficou grande demais
+3. Rodar as checagens automáticas possíveis
+4. Por último, com olhar humano: dá para entregar?
 
-- **Direction**
-- **Scope**
-- **Machine checks**
-- **Human willingness to accept**
+Dá para entender como:
 
-## Core topics
+- **A direção está certa?**
+- **Alterou demais?**
+- **A máquina já checou?**
+- **A pessoa realmente se atreve a receber?**
 
-- [Review diffs](/guide/quality/review-diffs/) — read diffs; confirm scope and risk
-- [Run tests](/guide/quality/run-tests/) — automated regression
-- [Verify artifacts](/guide/quality/verify-artifacts/) — docs, config, generated output
-- [Validate sources](/guide/quality/validate-sources/) — traceable research conclusions
-- [Handle uncertainty](/guide/quality/handle-uncertainty/) — when the model is unsure
-- [Definition of done](/guide/quality/definition-of-done/) — what "finished" means
+## Temas centrais
 
-## Verification emphasis by task type
+- [Revisar Diff](/guide/quality/review-diffs/) — ler o Diff, confirmar alcance e risco
+- [Rodar testes](/guide/quality/run-tests/) — regressão automática
+- [Verificar Artefatos](/guide/quality/verify-artifacts/) — docs, configuração, gerados
+- [Validar fontes](/guide/quality/validate-sources/) — conclusões de pesquisa rastreáveis
+- [Lidar com incerteza](/guide/quality/handle-uncertainty/) — o que fazer quando o modelo está incerto
+- [Definição de pronto](/guide/quality/definition-of-done/) — o que significa «terminou»
 
-- **Code changes**: diff, tests, manual critical path
-- **Documentation**: right audience, working links, steps you can follow
-- **Research**: real, current sources; conclusions within evidence
-- **Config or scripts**: environment assumptions, permission scope, recovery if it fails
+## Tarefas diferentes, focos de Verificação diferentes
 
-Unsure where to start: default to [definition of done](/guide/quality/definition-of-done/).
+- **Alterar código**: olhar Diff, rodar testes, passar à mão pelos caminhos-chave
+- **Escrever docs**: ver se serve ao leitor-alvo, se os links funcionam, se os passos realmente dão para seguir
+- **Pesquisar**: ver se as fontes são reais e atuais, se a conclusão ultrapassa a evidência
+- **Gerar configuração ou scripts**: ver premissas de ambiente, alcance de Permissão, como recuperar após falha
 
-Verification confirms the result is usable, trustworthy, and shippable.
+Se não souber por onde começar, leia por padrão [Definição de pronto](/guide/quality/definition-of-done/).
 
-How to write acceptance in prompts: [define done](/prompts/define-done/). End-to-end examples: [cases](/cases/).
+Verificação existe para confirmar que o resultado realmente serve, que você se atreve a usar e que dá para entregar.
+
+Como escrever critérios de aceite no Prompt: [Definir critérios de conclusão](/prompts/define-done/). Casos ponta a ponta: [Casos práticos](/cases/).
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers homepage still emphasizes building, testing, reviewing, and delivering changes with Codex; this page splits verification into review diffs, run tests, validate sources, and definition of done—cross-checked with in-site quality chapters.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** A página inicial da OpenAI Developers ainda enfatiza construir, testar, revisar e entregar mudanças com o Codex; esta página desmonta a Verificação em revisar Diff, rodar testes, validar fontes e definição de pronto, cruzada com os capítulos de qualidade do site.  
+**Última verificação:** 2026-07-26

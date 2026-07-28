@@ -1,35 +1,77 @@
 ---
-title: Foundations
-description: Build shared language for models, Agents, tools, permissions, and verification.
+title: Fundamentos
+description: Estabeleça uma linguagem comum para modelo, Agent, Ferramenta, Permissão e Verificação.
 locale: pt
-source_locale: en
-source_revision: 9a55eb9
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
+sidebar:
+  order: 3
 ---
 
-This section establishes concepts used across the handbook. Product UI differences live in [Product guides](/guide/); prompting techniques live in [Core capabilities](/guide/).
 
-## Chapter map
+Esta parte reúne os conceitos básicos que o handbook inteiro usa com frequência. Diferenças de interface de produto ficam em [Guias de produto](/guide/); técnicas de Prompt ficam em [Capacidades principais](/guide/).
 
-1. [AI and language models](/guide/foundations/ai-and-language-models/)
-2. [Agent basics](/guide/foundations/agent-basics/)
-3. [Goals, context, and actions](/guide/foundations/goals-context-and-actions/)
-4. [Files, tools, and commands](/guide/foundations/files-tools-and-commands/)
-5. [Local vs cloud](/guide/foundations/local-vs-cloud/)
-6. [Threads, tasks, and projects](/guide/foundations/threads-tasks-and-projects/)
-7. [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
-8. [Sandbox and network](/guide/foundations/sandbox-and-network/)
-9. [Models and reasoning](/guide/foundations/models-and-reasoning/)
-10. [Tokens, context, and compaction](/guide/foundations/tokens-context-and-compaction/)
-11. [Verification and human review](/guide/foundations/verification-and-human-review/)
-12. [Common misconceptions](/guide/foundations/common-misconceptions/)
+Este conjunto explica principalmente como o Codex funciona e como colaborar com ele.
 
-When you're done, continue to [Getting started](/guide/getting-started/).
+## Mapa do capítulo
+
+1. [IA e modelos de linguagem](/guide/foundations/ai-and-language-models/)
+2. [Fundamentos de Agent](/guide/foundations/agent-basics/)
+3. [Objetivo, Contexto e ação](/guide/foundations/goals-context-and-actions/)
+4. [Arquivos, Ferramentas e comandos](/guide/foundations/files-tools-and-commands/)
+5. [Local e Cloud](/guide/foundations/local-vs-cloud/)
+6. [Thread, Tarefa e projeto](/guide/foundations/threads-tasks-and-projects/)
+7. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
+8. [Sandbox e rede](/guide/foundations/sandbox-and-network/)
+9. [Modelos e Raciocínio](/guide/foundations/models-and-reasoning/)
+10. [Token, Contexto e Compactação](/guide/foundations/tokens-context-and-compaction/)
+11. [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
+12. [Mal-entendidos comuns](/guide/foundations/common-misconceptions/)
+
+Depois de ler, entre em [Começar a usar](/guide/getting-started/).
+
+## Mal-entendidos comuns
+
+### 1. Fundamentos são pura teoria — dá para pular
+
+No curto prazo parece que dá, mas muitos mal-entendidos depois vêm exatamente daqui não ter ficado claro.
+
+Por exemplo:
+
+- Por que ele pede Aprovação
+- Por que o Contexto o influencia
+- Por que ele altera lugares inesperados
+- Por que «ele disse que terminou» ainda não equivale a ter terminado de verdade
+
+### 2. Se eu sei perguntar, não preciso entender muitos conceitos
+
+Saber perguntar é importante — mas se você não sabe como ele lê Contexto, chama Ferramentas e fica sujeito a Permissões, fica mais difícil julgar por que o resultado desviou.
+
+### 3. Este capítulo deve ser lido decorando definições
+
+A leitura mais útil é:
+
+- Primeiro saber que problema cada conceito resolve
+- Depois entender com cenários reais de uso
+
+## Se não quiser ler o capítulo inteiro de uma vez
+
+Se não quiser ler o capítulo de uma vez, comece por estas páginas:
+
+1. [Fundamentos de Agent](/guide/foundations/agent-basics/)
+2. [Objetivo, Contexto e ação](/guide/foundations/goals-context-and-actions/)
+3. [Arquivos, Ferramentas e comandos](/guide/foundations/files-tools-and-commands/)
+4. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
+5. [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
+
+Entender estas páginas já basta para o uso cotidiano.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página só explica a estrutura e a ordem de leitura do capítulo de fundamentos; links internos e formulações conceituais foram revisados, e o texto não depende de fatos voláteis como versão de produto, preço ou interface.  
+**Última verificação:** 2026-07-26

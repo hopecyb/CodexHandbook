@@ -1,32 +1,65 @@
 ---
-title: Agent basics
-description: How an Agent works toward a goal by calling tools and iterating.
+title: Fundamentos de Agent
+description: Explica como o Agent chama Ferramentas e avança de forma iterativa em torno de um objetivo.
 locale: pt
-source_locale: en
-source_revision: ede187f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-An **Agent** doesn't end with one Q&A turn. It: understands the goal → chooses tools → observes results → adjusts the next step—until done or until it needs you.
 
-## Agent vs ordinary chat
+O **Agent** continua trabalhando em torno do objetivo: entender o objetivo → escolher Ferramentas → observar o resultado → ajustar o próximo passo, até concluir ou precisar da sua intervenção.
 
-| | Ordinary chat | Agent |
+A IA comum se parece mais com alguém que responde perguntas; o Agent se parece mais com alguém que, ao receber a Tarefa, avança passo a passo.
+
+## Diferença entre Agent e chat comum
+
+| | Chat comum | Agent |
 |---|---|---|
-| Output | Mostly text suggestions | Can read/write files, run commands, change the repo |
-| Process | One reply | Multiple tool calls |
-| Risk | Misleading advice | Can also break files or run dangerous commands |
-| Your role | Read | Set boundaries, approve, accept |
+| Saída | Sobretudo sugestões em texto | Pode ler/escrever arquivos, rodar comandos, alterar o repositório |
+| Processo | Uma resposta | Várias chamadas de Ferramenta |
+| Risco | Sugestões enganosas | Também pode estragar arquivos ou executar comandos perigosos |
+| Seu papel | Ler | Definir limites, Aprovação, aceite |
 
-## Related concepts
+## Uma analogia direta
 
-- Skill / Plugin / MCP: extend **what it can do** and **what it connects to**—advanced chapters to follow; see the [capability map](/guide/start-here/codex-capability-map/) for how they differ
-- Human approval: see [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Dá para comparar assim:
+
+- **Chat comum**: como perguntar a um amigo «como se resolve esta questão»
+- **Agent**: como pedir a um colega que faça uma versão primeiro e depois revisar juntos
+
+Por isso, no modo Agent, você precisa se preocupar mais com:
+
+- O que ele pode acessar
+- Se deve dar um plano antes
+- Como você vai aceitar o resultado depois
+
+## Por que separar essa diferença
+
+Muitos usos inadequados vêm do mesmo mal-entendido:
+
+> Achar que ele «só está falando»
+
+Quando ele começa a ler arquivos, alterá-los e rodar comandos, deixa de ser só sugestão na janela de chat — passa a participar do trabalho real.
+
+No começo, leia também:
+
+1. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
+2. [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/)
+3. [Revisar o resultado](/guide/getting-started/review-the-result/)
+
+## Conceitos relacionados
+
+- Skill / Plugin / MCP: ampliam «o que sabe fazer» e «a que se conecta» — veja [Extensão e automação](/skills/) e [Mapa de capacidades](/guide/start-here/codex-capability-map/)
+- Aprovação humana: veja [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
+
+A característica do Agent é conseguir fazer vários passos seguidos em torno do objetivo — não só devolver um parágrafo.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Status:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página só explica a diferença de colaboração entre Agent e chat comum; links internos, conceitos e analogias foram revisados, e o texto não depende de fatos de produto voláteis.  
+**Última verificação:** 2026-07-26

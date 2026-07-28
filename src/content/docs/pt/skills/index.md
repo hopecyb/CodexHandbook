@@ -1,26 +1,26 @@
 ---
 title: Skills
-description: Learn to use, write, test, and maintain Codex Skills.
+description: Aprenda a usar, escrever, testar e manter Codex Skills.
 locale: pt
-source_locale: en
-source_revision: 1a89e2f
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 # Skills
 
-Skills package stable methods, reference material, templates, and scripts into reusable capabilities.
+Skills encapsulam métodos estáveis, material de referência, templates e scripts em capacidades reutilizáveis.
 
-## Recommended order
+## Ordem recomendada
 
-1. [Skills overview](/skills/overview/)
-2. [When to use Skills](/skills/when-to-use-skills/)
-3. [Use a Skill](/skills/use-a-skill/)
-4. [Create your first Skill](/skills/create-your-first-skill/)
-5. [Skill anatomy](/skills/skill-anatomy/)
-6. [references/](/skills/references/) · [templates/](/skills/templates/) · [scripts/ and tests](/skills/scripts-and-tests/)
-7. [Choosing an extension method](/skills/choosing-an-extension-method/) · [Capability map](/skills/capability-map/)
+1. [Visão geral de Skills](/skills/overview/)
+2. [Quando usar Skills](/skills/when-to-use-skills/)
+3. [Usar um Skill](/skills/use-a-skill/)
+4. [Criar seu primeiro Skill](/skills/create-your-first-skill/)
+5. [Anatomia de um Skill](/skills/skill-anatomy/)
+6. [references/](/skills/references/) · [templates/](/skills/templates/) · [scripts/ e testes](/skills/scripts-and-tests/)
+7. [Como escolher o método de extensão](/skills/choosing-an-extension-method/) · [Mapa de capacidades de extensão](/skills/capability-map/)
 8. [Hooks](/skills/hooks/) · [MCP](/skills/mcp/) · [Plugins](/skills/plugins/) · [Automations](/skills/automations/)
-9. [Security and versioning](/skills/security/)
-10. Browse [Skill examples](/skills/examples/)
+9. [Segurança e versões](/skills/security/)
+10. Explorar [exemplos de Skills](/skills/examples/)

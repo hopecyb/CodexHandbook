@@ -1,116 +1,116 @@
 ---
-title: Personal Preferences
-description: User-level configuration, default models, and UI habits—without polluting team conventions in the repo.
+title: Preferências pessoais
+description: Configuração de utilizador, modelo predefinido e hábitos de interface, sem poluir as convenções de equipa no repositório.
 locale: pt
-source_locale: en
-source_revision: d363b82
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-**Personal preferences** are settings on your machine that apply across projects: default model, theme, approval habits, personal Skill paths, and so on. Unlike `AGENTS.md` in the repo, personal preferences should **not** assume teammates are the same.
+As **preferências pessoais** são definições que se aplicam na sua máquina em todos os projetos: modelo predefinido, tema, hábitos de Aprovação, caminhos de Skills pessoais, etc. Ao contrário de `AGENTS.md` no repositório, as preferências pessoais **não devem** assumir que os colegas têm as mesmas.
 
-## Contents
+## Conteúdo
 
-- What belongs in the personal layer versus the project layer
-- How to pair with [Profiles](/guide/customization/configuration/profiles/) to switch scenarios
-- How to avoid leaking relaxed personal settings into team repos
+- O que deve ficar na camada pessoal e o que na camada de projeto
+- Como combinar com [Profiles](/guide/customization/configuration/profiles/) para mudar de cenário
+- Evitar que definições pessoais permissivas se infiltrem no repositório da equipa
 
-Priority overview: [Customization](/guide/customization/) · [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/)
+Visão geral de prioridade: [Personalização](/guide/customization/) · [Âmbito e prioridade](/guide/customization/agents-md/scope-and-precedence/)
 
-## Why Separate This Layer
+## Porque separar esta camada
 
-Many people mix these at first:
+Muita gente começa por misturar estas coisas:
 
-- How I personally like to work
-- What this repo requires
-- What the company or team mandates
+- Como eu gosto de trabalhar
+- O que este repositório exige
+- O que a empresa ou a equipa impõe
 
-If you do not separate them, you later get:
+Se estas três classes não forem separadas, depois aparece facilmente:
 
-- Your local setup feels smooth, but teammates cannot reproduce it
-- You think rules are active when only your machine is compensating
-- You bring relaxed settings into a more serious project
+- Na sua máquina corre tudo bem, mas os colegas não conseguem reproduzir
+- Pensa que a regra já está em vigor, mas na verdade só a sua máquina a cobre
+- Leva definições permissivas para projetos mais sérios
 
-## What Belongs in Personal Preferences
+## O que cabe nas preferências pessoais
 
-| Content | Example |
+| Conteúdo | Exemplos |
 |---|---|
-| Default model and reasoning tier | Personal machine performance and plan |
-| UI theme, font, notifications | Desktop App [Settings](/guide/desktop-app/settings/) |
-| Personal MCP (private tools) | Local read-only database (authorize carefully) |
-| Personal Skill library path | No conflict with team Plugin |
-| Terminal aliases, `codex` launch directory habits | See [CLI Configuration](/guide/cli/configuration/) |
+| Modelo predefinido e nível de raciocínio | Desempenho da máquina e plano de conta |
+| Tema da UI, tipografia, notificações | [Definições](/guide/desktop-app/settings/) da App de ambiente de trabalho |
+| MCP pessoal (Ferramentas privadas) | Base de dados local só de leitura (autorize com cuidado) |
+| Caminho da biblioteca de Skills pessoais | Sem conflito com Plugins da equipa |
+| Aliases de terminal, hábitos de diretório de arranque do `codex` | Ver [Configuração CLI](/guide/cli/configuration/) |
 
-## Team Content That Should Not Live Only in the Personal Layer
+## Conteúdo de equipa que não deve ficar só na camada pessoal
 
-- Code style, test commands, directory structure → **project `AGENTS.md`**
-- Mandatory sandbox policy → **project configuration or organization management**
-- Compliance requirements for customer repos → **documentation + CI**, not personal memory alone
+- Estilo de código, comandos de teste, estrutura de diretórios → **`AGENTS.md` do projeto**
+- Política obrigatória de Sandbox → **configuração do projeto ou gestão da organização**
+- Requisitos de conformidade de repositórios de clientes → **documentação + CI**, não memória pessoal
 
-## Recommended Practices
+## Práticas recomendadas
 
-1. **Separate work/personal Profiles**: use a strict Profile for customer projects; practice projects can be relaxed
-2. **Read project rules when entering a new repo**, then decide whether to temporarily override personal defaults
-3. **Clean up regularly**: personal MCP and Skills; remove unused third-party sources
-4. When changing machines or reinstalling, export a configuration checklist (without secret values)
+1. **Separar Profiles de trabalho / pessoais**: projetos de clientes com Profile estrito; projetos de prática podem ser mais permissivos
+2. **Ao entrar num repositório novo, leia primeiro as regras do projeto**, e só depois decida se sobrescreve temporariamente os seus defaults
+3. **Limpe periodicamente** MCP e Skills pessoais; remova fontes de terceiros que já não usa
+4. Ao mudar de máquina ou reinstalar, exporte uma lista de configuração (sem valores de segredos)
 
-## Common Misconceptions
+## Mal-entendidos habituais
 
-### 1. What I usually like is not always a good global default
+### 1. O que gosto no dia a dia não deve tornar-se automaticamente o default global
 
-If your default habits are relaxed, they may be inappropriate in customer or team projects.
+Se o seu hábito predefinido for permissivo, em projetos de clientes ou de equipa pode deixar de ser adequado.
 
-### 2. Personal preferences and project rules are basically the same?
+### 2. Preferências pessoais e regras de projeto são quase a mesma coisa?
 
-They differ a lot.  
-Personal preferences are “I am used to working this way”; project rules are “everyone in this repo should try to work this way.”
+Diferem muito.  
+Preferências pessoais são «eu costumo assim»; regras de projeto são «neste repositório todos devem tentar assim».
 
-### 3. “My machine is fine” is not enough to judge whether the setup is reasonable
+### 3. «Na minha máquina está bem» não basta para julgar se o conjunto é razoável
 
-Better criteria:
+Critérios mais adequados:
 
-- Does not pollute the repo
-- Does not depend on defaults only you know
-- Does not cause harm when switching to a strict project
+- Não polui o repositório
+- Não depende de defaults que só você conhece
+- Ao mudar para um projeto estrito, não causa danos colaterais
 
-## How to Decide Whether Something Belongs in the Personal Layer
+## Decidir se deve ficar na camada pessoal
 
-When unsure whether a setting belongs in the personal layer, ask:
+Quando não tiver a certeza se uma definição deve ir para a camada pessoal, pergunte-se:
 
-1. Is this a habit only I care about?
-2. Will it affect others reproducing results?
-3. Is it appropriate to carry into every project?
+1. É um hábito que só eu valorizo?
+2. Afeta a capacidade de outros reproduzirem o resultado?
+3. É adequado levar isto a todos os projetos?
 
-If questions 2 or 3 lean dangerous, do not set it as a global default lightly.
+Se a resposta às perguntas 2 ou 3 for preocupante, não faça disso o default global à ligeira.
 
-Personal preferences exist to make your own workflow feel natural; they are not a backstop for team rules, and you should not dump relaxed settings into every project.
+As preferências pessoais existem para lhe ficar à mão — não para substituir as regras da equipa, nem para levar definições permissivas a todos os projetos de uma vez.
 
-## And the Memory Feature
+## Relação com a função de memória
 
-If the product offers “memory” or persistent preferences, see [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/). Memory suits stable habits; **project-specific constraints should still come from repo files**.
+Se o produto oferecer «memória» ou preferências persistentes, veja [Memórias e Contexto persistente](/guide/customization/memories-and-persistent-context/). A memória serve para hábitos estáveis; **as restrições específicas do projeto devem continuar a basear-se nos ficheiros do repositório**.
 
-## Common Mistakes
+## Erros habituais
 
-- Hard-coding a company API key in personal configuration
-- Globally auto-approving shell on your machine while handling customer code
-- Teammates clone the repo and complain “rules do not work”—because rules were never committed
+- Fixar chaves de API da empresa na configuração pessoal
+- Aprovar automaticamente shell a nível global pessoal ao tratar código de clientes
+- Colegas que fazem clone do repositório e reclamam que «as regras não se aplicam» — as regras nunca foram submetidas
 
-## Acceptance Checklist
+## Lista de verificação
 
-- [ ] You can give one example each for personal vs project vs organization layers
-- [ ] You have configured at least one strict Profile for a customer project
-- [ ] No personal secrets in the repo
+- [ ] Consegue dar um exemplo de cada uma das três camadas: pessoal vs projeto vs organização
+- [ ] Configurou pelo menos um Profile estrito para um projeto de cliente
+- [ ] Não há segredos pessoais dentro do repositório
 
-## References
+## Referências
 
-- freestylefly/CodexGuide personal and team configuration
+- freestylefly/CodexGuide configuração pessoal e de equipa
 - stormzhang `18-config.md`
 - KimYx0207 CX-04
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Cross-checked against this handbook’s currently verified project instructions, Profiles, settings division of labor, and security boundary chapters; this page only states the stable layering principle that personal habits should not pollute team repo rules and does not treat any one client’s current settings UI as a fixed contract.  
-**Last verified:** 2026-07-26
+**Estado:** verificado  
+**Produtos aplicáveis:** App / CLI / IDE  
+**Base de verificação:** Cruzada com capítulos já verificados deste manual sobre instruções de projeto, Profiles, divisão de definições e limites de segurança; esta página explica apenas o princípio estável de que «hábitos pessoais não devem poluir as regras do repositório da equipa», sem transformar a UI atual de um cliente concreto num contrato fixo.  
+**Última verificação:** 2026-07-26

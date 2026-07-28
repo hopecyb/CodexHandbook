@@ -1,98 +1,98 @@
 ---
-title: Permissions and sandbox
-description: Understanding approvals, execution isolation, and network boundaries for safe Codex use.
+title: Permissões e Sandbox
+description: Entenda Aprovação, isolamento de execução e limites de acesso à rede para usar o Codex com segurança.
+locale: pt
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 sidebar:
   order: 14
-locale: pt
-source_locale: en
-source_revision: '8321753'
-translation_status: fallback
-translated_at: '2026-07-28'
 ---
 
-# Permissions and sandbox
+# Permissões e Sandbox
 
-Codex should not perform high-risk actions without consent. **Approvals** are the key gate in human–agent collaboration; **sandbox** limits what filesystem and system capabilities the Agent can reach.
+O Codex não deve executar operações de alto risco sem consentimento. A **Aprovação** é a trava crítica na colaboração humano–máquina; o **Sandbox** limita o sistema de arquivos e parte das capacidades de sistema que o Agent alcança.
 
-## What's covered
+## Conteúdo desta página
 
-Many people treat permissions, approvals, sandbox, and network access as the same "security settings."
+Na primeira vez que vê «Permissão», «Aprovação», «Sandbox», «acesso à rede», muita gente acha que são quase a mesma coisa — afinal, tudo é configuração de segurança.
 
-The risky confusion: you think you only allowed it to continue—but you may have opened file writes, shell, or outbound network at once.
+O problema mais fácil de surgir é exatamente essa confusão: você acha que só está permitindo continuar, e na prática pode estar abrindo ao mesmo tempo a escrita de arquivos, a execução de comandos ou o acesso à internet.
 
-This page separates the concepts so you know what each confirmation actually releases.
+Esta página separa os conceitos para você julgar o que cada confirmação realmente libera.
 
-## Separate the concepts
+## Separe estes conceitos primeiro
 
-Think of them as:
+Dá para separar assim:
 
-- **Approval**: whether it must ask you first
-- **Sandbox**: even if allowed, what it can touch at most
-- **Network access**: whether information can leave or be pulled from outside
+- **Aprovação**: se precisa perguntar a você antes
+- **Sandbox**: mesmo querendo, até onde no máximo pode tocar
+- **Acesso à rede**: se pode levar informação para fora ou puxar coisas de fora
 
-They interact—but they are not the same thing.
+Juntos influenciam o resultado — mas não são a mesma coisa.
 
-## What you usually need to care about
+## O que você costuma precisar acompanhar
 
-- Read/write outside the current project path
-- Whether network is allowed
-- Whether specific shell commands are allowed
-- Whether the team enforces mandatory policy (managed config)
+- Se permite ler/escrever caminhos fora do projeto atual
+- Se permite acesso à rede
+- Se permite executar certos comandos de shell
+- Se a equipe aplicou políticas obrigatórias (configuração gerenciada)
 
-## Sandbox and network
+## Sandbox e rede
 
-**Sandbox** reduces accidental blast radius. **Network access** is another risk layer: exfiltrating sensitive prompt content or pulling untrusted data.
+O **Sandbox** reduz a superfície de erro. O **acesso à rede** é outra camada de risco: pode vazar informação sensível no Prompt ou puxar dados não confiáveis.
 
-When starting out:
+No começo, em geral trate assim:
 
-1. For first practice, disable unnecessary network or allow only what you clearly need
-2. Do not put production secrets in practice projects
-3. When you see "needs network / write sensitive path," pause, read, then approve
+1. Na primeira prática, desligue rede desnecessária ou permita só o acesso claramente necessário
+2. Não coloque chaves de produção no projeto de prática
+3. Ao ver pedidos de «sair à rede / escrever em caminho sensível», pare, entenda e só então aprove
 
-## Common misconceptions
+## Mal-entendidos comuns
 
-### A prompt does not always mean danger
+### Aparecer um pop-up não significa necessariamente perigo
 
-Many normal operations trigger approval:
+Muitas operações normais também disparam Aprovação, por exemplo:
 
-- Installing dependencies
-- Writing outside project directory
-- Opening browser or system apps
-- Accessing external sites or APIs
+- Instalar dependências
+- Escrever fora do diretório do projeto
+- Abrir o navegador ou apps do sistema
+- Acessar sites externos ou APIs
 
-Judge whether the step is **required for the current task**—not only whether a dialog appeared.
+O que você realmente precisa julgar é: **este passo é necessário para a Tarefa atual?** Não olhe só se o pop-up apareceu.
 
-### No prompt does not mean zero risk
+### Não haver pop-up também não significa risco zero
 
-If sandbox already allows an action—or you previously relaxed rules—Codex may not ask again.
+Se o Sandbox atual já permite certo tipo de operação, ou se você já aliviou regras antes, o Codex pode não perguntar de novo.
 
-Do not rely only on "was there a dialog"; check how the environment is configured.
+Por isso não dá para julgar risco só por «haver ou não caixa de diálogo» — olhe também como o ambiente atual está configurado.
 
-## When you see a permission request
+## Ao ver um pedido de Permissão, julgue nestes passos
 
-Ask three questions:
+Cada vez que aparecer um pedido ligado a Permissão, pergunte a si:
 
-1. Is this step necessary to finish the current task?
-2. Does the data or path exceed what I expected?
-3. If it goes wrong, do I know how to undo or recover?
+1. Este passo é necessário para concluir a Tarefa atual?
+2. Os dados ou caminhos que ele vai tocar ultrapassam o que eu esperava?
+3. Se executar errado, eu sei como desfazer ou remediar?
 
-If you cannot answer two of three, do not approve—ask Codex why the step is needed.
+Se duas das três não tiverem resposta, não aprove ainda — peça ao Codex que explique por que este passo é necessário.
 
-## Layered guide
+## Explicação por camadas
 
-| Layer | What it covers | Where to read |
+| Camada | O que cobre | Onde ler |
 |---|---|---|
-| Concepts (this page) | Why approvals and isolation matter | — |
-| Product differences | How each client prompts | [CLI approvals and sandbox](/guide/cli/approvals-and-sandbox/) · [Desktop App settings](/guide/desktop-app/settings/) |
-| Prompt strategy | Declaring boundaries in tasks | [Constraints and boundaries](/prompts/constraints-and-boundaries/) |
+| Conceito (esta página) | Por que Aprovação e isolamento são necessários | — |
+| Diferenças de produto | Como cada entrada mostra a confirmação | [Aprovação e Sandbox no CLI](/guide/cli/approvals-and-sandbox/) · [Configurações do App desktop](/guide/desktop-app/settings/) |
+| Estratégia de Prompt | Como declarar limites de Permissão na Tarefa | [Restrições e limites](/prompts/constraints-and-boundaries/) |
 
-Official policy and defaults may change—verify at [OpenAI Codex](https://developers.openai.com/codex).
+Políticas oficiais e valores padrão podem mudar; confira [OpenAI Codex](https://developers.openai.com/codex).
 
-Approval asks whether to continue; sandbox limits how far continuing can go. Read both together for clearer boundaries.
+Aprovação pergunta «continuar ou não»; Sandbox limita «mesmo continuando, até onde no máximo». Olhar as duas camadas juntas deixa a fronteira mais clara.
 
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers still provides official Codex entry; this page explains approvals, sandbox, and network as distinct boundaries and points to product chapters without claiming current defaults or exact permission matrices.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** A OpenAI Developers ainda fornece a entrada oficial do Codex; esta página só explica que Aprovação, Sandbox e acesso à rede são fronteiras de segurança distintas e direciona o leitor aos capítulos de cada produto para o comportamento concreto — sem declarar valores padrão atuais nem matriz exata de Permissão.  
+**Última verificação:** 2026-07-26

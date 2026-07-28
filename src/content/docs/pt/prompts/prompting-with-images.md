@@ -1,172 +1,186 @@
 ---
-title: Prompting with images
-description: How to ask when giving Codex screenshots, designs, or whiteboard photos.
+title: Prompts com imagens
+description: Como perguntar quando envia capturas, designs ou quadros brancos ao Codex, para obter resultados executáveis.
 locale: pt
-source_locale: en
-source_revision: fb0c011
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Many "look at this image" tasks fail not because the model didn't see—it got an image **without being told what to look for**.
+Muitas falhas de «trabalhar a partir da imagem» não vêm de o modelo não ver — vêm de enviar só a imagem **sem dizer o que deve observar nela**.
 
-Image prompting should establish three things:
+O foco de um Prompt com imagem é estabelecer três coisas para o Codex:
 
-1. What the image is
-2. Where you want attention
-3. What task the output should serve
+1. o que é esta imagem
+2. onde você quer atenção
+3. a que tarefa o resultado final deve servir
 
-## When image prompts help
+## Cenários em que Prompts com imagens ajudam
 
-| Scenario | What the image provides |
+| Cenário | Papel da imagem |
 |---|---|
-| UI bug triage | Abnormal location and state |
-| Design implementation | Layout, hierarchy, spacing, mood reference |
-| Docs from screenshots | Interface-based explanations or tutorials |
-| Whiteboard / flowchart cleanup | Hand-drawn → structured description |
-| Current vs. expected | Differences without guessing requirements |
+| Diagnóstico de bug de UI | Mostrar posição e estado anómalos |
+| Implementação a partir do design | Referência de layout, hierarquia, espaçamento e atmosfera |
+| Capturas para documentação | Base para escrever explicações ou tutoriais a partir da interface |
+| Organizar quadro branco / fluxograma | Transformar desenho à mão em descrição estruturada |
+| Comparar atual vs. esperado | Identificar diferenças em vez de adivinhar o pedido |
 
-When the task is about appearance, position, or visual state, images often beat long text; when it's about business rules, images are supporting evidence.
+Se o foco é «aparência, posição, estado visual», imagens costumam superar longos textos; se o foco é «regras de negócio», a imagem é sobretudo evidência auxiliar.
 
-## Four-part image prompt structure
+## Estrutura em quatro blocos
 
-Keep structure like text prompts:
+Recomenda-se a mesma estruturação dos Prompts em texto:
 
-### 1. Image identity
+### 1. Identidade da imagem
 
-What it is and where it came from.
+Diga o que é e de onde vem.
 
-```text
-This is a screenshot of the production login page, from iPhone 14 Safari.
-```
-
-### 2. Focus area
-
-Point at what matters—don't end with "find the problem yourself."
+Por exemplo:
 
 ```text
-Focus on spacing between the bottom button and the input, and layout when the keyboard is open.
+Isto é uma captura da página de login em produção, no Safari do iPhone 14.
 ```
 
-### 3. Task goal
+### 2. Região de atenção
 
-Analyze, reproduce, edit code, write docs, output a comparison table.
+Indique onde olhar; não termine com «encontre o problema sozinho».
+
+Por exemplo:
 
 ```text
-Analyze likely causes first; don't edit code yet. List 2–3 most relevant frontend files.
+Foque no espaçamento entre o botão inferior e o campo de texto, e nas mudanças de layout quando o teclado aparece.
 ```
 
-### 4. Output format
+### 3. Objetivo da tarefa
 
-What you want back—avoid vague essays.
+Diga o que fazer: analisar, reproduzir, alterar código, escrever documentação, produzir tabela de comparação.
+
+Por exemplo:
 
 ```text
-Output:
-1. What you observe in the image
-2. Likely causes
-3. Files to inspect
-4. Additional screenshots you need from me
+Analise primeiro as causas possíveis; não altere código já. Indique 2–3 arquivos front-end mais provavelmente relacionados.
 ```
 
-## Three common templates
+### 4. Formato de saída
 
-### 1. Find the problem in the image
+Diga que resultado quer; evite generalidades.
+
+Por exemplo:
 
 ```text
-I uploaded a screenshot of the current page. Focus on the red-box area.
-Describe the anomaly first, then list 2–3 likely causes.
-Don't modify code yet.
+Saída:
+1. O que observou na imagem
+2. Causas possíveis
+3. Arquivos sugeridos para inspeção
+4. Capturas adicionais de que ainda precisa
 ```
 
-### 2. Implement from the image
+## Três templates comuns
+
+### 1. Ver a imagem e achar o problema
 
 ```text
-I uploaded the target design.
-Summarize page structure, key components, responsive points, and visual style from this image.
-If you implement, keep structure and hierarchy consistent; don't add features on your own.
+Enviei uma captura da página atual. Foque na área do retângulo vermelho.
+Descreva primeiro a anomalia observada e depois liste 2–3 causas possíveis.
+Não modifique código ainda.
 ```
 
-### 3. Current vs. expected
+### 2. Implementar a partir da imagem
 
 ```text
-I'll upload two images: current result and desired result.
-Compare layout, text hierarchy, spacing, and interaction cues; give fix priority.
+Enviei o design-alvo.
+Com base nesta imagem, resuma a estrutura da página, componentes-chave, pontos responsivos e estilo visual.
+Se começar a implementar, priorize estrutura e hierarquia; não acrescente funcionalidades por conta própria.
 ```
 
-## Text that makes images more accurate
-
-Images often lack runtime context—add:
-
-- device or browser
-- hover / focus / error states
-- scroll position
-- current vs. target
-- whether to follow an existing design system
-
-"Works on desktop Chrome; only broken on iOS Safari" often beats another screenshot.
-
-## Best way to supply multiple images
-
-### Pair them
-
-Useful patterns:
-
-- current + expected
-
-or:
-
-- normal + broken
-
-Don't upload a pile of unlabeled images and let Codex guess order.
-
-### Label each image's role
+### 3. Comparação atual vs. esperado
 
 ```text
-Image 1: desktop current
-Image 2: mobile current
-Image 3: design target
+Vou enviar duas imagens: a primeira é o efeito atual; a segunda é o efeito esperado.
+Compare diferenças de layout, hierarquia tipográfica, espaçamento e sugestões de interação, e priorize as correções.
 ```
 
-Easier to map relationships.
+## Que texto acrescentar para ver melhor
 
-## Common image prompt mistakes
+A imagem costuma carecer de contexto de execução; estes dados ajudam:
 
-### "Just do it like this"
+- dispositivo ou browser
+- se o estado inclui hover / focus / erro
+- posição de scroll da página
+- se é «efeito atual» ou «efeito-alvo»
+- se deve respeitar um design system existente
 
-Codex infers all requirements from the image—including details you didn't care about.
+Uma frase como «no Chrome desktop está bem; só no Safari iOS falha» vale muitas vezes mais do que outra captura.
 
-### Crop without context
+## Como enviar várias imagens
 
-A partial shot shows the problem spot but not page state, responsive behavior, or modal context.
+### Faça «entradas em par»
 
-### Design as full spec
+Formas úteis:
 
-Designs show appearance—not data sources, edge cases, or interaction logic. Add business rules in text.
+- imagem atual
+- imagem esperada
 
-### Image replaces acceptance
+ou:
 
-Even design-driven work needs real page, diff, breakpoints, and usability. Images are input—not proof of done.
+- estado normal
+- estado anómalo
 
-## Related pages
+Não envie um monte de imagens sem legenda e deixe o Codex adivinhar a ordem.
 
-- Upload and manage images: [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- Generate new images: [Image generation](/guide/tools/image-generation/)
-- Complete task structure: [Task anatomy](/prompts/task-anatomy/)
-- Analyze before editing: [Ask for a plan first](/prompts/ask-for-a-plan/)
+### Dê um papel a cada imagem
 
-## Practical tip
-
-For "design review" style reading, ask for **observation**, then **judgment**, then **recommendation**:
+Por exemplo:
 
 ```text
-Only describe what you observe in the image—no conclusions yet.
-Then hypothesize the most likely causes.
-Finally suggest modification directions.
+Figura 1: efeito atual no desktop
+Figura 2: efeito atual no mobile
+Figura 3: efeito-alvo do design
 ```
 
-Clearer than "help me fix" and easier to continue from.
+Assim fica mais fácil mapear as correspondências.
 
-## Reference sources
+## Erros mais comuns em Prompts com imagens
+
+### Só dizer «faça conforme isto»
+
+O Codex tenta inferir todos os requisitos da imagem e trata detalhes irrelevantes como obrigatórios.
+
+### Só um recorte, sem contexto
+
+O recorte mostra o ponto problemático, mas pode omitir o estado da página, efeitos responsivos ou se é um overlay.
+
+### Tratar o design como especificação completa
+
+O design expressa aparência; raramente cobre origem de dados, casos limite e lógica de interação. Regras de negócio ainda precisam de texto.
+
+### Achar que a imagem substitui a aceitação
+
+Mesmo implementando a partir da imagem, no fim há que ver página real, diff, breakpoints e usabilidade. A imagem é entrada, não resultado de aceitação.
+
+## Como combinar com outras páginas
+
+- Enviar e gerir arquivos de imagem: [Imagens e capturas](/guide/files-and-artifacts/images-and-screenshots/)
+- Gerar imagens novas: [Geração de imagens](/guide/tools/image-generation/)
+- Formular a tarefa completa: [Anatomia de uma tarefa](/prompts/task-anatomy/)
+- Analisar antes de agir: [Pedir um plano primeiro](/prompts/ask-for-a-plan/)
+
+## Uma experiência prática
+
+Se quiser que o Codex «veja a imagem como numa revisão de design», peça primeiro **observação**, depois **julgamento**, e só no fim **sugestões**.
+
+Por exemplo:
+
+```text
+Descreva primeiro só o que observou na imagem; não tire conclusões.
+Depois estime a causa mais provável.
+Por fim sugira a direção da alteração.
+```
+
+Costuma ser mais claro do que «ajuda-me a corrigir», e facilita o passo seguinte.
+
+## Fontes de referência
 
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
 - OpenAI Academy: Working with files in ChatGPT
@@ -174,7 +188,7 @@ Clearer than "help me fix" and easier to continue from.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Structure, scenarios, and cautions rechecked against OpenAI official image input and file upload materials; body no longer depends on unofficial scenario sources and omits UI details that need per-version verification.
+**Estado:** verified  
+**Produtos aplicáveis:** App / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Estrutura, cenários e cuidados foram revistos com base em material oficial da OpenAI sobre entrada de imagens e upload de arquivos; o corpo já não depende de fontes de cenário não oficiais e não retém detalhes de interface que exigem verificação versão a versão.

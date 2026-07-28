@@ -1,113 +1,119 @@
 ---
-title: Supported editors
-description: Which editors support the Codex IDE extension, how to choose, and common limits.
+title: Editores suportados
+description: Que editores a extensão IDE do Codex suporta, como escolher e limitações habituais.
 locale: pt
-source_locale: en
-source_revision: 4be910b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The IDE extension embeds Codex in the **editor you already use**—start tasks, view diffs, and accept changes in the same UI. This page covers support scope and choice; installation: [Install IDE extension](/guide/ide/installation/).
+A extensão IDE incorpora o Codex no **editor que já usa**, para iniciar Tarefas, ver Diff e aceitar mudanças na mesma interface em que escreve código. Esta página explica o alcance do suporte e a escolha; os passos de instalação estão em [Instalar a extensão IDE](/guide/ide/installation/).
 
-## What's covered
+## Conteúdo desta página
 
-- Which editors have official extensions
-- IDE extension vs desktop App vs CLI
-- Unifying workflow across editors on a team
+- Que editores têm extensão oficial
+- Como escolher entre extensão IDE, App de desktop e CLI
+- Como alinhar o fluxo numa equipa com vários editores
 
-## What to look at when choosing
+## O que olhar na escolha
 
-Two questions: which editors are officially supported, and whether to stay in the IDE if you already have a favorite editor.
+Aqui tratamos de duas coisas: que editores estão no suporte oficial e, se já tem um editor habitual, se convém continuar a usar o Codex no IDE.
 
-## Official support scope
+## Alcance do suporte oficial
 
-**Concrete list and version requirements: [OpenAI Codex documentation](https://developers.openai.com/codex)**. Commonly includes:
+**A lista concreta e os requisitos de versão seguem a [documentação OpenAI Codex](https://developers.openai.com/codex)**. Os casos comuns incluem:
 
-| Editor | Typical users | Notes |
+| Editor | Utilizador típico | Notas |
 |---|---|---|
-| Visual Studio Code | Most developers | Marketplace install; mature ecosystem |
-| VS Code forks like Cursor | AI-editor users | Usually compatible with VS Code extension mechanism—verify in practice |
-| JetBrains family (if offered) | Java/Kotlin/IDEA users | Features/UI may differ from VS Code build |
+| Visual Studio Code | Maioria dos programadores | Instalação pelo marketplace; ecossistema mais maduro |
+| Forks da família VS Code, como Cursor | Quem já usa editores com IA | Em geral compatíveis com o mecanismo de extensões do VS Code; confirme com testes |
+| Série JetBrains (se a OpenAI oferecer) | Utilizadores de Java/Kotlin/IDEA | Funções e UI podem diferir ligeiramente da versão VS Code |
 
-Editors not on the official list: use [CLI](/guide/cli/) or [desktop App](/guide/desktop-app/) instead—do not rely on unofficial ports.
+Editores fora da lista oficial: use a [CLI](/guide/cli/) ou a [App de desktop](/guide/desktop-app/) como alternativa; não dependa de extensões portadas não oficiais.
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### Official support does not mean feature parity across clients
+### Suportar um editor não significa que as funções sejam iguais às de outras entradas
 
-"Has an extension" is not "can do everything here."
+Há quem interprete «há extensão» como «no IDE consigo fazer tudo».
 
-Different entry points emphasize different work:
+Cada entrada tem um enfoque diferente:
 
-- IDE: code-adjacent edits
-- App: project-level tasks and multi-task coordination
-- CLI: terminal, scripts, remote environments
+- O IDE inclina-se para alterar código de perto
+- A App inclina-se para Tarefas ao nível do projeto e coordenação multi-tarefa
+- A CLI inclina-se para terminal, scripts e ambientes remotos
 
-### Editor choice is not only habit
+### Escolher o editor não é só questão de hábito
 
-IDE fits well when you mostly:
+Se o trabalho principal for:
 
-- Edit code locally
-- Use selection
-- Edit and test in the same place
+- Alterações locais de código
+- Trabalhar com seleção
+- Alterar e testar ao mesmo tempo
 
-App or CLI often fit better for:
+O IDE costuma encaixar melhor.
 
-- Long tasks
-- Document coordination
-- Parallel multiple tasks
+Se o habitual for:
 
-## When to choose the IDE extension
+- Tarefas longas
+- Coordenação de documentação
+- Várias Tarefas em paralelo
 
-| Good fit | Less ideal |
+A App ou a CLI costumam servir melhor.
+
+## Quando escolher a extensão IDE
+
+| Adequado | Menos adequado |
 |---|---|
-| Want current file/selection in context automatically | Need parallel Agents, worktrees, App-only features |
-| Prefer inline diff in editor | Mostly non-code long tasks (docs, research) |
-| Already run tests and debug in IDE | Need standardized Cloud environment from scratch |
+| Ao alterar código, quer que «ficheiro/seleção atuais» entrem automaticamente no Contexto | Precisa de vários Agents em paralelo, árvores de trabalho e outras capacidades exclusivas da App |
+| Costuma ver Diff inline no editor | Faz sobretudo Tarefas longas não relacionadas com código (documentação, pesquisa) |
+| Já corre testes e depuração no IDE | Precisa de um ambiente Cloud padronizado para montar o repositório do zero |
 
-Decision entry: [Choose your Codex client](/guide/getting-started/choose-your-codex-client/)
+Entrada de decisão: [Escolher o cliente Codex](/guide/getting-started/choose-your-codex-client/)
 
-## Division of labor with desktop App
+## Divisão de papéis com a App de desktop
 
 ```text
-IDE extension: while editing → small steps → inline review → local tests
-Desktop App: project tasks → parallel Agents → worktrees → notifications and Cloud delegation
+Extensão IDE: a editar → mudanças pequenas → revisão inline → testes locais
+App de desktop: Tarefas ao nível do projeto → Agents em paralelo → árvores de trabalho → notificações e delegação Cloud
 ```
 
-Same account and project config can be shared; see [editor context](/guide/ide/editor-context/) and [AGENTS.md scope](/guide/customization/agents-md/scope-and-precedence/).
+Ambas podem partilhar a mesma conta e a configuração do projeto; ver [Contexto do editor](/guide/ide/editor-context/) e [Âmbito do AGENTS.md](/guide/customization/agents-md/scope-and-precedence/).
 
-## Team alignment
+## Alinhamento na equipa
 
-1. Document **recommended editor + minimum extension version** in README
-2. Core standards in `AGENTS.md`—not IDE-private features
-3. Code review still uses Git diff—not views only one IDE can show
+1. No README, indique o **editor recomendado + versão mínima da extensão**
+2. As regras centrais ficam em `AGENTS.md`, sem amarrar a funcionalidades privadas de um IDE
+3. O code review continua a basear-se no Diff do Git, sem depender de vistas «só visíveis num IDE»
 
-## Quick decision questions
+## Como decidir que entrada usar
 
-1. Do you spend most time editing code in an editor?
-2. Do you rely on current file, selection, and inline diff?
-3. Do you not need multi-Agent, worktrees, or heavier task management yet?
+Se estiver incerto, use estas perguntas:
 
-If mostly yes, start with the IDE extension.
+1. Passa a maior parte do tempo a alterar código no editor?
+2. Depende muito do ficheiro atual, da seleção e do Diff inline?
+3. Por agora não precisa de vários Agents, árvores de trabalho ou gestão de Tarefas mais forte?
 
-## Common mistakes
+Se a maioria das respostas for «sim», comece pela extensão IDE.
 
-- Assuming IDE extension and App are 1:1 equivalent
-- Starting tasks without workspace root open → wrong paths and `AGENTS.md` resolution
-- Multiple AI extensions fighting for context and shortcuts
+## Erros comuns
 
-Often you pick the IDE extension simply because that is where you already work.
+- Assumir que a extensão IDE e a App são 1:1 em funções
+- Iniciar Tarefas sem abrir a raiz da área de trabalho, o que provoca erros de caminho e de resolução do `AGENTS.md`
+- Misturar várias extensões de IA, com conflitos de Contexto e atalhos
 
-## References
+Muitas vezes escolhe-se a extensão IDE simplesmente porque o trabalho principal já está no editor.
 
-- OpenAI Codex IDE documentation
+## Fontes de referência
+
+- Documentação IDE do OpenAI Codex
 - stormzhang `09-ide.md`
 - KimYx0207 CX-08 IDE
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** Official Help Center strongly confirms "Codex VS Code extension is compatible with most VS Code forks," but this page extends to Cursor, Windsurf, JetBrains support shapes and comparisons; needs an updated support matrix before `verified`.  
-**Last verified:** 2026-07-26
+**Estado:** outdated  
+**Produtos aplicáveis:** IDE  
+**Nota de revisão:** O centro de ajuda oficial atual só confirma com força suficiente que «Codex VS Code extension is compatible with most VS Code forks»; esta página estende-se a formas concretas de suporte e comparação com Cursor, Windsurf, JetBrains, etc.; convém marcá-la como `outdated` até completar a matriz de suporte vigente.  
+**Última verificação:** 2026-07-26

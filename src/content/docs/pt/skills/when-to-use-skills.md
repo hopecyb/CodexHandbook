@@ -1,88 +1,88 @@
 ---
-title: When to use Skills
-description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
+title: Quando usar Skills
+description: Decidir se uma Tarefa deve virar Skill e como dividir o trabalho com comandos de barra e MCP.
 locale: pt
-source_locale: en
-source_revision: f4b5554
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-When you first encounter Skills, a common question is: is this worth packaging as a Skill?
+Quem começa com Skill costuma perguntar: isso realmente vale a pena virar um Skill dedicado?
 
-If everything becomes a Skill, things get heavy; if you never capture repeatable flows, you keep re-explaining the same steps by hand. This page helps you decide when to solidify a workflow.
+Se tudo virar Skill, o sistema fica pesado; se o que deveria consolidar-se não consolidar, você repete as mesmas instruções à mão. Aqui o foco é decidir quando fixar um fluxo.
 
-# When to use Skills
+# Quando usar Skills
 
-## Good candidates for a Skill
+## Adequado para encapsular em Skill
 
-- The same flow has been repeated manually a third time
-- You need a detailed checklist but do not want it in context every time
-- You want the model to auto-enable based on `description`
-- The team needs a shared, versioned workflow
+- O mesmo fluxo já foi repetido manualmente pela terceira vez
+- Precisa de checklist detalhado, sem ocupar o Contexto inteiro toda vez
+- Quer que o modelo decida sozinho quando ativar, pelo `description`
+- A equipe precisa de workflows compartilhados e versionados
 
-## Conditions that make a Skill worthwhile
+## Condições que justificam um Skill
 
-If a task meets both of these, a Skill is worth considering:
+Se uma Tarefa cumprir as duas condições abaixo, vale considerar Skill:
 
-- You will do it again
-- You want the next run to be as consistent as possible
+- Você vai fazer de novo no futuro
+- Quer que a próxima execução seja o mais consistente possível
 
-Many Skills end up in scenarios like:
+Muitos Skills acabam nestes cenários:
 
-- Reviewing diffs
-- Generating changelogs
-- Pre-release checks
-- Documentation publish flows
+- Revisar diff
+- Gerar changelog
+- Checagem pré-release
+- Fluxo de publicação de documentação
 
-These tasks are not complex, but they reuse well.
+Não são tarefas complexas, mas se prestam bem à reutilização.
 
-## Poor fits
+## Menos adequado
 
-- One-off tasks that never repeat
-- Very short commands you remember (consider a slash command)
-- Needs live external state that changes very fast (consider MCP)
+- Tarefas únicas, que nunca se repetiram
+- Comandos fixos muito curtos que você lembra (considere comando de barra)
+- Precisa de estado externo em tempo real que muda rápido demais (considere MCP)
 
-## Common misconceptions
+## Equívocos comuns
 
-### 1. Important tasks should always become Skills
+### 1. Se a Tarefa é importante, deve virar Skill
 
-Important does not mean reusable.  
-A one-off special task may only add maintenance burden as a Skill.
+Importante ≠ adequado para reutilizar.  
+Se for uma Tarefa especial e única, virar Skill pode só aumentar manutenção.
 
-### 2. More Skills is better
+### 2. Quanto mais Skills, melhor
 
-Too many Skills with fuzzy boundaries make the model misuse them and the team harder to maintain.
+Skills demais com limites confusos fazem o modelo errar o uso e a equipe sofrer para manter.
 
-### 3. If it connects to external systems, start with a Skill
+### 3. Se dá para ligar a um sistema externo, faça Skill primeiro
 
-External access is often an MCP problem; the Skill owns the **process**—how to connect still depends on MCP.
+Muitas vezes a conexão externa é assunto de MCP. O Skill cuida do «fluxo»; como conectar o sistema externo ainda depende do MCP.
 
-## How to try before committing
+## Como experimentar
 
-If you are unsure a workflow is worth capturing:
+Se ainda não sabe se um fluxo vale consolidar, tente assim algumas vezes:
 
-1. Do it manually two or three times
-2. Notice whether you repeat the same check order each time
-3. If yes, turn it into a Skill
+1. Faça manualmente duas ou três vezes
+2. Observe se está sempre repetindo a mesma ordem de checagens
+3. Se a resposta for «sim», aí transforme em Skill
 
-Skills built this way are sturdier because they come from real repetition, not upfront design.
+Skills assim ficam mais sólidos, porque nascem de repetição real, não de desenho no vazio.
 
-## Compared to other extension methods
+## Comparação com outras extensões
 
-| Method | Best for |
+| Método | Adequado para |
 |---|---|
-| Skill | Reusable flows, progressive disclosure |
-| MCP | External APIs and data sources |
-| Hooks | Auto-run at specific events |
-| `AGENTS.md` | Project-wide standing conventions |
+| Skill | Fluxos reutilizáveis, divulgação progressiva |
+| MCP | Conectar APIs e fontes de dados externas |
+| Hooks | Executar automaticamente em pontos de evento |
+| `AGENTS.md` | Convenções permanentes no nível do projeto |
 
-Skills are best for flows that repeat, need consistency, and you do not want to re-explain every time.
+Skill serve melhor para fluxos que «se repetem, precisam ser consistentes e você não quer explicar de novo toda vez».
 
-For extension choice, see [Choosing an extension method](/skills/choosing-an-extension-method/). For workflow capture, see [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Para escolher o método de extensão, veja [Como escolher o método de extensão](/skills/choosing-an-extension-method/). Para consolidar workflows, veja [Transformar um fluxo em Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Help "Skills in ChatGPT" confirms Skills are reusable, shareable workflows; current Codex runtime also matches skills by name and description. This page is selection guidance, not volatile UI.  
-**Last verified:** 2026-07-26
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base da Verificação:** O OpenAI Help *Skills in ChatGPT* confirma que Skill é um workflow reutilizável e compartilhável; o runtime atual do Codex também faz matching por nome e descrição. Esta página trata sobretudo de princípios de seleção, sem depender de UI volátil.  
+**Última Verificação:** 2026-07-26

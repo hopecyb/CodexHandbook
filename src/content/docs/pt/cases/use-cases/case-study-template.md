@@ -1,83 +1,84 @@
 ---
-title: Case study template
-description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
+title: Modelo de caso
+description: Estrutura unificada para redigir e fazer retrospectiva de casos Codex — facilita consolidação e comparação na equipa.
 locale: pt
-source_locale: en
-source_revision: 985e88b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Copy this template to create a new case page or internal retro doc.
 
-Before copying, delete sections your actual readers and deliverables don't need.
+Copie este modelo para criar uma nova página de caso ou um documento interno de retrospectiva.
+
+Antes de copiar, elimine as secções desnecessárias conforme o público e o entregável reais.
 
 ---
 
-## Metadata
+## Metadados
 
-| Field | Fill in |
+| Campo | Preencher |
 |---|---|
-| Case title | |
-| Audience | Beginner / Developer / Creator / Team |
-| Client used | App / CLI / IDE / Cloud |
-| Estimated time | |
-| Verification date | YYYY-MM-DD |
+| Título do caso | |
+| Público | Principiantes / programadores / criadores / equipas |
+| Cliente usado | App / CLI / IDE / Cloud |
+| Tempo estimado | |
+| Data de verificação | YYYY-MM-DD |
 
-## 1. Goal and context
+## 1. Objetivo e contexto
 
-- **Business goal:** one sentence
-- **Success criteria:** observable and verifiable
-- **Out of scope:** explicit exclusions
+- **Objetivo de negócio:** Uma frase
+- **Critérios de sucesso:** Observáveis e verificáveis
+- **Fora de âmbito:** Exclusões explícitas
 
-## 2. Preparation
+## 2. Preparação
 
-- Account/permissions/repo state
-- Context files needed (`AGENTS.md`, designs, etc.)
-- Risks: data, production, secrets
+- Conta / permissões / estado do repositório
+- Ficheiros de contexto necessários (`AGENTS.md`, mockups, etc.)
+- Riscos: dados, produção, segredos
 
-## 3. Workflow (EPXV)
+## 3. Fluxo de trabalho (EPXV)
 
-### Explore
+### Explorar
 
-- Input prompt (summary)
-- Key findings
+- Prompt de entrada (resumo)
+- Descobertas-chave
 
-### Plan
+### Planear
 
-- Step list
-- Human confirmation points
+- Lista de passos
+- Pontos de confirmação humana
 
-### Execute
+### Executar
 
-- Actual change scope
-- Deviations from plan and why
+- Âmbito real das alterações
+- Desvios face ao plano e motivos
 
-### Verify
+### Verificar
 
-- Automated tests
-- Manual checks
-- Evidence (screenshots, logs, links)
+- Testes automáticos
+- Verificação humana
+- Evidência (capturas, logs, ligações)
 
-## 4. Failure and recovery
+## 4. Falha e recuperação
 
-- What went wrong
-- How to undo or fix
-- What you'd change in prompts/config if you redid it
+- Que problemas ocorreram
+- Como desfazer ou corrigir
+- Se recomeçasse, o que mudaria no prompt/configuração
 
-## 5. Capture
+## 5. Consolidação
 
-- Whether to write `AGENTS.md` / Skill / Automation
-- Three recommendations for the team
+- Escrever em `AGENTS.md` / Skill / Automation?
+- 3 sugestões para a equipa
 
-## 6. References
+## 6. Fontes de referência
 
-- Official doc links
-- Whether this case adapts an external tutorial (task type only)
+- Ligações à documentação oficial
+- Se este caso foi adaptado de um tutorial externo (apenas o tipo de tarefa como referência)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against this handbook's verified EPXV workflow, failure recovery, project instructions, and case library structure; this page only provides a unified template for writing and retrospecting cases—not specific product behavior.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com o fluxo EPXV já verificado deste manual, recuperação de falhas, instruções de projeto e estrutura da biblioteca de casos; esta página só oferece um modelo unificado para redigir e fazer retrospectiva de casos, sem declarar comportamento concreto de produto.  
+**Última verificação:** 2026-07-26

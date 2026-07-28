@@ -1,90 +1,91 @@
 ---
-title: Human approval patterns
-description: When to approve, reject, or pause Codex—and how to write those rules clearly.
+title: Padrões de aprovação humana
+description: Quando aprovar, rejeitar ou pedir ao Codex para pausar — e como documentar essas regras com clareza.
 locale: pt
-source_locale: en
-source_revision: f8c7a3b
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Approval keeps irreversible actions for humans. This page summarizes common patterns.
 
-## Approval tiers
+A aprovação serve para deixar operações irreversíveis na decisão humana. Esta página reúne algumas práticas comuns.
 
-```text
-Auto-safe zone (read, analyze, plan)
-    ↓
-Prompt-confirm zone (write files, run commands, network)
-    ↓
-Mandatory human zone (push, delete data, send externally, change production config)
-```
-
-Specific dialog behavior varies by [product entry](/guide/); principles are the same.
-
-## Pattern 1: Plan first, execute later
+## Camadas de aprovação
 
 ```text
-Rule: Do not modify repo files until I say "approve plan."
+Zona automática segura (ler, analisar, planear)
+    ↓
+Zona de confirmação pedida (escrever ficheiros, correr comandos, rede)
+    ↓
+Zona de intervenção humana obrigatória (push, apagar dados, enviar para fora, alterar configuração de produção)
 ```
 
-Good for: unfamiliar codebase, production-related, large diff.
+O comportamento concreto dos diálogos varia conforme o [ponto de entrada do produto](/guide/); o princípio é o mesmo.
 
-## Pattern 2: Command whitelist
+## Padrão 1: planear antes de executar
 
-In [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) write:
+```text
+Regra: sem ver a minha «aprovação do plano», não modificar ficheiros do repositório.
+```
+
+Adequado a: código-base desconhecido, relacionado com produção, diffs grandes.
+
+## Padrão 2: lista branca de comandos
+
+Em [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/), declare:
 
 ```md
-Allowed without asking again: pnpm test, pnpm lint, git status, git diff
-Must confirm each time: git push, npm publish, database migrate
+Permitidos sem voltar a perguntar: pnpm test, pnpm lint, git status, git diff
+Confirmação obrigatória de cada vez: git push, npm publish, migrate de base de dados
 ```
 
-When conflicting with hosted policy, **stricter** wins.
+Em conflito com a política de hosting, prevalece a **mais estrita**.
 
-## Pattern 3: Two-phase merge
+## Padrão 3: fusão em duas fases
 
-1. Codex opens draft PR or local branch
-2. Human CI + review, then merge
+1. O Codex abre um draft PR ou um ramo local
+2. Fusão só após CI + review humana a passar
 
-Cloud: see [Create pull requests](/guide/web-and-cloud/create-pull-requests/).
+Cenários Cloud em [criar Pull Requests](/guide/web-and-cloud/create-pull-requests/).
 
-## Pattern 4: Read-only recon
+## Padrão 4: reconhecimento só de leitura
 
 ```text
-This round read-only: may read files, run tests, curl local API;
-no disk writes or git commit.
+Esta ronda é só de leitura: pode ler ficheiros, correr testes, curl a APIs locais;
+proibido escrever em disco e git commit.
 ```
 
-For audit, learning unfamiliar projects, production diagnosis.
+Usado em auditorias, aprendizagem de projetos desconhecidos e diagnóstico de problemas de produção.
 
-## When to reject and restart
+## Quando rejeitar e recomeçar
 
-| Signal | Suggestion |
+| Sinal | Sugestão |
 |---|---|
-| Plan doesn't match goal | Reject execution; request revised plan |
-| Scope creep | Stop; split task |
-| Tests skipped | Reject merge; require verification |
-| Cannot explain a command | Reject; require explanation |
+| Plano desalinhado com o objetivo | Recusar execução; pedir revisão do plano |
+| Âmbito das alterações a crescer | Parar; dividir a tarefa |
+| Testes saltados | Recusar fusão; exigir verificação complementar |
+| Impossível explicar um comando | Recusar; exigir explicação |
 
-## Relation to Automations
+## Relação com Automations
 
-Unattended tasks should still design human confirmation points—see [Scheduled and background tasks](/skills/automations/scheduled-tasks/).
+Tarefas sem supervisão também devem manter pontos de confirmação humana no desenho; ver [tarefas agendadas e em segundo plano](/skills/automations/scheduled-tasks/).
 
-## Common mistakes
+## Erros comuns
 
-- Long-term "always allow" without remembering risk
-- Approval theater—don't read diff
-- Verbal "don't mess up" instead of explicit mode
+- Marcar «permitir sempre» a longo prazo e esquecer o risco
+- Aprovação formal sem ler o diff
+- Usar «não faças disparates» oral em vez de um padrão explícito
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Approval mode declared before task starts
-- [ ] High-risk ops have second-person review or CI gate
-- [ ] Team has unified policy for `git push` and similar commands
+- [ ] Antes de iniciar a tarefa, declarar qual o padrão de aprovação
+- [ ] Operações de alto risco com segundo revisor ou CI
+- [ ] Política unificada da equipa para `git push` e comandos semelhantes
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** Cross-checked against OpenAI Developers' current official guidance on autonomy / approval boundaries, and verified approval, command rules, PR, and automation chapters in this handbook; this page only confirms stable collaboration principles—which actions auto-continue vs pause for human approval.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Cruzado com a orientação oficial atual da OpenAI Developers sobre autonomy / approval boundaries e com os capítulos já verificados deste manual sobre aprovação, regras de comando, PRs e automatização; esta página confirma apenas o princípio estável de colaboração «que ações podem continuar automaticamente e quais devem parar para aprovação humana».  
+**Última verificação:** 2026-07-26

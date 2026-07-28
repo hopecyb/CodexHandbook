@@ -1,69 +1,69 @@
 ---
-title: Automate template
-description: Repeatable tasks and reusable flows.
+title: Template de automação
+description: Tarefas repetidas e fluxos reutilizáveis.
 locale: pt
-source_locale: en
-source_revision: 4291cd1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Automate template
+# Template de automação
 
-A common automate mistake: focus on "can it run automatically" without:
+O equívoco comum em tarefas de automação: pensar só «consegue correr sozinho?», sem perguntar antes:
 
-- what happens on failure
-- who sees results
-- whether it can stop safely
+- o que fazer se falhar
+- quem vê o resultado
+- se consegue parar em segurança quando há erro
 
-This template emphasizes control when things go wrong.
+O foco deste template: a tarefa continua controlável quando algo corre mal.
 
 ## Template
 
 ```text
-Goal: Automate 【repeatable task】 as 【script/Skill/scheduled job】.
-Trigger: 【manual / schedule / CI】
-Inputs: 【data sources, config files】
-Constraints:
-- Clear exit codes and log locations on failure
-- No hardcoded secrets; use environment variables
-- Provide dry-run mode
-Acceptance:
-- Expected output on 【sample input】
-- Docs for how to run and troubleshoot
+Objetivo: automatizar 【tarefa repetida】 como 【script/Skill/tarefa agendada】.
+Gatilho: 【manual / agendado / CI】
+Entradas: 【fonte de dados, arquivos de configuração】
+Restrições:
+- em falha, código de saída e localização dos logs claros
+- sem segredos hardcoded; usar variáveis de ambiente
+- fornecer modo dry-run
+Aceitação:
+- com 【entrada de exemplo】 produz o resultado esperado
+- a documentação explica como executar e diagnosticar
 ```
 
-## When to use this template
+## Quando usar este template
 
-- Repeatable tasks with clear rules
-- Flows to script or schedule
-- Adding dry-run, logs, and exit codes as guardrails
+- Tarefas repetidas com regras claras
+- Fluxos a scriptar ou agendar
+- Querer primeiro dry-run, logs e códigos de saída como barreiras
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Automation removes human judgment
+### 1. Automatizar = eliminar julgamento humano
 
-Many practical automations only check, summarize, or draft.
+Muita automação viável só faz checagem automática, resumo automático ou rascunho automático.
 
-### 2. One successful run means ready to automate
+### 2. Correu uma vez = pronto para automatizar
 
-For long-running automation, also add:
+Para automação de longo prazo, ainda falta:
 
 - logs
-- exit codes
+- códigos de saída
 - dry-run
-- troubleshooting docs
+- documentação de diagnóstico
 
-The automate template aims for safe, sustained operation.
+O valor deste template é permitir execução longa e segura.
 
-## Related
+## Relacionado
 
-- [Long-running tasks](/prompts/long-running-tasks/)
-- [Automate a daily report case](/cases/automate-a-daily-report/)
+- [Prompts para tarefas longas](/prompts/long-running-tasks/)
+- [Caso: automatizar um relatório diário](/cases/automate-a-daily-report/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides an automate-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página oferece um template de tarefas de automação; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

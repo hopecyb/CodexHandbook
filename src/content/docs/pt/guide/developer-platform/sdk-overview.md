@@ -1,97 +1,97 @@
 ---
-title: SDK Overview
-description: Start Codex tasks from your application via the official SDK—authentication, sessions, and error-handling concepts.
+title: Visão geral do SDK
+description: Lançar Tarefas Codex na tua aplicação com o SDK oficial — conceitos de autenticação, sessão e tratamento de erros.
 locale: pt
-source_locale: en
-source_revision: 578f7f1
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The SDK (name and language per [official docs](https://developers.openai.com/codex)) lets you create tasks, poll status, and fetch results from **your own service**, not only via the terminal TUI.
+O SDK (nome e linguagens conforme a [documentação oficial](https://developers.openai.com/codex)) permite criar Tarefas, consultar o estado e obter resultados no **teu próprio serviço**, sem depender só da TUI do terminal.
 
-If “SDK” is new to you, think of it as a development toolkit for programs to call Codex—not a UI you click through.
+Se vês «SDK» pela primeira vez, pensa nele como um conjunto de ferramentas de desenvolvimento para um programa chamar o Codex — não como uma interface de cliques para pessoas.
 
-In other words, it fits when **your system calls Codex**. For one-off tasks, you usually do not need the SDK yet.
+Ou seja: serve para «o teu sistema chamar o Codex». Se só lanças uma Tarefa pontual, normalmente ainda não precisas do SDK.
 
-## What this page covers
+## O que esta página cobre
 
-- When to use the SDK vs CLI `exec`
-- Authentication and tenant isolation
-- How to pair with webhooks and queues
+- Quando usar o SDK em vez de CLI `exec`
+- Autenticação e isolamento de tenant
+- Ideias de combinação com Webhook e filas
 
-Platform overview: [Developer platform](/guide/developer-platform/)
+Vista geral da plataforma: [Plataforma para desenvolvedores](/guide/developer-platform/)
 
 ## SDK vs CLI
 
 | | SDK | CLI `exec` |
 |---|---|---|
-| Integration point | Backend services, internal tools | Shell, GitHub Actions |
-| State management | Your code owns it | Process exit code |
-| Best for | Multi-tenant products, custom UI | Simple pipelines |
+| Onde se integra | Serviço backend, ferramentas internas | Shell, GitHub Actions |
+| Gestão de estado | O teu código | Código de saída do processo |
+| Adequado para | Produto multi-tenant, UI à medida | Pipelines simples |
 
-Many teams use **CLI in CI, SDK in product**.
+Muitas equipas usam **CLI em CI e SDK no produto**.
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. What is the difference between SDK and CLI?
+### 1. Em que se diferenciam SDK e CLI?
 
-Roughly:
+Em traços gerais:
 
-- **CLI**: humans or scripts call from the terminal
-- **SDK**: you write code to embed Codex in your service
+- **CLI**: chama-o uma pessoa ou um script no terminal
+- **SDK**: escreves código e embutes a capacidade do Codex no teu serviço
 
-### 2. Should I learn the SDK first?
+### 2. Devo aprender primeiro o SDK?
 
-Usually not.
+Normalmente não.
 
-If you mainly want to learn Codex, local entry points and interactive CLI are usually a better first step.
+Se só queres aprender a usar o Codex, a entrada local e o modo interativo do CLI costumam ser melhor primeiro passo.
 
-### 3. When is the SDK worth it?
+### 3. Quando vale a pena o SDK?
 
-When you start hitting needs like:
+Quando aparecem necessidades como:
 
-- Triggering Codex tasks from your product
-- Managing task state and results yourself
-- Building custom UI, permissions, and workflows
+- Lançar Tarefas Codex a partir do teu próprio produto
+- Gerir tu o estado e o resultado das Tarefas
+- Fazer UI, Permissões e fluxos à medida
 
-The SDK fits “connecting systems programmatically,” not as the main entry for first-time Codex users.
+O SDK serve para «ligar sistemas a partir de um programa», não como entrada principal na primeira vez que usas o Codex.
 
-## Core concepts (language-agnostic)
+## Conceitos centrais (independentes da linguagem)
 
-1. **Authentication**: org API key or OAuth delegation—follow least scope
-2. **Task / thread**: one user request maps to a traceable ID
-3. **Tool policy**: server-side sandbox and approval aligned with clients
-4. **Results**: message history, file diffs, artifact URLs (per API)
-5. **Errors**: distinguish retryable (429) from non-retryable (400)
+1. **Autenticação**: API key da organização ou OAuth delegado — scope mínimo
+2. **Tarefa / Thread**: um pedido de utilizador com ID rastreável
+3. **Política de Ferramentas**: o servidor fixa Sandbox e Aprovação, alinhado com o cliente
+4. **Resultado**: histórico de mensagens, Diff de ficheiros, URL de artefatos (conforme a API)
+5. **Erros**: distinguir retentáveis (429) e não retentáveis (400)
 
-Error index: [Error reference](/guide/reference/error-reference/)
+Índice de erros: [Referência de erros e avisos](/guide/reference/error-reference/)
 
-## Minimal integration checklist
+## Lista mínima de integração
 
-- [ ] Trial on staging with a read-only repo
-- [ ] Log redaction; do not log full user prompts if they contain PII
-- [ ] Timeout and cancel: abort when the user leaves the page
-- [ ] Pin SDK and model IDs
+- [ ] Testar em staging com um repo só de leitura
+- [ ] Desensibilizar logs; não registar o Prompt completo do utilizador se contiver PII
+- [ ] Timeout e cancelamento: poder abortar a Tarefa se o utilizador abandonar a página
+- [ ] Fixar versão do SDK e do model ID
 
-## Connecting to CI/CD
+## Encaixe com CI/CD
 
-The SDK can trigger Cloud or remote runners, or CI can callback your service to update PR status. Example patterns: [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/).
+O SDK pode disparar Cloud ou um runner remoto, ou a CI pode chamar o teu serviço para atualizar o estado do PR. Padrões de exemplo em [Automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/).
 
-## Common mistakes
+## Erros frequentes
 
-- Using browser session cookies as API keys
-- No concurrency limits, spiking quota under load
-- Auto-merging PRs produced by the SDK
+- Usar o cookie de sessão do browser do utilizador como API key
+- Sem limite de concorrência; um pico de tráfego esgota a quota
+- Fazer merge automático de PRs gerados pelo SDK
 
-## Reference sources
+## Fontes de referência
 
-- OpenAI Codex SDK reference
-- KimYx0207 developer integration chapter
+- Referência do SDK OpenAI Codex
+- Capítulos de integração para desenvolvedores de KimYx0207
 
 ---
 
-**Status:** verified  
-**Products:** API  
-**Verification basis:** Cross-checked against OpenAI Developers’ current public Codex API/model and developer-platform use cases, plus verified developer-platform overview, CI/CD, and non-interactive chapters in this handbook; this page only confirms the stable split that the SDK fits programmatic integration, state management, and custom UI.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** API  
+**Base de verificação:** Cruzado com a documentação pública atual da OpenAI Developers sobre API/modelos Codex e casos da plataforma para desenvolvedores, e com os capítulos verificados de resumo da plataforma, CI/CD e modo não interativo; esta página só confirma o princípio estável de que o SDK serve para integração programática, gestão de estado e UI à medida.  
+**Última verificação:** 2026-07-26

@@ -1,72 +1,74 @@
 ---
-title: Change template
-description: Bounded iteration on existing work.
+title: Template de alteração
+description: Iterar com limites sobre o que já existe.
 locale: pt
-source_locale: en
-source_revision: abd9706
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-# Change template
+# Template de alteração
 
-For "change a little on what already exists."
+Este template serve tarefas do tipo «alterar um pouco o que já existe».
 
-Change tasks should state edit boundaries first.
+Em tarefas de alteração, comece por deixar claros os limites da mudança.
 
 ## Template
 
 ```text
-Goal: On 【existing feature/file】, complete 【specific change】.
-Context: 【why changing, blast radius】
-Inputs: @【relevant file paths】
-Constraints:
-- Keep 【API/style/behavior】 unchanged unless I explicitly allow
-- Minimal diff; no unrelated refactors
-- After each step, run only 【relevant tests】
-Acceptance:
-- 【behavior change description】
-- Related tests pass
-- Diff touches only necessary files
+Objetivo: em 【funcionalidade/arquivo existente】, concluir 【alteração concreta】.
+Contexto: 【por que alterar, alcance do impacto】
+Entradas: @【caminho dos arquivos relevantes】
+Restrições:
+- manter 【API/estilo/comportamento】 inalterado, salvo autorização explícita minha
+- diff mínimo; sem refatoração irrelevante
+- após cada passo, correr só 【testes relevantes】
+Aceitação:
+- 【descrição da mudança de comportamento】
+- testes relevantes passam
+- o diff envolve apenas os arquivos necessários
 ```
 
-## When to use this template
+## Quando usar este template
 
-- Edit existing page or component
-- Fix a specific bug
-- Tweak copy, interaction, or config
-- Emphasize "only this part—no drive-by refactors"
+- Alterar página ou componente existente
+- Corrigir um bug explícito
+- Ajustar texto, interação ou configuração
+- Querer enfatizar «só esta parte; sem refatorar de passagem»
 
-## Common misconceptions
+## Ideias erradas habituais
 
-### 1. Change is simpler than create, so write less
+### 1. Alterar é mais simples que criar, então pode escrever bem menos
 
-Change tasks hit old code, old constraints, and hidden dependencies—boundaries matter more.
+Alterar esbarra com código antigo, restrições antigas e dependências ocultas — precisa ainda mais de limites.
 
-### 2. "Minimal diff" means fewer lines
+### 2. «Diff mínimo» = mudar só umas linhas
 
-Minimal diff means **only what directly serves the goal**.
+«Diff mínimo» significa **alterar só o que está diretamente relacionado com o objetivo**.
 
-### 3. "Keep existing behavior" is enough
+### 3. «Manter o comportamento atual» ainda não basta
 
-Also state what counts as "existing behavior."
+Acrescente o que conta como «comportamento atual».
 
-## What this template prevents
+## O que este template previne
 
-- changing too much
-- changing the wrong thing
-- editing layers you didn't authorize
+Principalmente:
 
-Change prompts need "what to change" and "where changes are allowed."
+- alterar demais
+- alterar fora do alvo
+- tocar camadas que você não autorizou
 
-## Related
+Num Prompt de alteração, além de «o que mudar», diga «até onde é permitido mudar».
 
-- [Define done](/prompts/define-done/)
-- [Constraints and boundaries](/prompts/constraints-and-boundaries/)
+## Relacionado
+
+- [Definir o concluído](/prompts/define-done/)
+- [Restrições e limites](/prompts/constraints-and-boundaries/)
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-26  
-**Verification basis:** This page provides a change-task template; in-site links and template structure were rechecked, and the body does not depend on volatile facts such as product versions, pricing, or UI details.
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Última verificação:** 2026-07-26  
+**Base de verificação:** Esta página oferece um template de tarefas de alteração; links e estrutura foram revistos; o corpo não depende de factos voláteis do produto.

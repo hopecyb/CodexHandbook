@@ -1,36 +1,72 @@
 ---
-title: Glossary
-description: Short definitions of handbook terms.
+title: Glossário
+description: Definições curtas dos termos habituais do manual.
 locale: pt
-source_locale: en
-translation_status: fallback
-translated_at: '2026-07-28'
-source_revision: 0aa65ed
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
 
-| Term | Definition |
+| Termo | Definição |
 |---|---|
-| Agent | An execution approach that calls tools and iterates toward a goal |
-| Approval | Human confirmation before high-risk operations |
-| Diff | A before/after view of changes |
-| Cloud task | A task executed in a cloud environment |
-| Context | The set of information the model can currently use |
-| Compaction | The process of summarizing long context to save window space |
-| Hook | Custom logic that runs at lifecycle nodes (advanced) |
-| MCP | Protocol for connecting external tools and data (advanced) |
-| Prompt | The goal and requirements text given to an Agent |
-| Sandbox | Execution isolation that limits blast radius |
-| Skill | A reusable package of specialized instructions and resources (advanced) |
-| Thread | A continuous conversation and its accumulated context |
-| Token | The unit used to measure text processed by the model |
-| Worktree | An isolated working directory for parallel experiments |
+| Agent | Forma de execução que chama Ferramentas e avança por iteração até um objetivo |
+| Aprovação | Confirmação humana antes de uma operação de alto risco |
+| Diff | Vista de comparação antes/depois de uma alteração |
+| Tarefa Cloud | Tarefa executada num Ambiente Cloud |
+| Contexto | Conjunto de informação que o modelo pode usar no momento |
+| Compactação | Processo de resumir Contexto longo para poupar janela |
+| Hook | Lógica personalizada em nós do ciclo de vida (avançado) |
+| MCP | Protocolo para ligar Ferramentas e dados externos (avançado) |
+| Prompt | Texto de objetivo e requisitos para o Agent |
+| Sandbox | Isolamento de execução que limita o alcance do impacto |
+| Skill | Pacote reutilizável de instruções e recursos especializados (avançado) |
+| Thread | Conversação contínua e o seu Contexto acumulado |
+| Token | Unidade de medida do texto que o modelo processa |
+| Árvore de trabalho | Diretório de trabalho isolado para experiências em paralelo |
 
-Beginner version: [Terminology for beginners](/guide/start-here/terminology-for-beginners/)
+Versão para principiantes: [Terminologia para principiantes](/guide/start-here/terminology-for-beginners/)
+
+## Como usar
+
+Isto é um dicionário rápido, não um tutorial completo.  
+Se noutra página vês uma palavra e não te lembras do significado, volta aqui.
+
+Se a maioria destes termos ainda não te soa familiar, começa por [Terminologia para principiantes](/guide/start-here/terminology-for-beginners/).
+
+## Mal-entendidos frequentes
+
+### 1. Não precisas de memorizar do princípio ao fim
+
+O uso mais habitual é:
+
+- Encontrar a palavra noutra página
+- Voltar a consultá-la aqui
+- Continuar a ler o original
+
+### 2. Perceber a definição curta ≠ saber usar
+
+O glossário ajuda-te a identificar o termo; o como usar está na página temática correspondente.
+
+### 3. Muitos termos não significam que não possas continuar a aprender
+
+No Codex há palavras novas por natureza. Basta uma ideia aproximada e depois completar detalhes.
+
+## Quando não perceberes uma palavra
+
+Podes fazer isto:
+
+1. Consultar a definição curta
+2. Confirmar só a que classe de conceito pertence
+3. Ir à página temática para a explicação completa
+
+Assim um termo não interrompe demasiado o ritmo de leitura.
 
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Estado:** verified  
+**Produtos aplicáveis:** App / CLI / IDE / Cloud  
+**Base de verificação:** Esta página só oferece definições curtas de termos habituais do manual; foram revistas ligações internas e definições, e o corpo não depende de versão de produto, preços nem factos de interface variáveis.  
+**Última verificação:** 2026-07-26

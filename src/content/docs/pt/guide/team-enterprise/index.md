@@ -1,107 +1,107 @@
 ---
-title: Team & Enterprise
-description: Adoption, standards, governance, and security for scaling Codex without losing control.
+title: Equipa e empresa
+description: Adoção, normas, administração e governação de segurança para escalar o Codex sem perder o controlo.
 sidebar:
   order: 70
 locale: pt
-source_locale: en
-source_revision: fe1265c
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-The **Team & Enterprise** chapter is for engineering leads, platform, and security teams—moving Codex from individual productivity to something teams can manage, audit, and learn from. Pair with [Learning path · Team](/guide/learning-paths/team/); this chapter leans governance and rollout.
+O capítulo **Equipa e empresa** destina-se a responsáveis de engenharia, plataformas e segurança: passar o Codex de «útil para uma pessoa» a «gerível, auditável e recuperável pela equipa». Em leitura conjunta com [Percursos · Equipa](/guide/learning-paths/team/), este capítulo inclina-se mais para governação e implementação.
 
-If you are still solo or learning basics, you can read this later. It focuses on boundaries, process, and accountability when many people use Codex together.
+Se ainda usas sozinho ou estás a aprender o básico, podes deixar este capítulo para depois. Aqui o foco é: com muita gente a usar, como clarificar limites, processos e responsabilidades.
 
-Key questions:
+Questões centrais:
 
-- Who can use it
-- What scope is allowed
-- How to trace incidents
-- How high-risk extensions are approved
+- Quem pode usar
+- Até onde pode ir
+- Como rastrear quando algo corre mal
+- Como aprovar extensões de alto risco
 
-## What this chapter covers
+## Conteúdo deste capítulo
 
-- Path from small-team pilot to org rollout
-- Security, compliance, and extension (Plugin/MCP) risk
-- Cross-links to other handbook sections
+- Percurso do piloto em equipa pequena à adoção organizacional
+- Segurança, conformidade e riscos de extensões (Plugin/MCP)
+- Referências cruzadas a outros capítulos deste manual
 
-## Who should read
+## Quem deve ler o quê
 
-| Role | Start with |
+| Papel | Ler primeiro |
 |---|---|
-| EM / lead | [Threat model](/guide/team-enterprise/security/threat-model/) · [Acceptable use](/guide/team-enterprise/governance/acceptable-use/) |
-| Platform engineering | [Team rules](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Security | [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
+| EM / responsável | [Modelo de ameaças](/guide/team-enterprise/security/threat-model/) · [Uso aceitável](/guide/team-enterprise/governance/acceptable-use/) |
+| Engenharia de plataforma | [Regras de equipa](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
+| Segurança | [Riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injeção de Prompt](/guide/team-enterprise/security/prompt-injection/) |
 
-## Governance model (conceptual)
+## Modelo de governação (conceito)
 
 ```text
-Policy (org-managed, AUP)
+Política (gestão organizacional, AUP)
     ↓
-Standards (AGENTS.md, approved extension list)
+Normas (AGENTS.md, lista de extensões aprovadas)
     ↓
-Enforcement (rules, sandbox, Hooks, CI)
+Execução (regras, Sandbox, Hooks, CI)
     ↓
-Observation (audit, metrics, retrospectives)
+Observação (auditoria, métricas, retrospectiva)
 ```
 
-## Chapter navigation (starter)
+## Navegação do capítulo (início)
 
-| Topic | Pages |
+| Tema | Páginas |
 |---|---|
-| Security | [Threat model](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
-| Governance | [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/) |
+| Segurança | [Modelo de ameaças](/guide/team-enterprise/security/threat-model/) · [Riscos Plugin/MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injeção de Prompt](/guide/team-enterprise/security/prompt-injection/) |
+| Governação | [Política de uso aceitável](/guide/team-enterprise/governance/acceptable-use/) |
 
-Roadmap will add adoption, administration, deployment-patterns, etc.—see [chapter outline](/docs/planning/chapter-outline.md) (repo planning doc).
+O roteiro acrescentará adoption, administration, deployment-patterns, etc. — ver [chapter-outline](/docs/planning/chapter-outline.md) (documento de planeamento no repositório).
 
-## Relationship to customization
+## Relação com a configuração personalizada
 
-- Org-managed layer in [AGENTS.md precedence](/guide/customization/agents-md/scope-and-precedence/)
-- [Team rules policy](/guide/customization/rules/team-rules/)
+- Camada de gestão organizacional em [Precedência de AGENTS.md](/guide/customization/agents-md/scope-and-precedence/)
+- [Política de regras de equipa](/guide/customization/rules/team-rules/)
 
-## Common mistakes
+## Erros frequentes
 
-- Buy seats without training and standards
-- Personal relaxed sandbox becomes org default
-- Approve all community Plugins without a list
+- Comprar lugares sem formação nem normas
+- Aliviar o Sandbox pessoal e torná-lo o padrão da organização
+- Aprovar todos os Plugins da comunidade sem lista
 
-## Acceptance checklist
+## Lista de aceitação
 
-- [ ] Written AUP or equivalent policy
-- [ ] Approval process for high-risk extensions
-- [ ] Clear incident contacts (security/platform)
+- [ ] Existe AUP escrita ou política equivalente
+- [ ] Extensões de alto risco têm fluxo de Aprovação
+- [ ] Contactos de incidente claros (segurança / plataforma)
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Solo user—need this chapter now?
+### 1. Uso sozinho — preciso de ler este capítulo?
 
-Not necessarily deep reading yet.  
-But know: once Codex is a team system, problems are not only “how to prompt.”
+Não necessariamente a fundo agora.  
+Mas convém saber: quando o Codex passa de ferramenta individual a sistema de equipa, o problema deixa de ser só «como escrever o Prompt».
 
-### 2. Why so much audit, governance, policy?
+### 2. Porque se fala tanto de auditoria, governação e políticas?
 
-At team scale, boundaries blur over time—that is the risk.
+Em contexto de equipa, o risco maior é muita gente usar durante muito tempo e os limites ficarem cada vez mais difusos.
 
-### 3. First conceptual pass—read what?
+### 3. Para formar o conceito na primeira leitura, por onde começar?
 
-Start with:
+Podes começar por:
 
-- [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Política de uso aceitável](/guide/team-enterprise/governance/acceptable-use/)
 
-If you care about personal onboarding first, defer this chapter until team rollout, permissions, or risk control.
+Se o foco atual é o arranque individual, deixa este capítulo para depois; volta quando fores fazer adoção em equipa, gestão de Permissões ou controlo de risco.
 
-## Reference sources
+## Fontes de referência
 
-- KimYx0207 security and enterprise chapters
-- freestylefly/CodexGuide team playbook
-- stormzhang security tutorials
+- Capítulos de segurança e empresa de KimYx0207
+- Playbook de equipa freestylefly/CodexGuide
+- Tutoriais de segurança de stormzhang
 
 ---
 
-**Status:** verified  
-**Products:** Organization / team features (plan-dependent)  
-**Verification basis:** OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** Edição organizacional / funcionalidades de equipa (conforme o plano)  
+**Base de verificação:** A documentação atual do centro de ajuda e de plugins/apps da OpenAI continua a sublinhar que a adoção de equipa de Codex/ChatGPT exige acesso por papéis, ativação de plugins, Aprovação de ações, limites de dados e responsabilidades de auditoria. Esta página é só navegação do capítulo, focada no modelo de governação e na ordem de leitura, sem amarrar caminhos concretos do backoffice.  
+**Última verificação:** 2026-07-26

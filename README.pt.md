@@ -35,7 +35,7 @@
 <p align="center">
   <a href="https://codexhandbook.com/pt/">Ler online</a>
   ·
-  <a href="./src/content/docs/guide/index.md">Guia para iniciantes</a>
+  <a href="./src/content/docs/pt/guide/start-here/index.md">Comece aqui</a>
   ·
   <a href="./docs/planning/content-architecture.md">Arquitetura de conteúdo</a>
   ·
@@ -72,11 +72,11 @@ Para navegação completa, busca, organização de capítulos e atualizações c
 
 Recomendamos começar nesta ordem:
 
-1. [Guia — início](./src/content/docs/guide/index.md)
-2. [Contexto e arquivos](./src/content/docs/guide/context-and-files.md)
-3. [Prompts](./src/content/docs/prompts/index.md)
-4. [Skills](./src/content/docs/skills/index.md)
-5. [Casos](./src/content/docs/cases/index.md)
+1. [Comece aqui](./src/content/docs/pt/guide/start-here/index.md)
+2. [Contexto](./src/content/docs/pt/guide/context/index.md)
+3. [Prompts](./src/content/docs/pt/prompts/index.md)
+4. [Skills](./src/content/docs/pt/skills/index.md)
+5. [Casos](./src/content/docs/pt/cases/index.md)
 
 Este caminho é para quem é novo no Codex — ajuda a construir uma base sólida antes da prática.
 
@@ -110,10 +110,10 @@ Compreender fluxos de trabalho de ponta a ponta por meio de tarefas reais: ler c
 | Link | Uso |
 | --- | --- |
 | [Ler online](https://codexhandbook.com/pt/) | Navegar o manual completo no site |
-| [Guia](./src/content/docs/guide/index.md) | Entender caminhos de uso do Codex do zero |
-| [Prompts](./src/content/docs/prompts/index.md) | Aprender a descrever tarefas e limites com clareza |
-| [Skills](./src/content/docs/skills/index.md) | Transformar experiência em capacidades reutilizáveis |
-| [Casos](./src/content/docs/cases/index.md) | Ver fluxos de ponta a ponta com tarefas reais |
+| [Guia](./src/content/docs/pt/guide/start-here/index.md) | Entender caminhos de uso do Codex do zero |
+| [Prompts](./src/content/docs/pt/prompts/index.md) | Aprender a descrever tarefas e limites com clareza |
+| [Skills](./src/content/docs/pt/skills/index.md) | Transformar experiência em capacidades reutilizáveis |
+| [Casos](./src/content/docs/pt/cases/index.md) | Ver fluxos de ponta a ponta com tarefas reais |
 | [Exemplos](./examples/README.md) | Reutilizar prompts e ativos de exemplo |
 | [Arquitetura de conteúdo](./docs/planning/content-architecture.md) | Entender o design de informação do site |
 | [Esboço de capítulos](./docs/planning/chapter-outline.md) | Ver cobertura de tópicos |
@@ -122,17 +122,17 @@ Compreender fluxos de trabalho de ponta a ponta por meio de tarefas reais: ler c
 
 ```text
 Codex Handbook
-├── src/content/docs/guide/      # Guia, clientes, permissões, verificação
-├── src/content/docs/prompts/    # Métodos de prompts e expressão de tarefas
-├── src/content/docs/skills/     # Design, uso e governança de Skills
-├── src/content/docs/cases/      # Casos de tarefas reais
+├── src/content/docs/pt/guide/   # Guia, clientes, permissões, verificação
+├── src/content/docs/pt/prompts/ # Métodos de prompts e expressão de tarefas
+├── src/content/docs/pt/skills/  # Design, uso e governança de Skills
+├── src/content/docs/pt/cases/   # Casos de tarefas reais
 ├── examples/                    # Prompts copiáveis e exemplos estendidos
 ├── docs/planning/               # Planejamento e manutenção de conteúdo
 ```
 
 ## Desenvolvimento local
 
-Este projeto usa [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) para o site de documentação. O conteúdo principal está em `src/content/docs/`.
+Este projeto usa [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/) para o site de documentação. O conteúdo em português está em `src/content/docs/pt/`.
 
 Requisitos:
 
@@ -151,6 +151,14 @@ Construir o site estático:
 ```bash
 pnpm build
 ```
+
+Acompanhar a cobertura da tradução para português:
+
+```bash
+pnpm i18n:status -- --locale pt
+```
+
+O conteúdo em português está em `src/content/docs/pt/` (espelho da fonte em chinês simplificado). Glossário: [`glossary/pt.md`](./glossary/pt.md). Em 2026-07-28, a cobertura portuguesa é de **100%** (`translation_status: draft`; revisão linguística/técnica pendente).
 
 ## Princípios
 

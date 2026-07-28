@@ -1,208 +1,224 @@
 ---
-title: Configuration Reference
-description: Conceptual index of Codex user- and project-level configuration keys—paths and fields per official docs.
+title: Referência de configuração
+description: Índice conceptual de chaves de configuração de utilizador e de projeto do Codex — caminhos e campos conforme a documentação oficial.
 locale: pt
-source_locale: en
-source_revision: 04c61aa
-translation_status: fallback
-translated_at: '2026-07-28'
+source_locale: zh-CN
+source_revision: 5f36443
+translation_status: draft
+translated_at: 2026-07-28
 ---
 
-Configuration reference pages can overwhelm with keys, layers, and overrides. Start with one question:
+As páginas de «referência de configuração» enjoam fácil: chaves, camadas, sobrescritas por todo o lado. Se deixares clara uma pergunta, compreende-se muito melhor:
 
-> **What should be configuration—and what should not?**
+> **Que comportamentos devem mudar-se por configuração, e quais não convém resolver com configuração?**
 
-Config files often unify **model, sandbox, approval, MCP** behavior. This page is a **conceptual index**; file paths and TOML/YAML keys must follow [OpenAI Codex documentation](https://developers.openai.com/codex) and your installed version.
+Os ficheiros de configuração costumam unificar comportamentos de **modelo, Sandbox, Aprovação, MCP**, etc. Esta página é um **índice conceptual**; caminhos concretos de ficheiro e nomes de chaves TOML/YAML são definidos pela [documentação OpenAI Codex](https://developers.openai.com/codex) e pela versão que tiveres instalada.
 
-## A decision principle
+## Um princípio de juízo
 
-Config holds things that **should affect behavior long term**. Usually not:
+Na configuração costuma ir o que **queres que influencie a longo prazo o comportamento**; não convém meter:
 
-- Secrets
-- Full team rule prose
-- One-off task instructions
+- Valores sensíveis
+- O texto completo de regras de equipa
+- Instruções temporárias de uma só Tarefa
 
-Three buckets:
+Dividi-lo em três classes clarifica:
 
-- **Long-term behavior preferences** → config
-- **Specific task requirements** → prompt / `AGENTS.md` / Skill
-- **Secrets** → environment variables or Secret store
+- **Preferências de comportamento a longo prazo** → normalmente na configuração
+- **Requisitos concretos da Tarefa** → normalmente no Prompt / `AGENTS.md` / Skill
+- **Valores sensíveis** → normalmente em variáveis de ambiente ou Secret
 
-Unsure? Are you changing Codex’s long-term habits or describing this task?
+Se não tiveres claro, pergunta: estás a mudar o hábito a longo prazo do Codex, ou a encarregar esta Tarefa?
 
-- Long-term habits → config
-- This task → prompt, `AGENTS.md`, or task description
+- O hábito a longo prazo costuma ir à configuração
+- A instrução da Tarefa atual costuma ir ao Prompt, `AGENTS.md` ou a descrição da Tarefa
 
-## Configuration layers
+## Camadas de configuração
 
-| Layer | Location (conceptual) | Typical content |
+| Camada | Localização (conceito) | Conteúdo típico |
 |---|---|---|
-| User | `~/.codex/` etc. | Default model, personal approval habits |
-| Project | Config in repo | Team sandbox, MCP list |
-| Environment variables | Shell / CI injection | Keys, temporary switches |
-| Managed | Org-provisioned | Non-overridable mandatory policy |
+| Nível utilizador | `~/.codex/`, etc. | Modelo por omissão, hábitos pessoais de Aprovação |
+| Nível projeto | Ficheiro de configuração no repo | Sandbox de equipa, lista de MCP |
+| Variáveis de ambiente | Injeção Shell / CI | Secrets, interruptores temporários |
+| Gerida | Emitida pela organização | Política obrigatória não sobrescritível |
 
-## What each layer manages
+## O que gere cada camada
 
-- **User**: your personal defaults
-- **Project**: shared defaults for this repo
-- **Environment variables**: runtime-injected values
-- **Managed policy**: org-fixed boundaries you cannot override locally
+- **Nível utilizador**: os teus hábitos por omissão
+- **Nível projeto**: o comportamento por omissão que o repo quer partilhar
+- **Variáveis de ambiente**: valores temporários em tempo de execução
+- **Política gerida**: o que a organização fixa e tu não podes mudar em local
 
-You do not need precedence memorized on day one—know what each layer is for:
+Ao começar não precisas de memorizar «quem sobrescreve quem»; basta saber o que gere cada camada em traços gerais:
 
-- User: “how I personally like to work”
-- Project: “how this repo wants everyone to work”
-- Environment: “values for this run”
-- Managed: “org already decided”
+- Nível utilizador: «assim gosto de o usar no dia a dia»
+- Nível projeto: «este repo quer que todos o usemos mais ou menos assim»
+- Variáveis de ambiente: «valores temporários desta execução»
+- Política gerida: «limites que a organização já fixou por ti»
 
-Intro: [Config basics](/guide/customization/configuration/config-basics/) · CLI focus: [CLI configuration](/guide/cli/configuration/)
+Entrada: [Fundamentos de configuração](/guide/customization/configuration/config-basics/) · Enfoque terminal: [Configuração do CLI](/guide/cli/configuration/)
 
-## Configuration domains (conceptual)
+## Índice de domínios de configuração (conceito)
 
-### Model and reasoning
+### Modelo e raciocínio
 
-| Intent | Notes |
+| Intenção | Explicação |
 |---|---|
-| Default model | Model ID for new sessions |
-| Reasoning strength | Complexity tier if supported |
-| Sampling (temperature, etc.) | Usually default; pin for scripts |
+| Modelo por omissão | Model ID das sessões novas |
+| Intensidade de raciocínio / reasoning | Nível para Tarefas complexas (se suportado) |
+| Temperatura e amostragem | Costuma deixar-se por omissão; fixar ao scriptar |
 
-Background: [Models and reasoning](/guide/foundations/models-and-reasoning/)
+Contexto: [Modelos e raciocínio](/guide/foundations/models-and-reasoning/)
 
-### Sandbox and network
+### Sandbox e rede
 
-| Intent | Notes |
+| Intenção | Explicação |
 |---|---|
-| Filesystem scope | Writable paths, write outside project |
-| Network access | Deny / restricted / allow |
-| Egress domains | Allowlist if supported |
+| Alcance do sistema de ficheiros | Caminhos escrevíveis; se se permite escrever fora do projeto |
+| Acesso à rede | Proibido / limitado / permitido |
+| Domínios de saída | Allowlist (se suportado) |
 
-Background: [Sandbox and network](/guide/foundations/sandbox-and-network/)
+Contexto: [Sandbox e rede](/guide/foundations/sandbox-and-network/)
 
-### Approval policy
+### Política de Aprovação
 
-| Intent | Notes |
+| Intenção | Explicação |
 |---|---|
-| Before shell | Always ask / trust list / auto (high risk) |
-| Before file write | Same |
-| MCP tool calls | Per server or tool granularity |
+| Antes de executar shell | Perguntar sempre / lista de confiança / automático (alto risco) |
+| Antes de escrever ficheiros | Igual |
+| Chamadas a Ferramentas MCP | Por servidor ou por Ferramenta |
 
-Background: [Permissions and approvals](/guide/foundations/permissions-and-approvals/) · Matrix: [Permission matrix](/guide/reference/permission-matrix/)
+Contexto: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/) · Matriz: [Matriz de Permissões](/guide/reference/permission-matrix/)
 
-### Workspace and CLI
+### Espaço de trabalho e CLI
 
-| Intent | Notes |
+| Intenção | Explicação |
 |---|---|
-| Default `cwd` | Startup directory |
-| Non-interactive defaults | exec approval and sandbox |
-| Log level | Raise for troubleshooting |
+| `cwd` por omissão | Diretório de arranque |
+| Por omissão não interativo | Aprovação e Sandbox para exec |
+| Nível de log | Subi-lo ao diagnosticar |
 
-### MCP servers
+### Servidores MCP
 
-| Intent | Notes |
+| Intenção | Explicação |
 |---|---|
-| Server list | Command, URL, transport |
-| Env injection | Bound to MCP process—not in Git |
+| Lista de servidores | Comando, URL, transporte |
+| Injeção de variáveis de ambiente | Ligada ao processo MCP, não a Git |
 
-[Connect MCP](/skills/mcp/connect-an-mcp-server/)
+[Ligar MCP](/skills/mcp/connect-an-mcp-server/)
 
-### IDE / App extension
+### Extensões IDE / App
 
-Some settings live only in extension UI; may share user config backend with CLI—per product docs.
+Alguns itens só estão na UI de definições da extensão e podem partilhar o mesmo backend de configuração de utilizador que o CLI — conforme a documentação do produto.
 
-[IDE settings](/guide/ide/settings/) · [Desktop App settings](/guide/desktop-app/settings/)
+[Definições do IDE](/guide/ide/settings/) · [Definições da App de ambiente de trabalho](/guide/desktop-app/settings/)
 
-## Common misconceptions
+## Mal-entendidos frequentes
 
-### 1. Not everything belongs in config
+### 1. Nem tudo o configurável deve ir ao ficheiro de configuração
 
-Often better in:
+Às vezes encaixa melhor em:
 
 - `AGENTS.md`
-- Environment variables
+- Variáveis de ambiente
 - Skill
-- Current task description
+- Descrição da Tarefa atual
 
-Config is not a junk drawer.
+A configuração não é um contentor universal.
 
-### 2. You do not need every key on day one
+### 2. Não precisas de compreender cada chave de configuração desde o princípio
 
-Most people start with:
+A maioria só precisa de compreender no início:
 
-- Model
+- Modelo
 - Sandbox
-- Approval
+- Aprovação
 - MCP
 
-Those four cover most early questions.
+Essas quatro classes cobrem a imensa maioria das dúvidas reais.
 
-### 3. Project config replaces team docs?
+### 3. A configuração de projeto substitui por completo a documentação da equipa?
 
-Config expresses system defaults—not “why and when not to.”
+A configuração expressa bem «valores por omissão do comportamento do sistema»; não substitui explicações do tipo «porque se faz assim» ou «quando não o fazer».
 
-### 4. Official keys are many—learn four first
+### 4. Embora haja muitas chaves oficiais, não precisas de aprendê-las todas de uma vez
 
-- Default model
-- Sandbox scope
-- Approval policy
-- MCP connections
+O que a maioria encontra primeiro são estas quatro:
 
-## vs environment variables
+- Modelo por omissão
+- Alcance do Sandbox
+- Política de Aprovação
+- Ligação MCP
 
-| Type | Where |
+Compreender essas quatro já cobre a maior parte das perguntas da fase de entrada.
+
+## Com variáveis de ambiente
+
+| Tipo | Onde |
 |---|---|
-| API key, token | Environment variable or secret manager |
-| Non-sensitive switches | Environment variable or config |
-| Coding conventions | `AGENTS.md`, not config |
+| API key, token | Variáveis de ambiente ou gestor de Secrets |
+| Interruptores não sensíveis | Variáveis de ambiente ou configuração |
+| Normas de código | `AGENTS.md`, não config |
 
-## Should this go in config?
+## Como julgar se deve entrar na configuração
 
-Four questions:
+Perante «isto deve ir à configuração?», usa estas 4 perguntas:
 
-1. Should it apply long term by default?
-2. Is it sensitive?
-3. Personal habit or shared project rule?
-4. Adjusting system behavior or describing this task?
+1. Queres que aplique por omissão a longo prazo?
+2. É informação sensível?
+3. É hábito pessoal ou regra partilhada do projeto?
+4. Estás a ajustar o comportamento do sistema ou só a encarregar esta Tarefa?
 
-## When adjusting behavior
+Com essas 4, costuma ser mais difícil colocá-lo mal.
 
-1. Long-term default or one-off task?
-2. Sensitive or ordinary?
-3. Personal or shared?
+## Como decidir ao ajustar o comportamento
 
-Then place in config, env, `AGENTS.md`, Skill, or current prompt.
+Quando quiseres «ajustar o comportamento do Codex»:
 
-## Common scenarios
+1. É comportamento por omissão a longo prazo ou um requisito temporário desta Tarefa?
+2. É um valor sensível ou configuração normal?
+3. É preferência pessoal ou regra partilhada do projeto?
 
-| Goal | Usually |
+Assim costuma ficar claro se vai a:
+
+- Ficheiro de configuração
+- Variável de ambiente
+- `AGENTS.md`
+- Skill
+- Prompt atual
+
+## Cenários habituais
+
+Estas são as que mais confundem principiantes:
+
+| O que queres fazer | Onde costuma ir |
 |---|---|
-| Pin a model long term | User or project config |
-| Team wants tests before edits | `AGENTS.md` |
-| This task: only `docs/` | Current prompt |
-| API key / token | Environment or Secret |
-| Connect an MCP | Project config + env |
+| Fixar um modelo a longo prazo | Configuração de utilizador ou de projeto |
+| A equipa exige correr testes antes de alterar código | `AGENTS.md` |
+| Esta Tarefa só permite alterar `docs/` | Prompt atual |
+| API key / token | Variável de ambiente ou Secret |
+| Ligar um serviço MCP | Configuração de projeto + variáveis de ambiente |
 
-Easier than staring at key lists.
+Assim compreende-se melhor do que olhar só a lista de chaves.
 
-Cloud Secrets: [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/)
+Secrets Cloud: [Secrets e variáveis de ambiente](/guide/web-and-cloud/secrets-and-variables/)
 
-## Change discipline
+## Disciplina de mudança
 
-1. Change one config class at a time; observe a week
-2. Project-level changes via PR review
-3. After CLI upgrade, read official migration notes
-4. Never commit secrets in config files
+1. Muda só uma classe de configuração de cada vez e observa uma semana
+2. As mudanças de nível projeto passam por PR review
+3. Após atualizar o CLI, faz Diff das notas oficiais de migration
+4. Não escrevas secrets no ficheiro de configuração e os commits a Git
 
-Config is for long-term defaults—not secrets, task prose, or team rule essays.
+A configuração é para comportamento por omissão a longo prazo, não para valores sensíveis nem para substituir instruções de Tarefa e regras de equipa.
 
-## Common mistakes
+## Erros frequentes
 
-- Doc key names mismatch old CLI
-- Personal relaxed sandbox used on customer repos
-- Config contradicts `AGENTS.md` (config allows, doc forbids)
+- Nomes de chaves da documentação que não coincidem com um CLI antigo
+- Aliviar o Sandbox na tua máquina pessoal e usá-lo no repo do cliente
+- Contradição com instruções de `AGENTS.md` (a configuração permite o que o documento proíbe)
 
-## Reference sources
+## Fontes de referência
 
 - OpenAI Codex configuration reference
 - stormzhang `18-config.md`
@@ -210,7 +226,7 @@ Config is for long-term defaults—not secrets, task prose, or team rule essays.
 
 ---
 
-**Status:** verified  
-**Products:** CLI / App / IDE  
-**Verification basis:** OpenAI Help Center still documents user-level carriers like `~/.codex/config.toml` and `~/.codex/.env`; this page is explicitly a conceptual index—does not fix specific key names, path precedence, or legacy fields—so `verified` is appropriate.  
-**Last verified:** 2026-07-26
+**Estado:** verified  
+**Produtos aplicáveis:** CLI / App / IDE  
+**Base de verificação:** O material de configuração atual do OpenAI Help Center continua a deixar claro que existem veículos de configuração de utilizador como `~/.codex/config.toml` e `~/.codex/.env`; esta página posiciona-se explicitamente como «índice conceptual» e evita fixar nomes de chaves, prioridade de caminhos ou campos de versões antigas como factos, pelo que pode marcar-se `verified`.  
+**Última verificação:** 2026-07-26
