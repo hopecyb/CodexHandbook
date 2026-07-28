@@ -30,8 +30,6 @@ test-results/
 # Cursor
 .cursor/
 
-scripts/
-
 # AI
 .baoyu-skills/
 .superpowers/
