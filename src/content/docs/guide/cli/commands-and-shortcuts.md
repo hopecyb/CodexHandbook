@@ -1,6 +1,8 @@
 ---
 title: 命令与快捷方式
 description: CLI 子命令、会话内操作与键盘习惯——产品向说明，完整参数见参考区。
+sidebar:
+  order: 50
 ---
 
 终端里效率来自三块：**启动方式**、**会话内快捷操作**、**与脚本/编辑器的配合**。本页讲用法与习惯；参数表见 [CLI 命令参考](/guide/reference/commands/) 与 [键盘快捷方式](/guide/reference/keyboard-shortcuts/)。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Après avoir connecté GitHub, Codex peut cloner des repos, créer des branches, pousser et ouvrir des PR dans un **environnement distant** — le prérequis pour les workflows Cloud.

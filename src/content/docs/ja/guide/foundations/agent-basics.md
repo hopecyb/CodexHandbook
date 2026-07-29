@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Agent** は目標を中心に継続して作業します。目標の理解 → ツールの選択 → 結果の観察 → 次の一手の調整、という流れを、完了するかあなたの介入が必要になるまで繰り返します。

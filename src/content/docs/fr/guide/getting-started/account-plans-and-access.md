@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Avant d'utiliser Codex, vous avez besoin d'un compte OpenAI valide et d'un **accès produit** autorisé par votre région et la politique de votre organisation. Les noms de forfaits, quotas et inclusion App/CLI/Cloud suivent la documentation officielle.

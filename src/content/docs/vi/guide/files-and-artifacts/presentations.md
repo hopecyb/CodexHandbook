@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Bài trình bày (PPT, Keynote, Google Slides, Marp/Reveal v.v.) nhấn mạnh **cấu trúc tường thuật** và **nhất quán hình ảnh**. Agent giỏi đưa dàn ý và bản nháp; master và quy chuẩn thương hiệu vẫn cần người nắm.

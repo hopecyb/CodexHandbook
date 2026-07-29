@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 CLI で問題が起きると、表示はどれもターミナルエラーに見えますが、原因の種類は同じとは限りません。

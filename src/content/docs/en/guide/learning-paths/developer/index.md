@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 20
 ---
 
 > MVP status: this page is an overview. The full five steps will be added in a later milestone.

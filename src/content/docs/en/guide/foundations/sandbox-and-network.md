@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 80
 ---
 
 The **sandbox** limits which parts of the filesystem and system an Agent can touch, reducing the blast radius of mistakes. **Network access** is a separate risk layer: it may leak sensitive information from prompts or pull untrusted data.

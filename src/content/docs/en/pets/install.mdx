@@ -1,0 +1,59 @@
+---
+title: Install a Codex Pet
+description: "Understand the install folder, activation flow, and safety boundaries for Codex Pets."
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Install a Codex Pet
+
+Installing a Codex Pet means placing a client-readable resource package into a known folder. When the client starts or refreshes settings, it reads that folder, finds the metadata, and loads the matching animation assets.
+
+<PetScienceFigure variant="install" locale="en" />
+
+A Pet is usually a local folder with at least two files:
+
+```text
+~/.codex/pets/<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+`pet.json` describes the pet name, description, and spritesheet path. `spritesheet.webp` stores the animation frames. These files usually live in the same pet folder, and `spritesheetPath` needs to point to the actual file.
+
+## The Logic Behind Installation
+
+1. Get the package: confirm it contains at least `pet.json` and a spritesheet.
+2. Put it in the Pets folder: a common path is `~/.codex/pets/<pet-id>/`.
+3. Let the client read it again: restart Codex or refresh Pets settings.
+4. Select it in the UI: usually Settings -> Appearance -> Pets.
+
+On Windows, the folder is usually under `.codex\pets\<pet-id>\` in your user directory. If you use `CODEX_HOME`, follow the Pets folder shown by your current client.
+
+## Why Installation Often Fails
+
+If the pet does not appear after installation, check:
+
+- The folder name matches the `id` in `pet.json`.
+- `spritesheetPath` is a relative path such as `spritesheet.webp`.
+- The spritesheet file is actually in the same folder.
+- Codex was restarted, or the Pets settings were refreshed.
+- Windows, WSL, or a custom `CODEX_HOME` is not pointing at a different directory.
+
+Most failures mean the client did not find a complete package in the expected place, not that the idea of the pet is broken.
+
+## Update and Remove
+
+Back up the old folder before updating. After the new package works, replace `pet.json` and the spritesheet.
+
+To remove a pet, delete its `~/.codex/pets/<pet-id>/` folder, then restart Codex or refresh the Pets settings.
+
+## Safety Notes
+
+Do not run unknown remote shell commands. Install scripts can write local files or run extra commands. A safer path is to download the package, inspect `pet.json`, confirm the artwork source and license, then copy the files manually.
+
+Thinking of installation as “copying a local package” makes the boundary clearer: assets can be inspected, scripts should be reviewed, and source and license notes should stay attached.

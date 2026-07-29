@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Lần đầu xem trang này có thể thấy hơi trừu tượng — không cần hiểu nguyên lý tầng dưới trước. Model không phải bộ nhớ vô hạn. Nội dung càng nhiều, càng phân tán, càng kéo dài — nó càng dễ mất trọng tâm; ràng buộc quan trọng đã nói trước đó cũng có thể dần nhạt đi.

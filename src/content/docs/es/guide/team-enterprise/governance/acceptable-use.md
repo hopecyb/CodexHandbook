@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 La **política de uso aceptable (AUP)** convierte «¿se puede usar Codex para esto?» en un consenso organizacional, en lugar de dejarlo al criterio individual. Complementa el [modelo de amenazas](/guide/team-enterprise/security/threat-model/): el modelo habla de riesgos; la AUP habla de **límites de comportamiento**.

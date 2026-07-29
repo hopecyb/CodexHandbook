@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 CLI 設定は **デフォルトモデル、作業ディレクトリ、承認の厳しさ、MCP サーバー** などを決めます。[設定の基礎](/guide/customization/configuration/config-basics/) と概念は同じで、本ページはターミナルユーザーがよく触る項目に焦点を当てます。

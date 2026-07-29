@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Na primeira leitura esta página pode parecer abstrata — não precisa dominar o mecanismo interno de cara. O modelo não tem memória infinita. Quando o conteúdo fica demais, disperso ou longo demais, ele pode perder o foco, e restrições importantes ditas antes podem ir enfraquecendo.

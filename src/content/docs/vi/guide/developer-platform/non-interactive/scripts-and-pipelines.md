@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Ở đây nói về cách biến Codex từ thao tác tạm thời thành bước tự động hóa mà **đội có thể chạy lại, khi lỗi thì lần ra được, người khác cũng tiếp quản được**.

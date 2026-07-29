@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 20
 ---
 
 **Plugins** and **MCP servers** connect Codex to external systems: tickets, databases, internal APIs. More capability means a larger [threat model](/guide/team-enterprise/security/threat-model/) surface for exfiltration and overreach. Read with [MCP overview](/skills/mcp/mcp-overview/) and [Plugins overview](/skills/plugins/plugins-overview/).

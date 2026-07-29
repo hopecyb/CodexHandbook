@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Le **Bac à sable** limite les parties du système de fichiers et du système qu'un Agent peut toucher, réduisant le rayon d'explosion des erreurs. L'**accès réseau** est une couche de risque distincte : il peut fuiter des informations sensibles des Prompts ou récupérer des données non fiables.

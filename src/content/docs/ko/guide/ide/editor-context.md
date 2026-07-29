@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 IDE에서 Codex는 프롬프트만 읽는 것이 아니라 **에디터 상태**도 자동으로 받습니다. CLI 대비 IDE의 핵심 이점입니다. 컨텍스트가 어디서 오는지 알면 “파일을 열었는데도 못 본다”는 좌절을 줄일 수 있습니다.

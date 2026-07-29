@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Cloud-Aufgaben brauchen oft **Outbound**: npm/PyPI-Packages, APIs, Submodule. Gleichzeitig ist Internetzugriff eine **hohe Datenexfiltrationsfläche** — der Agent kann Repo- oder Secret-Inhalte an externe Dienste tragen.

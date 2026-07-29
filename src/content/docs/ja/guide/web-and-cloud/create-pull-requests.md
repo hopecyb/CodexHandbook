@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 初めて Cloud ワークフローを使うと、タスクは完了しているのに変更が確認・議論しやすい状態に入っていない、ということがよくあります。チームコラボレーションでは、この段階を **Pull Request** で担います。

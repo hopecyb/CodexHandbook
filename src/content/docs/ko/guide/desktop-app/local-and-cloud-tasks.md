@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 여기서는 데스크톱 App에서 작업이 본기기에서 도는지, 원격 환경에서 도는지에 대해 말합니다.

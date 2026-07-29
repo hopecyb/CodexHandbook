@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Webhook** cho phép bạn, khi trạng thái Tác vụ Codex hoặc Cloud thay đổi, gửi HTTP callback tới dịch vụ của mình để cập nhật ticket, thông báo Slack hoặc bàn Phê duyệt nội bộ. Chương này là lối vào tích hợp sự kiện của [nền tảng nhà phát triển](/guide/developer-platform/).

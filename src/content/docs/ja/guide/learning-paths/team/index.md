@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 > MVP 状態：本ページは概要です。共有説明、ガバナンス、メトリクスなどの詳細内容は今後のマイルストーン（第 11 部を含む）で追加します。

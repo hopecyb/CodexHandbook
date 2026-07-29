@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 IDE 확장 설정은 **개인 선호**와 **프로젝트 규칙**을 잇습니다. 모델 등급, 승인 엄격도, 열린 파일 자동 첨부 여부 등입니다. 전역 [구성 기초](/guide/customization/configuration/config-basics/)와 일치하며, 이 페이지는 에디터 안의 흔한 옵션에 초점을 둡니다.

@@ -19,6 +19,7 @@ export type NavItem = {
 	href: string;
 	label: LocalizedLabel;
 	prefix: string;
+	visibleIn?: SiteLang[];
 };
 
 export type FooterLink = {
@@ -26,6 +27,7 @@ export type FooterLink = {
 	label: LocalizedLabel;
 	external?: boolean;
 	global?: boolean;
+	visibleIn?: SiteLang[];
 };
 
 export type FooterLinkGroup = {
@@ -129,6 +131,38 @@ export const mainNavItems: NavItem[] = [
 		},
 		prefix: '/cases',
 	},
+	{
+		href: '/pets/',
+		label: {
+			'zh-CN': 'Codex 宠物',
+			en: 'Codex Pets',
+			'zh-TW': 'Codex 寵物',
+			fr: 'Mascottes Codex',
+			ja: 'Codex ペット',
+			ko: 'Codex 펫',
+			es: 'Mascotas de Codex',
+			de: 'Codex-Haustiere',
+			pt: 'Pets do Codex',
+			vi: 'Thú cưng Codex',
+		},
+		prefix: '/pets',
+	},
+	{
+		href: '/theme/',
+		label: {
+			'zh-CN': 'Codex主题皮肤',
+			en: 'Codex Theme',
+			'zh-TW': 'Codex 主題皮膚',
+			fr: 'Thèmes Codex',
+			ja: 'Codex テーマスキン',
+			ko: 'Codex 테마 스킨',
+			es: 'Temas de Codex',
+			de: 'Codex-Theme-Skins',
+			pt: 'Temas do Codex',
+			vi: 'Giao diện Codex',
+		},
+		prefix: '/theme',
+	},
 ];
 
 export const footerBrand: {
@@ -176,7 +210,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 			pt: 'Módulos',
 			vi: 'Mô-đun',
 		},
-		links: mainNavItems.map(({ href, label }) => ({ href, label })),
+		links: mainNavItems.map(({ href, label, visibleIn }) => ({ href, label, visibleIn })),
 	},
 	{
 		id: 'resources',
@@ -382,6 +416,10 @@ export const uiLabels = {
 		vi: 'Chân trang',
 	},
 };
+
+export function isNavItemVisible(item: { visibleIn?: SiteLang[] }, lang: SiteLang): boolean {
+	return !item.visibleIn || item.visibleIn.includes(lang);
+}
 
 export const footerLegal = {
 	site: 'codexhandbook.com',

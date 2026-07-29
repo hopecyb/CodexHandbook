@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 A «matriz de Permissões» também serve ao utilizador quotidiano. Explica sobretudo: com a mesma frase, porque a reação do Codex muda conforme a entrada.

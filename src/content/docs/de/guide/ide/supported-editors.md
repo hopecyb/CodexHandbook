@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Die IDE-Erweiterung bettet Codex in den **Editor, den du schon nutzt**, ein — Aufgaben starten, Diff sehen, Änderungen annehmen im gleichen Interface. Diese Seite klärt Unterstützung und Auswahl; Installation: [IDE-Erweiterung installieren](/guide/ide/installation/).

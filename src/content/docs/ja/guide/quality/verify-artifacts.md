@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 ここでいう「成果物」は、タスクの最終的な納品物のことです。たとえば：

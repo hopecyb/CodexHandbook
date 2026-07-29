@@ -1,6 +1,8 @@
 ---
 title: GitHub 集成
 description: 仓库连接、PR、Review 与 CI——Codex 在 GitHub 工作流中的位置。
+sidebar:
+  order: 10
 ---
 
 GitHub 是 Codex 最常见的代码协作面：Cloud 任务、PR 审查、Actions 与本地 push 都围绕同一套分支与权限。

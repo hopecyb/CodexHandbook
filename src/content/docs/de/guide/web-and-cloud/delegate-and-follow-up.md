@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 **Delegieren** heißt: Aufgabe an Cloud in der Remote-Umgebung. **Nachverfolgen** heißt: während oder nach dem Lauf Fortschritt sehen, Kontext nachreichen, riskante Aktionen freigeben, Änderungen verlangen. Kernworkflow für „außerhalb des Arbeitsplatzes weiterkommen“.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 “프로젝트”와 “작업”은 단순해 보이지만, 처음 쓸 때 쉽게 혼동합니다. 프로젝트는 지금 다루는 파일이나 저장소이고, 작업은 이번에 Codex에게 맡기는 구체적 일입니다.

@@ -1,6 +1,8 @@
 ---
 title: Cloud 代码审查
 description: 审查 Cloud 任务产出的 diff、PR 与自动化审查建议。
+sidebar:
+  order: 50
 ---
 
 Cloud 会帮你产出改动，但不会替你承担合并责任。

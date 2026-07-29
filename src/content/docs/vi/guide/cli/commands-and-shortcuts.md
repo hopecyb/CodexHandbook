@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Hiệu quả trong terminal đến từ ba khối: **cách khởi**, **thao tác tắt trong phiên**, **phối hợp với script/trình soạn thảo**. Trang này nói cách dùng và thói quen; bảng tham số xem [Tham chiếu lệnh CLI](/guide/reference/commands/) và [Phím tắt](/guide/reference/keyboard-shortcuts/).

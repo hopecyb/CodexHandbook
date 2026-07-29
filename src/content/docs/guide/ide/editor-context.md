@@ -1,6 +1,8 @@
 ---
 title: 编辑器上下文
 description: IDE 扩展如何把打开的文件、工作区与项目规则传给 Codex。
+sidebar:
+  order: 30
 ---
 
 在 IDE 里，Codex 不仅读你的 prompt，还会自动获得**编辑器状态**。这是 IDE 相对 CLI 的核心优势。理解上下文从哪来，能避免“明明打开了文件，它却没看见”的挫败感。

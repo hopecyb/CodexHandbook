@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 As Tarefas Cloud costumam precisar de **saída à rede**: descarregar pacotes npm/PyPI, chamar APIs, clonar submódulos. Ao mesmo tempo, o acesso à Internet é uma superfície de alto risco de **fuga de dados**, porque o Agent também pode levar conteúdo do repo ou de Secrets a serviços externos.

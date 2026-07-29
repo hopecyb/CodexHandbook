@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Ante un error, mucha gente se queda mirando esa línea en inglés e intenta adivinar. Clasificar el problema primero suele ser más efectivo.

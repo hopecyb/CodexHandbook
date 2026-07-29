@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 結論が外部事実に依存する場合は、結論だけを受け取らず、出典も一緒に受け取ってください。

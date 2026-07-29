@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Un **worktree** vous permet d'essayer des changements dans un répertoire isolé avec moins d'impact sur votre espace de travail principal (surtout avec les worktrees Git).

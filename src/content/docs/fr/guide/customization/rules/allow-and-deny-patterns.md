@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Les **Rules** déclarent dans la configuration ou les fichiers projet quelles commandes shell, chemins et appels d'outils sont **autorisés ou interdits**, réduisant l'approbation manuelle à chaque fois tout en empêchant l'automatisation dangereuse.

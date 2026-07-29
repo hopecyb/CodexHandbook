@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Esta página explica cómo añadir o reescribir páginas de tipo **guía** en `src/content/docs/` (no casos puros ni tablas de referencia puras).

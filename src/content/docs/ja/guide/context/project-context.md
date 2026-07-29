@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 「プロジェクトコンテキスト」とは、このプロジェクトで長期に安定し、多くのタスクで繰り返し使われる背景情報を指します。

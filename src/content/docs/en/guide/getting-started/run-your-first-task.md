@@ -7,6 +7,8 @@ source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
+sidebar:
+  order: 80
 ---
 
 The example below defaults to the **desktop App**; CLI/IDE can use the same prompt.

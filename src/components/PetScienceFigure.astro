@@ -1,0 +1,450 @@
+---
+interface Props {
+	variant: 'anatomy' | 'install' | 'spritesheet';
+	locale?: 'zh' | 'zh-tw' | 'en' | 'fr' | 'ja' | 'ko' | 'es' | 'de' | 'pt' | 'vi';
+}
+
+const { variant, locale = 'zh' } = Astro.props;
+const pageLocale = Astro.currentLocale?.toLowerCase();
+const figureLocale = locale === 'zh' && pageLocale === 'zh-tw' ? 'zh-tw' : locale;
+
+const copy = {
+	zh: {
+		anatomyTitle: '一个 Codex Pet 可以理解成本地资源包',
+		folder: '宠物目录',
+		metadata: 'pet.json',
+		metadataNote: '身份、名称、路径',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: '多帧动画图集',
+		client: 'Codex 客户端',
+		clientNote: '读取元数据并播放帧',
+		installTitle: '安装不是联网运行，而是让客户端重新读取本地资源',
+		step1: '获取资源包',
+		step2: '放入 Pets 目录',
+		step3: '重启或刷新',
+		step4: '在设置中选择',
+		spritesheetTitle: 'Spritesheet 把多帧动画排进一张图',
+		frame: '单帧',
+		rows: '动作行',
+		cols: '时间帧',
+	},
+	'zh-tw': {
+		anatomyTitle: '一個 Codex Pet 可以理解成本地資源包',
+		folder: '寵物目錄',
+		metadata: 'pet.json',
+		metadataNote: '身份、名稱、路徑',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: '多幀動畫圖集',
+		client: 'Codex 客戶端',
+		clientNote: '讀取後設資料並播放幀',
+		installTitle: '安裝不是聯網執行，而是讓客戶端重新讀取本地資源',
+		step1: '取得資源包',
+		step2: '放入 Pets 目錄',
+		step3: '重啟或重新整理',
+		step4: '在設定中選擇',
+		spritesheetTitle: 'Spritesheet 把多幀動畫排進一張圖',
+		frame: '單幀',
+		rows: '動作行',
+		cols: '時間幀',
+	},
+	en: {
+		anatomyTitle: 'A Codex Pet is a local resource package',
+		folder: 'Pet folder',
+		metadata: 'pet.json',
+		metadataNote: 'identity, name, path',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'animation atlas',
+		client: 'Codex client',
+		clientNote: 'reads metadata and plays frames',
+		installTitle: 'Installation means letting the client read local assets',
+		step1: 'Get package',
+		step2: 'Place in Pets folder',
+		step3: 'Restart or refresh',
+		step4: 'Select in settings',
+		spritesheetTitle: 'A spritesheet packs animation frames into one image',
+		frame: 'frame',
+		rows: 'action rows',
+		cols: 'time frames',
+	},
+	fr: {
+		anatomyTitle: 'Un Codex Pet est un paquet de ressources local',
+		folder: 'Dossier du pet',
+		metadata: 'pet.json',
+		metadataNote: 'identité, nom, chemin',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'atlas animé',
+		client: 'Client Codex',
+		clientNote: 'lit les métadonnées et joue les frames',
+		installTitle: 'Installer signifie faire relire des ressources locales au client',
+		step1: 'Obtenir le paquet',
+		step2: 'Placer dans Pets',
+		step3: 'Redémarrer',
+		step4: 'Choisir dans les réglages',
+		spritesheetTitle: 'Une spritesheet range les frames dans une seule image',
+		frame: 'frame',
+		rows: 'lignes d’action',
+		cols: 'frames temporelles',
+	},
+	ja: {
+		anatomyTitle: 'Codex Pet はローカルリソースパッケージです',
+		folder: 'Pet フォルダ',
+		metadata: 'pet.json',
+		metadataNote: 'ID、名前、パス',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'アニメーションアトラス',
+		client: 'Codex クライアント',
+		clientNote: 'メタデータを読みフレームを再生',
+		installTitle: 'インストールとは、クライアントにローカルリソースを読み直させること',
+		step1: 'パッケージ取得',
+		step2: 'Pets に配置',
+		step3: '再起動または更新',
+		step4: '設定で選択',
+		spritesheetTitle: 'Spritesheet は複数フレームを 1 枚にまとめる',
+		frame: '単一フレーム',
+		rows: '動作行',
+		cols: '時間フレーム',
+	},
+	ko: {
+		anatomyTitle: 'Codex Pet은 로컬 리소스 패키지입니다',
+		folder: 'Pet 폴더',
+		metadata: 'pet.json',
+		metadataNote: 'ID, 이름, 경로',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: '애니메이션 아틀라스',
+		client: 'Codex 클라이언트',
+		clientNote: '메타데이터를 읽고 프레임 재생',
+		installTitle: '설치는 클라이언트가 로컬 리소스를 다시 읽게 하는 과정입니다',
+		step1: '패키지 받기',
+		step2: 'Pets 폴더에 배치',
+		step3: '재시작 또는 새로고침',
+		step4: '설정에서 선택',
+		spritesheetTitle: 'Spritesheet는 여러 프레임을 한 이미지에 담습니다',
+		frame: '단일 프레임',
+		rows: '동작 행',
+		cols: '시간 프레임',
+	},
+	es: {
+		anatomyTitle: 'Un Codex Pet es un paquete local de recursos',
+		folder: 'Carpeta del pet',
+		metadata: 'pet.json',
+		metadataNote: 'identidad, nombre, ruta',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'atlas de animación',
+		client: 'Cliente Codex',
+		clientNote: 'lee metadatos y reproduce frames',
+		installTitle: 'Instalar significa hacer que el cliente vuelva a leer recursos locales',
+		step1: 'Obtener paquete',
+		step2: 'Poner en Pets',
+		step3: 'Reiniciar o refrescar',
+		step4: 'Elegir en ajustes',
+		spritesheetTitle: 'Una spritesheet organiza frames en una sola imagen',
+		frame: 'frame',
+		rows: 'filas de acción',
+		cols: 'frames de tiempo',
+	},
+	de: {
+		anatomyTitle: 'Ein Codex Pet ist ein lokales Ressourcenpaket',
+		folder: 'Pet-Ordner',
+		metadata: 'pet.json',
+		metadataNote: 'Identität, Name, Pfad',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'Animationsatlas',
+		client: 'Codex-Client',
+		clientNote: 'liest Metadaten und spielt Frames',
+		installTitle: 'Installation bedeutet, lokale Ressourcen neu einlesen zu lassen',
+		step1: 'Paket holen',
+		step2: 'In Pets ablegen',
+		step3: 'Neu starten',
+		step4: 'In Einstellungen wählen',
+		spritesheetTitle: 'Eine Spritesheet packt Frames in ein Bild',
+		frame: 'Frame',
+		rows: 'Aktionszeilen',
+		cols: 'Zeitframes',
+	},
+	pt: {
+		anatomyTitle: 'Um Codex Pet é um pacote local de recursos',
+		folder: 'Pasta do pet',
+		metadata: 'pet.json',
+		metadataNote: 'identidade, nome, caminho',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'atlas de animação',
+		client: 'Cliente Codex',
+		clientNote: 'lê metadados e reproduz frames',
+		installTitle: 'Instalar significa fazer o cliente reler recursos locais',
+		step1: 'Obter pacote',
+		step2: 'Colocar em Pets',
+		step3: 'Reiniciar ou atualizar',
+		step4: 'Escolher nas configurações',
+		spritesheetTitle: 'Uma spritesheet organiza frames em uma imagem',
+		frame: 'frame',
+		rows: 'linhas de ação',
+		cols: 'frames de tempo',
+	},
+	vi: {
+		anatomyTitle: 'Codex Pet là một gói tài nguyên cục bộ',
+		folder: 'Thư mục pet',
+		metadata: 'pet.json',
+		metadataNote: 'định danh, tên, đường dẫn',
+		sprite: 'spritesheet.webp',
+		spriteLine1: 'spritesheet',
+		spriteLine2: '.webp',
+		spriteNote: 'atlas hoạt ảnh',
+		client: 'Client Codex',
+		clientNote: 'đọc metadata và phát frame',
+		installTitle: 'Cài đặt là để client đọc lại tài nguyên cục bộ',
+		step1: 'Lấy gói',
+		step2: 'Đặt vào Pets',
+		step3: 'Khởi động lại',
+		step4: 'Chọn trong cài đặt',
+		spritesheetTitle: 'Spritesheet xếp nhiều frame vào một ảnh',
+		frame: 'frame',
+		rows: 'hàng hành động',
+		cols: 'frame thời gian',
+	},
+}[figureLocale];
+---
+
+<figure class={`pet-science pet-science--${variant}`}>
+	{variant === 'anatomy' && (
+		<svg viewBox="0 0 760 380" role="img" aria-labelledby="pet-anatomy-title">
+			<title id="pet-anatomy-title">{copy.anatomyTitle}</title>
+			<rect class="pet-science__panel" x="24" y="26" width="712" height="328" rx="20" />
+			<rect class="pet-science__folder" x="72" y="82" width="292" height="214" rx="16" />
+			<path class="pet-science__tab" d="M88 82h90l26 28h160v42H72v-52c0-10 6-18 16-18Z" />
+			<text class="pet-science__label pet-science__label--large" x="104" y="132">{copy.folder}</text>
+
+			<rect class="pet-science__file" x="104" y="166" width="96" height="70" rx="9" />
+			<path class="pet-science__fold" d="M180 166v20h20" />
+			<text class="pet-science__label pet-science__label--center pet-science__label--file" x="152" y="260">{copy.metadata}</text>
+			<text class="pet-science__note pet-science__note--center" x="152" y="280">{copy.metadataNote}</text>
+
+			<rect class="pet-science__file pet-science__file--image" x="236" y="166" width="96" height="70" rx="9" />
+			<circle class="pet-science__dot" cx="264" cy="193" r="9" />
+			<path class="pet-science__mountain" d="M248 222l25-26 17 17 13-13 18 22Z" />
+			<text class="pet-science__label pet-science__label--center pet-science__label--file" x="284" y="254">
+				<tspan x="284">{copy.spriteLine1}</tspan>
+				<tspan x="284" dy="18">{copy.spriteLine2}</tspan>
+			</text>
+			<text class="pet-science__note pet-science__note--center" x="284" y="292">{copy.spriteNote}</text>
+
+			<path class="pet-science__arrow" d="M394 190h78" />
+			<path class="pet-science__arrow-head" d="M472 190l-16-10v20Z" />
+			<rect class="pet-science__client" x="502" y="92" width="190" height="204" rx="24" />
+			<rect class="pet-science__screen" x="528" y="122" width="138" height="98" rx="12" />
+			<circle class="pet-science__face" cx="596" cy="170" r="32" />
+			<circle class="pet-science__eye" cx="585" cy="162" r="4" />
+			<circle class="pet-science__eye" cx="607" cy="162" r="4" />
+			<path class="pet-science__smile" d="M581 178c9 11 23 11 32 0" />
+			<text class="pet-science__label pet-science__label--large pet-science__label--center" x="596" y="254">{copy.client}</text>
+			<text class="pet-science__note pet-science__note--center" x="596" y="276">{copy.clientNote}</text>
+		</svg>
+	)}
+
+	{variant === 'install' && (
+		<svg viewBox="0 0 760 300" role="img" aria-labelledby="pet-install-title">
+			<title id="pet-install-title">{copy.installTitle}</title>
+			<rect class="pet-science__panel" x="24" y="28" width="712" height="244" rx="20" />
+			{[copy.step1, copy.step2, copy.step3, copy.step4].map((label, index) => {
+				const x = 72 + index * 166;
+				return (
+					<g>
+						<circle class="pet-science__step" cx={x + 54} cy="132" r="50" />
+						<text class="pet-science__number" x={x + 54} y="126">{index + 1}</text>
+						<text class="pet-science__label pet-science__label--center" x={x + 54} y="156">{label}</text>
+						{index < 3 && (
+							<>
+								<path class="pet-science__arrow" d={`M${x + 116} 132h54`} />
+								<path class="pet-science__arrow-head" d={`M${x + 170} 132l-16-10v20Z`} />
+							</>
+						)}
+					</g>
+				);
+			})}
+			<path class="pet-science__baseline" d="M100 224h560" />
+			<text class="pet-science__note pet-science__note--center" x="380" y="248">{copy.installTitle}</text>
+		</svg>
+	)}
+
+	{variant === 'spritesheet' && (
+		<svg viewBox="0 0 760 430" role="img" aria-labelledby="pet-spritesheet-title">
+			<title id="pet-spritesheet-title">{copy.spritesheetTitle}</title>
+			<rect class="pet-science__panel" x="24" y="24" width="712" height="382" rx="20" />
+			<text class="pet-science__note pet-science__note--center" x="380" y="56">{copy.spritesheetTitle}</text>
+			<rect class="pet-science__sheet" x="90" y="92" width="480" height="270" rx="10" />
+			{Array.from({ length: 8 }).map((_, col) => (
+				<path class="pet-science__grid-line" d={`M${90 + col * 60} 92v270`} />
+			))}
+			{Array.from({ length: 9 }).map((_, row) => (
+				<path class="pet-science__grid-line" d={`M90 ${92 + row * 30}h480`} />
+			))}
+			<rect class="pet-science__frame-highlight" x="150" y="122" width="60" height="30" rx="4" />
+			<circle class="pet-science__mini-face" cx="180" cy="137" r="9" />
+			<circle class="pet-science__mini-face" cx="240" cy="137" r="9" />
+			<circle class="pet-science__mini-face" cx="300" cy="137" r="9" />
+			<circle class="pet-science__mini-face" cx="360" cy="137" r="9" />
+
+			<path class="pet-science__callout" d="M224 137h330" />
+			<path class="pet-science__arrow-head" d="M224 137l16-10v20Z" />
+			<rect class="pet-science__callout-chip" x="584" y="118" width="92" height="38" rx="8" />
+			<text class="pet-science__label pet-science__label--callout pet-science__label--center" x="630" y="142">{copy.frame}</text>
+
+			<path class="pet-science__callout" d="M570 212h54" />
+			<rect class="pet-science__callout-chip" x="584" y="193" width="92" height="38" rx="8" />
+			<text class="pet-science__label pet-science__label--callout pet-science__label--center" x="630" y="217">{copy.rows}</text>
+
+			<path class="pet-science__callout" d="M330 380v-18" />
+			<rect class="pet-science__callout-chip" x="270" y="374" width="120" height="38" rx="8" />
+			<text class="pet-science__label pet-science__label--callout pet-science__label--center" x="330" y="398">{copy.cols}</text>
+		</svg>
+	)}
+</figure>
+
+<style>
+	.pet-science {
+		margin: 1.5rem 0;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background:
+			linear-gradient(180deg, color-mix(in srgb, var(--sl-color-accent) 10%, transparent), transparent 42%),
+			color-mix(in srgb, var(--sl-color-gray-6) 32%, transparent);
+		overflow: hidden;
+	}
+
+	.pet-science svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	.pet-science__panel,
+	.pet-science__client {
+		fill: color-mix(in srgb, var(--sl-color-bg) 90%, var(--sl-color-accent) 10%);
+		stroke: color-mix(in srgb, var(--sl-color-gray-4) 72%, transparent);
+	}
+
+	.pet-science__folder {
+		fill: color-mix(in srgb, #f5c542 64%, var(--sl-color-bg) 36%);
+		stroke: color-mix(in srgb, #f5c542 70%, var(--sl-color-gray-4) 30%);
+	}
+
+	.pet-science__tab {
+		fill: color-mix(in srgb, #f7d26a 72%, var(--sl-color-bg) 28%);
+	}
+
+	.pet-science__file,
+	.pet-science__screen,
+	.pet-science__step,
+	.pet-science__sheet {
+		fill: color-mix(in srgb, var(--sl-color-gray-6) 70%, var(--sl-color-bg) 30%);
+		stroke: color-mix(in srgb, var(--sl-color-gray-4) 76%, transparent);
+	}
+
+	.pet-science__file--image,
+	.pet-science__frame-highlight {
+		fill: color-mix(in srgb, #22c55e 28%, var(--sl-color-bg) 72%);
+	}
+
+	.pet-science__callout-chip {
+		fill: color-mix(in srgb, var(--sl-color-bg) 88%, var(--sl-color-accent) 12%);
+		stroke: color-mix(in srgb, var(--sl-color-gray-4) 72%, transparent);
+	}
+
+	.pet-science__fold,
+	.pet-science__mountain,
+	.pet-science__smile,
+	.pet-science__arrow,
+	.pet-science__callout,
+	.pet-science__baseline,
+	.pet-science__grid-line {
+		fill: none;
+		stroke: color-mix(in srgb, var(--sl-color-gray-2) 78%, transparent);
+		stroke-width: 3;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+	.pet-science__grid-line {
+		stroke-width: 1.2;
+		opacity: 0.55;
+	}
+
+	.pet-science__arrow-head {
+		fill: color-mix(in srgb, var(--sl-color-gray-2) 82%, transparent);
+	}
+
+	.pet-science__face,
+	.pet-science__mini-face {
+		fill: color-mix(in srgb, var(--sl-color-accent) 30%, var(--sl-color-bg) 70%);
+		stroke: color-mix(in srgb, var(--sl-color-accent) 65%, transparent);
+	}
+
+	.pet-science__eye,
+	.pet-science__dot {
+		fill: var(--sl-color-accent-high);
+	}
+
+	.pet-science__label,
+	.pet-science__number {
+		fill: var(--sl-color-text);
+		font-family: ui-sans-serif, system-ui, sans-serif;
+		font-size: 17px;
+		font-weight: 700;
+	}
+
+	.pet-science__label--large {
+		font-size: 20px;
+	}
+
+	.pet-science__label--file {
+		font-size: 15px;
+	}
+
+	.pet-science__label--callout {
+		font-size: 14px;
+	}
+
+	.pet-science__label--center,
+	.pet-science__note--center,
+	.pet-science__number {
+		text-anchor: middle;
+	}
+
+	.pet-science__number {
+		font-size: 28px;
+		fill: var(--sl-color-accent-high);
+	}
+
+	.pet-science__note {
+		fill: var(--sl-color-gray-2);
+		font-family: ui-sans-serif, system-ui, sans-serif;
+		font-size: 14px;
+	}
+
+	:global(html[data-theme='light']) .pet-science__label,
+	:global(html[data-theme='light']) .pet-science__number {
+		fill: var(--sl-color-text);
+	}
+
+	:global(html[data-theme='light']) .pet-science__note {
+		fill: var(--sl-color-text);
+		opacity: 0.78;
+	}
+</style>

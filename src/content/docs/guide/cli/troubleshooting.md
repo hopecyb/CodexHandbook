@@ -1,6 +1,8 @@
 ---
 title: CLI 排障
 description: 认证、权限与命令失败排查。
+sidebar:
+  order: 70
 ---
 
 CLI 出问题时，报错看起来可能都像终端报错，但背后原因未必是同一类。

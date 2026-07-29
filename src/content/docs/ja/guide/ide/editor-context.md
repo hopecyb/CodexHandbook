@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 IDE では、Codex はプロンプトだけでなく、**エディターの状態**も自動で取得します。これが IDE の CLI に対する中核的な利点です。コンテキストの出所を理解すると、「ファイルは開いているのに見ていない」というもどかしさを減らせます。

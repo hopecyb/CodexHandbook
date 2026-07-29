@@ -1,6 +1,8 @@
 ---
 title: 互联网访问
 description: Cloud 环境的出网策略、依赖安装与数据外泄风险——如何按需开放又守住边界。
+sidebar:
+  order: 70
 ---
 
 Cloud 任务常需要**出网**：拉取 npm/PyPI 包、访问 API、克隆子模块。与此同时，互联网访问也是**数据外泄**的高风险面，因为 Agent 也可能把仓库或 Secrets 中的内容带到外部服务。

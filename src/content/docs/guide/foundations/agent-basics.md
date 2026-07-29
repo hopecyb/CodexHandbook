@@ -1,6 +1,8 @@
 ---
 title: Agent 基础
 description: 解释 Agent 如何围绕目标调用工具并迭代推进。
+sidebar:
+  order: 20
 ---
 
 **Agent** 会围绕目标持续往下做：理解目标 → 选择工具 → 观察结果 → 调整下一步，直到完成或需要你介入。

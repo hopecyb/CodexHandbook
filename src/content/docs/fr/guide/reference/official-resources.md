@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Ce handbook est un guide open source communautaire. Le comportement produit, les installateurs et les plans sont régis par les sources officielles :

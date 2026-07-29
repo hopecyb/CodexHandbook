@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 `AGENTS.md`는 저장소(또는 하위 디렉터리)에 두는 **Markdown 프로젝트 지침**입니다. Codex가 해당 프로젝트에 들어갈 때 읽어, 코딩 스타일·테스트 요구·커밋 규범·금지구역을 맞춥니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 대부분의 개발 작업은 **텍스트와 코드 파일**에 떨어집니다. 소스, 테스트, 설정, Markdown. 이 페이지는 범위를 한정하고, 스타일을 맞추며, 안전하게 병합하는 방법을 설명합니다.

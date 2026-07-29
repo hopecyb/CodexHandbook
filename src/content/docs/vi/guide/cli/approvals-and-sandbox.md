@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Trong CLI, Agent có thể **đọc tệp, ghi tệp, chạy shell, có thể lên mạng** — phê duyệt và Sandbox là van an toàn giữa bạn và tự động hóa. Cấu hình sai dẫn tới: tương tác thì popup liên tục, hoặc CI không người canh thì rủi ro mất kiểm soát.

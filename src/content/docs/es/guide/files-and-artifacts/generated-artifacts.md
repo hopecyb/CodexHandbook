@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Al completar una tarea, el Agent puede crear informes, scripts, sitios estáticos, datos de test y otros **artefactos generados**. No siempre pasan por la ruta de revisión de código que conoces, así que hace falta un hábito de aceptación aparte.

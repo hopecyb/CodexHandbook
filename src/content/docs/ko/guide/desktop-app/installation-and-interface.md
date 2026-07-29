@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 설치 단계는 [데스크톱 App 설치](/guide/getting-started/install-desktop-app/)와 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 참고하세요.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 110
 ---
 
 Cette section établit les concepts utilisés dans tout le handbook. Les différences d'interface produit se trouvent dans les [Guides produit](/guide/) ; les techniques de prompting dans les [Capacités principales](/guide/).

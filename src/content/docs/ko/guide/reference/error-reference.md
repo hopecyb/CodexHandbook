@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 많은 사람이 오류를 보면 그 한 줄의 영어만 반복해서 보고, 직감으로 답을 추측하려 합니다. 먼저 문제를 분류하는 편이 보통 더 효과적입니다.

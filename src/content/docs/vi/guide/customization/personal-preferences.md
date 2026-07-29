@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **Sở thích cá nhân** là cài đặt hiệu lực xuyên dự án trên máy bạn: mô hình mặc định, chủ đề, thói phê duyệt, đường dẫn Skill cá nhân, v.v. Khác `AGENTS.md` trong kho, sở thích cá nhân **không nên** giả định đồng đội giống vậy.

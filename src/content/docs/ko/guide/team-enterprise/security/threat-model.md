@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 “위협 모델”을 쉽게 말하면, 위험을 미리 생각하는 일입니다.

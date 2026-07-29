@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 **Ủy thác** gửi một Tác vụ sang Cloud chạy trong môi trường từ xa; **theo dõi** là kiểm tiến độ, bổ sung Ngữ cảnh, phê duyệt bước rủi ro và yêu cầu chỉnh sửa trong hoặc sau Tác vụ. Đây là quy trình trung tâm để tiến triển khi xa bàn làm việc.

@@ -1,6 +1,8 @@
 ---
 title: 交接与恢复
 description: 跨会话继续未完成工作。
+sidebar:
+  order: 40
 ---
 
 这里处理的是一个很常见的问题：

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 20
 ---
 
 Images let the Agent **see** UI issues, design intent, or whiteboard sketches. This page covers input (images you provide) and image files in the repo; for generating new images see [Image generation](/guide/tools/image-generation/).

@@ -1,6 +1,8 @@
 ---
 title: 故障排查索引
 description: 按症状定位到对应教程与产品页。
+sidebar:
+  order: 110
 ---
 
 如果遇到问题，但又不知道该去 App、CLI、IDE、Cloud 哪一页找，可以先从这里找找方向。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Eine **Acceptable-Use-Policy (AUP)** schreibt „darf Codex das?“ als Organisationskonsens — statt nur persönliches Urteil. Sie ergänzt das [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/): dort Risiko, hier **Verhaltensgrenzen**.

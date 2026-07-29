@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 GitHub là mặt cộng tác mã phổ biến nhất của Codex: tác vụ Cloud, rà soát PR, Actions và push cục bộ đều quanh cùng một bộ nhánh và quyền.

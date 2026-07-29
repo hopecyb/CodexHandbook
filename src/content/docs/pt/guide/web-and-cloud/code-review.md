@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 O Cloud ajuda-te a produzir alterações, mas não assume por ti a responsabilidade do merge.

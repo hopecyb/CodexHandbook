@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 60
 ---
 
 **Delegation** sends a task to Cloud to run in a remote environment; **follow-up** is checking progress, adding context, approving risky steps, and requesting changes while a task runs or after it finishes. This is the core workflow for making progress away from your desk.

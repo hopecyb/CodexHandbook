@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Na primeira vez com o fluxo Cloud, costuma acontecer que a Tarefa já terminou mas a alteração ainda não está num estado fácil de rever e discutir. Em colaboração de equipa, esse passo costuma ser o **Pull Request**.

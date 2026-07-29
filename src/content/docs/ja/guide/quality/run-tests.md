@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 変更後は、明らかに壊れていないことを確認する何らかの方法が必要です。

@@ -1,6 +1,8 @@
 ---
 title: 处理不确定性
 description: 信息不足时要求提问而非臆造。
+sidebar:
+  order: 50
 ---
 
 信息不够时，先确认，再继续。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 프레젠테이션(PPT, Keynote, Google Slides, Marp/Reveal 등)은 **서사 구조**와 **시각 일관성**을 중시합니다. Agent는 개요와 초안에 강하고, 마스터와 브랜드 규범은 사람이 잡는 편이 맞습니다.

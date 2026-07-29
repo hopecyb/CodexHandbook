@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 IDE 拡張は Codex を**すでに使っているエディター**に組み込み、コードを書く同じ画面からタスクを開始し、diff を確認し、変更を受け入れられます。本ページでは対応範囲と選定を説明し、インストール手順は [IDE 拡張のインストール](/guide/ide/installation/) を参照してください。

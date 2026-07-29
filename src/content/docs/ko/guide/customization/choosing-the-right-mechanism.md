@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 많은 팀의 문제는 **같은 정보를 잘못된 곳에 두는 것**입니다. 저장소에 있어야 할 규칙을 채팅에 넣고, Skill이 될 흐름을 `AGENTS.md`에 쑤셔 넣고, 읽기 전용으로 붙여야 할 데이터에 고권한 MCP를 줍니다.

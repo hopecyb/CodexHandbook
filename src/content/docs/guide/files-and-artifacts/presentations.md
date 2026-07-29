@@ -1,6 +1,8 @@
 ---
 title: 演示文稿
 description: 幻灯片与演示稿的生成、改版与导出——结构、母版与演讲备注的约定。
+sidebar:
+  order: 50
 ---
 
 演示文稿（PPT、Keynote、Google Slides、Marp/Reveal 等）强调**叙事结构**与**视觉一致性**。Agent 擅长出大纲和初稿，母版与品牌规范仍需人把关。

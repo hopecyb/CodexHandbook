@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 130
 ---
 
 Learning paths **only organize reading order**—they do not duplicate long-form product manuals or capability topics.

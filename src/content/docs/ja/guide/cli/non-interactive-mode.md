@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 非対話モードでは、Codex が **TTY 会話なし** でタスクを完了できます。Agent をスクリプトや CI に接続する入口です。

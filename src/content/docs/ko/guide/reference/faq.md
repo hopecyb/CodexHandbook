@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 흩어진 질문이 있을 때 FAQ를 먼저 뒤져 보세요. 여기서는 완전한 체계를 펼치지 않고, 다음에 어디를 볼지 빠르게 찾게 돕습니다.

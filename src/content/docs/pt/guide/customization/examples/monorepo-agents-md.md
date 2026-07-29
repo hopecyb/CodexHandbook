@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Num monorepo convivem várias apps, pacotes partilhados e stacks diferentes — um `AGENTS.md` gigante facilita o Agent **alterar o pacote errado** ou correr os testes errados. Esta página dá um padrão reutilizável de **instruções em camadas** (exemplo; adapte ao repositório).

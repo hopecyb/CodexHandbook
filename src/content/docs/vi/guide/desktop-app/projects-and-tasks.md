@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Hai từ «dự án» và «tác vụ» nghe đơn giản, nhưng lần đầu dùng dễ lẫn. Dự án là bộ tệp hoặc kho bạn đang xử lý; tác vụ là việc cụ thể bạn nhờ Codex làm lần này.

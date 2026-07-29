@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 «Chế độ tương tác» nghĩa là bạn trò chuyện qua lại với Codex trong terminal; nó giải thích, thực thi, và khi cần sẽ chờ bạn xác nhận.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 No manual, comandos, permissões, preços e recursos do produto mudam com as versões. A **Verificação** garante que, ao seguir o documento, o leitor obtenha um resultado previsível.

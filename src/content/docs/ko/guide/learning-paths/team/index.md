@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 > MVP 상태：이 페이지는 개요입니다. 공유 설명, 거버넌스, 측정 등 심화 내용은 이후 마일스톤(제 11부 포함)에서 다룹니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Cloud で問題が起きたとき、再実行を繰り返しても根本原因は通常解決しません。

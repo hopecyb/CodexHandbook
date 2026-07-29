@@ -1,0 +1,43 @@
+---
+title: Thú cưng Codex
+description: "Tìm hiểu Codex Pets là gì, hoạt động ra sao và cần kiểm tra gì khi cài đặt hoặc tạo một pet."
+locale: vi
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Thú cưng Codex
+
+Codex Pets là các yếu tố đồng hành dạng hoạt ảnh xuất hiện trong client Codex. Chúng không phải năng lực mô hình hay công cụ tự động hóa, mà là tài nguyên hình ảnh cục bộ. Client có thể dùng chúng để biểu đạt các trạng thái như đang làm việc, chờ, hoàn tất, lỗi hoặc đang cần bạn can thiệp.
+
+<PetScienceFigure variant="anatomy" locale="vi" />
+
+Mục này mang tính phổ cập. Nó giải thích khái niệm cơ bản, cấu trúc tệp thường gặp, ranh giới an toàn khi cài đặt và mối quan hệ giữa hình ảnh và metadata khi tạo một Pet. Trang này không cung cấp danh sách tài nguyên pet và không xem bất kỳ thư viện bên ngoài nào là nguồn chính thức.
+
+## Thường gồm những gì
+
+Một Pet thường có thể hiểu là một gói cục bộ nhỏ:
+
+- `pet.json`: metadata như định danh, tên hiển thị, mô tả và đường dẫn hoạt ảnh.
+- `spritesheet.webp`: atlas ảnh chứa các frame hoạt ảnh.
+- Thư mục pet: nơi giữ metadata và asset cùng nhau.
+
+Nhìn theo cách này, Codex Pet gần với tài nguyên giao diện hoặc widget hình ảnh nhỏ hơn là một chương trình chạy qua mạng.
+
+## Vì sao cần hiểu cấu trúc
+
+Hiểu cấu trúc Pets giúp bạn trả lời ba câu hỏi thực tế:
+
+- Khi cài đặt: tệp nên đặt ở đâu và script nào cần đọc kỹ.
+- Khi sửa lỗi: vì sao pet không xuất hiện hoặc hoạt ảnh không phát.
+- Khi tạo: frame ảnh, nền trong suốt, metadata và ghi chú giấy phép đảm nhiệm phần nào.
+
+## Lộ trình đọc
+
+1. [Cài đặt Codex Pet](./install/): hiểu thư mục, kích hoạt và kiểm tra an toàn.
+2. [Tạo Codex Pet](./create/): hiểu cách hình ảnh trở thành tài nguyên có thể tải.
+
+Quản lý Pets như những gói cục bộ nhỏ và rõ ràng sẽ ổn định hơn việc dán lệnh không rõ nguồn gốc, đồng thời dễ bảo trì lâu dài hơn.

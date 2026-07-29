@@ -1,6 +1,8 @@
 ---
 title: 非交互模式
 description: 用 codex exec 与脚本管道集成——适合 CI、定时任务与自动化流水线。
+sidebar:
+  order: 30
 ---
 
 非交互模式让 Codex **无需 TTY 对话**即可完成任务，是开发者把 Agent 接进脚本和 CI 的入口。

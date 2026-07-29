@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Einige IDE-Integrationen erlauben, Aufgaben an die **Cloud zu delegieren**. Die Aufgabe läuft in einer remote standardisierten Umgebung — du kannst lokal weitereditieren oder den Rechner verlassen. Ablauf ähnlich wie reines Cloud/Web, nur der Einstieg sitzt im Editor.

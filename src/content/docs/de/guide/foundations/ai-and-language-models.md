@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Sprachmodelle **sagen die nächste sinnvolle Ausgabe voraus** — basierend auf dem Text, den Dateien und den Werkzeugergebnissen, die du bereitstellst. Sie sind stark beim Ergänzen, Ordnen, Entwerfen und beim Weiterarbeiten entlang des Kontexts. Sie kennen aber nicht von selbst, was du ihnen nicht gegeben hast, und können keine absolute Korrektheit garantieren.

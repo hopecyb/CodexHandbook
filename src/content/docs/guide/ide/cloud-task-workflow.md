@@ -1,6 +1,8 @@
 ---
 title: IDE 中的云端任务
 description: 从 IDE 委托 Cloud 任务、跟进状态与审查远程产出。
+sidebar:
+  order: 60
 ---
 
 部分 IDE 集成支持把任务**委托到 Cloud**。任务在远程标准化环境里运行，你可以继续在本地编辑，或者直接离开电脑。流程和纯 Cloud/Web 类似，只是入口在编辑器侧。

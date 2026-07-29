@@ -1,0 +1,43 @@
+---
+title: Mascottes Codex
+description: "Comprendre les Codex Pets : ce qu'ils sont, comment ils fonctionnent, et les points à vérifier avant d'en installer ou d'en créer un."
+locale: fr
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Mascottes Codex
+
+Les Codex Pets sont des éléments animés qui apparaissent dans le client Codex. Ce ne sont ni des capacités du modèle ni des outils d'automatisation, mais des ressources visuelles locales : le client peut afficher différents états pendant qu'une tâche travaille, attend, se termine, échoue ou demande votre intervention.
+
+<PetScienceFigure variant="anatomy" locale="fr" />
+
+Cette section a un objectif pédagogique : expliquer le concept, la structure courante des fichiers, les limites de sécurité lors de l'installation, ainsi que le lien entre les images et les métadonnées lors de la création d'un Pet. Le site ne fournit pas de liste de ressources et ne présente aucune galerie externe comme source officielle.
+
+## Composition courante
+
+Un Pet peut généralement être compris comme un petit paquet local :
+
+- `pet.json` : métadonnées comme l'identité, le nom affiché, la description et le chemin de l'animation.
+- `spritesheet.webp` : atlas d'image qui regroupe les frames d'animation.
+- Dossier du pet : dossier qui garde les métadonnées et les assets ensemble.
+
+Sous cet angle, un Codex Pet ressemble davantage à une ressource de thème ou à un petit widget visuel qu'à un programme connecté au réseau.
+
+## Pourquoi comprendre sa structure
+
+Comprendre les Pets aide à répondre à trois questions pratiques :
+
+- À l'installation : où placer les fichiers et quels scripts examiner avec prudence.
+- Au dépannage : pourquoi un pet n'apparaît pas ou pourquoi une animation ne se lance pas.
+- À la création : à quoi servent les frames, le fond transparent, les métadonnées et les notes de licence.
+
+## Parcours de lecture
+
+1. [Installer un Codex Pet](./install/) : comprendre les dossiers, l'activation et les contrôles de sécurité.
+2. [Créer un Codex Pet](./create/) : comprendre comment une image devient une ressource chargeable.
+
+Traiter chaque Pet comme un petit paquet local clair est plus fiable que copier une commande inconnue, et plus facile à maintenir dans le temps.

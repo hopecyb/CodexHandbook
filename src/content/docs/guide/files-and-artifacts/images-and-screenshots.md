@@ -1,6 +1,8 @@
 ---
 title: 图像与截图
 description: 向 Codex 提供截图、设计稿，并管理任务中的图像文件。
+sidebar:
+  order: 20
 ---
 
 图像让 Agent **看见**界面问题、设计意图或白板草图。本页涵盖输入（你提供的图）与仓库内图像文件管理；生成新图见 [图像生成](/guide/tools/image-generation/)。

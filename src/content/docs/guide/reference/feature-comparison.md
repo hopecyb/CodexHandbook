@@ -1,6 +1,8 @@
 ---
 title: 功能对照
 description: App、CLI、IDE、Cloud 能力对照。
+sidebar:
+  order: 30
 ---
 
 这张表偏学习和选型参考，具体能力还是以当前产品为准。

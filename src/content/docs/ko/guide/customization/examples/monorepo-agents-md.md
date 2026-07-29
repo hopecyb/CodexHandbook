@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Monorepo에는 여러 app, 공유 패키지, 서로 다른 기술 스택이 공존합니다. 거대한 `AGENTS.md` 하나로는 Agent가 **잘못된 패키지를 고치거나** 잘못된 테스트를 돌리기 쉽습니다. 이 페이지는 재사용 가능한 **계층 설명** 패턴(예시이며 저장소에 맞게 잘라 쓰세요)을 줍니다.

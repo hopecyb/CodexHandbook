@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 20
 ---
 
 State test commands in your prompt's acceptance criteria. If the repo has no tests, at minimum require: start/build commands succeed, or provide manual verification steps.

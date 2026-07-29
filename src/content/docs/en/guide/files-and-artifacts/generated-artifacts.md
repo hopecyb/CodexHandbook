@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 60
 ---
 
 When an Agent finishes, it may create reports, scripts, static sites, test data, and other **generated artifacts**. They may not go through your usual code review path—so they need their own verification habit.

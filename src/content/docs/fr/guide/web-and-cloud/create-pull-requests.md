@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Lors de votre premier workflow Cloud, la Tâche peut être « terminée » alors que les changements ne sont pas encore dans un état facile à inspecter et discuter. En équipe, ce transfert passe généralement par une **Pull Request**.

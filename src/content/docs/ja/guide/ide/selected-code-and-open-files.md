@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 IDE 拡張は**小さく、高精度**の変更に向いています。コードを選択し、意図を説明すると、Codex は近傍のコンテキスト内で修正します。ここでは選択範囲と開いているファイルでスコープを絞り、誤った箇所を直さない方法を扱います。

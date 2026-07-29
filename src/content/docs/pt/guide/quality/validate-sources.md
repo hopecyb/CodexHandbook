@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Sempre que a conclusão depender de factos externos, não aceite só a conclusão — peça também as fontes.

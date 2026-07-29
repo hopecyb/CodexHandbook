@@ -1,0 +1,43 @@
+---
+title: Codex Pets
+description: "Understand Codex Pets as a concept: what they are, how they work, and what to watch when installing or creating one."
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Codex Pets
+
+Codex Pets are animated companion elements that appear inside a Codex client. They are not model capabilities or automation tools. They are local visual resources that the client can use to express different states while work is running, waiting, complete, failed, or blocked on your input.
+
+<PetScienceFigure variant="anatomy" locale="en" />
+
+This section is educational. It explains the basic idea, common package structure, safety boundaries during installation, and the relationship between artwork and metadata when creating a Pet. This site does not provide a pet resource list and does not treat any external gallery as an official source.
+
+## What a Pet Usually Includes
+
+A Pet can usually be understood as a small local package:
+
+- `pet.json`: metadata such as identity, display name, description, and animation path.
+- `spritesheet.webp`: an image atlas that stores animation frames.
+- Pet folder: the directory that keeps metadata and assets together.
+
+From this angle, a Codex Pet is closer to a theme asset or small visual widget than to a networked program.
+
+## Why Learn the Structure
+
+Understanding Pets helps you answer three practical questions:
+
+- During installation: where files should go, and which scripts deserve caution.
+- During troubleshooting: why a pet does not appear or an animation does not play.
+- During creation: what frames, transparent backgrounds, metadata, and license notes are responsible for.
+
+## Reading Path
+
+1. [Install a Codex Pet](./install/): understand folders, activation, and safety checks.
+2. [Create a Codex Pet](./create/): understand how artwork becomes a loadable resource.
+
+Treat each Pet as a small local package. That is steadier than pasting commands from an unknown source and easier to maintain over time.

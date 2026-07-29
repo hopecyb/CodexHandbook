@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 40
 ---
 
 A **worktree** lets you try changes in an isolated directory with less impact on your main workspace (especially when using Git worktrees).

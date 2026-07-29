@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Lorsque plusieurs fichiers `AGENTS.md`, des fichiers de configuration et la conversation actuelle coexistent, il faut clarifier **quelle règle s'applique**.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 L'App de bureau est le point d'entrée par défaut pour les débutants : visualiser projets, Tâches, Diff et Approbations.

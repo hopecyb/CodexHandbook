@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Les Tâches Cloud ont souvent besoin d'un **accès réseau sortant** : tirer des packages npm/PyPI, appeler des API, cloner des sous-modules. En parallèle, l'accès Internet est une surface à haut risque pour **l'exfiltration de données** — un Agent pourrait envoyer le contenu du repo ou des Secrets à des services externes.

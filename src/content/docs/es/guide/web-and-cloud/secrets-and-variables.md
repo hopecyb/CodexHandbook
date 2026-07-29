@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Las Tareas Cloud suelen necesitar acceder a APIs privadas, registries de paquetes o bases de datos. Esas credenciales deben inyectarse con **Secrets y variables de entorno**, no escribirse en código, Prompt, issue, chat o historial de Git.

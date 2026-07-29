@@ -7,6 +7,8 @@ source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
+sidebar:
+  order: 20
 ---
 
 The first time you see `App / CLI / IDE / Cloud`, the usual question is: which one should I use?

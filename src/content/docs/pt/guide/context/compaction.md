@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 «Compactação de Contexto» pode entender-se assim: quando a conversa fica demasiado longa, o sistema reduz o conteúdo anterior a uma versão mais curta e continua a mantê-la. O objetivo é a Tarefa poder continuar; o custo é que **detalhes podem perder-se.**

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 함부로 보이거나, 복사되거나, 외부로 나가거나, 작업 기록에 오래 남기 싫은 내용은 먼저 민감 정보로 다루세요.

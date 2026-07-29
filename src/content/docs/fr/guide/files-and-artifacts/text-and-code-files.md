@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 La plupart du travail de développement est des **fichiers texte et code** : source, tests, config, Markdown. Cette page couvre le cadrage des changements, la cohérence de style et la fusion sécurisée.

@@ -1,6 +1,8 @@
 ---
 title: 安装与界面
 description: 桌面 App 安装后的主要界面区域。
+sidebar:
+  order: 10
 ---
 
 安装步骤见 [安装桌面 App](/guide/getting-started/install-desktop-app/) 与 [https://developers.openai.com/codex](https://developers.openai.com/codex)。

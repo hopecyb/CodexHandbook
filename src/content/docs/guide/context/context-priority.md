@@ -1,6 +1,8 @@
 ---
 title: 上下文优先级
 description: 冲突指示时谁说了算。
+sidebar:
+  order: 40
 ---
 
 常见冲突：项目说明 vs 当前提示词 vs 旧对话。实践原则：

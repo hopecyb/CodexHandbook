@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 A maioria das Tarefas de desenvolvimento cai em **ficheiros de texto e código**: código-fonte, testes, configuração, Markdown. Esta página explica como limitar o âmbito, manter o estilo e fazer merge com segurança.

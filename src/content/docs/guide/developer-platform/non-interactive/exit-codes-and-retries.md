@@ -1,6 +1,8 @@
 ---
 title: 退出码与重试
 description: 在流水线中正确解读 codex exec 的成败——何时重试、何时立即失败。
+sidebar:
+  order: 40
 ---
 
 CI 依赖**进程退出码**判断步骤成败。本章说明 [codex exec](/guide/developer-platform/non-interactive/codex-exec/) 常见语义、重试策略与幂等设计。

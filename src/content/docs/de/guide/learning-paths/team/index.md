@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 > MVP-Status: Diese Seite ist ein Überblick. Tiefe Inhalte zu Shared Docs, Governance und Metriken folgen in späteren Meilensteinen (inkl. Teil 11).

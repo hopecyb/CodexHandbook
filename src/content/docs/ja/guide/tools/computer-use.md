@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 **Computer Use**（コンピュータ使用）は、Agent が人のように画面を見、ポインタを動かし、文字を入力できる能力です。ブラウザやターミナルに限定されません。能力は最も強力ですが、**リスクと承認要件も最も高く**なります。

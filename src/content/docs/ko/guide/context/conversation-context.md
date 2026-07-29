@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 “대화 컨텍스트”는 같은 작업에서 앞에서 Codex와 나눈 말이 뒤에 계속 영향을 준다는 뜻입니다. 도움이 되기도 하고, 위험이 되기도 합니다.

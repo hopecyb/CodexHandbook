@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Có tác vụ chạy xuôi rất nhanh, có tác vụ càng chat càng lệch — khác biệt không phải model đột nhiên thông minh hay kém đi, mà ở chỗ bạn đã tách rõ tác vụ hay chưa.

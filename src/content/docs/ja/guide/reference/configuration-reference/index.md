@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 「設定項目リファレンス」はキー、層、上書き関係で圧倒されがちです。先に一問：

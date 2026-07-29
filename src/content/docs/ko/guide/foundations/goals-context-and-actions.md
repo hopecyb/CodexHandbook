@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 어떤 작업은 금방 잘 돌아가고, 어떤 작업은 대화할수록 빗나갑니다. 차이는 모델이 갑자기 똑똑해지거나 둔해져서가 아니라, 작업을 분명히 나눴는지에 있습니다.

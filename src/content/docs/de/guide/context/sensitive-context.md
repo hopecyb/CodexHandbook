@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Alles, was du nicht willkürlich gesehen, kopiert, weitergegeben oder dauerhaft in Aufgabenprotokollen haben willst, zuerst als sensible Information behandeln.

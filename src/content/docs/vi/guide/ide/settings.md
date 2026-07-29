@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Cài đặt tiện ích IDE nối **sở thích cá nhân** với **quy tắc dự án**: chọn mô hình nào, phê duyệt chặt đến đâu, có tự kèm tệp mở không, v.v. Khớp với [cơ bản cấu hình](/guide/customization/configuration/config-basics/) toàn cục; trang này nghiêng về tùy chọn thường gặp trong trình soạn thảo.

@@ -1,6 +1,8 @@
 ---
 title: 运行第一次任务
 description: 用清晰提示词完成一次小改动。
+sidebar:
+  order: 80
 ---
 
 以下示例默认 **桌面 App**；CLI/IDE 同样可用同一段提示词。

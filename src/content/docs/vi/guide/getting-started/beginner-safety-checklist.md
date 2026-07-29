@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Trước lần dùng đầu tiên, có thể tự hỏi một câu: «Nếu nó làm sai, tôi có phải trả giá quá lớn không?»

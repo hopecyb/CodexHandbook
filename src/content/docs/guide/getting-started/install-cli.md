@@ -1,6 +1,8 @@
 ---
 title: 安装 CLI
 description: 安装 Codex 命令行并完成基本检查。
+sidebar:
+  order: 40
 ---
 
 按官方 CLI 安装说明操作：[https://developers.openai.com/codex](https://developers.openai.com/codex)（一般是包管理器或官方安装脚本，以当前文档为准）。

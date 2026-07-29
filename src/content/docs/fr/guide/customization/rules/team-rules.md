@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Quand les équipes utilisent Codex, la **politique de règles** répond : quelles contraintes sont à l'échelle de l'entreprise, quelles le dépôt maintient et si les individus peuvent relaxer quoi que ce soit. Ce chapitre est la vue gouvernance des [Règles de commandes](/guide/customization/rules/command-rules/) et des [Modèles Allow et Deny](/guide/customization/rules/allow-and-deny-patterns/).

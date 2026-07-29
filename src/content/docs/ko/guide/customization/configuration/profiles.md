@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Profile(설정 묶음)**은 이름 있는 설정 세트(모델 + 샌드박스 + 승인 등)를 저장해, 장면마다 한 번에 전환하게 합니다. 매번 설정을 손으로 바꿀 필요가 없습니다.

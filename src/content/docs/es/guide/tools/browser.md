@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 La **herramienta de navegador** permite al Agent acceder a páginas reales en un entorno controlado: leer el DOM, hacer capturas y a veces interacciones simples. Sirve para aceptación frontend, comprobar enlaces de documentación y contrastar con diseños; no sustituye una auditoría de seguridad ni debe usarse para operar a la ligera paneles de producción.

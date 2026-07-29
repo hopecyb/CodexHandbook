@@ -1,0 +1,43 @@
+---
+title: Mascotas de Codex
+description: "Entiende qué son los Codex Pets, cómo funcionan y qué revisar al instalar o crear uno."
+locale: es
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Mascotas de Codex
+
+Los Codex Pets son elementos animados de compañía que aparecen dentro del cliente Codex. No son capacidades del modelo ni herramientas de automatización, sino recursos visuales locales. El cliente puede usarlos para expresar estados como trabajo en curso, espera, finalización, error o bloqueo por una intervención tuya.
+
+<PetScienceFigure variant="anatomy" locale="es" />
+
+Esta sección es educativa. Explica el concepto básico, la estructura común del paquete, los límites de seguridad durante la instalación y la relación entre arte y metadatos al crear un Pet. Este sitio no ofrece una lista de recursos y no trata ninguna galería externa como fuente oficial.
+
+## Qué suele incluir
+
+Un Pet suele entenderse como un pequeño paquete local:
+
+- `pet.json`: metadatos como identidad, nombre visible, descripción y ruta de animación.
+- `spritesheet.webp`: atlas de imagen que almacena frames de animación.
+- Carpeta del pet: directorio que mantiene juntos los metadatos y los assets.
+
+Desde este punto de vista, un Codex Pet se parece más a un recurso de tema o a un pequeño widget visual que a un programa conectado a la red.
+
+## Por qué conviene entenderlo
+
+Entender la estructura de Pets ayuda a responder tres preguntas prácticas:
+
+- Al instalar: dónde deben ir los archivos y qué scripts conviene revisar.
+- Al depurar: por qué no aparece una mascota o por qué no se reproduce una animación.
+- Al crear: qué responsabilidad tienen los frames, el fondo transparente, los metadatos y las notas de licencia.
+
+## Ruta de lectura
+
+1. [Instalar un Codex Pet](./install/): entiende carpetas, activación y comprobaciones de seguridad.
+2. [Crear un Codex Pet](./create/): entiende cómo el arte se convierte en un recurso cargable.
+
+Tratar cada Pet como un paquete local pequeño y claro es más estable que pegar comandos de origen desconocido, y más fácil de mantener a largo plazo.

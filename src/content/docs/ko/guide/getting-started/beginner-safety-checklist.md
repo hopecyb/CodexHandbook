@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 첫 사용 전에 스스로에게 한 번 물어보세요. 「잘못하면 대가가 너무 크지 않은가?」

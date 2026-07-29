@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Cloud タスクはプライベート API、パッケージリポジトリ、データベースへのアクセスを必要とすることがよくあります。ここで使う認証情報は **Secrets と環境変数** で注入し、コード、プロンプト、issue、チャット履歴、Git 履歴には書かないでください。

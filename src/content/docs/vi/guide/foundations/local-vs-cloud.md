@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 «Local» và «đám mây» nghe như thuật ngữ kỹ thuật — nói đơn giản: local là làm việc trên máy của bạn; đám mây là làm việc trên máy từ xa.

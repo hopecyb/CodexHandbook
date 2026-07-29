@@ -1,6 +1,8 @@
 ---
 title: 创建 Pull Request
 description: 从 Cloud 任务到可审查的 PR——描述、范围与人工合并闸门。
+sidebar:
+  order: 40
 ---
 
 第一次用 Cloud 工作流时，常见情况是任务已经做完了，但改动还没进入便于检查和讨论的状态。团队协作里，这一步一般靠 **Pull Request** 完成。

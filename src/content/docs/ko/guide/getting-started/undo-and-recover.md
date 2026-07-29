@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Codex를 처음 쓸 때 많은 사람이 가장 걱정하는 것은: 잘못 고치면 돌아갈 수 있는가?

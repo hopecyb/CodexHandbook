@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 팀이 Codex를 쓸 때 **규칙 정책**은 다음을 답합니다. 어떤 제약이 회사 전체에서 통일인지, 어떤 제약이 저장소 유지인지, 개인이 완화할 수 있는지. 이 장은 [명령 규칙](/guide/customization/rules/command-rules/)과 [허용과 거부 패턴](/guide/customization/rules/allow-and-deny-patterns/)의 거버넌스 관점입니다.

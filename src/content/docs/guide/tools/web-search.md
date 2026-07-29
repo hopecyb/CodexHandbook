@@ -1,6 +1,8 @@
 ---
 title: Web 搜索
 description: 用搜索补充事实并标注来源。
+sidebar:
+  order: 30
 ---
 
 Web 搜索适合补事实，不适合替你直接下最终结论。

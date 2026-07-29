@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Đặt Codex vào **pipeline Pull Request** có thể bắt vấn đề rõ trước khi người review, nhưng **không thay thế** review trách nhiệm và kiểm thử. Trang này nói về mẫu tự động hóa triển khai được.

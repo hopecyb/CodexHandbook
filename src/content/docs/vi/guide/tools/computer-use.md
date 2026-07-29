@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 **Computer Use** cho phép Agent xem màn hình, di chuyển con trỏ, gõ chữ như người — không chỉ giới hạn trình duyệt hoặc terminal. Năng lực mạnh nhất, **yêu cầu rủi ro và phê duyệt cũng cao nhất**.

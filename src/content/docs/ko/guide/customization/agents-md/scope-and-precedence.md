@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 여러 `AGENTS.md`, 설정 파일, 현재 대화가 동시에 있을 때 **어느 규칙이 적용되는지**를 분명히 해야 합니다.

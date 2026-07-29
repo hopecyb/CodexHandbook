@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Ví dụ dưới đây mặc định **Desktop App**; CLI/IDE cũng dùng được cùng một đoạn Prompt.

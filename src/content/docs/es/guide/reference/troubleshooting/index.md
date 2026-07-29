@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 110
 ---
 
 Si tienes un problema y no sabes si mirar App, CLI, IDE o Cloud, empieza por aquí.

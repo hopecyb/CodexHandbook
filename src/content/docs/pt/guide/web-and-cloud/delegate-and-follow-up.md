@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 **Delegar** é entregar a Tarefa ao Cloud para que se execute num ambiente remoto; **acompanhar** é, enquanto corre ou ao terminar, ver o progresso, completar o Contexto, Aprovar operações perigosas e pedir alterações. É o fluxo central de «continuar a avançar longe do posto de trabalho».

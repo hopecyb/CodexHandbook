@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **acceptable use 政策（AUP）**は「Codex でこれをやっていいか」を組織合意として書き、個人判断だけに頼らないものです。[脅威モデル](/guide/team-enterprise/security/threat-model/) と補完：脅威モデルはリスク、AUP は**行動境界**です。

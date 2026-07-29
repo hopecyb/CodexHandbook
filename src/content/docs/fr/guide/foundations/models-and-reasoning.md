@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Les modèles disponibles et les niveaux de « Raisonnement / thinking » évoluent avec les mises à jour produit. Équilibrez :

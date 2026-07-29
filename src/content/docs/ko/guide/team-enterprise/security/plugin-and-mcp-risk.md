@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Plugin**과 **MCP 서버**는 Codex를 외부 시스템에 연결합니다. 이슈, 데이터베이스, 내부 API가 여기에 해당합니다. 능력이 클수록 [위협 모델](/guide/team-enterprise/security/threat-model/)에서의 유출·권한 초과면이 커집니다. 이 장은 [MCP 개요](/skills/mcp/mcp-overview/), [Plugins 개요](/skills/plugins/plugins-overview/)와 함께 읽으세요.

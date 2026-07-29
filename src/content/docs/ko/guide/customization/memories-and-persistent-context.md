@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 일부 Codex 클라이언트는 **기억(Memory)**을 지원합니다. 여러 턴 대화에서 확인한 선호나 사실을 이후 세션까지 남깁니다. `AGENTS.md`·프로젝트 설정과 보완 관계이지만, 버전 관리되는 팀 규범을 **대체할 수 없습니다**.

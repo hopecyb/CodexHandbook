@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **ブラウザツール**は、Agent が制御された環境で実際の Web ページにアクセスできるようにします。DOM の読み取り、スクリーンショット、場合によっては簡単な操作も可能です。フロントエンドの検証、ドキュメントリンクの確認、デザイン稿との照合に向いています。セキュリティ監査の代替には向かず、本番管理画面を無造作に操作する用途にも向きません。

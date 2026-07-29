@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Las **Rules (reglas)** declaran en la configuración o en archivos del proyecto qué comandos shell, rutas y llamadas a herramientas están **permitidos o prohibidos**, para reducir clics de aprobación manual y a la vez impedir que se automaticen operaciones peligrosas.

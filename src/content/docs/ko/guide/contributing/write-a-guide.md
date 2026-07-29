@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 이 페이지는 `src/content/docs/`에 **가이드형** 페이지(순수 사례·순수 참고표가 아님)를 추가하거나 다시 쓰는 방법을 설명합니다.

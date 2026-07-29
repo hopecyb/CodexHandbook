@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 En algunos escenarios, Codex puede invocar la capacidad de **generación de imágenes**: ilustraciones, borradores de iconos, conceptos de UI, esquemas. El resultado debe tratarse como **artefacto pendiente de aceptación**, no como activo de marca listo para publicar.

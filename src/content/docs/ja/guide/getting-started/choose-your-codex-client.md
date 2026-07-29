@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 初めて `App / CLI / IDE / Cloud` という言葉を見たとき、よくある疑問は「結局どれを使うべきか」です。

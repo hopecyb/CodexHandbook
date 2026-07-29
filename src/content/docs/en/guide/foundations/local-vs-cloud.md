@@ -7,6 +7,8 @@ source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
+sidebar:
+  order: 50
 ---
 
 “Local” and “cloud” can sound technical. Simply: local means work on your own computer; cloud means work on a remote machine.

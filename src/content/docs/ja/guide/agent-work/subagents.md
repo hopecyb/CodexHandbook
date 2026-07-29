@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 **子 Agent（Subagent）** は、主 Agent が特定のサブ問題のために起動する**独立した作業単位**です。比較的隔離されたコンテキストを持ち、完了後に結果をメインスレッドへ集約します。

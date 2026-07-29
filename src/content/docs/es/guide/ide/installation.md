@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Si trabajas sobre todo en el editor, esta página cubre, además del lugar de instalación, estas preguntas:

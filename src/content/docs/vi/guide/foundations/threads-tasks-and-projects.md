@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Từ ngữ trên các sản phẩm có thể hơi khác; cẩm nang này thống nhất hiểu như sau:

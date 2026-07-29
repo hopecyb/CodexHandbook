@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 ターミナルは Codex に動作を実行させる最も直接的な方法のひとつです。効率は高い一方で、リスクを理解する必要もあります。

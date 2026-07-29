@@ -1,6 +1,8 @@
 ---
 title: 处理文件
 description: 让 Codex 在明确范围内读写文件。
+sidebar:
+  order: 20
 ---
 
 ## 本步目标

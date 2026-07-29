@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Si `codex` interactif est le chat pendant que vous travaillez, **`codex exec`** est plus proche de confier un job ponctuel et obtenir un résultat à la fin.

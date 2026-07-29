@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 SDK(이름과 언어는 [공식 문서](https://developers.openai.com/codex) 기준)는 **자체 서비스**에서 작업을 만들고, 상태를 폴링하고, 결과를 가져오게 해 줍니다. 터미널 TUI에만 의존하지 않아도 됩니다.

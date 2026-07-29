@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Dans un monorepo avec plusieurs apps, paquets partagés et différentes stacks — un seul `AGENTS.md` géant fait que l'Agent **modifie le mauvais paquet** ou exécute les mauvais tests. Cette page donne un modèle d'**instructions en couches** réutilisable (exemple — adaptez pour votre dépôt).

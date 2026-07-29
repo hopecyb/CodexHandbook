@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Effizienz im Terminal kommt aus drei Teilen: **Startweise**, **Shortcuts in der Sitzung**, **Zusammenspiel mit Skript/Editor**. Diese Seite zu Nutzung und Gewohnheiten; Parametertabellen: [CLI-Befehlsreferenz](/guide/reference/commands/) und [Tastaturkürzel](/guide/reference/keyboard-shortcuts/).

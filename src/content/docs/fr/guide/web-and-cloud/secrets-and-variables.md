@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Les Tâches Cloud ont souvent besoin d'API privées, de registres de packages ou de bases de données. Les identifiants doivent être injectés via **Secrets et variables d'environnement** — pas écrits dans le code, les Prompts, les issues, les journaux de chat ou l'historique Git.

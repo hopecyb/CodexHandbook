@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Les **préférences personnelles** sont des paramètres sur votre machine qui s'appliquent à tous les projets : modèle par défaut, thème, habitudes d'approbation, chemins Skill personnels, etc. Contrairement à `AGENTS.md` dans le dépôt, les préférences personnelles ne devraient **pas** supposer que les coéquipiers sont identiques.

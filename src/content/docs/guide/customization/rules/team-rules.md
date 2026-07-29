@@ -1,6 +1,8 @@
 ---
 title: 团队规则策略
 description: 在组织、仓库与个人之间分层治理命令与路径规则，可审查、可回滚。
+sidebar:
+  order: 30
 ---
 
 团队使用 Codex 时，**规则策略**回答：哪些约束全公司统一、哪些交给仓库维护、个人还能不能放宽。本章是 [命令规则](/guide/customization/rules/command-rules/) 与 [允许与拒绝模式](/guide/customization/rules/allow-and-deny-patterns/) 的治理视角。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Model có thể chọn và mức «suy luận / suy nghĩ» sẽ đổi theo cập nhật sản phẩm. Khi chọn hãy cân nhắc:

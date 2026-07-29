@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Khi có câu hỏi rời, có thể lật FAQ trước. Ở đây không triển khai hệ thống đầy đủ; chủ yếu giúp bạn nhanh tìm bước tiếp nên xem đâu.

@@ -1,6 +1,8 @@
 ---
 title: Webhook 概述
 description: 用 HTTP 回调把 Codex 任务状态接入内部系统——事件、签名与幂等。
+sidebar:
+  order: 10
 ---
 
 **Webhook** 让你在 Codex 或 Cloud 任务状态变化时，向自有服务发送 HTTP 回调，驱动工单更新、Slack 通知或内部审批台。本章是 [开发者平台](/guide/developer-platform/) 的事件集成入口。

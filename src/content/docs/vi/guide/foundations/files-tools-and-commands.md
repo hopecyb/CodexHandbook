@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Khác biệt lớn nhất so với chatbot thông thường là nó sẽ làm việc qua **công cụ**.

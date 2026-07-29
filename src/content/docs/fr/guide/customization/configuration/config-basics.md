@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 La configuration permet d'**unifier le comportement de Codex** sur votre machine ou dans un projet sans répéter le modèle, le niveau d'approbation ou la politique de bac à sable à chaque session.

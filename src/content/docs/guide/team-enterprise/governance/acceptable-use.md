@@ -1,6 +1,8 @@
 ---
 title: 可接受使用政策
 description: 团队层面约定 Codex 能做什么、不能做什么，与技术与培训对齐。
+sidebar:
+  order: 10
 ---
 
 **可接受使用政策（AUP）**把「能不能用 Codex 做这件事」写成组织共识，避免仅靠个人判断。它与 [威胁模型](/guide/team-enterprise/security/threat-model/) 互补：威胁模型讲风险，AUP 讲**行为边界**。

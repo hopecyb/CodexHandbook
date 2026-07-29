@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Phím tắt khác nhiều theo **client và phiên bản**. Trang này nhóm theo **ý định** để hỏi «có cách nhanh hơn không?» — kiểm trợ giúp hoặc cài đặt sản phẩm để biết liên kết chính xác.

@@ -1,6 +1,8 @@
 ---
 title: Shell 与终端
 description: 命令执行的能力与风险。
+sidebar:
+  order: 20
 ---
 
 终端是让 Codex 执行动作最直接的方式之一，所以效率很高，也更需要你看懂风险。

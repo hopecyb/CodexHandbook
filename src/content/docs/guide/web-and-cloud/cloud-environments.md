@@ -1,6 +1,8 @@
 ---
 title: Cloud 环境
 description: Codex Cloud 远程运行环境的构成、生命周期与团队配置要点。
+sidebar:
+  order: 20
 ---
 
 “Cloud 环境”是 Codex 在远程执行任务时使用的工作机。

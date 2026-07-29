@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 설정 파일은 로컬이나 프로젝트에서 **Codex 동작을 통일**하게 해, 세션마다 모델·승인 수준·샌드박스 정책을 다시 고르지 않아도 됩니다.

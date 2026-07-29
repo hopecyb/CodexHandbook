@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 よくある矛盾：プロジェクト説明 vs 現在のプロンプト vs 古い会話。実践上の原則：

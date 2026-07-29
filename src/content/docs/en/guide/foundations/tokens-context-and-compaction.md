@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 100
 ---
 
 A **Token** is the unit models use to process text. The **context window** is how much information can be used effectively in one turn.

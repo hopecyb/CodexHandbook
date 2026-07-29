@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 이미지는 Agent가 인터페이스 문제, 디자인 의도, 화이트보드 스케치를 **보게** 합니다. 이 페이지는 입력(당신이 준 이미지)과 저장소 안 이미지 파일 관리를 다룹니다. 새 이미지 생성은 [이미지 생성](/guide/tools/image-generation/)을 보세요.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Rules (quy tắc)** trong cấu hình hoặc tệp dự án khai báo lệnh shell, đường dẫn, gọi công cụ nào **cho phép hoặc cấm**, giảm mỗi lần bấm phê duyệt thủ công, đồng thời ngăn thao tác nguy hiểm tự động hóa.

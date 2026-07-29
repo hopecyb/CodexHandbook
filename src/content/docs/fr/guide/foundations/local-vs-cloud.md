@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 « Local » et « cloud » peuvent sembler techniques. Simplement : local signifie travailler sur votre propre ordinateur ; cloud signifie travailler sur une machine distante.

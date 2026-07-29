@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 El terminal es una de las formas más directas de que Codex ejecute acciones: por eso es muy eficiente y también hace falta que entiendas el riesgo.

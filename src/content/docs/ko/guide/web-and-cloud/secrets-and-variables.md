@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Cloud 작업은 사설 API, 패키지 저장소, 데이터베이스에 접근해야 하는 경우가 많습니다. 이때 쓰는 자격 증명은 **Secrets와 환경 변수**로 주입하세요. 코드, 프롬프트, issue, 채팅 기록, Git 이력에 쓰지 마세요.

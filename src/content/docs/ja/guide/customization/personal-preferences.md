@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **個人の好み**は本機でプロジェクト横断に効く設定です：デフォルトモデル、テーマ、承認習慣、個人 Skill パスなど。リポジトリ内の `AGENTS.md` と違い、個人の好みはチームメイトと同じとは**仮定しない**でください。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 La CI s'appuie sur les **codes de sortie de processus** pour juger le succès d'une étape. Cette page couvre la sémantique courante pour [codex exec](/guide/developer-platform/non-interactive/codex-exec/), la stratégie de retry et le design idempotent.

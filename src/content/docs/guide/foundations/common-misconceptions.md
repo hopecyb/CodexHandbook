@@ -1,6 +1,8 @@
 ---
 title: 常见误解
 description: 澄清把 Codex 当作万能黑盒的几类误区。
+sidebar:
+  order: 120
 ---
 
 很多人一开始用不好 Codex，不是操作不会，只是一开始就把它想偏了。

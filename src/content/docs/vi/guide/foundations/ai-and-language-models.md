@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Mô hình ngôn ngữ dựa trên chữ, tệp và kết quả công cụ bạn cung cấp để **dự đoán đầu ra hợp lý nhất tiếp theo**. Nó rất giỏi hoàn thiện, sắp xếp, soạn thảo và làm tiếp theo ngữ cảnh — nhưng không tự nhiên biết thông tin bạn chưa đưa, cũng không đảm bảo lần nào cũng hoàn toàn đúng.

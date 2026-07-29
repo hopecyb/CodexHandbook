@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 並列 Agent は、**もともと独立して進められる作業**を分割し、メインスレッドが調整、検収、マージ判断に集中するのに向いています。

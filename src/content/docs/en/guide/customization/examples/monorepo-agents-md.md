@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 10
 ---
 
 In a monorepo with multiple apps, shared packages, and different stacks—a single giant `AGENTS.md` makes it easy for the Agent to **edit the wrong package** or run the wrong tests. This page gives a reusable **layered instruction** pattern (example—trim for your repo).

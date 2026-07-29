@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 30
 ---
 
 “Prompt injection” means someone embeds content in context that misleads Codex.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 “도구 선택”은, 이 일을 어떤 방식으로 하면 효과적이고 안전한지를 말합니다.

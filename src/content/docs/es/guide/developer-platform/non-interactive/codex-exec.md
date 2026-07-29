@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Si el `codex` interactivo es charlar y actuar a la vez, **`codex exec`** se parece más a entregar la Tarea de una vez y devolver el resultado al terminar.

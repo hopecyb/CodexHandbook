@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Web 검색은 사실을 보완하기에 맞고, 최종 결론을 대신 내리기엔 맞지 않습니다.

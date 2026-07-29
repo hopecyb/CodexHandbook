@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Algunos clientes de Codex admiten **voz**: dictas la tarea o escuchas un resumen de la respuesta. Encaja cuando tienes las manos ocupadas o quieres volcar ideas rápido; **no** sirve para leer claves en voz alta ni sustituye el registro escrito de aceptación.

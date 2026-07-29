@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Trong Monorepo nhiều app, gói chia sẻ, stack kỹ thuật khác nhau cùng tồn tại — một `AGENTS.md` khổng lồ dễ để Agent **sửa nhầm gói** hoặc chạy nhầm kiểm thử. Trang này đưa mẫu **mô tả phân tầng** tái sử dụng được (ví dụ, hãy cắt theo kho).

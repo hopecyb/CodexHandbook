@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Cuando la CLI falla, el error puede parecer siempre un error de terminal, pero la causa de fondo no tiene por qué ser de la misma clase.

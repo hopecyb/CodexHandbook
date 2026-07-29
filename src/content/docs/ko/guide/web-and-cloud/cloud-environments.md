@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 “Cloud 환경”은 Codex가 원격에서 작업을 실행할 때 쓰는 작업 머신입니다.

@@ -1,6 +1,8 @@
 ---
 title: 命令规则
 description: 用命令级 allow/deny 约束 shell 与工具调用——比口头约定更可执行。
+sidebar:
+  order: 20
 ---
 
 **命令规则**聚焦「Agent 能跑哪些命令、以什么参数跑」。它们是 [允许与拒绝规则](/guide/customization/rules/allow-and-deny-patterns/) 的最常见形态，通常写在团队可审查的配置或规则文件中。

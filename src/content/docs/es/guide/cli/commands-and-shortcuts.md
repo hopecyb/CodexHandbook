@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 La eficiencia en la terminal viene de tres piezas: **forma de arranque**, **operaciones rápidas en sesión** y **coordinación con scripts/editor**. Esta página habla de usos y hábitos; las tablas de parámetros están en [Referencia de comandos CLI](/guide/reference/commands/) y [Atajos de teclado](/guide/reference/keyboard-shortcuts/).

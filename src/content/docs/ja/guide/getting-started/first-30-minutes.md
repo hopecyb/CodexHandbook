@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 110
 ---
 
 インストールが終わったばかりで、初日に何から始めるかわからない場合は、このルートに沿って進めてください。

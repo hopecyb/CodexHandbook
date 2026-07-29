@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 IDE 확장은 **작은 범위·고정밀도** 변경에 잘 맞습니다. 코드 한 구간을 선택하고 의도를 말하면, Codex가 인근 컨텍스트에서 수정합니다. 여기서는 선택 영역과 열린 파일로 범위를 조여 잘못된 곳을 고치지 않게 하는 방법을 다룹니다.

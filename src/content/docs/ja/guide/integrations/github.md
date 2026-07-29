@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 GitHub は Codex にとって最も一般的なコード協業面です。Cloud タスク、PR レビュー、Actions、ローカル push は、同じブランチと権限の上で動きます。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 `AGENTS.md` はリポジトリ（またはサブディレクトリ）に置く **Markdown プロジェクト指示**です。Codex がそのプロジェクトに入ると読み、コーディングスタイル、テスト要求、コミット規範、禁止事項を揃えます。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 SDK（名称と言語は [公式ドキュメント](https://developers.openai.com/codex) を基準に）で、**自社サービス**からタスク作成、状態ポーリング、結果取得ができます。ターミナル TUI だけに頼る必要がありません。

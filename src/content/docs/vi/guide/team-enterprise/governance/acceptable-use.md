@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Một **Chính sách sử dụng chấp nhận được (AUP)** biến «có được dùng Codex cho việc này không?» thành đồng thuận tổ chức thay vì phán đoán cá nhân. Nó bổ sung [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/): mô hình mối đe dọa bao rủi ro; AUP bao **ranh giới hành vi**.

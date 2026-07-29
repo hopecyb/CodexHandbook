@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Un modelo de lenguaje **predice la salida más razonable a continuación** a partir del texto, los archivos y los resultados de Herramientas que le das. Es bueno completando, organizando, redactando y siguiendo el Contexto, pero no conoce de forma natural lo que no le diste, ni garantiza estar siempre del todo en lo correcto.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Shortcuts unterscheiden sich stark nach **Client und Version**. Diese Seite ordnet nach **Absicht** — ob es einen schnelleren Weg gibt; konkrete Tasten in Hilfe oder Settings des Produkts.

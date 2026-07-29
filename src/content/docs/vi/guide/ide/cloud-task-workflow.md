@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Một số tích hợp IDE hỗ trợ **ủy thác tác vụ lên Cloud**. Tác vụ chạy trong môi trường chuẩn hóa từ xa; bạn có thể tiếp tục sửa local, hoặc rời máy. Quy trình giống Cloud/Web thuần, chỉ khác lối vào nằm phía trình soạn thảo.

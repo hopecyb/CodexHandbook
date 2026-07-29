@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Un **Webhook** te permite, cuando cambia el estado de una Tarea de Codex o Cloud, enviar un callback HTTP a tu propio servicio y disparar actualizaciones de tickets, notificaciones de Slack o mesas de Aprobación internas. Este capítulo es la entrada de integración por eventos de la [plataforma para desarrolladores](/guide/developer-platform/).

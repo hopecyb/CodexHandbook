@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 프롬프트 예시는 저장소 루트 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)에 두고, 핸드북 본문이 링크로 참조합니다. 설계 규범은 [`docs/planning/examples-system.md`](/docs/planning/examples-system.md)를 보세요.

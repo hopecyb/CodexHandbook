@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 50
 ---
 
 Cloud can produce changes for you, but it does not take merge responsibility on your behalf.

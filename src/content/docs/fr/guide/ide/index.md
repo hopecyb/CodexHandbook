@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 L'extension IDE convient au travail avec fichiers ouverts et sélections. MVP : installation, Tâches locales, dépannage.

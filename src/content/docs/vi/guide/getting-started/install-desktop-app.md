@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 1. Mở hướng dẫn tải ứng dụng desktop trong tài liệu Codex chính thức: [https://developers.openai.com/codex](https://developers.openai.com/codex)

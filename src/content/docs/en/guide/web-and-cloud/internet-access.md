@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 70
 ---
 
 Cloud tasks often need **outbound network access**: pulling npm/PyPI packages, calling APIs, cloning submodules. At the same time, internet access is a high-risk surface for **data exfiltration**—an Agent might send repo or Secret content to external services.

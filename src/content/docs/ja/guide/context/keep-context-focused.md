@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 多くのタスクが会話の途中で散らかるのは、コンテキストがすでに拡散していることがよくある原因です。

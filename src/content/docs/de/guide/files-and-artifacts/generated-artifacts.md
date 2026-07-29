@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Beim Aufgabenabschluss kann der Agent Reports, Skripte, Static Sites, Testdaten usw. als **Artefakte** neu anlegen. Sie laufen oft nicht über Ihren gewohnten Code-Review-Pfad — eigene Abnahmegewohnheit nötig.

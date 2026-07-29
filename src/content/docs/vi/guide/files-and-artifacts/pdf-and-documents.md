@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 PDF thường dùng cho quy chuẩn, bài báo, bản quét và báo cáo xuất. Khác văn bản thuần, PDF **cấu trúc phức tạp, dung lượng lớn, khó diff**, cần ước định cách làm tác vụ riêng.

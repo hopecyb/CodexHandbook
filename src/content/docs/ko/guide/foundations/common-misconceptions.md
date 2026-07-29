@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 많은 사람이 처음에 Codex를 잘 못 쓰는 이유는 조작을 몰라서가 아니라, 처음부터 잘못 기대해서입니다.

@@ -1,6 +1,8 @@
 ---
 title: codex exec
 description: 非交互执行入口——在脚本与 CI 中单次下发完整任务。
+sidebar:
+  order: 10
 ---
 
 如果交互式 `codex` 是一边聊一边做事，那 **`codex exec`** 更接近一次性把任务交出去，跑完就返回结果。

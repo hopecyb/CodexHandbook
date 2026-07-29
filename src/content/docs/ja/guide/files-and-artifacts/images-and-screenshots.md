@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 画像は Agent に UI の問題、デザイン意図、ホワイトボードのラフを **見せる** 手段になります。本ページは入力（あなたが渡す画像）とリポジトリ内画像の管理を扱います。新規画像の生成は [画像生成](/guide/tools/image-generation/) を参照してください。

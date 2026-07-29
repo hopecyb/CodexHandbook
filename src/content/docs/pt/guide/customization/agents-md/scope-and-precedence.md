@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Quando existem vários `AGENTS.md`, ficheiros de configuração e a conversa atual ao mesmo tempo, é preciso saber **qual regra se aplica**.

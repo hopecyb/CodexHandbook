@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 20
 ---
 
 An **Agent** doesn't end with one Q&A turn. It: understands the goal → chooses tools → observes results → adjusts the next step—until done or until it needs you.

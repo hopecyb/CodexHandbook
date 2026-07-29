@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Bảng này nghiêng học và tham chiếu chọn lựa; năng lực cụ thể vẫn lấy theo sản phẩm hiện tại.

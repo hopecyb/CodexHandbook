@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 „Lokal“ und „Cloud“ klingen technisch — kurz gesagt: Lokal heißt auf deinem Rechner arbeiten, Cloud heißt auf einer entfernten Maschine.

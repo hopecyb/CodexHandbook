@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 **Computer Use**는 Agent가 사람처럼 화면을 보고, 포인터를 움직이고, 글자를 입력하게 합니다. 브라우저나 터미널에 한정되지 않습니다. 능력이 가장 강하고, **위험과 승인 요구도 가장 높습니다**.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 CI entscheidet am **Prozess-Exit-Code** über Erfolg/Fehler. Dieses Kapitel erklärt gängige Semantik von [codex exec](/guide/developer-platform/non-interactive/codex-exec/), Retry-Strategien und Idempotenz.

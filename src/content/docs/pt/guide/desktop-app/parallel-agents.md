@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Os Agents em paralelo servem para repartir **trabalho que já pode avançar de forma independente**, de modo que a Thread principal se centre em coordenar, aceitar resultados e decidir o merge.

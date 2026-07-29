@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Indiquez les commands de test dans les critères d'acceptation de votre Prompt. Si le dépôt n'a pas de tests, exigez au minimum : les commands de démarrage/build réussissent, ou fournissez des étapes de Vérification manuelle.

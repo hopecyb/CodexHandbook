@@ -1,6 +1,8 @@
 ---
 title: 给出清晰任务
 description: 用目标、背景、约束、验收标准组织提示词。
+sidebar:
+  order: 30
 ---
 
 ## 本步目标

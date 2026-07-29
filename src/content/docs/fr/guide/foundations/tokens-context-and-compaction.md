@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Un **Token** est l'unité que les modèles utilisent pour traiter le texte. La **fenêtre de Contexte** est la quantité d'information utilisable efficacement en un tour.

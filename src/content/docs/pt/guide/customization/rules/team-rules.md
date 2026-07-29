@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Quando a equipa usa o Codex, a **política de regras** responde: que restrições são unificadas em toda a empresa, quais o repositório mantém, e se o indivíduo ainda pode relaxar. Este capítulo é a perspetiva de governação de [regras de comandos](/guide/customization/rules/command-rules/) e [padrões de permitir e negar](/guide/customization/rules/allow-and-deny-patterns/).

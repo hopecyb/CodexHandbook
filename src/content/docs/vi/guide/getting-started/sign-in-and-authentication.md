@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Nhiều người mới coi «tôi đã đăng nhập» và «tôi đã dùng bình thường được» là một chuyện — nhưng hai việc này không hoàn toàn giống nhau.

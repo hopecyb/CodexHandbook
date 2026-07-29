@@ -1,0 +1,55 @@
+---
+title: 安装 Codex Pet
+description: "从科普角度理解 Codex Pet 的安装目录、启用流程和安全边界。"
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# 安装 Codex Pet
+
+安装 Codex Pet 的本质，是把一个客户端能识别的资源包放到约定目录里。客户端启动或刷新设置时读取这个目录，找到元数据，再加载对应的动画素材。
+
+<PetScienceFigure variant="install" locale="zh" />
+
+一个 Pet 通常是一个本地文件夹，里面至少有两个文件：
+
+```text
+~/.codex/pets/<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+`pet.json` 描述宠物名称、说明和 spritesheet 路径；`spritesheet.webp` 保存动画帧。两个文件通常放在同一个宠物目录中，且 `pet.json` 里的 `spritesheetPath` 要指向实际存在的文件。
+
+## 安装流程背后的逻辑
+
+1. 获取宠物包：确认它至少包含 `pet.json` 和 spritesheet。
+2. 放入 Pets 目录：常见位置是 `~/.codex/pets/<pet-id>/`。
+3. 让客户端重新读取：重启 Codex，或在 Pets 设置里刷新。
+4. 在界面中选择：通常位于 Settings -> Appearance -> Pets。
+
+Windows 上通常使用用户目录下的 `.codex\pets\<pet-id>\`。如果你配置过 `CODEX_HOME`，以当前客户端显示的 Pets 文件夹为准。
+
+## 为什么经常安装失败
+
+安装后没有出现时，先看这几项：
+
+- 文件夹名和 `pet.json` 里的 `id` 是否一致。
+- `spritesheetPath` 是否是相对路径，例如 `spritesheet.webp`。
+- spritesheet 是否真的在同一目录中。
+- 是否重启过 Codex，或在 Pets 设置里刷新过。
+- Windows、WSL 或自定义 `CODEX_HOME` 是否指向了不同目录。
+
+这些问题大多不是“宠物坏了”，而是客户端没有在预期位置读到一组完整资源。
+
+## 更新和卸载的本质
+
+更新前先备份旧目录。确认新包可用后，再覆盖 `pet.json` 和 spritesheet。
+
+卸载时删除对应的 `~/.codex/pets/<pet-id>/` 目录，然后重启 Codex 或刷新 Pets 设置。
+
+## 安全提醒
+
+不要直接运行来历不明的远程 shell 命令。安装脚本可能会写入本地文件，甚至执行额外命令。更稳妥的方式是先下载包、检查 `pet.json`、确认素材来源和许可，再手动复制到 Pets 目录。
+
+把安装理解成“复制本地资源包”，会让风险边界更清楚：资源文件可检查，脚本行为要审阅，来源和授权要保留。

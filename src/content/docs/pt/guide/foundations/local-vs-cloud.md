@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 «Local» e «Cloud» soam técnicos; em termos simples, local é trabalhar no seu computador, Cloud é trabalhar numa máquina remota.

@@ -1,0 +1,59 @@
+---
+title: Codex Pet をインストールする
+description: "Codex Pets のインストールフォルダ、反映フロー、安全境界を理解します。"
+locale: ja
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Codex Pet をインストールする
+
+Codex Pet のインストールとは、クライアントが読めるリソースパッケージを決められたフォルダに置くことです。クライアントは起動時または設定更新時にそのフォルダを読み、メタデータを見つけ、対応するアニメーション素材を読み込みます。
+
+<PetScienceFigure variant="install" locale="ja" />
+
+Pet は通常、少なくとも二つのファイルを含むローカルフォルダです。
+
+```text
+~/.codex/pets/<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+`pet.json` はペット名、説明、spritesheet のパスを記述します。`spritesheet.webp` はアニメーションフレームを保持します。通常、この二つは同じフォルダにあり、`spritesheetPath` は実在するファイルを指す必要があります。
+
+## インストールの流れ
+
+1. パッケージを取得する：少なくとも `pet.json` と spritesheet が含まれることを確認します。
+2. Pets フォルダに置く：一般的な場所は `~/.codex/pets/<pet-id>/` です。
+3. クライアントに再読み込みさせる：Codex を再起動するか、Pets 設定で更新します。
+4. UI で選択する：通常は Settings -> Appearance -> Pets にあります。
+
+Windows では、ユーザーディレクトリ内の `.codex\pets\<pet-id>\` が一般的です。`CODEX_HOME` を設定している場合は、現在のクライアントが表示する Pets フォルダに従ってください。
+
+## よくある失敗
+
+インストール後に表示されない場合は、次を確認します。
+
+- フォルダ名と `pet.json` の `id` が一致しているか。
+- `spritesheetPath` が `spritesheet.webp` のような相対パスか。
+- spritesheet が同じフォルダに存在するか。
+- Codex を再起動したか、Pets 設定を更新したか。
+- Windows、WSL、またはカスタム `CODEX_HOME` が別の場所を指していないか。
+
+多くの場合、ペット自体が壊れているのではなく、クライアントが想定場所で完全なパッケージを見つけられていません。
+
+## 更新と削除
+
+更新前に古いフォルダをバックアップします。新しいパッケージが使えることを確認してから、`pet.json` と spritesheet を置き換えます。
+
+削除する場合は `~/.codex/pets/<pet-id>/` を消し、Codex を再起動するか Pets 設定を更新します。
+
+## 安全上の注意
+
+出所不明のリモート shell コマンドを直接実行しないでください。インストールスクリプトはローカルファイルを書き込んだり、追加コマンドを実行したりできます。より安全なのは、パッケージをダウンロードし、`pet.json` を確認し、素材の出所とライセンスを確認してから、手動で Pets フォルダへコピーする方法です。
+
+インストールを「ローカルリソースパッケージのコピー」と捉えると、リスク境界が明確になります。ファイルは確認でき、スクリプトは読むべきで、出所とライセンスは残すべきです。

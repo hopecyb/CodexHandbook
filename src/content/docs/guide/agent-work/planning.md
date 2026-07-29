@@ -1,6 +1,8 @@
 ---
 title: 规划
 description: 让 Codex 先把步骤、风险和验证讲清楚，再决定要不要执行。
+sidebar:
+  order: 10
 ---
 
 直接说“你开始改吧”时，常见问题是：

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 `AGENTS.md` é um ficheiro de **instruções de projeto em Markdown** no repositório (ou num subdiretório). O Codex lê-o ao entrar no projeto, para alinhar estilo de código, requisitos de teste, normas de commit e zonas proibidas.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Hier geht es darum, ob eine Aufgabe in der Desktop-App auf dem lokalen Rechner oder in einer Remote-Umgebung läuft.

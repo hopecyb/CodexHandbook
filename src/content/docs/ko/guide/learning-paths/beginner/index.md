@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Codex를 처음 배울 때 가장 자주 막히는 지점은, 어떤 글이 안 읽히는 것이 아니라 어느 페이지부터 시작할지 모르는 것입니다.

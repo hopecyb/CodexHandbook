@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Plugins** und **MCP-Server** verbinden Codex mit externen Systemen: Tickets, Datenbanken, interne APIs. Je stärker die Fähigkeit, desto größer Exfiltration und Overreach im [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/). Zusammen lesen mit [MCP-Überblick](/skills/mcp/mcp-overview/) und [Plugins-Überblick](/skills/plugins/plugins-overview/).

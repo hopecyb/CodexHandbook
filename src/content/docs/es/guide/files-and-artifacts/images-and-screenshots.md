@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Las imágenes permiten al Agent **ver** problemas de interfaz, intención de diseño o bocetos de pizarra. Esta página cubre la entrada (imágenes que aportas) y la gestión de archivos de imagen en el repositorio; para generar imágenes nuevas, ver [Generación de imágenes](/guide/tools/image-generation/).

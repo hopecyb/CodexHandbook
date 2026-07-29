@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Une **Politique d'usage acceptable (AUP)** transforme « peut-on utiliser Codex pour ceci ? » en consensus org au lieu de jugement individuel. Elle complète le [modèle de menace](/guide/team-enterprise/security/threat-model/) : le modèle de menace couvre le risque ; l'AUP couvre les **frontières de comportement**.

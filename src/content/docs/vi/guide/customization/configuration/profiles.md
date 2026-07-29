@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Profile** để bạn lưu một bộ cấu hình có tên (mô hình + Sandbox + phê duyệt v.v.), chuyển một nút theo tình huống khác nhau, không cần mỗi lần sửa cài đặt thủ công.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Webhook**은 Codex 또는 Cloud 작업 상태가 바뀔 때 자체 서비스로 HTTP 콜백을 보내, 이슈 갱신, Slack 알림, 내부 승인대 등을 구동하게 합니다. 이 장은 [개발자 플랫폼](/guide/developer-platform/)의 이벤트 통합 입구입니다.

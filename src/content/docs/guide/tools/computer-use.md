@@ -1,6 +1,8 @@
 ---
 title: Computer Use
 description: 通过屏幕与输入设备操作 GUI 的高级能力——适用场景、风险与审批。
+sidebar:
+  order: 50
 ---
 
 **Computer Use**（计算机使用）让 Agent 像人一样查看屏幕、移动指针、键入文字，不仅限于浏览器或终端。能力最强，**风险与审批要求也最高**。

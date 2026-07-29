@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Agent** sẽ liên tục làm quanh mục tiêu: hiểu mục tiêu → chọn công cụ → quan sát kết quả → điều chỉnh bước tiếp theo, cho đến khi hoàn thành hoặc cần bạn can thiệp.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 初めて練習プロジェクトを作るとき、手元の本番プロジェクトで試したくなることがよくあります。楽に見えて、リスクは高くなります。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Ví dụ Prompt nằm ở [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) gốc kho, được nội dung sổ tay liên kết. Quy chuẩn thiết kế xem [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 문제를 해결할 때는 가장 가능성 높고 다루기 쉬운 순서부터 점검합니다.

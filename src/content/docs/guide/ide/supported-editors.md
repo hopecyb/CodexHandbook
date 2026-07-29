@@ -1,6 +1,8 @@
 ---
 title: 支持的编辑器
 description: Codex IDE 扩展支持哪些编辑器、如何选型与常见限制。
+sidebar:
+  order: 10
 ---
 
 IDE 扩展把 Codex 嵌进你**已经在用的编辑器**，让你在写代码的同一界面里发起任务、看 diff、接受改动。本页说明支持范围与选型，安装步骤见 [安装 IDE 扩展](/guide/ide/installation/)。

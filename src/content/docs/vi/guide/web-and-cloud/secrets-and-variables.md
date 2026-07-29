@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Tác vụ Cloud thường cần API riêng, registry package hoặc cơ sở dữ liệu. Chứng chỉ phải được tiêm qua **Secrets và biến môi trường** — không viết vào code, Prompt, issue, log chat hoặc lịch sử Git.

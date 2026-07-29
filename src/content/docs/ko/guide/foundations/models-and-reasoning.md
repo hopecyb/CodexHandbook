@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 선택 가능한 모델과 「추론 / 사고」 단계는 제품 업데이트에 따라 바뀝니다. 고를 때 저울질하세요.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **Công cụ trình duyệt** cho phép Agent truy cập trang web thật trong môi trường được kiểm soát: đọc DOM, chụp màn hình, đôi khi cũng tương tác đơn giản. Nó phù hợp nghiệm thu frontend, kiểm liên kết tài liệu, đối chiếu bản thiết kế; không phù hợp thay kiểm toán bảo mật, cũng không nên dùng để tùy tiện thao tác backend production.

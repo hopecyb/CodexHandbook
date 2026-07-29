@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 50
 ---
 
 Presentations (PPT, Keynote, Google Slides, Marp/Reveal, etc.) emphasize **narrative structure** and **visual consistency**. Agents excel at outlines and first drafts; masters and brand rules still need human review.

@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 50
 ---
 
 Compaction drops detail. Key constraints, acceptance criteria, and file allowlists should be **re-stated** after compaction, or written in project instructions.

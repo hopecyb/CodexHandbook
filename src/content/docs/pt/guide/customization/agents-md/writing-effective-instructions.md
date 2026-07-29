@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Instruções de projeto eficazes aproximam-se de uma **checklist**. O objetivo é o Codex cometer menos erros previsíveis já na primeira tentativa.

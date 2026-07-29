@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 設定ページの項目は多いですが、最初からすべて調整する必要はありません。安全、承認、日常の使い心地に影響する項目だけ見れば十分です。

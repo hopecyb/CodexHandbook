@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Trong quy trình Cloud lần đầu, Tác vụ có thể «xong» trong khi thay đổi chưa ở trạng thái dễ kiểm tra và thảo luận. Trong đội, bước chuyển này thường qua một **Pull Request**.

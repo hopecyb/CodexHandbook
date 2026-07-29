@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Khi Agent hoàn thành tác vụ có thể tạo mới báo cáo, script, site tĩnh, dữ liệu kiểm thử và các **artifact** khác. Chúng chưa chắc đi qua đường rà soát mã bạn quen, nên cần thói quen nghiệm thu riêng.

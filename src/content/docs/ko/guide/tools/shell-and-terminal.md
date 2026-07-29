@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 터미널은 Codex가 동작을 실행하는 가장 직접적인 방식 중 하나라 효율이 높고, 그만큼 위험을 이해해야 합니다.

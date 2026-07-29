@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 10
 ---
 
 Put stable conventions in project instructions (e.g., `AGENTS.md` or product-provided project directives): directory structure, commands, code style, prohibitions.

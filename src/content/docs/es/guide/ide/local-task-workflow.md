@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 La Tarea local en el IDE es el ciclo «**abrir → seleccionar → describir → revisar → probar**», pensado para cambios pequeños y frecuentes. Aquí va el camino práctico más habitual; el detalle de Contexto está en [Selección y archivos abiertos](/guide/ide/selected-code-and-open-files/).

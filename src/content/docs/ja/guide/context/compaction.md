@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 「コンテキストの圧縮」は、会話が長くなったあと、先の内容をより短い版に縮めて引き続き保持する仕組みと理解できます。目的はタスクを続けられるようにすることですが、代償として **細部が失われる可能性** があります。

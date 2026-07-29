@@ -7,6 +7,8 @@ source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
+sidebar:
+  order: 110
 ---
 
 If you just installed Codex and are not sure how to start day one, follow this path.

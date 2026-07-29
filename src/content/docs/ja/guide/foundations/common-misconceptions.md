@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Codex を最初からうまく使えない人の多くは、操作がわからないのではなく、最初から期待の置き方がずれています。

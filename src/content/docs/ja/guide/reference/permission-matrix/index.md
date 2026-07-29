@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 「権限マトリクス」は一般利用者にも有用です。同じ一言でも、入口によって Codex の反応が違う理由を説明します。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Cloud는 변경을 만들어 주지만, 머지 책임까지 대신하지는 않습니다.

@@ -1,6 +1,8 @@
 ---
 title: Secrets 与环境变量
 description: 在 Cloud 中安全注入 API 密钥、令牌与非敏感配置变量。
+sidebar:
+  order: 30
 ---
 
 Cloud 任务常需要访问私有 API、包仓库或数据库。这里用到的凭据，应该通过 **Secrets 与环境变量** 注入，不要写进代码、prompt、issue、聊天记录或 Git 历史。

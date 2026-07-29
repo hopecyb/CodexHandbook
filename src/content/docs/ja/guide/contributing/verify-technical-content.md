@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 ハンドブック内のコマンド、権限、価格、製品機能はバージョンとともに変わります。**検証**は、読者がドキュメントどおりに操作したとき結果が予測可能であることを保証します。

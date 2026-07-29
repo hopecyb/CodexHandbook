@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Tác vụ Cloud thường cần **truy cập mạng đi ra**: kéo package npm/PyPI, gọi API, clone submodule. Đồng thời, truy cập Internet là bề mặt rủi ro cao cho **exfiltration dữ liệu** — Agent có thể gửi nội dung repo hoặc Secrets tới dịch vụ ngoài.

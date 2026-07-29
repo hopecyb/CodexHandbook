@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **Persönliche Vorlieben** sind Einstellungen, die lokal projektübergreifend gelten: Standardmodell, Theme, Freigabegewohnheiten, persönliche Skill-Pfade usw. Anders als `AGENTS.md` im Repo sollten persönliche Vorlieben **nicht** voraussetzen, dass Teamkollegen dieselben haben.

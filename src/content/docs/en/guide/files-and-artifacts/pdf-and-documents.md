@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 30
 ---
 
 PDFs are common for specs, papers, scans, and exported reports. Unlike plain text, PDFs are **structurally complex, large, and hard to diff**—they need explicit task design.

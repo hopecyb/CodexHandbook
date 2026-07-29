@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Cette page explique comment ajouter ou réviser des pages de style **guide** dans `src/content/docs/` (pas les cas purs ou les tableaux de référence purs).

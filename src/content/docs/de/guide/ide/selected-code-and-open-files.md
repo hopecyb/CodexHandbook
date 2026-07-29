@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Die IDE-Erweiterung eignet sich für **kleine, präzise** Änderungen: Codeausschnitt markieren, Absicht erklären, Codex ändert im nahen Kontext. Hier: wie Auswahl und geöffnete Dateien den Rahmen eng halten und Fehländerungen vermeiden.

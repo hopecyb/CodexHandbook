@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Lorsqu'un Agent termine, il peut créer des rapports, scripts, sites statiques, données de test et autres **artefacts générés**. Ils peuvent ne pas passer par votre chemin habituel de revue de code — ils nécessitent donc leur propre habitude de Vérification.

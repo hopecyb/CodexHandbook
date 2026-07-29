@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 In Monorepos koexistieren mehrere Apps, Shared Packages und Stacks — eine riesige `AGENTS.md` lässt den Agent leicht **das falsche Paket ändern** oder den falschen Test laufen. Diese Seite zeigt ein wiederverwendbares **geschichtetes Hinweis**-Muster (Beispiel, auf Ihr Repo zuschneiden).

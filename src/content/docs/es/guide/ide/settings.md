@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Los ajustes de la extensión IDE conectan **preferencias personales** y **reglas del proyecto**: qué nivel de modelo, cuánta Aprobación, si se adjuntan automáticamente los archivos abiertos, etc. Coinciden con los [fundamentos de configuración](/guide/customization/configuration/config-basics/) globales; esta página se centra en las opciones habituales dentro del editor.

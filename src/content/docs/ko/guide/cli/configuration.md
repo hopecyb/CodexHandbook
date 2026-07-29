@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 CLI 구성은 **기본 모델, 작업 디렉터리, 승인 엄격도, MCP 서버** 등을 정합니다. [구성 기초](/guide/customization/configuration/config-basics/) 개념과 일치하며, 이 페이지는 터미널 사용자가 자주 바꾸는 항목에 초점을 둡니다.

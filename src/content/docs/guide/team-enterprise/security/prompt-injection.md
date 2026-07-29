@@ -1,6 +1,8 @@
 ---
 title: Prompt 注入
 description: 当不可信文本进入上下文时——识别、缓解与团队政策要点。
+sidebar:
+  order: 30
 ---
 
 “Prompt 注入”指的是有人把会误导 Codex 的内容塞进它会看到的上下文里。

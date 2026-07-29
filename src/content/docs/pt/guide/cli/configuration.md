@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 A configuração da CLI decide o **modelo predefinido, o diretório de trabalho, a severidade da Aprovação, os servidores MCP**, etc. Coincide conceptualmente com as [bases de configuração](/guide/customization/configuration/config-basics/); esta página centra-se no que os utilizadores de terminal mais costumam alterar.

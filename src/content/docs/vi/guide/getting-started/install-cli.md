@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Làm theo hướng dẫn cài CLI chính thức: [https://developers.openai.com/codex](https://developers.openai.com/codex) (thường là trình quản lý gói hoặc script cài chính thức — lấy tài liệu hiện hành làm chuẩn).

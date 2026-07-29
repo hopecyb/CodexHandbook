@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 ターミナルでの効率は 3 つに分かれます：**起動方法**、**セッション内ショートカット**、**スクリプト / エディタとの連携**。本ページは使い方と習慣を扱います。引数表は [CLI コマンドリファレンス](/guide/reference/commands/) と [キーボードショートカット](/guide/reference/keyboard-shortcuts/)。

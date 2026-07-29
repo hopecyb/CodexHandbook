@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Algumas Tarefas fluem rápido; outras desviam quanto mais se conversa. A diferença não é o modelo ficar de repente mais inteligente ou mais burro — é você ter (ou não) desmontado a Tarefa com clareza.

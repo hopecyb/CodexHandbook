@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 **Computer Use** permite ao Agent ver o ecrã, mover o ponteiro e escrever texto como uma pessoa — não se limita ao browser ou ao terminal. É a capacidade mais forte e também a que exige **mais risco e Aprovação**.

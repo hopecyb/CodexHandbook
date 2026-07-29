@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Profile（設定セット）**で、モデル + サンドボックス + 承認などの命名設定を保存し、シーンごとにワンクリック切替できます。毎回手動で設定を変える必要がありません。

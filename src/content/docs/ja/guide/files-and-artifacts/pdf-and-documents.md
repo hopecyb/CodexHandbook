@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 PDF は仕様書、論文、スキャン、エクスポートレポートでよく使われます。プレーンテキストと違い、PDF は **構造が複雑でサイズが大きく、diff しにくい** ため、タスクの進め方を別途決める必要があります。

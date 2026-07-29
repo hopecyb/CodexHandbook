@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Las «instrucciones del proyecto» son el **contexto estático** con el que Codex entiende el repositorio; no se limitan a un único formato de archivo.

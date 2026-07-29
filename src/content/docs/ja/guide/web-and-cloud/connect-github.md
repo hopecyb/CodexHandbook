@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 GitHub に接続すると、Codex は**リモート環境**でリポジトリをクローンし、ブランチを作成し、プッシュして PR を開けます。これは Cloud ワークフローの前提です。

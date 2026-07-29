@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 El SDK (nombre e idiomas según la [documentación oficial](https://developers.openai.com/codex)) te permite crear Tareas, sondear el estado y obtener resultados en **tu propio servicio**, sin depender solo de la TUI de la terminal.

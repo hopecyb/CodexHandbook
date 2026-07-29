@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Pull Request パイプライン**に Codex を入れると、人間レビュー前に明らかな問題を拾えますが、**責任あるレビューとテストの代替にはなりません**。本ページは実装可能な自動化パターンを説明します。

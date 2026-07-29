@@ -1,6 +1,8 @@
 ---
 title: 什么是 AGENTS.md
 description: 项目级持久指令文件——给 Codex 的「协作合同」，不是架构百科。
+sidebar:
+  order: 10
 ---
 
 `AGENTS.md` 是放在仓库（或子目录）里的 **Markdown 项目指令**，Codex 在进入该项目时会读取，用来对齐编码风格、测试要求、提交规范和禁区。

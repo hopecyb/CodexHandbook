@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 タスクによってはすぐにうまくいき、別のタスクは会話が進むほどずれていきます。差はモデルが突然賢くなったり鈍くなったりすることではなく、タスクをきちんと分解できているかどうかにあります。

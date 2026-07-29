@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 IDE 확장의 검토 경험은 「행 단위 완성」과 「완전한 PR review」 사이에 있습니다. 변경이 에디터나 사이드 diff 뷰에 바로 나타나는 경우가 많습니다. 이 페이지는 결과를 안전하게 수락하는 방법을 설명합니다.

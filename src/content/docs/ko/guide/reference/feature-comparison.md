@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 이 표는 학습과 선정 참고에 가깝습니다. 구체 능력은 현재 제품을 기준으로 합니다.

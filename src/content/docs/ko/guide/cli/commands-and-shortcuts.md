@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 터미널 효율은 세 덩어리에서 옵니다. **시작 방식**, **세션 내 단축 조작**, **스크립트/에디터와의 맞춤**. 이 페이지는 사용법과 습관을 다룹니다. 매개변수 표는 [CLI 명령 참고](/guide/reference/commands/)와 [키보드 단축](/guide/reference/keyboard-shortcuts/)을 보세요.

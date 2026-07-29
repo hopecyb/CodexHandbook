@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Plugin** và **máy chủ MCP** nối Codex với hệ thống ngoài: ticket, cơ sở dữ liệu, API nội bộ. Nhiều năng lực hơn nghĩa là bề mặt [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) rộng hơn cho exfiltration và quyền vượt mức. Đọc kèm [Tổng quan MCP](/skills/mcp/mcp-overview/) và [Tổng quan Plugin](/skills/plugins/plugins-overview/).

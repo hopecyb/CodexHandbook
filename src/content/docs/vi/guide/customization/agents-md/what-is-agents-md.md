@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 `AGENTS.md` là **chỉ thị dự án Markdown** đặt trong kho (hoặc thư mục con); Codex đọc khi vào dự án đó để khớp phong cách mã hóa, yêu cầu kiểm thử, quy chuẩn commit và vùng cấm.

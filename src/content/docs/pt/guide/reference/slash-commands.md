@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Na primeira vez que se veem os slash commands, muita gente pensa que são jargão a memorizar. Pensa neles como um conjunto de entradas rápidas que podes apontar de propósito: compreende-se melhor.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Chỉ thị dự án hiệu quả gần hơn với **danh sách kiểm tra**. Mục tiêu là để Codex lần thử đầu đã ít mắc lỗi có thể tiên đoán.

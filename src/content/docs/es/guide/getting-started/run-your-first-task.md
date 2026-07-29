@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Los ejemplos siguientes asumen la **App de escritorio**; CLI/IDE pueden usar el mismo Prompt.

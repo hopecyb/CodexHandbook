@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 여기서는 Codex를 일회성 임시 조작에서, **팀이 반복 실행하고, 문제 나면 추적하고, 다른 사람도 인수할 수 있는** 자동화 단계로 바꾸는 법을 다룹니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 110
 ---
 
 막 설치했고 첫날 어떻게 시작할지 모르겠다면, 이 경로를 따르세요.

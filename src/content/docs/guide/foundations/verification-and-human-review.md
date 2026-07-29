@@ -1,6 +1,8 @@
 ---
 title: 验证与人工复核
 description: 为什么结果必须可检查，以及如何复核。
+sidebar:
+  order: 110
 ---
 
 Codex 可以帮你加速，但不能替你承担最终确认责任。

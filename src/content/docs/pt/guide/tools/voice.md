@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Alguns clientes Codex suportam **voz**: você enuncia a Tarefa ou ouve um resumo da resposta. Serve para mãos ocupadas e ditado rápido de ideias — **não** para ler segredos em voz alta, nem substitui o registo escrito de aceitação.

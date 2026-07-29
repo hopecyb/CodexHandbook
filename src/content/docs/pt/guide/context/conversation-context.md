@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 «Contexto da conversa» significa: o que disse antes com o Codex na mesma Tarefa continua a influenciar o que vem a seguir. Ajuda — e também traz risco.

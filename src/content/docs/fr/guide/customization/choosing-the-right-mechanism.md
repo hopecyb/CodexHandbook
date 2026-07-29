@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Beaucoup de problèmes d'équipe viennent de **mettre la même information au mauvais endroit** : des règles qui devraient être dans le dépôt partent dans le chat, des flux réutilisables qui devraient être des Skills sont entassés dans `AGENTS.md`, et l'accès en lecture seule aux données est confié à un MCP à haut privilège.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 «Proyecto» y «Tarea» parecen simples, pero la primera vez es fácil mezclarlos. El proyecto es el conjunto de archivos o el repositorio con el que trabajas; la Tarea es lo concreto que le pides a Codex en esta ocasión.

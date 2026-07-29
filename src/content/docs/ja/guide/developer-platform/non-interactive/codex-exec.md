@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 対話型 `codex` が話しながら作業するなら、**`codex exec`** はタスクを一度渡して走らせ、終了時に結果または失敗状態を返すに近いです。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 IDE 확장은 Codex를 **이미 쓰는 에디터**에 넣어, 코드를 쓰는 같은 화면에서 작업을 시작하고, diff를 보고, 변경을 수락하게 합니다. 이 페이지는 지원 범위와 선정을 설명합니다. 설치 단계는 [IDE 확장 설치](/guide/ide/installation/)를 보세요.

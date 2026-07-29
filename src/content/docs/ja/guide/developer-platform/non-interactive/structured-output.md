@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 自動化を初めて組むと、Codex に「それらしい文章」を出させる前提にしがちです。人が読むには足りますが、スクリプトには不向きです。

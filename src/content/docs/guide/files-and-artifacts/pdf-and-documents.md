@@ -1,6 +1,8 @@
 ---
 title: PDF 与文档
 description: 让 Codex 读取、摘要或生成 PDF 类文档时的范围、工具与验收要点。
+sidebar:
+  order: 30
 ---
 
 PDF 常用于规范、论文、扫描件与导出报告。与纯文本不同，PDF **结构复杂、体积大、不易 diff**，需要单独约定任务方式。

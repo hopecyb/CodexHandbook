@@ -1,6 +1,8 @@
 ---
 title: 本地任务工作流
 description: 在 IDE 中基于打开文件与选区发起、跟进并完成本地 Codex 任务。
+sidebar:
+  order: 50
 ---
 
 IDE 本地任务是「**打开 → 选中 → 描述 → 审查 → 测试**」的闭环，适合高频小步修改。这里给出一条最常见的实操路径；上下文细节见 [选区与打开文件](/guide/ide/selected-code-and-open-files/)。

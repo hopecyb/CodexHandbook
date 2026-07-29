@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Alguns clientes Codex suportam **memória (Memory)**: retenção, para sessões seguintes, de preferências ou factos que confirmou em várias conversas. Complementa `AGENTS.md` e a configuração do projeto, mas **não pode** substituir normas de equipa versionadas.

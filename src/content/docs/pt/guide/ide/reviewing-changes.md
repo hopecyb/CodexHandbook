@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 A experiência de revisão da extensão IDE fica entre «completar linha a linha» e «review completa de PR»: as mudanças aparecem muitas vezes diretamente no editor ou na vista lateral de Diff. Esta página explica como aceitar resultados com segurança.

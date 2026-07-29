@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Un **Agent** avanza de forma continua hacia un objetivo: entenderlo → elegir Herramientas → observar el resultado → ajustar el siguiente paso, hasta terminar o hasta que tú intervengas.

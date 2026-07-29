@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 표 작업은 silently 틀리기 쉬운 전형입니다. 구분자, 인코딩, 헤더, 수식, 날짜 형식 중 하나만 틀려도 하류가 전부 무너집니다.

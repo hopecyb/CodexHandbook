@@ -1,0 +1,95 @@
+---
+title: Tạo Codex Pet
+description: "Hiểu nguyên lý tạo Codex Pet qua asset, spritesheet, metadata và giấy phép."
+locale: vi
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Tạo Codex Pet
+
+Mục tiêu của việc tạo Codex Pet không phải chỉ là có một tấm ảnh đẹp, mà là có một gói tài nguyên mà Codex nhận diện được, tải được, phát được và chuyển đổi được giữa các trạng thái. Có thể hiểu nó là tổ hợp “metadata + atlas hoạt ảnh + ghi chú nguồn và giấy phép”.
+
+<PetScienceFigure variant="spritesheet" locale="vi" />
+
+Cấu trúc tối thiểu thường là:
+
+```text
+<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+## Spritesheet là gì
+
+Spritesheet là cách gộp nhiều frame hoạt ảnh vào một ảnh lớn. Client không cần tải hàng chục tệp nhỏ; nó cắt từng frame từ ảnh lớn theo tọa độ hàng và cột, rồi phát liên tiếp.
+
+Nhiều tài nguyên Codex Pet dùng quy ước atlas sau:
+
+- 8 cột x 9 hàng
+- Mỗi frame 192 x 208 px
+- Toàn ảnh 1536 x 1872 px
+- 72 frame
+- WebP hoặc định dạng ảnh được công cụ nguồn hỗ trợ rõ ràng
+
+Những thông số này là quy ước thường gặp, không phải luật bất biến. Trước khi tạo, hãy xác nhận hợp đồng thực tế mà client Codex, công cụ tạo hoặc nguồn tài nguyên hiện đang dùng.
+
+## Chuẩn bị asset
+
+Asset tốt thường đáp ứng:
+
+- Silhouette nhân vật rõ, nền có thể tách sạch.
+- Tỉ lệ, góc nhìn và đường baseline nhất quán giữa các hành động.
+- Nền trong suốt không có viền màu, bóng dư hoặc pixel thừa.
+- Nhân vật không sát mép để tránh bị cắt khi phát.
+- Hành động có thể tương ứng với làm việc, chờ, hoàn tất, lỗi, di chuyển hoặc rảnh.
+
+Nếu asset đến từ fan art, trò chơi, anime, thương hiệu hoặc tác phẩm của người khác, hãy xác nhận nguồn và giấy phép trước. Đừng mô tả asset chưa được phép là tài nguyên có thể dùng thương mại.
+
+## `pet.json` chịu trách nhiệm gì
+
+`pet.json` tối thiểu cần mô tả định danh pet và đường dẫn spritesheet. Ví dụ tối thiểu:
+
+```json
+{
+  "id": "my-pet",
+  "displayName": "My Pet",
+  "description": "A focused companion for Codex sessions.",
+  "spritesheetPath": "spritesheet.webp"
+}
+```
+
+Khuyến nghị:
+
+- `id` dùng chữ thường, số và dấu gạch ngang.
+- Tên thư mục khớp với `id`.
+- `spritesheetPath` dùng đường dẫn tương đối.
+- `description` mô tả rõ pet là gì.
+- Metadata bổ sung nên giữ tác giả, phiên bản, nguồn và giấy phép.
+
+`pet.json` không lưu hoạt ảnh. Nó nói với client “gói này là ai, asset ở đâu và nên được hiểu như thế nào”.
+
+## Kiểm tra cục bộ
+
+Trước khi phát hành hoặc chia sẻ, tối thiểu hãy kiểm tra:
+
+- `pet.json` là JSON hợp lệ.
+- `spritesheetPath` trỏ tới tệp tồn tại.
+- Kích thước spritesheet và lưới frame khớp hợp đồng hiện tại.
+- Mỗi hàng hoạt ảnh không nhảy, trôi hoặc bị cắt rõ rệt.
+- Nền trong suốt sạch.
+- Gói không chứa tệp tạm, ảnh nguồn hoặc asset không nên công khai.
+
+## Giấy phép và nguồn
+
+Asset pet thường đến từ fan art, ảnh chụp màn hình, ảnh AI tạo, thư viện công khai hoặc tác phẩm của người khác. Khi tạo, hãy phân biệt:
+
+- Bạn có được dùng cá nhân không.
+- Bạn có được chia sẻ công khai không.
+- Bạn có được cho phép người khác phân phối lại không.
+- Bạn có cần ghi công hoặc giữ liên kết nguồn không.
+
+Giữ lại tệp dự án gốc và ghi chép nguồn sẽ giúp việc sửa mép, đổi hành động, đổi kích thước và bổ sung giấy phép dễ hơn về sau.

@@ -1,6 +1,8 @@
 ---
 title: 完成第一个小项目
 description: 把上手步骤串成一次完整交付。
+sidebar:
+  order: 50
 ---
 
 ## 本步目标

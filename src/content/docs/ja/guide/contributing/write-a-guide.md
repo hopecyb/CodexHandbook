@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 本ページでは、`src/content/docs/` に**ガイド型**のページ（純粋な事例や参照表だけではないページ）を追加・改稿する方法を説明します。

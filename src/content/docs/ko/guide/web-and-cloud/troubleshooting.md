@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Cloud에 문제가 났을 때, 같은 실행을 반복한다고 근본 원인이 해결되지는 않습니다.

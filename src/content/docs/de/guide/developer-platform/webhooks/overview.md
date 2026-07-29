@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Webhooks** lassen Sie bei Statusänderungen von Codex- oder Cloud-Aufgaben HTTP-Callbacks an eigene Dienste senden — für Ticket-Updates, Slack-Benachrichtigungen oder interne Freigabe-UIs. Dieses Kapitel ist der Einstieg in Ereignisintegration der [Entwicklerplattform](/guide/developer-platform/).

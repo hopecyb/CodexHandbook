@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 «Mô tả dự án» là **ngữ cảnh tĩnh** để Codex hiểu kho, không giới hạn một định dạng tệp.

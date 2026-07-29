@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Los atajos varían mucho según **cliente y versión**. Esta página los clasifica por **intención de operación**, para juzgar si hay una forma más rápida; la tecla concreta, en la ayuda o ajustes del producto.

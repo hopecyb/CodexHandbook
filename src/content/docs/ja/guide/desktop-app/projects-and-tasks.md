@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 「プロジェクト」と「タスク」は単純に見えますが、初めて使うときに混同しやすい用語です。プロジェクトは扱っているファイルやリポジトリであり、タスクは今回 Codex に依頼する具体的な作業です。

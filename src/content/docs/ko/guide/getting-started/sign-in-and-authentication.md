@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 많은 초보자가 「이미 로그인했다」와 「이미 정상적으로 쓸 수 있다」를 같은 일로 보지만, 완전히 같지는 않습니다.

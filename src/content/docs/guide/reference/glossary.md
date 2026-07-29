@@ -1,6 +1,8 @@
 ---
 title: 术语表
 description: 手册常用术语的短定义。
+sidebar:
+  order: 10
 ---
 
 | 术语 | 定义 |

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Nhiều vấn đề nhóm thường là **đặt cùng một thông tin sai chỗ**: quy tắc đáng viết vào kho thì bỏ vào chat, quy trình đáng làm Skill thì nhét vào `AGENTS.md`, dữ liệu đáng nối chỉ đọc thì lại cấp MCP quyền cao.

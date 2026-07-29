@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 **Computer Use** (uso del ordenador) permite al Agent ver la pantalla, mover el puntero y teclear como una persona, no solo en el navegador o el terminal. Es la capacidad más fuerte y también la que **exige más riesgo y aprobación**.

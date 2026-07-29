@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 「샌드박스」와 「네트워크」는 사실 두 가지입니다. 샌드박스는 어디에 닿을 수 있는지, 네트워크는 어디에 연결할 수 있는지를 제한합니다.

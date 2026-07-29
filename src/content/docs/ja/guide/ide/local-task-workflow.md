@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 IDE のローカルタスクは「**開く → 選択 → 説明 → レビュー → テスト**」のループで、頻度の高い小さな修正に向いています。ここでは最も一般的な実践パスを示します。コンテキストの詳細は [選択範囲と開いているファイル](/guide/ide/selected-code-and-open-files/) を参照。

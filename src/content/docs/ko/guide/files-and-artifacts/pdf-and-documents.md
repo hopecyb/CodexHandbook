@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 PDF는 규격, 논문, 스캔본,보내기 보고서에 자주 씁니다. 순수 텍스트와 달리 PDF는 **구조가 복잡하고, 용량이 크며, diff하기 어려워** 작업 방식을 따로 약속해야 합니다.

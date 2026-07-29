@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Plugin** と **MCP サーバー**は Codex を外部システム（チケット、DB、内部 API）に接続します。能力が強いほど、[脅威モデル](/guide/team-enterprise/security/threat-model/) の漏洩と越権面も大きくなります。[MCP 概要](/skills/mcp/mcp-overview/)、[Plugins 概要](/skills/plugins/plugins-overview/) と併読。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Tiện ích IDE rất phù hợp thay đổi **phạm vi nhỏ, độ chính xác cao**: bạn chọn một đoạn mã, nêu ý định, Codex sửa trong ngữ cảnh lân cận. Ở đây chủ yếu nói cách dùng vùng chọn và tệp mở để thắt phạm vi, tránh sửa sai chỗ.

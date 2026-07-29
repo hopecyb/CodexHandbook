@@ -1,6 +1,8 @@
 ---
 title: AGENTS.md 作用域与优先级
 description: 多文件、monorepo 与「项目规则 vs 对话提示」谁说了算。
+sidebar:
+  order: 20
 ---
 
 多个 `AGENTS.md`、配置文件和当前对话同时存在时，需要明确**哪条规则生效**。

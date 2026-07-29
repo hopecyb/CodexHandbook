@@ -1,0 +1,95 @@
+---
+title: Create a Codex Pet
+description: "Understand Codex Pet creation through assets, spritesheets, metadata, and licensing."
+locale: en
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Create a Codex Pet
+
+Creating a Codex Pet is not just making a nice image. The goal is to produce a package that Codex can identify, load, animate, and switch between states. Think of it as metadata plus an animation atlas plus source and license notes.
+
+<PetScienceFigure variant="spritesheet" locale="en" />
+
+The smallest common structure is:
+
+```text
+<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+## What a Spritesheet Is
+
+A spritesheet combines many animation frames into one larger image. The client does not need to load dozens of small files; it crops frames from the larger image by row and column, then plays them in sequence.
+
+Many Codex Pet packages use this atlas convention:
+
+- 8 columns x 9 rows
+- 192 x 208 px per frame
+- 1536 x 1872 px full image
+- 72 frames
+- WebP, or another image format explicitly supported by the source tool
+
+Treat these as common conventions, not permanent rules. Before creating a package, confirm the actual contract used by your Codex client, generator, or resource source.
+
+## Prepare Assets
+
+Good source assets usually have:
+
+- A clear character silhouette and removable background.
+- Consistent scale, view, and baseline across actions.
+- Transparent backgrounds without color fringes or leftover pixels.
+- Enough padding so the character is not cropped during playback.
+- Actions that map to working, waiting, complete, failed, moving, or idle states.
+
+If the art is fan content or comes from a game, anime, brand, or another creator, confirm the source and license first. Do not describe unlicensed assets as commercial-use resources.
+
+## What `pet.json` Does
+
+`pet.json` should at least identify the pet and point to the spritesheet. A minimal example:
+
+```json
+{
+  "id": "my-pet",
+  "displayName": "My Pet",
+  "description": "A focused companion for Codex sessions.",
+  "spritesheetPath": "spritesheet.webp"
+}
+```
+
+Keep these habits:
+
+- Use lowercase letters, numbers, and hyphens for `id`.
+- Match the folder name to the `id`.
+- Use a relative `spritesheetPath`.
+- Make `description` specific to the pet.
+- Keep author, version, source, and license notes in any extra metadata.
+
+`pet.json` does not store the animation itself. It tells the client who this package is, where the asset is, and how to interpret it. If the path, filename, or folder structure does not line up, the client usually cannot load the Pet.
+
+## Local Checks
+
+Before publishing or sharing, check:
+
+- `pet.json` is valid JSON.
+- `spritesheetPath` points to an existing file.
+- The spritesheet dimensions and frame grid match the current contract.
+- Animation rows do not jump, drift, or crop badly.
+- Transparent backgrounds are clean.
+- The package does not include temporary files, source images, or private assets.
+
+## Licensing and Sources
+
+Pet artwork may come from fan art, screenshots, AI-generated images, public image libraries, or another creator's work. Separate these questions:
+
+- Can you use it personally?
+- Can you share it publicly?
+- Can other people redistribute it?
+- Do you need attribution or a source link?
+
+Keep the original project files and source notes so later edge cleanup, action edits, size changes, and license notes are easier.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Einstellungen der IDE-Erweiterung verbinden **persönliche Vorlieben** und **Projektregeln**: welches Modell, wie streng Freigabe, ob geöffnete Dateien automatisch mitkommen. Konsistent mit den globalen [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/); Fokus hier auf typische Editor-Optionen.

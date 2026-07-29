@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Một số client Codex hỗ trợ **giọng nói**: bạn nói tác vụ, hoặc nghe tóm tắt phản hồi. Nó phù hợp khi hai tay đang bận, muốn nói nhanh ý tưởng; **không** phù hợp đọc to khóa bí mật, cũng không thay bản ghi nghiệm thu bằng văn bản.

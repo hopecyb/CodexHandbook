@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 「ローカル」「クラウド」は技術用語に聞こえますが、簡単に言えばローカルは自分のコンピュータで作業し、クラウドはリモートのマシンで作業します。

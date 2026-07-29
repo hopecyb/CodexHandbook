@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 As notificações servem sobretudo para assinalar o estado da Tarefa, para não ficar presa em segundo plano à espera de Aprovação, ou concluída sem você notar.

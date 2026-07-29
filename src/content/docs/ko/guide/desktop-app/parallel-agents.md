@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 병렬 Agent는 **원래 독립적으로 진행할 수 있는 일**을 나누어, 메인 스레드가 조율·검수·병합 결정에 집중하게 하는 데 적합합니다.

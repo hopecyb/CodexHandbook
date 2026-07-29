@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 La primera vez que se ven los comandos slash, mucha gente cree que son jerga que hay que memorizar. Piénsalos como un conjunto de entradas rápidas que puedes apuntar a propósito: se entiende mejor.

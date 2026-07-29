@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 많은 작업이 대화할수록 어수선해지는 흔한 이유는, 컨텍스트가 이미 흩어졌기 때문입니다.

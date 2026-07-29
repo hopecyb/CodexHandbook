@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 「環境変数」は二極端に誤解されがちです：底层すぎる、またはすべての設定を入れる万能箱。単純に言えば、実行時にプログラムへ値を渡す方法で、秘密情報とスイッチに特に向きます。

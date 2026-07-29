@@ -1,6 +1,8 @@
 ---
 title: CLI 安装与更新
 description: 安装、升级与版本确认。
+sidebar:
+  order: 10
 ---
 
 第一次装 CLI，很多人会卡在这些地方：

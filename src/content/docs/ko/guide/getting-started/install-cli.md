@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 공식 CLI 설치 안내에 따르세요: [https://developers.openai.com/codex](https://developers.openai.com/codex)(보통 패키지 관리자나 공식 설치 스크립트. 현재 문서 기준).

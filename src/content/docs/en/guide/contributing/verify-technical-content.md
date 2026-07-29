@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 30
 ---
 
 Commands, permissions, pricing, and product features change. **Verification** means readers who follow the doc today get predictable results.

@@ -1,0 +1,59 @@
+---
+title: Cài đặt Codex Pet
+description: "Hiểu thư mục cài đặt, luồng kích hoạt và ranh giới an toàn của Codex Pets."
+locale: vi
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Cài đặt Codex Pet
+
+Cài đặt Codex Pet về bản chất là đặt một gói tài nguyên mà client đọc được vào thư mục đã quy ước. Khi client khởi động hoặc làm mới cài đặt, nó đọc thư mục này, tìm metadata rồi tải các asset hoạt ảnh tương ứng.
+
+<PetScienceFigure variant="install" locale="vi" />
+
+Một Pet thường là thư mục cục bộ có ít nhất hai tệp:
+
+```text
+~/.codex/pets/<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+`pet.json` mô tả tên pet, mô tả và đường dẫn spritesheet. `spritesheet.webp` lưu các frame hoạt ảnh. Hai tệp này thường nằm trong cùng thư mục pet, và `spritesheetPath` trong `pet.json` phải trỏ tới tệp thật.
+
+## Logic phía sau cài đặt
+
+1. Lấy gói: xác nhận nó có ít nhất `pet.json` và spritesheet.
+2. Đặt vào thư mục Pets: vị trí phổ biến là `~/.codex/pets/<pet-id>/`.
+3. Cho client đọc lại: khởi động lại Codex hoặc làm mới cài đặt Pets.
+4. Chọn trong giao diện: thường ở Settings -> Appearance -> Pets.
+
+Trên Windows, thư mục thường nằm dưới `.codex\pets\<pet-id>\` trong thư mục người dùng. Nếu bạn đã cấu hình `CODEX_HOME`, hãy theo thư mục Pets mà client hiện tại hiển thị.
+
+## Vì sao cài đặt hay lỗi
+
+Nếu cài xong mà pet không xuất hiện, hãy kiểm tra:
+
+- Tên thư mục có khớp với `id` trong `pet.json` không.
+- `spritesheetPath` có phải đường dẫn tương đối, ví dụ `spritesheet.webp`, không.
+- Spritesheet có thật sự nằm trong cùng thư mục không.
+- Codex đã được khởi động lại, hoặc cài đặt Pets đã được làm mới chưa.
+- Windows, WSL hoặc `CODEX_HOME` tùy chỉnh có đang trỏ sang thư mục khác không.
+
+Phần lớn lỗi không phải do “pet hỏng”, mà do client không đọc được một bộ tài nguyên đầy đủ ở vị trí dự kiến.
+
+## Cập nhật và gỡ bỏ
+
+Trước khi cập nhật, hãy sao lưu thư mục cũ. Sau khi xác nhận gói mới dùng được, thay `pet.json` và spritesheet.
+
+Khi gỡ bỏ, xóa thư mục `~/.codex/pets/<pet-id>/`, rồi khởi động lại Codex hoặc làm mới cài đặt Pets.
+
+## Nhắc nhở an toàn
+
+Đừng chạy trực tiếp các lệnh shell từ xa không rõ nguồn gốc. Script cài đặt có thể ghi tệp cục bộ, thậm chí chạy thêm lệnh khác. Cách chắc chắn hơn là tải gói xuống, kiểm tra `pet.json`, xác nhận nguồn và giấy phép asset, rồi sao chép thủ công vào thư mục Pets.
+
+Hiểu cài đặt là “sao chép gói tài nguyên cục bộ” giúp ranh giới rủi ro rõ hơn: tệp tài nguyên có thể kiểm tra, hành vi script cần xem lại, nguồn và giấy phép cần được giữ lại.

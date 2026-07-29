@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 **Subagent** là **đơn vị làm việc độc lập** mà Agent chính khởi động cho một vấn đề con cụ thể; nó có ngữ cảnh tương đối cách ly, hoàn thành rồi tổng hợp kết quả về thread chính.

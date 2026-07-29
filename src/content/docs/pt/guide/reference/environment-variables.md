@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 As «variáveis de ambiente» levam a dois extremos: ou se veem como algo muito de baixo nível, ou se acredita que toda a configuração cabe aí. Em claro: uma variável de ambiente é uma forma de entregar valores ao programa em tempo de execução, especialmente adequada para informação sensível e interruptores.

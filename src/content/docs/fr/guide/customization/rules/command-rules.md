@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Les **règles de commandes** se concentrent sur « quelles commandes l'Agent peut exécuter et avec quels arguments ». C'est la forme la plus courante des [Règles Allow et Deny](/guide/customization/rules/allow-and-deny-patterns/), généralement dans la configuration ou les fichiers de règles revus par l'équipe.

@@ -1,6 +1,8 @@
 ---
 title: Cloud 排障
 description: GitHub 连接、环境、Secrets、出网与 PR 环节的常见故障索引。
+sidebar:
+  order: 80
 ---
 
 Cloud 出问题时，重复运行一般解决不了根因。

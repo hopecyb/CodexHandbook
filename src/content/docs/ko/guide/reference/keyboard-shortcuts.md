@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 단축키는 **클라이언트와 버전**에 따라 차이가 큽니다. 이 페이지는 **조작 의도**로 분류해, 더 빠른 방법이 있는지 판단하기 쉽게 합니다. 구체 키는 제품 안 도움말이나 설정에서 확인하세요.

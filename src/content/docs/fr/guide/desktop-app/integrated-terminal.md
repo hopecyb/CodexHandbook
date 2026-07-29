@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Le terminal intégré vous aide à voir la sortie des commands de l'Agent ou à exécuter vous-même des commands de Vérification.

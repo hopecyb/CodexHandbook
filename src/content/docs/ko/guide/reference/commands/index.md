@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 명령 참고 페이지는 입구를 가리는 데 쓰며, 처음부터 파라미터를 외울 필요는 없습니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Cloud タスクは**外部ネットワーク**を必要とすることがよくあります：npm/PyPI パッケージの取得、API へのアクセス、サブモジュールのクローン。一方、インターネットアクセスは**データ漏洩**の高リスク面でもあり、Agent がリポジトリや Secrets の内容を外部サービスに持ち出す可能性があります。

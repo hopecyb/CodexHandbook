@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 IDE 拡張の設定は**個人の好み**と**プロジェクトルール**をつなぎます。どのモデルか、承認をどれだけ厳しくするか、開いているファイルを自動で含めるかなど。全体の [設定の基礎](/guide/customization/configuration/config-basics/) と整合し、本ページはエディター内のよく触る項目に焦点を当てます。

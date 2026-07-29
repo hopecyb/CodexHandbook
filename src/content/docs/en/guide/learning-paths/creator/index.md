@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 10
 ---
 
 > MVP status: this page is an overview. The full five steps (research, writing, images and decks, website prototypes, reusable workflows) will be added in a later milestone.

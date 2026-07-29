@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Biến môi trường thường bị đẩy về hai cực: «quá thấp tầng» hoặc «nhét hết vào đó». Nói ngắn: chúng truyền giá trị cho chương trình lúc chạy — đặc biệt secrets và công tắc.

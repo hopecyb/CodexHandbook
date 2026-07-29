@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Em alguns cenários, o Codex pode chamar capacidades de **geração de imagens**: ilustrações, rascunhos de ícones, conceitos de UI, diagramas. O resultado deve tratar-se como **Artefato por aceitar**, não como ativo de marca pronto a publicar.

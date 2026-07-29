@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 El problema de muchos equipos suele ser **poner la misma información en el lugar equivocado**: reglas que deberían estar en el repositorio van al chat, flujos que deberían ser un Skill se meten en `AGENTS.md`, y datos que deberían conectarse solo lectura reciben un MCP de alto permiso.

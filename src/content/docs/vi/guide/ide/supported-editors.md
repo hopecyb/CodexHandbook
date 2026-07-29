@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Tiện ích IDE gắn Codex vào trình soạn thảo **bạn đã dùng**, để bạn khởi tác vụ, xem diff, chấp nhận thay đổi ngay trong cùng giao diện viết mã. Trang này nêu phạm vi hỗ trợ và cách chọn; bước cài xem [Cài đặt tiện ích IDE](/guide/ide/installation/).

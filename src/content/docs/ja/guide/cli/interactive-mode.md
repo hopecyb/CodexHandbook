@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 「対話モード」とは、ターミナルで Codex と往復しながら説明・実行し、必要なら承認を待つ使い方です。

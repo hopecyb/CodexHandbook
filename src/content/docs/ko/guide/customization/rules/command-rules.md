@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **명령 규칙**은 「Agent가 어떤 명령을, 어떤 인자로 실행할 수 있는지」에 초점을 둡니다. [허용과 거부 규칙](/guide/customization/rules/allow-and-deny-patterns/)의 가장 흔한 형태이며, 보통 팀이 심사할 수 있는 설정·규칙 파일에 둡니다.

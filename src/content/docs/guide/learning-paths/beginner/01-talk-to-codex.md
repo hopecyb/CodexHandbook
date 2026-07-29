@@ -1,6 +1,8 @@
 ---
 title: 与 Codex 对话
 description: 练习用自然语言说明目标与限制。
+sidebar:
+  order: 10
 ---
 
 ## 本步目标

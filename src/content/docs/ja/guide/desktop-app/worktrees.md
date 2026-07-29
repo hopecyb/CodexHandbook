@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **worktree** は、隔離されたディレクトリで変更を試し、メインのワークスペースへの影響を減らすために使います。

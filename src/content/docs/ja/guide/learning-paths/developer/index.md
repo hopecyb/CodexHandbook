@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 > MVP 状態：本ページは概要です。完全な 5 ステップは今後のマイルストーンで追加します。

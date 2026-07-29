@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 GitHub를 연결하면 Codex가 **원격 환경**에서 저장소를 클론하고, 브랜치를 열고, 푸시하고, PR을 열 수 있습니다. Cloud 워크플로의 전제입니다.

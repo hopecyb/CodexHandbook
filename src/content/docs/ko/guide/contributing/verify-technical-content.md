@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 핸드북의 명령·권한·가격·제품 기능은 버전에 따라 바뀝니다. **검증**은 독자가 문서대로 했을 때 결과가 예측 가능하게 합니다.

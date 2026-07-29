@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Un **Agent** ne s'arrête pas à un tour de questions-réponses. Il : comprend l'objectif → choisit des outils → observe les résultats → ajuste l'étape suivante — jusqu'à la fin ou jusqu'à ce qu'il ait besoin de vous.

@@ -1,6 +1,8 @@
 ---
 title: CLI 命令参考
 description: Codex CLI 常用子命令与参数速查——学习向索引，非替代官方手册。
+sidebar:
+  order: 50
 ---
 
 命令参考页主要用来判断入口，不用一上来就背参数：

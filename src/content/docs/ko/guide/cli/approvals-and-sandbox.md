@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 CLI에서 Agent는 **파일을 읽고, 쓰고, shell을 실행하고, 네트워크에 연결할 수** 있습니다. 승인과 샌드박스는 당신과 자동화 사이의 안전 밸브입니다. 구성이 잘못되면 대화형에서 팝업이 잦아지거나, CI 무인 운전에서 위험이 커집니다.

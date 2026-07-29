@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Les modèles de langage **prédisent une sortie plausible suivante** à partir du texte, des fichiers et des résultats d'outils que vous fournissez. Ils sont forts sur les motifs, les brouillons et le Raisonnement de type recherche, mais ils ne « connaissent » pas intrinsèquement les secrets absents de votre machine, et ils ne garantissent pas que les faits sont toujours corrects.

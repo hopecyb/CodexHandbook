@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 エラーを見ると、英語の一行を直感で当てにいきがちですが、先に分類する方が効率的です。

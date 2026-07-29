@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 複数の `AGENTS.md`、設定ファイル、現在の会話が同時にあるとき、**どのルールが効くか**を明確にする必要があります。

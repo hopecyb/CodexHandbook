@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 CI は**プロセス終了コード**でステップの成否を判断します。本章は [codex exec](/guide/developer-platform/non-interactive/codex-exec/) の一般的な意味、再試行方針、冪等設計を説明します。

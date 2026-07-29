@@ -1,6 +1,8 @@
 ---
 title: 安装桌面 App
 description: 安装并打开 Codex 桌面应用。
+sidebar:
+  order: 30
 ---
 
 1. 打开官方 Codex 文档的桌面应用下载说明：[https://developers.openai.com/codex](https://developers.openai.com/codex)

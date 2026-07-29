@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 言語モデルは、あなたが提供したテキスト、ファイル、ツールの結果に基づいて、**次に最も妥当な出力を予測**します。補完、整理、起草、コンテキストに沿った作業が得意ですが、渡していない情報を自然に知っているわけではなく、毎回完全に正しいとも限りません。

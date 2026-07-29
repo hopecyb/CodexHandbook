@@ -14,9 +14,31 @@ const GROUP_LABELS: Record<string, string> = {
 	webhooks: 'Webhooks',
 };
 
+const OVERVIEW_LABELS: Record<string, string> = {
+	root: '概览',
+	en: 'Overview',
+	'zh-tw': '概覽',
+	fr: 'Vue d’ensemble',
+	ja: '概要',
+	ko: '개요',
+	es: 'Resumen',
+	de: 'Übersicht',
+	pt: 'Visão geral',
+	vi: 'Tổng quan',
+};
+
+function localeFromHref(href: string): string {
+	const firstSegment = href.split('/').filter(Boolean)[0];
+	return firstSegment && firstSegment in OVERVIEW_LABELS ? firstSegment : 'root';
+}
+
 function isIndexLink(href: string, dirName: string): boolean {
 	const normalized = href.replace(/\/$/, '');
 	return normalized.endsWith(`/${dirName}`);
+}
+
+function overviewLink(entry: Extract<SidebarEntry, { type: 'link' }>): SidebarEntry {
+	return { ...entry, label: OVERVIEW_LABELS[localeFromHref(entry.href)] ?? OVERVIEW_LABELS.root };
 }
 
 function labelForGroup(entry: Extract<SidebarEntry, { type: 'group' }>): string {
@@ -40,7 +62,9 @@ export function localizeSidebarLabels(entries: SidebarEntry[]): SidebarEntry[] {
 				child.type === 'link' && isIndexLink(child.href, entry.label),
 		);
 		const nextChildren =
-			indexLink && children.length > 1 ? children.filter((child) => child !== indexLink) : children;
+			indexLink && children.length > 1
+				? [overviewLink(indexLink), ...children.filter((child) => child !== indexLink)]
+				: children;
 
 		return { ...entry, label, entries: nextChildren };
 	});

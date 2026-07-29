@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 見られたり、コピーされたり、外部に送られたり、タスク記録に長期残ることを望まない内容は、まず機密情報として扱ってください。

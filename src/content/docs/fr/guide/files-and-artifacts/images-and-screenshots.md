@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Les images permettent à l'Agent de **voir** les problèmes UI, l'intention design ou les croquis de tableau blanc. Cette page couvre l'entrée (images que vous fournissez) et les fichiers image dans le repo ; pour générer de nouvelles images voir [Génération d'images](/guide/tools/image-generation/).

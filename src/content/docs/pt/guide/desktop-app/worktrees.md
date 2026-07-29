@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 A **árvore de trabalho (worktree)** serve para experimentar mudanças num diretório isolado, reduzindo interferência na área de trabalho principal.

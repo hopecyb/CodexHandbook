@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 このページを初めて見ると少し抽象的に感じるかもしれません。底层の原理を先に理解する必要はありません。モデルは無限の記憶ではありません。内容が多く、散らばり、長引くと、重点を捉えにくくなり、以前言った重要な制約も徐々に薄れていくことがあります。

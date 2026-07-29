@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Objectif : réaliser votre première Tâche dans un **projet d'entraînement sécurisé**, et apprendre à inspecter, accepter, modifier ou annuler.

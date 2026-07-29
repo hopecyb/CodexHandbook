@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 슬래시 명령을 처음 보면, 외워야 할 은어처럼 보이기 쉽습니다. 능동적으로 이름을 불러 쓰는 빠른 입구 묶음으로 보면 더 수월합니다.

@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 50
 ---
 
 1. Confirm your editor is on the official support list (see [https://developers.openai.com/codex](https://developers.openai.com/codex))

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Las **reglas de comandos** se centran en «qué comandos puede ejecutar el Agent y con qué parámetros». Son la forma más habitual de [reglas de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/), y suelen escribirse en configuración o archivos de reglas que el equipo puede revisar.

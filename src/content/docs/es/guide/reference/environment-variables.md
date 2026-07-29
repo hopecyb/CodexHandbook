@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Las «variables de entorno» llevan a dos extremos: o se ven como algo muy de bajo nivel, o se cree que toda la configuración cabe ahí. En claro: una variable de entorno es una forma de entregar valores al programa en tiempo de ejecución, especialmente adecuada para información sensible e interruptores.

@@ -1,6 +1,8 @@
 ---
 title: 撤销与恢复
 description: 在结果不满意时安全回退。
+sidebar:
+  order: 100
 ---
 
 第一次用 Codex 时，很多人最担心的是：它改错了，我还能不能回去？

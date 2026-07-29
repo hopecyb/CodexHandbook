@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Las tareas con tablas son el típico caso en que se puede fallar en silencio: separador, codificación, cabecera, fórmula o formato de fecha — si cualquiera falla, todo lo de abajo se cae.

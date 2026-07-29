@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 결론이 외부 사실에 의존한다면, 결론만 받지 말고 출처도 함께 받으세요.

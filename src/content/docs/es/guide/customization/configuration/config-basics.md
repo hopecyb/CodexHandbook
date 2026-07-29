@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Los archivos de configuración te permiten **unificar el comportamiento de Codex** en tu máquina o en el proyecto, sin repetir en cada sesión el modelo, el nivel de aprobación o la política de Sandbox.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Thông báo chủ yếu báo trạng thái tác vụ, tránh tác vụ nền bị dừng, đang chờ phê duyệt, hoặc đã xong mà bạn không để ý.

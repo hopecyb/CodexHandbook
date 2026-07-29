@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 효과적인 프로젝트 지침은 **체크리스트**에 가깝습니다. 목표는 Codex가 첫 시도에서 예측 가능한 실수를 줄이게 하는 것입니다.

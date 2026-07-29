@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 In der CLI kann der Agent **Dateien lesen und schreiben, Shell ausführen, ggf. netzwerken** — Freigabe und Sandbox sind das Sicherheitsventil zwischen dir und Automatisierung. Falsche Konfiguration: ständige Popups interaktiv, oder unkontrolliertes Risiko in unbeaufsichtigtem CI.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Las **preferencias personales** son ajustes de tu máquina que valen entre proyectos: modelo por defecto, tema, hábitos de aprobación, rutas de Skills personales, etc. A diferencia de `AGENTS.md` en el repositorio, las preferencias personales **no** deben asumir que los compañeros tienen las mismas.

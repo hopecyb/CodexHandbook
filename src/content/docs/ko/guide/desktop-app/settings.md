@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 설정 항목은 많지만, 처음부터 전부 조정할 필요는 없습니다. 보안·승인·일상 경험에 영향을 주는 항목만 보면 됩니다.

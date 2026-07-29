@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Na CLI, o Agent pode **ler ficheiros, escrever ficheiros, correr shell e eventualmente ligar à rede** — Aprovação e Sandbox são a válvula de segurança entre si e a automação. Uma configuração inadequada provoca pop-ups frequentes no modo interativo, ou risco descontrolado em CI sem supervisão.

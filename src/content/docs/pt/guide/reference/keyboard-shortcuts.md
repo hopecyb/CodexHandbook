@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Os atalhos variam muito segundo **cliente e versão**. Esta página classifica-os por **intenção de operação**, para julgar se há uma forma mais rápida; a tecla concreta, na ajuda ou definições do produto.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Codex를 **Pull Request 파이프라인**에 넣으면, 사람 리뷰 전에 뚜렷한 문제를 잡을 수 있습니다. 다만 **책임 있는 리뷰와 테스트를 대체하지는 않습니다**. 이 페이지는 실행 가능한 자동화 패턴을 다룹니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 “대화형 모드”는 터미널에서 Codex와 한 왕복씩 대화하는 방식입니다. 설명하고 실행하며, 필요할 때 확인을 기다립니다.

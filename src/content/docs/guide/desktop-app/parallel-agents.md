@@ -1,6 +1,8 @@
 ---
 title: 并行 Agent
 description: 同时推进多个 Agent 任务，避免把自己拖进合并冲突和审查混乱。
+sidebar:
+  order: 30
 ---
 
 并行 Agent 适合把**本来就能独立推进的工作**拆开，让主线程主要负责协调、验收和合并决策。

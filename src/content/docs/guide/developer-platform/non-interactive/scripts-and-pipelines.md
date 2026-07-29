@@ -1,6 +1,8 @@
 ---
 title: 脚本与流水线
 description: 在 shell、Makefile 与 GitHub Actions 中编排 codex exec——可重复、可审计。
+sidebar:
+  order: 20
 ---
 
 这里讲的是，怎么把 Codex 从一次临时操作，变成**团队能反复跑、出了问题能追、换个人也能接手**的自动化步骤。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 110
 ---
 
 문제가 생겼는데 App, CLI, IDE, Cloud 중 어느 페이지로 가야 할지 모르겠다면, 여기서 방향을 먼저 찾아 보세요.

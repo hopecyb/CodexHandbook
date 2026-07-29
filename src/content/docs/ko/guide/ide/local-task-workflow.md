@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 IDE 로컬 작업은 「**열기 → 선택 → 설명 → 검토 → 테스트**」의 순환이며, 빈번한 작은 수정에 맞습니다. 가장 흔한 실무 경로를 제시합니다. 컨텍스트 세부 사항은 [선택 영역과 열린 파일](/guide/ide/selected-code-and-open-files/)을 보세요.

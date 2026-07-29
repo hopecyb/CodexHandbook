@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 El «modo interactivo» es conversar ida y vuelta con Codex en la terminal: explica, ejecuta y, cuando hace falta, espera tu confirmación.

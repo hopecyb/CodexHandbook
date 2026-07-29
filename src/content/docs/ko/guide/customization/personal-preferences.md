@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **개인 선호**는 로컬에서 프로젝트 전반에 적용되는 설정입니다. 기본 모델, 테마, 승인 습관, 개인 Skill 경로 등입니다. 저장소 안 `AGENTS.md`와 달리, 개인 선호는 동료가 **같다고 가정하면 안 됩니다**.

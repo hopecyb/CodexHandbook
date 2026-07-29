@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Quy tắc lệnh** tập trung vào «Agent chạy được lệnh nào, với tham số nào». Chúng là hình thái phổ biến nhất của [quy tắc cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/), thường viết trong cấu hình hoặc tệp quy tắc nhóm rà được.

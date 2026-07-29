@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Codex は一部のシナリオで**画像生成**能力を呼び出せます。イラスト、アイコンの草稿、UI コンセプト図、説明図などです。生成結果は**検証待ちの成果物**として扱い、そのまま公開できるブランド資産とは見なさないでください。

@@ -1,6 +1,8 @@
 ---
 title: 进度与引导
 description: 执行途中发现方向偏了，如何用短指令把 Codex 拉回正确轨道。
+sidebar:
+  order: 20
 ---
 
 执行中途常见的反应通常只有两种：

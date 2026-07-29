@@ -1,6 +1,8 @@
 ---
 title: 交互模式
 description: 在终端中与 Codex 对话并执行任务。
+sidebar:
+  order: 20
 ---
 
 “交互模式”指的是你在终端里和 Codex 一来一回地对话，它会解释、执行，也会在需要时等你确认。

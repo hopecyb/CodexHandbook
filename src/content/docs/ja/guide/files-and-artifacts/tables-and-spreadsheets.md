@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 表形式タスクは静かに壊れやすい典型です。区切り文字、エンコーディング、ヘッダー、数式、日付形式のどれか一つでも外れると、下流がすべて崩れます。

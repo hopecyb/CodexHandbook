@@ -1,6 +1,8 @@
 ---
 title: 连接 GitHub
 description: 把 Codex Cloud 与 GitHub 仓库对接——权限、分支与环境。
+sidebar:
+  order: 10
 ---
 
 连接 GitHub 后，Codex 可在**远程环境**克隆仓库、开分支、推送与开 PR，这是 Cloud 工作流的前提。

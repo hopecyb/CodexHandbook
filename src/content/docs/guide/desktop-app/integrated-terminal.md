@@ -1,6 +1,8 @@
 ---
 title: 集成终端
 description: 在 App 内使用终端配合任务。
+sidebar:
+  order: 60
 ---
 
 集成终端便于查看 Agent 运行的命令输出，或亲自执行验证命令。

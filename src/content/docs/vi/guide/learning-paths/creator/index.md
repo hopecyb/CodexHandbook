@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 > Trạng thái MVP: trang này là tổng quan. Năm bước đầy đủ (nghiên cứu, viết, hình ảnh và demo, nguyên mẫu website, quy trình tái sử dụng) sẽ bổ sung ở các cột mốc sau.

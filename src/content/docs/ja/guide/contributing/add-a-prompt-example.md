@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 プロンプト例はリポジトリルートの [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) に置き、ハンドブック本文からリンクします。設計仕様は [`docs/planning/examples-system.md`](/docs/planning/examples-system.md) を参照してください。

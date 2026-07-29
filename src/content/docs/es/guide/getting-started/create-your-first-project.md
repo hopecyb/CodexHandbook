@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Al crear el primer proyecto de práctica, es tentador usar de inmediato el proyecto formal que tienes a mano. Parece más cómodo; el riesgo también es mayor.

@@ -1,6 +1,8 @@
 ---
 title: 子 Agent
 description: 把子任务委托给独立上下文——何时拆、如何交接、如何验收。
+sidebar:
+  order: 30
 ---
 
 **子 Agent（Subagent）** 是主 Agent 为特定子问题启动的**独立工作单元**，拥有相对隔离的上下文，完成后将结果汇总回主线程。

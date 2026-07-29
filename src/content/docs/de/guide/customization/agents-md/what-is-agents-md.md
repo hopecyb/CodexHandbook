@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 `AGENTS.md` ist eine **Markdown-Projektanweisung** im Repo (oder Unterverzeichnis). Codex liest sie beim Betreten des Projekts, um Coding-Stil, Testanforderungen, Commit-Normen und Tabuzonen auszurichten.

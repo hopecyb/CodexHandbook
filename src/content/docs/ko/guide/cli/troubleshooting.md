@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 CLI에 문제가 생기면 오류가 모두 터미널 오류처럼 보이지만, 이면 원인이 같지는 않습니다.

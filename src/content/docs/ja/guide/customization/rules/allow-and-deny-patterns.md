@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Rules（ルール）**は設定またはプロジェクトファイルで、どの shell コマンド、パス、ツール呼び出しを**許可または拒否**するかを宣言します。毎回手動承認を減らしつつ、危険操作の自動化を防ぎます。

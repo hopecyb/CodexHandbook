@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 90
 ---
 
 The IDE extension fits work with open files and selections. MVP: install, local tasks, troubleshooting.

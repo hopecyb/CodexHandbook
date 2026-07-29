@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 첫 연습 프로젝트를 만들 때, 손에 있는 정식 프로젝트로 바로 시험하고 싶어지기 쉽습니다. 편해 보이지만 위험도 더 큽니다.

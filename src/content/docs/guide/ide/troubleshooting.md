@@ -1,6 +1,8 @@
 ---
 title: IDE 排障
 description: 扩展加载、上下文与同步问题。
+sidebar:
+  order: 90
 ---
 
 IDE 排障和 CLI 排障有个区别：  

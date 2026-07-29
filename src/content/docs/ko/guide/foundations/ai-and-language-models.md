@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 언어 모델은 당신이 준 글·파일·도구 결과를 바탕으로 **다음에 가장 그럴듯한 출력을 예측**합니다. 보완·정리·초안·컨텍스트를 따라 일을 이어가는 데 능하지만, 주지 않은 정보를 본디 알지 못하며, 매번 완전히 옳다고 보장하지 않습니다.

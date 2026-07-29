@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 公式 CLI インストール説明に従って操作：[https://developers.openai.com/codex](https://developers.openai.com/codex)（通常はパッケージマネージャーまたは公式インストールスクリプト。現行ドキュメントが基準）。

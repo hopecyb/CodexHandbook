@@ -1,6 +1,8 @@
 ---
 title: 审查差异
 description: 如何读变更并提问。
+sidebar:
+  order: 10
 ---
 
 “差异”说的就是 Codex 这次到底改了哪些地方。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Les présentations (PPT, Keynote, Google Slides, Marp/Reveal, etc.) mettent l'accent sur la **structure narrative** et la **cohérence visuelle**. Les Agents excellent aux plans et premières versions ; les masters et règles de marque nécessitent encore une revue humaine.

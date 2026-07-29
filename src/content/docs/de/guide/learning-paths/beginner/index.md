@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Beim ersten Lernen von Codex scheitert es oft nicht an einer unverstandenen Seite, sondern daran, nicht zu wissen, wo man anfängt.

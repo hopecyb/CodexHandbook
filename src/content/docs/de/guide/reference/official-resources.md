@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Dieses Handbuch ist ein Community-Open-Source-Leitfaden. Produktverhalten, Installer und Pläne richten sich nach offiziellen Quellen:

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Chế độ không tương tác để Codex hoàn thành tác vụ **không cần hội thoại TTY** — là lối vào để nhà phát triển nối Agent vào script và CI.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Algunos clientes de Codex admiten **memoria (Memory)**: conservar preferencias o hechos que confirmaste en varios turnos para sesiones posteriores. Complementa `AGENTS.md` y la configuración del proyecto, pero **no** sustituye las normas de equipo versionadas.

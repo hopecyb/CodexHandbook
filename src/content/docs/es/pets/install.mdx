@@ -1,0 +1,59 @@
+---
+title: Instalar un Codex Pet
+description: "Entiende la carpeta de instalación, el flujo de activación y los límites de seguridad de Codex Pets."
+locale: es
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Instalar un Codex Pet
+
+Instalar un Codex Pet significa colocar un paquete de recursos legible por el cliente en una carpeta conocida. Cuando el cliente arranca o refresca ajustes, lee esa carpeta, encuentra los metadatos y carga los assets de animación correspondientes.
+
+<PetScienceFigure variant="install" locale="es" />
+
+Un Pet suele ser una carpeta local con al menos dos archivos:
+
+```text
+~/.codex/pets/<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+`pet.json` describe el nombre, la descripción y la ruta de la spritesheet. `spritesheet.webp` guarda los frames de animación. Ambos archivos suelen estar en la misma carpeta, y `spritesheetPath` debe apuntar a un archivo real.
+
+## La lógica de instalación
+
+1. Obtener el paquete: confirma que incluye al menos `pet.json` y una spritesheet.
+2. Colocarlo en la carpeta Pets: una ruta común es `~/.codex/pets/<pet-id>/`.
+3. Hacer que el cliente lo lea de nuevo: reinicia Codex o refresca los ajustes de Pets.
+4. Elegirlo en la interfaz: normalmente en Settings -> Appearance -> Pets.
+
+En Windows, la carpeta suele estar bajo `.codex\pets\<pet-id>\` dentro del directorio del usuario. Si usas `CODEX_HOME`, sigue la carpeta Pets que muestre tu cliente actual.
+
+## Por qué falla a menudo
+
+Si la mascota no aparece tras instalarla, revisa:
+
+- El nombre de la carpeta coincide con el `id` de `pet.json`.
+- `spritesheetPath` es una ruta relativa, por ejemplo `spritesheet.webp`.
+- La spritesheet está realmente en la misma carpeta.
+- Codex se reinició, o se refrescaron los ajustes de Pets.
+- Windows, WSL o un `CODEX_HOME` personalizado no apuntan a otra carpeta.
+
+La mayoría de los fallos indican que el cliente no encontró un paquete completo en el lugar esperado.
+
+## Actualizar y eliminar
+
+Antes de actualizar, haz una copia del directorio anterior. Cuando confirmes que el nuevo paquete funciona, reemplaza `pet.json` y la spritesheet.
+
+Para desinstalar, elimina `~/.codex/pets/<pet-id>/` y reinicia Codex o refresca los ajustes de Pets.
+
+## Seguridad
+
+No ejecutes directamente comandos shell remotos de origen desconocido. Un script de instalación puede escribir archivos locales o ejecutar comandos adicionales. Es más seguro descargar el paquete, revisar `pet.json`, confirmar la fuente y la licencia de los assets, y copiarlo manualmente a la carpeta Pets.
+
+Entender la instalación como “copiar un paquete local de recursos” aclara los límites: los archivos se pueden revisar, los scripts deben leerse y la fuente y la licencia deben conservarse.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 A Tarefa local no IDE é o ciclo «**abrir → selecionar → descrever → rever → testar**», adequado a mudanças pequenas e frequentes. Aqui fica o percurso prático mais comum; detalhes de Contexto em [Seleção e ficheiros abertos](/guide/ide/selected-code-and-open-files/).

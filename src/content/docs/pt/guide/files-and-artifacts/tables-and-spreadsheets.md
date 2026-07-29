@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Tarefas de tabelas são o típico erro silencioso: separador, encoding, cabeçalho, fórmula ou formato de data — qualquer falha e o downstream desaba.

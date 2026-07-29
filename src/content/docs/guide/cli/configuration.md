@@ -1,6 +1,8 @@
 ---
 title: CLI 配置
 description: 模型、沙盒、审批与 MCP——在终端里统一 Codex 行为。
+sidebar:
+  order: 40
 ---
 
 CLI 配置决定**默认模型、工作目录、审批严格度、MCP 服务器**等。与 [配置基础](/guide/customization/configuration/config-basics/) 概念一致，本页侧重终端用户常改项。

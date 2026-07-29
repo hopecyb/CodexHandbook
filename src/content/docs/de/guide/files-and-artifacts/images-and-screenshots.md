@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Bilder lassen den Agent UI-Probleme, Designabsicht oder Whiteboard-Skizzen **sehen**. Diese Seite: Input (Ihre Bilder) und Bildverwaltung im Repo; neue Bilder erzeugen: [Bildgenerierung](/guide/tools/image-generation/).

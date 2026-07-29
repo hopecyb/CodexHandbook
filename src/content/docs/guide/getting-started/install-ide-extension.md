@@ -1,6 +1,8 @@
 ---
 title: 安装 IDE 扩展
 description: 在支持的编辑器中安装 Codex 扩展。
+sidebar:
+  order: 50
 ---
 
 1. 确认编辑器在官方支持列表中（见 [https://developers.openai.com/codex](https://developers.openai.com/codex)）

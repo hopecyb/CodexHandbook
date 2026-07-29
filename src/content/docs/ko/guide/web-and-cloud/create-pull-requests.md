@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Cloud 워크플로를 처음 쓸 때 흔한 상황은, 작업은 끝났는데 변경이 아직 검사·토론하기 쉬운 상태가 아닌 것입니다. 팀 협업에서는 이 단계를 보통 **Pull Request**로 끝냅니다.

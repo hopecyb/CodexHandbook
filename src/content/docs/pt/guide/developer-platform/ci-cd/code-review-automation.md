@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Meter o Codex no **pipeline de Pull Request** pode apanhar problemas evidentes antes da review humana, mas **não substitui** a revisão responsável nem os testes. Esta página descreve padrões de automatização aplicáveis.

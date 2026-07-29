@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Agent**는 목표를 중심으로 계속 앞으로 갑니다. 목표 이해 → 도구 선택 → 결과 관찰 → 다음 조정, 완료되거나 당신 개입이 필요할 때까지.

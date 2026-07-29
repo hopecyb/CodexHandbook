@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 IDE 拡張のレビュー体験は「行内補完」と「完全な PR review」の中間にあります。変更はしばしばエディターまたはサイドの diff ビューに直接表示されます。本ページでは、結果を安全に受け入れる方法を説明します。

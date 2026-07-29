@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Manche Aufgaben laufen schnell rund, andere ziehen sich schief — der Unterschied liegt selten daran, dass das Modell plötzlich klüger oder dümmer wird, sondern daran, ob du die Aufgabe klar zerlegt hast.

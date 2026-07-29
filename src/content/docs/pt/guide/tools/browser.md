@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 A **Ferramenta de browser** permite ao Agent aceder a páginas web reais num ambiente controlado: ler o DOM, fazer ecrãs e, por vezes, interações simples. Serve para aceitação frontend, verificação de ligações de documentação e comparação com mockups — não substitui auditoria de segurança, nem deve operar backends de produção à vontade.

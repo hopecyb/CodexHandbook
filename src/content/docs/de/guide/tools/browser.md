@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Das **Browser-Werkzeug** lässt den Agent in kontrollierter Umgebung echte Seiten öffnen: DOM lesen, Screenshots, manchmal einfache Interaktion. Geeignet für Frontend-Abnahme, Doku-Link-Checks, Designabgleich — nicht als Security-Audit und nicht für beliebiges Produktions-Admin.

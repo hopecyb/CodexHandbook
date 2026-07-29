@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 通知は主にタスクの状態を知らせるために使います。バックグラウンドのタスクが止まったまま、承認待ちになっている、または完了したのに気づいていない、といった事態を防ぎます。

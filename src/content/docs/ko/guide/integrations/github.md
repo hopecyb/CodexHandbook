@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 GitHub는 Codex가 가장 흔히 쓰는 코드 협업 면입니다. Cloud 작업, PR 심사, Actions, 로컬 push가 같은 브랜치·권한 세트를 중심으로 돕니다.

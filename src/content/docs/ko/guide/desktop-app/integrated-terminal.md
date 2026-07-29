@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 통합 터미널은 Agent가 실행한 명령 출력을 보거나, 직접 검증 명령을 실행하기에 편리합니다.

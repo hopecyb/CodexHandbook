@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 “프로젝트 컨텍스트”는 이 프로젝트에서 장기적으로 안정적이며, 많은 작업에서 반복해 쓰는 배경 정보입니다.

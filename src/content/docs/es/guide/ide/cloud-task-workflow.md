@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Algunas integraciones IDE permiten **delegar la Tarea a Cloud**. La Tarea corre en un entorno remoto estandarizado; puedes seguir editando en local o simplemente dejar el ordenador. El flujo se parece al de Cloud/Web puro; solo cambia que la entrada está en el lado del editor.

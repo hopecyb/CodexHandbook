@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Os exemplos de Prompts ficam na raiz do repositório em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), referenciados pelo corpo do manual. Normas de desenho: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 > MVP 상태：이 페이지는 개요입니다. 완전한 다섯 단계는 이후 마일스톤에서 보완합니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Le SDK (nom et langage selon la [doc officielle](https://developers.openai.com/codex)) permet de créer des tâches, interroger le statut et récupérer les résultats depuis **votre propre service**, pas seulement via le TUI terminal.

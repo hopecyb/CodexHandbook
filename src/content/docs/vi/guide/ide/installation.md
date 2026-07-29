@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Nếu bạn chủ yếu làm việc trong trình soạn thảo, trang này ngoài vị trí cài đặt còn phủ các câu hỏi:

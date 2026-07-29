@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 La experiencia de revisión de la extensión IDE está entre el «autocomplete en línea» y el «PR review completo»: los cambios suelen aparecer directamente en el editor o en una vista de diff lateral. Esta página explica cómo aceptar resultados con seguridad.

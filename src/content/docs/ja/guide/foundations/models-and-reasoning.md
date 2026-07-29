@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 選択可能なモデルと「推論 / 思考」レベルは製品更新で変わります。選ぶときは次を天秤にかけてください。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 一部の Codex クライアントは**音声**をサポートしています。タスクを話したり、返答の要約を聞いたりできます。手が塞がっているときや、考えを素早く口述したいときに向いています。**秘密鍵を読み上げる用途には向かず**、書面による検証記録の代替にもなりません。

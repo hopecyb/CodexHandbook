@@ -1,0 +1,59 @@
+---
+title: Ein Codex Pet installieren
+description: "Verstehe Installationsordner, Aktivierungsfluss und Sicherheitsgrenzen von Codex Pets."
+locale: de
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Ein Codex Pet installieren
+
+Ein Codex Pet zu installieren bedeutet, ein vom Client lesbares Ressourcenpaket in einen bekannten Ordner zu legen. Beim Start oder beim Aktualisieren der Einstellungen liest der Client diesen Ordner, findet die Metadaten und lädt die passenden Animationsassets.
+
+<PetScienceFigure variant="install" locale="de" />
+
+Ein Pet ist meist ein lokaler Ordner mit mindestens zwei Dateien:
+
+```text
+~/.codex/pets/<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+`pet.json` beschreibt Pet-Name, Beschreibung und Spritesheet-Pfad. `spritesheet.webp` speichert die Animationsframes. Beide Dateien liegen normalerweise im selben Pet-Ordner, und `spritesheetPath` muss auf eine vorhandene Datei zeigen.
+
+## Die Logik der Installation
+
+1. Paket holen: prüfen, dass mindestens `pet.json` und eine Spritesheet enthalten sind.
+2. In den Pets-Ordner legen: üblich ist `~/.codex/pets/<pet-id>/`.
+3. Client neu lesen lassen: Codex neu starten oder Pets-Einstellungen aktualisieren.
+4. In der Oberfläche wählen: meist unter Settings -> Appearance -> Pets.
+
+Unter Windows liegt der Ordner üblicherweise unter `.codex\pets\<pet-id>\` im Benutzerverzeichnis. Wenn du `CODEX_HOME` nutzt, folge dem Pets-Ordner, den dein aktueller Client anzeigt.
+
+## Häufige Fehler
+
+Wenn das Pet nach der Installation nicht erscheint, prüfe:
+
+- Der Ordnername passt zur `id` in `pet.json`.
+- `spritesheetPath` ist ein relativer Pfad, etwa `spritesheet.webp`.
+- Die Spritesheet liegt wirklich im selben Ordner.
+- Codex wurde neu gestartet oder die Pets-Einstellungen wurden aktualisiert.
+- Windows, WSL oder ein eigenes `CODEX_HOME` zeigen nicht auf einen anderen Ordner.
+
+Meist ist das Pet nicht kaputt; der Client findet nur kein vollständiges Paket am erwarteten Ort.
+
+## Aktualisieren und Entfernen
+
+Sichere vor dem Aktualisieren den alten Ordner. Wenn das neue Paket funktioniert, ersetze `pet.json` und die Spritesheet.
+
+Zum Entfernen lösche `~/.codex/pets/<pet-id>/` und starte Codex neu oder aktualisiere die Pets-Einstellungen.
+
+## Sicherheit
+
+Führe keine unbekannten Remote-Shell-Befehle direkt aus. Installationsskripte können lokale Dateien schreiben oder zusätzliche Befehle starten. Sicherer ist es, das Paket herunterzuladen, `pet.json` zu prüfen, Quelle und Lizenz der Assets zu klären und den Ordner manuell nach Pets zu kopieren.
+
+Wenn du Installation als „lokales Ressourcenpaket kopieren“ verstehst, werden die Grenzen klarer: Dateien sind prüfbar, Skripte müssen gelesen werden, Quelle und Lizenz sollten erhalten bleiben.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 «Nén ngữ cảnh» có thể hiểu: hội thoại quá dài thì hệ thống rút nội dung trước thành bản ngắn hơn để tiếp tục giữ. Mục đích là để tác vụ còn chạy tiếp được; cái giá là **chi tiết có thể mất.**

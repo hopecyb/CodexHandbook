@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 1. Xác nhận trình soạn thảo nằm trong danh sách hỗ trợ chính thức (xem [https://developers.openai.com/codex](https://developers.openai.com/codex))

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Monorepo では複数 app、共有パッケージ、異なる技術スタックが共存します。巨大な `AGENTS.md` 一本だと Agent が**誤ったパッケージを変更**したり、誤ったテストを走らせることがあります。本ページは再利用可能な**層分け説明**パターン（例。リポジトリに合わせて裁剪してください）。

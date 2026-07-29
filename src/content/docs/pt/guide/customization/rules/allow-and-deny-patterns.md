@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 As **Rules (regras)** declaram, em configuração ou ficheiros de projeto, que comandos shell, caminhos e chamadas a Ferramentas são **permitidos ou proibidos**, reduzindo cliques manuais de Aprovação e impedindo a automação de operações perigosas.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 CLI では Agent が **ファイルの読み書き、shell 実行、場合によってはネットワーク接続** ができます。承認とサンドボックスは、あなたと自動化のあいだの安全弁です。設定が不適切だと、対話では承認が多すぎるか、CI の無人実行でリスクが制御不能になります。

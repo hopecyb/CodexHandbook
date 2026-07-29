@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 プレゼンテーション（PPT、Keynote、Google Slides、Marp/Reveal など）は **物語の構成** と **視覚的一貫性** が重要です。Agent は骨子と初稿が得意ですが、マスターとブランド規約は人の確認が必要です。

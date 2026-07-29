@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **コマンドルール**は「Agent がどのコマンドを、どの引数で実行できるか」に焦点を当てます。[許可と拒否ルール](/guide/customization/rules/allow-and-deny-patterns/) の最も一般的な形で、通常はチームが review できる設定またはルールファイルに書きます。

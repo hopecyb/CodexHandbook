@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 «Projeto» e «Tarefa» parecem simples, mas na primeira vez é fácil misturá-los. O projeto é o conjunto de ficheiros ou o repositório com que trabalha; a Tarefa é o que pede concretamente ao Codex nesta ocasião.

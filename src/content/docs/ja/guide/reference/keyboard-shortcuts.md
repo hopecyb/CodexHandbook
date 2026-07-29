@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 ショートカットは**クライアントとバージョン**で大きく異なります。本ページは**操作意図**で分類し、より速い方法があるか判断する助けにします。具体キー配列は製品内ヘルプまたは設定で確認してください。

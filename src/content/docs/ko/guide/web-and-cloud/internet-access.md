@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Cloud 작업은 종종 **출망**이 필요합니다. npm/PyPI 패키지 받기, API 접근, 서브모듈 클론 등입니다. 동시에 인터넷 접근은 **데이터 유출**의 고위험면이기도 합니다. Agent가 저장소나 Secrets의 내용을 외부 서비스로 가져갈 수도 있기 때문입니다.

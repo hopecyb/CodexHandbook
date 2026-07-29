@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 一部の IDE 連携では、タスクを**Cloud に委任**できます。タスクはリモートの標準環境で実行され、ローカル編集を続けたり、PC から離れても構いません。フローは純粋な Cloud/Web と似ていますが、入口はエディター側です。

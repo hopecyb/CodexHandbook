@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 “환경 변수”는 두 극단으로 가기 쉽습니다. 너무 저수준이라고 느끼거나, 모든 설정을 넣을 수 있다고 생각하는 것입니다. 직접 말하면, 환경 변수는 런타임에 값을 프로그램에 넘기는 방법이며, 민감 정보와 스위치에 특히 맞습니다.

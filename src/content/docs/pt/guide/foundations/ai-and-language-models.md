@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 O modelo de linguagem **prevê a saída mais razoável a seguir** com base no texto, nos arquivos e nos resultados de Ferramentas que você fornece. Ele é muito bom em completar, organizar, redigir e seguir o Contexto — mas não conhece por natureza o que você não deu, e não garante estar totalmente correto sempre.

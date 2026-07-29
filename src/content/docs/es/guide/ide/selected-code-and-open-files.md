@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 La extensión IDE encaja especialmente con cambios de **alcance pequeño y alta precisión**: seleccionas un fragmento, explicas la intención y Codex modifica en el Contexto cercano. Aquí se trata sobre todo de cómo usar selección y archivos abiertos para apretar el alcance y no cambiar el sitio equivocado.

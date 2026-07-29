@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Beim ersten Lesen wirkt diese Seite vielleicht abstrakt — du musst die Tiefenmechanik nicht zuerst verstehen. Modelle haben kein unbegrenztes Gedächtnis. Wird Inhalt zu viel, zu verstreut oder zu lang, verliert es den Fokus; frühe wichtige Einschränkungen können langsam verblassen.

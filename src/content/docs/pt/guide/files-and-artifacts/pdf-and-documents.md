@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Os PDF servem para especificações, papers, digitalizações e relatórios exportados. Ao contrário do texto puro, o PDF tem **estrutura complexa, volume grande e diff difícil** — precisa de uma forma de Tarefa própria.

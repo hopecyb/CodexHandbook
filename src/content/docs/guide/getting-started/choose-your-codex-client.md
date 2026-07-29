@@ -1,6 +1,8 @@
 ---
 title: 选择 Codex 客户端
 description: 在 App、CLI、IDE、Cloud 之间做第一次选择。
+sidebar:
+  order: 20
 ---
 
 第一次看到 `App / CLI / IDE / Cloud` 这几个词时，常见问题就是：到底该用哪个。

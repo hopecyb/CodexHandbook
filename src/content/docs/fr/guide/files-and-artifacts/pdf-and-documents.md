@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Les PDF sont courants pour specs, articles, scans et rapports exportés. Contrairement au texte brut, les PDF sont **structurellement complexes, volumineux et difficiles à diff** — ils nécessitent une conception de Tâche explicite.

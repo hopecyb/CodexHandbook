@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Codex는 일부 장면에서 **이미지 생성** 능력을 호출할 수 있습니다. 일러스트, 아이콘 초안, UI 컨셉, 도식. 생성 결과는 **검증 대기 산출물**로 보고, 바로 올릴 브랜드 자산으로 보지 마세요.

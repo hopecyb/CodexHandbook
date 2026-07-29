@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 10
 ---
 
 Follow the CLI instructions at [https://developers.openai.com/codex](https://developers.openai.com/codex) to install and upgrade. After install, confirm the command is on your `PATH` and complete authentication.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 **委任**とは、タスクを Cloud のリモート環境で実行させることです。**フォローアップ**とは、タスクの実行中または終了後に進捗を確認し、コンテキストを補い、危険な操作を承認し、修正を求めることです。これは「席を離れても前進できる」コアワークフローです。

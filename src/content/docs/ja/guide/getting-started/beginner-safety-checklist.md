@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 初回利用前に、自分にこう問いかけてください。「間違えたら、大きな代償を払うことになるか？」

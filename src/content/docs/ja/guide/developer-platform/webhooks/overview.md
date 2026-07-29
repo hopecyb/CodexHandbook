@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Webhook** で、Codex または Cloud タスクの状態変化時に自社サービスへ HTTP コールバックを送り、チケット更新、Slack 通知、内部承認台を駆動できます。本章は [開発者プラットフォーム](/guide/developer-platform/) のイベント統合入口です。

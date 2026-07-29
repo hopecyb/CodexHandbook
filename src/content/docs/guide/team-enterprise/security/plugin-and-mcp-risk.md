@@ -1,6 +1,8 @@
 ---
 title: Plugin 与 MCP 风险
 description: 扩展能访问什么、团队如何批准与监控——Skills、Plugin、MCP 的统一风险视角。
+sidebar:
+  order: 20
 ---
 
 **Plugin** 与 **MCP 服务器**把 Codex 连接到外部系统：工单、数据库、内部 API。能力越强，[威胁模型](/guide/team-enterprise/security/threat-model/) 中的外泄与越权面越大。本章与 [MCP 概述](/skills/mcp/mcp-overview/)、[Plugins 概述](/skills/plugins/plugins-overview/) 配合阅读。

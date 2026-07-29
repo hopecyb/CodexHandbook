@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 設定ファイルで、本機またはプロジェクトごとに**Codex の挙動を統一**できます。毎セッションモデル、承認レベル、サンドボックス方針を繰り返し設定する必要がありません。

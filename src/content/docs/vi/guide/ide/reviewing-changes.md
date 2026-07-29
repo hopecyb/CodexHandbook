@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Trải nghiệm rà soát của tiện ích IDE nằm giữa «bổ sung nội dòng» và «review PR đầy đủ»: thay đổi thường hiện trực tiếp trong trình soạn thảo hoặc view diff bên. Trang này nói cách chấp nhận kết quả an toàn.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Manche Codex-Clients unterstützen **Sprache**: Aufgaben sprechen oder Antwortzusammenfassungen hören. Geeignet bei belegten Händen und schnellem Diktat — **nicht** zum Vorlesen von Secrets und kein Ersatz für schriftliche Abnahmeprotokolle.

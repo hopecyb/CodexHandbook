@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 一部の Codex クライアントは**メモリ（Memory）**をサポートします。複数ターンで確認した好みや事実を後続セッションに残します。`AGENTS.md`、プロジェクト設定と補完関係ですが、**バージョン管理されたチーム規範の代替にはなりません**。

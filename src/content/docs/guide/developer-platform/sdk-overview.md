@@ -1,6 +1,8 @@
 ---
 title: SDK 概述
 description: 通过官方 SDK 在应用中发起 Codex 任务——认证、会话与错误处理概念。
+sidebar:
+  order: 10
 ---
 
 SDK（名称与语言以 [官方文档](https://developers.openai.com/codex) 为准）让你在**自有服务**里创建任务、轮询状态、拉取结果，而不只依赖终端 TUI。

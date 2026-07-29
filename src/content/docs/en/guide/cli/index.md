@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 80
 ---
 
 The CLI suits terminal users and scripts. MVP covers install, interactive mode, and troubleshooting only; non-interactive/`exec` and full command reference come in later milestones.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Tác vụ local trong IDE là vòng khép «**mở → chọn → mô tả → rà soát → kiểm thử**», phù hợp chỉnh sửa nhỏ tần suất cao. Đây là một đường thực hành phổ biến nhất; chi tiết ngữ cảnh xem [Vùng chọn và tệp mở](/guide/ide/selected-code-and-open-files/).

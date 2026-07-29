@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 A eficiência no terminal vem de três blocos: **forma de arranque**, **atalhos dentro da sessão** e **coordenação com scripts/editores**. Esta página fala de uso e hábitos; tabelas de parâmetros em [Referência de comandos da CLI](/guide/reference/commands/) e [Atalhos de teclado](/guide/reference/keyboard-shortcuts/).

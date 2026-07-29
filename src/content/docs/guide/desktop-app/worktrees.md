@@ -1,6 +1,8 @@
 ---
 title: 工作树
 description: 用隔离工作树并行试验改动。
+sidebar:
+  order: 40
 ---
 
 **工作树（worktree）** 用于在隔离目录中试验改动，减少对主工作区的干扰。

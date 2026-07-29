@@ -9,6 +9,7 @@ import {
 	footerLegal,
 	footerLinkGroups,
 	getSiteLang,
+	isNavItemVisible,
 	mainNavItems,
 	pickLabel,
 	uiLabels,
@@ -31,6 +32,10 @@ function isModuleActive(href: string) {
 }
 
 const footerLabel = pickLabel(uiLabels.siteFooter, lang);
+const visibleFooterLinkGroups = footerLinkGroups.map((group) => ({
+	...group,
+	links: group.links.filter((link) => isNavItemVisible(link, lang)),
+}));
 ---
 
 <footer class="site-footer print:hidden" aria-label={footerLabel}>
@@ -45,7 +50,7 @@ const footerLabel = pickLabel(uiLabels.siteFooter, lang);
 			</div>
 
 			{
-				footerLinkGroups.map((group) => (
+				visibleFooterLinkGroups.map((group) => (
 					<nav class="site-footer__group" aria-labelledby={`footer-${group.id}`}>
 						<p class="site-footer__group-title" id={`footer-${group.id}`}>
 							{pickLabel(group.title, lang)}

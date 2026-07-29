@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 30
 ---
 
 Many team problems come from **putting the same information in the wrong place**: rules that belong in the repo go into chat, reusable workflows that should be Skills get stuffed into `AGENTS.md`, and read-only data access is handed to a high-privilege MCP.

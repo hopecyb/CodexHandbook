@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 “권한 매트릭스”는 일반 사용자에게도 유용합니다. 같은 한 마디인데, 입구에 따라 Codex의 반응이 왜 다른지를 주로 설명합니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 En el IDE, Codex no solo lee tu Prompt: también obtiene automáticamente el **estado del editor**. Esa es la ventaja central del IDE frente a la CLI. Entender de dónde viene el Contexto evita la frustración de «tenía el archivo abierto y no lo vio».

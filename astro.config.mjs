@@ -23,6 +23,9 @@ const legacyRedirects = {
 	'/12-reference': '/guide/reference',
 	'/13-contributing': '/guide/contributing',
 	'/guide/what-is-codex': '/guide/start-here/what-is-codex',
+	'/pets/pets-list': '/pets/',
+	'/en/pets/pets-list': '/en/pets/',
+	'/zh-tw/pets/pets-list': '/zh-tw/pets/',
 };
 
 const siteUrl = 'https://codexhandbook.com';
@@ -150,28 +153,38 @@ export default defineConfig({
 				},
 				{
 					tag: 'script',
-					attrs: {
-						async: true,
-						src: 'https://www.googletagmanager.com/gtag/js?id=G-KPP4Z7D6SZ',
-					},
-				},
-				{
-					tag: 'script',
 					content: `
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', 'G-KPP4Z7D6SZ');
-					`,
-				},
-				{
-					tag: 'script',
-					content: `
-						(function(c,l,a,r,i,t,y){
-							c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-							t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-							y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-						})(window, document, "clarity", "script", "xtawngb7re");
+						(function () {
+							const hostname = window.location.hostname;
+							const isLocalHost =
+								hostname === "localhost" ||
+								hostname === "127.0.0.1" ||
+								hostname === "0.0.0.0" ||
+								hostname === "::1" ||
+								hostname.endsWith(".local") ||
+								hostname.startsWith("192.168.") ||
+								hostname.startsWith("10.") ||
+								/^172\\.(1[6-9]|2\\d|3[0-1])\\./.test(hostname);
+
+							if (isLocalHost) return;
+
+							const googleAnalyticsScript = document.createElement("script");
+							googleAnalyticsScript.async = true;
+							googleAnalyticsScript.src =
+								"https://www.googletagmanager.com/gtag/js?id=G-KPP4Z7D6SZ";
+							document.head.appendChild(googleAnalyticsScript);
+
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+							gtag('config', 'G-KPP4Z7D6SZ');
+
+							(function(c,l,a,r,i,t,y){
+								c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+								t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+								y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+							})(window, document, "clarity", "script", "xtawngb7re");
+						})();
 					`,
 				},
 			],
@@ -269,6 +282,36 @@ export default defineConfig({
 						vi: 'Case thực tế',
 					},
 					items: [{ autogenerate: { directory: 'cases' } }],
+				},
+				{
+					label: 'Codex 宠物',
+					translations: {
+						en: 'Codex Pets',
+						'zh-tw': 'Codex 寵物',
+						fr: 'Mascottes Codex',
+						ja: 'Codex ペット',
+						ko: 'Codex 펫',
+						es: 'Mascotas de Codex',
+						de: 'Codex-Haustiere',
+						pt: 'Pets do Codex',
+						vi: 'Thú cưng Codex',
+					},
+					items: [{ autogenerate: { directory: 'pets' } }],
+				},
+				{
+					label: 'Codex主题皮肤',
+					translations: {
+						en: 'Codex Theme',
+						'zh-tw': 'Codex 主題皮膚',
+						fr: 'Thèmes Codex',
+						ja: 'Codex テーマスキン',
+						ko: 'Codex 테마 스킨',
+						es: 'Temas de Codex',
+						de: 'Codex-Theme-Skins',
+						pt: 'Temas do Codex',
+						vi: 'Giao diện Codex',
+					},
+					items: [{ autogenerate: { directory: 'theme' } }],
 				},
 			],
 		}),

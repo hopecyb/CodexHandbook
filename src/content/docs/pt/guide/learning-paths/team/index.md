@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 > Estado MVP: esta página é uma visão geral. Conteúdo aprofundado sobre documentação partilhada, governação e métricas virá em marcos posteriores (incluindo a parte 11).

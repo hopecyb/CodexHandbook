@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 이 페이지를 처음 보면 추상적으로 느껴질 수 있습니다. 저층 원리부터 알 필요는 없습니다. 모델은 무한 기억이 아닙니다. 내용이 많고·흩어지고·길어지면 핵심을 놓칠 수 있고, 앞에서 말한 중요 제약도 서서히 옅어질 수 있습니다.

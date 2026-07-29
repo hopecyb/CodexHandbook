@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Modelos disponíveis e níveis de «Raciocínio / pensamento» mudam com atualizações do produto. Ao escolher, equilibre:

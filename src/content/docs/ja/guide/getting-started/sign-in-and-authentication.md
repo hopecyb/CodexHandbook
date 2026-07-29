@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 多くの初心者は「ログインした」と「正常に使える」を同じことだと考えがちですが、これらは別です。

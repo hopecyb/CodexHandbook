@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Tras conectar GitHub, Codex puede clonar el repo en un **entorno remoto**, abrir ramas, hacer push y abrir PRs: es el prerrequisito del flujo Cloud.

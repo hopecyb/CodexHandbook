@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승인**은 사람·Agent 협업의 게이트입니다.

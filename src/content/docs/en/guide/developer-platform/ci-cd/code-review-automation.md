@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 10
 ---
 
 Putting Codex in a **pull request pipeline** can catch obvious issues before human review, but it **cannot replace** accountable review and tests. This page covers practical automation patterns.

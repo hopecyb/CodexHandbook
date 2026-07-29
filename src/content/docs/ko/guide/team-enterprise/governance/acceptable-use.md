@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **허용 가능한 사용 정책(AUP)**는 「이 일을 Codex로 해도 되는가」를 조직 합의로 써서, 개인 판단에만 기대지 않게 합니다. [위협 모델](/guide/team-enterprise/security/threat-model/)과 보완 관계입니다. 위협 모델은 위험을, AUP는 **행동 경계**를 말합니다.

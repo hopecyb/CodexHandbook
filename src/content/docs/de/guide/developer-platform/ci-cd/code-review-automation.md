@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Codex in die **Pull-Request-Pipeline** zu legen, kann vor dem Menschen-Review offensichtliche Probleme fangen — **ersetzt** aber weder verantwortliches Review noch Tests. Diese Seite beschreibt umsetzbare Automatisierungsmuster.

@@ -1,6 +1,8 @@
 ---
 title: IDE 中审查变更
 description: 在编辑器内阅读 diff、评论与接受/拒绝 Codex 建议。
+sidebar:
+  order: 70
 ---
 
 IDE 扩展的审查体验介于「行内补全」与「完整 PR review」之间：改动常常直接呈现在编辑器或侧边 diff 视图中。本页说明如何安全地接受结果。

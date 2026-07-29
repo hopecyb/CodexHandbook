@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 インストール手順は [デスクトップ App のインストール](/guide/getting-started/install-desktop-app/) と [https://developers.openai.com/codex](https://developers.openai.com/codex) を参照してください。

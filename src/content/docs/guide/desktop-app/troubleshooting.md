@@ -1,6 +1,8 @@
 ---
 title: 桌面 App 排障
 description: 安装、登录与任务失败的常见处理。
+sidebar:
+  order: 100
 ---
 
 排障时，按最可能、最容易处理的顺序排查。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Un **subagent (Subagent)** es una **unidad de trabajo independiente** que el Agent principal arranca para un subproblema concreto: tiene un contexto relativamente aislado y, al terminar, devuelve el resultado al hilo principal.

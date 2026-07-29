@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 普段から主にエディターで作業しているなら、本ページではインストール先に加え、次のような疑問も扱います。

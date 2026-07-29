@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 “설정 항목 참고” 페이지는 키, 계층, 덮어쓰기 관계가 많아 처음부터 혼란스럽기 쉽습니다. 먼저 한 질문을 분명히 하면 훨씬 이해하기 쉽습니다.

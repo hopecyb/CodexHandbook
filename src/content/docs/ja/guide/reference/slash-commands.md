@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 初見のスラッシュコマンドは、覚えるべき呪文のように感じられます。能動的に点名できるショートカット入口と考えると分かりやすいです。

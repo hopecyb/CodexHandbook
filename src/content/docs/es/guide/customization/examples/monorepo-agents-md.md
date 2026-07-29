@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 En un monorepo conviven varias apps, paquetes compartidos y stacks distintos: un `AGENTS.md` gigante hace que el Agent **cambie el paquete equivocado** o ejecute el test equivocado. Esta página ofrece un patrón reutilizable de **explicación por capas** (ejemplo; adáptalo a tu repositorio).

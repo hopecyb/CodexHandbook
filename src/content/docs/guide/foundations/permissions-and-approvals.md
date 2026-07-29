@@ -1,6 +1,8 @@
 ---
 title: 权限与审批
 description: 解释 Codex 何时需要你批准操作。
+sidebar:
+  order: 70
 ---
 
 Codex 不应在未获同意时执行高风险操作。**审批** 是人机协作里的那道闸门。

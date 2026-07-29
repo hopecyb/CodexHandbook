@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 1013ae4
 translation_status: draft
 translated_at: 2026-07-26
+sidebar:
+  order: 20
 ---
 
 **Profile** lets you save a named set of configuration (model + sandbox + approval, etc.) and switch scenarios in one step instead of changing settings manually each time.

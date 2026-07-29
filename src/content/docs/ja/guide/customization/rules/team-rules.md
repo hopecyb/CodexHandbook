@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 チームで Codex を使うとき、**ルール方針**は次を答えます：どの制約を全社統一し、どれをリポジトリに任せ、個人が緩められるか。本章は [コマンドルール](/guide/customization/rules/command-rules/) と [許可と拒否パターン](/guide/customization/rules/allow-and-deny-patterns/) のガバナンス視点です。

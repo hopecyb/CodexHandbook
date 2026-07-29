@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 O GitHub é a superfície de colaboração de código mais comum do Codex: tarefas Cloud, revisão de PR, Actions e push local giram em torno do mesmo conjunto de branches e permissões.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 아래 예시는 기본이 **데스크톱 App**입니다. CLI/IDE에서도 같은 프롬프트를 쓸 수 있습니다.

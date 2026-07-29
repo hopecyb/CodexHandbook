@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 **Subagent**는 메인 Agent가 특정 하위 문제를 위해 시작하는 **독립 작업 단위**입니다. 상대적으로 격리된 컨텍스트를 갖고, 완료 후 결과를 메인 스레드로 모아 줍니다.

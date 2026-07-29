@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 > Statut MVP : cette page est un aperçu. Les cinq étapes complètes seront ajoutées dans un jalon ultérieur.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 알림은 작업 상태를 알려, 백그라운드 작업이 멈추거나 승인을 기다리거나 이미 끝났는데 놓치는 일을 줄입니다.

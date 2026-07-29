@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 1. 공식 Codex 문서의 데스크톱 앱 다운로드 안내를 엽니다: [https://developers.openai.com/codex](https://developers.openai.com/codex)

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 断片的な疑問があるときは FAQ から。完全体系ではなく、次にどこを見るかを素早く示します。

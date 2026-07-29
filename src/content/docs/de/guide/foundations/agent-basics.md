@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Ein **Agent** arbeitet fortlaufend um ein Ziel herum: Ziel verstehen → Werkzeug wählen → Ergebnis beobachten → nächsten Schritt anpassen — bis fertig oder bis du eingreifen musst.

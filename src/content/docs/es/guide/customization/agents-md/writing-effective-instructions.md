@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Las instrucciones de proyecto eficaces se parecen más a una **lista de verificación**. El objetivo es que Codex cometa menos errores previsibles en el primer intento.

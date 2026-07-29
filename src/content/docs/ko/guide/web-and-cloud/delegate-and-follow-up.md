@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 **위임**은 작업을 Cloud에 맡겨 원격 환경에서 실행하는 것입니다. **후속**은 작업 중·종료 후 진행을 보고, 컨텍스트를 보태고, 위험한 동작을 승인하고, 수정을 요구하는 것입니다. “자리를 떠나도 계속 추진”하는 핵심 워크플로입니다.

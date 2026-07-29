@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Este manual es una guía comunitaria de código abierto. Comportamiento del producto, paquetes de instalación y planes los marca lo oficial:

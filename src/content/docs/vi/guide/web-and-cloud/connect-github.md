@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 Sau khi kết nối GitHub, Codex có thể clone repo, tạo nhánh, push và mở PR trong **môi trường từ xa** — tiền đề cho quy trình Cloud.

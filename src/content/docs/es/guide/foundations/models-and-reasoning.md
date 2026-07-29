@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 90
 ---
 
 Los modelos disponibles y los niveles de «Razonamiento / pensamiento» cambian con las actualizaciones del producto. Al elegir, sopesa:

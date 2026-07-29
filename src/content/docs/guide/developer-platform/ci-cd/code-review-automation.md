@@ -1,6 +1,8 @@
 ---
 title: 代码审查自动化
 description: 在 CI 或 PR 流程中接入 Codex 审查——提示词、权限与人工门禁。
+sidebar:
+  order: 10
 ---
 
 把 Codex 放进 **Pull Request 流水线**，可以在人审前抓住明显问题，但**不能替代**责任审查与测试。本页讲可落地的自动化模式。

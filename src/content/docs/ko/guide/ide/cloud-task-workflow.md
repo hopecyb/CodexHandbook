@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 일부 IDE 통합은 작업을 **Cloud에 위임**할 수 있습니다. 작업은 원격 표준 환경에서 실행되고, 로컬에서 계속 편집하거나 자리를 비울 수 있습니다. 흐름은 순수 Cloud/Web과 비슷하지만, 입구가 에디터 측에 있습니다.

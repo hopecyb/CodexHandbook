@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Khi nhóm dùng Codex, **chiến lược quy tắc** trả lời: ràng buộc nào cả công ty thống nhất, ràng buộc nào giao kho duy trì, cá nhân còn nới được không. Chương này là góc quản trị của [Quy tắc lệnh](/guide/customization/rules/command-rules/) và [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/).

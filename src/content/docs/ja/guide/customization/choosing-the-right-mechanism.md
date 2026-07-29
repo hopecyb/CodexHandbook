@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 多くのチームの問題は、**同じ情報を間違った場所に置く**ことです。リポジトリに書くべきルールをチャットに入れ、Skill にすべき手順を `AGENTS.md` に詰め、読み取り専用でよいデータに高権限 MCP を渡す。

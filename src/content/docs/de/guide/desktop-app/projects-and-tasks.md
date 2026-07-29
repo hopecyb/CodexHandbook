@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 „Projekt“ und „Aufgabe“ wirken einfach, vermischen sich aber leicht beim ersten Mal. Das Projekt ist die Datei oder das Repository, an dem du arbeitest; die Aufgabe ist das konkrete, was du Codex diesmal erledigen lässt.

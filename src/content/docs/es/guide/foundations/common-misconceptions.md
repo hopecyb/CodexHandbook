@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Cuando mucha gente no saca partido a Codex al principio, no es que no sepa operar: es que lo imaginó mal desde el inicio.

@@ -1,0 +1,43 @@
+---
+title: Codex-Haustiere
+description: "Verstehe Codex Pets: was sie sind, wie sie funktionieren und worauf du beim Installieren oder Erstellen achten solltest."
+locale: de
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Codex-Haustiere
+
+Codex Pets sind animierte Begleiter im Codex-Client. Sie sind keine Modellfähigkeit und kein Automatisierungswerkzeug, sondern lokale visuelle Ressourcen. Der Client kann damit Zustände ausdrücken, etwa laufende Arbeit, Warten, Abschluss, Fehler oder eine blockierte Aufgabe, die deine Eingabe braucht.
+
+<PetScienceFigure variant="anatomy" locale="de" />
+
+Dieser Abschnitt ist als Einführung gedacht. Er erklärt das Grundkonzept, die übliche Paketstruktur, Sicherheitsgrenzen bei der Installation und die Beziehung zwischen Grafik und Metadaten beim Erstellen eines Pets. Diese Website stellt keine Ressourcenliste bereit und behandelt keine externe Galerie als offizielle Quelle.
+
+## Übliche Bestandteile
+
+Ein Pet lässt sich meist als kleines lokales Paket verstehen:
+
+- `pet.json`: Metadaten wie Identität, Anzeigename, Beschreibung und Animationspfad.
+- `spritesheet.webp`: ein Bildatlas mit Animationsframes.
+- Pet-Ordner: das Verzeichnis, das Metadaten und Assets zusammenhält.
+
+So betrachtet ist ein Codex Pet eher ein Theme-Asset oder kleines visuelles Widget als ein Netzwerkprogramm.
+
+## Warum die Struktur wichtig ist
+
+Die Struktur von Pets hilft bei drei praktischen Fragen:
+
+- Beim Installieren: wohin Dateien gehören und welche Skripte man vorsichtig prüfen sollte.
+- Beim Debuggen: warum ein Pet nicht erscheint oder eine Animation nicht abgespielt wird.
+- Beim Erstellen: wofür Frames, transparenter Hintergrund, Metadaten und Lizenzhinweise zuständig sind.
+
+## Leseweg
+
+1. [Ein Codex Pet installieren](./install/): Ordner, Aktivierung und Sicherheitschecks verstehen.
+2. [Ein Codex Pet erstellen](./create/): verstehen, wie Artwork zu einer ladbaren Ressource wird.
+
+Pets als kleine, klare lokale Pakete zu behandeln ist stabiler, als unbekannte Befehle einzufügen, und langfristig leichter zu pflegen.

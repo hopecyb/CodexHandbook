@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Certains clients Codex supportent **Memory** : garder les préférences ou faits que vous confirmez sur plusieurs tours pour les sessions ultérieures. Cela complète `AGENTS.md` et la configuration projet, mais **ne peut pas** remplacer les normes d'équipe versionnées.

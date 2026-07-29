@@ -1,0 +1,91 @@
+---
+title: 制作 Codex Pet
+description: "从素材、spritesheet、元数据和授权四个角度理解 Codex Pet 的制作原理。"
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# 制作 Codex Pet
+
+制作 Codex Pet 的目标不是单独得到一张好看的图片，而是得到一个 Codex 能识别、能播放、能切换状态的资源包。你可以把它理解成“元数据 + 动画图集 + 授权说明”的组合。
+
+<PetScienceFigure variant="spritesheet" locale="zh" />
+
+最小结构通常是：
+
+```text
+<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+## spritesheet 是什么
+
+Spritesheet 是把多帧动画合并到一张大图里的做法。客户端不需要加载几十张小图，而是按行列坐标从大图中裁切每一帧，再连续播放。
+
+很多 Codex Pet 资源使用以下 atlas 约定：
+
+- 8 列 x 9 行
+- 每帧 192 x 208 px
+- 整图 1536 x 1872 px
+- 72 帧
+- WebP 或来源工具明确支持的图片格式
+
+这些规格是常见约定，不是永远不变的规则。制作前先确认当前 Codex 客户端、生成工具或资源来源使用的实际契约。
+
+## 准备素材
+
+素材最好满足这些条件：
+
+- 角色轮廓清楚，背景可干净抠出。
+- 各动作的角色比例、视角和基线一致。
+- 透明背景没有彩边、残影和多余像素。
+- 角色不会贴边，避免播放时被裁切。
+- 动作能对应工作、等待、完成、失败、移动或闲置等状态。
+
+如果素材来自二创、游戏、动漫、品牌或他人作品，要先确认来源和授权。不要把未经授权的素材写成可商用资源。
+
+## `pet.json` 负责什么
+
+`pet.json` 至少要说明宠物身份和 spritesheet 路径。一个最小示例：
+
+```json
+{
+  "id": "my-pet",
+  "displayName": "My Pet",
+  "description": "A focused companion for Codex sessions.",
+  "spritesheetPath": "spritesheet.webp"
+}
+```
+
+建议保持：
+
+- `id` 使用小写字母、数字和短横线。
+- 文件夹名和 `id` 一致。
+- `spritesheetPath` 使用相对路径。
+- `description` 写清楚这个宠物是什么，不写空泛描述。
+- 额外元数据中保留作者、版本、来源和许可。
+
+`pet.json` 的作用不是保存动画本身，而是告诉客户端“这个包是谁、素材在哪里、应该怎么解释”。当素材路径、文件名或目录结构不一致时，客户端通常就无法加载。
+
+## 本地检查
+
+发布或分享前，至少检查：
+
+- `pet.json` 是合法 JSON。
+- `spritesheetPath` 指向存在的文件。
+- spritesheet 尺寸和帧网格符合当前契约。
+- 每行动画不会明显跳帧、漂移或裁切。
+- 透明背景干净。
+- 包里没有临时文件、源图或不该公开的素材。
+
+## 授权和来源
+
+宠物素材常常来自二创、截图、AI 生成图、公开图库或他人作品。制作时要分清：
+
+- 你能否个人使用。
+- 你能否公开分享。
+- 你能否允许他人二次分发。
+- 你是否需要署名或保留来源链接。
+
+保留原始工程文件和来源记录，会让后续修边、改动作、换尺寸和补授权说明更容易。

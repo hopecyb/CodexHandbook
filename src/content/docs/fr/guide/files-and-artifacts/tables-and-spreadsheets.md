@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Les Tâches de tableur sont une catégorie classique d'échec silencieux : séparateur, encodage, en-têtes, formules ou format de date — une erreur casse tout en aval.

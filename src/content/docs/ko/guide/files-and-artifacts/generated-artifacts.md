@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Agent가 작업을 마칠 때 보고서, 스크립트, 정적 사이트, 테스트 데이터 등 **생성물**을 새로 만들 수 있습니다. 익숙한 코드 심사 경로를 거치지 않을 수 있어, 별도의 검증 습관이 필요합니다.

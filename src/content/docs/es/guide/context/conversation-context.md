@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 El «Contexto de la conversación» significa: lo que tú y Codex habéis dicho antes en la misma Tarea sigue influyendo después. Ayuda, y también trae riesgo.

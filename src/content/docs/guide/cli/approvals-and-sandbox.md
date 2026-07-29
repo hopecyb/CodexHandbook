@@ -1,6 +1,8 @@
 ---
 title: 审批与沙盒
 description: CLI 中 shell、写盘与联网请求的批准策略，以及沙盒如何限制 Agent 行为。
+sidebar:
+  order: 60
 ---
 
 CLI 里 Agent 能**读文件、写文件、跑 shell、可能联网**——审批与沙盒是你与自动化之间的安全阀。配置不当会导致：交互时频繁弹窗，或 CI 无人值守时风险失控。

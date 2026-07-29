@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Codex を初めて学ぶとき、いちばんつまずきやすいのは特定のページが理解できないことではなく、どこから始めるべきかわからないことです。

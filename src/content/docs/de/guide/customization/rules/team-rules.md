@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Wenn Teams Codex nutzen, beantwortet die **Regelstrategie**: Welche Constraints gelten firmenweit, welche pflegt das Repo, und dürfen Personen noch lockern? Governance-Sicht auf [Befehlsregeln](/guide/customization/rules/command-rules/) und [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/).

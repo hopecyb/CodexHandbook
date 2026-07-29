@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 “조금만 고쳐 줘”라고만 하지 말고, Codex가 어떤 파일을 보고 어떤 파일을 보지 말아야 하는지도 말하세요.

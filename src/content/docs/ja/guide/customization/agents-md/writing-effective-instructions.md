@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 効果的なプロジェクト指示は**チェックリスト**に近いものです。目標は、Codex が初回試行で予見可能なミスを減らすことです。

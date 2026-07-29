@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 開発タスクの大半は **テキストとコードファイル** に収まります：ソース、テスト、設定、Markdown。本ページでは、範囲を限定し、スタイルを揃え、安全にマージする方法を説明します。

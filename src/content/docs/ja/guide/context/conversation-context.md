@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 「会話コンテキスト」とは、Codex と同じタスクの中でこれまでに話した内容が、その後の応答に引き続き影響することを指します。助けになる面もありますが、リスクも伴います。

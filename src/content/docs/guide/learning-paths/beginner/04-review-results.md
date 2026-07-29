@@ -1,6 +1,8 @@
 ---
 title: 审查结果
 description: 建立检查 diff、运行验证和追问的习惯。
+sidebar:
+  order: 40
 ---
 
 ## 本步目标

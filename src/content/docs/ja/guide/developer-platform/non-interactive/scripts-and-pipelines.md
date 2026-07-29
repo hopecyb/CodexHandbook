@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 ここでは Codex を一回の臨時操作から、**チームが繰り返し走らせ、問題時に追跡し、担当が変わっても引き継げる**自動化ステップにする方法を説明します。

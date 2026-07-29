@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 10
 ---
 
 See [Install the IDE extension](/guide/getting-started/install-ide-extension/) and [https://developers.openai.com/codex](https://developers.openai.com/codex).

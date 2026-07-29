@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 統合ターミナルは、Agent が実行したコマンドの出力を確認したり、自分で検証コマンドを実行したりするのに便利です。

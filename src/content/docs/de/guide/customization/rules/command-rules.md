@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 **Befehlsregeln** fokussieren „welche Befehle der Agent mit welchen Argumenten ausführen darf“. Sie sind die häufigste Form von [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/) und stehen typischerweise in team-reviewbaren Config- oder Regeldateien.

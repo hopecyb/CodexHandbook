@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 Lokale IDE-Aufgaben sind die Schleife **„öffnen → auswählen → beschreiben → prüfen → testen“** — geeignet für häufige kleine Schritte. Hier der gängigste Praxisweg; Kontext-Details: [Auswahl und geöffnete Dateien](/guide/ide/selected-code-and-open-files/).

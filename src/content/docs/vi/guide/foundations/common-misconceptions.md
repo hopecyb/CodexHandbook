@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 120
 ---
 
 Nhiều người ban đầu dùng Codex chưa tốt không phải vì không biết thao tác — mà vì ngay từ đầu đã nghĩ lệch về nó.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 “컨텍스트 압축”은 대화가 너무 길어지면, 시스템이 앞 내용을 더 짧은 버전으로 줄여 계속 남기는 것으로 이해할 수 있습니다. 목적은 작업을 이어 가게 하는 것이고, 대가는 **세부가 사라질 수 있다**는 점입니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Trong một số tình huống, Codex có thể gọi năng lực **tạo ảnh**: minh họa, bản nháp icon, sơ đồ khái niệm UI, sơ đồ. Kết quả tạo ra nên xem là **artifact chờ nghiệm thu**, không phải tài sản thương hiệu đưa lên production ngay.

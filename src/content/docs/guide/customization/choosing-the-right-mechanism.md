@@ -1,6 +1,8 @@
 ---
 title: 选择合适的机制
 description: 临时提示、AGENTS.md、记忆、Skill、MCP 该放哪一层，用一个判断框架讲清楚。
+sidebar:
+  order: 30
 ---
 
 很多团队的问题，往往是**把同一条信息放错地方**：本该写进仓库的规则放进聊天，本该做成 Skill 的流程塞进 `AGENTS.md`，本该只读接入的数据却给了高权限 MCP。

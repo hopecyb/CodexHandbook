@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 “Định nghĩa hoàn thành” nghĩa rất thẳng: nói trước phải đạt đến mức nào thì lần này mới thật sự xong.

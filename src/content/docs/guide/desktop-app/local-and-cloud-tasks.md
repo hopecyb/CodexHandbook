@@ -1,6 +1,8 @@
 ---
 title: 本地与云端任务
 description: 在 App 中切换本地与 Cloud 执行。
+sidebar:
+  order: 70
 ---
 
 这里说的是，在桌面 App 里任务到底跑在本机还是远程环境。

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 「完了の定義」は、そのまま「どの程度までできたら、今回は本当に完了か」を事前に説明することです。

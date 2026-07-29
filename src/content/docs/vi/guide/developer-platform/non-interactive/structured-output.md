@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Nhiều người lần đầu tự động hóa mặc định để Codex xuất một đoạn «nghe hợp lý». Người đọc còn ổn; script thì không thân thiện.

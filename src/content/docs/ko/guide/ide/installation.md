@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 평소 주로 에디터에서 일한다면, 이 페이지는 설치 위치뿐 아니라 다음도 다룹니다.

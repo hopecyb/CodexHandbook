@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 일부 Codex 클라이언트는 **음성**을 지원합니다. 작업을 말하거나, 답변 요약을 듣습니다. 손이 바쁘거나 생각을 빠르게 구술할 때 맞고, 키를 읽기에 **맞지 않으며**, 서면 검증 기록을 대체하지도 않습니다.

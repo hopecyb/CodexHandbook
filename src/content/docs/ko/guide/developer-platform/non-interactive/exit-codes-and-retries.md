@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 장은 [codex exec](/guide/developer-platform/non-interactive/codex-exec/)의 흔한 의미, 재시도 전략, 멱등 설계를 설명합니다.

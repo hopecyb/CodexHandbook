@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 **Rules(규칙)**는 설정이나 프로젝트 파일에서 어떤 shell 명령·경로·도구 호출을 **허용하거나 금지**할지 선언합니다. 매번 수동 승인을 줄이면서, 위험한 조작이 자동화되지 않게 합니다.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Hình ảnh giúp Agent **nhìn thấy** vấn đề giao diện, ý đồ thiết kế hoặc bản phác bảng trắng. Trang này gồm đầu vào (ảnh bạn cung cấp) và quản lý tệp ảnh trong kho; tạo ảnh mới xem [Tạo ảnh](/guide/tools/image-generation/).

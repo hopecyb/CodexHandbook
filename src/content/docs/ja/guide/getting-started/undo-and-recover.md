@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 Codex を初めて使うとき、多くの人が最も心配するのは「間違えたら戻れるか？」です。

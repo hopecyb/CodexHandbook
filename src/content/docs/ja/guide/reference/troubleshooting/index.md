@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 110
 ---
 
 問題が出ても、App、CLI、IDE、Cloud のどのページを見るべきか分からないときは、ここから方向を探せます。

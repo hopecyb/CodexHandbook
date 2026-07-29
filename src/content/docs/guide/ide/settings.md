@@ -1,6 +1,8 @@
 ---
 title: IDE 扩展设置
 description: 模型、审批、上下文与扩展行为在 IDE 中的配置入口。
+sidebar:
+  order: 80
 ---
 
 IDE 扩展设置连接**个人偏好**与**项目规则**：模型选哪档、审批多严、是否自动附带打开文件等。与全局 [配置基础](/guide/customization/configuration/config-basics/) 一致，本页侧重编辑器内的常见选项。

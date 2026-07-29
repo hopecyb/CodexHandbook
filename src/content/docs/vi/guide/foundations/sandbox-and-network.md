@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 «Sandbox» và «mạng» thực ra nói về hai việc: Sandbox giới hạn nó được chạm chỗ nào; mạng giới hạn nó được kết nối tới đâu.

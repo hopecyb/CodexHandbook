@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 10
 ---
 
 대화형 `codex`가 대화하며 일을 하는 편이라면, **`codex exec`**는 작업을 한 번에 맡기고, 끝나면 결과를 돌려주는 쪽에 가깝습니다.

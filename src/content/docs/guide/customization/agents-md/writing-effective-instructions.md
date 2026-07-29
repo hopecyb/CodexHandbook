@@ -1,6 +1,8 @@
 ---
 title: 写好项目指令
 description: AGENTS.md 写作清单——短、硬、可执行、可验证。
+sidebar:
+  order: 30
 ---
 
 有效的项目指令更接近**检查清单**。目标是让 Codex 在第一次尝试时就少犯可预见的错误。

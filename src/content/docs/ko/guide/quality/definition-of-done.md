@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 “완료 정의”의 뜻은 단순합니다. 어느 정도까지 해야 이번이 진짜 완료인지 미리 말하는 것입니다.

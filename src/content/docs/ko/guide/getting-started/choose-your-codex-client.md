@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 처음 `App / CLI / IDE / Cloud`를 보면 흔한 질문은 「도대체 무엇을 쓸까」입니다.

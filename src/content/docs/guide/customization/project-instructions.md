@@ -1,6 +1,8 @@
 ---
 title: 项目说明
 description: 除 AGENTS.md 外的项目级上下文，说明 README、docs 与对话引用的分工。
+sidebar:
+  order: 10
 ---
 
 「项目说明」是 Codex 理解仓库的**静态上下文**，不限于单个文件格式。

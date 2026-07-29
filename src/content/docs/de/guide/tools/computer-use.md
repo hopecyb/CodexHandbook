@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 **Computer Use** lässt den Agent wie ein Mensch Bildschirm sehen, Zeiger bewegen, tippen — nicht nur Browser oder Terminal. Stärkste Fähigkeit, **höchstes Risiko und strengste Freigabe**.

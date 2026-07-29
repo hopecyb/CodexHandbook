@@ -1,6 +1,8 @@
 ---
 title: 差异、评论与审查
 description: 阅读变更并留下审查意见。
+sidebar:
+  order: 50
 ---
 
 ## 审查流程

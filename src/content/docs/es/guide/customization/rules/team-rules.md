@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Al usar Codex en equipo, la **política de reglas** responde: qué restricciones unifica toda la empresa, cuáles mantiene el repositorio y si el individuo aún puede relajarlas. Este capítulo es la perspectiva de gobernanza de [reglas de comandos](/guide/customization/rules/command-rules/) y [patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/).

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 100
 ---
 
 La primera vez esta página puede parecer abstracta; no hace falta dominar el principio de bajo nivel. El modelo no tiene memoria infinita. Cuando el contenido crece, se dispersa o se alarga, puede perder el foco, y las restricciones importantes dichas al principio también se van diluyendo.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Die Überprüfung in der IDE-Erweiterung liegt zwischen „Inline-Completion“ und „vollständigem PR-Review“: Änderungen erscheinen oft direkt im Editor oder in der seitlichen Diff-Ansicht. Diese Seite erklärt, wie du Ergebnisse sicher annimmst.

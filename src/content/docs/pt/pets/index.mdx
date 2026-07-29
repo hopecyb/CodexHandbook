@@ -1,0 +1,43 @@
+---
+title: Pets do Codex
+description: "Entenda o que são Codex Pets, como funcionam e o que verificar ao instalar ou criar um."
+locale: pt
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Pets do Codex
+
+Codex Pets são elementos animados de companhia que aparecem no cliente Codex. Eles não são capacidades do modelo nem ferramentas de automação, mas recursos visuais locais. O cliente pode usá-los para expressar estados como trabalho em andamento, espera, conclusão, erro ou bloqueio aguardando sua intervenção.
+
+<PetScienceFigure variant="anatomy" locale="pt" />
+
+Esta seção tem foco educativo. Ela explica o conceito básico, a estrutura comum dos arquivos, os limites de segurança na instalação e a relação entre arte e metadados ao criar um Pet. Este site não fornece lista de recursos e não trata nenhuma galeria externa como fonte oficial.
+
+## O que geralmente compõe um Pet
+
+Um Pet costuma ser entendido como um pequeno pacote local:
+
+- `pet.json`: metadados como identidade, nome exibido, descrição e caminho da animação.
+- `spritesheet.webp`: atlas de imagem que armazena frames de animação.
+- Pasta do pet: diretório que mantém metadados e assets juntos.
+
+Desse ponto de vista, um Codex Pet se parece mais com um recurso de tema ou pequeno widget visual do que com um programa conectado à rede.
+
+## Por que entender a estrutura
+
+Entender Pets ajuda a responder três perguntas práticas:
+
+- Na instalação: onde os arquivos devem ficar e quais scripts merecem cautela.
+- Na solução de problemas: por que um pet não aparece ou uma animação não toca.
+- Na criação: qual o papel dos frames, do fundo transparente, dos metadados e das notas de licença.
+
+## Caminho de leitura
+
+1. [Instalar um Codex Pet](./install/): entenda pastas, ativação e verificações de segurança.
+2. [Criar um Codex Pet](./create/): entenda como arte vira um recurso carregável.
+
+Tratar cada Pet como um pacote local pequeno e claro é mais estável do que colar comandos de origem desconhecida, e também facilita a manutenção.

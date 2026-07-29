@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 50
 ---
 
 「로컬」「클라우드」는 기술 용어처럼 들리지만, 간단히 말하면 로컬은 자기 컴퓨터에서, 클라우드는 원격 기계에서 일하는 것입니다.

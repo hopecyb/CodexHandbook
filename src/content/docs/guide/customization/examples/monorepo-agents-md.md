@@ -1,6 +1,8 @@
 ---
 title: Monorepo 中的 AGENTS.md
 description: 在单仓库多包结构下放置项目指令、作用域与测试命令的示例模式。
+sidebar:
+  order: 10
 ---
 
 Monorepo 里多个 app、共享包、不同技术栈并存——一份巨型 `AGENTS.md` 容易让 Agent **改错包**或跑错测试。本页给出可复用的**分层说明**模式（示例，请按仓库裁剪）。

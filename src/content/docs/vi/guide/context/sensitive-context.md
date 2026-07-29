@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Mọi nội dung bạn không muốn người khác tùy tiện xem, chép, gửi ra ngoài hoặc để lâu trong nhật ký tác vụ — hãy coi là thông tin nhạy cảm trước.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 Agent がタスクを完了すると、レポート、スクリプト、静的サイト、テストデータなどの **生成物** ができます。これらは慣れ親しんだコードレビュー経路を通らないこともあるため、別の検証習慣が必要です。

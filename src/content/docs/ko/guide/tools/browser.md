@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **브라우저 도구**는 Agent가 통제된 환경에서 실제 웹페이지에 접근하게 합니다. DOM 읽기, 스크린샷, 때로는 단순 상호작용. 프론트엔드 검증, 문서 링크 점검, 디자인 대조에 맞고, 보안 감사를 대체하거나 프로덕션 백오피스를 함부로 조작하기엔 맞지 않습니다.

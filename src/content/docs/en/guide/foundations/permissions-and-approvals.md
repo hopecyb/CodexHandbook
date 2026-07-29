@@ -7,6 +7,8 @@ reviewed_at: 2026-07-26
 source_revision: 1013ae4
 translation_status: reviewed
 translated_at: 2026-07-26
+sidebar:
+  order: 70
 ---
 
 Codex should not perform high-risk operations without consent. **Approval** is a key gate in human–Agent collaboration.

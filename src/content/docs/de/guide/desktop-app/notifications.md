@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 Benachrichtigungen signalisieren vor allem Aufgabenstatus — damit Hintergrundaufgaben nicht stillstehen, auf Freigabe warten oder fertig sind, ohne dass du es merkst.

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 «Ngữ cảnh hội thoại» nghĩa là: những gì bạn và Codex đã nói trước trong cùng một tác vụ sẽ tiếp tục ảnh hưởng phần sau. Nó hữu ích, cũng có rủi ro.

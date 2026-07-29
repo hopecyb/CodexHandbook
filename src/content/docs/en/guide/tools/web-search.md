@@ -5,6 +5,8 @@ locale: en
 source_locale: zh-CN
 translation_status: draft
 translated_at: 2026-07-25
+sidebar:
+  order: 30
 ---
 
 Good for: public documentation, error codes, release notes. Not for: treating search results as final legal/medical conclusions.

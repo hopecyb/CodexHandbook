@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Los PDF se usan a menudo para especificaciones, papers, escaneos e informes exportados. A diferencia del texto plano, un PDF tiene **estructura compleja, mucho tamaño y un diff difícil**; conviene acordar por separado cómo encarar la tarea.

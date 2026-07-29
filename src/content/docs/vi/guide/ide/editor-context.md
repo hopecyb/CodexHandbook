@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 Trong IDE, Codex không chỉ đọc Prompt của bạn mà còn tự nhận **trạng thái trình soạn thảo**. Đây là lợi thế cốt lõi của IDE so với CLI. Hiểu ngữ cảnh đến từ đâu giúp tránh cảm giác thất vọng «đã mở tệp mà nó không thấy».

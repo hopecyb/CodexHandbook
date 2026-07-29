@@ -1,6 +1,8 @@
 ---
 title: 官方资源
 description: OpenAI / Codex 官方文档与入口链接。
+sidebar:
+  order: 120
 ---
 
 本手册是社区开源指南。产品行为、安装包与套餐以官方为准：

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Wenn mehrere `AGENTS.md`, Config-Dateien und der aktuelle Dialog gleichzeitig existieren, muss klar sein, **welche Regel gilt**.

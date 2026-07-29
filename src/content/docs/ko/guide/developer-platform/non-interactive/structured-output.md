@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 처음 자동화할 때 Codex가 “그럴듯한 문장”을 쓰게 두는 경우가 많습니다. 사람이 읽기에는 괜찮지만, 스크립트에는 불친절합니다.

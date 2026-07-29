@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 70
 ---
 
 Todo lo que no quieras que se vea, copie, reenvíe o quede a largo plazo en el registro de la Tarea, trátalo primero como información sensible.

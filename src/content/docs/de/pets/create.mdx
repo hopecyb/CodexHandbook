@@ -1,0 +1,95 @@
+---
+title: Ein Codex Pet erstellen
+description: "Verstehe die Erstellung eines Codex Pet über Assets, Spritesheet, Metadaten und Lizenzierung."
+locale: de
+source_locale: zh-CN
+translation_status: draft
+translated_at: 2026-07-29
+---
+
+import PetScienceFigure from '/src/components/PetScienceFigure.astro';
+
+# Ein Codex Pet erstellen
+
+Ein Codex Pet zu erstellen bedeutet nicht nur, ein schönes Bild zu erzeugen. Ziel ist ein Paket, das Codex erkennen, laden, animieren und zwischen Zuständen umschalten kann. Denke daran als Kombination aus Metadaten, Animationsatlas sowie Quellen- und Lizenzhinweisen.
+
+<PetScienceFigure variant="spritesheet" locale="de" />
+
+Die übliche Minimalstruktur ist:
+
+```text
+<pet-id>/
+  pet.json
+  spritesheet.webp
+```
+
+## Was eine Spritesheet ist
+
+Eine Spritesheet kombiniert viele Animationsframes in einem großen Bild. Der Client muss nicht dutzende kleine Dateien laden, sondern schneidet Frames anhand von Zeile und Spalte aus dem Bild und spielt sie nacheinander ab.
+
+Viele Codex-Pet-Pakete verwenden diese Atlas-Konvention:
+
+- 8 Spalten x 9 Zeilen
+- 192 x 208 px pro Frame
+- 1536 x 1872 px Gesamtbild
+- 72 Frames
+- WebP oder ein anderes vom Quellwerkzeug ausdrücklich unterstütztes Bildformat
+
+Das sind verbreitete Konventionen, keine dauerhaften Regeln. Prüfe vor dem Erstellen den tatsächlichen Vertrag deines Codex-Clients, Generators oder der Ressourcenquelle.
+
+## Assets vorbereiten
+
+Gute Ausgangsassets erfüllen meist:
+
+- Klare Figurensilhouette und sauber entfernbarer Hintergrund.
+- Konsistente Proportion, Perspektive und Grundlinie über Aktionen hinweg.
+- Transparenter Hintergrund ohne Farbsäume, Schattenreste oder überflüssige Pixel.
+- Genug Abstand zum Rand, damit beim Abspielen nichts abgeschnitten wird.
+- Aktionen für Arbeit, Warten, Abschluss, Fehler, Bewegung oder Leerlauf.
+
+Wenn Assets aus Fan-Art, Spielen, Anime, Marken oder Werken anderer stammen, prüfe zuerst Quelle und Lizenz. Beschreibe unlizenzierte Assets nicht als kommerziell nutzbare Ressourcen.
+
+## Aufgabe von `pet.json`
+
+`pet.json` sollte mindestens das Pet identifizieren und auf die Spritesheet verweisen. Ein Minimalbeispiel:
+
+```json
+{
+  "id": "my-pet",
+  "displayName": "My Pet",
+  "description": "A focused companion for Codex sessions.",
+  "spritesheetPath": "spritesheet.webp"
+}
+```
+
+Empfehlungen:
+
+- `id` mit Kleinbuchstaben, Zahlen und Bindestrichen schreiben.
+- Ordnername und `id` gleich halten.
+- `spritesheetPath` als relativen Pfad nutzen.
+- `description` konkret und verständlich schreiben.
+- Autor, Version, Quelle und Lizenz in zusätzlichen Metadaten behalten.
+
+`pet.json` speichert nicht die Animation selbst. Es sagt dem Client, wer das Paket ist, wo die Assets liegen und wie sie interpretiert werden sollen.
+
+## Lokale Prüfung
+
+Vor Veröffentlichung oder Weitergabe mindestens prüfen:
+
+- `pet.json` ist gültiges JSON.
+- `spritesheetPath` zeigt auf eine vorhandene Datei.
+- Größe und Frame-Raster der Spritesheet passen zum aktuellen Vertrag.
+- Animationen springen, driften oder schneiden nicht sichtbar ab.
+- Transparenter Hintergrund ist sauber.
+- Das Paket enthält keine temporären Dateien, Quelldateien oder Assets, die nicht öffentlich sein sollten.
+
+## Lizenz und Quellen
+
+Pet-Assets stammen oft aus Fan-Art, Screenshots, KI-generierten Bildern, öffentlichen Bibliotheken oder Werken anderer. Kläre:
+
+- Ob du sie privat nutzen darfst.
+- Ob du sie öffentlich teilen darfst.
+- Ob du Weiterverteilung erlauben darfst.
+- Ob Namensnennung oder Quellenlink nötig sind.
+
+Originaldateien und Quellenaufzeichnungen zu behalten erleichtert spätere Retuschen, neue Aktionen, Größenänderungen und Lizenzhinweise.

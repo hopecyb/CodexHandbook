@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: ba31b5a
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 80
 ---
 
 「サンドボックス」と「ネットワーク」は別の話です。サンドボックスはどこに触れられるかを制限し、ネットワークはどこにつながれるかを制限します。

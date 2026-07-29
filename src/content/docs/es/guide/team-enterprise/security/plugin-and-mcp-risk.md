@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 Los **Plugin** y los **servidores MCP** conectan Codex a sistemas externos: tickets, bases de datos, API internas. Cuanta más capacidad, mayor es la superficie de filtración y abuso de privilegios del [modelo de amenazas](/guide/team-enterprise/security/threat-model/). Léelo junto con [Resumen de MCP](/skills/mcp/mcp-overview/) y [Resumen de Plugins](/skills/plugins/plugins-overview/).

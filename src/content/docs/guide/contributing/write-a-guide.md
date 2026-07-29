@@ -1,6 +1,8 @@
 ---
 title: 撰写指南页
 description: 新手册正文的结构、frontmatter 与交叉链接约定。
+sidebar:
+  order: 10
 ---
 
 本页说明如何在 `src/content/docs/` 添加或改写**指南型**页面（非纯案例、非纯参考表）。

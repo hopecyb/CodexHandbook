@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 Cấu hình CLI quyết định **mô hình mặc định, thư mục làm việc, độ chặt phê duyệt, máy chủ MCP**, v.v. Khớp khái niệm với [cơ bản cấu hình](/guide/customization/configuration/config-basics/); trang này nghiêng về mục người dùng terminal hay chỉnh.

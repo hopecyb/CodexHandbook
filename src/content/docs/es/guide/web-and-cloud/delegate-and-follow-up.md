@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 **Delegar** es entregar la Tarea a Cloud para que se ejecute en un entorno remoto; **hacer seguimiento** es, mientras corre o al terminar, ver el progreso, completar el Contexto, Aprobar operaciones peligrosas y pedir cambios. Es el flujo central de «seguir avanzando lejos del puesto de trabajo».

@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 40
 ---
 
 **작업 트리(worktree)**는 격리된 디렉터리에서 변경을 시험해 메인 작업 영역에 대한 간섭을 줄입니다.

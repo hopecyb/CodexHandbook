@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 20
 ---
 
 고친 뒤에는, 명백히 깨지지 않았음을 확인할 방법이 있어야 합니다.

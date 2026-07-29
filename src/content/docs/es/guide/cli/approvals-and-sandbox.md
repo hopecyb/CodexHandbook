@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 60
 ---
 
 En la CLI el Agent puede **leer archivos, escribir archivos, ejecutar shell y posiblemente conectar a la red**: Aprobación y Sandbox son la válvula de seguridad entre tú y la automatización. Una mala configuración provoca ventanas frecuentes en modo interactivo, o riesgo descontrolado en CI sin supervisión.

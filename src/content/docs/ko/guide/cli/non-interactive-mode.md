@@ -6,6 +6,8 @@ source_locale: zh-CN
 source_revision: 5f36443
 translation_status: draft
 translated_at: 2026-07-28
+sidebar:
+  order: 30
 ---
 
 비대화형 모드는 Codex가 **TTY 대화 없이** 작업을 마치게 하며, 개발자가 Agent를 스크립트와 CI에 연결하는 입구입니다.
