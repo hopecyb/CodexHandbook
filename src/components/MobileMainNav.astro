@@ -1,0 +1,66 @@
+---
+import config from 'virtual:starlight/user-config';
+import context from 'virtual:starlight/project-context';
+import { getActiveModule } from '../utils/activeModule';
+import { localizedUrl } from '../utils/localizedUrl';
+import { getSiteLang, isNavItemVisible, mainNavItems, pickLabel, uiLabels } from '../utils/siteNav';
+import { standaloneHref, type StandalonePageId } from '../utils/standalonePages';
+
+const locale = Astro.locals.starlightRoute.locale ?? 'root';
+const normalizedLocale = locale === 'root' ? undefined : locale;
+const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
+const visibleMainNavItems = mainNavItems.filter((item) => isNavItemVisible(item, lang));
+
+function localizeHref(item: { href: string; global?: boolean; standalonePage?: StandalonePageId }) {
+	if (item.global) return item.href;
+	if (item.standalonePage) return standaloneHref(item.standalonePage, locale);
+	return localizedUrl(new URL(item.href, Astro.url), locale, context.trailingSlash).pathname;
+}
+
+function isActive(prefix: string) {
+	const moduleDir = prefix.replace(/^\//, '');
+	return getActiveModule(Astro.url.pathname, normalizedLocale) === moduleDir;
+}
+---
+
+<nav class="mobile-main-nav" aria-label={pickLabel(uiLabels.mainNav, lang)}>
+	{
+		visibleMainNavItems.map((item) => (
+			<a href={localizeHref(item)} aria-current={isActive(item.prefix) ? 'page' : undefined}>
+				{pickLabel(item.label, lang)}
+			</a>
+		))
+	}
+</nav>
+
+<style>
+	.mobile-main-nav {
+		display: grid;
+		gap: 0.15rem;
+		margin: 0 0 0.75rem;
+		padding: 0 0 0.75rem;
+		border-bottom: 1px solid var(--sl-color-hairline-shade);
+	}
+
+	.mobile-main-nav a {
+		display: block;
+		padding: 0.55rem 0.65rem;
+		border-radius: 0.4rem;
+		color: var(--sl-color-gray-2);
+		font-size: var(--sl-text-sm);
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.mobile-main-nav a:hover,
+	.mobile-main-nav a[aria-current='page'] {
+		color: var(--sl-color-accent-high);
+		background: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+	}
+
+	@media (min-width: 50rem) {
+		.mobile-main-nav {
+			display: none;
+		}
+	}
+</style>

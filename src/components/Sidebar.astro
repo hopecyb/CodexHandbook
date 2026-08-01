@@ -4,6 +4,7 @@ import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro';
 import { getActiveModule } from '../utils/activeModule';
 import { filterSidebarByModule, getSidebarHash } from '../utils/filterSidebar';
 import { localizeSidebarLabels } from '../utils/localizeSidebar';
+import MobileMainNav from './MobileMainNav.astro';
 import ModuleSidebarPersister from './ModuleSidebarPersister.astro';
 
 const { sidebar } = Astro.locals.starlightRoute;
@@ -15,6 +16,10 @@ const filteredSidebar = localizeSidebarLabels(
 );
 const hash = getSidebarHash(filteredSidebar);
 ---
+
+<div class="md:sl-hidden">
+	<MobileMainNav />
+</div>
 
 <ModuleSidebarPersister hash={hash}>
 	<SidebarSublist sublist={filteredSidebar} />

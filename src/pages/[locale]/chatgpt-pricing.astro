@@ -1,0 +1,14 @@
+---
+import PricingPage from '../../components/chatgpt-pricing/PricingPage.astro';
+import { standaloneLangFromLocale, standalonePages } from '../../utils/standalonePages';
+
+export function getStaticPaths() {
+	return standalonePages['chatgpt-pricing'].supportedLocales
+		.filter((locale) => locale !== 'root')
+		.map((locale) => ({ params: { locale } }));
+}
+
+const initialLanguage = standaloneLangFromLocale(Astro.params.locale);
+---
+
+<PricingPage initialLanguage={initialLanguage} />

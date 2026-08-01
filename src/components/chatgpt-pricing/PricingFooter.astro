@@ -1,0 +1,114 @@
+---
+import { translations } from '../../data/chatgptPricing';
+import type { SiteLang } from '../../utils/siteNav';
+import type { StandaloneLocaleCode } from '../../utils/standalonePages';
+
+interface Props {
+	year: number;
+	locale?: StandaloneLocaleCode;
+	lang?: SiteLang;
+}
+
+const { year, locale = 'root', lang = 'zh-CN' } = Astro.props;
+const t = (key: string) => translations[lang]?.[key] ?? translations['zh-CN'][key] ?? key;
+
+function localizedPath(path: string) {
+	if (locale === 'root') return path;
+	return `/${locale}${path}`;
+}
+
+const moduleLinks = [
+	{ href: localizedPath('/guide/'), key: 'guide' },
+	{ href: localizedPath('/prompts/'), key: 'prompts' },
+	{ href: localizedPath('/skills/'), key: 'skills' },
+	{ href: localizedPath('/cases/'), key: 'cases' },
+	{ href: localizedPath('/pets/'), key: 'pets' },
+	{ href: localizedPath('/theme/'), key: 'theme' },
+] as const;
+
+const communityLinks = [
+	{ href: localizedPath('/guide/contributing/'), key: 'contributing' },
+	{ href: localizedPath('/guide/learning-paths/'), key: 'learningPaths' },
+	{ href: localizedPath('/guide/start-here/handbook-version-policy/'), key: 'versionPolicy' },
+] as const;
+
+const trustLinks = [
+	{ href: '/contact/', key: 'contact' },
+	{ href: '/privacy-policy/', key: 'privacy' },
+	{ href: '/terms/', key: 'terms' },
+] as const;
+---
+
+<footer class="pricing-footer" aria-label="Site footer">
+	<div class="pricing-footer__inner">
+		<div class="pricing-footer__grid">
+			<div class="pricing-footer__brand">
+				<a class="pricing-footer__brand-link" href={localizedPath('/')}>
+					<img src="/brand/logo.png" alt="" width="36" height="36" loading="lazy" decoding="async" />
+					<span data-i18n="back">{t('back')}</span>
+				</a>
+				<p data-i18n="footerTagline">{t('footerTagline')}</p>
+			</div>
+			<nav class="pricing-footer__group" aria-labelledby="footer-modules">
+				<p class="pricing-footer__group-title" id="footer-modules" data-i18n="footerModules">{t('footerModules')}</p>
+				<ul>
+					{
+						moduleLinks.map((link) => (
+							<li>
+								<a href={link.href} data-i18n={link.key}>
+									{t(link.key)}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+			<nav class="pricing-footer__group" aria-labelledby="footer-resources">
+				<p class="pricing-footer__group-title" id="footer-resources" data-i18n="footerResources">{t('footerResources')}</p>
+				<ul>
+					<li>
+						<a href="https://github.com/hopecyb/CodexHandbook" rel="noreferrer" target="_blank" data-i18n="githubRepo">
+							{t('githubRepo')}
+						</a>
+					</li>
+					<li>
+						<a href="https://developers.openai.com/codex" rel="noreferrer" target="_blank" data-i18n="openaiDocs">
+							{t('openaiDocs')}
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="pricing-footer__group" aria-labelledby="footer-community">
+				<p class="pricing-footer__group-title" id="footer-community" data-i18n="footerCommunity">{t('footerCommunity')}</p>
+				<ul>
+					{
+						communityLinks.map((link) => (
+							<li>
+								<a href={link.href} data-i18n={link.key}>
+									{t(link.key)}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+			<nav class="pricing-footer__group" aria-labelledby="footer-trust">
+				<p class="pricing-footer__group-title" id="footer-trust" data-i18n="footerTrust">{t('footerTrust')}</p>
+				<ul>
+					{
+						trustLinks.map((link) => (
+							<li>
+								<a href={link.href} data-i18n={link.key}>
+									{t(link.key)}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</div>
+		<div class="pricing-footer__legal">
+			<p>&copy; {year} <a href={localizedPath('/')}>codexhandbook.com</a></p>
+		</div>
+	</div>
+</footer>

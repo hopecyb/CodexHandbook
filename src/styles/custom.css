@@ -8,6 +8,29 @@
 	width: calc(var(--sl-select-width) + var(--sl-inline-padding) * 2);
 }
 
+.sl-select.compact {
+	--sl-inline-padding: 0;
+	width: 2.375rem;
+}
+
+.sl-select.compact .sl-select-trigger {
+	display: grid;
+	place-items: center;
+	padding: 0.5rem;
+	border-color: transparent;
+	background-color: transparent;
+}
+
+.sl-select.compact .sl-select-trigger:hover {
+	border-color: transparent;
+	background-color: color-mix(in srgb, var(--sl-color-gray-5) 45%, transparent);
+}
+
+.sl-select.compact .sl-select-value,
+.sl-select.compact .caret {
+	display: none;
+}
+
 .sl-select-trigger {
 	position: relative;
 	display: flex;
@@ -54,6 +77,12 @@
 	inset-inline-start: var(--sl-inline-padding);
 }
 
+.sl-select.compact .label-icon {
+	position: static;
+	font-size: 1.05rem;
+	transform: none;
+}
+
 .sl-select-trigger .caret {
 	font-size: var(--sl-caret-size);
 	inset-inline-end: var(--sl-inline-padding);
@@ -77,10 +106,27 @@
 	border-radius: 0.5rem;
 	background-color: var(--sl-color-bg-nav);
 	box-shadow: 0 8px 24px color-mix(in srgb, var(--sl-color-black) 35%, transparent);
-	min-width: max(100%, 11rem);
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 100%;
 	max-height: min(70vh, 22rem);
 	overflow-y: auto;
 	scrollbar-gutter: stable;
+}
+
+.sl-select.compact .sl-select-menu {
+	inset-inline: auto 0;
+	width: max-content;
+	min-width: max-content;
+	/* 短列表不会出现滚动条，stable gutter 会在右侧多留一条空白 */
+	scrollbar-gutter: auto;
+	overflow: visible;
+}
+
+.sl-select.compact .sl-select-option {
+	padding-inline: 0.75rem;
+	overflow: visible;
+	text-overflow: clip;
 }
 
 .sl-select-option {
@@ -93,6 +139,9 @@
 	color: var(--sl-color-gray-1);
 	font-size: var(--sl-text-sm);
 	text-align: start;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 	cursor: pointer;
 	transition:
 		background-color 0.15s ease,

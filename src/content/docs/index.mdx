@@ -1,15 +1,15 @@
 ---
-title: Codex 指南手册
+title: Codex / AI Agent 实战手册
 head:
   - tag: title
-    content: Codex 指南手册
-description: Codex 指南手册围绕产品入门、提示词、Skills 与真实案例，帮助你把任务说明、执行过程和验收结果沉淀成可复用方法。
+    content: Codex / AI Agent 实战手册
+description: 以 Codex 为主轴的 AI Agent 实战手册，帮助个人、创作者、开发者和团队把一次成功协作沉淀成可复用、可验证、可交接的方法。
 template: splash
 editUrl: false
 lastUpdated: false
 hero:
-  title: 用 Codex <br /> 把想法变成成果
-  tagline: 从认识产品、写清提示词、封装 Skills 到复盘真实案例，把每一次任务整理成可执行、可检查、可交接的方法。
+  title: 用 Codex <br /> 把一次成功协作变成可复用方法
+  tagline: 这是一份以 Codex 为主轴的 AI Agent 实战手册：从写清任务，到执行、验证、复盘和交接，把想法稳定地变成成果。
   image:
     html: |
       <div class="home-hero-art" aria-hidden="true">
@@ -43,32 +43,45 @@ hero:
 import AboutHandbook from '../../components/AboutHandbook.astro';
 
 <section class="home-section home-section-lead" aria-label="手册定位">
-	<p>Codex 不只是一个能改代码的工具。它可以帮助你理解资料、生成内容、搭建原型、处理文档、审查变更、自动化重复工作，也可以成为团队协作中的执行伙伴。</p>
-	<p>这份手册按四个模块组织：认识产品、写好提示词、封装 Skills、通过实战案例学习完整流程，让不同基础的读者都能找到下一步。</p>
+	<p>Codex 不只是一个能改代码的工具。它可以帮助你理解资料、生成内容、搭建原型、处理文档、审查变更、自动化重复工作，也可以成为个人和团队的 AI Agent 执行伙伴。</p>
+	<p>本手册不追求堆积功能说明，而是关注一条可复用的工作链：明确目标，提供上下文，设置边界，让 Agent 执行，检查结果，再把经验沉淀成模板、Skill 或案例。</p>
 </section>
 
 <section class="home-section" aria-labelledby="modules-heading">
 	<div class="section-heading">
 		<p>四个模块</p>
-		<h2 id="modules-heading">按模块开始</h2>
+		<h2 id="modules-heading">四个模块，各自解决一个关键问题</h2>
 	</div>
 	<div class="module-grid">
 		<a class="module-card" href="/guide/">
 			<strong>Codex 指南</strong>
-			<span>安装客户端、理解权限、完成第一次任务。</span>
+			<span>理解能力边界，选择入口，安全完成任务并验收结果。</span>
 		</a>
 		<a class="module-card" href="/prompts/">
 			<strong>提示词</strong>
-			<span>讲清目标、背景、约束与验收标准，附带可复制模板。</span>
+			<span>把目标、背景、约束和完成标准写成可执行、可调试的任务说明。</span>
 		</a>
 		<a class="module-card" href="/skills/">
 			<strong>Skills</strong>
-			<span>封装稳定方法，扩展 Plugins、MCP 与 Hooks。</span>
+			<span>把稳定工作流封装成可复用能力，并管理权限、安全边界与测试。</span>
 		</a>
 		<a class="module-card" href="/cases/">
 			<strong>实战案例</strong>
-			<span>从 Bug 修复、写作、自动化等真实任务中学习。</span>
+			<span>沿着目标、提示、执行、纠偏、验收和复盘学习完整链路。</span>
 		</a>
+	</div>
+</section>
+
+<section class="home-section" aria-labelledby="assets-heading">
+	<div class="section-heading">
+		<p>带走可复用资产</p>
+		<h2 id="assets-heading">读完不只知道“怎么做”，还可以直接开始</h2>
+	</div>
+	<div class="path-grid">
+		<a class="path-card" href="/prompts/templates/"><strong>任务提示词模板</strong><span>按理解、研究、创建、修改、诊断和自动化等任务类型复用。</span></a>
+		<a class="path-card" href="/skills/examples/"><strong>Skill 示例</strong><span>从可读的示例开始，观察输入、输出、边界和测试方式。</span></a>
+		<a class="path-card" href="/cases/use-cases/case-study-template/"><strong>案例复盘模板</strong><span>记录目标、执行、人工检查、验证方式、失败处理和下一次改进。</span></a>
+		<a class="path-card" href="/guide/verification/"><strong>验收清单</strong><span>把“看起来完成了”变成可以复核、撤回和交接的结果。</span></a>
 	</div>
 </section>
 
@@ -134,7 +147,7 @@ import AboutHandbook from '../../components/AboutHandbook.astro';
 			<p>Codex 指南手册由开源贡献者维护，源内容以简体中文编写，并通过 GitHub 记录修改历史。页面会标注核验日期、翻译状态和适用范围，便于读者判断内容是否需要再次复核。</p>
 		</section>
 	</div>
-	<p class="home-evidence__meta">作者：Codex Handbook contributors · 首次发布：2026-07-26 · 最近更新：2026-07-28</p>
+	<p class="home-evidence__meta">作者：Codex Handbook contributors · 首次发布：2026-07-26 · 最近更新：2026-08-01</p>
 </section>
 
 <AboutHandbook title="开源共建">

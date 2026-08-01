@@ -1,0 +1,256 @@
+---
+import { currentYear, currencies, languages, plans, regions, translations, updatedAt } from '../../data/chatgptPricing';
+import '../../styles/chatgpt-pricing.css';
+import PricingFooter from './PricingFooter.astro';
+import {
+	standaloneHref,
+	standaloneHrefForLang,
+	standaloneLocaleFromLang,
+	type StandaloneLocaleCode,
+} from '../../utils/standalonePages';
+import type { SiteLang } from '../../utils/siteNav';
+
+interface Props {
+	initialLanguage: SiteLang;
+}
+
+const { initialLanguage } = Astro.props;
+const t = (key: string) => translations[initialLanguage]?.[key] ?? translations['zh-CN'][key] ?? key;
+const currentLocale = standaloneLocaleFromLang(initialLanguage);
+const languageRoutes = Object.fromEntries(
+	languages.map((language) => [language.code, standaloneHrefForLang('chatgpt-pricing', language.code as SiteLang)]),
+);
+const initialLanguageOption = languages.find((language) => language.code === initialLanguage) ?? languages[0];
+const currentPath = standaloneHref('chatgpt-pricing', currentLocale);
+const canonicalUrl = `https://codexhandbook.com${currentPath}`;
+
+function localizedPath(path: string, locale: StandaloneLocaleCode = currentLocale) {
+	if (locale === 'root') return path;
+	return `/${locale}${path}`;
+}
+
+const topbarLinks = [
+	{ href: localizedPath('/guide/'), key: 'guide' },
+	{ href: localizedPath('/prompts/'), key: 'prompts' },
+	{ href: localizedPath('/skills/'), key: 'skills' },
+	{ href: localizedPath('/cases/'), key: 'cases' },
+	{ href: currentPath, key: 'pricingNav', current: true },
+	{ href: localizedPath('/pets/'), key: 'pets' },
+	{ href: localizedPath('/theme/'), key: 'theme' },
+];
+---
+
+<!doctype html>
+<html lang={initialLanguage}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{translations[initialLanguage].title} | Codex 指南手册</title>
+		<meta name="description" content={translations[initialLanguage].subtitle} />
+		<link rel="canonical" href={canonicalUrl} />
+		{
+			languages.map((language) => (
+				<link
+					rel="alternate"
+					hreflang={language.code === 'zh-CN' ? 'zh-Hans' : language.code === 'zh-TW' ? 'zh-Hant' : language.code}
+					href={`https://codexhandbook.com${languageRoutes[language.code]}`}
+				/>
+			))
+		}
+		<link rel="alternate" hreflang="x-default" href="https://codexhandbook.com/chatgpt-pricing/" />
+		<link href="https://cdn.jsdelivr.net/npm/gridjs@6.2.0/dist/theme/mermaid.min.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/gridjs@6.2.0/dist/gridjs.umd.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js" defer></script>
+	</head>
+	<body>
+		<main class="pricing-shell">
+			<nav class="topbar" aria-label="Page">
+				<div class="topbar-primary">
+					<a href={localizedPath('/')} class="brand">
+						<img src="/brand/logo.png" alt="" width="32" height="32" />
+						<span data-i18n="back">{t('back')}</span>
+					</a>
+					<details class="topbar-menu">
+						<summary aria-label="Menu">
+							<span class="topbar-menu__icon" aria-hidden="true"></span>
+						</summary>
+						<div class="topbar-nav topbar-nav--panel" aria-label="Main navigation">
+							{
+								topbarLinks.map((link) => (
+									<a href={link.href} data-i18n={link.key} aria-current={link.current ? 'page' : undefined}>
+										{t(link.key)}
+									</a>
+								))
+							}
+						</div>
+					</details>
+				</div>
+				<div class="topbar-nav topbar-nav--desktop" aria-label="Main navigation">
+					{
+						topbarLinks.map((link) => (
+							<a href={link.href} data-i18n={link.key} aria-current={link.current ? 'page' : undefined}>
+								{t(link.key)}
+							</a>
+						))
+					}
+				</div>
+			</nav>
+
+			<section class="hero">
+				<div>
+					<p class="eyebrow">App Store Price Radar</p>
+					<h1 data-i18n="title">{t('title')}</h1>
+					<p data-i18n="subtitle">{t('subtitle')}</p>
+				</div>
+				<div class="control-panel" aria-label="Filters">
+					<label>
+						<span data-i18n="currency">{t('currency')}</span>
+						<div class="custom-select" data-dropdown="currency">
+							<select id="currency-select" class="native-select" aria-hidden="true" tabindex="-1">
+								{currencies.map((currency) => <option value={currency.code}>{currency.flag} {currency.code}</option>)}
+							</select>
+							<button class="custom-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+								<span class="custom-select__icon" data-selected-icon>{currencies[0].flag}</span>
+								<span class="custom-select__text">
+									<strong data-selected-label>{currencies[0].code}</strong>
+									<small data-selected-meta>{currencies[0].name}</small>
+								</span>
+								<span class="custom-select__chevron" aria-hidden="true"></span>
+							</button>
+							<div class="custom-select__menu" role="listbox" aria-label="Currency options">
+								{currencies.map((currency, index) => (
+									<button
+										type="button"
+										class="custom-select__option"
+										role="option"
+										data-value={currency.code}
+										aria-selected={index === 0 ? 'true' : 'false'}
+									>
+										<span class="custom-select__option-icon">{currency.flag}</span>
+										<span>
+											<strong>{currency.code}</strong>
+											<small>{currency.name}</small>
+										</span>
+									</button>
+								))}
+							</div>
+						</div>
+					</label>
+					<label>
+						<span data-i18n="language">{t('language')}</span>
+						<div class="custom-select" data-dropdown="language">
+							<select id="language-select" class="native-select" aria-hidden="true" tabindex="-1">
+								{
+									languages.map((language) => (
+										<option value={language.code} selected={language.code === initialLanguage}>
+											{language.label}
+										</option>
+									))
+								}
+							</select>
+							<button class="custom-select__trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+								<span class="custom-select__icon" data-selected-icon>{initialLanguageOption.short}</span>
+								<span class="custom-select__text">
+									<strong data-selected-label>{initialLanguageOption.label}</strong>
+									<small data-selected-meta>{initialLanguageOption.code}</small>
+								</span>
+								<span class="custom-select__chevron" aria-hidden="true"></span>
+							</button>
+							<div class="custom-select__menu" role="listbox" aria-label="Language options">
+								{languages.map((language) => (
+									<button
+										type="button"
+										class="custom-select__option"
+										role="option"
+										data-value={language.code}
+										aria-selected={language.code === initialLanguage ? 'true' : 'false'}
+									>
+										<span class="custom-select__option-icon">{language.short}</span>
+										<span>
+											<strong>{language.label}</strong>
+											<small>{language.code}</small>
+										</span>
+									</button>
+								))}
+							</div>
+						</div>
+					</label>
+				</div>
+			</section>
+
+			<section class="plan-tabs" aria-label="Plans">
+				{plans.map((plan, index) => (
+					<button type="button" class="plan-tab" data-plan={plan.id} aria-pressed={index === 0 ? 'true' : 'false'}>
+						{plan.label}
+					</button>
+				))}
+			</section>
+
+			<section class="stats-grid" aria-label="Price summary">
+				<article class="stat-card stat-card--lowest">
+					<span data-i18n="lowest">{t('lowest')}</span>
+					<strong id="lowest-price">¥109.86</strong>
+					<small id="lowest-region">🇵🇭 菲律宾</small>
+				</article>
+				<article class="stat-card">
+					<span data-i18n="highest">{t('highest')}</span>
+					<strong id="highest-price">¥211.18</strong>
+					<small id="highest-region">🇨🇴 哥伦比亚</small>
+				</article>
+				<article class="stat-card">
+					<span data-i18n="saving">{t('saving')}</span>
+					<strong id="saving-value">48%</strong>
+					<small data-i18n="sourceOnly">{t('sourceOnly')}</small>
+				</article>
+				<article class="stat-card">
+					<span data-i18n="median">{t('median')}</span>
+					<strong id="median-price">¥145.77</strong>
+					<small><span data-i18n="updated">{t('updated')}</span>：<time datetime={updatedAt}>{updatedAt}</time></small>
+				</article>
+			</section>
+
+			<section class="content-grid">
+				<article class="table-card">
+					<div class="section-title">
+						<div>
+							<p data-i18n="plan">{t('plan')}</p>
+							<h2 id="table-title" data-i18n="tableTitle">{t('tableTitle')}</h2>
+						</div>
+						<div class="section-badges">
+							<span id="active-plan-label">ChatGPT Plus 1月</span>
+							<span data-i18n="regionCount">{t('regionCount')}</span>
+						</div>
+					</div>
+					<div id="price-grid" class="price-grid"></div>
+				</article>
+
+				<aside class="chart-card">
+					<div class="section-title">
+						<div>
+							<p>Histogram</p>
+							<h2 data-i18n="chartTitle">{t('chartTitle')}</h2>
+						</div>
+					</div>
+					<div class="chart" aria-label="Price distribution">
+						<canvas id="chart"></canvas>
+					</div>
+					<div class="legend" aria-label="Legend">
+						<span><i class="legend-min"></i><span data-i18n="min">{t('min')}</span></span>
+						<span><i class="legend-low"></i><span data-i18n="low">{t('low')}</span></span>
+						<span><i class="legend-normal"></i><span data-i18n="normal">{t('normal')}</span></span>
+						<span><i class="legend-high"></i><span data-i18n="high">{t('high')}</span></span>
+						<span><i class="legend-max"></i><span data-i18n="max">{t('max')}</span></span>
+					</div>
+					<p class="note" data-i18n="source">{t('source')}</p>
+				</aside>
+			</section>
+		</main>
+
+		<PricingFooter year={currentYear} locale={currentLocale} lang={initialLanguage} />
+
+		<script is:inline define:vars={{ currencies, plans, regions, translations, languages, initialLanguage, languageRoutes }}>
+			window.__CHATGPT_PRICING__ = { currencies, plans, regions, translations, languages, initialLanguage, languageRoutes };
+		</script>
+		<script src="/scripts/chatgpt-pricing.js" defer></script>
+	</body>
+</html>

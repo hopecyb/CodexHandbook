@@ -1,3 +1,5 @@
+import { standalonePages, type StandalonePageId } from './standalonePages';
+
 export type SiteLang =
 	| 'zh-CN'
 	| 'en'
@@ -19,6 +21,8 @@ export type NavItem = {
 	href: string;
 	label: LocalizedLabel;
 	prefix: string;
+	global?: boolean;
+	standalonePage?: StandalonePageId;
 	visibleIn?: SiteLang[];
 };
 
@@ -27,6 +31,7 @@ export type FooterLink = {
 	label: LocalizedLabel;
 	external?: boolean;
 	global?: boolean;
+	standalonePage?: StandalonePageId;
 	visibleIn?: SiteLang[];
 };
 
@@ -132,6 +137,12 @@ export const mainNavItems: NavItem[] = [
 		prefix: '/cases',
 	},
 	{
+		href: '/chatgpt-pricing/',
+		label: standalonePages['chatgpt-pricing'].label,
+		prefix: '/chatgpt-pricing',
+		standalonePage: 'chatgpt-pricing',
+	},
+	{
 		href: '/pets/',
 		label: {
 			'zh-CN': 'Codex 宠物',
@@ -210,7 +221,13 @@ export const footerLinkGroups: FooterLinkGroup[] = [
 			pt: 'Módulos',
 			vi: 'Mô-đun',
 		},
-		links: mainNavItems.map(({ href, label, visibleIn }) => ({ href, label, visibleIn })),
+		links: mainNavItems.map(({ href, label, global, standalonePage, visibleIn }) => ({
+			href,
+			label,
+			global,
+			standalonePage,
+			visibleIn,
+		})),
 	},
 	{
 		id: 'resources',
@@ -402,6 +419,30 @@ export const uiLabels = {
 		de: 'Hauptnavigation',
 		pt: 'Navegação principal',
 		vi: 'Điều hướng chính',
+	},
+	more: {
+		'zh-CN': '更多',
+		en: 'More',
+		'zh-TW': '更多',
+		fr: 'Plus',
+		ja: 'その他',
+		ko: '더 보기',
+		es: 'Más',
+		de: 'Mehr',
+		pt: 'Mais',
+		vi: 'Thêm',
+	},
+	menu: {
+		'zh-CN': '菜单',
+		en: 'Menu',
+		'zh-TW': '選單',
+		fr: 'Menu',
+		ja: 'メニュー',
+		ko: '메뉴',
+		es: 'Menú',
+		de: 'Menü',
+		pt: 'Menu',
+		vi: 'Menu',
 	},
 	siteFooter: {
 		'zh-CN': '站点页脚',

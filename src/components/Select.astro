@@ -5,6 +5,7 @@ interface Props {
 	label: string;
 	icon: Parameters<typeof Icon>[0]['name'];
 	width?: string;
+	compact?: boolean;
 	options: Array<{
 		label: string;
 		value: string;
@@ -12,7 +13,7 @@ interface Props {
 	}>;
 }
 
-const { label, icon, width = '7em', options } = Astro.props;
+const { label, icon, width = '7em', compact = false, options } = Astro.props;
 const selected = options.find((option) => option.selected) ?? options[0];
 const labelId = `sl-select-${icon}-${options.map((option) => option.value).join('-')}`.replace(
 	/[^\w-]/g,
@@ -20,7 +21,7 @@ const labelId = `sl-select-${icon}-${options.map((option) => option.value).join(
 );
 ---
 
-<sl-select class="sl-select" style={`--sl-select-width: ${width}`}>
+<sl-select class:list={['sl-select', { compact }]} style={`--sl-select-width: ${width}`}>
 	<span class="sr-only" id={labelId}>{label}</span>
 	<button
 		type="button"
