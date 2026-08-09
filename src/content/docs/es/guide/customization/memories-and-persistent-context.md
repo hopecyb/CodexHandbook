@@ -76,6 +76,21 @@ Aunque un cliente admita memoria, no deberías dejarle guardar a largo plazo:
 | `AGENTS.md` | Todos los colaboradores del repositorio | Git PR |
 | Configuración del proyecto | Según la capa de configuración | Archivos + política gestionada |
 
+## Cómo distribuir la información por capas
+
+La memoria se vuelve confusa cuando mezclas información con distinta duración y visibilidad.
+
+| Tipo de información | Mejor lugar |
+|---|---|
+| Preferencia personal de explicación | Memoria |
+| Regla compartida por el equipo | `AGENTS.md` o configuración de proyecto |
+| Convención de un directorio | Instrucciones de proyecto a nivel de directorio |
+| Objetivo temporal de una tarea | Prompt actual o issue |
+| Pasos reutilizables | Skill o plantilla de Prompt |
+| Chequeo automático | Hook |
+
+Pregunta: quién debe verlo, cuánto durará y si necesita code review. El consenso de equipo va al repositorio; los hábitos personales, a memoria.
+
 ## Uso recomendado
 
 1. **Escríbelo primero en el repositorio**: comandos de test, estructura de directorios, prohibición de push — no deberían vivir solo en memoria

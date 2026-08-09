@@ -37,6 +37,23 @@ sidebar:
 - [開発者](/guide/learning-paths/developer/)
 - [チーム](/guide/learning-paths/team/)
 
+## 高度な操作者パス
+
+小さなタスクを完了できるようになったら、次はコマンドをさらに覚えることではなく、複数の能力を安定したワークフローとして組み合わせることです。
+
+| ステップ | テーマ | 先に読むもの |
+|---|---|---|
+| 1 | すばやい入口 | [スラッシュコマンドとクイック入口](/guide/reference/slash-commands/) |
+| 2 | 永続的なコンテキスト | [AGENTS.md](/guide/customization/agents-md/) と [メモリと永続コンテキスト](/guide/customization/memories-and-persistent-context/) |
+| 3 | 再利用できるワークフロー | [Skills 概要](/skills/overview/) と [Skill の構造](/skills/skill-anatomy/) |
+| 4 | 独立したサブタスク | [サブエージェント](/guide/agent-work/subagents/) と [マルチ Agent 協調](/cases/workflows/multi-agent-coordination/) |
+| 5 | 外部システム | [MCP 概要](/skills/mcp/mcp-overview/) |
+| 6 | 自動ガードレール | [Hooks 概要](/skills/hooks/hooks-overview/) |
+| 7 | チーム配布 | [Plugins 概要](/skills/plugins/plugins-overview/) |
+| 8 | 復元とレビュー | [取り消しと復元](/guide/getting-started/undo-and-recover/) と [Diff をレビューする](/guide/quality/review-diffs/) |
+
+このパスは、「たまに Codex に頼む」状態から「チームで繰り返せる小さな仕組み」へ進むためのものです。プロジェクト指示が長期ルールを定め、Skill が方法を定め、MCP が外部ツールを提供し、サブエージェントが境界の明確な作業を分担し、Hook が要所を守り、Plugin が一式を配布します。
+
 ## よくある誤解
 
 ### 1. 学習パスとマニュアル本文は重複している

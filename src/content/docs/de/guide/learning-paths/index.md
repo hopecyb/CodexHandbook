@@ -37,6 +37,23 @@ Dieses Kapitel liefert kein neues Wissen; es hilft, Umwege zu vermeiden.
 - [Entwickler](/guide/learning-paths/developer/)
 - [Team](/guide/learning-paths/team/)
 
+## Pfad für fortgeschrittene Operatoren
+
+Wenn Sie kleine Aufgaben bereits zuverlässig abschließen, ist der nächste Schritt nicht, mehr Befehle auswendig zu lernen. Wichtiger ist, mehrere Fähigkeiten zu stabilen Workflows zu verbinden.
+
+| Schritt | Thema | Zuerst lesen |
+|---|---|---|
+| 1 | Schnelle Einstiegspunkte | [Slash-Befehle und Schnellzugriffe](/guide/reference/slash-commands/) |
+| 2 | Dauerhafter Kontext | [AGENTS.md](/guide/customization/agents-md/) und [Erinnerung und persistenter Kontext](/guide/customization/memories-and-persistent-context/) |
+| 3 | Wiederverwendbare Workflows | [Skills Überblick](/skills/overview/) und [Skill-Struktur](/skills/skill-anatomy/) |
+| 4 | Isolierte Teilaufgaben | [Subagents](/guide/agent-work/subagents/) und [Multi-Agent-Koordination](/cases/workflows/multi-agent-coordination/) |
+| 5 | Externe Systeme | [MCP Überblick](/skills/mcp/mcp-overview/) |
+| 6 | Automatische Leitplanken | [Hooks Überblick](/skills/hooks/hooks-overview/) |
+| 7 | Team-Verteilung | [Plugins Überblick](/skills/plugins/plugins-overview/) |
+| 8 | Wiederherstellung und Review | [Rückgängig und Wiederherstellen](/guide/getting-started/undo-and-recover/) und [Diffs prüfen](/guide/quality/review-diffs/) |
+
+Dieser Pfad hilft, aus „Codex hilft gelegentlich“ ein kleines, wiederholbares Teamsystem zu machen: Projektanweisungen definieren dauerhafte Regeln, Skills die Methode, MCP liefert externe Werkzeuge, Subagents teilen abgegrenzte Aufgaben, Hooks sichern kritische Punkte, Plugins verteilen das Paket.
+
 ## Häufige Missverständnisse
 
 ### 1. Lernpfad und Handbuchtext sind doppelte Inhalte

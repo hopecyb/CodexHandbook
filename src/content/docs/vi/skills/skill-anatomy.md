@@ -88,6 +88,30 @@ Nếu trong bốn câu có một hai câu"có", có thể bắt đầu tách.
 Có thể dùng `SKILL.md` chạy thông trước, rồi khi thật sự phức tạp mới dần tách tài liệu, template và script ra.
 
 Thực hành đầy đủ: [Tạo Skill đầu tiên](/skills/create-your-first-skill/).
+## Từ mẫu thành Skill
+
+Nhiều nhóm không bắt đầu bằng việc “thiết kế Skill”, mà bắt đầu từ một Prompt cứ phải sao chép nhiều lần. Có thể phát triển theo các bước:
+
+| Giai đoạn | Hình thái | Khi nào nâng cấp |
+|---|---|---|
+| Prompt một lần | Trong cuộc trò chuyện hiện tại | Chỉ dùng một lần |
+| Mẫu | Thư viện Prompt hoặc tài liệu nhóm | Tác vụ cùng loại lặp lại nhưng bước làm còn thay đổi |
+| Skill một tệp | Một `SKILL.md` | Quy trình ổn định, điều kiện kích hoạt rõ |
+| Thư mục Skill hoàn chỉnh | `SKILL.md` + `templates/` + `references/` + `scripts/` | Định dạng đầu ra, tài liệu tham khảo dài, kiểm tra xác định đều ổn định |
+
+Đừng vội biến mọi mẫu thành Skill. Thứ đáng giữ lại là việc lặp lại nhiều, tiêu chuẩn thành công rõ, và nhóm sẵn sàng làm theo cùng một quy trình.
+
+## Thành phần Skill thường tái dùng
+
+| Thành phần | Phù hợp đặt gì |
+|---|---|
+| Mô tả chính | Điều kiện kích hoạt, bước làm, mục cấm, định nghĩa hoàn thành |
+| Mẫu | Đầu ra review PR, cấu trúc tài liệu, báo cáo rủi ro |
+| Tham khảo | Quy chuẩn mã, bảng thuật ngữ, quy tắc domain, ghi chú API |
+| Script | Phân tích độ phức tạp, kiểm link, thống kê coverage, kiểm format |
+
+Một Skill tốt không chỉ là Prompt dài hơn, mà là tách quy trình tái dùng thành các phần dễ đọc, kiểm thử được và dễ bảo trì.
+
 ---
 
 **Trạng thái:** verified  

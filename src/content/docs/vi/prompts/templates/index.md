@@ -40,6 +40,21 @@ Mẫu giống giàn giáo hơn là đáp án chuẩn.
 | [Nghiên cứu](/prompts/templates/research/) | Khảo sát và so sánh kèm trích dẫn |
 | [Tự động hóa](/prompts/templates/automate/) | Tác vụ lặp, script và quy trình không người trực |
 
+## Từ mẫu thành workflow
+
+Có Prompt dùng một lần là đủ; có Prompt lặp lại nhiều lần thì nên được ổn định hóa.
+
+| Tác vụ lặp lại | Ban đầu làm thành | Khi ổn định có thể nâng lên |
+|---|---|---|
+| Chuẩn bị PR | Mẫu review/sửa đổi | Skill với checklist cố định |
+| Tạo tài liệu API | Mẫu tạo/sửa đổi | Skill + script tài liệu |
+| Mở rộng độ phủ kiểm thử | Mẫu sửa đổi | Skill + quy ước lệnh test |
+| Điều tra hiệu năng | Mẫu chẩn đoán | Subagent hoặc Skill chuyên biệt |
+| Mỗi lần ghi file đều kiểm tra format | Không nên chỉ dựa vào mẫu | Hook |
+| Đọc ticket ngoài rồi mới sửa code | Mẫu nghiên cứu | MCP + Skill |
+
+Mẫu phù hợp với tác vụ do người chủ động khởi tạo; Skill phù hợp quy trình lặp lại; Hook phù hợp kiểm tra tự động ở điểm cố định; MCP phù hợp khi cần nối hệ thống ngoài.
+
 ## Hiểu lầm thường gặp
 
 ### 1. Mẫu là để copy nguyên xi

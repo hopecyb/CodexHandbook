@@ -86,6 +86,27 @@ Hook phù hợp hơn cho:
 3. **Nhật ký tuân thủ**: ai, khi nào, trên repo nào thực hiện thao tác ghi (đã ẩn danh)
 4. **Khớp CI**: quy tắc Hook local và GitHub Action càng đồng nguồn càng tốt
 
+## Guardrail nên làm trước
+
+Hook hợp nhất khi bắt đầu từ phạm vi hẹp và xác định, không phải viết một “trọng tài thông minh” khổng lồ.
+
+| Mẫu Hook | Bản đầu | Bản trưởng thành |
+|---|---|---|
+| Audit lệnh | Ghi lệnh, thời gian, thư mục làm việc | Cảnh báo hoặc yêu cầu xác nhận lần hai với lệnh rủi ro |
+| Quét secret | Cảnh báo khi sửa `.env`, key file, token nghi ngờ | Chặn và nêu cách xử lý |
+| Kiểm format | Báo lệch format | Gọi formatter giống CI |
+| Kiểm dependency | Nhắc review khi file package đổi | Nối chính sách lỗ hổng/giấy phép |
+| Tóm tắt phiên | Ghi file đã đổi và lệnh kiểm chứng | Nối vào handoff hoặc mẫu PR |
+
+Hook tốt khi lỗi phải “nhàm chán”: thông báo rõ, phạm vi nhỏ, đường bỏ qua có ghi log.
+
+## Thứ tự áp dụng
+
+1. Trước hết ghi log
+2. Sau đó chỉ cảnh báo rủi ro có độ tin cậy cao
+3. Cuối cùng chỉ chặn quy tắc xác định và đã được nhóm chấp nhận
+4. Tái dùng CI để tránh kiểm tra local và remote tách đôi
+
 ## Khi nào phù hợp dùng Hook
 
 Nếu một kiểm tra thỏa hai điều sau, rất phù hợp đưa vào Hook:

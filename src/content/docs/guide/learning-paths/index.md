@@ -32,6 +32,23 @@ sidebar:
 - [开发者](/guide/learning-paths/developer/)
 - [团队](/guide/learning-paths/team/)
 
+## 高级操作者路径
+
+如果你已经能完成小任务，下一步不是背更多命令，而是学会把多个能力组合成稳定工作流：
+
+| 步骤 | 主题 | 先读 |
+|---|---|---|
+| 1 | 快速入口 | [斜杠命令与快捷入口](/guide/reference/slash-commands/) |
+| 2 | 持久上下文 | [AGENTS.md](/guide/customization/agents-md/) 与 [记忆与持久上下文](/guide/customization/memories-and-persistent-context/) |
+| 3 | 可复用流程 | [Skills 概述](/skills/overview/) 与 [Skill 结构](/skills/skill-anatomy/) |
+| 4 | 独立子任务 | [子 Agent](/guide/agent-work/subagents/) 与 [多 Agent 协作](/cases/workflows/multi-agent-coordination/) |
+| 5 | 外部系统 | [MCP 概述](/skills/mcp/mcp-overview/) |
+| 6 | 自动守护栏 | [Hooks 概述](/skills/hooks/hooks-overview/) |
+| 7 | 团队分发 | [Plugins 概述](/skills/plugins/plugins-overview/) |
+| 8 | 回退与审查 | [撤销与恢复](/guide/getting-started/undo-and-recover/) 与 [审查 Diff](/guide/quality/review-diffs/) |
+
+这条路径适合把“偶尔让 Codex 帮一次忙”升级为“团队可重复执行的一套小系统”：项目指令定义长期规则，Skill 定义做事方法，MCP 提供外部工具，子 Agent 分担边界清楚的子任务，Hook 保护关键节点，Plugin 负责把这组能力发给更多人。
+
 ## 常见误会
 
 ### 1. 学习路径和手册正文是两套重复内容

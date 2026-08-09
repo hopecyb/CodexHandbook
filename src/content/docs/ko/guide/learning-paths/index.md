@@ -37,6 +37,23 @@ translated_at: 2026-07-28
 - [개발자](/guide/learning-paths/developer/)
 - [팀](/guide/learning-paths/team/)
 
+## 고급 운영자 경로
+
+작은 작업을 이미 끝낼 수 있다면, 다음 단계는 명령을 더 외우는 것이 아니라 여러 능력을 안정적인 워크플로로 묶는 것입니다.
+
+| 단계 | 주제 | 먼저 읽을 것 |
+|---|---|---|
+| 1 | 빠른 진입점 | [슬래시 명령과 빠른 진입](/guide/reference/slash-commands/) |
+| 2 | 지속되는 컨텍스트 | [AGENTS.md](/guide/customization/agents-md/)와 [기억과 지속 컨텍스트](/guide/customization/memories-and-persistent-context/) |
+| 3 | 재사용 가능한 워크플로 | [Skills 개요](/skills/overview/)와 [Skill 구조](/skills/skill-anatomy/) |
+| 4 | 독립 하위 작업 | [서브 에이전트](/guide/agent-work/subagents/)와 [다중 Agent 조율](/cases/workflows/multi-agent-coordination/) |
+| 5 | 외부 시스템 | [MCP 개요](/skills/mcp/mcp-overview/) |
+| 6 | 자동 가드레일 | [Hooks 개요](/skills/hooks/hooks-overview/) |
+| 7 | 팀 배포 | [Plugins 개요](/skills/plugins/plugins-overview/) |
+| 8 | 복구와 리뷰 | [실행 취소와 복구](/guide/getting-started/undo-and-recover/)와 [Diff 리뷰](/guide/quality/review-diffs/) |
+
+이 경로는 “가끔 Codex에게 도움을 받는” 상태를 “팀이 반복 실행할 수 있는 작은 시스템”으로 바꾸는 데 적합합니다. 프로젝트 지침은 장기 규칙을, Skill은 방법을, MCP는 외부 도구를, 서브 에이전트는 경계가 명확한 작업 분담을, Hook은 핵심 지점을, Plugin은 팀 배포를 담당합니다.
+
 ## 흔한 오해
 
 ### 1. 학습 경로와 매뉴얼 본문은 중복된 두 세트다

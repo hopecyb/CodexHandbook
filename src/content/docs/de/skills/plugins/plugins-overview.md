@@ -57,6 +57,27 @@ Plugin-Paket
 
 Plugin löst vor allem **Verteilung und Governance** — kein Muss für den ersten Codex-Einstieg.
 
+## Geeignete Plugin-Pakete
+
+Plugin lohnt sich besonders, wenn mehrere Fähigkeiten gemeinsam ausgeliefert werden.
+
+| Team-Paket | Kann enthalten |
+|---|---|
+| PR-Review-Paket | Review-Skill, nur lesendes GitHub MCP, Review-Vorlage, Risiko-Hook |
+| Dokumentationspaket | Doku-Skill, Glossar, Linkcheck-Hook, Release-Notiz-Vorlage |
+| Design-Kollaboration | Design-Connector, Screenshot/Annotation-Skill, Rechtehinweis, Beispiele |
+| Security-Prüfung | Nur lesender Review-Skill, Secret-Scan-Hook, Auditlog-Konfiguration |
+
+Ein persönliches Skript braucht kein Plugin. Wenn ein Team Fähigkeiten wiederholt installiert, aktualisiert und entzieht, lohnt Verpackung.
+
+## Vor dem Verpacken
+
+- Stabiler Team-Workflow oder Experiment?
+- Welche Teile sind Skill, MCP und Hook?
+- Ist die Rechtebeschreibung in einer Minute verständlich?
+- Gibt es Rollback für kaputte Upgrades oder Fehlinstallation?
+- Wie werden Berechtigungen bei Austritt oder Projektende entzogen?
+
 ## Installation und Verwaltung (Konzept)
 
 1. Plugin aus **offiziellem Marktplatz oder Team-Whitelist** wählen
@@ -87,7 +108,7 @@ Langfristig nur Erweiterungen, die das Team warten, zurückziehen und auditieren
 - Bei Austritt/Rollenwechsel Connector-Auth zurückziehen
 - Mit [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/) stapeln — Plugin bringt keine eigene Sicherheit mit
 
-## Vergleich zu Claude Code / anderen Ökosystemen
+## Vergleich zu anderen Agent-Ökosystemen
 
 „Plugin“ meint in Produkten Unterschiedliches. Beim Vergleich: **was paketiert, Berechtigungsmodell, open source auditierbar?** — siehe [Funktionsvergleich](/guide/reference/feature-comparison/).
 

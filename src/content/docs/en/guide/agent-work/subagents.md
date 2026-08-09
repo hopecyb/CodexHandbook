@@ -40,6 +40,19 @@ Then a subagent usually beats the main thread juggling global and local detail a
 | Parallel research on two technical options | Subtasks need mutually exclusive edits to the same file |
 | Long read-only analysis without polluting main context | No clear deliverable—"just look around" |
 
+## Useful subagent roles
+
+These roles are often worth turning into repeatable subagent definitions or saved task templates:
+
+| Role | Strong deliverable | Keep constrained by |
+|---|---|---|
+| Code reviewer | Findings with file references, severity, and missing tests | Read-only tools unless the user asks for fixes |
+| Test engineer | Coverage gaps, test cases to add, commands to run | One package or workflow at a time |
+| Documentation writer | Draft docs, API explanations, migration notes | Source files and existing style guide |
+| Debugger | Reproduction notes, suspected root cause, verification plan | Evidence from logs, tests, and code paths |
+| Security reviewer | Threat notes, unsafe flows, secret-handling risks | Read-only mode and explicit scope |
+| Performance analyst | Bottlenecks, measurement plan, low-risk optimizations | Benchmarks or profiling evidence |
+
 ## Common misconceptions
 
 ### 1. More subagents is not always better
@@ -98,6 +111,8 @@ Main thread (or you) picks a path, then enters execution per [explore—plan—e
 - Can subagent output be verified independently (open files and check)?
 - Did it modify repo without permission?
 - If multiple subagents conflict, is that called out?
+
+For implementation-heavy work, ask the subagent to return a proposed patch plan first. The main thread should still own final merge decisions, because it has the user conversation, the repo state, and the responsibility to verify the whole task.
 
 ## When to consider splitting
 

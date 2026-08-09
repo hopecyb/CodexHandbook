@@ -1,4 +1,13 @@
-export const MODULE_DIRS = ['guide', 'prompts', 'skills', 'cases', 'pets', 'theme', 'chatgpt-pricing'] as const;
+export const MODULE_DIRS = [
+	'guide',
+	'prompts',
+	'skills',
+	'cases',
+	'ai-roadmap',
+	'pets',
+	'theme',
+	'chatgpt-pricing',
+] as const;
 export type ModuleDir = (typeof MODULE_DIRS)[number];
 
 export function stripLocalePrefix(pathname: string, locale: string | undefined): string {

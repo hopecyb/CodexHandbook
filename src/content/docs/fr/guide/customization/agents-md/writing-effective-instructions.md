@@ -155,6 +155,20 @@ De bonnes instructions projet ne visent pas la quantité — elles rendent les c
 - [Explorer—Planifier—Exécuter—Vérifier](/cases/workflows/explore-plan-execute-verify/)
 - [Définir terminé](/prompts/define-done/)
 
+## D’une tâche à une règle projet
+
+Tous les bons prompts ne doivent pas aller dans `AGENTS.md`. Décidez d'abord quelle couche doit les porter.
+
+| Contenu récurrent | Meilleur emplacement |
+|---|---|
+| « Ne pas modifier les dossiers générés » | Interdit dans `AGENTS.md` |
+| « Relire chaque PR dans ce format » | Skill ou modèle de prompt |
+| « Formater après écriture » | Hook |
+| « Lire Linear/Jira avant de coder » | MCP + Skill associé |
+| « Je préfère les explications en chinois » | Mémoire ou préférence personnelle |
+
+`AGENTS.md` convient aux règles durables, partagées et vérifiables. Les processus vont dans les Skills, les contrôles automatiques dans les Hooks, l'accès externe dans MCP.
+
 ---
 
 **Statut :** vérifié  

@@ -66,6 +66,19 @@ Estas prácticas bajan mucho la probabilidad de «equivocarse y no poder arregla
 
 Equivocarse no es terrible. Seguir cambiando sin ver el alcance del Diff sí lo es.
 
+## Usa puntos de recuperación para explorar
+
+Recuperar no sirve solo para errores. También ayuda antes de explorar caminos alternativos.
+
+Buenos momentos:
+
+- Comparar dos rutas de implementación
+- Pedir a un Agent una refactorización amplia
+- Probar scripts de automatización o reemplazos masivos
+- Sospechar que el requisito cambiará pronto
+
+Ritmo más seguro: confirmar estado seguro, pedir a Codex archivos afectados, crear punto de recuperación o revisar Git, cambiar poco, revisar diff y verificación, y decidir conservar, revertir o probar otra ruta.
+
 ---
 
 **Estado:** verified  

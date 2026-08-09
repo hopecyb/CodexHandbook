@@ -86,6 +86,30 @@ Bei ein bis zwei „Ja“ kannst du aufteilen.
 Zuerst mit `SKILL.md` durchziehen; bei Komplexität Material, Vorlagen und Skripte schrittweise auslagern.
 
 Übung: [Ersten Skill erstellen](/skills/create-your-first-skill/).
+## Von Vorlage zu Skill
+
+Viele Teams beginnen nicht mit dem Entwurf eines Skills, sondern mit einem Prompt, den sie immer wieder kopieren. Er kann schrittweise reifen:
+
+| Phase | Form | Aufwerten, wenn |
+|---|---|---|
+| Einmal-Prompt | Aktueller Chat | Nur einmal nötig |
+| Vorlage | Prompt-Sammlung oder Teamdokument | Ähnliche Aufgaben wiederkehren, aber Schritte noch variieren |
+| Einzeldatei-Skill | Ein `SKILL.md` | Ablauf stabil und Auslöser klar |
+| Vollständiges Skill-Verzeichnis | `SKILL.md` + `templates/` + `references/` + `scripts/` | Ausgabeformat, Langreferenzen und deterministische Checks stabil sind |
+
+Nicht jede Vorlage muss Skill werden. Sinnvoll ist es bei wiederholter Nutzung, klaren Erfolgskriterien und Teamkonsens.
+
+## Häufige wiederverwendbare Skill-Komponenten
+
+| Komponente | Geeignet für |
+|---|---|
+| Hauptanweisung | Auslöser, Schritte, Verbote, Done-Kriterien |
+| Vorlagen | PR-Review-Ausgabe, Dokumentstruktur, Risikobericht |
+| Referenzen | Codestandards, Glossar, Fachregeln, API-Notizen |
+| Skripte | Komplexitätsanalyse, Linkprüfung, Coverage, Formatprüfung |
+
+Ein guter Skill ist nicht nur ein längerer Prompt, sondern zerlegt wiederholbare Arbeit in lesbare, testbare und wartbare Teile.
+
 ---
 
 **Status:** verified  

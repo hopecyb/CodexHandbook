@@ -155,6 +155,20 @@ pnpm test --filter @app/web
 - [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
 - [완료 정의](/prompts/define-done/)
 
+## 한 번의 작업에서 프로젝트 규칙으로
+
+좋은 프롬프트를 모두 `AGENTS.md`에 넣을 필요는 없습니다. 먼저 어느 층이 소유할지 판단하세요.
+
+| 반복되는 내용 | 더 나은 위치 |
+|---|---|
+| “generated 디렉터리는 수정하지 말 것” | `AGENTS.md`의 금지 사항 |
+| “매 PR을 고정 형식으로 리뷰” | Skill 또는 프롬프트 템플릿 |
+| “파일 작성 후 자동 포맷” | Hook |
+| “코딩 전 Linear/Jira 읽기” | MCP + 해당 Skill |
+| “중국어 설명을 선호” | 기억 또는 개인 선호 |
+
+`AGENTS.md`는 오래가고 공유되며 검증 가능한 규칙에 가장 적합합니다. 절차는 Skill로, 자동 검사는 Hook으로, 외부 접근은 MCP로 옮길 수 있습니다.
+
 ---
 
 **상태:** verified  

@@ -88,6 +88,30 @@ If one or two answers are yes, start splitting.
 Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
 
 Full exercise: [Create your first Skill](/skills/create-your-first-skill/).
+## From template to Skill
+
+Many teams do not start by designing a Skill. They start with a prompt they keep copying. Let it evolve in stages:
+
+| Stage | Form | Upgrade when |
+|---|---|---|
+| One-off prompt | Current conversation | It is only used once |
+| Template | Prompt library or team docs | Similar tasks repeat but the steps still change |
+| Single-file Skill | One `SKILL.md` | The process is stable and triggers are clear |
+| Full Skill directory | `SKILL.md` + `templates/` + `references/` + `scripts/` | Output format, long references, and deterministic checks are all stable |
+
+Do not turn every template into a Skill. Preserve the ones with repeated use, clear success criteria, and team agreement.
+
+## Common reusable Skill components
+
+| Component | Good for |
+|---|---|
+| Main instructions | Triggers, steps, prohibitions, done criteria |
+| Templates | PR review output, document structure, risk report format |
+| References | Code standards, glossary, domain rules, API notes |
+| Scripts | Complexity analysis, link checks, coverage counts, formatting checks |
+
+A good Skill is not just a longer prompt. It splits reusable work into readable, testable, maintainable parts.
+
 ---
 
 **Status:** verified  

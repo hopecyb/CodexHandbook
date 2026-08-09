@@ -57,6 +57,27 @@ Pacote Plugin
 
 Plugin resolve sobretudo **distribuição e governança** — não é obrigatório no primeiro contato com o Codex.
 
+## Combinações adequadas a Plugin
+
+Plugin vale mais quando várias capacidades precisam ser entregues juntas.
+
+| Pacote de equipa | Pode incluir |
+|---|---|
+| Review PR | Skill de review, GitHub MCP só leitura, template de review, Hook de risco |
+| Manutenção docs | Skill de documentação, glossário, Hook de links, template release notes |
+| Colaboração design | Connector de design, Skill screenshot/anotação, permissões, exemplos |
+| Inspeção segurança | Skill review só leitura, Hook scan secrets, config audit |
+
+Se for um script pessoal, mantém simples. Se a equipa instala, atualiza e revoga um grupo de capacidades, empacota como Plugin.
+
+## Antes de empacotar
+
+- Workflow estável da equipa ou experiência temporária?
+- Que partes são Skill, MCP e Hook?
+- A declaração de permissões entende-se em um minuto?
+- Há rollback para upgrade ou instalação falhada?
+- Como revogar autorizações quando pessoas saem ou projetos acabam?
+
 ## Instalação e gestão (conceito)
 
 1. Escolha Plugin no **marketplace oficial ou lista aprovada da equipe**
@@ -87,7 +108,7 @@ Só extensões que a equipe consegue manter, revogar e auditar cabem no longo pr
 - Ao sair ou mudar de função, revogue autorização de conectores
 - Some a [Permissão e Aprovação](/guide/foundations/permissions-and-approvals/) — não assuma que Plugin traz segurança embutida
 
-## Comparação com Claude Code / outros ecossistemas
+## Comparação com outros ecossistemas Agent
 
 «Plugin» não significa exatamente a mesma coisa em cada produto. Ao comparar, olhe: **o que empacota, modelo de Permissão, se é open source auditável** — veja [comparação de recursos](/guide/reference/feature-comparison/).
 

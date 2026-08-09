@@ -42,6 +42,21 @@ En esos casos, dividir en subagent suele ser más estable que hacer que el hilo 
 | Investigar en paralelo dos enfoques técnicos | Subtareas con edición mutuamente excluyente del mismo archivo |
 | Análisis largo solo de lectura, sin contaminar el contexto principal | «Mirar un poco» sin entregable claro |
 
+## Roles de subagent que conviene consolidar
+
+De las delegaciones puntuales, lo que más conviene conservar son roles con límites claros y formato de entrega estable.
+
+| Rol | Entrega fuerte | Restricción recomendada |
+|---|---|---|
+| Revisor de código | Problemas por gravedad, archivo y tests faltantes | Solo lectura por defecto; no arregla salvo petición explícita |
+| Ingeniero de tests | Huecos de cobertura, casos a añadir, comandos | Un paquete o workflow por encargo |
+| Redactor de documentación | API, migración, guía de usuario | Atado al código y al estilo existente |
+| Debugger | Reproducción, causa probable, plan de verificación | Conclusión basada en logs, tests o ruta de código |
+| Revisor de seguridad | Amenazas, escaladas, riesgos con secretos | Solo lectura, alcance claro |
+| Analista de rendimiento | Hipótesis de cuello de botella, medición, mejoras de bajo riesgo | Requiere benchmark o experimento reproducible |
+
+En tareas de implementación, pide primero un plan de parche. La integración y la verificación final se quedan en el hilo principal.
+
 ## Malentendidos habituales
 
 ### 1. Más subagents no siempre es mejor

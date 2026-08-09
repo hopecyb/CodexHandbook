@@ -112,6 +112,20 @@ Enterprise: roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
 
 Steps: [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
 
+## Start read-only
+
+Once MCP touches a real system, it becomes part of the permission, data, and audit chain. A safer path is trial data first, then team read-only validation, then small reversible writes with human approval, and only later mature governance with roles, audit, and revocable auth.
+
+If a server’s value comes from high-privilege writes, split read tools and write tools first, then give them different approvals.
+
+## Pre-connection review checklist
+
+- Which tools does the server expose? Are there writes?
+- Where are credentials stored, and can they be revoked by person/project/environment?
+- Could logs contain customer data, internal documents, or secret fragments?
+- Has one tool call been tested in a sandbox project?
+- Do writes have human confirmation, rollback, and audit logs?
+
 ## Common mistakes
 
 - Over-permissive MCP server "for convenience"

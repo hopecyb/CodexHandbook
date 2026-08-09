@@ -86,6 +86,27 @@ Keine komplexe Inferenz darüberlegen.
 3. **Compliance-Log**: Wer, wann, welches Repo geschrieben (maskiert)
 4. **CI-Alignment**: Lokale Hook-Regeln möglichst aus derselben Quelle wie GitHub Action
 
+## Leitplanken, mit denen man beginnen sollte
+
+Hooks sollten eng und deterministisch starten, nicht als großer „intelligenter Richter“.
+
+| Hook-Muster | Erste Version | Reife Version |
+|---|---|---|
+| Befehlsaudit | Befehl, Zeit, Arbeitsverzeichnis loggen | Bei riskanten Befehlen warnen oder zweite Bestätigung verlangen |
+| Secret-Scan | Bei `.env`, Key-Dateien oder Token-Mustern warnen | Blockieren und Behandlung erklären |
+| Formatprüfung | Formatabweichungen melden | Denselben Formatter wie CI ausführen |
+| Abhängigkeitsprüfung | Bei Paketdateien Review anstoßen | Schwachstellen- oder Lizenzstrategie anbinden |
+| Sitzungszusammenfassung | Dateien und Prüfungen protokollieren | Übergabe oder PR-Vorlage füllen |
+
+Ein guter Hook scheitert langweilig: klare Meldung, kleiner Radius, protokollierter Bypass.
+
+## Einführungsreihenfolge
+
+1. Erst protokollieren
+2. Dann nur bei hoher Sicherheit warnen
+3. Später nur deterministische, akzeptierte Regeln blockieren
+4. CI-Skripte wiederverwenden, damit lokale und entfernte Checks nicht auseinanderlaufen
+
 ## Wann Hooks passen
 
 Wenn ein Check beides erfüllt:

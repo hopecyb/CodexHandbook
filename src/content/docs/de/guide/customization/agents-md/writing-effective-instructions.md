@@ -155,6 +155,20 @@ Gute Projektanweisungen gewinnen nicht durch Menge, sondern dadurch, dass kritis
 - [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
 - [Done definieren](/prompts/define-done/)
 
+## Von einer Aufgabe zur Projektregel
+
+Nicht jeder gute Prompt gehört direkt in `AGENTS.md`. Entscheiden Sie zuerst, welche Ebene ihn besitzen sollte.
+
+| Wiederkehrender Inhalt | Besserer Ort |
+|---|---|
+| „Generated-Verzeichnisse nicht ändern“ | Verbot in `AGENTS.md` |
+| „Jeden PR im festen Format prüfen“ | Skill oder Prompt-Vorlage |
+| „Nach dem Schreiben formatieren“ | Hook |
+| „Vor dem Coden Linear/Jira lesen“ | MCP + passender Skill |
+| „Ich bevorzuge chinesische Erklärungen“ | Erinnerung oder persönliche Präferenz |
+
+`AGENTS.md` passt für langlebige, gemeinsame und prüfbare Regeln. Prozesslogik kann in Skills, automatische Checks in Hooks, externer Zugriff in MCP.
+
 ---
 
 **Status:** verified  

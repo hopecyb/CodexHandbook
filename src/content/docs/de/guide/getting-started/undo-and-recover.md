@@ -66,6 +66,19 @@ Diese Praktiken senken die Chance, dass Fehler schwer aufräumbar werden:
 
 Fehler selbst sind nicht schlimm. Ohne klaren Änderungsumfang weiterzuändern — das wird unangenehm.
 
+## Wiederherstellungspunkte als Explorationswerkzeug
+
+Wiederherstellung ist nicht nur Fehlerbehebung. Sie hilft auch, bevor alternative Wege ausprobiert werden.
+
+Geeignete Momente:
+
+- Zwei Implementierungsrichtungen vergleichen
+- Einen größeren Refactor durch einen Agent versuchen
+- Automatisierungsskripte oder Batch-Ersetzungen testen
+- Mit baldiger Anforderungsänderung rechnen
+
+Sicherer Rhythmus: sicheren Zustand bestätigen, betroffene Dateien nennen lassen, Wiederherstellungspunkt oder Git-Status prüfen, klein ändern, Diff und Verifikation prüfen, dann behalten, zurückrollen oder anderen Weg testen.
+
 ---
 
 **Status:** verified  

@@ -76,6 +76,21 @@ Mesmo que um cliente suporte memória, não deve entregar-lhe a longo prazo:
 | `AGENTS.md` | Todos os colaboradores do repositório | Git PR |
 | Configuração do projeto | Segundo a camada de configuração | Ficheiro + política gerida |
 
+## Como distribuir informação por camadas
+
+A memória fica confusa quando informação com duração e visibilidade diferentes vai toda para o mesmo lugar.
+
+| Tipo de informação | Melhor lugar |
+|---|---|
+| Preferência pessoal de explicação | Memória |
+| Regra partilhada pela equipa | `AGENTS.md` ou configuração do projeto |
+| Convenção de diretório | Instruções de projeto nesse diretório |
+| Objetivo temporário da tarefa | Prompt atual ou issue |
+| Passos reutilizáveis | Skill ou template de Prompt |
+| Verificação automática | Hook |
+
+Pergunta: quem precisa ver, quanto tempo dura, precisa de code review? Consenso de equipa vai para o repo; hábito pessoal vai para memória.
+
 ## Forma recomendada de uso
 
 1. **Escreva primeiro no repositório**: comandos de teste, estrutura de diretórios, proibição de push — isto não deve existir só na memória

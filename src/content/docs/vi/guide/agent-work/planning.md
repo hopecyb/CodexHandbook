@@ -131,6 +131,18 @@ Một thói quen cộng tác quan trọng là tách hai giai đoạn:
 
 Nếu trong thực thi phát hiện tiền đề đổi, hãy quay lại kế hoạch, đừng cố lao. Xem [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/).
 
+## Tác vụ rủi ro cao cần thêm ba mục trong kế hoạch
+
+Nếu tác vụ đụng nhiều tệp, hệ thống ngoài, cấu hình quyền, script tự động hóa hoặc quy tắc nhóm, kế hoạch còn phải nêu rõ:
+
+| Mục bổ sung | Vì sao quan trọng |
+|---|---|
+| Ranh giới quyền | Thao tác nào chỉ đọc, thao tác nào cần người xác nhận |
+| Cách khôi phục | Nếu đi sai hướng thì quay lại trạng thái an toàn thế nào |
+| Triển khai theo giai đoạn | Kiểm chứng trước trong thư mục test, dự án ví dụ hoặc phạm vi nhỏ |
+
+Hãy yêu cầu kế hoạch chia thành: phân tích chỉ đọc, thay đổi tối thiểu, kiểm chứng, rollback. Bước ghi hệ thống ngoài hoặc ghi hàng loạt phải được liệt kê trước, không thực thi ngay.
+
 ## Lỗi thường gặp
 
 - Kế hoạch không có cách kiểm chứng

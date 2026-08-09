@@ -88,6 +88,30 @@ Se um ou dois desses pontos forem «sim», comece a separar.
 Primeiro faça o `SKILL.md` funcionar; quando ficar complexo de verdade, extraia material, templates e scripts aos poucos.
 
 Exercício completo: [Criar seu primeiro Skill](/skills/create-your-first-skill/).
+## De template a Skill
+
+Muitas equipas não começam por desenhar um Skill; começam por um Prompt que copiam repetidamente. Ele pode evoluir por etapas:
+
+| Etapa | Forma | Quando evoluir |
+|---|---|---|
+| Prompt único | Conversa atual | Usa-se só uma vez |
+| Template | Biblioteca de Prompts ou docs da equipa | Tarefas parecidas repetem-se, mas os passos ainda mudam |
+| Skill de ficheiro único | Um `SKILL.md` | Processo estável e gatilho claro |
+| Diretório Skill completo | `SKILL.md` + `templates/` + `references/` + `scripts/` | Formato de saída, referências longas e checks determinísticos estabilizaram |
+
+Não transformes cada template em Skill. Vale a pena quando há repetição, critérios de sucesso claros e acordo da equipa.
+
+## Componentes reutilizáveis comuns
+
+| Componente | Serve para |
+|---|---|
+| Instrução principal | Gatilhos, passos, proibições, definição de concluído |
+| Templates | Saída de review PR, estrutura de documento, relatório de risco |
+| Referências | Normas de código, glossário, regras de domínio, notas API |
+| Scripts | Complexidade, links, cobertura, formatação |
+
+Um bom Skill não é só um Prompt mais longo: separa trabalho reutilizável em partes legíveis, testáveis e manuteníveis.
+
 ---
 
 **Status:** verified  

@@ -78,6 +78,21 @@ Même si un client supporte la mémoire, vous ne devriez pas stocker :
 | `AGENTS.md` | Tous les collaborateurs du dépôt | PR Git |
 | Configuration projet | Par couche de configuration | Fichiers + politique gérée |
 
+## Comment répartir l'information par couches
+
+La mémoire devient confuse quand des informations de durée et de visibilité différentes sont rangées au même endroit.
+
+| Type d'information | Meilleur emplacement |
+|---|---|
+| Préférence personnelle d'explication | Mémoire |
+| Règle d'équipe | `AGENTS.md` ou config projet |
+| Convention d'un répertoire | Instructions projet au niveau du répertoire |
+| Objectif temporaire | Prompt actuel ou issue |
+| Étapes réutilisables | Skill ou modèle de prompt |
+| Contrôle automatique | Hook |
+
+Demandez : qui doit le voir, combien de temps cela dure, faut-il une revue de code ? L'accord d'équipe va dans le dépôt ; l'habitude personnelle va en mémoire.
+
 ## Utilisation recommandée
 
 1. **Écrire dans le dépôt d'abord** : commandes de test, structure de répertoires, pas de push — ceux-ci ne devraient pas vivre uniquement en mémoire

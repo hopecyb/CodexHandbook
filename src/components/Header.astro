@@ -7,9 +7,16 @@ import SiteTitle from 'virtual:starlight/components/SiteTitle';
 import SocialIcons from 'virtual:starlight/components/SocialIcons';
 import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
 import { Icon } from '@astrojs/starlight/components';
-import { getActiveModule } from '../utils/activeModule';
+import { stripLocalePrefix } from '../utils/activeModule';
 import { localizedUrl } from '../utils/localizedUrl';
-import { getSiteLang, isNavItemVisible, mainNavItems, pickLabel, uiLabels } from '../utils/siteNav';
+import {
+	getSiteLang,
+	isNavItemVisible,
+	mainNavItems,
+	pickLabel,
+	uiLabels,
+	type NavItem,
+} from '../utils/siteNav';
 import { standaloneHref, type StandalonePageId } from '../utils/standalonePages';
 
 const shouldRenderSearch =
@@ -20,8 +27,29 @@ const normalizedLocale = locale === 'root' ? undefined : locale;
 const lang = getSiteLang(locale, config.locales?.[locale]?.lang);
 const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
 const visibleMainNavItems = mainNavItems.filter((item) => isNavItemVisible(item, lang));
-const primaryNavItems = visibleMainNavItems.filter((item) => item.href !== '/pets/' && item.href !== '/theme/');
-const secondaryNavItems = visibleMainNavItems.filter((item) => item.href === '/pets/' || item.href === '/theme/');
+const toolsNavItem: NavItem = {
+	href: '/guide/tools/',
+	label: {
+		'zh-CN': '工具',
+		en: 'Tools',
+	},
+	prefix: '/guide/tools',
+};
+const navItemsWithTools = [
+	...visibleMainNavItems,
+	...(isNavItemVisible(toolsNavItem, lang) ? [toolsNavItem] : []),
+];
+const primaryNavItems = visibleMainNavItems.filter((item) =>
+	['/guide/', '/cases/', '/ai-roadmap/'].includes(item.href),
+);
+const leadingPrimaryNavItems = primaryNavItems.filter((item) => item.href === '/guide/');
+const trailingPrimaryNavItems = primaryNavItems.filter((item) => item.href !== '/guide/');
+const capabilityNavItems = navItemsWithTools.filter((item) =>
+	['/prompts/', '/skills/', '/guide/tools/'].includes(item.href),
+);
+const resourceNavItems = visibleMainNavItems.filter((item) =>
+	['/chatgpt-pricing/', '/pets/', '/theme/'].includes(item.href),
+);
 
 function localizeHref(item: { href: string; global?: boolean; standalonePage?: StandalonePageId }) {
 	if (item.global) return item.href;
@@ -30,11 +58,13 @@ function localizeHref(item: { href: string; global?: boolean; standalonePage?: S
 }
 
 function isActive(prefix: string) {
-	const moduleDir = prefix.replace(/^\//, '');
-	return getActiveModule(Astro.url.pathname, normalizedLocale) === moduleDir;
+	const path = stripLocalePrefix(Astro.url.pathname, normalizedLocale);
+	const normalizedPrefix = prefix.replace(/\/$/, '');
+	return path === normalizedPrefix || path === `${normalizedPrefix}/` || path.startsWith(`${normalizedPrefix}/`);
 }
 
-const isMoreActive = secondaryNavItems.some((item) => isActive(item.prefix));
+const isCapabilitiesActive = capabilityNavItems.some((item) => isActive(item.prefix));
+const isResourcesActive = resourceNavItems.some((item) => isActive(item.prefix));
 ---
 
 <div class="header">
@@ -43,7 +73,7 @@ const isMoreActive = secondaryNavItems.some((item) => isActive(item.prefix));
 	</div>
 	<nav class="main-nav sl-hidden md:sl-flex print:hidden" aria-label={pickLabel(uiLabels.mainNav, lang)}>
 		{
-			primaryNavItems.map((item) => (
+			leadingPrimaryNavItems.map((item) => (
 				<a
 					href={localizeHref(item)}
 					aria-current={isActive(item.prefix) ? 'page' : undefined}
@@ -53,14 +83,44 @@ const isMoreActive = secondaryNavItems.some((item) => isActive(item.prefix));
 			))
 		}
 		{
-			secondaryNavItems.length > 0 && (
-				<details class:list={{ 'more-menu': true, 'is-active': isMoreActive }}>
+			capabilityNavItems.length > 0 && (
+				<details class:list={{ 'more-menu': true, 'is-active': isCapabilitiesActive }}>
 					<summary>
-						<span>{pickLabel(uiLabels.more, lang)}</span>
+						<span>{pickLabel(uiLabels.capabilities, lang)}</span>
 						<Icon name="down-caret" aria-hidden="true" />
 					</summary>
 					<div class="more-menu__panel">
-						{secondaryNavItems.map((item) => (
+						{capabilityNavItems.map((item) => (
+							<a
+								href={localizeHref(item)}
+								aria-current={isActive(item.prefix) ? 'page' : undefined}
+							>
+								{pickLabel(item.label, lang)}
+							</a>
+						))}
+					</div>
+				</details>
+			)
+		}
+		{
+			trailingPrimaryNavItems.map((item) => (
+				<a
+					href={localizeHref(item)}
+					aria-current={isActive(item.prefix) ? 'page' : undefined}
+				>
+					{pickLabel(item.label, lang)}
+				</a>
+			))
+		}
+		{
+			resourceNavItems.length > 0 && (
+				<details class:list={{ 'more-menu': true, 'is-active': isResourcesActive }}>
+					<summary>
+						<span>{pickLabel(uiLabels.resources, lang)}</span>
+						<Icon name="down-caret" aria-hidden="true" />
+					</summary>
+					<div class="more-menu__panel">
+						{resourceNavItems.map((item) => (
 							<a
 								href={localizeHref(item)}
 								aria-current={isActive(item.prefix) ? 'page' : undefined}

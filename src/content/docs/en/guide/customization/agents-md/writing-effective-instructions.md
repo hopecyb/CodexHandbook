@@ -155,6 +155,20 @@ Good project instructions are not about volume—they make key constraints, key 
 - [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
 - [Define Done](/prompts/define-done/)
 
+## From one task to a project rule
+
+Not every good prompt belongs directly in `AGENTS.md`. First decide which layer should own it.
+
+| Repeated content | Better place |
+|---|---|
+| “Do not edit generated directories” | `AGENTS.md` prohibition |
+| “Review every PR in this fixed format” | Skill or prompt template |
+| “Format files after writing” | Hook |
+| “Read Linear/Jira before coding” | MCP + matching Skill |
+| “I prefer Chinese explanations” | Memory or personal preference |
+
+`AGENTS.md` is best for long-lived, shared, verifiable rules. Process content can move to Skills; automatic checks to Hooks; external access to MCP.
+
 ---
 
 **Status:** verified  

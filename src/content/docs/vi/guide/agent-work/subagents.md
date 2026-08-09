@@ -42,6 +42,21 @@ Lúc đó tách thành Subagent thường ổn hơn để thread chính vừa lo
 | Nghiên cứu song song hai phương án kỹ thuật | Tác vụ con phụ thuộc mạnh việc sửa loại trừ trên cùng một tệp |
 | Phân tích chỉ đọc lâu, tránh làm bẩn ngữ cảnh chính | «Xem tạm» không có artifact giao rõ |
 
+## Vai trò subagent đáng chuẩn hóa
+
+Từ các lần ủy quyền một lần, thứ đáng giữ lại không phải là “một Agent vạn năng”, mà là vai trò có ranh giới rõ và định dạng bàn giao ổn định.
+
+| Vai trò | Artifact mạnh | Ràng buộc nên có |
+|---|---|---|
+| Người review mã | Vấn đề theo mức độ, vị trí tệp, test còn thiếu | Mặc định chỉ đọc; không sửa nếu chưa yêu cầu |
+| Kỹ sư kiểm thử | Lỗ hổng coverage, test nên bổ sung, lệnh cần chạy | Mỗi lần chỉ một package hoặc workflow |
+| Người viết tài liệu | Mô tả API, hướng dẫn migration, guide người dùng | Bám mã nguồn và văn phong sẵn có |
+| Debugger | Bước tái hiện, nguyên nhân nghi ngờ, kế hoạch kiểm chứng | Kết luận phải dựa trên log, test hoặc đường mã |
+| Người review bảo mật | Điểm đe dọa, đường vượt quyền, rủi ro secret | Chỉ đọc, phạm vi rõ |
+| Người phân tích hiệu năng | Giả thuyết nút thắt, kế hoạch đo, đề xuất ít rủi ro | Cần benchmark hoặc thử nghiệm tái hiện được |
+
+Với tác vụ có hiện thực, nên yêu cầu subagent trả về “kế hoạch patch” trước. Hợp nhất và kiểm chứng cuối cùng vẫn thuộc về luồng chính.
+
 ## Hiểu lầm thường gặp
 
 ### 1. Subagent không phải càng nhiều càng tốt

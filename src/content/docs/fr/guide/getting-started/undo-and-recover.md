@@ -18,6 +18,19 @@ Lorsque les résultats dépassent la portée ou que la qualité est faible :
 
 La prévention vaut mieux que la récupération : petite portée de fichiers, interdictions explicites, plan avant exécution.
 
+## Utiliser les points de récupération comme outil d’exploration
+
+La récupération ne sert pas seulement après une erreur. Elle aide aussi avant d'explorer plusieurs options.
+
+Bons moments pour créer un point de récupération :
+
+- Comparer deux directions d'implémentation
+- Demander une refactorisation large à un Agent
+- Tester scripts d'automatisation ou remplacements en lot
+- Penser que le besoin changera bientôt
+
+Rythme plus sûr : confirmer l'état sûr, demander les fichiers affectés, créer un point de récupération ou vérifier Git, modifier petit, relire diff et vérification, puis garder, revenir ou essayer une autre piste.
+
 ---
 
 **Statut :** review  

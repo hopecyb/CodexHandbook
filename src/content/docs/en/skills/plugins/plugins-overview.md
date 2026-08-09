@@ -57,6 +57,27 @@ Plugin package
 
 Plugin mainly solves **distribution and governance**—not a day-one Codex requirement.
 
+## Bundles that fit Plugin
+
+Plugin is most useful when several capabilities need to ship together.
+
+| Team bundle | May include |
+|---|---|
+| PR review pack | Review Skill, read-only GitHub MCP, review template, risk Hook |
+| Docs maintenance pack | Documentation Skill, glossary, link-check Hook, release-note template |
+| Design collaboration pack | Design connector, screenshot/annotation Skill, permission note, examples |
+| Security inspection pack | Read-only review Skill, secret-scan Hook, audit log config |
+
+If it is one personal script, keep it simple. If the team repeatedly installs, upgrades, and revokes a group of capabilities, package it as a Plugin.
+
+## Before packaging
+
+- Is this a stable team workflow or a temporary experiment?
+- Which parts are Skill, MCP, and Hook?
+- Can the permission statement be understood in one minute?
+- Can failed upgrades or bad installs roll back?
+- How are authorizations revoked when people leave or projects end?
+
 ## Install and manage (conceptual)
 
 1. Choose Plugin from **official marketplace or team-approved list**
@@ -87,7 +108,7 @@ Extensions the team can maintain, reclaim, and audit suit long-term enablement.
 - Revoke connector auth on offboarding or role change
 - Layer with [permissions and approvals](/guide/foundations/permissions-and-approvals/)—do not assume Plugin brings its own security
 
-## Compared to Claude Code / other ecosystems
+## Compared to other Agent ecosystems
 
 "Plugin" means different things across products. Compare: **what is bundled, permission model, open source auditable or not**—see [feature comparison](/guide/reference/feature-comparison/).
 

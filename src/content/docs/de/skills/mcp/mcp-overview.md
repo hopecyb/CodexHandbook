@@ -112,6 +112,20 @@ Enterprise: Roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
 
 Schritte: [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/)
 
+## Mit nur Lesen beginnen
+
+Sobald MCP ein echtes System berührt, gehört es zur Kette aus Berechtigung, Daten und Audit. Sicherer ist: erst Testdaten, dann Teamvalidierung nur lesend, dann wenige rücksetzbare Schreibaktionen mit Freigabe, später Rollen, Audit und widerrufbare Auth.
+
+Kommt der Wert eines Servers aus Schreibrechten, trennen Sie zuerst Lese- und Schreibwerkzeuge und geben Sie ihnen unterschiedliche Freigaben.
+
+## Checkliste vor der Anbindung
+
+- Welche Werkzeuge werden exponiert? Gibt es Schreibaktionen?
+- Wo liegen Zugangsdaten, und sind sie pro Person/Projekt/Umgebung widerrufbar?
+- Können Logs Kundendaten, interne Dokumente oder Secret-Fragmente enthalten?
+- Wurde ein einzelner Toolaufruf im Testprojekt geprüft?
+- Haben Schreibaktionen Bestätigung, Rollback und Auditlog?
+
 ## Häufige Fehler
 
 - MCP-Server „zur Entwicklung“ zu hohe Berechtigung

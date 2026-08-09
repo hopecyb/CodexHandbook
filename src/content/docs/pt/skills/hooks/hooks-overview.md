@@ -86,6 +86,27 @@ Não empilhe raciocínio complexo aqui.
 3. **Log de conformidade**: quem, quando, em qual repositório fez escrita (com mascaramento)
 4. **Alinhamento com CI**: regras do Hook local e do GitHub Action com a mesma origem, se possível
 
+## Guardrails para começar
+
+Hook deve começar estreito e determinístico, não como um grande “juiz inteligente”.
+
+| Padrão Hook | Primeira versão | Versão madura |
+|---|---|---|
+| Auditoria de comandos | Registar comando, hora, diretório | Alertar ou pedir confirmação em comandos de risco |
+| Scan de secrets | Avisar ao editar `.env`, key files ou tokens suspeitos | Bloquear e indicar tratamento |
+| Formatação | Reportar desvios | Chamar o mesmo formatter da CI |
+| Dependências | Pedir revisão ao mudar ficheiros de pacotes | Ligar política de vulnerabilidades/licenças |
+| Resumo de sessão | Registar ficheiros e comandos de verificação | Alimentar handoff ou template PR |
+
+Um bom Hook falha de forma aborrecida: mensagem clara, raio pequeno, bypass registado.
+
+## Ordem de adoção
+
+1. Primeiro registar
+2. Depois avisar só riscos de alta confiança
+3. Bloquear apenas regras determinísticas e aceites
+4. Reutilizar CI para não separar checks locais e remotos
+
 ## Quando Hook é adequado
 
 Se uma checagem cumprir estes dois pontos, cabe bem em Hook:

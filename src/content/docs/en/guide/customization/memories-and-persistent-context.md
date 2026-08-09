@@ -78,6 +78,21 @@ in it long term.
 | `AGENTS.md` | All repo collaborators | Git PR |
 | Project configuration | By configuration layer | Files + managed policy |
 
+## How to layer information
+
+Memory gets messy when information with different lifetimes and visibility is put in the same place.
+
+| Information type | Better home |
+|---|---|
+| Personal explanation preference | Memory |
+| Team-wide rule | `AGENTS.md` or project config |
+| Directory-specific convention | Directory-level project instructions |
+| Temporary task goal | Current prompt or issue |
+| Reusable steps | Skill or prompt template |
+| Automatic check | Hook |
+
+Ask: who must see it, how long will it last, and does it need code review? Team agreements belong in the repo; personal habits fit memory.
+
 ## Recommended Usage
 
 1. **Write into the repo first**: test commands, directory structure, no push—these should not live only in memory

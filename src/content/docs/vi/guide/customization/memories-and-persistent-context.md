@@ -78,6 +78,21 @@ cho nó lưu dài hạn.
 | `AGENTS.md` | Mọi cộng tác viên kho | Git PR |
 | Cấu hình dự án | Theo tầng cấu hình | Tệp + chiến lược quản trị |
 
+## Cách phân tầng thông tin
+
+Bộ nhớ trở nên rối không phải vì bản thân tính năng, mà vì ta nhét thông tin có tuổi thọ và độ hiển thị khác nhau vào cùng một chỗ.
+
+| Loại thông tin | Nên đặt ở |
+|---|---|
+| Sở thích giải thích cá nhân | Bộ nhớ |
+| Quy tắc nhóm phải cùng tuân thủ | `AGENTS.md` hoặc cấu hình dự án |
+| Quy ước riêng của thư mục | Chỉ thị dự án cấp thư mục |
+| Mục tiêu tạm thời của một tác vụ | Prompt hiện tại hoặc issue |
+| Bước làm cần tái dùng | Skill hoặc mẫu Prompt |
+| Kiểm tra phải tự chạy | Hook |
+
+Hãy hỏi: ai cần thấy, thông tin tồn tại bao lâu, có cần code review không. Đồng thuận nhóm nên ở repo; thói quen cá nhân mới hợp với bộ nhớ.
+
 ## Cách dùng khuyến nghị
 
 1. **Viết vào kho trước**: lệnh kiểm thử, cấu trúc thư mục, cấm push — những thứ này không nên chỉ tồn tại trong bộ nhớ

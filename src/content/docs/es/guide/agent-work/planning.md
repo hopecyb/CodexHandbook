@@ -131,6 +131,18 @@ Un hábito de colaboración importante es separar ambos:
 
 Si durante la ejecución cambia la premisa, vuelve al plan; no fuerces. Ver [Progreso y reorientación](/guide/agent-work/progress-and-steering/).
 
+## En tareas de alto riesgo, añade tres puntos
+
+Si la tarea toca muchos archivos, sistemas externos, permisos, automatización o reglas de equipo, el plan debe añadir:
+
+| Punto extra | Por qué importa |
+|---|---|
+| Límite de permisos | Qué es solo lectura y qué requiere confirmación humana |
+| Forma de recuperación | Cómo volver a un estado seguro si el camino era erróneo |
+| Despliegue por fases | Validar antes en carpeta de prueba, proyecto ejemplo o alcance pequeño |
+
+Pide el plan por fases: análisis solo lectura, cambio mínimo, verificación y rollback. Cualquier escritura externa o masiva debe listarse antes, no ejecutarse directamente.
+
 ## Errores frecuentes
 
 - El plan no tiene método de verificación

@@ -131,6 +131,18 @@ Wichtige Kollaborationsgewohnheit:
 
 Ändern sich Prämissen unterwegs → zurück zur Planung, nicht durchbrechen. Siehe [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/).
 
+## Hochrisiko-Pläne brauchen drei Zusatzpunkte
+
+Wenn eine Aufgabe viele Dateien, externe Systeme, Berechtigungen, Automatisierungsskripte oder Teamregeln berührt, sollte der Plan zusätzlich enthalten:
+
+| Zusatzpunkt | Warum wichtig |
+|---|---|
+| Berechtigungsgrenze | Was nur lesend ist und was menschliche Bestätigung braucht |
+| Wiederherstellung | Wie man bei falscher Richtung in einen sicheren Zustand zurückkehrt |
+| Stufenweiser Rollout | Erst in Testordner, Beispielprojekt oder kleinem Umfang prüfen |
+
+Fordern Sie Phasen an: nur lesende Analyse, minimale Änderung, Verifikation, Rollback. Externe oder massenhafte Schreibaktionen zuerst auflisten, nicht direkt ausführen.
+
 ## Häufige Fehler
 
 - Plan ohne Überprüfung

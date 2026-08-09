@@ -40,6 +40,21 @@ La plantilla es un andamiaje, no una respuesta tipo.
 | [Investigar](/prompts/templates/research/) | Investigación y comparación con citas |
 | [Automatizar](/prompts/templates/automate/) | Tareas repetidas, scripts y flujos desatendidos |
 
+## De plantilla a workflow
+
+Algunos Prompts se usan una sola vez; otros se repiten tanto que conviene estabilizarlos.
+
+| Tarea repetida | Empieza como | Cuando sea estable, pasa a |
+|---|---|---|
+| Preparar PR | Plantilla de revisión/modificación | Skill con checklist fijo |
+| Generar docs de API | Plantilla de crear/modificar | Skill + script de documentación |
+| Ampliar cobertura de tests | Plantilla de modificación | Skill + comandos de test acordados |
+| Investigar rendimiento | Plantilla de diagnóstico | Subagent o Skill específico |
+| Revisar formato tras escribir archivos | No encaja solo como plantilla | Hook |
+| Leer tickets externos antes de tocar código | Plantilla de investigación | MCP + Skill |
+
+La plantilla encaja cuando una persona inicia la tarea; Skill cuando el proceso se repite; Hook cuando el chequeo debe dispararse solo; MCP cuando hace falta acceder a sistemas externos.
+
 ## Ideas erróneas habituales
 
 ### 1. La plantilla se copia tal cual

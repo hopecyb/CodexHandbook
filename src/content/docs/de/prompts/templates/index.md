@@ -38,6 +38,21 @@ Vorlagen sind Gerüst, keine Musterlösung.
 | [Recherchieren](/prompts/templates/research/) | Recherche und Vergleich mit Quellen |
 | [Automatisieren](/prompts/templates/automate/) | Wiederholaufgaben, Skripte, unbeaufsichtigte Flows |
 
+## Von Vorlage zu Workflow
+
+Manche Prompts werden nur einmal gebraucht. Andere wiederholen sich so oft, dass sie stabilisiert werden sollten.
+
+| Wiederkehrende Aufgabe | Zuerst als | Stabil später als |
+|---|---|---|
+| PR-Vorbereitung | Review-/Änderungsvorlage | Skill mit fester Checkliste |
+| API-Dokumentation erzeugen | Erstell-/Änderungsvorlage | Skill + Dokumentationsskript |
+| Testabdeckung erweitern | Änderungsvorlage | Skill + vereinbarte Testbefehle |
+| Performance untersuchen | Diagnosevorlage | Subagent oder Spezial-Skill |
+| Nach jedem Schreiben Format prüfen | Nicht nur Vorlage | Hook |
+| Vor Codeänderung externe Tickets lesen | Recherchevorlage | MCP + Skill |
+
+Vorlagen passen zu manuell gestarteten Aufgaben; Skills zu wiederholten Abläufen; Hooks zu automatischen Prüfungen an festen Punkten; MCP zu externen Systemen.
+
 ## Häufige Irrtümer
 
 ### 1. Vorlage = 1:1 kopieren

@@ -38,6 +38,21 @@ Templates are scaffolding, not answer keys.
 | [Research](/prompts/templates/research/) | Investigation and comparison with citations |
 | [Automate](/prompts/templates/automate/) | Repeatable tasks, scripts, unattended flows |
 
+## From template to workflow
+
+Some prompts are one-off. Others repeat often enough that they should be stabilized.
+
+| Repeating task | Start as | Upgrade to when stable |
+|---|---|---|
+| PR preparation | Review/change template | Skill with a fixed checklist |
+| API docs generation | Create/change template | Skill + documentation script |
+| Expanding test coverage | Change template | Skill + agreed test commands |
+| Performance investigation | Diagnose template | Subagent or focused Skill |
+| Check formatting every time files change | Not a template problem | Hook |
+| Read external tickets before coding | Research template | MCP + Skill |
+
+Templates fit human-initiated tasks; Skills fit repeated processes; Hooks fit automatic checks at fixed points; MCP fits access to external systems.
+
 ## Common misconceptions
 
 ### 1. Templates are copy-paste artifacts

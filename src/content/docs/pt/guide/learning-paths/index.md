@@ -37,6 +37,23 @@ Este capítulo não acrescenta conhecimento novo; ajuda-te a evitar desvios.
 - [Desenvolvedor](/guide/learning-paths/developer/)
 - [Equipa](/guide/learning-paths/team/)
 
+## Percurso de operador avançado
+
+Se já consegues concluir pequenas tarefas, o passo seguinte não é decorar mais comandos, mas aprender a combinar várias capacidades em workflows estáveis.
+
+| Passo | Tema | Ler primeiro |
+|---|---|---|
+| 1 | Entradas rápidas | [Comandos slash e entradas rápidas](/guide/reference/slash-commands/) |
+| 2 | Contexto duradouro | [AGENTS.md](/guide/customization/agents-md/) e [Memórias e contexto persistente](/guide/customization/memories-and-persistent-context/) |
+| 3 | Workflows reutilizáveis | [Visão geral de Skills](/skills/overview/) e [Anatomia de Skill](/skills/skill-anatomy/) |
+| 4 | Subtarefas isoladas | [Subagents](/guide/agent-work/subagents/) e [Coordenação multi-agent](/cases/workflows/multi-agent-coordination/) |
+| 5 | Sistemas externos | [Visão geral de MCP](/skills/mcp/mcp-overview/) |
+| 6 | Guardrails automáticos | [Visão geral de Hooks](/skills/hooks/hooks-overview/) |
+| 7 | Distribuição em equipa | [Visão geral de Plugins](/skills/plugins/plugins-overview/) |
+| 8 | Recuperação e revisão | [Desfazer e recuperar](/guide/getting-started/undo-and-recover/) e [Rever diffs](/guide/quality/review-diffs/) |
+
+Este percurso ajuda a transformar “às vezes peço ajuda ao Codex” em “a equipa tem um pequeno sistema repetível”: instruções de projeto definem regras, Skills definem métodos, MCP fornece ferramentas externas, subagents dividem trabalho delimitado, Hooks protegem pontos-chave e Plugins empacotam tudo para outras pessoas.
+
 ## Mal-entendidos frequentes
 
 ### 1. Percursos e o texto do manual são dois conteúdos duplicados

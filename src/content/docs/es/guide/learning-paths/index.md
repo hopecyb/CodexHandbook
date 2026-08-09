@@ -37,6 +37,23 @@ Este capítulo no aporta conocimiento nuevo; ayuda a evitar rodeos.
 - [Desarrollador](/guide/learning-paths/developer/)
 - [Equipo](/guide/learning-paths/team/)
 
+## Ruta de operador avanzado
+
+Si ya puedes completar tareas pequeñas, el siguiente paso no es memorizar más comandos, sino aprender a combinar capacidades en flujos de trabajo estables.
+
+| Paso | Tema | Lee primero |
+|---|---|---|
+| 1 | Entradas rápidas | [Comandos slash y accesos rápidos](/guide/reference/slash-commands/) |
+| 2 | Contexto duradero | [AGENTS.md](/guide/customization/agents-md/) y [Memorias y contexto persistente](/guide/customization/memories-and-persistent-context/) |
+| 3 | Flujos reutilizables | [Resumen de Skills](/skills/overview/) y [Anatomía de un Skill](/skills/skill-anatomy/) |
+| 4 | Subtareas aisladas | [Subagents](/guide/agent-work/subagents/) y [Coordinación multi-agent](/cases/workflows/multi-agent-coordination/) |
+| 5 | Sistemas externos | [Resumen de MCP](/skills/mcp/mcp-overview/) |
+| 6 | Guardarraíles automáticos | [Resumen de Hooks](/skills/hooks/hooks-overview/) |
+| 7 | Distribución de equipo | [Resumen de Plugins](/skills/plugins/plugins-overview/) |
+| 8 | Recuperación y revisión | [Deshacer y recuperar](/guide/getting-started/undo-and-recover/) y [Revisar diffs](/guide/quality/review-diffs/) |
+
+Esta ruta sirve para pasar de “a veces pido ayuda a Codex” a “el equipo tiene un sistema pequeño y repetible”: las instrucciones de proyecto fijan reglas, los Skills fijan métodos, MCP ofrece herramientas externas, los subagents dividen trabajo acotado, los Hooks protegen puntos clave y los Plugins empaquetan todo para otros.
+
 ## Malentendidos frecuentes
 
 ### 1. Las rutas de aprendizaje y el cuerpo del manual son dos conjuntos de contenido duplicado

@@ -155,6 +155,20 @@ Una buena instrucción de proyecto no se mide por cuánto escribe, sino por si l
 - [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
 - [Definir hecho](/prompts/define-done/)
 
+## De una tarea a una regla de proyecto
+
+No todo buen Prompt debe ir directamente a `AGENTS.md`. Primero decide qué capa debe poseerlo.
+
+| Contenido repetido | Mejor lugar |
+|---|---|
+| “No tocar directorios generados” | Prohibición en `AGENTS.md` |
+| “Revisar cada PR con este formato” | Skill o plantilla de Prompt |
+| “Formatear archivos tras escribir” | Hook |
+| “Leer Linear/Jira antes de programar” | MCP + Skill correspondiente |
+| “Prefiero explicaciones en chino” | Memoria o preferencia personal |
+
+`AGENTS.md` encaja mejor con reglas duraderas, compartidas y verificables. Los procesos pueden pasar a Skills; los chequeos automáticos, a Hooks; el acceso externo, a MCP.
+
 ---
 
 **Estado:** verificado  

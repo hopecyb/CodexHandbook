@@ -131,6 +131,18 @@ Um hábito importante de colaboração é separar os dois:
 
 Se na execução a premissa mudar, volte ao plano — não force. Ver [Progresso e reorientação](/guide/agent-work/progress-and-steering/).
 
+## Em tarefas de alto risco, acrescente três itens
+
+Se a tarefa toca muitos ficheiros, sistemas externos, permissões, automação ou regras de equipa, o plano também deve declarar:
+
+| Item extra | Por que importa |
+|---|---|
+| Limite de permissões | O que é só leitura e o que exige confirmação humana |
+| Recuperação | Como voltar a um estado seguro se o caminho estiver errado |
+| Rollout faseado | Validar primeiro em pasta de teste, projeto exemplo ou escopo pequeno |
+
+Pede o plano por fases: análise só leitura, alteração mínima, verificação e rollback. Escritas externas ou em lote devem ser listadas antes, não executadas diretamente.
+
 ## Erros habituais
 
 - Plano sem forma de Verificação

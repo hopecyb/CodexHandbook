@@ -66,6 +66,19 @@ Các cách làm sau sẽ hạ rõ xác suất «sửa sai rồi khó thu dọn»
 
 Làm sai bản thân không đáng sợ. Chưa nhìn rõ phạm vi thay đổi đã sửa tiếp mới phiền hơn.
 
+## Xem điểm khôi phục như công cụ khám phá
+
+Khôi phục không chỉ để chữa lỗi sau khi xảy ra. Nó cũng hữu ích trước khi thử hướng khác.
+
+Nên tạo điểm khôi phục khi:
+
+- So sánh hai hướng hiện thực
+- Nhờ Agent refactor phạm vi rộng
+- Thử script tự động hóa hoặc thay thế hàng loạt
+- Không chắc yêu cầu có sớm đổi hướng không
+
+Nhịp an toàn hơn: xác nhận trạng thái an toàn hiện tại, yêu cầu Codex nêu file sẽ ảnh hưởng, tạo điểm khôi phục hoặc xác nhận trạng thái Git, sửa phạm vi nhỏ, review diff và kết quả kiểm chứng, rồi quyết định giữ, rollback hoặc thử hướng khác.
+
 ---
 
 **Trạng thái:** verified  

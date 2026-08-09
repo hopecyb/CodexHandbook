@@ -76,6 +76,21 @@ Auch wenn ein Client Erinnerung bietet, sollten Sie nicht langfristig speichern 
 | `AGENTS.md` | Alle Repo-Mitwirkenden | Git-PR |
 | Projektkonfiguration | Nach Config-Schicht | Datei + Managed Policy |
 
+## Informationen richtig schichten
+
+Erinnerung wird unübersichtlich, wenn Inhalte mit unterschiedlicher Lebensdauer und Sichtbarkeit am selben Ort landen.
+
+| Information | Besserer Ort |
+|---|---|
+| Persönliche Erklärpräferenz | Erinnerung |
+| Teamregel | `AGENTS.md` oder Projektkonfiguration |
+| Verzeichniskonvention | Verzeichnisnahe Projektanweisung |
+| Temporäres Aufgabenziel | Aktueller Prompt oder Issue |
+| Wiederverwendbare Schritte | Skill oder Prompt-Vorlage |
+| Automatische Prüfung | Hook |
+
+Fragen Sie: Wer muss es sehen, wie lange gilt es, braucht es Code Review? Teamkonsens gehört ins Repo; persönliche Gewohnheiten in die Erinnerung.
+
 ## Empfohlene Nutzung
 
 1. **Zuerst ins Repo schreiben**: Testbefehle, Verzeichnisstruktur, Push-Verbote — nicht nur in Erinnerung

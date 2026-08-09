@@ -57,6 +57,27 @@ Gói Plugin
 
 Plugin chủ yếu giải"**phân phối và quản trị**"— không phải thứ bắt buộc lần đầu dùng Codex.
 
+## Tổ hợp phù hợp đóng gói thành Plugin
+
+Plugin có giá trị nhất khi nhiều năng lực cần được giao cùng nhau.
+
+| Gói nhóm | Có thể gồm |
+|---|---|
+| Gói review PR | Skill review, GitHub MCP chỉ đọc, mẫu review, Hook rủi ro |
+| Gói bảo trì tài liệu | Skill tạo tài liệu, bảng thuật ngữ, Hook kiểm link, mẫu release note |
+| Gói cộng tác thiết kế | Connector thiết kế, Skill chụp/ghi chú ảnh, mô tả quyền, ví dụ nhóm |
+| Gói kiểm tra bảo mật | Skill review chỉ đọc, Hook quét secret, cấu hình audit log |
+
+Nếu chỉ là script cá nhân dùng một lần, đừng làm Plugin. Nếu nhóm lặp lại việc cài, nâng cấp, thu hồi một nhóm năng lực, hãy đóng gói.
+
+## Trước khi đóng gói
+
+- Đây là workflow nhóm ổn định hay thử nghiệm tạm thời?
+- Phần nào là Skill, phần nào là MCP, phần nào là Hook?
+- Mô tả quyền có dễ hiểu trong 1 phút không?
+- Khi nâng cấp lỗi hoặc cài nhầm, có rollback không?
+- Khi nghỉ việc, đổi vai trò, kết thúc dự án, thu hồi ủy quyền thế nào?
+
 ## Cài và quản lý (khái niệm)
 
 1. Chọn Plugin từ **marketplace chính thức hoặc danh sách nhóm phê duyệt**
@@ -87,7 +108,7 @@ Chỉ những mở rộng nhóm bảo trì, thu hồi, kiểm toán được m�
 - Khi nghỉ việc hoặc chuyển vai thu hồi ủy quyền connector
 - Cộng với [Quyền và Phê duyệt](/guide/foundations/permissions-and-approvals/) — đừng giả định Plugin tự mang bảo mật
 
-## So với Claude Code / hệ sinh thái khác
+## So với hệ sinh thái Agent khác
 
 "Plugin"ở các sản phẩm khác không hoàn toàn cùng nghĩa. Khi so hãy xem: **đóng gói gì, mô hình Quyền, có mã nguồn mở để kiểm toán không** — xem [đối chiếu tính năng](/guide/reference/feature-comparison/).
 

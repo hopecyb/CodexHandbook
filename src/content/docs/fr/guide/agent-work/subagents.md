@@ -40,6 +40,21 @@ Alors un sous-agent bat généralement le fil principal jonglant détail global 
 | Recherche parallèle sur deux options techniques | Sous-Tâches nécessitent des éditions mutuellement exclusives du même fichier |
 | Analyse longue en lecture seule sans polluer le Contexte principal | Pas de livrable clair — « juste regarder » |
 
+## Rôles de subagent à pérenniser
+
+Dans les délégations ponctuelles, ce qui vaut la peine d'être conservé, ce sont les rôles avec frontières nettes et format de rendu stable.
+
+| Rôle | Livrable fort | Contrainte recommandée |
+|---|---|---|
+| Relecteur code | Problèmes par gravité, fichier, tests manquants | Lecture seule par défaut ; ne corrige pas sans demande |
+| Ingénieur tests | Trous de couverture, cas à ajouter, commandes | Un paquet ou workflow à la fois |
+| Rédacteur documentation | API, migration, guide utilisateur | Relié au code et au style existant |
+| Debugger | Reproduction, cause probable, plan de vérification | Conclusion fondée sur logs, tests ou chemin code |
+| Relecteur sécurité | Menaces, chemins d'abus, risques secrets | Lecture seule, périmètre clair |
+| Analyste performance | Hypothèse de goulot, mesure, optimisations peu risquées | Benchmark ou expérience reproductible requis |
+
+Pour une tâche d'implémentation, demandez d'abord un plan de patch. La fusion et la vérification finale restent dans le fil principal.
+
 ## Idées reçues courantes
 
 ### 1. Plus de sous-agents n'est pas toujours mieux

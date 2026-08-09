@@ -38,6 +38,21 @@ C'est un échafaudage, pas une réponse type.
 | [Rechercher](/prompts/templates/research/) | enquête et comparaison avec sources |
 | [Automatiser](/prompts/templates/automate/) | tâches répétées, scripts, flux sans surveillance |
 
+## Du modèle au workflow
+
+Certains prompts ne servent qu'une fois. D'autres reviennent assez souvent pour être stabilisés.
+
+| Tâche répétée | D'abord sous forme de | Une fois stable |
+|---|---|---|
+| Préparation de PR | Modèle de revue/modification | Skill avec checklist fixe |
+| Génération de docs API | Modèle création/modification | Skill + script documentaire |
+| Extension de couverture de tests | Modèle de modification | Skill + commandes de test convenues |
+| Analyse de performance | Modèle diagnostic | Subagent ou Skill dédié |
+| Vérifier le format à chaque écriture | Pas seulement un modèle | Hook |
+| Lire des tickets externes avant de coder | Modèle de recherche | MCP + Skill |
+
+Le modèle convient aux tâches lancées par une personne ; le Skill aux processus répétés ; le Hook aux contrôles automatiques ; MCP à l'accès aux systèmes externes.
+
 ## Idées reçues
 
 ### 1. Copier tel quel

@@ -86,6 +86,27 @@ Do not add another layer of heavy reasoning here.
 3. **Compliance logging**: Who, when, write actions on which repo (redacted)
 4. **Align with CI**: Local Hook rules share source with GitHub Action when possible
 
+## Candidate guardrails
+
+Start with narrow, observable checks before adding blocking behavior:
+
+| Hook pattern | First version | Mature version |
+|---|---|---|
+| Command audit | Log shell commands with timestamp and working directory | Alert on privileged or unusual commands |
+| Secret scan | Warn on edits touching `.env`, key files, or token-looking strings | Block and explain the remediation path |
+| Format-on-write | Report formatting drift after generated edits | Run the same formatter used by CI |
+| Dependency check | Warn when package manifests change | Compare against an approved vulnerability or license policy |
+| Session summary | Write changed files and verification commands at session end | Feed the summary into handoff or PR templates |
+
+Good Hooks have boring failure modes: a clear message, a small scope, and a documented bypass path.
+
+## Adoption order
+
+1. Log first, so the team can see real behavior without interrupting work
+2. Warn on high-confidence problems, such as obvious secrets
+3. Block only when the rule is deterministic and already accepted by the team
+4. Reuse CI scripts where possible, so local and remote checks do not drift
+
 ## When Hooks fit
 
 A check belongs in a Hook if:

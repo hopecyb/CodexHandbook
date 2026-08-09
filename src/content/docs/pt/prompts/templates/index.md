@@ -40,6 +40,21 @@ O template é andaime, não resposta-padrão.
 | [Pesquisar](/prompts/templates/research/) | Investigação e comparação com citações |
 | [Automatizar](/prompts/templates/automate/) | Tarefas repetidas, scripts e fluxos sem supervisão |
 
+## De template a workflow
+
+Alguns Prompts bastam uma vez; outros repetem-se e devem ser estabilizados.
+
+| Tarefa repetida | Começa como | Quando estabilizar, evolui para |
+|---|---|---|
+| Preparar PR | Template de revisão/alteração | Skill com checklist fixo |
+| Gerar docs de API | Template de criação/alteração | Skill + script de documentação |
+| Aumentar cobertura de testes | Template de alteração | Skill + comandos de teste acordados |
+| Investigar performance | Template de diagnóstico | Subagent ou Skill dedicado |
+| Verificar formato sempre que há escrita | Não é só template | Hook |
+| Ler tickets externos antes de alterar código | Template de pesquisa | MCP + Skill |
+
+Template serve para tarefas iniciadas por pessoas; Skill para processos repetidos; Hook para verificações automáticas; MCP para acesso a sistemas externos.
+
 ## Ideias erradas habituais
 
 ### 1. Template = copiar tal e qual

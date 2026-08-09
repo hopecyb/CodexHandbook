@@ -42,6 +42,21 @@ Dann oft stabiler als Hauptthread gleichzeitig Global und Detail.
 | Zwei Tech-Optionen parallel recherchieren | Teilaufgaben mit mutualexklusiven Edits derselben Datei |
 | Lange Nur-Lese-Analyse ohne Hauptkontext-Verschmutzung | „Mal schauen“ ohne klares Lieferobjekt |
 
+## Wiederverwendbare Subagent-Rollen
+
+Aus Einmal-Delegationen sollten vor allem Rollen mit klaren Grenzen und stabilem Ausgabeformat entstehen.
+
+| Rolle | Starke Ausgabe | Empfohlene Grenze |
+|---|---|---|
+| Code-Reviewer | Probleme nach Schwere, Datei, fehlende Tests | Standardmäßig nur lesen; nicht reparieren, außer angefragt |
+| Test Engineer | Abdeckungslücken, Testfälle, Befehle | Ein Paket oder Workflow pro Auftrag |
+| Dokumentationsautor | API-Text, Migration, Nutzeranleitung | An Code und bestehenden Stil binden |
+| Debugger | Repro, vermutete Ursache, Verifikationsplan | Schlussfolgerung aus Logs, Tests oder Codepfad |
+| Security Reviewer | Bedrohungen, Rechtepfade, Secret-Risiken | Nur lesen, Umfang klar halten |
+| Performance-Analyst | Engpasshypothese, Messplan, risikoarme Vorschläge | Messung oder reproduzierbares Experiment verlangen |
+
+Bei Implementierungsaufgaben sollte der Subagent zuerst einen Patchplan liefern. Das Zusammenführen und die Endprüfung bleiben im Hauptthread.
+
 ## Häufige Missverständnisse
 
 ### 1. Mehr Subagents ≠ besser

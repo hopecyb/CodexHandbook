@@ -66,6 +66,19 @@ Estas práticas reduzem claramente a chance de «alterar errado e ficar difícil
 
 Errar em si não é terrível. Continuar alterando sem ver o alcance da mudança é o que complica mais.
 
+## Usar pontos de recuperação como exploração
+
+Recuperar não serve só para corrigir erros. Também ajuda antes de explorar alternativas.
+
+Bons momentos:
+
+- Comparar duas direções de implementação
+- Pedir a um Agent um refactor amplo
+- Testar scripts de automação ou substituições em lote
+- Achar que o requisito pode mudar em breve
+
+Ritmo mais seguro: confirmar estado seguro, pedir a Codex os ficheiros afetados, criar ponto de recuperação ou confirmar Git, mudar pouco, rever diff e verificação, depois manter, reverter ou tentar outro caminho.
+
 ---
 
 **Status:** verified  

@@ -43,3 +43,5 @@ dist/
 
 # Auto-generated Traditional Chinese locale (OpenCC from zh-CN root)
 src/content/docs/zh-tw/
+
+temp/

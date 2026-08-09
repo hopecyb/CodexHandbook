@@ -112,6 +112,20 @@ Kịch bản doanh nghiệp xem lộ trình `11-team-enterprise/security/plugin-
 
 Bước thao tác: [Nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/)
 
+## Bắt đầu từ chỉ đọc
+
+Khi MCP chạm hệ thống thật, nó bước vào chuỗi quyền, dữ liệu và kiểm toán. Thứ tự an toàn hơn là: dữ liệu test trước, nhóm kiểm chứng chỉ đọc, một ít thao tác ghi có thể hoàn tác và có người duyệt, rồi mới đến quản trị với vai trò, audit và auth có thể thu hồi.
+
+Nếu giá trị của server đến từ quyền ghi cao, hãy tách công cụ đọc và công cụ ghi trước.
+
+## Checklist trước khi nối
+
+- Server expose những công cụ nào? Có thao tác ghi không?
+- Credential lưu ở đâu? Có thu hồi theo người/dự án/môi trường không?
+- Log có thể chứa dữ liệu khách hàng, tài liệu nội bộ hoặc mảnh secret không?
+- Đã thử một lời gọi công cụ trong dự án test chưa?
+- Thao tác ghi có xác nhận người, rollback và audit log không?
+
 ## Lỗi thường gặp
 
 - Cho MCP server Quyền quá cao"cho tiện phát triển"

@@ -87,6 +87,30 @@ D'abord `SKILL.md`, puis références, modèles et scripts au besoin.
 
 Exercice : [Créer votre premier Skill](/skills/create-your-first-skill/).
 
+## Du modèle au Skill
+
+Beaucoup d'équipes ne commencent pas par concevoir un Skill. Elles commencent par un prompt qu'elles copient souvent. Il peut évoluer par étapes :
+
+| Étape | Forme | Quand évoluer |
+|---|---|---|
+| Prompt ponctuel | Conversation actuelle | Usage unique |
+| Modèle | Bibliothèque de prompts ou docs d'équipe | Les tâches similaires reviennent mais les étapes bougent encore |
+| Skill fichier unique | Un `SKILL.md` | Processus stable et déclencheur clair |
+| Dossier Skill complet | `SKILL.md` + `templates/` + `references/` + `scripts/` | Format de sortie, longues références et contrôles déterministes stabilisés |
+
+Ne transformez pas chaque modèle en Skill. Gardez ceux qui se répètent, avec critères de réussite clairs et accord d'équipe.
+
+## Composants réutilisables fréquents
+
+| Composant | Utile pour |
+|---|---|
+| Instructions principales | Déclencheurs, étapes, interdits, définition de terminé |
+| Modèles | Sortie de revue PR, structure doc, rapport de risque |
+| Références | Standards de code, glossaire, règles métier, notes API |
+| Scripts | Analyse complexité, liens, couverture, formatage |
+
+Un bon Skill n'est pas juste un prompt plus long : il découpe un processus réutilisable en pièces lisibles, testables et maintenables.
+
 ---
 
 **Statut :** verified  

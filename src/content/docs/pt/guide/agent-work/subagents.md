@@ -42,6 +42,21 @@ Aí, dividir em Subagent costuma ser mais estável do que a Thread principal ger
 | Investigar em paralelo duas abordagens técnicas | Subtarefas com edição mutuamente exclusiva do mesmo ficheiro |
 | Análise só de leitura longa, sem poluir o Contexto principal | «Olhar um pouco» sem entregável claro |
 
+## Funções de subagent que vale consolidar
+
+Das delegações pontuais, vale preservar papéis com fronteiras claras e formato de entrega estável.
+
+| Função | Entrega forte | Restrição recomendada |
+|---|---|---|
+| Revisor de código | Problemas por gravidade, ficheiro, testes em falta | Só leitura por defeito; não corrige sem pedido |
+| Engenheiro de testes | Lacunas de cobertura, casos a adicionar, comandos | Um pacote ou workflow por vez |
+| Redator de documentação | API, migração, guia de utilizador | Ligado ao código e estilo existente |
+| Debugger | Reprodução, causa provável, plano de verificação | Conclusão baseada em logs, testes ou caminho de código |
+| Revisor de segurança | Ameaças, caminhos de abuso, riscos de secrets | Só leitura, escopo claro |
+| Analista de performance | Hipótese de gargalo, medição, melhorias de baixo risco | Exige benchmark ou experiência reprodutível |
+
+Em tarefas com implementação, pede primeiro um plano de patch. A integração e verificação final ficam no fio principal.
+
 ## Mal-entendidos habituais
 
 ### 1. Mais Subagents não é automaticamente melhor

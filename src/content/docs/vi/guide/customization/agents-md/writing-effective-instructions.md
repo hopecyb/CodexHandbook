@@ -155,6 +155,20 @@ Chỉ thị dự án tốt không nằm ở viết nhiều, mà ở ràng buộc
 - [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
 - [Định nghĩa hoàn thành](/prompts/define-done/)
 
+## Từ một tác vụ thành quy tắc dự án
+
+Không phải Prompt tốt nào cũng nên nhét thẳng vào `AGENTS.md`. Trước hết hãy xác định nó thuộc tầng nào.
+
+| Nội dung lặp lại | Cách lưu phù hợp hơn |
+|---|---|
+| “Không sửa thư mục generated” | Mục cấm trong `AGENTS.md` |
+| “Mỗi PR review theo định dạng cố định” | Skill hoặc mẫu Prompt |
+| “Sau khi ghi file thì tự format” | Hook |
+| “Đọc Linear/Jira trước khi code” | MCP + Skill tương ứng |
+| “Tôi thích giải thích bằng tiếng Trung” | Bộ nhớ hoặc sở thích cá nhân |
+
+`AGENTS.md` hợp nhất với quy tắc dài hạn, chia sẻ trong nhóm và kiểm chứng được. Nội dung quy trình có thể chuyển sang Skill; kiểm tra tự động giao cho Hook; truy cập hệ thống ngoài giao cho MCP.
+
 ---
 
 **Trạng thái:** verified  

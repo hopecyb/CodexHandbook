@@ -37,6 +37,23 @@ Chương này không bổ sung kiến thức mới; chủ yếu giúp bạn ít 
 - [Nhà phát triển](/guide/learning-paths/developer/)
 - [Đội](/guide/learning-paths/team/)
 
+## Lộ trình người vận hành nâng cao
+
+Nếu bạn đã hoàn thành được các tác vụ nhỏ, bước tiếp theo không phải là học thuộc thêm lệnh, mà là biết kết hợp nhiều năng lực thành workflow ổn định.
+
+| Bước | Chủ đề | Đọc trước |
+|---|---|---|
+| 1 | Lối vào nhanh | [Lệnh slash và lối vào nhanh](/guide/reference/slash-commands/) |
+| 2 | Ngữ cảnh bền vững | [AGENTS.md](/guide/customization/agents-md/) và [Bộ nhớ và ngữ cảnh bền vững](/guide/customization/memories-and-persistent-context/) |
+| 3 | Workflow tái dùng | [Tổng quan Skills](/skills/overview/) và [Cấu trúc Skill](/skills/skill-anatomy/) |
+| 4 | Tác vụ con độc lập | [Subagents](/guide/agent-work/subagents/) và [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/) |
+| 5 | Hệ thống bên ngoài | [Tổng quan MCP](/skills/mcp/mcp-overview/) |
+| 6 | Guardrail tự động | [Tổng quan Hooks](/skills/hooks/hooks-overview/) |
+| 7 | Phân phối cho nhóm | [Tổng quan Plugins](/skills/plugins/plugins-overview/) |
+| 8 | Khôi phục và review | [Hoàn tác và khôi phục](/guide/getting-started/undo-and-recover/) và [Review diff](/guide/quality/review-diffs/) |
+
+Lộ trình này phù hợp để biến “thỉnh thoảng nhờ Codex giúp” thành “một hệ thống nhỏ mà nhóm có thể lặp lại”: chỉ thị dự án định nghĩa quy tắc dài hạn, Skill định nghĩa cách làm, MCP cung cấp công cụ ngoài, subagent chia việc rõ ranh giới, Hook bảo vệ điểm quan trọng, Plugin đóng gói để phân phối.
+
 ## Hiểu nhầm thường gặp
 
 ### 1. Lộ trình học và thân bài sổ tay là hai bộ nội dung trùng

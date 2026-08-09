@@ -112,6 +112,20 @@ Cenários empresariais: roadmap `11-team-enterprise/security/plugin-and-mcp-risk
 
 Passos práticos: [Conectar um servidor MCP](/skills/mcp/connect-an-mcp-server/)
 
+## Começar só leitura
+
+Quando MCP toca um sistema real, entra na cadeia de permissões, dados e auditoria. O caminho mais seguro é: dados de teste, validação só leitura pela equipa, poucas escritas reversíveis com aprovação humana e, depois, governação com papéis, auditoria e auth revogável.
+
+Se o valor do servidor depende de escritas privilegiadas, separa primeiro ferramentas de leitura e escrita.
+
+## Checklist antes da ligação
+
+- Que ferramentas o servidor expõe? Há escrita?
+- Onde ficam as credenciais e como revogar por pessoa/projeto/ambiente?
+- Logs podem conter dados de clientes, documentos internos ou fragmentos de secret?
+- Uma chamada de ferramenta foi testada em sandbox?
+- Escritas têm confirmação humana, rollback e auditoria?
+
 ## Erros comuns
 
 - Dar Permissão alta demais ao servidor MCP «para facilitar o desenvolvimento»

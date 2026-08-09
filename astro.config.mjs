@@ -26,6 +26,16 @@ const legacyRedirects = {
 	'/pets/pets-list': '/pets/',
 	'/en/pets/pets-list': '/en/pets/',
 	'/zh-tw/pets/pets-list': '/zh-tw/pets/',
+	'/roadmap': '/ai-roadmap',
+	'/en/roadmap': '/en/ai-roadmap',
+	'/zh-tw/roadmap': '/zh-tw/ai-roadmap',
+	'/fr/roadmap': '/fr/ai-roadmap',
+	'/ja/roadmap': '/ja/ai-roadmap',
+	'/ko/roadmap': '/ko/ai-roadmap',
+	'/es/roadmap': '/es/ai-roadmap',
+	'/de/roadmap': '/de/ai-roadmap',
+	'/pt/roadmap': '/pt/ai-roadmap',
+	'/vi/roadmap': '/vi/ai-roadmap',
 };
 
 const siteUrl = 'https://codexhandbook.com';
@@ -282,6 +292,21 @@ export default defineConfig({
 						vi: 'Case thực tế',
 					},
 					items: [{ autogenerate: { directory: 'cases' } }],
+				},
+				{
+					label: 'AI 应用路线图',
+					translations: {
+						en: 'AI Roadmap',
+						'zh-tw': 'AI 應用路線圖',
+						fr: 'Feuille de route IA',
+						ja: 'AI ロードマップ',
+						ko: 'AI 로드맵',
+						es: 'Mapa de ruta de IA',
+						de: 'KI-Roadmap',
+						pt: 'Roteiro de IA',
+						vi: 'Lộ trình AI',
+					},
+					items: [{ autogenerate: { directory: 'ai-roadmap' } }],
 				},
 				{
 					label: 'Codex 宠物',

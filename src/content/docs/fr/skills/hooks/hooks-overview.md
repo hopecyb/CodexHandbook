@@ -86,6 +86,27 @@ Ne ajoutez pas une autre couche de raisonnement lourd ici.
 3. **Journalisation de conformité** : Qui, quand, actions d'écriture sur quel dépôt (masquées)
 4. **Alignement avec CI** : Règles Hook locales partagent la source avec GitHub Action quand possible
 
+## Garde-fous à commencer en premier
+
+Un Hook doit commencer étroit et déterministe, pas comme un grand « juge intelligent ».
+
+| Modèle Hook | Première version | Version mature |
+|---|---|---|
+| Audit commande | Logger commande, heure, dossier | Alerter ou demander confirmation sur commandes à risque |
+| Scan secrets | Avertir sur `.env`, fichiers key ou token probable | Bloquer et expliquer la correction |
+| Format | Signaler les écarts | Utiliser le même formatter que CI |
+| Dépendances | Demander revue sur fichiers package | Brancher politique vulnérabilités/licences |
+| Résumé session | Enregistrer fichiers et vérifications | Alimenter handoff ou modèle PR |
+
+Un bon Hook échoue de façon ennuyeuse : message clair, rayon limité, contournement journalisé.
+
+## Ordre d'adoption
+
+1. Commencer par journaliser
+2. Puis avertir seulement les risques très probables
+3. Bloquer ensuite uniquement les règles déterministes acceptées
+4. Réutiliser CI pour éviter la divergence local/distant
+
 ## Quand les Hooks conviennent
 
 Une vérification appartient à un Hook si :

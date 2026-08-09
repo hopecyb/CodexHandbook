@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1440" width="900" height="1440" role="img" aria-labelledby="title desc">
+  <title id="title">AI application engineering roadmap</title>
+  <desc id="desc">A reverse chronological vertical timeline of applied AI engineering milestones from skills back to prompt engineering.</desc>
+  <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', 'Microsoft JhengHei', 'SimHei', sans-serif; }
+    .title { fill: #111827; font-size: 32px; font-weight: 700; }
+    .subtitle { fill: #4b5563; font-size: 16px; }
+    .year { fill: #2563eb; font-size: 18px; font-weight: 700; }
+    .node-title { fill: #111827; font-size: 18px; font-weight: 700; }
+    .node-date { fill: #6b7280; font-size: 13px; }
+    .node-body { fill: #374151; font-size: 14px; }
+  </style>
+  <defs>
+    <marker id="arrow-main" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto">
+      <polygon points="0 0, 12 4.5, 0 9" fill="#2563eb"/>
+    </marker>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#111827" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1440" fill="#ffffff"/>
+  <rect x="42" y="34" width="816" height="132" rx="18" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="72" y="86" class="title">AI 应用工程路线图</text>
+  <text x="72" y="122" class="subtitle">时间倒序：从可复用工作流、可验证执行环境，回看应用工程能力如何演进。</text>
+  <text x="72" y="148" class="subtitle">纵向阅读：治理与复用 → 协同执行 → 工具协议 → 输入控制。</text>
+
+  <line x1="224" y1="218" x2="224" y2="1398" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow-main)"/>
+
+  <g transform="translate(70 332)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2026</text>
+  </g>
+  <g transform="translate(240 202)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
+    <text x="28" y="32" class="node-title">Skills（技能）</text>
+    <text x="28" y="55" class="node-date">2026-04-10 · 可复用工作流单元</text>
+    <text x="28" y="78" class="node-body">把提示、步骤、示例、脚本和资源打包，让 AI 在重复任务中稳定复用经验。</text>
+  </g>
+  <g transform="translate(240 324)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#fecaca" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#dc2626"/>
+    <text x="28" y="32" class="node-title">Harness Engineering（驾驭工程）</text>
+    <text x="28" y="55" class="node-date">2026-02-11 · 可验证执行环境</text>
+    <text x="28" y="78" class="node-body">把工具、上下文、反馈、恢复和质量门槛合成稳定的任务脚手架。</text>
+  </g>
+  <g transform="translate(240 446)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#6b7280"/>
+    <text x="28" y="32" class="node-title">OpenSpec（规范驱动）/ OpenClaw（助手网关）</text>
+    <text x="28" y="55" class="node-date">2026-01 · 规范驱动与个人助手网关</text>
+    <text x="28" y="78" class="node-body">一边把需求固化成规格工件，一边把多渠道助手接入统一网关。</text>
+  </g>
+
+  <g transform="translate(70 758)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2025</text>
+  </g>
+  <g transform="translate(240 590)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#2563eb"/>
+    <text x="28" y="32" class="node-title">Context Engineering（上下文工程）</text>
+    <text x="28" y="55" class="node-date">2025-09-29 · 上下文工程</text>
+    <text x="28" y="78" class="node-body">从“写好提示词”转向“设计模型能看到什么、按什么优先级看到”。</text>
+  </g>
+  <g transform="translate(240 712)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
+    <text x="28" y="32" class="node-title">Multi-agent（多智能体协作）</text>
+    <text x="28" y="55" class="node-date">2025-06-13 · 角色协作</text>
+    <text x="28" y="78" class="node-body">把研究、实现、审查、验证拆给不同角色，让复杂任务可并行推进。</text>
+  </g>
+  <g transform="translate(240 834)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#99f6e4" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#0d9488"/>
+    <text x="28" y="32" class="node-title">Tool Use（工具使用）</text>
+    <text x="28" y="55" class="node-date">2025-03-11 · 多工具执行</text>
+    <text x="28" y="78" class="node-body">模型开始在任务中选择工具、调用工具、读取结果，并继续下一步推理。</text>
+  </g>
+
+  <g transform="translate(70 1002)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2024</text>
+  </g>
+  <g transform="translate(240 980)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#e9d5ff" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#9333ea"/>
+    <text x="28" y="32" class="node-title">MCP（模型上下文协议）</text>
+    <text x="28" y="55" class="node-date">2024-11-25 · 工具协议</text>
+    <text x="28" y="78" class="node-body">把工具、资源、提示和上下文暴露成协议层接口，减少一次性集成成本。</text>
+  </g>
+
+  <g transform="translate(70 1168)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2023</text>
+  </g>
+  <g transform="translate(240 1102)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#fed7aa" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#f97316"/>
+    <text x="28" y="32" class="node-title">RAG（检索增强生成）</text>
+    <text x="28" y="55" class="node-date">2023-11-06 · 知识接地</text>
+    <text x="28" y="78" class="node-body">把外部资料检索进上下文，降低幻觉，把回答绑定到可追溯知识源。</text>
+  </g>
+  <g transform="translate(240 1224)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="96" rx="12" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="96" rx="5" fill="#16a34a"/>
+    <text x="28" y="32" class="node-title">Function Calling（函数调用）</text>
+    <text x="28" y="55" class="node-date">2023-06-13 · 结构化动作</text>
+    <text x="28" y="78" class="node-body">让模型不只生成文本，而是以可解析参数调用函数、API 和业务动作。</text>
+  </g>
+
+  <g transform="translate(70 1362)">
+    <rect x="0" y="0" width="140" height="42" rx="21" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text x="42" y="27" class="year">2022</text>
+  </g>
+  <g transform="translate(240 1346)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="560" height="72" rx="12" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <rect x="0" y="0" width="10" height="72" rx="5" fill="#2563eb"/>
+    <text x="28" y="30" class="node-title">Prompt Engineering（提示词工程）</text>
+    <text x="28" y="53" class="node-date">2022-11-30 · 输入控制</text>
+  </g>
+</svg>

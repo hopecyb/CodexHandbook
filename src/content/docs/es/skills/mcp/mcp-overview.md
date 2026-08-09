@@ -112,6 +112,20 @@ Escenarios empresariales: hoja de ruta `11-team-enterprise/security/plugin-and-m
 
 Pasos operativos: [Conectar un servidor MCP](/skills/mcp/connect-an-mcp-server/)
 
+## Empieza en solo lectura
+
+Cuando MCP toca un sistema real, entra en la cadena de permisos, datos y auditoría. Un camino seguro es: datos de prueba primero, validación de equipo en solo lectura, luego pocas escrituras reversibles con aprobación humana y, más tarde, gobernanza con roles, auditoría y auth revocable.
+
+Si el valor del servidor depende de escrituras de alto permiso, separa primero herramientas de lectura y escritura.
+
+## Checklist antes de conectar
+
+- ¿Qué herramientas expone el servidor? ¿Hay escritura?
+- ¿Dónde se guardan las credenciales y cómo se revocan por persona/proyecto/entorno?
+- ¿Los logs pueden contener datos de clientes, documentos internos o secretos?
+- ¿Se probó una llamada de herramienta en sandbox?
+- ¿Las escrituras tienen confirmación humana, rollback y auditoría?
+
 ## Errores habituales
 
 - Dar al servidor MCP un Permiso excesivo «por comodidad de desarrollo»

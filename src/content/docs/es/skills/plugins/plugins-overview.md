@@ -57,6 +57,27 @@ Paquete Plugin
 
 Plugin resuelve sobre todo **distribución y gobernanza**; no es imprescindible la primera vez que usas Codex.
 
+## Combinaciones que encajan como Plugin
+
+Plugin aporta más valor cuando varias capacidades deben entregarse juntas.
+
+| Paquete de equipo | Puede incluir |
+|---|---|
+| Revisión PR | Skill de revisión, MCP GitHub solo lectura, plantilla, Hook de riesgo |
+| Mantenimiento docs | Skill de documentación, glosario, Hook de links, plantilla de release notes |
+| Colaboración diseño | Conector de diseño, Skill de captura/anotación, permisos, ejemplos |
+| Inspección seguridad | Skill de revisión solo lectura, Hook de secretos, configuración de auditoría |
+
+Si es un script personal, no hagas Plugin. Si el equipo instala, actualiza y revoca un conjunto de capacidades, empaquétalo.
+
+## Antes de empaquetar
+
+- ¿Workflow estable de equipo o experimento?
+- ¿Qué partes son Skill, MCP y Hook?
+- ¿La declaración de permisos se entiende en un minuto?
+- ¿Hay rollback ante upgrade o instalación fallida?
+- ¿Cómo se revocan autorizaciones al salir personas o cerrar proyectos?
+
 ## Instalación y gestión (concepto)
 
 1. Elige el Plugin en el **marketplace oficial o la lista aprobada por el equipo**
@@ -87,7 +108,7 @@ En el equipo solo encajan a largo plazo las extensiones que se pueden mantener, 
 - Al cambiar de rol o dejar la empresa, retira la autorización del conector
 - Se suma a [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/); no asumas que el Plugin trae seguridad por sí solo
 
-## Comparación con Claude Code / otros ecosistemas
+## Comparación con otros ecosistemas Agent
 
 El significado de «Plugin» no es idéntico en todos los productos. Al comparar, mira: **qué empaqueta, el modelo de Permisos y si es open source auditable** — ver [Comparación de funciones](/guide/reference/feature-comparison/).
 

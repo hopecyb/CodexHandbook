@@ -27,6 +27,23 @@ Les parcours d'apprentissage **organisent uniquement l'ordre de lecture** — il
 - [Développeur](/guide/learning-paths/developer/)
 - [Équipe](/guide/learning-paths/team/)
 
+## Parcours opérateur avancé
+
+Si vous terminez déjà de petites tâches, l'étape suivante n'est pas d'apprendre plus de commandes par cœur, mais de combiner plusieurs capacités en workflows stables.
+
+| Étape | Sujet | À lire d'abord |
+|---|---|---|
+| 1 | Entrées rapides | [Commandes slash et entrées rapides](/guide/reference/slash-commands/) |
+| 2 | Contexte durable | [AGENTS.md](/guide/customization/agents-md/) et [Mémoires et contexte persistant](/guide/customization/memories-and-persistent-context/) |
+| 3 | Workflows réutilisables | [Aperçu des Skills](/skills/overview/) et [Anatomie d'un Skill](/skills/skill-anatomy/) |
+| 4 | Sous-tâches isolées | [Subagents](/guide/agent-work/subagents/) et [Coordination multi-agent](/cases/workflows/multi-agent-coordination/) |
+| 5 | Systèmes externes | [Aperçu MCP](/skills/mcp/mcp-overview/) |
+| 6 | Garde-fous automatiques | [Aperçu des Hooks](/skills/hooks/hooks-overview/) |
+| 7 | Distribution d'équipe | [Aperçu des Plugins](/skills/plugins/plugins-overview/) |
+| 8 | Récupération et revue | [Annuler et récupérer](/guide/getting-started/undo-and-recover/) et [Relire les diffs](/guide/quality/review-diffs/) |
+
+Ce parcours aide à passer de « demander parfois de l'aide à Codex » à « une petite mécanique répétable pour l'équipe » : les instructions projet fixent les règles, les Skills la méthode, MCP expose les outils externes, les subagents découpent le travail, les Hooks protègent les points sensibles et les Plugins distribuent l'ensemble.
+
 ---
 
 **Statut :** review  

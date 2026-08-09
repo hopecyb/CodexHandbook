@@ -143,6 +143,20 @@ pnpm test --filter @app/web
 - [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
 - [完了の定義](/prompts/define-done/)
 
+## 一度のタスクからプロジェクトルールへ
+
+良いプロンプトをすべて `AGENTS.md` に入れる必要はありません。まず、どの層が持つべきかを判断します。
+
+| 繰り返す内容 | より適した場所 |
+|---|---|
+| 「generated ディレクトリを変更しない」 | `AGENTS.md` の禁止事項 |
+| 「毎回 PR を固定形式でレビューする」 | Skill またはプロンプトテンプレート |
+| 「書いた後にフォーマットする」 | Hook |
+| 「実装前に Linear/Jira を読む」 | MCP + 対応する Skill |
+| 「中国語で説明してほしい」 | メモリまたは個人設定 |
+
+`AGENTS.md` は、長く使う共有・検証可能なルールに向いています。手順は Skill、自動チェックは Hook、外部アクセスは MCP に移せます。
+
 ---
 
 **状態：** verified  
