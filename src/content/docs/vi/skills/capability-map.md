@@ -12,6 +12,8 @@ Cơ chế mở rộng không ít và thật sự dễ lẫn. Trang này chỉ n�
 
 ## Sơ đồ quan hệ
 
+![Từ một prompt đến gói năng lực cho nhóm](/diagrams/codex-capability-ladder-vi.svg)
+
 ```text
                     ┌─────────────────┐
                     │ Mục tiêu Tác vụ của bạn │
@@ -73,6 +75,23 @@ Cơ chế mở rộng không ít và thật sự dễ lẫn. Trang này chỉ n�
 | Cài một bộ tích hợp cho cả nhóm | Plugin |
 | Quét khóa bí mật trước mỗi lần commit | Hooks |
 | Thứ Hai hàng tuần tự sinh bản nháp báo cáo tuần | Automations (+ phát hành thủ công) |
+
+## Từ một tác vụ đến gói năng lực cho nhóm
+
+Dùng lộ trình này để quyết định khi nào nên chuẩn hóa workflow:
+
+| Giai đoạn | Hình thức | Phù hợp khi |
+|---|---|---|
+| Prompt dùng một lần | Chỉ dẫn trong cuộc trò chuyện hiện tại | Chỉ dùng một lần hoặc vẫn đang thăm dò |
+| Template | Khung cố định cho mục tiêu, ngữ cảnh, ràng buộc và nghiệm thu | Tác vụ lặp lại, nhưng các bước còn thay đổi |
+| Skill | `SKILL.md` kèm template, tài liệu tham chiếu hoặc script | Quy trình ổn định, tiêu chí thành công rõ |
+| Subagent | Vai trò chuyên biệt trong ngữ cảnh riêng | Review, kiểm thử, debug hoặc nghiên cứu có ranh giới rõ |
+| MCP | Công cụ gọi được từ hệ thống bên ngoài | Cần đọc ticket, repo hoặc hệ thống nội bộ |
+| Hook | Kiểm tra hoặc chặn theo sự kiện | Quét bí mật, định dạng, kiểm tra lệnh rủi ro |
+| Plugin | Gói cài đặt cho nhóm | Skills, MCP, Hooks, template và tài liệu đi cùng nhau |
+| Automation | Tác vụ theo lịch hoặc theo sự kiện | Báo cáo, giám sát, review định kỳ |
+
+Đừng bắt đầu bằng việc thiết kế Plugin. Hãy chạy tác vụ một lần trước, rồi xem bước nào lặp lại, kiểm tra nào cần tự động hóa và quyền ngoài nào thật sự cần thiết.
 
 Logic nhánh chi tiết: [Cách chọn phương thức mở rộng](/skills/choosing-an-extension-method/).
 

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">Codex 能力沉淀路径</title>
+  <desc id="desc">从一次性提示词逐步沉淀为模板、Skill、子 Agent、MCP、Hook、Plugin 和自动化的流程图。</desc>
+  <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', 'Microsoft JhengHei', 'SimHei', sans-serif; }
+    .title { fill: #111827; font-size: 24px; font-weight: 700; }
+    .subtitle { fill: #6b7280; font-size: 13px; }
+    .lane-label { fill: #374151; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+    .node-title { fill: #111827; font-size: 15px; font-weight: 700; }
+    .node-note { fill: #4b5563; font-size: 12px; }
+    .small { fill: #6b7280; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9333ea"/>
+    </marker>
+  </defs>
+
+  <rect data-graph-role="background" width="960" height="560" fill="#ffffff"/>
+  <text x="48" y="52" class="title">从一次提示到团队能力包</text>
+  <text x="48" y="76" class="subtitle">先把任务说清楚，再把重复流程沉淀为可复用、可验证、可治理的组件。</text>
+
+  <rect data-graph-role="container" x="48" y="106" width="864" height="102" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="66" y="132" class="lane-label">一次任务</text>
+  <rect x="92" y="148" width="150" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="167" y="166" text-anchor="middle" class="node-title">提示词</text>
+  <text x="167" y="183" text-anchor="middle" class="node-note">目标 / 约束 / 验收</text>
+  <rect x="308" y="148" width="150" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="383" y="166" text-anchor="middle" class="node-title">模板</text>
+  <text x="383" y="183" text-anchor="middle" class="node-note">保住任务结构</text>
+  <path d="M 246 169 L 300 169" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <text x="260" y="158" class="small">反复出现</text>
+
+  <rect data-graph-role="container" x="48" y="236" width="864" height="132" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="66" y="262" class="lane-label">稳定流程</text>
+  <rect x="92" y="286" width="150" height="54" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="167" y="307" text-anchor="middle" class="node-title">Skill</text>
+  <text x="167" y="326" text-anchor="middle" class="node-note">步骤、模板、脚本</text>
+  <rect x="308" y="286" width="150" height="54" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="383" y="307" text-anchor="middle" class="node-title">子 Agent</text>
+  <text x="383" y="326" text-anchor="middle" class="node-note">独立子任务</text>
+  <rect x="524" y="286" width="150" height="54" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="599" y="307" text-anchor="middle" class="node-title">MCP</text>
+  <text x="599" y="326" text-anchor="middle" class="node-note">外部系统工具</text>
+  <rect x="740" y="286" width="126" height="54" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="803" y="307" text-anchor="middle" class="node-title">Hook</text>
+  <text x="803" y="326" text-anchor="middle" class="node-note">自动守护栏</text>
+  <path d="M 383 208 L 200 280" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <path d="M 246 313 L 300 313" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <path d="M 458 313 L 516 313" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <path d="M 674 313 L 732 313" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect data-graph-role="container" x="48" y="396" width="864" height="102" rx="8" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+  <text x="66" y="422" class="lane-label">团队分发与自动运行</text>
+  <rect x="210" y="442" width="180" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="300" y="460" text-anchor="middle" class="node-title">Plugin</text>
+  <text x="300" y="477" text-anchor="middle" class="node-note">打包、安装、升级、回收</text>
+  <rect x="570" y="442" width="180" height="42" rx="8" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+  <text x="660" y="460" text-anchor="middle" class="node-title">Automation</text>
+  <text x="660" y="477" text-anchor="middle" class="node-note">定时、监控、无人值守</text>
+  <path d="M 480 368 L 350 436" fill="none" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <path d="M 500 368 L 610 436" fill="none" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow-purple)"/>
+  <path d="M 394 463 L 562 463" fill="none" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow-purple)"/>
+
+  <g data-graph-role="legend" transform="translate(48,524)">
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+    <text x="38" y="4" class="small">主流程沉淀</text>
+    <line x1="160" y1="0" x2="188" y2="0" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+    <text x="198" y="4" class="small">能力组合</text>
+    <line x1="310" y1="0" x2="338" y2="0" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow-purple)"/>
+    <text x="348" y="4" class="small">团队治理</text>
+  </g>
+</svg>

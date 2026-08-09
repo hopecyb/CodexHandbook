@@ -12,6 +12,8 @@ There are many extension mechanisms, and they are easy to confuse. This page exp
 
 ## Relationship diagram
 
+![From one prompt to a team capability pack](/diagrams/codex-capability-ladder-en.svg)
+
 ```text
                     ┌─────────────────┐
                     │  Your task goal  │
@@ -78,6 +80,23 @@ There are many extension mechanisms, and they are easy to confuse. This page exp
 | Ship one integration pack to the whole team | Plugin |
 | Scan for secrets before every commit | Hooks |
 | Auto-draft weekly report every Monday | Automations (+ human publish) |
+
+## From one task to a team capability pack
+
+Use this progression to decide whether a workflow is worth hardening:
+
+| Stage | Form | Best fit |
+|---|---|---|
+| One-off prompt | Task instructions in the current conversation | Used once, or still exploratory |
+| Template | Fixed goal/context/constraints/acceptance structure | Similar tasks repeat, but steps still change |
+| Skill | `SKILL.md` plus templates, references, or scripts | Stable process with clear success criteria |
+| Subagent | Specialized role in separate context | Bounded review, testing, debugging, or research |
+| MCP | Callable external-system tools | Needs tickets, repos, or internal systems |
+| Hook | Event-triggered check or block | Secret scanning, formatting, risky command checks |
+| Plugin | Team install package | Skills, MCP, Hooks, templates, and docs ship together |
+| Automation | Scheduled or event-driven task | Reports, monitoring, recurring review |
+
+Do not start by designing a Plugin. First run the task once, then observe which steps repeat, which checks must be automatic, and which external permissions are truly needed.
 
 For detailed branching logic, see [Choosing an extension method](/skills/choosing-an-extension-method/).
 

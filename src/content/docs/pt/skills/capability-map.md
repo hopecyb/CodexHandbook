@@ -12,6 +12,8 @@ Há muitos mecanismos de extensão, e é fácil confundir. Esta página explica 
 
 ## Diagrama de relação
 
+![De um prompt a um pacote de capacidades para a equipe](/diagrams/codex-capability-ladder-pt.svg)
+
 ```text
                     ┌─────────────────┐
                     │  Seu objetivo    │
@@ -80,6 +82,23 @@ Há muitos mecanismos de extensão, e é fácil confundir. Esta página explica 
 | Instalar um kit de integração para toda a equipe | Plugin |
 | Scan de segredos antes de cada commit | Hooks |
 | Toda segunda, gerar rascunho de relatório semanal | Automations (+ publicação humana) |
+
+## De uma tarefa a um pacote para a equipe
+
+Use esta progressão para decidir se um fluxo merece ser endurecido:
+
+| Etapa | Forma | Quando usar |
+|---|---|---|
+| Prompt pontual | Instruções na conversa atual | Uso único ou ainda exploratório |
+| Template | Estrutura fixa de objetivo, contexto, limites e aceite | Tarefas parecidas se repetem, mas os passos ainda mudam |
+| Skill | `SKILL.md` com templates, referências ou scripts | Processo estável com critérios claros de sucesso |
+| Subagent | Papel especializado em contexto separado | Revisão, testes, depuração ou pesquisa com escopo claro |
+| MCP | Ferramentas invocáveis de sistemas externos | Precisa ler tickets, repositórios ou sistemas internos |
+| Hook | Checagem ou bloqueio por evento | Segredos, formatação, comandos arriscados |
+| Plugin | Pacote instalável para a equipe | Skills, MCP, Hooks, templates e documentação juntos |
+| Automation | Tarefa agendada ou orientada por evento | Relatórios, monitoramento, revisões recorrentes |
+
+Não comece desenhando um Plugin. Primeiro execute a tarefa uma vez; depois observe quais passos se repetem, quais checagens devem ser automáticas e quais permissões externas são realmente necessárias.
 
 Lógica detalhada de ramificação: [Como escolher o método de extensão](/skills/choosing-an-extension-method/).
 

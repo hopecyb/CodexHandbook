@@ -12,6 +12,8 @@ Hay muchos mecanismos de extensión y es fácil confundirlos. Esta página solo 
 
 ## Esquema de relaciones
 
+![De un prompt a un paquete de capacidades para el equipo](/diagrams/codex-capability-ladder-es.svg)
+
 ```text
                     ┌─────────────────┐
                     │  Tu objetivo de  │
@@ -79,6 +81,23 @@ Hay muchos mecanismos de extensión y es fácil confundirlos. Esta página solo 
 | Instalar un conjunto de integraciones a todo el equipo | Plugin |
 | Escanear secretos antes de cada commit | Hooks |
 | Generar cada lunes un borrador de informe semanal | Automations (+ publicación humana) |
+
+## De una tarea a un paquete para el equipo
+
+Usa esta progresión para decidir si vale la pena endurecer un flujo:
+
+| Etapa | Forma | Cuándo encaja |
+|---|---|---|
+| Prompt puntual | Instrucciones en la conversación actual | Se usa una vez o todavía es exploratorio |
+| Plantilla | Estructura fija de objetivo, contexto, límites y aceptación | La tarea se repite, pero los pasos aún cambian |
+| Skill | `SKILL.md` con plantillas, referencias o scripts | Proceso estable con criterios de éxito claros |
+| Subagent | Rol especializado con contexto separado | Revisión, pruebas, depuración o investigación acotadas |
+| MCP | Herramientas invocables de sistemas externos | Hace falta leer tickets, repos o sistemas internos |
+| Hook | Comprobación o bloqueo por evento | Secretos, formato o comandos arriesgados |
+| Plugin | Paquete instalable para el equipo | Skills, MCP, Hooks, plantillas y documentación viajan juntos |
+| Automation | Tarea programada o por evento | Informes, monitoreo o revisiones recurrentes |
+
+No empieces diseñando un Plugin. Primero ejecuta la tarea una vez; luego observa qué pasos se repiten, qué comprobaciones deben automatizarse y qué permisos externos son realmente necesarios.
 
 Lógica detallada de ramas: [Cómo elegir el método de extensión](/skills/choosing-an-extension-method/).
 

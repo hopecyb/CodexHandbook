@@ -12,6 +12,8 @@ Beaucoup de mécanismes d'extension — et de confusion. Cette page décrit les 
 
 ## Schéma
 
+![D'un prompt à un pack de capacités d'équipe](/diagrams/codex-capability-ladder-fr.svg)
+
 ```text
                     ┌─────────────────┐
                     │  Objectif tâche  │
@@ -74,6 +76,23 @@ Beaucoup de mécanismes d'extension — et de confusion. Cette page décrit les 
 | pack d'intégration pour toute l'équipe | Plugin |
 | scan secrets avant chaque commit | Hooks |
 | brouillon de rapport hebdo le lundi | Automations (+ publication manuelle) |
+
+## D'une tâche à un pack d'équipe
+
+Cette progression aide à décider quand durcir un workflow :
+
+| Étape | Forme | Quand l'utiliser |
+|---|---|---|
+| Prompt ponctuel | Consigne dans la conversation en cours | Usage unique ou exploration |
+| Modèle | Structure fixe objectif/contexte/contraintes/acceptation | La tâche se répète, mais les étapes bougent encore |
+| Skill | `SKILL.md` avec modèles, références ou scripts | Processus stable, critères de réussite clairs |
+| Subagent | Rôle spécialisé dans un contexte séparé | Revue, tests, débogage ou recherche bien bornés |
+| MCP | Outils appelables de systèmes externes | Besoin de tickets, dépôts ou systèmes internes |
+| Hook | Vérification ou blocage sur événement | Secrets, formatage, commandes risquées |
+| Plugin | Pack installable pour l'équipe | Skills, MCP, Hooks, modèles et documentation livrés ensemble |
+| Automation | Tâche planifiée ou déclenchée par événement | Rapports, supervision, revues récurrentes |
+
+Ne commencez pas par concevoir un Plugin. Faites d'abord tourner la tâche une fois, puis observez les étapes répétées, les contrôles à automatiser et les permissions externes vraiment nécessaires.
 
 Logique détaillée : [Choisir une méthode d'extension](/skills/choosing-an-extension-method/).
 
