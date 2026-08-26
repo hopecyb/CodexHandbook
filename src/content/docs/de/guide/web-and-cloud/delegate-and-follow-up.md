@@ -1,130 +1,77 @@
 ---
-title: Delegieren und nachverfolgen
-description: 'Aufgaben aus App, IDE oder Handy an Cloud übergeben und nach dem Verlassen des Rechners Status, Freigabe und Iteration fortsetzen.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Delegieren und nachfassen
+description: Starte eine unabhängig ausführbare Cloud-Aufgabe und korrigiere im selben Chat Richtung und Ergebnisabnahme.
 sidebar:
   order: 60
+locale: de
+source_locale: zh-CN
+source_revision: 681ea7d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Delegieren** heißt: Aufgabe an Cloud in der Remote-Umgebung. **Nachverfolgen** heißt: während oder nach dem Lauf Fortschritt sehen, Kontext nachreichen, riskante Aktionen freigeben, Änderungen verlangen. Kernworkflow für „außerhalb des Arbeitsplatzes weiterkommen“.
+Delegieren bedeutet nicht, „ein Problem wegzuwerfen“, sondern einem unabhängigen Cloud-Chat Ziel, Einschränkungen, Umgebung und Fertigstellungskriterien zu übergeben. Die Aufgabe kann im Hintergrund laufen. Du kannst Protokolle lesen, Kontext ergänzen, Änderungen verlangen und abschließend den Diff prüfen.
 
-## Inhalt
+## Wann Delegation geeignet ist
 
-- Wann Cloud statt lokal
-- Unterschiede der Delegations-Einstiege
-- Effektives Follow-up statt „rauswerfen und vergessen“
+- Die Aufgabe erfordert einen längeren Build oder Testlauf.
+- Die Eingaben befinden sich bereits im Remote-Repository.
+- Die Umgebung lässt sich per Skript reproduzieren.
+- Die Aufgabe kann unabhängig von deiner aktuellen Arbeit fortgesetzt werden.
+- Du bist bereit, das Ergebnis nach Abschluss zu prüfen, statt es direkt zusammenzuführen.
 
-## So läuft der Flow
+Aufgaben, die von lokalem nicht committetem Zustand, lokalen Diensten oder fortlaufender menschlicher Bedienung abhängen, sollten zunächst lokal bleiben.
 
-Cloud-Aufgaben ähneln:
-
-- Aufgabe klar erklären
-- Remote-Lauf starten
-- Unterwegs ggf. Einschränkung oder Freigabe
-- Am Ende Diff/PR prüfen und entscheiden
-
-Cloud wechselt nur den Ausführungsort — Follow-up und Urteil bleiben bei Ihnen.
-
-## Für wen
-
-| Szenario | Empfehlung |
-|---|---|
-| Langer Build/Test | An Cloud; lokal anderes |
-| Pendeln / Meeting-Pause | Handy: Status, kritische Schritte freigeben |
-| Standardisierte Umgebung | Cloud + [Umgebungskonfiguration](/guide/web-and-cloud/cloud-environments/) |
-| Schnelles lokales Ausprobieren | [Desktop-App](/guide/desktop-app/) oder [IDE](/guide/ide/local-task-workflow/) |
-
-## Wann delegieren
-
-- Noch viel Ausprobieren, live steuern: zuerst lokal
-- Lange Läufe, Laptop verlassen, einheitliche Umgebung: Cloud
-
-## Vor dem Delegieren
-
-- [ ] [GitHub verbunden](/guide/web-and-cloud/connect-github/), Branch-Strategie klar
-- [ ] Beschreibung mit Ziel, Scope, Verboten, Abnahme ([Anatomie einer guten Aufgabe](/prompts/task-anatomy/))
-- [ ] Nötige ungepushte lokale Commits zuerst pushen oder lokal belassen
-- [ ] Secrets / [Outbound](/guide/web-and-cloud/internet-access/) bereit
-
-## Häufige Missverständnisse
-
-### 1. Delegiert = nicht mehr hinschauen
-
-Teuer: je später schiefe Richtung entdeckt, desto mehr Rework.
-
-### 2. Follow-up = „nur mal nach dem Status fragen“
-
-Wertvoller:
-
-- Fehlenden Kontext nachreichen
-- Scope einengen
-- Riskante Aktionen ablehnen
-- Nach Abschluss Nacharbeit verlangen
-
-### 3. Delegieren und lokal sind Gegensätze
-
-Häufig:  
-**Lokal explorieren → lange Läufe delegieren → lokal abschließen.**
-
-## Einstiege (Konzept)
-
-| Einstieg | Merkmale |
-|---|---|
-| [Desktop-App · Lokal und Cloud](/guide/desktop-app/local-and-cloud-tasks/) | Im selben Projekt lokal/Cloud wechseln |
-| [IDE · Cloud-Aufgaben](/guide/ide/cloud-task-workflow/) | Mit Selektion und offenen Dateien als Kontext |
-| Web / Mobile | Leichtes Ansehen, Freigabe, kurze Follow-ups |
-
-Buttons und Namen produktspezifisch.
-
-## Empfohlener Follow-up-Rhythmus
+## Vollständiger Delegationsauftrag
 
 ```text
-Delegieren → Umgebung gestartet bestätigen → (optional) Logs mittendrin
-    → Riskante Aktionen freigeben → Fertig Diff/PR prüfen
-    → Unzufrieden: Nachricht anhängen oder neue Follow-up-Aufgabe
+Ziel: Behebe das Problem aus #42, durch das die Verbindung einer Login-Anfrage nach 30 Sekunden noch nicht freigegeben wird.
+Ausgangspunkt: Branch fix/42-timeout in acme/api.
+Umfang: packages/auth/** und zugehörige Tests.
+Verboten: Keine Abhängigkeiten aktualisieren, keine öffentliche API ändern und nicht nach main pushen.
+Verifikation: pnpm test --filter auth; pnpm typecheck.
+Abschluss: Ursache, Diff, Befehle und Exit-Ergebnisse zeigen; nicht automatisch zusammenführen.
 ```
 
-Mindestens: **einmal mittendrin + einmal am Ende**.
+Bestätige nach dem Start zuerst die richtige Umgebung und den richtigen Branch. Fasse während des Laufs nur nach, wenn eine Voraussetzung fehlt oder die Arbeit in die falsche Richtung geht:
 
-### Währenddessen
+```text
+Zusätzliche Einschränkung: Ändere nicht den globalen HTTP-Client. Begrenze den Fix auf den auth adapter.
+Erkläre zuerst, wie dies den aktuellen Ansatz verändert, und fahre dann fort.
+```
 
-- **Kontext nachreichen**: fehlende Dateien/Grenzen — Follow-up statt Neustart mit Historienverlust
-- **Scope einengen**: „Stoppe X, nur Y“
-- **Freigabe**: [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) — lieber einen Schritt langsamer als unbekannte Shells batch-approven
+Der bestehende Kontext bleibt im selben Chat erhalten. Das eignet sich zur Korrektur desselben Ziels. Für ein vollständig unabhängiges Ziel erstellst du einen neuen Chat. Parallele Aufgaben dürfen nicht denselben Branch oder dieselbe Dateimenge beschreiben.
 
-### Danach
+## Nach dem Ergebnis
 
-- Diff im [PR-Flow](/guide/web-and-cloud/create-pull-requests/) prüfen
-- [Cloud-Code-Review](/guide/web-and-cloud/code-review/) oder lokalen Branch-Checkout
-- Weiter: gleiche PR neu delegieren oder lokal übernehmen
+1. Lies die Zusammenfassung und den vollständigen Diff.
+2. Gleiche die Dateien mit den erlaubten Pfaden der Aufgabe ab.
+3. Prüfe die tatsächliche Ausgabe jedes Verifikationsbefehls.
+4. Verlange eine Erklärung für fehlgeschlagene oder nicht ausgeführte Prüfungen.
+5. Formuliere nötige Änderungen als konkretes Follow-up im selben Chat.
+6. Erstelle nach Erfüllung der Kriterien einen PR und übergib die weitere Abnahme an CI und menschliches Review.
 
-## Mit Benachrichtigungen
+Cloud-Aufgaben können über Web, IDE, GitHub, GitLab (Beta), Linear oder Slack gestartet werden. Die offizielle Cloud-Seite beschreibt außerdem das Starten und Prüfen von Arbeit über die Codex CLI. Der Einstieg verändert die Grenzen von Repository, Umgebung, Netzwerk und Review nicht.
 
-[Desktop-Notifications](/guide/desktop-app/notifications/) oder Mobile-Push — sonst hängen Aufgaben an fehlender Freigabe. Team-Regel: wann jemand Prod-Repos freigeben kann.
+## Bei Fehlschlägen gezielt nachfassen
 
-## Häufige Fehler
+Schreibe nicht nur „Versuche es erneut“. Gib den Fehlernachweis und den nächsten Schritt an:
 
-- Vage Delegation → Cloud „versteht“ großes Refactoring
-- Lokal halb geändert ungepusht, Cloud startet von remote main
-- Nie mittendrin schauen — am Ende falsche Richtung, ganze Umgebungswaste
-- PR nur „LGTM“ ohne Tests
-- „Remote ausgeführt“ = „Remote verantwortlich“
+```text
+Der Test schlägt in retry.test.ts:48 fehl. Erkläre zuerst, ob dieser Fehlschlag durch die aktuelle Änderung verursacht wurde.
+Falls ja, behebe nur diese Regression und führe die auth-Tests erneut aus. Falls nein, erhalte den Fehlschlag und dokumentiere ihn ausdrücklich.
+```
 
-## Abnahme-Checkliste
+## Offizielle Grundlage
 
-- [ ] Mindestens ein Einstieg: Cloud-Aufgabe gestartet und abgeschlossen
-- [ ] Währenddessen eine wirksame Einschränkung nachgereicht
-- [ ] PR oder Branch mit Menschen-Diff-Review
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
 
-## Quellen
-- OpenAI Codex Cloud Task-Dokumentation
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud / App / IDE / Mobile  
-**Prüfhinweis:** Abhängig von aktuellen App-/IDE-/Web-/Mobile-Delegationen; Cross-Device-Follow-up ändert sich schnell — vor `verified` an offizielle Docs angleichen.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud, App, IDE, CLI
+
+**Zuletzt geprüft:** 2026-08-26

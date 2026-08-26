@@ -3,9 +3,10 @@ title: Tarefas locais e Cloud
 description: Alternar execução local e Cloud na App.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 95e2382
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -17,7 +18,7 @@ Na App, escolha o local de execução da Tarefa:
 - **Local**: ficheiros e ambiente da máquina; iteração rápida
 - **Cloud**: ambiente na nuvem; adequado a repositórios remotos e Tarefas longas
 
-Conceitos: [Local e Cloud](/guide/foundations/local-vs-cloud/) · Visão geral: [Web e Cloud](/guide/web-and-cloud/)
+Conceitos: [Local e Cloud](/pt/guide/foundations/local-vs-cloud/) · Visão geral: [Web e Cloud](/pt/guide/web-and-cloud/)
 
 Antes de alternar, confirme: as chaves devem aparecer nesse ambiente? A política de rede permite?
 

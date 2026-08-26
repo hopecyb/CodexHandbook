@@ -3,9 +3,10 @@ title: "Caso: sugerencias de triage y etiquetas de issues"
 description: Usa Codex para leer issues nuevos y sugerir etiquetas y responsables — automatización ligera de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadatos
@@ -41,7 +42,7 @@ translated_at: 2026-07-28
 
 **Planificar:** Definir el JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Ejecutar:** `codex exec` con title + body del issue (sanitiza contra [inyección de prompt](/guide/team-enterprise/security/prompt-injection/)).
+**Ejecutar:** `codex exec` con title + body del issue (sanitiza contra [inyección de prompt](/es/guide/team-enterprise/security/prompt-injection/)).
 
 **Verificar:** Contrasta con 3 fixtures de issues históricos frente a etiquetas humanas; tasa de coincidencia > 80% antes de salir a producción.
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-28
 
 ## 5. Captura para reutilizar
 
-- Integración opcional con [Webhook](/guide/developer-platform/webhooks/overview/) hacia el sistema interno de tickets
-- Retrospectiva en la [plantilla de caso](/cases/use-cases/case-study-template/)
+- Integración opcional con [Webhook](/es/guide/developer-platform/webhooks/overview/) hacia el sistema interno de tickets
+- Retrospectiva en la [plantilla de caso](/es/cases/use-cases/case-study-template/)
 
 ## 6. Capítulos relacionados
 
-- [Integración con GitHub](/guide/integrations/github/)
-- [Patrones de aprobación humana](/cases/workflows/human-approval-patterns/)
+- [Integración con GitHub](/es/guide/integrations/github/)
+- [Patrones de aprobación humana](/es/cases/workflows/human-approval-patterns/)
 
 ---
 

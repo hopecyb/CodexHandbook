@@ -1,0 +1,18 @@
+{
+  "description": "Block obvious secret-shaped strings before local writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/examples/hooks/secret-guard/pre_tool_use_guard.py\"",
+            "timeout": 3,
+            "statusMessage": "Checking tool input for secret-shaped strings"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -3,9 +3,10 @@ title: Tệp, công cụ và lệnh
 description: Giải thích Codex đọc/ghi tệp, chạy lệnh và dùng công cụ như thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -86,7 +87,7 @@ Chỉ cần một trong ba câu trả lời không được thì hãy để nó 
 
 1. **Phạm vi tối thiểu cần thiết**: chỉ rõ thư mục và tệp, tránh «sửa tùy ý cả kho»
 2. **Lệnh nguy hiểm cần phê duyệt**: xóa, đẩy, sửa cấu hình hệ thống…
-3. **Chọn công cụ có phương pháp**: xem [Chọn công cụ](/guide/tools/tool-selection/)
+3. **Chọn công cụ có phương pháp**: xem [Chọn công cụ](/vi/guide/tools/tool-selection/)
 
 Lối vào sản phẩm khác nhau thì bảng công cụ và cách xác nhận cũng khác — chi tiết xem từng cẩm nang sản phẩm.
 
@@ -94,9 +95,9 @@ Codex không chỉ «nói» — nó thật sự làm qua tệp, lệnh và công
 
 Bước tiếp theo nên đọc:
 
-1. [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
-2. [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
-3. [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
+1. [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
+2. [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
+3. [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/)
 
 ---
 

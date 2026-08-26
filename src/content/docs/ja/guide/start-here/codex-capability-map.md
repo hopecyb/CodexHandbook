@@ -3,9 +3,10 @@ title: 能力マップ
 description: プロンプト、ツール、拡張、マルチ Agent、ガバナンスなどの能力モジュールを俯瞰。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 7
 ---
@@ -59,25 +60,25 @@ Skills、MCP、Hooks、自動化は確かに強力ですが、解決するのは
 
 ## スタート順序
 
-1. [Codex とは](/guide/start-here/what-is-codex/) を読む
-2. 次に [パスを選ぶ](/guide/start-here/choose-your-path/)
-3. その後 [入門ガイド](/guide/getting-started/) へ
-4. 詰まったら [基礎概念](/guide/foundations/) と [学習パス](/guide/learning-paths/) に戻る
+1. [Codex とは](/ja/guide/start-here/what-is-codex/) を読む
+2. 次に [パスを選ぶ](/ja/guide/start-here/choose-your-path/)
+3. その後 [入門ガイド](/ja/guide/getting-started/) へ
+4. 詰まったら [基礎概念](/ja/guide/foundations/) と [学習パス](/ja/guide/learning-paths/) に戻る
 
 ## モジュールと権威ある章
 
 | 能力 | 権威ある位置 |
 |---|---|
-| モデル、Agent、権限、サンドボックス | [基礎概念](/guide/foundations/) |
-| 各入口の操作と実行方法 | [製品マニュアル](/guide/) |
-| プロンプト、コンテキスト、ツール、品質 | [コア能力](/guide/) |
-| AGENTS.md と設定 | [カスタマイズ](/guide/customization/) |
-| Skills、MCP、Plugin、自動化 | [拡張と自動化](/skills/) |
-| 再利用可能な協業方法 | [ワークフロー方法](/cases/workflows/) |
-| エンドツーエンドケース | [シーンケース](/cases/use-cases/) |
-| 読む順序 | [学習パス](/guide/learning-paths/) |
+| モデル、Agent、権限、サンドボックス | [基礎概念](/ja/guide/foundations/) |
+| 各入口の操作と実行方法 | [製品マニュアル](/ja/guide/) |
+| プロンプト、コンテキスト、ツール、品質 | [コア能力](/ja/guide/) |
+| AGENTS.md と設定 | [カスタマイズ](/ja/guide/customization/) |
+| Skills、MCP、Plugin、自動化 | [拡張と自動化](/ja/skills/) |
+| 再利用可能な協業方法 | [ワークフロー方法](/ja/cases/workflows/) |
+| エンドツーエンドケース | [シーンケース](/ja/cases/use-cases/) |
+| 読む順序 | [学習パス](/ja/guide/learning-paths/) |
 
-拡張の選定マップは [拡張能力マップ](/skills/capability-map/)、製品対照は [機能対照](/guide/reference/feature-comparison/)。各入口の能力差は機能対照ページに記載。
+拡張の選定マップは [拡張能力マップ](/ja/skills/capability-map/)、製品対照は [機能対照](/ja/guide/reference/feature-comparison/)。各入口の能力差は機能対照ページに記載。
 
 ---
 

@@ -1,120 +1,122 @@
 ---
-title: Slash Commands and Quick Entry
-description: "`/` commands and `$` Skill invocation—learning quick reference, not a full parameter manual."
+title: Slash commands and shortcuts
+description: A learning-oriented reference for slash commands and $ Skill invocation, not a complete parameter manual.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 9debf5c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 40
 ---
 
-Slash commands are not jargon to memorize—they are named quick entry points you invoke on purpose.
+A first list of slash commands can look like jargon to memorize. It is easier to treat them as shortcuts that explicitly enter a known flow.
 
-They usually jump into a fixed mode or built-in flow. Slash commands (`/command`) relate to [Skill](/skills/overview/) `$name` invocation but are not the same. Lists **change by product and version**—use in-client `/` completion and official docs before relying on names.
+They usually start a fixed mode or built-in workflow. Slash commands (`/command`) relate to `$name` invocation of a [Skill](/en/skills/overview/), but they are not the same. Exact lists **vary by product and access**, and differ across the desktop App, CLI, IDE, and ChatGPT Web. Use the current composer's `/` completion and official documentation.
 
-## Conceptual split
+## Distinguish the entry points
 
-| Entry | Who invokes | Typical use |
+| Entry | Who invokes it | Typical use |
 |---|---|---|
-| `/review` etc. | You type `/` | Built-in or configured fixed flows |
-| `$skill-name` | You or model | Project or user Skill |
-| Natural language | You | General tasks |
+| Slash command such as `/review` | You type `/` | Built-in or configured fixed flow |
+| `$skill-name` | You or the model | Project or user Skill |
+| Natural language | You | General task |
 
-## Three ways in plain terms
+## The direct distinction
 
-- `/command`: you pick a shortcut in chat
-- `$skill`: you or model names a Skill
-- Natural language: you state the need; model decides how
+- `/command`: explicitly choose a shortcut in the chat.
+- `$skill`: you or the model names a Skill.
+- Natural language: describe the need and let the model choose how to work.
 
-If you know the flow you want, `/command` is more direct.
+Use `/command` when you already know the flow and want to enter it quickly.
 
 ## What it is
 
-- Not a terminal command
-- Not secret vocabulary
-- Think “shortcut button in chat”
+- Not a terminal command.
+- Not hidden jargon.
+- A text entry point comparable to a shortcut button in the composer.
 
-Best when:
+It fits when:
 
-- You know which flow you want
-- You do not want to re-explain the same intent every time
+- you know which flow you want;
+- you do not want to restate the same intent each time.
 
 ## Common misconceptions
 
-### 1. Slash commands are not shell commands
+### 1. Slash commands are terminal commands
 
-They are chat shortcuts—not `codex ...` in the terminal.
+They are composer shortcuts, not `codex ...` shell commands.
 
-### 2. Lists are not fixed forever
+### 2. The slash-command list never changes
 
-Available commands differ by product, version, and environment—**completion in your environment** beats memorization.
+Commands vary by product, version, and environment. The current completion list is more reliable.
 
-### 3. Slash does not bypass approval and sandbox
+### 3. A slash command bypasses approval and sandboxing
 
-If the flow writes files, runs commands, or uses the network, policy still applies.
+Any underlying file write, command, or network action remains subject to current policy.
 
-### 4. You can use Codex well without slash commands
+### 4. You must know slash commands to use Codex well
 
-Natural language covers most work. Slash commands speed known flows after you are comfortable.
+Natural language handles most tasks. Slash commands accelerate a known workflow after you become familiar with it.
 
-## Common categories (illustrative)
+## Common current entries
 
-Names may be added or removed by version—**learning categories only**:
+### Desktop App / IDE
 
-### Session and mode
+- `/plan`: enter multistep planning mode.
+- `/review`: review uncommitted changes or compare with a base branch.
+- `/status`: show chat ID, context usage, and rate limits.
+- `/mcp`: inspect MCP connection state.
+- `/init`: scaffold `AGENTS.md` for the current project.
 
-- Switch plan mode, compact context, view help
-- Pairs with [Planning](/guide/agent-work/planning/)
+### CLI-specific session controls
 
-### Review and quality
+- `/permissions`: adjust the current session's permission mode.
+- `/agent`: inspect or switch Agent threads.
+- `/model`: choose the current model.
+- `/status`: inspect current session settings.
 
-- Review current diff or PR
-- With [Review diffs](/guide/quality/review-diffs/)
+ChatGPT Web has its own composer command menu. Do not assume App or CLI commands exist there under the same name.
 
-### Workspace and Git
+## Usage guidance
 
-- Status, draft commit message (you still confirm commit)
-- Follow [Human approval patterns](/cases/workflows/human-approval-patterns/)
+1. Type `/` and inspect what the current environment supports instead of memorizing an old list.
+2. Turn a durable team workflow into a **Skill plus documentation** so it does not depend on experts knowing a command name.
+3. Writes triggered by slash commands remain subject to sandboxing and approvals.
 
-### Extensions
+## Try it directly
 
-- Install or list Skills (e.g. `skill-installer` if available)
+1. Type `/`.
+2. Inspect the available entries.
+3. Choose one whose name and purpose are clear.
 
-## Usage notes
+## A useful first exercise
 
-1. **Type `/` first**—see what your environment supports; do not memorize stale lists
-2. Team flows → **Skill + docs** so knowledge is not tribal
-3. Slash-triggered writes still subject to sandbox and approval
+1. Type `/` and inspect what the current environment offers.
+2. Try one command with an understandable purpose.
+3. Observe whether it changes mode or runs a workflow.
+4. If the team must reuse it long-term, consider turning the process into a Skill.
 
-## Try it
+Slash commands provide quick entry points; Skills preserve reusable workflows.
 
-1. Type `/`
-2. See what is available
-3. Pick one whose name and purpose you understand
-
-## First-time path
-
-1. `/` to see offerings
-2. Try one clear command
-3. Notice: mode switch vs workflow run
-4. For recurring team flows, consider a Skill
-
-Shows split: slash = quick entry, Skill = durable reusable flow.
-
-## vs CLI commands
+## Difference from CLI commands
 
 | | In-chat `/` | Terminal `codex …` |
 |---|---|---|
-| Context | Current session and @ files | `--cwd` directory |
-| Best for | Interactive exploration | Scripts, CI |
+| Context | Current session and attached files | Directory selected with `--cd` / `-C` |
+| Best for | Interactive exploration | Scripts and CI |
 
-Slash commands are chat shortcuts—what your environment actually offers beats memorizing names.
+Treat slash commands as chat shortcuts. Inspecting the current environment is more useful than memorizing names.
 
-CLI subcommands: [CLI interactive mode](/guide/cli/interactive-mode/) and [Non-interactive mode](/guide/cli/non-interactive-mode/). Full parameter table: [CLI command reference](/guide/reference/commands/).
+See [CLI interactive mode](/en/guide/cli/interactive-mode/), [non-interactive mode](/en/guide/cli/non-interactive-mode/), and the [CLI command reference](/en/guide/reference/commands/).
 
 ---
 
-**Status:** outdated  
-**Products:** App / CLI / IDE  
-**Review note:** Centers `/review`, slash categories, and `$skill` relationships—availability, naming, and behavior change quickly; without current official command list and behavior docs, `outdated` is appropriate.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE
+
+**Verification basis:** Compared with current official desktop App Slash commands and Developer commands. Command sets differ by work surface; availability still follows composer completion.
+
+**Last verified:** 2026-08-26

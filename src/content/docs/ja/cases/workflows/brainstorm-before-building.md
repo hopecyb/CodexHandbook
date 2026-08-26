@@ -3,12 +3,13 @@ title: 構築前にブレインストーム
 description: コードや長文を書く前に、構造化された探索で案を収束させる——手戻りを減らす。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**構築前にブレインストーム**は、目標が曖昧で案が複数あるタスクに適します：新機能、リデザイン、コンテンツ選題、技術選定。[探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/) の①探索段階と接続しますが、すぐにコードを読んでファイルを変更するのではなく、**発散と収束**をより重視します。
+**構築前にブレインストーム**は、目標が曖昧で案が複数あるタスクに適します：新機能、リデザイン、コンテンツ選題、技術選定。[探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) の①探索段階と接続しますが、すぐにコードを読んでファイルを変更するのではなく、**発散と収束**をより重視します。
 
 ## このページが解決する問題
 
@@ -43,7 +44,7 @@ translated_at: 2026-07-28
 
 **段階 C — 計画へ進む**
 
-確認後、[仕様駆動](/cases/workflows/specification-driven-work/) または EPXV の②計画に接続する。
+確認後、[仕様駆動](/ja/cases/workflows/specification-driven-work/) または EPXV の②計画に接続する。
 
 ## 推奨ワークフロー
 
@@ -78,9 +79,9 @@ translated_at: 2026-07-28
 
 ## 関連章
 
-- [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
-- [仕様駆動の作業](/cases/workflows/specification-driven-work/)
-- [計画を求める](/prompts/ask-for-a-plan/)
+- [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
+- [仕様駆動の作業](/ja/cases/workflows/specification-driven-work/)
+- [計画を求める](/ja/prompts/ask-for-a-plan/)
 
 ---
 

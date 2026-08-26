@@ -4,7 +4,7 @@ description: Clarify myths about treating Codex as an all-knowing black box.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 83a9c4c
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -20,7 +20,7 @@ sidebar:
 | "Cloud is always safer than local" | Safety depends on policy, secrets, and review—not location |
 | "If the handbook says it, it's official" | OpenAI docs are authoritative; the handbook helps you learn |
 
-Next step: [Getting started](/guide/getting-started/).
+Next step: [Getting started](/en/guide/getting-started/).
 
 ---
 

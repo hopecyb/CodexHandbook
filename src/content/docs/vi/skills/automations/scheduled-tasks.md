@@ -3,100 +3,146 @@ title: Tác vụ hẹn giờ và nền
 description: Automations — chạy Codex không người trực dưới điều kiện kích hoạt; phải thiết kế Phê duyệt và điều kiện thoát.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7b79596
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Automations** để Codex tự thực thi Tác vụ dưới **lịch, sự kiện repo hoặc kích hoạt ngoài** — ví dụ kiểm tra cập nhật dependency, đồng bộ tài liệu, quét sức khỏe định kỳ.
+The hard part is not choosing a time. It is making every unattended run use stable inputs, narrow permissions, reviewable output, and stop conditions.
 
-## Nội dung trang này
+![Safety loop from manual verification to scheduling, human review, and adjustment](/diagrams/scheduled-task-safety-loop-vi.svg)
 
-- Khi nào đáng tự động hóa, khi nào phải giữ người trong vòng
-- Bốn điểm thiết kế: kích hoạt, thực thi, thông báo, thất bại
-- Quan hệ với Tác vụ Cloud và script CLI cục bộ
+## Who it is for
 
-## So với Tác vụ thủ công
+- Individuals producing daily or weekly reports, checking docs, or following PRs.
+- Developers running maintenance against a local project or isolated worktree.
+- Maintainers reviewing permissions, failure handling, and shared Skills.
 
-| | Tác vụ thủ công | Automation |
+## Support boundaries
+
+| Surface | Capability | Constraint |
 |---|---|---|
-| Khởi động | Bạn khởi xướng | Lịch/sự kiện |
-| Giám sát | Bạn có thể ngắt bất cứ lúc | Cần thông báo và nhật ký |
-| Rủi ro | Bạn phán đoán tại chỗ | Lỗi có thể lan hàng loạt |
-| Phù hợp | Khám phá, refactor | Lặp, quy tắc rõ |
+| ChatGPT Web | Create, manage, inspect runs; use uploads, connected tools, Skills, Plugins | Cannot directly access local folders |
+| ChatGPT desktop App | Create and manage; select local project or Git worktree | Computer awake, App running, project present |
+| Codex CLI | Prepare and manually test prompts, Skills, scripts | No Scheduled management UI |
+| IDE integration | Verify commands and edits in workspace | No Scheduled management UI |
 
-## Thiết kế tự động hóa an toàn
+## 1. Standalone or in-chat
 
-### 1. Điều kiện kích hoạt phải rõ
+### Standalone Scheduled task
+
+Each run starts from the saved prompt and appears separately in Scheduled. Use for independent reports and health checks; one task may cover several projects.
+
+### In-chat Scheduled task
+
+Return to one chat on schedule and retain context. Use for polling long work, following a PR, or continuing research.
+
+Choose standalone when each run should restart; choose in-chat when one question needs continuity.
+
+## 2. Choose material
+
+### Web
+
+Put durable instructions in the prompt or Skill and provide uploads, a Project, or connected services. “Read latest.csv from my desktop” cannot work on Web.
+
+### Local project in the desktop App
+
+For a Git repository:
+
+- **Local project:** work in the primary checkout, potentially touching open edits.
+- **Dedicated worktree:** isolate background edits from unfinished work.
+
+Non-Git projects run directly in their directory. Archive unneeded high-frequency runs so worktrees do not accumulate.
+
+## 3. Verify manually first
+
+Run the identical prompt, model, reasoning effort, and tools in a normal chat. Confirm:
+
+- inputs remain clear without live explanation;
+- no-change exits quietly;
+- output is quickly reviewable;
+- commands, Skills, and connected tools work;
+- missing access or material causes an explicit stop, not guessing.
+
+Inspect the first scheduled runs before changing prompt or frequency.
+
+## 4. Reusable task prompt
 
 ```text
-Tốt: mỗi Thứ Hai 09:00, kiểm tra liên kết chết trên docs/
-Xấu: giám sát liên tục và tự sửa code
+Create a standalone Scheduled task:
+
+Name: Weekly documentation broken-link check
+Time: Monday 09:00 in the current timezone
+Location: dedicated worktree for the current Git project
+
+Every run:
+1. Read only docs/, src/content/docs/, examples/, and public/diagrams/.
+2. Run pnpm check:links.
+3. If it passes, report file and link counts; do not edit.
+4. If it fails, list source file, broken target, and suggested fix; do not fix.
+5. No internet, installs, commit, push, or PR.
+6. If command/dependency is missing or result uncertain, stop and name the
+   exact item requiring human attention.
+
+Completion: end after one reviewable report; do not retry.
 ```
 
-### 2. Quyền tối thiểu
+This defines time, project, read scope, command, branches, prohibitions, and stop condition. Scheduling only retriggers the task; it does not replace its specification.
 
-- Quét chỉ đọc tốt hơn tự commit
-- Nếu tự mở PR, dùng tài khoản bot chuyên dụng và bảo vệ nhánh
+## 5. Permissions and review
 
-### 3. Điều kiện thoát
+Scheduled tasks run unattended with default sandbox settings.
 
-- Thất bại liên tiếp N lần thì tạm dừng
-- Diff vượt ngưỡng số dòng thì chuyển thủ công
-- Đụng thư mục bị cấm trong `AGENTS.md` thì dừng
-
-### 4. Thông báo
-
-- Slack/email/mobile: hoàn thành, thất bại, cần Phê duyệt
-- Giữ nhật ký để kiểm toán
-
-### 5. Điểm đối chiếu lại thủ công
-
-| Có thể toàn tự động | Cần thủ công |
+| Sandbox | Common result |
 |---|---|
-| Sinh PR nháp | Merge vào main |
-| Liệt kê dependency lỗi thời | Nâng cấp major |
-| Đồng bộ tài liệu công khai | Phát thông báo ra ngoài |
+| read-only | File edits, network, and local App control fail |
+| workspace-write | Workspace writes work; outside writes, network, and App control fail by default |
 
-## Mẫu điển hình
+Start with the narrowest mode that works. Add explicit allowlists rather than granting broad access after one failure.
 
-### Bảo trì định kỳ
+Keep human review for:
 
-- Báo cáo lỗ hổng dependency → mở issue, không sửa thẳng lockfile
-- Nhắc diff giữa file dịch và bản nguồn
+- sending or publishing externally;
+- production-state changes;
+- merging PRs or pushing main;
+- bulk deletion, migration, or permission changes;
+- unexpected diffs or failed tests.
 
-### Theo sự kiện
+## 6. No-change, failure, and stop
 
-- PR mới mở → chạy Skill review (bình luận đề xuất, không push)
-- Issue gắn nhãn `bug` → sinh bản nháp bước tái hiện
+A durable task defines:
 
-### Tác vụ dài
+1. **Finding:** evidence, severity, next step.
+2. **No change:** concise scope report without invented issues.
+3. **Unable:** missing material or access, then stop for a person.
 
-Tách thành nhiều đoạn Automation + [bàn giao và tiếp tục](/guide/agent-work/handoff-and-resume/), tránh hết Ngữ cảnh một lần.
+For in-chat polling, add termination such as PR merged/closed, three identical failures, or approval required.
 
-## Quan hệ với Cloud / CLI
+## Scheduled is not event-driven CI
 
-- **Cloud**: phù hợp tự động hóa từ xa tích hợp sâu với GitHub
-- **CLI + cron/CI**: phù hợp mạng nội bộ, pipeline tùy chỉnh
-- Chọn cách: [cục bộ và đám mây](/guide/foundations/local-vs-cloud/) và [Web và Cloud](/guide/web-and-cloud/)
+Use GitHub Actions, CI, webhooks, or Codex SDK when execution must follow a push, PR, or release event immediately. Minute-by-minute polling is not precise event triggering.
 
-## Lỗi thường gặp
+## Acceptance checklist
 
-- Tự động hóa `git push` thẳng lên nhánh chính
-- Không có cảnh báo thất bại — repo thầm mục nát
-- Đặt Tác vụ khám phá thành hẹn giờ — phí hạn mức và khó nghiệm thu
+- [ ] Prompt passed completely in a normal chat.
+- [ ] Standalone or in-chat mode selected.
+- [ ] Web material or local project is available at runtime.
+- [ ] Default sandbox suffices, or extra access has a reason.
+- [ ] Finding, no-change, failure, and stop paths are explicit.
+- [ ] First three runs received human sampling.
+- [ ] Frequent worktrees have archive and cleanup policy.
+- [ ] Critical writes retain human confirmation.
 
-## Checklist nghiệm thu
+## Official sources
 
-- [ ] Điều kiện kích hoạt, Quyền, thông báo, điều kiện thoát đã ghi tài liệu
-- [ ] Diễn tập một chu kỳ đầy đủ trên fork hoặc repo thử
-- [ ] Nhóm biết tài khoản bot và quy tắc Phê duyệt
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
+- [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
 
-## Nguồn tham chiếu
-- Giải thích chính thức OpenAI Codex Cloud / Automations
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** Cloud / App / CLI  
-**Ghi chú tái Kiểm chứng:** Trang này mô tả năng lực sản phẩm hiện hành về chạy tự động theo lịch, sự kiện và nền, nhưng lối vào kích hoạt và cách quản trị vẫn dễ đổi, căn cứ chính thức công khai cũng chưa đủ.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** ChatGPT Web / desktop App; CLI and IDE prepare and test
+
+**Kiểm chứng gần nhất:** 2026-08-26

@@ -3,9 +3,10 @@ title: ローカルと Cloud タスク
 description: App でローカル実行と Cloud 実行を切り替える。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 95e2382
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -17,7 +18,7 @@ App でタスクの実行場所を選択します。
 - **ローカル**：ローカルのファイルと環境。反復が速い
 - **Cloud**：クラウド環境。リモートリポジトリや長時間タスクに向く
 
-概念：[ローカルと Cloud](/guide/foundations/local-vs-cloud/) · 概要：[Web と Cloud](/guide/web-and-cloud/)
+概念：[ローカルと Cloud](/ja/guide/foundations/local-vs-cloud/) · 概要：[Web と Cloud](/ja/guide/web-and-cloud/)
 
 切り替える前に確認：秘密情報をその環境に置くべきか、ネットワークポリシーが許可するか。
 

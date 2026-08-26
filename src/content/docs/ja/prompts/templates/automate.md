@@ -3,9 +3,10 @@ title: 自動化テンプレート
 description: 反復タスクと再利用可能なフロー。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 自動化テンプレート
@@ -58,8 +59,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [長時間タスクのプロンプト](/prompts/long-running-tasks/)
-- [日報自動化の事例](/cases/automate-a-daily-report/)
+- [長時間タスクのプロンプト](/ja/prompts/long-running-tasks/)
+- [日報自動化の事例](/ja/cases/automate-a-daily-report/)
 
 ---
 

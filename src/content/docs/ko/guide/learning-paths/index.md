@@ -5,9 +5,10 @@ sidebar:
   order: 5
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 05e85de
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 학습 경로는 **순서만 정리**하며, 제품 매뉴얼이나 능력 특집의 긴 글을 복제하지 않습니다.
@@ -25,17 +26,17 @@ translated_at: 2026-07-28
 ## MVP에서 쓸 수 있는 경로
 
 - **초보자(완전한 다섯 단계)**
-  1. [Codex와 대화하기](/guide/learning-paths/beginner/01-talk-to-codex/)
-  2. [파일 다루기](/guide/learning-paths/beginner/02-work-with-files/)
-  3. [명확한 작업 주기](/guide/learning-paths/beginner/03-give-clear-tasks/)
-  4. [결과 검토하기](/guide/learning-paths/beginner/04-review-results/)
-  5. [첫 작은 프로젝트 끝내기](/guide/learning-paths/beginner/05-complete-first-project/)
+  1. [Codex와 대화하기](/ko/guide/learning-paths/beginner/01-talk-to-codex/)
+  2. [파일 다루기](/ko/guide/learning-paths/beginner/02-work-with-files/)
+  3. [명확한 작업 주기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
+  4. [결과 검토하기](/ko/guide/learning-paths/beginner/04-review-results/)
+  5. [첫 작은 프로젝트 끝내기](/ko/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## 개요(심화 단계는 이후 보완)
 
-- [크리에이터](/guide/learning-paths/creator/)
-- [개발자](/guide/learning-paths/developer/)
-- [팀](/guide/learning-paths/team/)
+- [크리에이터](/ko/guide/learning-paths/creator/)
+- [개발자](/ko/guide/learning-paths/developer/)
+- [팀](/ko/guide/learning-paths/team/)
 
 ## 고급 운영자 경로
 
@@ -43,14 +44,14 @@ translated_at: 2026-07-28
 
 | 단계 | 주제 | 먼저 읽을 것 |
 |---|---|---|
-| 1 | 빠른 진입점 | [슬래시 명령과 빠른 진입](/guide/reference/slash-commands/) |
-| 2 | 지속되는 컨텍스트 | [AGENTS.md](/guide/customization/agents-md/)와 [기억과 지속 컨텍스트](/guide/customization/memories-and-persistent-context/) |
-| 3 | 재사용 가능한 워크플로 | [Skills 개요](/skills/overview/)와 [Skill 구조](/skills/skill-anatomy/) |
-| 4 | 독립 하위 작업 | [서브 에이전트](/guide/agent-work/subagents/)와 [다중 Agent 조율](/cases/workflows/multi-agent-coordination/) |
-| 5 | 외부 시스템 | [MCP 개요](/skills/mcp/mcp-overview/) |
-| 6 | 자동 가드레일 | [Hooks 개요](/skills/hooks/hooks-overview/) |
-| 7 | 팀 배포 | [Plugins 개요](/skills/plugins/plugins-overview/) |
-| 8 | 복구와 리뷰 | [실행 취소와 복구](/guide/getting-started/undo-and-recover/)와 [Diff 리뷰](/guide/quality/review-diffs/) |
+| 1 | 빠른 진입점 | [슬래시 명령과 빠른 진입](/ko/guide/reference/slash-commands/) |
+| 2 | 지속되는 컨텍스트 | [AGENTS.md](/ko/guide/customization/agents-md/)와 [기억과 지속 컨텍스트](/ko/guide/customization/memories-and-persistent-context/) |
+| 3 | 재사용 가능한 워크플로 | [Skills 개요](/ko/skills/overview/)와 [Skill 구조](/ko/skills/skill-anatomy/) |
+| 4 | 독립 하위 작업 | [서브 에이전트](/ko/guide/agent-work/subagents/)와 [다중 Agent 조율](/ko/cases/workflows/multi-agent-coordination/) |
+| 5 | 외부 시스템 | [MCP 개요](/ko/skills/mcp/mcp-overview/) |
+| 6 | 자동 가드레일 | [Hooks 개요](/ko/skills/hooks/hooks-overview/) |
+| 7 | 팀 배포 | [Plugins 개요](/ko/skills/plugins/plugins-overview/) |
+| 8 | 복구와 리뷰 | [실행 취소와 복구](/ko/guide/getting-started/undo-and-recover/)와 [Diff 리뷰](/ko/guide/quality/review-diffs/) |
 
 이 경로는 “가끔 Codex에게 도움을 받는” 상태를 “팀이 반복 실행할 수 있는 작은 시스템”으로 바꾸는 데 적합합니다. 프로젝트 지침은 장기 규칙을, Skill은 방법을, MCP는 외부 도구를, 서브 에이전트는 경계가 명확한 작업 분담을, Hook은 핵심 지점을, Plugin은 팀 배포를 담당합니다.
 
@@ -73,10 +74,10 @@ translated_at: 2026-07-28
 
 어느 경로를 탈지 모르겠다면, 이렇게 고르세요.
 
-- 아직 첫 완전한 작업을 통과하지 못함：[초보자 경로](/guide/learning-paths/beginner/)
-- 주로 콘텐츠, 이미지·텍스트, 데모를 만들고 싶음：[크리에이터 경로](/guide/learning-paths/creator/)
-- 주로 코드 수정, 버그 수정, 프로젝트 연결：[개발자 경로](/guide/learning-paths/developer/)
-- 주로 팀 도입과 위험 통제：[팀 경로](/guide/learning-paths/team/)
+- 아직 첫 완전한 작업을 통과하지 못함：[초보자 경로](/ko/guide/learning-paths/beginner/)
+- 주로 콘텐츠, 이미지·텍스트, 데모를 만들고 싶음：[크리에이터 경로](/ko/guide/learning-paths/creator/)
+- 주로 코드 수정, 버그 수정, 프로젝트 연결：[개발자 경로](/ko/guide/learning-paths/developer/)
+- 주로 팀 도입과 위험 통제：[팀 경로](/ko/guide/learning-paths/team/)
 
 학습 경로는 “지금 가장 중요한 문제”로 다음에 무엇을 읽을지 정합니다.
 

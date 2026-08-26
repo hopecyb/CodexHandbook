@@ -3,54 +3,51 @@ title: Plugins
 description: Distribution d'extensions en équipe — les Plugins sont une couche de packaging, pas un nouveau type de capacité.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 33c9fe2
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Les Plugins résolvent surtout comment livrer et gérer un ensemble d'extensions pour que d'autres les installent.
+A Plugin is a unit of capability composition and distribution. It may contain Skills, connectors, MCP servers, browser extensions, Hooks, and Scheduled task templates; those components still perform the actual work.
 
-Ils portent sur :
+## Who it is for
 
-- Packaging
-- Distribution
-- Mises à niveau
-- Gouvernance des permissions
+- Users installing a ready-made capability bundle from a public directory.
+- Maintainers distributing team workflows, tools, and guardrails as one versioned unit.
+- Administrators reviewing source, external-service permissions, and Plugin Hooks.
 
-Ce n'est pas un nouveau type de capacité distinct.
+## Current support surfaces
 
-## Quand cette section s'applique
+| Surface | Browse/install | Use |
+|---|---|---|
+| ChatGPT Web and desktop App | Plugins tab | Chat and Work |
+| ChatGPT Mobile | Not a primary management surface | Use Plugins already installed on the account |
+| Codex in the ChatGPT desktop App | Plugins tab | Codex tasks |
+| Codex CLI | `/plugins` browser; start a new session after installation | Codex environment |
+| IDE integration | **Plugins not supported** | Use MCP, Skills, and other IDE-supported capabilities separately |
 
-Principalement deux situations :
+## Reading entry points
 
-- Vous allez livrer un pack d'extensions à toute l'équipe
-- Vous voulez juger si un Plugin vaut l'installation
+- [Plugins overview](/fr/skills/plugins/plugins-overview/): components, support boundaries, installation verification, and security review
+- [Capability map](/fr/skills/capability-map/): compare Plugins, Skills, MCP, Hooks, and Scheduled tasks
 
-Pour l'apprentissage personnel, une page de vue d'ensemble suffit souvent.
+## Before installation
 
-## Entrée dans cette section
+1. Who is the source and maintainer?
+2. Which Skills, connectors, MCP servers, browser capabilities, and Hooks are included?
+3. Which external accounts and scopes does it request?
+4. Were its Hooks reviewed and trusted in `/hooks`?
+5. How will the team disable, upgrade, roll back, and revoke it?
 
-- [Vue d'ensemble des Plugins](/skills/plugins/plugins-overview/) : comment Plugin se relie à Skill et MCP, et pourquoi c'est une couche de distribution
+## Official source
 
-## Idées reçues courantes
-
-### 1. Installer un Plugin est automatiquement sûr
-
-Un Plugin ne rend les capacités plus faciles à distribuer — pas implicitement fiables ou à faible permission.
-
-### 2. Plus de fonctionnalités signifie qu'il vaut l'installation
-
-Mieux vaut vérifier d'abord :
-
-- La source est fiable ?
-- Quelle est l'ampleur des permissions ?
-- L'équipe peut mettre à niveau, rollback et auditer ?
-
-Un Plugin est un pack de distribution d'extensions — pas un remplacement de Skill ou MCP.
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** App / CLI  
-**Base de vérification :** Catalogue Plugin, politique d'installation et support des surfaces évoluent encore ; cette section fixe ces détails trop rigidement — marqué `outdated` en attendant réécriture pour le catalogue Plugin actuel.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; Plugins are not supported in the IDE integration
+
+**Last verified:** 2026-08-26

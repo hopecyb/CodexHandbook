@@ -3,9 +3,10 @@ title: PDF とドキュメント
 description: Codex に PDF 系ドキュメントを読み取り、要約または生成させるときの範囲、ツール、検証の要点。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ PDF はテキストファイルより扱いが難しく、次が混在するこ�
 1. **ファイルパスを指定**：`docs/spec.pdf` または @ 参照（クライアント対応による）
 2. **欲しい結果を説明**：要約、特定章との照合、表データの抽出
 3. **ページまたは章**：長文は範囲を限定し、コンテキストを節約
-4. **機微内容**：契約書、身分証スキャンなどは [機密コンテキスト](/guide/context/sensitive-context/) の手順に従う
+4. **機微内容**：契約書、身分証スキャンなどは [機密コンテキスト](/ja/guide/context/sensitive-context/) の手順に従う
 
 ### 制限
 
@@ -97,8 +98,8 @@ OCR や版式認識に不確実性がある場合は、明示してください�
 ## リポジトリ方針との関係
 
 - 大きな PDF バイナリは **Git LFS** を検討するか、リポジトリ外に置く
-- diff が読めないときは、**ファイルを開く** + [成果物の検証](/guide/quality/verify-artifacts/) で確認
-- 生成物一覧は [生成物の検証](/guide/files-and-artifacts/generated-artifacts/) を参照
+- diff が読めないときは、**ファイルを開く** + [成果物の検証](/ja/guide/quality/verify-artifacts/) で確認
+- 生成物一覧は [生成物の検証](/ja/guide/files-and-artifacts/generated-artifacts/) を参照
 
 ## よくある失敗
 

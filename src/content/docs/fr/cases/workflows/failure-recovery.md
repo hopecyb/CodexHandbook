@@ -3,12 +3,13 @@ title: Reprise après échec
 description: Quand une tâche dévie, les tests passent au rouge ou le contexte s'épuise — comment revenir en arrière en sécurité et continuer.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-La **reprise après échec** couvre comment stabiliser la situation après qu'une tâche a dévié ou s'est interrompue. Ce chapitre propose des étapes reproductibles **détecter → limiter les dégâts → récupérer → tirer les leçons**, à associer à [Annuler et récupérer](/guide/getting-started/undo-and-recover/) et à la [Gestion des tâches longues](/cases/workflows/long-running-task-management/).
+La **reprise après échec** couvre comment stabiliser la situation après qu'une tâche a dévié ou s'est interrompue. Ce chapitre propose des étapes reproductibles **détecter → limiter les dégâts → récupérer → tirer les leçons**, à associer à [Annuler et récupérer](/fr/guide/getting-started/undo-and-recover/) et à la [Gestion des tâches longues](/fr/cases/workflows/long-running-task-management/).
 
 ## Ce que couvre cette page
 
@@ -54,7 +55,7 @@ Détecter (tests / humain / CI)
     → Capitaliser les leçons
 ```
 
-Multi-Agent : voir [Coordination multi-Agent](/cases/workflows/multi-agent-coordination/) — en cas d'échec, préciser quel sous-tâche gère le retour arrière.
+Multi-Agent : voir [Coordination multi-Agent](/fr/cases/workflows/multi-agent-coordination/) — en cas d'échec, préciser quel sous-tâche gère le retour arrière.
 
 ## Erreurs courantes
 
@@ -65,7 +66,7 @@ Multi-Agent : voir [Coordination multi-Agent](/cases/workflows/multi-agent-coord
 
 ## Limites de sécurité
 
-- La récupération elle-même est contrainte par les [règles de commande](/guide/customization/rules/command-rules/)
+- La récupération elle-même est contrainte par les [règles de commande](/fr/guide/customization/rules/command-rules/)
 - Incidents de production : revenir en arrière d'abord, analyse des causes ensuite — ne pas laisser l'Agent corriger directement les données de production
 
 ## Liste de contrôle d'acceptation
@@ -77,9 +78,9 @@ Multi-Agent : voir [Coordination multi-Agent](/cases/workflows/multi-agent-coord
 
 ## Chapitres connexes
 
-- [Diagnostiquer avant de corriger](/cases/workflows/diagnose-before-fixing/)
-- [Transfert et reprise](/guide/agent-work/handoff-and-resume/)
-- [Référence des erreurs](/guide/reference/error-reference/)
+- [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/)
+- [Transfert et reprise](/fr/guide/agent-work/handoff-and-resume/)
+- [Référence des erreurs](/fr/guide/reference/error-reference/)
 
 ---
 

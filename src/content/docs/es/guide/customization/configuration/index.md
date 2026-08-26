@@ -3,9 +3,10 @@ title: Configuración
 description: Página de introducción a archivos de configuración y profiles — qué comportamientos van en configuración y cuáles no.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La primera vez que ves el grupo «configuración», es fácil pensar que solo habla de un montón de nombres de parámetros.
@@ -14,8 +15,8 @@ En realidad resuelve una cosa: cómo debe trabajar Codex por defecto, sin tener 
 
 ## Orden recomendado
 
-1. [Fundamentos de configuración](/guide/customization/configuration/config-basics/)
-2. [Profiles](/guide/customization/configuration/profiles/)
+1. [Fundamentos de configuración](/es/guide/customization/configuration/config-basics/)
+2. [Profiles](/es/guide/customization/configuration/profiles/)
 
 ## Qué problema resuelve este grupo
 

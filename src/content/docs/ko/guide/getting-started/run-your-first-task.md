@@ -3,9 +3,10 @@ title: 첫 작업 실행
 description: 명확한 프롬프트로 작은 변경을 한 번 마칩니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ sidebar:
 
 1. 짧은 계획을 받게 하거나, 당신이 먼저 계획을 요청
 2. 파일 쓰기 승인 시 경로가 맞는지 확인
-3. 끝나면 [결과 확인](/guide/getting-started/review-the-result/)으로
+3. 끝나면 [결과 확인](/ko/guide/getting-started/review-the-result/)으로
 
 ## 실행 순서
 
@@ -112,7 +113,7 @@ sidebar:
 지금은 더 고치지 마세요. 방금 어디를 바꿨는지 알려 주세요.
 ```
 
-프롬프트 원리: [프롬프트 기초](/prompts/basics/).
+프롬프트 원리: [프롬프트 기초](/ko/prompts/basics/).
 
 ---
 

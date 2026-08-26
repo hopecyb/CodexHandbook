@@ -5,9 +5,10 @@ sidebar:
   order: 30
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a5cc3b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex의 핵심 산출은 종종 **저장소 안 파일 변경**이거나 **새로 생성된 산출물**(문서, 이미지, 설정)입니다. 이 특집은 파일 유형별 모범 실천을 설명해 “생성됐지만 쓸 수 없음”을 줄입니다.
@@ -20,14 +21,14 @@ Codex의 핵심 산출은 종종 **저장소 안 파일 변경**이거나 **새�
 
 | 주제 | 페이지 |
 |---|---|
-| 코드와 텍스트 | [텍스트와 코드 파일](/guide/files-and-artifacts/text-and-code-files/) |
-| 스크린샷·디자인 입력 | [이미지와 스크린샷](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF와 긴 문서 | [PDF와 문서](/guide/files-and-artifacts/pdf-and-documents/) |
-| 표 데이터 | [표와 스프레드시트](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| 슬라이드 | [프레젠테이션](/guide/files-and-artifacts/presentations/) |
-| Agent 출력물 | [생성물 검증](/guide/files-and-artifacts/generated-artifacts/) |
+| 코드와 텍스트 | [텍스트와 코드 파일](/ko/guide/files-and-artifacts/text-and-code-files/) |
+| 스크린샷·디자인 입력 | [이미지와 스크린샷](/ko/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF와 긴 문서 | [PDF와 문서](/ko/guide/files-and-artifacts/pdf-and-documents/) |
+| 표 데이터 | [표와 스프레드시트](/ko/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| 슬라이드 | [프레젠테이션](/ko/guide/files-and-artifacts/presentations/) |
+| Agent 출력물 | [생성물 검증](/ko/guide/files-and-artifacts/generated-artifacts/) |
 
-일반 방법은 [산출물 검증](/guide/quality/verify-artifacts/)을 보세요.
+일반 방법은 [산출물 검증](/ko/guide/quality/verify-artifacts/)을 보세요.
 
 ## 이 장이 말하는 것
 
@@ -44,8 +45,8 @@ Codex의 핵심 산출은 종종 **저장소 안 파일 변경**이거나 **새�
 1. **경로 명확**: prompt에 출력 경로와 이름 규칙을 씀
 2. **형식 약속**: 확장자, 인코딩(UTF-8), 줄바꿈을 프로젝트와 맞춤
 3. **용량 의식**: 큰 바이너리는 Git에 넣지 않거나 LFS/CDN 사용
-4. **사람 검증**: 생성 ≠ 완료; [완료 정의](/guide/quality/definition-of-done/)와 대조
-5. **민감 데이터**: [민감 컨텍스트](/guide/context/sensitive-context/) 참고
+4. **사람 검증**: 생성 ≠ 완료; [완료 정의](/ko/guide/quality/definition-of-done/)와 대조
+5. **민감 데이터**: [민감 컨텍스트](/ko/guide/context/sensitive-context/) 참고
 
 ## 흔한 오해
 
@@ -86,9 +87,9 @@ Codex로 파일을 처음 다룰 때:
 ## 도구와의 관계
 
 - 파일 읽기/쓰기: 파일 도구 + 터미널
-- 이미지 보기: [이미지 프롬프트](/prompts/prompting-with-images/)
-- 페이지 보기: [브라우저 도구](/guide/tools/browser/)
-- 이미지 생성: [이미지 생성](/guide/tools/image-generation/)
+- 이미지 보기: [이미지 프롬프트](/ko/prompts/prompting-with-images/)
+- 페이지 보기: [브라우저 도구](/ko/guide/tools/browser/)
+- 이미지 생성: [이미지 생성](/ko/guide/tools/image-generation/)
 
 파일형 작업에서 흔한 경우는, 결과는 이미 생성됐는데 형식·규칙·내용이 몰래 빗나간 것입니다.
 

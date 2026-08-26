@@ -3,9 +3,10 @@ title: Rückgängig machen und wiederherstellen
 description: "Bei unbefriedigendem Ergebnis sicher zurückrollen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b76bcfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---

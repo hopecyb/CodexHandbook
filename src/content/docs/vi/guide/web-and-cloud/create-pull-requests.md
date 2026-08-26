@@ -3,118 +3,77 @@ title: Tạo Pull Request
 description: "Từ Tác vụ Cloud tới PR có thể review — mô tả, phạm vi và cổng merge của người."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 70996a7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-Trong quy trình Cloud lần đầu, Tác vụ có thể «xong» trong khi thay đổi chưa ở trạng thái dễ kiểm tra và thảo luận. Trong đội, bước chuyển này thường qua một **Pull Request**.
+Inspect the summary and diff after a Cloud task. Create a pull request only when the result satisfies scope and verification criteria; otherwise, continue correcting it in the same chat.
 
-PR là đề xuất thay đổi có thể review.
-
-Nó tập trung điều gì đã đổi, vì sao và đã Kiểm chứng thế nào — nơi đầu ra Cloud đến với đội.
-
-## Nội dung phủ
-
-- Kỳ vọng đầu-cuối từ Tác vụ Cloud tới PR
-- Mô tả PR cần gồm gì cho người và CI
-- Khi nào không nên mở PR tự động
-
-## Khi nào mở PR
-
-Nếu người khác cần thấy thay đổi, CI cần chạy, hoặc công việc cần merge vào nhánh chính, đừng dừng ở «nhánh đã cập nhật» — chuyển sang **PR có thể review**.
-
-## Quy trình khuyến nghị
+## From task to PR
 
 ```text
-Kết nối GitHub → làm rõ issue/mục tiêu → Tác vụ Cloud (xác nhận kế hoạch) → push nhánh → mở PR → review người + CI → merge
+Select environment and starting branch
+  → run the Cloud task
+  → review summary, logs, and diff
+  → follow up if needed
+  → Create Pull Request
+  → CI + supplementary Codex review + human review
+  → a person decides whether to merge
 ```
 
-Tiền đề: [Kết nối GitHub](/guide/web-and-cloud/connect-github/)
+Tell Codex to “create a PR, do not merge,” but do not rely on a natural-language constraint alone. Enable branch protection and required checks in the repository.
 
-## Vì sao tự merge không phải mặc định
-
-PR tồn tại để người và tự động hóa có điểm kiểm soát — không chỉ để upload code.
-
-Mẫu phổ biến:
-
-- Codex có thể giúp mở PR
-- Người quyết định có merge không
-
-Điều này giữ cổng an toàn dù Tác vụ đã lệch hướng.
-
-## Điểm cốt lõi Prompt Tác vụ
+## Reusable task template
 
 ```text
-Mục tiêu: Sửa timeout đăng nhập mô tả trong #42
-Nhánh: fix/42-login-timeout
-Phạm vi: chỉ packages/auth và kiểm thử liên quan
-Xong: Mở PR tới main; không merge
-Mô tả PR phải gồm: lý do, tóm tắt thay đổi, lệnh và kết quả kiểm thử, rủi ro và rollback
+Goal: Fix the sign-in timeout regression in issue #42.
+Starting point: main.
+Scope: packages/auth/** and the corresponding tests only.
+Do not: upgrade dependencies, change the public API, or write directly to main.
+Verification: pnpm test --filter auth; pnpm typecheck.
+Deliverable: Create a PR to main, but do not merge it.
+The PR description must include the root cause, change summary, test commands
+and results, risks, and rollback approach.
 ```
 
-Căn chỉnh với [định nghĩa hoàn thành](/prompts/define-done/) và [cấu trúc Tác vụ](/prompts/task-anatomy/).
+## Before creation
 
-## Một PR tốt trả lời bốn câu hỏi
+- [ ] Starting commit is correct and no required local input remains unpushed.
+- [ ] Diff contains only the task scope.
+- [ ] The new branch name is recognizable and does not overwrite another person's work.
+- [ ] Tests actually ran and failures are not hidden by the summary.
+- [ ] No credentials, temporary logs, caches, or unrelated formatting.
+- [ ] A large change is split into independently reviewable PRs.
 
-1. Vì sao bạn làm thay đổi này?
-2. Chính xác điều gì đã đổi?
-3. Bạn Kiểm chứng thế nào?
-4. Còn rủi ro, giới hạn hoặc khoảng trống nào?
+## Minimum PR description
 
-Không có chúng, người review phải tự dựng lại Ngữ cảnh.
+1. Why the change is required.
+2. What actually changed.
+3. How it was verified, including commands and results.
+4. Risks, limitations, and rollback.
+5. What was explicitly not done.
 
-## Checklist chất lượng PR
+Add real screenshots for UI changes, reproduction steps for behavior changes, and compatibility and rollback details for migrations.
 
-- [ ] Tiêu đề nêu **điều gì** đã đổi, không phải «cập nhật code»
-- [ ] Liên kết số issue
-- [ ] CI đạt hoặc giải thích fail đã biết
-- [ ] Kích thước Diff chấp nhận được; tách PR quá lớn
-- [ ] Không secrets, không bão định dạng không liên quan
-- [ ] Ảnh chụp hoặc log cho thay đổi UI/hành vi
+## After creation
 
-## Cổng người
+Wait for required checks, request supplementary review with `@codex review`, and have a person with context inspect the main diff. Return specific comments to the same PR branch; do not create an unrelated duplicate branch.
 
-Dù Codex mở PR, **merge** mặc định phải do người (hoặc bot được kiểm soát dưới bảo vệ nhánh):
+Opening and merging a PR are separate permission boundaries. Cloud being able to create a PR does not justify bypassing the team's merge policy.
 
-Xem [mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
+## Official sources
 
-## Hiểu nhầm thường gặp
-
-### 1. Nhét thay đổi không liên quan vào một PR
-
-Khó review và khó hoàn tác.
-
-### 2. Nói «đã sửa» mà không nói Kiểm chứng thế nào
-
-Người review không phân được «đã kiểm thử» và «có lẽ ổn».
-
-### 3. Để Codex đụng thẳng main
-
-Có thể được với thí nghiệm solo; quá rủi ro với repo dùng chung.
-
-## Tự động hóa review
-
-- Dùng Skill hoặc `codex exec` trong CI cho **bình luận review bổ trợ**
-- Tự merge cần quản trị riêng — không phải đường mặc định cho người mới
-
-## Lỗi thường gặp
-
-- Một PR với nhiều tính năng không liên quan
-- Mô tả nói «thay đổi do AI sinh» không có ghi chú kiểm thử
-- Merge vào main không qua review
-
-## Đọc thêm
-
-- [Tích hợp GitHub](/guide/integrations/github/)
-- [Xem xét Diff](/guide/quality/review-diffs/)
-- [App máy tính: Diff và bình luận](/guide/desktop-app/diffs-comments-and-review/)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** Cloud / Web  
-**Ghi chú đối chiếu:** «Đầu ra Cloud vào PR để người review» vẫn đúng, nhưng trang mô tả cụ thể lối vào PR, hành vi tự động hóa và nhịp giao hàng Cloud; chưa đối chiếu từng dòng với tích hợp PR và GitHub Cloud chính thức hiện hành thì không nên đánh `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** Cloud, GitHub
+
+**Kiểm chứng gần nhất:** 2026-08-26

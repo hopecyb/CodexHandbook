@@ -1,0 +1,71 @@
+<svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo de sandbox Codex e decisão de aprovação</title>
+  <desc id="desc">Codex propõe uma ação e verifica o sandbox. Ações dentro do escopo rodam com evidências; ações fora do escopo solicitam decisão humana. A negação restringe ou explica; a aprovação permite apenas a ação declarada. Ambos os caminhos terminam em verificação.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 12.8px; }
+    .label { fill: #f8fafc; font-size: 15.2px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+    .tiny { fill: #94a3b8; font-size: 10.4px; }
+    .edge { fill: #e2e8f0; font-size: 10.4px; font-weight: 700; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="green-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#34d399"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1200" height="780" rx="8" fill="#020617"/>
+  <rect width="1200" height="780" rx="8" fill="url(#grid)"/>
+  <text x="44" y="48" class="h1">Sandbox controla o alcance máximo; aprovação controla se perguntar antes de cruzá-lo</text>
+  <text x="44" y="75" class="sub">Restrições da tarefa descrevem a intenção; limites do sistema restringem a execução; diffs, testes e estado externo determinam a aceitação.</text>
+
+  <rect x="66" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="191" y="158" text-anchor="middle" class="label">Objetivo e restrições da tarefa</text>
+  <text x="191" y="186" text-anchor="middle" class="note">Escopo permitido · ações proibidas · aceitação</text>
+  <path d="M316 169H390" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="390" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="515" y="158" text-anchor="middle" class="label">Codex propõe uma ação</text>
+  <text x="515" y="186" text-anchor="middle" class="note">Leitura/escrita · comando · rede · app</text>
+  <path d="M640 169H714" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M850 112L986 169L850 226L714 169Z" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="850" y="160" text-anchor="middle" class="label">Dentro do sandbox atual</text>
+  <text x="850" y="185" text-anchor="middle" class="label">Dentro do escopo?</text>
+
+  <path d="M986 169H1080V298" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#green-arrow)"/>
+  <text x="1015" y="155" class="edge">Sim</text>
+  <rect x="950" y="298" width="230" height="98" rx="9" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1065" y="335" text-anchor="middle" class="label">Executar dentro do limite</text>
+  <text x="1065" y="364" text-anchor="middle" class="note">Ainda registrar comandos e saída</text>
+
+  <path d="M850 226V282H588" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
+  <text x="864" y="258" class="edge">Não</text>
+  <rect x="318" y="282" width="270" height="104" rx="9" fill="#07101f" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="453" y="319" text-anchor="middle" class="label">O que a política de aprovação faz?</text>
+  <text x="453" y="348" text-anchor="middle" class="note">Perguntar ao usuário ou negar por política</text>
+  <text x="453" y="371" text-anchor="middle" class="tiny">Processos filhos usam o mesmo sandbox</text>
+
+  <path d="M385 386V445H214" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
+  <text x="314" y="430" class="edge">Negado</text>
+  <rect x="48" y="445" width="332" height="122" rx="9" fill="#2a1018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="214" y="483" text-anchor="middle" class="label">Restringir a ação ou explicar o bloqueio</text>
+  <text x="214" y="513" text-anchor="middle" class="note">Usar caminhos do workspace · dependências existentes</text>
+  <text x="214" y="541" text-anchor="middle" class="tiny">Nunca substituir silenciosamente por ação de maior risco</text>
+
+  <path d="M521 386V445H684" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="574" y="430" class="edge">Aprovado</text>
+  <rect x="518" y="445" width="332" height="122" rx="9" fill="#2a240b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="684" y="483" text-anchor="middle" class="label">Executar apenas o escopo explicitamente aprovado</text>
+  <text x="684" y="513" text-anchor="middle" class="note">Comando específico · caminho · domínio · duração</text>
+  <text x="684" y="541" text-anchor="middle" class="tiny">Reavaliar cada novo cruzamento</text>
+
+  <path d="M214 567V637H516" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M684 567V637H638" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M1065 396V637H638" fill="none" stroke="#34d399" stroke-width="1.5" marker-end="url(#green-arrow)"/>
+  <rect x="390" y="618" width="420" height="108" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="600" y="658" text-anchor="middle" class="label">Verificar resultados e efeitos externos</text>
+  <text x="600" y="687" text-anchor="middle" class="note">diff · testes · logs · estado remoto · recuperabilidade</text>
+  <text x="600" y="712" text-anchor="middle" class="tiny">Ausência de prompt não remove revisão; aprovação não prova correção.</text>
+</svg>

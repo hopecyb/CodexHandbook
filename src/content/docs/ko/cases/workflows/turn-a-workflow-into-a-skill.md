@@ -3,12 +3,13 @@ title: 워크플로를 Skill로 정착하기
 description: 세 번째 반복되는 흐름은 Skill로 쓸 가치가 있습니다—트리거, 설명, 인수를 하나로 묶습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-같은 종류의 작업(릴리스 검사, 문서 동기화, 보안 스캔)을 **세 번째**로 프롬프트를 복사·붙여넣기 해 끝낼 때면, [Skill](/skills/overview/)을 고려할 시점입니다. 이 장은 [워크플로 방법](/cases/workflows/)과 확장 체계를 잇습니다.
+같은 종류의 작업(릴리스 검사, 문서 동기화, 보안 스캔)을 **세 번째**로 프롬프트를 복사·붙여넣기 해 끝낼 때면, [Skill](/ko/skills/overview/)을 고려할 시점입니다. 이 장은 [워크플로 방법](/ko/cases/workflows/)과 확장 체계를 잇습니다.
 
 ## 이 글이 해결하는 문제
 
@@ -29,11 +30,11 @@ translated_at: 2026-07-28
 
 1. **SKILL.md를 분명히 씀**: 언제 트리거할지, 입출력, 금지 사항
 2. **`references/` 첨부**: checklist, 샘플 diff
-3. **선택 `scripts/`**: 반복 실행 가능한 검증 명령([명령 규칙](/guide/customization/rules/command-rules/)과 일치)
+3. **선택 `scripts/`**: 반복 실행 가능한 검증 명령([명령 규칙](/ko/guide/customization/rules/command-rules/)과 일치)
 4. **저장소 README 또는 AGENTS.md에** Skill 이름을 언급
 5. **2–3회 시험 실행** 후 `verified`로 표시
 
-입문: [첫 Skill 만들기](/skills/create-your-first-skill/)
+입문: [첫 Skill 만들기](/ko/skills/create-your-first-skill/)
 
 ## 권장 워크플로
 
@@ -45,7 +46,7 @@ translated_at: 2026-07-28
     → 저장소 약속 examples/ 디렉터리, 팀 플러그인 또는 내부 스킬 라이브러리에 기록
 ```
 
-[흐름을 자동화로 만들기](/skills/automations/scheduled-tasks/)와 비교하면: Skill은 **대화형 안내**에 가깝고, Automation은 **예약/무인**에 가깝습니다.
+[흐름을 자동화로 만들기](/ko/skills/automations/scheduled-tasks/)와 비교하면: Skill은 **대화형 안내**에 가깝고, Automation은 **예약/무인**에 가깝습니다.
 
 ## 흔한 실수
 
@@ -56,8 +57,8 @@ translated_at: 2026-07-28
 
 ## 보안 경계
 
-- [Skill 보안과 버전](/skills/security/) 참고
-- 팀 Skill은 확장 승인 목록에 넣어야 합니다([Plugin과 MCP 위험](/guide/team-enterprise/security/plugin-and-mcp-risk/) 참고)
+- [Skill 보안과 버전](/ko/skills/security/) 참고
+- 팀 Skill은 확장 승인 목록에 넣어야 합니다([Plugin과 MCP 위험](/ko/guide/team-enterprise/security/plugin-and-mcp-risk/) 참고)
 
 ## 인수 체크리스트
 

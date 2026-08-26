@@ -3,9 +3,10 @@ title: 이해 템플릿
 description: 먼저 인지를 세운 뒤 변경에 손댑니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 이해 템플릿
@@ -52,8 +53,8 @@ translated_at: 2026-07-28
 
 ## 관련
 
-- [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
-- [코드베이스 이해 사례](/cases/understand-a-codebase/)
+- [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
+- [코드베이스 이해 사례](/ko/cases/understand-a-codebase/)
 
 ---
 

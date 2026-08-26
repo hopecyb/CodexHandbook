@@ -3,9 +3,10 @@ title: Variables de entorno
 description: Uso, capas y seguridad de las variables de entorno relacionadas con Codex — índice complementario de la referencia de configuración.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -30,7 +31,7 @@ Si un valor cumple cualquiera de estas, prioriza variable de entorno:
 
 Por eso tokens, interruptores temporales e inyecciones de CI suelen ir por variables de entorno, no hardcodeados.
 
-Conceptos de claves de configuración: [Referencia de configuración](/guide/reference/configuration-reference/); Cloud: [Secrets y variables](/guide/web-and-cloud/secrets-and-variables/).
+Conceptos de claves de configuración: [Referencia de configuración](/es/guide/reference/configuration-reference/); Cloud: [Secrets y variables](/es/guide/web-and-cloud/secrets-and-variables/).
 
 ## Qué encaja en variables de entorno
 
@@ -74,7 +75,7 @@ Por tanto:
 
 - Normas de código, estructura de directorios → `AGENTS.md`
 - Valores por defecto de modelo consensuados por el equipo → configuración de proyecto (parte no secreta)
-- Allowlists complejas → [Reglas](/guide/customization/rules/allow-and-deny-patterns/)
+- Allowlists complejas → [Reglas](/es/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Malentendidos frecuentes
 
@@ -146,11 +147,11 @@ Exporta el token personal en `~/.zshrc` o en el `.envrc` de direnv — **no comm
 
 ### CLI no interactivo
 
-CI inyecta variables desde el almacén de secrets y luego corre `codex exec`. Véase [Modo no interactivo](/guide/cli/non-interactive-mode/).
+CI inyecta variables desde el almacén de secrets y luego corre `codex exec`. Véase [Modo no interactivo](/es/guide/cli/non-interactive-mode/).
 
 ### Servidor MCP
 
-El proceso MCP suele heredar el entorno del padre; en la configuración referencia `$VAR` en lugar de hardcodear. Véase [Conectar MCP](/skills/mcp/connect-an-mcp-server/).
+El proceso MCP suele heredar el entorno del padre; en la configuración referencia `$VAR` en lugar de hardcodear. Véase [Conectar MCP](/es/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 

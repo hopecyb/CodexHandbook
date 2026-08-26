@@ -3,9 +3,10 @@ title: "Case: bảng so sánh tính năng đối thủ"
 description: Nghiên cứu có trích dẫn và đầu ra bảng — quy trình người không phải kỹ sư cũng tái sử dụng được.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Siêu dữ liệu
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. Chuẩn bị
 
 - Làm rõ chiều so sánh (viết sẵn trong prompt hoặc `@brief.md`)
-- Bật [tìm kiếm web](/guide/tools/web-search/) (nếu sản phẩm hỗ trợ)
+- Bật [tìm kiếm web](/vi/guide/tools/web-search/) (nếu sản phẩm hỗ trợ)
 
 ## 3. Quy trình
 
-Theo [nghiên cứu có nguồn trích dẫn](/cases/workflows/research-with-sources/):
+Theo [nghiên cứu có nguồn trích dẫn](/vi/cases/workflows/research-with-sources/):
 
 ```text
 So sánh tính năng «cộng tác nhóm» của ba bên A/B/C:
@@ -44,7 +45,7 @@ Giá không kiểm chứng được thì ghi «cần xác nhận»;
 Xuất bảng markdown; không sửa tệp khác trong kho.
 ```
 
-**Kiểm chứng:** Người mở 3 URL; kiểm ngày tháng với [chính sách kiểm chứng](/guide/start-here/handbook-version-policy/).
+**Kiểm chứng:** Người mở 3 URL; kiểm ngày tháng với [chính sách kiểm chứng](/vi/guide/start-here/handbook-version-policy/).
 
 ## 4. Thất bại và phục hồi
 
@@ -58,8 +59,8 @@ Xuất bảng markdown; không sửa tệp khác trong kho.
 
 ## 6. Chương liên quan
 
-- [Ưu tiên Artifact](/cases/workflows/artifact-first-work/)
-- [Kiểm chứng nguồn](/guide/quality/validate-sources/)
+- [Ưu tiên Artifact](/vi/cases/workflows/artifact-first-work/)
+- [Kiểm chứng nguồn](/vi/guide/quality/validate-sources/)
 
 ---
 

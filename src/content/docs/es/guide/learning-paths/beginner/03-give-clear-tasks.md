@@ -3,9 +3,10 @@ title: Dar Tareas claras
 description: Organiza el Prompt con objetivo, contexto, restricciones y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7048d91
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Escribe un Prompt siguiendo un marco estable.
 
-El marco está en: [Anatomía de una buena Tarea](/prompts/task-anatomy/)
+El marco está en: [Anatomía de una buena Tarea](/es/prompts/task-anatomy/)
 
 Los dos pasos anteriores se centraban en «decir la Tarea con claridad»; este paso sigue con «hacerla más estable».
 
@@ -47,7 +48,7 @@ Sin aceptación, es más difícil saber si el resultado «no está terminado» o
 
 La clave de una Tarea clara es que objetivo, límites y criterios de finalización aparezcan juntos.
 
-Siguiente: [Revisar resultados](/guide/learning-paths/beginner/04-review-results/)
+Siguiente: [Revisar resultados](/es/guide/learning-paths/beginner/04-review-results/)
 
 ---
 

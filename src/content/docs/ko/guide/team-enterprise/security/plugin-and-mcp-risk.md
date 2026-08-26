@@ -3,14 +3,15 @@ title: Plugin과 MCP 위험
 description: 확장이 무엇에 접근할 수 있는지, 팀이 어떻게 승인·모니터링하는지——Skills, Plugin, MCP의 통합 위험 관점입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Plugin**과 **MCP 서버**는 Codex를 외부 시스템에 연결합니다. 이슈, 데이터베이스, 내부 API가 여기에 해당합니다. 능력이 클수록 [위협 모델](/guide/team-enterprise/security/threat-model/)에서의 유출·권한 초과면이 커집니다. 이 장은 [MCP 개요](/skills/mcp/mcp-overview/), [Plugins 개요](/skills/plugins/plugins-overview/)와 함께 읽으세요.
+**Plugin**과 **MCP 서버**는 Codex를 외부 시스템에 연결합니다. 이슈, 데이터베이스, 내부 API가 여기에 해당합니다. 능력이 클수록 [위협 모델](/ko/guide/team-enterprise/security/threat-model/)에서의 유출·권한 초과면이 커집니다. 이 장은 [MCP 개요](/ko/skills/mcp/mcp-overview/), [Plugins 개요](/ko/skills/plugins/plugins-overview/)와 함께 읽으세요.
 
 이런 단어를 처음 볼 때 정의를 급히 외울 필요는 없습니다. 먼저 이것만 잡으세요. Codex를 외부 시스템에 연결하면 능력도 커지고, 위험도 함께 커집니다.
 
@@ -52,7 +53,7 @@ sidebar:
 
 1. **기본 거부**：목록에 없는 원격 MCP 설치
 2. **로컬 MCP**도 디스크 전체를 읽을 수 있음——전용 OS 사용자 또는 컨테이너 사용
-3. **로그**：tool 이름과 파라미터 요약 기록(마스킹), [Hook 감사](/skills/hooks/hooks-examples/) 참고
+3. **로그**：tool 이름과 파라미터 요약 기록(마스킹), [Hook 감사](/ko/skills/hooks/hooks-examples/) 참고
 4. **Skill과 MCP 역할**：Skill은 흐름을 설명하고, MCP는 외부 연결을 실행——둘의 권한은 합집합이므로 가장 엄격한 정책을 취함
 
 ## 흔한 실수
@@ -92,10 +93,10 @@ sidebar:
 
 - [ ] 서면 승인 목록 또는 동등 프로세스가 있음
 - [ ] 프로덕션 MCP마다 owner와 데이터 등급이 있음
-- [ ] [Skill 보안](/skills/security/) 정책과 일치
+- [ ] [Skill 보안](/ko/skills/security/) 정책과 일치
 
 ## 참고 출처
-- [MCP 디버깅](/skills/mcp/debugging-mcp/)
+- [MCP 디버깅](/ko/skills/mcp/debugging-mcp/)
 ---
 
 **상태：** verified  

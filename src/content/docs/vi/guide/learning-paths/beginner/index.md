@@ -3,9 +3,10 @@ title: Lộ trình người mới
 description: "Cho độc giả lần đầu dùng Codex một tuyến năm bước ngắn nhất: từ nói rõ Tác vụ đến hoàn thành dự án nhỏ đầu tiên."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -16,11 +17,11 @@ Nhóm này là lộ trình ngắn nhất dành cho người mới.
 
 ## Thứ tự khuyến nghị
 
-1. [Trò chuyện với Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Làm việc với tệp](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Giao Tác vụ rõ ràng](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Xem xét kết quả](/guide/learning-paths/beginner/04-review-results/)
-5. [Hoàn thành dự án nhỏ đầu tiên](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Trò chuyện với Codex](/vi/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Làm việc với tệp](/vi/guide/learning-paths/beginner/02-work-with-files/)
+3. [Giao Tác vụ rõ ràng](/vi/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Xem xét kết quả](/vi/guide/learning-paths/beginner/04-review-results/)
+5. [Hoàn thành dự án nhỏ đầu tiên](/vi/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Nhóm này phù hợp ai
 

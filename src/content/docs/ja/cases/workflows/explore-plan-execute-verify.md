@@ -3,9 +3,10 @@ title: "探索—計画—実行—検証"
 description: Codex の汎用主ワークフロー——4 段階のチェックポイントで「一気に完了」より安定する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 これは本ハンドブックが推奨するデフォルトワークフローで、「まだやり方がわからない」ところから「マージできる」状態まで進むのに適しています。
@@ -19,7 +20,7 @@ translated_at: 2026-07-28
 ④ 検証 Verify    → テスト、diff レビュー、「完了の定義」との照合
 ```
 
-①②を飛ばして③に直行しないでください。そうすると「推測修正」になりやすくなります。[診断してから修正](/cases/workflows/diagnose-before-fixing/) を参照。
+①②を飛ばして③に直行しないでください。そうすると「推測修正」になりやすくなります。[診断してから修正](/ja/cases/workflows/diagnose-before-fixing/) を参照。
 
 ## ① 探索
 
@@ -45,7 +46,7 @@ translated_at: 2026-07-28
 「計画どおり実行」と返信するまでコードを書かないでください。
 ```
 
-大きなタスクや高リスクの変更は先に確認を待つ。小さなタスクは「計画が 3 ステップ以内なら自動実行」と約束し、[AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) に書く。
+大きなタスクや高リスクの変更は先に確認を待つ。小さなタスクは「計画が 3 ステップ以内なら自動実行」と約束し、[AGENTS.md](/ja/guide/customization/agents-md/writing-effective-instructions/) に書く。
 
 ## ③ 実行
 
@@ -67,7 +68,7 @@ translated_at: 2026-07-28
 | 人間 | diff の読解、主要経路の手動テスト |
 | 成果物 | スクリーンショット、ログ断片、API レスポンス |
 
-関連チェックリストは [完了の定義](/prompts/define-done/) と [テストの実行](/guide/quality/run-tests/) を参照。
+関連チェックリストは [完了の定義](/ja/prompts/define-done/) と [テストの実行](/ja/guide/quality/run-tests/) を参照。
 
 ## タスク規模に応じた調整
 
@@ -80,7 +81,7 @@ translated_at: 2026-07-28
 
 ## EPXV ケーステンプレートとの関係
 
-チームは 4 段階を [ケーステンプレート](/cases/use-cases/case-study-template/) と PR 説明に書き込み、共通言語を形成できる。
+チームは 4 段階を [ケーステンプレート](/ja/cases/use-cases/case-study-template/) と PR 説明に書き込み、共通言語を形成できる。
 
 ## よくある誤り
 

@@ -3,12 +3,13 @@ title: 長時間タスク管理
 description: 数時間・複数セッションにまたがる大タスク——チェックポイント、圧縮、委任、終了条件。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-長時間タスクではよく同じ問題に当たります：**コンテキストが満杯**、**人が離席**、**方向がずれる**、**いつ止めるか不明**。本ページは [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/) を、数時間または複数セッションに及ぶシナリオに適用します。
+長時間タスクではよく同じ問題に当たります：**コンテキストが満杯**、**人が離席**、**方向がずれる**、**いつ止めるか不明**。本ページは [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) を、数時間または複数セッションに及ぶシナリオに適用します。
 
 ## 扱う内容
 
@@ -16,7 +17,7 @@ translated_at: 2026-07-28
 - チェックポイントとステータスメモに何を書くか
 - 自動化された長時間実行の終了条件
 
-関連：[委任とフォローアップ](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+関連：[委任とフォローアップ](/ja/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/ja/skills/automations/scheduled-tasks/)
 
 ## 長時間タスクのシグナル
 
@@ -33,7 +34,7 @@ translated_at: 2026-07-28
 
 書面計画：範囲、非目標、マイルストーン、受け入れコマンド。大規模実行前に人のサインオフ。
 
-[計画](/guide/agent-work/planning/) · [サブエージェント](/guide/agent-work/subagents/)
+[計画](/ja/guide/agent-work/planning/) · [サブエージェント](/ja/guide/agent-work/subagents/)
 
 ### 2. チェックポイント
 
@@ -41,11 +42,11 @@ translated_at: 2026-07-28
 
 - レビュー可能な単位でコミットまたは stash
 - `PROGRESS.md` または issue コメント更新：完了、次、ブロッカー
-- コンテキスト満杯時は [圧縮](/guide/context/compaction/) または新セッション + 進捗ファイルへのリンク
+- コンテキスト満杯時は [圧縮](/ja/guide/context/compaction/) または新セッション + 進捗ファイルへのリンク
 
 ### 3. 締めくくりまたは委任
 
-- ローカル容量不足 → [Cloud 委任](/guide/web-and-cloud/delegate-and-follow-up/)
+- ローカル容量不足 → [Cloud 委任](/ja/guide/web-and-cloud/delegate-and-follow-up/)
 - 継続監視 → Automation + 明示的な**最大反復／期限**
 
 ## 終了条件（自動化では必須）

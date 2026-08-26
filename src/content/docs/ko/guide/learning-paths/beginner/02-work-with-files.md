@@ -3,9 +3,10 @@ title: 파일 다루기
 description: Codex가 명확한 범위 안에서 파일을 읽고 쓰게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7920b62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -24,7 +25,7 @@ hello.md만 편집하세요：문두에 날짜 주석 한 줄을 추가하세요
 끝나면 바꾼 줄을 나열하세요.
 ```
 
-차이를 확인한 뒤 수락하세요. 관련：[파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
+차이를 확인한 뒤 수락하세요. 관련：[파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 
 ## 연습 포인트
 
@@ -50,7 +51,7 @@ hello.md만 편집하세요：문두에 날짜 주석 한 줄을 추가하세요
 
 처음 파일을 건드릴 때 중요한 것은 많이 고치는 것이 아니라, 변경 경계를 분명히 하고 검사하기 쉽게 하는 것입니다.
 
-다음 단계：[명확한 작업 주기](/guide/learning-paths/beginner/03-give-clear-tasks/)
+다음 단계：[명확한 작업 주기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 

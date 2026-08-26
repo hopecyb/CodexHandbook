@@ -5,9 +5,10 @@ sidebar:
   order: 60
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f13f975
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Corto, preciso y buscable. Esta zona es sobre todo consulta e índice; las explicaciones en profundidad están en los capítulos temáticos.
@@ -26,24 +27,24 @@ Aquí conviene venir con una pregunta; no hace falta leerlo todo de una vez.
 
 ## Índice de aprendizaje
 
-- [Glosario](/guide/reference/glossary/)
-- [Preguntas frecuentes](/guide/reference/faq/)
-- [Comparación de funciones](/guide/reference/feature-comparison/)
-- [Comandos slash](/guide/reference/slash-commands/)
+- [Glosario](/es/guide/reference/glossary/)
+- [Preguntas frecuentes](/es/guide/reference/faq/)
+- [Comparación de funciones](/es/guide/reference/feature-comparison/)
+- [Comandos slash](/es/guide/reference/slash-commands/)
 
 ## Consulta técnica
 
-- [Referencia de comandos CLI](/guide/reference/commands/)
-- [Referencia de configuración](/guide/reference/configuration-reference/)
-- [Matriz de Permisos](/guide/reference/permission-matrix/)
-- [Variables de entorno](/guide/reference/environment-variables/)
-- [Atajos de teclado](/guide/reference/keyboard-shortcuts/)
-- [Referencia de errores y mensajes](/guide/reference/error-reference/)
+- [Referencia de comandos CLI](/es/guide/reference/commands/)
+- [Referencia de configuración](/es/guide/reference/configuration-reference/)
+- [Matriz de Permisos](/es/guide/reference/permission-matrix/)
+- [Variables de entorno](/es/guide/reference/environment-variables/)
+- [Atajos de teclado](/es/guide/reference/keyboard-shortcuts/)
+- [Referencia de errores y mensajes](/es/guide/reference/error-reference/)
 
 ## Diagnóstico y enlaces externos
 
-- [Índice de diagnóstico](/guide/reference/troubleshooting/)
-- [Recursos oficiales](/guide/reference/official-resources/)
+- [Índice de diagnóstico](/es/guide/reference/troubleshooting/)
+- [Recursos oficiales](/es/guide/reference/official-resources/)
 
 :::note[Sensible a la versión]
 Comandos, claves de configuración y Permisos por defecto cambian con el producto — cada página indica la fecha de verificación; antes de usar, contrasta con la documentación oficial.

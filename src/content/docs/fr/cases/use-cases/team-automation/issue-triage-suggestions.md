@@ -3,9 +3,10 @@ title: "Cas : suggestions de triage et d'étiquettes pour les issues"
 description: Utiliser Codex pour lire les nouvelles issues et suggérer étiquettes et responsable — automatisation légère d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Métadonnées
@@ -41,7 +42,7 @@ translated_at: 2026-07-28
 
 **Planifier :** Définir le schéma JSON : `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Exécuter :** `codex exec` avec titre + corps de l'issue (attention à la [désinfection contre l'injection de prompt](/guide/team-enterprise/security/prompt-injection/)).
+**Exécuter :** `codex exec` avec titre + corps de l'issue (attention à la [désinfection contre l'injection de prompt](/fr/guide/team-enterprise/security/prompt-injection/)).
 
 **Vérifier :** Comparer 3 issues historiques (fixtures) aux étiquettes humaines ; taux de concordance > 80 % avant mise en production.
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-28
 
 ## 5. Capitalisation
 
-- Connexion optionnelle au système de tickets interne via [Webhook](/guide/developer-platform/webhooks/overview/)
-- Rétrospective dans le [modèle de cas](/cases/use-cases/case-study-template/)
+- Connexion optionnelle au système de tickets interne via [Webhook](/fr/guide/developer-platform/webhooks/overview/)
+- Rétrospective dans le [modèle de cas](/fr/cases/use-cases/case-study-template/)
 
 ## 6. Chapitres connexes
 
-- [Intégration GitHub](/guide/integrations/github/)
-- [Modèles d'approbation humaine](/cases/workflows/human-approval-patterns/)
+- [Intégration GitHub](/fr/guide/integrations/github/)
+- [Modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/)
 
 ---
 

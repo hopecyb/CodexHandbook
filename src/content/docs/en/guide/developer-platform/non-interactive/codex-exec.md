@@ -1,18 +1,19 @@
 ---
+reviewed_at: 2026-08-26
 title: codex exec
 description: Non-interactive execution entry—dispatch a complete task once in scripts and CI.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 124836c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
 If interactive `codex` is chat-while-you-work, **`codex exec`** is closer to handing off a one-shot job and getting a result when it finishes.
 
-It is the core of [non-interactive mode](/guide/cli/non-interactive-mode/): no back-and-forth chat, no mid-run clarification—the process ends with a result or failure. This chapter targets [developer platform](/guide/developer-platform/) integrators and readers wiring Codex into scripts or CI for the first time.
+It is the core of [non-interactive mode](/en/guide/cli/non-interactive-mode/): no back-and-forth chat, no mid-run clarification—the process ends with a result or failure. This chapter targets [developer platform](/en/guide/developer-platform/) integrators and readers wiring Codex into scripts or CI for the first time.
 
 ## What this page covers
 
@@ -56,8 +57,16 @@ It fits when **task boundaries are already clear**; if you are still exploring, 
 
 ```bash
 cd /path/to/repo
-codex exec --cwd . "Read-only: compare current branch diff to main, list top 3 security risks, do not modify files"
+codex exec --cd . "Read-only: compare current branch diff to main, list top 3 security risks, do not modify files"
 ```
+
+Runs use a read-only sandbox by default. To permit workspace writes explicitly:
+
+```bash
+codex exec --cd . --sandbox workspace-write "Fix the failing test; modify only src/auth and tests/auth"
+```
+
+Progress is written to `stderr` and the final response to `stdout`. Use `--json` for the full machine-readable event stream, `-o` / `--output-last-message` for only the final response file, and `--output-schema` when downstream code requires stable fields.
 
 Principles:
 
@@ -67,7 +76,7 @@ Principles:
 
 ## Easy-to-miss reality
 
-In interactive mode you can say “that is not what I meant.”  
+In interactive mode you can say “that is not what I meant.”
 In `exec`, **if the first prompt is wrong, the whole run can go off track**.
 
 When writing `exec` prompts, be more explicit than usual about:
@@ -102,7 +111,7 @@ Prepare repo (checkout, install, read-only token)
     → Non-zero exit fails CI; do not retry forever
 ```
 
-See [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/).
+See [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/).
 
 ## What to treat it as
 
@@ -136,8 +145,8 @@ That is why many teams wire it behind `make review`, GitHub Actions, cron, or in
 
 ## Security boundaries
 
-- Unattended = weaker [human approval](/cases/workflows/human-approval-patterns/); default read-only
-- See [Security credentials](/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (cross-reference in same chapter)
+- Unattended = weaker [human approval](/en/cases/workflows/human-approval-patterns/); default read-only
+- See [Security credentials](/en/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (cross-reference in same chapter)
 
 ## Acceptance checklist
 
@@ -148,15 +157,18 @@ That is why many teams wire it behind `make review`, GitHub Actions, cron, or in
 
 ## Related
 
-- [CLI non-interactive mode](/guide/cli/non-interactive-mode/)
-- [Structured output](/guide/developer-platform/non-interactive/structured-output/)
-- [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [CLI non-interactive mode](/en/guide/cli/non-interactive-mode/)
+- [Structured output](/en/guide/developer-platform/non-interactive/structured-output/)
+- [Exit codes and retries](/en/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Reference sources
 - OpenAI Codex CLI documentation
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** This page gives useful guidance on `codex exec`, `--cwd`, and non-interactive integration, but lacks strong current official documentation to confirm command entry, flags, and behavior line by line; do not mark `verified` until latest CLI docs are aligned.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** CLI
+
+**Verification basis:** Compared with current Non-interactive mode and Developer commands documentation for Stable `codex exec`, `--cd` / `-C`, the default read-only sandbox, `workspace-write`, JSONL, and schema output.
+
+**Last verified:** 2026-08-26

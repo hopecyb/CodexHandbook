@@ -3,9 +3,10 @@ title: Investigación y aprendizaje
 description: Entrada a casos de investigación, comparación y aprendizaje con fuentes — énfasis en búsqueda, citas y límites de las conclusiones.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La mayor diferencia entre una tarea de investigación y un «Q&A» normal es:
@@ -14,7 +15,7 @@ La mayor diferencia entre una tarea de investigación y un «Q&A» normal es:
 
 ## Entradas de este grupo
 
-- [Matriz de funciones de competencia](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Matriz de funciones de competencia](/es/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## Enfoque del grupo
 

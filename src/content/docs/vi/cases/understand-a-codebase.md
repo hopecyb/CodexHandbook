@@ -3,9 +3,10 @@ title: Hiểu codebase
 description: Khám phá kho mã lạ ở chế độ chỉ đọc để xây bản đồ nhận thức có thể hành động.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Hiểu codebase
@@ -42,8 +43,8 @@ Chưa sửa code. Đọc @src/ và @README, nêu trong tối đa 8 điểm:
 
 ## 4. Liên quan
 
-- [Mẫu hiểu codebase](/prompts/templates/understand/)
-- [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
+- [Mẫu hiểu codebase](/vi/prompts/templates/understand/)
+- [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
 ---
 
 **Trạng thái:** verified  

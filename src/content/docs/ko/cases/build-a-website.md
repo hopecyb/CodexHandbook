@@ -3,9 +3,10 @@ title: 웹사이트 만들기
 description: 요구사항부터 미리보기 가능한 페이지까지의 프로토타입 구축 사례입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 웹사이트 만들기
@@ -41,8 +42,8 @@ translated_at: 2026-07-28
 
 ## 4. 관련
 
-- [만들기 템플릿](/prompts/templates/create/)
-- [산출물 우선 작업](/cases/workflows/artifact-first-work/)
+- [만들기 템플릿](/ko/prompts/templates/create/)
+- [산출물 우선 작업](/ko/cases/workflows/artifact-first-work/)
 ---
 
 **상태:** verified  

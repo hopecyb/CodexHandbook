@@ -3,8 +3,10 @@ title: Codex-Theme-Skins
 description: "Verstehen Sie, was Codex Dream Skin ist, wie Installation und Hintergrundwechsel funktionieren, warum CDP-Injektion genutzt wird und welche Sicherheitsgrenzen vor der Nutzung wichtig sind."
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-29
+reviewed_at: 2026-08-26
+source_revision: 8c0e360
 ---
 
 # Codex-Theme-Skins

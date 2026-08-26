@@ -3,9 +3,10 @@ title: Verificação e revisão humana
 description: Por que o resultado precisa ser verificável e como revisar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 19de747
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -14,10 +15,10 @@ O Codex pode acelerar o seu trabalho, mas não assume a responsabilidade final d
 
 O Codex aumenta a velocidade, mas **não dispensa o aceite**. No mínimo, revise isto:
 
-1. Leia o [Diff](/guide/quality/review-diffs/): quais arquivos mudaram e se ultrapassou o alcance
+1. Leia o [Diff](/pt/guide/quality/review-diffs/): quais arquivos mudaram e se ultrapassou o alcance
 2. Verifique conforme o critério de conclusão que você definiu
-3. Se der para rodar testes, rode: [Rodar testes](/guide/quality/run-tests/)
-4. Fatos externos precisam de fonte: [Validar fontes](/guide/quality/validate-sources/)
+3. Se der para rodar testes, rode: [Rodar testes](/pt/guide/quality/run-tests/)
+4. Fatos externos precisam de fonte: [Validar fontes](/pt/guide/quality/validate-sources/)
 
 ## O que a revisão humana realmente olha
 

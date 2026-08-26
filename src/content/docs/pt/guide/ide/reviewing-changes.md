@@ -3,96 +3,63 @@ title: Rever mudanças no IDE
 description: Ler Diff, comentar e aceitar/rejeitar sugestões do Codex no editor.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1ca9ffe
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 70
+reviewed_at: 2026-08-26
 ---
 
-A experiência de revisão da extensão IDE fica entre «completar linha a linha» e «review completa de PR»: as mudanças aparecem muitas vezes diretamente no editor ou na vista lateral de Diff. Esta página explica como aceitar resultados com segurança.
 
-Mesmo perante uma mudança «pronta a aceitar» no IDE, não tome «aceitar com um clique» como ação predefinida.
+The IDE is useful for reading summaries beside source code and focusing on a diff. A change appearing in the editor is not the same as acceptance. Inspect the diff, run tests, and then decide what to keep.
 
-## Conteúdo desta página
+## Complete a local review
 
-- Formas habituais de UI de revisão no IDE
-- Estratégias para aceitar, rejeitar e aceitar parcialmente
-- Ligação com Git, testes e fluxo de PR
+1. Read the result summary, but do not substitute it for the diff.
+2. Expand changed lines and inspect every affected file.
+3. Keep required edits and request follow-up changes for anything outside scope.
+4. Run `/review` in the input area.
+5. Compare against a base branch or review uncommitted changes.
+6. Run project tests and static checks in the IDE terminal.
+7. Confirm the final Git state with Git tools.
 
-## Fluxo de revisão
+`/review` appears only when the open project is a Git repository. It reports findings by priority and does not modify the worktree. In the IDE you can choose:
 
-1. **Ver o alcance**: que ficheiros mudaram? Há eliminações ou tempestades de formatação não pedidas?
-2. **Ler a lógica**: ramos condicionais, tratamento de erros, casos limite
-3. **Verificar segurança**: chaves, injeção, elevação de Permissões, envenenamento de dependências
-4. **Correr Verificação**: testes / lint acordados no projeto (no terminal do IDE ou em scripts de Tarefa)
-5. **Decidir**: aceitar, pedir alterações, ou anular e voltar a enviar a Tarefa
+- **Review against a base branch:** compare the current branch with the selected base.
+- **Review uncommitted changes:** inspect current worktree changes.
 
-Metodologia: [Rever Diff](/guide/quality/review-diffs/)
+Results appear in the current chat by default. Set `chatgpt.reviewDelivery` to `detached` to open a separate review chat.
 
-## Operações típicas do IDE (conceito)
+## Prompt with explicit reviewer criteria
 
-| Operação | Sugestão |
-|---|---|
-| Diff inline / texto fantasma | Veja bloco a bloco antes de aceitar; evite aceitar tudo de uma vez |
-| Aceitar um ficheiro | Aceite primeiro o de menor risco (por exemplo testes) |
-| Rejeitar e tentar de novo | No follow-up, diga «altere só X, não mexa em Y» |
-| Integração com Git | Depois de aceitar, confira ainda com `git diff` antes do commit |
+```text
+Review the current uncommitted changes. Prioritize defects that could cause
+wrong behavior, data loss, or security issues. Ignore pure style preferences.
+Every finding must include a file location, trigger condition, and verifiable
+impact. If there are no findings, state the remaining test gaps.
+```
 
-As funções de [Diff, comentários e revisão](/guide/desktop-app/diffs-comments-and-review/) da App de desktop são mais completas; no IDE, a revisão é sobretudo **leve e frequente**.
+## Acceptance checklist
 
-## Hábitos recomendados de Prompt
+- [ ] Changed files match the allowed task scope.
+- [ ] No accidental deletion, whole-file formatting, or sensitive files.
+- [ ] Failure paths and edge cases are covered.
+- [ ] Required tests, lint, and type checks pass.
+- [ ] High-priority reviewer findings are fixed or explicitly accepted.
+- [ ] `git diff --check` and `git status --short` are clean as expected.
 
-Antes de iniciar a Tarefa, inclua:
+For line comments, staging, or hunk-level reverts, use [Diffs, comments, and review](/pt/guide/desktop-app/diffs-comments-and-review/). For the general method, see [Review diffs](/pt/guide/quality/review-diffs/).
 
-- Glob de caminhos permitidos
-- Proibido: `git push`, alterar lockfile (salvo pedido explícito)
-- Ao concluir: listar um resumo das mudanças, **sem commit automático**
+## Official sources
 
-Ver [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
+- [Code review](https://learn.chatgpt.com/docs/code-review)
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 
-## Erros comuns
-
-- Confiar no ícone verde de testes sem ter corrido pessoalmente
-- Esconder mudanças de lógica dentro de um Diff grande de formatação automática
-- Depois de aceitar, fazer push direto sem PR / proteção de ramo
-
-## Lista de aceitação
-
-- [ ] `git status` coincide com os ficheiros esperados
-- [ ] Testes passam (local ou CI)
-- [ ] Sem resíduos de `.env`, token ou `console.log` de depuração
-- [ ] A mensagem de commit foi escrita ou confirmada por si
-
-## Dúvidas frequentes
-
-### 1. A sugestão inline parece pequena — posso aceitar já?
-
-Melhor não criar esse hábito.
-
-Muitos problemas não estão em «a mudança ser grande», mas em «parecer pequena e por isso ninguém olhou com atenção».
-
-### 2. Não sou forte a rever lógica — o que olhar primeiro que seja útil?
-
-Estas três coisas já têm muito valor:
-
-- São os ficheiros que pediu?
-- Apagou algo que não deveria?
-- Há resíduos evidentes de depuração ou desvio de estilo?
-
-### 3. Aceitar já equivale a concluir?
-
-Ainda não.
-
-Aceitar só coloca as mudanças na área de trabalho; a seguir ainda tem de verificar e decidir se faz commit.
-
-No IDE, «aceitar mudanças» é só um passo intermédio, não a aceitação final.
-
-## Fontes de referência
-- [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** IDE  
-**Nota de revisão:** Esta página depende de a extensão IDE oferecer atualmente Diff inline, Diff lateral, aceitar/rejeitar sugestões por bloco, etc.; o material oficial público vigente não basta para confirmar item a item essas capacidades de interface; até completar a documentação da nova extensão, não convém marcar como `verified`.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

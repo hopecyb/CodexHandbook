@@ -3,12 +3,13 @@ title: Zuerst brainstormen, dann bauen
 description: Vor Code oder langen Texten mit strukturierter Erkundung Optionen eingrenzen — weniger Nacharbeit.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Zuerst brainstormen, dann bauen** eignet sich für Aufgaben mit unscharfem Ziel und mehreren Optionen: neue Features, Redesigns, Content-Themen, Technikauswahl. Es schließt an Phase ① Erkunden von [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/) an, betont aber **Divergenz und Konvergenz** statt sofort Code zu lesen und Dateien zu ändern.
+**Zuerst brainstormen, dann bauen** eignet sich für Aufgaben mit unscharfem Ziel und mehreren Optionen: neue Features, Redesigns, Content-Themen, Technikauswahl. Es schließt an Phase ① Erkunden von [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/) an, betont aber **Divergenz und Konvergenz** statt sofort Code zu lesen und Dateien zu ändern.
 
 ## Welches Problem löst diese Seite
 
@@ -43,7 +44,7 @@ Basierend auf der Tabelle 1 Default- und 1 Alternativoption empfehlen;
 
 **Phase C — In die Planung**
 
-Nach Bestätigung weiter mit [Spezifikationsgetriebene Arbeit](/cases/workflows/specification-driven-work/) oder EPXV-Phase ② Planen.
+Nach Bestätigung weiter mit [Spezifikationsgetriebene Arbeit](/de/cases/workflows/specification-driven-work/) oder EPXV-Phase ② Planen.
 
 ## Empfohlener Workflow
 
@@ -78,9 +79,9 @@ Constraints klar machen (Zeit, Tech-Stack, unveränderliche Teile)
 
 ## Verwandte Kapitel
 
-- [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/)
-- [Spezifikationsgetriebene Arbeit](/cases/workflows/specification-driven-work/)
-- [Einen Plan erfragen](/prompts/ask-for-a-plan/)
+- [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/)
+- [Spezifikationsgetriebene Arbeit](/de/cases/workflows/specification-driven-work/)
+- [Einen Plan erfragen](/de/prompts/ask-for-a-plan/)
 
 ---
 

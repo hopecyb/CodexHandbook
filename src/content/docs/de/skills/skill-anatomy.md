@@ -3,9 +3,10 @@ title: Skill-Aufbau
 description: Rollen von SKILL.md, references/, templates/ und scripts/ mit Beispielen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beim ersten Blick auf ein Skill-Verzeichnis kennt man die Ordner oft, weiß aber nicht, warum sie so liegen.
@@ -85,7 +86,7 @@ Bei ein bis zwei „Ja“ kannst du aufteilen.
 
 Zuerst mit `SKILL.md` durchziehen; bei Komplexität Material, Vorlagen und Skripte schrittweise auslagern.
 
-Übung: [Ersten Skill erstellen](/skills/create-your-first-skill/).
+Übung: [Ersten Skill erstellen](/de/skills/create-your-first-skill/).
 ## Von Vorlage zu Skill
 
 Viele Teams beginnen nicht mit dem Entwurf eines Skills, sondern mit einem Prompt, den sie immer wieder kopieren. Er kann schrittweise reifen:

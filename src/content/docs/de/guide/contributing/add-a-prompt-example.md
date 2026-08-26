@@ -1,37 +1,38 @@
 ---
-title: Prompt-Beispiel hinzufügen
-description: "Reproduzierbare Prompts unter examples/prompts einreichen — mit Metadaten und Abnahmekriterien."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Ein Prompt-Beispiel hinzufügen
+description: Reiche unter examples/prompts einen reproduzierbaren Prompt mit Metadaten und Abnahmekriterien ein.
 sidebar:
   order: 20
+locale: de
+source_locale: zh-CN
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Prompt-Beispiele liegen im Repo-Root unter [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), verknüpft aus dem Handbuchtext. Design: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Prompt-Beispiele liegen im Stammverzeichnis des Repositorys unter [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) und werden aus dem Handbuchtext verlinkt. Die Gestaltungsregeln findest du unter [System für Prompts, Skills und Fallbeispiele](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## Inhalt dieser Seite
 
-Typische Stolperstellen:
+Typische Schwierigkeiten sind:
 
-- Unklar, welcher Prompt „aufnahmefähig“ ist
-- Unklar, welches Format Wiederverwendung ermöglicht
+- Es ist unklar, welche Prompts überhaupt eine Aufnahme wert sind
+- Es ist unklar, welches Format eine direkte Wiederverwendung durch andere ermöglicht
 
-Ziel: ein Beispiel einreichen, das andere **probieren, lernen und reproduzieren** können.
+Diese Seite erklärt, wie du ein Beispiel einreichst, das andere **tatsächlich ausprobieren, zum Lernen verwenden und reproduzieren** können.
 
 ## Aufnahmekriterien
 
-Wir nehmen „reproduzierbare Beispiele mit Kontext, Grenzen und Abnahme“ — keine Inspiration-Schnipsel.
+Aufgenommen werden reproduzierbare Beispiele mit Kontext, Grenzen und Abnahmekriterien, keine bloßen Ideenfragmente.
 
-Ein brauchbares Prompt-Beispiel beantwortet mindestens:
+Ein geeignetes Prompt-Beispiel beantwortet mindestens drei Fragen:
 
-- Wann nutzen
-- Wie genau formulieren
-- Wie danach urteilen, ob es geklappt hat
+- Wann wird es verwendet?
+- Wie lautet es konkret?
+- Woran lässt sich anschließend erkennen, ob die Aufgabe gut erledigt wurde?
 
-Klingt nur klug, ohne Prämissen und Abnahme → eher Notiz als Beispiel.
+Ein klug klingender Text ohne Voraussetzungen und Abnahmekriterien ist eher eine Notiz als ein Beispiel.
 
 ## Dateinamen
 
@@ -39,14 +40,14 @@ Klingt nur klug, ohne Prämissen und Abnahme → eher Notiz als Beispiel.
 examples/prompts/<category>/<slug>.md
 ```
 
-`category`-Beispiele: `development`, `research`, `meta-workflows`, `team`.
+Beispiele für `category`: `development`, `research`, `meta-workflows`, `team`.
 
-## Pflicht-Metadaten (YAML-Frontmatter)
+## Erforderliche Metadaten (YAML-Frontmatter)
 
 ```yaml
 ---
 id: prompt.fix-bug-with-tests
-title: Bug beheben und Tests ergänzen
+title: Einen Bug beheben und Tests ergänzen
 content_type: prompt
 audience: [beginner, developer]
 difficulty: beginner
@@ -57,82 +58,82 @@ last_verified: YYYY-MM-DD
 ---
 ```
 
-## Pflichtabschnitte im Text
+## Erforderliche Abschnitte
 
-1. **Nutzungsszenario**
+1. **Einsatzszenario**
 2. **Vorbereitung** (Berechtigungen, Branch, Kontextdateien)
 3. **Empfohlener Prompt** (vollständig kopierbar)
-4. **Abnahmekriterien** (Checkliste, objektiv prüfbar)
-5. **Häufige Fehlwege**
-6. **Verwandte Handbuchseiten** (Links nach `src/content/docs/`)
+4. **Abnahmekriterien** (objektiv prüfbare Checkliste)
+5. **Häufige Fehlerbilder**
+6. **Zugehörige Handbuchseiten** (Links nach `src/content/docs/`)
 
-Optional: Minimalversion, didaktische Zerlegung, austauschbare Variablen.
+Optional: Kurzfassung, didaktische Erläuterung und austauschbare Variablen.
 
 ## Häufige Missverständnisse
 
-### Fokus nicht zerstreuen
+### Den Schwerpunkt nicht verstreuen
 
-Mancher schreibt viel Hintergrund und Theorie — der kopierbare Prompt verschwindet in der Mitte.
+Manche Beiträge enthalten so viel Hintergrund, Theorie und weiterführende Erklärung, dass der tatsächlich kopierbare Prompt dazwischen kaum zu finden ist.
 
-Stabiler:
+Eine stabilere Reihenfolge ist:
 
-- Empfohlenen Prompt zuerst vollständig
-- Dann Prämissen, Variablen, Fehlwege
-- Erklärung zuletzt
+- Zuerst den empfohlenen Prompt vollständig formulieren
+- Danach Voraussetzungen, Variablen und Fehlerbilder ergänzen
+- Erklärende Inhalte zuletzt hinzufügen
 
-### Einmal selbst genutzt ≠ vollständiges Beispiel
+### Einmal selbst verwendet ist noch kein vollständiges Beispiel
 
-Sie kennen Ihre Default-Prämissen — Leser nicht.
+Du kennst die Voraussetzungen, die du bei der eigenen Verwendung stillschweigend angenommen hast. Leser kennen sie nicht.
 
-Prämissen schreiben, z. B.:
+Lege sie deshalb ausdrücklich offen, zum Beispiel:
 
-- Welcher Produkteinstieg
-- Welche Dateien, Screenshots, Kontext
-- Ob Dateiänderung, Befehle, Netz default erlaubt
+- Für welchen Produkteinstieg das Beispiel gedacht ist
+- Welche Dateien, Screenshots oder sonstigen Kontextinformationen benötigt werden
+- Ob Dateiänderungen, Befehlsausführung oder Netzwerkzugriff standardmäßig erlaubt sind
 
-### Keine echten Sensiblen im Beispiel
+### Keine echten vertraulichen Daten in Beispiele schreiben
 
-Echte Tokens, Konten, Intranet-Links, Kundendaten → ungeeignet fürs öffentliche Repo.
+Ein Beispiel mit echten Tokens, Konten, internen Links oder Kundendaten gehört nicht in ein öffentliches Repository.
 
-Beispiel lehrt Methode — nicht Ihre Produktionsumgebung.
+Das Beispiel soll eine Methode vermitteln, nicht deine Produktionsumgebung offenlegen.
 
-## Abnahmekriterien-Beispiel
+## Beispiel für Abnahmekriterien
 
 ```markdown
 ## Abnahmekriterien
 
-- [ ] Ursprünglich fehlgeschlagener Test grün
-- [ ] Vereinbarter Testsuite-Umfang grün
-- [ ] Diff nur aufgabenbezogene Dateien
-- [ ] Kein git push
+- [ ] Der ursprünglich fehlgeschlagene Test besteht
+- [ ] Die vereinbarte Testsuite besteht
+- [ ] Der Diff betrifft nur aufgabenrelevante Dateien
+- [ ] `git push` wurde nicht ausgeführt
 ```
 
-## Qualitätsschwelle
+## Qualitätsanforderungen
 
-- Ziel und Definition of Done klar
-- Berechtigungs- und Sicherheitsgrenzen erklärt
-- Keine echten Secrets und kein PII
-- Status `verified` braucht [unabhängige Prüfung](/guide/contributing/verify-technical-content/)
+- Ziel und Fertigstellungsdefinition sind eindeutig
+- Berechtigungs- und Sicherheitsgrenzen sind beschrieben
+- Keine echten Zugangsdaten und keine personenbezogenen Daten
+- Der Status `verified` erfordert eine [unabhängige Verifikation](/de/guide/contributing/verify-technical-content/)
 
-## Einreichungsablauf
+## Ablauf für Beiträge
 
-Stabil:
+Diese Reihenfolge ist in der Regel zuverlässig:
 
-1. Welche echte Aufgabenklasse löst das Beispiel
-2. Version schreiben, die andere direkt kopieren
-3. Minimale Voraussetzungen und Grenzen
-4. Klar: „was zählt als Erfolg“
-5. Sensibles und falsches Verzeichnis prüfen
+1. Bestimme zunächst, welche Art realer Aufgabe das Beispiel löst.
+2. Formuliere dann einen Prompt, den andere direkt übernehmen können.
+3. Nenne die mindestens erforderlichen Voraussetzungen und Grenzen.
+4. Beschreibe eindeutig, was als Erfolg gilt.
+5. Prüfe abschließend auf vertrauliche Informationen und den richtigen Verzeichnisort.
 
-## PR-Check
+## PR-Checkliste
 
-- [ ] Neuer Pfad in `examples/README.md`-Index (falls gepflegt)
-- [ ] Mindestens eine Fall- oder Workflow-Seite verlinkt (optional, empfohlen)
+- [ ] Der neue Dateipfad wurde gegebenenfalls in den Index von `examples/README.md` aufgenommen
+- [ ] Mindestens eine Fallbeispiel- oder Workflow-Seite verlinkt das Beispiel (optional, aber empfohlen)
 
-Ein gutes Prompt-Beispiel lässt andere direkt reproduzieren und ähnliche Ergebnisse erzielen.
+Ein gutes Prompt-Beispiel ermöglicht anderen, den Ablauf direkt zu reproduzieren und ein vergleichbares Ergebnis zu erhalten.
 
 ---
 
 **Status:** verified  
-**Prüfgrundlage:** Gegen aktuelles `examples/`-Verzeichnis, Beispiel-Frontmatter, Index und Beitragsprozess geprüft; Anforderungen an Fall-/Workflow-Links ausgerichtet, ohne volatile Client-Verhalten.  
+**Prüfgrundlage:** Mit dem aktuellen Verzeichnis `examples/`, dem Frontmatter vorhandener Beispiele, der Indexierung und dem Beitragsablauf dieses Repositorys abgeglichen. Die Anforderungen entsprechen der bestehenden Linkstruktur von Fallbeispielen und Workflows und hängen nicht vom veränderlichen Verhalten eines bestimmten Codex-Clients ab.  
 **Zuletzt geprüft:** 2026-07-26

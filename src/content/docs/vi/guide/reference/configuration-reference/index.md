@@ -3,9 +3,10 @@ title: Tham chiếu cấu hình
 description: "Chỉ mục khái niệm các khóa cấu hình Codex cấp người dùng và dự án — đường dẫn và trường lấy theo tài liệu chính thức."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -58,7 +59,7 @@ Ngày đầu không cần thuộc độ ưu tiên — biết mỗi tầng dùng 
 - Môi trường: «giá trị cho lần chạy này»
 - Quản lý: «tổ chức đã quyết rồi»
 
-Giới thiệu: [Cơ bản cấu hình](/guide/customization/configuration/config-basics/) · Trọng tâm CLI: [Cấu hình CLI](/guide/cli/configuration/)
+Giới thiệu: [Cơ bản cấu hình](/vi/guide/customization/configuration/config-basics/) · Trọng tâm CLI: [Cấu hình CLI](/vi/guide/cli/configuration/)
 
 ## Lĩnh vực cấu hình (khái niệm)
 
@@ -70,7 +71,7 @@ Giới thiệu: [Cơ bản cấu hình](/guide/customization/configuration/confi
 | Sức suy luận | Mức phức tạp nếu hỗ trợ |
 | Sampling (temperature, v.v.) | Thường mặc định; ghim cho script |
 
-Ngữ cảnh: [Mô hình và suy luận](/guide/foundations/models-and-reasoning/)
+Ngữ cảnh: [Mô hình và suy luận](/vi/guide/foundations/models-and-reasoning/)
 
 ### Sandbox và mạng
 
@@ -80,7 +81,7 @@ Ngữ cảnh: [Mô hình và suy luận](/guide/foundations/models-and-reasoning
 | Truy cập mạng | Deny / hạn chế / allow |
 | Domain egress | Danh sách cho phép nếu hỗ trợ |
 
-Ngữ cảnh: [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
+Ngữ cảnh: [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 
 ### Chính sách phê duyệt
 
@@ -90,7 +91,7 @@ Ngữ cảnh: [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
 | Trước ghi tệp | Tương tự |
 | Gọi công cụ MCP | Độ chi tiết theo máy chủ hoặc công cụ |
 
-Ngữ cảnh: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/) · Ma trận: [Ma trận quyền](/guide/reference/permission-matrix/)
+Ngữ cảnh: [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/) · Ma trận: [Ma trận quyền](/vi/guide/reference/permission-matrix/)
 
 ### Workspace và CLI
 
@@ -107,13 +108,13 @@ Ngữ cảnh: [Quyền và phê duyệt](/guide/foundations/permissions-and-appr
 | Danh sách máy chủ | Lệnh, URL, transport |
 | Tiêm env | Gắn tiến trình MCP — không vào Git |
 
-[Kết nối MCP](/skills/mcp/connect-an-mcp-server/)
+[Kết nối MCP](/vi/skills/mcp/connect-an-mcp-server/)
 
 ### Extension IDE / App
 
 Một số cài đặt chỉ sống trong UI extension; có thể chia sẻ backend cấu hình người dùng với CLI — theo tài liệu sản phẩm.
 
-[Cài đặt IDE](/guide/ide/settings/) · [Cài đặt App máy tính](/guide/desktop-app/settings/)
+[Cài đặt IDE](/vi/guide/ide/settings/) · [Cài đặt App máy tính](/vi/guide/desktop-app/settings/)
 
 ## Hiểu nhầm thường gặp
 
@@ -187,7 +188,7 @@ Rồi đặt vào cấu hình, env, `AGENTS.md`, Skill hoặc Prompt hiện tạ
 
 Dễ hơn cố định danh sách khóa.
 
-Secrets Cloud: [Secrets và biến môi trường](/guide/web-and-cloud/secrets-and-variables/)
+Secrets Cloud: [Secrets và biến môi trường](/vi/guide/web-and-cloud/secrets-and-variables/)
 
 ## Kỷ luật thay đổi
 

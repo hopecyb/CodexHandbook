@@ -3,9 +3,10 @@ title: Ruta para principiantes
 description: La ruta más corta de cinco pasos para quien usa Codex por primera vez, desde formular la Tarea hasta completar el primer proyecto pequeño.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -16,11 +17,11 @@ Este conjunto es la ruta más corta preparada para principiantes.
 
 ## Orden recomendado
 
-1. [Hablar con Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Trabajar con archivos](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Dar Tareas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Revisar resultados](/guide/learning-paths/beginner/04-review-results/)
-5. [Completar el primer proyecto pequeño](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Hablar con Codex](/es/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Trabajar con archivos](/es/guide/learning-paths/beginner/02-work-with-files/)
+3. [Dar Tareas claras](/es/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Revisar resultados](/es/guide/learning-paths/beginner/04-review-results/)
+5. [Completar el primer proyecto pequeño](/es/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Para quién es este conjunto
 

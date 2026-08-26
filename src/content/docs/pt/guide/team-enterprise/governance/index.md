@@ -3,9 +3,10 @@ title: Governação
 description: Página sobre políticas, limites e regras organizacionais — clarifica o que se pode fazer, o que não se pode e quem é responsável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Governação no contexto Codex resume-se a duas coisas: como a equipa pode usar, e quem trata quando algo corre mal.
@@ -18,7 +19,7 @@ Isto afeta diretamente:
 
 ## Entrada deste grupo
 
-- [Política de uso aceitável](/guide/team-enterprise/governance/acceptable-use/)
+- [Política de uso aceitável](/pt/guide/team-enterprise/governance/acceptable-use/)
 
 ## Que perguntas estas páginas respondem
 

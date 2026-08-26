@@ -3,9 +3,10 @@ title: Seleção e ficheiros abertos
 description: Usar código selecionado e ficheiros abertos para delimitar com precisão o alcance das Tarefas no IDE.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -28,11 +29,11 @@ A função da seleção é simples: dizer ao Codex para olhar sobretudo aqui, se
 | **Ficheiro aberto** | Precisa de perceber várias relações no mesmo ficheiro | Abrir `auth.ts` + `auth.test.ts` |
 | **Caminho `@`** | Ficheiros noutros diretórios ou ainda não abertos | `@src/api/client.ts` alinhado com tipos do backend |
 
-Profundidade conceptual: [Contexto de ficheiros e pastas](/guide/context/file-and-folder-context/)
+Profundidade conceptual: [Contexto de ficheiros e pastas](/pt/guide/context/file-and-folder-context/)
 
 ## Prática mínima útil
 
-1. Selecione o **menor fragmento relevante** (em geral 10–80 linhas) e, no Prompt, deixe claros o objetivo e a [definição de concluído](/prompts/define-done/)
+1. Selecione o **menor fragmento relevante** (em geral 10–80 linhas) e, no Prompt, deixe claros o objetivo e a [definição de concluído](/pt/prompts/define-done/)
 2. Se envolver chamadores, abra ou `@` mais 1–2 ficheiros a montante
 3. Peça «altere só ficheiros relacionados com X; liste os ficheiros a modificar antes de começar»
 4. Na vista de Diff do IDE, aceite bloco a bloco; não aceite tudo de uma vez
@@ -45,7 +46,7 @@ Seleção: opcional — comece pela função de entrada
 Prompt: indique as fronteiras do módulo e os diretórios proibidos
 ```
 
-Para refatorações grandes, prefira [árvores de trabalho na App de desktop](/guide/desktop-app/worktrees/) ou [modo de planeamento](/guide/agent-work/planning/). O IDE encaixa melhor no fecho e em commits pequenos.
+Para refatorações grandes, prefira [árvores de trabalho na App de desktop](/pt/guide/desktop-app/worktrees/) ou [modo de planeamento](/pt/guide/agent-work/planning/). O IDE encaixa melhor no fecho e em commits pequenos.
 
 ## Dúvidas frequentes
 
@@ -68,13 +69,13 @@ Usar seleção e ficheiros abertos é, no fundo, evitar arrastar alcance irrelev
 
 ## Em conjunto com a revisão
 
-Antes de aceitar, confronte com [Rever Diff](/guide/quality/review-diffs/):
+Antes de aceitar, confronte com [Rever Diff](/pt/guide/quality/review-diffs/):
 
 - Só mudaram os ficheiros acordados?
 - Há eliminações inesperadas fora da seleção?
 - Os testes cobrem os novos ramos?
 
-No produto: [Rever mudanças no IDE](/guide/ide/reviewing-changes/)
+No produto: [Rever mudanças no IDE](/pt/guide/ide/reviewing-changes/)
 
 ## Erros comuns
 
@@ -85,7 +86,7 @@ No produto: [Rever mudanças no IDE](/guide/ide/reviewing-changes/)
 | Aceitar todas as sugestões sem ler o Diff | Introduz desvio de estilo ou falhas de segurança |
 
 ## Fontes de referência
-- [Definir restrições](/prompts/constraints-and-boundaries/)
+- [Definir restrições](/pt/prompts/constraints-and-boundaries/)
 ---
 
 **Estado:** verified  

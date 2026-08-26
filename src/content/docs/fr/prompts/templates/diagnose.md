@@ -3,9 +3,10 @@ title: Modèle de diagnostic
 description: Trouver la cause racine avant de discuter du correctif.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèle de diagnostic
@@ -47,8 +48,8 @@ Le modèle impose d'expliquer **pourquoi** ça casse avant **comment** changer.
 
 ## Voir aussi
 
-- [Diagnostiquer avant de corriger](/cases/workflows/diagnose-before-fixing/)
-- [Cas : corriger un bug](/cases/fix-a-bug/)
+- [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/)
+- [Cas : corriger un bug](/fr/cases/fix-a-bug/)
 
 ---
 

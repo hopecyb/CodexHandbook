@@ -3,9 +3,10 @@ title: 장시간 작업 프롬프트
 description: 단계 분할, 체크포인트, 인수인계 정보입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 장시간 작업이 흔히 실패하는 방식은 다음과 같습니다.
@@ -75,7 +76,7 @@ translated_at: 2026-07-28
 
 더 나은 방식은 한 번에 끝내기보다, 각 단계에서 멈춰 점검할 수 있게 하는 것입니다.
 
-연계: [진행과 유도](/guide/agent-work/progress-and-steering/) · [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
+연계: [진행과 유도](/ko/guide/agent-work/progress-and-steering/) · [인수인계와 재개](/ko/guide/agent-work/handoff-and-resume/)
 
 ---
 

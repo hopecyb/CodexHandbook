@@ -3,9 +3,10 @@ title: 자동화 템플릿
 description: 반복 작업과 재사용 가능한 프로세스입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 자동화 템플릿
@@ -58,8 +59,8 @@ translated_at: 2026-07-28
 
 ## 관련
 
-- [장시간 작업 프롬프트](/prompts/long-running-tasks/)
-- [일일 보고서 자동화 사례](/cases/automate-a-daily-report/)
+- [장시간 작업 프롬프트](/ko/prompts/long-running-tasks/)
+- [일일 보고서 자동화 사례](/ko/cases/automate-a-daily-report/)
 
 ---
 

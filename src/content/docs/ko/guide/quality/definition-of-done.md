@@ -3,9 +3,10 @@ title: 완료 정의
 description: 팀과 개인이 공유하는 완료 체크리스트 사고방식.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e6b6511
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---

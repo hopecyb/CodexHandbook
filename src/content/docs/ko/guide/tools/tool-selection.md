@@ -3,9 +3,10 @@ title: 도구 선택
 description: 언제 터미널, 검색, 브라우저 또는 다른 도구를 쓸지.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 64967ca
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---

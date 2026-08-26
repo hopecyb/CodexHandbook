@@ -3,12 +3,13 @@ title: Trabajo impulsado por tests
 description: Define o completa primero tests que fallen y deja que impulsen la implementación — para que los cambios de Codex se puedan aceptar de forma objetiva.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Trabajo impulsado por tests** (TDD o «tests primero») consiste en hacer fallar el test y luego pasar a verde con la implementación mínima. Encaja en repos con infraestructura de tests y se relaciona directamente con escenarios como [Corregir un bug con verificación](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Trabajo impulsado por tests** (TDD o «tests primero») consiste en hacer fallar el test y luego pasar a verde con la implementación mínima. Encaja en repos con infraestructura de tests y se relaciona directamente con escenarios como [Corregir un bug con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Enfoque de esta página
 
@@ -21,7 +22,7 @@ translated_at: 2026-07-28
 - Repos con tests unitarios/de integración
 - Bugs de regresión, cambios de comportamiento de API, refactorizaciones
 
-No adecuado: prototipos sin infraestructura de tests, cambios únicos en sitios solo de copy. Ahí es mejor [EPXV](/cases/workflows/explore-plan-execute-verify/) con verificación humana.
+No adecuado: prototipos sin infraestructura de tests, cambios únicos en sitios solo de copy. Ahí es mejor [EPXV](/es/cases/workflows/explore-plan-execute-verify/) con verificación humana.
 
 ## Práctica mínima viable
 
@@ -47,7 +48,7 @@ ejecuta el test, confirma el fallo y luego cambia la implementación; en cada pa
 | Verde | Implementación mínima + test en verde |
 | Refactor | Ordenar el código bajo la protección de los tests (paso opcional aparte) |
 
-Combínalo con [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/): lee primero la aserción fallida y el stack, luego toca la implementación.
+Combínalo con [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/): lee primero la aserción fallida y el stack, luego toca la implementación.
 
 ## Errores frecuentes
 
@@ -58,7 +59,7 @@ Combínalo con [Diagnosticar antes de corregir](/cases/workflows/diagnose-before
 
 ## Límites de seguridad
 
-- Los comandos de test deben estar en el alcance de [reglas de comandos](/guide/customization/rules/command-rules/)
+- Los comandos de test deben estar en el alcance de [reglas de comandos](/es/guide/customization/rules/command-rules/)
 - Si un test de integración toca APIs de producción, la especificación debe prohibirlo o exigir mock
 
 ## Checklist de aceptación
@@ -66,12 +67,12 @@ Combínalo con [Diagnosticar antes de corregir](/cases/workflows/diagnose-before
 - [ ] Hay evidencia de fallo→pase (log o CI)
 - [ ] Pasan la suite completa o el alcance acordado
 - [ ] El diff no elimina tests ajenos
-- [ ] Coherente con [Definir terminado](/prompts/define-done/)
+- [ ] Coherente con [Definir terminado](/es/prompts/define-done/)
 
 ## Capítulos relacionados
 
-- [Ejecutar tests](/guide/quality/run-tests/)
-- [Caso: corregir un bug con verificación](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Ejecutar tests](/es/guide/quality/run-tests/)
+- [Caso: corregir un bug con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

@@ -3,16 +3,17 @@ title: "Injection de prompt"
 description: Quand du texte non fiable entre dans le contexte — reconnaissance, mitigation et essentiels de politique d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 « Injection de prompt » signifie que quelqu'un intègre du contenu dans le contexte qui induit Codex en erreur.
 
-Cela peut venir d'issues, pages web, commentaires de dépendances, docs ou texte collé — souvent pour faire que l'Agent **ignore la politique, fuite des données ou exécute des commandes dangereuses**. C'est un risque fréquent du [modèle de menace](/guide/team-enterprise/security/threat-model/) et plus proche du travail réel que beaucoup supposent.
+Cela peut venir d'issues, pages web, commentaires de dépendances, docs ou texte collé — souvent pour faire que l'Agent **ignore la politique, fuite des données ou exécute des commandes dangereuses**. C'est un risque fréquent du [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) et plus proche du travail réel que beaucoup supposent.
 
 ## Ce que cette page couvre
 
@@ -73,12 +74,12 @@ Les vraies injections sont plus subtiles ; cette distinction bloque encore beauc
 **Design**
 
 - Séparer **politique système** du **contenu utilisateur non fiable** (architecture varie par produit)
-- Actions à haute sensibilité toujours [approbation humaine](/cases/workflows/human-approval-patterns/)
+- Actions à haute sensibilité toujours [approbation humaine](/fr/cases/workflows/human-approval-patterns/)
 
 **Engineering**
 
 - Prompts CI **ne** collent pas le corps PR brut ; champs structurés + limites de longueur
-- [Hooks](/skills/hooks/hooks-examples/) scannent phrases d'injection connues (supplément uniquement)
+- [Hooks](/fr/skills/hooks/hooks-examples/) scannent phrases d'injection connues (supplément uniquement)
 - Tokens lecture seule, pas `git push`
 
 **Processus**
@@ -118,7 +119,7 @@ Ne pas auto-hériter des « instructions opérationnelles » depuis des sources 
 
 - [ ] Flux de revue CI/Cloud évalué pour surface d'injection
 - [ ] Les mainteneurs savent repérer les issues suspectes
-- [ ] Aligné avec [Usage acceptable](/guide/team-enterprise/governance/acceptable-use/)
+- [ ] Aligné avec [Usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/)
 
 ## Sources de référence
 - OWASP LLM Top 10 (Prompt Injection)

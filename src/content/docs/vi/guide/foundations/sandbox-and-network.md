@@ -3,9 +3,10 @@ title: Sandbox và mạng
 description: Hiểu cô lập thực thi, truy cập mạng và ranh giới rủi ro.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3d6d57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -64,7 +65,7 @@ Có thể coi như hai cánh cửa:
 
 Hai cánh cửa không chỉ là thiết lập kỹ thuật — cũng là cách bạn kiểm soát rủi ro.
 
-Lối vào thiết lập phía sản phẩm xem [Cài đặt](/guide/desktop-app/settings/) của Desktop App; chi tiết chính thức xem [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Lối vào thiết lập phía sản phẩm xem [Cài đặt](/vi/guide/desktop-app/settings/) của Desktop App; chi tiết chính thức xem [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Khi mới dùng, thà hạn chế nhiều hơn một chút trước — đừng mở hết cửa khi chưa hiểu rủi ro.
 

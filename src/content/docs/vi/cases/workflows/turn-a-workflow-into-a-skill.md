@@ -3,12 +3,13 @@ title: Đóng gói quy trình thành Skill
 description: Quy trình lặp lần thứ ba đáng viết thành Skill — tích hợp kích hoạt, hướng dẫn và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Khi cùng loại tác vụ (kiểm tra phát hành, đồng bộ tài liệu, quét bảo mật) **lần thứ ba** vẫn hoàn thành bằng copy-paste prompt, nên cân nhắc [Skill](/skills/overview/). Chương này nối [phương pháp quy trình](/cases/workflows/) với hệ mở rộng.
+Khi cùng loại tác vụ (kiểm tra phát hành, đồng bộ tài liệu, quét bảo mật) **lần thứ ba** vẫn hoàn thành bằng copy-paste prompt, nên cân nhắc [Skill](/vi/skills/overview/). Chương này nối [phương pháp quy trình](/vi/cases/workflows/) với hệ mở rộng.
 
 ## Trang này giải quyết gì
 
@@ -29,11 +30,11 @@ Không cần đóng gói: khám phá một lần, sửa nhỏ phụ thuộc mạ
 
 1. **Viết rõ SKILL.md:** khi nào kích hoạt, đầu vào đầu ra, mục cấm
 2. **Kèm `references/`:** checklist, ví dụ diff
-3. **Tùy chọn `scripts/`:** lệnh kiểm chứng chạy lại được (khớp [quy tắc lệnh](/guide/customization/rules/command-rules/))
+3. **Tùy chọn `scripts/`:** lệnh kiểm chứng chạy lại được (khớp [quy tắc lệnh](/vi/guide/customization/rules/command-rules/))
 4. **Nhắc tên Skill** trong README kho hoặc AGENTS.md
 5. **Thử chạy 2–3 lần**, rồi gắn `verified`
 
-Nhập môn: [tạo Skill đầu tiên](/skills/create-your-first-skill/)
+Nhập môn: [tạo Skill đầu tiên](/vi/skills/create-your-first-skill/)
 
 ## Quy trình đề xuất
 
@@ -45,7 +46,7 @@ Từ case thành công rút prompt và mục nghiệm thu
     → Ghi vào thư mục examples/ theo quy ước kho, plugin nhóm hoặc thư viện skill nội bộ
 ```
 
-So với [biến quy trình thành tự động hóa](/skills/automations/scheduled-tasks/): Skill nghiêng về **hướng dẫn tương tác**; Automation nghiêng về **theo lịch / không người trông**.
+So với [biến quy trình thành tự động hóa](/vi/skills/automations/scheduled-tasks/): Skill nghiêng về **hướng dẫn tương tác**; Automation nghiêng về **theo lịch / không người trông**.
 
 ## Lỗi thường gặp
 
@@ -56,8 +57,8 @@ So với [biến quy trình thành tự động hóa](/skills/automations/schedu
 
 ## Ranh giới an toàn
 
-- Xem [bảo mật và phiên bản Skill](/skills/security/)
-- Skill nhóm nên vào danh sách phê duyệt mở rộng (xem [rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Xem [bảo mật và phiên bản Skill](/vi/skills/security/)
+- Skill nhóm nên vào danh sách phê duyệt mở rộng (xem [rủi ro Plugin và MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Checklist nghiệm thu
 

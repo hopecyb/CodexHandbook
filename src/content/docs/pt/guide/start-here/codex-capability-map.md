@@ -3,9 +3,10 @@ title: Mapa de capacidades
 description: Visão geral de Prompt, Ferramentas, extensões, multi-Agent, governança e outros módulos.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 7
 ---
@@ -59,25 +60,25 @@ Não precisa ler página a página pelo sumário do site. Pode seguir esta ordem
 
 ## Ordem de início
 
-1. Veja [O que é o Codex](/guide/start-here/what-is-codex/)
-2. Depois [Escolha seu caminho](/guide/start-here/choose-your-path/)
-3. Em seguida entre em [Começar a usar](/guide/getting-started/)
-4. Se travar, volte a [Fundamentos](/guide/foundations/) e [Caminhos de aprendizagem](/guide/learning-paths/)
+1. Veja [O que é o Codex](/pt/guide/start-here/what-is-codex/)
+2. Depois [Escolha seu caminho](/pt/guide/start-here/choose-your-path/)
+3. Em seguida entre em [Começar a usar](/pt/guide/getting-started/)
+4. Se travar, volte a [Fundamentos](/pt/guide/foundations/) e [Caminhos de aprendizagem](/pt/guide/learning-paths/)
 
 ## Módulos e capítulos autoritativos
 
 | Capacidade | Local autoritativo |
 |---|---|
-| Modelo, Agent, Permissão, Sandbox | [Fundamentos](/guide/foundations/) |
-| Como clicar e rodar em cada entrada | [Guias de produto](/guide/) |
-| Prompt, Contexto, Ferramentas, qualidade | [Capacidades principais](/guide/) |
-| AGENTS.md e configuração | [Personalização](/guide/customization/) |
-| Skills, MCP, Plugin, automação | [Extensão e automação](/skills/) |
-| Métodos de colaboração repetíveis | [Métodos de fluxo de trabalho](/cases/workflows/) |
-| Casos ponta a ponta | [Casos de uso](/cases/use-cases/) |
-| Ordem de leitura | [Caminhos de aprendizagem](/guide/learning-paths/) |
+| Modelo, Agent, Permissão, Sandbox | [Fundamentos](/pt/guide/foundations/) |
+| Como clicar e rodar em cada entrada | [Guias de produto](/pt/guide/) |
+| Prompt, Contexto, Ferramentas, qualidade | [Capacidades principais](/pt/guide/) |
+| AGENTS.md e configuração | [Personalização](/pt/guide/customization/) |
+| Skills, MCP, Plugin, automação | [Extensão e automação](/pt/skills/) |
+| Métodos de colaboração repetíveis | [Métodos de fluxo de trabalho](/pt/cases/workflows/) |
+| Casos ponta a ponta | [Casos de uso](/pt/cases/use-cases/) |
+| Ordem de leitura | [Caminhos de aprendizagem](/pt/guide/learning-paths/) |
 
-Mapa geral de escolha de extensões: [Mapa de capacidades de extensão](/skills/capability-map/). Comparação de produtos: [Comparação de recursos](/guide/reference/feature-comparison/). Diferenças de capacidade entre entradas ficam na página de comparação.
+Mapa geral de escolha de extensões: [Mapa de capacidades de extensão](/pt/skills/capability-map/). Comparação de produtos: [Comparação de recursos](/pt/guide/reference/feature-comparison/). Diferenças de capacidade entre entradas ficam na página de comparação.
 
 ---
 

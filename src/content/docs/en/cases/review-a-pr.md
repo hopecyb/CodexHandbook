@@ -3,9 +3,10 @@ title: Review a PR
 description: Use Codex for structured diff review before merge.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 29b081c
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Review a PR
@@ -36,13 +37,13 @@ Output checklist with P0/P1, include file paths.
 
 ## 3. Team capture
 
-- Use [`$pr-review`](/skills/examples/review-skill/) Skill
-- CI integration: [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Use [`$pr-review`](/en/skills/examples/review-skill/) Skill
+- CI integration: [Code review automation](/en/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## 4. Related
 
-- [Review template](/prompts/templates/review/)
-- [Review before merge](/cases/workflows/review-before-merge/)
+- [Review template](/en/prompts/templates/review/)
+- [Review before merge](/en/cases/workflows/review-before-merge/)
 
 ---
 

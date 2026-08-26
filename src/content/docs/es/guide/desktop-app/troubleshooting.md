@@ -3,9 +3,10 @@ title: Resolución de problemas de la App de escritorio
 description: Tratamiento habitual de fallos de instalación, inicio de sesión y Tareas.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ca74b6c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,7 +21,7 @@ Al resolver problemas, investiga en el orden de lo más probable y más fácil d
 | La Tarea espera Aprobación sin avanzar | Vuelve a la vista de Tarea y gestiona las solicitudes pendientes |
 | Los cambios no cumplen lo esperado | Ajusta las restricciones, abre un hilo nuevo, revisa el Contexto |
 
-Si sigue fallando: [https://developers.openai.com/codex](https://developers.openai.com/codex) y el [índice de resolución de problemas](/guide/reference/troubleshooting/).
+Si sigue fallando: [https://developers.openai.com/codex](https://developers.openai.com/codex) y el [índice de resolución de problemas](/es/guide/reference/troubleshooting/).
 
 ## Malentendidos frecuentes
 

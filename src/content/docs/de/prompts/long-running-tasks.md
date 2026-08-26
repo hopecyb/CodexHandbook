@@ -3,9 +3,10 @@ title: Prompts für lange Aufgaben
 description: 'Phasen aufteilen, Checkpoints und Übergabeinformationen.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Lange Aufgaben scheitern oft so:
@@ -75,7 +76,7 @@ Phase 4: Änderungen, Risiken und Folgeempfehlungen zusammenfassen
 
 Besser: Jede Phase kann stoppen und geprüft werden — nicht alles in einem Rutsch.
 
-Dazu: [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/) · [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
+Dazu: [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/) · [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 
 ---
 

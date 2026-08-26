@@ -3,9 +3,10 @@ title: GitHub integration
 description: Repo connection, PRs, review, and CI—where Codex sits in GitHub workflows.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 5585550
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 GitHub is Codex's most common collaboration surface: Cloud tasks, PR review, Actions, and local push all share branches and permissions.
@@ -22,11 +23,11 @@ Even if you are not a senior developer, start with what it handles:
 
 | Capability | Typical entry | Handbook location |
 |---|---|---|
-| Connect remote repo | Cloud settings | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Cloud code changes → PR | Cloud task | [Create Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Local diff review | Desktop App / IDE | [Diffs and comments](/guide/desktop-app/diffs-comments-and-review/) |
+| Connect remote repo | Cloud settings | [Connect GitHub](/en/guide/web-and-cloud/connect-github/) |
+| Cloud code changes → PR | Cloud task | [Create Pull Request](/en/guide/web-and-cloud/create-pull-requests/) |
+| Local diff review | Desktop App / IDE | [Diffs and comments](/en/guide/desktop-app/diffs-comments-and-review/) |
 | Run Codex in CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
-| Auto PR review comments | Actions + exec | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
+| Auto PR review comments | Actions + exec | [Non-interactive mode](/en/guide/cli/non-interactive-mode/) |
 
 ## Recommended team norms
 

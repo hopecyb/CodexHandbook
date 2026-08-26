@@ -3,7 +3,7 @@ title: Local vs cloud
 description: Compare local tasks and Cloud tasks and when to use each.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
+source_revision: c61d0ea
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
@@ -73,7 +73,7 @@ Switch to Cloud when you actually need:
 - Remote repos or remote resources
 - Not to occupy your local machine
 
-Many beginners start with **local + desktop App**. Cloud details: [Web and Cloud overview](/guide/web-and-cloud/). Switching in the App: [Local and cloud tasks](/guide/desktop-app/local-and-cloud-tasks/).
+Many beginners start with **local + desktop App**. Cloud details: [Web and Cloud overview](/en/guide/web-and-cloud/). Switching in the App: [Local and cloud tasks](/en/guide/desktop-app/local-and-cloud-tasks/).
 
 Local is better for understanding the flow and making small changes. Cloud is better for longer, more standardized, more remote-collaborative work.
 

@@ -3,9 +3,10 @@ title: 初心者向け安全チェックリスト
 description: 初回利用前に必ず見る安全確認項目。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -21,9 +22,9 @@ sidebar:
 - [ ] 高リスク操作には自分の承認が必要だと理解している
 - [ ] 理解できないコマンドや外部通信リクエストは承認しない
 - [ ] 差分を確認してから結果を承認するつもりである
-- [ ] [取り消し](/guide/getting-started/undo-and-recover/) の方法を知っている
+- [ ] [取り消し](/ja/guide/getting-started/undo-and-recover/) の方法を知っている
 
-概念の補足：[権限と承認](/guide/foundations/permissions-and-approvals/) · [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)。
+概念の補足：[権限と承認](/ja/guide/foundations/permissions-and-approvals/) · [サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)。
 
 ## よくある誤解
 

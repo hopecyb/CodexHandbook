@@ -3,9 +3,10 @@ title: Ngữ cảnh
 description: Quản lý ngữ cảnh dự án, tệp và hội thoại.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f647ae2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 16
 ---
@@ -35,13 +36,13 @@ Lần đầu xem có hệ thống, gợi ý thứ tự:
 
 ## Điều hướng chương
 
-- [Ngữ cảnh dự án](/guide/context/project-context/)
-- [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
-- [Ngữ cảnh hội thoại](/guide/context/conversation-context/)
-- [Ưu tiên ngữ cảnh](/guide/context/context-priority/)
-- [Nén](/guide/context/compaction/)
-- [Giữ tập trung](/guide/context/keep-context-focused/)
-- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
+- [Ngữ cảnh dự án](/vi/guide/context/project-context/)
+- [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
+- [Ngữ cảnh hội thoại](/vi/guide/context/conversation-context/)
+- [Ưu tiên ngữ cảnh](/vi/guide/context/context-priority/)
+- [Nén](/vi/guide/context/compaction/)
+- [Giữ tập trung](/vi/guide/context/keep-context-focused/)
+- [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
 
 Chương này nhấn đi nhấn lại: ngữ cảnh phụ thuộc «lần này nó thật sự thấy gì». Nếu bạn nghĩ nó nên biết, nhưng lần này chưa cung cấp, thì không tính là ngữ cảnh.
 

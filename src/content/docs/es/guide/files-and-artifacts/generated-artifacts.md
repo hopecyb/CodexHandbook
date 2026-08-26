@@ -3,9 +3,10 @@ title: Aceptación de artefactos generados
 description: Aceptación sistemática de archivos, informes y salidas de build nuevos o exportados por Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -50,7 +51,7 @@ No es lo mismo que «solo cambió unas líneas de código existente», porque es
 5. Decidir: aceptar / modificar en parte / descartar y rehacer
 ```
 
-Método: [Verificar artefactos](/guide/quality/verify-artifacts/), [Definición de hecho](/guide/quality/definition-of-done/)
+Método: [Verificar artefactos](/es/guide/quality/verify-artifacts/), [Definición de hecho](/es/guide/quality/definition-of-done/)
 
 ## Malentendidos habituales
 
@@ -111,7 +112,7 @@ Un artefacto no basta con «ya se generó». Al menos hay que abrirlo, verificar
 - [ ] Sin secrets ni directorios generados de más
 
 ## Referencias
-- [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/)
+- [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/)
 ---
 
 **Estado:** verificado  

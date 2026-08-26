@@ -3,14 +3,15 @@ title: "Beispiel: Review-Skill"
 description: Skill-Beispiel auf Basis von pr-review — zur Team-Wiederverwendung oder Anpassung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Beispiel: Review-Skill
 
-Entspricht `pr-review` in [Ersten Skill erstellen](/skills/create-your-first-skill/) — nach Teambedarf anpassen.
+Entspricht `pr-review` in [Ersten Skill erstellen](/de/skills/create-your-first-skill/) — nach Teambedarf anpassen.
 
 ## SKILL.md
 

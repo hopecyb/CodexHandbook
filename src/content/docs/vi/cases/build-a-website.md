@@ -3,9 +3,10 @@ title: Xây website
 description: Case dựng nguyên mẫu từ yêu cầu đến trang có thể xem trước.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Xây website
@@ -41,8 +42,8 @@ Trước hết đưa kế hoạch wireframe; đợi tôi xác nhận rồi mới
 
 ## 4. Liên quan
 
-- [Mẫu tạo](/prompts/templates/create/)
-- [Làm việc ưu tiên Artifact](/cases/workflows/artifact-first-work/)
+- [Mẫu tạo](/vi/prompts/templates/create/)
+- [Làm việc ưu tiên Artifact](/vi/cases/workflows/artifact-first-work/)
 ---
 
 **Trạng thái:** verified  

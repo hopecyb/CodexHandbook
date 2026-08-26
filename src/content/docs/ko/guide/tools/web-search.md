@@ -3,9 +3,10 @@ title: Web 검색
 description: 검색으로 사실을 보완하고 출처를 표시합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 559d082
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ Web 검색은 사실을 보완하기에 맞고, 최종 결론을 대신 내리�
 
 적합: 공개 문서, 오류 코드, 버전 설명 조회. 부적합: 검색 결과를 최종 법률/의료 결론으로 둠.
 
-출처를 붙이게 하고, 사람이 열어 대조하세요. [출처 검증](/guide/quality/validate-sources/)과 함께 쓰세요.
+출처를 붙이게 하고, 사람이 열어 대조하세요. [출처 검증](/ko/guide/quality/validate-sources/)과 함께 쓰세요.
 
 ## 검색이 잘 맞는 일
 

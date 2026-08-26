@@ -3,141 +3,98 @@ title: MCP 概要
 description: Model Context Protocol。Codex が外部ツールとデータソースに安全に接続する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7b8726f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP は標準的な接続方式で、Codex が外部ツールとデータソースに接続します。
+MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
 
-Codex に Jira 検索、ナレッジベース読み取り、内部 API アクセス、特定の制御されたツール操作をさせたい場合、「どう接続するか、何を呼べるか、権限をどう管理するか」の仕組みが必要です。**MCP（Model Context Protocol）** はそれを解決します。
-
-## 内容
-
-- MCP が解く「Codex が実システムに届かない」問題
-- Skill、Plugin との役割分担
-- MCP をセキュリティガバナンスに含める理由
-
-## まず何ではないかを区別
-
-MCP は次ではありません。
-
-- アカウントとパスワードを Codex に直接貼ること
-- モデルが好きなように接続すること
-- 任意のサードパーティサービスをデフォルトで信頼すること
-
-外部システム接続を規範化し、より制御可能・監査可能にする配線方式です。
-
-## 核心概念
+## Call chain
 
 ```text
-Codex  ←→  MCP クライアント  ←→  MCP サーバー  ←→  外部システム
+Codex in a task
+  -> MCP client provided by the Codex host
+  -> MCP server: local process or remote service
+  -> external system: docs, design, tickets, internal API
+  -> structured result returned to the task
 ```
 
-| コンポーネント | 役割 |
+| Component | Responsible for | Not responsible for |
+|---|---|---|
+| Codex host | Read configuration, connect servers, expose tools to the Agent | Defining the server's business permissions |
+| MCP server | Define tools, authentication, arguments, and structured results | Automatically making every tool safe |
+| Skill | Define when and how to use tools | Establishing network connections |
+| Plugin | Compose and distribute Skills, connectors, MCP, and related capabilities | Acting as another tool protocol |
+
+## Supported server transports
+
+### STDIO
+
+Codex starts a local process and communicates over standard input/output. This fits local development tools and services that run only on the current computer.
+
+Review the command, dependency source, and forwarded environment variables because the process inherits the local execution environment.
+
+### Streamable HTTP
+
+Codex connects to a remote URL. Current documentation supports Bearer tokens, OAuth, and ChatGPT session authentication for trusted first-party servers.
+
+The service receives tool arguments. Verify TLS, identity, logging, retention, and tool permissions.
+
+## Combining MCP, Skills, and Plugins
+
+For a weekly high-priority issue check:
+
+| Layer | Content |
 |---|---|
-| MCP サーバー | ツール群を公開（例：`search_issues`、`get_user`） |
-| 設定 | Codex にサーバーの起動/接続方法を伝える |
-| ツール呼び出し | モデルがタスクでツールを選択。多くは承認が必要 |
+| MCP | Expose `search_issues`, `get_issue`, and related tools |
+| Skill | Define filters, evidence, and report format |
+| Plugin | Distribute the Skill, connector, and MCP definition |
+| Scheduled task | Run the verified task at a fixed time |
 
-MCP 自体は**ビジネスロジックを提供しません**。サーバー実装が読み書きルールを担い、Codex はどのツールを使うかを選びます。
+These are orthogonal responsibilities, not an upgrade ladder. See the [capability map](/ja/skills/capability-map/).
 
-## MCP の位置づけ
+## When MCP is worthwhile
 
-Skill は「操作マニュアル」寄り、MCP は「ツールインターフェース」を扱います。
-
-- Skill が手順を説明
-- MCP が一部の外部ツールを Codex に渡す
-
-両方が一緒に現れることも多い。  
-Skill がフローを規定し、フローの某ステップで MCP ツールを呼ぶ。
-
-## Skill、Plugin との関係
-
-| | MCP | Skill | Plugin |
-|---|---|---|---|
-| 本質 | ツールプロトコル | ワークフロー説明 | 配布パッケージ |
-| 典型内容 | API ラップ | 手順と規約 | Skill + MCP + アプリコネクタ |
-| 保守者 | あなたまたはサードパーティサーバー | あなたまたはチーム | 公開者 |
-
-よくある組み合わせ：**Skill がフローを規定**し、某ステップで **MCP ツール**を呼んでチケット一覧を取得。
-
-## いつ MCP を検討するか
-
-タスクが現在のリポジトリファイルの読み書きだけなら、通常 MCP は不要。  
-「リポジトリ外」の実システムに触れるなら、MCP、API、その他の制御された統合を検討します。
-
-## 適用シーン
-
-| MCP に向く | MCP に向かない |
+| Worthwhile | Not yet |
 |---|---|
-| Linear/Jira チケット検索 | リポジトリ内のコード変更のみ |
-| 読み取り専用のドキュメント/ナレッジベース | 単純 `curl` で足り、再利用不要 |
-| 制御された内部ツール | 監査なしの高権限本番 DB 書き込み |
+| Repeated access to one external system | One public web lookup |
+| Structured arguments and results are required | Repository file tools are enough |
+| OAuth or granular tool control is required | Only privileged writes exist, with no test environment |
+| A team needs one reusable connection | Server provenance cannot be reviewed |
 
-## よくある誤解
+## Security stages
 
-### 1. MCP を接続すれば Codex は何でもできる
+1. **Read-only trial:** public docs or test tenant, query tools only.
+2. **Team validation:** restricted project, role, and tool allowlist; record failures and latency.
+3. **Limited writes:** reversible small writes with human approval.
+4. **Governed operation:** revocable authorization, reviewable config, redacted logs, environment isolation.
 
-できることは、MCP サーバーが公開するツールと、それらが許可する操作次第です。
+Never put tokens in prompts, Git, or static HTTP headers. Prefer OAuth, `bearer_token_env_var`, or forwarded environment variables.
 
-### 2. MCP は技術接続だけでセキュリティ問題ではない
+## Pre-connection checklist
 
-実システムに接続すると同時に次になります。
+- [ ] Server source, version, and startup command are reviewable.
+- [ ] Read and write tools are identified.
+- [ ] A test tenant or least-privilege identity is used.
+- [ ] Remote logging of arguments and results is understood.
+- [ ] Writes have approval, rollback, and audit paths.
+- [ ] The team can disable the server and revoke access.
 
-- 権限
-- データ露出
-- 監査
-- サプライチェーン
+## Next step
 
-### 3. MCP があれば Skill やドキュメントは不要
+[Connect an MCP server](/ja/skills/mcp/connect-an-mcp-server/), beginning read-only, then verify with `codex mcp list` and `/mcp`.
 
-依然として必要です。MCP は「ツールを呼べるか」を解決し、「どのフローで呼ぶか、いつ呼ぶべきでないか」は解決しません。
+## Official sources
 
-## セキュリティ境界
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
-- **最小権限**：読み取り専用、プロジェクト限定、IP 限定
-- **凭据**：OAuth または短期 Token。prompt や Git に入れない
-- **人手承認**：書き込み、一括削除、外部メッセージ送信はレビューを設定
-- **サプライチェーン**：信頼できるサーバーのみ。サードパーティ MCP ソースを審査
-
-エンタープライズはロードマップ `11-team-enterprise/security/plugin-and-mcp-risk` を参照。
-
-## 接続順序
-
-1. 公式 MCP ドキュメントで現行クライアント設定形式を確認
-2. **読み取り専用**の公式またはコミュニティ例サーバーから開始
-3. テストプロジェクトで単一ツール呼び出しを検証
-4. 実システムに接続し、運用手順を文書化
-
-操作手順：[MCP サーバー接続](/skills/mcp/connect-an-mcp-server/)
-
-## まず読み取り専用から始める
-
-MCP が実システムに触れた瞬間、それは権限、データ、監査の連鎖に入ります。より安全なのは、テストデータ、チームの読み取り専用検証、人の承認つきの少量で戻せる書き込み、最後にロール・監査・取り消せる認可を備えた運用です。
-
-サーバーの価値が高権限の書き込みに偏っているなら、読み取りツールと書き込みツールを先に分けます。
-
-## 接続前チェックリスト
-
-- サーバーはどのツールを公開しているか。書き込みはあるか。
-- 認証情報はどこに保存され、個人/プロジェクト/環境ごとに取り消せるか。
-- ログに顧客データ、内部文書、Secret 断片が出ないか。
-- テストプロジェクトで単一ツール呼び出しを検証したか。
-- 書き込みには人の確認、ロールバック、監査ログがあるか。
-
-## よくあるミス
-
-- 開発の都合で MCP サーバーに過大権限を与える
-- MCP を Skill の代替とみなす（フロー説明は Skill または AGENTS.md に残す）
-- 設定変更をコードレビューに含めない
-
-## 参考ソース
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- OpenAI Codex MCP ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** App / CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは概念を含むが、「クライアント設定形式」「承認挙動」など現行実装判断を含む。2026-07-26 時点の公開公式根拠では全体の検証が不十分。
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins
+
+**Last verified:** 2026-08-25

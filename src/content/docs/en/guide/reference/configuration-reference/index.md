@@ -3,9 +3,10 @@ title: Configuration Reference
 description: Conceptual index of Codex user- and project-level configuration keys—paths and fields per official docs.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Configuration reference pages can overwhelm with keys, layers, and overrides. Start with one question:
@@ -56,7 +57,7 @@ You do not need precedence memorized on day one—know what each layer is for:
 - Environment: “values for this run”
 - Managed: “org already decided”
 
-Intro: [Config basics](/guide/customization/configuration/config-basics/) · CLI focus: [CLI configuration](/guide/cli/configuration/)
+Intro: [Config basics](/en/guide/customization/configuration/config-basics/) · CLI focus: [CLI configuration](/en/guide/cli/configuration/)
 
 ## Configuration domains (conceptual)
 
@@ -68,7 +69,7 @@ Intro: [Config basics](/guide/customization/configuration/config-basics/) · CLI
 | Reasoning strength | Complexity tier if supported |
 | Sampling (temperature, etc.) | Usually default; pin for scripts |
 
-Background: [Models and reasoning](/guide/foundations/models-and-reasoning/)
+Background: [Models and reasoning](/en/guide/foundations/models-and-reasoning/)
 
 ### Sandbox and network
 
@@ -78,7 +79,7 @@ Background: [Models and reasoning](/guide/foundations/models-and-reasoning/)
 | Network access | Deny / restricted / allow |
 | Egress domains | Allowlist if supported |
 
-Background: [Sandbox and network](/guide/foundations/sandbox-and-network/)
+Background: [Sandbox and network](/en/guide/foundations/sandbox-and-network/)
 
 ### Approval policy
 
@@ -88,7 +89,7 @@ Background: [Sandbox and network](/guide/foundations/sandbox-and-network/)
 | Before file write | Same |
 | MCP tool calls | Per server or tool granularity |
 
-Background: [Permissions and approvals](/guide/foundations/permissions-and-approvals/) · Matrix: [Permission matrix](/guide/reference/permission-matrix/)
+Background: [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/) · Matrix: [Permission matrix](/en/guide/reference/permission-matrix/)
 
 ### Workspace and CLI
 
@@ -105,13 +106,13 @@ Background: [Permissions and approvals](/guide/foundations/permissions-and-appro
 | Server list | Command, URL, transport |
 | Env injection | Bound to MCP process—not in Git |
 
-[Connect MCP](/skills/mcp/connect-an-mcp-server/)
+[Connect MCP](/en/skills/mcp/connect-an-mcp-server/)
 
 ### IDE / App extension
 
 Some settings live only in extension UI; may share user config backend with CLI—per product docs.
 
-[IDE settings](/guide/ide/settings/) · [Desktop App settings](/guide/desktop-app/settings/)
+[IDE settings](/en/guide/ide/settings/) · [Desktop App settings](/en/guide/desktop-app/settings/)
 
 ## Common misconceptions
 
@@ -185,7 +186,7 @@ Then place in config, env, `AGENTS.md`, Skill, or current prompt.
 
 Easier than staring at key lists.
 
-Cloud Secrets: [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/)
+Cloud Secrets: [Secrets and environment variables](/en/guide/web-and-cloud/secrets-and-variables/)
 
 ## Change discipline
 

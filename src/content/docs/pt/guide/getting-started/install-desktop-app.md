@@ -3,55 +3,66 @@ title: Instalar o App desktop
 description: Instale e abra o aplicativo desktop do Codex.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 89d6303
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
-1. Abra as instruções oficiais de download do app desktop na documentação do Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-2. Escolha o instalador do seu sistema operacional e instale
-3. Inicie o app e confirme que vê a entrada de login ou de projetos
 
-Se é a primeira vez com o Codex e não quer mexer no terminal ainda, o App desktop é a entrada mais direta.
-Aqui o foco é: depois de instalar, que estado conta como «já posso começar a usar».
+In this handbook, “desktop App” means the **Codex workspace in the current ChatGPT desktop App**. Official versions are available for macOS, Windows, and Linux.
 
-## Checagem pós-instalação
+## Installation
 
-- O app abre normalmente
-- Permissões do sistema (como acesso a arquivos) concedidas conforme a necessidade — não libere de uma vez discos irrelevantes
-- Visão geral da interface: [Instalação e interface](/guide/desktop-app/installation-and-interface/)
+1. Open the [official ChatGPT desktop App documentation](https://learn.chatgpt.com/docs/app).
+2. Download the installer for your operating system from the official entry point.
+3. Install and open ChatGPT, then sign in with your ChatGPT account or another available method.
+4. Start a chat, create a project, or open a practice folder.
+5. Open Codex, create a task, and describe the result you need.
 
-## Mal-entendidos comuns
+Do not download installers from third-party sites in search results. On managed devices, follow your organization's software distribution and update policy.
 
-### 1. Se o App inicia, está tudo ok
+## Minimal post-installation check
 
-Vale mais confirmar:
+Prepare a practice directory with no secrets and confirm that:
 
-- Consegue fazer login normalmente?
-- Vê a entrada de projetos ou Tarefas?
-- A Permissão foi concedida corretamente?
+- the App opens and shows the current account or workspace;
+- you can open the directory or add files to a project;
+- you can create a Codex task and receive a response;
+- file access covers only what the task needs;
+- you can locate task results, file changes, and approval controls.
 
-### 2. Qualquer caixa de Permissão do sistema: clicar em permitir em tudo
+Use this read-only smoke test:
 
-Mais seguro é conceder conforme a necessidade — não abrir de uma vez discos ou capacidades de sistema irrelevantes.
+```text
+Read this directory without modifying files. Tell me which files it contains,
+what kind of project it may be, and which filenames support your conclusion.
+```
 
-### 3. Depois de instalar, já deveria começar uma Tarefa grande
+## Common issues
 
-Na primeira vez, confirme primeiro coisas pequenas:
+### The App opens but Codex is missing
 
-- Login ok
-- A página abre normalmente
-- Você sabe onde ficam a entrada do projeto e a interface básica
+Check the current account, workspace, and plan access, then whether the organization disabled the capability. Reinstallation does not bypass account or administrator policy.
 
-Com o App desktop instalado, confirme primeiro que abre, faz login e mostra a entrada — e só então faça a primeira Tarefa.
+### The operating system requests file, accessibility, or app-control access
 
-Se falhar: veja [Problemas no App desktop](/guide/desktop-app/troubleshooting/).
+Decide whether the current task actually requires it. Opening a practice directory does not justify unrelated disk or system access. See [Permissions and sandboxing](/pt/guide/permissions-and-sandbox/).
+
+### The interface differs from a screenshot
+
+The App evolves quickly. Define success as being able to sign in, select a work location, start a task, and review its result—not finding a button at a fixed coordinate.
+
+See [Installation and first use](/pt/guide/desktop-app/installation-and-interface/) for the interface and [Desktop App troubleshooting](/pt/guide/desktop-app/troubleshooting/) for failures.
 
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** App  
-**Nota de revisão:** Entrada de download do App desktop, formato do instalador, entradas de interface e avisos de Permissão podem mudar com novas versões do ChatGPT/Codex desktop; esta página mantém só passos amplos, ainda insuficientes para provar alinhamento com o fluxo oficial atual de instalação.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Verification basis:** The current official App quickstart provides macOS, Windows, and Linux downloads and directs signed-in users to choose a chat, project, or folder. This page deliberately avoids volatile button positions and package names.
+
+**Last verified:** 2026-08-26

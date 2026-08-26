@@ -3,9 +3,10 @@ title: 設定項目リファレンス
 description: Codex ユーザー級とプロジェクト級設定キーの概念索引——パスとフィールドは公式を基準に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -58,7 +59,7 @@ sidebar:
 - 環境変数：「今回実行だけ渡す値」
 - マネージド方針：「組織がすでに決めた境界」
 
-入門：[設定の基礎](/guide/customization/configuration/config-basics/) · ターミナル寄り：[CLI 設定](/guide/cli/configuration/)
+入門：[設定の基礎](/ja/guide/customization/configuration/config-basics/) · ターミナル寄り：[CLI 設定](/ja/guide/cli/configuration/)
 
 ## 設定ドメイン索引（概念）
 
@@ -70,7 +71,7 @@ sidebar:
 | 推論強度 / reasoning | 複雑タスク段階（サポート時） |
 | 温度等サンプリング | 一般はデフォルト維持。スクリプト化時は固定 |
 
-背景：[モデルと推論](/guide/foundations/models-and-reasoning/)
+背景：[モデルと推論](/ja/guide/foundations/models-and-reasoning/)
 
 ### サンドボックスとネットワーク
 
@@ -80,7 +81,7 @@ sidebar:
 | ネットワークアクセス | 禁止 / 制限 / 許可 |
 | 外向きドメイン | 許可リスト（サポート時） |
 
-背景：[サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
+背景：[サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
 
 ### 承認方針
 
@@ -90,7 +91,7 @@ sidebar:
 | ファイル書き込み前 | 同上 |
 | MCP ツール呼び出し | サーバーまたはツール粒度 |
 
-背景：[権限と承認](/guide/foundations/permissions-and-approvals/) · マトリクス：[権限マトリクス](/guide/reference/permission-matrix/)
+背景：[権限と承認](/ja/guide/foundations/permissions-and-approvals/) · マトリクス：[権限マトリクス](/ja/guide/reference/permission-matrix/)
 
 ### ワークスペースと CLI
 
@@ -107,13 +108,13 @@ sidebar:
 | サーバーリスト | コマンド、URL、転送方式 |
 | 環境変数注入 | MCP プロセスにバインド。Git へ入れない |
 
-[MCP 接続](/skills/mcp/connect-an-mcp-server/)
+[MCP 接続](/ja/skills/mcp/connect-an-mcp-server/)
 
 ### IDE / App 拡張
 
 一部項目は拡張設定 UI にのみ存在し、CLI と同一ユーザー設定バックエンドを共有する場合あり——製品説明を基準に。
 
-[IDE 設定](/guide/ide/settings/) · [デスクトップ App 設定](/guide/desktop-app/settings/)
+[IDE 設定](/ja/guide/ide/settings/) · [デスクトップ App 設定](/ja/guide/desktop-app/settings/)
 
 ## よくある誤解
 
@@ -184,7 +185,7 @@ sidebar:
 
 設定キー一覧を見続けるより、こう見ると整理しやすいです。
 
-Cloud Secrets：[Secrets と環境変数](/guide/web-and-cloud/secrets-and-variables/)
+Cloud Secrets：[Secrets と環境変数](/ja/guide/web-and-cloud/secrets-and-variables/)
 
 ## 変更規律
 

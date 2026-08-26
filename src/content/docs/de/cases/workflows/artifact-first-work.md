@@ -3,18 +3,19 @@ title: Artefakt zuerst
 description: Zuerst Form und Pfad des finalen Artefakts vereinbaren, dann Schritte ableiten — geeignet für Docs, Configs, Reports und ähnliche Liefergegenstände.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Artefakt zuerst** bedeutet: Form und Speicherort des Liefergegenstands klar machen, bevor Codex die Schritte ableitet. Geeignet für Markdown-Docs, OpenAPI, Migrationsskripte, Folienumrisse und ähnliche klar umrissene Ausgaben; kombinierbar mit [Spezifikationsgetriebene Arbeit](/cases/workflows/specification-driven-work/).
+**Artefakt zuerst** bedeutet: Form und Speicherort des Liefergegenstands klar machen, bevor Codex die Schritte ableitet. Geeignet für Markdown-Docs, OpenAPI, Migrationsskripte, Folienumrisse und ähnliche klar umrissene Ausgaben; kombinierbar mit [Spezifikationsgetriebene Arbeit](/de/cases/workflows/specification-driven-work/).
 
 ## Schwerpunkte dieser Seite
 
 - Wie man Artefaktstruktur statt Prozessdetails beschreibt
 - Konsistenzprüfung bei Mehrdatei-Artefakten
-- Ausrichtung an den Fähigkeiten unter [Dateien und Artefakte](/guide/files-and-artifacts/)
+- Ausrichtung an den Fähigkeiten unter [Dateien und Artefakte](/de/guide/files-and-artifacts/)
 
 ## Minimal brauchbares Vorgehen
 
@@ -37,7 +38,7 @@ Artefaktliste definieren (Pfad + Format + Beispielreferenz)
     → Überprüfen (Lint, Linkcheck, Vorschau)
 ```
 
-Bei visuellen Artefakten Screenshots oder Vorschaubeschreibungen verlangen; siehe [Artefakte überprüfen](/guide/quality/verify-artifacts/).
+Bei visuellen Artefakten Screenshots oder Vorschaubeschreibungen verlangen; siehe [Artefakte überprüfen](/de/guide/quality/verify-artifacts/).
 
 ## Häufige Fehler
 
@@ -56,7 +57,7 @@ Bei visuellen Artefakten Screenshots oder Vorschaubeschreibungen verlangen; sieh
 - [ ] Alle deklarierten Dateien existieren und lassen sich öffnen
 - [ ] Format stimmt mit dem Referenzbeispiel überein
 - [ ] Links / Verzeichnisse / Frontmatter sind gültig
-- [ ] Entspricht [Done definieren](/prompts/define-done/)
+- [ ] Entspricht [Done definieren](/de/prompts/define-done/)
 
 ---
 

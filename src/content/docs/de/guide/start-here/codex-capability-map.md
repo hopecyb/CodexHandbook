@@ -3,9 +3,10 @@ title: Fähigkeitskarte
 description: "Überblick über Prompt-, Werkzeug-, Erweiterungs-, Multi-Agent- und Governance-Module."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 7
 ---
@@ -59,25 +60,25 @@ Du musst nicht die gesamte Site-Navigation Seite für Seite lesen. Du kannst so 
 
 ## Startreihenfolge
 
-1. [Was ist Codex](/guide/start-here/what-is-codex/) lesen
-2. Dann [Deinen Pfad wählen](/guide/start-here/choose-your-path/)
-3. Danach in den [Schnellstart](/guide/getting-started/)
-4. Bei Stockungen zurück zu [Grundlagen](/guide/foundations/) und [Lernpfaden](/guide/learning-paths/)
+1. [Was ist Codex](/de/guide/start-here/what-is-codex/) lesen
+2. Dann [Deinen Pfad wählen](/de/guide/start-here/choose-your-path/)
+3. Danach in den [Schnellstart](/de/guide/getting-started/)
+4. Bei Stockungen zurück zu [Grundlagen](/de/guide/foundations/) und [Lernpfaden](/de/guide/learning-paths/)
 
 ## Module und autoritative Kapitel
 
 | Fähigkeit | Autoritative Stelle |
 |---|---|
-| Modelle, Agent, Berechtigungen, Sandbox | [Grundlagen](/guide/foundations/) |
-| Wie Einstiege bedient und ausgeführt werden | [Produkthandbuch](/guide/) |
-| Prompt, Kontext, Werkzeuge, Qualität | [Kernfähigkeiten](/guide/) |
-| AGENTS.md und Konfiguration | [Personalisierung](/guide/customization/) |
-| Skills, MCP, Plugin, Automatisierung | [Erweiterungen und Automatisierung](/skills/) |
-| Wiederholbare Kollaborationsmethoden | [Workflow-Methoden](/cases/workflows/) |
-| End-to-End-Fallbeispiele | [Szenario-Fälle](/cases/use-cases/) |
-| Lesereihenfolge | [Lernpfade](/guide/learning-paths/) |
+| Modelle, Agent, Berechtigungen, Sandbox | [Grundlagen](/de/guide/foundations/) |
+| Wie Einstiege bedient und ausgeführt werden | [Produkthandbuch](/de/guide/) |
+| Prompt, Kontext, Werkzeuge, Qualität | [Kernfähigkeiten](/de/guide/) |
+| AGENTS.md und Konfiguration | [Personalisierung](/de/guide/customization/) |
+| Skills, MCP, Plugin, Automatisierung | [Erweiterungen und Automatisierung](/de/skills/) |
+| Wiederholbare Kollaborationsmethoden | [Workflow-Methoden](/de/cases/workflows/) |
+| End-to-End-Fallbeispiele | [Szenario-Fälle](/de/cases/use-cases/) |
+| Lesereihenfolge | [Lernpfade](/de/guide/learning-paths/) |
 
-Gesamtkarte zur Erweiterungsauswahl: [Erweiterungs-Fähigkeitskarte](/skills/capability-map/). Produktvergleich: [Funktionsvergleich](/guide/reference/feature-comparison/). Unterschiede zwischen Einstiegen stehen auf der Vergleichsseite.
+Gesamtkarte zur Erweiterungsauswahl: [Erweiterungs-Fähigkeitskarte](/de/skills/capability-map/). Produktvergleich: [Funktionsvergleich](/de/guide/reference/feature-comparison/). Unterschiede zwischen Einstiegen stehen auf der Vergleichsseite.
 
 ---
 

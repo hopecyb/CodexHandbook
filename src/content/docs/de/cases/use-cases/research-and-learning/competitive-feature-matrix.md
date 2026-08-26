@@ -3,9 +3,10 @@ title: "Fall: Wettbewerbs-Feature-Matrix"
 description: Recherche mit Quellen und Tabellen-Artefakt — Workflow, den auch Nicht-Entwickler wiederverwenden können.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadaten
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. Vorbereitung
 
 - Vergleichsdimensionen klar (vorher im Prompt oder `@brief.md`)
-- [Websuche](/guide/tools/web-search/) aktivieren (falls das Produkt es unterstützt)
+- [Websuche](/de/guide/tools/web-search/) aktivieren (falls das Produkt es unterstützt)
 
 ## 3. Workflow
 
-Folge [Recherche mit Quellen](/cases/workflows/research-with-sources/):
+Folge [Recherche mit Quellen](/de/cases/workflows/research-with-sources/):
 
 ```text
 Vergleiche die «Teamkollaboration»-Funktionen von A/B/C:
@@ -44,7 +45,7 @@ Preise, die nicht überprüfbar sind, als «zu bestätigen» markieren;
 Markdown-Tabelle ausgeben, andere Repository-Dateien nicht ändern.
 ```
 
-**Überprüfung:** 3 URLs manuell öffnen; Datum und [Versionspolicy](/guide/start-here/handbook-version-policy/) prüfen.
+**Überprüfung:** 3 URLs manuell öffnen; Datum und [Versionspolicy](/de/guide/start-here/handbook-version-policy/) prüfen.
 
 ## 4. Fehler und Wiederherstellung
 
@@ -58,8 +59,8 @@ Markdown-Tabelle ausgeben, andere Repository-Dateien nicht ändern.
 
 ## 6. Verwandte Kapitel
 
-- [Artefakt zuerst](/cases/workflows/artifact-first-work/)
-- [Quellen validieren](/guide/quality/validate-sources/)
+- [Artefakt zuerst](/de/cases/workflows/artifact-first-work/)
+- [Quellen validieren](/de/guide/quality/validate-sources/)
 
 ---
 

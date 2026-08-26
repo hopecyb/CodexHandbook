@@ -3,9 +3,10 @@ title: Mal-entendidos comuns
 description: Esclarece equívocos de tratar o Codex como uma caixa-preta onipotente.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 83a9c4c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -75,7 +76,7 @@ Faltar qualquer uma das três sobe claramente a probabilidade de problema.
 
 O Codex é forte, mas funciona melhor dentro de objetivos e limites claros — e não poupa você de entender e julgar.
 
-Próximo passo: [Começar a usar](/guide/getting-started/).
+Próximo passo: [Começar a usar](/pt/guide/getting-started/).
 
 ---
 

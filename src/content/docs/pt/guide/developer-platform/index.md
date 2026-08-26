@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-A **plataforma para desenvolvedores** é para quem quer **productizar** o Codex em pipelines: apps à medida, revisão em lote, portões de release, portais internos de desenvolvimento. O uso quotidiano de «escrever um Prompt para corrigir um bug» continua a começar em [Primeiros passos](/guide/getting-started/).
+A **plataforma para desenvolvedores** é para quem quer **productizar** o Codex em pipelines: apps à medida, revisão em lote, portões de release, portais internos de desenvolvimento. O uso quotidiano de «escrever um Prompt para corrigir um bug» continua a começar em [Primeiros passos](/pt/guide/getting-started/).
 
 Este capítulo não trata do uso diário do Codex, mas de como o ligar aos teus próprios sistemas.
 
@@ -30,10 +31,10 @@ Orienta-se a cenários como:
 
 | Pergunta do leitor | Para onde ir |
 |---|---|
-| Como executar `codex` no terminal | [Manual de produto CLI](/guide/cli/) |
-| Como fazer revisão com exec em CI | [Modo não interativo](/guide/cli/non-interactive-mode/) + CI deste capítulo |
-| Como embutir um Agent na tua App | [Visão geral do SDK](/guide/developer-platform/sdk-overview/) |
-| Modelo de Permissões e segurança | [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/) |
+| Como executar `codex` no terminal | [Manual de produto CLI](/pt/guide/cli/) |
+| Como fazer revisão com exec em CI | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) + CI deste capítulo |
+| Como embutir um Agent na tua App | [Visão geral do SDK](/pt/guide/developer-platform/sdk-overview/) |
+| Modelo de Permissões e segurança | [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/) |
 
 ## Arquitetura típica (conceito)
 
@@ -56,10 +57,10 @@ Fornecedor Git / tickets / repositório de artefatos
 
 | Tema | Páginas |
 |---|---|
-| SDK | [Visão geral do SDK](/guide/developer-platform/sdk-overview/) |
-| Não interativo | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Scripts e pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Saída estruturada](/guide/developer-platform/non-interactive/structured-output/) · [Códigos de saída e retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Visão geral](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [Visão geral do SDK](/pt/guide/developer-platform/sdk-overview/) |
+| Não interativo | [codex exec](/pt/guide/developer-platform/non-interactive/codex-exec/) · [Scripts e pipelines](/pt/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Saída estruturada](/pt/guide/developer-platform/non-interactive/structured-output/) · [Códigos de saída e retries](/pt/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Visão geral](/pt/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Automatização de revisão de código](/pt/guide/developer-platform/ci-cd/code-review-automation/) |
 
 Mais sobre `codex-sdk/`, `app-server/` e `architecture-patterns/` no [esquema do capítulo](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
@@ -78,7 +79,7 @@ Podes entender assim:
 
 ### 3. Que página vale mais a pena ler primeiro neste capítulo?
 
-Para formar o conceito, prioriza [Visão geral do SDK](/guide/developer-platform/sdk-overview/) e a relação com o [modo não interativo](/guide/cli/non-interactive-mode/).
+Para formar o conceito, prioriza [Visão geral do SDK](/pt/guide/developer-platform/sdk-overview/) e a relação com o [modo não interativo](/pt/guide/cli/non-interactive-mode/).
 
 Este capítulo fala de «como ligar o Codex ao sistema». Para o primeiro uso prático, começa pelo conteúdo de primeiros passos.
 

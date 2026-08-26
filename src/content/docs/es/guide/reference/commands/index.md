@@ -3,11 +3,12 @@ title: Referencia de comandos CLI
 description: Consulta rápida de subcomandos y parámetros habituales del CLI de Codex — índice de aprendizaje, no sustituye el manual oficial.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: bdc537d
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
 La página de referencia de comandos sirve sobre todo para elegir la entrada, no para memorizar parámetros de golpe:
@@ -35,9 +36,9 @@ Para quien empieza con el CLI, eso ya resuelve la mayor parte de la elección de
 
 | Entrada | Uso | Detalle |
 |---|---|---|
-| `codex` | Sesión TUI interactiva | [Modo interactivo](/guide/cli/interactive-mode/) |
-| `codex exec` (o equivalente) | Tarea no interactiva única / por tubería | [Modo no interactivo](/guide/cli/non-interactive-mode/) |
-| Relacionado con configuración | Leer/escribir configuración de usuario/proyecto | [Configuración del CLI](/guide/cli/configuration/) |
+| `codex` | Sesión TUI interactiva | [Modo interactivo](/es/guide/cli/interactive-mode/) |
+| `codex exec` (o equivalente) | Tarea no interactiva única / por tubería | [Modo no interactivo](/es/guide/cli/non-interactive-mode/) |
+| Relacionado con configuración | Leer/escribir configuración de usuario/proyecto | [Configuración del CLI](/es/guide/cli/configuration/) |
 
 :::caution[Sensible a la versión]
 Los nombres de parámetros de la tabla siguiente son redacciones habituales en documentación comunitaria y **no garantizan coincidir con tu CLI instalado**. Tras actualizar, vuelve a contrastar `--help`.
@@ -77,7 +78,7 @@ codex
 # - Aprobar peticiones de shell / escritura de archivos
 ```
 
-Comandos slash: [Comandos slash](/guide/reference/slash-commands/)
+Comandos slash: [Comandos slash](/es/guide/reference/slash-commands/)
 
 ## Criterio de entrada
 
@@ -103,25 +104,25 @@ Más ligero que hundirse de golpe en el detalle de parámetros.
 
 ```bash
 # Directorio de trabajo y Prompt único (esquema)
-codex exec --cwd /path/to/repo "tu descripción completa de la Tarea"
+codex exec --cd /path/to/repo "tu descripción completa de la Tarea"
 
 # Intenciones habituales (nombres de parámetro según lo oficial)
-# --cwd          directorio de trabajo
+# --cd          directorio de trabajo
 # --model        modelo fijo
 # --sandbox      política de Sandbox
 # --approval     política de Aprobación (especialmente importante sin supervisión)
 # tubería stdin  leer el Prompt desde un archivo o un comando aguas arriba
 ```
 
-Seguridad: [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/)
+Seguridad: [Patrones de Aprobación humana](/es/cases/workflows/human-approval-patterns/)
 
 ## Configuración y autenticación (concepto)
 
 | Operación | Explicación |
 |---|---|
-| Inicio de sesión | Alineado con [Iniciar sesión y autenticación](/guide/getting-started/sign-in-and-authentication/) |
-| Archivo de configuración | Nivel usuario / proyecto; véase [Referencia de configuración](/guide/reference/configuration-reference/) |
-| MCP | [Conectar MCP](/skills/mcp/connect-an-mcp-server/) |
+| Inicio de sesión | Alineado con [Iniciar sesión y autenticación](/es/guide/getting-started/sign-in-and-authentication/) |
+| Archivo de configuración | Nivel usuario / proyecto; véase [Referencia de configuración](/es/guide/reference/configuration-reference/) |
+| MCP | [Conectar MCP](/es/skills/mcp/connect-an-mcp-server/) |
 
 ## Código de salida y automatización
 
@@ -132,24 +133,24 @@ El modo no interactivo suele usar el **código de salida** para éxito/fallo, pe
 
 La página de comandos CLI sirve sobre todo para distinguir entradas y consultar intenciones; no hace falta memorizar parámetros para empezar.
 
-No ignores stderr en CI; conserva logs para [diagnosticar primero](/cases/workflows/diagnose-before-fixing/).
+No ignores stderr en CI; conserva logs para [diagnosticar primero](/es/cases/workflows/diagnose-before-fixing/).
 
 ## Diferencia con los comandos slash del chat
 
 | | Terminal `codex` | `/` dentro de la sesión |
 |---|---|---|
-| Documentación | Esta página + manual de producto | [slash-commands](/guide/reference/slash-commands/) |
+| Documentación | Esta página + manual de producto | [slash-commands](/es/guide/reference/slash-commands/) |
 | Adecuado | Scripts, CI | Exploración interactiva |
 
 ## Diagnóstico
 
 | Fenómeno | Apunta a |
 |---|---|
-| Comando no existe | [Instalar CLI](/guide/getting-started/install-cli/) |
-| Configuración no aplica | [Configuración del CLI](/guide/cli/configuration/) |
+| Comando no existe | [Instalar CLI](/es/guide/getting-started/install-cli/) |
+| Configuración no aplica | [Configuración del CLI](/es/guide/cli/configuration/) |
 | Aprobación bloquea CI | Endurecer el Prompt + Sandbox de solo lectura |
 
-[Diagnóstico del CLI](/guide/cli/troubleshooting/)
+[Diagnóstico del CLI](/es/guide/cli/troubleshooting/)
 
 ---
 

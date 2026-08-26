@@ -4,7 +4,7 @@ description: Require traceable evidence for research conclusions.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 35bd9a6
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -17,7 +17,7 @@ Ask the Agent:
 Attach a source URL or reference for each key fact; clearly mark anything uncertain as "unverified."
 ```
 
-Then click through and verify yourself. Search capability: [Web search](/guide/tools/web-search/)
+Then click through and verify yourself. Search capability: [Web search](/en/guide/tools/web-search/)
 
 ---
 

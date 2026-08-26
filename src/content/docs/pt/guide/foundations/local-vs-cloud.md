@@ -3,9 +3,10 @@ title: Local e Cloud
 description: Compara cenários adequados para Tarefas locais e Tarefas Cloud.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ Só mude para Cloud quando de fato precisar de:
 - Conexão a repositório remoto ou recursos remotos
 - Não ocupar a máquina local
 
-Muitos iniciantes começam com **local + App desktop**. Detalhes de Cloud: [Visão geral de Web e Cloud](/guide/web-and-cloud/). Alternar no App: [Tarefas locais e Cloud](/guide/desktop-app/local-and-cloud-tasks/).
+Muitos iniciantes começam com **local + App desktop**. Detalhes de Cloud: [Visão geral de Web e Cloud](/pt/guide/web-and-cloud/). Alternar no App: [Tarefas locais e Cloud](/pt/guide/desktop-app/local-and-cloud-tasks/).
 
 O local serve melhor para entender o fluxo e fazer mudanças pequenas. O Cloud serve melhor para Tarefas mais longas, mais padronizadas e com mais colaboração remota.
 

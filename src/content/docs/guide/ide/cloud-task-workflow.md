@@ -1,105 +1,71 @@
 ---
 title: IDE 中的云端任务
-description: 从 IDE 委托 Cloud 任务、跟进状态与审查远程产出。
+description: 从 IDE 把长任务委托给 Codex Cloud，并回到可审查结果。
 sidebar:
   order: 60
 ---
 
-部分 IDE 集成支持把任务**委托到 Cloud**。任务在远程标准化环境里运行，你可以继续在本地编辑，或者直接离开电脑。流程和纯 Cloud/Web 类似，只是入口在编辑器侧。
+IDE 可以把快速迭代留在本地，也可以连接 Codex web，把耗时更长的任务委托到 Cloud。入口仍在编辑器中，但执行环境、仓库状态和网络边界已经变成云端。
 
-## 内容
+## 什么时候委托
 
-- 何时从 IDE 发 Cloud 任务而非纯本地
-- 委托前后要准备什么
-- 如何把远程 diff 接回本地审查
-
-## 适合场景
-
-| 适合 Cloud | 坚持本地 |
+| 留在本地 | 委托到 Cloud |
 |---|---|
-| 依赖安装重、环境难复现 | 快速改两行 |
-| 需要推送分支 / 开 PR | 未连接 GitHub |
-| 长时运行、希望手机审批通知 | 含本机未提交敏感草稿 |
+| 需要和当前选区快速来回修改 | 任务步骤多、运行时间长 |
+| 依赖尚未提交的本地状态 | 输入已经在远程仓库或可上传 |
+| 必须访问本机专用工具 | 云环境可重建依赖与验证 |
+| 你需要实时操作进程 | 你希望本地继续做其他工作 |
 
-概念：[本地与云端](/guide/foundations/local-vs-cloud/)
+云端不会自动拥有你本机尚未提交的文件、凭据或运行进程。委托前必须明确任务从哪个仓库、分支与提交开始。
 
-## 这种工作流适合什么情况
+## 委托前清单
 
-这类工作流常见于这种情况：
+- [ ] 已用 ChatGPT 账户登录；Codex Cloud 不接受 API key 登录
+- [ ] 已连接 GitHub，或正在使用当前支持的 GitLab Beta 集成
+- [ ] 云环境能执行安装和验证脚本
+- [ ] 必要变量与 secrets 已在环境中配置，没有写进提示词
+- [ ] 本地未提交改动已处理，或明确不包含在任务中
+- [ ] 目标、允许路径、禁区和验收命令已经写清
 
-- 你习惯在 IDE 里工作
-- 但任务本身放到远程环境里跑更合适
-
-也就是说，你仍然在 IDE 里工作，但执行环境已经切到远程。
-
-## 前置条件
-
-- [ ] [GitHub 已连接](/guide/web-and-cloud/connect-github/)
-- [ ] Cloud [环境](/guide/web-and-cloud/cloud-environments/) 与 [Secrets](/guide/web-and-cloud/secrets-and-variables/) 已配置（若任务需要）
-- [ ] 本地改动已 commit 或明确「以远程分支为准」
-
-**IDE 不能代替 Cloud 访问你本机未推送的 commit。**
-
-## 常见误会
-
-### 1. 我在 IDE 里点了“云端运行”，它就会自动带上我本机的一切吗
-
-不会。  
-远程任务看到的，仍然是远程仓库、远程环境，以及你明确交给它的内容。
-
-### 2. 既然入口在 IDE 里，它就和本地任务差不多吗
-
-也不一样。  
-发起位置虽然在 IDE，但执行边界、环境和可见内容还是 Cloud 那一套。
-
-### 3. 云端跑完，不等于已经审查通过
-
-远程完成只代表任务在那里跑完了，不代表本地 review、测试和最终确认已经做完。
-
-## 推荐流程
+## 端到端示例
 
 ```text
-1. IDE 中写好任务说明（目标、分支、约束、验收）
-2. 选择「在云端运行」或等价入口（以产品 UI 为准）
-3. 确认计划（若启用 plan 模式）
-4. 离开或继续本地工作 → 通知/面板查看进度
-5. 远程完成后：在 Web/App 看 diff → 开 PR 或 pull 分支到本地
-6. 本地跑测试 + 人工 review → 合并
+目标：修复重试模块在达到上限后仍等待一次的问题。
+起点：仓库 acme/retry-service，分支 fix/retry-limit。
+范围：只修改 src/retry.ts 和对应测试。
+约束：不升级依赖，不修改公开 API，不推送到 main。
+验收：运行 pnpm test -- retry 和 pnpm typecheck；展示 diff 与命令结果。
 ```
 
-开 PR 细节：[创建 Pull Request](/guide/web-and-cloud/create-pull-requests/)
+推荐流程：
 
-## 一个常用顺序
+1. 在 IDE 中附带相关文件或选区，先确认问题边界；
+2. 选择 Cloud 继续处理较长任务；
+3. 在 Cloud 查看计划、进度和验证结果；
+4. 返回 IDE 或 Web 检查可审查的结果；
+5. 拉取分支或通过 PR 获取改动；
+6. 在可信本地环境重新测试并人工审查后再合并。
 
-第一次在 IDE 里发 Cloud 任务时，可以按这个顺序：
+云端“完成”只表示远程执行结束，不表示代码已经适合合并。远程依赖、操作系统或凭据与本地/CI 不同，仍可能暴露环境差异。
 
-1. 确认本地改动是否已提交或是否故意不带上
-2. 确认 GitHub、Secrets、分支都准备好了
-3. 用清楚的目标、范围和验收条件发起任务
-4. 远程完成后回来看 diff
-5. 本地再补测试和人工审查
+## 冲突与安全
 
-IDE 云端任务和本地任务的区别，核心就在执行环境是不是远程。
+- 不要在委托后让本地与云端同时改同一文件；
+- 不在提示词中粘贴生产密钥，使用环境 secrets；
+- 不把 Cloud 的网络访问当成默认能力，按环境允许列表配置；
+- 推送、开 PR 和合并是不同动作，合并必须保留人工或 CI 门禁。
 
-## 与桌面 App 委托的关系
+接着阅读[云环境](/guide/web-and-cloud/cloud-environments/)与[创建 Pull Request](/guide/web-and-cloud/create-pull-requests/)。
 
-桌面 App 的 [本地与云端任务](/guide/desktop-app/local-and-cloud-tasks/) 与 IDE 委托共享同一 Cloud 后端；差异主要在**入口 UI 与上下文附件**（IDE 可能附带当前选区摘要）。
+## 官方依据
 
-## 安全边界
-
-- Cloud 任务权限受 GitHub 连接范围与组织策略约束
-- 不要在任务描述里粘贴生产密钥；用 [Secrets](/guide/web-and-cloud/secrets-and-variables/)
-- 合并前仍须 [人工审查](/guide/web-and-cloud/code-review/)
-
-## 常见错误
-
-- 委托后在本机继续改同一文件，导致与远程分支冲突
-- 未写分支名，远程直接推共享分支
-- 把 Cloud 产出当「已验收」跳过 CI
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
 ---
 
-**状态：** outdated  
-**适用产品：** IDE / Cloud  
-**复核说明：** 本页把“从 IDE 直接委托 Cloud 任务、回接 diff、本地跟进”写成了较具体的当前扩展能力与流程，但官方现行资料不足以逐项证明该 IDE 云端委托体验的具体形态；在补齐正式 IDE/Cloud 文档前更适合标为 `outdated`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** IDE、Cloud
+
+**最近核验：** 2026-08-26

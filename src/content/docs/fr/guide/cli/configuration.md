@@ -3,12 +3,13 @@ title: Configuration CLI
 description: Modèles, Bac à sable, Approbations et MCP — unifier le comportement Codex dans le terminal.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-La configuration CLI définit le **modèle par défaut, le répertoire de travail, la rigueur des Approbations, les serveurs MCP**, et plus. Mêmes concepts que [Bases de configuration](/guide/customization/configuration/config-basics/) ; cette page se concentre sur ce que les utilisateurs de terminal changent souvent.
+La configuration CLI définit le **modèle par défaut, le répertoire de travail, la rigueur des Approbations, les serveurs MCP**, et plus. Mêmes concepts que [Bases de configuration](/fr/guide/customization/configuration/config-basics/) ; cette page se concentre sur ce que les utilisateurs de terminal changent souvent.
 
 ## Où vit la config
 
@@ -34,7 +35,7 @@ Affecte vitesse, coût et succès sur les Tâches difficiles. Le scripting doit 
 | Standard | Développement quotidien |
 | Assoupli | Machines personnelles de confiance uniquement, selon politique d'entreprise |
 
-Concepts : [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
+Concepts : [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
 ### Politique d'Approbation
 
@@ -42,7 +43,7 @@ La CLI peut demander avant shell, écriture disque ou réseau. Les équipes devr
 
 ### Liste des serveurs MCP
 
-Partagée avec [Connecter un serveur MCP](/skills/mcp/connect-an-mcp-server/) ; redémarrez les sessions après les changements.
+Partagée avec [Connecter un serveur MCP](/fr/skills/mcp/connect-an-mcp-server/) ; redémarrez les sessions après les changements.
 
 ## Aligner projet et CLI
 
@@ -60,7 +61,7 @@ Partagée avec [Connecter un serveur MCP](/skills/mcp/connect-an-mcp-server/) ; 
 | MCP non chargé | Syntaxe JSON/TOML, chemins |
 | Trop d'Approbations | Mode Bac à sable et listes d'autorisation |
 
-Plus : [Dépannage CLI](/guide/cli/troubleshooting/)
+Plus : [Dépannage CLI](/fr/guide/cli/troubleshooting/)
 
 ---
 

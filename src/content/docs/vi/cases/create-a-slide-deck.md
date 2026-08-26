@@ -3,9 +3,10 @@ title: Tạo slide
 description: Case tạo Artifact từ dàn ý đến bài thuyết trình có thể trình bày.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 42c7a26
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Tạo slide
@@ -42,7 +43,7 @@ Ràng buộc: Số liệu phải ghi nguồn hoặc ghi «ví dụ»; không g�
 
 ## 4. Liên quan
 
-- [Khả năng thuyết trình](/guide/files-and-artifacts/presentations/)
+- [Khả năng thuyết trình](/vi/guide/files-and-artifacts/presentations/)
 ---
 
 **Trạng thái:** verified  

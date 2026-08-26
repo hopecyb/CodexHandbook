@@ -1,118 +1,85 @@
 ---
-title: AGENTS.md — Geltungsbereich und Priorität
-description: "Mehrere Dateien, Monorepo und «Projektregel vs. Dialog-Prompt» — wer entscheidet."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Geltungsbereich und Rangfolge von AGENTS.md
+description: Verstehe genau, wie globale Regeln, Regeln im Projektstamm und Regeln des aktuellen Verzeichnisses gefunden und zusammengeführt werden.
 sidebar:
   order: 20
+locale: de
+source_locale: zh-CN
+source_revision: 698ab44
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Wenn mehrere `AGENTS.md`, Config-Dateien und der aktuelle Dialog gleichzeitig existieren, muss klar sein, **welche Regel gilt**.
+Codex baut zu Beginn jedes Laufs eine Anweisungskette auf. Entscheidend ist keine spekulative Rangliste aus „Organisationsrichtlinie, Konfiguration und Prompt“, sondern zunächst die genaue Erkennungsreihenfolge von `AGENTS.md` selbst.
 
-Thema hier: Wenn zwei Regeln auseinanderlaufen — wem folgen?
+## Offizielle Erkennungsreihenfolge
 
-## Prioritätsüberblick
+1. **Globale Ebene:** Im Codex-Home-Verzeichnis, standardmäßig `~/.codex`, wird zuerst nach `AGENTS.override.md` gesucht. Nur wenn diese Datei fehlt, wird `AGENTS.md` gelesen. Auf dieser Ebene wird nur die erste nicht leere Datei verwendet.
+2. **Projektebene:** Codex durchläuft die Verzeichnisse vom Projektstamm, in der Regel dem Git-Stamm, bis zum aktuellen Arbeitsverzeichnis. Pro Verzeichnis prüft es der Reihe nach `AGENTS.override.md`, `AGENTS.md` und konfigurierte Fallback-Dateinamen und verwendet höchstens eine Datei.
+3. **Zusammenführung:** Die Inhalte werden vom Stamm bis zum aktuellen Verzeichnis angefügt. Dateien näher am aktuellen Verzeichnis erscheinen später und können daher frühere Anweisungen überschreiben.
 
-```text
-Managed Organisation Policy > nähere AGENTS.md > Repo-Root-AGENTS.md > Benutzerkonfiguration > aktueller Dialog
-```
+Leere Dateien werden übersprungen. Die Zusammenführung endet, sobald `project_doc_max_bytes` erreicht ist; der Standardwert beträgt 32 KiB.
 
-„Näher“ meint die Datei **näher am aktuellen Arbeitspfad**. Arbeiten Sie unter `packages/web/AGENTS.md`, werden diese Datei und die Root-Datei zusammengeführt; bei Konflikt **gewinnt das Unterverzeichnis**.
-
-## „Näher gewinnt“ verstehen
-
-Stellen Sie sich vor:
-
-- Root-Regeln = „Repo-weite Defaults“
-- Unterverzeichnis-Regeln = „besondere Hinweise für diesen Teilbereich“
-
-Je näher am aktuellen Arbeitsort, desto konkreter — und desto eher priorisiert.
-
-## Verhältnis zum Dialog-Prompt
-
-| Quelle | Persistenz | Geeignet für |
-|---|---|---|
-| AGENTS.md | Sessionübergreifend, versionierbar | Teamkonsens, Build-Befehle, Tabuzonen |
-| Aufgaben-Prompt | Nur diese Session | Ziel, Umfang, Deadline dieser Runde |
-| @-Dateiverweis | Kontext dieser Session verstärken | Konkrete Implementierungsdateien, Designs |
-
-**Nicht** die ganze `AGENTS.md` in den Dialog kopieren. Zum Betonen einer Regel reicht ein Satz: „Testanforderungen aus AGENTS.md einhalten; diesmal zusätzlich `legacy/` nicht ändern.“
-
-## Monorepo-Muster
+## Beispiel für ein Monorepo
 
 ```text
 repo/
-├── AGENTS.md              # Repo-weit: Paketmanager, CI, Sicherheit
+├── AGENTS.md
 ├── apps/
 │   └── web/
-│       └── AGENTS.md      # Frontend: Komponentenbibliothek, E2E-Befehle
-└── packages/
-    └── api/
-        └── AGENTS.md      # Backend: DB-Migrationskonventionen
+│       └── AGENTS.md
+└── services/
+    └── payments/
+        ├── AGENTS.md
+        └── AGENTS.override.md
 ```
 
-Prinzipien:
+Bei einem Start in `services/payments` wird zuerst die `AGENTS.md` im Stammverzeichnis geladen. Da im Zielverzeichnis `AGENTS.override.md` vorhanden ist, wird die dortige `AGENTS.md` ignoriert.
 
-- **Root-Datei**: 10–20 harte, repo-weite Regeln
-- **Paketdateien**: nur paket-spezifische Befehle und Verzeichnis hinweise
-- Vermeiden Sie 80 % Duplikat in drei Dateien — Gemeinsames in die Root, Pakete nur Inkremente
+Die Stammdatei enthält repositoryweite Regeln, etwa Paketmanager, allgemeine Tests und sicherheitskritische Verbote. Eine verschachtelte Datei beschreibt nur zusätzliche Regeln für den jeweiligen Dienst. Dupliziere nicht 80 % desselben Inhalts.
 
-## Grenze zu persönlichen Vorlieben
+## Zusammenspiel mit dem Aufgaben-Prompt
 
-Persönliche Gewohnheiten (Theme, Standardmodell, lokale Pfade) gehören in die **Benutzerkonfiguration**, nicht in die Team-`AGENTS.md` — sonst treffen Sie Mitwirkende.
+`AGENTS.md` enthält langfristige, versionsverwaltbare Projektkonventionen. Der Prompt beschreibt Ziel, Umfang und Abnahme der aktuellen Aufgabe. Beispiel:
 
-## Häufige Missverständnisse
+```text
+Befolge alle anwendbaren AGENTS.md-Dateien. Ändere bei dieser Aufgabe nur services/payments/retry.ts und die Tests.
+Rotiere keine Zugangsdaten. Führe make test-payments aus und berichte das tatsächliche Ergebnis.
+```
 
-### 1. Was im aktuellen Dialog steht, ist neu und hat deshalb höchste Priorität
+Ein Prompt kann unveränderliche System-, Organisations-, Sandbox- oder Berechtigungsgrenzen nicht in verfügbare Funktionen umwandeln. Versuche bei Konflikten nicht, die Rangfolge mit „Ignoriere die vorherigen Regeln“ zu erraten. Lass Codex zuerst die geladenen Anweisungsquellen auflisten und grenze anschließend die Aufgabe ein.
 
-Dialog ergänzt „zusätzliche Anforderungen dieser Runde“ — er überschreibt nicht beliebig Team- oder Organisations-Hard-Rules.
+## Tatsächlich geladene Inhalte verifizieren
 
-### 2. Unterverzeichnis-`AGENTS.md` heißt Root-Regeln kopieren
+Starte im Zielverzeichnis eine neue Sitzung und frage:
 
-So sollte es nicht sein.
+```text
+Liste vor Arbeitsbeginn die Quellen von AGENTS.md und AGENTS.override.md in ihrer Ladereihenfolge auf
+und fasse die von jeder Datei hinzugefügten Einschränkungen getrennt zusammen. Ändere keine Dateien.
+```
 
-Besser:
+`AGENTS.md` wird beim Start gelesen. Starte nach einer Änderung einen neuen Lauf oder eine neue Sitzung, um sie zu verifizieren. Gehe nicht davon aus, dass die aktuelle Sitzung automatisch aktualisiert wurde.
 
-- Root: Gemeinsamkeiten
-- Unterverzeichnis: nur Inkremente und Ausnahmen
+## Fallbacks und Größenbegrenzung
 
-### 3. Die Reihenfolge allein reicht nicht
+Wenn bereits `TEAM_GUIDE.md` verwendet wird, kannst du Folgendes konfigurieren:
 
-Noch nicht.
+```toml
+project_doc_fallback_filenames = ["TEAM_GUIDE.md", ".agents.md"]
+project_doc_max_bytes = 65536
+```
 
-Wichtiger ist zu wissen:
+Ein Fallback gilt nur, wenn im selben Verzeichnis keine Datei höherer Priorität vorhanden ist. Entferne vor einer Erhöhung des Limits doppelte und irrelevante Hintergrundinformationen, damit wichtige Regeln nicht aus dem Kontext verdrängt werden.
 
-- welche Art Information auf welche Schicht gehört
-- warum bei Konflikt eine Schicht gewinnt
+## Offizielle Grundlage
 
-## Bei Konflikten urteilen
-
-Wenn zwei Regeln kollidieren, in dieser Reihenfolge prüfen:
-
-1. Welche ist näher am aktuellen Arbeitsverzeichnis
-2. Welche ist langfristige Projektregel, welche nur temporäre Ergänzung
-3. Gibt es darüber eine Organisations- oder Managed Policy
-
-Bei Regelkonflikten gewinnen typischerweise die nähere, härtere, klarere Schicht — nicht automatisch „der neueste Satz“.
-
-## Häufige Fehler
-
-- Unterverzeichnis-`AGENTS.md` widerspricht der Root-Datei, ohne zu sagen, wer Vorrang hat
-- Secrets in `AGENTS.md` und nach Git — Secret-Management und Umgebungsvariablen nutzen
-- „Temporäre Lockerung“ im Dialog soll Team-Managed-Policy überschreiben (meist unmöglich)
-
-## Abnahmeliste
-
-- [ ] Klare Arbeitsteilung zwischen Root-`AGENTS.md` und Paketdateien
-- [ ] Bewusstsein „Unterverzeichnis gewinnt“ bei Konflikten
-- [ ] Aufgaben-Prompt nur Inkremente, kein Kopieren des ganzen Projekt-Handbuchs
+- [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 ---
 
-**Status:** outdated  
-**Gilt für:** App / CLI / IDE / Cloud  
-**Nachprüfhinweis:** Diese Seite stellt Priorität von `AGENTS.md`, Benutzerkonfiguration und aktuellem Dialog als zu lineare Reihenfolge dar; tatsächliche Precedence kann je Client, organisationsgesteuerter Fähigkeit und Laufzeitumgebung abweichen und muss nach Ergänzung aktueller offizieller Belege neu geschrieben werden.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App, CLI, IDE, Cloud
+
+**Zuletzt geprüft:** 2026-08-26

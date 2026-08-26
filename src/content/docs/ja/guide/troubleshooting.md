@@ -5,9 +5,10 @@ sidebar:
   order: 18
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 問題が起きていて、まだ種類がわからないときは、このページから入れます。
@@ -24,12 +25,12 @@ translated_at: 2026-07-28
 
 | 症状 | 行き先 |
 |---|---|
-| インストール失敗 | [デスクトップのトラブルシューティング](/guide/desktop-app/troubleshooting/) · [CLI トラブルシューティング](/guide/cli/troubleshooting/) · [IDE トラブルシューティング](/guide/ide/troubleshooting/) |
-| ログイン / 認証失敗 | [ログイン](/guide/getting-started/sign-in-and-authentication/) |
-| どのクライアントを選ぶかわからない | [クライアントの選び方](/guide/choose-your-client/) · [機能対照](/guide/reference/feature-comparison/) |
-| 結果が範囲外 / 品質が悪い | [最初のタスク事例](/cases/first-task/) · [プロンプトのデバッグ](/prompts/prompt-debugging/) · [元に戻す](/guide/getting-started/undo-and-recover/) |
-| コンテキストが混乱 | [焦点を保つ](/guide/context/keep-context-focused/) |
-| 権限 / サンドボックスの疑問 | [権限とサンドボックス](/guide/permissions-and-sandbox/) |
+| インストール失敗 | [デスクトップのトラブルシューティング](/ja/guide/desktop-app/troubleshooting/) · [CLI トラブルシューティング](/ja/guide/cli/troubleshooting/) · [IDE トラブルシューティング](/ja/guide/ide/troubleshooting/) |
+| ログイン / 認証失敗 | [ログイン](/ja/guide/getting-started/sign-in-and-authentication/) |
+| どのクライアントを選ぶかわからない | [クライアントの選び方](/ja/guide/choose-your-client/) · [機能対照](/ja/guide/reference/feature-comparison/) |
+| 結果が範囲外 / 品質が悪い | [最初のタスク事例](/ja/cases/first-task/) · [プロンプトのデバッグ](/ja/prompts/prompt-debugging/) · [元に戻す](/ja/guide/getting-started/undo-and-recover/) |
+| コンテキストが混乱 | [焦点を保つ](/ja/guide/context/keep-context-focused/) |
+| 権限 / サンドボックスの疑問 | [権限とサンドボックス](/ja/guide/permissions-and-sandbox/) |
 
 ## どこから調べるかわからないときの分け方
 
@@ -60,7 +61,7 @@ translated_at: 2026-07-28
 
 トラブルシューティングは、すぐ直すことより先に分類することから始めます。
 
-参考：[FAQ](/guide/reference/faq/) · [エラーリファレンス](/guide/reference/error-reference/) · [公式 Codex ドキュメント](https://developers.openai.com/codex)
+参考：[FAQ](/ja/guide/reference/faq/) · [エラーリファレンス](/ja/guide/reference/error-reference/) · [公式 Codex ドキュメント](https://developers.openai.com/codex)
 
 ---
 

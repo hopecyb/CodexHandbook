@@ -3,16 +3,17 @@ title: Prompt Injection
 description: 'Wenn unvertrauenswürdiger Text in den Kontext kommt — Erkennen, Mildern und Team-Policy-Punkte.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 **Prompt Injection** heißt: Jemand schmuggelt irreführenden Inhalt in den Kontext, den Codex sieht.
 
-Herkunft kann Issue, Webseite, Dependency-Kommentar, Doku oder Nutzer-Paste sein — Ziel oft: Agent **Policy ignorieren, Daten leaken oder gefährliche Befehle ausführen** lassen. Hochfrequentes Risiko im [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/), nah an realer Arbeit.
+Herkunft kann Issue, Webseite, Dependency-Kommentar, Doku oder Nutzer-Paste sein — Ziel oft: Agent **Policy ignorieren, Daten leaken oder gefährliche Befehle ausführen** lassen. Hochfrequentes Risiko im [Bedrohungsmodell](/de/guide/team-enterprise/security/threat-model/), nah an realer Arbeit.
 
 ## Inhalt
 
@@ -75,12 +76,12 @@ Reale Injections sind oft subtiler — diese Unterscheidung blockt schon viele t
 **Design**
 
 - **Systempolicy** von **unvertrauenswürdigem Nutzerinhalt** trennen (architekturabhängig)
-- Hochsensible Operationen stets [menschliche Freigabe](/cases/workflows/human-approval-patterns/)
+- Hochsensible Operationen stets [menschliche Freigabe](/de/cases/workflows/human-approval-patterns/)
 
 **Engineering**
 
 - CI-Prompt **nicht** 1:1 mit PR-Body concatenieren; strukturierte Felder + Längenlimit
-- [Hooks](/skills/hooks/hooks-examples/) bekannte Injection-Phrasen scannen (Zusatzschicht)
+- [Hooks](/de/skills/hooks/hooks-examples/) bekannte Injection-Phrasen scannen (Zusatzschicht)
 - Read-only-Token, kein `git push`
 
 **Prozess**
@@ -120,7 +121,7 @@ Erstere ist die Hauptlinie; letztere default skeptisch lesen.
 
 - [ ] CI/Cloud-Review-Flow auf Injection-Fläche bewertet
 - [ ] Maintainer erkennen verdächtige Issues
-- [ ] Konsistent mit [Acceptable Use](/guide/team-enterprise/governance/acceptable-use/)
+- [ ] Konsistent mit [Acceptable Use](/de/guide/team-enterprise/governance/acceptable-use/)
 
 ## Quellen
 - OWASP LLM Top 10 (Prompt Injection)

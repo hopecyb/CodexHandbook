@@ -5,54 +5,66 @@ sidebar:
   order: 13
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5861c62
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cloud phù hợp chạy Tác vụ trong **môi trường từ xa chuẩn hóa**, nối GitHub và tạo PR. Trước khi bắt đầu có thể xem [Cục bộ và đám mây](/guide/foundations/local-vs-cloud/), và đọc [tài liệu Cloud chính thức](https://developers.openai.com/codex).
+Codex Cloud runs coding tasks in isolated cloud environments. It is useful for long background tasks, parallel attempts, and work started from GitHub, GitLab (Beta), Linear, or Slack. It does not remotely control your computer or automatically see local unpushed files.
 
-Tác vụ không chạy trên máy bạn, mà tiếp tục chạy trong môi trường từ xa.
+## Cloud task lifecycle
 
-Tình huống kiểu này thường gặp khi:
+```text
+Sign in with ChatGPT
+  → connect GitHub / GitLab
+  → create a repository environment
+  → check out the selected branch or commit
+  → run the setup script to install dependencies
+  → let the Agent modify and verify within the network policy
+  → inspect the summary, logs, and diff
+  → follow up or create a PR
+  → merge after human review and CI
+```
 
-- Tác vụ chạy lâu
-- Bạn không muốn canh máy cục bộ
-- Cần nối trực tiếp repo từ xa và quy trình PR
+Cloud provides isolation, reproducibility, and parallelism. It does not remove review.
 
-Cloud không nhất thiết là phần tiếp xúc đầu tiên, nhưng khi bắt đầu làm việc với repo từ xa, PR và Tác vụ dài bất đồng bộ, hầu như sẽ dùng tới.
+## Local or Cloud
 
-## Điều hướng chương
-
-| Giai đoạn | Trang |
+| Choose local | Choose Cloud |
 |---|---|
-| Kết nối | [Kết nối GitHub](/guide/web-and-cloud/connect-github/) |
-| Môi trường | [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/) |
-| Chứng chỉ | [Secrets và biến môi trường](/guide/web-and-cloud/secrets-and-variables/) |
-| Đầu ra | [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Chất lượng | [Review mã Cloud](/guide/web-and-cloud/code-review/) |
-| Hợp tác | [Ủy thác và theo dõi](/guide/web-and-cloud/delegate-and-follow-up/) |
-| Mạng | [Truy cập Internet](/guide/web-and-cloud/internet-access/) |
-| Xử lý sự cố | [Xử lý sự cố Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Tích hợp | [Tích hợp GitHub](/guide/integrations/github/) |
+| Work depends on uncommitted files or local services | Inputs are in a remote repository |
+| You must interact with a process in real time | The task can run independently in the background |
+| The change is small and fast | Work requires multiple build/test steps or parallel attempts |
+| A required tool exists only on this computer | Scripts can recreate the environment |
 
-Khởi tạo Tác vụ Cloud từ App máy tính: [Tác vụ cục bộ và Cloud](/guide/desktop-app/local-and-cloud-tasks/). Ủy thác từ IDE: [Tác vụ Cloud IDE](/guide/ide/cloud-task-workflow/).
+Read [Local and cloud execution](/vi/guide/foundations/local-vs-cloud/) before choosing.
 
-## Thứ tự đọc đề xuất
+## Recommended learning order
 
-Lần đầu tiếp xúc Cloud, có thể đọc theo thứ tự này:
+1. [Connect GitHub](/vi/guide/web-and-cloud/connect-github/): authorize only required repositories.
+2. [Cloud environments](/vi/guide/web-and-cloud/cloud-environments/): pin tools, versions, and setup.
+3. [Secrets and environment variables](/vi/guide/web-and-cloud/secrets-and-variables/): separate setup-only Secrets from ordinary variables.
+4. [Internet access](/vi/guide/web-and-cloud/internet-access/): Agent access is off by default; open only required domains and methods.
+5. [Delegate and follow up](/vi/guide/web-and-cloud/delegate-and-follow-up/): send goals, constraints, and acceptance criteria.
+6. [Create pull requests](/vi/guide/web-and-cloud/create-pull-requests/) and [Code review](/vi/guide/web-and-cloud/code-review/): turn a result into a mergeable deliverable.
+7. [Cloud troubleshooting](/vi/guide/web-and-cloud/troubleshooting/): diagnose repository, setup, network, and task layers.
 
-1. [Kết nối GitHub](/guide/web-and-cloud/connect-github/)
-2. [Secrets và biến môi trường](/guide/web-and-cloud/secrets-and-variables/)
-3. Quy trình PR, review mã và hợp tác
+When starting from the desktop App or IDE, also read [Local and cloud tasks](/vi/guide/desktop-app/local-and-cloud-tasks/) or [Cloud tasks from the IDE](/vi/guide/ide/cloud-task-workflow/).
 
-Nhìn rõ «nó nối repo thế nào, lấy quyền thế nào, xử lý khóa bí mật thế nào» trước, rồi mới xem chi tiết tự động hóa sẽ đỡ tốn sức hơn.
+## First exercise
 
-Cloud phù hợp xử lý Tác vụ repo từ xa tiếp tục chạy khi rời máy cục bộ, không chỉ là chuyển quy trình cục bộ lên trang web.
+Use a test repository with no production credentials. Ask Codex only to fix documentation links and run the link checker. Success means the environment starts, the diff contains only expected files, command output is visible, and the result can become a PR. A page showing “complete” is not sufficient acceptance evidence.
+
+## Official sources
+
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** Cloud  
-**Ghi chú đối chiếu:** Trang này với tư cách điều hướng Cloud vẫn có giá trị cấu trúc, nhưng các năng lực phụ thuộc như kết nối GitHub, Secrets, PR, theo dõi trên mobile và truy cập mạng đều thuộc vùng sản phẩm biến động cao; trước khi bổ sung từng trang theo tài liệu Cloud chính thức hiện hành, phù hợp hơn đánh dấu `outdated`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** Cloud
+
+**Kiểm chứng gần nhất:** 2026-08-26

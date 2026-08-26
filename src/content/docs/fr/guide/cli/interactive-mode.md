@@ -3,9 +3,10 @@ title: Mode interactif
 description: Parler à Codex dans le terminal et exécuter des Tâches.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 794dd7c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -17,7 +18,7 @@ Après le démarrage d'une session interactive :
 3. Approuvez ou rejetez les appels d'outils quand demandé
 4. Utilisez les raccourcis `/` (si disponibles) pour gérer la session — consultez l'aide CLI actuelle
 
-Les conseils de Prompt s'appliquent toujours : [Prompting](/prompts/)
+Les conseils de Prompt s'appliquent toujours : [Prompting](/fr/prompts/)
 
 ---
 

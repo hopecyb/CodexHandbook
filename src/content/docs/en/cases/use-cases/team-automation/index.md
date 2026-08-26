@@ -3,17 +3,18 @@ title: Team automation
 description: Entry for in-team repetitive automation cases—triggers, notifications, approvals, and stop conditions.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: c95ca8c
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Team automation cases are easy to overbuild. A safer framing: hand repetitive, rule-clear actions to automation; keep human judgment everywhere else.
 
 ## Cases in this group
 
-- [Scheduled link check](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Issue triage suggestions](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [Scheduled link check](/en/cases/use-cases/team-automation/scheduled-link-check/)
+- [Issue triage suggestions](/en/cases/use-cases/team-automation/issue-triage-suggestions/)
 
 ## What this group emphasizes
 

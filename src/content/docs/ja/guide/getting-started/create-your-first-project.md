@@ -3,9 +3,10 @@ title: 最初の練習プロジェクトを作成する
 description: 捨てられる安全な練習ディレクトリを用意する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b461719
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---

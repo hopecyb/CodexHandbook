@@ -3,9 +3,10 @@ title: Lập kế hoạch
 description: Để Codex nói rõ bước, rủi ro và cách kiểm chứng trước, rồi mới quyết định có thực thi không.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75099ef
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -94,7 +95,7 @@ Chưa sửa tệp. Hãy đưa kế hoạch dựa trên kho hiện tại, gồm:
 5. Mỗi bước kiểm chứng thế nào
 ```
 
-Cách viết đầy đủ hơn xem [Yêu cầu kế hoạch trước](/prompts/ask-for-a-plan/).
+Cách viết đầy đủ hơn xem [Yêu cầu kế hoạch trước](/vi/prompts/ask-for-a-plan/).
 
 ## Bạn đang rà gì
 
@@ -129,7 +130,7 @@ Một thói quen cộng tác quan trọng là tách hai giai đoạn:
 - **Giai đoạn kế hoạch**: cho phép khám phá, liệt kê lựa chọn, lộ sự không chắc chắn
 - **Giai đoạn thực thi**: đẩy theo đường đã xác nhận
 
-Nếu trong thực thi phát hiện tiền đề đổi, hãy quay lại kế hoạch, đừng cố lao. Xem [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/).
+Nếu trong thực thi phát hiện tiền đề đổi, hãy quay lại kế hoạch, đừng cố lao. Xem [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/).
 
 ## Tác vụ rủi ro cao cần thêm ba mục trong kế hoạch
 
@@ -152,10 +153,10 @@ Hãy yêu cầu kế hoạch chia thành: phân tích chỉ đọc, thay đổi 
 
 ## Kết hợp khuyến nghị
 
-- Cần chuỗi chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-- Cần nói rõ Prompt: xem [Yêu cầu kế hoạch trước](/prompts/ask-for-a-plan/)
-- Cần chỉnh hướng giữa chừng: xem [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/)
-- Cần quy tắc dài hạn: xem [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/)
+- Cần chuỗi chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+- Cần nói rõ Prompt: xem [Yêu cầu kế hoạch trước](/vi/prompts/ask-for-a-plan/)
+- Cần chỉnh hướng giữa chừng: xem [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/)
+- Cần quy tắc dài hạn: xem [AGENTS.md là gì](/vi/guide/customization/agents-md/what-is-agents-md/)
 
 ---
 

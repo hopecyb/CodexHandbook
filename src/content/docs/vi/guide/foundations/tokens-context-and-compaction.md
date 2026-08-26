@@ -3,9 +3,10 @@ title: Token, ngữ cảnh và nén
 description: Hiểu cửa sổ ngữ cảnh, mức chiếm dụng và nén.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b33848c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -60,7 +61,7 @@ Nếu lo yêu cầu then chốt bị quên, có thể làm các việc sau:
 
 - Viết ràng buộc then chốt vào tin nhắn hiện tại hoặc hướng dẫn dự án — đừng chỉ chôn trong hội thoại từ rất lâu trước
 - Đổi chủ đề thì mở Thread mới
-- Nguyên lý và gợi ý thao tác xem [Nén ngữ cảnh](/guide/context/compaction/) cùng [Giữ ngữ cảnh tập trung](/guide/context/keep-context-focused/)
+- Nguyên lý và gợi ý thao tác xem [Nén ngữ cảnh](/vi/guide/context/compaction/) cùng [Giữ ngữ cảnh tập trung](/vi/guide/context/keep-context-focused/)
 
 Ở đây nói khái niệm trước. Cách kiểm soát cụ thể có thể xem tiếp phần `05`.
 

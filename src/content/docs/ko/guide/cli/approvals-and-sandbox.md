@@ -3,9 +3,10 @@ title: 승인과 샌드박스
 description: CLI에서 shell·디스크 쓰기·네트워크 요청의 승인 전략과, 샌드박스가 Agent 동작을 제한하는 방식.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -27,7 +28,7 @@ CLI에서 Agent는 **파일을 읽고, 쓰고, shell을 실행하고, 네트워�
 
 둘이 함께 작동하며, CLI 사용이 보수적인지 경계가 너무 열린지를 좌우합니다.
 
-개념 기초: [권한과 승인](/guide/foundations/permissions-and-approvals/) · [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
+개념 기초: [권한과 승인](/ko/guide/foundations/permissions-and-approvals/) · [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
 
 ## 승인이 일어나는 때
 
@@ -57,7 +58,7 @@ CLI에서 Agent는 **파일을 읽고, 쓰고, shell을 실행하고, 네트워�
 - `$HOME`의 다른 프로젝트 접근 여부
 - 하위 프로세스와 네트워크 능력
 
-구성 입구: [CLI 구성](/guide/cli/configuration/) · 매트릭스: [권한 매트릭스](/guide/reference/permission-matrix/)
+구성 입구: [CLI 구성](/ko/guide/cli/configuration/) · 매트릭스: [권한 매트릭스](/ko/guide/reference/permission-matrix/)
 
 ## 대화형 vs 비대화형
 
@@ -66,7 +67,7 @@ CLI에서 Agent는 **파일을 읽고, 쓰고, shell을 실행하고, 네트워�
 | 대화형 `codex` | 사람이 있어 건별로 판단 가능 |
 | 비대화형 `exec` | 당신이 없으므로 샌드박스를 미리 조이고 프롬프트를 고정해야 함 |
 
-CI 필독: [비대화형 모드](/guide/cli/non-interactive-mode/) · [사람 승인 패턴](/cases/workflows/human-approval-patterns/)
+CI 필독: [비대화형 모드](/ko/guide/cli/non-interactive-mode/) · [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/)
 
 권장 CI 원칙:
 
@@ -76,7 +77,7 @@ CI 필독: [비대화형 모드](/guide/cli/non-interactive-mode/) · [사람 �
 
 ## allow/deny 규칙과의 관계
 
-프로젝트는 [허용과 거부 규칙](/guide/customization/rules/allow-and-deny-patterns/)에서 「예상 가능 명령」을 선언할 수 있습니다. **규칙은 실제 제품 동작과 일치해야** 하며, 그렇지 않으면 Agent가 여전히 막히거나 오히려 과도하게 열립니다.
+프로젝트는 [허용과 거부 규칙](/ko/guide/customization/rules/allow-and-deny-patterns/)에서 「예상 가능 명령」을 선언할 수 있습니다. **규칙은 실제 제품 동작과 일치해야** 하며, 그렇지 않으면 Agent가 여전히 막히거나 오히려 과도하게 열립니다.
 
 ## 흔한 실수
 

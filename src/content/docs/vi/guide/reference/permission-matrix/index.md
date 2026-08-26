@@ -3,151 +3,98 @@ title: Ma trận quyền
 description: "Bản đồ khái niệm các loại thao tác Codex, điểm phê duyệt và khác biệt sản phẩm."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: a161c0c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 70
+reviewed_at: 2026-08-26
 ---
 
-Ma trận quyền cũng giúp người dùng hàng ngày: vì sao cùng một câu nhận phản ứng khác nhau tùy lối vào Codex.
+Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
 
-Các **thao tác** khác nhau kích hoạt hành vi phê duyệt và Sandbox khác nhau theo **lối vào sản phẩm**. Ma trận này căn chỉnh đội về «điều người phải tường minh cho phép». Đây là **tham chiếu rủi ro và hành vi**, không phải văn bản tuân thủ pháp lý. Mặc định theo [tài liệu chính thức](https://developers.openai.com/codex) và chính sách quản lý tổ chức.
+![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-vi.svg)
 
-## Bảng dùng để làm gì
+## Three mechanisms to separate
 
-Khi phê duyệt, giới hạn hoặc từ chối xuất hiện, người ta thường nghĩ:
-
-- Mô hình hỏng
-- Tôi diễn đạt sai
-- Hôm qua còn chạy được
-
-Phần lớn là lối vào, chính sách và mức rủi ro — không chỉ cách bạn diễn đạt.
-
-## Ý tưởng trung tâm
-
-Không phải mọi «làm giúp tôi việc này» mang cùng rủi ro.
-
-Ví dụ:
-
-- Đọc một tệp
-- Sửa một tệp
-- Chạy một lệnh
-- Tới mạng
-- Push code
-
-Cùng hình câu — rủi ro khác — nên sản phẩm thêm phê duyệt, giới hạn và chặn khác nhau.
-
-Nền khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
-
-## Mức rủi ro thao tác
-
-| Mức | Thao tác ví dụ | Kỳ vọng mặc định |
+| Mechanism | Scope | Primary control |
 |---|---|---|
-| L0 đọc | Đọc văn bản trong repo, tìm code | Thường tự động |
-| L1 ghi | Sửa tệp dự án, định dạng | Thường xác nhận hoặc tự động trong Sandbox |
-| L2 thực thi | shell, trình quản lý package, kiểm thử | Thường xác nhận |
-| L3 mạng | curl, registry npm, API | Xác nhận chặt hoặc deny |
-| L4 ngoài giới hạn | Ghi ngoài dự án, git push, drop DB | Chặn hoặc xác nhận mạnh |
-| L5 GUI | Computer Use, hộp thoại hệ thống | Nhạy cảm tối đa; thường tắt |
+| Local Permission Profiles (Beta) | Local commands on macOS, Linux, WSL, and native Windows | Filesystem read/write/deny and network destinations |
+| Legacy sandbox settings | Local Codex | `read-only`, `workspace-write`, `danger-full-access`, and approval policy |
+| Cloud environment policy | Codex Cloud | Isolated container, setup internet, Agent network allowlist/HTTP methods |
 
-## Cách đọc
+Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configuration contains `sandbox_mode`, the command line passes `--sandbox`, or a configuration profile sets sandboxing, Codex uses the legacy sandbox rather than `default_permissions`.
 
-1. Tác vụ này thuộc lớp thao tác nào?
-2. Lớp đó thường bị chặn trong lối vào này không?
-3. Thêm chi tiết, chờ phê duyệt, hay chọn lối nhẹ hơn?
+## Built-in local Permission Profiles
 
-Dùng để xem trước trước khi bắt đầu.
+| Name | Boundary | Suitable for |
+|---|---|---|
+| `:read-only` | Local commands are read-only | Code understanding, review, first contact with a repository |
+| `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
+| `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
 
-## Ma trận (khái niệm — mặc định điển hình)
+A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
 
-**Y** = thường cần đồng ý tường minh hoặc giới hạn chính sách · **A** = có thể tự động dưới cấu hình đáng tin · **—** = tùy phiên bản/chính sách · **N** = thường không cho phép
+## Least-privilege example
 
-| Thao tác | App máy tính | CLI tương tác | IDE | Cloud |
-|---|---|---|---|---|
-| Đọc tệp repo | A | A | A | A |
-| Ghi tệp trong repo | Y/A | Y | Y/A | Y/A |
-| Chạy lệnh kiểm thử | Y/A | Y | Y/A | Y/A |
-| Cài dependency global | Y | Y | Y | Y |
-| Truy cập Internet công cộng | Y | Y | Y | Y |
-| Đọc tệp nhạy cảm như `.env` | Y | Y | Y | Y |
-| `git commit` | Y | Y | Y | Y |
-| `git push` | Y | Y | Y | Y |
-| Ghi ngoài dự án | N/Y | N/Y | N/Y | N |
-| Công cụ MCP bên thứ ba | Y | Y | Y | Y |
-| Trình duyệt mở URL | Y | — | — | Y |
-| Computer Use | Y/— | — | — | — |
+```toml
+default_permissions = "project-edit"
 
-Ghi chú:
+[features]
+network_proxy = true
 
-- **Cloud** chạy trong Sandbox từ xa — không truy cập filesystem laptop
-- **IDE** tương tự App; UI phê duyệt khác
-- **Chính sách quản lý** có thể ép mọi thứ thành Y hoặc N
+[permissions.project-edit.filesystem]
+":minimal" = "read"
 
-## Hiểu nhầm thường gặp
+[permissions.project-edit.filesystem.":workspace_roots"]
+"." = "write"
+".devcontainer" = "read"
+"**/*.env" = "deny"
 
-### 1. Tính khả thi không chỉ là «mô hình sẽ thử»
+[permissions.project-edit.network]
+enabled = true
 
-Thường là: allowance lối vào, chính sách, quyền.
+[permissions.project-edit.network.domains]
+"api.openai.com" = "allow"
+"tracking.example.com" = "deny"
+```
 
-### 2. Cloud không tự động tự do hơn hoặc an toàn hơn
+`network.enabled = true` permits command networking. `features.network_proxy` must also be enabled for domain rules to be enforced through the proxy.
 
-An toàn phụ thuộc Sandbox, mạng, Secrets, bảo vệ nhánh, phê duyệt cùng lúc.
+## Evaluate by action
 
-### 3. Quy tắc viết không một mình xóa rủi ro
+| Action | Primary risk | Minimum boundary |
+|---|---|---|
+| Read source | Sensitive files enter context | Workspace read with explicit credential denies |
+| Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
+| Run tests | Script side effects | Review scripts; use controlled environment |
+| Install dependencies | Supply chain and network | Pin versions and domains |
+| Git push / PR | External state change | Separate branch, protection, human review |
+| MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
 
-Tài liệu, chính sách phê duyệt, giới hạn kỹ thuật và review người thường kết hợp.
+`AGENTS.md` can say “do not push,” but is not a technical enforcement boundary. Combine rules with sandbox/permissions, GitHub access, and human review.
 
-### 4. Bị chặn ≠ bạn làm sai gì
+## Team verification
 
-Thường là: bước rủi ro cao hơn, lối vào không phù hợp việc, hoặc cần phê duyệt tường minh / cách tiếp cận nhẹ hơn.
+1. Record client and Codex versions.
+2. List every loaded configuration layer.
+3. Confirm whether Permission Profiles or legacy sandboxing is active.
+4. In a non-sensitive test directory, verify read, write, deny, and network behavior separately.
+5. Only then connect a real repository, retaining Git and organization gates.
 
-## Config và tài liệu áp dụng thế nào
+Permission Profiles remain Beta. Rerun this verification after upgrades.
 
-| Cơ chế | Vai trò |
-|---|---|
-| Chế độ Sandbox | Giới hạn L3/L4 dù Agent «muốn» |
-| Chính sách phê duyệt | L1–L3 có prompt không |
-| `AGENTS.md` | Điều cấm dự án (vd. không push) |
-| Bảo vệ nhánh | GitHub chặn merge chưa review |
-| Hooks | Kiểm tra pre-commit (xem lộ trình Hooks) |
+## Official sources
 
-[Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) · [Tham chiếu cấu hình](/guide/reference/configuration-reference/)
-
-## Khi nào nâng mức thận trọng
-
-Nếu một thao tác:
-
-- Sửa tệp
-- Chạy lệnh
-- Tới mạng
-- Chạm dữ liệu nhạy cảm
-- Gửi kết quả ra ngoài repo
-
-Không cần số L — biết nó vượt rủi ro đọc thông thường.
-
-Ma trận là công cụ xem trước: vì sao bước này có thể chặn, cần thận trọng hơn, hoặc chọn đường nhẹ hơn.
-
-## Ví dụ chính sách đội
-
-| Tình huống | Gợi ý |
-|---|---|
-| Repo luyện tập mã nguồn mở | Sandbox chuẩn + cho phép lệnh kiểm thử |
-| Monorepo doanh nghiệp | Chặt + không push + review PR người |
-| CI `codex exec` | Chỉ đọc hoặc dir scoped + không push |
-| Cloud gắn production | Secrets tối thiểu + bảo vệ nhánh |
-
-## Hiểu nhầm phổ biến
-
-| Hiểu nhầm | Sự thật |
-|---|---|
-| «Cloud an toàn hơn» | Phụ thuộc secrets, review, chính sách mạng |
-| «IDE sẽ không chạy shell» | Có thể chạy qua công cụ Agent |
-| «Tài liệu nói không push nên không bao giờ push» | Cần Sandbox + quyền Git + review người |
+- [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
+- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Ghi chú đối chiếu:** Khung mức rủi ro vẫn hữu ích, nhưng ma trận giả định nhiều mặc định theo lối vào và điểm phê duyệt mà thiếu tài liệu ma trận quyền theo lối vào chính thức hiện hành — không đánh `review` hoặc `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App, CLI, IDE, Cloud
+
+**Kiểm chứng gần nhất:** 2026-08-26

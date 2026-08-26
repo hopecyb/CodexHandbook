@@ -3,9 +3,10 @@ title: Diffs prüfen
 description: Änderungen lesen und gezielte Fragen stellen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7dc8ee8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -31,7 +32,7 @@ Beim Lesen vor allem:
 3. Namensgebung und Stil konsistent?
 4. Secrets oder Debug-Reste?
 
-Produktseitige Ansicht: [Diffs, Kommentare und Review](/guide/desktop-app/diffs-comments-and-review/)
+Produktseitige Ansicht: [Diffs, Kommentare und Review](/de/guide/desktop-app/diffs-comments-and-review/)
 
 ## Häufige Missverständnisse
 

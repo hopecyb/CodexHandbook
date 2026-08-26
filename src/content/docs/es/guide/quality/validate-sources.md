@@ -3,9 +3,10 @@ title: Validar fuentes
 description: Exige fundamentos trazables para las conclusiones de investigación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 35bd9a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -18,7 +19,7 @@ Exige al Agent:
 Cada hecho clave con URL o referencia; lo dudoso, márcalo explícitamente como «no verificado».
 ```
 
-Tras recibir el resultado, abre los enlaces y contrasta. Capacidad de búsqueda: [Búsqueda web](/guide/tools/web-search/).
+Tras recibir el resultado, abre los enlaces y contrasta. Capacidad de búsqueda: [Búsqueda web](/es/guide/tools/web-search/).
 
 ## Malentendidos habituales
 

@@ -3,9 +3,10 @@ title: Percurso de desenvolvedor (visão geral)
 description: Visão geral da rota relacionada com desenvolvimento de software; passos aprofundados a completar depois.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ Se queres usar o Codex sobretudo para alterar código, compreender projetos e co
 
 ## O que podes ler agora
 
-- [Primeiros passos](/guide/getting-started/) e [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [Correr testes](/guide/quality/run-tests/) · [Rever Diffs](/guide/quality/review-diffs/)
-- [Planeamento do Agent](/guide/agent-work/planning/)
+- [Primeiros passos](/pt/guide/getting-started/) e [CLI](/pt/guide/cli/) / [IDE](/pt/guide/ide/)
+- [Correr testes](/pt/guide/quality/run-tests/) · [Rever Diffs](/pt/guide/quality/review-diffs/)
+- [Planeamento do Agent](/pt/guide/agent-work/planning/)
 
 ## Mal-entendidos frequentes
 
@@ -46,11 +47,11 @@ A forma de trabalho do Codex não é a mesma que o autocomplete de um editor; co
 
 Se vais usar o Codex no desenvolvimento, lê nesta ordem:
 
-1. [Primeiros passos](/guide/getting-started/)
-2. [CLI](/guide/cli/) ou [IDE](/guide/ide/)
-3. [Trabalho do Agent](/guide/agent-work/)
-4. [Correr testes](/guide/quality/run-tests/)
-5. [Rever Diffs](/guide/quality/review-diffs/)
+1. [Primeiros passos](/pt/guide/getting-started/)
+2. [CLI](/pt/guide/cli/) ou [IDE](/pt/guide/ide/)
+3. [Trabalho do Agent](/pt/guide/agent-work/)
+4. [Correr testes](/pt/guide/quality/run-tests/)
+5. [Rever Diffs](/pt/guide/quality/review-diffs/)
 
 Este percurso valoriza alterações controláveis e resultados verificáveis — não só «fazê-lo escrever já».
 

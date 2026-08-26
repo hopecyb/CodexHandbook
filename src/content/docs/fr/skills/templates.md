@@ -3,9 +3,10 @@ title: Répertoire templates/
 description: Modèles de sortie et squelettes de rapport dans un Skill.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/` ne sert pas qu'à « gagner du temps de mise en page » — il **stabilise** la sortie du Skill.

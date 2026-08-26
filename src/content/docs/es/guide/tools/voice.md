@@ -3,9 +3,10 @@ title: Entrada y salida de voz
 description: Escenarios, límites y privacidad al interactuar con Codex por voz.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -28,7 +29,7 @@ La voz encaja mejor para expresar dirección, complementar contexto o hacer segu
 | Seguimiento breve en móvil | Leer en voz alta API keys o contraseñas |
 | Necesidades de accessibility | Documentos normativos que deben ser buscables y con diff |
 
-Tras dictar, conviene pedir a Codex que **repita lo entendido** o genere un plan escrito, y tú confirmas. Ver [Pedir un plan](/prompts/ask-for-a-plan/).
+Tras dictar, conviene pedir a Codex que **repita lo entendido** o genere un plan escrito, y tú confirmas. Ver [Pedir un plan](/es/prompts/ask-for-a-plan/).
 
 ## Para qué sirve la voz
 
@@ -93,7 +94,7 @@ Al acabar, pide que lo organice en versión escrita para que confirmes.
 
 ## Relación con lo multimodal
 
-- **Entrada de imagen**: diseños, capturas → [Prompts con imágenes](/prompts/prompting-with-images/)
+- **Entrada de imagen**: diseños, capturas → [Prompts con imágenes](/es/prompts/prompting-with-images/)
 - **Entrada de voz**: esta página
 - **Salida**: sigue centrada en código, archivos y diffs escritos; el resumen por voz no sustituye la revisión
 

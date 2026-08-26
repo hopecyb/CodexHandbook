@@ -3,9 +3,10 @@ title: Computer Use
 description: Capacidade avançada de operar a GUI via ecrã e dispositivos de entrada — cenários, riscos e Aprovação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -79,7 +80,7 @@ Computer Use quase equivale a **entregar teclado e rato ao Agent**:
 - Pode clicar por engano em diálogos de confirmação
 - O ecrã pode conter informação sensível nas notificações
 
-Leitura obrigatória: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/), [Sandbox e rede](/guide/foundations/sandbox-and-network/)
+Leitura obrigatória: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/), [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
 
 ## Como decidir se deve usá-lo
 
@@ -118,7 +119,7 @@ Operar aplicações fora do IDE?      → Computer Use (com mais cautela)
 Só alterar código e correr testes?  → Terminal + Ferramentas de ficheiros
 ```
 
-Ver [Seleção de Ferramentas](/guide/tools/tool-selection/)
+Ver [Seleção de Ferramentas](/pt/guide/tools/tool-selection/)
 
 ## Redação aplicável diretamente
 

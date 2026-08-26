@@ -3,9 +3,10 @@ title: Prioridad del Contexto
 description: Quién manda cuando las instrucciones chocan.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d68a819
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---

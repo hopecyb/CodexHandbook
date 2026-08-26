@@ -3,9 +3,10 @@ title: Qué es AGENTS.md
 description: Archivo de instrucciones persistentes a nivel de proyecto — el «contrato de colaboración» para Codex, no una enciclopedia de arquitectura.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -87,7 +88,7 @@ Aunque no escribas código tú, si usas Codex de forma continua en un proyecto, 
 | `AGENTS.md` en un subdirectorio | Ese directorio y sus subrutas (habitual en monorepos) |
 | Notas a nivel de usuario | Usa configuración personal o preferencias globales; no las mezcles con instrucciones de proyecto |
 
-Sobre alcance y conflictos: [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/).
+Sobre alcance y conflictos: [Alcance y prioridad](/es/guide/customization/agents-md/scope-and-precedence/).
 
 ## Diferencia con Skill y comandos slash
 
@@ -97,7 +98,7 @@ Sobre alcance y conflictos: [Alcance y prioridad](/guide/customization/agents-md
 | Skill | Paquete de flujo reutilizable (`SKILL.md`) | Checklist de release, flujos de revisión especializados |
 | Comandos slash | Atajos que disparas tú | `/review`, flujos de una sola vez |
 
-Reglas de proyecto → `AGENTS.md`; **un conjunto de pasos repetible y compartible** encaja mejor como [Skill](/skills/overview/).
+Reglas de proyecto → `AGENTS.md`; **un conjunto de pasos repetible y compartible** encaja mejor como [Skill](/es/skills/overview/).
 
 ## Cómo decidir dónde escribir
 
@@ -116,7 +117,7 @@ Por ejemplo:
 ## Errores habituales
 
 - Archivo demasiado largo: el modelo solo lee bien la primera mitad — **pon las restricciones duras en las primeras 30 líneas**
-- Instrucciones de alto riesgo del tipo «siempre haz push automático», en conflicto con [permisos y aprobación](/guide/foundations/permissions-and-approvals/)
+- Instrucciones de alto riesgo del tipo «siempre haz push automático», en conflicto con [permisos y aprobación](/es/guide/foundations/permissions-and-approvals/)
 - Nadie del equipo lo mantiene; el documento no coincide con los scripts reales
 
 ## Límites de seguridad

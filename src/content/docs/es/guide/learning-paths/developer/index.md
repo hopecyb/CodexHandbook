@@ -3,9 +3,10 @@ title: Ruta para desarrolladores (resumen)
 description: Resumen de la ruta relacionada con desarrollo de software; los pasos en profundidad se completarán más adelante.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ Si quieres usar Codex sobre todo para cambiar código, entender proyectos y corr
 
 ## Qué puedes leer ahora
 
-- [Primeros pasos](/guide/getting-started/) y [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [Ejecutar pruebas](/guide/quality/run-tests/) · [Revisar diferencias](/guide/quality/review-diffs/)
-- [Planificación del Agent](/guide/agent-work/planning/)
+- [Primeros pasos](/es/guide/getting-started/) y [CLI](/es/guide/cli/) / [IDE](/es/guide/ide/)
+- [Ejecutar pruebas](/es/guide/quality/run-tests/) · [Revisar diferencias](/es/guide/quality/review-diffs/)
+- [Planificación del Agent](/es/guide/agent-work/planning/)
 
 ## Malentendidos frecuentes
 
@@ -46,11 +47,11 @@ La forma de trabajar de Codex no es como el autocompletado de un editor; concept
 
 Si vas a usar Codex en desarrollo, lee en este orden:
 
-1. [Primeros pasos](/guide/getting-started/)
-2. [CLI](/guide/cli/) o [IDE](/guide/ide/)
-3. [Trabajo con Agent](/guide/agent-work/)
-4. [Ejecutar pruebas](/guide/quality/run-tests/)
-5. [Revisar diferencias](/guide/quality/review-diffs/)
+1. [Primeros pasos](/es/guide/getting-started/)
+2. [CLI](/es/guide/cli/) o [IDE](/es/guide/ide/)
+3. [Trabajo con Agent](/es/guide/agent-work/)
+4. [Ejecutar pruebas](/es/guide/quality/run-tests/)
+5. [Revisar diferencias](/es/guide/quality/review-diffs/)
 
 Esta ruta prioriza cambios controlables y resultados verificables, no solo «que empiece a escribir».
 

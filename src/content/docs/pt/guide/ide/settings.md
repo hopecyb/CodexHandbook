@@ -3,123 +3,66 @@ title: Definições da extensão IDE
 description: Entradas de configuração no IDE para modelo, Aprovação, Contexto e comportamento da extensão.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d4a3506
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 80
+reviewed_at: 2026-08-26
 ---
 
-As definições da extensão IDE ligam **preferências pessoais** e **regras do projeto**: que nível de modelo usar, quão estrita é a Aprovação, se anexar automaticamente ficheiros abertos, etc. Alinhadas com as [bases de configuração](/guide/customization/configuration/config-basics/) globais, esta página foca as opções habituais dentro do editor.
 
-## Conteúdo desta página
+IDE settings have two layers:
 
-- Divisão de papéis entre definições IDE, configuração de utilizador e `AGENTS.md`
-- Itens que os programadores mais ajustam
-- Como a equipa alinha valores predefinidos
-
-## O que estas definições controlam
-
-As definições IDE aproximam-se de: **hábitos predefinidos do Codex ao trabalhar consigo no editor**.
-
-Tratam de questões como:
-
-- Que modelo usar por defeito
-- Quão apertada deixar a Aprovação por defeito
-- Se incluir automaticamente o ficheiro atual e a seleção
-
-Não definem as regras do projeto em si; decidem se o uso no editor é fluido e estável.
-
-## Camadas de configuração (revisão)
-
-| Camada | Exemplo | Prioridade |
+| Layer | Location | Controls |
 |---|---|---|
-| Política gerida pela organização | Proibir afrouxar o Sandbox | Máxima |
-| `AGENTS.md` / configuração do projeto | Comandos de teste, convenções de diretórios | Alta |
-| UI de definições da extensão IDE | Modelo predefinido, layout do painel | Média |
-| Prompt da Tarefa pontual | «Nesta ocasião não ligue à rede» | Ao nível da Tarefa |
+| Codex Agent settings | `config.toml` | Model, reasoning effort, permissions, sandbox, MCP, and personalization; shared with the CLI |
+| Editor settings | VS Code settings with `chatgpt.*` | Sidebar, message queueing, send key, review delivery, language, and fonts |
 
-Ver [Âmbito e precedência](/guide/customization/agents-md/scope-and-precedence/)
+Keep repository rules in `AGENTS.md`, not in one person's editor settings.
 
-## Mal-entendidos frequentes
+## Open settings
 
-### Definições IDE não são normas do projeto
+Select the gear in the Codex sidebar, then **Codex Settings**. Change common Agent options in the panel or select **Open config.toml** to edit the active configuration layer.
 
-Muita gente confunde «como tenho configurado no editor» com «é assim que o projeto deve funcionar».
+Change editor behavior in the editor's Settings by searching `@ext:openai.chatgpt`, `Codex`, or a specific key.
 
-Uma divisão mais clara:
+## Settings worth understanding first
 
-- Definições do editor → experiência pessoal de uso
-- `AGENTS.md` e configuração do projeto → consenso da equipa
+| Key | Default | Change it when |
+|---|---:|---|
+| `chatgpt.openOnStartup` | `false` | You want the extension to focus the sidebar at startup |
+| `chatgpt.followUpQueueMode` | `queue` | Set `steer` to let a new message steer the current run |
+| `chatgpt.composerEnterBehavior` | `enter` | Multiline prompts are often sent accidentally |
+| `chatgpt.reviewDelivery` | `inline` | Set `detached` to show `/review` in a separate chat |
+| `chatgpt.localeOverride` | automatic | You need a fixed UI language |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | The repository and toolchain are in WSL2 |
 
-Estão relacionadas, mas não são a mesma coisa.
+`chatgpt.cliExecutable` is for Codex CLI development. Ordinary users should not override the extension's bundled executable; some features may stop working.
 
-### Anexar Contexto automaticamente não significa «quanto mais, melhor»
+## How to reason about configuration precedence
 
-Incluir automaticamente o ficheiro atual, a seleção e os separadores abertos é conveniente; mas se encher demais, também dilui o foco da Tarefa.
+- Organization policy defines limits that cannot be exceeded.
+- `config.toml` sets Agent defaults.
+- `AGENTS.md` supplies repository and directory rules.
+- Editor settings change only the IDE experience.
+- A one-off prompt adds the current task's goal and boundary.
 
-O critério prático é o suficiente; não é preciso perseguir «quanto mais aberto, mais forte».
+If a setting appears ineffective, identify which layer you changed and check whether a higher-level policy constrains it. See [Scope and precedence](/pt/guide/customization/agents-md/scope-and-precedence/) for the full model.
 
-## Definições habituais (conceito)
+## Verify changes
 
-### Modelo e raciocínio
+Change one setting class at a time. For example, after setting `chatgpt.reviewDelivery` to `detached`, run `/review` in a Git repository and confirm that a separate review chat opens. Record the old value, restore it if behavior is unexpected, and reload the editor.
 
-Afeta velocidade de resposta e qualidade em Tarefas complexas. Em projetos de equipa, o README pode indicar o «nível de modelo recomendado», para evitar que predefinições diferentes tornem os problemas difíceis de reproduzir.
+## Official sources
 
-### Aprovação e Sandbox
+- [Codex IDE settings](https://learn.chatgpt.com/docs/ide/settings)
+- [Configuration basics](https://learn.chatgpt.com/docs/config)
 
-Correspondem a [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/):
-
-- Iniciantes: manter o predefinido ou mais estrito
-- Repositórios de confiança: afrouxar com cuidado e sem misturar com diretórios de secrets de produção
-
-CLI e IDE devem partilhar a **mesma linha de base de segurança**; detalhes da CLI em [Configuração da CLI](/guide/cli/configuration/).
-
-### Comportamento do Contexto
-
-Algumas extensões permitem configurar:
-
-- Se incluir automaticamente o ficheiro / seleção atuais
-- Se ler `AGENTS.md`
-- Opções relacionadas com a janela de Contexto (conforme a versão)
-
-Demasiado Contexto automático aumenta o ruído; ver [Manter o Contexto focado](/guide/context/keep-context-focused/).
-
-### Login e conta
-
-Partilhado com [Iniciar sessão e autenticação](/guide/getting-started/sign-in-and-authentication/); depois de mudar de conta, reinicie a sessão da extensão.
-
-## Alinhamento na equipa
-
-1. O que **tem de ser igual** fica no repositório (`AGENTS.md` + configuração opcional do projeto)
-2. **Hábitos pessoais** ficam nas definições IDE, fora do Git
-3. Onboarding de novos membros: confronte a [instalação IDE](/guide/ide/installation/) e a versão da extensão
-
-## O que olhar na primeira vez
-
-Na primeira configuração da extensão IDE, foque-se em três categorias:
-
-1. Modelo e nível de raciocínio
-2. Relacionadas com Aprovação / segurança
-3. Relacionadas com Contexto automático
-
-Com estas três afinadas, já cobre a maioria dos problemas reais de uso.
-
-## Resolução de problemas
-
-| Fenómeno | Verificar |
-|---|---|
-| Definições sem efeito | Sobrepostas por política da organização? Precisa de recarregar a janela? |
-| Comportamento diferente da CLI | Compare com a [referência de configuração](/guide/reference/configuration-reference/) |
-| Extensão sem resposta | [Resolução de problemas IDE](/guide/ide/troubleshooting/) |
-
-As definições IDE são mais «como colabora com o Codex no editor»; como escrever as regras do projeto é outra camada — não misture as duas.
-
-## Fontes de referência
-- OpenAI Codex IDE settings
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** IDE  
-**Nota de revisão:** Esta página cobre itens de definição da extensão IDE, Contexto automático, preferências de Aprovação e sobreposição organizacional, mas essas entradas e nomes mudam facilmente com a versão da extensão; falta documentação oficial de definições bastante sólida para sustentar o conteúdo da página inteira.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

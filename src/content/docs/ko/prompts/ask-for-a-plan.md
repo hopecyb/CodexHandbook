@@ -3,9 +3,10 @@ title: 먼저 계획을 요청하기
 description: Codex가 손대기 전에 단계, 위험, 검증 방법을 먼저 말하게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 많은 문제는 할 수 없어서가 아니라, **너무 빨리 시작해서**입니다. “고쳐 줘” 한 마디는 탐색·계획·실행을 한꺼번에 섞기 쉽고, 결국 diff를 수동으로 검수하게 됩니다.
@@ -108,7 +109,7 @@ translated_at: 2026-07-28
 | 하위 작업으로 나누기 쉬움 | 여러 목표가 한 덩어리로 섞이기 쉬움 |
 | 검증 방법이 미리 보임 | 끝날 때까지 테스트를 잊기 쉬움 |
 
-많은 워크플로가 “탐색”과 “계획”을 따로 둡니다. [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)을 참고하세요.
+많은 워크플로가 “탐색”과 “계획”을 따로 둡니다. [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)을 참고하세요.
 
 ## 계획에서 흔히 나는 문제
 
@@ -126,10 +127,10 @@ translated_at: 2026-07-28
 
 ## 권장 조합
 
-- 정식 실행 체인이 필요하면: [계획하기](/guide/agent-work/planning/)
-- 계획을 재사용 가능하게 쓰려면: [작업 구조](/prompts/task-anatomy/)
-- 실행 중 궤도 수정이 필요하면: [진행과 유도](/guide/agent-work/progress-and-steering/)
-- 수락을 분명히 정의하려면: [완료 정의](/prompts/define-done/)
+- 정식 실행 체인이 필요하면: [계획하기](/ko/guide/agent-work/planning/)
+- 계획을 재사용 가능하게 쓰려면: [작업 구조](/ko/prompts/task-anatomy/)
+- 실행 중 궤도 수정이 필요하면: [진행과 유도](/ko/guide/agent-work/progress-and-steering/)
+- 수락을 분명히 정의하려면: [완료 정의](/ko/prompts/define-done/)
 
 ## 팀에서 잘 쓰는 약속
 

@@ -3,9 +3,10 @@ title: Agent 기초
 description: Agent가 목표를 중심으로 도구를 호출하며 반복 추진하는 방식을 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -46,14 +47,14 @@ sidebar:
 
 처음에는 함께 읽으세요.
 
-1. [권한과 승인](/guide/foundations/permissions-and-approvals/)
-2. [첫 작업 실행](/guide/getting-started/run-your-first-task/)
-3. [결과 확인](/guide/getting-started/review-the-result/)
+1. [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
+2. [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/)
+3. [결과 확인](/ko/guide/getting-started/review-the-result/)
 
 ## 관련 개념
 
-- Skill / Plugin / MCP: 「무엇을 할 수 있는지」와 「어디에 연결되는지」를 확장 — [확장과 자동화](/skills/)와 [능력 지도](/guide/start-here/codex-capability-map/)
-- 사람 승인: [권한과 승인](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP: 「무엇을 할 수 있는지」와 「어디에 연결되는지」를 확장 — [확장과 자동화](/ko/skills/)와 [능력 지도](/ko/guide/start-here/codex-capability-map/)
+- 사람 승인: [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
 
 Agent의 특징은 목표를 중심으로 몇 단계를 연속으로 한다는 것이며, 한 단락만 답하는 것이 아닙니다.
 

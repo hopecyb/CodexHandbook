@@ -3,9 +3,10 @@ title: Aceitação de Artefatos gerados
 description: Aceitação sistemática de ficheiros, relatórios e saídas de build novos ou exportados pelo Codex.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -50,7 +51,7 @@ Diferem de «só alterou umas linhas de código existente», porque é mais fác
 5. Decidir: aceitar / alterar parcialmente / descartar e refazer
 ```
 
-Métodos: [Verificar Artefatos](/guide/quality/verify-artifacts/), [Definição de concluído](/guide/quality/definition-of-done/)
+Métodos: [Verificar Artefatos](/pt/guide/quality/verify-artifacts/), [Definição de concluído](/pt/guide/quality/definition-of-done/)
 
 ## Mal-entendidos habituais
 
@@ -111,7 +112,7 @@ Artefatos não se julgam só por «já gerados». Pelo menos abra, verifique e s
 - [ ] Sem secrets, sem diretórios gerados a mais
 
 ## Referências
-- [Lidar com incerteza](/guide/quality/handle-uncertainty/)
+- [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/)
 ---
 
 **Estado:** verificado  

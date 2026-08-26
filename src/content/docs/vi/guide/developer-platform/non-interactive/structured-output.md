@@ -3,11 +3,12 @@ title: Đầu ra có cấu trúc
 description: "Để `exec` tạo kết quả máy parse được — cho bước sau, dashboard và cổng kiểm soát."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: aa19d49
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 Nhiều người lần đầu tự động hóa mặc định để Codex xuất một đoạn «nghe hợp lý». Người đọc còn ổn; script thì không thân thiện.
@@ -59,7 +60,7 @@ Yêu cầu đầu ra:
 Parse shell (minh họa):
 
 ```bash
-result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
+result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
@@ -104,7 +105,7 @@ Chỉ cần kết quả còn phải giao tiếp cho chương trình xử lý, h�
 | An toàn kiểu | Theo thỏa thuận + kiểm tra | Có thể dùng kiểu SDK |
 | Phù hợp | Script CI | Dịch vụ đa tenant |
 
-Xem [Tổng quan SDK](/guide/developer-platform/sdk-overview/).
+Xem [Tổng quan SDK](/vi/guide/developer-platform/sdk-overview/).
 
 ## Lỗi thường gặp
 
@@ -118,7 +119,7 @@ Xem [Tổng quan SDK](/guide/developer-platform/sdk-overview/).
 - [ ] Có tệp schema hoặc trường được ghi tài liệu
 - [ ] CI fail rõ ràng khi parse fail
 - [ ] Giữ mẫu đầu ra trong `fixtures/` để hồi quy
-- [ ] Thống nhất với chiến lược [mã thoát](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [ ] Thống nhất với chiến lược [mã thoát](/vi/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Nguồn tham chiếu
 - Thực hành chung OpenAI structured outputs (căn chỉnh khái niệm)

@@ -3,8 +3,10 @@ title: Giao diện Codex
 description: "Hiểu Codex Dream Skin là gì, cách cài đặt và đổi nền, vì sao dùng CDP injection, và ranh giới an toàn cần kiểm tra trước khi dùng theme."
 locale: vi
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-29
+reviewed_at: 2026-08-26
+source_revision: 8c0e360
 ---
 
 # Giao diện Codex

@@ -3,9 +3,10 @@ title: Verificação
 description: Revisar Diff, rodar testes, validar fontes e definir critérios de conclusão.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 17
 ---
@@ -76,12 +77,12 @@ Dá para entender como:
 
 ## Temas centrais
 
-- [Revisar Diff](/guide/quality/review-diffs/) — ler o Diff, confirmar alcance e risco
-- [Rodar testes](/guide/quality/run-tests/) — regressão automática
-- [Verificar Artefatos](/guide/quality/verify-artifacts/) — docs, configuração, gerados
-- [Validar fontes](/guide/quality/validate-sources/) — conclusões de pesquisa rastreáveis
-- [Lidar com incerteza](/guide/quality/handle-uncertainty/) — o que fazer quando o modelo está incerto
-- [Definição de pronto](/guide/quality/definition-of-done/) — o que significa «terminou»
+- [Revisar Diff](/pt/guide/quality/review-diffs/) — ler o Diff, confirmar alcance e risco
+- [Rodar testes](/pt/guide/quality/run-tests/) — regressão automática
+- [Verificar Artefatos](/pt/guide/quality/verify-artifacts/) — docs, configuração, gerados
+- [Validar fontes](/pt/guide/quality/validate-sources/) — conclusões de pesquisa rastreáveis
+- [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/) — o que fazer quando o modelo está incerto
+- [Definição de pronto](/pt/guide/quality/definition-of-done/) — o que significa «terminou»
 
 ## Tarefas diferentes, focos de Verificação diferentes
 
@@ -90,11 +91,11 @@ Dá para entender como:
 - **Pesquisar**: ver se as fontes são reais e atuais, se a conclusão ultrapassa a evidência
 - **Gerar configuração ou scripts**: ver premissas de ambiente, alcance de Permissão, como recuperar após falha
 
-Se não souber por onde começar, leia por padrão [Definição de pronto](/guide/quality/definition-of-done/).
+Se não souber por onde começar, leia por padrão [Definição de pronto](/pt/guide/quality/definition-of-done/).
 
 Verificação existe para confirmar que o resultado realmente serve, que você se atreve a usar e que dá para entregar.
 
-Como escrever critérios de aceite no Prompt: [Definir critérios de conclusão](/prompts/define-done/). Casos ponta a ponta: [Casos práticos](/cases/).
+Como escrever critérios de aceite no Prompt: [Definir critérios de conclusão](/pt/prompts/define-done/). Casos ponta a ponta: [Casos práticos](/pt/cases/).
 
 ---
 

@@ -3,9 +3,10 @@ title: 承認とサンドボックス
 description: CLI における shell、書き込み、ネットワーク要求の承認方針と、サンドボックスによる Agent 制限。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -27,7 +28,7 @@ CLI では Agent が **ファイルの読み書き、shell 実行、場合によ
 
 両方が組み合わさり、CLI が保守的か、境界が広すぎるかを左右します。
 
-概念の基礎：[権限と承認](/guide/foundations/permissions-and-approvals/) · [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
+概念の基礎：[権限と承認](/ja/guide/foundations/permissions-and-approvals/) · [サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
 
 ## 承認が起きるタイミング
 
@@ -57,7 +58,7 @@ CLI では Agent が **ファイルの読み書き、shell 実行、場合によ
 - `$HOME` 内の他プロジェクトへのアクセス可否
 - 子プロセスとネットワーク能力
 
-設定入口：[CLI 設定](/guide/cli/configuration/) · マトリクス：[権限マトリクス](/guide/reference/permission-matrix/)
+設定入口：[CLI 設定](/ja/guide/cli/configuration/) · マトリクス：[権限マトリクス](/ja/guide/reference/permission-matrix/)
 
 ## 対話 vs 非対話
 
@@ -66,7 +67,7 @@ CLI では Agent が **ファイルの読み書き、shell 実行、場合によ
 | 対話 `codex` | 人がその場にいる。1 件ずつ判断 |
 | 非対話 `exec` | 人がいない。事前にサンドボックスを絞り、プロンプトを固定 |
 
-CI 必読：[非対話モード](/guide/cli/non-interactive-mode/) · [人間承認パターン](/cases/workflows/human-approval-patterns/)
+CI 必読：[非対話モード](/ja/guide/cli/non-interactive-mode/) · [人間承認パターン](/ja/cases/workflows/human-approval-patterns/)
 
 推奨 CI 原則：
 
@@ -76,7 +77,7 @@ CI 必読：[非対話モード](/guide/cli/non-interactive-mode/) · [人間承
 
 ## allow/deny ルールとの関係
 
-プロジェクトは [許可と拒否パターン](/guide/customization/rules/allow-and-deny-patterns/) で「想定されるコマンド」を宣言できます。**ルールは実際の製品挙動と一致している必要があります**。そうでなければ、Agent は依然としてブロックされるか、逆に広すぎることになります。
+プロジェクトは [許可と拒否パターン](/ja/guide/customization/rules/allow-and-deny-patterns/) で「想定されるコマンド」を宣言できます。**ルールは実際の製品挙動と一致している必要があります**。そうでなければ、Agent は依然としてブロックされるか、逆に広すぎることになります。
 
 ## よくあるミス
 

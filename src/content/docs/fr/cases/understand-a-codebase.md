@@ -3,9 +3,10 @@ title: Comprendre une base de code
 description: Exploration en lecture seule d'un dépôt inconnu pour établir une carte cognitive actionnable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Comprendre une base de code
@@ -42,8 +43,8 @@ Ne modifiez pas encore le code. Lisez @src/ et @README, et expliquez en 8 points
 
 ## 4. Voir aussi
 
-- [Modèle de compréhension](/prompts/templates/understand/)
-- [Explorer—Planifier—Exécuter—Vérifier](/cases/workflows/explore-plan-execute-verify/)
+- [Modèle de compréhension](/fr/prompts/templates/understand/)
+- [Explorer—Planifier—Exécuter—Vérifier](/fr/cases/workflows/explore-plan-execute-verify/)
 
 ---
 

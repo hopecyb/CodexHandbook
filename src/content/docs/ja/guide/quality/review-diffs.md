@@ -3,9 +3,10 @@ title: 差分のレビュー
 description: 変更を読み、質問する方法。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 7dc8ee8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -31,7 +32,7 @@ diff を読むときの重点：
 3. 命名とスタイルは一貫しているか？
 4. キーやデバッグ残留はないか？
 
-製品側のビュー：[差分、コメントとレビュー](/guide/desktop-app/diffs-comments-and-review/)
+製品側のビュー：[差分、コメントとレビュー](/ja/guide/desktop-app/diffs-comments-and-review/)
 
 ## よくある誤解
 

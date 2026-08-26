@@ -3,10 +3,12 @@ title: Official resources
 description: OpenAI / Codex official documentation and entry links.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
+source_revision: c7126c4
 ---
 
 This handbook is a community open-source guide. Product behavior, installers, and plans are governed by official sources:

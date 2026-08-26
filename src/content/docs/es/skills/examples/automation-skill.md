@@ -3,9 +3,10 @@ title: "Ejemplo: Skill de automatización"
 description: Empaqueta comprobaciones o generación de informes repetitivos como Skill.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ejemplo: Skill de automatización
@@ -30,8 +31,8 @@ description: Resume cambios de ayer, resultados de tests y pendientes; genera un
 
 ## Relacionado
 
-- [Caso de informe diario automatizado](/cases/automate-a-daily-report/)
-- [Tareas programadas](/skills/automations/scheduled-tasks/)
+- [Caso de informe diario automatizado](/es/cases/automate-a-daily-report/)
+- [Tareas programadas](/es/skills/automations/scheduled-tasks/)
 ---
 
 **Estado:** verificado  

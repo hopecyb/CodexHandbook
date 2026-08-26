@@ -3,14 +3,15 @@ title: "Codes de sortie et retries"
 description: Interpréter succès et échec de codex exec dans les pipelines — quand retry vs fail fast.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-La CI s'appuie sur les **codes de sortie de processus** pour juger le succès d'une étape. Cette page couvre la sémantique courante pour [codex exec](/guide/developer-platform/non-interactive/codex-exec/), la stratégie de retry et le design idempotent.
+La CI s'appuie sur les **codes de sortie de processus** pour juger le succès d'une étape. Cette page couvre la sémantique courante pour [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/), la stratégie de retry et le design idempotent.
 
 ## Ce que cette page couvre
 
@@ -59,7 +60,7 @@ Si l'échec ne disparaîtra pas au retry — permissions, blocages de politique,
 | `0` | Tâche complétée et critères de succès du prompt atteints |
 | Non-`0` avec deny politique/bac à sable dans les logs | **Ne pas** retry aveuglément ; corriger config ou prompt |
 | Non-`0` avec API 429/5xx | Retries backoff exponentiel limités |
-| Problèmes P0 trouvés mais exécution réussie | Utiliser [sortie structurée](/guide/developer-platform/non-interactive/structured-output/) `pass: false` + script wrapper `exit 1` |
+| Problèmes P0 trouvés mais exécution réussie | Utiliser [sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/) `pass: false` + script wrapper `exit 1` |
 
 « Problème de sécurité trouvé » ne devrait pas reposer sur un crash — définir **explicitement** `pass: false` en JSON et laisser un script wrapper choisir le code de sortie.
 
@@ -69,7 +70,7 @@ Si l'échec ne disparaîtra pas au retry — permissions, blocages de politique,
 max=3
 delay=10
 for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
+  if codex exec --cd . "$(cat "$PROMPT")"; then
     exit 0
   fi
   code=$?
@@ -119,8 +120,8 @@ Séparer d'abord « panne temporaire » de « retry n'aidera pas », puis décid
 
 ## Lié
 
-- [Référence d'erreurs](/guide/reference/error-reference/)
-- [Récupération après échec](/cases/workflows/failure-recovery/)
+- [Référence d'erreurs](/fr/guide/reference/error-reference/)
+- [Récupération après échec](/fr/cases/workflows/failure-recovery/)
 
 ## Sources de référence
 - Orientations retry API OpenAI (conceptuel)

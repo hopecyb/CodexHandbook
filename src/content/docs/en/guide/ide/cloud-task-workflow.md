@@ -1,106 +1,77 @@
 ---
-title: Cloud tasks in the IDE
-description: Delegating Cloud tasks from the IDE, following status, and reviewing remote output.
+title: Cloud tasks from the IDE
+description: Delegate a long task from the IDE to Codex Cloud and return to reviewable results.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: ea8a618
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 60
 ---
 
-Some IDE integrations let you **delegate tasks to Cloud**. Work runs in a standardized remote environment while you keep editing locally or walk away. The flow matches pure Cloud/Web—only the entry point is in the editor.
+The IDE can keep quick iteration local or connect to Codex web to delegate longer work to Cloud. The entry point remains the editor, but execution environment, repository state, and network boundaries move to the cloud.
 
-## What's covered
+## When to delegate
 
-- When to send a Cloud task from the IDE vs purely local
-- What to prepare before and after delegation
-- Bringing remote diffs back for local review
-
-## Good fits
-
-| Prefer Cloud | Stay local |
+| Keep local | Delegate to Cloud |
 |---|---|
-| Heavy installs, hard-to-reproduce environments | Quick two-line edits |
-| Need branch push / open PR | GitHub not connected |
-| Long runs with phone approval notifications | Uncommitted sensitive drafts on machine |
+| You need rapid back-and-forth with the current selection | The task has many steps or runs for a long time |
+| It depends on uncommitted local state | Inputs already exist in a remote repository or can be uploaded |
+| It requires a local-only tool | The cloud environment can recreate dependencies and verification |
+| You need to control a live local process | You want to continue other work locally |
 
-Concept: [local vs cloud](/guide/foundations/local-vs-cloud/)
+Cloud does not automatically have your uncommitted local files, credentials, or running processes. State explicitly which repository, branch, and commit the task starts from.
 
-## When this workflow helps
+## Delegation checklist
 
-Common pattern:
+- [ ] Signed in with a ChatGPT account; Codex Cloud does not accept API-key sign-in.
+- [ ] GitHub is connected, or the currently supported GitLab Beta integration is in use.
+- [ ] The cloud environment can run setup and verification scripts.
+- [ ] Required variables and Secrets are configured in the environment, not pasted into the prompt.
+- [ ] Uncommitted local changes are handled or explicitly excluded.
+- [ ] Goal, allowed paths, exclusions, and acceptance commands are explicit.
 
-- You work in the IDE habitually
-- But the task runs better in a remote environment
-
-You still work in the IDE; execution has moved remote.
-
-## Prerequisites
-
-- [ ] [GitHub connected](/guide/web-and-cloud/connect-github/)
-- [ ] Cloud [environment](/guide/web-and-cloud/cloud-environments/) and [Secrets](/guide/web-and-cloud/secrets-and-variables/) configured if needed
-- [ ] Local changes committed or explicitly "remote branch is source of truth"
-
-**The IDE cannot make Cloud see unpushed commits on your machine.**
-
-## Common misconceptions
-
-### 1. "Run in Cloud" from the IDE carries everything on my machine
-
-No.  
-Remote tasks see the remote repo, remote environment, and what you explicitly attach.
-
-### 2. Because the entry is in the IDE, it behaves like a local task
-
-Not quite.  
-Launch location is IDE; execution boundary, environment, and visibility are still Cloud rules.
-
-### 3. Remote completion equals reviewed and approved
-
-Remote done only means it finished there—not that local review, tests, and sign-off are complete.
-
-## Recommended flow
+## End-to-end example
 
 ```text
-1. Write task in IDE (goal, branch, constraints, acceptance)
-2. Choose "Run in Cloud" or equivalent (per product UI)
-3. Confirm plan (if plan mode enabled)
-4. Leave or keep working locally → check progress in notifications/panel
-5. When remote finishes: review diff in Web/App → open PR or pull branch locally
-6. Run tests locally + human review → merge
+Goal: Fix the retry module waiting one extra time after reaching its limit.
+Starting point: acme/retry-service, branch fix/retry-limit.
+Scope: Modify only src/retry.ts and its tests.
+Constraints: Do not upgrade dependencies, change the public API, or push to main.
+Acceptance: Run pnpm test -- retry and pnpm typecheck; show the diff and command results.
 ```
 
-PR details: [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Recommended flow:
 
-## A practical first-time sequence
+1. Attach relevant files or selections in the IDE to confirm the boundary.
+2. Choose Cloud to continue the longer task.
+3. Inspect the plan, progress, and verification results in Cloud.
+4. Return to the IDE or web and inspect the reviewable result.
+5. Fetch the branch or use a pull request to obtain the change.
+6. Rerun tests in a trusted local environment and review manually before merging.
 
-1. Confirm local changes committed—or intentionally excluded
-2. Confirm GitHub, Secrets, branch ready
-3. Delegate with clear goal, scope, and acceptance
-4. Review diff when remote completes
-5. Add local tests and human review
+“Complete” in the cloud means remote execution ended. It does not mean the code is ready to merge. Remote dependencies, operating-system behavior, or credentials can differ from local and CI environments.
 
-The core difference from local IDE tasks: execution environment is remote.
+## Conflicts and security
 
-## Relation to desktop App delegation
+- Do not let local and cloud runs modify the same file simultaneously.
+- Do not paste production credentials into prompts; use environment Secrets.
+- Do not treat Cloud internet access as a default capability; configure allowed domains per environment.
+- Pushing, opening a PR, and merging are separate actions. Keep a human or CI gate before merging.
 
-[Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/) in the desktop App share the same Cloud backend; difference is mainly **entry UI and attached context** (IDE may include current selection summary).
+Next, read [Cloud environments](/en/guide/web-and-cloud/cloud-environments/) and [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/).
 
-## Security boundaries
+## Official sources
 
-- Cloud task permissions bounded by GitHub connection scope and org policy
-- Do not paste production keys in task descriptions; use [Secrets](/guide/web-and-cloud/secrets-and-variables/)
-- Still require [human review](/guide/web-and-cloud/code-review/) before merge
-
-## Common mistakes
-
-- Keep editing the same file locally after delegation → conflicts with remote branch
-- No branch name → remote pushes to a shared branch
-- Treat Cloud output as "accepted" and skip CI
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE / Cloud  
-**Review note:** This page describes IDE-to-Cloud delegation, diff handoff, and local follow-up as concrete current behavior; official docs do not yet verify that IDE Cloud delegation experience line by line—better `outdated` until formal IDE/Cloud documentation is available.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE, Cloud
+
+**Last verified:** 2026-08-26

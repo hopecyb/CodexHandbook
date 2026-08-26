@@ -3,9 +3,10 @@ title: Khi nào dùng Skills
 description: Quyết định Tác vụ có nên đóng thành Skill, và phân công với lệnh slash, MCP.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi mới làm quen Skill, câu hỏi thường gặp là: việc này có đáng làm thành một Skill riêng không.
@@ -79,7 +80,7 @@ Skill làm theo cách này vững hơn vì đến từ sự lặp thật, không
 
 Skill phù hợp hơn để đóng những quy trình"sẽ lặp, cần nhất quán, và không muốn giải thích lại mỗi lần".
 
-Chọn cách mở rộng: [Cách chọn phương thức mở rộng](/skills/choosing-an-extension-method/). Đóng workflow: [Biến quy trình thành Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Chọn cách mở rộng: [Cách chọn phương thức mở rộng](/vi/skills/choosing-an-extension-method/). Đóng workflow: [Biến quy trình thành Skill](/vi/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Trạng thái:** verified  

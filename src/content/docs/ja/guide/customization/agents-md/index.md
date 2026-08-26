@@ -3,9 +3,10 @@ title: AGENTS.md
 description: プロジェクトレベル長期指示の説明ページ——誰向けか、何を解決するかを先に整理してから書く。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: ce5c1af
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 初めて `AGENTS.md` を見ると、「もう一つの長い prompt」と理解しがちです。
@@ -16,9 +17,9 @@ translated_at: 2026-07-28
 
 ## 推奨順序
 
-1. [AGENTS.md とは](/guide/customization/agents-md/what-is-agents-md/)
-2. [スコープと優先順位](/guide/customization/agents-md/scope-and-precedence/)
-3. [効果的なプロジェクト指示の書き方](/guide/customization/agents-md/writing-effective-instructions/)
+1. [AGENTS.md とは](/ja/guide/customization/agents-md/what-is-agents-md/)
+2. [スコープと優先順位](/ja/guide/customization/agents-md/scope-and-precedence/)
+3. [効果的なプロジェクト指示の書き方](/ja/guide/customization/agents-md/writing-effective-instructions/)
 
 ## 先に押さえる点
 

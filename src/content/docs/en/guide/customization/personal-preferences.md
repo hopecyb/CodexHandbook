@@ -3,9 +3,10 @@ title: Personal Preferences
 description: User-level configuration, default models, and UI habits—without polluting team conventions in the repo.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ sidebar:
 ## Contents
 
 - What belongs in the personal layer versus the project layer
-- How to pair with [Profiles](/guide/customization/configuration/profiles/) to switch scenarios
+- How to pair with [Profiles](/en/guide/customization/configuration/profiles/) to switch scenarios
 - How to avoid leaking relaxed personal settings into team repos
 
-Priority overview: [Customization](/guide/customization/) · [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/)
+Priority overview: [Customization](/en/guide/customization/) · [Scope and Precedence](/en/guide/customization/agents-md/scope-and-precedence/)
 
 ## Why Separate This Layer
 
@@ -80,7 +81,7 @@ Personal preferences exist to make your own workflow feel natural; they are not 
 
 ## And the Memory Feature
 
-If the product offers “memory” or persistent preferences, see [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/). Memory suits stable habits; **project-specific constraints should still come from repo files**.
+If the product offers “memory” or persistent preferences, see [Memories and Persistent Context](/en/guide/customization/memories-and-persistent-context/). Memory suits stable habits; **project-specific constraints should still come from repo files**.
 
 ## Common Mistakes
 

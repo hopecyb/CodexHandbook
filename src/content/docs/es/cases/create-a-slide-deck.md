@@ -3,9 +3,10 @@ title: Crear una presentación
 description: Caso de generación de artefactos — del esquema a una presentación lista para proyectar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 42c7a26
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Crear una presentación
@@ -42,7 +43,7 @@ Restricciones: Los datos deben citar fuente o marcarse como «ejemplo»; no haga
 
 ## 4. Relacionado
 
-- [Capacidad de presentaciones](/guide/files-and-artifacts/presentations/)
+- [Capacidad de presentaciones](/es/guide/files-and-artifacts/presentations/)
 
 ---
 

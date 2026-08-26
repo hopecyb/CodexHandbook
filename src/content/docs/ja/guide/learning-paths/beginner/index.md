@@ -3,9 +3,10 @@ title: 初心者パス
 description: Codex を初めて使う読者向けに、タスクを明確に伝えることから最初の小さなプロジェクト完了までの最短 5 ステップルートを示します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -16,11 +17,11 @@ Codex を初めて学ぶとき、いちばんつまずきやすいのは特定�
 
 ## 推奨順序
 
-1. [Codex と対話する](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [ファイルを扱う](/guide/learning-paths/beginner/02-work-with-files/)
-3. [明確なタスクを与える](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [結果をレビューする](/guide/learning-paths/beginner/04-review-results/)
-5. [最初の小さなプロジェクトを完了する](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Codex と対話する](/ja/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [ファイルを扱う](/ja/guide/learning-paths/beginner/02-work-with-files/)
+3. [明確なタスクを与える](/ja/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [結果をレビューする](/ja/guide/learning-paths/beginner/04-review-results/)
+5. [最初の小さなプロジェクトを完了する](/ja/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## このパスが向いている人
 

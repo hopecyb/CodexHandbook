@@ -3,9 +3,10 @@ title: Content-Erstellung
 description: Einstieg zu Fällen für Docs, Artikel und Content-Assets — Fokus auf Prüfung, Umschreiben und Artefakt-Abnahme.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Fälle zur Content-Erstellung drehen sich um:
@@ -14,7 +15,7 @@ Fälle zur Content-Erstellung drehen sich um:
 
 ## Einstieg dieser Gruppe
 
-- [Dokumentationssite mit Prüfung refactoren](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Dokumentationssite mit Prüfung refactoren](/de/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## Schwerpunkte dieser Gruppe
 

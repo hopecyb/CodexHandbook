@@ -3,9 +3,10 @@ title: Prompting with images
 description: How to ask when giving Codex screenshots, designs, or whiteboard photos.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many "look at this image" tasks fail not because the model didn't see—it got an image **without being told what to look for**.
@@ -149,10 +150,10 @@ Even design-driven work needs real page, diff, breakpoints, and usability. Image
 
 ## Related pages
 
-- Upload and manage images: [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- Generate new images: [Image generation](/guide/tools/image-generation/)
-- Complete task structure: [Task anatomy](/prompts/task-anatomy/)
-- Analyze before editing: [Ask for a plan first](/prompts/ask-for-a-plan/)
+- Upload and manage images: [Images and screenshots](/en/guide/files-and-artifacts/images-and-screenshots/)
+- Generate new images: [Image generation](/en/guide/tools/image-generation/)
+- Complete task structure: [Task anatomy](/en/prompts/task-anatomy/)
+- Analyze before editing: [Ask for a plan first](/en/prompts/ask-for-a-plan/)
 
 ## Practical tip
 

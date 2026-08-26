@@ -5,9 +5,10 @@ sidebar:
   order: 16
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f647ae2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 コンテキストとは、モデルが「この瞬間に有効に使える情報」のことです。コンテキストを管理できないと、どんなに良いプロンプトでもノイズに埋もれます。
@@ -35,13 +36,13 @@ translated_at: 2026-07-28
 
 ## 本章ナビゲーション
 
-- [プロジェクトコンテキスト](/guide/context/project-context/)
-- [ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
-- [会話コンテキスト](/guide/context/conversation-context/)
-- [コンテキストの優先順位](/guide/context/context-priority/)
-- [圧縮](/guide/context/compaction/)
-- [焦点を保つ](/guide/context/keep-context-focused/)
-- [機密コンテキスト](/guide/context/sensitive-context/)
+- [プロジェクトコンテキスト](/ja/guide/context/project-context/)
+- [ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/)
+- [会話コンテキスト](/ja/guide/context/conversation-context/)
+- [コンテキストの優先順位](/ja/guide/context/context-priority/)
+- [圧縮](/ja/guide/context/compaction/)
+- [焦点を保つ](/ja/guide/context/keep-context-focused/)
+- [機密コンテキスト](/ja/guide/context/sensitive-context/)
 
 この章で繰り返し強調しているのは、コンテキストは「今回実際に本当に見えているもの」に依存するということです。知っているはずだと思っても、今回提供していなければ、コンテキストには含まれません。
 

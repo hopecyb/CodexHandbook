@@ -3,9 +3,10 @@ title: Modèles de Prompts
 description: Squelettes réutilisables par type de tâche — comprendre, créer, modifier, diagnostiquer, revoir, rechercher, automatiser.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèles de Prompts
@@ -30,13 +31,13 @@ C'est un échafaudage, pas une réponse type.
 
 | Modèle | Quand l'utiliser |
 |---|---|
-| [Comprendre](/prompts/templates/understand/) | lire dépôt, doc ou matériel avant d'agir |
-| [Créer](/prompts/templates/create/) | fonction, texte ou artefact from scratch |
-| [Modifier](/prompts/templates/change/) | itérer sur l'existant avec limites |
-| [Diagnostiquer](/prompts/templates/diagnose/) | cause racine avant code |
-| [Revoir](/prompts/templates/review/) | diff, PR ou changement de doc |
-| [Rechercher](/prompts/templates/research/) | enquête et comparaison avec sources |
-| [Automatiser](/prompts/templates/automate/) | tâches répétées, scripts, flux sans surveillance |
+| [Comprendre](/fr/prompts/templates/understand/) | lire dépôt, doc ou matériel avant d'agir |
+| [Créer](/fr/prompts/templates/create/) | fonction, texte ou artefact from scratch |
+| [Modifier](/fr/prompts/templates/change/) | itérer sur l'existant avec limites |
+| [Diagnostiquer](/fr/prompts/templates/diagnose/) | cause racine avant code |
+| [Revoir](/fr/prompts/templates/review/) | diff, PR ou changement de doc |
+| [Rechercher](/fr/prompts/templates/research/) | enquête et comparaison avec sources |
+| [Automatiser](/fr/prompts/templates/automate/) | tâches répétées, scripts, flux sans surveillance |
 
 ## Du modèle au workflow
 
@@ -73,7 +74,7 @@ Il ne décide pas :
 
 Choisissez le type, puis personnalisez — ne substituez pas la tâche par le modèle.
 
-Principes : [Bases des Prompts](/prompts/basics/) et [Anatomie d'une tâche](/prompts/task-anatomy/).
+Principes : [Bases des Prompts](/fr/prompts/basics/) et [Anatomie d'une tâche](/fr/prompts/task-anatomy/).
 
 ---
 

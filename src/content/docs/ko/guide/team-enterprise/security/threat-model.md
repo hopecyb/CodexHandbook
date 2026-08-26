@@ -3,9 +3,10 @@ title: 위협 모델
 description: 팀 환경에서 Codex의 주요 위험면입니다. 데이터, 도구, 확장, 공급망을 다룹니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 > **Codex가 우리 코드, 명령, 외부 도구에 정말 붙으면, 무엇이 가장 잘 잘못될 수 있는가?**
 
-**위협 모델**은 그 일을 쪼개서 분명히 보는 것입니다. Codex는 “또 하나의 채팅창”이 아니라 **코드를 읽고, 명령을 실행하고, 외부 도구를 호출**할 수 있습니다. 이 장은 주요 위험면을 먼저 펼치고, 구체 통제 항목은 [권한 매트릭스](/guide/reference/permission-matrix/)와 [샌드박스](/guide/foundations/sandbox-and-network/)를 보세요.
+**위협 모델**은 그 일을 쪼개서 분명히 보는 것입니다. Codex는 “또 하나의 채팅창”이 아니라 **코드를 읽고, 명령을 실행하고, 외부 도구를 호출**할 수 있습니다. 이 장은 주요 위험면을 먼저 펼치고, 구체 통제 항목은 [권한 매트릭스](/ko/guide/reference/permission-matrix/)와 [샌드박스](/ko/guide/foundations/sandbox-and-network/)를 보세요.
 
 ## 내용
 
@@ -74,10 +75,10 @@ sidebar:
 
 | 위협 | 설명 | 완화 방향 |
 |---|---|---|
-| 프롬프트 주입 | 악성 issue/웹페이지가 권한 초과를 유도 | 입력 소독, 읽기 전용 CI, [주입 특집](/guide/team-enterprise/security/prompt-injection/) |
+| 프롬프트 주입 | 악성 issue/웹페이지가 권한 초과를 유도 | 입력 소독, 읽기 전용 CI, [주입 특집](/ko/guide/team-enterprise/security/prompt-injection/) |
 | 과도한 권한 | token·샌드박스가 너무 넓음 | 최소 권한, 브랜치 보호 |
 | 데이터 유출 | 명령/MCP가 저장소 내용을 밖으로 전달 | 네트워크 정책, DLP, 감사 Hook |
-| 악성 확장 | 검토하지 않은 Plugin/MCP | [확장 위험](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| 악성 확장 | 검토하지 않은 Plugin/MCP | [확장 위험](/ko/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | 공급망 | 의존성·스크립트 오염 | 기존 SCA, code review와 결합 |
 | 오동작 | Agent가 DB를 지우고, 잘못 push | 명령 deny, push 없는 CI |
 
@@ -143,8 +144,8 @@ L5 사람 review와 브랜치 보호
 
 ## 관련 장
 
-- [민감 컨텍스트](/guide/context/sensitive-context/)
-- [사람 승인 패턴](/cases/workflows/human-approval-patterns/)
+- [민감 컨텍스트](/ko/guide/context/sensitive-context/)
+- [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/)
 
 ## 참고 출처
 - OpenAI 엔터프라이즈 보안 백서(공식)

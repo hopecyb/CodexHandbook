@@ -3,9 +3,10 @@ title: 대화형 모드
 description: 터미널에서 Codex와 대화하며 작업을 실행합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 794dd7c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,7 +22,7 @@ CLI의 흔한 사용법 중 하나입니다.
 3. 요청이 오면 도구 호출을 승인/거부합니다
 4. `/` 계열 단축 명령(있는 경우)으로 세션을 관리합니다—현행 CLI 도움말 기준
 
-프롬프트 방법은 그대로 적용됩니다: [프롬프트](/prompts/)
+프롬프트 방법은 그대로 적용됩니다: [프롬프트](/ko/prompts/)
 
 ## 흔한 오해
 

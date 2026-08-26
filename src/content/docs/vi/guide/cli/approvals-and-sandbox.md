@@ -3,9 +3,10 @@ title: Phê duyệt và Sandbox
 description: Chiến lược phê duyệt yêu cầu shell, ghi đĩa và mạng trong CLI, và Sandbox hạn chế hành vi Agent thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -27,7 +28,7 @@ Có thể nhớ:
 
 Hai thứ phối hợp sẽ ảnh hưởng trực tiếp CLI dùng nghiêng bảo thủ hay biên mở quá rộng.
 
-Nền khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/) · [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
+Nền khái niệm: [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/) · [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 
 ## Phê duyệt xảy ra khi nào
 
@@ -57,7 +58,7 @@ Sandbox có thể hạn chế:
 - Có được truy cập dự án khác trong `$HOME` không
 - Năng lực tiến trình con và mạng
 
-Lối vào cấu hình: [Cấu hình CLI](/guide/cli/configuration/) · Ma trận: [Ma trận quyền](/guide/reference/permission-matrix/)
+Lối vào cấu hình: [Cấu hình CLI](/vi/guide/cli/configuration/) · Ma trận: [Ma trận quyền](/vi/guide/reference/permission-matrix/)
 
 ## Tương tác vs không tương tác
 
@@ -66,7 +67,7 @@ Lối vào cấu hình: [Cấu hình CLI](/guide/cli/configuration/) · Ma trậ
 | Tương tác `codex` | Người có mặt, phán từng dòng được |
 | Không tương tác `exec` | Không có bạn — phải thắt Sandbox trước + Prompt cố định |
 
-CI bắt buộc đọc: [Chế độ không tương tác](/guide/cli/non-interactive-mode/) · [Mẫu phê duyệt thủ công](/cases/workflows/human-approval-patterns/)
+CI bắt buộc đọc: [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) · [Mẫu phê duyệt thủ công](/vi/cases/workflows/human-approval-patterns/)
 
 Nguyên tắc CI khuyến nghị:
 
@@ -76,7 +77,7 @@ Nguyên tắc CI khuyến nghị:
 
 ## Với quy tắc allow/deny
 
-Dự án có thể khai báo «lệnh dự kiến được» trong [Quy tắc cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/). **Quy tắc phải khớp hành vi sản phẩm thực**, nếu không Agent vẫn bị chặn hoặc ngược lại quá rộng.
+Dự án có thể khai báo «lệnh dự kiến được» trong [Quy tắc cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/). **Quy tắc phải khớp hành vi sản phẩm thực**, nếu không Agent vẫn bị chặn hoặc ngược lại quá rộng.
 
 ## Lỗi thường gặp
 

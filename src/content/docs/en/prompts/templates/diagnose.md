@@ -3,9 +3,10 @@ title: Diagnose template
 description: Find root cause before discussing fixes.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Diagnose template
@@ -47,8 +48,8 @@ The diagnose template requires explaining why it's broken before how to fix it.
 
 ## Related
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Fix a bug case](/cases/fix-a-bug/)
+- [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/)
+- [Fix a bug case](/en/cases/fix-a-bug/)
 
 ---
 

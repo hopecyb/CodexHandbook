@@ -3,9 +3,10 @@ title: Skill 例
 description: 執筆、レビュー、調査、自動化の 4 類 Skill 例の入口。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 346b14d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Skill 例
@@ -14,12 +15,12 @@ translated_at: 2026-07-28
 
 | 例 | 説明 |
 |---|---|
-| [執筆 Skill](/skills/examples/writing-skill/) | 構造化された長文執筆フロー |
-| [レビュー Skill](/skills/examples/review-skill/) | PR / diff レビュー（完全例） |
-| [調査 Skill](/skills/examples/research-skill/) | 引用付き調査出力 |
-| [自動化 Skill](/skills/examples/automation-skill/) | 反復タスクとスケジュールフロー |
+| [執筆 Skill](/ja/skills/examples/writing-skill/) | 構造化された長文執筆フロー |
+| [レビュー Skill](/ja/skills/examples/review-skill/) | PR / diff レビュー（完全例） |
+| [調査 Skill](/ja/skills/examples/research-skill/) | 引用付き調査出力 |
+| [自動化 Skill](/ja/skills/examples/automation-skill/) | 反復タスクとスケジュールフロー |
 
-関連ページ：[最初の Skill を作成する](/skills/create-your-first-skill/)。
+関連ページ：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)。
 
 ---
 

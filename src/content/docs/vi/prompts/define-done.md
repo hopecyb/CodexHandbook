@@ -3,9 +3,10 @@ title: Định nghĩa tiêu chí hoàn thành
 description: Viết điều kiện hoàn thành có thể kiểm tra.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b9d3ef1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều người nêu tác vụ chỉ nói «tôi muốn gì», nhưng không nói rõ «làm đến mức nào thì xong». Kết quả là đã hoàn thành hay chưa chỉ còn cảm giác.
@@ -75,7 +76,7 @@ Nếu không, thường vẫn còn quá mơ hồ.
 
 Tóm lại: đừng để «đã xong chưa» chỉ còn đoán.
 
-Đưa lệnh kiểm chứng vào tiêu chuẩn thì Agent mới dễ chủ động chạy: [Chạy kiểm thử](/guide/verification/)
+Đưa lệnh kiểm chứng vào tiêu chuẩn thì Agent mới dễ chủ động chạy: [Chạy kiểm thử](/vi/guide/verification/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Chế độ tương tác
 description: Trò chuyện với Codex và thực thi tác vụ trong terminal.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 794dd7c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,7 +22,7 @@ Sau khi khởi phiên tương tác:
 3. Khi được hỏi thì phê duyệt / từ chối lời gọi công cụ
 4. Dùng lệnh tắt kiểu `/` (nếu có) để quản phiên — lấy theo trợ giúp CLI hiện tại
 
-Phương pháp Prompt vẫn áp dụng: [Prompt](/prompts/)
+Phương pháp Prompt vẫn áp dụng: [Prompt](/vi/prompts/)
 
 ## Hiểu nhầm thường gặp
 

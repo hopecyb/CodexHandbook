@@ -3,10 +3,12 @@ title: Handoff and resume
 description: Continue unfinished work across sessions.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
+source_revision: b92008e
 ---
 
 A handoff summary should include:

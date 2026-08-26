@@ -3,33 +3,34 @@ title: 基礎概念
 description: モデル、Agent、ツール、権限、検証の共通言語を身につける。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: cf898a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
 
-このセクションでは、ハンドブック全体で繰り返し登場する基礎概念をまとめています。製品ごとの画面の違いは [製品ガイド](/guide/) に、プロンプトの技法は [コア能力](/guide/) に書いてあります。
+このセクションでは、ハンドブック全体で繰り返し登場する基礎概念をまとめています。製品ごとの画面の違いは [製品ガイド](/ja/guide/) に、プロンプトの技法は [コア能力](/ja/guide/) に書いてあります。
 
 ここでは主に、Codex がどう動くか、そしてどう協業するかを説明します。
 
 ## 本章の地図
 
-1. [AI と言語モデル](/guide/foundations/ai-and-language-models/)
-2. [Agent の基礎](/guide/foundations/agent-basics/)
-3. [目標、コンテキストとアクション](/guide/foundations/goals-context-and-actions/)
-4. [ファイル、ツールとコマンド](/guide/foundations/files-tools-and-commands/)
-5. [ローカルとクラウド](/guide/foundations/local-vs-cloud/)
-6. [スレッド、タスクとプロジェクト](/guide/foundations/threads-tasks-and-projects/)
-7. [権限と承認](/guide/foundations/permissions-and-approvals/)
-8. [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
-9. [モデルと推論](/guide/foundations/models-and-reasoning/)
-10. [Token、コンテキストと圧縮](/guide/foundations/tokens-context-and-compaction/)
-11. [検証と人的レビュー](/guide/foundations/verification-and-human-review/)
-12. [よくある誤解](/guide/foundations/common-misconceptions/)
+1. [AI と言語モデル](/ja/guide/foundations/ai-and-language-models/)
+2. [Agent の基礎](/ja/guide/foundations/agent-basics/)
+3. [目標、コンテキストとアクション](/ja/guide/foundations/goals-context-and-actions/)
+4. [ファイル、ツールとコマンド](/ja/guide/foundations/files-tools-and-commands/)
+5. [ローカルとクラウド](/ja/guide/foundations/local-vs-cloud/)
+6. [スレッド、タスクとプロジェクト](/ja/guide/foundations/threads-tasks-and-projects/)
+7. [権限と承認](/ja/guide/foundations/permissions-and-approvals/)
+8. [サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
+9. [モデルと推論](/ja/guide/foundations/models-and-reasoning/)
+10. [Token、コンテキストと圧縮](/ja/guide/foundations/tokens-context-and-compaction/)
+11. [検証と人的レビュー](/ja/guide/foundations/verification-and-human-review/)
+12. [よくある誤解](/ja/guide/foundations/common-misconceptions/)
 
-読み終えたら [クイックスタート](/guide/getting-started/) へ進んでください。
+読み終えたら [クイックスタート](/ja/guide/getting-started/) へ進んでください。
 
 ## よくある誤解
 
@@ -59,11 +60,11 @@ sidebar:
 
 一章まとめて読むのが負担なら、まず次のページから始めてください。
 
-1. [Agent の基礎](/guide/foundations/agent-basics/)
-2. [目標、コンテキストとアクション](/guide/foundations/goals-context-and-actions/)
-3. [ファイル、ツールとコマンド](/guide/foundations/files-tools-and-commands/)
-4. [権限と承認](/guide/foundations/permissions-and-approvals/)
-5. [検証と人的レビュー](/guide/foundations/verification-and-human-review/)
+1. [Agent の基礎](/ja/guide/foundations/agent-basics/)
+2. [目標、コンテキストとアクション](/ja/guide/foundations/goals-context-and-actions/)
+3. [ファイル、ツールとコマンド](/ja/guide/foundations/files-tools-and-commands/)
+4. [権限と承認](/ja/guide/foundations/permissions-and-approvals/)
+5. [検証と人的レビュー](/ja/guide/foundations/verification-and-human-review/)
 
 これらを理解できれば、日常利用には十分です。
 

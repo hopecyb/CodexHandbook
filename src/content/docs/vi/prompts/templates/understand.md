@@ -3,9 +3,10 @@ title: Mẫu hiểu
 description: Lập nhận thức chung trước khi thay đổi.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu hiểu
@@ -52,8 +53,8 @@ Giá trị của mẫu hiểu là giúp bạn thu hẹp phạm vi tác vụ ti�
 
 ## Liên quan
 
-- [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-- [Case hiểu codebase](/cases/understand-a-codebase/)
+- [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+- [Case hiểu codebase](/vi/cases/understand-a-codebase/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Fehler- und Hinweisreferenz
 description: 'Lernindex gängiger Fehlermeldungen, Exit-Codes und Ursachen — zeigt auf Troubleshooting, ersetzt keinen offiziellen Support.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,14 +21,14 @@ Bei Fehlern zuerst: eher **Auth, Berechtigung, Umgebung, Netz oder Aufgabenlogik
 2. Phase: Start, Install, Ausführung, Push, Ausgabe
 3. Zur Fachseite
 
-Globaler Index: [Troubleshooting](/guide/reference/troubleshooting/)
+Globaler Index: [Troubleshooting](/de/guide/reference/troubleshooting/)
 
 ## Auth und Konto
 
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
-| Authentication failed / 401 | Token abgelaufen, nicht angemeldet | [Anmelden und Authentifizierung](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | Org sperrt Feature/Modell | Admin; Plan [Konto und Zugang](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | Token abgelaufen, nicht angemeldet | [Anmelden und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | Org sperrt Feature/Modell | Admin; Plan [Konto und Zugang](/de/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Zu häufig oder Quote | Später retry; Plan-Nutzung prüfen |
 
 ## Häufige Missverständnisse
@@ -63,9 +64,9 @@ Manchmal nur „finale Zusammenfassung“; nützlich darüber:
 
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
-| command not found: codex | Nicht installiert oder PATH | [CLI installieren](/guide/getting-started/install-cli/) |
-| Config parse error | TOML/YAML-Syntax | [CLI-Konfiguration](/guide/cli/configuration/) |
-| Permission denied (write) | Sandbox oder Freigabe abgelehnt | [Freigaben und Sandbox](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | Nicht installiert oder PATH | [CLI installieren](/de/guide/getting-started/install-cli/) |
+| Config parse error | TOML/YAML-Syntax | [CLI-Konfiguration](/de/guide/cli/configuration/) |
+| Permission denied (write) | Sandbox oder Freigabe abgelehnt | [Freigaben und Sandbox](/de/guide/cli/approvals-and-sandbox/) |
 | Nicht-null Exit (exec) | Aufgabe fehlgeschlagen oder Done-Kriterien | stderr-Logs; Prompt straffen |
 
 ## Zuerst klassifizieren
@@ -105,23 +106,23 @@ Unklar wohin: zuerst mit dieser Seite in die Großklasse.
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
 | User rejected tool call | Sie oder Policy abgelehnt | Freigeben oder Aufgabe ändern |
-| Sandbox violation | Schreibpfad oder Befehl über Grenzen | [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Outbound gesperrt | Cloud: [Internetzugriff](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | Schreibpfad oder Befehl über Grenzen | [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/) |
+| Network access denied | Outbound gesperrt | Cloud: [Internetzugriff](/de/guide/web-and-cloud/internet-access/) |
 
 ## Cloud und GitHub
 
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
-| Repository access denied | OAuth-Scope zu klein | [GitHub verbinden](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Repo-Name, Rechte, Netz | [Cloud-Troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Name oder Scope | [Secrets und Variablen](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Branch Protection | [PR erstellen](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | OAuth-Scope zu klein | [GitHub verbinden](/de/guide/web-and-cloud/connect-github/) |
+| Clone failed | Repo-Name, Rechte, Netz | [Cloud-Troubleshooting](/de/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Name oder Scope | [Secrets und Variablen](/de/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Branch Protection | [PR erstellen](/de/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP und Erweiterungen
 
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
-| MCP server failed to start | Befehlspfad, fehlende Abhängigkeit | [MCP verbinden](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | Befehlspfad, fehlende Abhängigkeit | [MCP verbinden](/de/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | Externe API langsam/down | Retry; MCP-Logs |
 | Unknown tool | Config ≠ Serverversion | Sitzung neu; Config aktualisieren |
 
@@ -129,14 +130,14 @@ Unklar wohin: zuerst mit dieser Seite in die Großklasse.
 
 | Hinweis oder Phänomen | Mögliche Ursache | Nächster Schritt |
 |---|---|---|
-| Context length exceeded | Chat oder @-Dateien zu groß | [Komprimierung](/guide/context/compaction/) · Scope verkleinern |
-| Model not available | Region oder Plan | [Modelle und Reasoning](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Chat oder @-Dateien zu groß | [Komprimierung](/de/guide/context/compaction/) · Scope verkleinern |
+| Model not available | Region oder Plan | [Modelle und Reasoning](/de/guide/foundations/models-and-reasoning/) |
 
 ## So nutzen
 
 1. **Schlüsselzeile** in Client- oder Handbuchsuche kopieren
 2. Tabelle → Fachseite und Checkliste
-3. Weiter ungelöst: vollständige Logs, [offizielle Ressourcen](/guide/reference/official-resources/)
+3. Weiter ungelöst: vollständige Logs, [offizielle Ressourcen](/de/guide/reference/official-resources/)
 
 ## Bei Reports mitgeben
 

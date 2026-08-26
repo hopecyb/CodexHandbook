@@ -3,24 +3,25 @@ title: Script và pipeline
 description: "Điều phối `codex exec` trong shell, Makefile và GitHub Actions — lặp lại được, kiểm toán được."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
 Ở đây nói về cách biến Codex từ thao tác tạm thời thành bước tự động hóa mà **đội có thể chạy lại, khi lỗi thì lần ra được, người khác cũng tiếp quản được**.
 
 Nói ngắn: script cố định quy trình; pipeline lặp lại theo quy tắc.
 
-Chương này giải thích cách nhúng [codex exec](/guide/developer-platform/non-interactive/codex-exec/) vào shell, Makefile hoặc pipeline CI.
+Chương này giải thích cách nhúng [codex exec](/vi/guide/developer-platform/non-interactive/codex-exec/) vào shell, Makefile hoặc pipeline CI.
 
 ## Nội dung trang này
 
 - Phân công giữa script local và CI job
 - Cách quản lý Prompt và khóa bí mật
-- Kết hợp với [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/)
+- Kết hợp với [Tự động hóa review mã](/vi/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Ở đây giải quyết gì
 
@@ -62,7 +63,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
 Đưa `prompts/ci/security-review.md` vào Git; thay đổi đi review.
@@ -98,7 +99,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
 ```
 
 :::caution
@@ -111,7 +112,7 @@ Cách cài và phạm vi quyền trong ví dụ phải chỉnh theo yêu cầu b
 |---|---|
 | Repo | `prompts/`, `tools/run-codex.sh` |
 | CI | Checkout chỉ đọc, CLI ghim phiên bản, upload log artifact |
-| Callback | Tùy chọn [Webhook](/guide/developer-platform/webhooks/overview/) cập nhật hệ thống nội bộ |
+| Callback | Tùy chọn [Webhook](/vi/guide/developer-platform/webhooks/overview/) cập nhật hệ thống nội bộ |
 
 ## Cách phán đoán
 

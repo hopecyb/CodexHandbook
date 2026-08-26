@@ -3,9 +3,10 @@ title: scripts/ and tests
 description: Add deterministic scripts to a Skill and verify their behavior.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Early on, it is tempting to put everything in `SKILL.md`. That works for simple flows, but once a step must run **stably, repeatedly, and verifiably**, scripts beat prose.
@@ -76,7 +77,7 @@ That separates "script is broken" from "Skill integration is wrong."
 
 Do not rely on prose alone for actions that must repeat reliably. Get scripts working first, then confirm Skill invocation.
 
-Scripts inherit the current approval policy; see [command rules](/guide/customization/rules/command-rules/) and [Skill security](/skills/security/).
+Scripts inherit the current approval policy; see [command rules](/en/guide/customization/rules/command-rules/) and [Skill security](/en/skills/security/).
 ---
 
 **Status:** verified  

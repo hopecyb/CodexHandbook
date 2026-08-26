@@ -3,9 +3,10 @@ title: コードレビュー自動化
 description: CI または PR フローに Codex レビューを接続——prompt、権限、人工ゲート。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ sidebar:
 
 「この PR は必ずマージできる」と決める用途には向きません。
 
-関連：[非対話モード](/guide/cli/non-interactive-mode/) · [SDK 概要](/guide/developer-platform/sdk-overview/)
+関連：[非対話モード](/ja/guide/cli/non-interactive-mode/) · [SDK 概要](/ja/guide/developer-platform/sdk-overview/)
 
 ## 推奨アーキテクチャ
 
@@ -74,7 +75,7 @@ diff が大きい場合は <パス一覧> だけレビュー。
 | 注入防止 | 未消毒 PR 説明を system prompt にそのまま結合しない |
 | 秘密 | GitHub Secrets に token |
 
-[人工承認パターン](/cases/workflows/human-approval-patterns/) · [環境変数](/guide/reference/environment-variables/)
+[人工承認パターン](/ja/cases/workflows/human-approval-patterns/) · [環境変数](/ja/guide/reference/environment-variables/)
 
 ## 品質ゲート
 
@@ -84,7 +85,7 @@ diff が大きい場合は <パス一覧> だけレビュー。
 
 ## Cloud との関係
 
-複雑リポジトリは [Cloud](/guide/web-and-cloud/) で完全テスト後にレビュー。CI 内 exec は **軽量 diff レビュー**向き。
+複雑リポジトリは [Cloud](/ja/guide/web-and-cloud/) で完全テスト後にレビュー。CI 内 exec は **軽量 diff レビュー**向き。
 
 ## よくあるミス
 

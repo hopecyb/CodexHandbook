@@ -3,9 +3,10 @@ title: Planung
 description: "Zuerst Schritte, Risiken und Überprüfung klären lassen — dann entscheiden, ob ausgeführt wird."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75099ef
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -94,7 +95,7 @@ Noch keine Dateien ändern. Bitte Plan auf Basis des aktuellen Repos mit:
 5. Überprüfung je Schritt
 ```
 
-Ausführlicher: [Zuerst einen Plan verlangen](/prompts/ask-for-a-plan/).
+Ausführlicher: [Zuerst einen Plan verlangen](/de/prompts/ask-for-a-plan/).
 
 ## Was Sie reviewen
 
@@ -129,7 +130,7 @@ Wichtige Kollaborationsgewohnheit:
 - **Planphase**: explorieren, Optionen, Unsicherheit sichtbar machen
 - **Ausführungsphase**: bestätigten Pfad vorantreiben
 
-Ändern sich Prämissen unterwegs → zurück zur Planung, nicht durchbrechen. Siehe [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/).
+Ändern sich Prämissen unterwegs → zurück zur Planung, nicht durchbrechen. Siehe [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/).
 
 ## Hochrisiko-Pläne brauchen drei Zusatzpunkte
 
@@ -152,10 +153,10 @@ Fordern Sie Phasen an: nur lesende Analyse, minimale Änderung, Verifikation, Ro
 
 ## Empfohlene Kombinationen
 
-- Vollständige Hauptkette: [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- Prompt klar: [Zuerst einen Plan verlangen](/prompts/ask-for-a-plan/)
-- Korrektur unterwegs: [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/)
-- Langfristige Normen: [Was ist AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+- Vollständige Hauptkette: [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
+- Prompt klar: [Zuerst einen Plan verlangen](/de/prompts/ask-for-a-plan/)
+- Korrektur unterwegs: [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/)
+- Langfristige Normen: [Was ist AGENTS.md](/de/guide/customization/agents-md/what-is-agents-md/)
 
 ---
 

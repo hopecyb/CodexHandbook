@@ -3,9 +3,10 @@ title: Quy tắc cho phép và từ chối
 description: Dùng quy tắc lệnh và đường dẫn để ràng buộc thao tác Agent thực thi được — thói cá nhân và đường cơ sở nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ Giá trị chính có hai loại:
 | Đường dẫn | Cấm ghi `../`, cấm đọc `~/.ssh` |
 | Mạng | Cấm ra mạng hoặc chỉ cho phép tên miền registry |
 
-Đối chiếu [Ma trận quyền](/guide/reference/permission-matrix/): quy tắc là enforcement **cấu hình được**, ma trận mô tả **mặc định điển hình**.
+Đối chiếu [Ma trận quyền](/vi/guide/reference/permission-matrix/): quy tắc là enforcement **cấu hình được**, ma trận mô tả **mặc định điển hình**.
 
 ## Phân tầng khuyến nghị
 

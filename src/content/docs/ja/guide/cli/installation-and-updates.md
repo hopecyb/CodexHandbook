@@ -3,11 +3,12 @@ title: CLI のインストールと更新
 description: インストール、アップグレード、バージョン確認。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6b8ceaf
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 CLI を初めて入れるとき、多くの人は次の点でつまずきます。
@@ -54,7 +55,7 @@ CLI のインストール完了とは、一度コマンドが走ったことで�
 
 実務的な合格基準は、**現在のターミナルで見つかり、認証まで完了していること**です。
 
-関連：[CLI のインストール](/guide/getting-started/install-cli/)  
+関連：[CLI のインストール](/ja/guide/getting-started/install-cli/)
 公式のインストール・アップグレード説明は [OpenAI Codex ドキュメント](https://developers.openai.com/codex)。
 
 ---

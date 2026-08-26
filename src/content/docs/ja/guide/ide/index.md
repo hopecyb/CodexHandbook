@@ -5,9 +5,10 @@ sidebar:
   order: 12
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 66307a0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 IDE 拡張は**書きながら diff を見る**作業に向いています。ファイルを開き、コードを選択し、サイドバーでタスクを説明します。本章では、選定からレビューまでの一連の流れを扱います。
@@ -20,15 +21,15 @@ IDE 拡張は**書きながら diff を見る**作業に向いています。フ
 
 | テーマ | ページ |
 |---|---|
-| 選定 | [対応エディター](/guide/ide/supported-editors/) |
-| インストール | [インストール](/guide/ide/installation/) |
-| コンテキスト | [エディターコンテキスト](/guide/ide/editor-context/) · [選択範囲と開いているファイル](/guide/ide/selected-code-and-open-files/) |
-| ワークフロー | [ローカルタスク](/guide/ide/local-task-workflow/) · [Cloud タスク](/guide/ide/cloud-task-workflow/) |
-| 品質 | [変更のレビュー](/guide/ide/reviewing-changes/) |
-| 設定 | [設定](/guide/ide/settings/) |
-| トラブルシューティング | [トラブルシューティング](/guide/ide/troubleshooting/) |
+| 選定 | [対応エディター](/ja/guide/ide/supported-editors/) |
+| インストール | [インストール](/ja/guide/ide/installation/) |
+| コンテキスト | [エディターコンテキスト](/ja/guide/ide/editor-context/) · [選択範囲と開いているファイル](/ja/guide/ide/selected-code-and-open-files/) |
+| ワークフロー | [ローカルタスク](/ja/guide/ide/local-task-workflow/) · [Cloud タスク](/ja/guide/ide/cloud-task-workflow/) |
+| 品質 | [変更のレビュー](/ja/guide/ide/reviewing-changes/) |
+| 設定 | [設定](/ja/guide/ide/settings/) |
+| トラブルシューティング | [トラブルシューティング](/ja/guide/ide/troubleshooting/) |
 
-入門ショートカット：[IDE 拡張のインストール](/guide/getting-started/install-ide-extension/) · [クライアントの選択](/guide/getting-started/choose-your-codex-client/)
+入門ショートカット：[IDE 拡張のインストール](/ja/guide/getting-started/install-ide-extension/) · [クライアントの選択](/ja/guide/getting-started/choose-your-codex-client/)
 
 ## 最初に押さえておくこと
 

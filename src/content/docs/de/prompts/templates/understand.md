@@ -3,9 +3,10 @@ title: Verstehen-Vorlage
 description: Zuerst Orientierung aufbauen, dann ändern.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Verstehen-Vorlage
@@ -52,8 +53,8 @@ Wert der Verstehen-Vorlage: den Scope der nächsten Aufgabe zuerst eingrenzen.
 
 ## Verwandt
 
-- [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- [Codebase verstehen (Fall)](/cases/understand-a-codebase/)
+- [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
+- [Codebase verstehen (Fall)](/de/cases/understand-a-codebase/)
 
 ---
 

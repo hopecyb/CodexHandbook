@@ -3,9 +3,10 @@ title: 'Exemplo: Skill de automação'
 description: Empacote checagens repetidas ou geração de relatórios como Skill.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemplo: Skill de automação
@@ -30,8 +31,8 @@ description: Resume alterações de ontem, resultados de teste e pendências em 
 
 ## Relacionado
 
-- [Caso: automatizar relatório diário](/cases/automate-a-daily-report/)
-- [Tarefas agendadas](/skills/automations/scheduled-tasks/)
+- [Caso: automatizar relatório diário](/pt/cases/automate-a-daily-report/)
+- [Tarefas agendadas](/pt/skills/automations/scheduled-tasks/)
 ---
 
 **Status:** verified  

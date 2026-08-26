@@ -3,9 +3,10 @@ title: 프로젝트 컨텍스트
 description: 프로젝트 설명과 디렉터리급 배경.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4e1818a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---

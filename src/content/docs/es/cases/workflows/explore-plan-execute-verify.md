@@ -3,9 +3,10 @@ title: "Explorar—planificar—ejecutar—verificar"
 description: Flujo principal genérico de Codex — cuatro puntos de control por fase, más fiable que «todo de una vez».
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Este es el flujo de trabajo por defecto que recomienda este manual: de «aún no sé cómo» a «listo para fusionar».
@@ -19,7 +20,7 @@ Este es el flujo de trabajo por defecto que recomienda este manual: de «aún no
 ④ Verificar Verify   → Tests, revisión del diff, contraste con la «definición de terminado»
 ```
 
-No saltes ①② para ir directo a ③: eso suele acabar en «arreglar a ciegas». Ver [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/).
+No saltes ①② para ir directo a ③: eso suele acabar en «arreglar a ciegas». Ver [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/).
 
 ## ① Explorar
 
@@ -45,7 +46,7 @@ A partir de la exploración anterior, dame un plan: pasos numerados, archivos im
 No escribas código hasta que yo responda «ejecutar según el plan».
 ```
 
-Las tareas grandes o de alto riesgo esperan confirmación. En tareas pequeñas puedes acordar «si el plan tiene ≤3 pasos, puede ejecutarse automáticamente» y escribirlo en [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Las tareas grandes o de alto riesgo esperan confirmación. En tareas pequeñas puedes acordar «si el plan tiene ≤3 pasos, puede ejecutarse automáticamente» y escribirlo en [AGENTS.md](/es/guide/customization/agents-md/writing-effective-instructions/).
 
 ## ③ Ejecutar
 
@@ -67,7 +68,7 @@ Frase guía: «Ejecuta el paso 2; si hace falta cambiar el plan, para y explíca
 | Humana | Leer el diff, probar a mano las rutas críticas |
 | Artefacto | Capturas, fragmentos de log, respuestas de API |
 
-Listas relacionadas: [Definir terminado](/prompts/define-done/) y [Ejecutar tests](/guide/quality/run-tests/).
+Listas relacionadas: [Definir terminado](/es/prompts/define-done/) y [Ejecutar tests](/es/guide/quality/run-tests/).
 
 ## Ajuste según el tamaño de la tarea
 
@@ -80,7 +81,7 @@ Listas relacionadas: [Definir terminado](/prompts/define-done/) y [Ejecutar test
 
 ## Con la plantilla de casos EPXV
 
-El equipo puede volcar las cuatro fases en la [plantilla de caso](/cases/use-cases/case-study-template/) y en las descripciones de PR, para un lenguaje común.
+El equipo puede volcar las cuatro fases en la [plantilla de caso](/es/cases/use-cases/case-study-template/) y en las descripciones de PR, para un lenguaje común.
 
 ## Errores frecuentes
 

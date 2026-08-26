@@ -3,153 +3,84 @@ title: Xử lý sự cố Cloud
 description: "Chỉ mục triệu chứng cho kết nối GitHub, môi trường, Secrets, truy cập đi ra và vấn đề PR."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 4ba9a4d
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 80
+reviewed_at: 2026-08-26
 ---
 
-Khi Cloud fail, chạy lại thường không sửa gốc rễ.
+A Cloud retry consumes more time but does not add missing permissions, dependencies, or network configuration. Identify the failing stage first.
 
-Vấn đề Cloud thường nằm ở **quyền, khác môi trường, chứng chỉ hoặc mạng**. Trang này dẫn triệu chứng tới chủ đề đúng để tránh thử lại mù quáng trong chat.
+## Five-layer triage
 
-## Nội dung phủ
+| Stage | Common symptom | First check |
+|---|---|---|
+| Repository connection | Repository missing, 403, branch missing | GitHub authorization scope, organization policy, starting branch |
+| Container/setup | `command not found`, dependency installation failure | Pinned runtime, setup script, Secret |
+| Agent network | Setup downloads successfully, Agent `curl` fails | Agent access defaults to Off, allowlist, HTTP methods |
+| Agent execution | Wrong-scope edits, test command missing | Prompt scope, `AGENTS.md`, work log |
+| Delivery | Incomplete diff, unable to open a PR | Branch state, write access, protection rules |
 
-- Việc cần kiểm trước khi Tác vụ fail
-- Xử lý sự cố Cloud khác cục bộ thế nào
-- Khi nào quay lại kiểm chứng cục bộ từng bước nhỏ
+## Preserve evidence first
 
-## Kiểm điều kiện trước
+Record repository, starting commit, environment name, failure stage, first meaningful error, and complete command. Do not keep only “exit 1.”
 
-Nếu «Cloud đỏ, cục bộ xanh», kiểm điều kiện chạy trước.
+```text
+Environment: api-node22
+Starting point: main@abc123
+Stage: setup
+Command: pnpm install --frozen-lockfile
+First error: ERR_PNPM_FETCH_401 ...
+Local difference: local uses ~/.npmrc; Cloud has no NPM_TOKEN configured
+```
 
-Nguyên nhân phổ biến:
+This record points to a repair instead of forcing the next run to guess again.
 
-- Môi trường từ xa khác cục bộ
-- Cloud không thấy việc cục bộ chưa push
-- Secrets cấu hình sai
-- Mạng hoặc quyền bị hạn chế
+## Frequent failures
 
-Kiểm tiền đề trước khi đổ lỗi cho bản thân Tác vụ.
+### Setup sees a Secret but the Agent does not
 
-## Phân loại nhanh
+This is intentional: Secrets are removed before the Agent phase. Put credential-dependent installation in setup. Do not convert the value to an ordinary environment variable to bypass the protection.
 
-| Triệu chứng | Kiểm trước |
-|---|---|
-| Không kết nối repo / 403 | [Kết nối GitHub](/guide/web-and-cloud/connect-github/) |
-| Cài dependency fail | [Truy cập Internet](/guide/web-and-cloud/internet-access/) · [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/) |
-| Package riêng / API 401 | [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/) |
-| Tác vụ kẹt chờ | [Ủy thác và theo dõi](/guide/web-and-cloud/delegate-and-follow-up/) · Đang chờ Phê duyệt? |
-| Commit cục bộ vô hình với Cloud | Đã push? Cloud không đọc commit cục bộ chưa push |
-| Không mở PR hoặc push | Bảo vệ nhánh · [Tạo PR](/guide/web-and-cloud/create-pull-requests/) |
-| Kiểm thử đỏ Cloud, xanh cục bộ | Căn chỉnh phiên bản/env trong [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/) |
+### Setup has internet but the Agent does not
 
-## Thứ tự xử lý sự cố
+This is also the default. If the task truly requires Agent internet access, enable it for the environment, constrain domains and methods, and inspect the logs.
 
-1. Repo và nhánh đúng chưa?
-2. Quyền và ủy quyền đủ chưa?
-3. Môi trường và dependency sẵn chưa?
-4. Secrets và mạng hoạt động chưa?
-5. Mô tả Tác vụ thiếu ràng buộc then chốt?
+### Cached dependencies are stale
 
-Làm rõ các điểm này tốt hơn chạy lại ngay.
+Changing setup, maintenance, variables, or Secrets invalidates the cache automatically. When repository changes make a cache incompatible, use **Reset cache** on the environment page. For a shared team environment, assess the impact on other users first.
 
-## Kết nối và quyền
+### Local is green but Cloud is red
 
-**Triệu chứng:** OAuth thành công nhưng Tác vụ không clone được.
+Compare Node/Python versions, lockfiles, system dependencies, hidden local configuration, VPN or localhost services, and case-sensitive paths. Turn differences into explicit setup and repository rules.
 
-**Kiểm:**
+### PR review did not run
 
-1. Phạm vi ủy quyền có gồm org/repo đích
-2. Repo đã archive hoặc hạn chế GitHub App đang bật
-3. Tài khoản cá nhân kết nối repo org cần SSO
+Confirm Cloud configuration for the repository, enabled Code review, the exact `@codex review` comment, and GitHub integration permissions. Automatic reviews must also be enabled separately.
 
-**Triệu chứng:** push bị từ chối.
+## When to return local
 
-**Kiểm:** bảo vệ nhánh, review bắt buộc, cố push thẳng lên `main`
+If a problem depends on a local service, or two consecutive runs are repairing the environment rather than business code, reproduce it locally first. Add the successful commands, versions, and tests to `AGENTS.md` or setup before delegating again.
 
-## Hiểu nhầm thường gặp
+## Acceptance after repair
 
-### 1. Lỗi lúc cài luôn là vấn đề dependency
+- [ ] The same environment runs repeatedly from a clean starting point.
+- [ ] The fix did not hide the problem with broader repository access or unrestricted network access.
+- [ ] Logs do not expose a Secret.
+- [ ] A person still reviews the result diff and tests.
 
-Cũng có thể là mạng, auth, Secrets hoặc quyền registry riêng.
+## Official sources
 
-### 2. Xanh cục bộ nghĩa code tốt và Cloud không ổn định
-
-Thường nghĩa:  
-**môi trường cục bộ của bạn có tiền đề mà Cloud không có.**
-
-### 3. Tác vụ kẹt nghĩa mô hình đang nghĩ
-
-Có thể là:
-
-- Đang chờ Phê duyệt
-- Đang chờ mạng
-- Đang chờ môi trường khởi động
-- Phạm vi Tác vụ quá rộng
-
-## Môi trường và dependency
-
-**Triệu chứng:** `command not found` (node, python, v.v.).
-
-**Kiểm:** image nền có runtime cần thiết; `AGENTS.md` ghi phiên bản và lệnh cài.
-
-**Triệu chứng:** xung đột lockfile hoặc timeout cài.
-
-**Kiểm:** chính sách đi ra; mirror registry; dependency cần VPN (Cloud thường không trên mạng nội bộ)
-
-## Secrets và biến
-
-**Triệu chứng:** biến môi trường rỗng lúc build.
-
-**Kiểm:**
-
-- Tên Secret khớp tài liệu (thường phân biệt hoa thường)
-- Cấu hình đúng phạm vi repo/môi trường
-- Secret vô tình dán vào Prompt rồi bị che
-
-Thêm: [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/)
-
-## Tác vụ kẹt và timeout
-
-| Nguyên nhân | Hành động |
-|---|---|
-| Đang chờ phê duyệt người | Phê duyệt hoặc từ chối trong App/điện thoại |
-| Tác vụ quá lớn | Tách thành ủy thác nhỏ hơn |
-| Khởi động môi trường chậm | Cold start bình thường; nếu kéo dài, kiểm trang trạng thái chính thức |
-
-Theo dõi: [Ủy thác và theo dõi](/guide/web-and-cloud/delegate-and-follow-up/)
-
-## Chất lượng đầu ra
-
-Cloud xong nhưng kết quả không dùng được:
-
-1. So với mô tả Tác vụ — thiếu tiêu chí nghiệm thu?
-2. Checkout cùng nhánh cục bộ và chạy kiểm thử
-3. Thêm theo dõi với [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/) thay vì chạy lại cả Tác vụ
-
-## Khi nào quay lại cục bộ
-
-Nếu đã qua hai vòng trên điều kiện Cloud hơn là bản thân Tác vụ:
-
-- Tái hiện tối thiểu cục bộ
-- Ghi deps, lệnh, Kiểm chứng
-- Ủy thác Cloud lại
-
-Thường nhanh hơn đoán trong môi trường từ xa.
-
-## Quan hệ với chỉ mục xử lý sự cố toàn cục
-
-Vấn đề cục bộ CLI/IDE/App: [Tham chiếu · Xử lý sự cố](/guide/reference/troubleshooting/). Trang này chỉ phủ đường **đặc thù Cloud**.
-
-## Tham chiếu
-
-- Tài liệu hỗ trợ OpenAI Codex Cloud
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** Cloud  
-**Ghi chú đối chiếu:** Khung phân loại giúp ích, nhưng giả định hành vi kết nối repo Cloud, Secrets, Phê duyệt, mạng và PR hiện tại; khi Cloud và năng lực đa client tiến hóa, map triệu chứng–chủ đề cần viết lại theo tài liệu hỗ trợ chính thức mới nhất.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** Cloud
+
+**Kiểm chứng gần nhất:** 2026-08-26

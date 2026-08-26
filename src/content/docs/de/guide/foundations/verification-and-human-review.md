@@ -3,9 +3,10 @@ title: Überprüfung und menschliche Kontrolle
 description: "Warum Ergebnisse prüfbar sein müssen und wie du nachkontrollierst."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 19de747
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -14,10 +15,10 @@ Codex kann dich beschleunigen — die finale Bestätigungsverantwortung übernim
 
 Codex erhöht Tempo, **ersetzt aber keine Abnahme**. Mindestens prüfen:
 
-1. Den [Diff](/guide/quality/review-diffs/) lesen: Welche Dateien geändert, ob Grenzen überschritten
+1. Den [Diff](/de/guide/quality/review-diffs/) lesen: Welche Dateien geändert, ob Grenzen überschritten
 2. Anhand deiner definierten Fertigkriterien prüfen
-3. Tests laufen lassen, wenn möglich: [Tests ausführen](/guide/quality/run-tests/)
-4. Externe Fakten gegen Quellen prüfen: [Quellen validieren](/guide/quality/validate-sources/)
+3. Tests laufen lassen, wenn möglich: [Tests ausführen](/de/guide/quality/run-tests/)
+4. Externe Fakten gegen Quellen prüfen: [Quellen validieren](/de/guide/quality/validate-sources/)
 
 ## Was menschliche Kontrolle wirklich prüft
 

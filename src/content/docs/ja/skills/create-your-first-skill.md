@@ -3,9 +3,10 @@ title: 最初の Skill を作成する
 description: コミット可能な pr-review Skill をゼロから作り、テストとチーム共有まで。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 タスクの出し方は分かるが Skill をまだ作っていない人向けに、最初の Skill の基本手順を説明します。
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 向いている人
 
-[最初のタスク](/cases/first-task/) を完了し、テスト用リポジトリで試す意思がある人。
+[最初のタスク](/ja/cases/first-task/) を完了し、テスト用リポジトリで試す意思がある人。
 
 ## なぜ `pr-review` から始めるか
 
@@ -128,14 +129,14 @@ git commit -m "docs: add pr-review skill for Codex"
 - [ ] `$pr-review` が動き、危険な git 操作をしない
 - [ ] 出力に段階付き結論があり、漠然とした感想だけではない
 - [ ] `description` が一文でトリガーシーンを説明
-- [ ] [権限と承認](/guide/permissions-and-sandbox/) を確認（本例はスクリプトなし）
+- [ ] [権限と承認](/ja/guide/permissions-and-sandbox/) を確認（本例はスクリプトなし）
 
 「小さく安定した」Skill から始めると、明確なワークフローを安定再利用しやすいです。
 
 ## 次のステップ
 
-- [探索—計画—実行—検証](/prompts/templates/understand/) を Skill に固定
-- GitHub API が必要なら [MCP](/skills/mcp/mcp-overview/) を導入
+- [探索—計画—実行—検証](/ja/prompts/templates/understand/) を Skill に固定
+- GitHub API が必要なら [MCP](/ja/skills/mcp/mcp-overview/) を導入
 
 ## 参考
 - OpenAI Codex Skills 公式例と `skill-creator`（環境が提供する場合）

@@ -3,9 +3,10 @@ title: 데스크톱 App 문제 해결
 description: 설치·로그인·작업 실패의 흔한 대응.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ca74b6c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,7 +21,7 @@ sidebar:
 | 작업이 계속 승인 대기 | 작업 뷰로 돌아가 대기 중인 요청을 처리 |
 | 변경이 기대와 다름 | 제약을 조이고, 새 스레드를 열고, 컨텍스트를 점검 |
 
-그래도 실패하면: [https://developers.openai.com/codex](https://developers.openai.com/codex)와 [문제 해결 색인](/guide/reference/troubleshooting/).
+그래도 실패하면: [https://developers.openai.com/codex](https://developers.openai.com/codex)와 [문제 해결 색인](/ko/guide/reference/troubleshooting/).
 
 ## 흔한 오해
 

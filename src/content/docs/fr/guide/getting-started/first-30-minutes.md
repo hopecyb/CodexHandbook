@@ -3,9 +3,10 @@ title: Les 30 premières minutes
 description: Un parcours de 30 minutes à suivre dès le premier jour.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ L'objectif des 30 premières minutes est de compléter une boucle entière.
 
 | Temps | Que faire |
 |---|---|
-| 0–5 min | Lire la [Liste de contrôle sécurité](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 min | [Installer l'App de bureau](/guide/getting-started/install-desktop-app/) et [se connecter](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 min | [Créer un projet d'entraînement](/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Exécuter votre première Tâche](/guide/getting-started/run-your-first-task/) et examiner |
-| 25–30 min | Ouvrir [Parler à Codex](/guide/learning-paths/beginner/01-talk-to-codex/) pour entrer dans le parcours débutant |
+| 0–5 min | Lire la [Liste de contrôle sécurité](/fr/guide/getting-started/beginner-safety-checklist/) |
+| 5–10 min | [Installer l'App de bureau](/fr/guide/getting-started/install-desktop-app/) et [se connecter](/fr/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 min | [Créer un projet d'entraînement](/fr/guide/getting-started/create-your-first-project/) |
+| 15–25 min | [Exécuter votre première Tâche](/fr/guide/getting-started/run-your-first-task/) et examiner |
+| 25–30 min | Ouvrir [Parler à Codex](/fr/guide/learning-paths/beginner/01-talk-to-codex/) pour entrer dans le parcours débutant |
 
 ## Ce que ces 30 minutes doivent accomplir
 
@@ -94,7 +95,7 @@ Si après 30 minutes vous avez fait ces quatre choses, ce tour est terminé :
 
 ## Si vous êtes bloqué
 
-Allez à l'[index de dépannage](/guide/reference/troubleshooting/). Si un concept n'est pas clair, revenez aux [Prérequis](/guide/start-here/prerequisites/) et [Local vs cloud](/guide/foundations/local-vs-cloud/).
+Allez à l'[index de dépannage](/fr/guide/reference/troubleshooting/). Si un concept n'est pas clair, revenez aux [Prérequis](/fr/guide/start-here/prerequisites/) et [Local vs cloud](/fr/guide/foundations/local-vs-cloud/).
 
 Dans la première demi-heure, compléter une boucle « assigner une Tâche, voir le résultat, le juger vous-même » vaut déjà le coup.
 

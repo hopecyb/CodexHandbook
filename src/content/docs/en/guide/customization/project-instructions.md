@@ -3,9 +3,10 @@ title: Project Instructions
 description: Project-level context beyond AGENTS.md—how README, docs, and conversation references divide labor.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Then not only people get confused—Codex does too. The point is to keep “proj
 - **Project instructions**: relatively stable for months
 - **Conversation context**: this task’s goal, constraints, and intermediate conclusions
 
-In long tasks, if a rule keeps coming up, **write it back** to `AGENTS.md` or `docs/` instead of copy-pasting across ten threads. See [Keep Context Focused](/guide/context/keep-context-focused/).
+In long tasks, if a rule keeps coming up, **write it back** to `AGENTS.md` or `docs/` instead of copy-pasting across ten threads. See [Keep Context Focused](/en/guide/context/keep-context-focused/).
 
 ## Common Mistakes
 

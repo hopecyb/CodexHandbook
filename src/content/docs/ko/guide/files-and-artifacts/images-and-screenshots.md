@@ -3,14 +3,15 @@ title: 이미지와 스크린샷
 description: Codex에 스크린샷·디자인 시안을 제공하고, 작업 중 이미지 파일을 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-이미지는 Agent가 인터페이스 문제, 디자인 의도, 화이트보드 스케치를 **보게** 합니다. 이 페이지는 입력(당신이 준 이미지)과 저장소 안 이미지 파일 관리를 다룹니다. 새 이미지 생성은 [이미지 생성](/guide/tools/image-generation/)을 보세요.
+이미지는 Agent가 인터페이스 문제, 디자인 의도, 화이트보드 스케치를 **보게** 합니다. 이 페이지는 입력(당신이 준 이미지)과 저장소 안 이미지 파일 관리를 다룹니다. 새 이미지 생성은 [이미지 생성](/ko/guide/tools/image-generation/)을 보세요.
 
 스크린샷으로 작업을 줄 때는, 어디를 보고 싶은지, 왜 그곳이 문제인지 알려 주는 편이 좋습니다.
 
@@ -29,7 +30,7 @@ sidebar:
 | 아키텍처 화이트보드 | 선명한 사진 또는보내기 그림 + 범례 |
 | 오류 팝업 | 오류 전문 포함, 한쪽만 자르지 않음 |
 
-심화: [이미지 프롬프트](/prompts/prompting-with-images/)
+심화: [이미지 프롬프트](/ko/prompts/prompting-with-images/)
 
 ## 이미지가 진짜 보완하는 것
 
@@ -102,7 +103,7 @@ sidebar:
 
 - 스크린샷에 고객 데이터, 내부 URL, token이 있을 수 있음 — 먼저 마스킹
 - 키가 보이는 설정 UI를 신뢰하지 않는 작업에 보내지 않음
-- [민감 컨텍스트](/guide/context/sensitive-context/)
+- [민감 컨텍스트](/ko/guide/context/sensitive-context/)
 
 ## 참고 출처
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -112,9 +113,9 @@ sidebar:
 
 「그림대로 구현」형 작업:
 
-1. 구현과 참고 그림을 나란히 비교(또는 [브라우저 도구](/guide/tools/browser/)로 페이지 열기)
+1. 구현과 참고 그림을 나란히 비교(또는 [브라우저 도구](/ko/guide/tools/browser/)로 페이지 열기)
 2. 반응형·다크 모드 점검(요구가 있으면)
-3. [산출물 검증](/guide/quality/verify-artifacts/)
+3. [산출물 검증](/ko/guide/quality/verify-artifacts/)
 
 ## 흔한 실수
 

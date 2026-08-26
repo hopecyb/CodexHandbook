@@ -1,117 +1,65 @@
 ---
-title: 対応エディター
-description: Codex IDE 拡張が対応するエディター、選定方法、よくある制限。
+title: 対応エディタ
+description: VS Code 互換拡張、Xcode 統合、JetBrains 統合を区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1f0b54d
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-IDE 拡張は Codex を**すでに使っているエディター**に組み込み、コードを書く同じ画面からタスクを開始し、diff を確認し、変更を受け入れられます。本ページでは対応範囲と選定を説明し、インストール手順は [IDE 拡張のインストール](/guide/ide/installation/) を参照してください。
+Codex は現在、異なる方法で主要なエディタに統合されます。VS Code 系では Codex 拡張を使い、Xcode と JetBrains IDE ではそれぞれの統合入口を使います。
 
-## 本ページの内容
+## 現在のサポート方法
 
-- 公式拡張があるエディター
-- IDE 拡張 vs デスクトップ App vs CLI の選び方
-- 複数エディターを使うチームでのワークフロー統一
-
-## 選定時に見ること
-
-ここでは主に 2 点を扱います。どのエディターが公式サポート範囲内か、そして常用エディターがある場合に IDE で Codex を使い続けるべきかです。
-
-## 公式サポート範囲
-
-**具体的な一覧とバージョン要件は [OpenAI Codex ドキュメント](https://developers.openai.com/codex) を正とする**。一般的には次が含まれます。
-
-| エディター | 典型的なユーザー | 説明 |
+| エディタ | Codex の入口 | 開き方 |
 |---|---|---|
-| Visual Studio Code | 多くの開発者 | 拡張マーケットからインストール、エコシステムが最も成熟 |
-| Cursor など VS Code 系 fork | AI エディターを既に使っているユーザー | 通常は VS Code 拡張機構と互換。実機確認を推奨 |
-| JetBrains シリーズ（公式提供がある場合） | Java/Kotlin/IDEA ユーザー | 機能と UI は VS Code 版と多少異なる場合あり |
+| Visual Studio Code | Codex 拡張 | Codex アイコンまたは `Codex: Open Codex Sidebar` |
+| Cursor | 互換性のある Codex 拡張 | Codex アイコンまたは Command Palette |
+| Windsurf | 互換性のある Codex 拡張 | Codex アイコンまたは Command Palette |
+| Visual Studio Code Insiders | Codex 拡張 | 拡張パネルと Codex サイドバー |
+| Xcode | Xcode coding assistant 統合 | 新しいチャットを作成して Codex Agent を選択 |
+| JetBrains IDEs | JetBrains AI Chat 統合 | AI Chat を開いて Codex を選択 |
 
-公式一覧にないエディター：[CLI](/guide/cli/) や [デスクトップ App](/guide/desktop-app/) を代替として使い、非公式移植拡張には依存しないでください。
+インストールの入口と最低バージョンは変わる可能性があります。必ず [Codex IDE の公式ページ](https://learn.chatgpt.com/docs/codex/ide) から移動し、名前の似たサードパーティ拡張を公式サポートだと判断しないでください。
 
-## よくある誤解
+## IDE の入口に最も適した作業
 
-### エディターをサポートしているから、他の入口と機能がまったく同じとは限らない
+- 現在開いているファイルまたは選択範囲を質問へ直接追加する
+- 局所的なコードを説明、変更し、そのままフォローアップする
+- ソースコードの横で要約と変更をレビューする
+- 小さなタスクはローカルに残し、大きくなったら長いワークフローへ委任する
 
-「拡張がある」＝「IDE で何でもできる」と捉える人がいます。
-
-入口ごとに重点が異なります。
-
-- IDE はコードに密着した変更向き
-- App はプロジェクト単位のタスクとマルチタスク調整向き
-- CLI はターミナル、スクリプト、リモート環境向き
-
-### エディター選定は、慣れているかだけでは決まらない
-
-主に次のような作業なら：
-
-- コードの局所修正
-- 選択範囲の確認
-- 変更しながらテスト
-
-IDE が向いています。
-
-一方、次が多いなら：
-
-- 長時間タスク
-- ドキュメントの統括
-- 複数タスクの並行
-
-App や CLI の方が合うことが多いです。
-
-## IDE 拡張を選ぶタイミング
-
-| 向いている | あまり向かない |
-|---|---|
-| 変更時に「現在のファイル / 選択範囲」を自動でコンテキストに入れたい | 並列マルチ Agent、worktree など App 専用機能が必要 |
-| エディター内の inline diff に慣れている | 主に非コードの長時間タスク（ドキュメント、調査） |
-| 既に IDE でテスト・デバッグしている | 標準化された Cloud 環境でゼロからリポジトリを構築したい |
-
-判断の入口：[Codex クライアントの選択](/guide/getting-started/choose-your-codex-client/)
-
-## デスクトップ App との役割分担
+例：
 
 ```text
-IDE 拡張：編集中 → 小さな修正 → インラインレビュー → ローカルテスト
-デスクトップ App：プロジェクト単位タスク → 並列 Agent → worktree → 通知と Cloud 委任
+現在の選択範囲にある再試行ループを確認してください。
+最初に終了条件を説明してから、最小限の変更を行ってください。変更は現在のファイルと対応するテストだけに限定します。
+完了したら diff とテストコマンドを報告し、依存関係は更新しないでください。
 ```
 
-同一アカウントとプロジェクト設定を共有できます。[エディターコンテキスト](/guide/ide/editor-context/) と [AGENTS.md のスコープ](/guide/customization/agents-md/scope-and-precedence/) を参照。
+## 複数エディタを使うチームで一貫性を保つ
 
-## チームでの統一
+1. ビルド、テスト、フォーマットのコマンドをリポジトリの `AGENTS.md` またはコントリビューション文書に記述する。
+2. プロンプトでファイル範囲を制約し、特定 IDE の専用ボタンに依存しない。
+3. 最終検収は Git diff と同じテスト群を基準にし、「自分の IDE では動く」を基準にしない。
+4. 正確な UI の案内が必要な場合だけ、IDE ごとに説明を分ける。
 
-1. README に**推奨エディター + 最低拡張バージョン**を明記
-2. コア規約は `AGENTS.md` に書き、特定 IDE の非公開機能に縛らない
-3. Code review は Git diff を正とし、「特定 IDE でしか見られない」ビューに依存しない
+## 一覧にないエディタ
 
-## どの入口を使うかの判断
+まず [Codex CLI](/ja/guide/cli/) または[デスクトップ App](/ja/guide/desktop-app/)を使ってください。VS Code の拡張パッケージを互換性のないエディタへ無理にインストールしたり、サードパーティ統合を OpenAI の公式機能だとみなしたりしないでください。
 
-迷ったら、次の質問で判断できます。
+インストール手順は [IDE 統合をインストールする](/ja/guide/getting-started/install-ide-extension/)、コンテキストの使い方は[エディタのコンテキスト](/ja/guide/ide/editor-context/)を参照してください。
 
-1. コード修正の大半をエディターで行っているか
-2. 現在のファイル、選択範囲、inline diff に強く依存しているか
-3. 当面、マルチ Agent、worktree、より強いタスク管理は不要か
-
-ほとんどが「はい」なら、IDE 拡張から始めてください。
-
-## よくある間違い
-
-- IDE 拡張と App の機能が 1:1 で対応していると仮定する
-- ワークスペースのルートを開かずにタスクを開始し、パスと `AGENTS.md` の解釈がずれる
-- 複数の AI 拡張を混在させ、コンテキストとショートカットが衝突する
-
-IDE 拡張を選ぶ理由の多くは、そもそも主な作業がエディター内にあるからです。
-
-## 参考ソース
-- OpenAI Codex IDE ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** IDE  
-**検証根拠：** 現行の公式ヘルプセンターでは「Codex VS Code extension is compatible with most VS Code forks」と強く確認できるが、本ページは Cursor、Windsurf、JetBrains など具体的な対応形態と比較まで踏み込んでいる。現行のサポートマトリクスを補完するまでは `outdated` とするのが適切。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** IDE
+
+**検証根拠：** 現在の公式 IDE ページを照合し、VS Code、Cursor、Windsurf、VS Code Insiders、Xcode、JetBrains IDEs の具体的な入口を確認しました。各統合の機能が完全に同じだとは仮定していません。
+
+**最終検証：** 2026-08-26

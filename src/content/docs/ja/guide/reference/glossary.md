@@ -3,9 +3,10 @@ title: 用語集
 description: ハンドブック常用語の短い定義。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c07a94c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -27,13 +28,13 @@ sidebar:
 | Token | モデルがテキストを処理する計量単位 |
 | ワークツリー | 並行試行用の隔離作業ディレクトリ |
 
-初心者版：[初心者向け用語](/guide/start-here/terminology-for-beginners/)
+初心者版：[初心者向け用語](/ja/guide/start-here/terminology-for-beginners/)
 
 ## 使い方
 
 クイック辞書であり、完全チュートリアルではありません。他ページで見た語の意味を忘れたときに戻ってください。
 
-多くがまだ馴染みでないなら、先に [初心者向け用語](/guide/start-here/terminology-for-beginners/) が読みやすいです。
+多くがまだ馴染みでないなら、先に [初心者向け用語](/ja/guide/start-here/terminology-for-beginners/) が読みやすいです。
 
 ## よくある誤解
 

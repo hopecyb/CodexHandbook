@@ -3,9 +3,10 @@ title: 制約を定義する
 description: 変更可能範囲、スタイル、禁止事項を限定する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 617fa41
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 多くの失敗は目標が全く無いのではなく、**境界が不明**なことにあります。
@@ -98,7 +99,7 @@ translated_at: 2026-07-28
 
 目標は何をするか、制約はどこまでで止めるかを伝えます。
 
-権限の境界は制約と一緒に書くと、「ついで」の越権を減らせます。関連：[完了基準の定義](/prompts/define-done/)、[権限とサンドボックス](/guide/permissions-and-sandbox/)。
+権限の境界は制約と一緒に書くと、「ついで」の越権を減らせます。関連：[完了基準の定義](/ja/prompts/define-done/)、[権限とサンドボックス](/ja/guide/permissions-and-sandbox/)。
 
 ---
 

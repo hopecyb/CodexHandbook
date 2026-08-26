@@ -3,9 +3,10 @@ title: 규칙
 description: allow/deny, 명령 규칙, 팀 정책 설명 페이지 — 무엇을 막고 무엇을 알릴지 먼저 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1b6534d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 규칙 그룹은 초보자가 “Codex에 알림을 더 쓴다”로 오해하기 쉽습니다.
@@ -14,9 +15,9 @@ translated_at: 2026-07-28
 
 ## 권장 순서
 
-1. [허용과 거부 패턴](/guide/customization/rules/allow-and-deny-patterns/)
-2. [명령 규칙](/guide/customization/rules/command-rules/)
-3. [팀 규칙](/guide/customization/rules/team-rules/)
+1. [허용과 거부 패턴](/ko/guide/customization/rules/allow-and-deny-patterns/)
+2. [명령 규칙](/ko/guide/customization/rules/command-rules/)
+3. [팀 규칙](/ko/guide/customization/rules/team-rules/)
 
 ## 이 그룹이 돕는 것
 

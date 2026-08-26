@@ -3,9 +3,10 @@ title: 여러 Agent 조율하기
 description: 병렬 탐색, 분업 실행, 결과 병합의 협업 사례입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 여러 Agent 조율하기
@@ -36,7 +37,7 @@ Agent 2：방안 B의 장단점과 작업량
 
 ### 작업 트리 격리
 
-서로 다른 Agent가 다른 [git worktree](/guide/desktop-app/worktrees/)에서 다른 브랜치를 수정하고, 마지막에 사람이 병합합니다.
+서로 다른 Agent가 다른 [git worktree](/ko/guide/desktop-app/worktrees/)에서 다른 브랜치를 수정하고, 마지막에 사람이 병합합니다.
 
 ## 3. 조율 규칙(AGENTS.md에 쓰기를 권장)
 
@@ -46,8 +47,8 @@ Agent 2：방안 B의 장단점과 작업량
 
 ## 4. 관련
 
-- [여러 Agent 협업](/cases/workflows/multi-agent-coordination/)
-- [Subagent](/guide/agent-work/subagents/)
+- [여러 Agent 협업](/ko/cases/workflows/multi-agent-coordination/)
+- [Subagent](/ko/guide/agent-work/subagents/)
 ---
 
 **상태:** verified  

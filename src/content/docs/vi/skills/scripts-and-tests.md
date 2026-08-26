@@ -3,9 +3,10 @@ title: scripts/ và kiểm thử
 description: Thêm script xác định vào Skill và Kiểm chứng hành vi của chúng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi mới làm Skill, cách thường gặp là nhét hết vào `SKILL.md`. Quy trình đơn giản thì được, nhưng hễ một bước cần chạy **ổn định, lặp lại, Kiểm chứng được**, script đáng tin hơn mô tả thuần chữ.
@@ -76,7 +77,7 @@ Dễ hơn để tách"script bản thân hỏng"và"cách tích hợp Skill khô
 
 Hành động chạy lặp ổn định đừng chỉ dựa mô tả chữ. Chạy thông script trước, rồi xác nhận Skill gọi không có vấn đề.
 
-Script kế thừa chính sách Phê duyệt hiện tại; xem [quy tắc lệnh](/guide/customization/rules/command-rules/) và [bảo mật Skill](/skills/security/).
+Script kế thừa chính sách Phê duyệt hiện tại; xem [quy tắc lệnh](/vi/guide/customization/rules/command-rules/) và [bảo mật Skill](/vi/skills/security/).
 ---
 
 **Trạng thái:** verified  

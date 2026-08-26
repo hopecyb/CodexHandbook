@@ -1,83 +1,36 @@
 ---
 title: 选择 Codex 客户端
-description: 在 App、CLI、IDE、Cloud 之间做第一次选择。
+description: 用最短路径决定从桌面 App、CLI、IDE 还是 Cloud 开始。
 sidebar:
   order: 20
 ---
 
-第一次看到 `App / CLI / IDE / Cloud` 这几个词时，常见问题就是：到底该用哪个。
+先看工作主要发生在哪里：
 
-第一次选择不用想得太重。先从一个容易上手的入口开始，后面再补别的即可。
-
-## 直接选择
-
-如果现在没有强烈偏好，可以这样选：
-
-- **第一次用**：选桌面 App
-- **你本来就天天用终端**：选 CLI
-- **你主要在 VS Code / JetBrains 里写代码**：选 IDE 扩展
-- **你已经明确要接 GitHub 云端仓库或跑长任务**：看 Cloud
-
-## 这几个入口分别是什么
-
-| 入口 | 可以直接理解为 |
+| 你现在主要在 | 从这里开始 |
 |---|---|
-| 桌面 App | 图形化控制台，适合看任务、看差异、点审批 |
-| CLI | 终端里的 Codex，适合命令行用户 |
-| IDE 扩展 | 嵌在编辑器里的助手，适合边看代码边改 |
-| Cloud | 远程跑任务的方式，适合仓库协作和长任务 |
+| 桌面上管理项目、文件和多个任务 | **ChatGPT 桌面 App** |
+| 终端里运行 Git、测试和脚本 | **Codex CLI** |
+| VS Code、兼容编辑器、Xcode 或 JetBrains 里写代码 | **IDE 集成** |
+| 连接的远程仓库与隔离环境里 | **Codex Cloud** |
 
-## 按当前情况选
+第一次用且没有明确偏好，可以先装桌面 App；它更容易看见任务、文件、diff 和审批。入口不是永久选择，同一工作流可以从 IDE 开始，在 CLI 验证，再到桌面 App 或 Cloud 跟进长任务。
 
-| 若你… | 选 |
-|---|---|
-| 第一次用、想看清差异与审查 | **桌面 App** |
-| 习惯终端、要写脚本 | **CLI** |
-| 主要在编辑器里改代码 | **IDE 扩展** |
-| 要连 GitHub 云端环境 / 长任务 | **Cloud**（先读概述） |
+需要完整决策图、组合示例和验证步骤，阅读 [选择 Codex 客户端](/guide/choose-your-client/)；需要逐项对照，阅读 [功能对照](/guide/reference/feature-comparison/)。
 
-## 桌面 App 常见起点
+接下来选择对应安装页：
 
-对初学者来说，桌面 App 有几个明显的好处：
-
-- 更容易看见它做了什么
-- 它什么时候申请权限一目了然
-- diff、任务、项目这些概念更直观
-- 出错时也更容易停下来检查
-
-如果你并不明确偏爱终端，用桌面 App 往往会轻松一些。
-
-## 常见误会
-
-### 1. 这四个入口是四种完全不同的产品
-
-它们用的还是同一套能力，差别主要在操作方式和适合场景。
-
-### 2. 第一次必须一步选对，不然以后会很麻烦
-
-第一次选择只是起点，不是终身决定。
-
-### 3. 我以后只能固定用一个入口
-
-很多人后面会这样搭配：
-
-- 平时用桌面 App 看任务和审查变更
-- 需要批量操作时用 CLI
-- 主要写代码时切到 IDE 扩展
-
-## 开始顺序
-
-1. 先装 [桌面 App](/guide/getting-started/install-desktop-app/)
-2. 跑一遍 [第一次任务](/guide/getting-started/run-your-first-task/)
-3. 用顺手了，再考虑 CLI 或 IDE
-
-完整对照：[功能对照](/guide/reference/feature-comparison/)。可以装多个客户端；**练习项目保持同一目录**，便于对照体验。
-
-第一次不用急着比较“哪个更专业”。先选最容易看懂过程和结果的入口就行。
+- [安装桌面 App](/guide/getting-started/install-desktop-app/)
+- [安装 CLI](/guide/getting-started/install-cli/)
+- [安装 IDE 集成](/guide/getting-started/install-ide-extension/)
+- [了解 Codex Cloud](/guide/web-and-cloud/)
 
 ---
 
-**状态：** verified  
-**适用产品：** App / CLI / IDE  
-**核验依据：** OpenAI Developers 首页当前同时呈现 Codex、桌面工作流与开发者入口；本页结论属于首次上手的场景化选型建议，且已避免把 App / CLI / IDE / Cloud 写成互斥或能力完全不同的产品。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** App / CLI / IDE / Cloud
+
+**核验依据：** 已对照当前官方四类入口；本页只保留新手速选和去重导航，详细能力集中到主选择页与功能对照页维护。
+
+**最近核验：** 2026-08-26

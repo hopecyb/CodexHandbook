@@ -3,9 +3,10 @@ title: Presentaciones
 description: Generar, revisar y exportar diapositivas y guiones — convenciones de estructura, plantilla maestra y notas del orador.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Elige según a quién entregas:
 5. Exportar PDF y ensayar con cronómetro
 ```
 
-Alineado con [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/): en la fase de esquema, acepta primero y luego rellena el detalle.
+Alineado con [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/): en la fase de esquema, acepta primero y luego rellena el detalle.
 
 ## Por qué conviene controlar primero la estructura
 
@@ -114,13 +115,13 @@ También puedes formular el requisito con este tono:
 
 Ese tipo de pedido suele producir versiones más fáciles de seguir puliendo que «haz un PPT impresionante».
 
-Necesidades de imagen: [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/); solo generación de imagen: [Generación de imágenes](/guide/tools/image-generation/).
+Necesidades de imagen: [Imágenes y capturas](/es/guide/files-and-artifacts/images-and-screenshots/); solo generación de imagen: [Generación de imágenes](/es/guide/tools/image-generation/).
 
 ## Aceptación
 
 - Tamaño de tipografía legible a resolución de proyección
 - Animación moderada (demasiada es difícil de mantener)
-- Números alineados con [Validar fuentes](/guide/quality/validate-sources/)
+- Números alineados con [Validar fuentes](/es/guide/quality/validate-sources/)
 - Si las notas del orador bastan (si hacen falta)
 
 ## Qué conviene dejar a Codex y qué conviene decidir tú

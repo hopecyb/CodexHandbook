@@ -3,9 +3,10 @@ title: Arquivos, Ferramentas e comandos
 description: Explica como o Codex lê e escreve arquivos, roda comandos e usa Ferramentas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -86,7 +87,7 @@ Se alguma das três não tiver resposta, peça explicação primeiro.
 
 1. **Alcance mínimo necessário**: indique diretórios e arquivos; evite «alterar o repositório inteiro à vontade»
 2. **Comandos perigosos precisam de Aprovação**: apagar, fazer push, alterar configuração do sistema etc.
-3. **Há método na escolha de Ferramentas**: veja [Escolha de Ferramentas](/guide/tools/tool-selection/)
+3. **Há método na escolha de Ferramentas**: veja [Escolha de Ferramentas](/pt/guide/tools/tool-selection/)
 
 Entradas de produto diferentes têm painéis de Ferramentas e formas de confirmação diferentes; detalhes nos guias de cada produto.
 
@@ -94,9 +95,9 @@ O Codex não só «fala» — ele age de verdade por arquivos, comandos e Ferram
 
 Próximas leituras sugeridas:
 
-1. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
-2. [Sandbox e rede](/guide/foundations/sandbox-and-network/)
-3. [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/)
+1. [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
+2. [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
+3. [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/)
 
 ---
 

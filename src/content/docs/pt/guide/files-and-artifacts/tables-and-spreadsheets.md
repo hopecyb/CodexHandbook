@@ -3,9 +3,10 @@ title: Tabelas e folhas de cálculo
 description: Ler, limpar, analisar e exportar CSV, Excel e dados tabulares — sem partir estrutura nem encoding.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ Restrições: não alterar o ficheiro original; valores vazios = 0; duas casas d
 Aceitação: imprimir as primeiras 5 linhas + total de linhas
 ```
 
-Contexto: [Contexto de ficheiros e diretórios](/guide/context/file-and-folder-context/)
+Contexto: [Contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
 
 ## Porque Tarefas de tabelas falham em silêncio com facilidade
 
@@ -108,7 +109,7 @@ Se usar Python: `pandas`; se Node: `csv-parse` / `xlsx`, etc. — acorde a bibli
 
 - Cruzar contagens e totais com os dados de origem
 - Abrir o Excel e ver se datas foram tratadas como números
-- [Verificar Artefatos](/guide/quality/verify-artifacts/): comparar por amostragem
+- [Verificar Artefatos](/pt/guide/quality/verify-artifacts/): comparar por amostragem
 
 Em Tarefas de tabelas, o mais importante é clarificar colunas, tipos, regras e aceitação.
 
@@ -125,7 +126,7 @@ Em Tarefas de tabelas, o mais importante é clarificar colunas, tipos, regras e 
 - [ ] O ficheiro original não foi sobrescrito por acidente (ou a alteração é visível no diff)
 
 ## Referências
-- [Definir restrições](/prompts/constraints-and-boundaries/)
+- [Definir restrições](/pt/prompts/constraints-and-boundaries/)
 ---
 
 **Estado:** verificado  

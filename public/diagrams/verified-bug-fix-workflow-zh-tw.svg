@@ -1,0 +1,67 @@
+<svg lang="zh-tw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title desc">
+  <title id="title">帶驗證的 Bug 修復工作流</title>
+  <desc id="desc">先執行測試穩定復現紅燈，記錄失敗證據；再定位根因並做最小修復，執行相關測試得到綠燈，然後執行全量回歸和 diff 審查。任一環節失敗都返回相應步驟。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .label { fill: #f8fafc; font-size: 17px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 14px; }
+    .tiny { fill: #94a3b8; font-size: 12px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1100" height="590" rx="8" fill="#020617"/>
+  <rect width="1100" height="590" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">帶驗證的 Bug 修復：先紅、再綠、再回歸</text>
+  <text x="44" y="70" class="sub">測試通過只有在先穩定復現原問題之後，才能成為修復證據。</text>
+
+  <path d="M186 260H226" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M374 260H414" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M562 260H602" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M750 260H790" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M938 260H974" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M864 320V410H488V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+  <path d="M676 320V456H300V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="38" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="112" y="235" text-anchor="middle" class="label">1. 穩定復現</text>
+  <text x="112" y="261" text-anchor="middle" class="note">執行失敗測試</text>
+  <text x="112" y="283" text-anchor="middle" class="note">儲存斷言與堆疊</text>
+  <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">RED · 預期失敗</text>
+
+  <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="300" y="235" text-anchor="middle" class="label">2. 定位根因</text>
+  <text x="300" y="261" text-anchor="middle" class="note">讀實現與測試</text>
+  <text x="300" y="283" text-anchor="middle" class="note">排除相鄰假設</text>
+  <text x="300" y="304" text-anchor="middle" class="tiny">先解釋，不改程式碼</text>
+
+  <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="488" y="235" text-anchor="middle" class="label">3. 最小修復</text>
+  <text x="488" y="261" text-anchor="middle" class="note">只改根因路徑</text>
+  <text x="488" y="283" text-anchor="middle" class="note">保留公開行為</text>
+  <text x="488" y="304" text-anchor="middle" class="tiny">拒絕順手重構</text>
+
+  <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="676" y="235" text-anchor="middle" class="label">4. 相關測試</text>
+  <text x="676" y="261" text-anchor="middle" class="note">原測試變綠</text>
+  <text x="676" y="283" text-anchor="middle" class="note">邊界測試通過</text>
+  <text x="676" y="304" text-anchor="middle" class="tiny" fill="#34d399">GREEN</text>
+
+  <rect x="790" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="864" y="235" text-anchor="middle" class="label">5. 迴歸與審查</text>
+  <text x="864" y="261" text-anchor="middle" class="note">全量測試 · lint</text>
+  <text x="864" y="283" text-anchor="middle" class="note">diff 與範圍檢查</text>
+  <text x="864" y="304" text-anchor="middle" class="tiny">記錄剩餘風險</text>
+
+  <rect x="974" y="218" width="94" height="84" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1021" y="250" text-anchor="middle" class="label">交付</text>
+  <text x="1021" y="275" text-anchor="middle" class="note">證據齊全</text>
+
+  <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="504" text-anchor="middle" class="note">證據鏈：失敗命令與斷言 → 根因解釋 → 最小 diff → 相關測試通過 → 全量回歸通過 → 人工範圍審查</text>
+  <text x="550" y="526" text-anchor="middle" class="tiny">相關測試失敗返回最小修復；全量回歸或 diff 審查失敗返回根因分析。</text>
+</svg>

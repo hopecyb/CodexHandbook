@@ -1,141 +1,75 @@
 ---
 title: Internet access
-description: Cloud outbound policy, dependency installs, and data-exfiltration risk—how to open only what you need.
+description: Separate setup connectivity from Agent connectivity and constrain risk by domain and HTTP method.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 1e2d815
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
 
-Cloud tasks often need **outbound network access**: pulling npm/PyPI packages, calling APIs, cloning submodules. At the same time, internet access is a high-risk surface for **data exfiltration**—an Agent might send repo or Secret content to external services.
+Cloud has two separate network phases:
 
-## What's covered
+| Phase | Default | Main purpose |
+|---|---|---|
+| Setup script | Internet available | Install dependencies and tools |
+| Agent phase | Off by default | Let the Agent access external resources during the task |
 
-- Whether Cloud environments can reach the internet by default
-- When to allow access and how to minimize exposure
-- How this fits with local sandbox and Secrets policy
+A successful `pnpm install` during setup does not mean the Agent can later `curl` any site.
 
-## Basic boundary
+## Why Agent access is off by default
 
-"Needs network" does not mean "open everything."
+Agent internet access increases the risks of prompt injection, code or data exfiltration, malicious dependencies, and license-incompatible material entering a repository. An untrusted issue, web page, or dependency README can contain instructions designed to induce exfiltration.
 
-Many people frame it as binary:
+Allow only the targets and actions required by the task, and review work logs.
 
-- Either no network at all
-- Or full access for convenience
+## Options
 
-The usual approach is to grant only what the task needs—nothing extra.
+Configure Agent internet access per environment:
 
-## Two layers of "network"
+- **Off:** block all Agent internet access.
+- **On:** allow access, optionally constrained by domains and HTTP methods.
 
-| Layer | Meaning |
-|---|---|
-| Cloud environment outbound | Whether the remote machine can reach the public internet or internal APIs |
-| Agent tool networking | In-session web search, curl, etc. (varies by client) |
+Start with an empty domain list, use the Common dependencies preset, or select All (unrestricted). Do not use unrestricted access as a production troubleshooting shortcut.
 
-This page focuses on **Cloud environments**; general concepts: [sandbox and network](/guide/foundations/sandbox-and-network/).
+For read-only documentation or downloads, allow only `GET`, `HEAD`, and `OPTIONS`. This blocks `POST`, `PUT`, `PATCH`, and `DELETE`, which may send or modify data.
 
-## Why local working does not imply Cloud works
+## Minimal-access example
 
-Locally you might succeed because:
+A task must read public API documentation:
 
-- You are already logged into a service on your machine
-- You have `.npmrc`, SSH keys, or proxy config locally
-- You are on the company VPN
+1. Keep access Off and confirm that the failure is network-related.
+2. Enable Agent access.
+3. Add only the official documentation domain to the allowlist.
+4. Allow only `GET`, `HEAD`, and `OPTIONS`.
+5. Rerun the task and inspect every outbound request in the log.
+6. Decide whether to restore Off afterward.
 
-Cloud does not inherit those by default. "Works with `npm install` locally" does not imply Cloud can do the same.
+## Relationship to Secrets
 
-## Typical scenarios needing outbound access
-
-- Install dependencies: `npm install`, `pip install`, `go mod download`
-- Pull from private registries (needs [Secrets](/guide/web-and-cloud/secrets-and-variables/))
-- Call third-party APIs (payments, maps, LLM gateways, etc.)
-- Clone submodules or download build assets
-
-## Decision principle
-
-If a network action is not required for this task, do not open it first.
-
-Examples:
-
-- Package registries for installs: usually required
-- Random websites or extra downloads: usually not
-
-## Recommended strategy
-
-### Default tight, open on demand
-
-1. Confirm current network policy in [Cloud environments](/guide/web-and-cloud/cloud-environments/)
-2. List **required domains** (package managers, company APIs)—avoid "open entire internet"
-3. In `AGENTS.md`, document allowed URLs and forbid putting keys in prompts
-4. Validate with a test task: dependencies install; unrelated sites blocked (if fine-grained policy exists)
-
-### Split work with Secrets
-
-| Content | Where |
-|---|---|
-| API keys, tokens | Cloud Secrets—not in the repo |
-| Allowed API base URLs | Docs or env var names (not values) |
-| Proxy / mirror URLs | Team standard config |
-
-## Common misconceptions
-
-### 1. Network access is only convenience, not security
-
-Once online, it is simultaneously:
-
-- A dependency download problem
-- A credential usage problem
-- A data egress problem
-
-### 2. Safe as long as Secrets are not in the prompt
-
-If the environment can read Secrets and send results externally, risk remains.
-
-### 3. Web search equals Cloud outbound
-
-One is remote-environment networking; the other is in-session tool networking—do not mix them when debugging.
-
-### Data exfiltration safeguards
-
-- Do not put production database connection strings in task descriptions
-- Watch for attempts to send `.env` or key files externally
-- For untrusted repos on first Cloud run, try **no outbound or read-only sandbox**
-
-## Aligning with local development
-
-Local `curl` working does not mean Cloud can—common "red in Cloud" causes:
-
-| Symptom | Possible cause |
-|---|---|
-| Dependency install fails | Outbound blocked or registry needs auth |
-| Submodule won't clone | SSH key not injected via Secrets |
-| Internal API timeout | Cloud not on company VPN |
-
-Mitigations: HTTPS + token, reachable mirrors, or document that Cloud cannot reach internal resources.
-
-## Common mistakes
-
-- Globally opening outbound for convenience, then running unbounded tasks on repos with Secrets
-- Assuming Cloud shares your laptop's `.npmrc` (not pushed or not in Secrets)
-- Confusing "needs network" with "needs web search tool"
-- Only discovering missing local login state when install fails
+Cloud Secrets are removed before the Agent phase, reducing the risk of directly exfiltrating a setup Secret. Ordinary environment variables, repository content, and generated data can still be sent out. Never disguise sensitive data as an ordinary variable to bypass the Secret lifecycle.
 
 ## Acceptance checklist
 
-- [ ] Listed outbound domains/services required for Cloud tasks on this repo
-- [ ] Secrets configured and not committed to Git
-- [ ] Full install + test passed once on a test branch
-- [ ] Team knows what data must never appear in networked prompts
+- [ ] The need for Agent internet access is documented.
+- [ ] The allowlist contains only required domains.
+- [ ] HTTP methods are reduced to the smallest set.
+- [ ] Inputs are trusted or prompt-injection risk is considered.
+- [ ] Logs contain no command that uploads repository, environment, or credential data.
+- [ ] New dependencies were checked for source, version, and license.
 
-## References
-- OpenAI Codex Cloud network and security docs
+## Official sources
+
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers default Cloud outbound behavior, domain policy, and fine-grained network controls—all highly product- and org-dependent; without strong current official network policy docs, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

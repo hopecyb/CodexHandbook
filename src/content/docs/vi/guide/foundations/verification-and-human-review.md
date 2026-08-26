@@ -3,9 +3,10 @@ title: Kiểm chứng và rà soát thủ công
 description: Vì sao kết quả phải kiểm tra được, và cách rà soát lại.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 19de747
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -14,10 +15,10 @@ Codex có thể giúp bạn tăng tốc, nhưng không thể thay bạn chịu t
 
 Codex tăng tốc độ, nhưng **không miễn nghiệm thu**. Ít nhất phải rà lại các mục sau:
 
-1. Đọc [Diff](/guide/quality/review-diffs/): đã sửa tệp nào, có vượt phạm vi không
+1. Đọc [Diff](/vi/guide/quality/review-diffs/): đã sửa tệp nào, có vượt phạm vi không
 2. Kiểm tra theo tiêu chí hoàn thành bạn đã định
-3. Chạy được kiểm thử thì chạy: [Chạy kiểm thử](/guide/quality/run-tests/)
-4. Sự thật đưa ra ngoài phải kiểm nguồn: [Kiểm chứng nguồn](/guide/quality/validate-sources/)
+3. Chạy được kiểm thử thì chạy: [Chạy kiểm thử](/vi/guide/quality/run-tests/)
+4. Sự thật đưa ra ngoài phải kiểm nguồn: [Kiểm chứng nguồn](/vi/guide/quality/validate-sources/)
 
 ## Rà soát thủ công thực sự đang xem gì
 

@@ -3,22 +3,23 @@ title: 로컬 작업 워크플로
 description: IDE에서 열린 파일과 선택 영역을 바탕으로 로컬 Codex 작업을 시작하고, 따라가며, 마칩니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9abb5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-IDE 로컬 작업은 「**열기 → 선택 → 설명 → 검토 → 테스트**」의 순환이며, 빈번한 작은 수정에 맞습니다. 가장 흔한 실무 경로를 제시합니다. 컨텍스트 세부 사항은 [선택 영역과 열린 파일](/guide/ide/selected-code-and-open-files/)을 보세요.
+IDE 로컬 작업은 「**열기 → 선택 → 설명 → 검토 → 테스트**」의 순환이며, 빈번한 작은 수정에 맞습니다. 가장 흔한 실무 경로를 제시합니다. 컨텍스트 세부 사항은 [선택 영역과 열린 파일](/ko/guide/ide/selected-code-and-open-files/)을 보세요.
 
 ## 권장 흐름
 
 1. **워크스페이스 루트를 연다**(전체 저장소, 단일 파일 아님)
-2. 관련 파일을 연다; 필요하면 [코드 조각을 선택](/guide/ide/selected-code-and-open-files/)한다
-3. Codex 패널에 목표·제약·[완료 정의](/prompts/define-done/)를 분명히 쓴다
-4. 작업이 복잡하면 먼저 [계획을 요청](/prompts/ask-for-a-plan/)한 뒤 실행한다
-5. diff / inline 뷰에서 [변경을 검토](/guide/ide/reviewing-changes/)한다
+2. 관련 파일을 연다; 필요하면 [코드 조각을 선택](/ko/guide/ide/selected-code-and-open-files/)한다
+3. Codex 패널에 목표·제약·[완료 정의](/ko/prompts/define-done/)를 분명히 쓴다
+4. 작업이 복잡하면 먼저 [계획을 요청](/ko/prompts/ask-for-a-plan/)한 뒤 실행한다
+5. diff / inline 뷰에서 [변경을 검토](/ko/guide/ide/reviewing-changes/)한다
 6. IDE 터미널에서 프로젝트 테스트 명령을 실행한다
 7. 본인이 `git commit`한다(팀이 Agent commit을 명확히 허용한 경우 제외)
 
@@ -35,9 +36,9 @@ src/auth/login.ts와 대응 테스트만 수정.
 
 | 상황 | 제안 |
 |---|---|
-| 병렬 다중 작업, 작업 트리 | [데스크톱 App](/guide/desktop-app/) |
-| 스크립트 / CI | [CLI 비대화형](/guide/cli/non-interactive-mode/) |
-| 원격 표준 환경, PR 열기 | [IDE Cloud 작업](/guide/ide/cloud-task-workflow/) |
+| 병렬 다중 작업, 작업 트리 | [데스크톱 App](/ko/guide/desktop-app/) |
+| 스크립트 / CI | [CLI 비대화형](/ko/guide/cli/non-interactive-mode/) |
+| 원격 표준 환경, PR 열기 | [IDE Cloud 작업](/ko/guide/ide/cloud-task-workflow/) |
 
 ## 흔한 실수
 
@@ -45,7 +46,7 @@ src/auth/login.ts와 대응 테스트만 수정.
 - inline 제안을 한꺼번에 수락
 - 테스트 없이 commit
 
-컨텍스트: [에디터 컨텍스트](/guide/ide/editor-context/) · [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
+컨텍스트: [에디터 컨텍스트](/ko/guide/ide/editor-context/) · [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 
 ## 흔한 질문
 

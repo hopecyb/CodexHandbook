@@ -5,9 +5,10 @@ sidebar:
   order: 20
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: adbe0aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Agent dùng **Công cụ** để đọc tệp, chạy lệnh, tìm trên mạng, mở trình duyệt, v.v. Chọn đúng công cụ và viết rõ ranh giới giúp giảm tự ý lên mạng hoặc sửa quá mức.
@@ -32,22 +33,22 @@ Công cụ không phải kiến thức phụ thêm, mà là nền của an toàn
 
 | Công cụ | Trang |
 |---|---|
-| Tổng quan chọn | [Chọn công cụ](/guide/tools/tool-selection/) |
-| Terminal | [Shell và terminal](/guide/tools/shell-and-terminal/) |
-| Truy xuất | [Tìm kiếm web](/guide/tools/web-search/) |
-| Trang web | [Công cụ trình duyệt](/guide/tools/browser/) |
-| GUI | [Computer Use](/guide/tools/computer-use/) |
-| Hình ảnh | [Tạo ảnh](/guide/tools/image-generation/) |
-| Giọng nói | [Nhập và xuất giọng nói](/guide/tools/voice/) |
+| Tổng quan chọn | [Chọn công cụ](/vi/guide/tools/tool-selection/) |
+| Terminal | [Shell và terminal](/vi/guide/tools/shell-and-terminal/) |
+| Truy xuất | [Tìm kiếm web](/vi/guide/tools/web-search/) |
+| Trang web | [Công cụ trình duyệt](/vi/guide/tools/browser/) |
+| GUI | [Computer Use](/vi/guide/tools/computer-use/) |
+| Hình ảnh | [Tạo ảnh](/vi/guide/tools/image-generation/) |
+| Giọng nói | [Nhập và xuất giọng nói](/vi/guide/tools/voice/) |
 
-Đọc/ghi tệp và nghiệm thu artifact xem [Tệp và artifact](/guide/files-and-artifacts/). Công cụ mở rộng kết nối qua [MCP](/skills/mcp/mcp-overview/).
+Đọc/ghi tệp và nghiệm thu artifact xem [Tệp và artifact](/vi/guide/files-and-artifacts/). Công cụ mở rộng kết nối qua [MCP](/vi/skills/mcp/mcp-overview/).
 
 ## Thứ tự đọc đề xuất
 
 Lần đầu xem chương này, có thể đọc theo thứ tự:
 
-1. [Chọn công cụ](/guide/tools/tool-selection/), xem trước tác vụ khác nhau nên ưu tiên gì
-2. [Shell và terminal](/guide/tools/shell-and-terminal/), rồi xem rủi ro khi chạy lệnh
+1. [Chọn công cụ](/vi/guide/tools/tool-selection/), xem trước tác vụ khác nhau nên ưu tiên gì
+2. [Shell và terminal](/vi/guide/tools/shell-and-terminal/), rồi xem rủi ro khi chạy lệnh
 3. Trang tìm kiếm, trình duyệt hoặc công cụ khác, tiếp tục theo tác vụ đang có
 
 Công cụ quyết định Codex có thể “ra tay” thế nào; bạn chịu trách nhiệm nói rõ công cụ nào được dùng, công cụ nào không.

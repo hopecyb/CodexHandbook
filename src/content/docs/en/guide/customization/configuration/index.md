@@ -3,9 +3,10 @@ title: Configuration
 description: Overview of configuration files and profiles—what behavior belongs in configuration and what does not.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 The first time you see the “configuration” group, it is easy to think it is only about parameter names.
@@ -14,8 +15,8 @@ It mainly solves one thing: how Codex should work by default, instead of saying 
 
 ## Recommended Order
 
-1. [Configuration Basics](/guide/customization/configuration/config-basics/)
-2. [Profiles](/guide/customization/configuration/profiles/)
+1. [Configuration Basics](/en/guide/customization/configuration/config-basics/)
+2. [Profiles](/en/guide/customization/configuration/profiles/)
 
 ## What This Group Addresses
 

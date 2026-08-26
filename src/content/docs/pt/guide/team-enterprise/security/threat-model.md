@@ -3,9 +3,10 @@ title: Modelo de ameaças
 description: "Principais superfícies de risco do Codex em ambientes de equipa: dados, Ferramentas, extensões e cadeia de fornecimento."
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ O «modelo de ameaças», em claro, é antecipar o risco:
 
 > **Se o Codex entrar de verdade no nosso código, comandos e Ferramentas externas, o que é mais provável que corra mal?**
 
-O **modelo de ameaças** decompõe isso com clareza. O Codex não é «outra janela de chat»: pode **ler código, executar comandos e chamar Ferramentas externas**. Este capítulo desdobra primeiro as superfícies principais; os controlos concretos estão na [matriz de Permissões](/guide/reference/permission-matrix/) e no [Sandbox](/guide/foundations/sandbox-and-network/).
+O **modelo de ameaças** decompõe isso com clareza. O Codex não é «outra janela de chat»: pode **ler código, executar comandos e chamar Ferramentas externas**. Este capítulo desdobra primeiro as superfícies principais; os controlos concretos estão na [matriz de Permissões](/pt/guide/reference/permission-matrix/) e no [Sandbox](/pt/guide/foundations/sandbox-and-network/).
 
 ## Conteúdo
 
@@ -74,10 +75,10 @@ A esse nível, o modelo de ameaças parece-se a uma lista de riscos prévia ao g
 
 | Ameaça | Descrição | Direção de mitigação |
 |---|---|---|
-| Injeção de Prompt | Issue/web maliciosa induz operações fora de alcance | Sanitizar entrada, CI só de leitura, [tema de injeção](/guide/team-enterprise/security/prompt-injection/) |
+| Injeção de Prompt | Issue/web maliciosa induz operações fora de alcance | Sanitizar entrada, CI só de leitura, [tema de injeção](/pt/guide/team-enterprise/security/prompt-injection/) |
 | Excesso de Permissões | Token ou Sandbox demasiado amplos | Privilégio mínimo, proteção de branches |
 | Fuga de dados | Comando/MCP envia conteúdo do repo para fora | Política de rede, DLP, Hook de auditoria |
-| Extensão maliciosa | Plugin/MCP sem rever | [Riscos de extensão](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Extensão maliciosa | Plugin/MCP sem rever | [Riscos de extensão](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | Cadeia de fornecimento | Dependências e scripts envenenados | Combinar com SCA e code review existentes |
 | Erro operativo | Agent apaga a BD ou faz push incorreto | Deny de comandos, CI sem push |
 
@@ -143,8 +144,8 @@ Com isso já se podem baixar muitos riscos de equipa. A governação mais fina p
 
 ## Capítulos relacionados
 
-- [Contexto sensível](/guide/context/sensitive-context/)
-- [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
+- [Contexto sensível](/pt/guide/context/sensitive-context/)
+- [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/)
 
 ## Fontes de referência
 - Livro branco de segurança empresarial da OpenAI (oficial)

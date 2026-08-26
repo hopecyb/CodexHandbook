@@ -3,9 +3,10 @@ title: Cẩm nang này dành cho ai
 description: Giải thích cách người mới, người sáng tạo, nhà phát triển và nhóm dùng cẩm nang này.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 41e8ab8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
@@ -88,7 +89,7 @@ Nếu bạn có các nhu cầu sau, cẩm nang đáng để xem:
 - Bạn muốn biến cách dùng cá nhân thành quy trình nhóm có thể tái sử dụng
 - Bạn không xuất thân từ phát triển, nhưng muốn đưa AI thật sự vào công việc hàng ngày
 
-Bước tiếp theo: [Chọn đường đi của bạn](/guide/start-here/choose-your-path/).
+Bước tiếp theo: [Chọn đường đi của bạn](/vi/guide/start-here/choose-your-path/).
 
 ---
 

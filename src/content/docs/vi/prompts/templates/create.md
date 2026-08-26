@@ -3,9 +3,10 @@ title: Mẫu tạo
 description: Triển khai từ đầu chức năng, bản thảo hoặc Artifact.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu tạo
@@ -62,8 +63,8 @@ Trong tác vụ tạo, tình huống dễ lỗi nhất là chưa nói rõ «làm
 
 ## Liên quan
 
-- [Công việc dẫn bởi đặc tả](/cases/workflows/specification-driven-work/)
-- [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/)
+- [Công việc dẫn bởi đặc tả](/vi/cases/workflows/specification-driven-work/)
+- [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/)
 
 ---
 

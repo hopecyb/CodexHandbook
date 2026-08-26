@@ -1,143 +1,100 @@
 ---
-title: Descripción general de MCP
-description: Model Context Protocol — conecta Codex de forma segura a herramientas y fuentes de datos externas.
+title: Introducción a MCP
+description: Comprende clientes, servidores, herramientas, autenticación y límites de seguridad de MCP.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 7b8726f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP es una forma estándar de conexión para que Codex enlace herramientas y fuentes de datos externas.
+MCP convierte «el modelo quiere usar una capacidad externa» en una llamada estructurada a una herramienta. Sirve para conectar documentación de terceros, navegadores, Figma, gestores de incidencias y servicios internos.
 
-Si quieres que Codex consulte Jira, lea una base de conocimiento, acceda a una API interna u opere una herramienta controlada, hace falta un mecanismo de «cómo conectar, qué se puede llamar y cómo gestionar Permisos». **MCP (Model Context Protocol)** resuelve precisamente eso.
-
-## Contenido
-
-- MCP resuelve el problema de que «Codex no llega a los sistemas reales»
-- División de papeles con Skill y Plugin
-- Por qué MCP debe entrar en la gobernanza de seguridad
-
-## Primero, qué no es
-
-MCP no es:
-
-- Pegar usuario y contraseña directamente a Codex
-- Dejar que el modelo «conecte como quiera»
-- Dar por fiable por defecto cualquier servicio de terceros
-
-Es una forma de cableado normalizada, para que conectar sistemas externos sea más controlable y auditable.
-
-## Conceptos clave
+## Cadena de llamada
 
 ```text
-Codex  ←→  cliente MCP  ←→  servidor MCP  ←→  sistema externo
+Codex en una tarea
+  -> cliente MCP proporcionado por el host de Codex
+  -> servidor MCP: proceso local o servicio remoto
+  -> sistema externo: documentación, diseño, incidencias, API interna
+  -> resultado estructurado devuelto a la tarea
 ```
 
-| Componente | Rol |
+| Componente | De qué se encarga | De qué no se encarga |
+|---|---|---|
+| Host de Codex | Leer la configuración, conectar servidores y exponer herramientas al Agent | Definir los permisos de negocio del servidor |
+| Servidor MCP | Definir herramientas, autenticación, argumentos y resultados estructurados | Garantizar automáticamente que todas las herramientas sean seguras |
+| Skill | Definir cuándo y cómo usar las herramientas | Establecer conexiones de red |
+| Plugin | Componer y distribuir Skills, conectores, MCP y capacidades relacionadas | Actuar como otro protocolo de herramientas |
+
+## Transportes de servidor compatibles
+
+### STDIO
+
+Codex inicia un proceso local y se comunica mediante la entrada y salida estándar. Es adecuado para herramientas de desarrollo locales y servicios que solo se ejecutan en el equipo actual.
+
+Revisa el comando, la procedencia de las dependencias y las variables de entorno reenviadas, porque el proceso hereda el entorno de ejecución local.
+
+### Streamable HTTP
+
+Codex se conecta a una URL remota. La documentación actual confirma compatibilidad con tokens Bearer, OAuth y autenticación de sesión de ChatGPT para servidores propios de confianza.
+
+El servicio recibe los argumentos de la herramienta. Comprueba TLS, identidad, registros, conservación de datos y permisos de las herramientas.
+
+## Combinar MCP, Skills y Plugins
+
+Para una comprobación semanal de incidencias de alta prioridad:
+
+| Capa | Contenido |
 |---|---|
-| Servidor MCP | Expone un conjunto de herramientas (p. ej. `search_issues`, `get_user`) |
-| Configuración | Indica a Codex cómo arrancar / conectar el servidor |
-| Llamada a herramienta | El modelo elige la herramienta en la Tarea; a menudo hace falta tu Aprobación |
+| MCP | Expone `search_issues`, `get_issue` y herramientas relacionadas |
+| Skill | Define filtros, evidencias y formato del informe |
+| Plugin | Distribuye el Skill, el conector y la definición MCP |
+| Scheduled task | Ejecuta la tarea verificada en un momento fijo |
 
-MCP **no aporta** la lógica de negocio en sí. Tu servidor implementa las reglas de lectura/escritura; Codex decide qué herramienta usar en la Tarea.
+Son responsabilidades ortogonales, no una escala de evolución. Consulta el [mapa de capacidades](/es/skills/capability-map/).
 
-## Dónde encaja MCP
+## Cuándo merece la pena usar MCP
 
-El Skill se acerca más a un «manual de operaciones»; MCP se ocupa de la «interfaz de herramientas».
-
-- El Skill describe los pasos
-- MCP entrega ciertas herramientas externas a Codex
-
-A menudo aparecen juntos:  
-el Skill fija el flujo y, en un paso, se llama a una herramienta MCP.
-
-## Relación con Skill y Plugin
-
-| | MCP | Skill | Plugin |
-|---|---|---|---|
-| Esencia | Protocolo de herramientas | Descripción de workflow | Paquete de distribución |
-| Contenido típico | Envoltorio de API | Pasos y normas | Skill + MCP + conectores de aplicación |
-| Quién lo mantiene | Tú o un servidor de terceros | Tú o el equipo | El publicador |
-
-Combinación habitual: el **Skill define el flujo** y, en un paso, **llama a una herramienta MCP** para obtener la lista de tickets.
-
-## Cuándo plantearse MCP
-
-Si la Tarea solo necesita leer y escribir archivos del repositorio actual, en general no hace falta MCP.  
-Si necesita tocar un sistema real «fuera del repositorio», empieza a plantearte MCP, API u otra integración controlada.
-
-## Escenarios adecuados
-
-| Encaja con MCP | No encaja con MCP |
+| Merece la pena | Todavía no |
 |---|---|
-| Consultar tickets de Linear/Jira | Solo cambiar código dentro del repo |
-| Consulta de solo lectura a docs / knowledge base | Basta un `curl` simple y no hace falta reutilizar |
-| Herramientas internas controladas | Escrituras de alto Permiso en producción sin auditoría |
+| Acceso reiterado a un mismo sistema externo | Una consulta puntual en una web pública |
+| Se necesitan argumentos y resultados estructurados | Bastan las herramientas de archivos del repositorio |
+| Se necesita OAuth o control granular de herramientas | Solo existen escrituras privilegiadas y no hay entorno de prueba |
+| El equipo necesita una conexión reutilizable | No se puede revisar la procedencia del servidor |
 
-## Errores frecuentes
+## Etapas de seguridad
 
-### 1. Con MCP, Codex puede hacerlo todo
+1. **Prueba de solo lectura:** documentación pública o tenant de prueba, solo herramientas de consulta.
+2. **Validación del equipo:** proyecto, rol y allowlist de herramientas restringidos; registrar fallos y latencia.
+3. **Escrituras limitadas:** operaciones pequeñas y reversibles con aprobación humana.
+4. **Operación gobernada:** autorización revocable, configuración revisable, registros redactados y aislamiento por entorno.
 
-Lo que puede hacer depende de qué herramientas expone el servidor MCP y de qué permiten esas herramientas.
+No incluyas tokens en prompts, Git ni cabeceras HTTP estáticas. Usa preferiblemente OAuth, `bearer_token_env_var` o variables de entorno reenviadas.
 
-### 2. MCP es solo integración técnica, no seguridad
+## Lista de comprobación previa a la conexión
 
-En cuanto MCP se conecta a un sistema real, pasa a ser a la vez:
+- [ ] Se pueden revisar el origen, la versión y el comando de inicio del servidor.
+- [ ] Se han identificado las herramientas de lectura y de escritura.
+- [ ] Se usa un tenant de prueba o una identidad con privilegio mínimo.
+- [ ] Se entiende qué argumentos y resultados registra el sistema remoto.
+- [ ] Las escrituras tienen rutas de aprobación, reversión y auditoría.
+- [ ] El equipo sabe desactivar el servidor y revocar el acceso.
 
-- Un problema de Permisos
-- Un problema de exposición de datos
-- Un problema de auditoría
-- Un problema de cadena de suministro
+## Siguiente paso
 
-### 3. Con MCP ya no hace falta escribir Skill ni documentación
+Ve a [Conectar un servidor MCP](/es/skills/mcp/connect-an-mcp-server/), empieza por uno de solo lectura y verifícalo después con `codex mcp list` y `/mcp`.
 
-Sigue haciendo falta. MCP resuelve «si se puede llamar a la herramienta», no «con qué flujo hay que llamar y en qué casos no».
+## Fuentes oficiales
 
-## Límites de seguridad
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
-- **Mínimo Permiso**: solo lectura, proyecto limitado, IP limitada
-- **Credenciales**: OAuth o tokens de corta duración; no en el Prompt ni en Git
-- **Aprobación humana**: escrituras, borrados en lote y envío de mensajes al exterior deben tener revisión
-- **Cadena de suministro**: solo servidores de confianza; revisa el código fuente de MCP de terceros
-
-Escenarios empresariales: hoja de ruta `11-team-enterprise/security/plugin-and-mcp-risk`.
-
-## Orden de integración
-
-1. Lee la documentación oficial de MCP y confirma el formato de configuración del cliente actual
-2. Empieza con un servidor de ejemplo oficial o de la comunidad de **solo lectura**
-3. Valida una sola llamada a herramienta en un proyecto de prueba
-4. Luego conecta el sistema real y escribe el runbook
-
-Pasos operativos: [Conectar un servidor MCP](/skills/mcp/connect-an-mcp-server/)
-
-## Empieza en solo lectura
-
-Cuando MCP toca un sistema real, entra en la cadena de permisos, datos y auditoría. Un camino seguro es: datos de prueba primero, validación de equipo en solo lectura, luego pocas escrituras reversibles con aprobación humana y, más tarde, gobernanza con roles, auditoría y auth revocable.
-
-Si el valor del servidor depende de escrituras de alto permiso, separa primero herramientas de lectura y escritura.
-
-## Checklist antes de conectar
-
-- ¿Qué herramientas expone el servidor? ¿Hay escritura?
-- ¿Dónde se guardan las credenciales y cómo se revocan por persona/proyecto/entorno?
-- ¿Los logs pueden contener datos de clientes, documentos internos o secretos?
-- ¿Se probó una llamada de herramienta en sandbox?
-- ¿Las escrituras tienen confirmación humana, rollback y auditoría?
-
-## Errores habituales
-
-- Dar al servidor MCP un Permiso excesivo «por comodidad de desarrollo»
-- Tratar MCP como sustituto del Skill (la descripción del flujo sigue en Skill o `AGENTS.md`)
-- Cambios de configuración fuera de la revisión de código
-
-## Fuentes de referencia
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- Documentación MCP de OpenAI Codex
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** App / CLI / IDE  
-**Nota de revisión:** Aunque hay contenido conceptual, la página incluye juicios de implementación actuales («formato de configuración del cliente», «comportamiento de Aprobación»); a 2026-07-26 la base pública oficial no basta para validarla por completo.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** App de escritorio de ChatGPT / Codex CLI / IDE; ChatGPT Web usa MCP remoto mediante Plugins
+
+**Última verificación:** 2026-08-25

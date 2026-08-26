@@ -3,14 +3,15 @@ title: Política de uso aceitável
 description: Acordos ao nível da equipa sobre o que o Codex pode e não pode fazer, alinhados com tecnologia e formação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-A **política de uso aceitável (AUP)** converte «posso usar o Codex para isto?» num consenso organizacional, em vez de o deixar ao critério individual. Complementa o [modelo de ameaças](/guide/team-enterprise/security/threat-model/): o modelo fala de riscos; a AUP fala de **limites de comportamento**.
+A **política de uso aceitável (AUP)** converte «posso usar o Codex para isto?» num consenso organizacional, em vez de o deixar ao critério individual. Complementa o [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/): o modelo fala de riscos; a AUP fala de **limites de comportamento**.
 
 ## Conteúdo
 
@@ -63,7 +64,7 @@ Por isso o importante da AUP é alinhá-la com formação, Permissões, configur
 ## Estrutura básica
 
 1. **Propósito e alcance**
-2. **Cenários de uso permitidos** (ligação ao [mapa de capacidades](/guide/start-here/codex-capability-map/))
+2. **Cenários de uso permitidos** (ligação ao [mapa de capacidades](/pt/guide/start-here/codex-capability-map/))
 3. **Cenários de uso proibidos**
 4. **Dados e confidencialidade**
 5. **Requisitos de supervisão humana** (merge, alterações de produção)
@@ -97,7 +98,7 @@ Se as três se aproximam de «sim», a política tem mais probabilidade de ser r
 ## Lista de aceitação
 
 - [ ] O onboarding inclui confirmação da AUP
-- [ ] Sem contradição com as [regras de equipa](/guide/customization/rules/team-rules/)
+- [ ] Sem contradição com as [regras de equipa](/pt/guide/customization/rules/team-rules/)
 - [ ] Revisão anual ou ao publicar funções importantes
 
 O valor da AUP é escrever com clareza os limites de uso do Codex na equipa e alinhá-los com os controlos reais.

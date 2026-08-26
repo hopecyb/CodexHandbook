@@ -3,9 +3,10 @@ title: 크리에이터 경로(개요)
 description: 콘텐츠 창작 관련 루트 개요입니다. 심화 단계는 이후 보완합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,9 +23,9 @@ Codex로 주로 콘텐츠를 만들고, 코드를 고치는 용도가 아니라�
 
 ## 지금 읽을 수 있는 것
 
-- [프롬프트](/prompts/)：창작 작업을 분명히 쓰기
-- [산출물 검증](/guide/quality/verify-artifacts/)：원고와 페이지 검사
-- [데스크톱 App](/guide/desktop-app/)：터미널을 쓰지 않는 사용자의 주 입구
+- [프롬프트](/ko/prompts/)：창작 작업을 분명히 쓰기
+- [산출물 검증](/ko/guide/quality/verify-artifacts/)：원고와 페이지 검사
+- [데스크톱 App](/ko/guide/desktop-app/)：터미널을 쓰지 않는 사용자의 주 입구
 
 ## 흔한 오해
 
@@ -48,11 +49,11 @@ Codex로 주로 콘텐츠를 만들고, 코드를 고치는 용도가 아니라�
 
 지금 바로 시작하려면 이 순서로 읽으세요.
 
-1. [프롬프트 기초](/prompts/basics/)
-2. [프롬프트 템플릿](/prompts/templates/)
-3. [프레젠테이션](/guide/files-and-artifacts/presentations/)
-4. [이미지와 스크린샷](/guide/files-and-artifacts/images-and-screenshots/)
-5. [산출물 검증](/guide/quality/verify-artifacts/)
+1. [프롬프트 기초](/ko/prompts/basics/)
+2. [프롬프트 템플릿](/ko/prompts/templates/)
+3. [프레젠테이션](/ko/guide/files-and-artifacts/presentations/)
+4. [이미지와 스크린샷](/ko/guide/files-and-artifacts/images-and-screenshots/)
+5. [산출물 검증](/ko/guide/quality/verify-artifacts/)
 
 이 경로는 요구를 분명히 말하고, 결과도 확인할 수 있게 하는 데 더 무게를 둡니다.
 

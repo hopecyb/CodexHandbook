@@ -3,9 +3,10 @@ title: 프로젝트 지침 잘 쓰기
 description: AGENTS.md 작성 체크리스트 — 짧고, 단단하고, 실행 가능하고, 검증 가능하게.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ sidebar:
 
 ### 1. 하드 제약을 앞에
 
-「필수」「금지」를 파일 앞쪽에 둡니다. 컨텍스트가 제한될 때 모델은 앞부분에 더 큰 가중을 둡니다 — [컨텍스트 우선순위](/guide/context/context-priority/)와 같은 논리입니다.
+「필수」「금지」를 파일 앞쪽에 둡니다. 컨텍스트가 제한될 때 모델은 앞부분에 더 큰 가중을 둡니다 — [컨텍스트 우선순위](/ko/guide/context/context-priority/)와 같은 논리입니다.
 
 ### 2. 명령은 복사 가능하게
 
@@ -151,9 +152,9 @@ pnpm test --filter @app/web
 
 ## 더 읽기
 
-- [프로젝트 설명](/guide/customization/project-instructions/)
-- [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
-- [완료 정의](/prompts/define-done/)
+- [프로젝트 설명](/ko/guide/customization/project-instructions/)
+- [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
+- [완료 정의](/ko/prompts/define-done/)
 
 ## 한 번의 작업에서 프로젝트 규칙으로
 

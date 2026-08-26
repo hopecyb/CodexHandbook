@@ -3,9 +3,10 @@ title: Generierte Artefakte abnehmen
 description: "Von Codex neu angelegte oder exportierte Dateien, Reports und Build-Artefakte systematisch abnehmen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -48,7 +49,7 @@ Anders als „ein paar Zeilen bestehenden Code“ — Inhalt wird leichter über
 5. Entscheiden: annehmen / lokal ändern / verwerfen und neu
 ```
 
-Methoden: [Artefakte überprüfen](/guide/quality/verify-artifacts/), [Definition of Done](/guide/quality/definition-of-done/)
+Methoden: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/), [Definition of Done](/de/guide/quality/definition-of-done/)
 
 ## Häufige Missverständnisse
 
@@ -109,7 +110,7 @@ Artefakte nicht nur als „schon generiert“ werten — mindestens öffnen, pr�
 - [ ] Keine Secrets, keine überflüssigen Generierungsverzeichnisse
 
 ## Quellen
-- [Unsicherheit handhaben](/guide/quality/handle-uncertainty/)
+- [Unsicherheit handhaben](/de/guide/quality/handle-uncertainty/)
 ---
 
 **Status:** verified  

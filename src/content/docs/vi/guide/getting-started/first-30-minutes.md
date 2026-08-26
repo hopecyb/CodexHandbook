@@ -3,9 +3,10 @@ title: Lộ trình ba mươi phút đầu
 description: Lộ trình 30 phút có thể tham khảo trực tiếp khi lần đầu bắt tay.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ Mục tiêu ba mươi phút đầu là chạy thông vòng khép kín lần đ�
 
 | Thời gian | Việc cần làm |
 |---|---|
-| 0–5 phút | Đọc [Checklist an toàn](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 phút | [Cài Desktop App](/guide/getting-started/install-desktop-app/) và [đăng nhập](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 phút | [Tạo dự án luyện tập](/guide/getting-started/create-your-first-project/) |
-| 15–25 phút | [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/) và kiểm tra |
-| 25–30 phút | Mở [Trò chuyện với Codex](/guide/learning-paths/beginner/01-talk-to-codex/) để vào lộ trình người mới |
+| 0–5 phút | Đọc [Checklist an toàn](/vi/guide/getting-started/beginner-safety-checklist/) |
+| 5–10 phút | [Cài Desktop App](/vi/guide/getting-started/install-desktop-app/) và [đăng nhập](/vi/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 phút | [Tạo dự án luyện tập](/vi/guide/getting-started/create-your-first-project/) |
+| 15–25 phút | [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/) và kiểm tra |
+| 25–30 phút | Mở [Trò chuyện với Codex](/vi/guide/learning-paths/beginner/01-talk-to-codex/) để vào lộ trình người mới |
 
 ## 30 phút này cần hoàn thành gì
 
@@ -94,7 +95,7 @@ Nếu sau 30 phút bạn đã làm được 4 việc sau, vòng này tính là x
 
 ## Nếu bị kẹt
 
-Trước hết vào [Chỉ mục xử lý sự cố](/guide/reference/troubleshooting/). Nếu chỉ là khái niệm chưa hiểu, cũng có thể quay lại [Cần gì trước khi bắt đầu](/guide/start-here/prerequisites/) và [Local và đám mây](/guide/foundations/local-vs-cloud/).
+Trước hết vào [Chỉ mục xử lý sự cố](/vi/guide/reference/troubleshooting/). Nếu chỉ là khái niệm chưa hiểu, cũng có thể quay lại [Cần gì trước khi bắt đầu](/vi/guide/start-here/prerequisites/) và [Local và đám mây](/vi/guide/foundations/local-vs-cloud/).
 
 Trong ba mươi phút đầu, tự tay hoàn thành một vòng «giao tác vụ, xem kết quả, tự phán đoán» đã rất đáng.
 

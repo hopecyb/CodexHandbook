@@ -5,9 +5,10 @@ sidebar:
   order: 40
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3a2992b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex は「今回どう聞くか」だけでなく、**永続的な設定**によってあなたとチームの約束を覚えます。この章では、どの要求を会話に残し、どれをプロジェクトに沈めるかを主に区別します。
@@ -24,9 +25,9 @@ Codex は「今回どう聞くか」だけでなく、**永続的な設定**に�
 
 | 読者 | 先に読むページ |
 |---|---|
-| 初めてタスクを動かした | [プロジェクト説明](/guide/customization/project-instructions/) |
-| リポジトリに協業規範を固定したい | [AGENTS.md とは](/guide/customization/agents-md/what-is-agents-md/) |
-| CLI/App の挙動を統一したい | [設定の基礎](/guide/customization/configuration/config-basics/) |
+| 初めてタスクを動かした | [プロジェクト説明](/ja/guide/customization/project-instructions/) |
+| リポジトリに協業規範を固定したい | [AGENTS.md とは](/ja/guide/customization/agents-md/what-is-agents-md/) |
+| CLI/App の挙動を統一したい | [設定の基礎](/ja/guide/customization/configuration/config-basics/) |
 
 ## この章が扱うこと
 
@@ -77,14 +78,14 @@ Codex を使い始めてしばらくすると、多くの人が同じ種類の�
 
 | テーマ | ページ |
 |---|---|
-| AGENTS.md | [概要](/guide/customization/agents-md/what-is-agents-md/) · [スコープと優先順位](/guide/customization/agents-md/scope-and-precedence/) · [効果的なプロジェクト指示の書き方](/guide/customization/agents-md/writing-effective-instructions/) |
-| プロジェクト指示 | [プロジェクト説明](/guide/customization/project-instructions/) |
-| メモリ | [メモリと永続コンテキスト](/guide/customization/memories-and-persistent-context/) |
-| 仕組みの選び方 | [適切な仕組みの選択](/guide/customization/choosing-the-right-mechanism/) |
-| 設定ファイル | [設定の基礎](/guide/customization/configuration/config-basics/) · [Profile](/guide/customization/configuration/profiles/) |
-| 個人の好み | [個人の好み](/guide/customization/personal-preferences/) |
-| ルール | [許可と拒否](/guide/customization/rules/allow-and-deny-patterns/) · [コマンドルール](/guide/customization/rules/command-rules/) · [チーム方針](/guide/customization/rules/team-rules/) |
-| 例 | [Monorepo での AGENTS.md](/guide/customization/examples/monorepo-agents-md/) |
+| AGENTS.md | [概要](/ja/guide/customization/agents-md/what-is-agents-md/) · [スコープと優先順位](/ja/guide/customization/agents-md/scope-and-precedence/) · [効果的なプロジェクト指示の書き方](/ja/guide/customization/agents-md/writing-effective-instructions/) |
+| プロジェクト指示 | [プロジェクト説明](/ja/guide/customization/project-instructions/) |
+| メモリ | [メモリと永続コンテキスト](/ja/guide/customization/memories-and-persistent-context/) |
+| 仕組みの選び方 | [適切な仕組みの選択](/ja/guide/customization/choosing-the-right-mechanism/) |
+| 設定ファイル | [設定の基礎](/ja/guide/customization/configuration/config-basics/) · [Profile](/ja/guide/customization/configuration/profiles/) |
+| 個人の好み | [個人の好み](/ja/guide/customization/personal-preferences/) |
+| ルール | [許可と拒否](/ja/guide/customization/rules/allow-and-deny-patterns/) · [コマンドルール](/ja/guide/customization/rules/command-rules/) · [チーム方針](/ja/guide/customization/rules/team-rules/) |
+| 例 | [Monorepo での AGENTS.md](/ja/guide/customization/examples/monorepo-agents-md/) |
 
 Rules の細目は着手済み。設定の詳細ページはカスタマイズモジュールとともに継続補充されます。
 

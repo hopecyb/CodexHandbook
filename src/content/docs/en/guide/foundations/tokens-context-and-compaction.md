@@ -4,7 +4,7 @@ description: Context windows, usage, and compaction.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: b33848c
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -19,7 +19,7 @@ When conversation or files grow too large, the system may **compact**: keep summ
 
 - Put key constraints in the current message or project notes—not only deep in old conversation
 - Start a new thread when the topic changes
-- Theory and tactics: [Context compaction](/guide/context/compaction/) and [Keep context focused](/guide/context/keep-context-focused/)
+- Theory and tactics: [Context compaction](/en/guide/context/compaction/) and [Keep context focused](/en/guide/context/keep-context-focused/)
 
 This page is concepts; `05` is how to manage them.
 

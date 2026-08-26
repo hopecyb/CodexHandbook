@@ -3,11 +3,13 @@ title: CLI Configuration
 description: Models, sandbox, approvals, and MCP—unify Codex behavior in the terminal.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
+source_revision: 48f3288
 ---
 
-CLI configuration sets **default model, working directory, approval strictness, MCP servers**, and more. Same concepts as [Configuration basics](/guide/customization/configuration/config-basics/); this page focuses on what terminal users change often.
+CLI configuration sets **default model, working directory, approval strictness, MCP servers**, and more. Same concepts as [Configuration basics](/en/guide/customization/configuration/config-basics/); this page focuses on what terminal users change often.
 
 ## Where config lives
 
@@ -33,7 +35,7 @@ Affects speed, cost, and success on hard tasks. Scripting should **pin a model**
 | Standard | Daily development |
 | Relaxed | Trusted personal machines only, per company policy |
 
-Concepts: [Sandbox and network](/guide/foundations/sandbox-and-network/)
+Concepts: [Sandbox and network](/en/guide/foundations/sandbox-and-network/)
 
 ### Approval policy
 
@@ -41,7 +43,7 @@ The CLI may ask before shell, disk writes, or network. Teams should document exp
 
 ### MCP server list
 
-Shared with [Connect an MCP server](/skills/mcp/connect-an-mcp-server/); restart sessions after changes.
+Shared with [Connect an MCP server](/en/skills/mcp/connect-an-mcp-server/); restart sessions after changes.
 
 ## Align project and CLI
 
@@ -59,7 +61,7 @@ Avoid “works in App, fails in CI”:
 | MCP not loaded | JSON/TOML syntax, paths |
 | Too many approvals | Sandbox mode and allowlists |
 
-More: [CLI troubleshooting](/guide/cli/troubleshooting/)
+More: [CLI troubleshooting](/en/guide/cli/troubleshooting/)
 
 ---
 

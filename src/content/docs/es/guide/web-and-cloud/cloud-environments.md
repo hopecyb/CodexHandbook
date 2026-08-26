@@ -1,158 +1,84 @@
 ---
-title: Entorno Cloud
-description: Composición, ciclo de vida y puntos de configuración de equipo del entorno remoto de ejecución de Codex Cloud.
+title:  Entorno Cloud
+description:  Composición, ciclo de vida y puntos de configuración de equipo del entorno remoto de ejecución de Codex Cloud.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f7c7188
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-El «Entorno Cloud» es la máquina de trabajo que usa Codex al ejecutar Tareas en remoto.
+A Cloud environment defines what Codex installs and runs for a repository. It does not inherit your laptop configuration. When work passes locally but fails in Cloud, compare runtimes, dependencies, variables, and network access first.
 
-Afecta directamente al resultado: sistema operativo, versiones de lenguaje, toolchain, política de red y qué rama del repo recibe. Esta capa responde sobre todo a:
+## Execution order for each chat
 
-> **¿Por qué en local corre y en Cloud falla?**
+1. Create a container and check out the selected branch or commit SHA.
+2. Run the setup script; when restoring a cache, optionally run the maintenance script.
+3. Apply the internet policy.
+4. Run the Agent loop to execute commands, edit, and verify while loading applicable `AGENTS.md` files.
+5. Return the answer and diff for follow-up or PR creation.
 
-## Contenido
+The default `universal` image includes common languages, packages, and tools. Pin Python, Node.js, and other versions in environment settings, and install additional dependencies in the setup script.
 
-- Diferencias entre el Entorno Cloud y la máquina de desarrollo local
-- Cómo se vincula el entorno al repo y a la rama de GitHub
-- Cómo mantiene el equipo una configuración Cloud reproducible
+## Minimal reproducible configuration
 
-## Mira primero estas tres cosas
+For a pnpm project, pin the same Node.js version as CI and configure:
 
-- Cloud no «lee todo tu ordenador actual»; solo ve lo que hay en el entorno remoto
-- Al correr la Tarea, Cloud también se enfrenta a dependencias, versiones y red
-- Lo que no has committeado ni pusheado en local, Cloud por defecto no lo ve
-
-Puedes pensar Cloud como «cambiar de máquina para trabajar».
-
-## Concepto central
-
-```text
-Repo de GitHub (alguna rama)
-        ↓ clone / checkout
-Instancia de Entorno Cloud (contenedor o VM, según el producto)
-        ↓
-El Agent ejecuta la Tarea: instalar dependencias, cambiar código, probar, push
+```bash
+corepack enable
+pnpm install --frozen-lockfile
 ```
 
-Combínalo con [Conectar GitHub](/guide/web-and-cloud/connect-github/); el entorno **no** puede acceder a commits de tu portátil sin push.
+At the repository root, put validation rules in `AGENTS.md`:
 
-## Diferencias entre local y Cloud
+```md
+## Validation
 
-- **Tarea local**: Codex trabaja delante de ti, alrededor de tu ordenador actual
-- **Tarea Cloud**: envías a Codex a una máquina remota
+- Run `pnpm test` after code changes.
+- Run `pnpm typecheck` before reporting completion.
+- Do not update the lockfile unless dependency changes are requested.
+```
 
-De ahí vienen las confusiones habituales al usar Cloud por primera vez:
+Setup and Agent run in separate Bash sessions. A temporary `export` in setup does not automatically persist. Configure non-sensitive values as environment variables or persist them through shell configuration as the official guidance recommends.
 
-- «¿Por qué no ve el archivo que acabo de cambiar en local?»
-- «¿Por qué no tiene la herramienta instalada globalmente en mi máquina?»
-- «¿Por qué no conecta con la base de datos que tengo abierta en local?»
+## Cache and maintenance
 
-En la mayoría de los casos, **esa máquina remota simplemente no tiene esas cosas**; el problema está en el entorno.
+Cloud may cache container state for up to 12 hours to accelerate new and follow-up chats. After restoring a cache, it checks out the chat's selected branch and can run a maintenance script to refresh dependencies.
 
-## Qué incluye el entorno (capa conceptual)
+Changing setup, maintenance, environment variables, or Secrets invalidates the cache automatically. Use **Reset cache** when repository changes make a cache incompatible. In Business and Enterprise, users with access to an environment may share its cache; resetting it can affect others in the workspace.
 
-| Componente | Explicación |
+## Environment variables and Secrets
+
+- Environment variables are available during setup and the Agent phase.
+- Secrets are decrypted only for setup and removed before the Agent starts.
+- Setup has internet access.
+- Agent internet access is off by default and can be enabled per environment.
+
+These boundaries are easy to confuse. See [Secrets and environment variables](/es/guide/web-and-cloud/secrets-and-variables/).
+
+## Alignment checklist
+
+| Check | Target |
 |---|---|
-| Imagen base | OS, herramientas de build habituales |
-| Runtime | Node, Python, Go, etc. (según imagen y Tarea) |
-| Directorio de trabajo | Ruta del repo tras el clone |
-| Política de red | Si se permite salida, a qué dominios |
-| Inyección de credenciales | [Secrets y variables](/guide/web-and-cloud/secrets-and-variables/) |
+| Starting branch/commit | Matches the task |
+| Runtime versions | Match CI or production constraints |
+| Lockfile | Frozen installation |
+| Setup | Repeatable, non-interactive, fail fast |
+| Verification commands | Recorded in `AGENTS.md` |
+| Network | Only required domains and methods for the Agent |
 
-Lista concreta de imágenes y personalización según la [documentación oficial de Cloud](https://developers.openai.com/codex).
+## Official sources
 
-## Malentendidos frecuentes
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [codex-universal image](https://github.com/openai/codex-universal)
 
-### 1. Creer que Cloud hereda automáticamente tu entorno local
-
-No.
-
-Node, Python, Homebrew, Chrome o el cliente de BD que tengas en local no aparecen en Cloud «porque los tengas tú».
-
-### 2. Creer que pushear el repo basta para que todo esté listo
-
-El código del repo es solo el punto de partida; el éxito también depende de:
-
-- Cómo se instalan las dependencias
-- Cuáles son los comandos de arranque o prueba
-- Qué Secrets hacen falta
-- Si la política de red permite recursos externos
-
-### 3. Creer que un fallo de Cloud significa que Codex «no sirve»
-
-Muchos fallos de Cloud son entorno incompleto, no incapacidad de hacer la Tarea.
-
-Orden de diagnóstico:
-
-1. ¿Repo y rama correctos?
-2. ¿Dependencias y versiones de runtime correctas?
-3. ¿Secret y red disponibles?
-4. ¿El Prompt de la Tarea está claro?
-
-## Flujo de configuración recomendado
-
-1. Completa la primera Tarea Cloud en un **repo de prueba** y registra los comandos de instalación de dependencias
-2. Escribe los pasos repetidos en la documentación del repo (`README`, `AGENTS.md` o el archivo de environment que soporte el producto)
-3. Configura [Secrets](/guide/web-and-cloud/secrets-and-variables/) (registry privado, API key)
-4. Confirma que la política de [acceso a internet](/guide/web-and-cloud/internet-access/) cumple los requisitos de seguridad
-5. Con la misma plantilla de entorno, valida el ciclo issue → PR
-
-## Cuándo conviene Cloud
-
-Puedes decidir así:
-
-- Solo cambias el proyecto de tu máquina y quieres ver el resultado ya: primero local
-- Quieres dejar la Tarea corriendo, un entorno unificado para el equipo o conectar GitHub en remoto: entonces Cloud
-
-Si el flujo local aún no está fluido, no hace falta convertir el problema en «configuración de Cloud» de golpe.
-
-## Alineación con el entorno local
-
-Para evitar «verde en local, rojo en Cloud»:
-
-| Práctica | Motivo |
-|---|---|
-| Fijar versiones de dependencias (lockfile) | Instalación reproducible |
-| En `AGENTS.md`, escribir comandos de instalación y prueba | El Agent no adivina |
-| CI y Cloud con versiones cercanas de Node/Python | Menos deriva de versión |
-| Archivos grandes con Git LFS o descarga en build | Tamaño de clone controlable |
-
-## Ciclo de vida
-
-Tarea Cloud típica:
-
-1. **Crear/reutilizar** instancia de entorno
-2. **Preparar**: clone, checkout de rama, instalar dependencias
-3. **Ejecutar**: el Agent cambia código y corre comandos
-4. **Entregar**: push de rama, PR, log artifact
-5. **Destruir o recuperar** (la política varía según el producto)
-
-Las Tareas largas se pueden seguir con [notificaciones de la App de escritorio](/guide/desktop-app/notifications/) o desde el móvil.
-
-## Errores frecuentes
-
-- Asumir que Cloud ya trae toda la toolchain del monorepo privado
-- Depender de servicios `localhost` (BD, mock API) sin proveerlos en el entorno
-- En el primer intento, correr Tareas sin límite en el repo de producción
-- Confundir «problema de entorno» con «problema de capacidad del modelo»
-
-## Límites de seguridad
-
-- Trata el entorno como **semi-confiable**: sigue haciendo falta code review y protección de ramas
-- La cadena de conexión a BD de producción solo por Secrets, no en el Prompt
-- Limpia periódicamente plantillas de entorno y Secrets en desuso
-
-## Fuentes de referencia
-- OpenAI Codex Cloud environments
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** Cloud  
-**Nota de revisión:** Esta página toca forma de instancia, ciclo de vida, plantillas de entorno y vinculación a ramas de GitHub — detalles de implementación; falta documentación oficial vigente lo bastante sólida para confirmarlos uno a uno; hasta completar materiales formales de entorno Cloud, no conviene `verified`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

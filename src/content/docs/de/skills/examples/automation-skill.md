@@ -3,9 +3,10 @@ title: "Beispiel: Automations-Skill"
 description: Wiederholte Checks oder Report-Erzeugung als Skill kapseln.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Beispiel: Automations-Skill
@@ -30,8 +31,8 @@ description: "Fasst gestrige Änderungen, Testergebnisse und Todos zu einer Tage
 
 ## Verwandt
 
-- [Täglicher Report automatisieren](/cases/automate-a-daily-report/)
-- [Geplante Aufgaben](/skills/automations/scheduled-tasks/)
+- [Täglicher Report automatisieren](/de/cases/automate-a-daily-report/)
+- [Geplante Aufgaben](/de/skills/automations/scheduled-tasks/)
 ---
 
 **Status:** verified  

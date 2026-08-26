@@ -3,9 +3,10 @@ title: Explorar—Planear—Executar—Verificar
 description: Fluxo principal geral do Codex — quatro fases com checkpoints, mais estável do que «tudo de uma vez».
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Este é o fluxo de trabalho predefinido recomendado por este manual — adequado desde «ainda não sei como fazer» até «pode fundir».
@@ -19,7 +20,7 @@ Este é o fluxo de trabalho predefinido recomendado por este manual — adequado
 ④ Verificar Verify   → Testes, revisão do diff, confronto com a «definição de concluído»
 ```
 
-Não salte ①② e vá direto a ③ — isso vira facilmente «adivinhar a correção». Ver [diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/).
+Não salte ①② e vá direto a ③ — isso vira facilmente «adivinhar a correção». Ver [diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/).
 
 ## ① Explorar
 
@@ -45,7 +46,7 @@ Com base na exploração anterior, apresente o plano: passos numerados, ficheiro
 Não escreva código até eu responder «executar conforme o plano».
 ```
 
-Tarefas grandes ou alterações de alto risco exigem confirmação prévia. Em tarefas pequenas, pode acordar «plano com no máximo 3 passos pode executar automaticamente» e registar em [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Tarefas grandes ou alterações de alto risco exigem confirmação prévia. Em tarefas pequenas, pode acordar «plano com no máximo 3 passos pode executar automaticamente» e registar em [AGENTS.md](/pt/guide/customization/agents-md/writing-effective-instructions/).
 
 ## ③ Executar
 
@@ -67,7 +68,7 @@ Frase de orientação: «Execute o passo 2; se precisar de alterar o plano, pare
 | Humana | Ler o diff, testar manualmente caminhos críticos |
 | Artefato | Capturas, excertos de log, respostas de API |
 
-Listas relacionadas em [definir concluído](/prompts/define-done/) e [correr testes](/guide/quality/run-tests/).
+Listas relacionadas em [definir concluído](/pt/prompts/define-done/) e [correr testes](/pt/guide/quality/run-tests/).
 
 ## Ajustar à escala da tarefa
 
@@ -80,7 +81,7 @@ Listas relacionadas em [definir concluído](/prompts/define-done/) e [correr tes
 
 ## Com o modelo de caso EPXV
 
-A equipa pode escrever as quatro fases no [modelo de caso](/cases/use-cases/case-study-template/) e na descrição do PR, criando uma linguagem comum.
+A equipa pode escrever as quatro fases no [modelo de caso](/pt/cases/use-cases/case-study-template/) e na descrição do PR, criando uma linguagem comum.
 
 ## Erros comuns
 

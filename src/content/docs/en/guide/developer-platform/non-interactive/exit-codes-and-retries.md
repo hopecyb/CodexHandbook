@@ -1,16 +1,17 @@
 ---
+reviewed_at: 2026-08-26
 title: Exit Codes and Retries
 description: Interpret codex exec success and failure in pipelines—when to retry vs fail fast.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-CI relies on **process exit codes** to judge step success. This page covers common semantics for [codex exec](/guide/developer-platform/non-interactive/codex-exec/), retry strategy, and idempotent design.
+CI relies on **process exit codes** to judge step success. This page covers common semantics for [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/), retry strategy, and idempotent design.
 
 ## What this page covers
 
@@ -56,33 +57,30 @@ If the failure will not disappear on retry—permissions, policy blocks, bad pro
 
 | Situation | Suggested handling |
 |---|---|
-| `0` | Task completed and met success criteria in the prompt |
+| `0` | The `codex exec` process completed successfully; use structured output to decide whether the business check passed |
 | Non-`0` with policy/sandbox denial in logs | **Do not** blindly retry; fix config or prompt |
-| Non-`0` with API 429/5xx | Limited exponential backoff retries |
-| P0 issues found but execution succeeded | Use [structured output](/guide/developer-platform/non-interactive/structured-output/) `pass: false` + wrapper script `exit 1` |
+| Non-`0` that the runner identifies as a transient network or service failure | Limited backoff retries |
+| P0 issues found but execution succeeded | Use [structured output](/en/guide/developer-platform/non-interactive/structured-output/) `pass: false` + wrapper script `exit 1` |
 
 “Found a security issue” should not rely on a crash—**explicitly** set `pass: false` in JSON and let a wrapper script choose the exit code.
 
-## Retry template (bash)
+## Exit-code capture template (bash)
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Policy error, not retrying" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-Align “do not retry” codes with official docs and branch in `case`.
+Do not assign names to numbers without an official definition, such as assuming that `2` always means a policy failure. When retries are needed, let the outer runner use error types it can identify reliably, and limit attempts, total duration, and side effects.
 
 ## Idempotency and side effects
 
@@ -119,14 +117,14 @@ First separate “temporary fault” from “retry will not help,” then decide
 
 ## Related
 
-- [Error reference](/guide/reference/error-reference/)
-- [Failure recovery](/cases/workflows/failure-recovery/)
+- [Error reference](/en/guide/reference/error-reference/)
+- [Failure recovery](/en/cases/workflows/failure-recovery/)
 
 ## Reference sources
 - OpenAI API retry guidance (conceptual)
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** This page gives reasonable engineering advice on exit codes and retries, but examples assume specific exit semantics (e.g. `code=2`) and `codex exec` behavior without strong current official backing; restore `verified` after new CLI docs are checked.  
+**Status:** outdated
+**Products:** CLI
+**Review note:** This page gives reasonable engineering advice on exit codes and retries, but examples assume specific exit semantics (e.g. `code=2`) and `codex exec` behavior without strong current official backing; restore `verified` after new CLI docs are checked.
 **Last verified:** 2026-07-26

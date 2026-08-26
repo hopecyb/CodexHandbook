@@ -3,9 +3,10 @@ title: Entender un código base
 description: Explora en solo lectura un repositorio desconocido y construye un mapa mental accionable.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Entender un código base
@@ -42,8 +43,8 @@ No modifiques el código todavía. Lee @src/ y @README y explica en 8 puntos com
 
 ## 4. Relacionado
 
-- [Plantilla de comprensión](/prompts/templates/understand/)
-- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
+- [Plantilla de comprensión](/es/prompts/templates/understand/)
+- [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
 
 ---
 

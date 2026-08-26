@@ -3,9 +3,10 @@ title: Règles
 description: Vue d'ensemble des allow/deny, règles de commandes et politique d'équipe — quoi bloquer, quoi alerter et quoi standardiser.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1b6534d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Le groupe règles est facile à confondre pour les débutants avec « écrire quelques rappels supplémentaires pour Codex ».
@@ -14,9 +15,9 @@ Plus précisément, les règles répondent : quelles actions sont autorisées pa
 
 ## Ordre recommandé
 
-1. [Modèles Allow et Deny](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Règles de commandes](/guide/customization/rules/command-rules/)
-3. [Règles d'équipe](/guide/customization/rules/team-rules/)
+1. [Modèles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/)
+2. [Règles de commandes](/fr/guide/customization/rules/command-rules/)
+3. [Règles d'équipe](/fr/guide/customization/rules/team-rules/)
 
 ## Ce que ce groupe vous aide à résoudre
 

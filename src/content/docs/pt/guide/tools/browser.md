@@ -3,9 +3,10 @@ title: Ferramenta de browser
 description: Fazer o Codex abrir páginas web, verificar o estado da UI e validar comportamento frontend — capacidades e limites.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ Só ler código ou descrições textuais costuma não chegar — é preciso abri
 | Comparar página estática e implementação | Substituir um framework E2E completo |
 | Ler texto visível da página para ajudar no debug | Sites com verificação humana complexa |
 
-Contexto de seleção: [Seleção de Ferramentas](/guide/tools/tool-selection/)
+Contexto de seleção: [Seleção de Ferramentas](/pt/guide/tools/tool-selection/)
 
 ## Comparação com outras Ferramentas
 
@@ -83,7 +84,7 @@ O browser costuma encaixar melhor do que análise só de texto.
 1. **Frontend local**: primeiro `npm run dev`, depois dê `http://localhost:PORT/path`
 2. **Tarefa clara**: «verificar se o formulário de login overflow a 375px de largura», não «olhe a página»
 3. **Limites claros**: proibir acesso à internet externa; proibir submeter formulários para produção
-4. **Aceitação**: comparar com [Verificar Artefatos](/guide/quality/verify-artifacts/) e ecrãs
+4. **Aceitação**: comparar com [Verificar Artefatos](/pt/guide/quality/verify-artifacts/) e ecrãs
 
 ## Redação aplicável diretamente
 
@@ -100,9 +101,9 @@ Se encontrar problemas, dê evidência em ecrã e sugestões de correção.
 - Por defeito, assuma que o browser pode aceder a **tudo o que a sua máquina ou ambiente alcança** — incluindo admin de intranet
 - Na Tarefa declare: `só aceder a localhost` ou lista branca de domínios
 - Não corra Tarefas de repositórios não fiáveis numa configuração de browser já com sessão pessoal iniciada
-- A política de browser em Cloud é definida por [Ambientes Cloud](/guide/web-and-cloud/cloud-environments/) e pela política de rede
+- A política de browser em Cloud é definida por [Ambientes Cloud](/pt/guide/web-and-cloud/cloud-environments/) e pela política de rede
 
-Conceito de Aprovação: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/)
+Conceito de Aprovação: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
 
 ## Erros habituais
 

@@ -3,9 +3,10 @@ title: Escribir un artículo
 description: Flujo completo de escritura técnica — de la idea al esquema, el borrador y la comprobación de hechos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Escribir un artículo
@@ -49,11 +50,11 @@ Escribe sección a sección; evita generar el texto completo de una vez, que lue
 ### Verificar
 
 - Comprueba a mano enlaces, números de versión y comandos
-- Opcional: fija el flujo con el [Skill de escritura](/skills/examples/writing-skill/)
+- Opcional: fija el flujo con el [Skill de escritura](/es/skills/examples/writing-skill/)
 
 ## 3. Captura para reutilizar
 
-La escritura repetida puede encapsularse en el Skill `article-writer`; ver [ruta del creador](/guide/learning-paths/creator/).
+La escritura repetida puede encapsularse en el Skill `article-writer`; ver [ruta del creador](/es/guide/learning-paths/creator/).
 
 ---
 

@@ -3,9 +3,10 @@ title: Diagnosticar antes de corrigir
 description: Problemas de produção e bugs teimosos — construa primeiro a cadeia de evidências, só depois intervir.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Pedir ao Codex para corrigir o bug de imediato costuma gerar muita retrabalho. O fluxo de diagnóstico enfatiza: **sintoma → hipótese → evidência → correção mínima**.

@@ -1,0 +1,71 @@
+<svg lang="zh-tw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="title desc">
+  <title id="title">Codex 沙箱與審批判斷流程</title>
+  <desc id="desc">Codex 為完成任務提出動作，先判斷是否處於沙箱範圍內。範圍內可執行並留下證據；範圍外按審批策略請求人工決定。拒絕後收窄範圍或解釋，批准後只執行明確動作。兩條路徑最後都進入結果驗證。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .label { fill: #f8fafc; font-size: 19px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 15px; }
+    .tiny { fill: #94a3b8; font-size: 13px; }
+    .edge { fill: #e2e8f0; font-size: 13px; font-weight: 700; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="green-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#34d399"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1200" height="780" rx="8" fill="#020617"/>
+  <rect width="1200" height="780" rx="8" fill="url(#grid)"/>
+  <text x="44" y="48" class="h1">沙箱管“最多到哪裡”，審批管“越界前是否詢問”</text>
+  <text x="44" y="75" class="sub">任務約束描述意圖；系統邊界約束執行；diff、測試和外部狀態負責最終驗收。</text>
+
+  <rect x="66" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="191" y="158" text-anchor="middle" class="label">任務目標與約束</text>
+  <text x="191" y="186" text-anchor="middle" class="note">允許範圍 · 禁止動作 · 驗收</text>
+  <path d="M316 169H390" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="390" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="515" y="158" text-anchor="middle" class="label">Codex 提出動作</text>
+  <text x="515" y="186" text-anchor="middle" class="note">讀寫 · 命令 · 網路 · 應用</text>
+  <path d="M640 169H714" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M850 112L986 169L850 226L714 169Z" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="850" y="160" text-anchor="middle" class="label">在當前沙箱</text>
+  <text x="850" y="185" text-anchor="middle" class="label">範圍內？</text>
+
+  <path d="M986 169H1080V298" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#green-arrow)"/>
+  <text x="1015" y="155" class="edge">是</text>
+  <rect x="950" y="298" width="230" height="98" rx="9" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1065" y="335" text-anchor="middle" class="label">在邊界內執行</text>
+  <text x="1065" y="364" text-anchor="middle" class="note">仍需記錄命令與輸出</text>
+
+  <path d="M850 226V282H588" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
+  <text x="864" y="258" class="edge">否</text>
+  <rect x="318" y="282" width="270" height="104" rx="9" fill="#07101f" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="453" y="319" text-anchor="middle" class="label">審批策略如何處理？</text>
+  <text x="453" y="348" text-anchor="middle" class="note">詢問使用者或按策略拒絕</text>
+  <text x="453" y="371" text-anchor="middle" class="tiny">子程序也受同一沙箱約束</text>
+
+  <path d="M385 386V445H214" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
+  <text x="314" y="430" class="edge">拒絕</text>
+  <rect x="48" y="445" width="332" height="122" rx="9" fill="#2a1018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="214" y="483" text-anchor="middle" class="label">收窄動作或解釋阻塞</text>
+  <text x="214" y="513" text-anchor="middle" class="note">改用工作區內路徑 · 使用現有依賴</text>
+  <text x="214" y="541" text-anchor="middle" class="tiny">不能悄悄換成更高風險的替代操作</text>
+
+  <path d="M521 386V445H684" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="574" y="430" class="edge">批准</text>
+  <rect x="518" y="445" width="332" height="122" rx="9" fill="#2a240b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="684" y="483" text-anchor="middle" class="label">只執行明確批准的範圍</text>
+  <text x="684" y="513" text-anchor="middle" class="note">具體命令 · 路徑 · 域名 · 持續時間</text>
+  <text x="684" y="541" text-anchor="middle" class="tiny">新的越界動作需要重新判斷</text>
+
+  <path d="M214 567V637H516" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M684 567V637H638" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M1065 396V637H638" fill="none" stroke="#34d399" stroke-width="1.5" marker-end="url(#green-arrow)"/>
+  <rect x="390" y="618" width="420" height="108" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="600" y="658" text-anchor="middle" class="label">驗證結果與外部副作用</text>
+  <text x="600" y="687" text-anchor="middle" class="note">diff · 測試 · 日誌 · 遠端狀態 · 可恢復性</text>
+  <text x="600" y="712" text-anchor="middle" class="tiny">沒有彈窗不等於無需審查；獲得批准也不等於結果正確。</text>
+</svg>

@@ -3,9 +3,10 @@ title: Non-Interactive Mode
 description: Batch jobs, scripts, and pipelines—understand what tasks fit first, then commands and output design.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e226a62
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many people first hear “non-interactive mode” and think of it as “Codex without chat.”
@@ -14,10 +15,10 @@ Non-interactive mode is for putting Codex in scripts, CI, or batch jobs so one c
 
 ## Recommended order
 
-1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [Structured output](/guide/developer-platform/non-interactive/structured-output/)
-4. [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+1. [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/)
+2. [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [Structured output](/en/guide/developer-platform/non-interactive/structured-output/)
+4. [Exit codes and retries](/en/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## What this section solves
 

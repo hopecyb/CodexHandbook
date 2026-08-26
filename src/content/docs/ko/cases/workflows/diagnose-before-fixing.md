@@ -3,9 +3,10 @@ title: 먼저 진단한 뒤 수정
 description: 프로덕션 문제와 고질적인 bug—먼저 증거 사슬을 만든 뒤 손댑니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex에게 바로 bug를 고치라고 하면 재작업률이 보통 높습니다. 진단 워크플로는 더 강조합니다: **증상 → 가설 → 증거 → 최소 수정**.

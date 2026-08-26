@@ -1,50 +1,49 @@
 ---
 title: Hooks
-description: Add checks, logs, and blocks at fixed execution points—when to block vs log.
+description: Run scripts or MCP tools at Codex lifecycle points for checks, logging, and policy control.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: c768708
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-A Hook automatically inserts a check or log at a fixed moment.
+A Hook is an automatic handler in the Codex lifecycle. It can run a script or MCP tool when a session starts, a prompt is submitted, before or after a tool call, around context compaction, when a subagent stops, or when the main thread ends.
 
-It handles checks, logging, and interception at process nodes—not defining how the task itself should run.
+## What this section solves
 
-## Contents
-
-This section mainly answers three questions:
-
-- When should I trigger a Hook?
-- Am I trying to prevent problems or only record them?
-- How do I start Hook configuration in a low-risk way?
+- Choose a real event rather than inventing a name such as `pre_tool`.
+- Separate blocking before execution from feedback after execution.
+- Start with a testable, low-risk Hook.
+- Review the trust boundary of project Hooks and Hooks bundled in Plugins.
 
 ## Reading order
 
-1. [Hooks overview](/skills/hooks/hooks-overview/): Separate Hook from Skill and MCP first
-2. [Hook event types](/skills/hooks/hook-event-types/): Know whether to attach before, after, or at session start/end
-3. [Hook configuration examples](/skills/hooks/hooks-examples/): Three common patterns—log only / block first / light input check
+1. [Hooks overview](/en/skills/hooks/hooks-overview/): configuration layers, trust, and runtime behavior
+2. [Hook event types](/en/skills/hooks/hook-event-types/): choose events and matchers by lifecycle position
+3. [Hook examples](/en/skills/hooks/hooks-examples/): run a unit-tested `PreToolUse` guard
 
-## Configuration order
+## Fastest decision
 
-Do not start with the strictest block policy. A better order:
+| Goal | Consider first |
+|---|---|
+| Deny or rewrite tool input before execution | `PreToolUse` |
+| Decide when Codex is about to request elevated permission | `PermissionRequest` |
+| Log or add feedback after a tool finishes | `PostToolUse` |
+| Check a submitted prompt or add context | `UserPromptSubmit` |
+| Require the main thread or a subagent to continue another turn | `Stop` / `SubagentStop` |
 
-1. `log` first
-2. Then `warn`
-3. Then `block`
+Hooks do not replace sandboxing, approvals, command rules, or service-side permissions. They are an additional guardrail, and some managed-tool paths do not pass through local tool Hooks.
 
-That makes it easier to verify:
+## Official source
 
-- Events are wired correctly
-- False positives are acceptable
-- Performance does not slow daily use
-
-Think of a Hook as a small gate on a process node—for check, log, or block.
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Hook support surface, event model, and configuration entry points depend heavily on client version; as of 2026-07-26 official public material is insufficient to stabilize this section—marked `outdated`.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; trust review and `/hooks` management follow the Codex CLI documentation
+
+**Last verified:** 2026-08-25

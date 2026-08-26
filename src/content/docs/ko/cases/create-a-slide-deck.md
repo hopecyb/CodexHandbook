@@ -3,9 +3,10 @@ title: 슬라이드 만들기
 description: 개요부터 시연 가능한 발표 자료까지의 산출물 생성 사례입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 42c7a26
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 슬라이드 만들기
@@ -42,7 +43,7 @@ translated_at: 2026-07-28
 
 ## 4. 관련
 
-- [발표 자료 기능](/guide/files-and-artifacts/presentations/)
+- [발표 자료 기능](/ko/guide/files-and-artifacts/presentations/)
 ---
 
 **상태:** verified  

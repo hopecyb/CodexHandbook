@@ -3,9 +3,10 @@ title: 選択範囲と開いているファイル
 description: 選択したコードと開いているファイルで IDE タスクの範囲を正確に限定する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -28,11 +29,11 @@ IDE 拡張は**小さく、高精度**の変更に向いています。コード
 | **開いているファイル** | ファイル内の複数箇所の関連を理解したい | `auth.ts` と `auth.test.ts` を開く |
 | **@ パス** | ディレクトリをまたぐ、未オープンのファイル | `@src/api/client.ts` でバックエンドと型を揃える |
 
-概念の深掘り：[ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
+概念の深掘り：[ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/)
 
 ## 最小限の実践
 
-1. **最小の関連断片**を選択（通常 10〜80 行）。プロンプトに目標と [完了の定義](/prompts/define-done/) を書く
+1. **最小の関連断片**を選択（通常 10〜80 行）。プロンプトに目標と [完了の定義](/ja/prompts/define-done/) を書く
 2. 呼び出し元が関係するなら、上流ファイルをあと 1〜2 個開くか @ する
 3. 「X に関係するファイルだけ変更。変更予定ファイルを列挙してから着手」と要求する
 4. IDE の diff でブロックごとに受け入れ、一括受け入れしない
@@ -45,7 +46,7 @@ IDE 拡張は**小さく、高精度**の変更に向いています。コード
 プロンプト：モジュール境界、変更禁止ディレクトリを説明
 ```
 
-大規模リファクタリングは [デスクトップ App の worktree](/guide/desktop-app/worktrees/) や [プランニングモード](/guide/agent-work/planning/) が向いています。IDE は仕上げと小さなコミット向きです。
+大規模リファクタリングは [デスクトップ App の worktree](/ja/guide/desktop-app/worktrees/) や [プランニングモード](/ja/guide/agent-work/planning/) が向いています。IDE は仕上げと小さなコミット向きです。
 
 ## よくある疑問
 
@@ -68,13 +69,13 @@ IDE 拡張は**小さく、高精度**の変更に向いています。コード
 
 ## レビューとの連携
 
-受け入れる前に [diff のレビュー](/guide/quality/review-diffs/) と照合：
+受け入れる前に [diff のレビュー](/ja/guide/quality/review-diffs/) と照合：
 
 - 合意したファイルだけが変わっているか
 - 選択範囲外に意図しない削除がないか
 - 新しい分岐をテストでカバーしているか
 
-製品側：[IDE での変更レビュー](/guide/ide/reviewing-changes/)
+製品側：[IDE での変更レビュー](/ja/guide/ide/reviewing-changes/)
 
 ## よくある間違い
 
@@ -85,7 +86,7 @@ IDE 拡張は**小さく、高精度**の変更に向いています。コード
 | diff を読まずに提案をすべて受け入れ | スタイルの漂移やセキュリティ上の穴 |
 
 ## 参考ソース
-- [制約の定義](/prompts/constraints-and-boundaries/)
+- [制約の定義](/ja/prompts/constraints-and-boundaries/)
 ---
 
 **状態：** verified  

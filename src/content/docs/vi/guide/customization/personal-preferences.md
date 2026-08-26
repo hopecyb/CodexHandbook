@@ -3,9 +3,10 @@ title: Sở thích cá nhân
 description: Cấu hình cấp người dùng, mô hình mặc định và thói giao diện — tránh làm bẩn ước định nhóm trong kho.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ sidebar:
 ## Nội dung
 
 - Cái gì nên đặt tầng cá nhân, cái gì nên đặt tầng dự án
-- Phối hợp với [Profile](/guide/customization/configuration/profiles/) để chuyển tình huống thế nào
+- Phối hợp với [Profile](/vi/guide/customization/configuration/profiles/) để chuyển tình huống thế nào
 - Tránh cài đặt lỏng cá nhân rò vào kho nhóm
 
-Tổng quan ưu tiên: [Cấu hình cá nhân hóa](/guide/customization/) · [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/)
+Tổng quan ưu tiên: [Cấu hình cá nhân hóa](/vi/guide/customization/) · [Phạm vi và ưu tiên](/vi/guide/customization/agents-md/scope-and-precedence/)
 
 ## Vì sao cần tách tầng này
 
@@ -39,10 +40,10 @@ Nhưng ba loại không tách thì sau dễ:
 | Nội dung | Ví dụ |
 |---|---|
 | Mô hình mặc định và mức suy luận | Hiệu năng máy cá nhân và gói |
-| Chủ đề UI, font, thông báo | [Cài đặt](/guide/desktop-app/settings/) App máy tính |
+| Chủ đề UI, font, thông báo | [Cài đặt](/vi/guide/desktop-app/settings/) App máy tính |
 | MCP cá nhân (công cụ riêng) | DB cục bộ chỉ đọc (thận trọng ủy quyền) |
 | Đường dẫn thư viện Skill cá nhân | Không xung đột Plugin nhóm |
-| Alias terminal, thói thư mục khởi động `codex` | Xem [Cấu hình CLI](/guide/cli/configuration/) |
+| Alias terminal, thói thư mục khởi động `codex` | Xem [Cấu hình CLI](/vi/guide/cli/configuration/) |
 
 ## Nội dung nhóm không nên chỉ đặt tầng cá nhân
 
@@ -90,7 +91,7 @@ Sở thích cá nhân để bạn dùng vừa tay hơn, không thay lưới quy 
 
 ## Với tính năng bộ nhớ
 
-Nếu sản phẩm có «bộ nhớ» hoặc sở thích bền, xem [Bộ nhớ và ngữ cảnh bền](/guide/customization/memories-and-persistent-context/). Bộ nhớ phù hợp thói ổn định; **ràng buộc đặc thù dự án vẫn lấy tệp kho làm chuẩn**.
+Nếu sản phẩm có «bộ nhớ» hoặc sở thích bền, xem [Bộ nhớ và ngữ cảnh bền](/vi/guide/customization/memories-and-persistent-context/). Bộ nhớ phù hợp thói ổn định; **ràng buộc đặc thù dự án vẫn lấy tệp kho làm chuẩn**.
 
 ## Lỗi thường gặp
 

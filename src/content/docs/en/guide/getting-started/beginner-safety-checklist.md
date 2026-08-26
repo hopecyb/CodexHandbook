@@ -4,7 +4,7 @@ description: Safety checks to review before your first use.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 5add3bd
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -18,9 +18,9 @@ Check before you start:
 - [ ] I understand high-risk operations need my approval
 - [ ] I won't approve commands or network requests I don't understand
 - [ ] I plan to review diffs before accepting results
-- [ ] I know how to [undo](/guide/getting-started/undo-and-recover/)
+- [ ] I know how to [undo](/en/guide/getting-started/undo-and-recover/)
 
-Concepts: [Permissions and approvals](/guide/foundations/permissions-and-approvals/) · [Sandbox and network](/guide/foundations/sandbox-and-network/).
+Concepts: [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/) · [Sandbox and network](/en/guide/foundations/sandbox-and-network/).
 
 ---
 

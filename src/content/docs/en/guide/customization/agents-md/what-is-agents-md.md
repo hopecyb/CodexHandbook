@@ -3,9 +3,10 @@ title: What Is AGENTS.md
 description: Project-level persistent instruction file—a "collaboration contract" for Codex, not an architecture encyclopedia.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -87,7 +88,7 @@ Even if you do not write code yourself, as long as you have Codex working on a p
 | Subdirectory `AGENTS.md` | That directory and subpaths (common in monorepos) |
 | User-level notes | Personal configuration or global preferences—do not mix with project instructions |
 
-Scope and conflict handling: [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/).
+Scope and conflict handling: [Scope and Precedence](/en/guide/customization/agents-md/scope-and-precedence/).
 
 ## Difference from Skills and Slash Commands
 
@@ -97,7 +98,7 @@ Scope and conflict handling: [Scope and Precedence](/guide/customization/agents-
 | Skill | Reusable workflow package (`SKILL.md`) | Release checklist, specialized review flow |
 | Slash command | Shortcut you trigger actively | `/review`, one-off workflows |
 
-Use `AGENTS.md` for project rules; **repeatable, shareable step sets** fit better as a [Skill](/skills/overview/).
+Use `AGENTS.md` for project rules; **repeatable, shareable step sets** fit better as a [Skill](/en/skills/overview/).
 
 ## How to Decide Where to Write Something
 
@@ -116,7 +117,7 @@ For example:
 ## Common Mistakes
 
 - File too long; the model only reads the first part—**put hard constraints in the first 30 lines**
-- Writing high-risk instructions like “always auto push,” conflicting with [Permissions and Approvals](/guide/foundations/permissions-and-approvals/)
+- Writing high-risk instructions like “always auto push,” conflicting with [Permissions and Approvals](/en/guide/foundations/permissions-and-approvals/)
 - Nobody on the team maintains it; docs disagree with real script commands
 
 ## Security Boundaries

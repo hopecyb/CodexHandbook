@@ -3,9 +3,10 @@ title: Zuerst diagnostizieren, dann fixen
 description: "Produktionsprobleme und hartnäckige Bugs — zuerst eine Beweiskette aufbauen, dann eingreifen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex sofort zum Bugfixen zu bringen, führt oft zu hoher Nacharbeit. Der Diagnose-Workflow betont: **Symptom → Hypothese → Evidenz → minimale Korrektur**.

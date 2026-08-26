@@ -3,9 +3,10 @@ title: Anti-patterns de Prompts
 description: Evite pedidos vagos, extralimitação e exigências de raciocínio oculto.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Ao aprender Prompts, é fácil focar só em «como escrever».  

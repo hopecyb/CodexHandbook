@@ -3,9 +3,10 @@ title: Computer Use
 description: Contrôle GUI avancé via écran et périphériques d'entrée — cas d'usage, risques et Approbations.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Computer Use** permet à l'Agent de voir l'écran, déplacer le pointeur et taper — au-delà du navigateur ou du terminal seul. Capacité la plus puissante ; **risque et exigences d'Approbation les plus élevés**.
@@ -77,7 +78,7 @@ Computer Use est proche de **confier clavier et souris à l'Agent** :
 - Peut mal cliquer sur des dialogues de confirmation
 - L'écran peut montrer des notifications sensibles
 
-Lecture obligatoire : [permissions et Approbations](/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
+Lecture obligatoire : [permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
 ## Quand l'envisager
 
@@ -112,7 +113,7 @@ Besoin d'apps hors IDE ?                 → Computer Use (plus de prudence)
 Seulement code et tests ?                → terminal + outils fichier
 ```
 
-Voir [sélection d'outils](/guide/tools/tool-selection/)
+Voir [sélection d'outils](/fr/guide/tools/tool-selection/)
 
 ## Exemple de Prompt
 

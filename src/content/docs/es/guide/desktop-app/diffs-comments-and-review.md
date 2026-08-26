@@ -1,83 +1,72 @@
 ---
-title: Diff, comentarios y revisión
-description: Leer cambios y dejar opiniones de revisión.
+title:  Diff, comentarios y revisión
+description:  Leer cambios y dejar opiniones de revisión.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3efee20
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-## Flujo de revisión
+A chat summary is Codex's explanation of the work. A Git diff is what actually changed in the files. The desktop App's review pane shows diffs, lets you add line-level comments, and lets you choose which changes to stage, revert, commit, or push.
 
-1. Abre la vista de diff y navega por archivos
-2. Confirma que los cambios quedan dentro del alcance acordado
-3. Pregunta o comenta en los puntos dudosos (si la UI lo permite)
-4. Acepta, rechaza o pide modificaciones
+The project must be in a Git repository to use the full review pane and `/review`.
 
-Método: [Revisar diffs](/guide/quality/review-diffs/)
+## Two review layers
 
-## Contenido
+First inspect the scope yourself, then invoke an independent reviewer to look for implementation issues:
 
-En la App de escritorio, los cambios se miran sobre todo en la vista de diff, no en el área de conversación.
+1. Open the review pane and check the number and paths of changed files.
+2. Select **Last turn** to see exactly what changed in the latest turn.
+3. Switch between **Unstaged**, **Staged**, **Commit**, and **Branch** to confirm the review scope.
+4. Run `/review` in the input area.
+5. Choose whether to compare against a base branch, review uncommitted changes, inspect a specific commit, or apply custom criteria.
+6. Read the findings in priority order, then decide what to fix.
 
-El chat es «lo que dice»; la vista de diff es «lo que realmente ocurrió».
+The `/review` reviewer is read-only by default and does not modify the worktree. If you subsequently ask Codex to fix a finding, the original sandbox and approval rules still apply.
 
-## Malentendidos frecuentes
+## Reusable review criteria
 
-### 1. ¿Los comentarios solo sirven en colaboración en equipo?
+```text
+Review the current uncommitted changes. Focus on:
+- changes outside the task scope;
+- behavioral regressions, edge cases, or security issues;
+- whether tests cover failure paths;
+- whether the documentation matches the implementation.
 
-Aunque trabajes solo, comentar o preguntar también ayuda: al menos aclara «por qué se cambió esto».
+List findings first, ordered by severity. For each finding, provide the file,
+location, evidence, and the smallest reasonable fix.
+If you find no issues, say so explicitly and list any remaining test gaps.
+```
 
-### 2. Si no estoy seguro de si se equivocó, ¿qué hago?
+## Reduce ambiguity with line comments
 
-No hace falta dar una conclusión de entrada. Señala primero el punto dudoso y pide una explicación; es más seguro que adivinar.
+Hover over a suspicious line, select the **+** that appears, and write specific feedback. After leaving all comments, send one explicit instruction:
 
-### 3. ¿Qué hay que mirar como mínimo antes de aceptar?
+```text
+Address the line comments I left. Keep the change set minimal, rerun the
+relevant tests, and show the new diff when finished.
+```
 
-Al menos tres cosas:
+Useful comments identify a risk or acceptance condition, such as "What does this return for an empty array?" A comment that only says "This is wrong" is usually insufficient.
 
-- Qué archivos cambió
-- Si se salió del alcance permitido
-- Si hay eliminaciones o restos que claramente no deberían estar
+## Staging and reverting
 
-### 4. No soy un reviewer profesional, ¿no voy a detectar problemas?
+The review pane can stage, unstage, or revert an entire diff, a file, or an individual hunk. Reverting discards changes. Before doing so, confirm that the changes were not already present when the task began.
 
-Puedes empezar por lo más directo:
+Use a consistent acceptance order: scope → behavior → tests → security → maintainability. See [Review diffs](/es/guide/quality/review-diffs/) for more techniques.
 
-- ¿Ha tocado sitios que no debía?
-- ¿Ha borrado algo que aún parece importante?
-- Dice que hizo A: ¿el diff muestra realmente solo A?
+## Official sources
 
-## Orden de revisión
-
-Si cada vez que ves un diff te mareas un poco, fija primero este orden:
-
-1. Mira cuántos archivos cambió
-2. Mira si el cambio de cada archivo está relacionado con la Tarea
-3. Mira si hay modificaciones fuera de alcance
-4. Al final mira detalles de redacción, formato e implementación local
-
-Así es menos fácil distraerse con cambios menores desde el principio.
-
-## Qué merece la pena escribir en un comentario
-
-Al comentar no hace falta ser exhaustivo. Estas son las más útiles:
-
-- «¿Por qué hay que cambiar esto?»
-- «¿Esto se sale del alcance de esta vez?»
-- «Esto parece que podría afectar al comportamiento anterior; ¿puedes explicarlo?»
-- «¿Se puede añadir una forma de verificación aquí?»
-
-Ese tipo de comentario empuja mejor la corrección siguiente que limitarse a decir «hay un problema».
-
-En esta página, lo que realmente merece mirarse una y otra vez es la vista de diff.
+- [Code review](https://learn.chatgpt.com/docs/code-review)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App  
-**Nota de revisión:** Esta página describe la experiencia de UI actual de la vista de diff, los comentarios y aceptar/rechazar cambios en la App de escritorio, pero falta documentación oficial vigente lo bastante sólida para confirmar uno a uno esas pantallas y flujos; conviene marcarla como `outdated` hasta completar la documentación de revisión de escritorio.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE
+
+**Last verified:** 2026-08-26

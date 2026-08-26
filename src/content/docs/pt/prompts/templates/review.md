@@ -3,9 +3,10 @@ title: Template de revisão
 description: Revisão estruturada de diffs e riscos de mudança.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Template de revisão
@@ -50,8 +51,8 @@ O foco deste template é trazer riscos à superfície por dimensões fixas — n
 
 ## Relacionado
 
-- [Rever antes de fazer merge](/cases/workflows/review-before-merge/)
-- [Caso: rever um PR](/cases/review-a-pr/)
+- [Rever antes de fazer merge](/pt/cases/workflows/review-before-merge/)
+- [Caso: rever um PR](/pt/cases/review-a-pr/)
 
 ---
 

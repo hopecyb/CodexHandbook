@@ -3,14 +3,15 @@ title: Images et captures d'écran
 description: Fournir des captures et entrées design à Codex ; gérer les fichiers image dans les Tâches.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Les images permettent à l'Agent de **voir** les problèmes UI, l'intention design ou les croquis de tableau blanc. Cette page couvre l'entrée (images que vous fournissez) et les fichiers image dans le repo ; pour générer de nouvelles images voir [Génération d'images](/guide/tools/image-generation/).
+Les images permettent à l'Agent de **voir** les problèmes UI, l'intention design ou les croquis de tableau blanc. Cette page couvre l'entrée (images que vous fournissez) et les fichiers image dans le repo ; pour générer de nouvelles images voir [Génération d'images](/fr/guide/tools/image-generation/).
 
 Lors des Tâches avec captures, indiquez quoi regarder et pourquoi c'est important.
 
@@ -29,7 +30,7 @@ Lors des Tâches avec captures, indiquez quoi regarder et pourquoi c'est importa
 | Tableau blanc architecture | Photo claire ou export + légende |
 | Dialogue d'erreur | Texte d'erreur complet visible — pas un coin coupé |
 
-Exploration profonde : [Prompt avec images](/prompts/prompting-with-images/)
+Exploration profonde : [Prompt avec images](/fr/prompts/prompting-with-images/)
 
 ## Ce que les images ajoutent réellement
 
@@ -97,7 +98,7 @@ Ne pas inférer la logique métier depuis les captures — mise en page et visue
 
 - Les captures peuvent contenir données client, URLs internes, tokens — nettoyer d'abord
 - Ne pas envoyer des écrans de config avec secrets à des Tâches non fiables
-- [Contexte sensible](/guide/context/sensitive-context/)
+- [Contexte sensible](/fr/guide/context/sensitive-context/)
 
 ## Sources de référence
 - OpenAI Help Center : FAQ ChatGPT Image Inputs
@@ -107,9 +108,9 @@ Ne pas inférer la logique métier depuis les captures — mise en page et visue
 
 Pour les Tâches « implémenter depuis image » :
 
-1. Comparer côte à côte l'implémentation et la référence (ou [Outil navigateur](/guide/tools/browser/))
+1. Comparer côte à côte l'implémentation et la référence (ou [Outil navigateur](/fr/guide/tools/browser/))
 2. Vérifier responsive et mode sombre si requis
-3. [Vérifier les artefacts](/guide/quality/verify-artifacts/)
+3. [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/)
 
 ## Erreurs courantes
 

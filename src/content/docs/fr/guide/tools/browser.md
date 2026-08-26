@@ -3,9 +3,10 @@ title: Outil navigateur
 description: Laisser Codex ouvrir des pages, inspecter l'état de l'interface et Vérifier le comportement frontend — capacités et limites.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 L'**outil navigateur** permet à l'Agent d'accéder à de vraies pages dans un environnement contrôlé : lire le DOM, capturer des captures d'écran, parfois effectuer des interactions simples. Bon pour l'acceptation frontend, vérification de liens doc et comparaison de design — pas un substitut aux audits de sécurité ou à l'admin production occasionnelle.
@@ -37,7 +38,7 @@ La revue de code ou le texte seul ne suffisent souvent pas — il faut la page o
 | Comparer page statique à l'implémentation | Remplacer les frameworks de test E2E complets |
 | Lire le texte visible de la page pour déboguer | Sites avec CAPTCHA lourd |
 
-Contexte : [sélection d'outils](/guide/tools/tool-selection/)
+Contexte : [sélection d'outils](/fr/guide/tools/tool-selection/)
 
 ## Comparaison avec d'autres outils
 
@@ -81,7 +82,7 @@ L'outil navigateur bat généralement l'analyse texte pure.
 1. **Frontend local** : lancer `npm run dev`, puis fournir `http://localhost:PORT/chemin`
 2. **Tâche spécifique** : « Vérifier le débordement du formulaire de connexion à 375px » — pas « regarder le site »
 3. **Limites d'état** : pas de réseau externe, pas de soumission de formulaires en production
-4. **Acceptation** : comparer avec [Vérifier les artefacts](/guide/quality/verify-artifacts/) et captures d'écran
+4. **Acceptation** : comparer avec [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/) et captures d'écran
 
 ## Exemple de Prompt
 
@@ -96,9 +97,9 @@ Si vous trouvez des problèmes, fournir preuves par capture et suggestions de co
 - Hypothèse par défaut : le navigateur peut atteindre **tout ce que votre machine/environnement peut** — y compris l'admin interne
 - Déclarer dans la Tâche : `localhost only` ou une liste blanche de domaines
 - Ne pas exécuter des Tâches de dépôts non fiables dans un profil navigateur connecté à des comptes personnels
-- La politique navigateur Cloud suit [Environnements Cloud](/guide/web-and-cloud/cloud-environments/) et règles réseau
+- La politique navigateur Cloud suit [Environnements Cloud](/fr/guide/web-and-cloud/cloud-environments/) et règles réseau
 
-Approbations : [permissions et Approbations](/guide/foundations/permissions-and-approvals/)
+Approbations : [permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/)
 
 ## Erreurs courantes
 

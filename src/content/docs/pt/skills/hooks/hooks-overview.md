@@ -3,147 +3,92 @@ title: Visão geral de Hooks
 description: Insira validação, logs e auditoria nos nós-chave do Agent — complemente segurança e conformidade da equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 169a1ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Em resumo, Hook é inserir automaticamente uma camada de checagem ou registro num nó-chave.
 
-**Hooks** permitem rodar lógica customizada em nós fixos da cadeia de execução do Codex — por exemplo scan de segredos antes do commit, log de chamadas MCP, ou bloquear comandos perigosos. Complementam a política e a observabilidade de [Aprovação e Sandbox](/guide/cli/approvals-and-sandbox/).
+Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
 
-## Conteúdo
+![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-en.svg)
 
-- Diferença entre Hooks, Skill e MCP
-- Casos típicos de equipe
-- Princípios de segurança ao desenhar Hooks
+The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
 
-## Por que a equipe usa Hook
+## Configuration discovery
 
-Mesmo que você ainda não vá escrever Hook, vale saber o que ele costuma fazer na equipe:
+Codex looks beside active configuration layers for:
 
-- Por que algumas ações são barradas a mais num ponto-chave
-- Por que a equipe diz «essa checagem não é Skill, é Hook»
-- Por que certas regras não ficam no Prompt, e sim nos nós do sistema
+- `~/.codex/hooks.json`
+- `[hooks]` in `~/.codex/config.toml`
+- `<repo>/.codex/hooks.json`
+- `[hooks]` in `<repo>/.codex/config.toml`
+- Hooks bundled with enabled Plugins
+- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
 
-Muitas vezes, o «por que há uma checagem a mais aqui» na equipe é Hook por trás.
+Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
 
-Seleção comparativa: [Como escolher o método de extensão](/skills/choosing-an-extension-method/)
+When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
 
-## O que Hooks fazem
+## Review every unmanaged Hook
 
-| Fase (conceito) | O que o Hook pode fazer |
-|---|---|
-| Antes da chamada de ferramenta | Recusar comandos com `rm -rf` ou que vazem `.env` |
-| Depois da chamada de ferramenta | Escrever log de auditoria no SIEM |
-| Fim da sessão | Resumir a lista de arquivos alterados |
-| Antes de criar PR | Verificar formato do número do issue |
+Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
 
-## Como distinguir de Skill
+Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
 
-- **Skill**: diz ao Codex «nesse tipo de Tarefa, siga este fluxo»
-- **Hook**: diz ao sistema «neste nó, rode uma checagem automática primeiro»
+## Two executable handlers
 
-Problemas diferentes:
-
-- Skill tende a instrução de workflow
-- Hook tende a portão ou ponto de observação no fluxo
-
-Nomes de eventos e formato de configuração seguem a [documentação oficial de Hooks](https://developers.openai.com/codex).
-
-## Diferença em relação a Skill / MCP
-
-| | Hooks | Skill | MCP |
-|---|---|---|---|
-| Disparo | Evento do sistema | Usuário ou modelo | Pedido de ferramenta |
-| Objetivo | Política, auditoria | Instrução de workflow | Sistema externo |
-| Quem mantém | Plataforma / infra da equipe | Produto ou engenharia | Desenvolvedor de integração |
-
-## Equívocos comuns
-
-### 1. Hook substitui Aprovação e Sandbox
-
-Hook é camada complementar de checagem — não deve ser o único limite de segurança.
-
-### 2. Quanto mais Hooks, mais seguro
-
-Hooks lentos, pesados e obscuros demais só travam o fluxo e dificultam a triagem.
-
-### 3. Hook não serve para lógica complexa
-
-Hook serve melhor a coisas:
-
-- Rápidas
-- Determinísticas
-- Fáceis de testar
-
-Não empilhe raciocínio complexo aqui.
-
-## Casos recomendados para a equipe
-
-1. **Detecção de vazamento de segredo**: padrão de AWS key no diff → bloquear
-2. **Checagem de cabeçalho de licença**: avisar se arquivo novo não tem copyright da empresa
-3. **Log de conformidade**: quem, quando, em qual repositório fez escrita (com mascaramento)
-4. **Alinhamento com CI**: regras do Hook local e do GitHub Action com a mesma origem, se possível
-
-## Guardrails para começar
-
-Hook deve começar estreito e determinístico, não como um grande “juiz inteligente”.
-
-| Padrão Hook | Primeira versão | Versão madura |
+| Handler | Purpose | Boundary |
 |---|---|---|
-| Auditoria de comandos | Registar comando, hora, diretório | Alertar ou pedir confirmação em comandos de risco |
-| Scan de secrets | Avisar ao editar `.env`, key files ou tokens suspeitos | Bloquear e indicar tratamento |
-| Formatação | Reportar desvios | Chamar o mesmo formatter da CI |
-| Dependências | Pedir revisão ao mudar ficheiros de pacotes | Ligar política de vulnerabilidades/licenças |
-| Resumo de sessão | Registar ficheiros e comandos de verificação | Alimentar handoff ou template PR |
+| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
+| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
 
-Um bom Hook falha de forma aborrecida: mensagem clara, raio pequeno, bypass registado.
+The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
 
-## Ordem de adoção
+## Runtime behavior
 
-1. Primeiro registar
-2. Depois avisar só riscos de alta confiança
-3. Bloquear apenas regras determinísticas e aceites
-4. Reutilizar CI para não separar checks locais e remotos
+- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
+- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
+- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
+- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
 
-## Quando Hook é adequado
+## Relationship to other security layers
 
-Se uma checagem cumprir estes dois pontos, cabe bem em Hook:
+| Layer | Responsibility |
+|---|---|
+| Sandbox | Filesystem, network, and system capability boundary |
+| Approval | Human decision before high-risk actions |
+| Command rules | Declarative allow/deny for known command patterns |
+| Hook | Custom, testable logic at lifecycle points |
+| Service permission | Final external-system read/write authority |
 
-- Sempre acontece num nó fixo
-- Não deve depender de alguém lembrar de fazer à mão toda vez
+Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
 
-Exemplos: scan de informação sensível, validação de nome, registro de auditoria.
+## Adoption order
 
-## Princípios de desenho
+1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
+2. Use `systemMessage` or additional context for high-confidence warnings.
+3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
+4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
 
-- **Rápido**: timeout de Hook atrasa cada chamada de ferramenta
-- **Determinístico**: evite chamar LLM de novo dentro do Hook
-- **Testável**: unit test do script Hook com entrada fixa
-- **Desligável**: em emergência a equipe pode contornar (com auditoria)
+## Acceptance checklist
 
-Perspectiva de segurança: roadmap `11-team-enterprise`; usuários individuais costumam bastar com Hook de log só leitura.
+- [ ] Event names come from the current official list.
+- [ ] Matchers cover only required tools or sources.
+- [ ] Scripts have fixture tests and readable errors.
+- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
+- [ ] Failure, timeout, and disabled paths were exercised.
+- [ ] The team understands trust changes shown by `/hooks`.
 
-Hook serve a checagens automáticas nos nós-chave do sistema. Não é instrução de workflow e não substitui Aprovação.
+## Official source
 
-## Erros comuns
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
-- O próprio script Hook tem Permissão de escrita na rede — nova superfície de ataque
-- Repete e contradiz regras de `AGENTS.md`
-- Configuração de Hook sem versionamento — ambientes da equipe inconsistentes
-
-## Checklist de aceite
-
-- [ ] Consegue explicar o cenário de Hook mais necessário da equipe
-- [ ] Em falha do Hook, mensagem de erro clara para o desenvolvedor
-- [ ] Configuração entra na revisão de código
-
-## Fontes
-- Documentação OpenAI Codex Hooks
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** CLI / App (conforme a versão)  
-**Nota de revisão:** Esta página depende da descrição atual de capacidades Hook, nós típicos e governança de equipe; a documentação oficial pública cobre pouco esses detalhes — precisa reescrita conforme o cliente vigente.  
-**Última Verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
+
+**Last verified:** 2026-08-25

@@ -3,9 +3,10 @@ title: Criar uma apresentação
 description: Caso de geração de artefato — do esboço a um deck apresentável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 42c7a26
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Criar uma apresentação
@@ -42,7 +43,7 @@ Restrições: dados devem citar fonte ou marcar «exemplo»; não fazer pedidos 
 
 ## 4. Relacionado
 
-- [Capacidades de apresentações](/guide/files-and-artifacts/presentations/)
+- [Capacidades de apresentações](/pt/guide/files-and-artifacts/presentations/)
 ---
 
 **Estado:** verified  

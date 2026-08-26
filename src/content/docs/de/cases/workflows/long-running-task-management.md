@@ -3,12 +3,13 @@ title: Lange Aufgaben verwalten
 description: "Große Aufgaben über Stunden oder mehrere Sitzungen — Prüfpunkte, Komprimierung, Delegation und Exit-Kriterien."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Typische Probleme langer Aufgaben: **Kontext wird voll**, **Menschen müssen weg**, **Richtung driftet**, **unklar, wann stoppen**. Diese Seite setzt [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/) in Szenarien von Stunden bis mehreren Sitzungen.
+Typische Probleme langer Aufgaben: **Kontext wird voll**, **Menschen müssen weg**, **Richtung driftet**, **unklar, wann stoppen**. Diese Seite setzt [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/) in Szenarien von Stunden bis mehreren Sitzungen.
 
 ## Schwerpunkte dieser Seite
 
@@ -16,7 +17,7 @@ Typische Probleme langer Aufgaben: **Kontext wird voll**, **Menschen müssen weg
 - Was in Prüfpunkte und Statusprotokolle gehört
 - Exit-Kriterien für automatisierte lange Aufgaben
 
-Verwandt: [Delegieren und Nachverfolgen](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Verwandt: [Delegieren und Nachverfolgen](/de/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/de/skills/automations/scheduled-tasks/)
 
 ## Signale langer Aufgaben
 
@@ -33,7 +34,7 @@ Bei jedem dieser Signale zuerst einen Plan schreiben — nicht bis zum Ende durc
 
 Schriftlichen Plan erzeugen: Umfang, Nicht-Ziele, Meilensteine, Abnahmebefehle. Erst nach menschlicher Bestätigung großflächig ausführen.
 
-[Planung](/guide/agent-work/planning/) · [Subagents](/guide/agent-work/subagents/)
+[Planung](/de/guide/agent-work/planning/) · [Subagents](/de/guide/agent-work/subagents/)
 
 ### 2. Prüfpunkte
 
@@ -41,11 +42,11 @@ Nach jedem Meilenstein:
 
 - Commit oder Stash prüfbarer Inkremente
 - `PROGRESS.md` oder Issue-Kommentar aktualisieren: Erledigtes, Nächstes, Blocker
-- Bei vollem Kontext [Komprimierung](/guide/context/compaction/) oder neue Sitzung + Link zur Progress-Datei
+- Bei vollem Kontext [Komprimierung](/de/guide/context/compaction/) oder neue Sitzung + Link zur Progress-Datei
 
 ### 3. Abschließen oder delegieren
 
-- Lokal nicht mehr tragbar → [Cloud-Delegation](/guide/web-and-cloud/delegate-and-follow-up/)
+- Lokal nicht mehr tragbar → [Cloud-Delegation](/de/guide/web-and-cloud/delegate-and-follow-up/)
 - Dauerhaftes Monitoring nötig → Automation + klare **max iterations / Deadline**
 
 ## Exit-Kriterien (für Automations Pflicht)

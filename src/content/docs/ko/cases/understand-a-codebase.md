@@ -3,9 +3,10 @@ title: 코드베이스 이해하기
 description: 낯선 저장소를 읽기 전용으로 탐색해, 실행 가능한 인지 지도를 만듭니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 코드베이스 이해하기
@@ -42,8 +43,8 @@ translated_at: 2026-07-28
 
 ## 4. 관련
 
-- [이해 템플릿](/prompts/templates/understand/)
-- [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
+- [이해 템플릿](/ko/prompts/templates/understand/)
+- [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
 ---
 
 **상태:** verified  

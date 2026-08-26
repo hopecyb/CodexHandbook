@@ -1,84 +1,139 @@
 ---
-title: Non-Interactive Mode
-description: Run Codex without a TTY—suited for CI, cron jobs, and automation pipelines.
+title: Non-interactive mode
+description: Integrate codex exec with scripts and pipelines for CI, scheduled tasks, and automation.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+source_revision: a1cefbe
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 30
 ---
 
-Non-interactive mode lets Codex complete tasks **without a TTY conversation**—the entry point for embedding the agent in scripts and CI.
+Non-interactive mode lets Codex complete a task **without a TTY conversation**. It is the developer entry point for scripts and CI.
+
+Instead of a back-and-forth chat, you submit the entire task for one command-style run.
 
 ## What this page covers
 
-- When to use non-interactive vs an interactive `codex` session
-- Extra safety and approval requirements when unattended
-- Relationship to [CLI configuration](/guide/cli/configuration/)
+- When to use non-interactive execution instead of an interactive `codex` session.
+- Additional safety and approval requirements for unattended work.
+- Its relationship to [configuration](/en/guide/cli/configuration/).
 
-## Good fits
+## Suitable tasks
 
-| Good fit | Poor fit |
+| Suitable | Unsuitable |
 |---|---|
-| Fixed review prompts in CI | Needs multi-turn clarification |
-| Nightly doc link checks | Exploratory refactors |
-| Template-based codegen | High-ambiguity product decisions |
+| Fixed review prompt in CI | Requirements need multiple clarification rounds |
+| Nightly documentation link check | Exploratory refactoring |
+| Code generation from a predefined template | Ambiguous product decisions |
 
-## Core idea
+## Core model
 
-Non-interactive runs typically:
+A non-interactive run normally:
 
-1. Take a **complete task** from args or stdin
-2. Run in a specified working directory
-3. Exit with a status code for success/failure
-4. Emit logs or structured output for downstream steps
+1. receives a **complete task description** from arguments or stdin;
+2. runs in a specified working directory;
+3. reports process success or failure through an exit code;
+4. emits logs or structured output for downstream consumers.
 
-**Command names and flags follow official CLI docs** (often `codex exec` or equivalent); re-check `--help` after upgrades.
+The current entry point is `codex exec`. After an upgrade, rerun `codex exec --help` to verify every flag used by scripts.
 
-## Minimal example (illustrative)
+## Minimal working example
 
 ```bash
-# Repo root, read-only review (flags per official docs)
-codex exec --cwd . "List security risks in diff vs main; do not modify files"
+# Run one read-only review at the repository root
+codex exec --cd . "List security risks in the diff against main; do not modify files"
 ```
 
-Tips:
+`codex exec` uses a read-only sandbox by default. Progress is written to `stderr`, while the final Agent response goes to `stdout`, so you can redirect only the final result:
 
-- `cd` to a clean worktree in shell scripts
-- Store prompts in versioned `prompts/` files or heredocs
-- Fail CI on non-zero exit codes
+```bash
+codex exec --cd . "Write release notes for the last 10 commits" > release-notes.md
+```
 
-## Safety
+Practical guidance:
 
-Unattended = **no one to click reject**:
+- In a shell script, `cd` to a clean worktree first.
+- Put the task in a heredoc or versioned `prompts/` file.
+- Capture the exit code and fail CI when the process fails.
 
-| Principle | Practice |
+## Safety design
+
+Unattended means **you are not present to deny an action**:
+
+| Principle | Implementation |
 |---|---|
-| Least privilege | Read-only tokens, tight sandbox |
-| No push | CI opens PRs or uploads artifacts only |
-| Fixed prompts | Never concatenate unsanitized PR text (injection risk) |
-| Audit | Keep logs and diff artifacts |
+| Least privilege | Read-only token and constrained sandbox |
+| No push | CI opens a PR or uploads an artifact |
+| Fixed prompt | Do not concatenate unsanitized PR text directly into the prompt |
+| Audit | Preserve logs and diff artifacts |
 
-See [Human approval patterns](/cases/workflows/human-approval-patterns/).
+See [Human approval patterns](/en/cases/workflows/human-approval-patterns/) and the `08-developer-platform/non-interactive/` roadmap section.
 
-## Interactive vs non-interactive
+## Interactive comparison
 
 | | Interactive | Non-interactive |
 |---|---|---|
-| Entry | `codex` TUI | `exec` / pipes |
-| Human in the loop | Strong | Weak—design upfront |
-| Learning | Yes | No |
-| CI | No | Yes |
+| Entry | `codex` TUI | `exec` / pipeline |
+| Human in the loop | Strong | Weak; design beforehand |
+| Good for learning | Yes | No |
+| Good for CI | No | Yes |
 
-Interactive usage: [CLI interactive mode](/guide/cli/interactive-mode/)
+See [CLI interactive mode](/en/guide/cli/interactive-mode/).
+
+## Convert an interactive task
+
+Do not paste a whole chat history into a script. Compress it into a small specification:
+
+| Element | What to state |
+|---|---|
+| Goal | The single outcome |
+| Input | Files, diff, logs, or stdin to read |
+| Prohibitions | No edits, internet, push, or CI interruption |
+| Output | Text summary, JSON, report file, or exit result |
+| Acceptance | Commands that must pass and strings that must not appear |
+
+A non-interactive prompt should read like a work order: clear boundary, complete input, explicit failure conditions. Keep tasks that still require product judgment, design tradeoffs, or permission decisions interactive.
+
+## Common misconceptions
+
+### 1. It is more efficient, so should beginners learn it first?
+
+No. It runs quickly with little room for clarification.
+
+### 2. What is the main difference?
+
+- **Interactive:** ask, adjust, and approve during the run.
+- **Non-interactive:** execute once from a predefined specification.
+
+### 3. When should I avoid it?
+
+Wait if you:
+
+- are still learning to write a task;
+- do not know how to accept the result;
+- lack a basic model of approvals, sandboxing, and permissions.
+
+Use non-interactive mode for automation after interactive workflows are familiar.
 
 ## Common mistakes
 
-- Pasting a long chat history into a single exec
-- Production credentials and write access in CI
-- Unpinned CLI version causing sudden pipeline drift
+- Pasting an interactive session's full history into one exec call.
+- Giving CI production credentials and write access.
+- Leaving the CLI version unpinned so pipeline behavior changes unexpectedly.
+
+## Reference
+
+- OpenAI Codex CLI documentation
 
 ---
 
-**Status:** review  
-**Applies to:** CLI  
-**Last verified:** 2026-07-25
+**Status:** verified
+
+**Applies to:** CLI
+
+**Verification basis:** Compared with current Non-interactive mode documentation for `codex exec`, `--cd`, the default read-only sandbox, `stderr` progress, and `stdout` final response.
+
+**Last verified:** 2026-08-26

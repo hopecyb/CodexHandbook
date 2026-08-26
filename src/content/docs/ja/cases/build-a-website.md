@@ -3,9 +3,10 @@ title: ウェブサイトを構築する
 description: 要件からプレビュー可能なページまでのプロトタイプ構築ケース。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # ウェブサイトを構築する
@@ -41,8 +42,8 @@ translated_at: 2026-07-28
 
 ## 4. 関連
 
-- [作成テンプレート](/prompts/templates/create/)
-- [成果物優先の作業](/cases/workflows/artifact-first-work/)
+- [作成テンプレート](/ja/prompts/templates/create/)
+- [成果物優先の作業](/ja/cases/workflows/artifact-first-work/)
 
 ---
 

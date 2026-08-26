@@ -3,10 +3,12 @@ title: Glossary
 description: Short definitions of handbook terms.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
+source_revision: c07a94c
 ---
 
 | Term | Definition |
@@ -26,7 +28,7 @@ sidebar:
 | Token | The unit used to measure text processed by the model |
 | Worktree | An isolated working directory for parallel experiments |
 
-Beginner version: [Terminology for beginners](/guide/start-here/terminology-for-beginners/)
+Beginner version: [Terminology for beginners](/en/guide/start-here/terminology-for-beginners/)
 
 ---
 

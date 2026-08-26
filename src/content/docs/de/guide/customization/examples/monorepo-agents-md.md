@@ -3,9 +3,10 @@ title: AGENTS.md in einem Monorepo
 description: "Beispielmuster für Projektanweisungen, Geltungsbereich und Testbefehle in Single-Repo-Multi-Package-Strukturen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b6c73e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -91,7 +92,7 @@ Verboten: apps/api-Server direkt ändern
 Abnahme: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-Siehe [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
+Siehe [Datei- und Ordnerkontext](/de/guide/context/file-and-folder-context/)
 
 ## Cloud und CI
 
@@ -101,7 +102,7 @@ Monorepos scheitern in der Cloud oft an **fehlender Root-Installation** oder fal
 - Filter-Befehle für Ein-Paket-Aufgaben
 - Caching-Strategie (bei turborepo/nx Task-Graph nennen)
 
-[Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/)
+[Cloud-Umgebungen](/de/guide/web-and-cloud/cloud-environments/)
 
 ## Häufige Fehler
 

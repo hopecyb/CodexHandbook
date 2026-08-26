@@ -3,14 +3,15 @@ title: Rủi ro Plugin và MCP
 description: "Mở rộng truy cập được gì, đội phê duyệt và giám sát thế nào — góc nhìn rủi ro thống nhất cho Skills, Plugin và MCP."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Plugin** và **máy chủ MCP** nối Codex với hệ thống ngoài: ticket, cơ sở dữ liệu, API nội bộ. Nhiều năng lực hơn nghĩa là bề mặt [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) rộng hơn cho exfiltration và quyền vượt mức. Đọc kèm [Tổng quan MCP](/skills/mcp/mcp-overview/) và [Tổng quan Plugin](/skills/plugins/plugins-overview/).
+**Plugin** và **máy chủ MCP** nối Codex với hệ thống ngoài: ticket, cơ sở dữ liệu, API nội bộ. Nhiều năng lực hơn nghĩa là bề mặt [mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) rộng hơn cho exfiltration và quyền vượt mức. Đọc kèm [Tổng quan MCP](/vi/skills/mcp/mcp-overview/) và [Tổng quan Plugin](/vi/skills/plugins/plugins-overview/).
 
 Ngày đầu không cần định nghĩa hoàn hảo. Điểm trung tâm: nối Codex ra ngoài vừa tăng năng lực vừa tăng rủi ro.
 
@@ -52,7 +53,7 @@ MCP thí nghiệm cá nhân **không nên** chia sẻ token repo production.
 
 1. **Deny mặc định** cài MCP từ xa không có trong danh sách
 2. **MCP cục bộ** vẫn có thể đọc cả đĩa — dùng user OS riêng hoặc container
-3. **Log**: tên công cụ và tóm tắt tham số (đã làm sạch) — xem [Hook kiểm toán](/skills/hooks/hooks-examples/)
+3. **Log**: tên công cụ và tóm tắt tham số (đã làm sạch) — xem [Hook kiểm toán](/vi/skills/hooks/hooks-examples/)
 4. **Skill vs MCP**: Skill mô tả quy trình, MCP thực thi gọi ngoài — hợp quyền; áp dụng chính sách chặt hơn
 
 ## Lỗi thường gặp
@@ -91,10 +92,10 @@ Với mở rộng ngoài: quyền và ranh giới trước sức mạnh tính n�
 
 - [ ] Có danh sách phê duyệt bằng văn bản hoặc quy trình tương đương
 - [ ] Mỗi MCP production có người sở hữu và phân loại dữ liệu
-- [ ] Thống nhất với chính sách [Bảo mật Skill](/skills/security/)
+- [ ] Thống nhất với chính sách [Bảo mật Skill](/vi/skills/security/)
 
 ## Nguồn tham chiếu
-- [Gỡ lỗi MCP](/skills/mcp/debugging-mcp/)
+- [Gỡ lỗi MCP](/vi/skills/mcp/debugging-mcp/)
 ---
 
 **Trạng thái:** verified  

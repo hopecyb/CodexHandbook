@@ -3,9 +3,10 @@ title: 계획
 description: Codex가 단계·위험·검증을 먼저 분명히 말한 뒤, 실행할지 결정하게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75099ef
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -92,7 +93,7 @@ Codex에게 “먼저 계획을”이라고 하면, 사실 두 가지를 확인�
 5. 단계마다 검증 방법
 ```
 
-더 완전한 쓰기는 [먼저 계획 받기](/prompts/ask-for-a-plan/)를 보세요.
+더 완전한 쓰기는 [먼저 계획 받기](/ko/prompts/ask-for-a-plan/)를 보세요.
 
 ## 무엇을 심사하나
 
@@ -127,7 +128,7 @@ DB 변경은 독립 단계로 쪼개세요.
 - **계획 단계**: 탐색, 옵션 나열, 불확실성 드러내기 허용
 - **실행 단계**: 확인된 경로로 추진
 
-실행 중 전제가 바뀌면 억지로 밀지 말고 계획으로 돌아가세요. [진행과 유도](/guide/agent-work/progress-and-steering/)를 참고하세요.
+실행 중 전제가 바뀌면 억지로 밀지 말고 계획으로 돌아가세요. [진행과 유도](/ko/guide/agent-work/progress-and-steering/)를 참고하세요.
 
 ## 고위험 작업 계획에 세 가지 더하기
 
@@ -150,10 +151,10 @@ DB 변경은 독립 단계로 쪼개세요.
 
 ## 권장 조합
 
-- 완전한 메인 체인이 필요하면: [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
-- 프롬프트를 분명히: [먼저 계획 받기](/prompts/ask-for-a-plan/)
-- 중간 궤도 수정이 필요하면: [진행과 유도](/guide/agent-work/progress-and-steering/)
-- 장기 규범이 필요하면: [AGENTS.md란](/guide/customization/agents-md/what-is-agents-md/)
+- 완전한 메인 체인이 필요하면: [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
+- 프롬프트를 분명히: [먼저 계획 받기](/ko/prompts/ask-for-a-plan/)
+- 중간 궤도 수정이 필요하면: [진행과 유도](/ko/guide/agent-work/progress-and-steering/)
+- 장기 규범이 필요하면: [AGENTS.md란](/ko/guide/customization/agents-md/what-is-agents-md/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Ejecuta tu primera Tarea
 description: Completa un cambio pequeño con un Prompt claro.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ La primera Tarea incluye también:
 
 1. Pídele un plan breve (o exige el plan tú)
 2. Al aprobar escritura de archivos, confirma que la ruta es correcta
-3. Al terminar, ve a [Revisa el resultado](/guide/getting-started/review-the-result/)
+3. Al terminar, ve a [Revisa el resultado](/es/guide/getting-started/review-the-result/)
 
 ## Orden de ejecución
 
@@ -112,7 +113,7 @@ O:
 No sigas cambiando. Dime qué lugares acabas de modificar.
 ```
 
-Fundamentos del Prompt: [bases del Prompt](/prompts/basics/).
+Fundamentos del Prompt: [bases del Prompt](/es/prompts/basics/).
 
 ---
 

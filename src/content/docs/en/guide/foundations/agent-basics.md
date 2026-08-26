@@ -4,7 +4,7 @@ description: How an Agent works toward a goal by calling tools and iterating.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: cb6933a
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -24,8 +24,8 @@ An **Agent** doesn't end with one Q&A turn. It: understands the goal → chooses
 
 ## Related concepts
 
-- Skill / Plugin / MCP: extend **what it can do** and **what it connects to**—advanced chapters to follow; see the [capability map](/guide/start-here/codex-capability-map/) for how they differ
-- Human approval: see [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP: extend **what it can do** and **what it connects to**—advanced chapters to follow; see the [capability map](/en/guide/start-here/codex-capability-map/) for how they differ
+- Human approval: see [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/)
 
 ---
 

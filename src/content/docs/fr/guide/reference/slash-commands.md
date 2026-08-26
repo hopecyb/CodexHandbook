@@ -3,118 +3,118 @@ title: "Commandes slash et entrée rapide"
 description: Commandes `/` et invocation Skill `$` — référence rapide d'apprentissage, pas manuel complet des paramètres.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9debf5c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Les commandes slash ne sont pas du jargon à mémoriser — ce sont des points d'entrée rapides nommés que vous invoquez volontairement.
+A first list of slash commands can look like jargon to memorize. It is easier to treat them as shortcuts that explicitly enter a known flow.
 
-Elles sautent généralement dans un mode fixe ou un flux intégré. Les commandes slash (`/command`) se rapportent à l'invocation Skill `$name` de [Skill](/skills/overview/) mais ne sont pas identiques. Les listes **changent par produit et version** — utiliser l'autocomplétion `/` dans le client et la doc officielle avant de compter sur les noms.
+They usually start a fixed mode or built-in workflow. Slash commands (`/command`) relate to `$name` invocation of a [Skill](/fr/skills/overview/), but they are not the same. Exact lists **vary by product and access**, and differ across the desktop App, CLI, IDE, and ChatGPT Web. Use the current composer's `/` completion and official documentation.
 
-## Division conceptuelle
+## Distinguish the entry points
 
-| Entrée | Qui invoque | Usage typique |
+| Entry | Who invokes it | Typical use |
 |---|---|---|
-| `/review` etc. | Vous tapez `/` | Flux intégrés ou configurés fixes |
-| `$skill-name` | Vous ou le modèle | Skill projet ou utilisateur |
-| Langage naturel | Vous | Tâches générales |
+| Slash command such as `/review` | You type `/` | Built-in or configured fixed flow |
+| `$skill-name` | You or the model | Project or user Skill |
+| Natural language | You | General task |
 
-## Trois façons en termes simples
+## The direct distinction
 
-- `/command` : vous choisissez un raccourci dans le chat
-- `$skill` : vous ou le modèle nomme un Skill
-- Langage naturel : vous énoncez le besoin ; le modèle décide comment
+- `/command`: explicitly choose a shortcut in the chat.
+- `$skill`: you or the model names a Skill.
+- Natural language: describe the need and let the model choose how to work.
 
-Si vous connaissez le flux que vous voulez, `/command` est plus direct.
+Use `/command` when you already know the flow and want to enter it quickly.
 
-## Ce que c'est
+## What it is
 
-- Pas une commande terminal
-- Pas vocabulaire secret
-- Imaginez « bouton raccourci dans le chat »
+- Not a terminal command.
+- Not hidden jargon.
+- A text entry point comparable to a shortcut button in the composer.
 
-Idéal quand :
+It fits when:
 
-- Vous savez quel flux vous voulez
-- Vous ne voulez pas réexpliquer la même intention à chaque fois
+- you know which flow you want;
+- you do not want to restate the same intent each time.
 
-## Idées reçues courantes
+## Common misconceptions
 
-### 1. Les commandes slash ne sont pas des commandes shell
+### 1. Slash commands are terminal commands
 
-Ce sont des raccourcis chat — pas `codex ...` dans le terminal.
+They are composer shortcuts, not `codex ...` shell commands.
 
-### 2. Les listes ne sont pas fixes pour toujours
+### 2. The slash-command list never changes
 
-Les commandes disponibles diffèrent par produit, version et environnement — **l'autocomplétion dans votre environnement** bat la mémorisation.
+Commands vary by product, version, and environment. The current completion list is more reliable.
 
-### 3. Slash ne contourne pas approbation et bac à sable
+### 3. A slash command bypasses approval and sandboxing
 
-Si le flux écrit des fichiers, exécute des commandes ou utilise le réseau, la politique s'applique encore.
+Any underlying file write, command, or network action remains subject to current policy.
 
-### 4. Vous pouvez bien utiliser Codex sans commandes slash
+### 4. You must know slash commands to use Codex well
 
-Le langage naturel couvre la plupart du travail. Les commandes slash accélèrent les flux connus une fois à l'aise.
+Natural language handles most tasks. Slash commands accelerate a known workflow after you become familiar with it.
 
-## Catégories courantes (illustratif)
+## Common current entries
 
-Les noms peuvent être ajoutés ou supprimés par version — **catégories d'apprentissage uniquement** :
+### Desktop App / IDE
 
-### Session et mode
+- `/plan`: enter multistep planning mode.
+- `/review`: review uncommitted changes or compare with a base branch.
+- `/status`: show chat ID, context usage, and rate limits.
+- `/mcp`: inspect MCP connection state.
+- `/init`: scaffold `AGENTS.md` for the current project.
 
-- Basculer mode plan, compacter contexte, voir aide
-- Associe avec [Planification](/guide/agent-work/planning/)
+### CLI-specific session controls
 
-### Revue et qualité
+- `/permissions`: adjust the current session's permission mode.
+- `/agent`: inspect or switch Agent threads.
+- `/model`: choose the current model.
+- `/status`: inspect current session settings.
 
-- Revue diff ou PR actuel
-- Avec [Revoir les diffs](/guide/quality/review-diffs/)
+ChatGPT Web has its own composer command menu. Do not assume App or CLI commands exist there under the same name.
 
-### Workspace et Git
+## Usage guidance
 
-- Statut, message de commit draft (vous confirmez encore le commit)
-- Suivre [Modèles d'approbation humaine](/cases/workflows/human-approval-patterns/)
+1. Type `/` and inspect what the current environment supports instead of memorizing an old list.
+2. Turn a durable team workflow into a **Skill plus documentation** so it does not depend on experts knowing a command name.
+3. Writes triggered by slash commands remain subject to sandboxing and approvals.
 
-### Extensions
+## Try it directly
 
-- Installer ou lister Skills (ex. `skill-installer` si disponible)
+1. Type `/`.
+2. Inspect the available entries.
+3. Choose one whose name and purpose are clear.
 
-## Notes d'utilisation
+## A useful first exercise
 
-1. **Tapez `/` d'abord** — voir ce que votre environnement supporte ; ne pas mémoriser listes obsolètes
-2. Flux d'équipe → **Skill + docs** pour que la connaissance ne soit pas tribale
-3. Écritures déclenchées par slash encore soumises au bac à sable et approbation
+1. Type `/` and inspect what the current environment offers.
+2. Try one command with an understandable purpose.
+3. Observe whether it changes mode or runs a workflow.
+4. If the team must reuse it long-term, consider turning the process into a Skill.
 
-## Essayez
+Slash commands provide quick entry points; Skills preserve reusable workflows.
 
-1. Tapez `/`
-2. Voyez ce qui est disponible
-3. Choisissez une commande dont vous comprenez le nom et l'objectif
+## Difference from CLI commands
 
-## Chemin première fois
-
-1. `/` pour voir les offres
-2. Essayer une commande claire
-3. Noter : changement de mode vs exécution de flux de travail
-4. Pour flux d'équipe récurrents, envisager un Skill
-
-Montre la division : slash = entrée rapide, Skill = flux réutilisable durable.
-
-## vs commandes CLI
-
-| | `/` en chat | Terminal `codex …` |
+| | In-chat `/` | Terminal `codex …` |
 |---|---|---|
-| Contexte | Session actuelle et fichiers @ | Répertoire `--cwd` |
-| Idéal pour | Exploration interactive | Scripts, CI |
+| Context | Current session and attached files | Directory selected with `--cd` / `-C` |
+| Best for | Interactive exploration | Scripts and CI |
 
-Les commandes slash sont des raccourcis chat — ce que votre environnement offre réellement bat mémoriser les noms.
+Treat slash commands as chat shortcuts. Inspecting the current environment is more useful than memorizing names.
 
-Sous-commandes CLI : [Mode interactif CLI](/guide/cli/interactive-mode/) et [Mode non interactif](/guide/cli/non-interactive-mode/). Table complète des paramètres : [Référence commandes CLI](/guide/reference/commands/).
+See [CLI interactive mode](/fr/guide/cli/interactive-mode/), [non-interactive mode](/fr/guide/cli/non-interactive-mode/), and the [CLI command reference](/fr/guide/reference/commands/).
 
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** App / CLI / IDE  
-**Note de révision :** Centre `/review`, catégories slash et relations `$skill` — disponibilité, nommage et comportement changent rapidement ; sans liste officielle actuelle de commandes et doc de comportement, `obsolète` est approprié.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE
+
+**Verification basis:** Compared with current official desktop App Slash commands and Developer commands. Command sets differ by work surface; availability still follows composer completion.
+
+**Last verified:** 2026-08-26

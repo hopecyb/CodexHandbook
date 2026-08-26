@@ -3,9 +3,10 @@ title: Vérifier le contenu technique
 description: Comment marquer les pages vérifiées — étapes de reproduction, sources officielles et dates.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -115,8 +116,8 @@ Re-vérifier trimestriellement ou sur les releases majeures :
 
 ## Associé
 
-- [Politique de version du handbook](/guide/start-here/handbook-version-policy/)
-- [Ressources officielles](/guide/reference/official-resources/)
+- [Politique de version du handbook](/fr/guide/start-here/handbook-version-policy/)
+- [Ressources officielles](/fr/guide/reference/official-resources/)
 
 `verified` signifie vérifié contre la base actuelle indiquée avec des preuves traçables — pas seulement l'intuition de l'auteur.
 

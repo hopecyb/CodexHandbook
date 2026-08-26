@@ -1,153 +1,167 @@
 ---
-title: CLI-Befehlsreferenz
-description: 'Kurzreferenz gängiger Codex-CLI-Unterbefehle und Parameter — Lernindex, kein Ersatz für die offizielle Dokumentation.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Referenz der CLI-Befehle
+description: Kurzübersicht häufiger Codex-CLI-Unterbefehle und Parameter als Lernindex, nicht als Ersatz für das offizielle Handbuch.
 sidebar:
   order: 50
+locale: de
+source_locale: zh-CN
+source_revision: bdc537d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Die Befehlsreferenz hilft vor allem beim Einstieg entscheiden — Parameter nicht sofort pauken:
+Eine Befehlsreferenz hilft vor allem bei der Wahl des Einstiegs. Du musst nicht sofort alle Parameter auswendig lernen:
 
-> **Interaktiver Einstieg oder einmaliger Befehls-Einstieg?**
+> **Brauche ich jetzt den interaktiven Einstieg oder einen einmaligen Befehlsaufruf?**
 
-Diese Seite sammelt gängige **Codex-CLI**-Einstiege zum Suchen und Vergleichen. **Namen, Parameter und Defaults ändern sich mit der Version** — vor dem Ausführen `codex --help` und Unterbefehl-`--help`; maßgeblich [OpenAI Codex Docs](https://developers.openai.com/codex).
+Diese Seite fasst die aktuellen stabilen Einstiege der **Codex CLI** zum Suchen und Vergleichen zusammen. Führe vor der Verwendung weiterhin `codex --help` und `--help` für den Unterbefehl aus. Den vollständigen Reifegrad und alle Parameter findest du unter [Developer commands](https://learn.chatgpt.com/docs/developer-commands).
 
-## Wann nutzen
+## Wann diese Seite hilft
 
-- Interaktiv oder einmaliger Befehl?
-- Chat-artige Bedienung oder skriptartige Ausführung?
-- CLI klar, aber welche Einstiegsklasse?
+Häufige Fragen an die Befehlsreferenz sind:
 
-## Einstiegswahl
+- Soll ich eine interaktive Sitzung starten oder einen einmaligen Befehl ausführen?
+- Ist diese Aufgabe eher dialogorientiert oder skriptgesteuert?
+- Ich möchte die CLI verwenden, weiß aber nicht, welchen Einstieg ich nachschlagen soll.
 
-- Parallel schauen, chatten, fixen: `codex`
-- Aufgabe einmal abgeben, Ergebnis zurück: `codex exec`
+## Einstieg wählen
 
-Für CLI-Einsteiger löst das die meisten Einstiegsfragen.
+- Während der Arbeit beobachten, Rückfragen stellen und korrigieren: `codex`
+- Aufgabe einmal übergeben und nach dem Lauf das Ergebnis erhalten: `codex exec`
 
-## Befehlsüberblick (illustrativ)
+Für Einsteiger beantwortet diese Unterscheidung bereits die meisten Fragen zur Wahl des Einstiegs.
 
-| Einstieg | Nutzen | Details |
+## Übersicht der stabilen Befehle
+
+| Einstieg | Zweck | Ausführliche Beschreibung |
 |---|---|---|
-| `codex` | Interaktive TUI-Sitzung | [Interaktiver Modus](/guide/cli/interactive-mode/) |
-| `codex exec` (oder Äquivalent) | Nicht-interaktive Einzel-/Pipeline-Aufgabe | [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) |
-| Config-bezogen | Nutzer-/Projektkonfiguration lesen/schreiben | [CLI-Konfiguration](/guide/cli/configuration/) |
+| `codex` | Interaktive TUI-Sitzung | [Interaktiver Modus](/de/guide/cli/interactive-mode/) |
+| `codex exec` / `codex e` | Nicht interaktive Einzel- oder Pipelineaufgabe | [Nicht interaktiver Modus](/de/guide/cli/non-interactive-mode/) |
+| `codex doctor` | Diagnosebericht zu Installation, Konfiguration, Authentifizierung, Laufzeit, Git und Terminal erstellen | [CLI-Fehlersuche](/de/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | Authentifizierung verwalten | [Anmeldung und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | Gespeicherte Sitzung fortsetzen oder verzweigen | [Übergabe und Fortsetzung](/de/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | MCP-Server verwalten | [MCP verbinden](/de/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Plugins installieren, auflisten und entfernen | [Plugins](/de/skills/plugins/) |
 
-:::caution[Versionsempfindlich]
-Parameternamen unten sind gängige Community-Schreibweisen und **stimmen nicht zwingend mit Ihrer CLI überein**. Nach Upgrades `--help` erneut prüfen.
+:::caution[Unterschiedliche Reifegrade]
+Die offizielle Referenz enthält außerdem experimentelle, Beta- und veraltete Befehle. Diese Grundlagenübersicht vermischt sie nicht mit stabilen Einstiegen. Prüfe bei Bedarf zuerst Reifegrad und Risiko in der offiziellen Tabelle.
 :::
 
 ## Häufige Missverständnisse
 
-### 1. Nicht alle Befehle merken
+### 1. Du musst die Befehle der Referenz nicht vollständig auswendig lernen
 
-Zuerst wissen, welche Einstiegsklasse passt — Rest live per `--help`.
+Wichtiger ist, die geeignete Einstiegskategorie zu kennen. Die verbleibenden Details kannst du vor Ort mit `--help` nachschlagen.
 
-### 2. `codex exec` ist nicht einfach „stärkeres `codex`“
+### 2. `codex exec` ist nicht nur eine fortgeschrittene Version von `codex`
 
-Eher unüberwacht, Skript, CI — nicht nur „stärkerer“ interaktiver Einstieg.
+Der Befehl ist auf unbeaufsichtigte Ausführung, Skripte und CI ausgerichtet, nicht einfach ein leistungsfähigerer interaktiver Einstieg.
 
-### 3. Parameter sehen ≠ sofort drehen
+### 3. Ein sichtbarer Parameter muss nicht sofort geändert werden
 
-Viele hängen an Version, Umgebung und Security-Policy — Absicht verstehen, dann entscheiden.
+Viele Parameter hängen von Version, Umgebung und Sicherheitsrichtlinie ab. Verstehe zuerst die Absicht und entscheide dann, ob eine Änderung nötig ist.
 
-### 4. Befehlsreferenz ≠ Bedienungstutorial
+### 4. Eine Befehlsreferenz ist kein Bedienungstutorial
 
 Sie ist:
 
-- Einstiegskarte
-- Parameterindex
-- Umschlagplatz „welche Seite detaillierter?“
+- Eine Karte der Einstiege
+- Ein Parameterindex
+- Eine Weiterleitung zu ausführlicheren Seiten
 
-## Interaktiver Modus (Konzept)
+## Interaktiver Modus
 
 ```bash
-# Interaktive Sitzung am Repo-Root starten (illustrativ)
+# Interaktive Sitzung im Stammverzeichnis des Repositorys starten
 codex
 
-# Typische Sitzungsaktionen (laut TUI)
+# Häufige Aktionen innerhalb der Sitzung, abhängig von der TUI
 # - Aufgabenbeschreibung eingeben
-# - / Slash-Befehle → siehe slash-commands
-# - Shell- / Schreibdatei-Freigaben
+# - Slash-Befehl / verwenden → siehe Seite zu Slash-Befehlen
+# - Shell- und Dateischreibanfragen genehmigen
 ```
 
-Slash: [Slash-Befehle](/guide/reference/slash-commands/)
+Slash-Befehle: [Kurzübersicht der Slash-Befehle](/de/guide/reference/slash-commands/)
 
-## Einstiegsentscheidung
+## Reihenfolge für die Einstiegsentscheidung
 
-1. Zuerst `codex --help`
-2. Dann interaktiv oder `exec`
-3. Bei konkretem Unterbefehl dessen `--help`
+Gehe beim Einstieg in die CLI so vor:
 
-So stecken Sie nicht sofort in der ganzen Parametertabelle fest.
+1. Führe zuerst `codex --help` aus.
+2. Entscheide anschließend zwischen interaktivem Modus und `exec`.
+3. Wenn du einen konkreten Unterbefehl verwendest, lies dessen eigenes `--help`.
+
+So gerätst du nicht sofort in eine vollständige Parametertabelle.
 
 ## Schnellstart
 
-1. `codex --help`
-2. Parallel arbeiten → `codex`
-3. CI/Skript → `codex exec` vertiefen
+Wenn du direkt beginnen möchtest:
 
-Leichter als sofort Parameterdetails.
+1. Führe `codex --help` aus.
+2. Starte für dialogbegleitete Arbeit `codex`.
+3. Befasse dich erst für CI oder Skripte mit `codex exec`.
 
-## Nicht-interaktives exec (Konzept)
+Das ist leichter als ein Einstieg über sämtliche Parameterdetails.
+
+## Nicht interaktives exec
 
 ```bash
-# Arbeitsverzeichnis und einmaliger Prompt (illustrativ)
-codex exec --cwd /path/to/repo "Ihre vollständige Aufgabenbeschreibung"
+# Arbeitsverzeichnis und einmaligen Prompt angeben
+codex exec --cd /path/to/repo "Deine vollständige Aufgabenbeschreibung"
 
-# Häufige Absichten (Parameternamen offiziell)
-# --cwd          Arbeitsverzeichnis
-# --model        festes Modell
-# --sandbox      Sandbox-Policy
-# --approval     Freigabe-Policy (besonders unüberwacht)
-# stdin-Pipe     Prompt aus Datei oder Upstream
+# Derzeit häufig verwendete Parameter
+# --cd, -C       Arbeitsverzeichnis
+# --model        Modell fixieren
+# --sandbox      Sandbox-Richtlinie
+# --ask-for-approval, -a  Genehmigungsrichtlinie
+# stdin-Pipeline Prompt aus Datei oder vorgeschaltetem Befehl lesen
 ```
 
-Sicherheit: [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
+Sicherheit: [Muster für menschliche Genehmigungen](/de/cases/workflows/human-approval-patterns/)
 
-## Config und Auth (Konzept)
+## Konfiguration und Authentifizierung
 
-| Aktion | Erklärung |
+| Aktion | Beschreibung |
 |---|---|
-| Login | Wie [Anmelden und Authentifizierung](/guide/getting-started/sign-in-and-authentication/) |
-| Config-Dateien | Nutzer-/Projektebene: [Konfigurationsreferenz](/guide/reference/configuration-reference/) |
-| MCP | [MCP verbinden](/skills/mcp/connect-an-mcp-server/) |
+| Anmeldung | Entspricht [Anmeldung und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) |
+| Konfigurationsdatei | Benutzer- oder Projektebene, siehe [Konfigurationsreferenz](/de/guide/reference/configuration-reference/) |
+| MCP | [MCP verbinden](/de/skills/mcp/connect-an-mcp-server/) |
 
-## Exit-Codes und Automatisierung
+## Exitcodes und Automatisierung
 
-Nicht-interaktiv nutzt meist **Exit-Codes** für CI:
+Der nicht interaktive Modus signalisiert CI den Erfolg oder Fehlschlag normalerweise durch einen **Exitcode**:
 
-- `0`: Aufgabe wie vereinbart fertig
-- Nicht-`0`: Fehler oder menschliche Intervention — Log-Artifacts prüfen
+- `0`: Aufgabe wurde wie vereinbart abgeschlossen
+- Ungleich `0`: Fehlschlag oder menschliches Eingreifen erforderlich; Protokollartefakt prüfen
 
-CLI-Befehlssseite: Einstiege und Absichten — nicht Parameter pauken.
+Diese Seite dient der Wahl des Einstiegs und der Einordnung von Befehlen. Du musst keine Parameter auswendig lernen, um anzufangen.
 
-Stderr in CI nicht ignorieren; Logs für [Diagnose zuerst](/cases/workflows/diagnose-before-fixing/) behalten.
+Ignoriere `stderr` in CI nicht. Bewahre Protokolle für [Erst diagnostizieren, dann beheben](/de/cases/workflows/diagnose-before-fixing/) auf.
 
-## Unterschied zu Chat-Slash
+## Unterschied zu Slash-Befehlen im Chat
 
-| | Terminal `codex` | Sitzung `/` |
+| | Terminalbefehl `codex` | `/` innerhalb einer Sitzung |
 |---|---|---|
-| Doku | Diese Seite + Produkthandbuch | [slash-commands](/guide/reference/slash-commands/) |
-| Geeignet | Skripte, CI | Interaktives Explorieren |
+| Dokumentation | Diese Seite und Produkthandbuch | [Slash-Befehle](/de/guide/reference/slash-commands/) |
+| Geeignet für | Skripte und CI | Interaktive Untersuchung |
 
-## Troubleshooting
+## Fehlersuche
 
-| Phänomen | Wohin |
+| Symptom | Ziel |
 |---|---|
-| Befehl fehlt | [CLI installieren](/guide/getting-started/install-cli/) |
-| Config greift nicht | [CLI-Konfiguration](/guide/cli/configuration/) |
-| Freigabe blockiert CI | Prompt straffen + Read-only-Sandbox |
+| Befehl nicht vorhanden | [CLI installieren](/de/guide/getting-started/install-cli/) |
+| Konfiguration greift nicht | [CLI-Konfiguration](/de/guide/cli/configuration/) |
+| Genehmigungsanfrage blockiert CI | Prompt enger fassen und schreibgeschützte Sandbox verwenden |
 
-[CLI-Troubleshooting](/guide/cli/troubleshooting/)
+[CLI-Fehlersuche](/de/guide/cli/troubleshooting/)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** CLI  
-**Prüfhinweis:** Als Einstiegskarte geschrieben, aber Kern um `codex`, `codex exec`, Sitzungs-`/` und Parameterabsichten — hochvolatile CLI-Details; nach aktueller offizieller Befehlsdoku wieder `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** CLI
+
+**Prüfgrundlage:** Mit der aktuellen Reifegradtabelle unter Developer commands abgeglichen. Die Seite listet nur stabile Einstiege und verifiziert `--cd` / `-C` sowie Sandbox- und Genehmigungsparameter. Experimentelle und veraltete Befehle bleiben außerhalb der Grundlagenübersicht.
+
+**Zuletzt geprüft:** 2026-08-26

@@ -3,9 +3,10 @@ title: 예시
 description: 설정과 AGENTS.md를 추상 원칙만이 아니라 실제 예로 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 원칙만 보면 다 알겠는데, 자기 저장소에 내려놓으려면 막히는 경우가 많습니다.
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 이 그룹 진입점
 
-- [Monorepo의 AGENTS.md](/guide/customization/examples/monorepo-agents-md/)
+- [Monorepo의 AGENTS.md](/ko/guide/customization/examples/monorepo-agents-md/)
 
 ## 언제 보면 좋은가
 

@@ -3,17 +3,18 @@ title: チーム自動化
 description: チーム内の反復自動化事例入口——トリガー、通知、承認、停止条件。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c95ca8c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 チーム自動化は作りすぎやすい。より安全な枠組み：ルールが明確な反復作業だけ自動化し、それ以外は人の判断に残す。
 
 ## 本グループの事例
 
-- [定期リンクチェック](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Issue トリアージ提案](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [定期リンクチェック](/ja/cases/use-cases/team-automation/scheduled-link-check/)
+- [Issue トリアージ提案](/ja/cases/use-cases/team-automation/issue-triage-suggestions/)
 
 ## 本グループの強調点
 

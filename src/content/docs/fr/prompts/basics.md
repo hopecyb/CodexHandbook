@@ -3,9 +3,10 @@ title: Bases des Prompts
 description: Les éléments essentiels d'un bon Prompt.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Au début, on a tendance à se concentrer sur « si la formulation est sophistiquée ».  
@@ -98,7 +99,7 @@ Pour la plupart des débutants, commencer par la **version recommandée** est en
 
 Le cœur d'un bon Prompt : moins de suppositions, moins de dérives, moins de dépassements.
 
-Exemples : [Première tâche](/cases/first-task/) et [Anatomie d'une tâche](/prompts/task-anatomy/).
+Exemples : [Première tâche](/fr/cases/first-task/) et [Anatomie d'une tâche](/fr/prompts/task-anatomy/).
 
 ---
 

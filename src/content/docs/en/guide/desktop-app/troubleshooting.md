@@ -4,7 +4,7 @@ description: Common fixes for install, sign-in, and task failures.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: ca74b6c
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -19,7 +19,7 @@ sidebar:
 | Task stuck waiting for approval | Return to the task view and handle pending approval requests |
 | Changes not as expected | Tighten constraints, start a new thread, check context |
 
-Still stuck: [https://developers.openai.com/codex](https://developers.openai.com/codex) and the [troubleshooting index](/guide/reference/troubleshooting/).
+Still stuck: [https://developers.openai.com/codex](https://developers.openai.com/codex) and the [troubleshooting index](/en/guide/reference/troubleshooting/).
 
 ---
 

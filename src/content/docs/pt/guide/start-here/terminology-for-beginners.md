@@ -3,14 +3,15 @@ title: Terminologia para iniciantes
 description: Definições curtas de Tarefa, Contexto, Sandbox, Skill e outros termos comuns.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 401719c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 6
 ---
 
-Entradas mais completas estão no [Glossário](/guide/reference/glossary/). Aqui listamos primeiro os termos mais comuns — e os que mais atrapalham a leitura.
+Entradas mais completas estão no [Glossário](/pt/guide/reference/glossary/). Aqui listamos primeiro os termos mais comuns — e os que mais atrapalham a leitura.
 
 Ao abrir o handbook do Codex pela primeira vez, o que mais trava costuma ser a densidade de nomes. Cada palavra isolada parece familiar; juntas, confundem.
 
@@ -86,7 +87,7 @@ A maior parte do que segue é conteúdo avançado; na primeira vez não precisa 
 - Plugin
 - Detalhes de ambiente Cloud
 
-Complete a [primeira Tarefa](/guide/getting-started/run-your-first-task/) e depois volte a estes termos — costuma ficar mais natural.
+Complete a [primeira Tarefa](/pt/guide/getting-started/run-your-first-task/) e depois volte a estes termos — costuma ficar mais natural.
 
 Quando aparecer uma palavra nova, consulte aqui e continue lendo.
 

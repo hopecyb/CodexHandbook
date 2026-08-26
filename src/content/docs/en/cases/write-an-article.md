@@ -3,9 +3,10 @@ title: Write an article
 description: Full technical writing flow from topic selection through outline, draft, and fact-checking.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Write an article
@@ -49,11 +50,11 @@ Write section by section—avoid generating the full article in one pass (hard t
 ### Verify
 
 - Manually verify links, version numbers, commands still valid
-- Optional: solidify flow with [Writing Skill](/skills/examples/writing-skill/)
+- Optional: solidify flow with [Writing Skill](/en/skills/examples/writing-skill/)
 
 ## 3. Capture for reuse
 
-Repeated writing can be packaged as `article-writer` Skill; see [Creator path](/guide/learning-paths/creator/).
+Repeated writing can be packaged as `article-writer` Skill; see [Creator path](/en/guide/learning-paths/creator/).
 
 ---
 

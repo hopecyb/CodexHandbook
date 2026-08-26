@@ -3,9 +3,10 @@ title: Começar a usar
 description: Da conta e da instalação até a primeira Tarefa verificável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 283b8cb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -25,15 +26,15 @@ Se o que mais importa agora é «como começar» e «como evitar errar de cara»
 
 ## Passos
 
-1. [Conta, planos e acesso](/guide/getting-started/account-plans-and-access/)
-2. [Escolher o cliente](/guide/getting-started/choose-your-codex-client/)
-3. Instalar: [App desktop](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
-4. [Entrar](/guide/getting-started/sign-in-and-authentication/)
-5. [Criar o projeto de prática](/guide/getting-started/create-your-first-project/)
-6. [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/)
-7. [Revisar o resultado](/guide/getting-started/review-the-result/) · [Desfazer e recuperar](/guide/getting-started/undo-and-recover/)
+1. [Conta, planos e acesso](/pt/guide/getting-started/account-plans-and-access/)
+2. [Escolher o cliente](/pt/guide/getting-started/choose-your-codex-client/)
+3. Instalar: [App desktop](/pt/guide/getting-started/install-desktop-app/) · [CLI](/pt/guide/getting-started/install-cli/) · [IDE](/pt/guide/getting-started/install-ide-extension/)
+4. [Entrar](/pt/guide/getting-started/sign-in-and-authentication/)
+5. [Criar o projeto de prática](/pt/guide/getting-started/create-your-first-project/)
+6. [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/)
+7. [Revisar o resultado](/pt/guide/getting-started/review-the-result/) · [Desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/)
 
-Com pressa: [Primeiros 30 minutos](/guide/getting-started/first-30-minutes/) · leia primeiro a [Lista de segurança](/guide/getting-started/beginner-safety-checklist/).
+Com pressa: [Primeiros 30 minutos](/pt/guide/getting-started/first-30-minutes/) · leia primeiro a [Lista de segurança](/pt/guide/getting-started/beginner-safety-checklist/).
 
 Passos de instalação mudam com a versão; confira também [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

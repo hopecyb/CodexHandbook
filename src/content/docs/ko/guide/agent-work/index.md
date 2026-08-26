@@ -5,9 +5,10 @@ sidebar:
   order: 31
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 477e693
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Agent 작업이 다루는 것은, 작업을 **검증 가능한 완료 상태까지** 가져가는 방법입니다. 언제 먼저 계획을 세울지, 언제 하위 작업을 나눌지, 언제 중간에 궤도 수정을 할지, 언제 인수인계·재개를 할지 — 이 장이 푸는 문제입니다.
@@ -25,10 +26,10 @@ Agent 작업이 다루는 것은, 작업을 **검증 가능한 완료 상태까�
 
 ## 권장 읽는 순서
 
-1. [계획](/guide/agent-work/planning/)
-2. [진행과 유도](/guide/agent-work/progress-and-steering/)
-3. [Subagent](/guide/agent-work/subagents/)
-4. [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
+1. [계획](/ko/guide/agent-work/planning/)
+2. [진행과 유도](/ko/guide/agent-work/progress-and-steering/)
+3. [Subagent](/ko/guide/agent-work/subagents/)
+4. [인수인계와 재개](/ko/guide/agent-work/handoff-and-resume/)
 
 ## 자주 쓰는 프레임
 
@@ -70,10 +71,10 @@ Agent 작업은 대략 네 연속 동작으로 볼 수 있습니다.
 
 ## 이 장과 다른 장의 관계
 
-- 완전한 메인 워크플로가 필요하면: [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
-- 작업을 분명히 말해야 하면: [프롬프트](/prompts/)
-- 컨텍스트 관리가 필요하면: [컨텍스트](/guide/context/)
-- 다인/다중 작업 병행이 필요하면: [병렬 Agent](/guide/desktop-app/parallel-agents/)와 [다중 Agent 협업](/cases/workflows/multi-agent-coordination/)
+- 완전한 메인 워크플로가 필요하면: [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
+- 작업을 분명히 말해야 하면: [프롬프트](/ko/prompts/)
+- 컨텍스트 관리가 필요하면: [컨텍스트](/ko/guide/context/)
+- 다인/다중 작업 병행이 필요하면: [병렬 Agent](/ko/guide/desktop-app/parallel-agents/)와 [다중 Agent 협업](/ko/cases/workflows/multi-agent-coordination/)
 
 ## 먼저 이 최소 흐름을 통과
 

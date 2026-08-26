@@ -3,50 +3,55 @@ title: Thông báo
 description: Theo dõi nhắc hoàn thành tác vụ dài và cần phê duyệt.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 0869db2
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 80
+reviewed_at: 2026-08-26
 ---
 
-Thông báo chủ yếu báo trạng thái tác vụ, tránh tác vụ nền bị dừng, đang chờ phê duyệt, hoặc đã xong mà bạn không để ý.
+Notifications tell you when a task needs attention. They do not replace review. The desktop App can notify you when a turn completes and can separately control alerts for permission requests and questions.
 
-Thông báo dùng cho:
+## Recommended configuration
 
-- Tác vụ dài hoàn thành
-- Đang chờ bạn phê duyệt
-- Thất bại hoặc cần theo dõi tiếp
+Open **Settings → Notifications**:
 
-Trong cài đặt hệ thống nên giữ các thông báo cần thiết, kẻo tác vụ nền kẹt mà không ai xử lý. Thông báo liên quan tự động hóa nằm ở chương sau; ở đây chủ yếu xem nhắc tác vụ trong App.
+| Event | Recommendation | Reason |
+|---|---|---|
+| Turn completion | Notify when running in the background | You do not need to watch a long task continuously |
+| Permission | Enable | An unanswered approval request pauses the task |
+| Question | Enable | Codex needs your response when key context is missing |
 
-## Câu hỏi thường gặp
+The operating system must also allow the ChatGPT desktop App to send notifications. Enabling them inside the App is not enough if the OS denies permission.
 
-### 1. App luôn mở — vẫn cần thông báo?
+## Manage multiple chats in Activity
 
-Phần lớn trường hợp vẫn cần. Khi tác vụ chạy lâu, hoặc giữa chừng chờ bạn phê duyệt, thông báo giúp bạn không phải nhìn chằm chằm giao diện.
+When Activity is available, select the bell in the sidebar to view chats that are unread, running, or awaiting a response. The shortcut is:
 
-### 2. Nên giữ những thông báo nào?
+- macOS: `Cmd + Option + U`
+- Windows: `Ctrl + Alt + U`
 
-Ưu tiên giữ các loại:
+Filters depend on the current interface and may include Work, Chat, Pinned, and Scheduled. A useful processing order is: awaiting permission or input → failed → completed and awaiting review → still running.
 
-- Tác vụ hoàn thành
-- Chờ phê duyệt
-- Thực thi thất bại
+## What to do after a notification
 
-### 3. Nếu tắt hết thì sao?
+- **Completed:** open the diff and verification output; a notification is not an acceptance result.
+- **Permission request:** confirm the command, target resource, impact, and reversibility.
+- **Awaiting an answer:** add only the context needed; do not expand the task incidentally.
+- **Failed:** find the first meaningful error, then decide whether to retry or adjust the constraints.
 
-Không nhất thiết lỗi ngay, nhưng dễ hơn khi:
+CLI and IDE notifications work differently. The IDE has no separate notification settings. The CLI can use advanced configuration for TUI or external-program completion notifications. Desktop settings are not a global switch.
 
-- Tác vụ thực ra đã dừng
-- Nó đang chờ bạn phê duyệt
-- Kết quả đã có từ lâu mà bạn không thấy
+## Official sources
 
-Tắt hết thông báo khiến bạn dễ bỏ lỡ các thay đổi trạng thái này.
+- [Notifications](https://learn.chatgpt.com/docs/notifications)
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App  
-**Ghi chú tái kiểm:** Mô tả về loại thông báo desktop, nhắc chờ phê duyệt và gợi ý tác vụ nền vẫn có thể đúng, nhưng hiện thiếu tài liệu thông báo chính thức hiện hành đủ mạnh để chứng minh cách trình bày và cấu hình cụ thể trong ứng dụng desktop phiên bản mới.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App
+
+**Kiểm chứng gần nhất:** 2026-08-26

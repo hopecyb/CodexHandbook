@@ -3,9 +3,10 @@ title: Hiểu nhầm thường gặp
 description: Làm rõ vài hiểu nhầm khi coi Codex như hộp đen vạn năng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 83a9c4c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -75,7 +76,7 @@ Thiếu một trong ba điều này, xác suất sinh vấn đề tăng rõ.
 
 Codex rất mạnh, nhưng đặt trong mục tiêu và ranh giới rõ ràng thì dùng tốt hơn — nó không thay bạn tiết kiệm việc hiểu và phán đoán.
 
-Bước tiếp theo: [Bắt đầu nhanh](/guide/getting-started/).
+Bước tiếp theo: [Bắt đầu nhanh](/vi/guide/getting-started/).
 
 ---
 

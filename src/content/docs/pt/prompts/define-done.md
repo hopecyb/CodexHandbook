@@ -3,9 +3,10 @@ title: Definir o concluído
 description: Escreva condições de conclusão verificáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b9d3ef1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muita gente formula a tarefa dizendo «o que quero», mas não «até que ponto conta como feito». No fim, só se julga a olho se terminou.
@@ -75,7 +76,7 @@ Se não, ainda está demasiado vago.
 
 No fundo: não deixe «está feito?» depender de adivinhação.
 
-Inclua comandos de verificação nos critérios — assim o Agent tem mais probabilidade de os executar: [Correr testes](/guide/verification/)
+Inclua comandos de verificação nos critérios — assim o Agent tem mais probabilidade de os executar: [Correr testes](/pt/guide/verification/)
 
 ---
 

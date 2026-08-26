@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Nền tảng dành cho nhà phát triển** dành cho người muốn **sản phẩm hóa** Codex vào pipeline: ứng dụng tùy chỉnh, review hàng loạt, cổng phát hành, cổng thông tin nội bộ. Việc hàng ngày kiểu «viết một Prompt để sửa bug» vẫn bắt đầu từ [Bắt đầu nhanh](/guide/getting-started/).
+**Nền tảng dành cho nhà phát triển** dành cho người muốn **sản phẩm hóa** Codex vào pipeline: ứng dụng tùy chỉnh, review hàng loạt, cổng phát hành, cổng thông tin nội bộ. Việc hàng ngày kiểu «viết một Prompt để sửa bug» vẫn bắt đầu từ [Bắt đầu nhanh](/vi/guide/getting-started/).
 
 Chương này không nói về cách dùng Codex hàng ngày, mà về cách nối Codex vào hệ thống của bạn.
 
@@ -30,10 +31,10 @@ Nó nghiêng về các tình huống như:
 
 | Câu hỏi của người đọc | Đi đâu |
 |---|---|
-| Cách chạy `codex` trong terminal | [Sổ tay sản phẩm CLI](/guide/cli/) |
-| Cách exec review trong CI | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) + CI trong chương này |
-| Cách nhúng Agent vào App nội bộ | [Tổng quan SDK](/guide/developer-platform/sdk-overview/) |
-| Mô hình quyền và bảo mật | [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) |
+| Cách chạy `codex` trong terminal | [Sổ tay sản phẩm CLI](/vi/guide/cli/) |
+| Cách exec review trong CI | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) + CI trong chương này |
+| Cách nhúng Agent vào App nội bộ | [Tổng quan SDK](/vi/guide/developer-platform/sdk-overview/) |
+| Mô hình quyền và bảo mật | [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/) |
 
 ## Kiến trúc điển hình (khái niệm)
 
@@ -56,10 +57,10 @@ Nhà cung cấp Git / ticket / kho artifact
 
 | Chủ đề | Trang |
 |---|---|
-| SDK | [Tổng quan SDK](/guide/developer-platform/sdk-overview/) |
-| Không tương tác | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/) · [Mã thoát và thử lại](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Tổng quan](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [Tổng quan SDK](/vi/guide/developer-platform/sdk-overview/) |
+| Không tương tác | [codex exec](/vi/guide/developer-platform/non-interactive/codex-exec/) · [Script và pipeline](/vi/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Đầu ra có cấu trúc](/vi/guide/developer-platform/non-interactive/structured-output/) · [Mã thoát và thử lại](/vi/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Tổng quan](/vi/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Tự động hóa review mã](/vi/guide/developer-platform/ci-cd/code-review-automation/) |
 
 Thêm về `codex-sdk/`, `app-server/`, `architecture-patterns/` xem [dàn ý chương](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
@@ -78,7 +79,7 @@ Có thể hiểu như sau:
 
 ### 3. Lần đầu đọc chương này, trang nào đáng xem nhất?
 
-Nếu chỉ cần nắm khái niệm, ưu tiên [Tổng quan SDK](/guide/developer-platform/sdk-overview/) và mối quan hệ với [chế độ không tương tác](/guide/cli/non-interactive-mode/).
+Nếu chỉ cần nắm khái niệm, ưu tiên [Tổng quan SDK](/vi/guide/developer-platform/sdk-overview/) và mối quan hệ với [chế độ không tương tác](/vi/guide/cli/non-interactive-mode/).
 
 Chương nền tảng nhà phát triển nói về «cách nối Codex vào hệ thống». Lần đầu dùng Codex thực tế, hãy đọc nội dung nhập môn trước.
 

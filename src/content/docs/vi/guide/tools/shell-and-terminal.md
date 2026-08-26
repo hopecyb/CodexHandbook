@@ -3,9 +3,10 @@ title: Shell và terminal
 description: Năng lực và rủi ro khi thực thi lệnh.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0b4d40a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -33,7 +34,7 @@ Terminal mạnh cũng nguy hiểm. Nguyên tắc:
 - Cấm `rm -rf`, force push, sửa cấu hình ssh, v.v., trừ khi bạn hoàn toàn hiểu và thật sự cần
 - Đưa lệnh kiểm chứng vào tiêu chuẩn nghiệm thu
 
-Lối vào sản phẩm: [Terminal tích hợp](/guide/desktop-app/integrated-terminal/)
+Lối vào sản phẩm: [Terminal tích hợp](/vi/guide/desktop-app/integrated-terminal/)
 
 ## Vì sao rủi ro terminal cao hơn
 

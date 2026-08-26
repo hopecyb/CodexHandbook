@@ -3,9 +3,10 @@ title: Refactor docs with review
 description: Case study—batch link and section updates in an Astro/Starlight docs project; small diffs and build verification.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 This case demonstrates a **content engineering** task: multi-file Markdown, sidebar config, build verification. The stack matches this handbook, but the pattern applies to any static site.
@@ -19,7 +20,7 @@ This case demonstrates a **content engineering** task: multi-file Markdown, side
 | Risk | Medium (many links and navigation) |
 | Duration | 1–3 hours (depends on scale) |
 
-Template reference: [Case study template](/cases/use-cases/case-study-template/)
+Template reference: [Case study template](/en/cases/use-cases/case-study-template/)
 
 ## Background
 
@@ -50,7 +51,7 @@ Steps: config first, then md, then update 12-reference/index.md.
 
 - **Config before content**: avoids missing-slug build errors
 - Commit in batches of 3–5 files for easier review
-- Use [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/)
+- Use [Explore–Plan–Execute–Verify](/en/cases/workflows/explore-plan-execute-verify/)
 
 ## Checks
 

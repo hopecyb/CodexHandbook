@@ -5,9 +5,10 @@ sidebar:
   order: 30
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a5cc3b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La producción central de Codex suele ser **cambios de archivos en el repositorio** o **artefactos recién generados** (documentos, imágenes, configuración). Este tema explica las mejores prácticas por tipo de archivo, para evitar «se generó pero no sirve».
@@ -20,14 +21,14 @@ Aunque todos sean «archivos», cada tipo pide una forma distinta de encargar la
 
 | Tema | Página |
 |---|---|
-| Código y texto | [Archivos de texto y código](/guide/files-and-artifacts/text-and-code-files/) |
-| Capturas y entrada de diseño | [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF y documentos largos | [PDF y documentos](/guide/files-and-artifacts/pdf-and-documents/) |
-| Datos tabulares | [Tablas y hojas de cálculo](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| Diapositivas | [Presentaciones](/guide/files-and-artifacts/presentations/) |
-| Salidas del Agent | [Aceptación de artefactos generados](/guide/files-and-artifacts/generated-artifacts/) |
+| Código y texto | [Archivos de texto y código](/es/guide/files-and-artifacts/text-and-code-files/) |
+| Capturas y entrada de diseño | [Imágenes y capturas](/es/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF y documentos largos | [PDF y documentos](/es/guide/files-and-artifacts/pdf-and-documents/) |
+| Datos tabulares | [Tablas y hojas de cálculo](/es/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| Diapositivas | [Presentaciones](/es/guide/files-and-artifacts/presentations/) |
+| Salidas del Agent | [Aceptación de artefactos generados](/es/guide/files-and-artifacts/generated-artifacts/) |
 
-Método general: [Verificar artefactos](/guide/quality/verify-artifacts/).
+Método general: [Verificar artefactos](/es/guide/quality/verify-artifacts/).
 
 ## De qué habla este capítulo
 
@@ -44,8 +45,8 @@ Se parece más a un manual operativo desglosado por tipo de archivo que a una me
 1. **Ruta clara**: en el prompt, escribe la ruta de salida y el nombre
 2. **Formato acordado**: extensión, codificación (UTF-8), finales de línea alineados con el proyecto
 3. **Conciencia de tamaño**: los binarios grandes no van a Git, o usa LFS/CDN
-4. **Aceptación humana**: generar ≠ terminar; contrasta con [Definición de hecho](/guide/quality/definition-of-done/)
-5. **Datos sensibles**: ver [Contexto sensible](/guide/context/sensitive-context/)
+4. **Aceptación humana**: generar ≠ terminar; contrasta con [Definición de hecho](/es/guide/quality/definition-of-done/)
+5. **Datos sensibles**: ver [Contexto sensible](/es/guide/context/sensitive-context/)
 
 ## Malentendidos habituales
 
@@ -86,9 +87,9 @@ Así es menos fácil que te abrume todo el capítulo de golpe.
 ## Relación con las herramientas
 
 - Leer/escribir archivos: herramientas de archivo + terminal
-- Ver imágenes: [Prompt con imágenes](/prompts/prompting-with-images/)
-- Ver páginas: [Herramienta de navegador](/guide/tools/browser/)
-- Generar imágenes: [Generación de imágenes](/guide/tools/image-generation/)
+- Ver imágenes: [Prompt con imágenes](/es/prompts/prompting-with-images/)
+- Ver páginas: [Herramienta de navegador](/es/guide/tools/browser/)
+- Generar imágenes: [Generación de imágenes](/es/guide/tools/image-generation/)
 
 En tareas de archivos es habitual que el resultado ya esté generado, pero el formato, las reglas o el contenido ya se hayan desviado en silencio.
 

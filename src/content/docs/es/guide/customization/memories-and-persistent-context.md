@@ -3,9 +3,10 @@ title: Memorias y contexto persistente
 description: Cómo Codex recuerda preferencias y hechos entre sesiones — capacidades, límites y normas de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ Se parece más a «preferencias personales a largo plazo y unos pocos hechos est
 | Alias de proyecto que repites («backend = `services/api`») | Estado de sprint que cambia |
 | Hechos no sensibles que dijiste explícitamente «por favor, recuerda» | Normas de equipo que deberían estar en Git |
 
-Las normas a nivel de equipo deben ir a **`AGENTS.md` o a la configuración del proyecto**, para poder hacer review y onboarding. Ver [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/).
+Las normas a nivel de equipo deben ir a **`AGENTS.md` o a la configuración del proyecto**, para poder hacer review y onboarding. Ver [Alcance y prioridad](/es/guide/customization/agents-md/scope-and-precedence/).
 
 ## Malentendidos habituales
 

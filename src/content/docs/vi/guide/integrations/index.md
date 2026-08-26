@@ -5,9 +5,10 @@ sidebar:
   order: 55
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d842500
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Giá trị tích hợp của Codex không chỉ là nối thêm một công cụ, mà còn đặt Agent vào chuỗi cộng tác bạn đã dùng: hosting mã, luồng ticket, hệ thống thông báo, nền tảng nội bộ, kho tri thức.
@@ -101,7 +102,7 @@ Phù hợp:
 - Chạy rà soát không tương tác trong CI
 - Sửa lần hai quanh review comment
 
-Lối vào xem [Tích hợp GitHub](/guide/integrations/github/) và [Web và Cloud](/guide/web-and-cloud/).
+Lối vào xem [Tích hợp GitHub](/vi/guide/integrations/github/) và [Web và Cloud](/vi/guide/web-and-cloud/).
 
 ### Ticket và quản lý dự án
 
@@ -183,15 +184,15 @@ Lần đầu làm tích hợp, để Codex giúp bạn “xem” và “đề xu
 
 | Tích hợp | Trang |
 |---|---|
-| GitHub | [Tích hợp GitHub](/guide/integrations/github/) |
+| GitHub | [Tích hợp GitHub](/vi/guide/integrations/github/) |
 | Slack / Linear / Jira v.v. | Lấy tài liệu chính thức và chương MCP/Automation làm chính; sổ tay bổ sung dần |
 
 ## Quan hệ với các chương khác
 
-- Connector mở rộng và đóng gói phân phối: xem [Tổng quan Plugins](/skills/plugins/plugins-overview/)
-- Nối dữ liệu ngoài: xem [Tổng quan MCP](/skills/mcp/mcp-overview/)
-- Chạy định kỳ và nền: xem [Tác vụ định kỳ và nền](/skills/automations/scheduled-tasks/)
-- Cộng tác kho Cloud: xem [Web và Cloud](/guide/web-and-cloud/)
+- Connector mở rộng và đóng gói phân phối: xem [Tổng quan Plugins](/vi/skills/plugins/plugins-overview/)
+- Nối dữ liệu ngoài: xem [Tổng quan MCP](/vi/skills/mcp/mcp-overview/)
+- Chạy định kỳ và nền: xem [Tác vụ định kỳ và nền](/vi/skills/automations/scheduled-tasks/)
+- Cộng tác kho Cloud: xem [Web và Cloud](/vi/guide/web-and-cloud/)
 
 ## Nguồn tham khảo
 - Tài liệu tích hợp và lập trình viên chính thức OpenAI Codex

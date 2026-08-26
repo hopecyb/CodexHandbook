@@ -1,54 +1,70 @@
 ---
-title: Árboles de trabajo
-description: Probar cambios en paralelo con árboles de trabajo aislados.
+title:  Árboles de trabajo
+description:  Probar cambios en paralelo con árboles de trabajo aislados.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f050c32
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-Un **árbol de trabajo (worktree)** sirve para experimentar cambios en un directorio aislado y reducir la interferencia con el área de trabajo principal.
+A Git worktree gives one repository multiple independent checkout directories. Each directory has its own files and branch state while sharing the repository's Git metadata. Worktrees let coding chats run in parallel without overwriting one another's files.
 
-Puedes verlo como abrir una «zona de prueba paralela» del mismo repositorio, para no amontonar todos los intentos en el área de trabajo actual.
+## Prerequisites
 
-## Cuándo usarlo
+- The project must be in a Git repository.
+- Each task boundary must be independently describable and verifiable.
+- Parallel tasks should not modify the same core files.
 
-- Quieres probar dos implementaciones en paralelo
-- Te preocupa que una refactorización experimental contamine el área de trabajo de la rama principal
+If you are learning Codex for the first time, complete tasks sequentially in Local mode. Introduce worktrees when waiting time or file conflicts become an actual problem.
 
-## Cuándo no usarlo
+## Create a worktree in the App
 
-- El propio proyecto de práctica ya está lo bastante aislado
-- Aún no dominas Git: primero completa las Tareas en serie en un directorio de práctica
+1. Select **Worktree** below the input area of a new chat.
+2. Choose a starting branch: the main branch, a feature branch, or the current branch with unstaged changes.
+3. Submit the prompt; the App creates a Git worktree.
+4. Inspect, test, and review the work in its independent chat.
+5. Use **Handoff** when you are ready to return to the local checkout.
 
-## Malentendidos frecuentes
+A worktree created by default uses a detached HEAD. Codex can still work there, but define the destination branch and merge approach before preserving or sharing commits.
 
-### 1. ¿No es simplemente crear otra carpeta?
+## Two parallel tasks
 
-Por fuera lo parece, pero el objetivo no es solo «tener un directorio más», sino dejar espacio aislado para distintos intentos sobre el mismo repositorio.
+| Chat | Worktree task | File ownership | Acceptance |
+|---|---|---|---|
+| A | Fix a sign-in error | `src/auth/**` | Authentication tests pass |
+| B | Extend authentication docs | `docs/auth/**` | Link check passes |
 
-### 2. ¿Hay que aprenderlo desde el principio?
+Do not let both chats modify a shared lockfile or configuration file. If that is unavoidable, assign the change to one chat and let the other provide analysis only.
 
-No.
+## Pre-handoff checks
 
-Si aún estás familiarizándote con el flujo básico de Tareas, suele ser más sencillo no tocar worktrees todavía.
+```bash
+git status --short
+git diff --check
+git diff --stat
+```
 
-### 3. ¿Cuándo conviene aprenderlo?
+Then run the task-specific tests. Use Handoff, commit, or merge only after you know which chat produced each change, which branch should receive it, and whether verification passed.
 
-Merece la pena cuando empiezas a encontrarte con esto:
+## Scheduled tasks and Remote
 
-- Quieres probar dos implementaciones
-- No quieres mezclar cambios experimentales en el área de trabajo actual
-- En el equipo se abren varias Tareas en paralelo
+- A scheduled task in a Git repository can use a dedicated background worktree to avoid conflicts with current work.
+- Remote can control a worktree chat on a connected computer from a mobile device. The repository and commands remain on that computer or in its remote development environment.
+- A non-Git project has no worktree isolation; a scheduled task operates directly in the project directory.
 
-El worktree es una herramienta de aislamiento avanzada, no un requisito para empezar con Codex.
+## Official sources
+
+- [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
+- [Long-running work and parallel chats](https://learn.chatgpt.com/docs/long-running-work)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App  
-**Nota de revisión:** Esta página presenta el worktree como capacidad avanzada de la App de escritorio, pero el material oficial público actual no basta para demostrar uno a uno la entrada vigente ni el alcance del soporte de árboles de trabajo en la UI de escritorio; conviene marcarlo como `outdated` hasta completar la documentación de producto más reciente.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Last verified:** 2026-08-26

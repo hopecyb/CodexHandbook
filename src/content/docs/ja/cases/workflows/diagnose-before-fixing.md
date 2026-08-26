@@ -3,9 +3,10 @@ title: 診断してから修正
 description: 本番問題と根深い bug——証拠チェーンを構築してから手を入れる。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex にいきなり bug 修正をさせると、手戻り率は通常高くなります。診断ワークフローは **症状 → 仮説 → 証拠 → 最小修正** をより重視します。

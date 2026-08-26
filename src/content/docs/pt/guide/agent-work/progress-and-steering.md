@@ -3,9 +3,10 @@ title: Progresso e reorientação
 description: Quando a direção desvia a meio da execução, como puxar o Codex de volta com instruções curtas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6813a5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -134,7 +135,7 @@ Mantenha o seu juízo sobre a causa do problema, mas ainda não entre no refacto
 
 ## Quando voltar a «replanear»
 
-A reorientação serve a desvios locais; nestes casos vale mais voltar a [Planeamento](/guide/agent-work/planning/):
+A reorientação serve a desvios locais; nestes casos vale mais voltar a [Planeamento](/pt/guide/agent-work/planning/):
 
 - O objetivo da Tarefa mudou
 - Informação nova derrubou a premissa anterior
@@ -154,10 +155,10 @@ Quando detetar desvio na execução, use instruções curtas: «o que manter, o 
 
 ## Combinações recomendadas
 
-- Clarificar primeiro o caminho de execução: [Planeamento](/guide/agent-work/planning/)
-- Escrever o fluxo como cadeia principal completa: [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- Dividir a Tarefa: [Subagents](/guide/agent-work/subagents/)
-- Continuar após interrupção: [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
+- Clarificar primeiro o caminho de execução: [Planeamento](/pt/guide/agent-work/planning/)
+- Escrever o fluxo como cadeia principal completa: [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- Dividir a Tarefa: [Subagents](/pt/guide/agent-work/subagents/)
+- Continuar após interrupção: [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
 
 ---
 

@@ -3,9 +3,10 @@ title: CLI 문제 해결
 description: 인증·권한·명령 실패 점검.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d016f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---

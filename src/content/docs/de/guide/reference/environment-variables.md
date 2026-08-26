@@ -3,9 +3,10 @@ title: Umgebungsvariablen
 description: 'Zweck, Schichten und Sicherheit Codex-bezogener Umgebungsvariablen — ergänzender Index zur Konfigurationsreferenz.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -30,7 +31,7 @@ Priorität Env-Var, wenn mindestens eines zutrifft:
 
 Deshalb Tokens, temporäre Schalter, CI-Injection oft als Env-Var statt hardcodiert.
 
-Config-Schlüssel: [Konfigurationsreferenz](/guide/reference/configuration-reference/); Cloud: [Secrets und Variablen](/guide/web-and-cloud/secrets-and-variables/).
+Config-Schlüssel: [Konfigurationsreferenz](/de/guide/reference/configuration-reference/); Cloud: [Secrets und Variablen](/de/guide/web-and-cloud/secrets-and-variables/).
 
 ## Was in Env-Vars gehört
 
@@ -72,7 +73,7 @@ Also:
 
 - Coding-Normen, Verzeichnisstruktur → `AGENTS.md`
 - Geteilte Modell-Defaults → Projektconfig (nicht-sensibel)
-- Komplexe Allowlists → [Regeln](/guide/customization/rules/allow-and-deny-patterns/)
+- Komplexe Allowlists → [Regeln](/de/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Häufige Missverständnisse
 
@@ -142,11 +143,11 @@ In `~/.zshrc` oder direnv `.envrc` persönliche Tokens — **kein** Commit von `
 
 ### CLI nicht-interaktiv
 
-CI injiziert aus Secret-Store, dann `codex exec`. Siehe [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/).
+CI injiziert aus Secret-Store, dann `codex exec`. Siehe [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/).
 
 ### MCP-Server
 
-MCP erbt oft Eltern-Env; in Config `$VAR` referenzieren, nicht hardcodieren. Siehe [MCP verbinden](/skills/mcp/connect-an-mcp-server/).
+MCP erbt oft Eltern-Env; in Config `$VAR` referenzieren, nicht hardcodieren. Siehe [MCP verbinden](/de/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 

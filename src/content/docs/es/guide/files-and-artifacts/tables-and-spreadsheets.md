@@ -3,9 +3,10 @@ title: Tablas y hojas de cálculo
 description: Lectura, limpieza, análisis y exportación de CSV, Excel y datos tabulares — evita romper estructura y codificación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ Restricciones: no modificar el archivo original; nulos como 0; dos decimales
 Aceptación: imprimir las primeras 5 filas + total de filas
 ```
 
-Contexto: [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
+Contexto: [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
 
 ## Por qué las tareas con tablas fallan con facilidad en silencio
 
@@ -108,7 +109,7 @@ Si usas Python: lectura/escritura con `pandas`; si Node: `csv-parse` / `xlsx`, e
 
 - Si filas y totales se cruzan con los datos fuente
 - Abrir Excel y ver si las fechas se interpretaron como números
-- [Verificar artefactos](/guide/quality/verify-artifacts/): muestreo comparativo
+- [Verificar artefactos](/es/guide/quality/verify-artifacts/): muestreo comparativo
 
 En tareas tabulares, lo más importante es dejar claros columnas, tipos, reglas y aceptación.
 
@@ -125,7 +126,7 @@ En tareas tabulares, lo más importante es dejar claros columnas, tipos, reglas 
 - [ ] El archivo original no se sobrescribió por accidente (o el cambio es visible en el diff)
 
 ## Referencias
-- [Definir restricciones](/prompts/constraints-and-boundaries/)
+- [Definir restricciones](/es/prompts/constraints-and-boundaries/)
 ---
 
 **Estado:** verificado  

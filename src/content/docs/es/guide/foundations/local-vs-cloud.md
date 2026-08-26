@@ -3,9 +3,10 @@ title: Local frente a Cloud
 description: Compara cuándo encajan las Tareas locales y las Tareas Cloud.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ Cuando de verdad encuentres estas necesidades, pasa a Cloud:
 - necesitas conectar un repositorio remoto o recursos remotos
 - no quieres ocupar la máquina local
 
-Muchos principiantes empiezan con **local + App de escritorio**. Detalles de Cloud: [Resumen de Web y Cloud](/guide/web-and-cloud/). Cambio dentro de la App: [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/).
+Muchos principiantes empiezan con **local + App de escritorio**. Detalles de Cloud: [Resumen de Web y Cloud](/es/guide/web-and-cloud/). Cambio dentro de la App: [Tareas locales y Cloud](/es/guide/desktop-app/local-and-cloud-tasks/).
 
 Local encaja mejor para entender el flujo y hacer cambios pequeños. Cloud, para Tareas más largas, más estandarizadas y con más colaboración remota.
 

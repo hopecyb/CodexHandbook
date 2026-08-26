@@ -3,9 +3,10 @@ title: Automatizar um relatório diário
 description: Transforme trabalho de resumo repetitivo num script ou Skill reutilizável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Automatizar um relatório diário
@@ -26,7 +27,7 @@ translated_at: 2026-07-28
 
 ## 2. Paradigma de referência
 
-A equipa já tem um caso semelhante: [verificação agendada de ligações na documentação](/cases/use-cases/team-automation/scheduled-link-check/).
+A equipa já tem um caso semelhante: [verificação agendada de ligações na documentação](/pt/cases/use-cases/team-automation/scheduled-link-check/).
 
 ## 3. Prompt recomendado
 
@@ -39,8 +40,8 @@ Restrições: git só de leitura; não fazer push; fornecer scripts/generate-dai
 
 ## 4. Consolidação
 
-- [Exemplo de Skill de automatização](/skills/examples/automation-skill/)
-- [Tarefas agendadas](/skills/automations/scheduled-tasks/)
+- [Exemplo de Skill de automatização](/pt/skills/examples/automation-skill/)
+- [Tarefas agendadas](/pt/skills/automations/scheduled-tasks/)
 ---
 
 **Estado:** verified  

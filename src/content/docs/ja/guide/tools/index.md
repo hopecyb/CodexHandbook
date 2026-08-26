@@ -5,9 +5,10 @@ sidebar:
   order: 20
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: adbe0aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Agent は**ツール**を通じてファイルを読み、コマンドを実行し、ネットワークを検索し、ブラウザを開くなどの操作を行います。適切なツールを選び、境界を明確に書くことで、勝手に外部へ出たり、過度な変更をしたりするリスクを減らせます。
@@ -32,22 +33,22 @@ Agent は**ツール**を通じてファイルを読み、コマンドを実行�
 
 | ツール | ページ |
 |---|---|
-| 選定の概要 | [ツール選択](/guide/tools/tool-selection/) |
-| ターミナル | [Shell とターミナル](/guide/tools/shell-and-terminal/) |
-| 検索 | [Web 検索](/guide/tools/web-search/) |
-| Web ページ | [ブラウザツール](/guide/tools/browser/) |
-| GUI | [Computer Use](/guide/tools/computer-use/) |
-| 画像 | [画像生成](/guide/tools/image-generation/) |
-| 音声 | [音声入力と出力](/guide/tools/voice/) |
+| 選定の概要 | [ツール選択](/ja/guide/tools/tool-selection/) |
+| ターミナル | [Shell とターミナル](/ja/guide/tools/shell-and-terminal/) |
+| 検索 | [Web 検索](/ja/guide/tools/web-search/) |
+| Web ページ | [ブラウザツール](/ja/guide/tools/browser/) |
+| GUI | [Computer Use](/ja/guide/tools/computer-use/) |
+| 画像 | [画像生成](/ja/guide/tools/image-generation/) |
+| 音声 | [音声入力と出力](/ja/guide/tools/voice/) |
 
-ファイルの読み書きと成果物の検証は [ファイルと成果物](/guide/files-and-artifacts/) を参照してください。拡張ツールは [MCP](/skills/mcp/mcp-overview/) 経由で接続します。
+ファイルの読み書きと成果物の検証は [ファイルと成果物](/ja/guide/files-and-artifacts/) を参照してください。拡張ツールは [MCP](/ja/skills/mcp/mcp-overview/) 経由で接続します。
 
 ## 推奨する読み順
 
 この章を初めて読むときは、次の順序がおすすめです。
 
-1. [ツール選択](/guide/tools/tool-selection/)——まず、タスクごとに何を優先すべきかを確認する
-2. [Shell とターミナル](/guide/tools/shell-and-terminal/)——次に、コマンド実行のリスクを理解する
+1. [ツール選択](/ja/guide/tools/tool-selection/)——まず、タスクごとに何を優先すべきかを確認する
+2. [Shell とターミナル](/ja/guide/tools/shell-and-terminal/)——次に、コマンド実行のリスクを理解する
 3. 検索、ブラウザ、その他のツールページ——手元のタスクに応じて続きを読む
 
 ツールは Codex がどのように動けるかを決めます。あなたの役割は、どのツールを使ってよいか、使ってはいけないかを説明することです。

@@ -3,9 +3,10 @@ title: Ví dụ
 description: Hiểu cấu hình và AGENTS.md nên viết thế nào qua ví dụ thật, không chỉ xem nguyên tắc trừu tượng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều nguyên tắc nhìn riêng đều hiểu, nhưng đến kho mình lại không biết hạ thế nào.
@@ -14,7 +15,7 @@ Vai trò nhóm này là cho bạn xem “người khác viết thế nào”, gi
 
 ## Lối vào nhóm này
 
-- [AGENTS.md trong Monorepo](/guide/customization/examples/monorepo-agents-md/)
+- [AGENTS.md trong Monorepo](/vi/guide/customization/examples/monorepo-agents-md/)
 
 ## Nhóm này phù hợp xem khi nào nhất
 

@@ -3,9 +3,10 @@ title: Constraints definieren
 description: Änderbaren Scope, Stil und Verbote eingrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 617fa41
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele Aufgaben scheitern nicht, weil das Ziel fehlt — sondern weil **Grenzen unklar** sind.
@@ -98,7 +99,7 @@ Besonders dann klar schreiben:
 
 Das Ziel sagt Codex, was zu tun ist; Constraints sagen, wo Schluss ist.
 
-Berechtigungsgrenzen am besten zusammen mit Constraints schreiben, damit „nebenbei“ weniger übergreift. Siehe [Fertigstellungsstandard definieren](/prompts/define-done/) und [Berechtigungen und Sandbox](/guide/permissions-and-sandbox/).
+Berechtigungsgrenzen am besten zusammen mit Constraints schreiben, damit „nebenbei“ weniger übergreift. Siehe [Fertigstellungsstandard definieren](/de/prompts/define-done/) und [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/).
 
 ---
 

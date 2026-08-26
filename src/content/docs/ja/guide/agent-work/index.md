@@ -5,9 +5,10 @@ sidebar:
   order: 31
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 477e693
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Agent ワークが扱うのは、タスクを**検証可能な完了状態まで届ける**方法です。いつ先に計画するか、いつサブタスクに分けるか、途中でどう軌道修正するか、いつ引き継ぎと再開が必要か——この章で扱う問題はこれらです。
@@ -25,10 +26,10 @@ Agent ワークが扱うのは、タスクを**検証可能な完了状態まで
 
 ## 推奨読了順
 
-1. [計画](/guide/agent-work/planning/)
-2. [進捗と誘導](/guide/agent-work/progress-and-steering/)
-3. [子 Agent](/guide/agent-work/subagents/)
-4. [引き継ぎと再開](/guide/agent-work/handoff-and-resume/)
+1. [計画](/ja/guide/agent-work/planning/)
+2. [進捗と誘導](/ja/guide/agent-work/progress-and-steering/)
+3. [子 Agent](/ja/guide/agent-work/subagents/)
+4. [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/)
 
 ## よく使うフレームワーク
 
@@ -70,10 +71,10 @@ Agent ワークは、おおよそ次の四つの連続動作として捉えら�
 
 ## 本章と他章の関係
 
-- 完全なメインワークフローが必要：[探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
-- タスクをはっきり伝えたい：[プロンプト](/prompts/)
-- コンテキストを管理したい：[コンテキスト](/guide/context/)
-- 複数人・複数タスクの並行が必要：[並列 Agent](/guide/desktop-app/parallel-agents/) と [マルチ Agent 協業](/cases/workflows/multi-agent-coordination/)
+- 完全なメインワークフローが必要：[探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
+- タスクをはっきり伝えたい：[プロンプト](/ja/prompts/)
+- コンテキストを管理したい：[コンテキスト](/ja/guide/context/)
+- 複数人・複数タスクの並行が必要：[並列 Agent](/ja/guide/desktop-app/parallel-agents/) と [マルチ Agent 協業](/ja/cases/workflows/multi-agent-coordination/)
 
 ## まず通す最小フロー
 

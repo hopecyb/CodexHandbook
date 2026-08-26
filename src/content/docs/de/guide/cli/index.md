@@ -3,9 +3,10 @@ title: CLI
 description: Minimale Einstiegsbeschreibung für den Kommandozeilen-Zugang.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f654474
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 11
 ---
@@ -22,15 +23,15 @@ Typische Szenarien:
 
 Für Einsteiger ohne Terminalkenntnis ist die CLI keine Pflicht-Erste-Station; kennst du aber `cd`, `ls` und Befehle im Projektverzeichnis, ist sie sehr effizient.
 
-- [Installation und Updates](/guide/cli/installation-and-updates/)
-- [Interaktiver Modus](/guide/cli/interactive-mode/)
-- [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/)
-- [CLI-Konfiguration](/guide/cli/configuration/)
-- [Befehle und Shortcuts](/guide/cli/commands-and-shortcuts/)
-- [Freigabe und Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Fehlerbehebung](/guide/cli/troubleshooting/)
+- [Installation und Updates](/de/guide/cli/installation-and-updates/)
+- [Interaktiver Modus](/de/guide/cli/interactive-mode/)
+- [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/)
+- [CLI-Konfiguration](/de/guide/cli/configuration/)
+- [Befehle und Shortcuts](/de/guide/cli/commands-and-shortcuts/)
+- [Freigabe und Sandbox](/de/guide/cli/approvals-and-sandbox/)
+- [Fehlerbehebung](/de/guide/cli/troubleshooting/)
 
-Vollständige Befehlsreferenz: [CLI-Befehlsreferenz](/guide/reference/commands/).
+Vollständige Befehlsreferenz: [CLI-Befehlsreferenz](/de/guide/reference/commands/).
 
 ## Was beim ersten Einsatz trennen
 

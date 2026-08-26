@@ -3,9 +3,10 @@ title: Lidar com incerteza
 description: Quando a informação falta, exigir perguntas em vez de inventar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ea6795e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---

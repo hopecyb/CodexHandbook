@@ -3,9 +3,10 @@ title: Phát triển phần mềm
 description: Lối vào case sửa code, sửa bug, bổ sung kiểm chứng — trọng tâm kiểm soát phạm vi, test và hoàn tác.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 84208b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Case phát triển phần mềm chủ yếu nhìn vấn đề kiểu:
@@ -14,7 +15,7 @@ Case phát triển phần mềm chủ yếu nhìn vấn đề kiểu:
 
 ## Lối vào nhóm này
 
-- [Sửa bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Sửa bug kèm kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ## Trọng tâm nhóm này
 

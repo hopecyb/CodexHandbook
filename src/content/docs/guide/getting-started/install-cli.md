@@ -1,59 +1,64 @@
 ---
 title: 安装 CLI
-description: 安装 Codex 命令行并完成基本检查。
+description: 安装 Codex CLI，检查版本、登录状态和第一个仓库任务。
 sidebar:
   order: 40
 ---
 
-按官方 CLI 安装说明操作：[https://developers.openai.com/codex](https://developers.openai.com/codex)（一般是包管理器或官方安装脚本，以当前文档为准）。
+Codex CLI 适合把探索、修改、测试和审查留在终端里。官方安装页同时提供 macOS/Linux、Windows、npm 和 Homebrew 选项；请选择与你的系统和软件管理方式一致的一种。
 
-平时就常用终端的话，CLI 用起来会顺手一些。  
-第一次安装时，更容易卡住的地方多半在这里：
+## macOS / Linux 官方独立安装器
 
-- 装完之后怎么确认不是装了一半
-- 为什么命令明明装了，终端却找不到
-- 什么时候应该回到 PATH / 认证，而不是重复安装
+```bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+```
 
-CLI 装没装好，主要看当前终端能不能稳定识别 `codex`。
+更新 CLI 时再次运行同一官方安装命令。Windows、npm 或 Homebrew 用户应从 [Codex CLI 官方页面](https://learn.chatgpt.com/docs/codex/cli) 切换对应安装标签，不要把 macOS/Linux 命令直接套到所有系统。
 
 ## 安装后检查
 
-在终端运行版本或帮助命令（具体子命令以官方为准），确认：
+新开一个终端窗口，在练习仓库中运行：
 
-- 命令可执行
-- 能进入登录或已认证状态
+```bash
+codex --version
+codex login status
+```
 
-## 常见误会
+如果还没有登录：
 
-### 1. 装完以后，任何终端窗口都会立刻认命令
+```bash
+codex login
+```
 
-有时你需要重新打开终端，或者确认当前 shell 的 `PATH` 已经更新。
+完成浏览器授权后，在仓库目录启动交互会话：
 
-### 2. 看到安装输出成功，就说明已经能用了
+```bash
+codex
+```
 
-更值得确认的是当前环境能不能找到这个命令。
+第一条任务可以保持只读：
 
-### 3. CLI 问题都要重装
+```text
+先不要改文件。说明这个项目如何安装、测试和构建，并给出你读取的文件路径。
+```
 
-很多时候真正要查的是：
+## 出错时按顺序排查
 
-- `PATH`
-- 当前 shell
-- 登录状态
+1. `codex --version` 找不到命令：重新打开终端，检查当前 shell 的 `PATH`。
+2. 命令可执行但不能使用：运行 `codex login status`，区分安装问题和认证问题。
+3. 登录身份不对：运行 `codex logout` 后重新登录。
+4. 公司环境被拒绝：检查工作区、登录方式或托管配置，不要直接换私人凭据绕过策略。
 
-## 安装后怎么查
+不要在 shell 历史、工单或聊天中粘贴 API key。需要 API key 登录时，按 [登录与身份验证](/guide/getting-started/sign-in-and-authentication/) 使用标准输入方式。
 
-1. 先确认命令能执行
-2. 再确认当前会话能进入登录或已登录状态
-3. 还不行再去查安装位置和 PATH
-
-CLI 装好以后，当前终端应该能找到它，你也能继续完成认证。
-
-详细交互见 [CLI 交互模式](/guide/cli/interactive-mode/)。排障：[CLI 排障](/guide/cli/troubleshooting/)。
+继续学习 [CLI 交互模式](/guide/cli/interactive-mode/)；其他问题见 [CLI 排障](/guide/cli/troubleshooting/)。
 
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页虽刻意回避具体安装命令，但仍默认了一套当前 CLI 安装、终端检查与认证节奏；鉴于安装方式、支持平台与认证流程都会变化，在补齐最新版官方安装说明前，不宜标为 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已对照当前 Codex CLI 快速开始与认证文档，核实官方 macOS/Linux 安装器、`codex` 启动流程、ChatGPT 登录及登录状态命令；其他安装方式引导读者使用官方实时标签。
+
+**最近核验：** 2026-08-26

@@ -1,54 +1,70 @@
 ---
-title: Arbeitsbäume
-description: Änderungen in isolierten Arbeitsbäumen parallel ausprobieren.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Worktrees
+description: Isoliere parallele Chats mit Git-Worktrees und kehre sicher in den lokalen Arbeitsbereich zurück.
 sidebar:
   order: 40
+locale: de
+source_locale: zh-CN
+source_revision: f050c32
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Ein **Arbeitsbaum (worktree)** dient dazu, Änderungen in einem isolierten Verzeichnis auszuprobieren und den Hauptarbeitsbereich weniger zu stören.
+Mit Worktrees kann ein Git-Repository mehrere unabhängige Checkout-Verzeichnisse besitzen. Jedes Verzeichnis hat eigene Dateien und einen eigenen Branch-Status, nutzt aber dieselben Git-Metadaten des Repositorys. Dadurch können mehrere Codierungs-Chats parallel arbeiten, ohne ihre Dateien gegenseitig zu überschreiben.
 
-Denk daran als „parallelen Versuchsraum“ für dasselbe Repository — damit nicht alle Experimente den aktuellen Arbeitsbereich verstopfen.
+## Voraussetzungen
 
-## Wann nutzen
+- Das Projekt muss sich in einem Git-Repository befinden.
+- Die Aufgabengrenzen müssen unabhängig beschreibbar und abnehmbar sein.
+- Parallele Aufgaben dürfen nicht dieselben zentralen Dateien ändern.
 
-- Zwei Implementierungen parallel ausprobieren
-- Experimentelle Refactors sollen den Hauptbranch-Arbeitsbereich nicht verschmutzen
+Wenn du Codex zum ersten Mal ausprobierst, erledige Aufgaben zunächst sequenziell im Local-Modus. Verwende Worktrees erst, wenn Wartezeiten oder Dateikonflikte tatsächlich zum Problem werden.
 
-## Wann nicht
+## In der App erstellen
 
-- Das Übungsprojekt ist bereits ausreichend isoliert
-- Du kennst Git noch wenig: zuerst Aufgaben seriell im Übungsverzeichnis erledigen
+1. Wähle unter dem Eingabebereich eines neuen Chats **Worktree**.
+2. Wähle den Ausgangs-Branch: Haupt-Branch, Feature-Branch oder aktueller Branch mit nicht vorgemerkten Änderungen.
+3. Sende den Prompt ab; die App erstellt einen Git-Worktree.
+4. Prüfe, teste und reviewe die Aufgabe im separaten Chat.
+5. Verwende **Handoff**, wenn du zur lokalen Arbeitskopie zurückkehren möchtest.
 
-## Häufige Missverständnisse
+Ein standardmäßig erstellter Worktree befindet sich auf einem detached HEAD. Codex kann darin arbeiten. Bevor du Commits behalten oder teilen möchtest, musst du jedoch Ziel-Branch und Zusammenführungsweg eindeutig festlegen.
 
-### 1. Ist das einfach nur ein neuer Ordner?
+## Beispiel mit zwei parallelen Aufgaben
 
-Oberflächlich ähnlich — Zweck ist aber nicht nur „ein Verzeichnis mehr“, sondern isolierter Raum für verschiedene Versuche am selben Repository.
+| Chat | Aufgabe im Worktree | Dateizuständigkeit | Abnahme |
+|---|---|---|---|
+| A | Anmeldefehler beheben | `src/auth/**` | Authentifizierungstests bestehen |
+| B | Authentifizierungsdokumentation ergänzen | `docs/auth/**` | Linkprüfung besteht |
 
-### 2. Muss ich das gleich am Anfang lernen?
+Lass A und B nicht gleichzeitig dieselbe Sperr- oder Konfigurationsdatei ändern. Falls dies unvermeidlich ist, bestimme einen Chat als alleinigen Bearbeiter; der andere liefert nur Analyseergebnisse.
 
-Nein.
+## Prüfung vor der Übergabe
 
-Solange du den Basis-Aufgabenfluss übst, ist es oft einfacher, Worktrees zunächst wegzulassen.
+```bash
+git status --short
+git diff --check
+git diff --stat
+```
 
-### 3. Wann lohnt sich das Lernen?
+Führe anschließend die aufgabenspezifischen Tests aus. Übergib, committe oder führe erst zusammen, wenn eindeutig ist, aus welchem Chat jede Änderung stammt, welcher Branch das Ziel ist und ob die Verifikation bestanden wurde.
 
-Wenn du in solche Situationen kommst:
+## Beziehung zu geplanten Aufgaben und Remote
 
-- zwei Implementierungen ausprobieren
-- Experimente nicht in den aktuellen Arbeitsbereich mischen
-- im Team laufen mehrere parallele Aufgaben
+- Geplante Aufgaben in einem Git-Repository können einen eigenen Hintergrund-Worktree verwenden und dadurch Konflikte mit der aktuellen Arbeit vermeiden.
+- Mit Remote lässt sich ein Worktree-Chat auf einem verbundenen Rechner von einem Mobilgerät aus steuern. Repository und Befehle verbleiben auf diesem Rechner oder in seiner Remote-Entwicklungsumgebung.
+- Nicht-Git-Projekte bieten keine Worktree-Isolierung; geplante Aufgaben verwenden direkt das Projektverzeichnis.
 
-Der Arbeitsbaum ist ein fortgeschrittenes Isolationswerkzeug, kein Pflichtbestandteil beim Einstieg in Codex.
+## Offizielle Grundlage
+
+- [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
+- [Long-running work and parallel chats](https://learn.chatgpt.com/docs/long-running-work)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App  
-**Prüfhinweis:** Diese Seite stellt Worktrees als fortgeschrittene Desktop-App-Fähigkeit vor, aber aktuelle öffentliche Official-Quellen reichen nicht aus, um Einstiege und Unterstützungsumfang der Arbeitsbaum-Funktion in der Desktop-UI Punkt für Punkt zu belegen; bis zur ergänzten Produktdokumentation besser `outdated`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App
+
+**Zuletzt geprüft:** 2026-08-26

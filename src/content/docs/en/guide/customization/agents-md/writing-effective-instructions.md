@@ -3,9 +3,10 @@ title: Writing Effective Project Instructions
 description: AGENTS.md writing checklist—short, hard, executable, verifiable.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ Explicitly state what not to do
 
 ### 1. Front-load hard constraints
 
-Put “must” and “must not” near the top of the file. When context is limited, the model weights the beginning higher—the same logic as [Context Priority](/guide/context/context-priority/).
+Put “must” and “must not” near the top of the file. When context is limited, the model weights the beginning higher—the same logic as [Context Priority](/en/guide/context/context-priority/).
 
 ### 2. Commands should be copy-pasteable
 
@@ -151,9 +152,9 @@ Good project instructions are not about volume—they make key constraints, key 
 
 ## Further Reading
 
-- [Project Instructions](/guide/customization/project-instructions/)
-- [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- [Define Done](/prompts/define-done/)
+- [Project Instructions](/en/guide/customization/project-instructions/)
+- [Explore—Plan—Execute—Verify](/en/cases/workflows/explore-plan-execute-verify/)
+- [Define Done](/en/prompts/define-done/)
 
 ## From one task to a project rule
 

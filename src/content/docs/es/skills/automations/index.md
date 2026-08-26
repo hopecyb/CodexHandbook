@@ -1,56 +1,44 @@
 ---
-title: Automations
-description: Ejecución programada, por eventos y en segundo plano; qué conviene automatizar y qué exige revisión humana.
+title: Scheduled tasks
+description: Repite en ChatGPT, según un horario, una tarea que ya se ha verificado.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: f32c13f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`Automations` trata sobre todo de cómo ejecutar tareas repetitivas de forma automática, no de «hacer Codex más inteligente».
+Una Scheduled task permite que ChatGPT repita trabajo en segundo plano según una programación. Es adecuada para informes periódicos, seguimientos continuos y mantenimiento recurrente. No equivale a un webhook genérico, a un evento del repositorio ni a un sistema de CI.
 
-Este grupo se centra en:
+## Decide primero si es adecuada
 
-- Qué tareas merece la pena automatizar
-- En qué punto debe detenerse la automatización y esperar a una persona
-- Cómo diseñar fallos, alertas y rollback
+| Adecuada | No adecuada |
+|---|---|
+| Fuentes de entrada estables y resultados revisables | El problema debe redefinirse en cada ejecución |
+| Activada por una hora o un intervalo | Debe iniciarse exactamente con un Git push o la apertura de un PR |
+| Comprobaciones de solo lectura, resúmenes y borradores | Fusiones desatendidas en la rama principal o eliminaciones masivas |
+| Condiciones explícitas para «sin cambios» y para detenerse | Reintentos infinitos después de un fallo |
 
-## Criterios de decisión
+## Superficies de gestión actuales
 
-Al empezar con automatización, no hace falta entregar de golpe todo el trabajo repetitivo.
+- Crea y gestiona Scheduled tasks en ChatGPT Web o en la App de escritorio.
+- Codex CLI y el IDE no ofrecen una interfaz para gestionar Scheduled tasks; sí sirven para probar primero prompts, Skills o scripts.
+- La App de escritorio puede ejecutar una tarea sobre un proyecto local o un worktree aislado, pero el equipo debe estar encendido, la App en ejecución y el proyecto disponible en el disco.
+- Una tarea de Web puede usar contexto cargado, herramientas conectadas, Skills y Plugins, pero no puede leer directamente una carpeta local.
 
-Puedes decidir en este orden:
+## En esta sección
 
-1. Primero, si la tarea es **repetitiva, con reglas claras y fácil de verificar**
-2. Después, si puede limitarse a solo lectura, solo recomendaciones o solo un PR en borrador
-3. Por último, si conviene un modo totalmente desatendido
+- [Guía completa de Scheduled tasks](/es/skills/automations/scheduled-tasks/): elige el modo de ejecución, redacta un prompt duradero y define permisos y aceptación
 
-## Entrada del grupo
+## Fuente oficial
 
-- [Tareas programadas y en segundo plano](/skills/automations/scheduled-tasks/): qué es una tarea automatizada, disparadores, condiciones de salida y puntos de revisión humana
-
-## Errores frecuentes
-
-### 1. Si se repite, hay que automatizarlo
-
-Si la tarea se repite pero el criterio de juicio sigue dependiendo de una persona, automatizar demasiado pronto suele generar más problemas.
-
-### 2. Automatizar implica saltarse la confirmación humana
-
-Muchas automatizaciones ya aportan valor si llegan solo a:
-
-- Comprobaciones automáticas
-- Resúmenes automáticos
-- Abrir issues / PRs en borrador
-
-No empujes el resultado directamente a la rama principal.
-
-La automatización encaja mejor con tareas «repetitivas, con reglas claras y fáciles de revisar». Cuando hay juicios ambiguos, dejar la revisión humana en el flujo suele ser más estable.
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** Cloud / App / CLI  
-**Nota de revisión:** El contenido de este grupo asume capacidades y entradas de Automations disponibles hoy, pero el material público oficial sobre la superficie de automatización de Codex sigue incompleto; a 2026-07-26 no conviene marcarlo como estable.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** ChatGPT Web / App de escritorio; CLI e IDE sirven para preparar y probar tareas, pero no ofrecen una interfaz de gestión
+
+**Última verificación:** 2026-08-26

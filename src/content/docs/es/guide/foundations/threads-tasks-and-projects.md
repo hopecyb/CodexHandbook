@@ -3,9 +3,10 @@ title: Hilos, Tareas y proyectos
 description: Aclara la relación entre sesión, Tarea y espacio de trabajo del proyecto.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -37,8 +38,8 @@ El problema suele estar aquí: la Tarea cambió, pero el hilo sigue cargando Con
 ## Consejos prácticos
 
 - Si cambia el tema, **abre un hilo nuevo** para evitar que el Contexto antiguo interfiera
-- En Tareas largas, deja claras etapas y puntos de control; ver [Prompts para Tareas largas](/prompts/long-running-tasks/)
-- Si necesitas continuar entre sesiones, haz un resumen de Traspaso; ver [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+- En Tareas largas, deja claras etapas y puntos de control; ver [Prompts para Tareas largas](/es/prompts/long-running-tasks/)
+- Si necesitas continuar entre sesiones, haz un resumen de Traspaso; ver [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
 
 ## Malentendidos frecuentes
 

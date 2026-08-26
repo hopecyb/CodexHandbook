@@ -3,9 +3,10 @@ title: Coordination multi-Agent
 description: Exploration parallèle, exécution répartie et fusion des résultats — quand découper et comment vérifier.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Le multi-Agent convient aux sous-problèmes parallèles et faiblement couplés. Il ne convient pas à deux agents modifiant le même fichier sans coordinateur.
@@ -18,7 +19,7 @@ Le multi-Agent convient aux sous-problèmes parallèles et faiblement couplés. 
 | Un lance les tests pendant qu'un autre rédige la doc | État mutable partagé sans verrouillage |
 | Explorer plusieurs options d'implémentation | Forte dépendance séquentielle pas encore cartographiée |
 
-Capacités produit : [Agents parallèles](/guide/desktop-app/parallel-agents/), [Sous-agents](/guide/agent-work/subagents/).
+Capacités produit : [Agents parallèles](/fr/guide/desktop-app/parallel-agents/), [Sous-agents](/fr/guide/agent-work/subagents/).
 
 ## Modèles de coordination
 
@@ -36,11 +37,11 @@ Vous : en choisir une, puis ouvrir un seul Agent pour exécuter
 Agent d'exploration → produit un plan → Agent d'exécution (nouveau fil avec résumé du plan)
 ```
 
-Utiliser [transfert et reprise](/guide/agent-work/handoff-and-resume/) pour passer des résumés structurés — ne pas coller des conversations entières.
+Utiliser [transfert et reprise](/fr/guide/agent-work/handoff-and-resume/) pour passer des résumés structurés — ne pas coller des conversations entières.
 
 ### Modèle C : Isolation par worktree
 
-Des Agents différents modifient des branches différentes dans des [git worktrees](/guide/desktop-app/worktrees/) séparés ; fusion humaine à la fin.
+Des Agents différents modifient des branches différentes dans des [git worktrees](/fr/guide/desktop-app/worktrees/) séparés ; fusion humaine à la fin.
 
 ## Règles de coordination (recommandées dans AGENTS.md)
 

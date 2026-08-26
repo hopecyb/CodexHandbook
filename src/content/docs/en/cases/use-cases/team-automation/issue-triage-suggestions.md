@@ -3,9 +3,10 @@ title: "Case study: Issue triage and label suggestions"
 description: Use Codex to read new Issues and suggest labels and owners—light team automation.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 ## Metadata
@@ -41,7 +42,7 @@ translated_at: 2026-07-26
 
 **Plan:** Define JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Execute:** `codex exec` with issue title + body (watch [prompt injection](/guide/team-enterprise/security/prompt-injection/) sanitization).
+**Execute:** `codex exec` with issue title + body (watch [prompt injection](/en/guide/team-enterprise/security/prompt-injection/) sanitization).
 
 **Verify:** Compare to human labels on 3 historical issue fixtures; ship when agreement > 80%.
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-26
 
 ## 5. Capture
 
-- Optional [Webhook](/guide/developer-platform/webhooks/overview/) hook to internal ticketing
-- Retro in [Case study template](/cases/use-cases/case-study-template/)
+- Optional [Webhook](/en/guide/developer-platform/webhooks/overview/) hook to internal ticketing
+- Retro in [Case study template](/en/cases/use-cases/case-study-template/)
 
 ## 6. Related chapters
 
-- [GitHub integration](/guide/integrations/github/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [GitHub integration](/en/guide/integrations/github/)
+- [Human approval patterns](/en/cases/workflows/human-approval-patterns/)
 
 ---
 

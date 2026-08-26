@@ -3,9 +3,10 @@ title: Multi-Agent-Koordination
 description: Parallel erkunden, arbeitsteilig ausführen und Ergebnisse zusammenführen — wann zerlegen, wie abnehmen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Mehrere Agents eignen sich für parallelisierbare, lose gekoppelte Teilprobleme — nicht dafür, ohne Koordination dieselbe Datei gleichzeitig zu ändern.
@@ -18,7 +19,7 @@ Mehrere Agents eignen sich für parallelisierbare, lose gekoppelte Teilprobleme 
 | Einer Tests, einer Docs | Geteilter mutabler Zustand ohne Lock |
 | Mehrere Implementierungsoptionen erkunden | Starke Sequenzabhängigkeiten ungeklärt |
 
-Produktfähigkeiten: [Parallele Agents](/guide/desktop-app/parallel-agents/), [Subagents](/guide/agent-work/subagents/).
+Produktfähigkeiten: [Parallele Agents](/de/guide/desktop-app/parallel-agents/), [Subagents](/de/guide/agent-work/subagents/).
 
 ## Koordinationsmuster
 
@@ -36,11 +37,11 @@ Du: Eine wählen, dann einzelner Agent ausführen
 Erkunden-Agent → Plan ausgeben → Ausführen-Agent (neuer Thread, mit Plan-Zusammenfassung)
 ```
 
-Über [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/) strukturierte Zusammenfassungen übergeben — nicht den ganzen Chat pasten.
+Über [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/) strukturierte Zusammenfassungen übergeben — nicht den ganzen Chat pasten.
 
 ### Muster C: Isolation über Worktrees
 
-Verschiedene Agents ändern in unterschiedlichen [git worktrees](/guide/desktop-app/worktrees/) unterschiedliche Branches; am Ende manuell mergen.
+Verschiedene Agents ändern in unterschiedlichen [git worktrees](/de/guide/desktop-app/worktrees/) unterschiedliche Branches; am Ende manuell mergen.
 
 ## Koordinationsregeln (empfohlen in AGENTS.md)
 

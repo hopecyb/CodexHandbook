@@ -3,9 +3,10 @@ title: Projektanweisungen
 description: "Projektkontext jenseits von AGENTS.md: Rollenverteilung von README, docs und Dialogverweisen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Dann verwirren sich Menschen und Codex. Ziel: die „Repo-Wahrheit“ möglichst
 - **Projektanweisungen**: über Monate relativ stabil
 - **Gesprächskontext**: Ziel, Constraints und Zwischenfazits dieser Aufgabe
 
-Taucht eine Regel in langen Aufgaben immer wieder auf, **zurückschreiben** nach `AGENTS.md` oder `docs/` — nicht in zehn Threads kopieren. Siehe [Kontext fokussiert halten](/guide/context/keep-context-focused/).
+Taucht eine Regel in langen Aufgaben immer wieder auf, **zurückschreiben** nach `AGENTS.md` oder `docs/` — nicht in zehn Threads kopieren. Siehe [Kontext fokussiert halten](/de/guide/context/keep-context-focused/).
 
 ## Häufige Fehler
 

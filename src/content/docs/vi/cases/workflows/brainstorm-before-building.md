@@ -3,12 +3,13 @@ title: Brainstorm trước rồi mới làm
 description: Trước khi viết code hoặc bài dài, dùng khám phá có cấu trúc để hội tụ phương án — giảm làm lại.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Brainstorm trước rồi mới làm** phù hợp tác vụ mục tiêu mơ hồ, phương án không chỉ một: tính năng mới, redesign, chọn đề nội dung, chọn tech. Nối với giai đoạn ① khám phá của [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/), nhưng nhấn mạnh **phân tán và hội tụ**, chứ không đọc code sửa tệp ngay.
+**Brainstorm trước rồi mới làm** phù hợp tác vụ mục tiêu mơ hồ, phương án không chỉ một: tính năng mới, redesign, chọn đề nội dung, chọn tech. Nối với giai đoạn ① khám phá của [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/), nhưng nhấn mạnh **phân tán và hội tụ**, chứ không đọc code sửa tệp ngay.
 
 ## Trang này giải quyết gì
 
@@ -43,7 +44,7 @@ Nêu 2 điểm quyết định cần tôi xác nhận (định dạng, quyền).
 
 **Giai đoạn C — Vào kế hoạch**
 
-Sau xác nhận, nối [làm việc theo đặc tả](/cases/workflows/specification-driven-work/) hoặc ② kế hoạch của EPXV.
+Sau xác nhận, nối [làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/) hoặc ② kế hoạch của EPXV.
 
 ## Quy trình đề xuất
 
@@ -78,9 +79,9 @@ Làm rõ ràng buộc (thời gian, tech stack, phần không được sửa)
 
 ## Chương liên quan
 
-- [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-- [Làm việc theo đặc tả](/cases/workflows/specification-driven-work/)
-- [Yêu cầu kế hoạch](/prompts/ask-for-a-plan/)
+- [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+- [Làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/)
+- [Yêu cầu kế hoạch](/vi/prompts/ask-for-a-plan/)
 
 ---
 

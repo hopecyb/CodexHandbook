@@ -3,9 +3,10 @@ title: SDK 概要
 description: 公式 SDK でアプリから Codex タスクを起動——認証、セッション、エラー処理の概念。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -20,7 +21,7 @@ SDK（名称と言語は [公式ドキュメント](https://developers.openai.co
 - 認証とテナント分離
 - Webhook、キューとの連携思路
 
-プラットフォーム総覧：[開発者プラットフォーム](/guide/developer-platform/)
+プラットフォーム総覧：[開発者プラットフォーム](/ja/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -61,7 +62,7 @@ SDK は「プログラムにシステムを接続」向き。Codex 初回入門�
 4. **結果**：メッセージ履歴、ファイル diff、artifact URL（API による）
 5. **エラー**：再試行可能（429）と不可（400）を区別
 
-エラー索引：[エラーとメッセージリファレンス](/guide/reference/error-reference/)
+エラー索引：[エラーとメッセージリファレンス](/ja/guide/reference/error-reference/)
 
 ## 最小統合チェックリスト
 
@@ -72,7 +73,7 @@ SDK は「プログラムにシステムを接続」向き。Codex 初回入門�
 
 ## CI/CD との接続
 
-SDK が Cloud やリモート runner を起動、または CI があなたのサービスにコールバックして PR 状態を更新。例パターンは [コードレビュー自動化](/guide/developer-platform/ci-cd/code-review-automation/) を参照。
+SDK が Cloud やリモート runner を起動、または CI があなたのサービスにコールバックして PR 状態を更新。例パターンは [コードレビュー自動化](/ja/guide/developer-platform/ci-cd/code-review-automation/) を参照。
 
 ## よくあるミス
 

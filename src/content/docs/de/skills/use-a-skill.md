@@ -3,9 +3,10 @@ title: Einen Skill nutzen
 description: Skills explizit und implizit auslösen — und description gut schreiben.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Ein häufiger Irrtum am Anfang: „Sobald er installiert ist, wirkt er von allein.“ Einen Skill nutzen heißt, Codex nach einem vorformulierten Arbeitsmuster handeln zu lassen.
@@ -85,7 +86,7 @@ Nach dem Lesen der `description` weiß man, „wann sie greifen soll und wann ni
 
 Liest sie sich wie „kann irgendwie alles“, ist sie meist zu vage.
 
-Mehr Konzepte: [Skills-Überblick](/skills/overview/).
+Mehr Konzepte: [Skills-Überblick](/de/skills/overview/).
 ---
 
 **Status:** verified  

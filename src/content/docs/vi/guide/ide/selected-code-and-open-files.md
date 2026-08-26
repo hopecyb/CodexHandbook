@@ -3,9 +3,10 @@ title: Vùng chọn và tệp mở
 description: Dùng mã đã chọn và tệp đang mở để giới hạn chính xác phạm vi tác vụ IDE.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -28,11 +29,11 @@ Vai trò của vùng chọn rất đơn giản: bảo Codex tập trung vào đ�
 | **Tệp mở** | Cần hiểu nhiều chỗ liên quan trong tệp | Mở `auth.ts` + `auth.test.ts` |
 | **Đường dẫn @** | Xuyên thư mục, tệp chưa mở | `@src/api/client.ts` căn chỉnh kiểu với backend |
 
-Độ sâu khái niệm: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+Độ sâu khái niệm: [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 
 ## Cách làm tối thiểu dùng được
 
-1. Chọn **đoạn liên quan nhỏ nhất** (thường 10–80 dòng), trong Prompt viết rõ mục tiêu và [định nghĩa hoàn thành](/prompts/define-done/)
+1. Chọn **đoạn liên quan nhỏ nhất** (thường 10–80 dòng), trong Prompt viết rõ mục tiêu và [định nghĩa hoàn thành](/vi/prompts/define-done/)
 2. Nếu liên quan bên gọi, mở thêm hoặc @ 1–2 tệp thượng nguồn
 3. Yêu cầu «chỉ sửa tệp liên quan X; liệt kê tệp sẽ sửa rồi mới làm»
 4. Trong diff IDE chấp nhận từng khối — không chấp nhận hết một lần
@@ -45,7 +46,7 @@ Vùng chọn: tùy chọn — bắt đầu từ hàm lối vào
 Prompt: nêu biên mô-đun, thư mục cấm sửa
 ```
 
-Refactor lớn nên dùng [cây làm việc Desktop App](/guide/desktop-app/worktrees/) hoặc [chế độ lập kế hoạch](/guide/agent-work/planning/). IDE hợp hơn cho kết thúc và commit bước nhỏ.
+Refactor lớn nên dùng [cây làm việc Desktop App](/vi/guide/desktop-app/worktrees/) hoặc [chế độ lập kế hoạch](/vi/guide/agent-work/planning/). IDE hợp hơn cho kết thúc và commit bước nhỏ.
 
 ## Câu hỏi thường gặp
 
@@ -68,13 +69,13 @@ Dùng vùng chọn và tệp mở, nói cho cùng, là cố gắng đừng mang 
 
 ## Phối hợp với rà soát
 
-Trước khi chấp nhận, đối chiếu [Rà soát diff](/guide/quality/review-diffs/):
+Trước khi chấp nhận, đối chiếu [Rà soát diff](/vi/guide/quality/review-diffs/):
 
 - Có chỉ các tệp đã ước định thay đổi không
 - Ngoài vùng chọn có xóa bất ngờ không
 - Kiểm thử có phủ nhánh mới không
 
-Phía sản phẩm: [Rà soát thay đổi trong IDE](/guide/ide/reviewing-changes/)
+Phía sản phẩm: [Rà soát thay đổi trong IDE](/vi/guide/ide/reviewing-changes/)
 
 ## Lỗi thường gặp
 
@@ -85,7 +86,7 @@ Phía sản phẩm: [Rà soát thay đổi trong IDE](/guide/ide/reviewing-chang
 | Chấp nhận hết gợi ý chưa đọc diff | Đưa vào lệch phong cách hoặc lỗ hổng bảo mật |
 
 ## Nguồn tham khảo
-- [Định nghĩa ràng buộc](/prompts/constraints-and-boundaries/)
+- [Định nghĩa ràng buộc](/vi/prompts/constraints-and-boundaries/)
 ---
 
 **Trạng thái:** verified  

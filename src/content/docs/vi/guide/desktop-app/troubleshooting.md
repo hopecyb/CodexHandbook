@@ -3,9 +3,10 @@ title: Xử lý sự cố ứng dụng Desktop
 description: Xử lý thường gặp khi cài đặt, đăng nhập và tác vụ thất bại.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ca74b6c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,7 +21,7 @@ Khi xử lý sự cố, lần theo thứ tự nguyên nhân dễ xảy ra và d�
 | Tác vụ mãi chờ phê duyệt | Quay lại view tác vụ xử lý yêu cầu chờ phê duyệt |
 | Thay đổi không như kỳ vọng | Thắt chặt ràng buộc, mở thread mới, kiểm tra ngữ cảnh |
 
-Vẫn thất bại: [https://developers.openai.com/codex](https://developers.openai.com/codex) và [Mục lục xử lý sự cố](/guide/reference/troubleshooting/).
+Vẫn thất bại: [https://developers.openai.com/codex](https://developers.openai.com/codex) và [Mục lục xử lý sự cố](/vi/guide/reference/troubleshooting/).
 
 ## Hiểu nhầm thường gặp
 

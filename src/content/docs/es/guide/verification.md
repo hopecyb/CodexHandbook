@@ -5,9 +5,10 @@ sidebar:
   order: 17
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Verificación
@@ -76,12 +77,12 @@ Puedes entenderlo como:
 
 ## Temas centrales
 
-- [Revisar diffs](/guide/quality/review-diffs/) — leer el Diff, confirmar alcance y riesgo
-- [Ejecutar pruebas](/guide/quality/run-tests/) — regresión automática
-- [Verificar artefactos](/guide/quality/verify-artifacts/) — documentos, configuración, generados
-- [Validar fuentes](/guide/quality/validate-sources/) — conclusiones de investigación rastreables
-- [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/) — qué hacer cuando el modelo no está seguro
-- [Definición de hecho](/guide/quality/definition-of-done/) — qué significa «está hecho»
+- [Revisar diffs](/es/guide/quality/review-diffs/) — leer el Diff, confirmar alcance y riesgo
+- [Ejecutar pruebas](/es/guide/quality/run-tests/) — regresión automática
+- [Verificar artefactos](/es/guide/quality/verify-artifacts/) — documentos, configuración, generados
+- [Validar fuentes](/es/guide/quality/validate-sources/) — conclusiones de investigación rastreables
+- [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/) — qué hacer cuando el modelo no está seguro
+- [Definición de hecho](/es/guide/quality/definition-of-done/) — qué significa «está hecho»
 
 ## Cada tipo de Tarea enfatiza algo distinto
 
@@ -90,11 +91,11 @@ Puedes entenderlo como:
 - **Investigar**: si las fuentes son reales, si están actualizadas, si la conclusión no se sale de la evidencia
 - **Generar configuración o scripts**: premisas del entorno, alcance de Permisos, cómo recuperar tras un fallo
 
-Si no sabes por dónde empezar, lee por defecto [Definición de hecho](/guide/quality/definition-of-done/).
+Si no sabes por dónde empezar, lee por defecto [Definición de hecho](/es/guide/quality/definition-of-done/).
 
 La Verificación confirma que este resultado se puede usar, se puede confiar en él y se puede entregar.
 
-Cómo escribir criterios de aceptación en el Prompt: [definir el criterio de hecho](/prompts/define-done/). Casos de extremo a extremo: [casos prácticos](/cases/).
+Cómo escribir criterios de aceptación en el Prompt: [definir el criterio de hecho](/es/prompts/define-done/). Casos de extremo a extremo: [casos prácticos](/es/cases/).
 
 ---
 

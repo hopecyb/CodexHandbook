@@ -3,9 +3,10 @@ title: Terminer votre premier petit projet
 description: Enchaîner les étapes d'intégration en une livraison de bout en bout.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -20,8 +21,8 @@ Livrer un petit Artefact complet dans votre répertoire d'entraînement — par 
 
 ## Quand vous avez terminé
 
-- Revisitez la [carte des capacités](/guide/start-here/codex-capability-map/)
-- Approfondissez l'[App de bureau](/guide/desktop-app/) ou le [prompting](/prompts/)
+- Revisitez la [carte des capacités](/fr/guide/start-here/codex-capability-map/)
+- Approfondissez l'[App de bureau](/fr/guide/desktop-app/) ou le [prompting](/fr/prompts/)
 
 ---
 

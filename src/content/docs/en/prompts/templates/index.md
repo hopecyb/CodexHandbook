@@ -3,9 +3,10 @@ title: Prompt templates
 description: Reusable prompt skeletons by task type—understand, create, change, diagnose, review, research, automate.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Prompt templates
@@ -30,13 +31,13 @@ Templates are scaffolding, not answer keys.
 
 | Template | When to use |
 |---|---|
-| [Understand](/prompts/templates/understand/) | Read codebase, docs, or materials to build shared understanding first |
-| [Create](/prompts/templates/create/) | Build features, documents, or artifacts from scratch |
-| [Change](/prompts/templates/change/) | Iterate on something that already exists |
-| [Diagnose](/prompts/templates/diagnose/) | Find root cause before changing code |
-| [Review](/prompts/templates/review/) | Review diffs, PRs, or document changes |
-| [Research](/prompts/templates/research/) | Investigation and comparison with citations |
-| [Automate](/prompts/templates/automate/) | Repeatable tasks, scripts, unattended flows |
+| [Understand](/en/prompts/templates/understand/) | Read codebase, docs, or materials to build shared understanding first |
+| [Create](/en/prompts/templates/create/) | Build features, documents, or artifacts from scratch |
+| [Change](/en/prompts/templates/change/) | Iterate on something that already exists |
+| [Diagnose](/en/prompts/templates/diagnose/) | Find root cause before changing code |
+| [Review](/en/prompts/templates/review/) | Review diffs, PRs, or document changes |
+| [Research](/en/prompts/templates/research/) | Investigation and comparison with citations |
+| [Automate](/en/prompts/templates/automate/) | Repeatable tasks, scripts, unattended flows |
 
 ## From template to workflow
 
@@ -73,7 +74,7 @@ For beginners, "enough but not bloated" is fine.
 
 Pick the right type first, then adapt it—don't treat the template itself as the task.
 
-Writing principles: [Prompt basics](/prompts/basics/) and [Task anatomy](/prompts/task-anatomy/).
+Writing principles: [Prompt basics](/en/prompts/basics/) and [Task anatomy](/en/prompts/task-anatomy/).
 
 ---
 

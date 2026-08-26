@@ -3,9 +3,10 @@ title: Wann Skills einsetzen
 description: Entscheiden, ob eine Aufgabe als Skill lohnt — und wie Skills, Slash-Befehle und MCP sich teilen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beim Einstieg in Skills lautet die typische Frage: Lohnt es sich, genau das als eigenen Skill zu bauen?
@@ -79,7 +80,7 @@ Solche Skills sind robuster, weil sie aus echter Wiederholung kommen, nicht aus 
 
 Skills eignen sich für Abläufe, die „sich wiederholen, konsistent sein sollen und nicht jedes Mal neu erklärt werden müssen“.
 
-Auswahl der Erweiterungsmethode: [Erweiterungsmethode wählen](/skills/choosing-an-extension-method/). Workflow absichern: [Ablauf zum Skill machen](/cases/workflows/turn-a-workflow-into-a-skill/).
+Auswahl der Erweiterungsmethode: [Erweiterungsmethode wählen](/de/skills/choosing-an-extension-method/). Workflow absichern: [Ablauf zum Skill machen](/de/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Status:** verified  

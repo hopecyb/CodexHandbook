@@ -3,9 +3,10 @@ title: Tệp văn bản và mã
 description: Để Codex đọc/ghi đúng nguồn, cấu hình và tệp văn bản dạng tài liệu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ Khi để Codex sửa tệp văn bản hoặc mã, then chốt là sửa đúng 
 | Tài liệu `.md` | Đường dẫn liên kết tương đối, quy ước lẫn ngôn ngữ |
 | Mã sinh | Ghi rõ có nên commit hay gitignore |
 
-Ngữ cảnh: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+Ngữ cảnh: [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 
 ## Vì sao loại tệp này dễ có vấn đề nhất
 
@@ -50,7 +51,7 @@ Phong cách: khớp <tệp ví dụ>
 Hoàn thành: liệt kê tệp đã đổi + chạy <lệnh kiểm thử>
 ```
 
-Xem [Cấu trúc tác vụ tốt](/prompts/task-anatomy/)
+Xem [Cấu trúc tác vụ tốt](/vi/prompts/task-anatomy/)
 
 ## Hiểu lầm thường gặp
 
@@ -91,8 +92,8 @@ Nếu lo nó sửa nhiều, yêu cầu thẳng ba việc:
 
 ## Điểm rà soát
 
-- [Rà soát diff](/guide/quality/review-diffs/): logic, phạm vi, xóa
-- [Chạy kiểm thử](/guide/quality/run-tests/)
+- [Rà soát diff](/vi/guide/quality/review-diffs/): logic, phạm vi, xóa
+- [Chạy kiểm thử](/vi/guide/quality/run-tests/)
 - Vô tình đưa `TODO` chỗ giữ chỗ chưa hiện thực
 
 ## Lỗi thường gặp

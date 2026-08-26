@@ -3,12 +3,13 @@ title: 긴 작업 관리
 description: 수 시간 또는 여러 세션에 걸친 큰 작업—검사 지점, 압축, 위임, 종료 조건입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-긴 작업에서 흔한 문제는 **컨텍스트가 가득 참**, **사람이 자리를 비움**, **방향이 표류함**, **언제 멈출지 모름**입니다. 이 페이지는 [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)을 수 시간 또는 여러 세션 시나리오에 놓아 봅니다.
+긴 작업에서 흔한 문제는 **컨텍스트가 가득 참**, **사람이 자리를 비움**, **방향이 표류함**, **언제 멈출지 모름**입니다. 이 페이지는 [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)을 수 시간 또는 여러 세션 시나리오에 놓아 봅니다.
 
 ## 이 페이지의 초점
 
@@ -16,7 +17,7 @@ translated_at: 2026-07-28
 - 검사 지점과 상태 기록에 무엇을 쓸지
 - 자동화 긴 작업의 종료 조건
 
-관련: [위임과 후속](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+관련: [위임과 후속](/ko/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/ko/skills/automations/scheduled-tasks/)
 
 ## 긴 작업 신호
 
@@ -33,7 +34,7 @@ translated_at: 2026-07-28
 
 서면 계획을 산출합니다: 범위, 비목표, 마일스톤, 인수 명령. 사람이 확인한 뒤에 대규모 실행합니다.
 
-[계획](/guide/agent-work/planning/) · [Subagent](/guide/agent-work/subagents/)
+[계획](/ko/guide/agent-work/planning/) · [Subagent](/ko/guide/agent-work/subagents/)
 
 ### 2. 검사 지점
 
@@ -41,11 +42,11 @@ translated_at: 2026-07-28
 
 - 검토 가능한 증분을 커밋하거나 stash
 - `PROGRESS.md` 또는 issue 댓글을 갱신: 무엇을 끝냈는지, 다음, 차단 항목
-- 컨텍스트가 가득 차면 [압축](/guide/context/compaction/) 또는 새 세션 + 진행 파일 링크
+- 컨텍스트가 가득 차면 [압축](/ko/guide/context/compaction/) 또는 새 세션 + 진행 파일 링크
 
 ### 3. 마무리 또는 위임
 
-- 로컬에서 감당이 안 되면 → [Cloud 위임](/guide/web-and-cloud/delegate-and-follow-up/)
+- 로컬에서 감당이 안 되면 → [Cloud 위임](/ko/guide/web-and-cloud/delegate-and-follow-up/)
 - 지속 모니터링이 필요하면 → Automation + 명확한 **max iterations / 마감 시간**
 
 ## 종료 조건(자동화 필수)

@@ -3,12 +3,13 @@ title: Travail piloté par les tests
 description: Définir ou ajouter d'abord des tests en échec, puis guider l'implémentation — acceptation objective des modifications Codex.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Le **travail piloté par les tests** (TDD ou « tests d'abord ») consiste à faire échouer les tests d'abord, puis à implémenter le minimum pour les faire passer. Cela convient aux dépôts avec infrastructure de tests et se relie directement à des cas comme [Corriger un bug avec vérification](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+Le **travail piloté par les tests** (TDD ou « tests d'abord ») consiste à faire échouer les tests d'abord, puis à implémenter le minimum pour les faire passer. Cela convient aux dépôts avec infrastructure de tests et se relie directement à des cas comme [Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Ce que couvre cette page
 
@@ -21,7 +22,7 @@ Le **travail piloté par les tests** (TDD ou « tests d'abord ») consiste à fa
 - Dépôts avec tests unitaires/intégration
 - Bugs de régression, changements de comportement API, refactorisations
 
-Peu adapté : prototypes sans tests, modifications ponctuelles de texte sur un site marketing. Préférer l'[EPXV](/cases/workflows/explore-plan-execute-verify/) avec vérification manuelle.
+Peu adapté : prototypes sans tests, modifications ponctuelles de texte sur un site marketing. Préférer l'[EPXV](/fr/cases/workflows/explore-plan-execute-verify/) avec vérification manuelle.
 
 ## Approche minimale viable
 
@@ -47,7 +48,7 @@ lancez les tests pour confirmer l'échec, puis modifiez l'implémentation ; à c
 | Vert | Implémentation minimale + tests au vert |
 | Refactor | Nettoyage sous protection des tests (étape séparée optionnelle) |
 
-À combiner avec [Diagnostiquer avant de corriger](/cases/workflows/diagnose-before-fixing/) : lire d'abord les assertions en échec et la pile, puis modifier l'implémentation.
+À combiner avec [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/) : lire d'abord les assertions en échec et la pile, puis modifier l'implémentation.
 
 ## Erreurs courantes
 
@@ -58,7 +59,7 @@ lancez les tests pour confirmer l'échec, puis modifiez l'implémentation ; à c
 
 ## Limites de sécurité
 
-- Les commandes de test doivent rester dans le cadre des [règles de commande](/guide/customization/rules/command-rules/)
+- Les commandes de test doivent rester dans le cadre des [règles de commande](/fr/guide/customization/rules/command-rules/)
 - Les tests d'intégration touchant l'API de production doivent être interdits dans la spec ou utiliser des mocks
 
 ## Liste de contrôle d'acceptation
@@ -66,12 +67,12 @@ lancez les tests pour confirmer l'échec, puis modifiez l'implémentation ; à c
 - [ ] Preuve d'échec→succès des tests (journaux ou CI)
 - [ ] Suite complète ou périmètre convenu au vert
 - [ ] Le diff ne contient pas de suppressions de tests non liées
-- [ ] Aligné avec la [Définition de terminé](/prompts/define-done/)
+- [ ] Aligné avec la [Définition de terminé](/fr/prompts/define-done/)
 
 ## Chapitres connexes
 
-- [Lancer les tests](/guide/quality/run-tests/)
-- [Cas : Corriger un bug avec vérification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Lancer les tests](/fr/guide/quality/run-tests/)
+- [Cas : Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

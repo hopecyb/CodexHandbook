@@ -3,9 +3,10 @@ title: 'Example: Research Skill'
 description: Example research Skill with citations and "needs confirmation" markers.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Example: Research Skill
@@ -28,8 +29,8 @@ description: Technical research and comparison tables with URL/file path citatio
 
 ## Related
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Research template](/prompts/templates/research/)
+- [Research with sources case](/en/cases/research-with-sources/)
+- [Research template](/en/prompts/templates/research/)
 ---
 
 **Status:** verified  

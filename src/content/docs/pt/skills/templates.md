@@ -3,9 +3,10 @@ title: Diretório templates/
 description: Forneça templates de saída e esqueletos de relatório no Skill.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/` não é só «economizar um pouco de formatação». O papel prático é deixar a saída do Skill mais estável, sem improvisar a estrutura toda vez.

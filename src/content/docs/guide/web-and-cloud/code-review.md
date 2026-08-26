@@ -1,146 +1,79 @@
 ---
-title: Cloud 代码审查
-description: 审查 Cloud 任务产出的 diff、PR 与自动化审查建议。
+title: Cloud 与 GitHub 代码审查
+description: 审查 Cloud diff，并在 GitHub 用 Codex 做高信号补充 review。
 sidebar:
   order: 50
 ---
 
-Cloud 会帮你产出改动，但不会替你承担合并责任。
+Cloud 任务结束会给出摘要和 diff；你可以追问、要求修改或创建 PR。任务完成不等于合并批准，最终仍要经过项目的 CI、分支保护与人工判断。
 
-Cloud 任务结束后，**人的审查**仍是合并前的最后一道门。本页说明如何审查远程 Agent 产出，并与 GitHub PR、CI、Skill 审查衔接。
+## 两种审查
 
-## 内容
+| 类型 | 看什么 | 结果 |
+|---|---|---|
+| Cloud 结果审查 | 本次任务摘要、日志、diff | 决定跟进或创建 PR |
+| GitHub Codex review | 已连接仓库的 PR diff 与 `AGENTS.md` 规则 | 发布 GitHub code review |
 
-- Cloud PR 与本地 PR 审查有何不同
-- 审查清单与常见风险点
-- 如何用 Codex 辅助审查而不放弃责任
-
-## 为什么 Cloud 审查要更留心一点
-
-因为远程 Agent 更容易出现这类情况：
-
-- 顺手改到无关文件
-- 因环境差异产生大量 lockfile 或生成文件变化
-- 测试看起来跑了，但没真正覆盖关键逻辑
-- PR 描述写得很完整，但你还没确认内容是否属实
-
-所以 Cloud 审查不会更轻，反而更需要抓重点。
-
-## 审查在流程中的位置
+在 GitHub PR 评论：
 
 ```text
-Cloud 任务完成 → 推送分支 → 开 PR
-        ↓
-CI 运行（测试、lint、安全扫描）
-        ↓
-人工审查 diff + 可选 Agent 辅助审查
-        ↓
-批准合并（受分支保护约束）
+@codex review
 ```
 
-开 PR：[创建 Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Codex 会以普通 GitHub review 的形式发布发现。当前官方说明 GitHub 评论聚焦 P0/P1 高优先级问题；没有发现时可能只留下反应。不要因为评论少就跳过人工审查。
 
-## 最低检查标准
+## 审查顺序
 
-完整审查之前，至少先确认四件事：
+1. **范围**：文件、目录、依赖与生成物是否符合任务；
+2. **行为**：正常、失败和边界路径是否满足需求；
+3. **安全**：认证、权限、输入处理、凭据和出站网络；
+4. **证据**：实际运行了哪些测试，失败项是否披露；
+5. **可回滚性**：是否能小范围撤销，是否混入无关重构。
 
-1. 改动范围有没有跑偏
-2. 关键逻辑是不是真的按目标改了
-3. 测试或验证有没有真正做
-4. 有没有把敏感信息或危险改动带进去
+示例提示：
 
-这四项没有确认之前，还不能把“任务完成”当成“可以合并”。
+```text
+审查这个 PR，只报告会导致错误行为、数据损坏、安全问题或兼容性回归的发现。
+每条必须包含严重程度、具体位置、触发条件和影响。
+不要把风格偏好列为缺陷。
+```
 
-## 人工审查清单
+## 仓库特有规则
 
-与 [审查 diff](/guide/quality/review-diffs/) 一致，Cloud 场景额外关注：
+在适用目录的 `AGENTS.md` 中加入：
 
-| 检查项 | 原因 |
-|---|---|
-| 是否改了无关文件 | 远程 Agent 可能「顺手」重构 |
-| lockfile / 生成文件 | 环境差异导致大规模变更 |
-| 新依赖来源 | 供应链风险 |
-| 测试是否真覆盖新逻辑 | Agent 可能写空测试 |
-| 权限与认证改动 | 提权、硬编码 token |
-| 与 issue 范围一致 | 防止 scope creep |
+```md
+## Code Review Rules
 
-## 常见误会
+### Authentication boundaries
 
-### 1. CI 绿了，就等于可以合并吗
+- Flag any path that logs access tokens or sends them to non-allowlisted hosts.
+  Safe path: keep tokens in the credential provider and redact diagnostic output.
+```
 
-CI 只能说明“这组自动检查没挂”。需求是否理解对、范围是否跑偏、风险是否可接受，还是要靠人工判断。
+根目录规则覆盖整个仓库，嵌套 `AGENTS.md` 可为服务追加更具体检查。先写两三条长期稳定、能说明安全路径的规则，不要堆满易过时的函数名。
 
-### 2. 它自己写的 PR 描述很完整，所以我可以少看一点吗
+## 自动 review 的边界
 
-也不行。
-
-PR 描述只能帮你更快进入上下文，不能替你核实事实。
-
-### 3. 让 Codex 再审一次，就等于完成审查吗
-
-辅助审查很有用，但最终责任仍在人。
-
-## 用 Codex 辅助审查（不替代人）
-
-可接受的做法：
-
-- 本地或 Cloud 对新 PR 跑 `$pr-review` Skill（见 [创建 Skill](/skills/create-your-first-skill/)）
-- 要求列出「阻断 / 建议 / nit」三类意见
-- **你**对阻断项逐条确认
-
-不可接受：
-
-- 未读 diff 仅凭 Agent「说没问题」就合并
-- 让 Agent 自行 approve 受保护分支
-
-见 [验证与人工复核](/guide/foundations/verification-and-human-review/)
-
-## 建议顺序
-
-可以按这个顺序看：
-
-1. PR 标题和描述，确认目标
-2. 主要逻辑 diff
-3. 测试、生成文件、配置文件
-4. 自动化评论和补充建议
-
-这样可以避免一上来被大量细节淹没。
-
-## 审查评论驱动修订
-
-PR 收到 review 评论后：
-
-1. 新开 Cloud 或本地任务：「仅处理以下 review 评论，不要扩大范围」
-2. 附上评论链接或编号
-3. 推送新 commit 到同一 PR
-4. 再次跑 CI + 人工看一眼增量
-
-GitHub 侧：[GitHub 集成](/guide/integrations/github/)
-
-## 与 Automations 结合
-
-- PR 打开时自动跑审查 Skill（只评论，不 merge）
-- 详见 [定时与触发任务](/skills/automations/scheduled-tasks/)
-
-## 常见错误
-
-- 信任 Cloud 环境「隔离」而跳过安全审查
-- 合并巨大 diff 因为「CI 绿了」
-- review 评论粘贴未脱敏的生产日志
-- 把“我没发现问题”误当成“确实没有问题”
+拥有所需 GitHub push 或 admin 权限的用户可在 Codex Settings 为仓库开启自动 reviews。自动 review 是补充门禁，不应拥有自动 merge 权限；高风险仓库仍保留 required reviewers、CI 和分支保护。
 
 ## 验收清单
 
-- [ ] CI 全绿且你理解失败重试历史
-- [ ] 至少一人读过主要逻辑 diff
-- [ ] 与 issue/任务描述范围一致
-- [ ] 无 Secrets 进入仓库
+- [ ] 人已阅读主要逻辑 diff
+- [ ] P0/P1 发现已修复或书面接受风险
+- [ ] CI 通过，且失败重跑记录可解释
+- [ ] 无 Secret、意外生成物或无关 lockfile 更新
+- [ ] 任务描述、PR 描述与实际改动一致
 
-## 参考来源
-- [人工审批模式](/cases/workflows/human-approval-patterns/)
+## 官方依据
+
+- [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
+- [跨客户端代码审查](https://learn.chatgpt.com/docs/code-review)
+
 ---
 
-**状态：** outdated  
-**适用产品：** Cloud / GitHub  
-**复核说明：** Cloud 产物仍然需要人工审查这一原则没有问题，但本页把 Cloud PR、自动开 PR、远程审查节奏与通知方式写成了较具体的当前工作流；由于这些 Cloud/GitHub 集成形态更新较快，需按最新官方流程重写。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** Cloud、GitHub
+
+**最近核验：** 2026-08-26

@@ -5,9 +5,10 @@ sidebar:
   order: 15
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2007fae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Contexto y archivos
@@ -43,13 +44,13 @@ El criterio sencillo de esta página es:
 
 ## Gestión del Contexto
 
-- [Contexto del proyecto](/guide/context/project-context/) — `AGENTS.md`, acuerdos del repositorio
-- [Contexto de archivos y directorios](/guide/context/file-and-folder-context/) — referencias con @ y alcance
-- [Contexto de conversación](/guide/context/conversation-context/) — Hilo y compactación
-- [Mantener el foco](/guide/context/keep-context-focused/) — evitar ruido irrelevante
-- [Contexto sensible](/guide/context/sensitive-context/) — claves y privacidad
+- [Contexto del proyecto](/es/guide/context/project-context/) — `AGENTS.md`, acuerdos del repositorio
+- [Contexto de archivos y directorios](/es/guide/context/file-and-folder-context/) — referencias con @ y alcance
+- [Contexto de conversación](/es/guide/context/conversation-context/) — Hilo y compactación
+- [Mantener el foco](/es/guide/context/keep-context-focused/) — evitar ruido irrelevante
+- [Contexto sensible](/es/guide/context/sensitive-context/) — claves y privacidad
 
-Cómo organizar el fondo en el Prompt: [objetivos y Contexto](/prompts/goals-and-context/).
+Cómo organizar el fondo en el Prompt: [objetivos y Contexto](/es/prompts/goals-and-context/).
 
 ## Archivos y artefactos
 
@@ -67,18 +68,18 @@ Según el tipo de archivo cambian un poco la forma de lectura de Codex, la forma
 
 ## Archivos y artefactos
 
-- [Archivos de texto y código](/guide/files-and-artifacts/text-and-code-files/)
-- [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDF y documentos](/guide/files-and-artifacts/pdf-and-documents/)
-- [Tablas y hojas de cálculo](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [Presentaciones](/guide/files-and-artifacts/presentations/)
+- [Archivos de texto y código](/es/guide/files-and-artifacts/text-and-code-files/)
+- [Imágenes y capturas](/es/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF y documentos](/es/guide/files-and-artifacts/pdf-and-documents/)
+- [Tablas y hojas de cálculo](/es/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Presentaciones](/es/guide/files-and-artifacts/presentations/)
 
 ## Orden de lectura recomendado
 
 No hace falta leerlo todo de una vez. Puedes seguir este orden:
 
-1. Lee primero [Contexto de archivos y directorios](/guide/context/file-and-folder-context/) para entender «qué archivos debe ver»
-2. Luego [Mantener el foco](/guide/context/keep-context-focused/) para no dispersar la Tarea
+1. Lee primero [Contexto de archivos y directorios](/es/guide/context/file-and-folder-context/) para entender «qué archivos debe ver»
+2. Luego [Mantener el foco](/es/guide/context/keep-context-focused/) para no dispersar la Tarea
 3. Según el tipo de material que tengas, lee el capítulo de archivos correspondiente
 
 El Contexto es el montón de información que Codex tiene a mano al juzgar; si se lo das bien, el resultado también acierta más fácil.

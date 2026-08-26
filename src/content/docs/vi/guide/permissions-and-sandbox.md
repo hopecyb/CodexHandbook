@@ -1,98 +1,117 @@
 ---
-title: Quyền và Sandbox
-description: Hiểu phê duyệt, cô lập thực thi và ranh giới truy cập mạng để dùng Codex an toàn.
-locale: vi
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Quyền và sandbox
+description: Hiểu sandbox, phê duyệt, truy cập mạng và ranh giới thực thi cục bộ so với Cloud qua một chuỗi quyết định.
 sidebar:
   order: 14
+locale: vi
+source_locale: zh-CN
+source_revision: 6b29dc6
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-# Quyền và Sandbox
+Để dùng Codex an toàn, cần xem đồng thời hai lớp kiểm soát: **sandbox quyết định về mặt kỹ thuật có thể chạm tới đâu, còn chính sách phê duyệt quyết định có phải hỏi bạn trước khi vượt ranh giới hiện tại hay không.**
 
-Codex không nên thực thi thao tác rủi ro cao khi chưa được đồng ý. **Phê duyệt** là cánh cổng then chốt trong cộng tác người–máy; **Sandbox** giới hạn hệ tệp và một phần năng lực hệ thống mà Agent chạm tới được.
+![Luồng sandbox và phê duyệt của Codex: hành động đi qua ranh giới sandbox, yêu cầu con người phê duyệt khi vượt biên và cuối cùng để lại bằng chứng xác minh](/diagrams/sandbox-approval-flow-vi.svg)
 
-## Nội dung trang này
+## Trước hết hãy nhớ sự khác biệt này
 
-Nhiều người lần đầu thấy các từ «quyền», «phê duyệt», «Sandbox», «truy cập mạng» cứ tưởng chúng gần giống nhau — dù sao cũng thuộc cài đặt an toàn.
+| Kiểm soát | Câu hỏi được trả lời | Đối tượng điển hình |
+|---|---|---|
+| Sandbox | Hành động này có thể chạm tối đa đến đâu? | Tệp dự án, đường dẫn ngoài dự án, năng lực hệ thống, mạng |
+| Chính sách phê duyệt | Có phải hỏi con người trước khi vượt ranh giới hiện tại không? | Cài dependency, truy cập mạng, ghi thư mục ngoài, khởi động ứng dụng |
+| Ràng buộc tác vụ | Công việc lần này nên và không nên làm gì? | Thư mục được phép sửa, hành động cấm, lệnh chấp nhận |
+| Con người rà soát | Kết quả đã thực thi có chấp nhận được không? | diff, nhật ký, kiểm thử, tác dụng phụ bên ngoài |
 
-Chỗ dễ sinh vấn đề nhất chính là sự nhầm lẫn này: bạn tưởng mình chỉ cho phép nó tiếp tục thực thi — thực tế có thể đồng thời mở ranh giới ghi tệp, chạy lệnh hoặc truy cập mạng ngoài.
+Ràng buộc tác vụ không thay thế sandbox; sandbox cũng không thay thế bước rà soát cuối. Chúng lần lượt phụ trách ý định, ranh giới thực thi và chấp nhận kết quả.
 
-Trang này tách các khái niệm này ra, giúp bạn phán đoán mỗi lần xác nhận thực sự đã mở cái gì.
+## Một hành động đi qua ranh giới an toàn thế nào
 
-## Phân biệt các khái niệm này trước
+Khi Codex chuẩn bị chạy lệnh hoặc gọi công cụ, có thể hiểu theo thứ tự sau:
 
-Có thể tách như sau:
+1. Xác định hành động có nằm trong phạm vi sandbox hiện tại hay không.
+2. Nếu nằm trong phạm vi, thực thi và ghi lại đầu ra; không nhất thiết xuất hiện hộp thoại.
+3. Nếu vượt phạm vi, yêu cầu quyền theo chính sách phê duyệt hoặc bị từ chối trực tiếp.
+4. Bạn có thể từ chối, yêu cầu hành động hẹp hơn hoặc chỉ phê duyệt thao tác cụ thể lần này.
+5. Sau khi chạy, vẫn phải xem diff, kiểm thử và trạng thái hệ thống ngoài để xác nhận kết quả đáp ứng mục tiêu.
 
-- **Phê duyệt**: có cần hỏi bạn một câu trước không
-- **Sandbox**: dù muốn làm thì tối đa chạm tới đâu
-- **Truy cập mạng**: có mang thông tin ra ngoài, hoặc kéo thứ gì từ ngoài về được không
+Sandbox cũng giới hạn tiến trình con và lệnh do Codex khởi động. Đừng giả định một hành động có thể vượt ranh giới chỉ vì nó nằm trong script.
 
-Chúng cùng ảnh hưởng kết quả — nhưng không phải một chuyện.
+## Ranh giới cục bộ và Cloud khác nhau
 
-## Bạn thường cần quan tâm
+| Môi trường | Cách cô lập chính | Điểm chính về mạng | Điều cần kiểm tra |
+|---|---|---|---|
+| Tác vụ cục bộ trong App / CLI / IDE | Sandbox cấp hệ điều hành và chính sách phê duyệt hiện tại | Tác vụ cục bộ thường không nên mặc định phụ thuộc mạng ngoài; khi cần phải phê duyệt hoặc cấu hình rõ | Phạm vi workspace, lệnh, đường dẫn ngoài dự án, mục đích kết nối |
+| Tác vụ Cloud | Container cô lập do OpenAI quản lý | Giai đoạn thiết lập có thể dùng mạng theo cấu hình môi trường; giai đoạn Agent mặc định tắt mạng trừ khi bật rõ ràng | Kho mã, cấu hình môi trường, tên miền cho phép, diff và bằng chứng xác minh trả về |
 
-- Có cho phép đọc/ghi đường dẫn ngoài dự án hiện tại không
-- Có cho phép lên mạng không
-- Có cho phép thực thi lệnh shell cụ thể không
-- Nhóm có phát hành chính sách bắt buộc không (cấu hình quản trị)
+Secrets trong môi trường Cloud chỉ dùng ở giai đoạn thiết lập và bị loại bỏ trước khi giai đoạn Agent bắt đầu. Vẫn phải áp dụng quyền tối thiểu và không đưa thông tin xác thực production không liên quan vào môi trường tác vụ.
 
-## Sandbox và mạng
+## Đánh giá yêu cầu phê duyệt theo bốn bước
 
-**Sandbox** giảm mặt phẳng thao tác nhầm. **Truy cập mạng** là một tầng rủi ro riêng: có thể làm lộ thông tin nhạy cảm trong nội dung Prompt, hoặc kéo về dữ liệu không đáng tin.
+### 1. Đối chiếu với tác vụ
 
-Khi mới dùng, thường có thể xử lý theo hướng này:
+Bước này có thật sự phục vụ mục tiêu hiện tại không? “Có thể hữu ích” chưa đủ để phê duyệt.
 
-1. Lần luyện đầu tắt mạng không cần thiết, hoặc chỉ cho phép truy cập thật sự cần
-2. Đừng đưa khóa production vào dự án luyện tập
-3. Thấy yêu cầu «cần ra mạng / cần ghi đường dẫn nhạy cảm» thì dừng lại đọc hiểu rồi mới phê duyệt
+### 2. Đối chiếu phạm vi
+
+Yêu cầu chạm vào dự án hiện tại, thư mục ngoài, mạng hay ứng dụng hệ thống? Đường dẫn, tên miền và lệnh càng cụ thể càng dễ đánh giá.
+
+### 3. Đối chiếu tác dụng phụ
+
+Nó chỉ đọc hay còn ghi tệp, cài phần mềm, gửi dữ liệu hoặc sửa trạng thái từ xa? Tác dụng phụ bên ngoài thường cần thận trọng hơn thay đổi cục bộ có thể hoàn tác.
+
+### 4. Đối chiếu xác minh và khôi phục
+
+Xác nhận thành công thế nào? Có thể hoàn tác khi thất bại không? Nếu chưa có câu trả lời, hãy yêu cầu Codex giải thích hoặc đưa ra phương án nhỏ hơn trước.
+
+## Ví dụ cụ thể: cài dependency
+
+Giả sử Codex yêu cầu chạy:
+
+```bash
+pnpm install
+```
+
+Đừng chỉ nhìn lệnh có quen thuộc hay không. Hãy xác nhận:
+
+- Tác vụ hiện tại thực sự cần dependency đang thiếu
+- Lệnh chạy trong đúng thư mục kho mã
+- Cần truy cập registry gói nào
+- Có sửa tệp khóa hay không
+- Sau khi cài sẽ chạy kiểm thử hoặc build nào
+
+Nếu chỉ xác minh mã hiện có và dependency đã được cài, bạn có thể từ chối và yêu cầu dùng môi trường hiện tại trước.
+
+## Khai báo ranh giới trong prompt
+
+Có thể ghi trực tiếp phạm vi thực thi vào tác vụ:
+
+```text
+Chỉ sửa src/auth và tests/auth.
+Trước hết dùng dependency đã cài; không truy cập mạng hoặc nâng phiên bản.
+Nếu thật sự cần đường dẫn ngoài dự án hoặc mạng, hãy giải thích trước mục đích, đích và thao tác tối thiểu.
+Khi hoàn tất, chạy pnpm test --filter auth và báo cáo đầu ra cùng rủi ro còn lại.
+```
+
+Đoạn này làm rõ ý định, nhưng giới hạn thực thi thực tế vẫn do sandbox, chính sách phê duyệt và cấu hình quản trị của nhóm đảm nhiệm.
 
 ## Hiểu nhầm thường gặp
 
-### Cửa sổ bật lên không có nghĩa chắc chắn nguy hiểm
+- **Có hộp thoại phê duyệt thì chắc chắn nguy hiểm**: cài đặt, truy cập mạng hoặc ghi ngoài dự án bình thường cũng có thể kích hoạt. Hãy xem tính cần thiết và phạm vi.
+- **Không có hộp thoại thì hoàn toàn an toàn**: hành động có thể vốn đã nằm trong sandbox. Vẫn phải rà soát thay đổi thực tế.
+- **Phê duyệt một lần là mở vĩnh viễn**: thời hạn và phạm vi tùy sản phẩm và chính sách; hãy đọc nội dung yêu cầu.
+- **Agent con có bộ quyền khác**: Agent con kế thừa sandbox và chế độ quyền của tác vụ chính, không tự nhiên có quyền cao hơn.
+- **Hooks có thể thay sandbox**: Hook là lớp bảo vệ và kiểm toán bổ sung, không thay thế cô lập cưỡng chế của hệ điều hành.
 
-Nhiều thao tác bình thường cũng kích hoạt phê duyệt, ví dụ:
-
-- Cài dependency
-- Ghi vào thư mục ngoài dự án
-- Mở trình duyệt hoặc ứng dụng hệ thống
-- Truy cập website hoặc API bên ngoài
-
-Thứ thật sự cần phán đoán là: **bước này có phải việc tác vụ hiện tại vốn cần không.** Không thể chỉ nhìn cửa sổ có hiện hay không.
-
-### Không có cửa sổ cũng không bằng hoàn toàn không rủi ro
-
-Nếu Sandbox hiện tại vốn đã cho phép một loại thao tác, hoặc trước đó bạn đã nới quy tắc — Codex có thể không hỏi lại.
-
-Vì vậy không thể chỉ dựa vào «có hộp gợi ý hay không» để phán đoán rủi ro — còn phải xem chính môi trường hiện tại được cấu hình thế nào.
-
-## Khi thấy yêu cầu quyền, có thể phán đoán theo các bước sau
-
-Mỗi lần thấy yêu cầu liên quan quyền, có thể tự hỏi trước ba việc:
-
-1. Bước này có bắt buộc để hoàn thành tác vụ hiện tại không
-2. Dữ liệu hoặc đường dẫn nó muốn chạm có vượt kỳ vọng vốn có của tôi không
-3. Dù thực thi sai, tôi có biết cách hoàn tác hoặc khắc phục không
-
-Nếu trong ba điều này có hai điều trả lời không được — đừng phê duyệt trước, để Codex giải thích vì sao cần bước này trước.
-
-## Giải thích theo tầng
-
-| Tầng | Viết gì | Đọc ở đâu |
-|---|---|---|
-| Khái niệm (trang này) | Vì sao cần phê duyệt và cô lập | — |
-| Khác biệt sản phẩm | Mỗi lối vào hiện xác nhận thế nào | [Phê duyệt và Sandbox CLI](/guide/cli/approvals-and-sandbox/) · [Cài đặt Desktop App](/guide/desktop-app/settings/) |
-| Chiến lược Prompt | Cách khai báo ranh giới quyền trong tác vụ | [Ràng buộc và biên](/prompts/constraints-and-boundaries/) |
-
-Chính sách chính thức và giá trị mặc định có thể thay đổi — hãy đối chiếu [OpenAI Codex](https://developers.openai.com/codex).
-
-Phê duyệt đang hỏi bạn «có tiếp tục không»; Sandbox đang giới hạn «dù tiếp tục thì tối đa làm được đến đâu». Nhìn hai tầng này cùng lúc thì ranh giới mới rõ hơn.
+Xem thiết lập sản phẩm tại [phê duyệt và sandbox CLI](/vi/guide/cli/approvals-and-sandbox/) và [cài đặt App máy tính](/vi/guide/desktop-app/settings/); xem cách viết tác vụ tại [ràng buộc và biên](/vi/prompts/constraints-and-boundaries/).
 
 ---
 
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** OpenAI Developers hiện vẫn cung cấp lối vào Codex chính thức; trang này chỉ giải thích phê duyệt, Sandbox, truy cập mạng thuộc các ranh giới an toàn khác nhau, và dẫn độc giả tới các chương sản phẩm để xem hành vi cụ thể — không tuyên bố giá trị mặc định hiện tại hay ma trận quyền chính xác.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud
+
+**Căn cứ xác minh:** Đã đối chiếu với tài liệu hiện hành về sandbox, phê duyệt và an toàn của Codex. Trang này phân biệt ranh giới thực thi cấp hệ điều hành, chính sách phê duyệt, ràng buộc tác vụ và bước con người rà soát, đồng thời giải thích riêng mô hình mạng cục bộ và Cloud.
+
+**Xác minh gần nhất:** 2026-08-26

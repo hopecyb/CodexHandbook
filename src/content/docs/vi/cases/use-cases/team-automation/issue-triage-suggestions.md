@@ -3,9 +3,10 @@ title: "Case: gợi ý phân loại Issue và nhãn"
 description: Dùng Codex đọc Issue mới và gợi ý nhãn cùng người phụ trách — tự động hóa nhóm nhẹ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Siêu dữ liệu
@@ -41,7 +42,7 @@ translated_at: 2026-07-28
 
 **Lập kế hoạch:** Định nghĩa JSON schema: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Thực thi:** `codex exec` truyền issue title + body (chú ý khử [prompt injection](/guide/team-enterprise/security/prompt-injection/)).
+**Thực thi:** `codex exec` truyền issue title + body (chú ý khử [prompt injection](/vi/guide/team-enterprise/security/prompt-injection/)).
 
 **Kiểm chứng:** Dùng 3 fixture issue lịch sử so với nhãn thủ công; tỷ lệ khớp > 80% rồi mới lên production.
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-28
 
 ## 5. Đóng gói lại
 
-- Nối [Webhook](/guide/developer-platform/webhooks/overview/) với hệ thống ticket nội bộ (tùy chọn)
-- Rút kinh nghiệm ghi vào [mẫu case](/cases/use-cases/case-study-template/)
+- Nối [Webhook](/vi/guide/developer-platform/webhooks/overview/) với hệ thống ticket nội bộ (tùy chọn)
+- Rút kinh nghiệm ghi vào [mẫu case](/vi/cases/use-cases/case-study-template/)
 
 ## 6. Chương liên quan
 
-- [Tích hợp GitHub](/guide/integrations/github/)
-- [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
+- [Tích hợp GitHub](/vi/guide/integrations/github/)
+- [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/)
 
 ---
 

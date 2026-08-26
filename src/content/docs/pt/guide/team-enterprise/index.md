@@ -5,12 +5,13 @@ sidebar:
   order: 70
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3a4af60
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-O capítulo **Equipa e empresa** destina-se a responsáveis de engenharia, plataformas e segurança: passar o Codex de «útil para uma pessoa» a «gerível, auditável e recuperável pela equipa». Em leitura conjunta com [Percursos · Equipa](/guide/learning-paths/team/), este capítulo inclina-se mais para governação e implementação.
+O capítulo **Equipa e empresa** destina-se a responsáveis de engenharia, plataformas e segurança: passar o Codex de «útil para uma pessoa» a «gerível, auditável e recuperável pela equipa». Em leitura conjunta com [Percursos · Equipa](/pt/guide/learning-paths/team/), este capítulo inclina-se mais para governação e implementação.
 
 Se ainda usas sozinho ou estás a aprender o básico, podes deixar este capítulo para depois. Aqui o foco é: com muita gente a usar, como clarificar limites, processos e responsabilidades.
 
@@ -31,9 +32,9 @@ Questões centrais:
 
 | Papel | Ler primeiro |
 |---|---|
-| EM / responsável | [Modelo de ameaças](/guide/team-enterprise/security/threat-model/) · [Uso aceitável](/guide/team-enterprise/governance/acceptable-use/) |
-| Engenharia de plataforma | [Regras de equipa](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Segurança | [Riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injeção de Prompt](/guide/team-enterprise/security/prompt-injection/) |
+| EM / responsável | [Modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) · [Uso aceitável](/pt/guide/team-enterprise/governance/acceptable-use/) |
+| Engenharia de plataforma | [Regras de equipa](/pt/guide/customization/rules/team-rules/) · [Hooks](/pt/skills/hooks/hooks-overview/) |
+| Segurança | [Riscos de Plugin e MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injeção de Prompt](/pt/guide/team-enterprise/security/prompt-injection/) |
 
 ## Modelo de governação (conceito)
 
@@ -51,15 +52,15 @@ Observação (auditoria, métricas, retrospectiva)
 
 | Tema | Páginas |
 |---|---|
-| Segurança | [Modelo de ameaças](/guide/team-enterprise/security/threat-model/) · [Riscos Plugin/MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injeção de Prompt](/guide/team-enterprise/security/prompt-injection/) |
-| Governação | [Política de uso aceitável](/guide/team-enterprise/governance/acceptable-use/) |
+| Segurança | [Modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) · [Riscos Plugin/MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injeção de Prompt](/pt/guide/team-enterprise/security/prompt-injection/) |
+| Governação | [Política de uso aceitável](/pt/guide/team-enterprise/governance/acceptable-use/) |
 
-O roteiro acrescentará adoption, administration, deployment-patterns, etc. — ver [chapter-outline](/docs/planning/chapter-outline.md) (documento de planeamento no repositório).
+O roteiro acrescentará adoption, administration, deployment-patterns, etc. — ver [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (documento de planeamento no repositório).
 
 ## Relação com a configuração personalizada
 
-- Camada de gestão organizacional em [Precedência de AGENTS.md](/guide/customization/agents-md/scope-and-precedence/)
-- [Política de regras de equipa](/guide/customization/rules/team-rules/)
+- Camada de gestão organizacional em [Precedência de AGENTS.md](/pt/guide/customization/agents-md/scope-and-precedence/)
+- [Política de regras de equipa](/pt/guide/customization/rules/team-rules/)
 
 ## Erros frequentes
 
@@ -88,8 +89,8 @@ Em contexto de equipa, o risco maior é muita gente usar durante muito tempo e o
 
 Podes começar por:
 
-- [Riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Política de uso aceitável](/guide/team-enterprise/governance/acceptable-use/)
+- [Riscos de Plugin e MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Política de uso aceitável](/pt/guide/team-enterprise/governance/acceptable-use/)
 
 Se o foco atual é o arranque individual, deixa este capítulo para depois; volta quando fores fazer adoção em equipa, gestão de Permissões ou controlo de risco.
 

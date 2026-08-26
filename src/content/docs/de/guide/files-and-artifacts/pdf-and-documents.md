@@ -3,9 +3,10 @@ title: PDF und Dokumente
 description: "Umfang, Werkzeuge und Abnahme, wenn Codex PDF-Dokumente liest, zusammenfasst oder erzeugt."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ Je klarer „welchen Abschnitt, welches Ergebnis“, desto stabiler.
 1. **Pfad nennen**: `docs/spec.pdf` oder @-Verweis (clientabhängig)
 2. **Ziel sagen**: Zusammenfassung, Kapitelabgleich, Tabellenextraktion
 3. **Seiten oder Kapitel**: lange Docs begrenzen, Kontext sparen
-4. **Sensibel**: Verträge, Ausweise usw. über [sensiblen Kontext](/guide/context/sensitive-context/)
+4. **Sensibel**: Verträge, Ausweise usw. über [sensiblen Kontext](/de/guide/context/sensitive-context/)
 
 ### Grenzen
 
@@ -95,8 +96,8 @@ Bei OCR- oder Layout-Unsicherheit klar markieren.
 ## Repo-Strategie
 
 - Große Binär-PDFs: **Git LFS** oder nicht ins Repo
-- Unlesbarer Diff: Abnahme durch **Öffnen** + [Artefakte überprüfen](/guide/quality/verify-artifacts/)
-- Generiertes: [Generierte Artefakte abnehmen](/guide/files-and-artifacts/generated-artifacts/)
+- Unlesbarer Diff: Abnahme durch **Öffnen** + [Artefakte überprüfen](/de/guide/quality/verify-artifacts/)
+- Generiertes: [Generierte Artefakte abnehmen](/de/guide/files-and-artifacts/generated-artifacts/)
 
 ## Häufige Fehler
 

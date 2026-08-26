@@ -3,9 +3,10 @@ title: Bildgenerierung
 description: "Bilder in Codex-Aufgaben erzeugen oder bearbeiten — Prompt, Format und Abnahme."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -28,7 +29,7 @@ Geeignet für visuelle Entwürfe — nicht als finales Lieferobjekt.
 | Schnelle UI-Layout-Atmosphäre | Pixelgenaue Designlieferung |
 | Beispiel-Icons in Tutorials | Unautorisierte Personenporträts |
 
-Komplementär zu [Prompting mit Bildern](/prompts/prompting-with-images/): dort **Input**-Bilder; hier **Output**-Bilder.
+Komplementär zu [Prompting mit Bildern](/de/prompts/prompting-with-images/): dort **Input**-Bilder; hier **Output**-Bilder.
 
 ## Wofür Bildgenerierung taugt
 
@@ -48,7 +49,7 @@ Nicht direkt:
 
 1. Zweck, Seitenverhältnis, Stilkeywords (keine Markenstil-Namen stapeln)
 2. Format (PNG/SVG falls unterstützt) und Speicherpfad
-3. Danach [Artefakte überprüfen](/guide/quality/verify-artifacts/): öffnen, Auflösung, Lesbarkeit
+3. Danach [Artefakte überprüfen](/de/guide/quality/verify-artifacts/): öffnen, Auflösung, Lesbarkeit
 4. Vor externem Release Design oder Legal
 
 ## Häufige Missverständnisse
@@ -94,7 +95,7 @@ Kein Ersatz für strenge Designlieferung.
 
 - Große Bilder in `assets/` oder CDN, Git-Volumen prüfen
 - Im PR Prompt und Modellversion (interne Audit)
-- Siehe [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/)
+- Siehe [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/)
 
 ## Sicherheit und Compliance
 

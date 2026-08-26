@@ -3,9 +3,10 @@ title: 'Ví dụ: Skill viết'
 description: Gom nghiên cứu, dàn ý, bản thảo, chỉnh sửa thành một quy trình viết tái dùng được.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ví dụ: Skill viết
@@ -32,7 +33,7 @@ description: Viết bài kỹ thuật theo dàn ý — gồm nghiên cứu, bả
 
 ## Liên quan
 
-- [Case viết bài](/cases/write-an-article/)
+- [Case viết bài](/vi/cases/write-an-article/)
 ---
 
 **Trạng thái:** verified  

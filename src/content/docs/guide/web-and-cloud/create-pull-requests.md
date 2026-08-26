@@ -1,115 +1,72 @@
 ---
 title: 创建 Pull Request
-description: 从 Cloud 任务到可审查的 PR——描述、范围与人工合并闸门。
+description: 把 Cloud 结果交付为可审查、可验证且不自动合并的 PR。
 sidebar:
   order: 40
 ---
 
-第一次用 Cloud 工作流时，常见情况是任务已经做完了，但改动还没进入便于检查和讨论的状态。团队协作里，这一步一般靠 **Pull Request** 完成。
+Cloud 任务完成后先检查摘要和 diff。结果满足范围与验证标准时，再创建 Pull Request；若不满足，在同一聊天继续修正。
 
-PR 是一份可以被审查的改动申请。
-
-它会把改了什么、为什么改、有没有测过，集中放到一个可以 review 的位置。Cloud 任务交付给团队时，也会落到这里。
-
-## 内容
-
-- 从云端任务到 PR 的端到端预期
-- PR 描述应包含什么，方便人与 CI 验收
-- 何时不应自动开 PR
-
-## 什么时候要开 PR
-
-如果改动需要别人查看、需要 CI 运行，或者最后要合并到主分支，就别停在“分支里已经改完”，而是继续推进到 **可审查的 PR**。
-
-## 推荐工作流
+## 从任务到 PR
 
 ```text
-连接 GitHub → 明确 issue/目标 → Cloud 任务（计划确认）→ 推送分支 → 开 PR → 人工 review + CI → 合并
+选择环境与起始分支
+  → 运行 Cloud 任务
+  → 审查摘要、日志与 diff
+  → 必要时 follow-up
+  → Create Pull Request
+  → CI + Codex 补充 review + 人工 review
+  → 人决定是否合并
 ```
 
-前置：[连接 GitHub](/guide/web-and-cloud/connect-github/)
+提示词中明确“创建 PR，不要合并”，但不要只依赖自然语言约束；仓库还应启用分支保护和 required checks。
 
-## 为什么不建议一上来就自动合并
-
-PR 的作用是给人和系统留出检查入口，不只是把代码推上去。
-
-常见做法是：
-
-- Codex 可以帮你开 PR
-- 人来决定是否合并
-
-这样即使任务方向跑偏，也还有人工检查这一关。
-
-## 任务提示词要点
+## 可复用任务模板
 
 ```text
-目标：修复 #42 描述的登录超时问题
-分支：fix/42-login-timeout
-范围：仅 packages/auth 与相关测试
-完成：开 PR 到 main，不要合并
-PR 描述须包含：原因、改动摘要、测试命令与结果、风险与回滚
+目标：修复 #42 的登录超时回归。
+起点：main。
+范围：仅 packages/auth/** 与对应测试。
+禁止：升级依赖、修改公共 API、直接写 main。
+验证：pnpm test --filter auth；pnpm typecheck。
+交付：创建到 main 的 PR，但不要合并。
+PR 描述包含根因、改动摘要、测试命令及结果、风险和回滚方式。
 ```
 
-与 [定义完成](/prompts/define-done/) 和 [好任务的结构](/prompts/task-anatomy/) 一致。
+## 创建前检查
 
-## 一份好 PR 至少要回答四个问题
+- [ ] 起始 commit 正确，未遗漏本地未推送输入
+- [ ] diff 仅含任务范围
+- [ ] 新分支名称可识别且不覆盖他人工作
+- [ ] 测试真实执行，失败没有被摘要隐藏
+- [ ] 无凭据、临时日志、缓存和无关格式化
+- [ ] 大改动已拆成可独立审查的 PR
 
-1. 你为什么改这件事？
-2. 你具体改了哪些地方？
-3. 你怎么验证它？
-4. 还有什么风险、限制或未覆盖情况？
+## PR 描述至少回答
 
-PR 描述没覆盖这四点，审查者就得自己补上下文。
+1. 为什么需要改；
+2. 实际改了什么；
+3. 如何验证，包括命令与结果；
+4. 风险、限制和回滚方式；
+5. 哪些内容明确未做。
 
-## PR 质量检查清单
+UI 改动补真实截图，行为改动补复现步骤，迁移改动补兼容与回滚说明。
 
-- [ ] 标题说明「做了什么」，而非「更新代码」
-- [ ] 关联 issue 编号
-- [ ] CI 通过或说明已知失败原因
-- [ ] diff 行数在团队可接受范围；过大则拆 PR
-- [ ] 无密钥、无无关格式化风暴
-- [ ] 截图或日志（UI/行为变更时）
+## 创建后
 
-## 人工闸门
+等待 required checks，使用 `@codex review` 请求补充审查，再由具备上下文的人检查主要 diff。需要修正时把具体评论交回同一 PR 分支；不要另开一个不相关分支制造双份结果。
 
-即使 Codex 能开 PR，**合并**应默认由人完成（或通过受控 bot + 分支保护）：
+开 PR 与合并是两个权限边界。Cloud 能创建 PR，不代表它应绕过团队合并策略。
 
-见 [人工审批模式](/cases/workflows/human-approval-patterns/)
+## 官方依据
 
-## 常见误会
-
-### 1. 把多个不相关改动塞进一个 PR
-
-这样别人会很难看，也很难回退。
-
-### 2. 只说“已修复”，不说怎么验证
-
-对方不知道你是“真测过”，还是“感觉应该没问题”。
-
-### 3. 让 Codex 直接碰主分支
-
-对个人实验也许能省一步，但对协作仓库风险太高。
-
-## 与 Review 自动化
-
-- 可用 Skill 或 CI 中的 `codex exec` 做**补充审查评论**
-- 自动合并需单独治理策略，不在初学者默认路径中
-
-## 常见错误
-
-- PR 含多个不相关功能
-- 描述写「AI 生成的修改」却无测试说明
-- 直接合并到 main 绕过 review
-
-## 延伸阅读
-
-- [GitHub 集成](/guide/integrations/github/)
-- [审查 diff](/guide/quality/review-diffs/)
-- [桌面 App：diff 与评论](/guide/desktop-app/diffs-comments-and-review/)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
 
 ---
 
-**状态：** outdated  
-**适用产品：** Cloud / Web  
-**复核说明：** “Cloud 产出进入 PR 再由人审”仍是稳妥原则，但本页把开 PR 的入口、自动化行为和 Cloud 交付节奏写得较为具体；在当前官方 PR 流程与 Cloud GitHub 集成细节未逐项复核前，不宜标为 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** Cloud、GitHub
+
+**最近核验：** 2026-08-26

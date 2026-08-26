@@ -3,9 +3,10 @@ title: Apresentações
 description: Gerar, rever e exportar diapositivos e decks — acordos de estrutura, master e notas de apresentação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Escolha pelo destinatário final:
 5. Exportar PDF e ensaiar com cronómetro
 ```
 
-Alinhado com [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/): aceite o esboço antes de preencher detalhes.
+Alinhado com [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/): aceite o esboço antes de preencher detalhes.
 
 ## Porque controlar a estrutura primeiro
 
@@ -114,13 +115,13 @@ Também pode formular assim:
 
 Isto costuma produzir uma versão mais trabalhável do que «faça um PPT impressionante».
 
-Necessidades de imagem: [Imagens e ecrãs](/guide/files-and-artifacts/images-and-screenshots/); só geração de imagens: [Geração de imagens](/guide/tools/image-generation/).
+Necessidades de imagem: [Imagens e ecrãs](/pt/guide/files-and-artifacts/images-and-screenshots/); só geração de imagens: [Geração de imagens](/pt/guide/tools/image-generation/).
 
 ## Aceitação
 
 - Tamanho de letra legível na resolução do projetor
 - Animação moderada (demasiada animação é difícil de manter)
-- Números alinhados com [Validar fontes](/guide/quality/validate-sources/)
+- Números alinhados com [Validar fontes](/pt/guide/quality/validate-sources/)
 - Notas suficientes (se necessárias)
 
 ## O que entregar ao Codex e o que decidir você

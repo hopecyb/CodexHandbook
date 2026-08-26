@@ -3,14 +3,15 @@ title: "Vue d'ensemble Webhooks"
 description: Connectez l'état des tâches Codex aux systèmes internes via callbacks HTTP — événements, signatures et idempotence.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-Les **Webhooks** permettent à Codex ou Cloud d'envoyer des callbacks HTTP quand l'état d'une tâche change — pour mettre à jour les tickets, notifications Slack ou UI d'approbation interne. Ce chapitre est l'entrée d'intégration événementielle pour la [plateforme développeur](/guide/developer-platform/).
+Les **Webhooks** permettent à Codex ou Cloud d'envoyer des callbacks HTTP quand l'état d'une tâche change — pour mettre à jour les tickets, notifications Slack ou UI d'approbation interne. Ce chapitre est l'entrée d'intégration événementielle pour la [plateforme développeur](/fr/guide/developer-platform/).
 
 ## Ce que cette page couvre
 
@@ -52,7 +53,7 @@ Sans vérification de signature, idempotence et gestion de timeout, vous risquez
 | Intégration avec bus d'événements existants | Cron simple qui n'a besoin que des codes de sortie `exec` |
 | Flux multi-étapes (terminé → trigger deploy) | Pas de endpoint public et pas de queue |
 
-Pipelines simples : [Scripts et pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) uniquement. Services multi-tenant industrialisés combinent souvent **SDK + Webhook**.
+Pipelines simples : [Scripts et pipelines](/fr/guide/developer-platform/non-interactive/scripts-and-pipelines/) uniquement. Services multi-tenant industrialisés combinent souvent **SDK + Webhook**.
 
 ## Événements typiques (conceptuels)
 
@@ -108,7 +109,7 @@ Plus de réponses « oui » → les webhooks comptent plus.
 
 ## Frontières de sécurité
 
-- Voir [Modèle de menace](/guide/team-enterprise/security/threat-model/) et [Usage acceptable](/guide/team-enterprise/governance/acceptable-use/)
+- Voir [Modèle de menace](/fr/guide/team-enterprise/security/threat-model/) et [Usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/)
 - Rotation des secrets webhook sur un calendrier ops
 
 ## Liste de contrôle d'acceptation
@@ -116,7 +117,7 @@ Plus de réponses « oui » → les webhooks comptent plus.
 - [ ] Échec de signature retourne 4xx
 - [ ] Table d'idempotence ou clé de dedupe implémentée
 - [ ] Worker async et DLQ configurés
-- [ ] Aligné avec les conventions de champs [sortie structurée](/guide/developer-platform/non-interactive/structured-output/)
+- [ ] Aligné avec les conventions de champs [sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/)
 
 Les webhooks connectent les changements d'état de tâche aux autres systèmes — après que vérification de signature, idempotence et traitement async sont en place.
 

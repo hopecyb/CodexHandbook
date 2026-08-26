@@ -3,9 +3,10 @@ title: Xử lý sự cố
 description: Định vị theo triệu chứng tới hướng dẫn và trang sản phẩm tương ứng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 18
 ---
@@ -24,12 +25,12 @@ Bạn không cần ngay từ đầu phán đoán là vấn đề CLI, IDE, Cloud
 
 | Triệu chứng | Đi tới |
 |---|---|
-| Cài đặt thất bại | [Xử lý sự cố desktop](/guide/desktop-app/troubleshooting/) · [Xử lý sự cố CLI](/guide/cli/troubleshooting/) · [Xử lý sự cố IDE](/guide/ide/troubleshooting/) |
-| Đăng nhập/xác thực thất bại | [Đăng nhập](/guide/getting-started/sign-in-and-authentication/) |
-| Không biết chọn client nào | [Chọn client](/guide/choose-your-client/) · [So sánh tính năng](/guide/reference/feature-comparison/) |
-| Kết quả vượt phạm vi / rất tệ | [Case tác vụ đầu tiên](/cases/first-task/) · [Gỡ lỗi Prompt](/prompts/prompt-debugging/) · [Hoàn tác](/guide/getting-started/undo-and-recover/) |
-| Ngữ cảnh rối | [Giữ tập trung](/guide/context/keep-context-focused/) |
-| Thắc mắc về quyền/Sandbox | [Quyền và Sandbox](/guide/permissions-and-sandbox/) |
+| Cài đặt thất bại | [Xử lý sự cố desktop](/vi/guide/desktop-app/troubleshooting/) · [Xử lý sự cố CLI](/vi/guide/cli/troubleshooting/) · [Xử lý sự cố IDE](/vi/guide/ide/troubleshooting/) |
+| Đăng nhập/xác thực thất bại | [Đăng nhập](/vi/guide/getting-started/sign-in-and-authentication/) |
+| Không biết chọn client nào | [Chọn client](/vi/guide/choose-your-client/) · [So sánh tính năng](/vi/guide/reference/feature-comparison/) |
+| Kết quả vượt phạm vi / rất tệ | [Case tác vụ đầu tiên](/vi/cases/first-task/) · [Gỡ lỗi Prompt](/vi/prompts/prompt-debugging/) · [Hoàn tác](/vi/guide/getting-started/undo-and-recover/) |
+| Ngữ cảnh rối | [Giữ tập trung](/vi/guide/context/keep-context-focused/) |
+| Thắc mắc về quyền/Sandbox | [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/) |
 
 ## Cách phân khi không biết bắt đầu từ đâu
 
@@ -60,7 +61,7 @@ Thường không bằng dừng lại một chút, phán đoán trước mình th
 
 Xử lý sự cố phân loại trước — không nhất thiết phải bắt đầu sửa ngay.
 
-Thêm tham chiếu: [FAQ](/guide/reference/faq/) · [Tham chiếu lỗi](/guide/reference/error-reference/) · [Tài liệu Codex chính thức](https://developers.openai.com/codex)
+Thêm tham chiếu: [FAQ](/vi/guide/reference/faq/) · [Tham chiếu lỗi](/vi/guide/reference/error-reference/) · [Tài liệu Codex chính thức](https://developers.openai.com/codex)
 
 ---
 

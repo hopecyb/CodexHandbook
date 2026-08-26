@@ -3,9 +3,10 @@ title: Configuration Basics
 description: Codex config file locations, common settings, and intro to approval, sandbox, and model settings.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ These should not rely only on personal configuration.
 - Complex refactors: stronger reasoning model (if your plan supports it)
 - Scripts/CI: fixed model for reproducibility
 
-Concept background: [Models and Reasoning](/guide/foundations/models-and-reasoning/)
+Concept background: [Models and Reasoning](/en/guide/foundations/models-and-reasoning/)
 
 ### Approval and sandbox
 
@@ -84,7 +85,7 @@ Concept background: [Models and Reasoning](/guide/foundations/models-and-reasoni
 | Trusted personal project | Reduce interruption within safe bounds |
 | Enterprise repo | Follow managed policy; do not relax on your own |
 
-Concept background: [Permissions and Approvals](/guide/foundations/permissions-and-approvals/), [Sandbox and Network](/guide/foundations/sandbox-and-network/)
+Concept background: [Permissions and Approvals](/en/guide/foundations/permissions-and-approvals/), [Sandbox and Network](/en/guide/foundations/sandbox-and-network/)
 
 ### CLI and App consistency
 
@@ -113,9 +114,9 @@ Usually:
 
 ## Relation to CLI Topics
 
-- Interactive use: [CLI Interactive Mode](/guide/cli/interactive-mode/)
-- Non-interactive and scripts: [Non-Interactive Mode](/guide/cli/non-interactive-mode/)
-- Configuration detail: [CLI Configuration](/guide/cli/configuration/) · [Configuration Reference](/guide/reference/configuration-reference/)
+- Interactive use: [CLI Interactive Mode](/en/guide/cli/interactive-mode/)
+- Non-interactive and scripts: [Non-Interactive Mode](/en/guide/cli/non-interactive-mode/)
+- Configuration detail: [CLI Configuration](/en/guide/cli/configuration/) · [Configuration Reference](/en/guide/reference/configuration-reference/)
 
 ## Common Mistakes
 

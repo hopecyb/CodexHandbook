@@ -3,9 +3,10 @@ title: Directorio templates/
 description: Proporciona plantillas de salida y esqueletos de informes dentro de un Skill.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/` no es solo un directorio para «ahorrar un poco de formato». Su papel práctico es estabilizar la salida del Skill sin improvisar cada vez.

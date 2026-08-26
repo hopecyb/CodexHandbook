@@ -3,9 +3,10 @@ title: 콘텐츠 창작
 description: 문서, 글, 콘텐츠 자산 사례 진입점입니다. 검토, 개작, 산출물 인수를 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 콘텐츠 창작 사례는 주로 이런 시나리오를 봅니다:
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 이 그룹 진입점
 
-- [검토와 함께 문서 사이트 리팩터](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [검토와 함께 문서 사이트 리팩터](/ko/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## 이 그룹의 초점
 

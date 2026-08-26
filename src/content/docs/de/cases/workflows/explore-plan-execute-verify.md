@@ -3,9 +3,10 @@ title: Erkunden—Planen—Ausführen—Überprüfen
 description: "Der allgemeine Haupt-Workflow von Codex — vier Phasen-Prüfpunkte, stabiler als «alles in einem Schritt»."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Das ist der in diesem Handbuch empfohlene Standard-Workflow — von „noch unklar, wie“ bis „merge-fähig“.
@@ -19,7 +20,7 @@ Das ist der in diesem Handbuch empfohlene Standard-Workflow — von „noch unkl
 ④ Überprüfen Verify  → Tests, Diff-Prüfung, Abgleich mit «Definition of Done»
 ```
 
-① und ② nicht überspringen und direkt zu ③ gehen — das wird leicht zu „raten und reparieren“. Siehe [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/).
+① und ② nicht überspringen und direkt zu ③ gehen — das wird leicht zu „raten und reparieren“. Siehe [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/).
 
 ## ① Erkunden
 
@@ -45,7 +46,7 @@ Basierend auf der gerade erfolgten Erkundung einen Plan geben: Schrittnummern, b
 Vor meiner Antwort «Plan ausführen» keinen Code schreiben.
 ```
 
-Große oder riskante Änderungen brauchen zuerst Bestätigung. Bei kleinen Aufgaben kann man vereinbaren: „Pläne mit höchstens 3 Schritten dürfen automatisch ausgeführt werden“ — und das in [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) festhalten.
+Große oder riskante Änderungen brauchen zuerst Bestätigung. Bei kleinen Aufgaben kann man vereinbaren: „Pläne mit höchstens 3 Schritten dürfen automatisch ausgeführt werden“ — und das in [AGENTS.md](/de/guide/customization/agents-md/writing-effective-instructions/) festhalten.
 
 ## ③ Ausführen
 
@@ -67,7 +68,7 @@ Steuerungssatz: «Schritt 2 ausführen; bei Planänderung zuerst stoppen und erk
 | Manuell | Diff lesen, kritische Pfade handtesten |
 | Artefakt | Screenshots, Log-Ausschnitte, API-Antworten |
 
-Zugehörige Checklisten: [Done definieren](/prompts/define-done/) und [Tests ausführen](/guide/quality/run-tests/).
+Zugehörige Checklisten: [Done definieren](/de/prompts/define-done/) und [Tests ausführen](/de/guide/quality/run-tests/).
 
 ## Nach Aufgabengröße zuschneiden
 
@@ -80,7 +81,7 @@ Zugehörige Checklisten: [Done definieren](/prompts/define-done/) und [Tests aus
 
 ## Mit der EPXV-Fallvorlage
 
-Teams können die vier Phasen in die [Fallvorlage](/cases/use-cases/case-study-template/) und PR-Beschreibungen schreiben und so eine gemeinsame Sprache schaffen.
+Teams können die vier Phasen in die [Fallvorlage](/de/cases/use-cases/case-study-template/) und PR-Beschreibungen schreiben und so eine gemeinsame Sprache schaffen.
 
 ## Häufige Fehler
 

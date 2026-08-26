@@ -3,9 +3,10 @@ title: Thư mục references/
 description: Tổ chức tài liệu tham chiếu dài trong Skill để tiết lộ dần.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c595507
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `references/` phù hợp để chứa tài liệu dài không cần mở ngay mỗi lần, tránh quy trình chính vừa dài vừa loạn.

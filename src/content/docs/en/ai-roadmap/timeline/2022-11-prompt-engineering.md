@@ -8,6 +8,11 @@ trend: absorbed
 signal: well-calibrated
 tags: [prompt-engineering, llm, prompting, workflow, reliability]
 authored_by: ai-assisted
+locale: en
+source_locale: zh-CN
+translation_status: reviewed
+reviewed_at: 2026-08-26
+source_revision: 1028eec
 ---
 
 # Prompt Engineering

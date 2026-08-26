@@ -3,14 +3,15 @@ title: Thuật ngữ cho người mới
 description: Định nghĩa ngắn về tác vụ, ngữ cảnh, Sandbox, Skill và các từ thường dùng khác.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 401719c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 6
 ---
 
-Mục đầy đủ hơn xem [Bảng thuật ngữ](/guide/reference/glossary/). Ở đây liệt kê trước nhóm từ phổ biến nhất và dễ ảnh hưởng đến việc đọc nhất.
+Mục đầy đủ hơn xem [Bảng thuật ngữ](/vi/guide/reference/glossary/). Ở đây liệt kê trước nhóm từ phổ biến nhất và dễ ảnh hưởng đến việc đọc nhất.
 
 Khi mới đọc cẩm nang Codex, chỗ dễ bị kẹt thường là thuật ngữ dày đặc. Từng từ thì nhận ra, ghép lại thì dễ rối.
 
@@ -86,7 +87,7 @@ Các mục dưới đây phần lớn thuộc nội dung nâng cao; lần đầu
 - Plugin
 - Chi tiết môi trường Cloud
 
-Hoàn thành [tác vụ đầu tiên](/guide/getting-started/run-your-first-task/) trước, rồi quay lại các từ này — thường sẽ hiểu xuôi hơn.
+Hoàn thành [tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/) trước, rồi quay lại các từ này — thường sẽ hiểu xuôi hơn.
 
 Gặp từ lạ thì quay lại tra, rồi đọc tiếp là được.
 

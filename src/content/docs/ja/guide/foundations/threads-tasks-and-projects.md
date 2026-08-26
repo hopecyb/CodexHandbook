@@ -3,9 +3,10 @@ title: スレッド、タスクとプロジェクト
 description: セッション、タスク、プロジェクト作業領域の関係を整理する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -37,8 +38,8 @@ sidebar:
 ## 実践上の提案
 
 - テーマが変わったら **新しいスレッド** を開き、古いコンテキストの干渉を避ける
-- 長いタスクでは段階とチェックポイントを書く。[長時間タスクのプロンプト](/prompts/long-running-tasks/) を参照
-- セッションをまたいで続ける必要があるときは引き継ぎ要約を作る。[引き継ぎと再開](/guide/agent-work/handoff-and-resume/) を参照
+- 長いタスクでは段階とチェックポイントを書く。[長時間タスクのプロンプト](/ja/prompts/long-running-tasks/) を参照
+- セッションをまたいで続ける必要があるときは引き継ぎ要約を作る。[引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/) を参照
 
 ## よくある誤解
 

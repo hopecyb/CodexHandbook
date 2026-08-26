@@ -3,14 +3,15 @@ title: Cấu hình CLI
 description: Mô hình, Sandbox, phê duyệt và MCP — thống nhất hành vi Codex trong terminal.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-Cấu hình CLI quyết định **mô hình mặc định, thư mục làm việc, độ chặt phê duyệt, máy chủ MCP**, v.v. Khớp khái niệm với [cơ bản cấu hình](/guide/customization/configuration/config-basics/); trang này nghiêng về mục người dùng terminal hay chỉnh.
+Cấu hình CLI quyết định **mô hình mặc định, thư mục làm việc, độ chặt phê duyệt, máy chủ MCP**, v.v. Khớp khái niệm với [cơ bản cấu hình](/vi/guide/customization/configuration/config-basics/); trang này nghiêng về mục người dùng terminal hay chỉnh.
 
 ## Nội dung trang
 
@@ -74,7 +75,7 @@ Vậy cấu hình giống xu hướng mặc định, không phải đặc quyề
 | Chuẩn | Phát triển hàng ngày |
 | Nới | Chỉ môi trường cá nhân đáng tin, và khớp chính sách công ty |
 
-Khái niệm: [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
+Khái niệm: [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 
 ### Chiến lược phê duyệt
 
@@ -82,7 +83,7 @@ CLI có thể hỏi trước khi chạy shell, ghi đĩa, lên mạng. Nhóm nê
 
 ### Danh sách máy chủ MCP
 
-Dùng chung cấu hình với [Kết nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/); đổi rồi khởi lại phiên.
+Dùng chung cấu hình với [Kết nối máy chủ MCP](/vi/skills/mcp/connect-an-mcp-server/); đổi rồi khởi lại phiên.
 
 ## Một thứ tự cấu hình đủ dùng
 
@@ -111,7 +112,7 @@ Tránh «trong App chạy được, trên CI thất bại»:
 | MCP chưa tải | Cú pháp JSON/TOML, đường dẫn |
 | Phê duyệt quá thường xuyên | Chế độ Sandbox và allowlist |
 
-Thêm: [Xử lý sự cố CLI](/guide/cli/troubleshooting/)
+Thêm: [Xử lý sự cố CLI](/vi/guide/cli/troubleshooting/)
 
 Coi cấu hình CLI là «thói quen làm việc mặc định» là được — chỉ cố định những thứ bạn **gần như mỗi lần đều chọn lại**. Năng lực nâng cao bổ sung sau cũng kịp.
 

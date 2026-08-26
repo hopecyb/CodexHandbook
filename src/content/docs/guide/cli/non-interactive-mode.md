@@ -34,13 +34,19 @@ sidebar:
 3. 以退出码表示成功/失败
 4. 输出日志或结构化结果供下游消费
 
-**命令名与参数以官方 CLI 文档为准**（常见为 `codex exec` 或等价子命令）；升级 CLI 后应复核 `--help`。
+当前非交互入口是 `codex exec`；升级 CLI 后仍应运行 `codex exec --help` 复核脚本使用的参数。
 
 ## 最小可用示例（示意）
 
 ```bash
-# 在仓库根目录，只读审查（示意，参数以官方为准）
-codex exec --cwd . "列出相对 main 的 diff 中的安全风险，不要修改文件"
+# 在仓库根目录运行一次只读审查
+codex exec --cd . "列出相对 main 的 diff 中的安全风险，不要修改文件"
+```
+
+`codex exec` 默认使用只读沙箱。运行过程中进度写到 `stderr`，最终 Agent 回复写到 `stdout`，因此可以安全地把最终结果重定向给下游：
+
+```bash
+codex exec --cd . "生成最近 10 个提交的发布说明" > release-notes.md
 ```
 
 实践建议：
@@ -122,7 +128,10 @@ codex exec --cwd . "列出相对 main 的 diff 中的安全风险，不要修改
 - OpenAI Codex CLI 文档
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页仍以 `codex exec` 及其相关非交互集成方式为核心，但当前拿不到足够强的官方现行依据来逐条确认命令入口、参数和行为；在补齐最新版 CLI 非交互文档前，更适合标为 `outdated`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已对照当前官方 Non-interactive mode，核实 `codex exec`、`--cd`、默认只读沙箱，以及进度走 `stderr`、最终回复走 `stdout` 的管道行为。
+
+**最近核验：** 2026-08-26

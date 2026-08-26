@@ -3,9 +3,10 @@ title: 수정 템플릿
 description: 기존 기반에서 경계가 있는 반복을 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 수정 템플릿
@@ -63,8 +64,8 @@ translated_at: 2026-07-28
 
 ## 관련
 
-- [완료 기준 정의](/prompts/define-done/)
-- [제약과 경계](/prompts/constraints-and-boundaries/)
+- [완료 기준 정의](/ko/prompts/define-done/)
+- [제약과 경계](/ko/prompts/constraints-and-boundaries/)
 
 ---
 

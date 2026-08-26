@@ -3,14 +3,15 @@ title: 명령 규칙
 description: 명령급 allow/deny로 shell·도구 호출을 제약 — 구두 약속보다 실행 가능하게.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**명령 규칙**은 「Agent가 어떤 명령을, 어떤 인자로 실행할 수 있는지」에 초점을 둡니다. [허용과 거부 규칙](/guide/customization/rules/allow-and-deny-patterns/)의 가장 흔한 형태이며, 보통 팀이 심사할 수 있는 설정·규칙 파일에 둡니다.
+**명령 규칙**은 「Agent가 어떤 명령을, 어떤 인자로 실행할 수 있는지」에 초점을 둡니다. [허용과 거부 규칙](/ko/guide/customization/rules/allow-and-deny-patterns/)의 가장 흔한 형태이며, 보통 팀이 심사할 수 있는 설정·규칙 파일에 둡니다.
 
 ## 이 글에서 다루는 것
 
@@ -90,7 +91,7 @@ allow/deny가 “원칙적으로 무엇을 할 수 있는지”를 정한다면,
 | 목록화 | `package.json` scripts, Makefile, CI workflow에서 실제 명령 추출 |
 | 계층화 | 조직 하한선 deny → 프로젝트 allow 보완 → 개인 로컬 예외(있으면) |
 | 시범 실행 | 저위험 작업으로 「통과할 것은 통과, 막을 것은 막힘」 확인 |
-| 정렬 | 로컬 규칙과 [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/)을 되도록 동일 원천으로 |
+| 정렬 | 로컬 규칙과 [GitHub Action](/ko/guide/developer-platform/ci-cd/code-review-automation/)을 되도록 동일 원천으로 |
 
 ## 흔한 실수
 
@@ -115,10 +116,10 @@ allow/deny가 “원칙적으로 무엇을 할 수 있는지”를 정한다면,
 
 ## 관련 장
 
-- [허용과 거부 패턴](/guide/customization/rules/allow-and-deny-patterns/)
-- [팀 규칙 정책](/guide/customization/rules/team-rules/)
-- [CLI 승인과 샌드박스](/guide/cli/approvals-and-sandbox/)
-- [권한 매트릭스](/guide/reference/permission-matrix/)
+- [허용과 거부 패턴](/ko/guide/customization/rules/allow-and-deny-patterns/)
+- [팀 규칙 정책](/ko/guide/customization/rules/team-rules/)
+- [CLI 승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)
+- [권한 매트릭스](/ko/guide/reference/permission-matrix/)
 
 ---
 

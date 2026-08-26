@@ -3,9 +3,10 @@ title: Template de criação
 description: Implementar do zero uma função, um texto ou um artefato.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Template de criação
@@ -62,8 +63,8 @@ O pior na criação: começar sem clarificar «o quê» e «para quem».
 
 ## Relacionado
 
-- [Trabalho guiado por especificação](/cases/workflows/specification-driven-work/)
-- [Definir o concluído](/prompts/define-done/)
+- [Trabalho guiado por especificação](/pt/cases/workflows/specification-driven-work/)
+- [Definir o concluído](/pt/prompts/define-done/)
 
 ---
 

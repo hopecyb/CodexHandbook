@@ -3,9 +3,10 @@ title: 'Exemplo: Skill de pesquisa'
 description: Exemplo de Skill de pesquisa com citações e marcadores «a confirmar».
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemplo: Skill de pesquisa
@@ -28,8 +29,8 @@ description: Pesquisa técnica e tabelas de comparação com citações por URL/
 
 ## Relacionado
 
-- [Caso de pesquisa](/cases/research-with-sources/)
-- [Template de pesquisa](/prompts/templates/research/)
+- [Caso de pesquisa](/pt/cases/research-with-sources/)
+- [Template de pesquisa](/pt/prompts/templates/research/)
 ---
 
 **Status:** verified  

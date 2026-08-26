@@ -3,9 +3,10 @@ title: コンテキストの優先順位
 description: 指示が矛盾したとき、どれが優先されるか。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d68a819
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---

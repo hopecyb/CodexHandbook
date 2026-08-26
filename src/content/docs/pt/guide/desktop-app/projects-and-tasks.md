@@ -3,9 +3,10 @@ title: Projetos e Tarefas
 description: Gerir projetos e Tarefas na App.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 088dad1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -39,7 +40,7 @@ Se o local estiver errado, muitos problemas a seguir também desviam.
 A «Tarefa» é o **encargo concreto** desta ocasião.  
 Quanto mais claro for o encargo, menos o Codex terá de adivinhar enquanto trabalha.
 
-Contraste de conceitos: [Threads, Tarefas e projetos](/guide/foundations/threads-tasks-and-projects/)
+Contraste de conceitos: [Threads, Tarefas e projetos](/pt/guide/foundations/threads-tasks-and-projects/)
 
 ## Mal-entendidos frequentes
 

@@ -3,9 +3,10 @@ title: Crear un sitio web
 description: Caso de prototipo — de los requisitos a una página previsualizable.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Crear un sitio web
@@ -41,8 +42,8 @@ Primero un plan de wireframe; espera mi confirmación antes de escribir código.
 
 ## 4. Relacionado
 
-- [Plantilla de creación](/prompts/templates/create/)
-- [Trabajo orientado a artefactos](/cases/workflows/artifact-first-work/)
+- [Plantilla de creación](/es/prompts/templates/create/)
+- [Trabajo orientado a artefactos](/es/cases/workflows/artifact-first-work/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Skills-Überblick
 description: Mit SKILL.md wiederverwendbare Workflows an Codex vermitteln — einmal schreiben, bei Bedarf aufrufen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75eaa78
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Ein **Skill** ist ein Verzeichnis mit `SKILL.md` (optional Skripte und Referenzen), das einen festen Ablauf zu einer Fähigkeit packt, die Codex **automatisch oder explizit** aufrufen kann.
@@ -81,7 +82,7 @@ Tipps für gute `description`-Texte:
 4. Bei Bedarf Determinismus mit `scripts/` ergänzen
 5. Nach `.agents/skills/` committen und als PR ans Team geben
 
-Übung: [Ersten Skill erstellen](/skills/create-your-first-skill/)
+Übung: [Ersten Skill erstellen](/de/skills/create-your-first-skill/)
 
 ## Häufige Verwirrung
 

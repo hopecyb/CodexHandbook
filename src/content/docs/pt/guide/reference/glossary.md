@@ -3,9 +3,10 @@ title: Glossário
 description: Definições curtas dos termos habituais do manual.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c07a94c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -27,14 +28,14 @@ sidebar:
 | Token | Unidade de medida do texto que o modelo processa |
 | Árvore de trabalho | Diretório de trabalho isolado para experiências em paralelo |
 
-Versão para principiantes: [Terminologia para principiantes](/guide/start-here/terminology-for-beginners/)
+Versão para principiantes: [Terminologia para principiantes](/pt/guide/start-here/terminology-for-beginners/)
 
 ## Como usar
 
 Isto é um dicionário rápido, não um tutorial completo.  
 Se noutra página vês uma palavra e não te lembras do significado, volta aqui.
 
-Se a maioria destes termos ainda não te soa familiar, começa por [Terminologia para principiantes](/guide/start-here/terminology-for-beginners/).
+Se a maioria destes termos ainda não te soa familiar, começa por [Terminologia para principiantes](/pt/guide/start-here/terminology-for-beginners/).
 
 ## Mal-entendidos frequentes
 

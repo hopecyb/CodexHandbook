@@ -1,98 +1,116 @@
 ---
-title: Permissions et Bac à sable
-description: Comprendre les Approbations, l'isolation d'exécution et les limites réseau pour une utilisation sûre de Codex.
-sidebar:
-  order: 14
+title: Autorisations et bac à sable
+description: Suivez une chaîne de décision unique pour comprendre le bac à sable, les approbations, l'accès au réseau et les limites d'exécution locale ou Cloud.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6b29dc6
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 14
 ---
 
-# Permissions et Bac à sable
+Pour utiliser Codex en toute sécurité, il faut distinguer deux niveaux de contrôle : **le bac à sable détermine la portée technique maximale, tandis que la politique d'approbation détermine si Codex doit vous consulter avant de franchir la limite actuelle.**
 
-Codex ne doit pas effectuer d'actions à haut risque sans consentement. Les **Approbations** sont la porte clé dans la collaboration humain–agent ; le **Bac à sable** limite les capacités système et fichiers que l'Agent peut atteindre.
+![Flux du bac à sable et des approbations Codex : une action rencontre la limite du bac à sable, demande une approbation humaine pour la franchir, puis produit des preuves de vérification](/diagrams/sandbox-approval-flow-fr.svg)
 
-## Ce qui est couvert
+## Retenir cette distinction
 
-Beaucoup traitent permissions, Approbations, Bac à sable et accès réseau comme les mêmes « paramètres de sécurité ».
+| Contrôle | Question traitee | Objets types |
+|---|---|---|
+| Bac à sable | Jusqu'où cette action peut-elle aller ? | Fichiers du projet, chemins externes, fonctions système, réseau |
+| Politique d'approbation | Faut-il consulter une personne avant de franchir la limite actuelle ? | Installation de dépendances, accès réseau, écriture externe, lancement d'applications |
+| Contrainte de la tâche | Que faut-il faire ou ne pas faire dans cette tâche ? | Répertoires autorisés, actions interdites, commandes d'acceptation |
+| Révision humaine | Le résultat exécuté est-il acceptable ? | Diff, journaux, tests, effets de bord externes |
 
-La confusion risquée : vous pensez n'avoir autorisé que la poursuite — mais vous avez peut-être ouvert écriture fichier, shell ou réseau sortant en même temps.
+Les contraintes de la tâche ne remplacent pas le bac à sable, et le bac à sable ne remplace pas la révision finale. Ils encadrent respectivement l'intention, les limites d'exécution et l'acceptation du résultat.
 
-Cette page sépare les concepts pour que vous sachiez ce que chaque confirmation libère réellement.
+## Comment une action franchit les contrôles de sécurité
 
-## Séparer les concepts
+Lorsque Codex s'apprête à exécuter une commande ou à appeler un outil :
 
-Pensez-y comme :
+1. Déterminez si l'action reste dans le bac à sable actuel.
+2. Si c'est le cas, elle est exécutée et sa sortie est consignée ; aucune demande n'est nécessairement affichée.
+3. Si elle sort du périmètre, Codex demande une autorisation conformément à la politique, ou l'action est refusée.
+4. Vous pouvez la refuser, exiger une action plus restreinte ou n'approuver que cette opération explicite.
+5. Après l'exécution, examinez le diff, les tests et l'état du système externe afin de vérifier le résultat.
 
-- **Approbation** : doit-il vous demander d'abord
-- **Bac à sable** : même si autorisé, ce qu'il peut toucher au maximum
-- **Accès réseau** : si l'information peut sortir ou être tirée de l'extérieur
+Le bac à sable limite également les processus enfants et les commandes lancés par Codex. Une action placée dans un script ne contourne pas ces limites.
 
-Ils interagissent — mais ce n'est pas la même chose.
+## Les limites locales et Cloud diffèrent
 
-## Ce qui vous concerne généralement
+| Environnement | Isolation principale | Réseau | Points à contrôler |
+|---|---|---|---|
+| Tâche locale dans App / CLI / IDE | Bac à sable du système d'exploitation et politique d'approbation actuelle | Une tâche locale ne doit pas supposer l'accès à Internet ; approuvez-le ou configurez-le explicitement | Périmètre du workspace, commande, chemin externe, motif de l'accès réseau |
+| Tâche Cloud | Conteneur isolé géré par OpenAI | La phase setup peut utiliser l'accès configuré ; l'accès de l'Agent est désactivé par défaut sauf activation explicite | Dépôt, environnement, domaines autorisés, diff renvoyé, preuves de vérification |
 
-- Lecture/écriture hors du chemin de projet actuel
-- Si le réseau est autorisé
-- Si des commandes shell spécifiques sont autorisées
-- Si l'équipe impose une politique obligatoire (config gérée)
+Les Secrets Cloud servent pendant la phase setup et sont retires avant la phase Agent. Appliquez le principe du moindre privilege et n'ajoutez pas d'identifiants de production sans rapport avec la tâche.
 
-## Bac à sable et réseau
+## Quatre contrôles face à une demande d'approbation
 
-Le **Bac à sable** réduit le rayon d'action accidentel. L'**accès réseau** est une autre couche de risque : exfiltration de contenu sensible du Prompt ou récupération de données non fiables.
+### 1. Comparer avec la tâche
 
-Au début :
+Cette action sert-elle directement l'objectif actuel ? « Cela pourrait être utile » ne suffit pas à justifier une approbation.
 
-1. Pour la première pratique, désactivez le réseau inutile ou autorisez seulement ce dont vous avez clairement besoin
-2. Ne mettez pas de secrets de production dans les projets d'entraînement
-3. Quand vous voyez « besoin réseau / écriture chemin sensible », pausez, lisez, puis approuvez
+### 2. Comparer avec le périmètre
+
+L'action atteint-elle le projet, un répertoire externe, le réseau ou une application système ? Plus les chemins, domaines et commandes sont précis, plus la décision est simple.
+
+### 3. Examiner les effets de bord
+
+S'agit-il uniquement de lire, ou l'action va-t-elle écrire des fichiers, installer un logiciel, envoyer des données ou modifier un état distant ? Les effets de bord externes demandent plus de prudence que les modifications locales réversibles.
+
+### 4. Prevoir vérification et récupération
+
+Comment vérifier la réussite ? Peut-on annuler l'action en cas d'échec ? Si aucune réponse n'est claire, demandez à Codex une explication ou une solution plus limitée.
+
+## Exemple : installer des dépendances
+
+Supposons que Codex demande à exécuter :
+
+```bash
+pnpm install
+```
+
+Ne décidez pas uniquement selon votre familiarité avec la commande. Vérifiez que :
+
+- la tâche exige réellement les dépendances manquantes ;
+- la commande s'exécute dans le bon dépôt ;
+- vous savez quel registre de paquets sera contacté ;
+- vous savez si le fichier de verrouillage sera modifié ;
+- un test ou un build permettra de vérifier l'installation.
+
+Si la tâche consiste seulement à vérifier du code existant et que les dépendances sont déjà installées, refusez la demande et exigez d'abord l'utilisation de l'environnement actuel.
+
+## Déclarer les limites dans le prompt
+
+```text
+Ne modifier que src/auth et tests/auth.
+Utiliser d'abord les dépendances installées ; ne pas accéder a Internet ni mettre
+a jour les versions. Si un chemin externe ou le réseau est nécessaire, expliquer
+l'objectif, la cible et l'opération minimale avant de demander l'autorisation.
+Executer pnpm test --filter auth et indiquer la sortie et les risques restants.
+```
+
+Ce prompt rend l'intention explicite, mais les limites d'exécution réelles proviennent toujours du bac à sable, de la politique d'approbation et de la configuration gérée par l'équipe.
 
 ## Idées reçues courantes
 
-### Un Prompt ne signifie pas toujours danger
+- **Une demande d'approbation signale toujours un danger :** une installation, un accès réseau ou une écriture externe normaux peuvent exiger une approbation ; la nécessité et le périmètre sont déterminants.
+- **L'absence de demande garantit une sécurité complète :** l'action peut déjà se trouver dans le bac à sable, mais son résultat doit tout de même être révisé.
+- **Une approbation accorde un accès permanent :** la durée et la portée dependent du produit et de la politique ; lisez la demande.
+- **Les sous-agents possèdent des autorisations distinctes :** ils héritent du bac à sable et du mode d'autorisation de la tâche principale.
+- **Les Hooks remplacent le bac à sable :** les Hooks ajoutent des garde-fous et un audit ; ils ne remplacent pas l'isolation imposée par le système d'exploitation.
 
-Beaucoup d'opérations normales déclenchent une Approbation :
-
-- Installation de dépendances
-- Écriture hors du répertoire de projet
-- Ouverture du navigateur ou d'apps système
-- Accès à des sites ou API externes
-
-Jugez si l'étape est **requise pour la Tâche actuelle** — pas seulement si une boîte de dialogue est apparue.
-
-### Pas de Prompt ne signifie pas zéro risque
-
-Si le Bac à sable autorise déjà une action — ou si vous avez assoupli les règles auparavant — Codex peut ne plus demander.
-
-Ne comptez pas seulement sur « y avait-il une boîte de dialogue » ; vérifiez comment l'environnement est configuré.
-
-## Quand vous voyez une demande de permission
-
-Posez trois questions :
-
-1. Cette étape est-elle nécessaire pour terminer la Tâche actuelle ?
-2. Les données ou le chemin dépassent-ils ce que j'attendais ?
-3. Si ça tourne mal, sais-je comment annuler ou récupérer ?
-
-Si vous ne pouvez pas répondre à deux sur trois, n'approuvez pas — demandez à Codex pourquoi l'étape est nécessaire.
-
-## Guide par couches
-
-| Couche | Ce qu'elle couvre | Où lire |
-|---|---|---|
-| Concepts (cette page) | Pourquoi Approbations et isolation comptent | — |
-| Différences produit | Comment chaque client demande | [Approbations et Bac à sable CLI](/guide/cli/approvals-and-sandbox/) · [Paramètres App de bureau](/guide/desktop-app/settings/) |
-| Stratégie de Prompt | Déclarer les limites dans les Tâches | [Contraintes et limites](/prompts/constraints-and-boundaries/) |
-
-La politique et les valeurs par défaut officielles peuvent changer — vérifiez sur [OpenAI Codex](https://developers.openai.com/codex).
-
-L'Approbation demande s'il faut continuer ; le Bac à sable limite jusqu'où continuer peut aller. Lisez les deux ensemble pour des limites plus claires.
+Consultez [Approbations et bac à sable de la CLI](/fr/guide/cli/approvals-and-sandbox/) et [Paramètres de l'App de bureau](/fr/guide/desktop-app/settings/) pour les réglages des produits, ainsi que [Contraintes et limites](/fr/prompts/constraints-and-boundaries/) pour la formulation des tâches.
 
 ---
 
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE / Cloud  
-**Base de vérification :** OpenAI Developers fournit encore l'entrée officielle Codex ; cette page explique Approbations, Bac à sable et réseau comme limites distinctes et renvoie aux chapitres produit sans prétendre aux valeurs par défaut actuelles ou matrices de permission exactes.  
-**Dernière vérification :** 2026-07-26
+**Statut :** verified
+
+**Produits concernés :** App / CLI / IDE / Cloud
+
+**Base de vérification :** comparaison avec les recommandations actuelles de Codex sur le bac à sable, les approbations et la sécurité. Cette page distingue les limites du système d'exploitation, la politique d'approbation, les contraintes de tâche et la révision humaine, puis explique les modèles réseau différents en local et dans Cloud.
+
+**Dernière vérification :** 2026-08-26

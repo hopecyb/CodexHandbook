@@ -1,0 +1,80 @@
+<svg lang="zh-tw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Hook 生命週期與關鍵事件</title>
+  <desc id="desc">會話由 SessionStart 開始。任務輪次中先提交 UserPromptSubmit，工具執行前經過 PreToolUse；只有需要審批時觸發 PermissionRequest；工具完成後觸發 PostToolUse，Stop 可要求再繼續一輪。PreCompact 和 PostCompact 圍繞上下文壓縮，子 Agent 有開始和停止事件，SessionEnd 只在主執行緒結束時執行。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .lane { fill: #cbd5e1; font-size: 16px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 18px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 14px; }
+    .tiny { fill: #94a3b8; font-size: 12px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+  </defs>
+  <rect width="1100" height="720" rx="8" fill="#020617"/>
+  <rect width="1100" height="720" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Codex Hook 生命週期</text>
+  <text x="44" y="72" class="sub">先判斷副作用發生前還是發生後，再選擇事件；Hook 是額外守護層，不是完整安全邊界。</text>
+
+  <text x="46" y="132" class="lane">會話開始</text>
+  <rect x="180" y="100" width="210" height="72" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="285" y="130" text-anchor="middle" class="label">SessionStart</text>
+  <text x="285" y="153" text-anchor="middle" class="note">startup · resume · clear · compact</text>
+  <path d="M390 136H470" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <rect x="470" y="100" width="250" height="72" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="595" y="130" text-anchor="middle" class="label">UserPromptSubmit</text>
+  <text x="595" y="153" text-anchor="middle" class="note">檢查提示詞或補充上下文</text>
+
+  <rect x="40" y="214" width="1020" height="272" rx="12" fill="#07101f" stroke="#334155" stroke-width="1.5"/>
+  <text x="62" y="244" class="lane">一次工具呼叫與任務輪次</text>
+  <rect x="80" y="278" width="190" height="92" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="175" y="311" text-anchor="middle" class="label">PreToolUse</text>
+  <text x="175" y="337" text-anchor="middle" class="note">執行前：拒絕或改寫</text>
+  <text x="175" y="357" text-anchor="middle" class="tiny">本地支援工具路徑</text>
+  <path d="M270 324H326" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="326" y="278" width="200" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="426" y="311" text-anchor="middle" class="label">PermissionRequest</text>
+  <text x="426" y="337" text-anchor="middle" class="note">僅在準備請求審批時</text>
+  <text x="426" y="357" text-anchor="middle" class="tiny">允許 · 拒絕 · 正常詢問</text>
+  <path d="M526 324H582" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="582" y="278" width="150" height="92" rx="8" fill="#083344" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="657" y="317" text-anchor="middle" class="label">工具執行</text>
+  <text x="657" y="343" text-anchor="middle" class="note">副作用發生點</text>
+  <path d="M732 324H788" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="788" y="278" width="220" height="92" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="898" y="311" text-anchor="middle" class="label">PostToolUse</text>
+  <text x="898" y="337" text-anchor="middle" class="note">完成後：記錄或反饋</text>
+  <text x="898" y="357" text-anchor="middle" class="tiny">不能撤銷已經發生的副作用</text>
+
+  <rect x="326" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#a78bfa"/>
+  <text x="426" y="427" text-anchor="middle" class="label">PreCompact</text>
+  <text x="426" y="448" text-anchor="middle" class="tiny">上下文壓縮前</text>
+  <path d="M526 431H582" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="582" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#a78bfa"/>
+  <text x="682" y="427" text-anchor="middle" class="label">PostCompact</text>
+  <text x="682" y="448" text-anchor="middle" class="tiny">上下文壓縮後</text>
+  <rect x="808" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#fb923c"/>
+  <text x="908" y="427" text-anchor="middle" class="label">Stop</text>
+  <text x="908" y="448" text-anchor="middle" class="tiny">可要求主執行緒再繼續一輪</text>
+
+  <text x="46" y="550" class="lane">子 Agent</text>
+  <rect x="180" y="516" width="210" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="285" y="546" text-anchor="middle" class="label">SubagentStart</text>
+  <text x="285" y="570" text-anchor="middle" class="note">可追加開發上下文</text>
+  <path d="M390 552H470" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="470" y="516" width="220" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="580" y="546" text-anchor="middle" class="label">SubagentStop</text>
+  <text x="580" y="570" text-anchor="middle" class="note">可要求子 Agent 再檢查</text>
+
+  <text x="46" y="648" class="lane">主執行緒結束</text>
+  <rect x="180" y="614" width="210" height="72" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="285" y="644" text-anchor="middle" class="label">SessionEnd</text>
+  <text x="285" y="668" text-anchor="middle" class="note">只對主執行緒；預設 1 秒</text>
+  <rect x="470" y="614" width="538" height="72" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="739" y="643" text-anchor="middle" class="note">多個來源的匹配 Hook 都會執行；同一事件的 command Hook 可併發啟動</text>
+  <text x="739" y="668" text-anchor="middle" class="tiny">專案與 Plugin Hook 需要審查和信任，變更 hash 後重新審查</text>
+</svg>

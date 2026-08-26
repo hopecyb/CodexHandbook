@@ -1,98 +1,116 @@
 ---
-title: Permissions and sandbox
-description: Understanding approvals, execution isolation, and network boundaries for safe Codex use.
-sidebar:
-  order: 14
+title: Permissions and sandboxing
+description: Use one decision chain to understand sandboxing, approvals, network access, and local versus cloud execution.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 6b29dc6
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 14
 ---
 
-# Permissions and sandbox
+Using Codex safely requires two control layers: **the sandbox determines the maximum technical reach, while the approval policy determines whether Codex asks before crossing the current boundary.**
 
-Codex should not perform high-risk actions without consent. **Approvals** are the key gate in human–agent collaboration; **sandbox** limits what filesystem and system capabilities the Agent can reach.
+![Codex sandbox and approval flow: an action meets the sandbox boundary, requests human approval when crossing it, and ultimately leaves verification evidence](/diagrams/sandbox-approval-flow-en.svg)
 
-## What's covered
+## Remember this distinction
 
-Many people treat permissions, approvals, sandbox, and network access as the same "security settings."
+| Control | Question it answers | Typical objects |
+|---|---|---|
+| Sandbox | What can this action reach at most? | Project files, outside paths, system capabilities, network |
+| Approval policy | Must a person be asked before crossing the current boundary? | Installing dependencies, network access, external writes, launching apps |
+| Task constraint | What should and should not happen in this task? | Allowed directories, forbidden actions, acceptance commands |
+| Human review | Is the executed result acceptable? | Diff, logs, tests, external side effects |
 
-The risky confusion: you think you only allowed it to continue—but you may have opened file writes, shell, or outbound network at once.
+Task constraints do not replace a sandbox, and a sandbox does not replace final review. They respectively control intent, execution boundaries, and acceptance.
 
-This page separates the concepts so you know what each confirmation actually releases.
+## How an action passes through the boundary
 
-## Separate the concepts
+When Codex is about to run a command or call a tool:
 
-Think of them as:
+1. Determine whether the action is inside the current sandbox.
+2. If it is, execute it and record output; no prompt is necessarily shown.
+3. If it is outside, request permission according to policy or deny it.
+4. You may deny it, request a narrower action, or approve only this explicit operation.
+5. After execution, inspect the diff, tests, and external-system state to verify the task result.
 
-- **Approval**: whether it must ask you first
-- **Sandbox**: even if allowed, what it can touch at most
-- **Network access**: whether information can leave or be pulled from outside
+The sandbox also constrains child processes and commands started by Codex. An action inside a script does not bypass the boundary.
 
-They interact—but they are not the same thing.
+## Local and Cloud boundaries differ
 
-## What you usually need to care about
+| Environment | Primary isolation | Network | What to inspect |
+|---|---|---|---|
+| Local App / CLI / IDE task | Operating-system sandbox and current approval policy | Local tasks should not assume internet access; approve or configure it explicitly | Workspace scope, command, outside path, network purpose |
+| Cloud task | OpenAI-managed isolated container | Setup can use configured internet; Agent access is off by default unless enabled | Repository, environment, allowed domains, returned diff, verification evidence |
 
-- Read/write outside the current project path
-- Whether network is allowed
-- Whether specific shell commands are allowed
-- Whether the team enforces mandatory policy (managed config)
+Cloud Secrets are for setup and are removed before the Agent phase. Keep least privilege and do not add unrelated production credentials to a task environment.
 
-## Sandbox and network
+## Four checks for an approval request
 
-**Sandbox** reduces accidental blast radius. **Network access** is another risk layer: exfiltrating sensitive prompt content or pulling untrusted data.
+### 1. Compare with the task
 
-When starting out:
+Does this action directly serve the current goal? “It may be useful” is not enough.
 
-1. For first practice, disable unnecessary network or allow only what you clearly need
-2. Do not put production secrets in practice projects
-3. When you see "needs network / write sensitive path," pause, read, then approve
+### 2. Compare with scope
+
+Does it reach the project, an outside directory, the network, or a system application? Specific paths, domains, and commands are easier to judge.
+
+### 3. Compare side effects
+
+Is it read-only, or will it write files, install software, send data, or change remote state? External side effects deserve more caution than reversible local edits.
+
+### 4. Compare verification and recovery
+
+How will success be verified? Can failure be rolled back? If neither is clear, ask Codex to explain or propose a smaller alternative.
+
+## Example: dependency installation
+
+Suppose Codex requests:
+
+```bash
+pnpm install
+```
+
+Do not judge only by familiarity. Confirm that:
+
+- the task actually requires missing dependencies;
+- the command runs in the correct repository;
+- you know which package registry it will contact;
+- you know whether it will change the lockfile;
+- a test or build will verify the installation.
+
+If the task only verifies existing code and dependencies are already installed, deny the request and ask it to use the current environment first.
+
+## Declare boundaries in the prompt
+
+```text
+Modify only src/auth and tests/auth.
+Use installed dependencies first; do not access the internet or upgrade versions.
+If an outside path or network is necessary, explain the purpose, target, and
+smallest operation before requesting it.
+Run pnpm test --filter auth and report output and remaining risks.
+```
+
+This makes intent explicit, but the actual execution boundary still comes from the sandbox, approval policy, and managed team configuration.
 
 ## Common misconceptions
 
-### A prompt does not always mean danger
+- **An approval prompt always means danger:** normal installation, networking, or outside writes may require approval; necessity and scope are what matter.
+- **No prompt means complete safety:** the action may already be within the sandbox, but its result still needs review.
+- **One approval grants permanent access:** duration and scope depend on the product and policy; read the request.
+- **Subagents have separate permissions:** they inherit the main task's sandbox and permission mode.
+- **Hooks replace the sandbox:** Hooks add guardrails and auditing; they do not replace operating-system enforcement.
 
-Many normal operations trigger approval:
-
-- Installing dependencies
-- Writing outside project directory
-- Opening browser or system apps
-- Accessing external sites or APIs
-
-Judge whether the step is **required for the current task**—not only whether a dialog appeared.
-
-### No prompt does not mean zero risk
-
-If sandbox already allows an action—or you previously relaxed rules—Codex may not ask again.
-
-Do not rely only on "was there a dialog"; check how the environment is configured.
-
-## When you see a permission request
-
-Ask three questions:
-
-1. Is this step necessary to finish the current task?
-2. Does the data or path exceed what I expected?
-3. If it goes wrong, do I know how to undo or recover?
-
-If you cannot answer two of three, do not approve—ask Codex why the step is needed.
-
-## Layered guide
-
-| Layer | What it covers | Where to read |
-|---|---|---|
-| Concepts (this page) | Why approvals and isolation matter | — |
-| Product differences | How each client prompts | [CLI approvals and sandbox](/guide/cli/approvals-and-sandbox/) · [Desktop App settings](/guide/desktop-app/settings/) |
-| Prompt strategy | Declaring boundaries in tasks | [Constraints and boundaries](/prompts/constraints-and-boundaries/) |
-
-Official policy and defaults may change—verify at [OpenAI Codex](https://developers.openai.com/codex).
-
-Approval asks whether to continue; sandbox limits how far continuing can go. Read both together for clearer boundaries.
+See [CLI approvals and sandboxing](/en/guide/cli/approvals-and-sandbox/) and [Desktop App settings](/en/guide/desktop-app/settings/) for product settings, and [Constraints and boundaries](/en/prompts/constraints-and-boundaries/) for task wording.
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** OpenAI Developers still provides official Codex entry; this page explains approvals, sandbox, and network as distinct boundaries and points to product chapters without claiming current defaults or exact permission matrices.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE / Cloud
+
+**Verification basis:** Compared with current Codex sandbox, approval, and security guidance. This page separates operating-system boundaries, approval policy, task constraints, and human review, and explains the different local and Cloud network models.
+
+**Last verified:** 2026-08-26

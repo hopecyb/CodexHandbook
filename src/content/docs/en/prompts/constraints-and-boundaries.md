@@ -3,9 +3,10 @@ title: Constraints and boundaries
 description: Limit what can change, style rules, and forbidden actions.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 617fa41
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many tasks fail not because the goal was missing entirely, but because **boundaries were unclear**.
@@ -96,7 +97,7 @@ Be explicit when:
 
 Goal tells Codex what to do; constraints tell it where to stop.
 
-Write permission boundaries with constraints to reduce "while I'm here" overreach. See also [Define done](/prompts/define-done/) and [Permissions and sandbox](/guide/permissions-and-sandbox/).
+Write permission boundaries with constraints to reduce "while I'm here" overreach. See also [Define done](/en/prompts/define-done/) and [Permissions and sandbox](/en/guide/permissions-and-sandbox/).
 
 ---
 

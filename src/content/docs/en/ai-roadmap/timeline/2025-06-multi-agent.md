@@ -8,6 +8,11 @@ trend: rising
 signal: well-calibrated
 tags: [multi-agent, agent, orchestration, collaboration, llmops]
 authored_by: ai-assisted
+locale: en
+source_locale: zh-CN
+translation_status: reviewed
+reviewed_at: 2026-08-26
+source_revision: df11adc
 ---
 
 # Multi-agent

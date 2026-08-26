@@ -5,12 +5,13 @@ sidebar:
   order: 80
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b13e05c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Codex 가이드 핸드북**은 커뮤니티가 유지하는 문서 사이트입니다. 오류 수정, 페이지 보강, 재현 가능 사례, [`examples/`](/examples/README.md)의 프롬프트 예시 추가를 환영합니다.
+**Codex 가이드 핸드북**은 커뮤니티가 유지하는 문서 사이트입니다. 오류 수정, 페이지 보강, 재현 가능 사례, [`examples/`](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md)의 프롬프트 예시 추가를 환영합니다.
 
 ## 이 페이지 내용
 
@@ -33,10 +34,10 @@ translated_at: 2026-07-28
 | 유형 | 설명 | 가이드 |
 |---|---|---|
 | 수정/소규모 | 오탈자, 링크, 낡은 한 문장 | 바로 PR |
-| 새 가이드 페이지 | `src/content/docs/` 아래 장 본문 | [가이드 작성](/guide/contributing/write-a-guide/) |
-| 사례 | `src/content/docs/cases/` | [사례 템플릿](/cases/use-cases/case-study-template/) |
-| 프롬프트 예시 | `examples/prompts/` | [프롬프트 예시 추가](/guide/contributing/add-a-prompt-example/) |
-| 기술 검증 | `verified` 표시, 날짜 갱신 | [기술 내용 검증](/guide/contributing/verify-technical-content/) |
+| 새 가이드 페이지 | `src/content/docs/` 아래 장 본문 | [가이드 작성](/ko/guide/contributing/write-a-guide/) |
+| 사례 | `src/content/docs/cases/` | [사례 템플릿](/ko/cases/use-cases/case-study-template/) |
+| 프롬프트 예시 | `examples/prompts/` | [프롬프트 예시 추가](/ko/guide/contributing/add-a-prompt-example/) |
+| 기술 검증 | `verified` 표시, 날짜 갱신 | [기술 내용 검증](/ko/guide/contributing/verify-technical-content/) |
 | 번역 | `en/`, `zh-tw/` 등 | 로드맵 M6; 먼저 원문을 안정화 |
 
 ## 흔한 오해
@@ -61,7 +62,7 @@ translated_at: 2026-07-28
 ## 기본 원칙
 
 1. **중국어 간체 `root`가 원문**(별도 설명이 없으면)
-2. 외부 튜토리얼 원문을 **복사하지 않음**; [외부 자료 통합 계획](/docs/planning/external-source-integration.md) 참고
+2. 외부 튜토리얼 원문을 **복사하지 않음**; [외부 자료 통합 계획](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md) 참고
 3. **쉽게 바뀌는 사실**에는 `최근 검증` 날짜를 표시
 4. **각 sidebar slug**에 대응하는 markdown이 있어야 하며, 없으면 `npm run build` 실패
 5. 새 페이지는 `astro.config.mjs` sidebar도 동기 갱신
@@ -102,7 +103,7 @@ npm run build
 ## 관련 링크
 
 - 저장소: <https://github.com/hopecyb/CodexHandbook>
-- [장 개요](/docs/planning/chapter-outline.md)(기획용)
+- [장 개요](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)(기획용)
 
 ---
 

@@ -3,9 +3,10 @@ title: Seguridad
 description: 'Página sobre riesgos a nivel de equipo, superficie de ataque e ideas de mitigación: primero dónde está el riesgo, después los controles.'
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Si entras al grupo de seguridad directamente por páginas de detalle, es fácil quedarse solo con términos sueltos sin saber qué están defendiendo.
@@ -14,9 +15,9 @@ Este grupo se entiende mejor en el orden «de dónde viene el riesgo → qué ca
 
 ## Orden recomendado
 
-1. [Modelo de amenazas](/guide/team-enterprise/security/threat-model/)
-2. [Riesgos de Plugin y MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Prompt injection](/guide/team-enterprise/security/prompt-injection/)
+1. [Modelo de amenazas](/es/guide/team-enterprise/security/threat-model/)
+2. [Riesgos de Plugin y MCP](/es/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Prompt injection](/es/guide/team-enterprise/security/prompt-injection/)
 
 ## Quién debería mirarlo primero
 

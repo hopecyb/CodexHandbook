@@ -1,153 +1,86 @@
 ---
 title: Cloud troubleshooting
-description: Symptom index for GitHub connection, environments, Secrets, outbound access, and PR issues.
+description: Diagnose Cloud failures across repository, setup, network, Agent, and delivery layers.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 4ba9a4d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
 
-When Cloud fails, rerunning usually does not fix the root cause.
+A Cloud retry consumes more time but does not add missing permissions, dependencies, or network configuration. Identify the failing stage first.
 
-Cloud issues often sit in **permissions, environment differences, credentials, or network**. This page routes symptoms to the right topic so you do not blindly retry in chat.
+## Five-layer triage
 
-## What's covered
+| Stage | Common symptom | First check |
+|---|---|---|
+| Repository connection | Repository missing, 403, branch missing | GitHub authorization scope, organization policy, starting branch |
+| Container/setup | `command not found`, dependency installation failure | Pinned runtime, setup script, Secret |
+| Agent network | Setup downloads successfully, Agent `curl` fails | Agent access defaults to Off, allowlist, HTTP methods |
+| Agent execution | Wrong-scope edits, test command missing | Prompt scope, `AGENTS.md`, work log |
+| Delivery | Incomplete diff, unable to open a PR | Branch state, write access, protection rules |
 
-- What to check first when a task fails
-- How Cloud troubleshooting differs from local
-- When to step back to local small-step validation
+## Preserve evidence first
 
-## Check conditions first
+Record repository, starting commit, environment name, failure stage, first meaningful error, and complete command. Do not keep only “exit 1.”
 
-If "Cloud red, local green," check runtime conditions first.
+```text
+Environment: api-node22
+Starting point: main@abc123
+Stage: setup
+Command: pnpm install --frozen-lockfile
+First error: ERR_PNPM_FETCH_401 ...
+Local difference: local uses ~/.npmrc; Cloud has no NPM_TOKEN configured
+```
 
-Common causes:
+This record points to a repair instead of forcing the next run to guess again.
 
-- Remote environment differs from local
-- Cloud cannot see unpushed local work
-- Secrets misconfigured
-- Network or permissions restricted
+## Frequent failures
 
-Verify prerequisites before blaming the task itself.
+### Setup sees a Secret but the Agent does not
 
-## Quick triage
+This is intentional: Secrets are removed before the Agent phase. Put credential-dependent installation in setup. Do not convert the value to an ordinary environment variable to bypass the protection.
 
-| Symptom | Check first |
-|---|---|
-| Cannot connect to repo / 403 | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Dependency install fails | [Internet access](/guide/web-and-cloud/internet-access/) · [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
-| Private package / API 401 | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Task stuck waiting | [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) · pending approval? |
-| Local commit invisible to Cloud | Pushed? Cloud does not read unpushed local commits |
-| Cannot open PR or push | Branch protection · [Create PR](/guide/web-and-cloud/create-pull-requests/) |
-| Tests red in Cloud, green locally | Version/env alignment in [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
+### Setup has internet but the Agent does not
 
-## Troubleshooting order
+This is also the default. If the task truly requires Agent internet access, enable it for the environment, constrain domains and methods, and inspect the logs.
 
-1. Correct repo and branch?
-2. Sufficient permissions and authorization?
-3. Environment and dependencies in place?
-4. Secrets and network working?
-5. Task description missing key constraints?
+### Cached dependencies are stale
 
-Clearing these beats rerunning immediately.
+Changing setup, maintenance, variables, or Secrets invalidates the cache automatically. When repository changes make a cache incompatible, use **Reset cache** on the environment page. For a shared team environment, assess the impact on other users first.
 
-## Connection and permissions
+### Local is green but Cloud is red
 
-**Symptom:** OAuth succeeds but task cannot clone.
+Compare Node/Python versions, lockfiles, system dependencies, hidden local configuration, VPN or localhost services, and case-sensitive paths. Turn differences into explicit setup and repository rules.
 
-**Check:**
+### PR review did not run
 
-1. Authorization scope includes target org/repo
-2. Repo archived or GitHub App restrictions enabled
-3. Personal account connected to org repo requiring SSO
+Confirm Cloud configuration for the repository, enabled Code review, the exact `@codex review` comment, and GitHub integration permissions. Automatic reviews must also be enabled separately.
 
-**Symptom:** push rejected.
+## When to return local
 
-**Check:** branch protection, required review, attempt to push directly to `main`
+If a problem depends on a local service, or two consecutive runs are repairing the environment rather than business code, reproduce it locally first. Add the successful commands, versions, and tests to `AGENTS.md` or setup before delegating again.
 
-## Common misconceptions
+## Acceptance after repair
 
-### 1. Install-stage errors are always dependency problems
+- [ ] The same environment runs repeatedly from a clean starting point.
+- [ ] The fix did not hide the problem with broader repository access or unrestricted network access.
+- [ ] Logs do not expose a Secret.
+- [ ] A person still reviews the result diff and tests.
 
-Could also be network, auth, Secrets, or private registry permissions.
+## Official sources
 
-### 2. Local green means code is fine and Cloud is flaky
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
-Often means:  
-**your local environment has prerequisites Cloud lacks.**
-
-### 3. Stuck task means the model is thinking
-
-Could be:
-
-- Waiting for approval
-- Waiting on network
-- Waiting for environment startup
-- Task scope too large
-
-## Environment and dependencies
-
-**Symptom:** `command not found` (node, python, etc.).
-
-**Check:** base image includes required runtime; `AGENTS.md` documents version and install commands.
-
-**Symptom:** lockfile conflict or install timeout.
-
-**Check:** outbound policy; registry mirrors; dependencies requiring VPN (Cloud usually not on internal network)
-
-## Secrets and variables
-
-**Symptom:** env vars empty at build time.
-
-**Check:**
-
-- Secret names match docs (case sensitivity common)
-- Configured in correct repo/environment scope
-- Accidentally pasted Secret in prompt and got redacted
-
-More: [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/)
-
-## Hung tasks and timeouts
-
-| Cause | Action |
-|---|---|
-| Awaiting human approval | Approve or reject in App/phone |
-| Task too large | Split into smaller delegations |
-| Slow environment start | Cold start normal; if persistent, check official status page |
-
-Follow-up: [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/)
-
-## Output quality
-
-Cloud finished but result unusable:
-
-1. Compare against task description—missing acceptance criteria?
-2. Checkout same branch locally and run tests
-3. Add follow-up using [diagnose before fixing](/cases/workflows/diagnose-before-fixing/) instead of restarting whole task
-
-## When to step back to local
-
-If two rounds were spent on Cloud conditions instead of the task itself:
-
-- Reproduce minimally locally
-- Document deps, commands, verification
-- Delegate to Cloud again
-
-Usually faster than guessing in the remote environment.
-
-## Relation to global troubleshooting index
-
-CLI/IDE/App local issues: [Reference · Troubleshooting](/guide/reference/troubleshooting/). This page covers **Cloud-specific** paths only.
-
-## References
-- OpenAI Codex Cloud support docs
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** The triage framework helps, but it assumes current Cloud repo connection, Secrets, approval, network, and PR behavior; as Cloud and cross-client capabilities evolve, symptom-to-topic mapping needs a rewrite against latest official support docs.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

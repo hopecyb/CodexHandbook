@@ -3,9 +3,10 @@ title: Giữ ngữ cảnh tập trung
 description: Kiểm soát phạm vi, mở thread mới và bàn giao.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 042a77f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -43,7 +44,7 @@ Kết quả thường là bạn nghĩ mình đang bổ sung thông tin, còn Cod
 - Một tác vụ một mục tiêu
 - Định kỳ tóm tắt «đã xong / chưa xong / ràng buộc còn hiệu lực»
 - Tác vụ dài dùng cổng giai đoạn
-- Xuyên phiên dùng [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
+- Xuyên phiên dùng [Bàn giao và khôi phục](/vi/guide/agent-work/handoff-and-resume/)
 
 ## Thấy các tín hiệu này thì nên thu hẹp
 

@@ -3,9 +3,10 @@ title: Conversar com o Codex
 description: Pratica explicar objetivos e limites em linguagem natural.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -49,7 +50,7 @@ Se nem Tarefas só de leitura ficam claras, Tarefas de alteração desviam-se ai
 
 Leitura, explicação e resumo também precisam de limites.
 
-Seguinte: [Trabalhar com ficheiros](/guide/learning-paths/beginner/02-work-with-files/) · Princípio: [Fundamentos de Prompt](/prompts/basics/)
+Seguinte: [Trabalhar com ficheiros](/pt/guide/learning-paths/beginner/02-work-with-files/) · Princípio: [Fundamentos de Prompt](/pt/prompts/basics/)
 
 ---
 

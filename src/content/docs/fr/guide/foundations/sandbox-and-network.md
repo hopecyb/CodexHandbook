@@ -3,9 +3,10 @@ title: Bac à sable et réseau
 description: Isolation d'exécution, accès réseau et limites de risque.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3d6d57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -18,7 +19,7 @@ Le **Bac à sable** limite les parties du système de fichiers et du système qu
 2. Ne mettez pas de secrets de production dans un projet d'entraînement
 3. Lorsque vous voyez des demandes de « se connecter » ou « écrire sur des chemins sensibles », faites une pause, lisez, puis approuvez
 
-Paramètres produit : App de bureau [Paramètres](/guide/desktop-app/settings/) ; détails officiels : [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Paramètres produit : App de bureau [Paramètres](/fr/guide/desktop-app/settings/) ; détails officiels : [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 ---
 

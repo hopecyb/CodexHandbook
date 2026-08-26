@@ -3,9 +3,10 @@ title: Human approval patterns
 description: When to approve, reject, or pause Codex—and how to write those rules clearly.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Approval keeps irreversible actions for humans. This page summarizes common patterns.
@@ -20,7 +21,7 @@ Prompt-confirm zone (write files, run commands, network)
 Mandatory human zone (push, delete data, send externally, change production config)
 ```
 
-Specific dialog behavior varies by [product entry](/guide/); principles are the same.
+Specific dialog behavior varies by [product entry](/en/guide/); principles are the same.
 
 ## Pattern 1: Plan first, execute later
 
@@ -32,7 +33,7 @@ Good for: unfamiliar codebase, production-related, large diff.
 
 ## Pattern 2: Command whitelist
 
-In [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) write:
+In [AGENTS.md](/en/guide/customization/agents-md/writing-effective-instructions/) write:
 
 ```md
 Allowed without asking again: pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ When conflicting with hosted policy, **stricter** wins.
 1. Codex opens draft PR or local branch
 2. Human CI + review, then merge
 
-Cloud: see [Create pull requests](/guide/web-and-cloud/create-pull-requests/).
+Cloud: see [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/).
 
 ## Pattern 4: Read-only recon
 
@@ -68,7 +69,7 @@ For audit, learning unfamiliar projects, production diagnosis.
 
 ## Relation to Automations
 
-Unattended tasks should still design human confirmation points—see [Scheduled and background tasks](/skills/automations/scheduled-tasks/).
+Unattended tasks should still design human confirmation points—see [Scheduled and background tasks](/en/skills/automations/scheduled-tasks/).
 
 ## Common mistakes
 

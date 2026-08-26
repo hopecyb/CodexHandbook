@@ -3,9 +3,10 @@ title: 対話モード
 description: ターミナルで Codex と会話しながらタスクを実行する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 794dd7c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,7 +22,7 @@ sidebar:
 3. プロンプト時にツール呼び出しを承認 / 拒否する
 4. `/` 系ショートカット（ある場合）でセッション管理——現行 CLI のヘルプを正とする
 
-プロンプトの考え方は引き続き有効：[プロンプト](/prompts/)
+プロンプトの考え方は引き続き有効：[プロンプト](/ja/prompts/)
 
 ## よくある誤解
 

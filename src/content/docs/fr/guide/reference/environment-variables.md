@@ -3,9 +3,10 @@ title: "Variables d'environnement"
 description: Objectif, couche et sécurité des variables d'environnement liées à Codex — supplément à la référence de configuration.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Les variables d'environnement sont à deux extrêmes : « trop bas niveau » ou « tout y mettre ». Simplement : elles passent des valeurs aux programmes à l'exécution — surtout secrets et interrupteurs.
@@ -28,7 +29,7 @@ Préférer les variables d'environnement si l'un s'applique :
 
 Donc tokens, interrupteurs temporaires et injection CI utilisent souvent env — pas fichiers codés en dur.
 
-Concepts config : [Référence de configuration](/guide/reference/configuration-reference/) ; Cloud : [Secrets et variables](/guide/web-and-cloud/secrets-and-variables/).
+Concepts config : [Référence de configuration](/fr/guide/reference/configuration-reference/) ; Cloud : [Secrets et variables](/fr/guide/web-and-cloud/secrets-and-variables/).
 
 ## Bon choix pour variables d'environnement
 
@@ -66,7 +67,7 @@ Donc :
 
 - Standards de code, structure de répertoires → `AGENTS.md`
 - Modèle par défaut d'équipe → config projet (parties non secrètes)
-- Listes d'autorisation complexes → [Règles](/guide/customization/rules/allow-and-deny-patterns/)
+- Listes d'autorisation complexes → [Règles](/fr/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Idées reçues courantes
 
@@ -131,11 +132,11 @@ Exporter token personnel dans `~/.zshrc` ou direnv `.envrc` — **ne pas committ
 
 ### CLI non interactif
 
-CI injecte via secret store puis exécute `codex exec`. Voir [Mode non interactif](/guide/cli/non-interactive-mode/).
+CI injecte via secret store puis exécute `codex exec`. Voir [Mode non interactif](/fr/guide/cli/non-interactive-mode/).
 
 ### Serveurs MCP
 
-Les processus MCP héritent souvent l'env parent ; référencer `$VAR` dans config au lieu de coder en dur. Voir [Connecter MCP](/skills/mcp/connect-an-mcp-server/).
+Les processus MCP héritent souvent l'env parent ; référencer `$VAR` dans config au lieu de coder en dur. Voir [Connecter MCP](/fr/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 

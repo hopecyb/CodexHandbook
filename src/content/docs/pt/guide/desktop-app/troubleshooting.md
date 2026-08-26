@@ -3,9 +3,10 @@ title: Resolução de problemas na App de desktop
 description: Tratamento habitual de falhas de instalação, login e Tarefas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ca74b6c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,7 +21,7 @@ Ao resolver problemas, investigue pela ordem do mais provável e do mais fácil 
 | A Tarefa fica à espera de Aprovação | Volte à vista da Tarefa e trate os pedidos pendentes |
 | As mudanças não correspondem ao esperado | Aperte as restrições, abra uma Thread nova, verifique o Contexto |
 
-Se continuar a falhar: [https://developers.openai.com/codex](https://developers.openai.com/codex) e [Índice de resolução de problemas](/guide/reference/troubleshooting/).
+Se continuar a falhar: [https://developers.openai.com/codex](https://developers.openai.com/codex) e [Índice de resolução de problemas](/pt/guide/reference/troubleshooting/).
 
 ## Mal-entendidos frequentes
 

@@ -3,16 +3,17 @@ title: 프롬프트 주입
 description: 신뢰할 수 없는 텍스트가 컨텍스트에 들어올 때——식별, 완화, 팀 정책 요점입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 “프롬프트 주입”은 Codex가 보게 될 컨텍스트에, Codex를 오도하는 내용을 집어넣는 행위입니다.
 
-그 내용은 issue, 웹페이지, 의존성 주석, 문서, 사용자가 붙여 넣은 텍스트에서 올 수 있으며, 목적은 대개 Agent가 **정책을 무시하고, 데이터를 유출하고, 위험한 명령을 실행**하도록 유도하는 것입니다. [위협 모델](/guide/team-enterprise/security/threat-model/)에서 빈도가 높은 위험이며, 실제 업무와 멀리 있지 않습니다.
+그 내용은 issue, 웹페이지, 의존성 주석, 문서, 사용자가 붙여 넣은 텍스트에서 올 수 있으며, 목적은 대개 Agent가 **정책을 무시하고, 데이터를 유출하고, 위험한 명령을 실행**하도록 유도하는 것입니다. [위협 모델](/ko/guide/team-enterprise/security/threat-model/)에서 빈도가 높은 위험이며, 실제 업무와 멀리 있지 않습니다.
 
 ## 내용
 
@@ -75,12 +76,12 @@ Codex에게는, 어떤 텍스트를 봤다면 그 텍스트가 이후 행동에 
 **설계 층**
 
 - **시스템 정책**과 **신뢰할 수 없는 사용자 내용**을 구분(아키텍처는 제품마다 다름)
-- 고민감 동작은 항상 [사람 승인](/cases/workflows/human-approval-patterns/)
+- 고민감 동작은 항상 [사람 승인](/ko/cases/workflows/human-approval-patterns/)
 
 **엔지니어링 층**
 
 - CI 프롬프트에 PR body를 **원문 그대로 붙이지 않음**；구조화 필드 + 길이 제한
-- [Hook](/skills/hooks/hooks-examples/)으로 알려진 주입 구문 스캔(보완 층)
+- [Hook](/ko/skills/hooks/hooks-examples/)으로 알려진 주입 구문 스캔(보완 층)
 - 읽기 전용 token, `git push` 금지
 
 **프로세스 층**
@@ -120,7 +121,7 @@ Codex에게는, 어떤 텍스트를 봤다면 그 텍스트가 이후 행동에 
 
 - [ ] CI/Cloud 리뷰 흐름의 주입면을 평가함
 - [ ] 유지보수자가 의심스러운 issue를 식별할 줄 앎
-- [ ] [허용 가능한 사용](/guide/team-enterprise/governance/acceptable-use/)과 일치
+- [ ] [허용 가능한 사용](/ko/guide/team-enterprise/governance/acceptable-use/)과 일치
 
 ## 참고 출처
 - OWASP LLM Top 10(Prompt Injection)

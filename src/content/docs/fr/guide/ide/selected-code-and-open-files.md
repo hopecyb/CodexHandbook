@@ -3,9 +3,10 @@ title: Sélection et fichiers ouverts
 description: Utiliser le code sélectionné et les fichiers ouverts pour cadrer précisément le périmètre de Tâche IDE.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 L'extension IDE excelle sur les modifications **petites et haute précision** : sélectionner du code, énoncer l'intention, Codex modifie le Contexte proche. Cette page montre comment sélection et fichiers ouverts resserrent le périmètre et évitent d'éditer au mauvais endroit.
@@ -26,11 +27,11 @@ La sélection dit à Codex : concentre-toi ici — n'élargis pas le périmètre
 | **Fichiers ouverts** | Plusieurs endroits liés dans le fichier | Ouvrir `auth.ts` + `auth.test.ts` |
 | **Chemin @** | Cross-répertoire, pas ouvert | `@src/api/client.ts` aligner types avec backend |
 
-Concept plus profond : [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/)
+Concept plus profond : [Contexte de fichiers et dossiers](/fr/guide/context/file-and-folder-context/)
 
 ## Approche minimum viable
 
-1. Sélectionnez le **plus petit extrait pertinent** (souvent 10–80 lignes) ; énoncez objectif et [définition du terminé](/prompts/define-done/) dans le Prompt
+1. Sélectionnez le **plus petit extrait pertinent** (souvent 10–80 lignes) ; énoncez objectif et [définition du terminé](/fr/prompts/define-done/) dans le Prompt
 2. Si les appelants comptent, ouvrez ou @ 1–2 fichiers en amont
 3. Demandez de « modifier seulement les fichiers liés à X ; lister les fichiers avant d'éditer »
 4. Acceptez le diff IDE bloc par bloc — pas tout accepter
@@ -43,7 +44,7 @@ Sélection : optionnelle — partir de la fonction d'entrée
 Prompt : limites de module, répertoires qui ne doivent pas changer
 ```
 
-Grandes refactorisations : préférez [worktrees App de bureau](/guide/desktop-app/worktrees/) ou [mode planification](/guide/agent-work/planning/). L'IDE convient aux finitions et petits commits.
+Grandes refactorisations : préférez [worktrees App de bureau](/fr/guide/desktop-app/worktrees/) ou [mode planification](/fr/guide/agent-work/planning/). L'IDE convient aux finitions et petits commits.
 
 ## Questions courantes
 
@@ -64,13 +65,13 @@ La sélection et les fichiers ouverts existent pour éviter de traîner un péri
 
 ## Associer à la revue
 
-Avant d'accepter, vérifiez [revoir les diffs](/guide/quality/review-diffs/) :
+Avant d'accepter, vérifiez [revoir les diffs](/fr/guide/quality/review-diffs/) :
 
 - Seuls les fichiers convenus ont changé ?
 - Suppressions inattendues hors sélection ?
 - Les tests couvrent les nouvelles branches ?
 
-Page produit : [Revoir les changements IDE](/guide/ide/reviewing-changes/)
+Page produit : [Revoir les changements IDE](/fr/guide/ide/reviewing-changes/)
 
 ## Erreurs courantes
 
@@ -81,7 +82,7 @@ Page produit : [Revoir les changements IDE](/guide/ide/reviewing-changes/)
 | Tout accepter sans lire le diff | Dérive de style ou problèmes de sécurité |
 
 ## Références
-- [Contraintes et limites](/prompts/constraints-and-boundaries/)
+- [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)
 ---
 
 **Statut :** vérifié  

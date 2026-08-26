@@ -3,14 +3,15 @@ title: CLI 구성
 description: "모델, 샌드박스, 승인, MCP—터미널에서 Codex 동작을 통일합니다."
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-CLI 구성은 **기본 모델, 작업 디렉터리, 승인 엄격도, MCP 서버** 등을 정합니다. [구성 기초](/guide/customization/configuration/config-basics/) 개념과 일치하며, 이 페이지는 터미널 사용자가 자주 바꾸는 항목에 초점을 둡니다.
+CLI 구성은 **기본 모델, 작업 디렉터리, 승인 엄격도, MCP 서버** 등을 정합니다. [구성 기초](/ko/guide/customization/configuration/config-basics/) 개념과 일치하며, 이 페이지는 터미널 사용자가 자주 바꾸는 항목에 초점을 둡니다.
 
 ## 이 페이지의 내용
 
@@ -74,7 +75,7 @@ CLI 구성은 “Codex의 터미널 기본 작업 습관”으로 이해하면 �
 | 표준 | 일상 개발 |
 | 완화 | 개인 신뢰 환경만, 회사 정책에 부합할 때 |
 
-개념: [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
+개념: [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
 
 ### 승인 전략
 
@@ -82,7 +83,7 @@ CLI는 shell 실행·디스크 쓰기·네트워크 전에 물을 수 있습니�
 
 ### MCP 서버 목록
 
-[MCP 서버 연결](/skills/mcp/connect-an-mcp-server/)과 구성을 공유합니다. 변경 후 세션을 다시 시작하세요.
+[MCP 서버 연결](/ko/skills/mcp/connect-an-mcp-server/)과 구성을 공유합니다. 변경 후 세션을 다시 시작하세요.
 
 ## 충분한 구성 순서
 
@@ -111,7 +112,7 @@ CLI는 shell 실행·디스크 쓰기·네트워크 전에 물을 수 있습니�
 | MCP가 로드되지 않음 | JSON/TOML 문법, 경로 |
 | 승인이 너무 잦음 | 샌드박스 모드와 allowlist |
 
-더 보기: [CLI 문제 해결](/guide/cli/troubleshooting/)
+더 보기: [CLI 문제 해결](/ko/guide/cli/troubleshooting/)
 
 CLI 구성을 “기본 작업 습관”으로 보고, **거의 매번 반복해 고르는** 것만 고정하세요. 고급 능력은 나중에 보완해도 됩니다.
 

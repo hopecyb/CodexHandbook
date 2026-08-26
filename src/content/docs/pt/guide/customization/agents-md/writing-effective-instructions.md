@@ -3,9 +3,10 @@ title: Escrever instruções eficazes
 description: Checklist de escrita para AGENTS.md — curto, rígido, executável, verificável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ Declare explicitamente o que não fazer
 
 ### 1. Restrições rígidas à frente
 
-Coloque «obrigatório» e «proibido» no início do ficheiro. Com Contexto limitado, o modelo dá mais peso ao começo — a mesma lógica de [Prioridade de Contexto](/guide/context/context-priority/).
+Coloque «obrigatório» e «proibido» no início do ficheiro. Com Contexto limitado, o modelo dá mais peso ao começo — a mesma lógica de [Prioridade de Contexto](/pt/guide/context/context-priority/).
 
 ### 2. Comandos copiáveis
 
@@ -151,9 +152,9 @@ Boas instruções de projeto não se medem pela quantidade, e sim por restriçõ
 
 ## Leitura complementar
 
-- [Instruções do projeto](/guide/customization/project-instructions/)
-- [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- [Definir concluído](/prompts/define-done/)
+- [Instruções do projeto](/pt/guide/customization/project-instructions/)
+- [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- [Definir concluído](/pt/prompts/define-done/)
 
 ## De uma tarefa a uma regra de projeto
 

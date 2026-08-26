@@ -3,9 +3,10 @@ title: Create template
 description: Build features, documents, or artifacts from scratch.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Create template
@@ -62,8 +63,8 @@ In create tasks, the riskiest move is starting before "what to build and for who
 
 ## Related
 
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Define done](/prompts/define-done/)
+- [Specification-driven work](/en/cases/workflows/specification-driven-work/)
+- [Define done](/en/prompts/define-done/)
 
 ---
 

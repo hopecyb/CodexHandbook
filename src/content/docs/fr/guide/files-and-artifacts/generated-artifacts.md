@@ -3,9 +3,10 @@ title: Vérifier les artefacts générés
 description: Accepter systématiquement les fichiers, rapports et sorties de build que Codex crée ou exporte.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -48,7 +49,7 @@ Contrairement à « changé quelques lignes de code existant », ceux-ci sont fa
 5. Décider : accepter / édition partielle / abandonner et refaire
 ```
 
-Méthodes : [Vérifier les artefacts](/guide/quality/verify-artifacts/), [Définition de terminé](/guide/quality/definition-of-done/)
+Méthodes : [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/), [Définition de terminé](/fr/guide/quality/definition-of-done/)
 
 ## Idées reçues courantes
 
@@ -102,7 +103,7 @@ Généré ne signifie pas vérifié — ouvrir, valider et savoir s'il doit êtr
 - [ ] Pas de secrets, pas de répertoires générés errants
 
 ## Sources de référence
-- [Gérer l'incertitude](/guide/quality/handle-uncertainty/)
+- [Gérer l'incertitude](/fr/guide/quality/handle-uncertainty/)
 - exigences d'acceptation cas intégration sources externes
 ---
 

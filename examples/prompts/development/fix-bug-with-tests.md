@@ -18,7 +18,7 @@ last_verified: 2026-07-25
 
 - 本地可运行项目测试命令（见 `AGENTS.md` 或 `package.json`）
 - 在修复分支上工作；不要对 `main` 直接改
-- 确认 [命令规则](/06-customization/rules/command-rules/) 允许测试命令
+- 确认 [命令规则](/guide/customization/rules/command-rules/) 允许测试命令
 
 # 推荐版提示词
 
@@ -49,6 +49,6 @@ last_verified: 2026-07-25
 
 # 相关内容
 
-- [测试驱动工作](/09-workflows/test-driven-work/)
-- [先诊断再修复](/09-workflows/diagnose-before-fixing/)
-- [运行测试](/05-core-capabilities/quality/run-tests/)
+- [测试驱动工作](/cases/workflows/test-driven-work/)
+- [先诊断再修复](/cases/workflows/diagnose-before-fixing/)
+- [运行测试](/guide/quality/run-tests/)

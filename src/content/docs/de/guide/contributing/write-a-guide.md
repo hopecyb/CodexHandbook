@@ -1,125 +1,128 @@
 ---
-title: Guide-Seite schreiben
-description: "Struktur, Frontmatter und Cross-Link-Konventionen für neue Handbuchtexte."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Eine Anleitungsseite schreiben
+description: Vorgaben für Struktur, Frontmatter und Querverweise neuer Handbuchseiten.
 sidebar:
   order: 10
+locale: de
+source_locale: zh-CN
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Diese Seite: Wie Sie unter `src/content/docs/` **Guide-Seiten** anlegen oder umschreiben (keine reinen Fallstudien, keine reinen Referenztabellen).
+Diese Seite erklärt, wie du unter `src/content/docs/` eine **Anleitungsseite** hinzufügst oder überarbeitest, also weder ein reines Fallbeispiel noch eine reine Referenztabelle.
 
 ## Inhalt dieser Seite
 
-Typische Stolperstellen:
+Typische Schwierigkeiten sind:
 
-- Unklar, wie eine Guide-Seite aussehen soll
-- Unsicher, ob „Tutorial“, „Norm“ oder „Inhaltsverzeichnis-Zusammenfassung“
-- Unklar, was Einsteigern wirklich hilft
+- Es ist unklar, wie eine Anleitungsseite aufgebaut sein soll
+- Es ist unklar, ob du gerade ein Tutorial, eine Vorgabe oder nur eine Kapitelzusammenfassung schreibst
+- Es ist unklar, wie der Text Einsteigern tatsächlich hilft
 
-Hier getrennt — für wartbare, lesbare Guides.
+Die folgenden Abschnitte trennen diese Fragen und helfen dir, eine verständliche und langfristig pflegbare Anleitungsseite zu schreiben.
 
-## Rolle der Guide-Seite
+## Zweck einer Anleitungsseite
 
-Nicht „Material stapeln“. Sie soll von „Thema existiert“ zu „wann nutzen, was zuerst lesen, welche Fallen“ führen.
+Eine „Anleitungsseite“ ist nicht fertig, sobald Informationen auf ihr gesammelt wurden. Sie soll Leser von „Ich weiß, dass dieses Thema existiert“ zu „Ich verstehe ungefähr, wann ich es brauche, womit ich beginne und welche Fehler ich vermeiden sollte“ führen.
 
-Also nicht nur Wissensliste oder Befehlsliste — sondern nächster Schritt klar.
+Deshalb enthält sie üblicherweise mehr als eine Liste von Begriffen oder Befehlen. Sie zeigt außerdem, wie die Leser anschließend weiterarbeiten können.
 
 ## Frontmatter
 
 ```yaml
 ---
 title: Seitentitel
-description: In einem Satz, welches Problem die Seite löst
+description: Ein Satz zum Problem, das diese Seite löst
 ---
 ```
 
-Optional einheitlicher Footer (wie bestehende Seiten):
+Optional kannst du den einheitlichen Footer bestehender Seiten verwenden:
 
 ```markdown
 ---
 
 **Status:** planned | draft | review | verified | outdated | archived
-**Gilt für:** App / CLI / IDE / Cloud
+**Unterstützte Produkte:** App / CLI / IDE / Cloud
 **Zuletzt geprüft:** YYYY-MM-DD
 ```
 
 ## Empfohlene Struktur
 
-Abschnitte nach [External-Source-Integrations-Template](/docs/planning/external-source-integration.md#6-推荐页面模板); häufig:
+Wähle passende Abschnitte aus der [Vorlage zur Integration externer Quellen](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF). Häufig verwendet werden:
 
-- Welches Problem die Seite löst
-- Für wen
-- Minimal nutzbares Vorgehen
-- Empfohlener Workflow
-- Häufige Fehler
-- Sicherheitsgrenzen
-- Abnahmeliste
-- Quellen
+- Welches Problem löst die Seite?
+- Für wen ist sie gedacht?
+- Was ist die kleinste brauchbare Vorgehensweise?
+- Welcher Workflow wird empfohlen?
+- Welche Fehler treten häufig auf?
+- Wo liegen die Sicherheitsgrenzen?
+- Welche Punkte müssen bei der Abnahme geprüft werden?
+- Welche Quellen wurden verwendet?
 
-Produktbedienseiten eher Schritte; Konzeptseiten eher Tabellen und Diagramme.
+Seiten zur Produktbedienung dürfen stärker schrittweise aufgebaut sein, Konzeptseiten stärker mit Tabellen und Diagrammen arbeiten.
 
 ## Häufige Missverständnisse
 
-### Nicht jede Seite als Enzyklopädie
+### Nicht jede Seite muss eine Enzyklopädie sein
 
-Beim ersten Schreiben alles reinpacken — Fokus geht verloren.
+Beim Schreiben der ersten Anleitungsseite landet leicht das gesamte eigene Wissen im Text. Dadurch geht der Schwerpunkt verloren.
 
-Stabiler:
+Eine üblichere Reihenfolge ist:
 
-- Zuerst Hauptproblem
-- Dann typische Missverständnisse
-- Dann brauchbares Vorgehen oder Entscheidungsverfahren
+- Zuerst erklären, welches zentrale Problem die Seite löst
+- Danach die wahrscheinlichsten Missverständnisse der Leser behandeln
+- Anschließend eine ausreichende Vorgehensweise oder Entscheidungshilfe geben
 
-Hilft Einsteigern oft mehr als alle Details auf einmal.
+Das hilft Einsteigern meist mehr als eine möglichst vollständige Sammlung aller Details.
 
-### Nicht nur schreiben, was Sie wissen — wie andere lesen
+### Nicht nur an das Schreiben, sondern auch an das Lesen denken
 
-Sie kennen den Kontext; Erstleser nicht.
+Du selbst kennst den Kontext, neue Leser jedoch nicht.
 
-Brücken bewusst:
+Ergänze deshalb bewusst diese Übergangsinformationen:
 
-- Für wen die Seite
-- Was nach dem Lesen lösbar sein soll
-- Was zuerst greifen, wenn nur Einstieg
+- Für wen die Seite geeignet ist
+- Welches Problem nach dem Lesen lösbar sein soll
+- Welcher Punkt für einen schnellen Einstieg zuerst wichtig ist
 
-### Guide ersetzt keine offizielle Doku
+### Eine Anleitungsseite ersetzt nicht die offizielle Dokumentation
 
-Community hilft verstehen, verbinden, landen — flüchtige Fakten weiter an der offiziellen Doku prüfen.
+Ein Community-Handbuch kann Informationen verständlich machen, verbinden und auf die Praxis übertragen. Veränderliche Fakten müssen jedoch weiterhin anhand der offiziellen Dokumentation verifiziert werden.
 
-## Cross-Links
+## Querverweise
 
-- Interne Links mit Root-Pfad: `/cases/workflows/explore-plan-execute-verify/`
-- Auf Autoritätsseiten verlinken, große Duplikate vermeiden
-- Neue Seite in Kapitel-`index.md` und `astro.config.mjs`-Sidebar eintragen
+- Verwende für interne Links absolute Pfade: `/de/cases/workflows/explore-plan-execute-verify/`
+- Verlinke auf maßgebliche Seiten, statt große Textteile zu duplizieren
+- Trage neue Seiten im `index.md` des Kapitels und in der Sidebar von `astro.config.mjs` ein
 
-## Ton
+## Tonalität
 
-- Technisches Deutsch für Praktiker
-- Unsicherheit anerkennen („laut offizieller Doku“)
-- Keine „Wunder-Prompt“-Erzählung
+- Deutsch für Praktiker
+- Unsicherheit offen benennen, etwa mit „Maßgeblich ist die offizielle Dokumentation“
+- Keine Erzählung vom „Universal-Prompt“ verwenden
 
 ## Schreibreihenfolge
 
-1. Welches Problem löst die Seite
-2. Was Leser leicht missverstehen oder überspringen
-3. Minimal nutzbares Vorgehen, Workflow oder Entscheidung
-4. Zuletzt Cross-Links und Quellen
+Eine hilfreiche Reihenfolge ist:
 
-## Prüfung
+1. Beschreibe zuerst das konkrete Problem der Seite.
+2. Behandle dann die Stellen, die Leser am ehesten missverstehen oder überspringen.
+3. Ergänze anschließend die kleinste brauchbare Vorgehensweise, einen Workflow oder eine Entscheidungshilfe.
+4. Füge zum Schluss Querverweise und Quellen hinzu.
 
-Vor dem PR [Technische Inhalte prüfen](/guide/contributing/verify-technical-content/) lesen. Befehle, Preise, Berechtigungen usw. nachprüfen.
+## Verifikation
 
-Gute Guide-Seiten gewinnen nicht durch „alles voll“ — sondern dadurch, dass Erstleser wissen, warum die Seite existiert, was zuerst und wohin als Nächstes.
+Lies vor dem PR [Technische Inhalte verifizieren](/de/guide/contributing/verify-technical-content/). Veränderliche Angaben wie Befehle, Preise und Berechtigungen müssen erneut überprüft werden.
+
+Eine gute Anleitungsseite zeichnet sich nicht dadurch aus, dass sie jedes Detail enthält. Sie zeigt neuen Lesern, weshalb die Seite existiert, womit sie beginnen und wohin sie anschließend gehen können.
 
 ## Quellen
-- Offizielle OpenAI-Codex-Dokumentation
+- Offizielle OpenAI-Dokumentation zu Codex
 ```
 ---
 
 **Status:** verified  
-**Prüfgrundlage:** Gegen aktuelles Frontmatter, Footer-Status, Cross-Link-Gewohnheiten und Sidebar-Pflege geprüft; Schreibnorm und Strukturvorschläge, ohne produktversionsabhängige Details.  
+**Prüfgrundlage:** Anhand des aktuellen Frontmatters, der Footer-Status, der Querverweise und der Sidebar-Pflege dieses Repositorys geprüft. Die Seite beschreibt Schreibregeln und Strukturempfehlungen für Handbuchtexte und hängt nicht von Einzelheiten einer Produktversion ab.  
 **Zuletzt geprüft:** 2026-07-26

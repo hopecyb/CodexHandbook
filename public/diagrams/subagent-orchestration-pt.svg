@@ -1,0 +1,74 @@
+<svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-labelledby="title desc">
+  <title id="title">Arquitetura de orquestração de subagentes Codex</title>
+  <desc id="desc">O Agent principal mantém objetivos, restrições e permissões enquanto delega trabalho delimitado. Subagentes herdam o sandbox e podem compartilhar um workspace; retornam evidências para resolução de conflitos, merge e verificação final.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 12.8px; }
+    .label { fill: #f8fafc; font-size: 15.2px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+    .tiny { fill: #94a3b8; font-size: 10.4px; }
+    .lane { fill: #fbbf24; font-size: 11.2px; font-weight: 700; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+    <marker id="green-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#34d399"/></marker>
+  </defs>
+  <rect width="1200" height="800" rx="8" fill="#020617"/>
+  <rect width="1200" height="800" rx="8" fill="url(#grid)"/>
+  <text x="44" y="48" class="h1">O Agent principal orquestra, subagentes focam e evidências retornam ao thread principal para aceitação</text>
+  <text x="44" y="75" class="sub">Paralelize primeiro trabalho delimitado de somente leitura. Isolamento de contexto não é isolamento de arquivos; tarefas de escrita precisam de propriedade separada.</text>
+
+  <rect x="356" y="108" width="488" height="132" rx="10" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="600" y="145" text-anchor="middle" class="label">Agent principal: manter controle global</text>
+  <text x="600" y="177" text-anchor="middle" class="note">Objetivo do usuário · restrições · plano · modo de permissão</text>
+  <text x="600" y="207" text-anchor="middle" class="tiny">Definir contratos de subtarefa, decidir se adota resultados e assumir a resposta final</text>
+
+  <path d="M470 240V282H192V320" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <path d="M600 240V320" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <path d="M730 240V282H1008V320" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <text x="340" y="273" class="tiny">Contrato de delegação delimitado</text>
+
+  <rect x="44" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#34d399" stroke-width="1.5"/>
+  <text x="192" y="357" text-anchor="middle" class="label">Subagente A</text>
+  <text x="192" y="388" text-anchor="middle" class="note">Caminho de código somente leitura</text>
+  <path d="M72 408H312" fill="none" stroke="#14532d"/>
+  <text x="192" y="439" text-anchor="middle" class="note">Entregar: cadeia de chamadas e locais de arquivos</text>
+  <text x="192" y="469" text-anchor="middle" class="tiny">Contexto independente · permissões herdadas</text>
+  <text x="192" y="491" text-anchor="middle" class="tiny">Pode rodar com outras tarefas somente leitura</text>
+
+  <rect x="452" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="600" y="357" text-anchor="middle" class="label">Subagente B</text>
+  <text x="600" y="388" text-anchor="middle" class="note">Localizar testes e reprodução</text>
+  <path d="M480 408H720" fill="none" stroke="#4c1d95"/>
+  <text x="600" y="439" text-anchor="middle" class="note">Entregar: comando com falha e logs</text>
+  <text x="600" y="469" text-anchor="middle" class="tiny">Contexto independente · permissões herdadas</text>
+  <text x="600" y="491" text-anchor="middle" class="tiny">Conclusões devem ser reproduzíveis</text>
+
+  <rect x="860" y="320" width="296" height="188" rx="10" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="1008" y="357" text-anchor="middle" class="label">Subagente C</text>
+  <text x="1008" y="388" text-anchor="middle" class="note">Revisar opções ou mudanças recentes</text>
+  <path d="M888 408H1128" fill="none" stroke="#713f12"/>
+  <text x="1008" y="439" text-anchor="middle" class="note">Entregar: opções, evidências e riscos</text>
+  <text x="1008" y="469" text-anchor="middle" class="tiny">Contexto independente · permissões herdadas</text>
+  <text x="1008" y="491" text-anchor="middle" class="tiny">Adiciona custo de tokens e consolidação</text>
+
+  <rect x="44" y="536" width="1112" height="78" rx="9" fill="#2a1018" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="70" y="565" class="lane">Limite de execução compartilhado</text>
+  <text x="600" y="566" text-anchor="middle" class="note">Sandbox e modo de permissão são herdados da tarefa principal; vários Agents podem ver um mesmo workspace</text>
+  <text x="600" y="594" text-anchor="middle" class="tiny">Escritas concorrentes no mesmo arquivo entram em conflito: atribua propriedade por diretório, componente ou worktree e depois faça merge no thread principal.</text>
+
+  <path d="M192 508V535" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M600 508V535" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M1008 508V535" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M192 614V652H500" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#green-arrow)"/>
+  <path d="M600 614V652" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#green-arrow)"/>
+  <path d="M1008 614V652H700" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#green-arrow)"/>
+
+  <rect x="356" y="652" width="488" height="112" rx="10" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="600" y="690" text-anchor="middle" class="label">O Agent principal consolida, resolve conflitos e verifica</text>
+  <text x="600" y="721" text-anchor="middle" class="note">Comparar evidências → decidir edições → fazer merge → rodar testes e build novamente</text>
+  <text x="600" y="749" text-anchor="middle" class="tiny">Conclusão de subtarefa não é conclusão da tarefa; apenas evidência reproduzível sustenta a conclusão final.</text>
+</svg>

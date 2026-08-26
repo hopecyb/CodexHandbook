@@ -3,9 +3,10 @@ title: Plantilla de caso
 description: Estructura unificada para redactar y hacer retrospectiva de casos de Codex — facilita la captura y la comparación en el equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a430fba
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Copia esta plantilla para crear una página de caso nueva o un documento interno de retrospectiva.

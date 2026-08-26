@@ -3,9 +3,10 @@ title: Phân tích bảng tính
 description: Tải lên hoặc tham chiếu dữ liệu bảng để tổng hợp và rút insight.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Phân tích bảng tính
@@ -40,7 +41,7 @@ Nghiệm thu: Mỗi số trong summary ghi cách tính hoặc tên cột đượ
 
 ## 4. Liên quan
 
-- [Bảng và bảng tính](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Bảng và bảng tính](/vi/guide/files-and-artifacts/tables-and-spreadsheets/)
 ---
 
 **Trạng thái:** verified  

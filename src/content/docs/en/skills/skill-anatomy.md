@@ -3,9 +3,10 @@ title: Skill anatomy
 description: Roles of SKILL.md, references/, templates/, and scripts/, with examples.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 The first time you open a Skill directory, folders look familiar—but it is not always obvious why they are laid out this way.
@@ -87,7 +88,7 @@ If one or two answers are yes, start splitting.
 
 Run with `SKILL.md` first; split references, templates, and scripts when complexity warrants it.
 
-Full exercise: [Create your first Skill](/skills/create-your-first-skill/).
+Full exercise: [Create your first Skill](/en/skills/create-your-first-skill/).
 ## From template to Skill
 
 Many teams do not start by designing a Skill. They start with a prompt they keep copying. Let it evolve in stages:

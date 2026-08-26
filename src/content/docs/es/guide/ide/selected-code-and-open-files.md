@@ -3,9 +3,10 @@ title: Selección y archivos abiertos
 description: Acotar con precisión el alcance de la Tarea en el IDE mediante código seleccionado y archivos abiertos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -28,11 +29,11 @@ El papel de la selección es simple: decirle a Codex que mire aquí, y que no am
 | **Archivo abierto** | Hay que entender varias relaciones dentro del archivo | Abre `auth.ts` + `auth.test.ts` |
 | **Ruta `@`** | Entre directorios, archivos no abiertos | `@src/api/client.ts` alineado con tipos del backend |
 
-Profundidad conceptual: [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
+Profundidad conceptual: [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
 
 ## Práctica mínima viable
 
-1. Selecciona el **fragmento mínimo relevante** (suele ser 10–80 líneas) y en el Prompt deja claro el objetivo y la [definición de hecho](/prompts/define-done/)
+1. Selecciona el **fragmento mínimo relevante** (suele ser 10–80 líneas) y en el Prompt deja claro el objetivo y la [definición de hecho](/es/prompts/define-done/)
 2. Si implica a quien llama, abre o haz `@` a 1–2 archivos aguas arriba
 3. Pide «solo cambia archivos relacionados con X; lista los que modificarás antes de tocar»
 4. En el diff del IDE acepta bloque a bloque; no aceptes todo de golpe
@@ -45,7 +46,7 @@ Selección: opcional — empezar por la función de entrada
 Prompt: aclarar límites del módulo y directorios que no se pueden tocar
 ```
 
-Para refactorizaciones grandes conviene más un [árbol de trabajo de la App de escritorio](/guide/desktop-app/worktrees/) o el [modo de planificación](/guide/agent-work/planning/). El IDE encaja mejor con el cierre y commits pequeños.
+Para refactorizaciones grandes conviene más un [árbol de trabajo de la App de escritorio](/es/guide/desktop-app/worktrees/) o el [modo de planificación](/es/guide/agent-work/planning/). El IDE encaja mejor con el cierre y commits pequeños.
 
 ## Preguntas frecuentes
 
@@ -68,13 +69,13 @@ Usar selección y archivos abiertos, en el fondo, es intentar no arrastrar alcan
 
 ## Coordinación con la revisión
 
-Antes de aceptar, contrasta con [Revisar diffs](/guide/quality/review-diffs/):
+Antes de aceptar, contrasta con [Revisar diffs](/es/guide/quality/review-diffs/):
 
 - Si solo cambian los archivos acordados
 - Si fuera de la selección hay borrados inesperados
 - Si los tests cubren las ramas nuevas
 
-En el producto: [Revisar cambios en el IDE](/guide/ide/reviewing-changes/)
+En el producto: [Revisar cambios en el IDE](/es/guide/ide/reviewing-changes/)
 
 ## Errores frecuentes
 
@@ -85,7 +86,7 @@ En el producto: [Revisar cambios en el IDE](/guide/ide/reviewing-changes/)
 | Aceptar todas las sugerencias sin leer el diff | Deriva de estilo o vulnerabilidades de seguridad |
 
 ## Fuentes de referencia
-- [Definir restricciones](/prompts/constraints-and-boundaries/)
+- [Definir restricciones](/es/prompts/constraints-and-boundaries/)
 ---
 
 **Estado:** verified  

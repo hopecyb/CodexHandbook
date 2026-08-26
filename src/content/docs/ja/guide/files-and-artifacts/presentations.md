@@ -3,9 +3,10 @@ title: プレゼンテーション
 description: スライドと発表資料の生成、改訂、エクスポート。構成、マスター、発表者ノートの約束。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Codex で発表資料を作る価値は、まず構成・ページ順・話の�
 5. PDF をエクスポートしてリハーサルで時間計測
 ```
 
-[探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/) と同様、骨子段階で先に検証してから詳細を埋めます。
+[探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) と同様、骨子段階で先に検証してから詳細を埋めます。
 
 ## なぜ発表資料は先に構成を抑えるべきか
 
@@ -114,13 +115,13 @@ bullet、図、結論を 1 ページに詰めすぎると、聴衆は要点を�
 
 「かっこいい PPT を作って」より、磨き続けやすい初稿になりやすいです。
 
-画像要件は [画像とスクリーンショット](/guide/files-and-artifacts/images-and-screenshots/)。純粋な画像生成は [画像生成](/guide/tools/image-generation/)。
+画像要件は [画像とスクリーンショット](/ja/guide/files-and-artifacts/images-and-screenshots/)。純粋な画像生成は [画像生成](/ja/guide/tools/image-generation/)。
 
 ## 検証
 
 - 投影解像度で文字サイズが読めるか
 - アニメーションは控えめに（多すぎると保守が難しい）
-- 数値が [出典の確認](/guide/quality/validate-sources/) と一致するか
+- 数値が [出典の確認](/ja/guide/quality/validate-sources/) と一致するか
 - 発表者ノートが十分か（必要な場合）
 
 ## Codex に任せやすいことと、自分で決めること

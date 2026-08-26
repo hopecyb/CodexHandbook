@@ -3,9 +3,10 @@ title: scripts/ und Tests
 description: Deterministische Skripte im Skill ergänzen und ihr Verhalten prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Am Anfang landet oft alles in `SKILL.md`. Bei einfachen Abläufen okay — sobald ein Schritt **stabil, wiederholt und prüfbar** laufen muss, sind Skripte zuverlässiger als reine Prosa.
@@ -74,7 +75,7 @@ So trennst du „Skript kaputt“ von „Skill-Integration falsch“.
 
 Stabile, wiederholbare Aktionen nicht nur in Prosa belassen. Zuerst Skript durchziehen, dann Skill-Aufruf prüfen.
 
-Skripte erben die aktuelle Freigabe-Politik; siehe [Befehlsregeln](/guide/customization/rules/command-rules/) und [Skill-Sicherheit](/skills/security/).
+Skripte erben die aktuelle Freigabe-Politik; siehe [Befehlsregeln](/de/guide/customization/rules/command-rules/) und [Skill-Sicherheit](/de/skills/security/).
 ---
 
 **Status:** verified  

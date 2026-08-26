@@ -3,16 +3,17 @@ title: Prompt 注入
 description: 信頼できないテキストがコンテキストに入るとき——識別、緩和、チーム政策要点。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 「Prompt 注入」は、Codex が見るコンテキストに誤導内容を仕込むことです。
 
-issue、ウェブ、依存コメント、文書、ユーザー貼り付けテキストなどから来て、Agent に**方針無視、データ漏洩、危険コマンド実行**を誘導する目的が多いです。[脅威モデル](/guide/team-enterprise/security/threat-model/) の高頻度リスクで、実務に近い問題です。
+issue、ウェブ、依存コメント、文書、ユーザー貼り付けテキストなどから来て、Agent に**方針無視、データ漏洩、危険コマンド実行**を誘導する目的が多いです。[脅威モデル](/ja/guide/team-enterprise/security/threat-model/) の高頻度リスクで、実務に近い問題です。
 
 ## 内容
 
@@ -73,12 +74,12 @@ Codex がテキストを見たら、そのテキストが後続挙動に影響�
 **設計層**
 
 - **システム方針**と**信頼できないユーザーコンテンツ**を分離（アーキテクチャは製品により異なる）
-- 高機密操作は常に [人工承認](/cases/workflows/human-approval-patterns/)
+- 高機密操作は常に [人工承認](/ja/cases/workflows/human-approval-patterns/)
 
 **工程層**
 
 - CI prompt で PR body をそのまま結合しない。構造化フィールド + 長さ制限
-- [Hook](/skills/hooks/hooks-examples/) で既知注入フレーズをスキャン（補助層）
+- [Hook](/ja/skills/hooks/hooks-examples/) で既知注入フレーズをスキャン（補助層）
 - 読み取り専用 token、`git push` 禁止
 
 **プロセス層**
@@ -118,7 +119,7 @@ Codex がテキストを見たら、そのテキストが後続挙動に影響�
 
 - [ ] CI/Cloud レビューフローで注入面を評価済み
 - [ ] メンテナが不審 issue を識別できる
-- [ ] [acceptable use](/guide/team-enterprise/governance/acceptable-use/) と一致
+- [ ] [acceptable use](/ja/guide/team-enterprise/governance/acceptable-use/) と一致
 
 ## 参考
 - OWASP LLM Top 10（Prompt Injection）

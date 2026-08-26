@@ -3,9 +3,10 @@ title: Instrucciones del proyecto
 description: Contexto a nivel de proyecto más allá de AGENTS.md — cómo se reparten README, docs y referencias en la conversación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Entonces no solo se confunden las personas: también Codex. El objetivo es que l
 - **Instrucciones del proyecto**: relativamente estables a lo largo de meses
 - **Contexto de conversación**: objetivo de esta vez, restricciones, conclusiones intermedias
 
-Si en una tarea larga ves que una regla se menciona una y otra vez, **vuelve a escribirla** en `AGENTS.md` o `docs/`, en lugar de copiarla y pegarla en diez hilos. Ver [Mantener el contexto enfocado](/guide/context/keep-context-focused/).
+Si en una tarea larga ves que una regla se menciona una y otra vez, **vuelve a escribirla** en `AGENTS.md` o `docs/`, en lugar de copiarla y pegarla en diez hilos. Ver [Mantener el contexto enfocado](/es/guide/context/keep-context-focused/).
 
 ## Errores habituales
 

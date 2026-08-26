@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-The **Developer Platform** is for people who want to **productize** Codex into pipelines: custom apps, batch review, release gates, internal developer portals. For everyday “write a prompt to fix a bug,” start with [Getting started](/guide/getting-started/).
+The **Developer Platform** is for people who want to **productize** Codex into pipelines: custom apps, batch review, release gates, internal developer portals. For everyday “write a prompt to fix a bug,” start with [Getting started](/en/guide/getting-started/).
 
 This chapter is not about day-to-day Codex usage—it is about wiring Codex into your own systems.
 
@@ -30,10 +31,10 @@ It is aimed at scenarios like:
 
 | Reader question | Where to go |
 |---|---|
-| How to run `codex` in the terminal | [CLI product guide](/guide/cli/) |
-| How to exec review in CI | [Non-interactive mode](/guide/cli/non-interactive-mode/) + CI in this chapter |
-| How to embed an Agent in your app | [SDK overview](/guide/developer-platform/sdk-overview/) |
-| Permissions and security model | [Human approval patterns](/cases/workflows/human-approval-patterns/) |
+| How to run `codex` in the terminal | [CLI product guide](/en/guide/cli/) |
+| How to exec review in CI | [Non-interactive mode](/en/guide/cli/non-interactive-mode/) + CI in this chapter |
+| How to embed an Agent in your app | [SDK overview](/en/guide/developer-platform/sdk-overview/) |
+| Permissions and security model | [Human approval patterns](/en/cases/workflows/human-approval-patterns/) |
 
 ## Typical architecture (conceptual)
 
@@ -56,10 +57,10 @@ Git provider / tickets / artifact store
 
 | Topic | Pages |
 |---|---|
-| SDK | [SDK overview](/guide/developer-platform/sdk-overview/) |
-| Non-interactive | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Structured output](/guide/developer-platform/non-interactive/structured-output/) · [Exit codes and retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Overview](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [SDK overview](/en/guide/developer-platform/sdk-overview/) |
+| Non-interactive | [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/) · [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Structured output](/en/guide/developer-platform/non-interactive/structured-output/) · [Exit codes and retries](/en/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Overview](/en/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Code review automation](/en/guide/developer-platform/ci-cd/code-review-automation/) |
 
 For more on `codex-sdk/`, `app-server/`, and `architecture-patterns/`, see the [chapter outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
@@ -78,7 +79,7 @@ Think of it this way:
 
 ### 3. What is most valuable to read first in this chapter?
 
-If you only want a conceptual overview, start with [SDK overview](/guide/developer-platform/sdk-overview/) and how it relates to [non-interactive mode](/guide/cli/non-interactive-mode/).
+If you only want a conceptual overview, start with [SDK overview](/en/guide/developer-platform/sdk-overview/) and how it relates to [non-interactive mode](/en/guide/cli/non-interactive-mode/).
 
 The developer platform chapter is about wiring Codex into systems. For your first hands-on use of Codex, read the getting-started content first.
 

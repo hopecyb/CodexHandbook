@@ -3,9 +3,10 @@ title: Technische Inhalte prüfen
 description: "Seiten als verified markieren — mit Reproduktionsschritten, offiziellen Belegen und Datum."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -115,8 +116,8 @@ Quartalsweise oder bei Major-Release neu prüfen:
 
 ## Verwandt
 
-- [Handbuch-Versionspolitik](/guide/start-here/handbook-version-policy/)
-- [Offizielle Ressourcen](/guide/reference/official-resources/)
+- [Handbuch-Versionspolitik](/de/guide/start-here/handbook-version-policy/)
+- [Offizielle Ressourcen](/de/guide/reference/official-resources/)
 
 `verified` heißt: „nach aktuellen Belegen wirklich geprüft und nachvollziehbar“ — Autor-Selbstvertrauen reicht nicht.
 

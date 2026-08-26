@@ -3,9 +3,10 @@ title: Tích hợp GitHub
 description: Nối kho, PR, Review và CI — vị trí của Codex trong quy trình GitHub.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5585550
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -24,11 +25,11 @@ Dù bạn không phải lập trình viên kỳ cựu, cũng có thể xem trư�
 
 | Năng lực | Lối vào điển hình | Vị trí sổ tay |
 |---|---|---|
-| Nối kho từ xa | Cài đặt Cloud | [Nối GitHub](/guide/web-and-cloud/connect-github/) |
-| Sửa mã Cloud mở PR | Tác vụ Cloud | [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Rà soát diff cục bộ | App máy tính / IDE | [Diff và bình luận](/guide/desktop-app/diffs-comments-and-review/) |
+| Nối kho từ xa | Cài đặt Cloud | [Nối GitHub](/vi/guide/web-and-cloud/connect-github/) |
+| Sửa mã Cloud mở PR | Tác vụ Cloud | [Tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/) |
+| Rà soát diff cục bộ | App máy tính / IDE | [Diff và bình luận](/vi/guide/desktop-app/diffs-comments-and-review/) |
 | Chạy Codex trong CI | GitHub Actions | Lộ trình `08-developer-platform/ci-cd/` |
-| PR tự bình luận rà soát | Actions + exec | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) |
+| PR tự bình luận rà soát | Actions + exec | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
 
 ## Quy chuẩn nhóm khuyến nghị
 

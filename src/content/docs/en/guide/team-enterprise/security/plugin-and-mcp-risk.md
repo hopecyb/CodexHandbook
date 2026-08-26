@@ -3,14 +3,15 @@ title: Plugin and MCP Risk
 description: What extensions can access, how teams approve and monitor—unified risk view for Skills, Plugins, and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Plugins** and **MCP servers** connect Codex to external systems: tickets, databases, internal APIs. More capability means a larger [threat model](/guide/team-enterprise/security/threat-model/) surface for exfiltration and overreach. Read with [MCP overview](/skills/mcp/mcp-overview/) and [Plugins overview](/skills/plugins/plugins-overview/).
+**Plugins** and **MCP servers** connect Codex to external systems: tickets, databases, internal APIs. More capability means a larger [threat model](/en/guide/team-enterprise/security/threat-model/) surface for exfiltration and overreach. Read with [MCP overview](/en/skills/mcp/mcp-overview/) and [Plugins overview](/en/skills/plugins/plugins-overview/).
 
 You do not need perfect definitions on day one. Core point: connecting Codex externally increases capability and risk.
 
@@ -52,7 +53,7 @@ Experimental personal MCP **should not** share production repo tokens.
 
 1. **Deny by default** unlisted remote MCP installs
 2. **Local MCP** may still read the whole disk—dedicated OS user or container
-3. **Logs**: tool name and parameter summary (redacted)—see [Hook audit](/skills/hooks/hooks-examples/)
+3. **Logs**: tool name and parameter summary (redacted)—see [Hook audit](/en/skills/hooks/hooks-examples/)
 4. **Skill vs MCP**: Skill describes flow, MCP performs external calls—permissions union; apply strictest policy
 
 ## Common mistakes
@@ -91,10 +92,10 @@ For external extensions: permissions and boundaries before feature strength.
 
 - [ ] Written approval list or equivalent process
 - [ ] Each production MCP has owner and data classification
-- [ ] Consistent with [Skill security](/skills/security/) policy
+- [ ] Consistent with [Skill security](/en/skills/security/) policy
 
 ## Reference sources
-- [Debugging MCP](/skills/mcp/debugging-mcp/)
+- [Debugging MCP](/en/skills/mcp/debugging-mcp/)
 ---
 
 **Status:** verified  

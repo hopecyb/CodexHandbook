@@ -3,9 +3,10 @@ title: 권한과 승인
 description: Codex가 언제 작업 승인을 필요로 하는지 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -67,8 +68,8 @@ Codex는 동의 없이 고위험 작업을 실행해서는 안 됩니다. **승�
 | 층 | 무엇을 쓰는지 | 어디를 읽는지 |
 |---|---|---|
 | 개념(이 페이지) | 왜 승인이 필요한지 | — |
-| 제품 차이 | 각 입구에서 확인이 어떻게 뜨는지 | [제품 매뉴얼](/guide/) |
-| 프롬프트 전략 | 작업에서 권한 경계를 어떻게 선언하는지 | [제약 정의](/prompts/constraints-and-boundaries/) |
+| 제품 차이 | 각 입구에서 확인이 어떻게 뜨는지 | [제품 매뉴얼](/ko/guide/) |
+| 프롬프트 전략 | 작업에서 권한 경계를 어떻게 선언하는지 | [제약 정의](/ko/prompts/constraints-and-boundaries/) |
 
 공식 정책과 기본값은 바뀔 수 있으니 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 확인하세요.
 

@@ -3,9 +3,10 @@ title: Für wen ist dieses Handbook
 description: "Erklärt, wie Anfänger, Creator, Entwickler und Teams dieses Handbook nutzen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 41e8ab8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
@@ -88,7 +89,7 @@ Bei diesen Bedürfnissen lohnt sich das Handbook:
 - Du willst persönliche Nutzung zu team-tauglichen Abläufen machen
 - Du kommst nicht aus der Entwicklung, willst KI aber wirklich in den Alltag einbinden
 
-Als Nächstes: [Deinen Pfad wählen](/guide/start-here/choose-your-path/).
+Als Nächstes: [Deinen Pfad wählen](/de/guide/start-here/choose-your-path/).
 
 ---
 

@@ -5,9 +5,10 @@ sidebar:
   order: 5
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c8a032b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 대부분의 사람이 Codex를 처음 쓸 때 막히는 지점은 기술 배경이 아니라, 첫 단계를 어떻게 시작하느냐입니다.
@@ -59,8 +60,8 @@ translated_at: 2026-07-28
 
 ## 제안
 
-- 먼저 [초보자 안전 체크리스트](/guide/getting-started/beginner-safety-checklist/)를 읽으세요
-- [권한과 승인](/guide/foundations/permissions-and-approvals/)과 [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)를 알아 두세요
+- 먼저 [초보자 안전 체크리스트](/ko/guide/getting-started/beginner-safety-checklist/)를 읽으세요
+- [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)과 [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)를 알아 두세요
 - 공식 설치·제품 변경은 [https://developers.openai.com/codex](https://developers.openai.com/codex)를 기준으로 합니다
 
 ## 참고 출처

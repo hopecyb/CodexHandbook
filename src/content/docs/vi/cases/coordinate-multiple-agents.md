@@ -3,9 +3,10 @@ title: Phối hợp nhiều Agent
 description: Case cộng tác khám phá song song, phân công thực thi và gộp kết quả.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Phối hợp nhiều Agent
@@ -36,7 +37,7 @@ Agent 2: Ưu nhược điểm và khối lượng công việc của phương á
 
 ### Cô lập bằng worktree
 
-Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/guide/desktop-app/worktrees/) khác nhau; cuối cùng người gộp.
+Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/vi/guide/desktop-app/worktrees/) khác nhau; cuối cùng người gộp.
 
 ## 3. Quy tắc phối hợp (nên ghi vào AGENTS.md)
 
@@ -46,8 +47,8 @@ Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/guide/deskto
 
 ## 4. Liên quan
 
-- [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/)
-- [Subagent](/guide/agent-work/subagents/)
+- [Phối hợp nhiều Agent](/vi/cases/workflows/multi-agent-coordination/)
+- [Subagent](/vi/guide/agent-work/subagents/)
 ---
 
 **Trạng thái:** verified  

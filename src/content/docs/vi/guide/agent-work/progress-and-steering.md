@@ -3,9 +3,10 @@ title: Tiến độ và điều hướng
 description: Khi thực thi lệch hướng, dùng lệnh ngắn để kéo Codex về đúng quỹ đạo.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6813a5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -134,7 +135,7 @@ Giữ phán đoán của bạn về nguyên nhân vấn đề, nhưng chưa vào
 
 ## Khi nào nên quay lại “lập kế hoạch lại”
 
-Điều hướng phù hợp với lệch cục bộ, nhưng các trường hợp sau đáng quay về [Lập kế hoạch](/guide/agent-work/planning/) hơn:
+Điều hướng phù hợp với lệch cục bộ, nhưng các trường hợp sau đáng quay về [Lập kế hoạch](/vi/guide/agent-work/planning/) hơn:
 
 - Bản thân mục tiêu tác vụ đã đổi
 - Thông tin mới lật tiền đề cũ
@@ -154,10 +155,10 @@ Khi phát hiện lệch trong thực thi, dùng lệnh ngắn nói rõ “giữ 
 
 ## Kết hợp khuyến nghị
 
-- Cần làm rõ đường thực thi trước: xem [Lập kế hoạch](/guide/agent-work/planning/)
-- Cần viết quy trình thành chuỗi chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-- Cần tách tác vụ cho người khác: xem [Subagent](/guide/agent-work/subagents/)
-- Tác vụ gián đoạn rồi tiếp tục: xem [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
+- Cần làm rõ đường thực thi trước: xem [Lập kế hoạch](/vi/guide/agent-work/planning/)
+- Cần viết quy trình thành chuỗi chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+- Cần tách tác vụ cho người khác: xem [Subagent](/vi/guide/agent-work/subagents/)
+- Tác vụ gián đoạn rồi tiếp tục: xem [Bàn giao và khôi phục](/vi/guide/agent-work/handoff-and-resume/)
 
 ---
 

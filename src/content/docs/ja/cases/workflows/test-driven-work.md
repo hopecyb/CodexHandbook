@@ -3,12 +3,13 @@ title: テスト駆動の作業
 description: まず失敗テストを定義または補完し、実装を駆動する——Codex の変更を客観的に受け入れ可能にする。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**テスト駆動の作業**（TDD または「テスト先行」）は、まずテストを失敗させ、最小実装で通過させる方法です。すでにテスト基盤があるコードベースに適し、[検証付き Bug 修正](/cases/use-cases/software-development/fix-a-bug-with-verification/) などのシナリオと直接関連します。
+**テスト駆動の作業**（TDD または「テスト先行」）は、まずテストを失敗させ、最小実装で通過させる方法です。すでにテスト基盤があるコードベースに適し、[検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/) などのシナリオと直接関連します。
 
 ## このページの重点
 
@@ -21,7 +22,7 @@ translated_at: 2026-07-28
 - ユニット/統合テストがあるリポジトリ
 - 回帰 bug、API 動作変更、リファクタリング
 
-適さないシナリオ：テスト基盤のないプロトタイプ、純粋な文案サイトの一回限りの変更。このようなタスクは [EPXV](/cases/workflows/explore-plan-execute-verify/) で人間による検証が適しています。
+適さないシナリオ：テスト基盤のないプロトタイプ、純粋な文案サイトの一回限りの変更。このようなタスクは [EPXV](/ja/cases/workflows/explore-plan-execute-verify/) で人間による検証が適しています。
 
 ## 最小限の実践方法
 
@@ -47,7 +48,7 @@ TDD に従ってください：まず @src/foo.ts の「空入力は [] を返�
 | 緑 | 最小実装 + テスト通過 |
 | リファクタ | テスト保護下でコード整理（任意の独立ステップ） |
 
-[診断してから修正](/cases/workflows/diagnose-before-fixing/) と組み合わせる：まず失敗アサーションとスタックを読み、実装に手を入れる。
+[診断してから修正](/ja/cases/workflows/diagnose-before-fixing/) と組み合わせる：まず失敗アサーションとスタックを読み、実装に手を入れる。
 
 ## よくある誤り
 
@@ -58,7 +59,7 @@ TDD に従ってください：まず @src/foo.ts の「空入力は [] を返�
 
 ## 安全境界
 
-- テストコマンドは [コマンドルール](/guide/customization/rules/command-rules/) の許可範囲内であること
+- テストコマンドは [コマンドルール](/ja/guide/customization/rules/command-rules/) の許可範囲内であること
 - 本番 API に触れる統合テストは仕様で禁止するか mock に置き換える
 
 ## 受け入れチェックリスト
@@ -66,12 +67,12 @@ TDD に従ってください：まず @src/foo.ts の「空入力は [] を返�
 - [ ] 失敗→通過のテスト証拠がある（ログまたは CI）
 - [ ] 全量または約定範囲のテストが通過している
 - [ ] diff に無関係なテスト削除が含まれていない
-- [ ] [完了の定義](/prompts/define-done/) と一致している
+- [ ] [完了の定義](/ja/prompts/define-done/) と一致している
 
 ## 関連章
 
-- [テストの実行](/guide/quality/run-tests/)
-- [ケース：検証付き Bug 修正](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [テストの実行](/ja/guide/quality/run-tests/)
+- [ケース：検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

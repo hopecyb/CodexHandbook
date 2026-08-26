@@ -3,9 +3,10 @@ title: ガバナンス
 description: 政策、境界、組織ルールの説明ページ——何ができ、何ができず、誰が責任を持つかを先に明確に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex の文脈でガバナンスは主に二つ：チームがどう使ってよいか、問題時に誰が対応するか。
@@ -18,7 +19,7 @@ Codex の文脈でガバナンスは主に二つ：チームがどう使って�
 
 ## 本グループの入口
 
-- [acceptable use 政策](/guide/team-enterprise/governance/acceptable-use/)
+- [acceptable use 政策](/ja/guide/team-enterprise/governance/acceptable-use/)
 
 ## このグループが答える問い
 

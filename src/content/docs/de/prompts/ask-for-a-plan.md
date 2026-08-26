@@ -3,9 +3,10 @@ title: Zuerst einen Plan verlangen
 description: 'Bevor Codex loslegt: Schritte, Risiken und Überprüfung klar machen lassen.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele Probleme entstehen nicht, weil etwas unmöglich wäre — sondern weil **zu schnell gestartet** wird. Ein „hilf mir, das zu fixen“ vermengt Exploration, Plan und Ausführung; am Ende bleibst du beim Diff nur noch in der passiven Abnahme.
@@ -109,7 +110,7 @@ Das spart Kontext und zieht das Ergebnis leichter zurück auf Kurs.
 | Zerlegung in Teilaufgaben möglich | Mehrere Ziele vermischen sich leicht |
 | Überprüfungsmethode früh klar | Tests oft erst ganz am Ende |
 
-Viele Workflows trennen „Exploration“ und „Plan“ bewusst. Siehe [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/).
+Viele Workflows trennen „Exploration“ und „Plan“ bewusst. Siehe [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/).
 
 ## Typische Plan-Probleme
 
@@ -127,10 +128,10 @@ Gute Pläne benennen Unsicherheit, statt alle Voraussetzungen als gegeben zu tun
 
 ## Empfohlene Kombinationen
 
-- Formelle Ausführungskette: [Planung](/guide/agent-work/planning/)
-- Plan wiederverwendbar formulieren: [Aufgabenstruktur](/prompts/task-anatomy/)
-- Unterwegs korrigieren: [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/)
-- Abnahme klar definieren: [Fertigstellung definieren](/prompts/define-done/)
+- Formelle Ausführungskette: [Planung](/de/guide/agent-work/planning/)
+- Plan wiederverwendbar formulieren: [Aufgabenstruktur](/de/prompts/task-anatomy/)
+- Unterwegs korrigieren: [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/)
+- Abnahme klar definieren: [Fertigstellung definieren](/de/prompts/define-done/)
 
 ## Eine nützliche Team-Vereinbarung
 

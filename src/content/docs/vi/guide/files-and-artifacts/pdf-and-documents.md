@@ -3,9 +3,10 @@ title: PDF và tài liệu
 description: Phạm vi, công cụ và điểm nghiệm thu khi để Codex đọc, tóm tắt hoặc tạo tài liệu dạng PDF.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ Vậy càng nói rõ “xem đoạn nào, cần kết quả gì”, hiệu quả
 1. **Chỉ rõ đường dẫn tệp**: `docs/spec.pdf` hoặc tham chiếu @ (tùy client hỗ trợ)
 2. **Nói cần gì**: tóm tắt, đối chiếu một chương, trích dữ liệu bảng
 3. **Số trang hoặc chương**: tài liệu dài giới hạn phạm vi, tiết kiệm ngữ cảnh
-4. **Nội dung nhạy cảm**: hợp đồng, quét CCCD v.v. đi theo quy trình [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
+4. **Nội dung nhạy cảm**: hợp đồng, quét CCCD v.v. đi theo quy trình [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
 
 ### Giới hạn
 
@@ -97,8 +98,8 @@ Nếu OCR hoặc nhận dạng bố cục chưa chắc, hãy đánh dấu rõ.
 ## Với chiến lược kho
 
 - PDF nhị phân lớn cân nhắc **Git LFS** hoặc không vào kho
-- Khi diff không đọc được, nghiệm thu bằng **mở tệp** + đối chiếu [Kiểm chứng artifact](/guide/quality/verify-artifacts/)
-- Danh sách vật tạo ra xem [Nghiệm thu artifact tạo ra](/guide/files-and-artifacts/generated-artifacts/)
+- Khi diff không đọc được, nghiệm thu bằng **mở tệp** + đối chiếu [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/)
+- Danh sách vật tạo ra xem [Nghiệm thu artifact tạo ra](/vi/guide/files-and-artifacts/generated-artifacts/)
 
 ## Lỗi thường gặp
 

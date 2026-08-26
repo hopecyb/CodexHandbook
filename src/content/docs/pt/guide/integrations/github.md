@@ -3,9 +3,10 @@ title: Integração com GitHub
 description: 'Conexão de repositório, PR, Review e CI — o lugar do Codex no fluxo de trabalho do GitHub.'
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5585550
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -24,11 +25,11 @@ Mesmo sem ser desenvolvedor experiente, você pode começar vendo que tipos de c
 
 | Capacidade | Entrada típica | Onde no manual |
 |---|---|---|
-| Conectar repositório remoto | Configuração Cloud | [Conectar GitHub](/guide/web-and-cloud/connect-github/) |
-| Alterar código na nuvem e abrir PR | Tarefa Cloud | [Criar Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Revisar diff localmente | App desktop / IDE | [diff e comentários](/guide/desktop-app/diffs-comments-and-review/) |
+| Conectar repositório remoto | Configuração Cloud | [Conectar GitHub](/pt/guide/web-and-cloud/connect-github/) |
+| Alterar código na nuvem e abrir PR | Tarefa Cloud | [Criar Pull Request](/pt/guide/web-and-cloud/create-pull-requests/) |
+| Revisar diff localmente | App desktop / IDE | [diff e comentários](/pt/guide/desktop-app/diffs-comments-and-review/) |
 | Rodar Codex no CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
-| Comentários automáticos de review no PR | Actions + exec | [Modo não interativo](/guide/cli/non-interactive-mode/) |
+| Comentários automáticos de review no PR | Actions + exec | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
 
 ## Normas recomendadas para equipes
 

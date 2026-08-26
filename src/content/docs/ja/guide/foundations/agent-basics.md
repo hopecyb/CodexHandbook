@@ -3,9 +3,10 @@ title: Agent の基礎
 description: Agent が目標を中心にツールを呼び出し、反復して進める仕組みを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -46,14 +47,14 @@ Agent モードでは、次をより意識する必要があります。
 
 初めて使うときは、あわせて次を読むことをおすすめします。
 
-1. [権限と承認](/guide/foundations/permissions-and-approvals/)
-2. [最初のタスクを実行する](/guide/getting-started/run-your-first-task/)
-3. [結果を確認する](/guide/getting-started/review-the-result/)
+1. [権限と承認](/ja/guide/foundations/permissions-and-approvals/)
+2. [最初のタスクを実行する](/ja/guide/getting-started/run-your-first-task/)
+3. [結果を確認する](/ja/guide/getting-started/review-the-result/)
 
 ## 関連概念
 
-- Skill / Plugin / MCP：「何ができるか」「どこにつながるか」を拡張する——[拡張と自動化](/skills/) と [能力マップ](/guide/start-here/codex-capability-map/) を参照
-- 人的承認：[権限と承認](/guide/foundations/permissions-and-approvals/) を参照
+- Skill / Plugin / MCP：「何ができるか」「どこにつながるか」を拡張する——[拡張と自動化](/ja/skills/) と [能力マップ](/ja/guide/start-here/codex-capability-map/) を参照
+- 人的承認：[権限と承認](/ja/guide/foundations/permissions-and-approvals/) を参照
 
 Agent の特徴は、目標を中心に複数のステップを連続して実行できることです。一段の返答だけではありません。
 

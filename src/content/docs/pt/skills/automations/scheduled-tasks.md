@@ -3,100 +3,147 @@ title: Tarefas agendadas e em segundo plano
 description: Automations — rode o Codex sem supervisão sob triggers; desenhe Aprovação e condições de saída.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7b79596
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Automations** fazem o Codex executar Tarefas automaticamente sob **agenda, eventos de repositório ou triggers externos** — por exemplo checagem de atualização de dependências, sync de docs, scan periódico de saúde.
 
-## Conteúdo desta página
+The hard part is not choosing a time. It is making every unattended run use stable inputs, narrow permissions, reviewable output, and stop conditions.
 
-- Quando vale automatizar e quando humanos devem permanecer no loop
-- Quatro pontos de desenho: trigger, execução, notificação, falha
-- Relação com Tarefas Cloud e scripts CLI locais
+![Safety loop from manual verification to scheduling, human review, and adjustment](/diagrams/scheduled-task-safety-loop-en.svg)
 
-## Comparação com Tarefas manuais
+## Who it is for
 
-| | Tarefa manual | Automation |
+- Individuals producing daily or weekly reports, checking docs, or following PRs.
+- Developers running maintenance against a local project or isolated worktree.
+- Maintainers reviewing permissions, failure handling, and shared Skills.
+
+## Support boundaries
+
+| Surface | Capability | Constraint |
 |---|---|---|
-| Início | Você inicia | Agendamento/evento |
-| Supervisão | Você pode interromper a qualquer momento | Precisa de notificação e logs |
-| Risco | Você julga na hora | Erros podem se espalhar em lote |
-| Adequado para | Exploração, refatoração | Repetição, regras claras |
+| ChatGPT Web | Create, manage, inspect runs; use uploads, connected tools, Skills, Plugins | Cannot directly access local folders |
+| ChatGPT desktop App | Create and manage; select local project or Git worktree | Computer awake, App running, project present |
+| Codex CLI | Prepare and manually test prompts, Skills, scripts | No Scheduled management UI |
+| IDE integration | Verify commands and edits in workspace | No Scheduled management UI |
 
-## Desenho de automação segura
+## 1. Standalone or in-chat
 
-### 1. Condições de trigger claras
+### Standalone Scheduled task
+
+Each run starts from the saved prompt and appears separately in Scheduled. Use for independent reports and health checks; one task may cover several projects.
+
+### In-chat Scheduled task
+
+Return to one chat on schedule and retain context. Use for polling long work, following a PR, or continuing research.
+
+Choose standalone when each run should restart; choose in-chat when one question needs continuity.
+
+## 2. Choose material
+
+### Web
+
+Put durable instructions in the prompt or Skill and provide uploads, a Project, or connected services. “Read latest.csv from my desktop” cannot work on Web.
+
+### Local project in the desktop App
+
+For a Git repository:
+
+- **Local project:** work in the primary checkout, potentially touching open edits.
+- **Dedicated worktree:** isolate background edits from unfinished work.
+
+Non-Git projects run directly in their directory. Archive unneeded high-frequency runs so worktrees do not accumulate.
+
+## 3. Verify manually first
+
+Run the identical prompt, model, reasoning effort, and tools in a normal chat. Confirm:
+
+- inputs remain clear without live explanation;
+- no-change exits quietly;
+- output is quickly reviewable;
+- commands, Skills, and connected tools work;
+- missing access or material causes an explicit stop, not guessing.
+
+Inspect the first scheduled runs before changing prompt or frequency.
+
+## 4. Reusable task prompt
 
 ```text
-Bom: toda segunda 09:00, checar links quebrados em docs/
-Ruim: vigiar continuamente e alterar código automaticamente
+Create a standalone Scheduled task:
+
+Name: Weekly documentation broken-link check
+Time: Monday 09:00 in the current timezone
+Location: dedicated worktree for the current Git project
+
+Every run:
+1. Read only docs/, src/content/docs/, examples/, and public/diagrams/.
+2. Run pnpm check:links.
+3. If it passes, report file and link counts; do not edit.
+4. If it fails, list source file, broken target, and suggested fix; do not fix.
+5. No internet, installs, commit, push, or PR.
+6. If command/dependency is missing or result uncertain, stop and name the
+   exact item requiring human attention.
+
+Completion: end after one reviewable report; do not retry.
 ```
 
-### 2. Permissão mínima
+This defines time, project, read scope, command, branches, prohibitions, and stop condition. Scheduling only retriggers the task; it does not replace its specification.
 
-- Scan só leitura é melhor que commit automático
-- Se abrir PR automaticamente, use conta bot dedicada e proteção de branch
+## 5. Permissions and review
 
-### 3. Condições de saída
+Scheduled tasks run unattended with default sandbox settings.
 
-- Pausar após N falhas consecutivas
-- Diff acima do limiar de linhas → humano
-- Abortar se tocar diretórios proibidos em `AGENTS.md`
-
-### 4. Notificações
-
-- Slack/e-mail/mobile: conclusão, falha, precisa de Aprovação
-- Logs preservados para auditoria
-
-### 5. Pontos de revisão humana
-
-| Pode ser totalmente automático | Precisa de humano |
+| Sandbox | Common result |
 |---|---|
-| Gerar PR rascunho | Merge em main |
-| Listar dependências desatualizadas | Upgrade de versão major |
-| Sync de docs públicas | Publicar anúncio externo |
+| read-only | File edits, network, and local App control fail |
+| workspace-write | Workspace writes work; outside writes, network, and App control fail by default |
 
-## Padrões típicos
+Start with the narrowest mode that works. Add explicit allowlists rather than granting broad access after one failure.
 
-### Manutenção periódica
+Keep human review for:
 
-- Relatório de vulnerabilidades de dependências → abrir issue, sem alterar lockfile direto
-- Aviso de diff entre arquivos de tradução e copy de origem
+- sending or publishing externally;
+- production-state changes;
+- merging PRs or pushing main;
+- bulk deletion, migration, or permission changes;
+- unexpected diffs or failed tests.
 
-### Orientado a eventos
+## 6. No-change, failure, and stop
 
-- Novo PR aberto → rodar Skill de review (comentar sugestões, sem push)
-- Issue com label `bug` → gerar rascunho de passos de reprodução
+A durable task defines:
 
-### Tarefas longas
+1. **Finding:** evidence, severity, next step.
+2. **No change:** concise scope report without invented issues.
+3. **Unable:** missing material or access, then stop for a person.
 
-Divida em várias Automations + [transferência e retomada](/guide/agent-work/handoff-and-resume/), para não esgotar o Contexto de uma só vez.
+For in-chat polling, add termination such as PR merged/closed, three identical failures, or approval required.
 
-## Relação com Cloud / CLI
+## Scheduled is not event-driven CI
 
-- **Cloud**: adequado a automação remota com integração profunda ao GitHub
-- **CLI + cron/CI**: adequado a intranet e pipelines customizados
-- Seleção: [local vs nuvem](/guide/foundations/local-vs-cloud/) e [Web e Cloud](/guide/web-and-cloud/)
+Use GitHub Actions, CI, webhooks, or Codex SDK when execution must follow a push, PR, or release event immediately. Minute-by-minute polling is not precise event triggering.
 
-## Erros comuns
+## Acceptance checklist
 
-- Automação faz `git push` direto no branch principal
-- Sem alerta de falha — o repositório apodrece em silêncio
-- Tarefa exploratória no agendamento — gasta cota e é difícil aceitar
+- [ ] Prompt passed completely in a normal chat.
+- [ ] Standalone or in-chat mode selected.
+- [ ] Web material or local project is available at runtime.
+- [ ] Default sandbox suffices, or extra access has a reason.
+- [ ] Finding, no-change, failure, and stop paths are explicit.
+- [ ] First three runs received human sampling.
+- [ ] Frequent worktrees have archive and cleanup policy.
+- [ ] Critical writes retain human confirmation.
 
-## Checklist de aceite
+## Official sources
 
-- [ ] Trigger, Permissão, notificação e condições de saída documentados
-- [ ] Ciclo completo ensaiado em fork ou repositório de teste
-- [ ] Equipe conhece a conta bot e as regras de Aprovação
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
+- [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
 
-## Fontes
-- Documentação oficial OpenAI Codex Cloud / Automations
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** Cloud / App / CLI  
-**Nota de revisão:** Esta página descreve capacidades atuais de execução automática por agenda, evento e segundo plano, mas triggers e governança ainda mudam com facilidade, e a base oficial pública é incompleta.  
-**Última Verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test
+
+**Last verified:** 2026-08-26

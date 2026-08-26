@@ -3,9 +3,10 @@ title: Diagnostizieren-Vorlage
 description: Zuerst Ursache finden, dann Fix besprechen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Diagnostizieren-Vorlage
@@ -47,8 +48,8 @@ Die Vorlage verlangt zuerst, warum es kaputt ist — dann erst, wie ändern.
 
 ## Verwandt
 
-- [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/)
-- [Bug-Fix-Fall](/cases/fix-a-bug/)
+- [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/)
+- [Bug-Fix-Fall](/de/cases/fix-a-bug/)
 
 ---
 

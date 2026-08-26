@@ -3,9 +3,10 @@ title: Muster für menschliche Freigabe
 description: Wann freigeben, ablehnen oder Codex anhalten — und wie man diese Regeln klar formuliert.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Freigabe hält irreversible Aktionen beim Menschen. Diese Seite fasst gängige Muster zusammen.
@@ -20,7 +21,7 @@ Bestätigungszone (Dateien schreiben, Befehle ausführen, Netz)
 Zwang zum Menschen (push, Daten löschen, nach außen senden, Produktionsconfig ändern)
 ```
 
-Konkrete Dialoge variieren je nach [Produkteinstieg](/guide/); das Prinzip ist gleich.
+Konkrete Dialoge variieren je nach [Produkteinstieg](/de/guide/); das Prinzip ist gleich.
 
 ## Muster 1: Zuerst planen, dann ausführen
 
@@ -32,7 +33,7 @@ Geeignet: unbekannte Codebasis, produktionsnah, großer Diff.
 
 ## Muster 2: Befehl-Whitelist
 
-In [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) festhalten:
+In [AGENTS.md](/de/guide/customization/agents-md/writing-effective-instructions/) festhalten:
 
 ```md
 Ohne Nachfrage erlaubt: pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ Bei Konflikt mit Hosting-Policy gilt die **strengere** Regel.
 1. Codex öffnet Draft-PR oder lokalen Branch
 2. Mensch merged nach CI + Review
 
-Cloud-Szenarien: [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/).
+Cloud-Szenarien: [Pull Request erstellen](/de/guide/web-and-cloud/create-pull-requests/).
 
 ## Muster 4: Nur-lesen-Aufklärung
 
@@ -68,7 +69,7 @@ Für Audits, Lernen fremder Projekte, Diagnose von Produktionsproblemen.
 
 ## Verhältnis zu Automations
 
-Auch unbeaufsichtigte Aufgaben brauchen bei Design menschliche Bestätigungspunkte; siehe [Geplante und Hintergrundaufgaben](/skills/automations/scheduled-tasks/).
+Auch unbeaufsichtigte Aufgaben brauchen bei Design menschliche Bestätigungspunkte; siehe [Geplante und Hintergrundaufgaben](/de/skills/automations/scheduled-tasks/).
 
 ## Häufige Fehler
 

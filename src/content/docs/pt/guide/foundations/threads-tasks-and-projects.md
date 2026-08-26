@@ -3,9 +3,10 @@ title: Thread, Tarefa e projeto
 description: Esclareça a relação entre sessão, Tarefa e área de trabalho do projeto.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -37,8 +38,8 @@ O problema costuma ser este: a Tarefa mudou, mas a Thread ainda carrega Contexto
 ## Sugestões práticas
 
 - Ao mudar de tema, **abra uma Thread nova**, para evitar interferência do Contexto antigo
-- Em Tarefas longas, escreva fases e checkpoints; veja [Prompts para Tarefas longas](/prompts/long-running-tasks/)
-- Quando precisar continuar entre sessões, faça um resumo de Transferência: veja [Transferência e retomada](/guide/agent-work/handoff-and-resume/)
+- Em Tarefas longas, escreva fases e checkpoints; veja [Prompts para Tarefas longas](/pt/prompts/long-running-tasks/)
+- Quando precisar continuar entre sessões, faça um resumo de Transferência: veja [Transferência e retomada](/pt/guide/agent-work/handoff-and-resume/)
 
 ## Mal-entendidos comuns
 

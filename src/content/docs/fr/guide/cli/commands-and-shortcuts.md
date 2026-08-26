@@ -3,12 +3,13 @@ title: Commandes et raccourcis
 description: Sous-commandes CLI, actions en session et habitudes clavier — orienté produit ; drapeaux complets dans la référence.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6a36a12
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-L'efficacité en terminal vient de trois domaines : **comment vous lancez**, **raccourcis en session** et **association avec scripts/éditeurs**. Cette page couvre les habitudes ; les tableaux de drapeaux sont dans [Référence des commandes CLI](/guide/reference/commands/) et [Raccourcis clavier](/guide/reference/keyboard-shortcuts/).
+L'efficacité en terminal vient de trois domaines : **comment vous lancez**, **raccourcis en session** et **association avec scripts/éditeurs**. Cette page couvre les habitudes ; les tableaux de drapeaux sont dans [Référence des commandes CLI](/fr/guide/reference/commands/) et [Raccourcis clavier](/fr/guide/reference/keyboard-shortcuts/).
 
 ## Ce qui est couvert
 
@@ -32,9 +33,9 @@ Cette clarté choisit généralement la bonne commande.
 
 | Objectif | Entrée | Détails |
 |---|---|---|
-| Discuter et éditer interactivement | TUI interactif `codex` | [Mode interactif](/guide/cli/interactive-mode/) |
-| CI / pipeline en un coup | `codex exec` (ou équivalent) | [Mode non interactif](/guide/cli/non-interactive-mode/) |
-| Changer les valeurs par défaut | Fichiers de config | [Configuration CLI](/guide/cli/configuration/) |
+| Discuter et éditer interactivement | TUI interactif `codex` | [Mode interactif](/fr/guide/cli/interactive-mode/) |
+| CI / pipeline en un coup | `codex exec` (ou équivalent) | [Mode non interactif](/fr/guide/cli/non-interactive-mode/) |
+| Changer les valeurs par défaut | Fichiers de config | [Configuration CLI](/fr/guide/cli/configuration/) |
 
 :::note
 Les noms de sous-commandes changent selon la version — faites confiance à `codex --help`.
@@ -72,11 +73,11 @@ Les touches et commandes `/` exactes varient selon la version ; les catégories 
 
 ### Commandes slash
 
-Taper `/` au Prompt déclenche des flux intégrés (revue, compaction du Contexte, etc.). **Ne mémorisez pas une liste figée** — utilisez la complétion `/` dans votre environnement. Taxonomie orientée apprentissage : [référence des commandes slash](/guide/reference/slash-commands/).
+Taper `/` au Prompt déclenche des flux intégrés (revue, compaction du Contexte, etc.). **Ne mémorisez pas une liste figée** — utilisez la complétion `/` dans votre environnement. Taxonomie orientée apprentissage : [référence des commandes slash](/fr/guide/reference/slash-commands/).
 
 ### Approbations
 
-Quand l'Agent demande shell ou écritures fichier, l'interface propose approuver/refuser/toujours autoriser (si offert). Lisez [Approbations et Bac à sable](/guide/cli/approvals-and-sandbox/) avant usage sans surveillance.
+Quand l'Agent demande shell ou écritures fichier, l'interface propose approuver/refuser/toujours autoriser (si offert). Lisez [Approbations et Bac à sable](/fr/guide/cli/approvals-and-sandbox/) avant usage sans surveillance.
 
 ## Raccourcis couche shell (recommandés)
 
@@ -104,11 +105,11 @@ La revue non interactive peut être un script avec Prompt dans `prompts/review.m
 
 | | CLI | Extension IDE |
 |---|---|---|
-| Contexte | `--cwd`, fichiers @ (selon version) | Fichiers ouverts, sélection |
+| Contexte | `--cd` / `-C`, fichiers lus par les outils | Fichiers ouverts, sélection |
 | Idéal pour | Scripts, SSH distant, terminal pur | Éditer en voyant le diff |
 | Raccourcis | Touches terminal + `/` | Palette de commandes éditeur |
 
-IDE : [Flux de Tâche locale](/guide/ide/local-task-workflow/)
+IDE : [Flux de Tâche locale](/fr/guide/ide/local-task-workflow/)
 
 ## Erreurs courantes
 

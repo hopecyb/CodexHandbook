@@ -3,9 +3,10 @@ title: Tự động hóa review mã
 description: "Nối review Codex vào quy trình CI hoặc PR — Prompt, quyền và cổng người."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ Nó phù hợp nhất để:
 
 Nó không phù hợp để thay bạn quyết định «PR này chắc chắn được merge».
 
-Liên quan: [Chế độ không tương tác](/guide/cli/non-interactive-mode/) · [Tổng quan SDK](/guide/developer-platform/sdk-overview/)
+Liên quan: [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) · [Tổng quan SDK](/vi/guide/developer-platform/sdk-overview/)
 
 ## Kiến trúc khuyến nghị
 
@@ -76,7 +77,7 @@ Lưu phiên bản trong `prompts/ci-review.md`.
 | Chống injection | Không ghép mô tả PR chưa khử nhiễm vào system prompt |
 | Bí mật | Dùng GitHub Secrets lưu token |
 
-[Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) · [Biến môi trường](/guide/reference/environment-variables/)
+[Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/) · [Biến môi trường](/vi/guide/reference/environment-variables/)
 
 ## Cổng chất lượng
 
@@ -86,7 +87,7 @@ Lưu phiên bản trong `prompts/ci-review.md`.
 
 ## Quan hệ với Cloud
 
-Repo phức tạp có thể chạy kiểm thử đầy đủ trên [Cloud](/guide/web-and-cloud/) rồi mới review; exec trong CI phù hợp **review Diff nhẹ**.
+Repo phức tạp có thể chạy kiểm thử đầy đủ trên [Cloud](/vi/guide/web-and-cloud/) rồi mới review; exec trong CI phù hợp **review Diff nhẹ**.
 
 ## Lỗi thường gặp
 

@@ -3,9 +3,10 @@ title: Skill security and versioning
 description: Install sources, permission boundaries, upgrades and rollbacks—govern team Skills.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 A Skill is not just another prompt template.
@@ -33,7 +34,7 @@ If you:
 
 Skill security cannot rely only on "someone centrally manages it"; every user needs basic judgment.
 
-Basics: [Skills overview](/skills/overview/) · [Create your first Skill](/skills/create-your-first-skill/)
+Basics: [Skills overview](/en/skills/overview/) · [Create your first Skill](/en/skills/create-your-first-skill/)
 
 ## Threat model (simplified)
 
@@ -84,7 +85,7 @@ For teams, upgrading a Skill upgrades automated behavior—treat it like a depen
 | Changelog | Maintain release notes for the team Skill set |
 | Rollback | Keep previous copy; switch quickly on failure |
 
-Plugins can bundle Skills for unified distribution: [Plugins overview](/skills/plugins/plugins-overview/)
+Plugins can bundle Skills for unified distribution: [Plugins overview](/en/skills/plugins/plugins-overview/)
 
 ## Team habits
 
@@ -105,7 +106,7 @@ Explicit `$name` calls are clear; for **model auto-selection**, limit available 
 - [ ] Allowlist of permitted Skill sources
 - [ ] New hire onboarding installs only a "base pack"
 - [ ] Quarterly review of Skills still needed
-- [ ] Aligned with [allow and deny patterns](/guide/customization/rules/allow-and-deny-patterns/)
+- [ ] Aligned with [allow and deny patterns](/en/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Common mistakes
 

@@ -3,9 +3,10 @@ title: Webhooks
 description: "Trang giải thích tích hợp kích hoạt theo sự kiện: Webhook nhận thông báo, không thay thế thiết kế quy trình."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b718fb3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Từ `Webhook` nghe hơi trừu tượng.  
@@ -15,7 +16,7 @@ Trong tích hợp Codex, nó giải quyết «sự kiện bên ngoài tới → 
 
 ## Lối vào nhóm này
 
-- [Tổng quan Webhooks](/guide/developer-platform/webhooks/overview/)
+- [Tổng quan Webhooks](/vi/guide/developer-platform/webhooks/overview/)
 
 ## Nội dung nhóm
 

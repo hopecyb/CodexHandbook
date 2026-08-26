@@ -1,110 +1,77 @@
 ---
 title: Cloud-Aufgaben in der IDE
-description: Cloud-Aufgaben aus der IDE delegieren, Status verfolgen und Remote-Ergebnisse prüfen.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Delegiere Langzeitaufgaben aus der IDE an Codex Cloud und kehre zu einem prüfbaren Ergebnis zurück.
 sidebar:
   order: 60
+locale: de
+source_locale: zh-CN
+source_revision: ea8a618
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Einige IDE-Integrationen erlauben, Aufgaben an die **Cloud zu delegieren**. Die Aufgabe läuft in einer remote standardisierten Umgebung — du kannst lokal weitereditieren oder den Rechner verlassen. Ablauf ähnlich wie reines Cloud/Web, nur der Einstieg sitzt im Editor.
+Die IDE kann schnelle Iterationen lokal ausführen und zugleich eine Verbindung zu Codex im Web herstellen, um längere Aufgaben an Cloud zu delegieren. Der Einstieg bleibt im Editor, Ausführungsumgebung, Repository-Zustand und Netzwerkgrenzen liegen danach jedoch in der Cloud.
 
-## Inhalt
+## Wann delegieren?
 
-- Wann Cloud-Aufgaben aus der IDE statt rein lokal
-- Was vor und nach der Delegation vorzubereiten ist
-- Wie Remote-Diffs zurück in die lokale Überprüfung kommen
-
-## Geeignete Szenarien
-
-| Cloud geeignet | Lokal bleiben |
+| Lokal bleiben | An Cloud delegieren |
 |---|---|
-| Schwere Installationen, schwer reproduzierbare Umgebung | Zwei Zeilen schnell ändern |
-| Branch pushen / PR öffnen nötig | GitHub nicht verbunden |
-| Lange Läufe, Freigabehinweise am Handy | Enthält lokale, uncommitted sensible Entwürfe |
+| Die aktuelle Auswahl muss schnell und wiederholt angepasst werden | Die Aufgabe umfasst viele Schritte und läuft lange |
+| Die Aufgabe hängt von noch nicht committetem lokalem Zustand ab | Die Eingaben liegen im Remote-Repository oder können hochgeladen werden |
+| Lokale Spezialwerkzeuge sind erforderlich | Abhängigkeiten und Verifikation lassen sich in der Cloud-Umgebung reproduzieren |
+| Du musst den Prozess in Echtzeit bedienen | Du möchtest lokal währenddessen an etwas anderem arbeiten |
 
-Konzept: [Lokal und Cloud](/guide/foundations/local-vs-cloud/)
+Cloud besitzt nicht automatisch noch nicht committete lokale Dateien, lokale Zugangsdaten oder laufende Prozesse. Lege vor der Delegation eindeutig fest, von welchem Repository, Branch und Commit die Aufgabe ausgeht.
 
-## Wann dieser Workflow passt
+## Checkliste vor der Delegation
 
-Häufig, wenn:
+- [ ] Du bist mit einem ChatGPT-Konto angemeldet; Codex Cloud akzeptiert keine API-Key-Anmeldung
+- [ ] GitHub ist verbunden oder du verwendest die derzeit unterstützte GitLab-Beta-Integration
+- [ ] Die Cloud-Umgebung kann Installations- und Verifikationsskripte ausführen
+- [ ] Erforderliche Variablen und Secrets sind in der Umgebung konfiguriert und stehen nicht im Prompt
+- [ ] Lokale nicht committete Änderungen wurden behandelt oder ausdrücklich aus der Aufgabe ausgeschlossen
+- [ ] Ziel, erlaubte Pfade, Verbote und Abnahmebefehle sind eindeutig beschrieben
 
-- du in der IDE arbeitest
-- die Aufgabe selbst aber besser remote läuft
-
-Du bleibst also in der IDE, die Ausführungsumgebung ist aber remote.
-
-## Voraussetzungen
-
-- [ ] [GitHub verbunden](/guide/web-and-cloud/connect-github/)
-- [ ] Cloud-[Umgebung](/guide/web-and-cloud/cloud-environments/) und [Secrets](/guide/web-and-cloud/secrets-and-variables/) konfiguriert (falls nötig)
-- [ ] Lokale Änderungen committed oder klar „Remote-Branch ist maßgeblich“
-
-**Die IDE ersetzt nicht den Cloud-Zugriff auf lokal ungeschobene Commits.**
-
-## Häufige Missverständnisse
-
-### 1. „In der Cloud ausführen“ in der IDE nimmt automatisch alles vom Rechner mit?
-
-Nein.  
-Remote-Aufgaben sehen Remote-Repo, Remote-Umgebung und das, was du explizit übergibst.
-
-### 2. Einstieg in der IDE = fast wie lokale Aufgabe?
-
-Auch nicht.  
-Der Startpunkt ist die IDE, Ausführungsgrenzen, Umgebung und sichtbare Inhalte folgen trotzdem dem Cloud-Modell.
-
-### 3. Remote fertig ≠ Überprüfung bestanden
-
-Remote-Abschluss heißt nur: dort gelaufen — nicht, dass lokales Review, Tests und finale Bestätigung erledigt sind.
-
-## Empfohlener Ablauf
+## End-to-End-Beispiel
 
 ```text
-1. In der IDE Aufgabenbeschreibung schreiben (Ziel, Branch, Einschränkungen, Abnahme)
-2. «In der Cloud ausführen» oder äquivalenten Einstieg wählen (laut Produkt-UI)
-3. Plan bestätigen (falls Plan-Modus aktiv)
-4. Weggehen oder lokal weiterarbeiten → Fortschritt über Benachrichtigung/Panel
-5. Nach Remote-Abschluss: Diff in Web/App ansehen → PR öffnen oder Branch lokal pullen
-6. Lokal testen + manuelles Review → mergen
+Ziel: Behebe im Wiederholungsmodul den Fehler, durch den nach Erreichen des Limits noch einmal gewartet wird.
+Ausgangspunkt: Repository acme/retry-service, Branch fix/retry-limit.
+Umfang: Ändere nur src/retry.ts und die zugehörigen Tests.
+Einschränkungen: Keine Abhängigkeiten aktualisieren, öffentliche API nicht ändern und nicht nach main pushen.
+Abnahme: Führe pnpm test -- retry und pnpm typecheck aus; zeige Diff und Befehlsergebnisse.
 ```
 
-PR-Details: [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/)
+Empfohlener Ablauf:
 
-## Übliche Reihenfolge
+1. Füge in der IDE relevante Dateien oder eine Auswahl hinzu und bestätige zunächst die Problemgrenzen.
+2. Wähle Cloud, um die längere Aufgabe fortzusetzen.
+3. Prüfe Plan, Fortschritt und Verifikationsergebnisse in Cloud.
+4. Kehre zur IDE oder ins Web zurück und prüfe das reviewfähige Ergebnis.
+5. Rufe den Branch ab oder übernimm die Änderungen über einen PR.
+6. Teste erneut in einer vertrauenswürdigen lokalen Umgebung und führe vor dem Zusammenführen ein manuelles Review durch.
 
-Beim ersten Cloud-Task aus der IDE:
+„Abgeschlossen“ in Cloud bedeutet nur, dass die Remote-Ausführung beendet ist. Es bedeutet nicht, dass der Code zusammengeführt werden kann. Unterschiede bei Abhängigkeiten, Betriebssystem oder Zugangsdaten zwischen Remote, lokal und CI können weiterhin Probleme aufdecken.
 
-1. Klären, ob lokale Änderungen committed sind oder absichtlich weggelassen werden
-2. GitHub, Secrets und Branch vorbereiten
-3. Mit klarem Ziel, Umfang und Abnahmekriterien starten
-4. Nach Remote-Abschluss Diff ansehen
-5. Lokal Tests und manuelle Überprüfung nachziehen
+## Konflikte und Sicherheit
 
-Der Kernunterschied IDE-Cloud vs. lokal: Ist die Ausführungsumgebung remote?
+- Lass lokale und Cloud-Ausführung nach der Delegation nicht dieselbe Datei gleichzeitig ändern.
+- Füge keine Produktionszugangsdaten in Prompts ein; verwende Secrets der Umgebung.
+- Behandle Netzwerkzugriff in Cloud nicht als Standardfunktion; konfiguriere die Allowlist der Umgebung.
+- Push, PR-Erstellung und Zusammenführung sind getrennte Aktionen. Die Zusammenführung benötigt weiterhin ein menschliches oder CI-Gate.
 
-## Bezug zur Desktop-App-Delegation
+Lies als Nächstes [Cloud-Umgebungen](/de/guide/web-and-cloud/cloud-environments/) und [Pull Requests erstellen](/de/guide/web-and-cloud/create-pull-requests/).
 
-[Lokale und Cloud-Aufgaben](/guide/desktop-app/local-and-cloud-tasks/) der Desktop-App und IDE-Delegation teilen dasselbe Cloud-Backend; Unterschied vor allem **Einstiegs-UI und Kontextanhänge** (IDE kann eine Zusammenfassung der aktuellen Auswahl mitschicken).
+## Offizielle Grundlage
 
-## Sicherheitsgrenzen
-
-- Cloud-Aufgaben-Berechtigungen folgen GitHub-Verbindungsrahmen und Organisationsrichtlinien
-- Keine Produktionsgeheimnisse in die Aufgabenbeschreibung; [Secrets](/guide/web-and-cloud/secrets-and-variables/) nutzen
-- Vor dem Merge weiterhin [manuelle Überprüfung](/guide/web-and-cloud/code-review/)
-
-## Häufige Fehler
-
-- Nach Delegation lokal dieselbe Datei weiterändern → Konflikt mit Remote-Branch
-- Kein Branchname → Remote pusht auf gemeinsamen Branch
-- Cloud-Output als „abgenommen“ nehmen und CI überspringen
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** IDE / Cloud  
-**Prüfhinweis:** Diese Seite beschreibt konkrete aktuelle Erweiterungsfähigkeiten für IDE→Cloud-Delegation und Diff-Rückführung; aktuelle Official-Quellen reichen nicht für Punkt-für-Punkt-Belege — bis zur formalen IDE/Cloud-Doku besser `outdated`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** IDE, Cloud
+
+**Zuletzt geprüft:** 2026-08-26

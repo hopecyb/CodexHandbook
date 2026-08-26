@@ -3,9 +3,10 @@ title: Verificación y revisión humana
 description: Por qué el resultado debe ser comprobable y cómo revisarlo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 19de747
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -14,10 +15,10 @@ Codex puede acelerarte, pero no asume por ti la responsabilidad de la confirmaci
 
 Codex aumenta la velocidad, pero **no te libera de la aceptación**. Como mínimo, revisa esto:
 
-1. Lee el [Diff](/guide/quality/review-diffs/): qué archivos cambió y si se pasó de rango
+1. Lee el [Diff](/es/guide/quality/review-diffs/): qué archivos cambió y si se pasó de rango
 2. Comprueba según el criterio de terminado que definiste
-3. Si puedes ejecutar pruebas, hazlo: [Ejecutar pruebas](/guide/quality/run-tests/)
-4. Los hechos hacia fuera necesitan fuente: [Validar fuentes](/guide/quality/validate-sources/)
+3. Si puedes ejecutar pruebas, hazlo: [Ejecutar pruebas](/es/guide/quality/run-tests/)
+4. Los hechos hacia fuera necesitan fuente: [Validar fuentes](/es/guide/quality/validate-sources/)
 
 ## Qué mira realmente la revisión humana
 

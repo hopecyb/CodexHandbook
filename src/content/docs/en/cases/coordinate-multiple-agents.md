@@ -3,9 +3,10 @@ title: Coordinate multiple agents
 description: A collaboration case for parallel exploration, divided execution, and merging results.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Coordinate multiple agents
@@ -36,7 +37,7 @@ Agent 2: Pros, cons, and effort for plan B
 
 ### Worktree isolation
 
-Different agents work in different [git worktrees](/guide/desktop-app/worktrees/) on different branches; humans merge at the end.
+Different agents work in different [git worktrees](/en/guide/desktop-app/worktrees/) on different branches; humans merge at the end.
 
 ## 3. Coordination rules (recommended in AGENTS.md)
 
@@ -46,8 +47,8 @@ Different agents work in different [git worktrees](/guide/desktop-app/worktrees/
 
 ## 4. Related
 
-- [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)
-- [Subagents](/guide/agent-work/subagents/)
+- [Multi-agent coordination](/en/cases/workflows/multi-agent-coordination/)
+- [Subagents](/en/guide/agent-work/subagents/)
 
 ---
 

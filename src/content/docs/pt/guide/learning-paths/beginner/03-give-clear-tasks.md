@@ -3,9 +3,10 @@ title: Dar Tarefas claras
 description: Organiza o Prompt com objetivo, contexto, restrições e critérios de aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7048d91
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Escreve um Prompt segundo um enquadramento estável.
 
-Detalhes do enquadramento: [Anatomia de uma boa Tarefa](/prompts/task-anatomy/)
+Detalhes do enquadramento: [Anatomia de uma boa Tarefa](/pt/prompts/task-anatomy/)
 
 Os dois passos anteriores centraram-se em «dizer a Tarefa com clareza»; este continua com «dizê-la de forma mais estável».
 
@@ -47,7 +48,7 @@ Sem aceitação, fica mais difícil saber se «não acabou» ou se «só não go
 
 O essencial de uma Tarefa clara é objetivo, limites e critérios de conclusão aparecerem juntos.
 
-Seguinte: [Rever resultados](/guide/learning-paths/beginner/04-review-results/)
+Seguinte: [Rever resultados](/pt/guide/learning-paths/beginner/04-review-results/)
 
 ---
 

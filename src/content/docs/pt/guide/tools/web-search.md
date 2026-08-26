@@ -3,9 +3,10 @@ title: Pesquisa Web
 description: Usar a pesquisa para complementar factos e indicar fontes.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 559d082
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ A pesquisa Web serve para complementar factos — não para substituir a sua con
 
 Adequado: consultar documentação pública, códigos de erro, notas de versão. Inadequado: tratar o resultado da pesquisa como conclusão jurídica/médica final.
 
-Exija fontes anexas e abra-as manualmente para conferir. Use em conjunto com [Validar fontes](/guide/quality/validate-sources/).
+Exija fontes anexas e abra-as manualmente para conferir. Use em conjunto com [Validar fontes](/pt/guide/quality/validate-sources/).
 
 ## Para que serve a pesquisa
 

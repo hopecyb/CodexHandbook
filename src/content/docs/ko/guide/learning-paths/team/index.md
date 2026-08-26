@@ -3,9 +3,10 @@ title: 팀 경로(개요)
 description: 팀 도입 관련 루트 개요입니다. 심화 단계는 이후 보완합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -22,9 +23,9 @@ sidebar:
 
 ## 지금 읽을 수 있는 것
 
-- [권한과 승인](/guide/foundations/permissions-and-approvals/)
-- [민감 컨텍스트](/guide/context/sensitive-context/)
-- [완료 정의](/guide/quality/definition-of-done/)
+- [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
+- [민감 컨텍스트](/ko/guide/context/sensitive-context/)
+- [완료 정의](/ko/guide/quality/definition-of-done/)
 
 ## 흔한 오해
 
@@ -53,11 +54,11 @@ sidebar:
 
 팀 관점에서 추진하려면 이 순서로 읽으세요.
 
-1. [권한과 승인](/guide/foundations/permissions-and-approvals/)
-2. [민감 컨텍스트](/guide/context/sensitive-context/)
-3. [개인화와 프로젝트 설정](/guide/customization/)
-4. [완료 정의](/guide/quality/definition-of-done/)
-5. [팀과 엔터프라이즈](/guide/team-enterprise/)
+1. [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
+2. [민감 컨텍스트](/ko/guide/context/sensitive-context/)
+3. [개인화와 프로젝트 설정](/ko/guide/customization/)
+4. [완료 정의](/ko/guide/quality/definition-of-done/)
+5. [팀과 엔터프라이즈](/ko/guide/team-enterprise/)
 
 이 경로는 경계, 규칙, 검수에 무게를 둡니다. 사용량부터 올리는 것이 아닙니다.
 

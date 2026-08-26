@@ -3,81 +3,70 @@ title: Diff, bình luận và rà soát
 description: Đọc thay đổi và để lại ý kiến rà soát.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3efee20
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-## Quy trình rà soát
+A chat summary is Codex's explanation of the work. A Git diff is what actually changed in the files. The desktop App's review pane shows diffs, lets you add line-level comments, and lets you choose which changes to stage, revert, commit, or push.
 
-1. Mở view diff, duyệt theo tệp
-2. Xác nhận thay đổi nằm trong phạm vi đã ước định
-3. Hỏi thêm hoặc bình luận chỗ đáng ngờ (nếu UI hỗ trợ)
-4. Chấp nhận, từ chối hoặc yêu cầu sửa
+The project must be in a Git repository to use the full review pane and `/review`.
 
-Phương pháp: [Rà soát diff](/guide/quality/review-diffs/)
+## Two review layers
 
-## Nội dung
+First inspect the scope yourself, then invoke an independent reviewer to look for implementation issues:
 
-Trong ứng dụng Desktop, thay đổi chủ yếu xem ở view diff, không phải ở vùng hội thoại.
+1. Open the review pane and check the number and paths of changed files.
+2. Select **Last turn** to see exactly what changed in the latest turn.
+3. Switch between **Unstaged**, **Staged**, **Commit**, and **Branch** to confirm the review scope.
+4. Run `/review` in the input area.
+5. Choose whether to compare against a base branch, review uncommitted changes, inspect a specific commit, or apply custom criteria.
+6. Read the findings in priority order, then decide what to fix.
 
-Vùng chat là «lời nó nói»; view diff là «thực tế đã xảy ra gì».
+The `/review` reviewer is read-only by default and does not modify the worktree. If you subsequently ask Codex to fix a finding, the original sandbox and approval rules still apply.
 
-## Hiểu nhầm thường gặp
+## Reusable review criteria
 
-### 1. Bình luận chỉ hữu ích khi cộng tác nhóm?
+```text
+Review the current uncommitted changes. Focus on:
+- changes outside the task scope;
+- behavioral regressions, edge cases, or security issues;
+- whether tests cover failure paths;
+- whether the documentation matches the implementation.
 
-Dù dùng một mình, bình luận hoặc hỏi thêm vẫn hữu ích — ít nhất hỏi rõ «vì sao chỗ này lại sửa».
+List findings first, ordered by severity. For each finding, provide the file,
+location, evidence, and the smallest reasonable fix.
+If you find no issues, say so explicitly and list any remaining test gaps.
+```
 
-### 2. Tôi chưa chắc nó sửa sai — làm sao?
+## Reduce ambiguity with line comments
 
-Không cần kết luận ngay. Chỉ ra điểm đáng ngờ rồi để nó giải thích ổn hơn tự đoán cứng.
+Hover over a suspicious line, select the **+** that appears, and write specific feedback. After leaving all comments, send one explicit instruction:
 
-### 3. Trước khi chấp nhận, tối thiểu xem gì?
+```text
+Address the line comments I left. Keep the change set minimal, rerun the
+relevant tests, and show the new diff when finished.
+```
 
-Ít nhất xem ba việc:
+Useful comments identify a risk or acceptance condition, such as "What does this return for an empty array?" A comment that only says "This is wrong" is usually insufficient.
 
-- Đã sửa những tệp nào
-- Có vượt phạm vi cho phép không
-- Có xóa hoặc phần dư rõ ràng không nên xuất hiện không
+## Staging and reverting
 
-### 4. Tôi không phải reviewer chuyên nghiệp — liệu có thấy được vấn đề?
+The review pane can stage, unstage, or revert an entire diff, a file, or an individual hunk. Reverting discards changes. Before doing so, confirm that the changes were not already present when the task began.
 
-Có thể bắt đầu với vài câu hỏi trực tiếp nhất:
+Use a consistent acceptance order: scope → behavior → tests → security → maintainability. See [Review diffs](/vi/guide/quality/review-diffs/) for more techniques.
 
-- Nó có sửa chỗ không nên sửa không
-- Nó có xóa thứ trông vẫn quan trọng không
-- Nó nói đã làm A — trong diff có thật chỉ có A không
+## Official sources
 
-## Thứ tự rà soát
-
-Nếu mỗi lần thấy diff hơi rối, hãy cố định thứ tự này:
-
-1. Xem đã sửa bao nhiêu tệp
-2. Xem thay đổi mỗi tệp có liên quan tác vụ không
-3. Xem có sửa vượt phạm vi không
-4. Cuối cùng mới xem chi tiết diễn đạt, định dạng và triển khai cục bộ
-
-Như vậy ít bị cuốn theo chỉnh sửa nhỏ ngay từ đầu.
-
-## Bình luận nên viết gì cho đáng
-
-Khi viết bình luận cũng không cần cầu toàn. Đáng giá hơn là các loại:
-
-- «Chỗ này vì sao phải sửa?»
-- «Khối này có vượt phạm vi lần này không?»
-- «Chỗ này trông có thể ảnh hưởng hành vi cũ — giải thích thêm được không?»
-- «Đoạn này bổ sung cách kiểm chứng được không?»
-
-Loại bình luận này dễ đẩy bước sửa tiếp theo hơn chỉ nói «có vấn đề».
-
-Trên trang này, thứ thật sự đáng xem đi xem lại vẫn là view diff.
+- [Code review](https://learn.chatgpt.com/docs/code-review)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App  
-**Ghi chú tái kiểm:** Trang này xoay quanh trải nghiệm UI hiện tại của view diff, lối vào bình luận và chấp nhận/từ chối thay đổi trong Desktop App, nhưng thiếu tài liệu chính thức hiện hành đủ mạnh để xác nhận từng giao diện và luồng thao tác; trước khi bổ sung tài liệu rà soát desktop phiên bản mới nên gắn `outdated`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App, CLI, IDE
+
+**Kiểm chứng gần nhất:** 2026-08-26

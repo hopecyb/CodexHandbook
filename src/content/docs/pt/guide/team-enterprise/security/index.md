@@ -3,9 +3,10 @@ title: Segurança
 description: Página sobre riscos ao nível da equipa, superfície de ataque e ideias de proteção — compreende primeiro onde está o risco, depois as medidas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Se entrares neste grupo direto pelas páginas de detalhe, é fácil memorizar nomes soltos sem saber o que estão a prevenir.
@@ -14,9 +15,9 @@ Se entrares neste grupo direto pelas páginas de detalhe, é fácil memorizar no
 
 ## Ordem recomendada
 
-1. [Modelo de ameaças](/guide/team-enterprise/security/threat-model/)
-2. [Riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Injeção de Prompt](/guide/team-enterprise/security/prompt-injection/)
+1. [Modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/)
+2. [Riscos de Plugin e MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Injeção de Prompt](/pt/guide/team-enterprise/security/prompt-injection/)
 
 ## Quem deve ler primeiro
 

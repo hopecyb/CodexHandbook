@@ -3,9 +3,10 @@ title: 記事を書く
 description: テーマ選定からアウトライン、原稿、ファクトチェックまでの技術ライティングの完全な流れ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 記事を書く
@@ -49,11 +50,11 @@ translated_at: 2026-07-28
 ### 検証
 
 - リンク、バージョン番号、コマンドが有効か人間が照合する
-- 任意：[ライティング Skill](/skills/examples/writing-skill/) でフローを固定化する
+- 任意：[ライティング Skill](/ja/skills/examples/writing-skill/) でフローを固定化する
 
 ## 3. 蓄積
 
-繰り返しのライティングは `article-writer` Skill にカプセル化できる。[クリエイターパス](/guide/learning-paths/creator/) を参照。
+繰り返しのライティングは `article-writer` Skill にカプセル化できる。[クリエイターパス](/ja/guide/learning-paths/creator/) を参照。
 
 ---
 

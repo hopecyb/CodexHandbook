@@ -1,0 +1,67 @@
+<svg lang="en" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title desc">
+  <title id="title">Verified bug-fix workflow</title>
+  <desc id="desc">Reproduce stable red and record evidence; locate root cause, make the smallest repair, reach green in related tests, then run full regression and diff review. Failures return to the relevant step.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 25.2px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.4px; }
+    .label { fill: #f8fafc; font-size: 14.3px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 11.8px; }
+    .tiny { fill: #94a3b8; font-size: 10.1px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1100" height="590" rx="8" fill="#020617"/>
+  <rect width="1100" height="590" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Verified bug fix: red, then green, then regression</text>
+  <text x="44" y="70" class="sub">A passing test becomes repair evidence only after the original issue is reproduced reliably.</text>
+
+  <path d="M186 260H226" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M374 260H414" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M562 260H602" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M750 260H790" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M938 260H974" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M864 320V410H488V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+  <path d="M676 320V456H300V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="38" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="112" y="235" text-anchor="middle" class="label">1. Reproduce reliably</text>
+  <text x="112" y="261" text-anchor="middle" class="note">Run the failing test</text>
+  <text x="112" y="283" text-anchor="middle" class="note">Save assertion and stack</text>
+  <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">RED · expected failure</text>
+
+  <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="300" y="235" text-anchor="middle" class="label">2. Locate root cause</text>
+  <text x="300" y="261" text-anchor="middle" class="note">Read implementation and tests</text>
+  <text x="300" y="283" text-anchor="middle" class="note">Eliminate adjacent hypotheses</text>
+  <text x="300" y="304" text-anchor="middle" class="tiny">Explain first; do not edit</text>
+
+  <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="488" y="235" text-anchor="middle" class="label">3. Smallest repair</text>
+  <text x="488" y="261" text-anchor="middle" class="note">Change only the root-cause path</text>
+  <text x="488" y="283" text-anchor="middle" class="note">Preserve public behavior</text>
+  <text x="488" y="304" text-anchor="middle" class="tiny">Reject incidental refactoring</text>
+
+  <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="676" y="235" text-anchor="middle" class="label">4. Related tests</text>
+  <text x="676" y="261" text-anchor="middle" class="note">Original test turns green</text>
+  <text x="676" y="283" text-anchor="middle" class="note">Boundary tests pass</text>
+  <text x="676" y="304" text-anchor="middle" class="tiny" fill="#34d399">GREEN</text>
+
+  <rect x="790" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="864" y="235" text-anchor="middle" class="label">5. Regression and review</text>
+  <text x="864" y="261" text-anchor="middle" class="note">Full tests · lint</text>
+  <text x="864" y="283" text-anchor="middle" class="note">Diff and scope check</text>
+  <text x="864" y="304" text-anchor="middle" class="tiny">Record residual risks</text>
+
+  <rect x="974" y="218" width="94" height="84" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1021" y="250" text-anchor="middle" class="label">Deliver</text>
+  <text x="1021" y="275" text-anchor="middle" class="note">Evidence complete</text>
+
+  <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="504" text-anchor="middle" class="note">Evidence chain: failing command and assertion → root-cause explanation → minimal diff → related tests pass → full regression passes → human scope review</text>
+  <text x="550" y="526" text-anchor="middle" class="tiny">Related-test failure returns to the minimal repair; full-regression or diff-review failure returns to root-cause analysis.</text>
+</svg>

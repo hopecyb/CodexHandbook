@@ -3,9 +3,10 @@ title: 비대화형 모드
 description: 배치, 스크립트, 파이프라인용 설명 페이지입니다. 어떤 작업에 맞는지 먼저 이해한 뒤, 구체 명령과 출력 설계를 보세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e226a62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 많은 사람이 “비대화형 모드”를 처음 보면 “채팅 UI가 없는 일반판 Codex”로 이해합니다.
@@ -14,10 +15,10 @@ translated_at: 2026-07-28
 
 ## 권장 순서
 
-1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [스크립트와 파이프라인](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [구조화 출력](/guide/developer-platform/non-interactive/structured-output/)
-4. [종료 코드와 재시도](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+1. [codex exec](/ko/guide/developer-platform/non-interactive/codex-exec/)
+2. [스크립트와 파이프라인](/ko/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/)
+4. [종료 코드와 재시도](/ko/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## 이 그룹이 가장 잘 푸는 문제
 

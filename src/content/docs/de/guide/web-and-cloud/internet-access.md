@@ -1,139 +1,75 @@
 ---
 title: Internetzugriff
-description: 'Outbound-Policy der Cloud-Umgebung, Abhängigkeitsinstallation und Datenexfiltrationsrisiko — bedarfsgerecht öffnen und Grenzen halten.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Unterscheide Netzwerkzugriff während der Installation von Agent-Netzwerkzugriff und begrenze Risiken nach Domain und HTTP-Methode.
 sidebar:
   order: 70
+locale: de
+source_locale: zh-CN
+source_revision: 1e2d815
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cloud-Aufgaben brauchen oft **Outbound**: npm/PyPI-Packages, APIs, Submodule. Gleichzeitig ist Internetzugriff eine **hohe Datenexfiltrationsfläche** — der Agent kann Repo- oder Secret-Inhalte an externe Dienste tragen.
+Cloud besitzt zwei unterschiedliche Phasen mit Netzwerkzugriff:
 
-## Inhalt
+| Phase | Standardverhalten | Hauptzweck |
+|---|---|---|
+| Setup-Skript | Netzwerk verfügbar | Abhängigkeiten und Werkzeuge installieren |
+| Agent-Phase | Standardmäßig deaktiviert | Externe Ressourcen während der Agent-Ausführung verwenden |
 
-- Kann die Cloud-Umgebung default ins Internet?
-- Wann öffnen, wie Exposition minimieren
-- Zusammenspiel mit lokaler Sandbox und Secrets
+Ein erfolgreiches `pnpm install` im Setup bedeutet deshalb nicht, dass Agent anschließend mit `curl` auf beliebige Websites zugreifen kann.
 
-## Grundgrenze
+## Weshalb der Zugriff standardmäßig deaktiviert ist
 
-„Braucht Netz“ ≠ „unbeschränktes Netz“.
+Agent-Netzwerkzugriff erhöht die Risiken durch Prompt Injection, Exfiltration von Code oder Daten, schädliche Abhängigkeiten und Repository-Inhalte mit inkompatiblen Lizenzen. Nicht vertrauenswürdige Issues, Websites oder README-Dateien von Abhängigkeiten können Anweisungen enthalten, die Agent zu Exfiltrationsbefehlen verleiten.
 
-Viele sehen nur entweder/oder:
+Grundregel: Erlaube ausschließlich die für die Aufgabe nötigen Ziele und Aktionen und prüfe die Arbeitsprotokolle.
 
-- komplett offline
-- der Bequemlichkeit wegen alles offen
+## Konfigurationsoptionen
 
-Üblicher: nur die Netzfähigkeiten, die die Aufgabe braucht.
+Internetzugriff der Agent-Phase wird pro Umgebung konfiguriert:
 
-## Zwei „Netz“-Schichten
+- **Off:** Agent-Netzwerk vollständig blockieren.
+- **On:** Netzwerk erlauben und optional Domains sowie HTTP-Methoden einschränken.
 
-| Schicht | Bedeutung |
-|---|---|
-| Cloud-Umgebung Outbound | Darf die Remote-Maschine Public/Private APIs erreichen? |
-| Agent-Tool-Netz | Web Search, curl in der Session (clientabhängig) |
+Die Domainliste kann leer beginnen, die Voreinstellung Common dependencies verwenden oder All (unrestricted) auswählen. In einem Produktions-Repository darf unrestricted nicht als schnelle Lösung für einen Fehler dienen.
 
-Fokus hier: **Cloud-Umgebung**; allgemein: [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/).
+Wenn die Aufgabe nur Dokumentation lesen oder Inhalte herunterladen muss, beschränke die HTTP-Methoden auf `GET`, `HEAD` und `OPTIONS`. Dadurch werden `POST`, `PUT`, `PATCH` und `DELETE` blockiert, die Daten senden oder verändern können.
 
-## Lokal online ≠ Cloud online
+## Beispiel für minimale Freigabe
 
-Lokal vielleicht weil:
+Die Aufgabe muss die Dokumentation einer öffentlichen API abfragen:
 
-- bereits eingeloggt
-- lokales `.npmrc`, SSH-Key, Proxy
-- Firmen-VPN
+1. Behalte zuerst Off bei und bestätige, dass der Fehlschlag tatsächlich durch das Netzwerk verursacht wird.
+2. Aktiviere Agent access.
+3. Nimm ausschließlich die offizielle Domain in die Allowlist auf.
+4. Erlaube nur `GET`, `HEAD` und `OPTIONS`.
+5. Führe die Aufgabe erneut aus und prüfe alle ausgehenden Anfragen im Protokoll.
+6. Entscheide nach Aufgabenende, ob die Einstellung wieder auf Off gesetzt wird.
 
-Cloud erbt das nicht. „Lokal `npm install`“ ⇒ nicht automatisch „Cloud auch“.
+## Entscheidende Beziehung zu Secrets
 
-## Typische Outbound-Bedarfe
+Cloud-Secrets werden vor der Agent-Phase entfernt. Das reduziert das Risiko, dass Agent ein Setup-Secret direkt nach außen überträgt. Normale Umgebungsvariablen, Repository-Inhalte und während der Aufgabe erzeugte Daten können aber weiterhin gesendet werden. Tarne vertrauliche Werte nicht als normale Variablen, um den Secret-Lebenszyklus zu umgehen.
 
-- Abhängigkeiten: `npm install`, `pip install`, `go mod download`
-- Private Registry ([Secrets](/guide/web-and-cloud/secrets-and-variables/))
-- Drittanbieter-APIs (Payment, Maps, LLM-Gateway …)
-- Submodule oder Build-Assets
+## Abnahmecheckliste
 
-## Entscheidungsprinzip
+- [ ] Der zwingende Grund für Netzwerkzugriff in der Agent-Phase ist beschrieben
+- [ ] Die Allowlist enthält nur erforderliche Domains
+- [ ] HTTP-Methoden sind auf die kleinste Menge beschränkt
+- [ ] Eingabequellen sind vertrauenswürdig oder Prompt Injection wurde berücksichtigt
+- [ ] Protokolle enthalten keinen Befehl zum Hochladen von Repository, Umgebung oder Zugangsdaten
+- [ ] Neue Abhängigkeiten wurden auf Quelle, Version und Lizenz geprüft
 
-Ist ein Netzschritt für **diese** Aufgabe nicht nötig — nicht öffnen.
+## Offizielle Grundlage
 
-- Package-Quellen für Install: meist nötig
-- Unrelated Sites / Extra-Downloads: meist nicht
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
-## Empfohlene Strategie
-
-### Default eng, nach Bedarf öffnen
-
-1. In [Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/) aktuelle Netzpolicy prüfen
-2. **Erforderliche Domains** listen (Package-Manager, Firmen-API) — kein „ganzes Netz“
-3. In `AGENTS.md`: erlaubte URLs; Keys nicht in Prompts
-4. Testaufgabe: Abhängigkeiten installierbar, unrelevante Sites blockiert (falls granular möglich)
-
-### Arbeitsteilung mit Secrets
-
-| Inhalt | Wohin |
-|---|---|
-| API-Key, Token | Cloud Secrets, nicht Repo |
-| Erlaubte API-Base-URLs | Doku oder Variablen**namen** (nicht Werte) |
-| Proxy / Mirror-URLs | Team-Standardconfig |
-
-## Häufige Missverständnisse
-
-### 1. Netz nur „bequemer“, kein Security-Thema
-
-Mit Netz wird es zugleich:
-
-- Abhängigkeitsdownload
-- Credential-Nutzung
-- Datenexport
-
-### 2. Kein Secret im Prompt = absolut sicher
-
-Kann die Umgebung Secrets lesen und Ergebnisse nach außen senden, bleibt Risiko.
-
-### 3. Web Search = Cloud-Outbound
-
-Eines ist Remote-Umgebungs-Netz, eines Session-Tool-Netz — getrennt troubleshooten.
-
-### Schutz vor Exfiltration
-
-- Keine Prod-DB-Strings in Aufgabenbeschreibungen
-- Prüfen, ob Agent `.env`/Key-Inhalte nach außen sendet
-- Unvertrauenswürdige Repos: erste Cloud-Läufe **ohne Outbound oder Read-only-Sandbox**
-
-## Mit lokaler Dev abstimmen
-
-Lokales `curl` ≠ Cloud — häufige „Cloud rot“-Ursachen:
-
-| Phänomen | Mögliche Ursache |
-|---|---|
-| Abhängigkeitsinstall fehlgeschlagen | Outbound gesperrt oder Registry braucht Auth |
-| Submodule fehlen | SSH-Key nicht als Secret |
-| Interne API Timeout | Cloud nicht im Firmen-VPN |
-
-Richtung: HTTPS + Token, erreichbare Mirrors, oder Doku: Cloud unterstützt interne Ressourcen nicht.
-
-## Häufige Fehler
-
-- Global Outbound offen + unbeschränkte Tasks auf Prod-Repos mit Secrets
-- Annehmen, Cloud teile lokales `.npmrc` (ungepusht / kein Secret)
-- „Braucht Netz“ mit „braucht Web-Search-Tool“ vermischen
-- Erst bei Install-Fehler merken, dass Cloud keine lokale Login-Session hat
-
-## Abnahme-Checkliste
-
-- [ ] Erforderliche Outbound-Domains/Services für Cloud-Aufgaben des Repos gelistet
-- [ ] Secrets konfiguriert, nicht in Git
-- [ ] Testbranch: Install + Test durch
-- [ ] Team weiß, welche Daten nicht in vernetzte Prompts gehören
-
-## Quellen
-- OpenAI Codex Cloud Netz- und Security-Dokumentation
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud  
-**Prüfhinweis:** Default-Outbound, Domain-Policy und granulare Netzsteuerung hängen stark an Produkt und Org-Security; ohne starke aktuelle offizielle Netzpolicy-Doku nicht `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud
+
+**Zuletzt geprüft:** 2026-08-26

@@ -3,9 +3,10 @@ title: 技術コンテンツの検証
 description: ページを verified にする方法——再現手順、公式根拠、日付を含む。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -115,8 +116,8 @@ sidebar:
 
 ## 関連
 
-- [ハンドブック版ポリシー](/guide/start-here/handbook-version-policy/)
-- [公式リソース](/guide/reference/official-resources/)
+- [ハンドブック版ポリシー](/ja/guide/start-here/handbook-version-policy/)
+- [公式リソース](/ja/guide/reference/official-resources/)
 
 `verified` の意味は「現在の記載根拠どおりに実際に検証し、追跡可能な根拠がある」ことです。著者の「たぶん大丈夫」だけでは足りません。
 

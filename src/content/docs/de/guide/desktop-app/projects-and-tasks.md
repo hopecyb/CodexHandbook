@@ -3,9 +3,10 @@ title: Projekte und Aufgaben
 description: Projekte und Aufgaben in der App verwalten.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 088dad1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -39,7 +40,7 @@ Stimmt der Ort nicht, laufen viele Folgeprobleme schief.
 Die „Aufgabe“ ist der **konkrete Auftrag** dieses Durchgangs.  
 Je klarer der Auftrag, desto weniger muss Codex während der Arbeit raten.
 
-Begriffsvergleich: [Threads, Aufgaben und Projekte](/guide/foundations/threads-tasks-and-projects/)
+Begriffsvergleich: [Threads, Aufgaben und Projekte](/de/guide/foundations/threads-tasks-and-projects/)
 
 ## Häufige Missverständnisse
 

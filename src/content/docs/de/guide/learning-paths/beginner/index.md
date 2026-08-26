@@ -3,9 +3,10 @@ title: Einsteigerpfad
 description: Für den ersten Codex-Kontakt die kürzeste Fünf-Schritte-Route — von klaren Aufgaben bis zum ersten kleinen Projekt.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -16,11 +17,11 @@ Diese Gruppe ist der kürzeste Pfad für Einsteiger.
 
 ## Empfohlene Reihenfolge
 
-1. [Mit Codex sprechen](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Mit Dateien arbeiten](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Klare Aufgaben geben](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Ergebnisse prüfen](/guide/learning-paths/beginner/04-review-results/)
-5. [Erstes kleines Projekt abschließen](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Mit Codex sprechen](/de/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Mit Dateien arbeiten](/de/guide/learning-paths/beginner/02-work-with-files/)
+3. [Klare Aufgaben geben](/de/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Ergebnisse prüfen](/de/guide/learning-paths/beginner/04-review-results/)
+5. [Erstes kleines Projekt abschließen](/de/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Für wen
 

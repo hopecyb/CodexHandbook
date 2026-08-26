@@ -3,9 +3,10 @@ title: Plantilla de modificación
 description: Iterar con límites sobre lo existente.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de modificación
@@ -63,8 +64,8 @@ Un Prompt de modificación, además de «qué cambiar», debe aclarar «hasta d�
 
 ## Relacionado
 
-- [Definir el terminado](/prompts/define-done/)
-- [Restricciones y límites](/prompts/constraints-and-boundaries/)
+- [Definir el terminado](/es/prompts/define-done/)
+- [Restricciones y límites](/es/prompts/constraints-and-boundaries/)
 
 ---
 

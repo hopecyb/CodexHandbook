@@ -3,9 +3,10 @@ title: Génération d'images
 description: Générer ou éditer des images dans les Tâches Codex — Prompts, formats et acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex peut invoquer la **génération d'images** dans certains scénarios : brouillons d'illustration, esquisses d'icônes, concept art UI, diagrammes. Traitez la sortie comme des **artefacts à Vérifier** — pas des assets de marque prêts à livrer.
@@ -26,7 +27,7 @@ Bon pour des brouillons visuels — pas des livrables finaux.
 | Exploration rapide de mise en page UI | Livraison design pixel-perfect |
 | Icônes d'exemple tutoriel | Ressemblance de personne réelle sans autorisation |
 
-Complète [Prompting avec images](/prompts/prompting-with-images/) : cette page couvre les images en **entrée** ; celle-ci couvre les images en **sortie**.
+Complète [Prompting avec images](/fr/prompts/prompting-with-images/) : cette page couvre les images en **entrée** ; celle-ci couvre les images en **sortie**.
 
 ## À quoi sert la génération d'images
 
@@ -46,7 +47,7 @@ Pas un substitut pour :
 
 1. Énoncer usage, ratio d'aspect, mots-clés de style (éviter d'empiler des noms de marques déposées)
 2. Demander format de sortie (PNG/SVG si pris en charge) et chemin de sauvegarde
-3. Après génération, [Vérifier les artefacts](/guide/quality/verify-artifacts/) : ouvrir le fichier, vérifier résolution et lisibilité
+3. Après génération, [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/) : ouvrir le fichier, vérifier résolution et lisibilité
 4. Revue design ou juridique avant publication externe
 
 ## Idées reçues courantes
@@ -86,7 +87,7 @@ Plus proche de l'exploration, illustration de contenu et esquisse conceptuelle �
 
 - Grosses images dans `assets/` ou CDN ; surveiller la taille Git
 - En PR, noter le Prompt de génération et la version du modèle (audit interne)
-- Voir [images et captures d'écran](/guide/files-and-artifacts/images-and-screenshots/)
+- Voir [images et captures d'écran](/fr/guide/files-and-artifacts/images-and-screenshots/)
 
 ## Sécurité et conformité
 

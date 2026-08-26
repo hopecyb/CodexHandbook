@@ -3,9 +3,10 @@ title: Pedir un plan primero
 description: Antes de que Codex actúe, haz que explique los pasos, los riesgos y cómo verificar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muchos problemas no son de imposibilidad, sino de **empezar demasiado rápido**. Un «ayúdame a arreglarlo» mezcla con facilidad exploración, plan y ejecución, y al final solo puedes validar de forma pasiva mirando el diff.
@@ -108,7 +109,7 @@ Eso ahorra más contexto que un «empieza de nuevo» y reorienta el resultado co
 | Ayuda a dividir en subtareas | Fácil mezclar varios objetivos |
 | La verificación es visible de antemano | A menudo solo piensas en tests al final |
 
-Muchos flujos separan «exploración» y «plan». Ver [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/).
+Muchos flujos separan «exploración» y «plan». Ver [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/).
 
 ## Problemas más frecuentes del plan
 
@@ -126,10 +127,10 @@ Un buen plan admite incertidumbre; no finge que todas las premisas ya están cer
 
 ## Combinaciones recomendadas
 
-- Cadena de ejecución formal: [Planificación](/guide/agent-work/planning/)
-- Plan reutilizable: [Anatomía de una tarea](/prompts/task-anatomy/)
-- Corrección a mitad de ejecución: [Progreso y reorientación](/guide/agent-work/progress-and-steering/)
-- Aceptación clara: [Definir el terminado](/prompts/define-done/)
+- Cadena de ejecución formal: [Planificación](/es/guide/agent-work/planning/)
+- Plan reutilizable: [Anatomía de una tarea](/es/prompts/task-anatomy/)
+- Corrección a mitad de ejecución: [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/)
+- Aceptación clara: [Definir el terminado](/es/prompts/define-done/)
 
 ## Una convención útil en el equipo
 

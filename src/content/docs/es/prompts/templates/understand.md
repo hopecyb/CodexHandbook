@@ -3,9 +3,10 @@ title: Plantilla de comprensión
 description: Construir primero el mapa mental y luego cambiar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de comprensión
@@ -52,8 +53,8 @@ El valor de esta plantilla es acotar primero el alcance de la siguiente tarea.
 
 ## Relacionado
 
-- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- [Caso: comprender un repositorio](/cases/understand-a-codebase/)
+- [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
+- [Caso: comprender un repositorio](/es/cases/understand-a-codebase/)
 
 ---
 

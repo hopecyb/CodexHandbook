@@ -3,9 +3,10 @@ title: Fehlerbehebung
 description: "Nach Symptomen zu den passenden Tutorials und Produktseiten finden."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 18
 ---
@@ -24,12 +25,12 @@ Du musst nicht zuerst entscheiden, ob CLI, IDE, Cloud, Berechtigung oder Prompt 
 
 | Symptom | Weiter zu |
 |---|---|
-| Installation fehlgeschlagen | [Desktop-Fehlerbehebung](/guide/desktop-app/troubleshooting/) · [CLI-Fehlerbehebung](/guide/cli/troubleshooting/) · [IDE-Fehlerbehebung](/guide/ide/troubleshooting/) |
-| Login/Auth fehlgeschlagen | [Anmelden](/guide/getting-started/sign-in-and-authentication/) |
-| Unklar, welcher Client | [Client wählen](/guide/choose-your-client/) · [Funktionsvergleich](/guide/reference/feature-comparison/) |
-| Ergebnis überschreitet Grenzen / sehr schlecht | [Fallbeispiel erste Aufgabe](/cases/first-task/) · [Prompt-Debugging](/prompts/prompt-debugging/) · [Rückgängig](/guide/getting-started/undo-and-recover/) |
-| Kontext chaotisch | [Fokussiert halten](/guide/context/keep-context-focused/) |
-| Fragen zu Berechtigung/Sandbox | [Berechtigungen und Sandbox](/guide/permissions-and-sandbox/) |
+| Installation fehlgeschlagen | [Desktop-Fehlerbehebung](/de/guide/desktop-app/troubleshooting/) · [CLI-Fehlerbehebung](/de/guide/cli/troubleshooting/) · [IDE-Fehlerbehebung](/de/guide/ide/troubleshooting/) |
+| Login/Auth fehlgeschlagen | [Anmelden](/de/guide/getting-started/sign-in-and-authentication/) |
+| Unklar, welcher Client | [Client wählen](/de/guide/choose-your-client/) · [Funktionsvergleich](/de/guide/reference/feature-comparison/) |
+| Ergebnis überschreitet Grenzen / sehr schlecht | [Fallbeispiel erste Aufgabe](/de/cases/first-task/) · [Prompt-Debugging](/de/prompts/prompt-debugging/) · [Rückgängig](/de/guide/getting-started/undo-and-recover/) |
+| Kontext chaotisch | [Fokussiert halten](/de/guide/context/keep-context-focused/) |
+| Fragen zu Berechtigung/Sandbox | [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/) |
 
 ## Einteilung, wenn unklar ist, wo anfangen
 
@@ -60,7 +61,7 @@ Besser kurz stoppen, die Lage einordnen, dann zur passenden Seite.
 
 Fehlerbehebung heißt zuerst klassifizieren — nicht sofort „reparieren“.
 
-Mehr: [FAQ](/guide/reference/faq/) · [Fehlerreferenz](/guide/reference/error-reference/) · [Offizielle Codex-Doku](https://developers.openai.com/codex)
+Mehr: [FAQ](/de/guide/reference/faq/) · [Fehlerreferenz](/de/guide/reference/error-reference/) · [Offizielle Codex-Doku](https://developers.openai.com/codex)
 
 ---
 

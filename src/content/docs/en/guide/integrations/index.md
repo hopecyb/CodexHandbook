@@ -3,8 +3,10 @@ title: Integrations (Overview)
 description: Overview of GitHub, Slack, Linear, and other integrations; subpages to follow.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
+source_revision: d842500
 ---
 
 > MVP: overview only.

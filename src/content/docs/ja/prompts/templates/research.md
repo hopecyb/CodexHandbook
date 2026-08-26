@@ -3,9 +3,10 @@ title: 調査テンプレート
 description: 出典付きの調査と比較。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d71c760
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 調査テンプレート
@@ -44,8 +45,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [出典付き調査の事例](/cases/research-with-sources/)
-- [検証](/guide/verification/)
+- [出典付き調査の事例](/ja/cases/research-with-sources/)
+- [検証](/ja/guide/verification/)
 
 ---
 

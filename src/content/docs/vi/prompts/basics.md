@@ -3,9 +3,10 @@ title: Cơ bản về Prompt
 description: Các thành phần cơ bản của một Prompt tốt.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi mới học Prompt, dễ tập trung vào việc câu chữ có nghe «nâng cao» hay không.  
@@ -98,7 +99,7 @@ Với hầu hết người mới, luyện từ **bản khuyến nghị** thườ
 
 Cốt lõi của Prompt tốt là giảm đoán, lệch hướng và vượt ranh giới.
 
-Ví dụ xem [Chạy tác vụ đầu tiên](/cases/first-task/) và [Cấu trúc tác vụ tốt](/prompts/task-anatomy/).
+Ví dụ xem [Chạy tác vụ đầu tiên](/vi/cases/first-task/) và [Cấu trúc tác vụ tốt](/vi/prompts/task-anatomy/).
 
 ---
 

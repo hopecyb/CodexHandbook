@@ -1,114 +1,86 @@
 ---
-title: "Alcance y prioridad de AGENTS.md"
-description: Varios archivos, monorepos y «reglas de proyecto vs prompt de conversación» — quién manda.
+title:  "Alcance y prioridad de AGENTS.md"
+description:  Varios archivos, monorepos y «reglas de proyecto vs prompt de conversación» — quién manda.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 698ab44
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Cuando coexisten varios `AGENTS.md`, archivos de configuración y la conversación actual, hay que aclarar **qué regla aplica**.
+Codex builds an instruction chain at the start of every run. The important model is not a guessed ranking that mixes organization policy, configuration, and prompts; first understand how `AGENTS.md` files themselves are discovered.
 
-Aquí se trata de: cuando dos reglas parecen distintas, ¿a cuál hay que hacer caso?
+## Official discovery order
 
-## Resumen de prioridad
+1. **Global layer:** in Codex home (default `~/.codex`), Codex looks for `AGENTS.override.md` and falls back to `AGENTS.md`; it uses only the first non-empty file.
+2. **Project layer:** from the project root (usually the Git root) down to the current working directory, each directory is checked for `AGENTS.override.md`, `AGENTS.md`, and configured fallback names; at most one is loaded per directory.
+3. **Merge:** content is concatenated from root to current directory. Files closer to the current directory appear later and can therefore override earlier guidance.
 
-```text
-Política gestionada de la organización > AGENTS.md más cercano al directorio > AGENTS.md de la raíz del repo > configuración de usuario > conversación actual
-```
+Empty files are skipped. Loading stops when merged content reaches `project_doc_max_bytes`, whose default is 32 KiB.
 
-«Más cercano» significa el archivo de subdirectorio **más próximo a la ruta de trabajo actual**. Por ejemplo, al trabajar bajo `packages/web/AGENTS.md`, ese archivo se fusiona con el de la raíz; en conflicto, **gana el subdirectorio**.
-
-## Cómo entender «lo más cercano gana»
-
-Puedes verlo así:
-
-- Las reglas de la raíz son la «ley por defecto de todo el repo»
-- Las reglas de un subdirectorio son la «nota especial de esa zona»
-
-Así, cuanto más cerca de la ubicación de trabajo, más específicas suelen ser — y más prioridad tienen.
-
-## Relación con el prompt de conversación
-
-| Fuente | Persistencia | Qué conviene escribir |
-|---|---|---|
-| AGENTS.md | Entre sesiones, versionable | Consenso de equipo, comandos de build, zonas prohibidas |
-| Prompt de la tarea | Solo esta sesión | Objetivo de esta vez, alcance, plazo |
-| Referencias `@` a archivos | Refuerzo de contexto de esta sesión | Archivos de implementación concretos, diseños |
-
-**No** pegues de nuevo el `AGENTS.md` entero en el chat; si debes enfatizar una regla, cita en una frase: «Cumple los requisitos de test de AGENTS.md; esta vez, además, no toques el directorio `legacy/`.»
-
-## Patrón monorepo
+## Monorepo example
 
 ```text
 repo/
-├── AGENTS.md              # Común a todo el repo: gestor de paquetes, CI, seguridad
+├── AGENTS.md
 ├── apps/
 │   └── web/
-│       └── AGENTS.md      # Frontend: biblioteca de componentes, comandos E2E
-└── packages/
-    └── api/
-        └── AGENTS.md      # Backend: convenciones de migraciones de base de datos
+│       └── AGENTS.md
+└── services/
+    └── payments/
+        ├── AGENTS.md
+        └── AGENTS.override.md
 ```
 
-Principios:
+When started from `services/payments`, the root `AGENTS.md` loads first. Because that directory contains `AGENTS.override.md`, its sibling `AGENTS.md` is ignored.
 
-- **Archivo raíz**: 10–20 reglas duras compartidas por todo el repo
-- **Archivos de subpaquete**: solo comandos y notas de directorio propias de ese paquete
-- Evita tres archivos con un 80 % de repetición — lo repetido va en la raíz; el subpaquete solo escribe el incremento
+Put repository-wide rules—package manager, common tests, and security exclusions—at the root. Nested files should contain only incremental service rules. Do not duplicate 80% of the content.
 
-## Malentendidos habituales
+## How task prompts fit
 
-### 1. Lo dicho en la conversación actual es lo más nuevo, así que también tiene la máxima prioridad
+`AGENTS.md` holds lasting, version-controlled project conventions. The prompt holds the current goal, scope, and acceptance criteria:
 
-La conversación sirve para añadir «requisitos extra de esta vez», pero eso no equivale a poder anular a la ligera reglas duras de equipo u organización.
+```text
+Follow the applicable AGENTS.md files. For this task, modify only
+services/payments/retry.ts and its tests. Do not rotate credentials.
+Run make test-payments and report the actual result.
+```
 
-### 2. El `AGENTS.md` del subdirectorio es una copia de las reglas raíz
+A prompt cannot turn an unavailable system, organization, sandbox, or permission capability into an available one. When instructions conflict, do not guess from “ignore previous rules.” Ask Codex to list loaded instruction sources, then narrow the task.
 
-Tampoco debería serlo.
+## Verify what actually loaded
 
-Enfoque más adecuado:
+Start a new session in the target directory and ask:
 
-- La raíz escribe lo común
-- El subdirectorio solo escribe incrementos y excepciones
+```text
+Before working, list the AGENTS.md / AGENTS.override.md sources loaded for this
+run in order, then summarize the additional constraints from each. Do not edit files.
+```
 
-### 3. Solo memorizar el orden no basta
+`AGENTS.md` is read at startup. After changing it, verify in a new run or chat; do not assume a current session hot-reloads it.
 
-No basta.
+## Fallback names and capacity
 
-Más importante es saber:
+To use an existing `TEAM_GUIDE.md`:
 
-- Qué tipo de información va en cada capa
-- Por qué, en conflicto, manda una capa concreta
+```toml
+project_doc_fallback_filenames = ["TEAM_GUIDE.md", ".agents.md"]
+project_doc_max_bytes = 65536
+```
 
-## Cómo juzgar un conflicto
+A fallback applies only when no higher-priority file exists in the same directory. Remove duplicate and irrelevant background before increasing capacity so important rules are not crowded out.
 
-Cuando dos reglas parecen chocar, mira en este orden:
+## Official source
 
-1. ¿Cuál está más cerca del directorio de trabajo actual?
-2. ¿Cuál es una regla de proyecto a largo plazo y cuál solo un refuerzo temporal?
-3. ¿Hay una política de organización o gestionada que restrinja desde una capa superior?
-
-En conflicto, suele ganar la capa más cercana, más dura y más explícita; no asumas por defecto que «la frase más reciente» siempre gana.
-
-## Errores habituales
-
-- El `AGENTS.md` del subdirectorio contradice el de la raíz sin aclarar cuál manda
-- Escribir secretos en `AGENTS.md` y hacer commit en Git — usa gestión de secretos y variables de entorno
-- Esperar que un «relajamiento temporal» en el chat anule la política gestionada del equipo (normalmente no se puede)
-
-## Lista de verificación
-
-- [ ] El `AGENTS.md` raíz y los de subpaquete tienen un reparto claro
-- [ ] Hay conciencia clara de «el subdirectorio gana» ante conflictos
-- [ ] El prompt de la tarea solo escribe el incremento; no copia el manual entero del proyecto
+- [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Nota de revisión:** Esta página escribe la prioridad entre `AGENTS.md`, configuración de usuario y conversación actual como un orden lineal demasiado determinista; la precedence real puede diferir según cliente, capacidades gestionadas por la organización y entorno de ejecución. Hay que reescribirla tras completar la base oficial actual.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE, Cloud
+
+**Last verified:** 2026-08-26

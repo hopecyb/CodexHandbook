@@ -5,9 +5,10 @@ sidebar:
   order: 17
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 検証
@@ -76,12 +77,12 @@ Codex の出力は必ず確認可能であるべきです。検証は任意で�
 
 ## 中核テーマ
 
-- [差分のレビュー](/guide/quality/review-diffs/) — diff を読み、範囲とリスクを確認
-- [テストの実行](/guide/quality/run-tests/) — 自動回帰
-- [成果物の検証](/guide/quality/verify-artifacts/) — ドキュメント、設定、生成物
-- [出典の確認](/guide/quality/validate-sources/) — 調査結論の追跡可能性
-- [不確実性への対処](/guide/quality/handle-uncertainty/) — モデルが不確かなとき
-- [完了の定義](/guide/quality/definition-of-done/) — 「終わった」とは何か
+- [差分のレビュー](/ja/guide/quality/review-diffs/) — diff を読み、範囲とリスクを確認
+- [テストの実行](/ja/guide/quality/run-tests/) — 自動回帰
+- [成果物の検証](/ja/guide/quality/verify-artifacts/) — ドキュメント、設定、生成物
+- [出典の確認](/ja/guide/quality/validate-sources/) — 調査結論の追跡可能性
+- [不確実性への対処](/ja/guide/quality/handle-uncertainty/) — モデルが不確かなとき
+- [完了の定義](/ja/guide/quality/definition-of-done/) — 「終わった」とは何か
 
 ## タスクごとに検証の重点は違う
 
@@ -90,11 +91,11 @@ Codex の出力は必ず確認可能であるべきです。検証は任意で�
 - **調査**：出典は本物か、最新か、証拠を超えていないか
 - **設定やスクリプト生成**：環境前提、権限範囲、失敗時の復旧
 
-どこから始めるかわからなければ、まず [完了の定義](/guide/quality/definition-of-done/) を読んでください。
+どこから始めるかわからなければ、まず [完了の定義](/ja/guide/quality/definition-of-done/) を読んでください。
 
 検証は、結果が本当に使え、安心して渡せるかを確かめるためのものです。
 
-プロンプトでの検収基準の書き方は [完了基準の定義](/prompts/define-done/)。端到端の事例は [実践事例](/cases/)。
+プロンプトでの検収基準の書き方は [完了基準の定義](/ja/prompts/define-done/)。端到端の事例は [実践事例](/ja/cases/)。
 
 ---
 

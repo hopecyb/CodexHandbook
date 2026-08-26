@@ -3,9 +3,10 @@ title: AGENTS.md trong Monorepo
 description: Mẫu đặt chỉ thị dự án, phạm vi và lệnh kiểm thử trong cấu trúc một kho nhiều gói.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b6c73e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -91,7 +92,7 @@ Cấm: Sửa thẳng phía server apps/api
 Nghiệm thu: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-Xem [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+Xem [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 
 ## Cloud và CI
 
@@ -101,7 +102,7 @@ Monorepo trên Cloud thường thất bại vì **chưa cài ở gốc** hoặc 
 - Lệnh filter của tác vụ một gói
 - Chiến lược cache (nếu dùng turborepo/nx, ghi đồ thị tác vụ)
 
-[Môi trường Cloud](/guide/web-and-cloud/cloud-environments/)
+[Môi trường Cloud](/vi/guide/web-and-cloud/cloud-environments/)
 
 ## Lỗi thường gặp
 

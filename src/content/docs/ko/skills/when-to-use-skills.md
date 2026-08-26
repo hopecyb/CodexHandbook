@@ -3,9 +3,10 @@ title: 언제 Skills를 쓰는가
 description: 작업을 Skill로 묶을지 판단하고, 슬래시 명령·MCP와의 역할을 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 가치가 있는가입니다.
@@ -79,7 +80,7 @@ Skill을 처음 접할 때 흔한 질문은, 이 일을 굳이 Skill로 만들 �
 
 Skill은 「반복되고, 일관성이 필요하며, 매번 다시 설명하고 싶지 않은」 절차를 정리하기에 더 적합합니다.
 
-확장 방식 선택은 [확장 방식 고르기](/skills/choosing-an-extension-method/)를 참고하세요. 워크플로 정리는 [절차를 Skill로 바꾸기](/cases/workflows/turn-a-workflow-into-a-skill/)를 참고하세요.
+확장 방식 선택은 [확장 방식 고르기](/ko/skills/choosing-an-extension-method/)를 참고하세요. 워크플로 정리는 [절차를 Skill로 바꾸기](/ko/cases/workflows/turn-a-workflow-into-a-skill/)를 참고하세요.
 ---
 
 **상태:** verified  

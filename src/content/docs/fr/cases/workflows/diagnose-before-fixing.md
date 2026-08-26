@@ -3,9 +3,10 @@ title: Diagnostiquer avant de corriger
 description: Problèmes de production et bugs tenaces — établir une chaîne de preuves avant de toucher au code.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Demander à Codex de corriger un bug immédiatement entraîne souvent beaucoup de retours en arrière. Le flux de diagnostic met l'accent sur : **symptômes → hypothèses → preuves → correction minimale**.

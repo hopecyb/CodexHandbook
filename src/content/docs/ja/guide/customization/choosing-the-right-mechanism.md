@@ -3,9 +3,10 @@ title: 適切な仕組みの選択
 description: 一時 prompt、AGENTS.md、メモリ、Skill、MCP をどの層に置くか——判断フレームで整理。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ sidebar:
 
 ### 2. プロジェクト協業ルールか、個人の習慣か？
 
-**すべての協業者が知るべきルール**なら [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/) に。
+**すべての協業者が知るべきルール**なら [`AGENTS.md`](/ja/guide/customization/agents-md/what-is-agents-md/) に。
 
 例：
 
@@ -59,7 +60,7 @@ sidebar:
 - コミットメッセージや PR 受け入れルール
 - monorepo でサブディレクトリごとの特別規範
 
-**自分だけの好み**（説明は日本語、結論を先に）なら [メモリ](/guide/customization/memories-and-persistent-context/) や個人設定が向きます。
+**自分だけの好み**（説明は日本語、結論を先に）なら [メモリ](/ja/guide/customization/memories-and-persistent-context/) や個人設定が向きます。
 
 経験則：
 
@@ -82,7 +83,7 @@ sidebar:
 - **ルール**は「何ができる／できないか」
 - **手順**は「この種のことは通常どう進めるか」
 
-再利用できる手順は [Skill](/skills/overview/) が向きます。
+再利用できる手順は [Skill](/ja/skills/overview/) が向きます。
 
 ## よくある組み合わせ（二者択一ではない）
 
@@ -196,11 +197,11 @@ API Token を会話に貼らない。
 
 ## 関連読み物
 
-- [AGENTS.md とは](/guide/customization/agents-md/what-is-agents-md/)
-- [メモリと永続コンテキスト](/guide/customization/memories-and-persistent-context/)
-- [Skills 概要](/skills/overview/)
-- [MCP 概要](/skills/mcp/mcp-overview/)
-- [拡張方式の選び方](/skills/choosing-an-extension-method/)
+- [AGENTS.md とは](/ja/guide/customization/agents-md/what-is-agents-md/)
+- [メモリと永続コンテキスト](/ja/guide/customization/memories-and-persistent-context/)
+- [Skills 概要](/ja/skills/overview/)
+- [MCP 概要](/ja/skills/mcp/mcp-overview/)
+- [拡張方式の選び方](/ja/skills/choosing-an-extension-method/)
 
 ## 参考
 - OpenAI Codex 公式ドキュメント（現行バージョンを基準に）

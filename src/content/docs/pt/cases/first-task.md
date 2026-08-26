@@ -3,9 +3,10 @@ title: Primeira tarefa
 description: Conclua uma pequena alteração com um prompt claro e aprenda a rever o resultado.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9bcbce
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Primeira tarefa
@@ -48,9 +49,9 @@ Se faltar informação, pergunte-me primeiro — não invente.
 
 ## 5. Próximos passos
 
-- [Fundamentos de prompts](/prompts/basics/)
-- [Verificação](/guide/verification/)
-- [Começar aqui](/guide/start-here/)
+- [Fundamentos de prompts](/pt/prompts/basics/)
+- [Verificação](/pt/guide/verification/)
+- [Começar aqui](/pt/guide/start-here/)
 ---
 
 **Estado:** verified  

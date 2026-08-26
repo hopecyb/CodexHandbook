@@ -3,9 +3,10 @@ title: Analyze a spreadsheet
 description: Upload or reference tabular data for summarization and insights.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Analyze a spreadsheet
@@ -40,7 +41,7 @@ Acceptance: Every number in summary notes the calculation method or referenced c
 
 ## 4. Related
 
-- [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Tables and spreadsheets](/en/guide/files-and-artifacts/tables-and-spreadsheets/)
 
 ---
 

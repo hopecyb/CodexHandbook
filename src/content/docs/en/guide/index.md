@@ -3,9 +3,10 @@ title: Codex guide
 description: Understand Codex, choose a client, complete your first task, and learn permissions, context, and verification.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 6019b85
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Codex guide
@@ -25,14 +26,14 @@ You do not need every term, product, and workflow upfront. Find your current sta
 
 ## Recommended order
 
-1. [Start here](/guide/start-here/) — shortest path for new readers
-2. [What is Codex](/guide/start-here/what-is-codex/)
-3. [Choose your client](/guide/choose-your-client/)
-4. [Complete your first task](/cases/first-task/)
-5. [Permissions and sandbox](/guide/permissions-and-sandbox/)
-6. [Context and files](/guide/context-and-files/)
-7. [Verification](/guide/verification/)
-8. When stuck, see [Troubleshooting](/guide/troubleshooting/)
+1. [Start here](/en/guide/start-here/) — shortest path for new readers
+2. [What is Codex](/en/guide/start-here/what-is-codex/)
+3. [Choose your client](/en/guide/choose-your-client/)
+4. [Complete your first task](/en/cases/first-task/)
+5. [Permissions and sandbox](/en/guide/permissions-and-sandbox/)
+6. [Context and files](/en/guide/context-and-files/)
+7. [Verification](/en/guide/verification/)
+8. When stuck, see [Troubleshooting](/en/guide/troubleshooting/)
 
 ## Common misconceptions
 
@@ -54,19 +55,19 @@ The client is just the entry point; permissions, context, and verification recur
 
 ## Product entry points
 
-- [Desktop App](/guide/desktop-app/)
-- [CLI](/guide/cli/)
-- [IDE extension](/guide/ide/)
-- [Web and Cloud](/guide/web-and-cloud/)
+- [Desktop App](/en/guide/desktop-app/)
+- [CLI](/en/guide/cli/)
+- [IDE extension](/en/guide/ide/)
+- [Web and Cloud](/en/guide/web-and-cloud/)
 
 ## More topics
 
-- [Foundations](/guide/foundations/)
-- [Getting started](/guide/getting-started/)
-- [Learning paths](/guide/learning-paths/)
-- [Customization](/guide/customization/)
-- [Reference](/guide/reference/)
-- [Team and enterprise](/guide/team-enterprise/)
-- [Developer platform](/guide/developer-platform/)
+- [Foundations](/en/guide/foundations/)
+- [Getting started](/en/guide/getting-started/)
+- [Learning paths](/en/guide/learning-paths/)
+- [Customization](/en/guide/customization/)
+- [Reference](/en/guide/reference/)
+- [Team and enterprise](/en/guide/team-enterprise/)
+- [Developer platform](/en/guide/developer-platform/)
 
 Use this guide to find "what should I read next"—usually more useful than trying to learn all of Codex at once.

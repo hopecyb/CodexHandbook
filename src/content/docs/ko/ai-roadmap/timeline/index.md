@@ -3,8 +3,10 @@ title: 타임라인
 description: AI 애플리케이션 엔지니어링의 주요 지점 색인.
 locale: ko
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-08-08
+reviewed_at: 2026-08-26
+source_revision: 78e55cc
 ---
 
 # 타임라인
@@ -13,14 +15,14 @@ translated_at: 2026-08-08
 
 ## 노드
 
-1. [Prompt Engineering(프롬프트 엔지니어링)](/ai-roadmap/timeline/2022-11-prompt-engineering/)
-2. [Function Calling(함수 호출)](/ai-roadmap/timeline/2023-06-function-calling/)
-3. [RAG(검색 증강 생성)](/ai-roadmap/timeline/2023-11-rag/)
-4. [MCP(모델 컨텍스트 프로토콜)](/ai-roadmap/timeline/2024-11-mcp/)
-5. [Tool Use(도구 사용)](/ai-roadmap/timeline/2025-03-tool-use/)
-6. [Multi-agent(다중 에이전트 협업)](/ai-roadmap/timeline/2025-06-multi-agent/)
-7. [Context Engineering(컨텍스트 엔지니어링)](/ai-roadmap/timeline/2025-09-context-engineering/)
-8. [OpenSpec(명세 주도 개발)](/ai-roadmap/timeline/2026-01-openspec/)
-9. [OpenClaw(개인 AI 어시스턴트 게이트웨이)](/ai-roadmap/timeline/2026-01-openclaw/)
-10. [Harness Engineering(실행 하네스 엔지니어링)](/ai-roadmap/timeline/2026-02-harness-engineering/)
-11. [Skills(스킬)](/ai-roadmap/timeline/2026-04-skills/)
+1. [Prompt Engineering(프롬프트 엔지니어링)](/ko/ai-roadmap/timeline/2022-11-prompt-engineering/)
+2. [Function Calling(함수 호출)](/ko/ai-roadmap/timeline/2023-06-function-calling/)
+3. [RAG(검색 증강 생성)](/ko/ai-roadmap/timeline/2023-11-rag/)
+4. [MCP(모델 컨텍스트 프로토콜)](/ko/ai-roadmap/timeline/2024-11-mcp/)
+5. [Tool Use(도구 사용)](/ko/ai-roadmap/timeline/2025-03-tool-use/)
+6. [Multi-agent(다중 에이전트 협업)](/ko/ai-roadmap/timeline/2025-06-multi-agent/)
+7. [Context Engineering(컨텍스트 엔지니어링)](/ko/ai-roadmap/timeline/2025-09-context-engineering/)
+8. [OpenSpec(명세 주도 개발)](/ko/ai-roadmap/timeline/2026-01-openspec/)
+9. [OpenClaw(개인 AI 어시스턴트 게이트웨이)](/ko/ai-roadmap/timeline/2026-01-openclaw/)
+10. [Harness Engineering(실행 하네스 엔지니어링)](/ko/ai-roadmap/timeline/2026-02-harness-engineering/)
+11. [Skills(스킬)](/ko/ai-roadmap/timeline/2026-04-skills/)

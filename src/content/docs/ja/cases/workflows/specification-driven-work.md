@@ -3,12 +3,13 @@ title: 仕様駆動の作業
 description: 受け入れ可能な仕様を先に明確に書き、Codex に計画どおり実装させる——要件が明確な納品タスクに適する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**仕様駆動**は、大量のファイル変更の前に、目標、範囲、インターフェース、受け入れ基準を記した短い仕様を準備することです。[ブレインストーム](/cases/workflows/brainstorm-before-building/) の後に接続でき、すでに明確化された要件と組み合わせて [EPXV](/cases/workflows/explore-plan-execute-verify/) に直接入ることもできます。
+**仕様駆動**は、大量のファイル変更の前に、目標、範囲、インターフェース、受け入れ基準を記した短い仕様を準備することです。[ブレインストーム](/ja/cases/workflows/brainstorm-before-building/) の後に接続でき、すでに明確化された要件と組み合わせて [EPXV](/ja/cases/workflows/explore-plan-execute-verify/) に直接入ることもできます。
 
 ## このページの重点
 
@@ -57,7 +58,7 @@ translated_at: 2026-07-28
 
 ## テスト駆動との連携
 
-仕様の受け入れ項目はできるだけ**テスト可能**にする。テストに書けるものは先にテストを書く。[テスト駆動の作業](/cases/workflows/test-driven-work/) を参照。
+仕様の受け入れ項目はできるだけ**テスト可能**にする。テストに書けるものは先にテストを書く。[テスト駆動の作業](/ja/cases/workflows/test-driven-work/) を参照。
 
 ## よくある誤り
 

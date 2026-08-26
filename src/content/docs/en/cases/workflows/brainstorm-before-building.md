@@ -3,12 +3,13 @@ title: Brainstorm before building
 description: Structured exploration to converge on an approach before code or long-form writing—reduces rework.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-**Brainstorm before building** fits tasks where the goal is fuzzy or multiple approaches exist: new features, redesigns, content topics, tech selection. It connects to the ① Explore phase of [explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/), but emphasizes **diverge and converge** rather than immediately reading code and editing files.
+**Brainstorm before building** fits tasks where the goal is fuzzy or multiple approaches exist: new features, redesigns, content topics, tech selection. It connects to the ① Explore phase of [explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/), but emphasizes **diverge and converge** rather than immediately reading code and editing files.
 
 ## What this page covers
 
@@ -43,7 +44,7 @@ note 2 decision points I must confirm (format, permissions).
 
 **Phase C — Enter planning**
 
-After confirmation, proceed to [specification-driven work](/cases/workflows/specification-driven-work/) or EPXV ② Plan.
+After confirmation, proceed to [specification-driven work](/en/cases/workflows/specification-driven-work/) or EPXV ② Plan.
 
 ## Recommended workflow
 
@@ -78,9 +79,9 @@ Set a **time box**: e.g. complete divergence in 15 minutes to prevent drift.
 
 ## Related chapters
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Specification-driven work](/cases/workflows/specification-driven-work/)
-- [Ask for a plan](/prompts/ask-for-a-plan/)
+- [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/)
+- [Specification-driven work](/en/cases/workflows/specification-driven-work/)
+- [Ask for a plan](/en/prompts/ask-for-a-plan/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Permisos y Aprobaciones
 description: Explica cuándo Codex necesita que apruebes una operación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -67,8 +68,8 @@ En general, no. Puedes rechazar y pedirle que continúe de una forma más segura
 | Capa | Qué dice | Dónde leerlo |
 |---|---|---|
 | Concepto (esta página) | Por qué hace falta la Aprobación | — |
-| Diferencias de producto | Cómo confirma cada entrada | [Guías de producto](/guide/) |
-| Estrategia de Prompt | Cómo declarar límites de permiso en la Tarea | [Definir restricciones](/prompts/constraints-and-boundaries/) |
+| Diferencias de producto | Cómo confirma cada entrada | [Guías de producto](/es/guide/) |
+| Estrategia de Prompt | Cómo declarar límites de permiso en la Tarea | [Definir restricciones](/es/prompts/constraints-and-boundaries/) |
 
 Las políticas oficiales y los valores por defecto pueden cambiar; comprueba [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

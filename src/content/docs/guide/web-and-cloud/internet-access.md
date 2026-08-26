@@ -1,136 +1,69 @@
 ---
 title: 互联网访问
-description: Cloud 环境的出网策略、依赖安装与数据外泄风险——如何按需开放又守住边界。
+description: 区分安装期联网与 Agent 联网，并以域名和 HTTP 方法限制风险。
 sidebar:
   order: 70
 ---
 
-Cloud 任务常需要**出网**：拉取 npm/PyPI 包、访问 API、克隆子模块。与此同时，互联网访问也是**数据外泄**的高风险面，因为 Agent 也可能把仓库或 Secrets 中的内容带到外部服务。
+Cloud 有两个不同的联网阶段：
 
-## 内容
+| 阶段 | 默认行为 | 主要用途 |
+|---|---|---|
+| setup script | 可联网 | 安装依赖和工具 |
+| Agent phase | 默认关闭 | Agent 执行任务时访问外部资源 |
 
-- Cloud 环境默认能否访问互联网
-- 何时需要开放、如何最小化暴露
-- 与本地沙盒、Secrets 策略的配合
+因此，`pnpm install` 在 setup 成功，不代表 Agent 随后可以 `curl` 任意网站。
 
-## 基本边界
+## 为什么默认关闭
 
-“需要联网”不代表“应该无限制联网”。
+Agent 联网会增加提示注入、代码或数据外传、恶意依赖和许可证不兼容内容进入仓库的风险。不可信 issue、网页或依赖 README 里可能包含诱导 Agent 执行外传命令的指令。
 
-很多人会把这件事看成二选一：
+原则是：只开放任务必需的目标和动作，并审查工作日志。
 
-- 要么完全不能联网
-- 要么为了方便全部放开
+## 配置选项
 
-更常见的做法是，只给任务需要的网络能力，不给多余的网络能力。
+Agent 互联网访问按环境配置：
 
-## 两层「网络」
+- **Off**：完全阻止 Agent 联网；
+- **On**：允许联网，并可限制域名与 HTTP 方法。
 
-| 层 | 含义 |
-|---|---|
-| Cloud 环境出网 | 远程机器能否访问公网或内网 API |
-| Agent 工具联网 | 会话内 web search、curl 等（各客户端策略不同） |
+域名列表可从空列表开始，使用 Common dependencies 预设，或选择 All（unrestricted）。生产仓库不应把 unrestricted 当成排障捷径。
 
-本页侧重 **Cloud 环境**；通用概念见 [沙盒与网络](/guide/foundations/sandbox-and-network/)。
+若任务只需读取文档或下载内容，把 HTTP 方法限制在 `GET`、`HEAD` 与 `OPTIONS`。这样会阻止 `POST`、`PUT`、`PATCH`、`DELETE` 等可能外发或修改数据的方法。
 
-## 为什么本地能用，不代表 Cloud 也能用
+## 最小开放示例
 
-你本地能联网，可能是因为：
+任务需要查询某个公开 API 文档：
 
-- 你电脑里已经登录过某个服务
-- 你本地有 `.npmrc`、SSH key、代理配置
-- 你在公司 VPN 里
+1. 先保持 Off，确认失败确实由网络造成；
+2. 开启 Agent access；
+3. allowlist 只加入该官方域名；
+4. 只允许 `GET`、`HEAD`、`OPTIONS`；
+5. 重新运行并检查日志中所有出站请求；
+6. 任务结束后评估是否恢复 Off。
 
-但 Cloud 默认不会自动继承这些条件。所以“本地可以 `npm install`”并不能推出“Cloud 也一定可以”。
+## 与 Secret 的关键关系
 
-## 典型需要出网的场景
-
-- 安装依赖：`npm install`、`pip install`、`go mod download`
-- 拉取私有 registry（需 [Secrets](/guide/web-and-cloud/secrets-and-variables/)）
-- 调用第三方 API（支付、地图、LLM 网关等）
-- 克隆子模块或下载构建资源
-
-## 判断原则
-
-如果某个联网动作不是完成这次任务必需的，就别先放开。
-
-例如：
-
-- 为了安装依赖访问包源，通常是必需
-- 为了顺手访问无关网站、下载额外资源，通常不必需
-
-## 推荐策略
-
-### 默认收紧，按需放开
-
-1. 在 [Cloud 环境](/guide/web-and-cloud/cloud-environments/) 中确认当前网络策略
-2. 把**必需域名**列成清单（包管理器、公司 API），避免「全网开放」
-3. 在 `AGENTS.md` 写明：允许访问哪些 URL、禁止把密钥写进 prompt
-4. 用测试任务验证：能装依赖，但不能访问无关站点（若产品支持细粒度策略）
-
-### 与 Secrets 分工
-
-| 内容 | 放哪 |
-|---|---|
-| API key、token | Cloud Secrets，不进仓库 |
-| 允许的 API 基址 | 文档或环境变量名（非值） |
-| 代理 / 镜像 URL | 团队标准配置 |
-
-## 常见误会
-
-### 1. 能联网只是“方便一点”，不是安全问题
-
-一旦能联网，它就同时变成了：
-
-- 依赖下载问题
-- 凭据使用问题
-- 数据外发问题
-
-### 2. 只要没把 Secret 写进 prompt，就绝对安全
-
-如果环境本身能读到 Secret，又允许把结果发到外部服务，风险仍然存在。
-
-### 3. web search 和 Cloud 出网是一回事
-
-一个是远程环境层面的网络访问能力，一个是会话工具层面的联网能力，别混在一起排查。
-
-### 数据外泄防护
-
-- 不要把生产数据库连接串放进任务描述
-- 审查 Agent 是否尝试把 `.env`、密钥文件内容发到外部
-- 对不可信仓库首次跑 Cloud 时，**禁止出网或只读沙盒**试跑
-
-## 与本地开发对齐
-
-本地能 `curl` 不代表 Cloud 能——常见「Cloud 红」原因：
-
-| 现象 | 可能原因 |
-|---|---|
-| 依赖安装失败 | 出网被禁或 registry 需认证 |
-| 子模块拉不下来 | SSH key 未注入 Secrets |
-| 内网 API 超时 | Cloud 不在公司 VPN 内 |
-
-解决方向：改用 HTTPS + token、提供可达的镜像、或在文档中说明 Cloud 不支持内网资源。
-
-## 常见错误
-
-- 为省事全局开放出网，却在含 Secrets 的生产仓库跑无限制任务
-- 假设 Cloud 与笔记本共用同一 `.npmrc`（未推送或未配 Secret）
-- 把「需要联网」和「需要 web search 工具」混为一谈
-- 直到安装失败才第一次意识到 Cloud 根本没有本地那套登录态
+Cloud Secret 在 Agent 阶段前会被移除，这降低了 Agent 直接外传 setup Secret 的风险；但普通环境变量、仓库内容和任务产生的数据仍可能被发出。不要把敏感值伪装成普通变量来绕过 Secret 生命周期。
 
 ## 验收清单
 
-- [ ] 列出该仓库 Cloud 任务必需的出站域名/服务
-- [ ] Secrets 已配置且未提交 Git
-- [ ] 在测试分支跑通一次完整安装 + 测试
-- [ ] 团队知晓哪些数据禁止出现在联网 prompt 中
+- [ ] 已说明为什么 Agent 阶段必须联网
+- [ ] allowlist 只含必要域名
+- [ ] HTTP 方法限制到最小集合
+- [ ] 输入来源可信，或已考虑提示注入
+- [ ] 日志中没有上传仓库、环境或凭据的命令
+- [ ] 新依赖经过来源、版本与许可证检查
 
-## 参考来源
-- OpenAI Codex Cloud 网络与安全文档
+## 官方依据
+
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+
 ---
 
-**状态：** outdated  
-**适用产品：** Cloud  
-**复核说明：** 本页围绕 Cloud 环境默认出网能力、域名策略和细粒度网络控制展开，但这些都高度依赖当前产品与组织安全配置；在没有足够强的官方现行网络策略文档前，不宜标为 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** Cloud
+
+**最近核验：** 2026-08-26

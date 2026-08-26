@@ -4,7 +4,7 @@ description: How to read changes and ask questions.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 7dc8ee8
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -18,7 +18,7 @@ When reading a diff, ask:
 3. Are naming and style consistent?
 4. Any secrets or debug leftovers?
 
-Product-side view: [Diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/)
+Product-side view: [Diffs, comments, and review](/en/guide/desktop-app/diffs-comments-and-review/)
 
 ---
 

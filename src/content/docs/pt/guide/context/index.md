@@ -5,9 +5,10 @@ sidebar:
   order: 16
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f647ae2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 O Contexto é a informação que o modelo «consegue utilizar de forma eficaz neste momento». Se o Contexto estiver mal gerido, até o melhor Prompt fica afogado em ruído.
@@ -35,13 +36,13 @@ Na primeira leitura sistemática, pode seguir esta ordem:
 
 ## Navegação do capítulo
 
-- [Contexto do projeto](/guide/context/project-context/)
-- [Contexto de ficheiros e pastas](/guide/context/file-and-folder-context/)
-- [Contexto da conversa](/guide/context/conversation-context/)
-- [Prioridade do Contexto](/guide/context/context-priority/)
-- [Compactação](/guide/context/compaction/)
-- [Manter o foco](/guide/context/keep-context-focused/)
-- [Contexto sensível](/guide/context/sensitive-context/)
+- [Contexto do projeto](/pt/guide/context/project-context/)
+- [Contexto de ficheiros e pastas](/pt/guide/context/file-and-folder-context/)
+- [Contexto da conversa](/pt/guide/context/conversation-context/)
+- [Prioridade do Contexto](/pt/guide/context/context-priority/)
+- [Compactação](/pt/guide/context/compaction/)
+- [Manter o foco](/pt/guide/context/keep-context-focused/)
+- [Contexto sensível](/pt/guide/context/sensitive-context/)
 
 Este capítulo insiste nisto: o Contexto depende do que «ele realmente viu desta vez». Se acha que deveria saber, mas nesta ocasião não lhe forneceu, isso não conta como Contexto.
 

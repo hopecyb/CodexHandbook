@@ -4,7 +4,7 @@ description: Understand how language models generate responses from context.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 1951620
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -16,7 +16,7 @@ Language models **predict plausible next output** from the text, files, and tool
 ## What this means for you
 
 - **Input quality sets the ceiling**: vague goals lead to drift
-- **Context is limited**: long histories get compacted or truncated—see [Tokens, context, and compaction](/guide/foundations/tokens-context-and-compaction/)
+- **Context is limited**: long histories get compacted or truncated—see [Tokens, context, and compaction](/en/guide/foundations/tokens-context-and-compaction/)
 - **You must verify**: especially numbers, legal text, security, and anything published externally
 
 ## How this differs from a search engine

@@ -3,9 +3,10 @@ title: 환경 변수
 description: Codex 관련 환경 변수의 용도, 계층, 보안——설정 참고의 보완 색인입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -30,7 +31,7 @@ sidebar:
 
 그래서 token, 임시 스위치, CI 주입 값이 자주 환경 변수를 타고, 하드코딩하지 않습니다.
 
-설정 키 개념은 [설정 항목 참고](/guide/reference/configuration-reference/)；Cloud는 [Secrets와 변수](/guide/web-and-cloud/secrets-and-variables/)를 보세요.
+설정 키 개념은 [설정 항목 참고](/ko/guide/reference/configuration-reference/)；Cloud는 [Secrets와 변수](/ko/guide/web-and-cloud/secrets-and-variables/)를 보세요.
 
 ## 환경 변수에 넣기 좋은 내용
 
@@ -74,7 +75,7 @@ sidebar:
 
 - 코딩 규범, 디렉터리 구조 → `AGENTS.md`
 - 팀이 합의한 모델 기본값 → 프로젝트 설정(키가 아닌 부분)
-- 복잡한 allowlist → [규칙](/guide/customization/rules/allow-and-deny-patterns/)
+- 복잡한 allowlist → [규칙](/ko/guide/customization/rules/allow-and-deny-patterns/)
 
 ## 흔한 오해
 
@@ -146,11 +147,11 @@ Shell / CI가 주입한 환경 변수
 
 ### CLI 비대화형
 
-CI가 secret store로 변수를 주입한 뒤 `codex exec`를 실행. [비대화형 모드](/guide/cli/non-interactive-mode/)를 보세요.
+CI가 secret store로 변수를 주입한 뒤 `codex exec`를 실행. [비대화형 모드](/ko/guide/cli/non-interactive-mode/)를 보세요.
 
 ### MCP 서버
 
-MCP 프로세스는 종종 부모 프로세스 환경을 상속합니다. 설정에서 값을 하드코딩하지 말고 `$VAR`를 참조하세요. [MCP 연결](/skills/mcp/connect-an-mcp-server/)을 보세요.
+MCP 프로세스는 종종 부모 프로세스 환경을 상속합니다. 설정에서 값을 하드코딩하지 말고 `$VAR`를 참조하세요. [MCP 연결](/ko/skills/mcp/connect-an-mcp-server/)을 보세요.
 
 ### Cloud
 

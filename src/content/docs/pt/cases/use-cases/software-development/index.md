@@ -3,9 +3,10 @@ title: Desenvolvimento de software
 description: Entrada para casos de alterar código, corrigir bugs e complementar verificação — foco em controlo de âmbito, testes e rollback.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 84208b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Os casos de desenvolvimento de software focam este tipo de problema:
@@ -14,7 +15,7 @@ Os casos de desenvolvimento de software focam este tipo de problema:
 
 ## Entradas deste grupo
 
-- [Correção de bug com verificação](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Correção de bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ## Foco deste grupo
 

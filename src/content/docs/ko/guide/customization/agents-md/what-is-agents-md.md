@@ -3,9 +3,10 @@ title: AGENTS.md란
 description: 프로젝트급 지속 지침 파일 — Codex를 위한 「협업 계약」이며, 아키텍처 백과가 아닙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -87,7 +88,7 @@ sidebar:
 | 하위 디렉터리 `AGENTS.md` | 해당 디렉터리와 하위 경로(monorepo에 흔함) |
 | 사용자급 설명 | 개인 설정 또는 전역 선호 — 프로젝트 지침과 혼동하지 않음 |
 
-범위와 충돌 처리는 [범위와 우선순위](/guide/customization/agents-md/scope-and-precedence/)를 보세요.
+범위와 충돌 처리는 [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)를 보세요.
 
 ## Skill·슬래시 명령과의 차이
 
@@ -97,7 +98,7 @@ sidebar:
 | Skill | 재사용 가능한 워크플로 패키지(`SKILL.md`) | 릴리스 체크리스트, 전문 심사 흐름 |
 | 슬래시 명령 | 당신이 능동적으로 트리거하는 단축 진입점 | `/review`, 일회성 워크플로 |
 
-프로젝트 규칙은 `AGENTS.md`에 두고, **반복·공유 가능한 한 세트 단계**는 [Skill](/skills/overview/)로 만드는 편이 맞습니다.
+프로젝트 규칙은 `AGENTS.md`에 두고, **반복·공유 가능한 한 세트 단계**는 [Skill](/ko/skills/overview/)로 만드는 편이 맞습니다.
 
 ## 어디에 쓸지 판단하기
 
@@ -116,7 +117,7 @@ sidebar:
 ## 흔한 실수
 
 - 파일이 너무 길어 모델이 앞부분만 읽음 — **하드 제약은 앞 30줄에**
-- 「영원히 자동 push」 같은 고위험 지침을 써 [권한과 승인](/guide/foundations/permissions-and-approvals/)과 충돌
+- 「영원히 자동 push」 같은 고위험 지침을 써 [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)과 충돌
 - 팀이 유지하지 않아 문서와 실제 스크립트 명령이 불일치
 
 ## 보안 경계

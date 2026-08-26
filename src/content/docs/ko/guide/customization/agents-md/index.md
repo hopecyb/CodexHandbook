@@ -3,9 +3,10 @@ title: AGENTS.md
 description: 프로젝트급 장기 지침 설명 페이지 — 누구에게, 무엇을 해결하는지 먼저 나눈 뒤 내용을 씁니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce5c1af
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 많은 사람이 `AGENTS.md`를 처음 보면 “더 긴 프롬프트를 하나 더”로 이해합니다.
@@ -16,9 +17,9 @@ translated_at: 2026-07-28
 
 ## 권장 순서
 
-1. [AGENTS.md란](/guide/customization/agents-md/what-is-agents-md/)
-2. [범위와 우선순위](/guide/customization/agents-md/scope-and-precedence/)
-3. [프로젝트 지침 잘 쓰기](/guide/customization/agents-md/writing-effective-instructions/)
+1. [AGENTS.md란](/ko/guide/customization/agents-md/what-is-agents-md/)
+2. [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)
+3. [프로젝트 지침 잘 쓰기](/ko/guide/customization/agents-md/writing-effective-instructions/)
 
 ## 먼저 볼 점
 

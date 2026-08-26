@@ -1,151 +1,100 @@
 ---
-title: Permission Matrix
-description: Conceptual map of Codex action types, approval points, and product differences.
+title: Permission matrix
+description: Distinguish local Permission Profiles, legacy sandboxing, and Cloud network policy.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: a161c0c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 70
 ---
 
-The permission matrix helps everyday users too: why the same sentence gets different reactions in different Codex entry points.
+Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
 
-Different **actions** trigger different approval and sandbox behavior per **product entry**. This matrix aligns teams on “what must a human explicitly allow.” It is a **risk and behavior reference**, not legal compliance text. Defaults per [official documentation](https://developers.openai.com/codex) and org-managed policy.
+![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-en.svg)
 
-## What the table is for
+## Three mechanisms to separate
 
-When approval, limits, or rejection appear, people often think:
-
-- Model is broken
-- I phrased it wrong
-- It worked yesterday
-
-Much of that is entry, policy, and risk level—not your wording alone.
-
-## Core idea
-
-Not every “do this for me” carries the same risk.
-
-Examples:
-
-- Read a file
-- Edit a file
-- Run a command
-- Reach the network
-- Push code
-
-Same sentence shape—different risk—so products add different approval, limits, and blocks.
-
-Conceptual base: [Permissions and approvals](/guide/foundations/permissions-and-approvals/)
-
-## Action risk tiers
-
-| Tier | Example actions | Default expectation |
+| Mechanism | Scope | Primary control |
 |---|---|---|
-| L0 read | Read in-repo text, search code | Usually automatic |
-| L1 write | Edit project files, format | Often confirm or auto in sandbox |
-| L2 execute | shell, package manager, tests | Often confirm |
-| L3 network | curl, npm registry, API | Strict confirm or deny |
-| L4 out of bounds | Write outside project, git push, drop DB | Block or strong confirm |
-| L5 GUI | Computer Use, system dialogs | Highest sensitivity; often off |
+| Local Permission Profiles (Beta) | Local commands on macOS, Linux, WSL, and native Windows | Filesystem read/write/deny and network destinations |
+| Legacy sandbox settings | Local Codex | `read-only`, `workspace-write`, `danger-full-access`, and approval policy |
+| Cloud environment policy | Codex Cloud | Isolated container, setup internet, Agent network allowlist/HTTP methods |
 
-## How to read it
+Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configuration contains `sandbox_mode`, the command line passes `--sandbox`, or a configuration profile sets sandboxing, Codex uses the legacy sandbox rather than `default_permissions`.
 
-1. What class of action is this task?
-2. Will that class usually be blocked in this entry?
-3. Add detail, wait for approval, or pick a lighter entry?
+## Built-in local Permission Profiles
 
-Use it to preview before you start.
+| Name | Boundary | Suitable for |
+|---|---|---|
+| `:read-only` | Local commands are read-only | Code understanding, review, first contact with a repository |
+| `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
+| `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
 
-## Matrix (conceptual — typical defaults)
+A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
 
-**Y** = usually needs explicit consent or policy limit · **A** = may auto under trusted config · **—** = version/policy dependent · **N** = usually not allowed
+## Least-privilege example
 
-| Action | Desktop App | CLI interactive | IDE | Cloud |
-|---|---|---|---|---|
-| Read repo files | A | A | A | A |
-| Write in-repo files | Y/A | Y | Y/A | Y/A |
-| Run test commands | Y/A | Y | Y/A | Y/A |
-| Install global dependencies | Y | Y | Y | Y |
-| Access public internet | Y | Y | Y | Y |
-| Read sensitive files like `.env` | Y | Y | Y | Y |
-| `git commit` | Y | Y | Y | Y |
-| `git push` | Y | Y | Y | Y |
-| Write outside project | N/Y | N/Y | N/Y | N |
-| MCP third-party tools | Y | Y | Y | Y |
-| Browser open URL | Y | — | — | Y |
-| Computer Use | Y/— | — | — | — |
+```toml
+default_permissions = "project-edit"
 
-Notes:
+[features]
+network_proxy = true
 
-- **Cloud** runs in remote sandbox—no access to your laptop filesystem
-- **IDE** similar to App; approval UI differs
-- **Managed policy** can force all Y or N
+[permissions.project-edit.filesystem]
+":minimal" = "read"
 
-## Common misconceptions
+[permissions.project-edit.filesystem.":workspace_roots"]
+"." = "write"
+".devcontainer" = "read"
+"**/*.env" = "deny"
 
-### 1. Feasibility is not only “will the model try”
+[permissions.project-edit.network]
+enabled = true
 
-Often: entry allowance, policy, permissions.
+[permissions.project-edit.network.domains]
+"api.openai.com" = "allow"
+"tracking.example.com" = "deny"
+```
 
-### 2. Cloud is not automatically freer or safer
+`network.enabled = true` permits command networking. `features.network_proxy` must also be enabled for domain rules to be enforced through the proxy.
 
-Safety depends on sandbox, network, Secrets, branch protection, approval together.
+## Evaluate by action
 
-### 3. Written rules do not remove risk alone
+| Action | Primary risk | Minimum boundary |
+|---|---|---|
+| Read source | Sensitive files enter context | Workspace read with explicit credential denies |
+| Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
+| Run tests | Script side effects | Review scripts; use controlled environment |
+| Install dependencies | Supply chain and network | Pin versions and domains |
+| Git push / PR | External state change | Separate branch, protection, human review |
+| MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
 
-Docs, approval policy, technical limits, and human review often combine.
+`AGENTS.md` can say “do not push,” but is not a technical enforcement boundary. Combine rules with sandbox/permissions, GitHub access, and human review.
 
-### 4. Blocked ≠ you did something wrong
+## Team verification
 
-Often: higher risk step, wrong entry for the job, or needs explicit approval / lighter approach.
+1. Record client and Codex versions.
+2. List every loaded configuration layer.
+3. Confirm whether Permission Profiles or legacy sandboxing is active.
+4. In a non-sensitive test directory, verify read, write, deny, and network behavior separately.
+5. Only then connect a real repository, retaining Git and organization gates.
 
-## How config and docs land
+Permission Profiles remain Beta. Rerun this verification after upgrades.
 
-| Mechanism | Role |
-|---|---|
-| Sandbox mode | Limits L3/L4 even if Agent “wants” to |
-| Approval policy | Whether L1–L3 prompts |
-| `AGENTS.md` | Project prohibitions (e.g. no push) |
-| Branch protection | GitHub blocks unreviewed merge |
-| Hooks | Pre-commit checks (see Hooks roadmap) |
+## Official sources
 
-[Human approval patterns](/cases/workflows/human-approval-patterns/) · [Configuration reference](/guide/reference/configuration-reference/)
-
-## When to raise caution
-
-If an action:
-
-- Modifies files
-- Runs commands
-- Reaches the network
-- Touches sensitive data
-- Sends results outside the repo
-
-You may not need the L-number—know it is past casual-read risk.
-
-The matrix is a preview tool: why this step might block, whether to be more careful, or choose a lighter path.
-
-## Team policy examples
-
-| Scenario | Suggestion |
-|---|---|
-| Open-source practice repo | Standard sandbox + allow test commands |
-| Company monorepo | Strict + no push + human PR review |
-| CI `codex exec` | Read-only or scoped dir + no push |
-| Cloud production-related | Minimal Secrets + branch protection |
-
-## Common myths
-
-| Myth | Fact |
-|---|---|
-| “Cloud is safer” | Depends on secrets, review, network policy |
-| “IDE won’t run shell” | May run via Agent tools |
-| “Doc says no push so never push” | Need sandbox + Git permissions + human review |
+- [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
+- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 
 ---
 
-**Status:** outdated  
-**Products:** App / CLI / IDE / Cloud  
-**Review note:** Risk tier framing still useful, but matrix assumes many per-entry defaults and approval points without current official per-entry permission matrix documentation—do not mark `review` or `verified`.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE, Cloud
+
+**Last verified:** 2026-08-26

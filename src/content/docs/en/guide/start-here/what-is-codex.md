@@ -4,7 +4,7 @@ description: Explain in plain language what Codex can do, what it cannot, and th
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 6c6582f
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -40,7 +40,7 @@ Official product documentation is at [OpenAI Codex](https://developers.openai.co
 | Web / Cloud | Connect repositories, cloud environments, and long-running tasks |
 | Mobile and remote | Monitoring, approvals, and lightweight follow-up |
 
-See the [feature comparison](/guide/reference/feature-comparison/) for a side-by-side table. For how concepts relate, see the [capability map](/guide/start-here/codex-capability-map/).
+See the [feature comparison](/en/guide/reference/feature-comparison/) for a side-by-side table. For how concepts relate, see the [capability map](/en/guide/start-here/codex-capability-map/).
 
 ---
 

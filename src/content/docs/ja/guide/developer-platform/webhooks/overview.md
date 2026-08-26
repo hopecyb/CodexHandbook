@@ -3,14 +3,15 @@ title: Webhook 概要
 description: HTTP コールバックで Codex タスク状態を内部システムに接続——イベント、署名、冪等。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**Webhook** で、Codex または Cloud タスクの状態変化時に自社サービスへ HTTP コールバックを送り、チケット更新、Slack 通知、内部承認台を駆動できます。本章は [開発者プラットフォーム](/guide/developer-platform/) のイベント統合入口です。
+**Webhook** で、Codex または Cloud タスクの状態変化時に自社サービスへ HTTP コールバックを送り、チケット更新、Slack 通知、内部承認台を駆動できます。本章は [開発者プラットフォーム](/ja/guide/developer-platform/) のイベント統合入口です。
 
 ## このページで扱うこと
 
@@ -52,7 +53,7 @@ Webhook 向き：
 | 既存イベントバスと統合 | 単純 cron は `exec` 終了コードで足りる |
 | 多段編成（完了 → デプロイ起動） | 公網到達 endpoint がなくキューも使わない |
 
-単純パイプラインは [スクリプトとパイプライン](/guide/developer-platform/non-interactive/scripts-and-pipelines/) で足りることが多い。マルチテナント製品は **SDK + Webhook** 組み合わせが一般的です。
+単純パイプラインは [スクリプトとパイプライン](/ja/guide/developer-platform/non-interactive/scripts-and-pipelines/) で足りることが多い。マルチテナント製品は **SDK + Webhook** 組み合わせが一般的です。
 
 ## 典型イベント（概念）
 
@@ -106,7 +107,7 @@ def handle(request):
 
 ## セキュリティ境界
 
-- [脅威モデル](/guide/team-enterprise/security/threat-model/) と [acceptable use](/guide/team-enterprise/governance/acceptable-use/) を参照
+- [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) と [acceptable use](/ja/guide/team-enterprise/governance/acceptable-use/) を参照
 - webhook secret のローテーションを運用カレンダーに
 
 ## 受け入れチェックリスト
@@ -114,7 +115,7 @@ def handle(request):
 - [ ] 署名検証失敗で 4xx を返す
 - [ ] 冪等テーブルまたは dedupe key を実装
 - [ ] 非同期 worker と DLQ（デッドレター）を設定
-- [ ] [構造化出力](/guide/developer-platform/non-interactive/structured-output/) フィールド約束と一致
+- [ ] [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/) フィールド約束と一致
 
 Webhook はタスク状態変化を別システムに接続する向き。署名検証、冪等、非同期処理の基礎を先に整えること。
 

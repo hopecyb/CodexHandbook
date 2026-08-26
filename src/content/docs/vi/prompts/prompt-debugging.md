@@ -3,9 +3,10 @@ title: Gỡ lỗi Prompt
 description: Khi kết quả lệch, định vị vấn đề Prompt thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9b92e1f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi kết quả sai, nguyên nhân thường gặp gồm:

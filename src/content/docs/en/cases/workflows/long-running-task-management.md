@@ -3,12 +3,13 @@ title: Long-running task management
 description: Large tasks across hours or sessions—checkpoints, compaction, delegation, and exit conditions.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-Long tasks often run into the same problems: **context fills up**, **people step away**, **direction drifts**, and **it's unclear when to stop**. This page applies [Explore–Plan–Execute–Verify](/cases/workflows/explore-plan-execute-verify/) to scenarios that span hours or multiple sessions.
+Long tasks often run into the same problems: **context fills up**, **people step away**, **direction drifts**, and **it's unclear when to stop**. This page applies [Explore–Plan–Execute–Verify](/en/cases/workflows/explore-plan-execute-verify/) to scenarios that span hours or multiple sessions.
 
 ## What's covered
 
@@ -16,7 +17,7 @@ Long tasks often run into the same problems: **context fills up**, **people step
 - What to write in checkpoints and status notes
 - Exit conditions for automated long runs
 
-Related: [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Related: [Delegate and follow up](/en/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/en/skills/automations/scheduled-tasks/)
 
 ## Signals of a long task
 
@@ -33,7 +34,7 @@ If any apply, write the plan first—don't chat straight through to the end.
 
 Produce a written plan: scope, non-goals, milestones, acceptance commands. Get human sign-off before large-scale execution.
 
-[Planning](/guide/agent-work/planning/) · [Subagents](/guide/agent-work/subagents/)
+[Planning](/en/guide/agent-work/planning/) · [Subagents](/en/guide/agent-work/subagents/)
 
 ### 2. Checkpoints
 
@@ -41,11 +42,11 @@ After each milestone:
 
 - Commit or stash a reviewable increment
 - Update `PROGRESS.md` or an issue comment: what finished, what's next, blockers
-- When context is full, use [compaction](/guide/context/compaction/) or start a new session + link the progress file
+- When context is full, use [compaction](/en/guide/context/compaction/) or start a new session + link the progress file
 
 ### 3. Wrap up or delegate
 
-- When local capacity runs out → [Cloud delegation](/guide/web-and-cloud/delegate-and-follow-up/)
+- When local capacity runs out → [Cloud delegation](/en/guide/web-and-cloud/delegate-and-follow-up/)
 - For ongoing monitoring → Automation + explicit **max iterations / deadline**
 
 ## Exit conditions (required for automation)

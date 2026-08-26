@@ -3,9 +3,10 @@ title: Prompts pour tâches longues
 description: Découper en phases, points de contrôle et informations de passation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Les échecs sur les longues tâches ressemblent souvent à :
@@ -73,7 +74,7 @@ Phase 4 : résumé des changements, risques et suites possibles
 
 Mieux vaut pouvoir s'arrêter entre chaque bloc que tout finir d'un trait.
 
-Voir : [Progression et pilotage](/guide/agent-work/progress-and-steering/) · [Passation et reprise](/guide/agent-work/handoff-and-resume/)
+Voir : [Progression et pilotage](/fr/guide/agent-work/progress-and-steering/) · [Passation et reprise](/fr/guide/agent-work/handoff-and-resume/)
 
 ---
 

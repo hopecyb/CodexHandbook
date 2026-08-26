@@ -3,9 +3,10 @@ title: Regras de permitir e negar
 description: Constranger com regras de comandos e caminhos as operações que o Agent pode executar — hábitos pessoais e linha de base da equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ O valor principal é de dois tipos:
 | Caminhos | Proibir escrita em `../`, proibir leitura de `~/.ssh` |
 | Rede | Proibir saída de rede ou permitir só domínios de registry |
 
-Compare com a [matriz de Permissões](/guide/reference/permission-matrix/): as regras são enforcement **configurável**; a matriz descreve **defaults típicos**.
+Compare com a [matriz de Permissões](/pt/guide/reference/permission-matrix/): as regras são enforcement **configurável**; a matriz descreve **defaults típicos**.
 
 ## Camadas recomendadas
 

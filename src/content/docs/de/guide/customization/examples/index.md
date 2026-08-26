@@ -3,9 +3,10 @@ title: Beispiele
 description: "Anhand realer Beispiele verstehen, wie Config und AGENTS.md geschrieben werden — nicht nur abstrakte Prinzipien."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele Prinzipien versteht man beim Lesen — im eigenen Repo weiß man dann nicht, wie man landet.
@@ -14,7 +15,7 @@ Diese Gruppe zeigt „wie andere es schreiben“ und hilft, abstrakte Regeln in 
 
 ## Einstieg in diese Gruppe
 
-- [AGENTS.md in einem Monorepo](/guide/customization/examples/monorepo-agents-md/)
+- [AGENTS.md in einem Monorepo](/de/guide/customization/examples/monorepo-agents-md/)
 
 ## Wann diese Gruppe am besten passt
 

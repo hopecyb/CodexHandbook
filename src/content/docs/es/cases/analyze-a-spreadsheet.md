@@ -3,9 +3,10 @@ title: Analizar una hoja de cálculo
 description: Sube o referencia datos tabulares para obtener resúmenes e insights.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Analizar una hoja de cálculo
@@ -40,7 +41,7 @@ Aceptación: Cada cifra en summary indica el método de cálculo o el nombre de 
 
 ## 4. Relacionado
 
-- [Tablas y hojas de cálculo](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Tablas y hojas de cálculo](/es/guide/files-and-artifacts/tables-and-spreadsheets/)
 
 ---
 

@@ -5,7 +5,7 @@ sidebar:
   order: 20
 ---
 
-提示词实例存放在仓库根目录 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)，由手册正文链接引用。设计规范见 [`docs/planning/examples-system.md`](/docs/planning/examples-system.md)。
+提示词实例存放在仓库根目录 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)，由手册正文链接引用。设计规范见 [提示词、Skill 与案例体系](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md)。
 
 ## 本页内容
 

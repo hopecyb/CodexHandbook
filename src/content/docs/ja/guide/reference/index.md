@@ -5,9 +5,10 @@ sidebar:
   order: 60
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f13f975
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 短く、正確に、検索しやすく。本区は主にクイックリファレンスと索引。深い説明は各トピック章へ。
@@ -26,24 +27,24 @@ translated_at: 2026-07-28
 
 ## 学習向け索引
 
-- [用語集](/guide/reference/glossary/)
-- [よくある質問](/guide/reference/faq/)
-- [機能比較](/guide/reference/feature-comparison/)
-- [スラッシュコマンド早見](/guide/reference/slash-commands/)
+- [用語集](/ja/guide/reference/glossary/)
+- [よくある質問](/ja/guide/reference/faq/)
+- [機能比較](/ja/guide/reference/feature-comparison/)
+- [スラッシュコマンド早見](/ja/guide/reference/slash-commands/)
 
 ## 技術クイックリファレンス
 
-- [CLI コマンドリファレンス](/guide/reference/commands/)
-- [設定項目リファレンス](/guide/reference/configuration-reference/)
-- [権限マトリクス](/guide/reference/permission-matrix/)
-- [環境変数](/guide/reference/environment-variables/)
-- [キーボードショートカット](/guide/reference/keyboard-shortcuts/)
-- [エラーとメッセージリファレンス](/guide/reference/error-reference/)
+- [CLI コマンドリファレンス](/ja/guide/reference/commands/)
+- [設定項目リファレンス](/ja/guide/reference/configuration-reference/)
+- [権限マトリクス](/ja/guide/reference/permission-matrix/)
+- [環境変数](/ja/guide/reference/environment-variables/)
+- [キーボードショートカット](/ja/guide/reference/keyboard-shortcuts/)
+- [エラーとメッセージリファレンス](/ja/guide/reference/error-reference/)
 
 ## トラブルシュートと外部リンク
 
-- [トラブルシュート索引](/guide/reference/troubleshooting/)
-- [公式リソース](/guide/reference/official-resources/)
+- [トラブルシュート索引](/ja/guide/reference/troubleshooting/)
+- [公式リソース](/ja/guide/reference/official-resources/)
 
 :::note[バージョン敏感]
 コマンド、設定キー、デフォルト権限は製品更新で変わります——各ページに検証日を記載。使用前に公式ドキュメントを確認してください。

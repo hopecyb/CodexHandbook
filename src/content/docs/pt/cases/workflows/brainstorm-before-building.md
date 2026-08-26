@@ -3,12 +3,13 @@ title: Brainstorm antes de construir
 description: Antes de escrever código ou textos longos, use exploração estruturada para convergir na solução — menos retrabalho.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Brainstorm antes de construir** adequa-se a tarefas com objetivo vago e mais do que uma solução possível: novas funcionalidades, redesigns, temas de conteúdo, seleção tecnológica. Liga-se à fase ① Explorar de [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/), mas enfatiza **divergir e convergir**, em vez de ler código e alterar ficheiros de imediato.
+**Brainstorm antes de construir** adequa-se a tarefas com objetivo vago e mais do que uma solução possível: novas funcionalidades, redesigns, temas de conteúdo, seleção tecnológica. Liga-se à fase ① Explorar de [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/), mas enfatiza **divergir e convergir**, em vez de ler código e alterar ficheiros de imediato.
 
 ## Que problema resolve esta página
 
@@ -43,7 +44,7 @@ indique 2 pontos de decisão que preciso de confirmar (formato, permissões).
 
 **Fase C — Entrar no plano**
 
-Após confirmação, passe a [trabalho orientado por especificação](/cases/workflows/specification-driven-work/) ou à fase ② Planear de EPXV.
+Após confirmação, passe a [trabalho orientado por especificação](/pt/cases/workflows/specification-driven-work/) ou à fase ② Planear de EPXV.
 
 ## Fluxo recomendado
 
@@ -78,9 +79,9 @@ Defina uma **caixa de tempo**: por exemplo, concluir a divergência em 15 minuto
 
 ## Capítulos relacionados
 
-- [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/)
-- [Trabalho orientado por especificação](/cases/workflows/specification-driven-work/)
-- [Pedir um plano](/prompts/ask-for-a-plan/)
+- [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- [Trabalho orientado por especificação](/pt/cases/workflows/specification-driven-work/)
+- [Pedir um plano](/pt/prompts/ask-for-a-plan/)
 
 ---
 

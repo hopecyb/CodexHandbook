@@ -3,9 +3,10 @@ title: Skill 보안과 버전
 description: 설치 출처, 권한 경계, 업그레이드와 롤백으로 팀 Skill을 거버넌스합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill은 프롬프트 템플릿이 하나 더 생긴 것만이 아닙니다.
@@ -33,7 +34,7 @@ Codex가 일하는 방식에 영향을 주고, 때로는 스크립트나 추가 
 
 Skill 보안은 「누군가 통일 관리」에만 맡길 수 없습니다. 사용자 각자도 기본 판단력이 필요합니다.
 
-기초: [Skill 개요](/skills/overview/) · [첫 Skill 만들기](/skills/create-your-first-skill/)
+기초: [Skill 개요](/ko/skills/overview/) · [첫 Skill 만들기](/ko/skills/create-your-first-skill/)
 
 ## 위협 모델(단순화)
 
@@ -84,7 +85,7 @@ Skill을 만나면 먼저 세 가지를 물으세요.
 | changelog | 팀 Skill 세트의 release note 유지 |
 | 롤백 | 이전 버전 사본 보관. 문제 시 빠르게 전환 |
 
-Plugin은 Skill을 묶어 통일 배포할 수 있습니다. [Plugins 개요](/skills/plugins/plugins-overview/)
+Plugin은 Skill을 묶어 통일 배포할 수 있습니다. [Plugins 개요](/ko/skills/plugins/plugins-overview/)
 
 ## 팀 습관
 
@@ -105,7 +106,7 @@ Skill이 장기적으로 여러 사람에게 재사용된다면 「누가 DM으�
 - [ ] 설치 허용 Skill 출처 화이트리스트
 - [ ] 신규 직원 onboarding은 「기본 패키지」만 설치
 - [ ] 분기마다 여전히 필요한 Skill 재검토
-- [ ] [허용·거부 규칙](/guide/customization/rules/allow-and-deny-patterns/)과 일치
+- [ ] [허용·거부 규칙](/ko/guide/customization/rules/allow-and-deny-patterns/)과 일치
 
 ## 흔한 실수
 

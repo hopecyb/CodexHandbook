@@ -1,64 +1,70 @@
 ---
 title: CLI installieren
-description: "Codex-Kommandozeile installieren und grundlegend prüfen."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Installiere die Codex CLI und prüfe Version, Anmeldestatus und die erste Aufgabe in einem Repository.
 sidebar:
   order: 40
+locale: de
+source_locale: zh-CN
+source_revision: b12f7d0
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Der offiziellen CLI-Installationsanleitung folgen: [https://developers.openai.com/codex](https://developers.openai.com/codex) (meist Paketmanager oder offizielles Installationsskript — aktuelle Doku gilt).
+Mit der Codex CLI kannst du Untersuchung, Änderungen, Tests und Review im Terminal durchführen. Die offizielle Installationsseite bietet Varianten für macOS/Linux, Windows, npm und Homebrew. Wähle die Methode, die zu Betriebssystem und Softwareverwaltung passt.
 
-Wenn du ohnehin oft im Terminal arbeitest, fühlt sich CLI oft natürlicher an.  
-Beim ersten Installieren hakt es meist hier:
+## Offizielles eigenständiges Installationsprogramm für macOS/Linux
 
-- Nach der Installation: Wie bestätigen, dass es nicht „halb“ ist?
-- Befehl installiert, Terminal findet ihn nicht — warum?
-- Wann PATH / Auth prüfen statt neu installieren?
+```bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+```
 
-Ob CLI sitzt, siehst du vor allem daran, ob das aktuelle Terminal `codex` stabil erkennt.
+Führe für ein Update denselben offiziellen Installationsbefehl erneut aus. Benutzer von Windows, npm oder Homebrew wählen auf der [offiziellen Seite zur Codex CLI](https://learn.chatgpt.com/docs/codex/cli) die entsprechende Installationsregisterkarte. Übertrage den macOS/Linux-Befehl nicht unverändert auf jedes System.
 
 ## Nach der Installation prüfen
 
-Im Terminal Versions- oder Hilfebefehl ausführen (genaue Unterbefehle laut Offiziellem) und prüfen:
+Öffne ein neues Terminalfenster und führe in einem Übungs-Repository Folgendes aus:
 
-- Befehl ausführbar
-- Login oder bereits authentifizierter Zustand erreichbar
+```bash
+codex --version
+codex login status
+```
 
-## Häufige Missverständnisse
+Wenn du noch nicht angemeldet bist:
 
-### 1. Nach Installation kennt jedes Terminalfenster den Befehl sofort
+```bash
+codex login
+```
 
-Manchmal Terminal neu öffnen oder prüfen, ob `PATH` der aktuellen Shell aktualisiert ist.
+Starte nach der Autorisierung im Browser im Repository-Verzeichnis eine interaktive Sitzung:
 
-### 2. Installationsausgabe „Erfolg“ = schon nutzbar
+```bash
+codex
+```
 
-Wichtiger: Findet die aktuelle Umgebung den Befehl?
+Die erste Aufgabe kann schreibgeschützt bleiben:
 
-### 3. CLI-Probleme = immer neu installieren
+```text
+Ändere noch keine Dateien. Erkläre, wie dieses Projekt installiert, getestet und gebaut wird, und nenne die gelesenen Dateipfade.
+```
 
-Oft eher prüfen:
+## Fehler in dieser Reihenfolge untersuchen
 
-- `PATH`
-- aktuelle Shell
-- Login-Status
+1. `codex --version` findet den Befehl nicht: Öffne das Terminal erneut und prüfe `PATH` der aktuellen Shell.
+2. Der Befehl ist ausführbar, kann aber nicht verwendet werden: Führe `codex login status` aus und unterscheide Installations- von Authentifizierungsproblemen.
+3. Die falsche Identität ist angemeldet: Führe `codex logout` aus und melde dich erneut an.
+4. Die Unternehmensumgebung lehnt den Zugriff ab: Prüfe Workspace, Anmeldemodus und verwaltete Konfiguration. Umgehe die Richtlinie nicht mit privaten Zugangsdaten.
 
-## Nach der Installation so prüfen
+Füge einen API-Key nicht in Shellverlauf, Ticket oder Chat ein. Wenn du dich mit einem API-Key anmelden musst, verwende wie unter [Anmeldung und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) beschrieben die Standardeingabe.
 
-1. Zuerst: Befehl ausführbar?
-2. Dann: Aktuelle Sitzung kann Login / angemeldeten Zustand erreichen?
-3. Sonst: Installationsort und PATH
-
-CLI installiert: Das aktuelle Terminal sollte es finden, und du kannst die Authentifizierung fortsetzen.
-
-Interaktion im Detail: [CLI-Interaktivmodus](/guide/cli/interactive-mode/). Fehlerbehebung: [CLI-Fehlerbehebung](/guide/cli/troubleshooting/).
+Lies als Nächstes [Interaktiver CLI-Modus](/de/guide/cli/interactive-mode/). Weitere Probleme behandelt die [CLI-Fehlersuche](/de/guide/cli/troubleshooting/).
 
 ---
 
-**Status:** outdated  
-**Geeignete Produkte:** CLI  
-**Nachprüfhinweis:** Diese Seite vermeidet bewusst konkrete Installationsbefehle, setzt aber ein aktuelles CLI-Installations-, Terminal-Prüf- und Auth-Tempo voraus; Installationswege, unterstützte Plattformen und Auth-Abläufe ändern sich — ohne aktuelle offizielle Installationsanleitung nicht als `verified` markieren.  
-**Zuletzt überprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** CLI
+
+**Prüfgrundlage:** Mit dem aktuellen Schnellstart und der Authentifizierungsdokumentation der Codex CLI abgeglichen. Verifiziert wurden das offizielle Installationsprogramm für macOS/Linux, der Start mit `codex`, die ChatGPT-Anmeldung und die Befehle zum Anmeldestatus. Für andere Installationsarten verweist die Seite auf die aktuellen offiziellen Registerkarten.
+
+**Zuletzt geprüft:** 2026-08-26

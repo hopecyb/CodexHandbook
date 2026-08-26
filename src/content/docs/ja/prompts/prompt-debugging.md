@@ -3,9 +3,10 @@ title: プロンプトのトラブルシューティング
 description: 結果がずれたとき、プロンプトのどこに問題があるかを特定する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 9b92e1f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 結果が合わないとき、よくある原因は次のとおりです。

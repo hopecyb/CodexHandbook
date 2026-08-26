@@ -3,9 +3,10 @@ title: Prompts para tarefas longas
 description: Divida em fases, checkpoints e informação de transferência.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Falhas habituais em tarefas longas:
@@ -75,7 +76,7 @@ Fase 4: resuma mudanças, riscos e recomendações seguintes
 
 O melhor é poder parar e inspecionar em cada fase — não fazer tudo de um fôlego.
 
-Combinar com: [Progresso e reorientação](/guide/agent-work/progress-and-steering/) · [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
+Combinar com: [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/) · [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
 
 ---
 

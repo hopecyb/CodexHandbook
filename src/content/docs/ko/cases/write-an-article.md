@@ -3,9 +3,10 @@ title: 글 쓰기
 description: 주제 선정부터 개요, 초고, 사실 확인까지 기술 글쓰기의 전체 흐름입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 글 쓰기
@@ -49,11 +50,11 @@ translated_at: 2026-07-28
 ### 검증
 
 - 링크, 버전 번호, 명령이 아직 유효한지 사람이 확인
-- 선택: [글쓰기 Skill](/skills/examples/writing-skill/)로 흐름을 고정
+- 선택: [글쓰기 Skill](/ko/skills/examples/writing-skill/)로 흐름을 고정
 
 ## 3. 정착
 
-반복 글쓰기는 `article-writer` Skill로 패키징할 수 있습니다. [창작자 경로](/guide/learning-paths/creator/)를 참고하세요.
+반복 글쓰기는 `article-writer` Skill로 패키징할 수 있습니다. [창작자 경로](/ko/guide/learning-paths/creator/)를 참고하세요.
 ---
 
 **상태:** verified  

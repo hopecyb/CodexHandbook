@@ -3,9 +3,10 @@ title: 생성물 검증
 description: Codex가 새로 만들거나보낸 파일·보고서·빌드 산출물을 체계적으로 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -50,7 +51,7 @@ Agent가 작업을 마칠 때 보고서, 스크립트, 정적 사이트, 테스�
 5. 결정: 수락 / 국소 수정 / 폐기 후 재작업
 ```
 
-방법: [산출물 검증](/guide/quality/verify-artifacts/), [완료 정의](/guide/quality/definition-of-done/)
+방법: [산출물 검증](/ko/guide/quality/verify-artifacts/), [완료 정의](/ko/guide/quality/definition-of-done/)
 
 ## 흔한 오해
 
@@ -111,7 +112,7 @@ Agent가 작업을 마칠 때 보고서, 스크립트, 정적 사이트, 테스�
 - [ ] secrets 없음, 불필요 생성 디렉터리 없음
 
 ## 참고 출처
-- [불확실성 다루기](/guide/quality/handle-uncertainty/)
+- [불확실성 다루기](/ko/guide/quality/handle-uncertainty/)
 ---
 
 **상태:** verified  

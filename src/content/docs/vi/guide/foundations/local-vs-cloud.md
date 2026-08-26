@@ -3,9 +3,10 @@ title: Local và đám mây
 description: Đối chiếu tình huống phù hợp của tác vụ local và tác vụ Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ Nếu giờ vẫn chưa phân biệt được, có thể theo quy tắc này: l�
 - Cần kết nối kho từ xa hoặc tài nguyên xa
 - Không muốn chiếm máy local
 
-Nhiều người mới bắt đầu từ **local + Desktop App**. Chi tiết Cloud xem [Tổng quan Web và Cloud](/guide/web-and-cloud/). Chuyển đổi trong App xem [Tác vụ local và đám mây](/guide/desktop-app/local-and-cloud-tasks/).
+Nhiều người mới bắt đầu từ **local + Desktop App**. Chi tiết Cloud xem [Tổng quan Web và Cloud](/vi/guide/web-and-cloud/). Chuyển đổi trong App xem [Tác vụ local và đám mây](/vi/guide/desktop-app/local-and-cloud-tasks/).
 
 Local phù hợp hơn để hiểu quy trình trước và sửa thứ nhỏ. Đám mây phù hợp hơn với tác vụ dài hơn, chuẩn hóa hơn, cộng tác từ xa nhiều hơn.
 

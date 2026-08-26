@@ -3,9 +3,10 @@ title: Commencer ici
 description: Découvrez ce qu'est Codex, à qui il s'adresse et choisissez votre parcours d'apprentissage.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b7997c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 1
 ---
@@ -21,21 +22,21 @@ Bienvenue dans le Codex Handbook. Ce handbook considère les **débutants en IA*
 
 ## Ordre de lecture suggéré
 
-1. [Qu'est-ce que Codex](/guide/start-here/what-is-codex/)
-2. [À qui s'adresse ce handbook](/guide/start-here/who-is-this-handbook-for/)
-3. [Choisir votre parcours](/guide/start-here/choose-your-path/)
-4. Poursuivre avec [Fondamentaux](/guide/foundations/) et [Premiers pas](/guide/getting-started/)
+1. [Qu'est-ce que Codex](/fr/guide/start-here/what-is-codex/)
+2. [À qui s'adresse ce handbook](/fr/guide/start-here/who-is-this-handbook-for/)
+3. [Choisir votre parcours](/fr/guide/start-here/choose-your-path/)
+4. Poursuivre avec [Fondamentaux](/fr/guide/foundations/) et [Premiers pas](/fr/guide/getting-started/)
 
-Si vous voulez vous lancer tout de suite, allez directement à [Les 30 premières minutes](/guide/getting-started/first-30-minutes/), en parcourant d'abord la [Liste de contrôle sécurité pour débutants](/guide/getting-started/beginner-safety-checklist/).
+Si vous voulez vous lancer tout de suite, allez directement à [Les 30 premières minutes](/fr/guide/getting-started/first-30-minutes/), en parcourant d'abord la [Liste de contrôle sécurité pour débutants](/fr/guide/getting-started/beginner-safety-checklist/).
 
 ## Organisation du site
 
 | Couche | Objectif | Entrée |
 |---|---|---|
-| Parcours d'apprentissage | Quoi lire et dans quel ordre | [Parcours d'apprentissage](/guide/learning-paths/) |
-| Guides produit | Interface et opérations | [Guides produit](/guide/) |
-| Sujets de capacité | Principes et méthodes | [Capacités principales](/guide/) |
-| Référence | Consultation rapide | [Référence](/guide/reference/) |
+| Parcours d'apprentissage | Quoi lire et dans quel ordre | [Parcours d'apprentissage](/fr/guide/learning-paths/) |
+| Guides produit | Interface et opérations | [Guides produit](/fr/guide/) |
+| Sujets de capacité | Principes et méthodes | [Capacités principales](/fr/guide/) |
+| Référence | Consultation rapide | [Référence](/fr/guide/reference/) |
 
 Chaque sujet a une page de référence ; les parcours et études de cas utilisent des résumés avec des liens pour éviter la duplication.
 

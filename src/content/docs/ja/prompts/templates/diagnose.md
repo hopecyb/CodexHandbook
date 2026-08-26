@@ -3,9 +3,10 @@ title: 診断テンプレート
 description: 根因を特定してから修正を議論する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 診断テンプレート
@@ -47,8 +48,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [修正前に診断する](/cases/workflows/diagnose-before-fixing/)
-- [バグ修正の事例](/cases/fix-a-bug/)
+- [修正前に診断する](/ja/cases/workflows/diagnose-before-fixing/)
+- [バグ修正の事例](/ja/cases/fix-a-bug/)
 
 ---
 

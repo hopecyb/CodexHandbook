@@ -3,9 +3,10 @@ title: Projektanweisungen schreiben
 description: "Schreib-Checkliste für AGENTS.md — kurz, hart, ausführbar, überprüfbar."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ Klar sagen, was nicht zu tun ist
 
 ### 1. Harte Constraints nach vorne
 
-„Muss“ und „Verboten“ an den Dateianfang. Bei begrenztem Kontext wiegt der Anfang stärker — dieselbe Logik wie [Kontextpriorität](/guide/context/context-priority/).
+„Muss“ und „Verboten“ an den Dateianfang. Bei begrenztem Kontext wiegt der Anfang stärker — dieselbe Logik wie [Kontextpriorität](/de/guide/context/context-priority/).
 
 ### 2. Befehle kopierbar
 
@@ -151,9 +152,9 @@ Gute Projektanweisungen gewinnen nicht durch Menge, sondern dadurch, dass kritis
 
 ## Weiterlesen
 
-- [Projektanweisungen](/guide/customization/project-instructions/)
-- [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- [Done definieren](/prompts/define-done/)
+- [Projektanweisungen](/de/guide/customization/project-instructions/)
+- [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
+- [Done definieren](/de/prompts/define-done/)
 
 ## Von einer Aufgabe zur Projektregel
 

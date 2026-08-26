@@ -3,22 +3,23 @@ title: Lokaler Aufgaben-Workflow
 description: In der IDE lokale Codex-Aufgaben starten, begleiten und abschließen — basierend auf geöffneten Dateien und Auswahl.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9abb5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-Lokale IDE-Aufgaben sind die Schleife **„öffnen → auswählen → beschreiben → prüfen → testen“** — geeignet für häufige kleine Schritte. Hier der gängigste Praxisweg; Kontext-Details: [Auswahl und geöffnete Dateien](/guide/ide/selected-code-and-open-files/).
+Lokale IDE-Aufgaben sind die Schleife **„öffnen → auswählen → beschreiben → prüfen → testen“** — geeignet für häufige kleine Schritte. Hier der gängigste Praxisweg; Kontext-Details: [Auswahl und geöffnete Dateien](/de/guide/ide/selected-code-and-open-files/).
 
 ## Empfohlener Ablauf
 
 1. **Workspace-Wurzel öffnen** (ganzes Repository, nicht nur eine Datei)
-2. Relevante Dateien öffnen; bei Bedarf [Codeausschnitt auswählen](/guide/ide/selected-code-and-open-files/)
-3. Im Codex-Panel klar schreiben: Ziel, Einschränkungen, [Fertig-Definition](/prompts/define-done/)
-4. Bei komplexen Aufgaben zuerst [einen Plan verlangen](/prompts/ask-for-a-plan/), dann ausführen
-5. In Diff- / Inline-Ansicht [Änderungen prüfen](/guide/ide/reviewing-changes/)
+2. Relevante Dateien öffnen; bei Bedarf [Codeausschnitt auswählen](/de/guide/ide/selected-code-and-open-files/)
+3. Im Codex-Panel klar schreiben: Ziel, Einschränkungen, [Fertig-Definition](/de/prompts/define-done/)
+4. Bei komplexen Aufgaben zuerst [einen Plan verlangen](/de/prompts/ask-for-a-plan/), dann ausführen
+5. In Diff- / Inline-Ansicht [Änderungen prüfen](/de/guide/ide/reviewing-changes/)
 6. Im IDE-Terminal die Projekttestbefehle laufen lassen
 7. Du selbst `git commit` (außer das Team autorisiert Agent-Commits explizit)
 
@@ -35,9 +36,9 @@ Fertig: npm test -- auth ausführen und Änderungszusammenfassung listen.
 
 | Situation | Empfehlung |
 |---|---|
-| Parallele Multi-Tasks, Arbeitsbäume | [Desktop-App](/guide/desktop-app/) |
-| Skripte / CI | [CLI nicht-interaktiv](/guide/cli/non-interactive-mode/) |
-| Remote-Standardumgebung, PR öffnen | [IDE-Cloud-Aufgaben](/guide/ide/cloud-task-workflow/) |
+| Parallele Multi-Tasks, Arbeitsbäume | [Desktop-App](/de/guide/desktop-app/) |
+| Skripte / CI | [CLI nicht-interaktiv](/de/guide/cli/non-interactive-mode/) |
+| Remote-Standardumgebung, PR öffnen | [IDE-Cloud-Aufgaben](/de/guide/ide/cloud-task-workflow/) |
 
 ## Häufige Fehler
 
@@ -45,7 +46,7 @@ Fertig: npm test -- auth ausführen und Änderungszusammenfassung listen.
 - Alle Inline-Vorschläge mit einem Klick annehmen
 - Commit ohne Tests
 
-Kontext: [Editor-Kontext](/guide/ide/editor-context/) · [Datei- und Ordner-Kontext](/guide/context/file-and-folder-context/)
+Kontext: [Editor-Kontext](/de/guide/ide/editor-context/) · [Datei- und Ordner-Kontext](/de/guide/context/file-and-folder-context/)
 
 ## Häufige Fragen
 

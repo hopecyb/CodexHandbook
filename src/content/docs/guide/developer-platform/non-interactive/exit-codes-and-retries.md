@@ -51,33 +51,30 @@ CI 依赖**进程退出码**判断步骤成败。本章说明 [codex exec](/guid
 
 | 情况 | 建议处理 |
 |---|---|
-| `0` | 任务完成且满足 prompt 中的成功标准 |
+| `0` | `codex exec` 进程成功完成；业务是否通过仍要看结构化结果 |
 | 非 `0` 且日志含 policy/sandbox 拒绝 | **不要**盲目重试，修配置或 prompt |
-| 非 `0` 且 API 429/5xx | 有限次指数退避重试 |
+| 非 `0` 且已被运行器确认是临时网络或服务故障 | 有限次退避重试 |
 | 审查发现 P0 问题但执行成功 | 用 [结构化输出](/guide/developer-platform/non-interactive/structured-output/) 的 `pass: false` + 脚本 `exit 1` |
 
 「发现了安全问题」不应依赖崩溃式异常，而应**显式**在 JSON 里 `pass: false` 并由包装脚本决定退出码。
 
-## 重试模板（bash）
+## 退出码捕获模板（bash）
 
 ```bash
-max=3
-delay=10
-for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
-    exit 0
-  fi
-  code=$?
-  if [ "$code" -eq 2 ]; then
-    echo "Policy error, not retrying" >&2
-    exit "$code"
-  fi
-  sleep $((delay * i))
-done
-exit 1
+#!/usr/bin/env bash
+set -uo pipefail
+
+log_file="${RUNNER_TEMP:-/tmp}/codex-exec.stderr.log"
+codex exec --cd . "$(cat "$PROMPT")" 2>"$log_file"
+code=$?
+
+if [ "$code" -ne 0 ]; then
+  cat "$log_file" >&2
+  exit "$code"
+fi
 ```
 
-将「不可重试」码与官方文档对齐后写入 `case` 分支。
+不要给没有官方定义的数字自行命名，例如假设 `2` 永远表示策略失败。需要重试时，由外层运行器根据自己能稳定识别的错误类型决定，并限制次数、总时长和副作用。
 
 ## 幂等与副作用
 
@@ -121,7 +118,10 @@ exit 1
 - OpenAI API 重试指南（概念）
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页对退出码和重试给出了合理工程建议，但示例里包含特定退出码语义（如 `code=2`）与 `codex exec` 行为假设；这些细节目前缺少足够强的官方现行依据，需待新版 CLI 文档核实后再改回 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已移除无依据的特定退出码含义；本页只依赖当前官方确认的进程成败、`stderr` 进度与错误输出，并把业务审查结论交给结构化结果处理。
+
+**最近核验：** 2026-08-26

@@ -3,84 +3,97 @@ title: MCP 接続のデバッグ
 description: MCP サーバーが起動しない、ツールがタイムアウトする、結果が異常なときの体系的な切り分け手順。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 829c1e9
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP は外部システムを Codex に接続します。失敗時の典型は 3 類：**プロセスが起動しない**、**認証が誤っている**、**ツールロジックまたはタイムアウト**。本ページは設定を運任せで変え続けるのを避けるチェック順序を示します。
+“MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
 
-## 本ページの内容
+## Preserve four pieces of evidence
 
-- MCP 問題の最小再現方法
-- ログと設定の照合チェックリスト
-- いつ Codex ではなくサーバー実装を疑うか
-
-関連ページ：[MCP 概要](/skills/mcp/mcp-overview/) · [MCP サーバー接続](/skills/mcp/connect-an-mcp-server/)
-
-## トリアージフロー
-
-```text
-1. サーバーはターミナル単体で起動できるか？
-2. 設定 JSON/TOML の構文とパスは正しいか？
-3. 環境変数は MCP プロセスから見えるか？
-4. Codex セッションは新設定読み込みのため再起動したか？
-5. 単一ツール呼び出しはタイムアウト/引数エラーか？
+```bash
+codex mcp list
+codex mcp --help
+node --version    # only for a Node.js STDIO server
+python3 --version # only for a Python STDIO server
 ```
 
-## 起動失敗
+Also record server name, STDIO versus Streamable HTTP, exact error, and whether it occurred in App, CLI, or IDE. Never record the complete token.
 
-| 確認項目 | 説明 |
+## Four-layer triage
+
+| Layer | Symptom | First check |
+|---|---|---|
+| Configuration | Server absent from list | File path, TOML syntax, server name, `enabled` |
+| Startup/connection | Initialization timeout | STDIO command and PATH, or HTTP URL, TLS, proxy |
+| Authentication | 401/403 or sign-in request | OAuth state, token environment variable, scope |
+| Tool | Server online but call fails | Tool name, arguments, allowlist, timeout |
+
+## 1. Confirm configuration loaded
+
+- User file: `~/.codex/config.toml`.
+- Project file: `.codex/config.toml`, loaded only for a trusted project.
+- App, CLI, and IDE share configuration on one Codex host; do not maintain drifting copies.
+- Use `codex mcp list` or `/mcp`; file existence is not success evidence.
+
+## 2. STDIO startup failure
+
+Check that `command` is on PATH, runtime version is supported, `cwd` exists, and dependency provenance is trusted.
+
+Running the command directly proves only that it starts. A protocol server may wait indefinitely for input; that is not a complete tool-call test.
+
+Raise `startup_timeout_sec` only for a genuinely slow initialization. The default is 10 seconds; a huge value can hide a wrong command.
+
+## 3. Streamable HTTP connection failure
+
+Check in order:
+
+1. URL and TLS certificate.
+2. Corporate proxy or VPN.
+3. Existence of the environment variable named by `bearer_token_env_var`.
+4. Whether OAuth needs `codex mcp login <server-name>` again.
+5. Whether server logs received initialization.
+
+Do not temporarily put the token in static `http_headers`; it can leak into configuration and screenshots.
+
+## 4. Server online, tool unavailable
+
+| Symptom | Check |
 |---|---|
-| コマンドパス | `npx`、`uvx`、絶対パスが PATH にあるか |
-| 依存バージョン | Node/Python が MCP サーバー要件を満たすか |
-| 手動実行 | 設定の command + args を shell でコピー実行 |
-| 転送方式 | stdio と HTTP/SSE がドキュメントと一致するか |
+| Tools absent | `enabled_tools` / `disabled_tools`, server tool list |
+| Tool not found | Server version, renamed tool, stale session list |
+| Argument validation | Tool schema rather than old prompt fields |
+| Timeout | Smaller query, then `tool_timeout_sec`; default 60 seconds |
+| Empty result | Verify source-system visibility and filters with the same identity |
 
-## 認証失敗
+## Minimal reproduction prompt
 
-- API key が環境変数注入か（リポジトリ直書きでないか）
-- OAuth 系 MCP は期限切れで再認可が必要か
-- 会社プロキシが MCP 外向きを遮断していないか
+```text
+Inspect only MCP server <server-name>:
+1. Report visible tool names.
+2. Call <readonly-tool> with <minimal-arguments>.
+3. Preserve the error type and server message, but redact credentials.
+4. Do not call another server or write.
+```
 
-環境変数索引：[環境変数](/guide/reference/environment-variables/)
+## Acceptance after repair
 
-## ツール呼び出し異常
+- [ ] `codex mcp list` shows expected state.
+- [ ] One read-only tool succeeds with minimal arguments.
+- [ ] The root cause names a layer rather than “restart fixed it.”
+- [ ] Temporary tokens, debug logs, and broad permissions are removed.
+- [ ] Team configuration and repair notes are updated.
 
-| 現象 | 想定原因 |
-|---|---|
-| Tool not found | サーバーバージョンとクライアント schema の不一致 |
-| Timeout | 外部 API が遅い。タイムアウト延長またはクエリ最適化 |
-| 空結果 | 引数名誤り。MCP サーバーログを確認 |
-| 文字化け | エンコーディングが UTF-8 でない |
+## Official source
 
-prompt で Agent に**ツール戻り値の構造を表示**（マスキング）させるとデバッグしやすい。
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 
-## 安全なデバッグ習慣
-
-- **テストテナント**の API key を使い、本番は使わない
-- デバッグログに完全な token をチャットに貼らない
-- 悪意ある MCP を疑ったら即切断し、鍵をローテーション
-
-エラー索引：[エラーとメッセージリファレンス](/guide/reference/error-reference/)
-
-## よくあるミス
-
-- 設定変更後に Codex セッションを再起動しない
-- IDE と CLI に不一致の MCP 設定をそれぞれ持つ
-- MCP サーバーログを常に debug にし、スクリーンショットに秘密鍵が含まれる
-
-## 受け入れチェックリスト
-
-- [ ] ターミナル単体で MCP サーバーを起動できる
-- [ ] 読み取り専用ツールを少なくとも 1 回成功呼び出し
-- [ ] チーム標準の MCP 設定テンプレートを記録
-
-## 参考ソース
-- Model Context Protocol 仕様とデバッグガイド
 ---
 
-**状態：** outdated  
-**対象製品：** CLI / IDE / App  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページの切り分けは、Codex クライアントが MCP ツールをどう装載・表示・呼び出すかに依存。この部分は変動リスクが高く、現行ドキュメントでの再検証が必要。
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE
+
+**Last verified:** 2026-08-25

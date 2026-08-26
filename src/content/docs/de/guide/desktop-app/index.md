@@ -3,9 +3,10 @@ title: Desktop-App
 description: Installation, Oberfläche und tägliche Workflows der Desktop-App.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a3f2555
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -72,18 +73,18 @@ Das ist meist entspannter, als sofort alle Funktionen zu studieren.
 
 ## Dieses Kapitel
 
-- [Installation und Oberfläche](/guide/desktop-app/installation-and-interface/)
-- [Projekte und Aufgaben](/guide/desktop-app/projects-and-tasks/)
-- [Parallele Agenten](/guide/desktop-app/parallel-agents/)
-- [Arbeitsbäume](/guide/desktop-app/worktrees/)
-- [Diff, Kommentare und Überprüfung](/guide/desktop-app/diffs-comments-and-review/)
-- [Integriertes Terminal](/guide/desktop-app/integrated-terminal/)
-- [Lokale und Cloud-Aufgaben](/guide/desktop-app/local-and-cloud-tasks/)
-- [Benachrichtigungen](/guide/desktop-app/notifications/)
-- [Einstellungen](/guide/desktop-app/settings/)
-- [Fehlerbehebung](/guide/desktop-app/troubleshooting/)
+- [Installation und Oberfläche](/de/guide/desktop-app/installation-and-interface/)
+- [Projekte und Aufgaben](/de/guide/desktop-app/projects-and-tasks/)
+- [Parallele Agenten](/de/guide/desktop-app/parallel-agents/)
+- [Arbeitsbäume](/de/guide/desktop-app/worktrees/)
+- [Diff, Kommentare und Überprüfung](/de/guide/desktop-app/diffs-comments-and-review/)
+- [Integriertes Terminal](/de/guide/desktop-app/integrated-terminal/)
+- [Lokale und Cloud-Aufgaben](/de/guide/desktop-app/local-and-cloud-tasks/)
+- [Benachrichtigungen](/de/guide/desktop-app/notifications/)
+- [Einstellungen](/de/guide/desktop-app/settings/)
+- [Fehlerbehebung](/de/guide/desktop-app/troubleshooting/)
 
-Einstieg: [Desktop-App installieren](/guide/getting-started/install-desktop-app/)
+Einstieg: [Desktop-App installieren](/de/guide/getting-started/install-desktop-app/)
 
 Die Desktop-App eignet sich gut, um die Grundzusammenarbeit mit Codex zuerst durchzuspielen — CLI und fortgeschrittenere Workflows können später folgen.
 

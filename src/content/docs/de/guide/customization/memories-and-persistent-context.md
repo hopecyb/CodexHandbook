@@ -3,9 +3,10 @@ title: Erinnerungen und persistenter Kontext
 description: "Wie Codex Vorlieben und Fakten über Sessions merkt: Fähigkeiten, Grenzen und Teamnormen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ Das ist eher „persönliche langfristige Vorliebe und wenige stabile Fakten“ 
 | Wiederholt erklärte Projekt-Aliase („Backend = `services/api`“) | Wechselnder Sprint-Status |
 | Nicht-sensible Fakten, die Sie ausdrücklich „bitte merken“ sagen | Teamnormen, die in Git gehören |
 
-Teamnormen gehören in **`AGENTS.md` oder Projektkonfiguration**, damit Review und Onboarding funktionieren. Siehe [Geltungsbereich und Priorität](/guide/customization/agents-md/scope-and-precedence/).
+Teamnormen gehören in **`AGENTS.md` oder Projektkonfiguration**, damit Review und Onboarding funktionieren. Siehe [Geltungsbereich und Priorität](/de/guide/customization/agents-md/scope-and-precedence/).
 
 ## Häufige Missverständnisse
 

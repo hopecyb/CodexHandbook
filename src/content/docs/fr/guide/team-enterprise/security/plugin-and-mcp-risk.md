@@ -3,14 +3,15 @@ title: "Risque Plugin et MCP"
 description: Ce que les extensions peuvent accéder, comment les équipes approuvent et surveillent — vue unifiée du risque pour Skills, Plugins et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Les **Plugins** et **serveurs MCP** connectent Codex aux systèmes externes : tickets, bases de données, APIs internes. Plus de capacité signifie une surface de [modèle de menace](/guide/team-enterprise/security/threat-model/) plus large pour exfiltration et emprise excessive. Lire avec [Vue d'ensemble MCP](/skills/mcp/mcp-overview/) et [Vue d'ensemble Plugins](/skills/plugins/plugins-overview/).
+Les **Plugins** et **serveurs MCP** connectent Codex aux systèmes externes : tickets, bases de données, APIs internes. Plus de capacité signifie une surface de [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) plus large pour exfiltration et emprise excessive. Lire avec [Vue d'ensemble MCP](/fr/skills/mcp/mcp-overview/) et [Vue d'ensemble Plugins](/fr/skills/plugins/plugins-overview/).
 
 Vous n'avez pas besoin de définitions parfaites le premier jour. Point central : connecter Codex à l'extérieur augmente capacité et risque.
 
@@ -52,7 +53,7 @@ MCP personnel expérimental **ne devrait pas** partager les tokens de dépôt pr
 
 1. **Deny par défaut** les installs MCP distantes non listées
 2. **MCP local** peut encore lire tout le disque — utilisateur OS dédié ou conteneur
-3. **Logs** : nom d'outil et résumé de paramètres (rédigé) — voir [audit Hook](/skills/hooks/hooks-examples/)
+3. **Logs** : nom d'outil et résumé de paramètres (rédigé) — voir [audit Hook](/fr/skills/hooks/hooks-examples/)
 4. **Skill vs MCP** : Skill décrit le flux, MCP exécute les appels externes — union des permissions ; appliquer la politique la plus stricte
 
 ## Erreurs courantes
@@ -91,10 +92,10 @@ Pour les extensions externes : permissions et frontières avant la force des fon
 
 - [ ] Liste d'approbation écrite ou processus équivalent
 - [ ] Chaque MCP production a propriétaire et classification des données
-- [ ] Cohérent avec la politique [Sécurité Skill](/skills/security/)
+- [ ] Cohérent avec la politique [Sécurité Skill](/fr/skills/security/)
 
 ## Sources de référence
-- [Débogage MCP](/skills/mcp/debugging-mcp/)
+- [Débogage MCP](/fr/skills/mcp/debugging-mcp/)
 ---
 
 **Statut :** vérifié  

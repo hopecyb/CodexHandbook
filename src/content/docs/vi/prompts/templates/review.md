@@ -3,9 +3,10 @@ title: Mẫu review
 description: Review có cấu trúc về diff và rủi ro thay đổi.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu review
@@ -50,8 +51,8 @@ Trọng tâm mẫu review là lật rủi ro theo chiều cố định—không 
 
 ## Liên quan
 
-- [Review trước khi merge](/cases/workflows/review-before-merge/)
-- [Case review PR](/cases/review-a-pr/)
+- [Review trước khi merge](/vi/cases/workflows/review-before-merge/)
+- [Case review PR](/vi/cases/review-a-pr/)
 
 ---
 

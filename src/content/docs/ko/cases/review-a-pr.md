@@ -3,9 +3,10 @@ title: PR 검토하기
 description: 병합 전에 Codex로 구조화된 diff 검토를 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 29b081c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # PR 검토하기
@@ -36,13 +37,13 @@ checklist를 출력하고 P0/P1을 표시하며, 파일 경로를 붙이세요.
 
 ## 3. 팀 정착
 
-- [`$pr-review`](/skills/examples/review-skill/) Skill 사용
-- CI 통합은 [코드 검토 자동화](/guide/developer-platform/ci-cd/code-review-automation/) 참고
+- [`$pr-review`](/ko/skills/examples/review-skill/) Skill 사용
+- CI 통합은 [코드 검토 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/) 참고
 
 ## 4. 관련
 
-- [검토 템플릿](/prompts/templates/review/)
-- [병합 전 검토](/cases/workflows/review-before-merge/)
+- [검토 템플릿](/ko/prompts/templates/review/)
+- [병합 전 검토](/ko/cases/workflows/review-before-merge/)
 ---
 
 **상태:** verified  

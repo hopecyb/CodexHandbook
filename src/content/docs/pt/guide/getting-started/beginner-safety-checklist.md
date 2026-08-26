@@ -3,9 +3,10 @@ title: Lista de segurança para iniciantes
 description: Itens de segurança para conferir antes do primeiro uso.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -21,9 +22,9 @@ Antes de começar, marque:
 - [ ] Entendo que operações de alto risco precisam da minha Aprovação
 - [ ] Não vou aprovar comandos que não entendo nem pedidos de saída à rede
 - [ ] Pretendo verificar o Diff antes de aceitar o resultado
-- [ ] Sei como [desfazer](/guide/getting-started/undo-and-recover/)
+- [ ] Sei como [desfazer](/pt/guide/getting-started/undo-and-recover/)
 
-Complemento conceitual: [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/) · [Sandbox e rede](/guide/foundations/sandbox-and-network/).
+Complemento conceitual: [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/) · [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/).
 
 ## Mal-entendidos comuns
 

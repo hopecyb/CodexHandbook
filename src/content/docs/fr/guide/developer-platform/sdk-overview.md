@@ -3,9 +3,10 @@ title: "Vue d'ensemble SDK"
 description: Démarrez des tâches Codex depuis votre application via le SDK officiel — concepts d'authentification, sessions et gestion d'erreurs.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,7 +23,7 @@ En d'autres termes, il convient quand **votre système appelle Codex**. Pour des
 - Authentification et isolation tenant
 - Comment associer avec webhooks et queues
 
-Vue d'ensemble plateforme : [Plateforme développeur](/guide/developer-platform/)
+Vue d'ensemble plateforme : [Plateforme développeur](/fr/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -67,7 +68,7 @@ Le SDK convient à « connecter les systèmes programmatiquement », pas comme e
 4. **Résultats** : historique des messages, diffs de fichiers, URLs d'artefacts (selon API)
 5. **Erreurs** : distinguer réessayable (429) de non réessayable (400)
 
-Index d'erreurs : [Référence d'erreurs](/guide/reference/error-reference/)
+Index d'erreurs : [Référence d'erreurs](/fr/guide/reference/error-reference/)
 
 ## Liste de contrôle d'intégration minimale
 
@@ -78,7 +79,7 @@ Index d'erreurs : [Référence d'erreurs](/guide/reference/error-reference/)
 
 ## Connexion à CI/CD
 
-Le SDK peut déclencher Cloud ou runners distants, ou la CI peut callback votre service pour mettre à jour le statut PR. Modèles d'exemple : [Automatisation de revue de code](/guide/developer-platform/ci-cd/code-review-automation/).
+Le SDK peut déclencher Cloud ou runners distants, ou la CI peut callback votre service pour mettre à jour le statut PR. Modèles d'exemple : [Automatisation de revue de code](/fr/guide/developer-platform/ci-cd/code-review-automation/).
 
 ## Erreurs courantes
 

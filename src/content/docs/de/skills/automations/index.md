@@ -1,56 +1,44 @@
 ---
-title: Automations
-description: Zeitgesteuert, ereignisgetrieben, im Hintergrund — was automatisieren, was menschlich prüfen.
+title: Scheduled tasks
+description: Führe bereits verifizierte Aufgaben in ChatGPT zeitgesteuert wiederholt aus.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f32c13f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`Automations` behandelt, wie wiederholte Aufgaben automatisch laufen — nicht „Codex schlauer machen“.
+Eine Scheduled task lässt ChatGPT eine Aufgabe nach einem Zeitplan im Hintergrund wiederholen. Sie eignet sich für regelmäßige Berichte, fortlaufende Nachverfolgung und wiederkehrende Pflege. Sie ersetzt keine beliebigen Webhooks, Repository-Ereignisse oder CI-Automatisierungen.
 
-Fokus dieser Gruppe:
+## Zuerst die Eignung prüfen
 
-- Welche Aufgaben lohnen Auto-Lauf
-- Wo Auto-Lauf stoppen und auf Menschen warten
-- Fehler, Alarme, Rollback gestalten
+| Geeignet | Nicht geeignet |
+|---|---|
+| Stabile Eingabequellen und prüfbare Ausgaben | Problem muss bei jedem Lauf neu definiert werden |
+| Zeit- oder intervallgesteuert | Muss exakt durch Git push, Öffnen eines PR oder anderes Ereignis ausgelöst werden |
+| Schreibgeschützte Prüfung, Zusammenfassung oder Entwurf | Unbeaufsichtigte Zusammenführung in den Haupt-Branch oder Massenlöschung |
+| Eindeutiger Zustand „keine Änderung“ und Abbruchbedingungen | Unbegrenzte Wiederholung nach einem Fehler |
 
-## Entscheidungsschwerpunkt
+## Aktuelle Verwaltungsoberflächen
 
-Beim Einstieg nicht gleich jede Wiederholung abgeben.
+- Scheduled tasks werden in ChatGPT Web oder in der Desktop-App erstellt und verwaltet.
+- Codex CLI und IDE-Erweiterung besitzen keine Verwaltungsoberfläche für Scheduled. Dort kannst du Prompt, Skill oder Skript zunächst testen.
+- In der Desktop-App kann eine Aufgabe ein lokales Projekt oder einen isolierten Worktree verwenden. Dafür müssen Rechner und App laufen und das Projekt weiterhin auf dem Datenträger vorhanden sein.
+- Scheduled tasks im Web können hochgeladenen Kontext, verbundene Werkzeuge, Skills und Plugins verwenden, aber nicht direkt auf lokale Ordner zugreifen.
 
-Reihenfolge:
+## Seiten dieser Gruppe
 
-1. Ist die Sache **wiederholt, regelklar, Ergebnis gut abnehmbar**?
-2. Kann sie nur lesen, nur vorschlagen, nur Draft-PR öffnen?
-3. Erst dann voll unbeaufsichtigt erwägen
+- [Vollständige Anleitung zu Scheduled tasks](/de/skills/automations/scheduled-tasks/): Ausführungsart wählen, beständigen Prompt schreiben und Berechtigungen sowie Abnahme konfigurieren
 
-## Einstieg dieser Gruppe
+## Offizielle Quelle
 
-- [Geplante und Hintergrundaufgaben](/skills/automations/scheduled-tasks/): Was eine Automations-Aufgabe ist, Trigger, Exit-Bedingungen, menschliche Überprüfungspunkte
-
-## Häufige Irrtümer
-
-### 1. Wiederholt → muss automatisiert werden
-
-Wenn Kriterien noch stark menschlich sind, macht frühe Automation eher Probleme.
-
-### 2. Automation soll menschliche Bestätigung sparen
-
-Oft schon wertvoll:
-
-- Auto-Check
-- Auto-Zusammenfassung
-- Auto Issue / Draft-PR
-
-Nicht direkt auf den Hauptbranch pushen.
-
-Automation passt zu „wiederholt, regelklar, gut prüfbar“. Bei urteilsabhängigen Dingen menschliche Überprüfung im Ablauf belassen.
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud / App / CLI  
-**Nachprüfhinweis:** Gruppe setzt aktuelle Automations-Fähigkeit und Einstiege voraus; öffentliche Codex-Automations-Oberfläche ist unvollständig — bis 2026-07-26 nicht als stabil freigeben.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** ChatGPT Web / Desktop-App; CLI und IDE nur für Vorbereitung und Tests, ohne Verwaltungsoberfläche
+
+**Zuletzt geprüft:** 2026-08-26

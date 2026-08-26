@@ -1,122 +1,122 @@
 ---
 title: Lệnh gạch chéo và lối vào nhanh
-description: "Lệnh `/` và gọi Skill `$` — tra cứu nhanh hướng học, không phải sổ tay tham số đầy đủ."
+description: "Lệnh `/` và gọi Skill ` — tra cứu nhanh hướng học, không phải sổ tay tham số đầy đủ."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9debf5c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-Lệnh gạch chéo không phải jargon cần thuộc lòng — chúng là lối vào nhanh có tên bạn chủ động gọi.
+A first list of slash commands can look like jargon to memorize. It is easier to treat them as shortcuts that explicitly enter a known flow.
 
-Chúng thường nhảy vào một chế độ cố định hoặc luồng tích hợp. Lệnh gạch chéo (`/command`) liên quan tới gọi Skill `$name` của [Skill](/skills/overview/) nhưng không giống hệt. Danh sách **đổi theo sản phẩm và phiên bản** — dùng autocomplete `/` trong client và tài liệu chính thức trước khi dựa vào tên.
+They usually start a fixed mode or built-in workflow. Slash commands (`/command`) relate to `$name` invocation of a [Skill](/vi/skills/overview/), but they are not the same. Exact lists **vary by product and access**, and differ across the desktop App, CLI, IDE, and ChatGPT Web. Use the current composer's `/` completion and official documentation.
 
-## Phân chia khái niệm
+## Distinguish the entry points
 
-| Lối vào | Ai gọi | Công dụng điển hình |
+| Entry | Who invokes it | Typical use |
 |---|---|---|
-| `/review` v.v. | Bạn gõ `/` | Luồng tích hợp hoặc cấu hình cố định |
-| `$skill-name` | Bạn hoặc mô hình | Skill dự án hoặc người dùng |
-| Ngôn ngữ tự nhiên | Bạn | Tác vụ chung |
+| Slash command such as `/review` | You type `/` | Built-in or configured fixed flow |
+| `$skill-name` | You or the model | Project or user Skill |
+| Natural language | You | General task |
 
-## Ba cách nói đơn giản
+## The direct distinction
 
-- `/command`: bạn chọn phím tắt trong chat
-- `$skill`: bạn hoặc mô hình nêu tên một Skill
-- Ngôn ngữ tự nhiên: bạn nêu nhu cầu; mô hình quyết định cách làm
+- `/command`: explicitly choose a shortcut in the chat.
+- `$skill`: you or the model names a Skill.
+- Natural language: describe the need and let the model choose how to work.
 
-Nếu bạn biết luồng muốn dùng, `/command` trực tiếp hơn.
+Use `/command` when you already know the flow and want to enter it quickly.
 
-## Nó là gì
+## What it is
 
-- Không phải lệnh terminal
-- Không phải từ vựng bí mật
-- Hãy tưởng tượng «nút phím tắt trong chat»
+- Not a terminal command.
+- Not hidden jargon.
+- A text entry point comparable to a shortcut button in the composer.
 
-Phù hợp khi:
+It fits when:
 
-- Bạn biết luồng muốn dùng
-- Không muốn giải thích lại cùng ý định mỗi lần
+- you know which flow you want;
+- you do not want to restate the same intent each time.
 
-## Hiểu nhầm thường gặp
+## Common misconceptions
 
-### 1. Lệnh gạch chéo không phải lệnh shell
+### 1. Slash commands are terminal commands
 
-Chúng là phím tắt chat — không phải `codex ...` trong terminal.
+They are composer shortcuts, not `codex ...` shell commands.
 
-### 2. Danh sách không cố định mãi
+### 2. The slash-command list never changes
 
-Lệnh có sẵn khác theo sản phẩm, phiên bản và môi trường — **autocomplete trong môi trường của bạn** thắng thuộc lòng.
+Commands vary by product, version, and environment. The current completion list is more reliable.
 
-### 3. Gạch chéo không lách phê duyệt và Sandbox
+### 3. A slash command bypasses approval and sandboxing
 
-Nếu luồng ghi tệp, chạy lệnh hoặc dùng mạng, chính sách vẫn áp dụng.
+Any underlying file write, command, or network action remains subject to current policy.
 
-### 4. Bạn có thể dùng tốt Codex mà không cần lệnh gạch chéo
+### 4. You must know slash commands to use Codex well
 
-Ngôn ngữ tự nhiên phủ hầu hết công việc. Lệnh gạch chéo tăng tốc luồng đã quen khi đã thoải mái.
+Natural language handles most tasks. Slash commands accelerate a known workflow after you become familiar with it.
 
-## Phân loại phổ biến (minh họa)
+## Common current entries
 
-Tên có thể thêm hoặc bỏ theo phiên bản — **chỉ phân loại học**:
+### Desktop App / IDE
 
-### Phiên và chế độ
+- `/plan`: enter multistep planning mode.
+- `/review`: review uncommitted changes or compare with a base branch.
+- `/status`: show chat ID, context usage, and rate limits.
+- `/mcp`: inspect MCP connection state.
+- `/init`: scaffold `AGENTS.md` for the current project.
 
-- Chuyển chế độ kế hoạch, nén ngữ cảnh, xem trợ giúp
-- Liên hệ [Lập kế hoạch](/guide/agent-work/planning/)
+### CLI-specific session controls
 
-### Review và chất lượng
+- `/permissions`: adjust the current session's permission mode.
+- `/agent`: inspect or switch Agent threads.
+- `/model`: choose the current model.
+- `/status`: inspect current session settings.
 
-- Review Diff hoặc PR hiện tại
-- Với [Xem xét Diff](/guide/quality/review-diffs/)
+ChatGPT Web has its own composer command menu. Do not assume App or CLI commands exist there under the same name.
 
-### Workspace và Git
+## Usage guidance
 
-- Trạng thái, nháp thông điệp commit (bạn vẫn xác nhận commit)
-- Theo [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
+1. Type `/` and inspect what the current environment supports instead of memorizing an old list.
+2. Turn a durable team workflow into a **Skill plus documentation** so it does not depend on experts knowing a command name.
+3. Writes triggered by slash commands remain subject to sandboxing and approvals.
 
-### Mở rộng
+## Try it directly
 
-- Cài hoặc liệt kê Skills (ví dụ `skill-installer` nếu có)
+1. Type `/`.
+2. Inspect the available entries.
+3. Choose one whose name and purpose are clear.
 
-## Ghi chú dùng
+## A useful first exercise
 
-1. **Gõ `/` trước** — xem môi trường hỗ trợ gì; đừng thuộc danh sách cũ
-2. Luồng đội → **Skill + tài liệu** để kiến thức không mang tính bộ lạc
-3. Ghi do gạch chéo kích hoạt vẫn chịu Sandbox và phê duyệt
+1. Type `/` and inspect what the current environment offers.
+2. Try one command with an understandable purpose.
+3. Observe whether it changes mode or runs a workflow.
+4. If the team must reuse it long-term, consider turning the process into a Skill.
 
-## Thử
+Slash commands provide quick entry points; Skills preserve reusable workflows.
 
-1. Gõ `/`
-2. Xem có gì
-3. Chọn một lệnh bạn hiểu tên và mục tiêu
+## Difference from CLI commands
 
-## Đường lần đầu
-
-1. `/` để xem đề nghị
-2. Thử một lệnh rõ
-3. Ghi chú: đổi chế độ vs chạy quy trình làm việc
-4. Với luồng đội lặp lại, cân nhắc Skill
-
-Cho thấy phân chia: gạch chéo = lối vào nhanh, Skill = luồng tái sử dụng bền vững.
-
-## vs lệnh CLI
-
-| | `/` trong chat | Terminal `codex …` |
+| | In-chat `/` | Terminal `codex …` |
 |---|---|---|
-| Ngữ cảnh | Phiên hiện tại và tệp @ | Thư mục `--cwd` |
-| Phù hợp | Khám phá tương tác | Script, CI |
+| Context | Current session and attached files | Directory selected with `--cd` / `-C` |
+| Best for | Interactive exploration | Scripts and CI |
 
-Lệnh gạch chéo là phím tắt chat — những gì môi trường thực sự có thắng thuộc tên.
+Treat slash commands as chat shortcuts. Inspecting the current environment is more useful than memorizing names.
 
-Lệnh con CLI: [Chế độ tương tác CLI](/guide/cli/interactive-mode/) và [Chế độ không tương tác](/guide/cli/non-interactive-mode/). Bảng tham số đầy đủ: [Tham chiếu lệnh CLI](/guide/reference/commands/).
+See [CLI interactive mode](/vi/guide/cli/interactive-mode/), [non-interactive mode](/vi/guide/cli/non-interactive-mode/), and the [CLI command reference](/vi/guide/reference/commands/).
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Ghi chú đối chiếu:** Trung tâm `/review`, phân loại gạch chéo và quan hệ `$skill` — khả dụng, đặt tên và hành vi đổi nhanh; thiếu danh sách lệnh và tài liệu hành vi chính thức hiện hành thì `outdated` phù hợp.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App / CLI / IDE
+
+**Căn cứ kiểm chứng:** Compared with current official desktop App Slash commands and Developer commands. Command sets differ by work surface; availability still follows composer completion.
+
+**Kiểm chứng gần nhất:** 2026-08-26

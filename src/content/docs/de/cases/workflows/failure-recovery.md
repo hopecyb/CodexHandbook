@@ -3,12 +3,13 @@ title: Fehlerwiederherstellung
 description: "Wenn die Aufgabe driftet, Tests rot werden oder der Kontext erschöpft ist — sicher zurücksetzen und weitermachen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Fehlerwiederherstellung** beschreibt, wie man nach Drift oder Unterbrechung den Zustand sichert und weitergeht. Dieses Kapitel gibt einen wiederholbaren Ablauf **Erkennen → Schaden begrenzen → Wiederherstellen → Retro**, kombinierbar mit [Rückgängig machen und wiederherstellen](/guide/getting-started/undo-and-recover/) sowie [Lange Aufgaben verwalten](/cases/workflows/long-running-task-management/).
+**Fehlerwiederherstellung** beschreibt, wie man nach Drift oder Unterbrechung den Zustand sichert und weitergeht. Dieses Kapitel gibt einen wiederholbaren Ablauf **Erkennen → Schaden begrenzen → Wiederherstellen → Retro**, kombinierbar mit [Rückgängig machen und wiederherstellen](/de/guide/getting-started/undo-and-recover/) sowie [Lange Aufgaben verwalten](/de/cases/workflows/long-running-task-management/).
 
 ## Schwerpunkte dieser Seite
 
@@ -54,7 +55,7 @@ Erkennen (Tests/Mensch/CI)
     → Retro und Verstetigung
 ```
 
-Bei Multi-Agent: siehe [Multi-Agent-Koordination](/cases/workflows/multi-agent-coordination/) — bei Fehlern muss klar sein, welche Teilaufgabe den Rollback verantwortet.
+Bei Multi-Agent: siehe [Multi-Agent-Koordination](/de/cases/workflows/multi-agent-coordination/) — bei Fehlern muss klar sein, welche Teilaufgabe den Rollback verantwortet.
 
 ## Häufige Fehler
 
@@ -65,7 +66,7 @@ Bei Multi-Agent: siehe [Multi-Agent-Koordination](/cases/workflows/multi-agent-c
 
 ## Sicherheitsgrenzen
 
-- Wiederherstellungsaktionen selbst unterliegen den [Befehlsregeln](/guide/customization/rules/command-rules/)
+- Wiederherstellungsaktionen selbst unterliegen den [Befehlsregeln](/de/guide/customization/rules/command-rules/)
 - Bei Produktionsvorfällen zuerst rollbacken, dann Root Cause — Agent nicht direkt an Produktionsdaten lassen
 
 ## Abnahme-Checkliste
@@ -77,9 +78,9 @@ Bei Multi-Agent: siehe [Multi-Agent-Koordination](/cases/workflows/multi-agent-c
 
 ## Verwandte Kapitel
 
-- [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/)
-- [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
-- [Fehlerreferenz](/guide/reference/error-reference/)
+- [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/)
+- [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
+- [Fehlerreferenz](/de/guide/reference/error-reference/)
 
 ---
 

@@ -1,18 +1,19 @@
 ---
+reviewed_at: 2026-08-26
 title: CLI Command Reference
 description: Common Codex CLI subcommands and flags—learning index, not a substitute for official docs.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: bdc537d
+translation_status: reviewed
+translated_at: 2026-08-26
 ---
 
 Command reference helps you pick an entry point—not memorize every flag:
 
 > **Should I use interactive entry or a one-shot command?**
 
-This page indexes common **Codex CLI** entry points for search and comparison. **Names, flags, and defaults change by version**—run `codex --help` and subcommand `--help`, and follow [OpenAI Codex documentation](https://developers.openai.com/codex).
+This page indexes the current Stable **Codex CLI** entry points for search and comparison. Continue to run `codex --help` and each subcommand's `--help`; use [Developer commands](https://learn.chatgpt.com/docs/developer-commands) for complete maturity and parameter details.
 
 ## When to use this page
 
@@ -27,16 +28,20 @@ This page indexes common **Codex CLI** entry points for search and comparison. *
 
 For new CLI users, that split solves most entry questions.
 
-## Command overview (illustrative)
+## Stable command overview
 
 | Entry | Purpose | Detail |
 |---|---|---|
-| `codex` | Interactive TUI session | [Interactive mode](/guide/cli/interactive-mode/) |
-| `codex exec` (or equivalent) | Non-interactive single/pipeline task | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
-| Configuration | Read/write user/project config | [CLI configuration](/guide/cli/configuration/) |
+| `codex` | Interactive TUI session | [Interactive mode](/en/guide/cli/interactive-mode/) |
+| `codex exec` / `codex e` | Non-interactive single/pipeline task | [Non-interactive mode](/en/guide/cli/non-interactive-mode/) |
+| `codex doctor` | Generate an installation, configuration, authentication, runtime, Git, and terminal diagnostic report | [CLI troubleshooting](/en/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | Manage authentication | [Sign-in and authentication](/en/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | Continue or fork a saved session | [Handoff and resume](/en/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | Manage MCP servers | [Connect an MCP server](/en/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | Install, list, and remove Plugins | [Plugins](/en/skills/plugins/) |
 
-:::caution[Version-sensitive]
-Parameter names below reflect common community docs—**may not match your installed CLI**. Re-check `--help` after upgrades.
+:::caution[Different maturity levels]
+The official reference also contains Experimental, Beta, and Deprecated commands. This beginner reference does not mix them into the Stable list; confirm maturity and risk before using one.
 :::
 
 ## Common misconceptions
@@ -73,7 +78,7 @@ codex
 # - Approve shell / file write requests
 ```
 
-Slash commands: [Slash command reference](/guide/reference/slash-commands/)
+Slash commands: [Slash command reference](/en/guide/reference/slash-commands/)
 
 ## Entry decision flow
 
@@ -92,26 +97,26 @@ Avoid drowning in the full flag table on day one.
 ## Non-interactive exec (conceptual)
 
 ```bash
-# Working directory and one-shot prompt (illustrative)
-codex exec --cwd /path/to/repo "Your complete task description"
+# Working directory and one-shot prompt
+codex exec --cd /path/to/repo "Your complete task description"
 
-# Common intents (flag names per official docs)
-# --cwd          working directory
+# Current common flags
+# --cd, -C       working directory
 # --model        pin model
 # --sandbox      sandbox policy
-# --approval     approval policy (critical unattended)
+# --ask-for-approval, -a  approval policy
 # stdin pipe     read prompt from file or upstream command
 ```
 
-Security: [Human approval patterns](/cases/workflows/human-approval-patterns/)
+Security: [Human approval patterns](/en/cases/workflows/human-approval-patterns/)
 
 ## Configuration and auth (conceptual)
 
 | Action | Notes |
 |---|---|
-| Sign in | Same as [Sign-in and authentication](/guide/getting-started/sign-in-and-authentication/) |
-| Config files | User/project level—see [Configuration reference](/guide/reference/configuration-reference/) |
-| MCP | [Connect MCP](/skills/mcp/connect-an-mcp-server/) |
+| Sign in | Same as [Sign-in and authentication](/en/guide/getting-started/sign-in-and-authentication/) |
+| Config files | User/project level—see [Configuration reference](/en/guide/reference/configuration-reference/) |
+| MCP | [Connect MCP](/en/skills/mcp/connect-an-mcp-server/) |
 
 ## Exit codes and automation
 
@@ -122,28 +127,28 @@ Non-interactive mode usually uses **exit codes** for CI:
 
 CLI command pages help you pick entry and intent—not memorize parameters.
 
-Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/).
+Do not ignore stderr in CI; keep logs for [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/).
 
 ## vs in-chat slash commands
 
 | | `codex` terminal | In-session `/` |
 |---|---|---|
-| Docs | This page + product guide | [slash-commands](/guide/reference/slash-commands/) |
+| Docs | This page + product guide | [slash-commands](/en/guide/reference/slash-commands/) |
 | Best for | Scripts, CI | Interactive exploration |
 
 ## Troubleshooting
 
 | Symptom | See |
 |---|---|
-| Command not found | [Install CLI](/guide/getting-started/install-cli/) |
-| Config not applied | [CLI configuration](/guide/cli/configuration/) |
+| Command not found | [Install CLI](/en/guide/getting-started/install-cli/) |
+| Config not applied | [CLI configuration](/en/guide/cli/configuration/) |
 | Approval blocks CI | Tighten prompt + read-only sandbox |
 
-[CLI troubleshooting](/guide/cli/troubleshooting/)
+[CLI troubleshooting](/en/guide/cli/troubleshooting/)
 
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** Written as an entry map but still centers `codex`, `codex exec`, in-session `/`, and parameter intent—high-churn CLI details; restore `verified` after latest official command documentation.  
+**Status:** outdated
+**Products:** CLI
+**Review note:** Written as an entry map but still centers `codex`, `codex exec`, in-session `/`, and parameter intent—high-churn CLI details; restore `verified` after latest official command documentation.
 **Last verified:** 2026-07-26

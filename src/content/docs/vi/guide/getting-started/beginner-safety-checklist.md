@@ -3,9 +3,10 @@ title: Checklist an toàn cho người mới
 description: Các mục kiểm tra an toàn nên xem trước lần dùng đầu tiên.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -21,9 +22,9 @@ Trước khi bắt đầu đánh dấu:
 - [ ] Tôi hiểu thao tác rủi ro cao cần tôi phê duyệt
 - [ ] Tôi sẽ không phê duyệt lệnh hoặc yêu cầu ra mạng mà tôi không hiểu
 - [ ] Tôi định kiểm tra Diff rồi mới chấp nhận kết quả
-- [ ] Tôi biết cách [hoàn tác](/guide/getting-started/undo-and-recover/)
+- [ ] Tôi biết cách [hoàn tác](/vi/guide/getting-started/undo-and-recover/)
 
-Bổ sung khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/) · [Sandbox và mạng](/guide/foundations/sandbox-and-network/).
+Bổ sung khái niệm: [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/) · [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/).
 
 ## Hiểu nhầm thường gặp
 

@@ -3,106 +3,63 @@ title: Phím tắt bàn phím
 description: "Chỉ mục học các phím tắt phổ biến trong App, CLI TUI và extension IDE — lấy theo phiên bản bạn đã cài."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 0edf4f3
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 90
+reviewed_at: 2026-08-26
 ---
 
-Phím tắt khác nhiều theo **client và phiên bản**. Trang này nhóm theo **ý định** để hỏi «có cách nhanh hơn không?» — kiểm trợ giúp hoặc cài đặt sản phẩm để biết liên kết chính xác.
+Shortcuts vary by platform, client, and customization. This page includes only combinations explicitly documented today; use in-App **Keyboard Shortcuts** for the complete list.
 
-Ngày đầu không cần mọi phím tắt. Làm mượt các hành động làm đứt nhịp là đủ.
+## Desktop App
 
-:::caution
-Bảng dưới đây là **minh họa**, không phải danh sách liên kết đầy đủ. Phím có thể đổi sau khi nâng cấp.
-:::
+| Action | macOS | Windows |
+|---|---|---|
+| Open Settings | `Cmd + ,` | `Ctrl + ,` |
+| Open/close Activity | `Cmd + Option + U` | `Ctrl + Alt + U` |
+| Open integrated terminal | `Ctrl` + backtick | `Ctrl` + backtick |
+| Open App command palette | `Cmd + K` | Check Keyboard Shortcuts |
+| Clear terminal display | `Ctrl + L` | `Ctrl + L` |
 
-## Chỉ mục theo ý định
+`Cmd + K` opens the App command palette; it does not clear the terminal.
 
-| Ý định | App máy tính (minh họa) | CLI TUI (minh họa) | Extension IDE (minh họa) |
-|---|---|---|---|
-| Tác vụ/phiên mới | `Cmd/Ctrl+N` hoặc thanh bên | Thoát/vào lại / lệnh thread mới | Palette lệnh « Codex » |
-| Gửi tin nhắn | `Enter` / `Cmd+Enter` | Theo tài liệu sản phẩm | Gửi trong panel |
-| Dòng mới không gửi | `Shift+Enter` | Theo TUI | Theo panel |
-| Mở palette lệnh | Kiểu `Cmd/Ctrl+K` | Lệnh gạch chéo `/` | `Cmd/Ctrl+Shift+P` |
-| Tìm lịch sử | Tìm kiếm thanh bên | Tìm trong phiên nếu có | Lịch sử chat |
-| Phê duyệt gọi Công cụ | Nút panel | `y` / mũi tên (theo TUI) | Thông báo hoặc nút inline |
-| Từ chối | Nút panel | `n` | Từ chối inline |
+Keyboard Shortcuts in Settings can search by command or key, change a binding, and restore defaults. After customization, the local binding takes precedence over an online reference card.
 
-**Theo UI phiên bản bạn đã cài.**
+## IDE
 
-## Hành động nên học trước
+In VS Code-family editors, `chatgpt.composerEnterBehavior` determines how Enter and `Cmd/Ctrl + Enter` submit multiline prompts. Do not assume every computer uses the same send key.
 
-Phím tắt giảm ma sát khi bạn:
+While Codex is running, `chatgpt.followUpQueueMode` determines whether a new message queues or steers immediately. Press `Cmd/Ctrl + Shift + Enter` for a single send that reverses the current default.
 
-- Tìm Gửi
-- Gửi nhầm khi muốn dòng mới
-- Do dự phê duyệt công cụ
-- Không tìm được cách khởi động Tác vụ mới
+If the Codex sidebar is missing, run this from the editor Command Palette:
 
-Ưu tiên:
+```text
+Codex: Open Codex Sidebar
+```
 
-- Gửi / dòng mới
-- Tác vụ mới
-- Palette lệnh
-- Phê duyệt / từ chối
+## CLI
 
-## Lệnh gạch chéo vs bàn phím
+Use the current CLI TUI's `/help` and on-screen hints. This page does not guess `y`, `n`, or other approval keys because terminal, mode, and version affect interaction.
 
-- **Lệnh gạch chéo**: `/review`, `/help`, v.v. — xem [Tham chiếu lệnh gạch chéo](/guide/reference/slash-commands/)
-- **Phím tắt**: hành động UI không cần gõ
+The general terminal signal `Ctrl + C` may interrupt a command or session. Inspect current state rather than treating it as a side-effect-free Back key.
 
-Kết hợp: `Cmd+K` để focus ô nhập, rồi `/review`.
+## Learning order
 
-## Người dùng terminal CLI
+First learn to open Settings and Activity, open the terminal, and submit multiline prompts. Search in the App for other frequent actions. Team documentation should name actions rather than force the same customized bindings on everyone.
 
-- **Ctrl+C** để ngắt đầu ra mất kiểm soát (chú ý trạng thái chưa lưu)
-- Tách tmux: Codex cạnh `git diff`
-- Alias shell cho `codex exec` thường dùng — xem [Lệnh và phím tắt](/guide/cli/commands-and-shortcuts/)
+## Official sources
 
-## Hiểu nhầm thường gặp
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
+- [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
+- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
-### 1. Không cần thành thạo phím tắt trước khi dùng Codex
-
-Làm mượt vài hành động bạn lặp nhiều nhất.
-
-### 2. Trí nhớ cơ của người khác không phải tiêu chuẩn của bạn
-
-Phím tắt đến cùng thực hành — không phải cửa onboarding.
-
-### 3. Các client không cần liên kết giống hệt
-
-Biết hành động có phím tắt không, xem/đổi phím ở đâu, và hành động nào đáng liên kết trước.
-
-## Năm thứ cần học trước
-
-1. Gửi
-2. Dòng mới không gửi
-3. Palette lệnh
-4. Phê duyệt hoặc từ chối
-5. Tác vụ mới
-
-Thêm dần theo thời gian.
-
-## Người dùng IDE
-
-- Gắn «giải thích lựa chọn với Codex» vào phím thoải mái
-- Dùng Diff editor và go-to-definition — ít copy-paste hơn
-
-[Cài đặt IDE](/guide/ide/settings/) · [Code đã chọn và tệp đang mở](/guide/ide/selected-code-and-open-files/)
-
-## Khả năng tiếp cận và tùy chỉnh
-
-Hầu hết client cho phép gán lại. Đội có thể ghi liên kết **khuyến nghị** — không bắt buộc đồng nhất.
-
-Phím tắt không phải kỳ thi — làm mượt hành động làm đứt nhịp bạn nhiều nhất.
-
-## Nguồn tham chiếu
-- Trang Cài đặt / Phím tắt chính thức của từng sản phẩm
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Ghi chú đối chiếu:** Dù có disclaimer «minh họa», thân bài giả định phím tắt client cụ thể, hành vi gửi, phím palette và phím phê duyệt — rất phụ thuộc phiên bản và nền tảng, thiếu tài liệu phím tắt chính thức thống nhất đủ mạnh.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App, CLI, IDE
+
+**Kiểm chứng gần nhất:** 2026-08-26

@@ -3,9 +3,10 @@ title: Cấu trúc Skill
 description: Vai trò và ví dụ của SKILL.md, references/, templates/, scripts/.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Lần đầu nhìn thư mục Skill, cảm giác thường là"thư mục thì quen, nhưng không biết vì sao xếp vậy".
@@ -87,7 +88,7 @@ Nếu trong bốn câu có một hai câu"có", có thể bắt đầu tách.
 
 Có thể dùng `SKILL.md` chạy thông trước, rồi khi thật sự phức tạp mới dần tách tài liệu, template và script ra.
 
-Thực hành đầy đủ: [Tạo Skill đầu tiên](/skills/create-your-first-skill/).
+Thực hành đầy đủ: [Tạo Skill đầu tiên](/vi/skills/create-your-first-skill/).
 ## Từ mẫu thành Skill
 
 Nhiều nhóm không bắt đầu bằng việc “thiết kế Skill”, mà bắt đầu từ một Prompt cứ phải sao chép nhiều lần. Có thể phát triển theo các bước:

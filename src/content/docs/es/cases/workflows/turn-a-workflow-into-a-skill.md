@@ -3,12 +3,13 @@ title: Convertir un flujo de trabajo en Skill
 description: La tercera repetición de un proceso merece convertirse en Skill — disparador, instrucciones y aceptación en uno.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Cuando el mismo tipo de tarea (comprobación de release, sincronización de docs, escaneo de seguridad) se completa **por tercera vez** pegando el mismo prompt, toca considerar un [Skill](/skills/overview/). Este capítulo enlaza [Métodos de flujo de trabajo](/cases/workflows/) con el sistema de extensiones.
+Cuando el mismo tipo de tarea (comprobación de release, sincronización de docs, escaneo de seguridad) se completa **por tercera vez** pegando el mismo prompt, toca considerar un [Skill](/es/skills/overview/). Este capítulo enlaza [Métodos de flujo de trabajo](/es/cases/workflows/) con el sistema de extensiones.
 
 ## Qué resuelve esta página
 
@@ -29,11 +30,11 @@ No hace falta capturar: exploración de una sola vez, arreglos pequeños muy lig
 
 1. **Escribe SKILL.md con claridad:** cuándo se dispara, entradas/salidas, prohibiciones
 2. **Añade `references/`:** checklist, ejemplo de diff
-3. **Opcional `scripts/`:** comandos de verificación repetibles (alineados con [reglas de comandos](/guide/customization/rules/command-rules/))
+3. **Opcional `scripts/`:** comandos de verificación repetibles (alineados con [reglas de comandos](/es/guide/customization/rules/command-rules/))
 4. **Menciona el nombre del Skill** en el README del repo o en AGENTS.md
 5. **Prueba 2–3 veces** y luego marca `verified`
 
-Inicio: [Crear tu primer Skill](/skills/create-your-first-skill/)
+Inicio: [Crear tu primer Skill](/es/skills/create-your-first-skill/)
 
 ## Flujo recomendado
 
@@ -45,7 +46,7 @@ Extraer prompt y criterios de aceptación del caso de éxito
     → Escribir en el directorio examples/ acordado, plugin del equipo o biblioteca interna de skills
 ```
 
-Comparación con [Convertir un proceso en automatización](/skills/automations/scheduled-tasks/): el Skill orienta de forma **interactiva**; Automation es más **programada / desatendida**.
+Comparación con [Convertir un proceso en automatización](/es/skills/automations/scheduled-tasks/): el Skill orienta de forma **interactiva**; Automation es más **programada / desatendida**.
 
 ## Errores frecuentes
 
@@ -56,8 +57,8 @@ Comparación con [Convertir un proceso en automatización](/skills/automations/s
 
 ## Límites de seguridad
 
-- Ver [Seguridad y versiones de Skills](/skills/security/)
-- Los Skills de equipo deben entrar en la lista de aprobación de extensiones (ver [Riesgos de Plugin y MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Ver [Seguridad y versiones de Skills](/es/skills/security/)
+- Los Skills de equipo deben entrar en la lista de aprobación de extensiones (ver [Riesgos de Plugin y MCP](/es/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Checklist de aceptación
 

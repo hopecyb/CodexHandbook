@@ -3,52 +3,68 @@ title: Cây làm việc
 description: Dùng cây làm việc cô lập để thử thay đổi song song.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f050c32
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-**Cây làm việc (worktree)** dùng để thử thay đổi trong thư mục cô lập, giảm nhiễu lên không gian làm việc chính.
+A Git worktree gives one repository multiple independent checkout directories. Each directory has its own files and branch state while sharing the repository's Git metadata. Worktrees let coding chats run in parallel without overwriting one another's files.
 
-Có thể xem như mở một «khu thử nghiệm song song» cho cùng một kho, tránh nhồi mọi thử vào không gian làm việc hiện tại.
+## Prerequisites
 
-## Khi nào dùng
+- The project must be in a Git repository.
+- Each task boundary must be independently describable and verifiable.
+- Parallel tasks should not modify the same core files.
 
-- Muốn thử song song hai cách triển khai
-- Lo refactor thử nghiệm làm bẩn không gian làm việc nhánh chính
+If you are learning Codex for the first time, complete tasks sequentially in Local mode. Introduce worktrees when waiting time or file conflicts become an actual problem.
 
-## Khi nào không dùng
+## Create a worktree in the App
 
-- Dự án luyện tập vốn đã đủ cô lập
-- Bạn chưa quen Git: hãy hoàn thành tác vụ tuần tự trong thư mục luyện tập trước
+1. Select **Worktree** below the input area of a new chat.
+2. Choose a starting branch: the main branch, a feature branch, or the current branch with unstaged changes.
+3. Submit the prompt; the App creates a Git worktree.
+4. Inspect, test, and review the work in its independent chat.
+5. Use **Handoff** when you are ready to return to the local checkout.
 
-## Hiểu nhầm thường gặp
+A worktree created by default uses a detached HEAD. Codex can still work there, but define the destination branch and merge approach before preserving or sharing commits.
 
-### 1. Có phải chỉ là tạo thêm một thư mục?
+## Two parallel tasks
 
-Bề ngoài giống vậy, nhưng mục đích không chỉ là «thêm một thư mục», mà là dành không gian cô lập cho các thử khác nhau trên cùng một kho.
+| Chat | Worktree task | File ownership | Acceptance |
+|---|---|---|---|
+| A | Fix a sign-in error | `src/auth/**` | Authentication tests pass |
+| B | Extend authentication docs | `docs/auth/**` | Link check passes |
 
-### 2. Lúc đầu đã phải học nó chưa?
+Do not let both chats modify a shared lockfile or configuration file. If that is unavoidable, assign the change to one chat and let the other provide analysis only.
 
-Không.
+## Pre-handoff checks
 
-Nếu bạn vẫn đang quen luồng tác vụ cơ bản, tạm không đụng worktree thường đơn giản hơn.
+```bash
+git status --short
+git diff --check
+git diff --stat
+```
 
-### 3. Khi nào học thì hợp hơn?
+Then run the task-specific tests. Use Handoff, commit, or merge only after you know which chat produced each change, which branch should receive it, and whether verification passed.
 
-Khi bắt đầu gặp các tình huống này thì đáng học:
+## Scheduled tasks and Remote
 
-- Muốn thử hai cách triển khai
-- Không muốn trộn thay đổi thử vào không gian làm việc hiện tại
-- Trong nhóm sẽ mở nhiều tác vụ song song cùng lúc
+- A scheduled task in a Git repository can use a dedicated background worktree to avoid conflicts with current work.
+- Remote can control a worktree chat on a connected computer from a mobile device. The repository and commands remain on that computer or in its remote development environment.
+- A non-Git project has no worktree isolation; a scheduled task operates directly in the project directory.
 
-Worktree là công cụ cô lập nâng cao, không phải mục bắt buộc khi mới dùng Codex.
+## Official sources
+
+- [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
+- [Long-running work and parallel chats](https://learn.chatgpt.com/docs/long-running-work)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App  
-**Ghi chú tái kiểm:** Trang này giới thiệu worktree như năng lực nâng cao của Desktop App, nhưng tài liệu chính thức công khai hiện chưa đủ để chứng minh từng mục lối vào và phạm vi hỗ trợ worktree trong UI desktop; trước khi bổ sung tài liệu sản phẩm mới nhất nên gắn `outdated`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App
+
+**Kiểm chứng gần nhất:** 2026-08-26

@@ -3,9 +3,10 @@ title: Was du vor dem Start brauchst
 description: "Konto, Gerät, Übungsprojekt und Sicherheitsgrundlinie."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c8a032b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 5
 ---
@@ -59,8 +60,8 @@ Für die meisten Anfänger ist die **Desktop-App** entspannter: Die Oberfläche 
 
 ## Empfehlungen
 
-- Zuerst die [Sicherheits-Checkliste für Anfänger](/guide/getting-started/beginner-safety-checklist/) lesen
-- [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/) sowie [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/) kennenlernen
+- Zuerst die [Sicherheits-Checkliste für Anfänger](/de/guide/getting-started/beginner-safety-checklist/) lesen
+- [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/) sowie [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/) kennenlernen
 - Offizielle Installation und Produktänderungen: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## Quellen

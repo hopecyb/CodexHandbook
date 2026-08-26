@@ -3,9 +3,10 @@ title: Anatomie d'un Skill
 description: Rôles de SKILL.md, references/, templates/, scripts/ avec exemples.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Première impression d'un répertoire Skill : « je connais les dossiers, mais pourquoi cette organisation ? »
@@ -85,7 +86,7 @@ Un ou deux « oui » → commencer à découper.
 
 D'abord `SKILL.md`, puis références, modèles et scripts au besoin.
 
-Exercice : [Créer votre premier Skill](/skills/create-your-first-skill/).
+Exercice : [Créer votre premier Skill](/fr/skills/create-your-first-skill/).
 
 ## Du modèle au Skill
 

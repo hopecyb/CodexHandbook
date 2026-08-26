@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**개발자 플랫폼**은 Codex를 파이프라인에 **제품화**하려는 사람을 위한 장입니다. 커스텀 앱, 일괄 리뷰, 릴리스 게이트, 내부 개발자 포털이 여기에 해당합니다. 일상적으로 “프롬프트를 써서 버그를 고친다”는 흐름은 여전히 [시작하기](/guide/getting-started/)부터 보시면 됩니다.
+**개발자 플랫폼**은 Codex를 파이프라인에 **제품화**하려는 사람을 위한 장입니다. 커스텀 앱, 일괄 리뷰, 릴리스 게이트, 내부 개발자 포털이 여기에 해당합니다. 일상적으로 “프롬프트를 써서 버그를 고친다”는 흐름은 여전히 [시작하기](/ko/guide/getting-started/)부터 보시면 됩니다.
 
 이 장은 Codex를 일상적으로 쓰는 법이 아니라, Codex를 자신의 시스템에 연결하는 법을 다룹니다.
 
@@ -30,10 +31,10 @@ translated_at: 2026-07-28
 
 | 독자의 질문 | 어디로 |
 |---|---|
-| 터미널에서 `codex`를 어떻게 돌리나 | [CLI 제품 매뉴얼](/guide/cli/) |
-| CI에서 exec로 리뷰하려면 | [비대화형 모드](/guide/cli/non-interactive-mode/) + 이 장의 CI |
-| 자사 App에 Agent를 넣으려면 | [SDK 개요](/guide/developer-platform/sdk-overview/) |
-| 권한과 보안 모델 | [사람 승인 패턴](/cases/workflows/human-approval-patterns/) |
+| 터미널에서 `codex`를 어떻게 돌리나 | [CLI 제품 매뉴얼](/ko/guide/cli/) |
+| CI에서 exec로 리뷰하려면 | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) + 이 장의 CI |
+| 자사 App에 Agent를 넣으려면 | [SDK 개요](/ko/guide/developer-platform/sdk-overview/) |
+| 권한과 보안 모델 | [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/) |
 
 ## 전형적인 아키텍처(개념)
 
@@ -56,10 +57,10 @@ Git 제공자 / 이슈 / 아티팩트 저장소
 
 | 주제 | 페이지 |
 |---|---|
-| SDK | [SDK 개요](/guide/developer-platform/sdk-overview/) |
-| 비대화형 | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [스크립트와 파이프라인](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [구조화 출력](/guide/developer-platform/non-interactive/structured-output/) · [종료 코드와 재시도](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [개요](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [코드 리뷰 자동화](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [SDK 개요](/ko/guide/developer-platform/sdk-overview/) |
+| 비대화형 | [codex exec](/ko/guide/developer-platform/non-interactive/codex-exec/) · [스크립트와 파이프라인](/ko/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/) · [종료 코드와 재시도](/ko/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [개요](/ko/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [코드 리뷰 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/) |
 
 `codex-sdk/`, `app-server/`, `architecture-patterns/` 등은 [장 개요](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)를 참고하세요.
 
@@ -78,7 +79,7 @@ Git 제공자 / 이슈 / 아티팩트 저장소
 
 ### 3. 이 장을 처음 읽을 때 어느 페이지가 가장 유용한가요?
 
-개념만 잡으려면 [SDK 개요](/guide/developer-platform/sdk-overview/)와 [비대화형 모드](/guide/cli/non-interactive-mode/)의 관계를 먼저 보시면 됩니다.
+개념만 잡으려면 [SDK 개요](/ko/guide/developer-platform/sdk-overview/)와 [비대화형 모드](/ko/guide/cli/non-interactive-mode/)의 관계를 먼저 보시면 됩니다.
 
 개발자 플랫폼 장은 “Codex를 시스템에 어떻게 연결할까”를 다룹니다. Codex를 처음 쓸 때는 앞쪽 입문 내용을 먼저 보세요.
 

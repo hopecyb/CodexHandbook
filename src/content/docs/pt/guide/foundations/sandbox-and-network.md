@@ -3,9 +3,10 @@ title: Sandbox e rede
 description: Entenda isolamento de execução, acesso à rede e limites de risco.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3d6d57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -64,7 +65,7 @@ Dá para ver como duas portas:
 
 As duas não são só configuração técnica — também são o seu jeito de controlar risco.
 
-Configuração no produto: App desktop [Configurações](/guide/desktop-app/settings/); detalhes oficiais: [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Configuração no produto: App desktop [Configurações](/pt/guide/desktop-app/settings/); detalhes oficiais: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 No começo, prefira restringir um pouco mais a abrir todas as portas de uma vez sem entender o risco.
 

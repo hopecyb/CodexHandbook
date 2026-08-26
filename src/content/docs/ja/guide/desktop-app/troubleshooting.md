@@ -3,9 +3,10 @@ title: デスクトップ App トラブルシューティング
 description: インストール、ログイン、タスク失敗の一般的な対処。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: ca74b6c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,7 +21,7 @@ sidebar:
 | タスクが承認待ちのまま | タスクビューに戻り、保留中の承認リクエストを処理 |
 | 変更が期待と異なる | 制約を絞る、新しいスレッドを開く、コンテキストを確認 |
 
-それでも解決しない場合：[https://developers.openai.com/codex](https://developers.openai.com/codex) と [トラブルシューティング索引](/guide/reference/troubleshooting/) を参照してください。
+それでも解決しない場合：[https://developers.openai.com/codex](https://developers.openai.com/codex) と [トラブルシューティング索引](/ja/guide/reference/troubleshooting/) を参照してください。
 
 ## よくある誤解
 

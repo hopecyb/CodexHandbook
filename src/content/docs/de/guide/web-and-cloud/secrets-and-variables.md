@@ -1,133 +1,74 @@
 ---
 title: Secrets und Umgebungsvariablen
-description: 'API-Keys, Tokens und nicht-sensible Konfigurationsvariablen in Cloud sicher injizieren.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Wähle korrekt zwischen Cloud-Secrets für das Setup und normalen Umgebungsvariablen für den gesamten Chat.
 sidebar:
   order: 30
+locale: de
+source_locale: zh-CN
+source_revision: 08f8d64
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cloud-Aufgaben brauchen oft private APIs, Package-Registries oder Datenbanken. Credentials über **Secrets und Umgebungsvariablen** injizieren — nicht in Code, Prompt, Issue, Chat oder Git-Historie.
+Umgebungsvariablen und Secrets in Cloud besitzen unterschiedliche Lebenszyklen. Dieser Unterschied bestimmt, wofür sie sicher eingesetzt werden können, nicht nur, ob die Oberfläche einen Wert maskiert.
 
-## Inhalt
-
-- Secrets vs. gewöhnliche Umgebungsvariablen
-- Konfiguration in Cloud-Konsole / Repo-Settings
-- Verhältnis zu GitHub Actions Secrets
-
-## Secret vs. Umgebungsvariable
-
-- **Secret**: Werte, die nicht beliebig sichtbar sein dürfen — API-Key, DB-Passwort, Private Key
-- **Umgebungsvariable**: Konfiguration für Programme — teils sensibel, teils nicht
-
-Nicht jede Variable ist ein Secret; Secrets gehören in sichere Injection, nicht hardcodiert.
-
-## Konzeptuelle Unterscheidung
-
-| Typ | Beispiele | Speicheranforderung |
+| Typ | Sichtbare Phasen | Geeignete Inhalte |
 |---|---|---|
-| **Secret** | API-Key, Private Key, DB-Passwort | Verschlüsselt, UI maskiert, nicht in Logs |
-| **Variable** | `NODE_ENV=production`, Feature-Flags | Kann unverschlüsselt sein; Business-Policy trotzdem schützen |
-| **`.env` im Repo** | Lokale Entwicklung | **Nicht committen**; Cloud: Konsolen-Secrets |
+| Umgebungsvariable | Setup und gesamte Agent-Phase | Nicht vertrauliche Konfiguration wie Laufzeitmodus oder öffentliche API-Basisadresse |
+| Secret | Nur Setup-Skript | Token für private Pakete und Zugangsdaten zur Installation von Abhängigkeiten |
 
-Gesamtregel: [Sensibler Kontext](/guide/context/sensitive-context/)
+Secrets werden zusätzlich verschlüsselt gespeichert, erst bei der Aufgabenausführung entschlüsselt und vor Beginn der Agent-Phase entfernt. Sie sind kein allgemeiner Zugangsdatenkanal, über den Agent zur Laufzeit Produktions-APIs aufrufen soll.
 
-## Häufige Missverständnisse
+## Richtiges Beispiel: Privates Paket installieren
 
-### 1. „Nur kurz den Key einfügen — kein Problem?“
+Erstelle in den Umgebungseinstellungen ein Secret namens `NPM_TOKEN`. Das Setup-Skript erzeugt damit eine temporäre Authentifizierungskonfiguration und installiert die Abhängigkeiten:
 
-Hohes Risiko. Einmal eingefügt in:
-
-- Chat
-- Issue
-- PR-Beschreibung
-- Shell-Historie
-- Git-Commit
-
-kann es über Logs, Notifications, Screenshots, Historie und Kollaborateure streuen.
-
-### 2. „`.env` committen, dann liest Cloud?“
-
-`.env` für lokal — nicht ins VCS. In Cloud: Plattform-Secret-Management.
-
-### 3. „Name egal, Hauptsache Wert stimmt?“
-
-Viele Fehler liegen an:
-
-- Tippfehler im Namen
-- Falschem Scope
-- Code liest einen anderen Variablennamen
-
-Namen in Doku, Code und Cloud-Settings vereinheitlichen.
-
-## Konfigurationsprinzipien
-
-1. **Least Privilege**: jedes Secret nur für eine Aufgabenklasse
-2. **Isolation nach Repo/Umgebung**: Staging und Production getrennt
-3. **Rotation**: Tokens regelmäßig; alte Jobs dürfen ausfallen
-4. **Audit**: wer Secrets hinzufügt/ändert (Teamprozess)
-5. **Nie echoen**: Task-Logs und PR-Kommentare ohne Secret-Werte
-
-## Minimaler Ablauf
-
-1. Welche Externservices braucht die Aufgabe wirklich?
-2. Nur nötige Secrets — nicht sofort volle Prod-Rechte
-3. In Doku „welcher Secret-Name“ — ohne Wert
-4. Testaufgabe zum Lesen
-5. Dann echte Aufgabe
-
-## Empfohlener Workflow
-
-```text
-1. Secret in Cloud / GitHub Settings (SCREAMING_SNAKE, z. B. NPM_TOKEN)
-2. In AGENTS.md: «NPM_TOKEN nötig für private Packages» — ohne Wert
-3. Cloud-Aufgabe starten; bei Fehler Name und Scope prüfen
-4. CI: GitHub Actions Secrets, Namen an Cloud anlehnen für Doku
+```bash
+set -euo pipefail
+printf '//registry.npmjs.org/:_authToken=%s\n' "$NPM_TOKEN" > ~/.npmrc
+pnpm install --frozen-lockfile
+rm -f ~/.npmrc
 ```
 
-Mit [GitHub-Integration](/guide/integrations/github/): Plattform-Secrets bevorzugen — Agent soll Keys nicht aus Issue-Bodies kopieren.
+In der Agent-Phase wird das Token nicht mehr benötigt. Sie verwendet nur die bereits installierten Abhängigkeiten. Das Setup-Protokoll darf das Secret nicht mit `echo` ausgeben.
 
-## Wann als Secret behandeln
+## Falsches Beispiel
 
-Fragen:
+```text
+Den Produktionswert API_KEY als normale Umgebungsvariable konfigurieren
+und Agent mit curl echte Bestellungen über eine externe Schnittstelle verifizieren lassen.
+```
 
-- Bei Leak: Geld-, Daten-, Rechte- oder Business-Risiko?
+Damit bleibt der vertrauliche Wert während der gesamten Agent-Phase verfügbar. Bei geöffnetem Netzwerk entsteht ein Risiko für Exfiltration oder Fehlbedienung. Verwende stattdessen Test-Fixtures, Mocks, kurzlebige Testzugangsdaten mit minimalen Berechtigungen oder beschränke authentifizierte Vorbereitungen auf das Setup.
 
-Wenn ja: nicht in öffentliche Doku, Prompt, Chat oder Repo.
+## Konfiguration prüfen
 
-## Internetzugriff und Secrets
+1. Liste getrennt auf, welche Werte Setup und Agent-Phase tatsächlich benötigen.
+2. Verwende Secrets für vertrauliche Werte, die nur bei der Installation nötig sind.
+3. Verwende Umgebungsvariablen für nicht vertrauliche Einstellungen, die Agent benötigt.
+4. Schreibe Werte nicht in Prompt, Issue, PR, Repository oder `AGENTS.md`.
+5. Führe einen Secret-Scanner aus und prüfe die Setup-Protokolle.
+6. Rotiere Zugangsdaten regelmäßig und entferne nicht mehr benötigte Werte.
 
-Manche Aufgaben brauchen Outbound für Packages/APIs:
+Das Setup läuft in einer eigenen Bash-Sitzung. Ein normales `export` gilt nicht automatisch in der Agent-Phase weiter. Nicht vertrauliche Werte, die während des gesamten Chats verfügbar sein müssen, werden direkt als Umgebungsvariablen konfiguriert und nicht über einen temporären Shell-Zustand bereitgestellt.
 
-- Outbound-Policy nach Organisationssicherheit
-- Auch mit Netz: kein Bearer-Token im Prompt
-- Unvertrauenswürdige Repos: keine Produktions-Secrets
+## Beziehung zu CI
 
-## Häufige Fehler
+GitHub Actions Secrets und Codex Cloud Secrets sind getrennte Speichersysteme und werden nicht automatisch synchronisiert. Gleiche Variablen**namen** können die Dokumentation vereinfachen. Kopiere aber nicht dasselbe Produktionstoken mit weitergehenden Berechtigungen als für die Aufgabe erforderlich.
 
-| Fehler | Risiko |
-|---|---|
-| `.env` committen | Permanenter Leak |
-| Key in Issue/Aufgabenbeschreibung | Logs und Notifications streuen |
-| Prod-Secret für Experimente | Fehlbedienung Prod-Daten |
-| Secret-Name ≠ Code | Stiller Fehlschlag |
-| Admin-Token „der Einfachheit halber“ | Zu große Angriffsfläche |
+## Vorgehen nach einer Offenlegung
 
-## Abnahme-Checkliste
+Widerrufe oder rotiere die Zugangsdaten sofort und entferne offengelegte Inhalte anschließend aus Protokollen, Chats, Issues und Git-Historie. Das Löschen der aktuellen Datei widerruft ein bereits verbreitetes Secret nicht.
 
-- [ ] Keine hardcodierten Keys im Repo (Secret Scanner möglich)
-- [ ] Cloud-Secret-Liste = dokumentierte Namen
-- [ ] Fehlerlogs ohne Secret-Klartext
-- [ ] Austritt-/Rotationsprozess definiert
+## Offizielle Grundlage
 
-## Quellen
-- OpenAI Codex Cloud secrets
+- [Cloud environments: variables and secrets](https://learn.chatgpt.com/docs/environments/cloud-environment)
+
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud  
-**Prüfhinweis:** Konkrete Aussagen zu Config-Ort, Repo-Scope und Actions-Secrets brauchen stärkere aktuelle offizielle Secrets-Doku; bis dahin `outdated`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud
+
+**Zuletzt geprüft:** 2026-08-26

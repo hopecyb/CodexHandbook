@@ -3,9 +3,10 @@ title: Progreso y reorientación
 description: Si a mitad de la ejecución la dirección se desvía, cómo recuperar a Codex con instrucciones cortas.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6813a5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -134,7 +135,7 @@ Conserva tu diagnóstico de la causa, pero no entres aún al refactor. El siguie
 
 ## Cuándo volver a «replanificar»
 
-La reorientación sirve para desviaciones locales, pero en estos casos conviene más volver a [Planificación](/guide/agent-work/planning/):
+La reorientación sirve para desviaciones locales, pero en estos casos conviene más volver a [Planificación](/es/guide/agent-work/planning/):
 
 - El objetivo de la tarea en sí cambió
 - Nueva información anula la premisa anterior
@@ -154,10 +155,10 @@ Cuando detectas desviación en la ejecución, puedes usar una instrucción corta
 
 ## Combinaciones recomendadas
 
-- Necesitas aclarar primero la ruta de ejecución: ver [Planificación](/guide/agent-work/planning/)
-- Necesitas escribir el flujo como cadena principal completa: ver [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- Necesitas delegar la tarea a otros: ver [Subagents](/guide/agent-work/subagents/)
-- Continuar tras interrumpir la tarea: ver [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+- Necesitas aclarar primero la ruta de ejecución: ver [Planificación](/es/guide/agent-work/planning/)
+- Necesitas escribir el flujo como cadena principal completa: ver [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
+- Necesitas delegar la tarea a otros: ver [Subagents](/es/guide/agent-work/subagents/)
+- Continuar tras interrumpir la tarea: ver [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
 
 ---
 

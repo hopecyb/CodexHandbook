@@ -3,9 +3,10 @@ title: 公式リソース
 description: OpenAI / Codex 公式ドキュメントと入口リンク。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c7126c4
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---

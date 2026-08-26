@@ -3,9 +3,10 @@ title: Templates de Prompts
 description: Esqueletos reutilizáveis por tipo de tarefa — entender, criar, alterar, diagnosticar, rever, pesquisar, automatizar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Templates de Prompts
@@ -32,13 +33,13 @@ O template é andaime, não resposta-padrão.
 
 | Template | Cenário |
 |---|---|
-| [Entender](/prompts/templates/understand/) | Ler código-base, docs ou material; construir compreensão primeiro |
-| [Criar](/prompts/templates/create/) | Implementar do zero uma função, texto ou artefato |
-| [Alterar](/prompts/templates/change/) | Iterar sobre o que já existe |
-| [Diagnosticar](/prompts/templates/diagnose/) | Localizar a causa-raiz; ainda sem alterar código |
-| [Rever](/prompts/templates/review/) | Rever diff, PR ou alterações de documentação |
-| [Pesquisar](/prompts/templates/research/) | Investigação e comparação com citações |
-| [Automatizar](/prompts/templates/automate/) | Tarefas repetidas, scripts e fluxos sem supervisão |
+| [Entender](/pt/prompts/templates/understand/) | Ler código-base, docs ou material; construir compreensão primeiro |
+| [Criar](/pt/prompts/templates/create/) | Implementar do zero uma função, texto ou artefato |
+| [Alterar](/pt/prompts/templates/change/) | Iterar sobre o que já existe |
+| [Diagnosticar](/pt/prompts/templates/diagnose/) | Localizar a causa-raiz; ainda sem alterar código |
+| [Rever](/pt/prompts/templates/review/) | Rever diff, PR ou alterações de documentação |
+| [Pesquisar](/pt/prompts/templates/research/) | Investigação e comparação com citações |
+| [Automatizar](/pt/prompts/templates/automate/) | Tarefas repetidas, scripts e fluxos sem supervisão |
 
 ## De template a workflow
 
@@ -75,7 +76,7 @@ Para iniciantes, «suficiente sem inchado» basta.
 
 Escolha primeiro o tipo certo; depois adapte-o à sua tarefa — não trate o template em si como a tarefa.
 
-Princípios de escrita: [Fundamentos de Prompts](/prompts/basics/) e [Anatomia de uma tarefa](/prompts/task-anatomy/).
+Princípios de escrita: [Fundamentos de Prompts](/pt/prompts/basics/) e [Anatomia de uma tarefa](/pt/prompts/task-anatomy/).
 
 ---
 

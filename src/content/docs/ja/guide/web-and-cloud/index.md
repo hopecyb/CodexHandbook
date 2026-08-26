@@ -1,58 +1,70 @@
 ---
 title: Web と Cloud（概要）
-description: Cloud タスク、環境、Secrets、PR レビューへの入口ナビゲーション。
-sidebar:
-  order: 13
+description: リポジトリ接続、再現可能な環境、レビュー、Pull Request までのリモートタスクの流れを理解します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5861c62
+translation_status: reviewed
+translated_at: 2026-08-26
+sidebar:
+  order: 13
+reviewed_at: 2026-08-26
 ---
 
-Cloud は**標準化されたリモート環境**でタスクを実行し、GitHub に接続して PR を作成するのに向いています。始める前に [ローカルとクラウド](/guide/foundations/local-vs-cloud/) を読み、[公式 Cloud ドキュメント](https://developers.openai.com/codex) も参照してください。
+Codex Cloud は隔離されたクラウド環境でコーディングタスクを実行します。バックグラウンドの長時間タスク、並行した試行、GitHub、GitLab（Beta）、Linear、Slack から開始する作業に適しています。「PC を遠隔操作する」ものではなく、ローカルでまだ push していないファイルを自動的に参照することもありません。
 
-タスクはあなたの PC 上ではなく、リモート環境で継続して実行されます。
+## 一つの Cloud タスクの流れ
 
-このような場面でよく使われます：
+```text
+ChatGPT でログイン
+  → GitHub / GitLab を接続
+  → リポジトリ環境を作成
+  → 指定したブランチまたは commit を checkout
+  → setup script で依存関係をインストール
+  → Agent がネットワークポリシーの範囲内で変更、検証
+  → 要約、ログ、diff を確認
+  → follow-up で修正、または PR を作成
+  → 人によるレビューと CI の後に merge
+```
 
-- タスクの実行時間が長い
-- ローカルマシンの前に張り付きたくない
-- リモートリポジトリと PR フローに直接つなぎたい
+Cloud の価値は隔離、再現性、並行処理にあり、レビューをなくすことではありません。
 
-Cloud は最初に触る部分とは限りませんが、リモートリポジトリ、PR、非同期の長時間タスクに触れ始めると、ほぼ必ず使うことになります。
+## ローカルと Cloud の選択
 
-## 章ナビゲーション
-
-| 段階 | ページ |
+| ローカルを選ぶ | Cloud を選ぶ |
 |---|---|
-| 接続 | [GitHub に接続](/guide/web-and-cloud/connect-github/) |
-| 環境 | [Cloud 環境](/guide/web-and-cloud/cloud-environments/) |
-| 認証情報 | [Secrets と環境変数](/guide/web-and-cloud/secrets-and-variables/) |
-| 成果物 | [Pull Request を作成](/guide/web-and-cloud/create-pull-requests/) |
-| 品質 | [Cloud コードレビュー](/guide/web-and-cloud/code-review/) |
-| コラボレーション | [委任とフォローアップ](/guide/web-and-cloud/delegate-and-follow-up/) |
-| ネットワーク | [インターネットアクセス](/guide/web-and-cloud/internet-access/) |
-| トラブルシューティング | [Cloud トラブルシューティング](/guide/web-and-cloud/troubleshooting/) |
-| 統合 | [GitHub 統合](/guide/integrations/github/) |
+| 未コミットのファイルまたはローカルサービスに依存する | 入力がリモートリポジトリにある |
+| プロセスとリアルタイムで対話する必要がある | タスクをバックグラウンドで独立して実行できる |
+| 小さく短時間の変更 | 複数ステップのビルド、テスト、並行した試行 |
+| ツールが現在の PC にしかない | スクリプトで環境を再構築できる |
 
-デスクトップ App からクラウドタスクを開始する：[ローカルとクラウドタスク](/guide/desktop-app/local-and-cloud-tasks/)。IDE から委任する：[IDE クラウドタスク](/guide/ide/cloud-task-workflow/)。
+実行境界を理解するには、先に[ローカルと Cloud](/ja/guide/foundations/local-vs-cloud/)を参照してください。
 
-## 推奨読書順序
+## 推奨する学習順序
 
-初めて Cloud に触れるときは、次の順序で読むとよいです：
+1. [GitHub を接続する](/ja/guide/web-and-cloud/connect-github/)：必要なリポジトリだけを認可する。
+2. [Cloud 環境](/ja/guide/web-and-cloud/cloud-environments/)：ツール、バージョン、setup を固定する。
+3. [Secrets と環境変数](/ja/guide/web-and-cloud/secrets-and-variables/)：インストール時の Secret と実行時の変数を区別する。
+4. [インターネットアクセス](/ja/guide/web-and-cloud/internet-access/)：Agent フェーズはデフォルトでオフライン。ドメインと method を最小限だけ許可する。
+5. [委任と follow-up](/ja/guide/web-and-cloud/delegate-and-follow-up/)：目標、制約、検収基準を使ってタスクを依頼する。
+6. [Pull Request を作成する](/ja/guide/web-and-cloud/create-pull-requests/)と[コードレビュー](/ja/guide/web-and-cloud/code-review/)：結果を merge 可能な成果物にする。
+7. [Cloud のトラブルシューティング](/ja/guide/web-and-cloud/troubleshooting/)：リポジトリ、setup、ネットワーク、タスクの四層で問題を特定する。
 
-1. [GitHub に接続](/guide/web-and-cloud/connect-github/)
-2. [Secrets と環境変数](/guide/web-and-cloud/secrets-and-variables/)
-3. PR、コードレビュー、コラボレーションフロー
+デスクトップ App または IDE から開始する場合は、それぞれ[ローカルタスクと Cloud タスク](/ja/guide/desktop-app/local-and-cloud-tasks/)と [IDE の Cloud タスク](/ja/guide/ide/cloud-task-workflow/)を参照してください。
 
-「リポジトリへの接続方法、権限の取得方法、キーの扱い方」を先に把握してから、自動化の詳細を読むと省力です。
+## 最初の練習
 
-Cloud は、ローカルを離れても続けられるリモートリポジトリタスクを扱うのに向いており、単にローカルフローを Web に移しただけではありません。
+本番の認証情報を含まないテスト用リポジトリを選び、Codex には文書リンクの修正とリンクチェックだけを依頼してください。成功基準は、環境が起動する、diff が想定したファイルだけを含む、コマンド出力を確認できる、結果から PR を作成できる、です。画面に「完了」と表示されたことだけを検収基準にしないでください。
+
+## 公式情報
+
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Cloud 環境](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
 ---
 
-**状態：** outdated  
-**対象製品：** Cloud  
-**検証根拠：** 本ページは Cloud ナビゲーションページとして構造的な価値はあるが、GitHub 接続、Secrets、PR、モバイルフォローアップ、ネットワークアクセスなどの依存機能はすべて変動の激しい製品領域にある。現行の公式 Cloud ドキュメントをページごとに補完するまでは、`outdated` とするのが適切。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** Cloud
+
+**最終検証：** 2026-08-26

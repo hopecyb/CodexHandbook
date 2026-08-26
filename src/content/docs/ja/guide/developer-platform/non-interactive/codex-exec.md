@@ -3,16 +3,17 @@ title: codex exec
 description: 非対話実行入口——スクリプトと CI で単発タスクを一括投入。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 124836c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 対話型 `codex` が話しながら作業するなら、**`codex exec`** はタスクを一度渡して走らせ、終了時に結果または失敗状態を返すに近いです。
 
-[非対話モード](/guide/cli/non-interactive-mode/) の核心：往復チャットなし、途中澄清なし。プロセス終了で結果または失敗。本章は [開発者プラットフォーム](/guide/developer-platform/) 統合者向け。Codex を初めてスクリプトや CI に接続する読者にも適します。
+[非対話モード](/ja/guide/cli/non-interactive-mode/) の核心：往復チャットなし、途中澄清なし。プロセス終了で結果または失敗。本章は [開発者プラットフォーム](/ja/guide/developer-platform/) 統合者向け。Codex を初めてスクリプトや CI に接続する読者にも適します。
 
 ## 本ページの内容
 
@@ -56,8 +57,16 @@ CI で Codex とチャットしたり、十回止まって聞かれることは�
 
 ```bash
 cd /path/to/repo
-codex exec --cwd . "読み取り専用：現在ブランチと main の diff を比較し、最高リスク3件を列挙。ファイルは変更しない"
+codex exec --cd . "読み取り専用：現在ブランチと main の diff を比較し、最高リスク3件を列挙。ファイルは変更しない"
 ```
+
+デフォルトでは読み取り専用サンドボックスで実行されます。ワークスペースへの書き込みを許可する場合は、明示的に次のように指定します。
+
+```bash
+codex exec --cd . --sandbox workspace-write "失敗しているテストを修正し、src/auth と tests/auth だけを変更する"
+```
+
+進捗は `stderr`、最終回答は `stdout` に書き込まれます。完全なイベントストリームを機械処理する場合は `--json`、最終メッセージだけをファイルに保存する場合は `-o` / `--output-last-message` を使います。安定したフィールドが必要なら `--output-schema` も指定します。
 
 原則：
 
@@ -98,7 +107,7 @@ codex exec --cwd . "読み取り専用：現在ブランチと main の diff を
     → 非0なら CI 失敗。無限再試行しない
 ```
 
-[スクリプトとパイプライン](/guide/developer-platform/non-interactive/scripts-and-pipelines/) と接続。
+[スクリプトとパイプライン](/ja/guide/developer-platform/non-interactive/scripts-and-pipelines/) と接続。
 
 ## 何として使えるか
 
@@ -132,8 +141,8 @@ codex exec --cwd . "読み取り専用：現在ブランチと main の diff を
 
 ## セキュリティ境界
 
-- 無人運用＝[人工承認](/cases/workflows/human-approval-patterns/) が弱まる。デフォルト読み取り専用
-- [セキュリティ資格情報](/guide/developer-platform/ci-cd/code-review-automation/#安全凭证)（同章相互参照）
+- 無人運用＝[人工承認](/ja/cases/workflows/human-approval-patterns/) が弱まる。デフォルト読み取り専用
+- [セキュリティ資格情報](/ja/guide/developer-platform/ci-cd/code-review-automation/#安全凭证)（同章相互参照）
 
 ## 受け入れチェックリスト
 
@@ -144,15 +153,18 @@ codex exec --cwd . "読み取り専用：現在ブランチと main の diff を
 
 ## 関連章
 
-- [CLI 非対話モード](/guide/cli/non-interactive-mode/)
-- [構造化出力](/guide/developer-platform/non-interactive/structured-output/)
-- [終了コードと再試行](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [CLI 非対話モード](/ja/guide/cli/non-interactive-mode/)
+- [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/)
+- [終了コードと再試行](/ja/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## 参考
 - OpenAI Codex CLI ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 本ページは `codex exec`、`--cwd`、非対話統合方式について有用な思路を提供するが、現行公式ドキュメントがコマンド入口、パラメータ、挙動細部を十分に逐条確認できる根拠が不足。最新 CLI 公式根拠を補足する前は `verified` とすべきでない。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** CLI
+
+**検証根拠：** 現在の公式 Non-interactive mode と Developer commands を照合し、`codex exec` が Stable であること、`--cd` / `-C`、デフォルトの読み取り専用サンドボックス、`workspace-write`、JSONL と schema の出力方法を確認済みです。
+
+**最終検証：** 2026-08-26

@@ -3,9 +3,10 @@ title: Định nghĩa ràng buộc
 description: Giới hạn phạm vi được sửa, phong cách và điều cấm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 617fa41
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều tác vụ thất bại không phải vì hoàn toàn không nêu mục tiêu, mà vì **ranh giới không rõ**.
@@ -98,7 +99,7 @@ Những tình huống sau nên nêu ràng buộc rõ:
 
 Mục tiêu bảo Codex làm gì; ràng buộc bảo nó dừng ở đâu.
 
-Ranh giới quyền nên viết cùng ràng buộc, giảm vượt quyền «tiện tay». Trang liên quan: [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/) và [Quyền và Sandbox](/guide/permissions-and-sandbox/).
+Ranh giới quyền nên viết cùng ràng buộc, giảm vượt quyền «tiện tay». Trang liên quan: [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/) và [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/).
 
 ---
 

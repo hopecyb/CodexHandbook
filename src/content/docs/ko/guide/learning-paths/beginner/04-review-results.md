@@ -3,9 +3,10 @@ title: 결과 검토하기
 description: diff 확인, 검증 실행, 되묻기 습관을 만듭니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 82d6754
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 「한눈 보고 통과」를 고정된 확인 동작으로 바꿉니다.
 
-체크리스트：[결과 확인](/guide/getting-started/review-the-result/) · [diff 검토](/guide/quality/review-diffs/)
+체크리스트：[결과 확인](/ko/guide/getting-started/review-the-result/) · [diff 검토](/ko/guide/quality/review-diffs/)
 
 많은 사람이 이 단계를 건너뜁니다. Codex를 안정적으로 쓸 수 있는지는, 결과를 review할 줄 아는지에 달려 있는 경우가 많습니다.
 
@@ -46,7 +47,7 @@ review 습관을 일찍 만들수록, 나중에 결과를 맹신하기 어렵습
 
 결과 검토는 추가 동작이 아니라, 사용 과정의 일부입니다.
 
-다음 단계：[첫 작은 프로젝트 끝내기](/guide/learning-paths/beginner/05-complete-first-project/)
+다음 단계：[첫 작은 프로젝트 끝내기](/ko/guide/learning-paths/beginner/05-complete-first-project/)
 
 ---
 

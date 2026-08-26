@@ -3,14 +3,15 @@ title: Códigos de salida y reintentos
 description: Interpretar bien el éxito o el fallo de codex exec en el pipeline — cuándo reintentar y cuándo fallar de inmediato.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-CI depende del **código de salida del proceso** para juzgar si un paso tuvo éxito. Este capítulo explica la semántica habitual de [codex exec](/guide/developer-platform/non-interactive/codex-exec/), la estrategia de reintentos y el diseño idempotente.
+CI depende del **código de salida del proceso** para juzgar si un paso tuvo éxito. Este capítulo explica la semántica habitual de [codex exec](/es/guide/developer-platform/non-interactive/codex-exec/), la estrategia de reintentos y el diseño idempotente.
 
 ## Contenido de esta página
 
@@ -59,7 +60,7 @@ Si la causa del fallo no desaparece al reintentar —Permiso insuficiente, regla
 | `0` | La Tarea terminó y cumple el criterio de éxito del Prompt |
 | Distinto de `0` y el log muestra rechazo de policy/sandbox | **No** reintentar a ciegas; corrige configuración o Prompt |
 | Distinto de `0` y API 429/5xx | Reintento limitado con backoff exponencial |
-| Se encontró un P0 pero la ejecución tuvo éxito | Usa `pass: false` de la [salida estructurada](/guide/developer-platform/non-interactive/structured-output/) + `exit 1` en el script |
+| Se encontró un P0 pero la ejecución tuvo éxito | Usa `pass: false` de la [salida estructurada](/es/guide/developer-platform/non-interactive/structured-output/) + `exit 1` en el script |
 
 «Se encontró un problema de seguridad» no debería depender de una excepción tipo crash: debe ser **explícito** con `pass: false` en JSON y que el script envolvente decida el código de salida.
 
@@ -69,7 +70,7 @@ Si la causa del fallo no desaparece al reintentar —Permiso insuficiente, regla
 max=3
 delay=10
 for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
+  if codex exec --cd . "$(cat "$PROMPT")"; then
     exit 0
   fi
   code=$?
@@ -119,8 +120,8 @@ Primero distingue «¿es un fallo temporal o no mejorará al reintentar?» y lue
 
 ## Capítulos relacionados
 
-- [Referencia de errores](/guide/reference/error-reference/)
-- [Recuperación ante fallos](/cases/workflows/failure-recovery/)
+- [Referencia de errores](/es/guide/reference/error-reference/)
+- [Recuperación ante fallos](/es/cases/workflows/failure-recovery/)
 
 ## Fuentes de referencia
 - Guía de reintentos de la API de OpenAI (concepto)

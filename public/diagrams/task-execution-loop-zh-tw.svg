@@ -1,0 +1,66 @@
+<svg lang="zh-tw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">從任務說明到可驗證結果的閉環</title>
+  <desc id="desc">目標、背景、輸入、約束、驗收和許可權構成任務說明。Codex 依次探索、計劃、執行和驗證；驗證不通過時帶著證據返回任務說明或計劃，通過後交付結果。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .label { fill: #f8fafc; font-size: 18px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 14px; }
+    .tiny { fill: #94a3b8; font-size: 12px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1000" height="560" rx="8" fill="#020617"/>
+  <rect width="1000" height="560" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">從任務說明到可驗證結果</text>
+  <text x="44" y="70" class="sub">好提示詞不是終點，它要把執行、證據和反饋接成一個閉環。</text>
+
+  <path d="M260 282H310" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <path d="M438 282H478" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M606 282H646" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 282H814" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M878 336V406H770" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M846 336V454H170V378" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="40" y="112" width="220" height="266" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="145" y="142" text-anchor="middle" class="label">任務說明</text>
+  <text x="115" y="177" text-anchor="end" class="note">目標</text><text x="125" y="177" class="tiny">最終產物</text>
+  <text x="115" y="207" text-anchor="end" class="note">背景</text><text x="125" y="207" class="tiny">為什麼做</text>
+  <text x="115" y="237" text-anchor="end" class="note">輸入</text><text x="125" y="237" class="tiny">必須看的材料</text>
+  <text x="115" y="267" text-anchor="end" class="note">約束</text><text x="125" y="267" class="tiny">範圍與禁止項</text>
+  <text x="115" y="297" text-anchor="end" class="note">驗收</text><text x="125" y="297" class="tiny">可觀察證據</text>
+  <text x="115" y="327" text-anchor="end" class="note">許可權</text><text x="125" y="327" class="tiny">聯網、寫入、審批</text>
+  <line x1="62" y1="344" x2="228" y2="344" stroke="#1e293b"/>
+  <text x="145" y="364" text-anchor="middle" class="tiny">資訊不足時先問，不要猜</text>
+
+  <rect x="310" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="374" y="266" text-anchor="middle" class="label">探索</text>
+  <text x="374" y="291" text-anchor="middle" class="note">現狀 · 範圍</text>
+  <text x="374" y="311" text-anchor="middle" class="note">風險 · 未知</text>
+
+  <rect x="478" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="542" y="266" text-anchor="middle" class="label">計劃</text>
+  <text x="542" y="291" text-anchor="middle" class="note">步驟 · 檔案</text>
+  <text x="542" y="311" text-anchor="middle" class="note">風險 · 驗證</text>
+
+  <rect x="646" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="710" y="266" text-anchor="middle" class="label">執行</text>
+  <text x="710" y="291" text-anchor="middle" class="note">小步修改</text>
+  <text x="710" y="311" text-anchor="middle" class="note">控制範圍</text>
+
+  <rect x="814" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="878" y="266" text-anchor="middle" class="label">驗證</text>
+  <text x="878" y="291" text-anchor="middle" class="note">測試 · diff</text>
+  <text x="878" y="311" text-anchor="middle" class="note">截圖 · 來源</text>
+
+  <rect x="490" y="382" width="280" height="62" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="630" y="408" text-anchor="middle" class="label">通過：交付可驗證結果</text>
+  <text x="630" y="429" text-anchor="middle" class="tiny">產物 + 證據 + 剩餘風險</text>
+  <text x="905" y="393" class="tiny" fill="#34d399">通過</text>
+  <text x="460" y="472" class="tiny" fill="#fb7185">不通過：帶著失敗證據返回任務說明或計劃</text>
+</svg>

@@ -5,9 +5,10 @@ sidebar:
   order: 17
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Vérification
@@ -74,12 +75,12 @@ Pensez-y comme :
 
 ## Sujets principaux
 
-- [Revoir les diffs](/guide/quality/review-diffs/) — lire les diffs ; confirmer périmètre et risque
-- [Lancer les tests](/guide/quality/run-tests/) — régression automatisée
-- [Vérifier les artefacts](/guide/quality/verify-artifacts/) — docs, config, sortie générée
-- [Valider les sources](/guide/quality/validate-sources/) — conclusions de recherche traçables
-- [Gérer l'incertitude](/guide/quality/handle-uncertainty/) — quand le modèle n'est pas sûr
-- [Définition du terminé](/guide/quality/definition-of-done/) — ce que « fini » signifie
+- [Revoir les diffs](/fr/guide/quality/review-diffs/) — lire les diffs ; confirmer périmètre et risque
+- [Lancer les tests](/fr/guide/quality/run-tests/) — régression automatisée
+- [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/) — docs, config, sortie générée
+- [Valider les sources](/fr/guide/quality/validate-sources/) — conclusions de recherche traçables
+- [Gérer l'incertitude](/fr/guide/quality/handle-uncertainty/) — quand le modèle n'est pas sûr
+- [Définition du terminé](/fr/guide/quality/definition-of-done/) — ce que « fini » signifie
 
 ## Accent de Vérification par type de Tâche
 
@@ -88,11 +89,11 @@ Pensez-y comme :
 - **Recherche** : sources réelles et actuelles ; conclusions dans les preuves
 - **Config ou scripts** : hypothèses d'environnement, périmètre de permission, récupération en cas d'échec
 
-Incertain où commencer : par défaut vers [définition du terminé](/guide/quality/definition-of-done/).
+Incertain où commencer : par défaut vers [définition du terminé](/fr/guide/quality/definition-of-done/).
 
 La Vérification confirme que le résultat est utilisable, fiable et livrable.
 
-Comment écrire l'acceptation dans les Prompts : [définir le terminé](/prompts/define-done/). Exemples de bout en bout : [cas](/cases/).
+Comment écrire l'acceptation dans les Prompts : [définir le terminé](/fr/prompts/define-done/). Exemples de bout en bout : [cas](/fr/cases/).
 
 ---
 

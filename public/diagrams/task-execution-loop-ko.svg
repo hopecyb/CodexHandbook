@@ -1,0 +1,66 @@
+<svg lang="ko" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">작업 설명부터 검증 가능한 결과까지의 폐루프</title>
+  <desc id="desc">목표, 배경, 입력, 제약, 인수 조건, 권한이 작업 설명을 구성합니다. Codex는 탐색, 계획, 실행, 검증을 차례로 수행하고, 검증에 실패하면 증거와 함께 작업 설명이나 계획으로 돌아가며, 통과하면 결과를 전달합니다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 25.8px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.8px; }
+    .label { fill: #f8fafc; font-size: 15.5px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+    .tiny { fill: #94a3b8; font-size: 10.3px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1000" height="560" rx="8" fill="#020617"/>
+  <rect width="1000" height="560" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">작업 설명에서 검증 가능한 결과까지</text>
+  <text x="44" y="70" class="sub">좋은 프롬프트는 종착점이 아닙니다. 실행, 증거, 피드백을 하나의 폐루프로 연결해야 합니다.</text>
+
+  <path d="M260 282H310" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <path d="M438 282H478" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M606 282H646" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 282H814" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M878 336V406H770" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M846 336V454H170V378" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="40" y="112" width="220" height="266" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="145" y="142" text-anchor="middle" class="label">작업 설명</text>
+  <text x="115" y="177" text-anchor="end" class="note">목표</text><text x="125" y="177" class="tiny">최종 결과물</text>
+  <text x="115" y="207" text-anchor="end" class="note">배경</text><text x="125" y="207" class="tiny">수행 이유</text>
+  <text x="115" y="237" text-anchor="end" class="note">입력</text><text x="125" y="237" class="tiny">반드시 확인할 자료</text>
+  <text x="115" y="267" text-anchor="end" class="note">제약</text><text x="125" y="267" class="tiny">범위와 금지 사항</text>
+  <text x="115" y="297" text-anchor="end" class="note">인수 조건</text><text x="125" y="297" class="tiny">관찰 가능한 증거</text>
+  <text x="115" y="327" text-anchor="end" class="note">권한</text><text x="125" y="327" class="tiny">네트워크 · 쓰기 · 승인</text>
+  <line x1="62" y1="344" x2="228" y2="344" stroke="#1e293b"/>
+  <text x="145" y="364" text-anchor="middle" class="tiny">정보가 부족하면 추측하지 말고 먼저 질문</text>
+
+  <rect x="310" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="374" y="266" text-anchor="middle" class="label">탐색</text>
+  <text x="374" y="291" text-anchor="middle" class="note">현재 상태 · 범위</text>
+  <text x="374" y="311" text-anchor="middle" class="note">위험 · 미지 사항</text>
+
+  <rect x="478" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="542" y="266" text-anchor="middle" class="label">계획</text>
+  <text x="542" y="291" text-anchor="middle" class="note">단계 · 파일</text>
+  <text x="542" y="311" text-anchor="middle" class="note">위험 · 검증</text>
+
+  <rect x="646" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="710" y="266" text-anchor="middle" class="label">실행</text>
+  <text x="710" y="291" text-anchor="middle" class="note">작은 단위로 수정</text>
+  <text x="710" y="311" text-anchor="middle" class="note">범위 제어</text>
+
+  <rect x="814" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="878" y="266" text-anchor="middle" class="label">검증</text>
+  <text x="878" y="291" text-anchor="middle" class="note">테스트 · diff</text>
+  <text x="878" y="311" text-anchor="middle" class="note">스크린샷 · 출처</text>
+
+  <rect x="490" y="382" width="280" height="62" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="630" y="408" text-anchor="middle" class="label">통과: 검증 가능한 결과 전달</text>
+  <text x="630" y="429" text-anchor="middle" class="tiny">결과물 + 증거 + 잔여 위험</text>
+  <text x="905" y="393" class="tiny" fill="#34d399">통과</text>
+  <text x="460" y="472" class="tiny" fill="#fb7185">실패: 실패 증거와 함께 작업 설명 또는 계획으로 복귀</text>
+</svg>

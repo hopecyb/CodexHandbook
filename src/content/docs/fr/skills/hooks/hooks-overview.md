@@ -3,147 +3,91 @@ title: Vue d'ensemble des Hooks
 description: Insérer validation, journalisation et audit aux points clés de l'Agent — compléter sécurité et conformité d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 169a1ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-En bref, un Hook insère automatiquement une vérification ou un journal à un point clé.
+Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
 
-Les **Hooks** permettent d'exécuter une logique personnalisée à des nœuds fixes de la chaîne d'exécution Codex — par exemple scan de secrets pre-commit, journalisation d'appels MCP ou blocage de commandes dangereuses. Ils complètent la politique et l'observabilité depuis [approbations et sandbox](/guide/cli/approvals-and-sandbox/).
+![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-fr.svg)
 
-## Contenu
+The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
 
-- Comment les Hooks diffèrent des Skills et MCP
-- Cas d'usage typiques en équipe
-- Principes de sécurité lors de la conception des Hooks
+## Configuration discovery
 
-## Pourquoi les équipes utilisent les Hooks
+Codex looks beside active configuration layers for:
 
-Même si vous ne écrirez pas les Hooks vous-même, sachez ce que les équipes en font :
+- `~/.codex/hooks.json`
+- `[hooks]` in `~/.codex/config.toml`
+- `<repo>/.codex/hooks.json`
+- `[hooks]` in `<repo>/.codex/config.toml`
+- Hooks bundled with enabled Plugins
+- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
 
-- Pourquoi certaines actions ont une porte supplémentaire à un point clé
-- Pourquoi on dit « cette vérification est un Hook, pas un Skill »
-- Pourquoi certaines règles vivent sur des nœuds système plutôt que dans les prompts
+Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
 
-Beaucoup de moments « pourquoi cette vérification supplémentaire ? » en équipe sont des Hooks.
+When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
 
-Comparer les options : [Choisir une méthode d'extension](/skills/choosing-an-extension-method/)
+## Review every unmanaged Hook
 
-## Ce que font les Hooks
+Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
 
-| Phase (conceptuelle) | Ce qu'un Hook peut faire |
-|---|---|
-| Avant appel d'outil | Rejeter commandes avec `rm -rf`, fuite de `.env`, etc. |
-| Après appel d'outil | Écrire journaux d'audit vers SIEM |
-| Fin de session | Synthétiser les fichiers modifiés |
-| Avant création de PR | Vérifier format du numéro d'issue |
+Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
 
-## Distinguer Hook et Skill
+## Two executable handlers
 
-- **Skill** : Indiquer à Codex « pour ce type de tâche, suivez ce workflow »
-- **Hook** : Indiquer au système « à ce nœud, exécutez d'abord une vérification automatique »
-
-Ils résolvent des problèmes différents :
-
-- Skill = instructions de workflow
-- Hook = porte ou point d'observation sur le processus
-
-Noms d'événements et format de config exacts : [documentation officielle Hooks](https://developers.openai.com/codex).
-
-## Comparé à Skill / MCP
-
-| | Hooks | Skill | MCP |
-|---|---|---|---|
-| Déclenchement | Événements système | Invocation utilisateur ou modèle | Requêtes d'outils |
-| Objectif | Politique, audit | Instructions de workflow | Systèmes externes |
-| Mainteneur | Infra plateforme/équipe | Produit ou ingénierie | Développeurs d'intégration |
-
-## Idées reçues courantes
-
-### 1. Les Hooks remplacent approbation et sandbox
-
-Les Hooks sont une couche de vérification complémentaire — pas la seule limite de sécurité.
-
-### 2. Plus de Hooks = plus sûr
-
-Trop de Hooks lents, lourds et opaques ralentissent le flux et rendent le débogage pénible.
-
-### 3. Les Hooks ne sont pas pour la logique complexe
-
-Les Hooks conviennent au travail :
-
-- Rapide
-- Déterministe
-- Facile à tester
-
-Ne ajoutez pas une autre couche de raisonnement lourd ici.
-
-## Cas d'usage Hook recommandés en équipe
-
-1. **Détection de fuite de secrets** : Bloquer quand le diff correspond aux motifs de clé AWS
-2. **Vérification d'en-tête de licence** : Avertir quand de nouveaux fichiers n'ont pas la notice de copyright de l'entreprise
-3. **Journalisation de conformité** : Qui, quand, actions d'écriture sur quel dépôt (masquées)
-4. **Alignement avec CI** : Règles Hook locales partagent la source avec GitHub Action quand possible
-
-## Garde-fous à commencer en premier
-
-Un Hook doit commencer étroit et déterministe, pas comme un grand « juge intelligent ».
-
-| Modèle Hook | Première version | Version mature |
+| Handler | Purpose | Boundary |
 |---|---|---|
-| Audit commande | Logger commande, heure, dossier | Alerter ou demander confirmation sur commandes à risque |
-| Scan secrets | Avertir sur `.env`, fichiers key ou token probable | Bloquer et expliquer la correction |
-| Format | Signaler les écarts | Utiliser le même formatter que CI |
-| Dépendances | Demander revue sur fichiers package | Brancher politique vulnérabilités/licences |
-| Résumé session | Enregistrer fichiers et vérifications | Alimenter handoff ou modèle PR |
+| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
+| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
 
-Un bon Hook échoue de façon ennuyeuse : message clair, rayon limité, contournement journalisé.
+The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
 
-## Ordre d'adoption
+## Runtime behavior
 
-1. Commencer par journaliser
-2. Puis avertir seulement les risques très probables
-3. Bloquer ensuite uniquement les règles déterministes acceptées
-4. Réutiliser CI pour éviter la divergence local/distant
+- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
+- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
+- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
+- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
 
-## Quand les Hooks conviennent
+## Relationship to other security layers
 
-Une vérification appartient à un Hook si :
+| Layer | Responsibility |
+|---|---|
+| Sandbox | Filesystem, network, and system capability boundary |
+| Approval | Human decision before high-risk actions |
+| Command rules | Declarative allow/deny for known command patterns |
+| Hook | Custom, testable logic at lifecycle points |
+| Service permission | Final external-system read/write authority |
 
-- Elle se produit toujours au même nœud
-- Les personnes ne doivent pas la mémoriser manuellement à chaque fois
+Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
 
-Exemples : scan de données sensibles, validation de nommage, enregistrements d'audit.
+## Adoption order
 
-## Principes de conception
+1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
+2. Use `systemMessage` or additional context for high-confidence warnings.
+3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
+4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
 
-- **Rapide** : les timeouts Hook ralentissent chaque appel d'outil
-- **Déterministe** : éviter d'appeler un LLM dans un Hook
-- **Testable** : tests unitaires des scripts Hook avec entrée fixe
-- **Désactivable** : l'équipe peut contourner en urgence (avec audit)
+## Acceptance checklist
 
-Angle sécurité : roadmap `11-team-enterprise` ; les utilisateurs personnels commencent souvent par des Hooks journal en lecture seule.
+- [ ] Event names come from the current official list.
+- [ ] Matchers cover only required tools or sources.
+- [ ] Scripts have fixture tests and readable errors.
+- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
+- [ ] Failure, timeout, and disabled paths were exercised.
+- [ ] The team understands trust changes shown by `/hooks`.
 
-Les Hooks conviennent aux vérifications automatiques aux points clés du système. Ce n'est pas des instructions de workflow et ne remplace pas l'approbation.
+## Official source
 
-## Erreurs courantes
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
-- Scripts Hook avec accès écriture réseau deviennent une nouvelle surface d'attaque
-- Règles dupliquées et contradictoires avec `AGENTS.md`
-- Config Hook non versionnée — environnements des collègues divergent
-
-## Liste de validation
-
-- [ ] Peut nommer le scénario Hook dont l'équipe a le plus besoin
-- [ ] Message d'erreur clair pour les développeurs quand le Hook échoue
-- [ ] Config incluse en revue de code
-
-## Sources de référence
-- Documentation OpenAI Codex Hooks
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** CLI / App (selon version)  
-**Base de vérification :** Cette page dépend des capacités Hook actuelles, nœuds typiques et gouvernance d'équipe ; la documentation publique officielle manque de détail — réécriture nécessaire pour les clients actuels.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
+
+**Last verified:** 2026-08-25

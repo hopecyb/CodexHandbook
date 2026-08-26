@@ -50,11 +50,14 @@ CLI 安装完成，不是命令跑过一次就算，而是你当前终端能稳�
 更实际的判断标准是：当前终端能找到它，而且你已经能完成认证。
 
 也可对照：[安装 CLI](/guide/getting-started/install-cli/)
-官方安装与升级说明见 [OpenAI Codex 文档](https://developers.openai.com/codex)。
+官方安装与升级说明见 [Codex CLI](https://learn.chatgpt.com/docs/codex/cli)。macOS/Linux 官方独立安装器使用同一命令完成安装与更新；Windows、npm 和 Homebrew 方式以官方页面的对应标签为准。
 
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页虽然讲的是安装后检查思路，但正文仍默认存在某一套当前安装、更新与认证流程；由于官方 CLI 安装方式、认证步骤与版本确认命令都属于高波动细节，在未补齐最新版官方安装文档前，不宜标为 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已对照当前官方 CLI 快速开始，确认 macOS/Linux、Windows、npm、Homebrew 安装入口、更新路径与 `codex` 登录流程；具体命令集中到新手安装页维护。
+
+**最近核验：** 2026-08-26

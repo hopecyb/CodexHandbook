@@ -3,9 +3,10 @@ title: Error Reference
 description: Learning index of common errors, exit codes, and failure modes—points to troubleshooting, not official support.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many people stare at one English line and guess. Classifying the problem first usually works better.
@@ -20,14 +21,14 @@ Decide if it looks like **auth, permissions, environment, network, or task logic
 
 Often faster than guessing.
 
-Global index: [Troubleshooting](/guide/reference/troubleshooting/)
+Global index: [Troubleshooting](/en/guide/reference/troubleshooting/)
 
 ## Authentication and account
 
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
-| Authentication failed / 401 | Expired token, not signed in | [Sign-in and authentication](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | Org disabled feature or model | Contact admin; [Account and access](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | Expired token, not signed in | [Sign-in and authentication](/en/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | Org disabled feature or model | Contact admin; [Account and access](/en/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Too frequent or quota | Retry later; check plan usage |
 
 ## Common misconceptions
@@ -54,9 +55,9 @@ Earlier lines may show step, file, command, or underlying reason.
 
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
-| command not found: codex | Not installed or PATH | [Install CLI](/guide/getting-started/install-cli/) |
-| Config parse error | TOML/YAML syntax | [CLI configuration](/guide/cli/configuration/) |
-| Permission denied (write) | Sandbox or approval denial | [Approvals and sandbox](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | Not installed or PATH | [Install CLI](/en/guide/getting-started/install-cli/) |
+| Config parse error | TOML/YAML syntax | [CLI configuration](/en/guide/cli/configuration/) |
+| Permission denied (write) | Sandbox or approval denial | [Approvals and sandbox](/en/guide/cli/approvals-and-sandbox/) |
 | Non-zero exit (exec) | Task failed or completion criteria unmet | Check stderr; tighten prompt |
 
 ## Five categories
@@ -94,23 +95,23 @@ Use this page to land in the right category when unsure.
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
 | User rejected tool call | You or policy rejected action | Confirm if approval was right; or change task |
-| Sandbox violation | Path or command out of bounds | [Sandbox and network](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Egress blocked | Cloud: [Internet access](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | Path or command out of bounds | [Sandbox and network](/en/guide/foundations/sandbox-and-network/) |
+| Network access denied | Egress blocked | Cloud: [Internet access](/en/guide/web-and-cloud/internet-access/) |
 
 ## Cloud and GitHub
 
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
-| Repository access denied | Insufficient OAuth scope | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Repo name, permissions, network | [Cloud troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Wrong name or scope | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Branch protection | [Create pull requests](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Insufficient OAuth scope | [Connect GitHub](/en/guide/web-and-cloud/connect-github/) |
+| Clone failed | Repo name, permissions, network | [Cloud troubleshooting](/en/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Wrong name or scope | [Secrets and variables](/en/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Branch protection | [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP and extensions
 
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
-| MCP server failed to start | Command path, missing dependency | [Connect MCP](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | Command path, missing dependency | [Connect MCP](/en/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | Slow or down external API | Retry; check MCP logs |
 | Unknown tool | Config/server version mismatch | Restart session; update config |
 
@@ -118,14 +119,14 @@ Use this page to land in the right category when unsure.
 
 | Message or symptom | Likely cause | Next step |
 |---|---|---|
-| Context length exceeded | Conversation or @ files too large | [Compaction](/guide/context/compaction/) · narrow scope |
-| Model not available | Region or plan limitation | [Models and reasoning](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Conversation or @ files too large | [Compaction](/en/guide/context/compaction/) · narrow scope |
+| Model not available | Region or plan limitation | [Models and reasoning](/en/guide/foundations/models-and-reasoning/) |
 
 ## Using this page
 
 1. **Copy key phrase** into client or handbook search
 2. Follow table to topic checklist
-3. Still stuck: keep full log; see [Official resources](/guide/reference/official-resources/)
+3. Still stuck: keep full log; see [Official resources](/en/guide/reference/official-resources/)
 
 ## Help others help you
 

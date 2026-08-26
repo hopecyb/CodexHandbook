@@ -3,9 +3,10 @@ title: 브라우저 도구
 description: Codex가 웹페이지를 열고 UI 상태를 점검하며 프론트엔드 동작을 검증 — 능력과 경계.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ sidebar:
 | 정적 페이지와 구현 대조 | 완전한 E2E 테스트 프레임워크 대체 |
 | 페이지 가시 텍스트를 읽어 디버그 보조 | 복잡한 사람 검증이 필요한 사이트 |
 
-선택 배경: [도구 선택](/guide/tools/tool-selection/)
+선택 배경: [도구 선택](/ko/guide/tools/tool-selection/)
 
 ## 다른 도구와 비교
 
@@ -83,7 +84,7 @@ sidebar:
 1. **로컬 프론트**: 먼저 `npm run dev`, 이어서 `http://localhost:PORT/path`
 2. **작업을 분명히**: 「로그인 폼이 375px 너비에서 넘치는지」 — 「웹 좀 봐」가 아님
 3. **경계를 씀**: 외부망 금지, 프로덕션에 폼 제출 금지
-4. **검증**: [산출물 검증](/guide/quality/verify-artifacts/)과 스크린샷 대조
+4. **검증**: [산출물 검증](/ko/guide/quality/verify-artifacts/)과 스크린샷 대조
 
 ## 바로 쓸 수 있는 쓰기
 
@@ -100,9 +101,9 @@ http://localhost:4321/guide/foundations/local-vs-cloud/ 만 방문하고, 첫 �
 - 기본적으로 브라우저는 **당신 기기·환경이 접근할 수 있는 모든 것**에 닿을 수 있다고 가정 — 사내 admin 포함
 - 작업에 선언: `localhost만` 또는 허용 도메인 화이트리스트
 - 이미 개인 계정으로 로그인한 브라우저 설정에서 신뢰하지 않는 저장소 작업을 돌리지 않음
-- Cloud 환경 브라우저 정책은 [Cloud 환경](/guide/web-and-cloud/cloud-environments/)과 네트워크 정책에 따름
+- Cloud 환경 브라우저 정책은 [Cloud 환경](/ko/guide/web-and-cloud/cloud-environments/)과 네트워크 정책에 따름
 
-승인 개념: [권한과 승인](/guide/foundations/permissions-and-approvals/)
+승인 개념: [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
 
 ## 흔한 실수
 

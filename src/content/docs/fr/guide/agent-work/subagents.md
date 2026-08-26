@@ -1,148 +1,131 @@
 ---
 title: Sous-agents
-description: Déléguer des sous-Tâches à un Contexte isolé — quand diviser, comment transférer, comment accepter.
+description: Déléguez un travail bien délimité à des contextes indépendants, puis laissez l'Agent principal réunir les preuves, résoudre les conflits et accepter le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d65f0ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 30
 ---
 
-Un **Sous-agent** est une **unité de travail indépendante** que l'Agent principal démarre pour un sous-problème spécifique — Contexte relativement isolé, résultats résumés vers le fil principal.
+Un **sous-agent** est une unité de travail indépendante lancée par l'Agent principal pour traiter un sous-problème défini. Il dispose de son propre contexte et renvoie ses conclusions et ses preuves au fil principal. Les décisions globales et l'acceptation finale restent du ressort de l'Agent principal.
 
-Considérez-le comme confier une petite Tâche clairement bornée à un assistant qui ne se concentre que sur cette pièce. La valeur n'est pas « plus cool » — c'est un focus plus propre, une parallélisation plus facile.
+![Orchestration des sous-agents Codex : l'Agent principal délègue un travail délimité, les sous-agents renvoient des preuves, puis l'Agent principal les réunit et vérifie](/diagrams/subagent-orchestration-fr.svg)
 
-## Concept fondamental
+## Trois niveaux d'isolation
 
-| Agent principal | Sous-agent |
-|---|---|
-| Porte l'objectif global et la conversation utilisateur | Se concentre sur une sous-Tâche |
-| Le Contexte inclut l'historique complet | Contexte plus propre pour l'exploration profonde |
-| Coordonne et fusionne les résultats | Exécute exploration, recherche, implémentation spécialisée |
-
-vs [Agents parallèles](/guide/desktop-app/parallel-agents/) : les sous-agents sont généralement **délégués par l'Agent principal**, pas plusieurs fenêtres que vous ouvrez manuellement (les implémentations produit peuvent se chevaucher — suivre l'UI actuelle).
-
-## Quand la division paie
-
-Toutes les grandes Tâches n'ont pas besoin d'une division — envisagez-la quand :
-
-- Un sous-problème nécessite sa propre exploration profonde
-- Ce sous-problème est un type de travail différent de la ligne principale
-- Vous voulez une conclusion indépendante avant de continuer
-
-Alors un sous-agent bat généralement le fil principal jonglant détail global et local en même temps.
-
-## Cas d'usage
-
-| Bon choix | Mauvais choix |
-|---|---|
-| Recherche ciblée : « comment le module auth valide le token » dans un grand repo | Nécessite des clarifications continues avec vous |
-| Recherche parallèle sur deux options techniques | Sous-Tâches nécessitent des éditions mutuellement exclusives du même fichier |
-| Analyse longue en lecture seule sans polluer le Contexte principal | Pas de livrable clair — « juste regarder » |
-
-## Rôles de subagent à pérenniser
-
-Dans les délégations ponctuelles, ce qui vaut la peine d'être conservé, ce sont les rôles avec frontières nettes et format de rendu stable.
-
-| Rôle | Livrable fort | Contrainte recommandée |
+| Niveau | Isolé ? | Signification |
 |---|---|---|
-| Relecteur code | Problèmes par gravité, fichier, tests manquants | Lecture seule par défaut ; ne corrige pas sans demande |
-| Ingénieur tests | Trous de couverture, cas à ajouter, commandes | Un paquet ou workflow à la fois |
-| Rédacteur documentation | API, migration, guide utilisateur | Relié au code et au style existant |
-| Debugger | Reproduction, cause probable, plan de vérification | Conclusion fondée sur logs, tests ou chemin code |
-| Relecteur sécurité | Menaces, chemins d'abus, risques secrets | Lecture seule, périmètre clair |
-| Analyste performance | Hypothèse de goulot, mesure, optimisations peu risquées | Benchmark ou expérience reproductible requis |
+| Contexte de conversation | Oui | Chaque sous-agent se concentre sur sa tâche sans emporter tous les détails du fil principal |
+| Bac à sable et mode d'autorisation | Hérités | Une exécution indépendante n'accorde pas de droits supplémentaires |
+| Fichiers du workspace | Pas nécessairement | Plusieurs Agents peuvent voir le même workspace ; des écritures concurrentes peuvent entrer en conflit |
 
-Pour une tâche d'implémentation, demandez d'abord un plan de patch. La fusion et la vérification finale restent dans le fil principal.
+Règle essentielle : **l'isolation du contexte n'est pas l'isolation des fichiers.** Avant de modifier en parallèle, répartissez la propriété par répertoire, composant ou worktree.
 
-## Idées reçues courantes
+## Disponibilité actuelle
 
-### 1. Plus de sous-agents n'est pas toujours mieux
+Les versions actuelles de Codex proposent les sous-agents par défaut et rendent leur activité visible dans les interfaces concernées de l'App de bureau, de la CLI et de l'IDE. Les détails de l'interface peuvent changer ; le principe stable consiste à demander à Codex de déléguer les travaux indépendants, tandis que le fil principal se charge de leur synthèse.
 
-Trop nombreux ajoute du coût :
+Dans la CLI, utilisez `/agent` pour examiner les fils ou passer de l'un à l'autre. Les interfaces IDE compatibles affichent les Agents en arrière-plan, et l'App de bureau montre l'activité des fils de la tâche. Les contrôles exacts dépendent du client et du compte.
 
-- Plus de résultats à lire
-- Conclusions conflictuelles
-- Overhead de coordination peut excéder le bénéfice
+## Quand décomposer le travail
 
-### 2. Tâche complexe → toujours sous-agents ?
+Envisagez un sous-agent lorsque la tâche répond à au moins deux critères :
 
-Pas si fortement couplée et nécessite des confirmations fréquentes — le fil principal peut être moins coûteux.
+1. Elle peut être décrite indépendamment, sans synchronisation fréquente avec le fil principal.
+2. Elle possède un livrable explicite, comme une liste de fichiers, un résultat de test ou une conclusion d'une page.
+3. Elle peut s'exécuter en parallèle, ou une exploration isolée réduit fortement le bruit dans le fil principal.
 
-### 3. Les sous-agents peuvent aussi faire toutes les éditions ?
+### Travaux adaptés au parallélisme
 
-Dépend de la délégation — mais défaut plus sûr :
+- Cartographier en lecture seule le frontend, le backend et les tests séparément.
+- Examiner en parallèle plusieurs tests en échec sans lien entre eux.
+- Recueillir des preuves séparées pour deux options techniques.
+- Confier à des rôles spécialisés la sécurité, les performances ou la documentation.
 
-- Sous-agent fait analyse lecture seule, comparaison, localisation
-- Fil principal décide s'il modifie après lecture des conclusions
+### Travaux à conserver dans le fil principal
 
-## Workflow recommandé
+- Les exigences restent floues et demandent un dialogue avec l'utilisateur.
+- Les étapes doivent être exécutées dans un ordre strict.
+- Les modifications se concentrent dans un même fichier ou une même zone de code.
+- « Explorer » n'est associé à aucun critère de fin.
 
-### 1. L'Agent principal écrit le contrat de sous-Tâche
+Les sous-agents augmentent la consommation de tokens et le coût de synthèse. Ne parallélisez pas une petite tâche qu'un seul fil clair peut traiter efficacement.
 
-```text
-Sous-Tâche : analyse lecture seule de la logique de refresh de session dans packages/auth.
-Livrable : résumé dans 1 page + chemins de fichiers clés + risques.
-Interdit : changer un fichier ; ne pas pousser.
-```
+## Les responsabilités de l'Agent principal demeurent
 
-Ce qui compte est clarifier quatre choses :
+L'Agent principal conserve :
 
-- Exactement ce qu'il gère
-- À quoi ressemble la sortie
-- Actions interdites
-- Qui décide après le retour
+- l'objectif global, les contraintes de l'utilisateur et les décisions finales ;
+- les limites des sous-tâches et la propriété des fichiers ;
+- l'arbitrage entre des conclusions contradictoires ;
+- les tests et le build après fusion, ainsi que le compte rendu des risques.
 
-### 2. Le sous-agent exécute et retourne un résultat structuré
+Lorsqu'un sous-agent indique « terminé », il signale seulement la fin de sa sous-tâche ; cela ne prouve pas que la tâche globale est terminée.
 
-Format attendu :
+## Rédiger un contrat de délégation vérifiable
 
 ```text
-## Conclusion
-## Preuves (fichier:ligne)
-## Prochaines étapes suggérées
-## Questions ouvertes
+Lance un sous-agent pour analyser en lecture seule le renouvellement de session
+dans packages/auth.
+
+Périmètre : packages/auth et les tests associés ; ne modifier aucun fichier.
+Question : un ancien token peut-il être réutilisé après l'échec du renouvellement ?
+Livrable : conclusion, fichiers et lignes clés, parcours de reproduction, test conseillé.
+Vérification : chaque affirmation doit être vérifiable dans le code ou les tests.
+Retour : moins de 500 mots ; le fil principal décide de toute modification.
 ```
 
-### 3. L'Agent principal fusionne et décide
+Ce contrat précise la responsabilité, le périmètre, la question, l'interdiction, la méthode de vérification et le propriétaire de la décision.
 
-Le fil principal (ou vous) choisit un chemin, puis entre en exécution selon [explorer—planifier—exécuter—vérifier](/cases/workflows/explore-plan-execute-verify/).
+## Exemple en trois branches
 
-### 4. Acceptation
+Pour une régression de connexion intermittente :
 
-- La sortie du sous-agent peut être vérifiée indépendamment (ouvrir les fichiers et vérifier) ?
-- A-t-il modifié le repo sans permission ?
-- Si plusieurs sous-agents sont en conflit, est-ce signalé ?
+| Sous-tâche | Autorisation et périmètre | Livrable |
+|---|---|---|
+| A : parcours du code | Lecture seule de `src/auth/` | Chaîne d'appels du point d'entrée à la branche en échec |
+| B : preuves de test | Lecture seule des tests et journaux | Reproduction stable minimale |
+| C : changements récents | Lecture seule de l'historique Git associé | Modification la plus susceptible d'avoir introduit la régression et preuves |
 
-## Quand envisager une division
+Lorsque les trois résultats reviennent, comparez les preuves avant de choisir une correction. Ne laissez pas A, B et C modifier simultanément `src/auth/session.ts`.
 
-Si une sous-Tâche remplit deux sur trois :
+## Isoler les écritures parallèles
 
-1. Peut être décrite indépendamment
-2. A un livrable clair
-3. N'a pas besoin de partage constant de Contexte fin avec le fil principal
+1. Répartissez les écritures entre des répertoires ou composants sans chevauchement.
+2. Attribuez des worktrees ou des branches distincts.
+3. Indiquez précisément les fichiers dont chaque Agent est responsable.
+4. Laissez l'Agent principal fusionner les résultats et relancer la vérification.
 
-## Avec Skills et MCP
+La réussite des tests isolés ne garantit pas celle de l'ensemble une fois fusionné.
 
-- **Skill** : format de livrable standard pour sous-Tâches (ex. checklist de revue sécurité)
-- **MCP** : sous-agent interroge en lecture seule les tickets externes ; Agent principal synthétise
+## Liste de contrôle d'acceptation
 
-## Erreurs courantes
+- Le résultat répond-il à la question initiale sans élargir le périmètre ?
+- Contient-il des emplacements de fichiers, journaux ou tests vérifiables ?
+- Respecte-t-il les contraintes de lecture seule, de répertoire et de commande ?
+- Les résultats contradictoires ont-ils été explicitement arbitrés ?
+- Les tests complets et le build ont-ils été relancés après la fusion ?
+- Les problèmes non résolus et les risques restants sont-ils indiqués ?
 
-- Périmètre sous-agent trop grand — devient un second Agent principal
-- Pas de retour structuré — fil principal re-lit de longs logs
-- Plusieurs sous-agents éditant le même répertoire en parallèle
+## Associer les autres capacités
 
-Les sous-agents conviennent aux sous-problèmes avec limites claires, livrables clairs et complétion indépendante — pas dupliquer toute la Tâche principale.
+- Un **Skill** conserve une méthode de sous-tâche et son format de sortie.
+- **MCP** fournit des outils ou des données externes contrôlés.
+- Un **Hook** ajoute des garde-fous au démarrage, à l'arrêt ou aux appels d'outils d'un sous-agent.
+- Un **worktree** isole les modifications de fichiers ; il résout les conflits de workspace, pas ceux de contexte.
 
-## Lectures complémentaires
-
-- [Coordination multi-agents](/cases/workflows/multi-agent-coordination/)
-- [Transfert et reprise](/guide/agent-work/handoff-and-resume/)
+Poursuivez avec [Coordination multi-Agent](/fr/cases/workflows/multi-agent-coordination/) et [Passation et reprise](/fr/guide/agent-work/handoff-and-resume/).
 
 ---
 
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / Cloud  
-**Base de vérification :** Vérifié croisé avec le matériel public OpenAI Developers sur les workflows multi-agents, longue durée et parallèles ; cette page confirme des principes stables — sous-Tâches isolées, limites claires, livrables explicites — tandis que les détails UI et planification restent non contractuels « selon le produit actuel ».  
-**Dernière vérification :** 2026-07-26
+**Statut :** verified
+
+**Produits concernés :** App / CLI / IDE
+
+**Base de vérification :** comparaison avec la documentation actuelle sur les sous-agents. Cette page explique l'isolation du contexte, l'héritage des autorisations, les points d'accès à l'activité, le coût en tokens, les conflits d'écriture et la responsabilité finale de l'Agent principal.
+
+**Dernière vérification :** 2026-08-26

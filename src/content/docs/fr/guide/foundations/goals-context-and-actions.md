@@ -3,9 +3,10 @@ title: Objectifs, Contexte et actions
 description: Décomposer une interaction réussie en objectif, contexte, actions et acceptation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -17,7 +18,7 @@ Une interaction Codex fiable comporte généralement quatre parties :
 3. **Actions** : étapes que Codex peut entreprendre (lire, modifier, exécuter)
 4. **Acceptation** : ce que signifie « terminé » et comment vérifier
 
-Les chapitres de prompting développent ces quatre éléments en cadre stable — voir [Anatomie d'une bonne Tâche](/prompts/task-anatomy/).
+Les chapitres de prompting développent ces quatre éléments en cadre stable — voir [Anatomie d'une bonne Tâche](/fr/prompts/task-anatomy/).
 
 ## Petit exemple
 

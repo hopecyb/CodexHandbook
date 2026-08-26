@@ -3,9 +3,10 @@ title: Ändern-Vorlage
 description: Begrenzte Iteration auf Bestehendem.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ändern-Vorlage
@@ -63,8 +64,8 @@ Neben „was ändern“ muss klar sein: „nur bis wohin“.
 
 ## Verwandt
 
-- [Fertigstellungsstandard definieren](/prompts/define-done/)
-- [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
+- [Fertigstellungsstandard definieren](/de/prompts/define-done/)
+- [Constraints und Grenzen](/de/prompts/constraints-and-boundaries/)
 
 ---
 

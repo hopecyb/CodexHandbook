@@ -3,9 +3,10 @@ title: 설정
 description: 설정 파일과 profiles 설명 페이지 — 어떤 동작을 설정에 두고, 무엇을 두면 안 되는지 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 “설정” 그룹을 처음 보면 파라미터 이름 나열이라고 생각하기 쉽습니다.
@@ -14,8 +15,8 @@ translated_at: 2026-07-28
 
 ## 권장 순서
 
-1. [설정 기초](/guide/customization/configuration/config-basics/)
-2. [Profiles](/guide/customization/configuration/profiles/)
+1. [설정 기초](/ko/guide/customization/configuration/config-basics/)
+2. [Profiles](/ko/guide/customization/configuration/profiles/)
 
 ## 이 그룹이 푸는 문제
 

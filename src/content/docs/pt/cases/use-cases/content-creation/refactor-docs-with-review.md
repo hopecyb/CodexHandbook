@@ -3,9 +3,10 @@ title: Refatorar um site de documentação com revisão
 description: "Caso: atualizar ligações e capítulos em lote num projeto de documentação Astro/Starlight — diffs pequenos, verificação por build."
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Este caso demonstra tarefas de **engenharia de conteúdo**: Markdown multi-ficheiro, configuração da barra lateral, verificação por build. A stack é semelhante à deste manual, mas o cenário migra para qualquer site estático.
@@ -19,7 +20,7 @@ Este caso demonstra tarefas de **engenharia de conteúdo**: Markdown multi-fiche
 | Risco | Médio (muitas ligações e navegação) |
 | Duração | 1–3 horas (conforme a escala) |
 
-Descrição do modelo: [modelo de caso](/cases/use-cases/case-study-template/)
+Descrição do modelo: [modelo de caso](/pt/cases/use-cases/case-study-template/)
 
 ## Contexto
 
@@ -50,7 +51,7 @@ Passos: alterar config primeiro, depois escrever o md, por fim atualizar 12-refe
 
 - **Config primeiro, conteúdo depois:** evitar build a reportar missing slug
 - Commit de 3–5 ficheiros por lote, para facilitar a review
-- Usar [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/)
+- Usar [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
 
 ## Verificação
 

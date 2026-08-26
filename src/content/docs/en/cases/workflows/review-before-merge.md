@@ -3,12 +3,13 @@ title: Review before merge
 description: Structured diff and risk review with Codex before merge—clear human–machine roles.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-**Review before merge** puts [quality and verification](/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not replace human merge decisions.
+**Review before merge** puts [quality and verification](/en/guide/quality/) into the Git flow: before a PR merges, use Codex to check diff, tests, security, and spec alignment. Automated comments alone do not replace human merge decisions.
 
 ## What's covered
 
@@ -32,7 +33,7 @@ Output a checklist with P0/P1 labels.
 
 - Fixed prompt version + read-only token
 - Results in PR comment or check run
-- See [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- See [Code review automation](/en/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Recommended review dimensions
 
@@ -44,7 +45,7 @@ Output a checklist with P0/P1 labels.
 | Maintainability | Naming, duplication, public API |
 | Spec | Alignment with issue/spec doc |
 
-Pair with [Review diffs](/guide/quality/review-diffs/); high-risk items follow [Human approval patterns](/cases/workflows/human-approval-patterns/).
+Pair with [Review diffs](/en/guide/quality/review-diffs/); high-risk items follow [Human approval patterns](/en/cases/workflows/human-approval-patterns/).
 
 ## Common mistakes
 
@@ -67,8 +68,8 @@ Pair with [Review diffs](/guide/quality/review-diffs/); high-risk items follow [
 
 ## Related chapters
 
-- [Cloud code review](/guide/web-and-cloud/code-review/)
-- [Create pull requests](/guide/web-and-cloud/create-pull-requests/)
+- [Cloud code review](/en/guide/web-and-cloud/code-review/)
+- [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

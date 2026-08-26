@@ -3,9 +3,10 @@ title: Présentations
 description: Générer et réviser slides et decks — structure, masters et notes du présentateur.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Choisir par audience :
 5. Exporter PDF, répéter le timing
 ```
 
-Aligné avec [Explorer–planifier–exécuter–vérifier](/cases/workflows/explore-plan-execute-verify/) : approuver le plan avant le détail.
+Aligné avec [Explorer–planifier–exécuter–vérifier](/fr/cases/workflows/explore-plan-execute-verify/) : approuver le plan avant le détail.
 
 ## Pourquoi la structure vient en premier
 
@@ -110,13 +111,13 @@ Exemple de ton :
 
 Mieux que « faire un super PPT ».
 
-Images : [Images et captures d'écran](/guide/files-and-artifacts/images-and-screenshots/) ; génération pure : [Génération d'images](/guide/tools/image-generation/).
+Images : [Images et captures d'écran](/fr/guide/files-and-artifacts/images-and-screenshots/) ; génération pure : [Génération d'images](/fr/guide/tools/image-generation/).
 
 ## Vérification
 
 - Taille de police lisible à la résolution de projection
 - Animation sobre (difficile à maintenir si excessive)
-- Nombres correspondent à [Valider les sources](/guide/quality/validate-sources/)
+- Nombres correspondent à [Valider les sources](/fr/guide/quality/validate-sources/)
 - Notes du présentateur suffisantes si nécessaire
 
 ## Ce qu'il faut déléguer vs garder

@@ -3,9 +3,10 @@ title: diff 심사
 description: 변경을 읽고 질문하는 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7dc8ee8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -31,7 +32,7 @@ diff를 읽을 때 중점:
 3. 네이밍과 스타일이 일치하는가?
 4. 키나 디버그 잔여물이 있는가?
 
-제품 측 뷰: [diff, 코멘트와 심사](/guide/desktop-app/diffs-comments-and-review/)
+제품 측 뷰: [diff, 코멘트와 심사](/ko/guide/desktop-app/diffs-comments-and-review/)
 
 ## 흔한 오해
 

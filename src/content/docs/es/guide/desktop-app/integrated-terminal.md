@@ -1,55 +1,72 @@
 ---
-title: Terminal integrada
-description: Usar la terminal dentro de la App junto con las Tareas.
+title:  Terminal integrada
+description:  Usar la terminal dentro de la App junto con las Tareas.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 918b2bf
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
 
-La terminal integrada facilita ver la salida de los comandos que ejecuta el Agent, o lanzar tú mismo comandos de verificación.
+Every chat in the ChatGPT desktop App has a terminal scoped to the current project or worktree. It is not just a place to view logs. It is also the evidence window you use to verify Codex's conclusions.
 
-Sin salir de la App de escritorio, también puedes ver aquí el proceso y el resultado de los comandos.
+Open it from the terminal icon in the upper-right corner of the App, or press `Ctrl` and the backtick key together. ChatGPT can read the current terminal output, so you can ask it to analyze a failed build or a running development server.
 
-Al empezar, presta atención a esto:
+## Minimal verification flow
 
-- Qué ha ejecutado exactamente
-- Por qué dice que la verificación ha pasado
-- Por qué ha fallado un paso concreto
+In a JavaScript project, you might run:
 
-## Precauciones de uso
+```bash
+git status --short
+pnpm test
+pnpm run lint
+```
 
-- Incluye los «comandos de verificación» en los criterios de aceptación del Prompt
-- No pegues claves de producción en la terminal integrada
-- No reejecutes a mano en producción comandos que no entiendas
+Commands differ between projects. Check `README.md`, `package.json`, or the project rules first. Put the confirmed commands in the prompt:
 
-## Malentendidos frecuentes
+```text
+After the change, run pnpm test and pnpm run lint.
+Report the exit status of each command. If either fails, do not claim that
+the task is complete.
+```
 
-### 1. ¿Hay que saber usar la terminal para usar la App de escritorio?
+Record at least what ran, whether it exited successfully, the first meaningful error for each failure, and which checks did not run.
 
-Muchas Tareas básicas no requieren que escribas comandos.  
-Pero conviene saber para qué sirve la zona de terminal, para no quedarte perdido cuando haya que contrastar.
+## Handling long-running processes
 
-### 2. Si imprime un muro de texto, ¿qué miro?
+A development server keeps running; that does not mean the command is stuck. After starting it, check:
 
-Fíjate en esto:
+- whether the output includes a local URL;
+- whether the page opens in a browser;
+- whether runtime errors subsequently appear in the terminal.
 
-- Si hay errores evidentes
-- Qué comando ha ejecutado
-- Si al final ha sido éxito, fallo o completado a medias
+Send an interrupt signal when you need to stop it. Do not start duplicate servers only because no new output has appeared for a while.
 
-### 3. ¿Puedo copiar su comando y volver a ejecutarlo yo?
+## Reusable Actions
 
-Sí, siempre que entiendas qué hará, y sobre todo sin reejecutar a ciegas en producción.
+If you frequently run the same command, define an Action in the local environment. It becomes a shortcut in the desktop App and runs in the integrated terminal. Actions are suitable for low-risk verification such as `test`, `lint`, and `build`. Do not use them to hide production deployment or database deletion operations.
 
-La terminal integrada deja el proceso de verificación a la vista y también te ayuda a ir familiarizándote con lo que hace la línea de comandos.
+## Security boundary
+
+- Do not paste production secrets into a chat or terminal history.
+- For an unfamiliar command, first ask for its purpose, impact, and rollback approach.
+- Do not blindly rerun deletion, migration, or deployment commands in production.
+- A command being executable in the terminal does not mean it has business authorization.
+
+The official documentation lists common commands such as `git status`, `git pull --rebase`, tests, and linting. Your project's own documentation remains the final authority for its commands.
+
+## Official sources
+
+- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
+- [Local environments](https://learn.chatgpt.com/docs/environments/local)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App  
-**Nota de revisión:** Esta página asume una experiencia estable de «terminal integrada» para ver y reejecutar en la App de escritorio, pero el material oficial verificable actual confirma sobre todo que Codex puede trabajar con folders, repositories, terminals y developer tools locales; aún no basta para sostener la redacción concreta de la interfaz aquí descrita.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Last verified:** 2026-08-26

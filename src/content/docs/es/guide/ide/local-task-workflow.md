@@ -3,22 +3,23 @@ title: Flujo de Tareas locales
 description: Iniciar, seguir y completar Tareas locales de Codex en el IDE a partir de archivos abiertos y la selección.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9abb5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-La Tarea local en el IDE es el ciclo «**abrir → seleccionar → describir → revisar → probar**», pensado para cambios pequeños y frecuentes. Aquí va el camino práctico más habitual; el detalle de Contexto está en [Selección y archivos abiertos](/guide/ide/selected-code-and-open-files/).
+La Tarea local en el IDE es el ciclo «**abrir → seleccionar → describir → revisar → probar**», pensado para cambios pequeños y frecuentes. Aquí va el camino práctico más habitual; el detalle de Contexto está en [Selección y archivos abiertos](/es/guide/ide/selected-code-and-open-files/).
 
 ## Flujo recomendado
 
 1. **Abre la raíz del workspace** (todo el repositorio, no un solo archivo)
-2. Abre los archivos relevantes; si hace falta, [selecciona un fragmento de código](/guide/ide/selected-code-and-open-files/)
-3. En el panel de Codex deja claro: objetivo, restricciones y [definición de hecho](/prompts/define-done/)
-4. Si la Tarea es compleja, primero [pide un plan](/prompts/ask-for-a-plan/) y luego ejecuta
-5. En la vista de diff / inline, [revisa los cambios](/guide/ide/reviewing-changes/)
+2. Abre los archivos relevantes; si hace falta, [selecciona un fragmento de código](/es/guide/ide/selected-code-and-open-files/)
+3. En el panel de Codex deja claro: objetivo, restricciones y [definición de hecho](/es/prompts/define-done/)
+4. Si la Tarea es compleja, primero [pide un plan](/es/prompts/ask-for-a-plan/) y luego ejecuta
+5. En la vista de diff / inline, [revisa los cambios](/es/guide/ide/reviewing-changes/)
 6. En la terminal del IDE ejecuta los tests del proyecto
 7. Tú haces `git commit` (salvo que el equipo autorice explícitamente commits del Agent)
 
@@ -35,9 +36,9 @@ Hecho: ejecutar npm test -- auth y listar un resumen de cambios.
 
 | Situación | Sugerencia |
 |---|---|
-| Multitarea en paralelo, árboles de trabajo | [App de escritorio](/guide/desktop-app/) |
-| Scripts / CI | [CLI no interactiva](/guide/cli/non-interactive-mode/) |
-| Entorno remoto estandarizado, abrir PR | [Tareas Cloud en el IDE](/guide/ide/cloud-task-workflow/) |
+| Multitarea en paralelo, árboles de trabajo | [App de escritorio](/es/guide/desktop-app/) |
+| Scripts / CI | [CLI no interactiva](/es/guide/cli/non-interactive-mode/) |
+| Entorno remoto estandarizado, abrir PR | [Tareas Cloud en el IDE](/es/guide/ide/cloud-task-workflow/) |
 
 ## Errores frecuentes
 
@@ -45,7 +46,7 @@ Hecho: ejecutar npm test -- auth y listar un resumen de cambios.
 - Aceptar de un golpe todas las sugerencias inline
 - Hacer commit sin ejecutar tests
 
-Contexto: [Contexto del editor](/guide/ide/editor-context/) · [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
+Contexto: [Contexto del editor](/es/guide/ide/editor-context/) · [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
 
 ## Preguntas frecuentes
 

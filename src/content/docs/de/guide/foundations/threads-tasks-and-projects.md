@@ -3,9 +3,10 @@ title: "Thread, Aufgabe und Projekt"
 description: "Klärt die Beziehung zwischen Sitzung, Aufgabe und Projekt-Arbeitsbereich."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -37,8 +38,8 @@ Probleme entstehen oft hier: Die Aufgabe hat gewechselt, der Thread trägt noch 
 ## Praxistipps
 
 - Bei Themenwechsel **neuen Thread** — alter Kontext stört sonst
-- Lange Aufgaben mit Phasen und Checkpoints: [Prompts für lange Aufgaben](/prompts/long-running-tasks/)
-- Über Sitzungen hinweg weiterarbeiten: Übergabe-Zusammenfassung in [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
+- Lange Aufgaben mit Phasen und Checkpoints: [Prompts für lange Aufgaben](/de/prompts/long-running-tasks/)
+- Über Sitzungen hinweg weiterarbeiten: Übergabe-Zusammenfassung in [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 
 ## Häufige Missverständnisse
 

@@ -5,9 +5,10 @@ sidebar:
   order: 10
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a3f2555
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 A App de desktop é o ponto de entrada padrão para iniciantes: permite ver projetos, Tarefas, Diff e Aprovações de forma visual.
@@ -74,18 +75,18 @@ Em geral isso é mais leve do que estudar todas as funções de uma vez.
 
 ## Neste capítulo
 
-- [Instalação e interface](/guide/desktop-app/installation-and-interface/)
-- [Projetos e Tarefas](/guide/desktop-app/projects-and-tasks/)
-- [Agents em paralelo](/guide/desktop-app/parallel-agents/)
-- [Árvores de trabalho](/guide/desktop-app/worktrees/)
-- [Diff, comentários e revisão](/guide/desktop-app/diffs-comments-and-review/)
-- [Terminal integrado](/guide/desktop-app/integrated-terminal/)
-- [Tarefas locais e Cloud](/guide/desktop-app/local-and-cloud-tasks/)
-- [Notificações](/guide/desktop-app/notifications/)
-- [Definições](/guide/desktop-app/settings/)
-- [Resolução de problemas](/guide/desktop-app/troubleshooting/)
+- [Instalação e interface](/pt/guide/desktop-app/installation-and-interface/)
+- [Projetos e Tarefas](/pt/guide/desktop-app/projects-and-tasks/)
+- [Agents em paralelo](/pt/guide/desktop-app/parallel-agents/)
+- [Árvores de trabalho](/pt/guide/desktop-app/worktrees/)
+- [Diff, comentários e revisão](/pt/guide/desktop-app/diffs-comments-and-review/)
+- [Terminal integrado](/pt/guide/desktop-app/integrated-terminal/)
+- [Tarefas locais e Cloud](/pt/guide/desktop-app/local-and-cloud-tasks/)
+- [Notificações](/pt/guide/desktop-app/notifications/)
+- [Definições](/pt/guide/desktop-app/settings/)
+- [Resolução de problemas](/pt/guide/desktop-app/troubleshooting/)
 
-Ponto de partida: [Instalar a App de desktop](/guide/getting-started/install-desktop-app/)
+Ponto de partida: [Instalar a App de desktop](/pt/guide/getting-started/install-desktop-app/)
 
 A App de desktop convém para consolidar primeiro a colaboração básica com o Codex; depois pode complementar com a linha de comando e fluxos mais avançados.
 

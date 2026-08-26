@@ -5,9 +5,10 @@ sidebar:
   order: 20
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: adbe0aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Der Agent liest Dateien, führt Befehle aus, sucht im Netz, öffnet den Browser usw. über **Werkzeuge**. Richtige Wahl und klare Grenzen reduzieren unerwünschtes Outbound und übermäßige Änderungen.
@@ -32,20 +33,20 @@ Werkzeuge sind keine Zusatzkenntnis — Grundlage für Sicherheit und Effizienz.
 
 | Werkzeug | Seite |
 |---|---|
-| Auswahlüberblick | [Werkzeugwahl](/guide/tools/tool-selection/) |
-| Terminal | [Shell und Terminal](/guide/tools/shell-and-terminal/) |
-| Recherche | [Web-Suche](/guide/tools/web-search/) |
-| Webseiten | [Browser-Werkzeug](/guide/tools/browser/) |
-| GUI | [Computer Use](/guide/tools/computer-use/) |
-| Bilder | [Bildgenerierung](/guide/tools/image-generation/) |
-| Sprache | [Spracheingabe und -ausgabe](/guide/tools/voice/) |
+| Auswahlüberblick | [Werkzeugwahl](/de/guide/tools/tool-selection/) |
+| Terminal | [Shell und Terminal](/de/guide/tools/shell-and-terminal/) |
+| Recherche | [Web-Suche](/de/guide/tools/web-search/) |
+| Webseiten | [Browser-Werkzeug](/de/guide/tools/browser/) |
+| GUI | [Computer Use](/de/guide/tools/computer-use/) |
+| Bilder | [Bildgenerierung](/de/guide/tools/image-generation/) |
+| Sprache | [Spracheingabe und -ausgabe](/de/guide/tools/voice/) |
 
-Datei-I/O und Artefaktabnahme: [Dateien und Artefakte](/guide/files-and-artifacts/). Erweiterungen über [MCP](/skills/mcp/mcp-overview/).
+Datei-I/O und Artefaktabnahme: [Dateien und Artefakte](/de/guide/files-and-artifacts/). Erweiterungen über [MCP](/de/skills/mcp/mcp-overview/).
 
 ## Empfohlene Lesereihenfolge
 
-1. [Werkzeugwahl](/guide/tools/tool-selection/) — was zuerst bei welchem Aufgabentyp
-2. [Shell und Terminal](/guide/tools/shell-and-terminal/) — Risiken der Befehlsausführung
+1. [Werkzeugwahl](/de/guide/tools/tool-selection/) — was zuerst bei welchem Aufgabentyp
+2. [Shell und Terminal](/de/guide/tools/shell-and-terminal/) — Risiken der Befehlsausführung
 3. Suche, Browser oder andere Seiten je aktueller Aufgabe
 
 Werkzeuge bestimmen, wie Codex handeln kann — Sie sagen, welche erlaubt sind und welche nicht.

@@ -3,9 +3,10 @@ title: Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng
 description: Quy trình chính dùng chung của Codex — bốn giai đoạn điểm kiểm tra, ổn hơn «một bước xong».
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Đây là quy trình mặc định sổ tay khuyến nghị, phù hợp đi từ “chưa rõ làm thế nào” tới “có thể merge”.
@@ -19,7 +20,7 @@ translated_at: 2026-07-28
 ④ Kiểm chứng Verify  → Test, review diff, đối chiếu «định nghĩa hoàn thành»
 ```
 
-Đừng bỏ ①② nhảy thẳng ③ — dễ thành “đoán rồi sửa”. Xem [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/).
+Đừng bỏ ①② nhảy thẳng ③ — dễ thành “đoán rồi sửa”. Xem [chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/).
 
 ## ① Khám phá
 
@@ -45,7 +46,7 @@ Dựa trên khám phá vừa rồi, đưa kế hoạch: số bước, tệp liê
 Trước khi tôi trả lời «thực thi theo kế hoạch» thì chưa viết code.
 ```
 
-Tác vụ lớn hoặc thay đổi rủi ro cao phải chờ xác nhận. Tác vụ nhỏ có thể thỏa thuận “kế hoạch không quá 3 bước thì tự thực thi”, rồi ghi vào [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Tác vụ lớn hoặc thay đổi rủi ro cao phải chờ xác nhận. Tác vụ nhỏ có thể thỏa thuận “kế hoạch không quá 3 bước thì tự thực thi”, rồi ghi vào [AGENTS.md](/vi/guide/customization/agents-md/writing-effective-instructions/).
 
 ## ③ Thực thi
 
@@ -67,7 +68,7 @@ Câu dẫn: «Thực thi bước 2; nếu cần đổi kế hoạch thì dừng 
 | Thủ công | Đọc diff, thử tay đường then chốt |
 | Artifact | Ảnh chụp, đoạn log, phản hồi API |
 
-Checklist liên quan xem [định nghĩa hoàn thành](/prompts/define-done/) và [chạy test](/guide/quality/run-tests/).
+Checklist liên quan xem [định nghĩa hoàn thành](/vi/prompts/define-done/) và [chạy test](/vi/guide/quality/run-tests/).
 
 ## Cắt theo quy mô tác vụ
 
@@ -80,7 +81,7 @@ Checklist liên quan xem [định nghĩa hoàn thành](/prompts/define-done/) v�
 
 ## Với mẫu case EPXV
 
-Nhóm có thể ghi bốn giai đoạn vào [mẫu case](/cases/use-cases/case-study-template/) và mô tả PR, tạo ngôn ngữ thống nhất.
+Nhóm có thể ghi bốn giai đoạn vào [mẫu case](/vi/cases/use-cases/case-study-template/) và mô tả PR, tạo ngôn ngữ thống nhất.
 
 ## Lỗi thường gặp
 

@@ -3,9 +3,10 @@ title: 'Ví dụ: Skill nghiên cứu'
 description: Ví dụ Skill khảo sát kèm trích dẫn và dấu"cần xác nhận".
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ví dụ: Skill nghiên cứu
@@ -28,8 +29,8 @@ description: Khảo sát kỹ thuật và bảng so sánh kèm trích dẫn URL/
 
 ## Liên quan
 
-- [Case nghiên cứu](/cases/research-with-sources/)
-- [Template nghiên cứu](/prompts/templates/research/)
+- [Case nghiên cứu](/vi/cases/research-with-sources/)
+- [Template nghiên cứu](/vi/prompts/templates/research/)
 ---
 
 **Trạng thái:** verified  

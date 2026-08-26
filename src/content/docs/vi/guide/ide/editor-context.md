@@ -3,11 +3,12 @@ title: Ngữ cảnh trình soạn thảo
 description: Tiện ích IDE đưa tệp mở, không gian làm việc và quy tắc dự án cho Codex thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b6d208f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 Trong IDE, Codex không chỉ đọc Prompt của bạn mà còn tự nhận **trạng thái trình soạn thảo**. Đây là lợi thế cốt lõi của IDE so với CLI. Hiểu ngữ cảnh đến từ đâu giúp tránh cảm giác thất vọng «đã mở tệp mà nó không thấy».
@@ -23,15 +24,15 @@ Codex trong IDE không chỉ nhìn bạn nói gì, mà còn tham chiếu nội d
 ## Quy trình khuyến nghị
 
 1. **Mở kho bằng thư mục gốc không gian làm việc**, đừng chỉ mở thư mục con (monorepo ngoại lệ theo tài liệu nhóm)
-2. Khi sửa logic cục bộ, **chọn mã liên quan trước** rồi mô tả tác vụ → [Vùng chọn và tệp mở](/guide/ide/selected-code-and-open-files/)
+2. Khi sửa logic cục bộ, **chọn mã liên quan trước** rồi mô tả tác vụ → [Vùng chọn và tệp mở](/vi/guide/ide/selected-code-and-open-files/)
 3. Tác vụ xuyên mô-đun dùng `@` nêu tên tệp then chốt, đừng giả định «nó tự tìm được»
-4. Phiên dài định kỳ [nén ngữ cảnh](/guide/context/compaction/) hoặc mở thread mới
+4. Phiên dài định kỳ [nén ngữ cảnh](/vi/guide/context/compaction/) hoặc mở thread mới
 
 ## Khác biệt với CLI
 
 | | Tiện ích IDE | CLI |
 |---|---|---|
-| Nhận biết tệp | Mạnh (mở là ngữ cảnh) | Cần `--cwd` và công cụ đọc đĩa |
+| Nhận biết tệp | Mạnh (mở là ngữ cảnh) | Cần `--cd` và công cụ đọc đĩa |
 | Vùng chọn | Hỗ trợ gốc | Cần dán hoặc chỉ đường dẫn |
 | Phù hợp | Sửa cấp dòng, giải thích mã | Script, CI, môi trường không GUI |
 
@@ -56,7 +57,7 @@ Ngữ cảnh IDE giúp bạn, nhưng không đoán thay bạn; phạm vi tệp c
 
 ## Thông tin nhạy cảm
 
-Đừng để `.env` chứa khóa mở lâu ở tiền cảnh trình soạn thảo; xem [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/).
+Đừng để `.env` chứa khóa mở lâu ở tiền cảnh trình soạn thảo; xem [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/).
 
 Nhật ký, dữ liệu khách hàng hãy khử nhận dạng trước khi dán; IDE không tự phán đoán tuân thủ giúp bạn.
 
@@ -73,7 +74,7 @@ Nhật ký, dữ liệu khách hàng hãy khử nhận dạng trước khi dán;
 - [ ] Lệnh kiểm thử trong `AGENTS.md` khớp terminal IDE
 
 ## Nguồn tham khảo
-- [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+- [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 ---
 
 **Trạng thái:** verified  

@@ -3,18 +3,19 @@ title: Investigação com fontes
 description: Use o Codex para pesquisa, comparação e verificação de factos — com fontes e conclusões rastreáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ba7014d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 O fluxo de trabalho de **investigação com fontes** exige que as conclusões voltem a **fontes** (documentação oficial, artigos, ficheiros do repositório), e não a invenções confiante do modelo. Adequado a seleção tecnológica, comparação de concorrentes, revisão de literatura e interpretação de políticas.
 
 ## Que problema resolve esta página
 
-- Quando usar [pesquisa na web](/guide/tools/web-search/) vs. repositório só de leitura
+- Quando usar [pesquisa na web](/pt/guide/tools/web-search/) vs. repositório só de leitura
 - Como exigir formato de citação e marcação de incerteza
-- Ligação a [validar fontes](/guide/quality/validate-sources/)
+- Ligação a [validar fontes](/pt/guide/quality/validate-sources/)
 
 ## Prática mínima viável
 
@@ -37,7 +38,7 @@ Definir o problema e exclusões
     → Decisão humana ou passar à fase de especificação
 ```
 
-Tarefas de investigação longas devem ser divididas em várias rondas; ver [gestão de tarefas longas](/prompts/long-running-tasks/).
+Tarefas de investigação longas devem ser divididas em várias rondas; ver [gestão de tarefas longas](/pt/prompts/long-running-tasks/).
 
 ## Erros comuns
 
@@ -49,7 +50,7 @@ Tarefas de investigação longas devem ser divididas em várias rondas; ver [ges
 ## Limites de segurança
 
 - Material interno não público não deve sair por MCP não controlado
-- Factos voláteis (preços, versões, disponibilidade regional) devem marcar a [data de verificação](/guide/start-here/handbook-version-policy/)
+- Factos voláteis (preços, versões, disponibilidade regional) devem marcar a [data de verificação](/pt/guide/start-here/handbook-version-policy/)
 
 ## Lista de aceitação
 
@@ -60,8 +61,8 @@ Tarefas de investigação longas devem ser divididas em várias rondas; ver [ges
 
 ## Capítulos relacionados
 
-- [Lidar com incerteza](/guide/quality/handle-uncertainty/)
-- [Caso: refatorar documentação com revisão](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Lidar com incerteza](/pt/guide/quality/handle-uncertainty/)
+- [Caso: refatorar documentação com revisão](/pt/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

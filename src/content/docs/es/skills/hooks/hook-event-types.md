@@ -1,145 +1,90 @@
 ---
-title: Tipos de eventos Hook
-description: Puntos de disparo de Hook en la cadena de ejecución de Codex, para validar, registrar y bloquear en la fase adecuada.
+title: Tipos de eventos de Hook
+description: Elige eventos de los ciclos de vida de sesión, turno, llamada a herramienta, compactación y subagent.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 7da5c40
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Aquí se trata de cuándo debe dispararse una misma comprobación.
+La primera pregunta al elegir un Hook no es «¿cómo escribo el script?», sino «¿esto debe suceder antes o después del efecto secundario?». Un script asociado al evento equivocado quizá solo pueda informar del daño cuando ya se ha producido.
 
-Un **evento Hook** es el momento en que el sistema llama a la lógica que configuraste en un nodo fijo. Entender los tipos de evento permite aplicar la «auditoría y validación» de [Descripción general de Hooks](/skills/hooks/hooks-overview/) en la configuración, sin ralentizar cada llamada a herramienta.
+![Ciclo de vida de los Hooks de Codex y eventos principales](/diagrams/hook-lifecycle-events-es.svg)
 
-## Contenido
+## Eventos actuales
 
-- Fases de eventos habituales y escenarios adecuados
-- División de responsabilidades con [reglas de comandos](/guide/customization/rules/command-rules/)
-- Rendimiento y estrategia ante fallos al configurar
+| Evento | Cuándo se ejecuta | Filtros del matcher | Uso habitual |
+|---|---|---|---|
+| `SessionStart` | Al iniciar o reanudar una sesión | `startup`, `resume`, `clear`, `compact` | Notas del entorno, contexto restaurado |
+| `SubagentStart` | Cuando comienza un subagent | Tipo de subagent | Añadir restricciones al subagent |
+| `UserPromptSubmit` | Cuando la persona envía un prompt | No compatible; se ignora la configuración | Detectar secretos, añadir contexto de desarrollo |
+| `PreToolUse` | Antes de ejecutar una herramienta local compatible | Nombre de la herramienta | Rechazar o reescribir la llamada |
+| `PermissionRequest` | Cuando Codex está a punto de solicitar aprobación | Nombre de la herramienta | Permitir, rechazar o dejar la decisión al flujo normal |
+| `PostToolUse` | Después de que termine una herramienta local compatible | Nombre de la herramienta | Registrar resultados, aportar feedback al razonamiento posterior |
+| `PreCompact` | Antes de compactar el contexto | `manual` / `auto` | Guardar estado antes de la compactación |
+| `PostCompact` | Después de compactar el contexto | `manual` / `auto` | Restaurar el contexto necesario |
+| `SubagentStop` | Cuando un subagent está a punto de detenerse | Tipo de subagent | Exigir otra comprobación |
+| `Stop` | Cuando está a punto de terminar el turno de la tarea principal | No compatible; se ignora la configuración | Exigir más verificación en el hilo principal |
+| `SessionEnd` | Cuando termina el hilo principal | Actualmente `other` | Registro final rápido; no se ejecuta para subagents |
 
-## Un principio de decisión
+## Matchers de herramientas
 
-No empieces preguntando «¿se puede implementar este Hook?».  
-Pregúntate primero: ¿quieres detenerlo antes de que ocurra, o solo registrarlo después?
-
-Muchos Hooks mal colocados fallan porque el momento de disparo está mal elegido.
-
-:::note
-**Los nombres de evento y los campos se rigen por la [documentación oficial de Hooks](https://developers.openai.com/codex).** La tabla siguiente es un agrupamiento conceptual; tras actualizar la CLI, comprueba `--help` y las notas de la versión.
-:::
-
-## Agrupación de eventos (concepto)
-
-| Fase | Eventos típicos (nombres conceptuales) | Para qué sirven |
-|---|---|---|
-| Sesión | `session.start` / `session.end` | Comprobar entorno, resumir cambios, escribir cola de auditoría |
-| Antes de la herramienta | `tool.call.before` / `pre_tool_use` | Bloquear comandos peligrosos, escanear patrones de secretos |
-| Después de la herramienta | `tool.call.after` / `post_tool_use` | Logs estructurados, métricas, archivo desensibilizado |
-| Prompt | `user_prompt.submit` | Escaneo de políticas de inyección, límite de longitud |
-| Artefacto | `artifact.create` | Cabeceras de licencia, lista blanca de tipos de archivo |
-| Integración | `pr.before_create` (si está soportado) | Número de issue, formato de changelog |
-
-No cuelgues la misma lógica en varios eventos para que se ejecute varias veces; elige el punto **más temprano que aún pueda bloquear**.
-
-## Cómo entender estas fases
-
-- **Sesión**: al empezar o terminar esta Tarea
-- **Antes de la herramienta**: el comando o la herramienta aún no se ha ejecutado de verdad
-- **Después de la herramienta**: la acción ya ocurrió; puedes registrar, resumir o volver a comprobar
-- **Prompt**: justo al enviar el contenido del usuario
-- **Artefacto**: justo al generar un archivo o un resultado
-
-Empieza por este nivel; no hace falta memorizar los nombres de evento de golpe.
-
-## Relación con el motor de reglas
+Entre los valores habituales se incluyen:
 
 ```text
-Prompt del usuario → (opcional) Hook de prompt
-    → el modelo propone una llamada a herramienta
-    → motor de reglas allow/deny
-    → (opcional) Hook pre_tool → ejecución → Hook post_tool
+Bash
+^apply_patch$
+Edit|Write
+mcp__filesystem__read_file
+mcp__filesystem__.*
 ```
 
-- **Reglas**: declarativas, rápidas, adecuadas a patrones de comando conocidos
-- **Hook**: scripts imperativos, adecuados a políticas complejas y sistemas externos
+La ejecución de shell y de comandos unificados coincide con `Bash`. `apply_patch` también puede coincidir con los alias `Edit` o `Write`. MCP y otras herramientas de función locales coinciden con sus nombres reales.
 
-## Errores frecuentes
+## Tres eventos que suelen confundirse
 
-### 1. Si se puede comprobar, da igual colgarlo antes o después
+### PreToolUse
 
-Importa mucho.
+La entrada contiene `tool_name`, `tool_use_id` y el `tool_input` específico de la herramienta. Puede devolver:
 
-Si quieres «impedir que ocurra el efecto secundario», colócalo lo antes posible.  
-Si la acción ya terminó y solo descubres el problema en `post_tool`, suele ser tarde.
+- `permissionDecision: "deny"`: detener una llamada compatible.
+- `permissionDecision: "allow"` junto con `updatedInput`: reescribir una entrada compatible.
+- `additionalContext`: añadir contexto al modelo sin bloquear.
 
-### 2. Cuantos más eventos y más detalle, más profesional la configuración
+La salida de texto normal se ignora; debe emitirse el JSON documentado. El código de salida `2` con stderr también puede bloquear y proporcionar un motivo.
 
-Al configurar conviene buscar «pocos y precisos»: primero cuelga la lógica en el punto más adecuado.
+### PermissionRequest
 
-### 3. Los tipos de evento Hook son solo un detalle técnico
+Solo se ejecuta cuando Codex ya iba a solicitar aprobación para una elevación de shell, acceso de red gestionado o una acción similar. Puede permitir, rechazar o dejar la decisión a la interfaz normal de aprobación. No sustituye una política general de `PreToolUse`.
 
-Influyen directamente en:
+### PostToolUse
 
-- Si el riesgo se puede detener a tiempo
-- Si el log es útil
-- Si la interacción global se vuelve lenta
+La herramienta ya se ha ejecutado, y el evento se activa incluso si Bash termina con un código distinto de cero. Devolver un bloqueo o salir con `2` puede reemplazar el feedback dirigido al modelo, pero no deshacer un comando, una escritura de archivo ni una acción externa.
 
-## Estrategia ante fallos
+## Stop no es un botón para deshacer
 
-| Estrategia | Cuándo usarla |
-|---|---|
-| `block` | Violaciones de seguridad, requisitos duros de cumplimiento |
-| `warn` | Estilo, comprobaciones orientativas |
-| `log` | Solo observación, sin bloquear |
+En un evento `Stop`, `decision: "block"` crea automáticamente un prompt de continuación a partir del motivo y pide a Codex que ejecute otro turno. No revierte los efectos secundarios ya producidos. Comprueba `stop_hook_active` para evitar un bucle infinito.
 
-Ante timeout o caída del Hook, el comportamiento por defecto debe ser **seguro**: en producción, inclinarse a block o fail closed, y registrar el error para diagnóstico.
+## Ejercicio para elegir un evento
 
-## Si no sabes dónde colgarlo
+| Necesidad | Elección | Motivo |
+|---|---|---|
+| Impedir que se escriba un posible token | `PreToolUse` con matcher `apply_patch|Edit|Write` | Debe actuar antes de la escritura |
+| Medir la tasa de fallos del shell | `PostToolUse` con matcher `Bash` | Necesita conocer el resultado |
+| Guardar decisiones clave antes de una compactación automática | `PreCompact` | Se ejecuta antes de compactar |
+| No terminar hasta ejecutar las pruebas | `Stop` | Continúa la tarea actual |
+| Enviar una solicitud de red de 30 segundos al cerrar | No usar `SessionEnd` | El máximo es de tres segundos; los eventos de cierre deben ser breves |
 
-Si dudas del evento, usa esta regla simplificada:
+## Fuente oficial
 
-- Quieres impedir una acción peligrosa: prioriza el evento previo
-- Quieres registrar lo ocurrido: prioriza el evento posterior
-- Quieres una comprobación de arranque o un resumen de cierre: mira los eventos de sesión
+- [OpenAI: eventos y matchers de Hooks](https://learn.chatgpt.com/docs/hooks)
 
-Eso basta para la mayoría de configuraciones.
-
-## Enfoque de configuración mínima
-
-1. Elige un evento (recomendado: empezar con log de solo lectura en `post_tool`)
-2. El script recibe por stdin la carga JSON (nombre de herramienta, resumen de argumentos, directorio de trabajo)
-3. Código de salida `0` = ok; distinto de `0` = block/warn según política
-4. Prueba unitaria: ejecuta el script con un fixture JSON fijo
-
-Decide primero si quieres bloquear o registrar; después elige en qué evento colgar el Hook.
-
-Ejemplos completos: [Ejemplos de configuración de Hook](/skills/hooks/hooks-examples/).
-
-## Errores habituales
-
-- Bloquear en `post_tool` lo que debía ir en `pre_tool` (el efecto secundario ya ocurrió)
-- Llamar a un LLM o a red lenta dentro del Hook y hundir la interacción
-- Que la carga del evento contenga secretos y se escriban en logs en claro
-- Hooks sin versionar: entornos de compañeros inconsistentes
-
-## Límites de seguridad
-
-- El Permiso del script Hook debe ser ≤ al del Agent monitorizado
-- Ver [casos de equipo recomendados](/skills/hooks/hooks-overview/#casos-de-equipo-recomendados) y [modelo de amenazas](/guide/team-enterprise/security/threat-model/)
-
-## Lista de verificación
-
-- [ ] Puedes nombrar el evento más usado del equipo y por qué
-- [ ] Ante fallo hay un mensaje de error legible
-- [ ] El script tiene tests unitarios o fixtures
-- [ ] La configuración entra en revisión de código
-
-## Fuentes de referencia
-- Referencia de OpenAI Codex Hooks
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** CLI / App (según versión)  
-**Nota de revisión:** El núcleo de esta página son la agrupación de eventos Hook, la carga útil y la estrategia ante fallos; son detalles de implementación muy volátiles y el material público oficial a 2026-07-26 no basta para marcarlos como estables.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** Entornos que usan un host de Codex local
+
+**Última verificación:** 2026-08-25

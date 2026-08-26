@@ -3,9 +3,10 @@ title: 초보자 안전 체크리스트
 description: 첫 사용 전에 반드시 볼 안전 점검 항목.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -21,9 +22,9 @@ sidebar:
 - [ ] 고위험 작업에는 승인이 필요함을 이해함
 - [ ] 이해하지 못한 명령이나 외부망 요청은 승인하지 않음
 - [ ] diff를 확인한 뒤 결과를 수락할 계획임
-- [ ] [실행 취소](/guide/getting-started/undo-and-recover/) 방법을 앎
+- [ ] [실행 취소](/ko/guide/getting-started/undo-and-recover/) 방법을 앎
 
-개념 보충: [권한과 승인](/guide/foundations/permissions-and-approvals/) · [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/).
+개념 보충: [권한과 승인](/ko/guide/foundations/permissions-and-approvals/) · [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/).
 
 ## 흔한 오해
 

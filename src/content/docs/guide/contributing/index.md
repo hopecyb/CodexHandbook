@@ -5,7 +5,7 @@ sidebar:
   order: 80
 ---
 
-**Codex 指南手册**是社区维护的文档站。欢迎修正错误、补充页面、添加可复现案例与 [examples/](/examples/README.md) 中的提示词实例。
+**Codex 指南手册**是社区维护的文档站。欢迎修正错误、补充页面、添加可复现案例与 [examples/](https://github.com/hopecyb/CodexHandbook/tree/main/examples) 中的提示词实例。
 
 ## 本页内容
 
@@ -58,10 +58,10 @@ sidebar:
 ## 基本原则
 
 1. **简体中文 `root` 为源文**（除非另有说明）
-2. **不复制**外部教程原文；参考 [外部资料整合计划](/docs/planning/external-source-integration.md)
+2. **不复制**外部教程原文；参考[外部资料整合计划](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. **易变事实**须标 `最近核验` 日期
-4. **每个 sidebar slug** 必须有对应 markdown，否则 `npm run build` 失败
-5. 新增页面须同步更新 `astro.config.mjs` sidebar
+4. 新增页面必须有有效 frontmatter、文件路径和交叉链接
+5. 当前四模块侧边栏自动读取目录；新增文件后运行构建，确认排序和入口正确
 
 ## 第一次贡献，可以这样开始
 
@@ -85,7 +85,7 @@ pnpm dev
 合并前运行：
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## 行为准则
@@ -99,7 +99,7 @@ npm run build
 ## 相关链接
 
 - 仓库：<https://github.com/hopecyb/CodexHandbook>
-- [章节大纲](/docs/planning/chapter-outline.md)（规划用）
+- [章节大纲](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（仓库规划文档）
 
 ---
 

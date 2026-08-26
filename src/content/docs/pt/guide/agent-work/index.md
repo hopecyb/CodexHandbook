@@ -5,9 +5,10 @@ sidebar:
   order: 31
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 477e693
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 O trabalho do Agent foca-se em: como **levar uma Tarefa a um estado de conclusão verificável**. Quando planear primeiro, quando dividir subtarefas, quando corrigir a meio, quando fazer Transferência e retomar — é o que este capítulo trata.
@@ -25,10 +26,10 @@ Em muitas Tarefas, o difícil não é enunciar o pedido, e sim levá-lo até «r
 
 ## Ordem de leitura recomendada
 
-1. [Planeamento](/guide/agent-work/planning/)
-2. [Progresso e reorientação](/guide/agent-work/progress-and-steering/)
-3. [Subagents](/guide/agent-work/subagents/)
-4. [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
+1. [Planeamento](/pt/guide/agent-work/planning/)
+2. [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/)
+3. [Subagents](/pt/guide/agent-work/subagents/)
+4. [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
 
 ## Um quadro comum
 
@@ -70,10 +71,10 @@ Se os limites não estiverem claros, quanto mais subtarefas, mais confusa a Thre
 
 ## Relação com outros capítulos
 
-- Fluxo principal completo: [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- Clarificar a Tarefa: [Prompts](/prompts/)
-- Gerir Contexto: [Contexto](/guide/context/)
-- Paralelismo multi-pessoa/multi-Tarefa: [Agents em paralelo](/guide/desktop-app/parallel-agents/) e [Coordenação multi-Agent](/cases/workflows/multi-agent-coordination/)
+- Fluxo principal completo: [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- Clarificar a Tarefa: [Prompts](/pt/prompts/)
+- Gerir Contexto: [Contexto](/pt/guide/context/)
+- Paralelismo multi-pessoa/multi-Tarefa: [Agents em paralelo](/pt/guide/desktop-app/parallel-agents/) e [Coordenação multi-Agent](/pt/cases/workflows/multi-agent-coordination/)
 
 ## Corra primeiro este fluxo mínimo
 

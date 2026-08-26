@@ -3,9 +3,10 @@ title: Understand a codebase
 description: Read-only exploration of unfamiliar repos to build an actionable mental map.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Understand a codebase
@@ -42,8 +43,8 @@ Do not change code yet. Read @src/ and @README; explain in 8 bullets or fewer:
 
 ## 4. Related
 
-- [Understand template](/prompts/templates/understand/)
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
+- [Understand template](/en/prompts/templates/understand/)
+- [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Cuándo usar Skills
 description: Decide si una tarea encaja como Skill, y cómo se reparte el trabajo con comandos slash y MCP.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Al empezar con Skills, la pregunta habitual es: ¿merece la pena convertir esto en un Skill dedicado?
@@ -79,7 +80,7 @@ Así el Skill sale más sólido: nace de repetición real, no de un diseño en v
 
 Un Skill encaja mejor para flujos que «se repiten, deben ser consistentes y no quieres volver a explicarlos cada vez».
 
-Selección de método: [Cómo elegir el método de extensión](/skills/choosing-an-extension-method/). Consolidar flujos: [Convertir un flujo en Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Selección de método: [Cómo elegir el método de extensión](/es/skills/choosing-an-extension-method/). Consolidar flujos: [Convertir un flujo en Skill](/es/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Estado:** verificado  

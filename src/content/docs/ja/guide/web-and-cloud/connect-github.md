@@ -1,99 +1,72 @@
 ---
-title: GitHub に接続
-description: Codex Cloud と GitHub リポジトリを連携する——権限、ブランチ、環境。
+title: GitHub を接続する
+description: 最小限のリポジトリ範囲で Codex Cloud の GitHub アクセスを設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b811894
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-GitHub に接続すると、Codex は**リモート環境**でリポジトリをクローンし、ブランチを作成し、プッシュして PR を開けます。これは Cloud ワークフローの前提です。
+Codex Cloud では、最初に GitHub または GitLab（Beta）を接続し、次にリポジトリ用の環境を作成します。GitHub で認可した範囲により、Codex が参照できるリポジトリが決まります。ローカルの clone とまだ push していない変更は、その範囲に含まれません。
 
-## 内容
+## 接続手順
 
-- 接続が必要な理由、どの権限を承認するか
-- 接続前後のチェックリスト
-- ローカルデスクトップタスクとの役割分担
+1. Codex Cloud を開き、ChatGPT アカウントでログインする。
+2. 案内に従って GitHub を接続する。
+3. GitHub の認可画面で、組織と**必要なリポジトリ**を選択する。
+4. Codex に戻り、そのリポジトリを選択して Cloud 環境を作成する。
+5. 読み取り専用または小さな変更タスクで clone、ブランチ、diff を検証する。
+6. PR review が必要な場合は、Codex Settings でリポジトリの Code review を有効にする。
 
-## 関係図
+今回必要なリポジトリだけを認可してください。チームのリポジトリでは、組織が統合のインストールを許可していること、現在のアカウントに対応する権限があることを確認し、ブランチ保護を維持します。
+
+## 接続前後のチェック
+
+- [ ] 対象リポジトリが、誤って選んだ同名の fork ではない
+- [ ] デフォルトブランチとタスクの開始点を確認済み
+- [ ] 必要なローカル変更を push 済み、またはタスクに含めないことを明示済み
+- [ ] main ブランチへのレビューなしの直接書き込みを禁止している
+- [ ] 環境に本番用の全権限認証情報がない
+- [ ] 最初のタスクは低リスクのファイルだけを変更する
+
+## GitHub での二つの使い方
+
+### Cloud にタスクを実装させる
+
+Codex Cloud でリポジトリ環境と開始ブランチを選び、目標を説明します。タスク終了後に diff を確認してから PR を作成します。
+
+### Codex に PR をレビューさせる
+
+リポジトリで Code review を有効にした後、PR のコメントに次を記述します。
 
 ```text
-あなたの GitHub リポジトリ
-    ↕（OAuth / GitHub App、製品仕様による）
-Codex Cloud 環境
-    ↕
-Web/App で開始したクラウドタスク
+@codex review
 ```
 
-ローカルの [デスクトップ App](/guide/desktop-app/) は引き続きローカル clone を直接編集できます。Cloud は**標準化された環境、PC を離れても継続実行、スマホからの承認**などの場面向きです。詳しくは [ローカルとクラウド](/guide/foundations/local-vs-cloud/) を参照。
+Codex は通常の GitHub review を投稿します。自動レビューは Codex Settings で別途有効にする必要があります。チームは `AGENTS.md` の `## Code Review Rules` にリポジトリ固有のルールを記述できます。
 
-## よくある誤解
+## 権限エラーの判断
 
-### 1. ローカルにリポジトリがあるのに、なぜ GitHub に再接続するのか？
+- リポジトリが一覧にない：GitHub で認可したリポジトリ範囲を確認する
+- 組織リポジトリで 403：組織ポリシー、SSO、インストール許可を確認する
+- 自動 review を有効にできない：設定に必要な GitHub の push または admin 権限があるか確認する
+- Cloud からローカル commit が見えない：Cloud はリモートリポジトリからだけ checkout するため、明確なブランチへ先に push する
 
-Cloud タスクが参照するのはリモートリポジトリであり、ローカルのリポジトリではありません。
+一つの 403 を解決するために、すべての private リポジトリを直接認可しないでください。対象リポジトリと不足している具体的な権限を先に確認します。
 
-### 2. GitHub に接続すれば、ローカルの変更がすべて見えるのか？
+## 公式情報
 
-push していないローカルの変更は、Cloud からは通常見えません。  
-これはよくある混乱点です。
+- [Codex Cloud クイックスタート](https://learn.chatgpt.com/docs/cloud)
+- [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
 
-### 3. 接続時に最も注意すべきことは？
-
-次を先に確認すべきです：
-
-- リポジトリのスコープが広すぎないか
-- ブランチ保護の設定
-- キーが Cloud の安全な場所に正しく配置されているか
-
-GitHub に接続した後、Cloud が見るのはリモートリポジトリであり、まだプッシュしていないローカルの状態ではありません。
-
-## 接続前チェック
-
-- [ ] 対象リポジトリへの push 権限がある（PR のみ必要な場合は fork 戦略）
-- [ ] ブランチ保護ルールを把握している：main への直接 push が禁止されているか
-- [ ] キーがリポジトリ内にない。Cloud は [Secrets 設定](/guide/web-and-cloud/secrets-and-variables/) を使用
-- [ ] 組織がサードパーティ GitHub 統合を許可している
-
-## 推奨手順（概念）
-
-1. Codex Web/Cloud 設定で **GitHub 接続** を開く
-2. 組織とリポジトリのスコープを選択（**できるだけ最小限のリポジトリリスト**）
-3. OAuth 権限の説明を確認：通常はコードの読み取りと PR の作成が必要。書き込み権限はタスク次第
-4. テストリポジトリで小規模な Cloud タスクを開始して検証
-5. 成功後、デフォルトブランチと環境変数（あれば）を設定
-
-具体的なボタンと UI は現行製品に準拠してください。
-
-## 権限とセキュリティ
-
-| プラクティス | 理由 |
-|---|---|
-| 専用マシンユーザーまたは bot アカウントを使う（チーム） | 監査と退職時の回収 |
-| すべてのプライベートリポジトリを承認しない | 誤操作のリスクを下げる |
-| ブランチ保護 + 必須 review を有効化 | Cloud の成果物も人のレビューを通す |
-| 接続済みリポジトリリストを定期的に見直す | 終了したプロジェクトは速やかに切断 |
-
-## 接続後のよくあるタスク
-
-- リモートで issue を実装 → [Pull Request を作成](/guide/web-and-cloud/create-pull-requests/)
-- PR レビューとフォローアップ → [GitHub](/guide/integrations/github/) 統合
-- [Automations](/skills/automations/scheduled-tasks/) との連携
-
-## よくあるエラー
-
-- 個人 GitHub を本番組織リポジトリに接続し、個人ポリシーを適用している
-- Cloud がローカル未プッシュの commit にアクセスできると想定している
-- 初回から大規模 monorepo で無制限タスクを実行している
-
-## 参考ソース
-- OpenAI Codex Cloud / GitHub 統合ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** Cloud / Web  
-**検証根拠：** 本ページは現行の GitHub 接続方式、承認モデル、リポジトリスコープ設定、Cloud 側のボタン入口など具体的な製品動作に依存している。これらはすべて変動の激しい統合情報であり、現行の公式接続ドキュメントを補完してから `verified` に戻す必要がある。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** Cloud、GitHub
+
+**最終検証：** 2026-08-26

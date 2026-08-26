@@ -3,9 +3,10 @@ title: Quellen validieren
 description: Für Recherche-Schlussfolgerungen nachvollziehbare Belege verlangen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 35bd9a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -18,7 +19,7 @@ Vom Agent verlangen:
 Zu jedem kritischen Fakt Quelle als URL oder Literatur; Unsicheres klar als «nicht geprüft» markieren.
 ```
 
-Danach Links öffnen und gegenprüfen. Suchfähigkeit: [Web-Suche](/guide/tools/web-search/).
+Danach Links öffnen und gegenprüfen. Suchfähigkeit: [Web-Suche](/de/guide/tools/web-search/).
 
 ## Häufige Missverständnisse
 

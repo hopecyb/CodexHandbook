@@ -1,0 +1,80 @@
+<svg lang="de" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Hook-Lebenszyklus und Schlüsselereignisse</title>
+  <desc id="desc">Eine Sitzung beginnt mit SessionStart. In einer Aufgabenrunde kommt UserPromptSubmit vor PreToolUse und der Werkzeugausführung; PermissionRequest wird nur bei Freigabebedarf ausgelöst. Danach folgt PostToolUse, Stop kann eine weitere Runde verlangen. PreCompact und PostCompact rahmen die Kontextkomprimierung ein, Unter-Agents haben Start- und Stoppereignisse, SessionEnd läuft nur beim Ende des Hauptthreads.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 22.8px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 12.2px; }
+    .lane { fill: #cbd5e1; font-size: 12.2px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 13.7px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 10.6px; }
+    .tiny { fill: #94a3b8; font-size: 9.1px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+  </defs>
+  <rect width="1100" height="720" rx="8" fill="#020617"/>
+  <rect width="1100" height="720" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Codex Hook-Lebenszyklus</text>
+  <text x="44" y="72" class="sub">Ereignis danach wählen, ob Nebenwirkungen davor oder danach eintreten. Hook ist eine zusätzliche Schutzschicht, keine vollständige Sicherheitsgrenze.</text>
+
+  <text x="46" y="132" class="lane">Sitzungsstart</text>
+  <rect x="180" y="100" width="210" height="72" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="285" y="130" text-anchor="middle" class="label">SessionStart</text>
+  <text x="285" y="153" text-anchor="middle" class="note">startup · resume · clear · compact</text>
+  <path d="M390 136H470" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <rect x="470" y="100" width="250" height="72" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="595" y="130" text-anchor="middle" class="label">UserPromptSubmit</text>
+  <text x="595" y="153" text-anchor="middle" class="note">Prompt prüfen oder Kontext ergänzen</text>
+
+  <rect x="40" y="214" width="1020" height="272" rx="12" fill="#07101f" stroke="#334155" stroke-width="1.5"/>
+  <text x="62" y="244" class="lane">Ein Werkzeugaufruf und eine Aufgabenrunde</text>
+  <rect x="80" y="278" width="190" height="92" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="175" y="311" text-anchor="middle" class="label">PreToolUse</text>
+  <text x="175" y="337" text-anchor="middle" class="note">Vor Ausführung: ablehnen oder umschreiben</text>
+  <text x="175" y="357" text-anchor="middle" class="tiny">Lokal unterstützter Werkzeugpfad</text>
+  <path d="M270 324H326" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="326" y="278" width="200" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="426" y="311" text-anchor="middle" class="label">PermissionRequest</text>
+  <text x="426" y="337" text-anchor="middle" class="note">Nur beim Vorbereiten einer Freigabe</text>
+  <text x="426" y="357" text-anchor="middle" class="tiny">Erlauben · ablehnen · normal fragen</text>
+  <path d="M526 324H582" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="582" y="278" width="150" height="92" rx="8" fill="#083344" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="657" y="317" text-anchor="middle" class="label">Werkzeugausführung</text>
+  <text x="657" y="343" text-anchor="middle" class="note">Punkt der Nebenwirkung</text>
+  <path d="M732 324H788" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="788" y="278" width="220" height="92" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="898" y="311" text-anchor="middle" class="label">PostToolUse</text>
+  <text x="898" y="337" text-anchor="middle" class="note">Nach Abschluss: protokollieren oder rückmelden</text>
+  <text x="898" y="357" text-anchor="middle" class="tiny">Bereits eingetretene Nebenwirkungen nicht umkehrbar</text>
+
+  <rect x="326" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#a78bfa"/>
+  <text x="426" y="427" text-anchor="middle" class="label">PreCompact</text>
+  <text x="426" y="448" text-anchor="middle" class="tiny">Vor Kontextkomprimierung</text>
+  <path d="M526 431H582" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="582" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#a78bfa"/>
+  <text x="682" y="427" text-anchor="middle" class="label">PostCompact</text>
+  <text x="682" y="448" text-anchor="middle" class="tiny">Nach Kontextkomprimierung</text>
+  <rect x="808" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#fb923c"/>
+  <text x="908" y="427" text-anchor="middle" class="label">Stop</text>
+  <text x="908" y="448" text-anchor="middle" class="tiny">Kann eine weitere Hauptthread-Runde verlangen</text>
+
+  <text x="46" y="550" class="lane">Unter-Agent</text>
+  <rect x="180" y="516" width="210" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="285" y="546" text-anchor="middle" class="label">SubagentStart</text>
+  <text x="285" y="570" text-anchor="middle" class="note">Kann Entwicklungskontext ergänzen</text>
+  <path d="M390 552H470" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="470" y="516" width="220" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="580" y="546" text-anchor="middle" class="label">SubagentStop</text>
+  <text x="580" y="570" text-anchor="middle" class="note">Kann eine weitere Prüfung durch den Unter-Agent verlangen</text>
+
+  <text x="46" y="648" class="lane">Hauptthread endet</text>
+  <rect x="180" y="614" width="210" height="72" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="285" y="644" text-anchor="middle" class="label">SessionEnd</text>
+  <text x="285" y="668" text-anchor="middle" class="note">Nur Hauptthread; Standard: 1 Sekunde</text>
+  <rect x="470" y="614" width="538" height="72" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="739" y="643" text-anchor="middle" class="note">Passende Hooks aus allen Quellen werden ausgeführt; command Hooks desselben Ereignisses können parallel starten</text>
+  <text x="739" y="668" text-anchor="middle" class="tiny">Projekt- und Plugin-Hooks müssen geprüft und als vertrauenswürdig eingestuft werden; nach geändertem hash erneut prüfen</text>
+</svg>

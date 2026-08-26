@@ -3,18 +3,19 @@ title: Artifact-first work
 description: Agree on final artifact shape and path first, then derive steps—good for docs, config, reports, and other deliverables.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-**Artifact-first** means clarifying deliverable shape and location before Codex derives steps. It fits tasks with clear outputs—Markdown docs, OpenAPI, migration scripts, slide outlines—and can pair with [specification-driven work](/cases/workflows/specification-driven-work/).
+**Artifact-first** means clarifying deliverable shape and location before Codex derives steps. It fits tasks with clear outputs—Markdown docs, OpenAPI, migration scripts, slide outlines—and can pair with [specification-driven work](/en/cases/workflows/specification-driven-work/).
 
 ## What this page covers
 
 - How to describe artifact structure instead of process details
 - Consistency checks for multi-file deliverables
-- Alignment with [Files and artifacts](/guide/files-and-artifacts/) capabilities
+- Alignment with [Files and artifacts](/en/guide/files-and-artifacts/) capabilities
 
 ## Minimum viable approach
 
@@ -37,7 +38,7 @@ Define artifact list (path + format + sample reference)
     → Verify (lint, link check, preview)
 ```
 
-For visual artifacts, request screenshots or preview notes—see [Verify artifacts](/guide/quality/verify-artifacts/).
+For visual artifacts, request screenshots or preview notes—see [Verify artifacts](/en/guide/quality/verify-artifacts/).
 
 ## Common mistakes
 
@@ -56,7 +57,7 @@ For visual artifacts, request screenshots or preview notes—see [Verify artifac
 - [ ] All declared files exist and open
 - [ ] Format matches reference sample
 - [ ] Links / TOC / frontmatter valid
-- [ ] Meets [Definition of done](/prompts/define-done/)
+- [ ] Meets [Definition of done](/en/prompts/define-done/)
 
 ---
 

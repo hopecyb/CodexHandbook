@@ -3,9 +3,10 @@ title: Case study template
 description: Unified structure for writing and retrospecting Codex cases—easier team capture and comparison.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: a430fba
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Copy this template to create a new case page or internal retro doc.

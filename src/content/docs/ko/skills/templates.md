@@ -3,9 +3,10 @@ title: templates/ 디렉터리
 description: Skill에서 출력 템플릿과 보고서 골격을 제공합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/`는 「조판 시간을 조금 아끼는」 디렉터리만이 아닙니다. 더 실질적인 역할은 Skill 출력을 더 안정적으로 만들어, 매번 즉흥으로 만들지 않게 하는 것입니다.

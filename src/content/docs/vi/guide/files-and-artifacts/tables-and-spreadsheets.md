@@ -3,9 +3,10 @@ title: Bảng và bảng tính
 description: Đọc, làm sạch, phân tích và xuất dữ liệu dạng CSV, Excel và bảng — tránh phá cấu trúc và mã hóa.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ Ràng buộc: Không sửa tệp gốc; giá trị trống xử lý như 0; gi�
 Nghiệm thu: In 5 dòng đầu + tổng số dòng
 ```
 
-Ngữ cảnh: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+Ngữ cảnh: [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 
 ## Vì sao tác vụ bảng đặc biệt dễ sai thầm
 
@@ -108,7 +109,7 @@ Nếu dùng Python: `pandas` đọc/ghi; nếu dùng Node: `csv-parse` / `xlsx` 
 
 - Số dòng, tổng có đối chiếu chéo với dữ liệu nguồn không
 - Mở Excel xem ngày có bị coi là số không
-- [Kiểm chứng artifact](/guide/quality/verify-artifacts/): so sánh rút mẫu
+- [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/): so sánh rút mẫu
 
 Trong tác vụ bảng, quan trọng hơn là nói rõ cột, kiểu, quy tắc và nghiệm thu.
 
@@ -125,7 +126,7 @@ Trong tác vụ bảng, quan trọng hơn là nói rõ cột, kiểu, quy tắc 
 - [ ] Tệp gốc không bị ghi đè ngoài ý muốn (hoặc thay đổi thấy được trong diff)
 
 ## Nguồn tham khảo
-- [Định nghĩa ràng buộc](/prompts/constraints-and-boundaries/)
+- [Định nghĩa ràng buộc](/vi/prompts/constraints-and-boundaries/)
 ---
 
 **Trạng thái:** verified  

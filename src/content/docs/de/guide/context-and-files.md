@@ -3,9 +3,10 @@ title: Kontext und Dateien
 description: "Projekt-, Datei- und Gesprächskontext sowie gängige Eingabetypen verwalten."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2007fae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 15
 ---
@@ -41,13 +42,13 @@ Der einfache Maßstab dieser Seite:
 > **Lass es wirklich relevante Information sehen — und irrelevante nicht den Platz stehlen.**
 ## Kontextmanagement
 
-- [Projektkontext](/guide/context/project-context/) — `AGENTS.md`, Repo-Vereinbarungen
-- [Datei- und Verzeichniskontext](/guide/context/file-and-folder-context/) — @-Referenzen und Umfang
-- [Gesprächskontext](/guide/context/conversation-context/) — Thread und Komprimierung
-- [Fokussiert halten](/guide/context/keep-context-focused/) — irrelevantes Rauschen vermeiden
-- [Sensibler Kontext](/guide/context/sensitive-context/) — Secrets und Privatsphäre
+- [Projektkontext](/de/guide/context/project-context/) — `AGENTS.md`, Repo-Vereinbarungen
+- [Datei- und Verzeichniskontext](/de/guide/context/file-and-folder-context/) — @-Referenzen und Umfang
+- [Gesprächskontext](/de/guide/context/conversation-context/) — Thread und Komprimierung
+- [Fokussiert halten](/de/guide/context/keep-context-focused/) — irrelevantes Rauschen vermeiden
+- [Sensibler Kontext](/de/guide/context/sensitive-context/) — Secrets und Privatsphäre
 
-Wie du Hintergrund im Prompt organisierst: [Ziele und Kontext](/prompts/goals-and-context/).
+Wie du Hintergrund im Prompt organisierst: [Ziele und Kontext](/de/prompts/goals-and-context/).
 
 ## Dateien und Artefakte
 
@@ -65,18 +66,18 @@ Je nach Dateityp unterscheiden sich Leseweise, passende Fragen und Abnahme etwas
 
 ## Dateien und Artefakte
 
-- [Text- und Codedateien](/guide/files-and-artifacts/text-and-code-files/)
-- [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDF und Dokumente](/guide/files-and-artifacts/pdf-and-documents/)
-- [Tabellen und Spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [Präsentationen](/guide/files-and-artifacts/presentations/)
+- [Text- und Codedateien](/de/guide/files-and-artifacts/text-and-code-files/)
+- [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF und Dokumente](/de/guide/files-and-artifacts/pdf-and-documents/)
+- [Tabellen und Spreadsheets](/de/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Präsentationen](/de/guide/files-and-artifacts/presentations/)
 
 ## Empfohlene Lesereihenfolge
 
 Nicht alles auf einmal. Diese Reihenfolge hilft:
 
-1. Zuerst [Datei- und Verzeichniskontext](/guide/context/file-and-folder-context/) — verstehen, „welche Dateien es sehen soll“
-2. Dann [Fokussiert halten](/guide/context/keep-context-focused/) — Aufgaben nicht zerreden
+1. Zuerst [Datei- und Verzeichniskontext](/de/guide/context/file-and-folder-context/) — verstehen, „welche Dateien es sehen soll“
+2. Dann [Fokussiert halten](/de/guide/context/keep-context-focused/) — Aufgaben nicht zerreden
 3. Je nach Materialtyp die passende Datei-Kapitelseite
 
 Kontext ist der Informationshaufen, den Codex beim Urteilen griffbereit hat; richtig gegeben, werden Ergebnisse leichter richtig.

@@ -3,100 +3,108 @@ title: Connecter un serveur MCP
 description: Configurer, authentifier, vérifier et dépanner — connecter votre premier outil MCP en sécurité.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 972ccc3
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cette page porte sur la connexion et la vérification ; les détails de protocole et le développement de serveurs sont dans la documentation officielle MCP.
+This chapter completes the current official loop: **add server -> inspect configuration -> confirm tools in a session -> make one read-only call**.
 
-## Avant de commencer
+## Before starting
 
-- [ ] Comprendre les limites de sécurité dans [Vue d'ensemble MCP](/skills/mcp/mcp-overview/)
-- [ ] Avoir un compte de test en lecture seule ou sandbox
-- [ ] Confirmer que la version actuelle du client Codex supporte MCP (docs officielles)
+- Read the [MCP overview](/fr/skills/mcp/mcp-overview/).
+- Confirm `codex mcp --help` runs.
+- Use a trusted source and read-only scenario first.
+- Never put a real token in history, prompts, or the repository.
 
-## Flux recommandé
+## Path A: add a STDIO server with the CLI
 
-### 1. Choisir le type de serveur
+The official example uses the Context7 documentation server:
 
-| Type | Notes | Risque |
-|---|---|---|
-| Serveur stdio local | Processus sur votre machine | Moyen : permissions du processus = votre utilisateur |
-| HTTP/SSE distant | Service hébergé | Moyen–élevé : TLS, rotation de Token requis |
-
-Pour la première connexion, commencez par un **exemple officiel ou serveur local en lecture seule**.
-
-### 2. Ajouter la configuration
-
-L'emplacement de config varie selon CLI/App ; couramment bloc `mcp` au niveau utilisateur ou projet. Structure illustrative (**noms de champs selon docs officielles**) :
-
-```json
-{
-  "mcpServers": {
-    "example-readonly": {
-      "command": "npx",
-      "args": ["-y", "@example/mcp-server"],
-      "env": {
-        "API_TOKEN": "Lire depuis variable d'environnement — ne pas coder en dur dans le dépôt"
-      }
-    }
-  }
-}
+```bash
+codex mcp add context7 -- npx -y @upstash/context7-mcp
+codex mcp list
 ```
 
-Principes :
+This writes the server to Codex configuration. Everything after `--` is the STDIO startup command. The first run may download an npm package, so verify its name and source first.
 
-- Injecter les secrets via variables d'environnement ou gestionnaire de secrets
-- Les changements de config passent par revue Git (sauf secrets)
+## Path B: edit config.toml
 
-### 3. Redémarrer ou recharger le client
+User configuration defaults to `~/.codex/config.toml`. A trusted project may also use `.codex/config.toml`.
 
-Après changement de config MCP, redémarrer généralement la session Codex pour rafraîchir la liste des serveurs.
+STDIO:
 
-### 4. Vérifier que les outils sont visibles
+```toml
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+startup_timeout_sec = 10
+tool_timeout_sec = 60
+```
 
-Dans une tâche, demander explicitement :
+Remote Streamable HTTP:
+
+```toml
+[mcp_servers.internal_docs]
+url = "https://mcp.example.com"
+bearer_token_env_var = "INTERNAL_DOCS_TOKEN"
+enabled_tools = ["search_docs", "get_doc"]
+```
+
+Replace the illustrative name, URL, and tools with actual server documentation. `bearer_token_env_var` stores an environment-variable name, not the token.
+
+## OAuth servers
+
+After configuring an OAuth-capable server, run:
+
+```bash
+codex mcp login <server-name>
+```
+
+The desktop App and IDE MCP lists also mark OAuth servers and offer Authenticate.
+
+## Inspect from each client
+
+| Surface | Configuration or inspection |
+|---|---|
+| ChatGPT desktop App | Settings -> MCP servers; Restart after saving; use `/mcp` |
+| Codex CLI | `codex mcp add/list/login`; use `/mcp` in TUI |
+| IDE integration | Gear -> MCP servers; Restart extension after saving |
+
+They share configuration on one Codex host. ChatGPT Web does not read local configuration.
+
+## Verification prompt
 
 ```text
-Lister les outils MCP actuellement disponibles (noms et descriptions en une ligne seulement).
-Puis appeler un outil de test en lecture seule et afficher le résultat.
-Ne pas effectuer des opérations d'écriture.
+Use only the currently connected MCP server:
+1. List tool names related to development-documentation search.
+2. Use one read-only tool to find basic Node.js test-runner usage.
+3. Name the tool actually called.
+4. Do not write or connect another service.
 ```
 
-### 5. Essayer par petits pas
+Evidence: the server appears in `codex mcp list` or `/mcp`, a read-only tool returns structured data, and no unrelated permission is requested.
 
-Choisir une tâche réelle mais à faible risque, ex. : « Utiliser MCP pour récupérer uniquement le titre du ticket #123 ; ne pas changer le statut. »
+## Least-privilege options
 
-## Modes d'authentification
+- `enabled_tools`: allow only listed tools.
+- `disabled_tools`: exclude more tools after the allowlist.
+- `enabled = false`: keep configuration but disable temporarily.
+- `required = true`: fail startup if an essential server cannot initialize.
 
-| Mode | Convient à |
-|---|---|
-| API Key / PAT | Dev personnel ; rotation régulière |
-| OAuth | Auth au niveau utilisateur ; bon pour SaaS |
-| Local sans auth | Mock local seulement ; ne pas exposer sur le réseau |
+## On failure
 
-En cas d'échec vérifier : Token expiré, variable d'environnement non passée au processus, proxy d'entreprise bloquant.
+Record the exact error and diagnose configuration, process/network, authentication, and individual tools in [Debug MCP](/fr/skills/mcp/debugging-mcp/). Change one field at a time.
 
-## Liste de dépannage
+## Official source
 
-| Symptôme | Cause possible |
-|---|---|
-| Liste d'outils vide | Chemin de config incorrect, processus n'a pas démarré |
-| Timeout d'appel | Réseau, VPN, serveur down |
-| Permission denied | Portée du Token insuffisante |
-| Le modèle n'appelle jamais les outils | Tâche ne demandait pas ; ou description d'outil peu claire |
+- [OpenAI: Connect Codex to an MCP server](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
 
-## Travailler avec l'approbation
-
-Le premier appel à un outil inconnu peut demander confirmation — c'est attendu. Ne encouragez pas « toujours autoriser toutes les écritures MCP » dans la politique d'équipe.
-
-## Sources de référence
-- Documentation de configuration MCP OpenAI Codex
-- Exemples de serveurs modelcontextprotocol.io
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** App / CLI / IDE  
-**Base de vérification :** Décrit directement la configuration actuelle de serveur MCP, rechargement et étapes de vérification — très sensible à la version et au client ; pas encore adapté à `verified`.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE
+
+**Last verified:** 2026-08-25

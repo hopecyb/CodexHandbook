@@ -3,9 +3,10 @@ title: PDF와 문서
 description: Codex가 PDF류 문서를 읽고 요약·생성할 때의 범위, 도구, 검증 요점.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ PDF는 텍스트보다 더 번거롭습니다. 동시에 포함할 수 있기 �
 1. **파일 경로를 명시**: `docs/spec.pdf` 또는 @ 참조(클라이언트 지원에 따름)
 2. **무엇을 원하는지 설명**: 요약, 특정 장 대조, 표 데이터 추출
 3. **페이지 또는 장**: 긴 문서는 범위를 한정해 컨텍스트를 절약
-4. **민감 내용**: 계약, 신분증 스캔 등은 [민감 컨텍스트](/guide/context/sensitive-context/) 흐름
+4. **민감 내용**: 계약, 신분증 스캔 등은 [민감 컨텍스트](/ko/guide/context/sensitive-context/) 흐름
 
 ### 제한
 
@@ -97,8 +98,8 @@ OCR이나 판형 인식이 불확실하면 명시하세요.
 ## 저장소 전략과의 관계
 
 - 큰 바이너리 PDF는 **Git LFS** 또는 저장소 밖
-- diff가 읽히지 않으면 검증은 **파일 열기** + [산출물 검증](/guide/quality/verify-artifacts/) 대조
-- 생성물 목록은 [생성물 검증](/guide/files-and-artifacts/generated-artifacts/)
+- diff가 읽히지 않으면 검증은 **파일 열기** + [산출물 검증](/ko/guide/quality/verify-artifacts/) 대조
+- 생성물 목록은 [생성물 검증](/ko/guide/files-and-artifacts/generated-artifacts/)
 
 ## 흔한 실수
 

@@ -3,9 +3,10 @@ title: Codex là gì
 description: Giải thích bằng ngôn ngữ đời thường Codex làm được gì, không làm được gì, và các lối vào chính.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c6582f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 2
 ---
@@ -81,7 +82,7 @@ Quy trình phổ biến thường như sau:
 4. Xong việc, nó cho bạn biết đã thay đổi gì
 5. Bạn kiểm tra kết quả có đúng kỳ vọng không
 
-Ví dụ đầy đủ của quy trình này xem tại [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/).
+Ví dụ đầy đủ của quy trình này xem tại [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/).
 
 ## Các lối vào chính
 
@@ -93,7 +94,7 @@ Ví dụ đầy đủ của quy trình này xem tại [Chạy tác vụ đầu t
 | Web / Cloud | Kết nối kho mã, môi trường đám mây và tác vụ dài |
 | Di động và từ xa | Giám sát, phê duyệt và theo dõi nhẹ |
 
-Bảng đối chiếu xem [So sánh tính năng](/guide/reference/feature-comparison/). Quan hệ khái niệm xem [Bản đồ năng lực](/guide/start-here/).
+Bảng đối chiếu xem [So sánh tính năng](/vi/guide/reference/feature-comparison/). Quan hệ khái niệm xem [Bản đồ năng lực](/vi/guide/start-here/).
 
 ## Xem tiếp
 
@@ -105,9 +106,9 @@ Nếu chỉ muốn nhớ ba điểm trước, ghi các câu sau:
 
 Các trang liên quan có thể xem tiếp:
 
-1. [Chọn client Codex](/guide/choose-your-client/)
-2. [Thuật ngữ cho người mới](/guide/start-here/terminology-for-beginners/)
-3. [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
+1. [Chọn client Codex](/vi/guide/choose-your-client/)
+2. [Thuật ngữ cho người mới](/vi/guide/start-here/terminology-for-beginners/)
+3. [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Computer Use
 description: "Fortgeschrittene GUI-Bedienung über Bildschirm und Eingabegeräte — Szenarien, Risiken und Freigabe."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -79,7 +80,7 @@ Fast wie **Tastatur und Maus dem Agent geben**:
 - Bestätigungsdialoge falsch klicken
 - Notifications mit Sensiblem auf dem Screen
 
-Pflicht: [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/), [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
+Pflicht: [Berechtigungen und Freigabe](/de/guide/foundations/permissions-and-approvals/), [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
 
 ## Ob nutzen
 
@@ -109,7 +110,7 @@ App außerhalb IDE?      → Computer Use (vorsichtiger)
 Nur Code + Tests?       → Terminal + Dateiwerkzeug
 ```
 
-Siehe [Werkzeugwahl](/guide/tools/tool-selection/)
+Siehe [Werkzeugwahl](/de/guide/tools/tool-selection/)
 
 ## Direkt nutzbare Formulierung
 

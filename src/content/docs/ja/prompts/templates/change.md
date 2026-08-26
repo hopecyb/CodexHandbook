@@ -3,9 +3,10 @@ title: 変更テンプレート
 description: 既存の上で境界のある反復変更。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 変更テンプレート
@@ -63,8 +64,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [完了基準の定義](/prompts/define-done/)
-- [制約と境界](/prompts/constraints-and-boundaries/)
+- [完了基準の定義](/ja/prompts/define-done/)
+- [制約と境界](/ja/prompts/constraints-and-boundaries/)
 
 ---
 

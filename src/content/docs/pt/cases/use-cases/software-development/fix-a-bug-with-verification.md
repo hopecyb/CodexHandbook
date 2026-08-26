@@ -3,90 +3,194 @@ title: "Caso: correção de bug com verificação"
 description: Do teste em falha à correção mínima e regressão — o ciclo mais comum para programadores.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 91d8575
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## Metadados
 
-| Campo | Conteúdo |
+This is not a prompt template that merely swaps filenames. You will run real starter code, observe a failing test, and inspect how the reference repair makes the same suite pass.
+
+## Metadata
+
+| Field | Value |
 |---|---|
-| Público | Programadores |
-| Cliente | CLI ou IDE (repositório local) |
-| Tempo estimado | 30–60 minutos |
-| Data de verificação | 2026-07-25 |
+| Audience | Developers |
+| Client | CLI or IDE with a local repository |
+| Estimated time | 25–45 minutes |
+| Prerequisite | Run one Node.js command and read simple JavaScript |
+| Dependency | Built-in `node:test`; no third-party package |
+| Verified | 2026-08-25 |
 
-## 1. Objetivo e contexto
+## 1. Goal and background
 
-**Objetivo:** Corrigir um bug de regressão já capturado por um teste unitário e acrescentar testes para evitar reincidência.
+**Business context:** `calculateTotal` receives a percentage discount. A zero discount works, but `10`, intended to mean 10%, is multiplied as a ratio and produces a negative total.
 
-**Critérios de sucesso:**
+**Goal:** locate the calculation error, make the smallest repair, and prove that the same tests move from red to green.
 
-- O teste que falhava passa
-- A suíte completa continua verde
-- O diff envolve apenas ficheiros necessários
+**Success criteria:**
 
-**Fora de âmbito:** Refatorações em larga escala; upgrades major de dependências.
+- Starter suite reliably has one failure: expected 36, actual -360.
+- All three tests pass after repair.
+- Only percentage conversion changes; the cart API is not rewritten.
+- You can explain why post-fix green must be stored with pre-fix red.
 
-## 2. Preparação
+**Out of scope:** monetary precision libraries, tax, currency conversion, upgrades, UI.
 
-- Clonar o repositório, `pnpm install` (ou conforme `AGENTS.md`)
-- Confirmar reprodução local da falha: `pnpm test -- path/to/failing.test.ts`
-- Ramo: `fix/issue-123-short-desc`
+![Verified bug-fix workflow](/diagrams/verified-bug-fix-workflow-en.svg)
 
-## 3. Fluxo de trabalho
+The two return paths matter: a related-test failure returns to the minimal repair; regression or diff failure returns to root-cause analysis. Never delete assertions or broaden changes only to reach green.
 
-### Explorar
-
-```text
-Não altere código. Leia o teste em falha @tests/auth/login.test.ts e a implementação @src/auth/login.ts;
-em no máximo 5 pontos, explique a causa da falha, citando asserções e números de linha da stack.
-```
-
-### Planear
+## 2. Prepare material
 
 ```text
-Apresente o plano de correção: que ficheiros alterar, se são necessários novos testes e como verificar.
-Espere a minha resposta «executar» antes de alterar código.
+examples/complete-workflows/developer/verified-bug-fix/
+├── brief.md
+├── starter/
+│   ├── cart.js
+│   └── cart.test.js
+├── prompts/
+│   ├── 01-explore.md
+│   ├── 02-fix-and-verify.md
+│   └── 03-review.md
+├── solution/
+│   ├── cart.js
+│   └── cart.test.js
+└── validation.md
 ```
 
-### Executar
+`starter/` intentionally contains the bug; `solution/` is an independently runnable reference. Do not practice on the solution.
+
+## 3. Reproduce red
+
+```bash
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
+```
+
+Expected: non-zero exit, one failure out of three. Key evidence resembles:
 
 ```text
-Execute os passos 1–2 do plano. Após cada passo, corra apenas os testes relacionados.
+Expected values to be strictly equal:
+
+-360 !== 36
 ```
 
-### Verificar
+If it does not fail, stop. Confirm the `starter/` path, Node.js version, and whether files were already modified. Without stable red, there is no baseline.
+
+## 4. Read-only exploration
+
+### Explore
 
 ```text
-Corra a suíte completa de testes; resuma o diff para a minha review; não faça git push.
+Do not edit. Read:
+- examples/complete-workflows/developer/verified-bug-fix/starter/cart.js
+- examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
+
+In at most six points state:
+1. triggering input;
+2. expected and actual values;
+3. percentage versus ratio in the formula;
+4. exact minimal repair location;
+5. public behavior that must remain;
+6. post-fix verification commands.
 ```
 
-Humano: ler o diff, confirmar que não há alterações irrelevantes e seguir [rever diffs](/guide/quality/review-diffs/).
+A valid explanation says callers pass `10` for 10%, but the implementation computes `subtotal * 10` without dividing by `100`.
 
-## 4. Falha e recuperação
+## 5. Plan and make the smallest repair
 
-| Problema | Tratamento |
+```text
+Modify only percentage conversion in starter/cart.js.
+Do not change the function name, parameters, assertions, file structure, or dependencies.
+
+Then:
+1. run starter/cart.test.js;
+2. show the actual test summary;
+3. explain the changed line;
+4. do not commit or push.
+```
+
+The core repair is:
+
+```js
+const discount = subtotal * (discountPercent / 100);
+```
+
+Changing expected `36` to `-360` only rewrites the expectation; it does not repair the rule.
+
+## 6. Verify green
+
+To preserve the starter, run the reference:
+
+```bash
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
+```
+
+Expected: all three pass and exit status is zero.
+
+Keep at least:
+
+| Evidence | Question |
 |---|---|
-| A correção introduz novas falhas | `git stash` ou reverter o commit; reduzir o âmbito da alteração |
-| Diagnóstico da causa raiz errado | Voltar à exploração e pedir novas hipóteses |
-| Teste flaky | Estabilizar o teste antes de corrigir a lógica de negócio |
+| Pre-fix failing command | Is the original issue reproducible? |
+| Failing assertion | Does the test cover the bug? |
+| Code diff | Does the edit touch only the cause? |
+| Post-fix related test | Is the same behavior now correct? |
+| Broader tests | Did adjacent behavior regress? |
 
-## 5. Consolidação
+This exercise has one suite. A real repository also runs lint, types, and full tests from `AGENTS.md`.
 
-- Se este tipo de bug se repetir, acrescentar uma convenção em `AGENTS.md`
-- Pode extrair o Skill `$regression-guard`: correr a lista de testes críticos antes de fundir
+## 7. Review
 
-## 6. Capítulos relacionados
+```text
+Review this repair without editing. List findings first:
+- Does it convert the percentage rather than weaken tests?
+- Did it change the signature or unrelated logic?
+- Are empty cart, no discount, and 10% covered?
+- Which monetary precision risks remain out of scope?
+```
 
-- [Diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/)
-- [Percurso de aprendizagem do programador](/guide/learning-paths/developer/)
-- [Correr testes](/guide/quality/run-tests/)
+Also confirm no dependency, debug log, whole-file format, or Git operation appeared.
+
+## 8. Failure and recovery
+
+| Problem | Response |
+|---|---|
+| Starter does not fail | Run `starter/cart.test.js` and restore the starter |
+| Green after test change | Restore assertion; edit only percentage conversion |
+| Related test still fails | Compare values and placement of `/ 100` |
+| Full suite gains failures | Return to root cause, public behavior, and scope |
+| Flaky test | Stabilize the environment; one green run is not evidence |
+
+## 9. Transfer to a real repository
+
+```text
+Goal: fix [observable wrong behavior].
+Reproduction: [exact command]; stable failure: [assertion].
+Scope: only [implementation] and required tests; no refactor or upgrade.
+Acceptance: original and boundary tests pass; [full command] passes; clean diff.
+Permissions: no push, release, or production data; stop before extra access.
+Locate root cause and risk read-only; wait for plan approval before editing.
+```
+
+## 10. Preserve the process
+
+- Add an `AGENTS.md` rule if this bug class repeats.
+- Extract a `regression-guard` Skill requiring red, green, and regression evidence.
+- Put frequent boundary tests in CI rather than only in chats.
+
+## 11. Related chapters
+
+- [Diagnose before fixing](/pt/cases/workflows/diagnose-before-fixing/)
+- [Developer learning path](/pt/guide/learning-paths/developer/)
+- [Run tests](/pt/guide/quality/run-tests/)
+- [Review diffs](/pt/guide/quality/review-diffs/)
+- [Define done](/pt/prompts/define-done/)
 
 ---
 
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / IDE  
-**Base de verificação:** Cruzado com os capítulos já verificados deste manual sobre diagnóstico, correr testes, rever diffs e percurso do programador; o conteúdo limita-se ao caso estável de ciclo de desenvolvimento «do teste em falha à correção mínima e verificação de regressão».  
-**Última verificação:** 2026-07-26
+**Status:** verified
+**Applies to:** CLI / IDE
+**Verification basis:** The starter was verified with one expected failure out of three; the reference solution passes all three. The evidence chain is organized as red, root cause, minimal repair, green, regression, and human review.
+**Last verified:** 2026-08-25

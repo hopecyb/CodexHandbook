@@ -3,9 +3,10 @@ title: Erstellen-Vorlage
 description: Feature, Text oder Artefakt von null umsetzen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Erstellen-Vorlage
@@ -62,8 +63,8 @@ Am riskantesten: starten, bevor „was“ und „für wen“ klar sind.
 
 ## Verwandt
 
-- [Spezifikationsgetriebenes Arbeiten](/cases/workflows/specification-driven-work/)
-- [Fertigstellungsstandard definieren](/prompts/define-done/)
+- [Spezifikationsgetriebenes Arbeiten](/de/cases/workflows/specification-driven-work/)
+- [Fertigstellungsstandard definieren](/de/prompts/define-done/)
 
 ---
 

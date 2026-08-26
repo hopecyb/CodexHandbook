@@ -3,18 +3,19 @@ title: 出典付き調査
 description: Codex で検索・比較・ファクトチェック——追跡可能な出典と結論。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a9ff7a5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **出典付き調査**とは、主要な結論が公式ドキュメント、論文、リポジトリファイルなど特定の出典に追跡できること——根拠のない主張だけにしないことです。技術選定、競合比較、文献レビュー、ポリシー解釈に向きます。
 
 ## 扱う内容
 
-- [ウェブ検索](/guide/tools/web-search/) と読み取り専用リポジトリ作業の使い分け
+- [ウェブ検索](/ja/guide/tools/web-search/) と読み取り専用リポジトリ作業の使い分け
 - 引用形式と不確実性ラベルの要求方法
-- [出典を検証する](/guide/quality/validate-sources/) との組み合わせ
+- [出典を検証する](/ja/guide/quality/validate-sources/) との組み合わせ
 
 ## 最小限のアプローチ
 
@@ -37,7 +38,7 @@ translated_at: 2026-07-28
     → 人の判断または仕様フェーズへ
 ```
 
-長い調査はラウンド分割——[長時間タスク管理](/cases/workflows/long-running-task-management/)。
+長い調査はラウンド分割——[長時間タスク管理](/ja/cases/workflows/long-running-task-management/)。
 
 ## よくあるミス
 
@@ -49,7 +50,7 @@ translated_at: 2026-07-28
 ## 安全境界
 
 - 未公開の社内資料は制御されていない MCP 経由で出さない
-- 変わりやすい事実（価格、バージョン、地域提供）は [検証日](/guide/start-here/handbook-version-policy/) が必要
+- 変わりやすい事実（価格、バージョン、地域提供）は [検証日](/ja/guide/start-here/handbook-version-policy/) が必要
 
 ## 受け入れチェックリスト
 
@@ -60,8 +61,8 @@ translated_at: 2026-07-28
 
 ## 関連章
 
-- [不確実性への対処](/guide/quality/handle-uncertainty/)
-- [事例：レビュー付きドキュメント改修](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [不確実性への対処](/ja/guide/quality/handle-uncertainty/)
+- [事例：レビュー付きドキュメント改修](/ja/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

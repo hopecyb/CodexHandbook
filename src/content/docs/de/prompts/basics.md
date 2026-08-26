@@ -3,9 +3,10 @@ title: Prompt-Grundlagen
 description: Die grundlegenden Bausteine eines guten Prompts.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Wenn du mit Prompts anfängst, fällt der Fokus leicht auf „klingt die Formulierung fortgeschritten?“.  
@@ -98,7 +99,7 @@ Für die meisten Einsteiger ist der Start mit der **empfohlenen Version** meist 
 
 Der Kern eines guten Prompts: weniger Raten, weniger Abschweifen, weniger Grenzverletzung.
 
-Beispiele: [Erste Aufgabe ausführen](/cases/first-task/) und [Aufgabenstruktur](/prompts/task-anatomy/).
+Beispiele: [Erste Aufgabe ausführen](/de/cases/first-task/) und [Aufgabenstruktur](/de/prompts/task-anatomy/).
 
 ---
 

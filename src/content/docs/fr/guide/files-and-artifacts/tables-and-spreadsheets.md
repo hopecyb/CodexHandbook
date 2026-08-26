@@ -3,9 +3,10 @@ title: Tableaux et tableurs
 description: Lire, nettoyer, analyser et exporter CSV, Excel et données tabulaires — sans casser la structure ou l'encodage.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ Contraintes : Ne pas modifier la source ; traiter les blancs comme 0 ; deux déc
 Vérification : Afficher les 5 premières lignes + nombre total de lignes
 ```
 
-Contexte : [Contexte fichier et dossier](/guide/context/file-and-folder-context/)
+Contexte : [Contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
 
 ## Pourquoi les tableurs échouent silencieusement
 
@@ -102,7 +103,7 @@ Python : `pandas` ; Node : `csv-parse` / `xlsx` — documenter la norme du proje
 
 - Comptages de lignes et totaux vérifiés croisés avec la source
 - Ouvrir Excel et confirmer que les dates ne sont pas stockées comme nombres incorrectement
-- [Vérifier les artefacts](/guide/quality/verify-artifacts/) : comparaison d'échantillons
+- [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/) : comparaison d'échantillons
 
 Pour les tableurs, la clarté sur colonnes, types, règles et acceptation compte le plus.
 
@@ -119,7 +120,7 @@ Pour les tableurs, la clarté sur colonnes, types, règles et acceptation compte
 - [ ] Fichier source non écrasé accidentellement (ou changement visible dans le diff)
 
 ## Sources de référence
-- [Définir les contraintes](/prompts/constraints-and-boundaries/)
+- [Définir les contraintes](/fr/prompts/constraints-and-boundaries/)
 ---
 
 **Statut :** vérifié  

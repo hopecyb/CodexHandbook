@@ -3,9 +3,10 @@ title: Prompts mit Bildern
 description: 'Wie du bei Screenshots, Designs und Whiteboards fragen stellst, damit Ergebnisse ausführbar werden.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele „Bild → Aktion“-Aufgaben scheitern nicht, weil das Modell nichts sieht — sondern weil nur das Bild da ist und **nicht gesagt wird, worauf es achten soll**.
@@ -162,10 +163,10 @@ Auch bei Design-Umsetzung zählen echte Seite, Diff, Breakpoints und Nutzbarkeit
 
 ## Zusammenspiel mit anderen Seiten
 
-- Bilder hochladen/verwalten: [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-- Neue Bilder erzeugen: [Bildgenerierung](/guide/tools/image-generation/)
-- Aufgabe vollständig formulieren: [Aufgabenstruktur](/prompts/task-anatomy/)
-- Zuerst analysieren: [Zuerst einen Plan verlangen](/prompts/ask-for-a-plan/)
+- Bilder hochladen/verwalten: [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/)
+- Neue Bilder erzeugen: [Bildgenerierung](/de/guide/tools/image-generation/)
+- Aufgabe vollständig formulieren: [Aufgabenstruktur](/de/prompts/task-anatomy/)
+- Zuerst analysieren: [Zuerst einen Plan verlangen](/de/prompts/ask-for-a-plan/)
 
 ## Eine praktische Faustregel
 

@@ -3,9 +3,10 @@ title: 프로젝트와 작업
 description: App에서 프로젝트와 작업을 관리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 088dad1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -39,7 +40,7 @@ sidebar:
 “작업”은 이번에 준 **구체적 위임**입니다.  
 위임이 명확할수록 Codex가 추측하며 진행하기 어렵습니다.
 
-개념 대조: [스레드, 작업, 프로젝트](/guide/foundations/threads-tasks-and-projects/)
+개념 대조: [스레드, 작업, 프로젝트](/ko/guide/foundations/threads-tasks-and-projects/)
 
 ## 흔한 오해
 

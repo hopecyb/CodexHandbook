@@ -3,14 +3,15 @@ title: 終了コードと再試行
 description: パイプラインで codex exec の成否を正しく解釈——いつ再試行し、いつ即失敗するか。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-CI は**プロセス終了コード**でステップの成否を判断します。本章は [codex exec](/guide/developer-platform/non-interactive/codex-exec/) の一般的な意味、再試行方針、冪等設計を説明します。
+CI は**プロセス終了コード**でステップの成否を判断します。本章は [codex exec](/ja/guide/developer-platform/non-interactive/codex-exec/) の一般的な意味、再試行方針、冪等設計を説明します。
 
 ## 本ページの内容
 
@@ -57,7 +58,7 @@ CI は**プロセス終了コード**でステップの成否を判断します�
 | `0` | タスク完了かつ prompt の成功基準を満たす |
 | 非 `0` かつログに policy/sandbox 拒否 | **盲目的に再試行しない**。設定または prompt を修正 |
 | 非 `0` かつ API 429/5xx | 限回数の指数バックオフ再試行 |
-| P0 問題を発見したが実行は成功 | [構造化出力](/guide/developer-platform/non-interactive/structured-output/) の `pass: false` + スクリプトで `exit 1` |
+| P0 問題を発見したが実行は成功 | [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/) の `pass: false` + スクリプトで `exit 1` |
 
 「セキュリティ問題を発見」はクラッシュ例外に頼らず、JSON で**明示的に** `pass: false` とし、ラッパースクリプトが終了コードを決める。
 
@@ -67,7 +68,7 @@ CI は**プロセス終了コード**でステップの成否を判断します�
 max=3
 delay=10
 for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
+  if codex exec --cd . "$(cat "$PROMPT")"; then
     exit 0
   fi
   code=$?
@@ -115,8 +116,8 @@ exit 1
 
 ## 関連章
 
-- [エラーリファレンス](/guide/reference/error-reference/)
-- [失敗回復](/cases/workflows/failure-recovery/)
+- [エラーリファレンス](/ja/guide/reference/error-reference/)
+- [失敗回復](/ja/cases/workflows/failure-recovery/)
 
 ## 参考
 - OpenAI API 再試行ガイド（概念）

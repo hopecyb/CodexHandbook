@@ -4,17 +4,17 @@ description: Review, testing, and definition of done.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 967fdd6
 translation_status: reviewed
 translated_at: 2026-07-26
 ---
 
-- [Review diffs](/guide/quality/review-diffs/)
-- [Run tests](/guide/quality/run-tests/)
-- [Verify artifacts](/guide/quality/verify-artifacts/)
-- [Validate sources](/guide/quality/validate-sources/)
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Definition of done](/guide/quality/definition-of-done/)
+- [Review diffs](/en/guide/quality/review-diffs/)
+- [Run tests](/en/guide/quality/run-tests/)
+- [Verify artifacts](/en/guide/quality/verify-artifacts/)
+- [Validate sources](/en/guide/quality/validate-sources/)
+- [Handle uncertainty](/en/guide/quality/handle-uncertainty/)
+- [Definition of done](/en/guide/quality/definition-of-done/)
 
 ---
 

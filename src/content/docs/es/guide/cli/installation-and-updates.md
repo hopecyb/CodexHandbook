@@ -1,65 +1,66 @@
 ---
 title: Instalación y actualizaciones de la CLI
-description: Instalar, actualizar y confirmar la versión.
+description: Instala, actualiza y confirma la versión activa.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 6b8ceaf
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-La primera vez que instalas la CLI, mucha gente se atasca aquí:
+La primera instalación de la CLI suele plantear tres preguntas:
 
-- Si de verdad se instaló bien
-- Por qué tras instalar la terminal sigue sin reconocer `codex`
-- Cómo confirmar, tras actualizar, qué versión estás ejecutando ahora
+- ¿La instalación terminó realmente bien?
+- ¿Por qué la terminal sigue sin reconocer `codex`?
+- Después de actualizar, ¿cómo sé qué versión se está ejecutando?
 
-Instalar la CLI no es «el comando corrió una vez»: es que tu terminal actual pueda encontrarla de forma estable.
+La instalación termina cuando la terminal actual puede encontrar el comando de forma fiable, no cuando el instalador se ha ejecutado una vez.
 
-## Tras instalar, comprueba al menos estas 3 cosas
+## Comprueba al menos tres cosas
 
-1. El comando se puede ejecutar directamente
-2. La terminal actual lo encuentra en el `PATH`
-3. La autenticación ya está hecha; no basta con tener el ejecutable
+1. El comando se ejecuta directamente.
+2. La terminal actual lo encuentra a través de `PATH`.
+3. La autenticación está completa; no basta con instalar el ejecutable.
 
-## Malentendidos frecuentes
+## Errores de interpretación habituales
 
-### 1. Que el script de instalación termine no significa que esté listo
+### 1. Si el instalador termina, la instalación está completa
 
-Que el script termine solo dice que «se ejecutaron los pasos de instalación».  
-Lo siguiente es: si la terminal que tienes abierta ahora reconoce el comando.
+Solo significa que se ejecutaron sus pasos. A continuación, confirma que la terminal actual reconoce el comando.
 
-### 2. Abrir otra ventana de terminal lo arreglará solo
+### 2. Una ventana de terminal nueva siempre lo arregla
 
-A veces sí, a veces no.  
-Si el `PATH` no se actualizó, en otra ventana puede seguir sin encontrarlo.
+A veces sí, pero no siempre. Si `PATH` no se actualizó, la ventana nueva puede seguir sin encontrar el ejecutable.
 
-### 3. Actualizar es volver a instalar
+### 3. Actualizar consiste en reinstalar a ciegas
 
-A menudo lo que necesitas primero es confirmar:
+Determina primero:
 
-- Si la versión actual es antigua
-- Qué instalación estás actualizando exactamente
+- si la versión actual es antigua;
+- qué instalación concreta estás actualizando.
 
-## Puedes comprobar en este orden
+## Comprueba en este orden
 
-Justo después de instalar:
+Después de instalar:
 
-1. Confirma primero si el comando `codex` se ejecuta directamente
-2. Confirma si el `PATH` del shell actual incluye la ubicación de instalación
-3. Completa el login o la autenticación
-4. Por último confirma la información de versión
+1. Confirma que `codex` se ejecuta directamente.
+2. Confirma que el `PATH` del shell actual incluye la ubicación de instalación.
+3. Completa el inicio de sesión o la autenticación.
+4. Confirma la información de versión.
 
-El criterio práctico es: la terminal actual lo encuentra y ya puedes autenticarte.
+El criterio práctico es que esta terminal pueda encontrar el comando y que la autenticación termine correctamente.
 
-También puedes contrastar: [Instalar la CLI](/guide/getting-started/install-cli/)
-Instalación y actualización oficiales: [OpenAI Codex](https://developers.openai.com/codex).
+Consulta también [Instalar la CLI](/es/guide/getting-started/install-cli/). Las instrucciones actuales de instalación y actualización están en [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). El instalador independiente oficial para macOS/Linux usa el mismo comando para instalar y actualizar; para Windows, npm o Homebrew, usa la pestaña correspondiente de la página vigente.
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** CLI  
-**Nota de revisión:** Aunque esta página habla de cómo comprobar tras instalar, el cuerpo asume un flujo concreto de instalación, actualización y autenticación; como la forma de instalar la CLI oficial, los pasos de autenticación y los comandos de confirmación de versión son detalles muy volátiles, no conviene marcarla como `verified` hasta completar la documentación oficial de instalación más reciente.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** CLI
+
+**Base de verificación:** Comparado con el inicio rápido actual de la CLI para los puntos de entrada de macOS/Linux, Windows, npm y Homebrew, las rutas de actualización y el inicio de sesión con `codex`. Los comandos exactos se mantienen en la página de instalación para principiantes.
+
+**Última verificación:** 2026-08-26

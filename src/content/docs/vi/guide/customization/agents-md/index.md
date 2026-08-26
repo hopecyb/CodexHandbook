@@ -3,9 +3,10 @@ title: AGENTS.md
 description: Trang mô tả chỉ thị dài hạn cấp dự án — phân rõ viết cho ai, giải quyết gì, rồi mới viết nội dung.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce5c1af
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều người lần đầu thấy `AGENTS.md` hiểu thành “thêm một Prompt dài hơn”.
@@ -16,9 +17,9 @@ Nó phù hợp mang những ước định bạn không muốn nói lại mỗi 
 
 ## Thứ tự khuyến nghị
 
-1. [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/)
-2. [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/)
-3. [Viết chỉ thị dự án tốt](/guide/customization/agents-md/writing-effective-instructions/)
+1. [AGENTS.md là gì](/vi/guide/customization/agents-md/what-is-agents-md/)
+2. [Phạm vi và ưu tiên](/vi/guide/customization/agents-md/scope-and-precedence/)
+3. [Viết chỉ thị dự án tốt](/vi/guide/customization/agents-md/writing-effective-instructions/)
 
 ## Xem các điểm này trước
 

@@ -1,52 +1,57 @@
 ---
-title: Notificaciones
-description: Seguimiento de Tareas largas y avisos que requieren Aprobación.
+title:  Notificaciones
+description:  Seguimiento de Tareas largas y avisos que requieren Aprobación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 0869db2
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
 
-Las notificaciones sirven sobre todo para avisar del estado de la Tarea, y evitar que una Tarea en segundo plano se quede detenida, espere una Aprobación o termine sin que te enteres.
+Notifications tell you when a task needs attention. They do not replace review. The desktop App can notify you when a turn completes and can separately control alerts for permission requests and questions.
 
-Se usan para:
+## Recommended configuration
 
-- Finalización de Tareas largas
-- Esperas de tu Aprobación
-- Fallos o necesidad de seguimiento
+Open **Settings → Notifications**:
 
-Conviene conservar las notificaciones necesarias en los ajustes del sistema, para que nadie deje sin atender una Tarea en segundo plano atascada. Las notificaciones de automatización se tratan en capítulos posteriores; aquí nos centramos en los avisos de Tareas dentro de la App.
+| Event | Recommendation | Reason |
+|---|---|---|
+| Turn completion | Notify when running in the background | You do not need to watch a long task continuously |
+| Permission | Enable | An unanswered approval request pauses the task |
+| Question | Enable | Codex needs your response when key context is missing |
 
-## Preguntas frecuentes
+The operating system must also allow the ChatGPT desktop App to send notifications. Enabling them inside the App is not enough if the OS denies permission.
 
-### 1. Si dejo la App abierta, ¿sigo necesitando notificaciones?
+## Manage multiple chats in Activity
 
-En la mayoría de los casos, sí. Cuando la Tarea dura mucho o espera tu Aprobación a mitad de camino, las notificaciones te evitan mirar la interfaz todo el tiempo.
+When Activity is available, select the bell in the sidebar to view chats that are unread, running, or awaiting a response. The shortcut is:
 
-### 2. ¿Qué notificaciones conviene conservar?
+- macOS: `Cmd + Option + U`
+- Windows: `Ctrl + Alt + U`
 
-Prioriza estas:
+Filters depend on the current interface and may include Work, Chat, Pinned, and Scheduled. A useful processing order is: awaiting permission or input → failed → completed and awaiting review → still running.
 
-- Tarea completada
-- Esperando Aprobación
-- Fallo de ejecución
+## What to do after a notification
 
-### 3. ¿Qué pasa si las desactivo todas?
+- **Completed:** open the diff and verification output; a notification is not an acceptance result.
+- **Permission request:** confirm the command, target resource, impact, and reversibility.
+- **Awaiting an answer:** add only the context needed; do not expand the task incidentally.
+- **Failed:** find the first meaningful error, then decide whether to retry or adjust the constraints.
 
-No tiene por qué fallar de inmediato, pero es más fácil que ocurra:
+CLI and IDE notifications work differently. The IDE has no separate notification settings. The CLI can use advanced configuration for TUI or external-program completion notifications. Desktop settings are not a global switch.
 
-- La Tarea ya se detuvo
-- Está esperando tu Aprobación
-- El resultado ya salió y no lo viste
+## Official sources
 
-Si las apagas todas, es más fácil perderse estos cambios de estado.
+- [Notifications](https://learn.chatgpt.com/docs/notifications)
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App  
-**Notas de revisión:** La descripción de tipos de notificación, avisos de espera de Aprobación y recordatorios de Tareas en segundo plano puede seguir siendo válida, pero falta documentación oficial actual lo bastante sólida sobre cómo se presentan y configuran en la nueva aplicación de escritorio.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Last verified:** 2026-08-26

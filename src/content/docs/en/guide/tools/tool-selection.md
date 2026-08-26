@@ -3,10 +3,12 @@ title: Tool selection
 description: When to use terminal, search, browser, or other tools.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
+source_revision: 64967ca
 ---
 
 | Need | Prefer |

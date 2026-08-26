@@ -1,120 +1,79 @@
 ---
-title: Create Pull Request
-description: From Cloud tasks to reviewable PRs—descriptions, scope, and human merge gates.
+title: Create pull requests
+description: Deliver a Cloud result as a reviewable, verifiable PR that is not merged automatically.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 70996a7
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-On your first Cloud workflow, the task may be "done" while changes are not yet in a state that's easy to inspect and discuss. On teams, that handoff usually happens through a **Pull Request**.
+Inspect the summary and diff after a Cloud task. Create a pull request only when the result satisfies scope and verification criteria; otherwise, continue correcting it in the same chat.
 
-A PR is a reviewable change proposal.
-
-It centralizes what changed, why, and how it was tested—where Cloud deliverables land for the team.
-
-## What's covered
-
-- End-to-end expectations from Cloud task to PR
-- What PR descriptions should include for humans and CI
-- When not to auto-open a PR
-
-## When to open a PR
-
-If others need to see the change, CI must run, or the work must merge to the main branch, do not stop at "branch updated"—move to a **reviewable PR**.
-
-## Recommended workflow
+## From task to PR
 
 ```text
-Connect GitHub → clarify issue/goal → Cloud task (confirm plan) → push branch → open PR → human review + CI → merge
+Select environment and starting branch
+  → run the Cloud task
+  → review summary, logs, and diff
+  → follow up if needed
+  → Create Pull Request
+  → CI + supplementary Codex review + human review
+  → a person decides whether to merge
 ```
 
-Prerequisite: [Connect GitHub](/guide/web-and-cloud/connect-github/)
+Tell Codex to “create a PR, do not merge,” but do not rely on a natural-language constraint alone. Enable branch protection and required checks in the repository.
 
-## Why auto-merge is not the default
-
-PRs exist to give people and automation a checkpoint—not only to upload code.
-
-Common pattern:
-
-- Codex can help open the PR
-- A human decides whether to merge
-
-That preserves a safety gate even if the task drifted.
-
-## Task prompt essentials
+## Reusable task template
 
 ```text
-Goal: Fix the login timeout described in #42
-Branch: fix/42-login-timeout
-Scope: packages/auth and related tests only
-Done: Open PR to main; do not merge
-PR description must include: reason, change summary, test commands and results, risks and rollback
+Goal: Fix the sign-in timeout regression in issue #42.
+Starting point: main.
+Scope: packages/auth/** and the corresponding tests only.
+Do not: upgrade dependencies, change the public API, or write directly to main.
+Verification: pnpm test --filter auth; pnpm typecheck.
+Deliverable: Create a PR to main, but do not merge it.
+The PR description must include the root cause, change summary, test commands
+and results, risks, and rollback approach.
 ```
 
-Aligned with [define done](/prompts/define-done/) and [task anatomy](/prompts/task-anatomy/).
+## Before creation
 
-## A good PR answers four questions
+- [ ] Starting commit is correct and no required local input remains unpushed.
+- [ ] Diff contains only the task scope.
+- [ ] The new branch name is recognizable and does not overwrite another person's work.
+- [ ] Tests actually ran and failures are not hidden by the summary.
+- [ ] No credentials, temporary logs, caches, or unrelated formatting.
+- [ ] A large change is split into independently reviewable PRs.
 
-1. Why did you make this change?
-2. What exactly changed?
-3. How did you verify it?
-4. What risks, limits, or gaps remain?
+## Minimum PR description
 
-Without those, reviewers must reconstruct context themselves.
+1. Why the change is required.
+2. What actually changed.
+3. How it was verified, including commands and results.
+4. Risks, limitations, and rollback.
+5. What was explicitly not done.
 
-## PR quality checklist
+Add real screenshots for UI changes, reproduction steps for behavior changes, and compatibility and rollback details for migrations.
 
-- [ ] Title states **what** changed, not "update code"
-- [ ] Links the issue number
-- [ ] CI passes or explains known failures
-- [ ] Diff size is acceptable; split oversized PRs
-- [ ] No secrets, no unrelated formatting storms
-- [ ] Screenshots or logs for UI/behavior changes
+## After creation
 
-## Human gate
+Wait for required checks, request supplementary review with `@codex review`, and have a person with context inspect the main diff. Return specific comments to the same PR branch; do not create an unrelated duplicate branch.
 
-Even if Codex opens the PR, **merge** should default to a human (or a controlled bot under branch protection):
+Opening and merging a PR are separate permission boundaries. Cloud being able to create a PR does not justify bypassing the team's merge policy.
 
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
+## Official sources
 
-## Common misconceptions
-
-### 1. Stuffing unrelated changes into one PR
-
-Hard to review and hard to revert.
-
-### 2. Saying "fixed" without how you verified
-
-Reviewers cannot tell "tested" from "probably fine."
-
-### 3. Letting Codex touch main directly
-
-May work for solo experiments; too risky for shared repos.
-
-## Review automation
-
-- Use a Skill or `codex exec` in CI for **supplementary review comments**
-- Auto-merge needs separate governance—not the beginner default path
-
-## Common mistakes
-
-- One PR with multiple unrelated features
-- Description says "AI-generated changes" with no test notes
-- Merging to main without review
-
-## Further reading
-
-- [GitHub integration](/guide/integrations/github/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Desktop App: diffs and comments](/guide/desktop-app/diffs-comments-and-review/)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / Web  
-**Review note:** "Cloud output goes to a PR for human review" remains sound, but this page describes PR entry points, automation behavior, and Cloud delivery rhythm concretely; without line-by-line verification of current official PR and Cloud GitHub integration, it should not be marked `verified`.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud, GitHub
+
+**Last verified:** 2026-08-26

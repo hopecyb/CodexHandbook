@@ -3,9 +3,10 @@ title: Tareas locales y Cloud
 description: Cambiar entre ejecución local y Cloud en la App.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 95e2382
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -17,7 +18,7 @@ En la App eliges dónde corre la Tarea:
 - **Local**: archivos y entorno de tu máquina; la iteración es rápida
 - **Cloud**: entorno en la nube; conviene para repositorios remotos y Tareas largas
 
-Conceptos: [Local frente a Cloud](/guide/foundations/local-vs-cloud/) · Resumen: [Web y Cloud](/guide/web-and-cloud/)
+Conceptos: [Local frente a Cloud](/es/guide/foundations/local-vs-cloud/) · Resumen: [Web y Cloud](/es/guide/web-and-cloud/)
 
 Antes de cambiar, confirma: si las claves deben aparecer en ese entorno y si la política de red lo permite.
 

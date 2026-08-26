@@ -3,14 +3,15 @@ title: Códigos de saída e retries
 description: Interpretar bem o sucesso ou a falha de codex exec no pipeline — quando fazer retry e quando falhar de imediato.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-A CI depende do **código de saída do processo** para julgar se um passo teve sucesso. Este capítulo explica a semântica habitual de [codex exec](/guide/developer-platform/non-interactive/codex-exec/), a estratégia de retries e o desenho idempotente.
+A CI depende do **código de saída do processo** para julgar se um passo teve sucesso. Este capítulo explica a semântica habitual de [codex exec](/pt/guide/developer-platform/non-interactive/codex-exec/), a estratégia de retries e o desenho idempotente.
 
 ## Conteúdo desta página
 
@@ -59,7 +60,7 @@ Se a causa da falha não desaparece ao repetir —Permissão insuficiente, regra
 | `0` | A Tarefa terminou e cumpre o critério de sucesso do Prompt |
 | Diferente de `0` e o log mostra rejeição de policy/sandbox | **Não** fazer retry às cegas; corrige configuração ou Prompt |
 | Diferente de `0` e API 429/5xx | Retry limitado com backoff exponencial |
-| Encontrou-se um P0 mas a execução teve sucesso | Usa `pass: false` da [saída estruturada](/guide/developer-platform/non-interactive/structured-output/) + `exit 1` no script |
+| Encontrou-se um P0 mas a execução teve sucesso | Usa `pass: false` da [saída estruturada](/pt/guide/developer-platform/non-interactive/structured-output/) + `exit 1` no script |
 
 «Encontrou-se um problema de segurança» não deveria depender de uma exceção tipo crash: deve ser **explícito** com `pass: false` em JSON e o script envolvente decidir o código de saída.
 
@@ -69,7 +70,7 @@ Se a causa da falha não desaparece ao repetir —Permissão insuficiente, regra
 max=3
 delay=10
 for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
+  if codex exec --cd . "$(cat "$PROMPT")"; then
     exit 0
   fi
   code=$?
@@ -119,8 +120,8 @@ Primeiro distingue «é uma falha temporária ou não melhorará ao repetir?» e
 
 ## Capítulos relacionados
 
-- [Referência de erros](/guide/reference/error-reference/)
-- [Recuperação perante falhas](/cases/workflows/failure-recovery/)
+- [Referência de erros](/pt/guide/reference/error-reference/)
+- [Recuperação perante falhas](/pt/cases/workflows/failure-recovery/)
 
 ## Fontes de referência
 - Guia de retries da API da OpenAI (conceito)

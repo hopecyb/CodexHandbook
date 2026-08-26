@@ -1,0 +1,67 @@
+<svg lang="ja" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title desc">
+  <title id="title">検証付き Bug 修正ワークフロー</title>
+  <desc id="desc">まずテストを実行して失敗を安定再現し、証拠を記録します。次に根本原因を特定して最小修正を行い、関連テストを成功させてから、全回帰テストと diff レビューを実施します。失敗した段階に応じて前の手順へ戻ります。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 26.4px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 14.1px; }
+    .label { fill: #f8fafc; font-size: 15px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12.3px; }
+    .tiny { fill: #94a3b8; font-size: 10.6px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1100" height="590" rx="8" fill="#020617"/>
+  <rect width="1100" height="590" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">検証付き Bug 修正：RED、GREEN、回帰の順</text>
+  <text x="44" y="70" class="sub">テスト成功が修正の証拠になるのは、元の問題を先に安定して再現した場合だけです。</text>
+
+  <path d="M186 260H226" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M374 260H414" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M562 260H602" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M750 260H790" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M938 260H974" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M864 320V410H488V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+  <path d="M676 320V456H300V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="38" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="112" y="235" text-anchor="middle" class="label">1. 安定して再現</text>
+  <text x="112" y="261" text-anchor="middle" class="note">失敗するテストを実行</text>
+  <text x="112" y="283" text-anchor="middle" class="note">アサーションとスタックを保存</text>
+  <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">RED · 期待どおり失敗</text>
+
+  <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="300" y="235" text-anchor="middle" class="label">2. 根本原因を特定</text>
+  <text x="300" y="261" text-anchor="middle" class="note">実装とテストを読む</text>
+  <text x="300" y="283" text-anchor="middle" class="note">隣接する仮説を除外</text>
+  <text x="300" y="304" text-anchor="middle" class="tiny">コードを変えず、先に説明</text>
+
+  <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="488" y="235" text-anchor="middle" class="label">3. 最小修正</text>
+  <text x="488" y="261" text-anchor="middle" class="note">根本原因の経路だけ変更</text>
+  <text x="488" y="283" text-anchor="middle" class="note">公開動作を維持</text>
+  <text x="488" y="304" text-anchor="middle" class="tiny">ついでのリファクタリングはしない</text>
+
+  <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="676" y="235" text-anchor="middle" class="label">4. 関連テスト</text>
+  <text x="676" y="261" text-anchor="middle" class="note">元のテストが成功</text>
+  <text x="676" y="283" text-anchor="middle" class="note">境界テストが成功</text>
+  <text x="676" y="304" text-anchor="middle" class="tiny" fill="#34d399">GREEN</text>
+
+  <rect x="790" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="864" y="235" text-anchor="middle" class="label">5. 回帰とレビュー</text>
+  <text x="864" y="261" text-anchor="middle" class="note">全テスト · lint</text>
+  <text x="864" y="283" text-anchor="middle" class="note">diff と範囲を確認</text>
+  <text x="864" y="304" text-anchor="middle" class="tiny">残存リスクを記録</text>
+
+  <rect x="974" y="218" width="94" height="84" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1021" y="250" text-anchor="middle" class="label">提出</text>
+  <text x="1021" y="275" text-anchor="middle" class="note">証拠一式</text>
+
+  <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="504" text-anchor="middle" class="note">証拠チェーン：失敗コマンドとアサーション → 根本原因の説明 → 最小 diff → 関連テスト成功 → 全回帰成功 → 人による範囲レビュー</text>
+  <text x="550" y="526" text-anchor="middle" class="tiny">関連テストの失敗は最小修正へ戻り、全回帰または diff レビューの失敗は根本原因分析へ戻ります。</text>
+</svg>

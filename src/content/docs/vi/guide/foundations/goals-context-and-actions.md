@@ -3,9 +3,10 @@ title: Mục tiêu, ngữ cảnh và hành động
 description: Tách một lần tương tác thành công thành mục tiêu, bối cảnh, hành động và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -21,7 +22,7 @@ Một lần tương tác Codex ổn định hơn thường gồm bốn khối:
 3. **Hành động**: các bước Codex được phép làm (đọc, sửa, chạy)
 4. **Nghiệm thu**: thế nào là hoàn thành, kiểm tra ra sao
 
-Phần dạy Prompt triển khai bốn khối này thành khung ổn định — xem [Cấu trúc tác vụ tốt](/prompts/task-anatomy/).
+Phần dạy Prompt triển khai bốn khối này thành khung ổn định — xem [Cấu trúc tác vụ tốt](/vi/prompts/task-anatomy/).
 
 ## Bốn khối này mỗi khối lo gì
 

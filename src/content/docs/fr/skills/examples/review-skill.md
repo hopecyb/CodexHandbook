@@ -3,14 +3,15 @@ title: "Exemple : Skill d'examen"
 description: Exemple de Skill basé sur pr-review, adapté à la réutilisation ou l'ajustement en équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemple : Skill d'examen
 
-Cet exemple correspond au `pr-review` de [Créer votre premier Skill](/skills/create-your-first-skill/), ajustable selon les besoins de l'équipe.
+Cet exemple correspond au `pr-review` de [Créer votre premier Skill](/fr/skills/create-your-first-skill/), ajustable selon les besoins de l'équipe.
 
 ## SKILL.md
 

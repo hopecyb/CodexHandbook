@@ -3,9 +3,10 @@ title: AGENTS.md là gì
 description: Tệp chỉ thị bền cấp dự án — «hợp đồng cộng tác» cho Codex, không phải bách khoa kiến trúc.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -87,7 +88,7 @@ Dù bạn không tự viết mã, miễn bạn để Codex liên tục xử lý 
 | `AGENTS.md` thư mục con | Thư mục đó và đường dẫn con (monorepo thường gặp) |
 | Mô tả cấp người dùng | Dùng cấu hình cá nhân hoặc sở thích toàn cục; đừng trộn với chỉ thị dự án |
 
-Xử lý phạm vi và xung đột xem [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/).
+Xử lý phạm vi và xung đột xem [Phạm vi và ưu tiên](/vi/guide/customization/agents-md/scope-and-precedence/).
 
 ## Khác với Skill và lệnh slash
 
@@ -97,7 +98,7 @@ Xử lý phạm vi và xung đột xem [Phạm vi và ưu tiên](/guide/customiz
 | Skill | Gói quy trình tái sử dụng (`SKILL.md`) | Danh sách phát hành, quy trình rà soát chuyên biệt |
 | Lệnh slash | Lối tắt bạn chủ động kích hoạt | `/review`, quy trình một lần |
 
-Quy tắc dự án dùng `AGENTS.md`; **bộ bước lặp được, chia sẻ được** phù hợp hơn làm [Skill](/skills/overview/).
+Quy tắc dự án dùng `AGENTS.md`; **bộ bước lặp được, chia sẻ được** phù hợp hơn làm [Skill](/vi/skills/overview/).
 
 ## Phán đoán nên viết ở đâu
 
@@ -116,7 +117,7 @@ Ví dụ:
 ## Lỗi thường gặp
 
 - Tệp quá dài, mô hình chỉ đọc nửa đầu — **đặt ràng buộc cứng trong 30 dòng đầu**
-- Viết chỉ thị rủi ro cao kiểu «mãi tự push», xung đột với [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
+- Viết chỉ thị rủi ro cao kiểu «mãi tự push», xung đột với [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
 - Nhóm không ai duy trì, tài liệu không khớp lệnh script thật
 
 ## Ranh giới an toàn

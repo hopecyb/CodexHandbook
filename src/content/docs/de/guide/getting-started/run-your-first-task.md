@@ -3,9 +3,10 @@ title: Erste Aufgabe ausführen
 description: "Mit klaren Prompts eine kleine Änderung abschließen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ Zur ersten Aufgabe gehört auch:
 
 1. Kurzen Plan verlangen (oder selbst einfordern)
 2. Beim Freigeben von Dateischreiben den Pfad prüfen
-3. Danach zu [Ergebnis prüfen](/guide/getting-started/review-the-result/)
+3. Danach zu [Ergebnis prüfen](/de/guide/getting-started/review-the-result/)
 
 ## Ausführungsreihenfolge
 
@@ -112,7 +113,7 @@ Oder:
 Ändere erst nichts weiter. Sag mir, was du gerade geändert hast.
 ```
 
-Prompt-Prinzipien: [Prompt-Grundlagen](/prompts/basics/).
+Prompt-Prinzipien: [Prompt-Grundlagen](/de/prompts/basics/).
 
 ---
 

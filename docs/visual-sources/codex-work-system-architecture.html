@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codex 可复用工作系统架构</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { min-height: 100vh; padding: 2rem; color: #f8fafc; background: #020617; font-family: "JetBrains Mono", "PingFang SC", "Microsoft YaHei", monospace; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .header { margin-bottom: 1.5rem; }
+    .header-row { display: flex; align-items: center; gap: 0.75rem; }
+    .pulse-dot { width: 12px; height: 12px; border-radius: 50%; background: #22d3ee; animation: pulse 2s infinite; }
+    @keyframes pulse { 50% { opacity: 0.45; } }
+    h1 { font-size: 1.5rem; letter-spacing: 0; }
+    .subtitle { margin: 0.5rem 0 0 1.75rem; color: #94a3b8; font-size: 0.875rem; }
+    .diagram { overflow-x: auto; padding: 1.5rem; border: 1px solid #1e293b; border-radius: 8px; background: rgba(15, 23, 42, 0.5); }
+    svg { display: block; width: 100%; min-width: 900px; }
+    text { letter-spacing: 0; }
+    .diagram text[font-size="24"] { font-size: 30px; }
+    .diagram text[font-size="15"] { font-size: 18px; }
+    .diagram text[font-size="13"] { font-size: 16px; }
+    .diagram text[font-size="12"] { font-size: 14px; }
+    .diagram text[font-size="10"] { font-size: 12px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .card { padding: 1.1rem; border: 1px solid #1e293b; border-radius: 8px; background: rgba(15, 23, 42, 0.5); }
+    .card h2 { margin-bottom: 0.65rem; font-size: 0.9rem; }
+    .card p { color: #94a3b8; font-size: 0.75rem; line-height: 1.7; }
+    .cyan h2 { color: #22d3ee; } .rose h2 { color: #fb7185; } .amber h2 { color: #fbbf24; }
+    .footer { margin-top: 1.25rem; color: #475569; font-size: 0.75rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="header-row"><span class="pulse-dot"></span><h1>Codex 可复用工作系统</h1></div>
+      <p class="subtitle">规则、流程、工具、守护、分发和触发围绕一次任务协同。</p>
+    </header>
+    <section class="diagram" aria-label="Codex 可复用工作系统架构图">
+      <svg viewBox="0 0 1200 720" role="img" aria-labelledby="source-title source-desc">
+        <title id="source-title">Codex 可复用工作系统架构</title>
+        <desc id="source-desc">任务提示和项目规则进入 Codex 任务；Skills 提供流程，MCP 提供外部工具，子 Agent 并行探索，Hooks 在生命周期节点守护；Plugin 负责能力分发，Scheduled task 负责定时触发，最终输出由人审查。</desc>
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+          <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+          <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+        </defs>
+        <rect width="1200" height="720" rx="8" fill="#020617"/><rect width="1200" height="720" rx="8" fill="url(#grid)"/>
+        <text x="44" y="46" fill="#f8fafc" font-size="24" font-weight="700">Codex 可复用工作系统</text>
+        <text x="44" y="70" fill="#94a3b8" font-size="13">这些机制承担不同职责，不是从低到高的升级链。</text>
+
+        <path d="M222 191H350" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M222 301H350" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M222 411H350" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M222 521H350" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M820 276H974" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+        <path d="M820 420H974" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+        <path d="M1068 310V382" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+        <path d="M1068 480V540H730" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+        <g font-family="JetBrains Mono, PingFang SC, Microsoft YaHei, monospace">
+          <g><rect x="42" y="145" width="180" height="92" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/><text x="132" y="178" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">任务提示</text><text x="132" y="202" text-anchor="middle" fill="#cbd5e1" font-size="12">目标 · 输入 · 验收</text><text x="132" y="221" text-anchor="middle" fill="#94a3b8" font-size="10">当前任务的具体要求</text></g>
+          <g><rect x="42" y="255" width="180" height="92" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/><text x="132" y="288" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">AGENTS.md</text><text x="132" y="312" text-anchor="middle" fill="#cbd5e1" font-size="12">项目规则 · 命令</text><text x="132" y="331" text-anchor="middle" fill="#94a3b8" font-size="10">每次任务都会加载</text></g>
+          <g><rect x="42" y="365" width="180" height="92" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/><text x="132" y="398" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">Skill</text><text x="132" y="422" text-anchor="middle" fill="#cbd5e1" font-size="12">流程 · 参考 · 脚本</text><text x="132" y="441" text-anchor="middle" fill="#94a3b8" font-size="10">按任务需要加载</text></g>
+          <g><rect x="42" y="475" width="180" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/><text x="132" y="503" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">定时任务</text><text x="132" y="527" text-anchor="middle" fill="#cbd5e1" font-size="12">Scheduled task</text><text x="132" y="550" text-anchor="middle" fill="#94a3b8" font-size="10">按时间触发新的运行</text></g>
+
+          <rect x="350" y="112" width="470" height="486" rx="12" fill="#07101f" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="8 5"/>
+          <text x="370" y="140" fill="#fbbf24" font-size="12">一次 Codex 任务运行</text>
+          <g><rect x="390" y="175" width="390" height="84" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/><text x="585" y="207" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">主 Agent</text><text x="585" y="232" text-anchor="middle" fill="#cbd5e1" font-size="12">理解目标 · 维护计划 · 汇总证据</text></g>
+          <path d="M585 259V278H475V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/><path d="M585 259V278H695V297" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+          <g><rect x="390" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/><text x="475" y="332" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">子 Agent</text><text x="475" y="356" text-anchor="middle" fill="#cbd5e1" font-size="12">独立探索与检查</text><text x="475" y="376" text-anchor="middle" fill="#94a3b8" font-size="10">结果返回主线程</text></g>
+          <g><rect x="610" y="299" width="170" height="92" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/><text x="695" y="332" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">MCP / 工具</text><text x="695" y="356" text-anchor="middle" fill="#cbd5e1" font-size="12">文件 · Web · 外部系统</text><text x="695" y="376" text-anchor="middle" fill="#94a3b8" font-size="10">权限由宿主与服务控制</text></g>
+          <g><rect x="390" y="435" width="390" height="114" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5 4"/><text x="585" y="468" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">Hooks：生命周期守护栏</text><text x="585" y="495" text-anchor="middle" fill="#cbd5e1" font-size="12">运行前检查 · 工具调用策略 · 运行后审计</text><text x="585" y="520" text-anchor="middle" fill="#94a3b8" font-size="10">记录、补上下文或阻断，不负责定义任务目标</text></g>
+
+          <g><rect x="974" y="232" width="184" height="78" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/><text x="1066" y="263" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">可审查产物</text><text x="1066" y="287" text-anchor="middle" fill="#cbd5e1" font-size="12">文件 · diff · 报告 · 证据</text></g>
+          <g><rect x="974" y="382" width="184" height="98" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/><text x="1066" y="414" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="700">人工审查</text><text x="1066" y="438" text-anchor="middle" fill="#cbd5e1" font-size="12">范围 · 正确性 · 风险</text><text x="1066" y="459" text-anchor="middle" fill="#94a3b8" font-size="10">不通过则带证据返回</text></g>
+          <g><rect x="350" y="626" width="808" height="64" rx="8" fill="#0f172a" stroke="#fb923c" stroke-width="1.5"/><text x="754" y="652" text-anchor="middle" fill="#cbd5e1" font-size="12">Plugin：把 Skills、连接器、MCP、Hooks 和任务模板组合、安装与分发</text><text x="754" y="676" text-anchor="middle" fill="#94a3b8" font-size="10">它位于分发层，不是运行链路的最后一步</text></g>
+        </g>
+      </svg>
+    </section>
+    <section class="cards" aria-label="架构说明">
+      <article class="card cyan"><h2>运行输入</h2><p>任务提示负责这次要做什么；AGENTS.md 负责项目长期规则；Skill 在需要时提供稳定流程。</p></article>
+      <article class="card rose"><h2>权限与守护</h2><p>MCP 和工具扩大可执行范围，Hooks 在生命周期节点记录、检查或阻断。人工审查仍是最终闸门。</p></article>
+      <article class="card amber"><h2>复用与调度</h2><p>Plugin 负责把能力组合并分发，Scheduled task 负责按时间触发一次运行；两者都不代替任务本身。</p></article>
+    </section>
+    <p class="footer">Codex Handbook · zh-CN · 2026-08-25</p>
+  </main>
+</body>
+</html>

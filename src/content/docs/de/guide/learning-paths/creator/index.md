@@ -3,9 +3,10 @@ title: Creator-Pfad (Überblick)
 description: Überblick der Route für Content-Erstellung; tiefe Schritte folgen später.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,9 +23,9 @@ Wenn Sie Codex vor allem für Inhalte nutzen wollen — nicht zum Code ändern �
 
 ## Jetzt lesen
 
-- [Prompts](/prompts/): Kreativaufgaben klar formulieren
-- [Artefakte verifizieren](/guide/quality/verify-artifacts/): Texte und Seiten prüfen
-- [Desktop-App](/guide/desktop-app/): Haupteinstieg für Nicht-Terminal-Nutzer
+- [Prompts](/de/prompts/): Kreativaufgaben klar formulieren
+- [Artefakte verifizieren](/de/guide/quality/verify-artifacts/): Texte und Seiten prüfen
+- [Desktop-App](/de/guide/desktop-app/): Haupteinstieg für Nicht-Terminal-Nutzer
 
 ## Häufige Missverständnisse
 
@@ -48,11 +49,11 @@ Content braucht ebenfalls Überprüfung — Fokus anders: Struktur, Ton, Fakten,
 
 Zum Starten:
 
-1. [Prompt-Grundlagen](/prompts/basics/)
-2. [Prompt-Vorlagen](/prompts/templates/)
-3. [Präsentationen](/guide/files-and-artifacts/presentations/)
-4. [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/)
-5. [Artefakte verifizieren](/guide/quality/verify-artifacts/)
+1. [Prompt-Grundlagen](/de/prompts/basics/)
+2. [Prompt-Vorlagen](/de/prompts/templates/)
+3. [Präsentationen](/de/guide/files-and-artifacts/presentations/)
+4. [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/)
+5. [Artefakte verifizieren](/de/guide/quality/verify-artifacts/)
 
 Diese Route betont klare Anforderungen und prüfbare Ergebnisse.
 

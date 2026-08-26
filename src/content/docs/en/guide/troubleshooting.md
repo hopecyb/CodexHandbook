@@ -5,9 +5,10 @@ sidebar:
   order: 18
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 If something is already broken but you are unsure which category it falls into, start here.
@@ -24,12 +25,12 @@ You do not need to diagnose CLI vs IDE vs Cloud vs permissions vs prompting firs
 
 | Symptom | Go to |
 |---|---|
-| Install failure | [Desktop troubleshooting](/guide/desktop-app/troubleshooting/) · [CLI troubleshooting](/guide/cli/troubleshooting/) · [IDE troubleshooting](/guide/ide/troubleshooting/) |
-| Login/auth failure | [Sign-in](/guide/getting-started/sign-in-and-authentication/) |
-| Unsure which client | [Choose your client](/guide/choose-your-client/) · [Feature comparison](/guide/reference/feature-comparison/) |
-| Bad or out-of-scope results | [First task case](/cases/first-task/) · [Prompt debugging](/prompts/prompt-debugging/) · [Undo](/guide/getting-started/undo-and-recover/) |
-| Context confusion | [Keep context focused](/guide/context/keep-context-focused/) |
-| Permissions/sandbox questions | [Permissions and sandbox](/guide/permissions-and-sandbox/) |
+| Install failure | [Desktop troubleshooting](/en/guide/desktop-app/troubleshooting/) · [CLI troubleshooting](/en/guide/cli/troubleshooting/) · [IDE troubleshooting](/en/guide/ide/troubleshooting/) |
+| Login/auth failure | [Sign-in](/en/guide/getting-started/sign-in-and-authentication/) |
+| Unsure which client | [Choose your client](/en/guide/choose-your-client/) · [Feature comparison](/en/guide/reference/feature-comparison/) |
+| Bad or out-of-scope results | [First task case](/en/cases/first-task/) · [Prompt debugging](/en/prompts/prompt-debugging/) · [Undo](/en/guide/getting-started/undo-and-recover/) |
+| Context confusion | [Keep context focused](/en/guide/context/keep-context-focused/) |
+| Permissions/sandbox questions | [Permissions and sandbox](/en/guide/permissions-and-sandbox/) |
 
 ## When you do not know where to look
 
@@ -60,7 +61,7 @@ Usually better to pause, classify the problem, then open one targeted page.
 
 Triage before repair.
 
-More reference: [FAQ](/guide/reference/faq/) · [Error reference](/guide/reference/error-reference/) · [Official Codex docs](https://developers.openai.com/codex)
+More reference: [FAQ](/en/guide/reference/faq/) · [Error reference](/en/guide/reference/error-reference/) · [Official Codex docs](https://developers.openai.com/codex)
 
 ---
 

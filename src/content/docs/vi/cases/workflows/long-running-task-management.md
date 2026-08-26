@@ -3,12 +3,13 @@ title: Quản lý tác vụ dài
 description: Tác vụ lớn xuyên nhiều giờ hoặc nhiều phiên — điểm kiểm tra, nén, ủy thác và điều kiện thoát.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Vấn đề phổ biến của tác vụ dài: **ngữ cảnh đầy**, **người phải rời**, **hướng bị trôi**, **không biết khi nào dừng**. Trang này đặt [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/) vào kịch bản vài giờ thậm chí nhiều phiên.
+Vấn đề phổ biến của tác vụ dài: **ngữ cảnh đầy**, **người phải rời**, **hướng bị trôi**, **không biết khi nào dừng**. Trang này đặt [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/) vào kịch bản vài giờ thậm chí nhiều phiên.
 
 ## Trọng tâm trang này
 
@@ -16,7 +17,7 @@ Vấn đề phổ biến của tác vụ dài: **ngữ cảnh đầy**, **ngư�
 - Điểm kiểm tra và ghi trạng thái viết gì
 - Điều kiện thoát của tác vụ dài tự động hóa
 
-Liên quan: [ủy thác và theo dõi](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Liên quan: [ủy thác và theo dõi](/vi/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/vi/skills/automations/scheduled-tasks/)
 
 ## Tín hiệu tác vụ dài
 
@@ -33,7 +34,7 @@ Khi thỏa bất kỳ điều kiện nào, nên viết kế hoạch trước, đ
 
 Xuất kế hoạch viết: phạm vi, phi mục tiêu, milestone, lệnh nghiệm thu. Người xác nhận rồi mới thực thi quy mô lớn.
 
-[Lập kế hoạch](/guide/agent-work/planning/) · [Subagent](/guide/agent-work/subagents/)
+[Lập kế hoạch](/vi/guide/agent-work/planning/) · [Subagent](/vi/guide/agent-work/subagents/)
 
 ### 2. Điểm kiểm tra
 
@@ -41,11 +42,11 @@ Mỗi khi xong milestone:
 
 - Commit hoặc stash phần tăng dần review được
 - Cập nhật `PROGRESS.md` hoặc comment issue: đã xong gì, bước tiếp, mục chặn
-- Khi ngữ cảnh đầy, dùng [nén](/guide/context/compaction/) hoặc mở phiên mới + liên kết tệp tiến độ
+- Khi ngữ cảnh đầy, dùng [nén](/vi/guide/context/compaction/) hoặc mở phiên mới + liên kết tệp tiến độ
 
 ### 3. Kết thúc hoặc ủy thác
 
-- Cục bộ không chứa nổi → [ủy thác Cloud](/guide/web-and-cloud/delegate-and-follow-up/)
+- Cục bộ không chứa nổi → [ủy thác Cloud](/vi/guide/web-and-cloud/delegate-and-follow-up/)
 - Cần giám sát liên tục → Automation + **max iterations / deadline** rõ ràng
 
 ## Điều kiện thoát (bắt buộc với tự động hóa)

@@ -3,9 +3,10 @@ title: Tác vụ đầu tiên
 description: Dùng prompt rõ ràng để hoàn thành một thay đổi nhỏ và học cách kiểm tra kết quả.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9bcbce
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Tác vụ đầu tiên
@@ -48,9 +49,9 @@ Nếu thiếu thông tin, hãy hỏi tôi trước; đừng đoán.
 
 ## 5. Bước tiếp theo
 
-- [Cơ bản về prompt](/prompts/basics/)
-- [Kiểm chứng](/guide/verification/)
-- [Bắt đầu từ đây](/guide/start-here/)
+- [Cơ bản về prompt](/vi/prompts/basics/)
+- [Kiểm chứng](/vi/guide/verification/)
+- [Bắt đầu từ đây](/vi/guide/start-here/)
 ---
 
 **Trạng thái:** verified  

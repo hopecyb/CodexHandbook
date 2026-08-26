@@ -3,9 +3,10 @@ title: Glossaire
 description: Définitions courtes des termes du handbook.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c07a94c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -27,7 +28,7 @@ sidebar:
 | Token | Unité utilisée pour mesurer le texte traité par le modèle |
 | Worktree | Répertoire de travail isolé pour expériences parallèles |
 
-Version débutant : [Terminologie pour débutants](/guide/start-here/terminology-for-beginners/)
+Version débutant : [Terminologie pour débutants](/fr/guide/start-here/terminology-for-beginners/)
 
 ---
 

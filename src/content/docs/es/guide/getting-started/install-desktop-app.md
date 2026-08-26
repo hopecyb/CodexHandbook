@@ -1,57 +1,67 @@
 ---
-title: Instalar la App de escritorio
-description: Instala y abre la aplicación de escritorio de Codex.
+title:  Instalar la App de escritorio
+description:  Instala y abre la aplicación de escritorio de Codex.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 89d6303
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-1. Abre las instrucciones de descarga de la App de escritorio en la documentación oficial de Codex: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-2. Elige el instalador de tu sistema operativo e instálalo
-3. Inicia la aplicación y confirma que ves el inicio de sesión o la entrada a proyectos
+In this handbook, “desktop App” means the **Codex workspace in the current ChatGPT desktop App**. Official versions are available for macOS, Windows, and Linux.
 
-Si es tu primera vez con Codex y no quieres pelearte aún con el terminal, la App de escritorio es una entrada directa.
-Aquí importa sobre todo qué estado, tras instalar, indica que ya puedes empezar a usarla.
+## Installation
 
-## Comprobación tras la instalación
+1. Open the [official ChatGPT desktop App documentation](https://learn.chatgpt.com/docs/app).
+2. Download the installer for your operating system from the official entry point.
+3. Install and open ChatGPT, then sign in with your ChatGPT account or another available method.
+4. Start a chat, create a project, or open a practice folder.
+5. Open Codex, create a task, and describe the result you need.
 
-- La aplicación se abre con normalidad
-- Concede Permisos del sistema (como acceso a archivos) según necesidad; no des de golpe acceso a discos irrelevantes
-- Visión general de la interfaz: [instalación e interfaz](/guide/desktop-app/installation-and-interface/)
+Do not download installers from third-party sites in search results. On managed devices, follow your organization's software distribution and update policy.
 
-## Malentendidos frecuentes
+## Minimal post-installation check
 
-### 1. Si la App arranca, ya está todo bien
+Prepare a practice directory with no secrets and confirm that:
 
-Merece más la pena confirmar:
+- the App opens and shows the current account or workspace;
+- you can open the directory or add files to a project;
+- you can create a Codex task and receive a response;
+- file access covers only what the task needs;
+- you can locate task results, file changes, and approval controls.
 
-- Si puedes iniciar sesión con normalidad
-- Si ves la entrada a proyectos o Tareas
-- Si los Permisos están bien concedidos
+Use this read-only smoke test:
 
-### 2. Cuando el sistema pide Permisos, lo apruebo todo
+```text
+Read this directory without modifying files. Tell me which files it contains,
+what kind of project it may be, and which filenames support your conclusion.
+```
 
-Lo más seguro es conceder según necesidad, no abrir de una vez discos o capacidades del sistema irrelevantes.
+## Common issues
 
-### 3. Tras instalar, debería lanzarme ya a una Tarea grande
+### The App opens but Codex is missing
 
-La primera vez puedes confirmar primero cosas pequeñas:
+Check the current account, workspace, and plan access, then whether the organization disabled the capability. Reinstallation does not bypass account or administrator policy.
 
-- El inicio de sesión funciona
-- Las páginas se abren
-- Sabes dónde está la entrada a proyectos y la interfaz básica
+### The operating system requests file, accessibility, or app-control access
 
-Cuando la App de escritorio esté instalada, confirma que puedes abrirla, iniciar sesión y ver las entradas antes de hacer la primera Tarea.
+Decide whether the current task actually requires it. Opening a practice directory does not justify unrelated disk or system access. See [Permissions and sandboxing](/es/guide/permissions-and-sandbox/).
 
-Si falla: consulta [resolución de problemas de la App de escritorio](/guide/desktop-app/troubleshooting/).
+### The interface differs from a screenshot
+
+The App evolves quickly. Define success as being able to sign in, select a work location, start a task, and review its result—not finding a button at a fixed coordinate.
+
+See [Installation and first use](/es/guide/desktop-app/installation-and-interface/) for the interface and [Desktop App troubleshooting](/es/guide/desktop-app/troubleshooting/) for failures.
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App  
-**Nota de revisión:** La entrada de descarga de la App de escritorio, la forma del instalador, las entradas de interfaz y los avisos de Permisos pueden cambiar con las nuevas versiones de ChatGPT/Codex de escritorio; esta página solo conserva pasos amplios y aún no basta para demostrar que coincide con el flujo oficial actual de instalación.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Verification basis:** The current official App quickstart provides macOS, Windows, and Linux downloads and directs signed-in users to choose a chat, project, or folder. This page deliberately avoids volatile button positions and package names.
+
+**Last verified:** 2026-08-26

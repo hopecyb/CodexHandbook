@@ -3,18 +3,19 @@ title: Travail orienté livrables
 description: Convenir d'abord de la forme et du chemin du livrable final, puis déduire les étapes — adapté aux docs, configurations, rapports et autres livrables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Orienté livrables** signifie clarifier la forme et l'emplacement du livrable avant que Codex ne déduise les étapes. Cela convient aux tâches à sortie claire — documentation Markdown, OpenAPI, scripts de migration, plans de diapositives — et peut s'associer au [travail piloté par la spécification](/cases/workflows/specification-driven-work/).
+**Orienté livrables** signifie clarifier la forme et l'emplacement du livrable avant que Codex ne déduise les étapes. Cela convient aux tâches à sortie claire — documentation Markdown, OpenAPI, scripts de migration, plans de diapositives — et peut s'associer au [travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/).
 
 ## Ce que couvre cette page
 
 - Comment décrire la structure du livrable plutôt que les détails du processus
 - Vérifications de cohérence pour les livrables multi-fichiers
-- Alignement avec les capacités [Fichiers et livrables](/guide/files-and-artifacts/)
+- Alignement avec les capacités [Fichiers et livrables](/fr/guide/files-and-artifacts/)
 
 ## Approche minimale viable
 
@@ -37,7 +38,7 @@ Définir la liste des livrables (chemin + format + référence d'exemple)
     → Vérifier (lint, contrôle de liens, aperçu)
 ```
 
-Pour les livrables visuels, demander des captures d'écran ou des notes d'aperçu — voir [Vérifier les livrables](/guide/quality/verify-artifacts/).
+Pour les livrables visuels, demander des captures d'écran ou des notes d'aperçu — voir [Vérifier les livrables](/fr/guide/quality/verify-artifacts/).
 
 ## Erreurs courantes
 
@@ -56,7 +57,7 @@ Pour les livrables visuels, demander des captures d'écran ou des notes d'aperç
 - [ ] Tous les fichiers déclarés existent et s'ouvrent
 - [ ] Le format correspond à l'exemple de référence
 - [ ] Liens / table des matières / frontmatter valides
-- [ ] Conforme à la [Définition de terminé](/prompts/define-done/)
+- [ ] Conforme à la [Définition de terminé](/fr/prompts/define-done/)
 
 ---
 

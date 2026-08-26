@@ -3,9 +3,10 @@ title: Créer un site web
 description: Cas de prototypage d'une page prévisualisable localement, des besoins au rendu.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Créer un site web
@@ -41,8 +42,8 @@ Proposez d'abord un plan fil de fer, attendez ma confirmation avant d'écrire le
 
 ## 4. Voir aussi
 
-- [Modèle de création](/prompts/templates/create/)
-- [Travail centré sur les livrables](/cases/workflows/artifact-first-work/)
+- [Modèle de création](/fr/prompts/templates/create/)
+- [Travail centré sur les livrables](/fr/cases/workflows/artifact-first-work/)
 
 ---
 

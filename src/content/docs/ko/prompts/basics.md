@@ -3,9 +3,10 @@ title: 프롬프트 기초
 description: 좋은 프롬프트의 기본 구성 요소입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 프롬프트를 처음 배울 때, “표현이 고급스러운지”에 집중하기 쉽습니다.  
@@ -98,7 +99,7 @@ Codex에게는 다음이 분명한지가 더 중요합니다.
 
 좋은 프롬프트의 핵심은 추측, 이탈, 월권을 줄이는 것입니다.
 
-예시는 [첫 작업 실행](/cases/first-task/)과 [좋은 작업의 구조](/prompts/task-anatomy/)를 참고하세요.
+예시는 [첫 작업 실행](/ko/cases/first-task/)과 [좋은 작업의 구조](/ko/prompts/task-anatomy/)를 참고하세요.
 
 ---
 

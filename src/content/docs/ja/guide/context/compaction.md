@@ -3,9 +3,10 @@ title: コンテキストの圧縮
 description: 長い会話を圧縮したあと、何が残り何が失われるか。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 329ca4d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -73,7 +74,7 @@ sidebar:
 
 長い会話全体に頼り続けるより安定します。
 
-概念レベル：[Token、コンテキストと圧縮](/guide/foundations/tokens-context-and-compaction/)
+概念レベル：[Token、コンテキストと圧縮](/ja/guide/foundations/tokens-context-and-compaction/)
 
 長いタスクでは、最も重要な制限を一度だけ言うのは危険です。圧縮後は、重要なルールを積極的に再述する価値があります。
 

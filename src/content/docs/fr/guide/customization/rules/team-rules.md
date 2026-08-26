@@ -3,14 +3,15 @@ title: "Politique de règles d'équipe"
 description: Gouvernance en couches des règles de commandes et de chemins entre organisation, dépôt et individu — revueable et réversible.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-Quand les équipes utilisent Codex, la **politique de règles** répond : quelles contraintes sont à l'échelle de l'entreprise, quelles le dépôt maintient et si les individus peuvent relaxer quoi que ce soit. Ce chapitre est la vue gouvernance des [Règles de commandes](/guide/customization/rules/command-rules/) et des [Modèles Allow et Deny](/guide/customization/rules/allow-and-deny-patterns/).
+Quand les équipes utilisent Codex, la **politique de règles** répond : quelles contraintes sont à l'échelle de l'entreprise, quelles le dépôt maintient et si les individus peuvent relaxer quoi que ce soit. Ce chapitre est la vue gouvernance des [Règles de commandes](/fr/guide/customization/rules/command-rules/) et des [Modèles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Contenu
 
@@ -61,7 +62,7 @@ L4 Configuration personnelle          → local uniquement ; ne doit pas affaibl
 L5 Prompt de tâche unique           → renforcement temporaire OK ; relaxation temporaire limitée par L1
 ```
 
-Comparer avec [Portée AGENTS.md](/guide/customization/agents-md/scope-and-precedence/) : **les règles penchent vers l'application d'exécution ; AGENTS.md penche vers la description de comportement** ; elles devraient être d'accord — ne pas écrire des exigences contradictoires à deux endroits.
+Comparer avec [Portée AGENTS.md](/fr/guide/customization/agents-md/scope-and-precedence/) : **les règles penchent vers l'application d'exécution ; AGENTS.md penche vers la description de comportement** ; elles devraient être d'accord — ne pas écrire des exigences contradictoires à deux endroits.
 
 ## Pratique de base
 
@@ -78,7 +79,7 @@ Proposition (issue ou RFC) → revue sécurité/plateforme → PR modifiant les 
     → essai de tâches typiques dans dépôt staging → merge → annonce + mise à jour handbook
 ```
 
-Les grands changements (ex. autoriser le réseau outbound) devraient mettre à jour [audit Hooks](/skills/hooks/hooks-overview/) et [usage acceptable](/guide/team-enterprise/governance/acceptable-use/) ensemble.
+Les grands changements (ex. autoriser le réseau outbound) devraient mettre à jour [audit Hooks](/fr/skills/hooks/hooks-overview/) et [usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/) ensemble.
 
 ## Alignement avec Hooks et CI
 
@@ -113,7 +114,7 @@ Généralement :
 
 ## Frontières de sécurité
 
-- Les règles ne peuvent pas remplacer le [modèle de menace](/guide/team-enterprise/security/threat-model/) et la réponse aux incidents
+- Les règles ne peuvent pas remplacer le [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) et la réponse aux incidents
 - Pour les données réglementées, les règles nécessitent une revue conjointe avec classification des données et politique de rétention
 - Le contournement d'urgence nécessite un **enregistrement d'audit** et une revue post-incident
 

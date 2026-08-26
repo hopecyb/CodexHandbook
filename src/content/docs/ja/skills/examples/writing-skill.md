@@ -3,9 +3,10 @@ title: "例：執筆 Skill"
 description: 調査、大纲、原稿、推敲を再利用可能な執筆フローに整理する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 例：執筆 Skill
@@ -32,7 +33,7 @@ description: 大纲に沿って技術記事を執筆。調査、原稿、推敲�
 
 ## 関連
 
-- [記事執筆ケース](/cases/write-an-article/)
+- [記事執筆ケース](/ja/cases/write-an-article/)
 
 ---
 

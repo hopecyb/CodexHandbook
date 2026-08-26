@@ -3,112 +3,64 @@ title: Atalhos de teclado
 description: "Índice de aprendizagem de atalhos habituais na App, TUI do CLI e extensão IDE — conforme a versão atual."
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 0edf4f3
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 90
+reviewed_at: 2026-08-26
 ---
 
-Os atalhos variam muito segundo **cliente e versão**. Esta página classifica-os por **intenção de operação**, para julgar se há uma forma mais rápida; a tecla concreta, na ajuda ou definições do produto.
 
-Não precisas de memorizá-los todos de uma vez. Usar com fluidez os poucos que mais interrompem o ritmo já ajuda muito.
+Shortcuts vary by platform, client, and customization. This page includes only combinations explicitly documented today; use in-App **Keyboard Shortcuts** for the complete list.
 
-:::caution
-A tabela seguinte é **esquemática**, não uma tabela completa de bindings. Após atualizar, as teclas podem mudar.
-:::
+## Desktop App
 
-## Índice de intenções gerais
+| Action | macOS | Windows |
+|---|---|---|
+| Open Settings | `Cmd + ,` | `Ctrl + ,` |
+| Open/close Activity | `Cmd + Option + U` | `Ctrl + Alt + U` |
+| Open integrated terminal | `Ctrl` + backtick | `Ctrl` + backtick |
+| Open App command palette | `Cmd + K` | Check Keyboard Shortcuts |
+| Clear terminal display | `Ctrl + L` | `Ctrl + L` |
 
-| Intenção | App de ambiente de trabalho (esquema) | TUI do CLI (esquema) | Extensão IDE (esquema) |
-|---|---|---|---|
-| Nova Tarefa/sessão | `Cmd/Ctrl+N` ou barra lateral | Sair e voltar a entrar / comando de nova Thread | Paleta de comandos «Codex» |
-| Enviar mensagem | `Enter` / `Cmd+Enter` | Conforme o produto | Enviar no painel |
-| Nova linha sem enviar | `Shift+Enter` | Conforme a TUI | Conforme o painel |
-| Abrir paleta de comandos | Tipo `Cmd/Ctrl+K` | Slash commands `/` | `Cmd/Ctrl+Shift+P` |
-| Procurar histórico | Pesquisa na barra lateral | Pesquisa na sessão (se existir) | Histórico do chat |
-| Aprovar chamada a Ferramenta | Botão do painel | `y` / setas (conforme a TUI) | Notificação ou botão em linha |
-| Recusar | Botão do painel | `n` | Recusa em linha |
+`Cmd + K` opens the App command palette; it does not clear the terminal.
 
-**Prevalece a UI da versão que tiveres instalada.**
+Keyboard Shortcuts in Settings can search by command or key, change a binding, and restore defaults. After customization, the local binding takes precedence over an online reference card.
 
-## Que ações priorizar
+## IDE
 
-O valor dos atalhos está sobretudo em reduzir estes bloqueios:
+In VS Code-family editors, `chatgpt.composerEnterBehavior` determines how Enter and `Cmd/Ctrl + Enter` submit multiline prompts. Do not assume every computer uses the same send key.
 
-- Querer enviar e ter de procurar o botão
-- Querer nova linha e enviar por engano
-- Querer Aprovar e fazê-lo aos tropeções
-- Querer abrir uma Tarefa nova e não saber a entrada
+While Codex is running, `chatgpt.followUpQueueMode` determines whether a new message queues or steers immediately. Press `Cmd/Ctrl + Shift + Enter` for a single send that reverses the current default.
 
-Mais do que memorizar o conjunto completo, convém familiarizar-te primeiro com estas 4 classes:
+If the Codex sidebar is missing, run this from the editor Command Palette:
 
-- Enviar / nova linha
-- Nova Tarefa
-- Paleta de comandos
-- Aprovar / recusar
+```text
+Codex: Open Codex Sidebar
+```
 
-## Slash commands vs teclado
+## CLI
 
-- **Slash commands**: `/review`, `/help`, etc. — ver [Slash commands](/guide/reference/slash-commands/)
-- **Atalhos**: disparam uma ação de UI sem escrever texto
+Use the current CLI TUI's `/help` and on-screen hints. This page does not guess `y`, `n`, or other approval keys because terminal, mode, and version affect interaction.
 
-Podem combinar-se: primeiro `Cmd+K` para focar a entrada, depois `/review`.
+The general terminal signal `Ctrl + C` may interrupt a command or session. Inspect current state rather than treating it as a side-effect-free Back key.
 
-## Utilizadores de terminal CLI
+## Learning order
 
-- Aprende **Ctrl+C** para interromper saída descontrolada (cuidado com interromper estado sem guardar)
-- Multiplexor de terminal (tmux) em ecrã partido: Codex de um lado, `git diff` do outro
-- Empacota `codex exec` habituais como alias de shell — ver [Comandos e atalhos](/guide/cli/commands-and-shortcuts/)
+First learn to open Settings and Activity, open the terminal, and submit multiline prompts. Search in the App for other frequent actions. Team documentation should name actions rather than force the same customized bindings on everyone.
 
-## Mal-entendidos frequentes
+## Official sources
 
-### 1. Não precisas de dominar os atalhos para começar a usar
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
+- [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
+- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
-Usar com fluidez as poucas classes de ação que mais se disparam já baixa muito o custo.
-
-### 2. Outro usá-los com à-vontade não significa que tu sejas desajeitado agora
-
-Os atalhos são memória muscular que se forma com a familiaridade, não um limiar de entrada.
-
-### 3. Não precisas de forçar as mesmas teclas em todos os clientes
-
-Mais importante é saber:
-
-- Se essa ação tem atalho
-- Onde ver e mudar bindings
-- Que ações merecem priorizar
-
-## Ao começar, familiariza-te primeiro com estas
-
-Ao começar:
-
-1. Como enviar
-2. Como fazer nova linha sem enviar
-3. Como abrir a paleta de comandos
-4. Como Aprovar ou recusar
-5. Como abrir uma Tarefa nova
-
-Com essas 5 fluidas, o resto dos atalhos pode ir-se completando ao usar.
-
-## Utilizadores de IDE
-
-- Liga «explicar o código selecionado com Codex» a uma tecla cómoda
-- Combina com o Diff nativo do editor e «ir à definição» para menos copiar e colar
-
-[Definições do IDE](/guide/ide/settings/) · [Código selecionado e ficheiros abertos](/guide/ide/selected-code-and-open-files/)
-
-## Acessibilidade e personalização
-
-A maioria dos clientes permite mudar bindings nas definições. A equipa pode documentar **bindings recomendados**, sem exigir que todos coincidam.
-
-Os atalhos não são matéria de exame. Usar com fluidez os poucos que mais te interrompem costuma bastar.
-
-## Fontes de referência
-- Páginas oficiais de Settings / Keyboard shortcuts de cada produto
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Nota de revisão:** Embora declare várias vezes «esquema», o corpo continua a incluir pressupostos de atalhos atuais, forma de envio, paleta de comandos e teclas de Aprovação; dependem muito de versão e plataforma, e falta documentação oficial unificada de atalhos suficientemente sólida.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE
+
+**Last verified:** 2026-08-26

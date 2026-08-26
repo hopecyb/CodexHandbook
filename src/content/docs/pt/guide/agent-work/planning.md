@@ -3,9 +3,10 @@ title: Planeamento
 description: Fazer o Codex explicar primeiro passos, riscos e Verificação — e só depois decidir se executa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75099ef
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -94,7 +95,7 @@ Ainda não altere ficheiros. Com base no repositório atual, dê um plano com:
 5. Como verificar cada passo
 ```
 
-Redação mais completa: [Pedir um plano](/prompts/ask-for-a-plan/).
+Redação mais completa: [Pedir um plano](/pt/prompts/ask-for-a-plan/).
 
 ## O que está a rever
 
@@ -129,7 +130,7 @@ Um hábito importante de colaboração é separar os dois:
 - **Fase de plano**: permitir explorar, listar opções, expor incerteza
 - **Fase de execução**: avançar pelo caminho já confirmado
 
-Se na execução a premissa mudar, volte ao plano — não force. Ver [Progresso e reorientação](/guide/agent-work/progress-and-steering/).
+Se na execução a premissa mudar, volte ao plano — não force. Ver [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/).
 
 ## Em tarefas de alto risco, acrescente três itens
 
@@ -152,10 +153,10 @@ Pede o plano por fases: análise só leitura, alteração mínima, verificação
 
 ## Combinações recomendadas
 
-- Cadeia principal completa: [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- Clarificar o Prompt: [Pedir um plano](/prompts/ask-for-a-plan/)
-- Correção a meio: [Progresso e reorientação](/guide/agent-work/progress-and-steering/)
-- Normas de longo prazo: [O que é AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+- Cadeia principal completa: [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/)
+- Clarificar o Prompt: [Pedir um plano](/pt/prompts/ask-for-a-plan/)
+- Correção a meio: [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/)
+- Normas de longo prazo: [O que é AGENTS.md](/pt/guide/customization/agents-md/what-is-agents-md/)
 
 ---
 

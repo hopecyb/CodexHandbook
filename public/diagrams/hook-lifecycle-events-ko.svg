@@ -1,0 +1,80 @@
+<svg lang="ko" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Hook 수명 주기와 주요 이벤트</title>
+  <desc id="desc">SessionStart로 세션이 시작됩니다. 작업 턴에서는 먼저 UserPromptSubmit을 제출하고, 도구 실행 전에 PreToolUse를 거칩니다. 승인이 필요할 때만 PermissionRequest가 발생하고, 도구 완료 후 PostToolUse가 발생합니다. Stop은 주 스레드에 한 턴 더 진행하도록 요구할 수 있습니다. PreCompact와 PostCompact는 컨텍스트 압축 전후에 실행되며, 하위 Agent에는 시작과 중지 이벤트가 있고 SessionEnd는 주 스레드 종료 시에만 실행됩니다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 25.8px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.8px; }
+    .lane { fill: #cbd5e1; font-size: 13.8px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 15.5px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+    .tiny { fill: #94a3b8; font-size: 10.3px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+  </defs>
+  <rect width="1100" height="720" rx="8" fill="#020617"/>
+  <rect width="1100" height="720" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Codex Hook 수명 주기</text>
+  <text x="44" y="72" class="sub">부작용 발생 전인지 후인지 먼저 판단한 뒤 이벤트를 선택합니다. Hook은 추가 보호 계층이지 완전한 보안 경계가 아닙니다.</text>
+
+  <text x="46" y="132" class="lane">세션 시작</text>
+  <rect x="180" y="100" width="210" height="72" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="285" y="130" text-anchor="middle" class="label">SessionStart</text>
+  <text x="285" y="153" text-anchor="middle" class="note">startup · resume · clear · compact</text>
+  <path d="M390 136H470" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <rect x="470" y="100" width="250" height="72" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="595" y="130" text-anchor="middle" class="label">UserPromptSubmit</text>
+  <text x="595" y="153" text-anchor="middle" class="note">프롬프트 검사 또는 컨텍스트 추가</text>
+
+  <rect x="40" y="214" width="1020" height="272" rx="12" fill="#07101f" stroke="#334155" stroke-width="1.5"/>
+  <text x="62" y="244" class="lane">한 번의 도구 호출과 작업 턴</text>
+  <rect x="80" y="278" width="190" height="92" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="175" y="311" text-anchor="middle" class="label">PreToolUse</text>
+  <text x="175" y="337" text-anchor="middle" class="note">실행 전: 거부 또는 재작성</text>
+  <text x="175" y="357" text-anchor="middle" class="tiny">로컬에서 도구 경로 지원</text>
+  <path d="M270 324H326" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="326" y="278" width="200" height="92" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="426" y="311" text-anchor="middle" class="label">PermissionRequest</text>
+  <text x="426" y="337" text-anchor="middle" class="note">승인을 요청하려는 경우에만</text>
+  <text x="426" y="357" text-anchor="middle" class="tiny">허용 · 거부 · 정상적으로 질문</text>
+  <path d="M526 324H582" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="582" y="278" width="150" height="92" rx="8" fill="#083344" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="657" y="317" text-anchor="middle" class="label">도구 실행</text>
+  <text x="657" y="343" text-anchor="middle" class="note">부작용 발생 지점</text>
+  <path d="M732 324H788" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="788" y="278" width="220" height="92" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="898" y="311" text-anchor="middle" class="label">PostToolUse</text>
+  <text x="898" y="337" text-anchor="middle" class="note">완료 후: 기록 또는 피드백</text>
+  <text x="898" y="357" text-anchor="middle" class="tiny">이미 발생한 부작용은 되돌릴 수 없음</text>
+
+  <rect x="326" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#a78bfa"/>
+  <text x="426" y="427" text-anchor="middle" class="label">PreCompact</text>
+  <text x="426" y="448" text-anchor="middle" class="tiny">컨텍스트 압축 전</text>
+  <path d="M526 431H582" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="582" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#a78bfa"/>
+  <text x="682" y="427" text-anchor="middle" class="label">PostCompact</text>
+  <text x="682" y="448" text-anchor="middle" class="tiny">컨텍스트 압축 후</text>
+  <rect x="808" y="402" width="200" height="58" rx="8" fill="#0f172a" stroke="#fb923c"/>
+  <text x="908" y="427" text-anchor="middle" class="label">Stop</text>
+  <text x="908" y="448" text-anchor="middle" class="tiny">주 스레드에 한 턴 더 요구 가능</text>
+
+  <text x="46" y="550" class="lane">하위 Agent</text>
+  <rect x="180" y="516" width="210" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="285" y="546" text-anchor="middle" class="label">SubagentStart</text>
+  <text x="285" y="570" text-anchor="middle" class="note">개발 컨텍스트 추가 가능</text>
+  <path d="M390 552H470" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="470" y="516" width="220" height="72" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="580" y="546" text-anchor="middle" class="label">SubagentStop</text>
+  <text x="580" y="570" text-anchor="middle" class="note">하위 Agent에 재검사 요구 가능</text>
+
+  <text x="46" y="648" class="lane">주 스레드 종료</text>
+  <rect x="180" y="614" width="210" height="72" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="285" y="644" text-anchor="middle" class="label">SessionEnd</text>
+  <text x="285" y="668" text-anchor="middle" class="note">주 스레드에만 적용, 기본 1초</text>
+  <rect x="470" y="614" width="538" height="72" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="739" y="643" text-anchor="middle" class="note">여러 출처에서 일치한 Hook은 모두 실행되며 같은 이벤트의 command Hook은 병렬 시작 가능</text>
+  <text x="739" y="668" text-anchor="middle" class="tiny">프로젝트와 Plugin Hook은 검토와 신뢰가 필요하며 hash 변경 후 다시 검토</text>
+</svg>

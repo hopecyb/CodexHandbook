@@ -3,14 +3,15 @@ title: Tổng quan Webhook
 description: "Dùng HTTP callback để nối trạng thái Tác vụ Codex vào hệ thống nội bộ — sự kiện, chữ ký và idempotent."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**Webhook** cho phép bạn, khi trạng thái Tác vụ Codex hoặc Cloud thay đổi, gửi HTTP callback tới dịch vụ của mình để cập nhật ticket, thông báo Slack hoặc bàn Phê duyệt nội bộ. Chương này là lối vào tích hợp sự kiện của [nền tảng nhà phát triển](/guide/developer-platform/).
+**Webhook** cho phép bạn, khi trạng thái Tác vụ Codex hoặc Cloud thay đổi, gửi HTTP callback tới dịch vụ của mình để cập nhật ticket, thông báo Slack hoặc bàn Phê duyệt nội bộ. Chương này là lối vào tích hợp sự kiện của [nền tảng nhà phát triển](/vi/guide/developer-platform/).
 
 ## Trang này sẽ nói gì
 
@@ -54,7 +55,7 @@ Nhưng nếu không xác minh chữ ký, idempotent và xử lý timeout, có th
 | Tích hợp bus sự kiện sẵn có | Cron đơn giản chỉ cần mã thoát `exec` |
 | Điều phối nhiều bước (xong → kích hoạt deploy) | Không có endpoint public và không muốn dùng hàng đợi |
 
-Pipeline đơn giản có thể chỉ dùng [Script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/); dịch vụ đa tenant sản phẩm hóa thường kết hợp **SDK + Webhook**.
+Pipeline đơn giản có thể chỉ dùng [Script và pipeline](/vi/guide/developer-platform/non-interactive/scripts-and-pipelines/); dịch vụ đa tenant sản phẩm hóa thường kết hợp **SDK + Webhook**.
 
 ## Sự kiện điển hình (khái niệm)
 
@@ -110,7 +111,7 @@ Càng nhiều câu «có», Webhook càng có ý nghĩa.
 
 ## Ranh giới bảo mật
 
-- Xem [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) và [Sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
+- Xem [Mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) và [Sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/)
 - Đưa rotate webhook secret vào lịch vận hành
 
 ## Checklist nghiệm thu
@@ -118,7 +119,7 @@ Càng nhiều câu «có», Webhook càng có ý nghĩa.
 - [ ] Xác minh chữ ký thất bại trả 4xx
 - [ ] Đã có bảng idempotent hoặc dedupe key
 - [ ] Worker bất đồng bộ và DLQ (dead letter) đã cấu hình
-- [ ] Thống nhất với quy ước trường [đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/)
+- [ ] Thống nhất với quy ước trường [đầu ra có cấu trúc](/vi/guide/developer-platform/non-interactive/structured-output/)
 
 Webhook phù hợp nối thay đổi trạng thái Tác vụ vào hệ thống khác; đồng thời hãy làm tốt trước xác minh chữ ký, idempotent và xử lý bất đồng bộ.
 

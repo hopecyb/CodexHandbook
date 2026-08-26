@@ -1,59 +1,65 @@
 ---
-title: Ajustes
-description: Opciones habituales de la App de escritorio.
+title:  Ajustes
+description:  Opciones habituales de la App de escritorio.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: c599d50
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---
 
-La página de ajustes tiene muchas opciones, pero al principio no hace falta tocarlas todas. Mira las que afectan a seguridad, Aprobación y experiencia diaria.
+Settings personalize App behavior. They are not the complete Codex permission configuration. Keep the defaults at first and change a setting only after you understand its scope.
 
-Direcciones configurables habituales (los nombres concretos los marca la UI):
+Press `Cmd + ,` on macOS or `Ctrl + ,` on Windows, or open Settings from the application menu.
 
-- Modelo por defecto y nivel de razonamiento
-- Opciones relacionadas con Aprobación / Sandbox / red
-- Notificaciones
-- Apariencia y preferencias de edición
+## Four sections to check first
 
-La configuración gestionada por el equipo puede sobrescribir los ajustes personales. Documentación oficial: [https://developers.openai.com/codex](https://developers.openai.com/codex). Conceptos: [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
+### General
 
-## Preguntas frecuentes
+- Whether `Cmd + Enter` is required to submit a multiline prompt.
+- Whether **Prevent sleep while running** lets a local long-running task continue while you are away.
+- Follow-up behavior determines whether a new message steers the current run immediately or is queued for the next turn.
 
-### 1. ¿Hay que ajustarlo todo desde el principio?
+The last setting changes what happens when you add a clarification. Steer the current run for an urgent correction. Start a separate chat for an unrelated requirement.
 
-No. Deja los valores por defecto y primero entiende qué afecta cada ajuste.
+### Keyboard shortcuts
 
-### 2. ¿Qué ajustes mirar primero
+Search commands, change bindings, or restore defaults. If an online shortcut differs from your App, use the binding displayed here.
 
-Normalmente bastan estas tres categorías:
+### Notifications
 
-- Aprobación y Permisos
-- Relacionadas con la red
-- Notificaciones
+Choose when turn-completion notifications appear and whether to notify for permission requests and questions. See [Notifications and Activity](/es/guide/desktop-app/notifications/) for detailed recommendations.
 
-Son las que más influyen en:
+### Appearance
 
-- Qué puede hacer
-- Si se saldrá de los límites
-- Si recibirás avisos a tiempo
+Choose light, dark, or system appearance, and adjust the accent color, background, foreground, UI font, code font, and font size. For long code reviews, prioritize contrast and readable type over theme effects.
 
-### 3. ¿Por qué cambio un ajuste y el efecto no coincide con la documentación?
+## What these settings do not control
 
-Puede deberse a:
+- Repository rules belong in `AGENTS.md`.
+- Persistent CLI and Agent configuration primarily belongs in `config.toml`.
+- The sandbox, approval policy, and organization policy jointly determine whether files, networks, and commands are available.
+- Managed organization policy may restrict what an individual can select.
 
-- Versión distinta
-- Políticas gestionadas por el equipo que sobrescriben los ajustes personales
-- El entorno actual de la Tarea tiene otras restricciones
+A visible setting therefore does not guarantee that the current task has the corresponding permission. When an operation is denied, read [Permissions and sandboxing](/es/guide/permissions-and-sandbox/) before expanding access.
 
-La primera vez que mires la página de ajustes, entiende primero los límites de seguridad y las opciones de avisos; el resto de detalles puede esperar.
+## Verify each change
+
+Change one class of settings at a time and verify it with a low-risk chat. Record the previous value. If behavior differs from your expectation, restore the default first, then check the App version, operating-system permissions, and organization policy.
+
+## Official sources
+
+- [ChatGPT desktop App settings](https://learn.chatgpt.com/docs/app/settings)
+- [Codex configuration basics](https://learn.chatgpt.com/docs/config)
+- [Permissions](https://learn.chatgpt.com/docs/permissions)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App  
-**Nota de revisión:** Los ajustes, los nombres y si los cubre la gestión del workspace de la nueva App de escritorio siguen cambiando; aunque esta página solo lista «direcciones habituales», aún implica una estructura de una versión concreta; conviene esperar documentación oficial de ajustes más completa antes de volver a `verified`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Last verified:** 2026-08-26

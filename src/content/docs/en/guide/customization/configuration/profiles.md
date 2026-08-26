@@ -1,108 +1,88 @@
 ---
-title: Configuration Profiles
-description: Named configuration sets to switch model, sandbox, and approval combinations—one each for development, review, and CI.
+title: Configuration profiles
+description: Layer a named settings file onto Codex CLI configuration.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 7043ada
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Profile** lets you save a named set of configuration (model + sandbox + approval, etc.) and switch scenarios in one step instead of changing settings manually each time.
+Current Codex CLI `--profile <name>` layers `$CODEX_HOME/<name>.config.toml` over the base user configuration. It is primarily a CLI mechanism and should not be presented as a universal one-click desktop mode.
 
-## What This Page Covers
+## Minimal example
 
-- Profile versus “changing default configuration”
-- Common ways to split Profiles
-- How teams share Profile definitions
+Keep shared defaults in the base configuration:
 
-## What Profiles Control
+```toml
+# ~/.codex/config.toml
+model_reasoning_effort = "medium"
+```
 
-If “configuration” is default working habits, **Profile** is “a preset bundle for a scenario.”
+Create a read-only review profile:
 
-Think of it as:
+```toml
+# ~/.codex/review.config.toml
+sandbox_mode = "read-only"
+approval_policy = "never"
+```
 
-- One set for daily development
-- One for untrusted repos
-- One for read-only review
-- One for CI automated tasks
+Start it:
 
-So you do not retune a pile of switches every time.
+```bash
+codex --profile review
+# Short form
+codex -p review
+```
 
-## Typical Profile Examples
+Confirm local semantics:
 
-| Profile name | Intent | Traits (conceptual) |
+```bash
+codex --help
+```
+
+Current help should describe the profile path and layering. If your version differs, trust its output and the current official configuration reference.
+
+## Appropriate uses
+
+| Profile | Purpose | Example boundary |
 |---|---|---|
-| `daily` | Daily development | Balanced model, standard sandbox |
-| `strict` | Untrusted repo | Strong approval, limited network |
-| `review-only` | Read-only review | No disk write or read-only |
-| `ci` | Pipeline | Fixed model, non-interactive, no push |
+| `review` | Read-only inspection | read-only, no writes |
+| `workspace` | Everyday project changes | workspace writes, approvals as needed |
+| `ci` | Non-interactive checks | fixed output, no push |
 
-Specific fields: [Configuration Reference](/guide/reference/configuration-reference/).
+A profile only saves a configuration starting point. It cannot override organization requirements or make a prompt inherently safe. In particular, do not make `danger-full-access` an easy default profile.
 
-## Usage (Conceptual)
+## Do not confuse Permission Profiles
 
-1. Confirm Profile syntax in official docs (may relate to `[profiles.name]` in `config.toml` or equivalent)
-2. Create and name a Profile
-3. Specify at launch: `codex --profile strict` (command per `--help`)
-4. Note in README: “contributors recommended `daily`; CI uses `ci`”
+- **Configuration profile:** `--profile name` selects `<name>.config.toml` and may layer many Codex settings.
+- **Permission Profile (Beta):** `default_permissions` and `[permissions.<name>]` define filesystem and network boundaries.
 
-CLI detail: [CLI Configuration](/guide/cli/configuration/)
+They share a name but not purpose or schema. Current Permission Profiles also do not compose with legacy `sandbox_mode`; choose one permission system.
 
-## Common Misconceptions
+## Team boundary
 
-### More Profiles is not more flexible
+Configuration profiles live in a user's Codex home and are not automatically project configuration in the current version. A team can publish reviewed examples for members to install and inspect explicitly. Do not assume cloning a repository activates a personal profile.
 
-Many people want a Profile for every tiny scenario and end up with a dozen names they cannot tell apart.
+## Acceptance
 
-Usually keep 2–4 most-used ones:
+1. Run `codex --help` and confirm current `-p/--profile` support.
+2. Test `review` on a read-only task.
+3. Attempt an outside-workspace read or a write and confirm that the boundary blocks it.
+4. Inspect effective configuration; do not trust only the filename.
 
-- Daily development
-- Strict mode
-- Read-only review
-- CI
+## Official sources
 
-Enough to separate risk boundaries clearly.
+- [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
+- [Configuration layers in Codex CLI source](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
 
-### Profile is not a substitute for thinking
-
-Switching to a Profile does not make every task absolutely safe or appropriate.
-
-It only moves you to a common starting state; each task still needs the current repo and risk judgment.
-
-## Division of Labor with AGENTS.md
-
-| | Profile | AGENTS.md |
-|---|---|---|
-| Controls | Capability switches, model, sandbox | How to write this project |
-| Commit to Git | Optional (project-level profile snippet) | Yes |
-| Personal/team | Personal profile local; team profile should be PR | Team |
-
-## Common Mistakes
-
-- Ten Profiles per repo that nobody maintains
-- `ci` Profile still allows `git push`
-- Profile names disagree with docs; newcomers use the wrong one
-
-## Getting Started
-
-When starting with Profiles:
-
-1. Keep one `daily` as default
-2. Add `strict` for unfamiliar or high-risk repos
-3. If the team automates, add `ci` separately
-
-That already covers most common cases.
-
-Profiles help you quickly switch to a default combination you have already thought through for different risk scenarios.
-
-## References
-- OpenAI Codex profiles documentation
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App  
-**Review note:** This page states `Profile`, `codex --profile`, and shared profile structure too concretely; currently verifiable official material is insufficient to show these usages are broadly valid in present versions. It should not be marked `verified` until formal documentation support is added.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** CLI
+
+**Last verified:** 2026-08-26 (local `codex-cli 0.148.0`)

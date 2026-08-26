@@ -1,16 +1,17 @@
 ---
+reviewed_at: 2026-08-26
 title: Add a Prompt Example
 description: Submit reproducible prompts to examples/prompts with metadata and acceptance criteria.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Prompt examples live at repo root [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), linked from handbook pages. Design spec: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Prompt examples live at repo root [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), linked from handbook pages. See [Prompt, Skill, and case-study system](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## What this page covers
 
@@ -104,7 +105,7 @@ Teach the method—not your production environment.
 - Clear goal and definition of done
 - Permission and security boundaries stated
 - No real keys or PII
-- `verified` status needs [independent verification](/guide/contributing/verify-technical-content/)
+- `verified` status needs [independent verification](/en/guide/contributing/verify-technical-content/)
 
 ## Submission flow
 
@@ -123,6 +124,6 @@ A good prompt example lets someone reproduce and get a similar outcome.
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior.  
+**Status:** verified
+**Verification basis:** Cross-checked current `examples/` layout, example frontmatter, indexing, and contribution flow; aligned with case/workflow link patterns—not volatile product UI behavior.
 **Last verified:** 2026-07-26

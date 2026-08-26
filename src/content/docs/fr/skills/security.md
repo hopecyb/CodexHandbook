@@ -3,9 +3,10 @@ title: Sécurité et versions des Skills
 description: Source d'installation, limites de permission, mise à niveau et rollback pour gouverner les Skills d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Un Skill n'est pas qu'un modèle de Prompt de plus.
@@ -33,7 +34,7 @@ vous êtes dans la chaîne de risque.
 
 La sécurité Skill ne repose pas que sur un admin central.
 
-Bases : [Vue d'ensemble](/skills/overview/) · [Premier Skill](/skills/create-your-first-skill/)
+Bases : [Vue d'ensemble](/fr/skills/overview/) · [Premier Skill](/fr/skills/create-your-first-skill/)
 
 ## Modèle de menace (simplifié)
 
@@ -82,7 +83,7 @@ Pour l'équipe, c'est une **mise à niveau de comportement automatisé** — com
 | Changelog | release notes du pack équipe |
 | Rollback | copie version précédente |
 
-Plugin pour packager Skills : [Vue d'ensemble Plugins](/skills/plugins/plugins-overview/)
+Plugin pour packager Skills : [Vue d'ensemble Plugins](/fr/skills/plugins/plugins-overview/)
 
 ## Habitudes d'équipe
 
@@ -102,7 +103,7 @@ Skill partagé long terme :
 - [ ] liste blanche sources Skill
 - [ ] onboarding : pack de base seulement
 - [ ] revue trimestrielle des Skills encore utiles
-- [ ] alignement [allow/deny](/guide/customization/rules/allow-and-deny-patterns/)
+- [ ] alignement [allow/deny](/fr/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Erreurs courantes
 

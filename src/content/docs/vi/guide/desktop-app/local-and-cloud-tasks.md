@@ -3,9 +3,10 @@ title: Tác vụ local và Cloud
 description: Chuyển giữa thực thi local và Cloud trong App.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 95e2382
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -17,7 +18,7 @@ Trong App, chọn nơi chạy tác vụ:
 - **Local**: tệp và môi trường trên máy, lặp nhanh
 - **Cloud**: môi trường đám mây, phù hợp kết nối kho từ xa và tác vụ dài
 
-Khái niệm: [Local và Cloud](/guide/foundations/local-vs-cloud/) · Tổng quan: [Web và Cloud](/guide/web-and-cloud/)
+Khái niệm: [Local và Cloud](/vi/guide/foundations/local-vs-cloud/) · Tổng quan: [Web và Cloud](/vi/guide/web-and-cloud/)
 
 Trước khi chuyển, xác nhận: khóa bí mật có nên xuất hiện trong môi trường đó không, chính sách mạng có cho phép không.
 

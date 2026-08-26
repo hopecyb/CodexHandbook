@@ -3,9 +3,10 @@ title: Codex와 대화하기
 description: 자연어로 목표와 제한을 설명하는 연습을 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -49,7 +50,7 @@ Codex와 처음 대화할 때, 많은 사람이 검색창처럼 키워드만 던
 
 읽기, 설명, 요약 같은 작업에도 경계가 필요합니다.
 
-다음 단계：[파일 다루기](/guide/learning-paths/beginner/02-work-with-files/) · 원리：[프롬프트 기초](/prompts/basics/)
+다음 단계：[파일 다루기](/ko/guide/learning-paths/beginner/02-work-with-files/) · 원리：[프롬프트 기초](/ko/prompts/basics/)
 
 ---
 

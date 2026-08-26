@@ -3,9 +3,10 @@ title: Praxisbeispiele
 description: Anhand realer Aufgaben den vollständigen Ablauf von Ausführung, Prüfung und Wiederverwendung mit Codex lernen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3b29a57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Praxisbeispiele
@@ -14,24 +15,24 @@ Praxisbeispiele zeigen, wie man von einem konkreten Ziel aus Prompting, Ausführ
 
 ## Fallformat
 
-Jeder Fall sollte Ziel, Vorbereitungsmaterialien, empfohlene Prompts, Ausführungsablauf, menschliche Prüfpunkte, Überprüfungsmethoden, Fehlerbehandlung und wiederverwendbare Vorlagen enthalten. Zum Schreiben neuer Fälle siehe [Fallvorlage](/cases/use-cases/case-study-template/).
+Jeder Fall sollte Ziel, Vorbereitungsmaterialien, empfohlene Prompts, Ausführungsablauf, menschliche Prüfpunkte, Überprüfungsmethoden, Fehlerbehandlung und wiederverwendbare Vorlagen enthalten. Zum Schreiben neuer Fälle siehe [Fallvorlage](/de/cases/use-cases/case-study-template/).
 
 ## Einstieg und Allgemeines
 
-- [Erste Aufgabe](/cases/first-task/)
-- [Eine Codebasis verstehen](/cases/understand-a-codebase/)
-- [Mehrere Agents koordinieren](/cases/coordinate-multiple-agents/)
+- [Erste Aufgabe](/de/cases/first-task/)
+- [Eine Codebasis verstehen](/de/cases/understand-a-codebase/)
+- [Mehrere Agents koordinieren](/de/cases/coordinate-multiple-agents/)
 
 ## Erstellung und Büroarbeit
 
-- [Einen Artikel schreiben](/cases/write-an-article/)
-- [Eine Website aufbauen](/cases/build-a-website/)
-- [Eine Präsentation erstellen](/cases/create-a-slide-deck/)
-- [Eine Tabelle analysieren](/cases/analyze-a-spreadsheet/)
+- [Einen Artikel schreiben](/de/cases/write-an-article/)
+- [Eine Website aufbauen](/de/cases/build-a-website/)
+- [Eine Präsentation erstellen](/de/cases/create-a-slide-deck/)
+- [Eine Tabelle analysieren](/de/cases/analyze-a-spreadsheet/)
 
 ## Entwicklung und Zusammenarbeit
 
-- [Einen Bug beheben](/cases/fix-a-bug/)
-- [Einen PR prüfen](/cases/review-a-pr/)
-- [Recherche mit Quellen](/cases/research-with-sources/)
-- [Einen Tagesbericht automatisieren](/cases/automate-a-daily-report/)
+- [Einen Bug beheben](/de/cases/fix-a-bug/)
+- [Einen PR prüfen](/de/cases/review-a-pr/)
+- [Recherche mit Quellen](/de/cases/research-with-sources/)
+- [Einen Tagesbericht automatisieren](/de/cases/automate-a-daily-report/)

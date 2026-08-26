@@ -3,9 +3,10 @@ title: Thread, tác vụ và dự án
 description: Làm rõ quan hệ giữa phiên hội thoại, tác vụ và không gian làm việc dự án.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -37,8 +38,8 @@ Vấn đề thường nằm ở đây: tác vụ đã đổi, nhưng Thread vẫ
 ## Gợi ý thực hành
 
 - Chủ đề đổi thì **mở Thread mới**, tránh ngữ cảnh cũ gây nhiễu
-- Tác vụ dài hãy viết rõ giai đoạn và điểm kiểm tra — xem [Prompt cho tác vụ dài](/prompts/long-running-tasks/)
-- Khi cần tiếp tục xuyên phiên, làm tóm tắt bàn giao — xem [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
+- Tác vụ dài hãy viết rõ giai đoạn và điểm kiểm tra — xem [Prompt cho tác vụ dài](/vi/prompts/long-running-tasks/)
+- Khi cần tiếp tục xuyên phiên, làm tóm tắt bàn giao — xem [Bàn giao và khôi phục](/vi/guide/agent-work/handoff-and-resume/)
 
 ## Hiểu nhầm thường gặp
 

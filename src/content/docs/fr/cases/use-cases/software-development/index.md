@@ -3,9 +3,10 @@ title: Développement logiciel
 description: Point d'entrée des cas de modification de code, correction de bugs et ajout de vérifications — contrôle du périmètre, tests et retour arrière.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 84208b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Les cas de développement logiciel portent surtout sur cette question :
@@ -14,7 +15,7 @@ Les cas de développement logiciel portent surtout sur cette question :
 
 ## Entrées de ce groupe
 
-- [Correction de bug avec vérification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Correction de bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ## Points clés de ce groupe
 

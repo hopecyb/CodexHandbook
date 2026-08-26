@@ -3,9 +3,10 @@ title: Proyectos y Tareas
 description: Gestionar proyectos y Tareas en la App.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 088dad1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -39,7 +40,7 @@ Si el lugar es incorrecto, muchos problemas posteriores se desvían con él.
 La «Tarea» es el **encargo concreto** de esta ocasión.  
 Cuanto más claro sea el encargo, menos tendrá que adivinar Codex mientras trabaja.
 
-Comparación de conceptos: [Hilos, Tareas y proyectos](/guide/foundations/threads-tasks-and-projects/)
+Comparación de conceptos: [Hilos, Tareas y proyectos](/es/guide/foundations/threads-tasks-and-projects/)
 
 ## Malentendidos frecuentes
 

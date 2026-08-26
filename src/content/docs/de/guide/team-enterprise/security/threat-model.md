@@ -3,9 +3,10 @@ title: Bedrohungsmodell
 description: 'Wesentliche Risikoflächen von Codex in Teameumgebungen — Daten, Werkzeuge, Erweiterungen und Lieferkette.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 > **Wenn Codex wirklich an unseren Code, unsere Befehle und externe Werkzeuge angebunden ist — was kann am ehesten schiefgehen?**
 
-Ein **Bedrohungsmodell** zerlegt das. Codex ist nicht „noch ein Chatfenster“ — es kann **Code lesen, Befehle ausführen, externe Werkzeuge aufrufen**. Dieses Kapitel legt die Hauptflächen aus; konkrete Kontrollen folgen in [Berechtigungsmatrix](/guide/reference/permission-matrix/) und [Sandbox](/guide/foundations/sandbox-and-network/).
+Ein **Bedrohungsmodell** zerlegt das. Codex ist nicht „noch ein Chatfenster“ — es kann **Code lesen, Befehle ausführen, externe Werkzeuge aufrufen**. Dieses Kapitel legt die Hauptflächen aus; konkrete Kontrollen folgen in [Berechtigungsmatrix](/de/guide/reference/permission-matrix/) und [Sandbox](/de/guide/foundations/sandbox-and-network/).
 
 ## Inhalt
 
@@ -72,10 +73,10 @@ Auf dieser Ebene wird das Bedrohungsmodell zur Risiko-Checkliste vor dem Go-live
 
 | Bedrohung | Beschreibung | Milderung |
 |---|---|---|
-| Prompt Injection | Böswillige Issues/Seiten zu Overreach | Eingabe bereinigen, Read-only-CI, [Injection-Thema](/guide/team-enterprise/security/prompt-injection/) |
+| Prompt Injection | Böswillige Issues/Seiten zu Overreach | Eingabe bereinigen, Read-only-CI, [Injection-Thema](/de/guide/team-enterprise/security/prompt-injection/) |
 | Überrechte | Token, Sandbox zu weit | Least Privilege, Branch Protection |
 | Datenexfiltration | Befehle/MCP exportieren Repo-Inhalt | Netzwerkpolicy, DLP, Audit-Hooks |
-| Böswillige Erweiterungen | Ungeprüfte Plugins/MCP | [Erweiterungsrisiken](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Böswillige Erweiterungen | Ungeprüfte Plugins/MCP | [Erweiterungsrisiken](/de/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | Lieferkette | Abhängigkeiten und Skript-Poisoning | Mit bestehendem SCA und Code Review |
 | Fehlbedienung | Agent löscht DB, falscher Push | Command deny, CI ohne Push |
 
@@ -141,8 +142,8 @@ Damit sinken viele Teamrisiken schon. Feine Governance kann nachziehen.
 
 ## Verwandte Kapitel
 
-- [Sensibler Kontext](/guide/context/sensitive-context/)
-- [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
+- [Sensibler Kontext](/de/guide/context/sensitive-context/)
+- [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/)
 
 ## Quellen
 - OpenAI Enterprise Security Whitepaper (offiziell)

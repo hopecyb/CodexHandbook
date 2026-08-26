@@ -3,9 +3,10 @@ title: Parler à Codex
 description: S'entraîner à formuler objectifs et contraintes en langage naturel.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -28,7 +29,7 @@ Ne modifiez aucun fichier.
 - Les Tâches en lecture seule nécessitent aussi un « ne pas modifier » explicite
 - Les demandes vagues obtiennent des réponses vagues
 
-Suite : [Travailler avec les fichiers](/guide/learning-paths/beginner/02-work-with-files/) · Concepts : [Bases du Prompt](/prompts/basics/)
+Suite : [Travailler avec les fichiers](/fr/guide/learning-paths/beginner/02-work-with-files/) · Concepts : [Bases du Prompt](/fr/prompts/basics/)
 
 ---
 

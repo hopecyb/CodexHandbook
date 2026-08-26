@@ -4,14 +4,14 @@ description: Short definitions for task, context, sandbox, Skill, and other comm
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 401719c
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
   order: 6
 ---
 
-For a fuller glossary, see the [Glossary](/guide/reference/glossary/). Here are the first batch:
+For a fuller glossary, see the [Glossary](/en/guide/reference/glossary/). Here are the first batch:
 
 | Term | One-line definition |
 |---|---|

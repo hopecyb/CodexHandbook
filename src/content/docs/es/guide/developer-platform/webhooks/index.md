@@ -3,9 +3,10 @@ title: Webhooks
 description: 'Página de integración disparada por eventos: el Webhook recibe notificaciones; no sustituye el diseño del flujo de trabajo.'
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b718fb3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La palabra `Webhook` suena abstracta.  
@@ -15,7 +16,7 @@ En integraciones de Codex, resuelve «llegó un evento externo → cómo dispara
 
 ## Entrada de este grupo
 
-- [Resumen de Webhooks](/guide/developer-platform/webhooks/overview/)
+- [Resumen de Webhooks](/es/guide/developer-platform/webhooks/overview/)
 
 ## Contenido del grupo
 

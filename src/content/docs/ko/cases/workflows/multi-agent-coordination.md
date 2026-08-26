@@ -3,9 +3,10 @@ title: 여러 Agent 협업
 description: 병렬 탐색, 분업 실행, 결과 병합—언제 쪼개고, 어떻게 인수할지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 여러 Agent는 병렬 가능하고 결합도가 낮은 하위 문제에 적합하며, 조율 없이 같은 파일을 동시에 고치는 데는 적합하지 않습니다.
@@ -18,7 +19,7 @@ translated_at: 2026-07-28
 | 하나는 테스트, 하나는 문서 작성 | 공유 가변 상태에 잠금 없음 |
 | 여러 구현 방안 탐색 | 강한 순서 의존이 아직 정리되지 않음 |
 
-제품 기능은 [병렬 Agent](/guide/desktop-app/parallel-agents/), [Subagent](/guide/agent-work/subagents/)를 참고하세요.
+제품 기능은 [병렬 Agent](/ko/guide/desktop-app/parallel-agents/), [Subagent](/ko/guide/agent-work/subagents/)를 참고하세요.
 
 ## 협업 패턴
 
@@ -36,11 +37,11 @@ Agent 2: 방안 B의 장단점과 작업량
 탐색 Agent → 계획 출력 → 실행 Agent(새 스레드, 계획 요약 첨부)
 ```
 
-[인수인계와 복구](/guide/agent-work/handoff-and-resume/)로 구조화 요약을 전달하고, 전체 채팅을 붙여 넣지 마세요.
+[인수인계와 복구](/ko/guide/agent-work/handoff-and-resume/)로 구조화 요약을 전달하고, 전체 채팅을 붙여 넣지 마세요.
 
 ### 패턴 C: 작업 트리 격리
 
-서로 다른 Agent가 다른 [git worktree](/guide/desktop-app/worktrees/)에서 다른 브랜치를 수정하고, 마지막에 사람이 병합합니다.
+서로 다른 Agent가 다른 [git worktree](/ko/guide/desktop-app/worktrees/)에서 다른 브랜치를 수정하고, 마지막에 사람이 병합합니다.
 
 ## 조율 규칙(AGENTS.md에 쓰기를 권장)
 

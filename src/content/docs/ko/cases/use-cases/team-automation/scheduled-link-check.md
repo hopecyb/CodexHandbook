@@ -3,9 +3,10 @@ title: "사례: 예약 문서 링크 검사"
 description: 비대화형 Codex 또는 CI로 사이트 내 죽은 링크를 스캔합니다—팀 자동화 입문 사례입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## 메타 정보
@@ -55,8 +56,8 @@ translated_at: 2026-07-28
 ### 실행
 
 - `prompts/ci/link-check.md` 추가
-- `.github/workflows/docs-link-check.yml` 추가(예시, [스크립트와 파이프라인](/guide/developer-platform/non-interactive/scripts-and-pipelines/) 참고)
-- [codex exec](/guide/developer-platform/non-interactive/codex-exec/) 또는 순수 스크립트 + Codex 2차 분류 사용
+- `.github/workflows/docs-link-check.yml` 추가(예시, [스크립트와 파이프라인](/ko/guide/developer-platform/non-interactive/scripts-and-pipelines/) 참고)
+- [codex exec](/ko/guide/developer-platform/non-interactive/codex-exec/) 또는 순수 스크립트 + Codex 2차 분류 사용
 
 ### 검증
 
@@ -69,19 +70,19 @@ translated_at: 2026-07-28
 | 문제 | 처리 |
 |---|---|
 | 외부 사이트 일시 503 | 하드 죽은 링크와 소프트 실패를 구분, prompt에 정의 |
-| JSON 파싱 실패 | [구조화 출력](/guide/developer-platform/non-interactive/structured-output/) 제약을 강화 |
+| JSON 파싱 실패 | [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/) 제약을 강화 |
 | 할당량 소진 | 주간 예약 + 증분 검사로 변경 |
 
 ## 5. 정착
 
 - 세 번째 통과 후 Skill로 정착: `docs-link-audit`
-- 팀 [명령 규칙](/guide/customization/rules/team-rules/)에서 `npm run build`와 읽기 전용 git 허용
+- 팀 [명령 규칙](/ko/guide/customization/rules/team-rules/)에서 `npm run build`와 읽기 전용 git 허용
 
 ## 6. 관련 장
 
-- [긴 작업 관리](/cases/workflows/long-running-task-management/)
-- [Automations 예약 작업](/skills/automations/scheduled-tasks/)
-- [팀 학습 경로](/guide/learning-paths/team/)
+- [긴 작업 관리](/ko/cases/workflows/long-running-task-management/)
+- [Automations 예약 작업](/ko/skills/automations/scheduled-tasks/)
+- [팀 학습 경로](/ko/guide/learning-paths/team/)
 
 ---
 

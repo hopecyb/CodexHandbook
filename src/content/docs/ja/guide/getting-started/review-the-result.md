@@ -3,9 +3,10 @@ title: 結果を確認する
 description: 変更を読み、成果物を検証し、承認または修正を決める。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: cb5b5d9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---
@@ -21,9 +22,9 @@ Codex をより安定して使うには、**結果を確認する** 能力が必
 1. **差分を見る**：許可したファイルだけを変更したか？
 2. **成果物を開く**：内容は検証基準に合っているか？
 3. **修正を追う**：少し足りないだけなら、精密なフィードバックを続ける
-4. **決める**：承認 / 手動修正 / [取り消し](/guide/getting-started/undo-and-recover/)
+4. **決める**：承認 / 手動修正 / [取り消し](/ja/guide/getting-started/undo-and-recover/)
 
-さらに詳しい方法：[差分のレビュー](/guide/quality/review-diffs/)。
+さらに詳しい方法：[差分のレビュー](/ja/guide/quality/review-diffs/)。
 
 ## よく見落とす点
 

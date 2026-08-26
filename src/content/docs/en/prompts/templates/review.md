@@ -3,9 +3,10 @@ title: Review template
 description: Structured review of diffs and change risk.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Review template
@@ -50,8 +51,8 @@ The review template surfaces risk by dimension—not vague "good or bad."
 
 ## Related
 
-- [Review before merge](/cases/workflows/review-before-merge/)
-- [Review a PR case](/cases/review-a-pr/)
+- [Review before merge](/en/cases/workflows/review-before-merge/)
+- [Review a PR case](/en/cases/review-a-pr/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Cơ bản cấu hình
 description: Vị trí tệp cấu hình Codex, mục thường dùng và nhập môn cài đặt phê duyệt/Sandbox/mô hình.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ Những thứ này không nên chỉ dựa cấu hình cá nhân duy trì.
 - Tái cấu trúc phức tạp: mô hình suy luận mạnh hơn (nếu gói hỗ trợ)
 - Script/CI: khóa mô hình để tái hiện dễ hơn
 
-Nền khái niệm: [Mô hình và suy luận](/guide/foundations/models-and-reasoning/)
+Nền khái niệm: [Mô hình và suy luận](/vi/guide/foundations/models-and-reasoning/)
 
 ### Phê duyệt và Sandbox
 
@@ -84,7 +85,7 @@ Nền khái niệm: [Mô hình và suy luận](/guide/foundations/models-and-rea
 | Dự án cá nhân đáng tin | Có thể giảm ngắt trong điều kiện an toàn |
 | Kho doanh nghiệp | Tuân chiến lược quản trị, không tự nới |
 
-Nền khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/), [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
+Nền khái niệm: [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/), [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 
 ### Nhất quán CLI và App
 
@@ -113,9 +114,9 @@ Hầu hết trường hợp:
 
 ## Quan hệ với chuyên đề CLI
 
-- Cách dùng tương tác: [Chế độ tương tác CLI](/guide/cli/interactive-mode/)
-- Không tương tác và script: [Chế độ không tương tác](/guide/cli/non-interactive-mode/)
-- Mở rộng chi tiết cấu hình: [Cấu hình CLI](/guide/cli/configuration/) · [Tham chiếu mục cấu hình](/guide/reference/configuration-reference/)
+- Cách dùng tương tác: [Chế độ tương tác CLI](/vi/guide/cli/interactive-mode/)
+- Không tương tác và script: [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/)
+- Mở rộng chi tiết cấu hình: [Cấu hình CLI](/vi/guide/cli/configuration/) · [Tham chiếu mục cấu hình](/vi/guide/reference/configuration-reference/)
 
 ## Lỗi thường gặp
 

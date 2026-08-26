@@ -3,9 +3,10 @@ title: "Mémoires et contexte persistant"
 description: Comment Codex retient les préférences et les faits entre sessions — capacités, frontières et normes d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ C'est plus proche de « préférences personnelles à long terme et quelques fai
 | Alias de projet répétés (« backend signifie `services/api` ») | Statut de tâche sprint changeant |
 | Faits non sensibles que vous dites explicitement « veuillez retenir » | Normes d'équipe qui appartiennent à Git |
 
-Les normes au niveau équipe devraient aller dans **`AGENTS.md` ou la configuration projet** pour revue et onboarding des nouveaux. Voir [Portée et priorité](/guide/customization/agents-md/scope-and-precedence/).
+Les normes au niveau équipe devraient aller dans **`AGENTS.md` ou la configuration projet** pour revue et onboarding des nouveaux. Voir [Portée et priorité](/fr/guide/customization/agents-md/scope-and-precedence/).
 
 ## Idées reçues courantes
 

@@ -3,9 +3,10 @@ title: "Automatisation de revue de code"
 description: Câblez Codex dans les flux CI ou PR — prompts, permissions et portes humaines.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ C'est le mieux pour :
 
 Ce n'est pas adapté pour décider « ce PR est définitivement sûr à merger ».
 
-Lié : [Mode non interactif](/guide/cli/non-interactive-mode/) · [Vue d'ensemble SDK](/guide/developer-platform/sdk-overview/)
+Lié : [Mode non interactif](/fr/guide/cli/non-interactive-mode/) · [Vue d'ensemble SDK](/fr/guide/developer-platform/sdk-overview/)
 
 ## Architecture recommandée
 
@@ -76,7 +77,7 @@ Versionner dans `prompts/ci-review.md`.
 | Défense injection | Ne pas coller des descriptions PR non sanitizées dans le prompt système |
 | Secrets | Stocker les tokens dans GitHub Secrets |
 
-[Modèles d'approbation humaine](/cases/workflows/human-approval-patterns/) · [Variables d'environnement](/guide/reference/environment-variables/)
+[Modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/) · [Variables d'environnement](/fr/guide/reference/environment-variables/)
 
 ## Portes de qualité
 
@@ -86,7 +87,7 @@ Versionner dans `prompts/ci-review.md`.
 
 ## Relation avec Cloud
 
-Les dépôts complexes peuvent exécuter les tests complets sur [Cloud](/guide/web-and-cloud/) avant la revue ; exec en CI convient à la **revue de diff légère**.
+Les dépôts complexes peuvent exécuter les tests complets sur [Cloud](/fr/guide/web-and-cloud/) avant la revue ; exec en CI convient à la **revue de diff légère**.
 
 ## Erreurs courantes
 

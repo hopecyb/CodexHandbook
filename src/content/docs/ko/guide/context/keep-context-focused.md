@@ -3,9 +3,10 @@ title: 컨텍스트 초점 유지
 description: 범위 제어, 새 스레드, 인수인계.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 042a77f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -43,7 +44,7 @@ Codex에게 한 작업에 동시에 넣으면:
 - 한 작업에 한 목표
 - 「완료 / 미완료 / 여전히 유효한 제약」을 주기적으로 요약
 - 긴 작업에는 단계 게이트
-- 세션을 넘을 때는 [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
+- 세션을 넘을 때는 [인수인계와 재개](/ko/guide/agent-work/handoff-and-resume/)
 
 ## 이런 신호가 보이면 매듭지으세요
 

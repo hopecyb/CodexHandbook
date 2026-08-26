@@ -1,59 +1,65 @@
 ---
 title: Einstellungen
-description: Häufige Einstellungspunkte der Desktop-App.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Konfiguriere das alltägliche Verhalten, Tastenkombinationen, Benachrichtigungen und Erscheinungsbild der Desktop-App.
 sidebar:
   order: 90
+locale: de
+source_locale: zh-CN
+source_revision: c599d50
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Die Einstellungsseite hat viele Einträge — am Anfang nicht alles anfassen. Relevante Punkte zu Sicherheit, Freigabe und Alltagserlebnis reichen.
+Die Einstellungsseite passt das App-Verhalten an, umfasst aber nicht die gesamte Berechtigungskonfiguration von Codex. Behalte zunächst die Standardwerte bei und ändere sie erst, wenn du ihren Auswirkungsbereich kennst.
 
-Häufige Konfigurationsrichtungen (Namen laut UI):
+Öffne Settings unter macOS mit `Cmd + ,`, unter Windows mit `Ctrl + ,` oder über das App-Menü.
 
-- Standardmodell und Reasoning-Stufe
-- Freigabe- / Sandbox- / Netzwerkoptionen
-- Benachrichtigungen
-- Erscheinungsbild und Editor-Präferenzen
+## Vier Bereiche für Einsteiger
 
-Team-verwaltete Konfiguration kann persönliche Einstellungen überschreiben. Official: [https://developers.openai.com/codex](https://developers.openai.com/codex). Konzept: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
+### General
 
-## Häufige Fragen
+- Soll `Cmd + Enter` erforderlich sein, um einen mehrzeiligen Prompt abzusenden?
+- Darf **Prevent sleep while running** lokale Langzeitaufgaben weiter ausführen, während du den Rechner nicht verwendest?
+- Follow-up behavior legt fest, ob eine neue Nachricht die aktuelle Ausführung sofort steuert oder für die nächste Runde vorgemerkt wird.
 
-### 1. Alle Einstellungen beim ersten Mal durchstellen?
+Die letzte Einstellung verändert die Wirkung einer ergänzenden Nachricht. Steuere die aktuelle Ausführung nur bei einer dringenden Korrektur. Eine unabhängige neue Anforderung gehört in einen eigenen Chat.
 
-Nein. Defaults behalten und erst verstehen, was welche Einstellung bewirkt.
+### Keyboard shortcuts
 
-### 2. Welche Einstellungen zuerst ansehen
+Du kannst Befehle suchen, Tastenbelegungen ändern oder Standardwerte wiederherstellen. Wenn eine online beschriebene Tastenkombination nicht mit deiner Installation übereinstimmt, ist die hier angezeigte Belegung maßgeblich.
 
-Meist reichen diese drei:
+### Notifications
 
-- Freigabe und Berechtigungen
-- Netzwerkbezogen
-- Benachrichtigungen
+Lege fest, wann abgeschlossene Runden gemeldet werden, und steuere Hinweise auf Berechtigungsanfragen und Fragen. Vollständige Empfehlungen findest du unter [Benachrichtigungen und Aktivitätsansicht](/de/guide/desktop-app/notifications/).
 
-Sie beeinflussen am direktesten:
+### Appearance
 
-- was es tun darf
-- ob es Grenzen überschreitet
-- ob du rechtzeitig Hinweise bekommst
+Du kannst ein helles, dunkles oder systemabhängiges Design wählen sowie Akzent-, Hintergrund- und Vordergrundfarbe, UI-Schrift, Code-Schrift und Schriftgröße anpassen. Achte bei langen Code-Reviews zuerst auf Kontrast und Schriftgröße, nicht nur auf die Optik des Themes.
 
-### 3. Warum wirkt meine Änderung anders als in der Doku?
+## Was diese Seite nicht steuert
 
-Mögliche Gründe:
+- Repositoryregeln stehen in `AGENTS.md`.
+- Dauerhafte Konfigurationen von CLI und Agent stehen hauptsächlich in `config.toml`.
+- Ob Dateien, Netzwerk und Befehle verfügbar sind, hängt gemeinsam von Sandbox, Genehmigungen und Organisationsrichtlinien ab.
+- Von der Organisation verwaltete Richtlinien können die persönlich auswählbaren Funktionen einschränken.
 
-- andere Version
-- Team-Richtlinie überschreibt persönliche Einstellungen
-- aktuelle Aufgabenumgebung hat weitere Einschränkungen
+Eine sichtbare Einstellung bedeutet daher nicht, dass die aktuelle Aufgabe die entsprechende Berechtigung besitzt. Lies bei einer Ablehnung zuerst [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/), statt die Berechtigungen direkt auszuweiten.
 
-Beim ersten Blick auf Einstellungen zuerst Sicherheitsgrenzen und Hinweise verstehen — Details später.
+## Änderungen abnehmen
+
+Ändere jeweils nur eine Kategorie und verifiziere sie in einem risikoarmen Chat. Notiere den Ausgangswert und ändere weitere Einstellungen erst, nachdem die Wirkung bestätigt wurde. Weicht das Verhalten von der Erwartung ab, stelle zunächst den Standardwert wieder her und prüfe dann App-Version, Betriebssystemberechtigungen und Organisationsrichtlinien.
+
+## Offizielle Grundlage
+
+- [ChatGPT desktop app settings](https://learn.chatgpt.com/docs/app/settings)
+- [Codex configuration basics](https://learn.chatgpt.com/docs/config)
+- [Permissions](https://learn.chatgpt.com/docs/permissions)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App  
-**Prüfhinweis:** Einstellungsnamen und workspace-verwaltete Überschreibungen der neuen Desktop-App ändern sich weiter; diese Seite listet nur „häufige Richtungen“, impliziert aber eine bestimmte Einstellungsstruktur und sollte nach vollständigerer Official-Dokumentation wieder `verified` werden.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App
+
+**Zuletzt geprüft:** 2026-08-26

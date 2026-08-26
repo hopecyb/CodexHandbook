@@ -3,9 +3,10 @@ title: Entrée et sortie vocales
 description: Quand utiliser la voix avec Codex, limitations et considérations de confidentialité.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Certains clients Codex prennent en charge la **voix** : dicter une Tâche ou entendre un résumé de réponse. Bon quand vos mains sont occupées ou vous voulez dicter des idées rapidement — **pas** pour lire des secrets à voix haute ou remplacer des enregistrements d'acceptation écrits.
@@ -26,7 +27,7 @@ La voix convient à la direction, l'arrière-plan et le suivi rapide ; les déta
 | Suivis courts sur mobile | Lire des clés API ou mots de passe à voix haute |
 | Besoins d'accessibilité | Spécifications devant être consultables et diffables |
 
-Après avoir parlé, demandez à Codex de **répéter sa compréhension** ou produire un plan écrit pour votre confirmation. Voir [demander un plan](/prompts/ask-for-a-plan/).
+Après avoir parlé, demandez à Codex de **répéter sa compréhension** ou produire un plan écrit pour votre confirmation. Voir [demander un plan](/fr/prompts/ask-for-a-plan/).
 
 ## À quoi sert la voix
 
@@ -90,7 +91,7 @@ Puis demander une version écrite à confirmer.
 
 ## Lien avec l'entrée multimodale
 
-- **Entrée image** : maquettes, captures → [Prompting avec images](/prompts/prompting-with-images/)
+- **Entrée image** : maquettes, captures → [Prompting avec images](/fr/prompts/prompting-with-images/)
 - **Entrée vocale** : cette page
 - **Sortie** : surtout code, fichiers, diffs texte ; le résumé vocal ne remplace pas la revue
 

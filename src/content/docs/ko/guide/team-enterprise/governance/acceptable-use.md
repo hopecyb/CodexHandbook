@@ -3,14 +3,15 @@ title: 허용 가능한 사용 정책
 description: 팀 차원에서 Codex가 무엇을 할 수 있고 무엇을 하면 안 되는지 약속하며, 기술·교육과 맞춥니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**허용 가능한 사용 정책(AUP)**는 「이 일을 Codex로 해도 되는가」를 조직 합의로 써서, 개인 판단에만 기대지 않게 합니다. [위협 모델](/guide/team-enterprise/security/threat-model/)과 보완 관계입니다. 위협 모델은 위험을, AUP는 **행동 경계**를 말합니다.
+**허용 가능한 사용 정책(AUP)**는 「이 일을 Codex로 해도 되는가」를 조직 합의로 써서, 개인 판단에만 기대지 않게 합니다. [위협 모델](/ko/guide/team-enterprise/security/threat-model/)과 보완 관계입니다. 위협 모델은 위험을, AUP는 **행동 경계**를 말합니다.
 
 ## 내용
 
@@ -63,7 +64,7 @@ AUP가 주로 답하는 질문은, 기술적으로 가능해도 우리 팀에서
 ## 기본 구조
 
 1. **목적과 범위**
-2. **허용 사용 시나리오**([능력 지도](/guide/start-here/codex-capability-map/)로 연결)
+2. **허용 사용 시나리오**([능력 지도](/ko/guide/start-here/codex-capability-map/)로 연결)
 3. **금지 사용 시나리오**
 4. **데이터와 기밀**
 5. **사람 감독 요구**(머지, 프로덕션 변경)
@@ -97,7 +98,7 @@ AUP가 주로 답하는 질문은, 기술적으로 가능해도 우리 팀에서
 ## 검수 체크리스트
 
 - [ ] 직원 onboarding에 AUP 확인이 포함됨
-- [ ] [팀 규칙](/guide/customization/rules/team-rules/)과 모순 없음
+- [ ] [팀 규칙](/ko/guide/customization/rules/team-rules/)과 모순 없음
 - [ ] 매년 또는 주요 기능 출시 시 재검토
 
 AUP의 가치는 팀이 Codex를 쓰는 경계를 분명히 쓰고, 실제 통제 수단과 맞추는 데 있습니다.

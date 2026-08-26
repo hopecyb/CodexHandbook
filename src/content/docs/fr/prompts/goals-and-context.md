@@ -3,9 +3,10 @@ title: Objectifs et contexte
 description: Indiquer à Codex quoi livrer et pourquoi c'est important.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6ec9636
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup de Prompts semblent détaillés, mais deux choses restent floues :
@@ -75,7 +76,7 @@ Pour le contexte :
 
 L'objectif fixe la livraison ; le contexte explique le pourquoi.
 
-Voir aussi : ancrer le contexte projet dans [Contexte projet](/guide/context/project-context/) pour éviter de répéter un long paragraphe à chaque Prompt.
+Voir aussi : ancrer le contexte projet dans [Contexte projet](/fr/guide/context/project-context/) pour éviter de répéter un long paragraphe à chaque Prompt.
 
 ---
 

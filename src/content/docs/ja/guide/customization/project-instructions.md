@@ -3,9 +3,10 @@ title: プロジェクト説明
 description: AGENTS.md 以外のプロジェクトレベルコンテキスト——README、docs、会話参照の分担。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Codex はツールでこれらを読みます。重要なのは**真実を一つ
 - **プロジェクト説明**：数ヶ月単位で比較的安定
 - **会話コンテキスト**：今回の目標、制約、途中結論
 
-長いタスクで同じルールを繰り返し言うなら、十個のスレッドにコピペするのではなく `AGENTS.md` や `docs/` に**書き戻す**。[コンテキストを絞る](/guide/context/keep-context-focused/) を参照。
+長いタスクで同じルールを繰り返し言うなら、十個のスレッドにコピペするのではなく `AGENTS.md` や `docs/` に**書き戻す**。[コンテキストを絞る](/ja/guide/context/keep-context-focused/) を参照。
 
 ## よくあるミス
 

@@ -3,9 +3,10 @@ title: Computer Use
 description: Năng lực nâng cao thao tác GUI qua màn hình và thiết bị nhập — tình huống, rủi ro và phê duyệt.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -79,7 +80,7 @@ Computer Use gần như tương đương **giao bàn phím chuột cho Agent**:
 - Có thể bấm nhầm hộp thoại xác nhận
 - Màn hình có thể chứa thông tin nhạy cảm trong thông báo
 
-Bắt buộc đọc: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/), [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
+Bắt buộc đọc: [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/), [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 
 ## Phán đoán có nên dùng không
 
@@ -118,7 +119,7 @@ Cần thao tác ứng dụng ngoài IDE? → Computer Use (thận trọng hơn)
 Chỉ cần sửa mã chạy kiểm thử?   → Terminal + công cụ tệp
 ```
 
-Xem [Chọn công cụ](/guide/tools/tool-selection/)
+Xem [Chọn công cụ](/vi/guide/tools/tool-selection/)
 
 ## Cách viết áp dụng trực tiếp
 

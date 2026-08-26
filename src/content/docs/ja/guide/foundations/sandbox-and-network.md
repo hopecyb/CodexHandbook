@@ -3,9 +3,10 @@ title: サンドボックスとネットワーク
 description: 実行の隔離、ネットワークアクセス、リスク境界を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b3d6d57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -64,7 +65,7 @@ sidebar:
 
 どちらも単なる技術設定ではなく、リスクをコントロールする手段です。
 
-製品側の設定入口はデスクトップ App の [設定](/guide/desktop-app/settings/)。公式の詳細は [https://developers.openai.com/codex](https://developers.openai.com/codex) を参照してください。
+製品側の設定入口はデスクトップ App の [設定](/ja/guide/desktop-app/settings/)。公式の詳細は [https://developers.openai.com/codex](https://developers.openai.com/codex) を参照してください。
 
 初めて使うときは、リスクをまだ読み切れていないうちに扉を全部開けるより、先に制限を多めにしたほうが安全です。
 

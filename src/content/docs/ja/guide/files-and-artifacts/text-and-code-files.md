@@ -3,9 +3,10 @@ title: テキストとコードファイル
 description: Codex にソースコード、設定、ドキュメント系テキストファイルを正しく読み書きさせる。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ Codex にテキストやコードファイルを直させるときの要点は�
 | ドキュメント `.md` | リンクは相対パス、日英混在の規約 |
 | 生成コード | コミット対象か gitignore 対象かを明示する |
 
-コンテキスト：[ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
+コンテキスト：[ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/)
 
 ## なぜこのタイプが失敗しやすいか
 
@@ -50,7 +51,7 @@ Codex にテキストやコードファイルを直させるときの要点は�
 完了：変更ファイル一覧 + <テストコマンド> の実行
 ```
 
-[良いタスクの構造](/prompts/task-anatomy/) を参照。
+[良いタスクの構造](/ja/prompts/task-anatomy/) を参照。
 
 ## よくある誤解
 
@@ -91,8 +92,8 @@ Codex にテキストやコードファイルを直させるときの要点は�
 
 ## レビューの要点
 
-- [差分のレビュー](/guide/quality/review-diffs/)：ロジック、範囲、削除
-- [テストの実行](/guide/quality/run-tests/)
+- [差分のレビュー](/ja/guide/quality/review-diffs/)：ロジック、範囲、削除
+- [テストの実行](/ja/guide/quality/run-tests/)
 - 意図せず `TODO` プレースホルダーだけ残していないか
 
 ## よくある失敗

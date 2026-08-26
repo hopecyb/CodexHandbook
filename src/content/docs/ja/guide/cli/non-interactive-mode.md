@@ -3,11 +3,12 @@ title: 非対話モード
 description: codex exec とスクリプトパイプライン連携——CI、定期実行、自動化パイプライン向け。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: a1cefbe
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 非対話モードでは、Codex が **TTY 会話なし** でタスクを完了できます。Agent をスクリプトや CI に接続する入口です。
@@ -19,7 +20,7 @@ sidebar:
 
 - 非対話を使うタイミングと `codex` 対話セッションの違い
 - 無人実行時のセキュリティと承認の追加要件
-- [設定](/guide/cli/configuration/) との関係
+- [設定](/ja/guide/cli/configuration/) との関係
 
 ## 向いている場面
 
@@ -38,13 +39,19 @@ sidebar:
 3. 終了コードで成功 / 失敗を示す
 4. ログまたは構造化結果を下流で消費できる形で出力する
 
-**コマンド名と引数は公式 CLI ドキュメントを正とする**（よくあるのは `codex exec` または同等のサブコマンド）。CLI を上げたら `--help` で再確認してください。
+現在の非対話実行の入口は `codex exec` です。CLI を更新した後も、スクリプトで使う引数を `codex exec --help` で再確認してください。
 
 ## 最小限の例（示意）
 
 ```bash
 # リポジトリルートで読み取り専用レビュー（示意。引数は公式を正とする）
-codex exec --cwd . "main との diff からセキュリティリスクを列挙し、ファイルは変更しない"
+codex exec --cd . "main との diff からセキュリティリスクを列挙し、ファイルは変更しない"
+```
+
+`codex exec` はデフォルトで読み取り専用サンドボックスを使います。実行中の進捗は `stderr`、Agent の最終回答は `stdout` に書き込まれるため、最終結果を下流へ安全にリダイレクトできます。
+
+```bash
+codex exec --cd . "直近 10 件のコミットからリリースノートを作成する" > release-notes.md
 ```
 
 実践のコツ：
@@ -64,7 +71,7 @@ codex exec --cwd . "main との diff からセキュリティリスクを列挙�
 | 固定プロンプト | PR 説明から未消毒テキストを直接連結しない（注入リスク） |
 | 監査 | ログと diff artifact を保持 |
 
-[人間承認パターン](/cases/workflows/human-approval-patterns/) とロードマップ `08-developer-platform/non-interactive/` を参照。
+[人間承認パターン](/ja/cases/workflows/human-approval-patterns/) とロードマップ `08-developer-platform/non-interactive/` を参照。
 
 ## 対話モードとの比較
 
@@ -75,7 +82,21 @@ codex exec --cwd . "main との diff からセキュリティリスクを列挙�
 | 学習向き | はい | いいえ |
 | CI 向き | いいえ | はい |
 
-対話の使い方：[CLI 対話モード](/guide/cli/interactive-mode/)
+対話の使い方：[CLI 対話モード](/ja/guide/cli/interactive-mode/)
+
+## 対話タスクを非対話タスクに変換する
+
+チャット履歴全体をそのままスクリプトへ渡さないでください。より安定した方法は、小さな仕様に圧縮することです。
+
+| 要素 | 書き方 |
+|---|---|
+| 目標 | 今回だけ行うこと |
+| 入力 | 読み取るファイル、diff、ログ、stdin |
+| 禁止事項 | ファイル変更、ネットワーク、push、CI の中断などを禁止 |
+| 出力 | テキスト要約、JSON、レポートファイル、終了コード |
+| 検収 | 必須の成功コマンドと、含まれてはならないキーワード |
+
+非対話プロンプトは、境界、入力、失敗条件が明確な作業チケットのように書きます。プロダクト判断、設計上の選択、権限確認がまだ必要なタスクは、まず対話モードに残してください。
 
 ## よくある誤解
 
@@ -112,7 +133,10 @@ codex exec --cwd . "main との diff からセキュリティリスクを列挙�
 - OpenAI Codex CLI ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** CLI  
-**検証根拠：** 本ページは依然として `codex exec` と関連する非対話連携を中心にしているが、現時点ではコマンド入口、引数、挙動を逐条確認できる十分な公式根拠がない。最新 CLI 非対話ドキュメントを補うまでは `outdated` が適切。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** CLI
+
+**検証根拠：** 現在の公式 Non-interactive mode と照合し、`codex exec`、`--cd`、デフォルトの読み取り専用サンドボックス、進捗を `stderr`、最終回答を `stdout` に出力するパイプ動作を確認済みです。
+
+**最終検証：** 2026-08-26

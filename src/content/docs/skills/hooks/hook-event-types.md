@@ -1,140 +1,84 @@
 ---
 title: Hook 事件类型
-description: Codex 执行链路中的 Hook 触发点，用来在合适阶段做校验、日志与阻断。
+description: 按会话、任务轮次、工具调用、压缩和子 Agent 生命周期选择事件。
 ---
 
-这里讲的是，同样一条检查应该在什么时候触发。
+选择 Hook 的第一问不是“脚本怎么写”，而是“副作用发生前还是发生后处理”。事件放错位置，再完善的脚本也可能只会事后报告。
 
-**Hook 事件**是系统在固定节点调用你配置逻辑的时机。理解事件类型，才能在不拖慢每次工具调用的前提下，把 [Hooks 概述](/skills/hooks/hooks-overview/) 里的“审计、校验”落到配置上。
+![Codex Hook 生命周期与关键事件](/diagrams/hook-lifecycle-events-zh-cn.svg)
 
-## 内容
+## 当前事件清单
 
-- 常见事件阶段与适用场景
-- 事件与 [命令规则](/guide/customization/rules/command-rules/) 的分工
-- 配置时的性能与失败策略
+| 事件 | 发生时机 | matcher 过滤什么 | 常见用途 |
+|---|---|---|---|
+| `SessionStart` | 会话或恢复开始 | `startup`、`resume`、`clear`、`compact` | 环境说明、恢复上下文 |
+| `SubagentStart` | 子 Agent 启动 | 子 Agent 类型 | 给子 Agent 补充约束 |
+| `UserPromptSubmit` | 用户提示提交 | 不支持，配置会被忽略 | 密钥扫描、补开发上下文 |
+| `PreToolUse` | 支持的本地工具执行前 | 工具名 | 拒绝或改写调用 |
+| `PermissionRequest` | Codex 即将请求审批 | 工具名 | 允许、拒绝或交回正常审批 |
+| `PostToolUse` | 支持的本地工具返回后 | 工具名 | 记录结果、给后续推理反馈 |
+| `PreCompact` | 上下文压缩前 | `manual` / `auto` | 保存压缩前状态 |
+| `PostCompact` | 上下文压缩后 | `manual` / `auto` | 补回必要上下文 |
+| `SubagentStop` | 子 Agent 准备结束 | 子 Agent 类型 | 要求再执行一轮检查 |
+| `Stop` | 主任务轮次准备结束 | 不支持，配置会被忽略 | 要求主线程继续验证 |
+| `SessionEnd` | 主线程结束 | 当前为 `other` | 快速收尾日志；对子 Agent 不运行 |
 
-## 一个判断原则
+## 工具 matcher
 
-不要一开始就问“这个 Hook 能不能实现”。  
-先问自己：你到底是想在事情发生前拦住它，还是在事情发生后记录它？
-
-很多 Hook 放错位置，问题就出在触发时机选错了。
-
-:::note
-**事件名称与字段以 [官方 Hooks 文档](https://developers.openai.com/codex) 为准。** 下表为概念分组，升级 CLI 后请核对 `--help` 与 release notes。
-:::
-
-## 事件分组（概念）
-
-| 阶段 | 典型事件（概念名） | 适合做什么 |
-|---|---|---|
-| 会话 | `session.start` / `session.end` | 环境检查、汇总变更、写审计尾注 |
-| 工具前 | `tool.call.before` / `pre_tool_use` | 阻断危险命令、扫描密钥模式 |
-| 工具后 | `tool.call.after` / `post_tool_use` | 结构化日志、指标、脱敏存档 |
-| 提示 | `user_prompt.submit` | 注入策略扫描、长度限制 |
-| 产物 | `artifact.create` | 许可证头、文件类型白名单 |
-| 集成 | `pr.before_create`（若支持） | Issue 编号、changelog 格式 |
-
-同一逻辑不要挂多个事件重复执行，选**最早能阻断**的点。
-
-## 怎么理解这些阶段
-
-- **会话类**：这次任务开始或结束的时候
-- **工具前**：命令或工具还没真的执行
-- **工具后**：动作已经发生，可以记录、总结、再检查
-- **提示类**：用户内容刚提交时
-- **产物类**：文件或结果刚生成时
-
-先从这个层次理解，不用急着硬记事件名。
-
-## 与规则引擎的关系
+常见值包括：
 
 ```text
-用户 prompt →（可选）prompt Hook
-    → 模型提议工具调用
-    → 规则引擎 allow/deny
-    →（可选）pre_tool Hook → 执行 → post_tool Hook
+Bash
+^apply_patch$
+Edit|Write
+mcp__filesystem__read_file
+mcp__filesystem__.*
 ```
 
-- **规则**：声明式、快、适合已知命令模式
-- **Hook**：命令式脚本、适合复杂策略与外部系统
+Shell 与统一执行命令匹配为 `Bash`。`apply_patch` 也可以用别名 `Edit` 或 `Write` 匹配。MCP 与其他本地函数工具按实际工具名匹配。
 
-## 常见误区
+## 三个最容易混淆的事件
 
-### 1. 只要能检查出来，挂前挂后都差不多
+### PreToolUse
 
-差很多。
+输入包含 `tool_name`、`tool_use_id` 和工具特定的 `tool_input`。它可以：
 
-如果你要“阻止副作用发生”，就应该尽量挂在更早的位置。  
-如果动作已经做完了，再去 `post_tool` 才发现问题，往往已经晚了。
+- `permissionDecision: "deny"`：阻止支持的工具调用
+- `permissionDecision: "allow"` + `updatedInput`：改写支持的工具输入
+- `additionalContext`：不阻断，只给模型补充上下文
 
-### 2. 事件越多越细，配置就越专业
+普通 stdout 文本会被忽略；应输出官方定义的 JSON。退出码 `2` 加 stderr 也可以阻断并给出原因。
 
-配置时更应该追求“少而准”，先在一个最合适的点把逻辑挂对。
+### PermissionRequest
 
-### 3. Hook 事件类型只是技术细节
+只有 Codex 原本就准备请求 shell 升级、受管网络等审批时才触发。它可以 allow、deny，或不做决定让正常审批 UI 继续。不要用它代替 `PreToolUse` 的一般工具策略。
 
-它直接影响：
+### PostToolUse
 
-- 风险能不能及时拦住
-- 日志是不是有用
-- 整体交互会不会变慢
+工具已经运行，Bash 即使非零退出也会触发。这里返回 block 或退出 `2` 只能替换反馈并让模型处理，不能撤销命令、文件写入或外部动作。
 
-## 失败策略
+## Stop 不是“拒绝结束”按钮
 
-| 策略 | 何时用 |
-|---|---|
-| `block` | 安全违规、合规硬性要求 |
-| `warn` | 风格、建议性检查 |
-| `log` | 只观测，不阻断 |
+`Stop` 的 `decision: "block"` 表示根据 reason 自动创建一个继续提示，让 Codex 再做一轮；它不会把已经完成的工具副作用回滚。脚本必须检查 `stop_hook_active`，避免无限继续。
 
-Hook 超时或崩溃应**默认安全**：生产环境倾向 block 或 fail closed，并记录错误供排查。
+## 事件选择练习
 
-## 不确定挂哪时，可以这样想
+| 需求 | 选择 | 原因 |
+|---|---|---|
+| 阻止把疑似 token 写入文件 | `PreToolUse` 匹配 `apply_patch|Edit|Write` | 必须在写入前处理 |
+| 统计 shell 失败率 | `PostToolUse` 匹配 `Bash` | 需要退出结果 |
+| 上下文自动压缩前保存关键决定 | `PreCompact` | 发生在压缩前 |
+| 测试没跑完不让任务收口 | `Stop` | 需要继续当前任务轮次 |
+| 主线程结束时发 30 秒网络请求 | 不适合 `SessionEnd` | 最多 3 秒，且不应把长任务塞进收尾事件 |
 
-如果你不确定该挂哪个事件，可以按这个简化规则想：
+## 官方来源
 
-- 想阻止危险动作：优先前置事件
-- 想记录发生了什么：优先后置事件
-- 想做开场检查或收尾汇总：看会话事件
+- [OpenAI：Hooks 事件与 matcher](https://learn.chatgpt.com/docs/hooks)
 
-这套判断对大多数配置场景都够用了。
-
-## 最小配置思路
-
-1. 选一个事件（建议从 `post_tool` 只读日志开始）
-2. 脚本 stdin 接收 JSON 载荷（工具名、参数摘要、工作目录）
-3. 退出码 `0` 通过，非 `0` 按策略 block/warn
-4. 单测：固定 JSON fixture 跑脚本
-
-先想清楚是要拦住什么，还是记录什么，再决定 Hook 应该挂在哪个事件上。
-
-完整示例见 [Hook 配置示例](/skills/hooks/hooks-examples/)。
-
-## 常见错误
-
-- 在 `post_tool` 做本应在 `pre_tool` 的阻断（副作用已发生）
-- Hook 内调 LLM 或慢网络，拖垮交互
-- 事件载荷含密钥又写入明文日志
-- 未版本化 Hook，队友环境不一致
-
-## 安全边界
-
-- Hook 脚本权限应 ≤ 被监控的 Agent 权限
-- 见 [团队 Hook 用例](/skills/hooks/hooks-overview/#推荐团队用例) 与 [威胁模型](/guide/team-enterprise/security/threat-model/)
-
-## 验收清单
-
-- [ ] 能说出本团队最常用的 1 个事件及原因
-- [ ] 失败时有可读错误信息
-- [ ] 脚本有单元测试或 fixture
-- [ ] 配置纳入代码审查
-
-## 参考来源
-- OpenAI Codex Hooks 参考
 ---
 
-**状态：** outdated  
-**适用产品：** CLI / App（视版本）  
-**复核说明：** 本页核心是 Hook 事件分组、载荷与失败策略；这些都属于高波动实现细节，现有官方公开资料不足以在 2026-07-26 将其核为稳定。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** 使用本地 Codex host 的环境
+
+**最近核验：** 2026-08-25

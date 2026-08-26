@@ -3,50 +3,61 @@ title: Cài đặt tiện ích IDE
 description: Cài tiện ích trong trình soạn thảo được hỗ trợ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: fb7ff84
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Nếu bạn chủ yếu làm việc trong trình soạn thảo, trang này ngoài vị trí cài đặt còn phủ các câu hỏi:
+IDE entry points fall into two groups; their installation paths are not interchangeable:
 
-- Tôi có phù hợp bắt đầu từ tiện ích IDE không
-- Cài xong nên thấy gì
-- Vì sao đôi khi plugin đã cài nhưng trải nghiệm vẫn chưa như «trạng thái dùng được»
+| Editor | Current entry | How to open |
+|---|---|---|
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Codex extension | Select the Codex icon or run `Codex: Open Codex Sidebar` |
+| Xcode | Xcode coding assistant integration | Start a chat and select the Codex Agent |
+| JetBrains IDEs | JetBrains AI Chat integration | Open AI Chat and select Codex |
 
-Tiện ích IDE cài xong không chỉ là tiện ích xuất hiện trong danh sách, mà là bạn gọi được nó bình thường trong đúng trình soạn thảo và không gian làm việc.
+See [Supported editors](/vi/guide/ide/supported-editors/) for the complete matrix.
 
-## Sau khi cài, ít nhất xác nhận
+## Install and verify in VS Code-family editors
 
-1. Tiện ích được cài trong trình soạn thảo bạn đang dùng
-2. Đăng nhập hoặc xác thực đã hoàn tất
-3. Không gian làm việc đang mở là dự án bạn thật sự muốn thao tác
-4. Lối vào tiện ích, lệnh hoặc thanh bên hiện bình thường
+1. Install the Codex extension from the official Marketplace entry.
+2. Open a practice project rather than an empty window.
+3. Select the Codex icon. If it is not visible, run `Codex: Open Codex Sidebar` from the Command Palette.
+4. Authenticate with a ChatGPT account or API key.
+5. Start a chat, attach the current file, and ask a read-only question.
 
-## Hiểu nhầm thường gặp
+Minimal acceptance prompt:
 
-### 1. Trong Marketplace bấm cài là chắc dùng được?
+```text
+Read only the file that is currently open. Do not edit code.
+Explain its responsibility, inputs, and outputs in three points, citing a symbol
+name for each point.
+```
 
-Nhiều khi còn phải thêm vài bước:
+A response that matches the current file and symbols indicates that editor context is arriving correctly. Create a Git checkpoint before a write task.
 
-- Đăng nhập
-- Tải lại cửa sổ
-- Mở đúng không gian làm việc
+## Common failures
 
-### 2. Tiện ích IDE và CLI có phải cùng một thứ?
+- **Sidebar missing:** run `Codex: Open Codex Sidebar` from the Command Palette.
+- **Wrong context:** confirm that the project window, current file, and selection belong to the expected repository.
+- **Repeated sign-in:** CLI and IDE share cached authentication; check the active account and sign in again.
+- **Windows toolchain in WSL:** enable `chatgpt.runCodexInWindowsSubsystemForLinux` only when needed; changing it reloads VS Code.
+- **Different third-party behavior:** verify compatibility with the VS Code extension. Do not copy the Xcode or JetBrains entry point into another editor.
 
-Năng lực nền có thể thông nhau, nhưng lối vào sử dụng và nguồn ngữ cảnh khác nhau.  
-IDE phụ thuộc nhiều hơn vào «bạn đang mở tệp gì, dự án gì».
+For the longer beginner path, see [Install an IDE integration](/vi/guide/getting-started/install-ide-extension/).
 
-Để biết tiện ích IDE có thật sự sẵn sàng, chủ yếu xem bạn có gọi được nó bình thường trong trình soạn thảo và không gian làm việc hiện tại không.
+## Official sources
 
-Các bước chi tiết: [Cài đặt tiện ích IDE](/guide/getting-started/install-ide-extension/). Giải thích chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** IDE  
-**Ghi chú tái kiểm:** Lối vào cài đặt tiện ích IDE, cách đăng nhập, bước tải lại và hình thái thanh bên/bảng lệnh đều là thông tin sản phẩm biến động cao; khi chưa đối chiếu từng mục với bước cài chính thức hiện tại, trang này nên gắn `outdated` trước.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** IDE
+
+**Kiểm chứng gần nhất:** 2026-08-26

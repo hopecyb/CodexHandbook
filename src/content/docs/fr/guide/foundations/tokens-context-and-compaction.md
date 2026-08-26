@@ -3,9 +3,10 @@ title: Tokens, Contexte et compaction
 description: Fenêtres de Contexte, utilisation et compaction.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b33848c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -18,7 +19,7 @@ Quand la conversation ou les fichiers deviennent trop volumineux, le système pe
 
 - Mettez les contraintes clés dans le message actuel ou les notes de projet — pas seulement au fond de l'ancienne conversation
 - Démarrez un nouveau Fil quand le sujet change
-- Théorie et tactiques : [Compaction du Contexte](/guide/context/compaction/) et [Garder le Contexte ciblé](/guide/context/keep-context-focused/)
+- Théorie et tactiques : [Compaction du Contexte](/fr/guide/context/compaction/) et [Garder le Contexte ciblé](/fr/guide/context/keep-context-focused/)
 
 Cette page est conceptuelle ; `05` explique comment les gérer.
 

@@ -3,9 +3,10 @@ title: Escolher o mecanismo adequado
 description: Prompt temporário, AGENTS.md, memória, Skill, MCP — em que camada colocar cada um, com um quadro de decisão.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ Essas regras de longo prazo devem descer de camada.
 
 ### 2. É regra de colaboração do projeto ou hábito pessoal?
 
-Se for uma **regra que todos os colaboradores devem conhecer**, coloque em [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+Se for uma **regra que todos os colaboradores devem conhecer**, coloque em [`AGENTS.md`](/pt/guide/customization/agents-md/what-is-agents-md/).
 
 Por exemplo:
 
@@ -59,7 +60,7 @@ Por exemplo:
 - Regras de mensagem de commit ou de aceitação de PR
 - Normas especiais de subdiretórios num monorepo
 
-Se for só **a sua preferência** — «explicar em português», «conclusão primeiro, detalhes depois» — encaixa melhor em [memória](/guide/customization/memories-and-persistent-context/) ou configuração pessoal.
+Se for só **a sua preferência** — «explicar em português», «conclusão primeiro, detalhes depois» — encaixa melhor em [memória](/pt/guide/customization/memories-and-persistent-context/) ou configuração pessoal.
 
 Regra prática:
 
@@ -82,7 +83,7 @@ Ao decidir, fixe estes dois pontos:
 - A **regra** responde «o que se pode e o que não se pode»
 - Os **passos** respondem «como se costuma fazer este tipo de coisa»
 
-Passos reutilizáveis encaixam normalmente melhor como [Skill](/skills/overview/).
+Passos reutilizáveis encaixam normalmente melhor como [Skill](/pt/skills/overview/).
 
 ## Combinações comuns, não escolha exclusiva
 
@@ -196,11 +197,11 @@ Assim estabiliza primeiro o **consenso de colaboração** e depois amplia capaci
 
 ## Leitura complementar
 
-- [O que é AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- [Memórias e Contexto persistente](/guide/customization/memories-and-persistent-context/)
-- [Visão geral de Skills](/skills/overview/)
-- [Visão geral de MCP](/skills/mcp/mcp-overview/)
-- [Como escolher o método de extensão](/skills/choosing-an-extension-method/)
+- [O que é AGENTS.md](/pt/guide/customization/agents-md/what-is-agents-md/)
+- [Memórias e Contexto persistente](/pt/guide/customization/memories-and-persistent-context/)
+- [Visão geral de Skills](/pt/skills/overview/)
+- [Visão geral de MCP](/pt/skills/mcp/mcp-overview/)
+- [Como escolher o método de extensão](/pt/skills/choosing-an-extension-method/)
 
 ## Referências
 - Documentação oficial OpenAI Codex (conforme a versão atual)

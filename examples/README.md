@@ -1,6 +1,6 @@
 # 实例库（examples）
 
-本目录存放可复制的**提示词**、未来的 Skill/配置/完整案例材料。解释性正文在 [`src/content/docs/`](../src/content/docs/)。
+本目录存放可复制的提示词、Skill/配置素材和可运行完整案例。解释性正文在 [`src/content/docs/`](../src/content/docs/)。
 
 规范详见 [`docs/planning/examples-system.md`](../docs/planning/examples-system.md)。
 
@@ -9,10 +9,15 @@
 ```text
 examples/
 ├── README.md
-└── prompts/
-    ├── development/
-    ├── research/
-    └── meta-workflows/
+├── prompts/
+│   ├── development/
+│   ├── research/
+│   └── meta-workflows/
+├── hooks/
+│   └── secret-guard/
+└── complete-workflows/
+    └── developer/
+        └── verified-bug-fix/
 ```
 
 ## 提示词索引（首批）
@@ -24,10 +29,22 @@ examples/
 | `prompt.source-backed-summary` | [research/source-backed-summary.md](prompts/research/source-backed-summary.md) | 带来源的研究摘要 |
 | `prompt.epxv-starter` | [meta-workflows/epxv-starter.md](prompts/meta-workflows/epxv-starter.md) | EPXV 四阶段起步 |
 
+## 完整案例
+
+| ID | 目录 | 可验证结果 |
+|---|---|---|
+| `case.verified-bug-fix` | [developer/verified-bug-fix](complete-workflows/developer/verified-bug-fix/) | 起始代码 1 个测试失败，参考修复 3 个测试通过 |
+
+## 扩展能力示例
+
+| ID | 目录 | 可验证结果 |
+|---|---|---|
+| `hook.pre-tool-secret-guard` | [hooks/secret-guard](hooks/secret-guard/) | 标准库 Python 守护脚本的 3 个单元测试通过 |
+
 ## 贡献
 
 见手册 [添加提示词示例](/guide/contributing/add-a-prompt-example/)。
 
 ---
 
-**最近更新：** 2026-07-25
+**最近更新：** 2026-08-25

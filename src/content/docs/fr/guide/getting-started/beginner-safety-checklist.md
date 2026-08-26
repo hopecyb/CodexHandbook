@@ -3,9 +3,10 @@ title: Liste de contrôle sécurité pour débutants
 description: Vérifications de sécurité à passer en revue avant votre première utilisation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -17,9 +18,9 @@ Vérifiez avant de commencer :
 - [ ] Je comprends que les opérations à haut risque nécessitent mon Approbation
 - [ ] Je n'approuverai pas des commands ou requêtes réseau que je ne comprends pas
 - [ ] Je prévois d'examiner les Diff avant d'accepter les résultats
-- [ ] Je sais comment [annuler](/guide/getting-started/undo-and-recover/)
+- [ ] Je sais comment [annuler](/fr/guide/getting-started/undo-and-recover/)
 
-Concepts : [Permissions et Approbations](/guide/foundations/permissions-and-approvals/) · [Bac à sable et réseau](/guide/foundations/sandbox-and-network/).
+Concepts : [Permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/) · [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/).
 
 ---
 

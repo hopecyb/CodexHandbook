@@ -3,12 +3,13 @@ title: 失敗からの回復
 description: タスクが逸脱、テストが赤、コンテキスト枯渇——安全にロールバックして続ける方法。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**失敗からの回復**は、タスクが軌道を外れたり途中で止まったあと、状況を安定させる方法を扱います。本章は **検知 → 損失停止 → 回復 → 事後分析** の反復手順を示し、[取り消しと回復](/guide/getting-started/undo-and-recover/) および [長時間タスク管理](/cases/workflows/long-running-task-management/) と組み合わせます。
+**失敗からの回復**は、タスクが軌道を外れたり途中で止まったあと、状況を安定させる方法を扱います。本章は **検知 → 損失停止 → 回復 → 事後分析** の反復手順を示し、[取り消しと回復](/ja/guide/getting-started/undo-and-recover/) および [長時間タスク管理](/ja/cases/workflows/long-running-task-management/) と組み合わせます。
 
 ## 本ページの内容
 
@@ -54,7 +55,7 @@ translated_at: 2026-07-28
     → 教訓を記録
 ```
 
-マルチ Agent： [マルチ Agent 協調](/cases/workflows/multi-agent-coordination/)——失敗時はどのサブタスクがロールバック責任か明確に。
+マルチ Agent： [マルチ Agent 協調](/ja/cases/workflows/multi-agent-coordination/)——失敗時はどのサブタスクがロールバック責任か明確に。
 
 ## よくあるミス
 
@@ -65,7 +66,7 @@ translated_at: 2026-07-28
 
 ## 安全境界
 
-- 回復自体も [コマンドルール](/guide/customization/rules/command-rules/) で制約
+- 回復自体も [コマンドルール](/ja/guide/customization/rules/command-rules/) で制約
 - 本番インシデント：先にロールバック、原因分析は後——Agent に本番データを直接直させない
 
 ## 受け入れチェックリスト
@@ -77,9 +78,9 @@ translated_at: 2026-07-28
 
 ## 関連章
 
-- [修正前に診断する](/cases/workflows/diagnose-before-fixing/)
-- [引き継ぎと再開](/guide/agent-work/handoff-and-resume/)
-- [エラー参照](/guide/reference/error-reference/)
+- [修正前に診断する](/ja/cases/workflows/diagnose-before-fixing/)
+- [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/)
+- [エラー参照](/ja/guide/reference/error-reference/)
 
 ---
 

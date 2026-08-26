@@ -3,9 +3,10 @@ title: "Exemple : Skill de recherche"
 description: Exemple de Skill de recherche avec citations et marqueurs « à confirmer ».
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemple : Skill de recherche
@@ -28,8 +29,8 @@ description: Recherche technique avec citations URL/chemin de fichier et tableau
 
 ## Liens
 
-- [Cas : recherche avec sources](/cases/research-with-sources/)
-- [Modèle de recherche](/prompts/templates/research/)
+- [Cas : recherche avec sources](/fr/cases/research-with-sources/)
+- [Modèle de recherche](/fr/prompts/templates/research/)
 
 ---
 

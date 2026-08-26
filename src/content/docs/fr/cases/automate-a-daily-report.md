@@ -3,9 +3,10 @@ title: Automatiser un rapport quotidien
 description: Transformer un travail de synthèse répétitif en script ou Skill réutilisable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Automatiser un rapport quotidien
@@ -35,8 +36,8 @@ Contraintes : git en lecture seule ; ne pas push ; fournir scripts/generate-dail
 
 ## 4. Capitalisation
 
-- [Exemple de Skill d'automatisation](/skills/examples/automation-skill/)
-- [Tâches planifiées](/skills/automations/scheduled-tasks/)
+- [Exemple de Skill d'automatisation](/fr/skills/examples/automation-skill/)
+- [Tâches planifiées](/fr/skills/automations/scheduled-tasks/)
 
 ---
 

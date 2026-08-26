@@ -3,9 +3,10 @@ title: Définir les contraintes
 description: Limiter le périmètre modifiable, le style et les interdictions.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 617fa41
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup d'échecs ne viennent pas d'un objectif totalement absent, mais de **limites floues**.
@@ -92,7 +93,7 @@ Contraintes :
 
 L'objectif dit quoi faire ; les contraintes disent où s'arrêter.
 
-Écrivez les limites de permission avec les contraintes pour limiter les dépassements « en passant ». Voir [Définir le terminé](/prompts/define-done/) et [Permissions et bac à sable](/guide/permissions-and-sandbox/).
+Écrivez les limites de permission avec les contraintes pour limiter les dépassements « en passant ». Voir [Définir le terminé](/fr/prompts/define-done/) et [Permissions et bac à sable](/fr/guide/permissions-and-sandbox/).
 
 ---
 

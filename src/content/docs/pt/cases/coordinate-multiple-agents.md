@@ -3,9 +3,10 @@ title: Coordenar vários Agents
 description: Caso de colaboração com exploração em paralelo, divisão de trabalho e fusão de resultados.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Coordenar vários Agents
@@ -36,7 +37,7 @@ Agent 2: prós, contras e esforço da opção B
 
 ### Isolamento com árvores de trabalho
 
-Agents diferentes alteram ramos diferentes em [git worktrees](/guide/desktop-app/worktrees/) distintos; a fusão final é humana.
+Agents diferentes alteram ramos diferentes em [git worktrees](/pt/guide/desktop-app/worktrees/) distintos; a fusão final é humana.
 
 ## 3. Regras de coordenação (sugeridas em AGENTS.md)
 
@@ -46,8 +47,8 @@ Agents diferentes alteram ramos diferentes em [git worktrees](/guide/desktop-app
 
 ## 4. Relacionado
 
-- [Colaboração multi-Agent](/cases/workflows/multi-agent-coordination/)
-- [Subagents](/guide/agent-work/subagents/)
+- [Colaboração multi-Agent](/pt/cases/workflows/multi-agent-coordination/)
+- [Subagents](/pt/guide/agent-work/subagents/)
 ---
 
 **Estado:** verified  

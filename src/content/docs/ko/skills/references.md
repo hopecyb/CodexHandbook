@@ -3,9 +3,10 @@ title: references/ 디렉터리
 description: Skill에서 긴 참고 문서를 정리해 점진적 공개를 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c595507
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `references/`는 매번 바로 펼칠 필요 없는 긴 자료를 두기에 적합합니다. 주 절차가 길고 어수선해지는 것을 막습니다.

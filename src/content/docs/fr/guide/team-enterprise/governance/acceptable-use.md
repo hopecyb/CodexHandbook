@@ -3,14 +3,15 @@ title: "Politique d'usage acceptable"
 description: Accord au niveau équipe sur ce que Codex peut et ne peut pas faire — aligné avec les contrôles techniques et la formation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-Une **Politique d'usage acceptable (AUP)** transforme « peut-on utiliser Codex pour ceci ? » en consensus org au lieu de jugement individuel. Elle complète le [modèle de menace](/guide/team-enterprise/security/threat-model/) : le modèle de menace couvre le risque ; l'AUP couvre les **frontières de comportement**.
+Une **Politique d'usage acceptable (AUP)** transforme « peut-on utiliser Codex pour ceci ? » en consensus org au lieu de jugement individuel. Elle complète le [modèle de menace](/fr/guide/team-enterprise/security/threat-model/) : le modèle de menace couvre le risque ; l'AUP couvre les **frontières de comportement**.
 
 ## Ce que cette page couvre
 
@@ -59,7 +60,7 @@ L'AUP doit s'aligner avec formation, permissions, config et audit — pas seulem
 ## Structure de base
 
 1. **Objectif et portée**
-2. **Scénarios permis** (lien [Carte des capacités](/guide/start-here/codex-capability-map/))
+2. **Scénarios permis** (lien [Carte des capacités](/fr/guide/start-here/codex-capability-map/))
 3. **Scénarios interdits**
 4. **Données et confidentialité**
 5. **Supervision humaine** (merge, changements production)
@@ -93,7 +94,7 @@ Plus de « oui » → plus probablement efficace.
 ## Liste de contrôle d'acceptation
 
 - [ ] L'onboarding inclut l'accusé de réception AUP
-- [ ] Pas de conflit avec [Règles d'équipe](/guide/customization/rules/team-rules/)
+- [ ] Pas de conflit avec [Règles d'équipe](/fr/guide/customization/rules/team-rules/)
 - [ ] Revue annuelle ou sur releases majeures de fonctionnalités
 
 La valeur d'une AUP est des frontières d'équipe claires pour l'usage Codex — et l'alignement avec les contrôles réels.

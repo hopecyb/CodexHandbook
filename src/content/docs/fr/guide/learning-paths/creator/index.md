@@ -3,9 +3,10 @@ title: Parcours créateur (aperçu)
 description: Aperçu des parcours de création de contenu ; étapes détaillées à suivre.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,9 +15,9 @@ sidebar:
 
 ## Lire maintenant
 
-- [Prompting](/prompts/) : rédiger clairement les Tâches créatives
-- [Vérifier les Artefacts](/guide/quality/verify-artifacts/) : vérifier brouillons et pages
-- [App de bureau](/guide/desktop-app/) : le point d'entrée principal pour les utilisateurs sans terminal
+- [Prompting](/fr/prompts/) : rédiger clairement les Tâches créatives
+- [Vérifier les Artefacts](/fr/guide/quality/verify-artifacts/) : vérifier brouillons et pages
+- [App de bureau](/fr/guide/desktop-app/) : le point d'entrée principal pour les utilisateurs sans terminal
 
 ## Étapes prévues (plan)
 

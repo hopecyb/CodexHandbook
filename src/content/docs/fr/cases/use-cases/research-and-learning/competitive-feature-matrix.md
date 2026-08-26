@@ -3,9 +3,10 @@ title: "Cas : matrice comparative de fonctionnalités"
 description: Recherche sourcée et livrable tabulaire — flux de travail réutilisable même pour les lecteurs non techniques.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Métadonnées
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. Préparation
 
 - Dimensions de comparaison explicites (dans le prompt ou `@brief.md`)
-- Activer la [recherche web](/guide/tools/web-search/) (si le produit le prend en charge)
+- Activer la [recherche web](/fr/guide/tools/web-search/) (si le produit le prend en charge)
 
 ## 3. Flux de travail
 
-Suivre [Recherche avec sources](/cases/workflows/research-with-sources/) :
+Suivre [Recherche avec sources](/fr/cases/workflows/research-with-sources/) :
 
 ```text
 Comparer la fonctionnalité « collaboration d'équipe » chez A/B/C :
@@ -44,7 +45,7 @@ si le prix ne peut pas être vérifié, marquer « à confirmer » ;
 sortie en tableau markdown, ne pas modifier d'autres fichiers du dépôt.
 ```
 
-**Vérification :** ouvrir manuellement 3 URL ; vérifier les dates et la [politique de vérification](/guide/start-here/handbook-version-policy/).
+**Vérification :** ouvrir manuellement 3 URL ; vérifier les dates et la [politique de vérification](/fr/guide/start-here/handbook-version-policy/).
 
 ## 4. Échec et reprise
 
@@ -58,8 +59,8 @@ sortie en tableau markdown, ne pas modifier d'autres fichiers du dépôt.
 
 ## 6. Chapitres connexes
 
-- [Centré sur les livrables](/cases/workflows/artifact-first-work/)
-- [Valider les sources](/guide/quality/validate-sources/)
+- [Centré sur les livrables](/fr/cases/workflows/artifact-first-work/)
+- [Valider les sources](/fr/guide/quality/validate-sources/)
 
 ---
 

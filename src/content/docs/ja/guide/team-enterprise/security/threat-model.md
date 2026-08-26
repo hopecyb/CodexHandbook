@@ -3,9 +3,10 @@ title: 脅威モデル
 description: チーム環境での Codex 主要リスク面——データ、ツール、拡張、サプライチェーン。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 > **Codex がコード、コマンド、外部ツールに本当に接続したら、最も起きやすいことは何か？**
 
-**脅威モデル**はそれを分解して見える化します。Codex は「もう一つのチャット」ではなく、**コード読取、コマンド実行、外部ツール呼び出し**ができます。本章は主要リスク面を先に広げ、具体制御は [権限マトリクス](/guide/reference/permission-matrix/) と [サンドボックス](/guide/foundations/sandbox-and-network/) を参照。
+**脅威モデル**はそれを分解して見える化します。Codex は「もう一つのチャット」ではなく、**コード読取、コマンド実行、外部ツール呼び出し**ができます。本章は主要リスク面を先に広げ、具体制御は [権限マトリクス](/ja/guide/reference/permission-matrix/) と [サンドボックス](/ja/guide/foundations/sandbox-and-network/) を参照。
 
 ## 内容
 
@@ -72,10 +73,10 @@ sidebar:
 
 | 脅威 | 説明 | 緩和方向 |
 |---|---|---|
-| Prompt 注入 | 悪意 issue/ウェブが越権操作を誘導 | 入力消毒、読み取り専用 CI、[注入トピック](/guide/team-enterprise/security/prompt-injection/) |
+| Prompt 注入 | 悪意 issue/ウェブが越権操作を誘導 | 入力消毒、読み取り専用 CI、[注入トピック](/ja/guide/team-enterprise/security/prompt-injection/) |
 | 過大権限 | token、サンドボックスが広すぎ | 最小権限、ブランチ保護 |
 | データ漏洩 | コマンド/MCP でリポジトリ内容を外部送信 | ネットワーク方針、DLP、監査 Hook |
-| 悪意拡張 | 未審査 Plugin/MCP | [拡張リスク](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| 悪意拡張 | 未審査 Plugin/MCP | [拡張リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | サプライチェーン | 依存とスクリプトへの混入 | 既存 SCA、code review と組み合わせ |
 | 誤操作 | Agent が DB 削除、誤 push | コマンド deny、push なし CI |
 
@@ -141,8 +142,8 @@ L5 人の review とブランチ保護
 
 ## 関連章
 
-- [機密コンテキスト](/guide/context/sensitive-context/)
-- [人工承認パターン](/cases/workflows/human-approval-patterns/)
+- [機密コンテキスト](/ja/guide/context/sensitive-context/)
+- [人工承認パターン](/ja/cases/workflows/human-approval-patterns/)
 
 ## 参考
 - OpenAI エンタープライズセキュリティホワイトペーパー（公式）

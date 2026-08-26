@@ -3,9 +3,10 @@ title: Fundamentos de Agent
 description: Explica cómo un Agent llama Herramientas e itera alrededor de un objetivo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -46,14 +47,14 @@ En cuanto empieza a leer archivos, editarlos o ejecutar comandos, ya no es solo 
 
 Al empezar, conviene leer a la vez:
 
-1. [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
-2. [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/)
-3. [Revisa el resultado](/guide/getting-started/review-the-result/)
+1. [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
+2. [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/)
+3. [Revisa el resultado](/es/guide/getting-started/review-the-result/)
 
 ## Conceptos relacionados
 
-- Skill / Plugin / MCP: amplían «qué sabe hacer» y «a qué se conecta» — ver [Extensiones y automatización](/skills/) y [Mapa de capacidades](/guide/start-here/codex-capability-map/)
-- Aprobación humana: ver [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP: amplían «qué sabe hacer» y «a qué se conecta» — ver [Extensiones y automatización](/es/skills/) y [Mapa de capacidades](/es/guide/start-here/codex-capability-map/)
+- Aprobación humana: ver [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
 
 Lo propio de un Agent es que puede dar varios pasos seguidos alrededor de un objetivo, no solo devolverte un párrafo.
 

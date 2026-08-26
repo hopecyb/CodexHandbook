@@ -3,9 +3,10 @@ title: 모델과 추론
 description: 모델과 추론 강도를 고를 때 고려할 요소.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 001ea32
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---

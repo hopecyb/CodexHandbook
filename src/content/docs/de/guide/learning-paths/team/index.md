@@ -3,9 +3,10 @@ title: Team-Pfad (Überblick)
 description: Überblick der Route für Team-Rollout; tiefe Schritte folgen später.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -22,9 +23,9 @@ Wenn Sie eher interessiert, wie Teams Codex stabil nutzen — starten Sie hier.
 
 ## Jetzt lesen
 
-- [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-- [Sensibler Kontext](/guide/context/sensitive-context/)
-- [Definition of Done](/guide/quality/definition-of-done/)
+- [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
+- [Sensibler Kontext](/de/guide/context/sensitive-context/)
+- [Definition of Done](/de/guide/quality/definition-of-done/)
 
 ## Häufige Missverständnisse
 
@@ -53,11 +54,11 @@ Team-Rollout braucht eher:
 
 Aus Teamsicht:
 
-1. [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-2. [Sensibler Kontext](/guide/context/sensitive-context/)
-3. [Personalisierung und Projektkonfiguration](/guide/customization/)
-4. [Definition of Done](/guide/quality/definition-of-done/)
-5. [Team und Enterprise](/guide/team-enterprise/)
+1. [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
+2. [Sensibler Kontext](/de/guide/context/sensitive-context/)
+3. [Personalisierung und Projektkonfiguration](/de/guide/customization/)
+4. [Definition of Done](/de/guide/quality/definition-of-done/)
+5. [Team und Enterprise](/de/guide/team-enterprise/)
 
 Diese Route betont Grenzen, Regeln und Abnahme — nicht zuerst Nutzungsvolumen.
 

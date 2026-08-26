@@ -3,12 +3,13 @@ title: Workflow-Methoden
 description: Wiederholbare Kollaborationsmethoden — nicht an eine einzelne Produkt-UI gebunden, mit Fokus auf Prüfpunkte und Abnahme.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2306981
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-[Prompts](/prompts/) zeigen, wie man **formulieren** soll; Workflows zeigen, wie man **eine ganze Sache organisiert**. Die Methoden in diesem Kapitel gelten für App, CLI, IDE und Cloud.
+[Prompts](/de/prompts/) zeigen, wie man **formulieren** soll; Workflows zeigen, wie man **eine ganze Sache organisiert**. Die Methoden in diesem Kapitel gelten für App, CLI, IDE und Cloud.
 
 ## Warum Workflows nötig sind
 
@@ -24,26 +25,26 @@ Ohne Prüfpunkte entstehen leicht: falsche Verzeichnisse, keine Tests, Fehl-Merg
 
 | Workflow | Welches Problem |
 |---|---|
-| [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/) | Allgemeine Hauptkette für die meisten Aufgaben |
-| [Zuerst brainstormen, dann bauen](/cases/workflows/brainstorm-before-building/) | Divergieren und konvergieren, wenn die Lösung noch offen ist |
-| [Spezifikationsgetriebene Arbeit](/cases/workflows/specification-driven-work/) | Zuerst abnahmefähige Spezifikation, dann implementieren |
-| [Testgetriebene Arbeit](/cases/workflows/test-driven-work/) | Tests zuerst treiben die Implementierung |
-| [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) | Wann stoppen, wann freigeben, wann ablehnen |
-| [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/) | „Raten und reparieren“ vermeiden |
-| [Prüfung vor dem Merge](/cases/workflows/review-before-merge/) | Strukturierte Prüfung vor dem PR-Merge |
-| [Recherche mit Quellen](/cases/workflows/research-with-sources/) | Suche, Vergleich und Quellenüberprüfung |
-| [Artefakt zuerst](/cases/workflows/artifact-first-work/) | Zuerst Liefergegenstände vereinbaren, dann Schritte ableiten |
-| [Multi-Agent-Koordination](/cases/workflows/multi-agent-coordination/) | Parallelität und Arbeitsteilung |
-| [Lange Aufgaben verwalten](/cases/workflows/long-running-task-management/) | Prüfpunkte und Exit-Kriterien über Sitzungen hinweg |
-| [Fehlerwiederherstellung](/cases/workflows/failure-recovery/) | Zurücksetzen, wenn es schiefgeht oder Tests rot werden |
-| [Als Skill verfestigen](/cases/workflows/turn-a-workflow-into-a-skill/) | Wiederkehrende Abläufe als Skill schreiben |
+| [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/) | Allgemeine Hauptkette für die meisten Aufgaben |
+| [Zuerst brainstormen, dann bauen](/de/cases/workflows/brainstorm-before-building/) | Divergieren und konvergieren, wenn die Lösung noch offen ist |
+| [Spezifikationsgetriebene Arbeit](/de/cases/workflows/specification-driven-work/) | Zuerst abnahmefähige Spezifikation, dann implementieren |
+| [Testgetriebene Arbeit](/de/cases/workflows/test-driven-work/) | Tests zuerst treiben die Implementierung |
+| [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/) | Wann stoppen, wann freigeben, wann ablehnen |
+| [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/) | „Raten und reparieren“ vermeiden |
+| [Prüfung vor dem Merge](/de/cases/workflows/review-before-merge/) | Strukturierte Prüfung vor dem PR-Merge |
+| [Recherche mit Quellen](/de/cases/workflows/research-with-sources/) | Suche, Vergleich und Quellenüberprüfung |
+| [Artefakt zuerst](/de/cases/workflows/artifact-first-work/) | Zuerst Liefergegenstände vereinbaren, dann Schritte ableiten |
+| [Multi-Agent-Koordination](/de/cases/workflows/multi-agent-coordination/) | Parallelität und Arbeitsteilung |
+| [Lange Aufgaben verwalten](/de/cases/workflows/long-running-task-management/) | Prüfpunkte und Exit-Kriterien über Sitzungen hinweg |
+| [Fehlerwiederherstellung](/de/cases/workflows/failure-recovery/) | Zurücksetzen, wenn es schiefgeht oder Tests rot werden |
+| [Als Skill verfestigen](/de/cases/workflows/turn-a-workflow-into-a-skill/) | Wiederkehrende Abläufe als Skill schreiben |
 
 ## Weitere verwandte Kapitel
 
-- Qualität: [Kernfähigkeiten · Qualität und Überprüfung](/guide/quality/)
-- Agent: [Planung](/guide/agent-work/planning/), [Subagents](/guide/agent-work/subagents/)
-- Verstetigung: [Skill](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- Fälle: [Szenarien und Fallbibliothek](/cases/use-cases/)
+- Qualität: [Kernfähigkeiten · Qualität und Überprüfung](/de/guide/quality/)
+- Agent: [Planung](/de/guide/agent-work/planning/), [Subagents](/de/guide/agent-work/subagents/)
+- Verstetigung: [Skill](/de/skills/overview/), [AGENTS.md](/de/guide/customization/agents-md/what-is-agents-md/)
+- Fälle: [Szenarien und Fallbibliothek](/de/cases/use-cases/)
 
 ## Designprinzipien
 

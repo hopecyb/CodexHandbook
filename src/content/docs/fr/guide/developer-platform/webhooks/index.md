@@ -3,9 +3,10 @@ title: Webhooks
 description: Intégration événementielle — les webhooks reçoivent des notifications ; ils ne remplacent pas le design de flux de travail.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b718fb3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 « Webhook » semble abstrait.  
@@ -15,7 +16,7 @@ Dans l'intégration Codex, cela répond à « quand un événement externe arriv
 
 ## Entrée de section
 
-- [Vue d'ensemble Webhooks](/guide/developer-platform/webhooks/overview/)
+- [Vue d'ensemble Webhooks](/fr/guide/developer-platform/webhooks/overview/)
 
 ## Ce que cette section couvre
 

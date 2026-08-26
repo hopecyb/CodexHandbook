@@ -3,9 +3,10 @@ title: Template de alteração
 description: Iterar com limites sobre o que já existe.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Template de alteração
@@ -63,8 +64,8 @@ Num Prompt de alteração, além de «o que mudar», diga «até onde é permiti
 
 ## Relacionado
 
-- [Definir o concluído](/prompts/define-done/)
-- [Restrições e limites](/prompts/constraints-and-boundaries/)
+- [Definir o concluído](/pt/prompts/define-done/)
+- [Restrições e limites](/pt/prompts/constraints-and-boundaries/)
 
 ---
 

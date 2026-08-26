@@ -3,9 +3,10 @@ title: 権限と承認
 description: Codex がいつ操作の承認を求めるかを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -67,8 +68,8 @@ Codex が任意のファイルを読み、自由にネットワークへ出て�
 | 層 | 何を書くか | どこで読むか |
 |---|---|---|
 | 概念（本ページ） | なぜ承認が必要か | — |
-| 製品差 | 各入口での確認の出し方 | [製品ガイド](/guide/) |
-| プロンプト戦略 | タスク内で権限の境界をどう宣言するか | [制約を定義する](/prompts/constraints-and-boundaries/) |
+| 製品差 | 各入口での確認の出し方 | [製品ガイド](/ja/guide/) |
+| プロンプト戦略 | タスク内で権限の境界をどう宣言するか | [制約を定義する](/ja/prompts/constraints-and-boundaries/) |
 
 公式ポリシーとデフォルト値は変わる可能性があります。[https://developers.openai.com/codex](https://developers.openai.com/codex) で確認してください。
 

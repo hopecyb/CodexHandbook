@@ -3,14 +3,15 @@ title: Webhooks Overview
 description: Connect Codex task state to internal systems via HTTP callbacks—events, signatures, and idempotency.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**Webhooks** let Codex or Cloud send HTTP callbacks when task state changes—driving ticket updates, Slack notifications, or internal approval UIs. This chapter is the event-integration entry for the [developer platform](/guide/developer-platform/).
+**Webhooks** let Codex or Cloud send HTTP callbacks when task state changes—driving ticket updates, Slack notifications, or internal approval UIs. This chapter is the event-integration entry for the [developer platform](/en/guide/developer-platform/).
 
 ## What this page covers
 
@@ -52,7 +53,7 @@ Without signature verification, idempotency, and timeout handling, you risk forg
 | Integration with existing event buses | Simple cron that only needs `exec` exit codes |
 | Multi-step flows (complete → trigger deploy) | No public endpoint and no queue |
 
-Simple pipelines: [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) only. Productized multi-tenant services often combine **SDK + Webhook**.
+Simple pipelines: [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/) only. Productized multi-tenant services often combine **SDK + Webhook**.
 
 ## Typical events (conceptual)
 
@@ -108,7 +109,7 @@ More “yes” answers → webhooks matter more.
 
 ## Security boundaries
 
-- See [Threat model](/guide/team-enterprise/security/threat-model/) and [Acceptable use](/guide/team-enterprise/governance/acceptable-use/)
+- See [Threat model](/en/guide/team-enterprise/security/threat-model/) and [Acceptable use](/en/guide/team-enterprise/governance/acceptable-use/)
 - Rotate webhook secrets on an ops calendar
 
 ## Acceptance checklist
@@ -116,7 +117,7 @@ More “yes” answers → webhooks matter more.
 - [ ] Signature failure returns 4xx
 - [ ] Idempotency table or dedupe key implemented
 - [ ] Async worker and DLQ configured
-- [ ] Aligned with [structured output](/guide/developer-platform/non-interactive/structured-output/) field conventions
+- [ ] Aligned with [structured output](/en/guide/developer-platform/non-interactive/structured-output/) field conventions
 
 Webhooks connect task state changes to other systems—after signature verification, idempotency, and async handling are in place.
 

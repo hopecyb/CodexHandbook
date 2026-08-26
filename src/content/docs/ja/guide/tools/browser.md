@@ -3,9 +3,10 @@ title: ブラウザツール
 description: Codex に Web ページを開かせ、UI 状態を確認し、フロントエンドの動作を検証する——能力と境界。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ sidebar:
 | 静的ページと実装の照合 | 完全な E2E テストフレームワークの代替 |
 | ページの可視テキストを読み取ってデバッグを補助 | 複雑な CAPTCHA が必要なサイトの処理 |
 
-選定の背景：[ツール選択](/guide/tools/tool-selection/)
+選定の背景：[ツール選択](/ja/guide/tools/tool-selection/)
 
 ## 他ツールとの比較
 
@@ -81,7 +82,7 @@ sidebar:
 1. **ローカルフロントエンド**：まず `npm run dev` を実行し、`http://localhost:PORT/path` を渡す
 2. **タスクを明確に**：「ログインフォームが 375px 幅で溢れていないか確認」——「Web ページを見て」ではなく
 3. **境界を書く**：外部ネットワークへのアクセス禁止、本番へのフォーム送信禁止
-4. **検証**：[成果物の検証](/guide/quality/verify-artifacts/) とスクリーンショットを照合
+4. **検証**：[成果物の検証](/ja/guide/quality/verify-artifacts/) とスクリーンショットを照合
 
 ## そのまま使える書き方
 
@@ -98,9 +99,9 @@ http://localhost:4321/guide/foundations/local-vs-cloud/ のみにアクセスし
 - デフォルトでは、ブラウザは**あなたのマシンまたは環境からアクセスできるすべて**——社内 admin を含む——に到達できると想定する
 - タスクで `localhost のみ` または許可ドメインのホワイトリストを宣言する
 - 個人アカウントでログイン済みのブラウザプロファイルで、信頼できないリポジトリのタスクを実行しない
-- Cloud 環境のブラウザポリシーは [Cloud 環境](/guide/web-and-cloud/cloud-environments/) とネットワークポリシーで決まる
+- Cloud 環境のブラウザポリシーは [Cloud 環境](/ja/guide/web-and-cloud/cloud-environments/) とネットワークポリシーで決まる
 
-承認の概念：[権限と承認](/guide/foundations/permissions-and-approvals/)
+承認の概念：[権限と承認](/ja/guide/foundations/permissions-and-approvals/)
 
 ## よくあるミス
 

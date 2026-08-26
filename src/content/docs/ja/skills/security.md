@@ -3,9 +3,10 @@ title: Skill のセキュリティとバージョン
 description: インストール元、権限境界、アップグレードとロールバック——チーム Skill をガバナンス可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill は単なるプロンプトテンプレートではありません。
@@ -31,7 +32,7 @@ Codex の動き方を変え、スクリプトや追加リソースを含むこ�
 
 Skill セキュリティは「誰かが一元管理」だけに頼れず、利用者にも基本判断が必要です。
 
-基礎：[Skills 概要](/skills/overview/) · [最初の Skill を作成する](/skills/create-your-first-skill/)
+基礎：[Skills 概要](/ja/skills/overview/) · [最初の Skill を作成する](/ja/skills/create-your-first-skill/)
 
 ## 脅威モデル（簡略）
 
@@ -82,7 +83,7 @@ Skill セキュリティは「誰かが一元管理」だけに頼れず、利�
 | changelog | チーム Skill セットのリリースノートを維持 |
 | ロールバック | 前版を保持。障害時に迅速切替 |
 
-Plugin は Skill をバンドルして統一配布可能：[Plugins 概要](/skills/plugins/plugins-overview/)
+Plugin は Skill をバンドルして統一配布可能：[Plugins 概要](/ja/skills/plugins/plugins-overview/)
 
 ## チームの習慣
 
@@ -103,7 +104,7 @@ Skill が長期に多人で使われるなら「誰かが DM でパスを送っ�
 - [ ] 許可 Skill ソースのホワイトリスト
 - [ ] 新人オンボーディングは「基本パック」のみ
 - [ ] 四半期ごとにまだ必要な Skill を再確認
-- [ ] [許可と拒否パターン](/guide/customization/rules/allow-and-deny-patterns/) と整合
+- [ ] [許可と拒否パターン](/ja/guide/customization/rules/allow-and-deny-patterns/) と整合
 
 ## よくあるミス
 

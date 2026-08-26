@@ -3,9 +3,10 @@ title: 成果物の検証
 description: 生成されたドキュメント、ページ、その他の成果物を確認する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3daaaa7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---

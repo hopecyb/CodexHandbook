@@ -3,187 +3,110 @@ title: Hook 設定例
 description: 改編可能な Hook 設定とスクリプト骨組み。秘密鍵スキャン、監査ログ、形式検証を含む。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5a86fd4
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Hook の例を見るときは、まず何を防ぐかを確認し、自分の環境に合わせて改変します。
+This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
 
-本章は**参考例**の設定とスクリプトを提供し、チーム改編を容易にします。フィールド名とパスは [公式ドキュメント](https://developers.openai.com/codex) とローカル `codex --help` を正とし、コピー前に隔離リポジトリで試走してください。
+Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
-事前読了：[Hooks 概要](/skills/hooks/hooks-overview/) · [Hook イベントタイプ](/skills/hooks/hook-event-types/)
+## Goal and boundary
 
-## 使用前に範囲を確認
+Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.
 
-これらの例をそのまま使える「正解」として扱わない。  
-3 種類の雛形として見る。
+This demonstrates Hook input, output, and test structure only:
 
-- 記録のみ
-- 先にブロック
-- 軽量入力チェック
+- It does not replace a professional secret scanner.
+- The regular expression has false positives and false negatives.
+- It does not scan hosted tools.
+- It must not log complete tool input.
 
-まず考え方を見て、拡張するか決める。
-
-## 例 1：ツール呼び出し後に監査ログ（読み取り専用）
-
-**目標：** 誰がいつどのパスに書き込み操作したかを記録。マスキング失敗時は秘密鍵をディスクに書かない。
-
-`hooks.json`（参考例）：
+## 1. Configure hooks.json
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.after",
-      "command": ".codex/hooks/audit-log.sh",
-      "timeout_ms": 500
-    }
-  ]
+  "description": "Block obvious secret-shaped strings before local writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/examples/hooks/secret-guard/pre_tool_use_guard.py\"",
+            "timeout": 3,
+            "statusMessage": "Checking tool input for secret-shaped strings"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
-`.codex/hooks/audit-log.sh`：
+In a real repository, place configuration in `.codex/hooks.json` and the script under `.codex/hooks/`. The handbook keeps example paths so the complete artifact can be tested directly.
 
-```bash
-#!/usr/bin/env bash
-# stdin: JSON payload（構造は公式を正とする）
-payload=$(cat)
-tool=$(echo "$payload" | jq -r '.tool // "unknown"')
-ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
-exit 0
-```
+## 2. Denial output
 
-**受け入れ：** ファイル書き込みを 1 回実行後、ログに 1 行。スクリプト終了コードは常に 0。
-
-この類の例は記録のみで挙動を変えず、リスクが最も低く、通常は出発点に向きます。
-
-## 例 2：ツール呼び出し前に疑わしい秘密鍵をブロック
-
-**目標：** diff または書き込み内容が AWS アクセスキーパターンに一致したら `block`。
+The script reads event JSON from stdin and checks only `tool_input.command`. On a match it prints:
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.before",
-      "command": ".codex/hooks/secret-scan.sh",
-      "on_failure": "block",
-      "timeout_ms": 300
-    }
-  ]
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Secret-shaped string blocked by example hook."
+  }
 }
 ```
 
-`secret-scan.sh` の核心ロジック（参考例）：
+On no match it exits `0` with no output. Plain stdout is not a valid `PreToolUse` decision.
+
+## 3. Run tests
 
 ```bash
-#!/usr/bin/env bash
-payload=$(cat)
-text=$(echo "$payload" | jq -r '.arguments // empty' 2>/dev/null)
-if echo "$text" | grep -qE 'AKIA[0-9A-Z]{16}'; then
-  echo "Blocked: possible AWS access key in tool arguments" >&2
-  exit 1
-fi
-exit 0
+python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-**受け入れ：** `AKIA` テスト文字列を含むとブロック。通常の `git status` は通過。
+Expected: three tests pass, covering a normal command, suspected credential, and non-object `tool_input`.
 
-:::caution
-正規表現スキャンは誤検知・見逃しあり。補助層のみ。実際の秘密鍵は secret scanner と pre-commit を使い、[機密コンテキスト](/guide/context/sensitive-context/) を参照。
-:::
-
-この類は、実動作を止めることを決めた後に使うのが一般的。最初から block 型 Hook だとトラブルシュートコストが高くなりがちです。
-
-## 例 3：ユーザープロンプト送信時の長さとキーワードポリシー
-
-**目標：** システム指示を上書きしようとする明らかなフレーズを拒否（簡略例）。
+You can also pipe a fixture manually:
 
 ```bash
-#!/usr/bin/env bash
-prompt=$(cat | jq -r '.prompt // empty')
-if [ "${#prompt}" -gt 50000 ]; then
-  echo "Prompt too long" >&2
-  exit 1
-fi
-if echo "$prompt" | grep -qi 'ignore previous instructions'; then
-  echo "Blocked: possible injection pattern" >&2
-  exit 1
-fi
-exit 0
+printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
+  | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-**受け入れ：** 超長とパターン一致時に失敗。通常タスクは通過。
+Normal input produces no stdout.
 
-この類は少なくとも次が必要です。
+## 4. Enable it in a project
 
-- 入力を見られる
-- 明確な失敗理由を出せる
-- 正常リクエストを過度に誤傷しない
+1. Put configuration and script in the target repository using a stable repository-relative path.
+2. Run unit tests and one real normal command in an isolated repository.
+3. Start Codex and open `/hooks` to inspect the source and exact definition.
+4. After trusting it, verify both a normal pass and test-string denial.
+5. Review again after editing the script; a hash change returns an unmanaged Hook to pending trust.
 
-## チームルールとの同源
+## From warning to blocking
 
-「禁止コマンド部分文字列」を `tools/codex-policy.json` に抽出し、Hook と [コマンドルール](/guide/customization/rules/command-rules/) が共通読み取り。二重保守を避ける。
+Production teams usually start with non-blocking audit or context, then move to deny. Before upgrading, answer:
 
-## よくある誤解
+- Do fixtures cover known false positives?
+- Is a timeout or crash understandable to the user?
+- Does CI or service policy also enforce the rule?
+- Are bypass and emergency recovery auditable?
 
-### 1. 例が動けば本番にそのまま載せられる
+## Official source
 
-例の価値は構造と考え方の説明にあり、そのまま本番投入を意味しません。
+- [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
 
-### 2. block 型 Hook が log 型より成熟しているとは限らない
-
-多くのチームは log から始め、誤検知とパフォーマンスを確認してから warn/block に上げます。
-
-### 3. Hook 例はスクリプトの書き方だけを見ればよい
-
-スクリプトだけでは不十分。次も見る。
-
-- どのイベントに付けるか
-- 失敗戦略は何か
-- チームがなぜこう止めるか説明できるか
-
-## Hook のテスト
-
-```bash
-# fixture でスクリプトをテスト（参考例）
-echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
-echo $?
-```
-
-## よくある順序
-
-多くのチームは次の順で進めます。
-
-1. 読み取り専用ログ型
-2. warn 型
-3. block 型
-
-「ロジックが正しい」と「チームがブロックを受け入れる」を分けやすくなります。
-
-Hook 例は主に考え方と構造の学習用。正式環境へそのまま移植は不向きです。
-
-## よくあるミス
-
-- スクリプトに `chmod +x` がなく、静かに失敗
-- `timeout_ms` が短すぎて誤ブロック
-- ログパスが書き込めず Hook チェーン全体が失敗
-- Hook 内で payload 全文を `curl` 外部送信
-
-## 受け入れチェックリスト
-
-- [ ] 各 Hook に対応する fixture テストがある
-- [ ] 失敗戦略（block/warn）がチーム方針と一致
-- [ ] 設定とスクリプトが同リポジトリ、同 PR レビュー
-- [ ] ドキュメントに検証日と対象 CLI バージョンを記載
-
-## 参考ソース
-- OpenAI Codex Hooks 例
 ---
 
-**状態：** outdated  
-**対象製品：** CLI / App（バージョンによる）  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは Hook 設定構造、イベント名、ペイロードフィールド、スクリプト例を含む。例は現行実装に強く依存し、十分に安定した公式公開根拠が不足。
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
+
+**Last verified:** 2026-08-25

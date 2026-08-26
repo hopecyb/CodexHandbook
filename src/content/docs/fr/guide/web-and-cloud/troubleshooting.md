@@ -1,153 +1,86 @@
 ---
-title: Dépannage Cloud
-description: Index des symptômes pour la connexion GitHub, les environnements, les Secrets, l'accès sortant et les problèmes de PR.
+title: Dépannage de Cloud
+description: Diagnostiquez les échecs Cloud dans les couches dépôt, setup, réseau, Agent et livraison.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 4ba9a4d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
 
-Lorsque Cloud échoue, relancer ne corrige généralement pas la cause racine.
+Relancer une tâche Cloud prend plus de temps, mais n'ajoute ni autorisation, ni dépendance, ni configuration réseau manquantes. Commencez par identifier l'étape qui échoue.
 
-Les problèmes Cloud se situent souvent dans les **permissions, les différences d'environnement, les identifiants ou le réseau**. Cette page oriente les symptômes vers le bon sujet pour éviter de réessayer aveuglément dans le chat.
+## Triage en cinq couches
 
-## Ce qui est couvert
+| Étape | Symptôme courant | Premier contrôle |
+|---|---|---|
+| Connexion du dépôt | Dépôt absent, erreur 403, branche absente | Périmètre d'autorisation GitHub, politique de l'organisation, branche de départ |
+| Conteneur/setup | `command not found`, échec d'installation d'une dépendance | Runtime fixé, script de setup, Secret |
+| Réseau de l'Agent | Le setup télécharge correctement, mais `curl` échoue dans l'Agent | Accès Agent sur Off par défaut, allowlist, méthodes HTTP |
+| Exécution de l'Agent | Modifications hors périmètre, commande de test absente | Périmètre du prompt, `AGENTS.md`, journal du travail |
+| Livraison | Diff incomplet, impossible d'ouvrir une PR | État de la branche, droits d'écriture, règles de protection |
 
-- Ce qu'il faut vérifier en premier lorsqu'une Tâche échoue
-- Comment le dépannage Cloud diffère du local
-- Quand revenir à une validation locale par petites étapes
+## Conserver d'abord les preuves
 
-## Vérifier les conditions en premier
+Consignez le dépôt, le commit de départ, le nom de l'environnement, l'étape en échec, la première erreur significative et la commande complète. Ne conservez pas uniquement « exit 1 ».
 
-Si « Cloud rouge, local vert », vérifiez d'abord les conditions d'exécution.
+```text
+Environment: api-node22
+Starting point: main@abc123
+Stage: setup
+Command: pnpm install --frozen-lockfile
+First error: ERR_PNPM_FETCH_401 ...
+Local difference: local uses ~/.npmrc; Cloud has no NPM_TOKEN configured
+```
 
-Causes courantes :
+Ce relevé indique une piste de correction au lieu de forcer l'exécution suivante à deviner à nouveau.
 
-- L'environnement distant diffère du local
-- Cloud ne voit pas le travail local non poussé
-- Secrets mal configurés
-- Réseau ou permissions restreints
+## Échecs fréquents
 
-Vérifiez les prérequis avant de blâmer la Tâche elle-même.
+### Le setup voit un Secret, mais pas l'Agent
 
-## Tri rapide
+C'est intentionnel : les Secrets sont retirés avant la phase Agent. Placez l'installation qui dépend d'identifiants dans le setup. Ne convertissez pas la valeur en variable d'environnement ordinaire pour contourner cette protection.
 
-| Symptôme | Vérifier en premier |
-|---|---|
-| Impossible de connecter au repo / 403 | [Connecter GitHub](/guide/web-and-cloud/connect-github/) |
-| Échec d'installation des dépendances | [Accès Internet](/guide/web-and-cloud/internet-access/) · [Environnements Cloud](/guide/web-and-cloud/cloud-environments/) |
-| Package privé / API 401 | [Secrets et variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Tâche bloquée en attente | [Déléguer et suivre](/guide/web-and-cloud/delegate-and-follow-up/) · Approbation en attente ? |
-| Commit local invisible pour Cloud | Poussé ? Cloud ne lit pas les commits locaux non poussés |
-| Impossible d'ouvrir une PR ou pousser | Protection de branche · [Créer une PR](/guide/web-and-cloud/create-pull-requests/) |
-| Tests rouges dans Cloud, verts localement | Alignement version/env dans [Environnements Cloud](/guide/web-and-cloud/cloud-environments/) |
+### Le setup accède à Internet, mais pas l'Agent
 
-## Ordre de dépannage
+C'est également le comportement par défaut. Si la tâche exige réellement un accès Internet pendant la phase Agent, activez-le pour l'environnement, limitez les domaines et les méthodes, puis examinez les journaux.
 
-1. Repo et branche corrects ?
-2. Permissions et autorisation suffisantes ?
-3. Environnement et dépendances en place ?
-4. Secrets et réseau fonctionnels ?
-5. Description de Tâche manquant des contraintes clés ?
+### Les dépendances en cache sont obsolètes
 
-Clarifier ces points vaut mieux que relancer immédiatement.
+Toute modification du setup, de la maintenance, des variables ou des Secrets invalide automatiquement le cache. Lorsque des changements dans le dépôt rendent le cache incompatible, utilisez **Reset cache** sur la page de l'environnement. Pour un environnement d'équipe partagé, évaluez d'abord les conséquences pour les autres utilisateurs.
 
-## Connexion et permissions
+### Le local est vert, mais Cloud est rouge
 
-**Symptôme :** OAuth réussit mais la Tâche ne peut pas cloner.
+Comparez les versions de Node/Python, les lockfiles, les dépendances système, la configuration locale masquée, les services VPN ou localhost et la casse des chemins. Transformez ces différences en règles explicites de setup et de dépôt.
 
-**Vérifier :**
+### La révision de PR ne s'est pas exécutée
 
-1. Le périmètre d'autorisation inclut l'org/repo cible
-2. Repo archivé ou restrictions GitHub App activées
-3. Compte personnel connecté à un repo d'org nécessitant SSO
+Vérifiez la configuration Cloud du dépôt, l'activation de Code review, le commentaire exact `@codex review` et les autorisations de l'intégration GitHub. Les révisions automatiques doivent également être activées séparément.
 
-**Symptôme :** push refusé.
+## Quand revenir en local
 
-**Vérifier :** protection de branche, revue requise, tentative de push direct sur `main`
+Si le problème dépend d'un service local, ou si deux exécutions consécutives réparent l'environnement plutôt que le code métier, reproduisez-le d'abord en local. Ajoutez les commandes, versions et tests qui ont réussi à `AGENTS.md` ou au setup avant de déléguer de nouveau.
 
-## Idées reçues courantes
+## Acceptation après correction
 
-### 1. Les erreurs à l'installation sont toujours des problèmes de dépendances
+- [ ] Le même environnement s'exécute plusieurs fois depuis un point de départ propre.
+- [ ] La correction ne masque pas le problème par un accès élargi au dépôt ou un réseau sans restriction.
+- [ ] Les journaux n'exposent aucun Secret.
+- [ ] Une personne révise toujours le diff et les tests du résultat.
 
-Peut aussi être réseau, auth, Secrets ou permissions de registre privé.
+## Sources officielles
 
-### 2. Vert localement signifie que le code est bon et Cloud est instable
+- [Environnements Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Accès Internet de l'Agent](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
-Signifie souvent :  
-**votre environnement local a des prérequis que Cloud n'a pas.**
-
-### 3. Tâche bloquée signifie que le modèle réfléchit
-
-Peut être :
-
-- En attente d'Approbation
-- En attente sur le réseau
-- En attente du démarrage de l'environnement
-- Périmètre de Tâche trop large
-
-## Environnement et dépendances
-
-**Symptôme :** `command not found` (node, python, etc.).
-
-**Vérifier :** l'image de base inclut le runtime requis ; `AGENTS.md` documente la version et les commandes d'installation.
-
-**Symptôme :** conflit de lockfile ou timeout d'installation.
-
-**Vérifier :** politique sortante ; miroirs de registre ; dépendances nécessitant VPN (Cloud généralement pas sur le réseau interne)
-
-## Secrets et variables
-
-**Symptôme :** variables d'environnement vides au moment du build.
-
-**Vérifier :**
-
-- Noms de Secret correspondent à la doc (sensibilité à la casse fréquente)
-- Configuré dans le bon périmètre repo/environnement
-- Secret accidentellement collé dans le Prompt et masqué
-
-Plus : [Secrets et variables](/guide/web-and-cloud/secrets-and-variables/)
-
-## Tâches bloquées et timeouts
-
-| Cause | Action |
-|---|---|
-| Approbation humaine en attente | Approuver ou rejeter dans l'App/téléphone |
-| Tâche trop grande | Diviser en délégations plus petites |
-| Démarrage d'environnement lent | Cold start normal ; si persistant, vérifier la page de statut officielle |
-
-Suivi : [Déléguer et suivre](/guide/web-and-cloud/delegate-and-follow-up/)
-
-## Qualité de sortie
-
-Cloud terminé mais résultat inutilisable :
-
-1. Comparer à la description de Tâche — critères d'acceptation manquants ?
-2. Checkout de la même branche localement et exécuter les tests
-3. Ajouter un suivi avec [diagnostiquer avant de corriger](/cases/workflows/diagnose-before-fixing/) plutôt que relancer toute la Tâche
-
-## Quand revenir au local
-
-Si deux rounds ont été passés sur les conditions Cloud plutôt que sur la Tâche elle-même :
-
-- Reproduire minimalement en local
-- Documenter deps, commandes, Vérification
-- Déléguer à Cloud à nouveau
-
-Généralement plus rapide que deviner dans l'environnement distant.
-
-## Relation avec l'index de dépannage global
-
-Problèmes locaux CLI/IDE/App : [Référence · Dépannage](/guide/reference/troubleshooting/). Cette page couvre uniquement les chemins **spécifiques à Cloud**.
-
-## Références
-- Documentation de support OpenAI Codex Cloud
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** Cloud  
-**Note de revue :** Le cadre de tri aide, mais il suppose la connexion repo Cloud actuelle, les Secrets, l'Approbation, le réseau et le comportement PR ; à mesure que Cloud et les capacités multi-clients évoluent, le mapping symptôme-sujet nécessite une réécriture contre la documentation de support officielle la plus récente.  
-**Dernière vérification :** 2026-07-26
+**Statut :** verified
+
+**Produit concerné :** Cloud
+
+**Dernière vérification :** 2026-08-26

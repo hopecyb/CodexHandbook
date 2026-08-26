@@ -5,9 +5,10 @@ sidebar:
   order: 7
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 핸드북의 모듈이 많아 처음에는 흩어져 보이기 쉽습니다. 이 페이지는 주요 능력을 한 장에 모아 구조를 빠르게 맞춥니다.
@@ -59,25 +60,25 @@ Skills, MCP, Hooks, 자동화는 강력하지만, 효율 확대와 규모 있는
 
 ## 시작 순서
 
-1. [Codex란 무엇인가](/guide/start-here/what-is-codex/)를 봅니다
-2. [경로 고르기](/guide/start-here/choose-your-path/)를 봅니다
-3. [빠른 시작](/guide/getting-started/)으로 들어갑니다
-4. 막히면 [기초 개념](/guide/foundations/)과 [학습 경로](/guide/learning-paths/)로 돌아옵니다
+1. [Codex란 무엇인가](/ko/guide/start-here/what-is-codex/)를 봅니다
+2. [경로 고르기](/ko/guide/start-here/choose-your-path/)를 봅니다
+3. [빠른 시작](/ko/guide/getting-started/)으로 들어갑니다
+4. 막히면 [기초 개념](/ko/guide/foundations/)과 [학습 경로](/ko/guide/learning-paths/)로 돌아옵니다
 
 ## 모듈과 권위 장
 
 | 능력 | 권위 위치 |
 |---|---|
-| 모델, Agent, 권한, 샌드박스 | [기초 개념](/guide/foundations/) |
-| 각 입구에서 어떻게 누르고 실행하는지 | [제품 매뉴얼](/guide/) |
-| 프롬프트, 컨텍스트, 도구, 품질 | [핵심 역량](/guide/) |
-| AGENTS.md와 설정 | [맞춤 설정](/guide/customization/) |
-| Skills, MCP, Plugin, 자동화 | [확장과 자동화](/skills/) |
-| 반복 가능한 협업 방법 | [워크플로 방법](/cases/workflows/) |
-| 엔드투엔드 사례 | [시나리오 사례](/cases/use-cases/) |
-| 읽기 순서 | [학습 경로](/guide/learning-paths/) |
+| 모델, Agent, 권한, 샌드박스 | [기초 개념](/ko/guide/foundations/) |
+| 각 입구에서 어떻게 누르고 실행하는지 | [제품 매뉴얼](/ko/guide/) |
+| 프롬프트, 컨텍스트, 도구, 품질 | [핵심 역량](/ko/guide/) |
+| AGENTS.md와 설정 | [맞춤 설정](/ko/guide/customization/) |
+| Skills, MCP, Plugin, 자동화 | [확장과 자동화](/ko/skills/) |
+| 반복 가능한 협업 방법 | [워크플로 방법](/ko/cases/workflows/) |
+| 엔드투엔드 사례 | [시나리오 사례](/ko/cases/use-cases/) |
+| 읽기 순서 | [학습 경로](/ko/guide/learning-paths/) |
 
-확장 선정 총도는 [확장 능력 지도](/skills/capability-map/)를, 제품 대조는 [기능 비교](/guide/reference/feature-comparison/)를 보세요. 입구별 능력 차이는 기능 비교 페이지에 둡니다.
+확장 선정 총도는 [확장 능력 지도](/ko/skills/capability-map/)를, 제품 대조는 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요. 입구별 능력 차이는 기능 비교 페이지에 둡니다.
 
 ---
 

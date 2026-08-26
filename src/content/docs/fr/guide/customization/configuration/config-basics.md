@@ -3,9 +3,10 @@ title: "Bases de la configuration"
 description: Emplacements des fichiers de configuration Codex, paramètres courants et introduction aux approbations, bac à sable et modèles.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ Ces éléments ne devraient pas reposer uniquement sur la configuration personne
 - Refactors complexes : modèle de raisonnement plus puissant (si votre plan le permet)
 - Scripts/CI : modèle fixe pour la reproductibilité
 
-Contexte conceptuel : [Modèles et raisonnement](/guide/foundations/models-and-reasoning/)
+Contexte conceptuel : [Modèles et raisonnement](/fr/guide/foundations/models-and-reasoning/)
 
 ### Approbation et bac à sable
 
@@ -84,7 +85,7 @@ Contexte conceptuel : [Modèles et raisonnement](/guide/foundations/models-and-r
 | Projet personnel fiable | Réduire les interruptions dans des limites sûres |
 | Dépôt entreprise | Suivre la politique gérée ; ne pas relaxer par vous-même |
 
-Contexte conceptuel : [Permissions et approbations](/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
+Contexte conceptuel : [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/), [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
 ### Cohérence CLI et App
 
@@ -113,9 +114,9 @@ Généralement :
 
 ## Relation avec les sujets CLI
 
-- Utilisation interactive : [Mode interactif CLI](/guide/cli/interactive-mode/)
-- Non interactif et scripts : [Mode non interactif](/guide/cli/non-interactive-mode/)
-- Détail de configuration : [Configuration CLI](/guide/cli/configuration/) · [Référence de configuration](/guide/reference/configuration-reference/)
+- Utilisation interactive : [Mode interactif CLI](/fr/guide/cli/interactive-mode/)
+- Non interactif et scripts : [Mode non interactif](/fr/guide/cli/non-interactive-mode/)
+- Détail de configuration : [Configuration CLI](/fr/guide/cli/configuration/) · [Référence de configuration](/fr/guide/reference/configuration-reference/)
 
 ## Erreurs courantes
 

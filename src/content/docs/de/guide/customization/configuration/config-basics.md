@@ -3,9 +3,10 @@ title: Konfigurationsgrundlagen
 description: "Ort der Codex-Config, häufige Optionen und Einstieg in Freigabe, Sandbox und Modell."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ Das darf nicht nur auf persönlicher Config ruhen.
 - Komplexe Refactors: stärkeres Reasoning-Modell (falls Tarif erlaubt)
 - Skripte/CI: festes Modell für Reproduzierbarkeit
 
-Hintergrund: [Modelle und Reasoning](/guide/foundations/models-and-reasoning/)
+Hintergrund: [Modelle und Reasoning](/de/guide/foundations/models-and-reasoning/)
 
 ### Freigabe und Sandbox
 
@@ -84,7 +85,7 @@ Hintergrund: [Modelle und Reasoning](/guide/foundations/models-and-reasoning/)
 | Vertrautes Privatprojekt | Unter Sicherheitsvoraussetzungen weniger Unterbrechungen |
 | Unternehmens-Repo | Managed Policy folgen, nicht selbst lockern |
 
-Hintergrund: [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/), [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
+Hintergrund: [Berechtigungen und Freigabe](/de/guide/foundations/permissions-and-approvals/), [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
 
 ### CLI- und App-Konsistenz
 
@@ -113,9 +114,9 @@ Meist:
 
 ## Bezug zu CLI-Themen
 
-- Interaktiv: [CLI-Interaktionsmodus](/guide/cli/interactive-mode/)
-- Nicht-interaktiv und Skripte: [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/)
-- Config-Details: [CLI-Konfiguration](/guide/cli/configuration/) · [Konfigurationsreferenz](/guide/reference/configuration-reference/)
+- Interaktiv: [CLI-Interaktionsmodus](/de/guide/cli/interactive-mode/)
+- Nicht-interaktiv und Skripte: [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/)
+- Config-Details: [CLI-Konfiguration](/de/guide/cli/configuration/) · [Konfigurationsreferenz](/de/guide/reference/configuration-reference/)
 
 ## Häufige Fehler
 

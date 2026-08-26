@@ -3,9 +3,10 @@ title: 非対話モード
 description: バッチ、スクリプト、パイプラインの説明ページ——向くタスクを先に理解し、具体コマンドと出力設計を見る。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e226a62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 初めて「非対話モード」を見ると、「チャット UI がない普通の Codex」と理解しがちです。
@@ -14,10 +15,10 @@ translated_at: 2026-07-28
 
 ## 推奨順序
 
-1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [スクリプトとパイプライン](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [構造化出力](/guide/developer-platform/non-interactive/structured-output/)
-4. [終了コードと再試行](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+1. [codex exec](/ja/guide/developer-platform/non-interactive/codex-exec/)
+2. [スクリプトとパイプライン](/ja/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/)
+4. [終了コードと再試行](/ja/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## このグループが解くこと
 

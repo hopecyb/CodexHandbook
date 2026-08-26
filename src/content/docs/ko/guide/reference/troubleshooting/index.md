@@ -3,9 +3,10 @@ title: 장애 분석 색인
 description: 증상별로 대응 튜토리얼과 제품 페이지로 안내합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 55a1e60
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,12 +17,12 @@ sidebar:
 
 | 증상 | 이동 |
 |---|---|
-| 설치 실패 | [데스크톱 장애 분석](/guide/desktop-app/troubleshooting/) · [CLI 장애 분석](/guide/cli/troubleshooting/) · [IDE 장애 분석](/guide/ide/troubleshooting/) |
-| 로그인/인증 실패 | [로그인](/guide/getting-started/sign-in-and-authentication/) |
-| 어느 클라이언트를 고를지 모름 | [클라이언트 선택](/guide/getting-started/choose-your-codex-client/) · [기능 대조](/guide/reference/feature-comparison/) |
-| 결과가 경계를 넘거나 매우 나쁨 | [결과 확인](/guide/getting-started/review-the-result/) · [프롬프트 디버깅](/prompts/prompt-debugging/) · [실행 취소](/guide/getting-started/undo-and-recover/) |
-| 컨텍스트가 혼란스러움 | [초점 유지](/guide/context/keep-context-focused/) |
-| 권한/샌드박스 의문 | [권한](/guide/foundations/permissions-and-approvals/) · [샌드박스](/guide/foundations/sandbox-and-network/) |
+| 설치 실패 | [데스크톱 장애 분석](/ko/guide/desktop-app/troubleshooting/) · [CLI 장애 분석](/ko/guide/cli/troubleshooting/) · [IDE 장애 분석](/ko/guide/ide/troubleshooting/) |
+| 로그인/인증 실패 | [로그인](/ko/guide/getting-started/sign-in-and-authentication/) |
+| 어느 클라이언트를 고를지 모름 | [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/) · [기능 대조](/ko/guide/reference/feature-comparison/) |
+| 결과가 경계를 넘거나 매우 나쁨 | [결과 확인](/ko/guide/getting-started/review-the-result/) · [프롬프트 디버깅](/ko/prompts/prompt-debugging/) · [실행 취소](/ko/guide/getting-started/undo-and-recover/) |
+| 컨텍스트가 혼란스러움 | [초점 유지](/ko/guide/context/keep-context-focused/) |
+| 권한/샌드박스 의문 | [권한](/ko/guide/foundations/permissions-and-approvals/) · [샌드박스](/ko/guide/foundations/sandbox-and-network/) |
 
 ## 문제 종류를 모를 때
 

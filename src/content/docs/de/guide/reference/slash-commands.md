@@ -1,122 +1,126 @@
 ---
 title: Slash-Befehle und Schnelleinstiege
-description: '/-Befehle und $-Skill-Aufrufe — Lernkurzreferenz, kein vollständiges Parameterhandbuch.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Kurzübersicht zu /-Befehlen und $-Skill-Aufrufen zum Lernen, nicht als vollständiges Parameterhandbuch.
 sidebar:
   order: 40
+locale: de
+source_locale: zh-CN
+source_revision: 9debf5c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Beim ersten Slash-Befehl wirkt es oft wie auswendig zu lernender Jargon. Als Schnelleinstiege, die Sie aktiv anwählen, geht es leichter.
+Beim ersten Kontakt wirken Slash-Befehle leicht wie eine Liste auswendig zu lernender Fachbegriffe. Einfacher ist es, sie als ausdrücklich aufrufbare Schnelleinstiege zu betrachten.
 
-Sie führen typischerweise in feste Modi oder eingebaute Abläufe. Slash-Befehle (`/command`) hängen mit `$name`-Aufrufen von [Skills](/skills/overview/) zusammen, sind aber nicht dasselbe. Die konkrete Liste **ändert sich mit Produkt und Version** — vor Nutzung Client-`/`-Completion und offizielle Docs.
+Sie öffnen normalerweise schnell einen bestimmten Modus oder integrierten Ablauf. Slash-Befehle (`/command`) und der Aufruf eines [Skills](/de/skills/overview/) mit `$name` hängen zusammen, sind aber nicht identisch. Die konkrete Liste **ändert sich je nach Produkt und Zugriffsrechten**, und Desktop-App, CLI, IDE sowie ChatGPT Web bieten unterschiedliche Mengen. Maßgeblich sind die aktuelle Autovervollständigung nach `/` im Composer und die offizielle Dokumentation.
 
-## Konzeptuelle Unterscheidung
+## Begriffe unterscheiden
 
-| Einstieg | Wer startet | Typischer Nutzen |
+| Einstieg | Auslöser | Typischer Zweck |
 |---|---|---|
-| Slash wie `/review` | Sie tippen `/` | Eingebauter oder konfigurierter Fixablauf |
-| `$skill-name` | Sie oder das Modell | Projekt- oder Nutzer-Skill |
-| Natürliche Sprache | Sie | Allgemeine Aufgaben |
+| Slash-Befehl wie `/review` | Du gibst `/` ein | Integrierter oder konfigurierter fester Ablauf |
+| `$skill-name` | Du oder das Modell | Skill des Projekts oder Benutzers |
+| Natürliche Sprache | Du | Allgemeine Aufgabe |
 
-## Direkte Unterscheidung der drei
+## Direkte Unterscheidung
 
-- `/Befehl`: Im Chat aktiv einen Schnelleinstieg wählen
-- `$skill`: Sie oder das Modell benennen einen Skill
-- Natürliche Sprache: Bedarf sagen, Modell entscheidet den Weg
+- `/Befehl`: Du wählst im Chat ausdrücklich einen Schnelleinstieg
+- `$skill`: Du oder das Modell ruft einen bestimmten Skill auf
+- Natürliche Sprache: Du beschreibst die Anforderung und lässt das Modell die Vorgehensweise wählen
 
-Für bekannte Abläufe ist `/Befehl` oft direkter.
+Wenn du einen bekannten Ablauf schneller öffnen möchtest, ist ein `/Befehl` der direktere Weg.
 
-## Was es ist
+## Was ein Slash-Befehl ist
 
 - Kein Terminalbefehl
-- Kein mysteriöser Jargon
-- Eher „Shortcut-Buttons“ in der Chat-UI
+- Kein geheimnisvoller Fachbegriff
+- Vergleichbar mit dem Einstieg über eine „Schnellaktionsschaltfläche“ im Chat
 
-Geeignet wenn:
+Er eignet sich besonders, wenn:
 
-- Sie schon wissen, welchen Flow Sie wollen
-- Sie dieselbe Absicht nicht jedes Mal neu formulieren wollen
+- du den gewünschten Ablauf bereits kennst
+- du dieselbe Absicht nicht jedes Mal neu formulieren möchtest
 
 ## Häufige Missverständnisse
 
-### 1. Slash = Terminalbefehl
+### 1. Slash-Befehle sind Terminalbefehle
 
-Schnelleinstieg in der Chat-UI — kein `codex ...` in der Shell.
+Sie sind Schnelleinstiege in der Chat-Oberfläche und keine `codex ...`-Befehle für die Shell.
 
-### 2. Die Liste ist fest
+### 2. Die Liste der Slash-Befehle bleibt unverändert
 
-Produkt, Version und Umgebung ändern verfügbare Befehle — **Completion-Liste** der aktuellen Umgebung ist zuverlässiger.
+Verfügbare Befehle können sich nach Produkt, Version und Umgebung unterscheiden. Die **Autovervollständigung** der aktuellen Umgebung ist zuverlässiger als eine auswendig gelernte Liste.
 
-### 3. Slash umgeht Freigabe und Sandbox
+### 3. Slash-Befehle umgehen Genehmigungen und Sandbox
 
-Löst es Schreiben, Befehle oder Netz aus, gelten weiterhin aktuelle Policies.
+Wenn der ausgelöste Ablauf Dateien schreibt, Befehle ausführt oder das Netzwerk verwendet, gilt weiterhin die aktuelle Richtlinie.
 
-### 4. Ohne Slash nutze ich Codex schlecht
+### 4. Ohne Slash-Befehle lässt sich Codex nicht gut verwenden
 
-Natürliche Sprache deckt die meisten Aufgaben. Slash beschleunigt und fixiert Einstiege, wenn Sie schon etwas Routine haben.
+Die meisten Aufgaben können in natürlicher Sprache beschrieben werden. Slash-Befehle beschleunigen bekannte Abläufe, nachdem du mit Codex vertrauter bist.
 
-## Häufige Kategorien (illustrativ)
+## Derzeit häufige Einstiege
 
-Namen können je Version zu-/abnehmen — **nur Lernklassifikation**:
+### Desktop-App / IDE
 
-### Sitzung und Modus
+- `/plan`: In einen Planungsmodus für mehrere Schritte wechseln
+- `/review`: Nicht committete Änderungen oder Vergleich mit einem Basis-Branch prüfen
+- `/status`: Chat-ID, Kontextverbrauch und Rate Limits anzeigen
+- `/mcp`: Verbindungsstatus von MCP anzeigen
+- `/init`: Gerüst für `AGENTS.md` im aktuellen Projekt erstellen
 
-- Planungsmodus wechseln, Kontext komprimieren, Hilfe
-- Mit [Planung](/guide/agent-work/planning/)
+### Sitzungssteuerung nur in der CLI
 
-### Review und Qualität
+- `/permissions`: Berechtigungsmodus der aktuellen Sitzung anpassen
+- `/agent`: Agent-Threads prüfen oder wechseln
+- `/model`: Aktuelles Modell auswählen
+- `/status`: Einstellungen der aktuellen Sitzung prüfen
 
-- Diff oder PR reviewen
-- Mit [Diffs reviewen](/guide/quality/review-diffs/)
+ChatGPT Web besitzt ein eigenes Befehlsmenü im Composer. Gehe nicht davon aus, dass Befehle aus Desktop-App oder CLI dort unter demselben Namen verfügbar sind.
 
-### Workspace und Git
+## Hinweise zur Verwendung
 
-- Status, Commit-Message erzeugen (Commit weiterhin von Ihnen bestätigen)
-- [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) beachten
-
-### Erweiterungen
-
-- Skills installieren oder listen (falls z. B. `skill-installer`)
-
-## Beim Nutzen beachten
-
-1. **Zuerst `/` tippen** — was die Umgebung bietet, keine veraltete Liste pauken
-2. Team-Fixabläufe eher als **Skill + Doku** — weniger „nur alte Hasen kennen den Namen“
-3. Schreibaktionen durch Slash weiterhin unter Sandbox und Freigabe
+1. Gib zuerst `/` ein und prüfe die aktuelle Umgebung, statt eine veraltete Liste auswendig zu lernen.
+2. Setze wiederkehrende Teamabläufe vorzugsweise als **Skill mit Dokumentation** um, damit nicht nur erfahrene Personen den Befehlsnamen kennen.
+3. Von Slash-Befehlen ausgelöste Schreibzugriffe unterliegen weiterhin Sandbox und Genehmigungen.
 
 ## Direkt ausprobieren
 
-1. `/` eingeben
-2. Sehen, was die Umgebung bietet
-3. Einen verständlichen Namen/Zweck zuerst testen
+Gehe so vor:
 
-## Erster Versuch
+1. Gib `/` ein.
+2. Sieh dir die in der aktuellen Umgebung verfügbaren Einträge an.
+3. Wähle zunächst einen Eintrag, dessen Name und Zweck du verstehst.
 
-1. `/` — was bietet die Umgebung
-2. Einen verständlichen Befehl einmal testen
-3. Beobachten: eher „Modus wechseln“ oder „Ablauf starten“?
-4. Langfristig wiederverwendbare Team-Flows als Skill ablegen
+## Erster Lernversuch
 
-So wird die Arbeitsteilung klar: Slash = Schnelleinstieg, Skill = langfristiger Flow.
+Eine geeignete Reihenfolge ist:
+
+1. Gib `/` ein und sieh dir das aktuelle Angebot an.
+2. Probiere einen Befehl mit verständlichem Zweck aus.
+3. Beobachte, ob er eher einen Modus wechselt oder einen Ablauf ausführt.
+4. Wenn das Team diesen Ablauf langfristig wiederverwenden soll, erwäge anschließend einen Skill.
+
+So wird die Aufgabenteilung deutlich: Slash-Befehle sind Schnelleinstiege, Skills wiederverwendbare Langzeitabläufe.
 
 ## Unterschied zu CLI-Befehlen
 
-| | Chat `/` | Terminal `codex …` |
+| | `/` im Chat | `codex …` im Terminal |
 |---|---|---|
-| Kontext | Aktuelle Sitzung und @-Dateien | Verzeichnis per `--cwd` |
-| Geeignet | Interaktives Explorieren | Skripte, CI |
+| Kontext | Aktuelle Sitzung und beigefügte Dateien | Mit `--cd` / `-C` festgelegtes Verzeichnis |
+| Geeignet für | Interaktive Untersuchung | Skripte und CI |
 
-Slash als Chat-Schnelleinstieg — aktuelle Umgebung ansehen schlägt Auswendiglernen.
+Slash-Befehle sind Schnelleinstiege im Chat. Es ist hilfreicher, die tatsächlich verfügbaren Einträge der aktuellen Umgebung zu prüfen, als Namen auswendig zu lernen.
 
-CLI-Unterbefehle: [CLI Interaktiver Modus](/guide/cli/interactive-mode/) und [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/). Vollständige Parametertabellen: [CLI-Befehlsreferenz](/guide/reference/commands/).
+CLI-Unterbefehle behandeln [Interaktiver CLI-Modus](/de/guide/cli/interactive-mode/) und [Nicht interaktiver Modus](/de/guide/cli/non-interactive-mode/). Eine vollständige Parameterübersicht bietet die [Referenz der CLI-Befehle](/de/guide/reference/commands/).
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfhinweis:** Behandelt `/review`, Slash-Kategorien und `$skill`; verfügbare Menge, Namen und Verhalten ändern sich schnell — ohne aktuelle offizielle vollständige Liste eher `outdated`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App / CLI / IDE
+
+**Prüfgrundlage:** Mit den aktuellen offiziellen Tabellen für Slash commands in der Desktop-App und Developer commands abgeglichen. Die Seite stellt ausdrücklich klar, dass sich die Befehlssätze der Arbeitsoberflächen unterscheiden. Alle aufgeführten Befehle stammen aus der aktuellen offiziellen Tabelle; die endgültige Verfügbarkeit richtet sich weiterhin nach der Autovervollständigung im Composer.
+
+**Zuletzt geprüft:** 2026-08-26

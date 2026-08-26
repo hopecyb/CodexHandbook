@@ -3,9 +3,10 @@ title: "Exemple : Skill d'automatisation"
 description: Encapsuler des vérifications répétitives ou la génération de rapports en Skill.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemple : Skill d'automatisation
@@ -30,8 +31,8 @@ description: Synthétise les changements d'hier, l'état des tests et les tâche
 
 ## Liens
 
-- [Cas : automatiser un rapport quotidien](/cases/automate-a-daily-report/)
-- [Tâches planifiées](/skills/automations/scheduled-tasks/)
+- [Cas : automatiser un rapport quotidien](/fr/cases/automate-a-daily-report/)
+- [Tâches planifiées](/fr/skills/automations/scheduled-tasks/)
 
 ---
 

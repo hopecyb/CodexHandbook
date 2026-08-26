@@ -1,96 +1,149 @@
 ---
-title: Aufgabenstruktur
-description: 'Ziel, Hintergrund, Eingaben, Constraints, Abnahme und Berechtigungsgrenzen.'
+title: Struktur einer guten Aufgabe
+description: Ziel, Hintergrund, Eingaben, Einschränkungen, Abnahme und Berechtigungsgrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 4df3d01
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Bei vielen Infos zerfallen Anforderungen leicht: viel Material, unklarer Fokus — und Codex missversteht leichter.
+Je mehr Informationen eine Anforderung enthält, desto leichter verliert sie ihre Struktur: Materialien, Ergebnis, Grenzen und Abnahme stehen ungeordnet nebeneinander, und Codex muss die Lücken selbst füllen.
 
-Hier die typischen Bausteine einer Aufgabe.
+Diese Seite bietet einen direkt wiederverwendbaren Arbeitsauftrag. Du erfährst, welches Problem jeder Abschnitt löst und wie die Aufgabenbeschreibung in den Zyklus „Untersuchen, Planen, Ausführen, Verifizieren“ eintritt.
+
+## Zielgruppe
+
+- Personen, die Codex bereits öffnen können, aber häufig zu viele Änderungen, unvollständige Arbeit oder schwer beurteilbare Ergebnisse erhalten
+- Entwickler, Kreative und Teams, die mündlich formulierte Anforderungen an einen Agent übergeben möchten
+- Personen, die für Langzeitaufgaben Umfang, Berechtigungen und Abbruchbedingungen festlegen müssen
 
 ## Aufgabenstruktur
 
-Organisiere in dieser Reihenfolge:
+Ordne die Informationen in dieser Reihenfolge:
 
-- Was ist das Ergebnis?
-- Warum wird es gebraucht?
-- Welche Materialien braucht es?
+- Welches Ergebnis wird erwartet?
+- Weshalb ist die Aufgabe erforderlich?
+- Welche Materialien werden benötigt?
 - Wo liegen die Grenzen?
-- Wie wird Fertigstellung beurteilt?
+- Woran wird der Abschluss erkannt?
 
-Die Reihenfolge muss nicht starr sein — wenn diese Punkte klar sind, wird die Aufgabe deutlich stabiler.
+Die Reihenfolge muss nicht starr sein. Wenn diese Punkte eindeutig sind, wird die Aufgabe jedoch wesentlich stabiler.
 
 ## Empfohlene Vorlage
 
 ```text
-Ziel: …… (was ist das End-Artefakt)
-Hintergrund: …… (warum wichtig, aktueller Stand)
-Eingaben: …… (relevante Dateien/Links/eingefügter Inhalt)
-Constraints: …… (änderbarer Scope, Stil, Verbote)
-Abnahmekriterien: …… (prüfbare Fertigstellungsbedingungen)
-Berechtigungsgrenzen: …… (Netzwerk? Dependencies installieren? Config ändern?)
-Bei fehlenden Infos: zuerst fragen, nicht raten.
+Ziel: … [Welches Endergebnis wird erwartet?]
+Hintergrund: … [Weshalb ist es wichtig, wie ist der aktuelle Zustand?]
+Eingaben: … [Relevante Dateien, Links oder eingefügte Inhalte]
+Einschränkungen: … [Änderbarer Bereich, Stil und Verbote]
+Abnahmekriterien: … [Prüfbare Fertigstellungsbedingungen]
+Berechtigungsgrenzen: … [Netzwerk, Abhängigkeiten installieren, Konfiguration ändern]
+Bei fehlenden Informationen: Zuerst fragen, nicht raten.
 ```
 
-## Rolle jedes Abschnitts
+![Geschlossener Zyklus von der Aufgabenbeschreibung zum verifizierbaren Ergebnis](/diagrams/task-execution-loop-de.svg)
 
-- **Ziel**: verhindert reine Aktionen ohne Ergebnis
-- **Hintergrund**: hilft Codex zu verstehen, warum so
-- **Eingaben**: liefert Dateien, Links und Material, die wirklich nötig sind
-- **Constraints**: verhindert Grenzverletzung und „nebenbei mitändern“
-- **Abnahmekriterien**: macht „fertig?“ prüfbar
-- **Berechtigungsgrenzen**: klärt Netz, Dependencies, Config im Voraus
+Die sechs Elemente auf der linken Seite des Diagramms sollen den Prompt nicht verlängern, sondern entscheidende Lücken schließen. Nach Beginn der Ausführung bestimmen Verifikationsnachweise den nächsten Schritt: Nur ein erfolgreiches Ergebnis wird ausgeliefert. Bei einem Fehlschlag kehrt die Aufgabe mit den Fehlerinformationen zur Beschreibung oder zum Plan zurück, statt blind weiter verändert zu werden.
+
+## Zweck jedes Abschnitts
+
+- **Ziel:** Verhindert Aufgaben, die nur eine Aktion, aber kein Ergebnis beschreiben
+- **Hintergrund:** Hilft Codex zu verstehen, weshalb die Aufgabe so erledigt werden soll
+- **Eingaben:** Stellt die tatsächlich benötigten Dateien, Links und Materialien bereit
+- **Einschränkungen:** Verhindert Überschreitungen und beiläufige Zusatzänderungen
+- **Abnahmekriterien:** Macht die Frage „Ist die Aufgabe fertig?“ überprüfbar
+- **Berechtigungsgrenzen:** Klärt vorab Netzwerkzugriff, Installation von Abhängigkeiten und Konfigurationsänderungen
 
 ## Häufige Missverständnisse
 
-### 1. Jeder Abschnitt muss voll sein
+### 1. Jeder Abschnitt muss ausführlich ausgefüllt werden
 
-Die Vorlage ist eher Checkliste als Lückentext.  
-Manche Aufgaben brauchen keinen langen Hintergrund — aber ohne ihn fehlt auch ein Teil der Entscheidungsgrundlage.
+Die Vorlage ist eher eine Checkliste als ein Lückentext.  
+Einige Aufgaben benötigen keinen langen Hintergrund. Wenn du ihn auslässt, fehlt allerdings auch ein Teil der Entscheidungsgrundlage.
 
 ### 2. Ziel und Abnahme sind dasselbe
 
-Nicht dasselbe.
+Sie erfüllen unterschiedliche Aufgaben:
 
-- **Ziel**: welches Ergebnis du willst
-- **Abnahme**: wie du prüfst, dass es wirklich erreicht ist
+- Das **Ziel** beschreibt das gewünschte Ergebnis
+- Die **Abnahme** beschreibt, wie du bestätigst, dass dieses Ergebnis tatsächlich erreicht wurde
 
-### 3. Eingaben = möglichst viel Material einfügen
+### 3. Eingaben bedeuten, möglichst viele Materialien einzufügen
 
-Nicht mehr ist besser — relevant zählt.  
-Ziel: „Muss-Material“ klar übergeben.
+Mehr Eingaben sind nicht automatisch besser; entscheidend ist ihre Relevanz.  
+Kennzeichne eindeutig die Materialien, die unbedingt gelesen werden müssen.
 
 ## Minimale Aufgabenvorlage
 
-Wenn du zuerst eine brauchbare Kurzfassung willst:
+Für eine kurze, brauchbare Fassung kannst du die Vorlage so reduzieren:
 
 ```text
-Ziel: Was soll wie werden
-Eingaben: relevante Dateien oder Seiten hier
-Constraints: nur hier ändern, das nicht anfassen
-Abnahme: wie prüfe ich, dass du fertig bist
-Bei Unsicherheit: zuerst fragen
+Ziel: Was soll in welchen Zustand gebracht werden?
+Eingaben: Hier befinden sich die relevanten Dateien oder Seiten
+Einschränkungen: Welche Bereiche dürfen geändert werden und welche nicht?
+Abnahme: Wie prüfe ich, dass die Aufgabe wirklich abgeschlossen ist?
+Bei Unsicherheit: Zuerst fragen
 ```
 
-## Beispiel
+## Von einer unklaren Anfrage zur ausführbaren Aufgabe
+
+### Ursprüngliche Anfrage
 
 ```text
-Ziel: Docs-Homepage First-Screen-Text für Einsteiger verständlicher machen
-Eingaben: src/content/docs/guide/index.md
-Constraints: nur diese Datei, kein Style, keine neuen Komponenten
-Abnahme: Struktur behalten; Text umgangssprachlicher; pnpm build ok
-Bei Unsicherheit: zuerst Verständnis und Scope nennen, dann handeln
+Optimiere bitte die Startseite der Dokumentation.
 ```
 
-Diese Struktur reduziert Raten und macht Abnahme direkter. Abschnitte kannst du kürzen — aber was du streichst, fehlt als Information.
+Dieser Satz nennt weder Zielgruppe noch Änderungsbereich oder Kriterien für eine Verbesserung. Selbst wenn Codex Inhalt erzeugt, lässt sich kaum beurteilen, ob der Umfang überschritten wurde.
+
+### Ausführbare Fassung
+
+```text
+Ziel: Schreibe den Text im ersten sichtbaren Bereich der Dokumentationsstartseite neu, damit Personen ohne Codex-Erfahrung innerhalb von 30 Sekunden verstehen, worum es geht und wo sie beginnen.
+Hintergrund: Die aktuelle Startseite setzt voraus, dass Leser Agent, Kontext und Skill bereits verstehen, und erklärt den Einstieg nicht direkt genug.
+Eingabe: src/content/docs/guide/index.md
+Einschränkungen: Ändere nur diese Datei. Ändere weder Navigation, Stile noch Komponenten. Ergänze beim ersten Auftreten von Agent eine allgemein verständliche Erklärung.
+Abnahmekriterien:
+- Der erste sichtbare Bereich nennt Zweck des Handbuchs, Zielgruppe und ersten Leseeinstieg
+- Vorhandenes Frontmatter und Überschriftenebenen bleiben erhalten
+- Keine neuen unerklärten Fachbegriffe
+- pnpm build besteht
+Berechtigungsgrenzen: Verwandte interne Seiten dürfen gelesen werden. Kein Netzwerkzugriff, keine Installation von Abhängigkeiten und kein Git-Commit.
+Bei fehlenden Informationen: Liste zuerst die fehlenden Informationen und den geplanten Änderungsbereich auf und warte auf meine Bestätigung.
+```
+
+### Erwarteter Ausführungsablauf
+
+1. Startseite und benachbarte Einstiegsseiten lesen und die aktuellen Probleme beschreiben.
+2. Einen kurzen Plan erstellen, der nur eine Datei betrifft.
+3. Den Text ändern und eine Diff-Zusammenfassung zeigen.
+4. `pnpm build` ausführen.
+5. Für jedes der vier Abnahmekriterien den entsprechenden Nachweis berichten.
+
+## Die eigene Aufgabenbeschreibung prüfen
+
+Frage dich vor dem Absenden:
+
+- Beschreibt das Ziel ein Ergebnis oder nur eine Aktion wie „optimieren“, „bearbeiten“ oder „ansehen“?
+- Enthalten die Eingaben ausschließlich wirklich relevante Dateien und Materialien?
+- Nennen die Einschränkungen ausdrücklich, welche Inhalte unberührt bleiben müssen?
+- Kann eine andere Person bei den Abnahmekriterien eindeutig zwischen „bestanden“ und „nicht bestanden“ entscheiden?
+- Müssen Netzwerkzugriff, Installation von Abhängigkeiten, externe Schreibzugriffe oder Commits vorab genehmigt werden?
+- Soll Agent bei fehlenden Informationen zuerst fragen, selbst nachsehen oder anhalten?
+
+Du kannst die Vorlage an die Größe der Aufgabe anpassen. Jeder ausgelassene Abschnitt entfernt jedoch eine Kategorie von Entscheidungsgrundlagen. Ein Tippfehler in einer Datei benötigt keinen langen Hintergrund; eine modulübergreifende Migration darf nicht nur aus einem Zielsatz bestehen.
+
+## Nächste Schritte
+
+- [Fertigstellungskriterien definieren](/de/prompts/define-done/)
+- [Einschränkungen und Grenzen](/de/prompts/constraints-and-boundaries/)
+- [Zuerst einen Plan anfordern](/de/prompts/ask-for-a-plan/)
+- [Untersuchen, planen, ausführen, verifizieren](/de/cases/workflows/explore-plan-execute-verify/)
 
 ---
 
 **Status:** verified  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfgrundlage:** Diese Seite erklärt nur Methoden zur Aufgabenstruktur; Beispiele und interne Links wurden geprüft, der Text hängt nicht von volatilen Fakten wie Produktversion, Preis oder UI ab.  
-**Zuletzt geprüft:** 2026-07-26
+**Unterstützte Produkte:** App / CLI / IDE / Cloud  
+**Prüfgrundlage:** Diese Seite beschreibt ausschließlich eine Methode zur Aufgabenstruktur. Beispiele und interne Links wurden geprüft; der Text hängt nicht von veränderlichen Fakten wie Produktversion, Preis oder Oberfläche ab.  
+**Zuletzt geprüft:** 2026-08-25

@@ -3,9 +3,10 @@ title: レビュー付きドキュメント改修
 description: 事例——Astro/Starlight ドキュメントプロジェクトでのリンクとセクション一括更新。小さな diff とビルド検証。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 本事例は **コンテンツエンジニアリング** タスク：複数 Markdown、サイドバー設定、ビルド検証。スタックは本ハンドブックに合わせていますが、パターンは任意の静的サイトに適用できます。
@@ -19,7 +20,7 @@ translated_at: 2026-07-28
 | リスク | 中（リンクとナビゲーションが多い） |
 | 所要 | 1〜3 時間（規模による） |
 
-テンプレート参照：[事例テンプレート](/cases/use-cases/case-study-template/)
+テンプレート参照：[事例テンプレート](/ja/cases/use-cases/case-study-template/)
 
 ## 背景
 
@@ -50,7 +51,7 @@ translated_at: 2026-07-28
 
 - **設定がコンテンツより先**：slug 欠落のビルドエラーを避ける
 - 3〜5 ファイル単位でコミットしレビューしやすく
-- [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/) を使用
+- [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) を使用
 
 ## チェック
 

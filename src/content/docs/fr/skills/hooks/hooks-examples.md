@@ -3,183 +3,110 @@ title: Exemples de configuration Hook
 description: Configurations et squelettes de scripts Hook adaptables — scan de secrets, journal d'audit, validation de format.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5a86fd4
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-En lisant des exemples Hook, confirmez ce qu'ils défendent, puis adaptez à votre environnement.
+This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
 
-Ce chapitre fournit des configurations et scripts **illustratifs** pour adaptation en équipe. Les noms de champs et chemins suivent la [documentation officielle](https://developers.openai.com/codex) et le `codex --help` local ; testez dans un dépôt isolé avant de copier.
+Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
-Prérequis : [Vue d'ensemble des Hooks](/skills/hooks/hooks-overview/) · [Types d'événements Hook](/skills/hooks/hook-event-types/)
+## Goal and boundary
 
-## Confirmer le périmètre avant usage
+Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.
 
-Ne traitez pas ces exemples comme des « réponses standard » à copier-coller.  
-Traitez-les comme trois modèles :
+This demonstrates Hook input, output, and test structure only:
 
-- Journal seul
-- Blocage en premier
-- Contrôle léger des entrées
+- It does not replace a professional secret scanner.
+- The regular expression has false positives and false negatives.
+- It does not scan hosted tools.
+- It must not log complete tool input.
 
-Comprenez l'idée, puis décidez s'il faut étendre.
-
-## Exemple 1 : Journal d'audit après appel d'outil (lecture seule)
-
-**Objectif :** Enregistrer qui a écrit quels chemins et quand — ne pas écrire des secrets sur disque si le masquage échoue.
-
-`hooks.json` (illustratif) :
+## 1. Configure hooks.json
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.after",
-      "command": ".codex/hooks/audit-log.sh",
-      "timeout_ms": 500
-    }
-  ]
+  "description": "Block obvious secret-shaped strings before local writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/examples/hooks/secret-guard/pre_tool_use_guard.py\"",
+            "timeout": 3,
+            "statusMessage": "Checking tool input for secret-shaped strings"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
-`.codex/hooks/audit-log.sh` :
+In a real repository, place configuration in `.codex/hooks.json` and the script under `.codex/hooks/`. The handbook keeps example paths so the complete artifact can be tested directly.
 
-```bash
-#!/usr/bin/env bash
-# stdin : payload JSON (structure selon docs officielles)
-payload=$(cat)
-tool=$(echo "$payload" | jq -r '.tool // "unknown"')
-ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
-exit 0
-```
+## 2. Denial output
 
-**Validation :** Après une écriture de fichier, le journal a une ligne ; le script sort toujours 0.
-
-Les exemples journal seul sont le risque le plus faible — généralement le meilleur point de départ.
-
-## Exemple 2 : Bloquer des secrets suspects avant appel d'outil
-
-**Objectif :** `block` quand le diff ou le contenu d'écriture correspond au motif de clé d'accès AWS.
+The script reads event JSON from stdin and checks only `tool_input.command`. On a match it prints:
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.before",
-      "command": ".codex/hooks/secret-scan.sh",
-      "on_failure": "block",
-      "timeout_ms": 300
-    }
-  ]
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Secret-shaped string blocked by example hook."
+  }
 }
 ```
 
-Logique centrale dans `secret-scan.sh` (illustratif) :
+On no match it exits `0` with no output. Plain stdout is not a valid `PreToolUse` decision.
+
+## 3. Run tests
 
 ```bash
-#!/usr/bin/env bash
-payload=$(cat)
-text=$(echo "$payload" | jq -r '.arguments // empty' 2>/dev/null)
-if echo "$text" | grep -qE 'AKIA[0-9A-Z]{16}'; then
-  echo "Bloqué : possible clé d'accès AWS dans les arguments d'outil" >&2
-  exit 1
-fi
-exit 0
+python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-**Validation :** Chaîne de test avec `AKIA` bloquée ; `git status` normal passe.
+Expected: three tests pass, covering a normal command, suspected credential, and non-object `tool_input`.
 
-:::caution
-Le scan par regex a des faux positifs/négatifs — complément seulement ; les vrais secrets doivent utiliser des scanners de secrets et pre-commit ; voir [contexte sensible](/guide/context/sensitive-context/).
-:::
-
-Utilisez des Hooks de type block quand vous savez qu'il faut stopper de vraies actions. Commencer par block rend le débogage plus coûteux.
-
-## Exemple 3 : Politique de longueur et mots-clés à la soumission du prompt utilisateur
-
-**Objectif :** Rejeter les tentatives évidentes de contourner les instructions système (simplifié).
+You can also pipe a fixture manually:
 
 ```bash
-#!/usr/bin/env bash
-prompt=$(cat | jq -r '.prompt // empty')
-if [ "${#prompt}" -gt 50000 ]; then
-  echo "Prompt trop long" >&2
-  exit 1
-fi
-if echo "$prompt" | grep -qi 'ignore previous instructions'; then
-  echo "Bloqué : motif d'injection possible" >&2
-  exit 1
-fi
-exit 0
+printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
+  | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-**Validation :** Prompt trop long et motifs détectés échouent ; tâches normales passent.
+Normal input produces no stdout.
 
-Au minimum :
+## 4. Enable it in a project
 
-- Peut inspecter l'entrée
-- Raison d'échec claire
-- Ne bloque pas excessivement les requêtes normales
+1. Put configuration and script in the target repository using a stable repository-relative path.
+2. Run unit tests and one real normal command in an isolated repository.
+3. Start Codex and open `/hooks` to inspect the source and exact definition.
+4. After trusting it, verify both a normal pass and test-string denial.
+5. Review again after editing the script; a hash change returns an unmanaged Hook to pending trust.
 
-## Idées reçues courantes
+## From warning to blocking
 
-### 1. Si l'exemple fonctionne, il est prêt pour la production
+Production teams usually start with non-blocking audit or context, then move to deny. Before upgrading, answer:
 
-Les exemples enseignent la structure et les idées — pas une config production à déployer telle quelle.
+- Do fixtures cover known false positives?
+- Is a timeout or crash understandable to the user?
+- Does CI or service policy also enforce the rule?
+- Are bypass and emergency recovery auditable?
 
-### 2. Les Hooks block sont plus matures que les Hooks log
+## Official source
 
-Beaucoup d'équipes commencent par les journaux, confirment faux positifs et performance, puis passent à warn ou block.
+- [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
 
-### 3. Les exemples Hook ne concernent que la syntaxe de script
-
-Considérez aussi :
-
-- Sur quel événement il s'accroche
-- Stratégie d'échec
-- Si l'équipe peut expliquer pourquoi il bloque ainsi
-
-## Tester les Hooks
-
-```bash
-# Tester le script avec fixture (illustratif)
-echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
-echo $?
-```
-
-## Progression courante
-
-Beaucoup d'équipes suivent :
-
-1. Hook journal en lecture seule
-2. Hook warn
-3. Hook block
-
-Cela sépare « la logique est correcte » de « l'équipe accepte le blocage ».
-
-Les exemples Hook servent à apprendre la structure — pas à copier mot pour mot en production.
-
-## Erreurs courantes
-
-- Script sans `chmod +x`, échec silencieux
-- `timeout_ms` trop court provoque des faux blocages
-- Chemin de journal non writable casse toute la chaîne Hook
-- `curl` du payload complet sortant depuis le Hook
-
-## Liste de validation
-
-- [ ] Chaque Hook a des tests fixture
-- [ ] Stratégie d'échec (block/warn) conforme à la politique d'équipe
-- [ ] Config et scripts même dépôt, même revue PR
-- [ ] Docs indiquent date de vérification et version CLI applicable
-
-## Sources de référence
-- Exemples OpenAI Codex Hooks
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** CLI / App (selon version)  
-**Base de vérification :** Inclut structure de config Hook, noms d'événements, champs de payload et exemples de scripts — fortement lié à l'implémentation actuelle ; manque de base officielle publique stable.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
+
+**Last verified:** 2026-08-25

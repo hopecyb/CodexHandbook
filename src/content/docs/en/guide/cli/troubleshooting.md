@@ -3,10 +3,12 @@ title: CLI Troubleshooting
 description: Diagnose authentication, permissions, and command failures.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
+source_revision: 0d016f1
 ---
 
 | Symptom | Try first |

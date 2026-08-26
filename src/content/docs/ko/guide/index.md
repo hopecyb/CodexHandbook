@@ -3,9 +3,10 @@ title: Codex 가이드
 description: Codex를 이해하고, 클라이언트를 고르고, 첫 작업을 마친 뒤 권한·컨텍스트·검증을 익힙니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6019b85
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Codex 가이드
@@ -25,14 +26,14 @@ translated_at: 2026-07-28
 
 ## 권장 순서
 
-1. [여기서부터 시작](/guide/start-here/) — 새 독자를 위한 최단 경로
-2. [Codex란 무엇인가](/guide/start-here/what-is-codex/)
-3. [클라이언트 선택](/guide/choose-your-client/)
-4. [첫 작업 완료](/cases/first-task/)
-5. [권한과 샌드박스](/guide/permissions-and-sandbox/)
-6. [컨텍스트와 파일](/guide/context-and-files/)
-7. [검증](/guide/verification/)
-8. 문제가 생기면 [문제 해결](/guide/troubleshooting/)을 확인합니다
+1. [여기서부터 시작](/ko/guide/start-here/) — 새 독자를 위한 최단 경로
+2. [Codex란 무엇인가](/ko/guide/start-here/what-is-codex/)
+3. [클라이언트 선택](/ko/guide/choose-your-client/)
+4. [첫 작업 완료](/ko/cases/first-task/)
+5. [권한과 샌드박스](/ko/guide/permissions-and-sandbox/)
+6. [컨텍스트와 파일](/ko/guide/context-and-files/)
+7. [검증](/ko/guide/verification/)
+8. 문제가 생기면 [문제 해결](/ko/guide/troubleshooting/)을 확인합니다
 
 ## 흔한 오해
 
@@ -54,19 +55,19 @@ translated_at: 2026-07-28
 
 ## 제품 입구
 
-- [데스크톱 App](/guide/desktop-app/)
-- [CLI](/guide/cli/)
-- [IDE 확장](/guide/ide/)
-- [Web과 Cloud](/guide/web-and-cloud/)
+- [데스크톱 App](/ko/guide/desktop-app/)
+- [CLI](/ko/guide/cli/)
+- [IDE 확장](/ko/guide/ide/)
+- [Web과 Cloud](/ko/guide/web-and-cloud/)
 
 ## 더 많은 주제
 
-- [기초 개념](/guide/foundations/)
-- [빠른 시작](/guide/getting-started/)
-- [학습 경로](/guide/learning-paths/)
-- [맞춤 설정](/guide/customization/)
-- [참고 자료](/guide/reference/)
-- [팀과 엔터프라이즈](/guide/team-enterprise/)
-- [개발자 플랫폼](/guide/developer-platform/)
+- [기초 개념](/ko/guide/foundations/)
+- [빠른 시작](/ko/guide/getting-started/)
+- [학습 경로](/ko/guide/learning-paths/)
+- [맞춤 설정](/ko/guide/customization/)
+- [참고 자료](/ko/guide/reference/)
+- [팀과 엔터프라이즈](/ko/guide/team-enterprise/)
+- [개발자 플랫폼](/ko/guide/developer-platform/)
 
 「지금 다음에 무엇을 볼까」를 이 가이드로 찾는 편이, Codex 전체를 한 번에 배우려는 것보다 보통 더 유용합니다.

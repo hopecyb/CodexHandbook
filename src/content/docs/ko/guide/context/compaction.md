@@ -3,9 +3,10 @@ title: 컨텍스트 압축
 description: 긴 대화를 압축한 뒤 무엇이 남고 무엇이 사라지는지.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 329ca4d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -73,7 +74,7 @@ sidebar:
 
 긴 대화 전체에 의존하는 것보다 더 안정적입니다.
 
-개념 층: [Token, 컨텍스트, 압축](/guide/foundations/tokens-context-and-compaction/)
+개념 층: [Token, 컨텍스트, 압축](/ko/guide/foundations/tokens-context-and-compaction/)
 
 긴 작업에서 가장 중요한 제한은 한 번만 말하지 마세요. 압축 뒤에는 중요한 규칙을 능동적으로 다시 말하는 편이 낫습니다.
 

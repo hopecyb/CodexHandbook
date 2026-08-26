@@ -3,9 +3,10 @@ title: Bảo mật
 description: "Trang giải thích rủi ro cấp đội, bề mặt tấn công và hướng phòng vệ — hiểu rủi ro ở đâu trước, rồi mới nói biện pháp kiểm soát."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nếu nhóm bảo mật nhảy thẳng vào trang chi tiết, rất dễ chỉ nhớ vài thuật ngữ rời, mà không biết chúng đang chống gì.
@@ -14,9 +15,9 @@ Nhóm này rõ hơn nếu đọc theo thứ tự «rủi ro từ đâu tới, r�
 
 ## Thứ tự khuyến nghị
 
-1. [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/)
-2. [Rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Prompt injection](/guide/team-enterprise/security/prompt-injection/)
+1. [Mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/)
+2. [Rủi ro Plugin và MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Prompt injection](/vi/guide/team-enterprise/security/prompt-injection/)
 
 ## Ai nên xem trước
 

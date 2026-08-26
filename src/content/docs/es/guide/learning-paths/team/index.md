@@ -3,9 +3,10 @@ title: Ruta para equipos (resumen)
 description: Resumen de la ruta de adopción en equipo; los pasos en profundidad se completarán más adelante.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -22,9 +23,9 @@ Si te preocupa más cómo estabilizar el uso de Codex en el equipo, puedes empez
 
 ## Qué puedes leer ahora
 
-- [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
-- [Contexto sensible](/guide/context/sensitive-context/)
-- [Definición de hecho](/guide/quality/definition-of-done/)
+- [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
+- [Contexto sensible](/es/guide/context/sensitive-context/)
+- [Definición de hecho](/es/guide/quality/definition-of-done/)
 
 ## Malentendidos frecuentes
 
@@ -53,11 +54,11 @@ La adopción en equipo necesita:
 
 Si vas a avanzar desde la perspectiva del equipo, lee en este orden:
 
-1. [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
-2. [Contexto sensible](/guide/context/sensitive-context/)
-3. [Personalización y configuración del proyecto](/guide/customization/)
-4. [Definición de hecho](/guide/quality/definition-of-done/)
-5. [Equipo y empresa](/guide/team-enterprise/)
+1. [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
+2. [Contexto sensible](/es/guide/context/sensitive-context/)
+3. [Personalización y configuración del proyecto](/es/guide/customization/)
+4. [Definición de hecho](/es/guide/quality/definition-of-done/)
+5. [Equipo y empresa](/es/guide/team-enterprise/)
 
 Esta ruta prioriza límites, reglas y aceptación, no disparar primero el volumen de uso.
 

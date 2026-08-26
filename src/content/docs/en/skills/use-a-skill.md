@@ -3,9 +3,10 @@ title: Use a Skill
 description: Explicit and implicit Skill triggers, and how to write a good description.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 A common early mistake is thinking "once installed, it just works." Using a Skill means having Codex follow a pre-written workflow.
@@ -84,7 +85,7 @@ A useful bar: after reading `description`, you know when to use it and when not 
 
 If it still sounds like "does everything," it is probably too broad.
 
-More concepts: [Skills overview](/skills/overview/).
+More concepts: [Skills overview](/en/skills/overview/).
 ---
 
 **Status:** verified  

@@ -3,11 +3,12 @@ title: Instalação e atualizações da CLI
 description: Instalar, atualizar e confirmar a versão.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6b8ceaf
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 Na primeira instalação da CLI, muita gente trava nestes pontos:
@@ -54,7 +55,7 @@ Logo após instalar:
 
 O critério mais prático: o terminal atual encontra-o e já consegue autenticar.
 
-Também pode confrontar: [Instalar a CLI](/guide/getting-started/install-cli/)  
+Também pode confrontar: [Instalar a CLI](/pt/guide/getting-started/install-cli/)  
 Instalação e atualização oficiais: [documentação OpenAI Codex](https://developers.openai.com/codex).
 
 ---

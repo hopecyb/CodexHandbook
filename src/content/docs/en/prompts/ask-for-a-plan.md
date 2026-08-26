@@ -3,9 +3,10 @@ title: Ask for a plan first
 description: Before Codex edits, have it explain steps, risks, and how to verify.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many problems aren't impossible—they started **too fast**. "Help me fix this" blends exploration, planning, and execution, leaving you to accept whatever shows up in the diff.
@@ -108,7 +109,7 @@ This saves context versus "start over" and pulls results back on track.
 | Natural split into subtasks | Multiple goals get mashed together |
 | Verification visible upfront | Tests remembered only at the end |
 
-Many workflows separate exploration and planning. See [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/).
+Many workflows separate exploration and planning. See [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/).
 
 ## Where plans go wrong
 
@@ -126,10 +127,10 @@ Good plans admit uncertainty instead of pretending every assumption holds.
 
 ## Recommended pairings
 
-- Formal execution flow: [Planning](/guide/agent-work/planning/)
-- Reusable plan structure: [Task anatomy](/prompts/task-anatomy/)
-- Mid-run steering: [Progress and steering](/guide/agent-work/progress-and-steering/)
-- Clear acceptance: [Define done](/prompts/define-done/)
+- Formal execution flow: [Planning](/en/guide/agent-work/planning/)
+- Reusable plan structure: [Task anatomy](/en/prompts/task-anatomy/)
+- Mid-run steering: [Progress and steering](/en/guide/agent-work/progress-and-steering/)
+- Clear acceptance: [Define done](/en/prompts/define-done/)
 
 ## A useful team convention
 

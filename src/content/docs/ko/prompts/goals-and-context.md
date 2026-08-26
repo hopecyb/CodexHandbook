@@ -3,9 +3,10 @@ title: 목표와 배경 제공하기
 description: Codex가 무엇을 완료해야 하는지, 왜 중요한지 알게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6ec9636
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 많은 프롬프트는 정보가 많아 보이지만, 정작 다음 두 가지가 불분명합니다.
@@ -81,7 +82,7 @@ translated_at: 2026-07-28
 
 목표는 무엇을 납품할지 정하고, 배경은 왜 그렇게 해야 하는지를 보완합니다.
 
-관련: 프로젝트 수준 배경은 [프로젝트 컨텍스트](/guide/context/project-context/)에 두고, 매 프롬프트마다 긴 글을 반복하지 마세요.
+관련: 프로젝트 수준 배경은 [프로젝트 컨텍스트](/ko/guide/context/project-context/)에 두고, 매 프롬프트마다 긴 글을 반복하지 마세요.
 
 ---
 

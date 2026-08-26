@@ -3,126 +3,111 @@ title: Visão geral de Plugins
 description: Empacote Skills, MCP e conectores de app para distribuição e gestão unificadas na equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b2c5dae
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Plugin pode ser visto como um pacote de instalação: empacota um conjunto de extensões já configuradas para outros instalarem direto.
 
-**Plugin (plugin/conector)** empacota Skills, servidores MCP, integrações de app etc. em unidades **instaláveis, atualizáveis e governáveis** — especialmente útil quando «uma pessoa configura, a equipe inteira reutiliza».
+ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
 
-## Diferença central
+## Plugin contents
 
-| Uso isolado | Via Plugin |
-|---|---|
-| Copiar diretório Skill à mão | Instalar/atualizar com um clique |
-| Cada um configura MCP JSON | Servidores e notas de Permissão pré-definidos |
-| Docs espalhados | Publicador fornece inventário e notas de versão |
+| Component | Role | Installer review |
+|---|---|---|
+| Skills | Reusable steps, references, scripts | Instruction fit and script trust |
+| Connectors | GitHub, Slack, Drive, and other services | OAuth scopes, writes, external data |
+| MCP servers | Tools, authentication, structured data | Server source, tools, logs, permissions |
+| Browser extensions | Browser capability for a workflow | Browser access and necessity |
+| Hooks | Commands or MCP tools at lifecycle events | Review and trust exact definition |
+| Scheduled task templates | Reusable scheduling starting points | Frequency, access, exit, human review |
 
-Plugin é **camada de distribuição e composição**. A capacidade em si continua em Skill, MCP e conectores — veja [Mapa de capacidades de extensão](/skills/capability-map/).
+## Difference from Skill and MCP
 
-## Diferença entre Plugin, Skill e MCP
+| Mechanism | Main question | PR review example |
+|---|---|---|
+| Skill | Which steps? | Read diff, verify evidence, rank risk |
+| MCP / Connector | Which external tools? | Read GitHub PR and comments |
+| Hook | Which lifecycle check? | Scan secrets after a write |
+| Plugin | How is the bundle installed and distributed? | Team PR-review package |
 
-Versão curta:
+A Plugin is a distribution layer, not the final execution step. See [Capability map](/pt/skills/capability-map/).
 
-- **Skill**: diz ao Codex «quais passos seguir»
-- **MCP**: diz ao Codex «quais ferramentas externas pode chamar»
-- **Plugin**: empacota o acima para instalação e governança fáceis
+## Install and verify
 
-Muita confusão vem de tratar essas três camadas como a mesma coisa.
+### ChatGPT Web / desktop App
 
-## Composição típica
+1. Open Plugins.
+2. Inspect publisher, description, and contents.
+3. Install; review each external authorization separately.
+4. Verify at low risk in a new Chat, Work, or Codex task.
+
+### Codex CLI
+
+1. Enter `/plugins`.
+2. Install from a configured marketplace.
+3. **Start a new session**, then verify the installed Skill or tool.
+
+The IDE integration does not support Plugins. Manage them in the desktop App or CLI.
+
+## Low-risk prompt
 
 ```text
-Pacote Plugin
-├── Skills (opcional)
-├── Definições de servidor MCP (opcional)
-├── Conectores de app / fluxo OAuth (opcional)
-└── Metadados: versão, declaração de Permissão, changelog
+Inspect only newly installed <plugin-name>; do not write:
+1. List related Skills and tools.
+2. Mark each tool read-only or externally mutating.
+3. Use test data or one read-only query.
+4. Name the component used and authorizations still requiring human review.
 ```
 
-## Quando usar Plugin
+Do not send messages, change states, delete data, or bulk-write during first verification.
 
-| Use Plugin | Não use Plugin |
-|---|---|
-| Equipe instala unificada o pacote Figma/Linear/GitHub | Script pessoal único |
-| Precisa de versionamento e rollback | Um `SKILL.md` basta |
-| Empresa só permite extensões na whitelist | Protótipo em fase experimental |
+## Team adoption
 
-## Quando se importar com Plugin
+1. **Inventory:** Skills, connectors, MCP, browser extensions, Hooks, templates.
+2. **Provenance:** marketplace, repository, publisher, update policy.
+3. **Least privilege:** test account and read-only scopes.
+4. **Pilot:** non-production project or small team.
+5. **Hook review:** inspect bundled Hook hash and behavior in `/hooks`.
+6. **Exit record:** disable, uninstall, rollback, revoke OAuth.
 
-- Só estudo pessoal, alguns Skills próprios: pode deixar para depois
-- Vai distribuir um kit unificado de extensões para a equipe: aí importa Plugin
+## Boundaries
 
-Plugin resolve sobretudo **distribuição e governança** — não é obrigatório no primeiro contato com o Codex.
+- Successful installation does not prove safety or data fit.
+- External authorization is a separate high-risk step.
+- Plugin Hooks run alongside matching Hooks from other sources.
+- Workspace administrators can restrict Plugins and tools.
+- Mobile uses installed Plugins but should not be assumed to have full management.
 
-## Combinações adequadas a Plugin
+## When not to build a Plugin
 
-Plugin vale mais quando várias capacidades precisam ser entregues juntas.
+- One simple `SKILL.md` with no distribution problem.
+- One personal experimental script.
+- Unstable permission and update policy.
+- Users work only in the IDE integration.
 
-| Pacote de equipa | Pode incluir |
-|---|---|
-| Review PR | Skill de review, GitHub MCP só leitura, template de review, Hook de risco |
-| Manutenção docs | Skill de documentação, glossário, Hook de links, template release notes |
-| Colaboração design | Connector de design, Skill screenshot/anotação, permissões, exemplos |
-| Inspeção segurança | Skill review só leitura, Hook scan secrets, config audit |
+Stabilize one Skill or MCP workflow before bundling it.
 
-Se for um script pessoal, mantém simples. Se a equipa instala, atualiza e revoga um grupo de capacidades, empacota como Plugin.
+## Acceptance checklist
 
-## Antes de empacotar
+- [ ] Target surface supports Plugins.
+- [ ] Publisher and source are traceable.
+- [ ] External connections and OAuth scopes reviewed.
+- [ ] Plugin Hooks reviewed and trusted.
+- [ ] Read-only minimal task succeeds.
+- [ ] New session discovers expected Skill/tool.
+- [ ] Team has disable, rollback, revocation steps.
 
-- Workflow estável da equipa ou experiência temporária?
-- Que partes são Skill, MCP e Hook?
-- A declaração de permissões entende-se em um minuto?
-- Há rollback para upgrade ou instalação falhada?
-- Como revogar autorizações quando pessoas saem ou projetos acabam?
+## Official sources
 
-## Instalação e gestão (conceito)
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
-1. Escolha Plugin no **marketplace oficial ou lista aprovada da equipe**
-2. Leia a declaração de Permissão: quais repositórios lê, quais SaaS acessa
-3. Após instalar, reinicie a sessão e valide a lista de ferramentas e Skills
-4. Atualize periodicamente; versões major, teste antes em repositório staging
-
-Botões e comandos concretos seguem a UI atual do App desktop / CLI.
-
-## Equívocos comuns
-
-### 1. Instalar Plugin ≠ automaticamente seguro
-
-Plugin só facilita a distribuição; não torna a Permissão segura por natureza. Ainda olhe:
-
-- O que pode acessar
-- Se age em seu nome em ações externas
-- Se a origem é confiável
-
-### 2. Se dá para instalar, vale instalar
-
-Só extensões que a equipe consegue manter, revogar e auditar cabem no longo prazo.
-
-## Segurança e privacidade
-
-- Instale só de fontes confiáveis; revise o OAuth scope pedido pelo Plugin
-- Distinga Permissão de «ler design» vs «enviar mensagem em seu nome»
-- Ao sair ou mudar de função, revogue autorização de conectores
-- Some a [Permissão e Aprovação](/guide/foundations/permissions-and-approvals/) — não assuma que Plugin traz segurança embutida
-
-## Comparação com outros ecossistemas Agent
-
-«Plugin» não significa exatamente a mesma coisa em cada produto. Ao comparar, olhe: **o que empacota, modelo de Permissão, se é open source auditável** — veja [comparação de recursos](/guide/reference/feature-comparison/).
-
-## Erros comuns
-
-- Um Plugin para cada Skill pequeno — custo de manutenção explode
-- Instalar e nunca atualizar — perde correções de segurança
-- Ativar Plugin experimental em repositório de produção
-
-## Fontes
-- Documentação OpenAI Codex Plugins
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** App / CLI  
-**Nota de revisão:** O OpenAI Help confirma Plugin como contêiner que empacota Skills, Apps e app templates, mas esta página ainda detalha demais instalação, upgrade e governança além da base pública estável.  
-**Última Verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins
+
+**Last verified:** 2026-08-26

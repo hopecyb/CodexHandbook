@@ -3,9 +3,10 @@ title: 프롬프트 디버깅
 description: 결과가 어긋날 때 프롬프트 문제를 어떻게 찾는지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9b92e1f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 결과가 틀릴 때 흔한 원인은 다음과 같습니다.

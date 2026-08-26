@@ -1,119 +1,137 @@
 ---
 title: Modo no interactivo
-description: Integrar con codex exec y tuberías de scripts — para CI, tareas programadas y pipelines de automatización.
+description: Integra codex exec con scripts y pipelines para CI, tareas programadas y automatización.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: a1cefbe
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-El modo no interactivo permite que Codex complete Tareas **sin diálogo TTY**: es la entrada para que los desarrolladores enganchen el Agent a scripts y CI.
+El modo no interactivo permite que Codex complete una tarea **sin una conversación mediante TTY**. Es el punto de entrada para que los desarrolladores lo integren en scripts y CI.
 
-En resumen: el modo no interactivo no es chat de ida y vuelta, sino entregar la Tarea de una vez para que la ejecute.
-
-Se parece más a una invocación de tipo comando.
+En vez de mantener una conversación, se envía la tarea completa para una única ejecución al estilo de un comando.
 
 ## Contenido de esta página
 
-- Cuándo usar no interactivo en lugar de una sesión interactiva `codex`
-- Requisitos extra de seguridad y Aprobación sin supervisión
-- Relación con la [configuración](/guide/cli/configuration/)
+- Cuándo usar una ejecución no interactiva en lugar de una sesión interactiva con `codex`.
+- Requisitos adicionales de seguridad y aprobación para trabajo sin supervisión.
+- Su relación con la [configuración](/es/guide/cli/configuration/).
 
-## Escenarios adecuados
+## Tareas adecuadas
 
-| Conviene | No conviene |
+| Adecuadas | No adecuadas |
 |---|---|
-| Ejecutar en CI un Prompt de revisión fijo | Necesitas aclarar requisitos en varias rondas |
-| Comprobar enlaces de documentación nightly | Refactorización exploratoria |
-| Generación de código con plantillas predefinidas | Decisiones de producto muy ambiguas |
+| Prompt fijo de revisión en CI | Los requisitos necesitan varias rondas de aclaraciones |
+| Comprobación nocturna de enlaces de documentación | Refactorización exploratoria |
+| Generación de código desde una plantilla predefinida | Decisiones de producto ambiguas |
 
-## Conceptos centrales
+## Modelo básico
 
-La ejecución no interactiva suele:
+Una ejecución no interactiva suele:
 
-1. Recibir la **descripción completa de la Tarea** por parámetros o stdin
-2. Correr en el directorio de trabajo indicado
-3. Indicar éxito/fallo con el código de salida
-4. Emitir logs o resultados estructurados para el consumidor aguas abajo
+1. recibir una **descripción completa de la tarea** mediante argumentos o stdin;
+2. ejecutarse en un directorio de trabajo especificado;
+3. indicar el éxito o fallo del proceso mediante un código de salida;
+4. emitir registros o resultados estructurados para consumidores posteriores.
 
-**Los nombres de comando y parámetros los marca la documentación oficial de la CLI** (a menudo `codex exec` o un subcomando equivalente); tras actualizar la CLI, vuelve a comprobar `--help`.
+El punto de entrada actual es `codex exec`. Después de actualizar la CLI, vuelve a ejecutar `codex exec --help` para verificar todos los parámetros que usan tus scripts.
 
-## Ejemplo mínimo usable (ilustrativo)
+## Ejemplo mínimo funcional
 
 ```bash
-# En la raíz del repo, revisión de solo lectura (ilustrativo; parámetros según lo oficial)
-codex exec --cwd . "Lista riesgos de seguridad en el diff respecto a main; no modifiques archivos"
+# Ejecutar una revisión de solo lectura en la raíz del repositorio
+codex exec --cd . "Enumera los riesgos de seguridad del diff respecto a main; no modifiques archivos"
 ```
 
-Consejos prácticos:
+`codex exec` usa de forma predeterminada un sandbox de solo lectura. El progreso se escribe en `stderr` y la respuesta final del Agent en `stdout`, de modo que puedes redirigir únicamente el resultado final:
 
-- En el script de shell, haz primero `cd` a una copia de trabajo limpia
-- Pon la cadena de la Tarea en un heredoc o en un archivo versionado en `prompts/`
-- Captura el código de salida; si falla, el CI marca en rojo
+```bash
+codex exec --cd . "Escribe notas de publicación para los últimos 10 commits" > release-notes.md
+```
+
+Recomendaciones prácticas:
+
+- En un script de shell, usa primero `cd` para entrar en un worktree limpio.
+- Conserva la tarea en un heredoc o en un archivo versionado dentro de `prompts/`.
+- Captura el código de salida y haz fallar CI si falla el proceso.
 
 ## Diseño de seguridad
 
-Sin supervisión = **no hay nadie que pulse rechazar**:
+Sin supervisión significa que **no estás presente para rechazar una acción**:
 
-| Principio | Práctica |
+| Principio | Implementación |
 |---|---|
-| Mínimo Permiso | Token de solo lectura, Sandbox restringido |
-| Sin push | El CI solo abre PR o sube artifact |
-| Prompt fijo | Prohibido concatenar texto no sanitizado desde la descripción del PR (riesgo de inyección) |
-| Auditoría | Conserva logs y artifact del diff |
+| Privilegio mínimo | Token de solo lectura y sandbox restringido |
+| Sin push | CI abre un PR o sube un artifact |
+| Prompt fijo | No concatenar directamente en el prompt texto de un PR sin sanear |
+| Auditoría | Conservar registros y artifacts del diff |
 
-Ver [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/) y la ruta `08-developer-platform/non-interactive/`.
+Consulta [Patrones de aprobación humana](/es/cases/workflows/human-approval-patterns/) y la sección de la hoja de ruta `08-developer-platform/non-interactive/`.
 
 ## Comparación con el modo interactivo
 
-| | Modo interactivo | Modo no interactivo |
+| | Interactivo | No interactivo |
 |---|---|---|
-| Entrada | TUI `codex` | `exec` / tubería |
-| Humano en el bucle | Fuerte | Débil; hay que diseñarlo de antemano |
-| Apto para aprender | Sí | No |
-| Apto para CI | No | Sí |
+| Entrada | TUI `codex` | `exec` / pipeline |
+| Persona dentro del ciclo | Alta | Baja; debe diseñarse de antemano |
+| Adecuado para aprender | Sí | No |
+| Adecuado para CI | No | Sí |
 
-Uso interactivo: [Modo interactivo de la CLI](/guide/cli/interactive-mode/)
+Consulta el [modo interactivo de la CLI](/es/guide/cli/interactive-mode/).
 
-## Malentendidos frecuentes
+## Convertir una tarea interactiva
 
-### 1. Si el modo no interactivo es más eficiente, ¿hay que aprenderlo primero?
+No pegues un historial de chat entero en un script. Redúcelo a una especificación breve:
 
-No se recomienda.
+| Elemento | Qué debe indicar |
+|---|---|
+| Objetivo | El único resultado esperado |
+| Entrada | Archivos, diff, registros o stdin que se deben leer |
+| Prohibiciones | Sin ediciones, internet, push ni interrupción de CI |
+| Salida | Resumen de texto, JSON, archivo de informe o resultado de salida |
+| Aceptación | Comandos que deben pasar y cadenas que no deben aparecer |
 
-Para quien lo usa por primera vez, el modo no interactivo suele ser demasiado rápido y rígido, con poco espacio para aclaraciones de ida y vuelta.
+Un prompt no interactivo debe parecerse a una orden de trabajo: límites claros, entradas completas y condiciones de fallo explícitas. Mantén en modo interactivo las tareas que todavía requieren criterio de producto, decisiones de diseño o confirmación de permisos.
 
-### 2. ¿Cuál es la mayor diferencia con el modo interactivo?
+## Errores de interpretación habituales
 
-La diferencia central se puede ver así:
+### 1. Si es más eficiente, ¿debe aprenderse primero?
 
-- **Modo interactivo**: a mitad de camino aún puedes preguntar, cambiar y aprobar
-- **Modo no interactivo**: se parece más a una ejecución de una sola vez, para flujos definidos de antemano
+No. Se ejecuta deprisa y deja poco espacio para aclaraciones.
 
-### 3. ¿Cuándo no debería tocarlo todavía?
+### 2. ¿Cuál es la diferencia principal?
 
-Si aún estás en estas fases, mejor no:
+- **Interactivo:** permite preguntar, ajustar y aprobar durante la ejecución.
+- **No interactivo:** ejecuta una vez a partir de una especificación predefinida.
 
-- Aún no dominas cómo escribir Prompts
-- Aún no sabes cómo aceptar resultados
-- Aún no tienes un juicio básico sobre Aprobación, Sandbox y Permisos
+### 3. ¿Cuándo debería evitarlo?
 
-El modo no interactivo encaja con automatización, no tanto con el primer tanteo. Primero domina el modo interactivo; luego habla de engancharlo a scripts.
+Espera si:
 
-## Errores frecuentes
+- todavía estás aprendiendo a redactar una tarea;
+- no sabes cómo aceptar o rechazar el resultado;
+- no tienes un modelo básico de aprobaciones, sandbox y permisos.
 
-- Meter tal cual el historial largo de una sesión interactiva en un solo `exec`
-- Usar en CI credenciales de producción y Permisos de escritura
-- No fijar la versión de la CLI y que el pipeline cambie de comportamiento de golpe
+Usa el modo no interactivo para automatizar después de familiarizarte con los flujos interactivos.
 
-## Fuentes de referencia
+## Errores habituales
+
+- Pegar todo el historial de una sesión interactiva en una única llamada a `exec`.
+- Conceder a CI credenciales de producción y acceso de escritura.
+- No fijar la versión de la CLI, de modo que el comportamiento del pipeline cambie de forma inesperada.
+
+## Fuente de referencia
 - Documentación de OpenAI Codex CLI
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** CLI  
-**Nota de revisión:** Esta página sigue centrándose en `codex exec` y sus formas de integración no interactiva, pero no hay base oficial vigente lo bastante sólida para confirmar uno a uno entrada de comando, parámetros y comportamiento; conviene marcarla como `outdated` hasta completar la documentación no interactiva más reciente de la CLI.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** CLI
+
+**Base de verificación:** Comparado con la documentación actual de Non-interactive mode para `codex exec`, `--cd`, el sandbox predeterminado de solo lectura, el progreso en `stderr` y la respuesta final en `stdout`.
+
+**Última verificación:** 2026-08-26

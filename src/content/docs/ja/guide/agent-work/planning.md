@@ -3,9 +3,10 @@ title: 計画
 description: Codex に手順・リスク・検証を先に明確にさせ、実行するかどうかを判断する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 75099ef
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -92,7 +93,7 @@ Codex に「先に計画を出して」と言うとき、実際には次の二�
 5. 各ステップの検証方法
 ```
 
-より完全な書き方は [まず計画を求める](/prompts/ask-for-a-plan/) を参照。
+より完全な書き方は [まず計画を求める](/ja/prompts/ask-for-a-plan/) を参照。
 
 ## レビューで見るべきこと
 
@@ -127,7 +128,7 @@ Codex に「先に計画を出して」と言うとき、実際には次の二�
 - **計画段階**：探索・選択肢の列挙・不確実性の露出を許す
 - **実行段階**：確認済みのパスに沿って進める
 
-実行中に前提が変わったら、無理に突き進まず計画に戻る。→ [進捗と誘導](/guide/agent-work/progress-and-steering/)
+実行中に前提が変わったら、無理に突き進まず計画に戻る。→ [進捗と誘導](/ja/guide/agent-work/progress-and-steering/)
 
 ## 高リスクタスクの計画に足す三項目
 
@@ -150,10 +151,10 @@ Codex に「先に計画を出して」と言うとき、実際には次の二�
 
 ## おすすめの組み合わせ
 
-- 完全なメイン経路が必要：[探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
-- プロンプトをはっきり書きたい：[まず計画を求める](/prompts/ask-for-a-plan/)
-- 途中で軌道修正したい：[進捗と誘導](/guide/agent-work/progress-and-steering/)
-- 長期の規範が必要：[AGENTS.md とは](/guide/customization/agents-md/what-is-agents-md/)
+- 完全なメイン経路が必要：[探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
+- プロンプトをはっきり書きたい：[まず計画を求める](/ja/prompts/ask-for-a-plan/)
+- 途中で軌道修正したい：[進捗と誘導](/ja/guide/agent-work/progress-and-steering/)
+- 長期の規範が必要：[AGENTS.md とは](/ja/guide/customization/agents-md/what-is-agents-md/)
 
 ---
 

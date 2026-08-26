@@ -3,9 +3,10 @@ title: Explore—plan—execute—verify
 description: Codex's default main workflow—four phase checkpoints, steadier than "one shot."
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 This is the handbook's recommended default workflow—from "not sure how yet" to "ready to merge."
@@ -19,7 +20,7 @@ This is the handbook's recommended default workflow—from "not sure how yet" to
 ④ Verify    → Tests, diff review, check against definition of done
 ```
 
-Do not skip ①② and jump to ③—that often becomes "guess and patch." See [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/).
+Do not skip ①② and jump to ③—that often becomes "guess and patch." See [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/).
 
 ## ① Explore
 
@@ -45,7 +46,7 @@ Based on the exploration above, give a plan: numbered steps, involved files, how
 Do not write code until I reply "execute per plan."
 ```
 
-Large or high-risk changes need confirmation first. Small tasks can agree "plan under 3 steps can auto-execute"—write that in [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Large or high-risk changes need confirmation first. Small tasks can agree "plan under 3 steps can auto-execute"—write that in [AGENTS.md](/en/guide/customization/agents-md/writing-effective-instructions/).
 
 ## ③ Execute
 
@@ -67,7 +68,7 @@ Guide phrase: "Execute step 2; if the plan must change, stop and explain first."
 | Manual | Read diff, hand-test critical paths |
 | Artifacts | Screenshots, log snippets, API responses |
 
-See [Definition of done](/prompts/define-done/) and [Run tests](/guide/quality/run-tests/) for checklists.
+See [Definition of done](/en/prompts/define-done/) and [Run tests](/en/guide/quality/run-tests/) for checklists.
 
 ## Trim by task size
 
@@ -80,7 +81,7 @@ See [Definition of done](/prompts/define-done/) and [Run tests](/guide/quality/r
 
 ## EPXV case template
 
-Teams can embed the four phases in [case study template](/cases/use-cases/case-study-template/) and PR descriptions for shared language.
+Teams can embed the four phases in [case study template](/en/cases/use-cases/case-study-template/) and PR descriptions for shared language.
 
 ## Common mistakes
 

@@ -3,9 +3,10 @@ title: templates/ ディレクトリ
 description: Skill 内で出力テンプレートとレポート骨組みを提供する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/` は体裁を省くためだけではありません。実務的には、毎回即興せず Skill 出力を安定させる役割があります。

@@ -3,9 +3,10 @@ title: Mapa de capacidades
 description: Panorama de módulos como Prompt, herramientas, extensiones, multi-Agent y gobernanza.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 7
 ---
@@ -59,25 +60,25 @@ No hace falta leer página a página el directorio del sitio. Puedes seguir este
 
 ## Orden de arranque
 
-1. Lee [Qué es Codex](/guide/start-here/what-is-codex/)
-2. Luego [Elige tu ruta](/guide/start-here/choose-your-path/)
-3. Entra en [Primeros pasos](/guide/getting-started/)
-4. Si te atascas, vuelve a [Fundamentos](/guide/foundations/) y [Rutas de aprendizaje](/guide/learning-paths/)
+1. Lee [Qué es Codex](/es/guide/start-here/what-is-codex/)
+2. Luego [Elige tu ruta](/es/guide/start-here/choose-your-path/)
+3. Entra en [Primeros pasos](/es/guide/getting-started/)
+4. Si te atascas, vuelve a [Fundamentos](/es/guide/foundations/) y [Rutas de aprendizaje](/es/guide/learning-paths/)
 
 ## Módulos y capítulos canónicos
 
 | Capacidad | Ubicación canónica |
 |---|---|
-| Modelos, Agent, permisos, Sandbox | [Fundamentos](/guide/foundations/) |
-| Cómo operar en cada entrada | [Guías de producto](/guide/) |
-| Prompt, Contexto, Herramientas, calidad | [Capacidades principales](/guide/) |
-| AGENTS.md y configuración | [Personalización](/guide/customization/) |
-| Skills, MCP, Plugin, automatización | [Extensiones y automatización](/skills/) |
-| Métodos de colaboración repetibles | [Métodos de flujo de trabajo](/cases/workflows/) |
-| Casos de extremo a extremo | [Casos de uso](/cases/use-cases/) |
-| Orden de lectura | [Rutas de aprendizaje](/guide/learning-paths/) |
+| Modelos, Agent, permisos, Sandbox | [Fundamentos](/es/guide/foundations/) |
+| Cómo operar en cada entrada | [Guías de producto](/es/guide/) |
+| Prompt, Contexto, Herramientas, calidad | [Capacidades principales](/es/guide/) |
+| AGENTS.md y configuración | [Personalización](/es/guide/customization/) |
+| Skills, MCP, Plugin, automatización | [Extensiones y automatización](/es/skills/) |
+| Métodos de colaboración repetibles | [Métodos de flujo de trabajo](/es/cases/workflows/) |
+| Casos de extremo a extremo | [Casos de uso](/es/cases/use-cases/) |
+| Orden de lectura | [Rutas de aprendizaje](/es/guide/learning-paths/) |
 
-Mapa general de extensiones: [Mapa de capacidades de extensión](/skills/capability-map/). Comparación de productos: [Comparación de funciones](/guide/reference/feature-comparison/). Las diferencias entre entradas están en la página de comparación.
+Mapa general de extensiones: [Mapa de capacidades de extensión](/es/skills/capability-map/). Comparación de productos: [Comparación de funciones](/es/guide/reference/feature-comparison/). Las diferencias entre entradas están en la página de comparación.
 
 ---
 

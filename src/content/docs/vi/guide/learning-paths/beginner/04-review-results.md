@@ -3,9 +3,10 @@ title: Xem xét kết quả
 description: "Nuôi thói quen kiểm tra Diff, chạy Kiểm chứng và hỏi lại."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 82d6754
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Đổi «nhìn một cái là qua» thành hành động kiểm tra cố định.
 
-Danh sách: [Kiểm tra kết quả](/guide/getting-started/review-the-result/) · [Xem xét Diff](/guide/quality/review-diffs/)
+Danh sách: [Kiểm tra kết quả](/vi/guide/getting-started/review-the-result/) · [Xem xét Diff](/vi/guide/quality/review-diffs/)
 
 Nhiều người bỏ qua bước này. Dùng Codex có ổn hay không thường phụ thuộc bạn có review kết quả không.
 
@@ -46,7 +47,7 @@ Kế hoạch chỉ là hỗ trợ; bạn vẫn phải xem nó có đụng phạm
 
 Xem xét kết quả không phải hành động phụ; nó vốn là một phần của quá trình dùng.
 
-Bước tiếp: [Hoàn thành dự án nhỏ đầu tiên](/guide/learning-paths/beginner/05-complete-first-project/)
+Bước tiếp: [Hoàn thành dự án nhỏ đầu tiên](/vi/guide/learning-paths/beginner/05-complete-first-project/)
 
 ---
 

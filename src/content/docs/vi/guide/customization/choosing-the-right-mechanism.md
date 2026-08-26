@@ -3,9 +3,10 @@ title: Chọn cơ chế phù hợp
 description: Prompt tạm, AGENTS.md, bộ nhớ, Skill, MCP nên đặt tầng nào — một khung phán đoán nói rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ Loại quy tắc dài hạn này nên tiếp tục hạ xuống.
 
 ### 2. Đây là quy tắc cộng tác dự án, hay thói quen cá nhân?
 
-Nếu là **quy tắc mọi cộng tác viên đều nên biết**, đưa vào [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+Nếu là **quy tắc mọi cộng tác viên đều nên biết**, đưa vào [`AGENTS.md`](/vi/guide/customization/agents-md/what-is-agents-md/).
 
 Ví dụ:
 
@@ -59,7 +60,7 @@ Ví dụ:
 - Thông điệp commit hoặc quy tắc nghiệm thu PR
 - Quy chuẩn đặc biệt của thư mục con khác nhau trong monorepo
 
-Nếu chỉ là **sở thích của bạn**, ví dụ “giải thích bằng tiếng Việt”, “đưa kết luận trước rồi mới chi tiết”, phù hợp hơn đưa vào [bộ nhớ](/guide/customization/memories-and-persistent-context/) hoặc cấu hình cá nhân.
+Nếu chỉ là **sở thích của bạn**, ví dụ “giải thích bằng tiếng Việt”, “đưa kết luận trước rồi mới chi tiết”, phù hợp hơn đưa vào [bộ nhớ](/vi/guide/customization/memories-and-persistent-context/) hoặc cấu hình cá nhân.
 
 Có thể phán đoán theo kinh nghiệm:
 
@@ -82,7 +83,7 @@ Khi phán đoán nắm hai điểm này trước:
 - **Quy tắc** trả lời “làm được gì, không được làm gì”
 - **Bước** trả lời “loại việc này thường làm thế nào”
 
-Bước tái sử dụng được thường phù hợp hơn làm [Skill](/skills/overview/).
+Bước tái sử dụng được thường phù hợp hơn làm [Skill](/vi/skills/overview/).
 
 ## Tổ hợp thường gặp, không phải chọn một trong hai
 
@@ -196,11 +197,11 @@ Như vậy dễ ổn định **đồng thuận cộng tác** trước, rồi d�
 
 ## Đọc thêm
 
-- [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/)
-- [Bộ nhớ và ngữ cảnh bền](/guide/customization/memories-and-persistent-context/)
-- [Tổng quan Skills](/skills/overview/)
-- [Tổng quan MCP](/skills/mcp/mcp-overview/)
-- [Chọn cách mở rộng](/skills/choosing-an-extension-method/)
+- [AGENTS.md là gì](/vi/guide/customization/agents-md/what-is-agents-md/)
+- [Bộ nhớ và ngữ cảnh bền](/vi/guide/customization/memories-and-persistent-context/)
+- [Tổng quan Skills](/vi/skills/overview/)
+- [Tổng quan MCP](/vi/skills/mcp/mcp-overview/)
+- [Chọn cách mở rộng](/vi/skills/choosing-an-extension-method/)
 
 ## Nguồn tham khảo
 - Tài liệu chính thức OpenAI Codex (lấy phiên bản hiện tại làm chuẩn)

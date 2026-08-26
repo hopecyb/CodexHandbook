@@ -1,109 +1,64 @@
 ---
 title: Supported editors
-description: Which editors support the Codex IDE extension, how to choose, and common limits.
+description: Distinguish the VS Code-compatible extension from Xcode and JetBrains integrations.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 1f0b54d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 10
 ---
 
-The IDE extension embeds Codex in the **editor you already use**—start tasks, view diffs, and accept changes in the same UI. This page covers support scope and choice; installation: [Install IDE extension](/guide/ide/installation/).
+Codex enters mainstream editors through different mechanisms: the Codex extension for VS Code-family editors, and native integration entry points for Xcode and JetBrains IDEs.
 
-## What's covered
+## Current support paths
 
-- Which editors have official extensions
-- IDE extension vs desktop App vs CLI
-- Unifying workflow across editors on a team
-
-## What to look at when choosing
-
-Two questions: which editors are officially supported, and whether to stay in the IDE if you already have a favorite editor.
-
-## Official support scope
-
-**Concrete list and version requirements: [OpenAI Codex documentation](https://developers.openai.com/codex)**. Commonly includes:
-
-| Editor | Typical users | Notes |
+| Editor | Codex entry | How to open |
 |---|---|---|
-| Visual Studio Code | Most developers | Marketplace install; mature ecosystem |
-| VS Code forks like Cursor | AI-editor users | Usually compatible with VS Code extension mechanism—verify in practice |
-| JetBrains family (if offered) | Java/Kotlin/IDEA users | Features/UI may differ from VS Code build |
+| Visual Studio Code | Codex extension | Codex icon or `Codex: Open Codex Sidebar` |
+| Cursor | Compatible Codex extension | Codex icon or Command Palette |
+| Windsurf | Compatible Codex extension | Codex icon or Command Palette |
+| Visual Studio Code Insiders | Codex extension | Extensions panel and Codex sidebar |
+| Xcode | Xcode coding assistant integration | Start a chat and select Codex Agent |
+| JetBrains IDEs | JetBrains AI Chat integration | Open AI Chat and select Codex |
 
-Editors not on the official list: use [CLI](/guide/cli/) or [desktop App](/guide/desktop-app/) instead—do not rely on unofficial ports.
+Installation entry points and minimum versions can change. Start from the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide) rather than inferring official support from similarly named third-party extensions.
 
-## Common misconceptions
+## Best uses for the IDE entry point
 
-### Official support does not mean feature parity across clients
+- Attach the currently open file or selection directly to a question.
+- Explain, modify, and follow up on local code.
+- Review summaries and changes beside source code.
+- Keep small tasks local and delegate longer work when it grows.
 
-"Has an extension" is not "can do everything here."
-
-Different entry points emphasize different work:
-
-- IDE: code-adjacent edits
-- App: project-level tasks and multi-task coordination
-- CLI: terminal, scripts, remote environments
-
-### Editor choice is not only habit
-
-IDE fits well when you mostly:
-
-- Edit code locally
-- Use selection
-- Edit and test in the same place
-
-App or CLI often fit better for:
-
-- Long tasks
-- Document coordination
-- Parallel multiple tasks
-
-## When to choose the IDE extension
-
-| Good fit | Less ideal |
-|---|---|
-| Want current file/selection in context automatically | Need parallel Agents, worktrees, App-only features |
-| Prefer inline diff in editor | Mostly non-code long tasks (docs, research) |
-| Already run tests and debug in IDE | Need standardized Cloud environment from scratch |
-
-Decision entry: [Choose your Codex client](/guide/getting-started/choose-your-codex-client/)
-
-## Division of labor with desktop App
+Example:
 
 ```text
-IDE extension: while editing → small steps → inline review → local tests
-Desktop App: project tasks → parallel Agents → worktrees → notifications and Cloud delegation
+Inspect the retry loop in the current selection.
+Explain the termination condition first, then make the smallest change.
+Modify only the current file and its corresponding test.
+Report the diff and test command; do not upgrade dependencies.
 ```
 
-Same account and project config can be shared; see [editor context](/guide/ide/editor-context/) and [AGENTS.md scope](/guide/customization/agents-md/scope-and-precedence/).
+## Keep multiple editors consistent
 
-## Team alignment
+1. Put build, test, and formatting commands in repository `AGENTS.md` or contribution docs.
+2. Constrain file scope in prompts rather than relying on an IDE-specific button.
+3. Accept against the Git diff and the same test set, not merely “it runs in my IDE.”
+4. Write editor-specific instructions only when exact UI guidance is necessary.
 
-1. Document **recommended editor + minimum extension version** in README
-2. Core standards in `AGENTS.md`—not IDE-private features
-3. Code review still uses Git diff—not views only one IDE can show
+## Editors outside the list
 
-## Quick decision questions
+For editors outside this list, use [Codex CLI](/en/guide/cli/) or the [desktop App](/en/guide/desktop-app/). Do not force-install the VS Code package into an incompatible editor or treat a third-party integration as an OpenAI feature by default.
 
-1. Do you spend most time editing code in an editor?
-2. Do you rely on current file, selection, and inline diff?
-3. Do you not need multi-Agent, worktrees, or heavier task management yet?
+See [Install and enable the IDE integration](/en/guide/getting-started/install-ide-extension/) for installation and [Editor context](/en/guide/ide/editor-context/) for context behavior.
 
-If mostly yes, start with the IDE extension.
-
-## Common mistakes
-
-- Assuming IDE extension and App are 1:1 equivalent
-- Starting tasks without workspace root open → wrong paths and `AGENTS.md` resolution
-- Multiple AI extensions fighting for context and shortcuts
-
-Often you pick the IDE extension simply because that is where you already work.
-
-## References
-- OpenAI Codex IDE documentation
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** Official Help Center strongly confirms "Codex VS Code extension is compatible with most VS Code forks," but this page extends to Cursor, Windsurf, JetBrains support shapes and comparisons; needs an updated support matrix before `verified`.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

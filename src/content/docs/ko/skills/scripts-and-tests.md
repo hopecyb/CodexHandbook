@@ -3,9 +3,10 @@ title: scripts/와 테스트
 description: Skill에 결정적 스크립트를 넣고 동작을 검증합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill을 처음 만들 때 흔한 방법은 모든 것을 `SKILL.md`에 쓰는 것입니다. 간단한 절차에는 괜찮지만, 어떤 단계가 **안정·반복·검증 가능**하게 실행되어야 한다면 스크립트가 순수 텍스트 설명보다 더 신뢰할 수 있습니다.
@@ -76,7 +77,7 @@ Skill은 「언제 호출하는지, 어떻게 호출하는지, 출력이 기대�
 
 안정적으로 반복 실행할 동작은 텍스트 설명에만 맡기지 마세요. 스크립트를 먼저 통과시킨 뒤 Skill 호출을 확인하세요.
 
-스크립트는 현재 승인 정책을 상속합니다. [명령 규칙](/guide/customization/rules/command-rules/)과 [Skill 보안](/skills/security/)을 참고하세요.
+스크립트는 현재 승인 정책을 상속합니다. [명령 규칙](/ko/guide/customization/rules/command-rules/)과 [Skill 보안](/ko/skills/security/)을 참고하세요.
 ---
 
 **상태:** verified  

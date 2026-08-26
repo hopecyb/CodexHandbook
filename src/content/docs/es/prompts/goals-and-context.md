@@ -3,9 +3,10 @@ title: Objetivos y contexto
 description: Haz que Codex sepa qué completar y por qué importa.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6ec9636
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muchos Prompts parecen tener bastante información, pero estas dos cosas no quedan claras:
@@ -81,7 +82,7 @@ Al revisar el contexto, mira una más:
 
 El objetivo decide qué entregar; el contexto explica por qué hacerlo así.
 
-Relacionado: el contexto a nivel de proyecto puede vivir en [Contexto del proyecto](/guide/context/project-context/) para no repetir párrafos largos en cada Prompt.
+Relacionado: el contexto a nivel de proyecto puede vivir en [Contexto del proyecto](/es/guide/context/project-context/) para no repetir párrafos largos en cada Prompt.
 
 ---
 

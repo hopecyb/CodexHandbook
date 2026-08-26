@@ -3,9 +3,10 @@ title: 결과 확인
 description: 변경을 읽고 산출물을 검증한 뒤 수락하거나 수정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb5b5d9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---
@@ -21,9 +22,9 @@ Codex를 더 안정적으로 쓰려면 **결과를 확인**할 줄 알아야 합
 1. **diff 보기**: 허용한 파일만 고쳤는지?
 2. **산출물 열기**: 내용이 수락 기준에 맞는지?
 3. **이어서 수정**: 조금만 모자라면 정밀한 피드백을 이어 줌
-4. **결정**: 수락 / 수동 수정 / [실행 취소](/guide/getting-started/undo-and-recover/)
+4. **결정**: 수락 / 수동 수정 / [실행 취소](/ko/guide/getting-started/undo-and-recover/)
 
-더 많은 방법: [diff 검토](/guide/quality/review-diffs/).
+더 많은 방법: [diff 검토](/ko/guide/quality/review-diffs/).
 
 ## 흔한 놓침
 

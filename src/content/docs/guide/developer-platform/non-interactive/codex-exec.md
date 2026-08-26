@@ -53,8 +53,16 @@ sidebar:
 
 ```bash
 cd /path/to/repo
-codex exec --cwd . "只读：对比当前分支与 main 的 diff，列出 3 个最高安全风险，不要修改文件"
+codex exec --cd . "只读：对比当前分支与 main 的 diff，列出 3 个最高安全风险，不要修改文件"
 ```
+
+默认情况下运行处于只读沙箱。需要允许工作区写入时显式使用：
+
+```bash
+codex exec --cd . --sandbox workspace-write "修复失败测试，只修改 src/auth 与 tests/auth"
+```
+
+进度写入 `stderr`，最终回复写入 `stdout`。机器消费完整事件流时使用 `--json`，只要最终消息文件时使用 `-o` / `--output-last-message`；需要稳定字段时再加 `--output-schema`。
 
 原则：
 
@@ -153,7 +161,10 @@ codex exec --cwd . "只读：对比当前分支与 main 的 diff，列出 3 个�
 - OpenAI Codex CLI 文档
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页围绕 `codex exec`、`--cwd` 与非交互集成方式提供了有用思路，但当前缺少足够强的官方现行文档来逐条确认命令入口、参数和行为细节；补齐最新 CLI 官方依据前，不宜标为 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已对照当前官方 Non-interactive mode 与 Developer commands，核实 `codex exec` 为 Stable、`--cd` / `-C`、默认只读沙箱、`workspace-write`、JSONL 与 schema 输出方式。
+
+**最近核验：** 2026-08-26

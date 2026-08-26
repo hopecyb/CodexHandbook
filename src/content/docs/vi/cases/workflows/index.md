@@ -3,12 +3,13 @@ title: Phương pháp quy trình
 description: Phương pháp cộng tác có thể lặp lại — không gắn một giao diện sản phẩm duy nhất; nhấn mạnh điểm kiểm tra và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2306981
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-[Prompt](/prompts/) dạy bạn cách **nói**; quy trình dạy bạn cách **tổ chức cả một việc**. Phương pháp chương này áp dụng cho App, CLI, IDE và Cloud.
+[Prompt](/vi/prompts/) dạy bạn cách **nói**; quy trình dạy bạn cách **tổ chức cả một việc**. Phương pháp chương này áp dụng cho App, CLI, IDE và Cloud.
 
 ## Vì sao cần quy trình
 
@@ -24,26 +25,26 @@ Không có điểm kiểm tra thì dễ: sửa sai thư mục, quên chạy test
 
 | Quy trình | Giải quyết vấn đề gì |
 |---|---|
-| [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/) | Chuỗi chính dùng chung, phù hợp hầu hết tác vụ |
-| [Brainstorm trước rồi mới làm](/cases/workflows/brainstorm-before-building/) | Phân tán và hội tụ khi phương án chưa chốt |
-| [Làm việc theo đặc tả](/cases/workflows/specification-driven-work/) | Viết đặc tả nghiệm thu được trước rồi mới triển khai |
-| [Làm việc theo test](/cases/workflows/test-driven-work/) | Test trước dẫn dắt triển khai |
-| [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/) | Khi nào dừng, khi nào duyệt, khi nào từ chối |
-| [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/) | Tránh «đoán rồi sửa» |
-| [Review trước khi merge](/cases/workflows/review-before-merge/) | Review có cấu trúc trước khi merge PR |
-| [Nghiên cứu có nguồn trích dẫn](/cases/workflows/research-with-sources/) | Truy xuất, so sánh và kiểm chứng nguồn |
-| [Ưu tiên Artifact](/cases/workflows/artifact-first-work/) | Thỏa thuận thành phẩm trước rồi suy ngược bước |
-| [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/) | Song song và phân công |
-| [Quản lý tác vụ dài](/cases/workflows/long-running-task-management/) | Điểm kiểm tra xuyên phiên và điều kiện thoát |
-| [Phục hồi thất bại](/cases/workflows/failure-recovery/) | Hoàn tác khi lệch hướng hoặc test đỏ |
-| [Đóng gói thành Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Viết quy trình lặp lại thành Skill |
+| [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/) | Chuỗi chính dùng chung, phù hợp hầu hết tác vụ |
+| [Brainstorm trước rồi mới làm](/vi/cases/workflows/brainstorm-before-building/) | Phân tán và hội tụ khi phương án chưa chốt |
+| [Làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/) | Viết đặc tả nghiệm thu được trước rồi mới triển khai |
+| [Làm việc theo test](/vi/cases/workflows/test-driven-work/) | Test trước dẫn dắt triển khai |
+| [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/) | Khi nào dừng, khi nào duyệt, khi nào từ chối |
+| [Chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/) | Tránh «đoán rồi sửa» |
+| [Review trước khi merge](/vi/cases/workflows/review-before-merge/) | Review có cấu trúc trước khi merge PR |
+| [Nghiên cứu có nguồn trích dẫn](/vi/cases/workflows/research-with-sources/) | Truy xuất, so sánh và kiểm chứng nguồn |
+| [Ưu tiên Artifact](/vi/cases/workflows/artifact-first-work/) | Thỏa thuận thành phẩm trước rồi suy ngược bước |
+| [Phối hợp nhiều Agent](/vi/cases/workflows/multi-agent-coordination/) | Song song và phân công |
+| [Quản lý tác vụ dài](/vi/cases/workflows/long-running-task-management/) | Điểm kiểm tra xuyên phiên và điều kiện thoát |
+| [Phục hồi thất bại](/vi/cases/workflows/failure-recovery/) | Hoàn tác khi lệch hướng hoặc test đỏ |
+| [Đóng gói thành Skill](/vi/cases/workflows/turn-a-workflow-into-a-skill/) | Viết quy trình lặp lại thành Skill |
 
 ## Chương khác liên quan quy trình
 
-- Chất lượng: [năng lực cốt lõi · chất lượng và kiểm chứng](/guide/quality/)
-- Agent: [lập kế hoạch](/guide/agent-work/planning/), [Subagent](/guide/agent-work/subagents/)
-- Đóng gói: [Skill](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- Case: [thư viện kịch bản và case](/cases/use-cases/)
+- Chất lượng: [năng lực cốt lõi · chất lượng và kiểm chứng](/vi/guide/quality/)
+- Agent: [lập kế hoạch](/vi/guide/agent-work/planning/), [Subagent](/vi/guide/agent-work/subagents/)
+- Đóng gói: [Skill](/vi/skills/overview/), [AGENTS.md](/vi/guide/customization/agents-md/what-is-agents-md/)
+- Case: [thư viện kịch bản và case](/vi/cases/use-cases/)
 
 ## Nguyên tắc thiết kế
 

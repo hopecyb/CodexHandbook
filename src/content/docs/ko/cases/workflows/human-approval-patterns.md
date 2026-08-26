@@ -3,9 +3,10 @@ title: 사람 승인 패턴
 description: 언제 승인·거절하거나 Codex에 일시중지를 요청할지, 그리고 그 규칙을 어떻게 분명히 쓸지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 승인의 역할은 되돌릴 수 없는 작업을 사람이 결정하게 두는 것입니다. 이 페이지는 흔한 몇 가지 방식을 정리합니다.
@@ -20,7 +21,7 @@ translated_at: 2026-07-28
 강제 사람 구역(push, 데이터 삭제, 외부 발송, 프로덕션 설정 변경)
 ```
 
-구체 팝업 동작은 [제품 진입점](/guide/)에 따라 다르지만, 원칙은 같습니다.
+구체 팝업 동작은 [제품 진입점](/ko/guide/)에 따라 다르지만, 원칙은 같습니다.
 
 ## 패턴 1: 먼저 계획한 뒤 실행
 
@@ -32,7 +33,7 @@ translated_at: 2026-07-28
 
 ## 패턴 2: 화이트리스트 명령
 
-[AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/)에 명시합니다:
+[AGENTS.md](/ko/guide/customization/agents-md/writing-effective-instructions/)에 명시합니다:
 
 ```md
 다시 묻지 않고 허용: pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ translated_at: 2026-07-28
 1. Codex가 draft PR 또는 로컬 브랜치를 엽니다
 2. 사람이 CI + review를 통과시킨 뒤 병합합니다
 
-Cloud 시나리오는 [Pull Request 만들기](/guide/web-and-cloud/create-pull-requests/)를 참고하세요.
+Cloud 시나리오는 [Pull Request 만들기](/ko/guide/web-and-cloud/create-pull-requests/)를 참고하세요.
 
 ## 패턴 4: 읽기 전용 정찰
 
@@ -68,7 +69,7 @@ Cloud 시나리오는 [Pull Request 만들기](/guide/web-and-cloud/create-pull-
 
 ## Automations와의 관계
 
-무인 작업도 설계 시 사람 확인 지점을 남겨야 합니다. [예약과 백그라운드 작업](/skills/automations/scheduled-tasks/)을 참고하세요.
+무인 작업도 설계 시 사람 확인 지점을 남겨야 합니다. [예약과 백그라운드 작업](/ko/skills/automations/scheduled-tasks/)을 참고하세요.
 
 ## 흔한 실수
 

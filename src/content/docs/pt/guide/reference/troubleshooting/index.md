@@ -3,9 +3,10 @@ title: Índice de resolução de problemas
 description: Localiza o tutorial ou a página de produto certa a partir do sintoma.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 55a1e60
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,12 +17,12 @@ Procurar por sintoma é mais rápido do que vasculhar o site inteiro.
 
 | Sintoma | Ir para |
 |---|---|
-| Falha de instalação | [Diagnóstico desktop](/guide/desktop-app/troubleshooting/) · [Diagnóstico CLI](/guide/cli/troubleshooting/) · [Diagnóstico IDE](/guide/ide/troubleshooting/) |
-| Falha de login / autenticação | [Iniciar sessão](/guide/getting-started/sign-in-and-authentication/) |
-| Não sei que cliente escolher | [Escolher o cliente](/guide/getting-started/choose-your-codex-client/) · [Comparação de funcionalidades](/guide/reference/feature-comparison/) |
-| Resultado fora de âmbito / muito mau | [Verificar o resultado](/guide/getting-started/review-the-result/) · [Depuração de Prompt](/prompts/prompt-debugging/) · [Anular e recuperar](/guide/getting-started/undo-and-recover/) |
-| Contexto confuso | [Manter o foco](/guide/context/keep-context-focused/) |
-| Dúvidas de Permissão / Sandbox | [Permissões](/guide/foundations/permissions-and-approvals/) · [Sandbox](/guide/foundations/sandbox-and-network/) |
+| Falha de instalação | [Diagnóstico desktop](/pt/guide/desktop-app/troubleshooting/) · [Diagnóstico CLI](/pt/guide/cli/troubleshooting/) · [Diagnóstico IDE](/pt/guide/ide/troubleshooting/) |
+| Falha de login / autenticação | [Iniciar sessão](/pt/guide/getting-started/sign-in-and-authentication/) |
+| Não sei que cliente escolher | [Escolher o cliente](/pt/guide/getting-started/choose-your-codex-client/) · [Comparação de funcionalidades](/pt/guide/reference/feature-comparison/) |
+| Resultado fora de âmbito / muito mau | [Verificar o resultado](/pt/guide/getting-started/review-the-result/) · [Depuração de Prompt](/pt/prompts/prompt-debugging/) · [Anular e recuperar](/pt/guide/getting-started/undo-and-recover/) |
+| Contexto confuso | [Manter o foco](/pt/guide/context/keep-context-focused/) |
+| Dúvidas de Permissão / Sandbox | [Permissões](/pt/guide/foundations/permissions-and-approvals/) · [Sandbox](/pt/guide/foundations/sandbox-and-network/) |
 
 ## Quando não sabes a que categoria pertence
 

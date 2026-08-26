@@ -3,9 +3,10 @@ title: Skills overview
 description: Teach Codex reusable workflows with SKILL.md—write once, invoke on demand.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 75eaa78
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 A **Skill** is a directory containing `SKILL.md` (plus optional scripts and reference material) that packages a fixed workflow into a capability Codex can **invoke automatically or explicitly**.
@@ -81,7 +82,7 @@ Tips for writing `description`:
 4. Add `scripts/` when you need determinism
 5. Commit to `.agents/skills/` and open a PR for the team
 
-Hands-on practice: [Create your first Skill](/skills/create-your-first-skill/)
+Hands-on practice: [Create your first Skill](/en/skills/create-your-first-skill/)
 
 ## Common questions
 

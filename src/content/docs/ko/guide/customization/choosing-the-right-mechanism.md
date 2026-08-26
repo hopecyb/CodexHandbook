@@ -3,9 +3,10 @@ title: 적합한 메커니즘 고르기
 description: 임시 프롬프트, AGENTS.md, 기억, Skill, MCP를 어느 계층에 둘지 판단 프레임으로 정리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ sidebar:
 
 ### 2. 프로젝트 협업 규칙인가, 개인 습관인가?
 
-**모든 협업자가 알아야 할 규칙**이면 [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/)에 둡니다.
+**모든 협업자가 알아야 할 규칙**이면 [`AGENTS.md`](/ko/guide/customization/agents-md/what-is-agents-md/)에 둡니다.
 
 예:
 
@@ -59,7 +60,7 @@ sidebar:
 - 커밋 메시지 또는 PR 검증 규칙
 - monorepo 하위 디렉터리별 특수 규범
 
-**당신만의 선호**라면 — 예: “설명은 한국어”, “결론 먼저 세부 나중” — [기억](/guide/customization/memories-and-persistent-context/)이나 개인 설정이 더 맞습니다.
+**당신만의 선호**라면 — 예: “설명은 한국어”, “결론 먼저 세부 나중” — [기억](/ko/guide/customization/memories-and-persistent-context/)이나 개인 설정이 더 맞습니다.
 
 경험 법칙:
 
@@ -82,7 +83,7 @@ sidebar:
 - **규칙**은 “무엇을 할 수 있고, 무엇을 못 하는지”에 답합니다
 - **단계**는 “이런 일을 보통 어떻게 하는지”에 답합니다
 
-재사용 가능한 단계는 보통 [Skill](/skills/overview/)이 더 맞습니다.
+재사용 가능한 단계는 보통 [Skill](/ko/skills/overview/)이 더 맞습니다.
 
 ## 흔한 조합 — 둘 중 하나가 아님
 
@@ -196,11 +197,11 @@ API token을 대화에 붙여 넣지 마세요.
 
 ## 더 읽기
 
-- [AGENTS.md란](/guide/customization/agents-md/what-is-agents-md/)
-- [기억과 지속 컨텍스트](/guide/customization/memories-and-persistent-context/)
-- [Skills 개요](/skills/overview/)
-- [MCP 개요](/skills/mcp/mcp-overview/)
-- [확장 방식 고르기](/skills/choosing-an-extension-method/)
+- [AGENTS.md란](/ko/guide/customization/agents-md/what-is-agents-md/)
+- [기억과 지속 컨텍스트](/ko/guide/customization/memories-and-persistent-context/)
+- [Skills 개요](/ko/skills/overview/)
+- [MCP 개요](/ko/skills/mcp/mcp-overview/)
+- [확장 방식 고르기](/ko/skills/choosing-an-extension-method/)
 
 ## 참고 출처
 - OpenAI Codex 공식 문서(현재 버전 기준)

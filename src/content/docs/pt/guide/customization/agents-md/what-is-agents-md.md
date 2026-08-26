@@ -3,9 +3,10 @@ title: O que é AGENTS.md
 description: Ficheiro de instruções persistentes a nível de projeto — o «contrato de colaboração» com o Codex, não uma enciclopédia de arquitetura.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -87,7 +88,7 @@ Mesmo sem escrever código, se o Codex tratar um projeto de forma contínua, `AG
 | `AGENTS.md` em subdiretório | Esse diretório e subcaminhos (comum em monorepo) |
 | Instruções a nível de utilizador | Use configuração pessoal ou preferências globais; não misture com instruções do projeto |
 
-Âmbito e resolução de conflitos: [Âmbito e prioridade](/guide/customization/agents-md/scope-and-precedence/).
+Âmbito e resolução de conflitos: [Âmbito e prioridade](/pt/guide/customization/agents-md/scope-and-precedence/).
 
 ## Diferença face a Skill e comandos de barra
 
@@ -97,7 +98,7 @@ Mesmo sem escrever código, se o Codex tratar um projeto de forma contínua, `AG
 | Skill | Pacote de fluxo reutilizável (`SKILL.md`) | Checklist de release, fluxos de revisão especializados |
 | Comando de barra | Atalho que você dispara ativamente | `/review`, fluxos pontuais |
 
-Regras de projeto → `AGENTS.md`; **um conjunto de passos repetível e partilhável** encaixa melhor como [Skill](/skills/overview/).
+Regras de projeto → `AGENTS.md`; **um conjunto de passos repetível e partilhável** encaixa melhor como [Skill](/pt/skills/overview/).
 
 ## Como decidir onde escrever
 
@@ -116,7 +117,7 @@ Por exemplo:
 ## Erros habituais
 
 - Ficheiro demasiado longo; o modelo só lê a primeira metade — **coloque restrições rígidas nas primeiras 30 linhas**
-- Instruções de alto risco como «sempre fazer push automático», em conflito com [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/)
+- Instruções de alto risco como «sempre fazer push automático», em conflito com [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
 - Ninguém na equipa mantém; o documento diverge dos comandos reais dos scripts
 
 ## Limites de segurança

@@ -3,9 +3,10 @@ title: 機密コンテキスト
 description: 鍵、プライバシー、共有可能でない資料。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 909b1ff
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---

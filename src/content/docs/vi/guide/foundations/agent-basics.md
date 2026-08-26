@@ -3,9 +3,10 @@ title: Cơ bản về Agent
 description: Giải thích Agent gọi công cụ quanh mục tiêu và lặp để tiến tới như thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -46,14 +47,14 @@ Một khi nó bắt đầu đọc tệp, sửa tệp, chạy lệnh — nó khô
 
 Khi mới dùng, nên đọc đồng thời:
 
-1. [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
-2. [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
-3. [Kiểm tra kết quả](/guide/getting-started/review-the-result/)
+1. [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
+2. [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/)
+3. [Kiểm tra kết quả](/vi/guide/getting-started/review-the-result/)
 
 ## Khái niệm liên quan
 
-- Skill / Plugin / MCP: mở rộng «làm được gì» và «kết nối tới đâu» — xem [Mở rộng và tự động hóa](/skills/) cùng [Bản đồ năng lực](/guide/start-here/codex-capability-map/)
-- Phê duyệt thủ công: xem [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP: mở rộng «làm được gì» và «kết nối tới đâu» — xem [Mở rộng và tự động hóa](/vi/skills/) cùng [Bản đồ năng lực](/vi/guide/start-here/codex-capability-map/)
+- Phê duyệt thủ công: xem [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
 
 Đặc điểm của Agent là nó có thể liên tục làm vài bước quanh mục tiêu — không chỉ trả bạn một đoạn chữ.
 

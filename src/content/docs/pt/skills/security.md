@@ -3,9 +3,10 @@ title: Segurança e versões de Skills
 description: Origem da instalação, limites de Permissão, upgrade e rollback — Skills de equipe governáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill não é só mais um template de Prompt.
@@ -33,7 +34,7 @@ Já participa da cadeia de propagação de risco.
 
 Segurança de Skill não depende só de «alguém que cuida de tudo» — cada usuário precisa de julgamento básico.
 
-Base: [Visão geral de Skills](/skills/overview/) · [Criar seu primeiro Skill](/skills/create-your-first-skill/)
+Base: [Visão geral de Skills](/pt/skills/overview/) · [Criar seu primeiro Skill](/pt/skills/create-your-first-skill/)
 
 ## Modelo de ameaça (simplificado)
 
@@ -84,7 +85,7 @@ Para a equipe, atualizar Skill é atualizar um comportamento automatizado — tr
 | changelog | Mantenha release notes do conjunto de Skills da equipe |
 | Rollback | Guarde cópia da versão anterior; troque rápido se der problema |
 
-Plugin pode empacotar Skills para distribuição unificada: [Visão geral de Plugins](/skills/plugins/plugins-overview/)
+Plugin pode empacotar Skills para distribuição unificada: [Visão geral de Plugins](/pt/skills/plugins/plugins-overview/)
 
 ## Hábitos de equipe
 
@@ -105,7 +106,7 @@ Quando o usuário chama `$name` de forma explícita, a intenção é clara; quan
 - [ ] Whitelist de fontes de Skill permitidas
 - [ ] Onboarding de novos só instala o «pacote básico»
 - [ ] Revisão trimestral dos Skills ainda necessários
-- [ ] Alinhado a [padrões allow e deny](/guide/customization/rules/allow-and-deny-patterns/)
+- [ ] Alinhado a [padrões allow e deny](/pt/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Erros comuns
 

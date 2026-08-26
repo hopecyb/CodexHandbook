@@ -3,9 +3,10 @@ title: Refactor site tài liệu kèm review
 description: "Case: cập nhật hàng loạt liên kết và chương trong dự án tài liệu Astro/Starlight — diff nhỏ từng bước, kiểm chứng bằng build."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Case này minh họa tác vụ **kỹ thuật nội dung**: Markdown nhiều tệp, cấu hình sidebar, kiểm chứng build. Tech stack giống sổ tay này, nhưng kịch bản chuyển được sang mọi static site.
@@ -19,7 +20,7 @@ Case này minh họa tác vụ **kỹ thuật nội dung**: Markdown nhiều t�
 | Rủi ro | Trung bình (nhiều liên kết và điều hướng) |
 | Thời lượng | 1–3 giờ (tùy quy mô) |
 
-Giải thích mẫu: [mẫu case](/cases/use-cases/case-study-template/)
+Giải thích mẫu: [mẫu case](/vi/cases/use-cases/case-study-template/)
 
 ## Ngữ cảnh
 
@@ -50,7 +51,7 @@ Bước: Sửa config trước, rồi viết md, cuối cùng cập nhật 12-re
 
 - **Config trước, nội dung sau:** tránh build báo missing slug
 - Mỗi lô 3–5 tệp thì commit, dễ review
-- Dùng [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
+- Dùng [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
 
 ## Kiểm tra
 

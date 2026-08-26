@@ -3,9 +3,10 @@ title: Parcours débutant
 description: Le parcours le plus court en cinq étapes pour les nouveaux utilisateurs de Codex — des Tâches claires à la réalisation d'un petit projet.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Lors de l'apprentissage de Codex pour la première fois, le blocage n'est souvent pas une page confuse — c'est de ne pas savoir par où commencer.
@@ -14,11 +15,11 @@ Ce parcours est la route la plus courte pour les nouveaux arrivants.
 
 ## Ordre recommandé
 
-1. [Parler à Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Travailler avec les fichiers](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Donner des Tâches claires](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Examiner les résultats](/guide/learning-paths/beginner/04-review-results/)
-5. [Terminer votre premier petit projet](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Parler à Codex](/fr/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Travailler avec les fichiers](/fr/guide/learning-paths/beginner/02-work-with-files/)
+3. [Donner des Tâches claires](/fr/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Examiner les résultats](/fr/guide/learning-paths/beginner/04-review-results/)
+5. [Terminer votre premier petit projet](/fr/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## À qui s'adresse ce parcours
 

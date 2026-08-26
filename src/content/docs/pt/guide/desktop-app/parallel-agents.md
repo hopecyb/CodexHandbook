@@ -3,159 +3,81 @@ title: Agents em paralelo
 description: Avançar várias Tarefas de Agent ao mesmo tempo sem cair em conflitos de merge nem em caos de revisão.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6f0977b
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
-Os Agents em paralelo servem para repartir **trabalho que já pode avançar de forma independente**, de modo que a Thread principal se centre em coordenar, aceitar resultados e decidir o merge.
 
-Se a divisão for correta, o paralelismo encurta muito a espera; se não for, só gera conflitos mais depressa.
+The basic unit of parallel work is a chat with its own context, messages, result, and goal. A task is suitable for parallel execution when **its parts are independent, have clear file boundaries, and can be accepted separately**, not merely because it has many steps.
 
-## Mal-entendidos frequentes
+![Orchestration diagram in which the main thread delegates independent work to several subagents and consolidates evidence and conflicts](/diagrams/subagent-orchestration-pt.svg)
 
-Quem vê «Agents em paralelo» pela primeira vez costuma pensar que só significa «mais rápido». Não é de todo falso, mas fica curto.
+## Decide whether work can run in parallel
 
-A premissa é: **essas Tarefas já se sustentam por si**. Se na realidade dependem umas das outras e só as forçou a separar, o paralelismo atrasa: depois há que alinhar premissas, recuperar resultados e gerir conflitos.
-
-## Quando convém o paralelismo
-
-| Convém | Não convém |
+| Can run in parallel | Should remain sequential |
 |---|---|
-| Duas investigações independentes ao mesmo tempo | Vários Agents a modificar o mesmo ficheiro central |
-| Uma análise só de leitura enquanto se redige um rascunho de documentação | Requisitos que mudam com frequência e precisam das suas clarificações contínuas |
-| Fronteira clara entre a UI front-end e a API back-end | Um problema que não pode começar sem o resultado de outro |
+| Two read-only investigations | The second task depends on the first task's conclusion |
+| Code and documentation have non-overlapping directories | Both tasks modify the same core file |
+| Two approaches produce separate prototypes | Requirements are still changing frequently |
+| Each task has independent tests | Correctness can only be established after joint integration |
 
-Critérios habituais:
+The official guidance recommends avoiding two chats that write to the same data source. Use separate Git worktrees for parallel coding.
 
-- **Pode definir o entregável** → apto para paralelo
-- **Pode acordar limites de antemão** → apto para paralelo
-- **Pode verificar de forma independente** → apto para paralelo
+## Progress from simple to complex
 
-## O que faz o Agent principal
-
-No modo paralelo, o Agent principal não tem de completar todas as subtarefas em pessoa. Centra-se em três coisas:
-
-1. Deixar claro o objetivo e as zonas proibidas de cada subtarefa
-2. Verificar se os resultados são verificáveis
-3. Decidir o desempate quando os resultados colidem
-
-O Agent principal age mais como um pequeno responsável técnico: coordena e escolhe, não executa todas as subtarefas.
-
-## Como convém dividir
-
-### Divida «problemas», não «passos de um processo»
-
-Melhor divisão:
-
-- Agent A: analisar se a falha de login se deve à atualização do token
-- Agent B: verificar as duas últimas mudanças relacionadas com autenticação
-
-Pior divisão:
-
-- Agent A: ler metade dos registos
-- Agent B: ler a outra metade dos registos
-
-No primeiro caso, cada Tarefa tem um objetivo completo; no segundo, é só fragmentação mecânica, com custo alto de recuperação.
-
-### Priorize estes tipos
-
-- **Análise só de leitura**: ler código, registos, documentação, listar riscos
-- **Comparação de opções**: rotas de implementação A/B, escolha de bibliotecas, esquemas de Permissão
-- **Entregáveis com fronteira clara**: página independente, documentação independente, módulo independente
-
-## Um modelo de delegação
-
-A instrução para um Agent em paralelo deve incluir, na medida do possível, estes quatro itens:
+### 1. Start with parallel read-only tasks
 
 ```text
-Tarefa: analisar apenas o cálculo de cupões no fluxo de checkout; não alterar código.
-Entrega: resumo de 200 palavras + caminhos dos ficheiros-chave + pontos de risco + próximo passo sugerido.
-Limites: não procurar fora do módulo de pagamento; não correr comandos de escrita.
-Aceitação: a conclusão tem de remeter a evidência em ficheiro ou registo.
+Task: Analyze the latest failure in the authentication module. Do not edit files.
+Scope: src/auth/** and the corresponding tests.
+Deliverable: root-cause hypotheses, evidence paths, remaining uncertainty,
+and recommended verification commands.
 ```
 
-Isto é mais eficaz do que «vá ver este problema».
+Read-only tasks do not create merge conflicts and are a good first exercise.
 
-## Três padrões comuns de paralelismo
+### 2. Then parallelize write tasks
 
-### 1. Investigação em duas vias
+For each chat, define the goal, file ownership, exclusions, and acceptance criteria:
 
-Adequado quando ainda não sabe qual rota é a certa.
+```text
+Goal: Document authentication error codes.
+Ownership: docs/auth/** only.
+Do not modify: src/**, lockfiles, or shared configuration.
+Acceptance: run pnpm check:links and report the result.
+```
 
-- Agent A investiga a implementação atual
-- Agent B investiga alternativas
-- A Thread principal compara custo, risco e compatibilidade
+Put each coding chat in a separate [worktree](/pt/guide/desktop-app/worktrees/). Assign shared configuration to the main chat or one designated owner.
 
-### 2. Avanço por camadas
+### 3. Consolidate centrally
 
-Adequado quando as fronteiras do sistema já estão claras.
+Do not concatenate results without review. The main chat should verify:
 
-- Agent A trata da camada de documentação ou Prompt
-- Agent B trata da camada de código ou configuração
-- A Thread principal faz a verificação de consistência
+1. that each task stayed within its boundary;
+2. that its evidence and tests are reproducible;
+3. that conclusions do not conflict;
+4. whether integration tests must be rerun after merging.
 
-### 3. Rascunho + revisão
+## Long-running work and Goal mode
 
-Adequado quando precisa de uma primeira versão e de uma revisão rápida.
+Enter `/goal` in the desktop App, CLI, or IDE to start Goal mode. A goal should define the outcome, constraints, and verification criteria. Each chat has its own goal. Parallel execution does not expand sandbox access or permissions; work still pauses when an operation requires a decision.
 
-- Agent A produz o rascunho
-- Agent B só faz review, sem alterar
-- A Thread principal decide se adota
+For finer-grained tool orchestration, see [Subagents](/pt/guide/agent-work/subagents/).
 
-Este padrão encaixa bem em completar documentação, revisar PRs e organizar casos.
+## Official sources
 
-## Gestão de conflitos
+- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
+- [Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
+- [Subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
-No paralelismo, o ponto que mais trava costuma ser o merge.
-
-### Acordar estes limites de antemão
-
-- Que diretórios cabem a cada Agent
-- Se é permitido alterar ficheiros de configuração partilhados
-- Quem tem o direito final de commit
-
-### Nestes casos, volte à série
-
-- As duas subtarefas precisam de alterar o mesmo fluxo de negócio
-- A conclusão de um Agent continua a derrubar as premissas do outro
-- Percebe que gasta mais tempo a «explicar Contexto» do que a avançar a Tarefa
-
-Quando o custo de coordenação supera o tempo poupado, o paralelismo deixa de fazer sentido.
-
-## Revisão e aceitação
-
-A saída de cada Agent em paralelo deve cumprir pelo menos um destes pontos:
-
-- Remeter a ficheiro, registo, ligação ou Diff concreto
-- Declarar claramente «o que não fez»
-- Indicar à Thread principal como verificar o próximo passo
-
-Se a entrega for só «acho que pode haver um problema aqui», a Thread principal quase não recebe nada útil.
-
-## Erros comuns
-
-- Paralelizar às cegas só porque há muitas Tarefas, sem julgar dependências
-- Vários Agents a modificar o mesmo diretório sem acordo de propriedade
-- A Thread principal não aceita resultados e junta subtarefas num resultado final
-- Usar o paralelismo como forma de «pensar menos», o que só amplifica a confusão
-
-A premissa dos Agents em paralelo continua a ser: Tarefas independentes, aceitáveis em separado, e depois avançadas cada uma por si.
-
-## Ordem de leitura recomendada
-
-1. [Subagents](/guide/agent-work/subagents/)
-2. [Progresso e reorientação](/guide/agent-work/progress-and-steering/)
-3. [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
-4. [Fluxo de coordenação multi-Agent](/cases/workflows/multi-agent-coordination/)
-
-## Fontes de referência
-- Documentação da OpenAI Codex sobre multitasking e colaboração entre Tarefas
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** App  
-**Nota de revisão:** A metodologia de Agents em paralelo continua útil, mas esta página apresenta-a como capacidade atual que se pode adotar diretamente na App de desktop, sem documentação oficial vigente bastante sólida sobre a forma concreta da UI, das entradas e da colaboração entre Tarefas; por isso marca-se temporariamente como `outdated`.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE
+
+**Last verified:** 2026-08-26

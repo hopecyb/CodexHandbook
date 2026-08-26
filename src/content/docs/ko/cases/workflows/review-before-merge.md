@@ -3,12 +3,13 @@ title: 병합 전 검토
 description: merge 전에 Codex로 구조화된 diff와 위험 검토를 합니다—사람·기계 분업이 명확합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**병합 전 검토**는 [품질과 검증](/guide/quality/)을 Git 흐름에 두는 것입니다. PR 병합 전에 Codex로 diff, 테스트, 보안, 스펙 일치를 검사합니다. 자동 댓글 자체가 자동 병합을 대신하지는 않습니다.
+**병합 전 검토**는 [품질과 검증](/ko/guide/quality/)을 Git 흐름에 두는 것입니다. PR 병합 전에 Codex로 diff, 테스트, 보안, 스펙 일치를 검사합니다. 자동 댓글 자체가 자동 병합을 대신하지는 않습니다.
 
 ## 이 페이지의 초점
 
@@ -32,7 +33,7 @@ checklist를 출력하고 P0/P1을 표시하세요.
 
 - 고정 prompt 버전 + 읽기 전용 token
 - 결과를 PR comment 또는 check run에 기록
-- [코드 검토 자동화](/guide/developer-platform/ci-cd/code-review-automation/) 참고
+- [코드 검토 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/) 참고
 
 ## 권장 검토 차원
 
@@ -44,7 +45,7 @@ checklist를 출력하고 P0/P1을 표시하세요.
 | 유지보수성 | 이름, 중복, 공개 API |
 | 스펙 | issue/스펙 문서와 일치 |
 
-[diff 검토하기](/guide/quality/review-diffs/)와 함께 쓸 수 있습니다. 고위험 항목은 [사람 승인 패턴](/cases/workflows/human-approval-patterns/)을 따릅니다.
+[diff 검토하기](/ko/guide/quality/review-diffs/)와 함께 쓸 수 있습니다. 고위험 항목은 [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/)을 따릅니다.
 
 ## 흔한 실수
 
@@ -67,8 +68,8 @@ checklist를 출력하고 P0/P1을 표시하세요.
 
 ## 관련 장
 
-- [Cloud 코드 검토](/guide/web-and-cloud/code-review/)
-- [Pull Request 만들기](/guide/web-and-cloud/create-pull-requests/)
+- [Cloud 코드 검토](/ko/guide/web-and-cloud/code-review/)
+- [Pull Request 만들기](/ko/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

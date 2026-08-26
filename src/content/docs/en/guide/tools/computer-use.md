@@ -3,9 +3,10 @@ title: Computer Use
 description: Advanced GUI control via screen and input devices—use cases, risks, and approvals.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 **Computer Use** lets the Agent view the screen, move the pointer, and type—beyond browser or terminal alone. Most powerful capability; **highest risk and approval requirements**.
@@ -77,7 +78,7 @@ Computer Use is close to **handing keyboard and mouse to the Agent**:
 - May mis-click confirmation dialogs
 - Screen may show sensitive notifications
 
-Required reading: [permissions and approvals](/guide/foundations/permissions-and-approvals/), [sandbox and network](/guide/foundations/sandbox-and-network/)
+Required reading: [permissions and approvals](/en/guide/foundations/permissions-and-approvals/), [sandbox and network](/en/guide/foundations/sandbox-and-network/)
 
 ## When to consider it
 
@@ -112,7 +113,7 @@ Need apps outside IDE?       → Computer Use (more caution)
 Only code and tests?         → terminal + file tools
 ```
 
-See [tool selection](/guide/tools/tool-selection/)
+See [tool selection](/en/guide/tools/tool-selection/)
 
 ## Example prompt
 

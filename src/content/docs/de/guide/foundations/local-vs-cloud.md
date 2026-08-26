@@ -3,9 +3,10 @@ title: Lokal und Cloud
 description: "Vergleicht Einsatzszenarien für lokale Aufgaben und Cloud-Aufgaben."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ Zu Cloud wechseln, wenn du wirklich brauchst:
 - Anbindung an remote Repos oder entfernte Ressourcen
 - Deinen Rechner nicht belasten
 
-Viele Anfänger starten mit **lokal + Desktop-App**. Cloud-Details: [Web- und Cloud-Überblick](/guide/web-and-cloud/). Wechsel in der App: [Lokale und Cloud-Aufgaben](/guide/desktop-app/local-and-cloud-tasks/).
+Viele Anfänger starten mit **lokal + Desktop-App**. Cloud-Details: [Web- und Cloud-Überblick](/de/guide/web-and-cloud/). Wechsel in der App: [Lokale und Cloud-Aufgaben](/de/guide/desktop-app/local-and-cloud-tasks/).
 
 Lokal eignet sich besser, um den Ablauf zu verstehen und Kleines zu ändern. Cloud eignet sich besser für längere, standardisierte, remote-kollaborative Aufgaben.
 

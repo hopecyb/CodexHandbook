@@ -5,9 +5,10 @@ sidebar:
   order: 4
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 612639b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **역할**, **작업**, **제품** 중 어떤 것으로든 들어갈 수 있습니다. 세 경로는 결국 같은 핵심 페이지로 모이며, 시작점만 다릅니다.
@@ -16,29 +17,29 @@ translated_at: 2026-07-28
 
 ## 역할별
 
-- [초보자 다섯 단계](/guide/learning-paths/beginner/01-talk-to-codex/)(MVP 완성)
-- [창작자 경로 개요](/guide/learning-paths/creator/)
-- [개발자 경로 개요](/guide/learning-paths/developer/)
-- [팀 경로 개요](/guide/learning-paths/team/)
+- [초보자 다섯 단계](/ko/guide/learning-paths/beginner/01-talk-to-codex/)(MVP 완성)
+- [창작자 경로 개요](/ko/guide/learning-paths/creator/)
+- [개발자 경로 개요](/ko/guide/learning-paths/developer/)
+- [팀 경로 개요](/ko/guide/learning-paths/team/)
 
 ## 작업별
 
 | 하고 싶은 일 | 먼저 읽기 |
 |---|---|
-| Codex와 용어 이해하기 | [기초 개념](/guide/foundations/) |
-| 오늘 한 번 끝까지 돌려 보기 | [빠른 시작](/guide/getting-started/) |
-| 프롬프트 잘 쓰기 | [프롬프트](/prompts/) |
-| 결과 확인하기 | [품질과 검증](/guide/quality/) |
-| 대조·문제 해결 | [참고 자료](/guide/reference/) |
+| Codex와 용어 이해하기 | [기초 개념](/ko/guide/foundations/) |
+| 오늘 한 번 끝까지 돌려 보기 | [빠른 시작](/ko/guide/getting-started/) |
+| 프롬프트 잘 쓰기 | [프롬프트](/ko/prompts/) |
+| 결과 확인하기 | [품질과 검증](/ko/guide/quality/) |
+| 대조·문제 해결 | [참고 자료](/ko/guide/reference/) |
 
 ## 제품별
 
-- [데스크톱 App](/guide/desktop-app/)
-- 터미널: [CLI](/guide/cli/)
-- 편집기: [IDE](/guide/ide/)
-- 클라우드 개요: [Web과 Cloud](/guide/web-and-cloud/)
+- [데스크톱 App](/ko/guide/desktop-app/)
+- 터미널: [CLI](/ko/guide/cli/)
+- 편집기: [IDE](/ko/guide/ide/)
+- 클라우드 개요: [Web과 Cloud](/ko/guide/web-and-cloud/)
 
-아직 확신이 없으면 [Codex 클라이언트 선택](/guide/getting-started/choose-your-codex-client/)과 [기능 비교](/guide/reference/feature-comparison/)를 보세요.
+아직 확신이 없으면 [Codex 클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)과 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요.
 
 ## 흔한 오해
 
@@ -58,7 +59,7 @@ translated_at: 2026-07-28
 
 확신이 없으면 아래 순서로 판단하세요.
 
-1. 첫 작업을 아직 끝까지 못 돌렸다면: 먼저 [초보자 경로](/guide/learning-paths/beginner/)
+1. 첫 작업을 아직 끝까지 못 돌렸다면: 먼저 [초보자 경로](/ko/guide/learning-paths/beginner/)
 2. 무엇을 할지 이미 알고 있다면: 「작업」표로 들어가기
 3. 주로 쓰는 입구가 정해졌다면: 해당 제품 장으로
 

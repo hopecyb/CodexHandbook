@@ -3,9 +3,10 @@ title: 画像生成
 description: Codex タスクでの画像生成または編集——プロンプト、形式、検証。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -28,7 +29,7 @@ Codex は一部のシナリオで**画像生成**能力を呼び出せます。�
 | UI レイアウトの雰囲気を素早く探索 | ピクセル単位の再現が必要なデザイン納品 |
 | チュートリアル用のサンプルアイコン | 未承認の実在人物の肖像を含むシーン |
 
-[画像プロンプト](/prompts/prompting-with-images/) と補完関係にあります。あちらは画像の**入力**、本ページは画像の**出力**を扱います。
+[画像プロンプト](/ja/prompts/prompting-with-images/) と補完関係にあります。あちらは画像の**入力**、本ページは画像の**出力**を扱います。
 
 ## 画像生成が向いていること
 
@@ -48,7 +49,7 @@ Codex は一部のシナリオで**画像生成**能力を呼び出せます。�
 
 1. 用途、サイズ比率、スタイルのキーワードを説明する（侵害の恐れのあるスタイル名の羅列は避ける）
 2. 出力形式（PNG / SVG がサポートされる場合）と保存パスを指定する
-3. 生成後に [成果物の検証](/guide/quality/verify-artifacts/)：ファイルを開き、解像度と可読性を確認する
+3. 生成後に [成果物の検証](/ja/guide/quality/verify-artifacts/)：ファイルを開き、解像度と可読性を確認する
 4. 対外公開前にデザインまたは法務でレビューする
 
 ## よくある誤解
@@ -97,7 +98,7 @@ Codex は一部のシナリオで**画像生成**能力を呼び出せます。�
 
 - 大きな画像は `assets/` または CDN に置き、Git のサイズを評価する
 - PR で生成プロンプトとモデルバージョンを記載する（内部監査用）
-- [画像とスクリーンショット](/guide/files-and-artifacts/images-and-screenshots/) を参照
+- [画像とスクリーンショット](/ja/guide/files-and-artifacts/images-and-screenshots/) を参照
 
 ## 安全とコンプライアンス
 

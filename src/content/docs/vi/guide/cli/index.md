@@ -3,9 +3,10 @@ title: CLI
 description: Hướng dẫn tối thiểu dùng được cho lối vào dòng lệnh.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f654474
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 11
 ---
@@ -22,15 +23,15 @@ Nó nghiêng về các tình huống:
 
 Với người mới hoàn toàn chưa quen terminal, CLI không phải trạm đầu bắt buộc; nhưng nếu bạn đã biết cơ bản `cd`, `ls`, chạy lệnh trong thư mục dự án, nó sẽ rất hiệu quả.
 
-- [Cài đặt và cập nhật](/guide/cli/installation-and-updates/)
-- [Chế độ tương tác](/guide/cli/interactive-mode/)
-- [Chế độ không tương tác](/guide/cli/non-interactive-mode/)
-- [Cấu hình CLI](/guide/cli/configuration/)
-- [Lệnh và lối tắt](/guide/cli/commands-and-shortcuts/)
-- [Phê duyệt và Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Xử lý sự cố](/guide/cli/troubleshooting/)
+- [Cài đặt và cập nhật](/vi/guide/cli/installation-and-updates/)
+- [Chế độ tương tác](/vi/guide/cli/interactive-mode/)
+- [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/)
+- [Cấu hình CLI](/vi/guide/cli/configuration/)
+- [Lệnh và lối tắt](/vi/guide/cli/commands-and-shortcuts/)
+- [Phê duyệt và Sandbox](/vi/guide/cli/approvals-and-sandbox/)
+- [Xử lý sự cố](/vi/guide/cli/troubleshooting/)
 
-Tham chiếu lệnh đầy đủ: [Tham chiếu lệnh CLI](/guide/reference/commands/).
+Tham chiếu lệnh đầy đủ: [Tham chiếu lệnh CLI](/vi/guide/reference/commands/).
 
 ## Lần đầu dùng — phân rõ gì trước
 

@@ -5,9 +5,10 @@ sidebar:
   order: 55
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d842500
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 O valor das integrações do Codex não é só «ligar mais uma ferramenta» — é colocar o Agent na cadeia de colaboração que você já usa: hospedagem de código, tickets, notificações, plataformas internas, bases de conhecimento.
@@ -101,7 +102,7 @@ Adequado para:
 - Review não interativo no CI
 - Segunda correção a partir de comentários de review
 
-Entrada: [Integração com GitHub](/guide/integrations/github/) e [Web e Cloud](/guide/web-and-cloud/).
+Entrada: [Integração com GitHub](/pt/guide/integrations/github/) e [Web e Cloud](/pt/guide/web-and-cloud/).
 
 ### Tickets e gestão de projeto
 
@@ -183,15 +184,15 @@ Na primeira integração, deixar o Codex «ver» e «sugerir» costuma ser mais 
 
 | Integração | Página |
 |---|---|
-| GitHub | [Integração com GitHub](/guide/integrations/github/) |
+| GitHub | [Integração com GitHub](/pt/guide/integrations/github/) |
 | Slack / Linear / Jira etc. | Principalmente docs oficiais e capítulos MCP/Automation; este manual completa aos poucos |
 
 ## Relação com outros capítulos
 
-- Conectores e distribuição empacotada: ver [Visão geral de Plugins](/skills/plugins/plugins-overview/)
-- Dados externos: ver [Visão geral de MCP](/skills/mcp/mcp-overview/)
-- Agendamento e background: ver [Tarefas agendadas e em background](/skills/automations/scheduled-tasks/)
-- Colaboração em repositório na nuvem: ver [Web e Cloud](/guide/web-and-cloud/)
+- Conectores e distribuição empacotada: ver [Visão geral de Plugins](/pt/skills/plugins/plugins-overview/)
+- Dados externos: ver [Visão geral de MCP](/pt/skills/mcp/mcp-overview/)
+- Agendamento e background: ver [Tarefas agendadas e em background](/pt/skills/automations/scheduled-tasks/)
+- Colaboração em repositório na nuvem: ver [Web e Cloud](/pt/guide/web-and-cloud/)
 
 ## Fontes
 - Documentação oficial de integrações e desenvolvedores do OpenAI Codex

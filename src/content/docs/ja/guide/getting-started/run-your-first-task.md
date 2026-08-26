@@ -3,9 +3,10 @@ title: 最初のタスクを実行する
 description: 明確なプロンプトで小さな変更を 1 回完了する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ sidebar:
 
 1. 短い計画を出させる（または自分から計画を求める）
 2. ファイル書き込みの承認時にパスが正しいか確認する
-3. 完了後 [結果の確認](/guide/getting-started/review-the-result/) へ進む
+3. 完了後 [結果の確認](/ja/guide/getting-started/review-the-result/) へ進む
 
 ## 実行順序
 
@@ -112,7 +113,7 @@ sidebar:
 まだ変更を続けないでください。さきほどどこを変更したか教えてください。
 ```
 
-プロンプトの原理：[プロンプトの基礎](/prompts/basics/)。
+プロンプトの原理：[プロンプトの基礎](/ja/prompts/basics/)。
 
 ---
 

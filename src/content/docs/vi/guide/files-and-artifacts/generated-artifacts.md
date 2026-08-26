@@ -3,9 +3,10 @@ title: Nghiệm thu artifact tạo ra
 description: Nghiệm thu có hệ thống tệp, báo cáo và artifact build mà Codex tạo mới hoặc xuất.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -50,7 +51,7 @@ Những thứ này khác “chỉ sửa vài dòng mã hiện có”, vì dễ h
 5. Quyết định: nhận / sửa cục bộ / bỏ làm lại
 ```
 
-Phương pháp: [Kiểm chứng artifact](/guide/quality/verify-artifacts/), [Định nghĩa hoàn thành](/guide/quality/definition-of-done/)
+Phương pháp: [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/), [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/)
 
 ## Hiểu lầm thường gặp
 
@@ -111,7 +112,7 @@ Artifact không chỉ xem “đã tạo”. Ít nhất phải mở xem, kiểm c
 - [ ] Không secrets, không thư mục sinh thừa
 
 ## Nguồn tham khảo
-- [Xử lý sự không chắc chắn](/guide/quality/handle-uncertainty/)
+- [Xử lý sự không chắc chắn](/vi/guide/quality/handle-uncertainty/)
 ---
 
 **Trạng thái:** verified  

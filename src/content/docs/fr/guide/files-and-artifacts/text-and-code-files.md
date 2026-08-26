@@ -3,9 +3,10 @@ title: Fichiers texte et code
 description: Faire lire et écrire correctement à Codex les sources, configs et fichiers de documentation texte.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ La clé est changer les bons endroits de la bonne manière — sans éditions co
 | Docs `.md` | Liens relatifs, conventions multilingues |
 | Code généré | Clarifier commit vs gitignore |
 
-Contexte : [Contexte fichier et dossier](/guide/context/file-and-folder-context/)
+Contexte : [Contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
 
 ## Pourquoi ces fichiers se trompent
 
@@ -50,7 +51,7 @@ Style : correspondre à <fichier exemple>
 Terminé quand : lister fichiers changés + exécuter <commande de test>
 ```
 
-Voir [Anatomie de Tâche](/prompts/task-anatomy/)
+Voir [Anatomie de Tâche](/fr/prompts/task-anatomy/)
 
 ## Idées reçues courantes
 
@@ -87,8 +88,8 @@ Exiger :
 
 ## Focus de revue
 
-- [Revoir les diffs](/guide/quality/review-diffs/) : logique, périmètre, suppressions
-- [Exécuter les tests](/guide/quality/run-tests/)
+- [Revoir les diffs](/fr/guide/quality/review-diffs/) : logique, périmètre, suppressions
+- [Exécuter les tests](/fr/guide/quality/run-tests/)
 - Pas de placeholders `TODO` non implémentés laissés
 
 ## Erreurs courantes

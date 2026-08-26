@@ -3,9 +3,10 @@ title: Research template
 description: Investigation and comparison with citations.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d71c760
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Research template
@@ -44,8 +45,8 @@ Key constraint: every major conclusion traceable to a source—not just pretty f
 
 ## Related
 
-- [Research with sources case](/cases/research-with-sources/)
-- [Verification](/guide/verification/)
+- [Research with sources case](/en/cases/research-with-sources/)
+- [Verification](/en/guide/verification/)
 
 ---
 

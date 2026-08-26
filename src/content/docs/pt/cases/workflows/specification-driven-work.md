@@ -3,12 +3,13 @@ title: Trabalho orientado por especificação
 description: Escreva primeiro uma especificação aceitável e deixe o Codex implementar conforme o plano — adequado a entregas com requisitos claros.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Trabalho orientado por especificação** significa preparar uma especificação curta — objetivo, âmbito, interfaces e critérios de aceitação — antes de alterar muitos ficheiros. Pode seguir [brainstorm](/cases/workflows/brainstorm-before-building/) ou, com requisitos já clarificados, entrar diretamente em [EPXV](/cases/workflows/explore-plan-execute-verify/).
+**Trabalho orientado por especificação** significa preparar uma especificação curta — objetivo, âmbito, interfaces e critérios de aceitação — antes de alterar muitos ficheiros. Pode seguir [brainstorm](/pt/cases/workflows/brainstorm-before-building/) ou, com requisitos já clarificados, entrar diretamente em [EPXV](/pt/cases/workflows/explore-plan-execute-verify/).
 
 ## Foco desta página
 
@@ -57,7 +58,7 @@ não acrescente funcionalidades não listadas na especificação. Espere a minha
 
 ## Combinação com trabalho orientado por testes
 
-Os itens de aceitação na especificação devem ser, tanto quanto possível, **testáveis**; o que puder ser teste, escreva o teste primeiro — ver [trabalho orientado por testes](/cases/workflows/test-driven-work/).
+Os itens de aceitação na especificação devem ser, tanto quanto possível, **testáveis**; o que puder ser teste, escreva o teste primeiro — ver [trabalho orientado por testes](/pt/cases/workflows/test-driven-work/).
 
 ## Erros comuns
 

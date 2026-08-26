@@ -3,24 +3,25 @@ title: 스크립트와 파이프라인
 description: shell, Makefile, GitHub Actions에서 codex exec를 오케스트레이션합니다——반복 가능하고 감사 가능합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
 여기서는 Codex를 일회성 임시 조작에서, **팀이 반복 실행하고, 문제 나면 추적하고, 다른 사람도 인수할 수 있는** 자동화 단계로 바꾸는 법을 다룹니다.
 
 간단히 말해, 스크립트는 흐름을 고정하고, 파이프라인은 규칙에 따라 반복 실행합니다.
 
-이 장은 [codex exec](/guide/developer-platform/non-interactive/codex-exec/)를 shell, Makefile, CI 파이프라인에 넣는 방법을 설명합니다.
+이 장은 [codex exec](/ko/guide/developer-platform/non-interactive/codex-exec/)를 shell, Makefile, CI 파이프라인에 넣는 방법을 설명합니다.
 
 ## 이 페이지 내용
 
 - 로컬 스크립트 vs CI job의 역할 분담
 - 프롬프트와 키 관리 방식
-- [코드 리뷰 자동화](/guide/developer-platform/ci-cd/code-review-automation/)와의 조합
+- [코드 리뷰 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/)와의 조합
 
 ## 여기서 풀 문제
 
@@ -62,7 +63,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
 `prompts/ci/security-review.md`를 Git에 넣고, 변경은 review를 탑니다.
@@ -98,7 +99,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
 ```
 
 :::caution
@@ -111,7 +112,7 @@ jobs:
 |---|---|
 | 저장소 | `prompts/`, `tools/run-codex.sh` |
 | CI | 읽기 전용 checkout, CLI 고정, log artifact 업로드 |
-| 콜백 | 선택적으로 [Webhook](/guide/developer-platform/webhooks/overview/)으로 내부 시스템 갱신 |
+| 콜백 | 선택적으로 [Webhook](/ko/guide/developer-platform/webhooks/overview/)으로 내부 시스템 갱신 |
 
 ## 어떻게 판단할까
 

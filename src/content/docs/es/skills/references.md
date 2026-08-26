@@ -3,9 +3,10 @@ title: Directorio references/
 description: Organiza documentación de referencia larga en un Skill para divulgación progresiva.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c595507
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `references/` encaja con material largo que no necesitas expandir cada vez, para que el flujo principal no quede largo y confuso.

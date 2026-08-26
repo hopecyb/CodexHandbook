@@ -5,9 +5,10 @@ sidebar:
   order: 2
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c6582f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex는 OpenAI가 제공하는 **AI 프로그래밍·업무 Agent**입니다. 목표를 주면 프로젝트 파일·도구·승인을 바탕으로 내용을 읽고 고치고, 명령을 실행하고, 결과를 만든 뒤, 과정과 변경을 당신에게 검토하도록 넘깁니다.
@@ -81,7 +82,7 @@ Codex를 조수로 쓰면 됩니다. 책임까지 넘기지 마세요.
 4. 끝나면 무엇을 바꿨는지 알려 줍니다
 5. 결과가 기대에 맞는지 확인합니다
 
-이 흐름의 전체 예시는 [첫 작업 실행](/guide/getting-started/run-your-first-task/)을 보세요.
+이 흐름의 전체 예시는 [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/)을 보세요.
 
 ## 주요 사용 입구
 
@@ -93,7 +94,7 @@ Codex를 조수로 쓰면 됩니다. 책임까지 넘기지 마세요.
 | Web / Cloud | 저장소 연결, 클라우드 환경, 장기 작업 |
 | 모바일·원격 | 모니터링, 승인, 가벼운 추적 |
 
-대조표는 [기능 비교](/guide/reference/feature-comparison/)를 보세요. 개념 관계는 [능력 지도](/guide/start-here/)를 보세요.
+대조표는 [기능 비교](/ko/guide/reference/feature-comparison/)를 보세요. 개념 관계는 [능력 지도](/ko/guide/start-here/)를 보세요.
 
 ## 이어서 보기
 
@@ -105,9 +106,9 @@ Codex를 조수로 쓰면 됩니다. 책임까지 넘기지 마세요.
 
 관련 페이지:
 
-1. [Codex 클라이언트 선택](/guide/choose-your-client/)
-2. [초보자를 위한 용어](/guide/start-here/terminology-for-beginners/)
-3. [첫 작업 실행](/guide/getting-started/run-your-first-task/)
+1. [Codex 클라이언트 선택](/ko/guide/choose-your-client/)
+2. [초보자를 위한 용어](/ko/guide/start-here/terminology-for-beginners/)
+3. [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/)
 
 ---
 

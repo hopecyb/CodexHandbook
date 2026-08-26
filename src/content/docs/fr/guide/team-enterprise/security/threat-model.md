@@ -3,9 +3,10 @@ title: "Modèle de menace"
 description: Surfaces de risque principales pour Codex en environnements d'équipe — données, outils, extensions et supply chain.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ Un modèle de menace signifie penser au risque avant qu'il arrive :
 
 > **Si Codex se connecte vraiment à notre code, commandes et outils externes, qu'est-ce qui est le plus susceptible d'aller mal ?**
 
-La **modélisation des menaces** décompose cela. Codex n'est pas « juste une autre fenêtre de chat » — il peut **lire le code, exécuter des commandes, appeler des outils externes**. Ce chapitre mappe les surfaces de risque principales ; les contrôles vivent dans [Matrice des permissions](/guide/reference/permission-matrix/) et [Bac à sable](/guide/foundations/sandbox-and-network/).
+La **modélisation des menaces** décompose cela. Codex n'est pas « juste une autre fenêtre de chat » — il peut **lire le code, exécuter des commandes, appeler des outils externes**. Ce chapitre mappe les surfaces de risque principales ; les contrôles vivent dans [Matrice des permissions](/fr/guide/reference/permission-matrix/) et [Bac à sable](/fr/guide/foundations/sandbox-and-network/).
 
 ## Ce que cette page couvre
 
@@ -72,10 +73,10 @@ Ce cadrage transforme la modélisation des menaces en liste de contrôle de risq
 
 | Menace | Description | Direction mitigation |
 |---|---|---|
-| Injection de prompt | Issue/web malveillant oriente emprise excessive | Hygiène entrée, CI lecture seule, [sujet injection](/guide/team-enterprise/security/prompt-injection/) |
+| Injection de prompt | Issue/web malveillant oriente emprise excessive | Hygiène entrée, CI lecture seule, [sujet injection](/fr/guide/team-enterprise/security/prompt-injection/) |
 | Sur-permission | Token, bac à sable trop large | Privilège minimum, protection de branche |
 | Exfiltration données | Commandes/MCP fuient le dépôt | Politique réseau, DLP, Hooks d'audit |
-| Extension malveillante | Plugin/MCP non revu | [Risque extension](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Extension malveillante | Plugin/MCP non revu | [Risque extension](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | Supply chain | Tampering dépendance/script | SCA existant, revue de code |
 | Mauvaise manipulation | Agent drop DB, mauvais push | Deny commande, CI no-push |
 
@@ -141,8 +142,8 @@ Cela supprime déjà beaucoup de risque d'équipe ; affiner la gouvernance plus 
 
 ## Lié
 
-- [Contexte sensible](/guide/context/sensitive-context/)
-- [Modèles d'approbation humaine](/cases/workflows/human-approval-patterns/)
+- [Contexte sensible](/fr/guide/context/sensitive-context/)
+- [Modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/)
 
 ## Sources de référence
 - Livre blanc sécurité entreprise OpenAI (officiel)

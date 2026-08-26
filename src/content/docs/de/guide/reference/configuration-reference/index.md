@@ -3,9 +3,10 @@ title: Konfigurationsreferenz
 description: 'Konzeptindex zu Codex-Config-Schlüsseln auf Nutzer- und Projektebene — Pfade und Felder nach offizieller Dokumentation.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -58,7 +59,7 @@ Zuerst nicht „wer überschreibt wen“ pauken — ungefähre Rolle reicht:
 - Env: „nur für diesen Lauf“
 - Managed: „Organisation hat die Grenze gesetzt“
 
-Einstieg: [Config-Grundlagen](/guide/customization/configuration/config-basics/) · Terminal: [CLI-Konfiguration](/guide/cli/configuration/)
+Einstieg: [Config-Grundlagen](/de/guide/customization/configuration/config-basics/) · Terminal: [CLI-Konfiguration](/de/guide/cli/configuration/)
 
 ## Domänenindex (Konzept)
 
@@ -70,7 +71,7 @@ Einstieg: [Config-Grundlagen](/guide/customization/configuration/config-basics/)
 | Reasoning-Stärke | Stufe für komplexe Aufgaben (falls unterstützt) |
 | Temperature usw. | Meist Default; bei Skripten fixieren |
 
-Hintergrund: [Modelle und Reasoning](/guide/foundations/models-and-reasoning/)
+Hintergrund: [Modelle und Reasoning](/de/guide/foundations/models-and-reasoning/)
 
 ### Sandbox und Netz
 
@@ -80,7 +81,7 @@ Hintergrund: [Modelle und Reasoning](/guide/foundations/models-and-reasoning/)
 | Netz | Verboten / eingeschränkt / erlaubt |
 | Outbound-Domains | Allowlist (falls unterstützt) |
 
-Hintergrund: [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
+Hintergrund: [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
 
 ### Freigabe-Policy
 
@@ -90,7 +91,7 @@ Hintergrund: [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
 | Vor Schreibdatei | Ebenso |
 | MCP-Tool-Aufrufe | Pro Server oder Tool |
 
-Hintergrund: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/) · Matrix: [Berechtigungsmatrix](/guide/reference/permission-matrix/)
+Hintergrund: [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/) · Matrix: [Berechtigungsmatrix](/de/guide/reference/permission-matrix/)
 
 ### Workspace und CLI
 
@@ -107,13 +108,13 @@ Hintergrund: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-a
 | Serverliste | Befehl, URL, Transport |
 | Env-Injection | An MCP-Prozess gebunden, nicht ins Git |
 
-[MCP verbinden](/skills/mcp/connect-an-mcp-server/)
+[MCP verbinden](/de/skills/mcp/connect-an-mcp-server/)
 
 ### IDE- / App-Erweiterungen
 
 Manche nur in der Erweiterungs-UI; ggf. gleiches Nutzer-Config-Backend wie CLI — produktspezifisch.
 
-[IDE-Einstellungen](/guide/ide/settings/) · [Desktop-App-Einstellungen](/guide/desktop-app/settings/)
+[IDE-Einstellungen](/de/guide/ide/settings/) · [Desktop-App-Einstellungen](/de/guide/desktop-app/settings/)
 
 ## Häufige Missverständnisse
 
@@ -201,7 +202,7 @@ Dann eher:
 
 Klarer als nur Schlüssellisten starren.
 
-Cloud Secrets: [Secrets und Umgebungsvariablen](/guide/web-and-cloud/secrets-and-variables/)
+Cloud Secrets: [Secrets und Umgebungsvariablen](/de/guide/web-and-cloud/secrets-and-variables/)
 
 ## Änderungsdisziplin
 

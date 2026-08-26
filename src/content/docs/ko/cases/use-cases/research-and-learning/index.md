@@ -3,9 +3,10 @@ title: 리서치와 학습
 description: 출처가 있는 조사, 비교, 학습형 사례 진입점입니다. 검색, 인용, 결론 경계를 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 리서치 작업과 일반 “질의응답”의 가장 큰 차이는 이것입니다:
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 이 그룹 진입점
 
-- [경쟁 제품 기능 비교표](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [경쟁 제품 기능 비교표](/ko/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## 이 그룹의 초점
 

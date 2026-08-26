@@ -1,92 +1,56 @@
 ---
-title: Corriger un bug
-description: De l'échec du test à la correction minimale et à la régression — l'exemple de boucle la plus courante pour les développeurs.
+title: "Corriger un bug : par où commencer"
+description: Choisissez le parcours de correction adapté à votre situation, puis poursuivez avec le cas complet et exécutable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 27c707b
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## Métadonnées
+Cette page sert de point d'entrée rapide. Les étapes complètes, le code exécutable, les preuves de tests rouge/vert et les prompts propres à chaque phase sont regroupés dans [Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/), afin d'éviter que deux versions ne divergent.
 
-| Champ | Contenu |
+## Identifier l'étape manquante
+
+| Situation actuelle | Point de départ |
 |---|---|
-| Public visé | Développeurs |
-| Client | CLI ou IDE (dépôt local) |
-| Durée estimée | 30–60 minutes |
-| Date de vérification | 2026-07-25 |
+| Vous savez seulement que le résultat est incorrect, sans reproduction stable | [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/) |
+| Un test échoue de manière fiable | [Corriger un bug avec vérification](/fr/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| Vous ne connaissez pas le module | [Comprendre une base de code](/fr/cases/understand-a-codebase/) |
+| La correction est terminée et prête à être fusionnée | [Réviser une PR](/fr/cases/review-a-pr/) |
+| Le test lui-même est instable | Commencez par [Exécuter les tests](/fr/guide/quality/run-tests/) ; un test flaky ne constitue pas une preuve de correction |
 
-## 1. Objectif et contexte
+## Boucle de preuves minimale
 
-**Objectif :** Corriger une régression capturée par un test unitaire et ajouter des tests pour éviter une récidive.
+Quel que soit le langage ou le framework, conservez cette chaîne de preuves :
 
-**Critères de succès :**
+1. Reproduisez le problème initial de façon fiable avec une commande précise.
+2. Conservez l'assertion en échec, la sortie d'erreur et les conditions d'entrée.
+3. Expliquez la cause racine avant d'appliquer la correction minimale.
+4. Faites réussir le test initialement en échec et les nouveaux tests de limites.
+5. Exécutez des contrôles de régression plus larges.
+6. Lisez le diff manuellement et refusez toute modification sans rapport.
 
-- Le test en échec passe à nouveau
-- Toute la suite de tests reste verte
-- Le diff ne concerne que les fichiers nécessaires
+L'étape 4 sans l'étape 1 ne prouve pas que le test couvre le problème initial. De même, une suite complète au vert sans révision du diff ne prouve pas que le périmètre de la modification est correct.
 
-**Hors périmètre :** Refactorisation à grande échelle, mise à niveau majeure des dépendances.
+## Pratiquer directement
 
-## 2. Préparation
+Le dépôt contient un exemple JavaScript de remise sur un panier, sans dépendance tierce :
 
-- Cloner le dépôt, `pnpm install` (ou selon `AGENTS.md`)
-- Confirmer la reproduction locale : `pnpm test -- path/to/failing.test.ts`
-- Branche : `fix/issue-123-short-desc`
+```bash
+# Starter: one test is expected to fail
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-## 3. Flux de travail
-
-### Explorer
-
-```text
-Ne modifiez pas encore le code. Lisez le test en échec @tests/auth/login.test.ts et l'implémentation @src/auth/login.ts,
-expliquez la cause de l'échec en 5 points maximum, en citant les assertions et les numéros de ligne de la pile.
+# Reference solution: all three tests are expected to pass
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-### Planifier
-
-```text
-Proposez un plan de correction : quels fichiers modifier, si de nouveaux tests sont nécessaires, comment vérifier.
-Attendez ma réponse « exécuter » avant de modifier le code.
-```
-
-### Exécuter
-
-```text
-Exécutez les étapes 1–2 du plan. Après chaque étape, lancez uniquement les tests concernés.
-```
-
-### Vérifier
-
-```text
-Lancez la suite de tests complète ; résumez le diff pour ma revue ; ne faites pas de git push.
-```
-
-Humain : lisez le diff, confirmez l'absence de modifications non pertinentes, vérifiez selon [Examiner les diffs](/guide/quality/review-diffs/).
-
-## 4. Échec et reprise
-
-| Problème | Traitement |
-|---|---|
-| Nouveaux échecs après correction | `git stash` ou annuler le commit, réduire la portée des modifications |
-| Diagnostic erroné | Revenir à l'exploration, demander une nouvelle hypothèse |
-| Test flaky | Stabiliser le test avant de corriger la logique métier |
-
-## 5. Capitalisation
-
-- Si ce type de bug se répète, ajoutez une convention dans `AGENTS.md`
-- Vous pouvez extraire le Skill `$regression-guard` : exécuter la liste des tests critiques avant fusion
-
-## 6. Chapitres connexes
-
-- [Comprendre une base de code](/cases/understand-a-codebase/)
-- [Examiner les diffs](/guide/quality/review-diffs/)
-- [Exécuter les tests](/guide/quality/run-tests/)
+Tous les fichiers se trouvent dans [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
 
 ---
 
-**Statut :** verified  
-**Produits concernés :** CLI / IDE  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** La page d'accueil OpenAI Developers décrit toujours Codex comme capable de corriger des défauts, d'exécuter des tests et d'examiner des modifications ; cet exemple se concentre sur la boucle d'ingénierie stable « reproduire l'échec, correction minimale, tests complémentaires et validation de régression », sans dépendre d'un framework ou d'une interface produit spécifique.
+**Statut :** verified
+**Produits concernés :** CLI / IDE
+**Base de vérification :** cette page d'entrée ne maintient que le choix du parcours et une boucle d'ingénierie stable. Les commandes censées échouer puis réussir ont été exécutées dans le dépôt actuel.
+**Dernière vérification :** 2026-08-25

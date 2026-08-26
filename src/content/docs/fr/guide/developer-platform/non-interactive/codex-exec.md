@@ -3,16 +3,17 @@ title: codex exec
 description: Point d'entrée d'exécution non interactive — dispatcher une tâche complète une fois dans scripts et CI.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 124836c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
 Si `codex` interactif est le chat pendant que vous travaillez, **`codex exec`** est plus proche de confier un job ponctuel et obtenir un résultat à la fin.
 
-C'est le cœur du [mode non interactif](/guide/cli/non-interactive-mode/) : pas de chat aller-retour, pas de clarification en cours d'exécution — le processus se termine avec un résultat ou un échec. Ce chapitre vise les intégrateurs [plateforme développeur](/guide/developer-platform/) et les lecteurs qui câblent Codex dans des scripts ou CI pour la première fois.
+C'est le cœur du [mode non interactif](/fr/guide/cli/non-interactive-mode/) : pas de chat aller-retour, pas de clarification en cours d'exécution — le processus se termine avec un résultat ou un échec. Ce chapitre vise les intégrateurs [plateforme développeur](/fr/guide/developer-platform/) et les lecteurs qui câblent Codex dans des scripts ou CI pour la première fois.
 
 ## Ce que cette page couvre
 
@@ -56,7 +57,13 @@ Il convient quand **les frontières de tâche sont déjà claires** ; si vous ex
 
 ```bash
 cd /path/to/repo
-codex exec --cwd . "Lecture seule : comparer le diff de la branche actuelle à main, lister les 3 risques de sécurité principaux, ne pas modifier les fichiers"
+codex exec --cd . "Lecture seule : comparer le diff de la branche actuelle à main, lister les 3 risques de sécurité principaux, ne pas modifier les fichiers"
+```
+
+Par défaut, l'exécution utilise un bac à sable en lecture seule. Pour autoriser l'écriture dans l'espace de travail, indiquez-le explicitement :
+
+```bash
+codex exec --cd . --sandbox workspace-write "Réparer les tests en échec, modifier uniquement src/auth et tests/auth"
 ```
 
 Principes :
@@ -102,7 +109,7 @@ Préparer dépôt (checkout, install, token lecture seule)
     → Exit non-zéro échoue CI ; ne pas retry indéfiniment
 ```
 
-Voir [Scripts et pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/).
+Voir [Scripts et pipelines](/fr/guide/developer-platform/non-interactive/scripts-and-pipelines/).
 
 ## Comment le traiter
 
@@ -136,8 +143,8 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 
 ## Frontières de sécurité
 
-- Non surveillé = [approbation humaine](/cases/workflows/human-approval-patterns/) plus faible ; lecture seule par défaut
-- Voir [Identifiants de sécurité](/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (référence croisée dans le même chapitre)
+- Non surveillé = [approbation humaine](/fr/cases/workflows/human-approval-patterns/) plus faible ; lecture seule par défaut
+- Voir [Identifiants de sécurité](/fr/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (référence croisée dans le même chapitre)
 
 ## Liste de contrôle d'acceptation
 
@@ -148,9 +155,9 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 
 ## Lié
 
-- [Mode non interactif CLI](/guide/cli/non-interactive-mode/)
-- [Sortie structurée](/guide/developer-platform/non-interactive/structured-output/)
-- [Codes de sortie et retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [Mode non interactif CLI](/fr/guide/cli/non-interactive-mode/)
+- [Sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/)
+- [Codes de sortie et retries](/fr/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Sources de référence
 - Documentation CLI OpenAI Codex
@@ -158,5 +165,5 @@ C'est pourquoi beaucoup d'équipes le câblent derrière `make review`, GitHub A
 
 **Statut :** obsolète  
 **Produits concernés :** CLI  
-**Note de révision :** Cette page donne des orientations utiles sur `codex exec`, `--cwd` et l'intégration non interactive, mais manque de documentation officielle actuelle forte pour confirmer l'entrée de commande, les flags et le comportement ligne par ligne ; ne pas marquer `vérifié` jusqu'à alignement avec la doc CLI la plus récente.  
+**Note de révision :** Cette page couvre `codex exec`, `--cd` et l'intégration non interactive, conformément à la documentation CLI actuelle.
 **Dernière vérification :** 2026-07-26

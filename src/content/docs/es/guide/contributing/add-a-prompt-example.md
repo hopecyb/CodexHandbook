@@ -3,14 +3,15 @@ title: Añadir un ejemplo de prompt
 description: Enviar prompts reproducibles a examples/prompts, con metadatos y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Los ejemplos de prompt viven en el directorio raíz del repositorio [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) y se enlazan desde el cuerpo del manual. La especificación de diseño está en [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Los ejemplos de prompt viven en el directorio raíz del repositorio [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) y se enlazan desde el cuerpo del manual. La especificación de diseño está en [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## Contenido de esta página
 
@@ -112,7 +113,7 @@ El ejemplo debe enseñar el método, no exponer tu entorno de producción.
 - Objetivo y definición de hecho claros
 - Incluye explicación de límites de permiso y seguridad
 - Sin secretos reales ni PII
-- El estado `verified` requiere [verificación independiente](/guide/contributing/verify-technical-content/)
+- El estado `verified` requiere [verificación independiente](/es/guide/contributing/verify-technical-content/)
 
 ## Flujo de envío
 

@@ -3,14 +3,15 @@ title: Images and Screenshots
 description: Provide screenshots and design inputs to Codex; manage image files in tasks.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Images let the Agent **see** UI issues, design intent, or whiteboard sketches. This page covers input (images you provide) and image files in the repo; for generating new images see [Image generation](/guide/tools/image-generation/).
+Images let the Agent **see** UI issues, design intent, or whiteboard sketches. This page covers input (images you provide) and image files in the repo; for generating new images see [Image generation](/en/guide/tools/image-generation/).
 
 When tasking with screenshots, say what to look at and why it matters.
 
@@ -29,7 +30,7 @@ When tasking with screenshots, say what to look at and why it matters.
 | Architecture whiteboard | Clear photo or export + legend |
 | Error dialog | Full error text visible—not a cropped corner |
 
-Deep dive: [Prompting with images](/prompts/prompting-with-images/)
+Deep dive: [Prompting with images](/en/prompts/prompting-with-images/)
 
 ## What images actually add
 
@@ -97,7 +98,7 @@ Do not infer business logic from screenshots—layout and visuals only.
 
 - Screenshots may contain customer data, internal URLs, tokens—redact first
 - Do not send config screens with secrets to untrusted tasks
-- [Sensitive context](/guide/context/sensitive-context/)
+- [Sensitive context](/en/guide/context/sensitive-context/)
 
 ## Reference sources
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -107,9 +108,9 @@ Do not infer business logic from screenshots—layout and visuals only.
 
 For “implement from image” tasks:
 
-1. Side-by-side compare implementation and reference (or [Browser tool](/guide/tools/browser/))
+1. Side-by-side compare implementation and reference (or [Browser tool](/en/guide/tools/browser/))
 2. Check responsive and dark mode if required
-3. [Verify artifacts](/guide/quality/verify-artifacts/)
+3. [Verify artifacts](/en/guide/quality/verify-artifacts/)
 
 ## Common mistakes
 

@@ -3,9 +3,10 @@ title: Tables and Spreadsheets
 description: Read, clean, analyze, and export CSV, Excel, and tabular data—without breaking structure or encoding.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ Constraints: Do not modify source; treat blanks as 0; two decimal places
 Verification: Print first 5 rows + total row count
 ```
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Context: [File and folder context](/en/guide/context/file-and-folder-context/)
 
 ## Why spreadsheets fail quietly
 
@@ -102,7 +103,7 @@ Python: `pandas`; Node: `csv-parse` / `xlsx`—document project standard in `AGE
 
 - Row counts and totals cross-check against source
 - Open Excel and confirm dates are not stored as numbers wrongly
-- [Verify artifacts](/guide/quality/verify-artifacts/): sample comparison
+- [Verify artifacts](/en/guide/quality/verify-artifacts/): sample comparison
 
 For spreadsheets, clarity on columns, types, rules, and acceptance matters most.
 
@@ -119,7 +120,7 @@ For spreadsheets, clarity on columns, types, rules, and acceptance matters most.
 - [ ] Source file not overwritten unexpectedly (or change visible in diff)
 
 ## Reference sources
-- [Define constraints](/prompts/constraints-and-boundaries/)
+- [Define constraints](/en/prompts/constraints-and-boundaries/)
 ---
 
 **Status:** verified  

@@ -1,102 +1,149 @@
 ---
-title: Tareas programadas y en segundo plano
-description: "Automations: ejecutar Codex desatendido bajo disparadores; hay que diseñar Aprobación y condiciones de salida."
+title: Guía completa de Scheduled tasks
+description: Elige entre una tarea independiente o dentro de un chat y configura proyectos, worktrees, permisos, prompts y revisión humana.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 7b79596
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Automations** permite que Codex ejecute tareas de forma automática ante un **horario, un evento de repositorio o un disparador externo**, por ejemplo comprobaciones de dependencias, sincronización de documentación o escaneos periódicos de salud.
+La parte difícil de una Scheduled task no es elegir la hora. Es conseguir que cada ejecución desatendida tenga entradas estables, permisos limitados, resultados revisables y condiciones de parada.
 
-## Contenido de esta página
+![Ciclo de seguridad desde la verificación manual hasta la programación, la revisión humana y el ajuste](/diagrams/scheduled-task-safety-loop-es.svg)
 
-- Cuándo merece la pena automatizar y cuándo debe quedar una persona en el bucle
-- Cuatro puntos de diseño: disparo, ejecución, notificación y fallo
-- Relación con tareas Cloud y scripts locales de CLI
+## Para quién es
 
-## Comparación con tareas manuales
+- Personas que generan informes diarios o semanales, comprueban documentación o hacen seguimiento de PR.
+- Desarrolladores que ejecutan mantenimiento periódico sobre un proyecto local o un worktree aislado.
+- Responsables que evalúan permisos, tratamiento de fallos y Skills compartidos por el equipo.
 
-| | Tarea manual | Automation |
+## Límites de compatibilidad
+
+| Superficie | Qué permite | Restricción principal |
 |---|---|---|
-| Inicio | La inicias tú | Programación / evento |
-| Supervisión | Puedes interrumpir en cualquier momento | Hace falta notificación y logs |
-| Riesgo | Juzgas en el momento | El error puede propagarse en lote |
-| Encaja con | Exploración, refactor | Trabajo repetitivo y con reglas claras |
+| ChatGPT Web | Crear, gestionar y consultar ejecuciones; usar archivos cargados, herramientas conectadas, Skills y Plugins | No puede acceder directamente a carpetas locales |
+| App de escritorio de ChatGPT | Crear y gestionar; elegir un proyecto local o un Git worktree | El equipo debe estar encendido, la App en ejecución y el proyecto disponible |
+| Codex CLI | Preparar y probar manualmente prompts, Skills y scripts | No ofrece una interfaz de gestión de Scheduled tasks |
+| Integración IDE | Verificar comandos y cambios en el workspace | No ofrece una interfaz de gestión de Scheduled tasks |
 
-## Diseño de automatización segura
+## 1. Elegir entre una tarea independiente y una tarea dentro del chat
 
-### 1. Condiciones de disparo claras
+### Scheduled task independiente
+
+Cada ejecución parte del prompt guardado y aparece por separado en Scheduled. Es adecuada para informes y comprobaciones de estado independientes; una misma tarea puede abarcar varios proyectos.
+
+### Scheduled task dentro del chat
+
+Vuelve al mismo chat según la programación y conserva el contexto. Es adecuada para consultar periódicamente trabajos largos, seguir el estado de un PR, continuar una investigación o mantener una conversación previa.
+
+Elige una tarea independiente cuando cada ejecución deba empezar de nuevo; elige una tarea dentro del chat cuando una misma cuestión necesite continuidad.
+
+## 2. Elegir los materiales de ejecución
+
+### Ejecutar en Web
+
+Incluye las instrucciones duraderas en el prompt o en un Skill y proporciona archivos cargados, un Project o servicios conectados. Una indicación como «lee latest.csv de mi escritorio» no puede funcionar en Web.
+
+### Usar un proyecto local en la App de escritorio
+
+Para un repositorio Git puedes elegir:
+
+- **Proyecto local:** trabaja en el checkout principal y podría tocar archivos que estás editando.
+- **Worktree dedicado:** aísla los cambios en segundo plano del trabajo sin terminar; es preferible para tareas que modifican archivos.
+
+Los proyectos que no usan Git se ejecutan directamente en su directorio. Archiva las ejecuciones frecuentes que ya no necesites para evitar la acumulación de worktrees.
+
+## 3. Verificar manualmente primero
+
+Ejecuta en un chat normal exactamente el mismo prompt, modelo, nivel de razonamiento y conjunto de herramientas. Comprueba al menos que:
+
+- las entradas siguen siendo claras sin explicaciones en directo;
+- si no hay cambios, la tarea termina sin generar ruido;
+- el resultado puede revisarse con rapidez;
+- los comandos, Skills y herramientas conectadas funcionan;
+- si faltan permisos o materiales, la tarea se detiene y lo explica en vez de adivinar.
+
+Revisa las primeras ejecuciones programadas antes de ajustar el prompt o la frecuencia.
+
+## 4. Prompt de tarea reutilizable
 
 ```text
-Bien: cada lunes a las 09:00, comprobar enlaces rotos en docs/
-Mal: vigilar de continuo y cambiar código automáticamente
+Crea una Scheduled task independiente:
+
+Nombre: Comprobación semanal de enlaces rotos en la documentación
+Hora: lunes a las 09:00, en la zona horaria actual
+Ubicación: worktree dedicado del proyecto Git actual
+
+En cada ejecución:
+1. Lee únicamente docs/, src/content/docs/, examples/ y public/diagrams/.
+2. Ejecuta pnpm check:links.
+3. Si pasa, informa solo del número de archivos y enlaces; no modifiques nada.
+4. Si falla, enumera el archivo de origen, el destino roto y la corrección sugerida;
+   no corrijas los enlaces automáticamente.
+5. Sin internet, instalaciones, commit, push ni PR.
+6. Si falta el comando o una dependencia, o el resultado es incierto, detente e
+   indica el elemento exacto que requiere intervención humana.
+
+Finalización: termina después de producir un informe revisable; no reintentes.
 ```
 
-### 2. Permisos mínimos
+Aquí quedan definidos la hora, el proyecto, el alcance de lectura, el comando, las ramas de éxito y fallo, las acciones prohibidas y la condición de parada. La programación solo vuelve a activar la tarea; no sustituye su especificación.
 
-- El escaneo de solo lectura es preferible al commit automático
-- Si se abren PRs automáticamente, usa una cuenta bot dedicada y protección de ramas
+## 5. Permisos y revisión humana
 
-### 3. Condiciones de salida
+Las Scheduled tasks se ejecutan sin supervisión con la configuración predeterminada del sandbox.
 
-- Pausar tras N fallos consecutivos
-- Si el diff supera un umbral de líneas, pasar a revisión humana
-- Abortar al tocar directorios prohibidos en `AGENTS.md`
-
-### 4. Notificaciones
-
-- Slack / correo / móvil: completado, fallo, pendiente de Aprobación
-- Conservar logs para auditoría
-
-### 5. Puntos de revisión humana
-
-| Puede ser automático | Requiere persona |
+| Modo de sandbox | Resultado habitual |
 |---|---|
-| Generar un PR en borrador | Fusionar en main |
-| Listar dependencias obsoletas | Subir major versions |
-| Sincronizar documentación pública | Publicar un anuncio externo |
+| read-only | Fallan la edición de archivos, la red y el control de Apps locales |
+| workspace-write | Se puede escribir en el workspace; las escrituras externas, la red y el control de Apps fallan de forma predeterminada |
 
-## Patrones típicos
+Empieza con el modo más restrictivo que permita completar la tarea. Si necesitas red o un acceso de archivos más amplio, añade allowlists explícitas; no concedas permisos generales solo para eliminar un fallo puntual.
 
-### Mantenimiento periódico
+Conserva la revisión humana para:
 
-- Informe de vulnerabilidades de dependencias → abrir issue, sin tocar el lockfile
-- Aviso de diff entre archivos de traducción y el texto fuente
+- enviar mensajes o publicar contenido fuera del sistema;
+- modificar el estado de producción;
+- fusionar PR o hacer push a la rama principal;
+- eliminar en bloque, migrar o cambiar permisos;
+- un diff que exceda el alcance esperado o pruebas que fallen.
 
-### Impulsado por eventos
+## 6. Diseñar las rutas «sin cambios», fallo y parada
 
-- Nuevo PR abierto → ejecutar Skill de review (comentar sugerencias, sin push)
-- Issue con etiqueta `bug` → generar borrador de pasos de reproducción
+Una tarea duradera debe definir tres rutas:
 
-### Tareas de larga duración
+1. **Hay hallazgos:** presentar evidencias, gravedad y siguiente paso.
+2. **No hay cambios:** informar brevemente del alcance comprobado sin inventar problemas.
+3. **No se puede completar:** indicar los materiales o permisos que faltan, detenerse y esperar a una persona.
 
-Dividir en varias Automations + [traspaso y reanudación](/guide/agent-work/handoff-and-resume/), para no agotar el contexto en una sola pasada.
+Para una tarea dentro del chat que consulta periódicamente un estado, añade condiciones de terminación como «el PR se ha fusionado o cerrado», «se ha repetido el mismo error tres veces» o «se requiere aprobación humana».
 
-## Relación con Cloud / CLI
+## Una Scheduled task no es CI basada en eventos
 
-- **Cloud**: automatización remota bien integrada con GitHub
-- **CLI + cron/CI**: redes internas y pipelines a medida
-- Criterios de elección: [Local vs Cloud](/guide/foundations/local-vs-cloud/) y [Web y Cloud](/guide/web-and-cloud/)
+Si la ejecución debe producirse inmediatamente después de un `push`, de la creación de un PR o de una publicación, usa GitHub Actions, CI, webhooks o Codex SDK. Consultar el estado cada minuto no equivale a una activación precisa por eventos.
 
-## Errores habituales
+## Lista de aceptación
 
-- Automatizar un `git push` directo a la rama principal
-- Sin alertas de fallo, el repositorio se degrada en silencio
-- Programar tareas exploratorias: gasta cuota y es difícil de verificar
+- [ ] El prompt se ejecutó por completo en un chat normal.
+- [ ] Se eligió una tarea independiente o dentro del chat.
+- [ ] Los materiales de Web o el proyecto local estarán disponibles durante la ejecución.
+- [ ] El sandbox predeterminado basta, o existe una razón explícita para el acceso adicional.
+- [ ] Están definidas las rutas con hallazgos, sin cambios, de fallo y de parada.
+- [ ] Una persona revisó una muestra de las tres primeras ejecuciones.
+- [ ] Los worktrees frecuentes tienen una política de archivo y limpieza.
+- [ ] Las escrituras críticas conservan confirmación humana.
 
-## Lista de verificación
+## Fuentes oficiales
 
-- [ ] Disparadores, Permisos, notificaciones y condiciones de salida documentados
-- [ ] Se ha ensayado un ciclo completo en un fork o repositorio de prueba
-- [ ] El equipo conoce la cuenta bot y las reglas de Aprobación
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
+- [OpenAI: Sandboxing](https://learn.chatgpt.com/docs/permissions/sandboxing)
 
-## Fuentes de referencia
-- Documentación oficial de OpenAI Codex Cloud / Automations
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** Cloud / App / CLI  
-**Nota de revisión:** Esta página describe la capacidad actual de ejecución automática programada, por eventos y en segundo plano, pero las entradas de disparo y la gobernanza siguen cambiando con facilidad, y la base pública oficial no es lo bastante completa.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** ChatGPT Web / App de escritorio; CLI e IDE sirven para preparar y probar
+
+**Última verificación:** 2026-08-26

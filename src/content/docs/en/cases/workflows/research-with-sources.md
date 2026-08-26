@@ -3,18 +3,19 @@ title: Research with sources
 description: Use Codex for search, comparison, and fact-checking—traceable sources and conclusions.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: a9ff7a5
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 **Research with sources** means every key conclusion can be traced to a specific source—official docs, papers, or repo files—not just an unsupported claim. It fits tech selection, competitive comparison, literature review, and policy interpretation.
 
 ## What's covered
 
-- When to use [web search](/guide/tools/web-search/) vs read-only repo work
+- When to use [web search](/en/guide/tools/web-search/) vs read-only repo work
 - How to require citation format and uncertainty labels
-- How this pairs with [validate sources](/guide/quality/validate-sources/)
+- How this pairs with [validate sources](/en/guide/quality/validate-sources/)
 
 ## Minimum viable approach
 
@@ -37,7 +38,7 @@ Define question and exclusions
     → human decision or move to spec phase
 ```
 
-For long research, split across rounds—see [Long-running task management](/cases/workflows/long-running-task-management/).
+For long research, split across rounds—see [Long-running task management](/en/cases/workflows/long-running-task-management/).
 
 ## Common mistakes
 
@@ -49,7 +50,7 @@ For long research, split across rounds—see [Long-running task management](/cas
 ## Security boundaries
 
 - Internal unpublished material must not leave via uncontrolled MCP
-- Volatile facts (pricing, versions, regional availability) need a [verification date](/guide/start-here/handbook-version-policy/)
+- Volatile facts (pricing, versions, regional availability) need a [verification date](/en/guide/start-here/handbook-version-policy/)
 
 ## Acceptance checklist
 
@@ -60,8 +61,8 @@ For long research, split across rounds—see [Long-running task management](/cas
 
 ## Related chapters
 
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
-- [Case: Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Handle uncertainty](/en/guide/quality/handle-uncertainty/)
+- [Case: Refactor docs with review](/en/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

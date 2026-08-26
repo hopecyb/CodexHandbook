@@ -1,56 +1,53 @@
 ---
 title: Plugins
-description: チームが拡張能力を配布する説明ページ。パッケージ層であり、新しい能力タイプではないことを先に区別する。
+description: 再利用可能な Skills、コネクタ、MCP、Hooks、タスクテンプレートの組み合わせを参照、インストール、管理します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 33c9fe2
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Plugin が主に解くのは、拡張能力のセットを他人にインストール・管理させる方法です。
+Plugin は機能を組み合わせて配布する単位です。Skills、コネクタ、MCP サーバー、ブラウザ拡張、Hooks、Scheduled task のテンプレートを含めることができます。実際の作業を行うのは、Plugin に含まれるこれらのコンポーネントです。
 
-より偏っているのは：
+## 対象読者
 
-- パッケージ化
-- 配布
-- アップグレード
-- 権限ガバナンス
+- 公開ディレクトリから既成の機能セットをインストールしたい利用者
+- チームの手順、ツール、ガードレールを一つのバージョン管理単位として配布したい保守担当者
+- 配布元、外部サービスの権限、Plugin Hook をレビューする必要がある管理者
 
-別の全新能力タイプを発明しているわけではありません。
+## 現在サポートされる画面
 
-## 適用シーン
+| 画面 | 参照 / インストール | 使用 |
+|---|---|---|
+| ChatGPT Web とデスクトップ App | Plugins タブ | Chat と Work |
+| ChatGPT Mobile | 主な管理画面ではない | アカウントにある Plugin を使用 |
+| ChatGPT デスクトップ App 内の Codex | Plugins タブ | Codex タスク |
+| Codex CLI | `/plugins` ブラウザ。インストール後に新しいセッションを開始 | Codex 環境 |
+| IDE 拡張 | **Plugin はサポートしない** | MCP や Skill など、IDE が個別にサポートする機能は使用可能 |
 
-このグループは主に次の 2 類向けです。
+## 読む入口
 
-- チームに拡張能力一式を統一配布する準備
-- プラグインを入れる価値があるか判断したい
+- [Plugins の概要](/ja/skills/plugins/plugins-overview/)：コンポーネント、サポート範囲、インストールの検証、セキュリティレビューを理解する
+- [拡張機能マップ](/ja/skills/capability-map/)：Plugin、Skill、MCP、Hook、Scheduled task を比較する
 
-個人学習なら、概念を 1 ページ把握するだけで十分なことが多いです。
+## インストール前に確認すること
 
-## 本グループの入口
+1. 配布元と保守担当者は誰か。
+2. どの Skills、コネクタ、MCP、ブラウザ機能、Hooks が含まれるか。
+3. 外部アカウントへの接続が必要か。どの scope を取得するか。
+4. Hook は `/hooks` でレビューされ、信頼済みになっているか。
+5. チームはどのように無効化、更新、ロールバック、認可の取り消しを行うか。
 
-- [Plugins 概要](/skills/plugins/plugins-overview/)：Plugin と Skill、MCP の関係、なぜ配布層に近いかを理解
+## 公式情報
 
-## よくある誤解
-
-### 1. Plugin を入れれば自動的に安全
-
-Plugin は能力を配りやすくするだけで、デフォルトで信頼できる、低権限であるとは限りません。
-
-### 2. 機能が多ければ入れる価値がある
-
-先に見るべきは：
-
-- 出所が信頼できるか
-- 権限範囲が広すぎないか
-- チームがアップグレード、ロールバック、監査できるか
-
-Plugin は拡張能力の配布パッケージに近く、Skill や MCP の代替でもありません。
+- [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
 
 ---
 
-**状態：** outdated  
-**対象製品：** App / CLI  
-**最終検証：** 2026-07-26  
-**検証根拠：** 現行のプラグインディレクトリ、インストール方針、表面サポートは進化中。本グループの説明は詳細を固定しすぎているため暫定 `outdated`。現行 Plugin ディレクトリに合わせた書き直しが必要。
+**状態：** verified
+
+**対象製品：** ChatGPT Web / デスクトップ App / Mobile、Codex デスクトップと CLI。IDE 拡張は Plugin をサポートしません
+
+**最終検証：** 2026-08-26

@@ -1,163 +1,100 @@
 ---
 title: Berechtigungsmatrix
-description: 'Konzeptuelle Gegenüberstellung von Codex-Operationstypen, Freigabepunkten und Produktdifferenzen.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Unterscheide lokale Permission Profiles, alte Sandbox-Einstellungen und Cloud-Netzwerkrichtlinien.
 sidebar:
   order: 70
+locale: de
+source_locale: zh-CN
+source_revision: a161c0c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Die **Berechtigungsmatrix** hilft auch normalen Nutzern: Warum reagiert Codex bei derselben Formulierung an verschiedenen Einstiegen anders?
+Versuche Berechtigungen nicht mit einer starren Tabelle vorherzusagen, die nur fragt, ob App, CLI, IDE oder Cloud einen Dialog anzeigen. Das tatsächliche Verhalten hängt gemeinsam von Ausführungsort, wirksamer Konfiguration, Organisationsanforderungen, Betriebssystem und konkreter Aktion ab.
 
-Unterschiedliche **Operationen** lösen an unterschiedlichen **Produkteinstiegen** unterschiedliche Freigabe- und Sandbox-Verhalten aus. Die Matrix hilft Teams abzustimmen, „was Menschen explizit freigeben müssen“ — **Risiko- und Verhaltensvergleich**, keine Compliance-Vorschrift. Defaults: [offizielle Docs](https://developers.openai.com/codex) und Organisationspolicies.
+![Entscheidungsablauf zwischen Sandbox-Blockade, menschlicher Genehmigung und Ausführungsergebnis](/diagrams/sandbox-approval-flow-de.svg)
 
-## Was die Tabelle zeigt
+## Zuerst drei Mechanismen unterscheiden
 
-Bei Freigabe, Limit oder Ablehnung denken viele zuerst:
-
-- Modell kaputt
-- Formulierung falsch
-- Gestern ging es, heute nicht
-
-Oft liegt der Unterschied an Einstieg, Policy und Risikostufe.
-
-## Kernpunkt
-
-Nicht jedes „hilf mir damit“ hat dasselbe Risiko.
-
-Zum Beispiel:
-
-- Eine Datei lesen
-- Eine Datei ändern
-- Einen Befehl ausführen
-- Ins Netz
-- Code pushen
-
-Alles „Aufgabe ausführen“ — Risiko nicht dieselbe Stufe. Deshalb Freigaben, Limits und Blocks an verschiedenen Stellen.
-
-Grundlagen: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-
-## Operationsrisikostufen
-
-| Stufe | Beispiele | Typische Erwartung |
+| Mechanismus | Geltungsbereich | Wichtigste Kontrolle |
 |---|---|---|
-| L0 Lesen | Projekttext lesen, Code suchen | Meist automatisch |
-| L1 Schreiben | Projektdateien ändern, formatieren | Oft Bestätigung oder auto in Sandbox |
-| L2 Ausführen | Shell, Package-Manager, Tests | Oft Bestätigung |
-| L3 Outbound | curl, npm registry, API | Strenge Bestätigung oder Verbot |
-| L4 Overreach | Pfade außerhalb, git push, DB löschen | Block oder starke Bestätigung |
-| L5 GUI | Computer Use, Systemdialoge | Höchste Sensibilität, oft default aus |
+| Lokale Permission Profiles (Beta) | Lokale Befehle unter macOS, Linux, WSL und nativem Windows | Lesen, Schreiben oder Sperren im Dateisystem sowie Netzwerkziele |
+| Alte Sandbox-Einstellungen | Lokales Codex | `read-only`, `workspace-write`, `danger-full-access` und Genehmigungsrichtlinie |
+| Cloud-Umgebungsrichtlinie | Codex Cloud | Isolierter Container, Netzwerk in der Setup-Phase, Allowlist und HTTP-Methoden für das Netzwerk der Agent-Phase |
 
-## Lesart
+Permission Profiles werden nicht mit dem alten `sandbox_mode` kombiniert. Sobald die geladene Konfiguration `sandbox_mode` enthält, `--sandbox` auf der Kommandozeile angegeben wird oder ein Konfigurationsprofil eine Sandbox festlegt, verwendet Codex die alten Sandbox-Einstellungen statt `default_permissions`.
 
-Nicht jedes Feld pauken. Nutzen:
+## Integrierte lokale Permission Profiles
 
-- Operationsklasse der aktuellen Aufgabe bestimmen
-- Ob der aktuelle Einstieg typischerweise blockiert
-- Ob Erklärung nachreichen, auf Freigabe warten oder Einstieg wechseln
+| Name | Grenze | Geeignet für |
+|---|---|---|
+| `:read-only` | Lokale Befehle nur lesend | Codeverständnis, Review und erster Kontakt mit einem Repository |
+| `:workspace` | Aktuelle Workspace-Roots und temporäre Systemverzeichnisse beschreibbar | Reguläre Entwicklungsaufgaben |
+| `:danger-full-access` | Entfernt lokale Sandbox-Beschränkungen | Nur wenn eine externe Isolierung besteht und der Zugriff ausdrücklich erforderlich ist |
 
-Auch als Vorab-Einschätzung.
+Ein eigenes Profil kann Pfade auf `read`, `write` oder `deny` setzen und mit spezifischeren Regeln vertrauliche Dateien wie `.env` aus einem breiteren Bereich ausschließen. Bei Konflikten für denselben Pfad hat `deny` Vorrang vor `write`, `write` Vorrang vor `read`.
 
-## Matrix (Konzept — typische Defaults)
+## Beispiel mit minimalen Berechtigungen
 
-**Y** = oft explizite Zustimmung oder Policy-Limit · **A** = auto bei vertrauenswürdiger Config · **—** = version/policyabhängig · **N** = meist nicht erlaubt
+```toml
+default_permissions = "project-edit"
 
-| Operation | Desktop-App | CLI interaktiv | IDE | Cloud |
-|---|---|---|---|---|
-| Repo-Dateien lesen | A | A | A | A |
-| Dateien im Repo schreiben | Y/A | Y | Y/A | Y/A |
-| Testbefehle | Y/A | Y | Y/A | Y/A |
-| Globale Abhängigkeiten installieren | Y | Y | Y | Y |
-| Öffentliches Netz | Y | Y | Y | Y |
-| Sensitive Dateien wie `.env` lesen | Y | Y | Y | Y |
-| `git commit` | Y | Y | Y | Y |
-| `git push` | Y | Y | Y | Y |
-| Pfade außerhalb des Projekts | N/Y | N/Y | N/Y | N |
-| MCP-Drittanbieter-Tools | Y | Y | Y | Y |
-| Browser-URL öffnen | Y | — | — | Y |
-| Computer Use | Y/— | — | — | — |
+[features]
+network_proxy = true
 
-Hinweise:
+[permissions.project-edit.filesystem]
+":minimal" = "read"
 
-- **Cloud** läuft in Remote-Sandbox — kein Laptop-Dateisystem
-- **IDE** ähnlich App, andere Freigabe-UI
-- **Managed Policy** kann alles auf Y oder N zwingen
+[permissions.project-edit.filesystem.":workspace_roots"]
+"." = "write"
+".devcontainer" = "read"
+"**/*.env" = "deny"
 
-## Häufige Missverständnisse
+[permissions.project-edit.network]
+enabled = true
 
-### 1. Ob es geht, hängt nicht nur vom Modell ab
+[permissions.project-edit.network.domains]
+"api.openai.com" = "allow"
+"tracking.example.com" = "deny"
+```
 
-Oft:
+`network.enabled = true` erlaubt Befehlen lediglich, das Netzwerk zu verwenden. Damit Domainregeln über den Proxy erzwungen werden, muss zusätzlich `features.network_proxy` aktiviert sein.
 
-- Erlaubt der Einstieg es?
-- Lässt die Policy durch?
-- Reichen die Rechte?
+## Nach Aktion beurteilen
 
-### 2. Cloud nicht automatisch freier oder sicherer
+| Aktion | Hauptrisiko | Kleinste Grenze |
+|---|---|---|
+| Quellcode lesen | Vertrauliche Dateien gelangen in den Kontext | Workspace lesen, Zugangsdaten ausdrücklich sperren |
+| Dateien ändern | Überschreiben oder Löschen außerhalb des Umfangs | Nur Ziel-Workspace beschreiben und Diff prüfen |
+| Tests ausführen | Nebenwirkungen eines Skripts | Skript prüfen und kontrollierte Umgebung verwenden |
+| Abhängigkeiten installieren | Lieferketten- und Netzwerkrisiko | Versionen fixieren und Domains einschränken |
+| Git push / PR | Externer Zustand wird verändert | Eigener Branch, Branchschutz und menschliches Review |
+| MCP-/Plugin-Werkzeug | Drittanbieterdaten und Schreibzugriffe | Minimaler Scope, Genehmigung pro Aktion und Protokollierung |
 
-Sicherheit hängt an Sandbox, Netz, Secrets, Branch Protection und Freigabe zusammen.
+`AGENTS.md` kann „nicht pushen“ anweisen, stellt aber keine technisch erzwungene Grenze dar. Kombiniere die Regel mit Sandbox oder Permissions, GitHub-Berechtigungen und menschlichem Review.
 
-### 3. Regeln schreiben ≠ Risiko verschwindet
+## Prüfung im Team
 
-Doku-Regeln, Freigabe-Policy, Techniklimits und Menschen-Review oft zusammen.
+1. Notiere Client- und Codex-Version.
+2. Liste alle geladenen Konfigurationsebenen auf.
+3. Bestätige, ob ein Permission Profile oder die alte Sandbox verwendet wird.
+4. Teste Lesen, Schreiben, Sperren und Netzwerk getrennt in einem Verzeichnis ohne vertrauliche Daten.
+5. Binde erst danach das echte Repository ein und behalte Git- und Organisations-Gates bei.
 
-### 4. Blockiert ≠ Sie haben falsch gemacht
+Permission Profiles befinden sich weiterhin in der Beta-Phase. Führe diese Verifikation nach einem Upgrade erneut aus.
 
-Oft:
+## Offizielle Grundlage
 
-- Dieser Schritt ist riskanter
-- Einstieg ungeeignet
-- Klarere Freigabe oder leichtere Variante nötig
-
-## Config und Doku umsetzen
-
-| Mechanismus | Wirkung |
-|---|---|
-| Sandbox-Modus | Begrenzt L3/L4 auch wenn Agent „will“ |
-| Freigabe-Policy | Ob L1–L3 Popups zeigen |
-| `AGENTS.md` | Projektverbote (z. B. kein Push) |
-| Branch Protection | GitHub blockiert ungeprüfte Merges |
-| Hooks | Checks vor Commit (siehe Hooks-Roadmap) |
-
-[Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) · [Konfigurationsreferenz](/guide/reference/configuration-reference/)
-
-## Wann vorsichtiger werden
-
-Bei einer der folgenden Eigenschaften:
-
-- Ändert Dateien
-- Führt Befehle aus
-- Geht ins Netz
-- Berührt sensible Daten
-- Sendet Ergebnisse aus dem Repo
-
-L-Nummer nicht nötig — aber: nicht mehr „kurz drüberschauen“-Risiko.
-
-Die Matrix ist ein Vorhersagewerkzeug: warum blockiert, ob vorsichtiger, oder leichtere Variante.
-
-## Teamstrategien (Beispiele)
-
-| Szenario | Empfehlung |
-|---|---|
-| Open-Source-Übungsrepo | Standard-Sandbox + Testbefehle erlaubt |
-| Firmen-Monorepo | Streng + kein Push + PR mit Menschen-Review |
-| CI `codex exec` | Read-only oder begrenztes Verzeichnis + kein Push |
-| Cloud produktionsnah | Secrets minimal + Branch Protection |
-
-## Häufige Irrtümer
-
-| Irrtum | Tatsache |
-|---|---|
-| «Cloud ist sicherer» | Hängt an Secrets, Review, Netzpolicy |
-| «IDE führt kein Shell aus» | Kann über Agent-Tools |
-| «Verbot Push in Doku = kein Push» | Braucht Sandbox + Git-Rechte + Menschen-Review |
+- [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
+- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfhinweis:** Risikostufen-Idee nützlich; Matrix mit vielen Annahmen zu Defaults, Freigabepunkten und Fähigkeiten je Einstieg — ohne aktuelle offizielle Per-Einstieg-Matrix nicht `review`/`verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App, CLI, IDE, Cloud
+
+**Zuletzt geprüft:** 2026-08-26

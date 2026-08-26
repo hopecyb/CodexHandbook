@@ -3,9 +3,10 @@ title: 許可と拒否ルール
 description: コマンドとパスルールで Agent の操作を制約——個人習慣とチームの底線。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ sidebar:
 | パス | `../` への書き込み禁止、`~/.ssh` 読み取り禁止 |
 | ネットワーク | 外向き通信禁止または registry ドメインのみ |
 
-[権限マトリクス](/guide/reference/permission-matrix/) と対照：ルールは**設定可能な** enforcement。マトリクスは**典型的なデフォルト**を述べる。
+[権限マトリクス](/ja/guide/reference/permission-matrix/) と対照：ルールは**設定可能な** enforcement。マトリクスは**典型的なデフォルト**を述べる。
 
 ## 推奨層分け
 

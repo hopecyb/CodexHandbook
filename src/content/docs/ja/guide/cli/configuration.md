@@ -3,14 +3,15 @@ title: CLI 設定
 description: モデル、サンドボックス、承認、MCP——ターミナルで Codex の挙動を統一する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-CLI 設定は **デフォルトモデル、作業ディレクトリ、承認の厳しさ、MCP サーバー** などを決めます。[設定の基礎](/guide/customization/configuration/config-basics/) と概念は同じで、本ページはターミナルユーザーがよく触る項目に焦点を当てます。
+CLI 設定は **デフォルトモデル、作業ディレクトリ、承認の厳しさ、MCP サーバー** などを決めます。[設定の基礎](/ja/guide/customization/configuration/config-basics/) と概念は同じで、本ページはターミナルユーザーがよく触る項目に焦点を当てます。
 
 ## 本ページの内容
 
@@ -74,7 +75,7 @@ CLI 設定は「ターミナルでの Codex のデフォルトの働き方」と
 | 標準 | 日常開発 |
 | 緩和 | 個人の信頼環境のみ。会社方針に合致すること |
 
-概念：[サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
+概念：[サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
 
 ### 承認ポリシー
 
@@ -82,7 +83,7 @@ CLI は shell 実行、書き込み、ネットワーク接続の前に確認す
 
 ### MCP サーバー一覧
 
-[Connect MCP サーバー](/skills/mcp/connect-an-mcp-server/) と設定を共有。変更後はセッションを再起動してください。
+[Connect MCP サーバー](/ja/skills/mcp/connect-an-mcp-server/) と設定を共有。変更後はセッションを再起動してください。
 
 ## 十分な設定順序
 
@@ -111,7 +112,7 @@ CLI は shell 実行、書き込み、ネットワーク接続の前に確認す
 | MCP が読み込まれない | JSON/TOML 構文、パス |
 | 承認が多すぎる | サンドボックスモードと allowlist |
 
-詳細：[CLI トラブルシューティング](/guide/cli/troubleshooting/)
+詳細：[CLI トラブルシューティング](/ja/guide/cli/troubleshooting/)
 
 CLI 設定は「デフォルトの働き方」と考え、**ほぼ毎回同じ選択をするものだけ** 固定すれば十分です。高度な能力は後から足しても遅くありません。
 

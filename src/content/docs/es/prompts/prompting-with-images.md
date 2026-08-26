@@ -3,9 +3,10 @@ title: Prompts con imágenes
 description: Cómo preguntar al dar a Codex capturas, diseños o fotos de pizarra para obtener resultados ejecutables.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muchos fallos de «trabajar a partir de una imagen» no vienen de que el modelo no la vea, sino de dar solo la imagen **sin decir qué debe mirar en ella**.
@@ -161,10 +162,10 @@ Aunque implementes según la imagen, al final hay que mirar la página real, el 
 
 ## Cómo combinarlo con otras páginas
 
-- Subir y gestionar archivos de imagen: [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/)
-- Generar imágenes nuevas: [Generación de imágenes](/guide/tools/image-generation/)
-- Formular la tarea completa: [Anatomía de una tarea](/prompts/task-anatomy/)
-- Analizar antes de actuar: [Pedir un plan primero](/prompts/ask-for-a-plan/)
+- Subir y gestionar archivos de imagen: [Imágenes y capturas](/es/guide/files-and-artifacts/images-and-screenshots/)
+- Generar imágenes nuevas: [Generación de imágenes](/es/guide/tools/image-generation/)
+- Formular la tarea completa: [Anatomía de una tarea](/es/prompts/task-anatomy/)
+- Analizar antes de actuar: [Pedir un plan primero](/es/prompts/ask-for-a-plan/)
 
 ## Una experiencia práctica
 

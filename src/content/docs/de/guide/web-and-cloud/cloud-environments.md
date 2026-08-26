@@ -1,156 +1,84 @@
 ---
 title: Cloud-Umgebungen
-description: Aufbau, Lebenszyklus und Team-Konfiguration der Remote-Laufumgebung von Codex Cloud.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Konfiguriere Laufzeit, Abhängigkeiten, Setup, Cache und Repository-Ausgangspunkt von Codex Cloud.
 sidebar:
   order: 20
+locale: de
+source_locale: zh-CN
+source_revision: f7c7188
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Eine **Cloud-Umgebung** ist die Arbeitsmaschine, auf der Codex Remote-Aufgaben ausführt.
+Eine Cloud-Umgebung legt fest, was Codex für ein Repository installiert und ausführt. Sie übernimmt die Konfiguration deines Laptops nicht. Wenn ein lokaler Lauf besteht und Cloud fehlschlägt, vergleiche zuerst Laufzeit, Abhängigkeiten, Variablen und Netzwerk.
 
-Sie beeinflusst Ergebnisse direkt: OS, Sprachversionen, Toolchain, Netzwerkpolicy und welcher Repo-Branch vorliegt. Diese Schicht erklärt vor allem:
+## Ausführungsreihenfolge eines Chats
 
-> **Warum läuft es lokal, in Cloud aber nicht?**
+1. Container erstellen und den gewählten Branch oder die Commit-SHA auschecken.
+2. Setup-Skript ausführen; bei Wiederverwendung eines Caches kann zusätzlich ein Maintenance-Skript laufen.
+3. Internetrichtlinie anwenden.
+4. Agent-Schleife mit Befehlen, Änderungen und Verifikation ausführen und die anwendbaren `AGENTS.md`-Dateien lesen.
+5. Antwort und Diff für Rückfragen oder die Erstellung eines PR zurückgeben.
 
-## Inhalt
+Das Standardimage `universal` enthält verbreitete Sprachen, Paketmanager und Werkzeuge. In den Umgebungseinstellungen kannst du Versionen von Python, Node.js und anderen Laufzeiten fixieren oder zusätzliche Abhängigkeiten im Setup-Skript installieren.
 
-- Unterschiede Cloud-Umgebung vs. lokaler Dev-Rechner
-- Bindung an GitHub-Repo und Branch
-- Wie Teams reproduzierbare Cloud-Konfiguration pflegen
+## Minimale reproduzierbare Konfiguration
 
-## Zuerst diese Punkte
+Lege für ein pnpm-Projekt in der Umgebung zunächst dieselbe Node.js-Version wie in CI fest und verwende:
 
-- Cloud „liest nicht alles auf Ihrem Rechner“ — nur was in der Remote-Umgebung liegt
-- Auch Cloud braucht Abhängigkeiten, passende Versionen und Netz
-- Uncommittetes / ungepushstes Lokal sieht Cloud default nicht
-
-Stellen Sie sich Cloud als **andere Maschine** vor.
-
-## Kernkonzept
-
-```text
-GitHub-Repo (Branch)
-        ↓ clone / checkout
-Cloud-Umgebungsinstanz (Container oder VM，produktspezifisch)
-        ↓
-Agent führt Aufgabe aus: Abhängigkeiten, Code, Tests, Push
+```bash
+corepack enable
+pnpm install --frozen-lockfile
 ```
 
-Zusammen mit [GitHub verbinden](/guide/web-and-cloud/connect-github/); die Umgebung **kann keine** ungepushsten Notebook-Commits sehen.
+Dokumentiere im `AGENTS.md` des Repository-Stamms:
 
-## Lokal vs. Cloud
+```md
+## Validation
 
-- **Lokale Aufgabe**: Codex arbeitet vor Ihren Augen auf diesem Rechner
-- **Cloud-Aufgabe**: Codex arbeitet auf einer Remote-Maschine
+- Run `pnpm test` after code changes.
+- Run `pnpm typecheck` before reporting completion.
+- Do not update the lockfile unless dependency changes are requested.
+```
 
-Typische Erstverwirrung:
+Setup- und Agent-Phase laufen in unterschiedlichen Bash-Sitzungen. Ein vorübergehendes `export` im Setup gilt nicht automatisch in der Agent-Phase. Konfiguriere nicht vertrauliche Werte in den Umgebungseinstellungen oder persistiere sie nach offizieller Empfehlung in der Shell-Konfiguration.
 
-- „Warum sieht es meine gerade geänderten lokalen Dateien nicht?“
-- „Warum fehlt das global installierte Tool von meinem Laptop?“
-- „Warum kommt es nicht an meine lokale DB?“
+## Cache und Maintenance
 
-Meist: **Die Remote-Maschine hat das schlicht nicht.**
+Cloud kann einen Containerzustand bis zu 12 Stunden zwischenspeichern, um neue Chats und Folgerunden zu beschleunigen. Nach der Wiederherstellung aus dem Cache checkt Cloud den für den Chat angegebenen Branch aus und kann ein Maintenance-Skript zur Aktualisierung von Abhängigkeiten ausführen.
 
-## Was die Umgebung enthält (Konzept)
+Änderungen an Setup, Maintenance, Umgebungsvariablen oder Secrets machen den Cache automatisch ungültig. Falls Änderungen im Repository den Cache inkompatibel machen, verwende manuell **Reset cache**. Umgebungscaches in Business und Enterprise können von Benutzern mit Zugriff auf dieselbe Umgebung gemeinsam verwendet werden; ein Reset wirkt sich dann auch auf andere Workspace-Benutzer aus.
 
-| Bestandteil | Erklärung |
+## Umgebungsvariablen und Secrets
+
+- Umgebungsvariablen stehen in der Setup- und in der Agent-Phase zur Verfügung.
+- Secrets werden ausschließlich in der Setup-Phase entschlüsselt und vor Beginn der Agent-Phase entfernt.
+- In der Setup-Phase besteht Internetzugriff.
+- Die Agent-Phase hat standardmäßig keinen Netzwerkzugriff; er kann pro Umgebung ausdrücklich freigeschaltet werden.
+
+Diese Grenzen werden häufig verwechselt. Das nächste Kapitel behandelt sie ausführlich: [Secrets und Umgebungsvariablen](/de/guide/web-and-cloud/secrets-and-variables/).
+
+## Abgleichcheckliste
+
+| Prüfung | Ziel |
 |---|---|
-| Basisimage | OS, gängige Build-Tools |
-| Runtime | Node, Python, Go usw. (Image/Aufgabe) |
-| Arbeitsverzeichnis | Pfad nach dem Clone |
-| Netzwerkpolicy | Outbound erlaubt? Welche Domains? |
-| Credential-Injection | [Secrets und Variablen](/guide/web-and-cloud/secrets-and-variables/) |
+| Ausgangs-Branch/Commit | Entspricht der Aufgabenbeschreibung |
+| Laufzeitversion | Entspricht CI- oder Produktionsvorgaben |
+| Sperrdatei | Installation im Frozen-Modus |
+| Setup | Wiederholbar, nicht interaktiv und bricht bei einem Fehler ab |
+| Verifikationsbefehle | In `AGENTS.md` dokumentiert |
+| Netzwerk | Agent erhält nur Zugriff auf erforderliche Domains und Methoden |
 
-Image-Listen und Customizing: [offizielle Cloud-Dokumentation](https://developers.openai.com/codex).
+## Offizielle Grundlage
 
-## Häufige Missverständnisse
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Image codex-universal](https://github.com/openai/codex-universal)
 
-### 1. Cloud erbt automatisch die lokale Umgebung
-
-Nein.
-
-Lokal installiertes Node, Python, Homebrew, Chrome, DB-Clients erscheinen nicht „weil lokal vorhanden“.
-
-### 2. Repo gepusht = alles bereit
-
-Code ist nur der Start; Erfolg hängt ab von:
-
-- Abhängigkeitsinstallation
-- Start-/Testbefehlen
-- benötigten Secrets
-- Netzwerkpolicy für externe Ressourcen
-
-### 3. Cloud-Fehler = Codex kann es nicht
-
-Oft fehlt die Umgebung — nicht die Aufgabe.
-
-Reihenfolge:
-
-1. Repo und Branch korrekt?
-2. Abhängigkeiten und Runtime-Versionen korrekt?
-3. Secrets und Netz verfügbar?
-4. Aufgaben-Prompt klar?
-
-## Empfohlener Konfigurationsablauf
-
-1. Erste Cloud-Aufgabe im **Testrepo**, Installationsbefehle notieren
-2. Wiederkehrendes in Repo-Doku (`README`, `AGENTS.md` oder unterstützte Environment-Dateien)
-3. [Secrets](/guide/web-and-cloud/secrets-and-variables/) (private Registry, API-Keys)
-4. [Internetzugriff](/guide/web-and-cloud/internet-access/) an Sicherheitsanforderungen prüfen
-5. Mit demselben Template Issue → PR-Kreislauf verifizieren
-
-## Wann Cloud
-
-- Nur lokales Projekt, sofort Ergebnis: zuerst lokal
-- Lange Läufe, einheitliche Team-Umgebung, Remote-GitHub: Cloud
-
-Wenn der lokale Flow noch wackelt, nicht vorschnell zum „Cloud-Config-Problem“ eskalieren.
-
-## Mit lokal abstimmen
-
-„Lokal grün, Cloud rot“ vermeiden:
-
-| Praxis | Grund |
-|---|---|
-| Abhängigkeitsversionen locken (lockfile) | Reproduzierbare Installation |
-| Install- und Testbefehle in `AGENTS.md` | Agent rät nicht |
-| CI und Cloud ähnliche Node/Python-Versionen | Weniger Drift |
-| Große Dateien via Git LFS oder Build-Download | Clone-Größe steuerbar |
-
-## Lebenszyklus
-
-Typische Cloud-Aufgabe:
-
-1. Instanz **erstellen/wiederverwenden**
-2. **Vorbereiten**: clone, Branch checkout, Abhängigkeiten
-3. **Ausführen**: Agent ändert Code, läuft Befehle
-4. **Output**: Branch-Push, PR, Log-Artifacts
-5. **Zerstören oder recyclen** (produktspezifisch)
-
-Lange Aufgaben: [Desktop-App-Benachrichtigungen](/guide/desktop-app/notifications/) oder Mobile Follow-up.
-
-## Häufige Fehler
-
-- Annehmen, Cloud habe die komplette Toolchain des privaten Monorepos
-- `localhost`-Dienste (DB, Mock-API) ohne Bereitstellung in der Umgebung
-- Erste Aufgabe unbeschränkt auf Produktionsrepo
-- Umgebungsproblem als Modellfähigkeitsproblem missverstehen
-
-## Sicherheitsgrenzen
-
-- Umgebung als **halbvertrauenswürdig**: weiterhin Code Review und Branch Protection
-- Produktions-DB-Strings nur über Secrets, nicht im Prompt
-- Unbenutzte Environment-Templates und Secrets regelmäßig aufräumen
-
-## Quellen
-- OpenAI Codex Cloud environments
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud  
-**Prüfhinweis:** Betrifft Instanzform, Lebenszyklus, Templates und Branch-Bindung — ohne starke aktuelle offizielle Detailbelege nicht `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud
+
+**Zuletzt geprüft:** 2026-08-26

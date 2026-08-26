@@ -4,7 +4,7 @@ description: Execution isolation, network access, and risk boundaries.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: b3d6d57
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -19,7 +19,7 @@ The **sandbox** limits which parts of the filesystem and system an Agent can tou
 2. Don't put production secrets in a practice project
 3. When you see requests to "go online" or "write to sensitive paths," pause, read, then approve
 
-Product settings: desktop App [Settings](/guide/desktop-app/settings/); official details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Product settings: desktop App [Settings](/en/guide/desktop-app/settings/); official details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 ---
 

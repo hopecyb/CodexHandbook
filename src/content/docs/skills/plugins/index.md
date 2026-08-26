@@ -1,51 +1,47 @@
 ---
 title: Plugins
-description: 团队分发扩展能力的说明页，先分清它是打包层，不是另一种全新能力。
+description: 浏览、安装和治理可复用的 Skills、连接器、MCP、Hooks 与任务模板组合。
 ---
 
-Plugin 主要解决的是：怎么把一组扩展能力发给别人安装和管理。
+Plugin 是能力组合与分发单元。它可以包含 Skills、连接器、MCP 服务器、浏览器扩展、Hooks 和 Scheduled task 模板；真正执行工作的仍是其中这些组件。
 
-它更偏向：
+## 适合谁
 
-- 打包
-- 分发
-- 升级
-- 权限治理
+- 想从公共目录安装一套现成能力的使用者
+- 准备把团队流程、工具和守护栏作为一个版本化单元分发的维护者
+- 需要审查来源、外部服务权限和 Plugin Hook 的管理员
 
-它不是单独发明的一种全新能力类型。
+## 当前支持表面
 
-## 适用场景
+| 表面 | 浏览/安装 | 使用 |
+|---|---|---|
+| ChatGPT Web 与桌面 App | Plugins 标签页 | Chat 与 Work |
+| ChatGPT Mobile | 不作为主要管理入口 | 使用账号已有 Plugin |
+| ChatGPT 桌面 App 中的 Codex | Plugins 标签页 | Codex 任务 |
+| Codex CLI | `/plugins` 浏览器；安装后开启新会话 | Codex 环境 |
+| IDE 扩展 | **不支持 Plugin** | 可单独使用 MCP、Skill 等 IDE 已支持能力 |
 
-这一组主要面向两类情况：
+## 阅读入口
 
-- 你准备给团队统一发一套扩展能力
-- 你想判断一个插件值不值得装
+- [Plugins 概述](/skills/plugins/plugins-overview/)：理解组件、支持边界、安装验证与安全审查
+- [扩展能力地图](/skills/capability-map/)：比较 Plugin、Skill、MCP、Hook 和 Scheduled task
 
-如果只是个人学习，先了解一页概念通常已经够了。
+## 安装前先问
 
-## 本组入口
+1. 来源和维护者是谁？
+2. 它包含哪些 Skills、连接器、MCP、浏览器能力与 Hooks？
+3. 是否需要连接外部账号，会获得哪些 scope？
+4. Hook 是否已在 `/hooks` 中审查和信任？
+5. 团队怎样禁用、升级、回滚和回收授权？
 
-- [Plugins 概述](/skills/plugins/plugins-overview/)：理解 Plugin 跟 Skill、MCP 的关系，以及它为什么更像分发层
+## 官方来源
 
-## 常见误区
-
-### 1. 装了 Plugin 就自动安全
-
-Plugin 只是把能力更方便地发下来，不代表它默认就可信，也不代表默认就是低权限。
-
-### 2. 只要功能多，就值得装
-
-更值得先看的是：
-
-- 来源是不是可信
-- 权限范围大不大
-- 团队能不能升级、回滚、审计
-
-Plugin 更像扩展能力的分发包，也不是 Skill 或 MCP 的替代品。
+- [OpenAI：Plugins](https://learn.chatgpt.com/docs/plugins)
 
 ---
 
-**状态：** outdated  
-**适用产品：** App / CLI  
-**复核说明：** 当前插件目录、安装策略和表面支持情况仍在演进；本组说明把这些细节写得过于固定，因此暂改为 `outdated`，待按现行 Plugin 目录重写。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** ChatGPT Web / 桌面 App / Mobile；Codex 桌面与 CLI；IDE 扩展不支持 Plugin
+
+**最近核验：** 2026-08-26

@@ -1,0 +1,70 @@
+<svg lang="vi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" role="img" aria-labelledby="title desc">
+  <title id="title">Sơ đồ chọn phương thức mở rộng Codex</title>
+  <desc id="desc">Chọn cơ chế theo đối tượng cần lưu bền: dùng prompt cho tác vụ một lần, AGENTS.md cho quy tắc dự án, Skill cho quy trình tái sử dụng, MCP cho công cụ ngoài, Hook để bảo vệ vòng đời, Plugin để đóng gói phân phối và Scheduled task để lặp theo thời gian.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 24.6px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.1px; }
+    .lane { fill: #cbd5e1; font-size: 13.1px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 14.8px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 11.5px; }
+    .tiny { fill: #94a3b8; font-size: 9.8px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1100" height="700" rx="8" fill="#020617"/>
+  <rect width="1100" height="700" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Hỏi “cần lưu bền điều gì” trước khi chọn cơ chế mở rộng</text>
+  <text x="44" y="70" class="sub">Có thể kết hợp các cơ chế này nhưng trách nhiệm khác nhau; đừng hiểu chúng là bậc nâng cấp từ thấp lên cao.</text>
+
+  <rect x="390" y="96" width="320" height="68" rx="8" fill="#0f172a" stroke="#f8fafc" stroke-width="1.5"/>
+  <text x="550" y="124" text-anchor="middle" class="label">Vấn đề chính hiện tại là gì?</text>
+  <text x="550" y="147" text-anchor="middle" class="note">Chỉ dẫn · quy tắc · quy trình · công cụ · kích hoạt · phân phối</text>
+
+  <path d="M550 164V198H190V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V198H910V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="190" y="254" text-anchor="middle" class="lane">Lưu lại kiến thức và cách làm</text>
+  <rect x="70" y="284" width="240" height="76" rx="8" fill="#083344" stroke="#22d3ee"/>
+  <text x="190" y="313" text-anchor="middle" class="label">Prompt</text>
+  <text x="190" y="337" text-anchor="middle" class="note">Chỉ phục vụ tác vụ hiện tại</text>
+  <path d="M190 360V392" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="205" y="382" class="tiny">Tác vụ cùng loại sẽ lặp lại</text>
+  <rect x="70" y="394" width="240" height="76" rx="8" fill="#064e3b" stroke="#34d399"/>
+  <text x="190" y="423" text-anchor="middle" class="label">Skill</text>
+  <text x="190" y="447" text-anchor="middle" class="note">Quy trình, tài liệu tham khảo và script có thể tái sử dụng</text>
+  <rect x="70" y="500" width="240" height="76" rx="8" fill="#3b0764" stroke="#a78bfa"/>
+  <text x="190" y="529" text-anchor="middle" class="label">AGENTS.md</text>
+  <text x="190" y="553" text-anchor="middle" class="note">Quy tắc phải tuân theo mỗi khi vào dự án</text>
+
+  <rect x="400" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="550" y="254" text-anchor="middle" class="lane">Bổ sung năng lực cho quá trình chạy</text>
+  <rect x="430" y="284" width="240" height="76" rx="8" fill="#1e1b4b" stroke="#a78bfa"/>
+  <text x="550" y="313" text-anchor="middle" class="label">MCP / Connector</text>
+  <text x="550" y="337" text-anchor="middle" class="note">Kết nối công cụ và dữ liệu ngoài</text>
+  <rect x="430" y="394" width="240" height="76" rx="8" fill="#4c0519" stroke="#fb7185"/>
+  <text x="550" y="423" text-anchor="middle" class="label">Hook</text>
+  <text x="550" y="447" text-anchor="middle" class="note">Kiểm tra hoặc chặn tại điểm vòng đời</text>
+  <rect x="430" y="500" width="240" height="76" rx="8" fill="#422006" stroke="#fbbf24"/>
+  <text x="550" y="529" text-anchor="middle" class="label">Agent con</text>
+  <text x="550" y="553" text-anchor="middle" class="note">Xử lý song song các vấn đề con độc lập</text>
+
+  <rect x="760" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="910" y="254" text-anchor="middle" class="lane">Phân phối hoặc kích hoạt theo thời gian</text>
+  <rect x="790" y="304" width="240" height="90" rx="8" fill="#3f1d0b" stroke="#fb923c"/>
+  <text x="910" y="333" text-anchor="middle" class="label">Plugin</text>
+  <text x="910" y="357" text-anchor="middle" class="note">Đóng gói Skills, trình kết nối và MCP</text>
+  <text x="910" y="378" text-anchor="middle" class="tiny">Cũng có thể gồm Hooks và mẫu tác vụ</text>
+  <rect x="790" y="444" width="240" height="90" rx="8" fill="#3f0713" stroke="#fb7185"/>
+  <text x="910" y="473" text-anchor="middle" class="label">Scheduled task</text>
+  <text x="910" y="497" text-anchor="middle" class="note">Chạy lặp lại theo thời gian</text>
+  <text x="910" y="518" text-anchor="middle" class="tiny">Xác minh tác vụ trước khi lập lịch</text>
+
+  <rect x="120" y="626" width="860" height="58" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="651" text-anchor="middle" class="note">Tổ hợp phổ biến: AGENTS.md đặt quy tắc + Skill đặt quy trình + MCP cung cấp công cụ + Hook bảo vệ ranh giới</text>
+  <text x="550" y="673" text-anchor="middle" class="tiny">Plugin phụ trách phân phối, Scheduled task phụ trách kích hoạt theo lịch</text>
+</svg>

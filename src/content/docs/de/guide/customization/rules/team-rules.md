@@ -3,14 +3,15 @@ title: Teamregel-Strategie
 description: "Befehls- und Pfadregeln zwischen Organisation, Repo und Person schichten — reviewbar, rückrollbar."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-Wenn Teams Codex nutzen, beantwortet die **Regelstrategie**: Welche Constraints gelten firmenweit, welche pflegt das Repo, und dürfen Personen noch lockern? Governance-Sicht auf [Befehlsregeln](/guide/customization/rules/command-rules/) und [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/).
+Wenn Teams Codex nutzen, beantwortet die **Regelstrategie**: Welche Constraints gelten firmenweit, welche pflegt das Repo, und dürfen Personen noch lockern? Governance-Sicht auf [Befehlsregeln](/de/guide/customization/rules/command-rules/) und [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Inhalt
 
@@ -61,7 +62,7 @@ L4 Persönliche Config        → nur lokal, darf L1 nicht schwächen
 L5 Einmal-Aufgaben-Prompt    → temporär straffer ok; temporär lockern durch L1 begrenzt
 ```
 
-Abgleich mit [AGENTS.md-Geltungsbereich](/guide/customization/agents-md/scope-and-precedence/): **Regeln ≈ Enforcement, AGENTS.md ≈ Verhaltenshinweise**; konsistent halten, keine widersprüchlichen Doppelsets.
+Abgleich mit [AGENTS.md-Geltungsbereich](/de/guide/customization/agents-md/scope-and-precedence/): **Regeln ≈ Enforcement, AGENTS.md ≈ Verhaltenshinweise**; konsistent halten, keine widersprüchlichen Doppelsets.
 
 ## Grundvorgehen
 
@@ -78,7 +79,7 @@ Vorschlag (Issue oder RFC) → Security/Platform-Review → PR an Regeldateien
     → typische Aufgaben im Staging-Repo → Merge → Ankündigung + Handbuchseite aktualisieren
 ```
 
-Große Änderungen (z. B. Netzwerk-Outbound öffnen) aktualisieren parallel [Hooks-Audit](/skills/hooks/hooks-overview/) und [Acceptable Use](/guide/team-enterprise/governance/acceptable-use/).
+Große Änderungen (z. B. Netzwerk-Outbound öffnen) aktualisieren parallel [Hooks-Audit](/de/skills/hooks/hooks-overview/) und [Acceptable Use](/de/guide/team-enterprise/governance/acceptable-use/).
 
 ## Abgleich mit Hooks und CI
 
@@ -113,7 +114,7 @@ Typisch:
 
 ## Sicherheitsgrenzen
 
-- Regeln ersetzen nicht [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/) und Incident-Response
+- Regeln ersetzen nicht [Bedrohungsmodell](/de/guide/team-enterprise/security/threat-model/) und Incident-Response
 - Bei regulierten Daten: Regeln zusammen mit Datenklassifikation und Retention reviewen
 - Notfall-Bypässe brauchen **Audit-Trail** und Nachbereitung
 

@@ -3,14 +3,15 @@ title: Plugin と MCP リスク
 description: 拡張が何にアクセスできるか、チームがどう承認・監視するか——Skill、Plugin、MCP の統一リスク視点。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Plugin** と **MCP サーバー**は Codex を外部システム（チケット、DB、内部 API）に接続します。能力が強いほど、[脅威モデル](/guide/team-enterprise/security/threat-model/) の漏洩と越権面も大きくなります。[MCP 概要](/skills/mcp/mcp-overview/)、[Plugins 概要](/skills/plugins/plugins-overview/) と併読。
+**Plugin** と **MCP サーバー**は Codex を外部システム（チケット、DB、内部 API）に接続します。能力が強いほど、[脅威モデル](/ja/guide/team-enterprise/security/threat-model/) の漏洩と越権面も大きくなります。[MCP 概要](/ja/skills/mcp/mcp-overview/)、[Plugins 概要](/ja/skills/plugins/plugins-overview/) と併読。
 
 初見では定義を急がず、一点を押さえてください：Codex を外部システムに繋ぐと、能力とリスクが同時に増えます。
 
@@ -52,7 +53,7 @@ sidebar:
 
 1. **デフォルト拒否**：リスト外リモート MCP はインストールしない
 2. **ローカル MCP** も全ディスク読取可能——専用 OS ユーザーまたはコンテナ
-3. **ログ**：tool 名とパラメータ要約（脱敏）。[Hook 監査](/skills/hooks/hooks-examples/) を参照
+3. **ログ**：tool 名とパラメータ要約（脱敏）。[Hook 監査](/ja/skills/hooks/hooks-examples/) を参照
 4. **Skill と MCP 分担**：Skill は手順、MCP は外部接続——権限は和集合、最も厳しい方針を採用
 
 ## よくあるミス
@@ -89,10 +90,10 @@ sidebar:
 
 - [ ] 書面承認リストまたは同等フローがある
 - [ ] 本番 MCP ごとに owner とデータ分類がある
-- [ ] [Skill セキュリティ](/skills/security/) 政策と一致
+- [ ] [Skill セキュリティ](/ja/skills/security/) 政策と一致
 
 ## 参考
-- [MCP デバッグ](/skills/mcp/debugging-mcp/)
+- [MCP デバッグ](/ja/skills/mcp/debugging-mcp/)
 ---
 
 **状態：** verified  

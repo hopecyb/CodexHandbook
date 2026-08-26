@@ -3,9 +3,10 @@ title: "例：自動化 Skill"
 description: 繰り返しチェックやレポート生成を Skill としてパッケージ化する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 例：自動化 Skill
@@ -30,8 +31,8 @@ description: 昨日の変更、テスト結果、TODO を集約し、日報 Mark
 
 ## 関連
 
-- [自動化日報ケース](/cases/automate-a-daily-report/)
-- [スケジュールタスク](/skills/automations/scheduled-tasks/)
+- [自動化日報ケース](/ja/cases/automate-a-daily-report/)
+- [スケジュールタスク](/ja/skills/automations/scheduled-tasks/)
 
 ---
 

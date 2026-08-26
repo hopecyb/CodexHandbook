@@ -3,8 +3,10 @@ title: Codex Theme Skins
 description: "Understand what Codex Dream Skin is, how to install it and switch backgrounds, why it uses CDP injection, and what safety boundary to check before using theme skins."
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-29
+reviewed_at: 2026-08-26
+source_revision: 8c0e360
 ---
 
 # Codex Theme Skins

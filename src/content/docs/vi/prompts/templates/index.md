@@ -3,9 +3,10 @@ title: Mẫu Prompt
 description: Khung Prompt tái sử dụng theo loại tác vụ—hiểu, tạo, sửa, chẩn đoán, review, nghiên cứu, tự động hóa.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu Prompt
@@ -32,13 +33,13 @@ Mẫu giống giàn giáo hơn là đáp án chuẩn.
 
 | Mẫu | Tình huống phù hợp |
 |---|---|
-| [Hiểu](/prompts/templates/understand/) | Đọc codebase, tài liệu hoặc tư liệu; lập nhận thức trước |
-| [Tạo](/prompts/templates/create/) | Triển khai từ đầu chức năng, bản thảo hoặc Artifact |
-| [Sửa](/prompts/templates/change/) | Lặp lại thay đổi trên nền hiện có |
-| [Chẩn đoán](/prompts/templates/diagnose/) | Định vị nguyên nhân gốc; chưa sửa code |
-| [Review](/prompts/templates/review/) | Review diff, PR hoặc thay đổi tài liệu |
-| [Nghiên cứu](/prompts/templates/research/) | Khảo sát và so sánh kèm trích dẫn |
-| [Tự động hóa](/prompts/templates/automate/) | Tác vụ lặp, script và quy trình không người trực |
+| [Hiểu](/vi/prompts/templates/understand/) | Đọc codebase, tài liệu hoặc tư liệu; lập nhận thức trước |
+| [Tạo](/vi/prompts/templates/create/) | Triển khai từ đầu chức năng, bản thảo hoặc Artifact |
+| [Sửa](/vi/prompts/templates/change/) | Lặp lại thay đổi trên nền hiện có |
+| [Chẩn đoán](/vi/prompts/templates/diagnose/) | Định vị nguyên nhân gốc; chưa sửa code |
+| [Review](/vi/prompts/templates/review/) | Review diff, PR hoặc thay đổi tài liệu |
+| [Nghiên cứu](/vi/prompts/templates/research/) | Khảo sát và so sánh kèm trích dẫn |
+| [Tự động hóa](/vi/prompts/templates/automate/) | Tác vụ lặp, script và quy trình không người trực |
 
 ## Từ mẫu thành workflow
 
@@ -75,7 +76,7 @@ Với người mới, mẫu «đủ dùng nhưng không phình» là được.
 
 Chọn đúng loại mẫu trước, rồi sửa thành tác vụ của bạn; đừng coi bản thân mẫu là tác vụ.
 
-Nguyên tắc viết xem [Cơ bản về Prompt](/prompts/basics/) và [Cấu trúc tác vụ](/prompts/task-anatomy/).
+Nguyên tắc viết xem [Cơ bản về Prompt](/vi/prompts/basics/) và [Cấu trúc tác vụ](/vi/prompts/task-anatomy/).
 
 ---
 

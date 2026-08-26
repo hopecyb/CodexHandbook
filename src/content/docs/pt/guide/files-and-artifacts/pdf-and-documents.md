@@ -3,9 +3,10 @@ title: PDF e documentos
 description: Âmbito, Ferramentas e pontos de aceitação ao pedir ao Codex para ler, resumir ou gerar documentos PDF.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ Quanto mais claro «que secção ver e que resultado quer», mais estável o efe
 1. **Indique o caminho do ficheiro**: `docs/spec.pdf` ou referência @ (conforme o cliente)
 2. **Diga o que quer**: resumo, comparar um capítulo, extrair dados de tabelas
 3. **Páginas ou capítulos**: em documentos longos, limite o âmbito e poupe Contexto
-4. **Conteúdo sensível**: contratos, digitalizações de documentos de identidade → fluxo de [Contexto sensível](/guide/context/sensitive-context/)
+4. **Conteúdo sensível**: contratos, digitalizações de documentos de identidade → fluxo de [Contexto sensível](/pt/guide/context/sensitive-context/)
 
 ### Limitações
 
@@ -97,8 +98,8 @@ Se OCR ou reconhecimento de layout forem incertos, marque-os explicitamente.
 ## Estratégia no repositório
 
 - PDF binários grandes: considere **Git LFS** ou fora do repositório
-- Quando o diff for ilegível, aceite **abrindo o ficheiro** + [Verificar Artefatos](/guide/quality/verify-artifacts/)
-- Lista de gerados: [Aceitação de Artefatos gerados](/guide/files-and-artifacts/generated-artifacts/)
+- Quando o diff for ilegível, aceite **abrindo o ficheiro** + [Verificar Artefatos](/pt/guide/quality/verify-artifacts/)
+- Lista de gerados: [Aceitação de Artefatos gerados](/pt/guide/files-and-artifacts/generated-artifacts/)
 
 ## Erros habituais
 

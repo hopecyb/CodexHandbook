@@ -3,14 +3,15 @@ title: Política de regras de equipa
 description: Governar regras de comandos e caminhos em camadas entre organização, repositório e indivíduo — revisável e reversível.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-Quando a equipa usa o Codex, a **política de regras** responde: que restrições são unificadas em toda a empresa, quais o repositório mantém, e se o indivíduo ainda pode relaxar. Este capítulo é a perspetiva de governação de [regras de comandos](/guide/customization/rules/command-rules/) e [padrões de permitir e negar](/guide/customization/rules/allow-and-deny-patterns/).
+Quando a equipa usa o Codex, a **política de regras** responde: que restrições são unificadas em toda a empresa, quais o repositório mantém, e se o indivíduo ainda pode relaxar. Este capítulo é a perspetiva de governação de [regras de comandos](/pt/guide/customization/rules/command-rules/) e [padrões de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Conteúdo
 
@@ -61,7 +62,7 @@ L4 Configuração pessoal             → só nesta máquina; não pode enfraque
 L5 Prompt da Tarefa única           → apertar temporariamente pode; relaxar temporariamente limitado por L1
 ```
 
-Compare com [Âmbito de AGENTS.md](/guide/customization/agents-md/scope-and-precedence/): **as regras inclinaram-se para enforcement de execução; AGENTS.md para descrição de comportamento**; devem ser consistentes — não escreva dois conjuntos contraditórios.
+Compare com [Âmbito de AGENTS.md](/pt/guide/customization/agents-md/scope-and-precedence/): **as regras inclinaram-se para enforcement de execução; AGENTS.md para descrição de comportamento**; devem ser consistentes — não escreva dois conjuntos contraditórios.
 
 ## Prática básica
 
@@ -78,7 +79,7 @@ Proposta (issue ou RFC) → review de segurança/plataforma → PR altera fichei
     → Ensaio de Tarefas típicas em repositório staging → merge → anúncio + atualização da página do manual
 ```
 
-Grandes mudanças (p. ex. abrir saída de rede) devem atualizar em sincronia [auditoria de Hooks](/skills/hooks/hooks-overview/) e [acceptable use](/guide/team-enterprise/governance/acceptable-use/).
+Grandes mudanças (p. ex. abrir saída de rede) devem atualizar em sincronia [auditoria de Hooks](/pt/skills/hooks/hooks-overview/) e [acceptable use](/pt/guide/team-enterprise/governance/acceptable-use/).
 
 ## Alinhamento com Hooks e CI
 
@@ -113,7 +114,7 @@ Normalmente corresponde a:
 
 ## Limites de segurança
 
-- As regras não substituem o [modelo de ameaças](/guide/team-enterprise/security/threat-model/) nem o fluxo de resposta a incidentes
+- As regras não substituem o [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) nem o fluxo de resposta a incidentes
 - Com dados regulados, as regras devem ser revistas em conjunto com classificação de dados e políticas de retenção
 - Contornos de emergência exigem **registo de auditoria** e retrospectiva posterior
 

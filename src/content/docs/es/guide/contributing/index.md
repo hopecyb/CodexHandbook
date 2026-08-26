@@ -5,12 +5,13 @@ sidebar:
   order: 80
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b13e05c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-El **Codex Handbook** es un sitio de documentación mantenido por la comunidad. Se aceptan correcciones de errores, páginas nuevas, casos reproducibles y ejemplos de prompt en [examples/](/examples/README.md).
+El **Codex Handbook** es un sitio de documentación mantenido por la comunidad. Se aceptan correcciones de errores, páginas nuevas, casos reproducibles y ejemplos de prompt en [examples/](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md).
 
 ## Contenido de esta página
 
@@ -35,10 +36,10 @@ No hace falta ser «el que más sabe del tema» para empezar a ayudar. Muchas me
 | Tipo | Descripción | Guía |
 |---|---|---|
 | Corrección / cambio pequeño | Erratas, enlaces, una frase desactualizada | PR directo |
-| Nueva página de guía | Texto del capítulo bajo `src/content/docs/` | [Escribir una guía](/guide/contributing/write-a-guide/) |
-| Caso | `src/content/docs/cases/` | [Plantilla de caso](/cases/use-cases/case-study-template/) |
-| Ejemplo de prompt | `examples/prompts/` | [Añadir un ejemplo de prompt](/guide/contributing/add-a-prompt-example/) |
-| Verificación técnica | Marcar `verified`, actualizar fecha | [Verificar contenido técnico](/guide/contributing/verify-technical-content/) |
+| Nueva página de guía | Texto del capítulo bajo `src/content/docs/` | [Escribir una guía](/es/guide/contributing/write-a-guide/) |
+| Caso | `src/content/docs/cases/` | [Plantilla de caso](/es/cases/use-cases/case-study-template/) |
+| Ejemplo de prompt | `examples/prompts/` | [Añadir un ejemplo de prompt](/es/guide/contributing/add-a-prompt-example/) |
+| Verificación técnica | Marcar `verified`, actualizar fecha | [Verificar contenido técnico](/es/guide/contributing/verify-technical-content/) |
 | Traducción | `en/`, `zh-tw/`, etc. | Hoja de ruta M6; estabilizar primero el texto fuente |
 
 ## Malentendidos habituales
@@ -63,7 +64,7 @@ La condición es solo: formular el problema con concreción e intentar convertir
 ## Principios básicos
 
 1. **El chino simplificado `root` es el texto fuente** (salvo indicación contraria)
-2. **No copiar** tutoriales externos literales; ver [plan de integración de fuentes externas](/docs/planning/external-source-integration.md)
+2. **No copiar** tutoriales externos literales; ver [plan de integración de fuentes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. Los **hechos variables** deben llevar fecha de `Última verificación`
 4. **Cada slug del sidebar** debe tener su markdown; si no, `npm run build` falla
 5. Las páginas nuevas deben actualizar también el sidebar de `astro.config.mjs`
@@ -104,7 +105,7 @@ La primera contribución no tiene que aspirar a escribir mucho. Aclarar un punto
 ## Enlaces relacionados
 
 - Repositorio: <https://github.com/hopecyb/CodexHandbook>
-- [Esquema de capítulos](/docs/planning/chapter-outline.md) (para planificación)
+- [Esquema de capítulos](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (para planificación)
 
 ---
 

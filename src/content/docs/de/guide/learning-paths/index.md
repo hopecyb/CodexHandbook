@@ -5,9 +5,10 @@ sidebar:
   order: 5
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 05e85de
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Lernpfade **ordnen nur die Reihenfolge** — sie kopieren keine Langtexte aus Produkthandbuch oder Fachkapiteln.
@@ -25,17 +26,17 @@ Dieses Kapitel liefert kein neues Wissen; es hilft, Umwege zu vermeiden.
 ## Verfügbare MVP-Pfade
 
 - **Einsteiger (vollständige fünf Schritte)**
-  1. [Mit Codex sprechen](/guide/learning-paths/beginner/01-talk-to-codex/)
-  2. [Mit Dateien arbeiten](/guide/learning-paths/beginner/02-work-with-files/)
-  3. [Klare Aufgaben geben](/guide/learning-paths/beginner/03-give-clear-tasks/)
-  4. [Ergebnisse prüfen](/guide/learning-paths/beginner/04-review-results/)
-  5. [Erstes kleines Projekt abschließen](/guide/learning-paths/beginner/05-complete-first-project/)
+  1. [Mit Codex sprechen](/de/guide/learning-paths/beginner/01-talk-to-codex/)
+  2. [Mit Dateien arbeiten](/de/guide/learning-paths/beginner/02-work-with-files/)
+  3. [Klare Aufgaben geben](/de/guide/learning-paths/beginner/03-give-clear-tasks/)
+  4. [Ergebnisse prüfen](/de/guide/learning-paths/beginner/04-review-results/)
+  5. [Erstes kleines Projekt abschließen](/de/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Überblick (tiefe Schritte folgen später)
 
-- [Creator](/guide/learning-paths/creator/)
-- [Entwickler](/guide/learning-paths/developer/)
-- [Team](/guide/learning-paths/team/)
+- [Creator](/de/guide/learning-paths/creator/)
+- [Entwickler](/de/guide/learning-paths/developer/)
+- [Team](/de/guide/learning-paths/team/)
 
 ## Pfad für fortgeschrittene Operatoren
 
@@ -43,14 +44,14 @@ Wenn Sie kleine Aufgaben bereits zuverlässig abschließen, ist der nächste Sch
 
 | Schritt | Thema | Zuerst lesen |
 |---|---|---|
-| 1 | Schnelle Einstiegspunkte | [Slash-Befehle und Schnellzugriffe](/guide/reference/slash-commands/) |
-| 2 | Dauerhafter Kontext | [AGENTS.md](/guide/customization/agents-md/) und [Erinnerung und persistenter Kontext](/guide/customization/memories-and-persistent-context/) |
-| 3 | Wiederverwendbare Workflows | [Skills Überblick](/skills/overview/) und [Skill-Struktur](/skills/skill-anatomy/) |
-| 4 | Isolierte Teilaufgaben | [Subagents](/guide/agent-work/subagents/) und [Multi-Agent-Koordination](/cases/workflows/multi-agent-coordination/) |
-| 5 | Externe Systeme | [MCP Überblick](/skills/mcp/mcp-overview/) |
-| 6 | Automatische Leitplanken | [Hooks Überblick](/skills/hooks/hooks-overview/) |
-| 7 | Team-Verteilung | [Plugins Überblick](/skills/plugins/plugins-overview/) |
-| 8 | Wiederherstellung und Review | [Rückgängig und Wiederherstellen](/guide/getting-started/undo-and-recover/) und [Diffs prüfen](/guide/quality/review-diffs/) |
+| 1 | Schnelle Einstiegspunkte | [Slash-Befehle und Schnellzugriffe](/de/guide/reference/slash-commands/) |
+| 2 | Dauerhafter Kontext | [AGENTS.md](/de/guide/customization/agents-md/) und [Erinnerung und persistenter Kontext](/de/guide/customization/memories-and-persistent-context/) |
+| 3 | Wiederverwendbare Workflows | [Skills Überblick](/de/skills/overview/) und [Skill-Struktur](/de/skills/skill-anatomy/) |
+| 4 | Isolierte Teilaufgaben | [Subagents](/de/guide/agent-work/subagents/) und [Multi-Agent-Koordination](/de/cases/workflows/multi-agent-coordination/) |
+| 5 | Externe Systeme | [MCP Überblick](/de/skills/mcp/mcp-overview/) |
+| 6 | Automatische Leitplanken | [Hooks Überblick](/de/skills/hooks/hooks-overview/) |
+| 7 | Team-Verteilung | [Plugins Überblick](/de/skills/plugins/plugins-overview/) |
+| 8 | Wiederherstellung und Review | [Rückgängig und Wiederherstellen](/de/guide/getting-started/undo-and-recover/) und [Diffs prüfen](/de/guide/quality/review-diffs/) |
 
 Dieser Pfad hilft, aus „Codex hilft gelegentlich“ ein kleines, wiederholbares Teamsystem zu machen: Projektanweisungen definieren dauerhafte Regeln, Skills die Methode, MCP liefert externe Werkzeuge, Subagents teilen abgegrenzte Aufgaben, Hooks sichern kritische Punkte, Plugins verteilen das Paket.
 
@@ -73,10 +74,10 @@ Der Pfad ist Empfehlung, kein Zwang. Mit konkreten Fragen dürfen Sie jederzeit 
 
 So wählen:
 
-- Noch keinen vollständigen Aufgabenzyklus erfolgreich: [Einsteigerpfad](/guide/learning-paths/beginner/)
-- Vor allem Inhalte, Bild/Text, Demos: [Creator-Pfad](/guide/learning-paths/creator/)
-- Vor allem Code ändern, Bugs, Projekte: [Entwicklerpfad](/guide/learning-paths/developer/)
-- Vor allem Team-Rollout und Risiko: [Team-Pfad](/guide/learning-paths/team/)
+- Noch keinen vollständigen Aufgabenzyklus erfolgreich: [Einsteigerpfad](/de/guide/learning-paths/beginner/)
+- Vor allem Inhalte, Bild/Text, Demos: [Creator-Pfad](/de/guide/learning-paths/creator/)
+- Vor allem Code ändern, Bugs, Projekte: [Entwicklerpfad](/de/guide/learning-paths/developer/)
+- Vor allem Team-Rollout und Risiko: [Team-Pfad](/de/guide/learning-paths/team/)
 
 Lernpfade entscheiden anhand des „jetzt wichtigsten Problems“, was als Nächstes gelesen wird.
 

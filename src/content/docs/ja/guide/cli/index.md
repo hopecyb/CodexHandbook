@@ -5,9 +5,10 @@ sidebar:
   order: 11
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f654474
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 CLI はターミナルユーザーと、スクリプト・CI 連携に向いています。
@@ -22,15 +23,15 @@ CLI はターミナルユーザーと、スクリプト・CI 連携に向いて�
 
 ターミナルに不慣れな初心者にとって、CLI は最初に必ず学ぶ必要はありません。ただし `cd`、`ls`、プロジェクトディレクトリでのコマンド実行ができていれば、かなり効率的です。
 
-- [インストールと更新](/guide/cli/installation-and-updates/)
-- [対話モード](/guide/cli/interactive-mode/)
-- [非対話モード](/guide/cli/non-interactive-mode/)
-- [CLI 設定](/guide/cli/configuration/)
-- [コマンドとショートカット](/guide/cli/commands-and-shortcuts/)
-- [承認とサンドボックス](/guide/cli/approvals-and-sandbox/)
-- [トラブルシューティング](/guide/cli/troubleshooting/)
+- [インストールと更新](/ja/guide/cli/installation-and-updates/)
+- [対話モード](/ja/guide/cli/interactive-mode/)
+- [非対話モード](/ja/guide/cli/non-interactive-mode/)
+- [CLI 設定](/ja/guide/cli/configuration/)
+- [コマンドとショートカット](/ja/guide/cli/commands-and-shortcuts/)
+- [承認とサンドボックス](/ja/guide/cli/approvals-and-sandbox/)
+- [トラブルシューティング](/ja/guide/cli/troubleshooting/)
 
-完全なコマンドリファレンスは [CLI コマンドリファレンス](/guide/reference/commands/)。
+完全なコマンドリファレンスは [CLI コマンドリファレンス](/ja/guide/reference/commands/)。
 
 ## 最初に区別すること
 

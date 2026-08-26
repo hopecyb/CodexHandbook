@@ -3,9 +3,10 @@ title: IDE 문제 해결
 description: 확장 로드, 컨텍스트, 동기화 문제.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 438b4f5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---

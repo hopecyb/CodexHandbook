@@ -3,9 +3,10 @@ title: トラブルシュート索引
 description: 症状から該当チュートリアルと製品ページへ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 55a1e60
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,12 +17,12 @@ sidebar:
 
 | 症状 | 行き先 |
 |---|---|
-| インストール失敗 | [デスクトップトラブルシュート](/guide/desktop-app/troubleshooting/) · [CLI トラブルシュート](/guide/cli/troubleshooting/) · [IDE トラブルシュート](/guide/ide/troubleshooting/) |
-| ログイン/認証失敗 | [ログイン](/guide/getting-started/sign-in-and-authentication/) |
-| どのクライアントを選ぶか分からない | [クライアント選択](/guide/getting-started/choose-your-codex-client/) · [機能比較](/guide/reference/feature-comparison/) |
-| 結果が範囲外/品質が悪い | [結果を確認](/guide/getting-started/review-the-result/) · [プロンプトデバッグ](/prompts/prompt-debugging/) · [元に戻す](/guide/getting-started/undo-and-recover/) |
-| コンテキストが混乱 | [フォーカスを保つ](/guide/context/keep-context-focused/) |
-| 権限/サンドボックスの疑問 | [権限](/guide/foundations/permissions-and-approvals/) · [サンドボックス](/guide/foundations/sandbox-and-network/) |
+| インストール失敗 | [デスクトップトラブルシュート](/ja/guide/desktop-app/troubleshooting/) · [CLI トラブルシュート](/ja/guide/cli/troubleshooting/) · [IDE トラブルシュート](/ja/guide/ide/troubleshooting/) |
+| ログイン/認証失敗 | [ログイン](/ja/guide/getting-started/sign-in-and-authentication/) |
+| どのクライアントを選ぶか分からない | [クライアント選択](/ja/guide/getting-started/choose-your-codex-client/) · [機能比較](/ja/guide/reference/feature-comparison/) |
+| 結果が範囲外/品質が悪い | [結果を確認](/ja/guide/getting-started/review-the-result/) · [プロンプトデバッグ](/ja/prompts/prompt-debugging/) · [元に戻す](/ja/guide/getting-started/undo-and-recover/) |
+| コンテキストが混乱 | [フォーカスを保つ](/ja/guide/context/keep-context-focused/) |
+| 権限/サンドボックスの疑問 | [権限](/ja/guide/foundations/permissions-and-approvals/) · [サンドボックス](/ja/guide/foundations/sandbox-and-network/) |
 
 ## 問題の類が分からないとき
 

@@ -3,9 +3,10 @@ title: CI/CD
 description: Connectez Codex aux flux d'intégration continue et de release — commencez par l'automatisation à faible risque.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 En câblant Codex dans CI/CD, l'erreur la plus courante est vouloir auto-éditer, auto-push et auto-merge dès le premier jour.
@@ -14,7 +15,7 @@ L'approche plus courante est de commencer en lecture seule : suggestions et rapp
 
 ## Entrée de section
 
-- [Automatisation de revue de code](/guide/developer-platform/ci-cd/code-review-automation/)
+- [Automatisation de revue de code](/fr/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Ce que cette section couvre
 

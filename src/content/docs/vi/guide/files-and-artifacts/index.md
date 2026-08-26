@@ -5,9 +5,10 @@ sidebar:
   order: 30
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a5cc3b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Đầu ra cốt lõi của Codex thường là **thay đổi tệp trong kho** hoặc **artifact mới tạo** (tài liệu, ảnh, cấu hình). Chuyên đề này nói thực hành tốt nhất theo loại tệp, tránh “đã tạo nhưng không dùng được”.
@@ -20,14 +21,14 @@ Cùng là “tệp”, loại khác nhau cần cách giao và nghiệm thu khác
 
 | Chủ đề | Trang |
 |---|---|
-| Mã và văn bản | [Tệp văn bản và mã](/guide/files-and-artifacts/text-and-code-files/) |
-| Ảnh chụp và đầu vào thiết kế | [Hình ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF và tài liệu dài | [PDF và tài liệu](/guide/files-and-artifacts/pdf-and-documents/) |
-| Dữ liệu bảng | [Bảng và bảng tính](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| Slide | [Bài trình bày](/guide/files-and-artifacts/presentations/) |
-| Đầu ra của Agent | [Nghiệm thu artifact tạo ra](/guide/files-and-artifacts/generated-artifacts/) |
+| Mã và văn bản | [Tệp văn bản và mã](/vi/guide/files-and-artifacts/text-and-code-files/) |
+| Ảnh chụp và đầu vào thiết kế | [Hình ảnh và ảnh chụp màn hình](/vi/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF và tài liệu dài | [PDF và tài liệu](/vi/guide/files-and-artifacts/pdf-and-documents/) |
+| Dữ liệu bảng | [Bảng và bảng tính](/vi/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| Slide | [Bài trình bày](/vi/guide/files-and-artifacts/presentations/) |
+| Đầu ra của Agent | [Nghiệm thu artifact tạo ra](/vi/guide/files-and-artifacts/generated-artifacts/) |
 
-Phương pháp chung xem [Kiểm chứng artifact](/guide/quality/verify-artifacts/).
+Phương pháp chung xem [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/).
 
 ## Chương này nói gì
 
@@ -44,8 +45,8 @@ Vậy nó giống bộ hướng dẫn thao tác tách theo loại tệp hơn là
 1. **Đường dẫn rõ**: trong Prompt viết rõ đường dẫn xuất và đặt tên
 2. **Ước định dạng**: phần mở rộng, mã hóa (UTF-8), ký tự xuống dòng khớp dự án
 3. **Ý thức dung lượng**: nhị phân lớn không vào Git, hoặc dùng LFS/CDN
-4. **Nghiệm thu thủ công**: tạo ≠ hoàn thành; đối chiếu [Định nghĩa hoàn thành](/guide/quality/definition-of-done/)
-5. **Dữ liệu nhạy cảm**: xem [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
+4. **Nghiệm thu thủ công**: tạo ≠ hoàn thành; đối chiếu [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/)
+5. **Dữ liệu nhạy cảm**: xem [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
 
 ## Hiểu lầm thường gặp
 
@@ -86,9 +87,9 @@ Như vậy không dễ bị cả chương thông tin đè ngay từ đầu.
 ## Quan hệ với công cụ
 
 - Đọc/ghi tệp: công cụ tệp + terminal
-- Xem ảnh: [Prompt kèm ảnh](/prompts/prompting-with-images/)
-- Xem trang: [Công cụ trình duyệt](/guide/tools/browser/)
-- Tạo ảnh: [Tạo ảnh](/guide/tools/image-generation/)
+- Xem ảnh: [Prompt kèm ảnh](/vi/prompts/prompting-with-images/)
+- Xem trang: [Công cụ trình duyệt](/vi/guide/tools/browser/)
+- Tạo ảnh: [Tạo ảnh](/vi/guide/tools/image-generation/)
 
 Trong tác vụ kiểu tệp, rất thường gặp kết quả đã tạo ra nhưng định dạng, quy tắc hoặc nội dung đã âm thầm lệch.
 

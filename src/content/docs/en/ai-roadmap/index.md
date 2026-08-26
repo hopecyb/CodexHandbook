@@ -3,8 +3,10 @@ title: AI application roadmap
 description: Understand Prompt Engineering, RAG, MCP, Multi-agent, Context Engineering, Skills, and other applied AI engineering milestones.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-08-08
+reviewed_at: 2026-08-26
+source_revision: 0333168
 ---
 
 # AI application roadmap

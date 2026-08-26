@@ -3,9 +3,10 @@ title: Einen Artikel schreiben
 description: Vollständiger technischer Schreibprozess von Themenwahl über Gliederung und Entwurf bis zur Faktenprüfung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Einen Artikel schreiben
@@ -49,11 +50,11 @@ Abschnitt für Abschnitt schreiben; vermeide, den gesamten Text auf einmal zu er
 ### Überprüfen
 
 - Links, Versionsnummern und Befehle manuell auf Gültigkeit prüfen
-- Optional: Ablauf mit dem [Schreib-Skill](/skills/examples/writing-skill/) absichern
+- Optional: Ablauf mit dem [Schreib-Skill](/de/skills/examples/writing-skill/) absichern
 
 ## 3. Verstetigen
 
-Wiederkehrendes Schreiben kann als `article-writer`-Skill gekapselt werden; siehe [Pfad für Autoren](/guide/learning-paths/creator/).
+Wiederkehrendes Schreiben kann als `article-writer`-Skill gekapselt werden; siehe [Pfad für Autoren](/de/guide/learning-paths/creator/).
 ---
 
 **Status:** verified  

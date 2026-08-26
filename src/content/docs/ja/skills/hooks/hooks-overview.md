@@ -3,147 +3,91 @@ title: Hooks 概要
 description: Agent の重要ノードに検証、ログ、監査を挿入し、チームのセキュリティとコンプライアンスを補完する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 169a1ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-端的に言うと、Hook は重要ノードに自動でチェックや記録の層を差し込む仕組みです。
+Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
 
-**Hooks** は Codex 実行チェーンの固定ノードでカスタムロジックを走らせます。例：コミット前の秘密鍵スキャン、MCP 呼び出しの記録、危険コマンドのブロック。[承認とサンドボックス](/guide/cli/approvals-and-sandbox/) のポリシーと可観測性を補完します。
+![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-ja.svg)
 
-## 内容
+The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
 
-- Hooks と Skill、MCP の違い
-- 典型的なチームユースケース
-- Hook 設計時のセキュリティ原則
+## Configuration discovery
 
-## チームが Hook を使う理由
+Codex looks beside active configuration layers for:
 
-自分で Hook を書く予定がなくても、チーム内で何に使われるかは知っておくとよいです。
+- `~/.codex/hooks.json`
+- `[hooks]` in `~/.codex/config.toml`
+- `<repo>/.codex/hooks.json`
+- `[hooks]` in `<repo>/.codex/config.toml`
+- Hooks bundled with enabled Plugins
+- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
 
-- なぜ特定の動作がキーポイントで追加ブロックされるか
-- なぜ「これは Skill ではなく Hook」と言われるか
-- なぜ一部のルールは prompt ではなくシステムノードに書かれるか
+Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
 
-チームで「なぜここに追加チェックがあるのか」の多くは Hook です。
+When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
 
-比較選定：[拡張方式の選び方](/skills/choosing-an-extension-method/)
+## Review every unmanaged Hook
 
-## Hooks ができること
+Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
 
-| 段階（概念） | Hook でできること |
-|---|---|
-| ツール呼び出し前 | `rm -rf`、`.env` 漏洩コマンドの拒否 |
-| ツール呼び出し後 | SIEM への監査ログ |
-| セッション終了 | 変更ファイル一覧の集約 |
-| PR 作成前 | issue 番号形式のチェック |
+Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
 
-## Skill との区別
+## Two executable handlers
 
-- **Skill**：この種のタスクに遭遇したらどのフローで進むかを Codex に伝える
-- **Hook**：このノードに到達したら先に自動チェックするようシステムに伝える
-
-解く問題が異なります。
-
-- Skill はワークフロー説明寄り
-- Hook はフロー上の関所や観測点寄り
-
-具体的なイベント名と設定形式は [公式 Hooks ドキュメント](https://developers.openai.com/codex) を正とします。
-
-## Skill / MCP との違い
-
-| | Hooks | Skill | MCP |
-|---|---|---|---|
-| トリガー | システムイベント | ユーザーまたはモデル呼び出し | ツールリクエスト |
-| 目的 | ポリシー、監査 | ワークフロー説明 | 外部システム |
-| 保守者 | プラットフォーム/チーム基盤 | プロダクトまたはエンジニアリング | 統合開発者 |
-
-## よくある誤解
-
-### 1. Hook は承認とサンドボックスの代替になる
-
-Hook は補助チェック層であり、唯一のセキュリティ境界にすべきではありません。
-
-### 2. Hook が多いほど安全
-
-遅く、重く、理解しにくい Hook が多いと、フローが重くなり、トラブルシュートが苦しくなります。
-
-### 3. Hook に複雑なロジックを載せるべきではない
-
-Hook に向くのは次のようなことです。
-
-- 速い
-- 決定的
-- テストしやすい
-
-ここに複雑な推論を重ねないでください。
-
-## 推奨チームユースケース
-
-1. **秘密鍵漏洩検出**：diff に AWS key パターンがあればブロック
-2. **ライセンスヘッダチェック**：新規ファイルに会社著作権表示がなければ警告
-3. **コンプライアンスログ**：誰がいつどのリポジトリに書き込み操作したか（マスキング）
-4. **CI との整合**：ローカル Hook ルールと GitHub Action をできるだけ同源に
-
-## まず作るべきガードレール
-
-Hook は、巨大な「知的判定者」ではなく、狭く決定的なところから始めます。
-
-| Hook パターン | 第一版 | 成熟版 |
+| Handler | Purpose | Boundary |
 |---|---|---|
-| コマンド監査 | コマンド、時刻、作業ディレクトリを記録 | 高リスクコマンドで警告または再確認 |
-| Secret スキャン | `.env`、key ファイル、疑似 token で警告 | ブロックし対処を示す |
-| フォーマット確認 | 形式のズレを報告 | CI と同じ formatter を呼ぶ |
-| 依存関係確認 | package ファイル変更時に確認を促す | 脆弱性/ライセンス方針へ接続 |
-| セッション要約 | 変更ファイルと検証コマンドを記録 | 引き継ぎ文書や PR テンプレートへ接続 |
+| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
+| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
 
-良い Hook の失敗は退屈です。メッセージが明確で、影響範囲が小さく、迂回が記録されます。
+The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
 
-## 採用順序
+## Runtime behavior
 
-1. まず記録する
-2. 次に高確度リスクだけ警告する
-3. その後、決定的で合意済みの規則だけブロックする
-4. CI とスクリプトを共用し、ローカルと遠端の検査を分岐させない
+- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
+- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
+- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
+- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
 
-## Hook が向く状況
+## Relationship to other security layers
 
-次の 2 つを満たすチェックは Hook に適しています。
+| Layer | Responsibility |
+|---|---|
+| Sandbox | Filesystem, network, and system capability boundary |
+| Approval | Human decision before high-risk actions |
+| Command rules | Declarative allow/deny for known command patterns |
+| Hook | Custom, testable logic at lifecycle points |
+| Service permission | Final external-system read/write authority |
 
-- 常に固定ノードで発生する
-- 人が毎回手動で覚えて実行すべきではない
+Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
 
-例：機密情報スキャン、命名検証、監査記録。
+## Adoption order
 
-## 設計原則
+1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
+2. Use `systemMessage` or additional context for high-confidence warnings.
+3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
+4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
 
-- **速い**：Hook のタイムアウトは毎回のツール呼び出しを遅くする
-- **決定的**：Hook 内で LLM を再呼び出ししない
-- **テスト可能**：固定入力で Hook スクリプトを単体テスト
-- **無効化可能**：緊急時にチームがバイパスできる（監査付き）
+## Acceptance checklist
 
-セキュリティ視点はロードマップ `11-team-enterprise` を参照。個人ユーザーは読み取り専用ログ Hook から十分なことが多いです。
+- [ ] Event names come from the current official list.
+- [ ] Matchers cover only required tools or sources.
+- [ ] Scripts have fixture tests and readable errors.
+- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
+- [ ] Failure, timeout, and disabled paths were exercised.
+- [ ] The team understands trust changes shown by `/hooks`.
 
-Hook はシステムの重要ノードで自動チェックするのに向きます。ワークフロー説明ではなく、承認の代替にもなりません。
+## Official source
 
-## よくあるミス
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
-- Hook スクリプト自体にネットワーク書き込み権限があり、新たな攻撃面になる
-- `AGENTS.md` ルールと重複かつ矛盾
-- Hook 設定がバージョン管理されず、メンバー間で環境が不一致
-
-## 受け入れチェックリスト
-
-- [ ] チームが最も必要とする Hook シーンを 1 つ説明できる
-- [ ] Hook 失敗時に開発者向けの明確なエラーメッセージがある
-- [ ] 設定がコードレビューに含まれる
-
-## 参考ソース
-- OpenAI Codex Hooks ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** CLI / App（バージョンによる）  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは現行 Hook 能力、典型ノード、チームガバナンス方式の現状記述に依存。公式公開ドキュメントではこれらの詳細を十分支えられず、現行クライアントに合わせた書き直しが必要。
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
+
+**Last verified:** 2026-08-25

@@ -3,9 +3,10 @@ title: Den richtigen Mechanismus wählen
 description: "Temporärer Prompt, AGENTS.md, Erinnerung, Skill, MCP — wohin gehört welche Schicht; ein Entscheidungsrahmen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ Solche langfristigen Regeln sollten weiter „absinken“.
 
 ### 2. Projekt-Kollaborationsregel oder persönliche Gewohnheit?
 
-Geht es um **Regeln, die alle Mitwirkenden kennen sollten**, gehört das in [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+Geht es um **Regeln, die alle Mitwirkenden kennen sollten**, gehört das in [`AGENTS.md`](/de/guide/customization/agents-md/what-is-agents-md/).
 
 Zum Beispiel:
 
@@ -59,7 +60,7 @@ Zum Beispiel:
 - Commit-Message- oder PR-Abnahmeregeln
 - Spezialnormen in Monorepo-Unterverzeichnissen
 
-Geht es nur um **Ihre Vorlieben** — etwa „Erklärung auf Deutsch“, „zuerst Fazit, dann Details“ — passen [Erinnerung](/guide/customization/memories-and-persistent-context/) oder persönliche Konfiguration besser.
+Geht es nur um **Ihre Vorlieben** — etwa „Erklärung auf Deutsch“, „zuerst Fazit, dann Details“ — passen [Erinnerung](/de/guide/customization/memories-and-persistent-context/) oder persönliche Konfiguration besser.
 
 Faustregel:
 
@@ -82,7 +83,7 @@ Zuerst diese beiden Punkte greifen:
 - **Regeln** beantworten „was darf / was darf nicht“
 - **Schritte** beantworten „wie macht man so etwas üblicherweise“
 
-Wiederverwendbare Schritte eignen sich meist besser als [Skill](/skills/overview/).
+Wiederverwendbare Schritte eignen sich meist besser als [Skill](/de/skills/overview/).
 
 ## Häufige Kombinationen statt Entweder-oder
 
@@ -196,11 +197,11 @@ So stabilisieren Sie zuerst den **Kollaborationskonsens**, dann erweitern Sie F�
 
 ## Weiterlesen
 
-- [Was ist AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- [Erinnerungen und persistenter Kontext](/guide/customization/memories-and-persistent-context/)
-- [Skills-Überblick](/skills/overview/)
-- [MCP-Überblick](/skills/mcp/mcp-overview/)
-- [Erweiterungsmethode wählen](/skills/choosing-an-extension-method/)
+- [Was ist AGENTS.md](/de/guide/customization/agents-md/what-is-agents-md/)
+- [Erinnerungen und persistenter Kontext](/de/guide/customization/memories-and-persistent-context/)
+- [Skills-Überblick](/de/skills/overview/)
+- [MCP-Überblick](/de/skills/mcp/mcp-overview/)
+- [Erweiterungsmethode wählen](/de/skills/choosing-an-extension-method/)
 
 ## Quellen
 - Offizielle OpenAI-Codex-Dokumentation (jeweils aktuelle Version)

@@ -3,9 +3,10 @@ title: Patrones de aprobación humana
 description: Cuándo aprobar, rechazar o pedir a Codex que pause, y cómo dejar esas reglas por escrito.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La aprobación deja las operaciones irreversibles en manos humanas. Esta página resume patrones habituales.
@@ -20,7 +21,7 @@ Zona de confirmación (escribir archivos, ejecutar comandos, red)
 Zona de intervención humana obligatoria (push, borrar datos, salida a internet, cambiar config de producción)
 ```
 
-El comportamiento concreto de los diálogos varía según el [punto de entrada del producto](/guide/); el principio es el mismo.
+El comportamiento concreto de los diálogos varía según el [punto de entrada del producto](/es/guide/); el principio es el mismo.
 
 ## Patrón 1: Planificar primero, ejecutar después
 
@@ -32,7 +33,7 @@ Adecuado para: código base desconocido, cambios ligados a producción, diffs gr
 
 ## Patrón 2: Comandos en lista blanca
 
-En [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) deja escrito:
+En [AGENTS.md](/es/guide/customization/agents-md/writing-effective-instructions/) deja escrito:
 
 ```md
 Permitidos sin preguntar de nuevo: pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ Si hay conflicto con la política del hosting, prevalece la **más estricta**.
 1. Codex abre un draft PR o una rama local
 2. Tras CI humano + review, se fusiona
 
-Escenarios Cloud: [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/).
+Escenarios Cloud: [Crear Pull Request](/es/guide/web-and-cloud/create-pull-requests/).
 
 ## Patrón 4: Reconocimiento en solo lectura
 
@@ -68,7 +69,7 @@ prohibido escribir en disco y hacer git commit.
 
 ## Relación con Automations
 
-Las tareas desatendidas también deben conservar puntos de confirmación humana en el diseño; ver [Tareas programadas y en segundo plano](/skills/automations/scheduled-tasks/).
+Las tareas desatendidas también deben conservar puntos de confirmación humana en el diseño; ver [Tareas programadas y en segundo plano](/es/skills/automations/scheduled-tasks/).
 
 ## Errores frecuentes
 

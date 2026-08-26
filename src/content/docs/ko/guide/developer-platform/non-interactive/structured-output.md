@@ -3,11 +3,12 @@ title: 구조화 출력
 description: exec가 기계가 파싱할 수 있는 결과를 내게 합니다——후속 단계, 대시보드, 게이트용입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: aa19d49
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 처음 자동화할 때 Codex가 “그럴듯한 문장”을 쓰게 두는 경우가 많습니다. 사람이 읽기에는 괜찮지만, 스크립트에는 불친절합니다.
@@ -59,7 +60,7 @@ JSON, schema 같은 말을 엔지니어링 강박으로 이해하기 쉽습니�
 Shell 파싱(예시):
 
 ```bash
-result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
+result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
@@ -104,7 +105,7 @@ schema 정의(버전 v1)
 | 타입 안전 | 약속 + 검증 | SDK 타입 사용 가능 |
 | 적합 | CI 스크립트 | 멀티테넌트 서비스 |
 
-[SDK 개요](/guide/developer-platform/sdk-overview/)를 보세요.
+[SDK 개요](/ko/guide/developer-platform/sdk-overview/)를 보세요.
 
 ## 흔한 실수
 
@@ -118,7 +119,7 @@ schema 정의(버전 v1)
 - [ ] schema 파일 또는 문서화된 필드가 있음
 - [ ] CI가 파싱 실패를 명시적으로 실패 처리
 - [ ] 샘플 출력을 `fixtures/`에 두어 회귀용으로 사용
-- [ ] [종료 코드](/guide/developer-platform/non-interactive/exit-codes-and-retries/) 전략과 일치
+- [ ] [종료 코드](/ko/guide/developer-platform/non-interactive/exit-codes-and-retries/) 전략과 일치
 
 ## 참고 출처
 - OpenAI structured outputs 일반 실천(개념 정렬)

@@ -3,54 +3,42 @@ title: Automations
 description: Planification, événements et exécution en arrière-plan — ce qui convient à l'automatisation et ce qui exige une relecture humaine.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f32c13f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`Automations` porte surtout sur l'exécution automatique de tâches répétitives, pas sur « rendre Codex plus intelligent ».
+A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
 
-Ce groupe traite surtout :
+## Decide whether it fits
 
-- Quelles tâches méritent l'automatisation
-- Jusqu'où automatiser avant d'arrêter pour une personne
-- Comment concevoir échecs, alertes et retour arrière
+| Suitable | Unsuitable |
+|---|---|
+| Stable input sources and reviewable output | The problem must be redefined on every run |
+| Driven by time or interval | Must trigger exactly on Git push or PR creation |
+| Read-only checks, summaries, and drafts | Unattended main-branch merges or bulk deletion |
+| Explicit no-change and stop conditions | Infinite retry after failure |
 
-## Points de jugement
+## Current management surfaces
 
-En découvrant l'automatisation, inutile de tout déléguer d'emblée.
+- Create and manage Scheduled tasks in ChatGPT Web or the desktop App.
+- Codex CLI and IDE have no Scheduled management UI; use them to test prompts, Skills, or scripts first.
+- The desktop App can run a task against a local project or isolated worktree, but the computer must be awake, the App running, and the project still on disk.
+- A Web task can use uploaded context, connected tools, Skills, and Plugins, but cannot read a local folder directly.
 
-Ordre suggéré :
+## In this section
 
-1. La tâche est-elle **répétitive, à règles claires, résultat vérifiable** ?
-2. Peut-elle rester en lecture seule, suggestion ou brouillon de PR ?
-3. Ensuite seulement, envisager l'exécution sans surveillance
+- [Complete Scheduled tasks guide](/fr/skills/automations/scheduled-tasks/): choose an execution mode, write a durable prompt, and define permissions and acceptance
 
-## Entrées de ce groupe
+## Official source
 
-- [Tâches planifiées et en arrière-plan](/skills/automations/scheduled-tasks/) : comprendre les tâches automatisées, déclencheurs, conditions de sortie et points de relecture humaine
-
-## Idées reçues courantes
-
-### 1. Tout ce qui se répète doit être automatisé
-
-Si la répétition existe mais le jugement reste très humain, automatiser trop tôt augmente les problèmes.
-
-### 2. L'automatisation doit supprimer toute confirmation humaine
-
-Beaucoup de valeur vient déjà de :
-
-- Vérifications automatiques
-- Synthèses automatiques
-- Ouverture automatique d'issue / brouillon de PR
-
-Sans pousser le résultat directement sur la branche principale.
-
-L'automatisation convient aux tâches « répétitives, à règles claires, résultat facile à vérifier ». Pour ce qui dépend du jugement, garder une relecture humaine dans le flux est souvent plus sûr.
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** Cloud / App / CLI  
-**Dernière vérification :** 2026-07-26  
-**Base de vérification :** Ce groupe suppose des capacités et points d'entrée Automations actuellement disponibles ; la documentation publique officielle sur les surfaces d'automatisation Codex reste incomplète au 2026-07-26 — pas encore stabilisable.
+**Status:** verified
+
+**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI
+
+**Last verified:** 2026-08-26

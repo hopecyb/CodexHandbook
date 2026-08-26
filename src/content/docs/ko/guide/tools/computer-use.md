@@ -3,9 +3,10 @@ title: Computer Use
 description: 화면과 입력 장치로 GUI를 조작하는 고급 능력 — 적용 장면, 위험, 승인.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -79,7 +80,7 @@ Computer Use는 거의 **키보드·마우스를 Agent에 넘기는 것**과 같
 - 확인 대화상자를 잘못 누를 수 있음
 - 화면에 알림의 민감 정보가 있을 수 있음
 
-필독: [권한과 승인](/guide/foundations/permissions-and-approvals/), [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
+필독: [권한과 승인](/ko/guide/foundations/permissions-and-approvals/), [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
 
 ## 쓸지 말지 판단하기
 
@@ -118,7 +119,7 @@ IDE 밖 앱을 조작?  → Computer Use(더 신중)
 코드만 고치고 테스트?  → 터미널 + 파일 도구
 ```
 
-[도구 선택](/guide/tools/tool-selection/)을 보세요.
+[도구 선택](/ko/guide/tools/tool-selection/)을 보세요.
 
 ## 바로 쓸 수 있는 쓰기
 

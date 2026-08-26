@@ -1,29 +1,71 @@
 ---
-title: Install CLI
-description: Install the Codex command line and run basic checks.
+title: Install the CLI
+description: Install Codex CLI, check its version and sign-in state, and run a first repository task.
 locale: en
 source_locale: zh-CN
-reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: b12f7d0
 translation_status: reviewed
-translated_at: 2026-07-26
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-Follow official CLI installation: [https://developers.openai.com/codex](https://developers.openai.com/codex) (usually a package manager or official install script—see current docs).
+Codex CLI keeps exploration, editing, testing, and review in the terminal. The official installation page provides macOS/Linux, Windows, npm, and Homebrew options. Choose one that matches your operating system and package-management approach.
 
-## Post-install checks
+## Official standalone installer for macOS and Linux
 
-In a terminal, run the version or help command (exact subcommands per official docs) and confirm:
+```bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+```
 
-- The command runs
-- You can sign in or are already authenticated
+Run the same official installer again to update the CLI. Windows, npm, and Homebrew users should select the relevant tab on the [official Codex CLI page](https://learn.chatgpt.com/docs/codex/cli); do not apply the macOS/Linux command to every system.
 
-Details: [CLI interactive mode](/guide/cli/interactive-mode/). Troubleshooting: [CLI troubleshooting](/guide/cli/troubleshooting/).
+## Post-installation checks
+
+Open a new terminal and run these commands in a practice repository:
+
+```bash
+codex --version
+codex login status
+```
+
+If you are not signed in:
+
+```bash
+codex login
+```
+
+After browser authorization, start an interactive session from the repository:
+
+```bash
+codex
+```
+
+Keep the first task read-only:
+
+```text
+Do not edit files yet. Explain how this project is installed, tested, and built,
+and list the file paths you used as evidence.
+```
+
+## Troubleshoot in order
+
+1. If `codex --version` is not found, reopen the terminal and inspect the current shell's `PATH`.
+2. If the command runs but Codex does not, use `codex login status` to distinguish installation from authentication.
+3. If the wrong identity is active, run `codex logout` and sign in again.
+4. If a company environment rejects access, inspect workspace, sign-in, and managed settings. Do not bypass policy with personal credentials.
+
+Never paste an API key into shell history, tickets, or chats. For API-key sign-in, use the standard-input method in [Sign-in and authentication](/en/guide/getting-started/sign-in-and-authentication/).
+
+Continue with [CLI interactive mode](/en/guide/cli/interactive-mode/). For other failures, see [CLI troubleshooting](/en/guide/cli/troubleshooting/).
 
 ---
 
-**Status:** review  
-**Applicable products:** CLI  
-**Last verified:** 2026-07-25
+**Status:** verified
+
+**Applies to:** CLI
+
+**Verification basis:** Compared with the current Codex CLI quickstart and authentication documentation, including the official macOS/Linux installer, `codex` startup, ChatGPT sign-in, and status command. Other installation paths point to the live official tabs.
+
+**Last verified:** 2026-08-26

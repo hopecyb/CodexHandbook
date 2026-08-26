@@ -1,0 +1,71 @@
+<svg lang="en" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" role="img" aria-labelledby="title desc">
+  <title id="title">Codex sandbox and approval decision flow</title>
+  <desc id="desc">Codex proposes an action and checks the sandbox. In-scope actions run with evidence; out-of-scope actions request a human decision. Denial narrows or explains; approval permits only the stated action. Both paths end in verification.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 25.2px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.4px; }
+    .label { fill: #f8fafc; font-size: 16px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12.6px; }
+    .tiny { fill: #94a3b8; font-size: 10.9px; }
+    .edge { fill: #e2e8f0; font-size: 10.9px; font-weight: 700; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="green-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#34d399"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1200" height="780" rx="8" fill="#020617"/>
+  <rect width="1200" height="780" rx="8" fill="url(#grid)"/>
+  <text x="44" y="48" class="h1">Sandbox controls maximum reach; approval controls whether to ask before crossing it</text>
+  <text x="44" y="75" class="sub">Task constraints describe intent; system boundaries constrain execution; diffs, tests, and external state determine acceptance.</text>
+
+  <rect x="66" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="191" y="158" text-anchor="middle" class="label">Task goal and constraints</text>
+  <text x="191" y="186" text-anchor="middle" class="note">Allowed scope · prohibited actions · acceptance</text>
+  <path d="M316 169H390" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="390" y="122" width="250" height="94" rx="9" fill="#07101f" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="515" y="158" text-anchor="middle" class="label">Codex proposes an action</text>
+  <text x="515" y="186" text-anchor="middle" class="note">Read/write · command · network · app</text>
+  <path d="M640 169H714" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M850 112L986 169L850 226L714 169Z" fill="#07101f" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="850" y="160" text-anchor="middle" class="label">Inside current sandbox</text>
+  <text x="850" y="185" text-anchor="middle" class="label">In scope?</text>
+
+  <path d="M986 169H1080V298" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#green-arrow)"/>
+  <text x="1015" y="155" class="edge">Yes</text>
+  <rect x="950" y="298" width="230" height="98" rx="9" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1065" y="335" text-anchor="middle" class="label">Execute inside boundary</text>
+  <text x="1065" y="364" text-anchor="middle" class="note">Still record commands and output</text>
+
+  <path d="M850 226V282H588" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
+  <text x="864" y="258" class="edge">No</text>
+  <rect x="318" y="282" width="270" height="104" rx="9" fill="#07101f" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="453" y="319" text-anchor="middle" class="label">What does approval policy do?</text>
+  <text x="453" y="348" text-anchor="middle" class="note">Ask user or deny by policy</text>
+  <text x="453" y="371" text-anchor="middle" class="tiny">Child processes use the same sandbox</text>
+
+  <path d="M385 386V445H214" fill="none" stroke="#fb7185" stroke-width="2" marker-end="url(#rose-arrow)"/>
+  <text x="314" y="430" class="edge">Denied</text>
+  <rect x="48" y="445" width="332" height="122" rx="9" fill="#2a1018" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="214" y="483" text-anchor="middle" class="label">Narrow action or explain blocker</text>
+  <text x="214" y="513" text-anchor="middle" class="note">Use workspace paths · existing dependencies</text>
+  <text x="214" y="541" text-anchor="middle" class="tiny">Never silently substitute higher-risk action</text>
+
+  <path d="M521 386V445H684" fill="none" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="574" y="430" class="edge">Approved</text>
+  <rect x="518" y="445" width="332" height="122" rx="9" fill="#2a240b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="684" y="483" text-anchor="middle" class="label">Execute only explicit approved scope</text>
+  <text x="684" y="513" text-anchor="middle" class="note">Specific command · path · domain · duration</text>
+  <text x="684" y="541" text-anchor="middle" class="tiny">Re-evaluate every new crossing</text>
+
+  <path d="M214 567V637H516" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M684 567V637H638" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M1065 396V637H638" fill="none" stroke="#34d399" stroke-width="1.5" marker-end="url(#green-arrow)"/>
+  <rect x="390" y="618" width="420" height="108" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="600" y="658" text-anchor="middle" class="label">Verify results and external side effects</text>
+  <text x="600" y="687" text-anchor="middle" class="note">diff · tests · logs · remote state · recoverability</text>
+  <text x="600" y="712" text-anchor="middle" class="tiny">No prompt does not remove review; approval does not prove correctness.</text>
+</svg>

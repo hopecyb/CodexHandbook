@@ -3,9 +3,10 @@ title: Nicht-interaktiver Modus
 description: 'Erläuterungsseite für Batch, Skripte und Pipelines — zuerst verstehen, wofür er geeignet ist, dann Befehle und Ausgabe gestalten.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e226a62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele verstehen „Nicht-interaktiver Modus“ zuerst als „Codex ohne Chat-Oberfläche“.
@@ -14,10 +15,10 @@ Der Nicht-interaktive Modus eignet sich besser dafür, Codex in Skripte, CI oder
 
 ## Empfohlene Reihenfolge
 
-1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [Skripte und Pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [Strukturierte Ausgabe](/guide/developer-platform/non-interactive/structured-output/)
-4. [Exit-Codes und Retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+1. [codex exec](/de/guide/developer-platform/non-interactive/codex-exec/)
+2. [Skripte und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [Strukturierte Ausgabe](/de/guide/developer-platform/non-interactive/structured-output/)
+4. [Exit-Codes und Retries](/de/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Welche Probleme diese Gruppe löst
 

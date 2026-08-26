@@ -3,9 +3,10 @@ title: 프레젠테이션
 description: 슬라이드·발표 원고의 생성·개정·보내기 — 구조, 마스터, 발표 메모 약속.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Codex로 발표 자료를 만들 때 가장 가치 있는 것은 구조·페이�
 5. PDF로보내 리허설·시간 측정
 ```
 
-[탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)과 같습니다. 개요 단계를 먼저 검증한 뒤 세부를 채웁니다.
+[탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)과 같습니다. 개요 단계를 먼저 검증한 뒤 세부를 채웁니다.
 
 ## 왜 발표 자료는 구조를 먼저 잡아야 하나
 
@@ -114,13 +115,13 @@ bullet·그림·결론이 너무 많으면 청중이 초점을 한 번에 잡기
 
 이런 요구가 “고급스러운 PPT 하나”보다 계속 다듬을 수 있는 버전을 내기 쉽습니다.
 
-이미지 요구는 [이미지와 스크린샷](/guide/files-and-artifacts/images-and-screenshots/), 순수 생성 이미지는 [이미지 생성](/guide/tools/image-generation/)을 보세요.
+이미지 요구는 [이미지와 스크린샷](/ko/guide/files-and-artifacts/images-and-screenshots/), 순수 생성 이미지는 [이미지 생성](/ko/guide/tools/image-generation/)을 보세요.
 
 ## 검증
 
 - 프로젝션 해상도에서 글자 크기 가독
 - 애니메이션은 적절히(과하면 유지보수 어려움)
-- 숫자가 [출처 검증](/guide/quality/validate-sources/)과 일치
+- 숫자가 [출처 검증](/ko/guide/quality/validate-sources/)과 일치
 - 발표 메모가 충분한지(필요하면)
 
 ## Codex에 맡기기 좋은 것 / 당신이 결정할 것

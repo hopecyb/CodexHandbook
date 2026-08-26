@@ -3,9 +3,10 @@ title: Überprüfung
 description: "Diffs prüfen, Tests ausführen, Quellen validieren und Fertigkriterien definieren."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 17
 ---
@@ -76,12 +77,12 @@ Anders gesagt:
 
 ## Kernthemen
 
-- [Diffs prüfen](/guide/quality/review-diffs/) — Diff lesen, Umfang und Risiko bestätigen
-- [Tests ausführen](/guide/quality/run-tests/) — automatische Regression
-- [Artefakte prüfen](/guide/quality/verify-artifacts/) — Doku, Konfiguration, Generiertes
-- [Quellen validieren](/guide/quality/validate-sources/) — Recherche-Schlussfolgerungen nachvollziehbar
-- [Unsicherheit handhaben](/guide/quality/handle-uncertainty/) — wenn das Modell unsicher ist
-- [Fertig-Definition](/guide/quality/definition-of-done/) — was „fertig“ heißt
+- [Diffs prüfen](/de/guide/quality/review-diffs/) — Diff lesen, Umfang und Risiko bestätigen
+- [Tests ausführen](/de/guide/quality/run-tests/) — automatische Regression
+- [Artefakte prüfen](/de/guide/quality/verify-artifacts/) — Doku, Konfiguration, Generiertes
+- [Quellen validieren](/de/guide/quality/validate-sources/) — Recherche-Schlussfolgerungen nachvollziehbar
+- [Unsicherheit handhaben](/de/guide/quality/handle-uncertainty/) — wenn das Modell unsicher ist
+- [Fertig-Definition](/de/guide/quality/definition-of-done/) — was „fertig“ heißt
 
 ## Unterschiedliche Aufgaben, unterschiedliche Schwerpunkte
 
@@ -90,11 +91,11 @@ Anders gesagt:
 - **Recherche**: Quellen echt und aktuell? Schlussfolgerung über Evidenz hinaus?
 - **Konfiguration oder Skripte erzeugen**: Umgebungsvoraussetzungen, Berechtigungsumfang, Wiederherstellung nach Fehlern
 
-Unklar, womit starten? Standard: [Fertig-Definition](/guide/quality/definition-of-done/).
+Unklar, womit starten? Standard: [Fertig-Definition](/de/guide/quality/definition-of-done/).
 
 Überprüfung bestätigt: Dieses Ergebnis ist nutzbar, vertrauenswürdig und abgabefähig.
 
-Wie Abnahmekriterien im Prompt stehen: [Fertigkriterien definieren](/prompts/define-done/). End-to-End-Fälle: [Praxisbeispiele](/cases/).
+Wie Abnahmekriterien im Prompt stehen: [Fertigkriterien definieren](/de/prompts/define-done/). End-to-End-Fälle: [Praxisbeispiele](/de/cases/).
 
 ---
 

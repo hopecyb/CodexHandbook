@@ -3,9 +3,10 @@ title: Modelo de caso
 description: Estrutura unificada para redigir e fazer retrospectiva de casos Codex — facilita consolidação e comparação na equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a430fba
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Copie este modelo para criar uma nova página de caso ou um documento interno de retrospectiva.

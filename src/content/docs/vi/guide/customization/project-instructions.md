@@ -3,9 +3,10 @@ title: Mô tả dự án
 description: Ngữ cảnh cấp dự án ngoài AGENTS.md — phân công README, docs và tham chiếu hội thoại.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Lúc đó không chỉ người rối, Codex cũng rối. Trọng tâm là để
 - **Mô tả dự án**: tương đối ổn định trong vài tháng
 - **Ngữ cảnh hội thoại**: mục tiêu lần này, ràng buộc, kết luận giữa chừng
 
-Trong tác vụ dài nếu thấy một quy tắc bị nhắc lặp, nên **ghi lại** vào `AGENTS.md` hoặc `docs/`, chứ không sao chép dán trong mười thread. Xem [Giữ ngữ cảnh tập trung](/guide/context/keep-context-focused/).
+Trong tác vụ dài nếu thấy một quy tắc bị nhắc lặp, nên **ghi lại** vào `AGENTS.md` hoặc `docs/`, chứ không sao chép dán trong mười thread. Xem [Giữ ngữ cảnh tập trung](/vi/guide/context/keep-context-focused/).
 
 ## Lỗi thường gặp
 

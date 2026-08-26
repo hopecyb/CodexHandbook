@@ -3,9 +3,10 @@ title: "Règles Allow et Deny"
 description: Contraindre ce que l'Agent peut exécuter avec des règles de commandes et de chemins — habitudes personnelles et lignes de base d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ Leur valeur est principalement double :
 | Chemins | Interdire l'écriture `../`, interdire la lecture `~/.ssh` |
 | Réseau | Interdire l'outbound ou autoriser uniquement les domaines de registre |
 
-Comparer avec [Matrice des permissions](/guide/reference/permission-matrix/) : les règles sont une application **configurable** ; la matrice décrit les **défauts typiques**.
+Comparer avec [Matrice des permissions](/fr/guide/reference/permission-matrix/) : les règles sont une application **configurable** ; la matrice décrit les **défauts typiques**.
 
 ## Couches recommandées
 

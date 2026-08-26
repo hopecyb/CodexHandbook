@@ -3,9 +3,10 @@ title: Lộ trình nhà phát triển (tổng quan)
 description: Tổng quan tuyến liên quan phát triển phần mềm; bước sâu sẽ bổ sung sau.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ Nếu bạn chủ yếu muốn dùng Codex sửa code, hiểu dự án, sửa v�
 
 ## Hiện có thể đọc
 
-- [Bắt đầu nhanh](/guide/getting-started/) và [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [Chạy kiểm thử](/guide/quality/run-tests/) · [Xem xét Diff](/guide/quality/review-diffs/)
-- [Lập kế hoạch Agent](/guide/agent-work/planning/)
+- [Bắt đầu nhanh](/vi/guide/getting-started/) và [CLI](/vi/guide/cli/) / [IDE](/vi/guide/ide/)
+- [Chạy kiểm thử](/vi/guide/quality/run-tests/) · [Xem xét Diff](/vi/guide/quality/review-diffs/)
+- [Lập kế hoạch Agent](/vi/guide/agent-work/planning/)
 
 ## Hiểu nhầm thường gặp
 
@@ -46,11 +47,11 @@ Cách Codex làm việc khác autocomplete editor thông thường; các khái n
 
 Nếu chuẩn bị dùng Codex vào phát triển, đọc theo thứ tự này:
 
-1. [Bắt đầu nhanh](/guide/getting-started/)
-2. [CLI](/guide/cli/) hoặc [IDE](/guide/ide/)
-3. [Công việc Agent](/guide/agent-work/)
-4. [Chạy kiểm thử](/guide/quality/run-tests/)
-5. [Xem xét Diff](/guide/quality/review-diffs/)
+1. [Bắt đầu nhanh](/vi/guide/getting-started/)
+2. [CLI](/vi/guide/cli/) hoặc [IDE](/vi/guide/ide/)
+3. [Công việc Agent](/vi/guide/agent-work/)
+4. [Chạy kiểm thử](/vi/guide/quality/run-tests/)
+5. [Xem xét Diff](/vi/guide/quality/review-diffs/)
 
 Lộ trình này coi trọng hơn thay đổi kiểm soát được, kết quả Kiểm chứng được, không chỉ theo đuổi «để nó viết trước đã».
 

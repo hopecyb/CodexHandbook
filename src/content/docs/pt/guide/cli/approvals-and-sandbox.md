@@ -3,9 +3,10 @@ title: Aprovação e Sandbox
 description: Estratégias de aprovação para shell, escrita em disco e pedidos de rede na CLI, e como o Sandbox limita o comportamento do Agent.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -27,7 +28,7 @@ Pode lembrar assim:
 
 Juntos, determinam se o uso da CLI fica mais conservador ou com fronteiras demasiado abertas.
 
-Base conceptual: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/) · [Sandbox e rede](/guide/foundations/sandbox-and-network/)
+Base conceptual: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/) · [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
 
 ## Quando ocorre a Aprovação
 
@@ -57,7 +58,7 @@ O Sandbox pode limitar:
 - Se pode aceder a outros projetos em `$HOME`
 - Capacidades de subprocessos e rede
 
-Entradas de configuração: [Configuração da CLI](/guide/cli/configuration/) · Matriz: [Matriz de Permissões](/guide/reference/permission-matrix/)
+Entradas de configuração: [Configuração da CLI](/pt/guide/cli/configuration/) · Matriz: [Matriz de Permissões](/pt/guide/reference/permission-matrix/)
 
 ## Interativo vs não interativo
 
@@ -66,7 +67,7 @@ Entradas de configuração: [Configuração da CLI](/guide/cli/configuration/) �
 | Interativo `codex` | Pessoa presente; pode julgar caso a caso |
 | Não interativo `exec` | Sem si presente; precisa de apertar o Sandbox de antemão + Prompt fixo |
 
-Leitura obrigatória em CI: [Modo não interativo](/guide/cli/non-interactive-mode/) · [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
+Leitura obrigatória em CI: [Modo não interativo](/pt/guide/cli/non-interactive-mode/) · [Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/)
 
 Princípios recomendados para CI:
 
@@ -76,7 +77,7 @@ Princípios recomendados para CI:
 
 ## Relação com regras allow/deny
 
-O projeto pode declarar «comandos previsíveis» em [Regras de permitir e negar](/guide/customization/rules/allow-and-deny-patterns/). **As regras têm de coincidir com o comportamento real do produto**; caso contrário o Agent continua a ser bloqueado ou fica demasiado largo.
+O projeto pode declarar «comandos previsíveis» em [Regras de permitir e negar](/pt/guide/customization/rules/allow-and-deny-patterns/). **As regras têm de coincidir com o comportamento real do produto**; caso contrário o Agent continua a ser bloqueado ou fica demasiado largo.
 
 ## Erros comuns
 

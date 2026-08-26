@@ -3,9 +3,10 @@ title: Manter o Contexto focado
 description: Controlar o alcance, abrir Threads novas e fazer transferência.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 042a77f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -43,7 +44,7 @@ O resultado costuma ser: você acha que está a acrescentar informação; o Code
 - Uma Tarefa, um objetivo
 - Resumir periodicamente «concluído / por concluir / restrições ainda válidas»
 - Em Tarefas longas, usar portões de fase
-- Entre sessões, usar [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
+- Entre sessões, usar [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
 
 ## Sinais de que já deve fechar
 

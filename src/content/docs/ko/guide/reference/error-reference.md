@@ -3,9 +3,10 @@ title: 오류와 안내 참고
 description: 흔한 오류 메시지, 종료 코드, 실패 원인의 학습용 색인——장애 분석 페이지로 안내하며 공식 지원을 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -24,14 +25,14 @@ sidebar:
 
 원인을 바로 추측하는 것보다 보통 더 빠릅니다.
 
-전역 색인：[장애 분석](/guide/reference/troubleshooting/)
+전역 색인：[장애 분석](/ko/guide/reference/troubleshooting/)
 
 ## 인증과 계정
 
 | 안내 또는 현상 | 가능한 원인 | 다음 단계 |
 |---|---|---|
-| Authentication failed / 401 | token 만료, 미로그인 | [로그인과 인증](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | 조직이 기능이나 모델을 비활성화 | 관리자에게 연락；플랜은 [계정과 접근](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | token 만료, 미로그인 | [로그인과 인증](/ko/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | 조직이 기능이나 모델을 비활성화 | 관리자에게 연락；플랜은 [계정과 접근](/ko/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | 요청이 너무 잦거나 쿼터 | 잠시 후 재시도；플랜 사용량 확인 |
 
 ## 흔한 오해
@@ -69,9 +70,9 @@ sidebar:
 
 | 안내 또는 현상 | 가능한 원인 | 다음 단계 |
 |---|---|---|
-| command not found: codex | 미설치 또는 PATH | [CLI 설치](/guide/getting-started/install-cli/) |
-| Config parse error | TOML/YAML 문법 | [CLI 설정](/guide/cli/configuration/) |
-| Permission denied (write) | 샌드박스 또는 승인 거부 | [승인과 샌드박스](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | 미설치 또는 PATH | [CLI 설치](/ko/guide/getting-started/install-cli/) |
+| Config parse error | TOML/YAML 문법 | [CLI 설정](/ko/guide/cli/configuration/) |
+| Permission denied (write) | 샌드박스 또는 승인 거부 | [승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/) |
 | 비영 종료 코드(exec) | 작업 실패 또는 완료 조건 미충족 | stderr 로그 확인；프롬프트를 조임 |
 
 ## 먼저 분류하기
@@ -111,23 +112,23 @@ sidebar:
 | 안내 또는 현상 | 가능한 원인 | 다음 단계 |
 |---|---|---|
 | User rejected tool call | 당신이나 정책이 동작을 거부 | 승인해야 하는지 확인；또는 작업 변경 |
-| Sandbox violation | 쓰기 경로나 명령이 경계를 넘음 | [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/) |
-| Network access denied | 출망이 금지됨 | Cloud：[인터넷 접근](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | 쓰기 경로나 명령이 경계를 넘음 | [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/) |
+| Network access denied | 출망이 금지됨 | Cloud：[인터넷 접근](/ko/guide/web-and-cloud/internet-access/) |
 
 ## Cloud와 GitHub
 
 | 안내 또는 현상 | 가능한 원인 | 다음 단계 |
 |---|---|---|
-| Repository access denied | OAuth 범위 부족 | [GitHub 연결](/guide/web-and-cloud/connect-github/) |
-| Clone failed | 저장소 이름, 권한, 네트워크 | [Cloud 장애 분석](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | 이름 오류 또는 스코프 | [Secrets와 변수](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | 브랜치 보호 | [PR 만들기](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | OAuth 범위 부족 | [GitHub 연결](/ko/guide/web-and-cloud/connect-github/) |
+| Clone failed | 저장소 이름, 권한, 네트워크 | [Cloud 장애 분석](/ko/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | 이름 오류 또는 스코프 | [Secrets와 변수](/ko/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | 브랜치 보호 | [PR 만들기](/ko/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP와 확장
 
 | 안내 또는 현상 | 가능한 원인 | 다음 단계 |
 |---|---|---|
-| MCP server failed to start | 명령 경로, 의존성 누락 | [MCP 연결](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | 명령 경로, 의존성 누락 | [MCP 연결](/ko/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | 외부 API가 느리거나 다운 | 재시도；MCP 로그 확인 |
 | Unknown tool | 설정과 서버 버전 불일치 | 세션 재시작；설정 갱신 |
 
@@ -135,14 +136,14 @@ sidebar:
 
 | 안내 또는 현상 | 가능한 원인 | 다음 단계 |
 |---|---|---|
-| Context length exceeded | 대화나 @ 파일이 너무 큼 | [압축](/guide/context/compaction/) · 범위 축소 |
-| Model not available | 지역 또는 플랜이 지원하지 않음 | [모델과 추론](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | 대화나 @ 파일이 너무 큼 | [압축](/ko/guide/context/compaction/) · 범위 축소 |
+| Model not available | 지역 또는 플랜이 지원하지 않음 | [모델과 추론](/ko/guide/foundations/models-and-reasoning/) |
 
 ## 이 페이지 사용법
 
 1. **핵심 문장**을 클라이언트 검색이나 본 핸드북 검색에 복사
 2. 표를 따라 특집 페이지로 가 체크리스트를 실행
-3. 그래도 해결되지 않으면：전체 로그를 남기고 [공식 리소스](/guide/reference/official-resources/)를 확인
+3. 그래도 해결되지 않으면：전체 로그를 남기고 [공식 리소스](/ko/guide/reference/official-resources/)를 확인
 
 ## 보고할 때 붙이면 좋은 것
 

@@ -3,9 +3,10 @@ title: SDK-Überblick
 description: 'Über das offizielle SDK Codex-Aufgaben in Anwendungen starten — Konzepte zu Authentifizierung, Sitzungen und Fehlerbehandlung.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,7 +23,7 @@ Es eignet sich also eher dafür, dass **Ihr System** Codex aufruft. Für eine ei
 - Authentifizierung und Mandantentrennung
 - Zusammenspiel mit Webhook und Queues
 
-Plattformüberblick: [Entwicklerplattform](/guide/developer-platform/)
+Plattformüberblick: [Entwicklerplattform](/de/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -67,7 +68,7 @@ Das SDK passt zu „System an System anbinden“, nicht als Haupteinstieg für d
 4. **Ergebnis**: Nachrichtenverlauf, Datei-Diff, Artifact-URL (je nach API)
 5. **Fehler**: Wiederholbar (429) vs. nicht wiederholbar (400) unterscheiden
 
-Fehlerindex: [Fehler- und Hinweisreferenz](/guide/reference/error-reference/)
+Fehlerindex: [Fehler- und Hinweisreferenz](/de/guide/reference/error-reference/)
 
 ## Minimale Integrations-Checkliste
 
@@ -78,7 +79,7 @@ Fehlerindex: [Fehler- und Hinweisreferenz](/guide/reference/error-reference/)
 
 ## Anbindung an CI/CD
 
-Das SDK triggert Cloud oder Remote-Runner, oder CI ruft Ihren Dienst zurück, um den PR-Status zu aktualisieren. Beispielmuster: [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/).
+Das SDK triggert Cloud oder Remote-Runner, oder CI ruft Ihren Dienst zurück, um den PR-Status zu aktualisieren. Beispielmuster: [Code-Review-Automatisierung](/de/guide/developer-platform/ci-cd/code-review-automation/).
 
 ## Häufige Fehler
 

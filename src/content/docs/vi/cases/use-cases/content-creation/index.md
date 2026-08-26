@@ -3,9 +3,10 @@ title: Sáng tạo nội dung
 description: Lối vào case về tài liệu, bài viết và tài sản nội dung — trọng tâm review, viết lại và nghiệm thu Artifact.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Case sáng tạo nội dung chủ yếu nhìn kịch bản kiểu:
@@ -14,7 +15,7 @@ Case sáng tạo nội dung chủ yếu nhìn kịch bản kiểu:
 
 ## Lối vào nhóm này
 
-- [Refactor site tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refactor site tài liệu kèm review](/vi/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## Trọng tâm nhóm này
 

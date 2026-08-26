@@ -3,9 +3,10 @@ title: Biến môi trường
 description: "Công dụng, tầng và bảo mật của biến môi trường liên quan Codex — bổ sung cho tham chiếu cấu hình."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -30,7 +31,7 @@ Dùng chúng để **tiêm khóa, ghi đè công tắc, thích ứng CI** mà kh
 
 Vì vậy token, công tắc tạm và tiêm CI thường dùng env — không tệp hard-code.
 
-Khái niệm cấu hình: [Tham chiếu cấu hình](/guide/reference/configuration-reference/); Cloud: [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/).
+Khái niệm cấu hình: [Tham chiếu cấu hình](/vi/guide/reference/configuration-reference/); Cloud: [Secrets và biến](/vi/guide/web-and-cloud/secrets-and-variables/).
 
 ## Lựa chọn tốt cho biến môi trường
 
@@ -68,7 +69,7 @@ Vì vậy:
 
 - Chuẩn code, cấu trúc thư mục → `AGENTS.md`
 - Mô hình mặc định đội → cấu hình dự án (phần không secret)
-- Danh sách cho phép phức tạp → [Quy tắc](/guide/customization/rules/allow-and-deny-patterns/)
+- Danh sách cho phép phức tạp → [Quy tắc](/vi/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Hiểu nhầm thường gặp
 
@@ -133,11 +134,11 @@ Export token cá nhân trong `~/.zshrc` hoặc direnv `.envrc` — **không comm
 
 ### CLI không tương tác
 
-CI tiêm qua secret store rồi chạy `codex exec`. Xem [Chế độ không tương tác](/guide/cli/non-interactive-mode/).
+CI tiêm qua secret store rồi chạy `codex exec`. Xem [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/).
 
 ### Máy chủ MCP
 
-Tiến trình MCP thường kế thừa env cha; tham chiếu `$VAR` trong config thay vì hard-code. Xem [Kết nối MCP](/skills/mcp/connect-an-mcp-server/).
+Tiến trình MCP thường kế thừa env cha; tham chiếu `$VAR` trong config thay vì hard-code. Xem [Kết nối MCP](/vi/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 

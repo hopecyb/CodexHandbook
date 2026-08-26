@@ -3,9 +3,10 @@ title: Créer votre premier Skill
 description: Un Skill pr-review soumissable from scratch, avec tests et partage équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Vous savez déjà donner des tâches, mais pas encore créer un Skill ? Cette page couvre les bases du **premier** Skill.
@@ -14,7 +15,7 @@ Vous savez déjà donner des tâches, mais pas encore créer un Skill ? Cette pa
 
 ## Public
 
-Vous avez fait [Première tâche](/cases/first-task/) et acceptez d'essayer dans un dépôt de test.
+Vous avez fait [Première tâche](/fr/cases/first-task/) et acceptez d'essayer dans un dépôt de test.
 
 ## Pourquoi commencer par `pr-review`
 
@@ -126,14 +127,14 @@ Utile si :
 - [ ] `$pr-review` OK sans git dangereux
 - [ ] conclusions par niveau, pas de généralités
 - [ ] `description` = scénario en une phrase
-- [ ] [Permissions et approbations](/guide/permissions-and-sandbox/) si scripts (ici aucun)
+- [ ] [Permissions et approbations](/fr/guide/permissions-and-sandbox/) si scripts (ici aucun)
 
 Commencer petit et stable facilite la réutilisation d'une routine claire.
 
 ## Suite
 
-- figer [Comprendre](/prompts/templates/understand/) en Skill
-- API GitHub → [MCP](/skills/mcp/mcp-overview/)
+- figer [Comprendre](/fr/prompts/templates/understand/) en Skill
+- API GitHub → [MCP](/fr/skills/mcp/mcp-overview/)
 
 ## Sources
 - Exemples officiels Codex Skills et `skill-creator` (si fourni)

@@ -3,14 +3,15 @@ title: 종료 코드와 재시도
 description: 파이프라인에서 codex exec의 성패를 올바르게 해석합니다——언제 재시도하고, 언제 즉시 실패할지입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 장은 [codex exec](/guide/developer-platform/non-interactive/codex-exec/)의 흔한 의미, 재시도 전략, 멱등 설계를 설명합니다.
+CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 장은 [codex exec](/ko/guide/developer-platform/non-interactive/codex-exec/)의 흔한 의미, 재시도 전략, 멱등 설계를 설명합니다.
 
 ## 이 페이지 내용
 
@@ -59,7 +60,7 @@ CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 �
 | `0` | 작업 완료 + 프롬프트의 성공 기준 충족 |
 | 비 `0`이고 로그에 policy/sandbox 거부 | **맹목 재시도하지 말고** 설정이나 프롬프트를 고침 |
 | 비 `0`이고 API 429/5xx | 제한된 횟수의 지수 백오프 재시도 |
-| P0 문제를 찾았지만 실행은 성공 | [구조화 출력](/guide/developer-platform/non-interactive/structured-output/)의 `pass: false` + 스크립트 `exit 1` |
+| P0 문제를 찾았지만 실행은 성공 | [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/)의 `pass: false` + 스크립트 `exit 1` |
 
 「보안 문제를 발견했다」는 크래시성 예외에 의존하지 말고, JSON에 `pass: false`를 **명시**하고 래퍼 스크립트가 종료 코드를 결정하게 하세요.
 
@@ -69,7 +70,7 @@ CI는 **프로세스 종료 코드**로 단계 성패를 판단합니다. 이 �
 max=3
 delay=10
 for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
+  if codex exec --cd . "$(cat "$PROMPT")"; then
     exit 0
   fi
   code=$?
@@ -119,8 +120,8 @@ exit 1
 
 ## 관련 장
 
-- [오류 참고](/guide/reference/error-reference/)
-- [실패 복구](/cases/workflows/failure-recovery/)
+- [오류 참고](/ko/guide/reference/error-reference/)
+- [실패 복구](/ko/cases/workflows/failure-recovery/)
 
 ## 참고 출처
 - OpenAI API 재시도 가이드(개념)

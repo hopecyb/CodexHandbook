@@ -3,9 +3,10 @@ title: Anti-patterns de Prompt
 description: Formulations floues, dépassement de permissions et demandes de « raisonnement caché » à éviter.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 On apprend souvent « comment bien écrire » — savoir ce qui **dérape le plus vite** fait gagner du temps.

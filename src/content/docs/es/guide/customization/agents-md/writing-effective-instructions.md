@@ -3,9 +3,10 @@ title: Escribir instrucciones eficaces
 description: Checklist de escritura de AGENTS.md — corto, duro, ejecutable y verificable.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ Deja claro qué no hacer
 
 ### 1. Pon delante las restricciones duras
 
-Coloca «debe» y «prohibido» al inicio del archivo. Con contexto limitado, el modelo da más peso al comienzo — la misma lógica que [prioridad del contexto](/guide/context/context-priority/).
+Coloca «debe» y «prohibido» al inicio del archivo. Con contexto limitado, el modelo da más peso al comienzo — la misma lógica que [prioridad del contexto](/es/guide/context/context-priority/).
 
 ### 2. Comandos copiables
 
@@ -151,9 +152,9 @@ Una buena instrucción de proyecto no se mide por cuánto escribe, sino por si l
 
 ## Lecturas relacionadas
 
-- [Instrucciones del proyecto](/guide/customization/project-instructions/)
-- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- [Definir hecho](/prompts/define-done/)
+- [Instrucciones del proyecto](/es/guide/customization/project-instructions/)
+- [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
+- [Definir hecho](/es/prompts/define-done/)
 
 ## De una tarea a una regla de proyecto
 

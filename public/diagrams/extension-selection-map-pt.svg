@@ -1,0 +1,70 @@
+<svg lang="pt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" role="img" aria-labelledby="title desc">
+  <title id="title">Seleção de método de extensão Codex</title>
+  <desc id="desc">Escolha pelo que deve persistir: prompt para uma tarefa, AGENTS.md para regras do projeto, Skill para processo reutilizável, MCP para ferramentas externas, Hook para proteções do ciclo de vida, Plugin para distribuição e Scheduled task para repetição.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 24px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 12.8px; }
+    .lane { fill: #cbd5e1; font-size: 12.8px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 14.4px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 11.2px; }
+    .tiny { fill: #94a3b8; font-size: 9.6px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1100" height="700" rx="8" fill="#020617"/>
+  <rect width="1100" height="700" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Pergunte o que deve persistir e então escolha um mecanismo de extensão</text>
+  <text x="44" y="70" class="sub">Esses mecanismos se combinam, mas têm responsabilidades diferentes; não são uma escada de upgrade.</text>
+
+  <rect x="390" y="96" width="320" height="68" rx="8" fill="#0f172a" stroke="#f8fafc" stroke-width="1.5"/>
+  <text x="550" y="124" text-anchor="middle" class="label">Qual é o principal problema?</text>
+  <text x="550" y="147" text-anchor="middle" class="note">Instruções · regras · processo · ferramentas · gatilho · distribuição</text>
+
+  <path d="M550 164V198H190V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V198H910V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="190" y="254" text-anchor="middle" class="lane">Preservar conhecimento e prática</text>
+  <rect x="70" y="284" width="240" height="76" rx="8" fill="#083344" stroke="#22d3ee"/>
+  <text x="190" y="313" text-anchor="middle" class="label">Prompt</text>
+  <text x="190" y="337" text-anchor="middle" class="note">Somente para esta tarefa</text>
+  <path d="M190 360V392" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="205" y="382" class="tiny">Esta classe de tarefa se repete</text>
+  <rect x="70" y="394" width="240" height="76" rx="8" fill="#064e3b" stroke="#34d399"/>
+  <text x="190" y="423" text-anchor="middle" class="label">Skill</text>
+  <text x="190" y="447" text-anchor="middle" class="note">Processo, referências e scripts reutilizáveis</text>
+  <rect x="70" y="500" width="240" height="76" rx="8" fill="#3b0764" stroke="#a78bfa"/>
+  <text x="190" y="529" text-anchor="middle" class="label">AGENTS.md</text>
+  <text x="190" y="553" text-anchor="middle" class="note">Regras seguidas sempre que o projeto é aberto</text>
+
+  <rect x="400" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="550" y="254" text-anchor="middle" class="lane">Adicionar capacidade de execução</text>
+  <rect x="430" y="284" width="240" height="76" rx="8" fill="#1e1b4b" stroke="#a78bfa"/>
+  <text x="550" y="313" text-anchor="middle" class="label">MCP / Connector</text>
+  <text x="550" y="337" text-anchor="middle" class="note">Conectar ferramentas e dados externos</text>
+  <rect x="430" y="394" width="240" height="76" rx="8" fill="#4c0519" stroke="#fb7185"/>
+  <text x="550" y="423" text-anchor="middle" class="label">Hook</text>
+  <text x="550" y="447" text-anchor="middle" class="note">Verificar ou bloquear em pontos do ciclo de vida</text>
+  <rect x="430" y="500" width="240" height="76" rx="8" fill="#422006" stroke="#fbbf24"/>
+  <text x="550" y="529" text-anchor="middle" class="label">Subagente</text>
+  <text x="550" y="553" text-anchor="middle" class="note">Tratar subproblemas independentes em paralelo</text>
+
+  <rect x="760" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="910" y="254" text-anchor="middle" class="lane">Distribuir ou disparar por tempo</text>
+  <rect x="790" y="304" width="240" height="90" rx="8" fill="#3f1d0b" stroke="#fb923c"/>
+  <text x="910" y="333" text-anchor="middle" class="label">Plugin</text>
+  <text x="910" y="357" text-anchor="middle" class="note">Empacotar Skills, conectores e MCP</text>
+  <text x="910" y="378" text-anchor="middle" class="tiny">Pode incluir Hooks e modelos de tarefa</text>
+  <rect x="790" y="444" width="240" height="90" rx="8" fill="#3f0713" stroke="#fb7185"/>
+  <text x="910" y="473" text-anchor="middle" class="label">Scheduled task</text>
+  <text x="910" y="497" text-anchor="middle" class="note">Repetir por tempo</text>
+  <text x="910" y="518" text-anchor="middle" class="tiny">Verificar antes de agendar</text>
+
+  <rect x="120" y="626" width="860" height="58" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="651" text-anchor="middle" class="note">Comum: regras AGENTS.md + processo Skill + ferramentas MCP + limites Hook</text>
+  <text x="550" y="673" text-anchor="middle" class="tiny">Plugin distribui; Scheduled task dispara por tempo</text>
+</svg>

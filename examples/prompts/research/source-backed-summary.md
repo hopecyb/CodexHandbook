@@ -48,6 +48,6 @@ last_verified: 2026-07-25
 
 # 相关内容
 
-- [带引用的研究](/09-workflows/research-with-sources/)
-- [验证来源](/05-core-capabilities/quality/validate-sources/)
+- [带引用的研究](/cases/workflows/research-with-sources/)
+- [验证来源](/guide/quality/validate-sources/)
 - [案例：竞品功能对比表](/cases/use-cases/research-and-learning/competitive-feature-matrix/)

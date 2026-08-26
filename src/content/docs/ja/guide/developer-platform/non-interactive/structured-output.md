@@ -3,11 +3,12 @@ title: 構造化出力
 description: exec の結果を機械が解析可能に——下流ステップ、ダッシュボード、ゲート向け。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: aa19d49
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 自動化を初めて組むと、Codex に「それらしい文章」を出させる前提にしがちです。人が読むには足りますが、スクリプトには不向きです。
@@ -55,7 +56,7 @@ Prompt 末尾にフォーマット要求を固定：
 Shell 解析（示意）：
 
 ```bash
-result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
+result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
@@ -99,7 +100,7 @@ schema 定義（バージョン v1）
 | 型安全 | 約束 + 検証 | SDK 型を利用可 |
 | 向く用途 | CI スクリプト | マルチテナントサービス |
 
-[SDK 概要](/guide/developer-platform/sdk-overview/) を参照。
+[SDK 概要](/ja/guide/developer-platform/sdk-overview/) を参照。
 
 ## よくあるミス
 
@@ -113,7 +114,7 @@ schema 定義（バージョン v1）
 - [ ] schema ファイルまたはフィールド文書がある
 - [ ] CI が解析失敗を明示的に失敗扱い
 - [ ] サンプル出力が `fixtures/` に回帰用保存
-- [ ] [終了コード](/guide/developer-platform/non-interactive/exit-codes-and-retries/) 方針と一致
+- [ ] [終了コード](/ja/guide/developer-platform/non-interactive/exit-codes-and-retries/) 方針と一致
 
 ## 参考
 - OpenAI structured outputs 一般実践（概念整合）

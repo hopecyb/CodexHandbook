@@ -3,9 +3,10 @@ title: Create your first Skill
 description: Build a committable pr-review Skill from scratch, with testing and team sharing.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 If you can assign tasks but have not built a Skill yet, this page covers the basics of your first one.
@@ -14,7 +15,7 @@ Spend 15–30 minutes on a **repo-reusable** Skill—often more direct than read
 
 ## Who this is for
 
-You can complete [your first task](/cases/first-task/) and are willing to experiment in a test repo.
+You can complete [your first task](/en/cases/first-task/) and are willing to experiment in a test repo.
 
 ## Why start with `pr-review`
 
@@ -136,14 +137,14 @@ A useful Skill should also:
 - [ ] `$pr-review` runs without dangerous git operations
 - [ ] Output has tiered conclusions, not vague prose
 - [ ] `description` states trigger scenario in one sentence
-- [ ] Checked script needs against [permissions and sandbox](/guide/permissions-and-sandbox/) (this example has no scripts)
+- [ ] Checked script needs against [permissions and sandbox](/en/guide/permissions-and-sandbox/) (this example has no scripts)
 
 Starting with a small, steady Skill makes it easier to reuse a clear workflow reliably.
 
 ## Next steps
 
-- Turn [explore–plan–execute–verify](/prompts/templates/understand/) into a Skill
-- When you need GitHub API access, add [MCP](/skills/mcp/mcp-overview/)
+- Turn [explore–plan–execute–verify](/en/prompts/templates/understand/) into a Skill
+- When you need GitHub API access, add [MCP](/en/skills/mcp/mcp-overview/)
 
 ## References
 - OpenAI Codex Skills official examples and `skill-creator` (if provided in your environment)

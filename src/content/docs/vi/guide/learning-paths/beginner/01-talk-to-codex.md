@@ -3,9 +3,10 @@ title: Trò chuyện với Codex
 description: Luyện dùng ngôn ngữ tự nhiên để nêu mục tiêu và hạn chế.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -50,7 +51,7 @@ Nếu ngay cả Tác vụ chỉ đọc cũng không nói rõ, sau này lên Tác
 
 Tác vụ chỉ đọc, giải thích, tóm tắt cũng cần ranh giới.
 
-Bước tiếp: [Làm việc với tệp](/guide/learning-paths/beginner/02-work-with-files/) · Nguyên lý: [Cơ bản về Prompt](/prompts/basics/)
+Bước tiếp: [Làm việc với tệp](/vi/guide/learning-paths/beginner/02-work-with-files/) · Nguyên lý: [Cơ bản về Prompt](/vi/prompts/basics/)
 
 ---
 

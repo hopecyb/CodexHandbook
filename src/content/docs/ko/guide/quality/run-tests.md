@@ -3,9 +3,10 @@ title: 테스트 실행
 description: 검증 단계를 작업의 일부로 만듭니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 13d4ba5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---

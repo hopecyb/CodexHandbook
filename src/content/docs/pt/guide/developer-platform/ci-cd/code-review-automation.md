@@ -3,9 +3,10 @@ title: Automatização de revisão de código
 description: Ligar a revisão do Codex a CI ou ao fluxo de PR — Prompt, Permissões e portão humano.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ O que faz melhor:
 
 Não serve para decidir por ti «este PR pode fazer-se merge com segurança».
 
-Relacionado: [Modo não interativo](/guide/cli/non-interactive-mode/) · [Visão geral do SDK](/guide/developer-platform/sdk-overview/)
+Relacionado: [Modo não interativo](/pt/guide/cli/non-interactive-mode/) · [Visão geral do SDK](/pt/guide/developer-platform/sdk-overview/)
 
 ## Arquitetura recomendada
 
@@ -76,7 +77,7 @@ Versiona o ficheiro em `prompts/ci-review.md`.
 | Anti-injeção | Não cole a descrição do PR sem sanitizar no system prompt |
 | Secrets | Guarda o token em GitHub Secrets |
 
-[Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/) · [Variáveis de ambiente](/guide/reference/environment-variables/)
+[Padrões de Aprovação humana](/pt/cases/workflows/human-approval-patterns/) · [Variáveis de ambiente](/pt/guide/reference/environment-variables/)
 
 ## Portões de qualidade
 
@@ -86,7 +87,7 @@ Versiona o ficheiro em `prompts/ci-review.md`.
 
 ## Relação com Cloud
 
-Em repos complexos podes correr testes completos no [Cloud](/guide/web-and-cloud/) e rever depois; o exec dentro de CI encaixa em **revisão leve do Diff**.
+Em repos complexos podes correr testes completos no [Cloud](/pt/guide/web-and-cloud/) e rever depois; o exec dentro de CI encaixa em **revisão leve do Diff**.
 
 ## Erros frequentes
 

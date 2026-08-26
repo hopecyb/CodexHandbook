@@ -3,14 +3,15 @@ title: Bilder und Screenshots
 description: "Screenshots und Designs an Codex geben und Bilddateien in Aufgaben verwalten."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Bilder lassen den Agent UI-Probleme, Designabsicht oder Whiteboard-Skizzen **sehen**. Diese Seite: Input (Ihre Bilder) und Bildverwaltung im Repo; neue Bilder erzeugen: [Bildgenerierung](/guide/tools/image-generation/).
+Bilder lassen den Agent UI-Probleme, Designabsicht oder Whiteboard-Skizzen **sehen**. Diese Seite: Input (Ihre Bilder) und Bildverwaltung im Repo; neue Bilder erzeugen: [Bildgenerierung](/de/guide/tools/image-generation/).
 
 Bei Screenshot-Aufgaben: klar sagen, wohin geschaut werden soll und warum dort ein Problem liegt.
 
@@ -29,7 +30,7 @@ Bei Screenshot-Aufgaben: klar sagen, wohin geschaut werden soll und warum dort e
 | Architektur-Whiteboard | klares Foto/Export + Legende |
 | Fehlerdialog | vollständiger Fehlertext, nicht nur eine Ecke |
 
-Vertiefung: [Prompting mit Bildern](/prompts/prompting-with-images/)
+Vertiefung: [Prompting mit Bildern](/de/prompts/prompting-with-images/)
 
 ## Was Bilder wirklich ergänzen
 
@@ -100,7 +101,7 @@ Keine Geschäftslogik aus dem Screenshot raten — nur Visual und Layout.
 
 - Screenshots können Kundendaten, interne URLs, Token enthalten — zuerst schwärzen
 - Keine Config-UIs mit Secrets an untrusted Aufgaben
-- [Sensibler Kontext](/guide/context/sensitive-context/)
+- [Sensibler Kontext](/de/guide/context/sensitive-context/)
 
 ## Quellen
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -110,9 +111,9 @@ Keine Geschäftslogik aus dem Screenshot raten — nur Visual und Layout.
 
 Bei „nach Bild umsetzen“:
 
-1. Umsetzung und Referenz nebeneinander (oder Seite mit [Browser-Werkzeug](/guide/tools/browser/) öffnen)
+1. Umsetzung und Referenz nebeneinander (oder Seite mit [Browser-Werkzeug](/de/guide/tools/browser/) öffnen)
 2. Responsive und Dark Mode prüfen (falls gefordert)
-3. [Artefakte überprüfen](/guide/quality/verify-artifacts/)
+3. [Artefakte überprüfen](/de/guide/quality/verify-artifacts/)
 
 ## Häufige Fehler
 

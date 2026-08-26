@@ -1,16 +1,17 @@
 ---
+reviewed_at: 2026-08-26
 title: Contributing
 description: How to contribute guides, cases, prompt examples, and translations—process and quality standards.
 sidebar:
   order: 80
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: b13e05c
+translation_status: reviewed
+translated_at: 2026-08-26
 ---
 
-**Codex Handbook** is a community-maintained documentation site. We welcome fixes, new pages, reproducible cases, and prompt examples in [examples/](/examples/README.md).
+**Codex Handbook** is a community-maintained documentation site. We welcome fixes, new pages, reproducible cases, and prompt examples in [examples/](https://github.com/hopecyb/CodexHandbook/tree/main/examples).
 
 ## What this page covers
 
@@ -35,10 +36,10 @@ You do not need to be the domain expert first. Many improvements come from first
 | Type | Description | Guide |
 |---|---|---|
 | Fix / small edit | Typos, links, one outdated sentence | Direct PR |
-| New guide page | Chapter body under `src/content/docs/` | [Write a guide](/guide/contributing/write-a-guide/) |
-| Case study | `src/content/docs/cases/` | [Case template](/cases/use-cases/case-study-template/) |
-| Prompt example | `examples/prompts/` | [Add a prompt example](/guide/contributing/add-a-prompt-example/) |
-| Technical verification | Mark `verified`, update dates | [Verify technical content](/guide/contributing/verify-technical-content/) |
+| New guide page | Chapter body under `src/content/docs/` | [Write a guide](/en/guide/contributing/write-a-guide/) |
+| Case study | `src/content/docs/cases/` | [Case template](/en/cases/use-cases/case-study-template/) |
+| Prompt example | `examples/prompts/` | [Add a prompt example](/en/guide/contributing/add-a-prompt-example/) |
+| Technical verification | Mark `verified`, update dates | [Verify technical content](/en/guide/contributing/verify-technical-content/) |
 | Translation | `en/`, `zh-tw/`, etc. | Roadmap M6; stabilize source first |
 
 ## Common misconceptions
@@ -59,10 +60,10 @@ If your audience includes beginners, where you get stuck is signal—if you make
 ## Core principles
 
 1. **Simplified Chinese `root` is source** (unless stated otherwise)
-2. **Do not copy** external tutorials verbatim; see [External source integration plan](/docs/planning/external-source-integration.md)
+2. **Do not copy** external tutorials verbatim; see the [external source integration plan](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. **Volatile facts** need `Last verified` dates
-4. **Every sidebar slug** needs a markdown file or `npm run build` fails
-5. New pages must update `astro.config.mjs` sidebar
+4. New pages must have valid frontmatter, file paths, and cross-links
+5. The four primary module sidebars are directory-driven; after adding a file, run the build and verify ordering and entry points
 
 ## First contribution path
 
@@ -84,7 +85,7 @@ pnpm dev
 Before merge:
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## Code of conduct
@@ -98,10 +99,10 @@ A first contribution does not need to be huge—clarify one real beginner pain p
 ## Related links
 
 - Repository: <https://github.com/hopecyb/CodexHandbook>
-- [Chapter outline](/docs/planning/chapter-outline.md) (planning)
+- [Chapter outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (repository planning document)
 
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked repo directory structure, sidebar maintenance, page status system, and contribution flow; handbook maintenance rules—not volatile Codex UI behavior.  
+**Status:** verified
+**Verification basis:** Cross-checked repo directory structure, sidebar maintenance, page status system, and contribution flow; handbook maintenance rules—not volatile Codex UI behavior.
 **Last verified:** 2026-07-26

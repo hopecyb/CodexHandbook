@@ -3,9 +3,10 @@ title: Viết bài
 description: Quy trình viết kỹ thuật đầy đủ từ chọn đề đến dàn ý, bản thảo và kiểm tra sự thật.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Viết bài
@@ -49,11 +50,11 @@ Viết từng mục; tránh sinh cả bài một lần khiến khó sửa.
 ### Kiểm chứng
 
 - Người đối chiếu liên kết, số phiên bản, lệnh còn hiệu lực
-- Tùy chọn: dùng [Skill viết](/skills/examples/writing-skill/) để cố định quy trình
+- Tùy chọn: dùng [Skill viết](/vi/skills/examples/writing-skill/) để cố định quy trình
 
 ## 3. Đóng gói lại
 
-Viết lặp lại có thể đóng gói Skill `article-writer`; xem [lộ trình người sáng tạo](/guide/learning-paths/creator/).
+Viết lặp lại có thể đóng gói Skill `article-writer`; xem [lộ trình người sáng tạo](/vi/guide/learning-paths/creator/).
 ---
 
 **Trạng thái:** verified  

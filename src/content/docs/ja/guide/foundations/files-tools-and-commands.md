@@ -3,9 +3,10 @@ title: ファイル、ツールとコマンド
 description: Codex がファイルの読み書き、コマンド実行、ツール利用を行う仕組みを説明する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -86,7 +87,7 @@ Codex がファイルの読み取り、変更、コマンド実行をしよう�
 
 1. **必要最小限の範囲**：ディレクトリとファイルを指定し、「リポジトリ全体を適当に変更」は避ける
 2. **危険なコマンドは承認が必要**：削除、プッシュ、システム設定の変更など
-3. **ツール選択には方針がある**：[ツール選択](/guide/tools/tool-selection/) を参照
+3. **ツール選択には方針がある**：[ツール選択](/ja/guide/tools/tool-selection/) を参照
 
 製品入口によってツールパネルと確認方法は異なります。詳細は各製品ガイドを参照してください。
 
@@ -94,9 +95,9 @@ Codex は「言う」だけではなく、ファイル、コマンド、ツー�
 
 次に読むことをおすすめします。
 
-1. [権限と承認](/guide/foundations/permissions-and-approvals/)
-2. [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
-3. [最初のタスクを実行する](/guide/getting-started/run-your-first-task/)
+1. [権限と承認](/ja/guide/foundations/permissions-and-approvals/)
+2. [サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
+3. [最初のタスクを実行する](/ja/guide/getting-started/run-your-first-task/)
 
 ---
 

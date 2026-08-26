@@ -3,9 +3,10 @@ title: 검증과 사람 검토
 description: 결과가 확인 가능해야 하는 이유와 재검토 방법.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 19de747
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -14,10 +15,10 @@ Codex는 속도를 높여 주지만, 최종 확인 책임을 대신하지 않습
 
 Codex는 속도를 높이되, **수락을 면제하지 않습니다**. 최소한 아래를 재검토하세요.
 
-1. [차이](/guide/quality/review-diffs/)를 읽기: 어떤 파일을 고쳤는지, 범위를 넘었는지
+1. [차이](/ko/guide/quality/review-diffs/)를 읽기: 어떤 파일을 고쳤는지, 범위를 넘었는지
 2. 당신이 정의한 완료 기준으로 확인
-3. 테스트를 돌릴 수 있으면 돌리기: [테스트 실행](/guide/quality/run-tests/)
-4. 대외 사실은 출처를 확인: [출처 확인](/guide/quality/validate-sources/)
+3. 테스트를 돌릴 수 있으면 돌리기: [테스트 실행](/ko/guide/quality/run-tests/)
+4. 대외 사실은 출처를 확인: [출처 확인](/ko/guide/quality/validate-sources/)
 
 ## 사람 검토가 보는 것
 

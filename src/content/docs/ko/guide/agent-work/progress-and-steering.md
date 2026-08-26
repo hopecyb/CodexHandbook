@@ -3,9 +3,10 @@ title: 진행과 유도
 description: 실행 중 방향이 빗나가면, 짧은 지시로 Codex를 올바른 궤도로 되돌립니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6813a5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -134,7 +135,7 @@ sidebar:
 
 ## 언제 “재계획”으로 돌아가야 하나
 
-유도는 국소 이탈에 맞고, 다음은 [계획](/guide/agent-work/planning/)으로 돌아가는 편이 낫습니다.
+유도는 국소 이탈에 맞고, 다음은 [계획](/ko/guide/agent-work/planning/)으로 돌아가는 편이 낫습니다.
 
 - 작업 목표 자체가 바뀜
 - 새 정보가 원래 전제를 뒤집음
@@ -154,10 +155,10 @@ sidebar:
 
 ## 권장 조합
 
-- 실행 경로를 먼저 분명히: [계획](/guide/agent-work/planning/)
-- 흐름을 완전한 메인 체인으로: [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
-- 작업을 남에게 나눔: [Subagent](/guide/agent-work/subagents/)
-- 작업이 끊긴 뒤 계속: [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
+- 실행 경로를 먼저 분명히: [계획](/ko/guide/agent-work/planning/)
+- 흐름을 완전한 메인 체인으로: [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
+- 작업을 남에게 나눔: [Subagent](/ko/guide/agent-work/subagents/)
+- 작업이 끊긴 뒤 계속: [인수인계와 재개](/ko/guide/agent-work/handoff-and-resume/)
 
 ---
 

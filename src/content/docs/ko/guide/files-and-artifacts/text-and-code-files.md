@@ -3,9 +3,10 @@ title: 텍스트와 코드 파일
 description: Codex가 소스·설정·문서형 텍스트 파일을 올바르게 읽고 쓰게 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ Codex에 텍스트·코드 파일을 고치게 할 때 핵심은, 맞는 곳을�
 | 문서 `.md` | 링크 상대 경로, 한·영 혼용 규범 |
 | 생성 코드 | 커밋할지 gitignore할지 명시 |
 
-컨텍스트: [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
+컨텍스트: [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 
 ## 왜 이런 파일이 가장 틀리기 쉬운가
 
@@ -50,7 +51,7 @@ Codex에 텍스트·코드 파일을 고치게 할 때 핵심은, 맞는 곳을�
 완료: 변경 파일 목록 + <테스트 명령> 실행
 ```
 
-[좋은 작업의 구조](/prompts/task-anatomy/)를 참고하세요.
+[좋은 작업의 구조](/ko/prompts/task-anatomy/)를 참고하세요.
 
 ## 흔한 오해
 
@@ -91,8 +92,8 @@ Codex에 텍스트·코드 파일을 고치게 할 때 핵심은, 맞는 곳을�
 
 ## 심사 요점
 
-- [diff 심사](/guide/quality/review-diffs/): 논리, 범위, 삭제
-- [테스트 실행](/guide/quality/run-tests/)
+- [diff 심사](/ko/guide/quality/review-diffs/): 논리, 범위, 삭제
+- [테스트 실행](/ko/guide/quality/run-tests/)
 - 구현 없는 `TODO` 자리표시자를 의도치 않게 도입하지 않음
 
 ## 흔한 실수

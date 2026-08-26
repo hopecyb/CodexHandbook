@@ -3,9 +3,10 @@ title: Mục tiêu và ngữ cảnh
 description: Để Codex biết cần hoàn thành gì và vì sao điều đó quan trọng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6ec9636
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều Prompt trông như có nhiều thông tin, nhưng lại chưa nói rõ hai điều sau:
@@ -81,7 +82,7 @@ Khi kiểm bối cảnh, xem thêm một điểm:
 
 Mục tiêu quyết định giao gì; bối cảnh bổ sung vì sao phải làm như vậy.
 
-Liên quan: bối cảnh cấp dự án có thể gửi xuống [Ngữ cảnh dự án](/guide/context/project-context/), tránh lặp đoạn dài trong mọi Prompt.
+Liên quan: bối cảnh cấp dự án có thể gửi xuống [Ngữ cảnh dự án](/vi/guide/context/project-context/), tránh lặp đoạn dài trong mọi Prompt.
 
 ---
 

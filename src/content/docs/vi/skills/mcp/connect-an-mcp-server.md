@@ -3,100 +3,108 @@ title: Nối máy chủ MCP
 description: Cấu hình, xác thực, Kiểm chứng và gỡ lỗi — nối an toàn công cụ MCP đầu tiên.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 972ccc3
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Trang này tập trung quy trình nối và Kiểm chứng; chi tiết giao thức và phát triển server xem tài liệu MCP chính thức.
+This chapter completes the current official loop: **add server -> inspect configuration -> confirm tools in a session -> make one read-only call**.
 
-## Trước khi bắt đầu
+## Before starting
 
-- [ ] Đã hiểu ranh giới bảo mật trong [Tổng quan MCP](/skills/mcp/mcp-overview/)
-- [ ] Có tài khoản thử chỉ đọc hoặc môi trường Sandbox
-- [ ] Xác nhận phiên bản client Codex hiện tại hỗ trợ MCP (theo tài liệu chính thức)
+- Read the [MCP overview](/vi/skills/mcp/mcp-overview/).
+- Confirm `codex mcp --help` runs.
+- Use a trusted source and read-only scenario first.
+- Never put a real token in history, prompts, or the repository.
 
-## Quy trình khuyến nghị
+## Path A: add a STDIO server with the CLI
 
-### 1. Chọn loại server
+The official example uses the Context7 documentation server:
 
-| Loại | Ghi chú | Rủi ro |
-|---|---|---|
-| Server stdio cục bộ | Khởi động process trên máy | Trung bình: Quyền process = Quyền user của bạn |
-| HTTP/SSE từ xa | Dịch vụ được host | Trung bình–cao: cần TLS, xoay token |
-
-Lần đầu nối, nên bắt đầu từ **ví dụ chính thức hoặc server cục bộ chỉ đọc**.
-
-### 2. Thêm cấu hình
-
-Vị trí cấu hình khác nhau giữa CLI/App; thường là khối cấu hình `mcp` cấp user hoặc dự án. Cấu trúc minh họa (**tên trường theo tài liệu chính thức**):
-
-```json
-{
-  "mcpServers": {
-    "example-readonly": {
-      "command": "npx",
-      "args": ["-y", "@example/mcp-server"],
-      "env": {
-        "API_TOKEN": "đọc từ biến môi trường, đừng hard-code trong repo"
-      }
-    }
-  }
-}
+```bash
+codex mcp add context7 -- npx -y @upstash/context7-mcp
+codex mcp list
 ```
 
-Nguyên tắc:
+This writes the server to Codex configuration. Everything after `--` is the STDIO startup command. The first run may download an npm package, so verify its name and source first.
 
-- Khóa tiêm bằng biến môi trường hoặc trình quản lý khóa
-- Đổi cấu hình đi Git review (trừ secrets)
+## Path B: edit config.toml
 
-### 3. Khởi động lại hoặc nạp lại client
+User configuration defaults to `~/.codex/config.toml`. A trusted project may also use `.codex/config.toml`.
 
-Sau khi sửa cấu hình MCP thường cần khởi động lại phiên Codex để danh sách server làm mới.
+STDIO:
 
-### 4. Kiểm chứng công cụ hiện diện
+```toml
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+startup_timeout_sec = 10
+tool_timeout_sec = 60
+```
 
-Trong Tác vụ yêu cầu rõ:
+Remote Streamable HTTP:
+
+```toml
+[mcp_servers.internal_docs]
+url = "https://mcp.example.com"
+bearer_token_env_var = "INTERNAL_DOCS_TOKEN"
+enabled_tools = ["search_docs", "get_doc"]
+```
+
+Replace the illustrative name, URL, and tools with actual server documentation. `bearer_token_env_var` stores an environment-variable name, not the token.
+
+## OAuth servers
+
+After configuring an OAuth-capable server, run:
+
+```bash
+codex mcp login <server-name>
+```
+
+The desktop App and IDE MCP lists also mark OAuth servers and offer Authenticate.
+
+## Inspect from each client
+
+| Surface | Configuration or inspection |
+|---|---|
+| ChatGPT desktop App | Settings -> MCP servers; Restart after saving; use `/mcp` |
+| Codex CLI | `codex mcp add/list/login`; use `/mcp` in TUI |
+| IDE integration | Gear -> MCP servers; Restart extension after saving |
+
+They share configuration on one Codex host. ChatGPT Web does not read local configuration.
+
+## Verification prompt
 
 ```text
-Liệt kê các công cụ MCP hiện khả dụng (chỉ cần tên và một câu mô tả).
-Rồi gọi một công cụ thử theo cách chỉ đọc và hiện kết quả.
-Không thực hiện thao tác ghi.
+Use only the currently connected MCP server:
+1. List tool names related to development-documentation search.
+2. Use one read-only tool to find basic Node.js test-runner usage.
+3. Name the tool actually called.
+4. Do not write or connect another service.
 ```
 
-### 5. Thử từng bước nhỏ
+Evidence: the server appears in `codex mcp list` or `/mcp`, a read-only tool returns structured data, and no unrelated permission is requested.
 
-Chọn một Tác vụ thật nhưng rủi ro thấp, ví dụ:"Dùng MCP tra tiêu đề ticket #123, đừng đổi trạng thái."
+## Least-privilege options
 
-## Chế độ xác thực
+- `enabled_tools`: allow only listed tools.
+- `disabled_tools`: exclude more tools after the allowlist.
+- `enabled = false`: keep configuration but disable temporarily.
+- `required = true`: fail startup if an essential server cannot initialize.
 
-| Chế độ | Phù hợp |
-|---|---|
-| API Key / PAT | Phát triển cá nhân, xoay định kỳ |
-| OAuth | Ủy quyền cấp user, phù hợp SaaS |
-| Local không xác thực | Chỉ mock trên máy, đừng lộ ra mạng |
+## On failure
 
-Khi thất bại kiểm: token hết hạn, biến môi trường chưa truyền vào, proxy công ty chặn.
+Record the exact error and diagnose configuration, process/network, authentication, and individual tools in [Debug MCP](/vi/skills/mcp/debugging-mcp/). Change one field at a time.
 
-## Checklist gỡ lỗi
+## Official source
 
-| Hiện tượng | Nguyên nhân có thể |
-|---|---|
-| Danh sách công cụ trống | Sai đường cấu hình, process khởi động thất bại |
-| Gọi hết thời gian | Mạng, VPN, server sập |
-| Quyền bị từ chối | Scope token không đủ |
-| Model không bao giờ gọi công cụ | Mô tả Tác vụ không yêu cầu; hoặc description công cụ không rõ |
+- [OpenAI: Connect Codex to an MCP server](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
 
-## Phối hợp với Phê duyệt
-
-Lần đầu gọi công cụ lạ, client có thể hiện xác nhận — đây là hành vi kỳ vọng. Đừng khuyến khích trong quy chuẩn nhóm"cho phép vĩnh viễn mọi thao tác ghi MCP".
-
-## Nguồn tham chiếu
-- Tài liệu cấu hình OpenAI Codex MCP
-- Ví dụ server trên modelcontextprotocol.io
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Ghi chú tái Kiểm chứng:** Trang này mô tả trực tiếp cấu hình server MCP hiện tại, nạp lại và bước Kiểm chứng; các bước này rất nhạy với phiên bản và triển khai client, tạm chưa nên đánh `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** ChatGPT desktop App / Codex CLI / IDE
+
+**Kiểm chứng gần nhất:** 2026-08-25

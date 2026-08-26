@@ -5,9 +5,10 @@ sidebar:
   order: 40
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a2992b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex stützt sich nicht nur darauf, „wie Sie diesmal fragen“, sondern auch auf **persistente Konfiguration**, um Ihre und die Team-Vereinbarungen zu merken. Dieses Kapitel trennt vor allem, welche Anforderungen im Gespräch bleiben und welche ins Projekt wandern sollen.
@@ -24,9 +25,9 @@ Wenn Sie dieselben Sätze schon wiederholen — etwa „dieses Verzeichnis nicht
 
 | Leser | Zuerst lesen |
 |---|---|
-| Erste Aufgabe gerade zum Laufen gebracht | [Projektanweisungen](/guide/customization/project-instructions/) |
-| Kollaborationsnormen im Repo verankern | [Was ist AGENTS.md](/guide/customization/agents-md/what-is-agents-md/) |
-| CLI-/App-Verhalten vereinheitlichen | [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/) |
+| Erste Aufgabe gerade zum Laufen gebracht | [Projektanweisungen](/de/guide/customization/project-instructions/) |
+| Kollaborationsnormen im Repo verankern | [Was ist AGENTS.md](/de/guide/customization/agents-md/what-is-agents-md/) |
+| CLI-/App-Verhalten vereinheitlichen | [Konfigurationsgrundlagen](/de/guide/customization/configuration/config-basics/) |
 
 ## Worum es in diesem Kapitel geht
 
@@ -78,14 +79,14 @@ Zu verstreute Einstellungen, zu lange Regeln und chaotische Schichten machen es 
 
 | Thema | Seiten |
 |---|---|
-| AGENTS.md | [Überblick](/guide/customization/agents-md/what-is-agents-md/) · [Geltungsbereich und Priorität](/guide/customization/agents-md/scope-and-precedence/) · [Projektanweisungen schreiben](/guide/customization/agents-md/writing-effective-instructions/) |
-| Projektanweisungen | [Projektanweisungen](/guide/customization/project-instructions/) |
-| Erinnerung | [Erinnerungen und persistenter Kontext](/guide/customization/memories-and-persistent-context/) |
-| Mechanismuswahl | [Den richtigen Mechanismus wählen](/guide/customization/choosing-the-right-mechanism/) |
-| Konfigurationsdateien | [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/) · [Profile](/guide/customization/configuration/profiles/) |
-| Persönliche Vorlieben | [Persönliche Vorlieben](/guide/customization/personal-preferences/) |
-| Regeln | [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/) · [Befehlsregeln](/guide/customization/rules/command-rules/) · [Teamrichtlinien](/guide/customization/rules/team-rules/) |
-| Beispiele | [AGENTS.md in einem Monorepo](/guide/customization/examples/monorepo-agents-md/) |
+| AGENTS.md | [Überblick](/de/guide/customization/agents-md/what-is-agents-md/) · [Geltungsbereich und Priorität](/de/guide/customization/agents-md/scope-and-precedence/) · [Projektanweisungen schreiben](/de/guide/customization/agents-md/writing-effective-instructions/) |
+| Projektanweisungen | [Projektanweisungen](/de/guide/customization/project-instructions/) |
+| Erinnerung | [Erinnerungen und persistenter Kontext](/de/guide/customization/memories-and-persistent-context/) |
+| Mechanismuswahl | [Den richtigen Mechanismus wählen](/de/guide/customization/choosing-the-right-mechanism/) |
+| Konfigurationsdateien | [Konfigurationsgrundlagen](/de/guide/customization/configuration/config-basics/) · [Profile](/de/guide/customization/configuration/profiles/) |
+| Persönliche Vorlieben | [Persönliche Vorlieben](/de/guide/customization/personal-preferences/) |
+| Regeln | [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/) · [Befehlsregeln](/de/guide/customization/rules/command-rules/) · [Teamrichtlinien](/de/guide/customization/rules/team-rules/) |
+| Beispiele | [AGENTS.md in einem Monorepo](/de/guide/customization/examples/monorepo-agents-md/) |
 
 Die Rules-Unterseiten sind angelaufen; weitere Konfigurationsdetailseiten folgen mit dem Customization-Modul.
 

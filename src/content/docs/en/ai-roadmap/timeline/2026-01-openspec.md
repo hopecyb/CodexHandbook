@@ -9,6 +9,11 @@ signal: well-calibrated
 adoption_effort: ready-to-use
 tags: [openspec, spec-driven-development, sdd, workflow, agent, ai-engineering]
 authored_by: ai-assisted
+locale: en
+source_locale: zh-CN
+translation_status: reviewed
+reviewed_at: 2026-08-26
+source_revision: 033715b
 ---
 
 # OpenSpec

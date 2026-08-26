@@ -3,9 +3,10 @@ title: Plantilla de investigación
 description: Investigación y comparación con citas.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d71c760
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de investigación
@@ -44,8 +45,8 @@ Una restricción clave de esta plantilla: cada conclusión importante debe rastr
 
 ## Relacionado
 
-- [Caso: investigar con fuentes](/cases/research-with-sources/)
-- [Verificación](/guide/verification/)
+- [Caso: investigar con fuentes](/es/cases/research-with-sources/)
+- [Verificación](/es/guide/verification/)
 
 ---
 

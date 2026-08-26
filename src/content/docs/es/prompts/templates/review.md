@@ -3,9 +3,10 @@ title: Plantilla de revisión
 description: Revisión estructurada de diffs y riesgo del cambio.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de revisión
@@ -50,8 +51,8 @@ El foco de esta plantilla es sacar riesgos por dimensiones fijas, no evaluar en 
 
 ## Relacionado
 
-- [Revisar antes de fusionar](/cases/workflows/review-before-merge/)
-- [Caso: revisar un PR](/cases/review-a-pr/)
+- [Revisar antes de fusionar](/es/cases/workflows/review-before-merge/)
+- [Caso: revisar un PR](/es/cases/review-a-pr/)
 
 ---
 

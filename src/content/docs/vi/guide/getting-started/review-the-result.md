@@ -3,9 +3,10 @@ title: Kiểm tra kết quả
 description: Đọc thay đổi, kiểm chứng artifact và quyết định chấp nhận hoặc sửa.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb5b5d9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---
@@ -21,9 +22,9 @@ Muốn dùng Codex ổn định hơn, phải xem bạn có biết **kiểm tra k
 1. **Xem Diff**: có chỉ sửa các tệp được phép không?
 2. **Mở artifact**: nội dung có khớp tiêu chí nghiệm thu không?
 3. **Hỏi tiếp để chỉnh**: nếu chỉ lệch một chút, tiếp tục bổ sung phản hồi chính xác
-4. **Quyết định**: chấp nhận / sửa tay / [hoàn tác](/guide/getting-started/undo-and-recover/)
+4. **Quyết định**: chấp nhận / sửa tay / [hoàn tác](/vi/guide/getting-started/undo-and-recover/)
 
-Thêm phương pháp: [Rà soát Diff](/guide/quality/review-diffs/).
+Thêm phương pháp: [Rà soát Diff](/vi/guide/quality/review-diffs/).
 
 ## Chỗ dễ xem sót thường gặp
 

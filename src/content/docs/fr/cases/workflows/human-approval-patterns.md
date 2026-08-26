@@ -3,9 +3,10 @@ title: Modèles d'approbation humaine
 description: Quand approuver, refuser ou mettre Codex en pause — et comment rédiger ces règles clairement.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 L'approbation sert à réserver les actions irréversibles aux humains. Cette page rassemble des modèles courants.
@@ -20,7 +21,7 @@ Zone de confirmation par prompt (écriture de fichiers, exécution de commandes,
 Zone humaine obligatoire (push, suppression de données, envoi externe, modification de config production)
 ```
 
-Le comportement des dialogues varie selon l'[entrée produit](/guide/) ; les principes restent les mêmes.
+Le comportement des dialogues varie selon l'[entrée produit](/fr/guide/) ; les principes restent les mêmes.
 
 ## Modèle 1 : Planifier d'abord, exécuter ensuite
 
@@ -32,7 +33,7 @@ Adapté à : codebase peu familière, production, gros diff.
 
 ## Modèle 2 : Liste blanche de commandes
 
-Dans [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) :
+Dans [AGENTS.md](/fr/guide/customization/agents-md/writing-effective-instructions/) :
 
 ```md
 Autorisé sans redemander : pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ En cas de conflit avec la politique hébergée, la règle **la plus stricte** l'
 1. Codex ouvre une PR brouillon ou une branche locale
 2. CI humain + revue, puis fusion
 
-Cloud : voir [Créer des pull requests](/guide/web-and-cloud/create-pull-requests/).
+Cloud : voir [Créer des pull requests](/fr/guide/web-and-cloud/create-pull-requests/).
 
 ## Modèle 4 : Reconnaissance en lecture seule
 
@@ -68,7 +69,7 @@ Pour l'audit, l'apprentissage d'un projet inconnu, le diagnostic de production.
 
 ## Rapport avec Automations
 
-Les tâches sans surveillance doivent aussi prévoir des points de confirmation humaine — voir [Tâches planifiées et en arrière-plan](/skills/automations/scheduled-tasks/).
+Les tâches sans surveillance doivent aussi prévoir des points de confirmation humaine — voir [Tâches planifiées et en arrière-plan](/fr/skills/automations/scheduled-tasks/).
 
 ## Erreurs courantes
 

@@ -3,9 +3,10 @@ title: 目標とコンテキストを伝える
 description: Codex に何を達成し、なぜ重要かを知らせる。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6ec9636
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 情報は多いのに、次の2点が不明瞭なプロンプトはよくあります。
@@ -79,7 +80,7 @@ translated_at: 2026-07-28
 
 目標が何を届けるかを決め、背景がなぜそうするかを補います。
 
-関連：プロジェクト単位の背景は [プロジェクトコンテキスト](/guide/context/project-context/) に置き、毎回のプロンプトで長文を繰り返さない。
+関連：プロジェクト単位の背景は [プロジェクトコンテキスト](/ja/guide/context/project-context/) に置き、毎回のプロンプトで長文を繰り返さない。
 
 ---
 

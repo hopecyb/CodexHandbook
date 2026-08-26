@@ -30,11 +30,11 @@ sidebar:
 | 你想做的事 | 入口 | 详解 |
 |---|---|---|
 | 边聊边改代码 | `codex` 交互 TUI | [交互模式](/guide/cli/interactive-mode/) |
-| CI / 管道单次任务 | `codex exec`（或等价） | [非交互模式](/guide/cli/non-interactive-mode/) |
+| CI / 管道单次任务 | `codex exec` | [非交互模式](/guide/cli/non-interactive-mode/) |
 | 改默认行为 | 配置文件 | [CLI 配置](/guide/cli/configuration/) |
 
 :::note
-子命令名随版本变化，以 `codex --help` 为准。
+`codex` 与 `codex exec` 当前均为 Stable 入口；具体参数仍以 `codex --help` 和 `codex exec --help` 为准。
 :::
 
 ## 常见误会
@@ -108,7 +108,7 @@ cx() {
 
 | | CLI | IDE 扩展 |
 |---|---|---|
-| 上下文 | `--cwd`、@ 文件（视版本） | 打开文件、选中代码 |
+| 上下文 | `--cd` / `-C` 指定目录、工具读盘 | 打开文件、选中代码 |
 | 适合 | 脚本、SSH 远程、纯终端 | 边改边看 diff |
 | 快捷方式 | 终端键位 + `/` | 编辑器命令面板 |
 
@@ -132,7 +132,10 @@ IDE：[本地任务工作流](/guide/ide/local-task-workflow/)
 - OpenAI Codex CLI 文档
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页涉及 `codex`、`codex exec`、`/` 命令类别和会话内快捷操作等易随版本变化的 CLI 交互细节；当前缺少足够强的官方现行命令/快捷方式文档来支撑这些描述，需重写后再核验。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已对照当前官方 Developer commands 与 Non-interactive mode 页面，核实 `codex`、`codex exec`、`--cd` / `-C` 和会话内斜杠入口；快捷键仍引导读者以当前补全和 `--help` 为准。
+
+**最近核验：** 2026-08-26

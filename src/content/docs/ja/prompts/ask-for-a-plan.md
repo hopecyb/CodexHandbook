@@ -3,9 +3,10 @@ title: まず計画を求める
 description: Codex が手を動かす前に、手順・リスク・検証方法を明確にさせる。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 多くの問題は「できない」のではなく、**始めすぎ**です。「直して」と一言言うと、探索・計画・実行が混ざり、最後は diff を見ながら受動的に受け入れることになりがちです。
@@ -108,7 +109,7 @@ DB 変更は別ステップに分けて。
 | サブタスクに分割しやすい | 複数目標が混ざりやすい |
 | 検証方法が先に見える | 最後にテストを思い出しがち |
 
-多くのワークフローは「探索」と「計画」を分けます。 [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/) を参照。
+多くのワークフローは「探索」と「計画」を分けます。 [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) を参照。
 
 ## 計画でよくある問題
 
@@ -126,10 +127,10 @@ DB 変更は別ステップに分けて。
 
 ## おすすめの組み合わせ
 
-- 正式な実行フローが必要：[計画](/guide/agent-work/planning/)
-- 計画を再利用可能に：[タスクの構造](/prompts/task-anatomy/)
-- 実行中の軌道修正：[進捗と誘導](/guide/agent-work/progress-and-steering/)
-- 受け入れを明確に：[完了基準の定義](/prompts/define-done/)
+- 正式な実行フローが必要：[計画](/ja/guide/agent-work/planning/)
+- 計画を再利用可能に：[タスクの構造](/ja/prompts/task-anatomy/)
+- 実行中の軌道修正：[進捗と誘導](/ja/guide/agent-work/progress-and-steering/)
+- 受け入れを明確に：[完了基準の定義](/ja/prompts/define-done/)
 
 ## チームで使いやすい約束
 

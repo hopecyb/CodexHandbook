@@ -3,9 +3,10 @@ title: 이미지 프롬프트
 description: Codex에 스크린샷, 디자인 시안, 화이트보드를 줄 때 실행 가능한 결과를 얻기 쉬운 질문법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 많은 “보고 일하기” 실패는 모델이 못 봐서가 아니라, 이미지만 주고 **무엇을 보라고 할지**를 말하지 않아서입니다.
@@ -161,10 +162,10 @@ Codex가 이미지에서 모든 요구를 역추론하려다, 당신이 신경 �
 
 ## 다른 페이지와의 연계
 
-- 이미지 파일 업로드·관리: [이미지와 스크린샷](/guide/files-and-artifacts/images-and-screenshots/)
-- 새 이미지 생성: [이미지 생성](/guide/tools/image-generation/)
-- 작업을 완전히 말하기: [작업 구조](/prompts/task-anatomy/)
-- 분석 후 손대기: [먼저 계획을 요청하기](/prompts/ask-for-a-plan/)
+- 이미지 파일 업로드·관리: [이미지와 스크린샷](/ko/guide/files-and-artifacts/images-and-screenshots/)
+- 새 이미지 생성: [이미지 생성](/ko/guide/tools/image-generation/)
+- 작업을 완전히 말하기: [작업 구조](/ko/prompts/task-anatomy/)
+- 분석 후 손대기: [먼저 계획을 요청하기](/ko/prompts/ask-for-a-plan/)
 
 ## 실용적인 한 가지 경험
 

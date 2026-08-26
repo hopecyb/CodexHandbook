@@ -3,9 +3,10 @@ title: Validar fontes
 description: Exigir bases rastreáveis para conclusões de investigação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 35bd9a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -18,7 +19,7 @@ Exija ao Agent:
 Cada facto-chave com URL ou referência; o que for incerto, marque explicitamente «não verificado».
 ```
 
-Depois do resultado, abra as ligações e confira. Capacidade de pesquisa: [Pesquisa Web](/guide/tools/web-search/).
+Depois do resultado, abra as ligações e confira. Capacidade de pesquisa: [Pesquisa Web](/pt/guide/tools/web-search/).
 
 ## Mal-entendidos habituais
 

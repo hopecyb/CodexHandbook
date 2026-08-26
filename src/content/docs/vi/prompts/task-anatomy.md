@@ -3,94 +3,142 @@ title: Cấu trúc tác vụ tốt
 description: Mục tiêu, bối cảnh, đầu vào, ràng buộc, nghiệm thu và ranh giới quyền.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 4df3d01
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Khi nêu yêu cầu, thông tin nhiều dễ viết phân tán: nguyên liệu nhiều nhưng trọng tâm không rõ, Codex cũng dễ hiểu nhầm.
+A requirement with too much unstructured information mixes outcomes, boundaries, and acceptance. Codex must then fill the gaps.
 
-Dưới đây là các thành phần thường gặp trong một tác vụ.
+This page provides a reusable work order and shows how it enters an explore, plan, execute, verify loop.
 
-## Cấu trúc tác vụ
+## Who it is for
 
-Có thể tổ chức theo thứ tự sau:
+- Readers who can open Codex but often see over-editing, incomplete work, or unverifiable results.
+- Developers, creators, and teams converting verbal requirements into Agent work.
+- Anyone defining scope, access, and stop conditions for a long task.
 
-- Kết quả là gì
-- Vì sao phải làm
-- Cần những nguyên liệu nào
-- Ranh giới ở đâu
-- Làm sao biết đã hoàn thành
+## Task structure
 
-Thứ tự không nhất thiết cố định, nhưng nói rõ các mục này thì tác vụ ổn định hơn nhiều.
+Organize around:
 
-## Mẫu khuyến nghị
+- desired outcome;
+- reason;
+- required material;
+- boundaries;
+- completion evidence.
 
-```text
-Mục tiêu: …… (sản phẩm đầu ra cuối cùng là gì)
-Bối cảnh: …… (vì sao quan trọng, hiện trạng)
-Đầu vào: …… (tệp/liên kết/nội dung dán liên quan)
-Ràng buộc: …… (phạm vi được sửa, phong cách, điều cấm)
-Tiêu chí nghiệm thu: …… (điều kiện hoàn thành có thể kiểm tra)
-Ranh giới quyền: …… (có được lên mạng, cài dependency, sửa cấu hình không)
-Khi thiếu thông tin: hỏi trước, đừng đoán.
-```
+The order can vary, but explicit answers make execution more stable.
 
-## Vai trò từng đoạn
-
-- **Mục tiêu**: tránh tác vụ chỉ có hành động, không có kết quả
-- **Bối cảnh**: giúp Codex hiểu vì sao làm như vậy
-- **Đầu vào**: đưa đúng tệp, liên kết, tài liệu nó cần xem vào tầm tay
-- **Ràng buộc**: ngăn vượt ranh giới và sửa thừa «tiện tay»
-- **Tiêu chí nghiệm thu**: biến «đã xong chưa» thành việc có thể kiểm tra
-- **Ranh giới quyền**: nói trước có được lên mạng, cài dependency, sửa cấu hình không
-
-## Hiểu lầm thường gặp
-
-### 1. Mỗi đoạn đều phải viết đầy
-
-Mẫu này gần checklist hơn là bài điền chỗ trống.  
-Một số tác vụ không cần bối cảnh dài, nhưng bỏ đi cũng mất một phần căn cứ phán đoán.
-
-### 2. Mục tiêu và nghiệm thu không phải một thứ
-
-Hai thứ khác nhau.
-
-- **Mục tiêu** nói bạn muốn kết quả gì
-- **Nghiệm thu** nói bạn kiểm tra thế nào để biết thật sự đã đạt
-
-### 3. Đầu vào là dán hết đống tài liệu
-
-Đầu vào không phải càng nhiều càng tốt—liên quan quan trọng hơn.  
-Trọng tâm là giao rõ «nguyên liệu bắt buộc phải xem».
-
-## Mẫu tác vụ tối thiểu
-
-Nếu chỉ muốn viết bản dùng được trước, có thể rút gọn:
+## Recommended template
 
 ```text
-Mục tiêu: Biến cái gì thành trạng thái nào
-Đầu vào: Tệp hoặc trang liên quan ở đây
-Ràng buộc: Chỉ được sửa chỗ nào, không được đụng gì
-Nghiệm thu: Tôi kiểm tra thế nào để biết bạn đã xong thật
-Khi không chắc: hỏi trước
+Goal: ... (final deliverable)
+Background: ... (why it matters and current state)
+Inputs: ... (files, links, pasted material)
+Constraints: ... (editable scope, style, prohibited actions)
+Acceptance criteria: ... (observable completion conditions)
+Permission boundary: ... (internet, dependencies, configuration)
+If information is missing: ask first; do not guess.
 ```
 
-## Ví dụ
+![Loop from a task specification to a verifiable result](/diagrams/task-execution-loop-vi.svg)
+
+The six fields do not exist to make a prompt long. They remove critical gaps. Verification decides the next step: deliver only on success; otherwise return with evidence to the task or plan instead of editing blindly.
+
+## Purpose of each section
+
+- **Goal:** define an outcome, not only an action.
+- **Background:** explain why this approach matters.
+- **Inputs:** place required files, links, and material nearby.
+- **Constraints:** prevent scope expansion.
+- **Acceptance:** make completion observable.
+- **Permissions:** state internet, install, and configuration boundaries.
+
+## Common misconceptions
+
+### 1. Every section must be long
+
+This is a checklist, not a form. Omitting context can be appropriate, but removes evidence for decisions.
+
+### 2. Goal and acceptance are different
+
+- **Goal:** what result you want.
+- **Acceptance:** how you know it was achieved.
+
+### 3. Inputs means pasting everything
+
+Relevance matters more than volume. Explicitly provide material that must be read.
+
+## Minimal task template
 
 ```text
-Mục tiêu: Sửa copy màn hình đầu trang docs cho dễ hiểu với người mới
-Đầu vào: src/content/docs/guide/index.md
-Ràng buộc: Chỉ sửa một tệp này; không đổi style; không thêm component
-Nghiệm thu: Giữ cấu trúc hiện có; copy gần lời nói hơn; pnpm build pass
-Khi không chắc: Nêu hiểu biết và phạm vi thay đổi trước, rồi mới sửa
+Goal: turn what into which result
+Input: relevant files or pages
+Constraints: where edits are allowed and prohibited
+Acceptance: how I can verify completion
+When uncertain: ask first
 ```
 
-Cấu trúc này chủ yếu để giảm đoán và làm nghiệm thu trực tiếp hơn. Có thể cắt bớt mẫu theo nhu cầu, nhưng bỏ đoạn nào thì chấp nhận mất phần thông tin đó.
+## From vague request to executable task
+
+### Original
+
+```text
+Improve the documentation homepage.
+```
+
+It lacks audience, scope, and success criteria.
+
+### Executable version
+
+```text
+Goal: Rewrite the homepage first screen so a reader new to Codex knows within
+30 seconds what it is and where to start.
+Background: The current page assumes Agent, context, and Skill knowledge.
+Input: src/content/docs/guide/index.md
+Constraints: Modify only this file; do not change navigation, styles, or
+components. Explain Agent plainly on first use.
+Acceptance:
+- First screen states purpose, audience, and first reading entry.
+- Preserve frontmatter and heading levels.
+- Add no unexplained jargon.
+- pnpm build passes.
+Permissions: May read related site pages; no internet, installs, config changes,
+or Git commit.
+If information is missing: list it and the proposed scope, then wait.
+```
+
+### Expected execution
+
+1. Read the homepage and adjacent entries; explain current issues.
+2. Give a short one-file plan.
+3. Edit and summarize the diff.
+4. Run `pnpm build`.
+5. Report evidence against all four criteria.
+
+## Self-review before sending
+
+- Does the goal describe an outcome rather than “improve,” “handle,” or “look”?
+- Are inputs limited to relevant material?
+- Do constraints name prohibited areas?
+- Can another person judge each criterion pass/fail?
+- Do internet, installation, external writes, or commits need authorization?
+- Should the Agent ask, investigate, or stop when information is missing?
+
+Scale the template to the task. A typo needs little background; a cross-module migration needs more than one goal sentence.
+
+## Next steps
+
+- [Define done](/vi/prompts/define-done/)
+- [Constraints and boundaries](/vi/prompts/constraints-and-boundaries/)
+- [Ask for a plan](/vi/prompts/ask-for-a-plan/)
+- [Explore, plan, execute, verify](/vi/cases/workflows/explore-plan-execute-verify/)
 
 ---
 
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Cơ sở kiểm chứng:** Trang này chỉ mô tả phương pháp cấu trúc tác vụ; ví dụ và liên kết nội bộ đã được rà lại, và nội dung không phụ thuộc phiên bản sản phẩm, giá cả hay chi tiết giao diện dễ thay đổi.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+**Áp dụng cho:** App / CLI / IDE / Cloud
+**Căn cứ kiểm chứng:** This page documents a stable task-design method. Examples and internal links were reviewed and do not depend on volatile UI, pricing, or version facts.
+**Kiểm chứng gần nhất:** 2026-08-25

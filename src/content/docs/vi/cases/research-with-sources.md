@@ -3,18 +3,19 @@ title: Nghiên cứu có nguồn trích dẫn
 description: Dùng Codex để truy xuất, so sánh và kiểm tra sự thật — tạo nguồn và kết luận có thể truy vết.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ba7014d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Nghiên cứu có nguồn trích dẫn** nhấn mạnh: kết luận phải quay về được **nguồn** (tài liệu chính thức, bài báo, tệp trong kho), chứ không phải mô hình tự tin bịa. Phù hợp chọn tech stack, so sánh đối thủ, tổng quan tài liệu, diễn giải chính sách.
 
 ## Trang này giải quyết gì
 
-- Khi nào dùng [tìm kiếm web](/guide/tools/web-search/) vs chỉ đọc kho
+- Khi nào dùng [tìm kiếm web](/vi/guide/tools/web-search/) vs chỉ đọc kho
 - Cách yêu cầu định dạng trích dẫn và đánh dấu độ không chắc
-- Nối với [kiểm chứng nguồn](/guide/quality/validate-sources/)
+- Nối với [kiểm chứng nguồn](/vi/guide/quality/validate-sources/)
 
 ## Cách làm tối thiểu dùng được
 
@@ -37,7 +38,7 @@ Không sửa code.
     → Người quyết hoặc chuyển sang giai đoạn đặc tả
 ```
 
-Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ dài](/prompts/long-running-tasks/).
+Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ dài](/vi/prompts/long-running-tasks/).
 
 ## Lỗi thường gặp
 
@@ -49,7 +50,7 @@ Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ
 ## Ranh giới an toàn
 
 - Tài liệu nội bộ chưa công bố không được gửi ra ngoài qua MCP không kiểm soát
-- Sự thật dễ đổi như giá, phiên bản, khả dụng theo vùng phải ghi [ngày kiểm chứng](/guide/start-here/handbook-version-policy/)
+- Sự thật dễ đổi như giá, phiên bản, khả dụng theo vùng phải ghi [ngày kiểm chứng](/vi/guide/start-here/handbook-version-policy/)
 
 ## Checklist nghiệm thu
 
@@ -60,8 +61,8 @@ Tác vụ nghiên cứu dài nên tách nhiều vòng; xem [quản lý tác vụ
 
 ## Chương liên quan
 
-- [Xử lý độ không chắc](/guide/quality/handle-uncertainty/)
-- [Case: refactor tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Xử lý độ không chắc](/vi/guide/quality/handle-uncertainty/)
+- [Case: refactor tài liệu kèm review](/vi/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

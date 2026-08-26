@@ -3,54 +3,43 @@ title: Automations
 description: Agendamento, eventos e execução em segundo plano — o que automatizar e o que exige revisão humana.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f32c13f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`Automations` fala de como Tarefas repetidas rodam sozinhas — não de «deixar o Codex mais inteligente».
 
-Este grupo se preocupa com:
+A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
 
-- Quais Tarefas valem rodar automaticamente
-- Em que ponto a automação deve parar e esperar uma pessoa
-- Como desenhar falha, alerta e rollback
+## Decide whether it fits
 
-## O que julgar primeiro
+| Suitable | Unsuitable |
+|---|---|
+| Stable input sources and reviewable output | The problem must be redefined on every run |
+| Driven by time or interval | Must trigger exactly on Git push or PR creation |
+| Read-only checks, summaries, and drafts | Unattended main-branch merges or bulk deletion |
+| Explicit no-change and stop conditions | Infinite retry after failure |
 
-Ao começar com automação, não entregue de imediato todo trabalho repetitivo.
+## Current management surfaces
 
-Use esta ordem:
+- Create and manage Scheduled tasks in ChatGPT Web or the desktop App.
+- Codex CLI and IDE have no Scheduled management UI; use them to test prompts, Skills, or scripts first.
+- The desktop App can run a task against a local project or isolated worktree, but the computer must be awake, the App running, and the project still on disk.
+- A Web task can use uploaded context, connected tools, Skills, and Plugins, but cannot read a local folder directly.
 
-1. Primeiro: a coisa é **repetida, com regras claras e resultado fácil de aceitar**?
-2. Depois: dá para ser só leitura, só sugestão, só abrir um PR rascunho?
-3. Só então considere operação totalmente sem supervisão
+## In this section
 
-## Entrada deste grupo
+- [Complete Scheduled tasks guide](/pt/skills/automations/scheduled-tasks/): choose an execution mode, write a durable prompt, and define permissions and acceptance
 
-- [Tarefas agendadas e em segundo plano](/skills/automations/scheduled-tasks/): o que é uma Tarefa automatizada, disparos, condições de saída e pontos de revisão humana
+## Official source
 
-## Equívocos comuns
-
-### 1. Se se repete, deve automatizar
-
-Se a Tarefa se repete mas o critério ainda depende muito de julgamento humano, automatizar cedo demais costuma gerar mais problemas.
-
-### 2. Automação deve eliminar a confirmação humana
-
-Muita automação já tem valor ao fazer só:
-
-- Checagem automática
-- Resumo automático
-- Abrir issue / PR rascunho automaticamente
-
-Não empurre o resultado direto para o branch principal.
-
-Automação serve melhor a Tarefas «repetidas, com regras claras e resultado fácil de verificar». Quando depende de julgamento, deixar revisão humana no fluxo costuma ser mais estável.
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** Cloud / App / CLI  
-**Nota de revisão:** Este grupo assume Automations disponíveis com entrada atual; o material oficial público sobre a superfície de automação do Codex ainda é incompleto — até 2026-07-26 não convém marcar como estável.  
-**Última Verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI
+
+**Last verified:** 2026-08-26

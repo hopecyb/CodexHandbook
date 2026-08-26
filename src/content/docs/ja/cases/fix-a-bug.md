@@ -1,92 +1,56 @@
 ---
-title: Bug を修正する
-description: 失敗テストから最小修正と回帰テストへ——開発者に最も一般的なクローズドループの例。
+title: Bug 修正：どこから始めるか
+description: 現在の問題に合う Bug 修正経路を選び、実行可能な資料を使う完全な事例へ進みます。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 27c707b
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## メタ情報
+これは短い入口ページです。完全な手順、実行可能なコード、RED / GREEN のテスト証拠、段階ごとのプロンプトは [検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/) にまとめています。2 つのページで内容が重複し、後から不整合が生じるのを防ぐためです。
 
-| 項目 | 内容 |
+## まず、今足りない手順を判断する
+
+| 現在の状況 | ここから始める |
 |---|---|
-| 対象読者 | 開発者 |
-| クライアント | CLI または IDE（ローカルリポジトリ） |
-| 所要時間の目安 | 30–60 分 |
-| 検証日 | 2026-07-25 |
+| 「結果がおかしい」だけで、安定した再現がない | [先に診断してから修正する](/ja/cases/workflows/diagnose-before-fixing/) |
+| 安定した失敗テストがある | [検証付き Bug 修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| 関連モジュールに詳しくない | [コードベースを理解する](/ja/cases/understand-a-codebase/) |
+| 修正が終わり、マージの準備ができた | [PR をレビューする](/ja/cases/review-a-pr/) |
+| テスト自体が不安定 | 先に [テストを実行する](/ja/guide/quality/run-tests/) を読み、flaky test を修正の証拠にしない |
 
-## 1. 目標と背景
+## 最小の閉ループ
 
-**目標：** ユニットテストで捕捉された回帰 bug を修正し、再発防止のテストを追加する。
+言語やフレームワークに関係なく、次の証拠チェーンを維持します。
 
-**成功基準：**
+1. 明確なコマンドで元の問題を安定して再現する。
+2. 失敗したアサーション、エラー出力、入力条件を保存する。
+3. 先に根本原因を説明し、その後に最小修正を行う。
+4. 元の失敗テストと追加した境界テストを通過させる。
+5. より広い範囲の回帰チェックを実行する。
+6. 人が diff を読み、無関係な変更がないことを確認する。
 
-- 元の失敗テストが通過する
-- 全テストがグリーンのままである
-- diff は必要なファイルのみに限定される
+第 4 歩だけで第 1 歩がなければ、テストが元の問題を対象にしている証明にはなりません。「全テストが GREEN」だけで diff レビューがなければ、変更範囲が正しい証明にもなりません。
 
-**範囲外：** 大規模リファクタリング、依存関係の major バージョンアップグレード。
+## すぐに練習できる
 
-## 2. 準備
+リポジトリには、外部パッケージに依存しない JavaScript のショッピングカート割引例があります。
 
-- リポジトリをクローンし、`pnpm install`（または `AGENTS.md` に従う）
-- ローカルで失敗を再現できることを確認：`pnpm test -- path/to/failing.test.ts`
-- ブランチ：`fix/issue-123-short-desc`
+```bash
+# 開始コード：1 件のテストが予期どおり失敗
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-## 3. ワークフロー
-
-### 探索
-
-```text
-まだコードを変更しないでください。失敗テスト @tests/auth/login.test.ts と実装 @src/auth/login.ts を読み、
-5 項目以内で失敗原因を説明してください。アサーションとスタックの行番号を引用してください。
+# 参考修正：3 件のテストがすべて通過
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-### 計画
-
-```text
-修正計画を提示してください：変更するファイル、新規テストの要否、検証方法。
-「実行」と返信するまでコードを変更しないでください。
-```
-
-### 実行
-
-```text
-計画の第 1–2 ステップを実行してください。各ステップ後に関連テストのみを実行してください。
-```
-
-### 検証
-
-```text
-完全なテストスイートを実行してください。review 用に diff を要約してください。git push はしないでください。
-```
-
-人間による確認：diff を読み、無関係な変更がないことを確認し、[差分のレビュー](/guide/quality/review-diffs/) に従って確認する。
-
-## 4. 失敗と回復
-
-| 問題 | 対処 |
-|---|---|
-| 修正後に新たな失敗が発生 | `git stash` または commit を戻し、変更を縮小する |
-| 根本原因の判断が誤り | 探索に戻り、新しい仮説を求める |
-| テストが flaky | まずテストを安定させてからビジネスロジックを修正する |
-
-## 5. 蓄積
-
-- 同種の bug が繰り返し発生する場合、`AGENTS.md` に規約を 1 条追加する
-- `$regression-guard` Skill に抽出可能：マージ前に重要テストリストを実行する
-
-## 6. 関連章
-
-- [コードベースを理解する](/cases/understand-a-codebase/)
-- [差分のレビュー](/guide/quality/review-diffs/)
-- [テストの実行](/guide/quality/run-tests/)
+完全な資料は [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix) にあります。
 
 ---
 
 **状態：** verified  
 **対象製品：** CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** OpenAI Developers のホームページは現在も Codex を欠陥修正、テスト実行、変更レビューに使用できると説明しています。本ページの例は「まず失敗を再現し、最小修正を行い、テストを追加して回帰検証する」安定したエンジニアリングクローズドループに焦点を当て、特定のフレームワークや製品 UI に依存しません。
+**検証根拠：** このページは入口として経路選択と安定したエンジニアリング閉ループだけを扱います。サンプルの予期された失敗と成功コマンドは、現在のリポジトリで実行して確認済みです。
+**最終検証：** 2026-08-25

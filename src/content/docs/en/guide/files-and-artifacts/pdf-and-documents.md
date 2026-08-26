@@ -3,9 +3,10 @@ title: PDF and Documents
 description: Scope, tools, and verification when Codex reads, summarizes, or generates PDFs and long documents.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ Clearer scope (“which section, what output”) usually means better results.
 1. **Specify path**: `docs/spec.pdf` or @ reference (per client support)
 2. **State the goal**: summary, compare a chapter, extract table data
 3. **Page or section**: limit scope on long docs to save context
-4. **Sensitive content**: contracts, ID scans—follow [Sensitive context](/guide/context/sensitive-context/)
+4. **Sensitive content**: contracts, ID scans—follow [Sensitive context](/en/guide/context/sensitive-context/)
 
 ### Limits
 
@@ -95,8 +96,8 @@ If OCR or layout is uncertain, say so explicitly.
 ## Repo policy
 
 - Large PDFs: **Git LFS** or out of repo
-- When diff is unreadable, verify by **opening file** + [Verify artifacts](/guide/quality/verify-artifacts/)
-- Generated outputs: [Verifying generated artifacts](/guide/files-and-artifacts/generated-artifacts/)
+- When diff is unreadable, verify by **opening file** + [Verify artifacts](/en/guide/quality/verify-artifacts/)
+- Generated outputs: [Verifying generated artifacts](/en/guide/files-and-artifacts/generated-artifacts/)
 
 ## Common mistakes
 

@@ -3,9 +3,10 @@ title: ローカルとクラウド
 description: ローカルタスクと Cloud タスクの適用シーンを比較する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ sidebar:
 - リモートリポジトリやリモートリソースに接続したい
 - ローカルマシンを占有したくない
 
-多くの初心者は **ローカル + デスクトップ App** から始めます。Cloud の詳細は [Web と Cloud の概要](/guide/web-and-cloud/)。App 内での切り替えは [ローカルとクラウドのタスク](/guide/desktop-app/local-and-cloud-tasks/) を参照してください。
+多くの初心者は **ローカル + デスクトップ App** から始めます。Cloud の詳細は [Web と Cloud の概要](/ja/guide/web-and-cloud/)。App 内での切り替えは [ローカルとクラウドのタスク](/ja/guide/desktop-app/local-and-cloud-tasks/) を参照してください。
 
 ローカルは流れを理解し、小さな変更を試すのに向いています。クラウドはより長く、標準化され、リモート協業が多いタスクに向いています。
 

@@ -335,6 +335,45 @@
 	box-shadow: 0 1.8rem 3.2rem rgba(62, 90, 168, 0.12);
 }
 
+/* Explanatory diagrams: preserve readable labels on narrow screens. */
+.sl-markdown-content p:has(> img[src^='/diagrams/']:only-child) {
+	max-width: 100%;
+	margin-block: 1.5rem;
+	border: 1px solid var(--sl-color-gray-6);
+	border-radius: 0.5rem;
+	background: #020617;
+}
+
+.sl-markdown-content p > img[src^='/diagrams/']:only-child {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	border-radius: 0.5rem;
+}
+
+@media (max-width: 49.999rem) {
+	.sl-markdown-content p:has(> img[src^='/diagrams/']:only-child) {
+		overflow-x: auto;
+		overflow-y: hidden;
+		overscroll-behavior-inline: contain;
+		scrollbar-width: thin;
+	}
+
+	.sl-markdown-content p > img[src^='/diagrams/']:only-child {
+		width: 56rem;
+		max-width: none;
+	}
+
+	.sl-markdown-content table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+		overscroll-behavior-inline: contain;
+		scrollbar-width: thin;
+	}
+}
+
 .splash .content-panel {
 	padding-block-end: 0;
 }

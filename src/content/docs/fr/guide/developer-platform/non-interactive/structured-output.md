@@ -3,9 +3,10 @@ title: "Sortie structurée"
 description: Faire produire exec des résultats parseables par machine pour étapes aval, dashboards et portes.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: aa19d49
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -57,7 +58,7 @@ Exigences de sortie :
 Parsing shell (sketch) :
 
 ```bash
-result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
+result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
@@ -102,7 +103,7 @@ Chaque fois que les résultats alimentent un autre programme, demandez à Codex 
 | Sécurité de type | Convention + validation | Types SDK |
 | Idéal pour | Scripts CI | Services multi-tenant |
 
-Voir [Vue d'ensemble SDK](/guide/developer-platform/sdk-overview/).
+Voir [Vue d'ensemble SDK](/fr/guide/developer-platform/sdk-overview/).
 
 ## Erreurs courantes
 
@@ -116,7 +117,7 @@ Voir [Vue d'ensemble SDK](/guide/developer-platform/sdk-overview/).
 - [ ] Fichier schéma ou champs documentés existent
 - [ ] CI échoue explicitement sur échec de parse
 - [ ] Sortie d'exemple dans `fixtures/` pour régression
-- [ ] Aligné avec la stratégie [codes de sortie](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [ ] Aligné avec la stratégie [codes de sortie](/fr/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Sources de référence
 - Pratique générale sorties structurées OpenAI (alignement conceptuel)

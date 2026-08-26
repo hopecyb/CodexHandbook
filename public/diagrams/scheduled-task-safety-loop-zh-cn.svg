@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 650" width="1100" height="650" role="img" aria-labelledby="title desc">
+  <title id="title">Scheduled task 安全运行闭环</title>
+  <desc id="desc">先定义耐久任务并手动验证，再选择独立任务或聊天内任务、Web 上下文或桌面本地项目与 worktree。任务使用默认沙箱无人值守运行，结果进入 Scheduled 供人工复核；有误时调整提示词、工具或频率，无变化时结束，有高风险写操作时等待人工。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .label { fill: #f8fafc; font-size: 18px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 14px; }
+    .tiny { fill: #94a3b8; font-size: 12px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1100" height="650" rx="8" fill="#020617"/>
+  <rect width="1100" height="650" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">从手动验证到安全定时运行</text>
+  <text x="44" y="72" class="sub">调度只负责再次触发；稳定输入、最小权限、停止条件和人工复核必须写进任务。</text>
+
+  <path d="M220 220H250" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M430 220H460" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M640 220H670" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M850 220H880" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="130" y="190" text-anchor="middle" class="label">1. 定义耐久任务</text>
+  <text x="130" y="219" text-anchor="middle" class="note">输入 · 范围 · 验收</text>
+  <text x="130" y="243" text-anchor="middle" class="note">无变化 · 失败 · 停止</text>
+  <text x="130" y="265" text-anchor="middle" class="tiny">先写清每次都要做什么</text>
+
+  <rect x="250" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="340" y="190" text-anchor="middle" class="label">2. 手动验证</text>
+  <text x="340" y="219" text-anchor="middle" class="note">同一提示词 · Skill</text>
+  <text x="340" y="243" text-anchor="middle" class="note">同一工具与权限</text>
+  <text x="340" y="265" text-anchor="middle" class="tiny">结果可审查后再调度</text>
+
+  <rect x="460" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="550" y="190" text-anchor="middle" class="label">3. 选择上下文</text>
+  <text x="550" y="219" text-anchor="middle" class="note">独立任务：每次重启</text>
+  <text x="550" y="243" text-anchor="middle" class="note">聊天内：延续上下文</text>
+  <text x="550" y="265" text-anchor="middle" class="tiny">按运行是否相互独立判断</text>
+
+  <rect x="670" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="760" y="190" text-anchor="middle" class="label">4. 选择材料</text>
+  <text x="760" y="219" text-anchor="middle" class="note">Web：上传与连接工具</text>
+  <text x="760" y="243" text-anchor="middle" class="note">桌面：项目 / worktree</text>
+  <text x="760" y="265" text-anchor="middle" class="tiny">Web 不能读取本机目录</text>
+
+  <rect x="880" y="158" width="180" height="124" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="970" y="190" text-anchor="middle" class="label">5. 无人值守运行</text>
+  <text x="970" y="219" text-anchor="middle" class="note">使用默认沙箱</text>
+  <text x="970" y="243" text-anchor="middle" class="note">只授予必要权限</text>
+  <text x="970" y="265" text-anchor="middle" class="tiny">本地任务需机器与 App 在线</text>
+
+  <path d="M970 282V350H790" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="570" y="330" width="220" height="106" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="680" y="363" text-anchor="middle" class="label">Scheduled 收件箱</text>
+  <text x="680" y="390" text-anchor="middle" class="note">完成 · 失败 · 需要关注</text>
+  <text x="680" y="414" text-anchor="middle" class="tiny">保留运行证据与未读状态</text>
+  <path d="M570 383H520" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="280" y="330" width="240" height="106" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="400" y="363" text-anchor="middle" class="label">人工复核</text>
+  <text x="400" y="390" text-anchor="middle" class="note">证据 · diff · 外部副作用</text>
+  <text x="400" y="414" text-anchor="middle" class="tiny">关键写操作仍由人决定</text>
+
+  <path d="M400 436V500H130V284" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#rose-arrow)"/>
+  <text x="265" y="490" text-anchor="middle" class="tiny" fill="#fb7185">结果过宽、材料不足或频率不合适：调整后重新手动验证</text>
+
+  <rect x="280" y="526" width="510" height="78" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="535" y="556" text-anchor="middle" class="note">每次运行必须明确三条路径</text>
+  <text x="535" y="582" text-anchor="middle" class="tiny">有发现：交付证据 · 无变化：简短结束 · 无法完成：停止并等待人工</text>
+</svg>

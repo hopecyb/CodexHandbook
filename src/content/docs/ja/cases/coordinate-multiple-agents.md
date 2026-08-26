@@ -3,9 +3,10 @@ title: 複数 Agent の調整
 description: 並列探索、分担実行、結果のマージ——協働ケース。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 複数 Agent の調整
@@ -36,7 +37,7 @@ Agent 2：案 B の長所短所と工数
 
 ### ワークツリー分離
 
-異なる Agent が異なる [git worktree](/guide/desktop-app/worktrees/) で異なるブランチを変更し、最後に人間がマージする。
+異なる Agent が異なる [git worktree](/ja/guide/desktop-app/worktrees/) で異なるブランチを変更し、最後に人間がマージする。
 
 ## 3. 調整ルール（AGENTS.md への記載を推奨）
 
@@ -46,8 +47,8 @@ Agent 2：案 B の長所短所と工数
 
 ## 4. 関連
 
-- [複数 Agent 協働](/cases/workflows/multi-agent-coordination/)
-- [サブ Agent](/guide/agent-work/subagents/)
+- [複数 Agent 協働](/ja/cases/workflows/multi-agent-coordination/)
+- [サブ Agent](/ja/guide/agent-work/subagents/)
 
 ---
 

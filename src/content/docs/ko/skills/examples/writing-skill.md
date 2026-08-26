@@ -3,9 +3,10 @@ title: '예시: 글쓰기 Skill'
 description: 연구·개요·원고·윤문을 반복 가능한 글쓰기 절차로 정리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 예시: 글쓰기 Skill
@@ -32,7 +33,7 @@ description: 개요에 따라 기술 글을 작성합니다. 연구, 원고, 윤
 
 ## 관련
 
-- [글쓰기 사례](/cases/write-an-article/)
+- [글쓰기 사례](/ko/cases/write-an-article/)
 ---
 
 **상태:** verified  

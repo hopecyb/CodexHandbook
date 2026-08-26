@@ -3,9 +3,10 @@ title: 용어집
 description: 핸드북에서 자주 쓰는 용어의 짧은 정의입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c07a94c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -27,14 +28,14 @@ sidebar:
 | Token | 모델이 텍스트를 처리하는 계량 단위 |
 | 작업 트리 | 병렬 실험을 위한 격리된 작업 디렉터리 |
 
-초보자판：[초보자를 위한 용어](/guide/start-here/terminology-for-beginners/)
+초보자판：[초보자를 위한 용어](/ko/guide/start-here/terminology-for-beginners/)
 
 ## 사용 방식
 
 여기는 빠른 조회 사전이지 완전한 튜토리얼이 아닙니다.  
 다른 페이지에서 단어를 보고 뜻이 잠깐 기억나지 않으면 여기로 돌아와 찾으세요.
 
-이 단어들이 대부분 아직 낯설다면, 먼저 [초보자를 위한 용어](/guide/start-here/terminology-for-beginners/)를 읽는 편이 더 수월합니다.
+이 단어들이 대부분 아직 낯설다면, 먼저 [초보자를 위한 용어](/ko/guide/start-here/terminology-for-beginners/)를 읽는 편이 더 수월합니다.
 
 ## 흔한 오해
 

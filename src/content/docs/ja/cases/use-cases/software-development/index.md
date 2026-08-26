@@ -3,9 +3,10 @@ title: ソフトウェア開発
 description: コード変更、バグ修正、検証事例の入口——範囲制御、テスト、ロールバック。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 84208b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ソフトウェア開発の事例は次の問いに焦点を当てます。
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 本グループの事例
 
-- [検証付きバグ修正](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [検証付きバグ修正](/ja/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ## 本グループの強調点
 

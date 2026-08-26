@@ -3,9 +3,10 @@ title: 생성 템플릿
 description: 기능, 원고, 산출물을 처음부터 구현합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 생성 템플릿
@@ -62,8 +63,8 @@ translated_at: 2026-07-28
 
 ## 관련
 
-- [명세 주도 작업](/cases/workflows/specification-driven-work/)
-- [완료 기준 정의](/prompts/define-done/)
+- [명세 주도 작업](/ko/cases/workflows/specification-driven-work/)
+- [완료 기준 정의](/ko/prompts/define-done/)
 
 ---
 

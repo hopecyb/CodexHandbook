@@ -3,9 +3,10 @@ title: Ficheiros de texto e código
 description: Fazer o Codex ler e escrever corretamente ficheiros de texto — código-fonte, configuração e documentação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ Ao pedir ao Codex para alterar texto ou código, o essencial é alterar no síti
 | Documentação `.md` | Caminhos relativos de ligações; normas de mistura PT/EN |
 | Código gerado | Indicar se deve ser submetido ou gitignore |
 
-Contexto: [Contexto de ficheiros e diretórios](/guide/context/file-and-folder-context/)
+Contexto: [Contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
 
 ## Porque estes ficheiros falham com mais facilidade
 
@@ -50,7 +51,7 @@ Estilo: alinhado com <ficheiro de exemplo>
 Conclusão: listar ficheiros alterados + correr <comando de teste>
 ```
 
-Ver [Anatomia de uma boa Tarefa](/prompts/task-anatomy/)
+Ver [Anatomia de uma boa Tarefa](/pt/prompts/task-anatomy/)
 
 ## Mal-entendidos habituais
 
@@ -91,8 +92,8 @@ Se tem medo de alterações a mais, exija estas três coisas:
 
 ## Pontos de revisão
 
-- [Revisar diffs](/guide/quality/review-diffs/): lógica, âmbito, eliminações
-- [Correr testes](/guide/quality/run-tests/)
+- [Revisar diffs](/pt/guide/quality/review-diffs/): lógica, âmbito, eliminações
+- [Correr testes](/pt/guide/quality/run-tests/)
 - Introdução involuntária de `TODO` placeholder por implementar
 
 ## Erros habituais

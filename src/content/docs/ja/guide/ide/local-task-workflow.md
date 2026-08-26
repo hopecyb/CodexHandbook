@@ -3,22 +3,23 @@ title: ローカルタスクのワークフロー
 description: IDE で開いているファイルと選択範囲に基づき、ローカル Codex タスクを開始・追跡・完了する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f9abb5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-IDE のローカルタスクは「**開く → 選択 → 説明 → レビュー → テスト**」のループで、頻度の高い小さな修正に向いています。ここでは最も一般的な実践パスを示します。コンテキストの詳細は [選択範囲と開いているファイル](/guide/ide/selected-code-and-open-files/) を参照。
+IDE のローカルタスクは「**開く → 選択 → 説明 → レビュー → テスト**」のループで、頻度の高い小さな修正に向いています。ここでは最も一般的な実践パスを示します。コンテキストの詳細は [選択範囲と開いているファイル](/ja/guide/ide/selected-code-and-open-files/) を参照。
 
 ## 推奨フロー
 
 1. **ワークスペースのルートを開く**（単一ファイルではなくリポジトリ全体）
-2. 関連ファイルを開く。必要なら [コード断片を選択](/guide/ide/selected-code-and-open-files/)
-3. Codex パネルに目標、制約、[完了の定義](/prompts/define-done/) を明確に書く
-4. タスクが複雑なら、先に [計画を求める](/prompts/ask-for-a-plan/) してから実行
-5. diff / inline ビューで [変更をレビュー](/guide/ide/reviewing-changes/)
+2. 関連ファイルを開く。必要なら [コード断片を選択](/ja/guide/ide/selected-code-and-open-files/)
+3. Codex パネルに目標、制約、[完了の定義](/ja/prompts/define-done/) を明確に書く
+4. タスクが複雑なら、先に [計画を求める](/ja/prompts/ask-for-a-plan/) してから実行
+5. diff / inline ビューで [変更をレビュー](/ja/guide/ide/reviewing-changes/)
 6. IDE ターミナルでプロジェクトのテストコマンドを実行
 7. 自分で `git commit`（チームが Agent の commit を明示的に許可している場合を除く）
 
@@ -35,9 +36,9 @@ src/auth/login.ts と対応するテストだけを変更。
 
 | 状況 | 推奨 |
 |---|---|
-| 並列マルチタスク、worktree | [デスクトップ App](/guide/desktop-app/) |
-| スクリプト / CI | [CLI 非対話](/guide/cli/non-interactive-mode/) |
-| リモートの標準環境、PR 作成 | [IDE の Cloud タスク](/guide/ide/cloud-task-workflow/) |
+| 並列マルチタスク、worktree | [デスクトップ App](/ja/guide/desktop-app/) |
+| スクリプト / CI | [CLI 非対話](/ja/guide/cli/non-interactive-mode/) |
+| リモートの標準環境、PR 作成 | [IDE の Cloud タスク](/ja/guide/ide/cloud-task-workflow/) |
 
 ## よくある間違い
 
@@ -45,7 +46,7 @@ src/auth/login.ts と対応するテストだけを変更。
 - inline 提案を一括受け入れ
 - テストせずに commit
 
-コンテキスト：[エディターコンテキスト](/guide/ide/editor-context/) · [ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
+コンテキスト：[エディターコンテキスト](/ja/guide/ide/editor-context/) · [ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/)
 
 ## よくある疑問
 

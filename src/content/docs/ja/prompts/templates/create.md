@@ -3,9 +3,10 @@ title: 作成テンプレート
 description: 機能・原稿・成果物をゼロから作る。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 作成テンプレート
@@ -62,8 +63,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [仕様駆動の作業](/cases/workflows/specification-driven-work/)
-- [完了基準の定義](/prompts/define-done/)
+- [仕様駆動の作業](/ja/cases/workflows/specification-driven-work/)
+- [完了基準の定義](/ja/prompts/define-done/)
 
 ---
 

@@ -49,7 +49,7 @@ sidebar:
 | 安全 | [威胁模型](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP 风险](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/guide/team-enterprise/security/prompt-injection/) |
 | 治理 | [可接受使用政策](/guide/team-enterprise/governance/acceptable-use/) |
 
-路线图将补充 adoption、administration、deployment-patterns 等细目，见 [chapter-outline](/docs/planning/chapter-outline.md)（仓库规划文档）。
+路线图将补充 adoption、administration、deployment-patterns 等细目，见 [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（仓库规划文档）。
 
 ## 与个性化配置的关系
 

@@ -3,9 +3,10 @@ title: Làm việc với tệp
 description: Để Codex đọc/ghi tệp trong phạm vi đã nêu rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7920b62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -24,7 +25,7 @@ Không sửa tệp khác, không chạy lệnh.
 Xong hãy liệt kê các dòng bạn đã đổi.
 ```
 
-Kiểm tra Diff rồi mới chấp nhận. Liên quan: [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+Kiểm tra Diff rồi mới chấp nhận. Liên quan: [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 
 ## Trọng tâm luyện
 
@@ -50,7 +51,7 @@ Vì vậy phía sau còn phải phối hợp kiểm tra Diff.
 
 Lần đầu đụng tệp, trọng tâm không phải sửa nhiều, mà để ranh giới thay đổi rõ và dễ kiểm tra.
 
-Bước tiếp: [Giao Tác vụ rõ ràng](/guide/learning-paths/beginner/03-give-clear-tasks/)
+Bước tiếp: [Giao Tác vụ rõ ràng](/vi/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 

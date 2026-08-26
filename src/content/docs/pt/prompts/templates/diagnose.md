@@ -3,9 +3,10 @@ title: Template de diagnóstico
 description: Localize a causa-raiz antes de discutir a correção.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Template de diagnóstico
@@ -47,8 +48,8 @@ O template de diagnóstico pede primeiro *por que* quebrou; só depois discute *
 
 ## Relacionado
 
-- [Diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/)
-- [Caso: corrigir um bug](/cases/fix-a-bug/)
+- [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/)
+- [Caso: corrigir um bug](/pt/cases/fix-a-bug/)
 
 ---
 

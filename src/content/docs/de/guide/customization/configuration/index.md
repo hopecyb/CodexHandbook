@@ -3,9 +3,10 @@ title: Konfiguration
 description: "Einstiegsseite zu Config und Profiles: welche Verhaltensweisen in die Config gehören — und welche nicht."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beim ersten Blick auf die Gruppe „Konfiguration“ wirkt es oft, als ginge es nur um Parameternamen.
@@ -14,8 +15,8 @@ Eigentlich geht es um eines: Codex soll standardmäßig auf eine bestimmte Weise
 
 ## Empfohlene Reihenfolge
 
-1. [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/)
-2. [Profiles](/guide/customization/configuration/profiles/)
+1. [Konfigurationsgrundlagen](/de/guide/customization/configuration/config-basics/)
+2. [Profiles](/de/guide/customization/configuration/profiles/)
 
 ## Welche Probleme diese Gruppe löst
 

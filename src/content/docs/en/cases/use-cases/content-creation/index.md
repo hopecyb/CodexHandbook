@@ -3,9 +3,10 @@ title: Content creation
 description: Entry for docs, articles, and content-asset cases—focus on review, rewriting, and artifact verification.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Content-creation cases focus on this scenario:
@@ -14,7 +15,7 @@ Content-creation cases focus on this scenario:
 
 ## Cases in this group
 
-- [Refactor docs with review](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refactor docs with review](/en/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## What this group emphasizes
 

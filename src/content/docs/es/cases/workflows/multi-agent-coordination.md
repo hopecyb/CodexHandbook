@@ -3,9 +3,10 @@ title: Coordinación multi-Agent
 description: Exploración en paralelo, división de ejecución y fusión de resultados — cuándo dividir y cómo aceptar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Multi-Agent encaja con subproblemas paralelizables y poco acoplados; no encaja con editar el mismo archivo a la vez sin coordinación humana.
@@ -18,7 +19,7 @@ Multi-Agent encaja con subproblemas paralelizables y poco acoplados; no encaja c
 | Uno ejecuta tests y otro escribe docs | Estado mutable compartido sin bloqueo |
 | Explorar varias implementaciones | Dependencias fuertes de orden sin aclarar |
 
-Capacidades del producto: [Agents en paralelo](/guide/desktop-app/parallel-agents/), [Subagents](/guide/agent-work/subagents/).
+Capacidades del producto: [Agents en paralelo](/es/guide/desktop-app/parallel-agents/), [Subagents](/es/guide/agent-work/subagents/).
 
 ## Patrones de colaboración
 
@@ -36,11 +37,11 @@ Tú: eliges una y abres un solo Agent para ejecutar
 Agent de exploración → plan → Agent de ejecución (hilo nuevo, con resumen del plan)
 ```
 
-Usa [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/) para pasar un resumen estructurado; no pegues el chat entero.
+Usa [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/) para pasar un resumen estructurado; no pegues el chat entero.
 
 ### Patrón C: Aislamiento con worktree
 
-Distintos Agents modifican distintas ramas en distintos [git worktree](/guide/desktop-app/worktrees/); al final fusionas tú.
+Distintos Agents modifican distintas ramas en distintos [git worktree](/es/guide/desktop-app/worktrees/); al final fusionas tú.
 
 ## Reglas de coordinación (recomendado en AGENTS.md)
 

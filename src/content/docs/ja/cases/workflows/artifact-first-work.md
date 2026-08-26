@@ -3,18 +3,19 @@ title: 成果物優先
 description: まず最終成果物の形とパスを約束し、ステップを逆算する——ドキュメント、設定、レポートなどの成果物に適する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**成果物優先**は、まず成果物の形と配置を明確にし、Codex にステップを逆算させる方法です。Markdown ドキュメント、OpenAPI、マイグレーションスクリプト、スライドアウトラインなど出力が明確なタスクに適し、[仕様駆動](/cases/workflows/specification-driven-work/) と組み合わせても使えます。
+**成果物優先**は、まず成果物の形と配置を明確にし、Codex にステップを逆算させる方法です。Markdown ドキュメント、OpenAPI、マイグレーションスクリプト、スライドアウトラインなど出力が明確なタスクに適し、[仕様駆動](/ja/cases/workflows/specification-driven-work/) と組み合わせても使えます。
 
 ## このページの重点
 
 - プロセスの詳細ではなく成果物構造の記述方法
 - 複数ファイル成果物の一貫性チェック
-- [ファイルと成果物](/guide/files-and-artifacts/) 機能との整合
+- [ファイルと成果物](/ja/guide/files-and-artifacts/) 機能との整合
 
 ## 最小限の実践方法
 
@@ -37,7 +38,7 @@ translated_at: 2026-07-28
     → 検証（lint、リンクチェック、プレビュー）
 ```
 
-視覚的成果物にはスクリーンショットまたはプレビュー説明を要求できる。[成果物の検証](/guide/quality/verify-artifacts/) を参照。
+視覚的成果物にはスクリーンショットまたはプレビュー説明を要求できる。[成果物の検証](/ja/guide/quality/verify-artifacts/) を参照。
 
 ## よくある誤り
 
@@ -56,7 +57,7 @@ translated_at: 2026-07-28
 - [ ] 宣言されたすべてのファイルが存在し、開ける
 - [ ] 形式と参照サンプルが一致する
 - [ ] リンク/目次/Frontmatter が有効
-- [ ] [完了の定義](/prompts/define-done/) に合致する
+- [ ] [完了の定義](/ja/prompts/define-done/) に合致する
 
 ---
 

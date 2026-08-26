@@ -3,9 +3,10 @@ title: Mantener el Contexto enfocado
 description: Controlar el alcance, abrir hilos nuevos y hacer traspasos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 042a77f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -43,7 +44,7 @@ El resultado suele ser: tú crees que estás añadiendo información; Codex ve u
 - Una Tarea, un objetivo
 - Resumir con regularidad «hecho / pendiente / restricciones aún vigentes»
 - En Tareas largas, usar puertas de fase
-- Entre sesiones, usar [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+- Entre sesiones, usar [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
 
 ## Señales de que hay que cerrar
 

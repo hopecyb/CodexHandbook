@@ -3,9 +3,10 @@ title: scripts/ とテスト
 description: Skill に決定的なスクリプトを追加し、挙動を検証する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 最初はすべてを `SKILL.md` に書きたくなります。単純なフローではそれで足りますが、**安定・反復・検証可能**に実行すべきステップがあるなら、文章よりスクリプトが信頼できます。
@@ -73,7 +74,7 @@ my-skill/
 
 安定反復が必要な動作は文章だけに頼らない。スクリプトを先に通し、その後 Skill 呼び出しを確認。
 
-スクリプトは現在の承認ポリシーを継承。[コマンドルール](/guide/customization/rules/command-rules/) と [Skill セキュリティ](/skills/security/) を参照。
+スクリプトは現在の承認ポリシーを継承。[コマンドルール](/ja/guide/customization/rules/command-rules/) と [Skill セキュリティ](/ja/skills/security/) を参照。
 
 ---
 

@@ -3,9 +3,10 @@ title: AI và mô hình ngôn ngữ
 description: Hiểu mô hình ngôn ngữ tạo phản hồi dựa trên ngữ cảnh như thế nào.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1951620
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -37,7 +38,7 @@ Nó đang đẩy tiếp theo ngữ cảnh hiện tại — không tự biết đ
 ## Với người dùng nghĩa là gì
 
 - **Chất lượng đầu vào quyết định trần trên**: mục tiêu mơ hồ thì đầu ra dễ lệch
-- **Ngữ cảnh có hạn**: lịch sử quá dài sẽ bị nén hoặc cắt — xem [Token, ngữ cảnh và nén](/guide/foundations/tokens-context-and-compaction/)
+- **Ngữ cảnh có hạn**: lịch sử quá dài sẽ bị nén hoặc cắt — xem [Token, ngữ cảnh và nén](/vi/guide/foundations/tokens-context-and-compaction/)
 - **Phải kiểm chứng**: đặc biệt số liệu, pháp lý, an toàn và nội dung phát hành ra ngoài
 
 ## Hiểu nhầm thường gặp

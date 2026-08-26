@@ -1,98 +1,117 @@
 ---
 title: Berechtigungen und Sandbox
-description: "Freigabe, Ausführungsisolation und Netzwerkgrenzen verstehen — Codex sicher nutzen."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Verstehe Sandbox, Genehmigungen, Netzwerkzugriff sowie lokale und Cloud-Ausführungsgrenzen anhand einer Entscheidungskette.
 sidebar:
   order: 14
+locale: de
+source_locale: zh-CN
+source_revision: 6b29dc6
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-# Berechtigungen und Sandbox
+Für eine sichere Nutzung von Codex musst du zwei Kontrollebenen gemeinsam betrachten: **Die Sandbox legt fest, welche Bereiche technisch erreichbar sind. Die Genehmigungsrichtlinie legt fest, ob Codex vor dem Überschreiten der aktuellen Grenze fragen muss.**
 
-Codex sollte riskante Operationen nicht ohne Zustimmung ausführen. **Freigabe** ist das zentrale Tor der Mensch-Maschine-Zusammenarbeit; die **Sandbox** begrenzt Dateisystem und Teile der Systemfähigkeiten, die der Agent erreichen kann.
+![Ablauf von Codex-Sandbox und Genehmigung: Eine Aktion durchläuft zuerst die Sandbox-Grenze, fordert bei Überschreitung menschliche Genehmigung an und hinterlässt schließlich Verifikationsnachweise](/diagrams/sandbox-approval-flow-de.svg)
 
-## Inhalt dieser Seite
+## Zuerst diesen Unterschied verstehen
 
-Viele, die „Berechtigung“, „Freigabe“, „Sandbox“ und „Netzwerkzugriff“ zum ersten Mal sehen, halten sie für ungefähr dasselbe — alles Sicherheitseinstellungen.
-
-Genau diese Vermischung ist riskant: Du denkst, du erlaubst nur „weiter“ — und öffnest dabei gleichzeitig Grenzen für Dateischreiben, Befehle oder externes Netz.
-
-Diese Seite trennt die Begriffe, damit du bei jeder Bestätigung weißt, was wirklich freigegeben wird.
-
-## Diese Begriffe zuerst trennen
-
-So kannst du sie aufteilen:
-
-- **Freigabe**: Soll es dich zuerst fragen?
-- **Sandbox**: Selbst wenn es will — wohin darf es höchstens greifen?
-- **Netzwerkzugriff**: Darf Information nach draußen — oder von draußen geholt werden?
-
-Sie wirken gemeinsam aufs Ergebnis — sind aber nicht dasselbe.
-
-## Worauf du meist achten solltest
-
-- Darf es Pfade außerhalb des aktuellen Projekts lesen/schreiben?
-- Darf es online gehen?
-- Darf es bestimmte Shell-Befehle ausführen?
-- Hat das Team verpflichtende Politiken ausgegeben (Managed Config)?
-
-## Sandbox und Netzwerk
-
-Die **Sandbox** verkleinert die Fläche für Fehlbedienung. **Netzwerkzugriff** ist eine weitere Risikoebene: Sensible Prompt-Inhalte können abfließen, oder unzuverlässige Daten können hereinkommen.
-
-Am Anfang oft so:
-
-1. Erste Übung: unnötiges Netz aus oder nur klar benötigten Zugriff erlauben
-2. Keine Produktions-Secrets in Übungsprojekte
-3. Bei „ins Netz / sensible Pfade schreiben“ erst verstehen, dann freigeben
-
-## Häufige Missverständnisse
-
-### Ein Dialog heißt nicht automatisch Gefahr
-
-Viele normale Operationen lösen Freigabe aus, z. B.:
-
-- Abhängigkeiten installieren
-- Außerhalb des Projekts schreiben
-- Browser oder System-Apps öffnen
-- Externe Websites oder APIs anfassen
-
-Entscheidend ist: **Braucht der aktuelle Schritt diese Aktion wirklich?** Nicht nur, ob ein Dialog erscheint.
-
-### Kein Dialog = kein Risiko
-
-Erlaubt die aktuelle Sandbox eine Operationsklasse schon, oder hast du Regeln früher gelockert, fragt Codex vielleicht nicht erneut.
-
-Risiko nur am Dialog festzumachen reicht nicht — auch die Umgebungskonfiguration zählen.
-
-## Bei Berechtigungsanfragen so urteilen
-
-Bei jeder berechtigungsbezogenen Anfrage drei Fragen:
-
-1. Ist dieser Schritt für die aktuelle Aufgabe nötig?
-2. Gehen Daten oder Pfade über das hinaus, was ich erwartet habe?
-3. Weiß ich bei Fehlern, wie ich rückgängig mache oder nachbessere?
-
-Fehlen zwei von drei Antworten: Nicht freigeben — zuerst erklären lassen, warum dieser Schritt nötig ist.
-
-## Schichten
-
-| Schicht | Inhalt | Wo lesen |
+| Kontrolle | Beantwortete Frage | Typische Objekte |
 |---|---|---|
-| Konzept (diese Seite) | Warum Freigabe und Isolation nötig sind | — |
-| Produktunterschiede | Wie Einstiege Bestätigungen zeigen | [CLI Freigaben und Sandbox](/guide/cli/approvals-and-sandbox/) · [Desktop-App-Einstellungen](/guide/desktop-app/settings/) |
-| Prompt-Strategie | Wie du Berechtigungsgrenzen in der Aufgabe angibst | [Einschränkungen und Grenzen](/prompts/constraints-and-boundaries/) |
+| Sandbox | Welche Bereiche kann diese Aktion höchstens erreichen? | Projektdateien, externe Pfade, Systemfunktionen und Netzwerk |
+| Genehmigungsrichtlinie | Muss vor dem Überschreiten der aktuellen Grenze ein Mensch gefragt werden? | Abhängigkeiten installieren, Netzwerk verwenden, in externe Verzeichnisse schreiben, Anwendungen starten |
+| Aufgabeneinschränkungen | Was soll und was darf diese Aufgabe nicht tun? | Änderbare Verzeichnisse, verbotene Aktionen, Abnahmebefehle |
+| Menschliches Review | Sind die ausgeführten Ergebnisse akzeptabel? | Diff, Protokolle, Tests und externe Nebenwirkungen |
 
-Offizielle Politiken und Defaults können sich ändern — prüfe [OpenAI Codex](https://developers.openai.com/codex).
+Aufgabeneinschränkungen ersetzen die Sandbox nicht; die Sandbox ersetzt kein abschließendes Review. Sie regeln Absicht, Ausführungsgrenzen und Ergebnisabnahme.
 
-Freigabe fragt „soll es weiter?“; Sandbox begrenzt „auch wenn weiter — wie weit höchstens?“. Beide Schichten zusammen machen die Grenze klarer.
+## Wie eine Aktion die Sicherheitsgrenzen durchläuft
+
+Wenn Codex einen Befehl oder Werkzeugaufruf vorbereitet, kannst du den Ablauf so verstehen:
+
+1. Zuerst wird geprüft, ob die Aktion innerhalb der aktuellen Sandbox liegt.
+2. Innerhalb der Grenze wird sie ausgeführt und ihre Ausgabe protokolliert; ein Dialog muss dabei nicht erscheinen.
+3. Außerhalb der Grenze fordert Codex je nach Genehmigungsrichtlinie eine Erlaubnis an oder lehnt die Aktion direkt ab.
+4. Du kannst ablehnen, eine enger begrenzte Aktion verlangen oder genau diese einzelne Aktion genehmigen.
+5. Prüfe nach der Ausführung weiterhin Diff, Tests und Zustand externer Systeme und bestätige, dass das Ergebnis dem Aufgabenziel entspricht.
+
+Die Sandbox gilt ebenso für Unterprozesse und Befehle, die Codex startet. Eine Aktion umgeht die Grenze nicht deshalb, weil sie innerhalb eines Skripts stattfindet.
+
+## Lokale Ausführung und Cloud haben unterschiedliche Grenzen
+
+| Umgebung | Wichtigste Isolierung | Netzwerk | Was du prüfen solltest |
+|---|---|---|---|
+| Lokale Aufgaben in App / CLI / IDE | Sandbox des Betriebssystems und aktuelle Genehmigungsrichtlinie | Lokale Aufgaben sollten sich normalerweise nicht standardmäßig auf externes Netzwerk verlassen; Zugriff ausdrücklich genehmigen oder konfigurieren | Arbeitsbereich, Befehl, externe Pfade und Zweck des Netzwerkzugriffs |
+| Cloud-Aufgabe | Von OpenAI verwalteter isolierter Container | Netzwerk kann für die Setup-Phase konfiguriert werden; in der Agent-Phase ist es standardmäßig deaktiviert, sofern es nicht ausdrücklich aktiviert wird | Repository, Umgebungskonfiguration, erlaubte Domains, zurückgegebener Diff und Verifikationsnachweise |
+
+Secrets einer Cloud-Umgebung werden in der Setup-Phase verwendet und vor Beginn der Agent-Phase entfernt. Verwende weiterhin minimale Berechtigungen und lege keine sachfremden Produktionszugangsdaten in der Aufgabenumgebung ab.
+
+## Genehmigungsanfragen in vier Schritten beurteilen
+
+### 1. Mit der Aufgabe abgleichen
+
+Dient dieser Schritt tatsächlich dem aktuellen Ziel? „Könnte nützlich sein“ reicht als Begründung für eine Genehmigung nicht.
+
+### 2. Mit dem Umfang abgleichen
+
+Greift die Anfrage auf das aktuelle Projekt, ein externes Verzeichnis, das Netzwerk oder eine Systemanwendung zu? Je genauer Pfad, Domain und Befehl sind, desto leichter lässt sich die Anfrage beurteilen.
+
+### 3. Nebenwirkungen abgleichen
+
+Liest die Aktion nur, oder schreibt sie Dateien, installiert Software, sendet Daten oder verändert einen Remote-Zustand? Externe Nebenwirkungen erfordern normalerweise mehr Vorsicht als lokal umkehrbare Änderungen.
+
+### 4. Verifikation und Wiederherstellung abgleichen
+
+Wie lässt sich der Erfolg bestätigen? Kann die Aktion bei einem Fehlschlag rückgängig gemacht werden? Wenn diese Fragen unbeantwortet sind, lass Codex zunächst eine Erklärung oder eine kleinere Alternative liefern.
+
+## Konkretes Beispiel: Abhängigkeiten installieren
+
+Angenommen, Codex möchte Folgendes ausführen:
+
+```bash
+pnpm install
+```
+
+Verlasse dich nicht nur darauf, dass dir der Befehl bekannt vorkommt. Prüfe:
+
+- Benötigt die aktuelle Aufgabe tatsächlich noch nicht installierte Abhängigkeiten?
+- Wird der Befehl im richtigen Repository-Verzeichnis ausgeführt?
+- Auf welches Paket-Repository muss er zugreifen?
+- Ändert er eine Sperrdatei?
+- Welche Tests oder Builds werden nach der Installation ausgeführt?
+
+Wenn du nur vorhandenen Code verifizieren möchtest und die Abhängigkeiten bereits installiert sind, kannst du ablehnen und zuerst die vorhandene Umgebung verwenden lassen.
+
+## Grenzen im Prompt formulieren
+
+Du kannst den Ausführungsbereich direkt in der Aufgabe beschreiben:
+
+```text
+Ändere nur src/auth und tests/auth.
+Verwende zuerst die installierten Abhängigkeiten und greife nicht auf das Netzwerk zu oder aktualisiere Versionen.
+Wenn ein Zugriff auf externe Pfade oder das Netzwerk erforderlich ist, nenne vorher Zweck, Ziel und kleinste mögliche Aktion.
+Führe abschließend pnpm test --filter auth aus und berichte Befehlsausgabe sowie verbleibende Risiken.
+```
+
+Damit ist die Absicht eindeutiger. Die tatsächlichen Ausführungsgrenzen werden weiterhin von Sandbox, Genehmigungsrichtlinie und verwalteter Teamkonfiguration durchgesetzt.
+
+## Häufige Irrtümer
+
+- **Eine Genehmigungsanfrage bedeutet immer Gefahr:** Auch reguläre Installation, Netzwerkzugriff oder Schreiben außerhalb des Projekts können eine Genehmigung erfordern. Entscheidend sind Notwendigkeit und Umfang.
+- **Ohne Dialog ist die Aktion vollständig sicher:** Sie kann bereits innerhalb der Sandbox liegen. Prüfe trotzdem die tatsächlichen Änderungen.
+- **Eine Genehmigung öffnet dauerhaft alles:** Dauer und Umfang hängen von Produkt und Richtlinie ab. Lies die Anfrage genau.
+- **Subagents besitzen eigene Berechtigungen:** Sie erben Sandbox und Berechtigungsmodus der Hauptaufgabe und erhalten nicht automatisch weitergehenden Zugriff.
+- **Hooks ersetzen die Sandbox:** Hooks sind eine zusätzliche Schutz- und Auditebene, kein Ersatz für erzwungene Isolierung durch das Betriebssystem.
+
+Produktspezifische Einstellungen findest du unter [CLI-Genehmigungen und Sandbox](/de/guide/cli/approvals-and-sandbox/) und [Desktop-App-Einstellungen](/de/guide/desktop-app/settings/). Die Aufgabenformulierung behandelt [Einschränkungen und Grenzen](/de/prompts/constraints-and-boundaries/).
 
 ---
 
-**Status:** verified  
-**Geeignete Produkte:** App / CLI / IDE / Cloud  
-**Überprüfungsgrundlage:** OpenAI Developers stellt weiterhin den offiziellen Codex-Einstieg bereit; diese Seite erklärt nur, dass Freigabe, Sandbox und Netzwerkzugriff unterschiedliche Sicherheitsgrenzen sind, und verweist auf Produktkapitel für konkretes Verhalten — ohne aktuelle Defaults oder eine präzise Berechtigungsmatrix zu behaupten.  
-**Zuletzt überprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App / CLI / IDE / Cloud
+
+**Prüfgrundlage:** Mit den aktuellen Codex-Informationen zu Sandbox, Genehmigungen und Sicherheit abgeglichen. Die Seite unterscheidet Ausführungsgrenzen des Betriebssystems, Genehmigungsrichtlinie, Aufgabeneinschränkungen und menschliches Review und beschreibt die unterschiedlichen Netzwerkmodelle für lokale Ausführung und Cloud.
+
+**Zuletzt geprüft:** 2026-08-26

@@ -3,11 +3,12 @@ title: Viết trang hướng dẫn
 description: Cấu trúc, frontmatter và quy ước liên kết chéo cho nội dung sổ tay mới.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 Trang này giải thích cách thêm hoặc viết lại trang **kiểu hướng dẫn** trong `src/content/docs/` (không phải case thuần, không phải bảng tham chiếu thuần).
@@ -49,7 +50,7 @@ Có thể dùng chân trang thống nhất ở cuối (khớp trang hiện có):
 
 ## Cấu trúc khuyến nghị
 
-Chọn mục theo [mẫu tích hợp nguồn ngoài](/docs/planning/external-source-integration.md#6-推荐页面模板), tổ hợp thường gặp:
+Chọn mục theo [mẫu tích hợp nguồn ngoài](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板), tổ hợp thường gặp:
 
 - Trang giải quyết vấn đề gì
 - Phù hợp ai
@@ -113,7 +114,7 @@ Có thể viết theo thứ tự:
 
 ## Kiểm chứng
 
-Trước khi gửi PR, đọc [Kiểm chứng nội dung kỹ thuật](/guide/contributing/verify-technical-content/). Lệnh, giá, quyền và thông tin dễ thay đổi khác phải rà lại.
+Trước khi gửi PR, đọc [Kiểm chứng nội dung kỹ thuật](/vi/guide/contributing/verify-technical-content/). Lệnh, giá, quyền và thông tin dễ thay đổi khác phải rà lại.
 
 Trang hướng dẫn tốt không nằm ở “viết đủ tài liệu”, mà ở chỗ để độc giả lần đầu biết trang vì sao tồn tại, xem gì trước, bước tiếp theo đi đâu.
 

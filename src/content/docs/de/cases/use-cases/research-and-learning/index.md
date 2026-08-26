@@ -3,9 +3,10 @@ title: Recherche und Lernen
 description: Einstieg zu Recherche-, Vergleichs- und Lernfällen mit Quellen — Fokus auf Suche, Zitation und Grenzen der Schlussfolgerung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Der größte Unterschied zwischen Recherche und gewöhnlichem «Fragen und Antworten»:
@@ -14,7 +15,7 @@ Der größte Unterschied zwischen Recherche und gewöhnlichem «Fragen und Antwo
 
 ## Einstieg dieser Gruppe
 
-- [Wettbewerbs-Feature-Matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Wettbewerbs-Feature-Matrix](/de/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## Schwerpunkte dieser Gruppe
 

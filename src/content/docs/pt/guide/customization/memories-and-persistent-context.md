@@ -3,9 +3,10 @@ title: Memórias e Contexto persistente
 description: Como o Codex memoriza preferências e factos entre sessões — capacidades, limites e normas de equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ Por exemplo:
 | Aliases de projeto que repete («backend = `services/api`») | Estado de tarefas de sprint que muda |
 | Factos não sensíveis que pediu explicitamente «por favor, lembre-se» | Normas de equipa que devem estar no Git |
 
-Normas a nível de equipa devem ir para **`AGENTS.md` ou configuração do projeto**, para review e onboarding de novos membros. Ver [Âmbito e prioridade](/guide/customization/agents-md/scope-and-precedence/).
+Normas a nível de equipa devem ir para **`AGENTS.md` ou configuração do projeto**, para review e onboarding de novos membros. Ver [Âmbito e prioridade](/pt/guide/customization/agents-md/scope-and-precedence/).
 
 ## Mal-entendidos habituais
 

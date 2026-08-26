@@ -3,9 +3,10 @@ title: Qu'est-ce que Codex
 description: Expliquer en langage simple ce que Codex peut faire, ce qu'il ne peut pas, et les principaux points d'entrée.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c6582f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 2
 ---
@@ -39,7 +40,7 @@ La documentation produit officielle se trouve sur [OpenAI Codex](https://develop
 | Web / Cloud | Connecter des dépôts, environnements cloud et Tâches de longue durée |
 | Mobile et à distance | Surveillance, Approbations et suivi léger |
 
-Consultez la [comparaison des fonctionnalités](/guide/reference/feature-comparison/) pour un tableau côte à côte. Pour les relations entre concepts, voir la [carte des capacités](/guide/start-here/codex-capability-map/).
+Consultez la [comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) pour un tableau côte à côte. Pour les relations entre concepts, voir la [carte des capacités](/fr/guide/start-here/codex-capability-map/).
 
 ---
 

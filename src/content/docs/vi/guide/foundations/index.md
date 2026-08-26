@@ -3,33 +3,34 @@ title: Khái niệm nền tảng
 description: Xây dựng ngôn ngữ chung về model, Agent, công cụ, quyền và kiểm chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cf898a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
 
-Phần này gom các khái niệm nền tảng mà cả cẩm nang sẽ dùng đi dùng lại. Khác biệt giao diện sản phẩm viết ở [Cẩm nang sản phẩm](/guide/); kỹ thuật Prompt viết ở [Năng lực cốt lõi](/guide/).
+Phần này gom các khái niệm nền tảng mà cả cẩm nang sẽ dùng đi dùng lại. Khác biệt giao diện sản phẩm viết ở [Cẩm nang sản phẩm](/vi/guide/); kỹ thuật Prompt viết ở [Năng lực cốt lõi](/vi/guide/).
 
 Nhóm nội dung này chủ yếu giải thích Codex làm việc thế nào, và cách cộng tác với nó.
 
 ## Bản đồ chương này
 
-1. [AI và mô hình ngôn ngữ](/guide/foundations/ai-and-language-models/)
-2. [Cơ bản về Agent](/guide/foundations/agent-basics/)
-3. [Mục tiêu, ngữ cảnh và hành động](/guide/foundations/goals-context-and-actions/)
-4. [Tệp, công cụ và lệnh](/guide/foundations/files-tools-and-commands/)
-5. [Local và đám mây](/guide/foundations/local-vs-cloud/)
-6. [Thread, tác vụ và dự án](/guide/foundations/threads-tasks-and-projects/)
-7. [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
-8. [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
-9. [Model và suy luận](/guide/foundations/models-and-reasoning/)
-10. [Token, ngữ cảnh và nén](/guide/foundations/tokens-context-and-compaction/)
-11. [Kiểm chứng và rà soát thủ công](/guide/foundations/verification-and-human-review/)
-12. [Hiểu nhầm thường gặp](/guide/foundations/common-misconceptions/)
+1. [AI và mô hình ngôn ngữ](/vi/guide/foundations/ai-and-language-models/)
+2. [Cơ bản về Agent](/vi/guide/foundations/agent-basics/)
+3. [Mục tiêu, ngữ cảnh và hành động](/vi/guide/foundations/goals-context-and-actions/)
+4. [Tệp, công cụ và lệnh](/vi/guide/foundations/files-tools-and-commands/)
+5. [Local và đám mây](/vi/guide/foundations/local-vs-cloud/)
+6. [Thread, tác vụ và dự án](/vi/guide/foundations/threads-tasks-and-projects/)
+7. [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
+8. [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
+9. [Model và suy luận](/vi/guide/foundations/models-and-reasoning/)
+10. [Token, ngữ cảnh và nén](/vi/guide/foundations/tokens-context-and-compaction/)
+11. [Kiểm chứng và rà soát thủ công](/vi/guide/foundations/verification-and-human-review/)
+12. [Hiểu nhầm thường gặp](/vi/guide/foundations/common-misconceptions/)
 
-Đọc xong thì vào [Bắt đầu nhanh](/guide/getting-started/).
+Đọc xong thì vào [Bắt đầu nhanh](/vi/guide/getting-started/).
 
 ## Hiểu nhầm thường gặp
 
@@ -59,11 +60,11 @@ Cách đọc thực dụng hơn:
 
 Nếu không muốn đọc hết cả chương một mạch, có thể đọc trước các trang sau:
 
-1. [Cơ bản về Agent](/guide/foundations/agent-basics/)
-2. [Mục tiêu, ngữ cảnh và hành động](/guide/foundations/goals-context-and-actions/)
-3. [Tệp, công cụ và lệnh](/guide/foundations/files-tools-and-commands/)
-4. [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
-5. [Kiểm chứng và rà soát thủ công](/guide/foundations/verification-and-human-review/)
+1. [Cơ bản về Agent](/vi/guide/foundations/agent-basics/)
+2. [Mục tiêu, ngữ cảnh và hành động](/vi/guide/foundations/goals-context-and-actions/)
+3. [Tệp, công cụ và lệnh](/vi/guide/foundations/files-tools-and-commands/)
+4. [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
+5. [Kiểm chứng và rà soát thủ công](/vi/guide/foundations/verification-and-human-review/)
 
 Hiểu rõ vài trang này đã đủ đỡ việc dùng hàng ngày.
 

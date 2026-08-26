@@ -3,14 +3,15 @@ title: Webhook 개요
 description: HTTP 콜백으로 Codex 작업 상태를 내부 시스템에 연결합니다——이벤트, 서명, 멱등입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**Webhook**은 Codex 또는 Cloud 작업 상태가 바뀔 때 자체 서비스로 HTTP 콜백을 보내, 이슈 갱신, Slack 알림, 내부 승인대 등을 구동하게 합니다. 이 장은 [개발자 플랫폼](/guide/developer-platform/)의 이벤트 통합 입구입니다.
+**Webhook**은 Codex 또는 Cloud 작업 상태가 바뀔 때 자체 서비스로 HTTP 콜백을 보내, 이슈 갱신, Slack 알림, 내부 승인대 등을 구동하게 합니다. 이 장은 [개발자 플랫폼](/ko/guide/developer-platform/)의 이벤트 통합 입구입니다.
 
 ## 이 페이지에서 다루는 내용
 
@@ -54,7 +55,7 @@ Webhook이 더 맞는 경우는 다음과 같습니다.
 | 기존 이벤트 버스와 통합 | 단순 cron으로 `exec` 종료 코드만 필요할 때 |
 | 다단계 오케스트레이션(완료 → 배포 트리거) | 공개 endpoint가 없고 큐도 쓰기 싫을 때 |
 
-단순 파이프라인은 [스크립트와 파이프라인](/guide/developer-platform/non-interactive/scripts-and-pipelines/)만으로도 됩니다. 제품화된 멀티테넌트 서비스는 종종 **SDK + Webhook**을 함께 씁니다.
+단순 파이프라인은 [스크립트와 파이프라인](/ko/guide/developer-platform/non-interactive/scripts-and-pipelines/)만으로도 됩니다. 제품화된 멀티테넌트 서비스는 종종 **SDK + Webhook**을 함께 씁니다.
 
 ## 전형적인 이벤트(개념)
 
@@ -110,7 +111,7 @@ def handle(request):
 
 ## 보안 경계
 
-- [위협 모델](/guide/team-enterprise/security/threat-model/)과 [허용 가능한 사용](/guide/team-enterprise/governance/acceptable-use/)을 보세요
+- [위협 모델](/ko/guide/team-enterprise/security/threat-model/)과 [허용 가능한 사용](/ko/guide/team-enterprise/governance/acceptable-use/)을 보세요
 - webhook secret 로테이션을 운영 캘린더에 넣으세요
 
 ## 검수 체크리스트
@@ -118,7 +119,7 @@ def handle(request):
 - [ ] 서명 검증 실패 시 4xx 반환
 - [ ] 멱등 테이블 또는 dedupe key 구현
 - [ ] 비동기 worker와 DLQ(dead letter)구성
-- [ ] [구조화 출력](/guide/developer-platform/non-interactive/structured-output/) 필드 약속과 일치
+- [ ] [구조화 출력](/ko/guide/developer-platform/non-interactive/structured-output/) 필드 약속과 일치
 
 Webhook은 작업 상태 변화를 다른 시스템에 연결하는 데 맞습니다. 다만 서명 검증, 멱등, 비동기 처리 같은 기초를 먼저 갖추세요.
 

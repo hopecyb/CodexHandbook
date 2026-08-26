@@ -3,9 +3,10 @@ title: Planificación
 description: Haz que Codex explique primero pasos, riesgos y verificación antes de decidir si ejecutar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75099ef
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -94,7 +95,7 @@ Primero no cambies archivos. Da un plan basado en el repositorio actual, con:
 5. Cómo verificar cada paso
 ```
 
-Una formulación más completa está en [Pedir un plan](/prompts/ask-for-a-plan/).
+Una formulación más completa está en [Pedir un plan](/es/prompts/ask-for-a-plan/).
 
 ## Qué revisas
 
@@ -129,7 +130,7 @@ Un hábito de colaboración importante es separar ambos:
 - **Fase de plan**: se permite explorar, listar opciones y exponer incertidumbre
 - **Fase de ejecución**: avanzar por la ruta ya confirmada
 
-Si durante la ejecución cambia la premisa, vuelve al plan; no fuerces. Ver [Progreso y reorientación](/guide/agent-work/progress-and-steering/).
+Si durante la ejecución cambia la premisa, vuelve al plan; no fuerces. Ver [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/).
 
 ## En tareas de alto riesgo, añade tres puntos
 
@@ -152,10 +153,10 @@ Pide el plan por fases: análisis solo lectura, cambio mínimo, verificación y 
 
 ## Combinaciones recomendadas
 
-- Necesitas la cadena principal completa: ver [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- Necesitas formular bien el prompt: ver [Pedir un plan](/prompts/ask-for-a-plan/)
-- Necesitas corregir a mitad de camino: ver [Progreso y reorientación](/guide/agent-work/progress-and-steering/)
-- Necesitas normas a largo plazo: ver [Qué es AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
+- Necesitas la cadena principal completa: ver [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
+- Necesitas formular bien el prompt: ver [Pedir un plan](/es/prompts/ask-for-a-plan/)
+- Necesitas corregir a mitad de camino: ver [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/)
+- Necesitas normas a largo plazo: ver [Qué es AGENTS.md](/es/guide/customization/agents-md/what-is-agents-md/)
 
 ---
 

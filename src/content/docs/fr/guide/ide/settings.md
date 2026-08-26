@@ -1,121 +1,67 @@
 ---
-title: Paramètres de l'extension IDE
-description: Modèle, Approbations, Contexte et configuration du comportement de l'extension dans l'IDE.
+title: Paramètres de l'intégration IDE
+description: Distinguer la configuration partagée de l'Agent des paramètres de comportement des éditeurs de la famille VS Code.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d4a3506
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 80
 ---
 
-Les paramètres de l'extension IDE relient **préférences personnelles** et **règles de projet** : quel modèle, rigueur des Approbations, attachement automatique des fichiers ouverts, etc. Aligné avec [Bases de configuration](/guide/customization/configuration/config-basics/) globales ; cette page se concentre sur les options éditeur courantes.
+Les paramètres de l'IDE comportent deux couches :
 
-## Ce qui est couvert
-
-- Paramètres IDE vs config utilisateur vs `AGENTS.md`
-- Paramètres que les développeurs ajustent le plus souvent
-- Comment les équipes alignent les valeurs par défaut
-
-## Ce que contrôlent ces paramètres
-
-Les paramètres IDE sont plus proches de : **habitudes par défaut quand Codex travaille avec vous dans l'éditeur**.
-
-Ils répondent à des questions comme :
-
-- Modèle par défaut
-- Rigueur d'Approbation par défaut
-- Attacher automatiquement fichier et sélection actuels
-
-Ils ne définissent pas les règles de projet — ils façonnent si l'éditeur paraît fluide et prévisible.
-
-## Couches de configuration (rappel)
-
-| Couche | Exemples | Priorité |
+| Couche | Emplacement | Contrôle |
 |---|---|---|
-| Politique gérée org | Interdire d'assouplir le Bac à sable | La plus haute |
-| `AGENTS.md` projet / config projet | Commandes de test, conventions de répertoire | Élevée |
-| Interface paramètres extension IDE | Modèle par défaut, disposition du panneau | Moyenne |
-| Prompt de Tâche unique | « Pas de réseau cette fois » | Niveau Tâche |
+| Paramètres de l'Agent Codex | `config.toml` | Modèle, effort de raisonnement, autorisations, bac à sable, MCP et personnalisation ; partagés avec la CLI |
+| Paramètres de l'éditeur | Paramètres VS Code sous `chatgpt.*` | Barre latérale, mise en file des messages, touche d'envoi, affichage de la révision, langue et polices |
 
-Voir [portée et priorité](/guide/customization/agents-md/scope-and-precedence/)
+Conservez les règles du dépôt dans `AGENTS.md`, et non dans les paramètres personnels d'un éditeur.
 
-## Idées reçues courantes
+## Ouvrir les paramètres
 
-### Les paramètres IDE ne sont pas les standards de projet
+Sélectionnez l'engrenage dans la barre latérale Codex, puis **Codex Settings**. Modifiez les options courantes de l'Agent dans le panneau ou sélectionnez **Open config.toml** pour modifier la couche de configuration active.
 
-Ne confondez pas « comment j'aime configurer mon éditeur » avec « comment ce projet doit fonctionner ».
+Pour changer le comportement de l'éditeur, recherchez `@ext:openai.chatgpt`, `Codex` ou une clé précise dans ses paramètres.
 
-- Paramètres éditeur → UX personnelle
-- `AGENTS.md` et config projet → accord d'équipe
+## Paramètres à comprendre en priorité
 
-Liés mais pas identiques.
+| Clé | Valeur par défaut | Quand la modifier |
+|---|---:|---|
+| `chatgpt.openOnStartup` | `false` | Vous voulez que l'extension place la barre latérale au premier plan au démarrage |
+| `chatgpt.followUpQueueMode` | `queue` | Définissez `steer` pour qu'un nouveau message réoriente l'exécution en cours |
+| `chatgpt.composerEnterBehavior` | `enter` | Les prompts multilignes sont souvent envoyés accidentellement |
+| `chatgpt.reviewDelivery` | `inline` | Définissez `detached` pour afficher `/review` dans une conversation distincte |
+| `chatgpt.localeOverride` | automatique | Vous avez besoin d'une langue d'interface fixe |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | Le dépôt et la chaîne d'outils se trouvent dans WSL2 |
 
-### Plus de Contexte automatique n'est pas toujours mieux
+`chatgpt.cliExecutable` est destiné au développement de Codex CLI. Les utilisateurs ordinaires ne doivent pas remplacer l'exécutable inclus avec l'extension ; certaines fonctions pourraient cesser de fonctionner.
 
-Attacher automatiquement fichier actuel, sélection et onglets aide jusqu'à diluer la focalisation de la Tâche.
+## Comprendre la priorité des configurations
 
-« Assez » bat « tout ouvrir ».
+- La politique de l'organisation fixe des limites qui ne peuvent pas être dépassées.
+- `config.toml` définit les valeurs par défaut de l'Agent.
+- `AGENTS.md` fournit les règles du dépôt et des répertoires.
+- Les paramètres de l'éditeur modifient uniquement l'expérience dans l'IDE.
+- Un prompt ponctuel ajoute l'objectif et les limites de la tâche en cours.
 
-## Paramètres couramment ajustés (conceptuels)
+Si un paramètre semble sans effet, identifiez la couche que vous avez modifiée et vérifiez si une politique de niveau supérieur la contraint. Consultez [Périmètre et priorité](/fr/guide/customization/agents-md/scope-and-precedence/) pour le modèle complet.
 
-### Modèle et raisonnement
+## Vérifier les modifications
 
-Affecte vitesse vs qualité sur les Tâches difficiles. Les équipes peuvent noter le niveau de modèle recommandé dans le README pour que tout le monde ne débogue pas des valeurs par défaut différentes.
+Ne modifiez qu'une catégorie de paramètres à la fois. Par exemple, après avoir défini `chatgpt.reviewDelivery` sur `detached`, exécutez `/review` dans un dépôt Git et vérifiez qu'une conversation de révision distincte s'ouvre. Notez l'ancienne valeur, rétablissez-la si le comportement est inattendu, puis rechargez l'éditeur.
 
-### Approbations et Bac à sable
+## Sources officielles
 
-Correspond à [permissions et Approbations](/guide/foundations/permissions-and-approvals/) :
+- [Paramètres de Codex IDE](https://learn.chatgpt.com/docs/ide/settings)
+- [Principes de configuration](https://learn.chatgpt.com/docs/config)
 
-- Débutants : garder défaut ou plus strict
-- Dépôts de confiance : assouplir prudemment ; ne pas mélanger avec répertoires de secrets de production
-
-CLI et IDE devraient partager la **même base de sécurité** ; CLI : [Configuration CLI](/guide/cli/configuration/).
-
-### Comportement du Contexte
-
-Certaines extensions configurent :
-
-- Inclure automatiquement fichier / sélection actuels
-- Lire `AGENTS.md`
-- Options de fenêtre de Contexte (selon version)
-
-Trop de Contexte auto ajoute du bruit ; voir [garder le Contexte focalisé](/guide/context/keep-context-focused/).
-
-### Connexion et compte
-
-Partagé avec [connexion et authentification](/guide/getting-started/sign-in-and-authentication/) ; redémarrer la session d'extension après changement de compte.
-
-## Alignement d'équipe
-
-1. Mettre les éléments **à respecter obligatoirement** dans le dépôt (`AGENTS.md` + config projet optionnelle)
-2. Garder les **habitudes personnelles** dans les paramètres IDE — pas dans Git
-3. Intégration nouveau membre : vérifier la version d'extension selon [Installation IDE](/guide/ide/installation/)
-
-## Focus première fois
-
-À la première configuration, vérifiez trois catégories :
-
-1. Modèle et niveau de raisonnement
-2. Approbation / sécurité
-3. Contexte automatique
-
-Les ajuster couvre la plupart des frictions réelles.
-
-## Dépannage
-
-| Symptôme | Vérifier |
-|---|---|
-| Paramètres non appliqués | Override politique org ? Recharger la fenêtre ? |
-| Diffère de la CLI | Comparer [référence de configuration](/guide/reference/configuration-reference/) |
-| Extension non réactive | [Dépannage IDE](/guide/ide/troubleshooting/) |
-
-Les paramètres IDE sont comment vous et Codex coopérez dans l'éditeur ; les règles de projet sont une couche séparée — ne les mélangez pas.
-
-## Références
-- Paramètres IDE OpenAI Codex
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** IDE  
-**Note de revue :** Cette page couvre entrées de paramètres IDE, Contexte auto, préférences d'Approbation et overrides org — noms et interface changent souvent ; manque de doc officielle forte sur les paramètres pour supporter toute la page.  
-**Dernière vérification :** 2026-07-26
+**Statut :** vérifié
+
+**Produits concernés :** IDE
+
+**Dernière vérification :** 2026-08-26

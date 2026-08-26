@@ -3,12 +3,13 @@ title: 먼저 브레인스토밍한 뒤 손대기
 description: 코드나 긴 글을 쓰기 전에, 구조화된 탐색으로 방안을 수렴합니다—재작업을 줄입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**먼저 브레인스토밍한 뒤 손대기**는 목표가 모호하고 방안이 둘 이상인 작업에 적합합니다: 새 기능, 개편, 콘텐츠 주제, 기술 선정. [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)의 ①탐색 단계와 이어지지만, 코드를 바로 읽고 파일을 고치기보다 **발산과 수렴**을 더 강조합니다.
+**먼저 브레인스토밍한 뒤 손대기**는 목표가 모호하고 방안이 둘 이상인 작업에 적합합니다: 새 기능, 개편, 콘텐츠 주제, 기술 선정. [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)의 ①탐색 단계와 이어지지만, 코드를 바로 읽고 파일을 고치기보다 **발산과 수렴**을 더 강조합니다.
 
 ## 이 글이 해결하는 문제
 
@@ -43,7 +44,7 @@ translated_at: 2026-07-28
 
 **단계 C — 계획으로 진입**
 
-확인 후 [스펙 주도](/cases/workflows/specification-driven-work/) 또는 EPXV의 ②계획으로 이어갑니다.
+확인 후 [스펙 주도](/ko/cases/workflows/specification-driven-work/) 또는 EPXV의 ②계획으로 이어갑니다.
 
 ## 권장 워크플로
 
@@ -78,9 +79,9 @@ translated_at: 2026-07-28
 
 ## 관련 장
 
-- [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)
-- [스펙 주도 작업](/cases/workflows/specification-driven-work/)
-- [계획 요청하기](/prompts/ask-for-a-plan/)
+- [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)
+- [스펙 주도 작업](/ko/cases/workflows/specification-driven-work/)
+- [계획 요청하기](/ko/prompts/ask-for-a-plan/)
 
 ---
 

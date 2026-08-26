@@ -27,7 +27,7 @@
 - `05` 中 `files-and-artifacts/` 与未列入精简子集的 tools/agent-work 页
 - `examples/`、完整 taxonomy、多语言译文、站点自动化工具
 
-后续里程碑见仓库根目录 [`ROADMAP.md`](../../ROADMAP.md)。
+后续里程碑见 [`content-expansion-plan.md`](content-expansion-plan.md)。
 
 ## 4. 权威归属（一句话）
 

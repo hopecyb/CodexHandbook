@@ -3,9 +3,10 @@ title: Qué es Codex
 description: Explica en lenguaje sencillo qué puede y qué no puede hacer Codex, y cuáles son sus entradas principales.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c6582f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 2
 ---
@@ -81,7 +82,7 @@ El flujo suele ser así:
 4. Al terminar, te dice qué cambió
 5. Tú compruebas si el resultado cumple lo esperado
 
-Un ejemplo completo de este flujo está en [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/).
+Un ejemplo completo de este flujo está en [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/).
 
 ## Entradas principales
 
@@ -93,7 +94,7 @@ Un ejemplo completo de este flujo está en [Ejecuta tu primera Tarea](/guide/get
 | Web / Cloud | Conectar repositorios, entornos cloud y Tareas largas |
 | Móvil y remoto | Supervisar, aprobar y hacer seguimiento ligero |
 
-Tabla comparativa: [Comparación de funciones](/guide/reference/feature-comparison/). Relaciones de conceptos: [Mapa de capacidades](/guide/start-here/).
+Tabla comparativa: [Comparación de funciones](/es/guide/reference/feature-comparison/). Relaciones de conceptos: [Mapa de capacidades](/es/guide/start-here/).
 
 ## Siguiente paso
 
@@ -105,9 +106,9 @@ Si solo quieres retener tres ideas:
 
 Páginas relacionadas:
 
-1. [Elige un cliente de Codex](/guide/choose-your-client/)
-2. [Terminología para principiantes](/guide/start-here/terminology-for-beginners/)
-3. [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/)
+1. [Elige un cliente de Codex](/es/guide/choose-your-client/)
+2. [Terminología para principiantes](/es/guide/start-here/terminology-for-beginners/)
+3. [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/)
 
 ---
 

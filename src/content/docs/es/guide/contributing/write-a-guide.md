@@ -3,11 +3,12 @@ title: Escribir una página de guía
 description: Estructura, frontmatter y convenciones de enlaces cruzados para el cuerpo nuevo del manual.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 Esta página explica cómo añadir o reescribir páginas de tipo **guía** en `src/content/docs/` (no casos puros ni tablas de referencia puras).
@@ -49,7 +50,7 @@ Opcionalmente, al final del texto, un pie unificado (como en las páginas existe
 
 ## Estructura recomendada
 
-Elige secciones según la [plantilla de integración de fuentes externas](/docs/planning/external-source-integration.md#6-推荐页面模板); combinaciones habituales:
+Elige secciones según la [plantilla de integración de fuentes externas](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板); combinaciones habituales:
 
 - Qué problema resuelve la página
 - Para quién sirve
@@ -113,7 +114,7 @@ Puedes escribir en este orden:
 
 ## Verificación
 
-Antes del PR, lee [Verificar contenido técnico](/guide/contributing/verify-technical-content/). Información variable como comandos, precios y permisos debe revalidarse.
+Antes del PR, lee [Verificar contenido técnico](/es/guide/contributing/verify-technical-content/). Información variable como comandos, precios y permisos debe revalidarse.
 
 Una buena página de guía no consiste en «escribir todo el material», sino en que quien llega por primera vez sepa por qué existe la página, qué mirar primero y hacia dónde ir después.
 

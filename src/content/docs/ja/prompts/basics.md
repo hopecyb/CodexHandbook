@@ -3,9 +3,10 @@ title: プロンプトの基礎
 description: 良いプロンプトの基本構成要素。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 プロンプトを学び始めると、「表現が上級かどうか」に意識が向きがちです。  
@@ -98,7 +99,7 @@ Codex にとって重要なのは、次のことが明確かどうかです。
 
 良いプロンプトの核心は、推測・逸脱・越境を減らすことです。
 
-例は [最初のタスクを実行する](/cases/first-task/) と [タスクの構造](/prompts/task-anatomy/) を参照。
+例は [最初のタスクを実行する](/ja/cases/first-task/) と [タスクの構造](/ja/prompts/task-anatomy/) を参照。
 
 ---
 

@@ -3,9 +3,10 @@ title: プロンプトのアンチパターン
 description: 避けるべき曖昧さ、権限の逸脱、隠れた推論の要求。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 プロンプトを学ぶと「どう書くか」に意識が行きがちですが、どの言い回しがタスクを外しやすいかを先に知る方が遠回りしにくいです。

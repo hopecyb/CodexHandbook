@@ -3,9 +3,10 @@ title: Desktop-App Fehlerbehebung
 description: Häufige Behandlung bei Installation, Anmeldung und Aufgabenfehlern.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ca74b6c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -20,7 +21,7 @@ Bei der Fehlerbehebung zuerst die wahrscheinlichsten und einfachsten Ursachen pr
 | Aufgabe wartet dauernd auf Freigabe | In die Aufgabenansicht zurück und ausstehende Freigaben bearbeiten |
 | Änderungen passen nicht | Einschränkungen verschärfen, neuen Thread starten, Kontext prüfen |
 
-Weiterhin fehlgeschlagen: [https://developers.openai.com/codex](https://developers.openai.com/codex) und [Fehlerbehebungsindex](/guide/reference/troubleshooting/).
+Weiterhin fehlgeschlagen: [https://developers.openai.com/codex](https://developers.openai.com/codex) und [Fehlerbehebungsindex](/de/guide/reference/troubleshooting/).
 
 ## Häufige Missverständnisse
 

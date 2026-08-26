@@ -3,9 +3,10 @@ title: Prompt cho tác vụ dài
 description: Tách giai đoạn, checkpoint và thông tin bàn giao.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Tác vụ dài thường thất bại theo các cách này:
@@ -75,7 +76,7 @@ Giai đoạn 4: Tóm tắt thay đổi, rủi ro và đề xuất tiếp theo
 
 Cách phù hợp hơn là mỗi đoạn có thể dừng để kiểm, chứ không làm một mạch đến hết.
 
-Kết hợp: [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/) · [Bàn giao và phục hồi](/guide/agent-work/handoff-and-resume/)
+Kết hợp: [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/) · [Bàn giao và phục hồi](/vi/guide/agent-work/handoff-and-resume/)
 
 ---
 

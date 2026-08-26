@@ -3,9 +3,10 @@ title: 로컬과 클라우드
 description: 로컬 작업과 Cloud 작업의 적합한 장면을 비교합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ Codex를 먼저 쓰기만 원한다면, 보통 **로컬**이 더 수월합니다
 - 원격 저장소·원격 자원에 연결해야 함
 - 로컬을 점유하고 싶지 않음
 
-많은 초보자는 **로컬 + 데스크톱 App**부터 시작합니다. Cloud 세부는 [Web과 Cloud 개요](/guide/web-and-cloud/)를 보세요. App에서 전환은 [로컬과 클라우드 작업](/guide/desktop-app/local-and-cloud-tasks/)을 보세요.
+많은 초보자는 **로컬 + 데스크톱 App**부터 시작합니다. Cloud 세부는 [Web과 Cloud 개요](/ko/guide/web-and-cloud/)를 보세요. App에서 전환은 [로컬과 클라우드 작업](/ko/guide/desktop-app/local-and-cloud-tasks/)을 보세요.
 
 로컬은 흐름을 이해하고 작은 것을 고치는 데 더 맞습니다. 클라우드는 더 길고·더 표준화되고·원격 협업이 많은 작업에 더 맞습니다.
 

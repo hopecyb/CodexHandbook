@@ -3,9 +3,10 @@ title: Demander un plan d'abord
 description: Avant que Codex n'agisse, faites-lui exposer les étapes, les risques et la validation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup de problèmes ne viennent pas de l'impossibilité de faire, mais d'un **démarrage trop rapide**. Un « aide-moi à corriger » mélange souvent exploration, plan et exécution — et vous ne validez qu'en regardant le diff.
@@ -108,7 +109,7 @@ C'est souvent plus économe en contexte que « recommence ».
 | aide à découper en sous-tâches | plusieurs objectifs se mélangent |
 | la validation est visible à l'avance | on pense aux tests à la fin |
 
-Beaucoup de workflows séparent « exploration » et « plan ». Voir [Explorer — planifier — exécuter — vérifier](/cases/workflows/explore-plan-execute-verify/).
+Beaucoup de workflows séparent « exploration » et « plan ». Voir [Explorer — planifier — exécuter — vérifier](/fr/cases/workflows/explore-plan-execute-verify/).
 
 ## Problèmes fréquents des plans
 
@@ -126,10 +127,10 @@ Un bon plan admet l'incertitude au lieu de prétendre que tout est acquis.
 
 ## Combinaisons recommandées
 
-- chaîne d'exécution formelle : [Planification](/guide/agent-work/planning/)
-- plan réutilisable : [Anatomie d'une tâche](/prompts/task-anatomy/)
-- corriger en cours de route : [Progression et pilotage](/guide/agent-work/progress-and-steering/)
-- définir l'acceptation : [Définir le terminé](/prompts/define-done/)
+- chaîne d'exécution formelle : [Planification](/fr/guide/agent-work/planning/)
+- plan réutilisable : [Anatomie d'une tâche](/fr/prompts/task-anatomy/)
+- corriger en cours de route : [Progression et pilotage](/fr/guide/agent-work/progress-and-steering/)
+- définir l'acceptation : [Définir le terminé](/fr/prompts/define-done/)
 
 ## Convention d'équipe utile
 

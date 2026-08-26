@@ -3,9 +3,10 @@ title: Webhooks
 description: イベントトリガー統合の説明ページ——Webhook は通知を受け取る。ワークフロー設計の代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b718fb3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `Webhook` は抽象的に聞こえますが、単純に言えば**何かが起きたとき、システムがあなたに通知を送る**仕組みです。
@@ -14,7 +15,7 @@ Codex 統合では「外部イベントが来たら、後続フローをどう�
 
 ## 本グループの入口
 
-- [Webhook 概要](/guide/developer-platform/webhooks/overview/)
+- [Webhook 概要](/ja/guide/developer-platform/webhooks/overview/)
 
 ## 本グループの内容
 

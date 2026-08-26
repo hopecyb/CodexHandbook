@@ -3,9 +3,10 @@ title: チームパス（概要）
 description: チーム導入関連ルートの概要。詳細ステップは今後追加します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -22,9 +23,9 @@ sidebar:
 
 ## 今読める内容
 
-- [権限と承認](/guide/foundations/permissions-and-approvals/)
-- [機密コンテキスト](/guide/context/sensitive-context/)
-- [完了の定義](/guide/quality/definition-of-done/)
+- [権限と承認](/ja/guide/foundations/permissions-and-approvals/)
+- [機密コンテキスト](/ja/guide/context/sensitive-context/)
+- [完了の定義](/ja/guide/quality/definition-of-done/)
 
 ## よくある誤解
 
@@ -53,11 +54,11 @@ sidebar:
 
 チーム視点で推進する準備ができている場合は、次の順序で読めます。
 
-1. [権限と承認](/guide/foundations/permissions-and-approvals/)
-2. [機密コンテキスト](/guide/context/sensitive-context/)
-3. [パーソナライズとプロジェクト設定](/guide/customization/)
-4. [完了の定義](/guide/quality/definition-of-done/)
-5. [チームとエンタープライズ](/guide/team-enterprise/)
+1. [権限と承認](/ja/guide/foundations/permissions-and-approvals/)
+2. [機密コンテキスト](/ja/guide/context/sensitive-context/)
+3. [パーソナライズとプロジェクト設定](/ja/guide/customization/)
+4. [完了の定義](/ja/guide/quality/definition-of-done/)
+5. [チームとエンタープライズ](/ja/guide/team-enterprise/)
 
 このパスは、境界、ルール、検収を重視し、まず利用量を増やすことを優先しません。
 

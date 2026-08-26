@@ -3,9 +3,10 @@ title: Referencia de errores y mensajes
 description: Índice de aprendizaje de mensajes de error habituales, códigos de salida y causas de fallo — apunta a páginas de diagnóstico; no sustituye el soporte oficial.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -24,14 +25,14 @@ Ante un error, haz primero estos tres pasos:
 
 Suele ser más rápido que adivinar la causa.
 
-Índice global: [Diagnóstico](/guide/reference/troubleshooting/)
+Índice global: [Diagnóstico](/es/guide/reference/troubleshooting/)
 
 ## Autenticación y cuenta
 
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
-| Authentication failed / 401 | Token caducado, sin iniciar sesión | [Iniciar sesión y autenticación](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | La organización desactiva la función o el modelo | Contacta al administrador; mira el plan en [Cuenta y acceso](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | Token caducado, sin iniciar sesión | [Iniciar sesión y autenticación](/es/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | La organización desactiva la función o el modelo | Contacta al administrador; mira el plan en [Cuenta y acceso](/es/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Demasiadas peticiones o cuota | Reintenta más tarde; mira el uso del plan |
 
 ## Malentendidos frecuentes
@@ -69,9 +70,9 @@ A veces la última línea solo es el «resumen final del fallo»; la informació
 
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
-| command not found: codex | No instalado o PATH | [Instalar CLI](/guide/getting-started/install-cli/) |
-| Config parse error | Sintaxis TOML/YAML | [Configuración del CLI](/guide/cli/configuration/) |
-| Permission denied (write) | Sandbox o Aprobación rechazada | [Aprobaciones y Sandbox](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | No instalado o PATH | [Instalar CLI](/es/guide/getting-started/install-cli/) |
+| Config parse error | Sintaxis TOML/YAML | [Configuración del CLI](/es/guide/cli/configuration/) |
+| Permission denied (write) | Sandbox o Aprobación rechazada | [Aprobaciones y Sandbox](/es/guide/cli/approvals-and-sandbox/) |
 | Código de salida distinto de cero (exec) | Fallo de Tarea o criterio de finalización no cumplido | Mira logs de stderr; endurece el Prompt |
 
 ## Clasifica primero
@@ -111,23 +112,23 @@ Si aún no sabes a dónde mirar, usa esta página para clasificar el problema en
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
 | User rejected tool call | Tú o la política rechazasteis la operación | Confirma si debía Aprobarse; o cambia la Tarea |
-| Sandbox violation | Ruta de escritura o comando fuera de alcance | [Sandbox y red](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Salida a red prohibida | Cloud: [Acceso a internet](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | Ruta de escritura o comando fuera de alcance | [Sandbox y red](/es/guide/foundations/sandbox-and-network/) |
+| Network access denied | Salida a red prohibida | Cloud: [Acceso a internet](/es/guide/web-and-cloud/internet-access/) |
 
 ## Cloud y GitHub
 
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
-| Repository access denied | Alcance OAuth insuficiente | [Conectar GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Nombre del repo, Permiso, red | [Diagnóstico de Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Nombre incorrecto o alcance | [Secrets y variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Protección de ramas | [Crear PR](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Alcance OAuth insuficiente | [Conectar GitHub](/es/guide/web-and-cloud/connect-github/) |
+| Clone failed | Nombre del repo, Permiso, red | [Diagnóstico de Cloud](/es/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Nombre incorrecto o alcance | [Secrets y variables](/es/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Protección de ramas | [Crear PR](/es/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP y extensiones
 
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
-| MCP server failed to start | Ruta del comando, dependencias que faltan | [Conectar MCP](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | Ruta del comando, dependencias que faltan | [Conectar MCP](/es/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | API externa lenta o caída | Reintentar; mirar logs de MCP |
 | Unknown tool | Configuración y versión del servidor inconsistentes | Reiniciar la sesión; actualizar la configuración |
 
@@ -135,14 +136,14 @@ Si aún no sabes a dónde mirar, usa esta página para clasificar el problema en
 
 | Mensaje o fenómeno | Posible causa | Siguiente paso |
 |---|---|---|
-| Context length exceeded | Conversación o archivos @ demasiado grandes | [Compactación](/guide/context/compaction/) · reducir el alcance |
-| Model not available | Región o plan no lo soporta | [Modelos y razonamiento](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Conversación o archivos @ demasiado grandes | [Compactación](/es/guide/context/compaction/) · reducir el alcance |
+| Model not available | Región o plan no lo soporta | [Modelos y razonamiento](/es/guide/foundations/models-and-reasoning/) |
 
 ## Cómo usar esta página
 
 1. **Copia la frase clave** a la búsqueda del cliente o de este manual
 2. Salta por la tabla a la página temática y ejecuta la lista de comprobación
-3. Si sigue sin resolverse: conserva el log completo y mira [Recursos oficiales](/guide/reference/official-resources/)
+3. Si sigue sin resolverse: conserva el log completo y mira [Recursos oficiales](/es/guide/reference/official-resources/)
 
 ## Al reportar un problema, esto ayuda más
 

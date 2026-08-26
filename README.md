@@ -39,6 +39,8 @@
   ·
   <a href="./docs/planning/content-architecture.md">内容架构</a>
   ·
+  <a href="./STYLE_GUIDE.md">写作规范</a>
+  ·
   <a href="./examples/README.md">示例库</a>
 </p>
 
@@ -117,6 +119,8 @@
 | [Examples](./examples/README.md) | 直接复用提示词与示例资产 |
 | [内容架构](./docs/planning/content-architecture.md) | 快速理解整站信息设计 |
 | [章节大纲](./docs/planning/chapter-outline.md) | 查看主题覆盖范围 |
+| [写作与视觉规范](./STYLE_GUIDE.md) | 统一中文表达、示例、事实核验和图示标准 |
+| [参与贡献](./CONTRIBUTING.md) | 提交教程、案例、图示和翻译的工作流 |
 
 ## 内容结构
 
@@ -172,6 +176,8 @@ pnpm build
 
 如果你想参与内容建设，可以先看：
 
+- [参与贡献](./CONTRIBUTING.md)
+- [写作与视觉规范](./STYLE_GUIDE.md)
 - [示例库说明](./examples/README.md)
 - [内容架构](./docs/planning/content-architecture.md)
 - [章节大纲](./docs/planning/chapter-outline.md)

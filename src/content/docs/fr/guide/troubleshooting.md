@@ -5,9 +5,10 @@ sidebar:
   order: 18
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Si quelque chose est déjà cassé mais que vous ne savez pas dans quelle catégorie cela tombe, commencez ici.
@@ -24,12 +25,12 @@ Pas besoin de diagnostiquer CLI vs IDE vs Cloud vs permissions vs Prompt d'abord
 
 | Symptôme | Aller vers |
 |---|---|
-| Échec d'installation | [Dépannage bureau](/guide/desktop-app/troubleshooting/) · [Dépannage CLI](/guide/cli/troubleshooting/) · [Dépannage IDE](/guide/ide/troubleshooting/) |
-| Échec connexion/auth | [Connexion](/guide/getting-started/sign-in-and-authentication/) |
-| Client incertain | [Choisir votre client](/guide/choose-your-client/) · [Comparaison des fonctionnalités](/guide/reference/feature-comparison/) |
-| Résultats mauvais ou hors périmètre | [Cas première Tâche](/cases/first-task/) · [Débogage de Prompt](/prompts/prompt-debugging/) · [Annuler](/guide/getting-started/undo-and-recover/) |
-| Confusion de Contexte | [Garder le Contexte focalisé](/guide/context/keep-context-focused/) |
-| Questions permissions/Bac à sable | [Permissions et Bac à sable](/guide/permissions-and-sandbox/) |
+| Échec d'installation | [Dépannage bureau](/fr/guide/desktop-app/troubleshooting/) · [Dépannage CLI](/fr/guide/cli/troubleshooting/) · [Dépannage IDE](/fr/guide/ide/troubleshooting/) |
+| Échec connexion/auth | [Connexion](/fr/guide/getting-started/sign-in-and-authentication/) |
+| Client incertain | [Choisir votre client](/fr/guide/choose-your-client/) · [Comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) |
+| Résultats mauvais ou hors périmètre | [Cas première Tâche](/fr/cases/first-task/) · [Débogage de Prompt](/fr/prompts/prompt-debugging/) · [Annuler](/fr/guide/getting-started/undo-and-recover/) |
+| Confusion de Contexte | [Garder le Contexte focalisé](/fr/guide/context/keep-context-focused/) |
+| Questions permissions/Bac à sable | [Permissions et Bac à sable](/fr/guide/permissions-and-sandbox/) |
 
 ## Quand vous ne savez pas où chercher
 
@@ -60,7 +61,7 @@ Mieux vaut souvent faire une pause, classer le problème, puis ouvrir une page c
 
 Triage avant réparation.
 
-Plus de référence : [FAQ](/guide/reference/faq/) · [Référence des erreurs](/guide/reference/error-reference/) · [Docs officielles Codex](https://developers.openai.com/codex)
+Plus de référence : [FAQ](/fr/guide/reference/faq/) · [Référence des erreurs](/fr/guide/reference/error-reference/) · [Docs officielles Codex](https://developers.openai.com/codex)
 
 ---
 

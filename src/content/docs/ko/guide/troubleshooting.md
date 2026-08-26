@@ -5,9 +5,10 @@ sidebar:
   order: 18
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 이미 문제가 생겼지만 어느 종류인지 모르겠다면, 이 페이지에서 시작하세요.
@@ -24,12 +25,12 @@ translated_at: 2026-07-28
 
 | 증상 | 이동 |
 |---|---|
-| 설치 실패 | [데스크톱 문제 해결](/guide/desktop-app/troubleshooting/) · [CLI 문제 해결](/guide/cli/troubleshooting/) · [IDE 문제 해결](/guide/ide/troubleshooting/) |
-| 로그인/인증 실패 | [로그인](/guide/getting-started/sign-in-and-authentication/) |
-| 어떤 클라이언트를 고를지 모름 | [클라이언트 선택](/guide/choose-your-client/) · [기능 비교](/guide/reference/feature-comparison/) |
-| 결과가 범위를 넘거나 매우 나쁨 | [첫 작업 사례](/cases/first-task/) · [프롬프트 디버깅](/prompts/prompt-debugging/) · [실행 취소](/guide/getting-started/undo-and-recover/) |
-| 컨텍스트가 혼란스러움 | [초점 유지](/guide/context/keep-context-focused/) |
-| 권한/샌드박스 의문 | [권한과 샌드박스](/guide/permissions-and-sandbox/) |
+| 설치 실패 | [데스크톱 문제 해결](/ko/guide/desktop-app/troubleshooting/) · [CLI 문제 해결](/ko/guide/cli/troubleshooting/) · [IDE 문제 해결](/ko/guide/ide/troubleshooting/) |
+| 로그인/인증 실패 | [로그인](/ko/guide/getting-started/sign-in-and-authentication/) |
+| 어떤 클라이언트를 고를지 모름 | [클라이언트 선택](/ko/guide/choose-your-client/) · [기능 비교](/ko/guide/reference/feature-comparison/) |
+| 결과가 범위를 넘거나 매우 나쁨 | [첫 작업 사례](/ko/cases/first-task/) · [프롬프트 디버깅](/ko/prompts/prompt-debugging/) · [실행 취소](/ko/guide/getting-started/undo-and-recover/) |
+| 컨텍스트가 혼란스러움 | [초점 유지](/ko/guide/context/keep-context-focused/) |
+| 권한/샌드박스 의문 | [권한과 샌드박스](/ko/guide/permissions-and-sandbox/) |
 
 ## 어디서부터 볼지 모를 때의 분류
 
@@ -60,7 +61,7 @@ translated_at: 2026-07-28
 
 문제 해결은 먼저 분류하는 일이지, 당장 고치기부터가 아닙니다.
 
-더 보기: [FAQ](/guide/reference/faq/) · [오류 참고](/guide/reference/error-reference/) · [공식 Codex 문서](https://developers.openai.com/codex)
+더 보기: [FAQ](/ko/guide/reference/faq/) · [오류 참고](/ko/guide/reference/error-reference/) · [공식 Codex 문서](https://developers.openai.com/codex)
 
 ---
 

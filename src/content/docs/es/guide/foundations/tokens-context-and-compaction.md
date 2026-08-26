@@ -3,9 +3,10 @@ title: Token, Contexto y Compactación
 description: Entiende la ventana de Contexto, su ocupación y la Compactación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b33848c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -60,7 +61,7 @@ Si te preocupa que se olviden requisitos clave, puedes:
 
 - Escribe las restricciones clave en el mensaje actual o en la descripción del proyecto; no las dejes solo enterradas en un diálogo muy antiguo
 - Cuando cambie el tema, abre un hilo nuevo
-- Principio y consejos operativos: [Compactación de Contexto](/guide/context/compaction/) y [Mantén el Contexto enfocado](/guide/context/keep-context-focused/)
+- Principio y consejos operativos: [Compactación de Contexto](/es/guide/context/compaction/) y [Mantén el Contexto enfocado](/es/guide/context/keep-context-focused/)
 
 Aquí van los conceptos. Cómo controlarlos en la práctica, en el `05`.
 

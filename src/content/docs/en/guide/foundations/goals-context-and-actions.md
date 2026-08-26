@@ -4,7 +4,7 @@ description: Break a successful interaction into goal, background, actions, and 
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 656b931
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -18,7 +18,7 @@ A reliable Codex interaction usually has four parts:
 3. **Actions**: steps Codex may take (read, edit, run)
 4. **Acceptance**: what "done" means and how to check
 
-Prompting chapters expand these four into a stable framework—see [Anatomy of a good task](/prompts/task-anatomy/).
+Prompting chapters expand these four into a stable framework—see [Anatomy of a good task](/en/prompts/task-anatomy/).
 
 ## Small example
 

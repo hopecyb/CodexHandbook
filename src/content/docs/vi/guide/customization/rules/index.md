@@ -3,9 +3,10 @@ title: Quy tắc
 description: Trang mô tả allow/deny, quy tắc lệnh và chiến lược nhóm — phân rõ cái nào nên chặn, cái nào nên nhắc.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1b6534d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhóm quy tắc dễ nhất để người mới hiểu nhầm thành “viết thêm một chút nhắc nhở cho Codex”.
@@ -14,9 +15,9 @@ Hiểu chính xác hơn: quy tắc giải quyết “hành động nào mặc đ
 
 ## Thứ tự khuyến nghị
 
-1. [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Quy tắc lệnh](/guide/customization/rules/command-rules/)
-3. [Quy tắc nhóm](/guide/customization/rules/team-rules/)
+1. [Mẫu cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/)
+2. [Quy tắc lệnh](/vi/guide/customization/rules/command-rules/)
+3. [Quy tắc nhóm](/vi/guide/customization/rules/team-rules/)
 
 ## Nhóm này giúp bạn giải quyết gì
 

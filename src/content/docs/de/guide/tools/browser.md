@@ -3,9 +3,10 @@ title: Browser-Werkzeug
 description: "Webseiten öffnen, UI-Status prüfen und Frontend-Verhalten verifizieren — Fähigkeiten und Grenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ Code lesen oder Textbeschreibungen reichen oft nicht — Seite wirklich öffnen.
 | Statische Seite vs. Umsetzung | Ersatz für volles E2E-Framework |
 | Sichtbaren Text zur Debug-Hilfe | Sites mit komplexer Human-Verification |
 
-Auswahlhintergrund: [Werkzeugwahl](/guide/tools/tool-selection/)
+Auswahlhintergrund: [Werkzeugwahl](/de/guide/tools/tool-selection/)
 
 ## Vergleich mit anderen Werkzeugen
 
@@ -83,7 +84,7 @@ Dann oft besser als reine Textanalyse.
 1. **Lokales Frontend**: zuerst `npm run dev`, dann `http://localhost:PORT/path`
 2. **Aufgabe klar**: „Login-Formular bei 375px Overflow?“ statt „schau die Seite an“
 3. **Grenzen**: kein Outbound, kein Formular an Produktion
-4. **Abnahme**: [Artefakte überprüfen](/guide/quality/verify-artifacts/) und Screenshots
+4. **Abnahme**: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/) und Screenshots
 
 ## Direkt nutzbare Formulierung
 
@@ -98,9 +99,9 @@ Bei Problemen Screenshot-Beleg und Änderungsvorschlag.
 - Default: Browser erreicht **alles, was Maschine/Umgebung erreicht** — inkl. Intranet-Admin
 - Im Prompt: `nur localhost` oder Domain-Allowlist
 - Keine untrusted-Repo-Aufgaben in Browserprofilen mit persönlichem Login
-- Cloud-Browser-Policy: [Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/) und Netzrichtlinie
+- Cloud-Browser-Policy: [Cloud-Umgebungen](/de/guide/web-and-cloud/cloud-environments/) und Netzrichtlinie
 
-Freigabe: [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/)
+Freigabe: [Berechtigungen und Freigabe](/de/guide/foundations/permissions-and-approvals/)
 
 ## Häufige Fehler
 

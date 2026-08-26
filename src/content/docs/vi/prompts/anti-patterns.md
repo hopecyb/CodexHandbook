@@ -3,9 +3,10 @@ title: Phản mẫu Prompt
 description: Các yêu cầu mơ hồ, vượt quyền và đòi suy luận ẩn cần tránh.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi học Prompt, dễ dồn chú ý vào «nên viết thế nào».

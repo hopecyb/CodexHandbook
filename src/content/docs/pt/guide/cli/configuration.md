@@ -3,14 +3,15 @@ title: Configuração da CLI
 description: Modelo, Sandbox, Aprovação e MCP — unificar o comportamento do Codex no terminal.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-A configuração da CLI decide o **modelo predefinido, o diretório de trabalho, a severidade da Aprovação, os servidores MCP**, etc. Coincide conceptualmente com as [bases de configuração](/guide/customization/configuration/config-basics/); esta página centra-se no que os utilizadores de terminal mais costumam alterar.
+A configuração da CLI decide o **modelo predefinido, o diretório de trabalho, a severidade da Aprovação, os servidores MCP**, etc. Coincide conceptualmente com as [bases de configuração](/pt/guide/customization/configuration/config-basics/); esta página centra-se no que os utilizadores de terminal mais costumam alterar.
 
 ## Conteúdo desta página
 
@@ -74,7 +75,7 @@ Afeta velocidade, custo e taxa de sucesso em Tarefas complexas. Em cenários com
 | Padrão | Desenvolvimento do dia a dia |
 | Afrouxado | Só ambiente pessoal de confiança, e conforme a política da empresa |
 
-Conceitos: [Sandbox e rede](/guide/foundations/sandbox-and-network/)
+Conceitos: [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
 
 ### Estratégia de Aprovação
 
@@ -82,7 +83,7 @@ A CLI pode perguntar antes de correr shell, escrever em disco ou ligar à rede. 
 
 ### Lista de servidores MCP
 
-Partilha configuração com [Ligar um servidor MCP](/skills/mcp/connect-an-mcp-server/); depois de alterar, reinicie a sessão.
+Partilha configuração com [Ligar um servidor MCP](/pt/skills/mcp/connect-an-mcp-server/); depois de alterar, reinicie a sessão.
 
 ## Uma ordem de configuração suficiente
 
@@ -111,7 +112,7 @@ Evite «na App corre, no CI falha»:
 | MCP não carregou | Sintaxe JSON/TOML, caminhos |
 | Aprovação demasiado frequente | Modo de Sandbox e allowlist |
 
-Mais: [Resolução de problemas na CLI](/guide/cli/troubleshooting/)
+Mais: [Resolução de problemas na CLI](/pt/guide/cli/troubleshooting/)
 
 Trate a configuração da CLI como «hábitos de trabalho predefinidos» e fixe só o que **quase sempre repetiria**. Capacidades avançadas podem ficar para depois.
 

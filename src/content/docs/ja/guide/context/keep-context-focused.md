@@ -3,9 +3,10 @@ title: コンテキストの焦点を保つ
 description: 範囲の制御、新しいスレッドの開始、引き継ぎ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 042a77f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -43,7 +44,7 @@ Codex にとって、一つのタスクに次が同時に入ると：
 - 一度のタスクに目標は一つ
 - 定期的に「完了 / 未完了 / まだ有効な制約」を要約する
 - 長いタスクには段階ゲートを使う
-- セッションをまたぐ場合は [引き継ぎと再開](/guide/agent-work/handoff-and-resume/) を使う
+- セッションをまたぐ場合は [引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/) を使う
 
 ## 締めるべきサイン
 

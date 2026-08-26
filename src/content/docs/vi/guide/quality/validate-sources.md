@@ -3,9 +3,10 @@ title: Xác minh nguồn
 description: Yêu cầu bằng chứng truy xuất được cho kết luận nghiên cứu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 35bd9a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -18,7 +19,7 @@ Yêu cầu Agent:
 Mỗi sự kiện then chốt hãy kèm URL nguồn hoặc tài liệu; chỗ chưa chắc hãy ghi rõ «chưa xác minh».
 ```
 
-Sau khi có kết quả, hãy mở liên kết để đối chiếu. Khả năng tìm kiếm xem [Tìm kiếm web](/guide/tools/web-search/).
+Sau khi có kết quả, hãy mở liên kết để đối chiếu. Khả năng tìm kiếm xem [Tìm kiếm web](/vi/guide/tools/web-search/).
 
 ## Hiểu lầm thường gặp
 

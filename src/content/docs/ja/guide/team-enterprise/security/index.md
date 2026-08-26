@@ -3,9 +3,10 @@ title: セキュリティ
 description: チーム級リスク、攻撃面、防御思路の説明ページ——リスクを先に理解し、制御を決める。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 セキュリティグループを細部ページから入ると、断片用語だけ覚えて、何を防いでいるか分からなくなりがちです。
@@ -14,9 +15,9 @@ translated_at: 2026-07-28
 
 ## 推奨順序
 
-1. [脅威モデル](/guide/team-enterprise/security/threat-model/)
-2. [Plugin と MCP リスク](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Prompt 注入](/guide/team-enterprise/security/prompt-injection/)
+1. [脅威モデル](/ja/guide/team-enterprise/security/threat-model/)
+2. [Plugin と MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Prompt 注入](/ja/guide/team-enterprise/security/prompt-injection/)
 
 ## 先に見る人
 

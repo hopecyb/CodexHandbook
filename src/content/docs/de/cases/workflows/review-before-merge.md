@@ -3,12 +3,13 @@ title: Prüfung vor dem Merge
 description: Vor dem Merge mit Codex strukturierte Diff- und Risikoprüfung — klare Arbeitsteilung Mensch/Maschine.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Prüfung vor dem Merge** bringt [Qualität und Überprüfung](/guide/quality/) in den Git-Ablauf: Vor dem PR-Merge prüft Codex Diff, Tests, Sicherheit und Spezifikationskonsistenz. Automatische Kommentare ersetzen kein automatisches Mergen.
+**Prüfung vor dem Merge** bringt [Qualität und Überprüfung](/de/guide/quality/) in den Git-Ablauf: Vor dem PR-Merge prüft Codex Diff, Tests, Sicherheit und Spezifikationskonsistenz. Automatische Kommentare ersetzen kein automatisches Mergen.
 
 ## Schwerpunkte dieser Seite
 
@@ -32,7 +33,7 @@ Ausgabe als Checklist mit P0/P1.
 
 - Feste Prompt-Version + nur-lesendes Token
 - Ergebnis als PR-Comment oder Check Run
-- Siehe [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
+- Siehe [Code-Review-Automatisierung](/de/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Empfohlene Prüfdimensionen
 
@@ -44,7 +45,7 @@ Ausgabe als Checklist mit P0/P1.
 | Wartbarkeit | Namensgebung, Duplikate, öffentliche API |
 | Spezifikation | Konsistent mit Issue/Spezifikationsdokument |
 
-Kombinierbar mit [Diffs prüfen](/guide/quality/review-diffs/); Hochrisiko-Punkte über [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/).
+Kombinierbar mit [Diffs prüfen](/de/guide/quality/review-diffs/); Hochrisiko-Punkte über [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/).
 
 ## Häufige Fehler
 
@@ -67,8 +68,8 @@ Kombinierbar mit [Diffs prüfen](/guide/quality/review-diffs/); Hochrisiko-Punkt
 
 ## Verwandte Kapitel
 
-- [Cloud Code Review](/guide/web-and-cloud/code-review/)
-- [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/)
+- [Cloud Code Review](/de/guide/web-and-cloud/code-review/)
+- [Pull Request erstellen](/de/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

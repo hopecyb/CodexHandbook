@@ -1,84 +1,80 @@
 ---
-title: Anmelden und Authentifizierung
-description: "Login abschließen und Identität sowie Berechtigungsstatus bestätigen."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Anmeldung und Authentifizierung
+description: Wähle für lokale Clients und Cloud den richtigen Anmeldemodus und überprüfe die aktive Identität sicher.
 sidebar:
   order: 60
+locale: de
+source_locale: zh-CN
+source_revision: e17d14f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Viele Anfänger setzen „ich bin angemeldet“ mit „ich kann normal nutzen“ gleich — das ist nicht dasselbe.
+Für die Verwendung von OpenAI-Modellen bietet Codex zwei persönliche Anmeldemethoden:
 
-Login klärt „wer du bist“; Authentifizierung und Berechtigungscheck klären „ob du in diesem Client jetzt normal starten kannst“.
+- **Mit ChatGPT anmelden:** Nutzt das Abonnementkontingent und übernimmt Workspace-Berechtigungen sowie Datenrichtlinien von ChatGPT.
+- **Mit API-Key anmelden:** Wird nach API-Nutzung abgerechnet und übernimmt Daten- und Verwaltungsrichtlinien der API-Organisation.
 
-Im gewählten Client den UI-Hinweisen folgen. Möglich sind:
+Lokale Arbeit in ChatGPT-Desktop-App, Codex CLI und IDE-Integration unterstützt beide Methoden. **Codex Cloud erfordert die Anmeldung mit ChatGPT.**
 
-- Browser-Weiterleitung zur Autorisierung
-- SSO / Organisationskonto
-- Gerätecode oder Token (CLI-Szenario)
+## Mit ChatGPT anmelden
 
-## Was nach dem Login zu bestätigen ist
+Ein lokaler Client öffnet die Autorisierung im Browser und übergibt die Anmeldedaten anschließend zurück an den Client:
 
-Vor allem:
+- Desktop-App: Wähle auf der abgemeldeten Seite die Fortsetzung der Anmeldung.
+- CLI: Führe `codex login` aus.
+- IDE: Wähle auf der abgemeldeten Seite die Anmeldung mit ChatGPT.
 
-- Bist du wirklich in einem nutzbaren Zustand?
-- Nutzt du gerade persönliche oder Organisations-Identität?
-- Wenn es noch nicht geht: eher Login-Fehler oder fehlende Berechtigung?
+Prüfe nach der Anmeldung das aktive Konto und den Workspace. Das ist besonders wichtig, wenn ein persönlicher Bereich und ein Unternehmens-Workspace nebeneinander bestehen.
 
-## Nach dem Login prüfen
+## Mit API-Key anmelden
 
-- Angezeigt: dein Konto oder deine Organisation
-- Projekt erstellen oder öffnen möglich
-- Keine Fehler wie „keine Berechtigung für Codex“
+Nachdem du auf der OpenAI Platform einen Key erstellt hast, darfst du ihn nicht direkt in den Befehlsverlauf schreiben. In der CLI verwendest du die Standardeingabe:
 
-Wenn alle drei stimmen, kannst du zum nächsten Schritt.
+```bash
+printenv OPENAI_API_KEY | codex login --with-api-key
+```
 
-## Häufige Missverständnisse
+Öffne in der Desktop-App „Mit einer anderen Methode anmelden“ und in der IDE „Use API Key“. Ein API-Key eignet sich für lokale Arbeit und vertrauenswürdige CI, stellt aber keine Funktionen bereit, die von einem ChatGPT-Workspace oder Cloud abhängen.
 
-### 1. Browser-Autorisierung fertig = alles ok
+## CLI-Identität prüfen und abmelden
 
-Manchmal hat der Browser schon autorisiert, der Client zeigt aber noch:
+```bash
+codex login status
+codex logout
+```
 
-- Falsches Konto
-- Organisationsberechtigung nicht offen
-- Tarif oder Zugang passt nicht
-- Lokaler Client-Status noch nicht aktualisiert
+CLI und IDE verwenden gemeinsam zwischengespeicherte Anmeldeinformationen. Wenn du dich in einer der beiden Oberflächen abmeldest, kann beim nächsten Start auch in der anderen eine erneute Anmeldung erforderlich sein.
 
-### 2. App, CLI und IDE müssen sich beim Login gleich anfühlen
+## Sicherheit der Anmeldedaten
 
-Clients können unterschiedlich authentifizieren, z. B.:
+- Committe `~/.codex/auth.json` nicht und füge die Datei weder in Tickets, Chats noch Protokolle ein.
+- Verwende vorzugsweise den Anmeldedatenspeicher des Betriebssystems. Behandle Tokens in einem Dateispeicher wie Passwörter.
+- Nutze für CI eigene widerrufbare Zugangsdaten und keinen persönlichen langlebigen Key.
+- Codex Cloud greift direkt auf Code-Repositorys zu. Aktiviere MFA für dein Konto; bei Organisations-SSO muss der Administrator MFA erzwingen.
+- Verwende keinen privaten Key, um Organisationsbeschränkungen zu umgehen. Prüfe zuerst Workspace und verwaltete Richtlinien.
 
-- Desktop-App eher grafische Weiterleitung
-- CLI ggf. Gerätecode, Token oder Browser-Autorisierung
-- IDE-Erweiterung zusätzlich Editor-eigener Status
+## Anmeldung erfolgreich, Verwendung trotzdem nicht möglich
 
-### 3. Login reicht — welche Identität egal
+Untersuche das Problem in dieser Reihenfolge:
 
-Besonders bei parallelem Privatkonto, Teamkonto und Organisations-SSO prüfen:
+1. Ist das aktuelle Konto oder die API-Organisation korrekt?
+2. Ist der richtige ChatGPT-Workspace ausgewählt?
+3. Erfordert die Zielfunktion eine ChatGPT-Anmeldung statt eines API-Keys?
+4. Schränken Tarif, Platz, Rolle oder Administratorrichtlinie den Zugriff ein?
+5. Prüfe erst danach Client-Cache, Netzwerk und Version.
 
-- Wer wird gerade angezeigt?
-- Zu welcher Organisation gehören die aktuellen Berechtigungen?
-- Unter welcher Identität landen spätere Projekte und Aufgaben?
+Für die CLI stehen eigene Anmeldeprotokolle zur Verfügung, die du bei einer Supportanfrage oder Authentifizierungsfehlersuche verwenden kannst. Prüfe die Protokolle dennoch zuerst auf vertrauliche Informationen.
 
-## Wenn Login klappt, Nutzung aber nicht
-
-Wenn du „angemeldet“ bist, aber nicht starten kannst:
-
-1. Ist das angezeigte Konto das gewünschte?
-2. Bist du in der richtigen Organisation / dem richtigen Workspace?
-3. Gibt es Hinweise zu Berechtigung, Zugang oder Tarif?
-4. Hängt der Client selbst oder ist er unsynchron?
-
-Wichtig bleibt: richtige Identität und die Fähigkeit, Projekte zu erstellen und Aufgaben zu starten.
-
-Auth-Details und Sicherheitshinweise: [https://developers.openai.com/codex](https://developers.openai.com/codex). Bei Fehlern: [Fehlerbehebungs-Index](/guide/reference/troubleshooting/).
+Tarifgrenzen behandelt [Konten, Tarife und Zugriff](/de/guide/getting-started/account-plans-and-access/). Alle Einzelheiten findest du auf der [offiziellen Authentication-Seite](https://learn.chatgpt.com/docs/auth).
 
 ---
 
-**Status:** outdated  
-**Geeignete Produkte:** App / CLI / IDE  
-**Nachprüfhinweis:** Diese Seite betrifft Browser-Autorisierung, SSO, Gerätecode, Organisationsidentität und Client-Verfügbarkeit — Erfahrungen ändern sich schnell je Einstieg und Version; es fehlt ausreichend starke aktuelle offizielle Login-Doku für die ganze Seite, daher vorerst `outdated`.  
-**Zuletzt überprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App / CLI / IDE / Cloud
+
+**Prüfgrundlage:** Mit der aktuellen offiziellen Authentication-Seite abgeglichen. Verifiziert wurden die beiden lokalen Anmeldemethoden ChatGPT und API-Key, die ChatGPT-Anforderung für Cloud, CLI-Befehle, gemeinsam genutzter Cache und Grenzen der Anmeldedatenspeicherung.
+
+**Zuletzt geprüft:** 2026-08-26

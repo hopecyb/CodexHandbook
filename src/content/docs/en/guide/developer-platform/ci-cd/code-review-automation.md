@@ -3,9 +3,10 @@ title: Code Review Automation
 description: Wire Codex into CI or PR workflows—prompts, permissions, and human gates.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ It is best at:
 
 It is not suited to deciding “this PR is definitely safe to merge.”
 
-Related: [Non-interactive mode](/guide/cli/non-interactive-mode/) · [SDK overview](/guide/developer-platform/sdk-overview/)
+Related: [Non-interactive mode](/en/guide/cli/non-interactive-mode/) · [SDK overview](/en/guide/developer-platform/sdk-overview/)
 
 ## Recommended architecture
 
@@ -76,7 +77,7 @@ Version in `prompts/ci-review.md`.
 | Injection defense | Do not paste unsanitized PR descriptions into system prompt |
 | Secrets | Store tokens in GitHub Secrets |
 
-[Human approval patterns](/cases/workflows/human-approval-patterns/) · [Environment variables](/guide/reference/environment-variables/)
+[Human approval patterns](/en/cases/workflows/human-approval-patterns/) · [Environment variables](/en/guide/reference/environment-variables/)
 
 ## Quality gates
 
@@ -86,7 +87,7 @@ Version in `prompts/ci-review.md`.
 
 ## Relationship to Cloud
 
-Complex repos may run full tests on [Cloud](/guide/web-and-cloud/) before review; in-CI exec suits **lightweight diff review**.
+Complex repos may run full tests on [Cloud](/en/guide/web-and-cloud/) before review; in-CI exec suits **lightweight diff review**.
 
 ## Common mistakes
 

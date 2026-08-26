@@ -3,9 +3,10 @@ title: 실행 취소와 복구
 description: 결과가 마음에 들지 않을 때 안전하게 되돌립니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b76bcfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---

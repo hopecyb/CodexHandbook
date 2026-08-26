@@ -3,9 +3,10 @@ title: Lokale und Cloud-Aufgaben
 description: Zwischen lokaler und Cloud-Ausführung in der App wechseln.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 95e2382
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -17,7 +18,7 @@ In der App wählst du den Ausführungsort der Aufgabe:
 - **Lokal:** Dateien und Umgebung auf deinem Rechner, schnelle Iteration
 - **Cloud:** Cloud-Umgebung, geeignet für Remote-Repositories und lange Aufgaben
 
-Konzepte: [Lokal und Cloud](/guide/foundations/local-vs-cloud/) · Überblick: [Web und Cloud](/guide/web-and-cloud/)
+Konzepte: [Lokal und Cloud](/de/guide/foundations/local-vs-cloud/) · Überblick: [Web und Cloud](/de/guide/web-and-cloud/)
 
 Vor dem Wechsel prüfen: Dürfen Geheimnisse in dieser Umgebung erscheinen? Erlaubt die Netzwerkrichtlinie das?
 

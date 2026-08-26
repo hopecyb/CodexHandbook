@@ -3,9 +3,10 @@ title: Environment Variables
 description: Purpose, layering, and security of Codex-related environment variables—supplement to configuration reference.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Environment variables sit at two extremes: “too low level” or “dump everything here.” Simply: they pass values into programs at runtime—especially secrets and switches.
@@ -28,7 +29,7 @@ Prefer environment variables if any apply:
 
 Hence tokens, temporary switches, and CI injection often use env—not hardcoded files.
 
-Config concepts: [Configuration reference](/guide/reference/configuration-reference/); Cloud: [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/).
+Config concepts: [Configuration reference](/en/guide/reference/configuration-reference/); Cloud: [Secrets and variables](/en/guide/web-and-cloud/secrets-and-variables/).
 
 ## Good fits for environment variables
 
@@ -66,7 +67,7 @@ So:
 
 - Coding standards, directory layout → `AGENTS.md`
 - Team default model → project config (non-secret parts)
-- Complex allowlists → [Rules](/guide/customization/rules/allow-and-deny-patterns/)
+- Complex allowlists → [Rules](/en/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Common misconceptions
 
@@ -131,11 +132,11 @@ Export personal token in `~/.zshrc` or direnv `.envrc`—**do not commit** `.env
 
 ### CLI non-interactive
 
-CI injects via secret store then runs `codex exec`. See [Non-interactive mode](/guide/cli/non-interactive-mode/).
+CI injects via secret store then runs `codex exec`. See [Non-interactive mode](/en/guide/cli/non-interactive-mode/).
 
 ### MCP servers
 
-MCP processes often inherit parent env; reference `$VAR` in config instead of hardcoding. See [Connect MCP](/skills/mcp/connect-an-mcp-server/).
+MCP processes often inherit parent env; reference `$VAR` in config instead of hardcoding. See [Connect MCP](/en/skills/mcp/connect-an-mcp-server/).
 
 ### Cloud
 

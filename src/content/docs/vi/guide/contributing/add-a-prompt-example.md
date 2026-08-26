@@ -3,14 +3,15 @@ title: Thêm ví dụ Prompt
 description: Gửi Prompt tái hiện được vào examples/prompts, kèm siêu dữ liệu và tiêu chuẩn nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Ví dụ Prompt nằm ở [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) gốc kho, được nội dung sổ tay liên kết. Quy chuẩn thiết kế xem [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Ví dụ Prompt nằm ở [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) gốc kho, được nội dung sổ tay liên kết. Quy chuẩn thiết kế xem [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## Nội dung trang này
 
@@ -112,7 +113,7 @@ Ví dụ dạy phương pháp, không phải lộ môi trường production củ
 - Mục tiêu và định nghĩa hoàn thành rõ
 - Có mô tả quyền và ranh giới an toàn
 - Không chứa khóa bí mật thật và PII
-- Trạng thái `verified` cần [kiểm chứng độc lập](/guide/contributing/verify-technical-content/)
+- Trạng thái `verified` cần [kiểm chứng độc lập](/vi/guide/contributing/verify-technical-content/)
 
 ## Quy trình gửi
 

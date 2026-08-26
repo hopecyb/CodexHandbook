@@ -3,12 +3,13 @@ title: Turn a workflow into a Skill
 description: The third repeat of the same flow deserves a Skill—trigger, instructions, and acceptance in one place.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-When the same class of task (release checks, doc sync, security scans) is done **a third time** by copy-pasting prompts, consider a [Skill](/skills/overview/). This chapter bridges [workflow methods](/cases/workflows/) and the extension system.
+When the same class of task (release checks, doc sync, security scans) is done **a third time** by copy-pasting prompts, consider a [Skill](/en/skills/overview/). This chapter bridges [workflow methods](/en/cases/workflows/) and the extension system.
 
 ## What this page solves
 
@@ -29,11 +30,11 @@ Skip capture for: one-off exploration, small fixes tightly bound to that day's c
 
 1. **Write SKILL.md clearly**: when to trigger, inputs/outputs, prohibitions
 2. **Attach `references/`**: checklists, sample diffs
-3. **Optional `scripts/`**: repeatable verification commands (aligned with [command rules](/guide/customization/rules/command-rules/))
+3. **Optional `scripts/`**: repeatable verification commands (aligned with [command rules](/en/guide/customization/rules/command-rules/))
 4. **Mention the Skill name** in repo README or AGENTS.md
 5. **Trial 2–3 runs**, then mark `verified`
 
-Getting started: [Create your first Skill](/skills/create-your-first-skill/)
+Getting started: [Create your first Skill](/en/skills/create-your-first-skill/)
 
 ## Recommended workflow
 
@@ -45,7 +46,7 @@ Extract prompt and acceptance from a successful case
     → place in repo examples/, team plugin, or internal skill library
 ```
 
-Compare with [Turn a flow into automation](/skills/automations/scheduled-tasks/): Skills are **interactive guidance**; Automations are **scheduled/unattended**.
+Compare with [Turn a flow into automation](/en/skills/automations/scheduled-tasks/): Skills are **interactive guidance**; Automations are **scheduled/unattended**.
 
 ## Common mistakes
 
@@ -56,8 +57,8 @@ Compare with [Turn a flow into automation](/skills/automations/scheduled-tasks/)
 
 ## Security boundaries
 
-- See [Skill security and versioning](/skills/security/)
-- Team Skills belong on the extension approval list (see [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- See [Skill security and versioning](/en/skills/security/)
+- Team Skills belong on the extension approval list (see [Plugin and MCP risk](/en/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Acceptance checklist
 

@@ -3,9 +3,10 @@ title: Dokumentationssite mit Prüfung refactoren
 description: "Fall: In einem Astro/Starlight-Docs-Projekt Links und Kapitel batchweise aktualisieren — kleine Diffs, Build-Überprüfung."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Dieser Fall zeigt eine **Content-Engineering**-Aufgabe: Mehrdatei-Markdown, Sidebar-Config, Build-Überprüfung. Der Stack ähnelt diesem Handbuch; das Muster lässt sich auf jede Static Site übertragen.
@@ -19,7 +20,7 @@ Dieser Fall zeigt eine **Content-Engineering**-Aufgabe: Mehrdatei-Markdown, Side
 | Risiko | mittel (viele Links und Navigation) |
 | Dauer | 1–3 Stunden (je nach Umfang) |
 
-Vorlage: [Fallvorlage](/cases/use-cases/case-study-template/)
+Vorlage: [Fallvorlage](/de/cases/use-cases/case-study-template/)
 
 ## Hintergrund
 
@@ -50,7 +51,7 @@ Schritte: Zuerst Config, dann md, zuletzt 12-reference/index.md aktualisieren.
 
 - **Zuerst Config, dann Inhalt**: verhindert Build-Fehler wegen missing slug
 - Pro Batch 3–5 Dateien committen — leichter zu reviewen
-- [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/) nutzen
+- [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/) nutzen
 
 ## Prüfung
 

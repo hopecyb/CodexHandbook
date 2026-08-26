@@ -3,9 +3,10 @@ title: Tổng quan SDK
 description: "Khởi tạo Tác vụ Codex trong ứng dụng qua SDK chính thức — khái niệm xác thực, phiên và xử lý lỗi."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,7 +23,7 @@ Nói cách khác, nó phù hợp khi «hệ thống của bạn gọi Codex». N
 - Xác thực và cô lập tenant
 - Cách phối hợp với Webhook và hàng đợi
 
-Tổng quan nền tảng: [Nền tảng dành cho nhà phát triển](/guide/developer-platform/)
+Tổng quan nền tảng: [Nền tảng dành cho nhà phát triển](/vi/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -67,7 +68,7 @@ SDK phù hợp «nối hệ thống cho chương trình», không phù hợp là
 4. **Kết quả**: lịch sử tin nhắn, Diff tệp, URL artifact (tùy API)
 5. **Lỗi**: phân biệt có thể thử lại (429) và không thử lại (400)
 
-Chỉ mục lỗi: [Tham chiếu lỗi và thông báo](/guide/reference/error-reference/)
+Chỉ mục lỗi: [Tham chiếu lỗi và thông báo](/vi/guide/reference/error-reference/)
 
 ## Checklist tích hợp tối thiểu
 
@@ -78,7 +79,7 @@ Chỉ mục lỗi: [Tham chiếu lỗi và thông báo](/guide/reference/error-r
 
 ## Nối với CI/CD
 
-SDK kích hoạt Cloud hoặc remote runner, hoặc CI gọi ngược dịch vụ của bạn để cập nhật trạng thái PR. Mẫu ví dụ xem [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/).
+SDK kích hoạt Cloud hoặc remote runner, hoặc CI gọi ngược dịch vụ của bạn để cập nhật trạng thái PR. Mẫu ví dụ xem [Tự động hóa review mã](/vi/guide/developer-platform/ci-cd/code-review-automation/).
 
 ## Lỗi thường gặp
 

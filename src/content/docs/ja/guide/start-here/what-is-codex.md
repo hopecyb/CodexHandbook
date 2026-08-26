@@ -3,9 +3,10 @@ title: Codex とは
 description: Codex が何をできて、何ができないか、主な利用入口をわかりやすく説明。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6c6582f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 2
 ---
@@ -81,7 +82,7 @@ Codex をアシスタントとして使い、責任は一緒に渡さない。
 4. 完了後、何を変更したかを報告する
 5. 結果が期待通りかを確認する
 
-このフローの完全な例は [最初のタスクを実行する](/guide/getting-started/run-your-first-task/) を参照してください。
+このフローの完全な例は [最初のタスクを実行する](/ja/guide/getting-started/run-your-first-task/) を参照してください。
 
 ## 主な利用入口
 
@@ -93,7 +94,7 @@ Codex をアシスタントとして使い、責任は一緒に渡さない。
 | Web / Cloud | リポジトリ接続、クラウド環境、長期タスク |
 | モバイルとリモート | 監視、承認、軽量なフォローアップ |
 
-対照表は [機能対照](/guide/reference/feature-comparison/)。概念の関係は [能力マップ](/guide/start-here/)。
+対照表は [機能対照](/ja/guide/reference/feature-comparison/)。概念の関係は [能力マップ](/ja/guide/start-here/)。
 
 ## 次に読むもの
 
@@ -105,9 +106,9 @@ Codex をアシスタントとして使い、責任は一緒に渡さない。
 
 関連ページ：
 
-1. [Codex クライアントの選択](/guide/choose-your-client/)
-2. [初心者向け用語](/guide/start-here/terminology-for-beginners/)
-3. [最初のタスクを実行する](/guide/getting-started/run-your-first-task/)
+1. [Codex クライアントの選択](/ja/guide/choose-your-client/)
+2. [初心者向け用語](/ja/guide/start-here/terminology-for-beginners/)
+3. [最初のタスクを実行する](/ja/guide/getting-started/run-your-first-task/)
 
 ---
 

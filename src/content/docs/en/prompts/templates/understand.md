@@ -3,9 +3,10 @@ title: Understand template
 description: Build shared understanding before making changes.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Understand template
@@ -52,8 +53,8 @@ The understand template helps narrow the next task scope.
 
 ## Related
 
-- [Explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/)
-- [Understand a codebase case](/cases/understand-a-codebase/)
+- [Explore—plan—execute—verify](/en/cases/workflows/explore-plan-execute-verify/)
+- [Understand a codebase case](/en/cases/understand-a-codebase/)
 
 ---
 

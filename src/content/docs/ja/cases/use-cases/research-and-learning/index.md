@@ -3,9 +3,10 @@ title: 調査と学習
 description: 出典付き調査、比較、学習事例の入口——検索、引用、結論の境界。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 調査タスクが普通の Q&A と違うのは一点です。
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 本グループの事例
 
-- [競合機能マトリクス](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [競合機能マトリクス](/ja/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## 本グループの強調点
 

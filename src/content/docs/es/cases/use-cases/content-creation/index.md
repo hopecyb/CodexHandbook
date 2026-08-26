@@ -3,9 +3,10 @@ title: Creación de contenido
 description: Entrada a casos de documentación, artículos y activos de contenido — énfasis en revisión, reescritura y aceptación de artefactos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Los casos de creación de contenido se centran en este tipo de escenario:
@@ -14,7 +15,7 @@ Los casos de creación de contenido se centran en este tipo de escenario:
 
 ## Entradas de este grupo
 
-- [Refactorizar un sitio de docs con revisión](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refactorizar un sitio de docs con revisión](/es/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## Enfoque del grupo
 

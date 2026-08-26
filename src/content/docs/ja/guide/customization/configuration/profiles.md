@@ -1,102 +1,88 @@
 ---
 title: 設定 Profile
-description: 命名設定セットでモデル、サンドボックス、承認の組み合わせを切替——開発、レビュー、CI ごとに一套。
+description: 独立した設定ファイルを使い、Codex CLI の基本設定に名前付きの設定一式を重ねます。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7043ada
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-**Profile（設定セット）**で、モデル + サンドボックス + 承認などの命名設定を保存し、シーンごとにワンクリック切替できます。毎回手動で設定を変える必要がありません。
+現在の Codex CLI では、`--profile <name>` を指定すると、`$CODEX_HOME/<name>.config.toml` が基本のユーザー設定に重ねられます。これは主に CLI 向けの機能であり、デスクトップ App 全体で使える汎用的な「ワンクリックモード」と説明すべきではありません。
 
-## このページで扱うこと
+## 最小構成の例
 
-- Profile と「デフォルト設定を変える」の違い
-- 一般的な Profile の分け方
-- チームが Profile 定義を共有する方法
+基本設定には、共通の既定値を残します。
 
-## Profile が管理すること
+```toml
+# ~/.codex/config.toml
+model_reasoning_effort = "medium"
+```
 
-「設定」がデフォルトの働き方なら、**Profile** は「シーン別のプリセット」です。
+読み取り専用レビュー用の profile：
 
-- 普段の開発用
-- 信頼できないリポジトリ用
-- 読み取り専用レビュー用
-- CI 自動実行用
+```toml
+# ~/.codex/review.config.toml
+sandbox_mode = "read-only"
+approval_policy = "never"
+```
 
-毎回スイッチをいじる必要がありません。
+起動方法：
 
-## 典型 Profile 例
+```bash
+codex --profile review
+# 短縮形
+codex -p review
+```
 
-| Profile 名 | 意図 | 特徴（概念） |
+ローカルにインストールしたバージョンで動作を確認します。
+
+```bash
+codex --help
+```
+
+現在のヘルプには、profile ファイルのパスと設定の重ね合わせが説明されているはずです。バージョンによって内容が異なる場合は、ローカルの出力と公式の設定リファレンスを優先してください。
+
+## Profile に適した用途
+
+| Profile | 目的 | 境界の例 |
 |---|---|---|
-| `daily` | 日常開発 | バランスモデル、標準サンドボックス |
-| `strict` | 信頼できないリポジトリ | 強い承認、ネットワーク制限 |
-| `review-only` | 読み取り専用レビュー | 書き込み禁止または読み取りのみ |
-| `ci` | パイプライン | 固定モデル、非対話、push なし |
+| `review` | 読み取り専用の確認 | read-only、書き込みなし |
+| `workspace` | 日常的なプロジェクト変更 | ワークスペース内だけに書き込み、必要に応じて承認 |
+| `ci` | 非対話型の検査 | 出力を固定し、push は行わない |
 
-具体フィールドは [設定項目リファレンス](/guide/reference/configuration-reference/) を参照。
+Profile は、設定の開始点をひとまとめに保存するだけです。組織の requirements を上書きすることも、プロンプトを自動的に安全にすることもありません。特に `danger-full-access` を、気軽に使う既定の profile にしないでください。
 
-## 利用方法（概念）
+## Permission Profile と混同しない
 
-1. 公式で Profile 構文を確認（`config.toml` 内 `[profiles.name]` または同等構造の可能性）
-2. Profile を作成して命名
-3. 起動時に指定：`codex --profile strict`（コマンドは `--help` を基準に）
-4. README に「貢献者は `daily` 推奨、CI は `ci`」と記載
+- **設定 Profile**：`--profile name` で `<name>.config.toml` を選択し、さまざまな Codex 設定を重ねます。
+- **Permission Profile（Beta）**：`default_permissions` と `[permissions.<name>]` で、ファイルシステムとネットワークの境界を定義します。
 
-CLI 詳細：[CLI 設定](/guide/cli/configuration/)
+どちらも profile と呼ばれますが、目的と設定構造は異なります。現在の Permission Profile は従来の `sandbox_mode` とも併用しません。どちらか一方の権限システムを選んで設定してください。
 
-## よくある誤解
+## チームで使う場合の境界
 
-### Profile が多いほど柔軟ではない
+設定 Profile はユーザーの Codex home に置かれ、現在のバージョンでは、そのままプロジェクト設定としてコミットされるものではありません。チームはレビュー済みのサンプルファイルをドキュメントで提供し、各メンバーに明示的なインストールと確認を求められます。リポジトリを clone しただけで個人 profile が自動的に有効になるとは想定しないでください。
 
-細かいシーンごとに Profile を作り、十数個になって自分でも違いを覚えられなくなることがあります。
+## 受け入れ確認
 
-通常は2〜4の常用で十分：
+1. `codex --help` を実行し、現在のバージョンが `-p/--profile` をサポートしていることを確認する。
+2. 読み取り専用タスクで `review` を試す。
+3. ワークスペース外のファイル読み取りやファイル書き込みを要求し、想定どおりに境界で阻止されることを確認する。
+4. ファイル名だけを信用せず、有効になった設定を確認する。
 
-- 日常開発
-- 厳格モード
-- 読み取り専用レビュー
-- CI
+## 公式情報
 
-リスク境界が明確に分かれば足ります。
+- [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
+- [Codex CLI ソースコードの設定レイヤー](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
 
-### Profile は思考の代替スイッチではない
-
-Profile を切っても、すべてのタスクが絶対安全・絶対適切になるわけではありません。「よくある開始状態」への切替を助けるもので、具体タスクはリポジトリとリスク判断と組み合わせます。
-
-## AGENTS.md との分担
-
-| | Profile | AGENTS.md |
-|---|---|---|
-| 管理対象 | 能力スイッチ、モデル、サンドボックス | このプロジェクトをどう書くか |
-| Git コミット | 任意（プロジェクト級 profile 片段） | はい |
-| 個人／チーム | 個人 profile は本機。チーム profile は PR | チーム |
-
-## よくあるミス
-
-- リポジトリごとに10個の Profile を作り誰も保守しない
-- `ci` Profile で依然 `git push` を許可
-- Profile 名と文書が不一致で新人が誤用
-
-## 始め方の提案
-
-1. まず `daily` をデフォルトに
-2. 次に `strict` を追加（不慣れ・高リスクリポジトリ向け）
-3. チームに自動化があれば `ci` を別途追加
-
-これで多くの常见情况をカバーできます。
-
-Profile の価値は、リスクシーンごとに、すでに考え抜いたデフォルト組み合わせへ素早く切り替えることです。
-
-## 参考
-- OpenAI Codex profiles ドキュメント
 ---
 
-**状態：** outdated  
-**対象製品：** CLI / App  
-**検証根拠：** 本ページは `Profile`、`codex --profile`、共有 profile 構造を過度に具体化している。現行で核証できる公式資料が、これらの用法が現バージョンで普遍的に成立することを十分に示していない。正式ドキュメント根拠を補足する前は `verified` とすべきでない。  
-**最終検証：** 2026-07-26
+**ステータス：** verified
+
+**対象製品：** CLI
+
+**最終確認：** 2026-08-26（ローカル環境：`codex-cli 0.148.0`）

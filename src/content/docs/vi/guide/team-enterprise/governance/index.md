@@ -3,9 +3,10 @@ title: Quản trị
 description: "Trang giải thích chính sách, ranh giới và quy tắc tổ chức — nêu rõ được làm gì, không được làm gì, ai chịu trách nhiệm."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Đặt quản trị vào ngữ cảnh Codex chủ yếu là hai việc: đội cho phép dùng thế nào, khi có sự cố ai xử lý.
@@ -18,7 +19,7 @@ translated_at: 2026-07-28
 
 ## Lối vào nhóm này
 
-- [Chính sách sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
+- [Chính sách sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/)
 
 ## Nhóm trang này chủ yếu trả lời gì
 

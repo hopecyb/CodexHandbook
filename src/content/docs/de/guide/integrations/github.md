@@ -3,9 +3,10 @@ title: GitHub-Integration
 description: "Repo-Anbindung, PR, Review und CI — Codex in GitHub-Workflows."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5585550
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -24,11 +25,11 @@ Auch ohne Senior-Dev-Hintergrund zuerst:
 
 | Fähigkeit | Typischer Einstieg | Handbuch |
 |---|---|---|
-| Remote-Repo verbinden | Cloud-Einstellungen | [GitHub verbinden](/guide/web-and-cloud/connect-github/) |
-| Cloud: Code ändern, PR öffnen | Cloud-Aufgabe | [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/) |
-| Lokal Diff prüfen | Desktop-App / IDE | [Diffs und Kommentare](/guide/desktop-app/diffs-comments-and-review/) |
+| Remote-Repo verbinden | Cloud-Einstellungen | [GitHub verbinden](/de/guide/web-and-cloud/connect-github/) |
+| Cloud: Code ändern, PR öffnen | Cloud-Aufgabe | [Pull Request erstellen](/de/guide/web-and-cloud/create-pull-requests/) |
+| Lokal Diff prüfen | Desktop-App / IDE | [Diffs und Kommentare](/de/guide/desktop-app/diffs-comments-and-review/) |
 | Codex in CI | GitHub Actions | Roadmap `08-developer-platform/ci-cd/` |
-| PR Auto-Review-Kommentar | Actions + exec | [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) |
+| PR Auto-Review-Kommentar | Actions + exec | [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/) |
 
 ## Empfohlene Teamnorm
 

@@ -1,58 +1,70 @@
 ---
-title: Web et Cloud (aperçu)
-description: Navigation d'entrée pour les Tâches Cloud, les environnements, les Secrets et la revue de PR.
-sidebar:
-  order: 13
+title: Vue d'ensemble de Web et Cloud
+description: Parcourez le flux de tâches distantes, de la connexion du dépôt et d'un environnement reproductible jusqu'à la révision et à la pull request.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5861c62
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 13
 ---
 
-Cloud convient pour exécuter des Tâches dans un **environnement distant standardisé**, connecter GitHub et produire des PR. Commencez par [local vs cloud](/guide/foundations/local-vs-cloud/) et consultez la [documentation officielle Cloud](https://developers.openai.com/codex).
+Codex Cloud exécute les tâches de programmation dans des environnements Cloud isolés. Il convient aux tâches longues en arrière-plan, aux tentatives parallèles et aux travaux lancés depuis GitHub, GitLab (Beta), Linear ou Slack. Il ne contrôle pas votre ordinateur à distance et ne voit pas automatiquement les fichiers locaux qui n'ont pas été poussés.
 
-Les Tâches ne s'exécutent pas sur votre ordinateur portable — elles continuent dans un environnement distant.
+## Cycle de vie d'une tâche Cloud
 
-Scénarios typiques :
+```text
+Se connecter avec ChatGPT
+  → connecter GitHub / GitLab
+  → créer un environnement pour le dépôt
+  → extraire la branche ou le commit choisi
+  → exécuter le script de setup pour installer les dépendances
+  → laisser l'Agent modifier et vérifier dans les limites de la politique réseau
+  → examiner le résumé, les journaux et le diff
+  → poursuivre dans la conversation ou créer une PR
+  → fusionner après révision humaine et CI
+```
 
-- Tâches longues
-- Vous ne voulez pas surveiller votre machine
-- Vous avez besoin de workflows repo distant et PR directement
+Cloud apporte isolation, reproductibilité et parallélisme. Il ne supprime pas la révision.
 
-Cloud n'est pas toujours la première chose que vous touchez, mais une fois que vous travaillez avec des repos distants, des PR et des Tâches longues asynchrones, vous l'utiliserez probablement.
+## Local ou Cloud
 
-## Navigation de la section
-
-| Phase | Page |
+| Choisir le local | Choisir Cloud |
 |---|---|
-| Connexion | [Connecter GitHub](/guide/web-and-cloud/connect-github/) |
-| Environnement | [Environnements Cloud](/guide/web-and-cloud/cloud-environments/) |
-| Identifiants | [Secrets et variables d'environnement](/guide/web-and-cloud/secrets-and-variables/) |
-| Sortie | [Créer une Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Qualité | [Revue de code Cloud](/guide/web-and-cloud/code-review/) |
-| Collaboration | [Déléguer et suivre](/guide/web-and-cloud/delegate-and-follow-up/) |
-| Réseau | [Accès Internet](/guide/web-and-cloud/internet-access/) |
-| Dépannage | [Dépannage Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Intégration | [Intégration GitHub](/guide/integrations/github/) |
+| Le travail dépend de fichiers non commités ou de services locaux | Les entrées se trouvent dans un dépôt distant |
+| Vous devez interagir avec un processus en temps réel | La tâche peut s'exécuter indépendamment en arrière-plan |
+| La modification est petite et rapide | Le travail exige plusieurs étapes de build/test ou des tentatives parallèles |
+| Un outil requis n'existe que sur cet ordinateur | Des scripts peuvent recréer l'environnement |
 
-Démarrez des Tâches Cloud depuis l'App de bureau : [Tâches locales et Cloud](/guide/desktop-app/local-and-cloud-tasks/). Déléguez depuis l'IDE : [Tâches Cloud IDE](/guide/ide/cloud-task-workflow/).
+Lisez [Exécution locale et Cloud](/fr/guide/foundations/local-vs-cloud/) avant de choisir.
 
-## Ordre de lecture suggéré
+## Ordre d'apprentissage recommandé
 
-Lors de votre première prise de contact avec Cloud :
+1. [Connecter GitHub](/fr/guide/web-and-cloud/connect-github/) : n'autoriser que les dépôts requis.
+2. [Environnements Cloud](/fr/guide/web-and-cloud/cloud-environments/) : fixer les outils, les versions et le setup.
+3. [Secrets et variables d'environnement](/fr/guide/web-and-cloud/secrets-and-variables/) : séparer les Secrets réservés au setup des variables ordinaires.
+4. [Accès à Internet](/fr/guide/web-and-cloud/internet-access/) : l'accès de l'Agent est désactivé par défaut ; n'ouvrir que les domaines et méthodes nécessaires.
+5. [Déléguer et poursuivre](/fr/guide/web-and-cloud/delegate-and-follow-up/) : fournir l'objectif, les contraintes et les critères d'acceptation.
+6. [Créer des pull requests](/fr/guide/web-and-cloud/create-pull-requests/) et [Révision de code](/fr/guide/web-and-cloud/code-review/) : transformer un résultat en livrable fusionnable.
+7. [Dépannage Cloud](/fr/guide/web-and-cloud/troubleshooting/) : diagnostiquer les couches dépôt, setup, réseau et tâche.
 
-1. [Connecter GitHub](/guide/web-and-cloud/connect-github/)
-2. [Secrets et variables d'environnement](/guide/web-and-cloud/secrets-and-variables/)
-3. Flux PR, revue de code et collaboration
+Si vous partez de l'App de bureau ou de l'IDE, lisez aussi [Tâches locales et Cloud](/fr/guide/desktop-app/local-and-cloud-tasks/) ou [Tâches Cloud depuis l'IDE](/fr/guide/ide/cloud-task-workflow/).
 
-Comprendre comment cela se connecte aux repos, aux permissions et aux secrets vous évite des efforts avant de plonger dans l'automatisation.
+## Premier exercice
 
-Cloud est pour le travail sur des repos distants qui continue après que vous quittez votre machine — pas simplement « workflow local dans un navigateur ».
+Utilisez un dépôt de test sans identifiant de production. Demandez uniquement à Codex de corriger les liens de documentation et d'exécuter le vérificateur de liens. La réussite signifie que l'environnement démarre, que le diff ne contient que les fichiers attendus, que la sortie de la commande est visible et que le résultat peut devenir une PR. Une page affichant « terminé » ne constitue pas une preuve d'acceptation suffisante.
+
+## Sources officielles
+
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Environnements Cloud](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** Cloud  
-**Note de revue :** Cette page de navigation a encore une valeur structurelle, mais elle dépend de capacités à forte évolution — connexion GitHub, Secrets, PR, suivi mobile, accès réseau ; marquer `outdated` jusqu'à que chaque sous-page soit alignée avec la documentation officielle Cloud actuelle.  
-**Dernière vérification :** 2026-07-26
+**Statut :** verified
+
+**Produit concerné :** Cloud
+
+**Dernière vérification :** 2026-08-26

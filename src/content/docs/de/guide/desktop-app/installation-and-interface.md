@@ -1,58 +1,77 @@
 ---
-title: Installation und Oberfläche
-description: Wichtige Oberflächenbereiche nach der Installation der Desktop-App.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Installation und erster Einsatz
+description: Lerne Projekte, Chats, Codex und Review-Einstiege in der ChatGPT-Desktop-App kennen.
 sidebar:
   order: 10
+locale: de
+source_locale: zh-CN
+source_revision: d61c2fa
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Installationsschritte: [Desktop-App installieren](/guide/getting-started/install-desktop-app/) und [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Dieses Kapitel richtet sich an Personen, die die ChatGPT-Desktop-App zum ersten Mal öffnen. Ziel ist nicht, alle Schaltflächen auswendig zu lernen, sondern eine **kleine, prüfbare und verifizierbare Aufgabe** abzuschließen.
 
-Beim ersten Öffnen der Desktop-App erscheinen viele Informationen gleichzeitig.
+Die Schritte für Installation und Anmeldung findest du unter [Desktop-App installieren](/de/guide/getting-started/install-desktop-app/). Derzeit sind offizielle Versionen für macOS, Windows und Linux verfügbar. Nach der Anmeldung kannst du einen neuen Chat oder ein Projekt erstellen oder einen lokalen Ordner öffnen.
 
-Du musst nicht sofort alle Bereiche durchschauen — erkenne zuerst die wichtigsten Stellen.
+## Zuerst drei Objekte kennenlernen
 
-## Oberflächenbereiche (logische Aufteilung)
+| Objekt | Zweck | Erster Schritt für Einsteiger |
+|---|---|---|
+| Projekt oder Ordner | Stellt einem Chat Dateien und Arbeitsverzeichnis bereit | Öffne ein Übungs-Repository, nicht sofort ein Produktionsverzeichnis |
+| Chat | Bewahrt Ziel, Kontext, Fortschritt und Ergebnis auf | Verwende für jedes eindeutige Ziel einen eigenen Chat |
+| Codex | Liest, ändert und verifiziert Projektinhalte | Beginne mit einer risikoarmen, leicht prüfbaren Änderung |
 
-Konkrete Bezeichnungen ändern sich mit der Version; orientiere dich an dem Text auf deinem Bildschirm:
+Die App-Oberfläche wird laufend weiterentwickelt. Diese drei Objekte sind beständiger als die Position einer bestimmten Schaltfläche.
 
-1. **Projekt- / Arbeitsbereichsauswahl:** aktuell gebundener Ordner
-2. **Gesprächs- / Aufgabenbereich:** Prompt eingeben, Agent-Fortschritt sehen
-3. **Änderungs- / Diff-Ansicht:** vorgeschlagene Änderungen prüfen
-4. **Terminal oder Protokoll** (falls aktiv): Befehlsausgaben sehen
-5. **Einstellungen und Konto:** Modell, Berechtigungen, Benachrichtigungen usw.
+## Die erste echte Aufgabe abschließen
 
-Finde zuerst „wo gebe ich eine Aufgabe ein“ und „wo gebe ich Dateiänderungen frei“.
+Bereite ein vorhandenes Git-Repository vor und vergewissere dich, dass es keine noch nicht festgehaltenen Änderungen enthält, die erhalten bleiben müssen. Öffne dann den Ordner in der App und erstelle einen Codex-Chat.
 
-## Häufige Missverständnisse
+Gib Folgendes ein:
 
-### 1. Am Anfang müssen nicht alle Panels klar sein
+```text
+Lies zuerst README.md und ändere nur den Abschnitt „Lokal ausführen“:
+1. Korrigiere den nicht mehr gültigen Startbefehl.
+2. Lass alle anderen Abschnitte unverändert.
+3. Zeige nach der Änderung den Diff und führe die in der Dokumentation ausführbaren Prüfbefehle aus.
+4. Wenn eine Verifikation nicht möglich ist, nenne den Grund ausdrücklich und behaupte nicht, die Aufgabe sei abgeschlossen.
+```
 
-Diese drei Bereiche reichen zuerst:
+Lies nach Abschluss nicht nur die Chat-Zusammenfassung, sondern prüfe auch:
 
-- wo Aufgaben eingegeben werden
-- wo Änderungen sichtbar sind
-- wo freigegeben oder abgelehnt wird
+1. Enthält der Review-Bereich ausschließlich die erwarteten Dateien?
+2. Sind gelöschte Inhalte tatsächlich entbehrlich?
+3. Stützt die Terminalausgabe die Aussage, dass die Verifikation bestanden wurde?
+4. Entspricht `git diff` dem Aufgabenbereich?
 
-### 2. Terminal, Diff und Einstellungen später lernen?
+## Wann Chat, Work oder Codex verwenden?
 
-Stufenweise Lernen ist in Ordnung.  
-Die Diff-Ansicht solltest du aber früh kennenlernen — sie entscheidet direkt, ob du den Änderungsrahmen verstehst.
+- Verwende Chat für Wissensfragen und Ideendiskussionen.
+- Verwende Work für allgemeine Arbeit über mehrere Dateien und Werkzeuge hinweg.
+- Verwende Codex, wenn ein Repository verstanden, geändert und getestet werden soll.
 
-### 3. Oberfläche weicht von Dokumentationsscreenshots ab?
+Für eine vorübergehende Frage ohne langfristig benötigten Kontext kannst du Quick chat verwenden. Fortlaufend verfolgte Arbeit gehört in einen regulären Chat oder ein Projekt.
 
-Maßgeblich ist der aktuelle Text deiner Version.  
-Hier geht es um logische Bereiche, nicht um konkrete Buttonnamen.
+## Was du bei einem Fehler zuerst prüfst
 
-Finde zuerst „Aufgabe eingeben“, „Änderungen sehen“ und „freigeben“ — den Rest lernst du im Gebrauch.
+- **Dateien sind nicht sichtbar:** Prüfe, ob der richtige Ordner geöffnet ist und die Aufgabenberechtigung nicht abgelehnt wurde.
+- **Ein Befehl lässt sich nicht ausführen:** Prüfe, ob die Abhängigkeiten installiert sind, und lies den ersten aussagekräftigen Fehler im Terminal.
+- **Alte Änderungen sind mit den neuen vermischt:** Unterscheide mit `git status` zwischen bereits vor der Aufgabe vorhandenen und neu entstandenen Änderungen.
+- **Die App sieht anders aus als beschrieben:** Orientiere dich an den logischen Objekten „Projekt/Ordner, Chat, Review und Terminal“ statt an festen Positionen in Screenshots.
+
+Lerne als Nächstes [Diffs, Kommentare und Reviews](/de/guide/desktop-app/diffs-comments-and-review/) sowie das [integrierte Terminal](/de/guide/desktop-app/integrated-terminal/) kennen.
+
+## Offizielle Grundlage
+
+- [ChatGPT desktop app](https://learn.chatgpt.com/docs/app)
+- [Code review](https://learn.chatgpt.com/docs/code-review)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App  
-**Prüfhinweis:** Die neue ChatGPT-Desktop-Anwendung hat im Juli 2026 Navigation und Layout von Chat/Work/Codex noch angepasst; diese Seite versucht nur „logische Bereiche“ zu beschreiben, basiert aber weiterhin auf einer bestimmten Desktop-UI-Aufteilung und muss nach Stabilisierung der Oberfläche neu geschrieben werden.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App
+
+**Zuletzt geprüft:** 2026-08-26

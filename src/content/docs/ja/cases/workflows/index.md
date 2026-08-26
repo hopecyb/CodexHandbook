@@ -3,12 +3,13 @@ title: ワークフロー手法
 description: 繰り返し可能な協働方法——単一製品 UI に縛られず、チェックポイントと受け入れを重視する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 2306981
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-[プロンプト](/prompts/) は**言い方**を教えます。ワークフローは**一連の作業の組み立て方**を教えます。本章の方法は App、CLI、IDE、Cloud に適用できます。
+[プロンプト](/ja/prompts/) は**言い方**を教えます。ワークフローは**一連の作業の組み立て方**を教えます。本章の方法は App、CLI、IDE、Cloud に適用できます。
 
 ## なぜワークフローが必要か
 
@@ -24,26 +25,26 @@ translated_at: 2026-07-28
 
 | ワークフロー | 解決する問題 |
 |---|---|
-| [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/) | 汎用の主経路。ほとんどのタスクに適する |
-| [構築前にブレインストーム](/cases/workflows/brainstorm-before-building/) | 案が未定のときの発散と収束 |
-| [仕様駆動の作業](/cases/workflows/specification-driven-work/) | 受け入れ可能な仕様を先に書いてから実装 |
-| [テスト駆動の作業](/cases/workflows/test-driven-work/) | テスト先行で実装を駆動 |
-| [人間による承認パターン](/cases/workflows/human-approval-patterns/) | いつ止まり、いつ承認し、いつ拒否するか |
-| [診断してから修正](/cases/workflows/diagnose-before-fixing/) | 「推測修正」を避ける |
-| [マージ前レビュー](/cases/workflows/review-before-merge/) | PR マージ前の構造化レビュー |
-| [出典付きリサーチ](/cases/workflows/research-with-sources/) | 検索、比較、出典の検証 |
-| [成果物優先](/cases/workflows/artifact-first-work/) | まず成果物を約束し、ステップを逆算 |
-| [複数 Agent 協働](/cases/workflows/multi-agent-coordination/) | 並列と分担 |
-| [長タスク管理](/cases/workflows/long-running-task-management/) | セッションをまたぐチェックポイントと終了条件 |
-| [失敗からの回復](/cases/workflows/failure-recovery/) | 逸脱、テスト失敗時のロールバック |
-| [Skill として蓄積](/cases/workflows/turn-a-workflow-into-a-skill/) | 繰り返しフローを Skill として記述 |
+| [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/) | 汎用の主経路。ほとんどのタスクに適する |
+| [構築前にブレインストーム](/ja/cases/workflows/brainstorm-before-building/) | 案が未定のときの発散と収束 |
+| [仕様駆動の作業](/ja/cases/workflows/specification-driven-work/) | 受け入れ可能な仕様を先に書いてから実装 |
+| [テスト駆動の作業](/ja/cases/workflows/test-driven-work/) | テスト先行で実装を駆動 |
+| [人間による承認パターン](/ja/cases/workflows/human-approval-patterns/) | いつ止まり、いつ承認し、いつ拒否するか |
+| [診断してから修正](/ja/cases/workflows/diagnose-before-fixing/) | 「推測修正」を避ける |
+| [マージ前レビュー](/ja/cases/workflows/review-before-merge/) | PR マージ前の構造化レビュー |
+| [出典付きリサーチ](/ja/cases/workflows/research-with-sources/) | 検索、比較、出典の検証 |
+| [成果物優先](/ja/cases/workflows/artifact-first-work/) | まず成果物を約束し、ステップを逆算 |
+| [複数 Agent 協働](/ja/cases/workflows/multi-agent-coordination/) | 並列と分担 |
+| [長タスク管理](/ja/cases/workflows/long-running-task-management/) | セッションをまたぐチェックポイントと終了条件 |
+| [失敗からの回復](/ja/cases/workflows/failure-recovery/) | 逸脱、テスト失敗時のロールバック |
+| [Skill として蓄積](/ja/cases/workflows/turn-a-workflow-into-a-skill/) | 繰り返しフローを Skill として記述 |
 
 ## ワークフロー関連のその他の章
 
-- 品質：[コア能力 · 品質と検証](/guide/quality/)
-- Agent：[計画](/guide/agent-work/planning/)、[サブ Agent](/guide/agent-work/subagents/)
-- 蓄積：[Skill](/skills/overview/)、[AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- ケース：[シナリオとケースライブラリ](/cases/use-cases/)
+- 品質：[コア能力 · 品質と検証](/ja/guide/quality/)
+- Agent：[計画](/ja/guide/agent-work/planning/)、[サブ Agent](/ja/guide/agent-work/subagents/)
+- 蓄積：[Skill](/ja/skills/overview/)、[AGENTS.md](/ja/guide/customization/agents-md/what-is-agents-md/)
+- ケース：[シナリオとケースライブラリ](/ja/cases/use-cases/)
 
 ## 設計原則
 

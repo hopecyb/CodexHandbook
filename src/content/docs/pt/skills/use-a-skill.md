@@ -3,9 +3,10 @@ title: Usar um Skill
 description: Disparo explícito e implícito de Skills, e como escrever um bom description.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Quem começa com Skill costuma achar que «depois de instalar, ele ativa sozinho». Usar um Skill é fazer o Codex seguir um roteiro de trabalho já escrito.
@@ -85,7 +86,7 @@ depois de ler o `description`, deve ficar óbvio «quando usar» e «quando não
 
 Se, após ler, ainda parecer que «serve para tudo», provavelmente está vago demais.
 
-Mais conceitos em [Visão geral de Skills](/skills/overview/).
+Mais conceitos em [Visão geral de Skills](/pt/skills/overview/).
 ---
 
 **Status:** verified  

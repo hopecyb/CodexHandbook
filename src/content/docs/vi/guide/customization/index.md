@@ -5,9 +5,10 @@ sidebar:
   order: 40
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a2992b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex không chỉ dựa vào “lần này hỏi thế nào”, mà còn dựa vào **cấu hình bền** để nhớ ước định của bạn và nhóm. Chương này chủ yếu phân biệt yêu cầu nào nên giữ trong hội thoại, yêu cầu nào nên hạ xuống dự án.
@@ -24,9 +25,9 @@ Nếu bạn đã bắt đầu lặp lại cùng một câu, ví dụ “đừng 
 
 | Độc giả | Đề xuất đọc trước |
 |---|---|
-| Vừa chạy thông tác vụ đầu | [Mô tả dự án](/guide/customization/project-instructions/) |
-| Muốn cố định quy chuẩn cộng tác trong kho | [AGENTS.md là gì](/guide/customization/agents-md/what-is-agents-md/) |
-| Muốn thống nhất hành vi CLI/App | [Cơ bản cấu hình](/guide/customization/configuration/config-basics/) |
+| Vừa chạy thông tác vụ đầu | [Mô tả dự án](/vi/guide/customization/project-instructions/) |
+| Muốn cố định quy chuẩn cộng tác trong kho | [AGENTS.md là gì](/vi/guide/customization/agents-md/what-is-agents-md/) |
+| Muốn thống nhất hành vi CLI/App | [Cơ bản cấu hình](/vi/guide/customization/configuration/config-basics/) |
 
 ## Chương này đang xử lý gì
 
@@ -78,14 +79,14 @@ Cấu hình quá phân tán, quy tắc quá dài, tầng quá loạn, ngược l
 
 | Chủ đề | Trang |
 |---|---|
-| AGENTS.md | [Tổng quan](/guide/customization/agents-md/what-is-agents-md/) · [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/) · [Viết chỉ thị dự án tốt](/guide/customization/agents-md/writing-effective-instructions/) |
-| Chỉ thị dự án | [Mô tả dự án](/guide/customization/project-instructions/) |
-| Bộ nhớ | [Bộ nhớ và ngữ cảnh bền](/guide/customization/memories-and-persistent-context/) |
-| Chọn cơ chế | [Chọn cơ chế phù hợp](/guide/customization/choosing-the-right-mechanism/) |
-| Tệp cấu hình | [Cơ bản cấu hình](/guide/customization/configuration/config-basics/) · [Profile](/guide/customization/configuration/profiles/) |
-| Sở thích cá nhân | [Sở thích cá nhân](/guide/customization/personal-preferences/) |
-| Quy tắc | [Cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/) · [Quy tắc lệnh](/guide/customization/rules/command-rules/) · [Chiến lược nhóm](/guide/customization/rules/team-rules/) |
-| Ví dụ | [AGENTS.md trong Monorepo](/guide/customization/examples/monorepo-agents-md/) |
+| AGENTS.md | [Tổng quan](/vi/guide/customization/agents-md/what-is-agents-md/) · [Phạm vi và ưu tiên](/vi/guide/customization/agents-md/scope-and-precedence/) · [Viết chỉ thị dự án tốt](/vi/guide/customization/agents-md/writing-effective-instructions/) |
+| Chỉ thị dự án | [Mô tả dự án](/vi/guide/customization/project-instructions/) |
+| Bộ nhớ | [Bộ nhớ và ngữ cảnh bền](/vi/guide/customization/memories-and-persistent-context/) |
+| Chọn cơ chế | [Chọn cơ chế phù hợp](/vi/guide/customization/choosing-the-right-mechanism/) |
+| Tệp cấu hình | [Cơ bản cấu hình](/vi/guide/customization/configuration/config-basics/) · [Profile](/vi/guide/customization/configuration/profiles/) |
+| Sở thích cá nhân | [Sở thích cá nhân](/vi/guide/customization/personal-preferences/) |
+| Quy tắc | [Cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/) · [Quy tắc lệnh](/vi/guide/customization/rules/command-rules/) · [Chiến lược nhóm](/vi/guide/customization/rules/team-rules/) |
+| Ví dụ | [AGENTS.md trong Monorepo](/vi/guide/customization/examples/monorepo-agents-md/) |
 
 Chi tiết Rules đã bắt đầu; các trang cấu hình chi tiết hơn sẽ bổ sung theo module tùy chỉnh.
 

@@ -5,9 +5,10 @@ sidebar:
   order: 4
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 283b8cb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 El objetivo es completar la primera Tarea en un **proyecto de práctica seguro**, y aprender a revisar, aceptar, modificar o deshacer.
@@ -25,15 +26,15 @@ Si lo que más te preocupa es «cómo empezar» y «cómo evitar equivocarte al 
 
 ## Pasos
 
-1. [Cuenta, planes y acceso](/guide/getting-started/account-plans-and-access/)
-2. [Elige un cliente](/guide/getting-started/choose-your-codex-client/)
-3. Instala: [App de escritorio](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
-4. [Inicia sesión](/guide/getting-started/sign-in-and-authentication/)
-5. [Crea un proyecto de práctica](/guide/getting-started/create-your-first-project/)
-6. [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/)
-7. [Revisa el resultado](/guide/getting-started/review-the-result/) · [Deshacer y recuperar](/guide/getting-started/undo-and-recover/)
+1. [Cuenta, planes y acceso](/es/guide/getting-started/account-plans-and-access/)
+2. [Elige un cliente](/es/guide/getting-started/choose-your-codex-client/)
+3. Instala: [App de escritorio](/es/guide/getting-started/install-desktop-app/) · [CLI](/es/guide/getting-started/install-cli/) · [IDE](/es/guide/getting-started/install-ide-extension/)
+4. [Inicia sesión](/es/guide/getting-started/sign-in-and-authentication/)
+5. [Crea un proyecto de práctica](/es/guide/getting-started/create-your-first-project/)
+6. [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/)
+7. [Revisa el resultado](/es/guide/getting-started/review-the-result/) · [Deshacer y recuperar](/es/guide/getting-started/undo-and-recover/)
 
-Si tienes prisa: [primeros 30 minutos](/guide/getting-started/first-30-minutes/) · lee primero la [lista de seguridad](/guide/getting-started/beginner-safety-checklist/).
+Si tienes prisa: [primeros 30 minutos](/es/guide/getting-started/first-30-minutes/) · lee primero la [lista de seguridad](/es/guide/getting-started/beginner-safety-checklist/).
 
 Los pasos de instalación cambian con la versión; comprueba también [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

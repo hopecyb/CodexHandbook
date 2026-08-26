@@ -3,9 +3,10 @@ title: Text- und Codedateien
 description: "Quellcode, Config und Dokument-Textdateien mit Codex korrekt lesen und schreiben."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ Wenn Codex Text oder Code ändert: am richtigen Ort, auf die richtige Weise — 
 | Dokumente `.md` | Relative Links, gemischtsprachige Konventionen |
 | Generierter Code | Ob committen oder gitignore klarstellen |
 
-Kontext: [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
+Kontext: [Datei- und Ordnerkontext](/de/guide/context/file-and-folder-context/)
 
 ## Warum diese Dateien oft scheitern
 
@@ -50,7 +51,7 @@ Stil: wie <Beispieldatei>
 Fertig: geänderte Dateien listen + <Testbefehl> ausführen
 ```
 
-Siehe [Anatomie guter Aufgaben](/prompts/task-anatomy/)
+Siehe [Anatomie guter Aufgaben](/de/prompts/task-anatomy/)
 
 ## Häufige Missverständnisse
 
@@ -91,8 +92,8 @@ Direkt verlangen:
 
 ## Review-Schwerpunkte
 
-- [Diffs prüfen](/guide/quality/review-diffs/): Logik, Umfang, Löschungen
-- [Tests ausführen](/guide/quality/run-tests/)
+- [Diffs prüfen](/de/guide/quality/review-diffs/): Logik, Umfang, Löschungen
+- [Tests ausführen](/de/guide/quality/run-tests/)
 - Unbeabsichtigte `TODO`-Platzhalter ohne Umsetzung
 
 ## Häufige Fehler

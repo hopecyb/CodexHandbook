@@ -3,9 +3,10 @@ title: Sandbox und Netzwerk
 description: "Verstehe Ausführungsisolation, Netzwerkzugriff und Risikogrenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3d6d57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -64,7 +65,7 @@ Stell dir zwei Türen vor:
 
 Beide Türen sind nicht nur technische Einstellungen — sie sind deine Risikosteuerung.
 
-Produktseitige Einstiege: Desktop-App [Einstellungen](/guide/desktop-app/settings/); offizielle Details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Produktseitige Einstiege: Desktop-App [Einstellungen](/de/guide/desktop-app/settings/); offizielle Details: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Am Anfang lieber etwas enger begrenzen, als alle Türen zu öffnen, bevor du die Risiken verstehst.
 

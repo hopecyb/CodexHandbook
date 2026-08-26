@@ -3,9 +3,10 @@ title: 出典の確認
 description: 調査結論にたどれる根拠を求める。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 35bd9a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -18,7 +19,7 @@ Agent に次を求めます。
 各重要事実に出典 URL または文献を付ける。不確かなものは「未確認」と明記する。
 ```
 
-結果を受け取ったら、リンクを開いて再確認してください。検索機能は [Web 検索](/guide/tools/web-search/) を参照。
+結果を受け取ったら、リンクを開いて再確認してください。検索機能は [Web 検索](/ja/guide/tools/web-search/) を参照。
 
 ## よくある誤解
 

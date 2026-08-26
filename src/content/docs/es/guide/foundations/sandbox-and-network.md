@@ -3,9 +3,10 @@ title: Sandbox y red
 description: Entiende el aislamiento de ejecución, el acceso a la red y los límites de riesgo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3d6d57
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -64,7 +65,7 @@ Piensa en dos puertas:
 
 Ninguna es solo un ajuste técnico; también es tu forma de controlar el riesgo.
 
-Entrada de ajustes en el producto: App de escritorio [Ajustes](/guide/desktop-app/settings/); detalles oficiales: [https://developers.openai.com/codex](https://developers.openai.com/codex).
+Entrada de ajustes en el producto: App de escritorio [Ajustes](/es/guide/desktop-app/settings/); detalles oficiales: [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
 Al empezar, mejor restringir un poco de más que abrir todas las puertas cuando aún no entiendes el riesgo.
 

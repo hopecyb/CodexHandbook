@@ -8,6 +8,11 @@ trend: rising
 signal: well-calibrated
 tags: [context-engineering, agent, memory, context-window, llmops]
 authored_by: ai-assisted
+locale: en
+source_locale: zh-CN
+translation_status: reviewed
+reviewed_at: 2026-08-26
+source_revision: 5fc2d08
 ---
 
 # Context Engineering

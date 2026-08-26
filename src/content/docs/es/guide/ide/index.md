@@ -5,9 +5,10 @@ sidebar:
   order: 12
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 66307a0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La extensión IDE conviene cuando **escribes y miras el diff a la vez**: abres archivos, seleccionas código y describes la Tarea en la barra lateral. Este capítulo cubre el recorrido completo, desde la elección hasta la revisión.
@@ -20,15 +21,15 @@ Trae directamente el archivo abierto y la selección actuales, así que muchas T
 
 | Tema | Página |
 |---|---|
-| Elección | [Editores compatibles](/guide/ide/supported-editors/) |
-| Instalación | [Instalación](/guide/ide/installation/) |
-| Contexto | [Contexto del editor](/guide/ide/editor-context/) · [Selección y archivos abiertos](/guide/ide/selected-code-and-open-files/) |
-| Flujo de trabajo | [Tareas locales](/guide/ide/local-task-workflow/) · [Tareas Cloud](/guide/ide/cloud-task-workflow/) |
-| Calidad | [Revisar cambios](/guide/ide/reviewing-changes/) |
-| Configuración | [Ajustes](/guide/ide/settings/) |
-| Resolución de problemas | [Resolución de problemas](/guide/ide/troubleshooting/) |
+| Elección | [Editores compatibles](/es/guide/ide/supported-editors/) |
+| Instalación | [Instalación](/es/guide/ide/installation/) |
+| Contexto | [Contexto del editor](/es/guide/ide/editor-context/) · [Selección y archivos abiertos](/es/guide/ide/selected-code-and-open-files/) |
+| Flujo de trabajo | [Tareas locales](/es/guide/ide/local-task-workflow/) · [Tareas Cloud](/es/guide/ide/cloud-task-workflow/) |
+| Calidad | [Revisar cambios](/es/guide/ide/reviewing-changes/) |
+| Configuración | [Ajustes](/es/guide/ide/settings/) |
+| Resolución de problemas | [Resolución de problemas](/es/guide/ide/troubleshooting/) |
 
-Atajos de inicio: [Instalar la extensión IDE](/guide/getting-started/install-ide-extension/) · [Elegir cliente](/guide/getting-started/choose-your-codex-client/)
+Atajos de inicio: [Instalar la extensión IDE](/es/guide/getting-started/install-ide-extension/) · [Elegir cliente](/es/guide/getting-started/choose-your-codex-client/)
 
 ## Presta atención a esto primero
 

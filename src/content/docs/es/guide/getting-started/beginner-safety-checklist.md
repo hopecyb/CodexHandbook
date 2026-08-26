@@ -3,9 +3,10 @@ title: Lista de seguridad para principiantes
 description: Comprobaciones de seguridad obligatorias antes del primer uso.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -21,9 +22,9 @@ Marca antes de empezar:
 - [ ] Entiendo que las operaciones de alto riesgo requieren mi Aprobación
 - [ ] No aprobaré comandos o peticiones de red que no entienda
 - [ ] Revisaré el Diff antes de aceptar el resultado
-- [ ] Sé cómo [deshacer](/guide/getting-started/undo-and-recover/)
+- [ ] Sé cómo [deshacer](/es/guide/getting-started/undo-and-recover/)
 
-Conceptos de apoyo: [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/) · [Sandbox y red](/guide/foundations/sandbox-and-network/).
+Conceptos de apoyo: [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/) · [Sandbox y red](/es/guide/foundations/sandbox-and-network/).
 
 ## Malentendidos frecuentes
 

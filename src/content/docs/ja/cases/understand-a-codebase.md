@@ -3,9 +3,10 @@ title: コードベースを理解する
 description: 読み取り専用で未知のリポジトリを探索し、行動可能な認知マップを構築する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # コードベースを理解する
@@ -42,8 +43,8 @@ translated_at: 2026-07-28
 
 ## 4. 関連
 
-- [理解テンプレート](/prompts/templates/understand/)
-- [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
+- [理解テンプレート](/ja/prompts/templates/understand/)
+- [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
 
 ---
 

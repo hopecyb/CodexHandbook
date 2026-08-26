@@ -3,9 +3,10 @@ title: 開発者パス（概要）
 description: ソフトウェア開発関連ルートの概要。詳細ステップは今後追加します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ sidebar:
 
 ## 今読める内容
 
-- [クイックスタート](/guide/getting-started/) と [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [テストの実行](/guide/quality/run-tests/) · [差分のレビュー](/guide/quality/review-diffs/)
-- [Agent の計画](/guide/agent-work/planning/)
+- [クイックスタート](/ja/guide/getting-started/) と [CLI](/ja/guide/cli/) / [IDE](/ja/guide/ide/)
+- [テストの実行](/ja/guide/quality/run-tests/) · [差分のレビュー](/ja/guide/quality/review-diffs/)
+- [Agent の計画](/ja/guide/agent-work/planning/)
 
 ## よくある誤解
 
@@ -46,11 +47,11 @@ Codex の動作は通常のエディタの自動補完とは異なります。�
 
 開発に Codex を使う準備ができている場合は、次の順序で読めます。
 
-1. [クイックスタート](/guide/getting-started/)
-2. [CLI](/guide/cli/) または [IDE](/guide/ide/)
-3. [Agent ワーク](/guide/agent-work/)
-4. [テストの実行](/guide/quality/run-tests/)
-5. [差分のレビュー](/guide/quality/review-diffs/)
+1. [クイックスタート](/ja/guide/getting-started/)
+2. [CLI](/ja/guide/cli/) または [IDE](/ja/guide/ide/)
+3. [Agent ワーク](/ja/guide/agent-work/)
+4. [テストの実行](/ja/guide/quality/run-tests/)
+5. [差分のレビュー](/ja/guide/quality/review-diffs/)
 
 このパスは、変更を制御可能にし結果を検証可能にすることを重視し、「まず書かせる」ことだけを追求しません。
 

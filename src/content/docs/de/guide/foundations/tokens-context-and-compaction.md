@@ -3,9 +3,10 @@ title: "Token, Kontext und Komprimierung"
 description: "Verstehe Kontextfenster, Belegung und Komprimierung."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b33848c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -60,7 +61,7 @@ Wenn du fürchtest, dass Schlüsselanforderungen verloren gehen:
 
 - Wichtige Einschränkungen in die aktuelle Nachricht oder Projektanweisung — nicht nur in sehr alte Gespräche begraben
 - Bei Themenwechsel neuen Thread öffnen
-- Prinzipien und Tipps: [Kontext-Komprimierung](/guide/context/compaction/) und [Kontext fokussiert halten](/guide/context/keep-context-focused/)
+- Prinzipien und Tipps: [Kontext-Komprimierung](/de/guide/context/compaction/) und [Kontext fokussiert halten](/de/guide/context/keep-context-focused/)
 
 Hier zuerst die Begriffe. Wie du steuerst, steht weiter in `05`.
 

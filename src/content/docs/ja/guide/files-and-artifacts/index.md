@@ -5,9 +5,10 @@ sidebar:
   order: 30
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3a5cc3b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex の主な成果は、多くの場合 **リポジトリ内のファイル変更** または **新しく生成された成果物**（ドキュメント、画像、設定）です。本セクションでは、ファイルタイプごとのベストプラクティスを説明し、「生成されたが使えない」事態を避ける方法を示します。
@@ -20,14 +21,14 @@ Codex の主な成果は、多くの場合 **リポジトリ内のファイル�
 
 | テーマ | ページ |
 |---|---|
-| コードとテキスト | [テキストとコードファイル](/guide/files-and-artifacts/text-and-code-files/) |
-| スクリーンショットとデザイン入力 | [画像とスクリーンショット](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF と長文ドキュメント | [PDF とドキュメント](/guide/files-and-artifacts/pdf-and-documents/) |
-| 表形式データ | [表とスプレッドシート](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| スライド | [プレゼンテーション](/guide/files-and-artifacts/presentations/) |
-| Agent の出力物 | [生成物の検証](/guide/files-and-artifacts/generated-artifacts/) |
+| コードとテキスト | [テキストとコードファイル](/ja/guide/files-and-artifacts/text-and-code-files/) |
+| スクリーンショットとデザイン入力 | [画像とスクリーンショット](/ja/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF と長文ドキュメント | [PDF とドキュメント](/ja/guide/files-and-artifacts/pdf-and-documents/) |
+| 表形式データ | [表とスプレッドシート](/ja/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| スライド | [プレゼンテーション](/ja/guide/files-and-artifacts/presentations/) |
+| Agent の出力物 | [生成物の検証](/ja/guide/files-and-artifacts/generated-artifacts/) |
 
-共通の方法は [成果物の検証](/guide/quality/verify-artifacts/) を参照してください。
+共通の方法は [成果物の検証](/ja/guide/quality/verify-artifacts/) を参照してください。
 
 ## この章で説明すること
 
@@ -44,8 +45,8 @@ Codex の主な成果は、多くの場合 **リポジトリ内のファイル�
 1. **パスを明確に**：プロンプトで出力パスと命名を書く
 2. **形式の約束**：拡張子、エンコーディング（UTF-8）、改行をプロジェクトと揃える
 3. **サイズへの配慮**：大きなバイナリは Git に入れない、または LFS/CDN を使う
-4. **手動検証**：生成 ≠ 完了。[完了の定義](/guide/quality/definition-of-done/) と照合する
-5. **機微データ**：[機密コンテキスト](/guide/context/sensitive-context/) を参照
+4. **手動検証**：生成 ≠ 完了。[完了の定義](/ja/guide/quality/definition-of-done/) と照合する
+5. **機微データ**：[機密コンテキスト](/ja/guide/context/sensitive-context/) を参照
 
 ## よくある誤解
 
@@ -86,9 +87,9 @@ Codex で初めてファイルを扱うときは、次の順で読むとよい�
 ## ツールとの関係
 
 - ファイルの読み書き：ファイルツール + ターミナル
-- 画像の参照：[画像プロンプト](/prompts/prompting-with-images/)
-- ページの確認：[ブラウザツール](/guide/tools/browser/)
-- 画像の生成：[画像生成](/guide/tools/image-generation/)
+- 画像の参照：[画像プロンプト](/ja/prompts/prompting-with-images/)
+- ページの確認：[ブラウザツール](/ja/guide/tools/browser/)
+- 画像の生成：[画像生成](/ja/guide/tools/image-generation/)
 
 ファイル系タスクでは、結果は出ているのに形式・ルール・内容が静かにずれている、ということがよくあります。
 

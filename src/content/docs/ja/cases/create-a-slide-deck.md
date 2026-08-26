@@ -3,9 +3,10 @@ title: スライドを作成する
 description: アウトラインからプレゼン資料までの成果物生成ケース。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 42c7a26
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # スライドを作成する
@@ -42,7 +43,7 @@ translated_at: 2026-07-28
 
 ## 4. 関連
 
-- [プレゼンテーション機能](/guide/files-and-artifacts/presentations/)
+- [プレゼンテーション機能](/ja/guide/files-and-artifacts/presentations/)
 
 ---
 

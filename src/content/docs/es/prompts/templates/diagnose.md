@@ -3,9 +3,10 @@ title: Plantilla de diagnóstico
 description: Localizar primero la causa raíz y luego hablar de la corrección.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de diagnóstico
@@ -47,8 +48,8 @@ La plantilla de diagnóstico exige primero explicar por qué se rompe y luego c�
 
 ## Relacionado
 
-- [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/)
-- [Caso: corregir un bug](/cases/fix-a-bug/)
+- [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/)
+- [Caso: corregir un bug](/es/cases/fix-a-bug/)
 
 ---
 

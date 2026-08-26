@@ -3,16 +3,17 @@ title: Prompt Injection
 description: When untrusted text enters context—recognition, mitigation, and team policy essentials.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 “Prompt injection” means someone embeds content in context that misleads Codex.
 
-It may come from issues, web pages, dependency comments, docs, or pasted text—often to make the Agent **ignore policy, leak data, or run dangerous commands**. It is a frequent [threat model](/guide/team-enterprise/security/threat-model/) risk and closer to real work than many assume.
+It may come from issues, web pages, dependency comments, docs, or pasted text—often to make the Agent **ignore policy, leak data, or run dangerous commands**. It is a frequent [threat model](/en/guide/team-enterprise/security/threat-model/) risk and closer to real work than many assume.
 
 ## What this page covers
 
@@ -73,12 +74,12 @@ Real injections are subtler; this distinction still blocks many low-effort attac
 **Design**
 
 - Separate **system policy** from **untrusted user content** (architecture varies by product)
-- High-sensitivity actions always [human approval](/cases/workflows/human-approval-patterns/)
+- High-sensitivity actions always [human approval](/en/cases/workflows/human-approval-patterns/)
 
 **Engineering**
 
 - CI prompts **do not** paste PR body raw; structured fields + length limits
-- [Hooks](/skills/hooks/hooks-examples/) scan known injection phrases (supplement only)
+- [Hooks](/en/skills/hooks/hooks-examples/) scan known injection phrases (supplement only)
 - Read-only tokens, no `git push`
 
 **Process**
@@ -118,7 +119,7 @@ Do not auto-inherit “operational instructions” from untrusted sources. Many 
 
 - [ ] CI/Cloud review flow assessed for injection surface
 - [ ] Maintainers know how to spot suspicious issues
-- [ ] Aligned with [Acceptable use](/guide/team-enterprise/governance/acceptable-use/)
+- [ ] Aligned with [Acceptable use](/en/guide/team-enterprise/governance/acceptable-use/)
 
 ## Reference sources
 - OWASP LLM Top 10 (Prompt Injection)

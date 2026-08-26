@@ -3,9 +3,10 @@ title: AGENTS.md
 description: Página de orientação sobre instruções de longo prazo a nível de projeto — quem as lê e que problema resolvem, antes de escrever o conteúdo.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce5c1af
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muita gente, na primeira vez que vê `AGENTS.md`, interpreta-o como «mais um Prompt, só que mais longo».
@@ -16,9 +17,9 @@ Serve melhor para convenções que não quer repetir de cada vez e que os membro
 
 ## Ordem recomendada
 
-1. [O que é AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-2. [Âmbito e prioridade](/guide/customization/agents-md/scope-and-precedence/)
-3. [Escrever instruções eficazes](/guide/customization/agents-md/writing-effective-instructions/)
+1. [O que é AGENTS.md](/pt/guide/customization/agents-md/what-is-agents-md/)
+2. [Âmbito e prioridade](/pt/guide/customization/agents-md/scope-and-precedence/)
+3. [Escrever instruções eficazes](/pt/guide/customization/agents-md/writing-effective-instructions/)
 
 ## Pontos a ter em conta primeiro
 

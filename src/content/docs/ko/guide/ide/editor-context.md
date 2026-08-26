@@ -3,11 +3,12 @@ title: 에디터 컨텍스트
 description: IDE 확장이 열린 파일·워크스페이스·프로젝트 규칙을 Codex에 전달하는 방식.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b6d208f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 IDE에서 Codex는 프롬프트만 읽는 것이 아니라 **에디터 상태**도 자동으로 받습니다. CLI 대비 IDE의 핵심 이점입니다. 컨텍스트가 어디서 오는지 알면 “파일을 열었는데도 못 본다”는 좌절을 줄일 수 있습니다.
@@ -23,15 +24,15 @@ IDE의 Codex는 당신이 한 말만 보는 게 아니라, 지금 에디터에�
 ## 권장 워크플로
 
 1. **워크스페이스 루트로 저장소를 연다**. 하위 폴더만 열지 마세요(monorepo 예외는 팀 문서 참고)
-2. 국소 로직을 고칠 때는 **관련 코드를 먼저 선택한 뒤** 작업을 설명 → [선택 영역과 열린 파일](/guide/ide/selected-code-and-open-files/)
+2. 국소 로직을 고칠 때는 **관련 코드를 먼저 선택한 뒤** 작업을 설명 → [선택 영역과 열린 파일](/ko/guide/ide/selected-code-and-open-files/)
 3. 모듈을 넘는 작업은 `@`로 관련 파일을 지정하세요. 「알아서 찾을 것」이라고 가정하지 마세요
-4. 긴 세션은 주기적으로 [컨텍스트를 압축](/guide/context/compaction/)하거나 새 스레드를 엽니다
+4. 긴 세션은 주기적으로 [컨텍스트를 압축](/ko/guide/context/compaction/)하거나 새 스레드를 엽니다
 
 ## CLI와의 차이
 
 | | IDE 확장 | CLI |
 |---|---|---|
-| 파일 인식 | 강함(열면 바로 컨텍스트) | `--cwd`와 도구로 디스크 읽기 필요 |
+| 파일 인식 | 강함(열면 바로 컨텍스트) | `--cd`와 도구로 디스크 읽기 필요 |
 | 선택 영역 | 기본 지원 | 붙여넣기나 경로 지정 필요 |
 | 적합 | 행 단위 수정, 코드 설명 | 스크립트, CI, GUI 없는 환경 |
 
@@ -56,7 +57,7 @@ IDE 컨텍스트는 돕지만 추측을 대신하지는 않습니다. 파일 범
 
 ## 민감 정보
 
-키가 들어 있는 `.env`를 에디터 전면에 오래 두지 마세요. [민감 컨텍스트](/guide/context/sensitive-context/)를 보세요.
+키가 들어 있는 `.env`를 에디터 전면에 오래 두지 마세요. [민감 컨텍스트](/ko/guide/context/sensitive-context/)를 보세요.
 
 로그·고객 데이터는 붙여넣기 전에 마스킹하세요. IDE가 규정을 대신 판단해 주지는 않습니다.
 
@@ -73,7 +74,7 @@ IDE 컨텍스트는 돕지만 추측을 대신하지는 않습니다. 파일 범
 - [ ] `AGENTS.md`의 테스트 명령이 IDE 터미널과 일치
 
 ## 참고 출처
-- [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
+- [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 ---
 
 **상태:** verified  

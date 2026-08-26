@@ -3,9 +3,10 @@ title: よくある誤解
 description: Codex を万能なブラックボックスとみなす典型的な誤解を整理する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 83a9c4c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -75,7 +76,7 @@ Codex を誤用していないか不安なら、次の三つを確認してく�
 
 Codex は強力ですが、明確な目標と境界の中でこそ力を発揮します。理解と判断を代わりにはしません。
 
-次のステップ：[クイックスタート](/guide/getting-started/)。
+次のステップ：[クイックスタート](/ja/guide/getting-started/)。
 
 ---
 

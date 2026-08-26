@@ -3,9 +3,10 @@ title: Skills 概要
 description: SKILL.md で再利用可能なワークフローを Codex に教え、一度書けば必要に応じて呼び出せるようにする。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 75eaa78
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Skill** は `SKILL.md` を含むディレクトリ（スクリプトや参考資料を追加可能）で、一連の固定フローを Codex が**自動または明示的に呼び出せる**能力としてパッケージ化したものです。
@@ -81,7 +82,7 @@ description: 現在のブランチと main の diff をレビューし、リス�
 4. 決定論が必要になったら `scripts/` を追加
 5. `.agents/skills/` にコミットし、チームに PR
 
-実践演習：[最初の Skill を作成する](/skills/create-your-first-skill/)
+実践演習：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)
 
 ## よくある混乱
 

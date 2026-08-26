@@ -1,149 +1,85 @@
 ---
-title: Cloud-Code-Review
-description: Diffs, PRs und automatisierte Review-Vorschläge aus Cloud-Aufgaben prüfen.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Code-Reviews in Cloud und GitHub
+description: Prüfe Cloud-Diffs und verwende Codex in GitHub als ergänzenden Reviewer mit hohem Signal.
 sidebar:
   order: 50
+locale: de
+source_locale: zh-CN
+source_revision: a74296a
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cloud erzeugt Änderungen — trägt aber nicht die Merge-Verantwortung.
+Eine abgeschlossene Cloud-Aufgabe liefert eine Zusammenfassung und einen Diff. Du kannst nachfragen, Änderungen verlangen oder einen PR erstellen. Der Aufgabenabschluss ist keine Genehmigung zur Zusammenführung. Projekt-CI, Branchschutz und menschliche Entscheidung bleiben erforderlich.
 
-Nach Cloud-Aufgaben bleibt **Menschen-Review** die letzte Tür vor dem Merge. Diese Seite erklärt Remote-Agent-Output zu prüfen und mit GitHub-PR, CI und Skill-Review zu verknüpfen.
+## Zwei Arten von Review
 
-## Inhalt
+| Art | Prüfgegenstand | Ergebnis |
+|---|---|---|
+| Review eines Cloud-Ergebnisses | Zusammenfassung, Protokolle und Diff der aktuellen Aufgabe | Entscheidung über Folgerunde oder PR-Erstellung |
+| GitHub-Review durch Codex | PR-Diff des verbundenen Repositorys und Regeln aus `AGENTS.md` | Veröffentlichtes GitHub-Code-Review |
 
-- Unterschiede Cloud-PR vs. lokales PR-Review
-- Checkliste und typische Risiken
-- Codex als Review-Hilfe ohne Verantwortungsabgabe
-
-## Warum Cloud-Review mehr Aufmerksamkeit braucht
-
-Remote-Agents neigen eher zu:
-
-- Unrelated Dateien mitändern
-- Umgebungsdrift → große Lockfile-/Generierungs-Diffs
-- Tests „gelaufen“, aber kritische Logik ungedeckt
-- Vollständige PR-Beschreibung, deren Inhalt Sie noch nicht verifiziert haben
-
-Cloud-Review wird nicht leichter — Fokus wichtiger.
-
-## Position im Ablauf
+Kommentiere in einem GitHub-PR:
 
 ```text
-Cloud-Aufgabe fertig → Branch pushen → PR öffnen
-        ↓
-CI (Tests, Lint, Security-Scan)
-        ↓
-Menschen-Review Diff + optional Agent-Hilfe
-        ↓
-Merge freigeben (Branch Protection)
+@codex review
 ```
 
-PR öffnen: [Pull Request erstellen](/guide/web-and-cloud/create-pull-requests/)
+Codex veröffentlicht Findings als reguläres GitHub-Review. Nach aktueller offizieller Beschreibung konzentrieren sich GitHub-Kommentare auf Probleme hoher Priorität der Stufen P0/P1. Wenn keine Findings vorliegen, kann nur eine Reaktion hinterlassen werden. Überspringe das menschliche Review nicht, nur weil wenige Kommentare erscheinen.
 
-## Mindeststandard
+## Review-Reihenfolge
 
-Vor dem vollständigen Review mindestens:
+1. **Umfang:** Entsprechen Dateien, Verzeichnisse, Abhängigkeiten und generierte Inhalte der Aufgabe?
+2. **Verhalten:** Erfüllen Normalfall, Fehlerpfade und Grenzfälle die Anforderungen?
+3. **Sicherheit:** Authentifizierung, Berechtigungen, Eingabeverarbeitung, Zugangsdaten und ausgehendes Netzwerk.
+4. **Nachweise:** Welche Tests wurden tatsächlich ausgeführt und welche Fehlschläge offengelegt?
+5. **Rückgängigmachung:** Lässt sich die Änderung lokal zurücknehmen und enthält sie sachfremdes Refactoring?
 
-1. Änderungsbereich nicht abgeschweift?
-2. Kernlogik wirklich am Ziel?
-3. Tests/Verifikation wirklich gemacht?
-4. Keine Secrets oder gefährlichen Änderungen eingeschleppt?
+Beispiel-Prompt:
 
-Ohne diese vier ist „Aufgabe fertig“ ≠ „mergebar“.
+```text
+Prüfe diesen PR und melde nur Findings, die falsches Verhalten, Datenverlust, Sicherheitsprobleme oder Kompatibilitätsregressionen verursachen.
+Jedes Finding muss Schweregrad, konkrete Position, Auslösebedingung und Auswirkung enthalten.
+Führe Stilpräferenzen nicht als Defekte auf.
+```
 
-## Menschen-Review-Checkliste
+## Repositoryspezifische Regeln
 
-Konsistent mit [Diffs reviewen](/guide/quality/review-diffs/); Cloud zusätzlich:
+Ergänze in der anwendbaren `AGENTS.md`:
 
-| Prüfpunkt | Grund |
-|---|---|
-| Unrelated Dateien? | Remote-Agent „räumt nebenbei“ |
-| Lockfile / generierte Dateien | Umgebungsdrift |
-| Herkunft neuer Abhängigkeiten | Lieferkettenrisiko |
-| Tests decken neue Logik? | Agent schreibt leere Tests |
-| Auth-/Permission-Änderungen | Privilege Escalation, hardcodierte Tokens |
-| Scope = Issue | Scope Creep verhindern |
+```md
+## Code Review Rules
 
-## Häufige Missverständnisse
+### Authentication boundaries
 
-### 1. CI grün = mergebar?
+- Flag any path that logs access tokens or sends them to non-allowlisted hosts.
+  Safe path: keep tokens in the credential provider and redact diagnostic output.
+```
 
-CI sagt nur: diese Checks sind durch. Verständnis, Scope und akzeptables Risiko bleiben menschlich.
+Regeln im Repository-Stamm gelten für das gesamte Repository. Eine verschachtelte `AGENTS.md` kann für einen Dienst spezifischere Prüfungen ergänzen. Beginne mit zwei oder drei langfristig stabilen Regeln, die auch den sicheren Weg beschreiben, statt viele schnell veraltende Funktionsnamen aufzunehmen.
 
-### 2. Vollständige PR-Beschreibung = weniger lesen?
+## Grenzen automatischer Reviews
 
-Nein.
+Benutzer mit den erforderlichen GitHub-Push- oder Administratorberechtigungen können automatische Reviews für ein Repository in Codex Settings aktivieren. Automatische Reviews sind ein ergänzendes Gate und dürfen keine automatische Merge-Berechtigung besitzen. Repositorys mit hohem Risiko behalten erforderliche Reviewer, CI und Branchschutz bei.
 
-Beschreibung beschleunigt Kontext — ersetzt keine Faktenprüfung.
+## Abnahmecheckliste
 
-### 3. Nochmal Codex-Review = Review erledigt?
+- [ ] Ein Mensch hat den zentralen Logik-Diff gelesen
+- [ ] P0/P1-Findings wurden behoben oder das Risiko schriftlich akzeptiert
+- [ ] CI besteht und wiederholte fehlgeschlagene Läufe sind erklärbar
+- [ ] Keine Secrets, unerwarteten generierten Inhalte oder sachfremden Aktualisierungen der Sperrdatei
+- [ ] Aufgabenbeschreibung, PR-Beschreibung und tatsächliche Änderungen stimmen überein
 
-Hilfreich — Verantwortung bleibt beim Menschen.
+## Offizielle Grundlage
 
-## Codex als Review-Hilfe (kein Ersatz)
+- [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
+- [Code review across clients](https://learn.chatgpt.com/docs/code-review)
 
-Akzeptabel:
-
-- Lokal oder Cloud `$pr-review`-Skill auf neuem PR ([Skill erstellen](/skills/create-your-first-skill/))
-- Meinungen in „Blocker / Vorschlag / nit“
-- **Sie** bestätigen Blocker einzeln
-
-Nicht akzeptabel:
-
-- Ohne Diff-Lesen nur wegen „Agent sagt ok“ mergen
-- Agent approve geschützte Branches selbst
-
-Siehe [Verifikation und Menschen-Review](/guide/foundations/verification-and-human-review/)
-
-## Empfohlene Reihenfolge
-
-1. PR-Titel und Beschreibung → Ziel
-2. Hauptlogik-Diff
-3. Tests, generierte Dateien, Config
-4. Automatisierte Kommentare und Ergänzungen
-
-So ertrinken Sie nicht sofort in Details.
-
-## Review-Kommentare steuern Nacharbeit
-
-Nach Review-Kommentaren:
-
-1. Neue Cloud- oder lokale Aufgabe: „Nur diese Review-Kommentare, Scope nicht erweitern“
-2. Kommentar-Links oder Nummern anhängen
-3. Neue Commits auf denselben PR
-4. CI erneut + Menschen-Blick aufs Delta
-
-GitHub-Seite: [GitHub-Integration](/guide/integrations/github/)
-
-## Mit Automations
-
-- Bei PR-Open Review-Skill (nur Kommentar, kein Merge)
-- Siehe [Geplante und getriggerte Aufgaben](/skills/automations/scheduled-tasks/)
-
-## Häufige Fehler
-
-- Cloud-„Isolation“ als Freibrief, Security-Review zu überspringen
-- Riesige Diffs mergen weil „CI grün“
-- Review-Kommentare mit unredaktierten Prod-Logs
-- „Ich habe nichts gefunden“ = „Es gibt nichts“
-
-## Abnahme-Checkliste
-
-- [ ] CI grün und Retry-Historie verstanden
-- [ ] Mindestens eine Person hat Hauptlogik-Diff gelesen
-- [ ] Scope = Issue/Aufgabenbeschreibung
-- [ ] Keine Secrets im Repo
-
-## Quellen
-- [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud / GitHub  
-**Prüfhinweis:** Prinzip „Cloud-Output braucht Menschen-Review“ stimmt; konkrete Cloud-PR-, Auto-PR- und Remote-Review-Takte ändern sich schnell — an aktueller offizieller Flow neu ausrichten.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud, GitHub
+
+**Zuletzt geprüft:** 2026-08-26

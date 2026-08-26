@@ -3,9 +3,10 @@ title: Eine Codebasis verstehen
 description: Unbekannte Repositories nur lesend erkunden und eine handlungsfähige mentale Karte aufbauen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Eine Codebasis verstehen
@@ -42,8 +43,8 @@ translated_at: 2026-07-28
 
 ## 4. Verwandt
 
-- [Verstehen-Vorlage](/prompts/templates/understand/)
-- [Erkunden—Planen—Ausführen—Überprüfen](/cases/workflows/explore-plan-execute-verify/)
+- [Verstehen-Vorlage](/de/prompts/templates/understand/)
+- [Erkunden—Planen—Ausführen—Überprüfen](/de/cases/workflows/explore-plan-execute-verify/)
 ---
 
 **Status:** verified  

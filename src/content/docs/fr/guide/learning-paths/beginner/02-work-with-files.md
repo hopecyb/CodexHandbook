@@ -3,9 +3,10 @@ title: Travailler avec les fichiers
 description: Faire lire et écrire des fichiers à Codex dans une portée claire.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7920b62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ Ne modifiez pas d'autres fichiers et n'exécutez pas de commands.
 Une fois terminé, listez les lignes que vous avez modifiées.
 ```
 
-Examinez le Diff avant d'accepter. Lié : [Contexte fichier et dossier](/guide/context/file-and-folder-context/)
+Examinez le Diff avant d'accepter. Lié : [Contexte fichier et dossier](/fr/guide/context/file-and-folder-context/)
 
-Suite : [Donner des Tâches claires](/guide/learning-paths/beginner/03-give-clear-tasks/)
+Suite : [Donner des Tâches claires](/fr/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 

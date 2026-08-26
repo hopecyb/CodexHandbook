@@ -1,56 +1,44 @@
 ---
-title: Automations
-description: Scheduled, event-driven, and background runs—what to automate vs what needs human review.
+title: Scheduled tasks
+description: Repeat a previously verified task on a schedule in ChatGPT.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: f32c13f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`Automations` is about running repeat tasks automatically—not making Codex "smarter."
+A Scheduled task lets ChatGPT repeat work in the background on a schedule. It fits periodic reports, ongoing follow-up, and recurring maintenance. It is not a general webhook, repository event, or CI system.
 
-This section focuses on:
+## Decide whether it fits
 
-- Which tasks are worth automating
-- Where automation should stop for human review
-- How to design failure, alerts, and rollback
+| Suitable | Unsuitable |
+|---|---|
+| Stable input sources and reviewable output | The problem must be redefined on every run |
+| Driven by time or interval | Must trigger exactly on Git push or PR creation |
+| Read-only checks, summaries, and drafts | Unattended main-branch merges or bulk deletion |
+| Explicit no-change and stop conditions | Infinite retry after failure |
 
-## How to decide
+## Current management surfaces
 
-You do not need to automate every repeat task on day one.
+- Create and manage Scheduled tasks in ChatGPT Web or the desktop App.
+- Codex CLI and IDE have no Scheduled management UI; use them to test prompts, Skills, or scripts first.
+- The desktop App can run a task against a local project or isolated worktree, but the computer must be awake, the App running, and the project still on disk.
+- A Web task can use uploaded context, connected tools, Skills, and Plugins, but cannot read a local folder directly.
 
-Decide in this order:
+## In this section
 
-1. Is it **repeatable, rule-clear, and easy to verify**?
-2. Can it stay read-only, advisory only, or draft-PR only?
-3. Only then consider fully unattended runs
+- [Complete Scheduled tasks guide](/en/skills/automations/scheduled-tasks/): choose an execution mode, write a durable prompt, and define permissions and acceptance
 
-## Entry in this section
+## Official source
 
-- [Scheduled and background tasks](/skills/automations/scheduled-tasks/): What automation tasks are, triggers, exit conditions, human review points
-
-## Common misconceptions
-
-### 1. If it repeats, automate it
-
-If judgment still depends heavily on people, automating too early often causes more problems.
-
-### 2. Automation should eliminate human confirmation
-
-Much value already comes from:
-
-- Automatic checks
-- Automatic summaries
-- Automatic issue / draft PR creation
-
-Do not push results straight to main.
-
-Automation fits tasks that repeat, have clear rules, and produce checkable results. For judgment-heavy work, keep human review in the loop.
+- [OpenAI: Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / App / CLI  
-**Verification basis:** This section assumes currently available Automations capability and entry points; official public material on Codex automation surfaces is still incomplete as of 2026-07-26—not stable enough to verify.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT Web / desktop App; CLI and IDE prepare and test tasks but have no management UI
+
+**Last verified:** 2026-08-26

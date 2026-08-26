@@ -1,145 +1,90 @@
 ---
 title: Hook-Ereignistypen
-description: Hook-Auslösepunkte in der Codex-Ausführungskette — Validierung, Logs und Block an der richtigen Phase.
+description: Wähle Ereignisse für Sitzung, Aufgabenrunde, Werkzeugaufruf, Komprimierung und Subagent-Lebenszyklus.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7da5c40
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Hier geht es darum, wann derselbe Check greifen soll.
+Die erste Frage bei der Hook-Auswahl lautet nicht „Wie schreibe ich das Skript?“, sondern „Muss die Nebenwirkung vor oder nach ihrem Auftreten behandelt werden?“ Ein falsch platziertes Ereignis kann selbst mit einem guten Skript nur noch nachträglich Bericht erstatten.
 
-**Hook-Ereignisse** sind die Zeitpunkte, an denen das System deine konfigurierte Logik aufruft. Nur mit klarem Ereignistyp landen „Audit und Validierung“ aus dem [Hooks-Überblick](/skills/hooks/hooks-overview/) in der Konfig — ohne jeden Werkzeugaufruf zu bremsen.
+![Lebenszyklus und zentrale Ereignisse eines Codex-Hooks](/diagrams/hook-lifecycle-events-de.svg)
 
-## Inhalt
+## Aktuelle Ereignisliste
 
-- Häufige Ereignisphasen und Einsatzfälle
-- Teilung mit [Befehlsregeln](/guide/customization/rules/command-rules/)
-- Performance und Fehlschlag-Strategie bei der Konfiguration
+| Ereignis | Zeitpunkt | Was filtert matcher? | Häufiger Zweck |
+|---|---|---|---|
+| `SessionStart` | Sitzung oder Wiederaufnahme beginnt | `startup`, `resume`, `clear`, `compact` | Umgebung erklären, Kontext wiederherstellen |
+| `SubagentStart` | Subagent startet | Subagent-Typ | Zusätzliche Einschränkungen für Subagent |
+| `UserPromptSubmit` | Benutzer sendet Prompt | Nicht unterstützt; Konfiguration wird ignoriert | Zugangsdaten erkennen, Entwicklungskontext ergänzen |
+| `PreToolUse` | Vor Ausführung eines unterstützten lokalen Werkzeugs | Werkzeugname | Aufruf ablehnen oder umschreiben |
+| `PermissionRequest` | Codex steht kurz vor einer Genehmigungsanfrage | Werkzeugname | Erlauben, ablehnen oder reguläre Genehmigung fortsetzen |
+| `PostToolUse` | Nach Rückgabe eines unterstützten lokalen Werkzeugs | Werkzeugname | Ergebnis protokollieren, Feedback für weiteres Reasoning geben |
+| `PreCompact` | Vor Kontextkomprimierung | `manual` / `auto` | Zustand vor Komprimierung sichern |
+| `PostCompact` | Nach Kontextkomprimierung | `manual` / `auto` | Erforderlichen Kontext wieder ergänzen |
+| `SubagentStop` | Subagent möchte enden | Subagent-Typ | Eine weitere Prüfrunde verlangen |
+| `Stop` | Hauptaufgabenrunde möchte enden | Nicht unterstützt; Konfiguration wird ignoriert | Hauptthread zur weiteren Verifikation auffordern |
+| `SessionEnd` | Hauptthread endet | Derzeit `other` | Kurzes Abschlussprotokoll; läuft nicht für Subagents |
 
-## Ein Entscheidungsprinzip
+## Werkzeug-matcher
 
-Nicht zuerst fragen „kann dieser Hook das?“  
-Sondern: Willst du **vor** der Aktion stoppen oder **danach** aufzeichnen?
-
-Viele falsch platzierte Hooks scheitern am Timing.
-
-:::note
-**Ereignisnamen und Felder richten sich nach der [offiziellen Hooks-Dokumentation](https://developers.openai.com/codex).** Die Tabelle ist konzeptionell gruppiert; nach CLI-Upgrade `--help` und Release Notes prüfen.
-:::
-
-## Ereignisgruppen (Konzept)
-
-| Phase | Typische Ereignisse (Konzeptnamen) | Geeignet für |
-|---|---|---|
-| Sitzung | `session.start` / `session.end` | Umgebungscheck, Änderungszusammenfassung, Audit-Fußnote |
-| Vor Werkzeug | `tool.call.before` / `pre_tool_use` | Gefährliche Befehle blockieren, Secret-Muster scannen |
-| Nach Werkzeug | `tool.call.after` / `post_tool_use` | Strukturiertes Log, Metriken, maskiertes Archiv |
-| Prompt | `user_prompt.submit` | Policy-Scan, Längenlimit |
-| Artefakt | `artifact.create` | Lizenzkopf, Dateityp-Whitelist |
-| Integration | `pr.before_create` (falls unterstützt) | Issue-Nummer, Changelog-Format |
-
-Dieselbe Logik nicht an mehreren Ereignissen doppelt hängen — den **frühsten Block-Punkt** wählen.
-
-## Phasen verstehen
-
-- **Sitzung**: Aufgabe startet oder endet
-- **Vor Werkzeug**: Befehl/Werkzeug noch nicht ausgeführt
-- **Nach Werkzeug**: Aktion geschehen — loggen, zusammenfassen, nachprüfen
-- **Prompt**: Nutzerinhalt gerade eingereicht
-- **Artefakt**: Datei/Ergebnis gerade erzeugt
-
-Zuerst diese Ebene, Ereignisnamen später.
-
-## Bezug zur Regel-Engine
+Häufige Werte:
 
 ```text
-Nutzer-Prompt → (optional) Prompt-Hook
-    → Modell schlägt Werkzeugaufruf vor
-    → Regel-Engine allow/deny
-    → (optional) pre_tool-Hook → Ausführen → post_tool-Hook
+Bash
+^apply_patch$
+Edit|Write
+mcp__filesystem__read_file
+mcp__filesystem__.*
 ```
 
-- **Regeln**: deklarativ, schnell, bekannte Befehlsmuster
-- **Hooks**: imperative Skripte, komplexe Politik und externe Systeme
+Shell und einheitliche Befehlsausführung werden als `Bash` abgeglichen. `apply_patch` lässt sich auch über die Aliase `Edit` oder `Write` abgleichen. MCP- und andere lokale Funktionswerkzeuge verwenden ihren tatsächlichen Werkzeugnamen.
 
-## Häufige Irrtümer
+## Drei häufig verwechselte Ereignisse
 
-### 1. Vorher oder nachher — egal, solange geprüft wird
+### PreToolUse
 
-Großer Unterschied.
+Die Eingabe enthält `tool_name`, `tool_use_id` und werkzeugspezifisches `tool_input`. Möglich sind:
 
-Nebenwirkungen verhindern → möglichst früh.  
-Erst in `post_tool` finden ist oft zu spät.
+- `permissionDecision: "deny"`: Unterstützten Werkzeugaufruf blockieren
+- `permissionDecision: "allow"` mit `updatedInput`: Eingabe eines unterstützten Werkzeugs ändern
+- `additionalContext`: Nicht blockieren, sondern zusätzlichen Modellkontext bereitstellen
 
-### 2. Mehr/feinere Ereignisse = professioneller
+Normaler Text auf stdout wird ignoriert. Gib das offiziell definierte JSON aus. Exitcode `2` mit stderr kann ebenfalls blockieren und einen Grund liefern.
 
-Besser „wenig und treffsicher“ — einen passenden Punkt richtig setzen.
+### PermissionRequest
 
-### 3. Ereignistypen sind nur Technikdetails
+Dieses Ereignis tritt nur auf, wenn Codex ohnehin eine Genehmigung für Shell-Eskalation, verwaltetes Netzwerk oder ähnlichen Zugriff anfordern möchte. Der Hook kann erlauben, ablehnen oder keine Entscheidung treffen und dadurch die reguläre Genehmigungsoberfläche fortsetzen. Verwende ihn nicht statt `PreToolUse` als allgemeine Werkzeugrichtlinie.
 
-Sie bestimmen:
+### PostToolUse
 
-- Ob Risiko rechtzeitig gestoppt wird
-- Ob Logs nützlich sind
-- Ob die Interaktion langsam wird
+Das Werkzeug wurde bereits ausgeführt; bei Bash tritt das Ereignis auch nach einem Exitcode ungleich null auf. Eine blockierende Rückgabe oder Exitcode `2` kann nur das Feedback ersetzen und das Modell weiterarbeiten lassen. Sie macht einen Befehl, Dateischreibvorgang oder eine externe Aktion nicht rückgängig.
 
-## Fehlschlag-Strategie
+## Stop ist keine Schaltfläche zum „Ablehnen des Endes“
 
-| Strategie | Wann |
-|---|---|
-| `block` | Sicherheitsverstoß, harte Compliance |
-| `warn` | Stil, Empfehlungschecks |
-| `log` | Nur beobachten, nicht blockieren |
+`decision: "block"` bei `Stop` erzeugt aus dem angegebenen reason automatisch einen Fortsetzungsprompt und lässt Codex eine weitere Runde ausführen. Bereits entstandene Werkzeugnebenwirkungen werden nicht rückgängig gemacht. Das Skript muss `stop_hook_active` prüfen, um eine Endlosschleife zu verhindern.
 
-Bei Timeout/Crash **sicherheitshalber**: Produktion eher block oder fail-closed, Fehler für Diagnose loggen.
+## Übung zur Ereignisauswahl
 
-## Unsicher, wohin hängen?
+| Anforderung | Wahl | Grund |
+|---|---|---|
+| Vermutetes Token vor einem Dateischreibzugriff blockieren | `PreToolUse` mit `apply_patch|Edit|Write` | Muss vor dem Schreiben geschehen |
+| Fehlerquote von Shell-Befehlen erfassen | `PostToolUse` mit `Bash` | Benötigt das Ausführungsergebnis |
+| Wichtige Entscheidung vor automatischer Kontextkomprimierung sichern | `PreCompact` | Tritt vor der Komprimierung auf |
+| Aufgabe nicht abschließen, bevor Tests beendet sind | `Stop` | Aktuelle Aufgabenrunde muss fortgesetzt werden |
+| 30-sekündige Netzwerkanfrage beim Ende des Hauptthreads | Nicht für `SessionEnd` geeignet | Höchstens 3 Sekunden; lange Arbeit gehört nicht in ein Abschlussereignis |
 
-Vereinfacht:
+## Offizielle Quelle
 
-- Gefährliche Aktion stoppen → Pre-Ereignisse
-- Aufzeichnen, was passiert ist → Post-Ereignisse
-- Opening-Check oder Closing-Summary → Sitzungsereignisse
+- [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
 
-Reicht für die meisten Konfigs.
-
-## Minimale Konfig-Idee
-
-1. Ein Ereignis wählen (Start: `post_tool` nur Read-Log)
-2. Skript liest JSON-Payload von stdin (Werkzeugname, Argument-Zusammenfassung, Arbeitsverzeichnis)
-3. Exit `0` = ok, sonst nach Strategie block/warn
-4. Unit-Test: festes JSON-Fixture
-
-Erst klären: stoppen oder aufzeichnen — dann das Ereignis wählen.
-
-Vollständige Beispiele: [Hook-Konfigurationsbeispiele](/skills/hooks/hooks-examples/).
-
-## Häufige Fehler
-
-- In `post_tool` blockieren, was `pre_tool` gehört (Nebenwirkung schon da)
-- LLM oder langsames Netz im Hook → Interaktion tot
-- Payload mit Secrets in Klartext-Logs
-- Hook nicht versioniert → abweichende Team-Umgebungen
-
-## Sicherheitsgrenzen
-
-- Hook-Skript-Berechtigung ≤ überwachter Agent-Berechtigung
-- Siehe [Team-Hook-Fälle](/skills/hooks/hooks-overview/#empfohlene-team-fälle) und [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/)
-
-## Abnahme-Checkliste
-
-- [ ] Häufigstes Team-Ereignis und Begründung nennen
-- [ ] Lesbare Fehlermeldung bei Fehlschlag
-- [ ] Skript mit Unit-Tests oder Fixtures
-- [ ] Konfig in Code-Review
-
-## Quellen
-- OpenAI Codex Hooks-Referenz
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** CLI / App (versionsabhängig)  
-**Nachprüfhinweis:** Kern sind Ereignisgruppen, Payload und Fehlschlag-Strategie — volatile Implementierungsdetails; öffentliche Quellen reichen am 2026-07-26 nicht für „stabil“.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host
+
+**Zuletzt geprüft:** 2026-08-25

@@ -5,9 +5,10 @@ sidebar:
   order: 20
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: adbe0aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 El Agent usa **herramientas** para leer archivos, ejecutar comandos, buscar en la red, abrir el navegador, etc. Elegir bien la herramienta y escribir claros los límites reduce salidas no autorizadas a la red o cambios excesivos.
@@ -32,22 +33,22 @@ Las herramientas no son conocimiento adicional: son la base de seguridad y efici
 
 | Herramienta | Página |
 |---|---|
-| Resumen de selección | [Selección de herramientas](/guide/tools/tool-selection/) |
-| Terminal | [Shell y terminal](/guide/tools/shell-and-terminal/) |
-| Recuperación | [Búsqueda web](/guide/tools/web-search/) |
-| Páginas web | [Herramienta de navegador](/guide/tools/browser/) |
-| GUI | [Computer Use](/guide/tools/computer-use/) |
-| Imágenes | [Generación de imágenes](/guide/tools/image-generation/) |
-| Voz | [Entrada y salida de voz](/guide/tools/voice/) |
+| Resumen de selección | [Selección de herramientas](/es/guide/tools/tool-selection/) |
+| Terminal | [Shell y terminal](/es/guide/tools/shell-and-terminal/) |
+| Recuperación | [Búsqueda web](/es/guide/tools/web-search/) |
+| Páginas web | [Herramienta de navegador](/es/guide/tools/browser/) |
+| GUI | [Computer Use](/es/guide/tools/computer-use/) |
+| Imágenes | [Generación de imágenes](/es/guide/tools/image-generation/) |
+| Voz | [Entrada y salida de voz](/es/guide/tools/voice/) |
 
-Lectura/escritura de archivos y aceptación de artefactos: [Archivos y artefactos](/guide/files-and-artifacts/). Las herramientas de extensión se conectan vía [MCP](/skills/mcp/mcp-overview/).
+Lectura/escritura de archivos y aceptación de artefactos: [Archivos y artefactos](/es/guide/files-and-artifacts/). Las herramientas de extensión se conectan vía [MCP](/es/skills/mcp/mcp-overview/).
 
 ## Orden de lectura sugerido
 
 La primera vez que mires este capítulo, puedes leer en este orden:
 
-1. [Selección de herramientas](/guide/tools/tool-selection/): qué priorizar según la tarea
-2. [Shell y terminal](/guide/tools/shell-and-terminal/): riesgos de ejecutar comandos
+1. [Selección de herramientas](/es/guide/tools/tool-selection/): qué priorizar según la tarea
+2. [Shell y terminal](/es/guide/tools/shell-and-terminal/): riesgos de ejecutar comandos
 3. Páginas de búsqueda, navegador u otras herramientas, según la tarea que tengas entre manos
 
 Las herramientas deciden cómo puede actuar Codex; tú tienes que explicar cuáles se pueden usar y cuáles no.

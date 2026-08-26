@@ -3,7 +3,7 @@ title: First 30 minutes
 description: A 30-minute path you can follow on day one.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
+source_revision: 5363190
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
@@ -17,11 +17,11 @@ The goal of the first 30 minutes is to complete one full loop.
 
 | Time | What to do |
 |---|---|
-| 0–5 min | Read [Safety checklist](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 min | [Install desktop App](/guide/getting-started/install-desktop-app/) and [sign in](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 min | [Create practice project](/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Run your first task](/guide/getting-started/run-your-first-task/) and review |
-| 25–30 min | Open [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/) to enter the beginner path |
+| 0–5 min | Read [Safety checklist](/en/guide/getting-started/beginner-safety-checklist/) |
+| 5–10 min | [Install desktop App](/en/guide/getting-started/install-desktop-app/) and [sign in](/en/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 min | [Create practice project](/en/guide/getting-started/create-your-first-project/) |
+| 15–25 min | [Run your first task](/en/guide/getting-started/run-your-first-task/) and review |
+| 25–30 min | Open [Talk to Codex](/en/guide/learning-paths/beginner/01-talk-to-codex/) to enter the beginner path |
 
 ## What these 30 minutes should achieve
 
@@ -95,7 +95,7 @@ If after 30 minutes you have done these four things, this round is complete:
 
 ## If you get stuck
 
-Go to the [Troubleshooting index](/guide/reference/troubleshooting/). If a concept is unclear, go back to [Prerequisites](/guide/start-here/prerequisites/) and [Local vs cloud](/guide/foundations/local-vs-cloud/).
+Go to the [Troubleshooting index](/en/guide/reference/troubleshooting/). If a concept is unclear, go back to [Prerequisites](/en/guide/start-here/prerequisites/) and [Local vs cloud](/en/guide/foundations/local-vs-cloud/).
 
 In the first half hour, completing one loop of “assign a task, see the result, judge it yourself” is already worth it.
 

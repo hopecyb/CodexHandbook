@@ -3,9 +3,10 @@ title: Exemples
 description: Apprendre comment la configuration et AGENTS.md doivent être écrits à partir d'exemples réels, pas seulement des principes abstraits.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup de principes font sens isolément mais sont difficiles à appliquer dans votre propre dépôt.
@@ -14,7 +15,7 @@ Ce groupe montre « comment d'autres l'ont écrit » pour transformer des règle
 
 ## Entrées dans ce groupe
 
-- [AGENTS.md dans un monorepo](/guide/customization/examples/monorepo-agents-md/)
+- [AGENTS.md dans un monorepo](/fr/guide/customization/examples/monorepo-agents-md/)
 
 ## Quand lire ce groupe
 

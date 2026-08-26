@@ -9,7 +9,7 @@ sidebar:
 
 > **我现在该用交互入口，还是用单次命令入口？**
 
-本页汇总 **Codex CLI** 常用入口，方便搜索与对照。**命令名、参数与默认值随版本变化**，执行前务必运行 `codex --help` 及子命令 `--help`，并以 [OpenAI Codex 文档](https://developers.openai.com/codex) 为准。
+本页汇总 **Codex CLI** 当前 Stable 入口，方便搜索与对照。执行前仍应运行 `codex --help` 及子命令 `--help`，完整成熟度和参数以 [Developer commands](https://learn.chatgpt.com/docs/developer-commands) 为准。
 
 ## 什么时候用
 
@@ -26,16 +26,20 @@ sidebar:
 
 对刚开始用 CLI 的人来说，这一步基本已经能解决大部分入口选择问题。
 
-## 命令总览（示意）
+## Stable 命令总览
 
 | 入口 | 用途 | 详解 |
 |---|---|---|
 | `codex` | 交互式 TUI 会话 | [交互模式](/guide/cli/interactive-mode/) |
-| `codex exec`（或等价） | 非交互单次/管道任务 | [非交互模式](/guide/cli/non-interactive-mode/) |
-| 配置相关 | 读写用户/项目配置 | [CLI 配置](/guide/cli/configuration/) |
+| `codex exec` / `codex e` | 非交互单次/管道任务 | [非交互模式](/guide/cli/non-interactive-mode/) |
+| `codex doctor` | 生成安装、配置、认证、运行时、Git 与终端诊断报告 | [CLI 排障](/guide/cli/troubleshooting/) |
+| `codex login` / `codex logout` | 管理认证 | [登录与认证](/guide/getting-started/sign-in-and-authentication/) |
+| `codex resume` / `codex fork` | 继续或分叉已保存会话 | [交接与恢复](/guide/agent-work/handoff-and-resume/) |
+| `codex mcp` | 管理 MCP 服务器 | [连接 MCP](/skills/mcp/connect-an-mcp-server/) |
+| `codex plugin` | 安装、列出和移除 Plugin | [Plugins](/skills/plugins/) |
 
-:::caution[版本敏感]
-下表参数名为社区文档常见写法，**不保证与你安装的 CLI 一致**。升级后重新核对 `--help`。
+:::caution[成熟度不同]
+官方参考还包含 Experimental、Beta 和 Deprecated 命令。本页不把它们混进基础速查；需要时先在官方表中确认成熟度与风险。
 :::
 
 ## 常见误会
@@ -98,13 +102,13 @@ codex
 
 ```bash
 # 指定工作目录与单次 prompt（示意）
-codex exec --cwd /path/to/repo "你的完整任务说明"
+codex exec --cd /path/to/repo "你的完整任务说明"
 
-# 常见意图（参数名以官方为准）
-# --cwd          工作目录
+# 当前常用参数
+# --cd, -C       工作目录
 # --model        固定模型
 # --sandbox      沙盒策略
-# --approval     审批策略（无人值守时尤其重要）
+# --ask-for-approval, -a  审批策略
 # stdin 管道     从文件或上游命令读 prompt
 ```
 
@@ -148,7 +152,10 @@ CLI 命令页主要用于分辨入口和查意图，不用靠死记参数上手�
 
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页虽然已经尽量写成“入口地图”，但核心仍围绕 `codex`、`codex exec`、会话内 `/` 命令与相关参数意图展开；这些都属于当前 CLI 的高波动产品细节，需待补充最新版官方命令文档后再恢复 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**核验依据：** 已对照当前官方 Developer commands 的成熟度表，仅列 Stable 入口，并核实 `--cd` / `-C`、沙箱和审批参数；实验性与弃用命令不进入基础速查。
+
+**最近核验：** 2026-08-26

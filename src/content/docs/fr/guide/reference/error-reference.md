@@ -3,9 +3,10 @@ title: "Référence d'erreurs"
 description: Index d'apprentissage des erreurs courantes, codes de sortie et modes d'échec — pointe vers dépannage, pas support officiel.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup fixent une ligne en anglais et devinent. Classifier le problème d'abord fonctionne généralement mieux.
@@ -20,14 +21,14 @@ Décidez si cela ressemble à **auth, permissions, environnement, réseau ou log
 
 Souvent plus rapide que deviner.
 
-Index global : [Dépannage](/guide/reference/troubleshooting/)
+Index global : [Dépannage](/fr/guide/reference/troubleshooting/)
 
 ## Authentification et compte
 
 | Message ou symptôme | Cause probable | Étape suivante |
 |---|---|---|
-| Authentication failed / 401 | Token expiré, non connecté | [Connexion et authentification](/guide/getting-started/sign-in-and-authentication/) |
-| Politique organisation | Org a désactivé fonctionnalité ou modèle | Contacter admin ; [Compte et accès](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | Token expiré, non connecté | [Connexion et authentification](/fr/guide/getting-started/sign-in-and-authentication/) |
+| Politique organisation | Org a désactivé fonctionnalité ou modèle | Contacter admin ; [Compte et accès](/fr/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Trop fréquent ou quota | Retry plus tard ; vérifier usage du plan |
 
 ## Idées reçues courantes
@@ -54,9 +55,9 @@ Les lignes précédentes peuvent montrer étape, fichier, commande ou raison sou
 
 | Message ou symptôme | Cause probable | Étape suivante |
 |---|---|---|
-| command not found: codex | Non installé ou PATH | [Installer CLI](/guide/getting-started/install-cli/) |
-| Config parse error | Syntaxe TOML/YAML | [Configuration CLI](/guide/cli/configuration/) |
-| Permission denied (write) | Deny bac à sable ou approbation | [Approbations et bac à sable](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | Non installé ou PATH | [Installer CLI](/fr/guide/getting-started/install-cli/) |
+| Config parse error | Syntaxe TOML/YAML | [Configuration CLI](/fr/guide/cli/configuration/) |
+| Permission denied (write) | Deny bac à sable ou approbation | [Approbations et bac à sable](/fr/guide/cli/approvals-and-sandbox/) |
 | Exit non-zéro (exec) | Tâche échouée ou critères de complétion non atteints | Vérifier stderr ; renforcer prompt |
 
 ## Cinq catégories
@@ -94,23 +95,23 @@ Utilisez cette page pour atteindre la bonne catégorie quand incertain.
 | Message ou symptôme | Cause probable | Étape suivante |
 |---|---|---|
 | User rejected tool call | Vous ou politique a rejeté l'action | Confirmer si approbation était correcte ; ou changer tâche |
-| Sandbox violation | Chemin ou commande hors limites | [Bac à sable et réseau](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Egress bloqué | Cloud : [Accès internet](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | Chemin ou commande hors limites | [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/) |
+| Network access denied | Egress bloqué | Cloud : [Accès internet](/fr/guide/web-and-cloud/internet-access/) |
 
 ## Cloud et GitHub
 
 | Message ou symptôme | Cause probable | Étape suivante |
 |---|---|---|
-| Repository access denied | Scope OAuth insuffisant | [Connecter GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Nom dépôt, permissions, réseau | [Dépannage Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Mauvais nom ou scope | [Secrets et variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Protection de branche | [Créer pull requests](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Scope OAuth insuffisant | [Connecter GitHub](/fr/guide/web-and-cloud/connect-github/) |
+| Clone failed | Nom dépôt, permissions, réseau | [Dépannage Cloud](/fr/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Mauvais nom ou scope | [Secrets et variables](/fr/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Protection de branche | [Créer pull requests](/fr/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP et extensions
 
 | Message ou symptôme | Cause probable | Étape suivante |
 |---|---|---|
-| MCP server failed to start | Chemin commande, dépendance manquante | [Connecter MCP](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | Chemin commande, dépendance manquante | [Connecter MCP](/fr/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | API externe lente ou down | Retry ; vérifier logs MCP |
 | Unknown tool | Config/version serveur incompatible | Redémarrer session ; mettre à jour config |
 
@@ -118,14 +119,14 @@ Utilisez cette page pour atteindre la bonne catégorie quand incertain.
 
 | Message ou symptôme | Cause probable | Étape suivante |
 |---|---|---|
-| Context length exceeded | Conversation ou fichiers @ trop grands | [Compaction](/guide/context/compaction/) · réduire portée |
-| Model not available | Limitation région ou plan | [Modèles et raisonnement](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Conversation ou fichiers @ trop grands | [Compaction](/fr/guide/context/compaction/) · réduire portée |
+| Model not available | Limitation région ou plan | [Modèles et raisonnement](/fr/guide/foundations/models-and-reasoning/) |
 
 ## Utiliser cette page
 
 1. **Copier phrase clé** dans recherche client ou handbook
 2. Suivre table vers liste de contrôle sujet
-3. Encore bloqué : garder log complet ; voir [Ressources officielles](/guide/reference/official-resources/)
+3. Encore bloqué : garder log complet ; voir [Ressources officielles](/fr/guide/reference/official-resources/)
 
 ## Aider les autres à vous aider
 

@@ -3,9 +3,10 @@ title: Codex と対話する
 description: 自然言語で目標と制限を説明する練習をします。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -49,7 +50,7 @@ Codex と初めて対話するとき、多くの人は検索ボックスのよ�
 
 読み取り、説明、要約といったタスクにも、同様に境界が必要です。
 
-次のステップ：[ファイルを扱う](/guide/learning-paths/beginner/02-work-with-files/) · 原理：[プロンプトの基礎](/prompts/basics/)
+次のステップ：[ファイルを扱う](/ja/guide/learning-paths/beginner/02-work-with-files/) · 原理：[プロンプトの基礎](/ja/prompts/basics/)
 
 ---
 

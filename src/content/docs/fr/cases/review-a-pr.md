@@ -3,9 +3,10 @@ title: Examiner une PR
 description: Utiliser Codex pour une revue structurée du diff avant la fusion.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 29b081c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Examiner une PR
@@ -36,13 +37,13 @@ Produisez une checklist, marquez P0/P1, avec les chemins de fichiers.
 
 ## 3. Capitalisation d'équipe
 
-- Utiliser le Skill [`$pr-review`](/skills/examples/review-skill/)
-- Intégration CI : voir [Automatisation de la revue de code](/guide/developer-platform/ci-cd/code-review-automation/)
+- Utiliser le Skill [`$pr-review`](/fr/skills/examples/review-skill/)
+- Intégration CI : voir [Automatisation de la revue de code](/fr/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## 4. Voir aussi
 
-- [Modèle de revue](/prompts/templates/review/)
-- [Revue avant fusion](/cases/workflows/review-before-merge/)
+- [Modèle de revue](/fr/prompts/templates/review/)
+- [Revue avant fusion](/fr/cases/workflows/review-before-merge/)
 
 ---
 

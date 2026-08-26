@@ -3,12 +3,13 @@ title: Trabalho orientado por testes
 description: Defina ou complete primeiro os testes em falha e deixe-os conduzir a implementação — para que as alterações do Codex sejam objetivamente aceitáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Trabalho orientado por testes** (TDD ou «testes primeiro») consiste em fazer o teste falhar e depois, com a implementação mínima, fazê-lo passar. Adequado a código-bases com infraestrutura de testes e diretamente relacionado com cenários como [correção de bug com verificação](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Trabalho orientado por testes** (TDD ou «testes primeiro») consiste em fazer o teste falhar e depois, com a implementação mínima, fazê-lo passar. Adequado a código-bases com infraestrutura de testes e diretamente relacionado com cenários como [correção de bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Foco desta página
 
@@ -21,7 +22,7 @@ translated_at: 2026-07-28
 - Repositórios com testes unitários/de integração
 - Bugs de regressão, alterações de comportamento de API, refatorações
 
-Cenários inadequados: protótipos sem infraestrutura de testes; alterações pontuais em sites só de texto. Nestes casos, prefira [EPXV](/cases/workflows/explore-plan-execute-verify/) com verificação humana.
+Cenários inadequados: protótipos sem infraestrutura de testes; alterações pontuais em sites só de texto. Nestes casos, prefira [EPXV](/pt/cases/workflows/explore-plan-execute-verify/) com verificação humana.
 
 ## Prática mínima viável
 
@@ -47,7 +48,7 @@ corra o teste e confirme a falha antes de alterar a implementação; em cada pas
 | Verde | Implementação mínima + testes a passar |
 | Refatorar | Organizar o código sob proteção dos testes (passo opcional separado) |
 
-Combine com [diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/): leia primeiro a asserção em falha e a stack, depois mexa na implementação.
+Combine com [diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/): leia primeiro a asserção em falha e a stack, depois mexa na implementação.
 
 ## Erros comuns
 
@@ -58,7 +59,7 @@ Combine com [diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fi
 
 ## Limites de segurança
 
-- Comandos de teste devem estar no âmbito permitido pelas [regras de comando](/guide/customization/rules/command-rules/)
+- Comandos de teste devem estar no âmbito permitido pelas [regras de comando](/pt/guide/customization/rules/command-rules/)
 - Se testes de integração tocarem APIs de produção, a especificação deve proibi-lo ou exigir mock
 
 ## Lista de aceitação
@@ -66,12 +67,12 @@ Combine com [diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fi
 - [ ] Evidência de falha→sucesso nos testes (logs ou CI)
 - [ ] Suíte completa ou no âmbito acordado a passar
 - [ ] Diff sem remoção irrelevante de testes
-- [ ] Consistente com [definir concluído](/prompts/define-done/)
+- [ ] Consistente com [definir concluído](/pt/prompts/define-done/)
 
 ## Capítulos relacionados
 
-- [Correr testes](/guide/quality/run-tests/)
-- [Caso: correção de bug com verificação](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Correr testes](/pt/guide/quality/run-tests/)
+- [Caso: correção de bug com verificação](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

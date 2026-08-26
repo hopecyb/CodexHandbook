@@ -1,0 +1,70 @@
+<svg lang="ko" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" role="img" aria-labelledby="title desc">
+  <title id="title">Codex 확장 방식 선택도</title>
+  <desc id="desc">무엇을 지속할지에 따라 메커니즘을 선택합니다. 단일 작업은 프롬프트, 프로젝트 규칙은 AGENTS.md, 재사용 흐름은 Skill, 외부 도구는 MCP, 수명 주기 보호는 Hook, 묶음 배포는 Plugin, 시간 기반 반복 실행은 Scheduled task를 사용합니다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 25.8px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.8px; }
+    .lane { fill: #cbd5e1; font-size: 13.8px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 15.5px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+    .tiny { fill: #94a3b8; font-size: 10.3px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1100" height="700" rx="8" fill="#020617"/>
+  <rect width="1100" height="700" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">“무엇을 지속할지” 먼저 묻고 확장 메커니즘 선택</text>
+  <text x="44" y="70" class="sub">이 메커니즘들은 조합할 수 있지만 역할이 다릅니다. 낮은 단계에서 높은 단계로 올라가는 업그레이드 사다리가 아닙니다.</text>
+
+  <rect x="390" y="96" width="320" height="68" rx="8" fill="#0f172a" stroke="#f8fafc" stroke-width="1.5"/>
+  <text x="550" y="124" text-anchor="middle" class="label">현재 문제의 핵심은 무엇입니까?</text>
+  <text x="550" y="147" text-anchor="middle" class="note">지침 · 규칙 · 흐름 · 도구 · 트리거 · 배포</text>
+
+  <path d="M550 164V198H190V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V198H910V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="190" y="254" text-anchor="middle" class="lane">지식과 방식을 남기기</text>
+  <rect x="70" y="284" width="240" height="76" rx="8" fill="#083344" stroke="#22d3ee"/>
+  <text x="190" y="313" text-anchor="middle" class="label">프롬프트</text>
+  <text x="190" y="337" text-anchor="middle" class="note">현재 작업에만 사용</text>
+  <path d="M190 360V392" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="205" y="382" class="tiny">같은 유형의 작업이 반복됨</text>
+  <rect x="70" y="394" width="240" height="76" rx="8" fill="#064e3b" stroke="#34d399"/>
+  <text x="190" y="423" text-anchor="middle" class="label">Skill</text>
+  <text x="190" y="447" text-anchor="middle" class="note">재사용 가능한 흐름, 참고 자료, 스크립트</text>
+  <rect x="70" y="500" width="240" height="76" rx="8" fill="#3b0764" stroke="#a78bfa"/>
+  <text x="190" y="529" text-anchor="middle" class="label">AGENTS.md</text>
+  <text x="190" y="553" text-anchor="middle" class="note">프로젝트에 들어올 때마다 따라야 할 규칙</text>
+
+  <rect x="400" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="550" y="254" text-anchor="middle" class="lane">실행 과정에 기능 추가</text>
+  <rect x="430" y="284" width="240" height="76" rx="8" fill="#1e1b4b" stroke="#a78bfa"/>
+  <text x="550" y="313" text-anchor="middle" class="label">MCP / Connector</text>
+  <text x="550" y="337" text-anchor="middle" class="note">외부 도구와 데이터 연결</text>
+  <rect x="430" y="394" width="240" height="76" rx="8" fill="#4c0519" stroke="#fb7185"/>
+  <text x="550" y="423" text-anchor="middle" class="label">Hook</text>
+  <text x="550" y="447" text-anchor="middle" class="note">수명 주기 지점에서 검사 또는 차단</text>
+  <rect x="430" y="500" width="240" height="76" rx="8" fill="#422006" stroke="#fbbf24"/>
+  <text x="550" y="529" text-anchor="middle" class="label">하위 Agent</text>
+  <text x="550" y="553" text-anchor="middle" class="note">독립된 하위 문제를 병렬 처리</text>
+
+  <rect x="760" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="910" y="254" text-anchor="middle" class="lane">배포하거나 시간에 따라 트리거</text>
+  <rect x="790" y="304" width="240" height="90" rx="8" fill="#3f1d0b" stroke="#fb923c"/>
+  <text x="910" y="333" text-anchor="middle" class="label">Plugin</text>
+  <text x="910" y="357" text-anchor="middle" class="note">Skills, 커넥터, MCP 패키징</text>
+  <text x="910" y="378" text-anchor="middle" class="tiny">Hooks와 작업 템플릿도 포함 가능</text>
+  <rect x="790" y="444" width="240" height="90" rx="8" fill="#3f0713" stroke="#fb7185"/>
+  <text x="910" y="473" text-anchor="middle" class="label">Scheduled task</text>
+  <text x="910" y="497" text-anchor="middle" class="note">시간에 따라 반복 실행</text>
+  <text x="910" y="518" text-anchor="middle" class="tiny">작업을 검증한 뒤 예약</text>
+
+  <rect x="120" y="626" width="860" height="58" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="651" text-anchor="middle" class="note">일반 조합: AGENTS.md로 규칙 + Skill로 흐름 + MCP로 도구 + Hook으로 경계 보호</text>
+  <text x="550" y="673" text-anchor="middle" class="tiny">Plugin은 배포, Scheduled task는 정기 트리거 담당</text>
+</svg>

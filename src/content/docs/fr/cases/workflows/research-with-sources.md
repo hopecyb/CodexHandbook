@@ -3,18 +3,19 @@ title: Recherche avec sources
 description: Utiliser Codex pour la recherche, la comparaison et la vérification des faits — sources et conclusions traçables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9ff7a5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La **recherche avec sources** exige que chaque conclusion clé puisse être rattachée à une source précise — documentation officielle, article ou fichier du dépôt — et non à une affirmation sans fondement. Cela convient au choix technique, à la comparaison concurrentielle, à la revue de littérature et à l'interprétation de politiques.
 
 ## Ce que couvre cette page
 
-- Quand utiliser la [recherche web](/guide/tools/web-search/) vs le dépôt en lecture seule
+- Quand utiliser la [recherche web](/fr/guide/tools/web-search/) vs le dépôt en lecture seule
 - Comment exiger un format de citation et des marqueurs d'incertitude
-- Comment associer [Valider les sources](/guide/quality/validate-sources/)
+- Comment associer [Valider les sources](/fr/guide/quality/validate-sources/)
 
 ## Approche minimale viable
 
@@ -37,7 +38,7 @@ Définir la question et les exclusions
     → décision humaine ou passage à la phase spécification
 ```
 
-Pour une recherche longue, découper en plusieurs tours — voir [Gestion des tâches longues](/cases/workflows/long-running-task-management/).
+Pour une recherche longue, découper en plusieurs tours — voir [Gestion des tâches longues](/fr/cases/workflows/long-running-task-management/).
 
 ## Erreurs courantes
 
@@ -49,7 +50,7 @@ Pour une recherche longue, découper en plusieurs tours — voir [Gestion des t�
 ## Limites de sécurité
 
 - Le matériel interne non publié ne doit pas sortir via un MCP non contrôlé
-- Les faits volatils (prix, versions, disponibilité régionale) doivent porter une [date de vérification](/guide/start-here/handbook-version-policy/)
+- Les faits volatils (prix, versions, disponibilité régionale) doivent porter une [date de vérification](/fr/guide/start-here/handbook-version-policy/)
 
 ## Liste de contrôle d'acceptation
 
@@ -60,8 +61,8 @@ Pour une recherche longue, découper en plusieurs tours — voir [Gestion des t�
 
 ## Chapitres connexes
 
-- [Gérer l'incertitude](/guide/quality/handle-uncertainty/)
-- [Cas : Refactoriser la doc avec revue](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Gérer l'incertitude](/fr/guide/quality/handle-uncertainty/)
+- [Cas : Refactoriser la doc avec revue](/fr/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

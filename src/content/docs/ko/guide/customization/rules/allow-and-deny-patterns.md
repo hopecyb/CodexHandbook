@@ -3,9 +3,10 @@ title: 허용과 거부 규칙
 description: 명령·경로 규칙으로 Agent가 실행할 수 있는 조작을 제약 — 개인 습관과 팀 하한선.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ sidebar:
 | 경로 | `../` 쓰기 금지, `~/.ssh` 읽기 금지 |
 | 네트워크 | 외부망 금지 또는 registry 도메인만 허용 |
 
-[권한 매트릭스](/guide/reference/permission-matrix/)와 대조하세요. 규칙은 **설정 가능한** enforcement이고, 매트릭스는 **전형적 기본값**을 설명합니다.
+[권한 매트릭스](/ko/guide/reference/permission-matrix/)와 대조하세요. 규칙은 **설정 가능한** enforcement이고, 매트릭스는 **전형적 기본값**을 설명합니다.
 
 ## 권장 계층
 

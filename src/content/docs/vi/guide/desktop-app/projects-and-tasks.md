@@ -3,9 +3,10 @@ title: Dự án và tác vụ
 description: Quản lý dự án và tác vụ trong App.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 088dad1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -39,7 +40,7 @@ Sân sai thì nhiều vấn đề sau đó sẽ lệch theo.
 «Tác vụ» chính là **ủy thác cụ thể** bạn đưa ra lần này.  
 Ủy thác càng rõ, Codex càng ít phải vừa làm vừa đoán.
 
-Đối chiếu khái niệm: [Thread, tác vụ và dự án](/guide/foundations/threads-tasks-and-projects/)
+Đối chiếu khái niệm: [Thread, tác vụ và dự án](/vi/guide/foundations/threads-tasks-and-projects/)
 
 ## Hiểu nhầm thường gặp
 

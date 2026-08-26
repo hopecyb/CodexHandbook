@@ -3,9 +3,10 @@ title: Bộ nhớ và ngữ cảnh bền
 description: Codex nhớ sở thích và sự kiện qua phiên thế nào — năng lực, ranh giới và quy chuẩn nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ Nó giống hơn “sở thích dài hạn cá nhân và ít sự kiện ổn đ
 | Bí danh dự án phải giải thích lặp («backend chỉ `services/api`») | Trạng thái tác vụ sprint hay đổi |
 | Sự kiện không nhạy cảm bạn nói rõ «hãy nhớ» | Quy chuẩn nhóm nên viết trong Git |
 
-Quy chuẩn cấp nhóm nên vào **`AGENTS.md` hoặc cấu hình dự án**, để review và onboarding người mới. Xem [Phạm vi và ưu tiên](/guide/customization/agents-md/scope-and-precedence/).
+Quy chuẩn cấp nhóm nên vào **`AGENTS.md` hoặc cấu hình dự án**, để review và onboarding người mới. Xem [Phạm vi và ưu tiên](/vi/guide/customization/agents-md/scope-and-precedence/).
 
 ## Hiểu lầm thường gặp
 

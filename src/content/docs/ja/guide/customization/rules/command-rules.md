@@ -3,14 +3,15 @@ title: コマンドルール
 description: コマンドレベルの allow/deny で shell とツール呼び出しを制約——口頭約束より実行可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**コマンドルール**は「Agent がどのコマンドを、どの引数で実行できるか」に焦点を当てます。[許可と拒否ルール](/guide/customization/rules/allow-and-deny-patterns/) の最も一般的な形で、通常はチームが review できる設定またはルールファイルに書きます。
+**コマンドルール**は「Agent がどのコマンドを、どの引数で実行できるか」に焦点を当てます。[許可と拒否ルール](/ja/guide/customization/rules/allow-and-deny-patterns/) の最も一般的な形で、通常はチームが review できる設定またはルールファイルに書きます。
 
 ## このページで扱うこと
 
@@ -86,7 +87,7 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 | 棚卸し | `package.json` scripts、Makefile、CI workflow から実コマンドを抽出 |
 | 層分け | 組織 deny → プロジェクト allow 補足 → 個人本機例外（あれば） |
 | 試走 | 低リスクタスクで「通るべきは通り、止めるべきは止まる」を確認 |
-| 整合 | ローカルルールと [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) を可能な限り同源に |
+| 整合 | ローカルルールと [GitHub Action](/ja/guide/developer-platform/ci-cd/code-review-automation/) を可能な限り同源に |
 
 ## よくあるミス
 
@@ -111,10 +112,10 @@ allow/deny が「原則として何ができるか」を規定するなら、コ
 
 ## 関連章
 
-- [許可と拒否パターン](/guide/customization/rules/allow-and-deny-patterns/)
-- [チームルール方針](/guide/customization/rules/team-rules/)
-- [CLI 承認とサンドボックス](/guide/cli/approvals-and-sandbox/)
-- [権限マトリクス](/guide/reference/permission-matrix/)
+- [許可と拒否パターン](/ja/guide/customization/rules/allow-and-deny-patterns/)
+- [チームルール方針](/ja/guide/customization/rules/team-rules/)
+- [CLI 承認とサンドボックス](/ja/guide/cli/approvals-and-sandbox/)
+- [権限マトリクス](/ja/guide/reference/permission-matrix/)
 
 ---
 

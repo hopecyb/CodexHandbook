@@ -3,9 +3,10 @@ title: Skill の構造
 description: SKILL.md、references/、templates/、scripts/ の役割と例。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill ディレクトリを初めて見ると、フォルダは見覚えがあっても、なぜこう配置するか分かりにくいことがあります。
@@ -87,7 +88,7 @@ description: 現在ブランチと main の diff をレビューし、リスク�
 
 まず `SKILL.md` で回し、複雑になったら references・templates・scripts を分けます。
 
-実習：[最初の Skill を作成する](/skills/create-your-first-skill/)。
+実習：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)。
 
 ## テンプレートから Skill へ
 

@@ -1,16 +1,17 @@
 ---
+reviewed_at: 2026-08-26
 title: Team & Enterprise
 description: Adoption, standards, governance, and security for scaling Codex without losing control.
 sidebar:
   order: 70
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 3a4af60
+translation_status: reviewed
+translated_at: 2026-08-26
 ---
 
-The **Team & Enterprise** chapter is for engineering leads, platform, and security teams—moving Codex from individual productivity to something teams can manage, audit, and learn from. Pair with [Learning path · Team](/guide/learning-paths/team/); this chapter leans governance and rollout.
+The **Team & Enterprise** chapter is for engineering leads, platform, and security teams—moving Codex from individual productivity to something teams can manage, audit, and learn from. Pair with [Learning path · Team](/en/guide/learning-paths/team/); this chapter leans governance and rollout.
 
 If you are still solo or learning basics, you can read this later. It focuses on boundaries, process, and accountability when many people use Codex together.
 
@@ -31,9 +32,9 @@ Key questions:
 
 | Role | Start with |
 |---|---|
-| EM / lead | [Threat model](/guide/team-enterprise/security/threat-model/) · [Acceptable use](/guide/team-enterprise/governance/acceptable-use/) |
-| Platform engineering | [Team rules](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Security | [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
+| EM / lead | [Threat model](/en/guide/team-enterprise/security/threat-model/) · [Acceptable use](/en/guide/team-enterprise/governance/acceptable-use/) |
+| Platform engineering | [Team rules](/en/guide/customization/rules/team-rules/) · [Hooks](/en/skills/hooks/hooks-overview/) |
+| Security | [Plugin and MCP risk](/en/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/en/guide/team-enterprise/security/prompt-injection/) |
 
 ## Governance model (conceptual)
 
@@ -51,15 +52,15 @@ Observation (audit, metrics, retrospectives)
 
 | Topic | Pages |
 |---|---|
-| Security | [Threat model](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
-| Governance | [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/) |
+| Security | [Threat model](/en/guide/team-enterprise/security/threat-model/) · [Plugin/MCP risk](/en/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/en/guide/team-enterprise/security/prompt-injection/) |
+| Governance | [Acceptable use policy](/en/guide/team-enterprise/governance/acceptable-use/) |
 
-Roadmap will add adoption, administration, deployment-patterns, etc.—see [chapter outline](/docs/planning/chapter-outline.md) (repo planning doc).
+The roadmap will add adoption, administration, deployment patterns, and related topics; see the [chapter outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (repository planning document).
 
 ## Relationship to customization
 
-- Org-managed layer in [AGENTS.md precedence](/guide/customization/agents-md/scope-and-precedence/)
-- [Team rules policy](/guide/customization/rules/team-rules/)
+- Org-managed layer in [AGENTS.md precedence](/en/guide/customization/agents-md/scope-and-precedence/)
+- [Team rules policy](/en/guide/customization/rules/team-rules/)
 
 ## Common mistakes
 
@@ -77,7 +78,7 @@ Roadmap will add adoption, administration, deployment-patterns, etc.—see [chap
 
 ### 1. Solo user—need this chapter now?
 
-Not necessarily deep reading yet.  
+Not necessarily deep reading yet.
 But know: once Codex is a team system, problems are not only “how to prompt.”
 
 ### 2. Why so much audit, governance, policy?
@@ -88,14 +89,14 @@ At team scale, boundaries blur over time—that is the risk.
 
 Start with:
 
-- [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Plugin and MCP risk](/en/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Acceptable use policy](/en/guide/team-enterprise/governance/acceptable-use/)
 
 If you care about personal onboarding first, defer this chapter until team rollout, permissions, or risk control.
 
 ---
 
-**Status:** verified  
-**Products:** Organization / team features (plan-dependent)  
-**Verification basis:** OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths.  
+**Status:** verified
+**Products:** Organization / team features (plan-dependent)
+**Verification basis:** OpenAI Help Center and plugin/app docs still emphasize role access, plugin enablement, action approval, data boundaries, and audit responsibility for team Codex/ChatGPT rollout. This page is chapter navigation focused on governance model and reading order—not specific admin UI paths.
 **Last verified:** 2026-07-26

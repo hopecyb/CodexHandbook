@@ -4,7 +4,7 @@ description: Account, device, practice project, and safety baseline.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: c8a032b
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -20,8 +20,8 @@ sidebar:
 
 ## Recommended
 
-- Read the [Beginner safety checklist](/guide/getting-started/beginner-safety-checklist/) first
-- Understand [Permissions and approvals](/guide/foundations/permissions-and-approvals/) and [Sandbox and network](/guide/foundations/sandbox-and-network/)
+- Read the [Beginner safety checklist](/en/guide/getting-started/beginner-safety-checklist/) first
+- Understand [Permissions and approvals](/en/guide/foundations/permissions-and-approvals/) and [Sandbox and network](/en/guide/foundations/sandbox-and-network/)
 - For official installation and product changes, see [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## Not required

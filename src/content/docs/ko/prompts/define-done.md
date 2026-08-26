@@ -3,9 +3,10 @@ title: 완료 기준 정의
 description: 확인할 수 있는 완료 조건을 작성합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b9d3ef1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 많은 사람이 작업을 낼 때 “무엇을 원하는지”는 말하지만, “어느 정도면 완료인지”는 말하지 않습니다. 그 결과 끝났는지 감으로만 판단하게 됩니다.
@@ -75,7 +76,7 @@ translated_at: 2026-07-28
 
 결국, “끝났는지”를 추측에만 맡기지 않으면 됩니다.
 
-검증 명령을 기준에 넣으면 Agent가 더 적극적으로 실행합니다: [테스트 실행](/guide/verification/)
+검증 명령을 기준에 넣으면 Agent가 더 적극적으로 실행합니다: [테스트 실행](/ko/guide/verification/)
 
 ---
 

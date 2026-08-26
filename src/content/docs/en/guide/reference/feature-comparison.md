@@ -1,29 +1,77 @@
 ---
 title: Feature comparison
-description: Capability comparison across App, CLI, IDE, and Cloud.
+description: Compare the desktop App, CLI, IDE, and Cloud by work surface, execution location, and review method.
 locale: en
 source_locale: zh-CN
-translation_status: draft
-translated_at: 2026-07-25
+source_revision: f2f0528
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-The table below is for learning purposes; actual capabilities depend on the current product.
+This table compares only **stable primary workflows**. It does not turn rapidly changing small features into permanent promises. Decide with the [client-selection diagram](/en/guide/choose-your-client/), then confirm differences here.
 
-| Capability | Desktop App | CLI | IDE | Cloud |
+## Core comparison
+
+| Entry | Where work happens | Strongest context | Primary review | Typical tasks |
 |---|---|---|---|---|
-| Beginner-friendly visual review | Strong | Medium | Medium | Medium |
-| Terminal / script integration | Medium | Strong | Medium | Medium |
-| Inline editor context | Medium | Weak | Strong | Medium |
-| Remote standardized environment | Depends on integration | Depends on usage | Depends on usage | Strong |
-| Parallel tasks / worktrees | Common | Depends on workflow | Depends on workflow | Depends on product |
-| Mobile approval follow-up | Depends on notifications/remote | Weak | Weak | Depends on product |
+| ChatGPT desktop App | Local projects, chats, and files | Open folders, projects, and tasks | Task summary, files, diff, approval UI | Multi-project coordination, long tasks, file and computer operations |
+| Codex CLI | Current terminal and local repository | Working directory, command output, Git state | Terminal commands, diff, result summary | Exploration, editing, testing, scripts, CI |
+| IDE integration | Current editor | Open files, selection, recent conversation | Change summary and diff beside code | Local explanation, incremental edits, editor review |
+| Codex Cloud | Isolated remote environment | Connected repository and environment configuration | Cloud logs, summary, diff, PR | Long background tasks, parallel attempts, remote collaboration |
 
-Selection guide: [Choose your Codex client](/guide/getting-started/choose-your-codex-client/)
+## Installation and identity
+
+| Item | Desktop App | CLI | IDE | Cloud |
+|---|---|---|---|---|
+| Entry | macOS / Windows / Linux desktop App | Local command line | VS Code-compatible extension; separate Xcode and JetBrains integrations | Web and supported remote integrations |
+| ChatGPT sign-in | Supported | Supported | Supported | Required |
+| Local API-key sign-in | Supported | Supported | Supported | Not supported |
+| Primary billing | ChatGPT plan or API usage | ChatGPT plan or API usage | ChatGPT plan or API usage | ChatGPT plan and workspace permissions |
+
+Local work signed in with an API key follows different billing, administration, and data-handling policies from ChatGPT sign-in. API keys also do not provide ChatGPT-workspace or Cloud capabilities. Use live official pages for current plans and limits.
+
+## Common combinations
+
+### Personal development loop
+
+```text
+IDE locates a local issue → CLI runs a precise test → desktop App reviews long work and the diff
+```
+
+### Remote team loop
+
+```text
+Start from GitHub / GitLab / Linear / Slack → run in isolated Cloud
+→ human reviews summary and diff → create PR
+```
+
+### Beginner learning loop
+
+```text
+Open a practice folder in the desktop App → request a small task
+→ inspect permission request → inspect diff → run verification
+```
+
+## Do not use the matrix instead of checking reality
+
+Plugins, Scheduled tasks, notifications, models, and organization policies evolve quickly. Check the current client and official documentation for:
+
+- whether a feature appears for the current account;
+- whether plan, region, or administrator policy restricts it;
+- current command, shortcut, or UI names;
+- whether API-key sign-in supports a ChatGPT or Cloud feature.
+
+Keep the rule simple: **IDE for local code, CLI for terminal loops, desktop App for local task coordination, Cloud for isolated remote execution.**
 
 ---
 
-**Status:** review  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Last verified:** 2026-07-25
+**Status:** verified
+
+**Applies to:** App / CLI / IDE / Cloud
+
+**Verification basis:** Compared with current App, CLI, IDE, Cloud, Authentication, and Pricing documentation. The matrix keeps explicit work-location, context, review, and sign-in boundaries instead of guessing volatile features as strong, medium, or weak.
+
+**Last verified:** 2026-08-26

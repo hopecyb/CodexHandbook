@@ -3,9 +3,10 @@ title: 進捗と誘導
 description: 実行途中で方向がずれたとき、短い指示で Codex を正しい軌道に戻す。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6813a5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -134,7 +135,7 @@ sidebar:
 
 ## 「再計画」に戻るべきとき
 
-誘導は局所的なずれ向けですが、次の場合は [計画](/guide/agent-work/planning/) に戻る価値があります。
+誘導は局所的なずれ向けですが、次の場合は [計画](/ja/guide/agent-work/planning/) に戻る価値があります。
 
 - タスクの目標自体が変わった
 - 新情報が当初の前提を覆した
@@ -154,10 +155,10 @@ sidebar:
 
 ## おすすめの組み合わせ
 
-- 実行パスを先に明確にしたい：[計画](/guide/agent-work/planning/)
-- フローを完全なメイン経路として書きたい：[探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
-- タスクを別に任せたい：[子 Agent](/guide/agent-work/subagents/)
-- タスク中断後に続けたい：[引き継ぎと再開](/guide/agent-work/handoff-and-resume/)
+- 実行パスを先に明確にしたい：[計画](/ja/guide/agent-work/planning/)
+- フローを完全なメイン経路として書きたい：[探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
+- タスクを別に任せたい：[子 Agent](/ja/guide/agent-work/subagents/)
+- タスク中断後に続けたい：[引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/)
 
 ---
 

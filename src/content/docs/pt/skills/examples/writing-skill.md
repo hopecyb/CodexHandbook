@@ -3,9 +3,10 @@ title: 'Exemplo: Skill de escrita'
 description: Transforme pesquisa, outline, rascunho e polimento num fluxo de escrita reutilizável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemplo: Skill de escrita
@@ -32,7 +33,7 @@ description: Escreve artigos técnicos a partir de um outline — pesquisa, rasc
 
 ## Relacionado
 
-- [Caso: escrever um artigo](/cases/write-an-article/)
+- [Caso: escrever um artigo](/pt/cases/write-an-article/)
 ---
 
 **Status:** verified  

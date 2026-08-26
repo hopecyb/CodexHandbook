@@ -3,9 +3,10 @@ title: Generación de imágenes
 description: Generar o editar imágenes en tareas Codex — prompts, formatos y aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -28,7 +29,7 @@ Sirve para dar primero un borrador visual; no para tomarlo directamente como pro
 | Explorar rápido el ambiente de un layout de UI | Entrega de diseño con fidelidad a nivel de píxel |
 | Iconos de ejemplo en tutoriales | Escenas con retratos reales sin autorización |
 
-Complementa [Prompts con imágenes](/prompts/prompting-with-images/): esa página trata la **entrada** de imágenes; esta, la **salida**.
+Complementa [Prompts con imágenes](/es/prompts/prompting-with-images/): esa página trata la **entrada** de imágenes; esta, la **salida**.
 
 ## Para qué sirve la generación de imágenes
 
@@ -48,7 +49,7 @@ Estos usos no encajan con tomar el resultado generado tal cual:
 
 1. Indica uso, proporción de tamaño, palabras clave de estilo (evita apilar nombres de estilos que infrinjan derechos)
 2. Exige formato de salida (PNG/SVG si está soportado) y ruta de guardado
-3. Tras generar, [Verificar artefactos](/guide/quality/verify-artifacts/): abrir el archivo, comprobar resolución y legibilidad
+3. Tras generar, [Verificar artefactos](/es/guide/quality/verify-artifacts/): abrir el archivo, comprobar resolución y legibilidad
 4. Antes de publicar al exterior, revisión de diseño o legal
 
 ## Malentendidos habituales
@@ -97,7 +98,7 @@ Puedes pedir con esta estructura:
 
 - Imágenes grandes en `assets/` o CDN; evalúa el volumen de Git
 - En el PR, indica el prompt de generación y la versión del modelo (auditoría interna)
-- Ver [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/)
+- Ver [Imágenes y capturas](/es/guide/files-and-artifacts/images-and-screenshots/)
 
 ## Seguridad y cumplimiento
 

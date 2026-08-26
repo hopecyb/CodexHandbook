@@ -3,9 +3,10 @@ title: 目標、コンテキストとアクション
 description: 成功するやり取りを目標、背景、アクション、検収に分解する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -21,7 +22,7 @@ sidebar:
 3. **アクション**：Codex に許可するステップ（読む、変更する、実行する）
 4. **検収**：いつ完了とみなすか、どう確認するか
 
-プロンプトの章ではこの四つを安定した枠組みに展開しています。[良いタスクの構造](/prompts/task-anatomy/) を参照してください。
+プロンプトの章ではこの四つを安定した枠組みに展開しています。[良いタスクの構造](/ja/prompts/task-anatomy/) を参照してください。
 
 ## 四つがそれぞれ担うこと
 

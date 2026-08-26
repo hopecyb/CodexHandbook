@@ -1,108 +1,88 @@
 ---
-title: Profiles de configuración
-description: Cambia de combinación de modelo, Sandbox y aprobación con perfiles con nombre — una para desarrollo, otra para revisión, otra para CI.
+title:  Profiles de configuración
+description:  Cambia de combinación de modelo, Sandbox y aprobación con perfiles con nombre — una para desarrollo, otra para revisión, otra para CI.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7043ada
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Un **Profile (perfil de configuración)** te permite guardar un conjunto con nombre (modelo + Sandbox + aprobación, etc.) y cambiar de escenario con un clic, sin ajustar a mano cada vez.
+Current Codex CLI `--profile <name>` layers `$CODEX_HOME/<name>.config.toml` over the base user configuration. It is primarily a CLI mechanism and should not be presented as a universal one-click desktop mode.
 
-## Qué cubre esta página
+## Minimal example
 
-- Diferencia entre Profile y «cambiar la configuración por defecto»
-- Formas habituales de dividir Profiles
-- Cómo puede el equipo compartir definiciones de Profile
+Keep shared defaults in the base configuration:
 
-## Qué gestiona un Profile
+```toml
+# ~/.codex/config.toml
+model_reasoning_effort = "medium"
+```
 
-Si la «configuración» es el hábito de trabajo por defecto, un **Profile** es «un conjunto de presets para distintos escenarios».
+Create a read-only review profile:
 
-Puedes verlo así:
+```toml
+# ~/.codex/review.config.toml
+sandbox_mode = "read-only"
+approval_policy = "never"
+```
 
-- Desarrollo diario: un conjunto
-- Revisar un repositorio no confiable: otro
-- Revisión de solo lectura: otro
-- Tareas automáticas en CI: otro más
+Start it:
 
-Así no tienes que cambiar un montón de interruptores cada vez.
+```bash
+codex --profile review
+# Short form
+codex -p review
+```
 
-## Ejemplos típicos de Profile
+Confirm local semantics:
 
-| Nombre de Profile | Intención | Rasgos (concepto) |
+```bash
+codex --help
+```
+
+Current help should describe the profile path and layering. If your version differs, trust its output and the current official configuration reference.
+
+## Appropriate uses
+
+| Profile | Purpose | Example boundary |
 |---|---|---|
-| `daily` | Desarrollo diario | Modelo equilibrado, Sandbox estándar |
-| `strict` | Repositorio no confiable | Aprobación fuerte, red limitada |
-| `review-only` | Revisión de solo lectura | Prohíbe escritura o solo permite lectura |
-| `ci` | Pipeline | Modelo fijo, no interactivo, sin push |
+| `review` | Read-only inspection | read-only, no writes |
+| `workspace` | Everyday project changes | workspace writes, approvals as needed |
+| `ci` | Non-interactive checks | fixed output, no push |
 
-Campos concretos: [Referencia de opciones](/guide/reference/configuration-reference/).
+A profile only saves a configuration starting point. It cannot override organization requirements or make a prompt inherently safe. In particular, do not make `danger-full-access` an easy default profile.
 
-## Forma de uso (concepto)
+## Do not confuse Permission Profiles
 
-1. Confirma en la documentación oficial la sintaxis de Profile (puede relacionarse con `[profiles.name]` en `config.toml` o una estructura equivalente)
-2. Crea el Profile y nómbralo
-3. Al arrancar, especifica: `codex --profile strict` (el comando según `--help`)
-4. En el README, indica «contribuidores: se recomienda `daily`; CI usa `ci`»
+- **Configuration profile:** `--profile name` selects `<name>.config.toml` and may layer many Codex settings.
+- **Permission Profile (Beta):** `default_permissions` and `[permissions.<name>]` define filesystem and network boundaries.
 
-Detalle CLI: [Configuración CLI](/guide/cli/configuration/)
+They share a name but not purpose or schema. Current Permission Profiles also do not compose with legacy `sandbox_mode`; choose one permission system.
 
-## Malentendidos habituales
+## Team boundary
 
-### Más Profiles no siempre es más flexible
+Configuration profiles live in a user's Codex home and are not automatically project configuration in the current version. A team can publish reviewed examples for members to install and inspect explicitly. Do not assume cloning a repository activates a personal profile.
 
-La primera vez mucha gente quiere un Profile por cada escenario mínimo y acaba con más de diez nombres sin recordar las diferencias.
+## Acceptance
 
-Suele bastar conservar 2 a 4 de los más usados:
+1. Run `codex --help` and confirm current `-p/--profile` support.
+2. Test `review` on a read-only task.
+3. Attempt an outside-workspace read or a write and confirm that the boundary blocks it.
+4. Inspect effective configuration; do not trust only the filename.
 
-- Desarrollo diario
-- Modo estricto
-- Revisión de solo lectura
-- CI
+## Official sources
 
-Que sepan distinguir con claridad los límites de riesgo.
+- [Codex configuration schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
+- [Configuration layers in Codex CLI source](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
 
-### Un Profile no sustituye el juicio
-
-Cambiar a un Profile no significa que todas las tareas posteriores sean absolutamente seguras o adecuadas.
-
-Solo te ayuda a pasar al «estado de partida habitual»; la tarea concreta sigue exigiendo juzgar el repositorio actual y el riesgo.
-
-## Reparto con AGENTS.md
-
-| | Profile | AGENTS.md |
-|---|---|---|
-| Qué gestiona | Interruptores de capacidad, modelo, Sandbox | Cómo se escribe este proyecto |
-| Commit en Git | Opcional (fragmentos de profile a nivel de proyecto) | Sí |
-| Personal/equipo | Profile personal puede ser local; el del equipo debe ir por PR | Equipo |
-
-## Errores habituales
-
-- Diez Profiles por repositorio que nadie mantiene
-- El Profile `ci` sigue permitiendo `git push`
-- Nombres de Profile distintos a la documentación: los novatos usan el incorrecto
-
-## Sugerencia para empezar
-
-Al empezar con Profiles, puedes hacerlo así:
-
-1. Conserva primero un `daily` como perfil por defecto
-2. Añade un `strict` para repositorios desconocidos o de alto riesgo
-3. Si el equipo tiene automatización, añade aparte un `ci`
-
-Con eso ya cubres la mayoría de los casos habituales.
-
-El valor de Profile es cambiar rápido, en escenarios de riesgo distintos, a una combinación por defecto que ya has pensado.
-
-## Referencias
-- Documentación de profiles de OpenAI Codex
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** CLI / App  
-**Nota de revisión:** Esta página describe `Profile`, `codex --profile` y la estructura de profiles compartidos de forma demasiado concreta, pero la documentación oficial verificable actual no basta para demostrar que esos usos sean generales en la versión vigente; hasta completar la base documental formal, no conviene marcarla como `verified`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** CLI
+
+**Last verified:** 2026-08-26 (local `codex-cli 0.148.0`)

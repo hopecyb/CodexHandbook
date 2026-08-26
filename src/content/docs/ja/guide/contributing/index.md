@@ -1,16 +1,17 @@
 ---
 title: コントリビューション
-description: 本ハンドブックへの本文・事例・プロンプト例・翻訳の貢献方法——フローと品質基準。
+description: 本ハンドブックへの本文・事例・プロンプト例・翻訳の貢献方法と品質基準。
 sidebar:
   order: 80
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b13e05c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Codex ガイドハンドブック**はコミュニティが維持するドキュメントサイトです。誤りの修正、ページの追加、再現可能な事例、[examples/](/examples/README.md) にあるプロンプト例の追加を歓迎します。
+**Codex ガイドハンドブック**はコミュニティが維持するドキュメントサイトです。誤りの修正、ページの追加、再現可能な事例、[examples/](https://github.com/hopecyb/CodexHandbook/tree/main/examples) にあるプロンプト例の追加を歓迎します。
 
 ## 本ページの内容
 
@@ -33,15 +34,15 @@ translated_at: 2026-07-28
 | 種類 | 説明 | ガイド |
 |---|---|---|
 | 修正・小さな変更 | 誤字、リンク、古くなった一文 | そのまま PR |
-| 新しいガイドページ | `src/content/docs/` 配下の章本文 | [ガイドページの執筆](/guide/contributing/write-a-guide/) |
-| 事例 | `src/content/docs/cases/` | [事例テンプレート](/cases/use-cases/case-study-template/) |
-| プロンプト例 | `examples/prompts/` | [プロンプト例の追加](/guide/contributing/add-a-prompt-example/) |
-| 技術検証 | `verified` の付与、日付の更新 | [技術コンテンツの検証](/guide/contributing/verify-technical-content/) |
-| 翻訳 | `en/`、`zh-tw/` など | ロードマップ M6；まずソース文を安定させる |
+| 新しいガイドページ | `src/content/docs/` 配下の章本文 | [ガイドページの執筆](/ja/guide/contributing/write-a-guide/) |
+| 事例 | `src/content/docs/cases/` | [事例テンプレート](/ja/cases/use-cases/case-study-template/) |
+| プロンプト例 | `examples/prompts/` | [プロンプト例の追加](/ja/guide/contributing/add-a-prompt-example/) |
+| 技術検証 | `verified` の付与、日付の更新 | [技術コンテンツの検証](/ja/guide/contributing/verify-technical-content/) |
+| 翻訳 | `en/`、`zh-tw/` など | ロードマップ M6。まずソース文を安定させる |
 
 ## よくある誤解
 
-### コントリビューション＝大きな章を新規執筆しなければならない、ではない
+### コントリビューションは大きな章の新規執筆に限らない
 
 初めて参加する人は、「貢献」と聞くと大きなコンテンツ一式を補う必要があると思いがちです。
 
@@ -52,19 +53,19 @@ translated_at: 2026-07-28
 - 抜けている目次の入口を補う
 - 古いコマンドを格下げするか、日付を明記する
 
-### 「専門家ではない」＝「フィードバックが役に立たない」、ではない
+### 「専門家ではない」ことは「フィードバックが役に立たない」ことではない
 
 読者に初心者が含まれるなら、読んでいてつまずいた場所そのものが高価値なシグナルです。
 
-前提は、問題を具体的に書き、「ここがわからない」だけでなく、より明確な表現に直すことです。
+問題を具体的に書き、「ここがわからない」だけでなく、より明確な表現に直すことが前提です。
 
 ## 基本原則
 
 1. **簡体字中国語の `root` をソース文とする**（特に断りがない限り）
-2. **外部チュートリアルの原文をコピーしない**；[外部資料統合計画](/docs/planning/external-source-integration.md) を参照
+2. **外部チュートリアルの原文をコピーしない**。[外部資料統合計画](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)を参照
 3. **変わりやすい事実**には `最終検証` の日付を付ける
-4. **各 sidebar slug** に対応する markdown が必要。ないと `npm run build` が失敗する
-5. 新規ページは `astro.config.mjs` の sidebar も同期して更新する
+4. 新規ページには有効な frontmatter、ファイルパス、相互リンクが必要
+5. 現在の 4 モジュールのサイドバーはディレクトリから自動生成される。ファイル追加後にビルドし、順序と入口を確認する
 
 ## 初めてのコントリビューションの進め方
 
@@ -85,10 +86,10 @@ pnpm install
 pnpm dev
 ```
 
-マージ前に実行：
+マージ前に実行します。
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ## 行動規範
@@ -102,11 +103,10 @@ npm run build
 ## 関連リンク
 
 - リポジトリ：<https://github.com/hopecyb/CodexHandbook>
-- [章のアウトライン](/docs/planning/chapter-outline.md)（計画用）
+- [章のアウトライン](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（リポジトリの計画文書）
 
 ---
 
 **状態：** verified  
-**対象製品：** （本ページはハンドブック運用規約のため該当なし）  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本リポジトリの現行ディレクトリ構造、サイドバー維持方法、ページ状態体系、コントリビューションフローを項目ごとに再確認済み。本ページはハンドブック運用ルールであり、特定の Codex 製品端の変わりやすい UI 動作には依存しない。
+**検証根拠：** 本リポジトリの現行ディレクトリ構造、サイドバー維持方法、ページ状態体系、コントリビューションフローを項目ごとに再確認済みです。本ページはハンドブック運用ルールであり、特定の Codex 製品の変わりやすい UI 動作には依存しません。
+**最終検証：** 2026-07-26

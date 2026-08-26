@@ -3,143 +3,88 @@ title: Hook イベントタイプ
 description: Codex 実行チェーンにおける Hook トリガーポイント。適切な段階で検証、ログ、ブロックを行う。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7da5c40
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-ここで扱うのは、同じチェックをいつ発火させるかです。
+The first question when choosing a Hook is not “how do I write the script?” It is “must this happen before or after the side effect?” A script attached to the wrong event may only report damage after the fact.
 
-**Hook イベント**は、固定ノードで設定したロジックをシステムが呼び出すタイミングです。イベントタイプを理解すると、毎回のツール呼び出しを遅くせずに [Hooks 概要](/skills/hooks/hooks-overview/) の「監査・検証」を設定に落とせます。
+![Codex Hook lifecycle and key events](/diagrams/hook-lifecycle-events-ja.svg)
 
-## 内容
+## Current events
 
-- よくあるイベント段階と適用シーン
-- イベントと [コマンドルール](/guide/customization/rules/command-rules/) の役割分担
-- 設定時のパフォーマンスと失敗戦略
+| Event | When it runs | Matcher filters | Common use |
+|---|---|---|---|
+| `SessionStart` | Session start or resume | `startup`, `resume`, `clear`, `compact` | Environment notes, restored context |
+| `SubagentStart` | Subagent starts | Subagent type | Add subagent constraints |
+| `UserPromptSubmit` | User submits a prompt | Unsupported; configuration is ignored | Secret scan, development context |
+| `PreToolUse` | Before a supported local tool runs | Tool name | Deny or rewrite the call |
+| `PermissionRequest` | Codex is about to request approval | Tool name | Allow, deny, or defer to normal approval |
+| `PostToolUse` | After a supported local tool returns | Tool name | Record results, feed later reasoning |
+| `PreCompact` | Before context compaction | `manual` / `auto` | Save state before compaction |
+| `PostCompact` | After context compaction | `manual` / `auto` | Restore required context |
+| `SubagentStop` | A subagent is about to stop | Subagent type | Require another check |
+| `Stop` | Main task turn is about to stop | Unsupported; configuration is ignored | Require more main-thread verification |
+| `SessionEnd` | Main thread ends | Currently `other` | Fast closing log; does not run for subagents |
 
-## 判断の原則
+## Tool matchers
 
-最初に「この Hook は実装できるか」と聞かない。  
-先に自問する：起きる前に止めたいのか、起きた後に記録したいのか？
-
-多くの Hook の位置ずれは、トリガータイミングの選択ミスにあります。
-
-:::note
-**イベント名とフィールドは [公式 Hooks ドキュメント](https://developers.openai.com/codex) を正とする。** 下表は概念グループ。CLI アップグレード後は `--help` とリリースノートで再確認。
-:::
-
-## イベントグループ（概念）
-
-| 段階 | 典型イベント（概念名） | 向いていること |
-|---|---|---|
-| セッション | `session.start` / `session.end` | 環境チェック、変更集約、監査の末尾注記 |
-| ツール前 | `tool.call.before` / `pre_tool_use` | 危険コマンドのブロック、秘密鍵パターンのスキャン |
-| ツール後 | `tool.call.after` / `post_tool_use` | 構造化ログ、メトリクス、マスキング保存 |
-| プロンプト | `user_prompt.submit` | ポリシースキャンの注入、長さ制限 |
-| 成果物 | `artifact.create` | ライセンスヘッダ、ファイルタイプホワイトリスト |
-| 統合 | `pr.before_create`（サポート時） | Issue 番号、changelog 形式 |
-
-同じロジックを複数イベントに重ねない。**最も早くブロックできる**点を選ぶ。
-
-## 段階の理解
-
-- **セッション系**：タスクの開始または終了時
-- **ツール前**：コマンドやツールがまだ実行されていない
-- **ツール後**：動作は発生済み。記録、要約、再チェックが可能
-- **プロンプト系**：ユーザー内容が送信された直後
-- **成果物系**：ファイルや結果が生成された直後
-
-まずこのレベルで理解し、イベント名を急いで暗記する必要はありません。
-
-## ルールエンジンとの関係
+Common values include:
 
 ```text
-ユーザープロンプト →（任意）prompt Hook
-    → モデルがツール呼び出しを提案
-    → ルールエンジン allow/deny
-    →（任意）pre_tool Hook → 実行 → post_tool Hook
+Bash
+^apply_patch$
+Edit|Write
+mcp__filesystem__read_file
+mcp__filesystem__.*
 ```
 
-- **ルール**：宣言的、速い、既知のコマンドパターン向き
-- **Hook**：命令型スクリプト、複雑なポリシーと外部システム向き
+Shell and unified command execution match `Bash`. `apply_patch` can also match the aliases `Edit` or `Write`. MCP and other local function tools match their actual tool names.
 
-## よくある誤解
+## Three events commonly confused
 
-### 1. 検出できれば前後どちらでも同じ
+### PreToolUse
 
-大きく異なります。
+Input contains `tool_name`, `tool_use_id`, and tool-specific `tool_input`. It can return:
 
-「副作用を防ぐ」ならできるだけ早い位置に。  
-`post_tool` で初めて問題に気づいた時点では、しばしば手遅れです。
+- `permissionDecision: "deny"`: stop a supported call.
+- `permissionDecision: "allow"` plus `updatedInput`: rewrite supported input.
+- `additionalContext`: add model context without blocking.
 
-### 2. イベントが細かいほど設定がプロらしい
+Plain stdout is ignored; output the documented JSON. Exit code `2` with stderr can also block and provide a reason.
 
-設定では「少なく正確に」。最も適切な 1 点にロジックを付ける。
+### PermissionRequest
 
-### 3. Hook イベントタイプは技術的細部だけ
+This runs only when Codex was already going to request approval for shell escalation, managed networking, or a similar action. It can allow, deny, or leave the decision to the normal approval UI. It does not replace general `PreToolUse` policy.
 
-次に直接影響します。
+### PostToolUse
 
-- リスクを間に合うか止められるか
-- ログが有用か
-- 全体の対話が遅くならないか
+The tool has already run, and the event fires even when Bash exits non-zero. Returning block or exiting `2` can replace feedback for the model, but cannot undo a command, file write, or external action.
 
-## 失敗戦略
+## Stop is not an undo button
 
-| 戦略 | いつ使う |
-|---|---|
-| `block` | セキュリティ違反、コンプライアンスの硬性要件 |
-| `warn` | スタイル、提案的チェック |
-| `log` | 観測のみ、ブロックしない |
+`decision: "block"` for `Stop` automatically creates a continuation prompt from the reason, asking Codex to run another turn. It does not roll back completed side effects. Check `stop_hook_active` to prevent an infinite loop.
 
-Hook のタイムアウトやクラッシュは**デフォルトで安全に**：本番は block または fail closed を傾向とし、調査用にエラーを記録。
+## Event-selection exercise
 
-## どこに付けるか迷ったとき
+| Need | Choose | Why |
+|---|---|---|
+| Stop a suspected token from being written | `PreToolUse` matching `apply_patch|Edit|Write` | Must act before the write |
+| Measure shell failure rate | `PostToolUse` matching `Bash` | Needs the result |
+| Save key decisions before automatic compaction | `PreCompact` | Runs before compaction |
+| Do not close until tests have run | `Stop` | Continue the current task |
+| Send a 30-second network request at shutdown | Not `SessionEnd` | Maximum three seconds; closing events should stay short |
 
-どのイベントか不明なら、次の簡略ルールで考える。
+## Official source
 
-- 危険動作を止めたい：前置イベントを優先
-- 何が起きたか記録したい：後置イベントを優先
-- 開始チェックや終了集約：セッションイベントを見る
+- [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
 
-多くの設定シーンではこの判断で十分です。
-
-## 最小設定の考え方
-
-1. 1 イベントを選ぶ（`post_tool` の読み取り専用ログから推奨）
-2. スクリプトの stdin で JSON ペイロード（ツール名、引数要約、作業ディレクトリ）
-3. 終了コード `0` で通過、非 `0` は戦略に応じて block/warn
-4. 単体テスト：固定 JSON fixture でスクリプト実行
-
-止めるのか記録するのかを先に決め、それからイベントを選ぶ。
-
-完全な例は [Hook 設定例](/skills/hooks/hooks-examples/) を参照。
-
-## よくあるミス
-
-- `post_tool` で `pre_tool` ですべきブロック（副作用は既に発生）
-- Hook 内で LLM や遅いネットワークを呼び、対話を破壊
-- イベントペイロードに秘密鍵があり、平文ログに書き込む
-- Hook がバージョン管理されず、メンバー間で環境不一致
-
-## セキュリティ境界
-
-- Hook スクリプトの権限は監視対象 Agent の権限以下に
-- [チーム Hook ユースケース](/skills/hooks/hooks-overview/#推奨チームユースケース) と [脅威モデル](/guide/team-enterprise/security/threat-model/) を参照
-
-## 受け入れチェックリスト
-
-- [ ] チームで最も使うイベント 1 つとその理由を言える
-- [ ] 失敗時に読みやすいエラーメッセージがある
-- [ ] スクリプトに単体テストまたは fixture がある
-- [ ] 設定がコードレビューに含まれる
-
-## 参考ソース
-- OpenAI Codex Hooks リファレンス
 ---
 
-**状態：** outdated  
-**対象製品：** CLI / App（バージョンによる）  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページの核心は Hook イベントグループ、ペイロード、失敗戦略。いずれも変動の大きい実装詳細であり、2026-07-26 時点の公式公開資料では安定検証が困難。
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host
+
+**Last verified:** 2026-08-25

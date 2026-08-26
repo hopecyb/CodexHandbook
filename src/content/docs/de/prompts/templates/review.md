@@ -3,9 +3,10 @@ title: Review-Vorlage
 description: Diff und Änderungsrisiken strukturiert prüfen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Review-Vorlage
@@ -50,8 +51,8 @@ Kern der Review-Vorlage: Risiken entlang fester Dimensionen aufdecken — kein v
 
 ## Verwandt
 
-- [Review vor dem Merge](/cases/workflows/review-before-merge/)
-- [PR-Review-Fall](/cases/review-a-pr/)
+- [Review vor dem Merge](/de/cases/workflows/review-before-merge/)
+- [PR-Review-Fall](/de/cases/review-a-pr/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Klare Aufgaben geben
 description: 'Prompts mit Ziel, Kontext, Einschränkungen und Abnahmekriterien strukturieren.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7048d91
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Einen Prompt nach stabilem Rahmen schreiben.
 
-Rahmen: [Anatomie einer guten Aufgabe](/prompts/task-anatomy/)
+Rahmen: [Anatomie einer guten Aufgabe](/de/prompts/task-anatomy/)
 
 Die ersten beiden Schritte klärten „Aufgabe aussprechen“; hier geht es um „Aufgabe stabiler aussprechen“.
 
@@ -47,7 +48,7 @@ Ohne Abnahme schwer zu sagen: „nicht fertig“ oder „nur unzufrieden“.
 
 Klare Aufgaben brauchen Ziel, Grenzen und Fertigkriterien zugleich.
 
-Weiter: [Ergebnisse prüfen](/guide/learning-paths/beginner/04-review-results/)
+Weiter: [Ergebnisse prüfen](/de/guide/learning-paths/beginner/04-review-results/)
 
 ---
 

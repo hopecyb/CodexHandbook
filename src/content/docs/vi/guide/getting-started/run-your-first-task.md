@@ -3,9 +3,10 @@ title: Chạy tác vụ đầu tiên
 description: Dùng Prompt rõ ràng để hoàn thành một thay đổi nhỏ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ Tác vụ lần đầu vốn gồm các nội dung sau:
 
 1. Để nó đưa kế hoạch ngắn (hoặc bạn chủ động yêu cầu kế hoạch)
 2. Khi phê duyệt ghi tệp, xác nhận đường dẫn đúng
-3. Xong rồi vào [Kiểm tra kết quả](/guide/getting-started/review-the-result/)
+3. Xong rồi vào [Kiểm tra kết quả](/vi/guide/getting-started/review-the-result/)
 
 ## Thứ tự thực thi
 
@@ -112,7 +113,7 @@ Hoặc:
 Tạm đừng sửa tiếp. Cho tôi biết vừa rồi bạn đã sửa những chỗ nào.
 ```
 
-Nguyên lý Prompt: [Cơ bản về Prompt](/prompts/basics/).
+Nguyên lý Prompt: [Cơ bản về Prompt](/vi/prompts/basics/).
 
 ---
 

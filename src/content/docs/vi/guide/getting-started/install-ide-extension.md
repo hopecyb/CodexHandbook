@@ -3,48 +3,62 @@ title: Cài phần mở rộng IDE
 description: Cài phần mở rộng Codex trong trình soạn thảo được hỗ trợ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1196b38
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-1. Xác nhận trình soạn thảo nằm trong danh sách hỗ trợ chính thức (xem [https://developers.openai.com/codex](https://developers.openai.com/codex))
-2. Từ marketplace phần mở rộng tìm phần mở rộng Codex chính thức và cài
-3. Khởi động lại trình soạn thảo (nếu cần) và mở bảng phần mở rộng
+Current IDE support has more than one installation path:
 
-Nếu phần lớn thời gian bạn ở trong VS Code hoặc JetBrains, phần mở rộng IDE thường sẽ hợp tay hơn.  
-Điểm dễ nhầm nhất khi cài lần đầu: phần mở rộng «đã cài» và «đã làm việc bình thường trong không gian làm việc hiện tại» thực ra vẫn là hai bước.
+| IDE | Installation or activation |
+|---|---|
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Install or enable the Codex extension |
+| Xcode | Select Codex Agent in Xcode's coding assistant |
+| JetBrains IDEs | Select Codex in AI Chat |
 
-## Sau cài đặt xác nhận thêm các việc sau
+Use the entry for your IDE on the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide). Do not infer button locations from a different IDE.
 
-- Bạn đang dùng trình soạn thảo được hỗ trợ chính thức
-- Phần mở rộng cài trong trình soạn thảo hiện tại — không cài nhầm môi trường
-- Sau khởi động lại thấy được lối vào phần mở rộng
-- Đang mở đúng thư mục dự án bạn thật sự muốn làm việc
+## VS Code-compatible editors
 
-## Hiểu nhầm thường gặp
+1. Install the Codex extension from the official Marketplace entry.
+2. Open the root of a real project workspace.
+3. Select the Codex icon. If it is missing, open the Command Palette and run `Codex: Open Codex Sidebar`.
+4. Sign in with ChatGPT or an API key.
 
-### 1. Trong Marketplace bấm cài là xong
+## Xcode and JetBrains
 
-Phía sau thường còn cần:
+- Xcode: open the coding assistant, start a chat, and select Codex as the Agent.
+- JetBrains: open AI Chat and select Codex.
 
-- Khởi động lại trình soạn thảo
-- Đăng nhập
-- Mở đúng không gian làm việc
+These entry points are provided by their respective IDEs and do not have the same interface as the VS Code extension.
 
-### 2. Phần mở rộng IDE tự nhiên biết bạn muốn thao tác dự án nào
+## Check editor context after installation
 
-Nếu gốc không gian làm việc sai, ngữ cảnh nó nhận cũng lệch theo.
+Open a source file, select a short section, and ask:
 
-Phần mở rộng IDE cài xong rồi, còn phải xác nhận nó xuất hiện và làm việc bình thường trong trình soạn thảo cùng không gian làm việc hiện tại của bạn.
+```text
+Explain only the inputs, outputs, and failure paths of the current selection.
+Do not edit files. Cite the relevant symbol names.
+```
 
-Tiếp theo: [Quy trình tác vụ local IDE](/guide/ide/local-task-workflow/). Xử lý sự cố: [Xử lý sự cố IDE](/guide/ide/troubleshooting/).
+If the answer is unrelated to the selection, check:
+
+- whether the expected project root is open;
+- whether the file or selection is attached to the composer;
+- whether the correct identity and workspace are active;
+- whether another AI extension conflicts with the integration or shortcuts.
+
+Continue with the [local IDE task workflow](/vi/guide/ide/local-task-workflow/). See [Supported editors](/vi/guide/ide/supported-editors/) for the complete support matrix.
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** IDE  
-**Ghi chú rà soát lại:** Phạm vi hỗ trợ phần mở rộng IDE, lối vào marketplace, cách nối đăng nhập và tích hợp không gian làm việc đều thuộc thông tin sản phẩm biến động cao; trong điều kiện chưa đối chiếu từng mục với ma trận hỗ trợ và tài liệu cài chính thức hiện hành, phù hợp hơn tạm đánh dấu `outdated`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** IDE
+
+**Căn cứ kiểm chứng:** The current official IDE quickstart lists VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains, with separate integration paths for the latter two groups.
+
+**Kiểm chứng gần nhất:** 2026-08-26

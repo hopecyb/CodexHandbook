@@ -1,60 +1,61 @@
 ---
 title: Skripte und Pipelines
-description: 'codex exec in Shell, Makefile und GitHub Actions orchestrieren — wiederholbar und auditierbar.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Orchestriere codex exec wiederholbar und auditierbar in Shell, Makefile und GitHub Actions.
 sidebar:
   order: 20
+locale: de
+source_locale: zh-CN
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Hier geht es darum, Codex von einer einmaligen Ad-hoc-Aktion in **Schritte zu verwandeln, die das Team wiederholen, bei Problemen nachverfolgen und übergeben kann**.
+Diese Seite zeigt, wie aus einer einmaligen Codex-Aktion ein **wiederholbarer Teamablauf wird, der sich bei Problemen nachvollziehen und von anderen übernehmen lässt**.
 
-Kurz: Skripte fixieren den Ablauf; Pipelines wiederholen ihn nach Regeln.
+Ein Skript fixiert den Ablauf; eine Pipeline führt ihn nach festen Regeln wiederholt aus.
 
-Dieses Kapitel zeigt, wie Sie [codex exec](/guide/developer-platform/non-interactive/codex-exec/) in Shell, Makefile oder CI-Pipelines einbetten.
+Das Kapitel beschreibt die Einbindung von [codex exec](/de/guide/developer-platform/non-interactive/codex-exec/) in Shell, Makefile oder eine CI-Pipeline.
 
 ## Inhalt dieser Seite
 
-- Arbeitsteilung lokales Skript vs. CI-Job
-- Verwaltung von Prompt und Secrets
-- Kombination mit [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
+- Aufgabenteilung zwischen lokalem Skript und CI-Job
+- Verwaltung von Prompts und Zugangsdaten
+- Zusammenspiel mit der [Automatisierung von Code-Reviews](/de/guide/developer-platform/ci-cd/code-review-automation/)
 
-## Welches Problem wird gelöst
+## Welches Problem hier gelöst wird
 
-„Skripte und Pipelines“ machen aus „heute habe ich das manuell so gemacht“ ein „das Team kann es künftig auf dieselbe Weise stabil wiederholen“.
+Skripte und Pipelines verwandeln „Ich habe das heute einmal manuell so gemacht“ in „Das Team kann denselben Ablauf später zuverlässig wiederholen“.
 
-Drei Dinge zählen besonders:
+Drei Eigenschaften sind dabei besonders wichtig:
 
 - Wiederholbarkeit
 - Auditierbarkeit
 - Übergabefähigkeit
 
-## Warum viele Teams Prompts nicht direkt in die CI-UI kleben
+## Weshalb Teams einen Prompt nicht einfach in die CI-Oberfläche einfügen
 
-Das ist schwer wartbar:
+Ein solcher Prompt lässt sich schwer pflegen:
 
-- Neue Personen wissen nicht, wie es ursprünglich gedacht war
-- Logikänderungen gehen nicht sauber durch Code Review
-- Bei Fehlern ist unklar, ob Prompt, Umgebung oder Skript geändert wurde
+- Eine neue zuständige Person kennt die ursprünglichen Gestaltungsentscheidungen nicht
+- Eine Logikänderung kann nicht regulär durch ein Code-Review gehen
+- Nach einem Fehler ist kaum feststellbar, ob Prompt, Umgebung oder Skript verändert wurde
 
-Prompt, Skript und Regeln in Git zu legen heißt: der Automatisierung Versionskontrolle geben.
+Prompt, Skript und Regeln in Git abzulegen, versieht den Automatisierungsablauf mit Versionsverwaltung.
 
 ## Häufige Missverständnisse
 
-### Automatisierung braucht Stabilität, nicht „je früher desto besser“
+### Automatisierung erfordert Stabilität, nicht einen möglichst frühen Start
 
-Beim ersten Automatisieren wollen viele sofort die ganze Kette verdrahten.
+Bei der ersten Automatisierung wird häufig sofort ein vollständiger End-to-End-Ablauf gebaut.
 
-Wenn Prompt noch oft wechselt, Erfolgskriterien unklar und Berechtigungsgrenzen wackelig sind, macht frühe Automatisierung das Debugging später schwerer.
+Solange sich der Prompt häufig ändert, Erfolgskriterien unklar sind oder Berechtigungsgrenzen nicht feststehen, erschwert eine frühe Automatisierung die spätere Fehlersuche.
 
-### Skripte fixieren Vorgehen
+### Skripte halten Vorgehensweisen fest
 
-Ein gutes Skript macht Schritte, die sonst im Kopf stecken, zu Dateien, die jeder lesen und reviewen kann.
+Ein gutes Skript verwandelt Schritte, die sonst im Gedächtnis einzelner Personen liegen, in eine für alle verständliche und prüfbare Datei.
 
-## Minimal nutzbares Shell-Fragment
+## Minimales Shell-Fragment
 
 ```bash
 #!/usr/bin/env bash
@@ -62,22 +63,22 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
-`prompts/ci/security-review.md` ins Git; Änderungen über Review.
+`prompts/ci/security-review.md` wird in Git verwaltet und bei Änderungen reviewt.
 
-## Gewohnheiten, die sich zuerst lohnen
+## Die wichtigsten ersten Gewohnheiten
 
-Beim ersten Automatisieren nicht „groß und vollständig“ anstreben — zuerst diese drei Dinge fixieren:
+Versuche bei deiner ersten Automatisierung nicht sofort, jedes Detail abzudecken. Fixiere zunächst drei Punkte:
 
-1. Wo liegt die Prompt-Datei
-2. Wie heißt das Einstiegsskript
-3. Wie werden Erfolg und Fehler erkannt
+1. Wo liegt die Prompt-Datei?
+2. Wie heißt das Einstiegsskript?
+3. Wie werden Erfolg und Fehlschlag bestimmt?
 
-Danach fallen Logs, Schema und Benachrichtigungen leichter.
+Wenn diese Grundlagen stehen, lassen sich Protokolle, Schema und Benachrichtigungen später deutlich einfacher ergänzen.
 
-## GitHub-Actions-Skizze
+## GitHub Actions: Offizielle Action verwenden
 
 ```yaml
 jobs:
@@ -85,70 +86,68 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # Version pinnten; offizielle Installationsdokumentation maßgeblich
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-Installationsweg und Permission-Scopes im Beispiel an die Sicherheitsanforderungen der Organisation anpassen; Secrets **nicht** im Workflow echoen.
+Verwende in GitHub Actions vorzugsweise die offizielle `openai/codex-action`. Stelle den API-Key nicht als Umgebungsvariable für einen vollständigen Job bereit, der Repository-Code ausführt. Falls ein späterer Schritt in einen PR schreiben muss, trenne Schreibberechtigung und Zugangsdaten in unterschiedliche Jobs und übergib Änderungen als Patch-Artefakt.
 :::
 
 ## Empfohlener Workflow
 
 | Ebene | Inhalt |
 |---|---|
-| Repo | `prompts/`, `tools/run-codex.sh` |
-| CI | Read-only-Checkout, feste CLI, Log-Artifact hochladen |
-| Callback | optional [Webhook](/guide/developer-platform/webhooks/overview/) für interne Systeme |
+| Repository | `prompts/`, `tools/run-codex.sh` |
+| CI | Schreibgeschützter Checkout, fixierte CLI, hochgeladenes Protokollartefakt |
+| Callback | Optional mit einem [Webhook](/de/guide/developer-platform/webhooks/overview/) ein internes System aktualisieren |
 
-## Wann es passt
+## Entscheidungshilfe
 
-Wenn beides zutrifft, eignet sich Skript oder Pipeline:
+Ein Vorgang eignet sich für ein Skript oder eine Pipeline, wenn beide Bedingungen erfüllt sind:
 
-- Sie wiederholen es oft
-- Sie wollen jedes Mal möglichst dasselbe Vorgehen
+- Du führst ihn wiederholt aus
+- Die Vorgehensweise soll bei jedem Lauf möglichst gleich sein
 
-Beispiele: PR-Review, Änderungszusammenfassung, Security-Scan, Dokumentationschecks.
+Beispiele sind PR-Reviews, Änderungszusammenfassungen, Sicherheitsprüfungen und Dokumentationschecks.
 
-Nicht vollautomatisieren, solange der Ablauf noch instabil ist; zuerst als Skript fixieren, dann in die Pipeline — meist robuster.
+Automatisiere einen noch instabilen Prozess nicht sofort vollständig. Halte die Vorgehensweise zunächst in einem Skript fest und binde das Skript anschließend in die Pipeline ein.
 
 ## Häufige Fehler
 
-- Dynamisches Zusammenfügen von `${{ github.event.pull_request.body }}` ohne Escaping (Injection)
-- Keine Concurrency-Kontrolle am selben PR → doppelte Läufe, Quotenverbrauch
-- Lokal OK, CI fehlt Abhängigkeit (kein `npm ci`)
-- Erfolgskriterium nur „gelaufen“, ohne strukturierte Auswertung
-- Zu hohe Schreibrechte von Anfang an
+- `${{ github.event.pull_request.body }}` ohne Escaping dynamisch an den Prompt anhängen und damit eine Injection ermöglichen
+- Denselben PR ohne Parallelitätskontrolle mehrfach ausführen und Kontingent verbrauchen
+- Lokaler Lauf besteht, aber in CI fehlen Abhängigkeiten, weil `npm ci` nicht ausgeführt wurde
+- Als Erfolgskriterium nur „Prozess beendet“ verwenden und keine strukturierte Schlussfolgerung auswerten
+- Der ersten Automatisierung sofort zu weitreichende Schreibberechtigungen geben
 
 ## Sicherheitsgrenzen
 
-- CI-Token Least Privilege; kein `git push`, außer in einem separat freigegebenen Job
-- Workflows bei Fork-PRs vorsichtig mit Secrets (`pull_request_target` braucht Security Review)
+- CI-Token mit minimalen Berechtigungen verwenden; `git push` nur in einem gesonderten Genehmigungsjob erlauben
+- Zugangsdaten in Workflows für PRs aus Forks mit besonderer Vorsicht verwenden; `pull_request_target` erfordert ein Sicherheitsreview
 
-## Abnahme-Checkliste
+## Abnahmecheckliste
 
-- [ ] Prompt und Skript versioniert in Git
-- [ ] CI-Fehler blockiert Merge (falls Policy es verlangt)
-- [ ] Artifact-Retention entspricht Compliance
-- [ ] Verhalten konsistent mit lokalem `make review`
+- [ ] Prompt und Skript sind in Git versioniert
+- [ ] Ein CI-Fehler blockiert die Zusammenführung, sofern die Richtlinie dies verlangt
+- [ ] Die Aufbewahrung von Artefakten erfüllt die Compliance-Anforderungen
+- [ ] Das Verhalten entspricht dem lokalen `make review`
 
 ## Quellen
-- OpenAI Codex + GitHub-Integrationsdokumentation
+- Dokumentation zur Integration von OpenAI Codex und GitHub
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** CLI  
-**Prüfhinweis:** Das Prinzip „Prompt, Skript und Pipeline über Git reviewen“ bleibt gültig; Beispiele hängen an `codex exec`, CLI-Installation und konkreten GitHub-Actions-Anbindungen — hochflüchtige Implementierungsdetails. Nach aktuellem offiziellem Pipeline-Stand wieder auf `verified` setzen.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** CLI / GitHub Actions
+
+**Prüfgrundlage:** Mit den aktuellen offiziellen Empfehlungen zum nicht interaktiven Modus und zur Codex GitHub Action abgeglichen. `--cd` wurde korrigiert; die Trennung des Jobs mit API-Key von Repository-Schreibberechtigungen ist die standardmäßige Sicherheitsgrenze.
+
+**Zuletzt geprüft:** 2026-08-26

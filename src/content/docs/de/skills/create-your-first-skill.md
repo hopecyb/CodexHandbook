@@ -3,9 +3,10 @@ title: Ersten Skill erstellen
 description: Von null einen commitbaren pr-review-Skill — inkl. Test und Team-Sharing.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Wenn du Aufgaben schon verteilst, aber noch keinen echten Skill gebaut hast, zeigt diese Seite den Grundablauf.
@@ -14,7 +15,7 @@ In 15–30 Minuten einen **im Repo wiederverwendbaren** Skill zu bauen hilft oft
 
 ## Für wen
 
-Du kannst die [erste Aufgabe](/cases/first-task/) durchziehen und willst in einem Test-Repo experimentieren.
+Du kannst die [erste Aufgabe](/de/cases/first-task/) durchziehen und willst in einem Test-Repo experimentieren.
 
 ## Warum mit `pr-review` starten
 
@@ -136,14 +137,14 @@ Ein nützlicher Skill erfüllt mindestens:
 - [ ] `$pr-review` läuft durch und führt keine gefährlichen Git-Operationen aus
 - [ ] Ausgabe enthält gestufte Schlüsse, keine Allgemeinplätze
 - [ ] `description` nennt das Auslöseszenario in einem Satz
-- [ ] Gegen [Berechtigungen und Freigabe](/guide/permissions-and-sandbox/) geprüft (dieses Beispiel hat keine Skripte)
+- [ ] Gegen [Berechtigungen und Freigabe](/de/guide/permissions-and-sandbox/) geprüft (dieses Beispiel hat keine Skripte)
 
 Ein „kleiner, stabiler“ Skill macht klare Arbeitsmuster leichter wiederverwendbar.
 
 ## Nächste Schritte
 
-- [Verstehen—Planen—Ausführen—Prüfen](/prompts/templates/understand/) als Skill absichern
-- Bei GitHub-API-Bedarf [MCP](/skills/mcp/mcp-overview/) einbinden
+- [Verstehen—Planen—Ausführen—Prüfen](/de/prompts/templates/understand/) als Skill absichern
+- Bei GitHub-API-Bedarf [MCP](/de/skills/mcp/mcp-overview/) einbinden
 
 ## Quellen
 - Offizielle OpenAI-Codex-Skills-Beispiele und `skill-creator` (falls vorhanden)

@@ -1,92 +1,56 @@
 ---
-title: Fix a bug
-description: From failing test to minimal fix and regression—the most common developer loop.
+title: 'Fix a bug: where to start'
+description: Choose the bug-fix path that matches your situation and continue to the complete runnable case.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 27c707b
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## Meta information
+This is a short entry page. The complete steps, runnable code, red/green test evidence, and phase-specific prompts are maintained in [Verified bug fixing](/en/cases/use-cases/software-development/fix-a-bug-with-verification/) so the two pages do not drift.
 
-| Field | Content |
+## Identify the missing step
+
+| Current situation | Start here |
 |---|---|
-| Audience | Developers |
-| Client | CLI or IDE (local repo) |
-| Estimated time | 30–60 minutes |
-| Verified date | 2026-07-25 |
+| You only know the result is wrong; there is no stable reproduction | [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/) |
+| A test fails reliably | [Verified bug fixing](/en/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| You do not know the module | [Understand a codebase](/en/cases/understand-a-codebase/) |
+| The fix is complete and ready to merge | [Review a PR](/en/cases/review-a-pr/) |
+| The test itself is unstable | Read [Run tests](/en/guide/quality/run-tests/) first; a flaky test is not repair evidence |
 
-## 1. Goal and background
+## Minimal evidence loop
 
-**Goal:** Fix a regression bug already caught by unit tests, and add tests to prevent recurrence.
+Keep this evidence chain in any language or framework:
 
-**Success criteria:**
+1. Reproduce the original failure reliably with an explicit command.
+2. Save the failing assertion, error output, and input conditions.
+3. Explain the root cause before making the smallest repair.
+4. Make the original failing test and new boundary tests pass.
+5. Run broader regression checks.
+6. Read the diff manually and reject unrelated changes.
 
-- Original failing test passes
-- Full test suite still green
-- Diff only touches necessary files
+Step 4 without step 1 does not prove that the test covers the original issue. A green full suite without diff review also does not prove that the change scope is correct.
 
-**Out of scope:** Large refactors, major dependency upgrades.
+## Practice directly
 
-## 2. Preparation
+The repository includes a JavaScript shopping-cart discount example with no third-party dependencies:
 
-- Clone repo, `pnpm install` (or per `AGENTS.md`)
-- Confirm local reproduction: `pnpm test -- path/to/failing.test.ts`
-- Branch: `fix/issue-123-short-desc`
+```bash
+# Starter: one test is expected to fail
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-## 3. Workflow
-
-### Explore
-
-```text
-Do not change code yet. Read failing test @tests/auth/login.test.ts and implementation @src/auth/login.ts;
-explain the failure in 5 bullets or fewer, citing assertions and stack line numbers.
+# Reference solution: all three tests are expected to pass
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-### Plan
-
-```text
-Give a fix plan: which files to change, whether new tests are needed, how to verify.
-Wait for my reply "execute" before changing code.
-```
-
-### Execute
-
-```text
-Execute plan steps 1–2. After each step, run only related tests.
-```
-
-### Verify
-
-```text
-Run the full test suite; summarize diff for my review; do not git push.
-```
-
-Human: Read the diff, confirm no unrelated changes, check per [Review diffs](/guide/quality/review-diffs/).
-
-## 4. Failure and recovery
-
-| Issue | Action |
-|---|---|
-| New failures after fix | `git stash` or revert commit; narrow the change |
-| Wrong root cause | Return to explore; request new hypothesis |
-| Flaky test | Stabilize test before fixing business logic |
-
-## 5. Capture for reuse
-
-- If this bug type recurs, add a convention in `AGENTS.md`
-- Extract `$regression-guard` Skill: run critical test list before merge
-
-## 6. Related chapters
-
-- [Understand a codebase](/cases/understand-a-codebase/)
-- [Review diffs](/guide/quality/review-diffs/)
-- [Run tests](/guide/quality/run-tests/)
+The complete materials are in [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
 
 ---
 
-**Status:** verified  
-**Applicable products:** CLI / IDE  
-**Last verified:** 2026-07-26  
-**Verification basis:** OpenAI Developers' homepage currently still describes Codex as usable for fixing defects, running tests, and reviewing changes; this page focuses on the stable engineering loop—reproduce failure first, minimal fix, add tests, regression verification—not dependent on any specific framework or product UI.
+**Status:** verified
+**Applies to:** CLI / IDE
+**Verification basis:** This entry page maintains only path selection and a stable engineering loop. The expected failing and passing commands were run in the current repository.
+**Last verified:** 2026-08-25

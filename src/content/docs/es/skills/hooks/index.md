@@ -1,50 +1,49 @@
 ---
 title: Hooks
-description: Añade comprobaciones, logs y bloqueos en nodos fijos de ejecución; cuándo bloquear y cuándo solo registrar.
+description: Ejecuta scripts o herramientas MCP en puntos del ciclo de vida de Codex para comprobar, registrar y aplicar políticas.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: c768708
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Un Hook inserta automáticamente una comprobación o un registro en un momento fijo.
+Un Hook es un controlador automático del ciclo de vida de Codex. Puede ejecutar un script o una herramienta MCP al iniciar una sesión, enviar un prompt, antes o después de una llamada a una herramienta, durante la compactación del contexto, cuando se detiene un subagent o cuando termina el hilo principal.
 
-Se ocupa de comprobar, registrar e interceptar en nodos del flujo; no define cómo se hace la tarea en sí.
+## Qué resuelve esta sección
 
-## Contenido
-
-Este grupo cubre sobre todo 3 preguntas:
-
-- En qué momento debo disparar el Hook
-- ¿Quiero impedir que ocurra el problema, o solo registrarlo?
-- En la primera configuración, cómo empezar con bajo riesgo
+- Elegir un evento real, en lugar de inventar nombres inexistentes como `pre_tool`.
+- Distinguir entre bloquear antes de la ejecución y aportar feedback después.
+- Empezar con un Hook comprobable y de bajo riesgo.
+- Revisar el límite de confianza de los Hooks del proyecto y de los incluidos en Plugins.
 
 ## Orden de lectura
 
-1. [Descripción general de Hooks](/skills/hooks/hooks-overview/): primero distingue Hook de Skill y MCP
-2. [Tipos de eventos Hook](/skills/hooks/hook-event-types/): saber si colgarlo delante, detrás, o al inicio/fin de sesión
-3. [Ejemplos de configuración de Hooks](/skills/hooks/hooks-examples/): tres patrones habituales — solo registrar / bloquear primero / comprobación ligera de entrada
+1. [Introducción a los Hooks](/es/skills/hooks/hooks-overview/): capas de configuración, confianza y comportamiento durante la ejecución
+2. [Tipos de eventos de Hook](/es/skills/hooks/hook-event-types/): elige eventos y matchers según su posición en el ciclo de vida
+3. [Ejemplos de Hooks](/es/skills/hooks/hooks-examples/): ejecuta un guardián `PreToolUse` con pruebas unitarias
 
-## Orden de configuración
+## Decisión rápida
 
-No conviene empezar con la política de bloqueo más estricta. Un orden más adecuado:
+| Objetivo | Considera primero |
+|---|---|
+| Rechazar o reescribir la entrada de una herramienta antes de ejecutarla | `PreToolUse` |
+| Decidir cuando Codex está a punto de solicitar permisos elevados | `PermissionRequest` |
+| Registrar o añadir feedback después de que termine una herramienta | `PostToolUse` |
+| Comprobar un prompt enviado o añadirle contexto | `UserPromptSubmit` |
+| Exigir que el hilo principal o un subagent continúen otro turno | `Stop` / `SubagentStop` |
 
-1. Primero `log`
-2. Luego `warn`
-3. Luego `block`
+Los Hooks no sustituyen el sandbox, las aprobaciones, las reglas de comandos ni los permisos del servicio. Son una capa adicional de protección, y algunas rutas de herramientas gestionadas no pasan por los Hooks de herramientas locales.
 
-Así es más fácil verificar antes:
+## Fuente oficial
 
-- Si el evento está bien colgado
-- Si hay muchos falsos positivos
-- Si el rendimiento ralentiza el uso diario
-
-Un Hook se puede ver como una pequeña compuerta en un nodo del flujo, para comprobar, registrar o interceptar.
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** CLI / App (según versión)  
-**Nota de revisión:** El alcance de soporte, el modelo de eventos y la entrada de configuración de Hooks dependen mucho de la versión del cliente; a 2026-07-26, el material público oficial no basta para validar de forma estable este grupo, por ahora marcado como `outdated`.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** Entornos que usan un host de Codex local; la revisión de confianza y la gestión mediante `/hooks` siguen la documentación oficial de Codex CLI
+
+**Última verificación:** 2026-08-25

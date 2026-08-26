@@ -3,9 +3,10 @@ title: Qué necesitas antes de empezar
 description: Cuenta, dispositivo, proyecto de práctica y línea base de seguridad.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c8a032b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 5
 ---
@@ -59,8 +60,8 @@ Para la mayoría de principiantes, empezar por la **App de escritorio** es más 
 
 ## Recomendaciones
 
-- Lee primero la [Lista de seguridad para principiantes](/guide/getting-started/beginner-safety-checklist/)
-- Conoce [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/) y [Sandbox y red](/guide/foundations/sandbox-and-network/)
+- Lee primero la [Lista de seguridad para principiantes](/es/guide/getting-started/beginner-safety-checklist/)
+- Conoce [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/) y [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
 - Instalación oficial y cambios de producto: [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## Fuentes de referencia

@@ -5,30 +5,31 @@ sidebar:
   order: 21
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 967fdd6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Al usar Codex, mucha gente se centra en «¿puede hacerlo?» y deja de lado otra pregunta: una vez hecho, ¿cómo confirmas que esta vez sí se puede aceptar?
 
 Eso es lo que trata este grupo. Hacer calidad y verificación sirve para evitar «parece terminado, pero aún no está estable».
 
-- [Revisar diffs](/guide/quality/review-diffs/)
-- [Ejecutar tests](/guide/quality/run-tests/)
-- [Verificar artefactos](/guide/quality/verify-artifacts/)
-- [Validar fuentes](/guide/quality/validate-sources/)
-- [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/)
-- [Definición de hecho](/guide/quality/definition-of-done/)
+- [Revisar diffs](/es/guide/quality/review-diffs/)
+- [Ejecutar tests](/es/guide/quality/run-tests/)
+- [Verificar artefactos](/es/guide/quality/verify-artifacts/)
+- [Validar fuentes](/es/guide/quality/validate-sources/)
+- [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/)
+- [Definición de hecho](/es/guide/quality/definition-of-done/)
 
 ## Orden de lectura
 
 La primera vez, puedes leer en este orden:
 
-1. Mira [Revisar diffs](/guide/quality/review-diffs/) y confirma qué cambió realmente
-2. Mira [Ejecutar tests](/guide/quality/run-tests/) y confirma si se rompió algo
-3. Mira [Verificar artefactos](/guide/quality/verify-artifacts/) y confirma si el resultado es lo que realmente querías
-4. Mira [Definición de hecho](/guide/quality/definition-of-done/) y aclara «qué cuenta como realmente terminado»
+1. Mira [Revisar diffs](/es/guide/quality/review-diffs/) y confirma qué cambió realmente
+2. Mira [Ejecutar tests](/es/guide/quality/run-tests/) y confirma si se rompió algo
+3. Mira [Verificar artefactos](/es/guide/quality/verify-artifacts/) y confirma si el resultado es lo que realmente querías
+4. Mira [Definición de hecho](/es/guide/quality/definition-of-done/) y aclara «qué cuenta como realmente terminado»
 
 Sin comprobación, «hecho» muchas veces solo parece hecho de momento.
 

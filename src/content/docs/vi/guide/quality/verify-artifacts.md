@@ -3,9 +3,10 @@ title: Kiểm chứng artifact
 description: Kiểm tra tài liệu, trang và các artifact khác được tạo ra.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3daaaa7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---

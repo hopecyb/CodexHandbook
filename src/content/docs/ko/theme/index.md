@@ -3,8 +3,10 @@ title: Codex 테마 스킨
 description: "Codex Dream Skin이 무엇인지, 설치와 배경 변경 방법, CDP 주입을 사용하는 이유, 테마 사용 전 확인할 보안 경계를 설명합니다."
 locale: ko
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-29
+reviewed_at: 2026-08-26
+source_revision: 8c0e360
 ---
 
 # Codex 테마 스킨

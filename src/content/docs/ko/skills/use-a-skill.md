@@ -3,9 +3,10 @@ title: Skill 사용하기
 description: Skill의 명시적·암시적 트리거와 좋은 description 작성 요점.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill을 처음 접할 때 흔한 오해는 「설치하면 알아서 동작한다」는 것입니다. Skill을 쓴다는 것은 Codex가 미리 적어 둔 작업 루틴대로 일하게 하는 것입니다.
@@ -85,7 +86,7 @@ $pr-review 현재 커밋되지 않은 변경을 검토해 주세요
 
 한 줄을 읽어도 「뭐든 할 수 있을 것 같다」면 대개 너무 막연한 것입니다.
 
-개념은 [Skills 개요](/skills/overview/)를 더 참고하세요.
+개념은 [Skills 개요](/ko/skills/overview/)를 더 참고하세요.
 ---
 
 **상태:** verified  

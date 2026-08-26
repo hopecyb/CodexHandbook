@@ -3,9 +3,10 @@ title: Long-running tasks
 description: Phases, checkpoints, and handoff information.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Long tasks often fail like this:
@@ -75,7 +76,7 @@ Phase 4: Summarize changes, risks, and follow-up recommendations
 
 Better to stop and check each segment than finish everything in one breath.
 
-See also: [Progress and steering](/guide/agent-work/progress-and-steering/) · [Handoff and resume](/guide/agent-work/handoff-and-resume/)
+See also: [Progress and steering](/en/guide/agent-work/progress-and-steering/) · [Handoff and resume](/en/guide/agent-work/handoff-and-resume/)
 
 ---
 

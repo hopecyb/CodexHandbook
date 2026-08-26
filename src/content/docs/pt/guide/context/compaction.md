@@ -3,9 +3,10 @@ title: Compactação de Contexto
 description: O que se mantém e o que se perde depois de compactar conversas longas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 329ca4d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -73,7 +74,7 @@ Restrições válidas neste momento:
 
 Isto é mais estável do que continuar a depender da conversa longa inteira.
 
-Camada conceptual: [Token, Contexto e compactação](/guide/foundations/tokens-context-and-compaction/)
+Camada conceptual: [Token, Contexto e compactação](/pt/guide/foundations/tokens-context-and-compaction/)
 
 Em Tarefas longas, as restrições mais importantes não se dizem só uma vez; depois da compactação, regras importantes valem a pena ser ditas outra vez de propósito.
 

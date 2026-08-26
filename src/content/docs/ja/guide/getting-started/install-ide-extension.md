@@ -1,50 +1,63 @@
 ---
-title: IDE 拡張のインストール
-description: 対応エディタに Codex 拡張をインストールする。
+title: IDE 統合をインストールする
+description: VS Code 互換エディタ、Xcode、JetBrains IDE で Codex を有効にします。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1196b38
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-1. エディタが公式サポートリストにあることを確認（[https://developers.openai.com/codex](https://developers.openai.com/codex) を参照）
-2. 拡張マーケットで公式 Codex 拡張を検索してインストール
-3. エディタを再起動（必要な場合）し、拡張パネルを開く
+現在サポートされる IDE には、複数のインストール方法があります。
 
-普段の大半を VS Code や JetBrains で過ごすなら、IDE 拡張の方が使いやすいことが多いです。  
-初回インストールで最も混乱しやすいのは、拡張が「インストール済み」と「現在のワークスペースで正常に動作している」が別ステップだという点です。
+| IDE | インストールまたは有効化の方法 |
+|---|---|
+| Visual Studio Code、Cursor、Windsurf、VS Code Insiders | Codex 拡張をインストールまたは有効化する |
+| Xcode | Xcode の coding assistant で Codex Agent を選択する |
+| JetBrains IDEs | AI Chat で Codex を選択する |
 
-## インストール後に再確認すること
+[Codex IDE の公式ページ](https://learn.chatgpt.com/docs/codex/ide)から、利用する IDE に対応する公式の入口へ進んでください。別の IDE のスクリーンショットを見て、ボタンの位置を推測しないでください。
 
-- 公式サポートのエディタを使っている
-- 拡張が現在のエディタに入っており、環境を間違えていない
-- 再起動後に拡張入口が見える
-- 実際に作業するプロジェクトディレクトリを開いている
+## VS Code 互換エディタ
 
-## よくある誤解
+1. 公式 Marketplace の入口から Codex 拡張をインストールする。
+2. 実際のプロジェクトのワークスペースルートを開く。
+3. Codex アイコンを選択する。表示されない場合は Command Palette を開き、`Codex: Open Codex Sidebar` を実行する。
+4. ChatGPT または API key でログインする。
 
-### 1. Marketplace でインストールを押せば終わり
+## Xcode と JetBrains
 
-その後によく必要になるのは次です。
+- Xcode：coding assistant を開き、新しいチャットを作成して Agent として Codex を選択する。
+- JetBrains：AI Chat を開き、Codex を選択する。
 
-- エディタの再起動
-- ログイン
-- 正しいワークスペースを開く
+これらの入口は各 IDE が提供するため、画面は VS Code 拡張と完全には一致しません。
 
-### 2. IDE 拡張は操作したいプロジェクトを自動で知っている
+## インストール後にコンテキストを確認する
 
-ワークスペースのルートが違うと、取得するコンテキストもずれます。
+ソースファイルを一つ開き、短いコード範囲を選択してから、次のように質問します。
 
-IDE 拡張をインストールしたら、現在のエディタとワークスペースで正常に表示され、動作することを確認してください。
+```text
+現在の選択範囲の入力、出力、失敗経路だけを説明してください。ファイルは変更せず、関連する関数名を引用してください。
+```
 
-次：[IDE ローカルタスクワークフロー](/guide/ide/local-task-workflow/)。トラブルシューティング：[IDE トラブルシューティング](/guide/ide/troubleshooting/)。
+回答が選択範囲と明らかに関係ない場合は、まず次を確認してください。
+
+- 正しいプロジェクトルートを開いているか
+- ファイルまたは選択範囲が composer に添付されているか
+- 現在のログイン ID とワークスペースが正しいか
+- 競合する AI 拡張またはショートカットが同時に有効になっていないか
+
+次に [IDE のローカルタスクワークフロー](/ja/guide/ide/local-task-workflow/) を学んでください。完全なサポート範囲は[対応エディタ](/ja/guide/ide/supported-editors/)を参照してください。
 
 ---
 
-**状態：** outdated  
-**対象製品：** IDE  
-**検証根拠：** IDE 拡張のサポート範囲、拡張マーケット入口、ログイン接続、ワークスペース統合は高変動の製品情報。現行の公式サポートマトリクスとインストールドキュメントで項目ごとに照合できないため、`outdated` が適切。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** IDE
+
+**検証根拠：** 現在の公式 IDE クイックスタートには、VS Code、Cursor、Windsurf、VS Code Insiders と、Xcode、JetBrains の個別の統合方法が明記されています。このページでは、その二種類の経路に分けてインストール方法を説明します。
+
+**最終検証：** 2026-08-26

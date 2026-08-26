@@ -5,9 +5,10 @@ sidebar:
   order: 4
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 283b8cb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 목표는 **안전한 연습 프로젝트**에서 첫 작업을 마치고, 확인·수락·수정·철회를 익히는 것입니다.
@@ -25,15 +26,15 @@ translated_at: 2026-07-28
 
 ## 단계
 
-1. [계정·플랜·접근](/guide/getting-started/account-plans-and-access/)
-2. [클라이언트 선택](/guide/getting-started/choose-your-codex-client/)
-3. 설치: [데스크톱 App](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
-4. [로그인](/guide/getting-started/sign-in-and-authentication/)
-5. [연습 프로젝트 만들기](/guide/getting-started/create-your-first-project/)
-6. [첫 작업 실행](/guide/getting-started/run-your-first-task/)
-7. [결과 확인](/guide/getting-started/review-the-result/) · [실행 취소와 복구](/guide/getting-started/undo-and-recover/)
+1. [계정·플랜·접근](/ko/guide/getting-started/account-plans-and-access/)
+2. [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)
+3. 설치: [데스크톱 App](/ko/guide/getting-started/install-desktop-app/) · [CLI](/ko/guide/getting-started/install-cli/) · [IDE](/ko/guide/getting-started/install-ide-extension/)
+4. [로그인](/ko/guide/getting-started/sign-in-and-authentication/)
+5. [연습 프로젝트 만들기](/ko/guide/getting-started/create-your-first-project/)
+6. [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/)
+7. [결과 확인](/ko/guide/getting-started/review-the-result/) · [실행 취소와 복구](/ko/guide/getting-started/undo-and-recover/)
 
-급할 때: [처음 30분](/guide/getting-started/first-30-minutes/) · 먼저 [안전 체크리스트](/guide/getting-started/beginner-safety-checklist/)를 읽으세요.
+급할 때: [처음 30분](/ko/guide/getting-started/first-30-minutes/) · 먼저 [안전 체크리스트](/ko/guide/getting-started/beginner-safety-checklist/)를 읽으세요.
 
 설치 단계는 버전에 따라 바뀌니 [https://developers.openai.com/codex](https://developers.openai.com/codex)도 함께 확인하세요.
 

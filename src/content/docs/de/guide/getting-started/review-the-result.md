@@ -3,9 +3,10 @@ title: Ergebnis prüfen
 description: "Änderungen lesen, Artefakte validieren und annehmen oder anpassen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb5b5d9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---
@@ -21,9 +22,9 @@ Nicht nur „fertig“ glauben — ansehen, was wirklich geändert wurde und ob 
 1. **Diff ansehen**: Nur erlaubte Dateien geändert?
 2. **Artefakt öffnen**: Inhalt erfüllt Abnahmekriterien?
 3. **Nachsteuern**: Fehlt nur wenig — präzises Feedback nachliefern
-4. **Entscheiden**: Annehmen / manuell ändern / [rückgängig](/guide/getting-started/undo-and-recover/)
+4. **Entscheiden**: Annehmen / manuell ändern / [rückgängig](/de/guide/getting-started/undo-and-recover/)
 
-Mehr Methoden: [Diffs prüfen](/guide/quality/review-diffs/).
+Mehr Methoden: [Diffs prüfen](/de/guide/quality/review-diffs/).
 
 ## Häufig übersehen
 

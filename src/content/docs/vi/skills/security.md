@@ -3,9 +3,10 @@ title: Bảo mật và phiên bản Skill
 description: Nguồn cài đặt, ranh giới Quyền, nâng cấp và rollback — để Skill nhóm có thể quản trị.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill không chỉ là thêm một template Prompt.
@@ -33,7 +34,7 @@ Thì bạn đã nằm trong chuỗi lan truyền rủi ro.
 
 Bảo mật Skill không chỉ dựa vào"có người quản thống nhất"— mỗi người dùng cũng cần phán đoán cơ bản.
 
-Nền tảng: [Tổng quan Skill](/skills/overview/) · [Tạo Skill đầu tiên](/skills/create-your-first-skill/)
+Nền tảng: [Tổng quan Skill](/vi/skills/overview/) · [Tạo Skill đầu tiên](/vi/skills/create-your-first-skill/)
 
 ## Mô hình đe dọa (đơn giản hóa)
 
@@ -84,7 +85,7 @@ Với nhóm, nâng cấp Skill là nâng cấp một đoạn hành vi tự độ
 | changelog | Giữ release note cho bộ Skill nhóm |
 | Rollback | Giữ bản sao phiên bản trước; có vấn đề chuyển nhanh |
 
-Plugin có thể đóng gói Skill để phân phối thống nhất: [Tổng quan Plugins](/skills/plugins/plugins-overview/)
+Plugin có thể đóng gói Skill để phân phối thống nhất: [Tổng quan Plugins](/vi/skills/plugins/plugins-overview/)
 
 ## Thói quen nhóm
 
@@ -105,7 +106,7 @@ Khi người dùng gọi tường minh bằng `$name`, ý định rõ; khi **mod
 - [ ] Whitelist nguồn Skill được phép cài
 - [ ] Onboarding nhân viên mới chỉ cài"gói cơ bản"
 - [ ] Mỗi quý rà lại Skill vẫn còn cần
-- [ ] Khớp [quy tắc cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/)
+- [ ] Khớp [quy tắc cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Lỗi thường gặp
 

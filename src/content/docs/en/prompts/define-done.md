@@ -3,9 +3,10 @@ title: Define done
 description: Write checkable completion conditions.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b9d3ef1
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many people state what they want but not what "done enough" looks like. Then whether the work is finished becomes a matter of feel.
@@ -75,7 +76,7 @@ If not, it's probably still too vague.
 
 Bottom line: don't let "is it done?" depend on guessing.
 
-Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/guide/verification/)
+Put verification commands in the criteria so the Agent is more likely to run them: [Run tests](/en/guide/verification/)
 
 ---
 

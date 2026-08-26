@@ -3,9 +3,10 @@ title: Chọn đường đi của bạn
 description: Chọn lộ trình đọc theo vai trò, tác vụ và lối vào sản phẩm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 612639b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -16,29 +17,29 @@ Có nhiều lối vào; chọn cái gần với vấn đề hiện tại nhất 
 
 ## Theo vai trò
 
-- [Năm bước cho người mới](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP đầy đủ)
-- [Tổng quan lộ trình người sáng tạo](/guide/learning-paths/creator/)
-- [Tổng quan lộ trình nhà phát triển](/guide/learning-paths/developer/)
-- [Tổng quan lộ trình nhóm](/guide/learning-paths/team/)
+- [Năm bước cho người mới](/vi/guide/learning-paths/beginner/01-talk-to-codex/) (MVP đầy đủ)
+- [Tổng quan lộ trình người sáng tạo](/vi/guide/learning-paths/creator/)
+- [Tổng quan lộ trình nhà phát triển](/vi/guide/learning-paths/developer/)
+- [Tổng quan lộ trình nhóm](/vi/guide/learning-paths/team/)
 
 ## Theo tác vụ
 
 | Bạn muốn… | Đọc trước |
 |---|---|
-| Hiểu Codex và thuật ngữ | [Khái niệm nền tảng](/guide/foundations/) |
-| Hôm nay chạy thông một lần | [Bắt đầu nhanh](/guide/getting-started/) |
-| Viết Prompt tốt | [Prompt](/prompts/) |
-| Học kiểm tra kết quả | [Chất lượng và kiểm chứng](/guide/quality/) |
-| Tra cứu đối chiếu và xử lý sự cố | [Tài liệu tham chiếu](/guide/reference/) |
+| Hiểu Codex và thuật ngữ | [Khái niệm nền tảng](/vi/guide/foundations/) |
+| Hôm nay chạy thông một lần | [Bắt đầu nhanh](/vi/guide/getting-started/) |
+| Viết Prompt tốt | [Prompt](/vi/prompts/) |
+| Học kiểm tra kết quả | [Chất lượng và kiểm chứng](/vi/guide/quality/) |
+| Tra cứu đối chiếu và xử lý sự cố | [Tài liệu tham chiếu](/vi/guide/reference/) |
 
 ## Theo sản phẩm
 
-- [Desktop App](/guide/desktop-app/)
-- Terminal: [CLI](/guide/cli/)
-- Trình soạn thảo: [IDE](/guide/ide/)
-- Tổng quan đám mây: [Web và Cloud](/guide/web-and-cloud/)
+- [Desktop App](/vi/guide/desktop-app/)
+- Terminal: [CLI](/vi/guide/cli/)
+- Trình soạn thảo: [IDE](/vi/guide/ide/)
+- Tổng quan đám mây: [Web và Cloud](/vi/guide/web-and-cloud/)
 
-Nếu tạm thời chưa chắc, xem [Chọn client Codex](/guide/getting-started/choose-your-codex-client/) và [So sánh tính năng](/guide/reference/feature-comparison/).
+Nếu tạm thời chưa chắc, xem [Chọn client Codex](/vi/guide/getting-started/choose-your-codex-client/) và [So sánh tính năng](/vi/guide/reference/feature-comparison/).
 
 ## Hiểu nhầm thường gặp
 
@@ -58,7 +59,7 @@ Lộ trình chỉ để bớt vòng vo, không phải một khóa học bắt bu
 
 Khi chưa chắc, có thể phán đoán theo thứ tự sau:
 
-1. Chưa chạy thông tác vụ đầu tiên: đi [lộ trình người mới](/guide/learning-paths/beginner/) trước
+1. Chưa chạy thông tác vụ đầu tiên: đi [lộ trình người mới](/vi/guide/learning-paths/beginner/) trước
 2. Đã biết mình cần làm gì: vào theo bảng nhóm «tác vụ»
 3. Đã xác định chủ yếu làm việc ở lối vào nào: rồi tới chương sản phẩm tương ứng
 

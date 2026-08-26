@@ -3,9 +3,10 @@ title: "Caso: matriz de comparação de funcionalidades"
 description: Investigação com citações e produção de tabelas — fluxo reutilizável também por leitores não técnicos.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadados
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. Preparação
 
 - Clarificar dimensões de comparação (no prompt ou em `@brief.md` de antemão)
-- Ativar [pesquisa na web](/guide/tools/web-search/) (se o produto suportá-la)
+- Ativar [pesquisa na web](/pt/guide/tools/web-search/) (se o produto suportá-la)
 
 ## 3. Fluxo de trabalho
 
-Seguir [investigação com fontes](/cases/workflows/research-with-sources/):
+Seguir [investigação com fontes](/pt/cases/workflows/research-with-sources/):
 
 ```text
 Compare as funcionalidades de «colaboração em equipa» de A/B/C:
@@ -44,7 +45,7 @@ se o preço não for verificável, marque «a confirmar»;
 produza tabela markdown; não altere outros ficheiros do repositório.
 ```
 
-**Verificação:** Abrir manualmente 3 URLs; verificar datas face à [política de verificação](/guide/start-here/handbook-version-policy/).
+**Verificação:** Abrir manualmente 3 URLs; verificar datas face à [política de verificação](/pt/guide/start-here/handbook-version-policy/).
 
 ## 4. Falha e recuperação
 
@@ -58,8 +59,8 @@ produza tabela markdown; não altere outros ficheiros do repositório.
 
 ## 6. Capítulos relacionados
 
-- [Artefato primeiro](/cases/workflows/artifact-first-work/)
-- [Validar fontes](/guide/quality/validate-sources/)
+- [Artefato primeiro](/pt/cases/workflows/artifact-first-work/)
+- [Validar fontes](/pt/guide/quality/validate-sources/)
 
 ---
 

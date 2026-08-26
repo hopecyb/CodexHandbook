@@ -3,9 +3,10 @@ title: Revisar diffs
 description: Como ler alterações e fazer perguntas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7dc8ee8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -31,7 +32,7 @@ Ao ler o diff, foque-se em:
 3. Nomenclatura e estilo são consistentes?
 4. Há segredos ou resíduos de debug?
 
-Vista no produto: [Diffs, comentários e revisão](/guide/desktop-app/diffs-comments-and-review/)
+Vista no produto: [Diffs, comentários e revisão](/pt/guide/desktop-app/diffs-comments-and-review/)
 
 ## Mal-entendidos habituais
 

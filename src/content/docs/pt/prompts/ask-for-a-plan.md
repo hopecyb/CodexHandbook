@@ -3,9 +3,10 @@ title: Pedir um plano primeiro
 description: Antes de o Codex agir, peça que explique os passos, os riscos e a forma de verificar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muitos problemas não são «impossível fazer» — só **começam depressa demais**. Um «ajuda-me a corrigir» junta facilmente exploração, plano e execução; no fim só se valida passivamente no diff.
@@ -108,7 +109,7 @@ Isto poupa mais contexto do que «recomece do zero» e puxa o resultado de volta
 | Ajuda a dividir em subtarefas | Junta vários objetivos no mesmo fluxo |
 | A verificação fica visível cedo | Só se lembra dos testes no fim |
 
-Muitos workflows separam «exploração» e «plano». Ver [Explorar—planejar—executar—verificar](/cases/workflows/explore-plan-execute-verify/).
+Muitos workflows separam «exploração» e «plano». Ver [Explorar—planejar—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/).
 
 ## Problemas mais comuns num plano
 
@@ -126,10 +127,10 @@ Um bom plano admite incerteza; não finge que todas as premissas já estão firm
 
 ## Combinações recomendadas
 
-- Cadeia de execução formal: [Planejamento](/guide/agent-work/planning/)
-- Plano reutilizável: [Anatomia de uma tarefa](/prompts/task-anatomy/)
-- Correção a meio do caminho: [Progresso e reorientação](/guide/agent-work/progress-and-steering/)
-- Aceitação clara: [Definir o concluído](/prompts/define-done/)
+- Cadeia de execução formal: [Planejamento](/pt/guide/agent-work/planning/)
+- Plano reutilizável: [Anatomia de uma tarefa](/pt/prompts/task-anatomy/)
+- Correção a meio do caminho: [Progresso e reorientação](/pt/guide/agent-work/progress-and-steering/)
+- Aceitação clara: [Definir o concluído](/pt/prompts/define-done/)
 
 ## Uma convenção útil em equipa
 

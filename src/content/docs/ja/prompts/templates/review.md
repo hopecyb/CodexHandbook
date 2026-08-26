@@ -3,9 +3,10 @@ title: レビューテンプレート
 description: diff と変更リスクを構造化してレビューする。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # レビューテンプレート
@@ -50,8 +51,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [マージ前レビュー](/cases/workflows/review-before-merge/)
-- [PR レビューの事例](/cases/review-a-pr/)
+- [マージ前レビュー](/ja/cases/workflows/review-before-merge/)
+- [PR レビューの事例](/ja/cases/review-a-pr/)
 
 ---
 

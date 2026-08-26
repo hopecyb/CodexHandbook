@@ -3,12 +3,13 @@ title: ワークフローを Skill にする
 description: 同じフローが3回目なら Skill の価値——トリガー、指示、受け入れを一箇所に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-同種のタスク（リリースチェック、ドキュメント同期、セキュリティスキャン）をプロンプトのコピペで**3回目**やるなら、[Skill](/skills/overview/) を検討。本章は [ワークフロー手法](/cases/workflows/) と拡張システムを橋渡しします。
+同種のタスク（リリースチェック、ドキュメント同期、セキュリティスキャン）をプロンプトのコピペで**3回目**やるなら、[Skill](/ja/skills/overview/) を検討。本章は [ワークフロー手法](/ja/cases/workflows/) と拡張システムを橋渡しします。
 
 ## 本ページが解くこと
 
@@ -29,11 +30,11 @@ translated_at: 2026-07-28
 
 1. **SKILL.md を明確に**：トリガー、入出力、禁止事項
 2. **`references/` を添付**：チェックリスト、サンプル diff
-3. **任意 `scripts/`**：反復検証コマンド（[コマンドルール](/guide/customization/rules/command-rules/) と整合）
+3. **任意 `scripts/`**：反復検証コマンド（[コマンドルール](/ja/guide/customization/rules/command-rules/) と整合）
 4. README または AGENTS.md で **Skill 名**に言及
 5. **2〜3 回試行**後 `verified` とマーク
 
-入門：[最初の Skill を作成する](/skills/create-your-first-skill/)
+入門：[最初の Skill を作成する](/ja/skills/create-your-first-skill/)
 
 ## 推奨ワークフロー
 
@@ -45,7 +46,7 @@ translated_at: 2026-07-28
     → リポジトリ examples/、チーム Plugin、社内技能ライブラリへ
 ```
 
-[フローを自動化にする](/skills/automations/scheduled-tasks/) との比較：Skill は**対話的ガイド**、Automations は**定期／無人**。
+[フローを自動化にする](/ja/skills/automations/scheduled-tasks/) との比較：Skill は**対話的ガイド**、Automations は**定期／無人**。
 
 ## よくあるミス
 
@@ -56,8 +57,8 @@ translated_at: 2026-07-28
 
 ## 安全境界
 
-- [Skill のセキュリティとバージョン](/skills/security/)
-- チーム Skill は拡張承認リストに（[Plugin と MCP リスク](/guide/team-enterprise/security/plugin-and-mcp-risk/)）
+- [Skill のセキュリティとバージョン](/ja/skills/security/)
+- チーム Skill は拡張承認リストに（[Plugin と MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/)）
 
 ## 受け入れチェックリスト
 

@@ -3,9 +3,10 @@ title: Dùng Skill
 description: Kích hoạt Skill tường minh và ngầm, cùng điểm then chốt khi viết description.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi mới làm quen Skill, hiểu lầm thường gặp là"cài xong là nó tự có hiệu lực". Dùng Skill nghĩa là để Codex làm việc theo một bộ quy trình đã viết sẵn.
@@ -85,7 +86,7 @@ Một tiêu chuẩn hay dùng:
 
 Nếu đọc xong vẫn thấy"có vẻ làm được mọi thứ", thì thường là quá chung.
 
-Thêm khái niệm: [Tổng quan Skills](/skills/overview/).
+Thêm khái niệm: [Tổng quan Skills](/vi/skills/overview/).
 ---
 
 **Trạng thái:** verified  

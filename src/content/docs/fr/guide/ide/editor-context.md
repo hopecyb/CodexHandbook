@@ -1,91 +1,81 @@
 ---
-title: Contexte éditeur
-description: Comment l'extension IDE transmet fichiers ouverts, espace de travail et règles de projet à Codex.
+title: Contexte de l'éditeur
+description: Comment l'intégration IDE transmet à Codex les fichiers ouverts, le contexte de l'espace de travail et les règles du projet.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b6d208f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 30
 ---
 
-Dans l'IDE, Codex reçoit plus que votre Prompt — il reçoit automatiquement **l'état de l'éditeur**. C'est l'avantage central de l'IDE sur la CLI. Comprendre d'où vient le Contexte évite la frustration « le fichier est ouvert mais il l'a ignoré ».
+Dans un IDE, Codex reçoit plus que le prompt : il reçoit également **l'état de l'éditeur**. C'est son principal avantage par rapport à un simple terminal. Comprendre l'origine du contexte évite la frustration de constater que « le fichier est ouvert, mais Codex ne l'a pas vu ».
 
-Codex IDE ne lit pas seulement ce que vous tapez — il référence aussi ce que vous regardez dans l'éditeur.
+## Contenu de cette page
 
-## Ce qui est couvert
+- le contexte joint automatiquement par l'IDE ;
+- sa combinaison avec les fichiers mentionnés par `@`, les sélections et `AGENTS.md` ;
+- la réduction du bruit et l'amélioration du ciblage.
 
-- Quel Contexte l'IDE attache automatiquement
-- Comment cela s'empile avec fichiers @, sélection et AGENTS.md
-- Réduire le bruit et améliorer le taux de réussite
+## Workflow recommandé
 
-## Sources de Contexte (couches conceptuelles)
+1. **Ouvrez la racine du dépôt comme espace de travail**, plutôt qu'un simple sous-dossier (consultez les recommandations d'équipe pour les monorepos).
+2. Pour une logique locale, **sélectionnez le code pertinent** avant de décrire la tâche. Consultez [Code sélectionné et fichiers ouverts](/fr/guide/ide/selected-code-and-open-files/).
+3. Pour un travail qui traverse plusieurs modules, nommez les fichiers importants avec `@` au lieu de supposer que Codex les trouvera.
+4. Compactez une longue session avec la [compaction du contexte](/fr/guide/context/compaction/) ou démarrez une nouvelle tâche.
 
-| Source | Qui contrôle | Contenu typique |
+## IDE et CLI
+
+| | Intégration IDE | CLI |
 |---|---|---|
-| Racine espace de travail | Dossier ouvert | Structure projet, `AGENTS.md`, fichiers de config |
-| Fichiers ouverts | Onglets éditeur | Source que vous éditez |
-| Sélection | Code surligné | Fonction, extrait d'erreur |
-| @ explicite | Chemins @ dans le chat | Fichiers cross-répertoire, docs |
-| Règles projet | `AGENTS.md` etc. dans le dépôt | Standards de code, commandes de test |
-
-Priorité et conflits : [priorité du Contexte](/guide/context/context-priority/).
-
-## Flux de travail recommandé
-
-1. **Ouvrez la racine du dépôt comme espace de travail**, pas seulement un sous-dossier (exceptions monorepo selon doc d'équipe)
-2. Pour des modifications locales, **sélectionnez le code pertinent** puis décrivez la Tâche → [sélection et fichiers ouverts](/guide/ide/selected-code-and-open-files/)
-3. Pour du travail cross-module, @ les fichiers clés — ne supposez pas « il cherchera tout seul »
-4. Dans les longues sessions, [compacter le Contexte](/guide/context/compaction/) ou démarrez un nouveau fil périodiquement
-
-## Différence avec la CLI
-
-| | Extension IDE | CLI |
-|---|---|---|
-| Conscience des fichiers | Forte (fichiers ouverts dans le Contexte) | Besoin de `--cwd` et lectures d'outils |
-| Sélection | Native | Coller ou spécifier des chemins |
-| Idéal pour | Modifications au niveau ligne, expliquer le code | Scripts, CI, environnements headless |
+| Connaissance des fichiers | Forte : les fichiers ouverts sont disponibles dans le contexte | Utilisez `--cd` / `-C` et les outils pour lire le disque |
+| Sélection | Prise en charge native | Collez-la ou indiquez un chemin |
+| Usage idéal | Modifications ligne par ligne et explication du code | Scripts, CI et environnements sans interface graphique |
 
 ## Questions courantes
 
-### 1. Le fichier est ouvert — pourquoi n'a-t-il pas changé ce que j'attendais ?
+### Pourquoi Codex a-t-il ignoré un fichier ouvert ?
 
-« Ouvert » ne signifie pas « la focalisation est évidente ».
+Ouvrir un fichier ne rend pas explicite le centre de la tâche. Si le périmètre reste vague, Codex peut examiner d'autres contenus connexes ou manquer le fragment sélectionné.
 
-Si le périmètre de la Tâche reste vague, il peut lire d'autre matériel ou manquer l'extrait qui vous importe.
+### Ouvrir davantage de fichiers est-il toujours préférable ?
 
-### 2. Plus de fichiers ouverts = mieux ?
+Un trop grand nombre de fichiers volumineux sans rapport rend le contexte bruyant et dilue les éléments importants.
 
-Trop de fichiers ouverts non liés ajoutent du bruit et diluent la focalisation.
+### Le contexte automatique de l'IDE remplace-t-il un prompt clair ?
 
-### 3. Le Contexte automatique signifie que je peux sauter une description claire de Tâche ?
+Non. Le contexte automatique est utile, mais il ne remplace pas un objectif, un périmètre, des contraintes et des critères d'acceptation clairement énoncés.
 
-Le Contexte aide ; il ne remplace pas d'énoncer objectif, contraintes et critères de terminé.
-
-Le Contexte IDE assiste — il ne devine pas pour vous. Un périmètre fichier plus serré signifie généralement des résultats plus stables.
+Le contexte de l'IDE aide Codex, mais ne lui permet pas de deviner. Des limites de fichiers précises produisent généralement des résultats plus stables.
 
 ## Informations sensibles
 
-Ne laissez pas `.env` avec secrets épinglé ouvert ; voir [Contexte sensible](/guide/context/sensitive-context/).
+Ne laissez pas au premier plan un fichier `.env` contenant des secrets. Consultez [Contexte sensible](/fr/guide/context/sensitive-context/).
 
-Rédigez logs et données clients avant de coller ; l'IDE ne juge pas la conformité pour vous.
+Masquez les journaux et les données client avant de les joindre ; l'IDE ne peut pas décider à votre place de leur conformité.
 
 ## Erreurs courantes
 
-- Attendre `AGENTS.md` en mode fichier unique sans espace de travail
-- Ouvrir beaucoup de gros fichiers non liés, remplissant la fenêtre de Contexte
-- Dire « cette fonction » sans sélectionner ou @-mentionner le fichier
+- Attendre la découverte de `AGENTS.md` dans une fenêtre ouverte sur un seul fichier, sans espace de travail.
+- Ouvrir de nombreux fichiers volumineux sans rapport et saturer la fenêtre de contexte.
+- Dire « cette fonction » sans la sélectionner ni nommer son fichier avec `@`.
 
 ## Liste de contrôle d'acceptation
 
-- [ ] La racine de l'espace de travail est correcte
-- [ ] 1–3 fichiers pertinents à la Tâche ouverts ou @-mentionnés
-- [ ] Les commandes de test dans `AGENTS.md` correspondent à l'usage terminal IDE
+- [ ] La racine de l'espace de travail est correcte.
+- [ ] Un à trois fichiers utiles à la tâche sont ouverts ou joints avec `@`.
+- [ ] Les commandes de test indiquées dans `AGENTS.md` correspondent au terminal de l'IDE.
 
-## Références
-- [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/)
+## Référence
+
+- [Contexte des fichiers et dossiers](/fr/guide/context/file-and-folder-context/)
+
 ---
 
-**Statut :** vérifié  
-**Produits concernés :** IDE  
-**Base de vérification :** Le centre d'aide OpenAI positionne encore l'extension IDE comme entrée principale associée aux outils locaux ; cette page ne suppose pas de boutons éditeur spécifiques — elle résume espace de travail, fichiers ouverts, sélection, fichiers @ et règles de projet comme méthodologie de Contexte IDE stable.  
-**Dernière vérification :** 2026-07-26
+**Statut :** vérifié
+
+**Produits concernés :** IDE
+
+**Dernière vérification :** 2026-08-26

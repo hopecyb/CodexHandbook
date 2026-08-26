@@ -3,9 +3,10 @@ title: Guia Codex
 description: Conheça o Codex, escolha o cliente, complete a primeira Tarefa e entenda Permissão, Contexto e Verificação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6019b85
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Guia Codex
@@ -25,14 +26,14 @@ Você não precisa dominar toda a terminologia, produtos e fluxos de antemão. E
 
 ## Ordem recomendada
 
-1. [Comece aqui](/guide/start-here/) — caminho mais curto para novos leitores
-2. [O que é o Codex](/guide/start-here/what-is-codex/)
-3. [Escolher o cliente](/guide/choose-your-client/)
-4. [Completar a primeira Tarefa](/cases/first-task/)
-5. [Permissões e Sandbox](/guide/permissions-and-sandbox/)
-6. [Contexto e arquivos](/guide/context-and-files/)
-7. [Verificação](/guide/verification/)
-8. Em caso de problema, veja [Solução de problemas](/guide/troubleshooting/)
+1. [Comece aqui](/pt/guide/start-here/) — caminho mais curto para novos leitores
+2. [O que é o Codex](/pt/guide/start-here/what-is-codex/)
+3. [Escolher o cliente](/pt/guide/choose-your-client/)
+4. [Completar a primeira Tarefa](/pt/cases/first-task/)
+5. [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/)
+6. [Contexto e arquivos](/pt/guide/context-and-files/)
+7. [Verificação](/pt/guide/verification/)
+8. Em caso de problema, veja [Solução de problemas](/pt/guide/troubleshooting/)
 
 ## Mal-entendidos comuns
 
@@ -54,19 +55,19 @@ O cliente é só a entrada; muitos conceitos centrais — Permissão, Contexto, 
 
 ## Entradas de produto
 
-- [App desktop](/guide/desktop-app/)
-- [CLI](/guide/cli/)
-- [Extensão IDE](/guide/ide/)
-- [Web e Cloud](/guide/web-and-cloud/)
+- [App desktop](/pt/guide/desktop-app/)
+- [CLI](/pt/guide/cli/)
+- [Extensão IDE](/pt/guide/ide/)
+- [Web e Cloud](/pt/guide/web-and-cloud/)
 
 ## Mais temas
 
-- [Fundamentos](/guide/foundations/)
-- [Começar a usar](/guide/getting-started/)
-- [Caminhos de aprendizagem](/guide/learning-paths/)
-- [Personalização](/guide/customization/)
-- [Referência](/guide/reference/)
-- [Equipes e empresas](/guide/team-enterprise/)
-- [Plataforma para desenvolvedores](/guide/developer-platform/)
+- [Fundamentos](/pt/guide/foundations/)
+- [Começar a usar](/pt/guide/getting-started/)
+- [Caminhos de aprendizagem](/pt/guide/learning-paths/)
+- [Personalização](/pt/guide/customization/)
+- [Referência](/pt/guide/reference/)
+- [Equipes e empresas](/pt/guide/team-enterprise/)
+- [Plataforma para desenvolvedores](/pt/guide/developer-platform/)
 
 Usar este guia para achar «o que ler a seguir» costuma ser mais útil do que tentar aprender o Codex inteiro de uma vez.

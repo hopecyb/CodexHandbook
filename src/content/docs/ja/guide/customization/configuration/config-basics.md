@@ -3,9 +3,10 @@ title: 設定の基礎
 description: Codex 設定ファイルの場所、よく使う項目、承認／サンドボックス／モデル設定の入門。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -72,7 +73,7 @@ sidebar:
 - 複雑リファクタ：より強い推論モデル（プラン次第）
 - スクリプト／CI：再現性のためモデル固定
 
-背景：[モデルと推論](/guide/foundations/models-and-reasoning/)
+背景：[モデルと推論](/ja/guide/foundations/models-and-reasoning/)
 
 ### 承認とサンドボックス
 
@@ -82,7 +83,7 @@ sidebar:
 | 信頼できる個人プロジェクト | 安全前提で割り込みを減らせる |
 | 企業リポジトリ | マネージド方針に従い、独自に緩めない |
 
-背景：[権限と承認](/guide/foundations/permissions-and-approvals/)、[サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
+背景：[権限と承認](/ja/guide/foundations/permissions-and-approvals/)、[サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
 
 ### CLI と App の一貫性
 
@@ -111,9 +112,9 @@ sidebar:
 
 ## CLI トピックとの関係
 
-- 対話型：[CLI 対話モード](/guide/cli/interactive-mode/)
-- 非対話とスクリプト：[非対話モード](/guide/cli/non-interactive-mode/)
-- 設定の詳細：[CLI 設定](/guide/cli/configuration/) · [設定項目リファレンス](/guide/reference/configuration-reference/)
+- 対話型：[CLI 対話モード](/ja/guide/cli/interactive-mode/)
+- 非対話とスクリプト：[非対話モード](/ja/guide/cli/non-interactive-mode/)
+- 設定の詳細：[CLI 設定](/ja/guide/cli/configuration/) · [設定項目リファレンス](/ja/guide/reference/configuration-reference/)
 
 ## よくあるミス
 

@@ -3,9 +3,10 @@ title: 프롬프트 안티패턴
 description: 피해야 할 모호함, 월권, 숨은 추론 요구입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 프롬프트를 배울 때 “어떻게 써야 하는지”에만 집중하기 쉽습니다.

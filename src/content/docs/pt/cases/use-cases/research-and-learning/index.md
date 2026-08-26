@@ -3,9 +3,10 @@ title: Investigação e aprendizagem
 description: Entrada para casos de pesquisa, comparação e aprendizagem com fontes — foco em recuperação, citação e limites das conclusões.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 A maior diferença entre tarefas de investigação e um «Q&A» comum:
@@ -14,7 +15,7 @@ A maior diferença entre tarefas de investigação e um «Q&A» comum:
 
 ## Entradas deste grupo
 
-- [Matriz de comparação de funcionalidades](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Matriz de comparação de funcionalidades](/pt/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## Foco deste grupo
 

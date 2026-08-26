@@ -3,14 +3,15 @@ title: Quy tắc lệnh
 description: Dùng allow/deny cấp lệnh để ràng buộc shell và gọi công cụ — thực thi được hơn ước định miệng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Quy tắc lệnh** tập trung vào «Agent chạy được lệnh nào, với tham số nào». Chúng là hình thái phổ biến nhất của [quy tắc cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/), thường viết trong cấu hình hoặc tệp quy tắc nhóm rà được.
+**Quy tắc lệnh** tập trung vào «Agent chạy được lệnh nào, với tham số nào». Chúng là hình thái phổ biến nhất của [quy tắc cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/), thường viết trong cấu hình hoặc tệp quy tắc nhóm rà được.
 
 ## Trang này sẽ nói gì
 
@@ -90,7 +91,7 @@ Minh họa (định dạng lấy cấu hình chính thức làm chuẩn):
 | Kiểm kê | Từ `package.json` scripts, Makefile, CI workflow trích lệnh thật |
 | Phân tầng | Deny đáy tổ chức → bổ sung allow dự án → ngoại lệ máy cá nhân (nếu có) |
 | Thử chạy | Dùng tác vụ rủi ro thấp xác nhận «nên cho thì cho, nên chặn thì chặn» |
-| Khớp | Quy tắc cục bộ và [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) cố cùng nguồn |
+| Khớp | Quy tắc cục bộ và [GitHub Action](/vi/guide/developer-platform/ci-cd/code-review-automation/) cố cùng nguồn |
 
 ## Lỗi thường gặp
 
@@ -115,10 +116,10 @@ Quy tắc lệnh không phải đang “nhớ lệnh”, mà đang phân rõ l�
 
 ## Chương liên quan
 
-- [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/)
-- [Chiến lược quy tắc nhóm](/guide/customization/rules/team-rules/)
-- [Phê duyệt và Sandbox CLI](/guide/cli/approvals-and-sandbox/)
-- [Ma trận quyền](/guide/reference/permission-matrix/)
+- [Mẫu cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/)
+- [Chiến lược quy tắc nhóm](/vi/guide/customization/rules/team-rules/)
+- [Phê duyệt và Sandbox CLI](/vi/guide/cli/approvals-and-sandbox/)
+- [Ma trận quyền](/vi/guide/reference/permission-matrix/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Plantillas de Prompts
 description: Esqueletos reutilizables por tipo de tarea — comprender, crear, modificar, diagnosticar, revisar, investigar, automatizar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantillas de Prompts
@@ -32,13 +33,13 @@ La plantilla es un andamiaje, no una respuesta tipo.
 
 | Plantilla | Escenario |
 |---|---|
-| [Comprender](/prompts/templates/understand/) | Leer repositorio, documentación o material y construir primero el mapa mental |
-| [Crear](/prompts/templates/create/) | Implementar de cero una función, un texto o un artefacto |
-| [Modificar](/prompts/templates/change/) | Iterar sobre lo existente con límites |
-| [Diagnosticar](/prompts/templates/diagnose/) | Localizar la causa raíz, sin cambiar código todavía |
-| [Revisar](/prompts/templates/review/) | Revisar un diff, un PR o un cambio de documentación |
-| [Investigar](/prompts/templates/research/) | Investigación y comparación con citas |
-| [Automatizar](/prompts/templates/automate/) | Tareas repetidas, scripts y flujos desatendidos |
+| [Comprender](/es/prompts/templates/understand/) | Leer repositorio, documentación o material y construir primero el mapa mental |
+| [Crear](/es/prompts/templates/create/) | Implementar de cero una función, un texto o un artefacto |
+| [Modificar](/es/prompts/templates/change/) | Iterar sobre lo existente con límites |
+| [Diagnosticar](/es/prompts/templates/diagnose/) | Localizar la causa raíz, sin cambiar código todavía |
+| [Revisar](/es/prompts/templates/review/) | Revisar un diff, un PR o un cambio de documentación |
+| [Investigar](/es/prompts/templates/research/) | Investigación y comparación con citas |
+| [Automatizar](/es/prompts/templates/automate/) | Tareas repetidas, scripts y flujos desatendidos |
 
 ## De plantilla a workflow
 
@@ -75,7 +76,7 @@ Para quien empieza, «suficiente sin ser voluminosa» basta.
 
 Elige primero el tipo correcto y adáptalo a tu tarea; no sustituyas la tarea por la plantilla.
 
-Principios de escritura: [Fundamentos de Prompts](/prompts/basics/) y [Anatomía de una tarea](/prompts/task-anatomy/).
+Principios de escritura: [Fundamentos de Prompts](/es/prompts/basics/) y [Anatomía de una tarea](/es/prompts/task-anatomy/).
 
 ---
 

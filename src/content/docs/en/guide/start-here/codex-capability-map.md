@@ -4,7 +4,7 @@ description: Overview of prompting, tools, extensions, multi-Agent workflows, an
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 0bfd4e0
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -27,12 +27,12 @@ Goals and prompts
 
 | Capability | Authoritative location |
 |---|---|
-| Models, Agent, permissions, sandbox | [Foundations](/guide/foundations/) |
-| How to use each entry point | [Product guides](/guide/) |
-| Prompting, context, tools, quality | [Core capabilities](/guide/) |
-| Reading order | [Learning paths](/guide/learning-paths/) |
+| Models, Agent, permissions, sandbox | [Foundations](/en/guide/foundations/) |
+| How to use each entry point | [Product guides](/en/guide/) |
+| Prompting, context, tools, quality | [Core capabilities](/en/guide/) |
+| Reading order | [Learning paths](/en/guide/learning-paths/) |
 
-Extension capabilities (Skills, Plugins, MCP, Hooks) are named at a conceptual level in the MVP; systematic teaching comes in later milestones. Don't mix this extension map with product comparisons: this page is about **what to learn**; the [feature comparison](/guide/reference/feature-comparison/) is about **which entry point has what**.
+Extension capabilities (Skills, Plugins, MCP, Hooks) are named at a conceptual level in the MVP; systematic teaching comes in later milestones. Don't mix this extension map with product comparisons: this page is about **what to learn**; the [feature comparison](/en/guide/reference/feature-comparison/) is about **which entry point has what**.
 
 ---
 

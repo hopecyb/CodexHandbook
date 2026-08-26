@@ -3,9 +3,10 @@ title: Selection and open files
 description: Using selected code and open files to narrow IDE task scope precisely.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 The IDE extension excels at **small, high-precision** edits: select code, state intent, Codex changes nearby context. This page shows how selection and open files tighten scope and avoid editing the wrong place.
@@ -26,11 +27,11 @@ Selection tells Codex: focus here—do not expand scope on your own.
 | **Open files** | Multiple related spots in-file | Open `auth.ts` + `auth.test.ts` |
 | **@ path** | Cross-directory, not open | `@src/api/client.ts` align types with backend |
 
-Deeper concept: [file and folder context](/guide/context/file-and-folder-context/)
+Deeper concept: [file and folder context](/en/guide/context/file-and-folder-context/)
 
 ## Minimum viable approach
 
-1. Select the **smallest relevant snippet** (often 10–80 lines); state goal and [definition of done](/prompts/define-done/) in the prompt
+1. Select the **smallest relevant snippet** (often 10–80 lines); state goal and [definition of done](/en/prompts/define-done/) in the prompt
 2. If callers matter, open or @ 1–2 upstream files
 3. Ask to "change only files related to X; list files before editing"
 4. Accept IDE diff block by block—not accept all
@@ -43,7 +44,7 @@ Selection: optional—start from entry function
 Prompt: module boundaries, directories that must not change
 ```
 
-Large refactors: prefer [desktop App worktrees](/guide/desktop-app/worktrees/) or [planning mode](/guide/agent-work/planning/). IDE fits finishing touches and small commits.
+Large refactors: prefer [desktop App worktrees](/en/guide/desktop-app/worktrees/) or [planning mode](/en/guide/agent-work/planning/). IDE fits finishing touches and small commits.
 
 ## Common questions
 
@@ -64,13 +65,13 @@ Selection and open files exist to avoid dragging unrelated scope along.
 
 ## Pair with review
 
-Before accepting, check [review diffs](/guide/quality/review-diffs/):
+Before accepting, check [review diffs](/en/guide/quality/review-diffs/):
 
 - Only agreed files changed?
 - Unexpected deletes outside selection?
 - Tests cover new branches?
 
-Product page: [IDE reviewing changes](/guide/ide/reviewing-changes/)
+Product page: [IDE reviewing changes](/en/guide/ide/reviewing-changes/)
 
 ## Common mistakes
 
@@ -81,7 +82,7 @@ Product page: [IDE reviewing changes](/guide/ide/reviewing-changes/)
 | Accept all without reading diff | Style drift or security issues |
 
 ## References
-- [Constraints and boundaries](/prompts/constraints-and-boundaries/)
+- [Constraints and boundaries](/en/prompts/constraints-and-boundaries/)
 ---
 
 **Status:** verified  

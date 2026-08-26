@@ -3,9 +3,10 @@ title: Solução de problemas
 description: Localize o tutorial e a página de produto certos a partir do sintoma.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 18
 ---
@@ -24,12 +25,12 @@ Não precisa julgar de cara se é CLI, IDE, Cloud, Permissão ou Prompt. Classif
 
 | Sintoma | Ir para |
 |---|---|
-| Instalação falhou | [Problemas no desktop](/guide/desktop-app/troubleshooting/) · [Problemas no CLI](/guide/cli/troubleshooting/) · [Problemas no IDE](/guide/ide/troubleshooting/) |
-| Login/autenticação falhou | [Entrar](/guide/getting-started/sign-in-and-authentication/) |
-| Não sabe qual cliente escolher | [Escolher o cliente](/guide/choose-your-client/) · [Comparação de recursos](/guide/reference/feature-comparison/) |
-| Resultado fora do alcance / muito ruim | [Caso da primeira Tarefa](/cases/first-task/) · [Depuração de Prompt](/prompts/prompt-debugging/) · [Desfazer](/guide/getting-started/undo-and-recover/) |
-| Contexto confuso | [Manter o foco](/guide/context/keep-context-focused/) |
-| Dúvidas de Permissão/Sandbox | [Permissões e Sandbox](/guide/permissions-and-sandbox/) |
+| Instalação falhou | [Problemas no desktop](/pt/guide/desktop-app/troubleshooting/) · [Problemas no CLI](/pt/guide/cli/troubleshooting/) · [Problemas no IDE](/pt/guide/ide/troubleshooting/) |
+| Login/autenticação falhou | [Entrar](/pt/guide/getting-started/sign-in-and-authentication/) |
+| Não sabe qual cliente escolher | [Escolher o cliente](/pt/guide/choose-your-client/) · [Comparação de recursos](/pt/guide/reference/feature-comparison/) |
+| Resultado fora do alcance / muito ruim | [Caso da primeira Tarefa](/pt/cases/first-task/) · [Depuração de Prompt](/pt/prompts/prompt-debugging/) · [Desfazer](/pt/guide/getting-started/undo-and-recover/) |
+| Contexto confuso | [Manter o foco](/pt/guide/context/keep-context-focused/) |
+| Dúvidas de Permissão/Sandbox | [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/) |
 
 ## Como classificar quando não souber por onde começar
 
@@ -60,7 +61,7 @@ Em geral é melhor parar, julgar a categoria e só então ir à página correspo
 
 Investigar começa por classificar — não precisa sair consertando de imediato.
 
-Mais referência: [FAQ](/guide/reference/faq/) · [Referência de erros](/guide/reference/error-reference/) · [Documentação oficial do Codex](https://developers.openai.com/codex)
+Mais referência: [FAQ](/pt/guide/reference/faq/) · [Referência de erros](/pt/guide/reference/error-reference/) · [Documentação oficial do Codex](https://developers.openai.com/codex)
 
 ---
 

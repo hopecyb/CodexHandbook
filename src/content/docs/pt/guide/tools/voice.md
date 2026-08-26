@@ -3,9 +3,10 @@ title: Entrada e saída de voz
 description: Cenários, limitações e cuidados de privacidade ao interagir com o Codex por voz.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -28,7 +29,7 @@ A voz encaixa melhor em direção, contexto suplementar ou follow-up rápido; de
 | Follow-up breve em telemóvel | Ler em voz alta API keys ou palavras-passe |
 | Necessidades de acessibilidade | Documentação normativa que precisa de pesquisa e diff |
 
-Após ditar, peça ao Codex para **repetir a compreensão** ou gerar um plano escrito, e só então confirme. Ver [Pedir um plano](/prompts/ask-for-a-plan/).
+Após ditar, peça ao Codex para **repetir a compreensão** ou gerar um plano escrito, e só então confirme. Ver [Pedir um plano](/pt/prompts/ask-for-a-plan/).
 
 ## Para que serve a voz
 
@@ -93,7 +94,7 @@ Depois, peça-lhe para organizar numa versão escrita para confirmar.
 
 ## Relação com multimodalidade
 
-- **Entrada de imagem**: mockups, ecrãs → [Prompt com imagens](/prompts/prompting-with-images/)
+- **Entrada de imagem**: mockups, ecrãs → [Prompt com imagens](/pt/prompts/prompting-with-images/)
 - **Entrada de voz**: esta página
 - **Saída**: continua a centrar-se em código, ficheiros e diffs escritos; o resumo por voz não substitui a revisão
 

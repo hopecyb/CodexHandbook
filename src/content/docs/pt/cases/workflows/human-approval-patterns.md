@@ -3,9 +3,10 @@ title: Padrões de aprovação humana
 description: Quando aprovar, rejeitar ou pedir ao Codex para pausar — e como documentar essas regras com clareza.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 A aprovação serve para deixar operações irreversíveis na decisão humana. Esta página reúne algumas práticas comuns.
@@ -20,7 +21,7 @@ Zona de confirmação pedida (escrever ficheiros, correr comandos, rede)
 Zona de intervenção humana obrigatória (push, apagar dados, enviar para fora, alterar configuração de produção)
 ```
 
-O comportamento concreto dos diálogos varia conforme o [ponto de entrada do produto](/guide/); o princípio é o mesmo.
+O comportamento concreto dos diálogos varia conforme o [ponto de entrada do produto](/pt/guide/); o princípio é o mesmo.
 
 ## Padrão 1: planear antes de executar
 
@@ -32,7 +33,7 @@ Adequado a: código-base desconhecido, relacionado com produção, diffs grandes
 
 ## Padrão 2: lista branca de comandos
 
-Em [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/), declare:
+Em [AGENTS.md](/pt/guide/customization/agents-md/writing-effective-instructions/), declare:
 
 ```md
 Permitidos sem voltar a perguntar: pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ Em conflito com a política de hosting, prevalece a **mais estrita**.
 1. O Codex abre um draft PR ou um ramo local
 2. Fusão só após CI + review humana a passar
 
-Cenários Cloud em [criar Pull Requests](/guide/web-and-cloud/create-pull-requests/).
+Cenários Cloud em [criar Pull Requests](/pt/guide/web-and-cloud/create-pull-requests/).
 
 ## Padrão 4: reconhecimento só de leitura
 
@@ -68,7 +69,7 @@ Usado em auditorias, aprendizagem de projetos desconhecidos e diagnóstico de pr
 
 ## Relação com Automations
 
-Tarefas sem supervisão também devem manter pontos de confirmação humana no desenho; ver [tarefas agendadas e em segundo plano](/skills/automations/scheduled-tasks/).
+Tarefas sem supervisão também devem manter pontos de confirmação humana no desenho; ver [tarefas agendadas e em segundo plano](/pt/skills/automations/scheduled-tasks/).
 
 ## Erros comuns
 

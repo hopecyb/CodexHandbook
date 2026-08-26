@@ -3,14 +3,15 @@ title: Command Rules
 description: Command-level allow/deny for shell and tool calls—more executable than verbal agreement.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Command rules** focus on “which commands the Agent may run and with what arguments.” They are the most common form of [Allow and Deny Rules](/guide/customization/rules/allow-and-deny-patterns/), usually in team-reviewable configuration or rule files.
+**Command rules** focus on “which commands the Agent may run and with what arguments.” They are the most common form of [Allow and Deny Rules](/en/guide/customization/rules/allow-and-deny-patterns/), usually in team-reviewable configuration or rule files.
 
 ## What This Page Covers
 
@@ -90,7 +91,7 @@ Illustrative (format per official configuration):
 | Inventory | Extract real commands from `package.json` scripts, Makefile, CI workflow |
 | Layer | Organization deny baseline → project allow supplement → personal local exception (if any) |
 | Trial | Validate with low-risk tasks: “should approve does; should block blocks” |
-| Align | Local rules and [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) share source when possible |
+| Align | Local rules and [GitHub Action](/en/guide/developer-platform/ci-cd/code-review-automation/) share source when possible |
 
 ## Common Mistakes
 
@@ -115,10 +116,10 @@ Command rules are not “memorizing commands”—they separate daily actions fr
 
 ## Related Chapters
 
-- [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/)
-- [Team Rules Policy](/guide/customization/rules/team-rules/)
-- [CLI Approval and Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Permission Matrix](/guide/reference/permission-matrix/)
+- [Allow and Deny Patterns](/en/guide/customization/rules/allow-and-deny-patterns/)
+- [Team Rules Policy](/en/guide/customization/rules/team-rules/)
+- [CLI Approval and Sandbox](/en/guide/cli/approvals-and-sandbox/)
+- [Permission Matrix](/en/guide/reference/permission-matrix/)
 
 ---
 

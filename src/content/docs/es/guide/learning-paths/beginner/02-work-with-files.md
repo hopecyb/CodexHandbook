@@ -3,9 +3,10 @@ title: Trabajar con archivos
 description: Haz que Codex lea y escriba archivos dentro de un alcance explícito.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7920b62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -24,7 +25,7 @@ No cambies otros archivos ni ejecutes comandos.
 Al terminar, enumera las líneas que modificaste.
 ```
 
-Revisa el diff antes de aceptar. Relacionado: [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
+Revisa el diff antes de aceptar. Relacionado: [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
 
 ## Puntos clave del ejercicio
 
@@ -50,7 +51,7 @@ Por eso hay que combinarlo con la revisión del diff.
 
 La primera vez que se mueven archivos, lo importante no es cuánto se cambia, sino que el límite del cambio sea claro y fácil de comprobar.
 
-Siguiente: [Dar Tareas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
+Siguiente: [Dar Tareas claras](/es/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 

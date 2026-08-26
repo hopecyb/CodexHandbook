@@ -3,9 +3,10 @@ title: Fortschritt und Steuerung
 description: "Wenn die Richtung unterwegs abdriftet — mit kurzen Anweisungen Codex zurückholen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6813a5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -126,7 +127,7 @@ Ursachenurteil behalten, aber noch keinen Refactor. Als Nächstes nur Minimalfix
 
 ## Wann zurück zu „neu planen“
 
-Steuerung für lokale Drift; zurück zur [Planung](/guide/agent-work/planning/) wenn:
+Steuerung für lokale Drift; zurück zur [Planung](/de/guide/agent-work/planning/) wenn:
 
 - Ziel selbst geändert
 - Neue Info stürzt Prämissen
@@ -146,10 +147,10 @@ Bei Drift unterwegs: kurz „was behalten, was stoppen, was als Nächstes nur“
 
 ## Empfohlene Kombinationen
 
-- Pfad zuerst klären: [Planung](/guide/agent-work/planning/)
-- Als Hauptkette: [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- An andere delelegieren: [Subagents](/guide/agent-work/subagents/)
-- Nach Unterbrechung weiter: [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
+- Pfad zuerst klären: [Planung](/de/guide/agent-work/planning/)
+- Als Hauptkette: [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
+- An andere delelegieren: [Subagents](/de/guide/agent-work/subagents/)
+- Nach Unterbrechung weiter: [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 
 ---
 

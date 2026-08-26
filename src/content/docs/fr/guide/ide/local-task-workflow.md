@@ -3,9 +3,10 @@ title: Flux de Tâche locale
 description: Démarrer des Tâches locales depuis les fichiers ouverts et les sélections.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9abb5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -17,7 +18,7 @@ Flux typique :
 3. Revoyez les suggestions en vues inline ou diff
 4. Après acceptation, lancez vos tests / aperçu
 
-Conseils de Contexte : [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/)
+Conseils de Contexte : [Contexte de fichiers et dossiers](/fr/guide/context/file-and-folder-context/)
 
 ---
 

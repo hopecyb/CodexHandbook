@@ -3,9 +3,10 @@ title: Escrever um artigo
 description: Fluxo completo de escrita técnica — do tema ao esboço, rascunho e verificação de factos.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Escrever um artigo
@@ -49,11 +50,11 @@ Escreva secção a secção; evite gerar o texto inteiro de uma vez, pois fica d
 ### Verificar
 
 - Verificar manualmente se ligações, números de versão e comandos ainda são válidos
-- Opcional: consolidar o fluxo com o [Skill de escrita](/skills/examples/writing-skill/)
+- Opcional: consolidar o fluxo com o [Skill de escrita](/pt/skills/examples/writing-skill/)
 
 ## 3. Consolidação
 
-Escrita repetida pode encapsular-se no Skill `article-writer`; ver [percurso do criador](/guide/learning-paths/creator/).
+Escrita repetida pode encapsular-se no Skill `article-writer`; ver [percurso do criador](/pt/guide/learning-paths/creator/).
 ---
 
 **Estado:** verified  

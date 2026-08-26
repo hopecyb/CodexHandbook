@@ -3,9 +3,10 @@ title: 거버넌스
 description: 정책, 경계, 조직 규칙 설명 페이지입니다. 무엇을 할 수 있고, 무엇을 하면 안 되며, 누가 책임지는지 먼저 분명히 하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex 맥락에서 거버넌스는 주로 두 가지입니다. 팀이 어떻게 써도 되는지, 문제가 나면 누가 처리하는지.
@@ -18,7 +19,7 @@ Codex 맥락에서 거버넌스는 주로 두 가지입니다. 팀이 어떻게 
 
 ## 이 그룹 입구
 
-- [허용 가능한 사용 정책](/guide/team-enterprise/governance/acceptable-use/)
+- [허용 가능한 사용 정책](/ko/guide/team-enterprise/governance/acceptable-use/)
 
 ## 이 그룹 페이지가 주로 답하는 질문
 

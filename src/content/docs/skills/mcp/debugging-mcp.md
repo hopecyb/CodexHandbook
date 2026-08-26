@@ -1,81 +1,93 @@
 ---
 title: 调试 MCP 连接
-description: MCP 服务器启不来、工具超时或结果异常时的系统化排查步骤。
+description: 按配置、传输、鉴权和工具四层定位 MCP 故障。
 ---
 
-MCP 把外部系统接进 Codex。失败时常见三类：**进程起不来**、**鉴权错**、**工具逻辑或超时**。本页给出检查顺序，避免反复改配置碰运气。
+MCP 故障常被混成一句“工具不能用”。更快的做法是先判断失败发生在哪一层，再只改一个变量。
 
-## 本页内容
+## 先保存四项证据
 
-- 最小复现 MCP 问题的方法
-- 日志与配置核对清单
-- 何时怀疑服务器实现而非 Codex
-
-相关页面：[MCP 概述](/skills/mcp/mcp-overview/) · [连接 MCP 服务器](/skills/mcp/connect-an-mcp-server/)
-
-## 分诊流程
-
-```text
-1. 服务器能否在终端单独启动？
-2. 配置 JSON/TOML 语法与路径是否正确？
-3. 环境变量是否在 MCP 进程中可见？
-4. Codex 会话是否已重启加载新配置？
-5. 单个工具调用是否超时/参数错误？
+```bash
+codex mcp list
+codex mcp --help
+node --version   # 仅当 STDIO 服务器使用 Node.js
+python3 --version # 仅当 STDIO 服务器使用 Python
 ```
 
-## 启动失败
+另外记录：服务器名、使用 STDIO 还是 Streamable HTTP、错误原文、发生在桌面 App/CLI/IDE 哪个表面。不要记录完整 token。
 
-| 检查项 | 说明 |
+## 四层分诊
+
+| 层 | 典型现象 | 第一检查 |
+|---|---|---|
+| 配置 | 服务器不在列表 | 文件路径、TOML 语法、服务器名、`enabled` |
+| 启动/连接 | 初始化超时 | STDIO 命令与 PATH，或 HTTP URL、TLS、代理 |
+| 鉴权 | 401/403、要求登录 | OAuth 状态、token 环境变量、scope |
+| 工具 | 服务器在线但调用失败 | 工具名、参数、allowlist、工具超时 |
+
+## 1. 确认配置确实被读取
+
+- 用户级文件是 `~/.codex/config.toml`。
+- 项目级文件是 `.codex/config.toml`，只在受信任项目中加载。
+- 桌面 App、CLI、IDE 在同一 Codex host 上共享配置；不要为三者创建互相漂移的副本。
+- 用 `codex mcp list` 或会话中的 `/mcp` 看实际状态，不以“文件存在”作为成功证据。
+
+## 2. STDIO 服务器启动失败
+
+检查 `command` 是否在 PATH，运行时版本是否满足服务器要求，`cwd` 是否存在，依赖包来源是否可信。
+
+直接运行启动命令只能证明“可执行文件能启动”。MCP 服务器等待协议输入时看起来一直不退出可能是正常现象；不要把它当成完整工具调用测试。
+
+初始化慢时才考虑提高 `startup_timeout_sec`。默认值是 10 秒，盲目改成很大只会掩盖错误命令。
+
+## 3. Streamable HTTP 连接失败
+
+按顺序检查：
+
+1. URL 与 TLS 证书
+2. 公司代理或 VPN
+3. `bearer_token_env_var` 指向的环境变量是否存在
+4. OAuth 是否需要重新执行 `codex mcp login <server-name>`
+5. 服务端日志是否收到初始化请求
+
+不要把 token 改成静态 `http_headers` 值来“临时排障”。这很容易进入配置文件和截图。
+
+## 4. 服务器在线但工具不可用
+
+| 现象 | 检查 |
 |---|---|
-| 命令路径 | `npx`、`uvx`、绝对路径是否在 PATH |
-| 依赖版本 | Node/Python 版本是否满足 MCP 服务器要求 |
-| 手动运行 | 复制配置中的 command + args 在 shell 执行 |
-| 传输方式 | stdio vs HTTP/SSE 是否与文档一致 |
+| 工具完全不出现 | `enabled_tools` / `disabled_tools`、服务器返回的工具清单 |
+| Tool not found | 服务端版本、工具重命名、会话是否仍持有旧清单 |
+| 参数校验失败 | 对照工具 schema，不从旧提示词猜字段 |
+| 调用超时 | 缩小查询，再核对 `tool_timeout_sec`；默认 60 秒 |
+| 结果为空 | 用同一账号在源系统验证数据范围和过滤条件 |
 
-## 鉴权失败
+## 最小复现提示词
 
-- API key 是否通过环境变量注入（非写进仓库）
-- OAuth 类 MCP 是否过期需重新授权
-- 公司代理是否阻断 MCP 出站
+```text
+只检查 MCP 服务器 <server-name>：
+1. 报告它当前可见的工具名称；
+2. 调用 <readonly-tool>，参数只使用 <minimal-arguments>；
+3. 原样保留错误类型与服务端消息，但隐藏凭据；
+4. 不调用其他服务器，不执行写操作。
+```
 
-环境变量索引：[环境变量](/guide/reference/environment-variables/)
+## 排障完成的验收
 
-## 工具调用异常
+- [ ] `codex mcp list` 中状态符合预期
+- [ ] 一个只读工具以最小参数成功
+- [ ] 根因落在具体层级，而不是“重启后好了”
+- [ ] 临时 token、debug 日志和宽权限已经撤回
+- [ ] 团队配置与修复说明已更新
 
-| 现象 | 可能原因 |
-|---|---|
-| Tool not found | 服务器版本与客户端 schema 不匹配 |
-| Timeout | 外部 API 慢；调大超时或优化查询 |
-| 空结果 | 参数名错误；查 MCP 服务器日志 |
-| 乱码 | 编码非 UTF-8 |
+## 官方来源
 
-在 prompt 中要求 Agent **打印工具返回的结构**（脱敏）便于调试。
+- [OpenAI：Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 
-## 安全调试习惯
-
-- 用**测试租户** API key，不用生产
-- 调试日志不要粘贴完整 token 到聊天
-- 怀疑恶意 MCP 时立即断开并轮换密钥
-
-错误索引：[错误与提示参考](/guide/reference/error-reference/)
-
-## 常见错误
-
-- 改配置不重启 Codex 会话
-- 在 IDE 与 CLI 各配一份不一致的 MCP
-- 把 MCP 服务器日志级别永远开到 debug 提交截图含密钥
-
-## 验收清单
-
-- [ ] 能在终端独立启动 MCP 服务器
-- [ ] 至少成功调用一个只读工具
-- [ ] 记录团队标准 MCP 配置模板
-
-## 参考来源
-- Model Context Protocol 规范与调试指南
 ---
 
-**状态：** outdated  
-**适用产品：** CLI / IDE / App  
-**复核说明：** 本页排障步骤依赖当前 Codex 客户端如何装载、显示和调用 MCP 工具；这部分变动风险较高，需基于现行文档重新核写。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** ChatGPT 桌面 App / Codex CLI / IDE
+
+**最近核验：** 2026-08-25

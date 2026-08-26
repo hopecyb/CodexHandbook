@@ -1,65 +1,68 @@
 ---
-title: CLI Installation und Updates
-description: Installieren, aktualisieren und Version prüfen.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: CLI installieren und aktualisieren
+description: Installation, Aktualisierung und Versionsprüfung.
 sidebar:
   order: 10
+locale: de
+source_locale: zh-CN
+source_revision: 6b8ceaf
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Beim ersten CLI-Setup scheitern viele an:
+Bei der ersten Installation der CLI bleiben häufig diese Fragen offen:
 
-- Ob die Installation überhaupt geklappt hat
-- Warum das Terminal `codex` danach nicht kennt
-- Wie man nach einem Update bestätigt, welche Version gerade läuft
+- Wurde die Installation tatsächlich abgeschlossen?
+- Weshalb kennt das Terminal den Befehl `codex` nach der Installation noch nicht?
+- Wie lässt sich nach einer Aktualisierung feststellen, welche Version gerade ausgeführt wird?
 
-CLI „fertig“ heißt nicht: Befehl einmal gelaufen — sondern: Dein aktuelles Terminal findet ihn zuverlässig.
+Die CLI ist nicht schon deshalb einsatzbereit, weil der Installationsbefehl einmal durchgelaufen ist. Dein aktuelles Terminal muss sie zuverlässig finden können.
 
-## Nach der Installation mindestens drei Checks
+## Prüfe nach der Installation mindestens diese drei Punkte
 
-1. Befehl lässt sich direkt ausführen
-2. Aktuelles Terminal findet ihn im `PATH`
-3. Authentifizierung ist erledigt — nicht nur die Binary installiert
+1. Der Befehl lässt sich direkt ausführen.
+2. Das aktuelle Terminal findet ihn über `PATH`.
+3. Die Authentifizierung wurde abgeschlossen; nicht nur die ausführbare Datei ist installiert.
 
 ## Häufige Missverständnisse
 
-### 1. Installationsskript durchgelaufen = fertig
+### 1. Ein abgeschlossenes Installationsskript bedeutet eine fertige Installation
 
-Das Skript durchgelaufen heißt nur: „Installationsschritte liefen.“  
-Danach: Erkennt dein aktuelles Terminal den Befehl?
+Ein abgeschlossenes Skript zeigt nur, dass die Installationsschritte ausgeführt wurden.  
+Prüfe als Nächstes, ob das aktuell geöffnete Terminal den Befehl erkennt.
 
-### 2. Neues Terminalfenster fixiert es automatisch
+### 2. Ein neues Terminalfenster behebt das Problem automatisch
 
-Manchmal ja, manchmal nein.  
-Ist `PATH` nicht aktualisiert, findet auch ein neues Fenster ihn nicht.
+Manchmal trifft das zu, manchmal nicht.  
+Wenn `PATH` nicht aktualisiert wurde, kann der Befehl auch in einem neuen Fenster unauffindbar bleiben.
 
-### 3. Update = nochmal installieren
+### 3. Aktualisieren bedeutet einfach erneut installieren
 
-Oft brauchst du zuerst Klarheit:
+Häufig musst du zuerst zwei andere Fragen beantworten:
 
-- Ist die aktuelle Version veraltet?
-- Welche Installation aktualisierst du eigentlich?
+- Ist die aktuell ausgeführte Version tatsächlich veraltet?
+- Welche der möglicherweise mehreren Installationen aktualisierst du gerade?
 
-## Prüfpflichtreihenfolge
+## Empfohlene Prüfreihenfolge
 
-Nach frischer Installation:
+Gehe direkt nach der Installation folgendermaßen vor:
 
-1. Kann `codex` direkt ausgeführt werden?
-2. Enthält der `PATH` der aktuellen Shell den Installationsort?
-3. Login / Authentifizierung abschließen
-4. Versionsinfo prüfen
+1. Prüfe, ob sich `codex` direkt ausführen lässt.
+2. Prüfe, ob `PATH` der aktuellen Shell den Installationsort enthält.
+3. Schließe Anmeldung oder Authentifizierung ab.
+4. Prüfe abschließend die Versionsinformationen.
 
-Praktisches Kriterium: Aktuelles Terminal findet ihn, und Authentifizierung ist möglich.
+Das praktische Erfolgskriterium lautet: Das aktuelle Terminal findet den Befehl, und du kannst die Authentifizierung abschließen.
 
-Auch: [CLI installieren](/guide/getting-started/install-cli/)  
-Official Installation und Upgrade: [OpenAI-Codex-Dokumentation](https://developers.openai.com/codex).
+Weitere Hinweise bietet [CLI installieren](/de/guide/getting-started/install-cli/). Die offiziellen Installations- und Aktualisierungsanweisungen findest du unter [Codex CLI](https://learn.chatgpt.com/docs/codex/cli). Das offizielle eigenständige Installationsprogramm für macOS und Linux verwendet denselben Befehl für Installation und Aktualisierung. Für Windows, npm und Homebrew gelten die jeweiligen Registerkarten der offiziellen Seite.
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** CLI  
-**Prüfhinweis:** Diese Seite beschreibt Prüflogik nach der Installation, setzt aber eine bestimmte aktuelle Installations-, Update- und Auth-Flow voraus; Official-Installationswege, Auth-Schritte und Versionsbefehle ändern sich stark — ohne aktuelle Official-Installationsdokumentation nicht `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** CLI
+
+**Prüfgrundlage:** Mit dem aktuellen offiziellen Schnellstart der CLI abgeglichen. Verifiziert wurden die Installationswege für macOS/Linux, Windows, npm und Homebrew, die Aktualisierungswege und die Anmeldung mit `codex`. Konkrete Befehle werden zentral auf der Einsteigerseite zur Installation gepflegt.
+
+**Zuletzt geprüft:** 2026-08-26

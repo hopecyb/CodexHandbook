@@ -3,9 +3,10 @@ title: Rédiger un article
 description: Flux complet de rédaction technique, du sujet au plan, au brouillon et à la vérification des faits.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97878bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Rédiger un article
@@ -49,11 +50,11 @@ Rédigez section par section, évitez de générer l'intégralité du texte d'un
 ### Vérifier
 
 - Vérifier manuellement les liens, numéros de version et commandes
-- Optionnel : utiliser le [Skill de rédaction](/skills/examples/writing-skill/) pour figer le flux
+- Optionnel : utiliser le [Skill de rédaction](/fr/skills/examples/writing-skill/) pour figer le flux
 
 ## 3. Capitalisation
 
-Les rédactions répétées peuvent être encapsulées dans le Skill `article-writer` ; voir [Parcours créateur](/guide/learning-paths/creator/).
+Les rédactions répétées peuvent être encapsulées dans le Skill `article-writer` ; voir [Parcours créateur](/fr/guide/learning-paths/creator/).
 
 ---
 

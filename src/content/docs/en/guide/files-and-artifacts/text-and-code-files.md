@@ -3,9 +3,10 @@ title: Text and Code Files
 description: Have Codex read and write source, config, and documentation text files correctly.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ The key is changing the right places the right way—without extra collateral ed
 | Docs `.md` | Relative links, mixed-language conventions |
 | Generated code | Clarify commit vs gitignore |
 
-Context: [File and folder context](/guide/context/file-and-folder-context/)
+Context: [File and folder context](/en/guide/context/file-and-folder-context/)
 
 ## Why these files go wrong
 
@@ -50,7 +51,7 @@ Style: match <example file>
 Done when: list changed files + run <test command>
 ```
 
-See [Task anatomy](/prompts/task-anatomy/)
+See [Task anatomy](/en/prompts/task-anatomy/)
 
 ## Common misconceptions
 
@@ -87,8 +88,8 @@ Require:
 
 ## Review focus
 
-- [Review diffs](/guide/quality/review-diffs/): logic, scope, deletions
-- [Run tests](/guide/quality/run-tests/)
+- [Review diffs](/en/guide/quality/review-diffs/): logic, scope, deletions
+- [Run tests](/en/guide/quality/run-tests/)
 - No unimplemented `TODO` placeholders left behind
 
 ## Common mistakes

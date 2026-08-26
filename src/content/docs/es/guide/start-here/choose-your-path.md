@@ -3,9 +3,10 @@ title: Elige tu ruta
 description: Elige una ruta de lectura según rol, Tarea o entrada de producto.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 612639b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -16,29 +17,29 @@ Hay muchas entradas: elige primero la que más se acerque a tu problema actual.
 
 ## Por rol
 
-- [Cinco pasos para principiantes](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP completo)
-- [Resumen de la ruta para creadores](/guide/learning-paths/creator/)
-- [Resumen de la ruta para desarrolladores](/guide/learning-paths/developer/)
-- [Resumen de la ruta para equipos](/guide/learning-paths/team/)
+- [Cinco pasos para principiantes](/es/guide/learning-paths/beginner/01-talk-to-codex/) (MVP completo)
+- [Resumen de la ruta para creadores](/es/guide/learning-paths/creator/)
+- [Resumen de la ruta para desarrolladores](/es/guide/learning-paths/developer/)
+- [Resumen de la ruta para equipos](/es/guide/learning-paths/team/)
 
 ## Por Tarea
 
 | Quieres… | Empieza por |
 |---|---|
-| Entender Codex y la terminología | [Fundamentos](/guide/foundations/) |
-| Completar una pasada hoy | [Primeros pasos](/guide/getting-started/) |
-| Escribir buenos Prompts | [Prompts](/prompts/) |
-| Aprender a comprobar resultados | [Calidad y verificación](/guide/quality/) |
-| Consultar tablas y resolver problemas | [Referencia](/guide/reference/) |
+| Entender Codex y la terminología | [Fundamentos](/es/guide/foundations/) |
+| Completar una pasada hoy | [Primeros pasos](/es/guide/getting-started/) |
+| Escribir buenos Prompts | [Prompts](/es/prompts/) |
+| Aprender a comprobar resultados | [Calidad y verificación](/es/guide/quality/) |
+| Consultar tablas y resolver problemas | [Referencia](/es/guide/reference/) |
 
 ## Por producto
 
-- [App de escritorio](/guide/desktop-app/)
-- Terminal: [CLI](/guide/cli/)
-- Editor: [IDE](/guide/ide/)
-- Resumen cloud: [Web y Cloud](/guide/web-and-cloud/)
+- [App de escritorio](/es/guide/desktop-app/)
+- Terminal: [CLI](/es/guide/cli/)
+- Editor: [IDE](/es/guide/ide/)
+- Resumen cloud: [Web y Cloud](/es/guide/web-and-cloud/)
 
-Si aún no lo tienes claro, mira [Elige un cliente de Codex](/guide/getting-started/choose-your-codex-client/) y [Comparación de funciones](/guide/reference/feature-comparison/).
+Si aún no lo tienes claro, mira [Elige un cliente de Codex](/es/guide/getting-started/choose-your-codex-client/) y [Comparación de funciones](/es/guide/reference/feature-comparison/).
 
 ## Malentendidos frecuentes
 
@@ -58,7 +59,7 @@ La ruta sirve para dar menos rodeos, no es un curso obligatorio en orden fijo.
 
 Cuando dudes, juzga en este orden:
 
-1. Aún no has completado tu primera Tarea: ve a la [ruta para principiantes](/guide/learning-paths/beginner/)
+1. Aún no has completado tu primera Tarea: ve a la [ruta para principiantes](/es/guide/learning-paths/beginner/)
 2. Ya sabes qué quieres hacer: entra por la tabla de «Tarea»
 3. Ya sabes en qué entrada trabajas sobre todo: ve al capítulo de producto correspondiente
 

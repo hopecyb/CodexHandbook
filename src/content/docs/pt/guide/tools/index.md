@@ -5,9 +5,10 @@ sidebar:
   order: 20
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: adbe0aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 O Agent usa **Ferramentas** para ler ficheiros, correr comandos, pesquisar na rede, abrir o browser, etc. Escolher a Ferramenta certa e clarificar limites reduz saída de rede não autorizada ou alterações excessivas.
@@ -32,22 +33,22 @@ As Ferramentas não são conhecimento adicional — são a base de segurança e 
 
 | Ferramenta | Página |
 |---|---|
-| Visão geral de seleção | [Seleção de Ferramentas](/guide/tools/tool-selection/) |
-| Terminal | [Shell e terminal](/guide/tools/shell-and-terminal/) |
-| Pesquisa | [Pesquisa Web](/guide/tools/web-search/) |
-| Páginas web | [Ferramenta de browser](/guide/tools/browser/) |
-| GUI | [Computer Use](/guide/tools/computer-use/) |
-| Imagens | [Geração de imagens](/guide/tools/image-generation/) |
-| Voz | [Entrada e saída de voz](/guide/tools/voice/) |
+| Visão geral de seleção | [Seleção de Ferramentas](/pt/guide/tools/tool-selection/) |
+| Terminal | [Shell e terminal](/pt/guide/tools/shell-and-terminal/) |
+| Pesquisa | [Pesquisa Web](/pt/guide/tools/web-search/) |
+| Páginas web | [Ferramenta de browser](/pt/guide/tools/browser/) |
+| GUI | [Computer Use](/pt/guide/tools/computer-use/) |
+| Imagens | [Geração de imagens](/pt/guide/tools/image-generation/) |
+| Voz | [Entrada e saída de voz](/pt/guide/tools/voice/) |
 
-Leitura/escrita de ficheiros e aceitação de Artefatos: [Ficheiros e Artefatos](/guide/files-and-artifacts/). Ferramentas de extensão entram via [MCP](/skills/mcp/mcp-overview/).
+Leitura/escrita de ficheiros e aceitação de Artefatos: [Ficheiros e Artefatos](/pt/guide/files-and-artifacts/). Ferramentas de extensão entram via [MCP](/pt/skills/mcp/mcp-overview/).
 
 ## Ordem de leitura sugerida
 
 Na primeira leitura deste capítulo:
 
-1. [Seleção de Ferramentas](/guide/tools/tool-selection/) — que priorizar por tipo de Tarefa
-2. [Shell e terminal](/guide/tools/shell-and-terminal/) — riscos da execução de comandos
+1. [Seleção de Ferramentas](/pt/guide/tools/tool-selection/) — que priorizar por tipo de Tarefa
+2. [Shell e terminal](/pt/guide/tools/shell-and-terminal/) — riscos da execução de comandos
 3. Páginas de pesquisa, browser ou outras Ferramentas, conforme a Tarefa em mãos
 
 As Ferramentas determinam como o Codex age; cabe-lhe declarar quais pode usar e quais não.

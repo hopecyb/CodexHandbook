@@ -3,14 +3,15 @@ title: Plugin- und MCP-Risiken
 description: 'Was Erweiterungen erreichen können und wie Teams freigeben und überwachen — einheitliche Risikosicht auf Skills, Plugins und MCP.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Plugins** und **MCP-Server** verbinden Codex mit externen Systemen: Tickets, Datenbanken, interne APIs. Je stärker die Fähigkeit, desto größer Exfiltration und Overreach im [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/). Zusammen lesen mit [MCP-Überblick](/skills/mcp/mcp-overview/) und [Plugins-Überblick](/skills/plugins/plugins-overview/).
+**Plugins** und **MCP-Server** verbinden Codex mit externen Systemen: Tickets, Datenbanken, interne APIs. Je stärker die Fähigkeit, desto größer Exfiltration und Overreach im [Bedrohungsmodell](/de/guide/team-enterprise/security/threat-model/). Zusammen lesen mit [MCP-Überblick](/de/skills/mcp/mcp-overview/) und [Plugins-Überblick](/de/skills/plugins/plugins-overview/).
 
 Beim ersten Kontakt nicht sofort Definitionen pauken. Ein Punkt reicht: Sobald Codex externe Systeme erreicht, wachsen Fähigkeit und Risiko gemeinsam.
 
@@ -52,7 +53,7 @@ Experimentelle persönliche MCPs **nicht** mit demselben Token wie Produktionsre
 
 1. **Default deny** für Remote-MCPs außerhalb der Liste
 2. **Lokales MCP** kann trotzdem die ganze Disk lesen — eigener OS-User oder Container
-3. **Logs**: Tool-Name und Parameterzusammenfassung (redaktiert); siehe [Hook-Audit](/skills/hooks/hooks-examples/)
+3. **Logs**: Tool-Name und Parameterzusammenfassung (redaktiert); siehe [Hook-Audit](/de/skills/hooks/hooks-examples/)
 4. **Skill vs. MCP**: Skill beschreibt Ablauf, MCP macht Externzugriff — Rechte als Schnittmenge, strengste Policy
 
 ## Häufige Fehler
@@ -92,10 +93,10 @@ Bei Externerweiterungen zuerst Rechte und Grenzen, dann Feature-Stärke.
 
 - [ ] Schriftliche Freigabeliste oder gleichwertiger Prozess
 - [ ] Jedes Produktions-MCP hat Owner und Datenklasse
-- [ ] Konsistent mit [Skill-Security](/skills/security/)
+- [ ] Konsistent mit [Skill-Security](/de/skills/security/)
 
 ## Quellen
-- [MCP debuggen](/skills/mcp/debugging-mcp/)
+- [MCP debuggen](/de/skills/mcp/debugging-mcp/)
 ---
 
 **Status:** verified  

@@ -3,9 +3,10 @@ title: Fundamentos de configuración
 description: Ubicación de los archivos de configuración de Codex, opciones habituales e introducción a aprobación, Sandbox y modelo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ Eso no debería sostenerse solo con configuración personal.
 - Refactorizaciones complejas: modelo de razonamiento más fuerte (si el plan lo permite)
 - Scripts/CI: modelo fijo para facilitar la reproducción
 
-Trasfondo conceptual: [Modelos y razonamiento](/guide/foundations/models-and-reasoning/)
+Trasfondo conceptual: [Modelos y razonamiento](/es/guide/foundations/models-and-reasoning/)
 
 ### Aprobación y Sandbox
 
@@ -84,7 +85,7 @@ Trasfondo conceptual: [Modelos y razonamiento](/guide/foundations/models-and-rea
 | Proyecto personal de confianza | Puedes reducir interrupciones con seguridad |
 | Repositorio empresarial | Sigue la política gestionada; no la relajes por tu cuenta |
 
-Trasfondo conceptual: [Permisos y aprobación](/guide/foundations/permissions-and-approvals/), [Sandbox y red](/guide/foundations/sandbox-and-network/)
+Trasfondo conceptual: [Permisos y aprobación](/es/guide/foundations/permissions-and-approvals/), [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
 
 ### Consistencia entre CLI y App
 
@@ -113,9 +114,9 @@ En la mayoría de los casos:
 
 ## Relación con el tema CLI
 
-- Uso interactivo: [Modo interactivo CLI](/guide/cli/interactive-mode/)
-- No interactivo y scripts: [Modo no interactivo](/guide/cli/non-interactive-mode/)
-- Detalle de configuración: [Configuración CLI](/guide/cli/configuration/) · [Referencia de opciones](/guide/reference/configuration-reference/)
+- Uso interactivo: [Modo interactivo CLI](/es/guide/cli/interactive-mode/)
+- No interactivo y scripts: [Modo no interactivo](/es/guide/cli/non-interactive-mode/)
+- Detalle de configuración: [Configuración CLI](/es/guide/cli/configuration/) · [Referencia de opciones](/es/guide/reference/configuration-reference/)
 
 ## Errores habituales
 

@@ -3,9 +3,10 @@ title: Para quién es este handbook
 description: Explica cómo pueden usar este handbook principiantes, creadores, desarrolladores y equipos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 41e8ab8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
@@ -88,7 +89,7 @@ Si te reconoces en esto, vale la pena leerlo:
 - Quieres convertir tu uso personal en un flujo reutilizable para el equipo
 - No vienes del desarrollo, pero quieres integrar la IA de verdad en el trabajo diario
 
-Siguiente paso: [Elige tu ruta](/guide/start-here/choose-your-path/).
+Siguiente paso: [Elige tu ruta](/es/guide/start-here/choose-your-path/).
 
 ---
 

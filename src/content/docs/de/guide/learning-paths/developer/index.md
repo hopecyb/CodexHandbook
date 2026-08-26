@@ -3,9 +3,10 @@ title: Entwicklerpfad (Überblick)
 description: Überblick der Route für Softwareentwicklung; tiefe Schritte folgen später.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ Wenn Sie Codex vor allem zum Code ändern, Projekte verstehen und Probleme fixen
 
 ## Jetzt lesen
 
-- [Erste Schritte](/guide/getting-started/) und [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [Tests ausführen](/guide/quality/run-tests/) · [Diffs reviewen](/guide/quality/review-diffs/)
-- [Agent-Planung](/guide/agent-work/planning/)
+- [Erste Schritte](/de/guide/getting-started/) und [CLI](/de/guide/cli/) / [IDE](/de/guide/ide/)
+- [Tests ausführen](/de/guide/quality/run-tests/) · [Diffs reviewen](/de/guide/quality/review-diffs/)
+- [Agent-Planung](/de/guide/agent-work/planning/)
 
 ## Häufige Missverständnisse
 
@@ -46,11 +47,11 @@ Codex arbeitet anders als Editor-Autocomplete; Berechtigung, Kontext und Werkzeu
 
 Für den Einsatz in der Entwicklung:
 
-1. [Erste Schritte](/guide/getting-started/)
-2. [CLI](/guide/cli/) oder [IDE](/guide/ide/)
-3. [Agent-Arbeit](/guide/agent-work/)
-4. [Tests ausführen](/guide/quality/run-tests/)
-5. [Diffs reviewen](/guide/quality/review-diffs/)
+1. [Erste Schritte](/de/guide/getting-started/)
+2. [CLI](/de/guide/cli/) oder [IDE](/de/guide/ide/)
+3. [Agent-Arbeit](/de/guide/agent-work/)
+4. [Tests ausführen](/de/guide/quality/run-tests/)
+5. [Diffs reviewen](/de/guide/quality/review-diffs/)
 
 Diese Route betont kontrollierte Änderungen und prüfbare Ergebnisse — nicht nur „erstmal schreiben lassen“.
 

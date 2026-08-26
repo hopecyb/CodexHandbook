@@ -3,12 +3,13 @@ title: Consolidar um fluxo de trabalho como Skill
 description: Um fluxo repetido pela terceira vez merece um Skill — gatilho, instruções e aceitação num só pacote.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Quando o mesmo tipo de tarefa (verificação de release, sincronização de docs, scan de segurança) é concluído pela **terceira** vez com copy-paste de prompts, é altura de considerar um [Skill](/skills/overview/). Este capítulo liga [métodos de fluxo de trabalho](/cases/workflows/) ao sistema de extensões.
+Quando o mesmo tipo de tarefa (verificação de release, sincronização de docs, scan de segurança) é concluído pela **terceira** vez com copy-paste de prompts, é altura de considerar um [Skill](/pt/skills/overview/). Este capítulo liga [métodos de fluxo de trabalho](/pt/cases/workflows/) ao sistema de extensões.
 
 ## Que problema resolve esta página
 
@@ -29,11 +30,11 @@ Não precisa consolidar: exploração pontual; pequenas correções fortemente d
 
 1. **Escrever SKILL.md com clareza:** quando dispara, entradas/saídas, proibições
 2. **Anexar `references/`:** checklist, exemplo de diff
-3. **Opcional `scripts/`:** comandos de verificação repetíveis (alinhados com [regras de comando](/guide/customization/rules/command-rules/))
+3. **Opcional `scripts/`:** comandos de verificação repetíveis (alinhados com [regras de comando](/pt/guide/customization/rules/command-rules/))
 4. **Mencionar o nome do Skill** no README do repositório ou em AGENTS.md
 5. **Correr 2–3 vezes** e só depois marcar `verified`
 
-Começar: [criar o primeiro Skill](/skills/create-your-first-skill/)
+Começar: [criar o primeiro Skill](/pt/skills/create-your-first-skill/)
 
 ## Fluxo recomendado
 
@@ -45,7 +46,7 @@ Extrair prompt e itens de aceitação de um caso bem-sucedido
     → Escrever no diretório examples/ acordado, plugin da equipa ou biblioteca interna de skills
 ```
 
-Compare com [transformar o fluxo em automatização](/skills/automations/scheduled-tasks/): Skill inclina-se a **orientação interativa**; Automation a **agendamento / sem supervisão**.
+Compare com [transformar o fluxo em automatização](/pt/skills/automations/scheduled-tasks/): Skill inclina-se a **orientação interativa**; Automation a **agendamento / sem supervisão**.
 
 ## Erros comuns
 
@@ -56,8 +57,8 @@ Compare com [transformar o fluxo em automatização](/skills/automations/schedul
 
 ## Limites de segurança
 
-- Ver [segurança e versões de Skills](/skills/security/)
-- Skills da equipa devem entrar na lista de aprovação de extensões (ver [riscos de Plugin e MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Ver [segurança e versões de Skills](/pt/skills/security/)
+- Skills da equipa devem entrar na lista de aprovação de extensões (ver [riscos de Plugin e MCP](/pt/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Lista de aceitação
 

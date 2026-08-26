@@ -3,9 +3,10 @@ title: Skill 예시
 description: 글쓰기·검토·연구·자동화 네 유형의 Skill 예시 입구.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 346b14d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Skill 예시
@@ -14,12 +15,12 @@ translated_at: 2026-07-28
 
 | 예시 | 설명 |
 |---|---|
-| [글쓰기 Skill](/skills/examples/writing-skill/) | 구조화된 장문 글쓰기 절차 |
-| [검토 Skill](/skills/examples/review-skill/) | PR / diff 검토(완전 예시) |
-| [연구 Skill](/skills/examples/research-skill/) | 인용을 포함한 조사 출력 |
-| [자동화 Skill](/skills/examples/automation-skill/) | 반복 작업과 예약 절차 |
+| [글쓰기 Skill](/ko/skills/examples/writing-skill/) | 구조화된 장문 글쓰기 절차 |
+| [검토 Skill](/ko/skills/examples/review-skill/) | PR / diff 검토(완전 예시) |
+| [연구 Skill](/ko/skills/examples/research-skill/) | 인용을 포함한 조사 출력 |
+| [자동화 Skill](/ko/skills/examples/automation-skill/) | 반복 작업과 예약 절차 |
 
-관련 페이지: [첫 Skill 만들기](/skills/create-your-first-skill/).
+관련 페이지: [첫 Skill 만들기](/ko/skills/create-your-first-skill/).
 ---
 
 **상태:** verified  

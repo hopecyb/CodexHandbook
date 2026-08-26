@@ -5,9 +5,10 @@ sidebar:
   order: 12
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 66307a0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 IDE 확장은 **쓰면서 diff를 보는** 방식에 맞습니다. 파일을 열고, 코드를 선택한 뒤, 사이드바에서 작업을 설명합니다. 이 장은 선정부터 검토까지 전체 경로를 다룹니다.
@@ -20,15 +21,15 @@ IDE 확장은 **쓰면서 diff를 보는** 방식에 맞습니다. 파일을 열
 
 | 주제 | 페이지 |
 |---|---|
-| 선정 | [지원 에디터](/guide/ide/supported-editors/) |
-| 설치 | [설치](/guide/ide/installation/) |
-| 컨텍스트 | [에디터 컨텍스트](/guide/ide/editor-context/) · [선택 영역과 열린 파일](/guide/ide/selected-code-and-open-files/) |
-| 워크플로 | [로컬 작업](/guide/ide/local-task-workflow/) · [Cloud 작업](/guide/ide/cloud-task-workflow/) |
-| 품질 | [변경 검토](/guide/ide/reviewing-changes/) |
-| 구성 | [설정](/guide/ide/settings/) |
-| 문제 해결 | [문제 해결](/guide/ide/troubleshooting/) |
+| 선정 | [지원 에디터](/ko/guide/ide/supported-editors/) |
+| 설치 | [설치](/ko/guide/ide/installation/) |
+| 컨텍스트 | [에디터 컨텍스트](/ko/guide/ide/editor-context/) · [선택 영역과 열린 파일](/ko/guide/ide/selected-code-and-open-files/) |
+| 워크플로 | [로컬 작업](/ko/guide/ide/local-task-workflow/) · [Cloud 작업](/ko/guide/ide/cloud-task-workflow/) |
+| 품질 | [변경 검토](/ko/guide/ide/reviewing-changes/) |
+| 구성 | [설정](/ko/guide/ide/settings/) |
+| 문제 해결 | [문제 해결](/ko/guide/ide/troubleshooting/) |
 
-입문 지름길: [IDE 확장 설치](/guide/getting-started/install-ide-extension/) · [클라이언트 선택](/guide/getting-started/choose-your-codex-client/)
+입문 지름길: [IDE 확장 설치](/ko/guide/getting-started/install-ide-extension/) · [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)
 
 ## 먼저 이 몇 가지에 주의하세요
 

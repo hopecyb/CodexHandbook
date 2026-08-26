@@ -1,151 +1,132 @@
 ---
 title: Subagents
-description: Delegar subtareas a un contexto independiente — cuándo dividir, cómo traspasar y cómo aceptar.
+description: Delega trabajo bien delimitado en contextos independientes y deja que el Agent principal consolide las evidencias, resuelva conflictos y acepte el resultado.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: d65f0ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-Un **subagent (Subagent)** es una **unidad de trabajo independiente** que el Agent principal arranca para un subproblema concreto: tiene un contexto relativamente aislado y, al terminar, devuelve el resultado al hilo principal.
+Un **subagent** es una unidad de trabajo independiente que el Agent principal inicia para resolver un subproblema definido. Tiene su propio contexto y devuelve conclusiones y evidencias al hilo principal. El Agent principal conserva las decisiones globales y la aceptación final.
 
-Puedes entender un subagent así: das una subtarea clara a un asistente que solo se ocupa de eso. Su valor no está en «ser más cool», sino en «más limpio, más enfocado y más fácil de paralelizar».
+![Orquestación de subagents en Codex: el Agent principal delega tareas delimitadas, los subagents devuelven evidencias y el Agent principal consolida y verifica](/diagrams/subagent-orchestration-es.svg)
 
-## Un concepto central
+## Tres capas de aislamiento
 
-| Agent principal | Subagent |
-|---|---|
-| Mantiene el objetivo global y el diálogo con el usuario | Se centra en una sola subtarea |
-| El contexto incluye el historial completo | Contexto más limpio, apto para profundizar |
-| Coordina y fusiona resultados | Ejecuta exploración, búsqueda o implementación especializada |
-
-Diferencia respecto a [Agents en paralelo](/guide/desktop-app/parallel-agents/): el subagent suele ser una unidad de tarea **delegada activamente por el Agent principal**, no varias ventanas abiertas a mano por el usuario (las implementaciones de producto pueden solaparse; prevalece la UI actual).
-
-## Cuándo merece la pena dividir
-
-No hace falta dividir solo porque la tarea sea grande, sino cuando ves que:
-
-- Un subproblema necesita profundizar por sí solo
-- Ese subproblema no es el mismo tipo de trabajo que la línea principal
-- Quieres primero una conclusión independiente y luego volver
-
-En esos casos, dividir en subagent suele ser más estable que hacer que el hilo principal cuide a la vez el global y el detalle.
-
-## Escenarios adecuados
-
-| Adecuado | No adecuado |
-|---|---|
-| Búsqueda dirigida en un monorepo grande: «cómo valida el token el módulo de autenticación» | Necesitas aclarar requisitos ida y vuelta con el usuario |
-| Investigar en paralelo dos enfoques técnicos | Subtareas con edición mutuamente excluyente del mismo archivo |
-| Análisis largo solo de lectura, sin contaminar el contexto principal | «Mirar un poco» sin entregable claro |
-
-## Roles de subagent que conviene consolidar
-
-De las delegaciones puntuales, lo que más conviene conservar son roles con límites claros y formato de entrega estable.
-
-| Rol | Entrega fuerte | Restricción recomendada |
+| Capa | ¿Está aislada? | Significado |
 |---|---|---|
-| Revisor de código | Problemas por gravedad, archivo y tests faltantes | Solo lectura por defecto; no arregla salvo petición explícita |
-| Ingeniero de tests | Huecos de cobertura, casos a añadir, comandos | Un paquete o workflow por encargo |
-| Redactor de documentación | API, migración, guía de usuario | Atado al código y al estilo existente |
-| Debugger | Reproducción, causa probable, plan de verificación | Conclusión basada en logs, tests o ruta de código |
-| Revisor de seguridad | Amenazas, escaladas, riesgos con secretos | Solo lectura, alcance claro |
-| Analista de rendimiento | Hipótesis de cuello de botella, medición, mejoras de bajo riesgo | Requiere benchmark o experimento reproducible |
+| Contexto de conversación | Sí | Cada subagent se concentra en su tarea sin cargar todos los detalles del hilo principal |
+| Sandbox y modo de permisos | Se heredan | La ejecución independiente no concede un acceso mayor |
+| Archivos del workspace | No necesariamente | Varios Agents pueden ver el mismo workspace; las escrituras simultáneas pueden entrar en conflicto |
 
-En tareas de implementación, pide primero un plan de parche. La integración y la verificación final se quedan en el hilo principal.
+La regla clave es: **aislar el contexto no significa aislar los archivos.** Antes de editar en paralelo, divide la propiedad por directorio, componente o worktree.
 
-## Malentendidos habituales
+## Disponibilidad actual
 
-### 1. Más subagents no siempre es mejor
+Las versiones actuales de Codex ofrecen subagents de forma predeterminada y muestran su actividad en las superficies correspondientes de la App de escritorio, CLI e IDE. Los detalles de la interfaz cambian; el patrón estable consiste en pedir a Codex que delegue trabajo independiente mientras el hilo principal se encarga de consolidarlo.
 
-Dividir demasiado trae costes nuevos:
+En la CLI, usa `/agent` para inspeccionar o cambiar de hilo. Las superficies compatibles del IDE muestran Agents en segundo plano, y la App de escritorio presenta la actividad de los hilos de una tarea. Los controles exactos dependen del cliente y de la cuenta.
 
-- Tienes que leer más resultados de vuelta
-- Distintos subagents pueden contradecirse
-- El coste de coordinación puede superar el beneficio
+## Cuándo dividir el trabajo
 
-### 2. ¿Si la tarea es compleja, hay que dividir en subagent de inmediato?
+Considera un subagent cuando se cumplan al menos dos condiciones:
 
-No necesariamente.  
-Si el problema está muy acoplado y hay que confirmar contigo a menudo, avanzar en el hilo principal suele ahorrar más.
+1. La tarea puede describirse de forma independiente sin sincronizar continuamente los detalles del hilo principal.
+2. Tiene un entregable explícito, como una lista de archivos, un resultado de pruebas o una conclusión de una página.
+3. Puede ejecutarse en paralelo, o un análisis profundo y aislado reduce mucho el ruido del hilo principal.
 
-### 3. ¿Puede el subagent de paso hacer también todos los cambios?
+### Trabajo adecuado para paralelizar
 
-Si puede depende de cómo lo delegues; pero el enfoque por defecto más estable es:
+- Trazar por separado y en modo de solo lectura el frontend, el backend y las pruebas.
+- Investigar de forma independiente pruebas fallidas que no están relacionadas.
+- Recopilar evidencias por separado para dos opciones técnicas.
+- Asignar revisiones especializadas de seguridad, rendimiento o documentación.
 
-- Dejar primero que el subagent haga análisis de solo lectura, comparación y localización
-- Tras ver las conclusiones en el hilo principal, decidir si entrar a modificar
+### Trabajo que conviene mantener en el hilo principal
 
-## Flujo de trabajo recomendado
+- Los requisitos no están claros y necesitan conversación continua con el usuario.
+- Los pasos deben ejecutarse en una secuencia estricta.
+- Los cambios se concentran en un mismo archivo o fragmento de código.
+- «Echar un vistazo» no tiene un criterio de finalización.
 
-### 1. El Agent principal escribe el contrato de la subtarea
+Los subagents aumentan el consumo de tokens y el coste de consolidación. No paralelices una tarea pequeña que un único hilo claro pueda resolver bien.
+
+## Las responsabilidades del Agent principal permanecen
+
+El Agent principal conserva:
+
+- el objetivo global, las restricciones del usuario y las decisiones finales;
+- los límites de las subtareas y la propiedad de los archivos;
+- la resolución de conclusiones contradictorias;
+- las pruebas y el build después de fusionar, junto con el informe de riesgos.
+
+Que un subagent indique «terminado» es una señal sobre la subtarea, no una prueba de que toda la tarea haya concluido.
+
+## Redactar un contrato de delegación aceptable
+
+Este ejemplo plantea una investigación de solo lectura:
 
 ```text
-Subtarea: análisis de solo lectura de la lógica de refresco de session en packages/auth.
-Entrega: resumen de ≤1 página + rutas de archivos clave + puntos de riesgo.
-Prohibido: cambiar cualquier archivo; no hacer push.
+Inicia un subagent para analizar, en modo de solo lectura, la renovación de sesiones en packages/auth.
+
+Alcance: packages/auth y sus pruebas; no edites.
+Pregunta: ¿puede reutilizarse un token antiguo después de que falle la renovación?
+Entrega: conclusión, archivos y líneas clave, ruta de reproducción y prueba recomendada.
+Verificación: cada afirmación debe poder comprobarse en el código o en las pruebas existentes.
+Respuesta: menos de 500 palabras; el hilo principal decide si se edita.
 ```
 
-Aquí lo importante no es el formato, sino dejar claras 4 cosas:
+Define la responsabilidad, el alcance, la pregunta, la prohibición, la verificación y quién toma la decisión.
 
-- De qué se ocupa exactamente
-- Cómo debe ser el entregable
-- Qué acciones no puede hacer
-- Quién decide tras la vuelta
+## Ejemplo en tres vías
 
-### 2. El subagent ejecuta y devuelve un resultado estructurado
+Para una regresión intermitente del inicio de sesión:
 
-Formato esperado:
+| Subtarea | Permisos y alcance | Entregable |
+|---|---|---|
+| A: ruta del código | Solo lectura en `src/auth/` | Cadena de llamadas desde la entrada hasta la rama de fallo |
+| B: evidencia de pruebas | Solo lectura en pruebas y registros | Reproducción estable más pequeña |
+| C: cambios recientes | Solo lectura en el historial Git relacionado | Cambio con mayor probabilidad de introducir la regresión y sus evidencias |
 
-```text
-## Conclusión
-## Evidencia (archivo:línea)
-## Siguiente paso sugerido
-## Problemas sin resolver
-```
+Cuando vuelvan los tres resultados, compara las evidencias antes de elegir una reparación. No permitas que A, B y C editen a la vez `src/auth/session.ts`.
 
-### 3. El Agent principal fusiona y decide
+## Aislar escrituras paralelas
 
-El hilo principal (o tú) decide qué ruta adoptar y luego entra en la fase de ejecución de [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/).
+1. Divide las escrituras en directorios o componentes que no se solapen.
+2. Asigna worktrees o ramas independientes.
+3. Indica los archivos exactos que posee cada Agent.
+4. Deja que el Agent principal fusione y vuelva a ejecutar la verificación.
 
-### 4. Aceptación
+Que las pruebas aisladas pasen no demuestra que funcione la combinación después de fusionar.
 
-- Si la salida del subagent se puede verificar de forma independiente (abrir archivos y contrastar)
-- Si modificó el repositorio fuera de su alcance
-- Si, con varios subagents, los conflictos de conclusión ya están marcados
+## Lista de aceptación
 
-## Criterios para decidir
+- ¿El resultado responde a la pregunta original sin ampliar el alcance?
+- ¿Incluye ubicaciones de archivos, registros o pruebas verificables?
+- ¿Respetó las restricciones de solo lectura, directorios y comandos?
+- ¿Se resolvieron de forma explícita los resultados contradictorios?
+- ¿Se volvieron a ejecutar todas las pruebas y el build después de fusionar?
+- ¿Se indican los problemas pendientes y los riesgos residuales?
 
-Si una subtarea cumple 2 de estas 3 condiciones, puedes considerar dividir:
+## Combinación con otras capacidades
 
-1. Se puede describir de forma independiente
-2. Tiene un entregable claro
-3. No necesita compartir a menudo el mismo montón de contexto fino con el hilo principal
+- Un **Skill** conserva el método y el formato de salida de una subtarea.
+- **MCP** proporciona herramientas o datos externos bajo control.
+- Un **Hook** añade protecciones al iniciar o detener un subagent, o al llamar a herramientas.
+- Un **worktree** aísla las ediciones de archivos; resuelve conflictos del workspace, no del contexto.
 
-## Coordinación con Skill y MCP
-
-- **Skill**: define el formato estándar de entrega de la subtarea (p. ej. lista de revisión de seguridad)
-- **MCP**: el subagent consulta solo lectura tickets externos; el Agent principal decide en conjunto
-
-## Errores frecuentes
-
-- Alcance del subagent demasiado grande: se convierte en un segundo Agent principal
-- No exigir retorno estructurado: el hilo principal vuelve a leer logs largos
-- Varios subagents cambian el mismo directorio a la vez
-
-El subagent encaja mejor en subproblemas con «límites claros, entrega explícita y que se pueden completar solos»; no sirve para copiar otra vez toda la tarea principal.
-
-## Lectura complementaria
-
-- [Coordinación multi-agent](/cases/workflows/multi-agent-coordination/)
-- [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+Continúa con [Coordinación entre varios Agents](/es/cases/workflows/multi-agent-coordination/) y [Entrega y reanudación](/es/guide/agent-work/handoff-and-resume/).
 
 ---
 
-**Estado:** verificado  
-**Productos aplicables:** App / CLI / Cloud  
-**Base de verificación:** Contrastado con las explicaciones públicas actuales de OpenAI Developers sobre multi-agent, tareas largas y flujos en paralelo; esta página solo confirma el principio estable de «subtareas independientes, límites claros, entrega explícita»; donde toca UI actual o implementación concreta de planificación se mantiene como formulación no contractual («según el producto actual»).  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** App / CLI / IDE
+
+**Base de verificación:** Comparado con la documentación actual sobre subagents de Codex; explica el aislamiento del contexto, la herencia de permisos, los puntos de entrada de actividad, el coste de tokens, los conflictos de escritura y la responsabilidad final del Agent principal.
+
+**Última verificación:** 2026-08-26

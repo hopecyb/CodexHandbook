@@ -3,9 +3,10 @@ title: SDK 개요
 description: 공식 SDK로 애플리케이션에서 Codex 작업을 시작합니다——인증, 세션, 오류 처리 개념입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,7 +23,7 @@ SDK(이름과 언어는 [공식 문서](https://developers.openai.com/codex) 기
 - 인증과 테넌트 격리
 - Webhook, 큐와의 조합 아이디어
 
-플랫폼 총괄：[개발자 플랫폼](/guide/developer-platform/)
+플랫폼 총괄：[개발자 플랫폼](/ko/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -67,7 +68,7 @@ SDK는 “프로그램에 시스템을 붙이는” 용도에 맞습니다. Code
 4. **결과**：메시지 이력, 파일 diff, artifact URL(API에 따라 다름)
 5. **오류**：재시도 가능(429)과 불가(400)를 구분합니다
 
-오류 색인：[오류와 안내 참고](/guide/reference/error-reference/)
+오류 색인：[오류와 안내 참고](/ko/guide/reference/error-reference/)
 
 ## 최소 통합 체크리스트
 
@@ -78,7 +79,7 @@ SDK는 “프로그램에 시스템을 붙이는” 용도에 맞습니다. Code
 
 ## CI/CD와의 연결
 
-SDK가 Cloud나 원격 runner를 트리거하거나, CI가 내 서비스를 콜백해 PR 상태를 갱신합니다. 예시 패턴은 [코드 리뷰 자동화](/guide/developer-platform/ci-cd/code-review-automation/)를 보세요.
+SDK가 Cloud나 원격 runner를 트리거하거나, CI가 내 서비스를 콜백해 PR 상태를 갱신합니다. 예시 패턴은 [코드 리뷰 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/)를 보세요.
 
 ## 흔한 실수
 

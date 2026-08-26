@@ -3,14 +3,15 @@ title: コマンドとショートカット
 description: CLI サブコマンド、セッション内操作、キーボード習慣——製品向け説明。完全な引数はリファレンスへ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6a36a12
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-ターミナルでの効率は 3 つに分かれます：**起動方法**、**セッション内ショートカット**、**スクリプト / エディタとの連携**。本ページは使い方と習慣を扱います。引数表は [CLI コマンドリファレンス](/guide/reference/commands/) と [キーボードショートカット](/guide/reference/keyboard-shortcuts/)。
+ターミナルでの効率は 3 つに分かれます：**起動方法**、**セッション内ショートカット**、**スクリプト / エディタとの連携**。本ページは使い方と習慣を扱います。引数表は [CLI コマンドリファレンス](/ja/guide/reference/commands/) と [キーボードショートカット](/ja/guide/reference/keyboard-shortcuts/)。
 
 ## 本ページの内容
 
@@ -34,9 +35,9 @@ CLI を初めて見ると、「コマンドとショートカット」は構文�
 
 | やりたいこと | 入口 | 詳細 |
 |---|---|---|
-| 会話しながらコードを直す | `codex` 対話 TUI | [対話モード](/guide/cli/interactive-mode/) |
-| CI / パイプの単発タスク | `codex exec`（または同等） | [非対話モード](/guide/cli/non-interactive-mode/) |
-| デフォルト挙動を変える | 設定ファイル | [CLI 設定](/guide/cli/configuration/) |
+| 会話しながらコードを直す | `codex` 対話 TUI | [対話モード](/ja/guide/cli/interactive-mode/) |
+| CI / パイプの単発タスク | `codex exec`（または同等） | [非対話モード](/ja/guide/cli/non-interactive-mode/) |
+| デフォルト挙動を変える | 設定ファイル | [CLI 設定](/ja/guide/cli/configuration/) |
 
 :::note
 サブコマンド名はバージョンで変わります。`codex --help` を正としてください。
@@ -79,11 +80,11 @@ CLI を初めて見ると、「コマンドとショートカット」は構文�
 
 ### スラッシュコマンド
 
-プロンプトで `/` を入力すると組み込みフロー（レビュー、コンテキスト圧縮など）が起動します。**一覧を暗記しない**——現在の環境の `/` 補完を正としてください。学習向け分類は [スラッシュコマンド早見表](/guide/reference/slash-commands/)。
+プロンプトで `/` を入力すると組み込みフロー（レビュー、コンテキスト圧縮など）が起動します。**一覧を暗記しない**——現在の環境の `/` 補完を正としてください。学習向け分類は [スラッシュコマンド早見表](/ja/guide/reference/slash-commands/)。
 
 ### 承認関連
 
-Agent が shell やファイル書き込みを求めると、対話 UI で承認 / 拒否 / 常に許可（提供される場合）が出ます。無人実行前に必ず [承認とサンドボックス](/guide/cli/approvals-and-sandbox/) を読んでください。
+Agent が shell やファイル書き込みを求めると、対話 UI で承認 / 拒否 / 常に許可（提供される場合）が出ます。無人実行前に必ず [承認とサンドボックス](/ja/guide/cli/approvals-and-sandbox/) を読んでください。
 
 ## Shell 層のショートカット（推奨）
 
@@ -113,11 +114,11 @@ CLI を初めて使うなら、次の順がおすすめです。
 
 | | CLI | IDE 拡張 |
 |---|---|---|
-| コンテキスト | `--cwd`、`@` ファイル（バージョンによる） | 開いているファイル、選択コード |
+| コンテキスト | `--cd`、`@` ファイル（バージョンによる） | 開いているファイル、選択コード |
 | 向くこと | スクリプト、SSH リモート、純ターミナル | 変更しながら diff を見る |
 | ショートカット | ターミナルキー + `/` | エディタのコマンドパレット |
 
-IDE：[ローカルタスクワークフロー](/guide/ide/local-task-workflow/)
+IDE：[ローカルタスクワークフロー](/ja/guide/ide/local-task-workflow/)
 
 ## よくあるミス
 

@@ -3,9 +3,10 @@ title: Rever resultados
 description: Cria o hábito de verificar o Diff, correr a Verificação e fazer perguntas de seguimento.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 82d6754
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Troca «olhar de relance e seguir» por ações de verificação fixas.
 
-Listas: [Verificar o resultado](/guide/getting-started/review-the-result/) · [Rever Diffs](/guide/quality/review-diffs/)
+Listas: [Verificar o resultado](/pt/guide/getting-started/review-the-result/) · [Rever Diffs](/pt/guide/quality/review-diffs/)
 
 Muita gente salta este passo. Usar o Codex de forma estável depende muitas vezes de saberes fazer review do resultado.
 
@@ -46,7 +47,7 @@ O plano só ajuda — ainda tens de ver se toca em âmbito que não deveria.
 
 Rever o resultado não é um extra: faz parte do processo de uso.
 
-Seguinte: [Concluir o primeiro projeto pequeno](/guide/learning-paths/beginner/05-complete-first-project/)
+Seguinte: [Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/)
 
 ---
 

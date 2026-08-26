@@ -3,7 +3,7 @@ title: Run your first task
 description: Complete a small change with a clear prompt.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
+source_revision: 766820b
 translation_status: reviewed
 translated_at: 2026-07-26
 reviewed_at: 2026-07-26
@@ -75,7 +75,7 @@ The first task is supposed to include:
 
 1. Ask for a short plan first (or request one yourself)
 2. When approving file writes, confirm paths are correct
-3. When done, go to [Review the result](/guide/getting-started/review-the-result/)
+3. When done, go to [Review the result](/en/guide/getting-started/review-the-result/)
 
 ## Suggested order
 
@@ -113,7 +113,7 @@ Or:
 Do not make more edits. Tell me exactly what you changed just now.
 ```
 
-Prompting basics: [Prompt basics](/prompts/basics/).
+Prompting basics: [Prompt basics](/en/prompts/basics/).
 
 ---
 

@@ -3,9 +3,10 @@ title: Modèle de création
 description: Implémenter une fonctionnalité, un texte ou un artefact from scratch.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèle de création
@@ -62,8 +63,8 @@ Le pire : démarrer sans « quoi » et « pour qui ».
 
 ## Voir aussi
 
-- [Travail piloté par la spécification](/cases/workflows/specification-driven-work/)
-- [Définir le terminé](/prompts/define-done/)
+- [Travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/)
+- [Définir le terminé](/fr/prompts/define-done/)
 
 ---
 

@@ -10,8 +10,10 @@ tags: [tool-use, tools, agent, orchestration, function-calling]
 authored_by: ai-assisted
 locale: vi
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-08-09
+reviewed_at: 2026-08-26
+source_revision: 902c66c
 ---
 
 # Tool Use (sử dụng công cụ)

@@ -3,9 +3,10 @@ title: Objetivo, Contexto y acciones
 description: Descompone una interacción exitosa en objetivo, trasfondo, acciones y aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -21,7 +22,7 @@ Una interacción estable con Codex suele tener cuatro bloques:
 3. **Acciones**: pasos que Codex puede dar (leer, editar, ejecutar)
 4. **Aceptación**: cómo se sabe que terminó y cómo comprobarlo
 
-La enseñanza de Prompts desarrolla estos cuatro bloques en un marco estable; ver [Anatomía de una buena Tarea](/prompts/task-anatomy/).
+La enseñanza de Prompts desarrolla estos cuatro bloques en un marco estable; ver [Anatomía de una buena Tarea](/es/prompts/task-anatomy/).
 
 ## Qué controla cada bloque
 

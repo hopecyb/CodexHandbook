@@ -3,9 +3,10 @@ title: Monorepo의 AGENTS.md
 description: 단일 저장소 다중 패키지에서 프로젝트 지침·범위·테스트 명령을 두는 예시 패턴.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b6c73e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -91,7 +92,7 @@ monorepo 지침을 처음 쓸 때 모든 제약을 루트 `AGENTS.md`에 쑤셔 
 검증: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-[파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)를 참고하세요.
+[파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)를 참고하세요.
 
 ## Cloud와 CI
 
@@ -101,7 +102,7 @@ Monorepo는 Cloud에서 **루트 설치를 빼먹거나** filter 오류로 자�
 - 단일 패키지 작업의 filter 명령
 - 캐시 전략(turborepo/nx를 쓰면 작업 그래프 명시)
 
-[Cloud 환경](/guide/web-and-cloud/cloud-environments/)
+[Cloud 환경](/ko/guide/web-and-cloud/cloud-environments/)
 
 ## 흔한 실수
 

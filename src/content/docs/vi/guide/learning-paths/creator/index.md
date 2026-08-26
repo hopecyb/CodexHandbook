@@ -3,9 +3,10 @@ title: Lộ trình người sáng tạo (tổng quan)
 description: Tổng quan tuyến liên quan sáng tạo nội dung; bước sâu sẽ bổ sung sau.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,9 +23,9 @@ Nếu bạn chủ yếu muốn dùng Codex làm nội dung, chứ không sửa c
 
 ## Hiện có thể đọc
 
-- [Prompt](/prompts/): viết rõ Tác vụ sáng tạo
-- [Kiểm chứng artifact](/guide/quality/verify-artifacts/): kiểm tra bản thảo và trang
-- [App máy tính](/guide/desktop-app/): lối vào chính phù hợp người không dùng terminal
+- [Prompt](/vi/prompts/): viết rõ Tác vụ sáng tạo
+- [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/): kiểm tra bản thảo và trang
+- [App máy tính](/vi/guide/desktop-app/): lối vào chính phù hợp người không dùng terminal
 
 ## Hiểu nhầm thường gặp
 
@@ -48,11 +49,11 @@ Công việc nội dung cũng cần Kiểm chứng; chỉ là trọng tâm khác
 
 Nếu muốn bắt đầu ngay, đọc theo thứ tự này:
 
-1. [Cơ bản về Prompt](/prompts/basics/)
-2. [Mẫu Prompt](/prompts/templates/)
-3. [Bài thuyết trình](/guide/files-and-artifacts/presentations/)
-4. [Hình ảnh và ảnh chụp](/guide/files-and-artifacts/images-and-screenshots/)
-5. [Kiểm chứng artifact](/guide/quality/verify-artifacts/)
+1. [Cơ bản về Prompt](/vi/prompts/basics/)
+2. [Mẫu Prompt](/vi/prompts/templates/)
+3. [Bài thuyết trình](/vi/guide/files-and-artifacts/presentations/)
+4. [Hình ảnh và ảnh chụp](/vi/guide/files-and-artifacts/images-and-screenshots/)
+5. [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/)
 
 Lộ trình này coi trọng hơn nói rõ nhu cầu và kiểm tra được kết quả.
 

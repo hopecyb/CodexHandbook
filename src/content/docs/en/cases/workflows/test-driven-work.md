@@ -3,12 +3,13 @@ title: Test-driven work
 description: Define or add failing tests first, then drive implementation—objective acceptance for Codex changes.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-**Test-driven work** (TDD or "tests first") means making tests fail first, then minimal implementation to pass. It fits repos with test infrastructure and links directly to cases like [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Test-driven work** (TDD or "tests first") means making tests fail first, then minimal implementation to pass. It fits repos with test infrastructure and links directly to cases like [Fix a bug with verification](/en/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## What's covered
 
@@ -21,7 +22,7 @@ translated_at: 2026-07-26
 - Repos with unit/integration tests
 - Regression bugs, API behavior changes, refactors
 
-Poor fits: prototypes without tests, one-off copy on marketing sites. Use [EPXV](/cases/workflows/explore-plan-execute-verify/) with manual verification instead.
+Poor fits: prototypes without tests, one-off copy on marketing sites. Use [EPXV](/en/cases/workflows/explore-plan-execute-verify/) with manual verification instead.
 
 ## Minimum viable approach
 
@@ -47,7 +48,7 @@ run tests to confirm failure, then change implementation; run only the related t
 | Green | Minimal implementation + passing tests |
 | Refactor | Clean up under test protection (optional separate step) |
 
-Combine with [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/): read failing assertions and stack first, then change implementation.
+Combine with [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/): read failing assertions and stack first, then change implementation.
 
 ## Common mistakes
 
@@ -58,7 +59,7 @@ Combine with [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/):
 
 ## Security boundaries
 
-- Test commands must stay within [command rules](/guide/customization/rules/command-rules/)
+- Test commands must stay within [command rules](/en/guide/customization/rules/command-rules/)
 - Integration tests hitting production APIs must be forbidden in spec or use mocks
 
 ## Acceptance checklist
@@ -66,12 +67,12 @@ Combine with [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/):
 - [ ] Evidence of fail→pass tests (logs or CI)
 - [ ] Full or agreed-scope test suite passes
 - [ ] Diff has no unrelated test deletions
-- [ ] Aligned with [Define done](/prompts/define-done/)
+- [ ] Aligned with [Define done](/en/prompts/define-done/)
 
 ## Related chapters
 
-- [Run tests](/guide/quality/run-tests/)
-- [Case: Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Run tests](/en/guide/quality/run-tests/)
+- [Case: Fix a bug with verification](/en/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

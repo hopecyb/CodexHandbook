@@ -3,9 +3,10 @@ title: Eine Tabelle analysieren
 description: Tabellendaten hochladen oder referenzieren und Zusammenfassungen sowie Insights erzeugen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Eine Tabelle analysieren
@@ -40,7 +41,7 @@ Akzeptanz: Jede Zahl in summary mit Berechnungsweg oder Spaltennamen versehen.
 
 ## 4. Verwandt
 
-- [Tabellen und Spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Tabellen und Spreadsheets](/de/guide/files-and-artifacts/tables-and-spreadsheets/)
 ---
 
 **Status:** verified  

@@ -3,9 +3,10 @@ title: クイックスタート
 description: アカウントとインストールから、最初の検証可能なタスクまで。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 283b8cb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -25,15 +26,15 @@ sidebar:
 
 ## ステップ
 
-1. [アカウント、プラン、アクセス](/guide/getting-started/account-plans-and-access/)
-2. [クライアントの選択](/guide/getting-started/choose-your-codex-client/)
-3. インストール：[デスクトップ App](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
-4. [ログイン](/guide/getting-started/sign-in-and-authentication/)
-5. [練習プロジェクトの作成](/guide/getting-started/create-your-first-project/)
-6. [最初のタスクを実行](/guide/getting-started/run-your-first-task/)
-7. [結果の確認](/guide/getting-started/review-the-result/) · [取り消しと復元](/guide/getting-started/undo-and-recover/)
+1. [アカウント、プラン、アクセス](/ja/guide/getting-started/account-plans-and-access/)
+2. [クライアントの選択](/ja/guide/getting-started/choose-your-codex-client/)
+3. インストール：[デスクトップ App](/ja/guide/getting-started/install-desktop-app/) · [CLI](/ja/guide/getting-started/install-cli/) · [IDE](/ja/guide/getting-started/install-ide-extension/)
+4. [ログイン](/ja/guide/getting-started/sign-in-and-authentication/)
+5. [練習プロジェクトの作成](/ja/guide/getting-started/create-your-first-project/)
+6. [最初のタスクを実行](/ja/guide/getting-started/run-your-first-task/)
+7. [結果の確認](/ja/guide/getting-started/review-the-result/) · [取り消しと復元](/ja/guide/getting-started/undo-and-recover/)
 
-時間がない場合：[最初の 30 分](/guide/getting-started/first-30-minutes/) · 先に [安全チェックリスト](/guide/getting-started/beginner-safety-checklist/) を読む。
+時間がない場合：[最初の 30 分](/ja/guide/getting-started/first-30-minutes/) · 先に [安全チェックリスト](/ja/guide/getting-started/beginner-safety-checklist/) を読む。
 
 インストール手順はバージョンで変わるため、[https://developers.openai.com/codex](https://developers.openai.com/codex) も併せて確認してください。
 

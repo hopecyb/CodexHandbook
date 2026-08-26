@@ -1,120 +1,78 @@
 ---
-title: Pull Request erstellen
-description: 'Von der Cloud-Aufgabe zum reviewbaren PR — Beschreibung, Umfang und menschliches Merge-Gate.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Pull Requests erstellen
+description: Liefere ein Cloud-Ergebnis als prüfbaren und verifizierbaren PR aus, der nicht automatisch zusammengeführt wird.
 sidebar:
   order: 40
+locale: de
+source_locale: zh-CN
+source_revision: 70996a7
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Beim ersten Cloud-Workflow ist die Aufgabe oft fertig — die Änderung aber noch nicht in einem Zustand zum Prüfen und Diskutieren. In der Teamkollaboration übernimmt das der **Pull Request**.
+Prüfe nach Abschluss einer Cloud-Aufgabe zuerst Zusammenfassung und Diff. Erstelle erst dann einen Pull Request, wenn Ergebnis, Umfang und Verifikationskriterien erfüllt sind. Andernfalls korrigiere die Aufgabe im selben Chat.
 
-Ein PR ist ein reviewbarer Änderungsantrag.
-
-Er bündelt was geändert wurde, warum, und ob getestet — an einem Ort. Cloud-Aufgaben landen für das Team oft hier.
-
-## Inhalt
-
-- End-to-End-Erwartung von Cloud-Aufgabe zu PR
-- Was die PR-Beschreibung für Mensch und CI enthalten sollte
-- Wann kein Auto-PR
-
-## Wann einen PR öffnen
-
-Wenn andere reviewen, CI laufen oder Merge in den Hauptbranch nötig ist: nicht bei „Branch ist fertig“ stehen bleiben — weiter zum **reviewbaren PR**.
-
-## Empfohlener Workflow
+## Von der Aufgabe zum PR
 
 ```text
-GitHub verbinden → Issue/Ziel klar → Cloud-Aufgabe (Plan bestätigen) → Branch pushen → PR öffnen → Menschen-Review + CI → Merge
+Umgebung und Ausgangs-Branch wählen
+  → Cloud-Aufgabe ausführen
+  → Zusammenfassung, Protokolle und Diff prüfen
+  → bei Bedarf Follow-up
+  → Create Pull Request
+  → CI + ergänzendes Codex-Review + menschliches Review
+  → Mensch entscheidet über die Zusammenführung
 ```
 
-Voraussetzung: [GitHub verbinden](/guide/web-and-cloud/connect-github/)
+Formuliere im Prompt ausdrücklich „PR erstellen, nicht zusammenführen“. Verlasse dich aber nicht nur auf diese Anweisung in natürlicher Sprache. Aktiviere im Repository zusätzlich Branchschutz und required checks.
 
-## Warum nicht sofort Auto-Merge
-
-Der PR lässt Mensch und System prüfen — er ist mehr als „Code hochschieben“.
-
-Üblich:
-
-- Codex kann den PR öffnen
-- Menschen entscheiden über Merge
-
-So bleibt bei schiefer Richtung noch eine Prüfung.
-
-## Prompt-Punkte für die Aufgabe
+## Wiederverwendbare Aufgabenvorlage
 
 ```text
-Ziel: Login-Timeout aus #42 beheben
-Branch: fix/42-login-timeout
-Umfang: nur packages/auth und zugehörige Tests
-Fertig: PR gegen main öffnen, nicht mergen
-PR-Beschreibung muss enthalten: Ursache, Änderungszusammenfassung, Testbefehle und Ergebnisse, Risiko und Rollback
+Ziel: Behebe die Login-Timeout-Regression aus #42.
+Ausgangspunkt: main.
+Umfang: Nur packages/auth/** und die zugehörigen Tests.
+Verboten: Keine Abhängigkeiten aktualisieren, keine öffentliche API ändern und nicht direkt nach main schreiben.
+Verifikation: pnpm test --filter auth; pnpm typecheck.
+Auslieferung: Erstelle einen PR nach main, aber führe ihn nicht zusammen.
+Die PR-Beschreibung enthält Ursache, Änderungszusammenfassung, Testbefehle und Ergebnisse, Risiken und Rückgängigmachung.
 ```
 
-Konsistent mit [Done definieren](/prompts/define-done/) und [Anatomie einer guten Aufgabe](/prompts/task-anatomy/).
+## Prüfung vor der Erstellung
 
-## Eine gute PR beantwortet mindestens vier Fragen
+- [ ] Der Ausgangs-Commit ist korrekt und keine lokalen ungepushten Eingaben fehlen
+- [ ] Der Diff enthält nur den Aufgabenbereich
+- [ ] Der neue Branchname ist eindeutig und überschreibt keine fremde Arbeit
+- [ ] Tests wurden tatsächlich ausgeführt und Fehlschläge nicht in der Zusammenfassung verborgen
+- [ ] Keine Zugangsdaten, temporären Protokolle, Caches oder sachfremden Formatierungen
+- [ ] Große Änderungen wurden in unabhängig prüfbare PRs aufgeteilt
 
-1. Warum diese Änderung?
-2. Was genau wurde geändert?
-3. Wie verifiziert?
-4. Welche Risiken, Limits oder Lücken bleiben?
+## Mindestinhalt der PR-Beschreibung
 
-Fehlen diese Punkte, muss der Reviewer Kontext nachholen.
+1. Weshalb ist die Änderung erforderlich?
+2. Was wurde tatsächlich geändert?
+3. Wie wurde verifiziert, einschließlich Befehlen und Ergebnissen?
+4. Welche Risiken, Einschränkungen und Möglichkeiten zur Rückgängigmachung bestehen?
+5. Welche Inhalte wurden ausdrücklich nicht umgesetzt?
 
-## PR-Qualitätscheckliste
+Ergänze bei UI-Änderungen echte Screenshots, bei Verhaltensänderungen Reproduktionsschritte und bei Migrationen Hinweise zu Kompatibilität und Rückgängigmachung.
 
-- [ ] Titel sagt „was“, nicht „Code aktualisiert“
-- [ ] Issue-Nummer verknüpft
-- [ ] CI grün oder bekannte Fehler erklärt
-- [ ] Diff-Größe im Teamrahmen; sonst splitten
-- [ ] Keine Secrets, kein Formatierungssturm
-- [ ] Screenshots/Logs bei UI-/Verhaltensänderungen
+## Nach der Erstellung
 
-## Menschliches Gate
+Warte auf die required checks, fordere mit `@codex review` ein ergänzendes Review an und lass eine Person mit dem nötigen Kontext den zentralen Diff prüfen. Übergib konkrete Review-Kommentare für Korrekturen an denselben PR-Branch zurück. Erstelle dafür keinen unabhängigen zweiten Branch mit doppeltem Ergebnis.
 
-Auch wenn Codex PRs öffnen kann: **Merge** default durch Menschen (oder kontrollierter Bot + Branch Protection):
+PR-Erstellung und Zusammenführung sind zwei Berechtigungsgrenzen. Dass Cloud einen PR erstellen kann, berechtigt nicht zum Umgehen der Zusammenführungsrichtlinie des Teams.
 
-Siehe [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
+## Offizielle Grundlage
 
-## Häufige Missverständnisse
-
-### 1. Mehrere unzusammenhängende Änderungen in einem PR
-
-Schwer zu lesen und zurückzurollen.
-
-### 2. Nur „behoben“, ohne Verifikation
-
-Unklar, ob wirklich getestet oder „sollte passen“.
-
-### 3. Codex direkt auf den Hauptbranch
-
-Für Solo-Experimente vielleicht ein Schritt weniger — für Kollaborationsrepos zu riskant.
-
-## Mit Review-Automatisierung
-
-- Skill oder CI-`codex exec` für **ergänzende Review-Kommentare**
-- Auto-Merge braucht eigene Governance — nicht Einsteiger-Default
-
-## Häufige Fehler
-
-- PR mit mehreren unzusammenhängenden Features
-- Beschreibung „AI-generierte Änderung“ ohne Testangaben
-- Direkt auf main mergen und Review umgehen
-
-## Weiterlesen
-
-- [GitHub-Integration](/guide/integrations/github/)
-- [Diffs reviewen](/guide/quality/review-diffs/)
-- [Desktop-App: Diff und Kommentare](/guide/desktop-app/diffs-comments-and-review/)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [GitHub Pull Request review](https://learn.chatgpt.com/docs/third-party/github)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud / Web  
-**Prüfhinweis:** „Cloud-Output in PR, dann Menschen-Review“ bleibt solide; konkrete PR-Einstiege, Automatisierung und Cloud-Takt brauchen Abgleich mit aktuellen offiziellen PR-/GitHub-Integrationsdetails vor `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud, GitHub
+
+**Zuletzt geprüft:** 2026-08-26

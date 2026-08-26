@@ -1,103 +1,82 @@
 ---
 title: 配置 Profile
-description: 用命名配置档切换模型、沙盒与审批组合——开发、审查、CI 各一套。
+description: 用独立配置文件为 Codex CLI 叠加一组命名设置。
 sidebar:
   order: 20
 ---
 
-**Profile（配置档）** 让你保存一组命名配置（模型 + 沙盒 + 审批等），在不同场景一键切换，而不必每次手动改设置。
+当前 Codex CLI 的 `--profile <name>` 会把 `$CODEX_HOME/<name>.config.toml` 叠加到基础用户配置上。它主要用于 CLI 场景，不应被描述成桌面应用里的通用“一键模式”。
 
-## 这篇会讲什么
+## 最小示例
 
-- Profile 与「改默认配置」的区别
-- 常见 Profile 划分方式
-- 团队如何共享 Profile 定义
+基础配置保留共享默认值：
 
-## Profile 在管什么
+```toml
+# ~/.codex/config.toml
+model_reasoning_effort = "medium"
+```
 
-如果“配置”是默认工作习惯，那 **Profile** 就是“不同场景下的一套预设档”。
+只读审查 profile：
 
-可以把它看成：
+```toml
+# ~/.codex/review.config.toml
+sandbox_mode = "read-only"
+approval_policy = "never"
+```
 
-- 平时开发用一套
-- 看不可信仓库用一套
-- 只读审查用一套
-- CI 自动跑任务再用一套
+启动：
 
-这样就不用每次临时去改一堆开关。
+```bash
+codex --profile review
+# 简写
+codex -p review
+```
 
-## 典型 Profile 示例
+用本机版本确认语义：
 
-| Profile 名 | 意图 | 特征（概念） |
+```bash
+codex --help
+```
+
+当前帮助应说明 profile 文件路径和叠加关系。若版本不同，以本机输出与官方配置参考为准。
+
+## Profile 适合什么
+
+| Profile | 目的 | 示例边界 |
 |---|---|---|
-| `daily` | 日常开发 | 平衡模型、标准沙盒 |
-| `strict` | 不可信仓库 | 强审批、限网络 |
-| `review-only` | 只读审查 | 禁止写盘或仅允许读 |
-| `ci` | 流水线 | 固定模型、非交互、无 push |
+| `review` | 只读检查 | read-only、无写操作 |
+| `workspace` | 日常项目修改 | 只写工作区、按需审批 |
+| `ci` | 非交互检查 | 固定输出、无 push |
 
-具体字段见 [配置项参考](/guide/reference/configuration-reference/)。
+Profile 只保存一组配置起点。它不会覆盖组织 requirements，也不会让提示词自动安全。尤其不要把 `danger-full-access` 做成随手使用的默认 profile。
 
-## 使用方式（概念）
+## 不要与 Permission Profile 混淆
 
-1. 在官方文档确认 Profile 语法（可能与 `config.toml` 内 `[profiles.name]` 或等价结构相关）
-2. 创建 Profile 并命名
-3. 启动时指定：`codex --profile strict`（命令以 `--help` 为准）
-4. 在 README 注明「贡献者推荐 `daily`，CI 使用 `ci`」
+- **配置 Profile**：`--profile name` 选择 `<name>.config.toml`，可叠加多种 Codex 配置；
+- **Permission Profile（Beta）**：`default_permissions` 与 `[permissions.<name>]` 定义文件系统和网络边界。
 
-CLI 细节：[CLI 配置](/guide/cli/configuration/)
+两者都叫 profile，但用途和配置结构不同。当前 Permission Profile 也不与旧 `sandbox_mode` 组合；选一种权限系统配置。
 
-## 常见误会
+## 团队使用边界
 
-### Profile 不是越多越灵活越好
+配置 Profile 位于用户 Codex home，不是当前版本里天然可提交的项目配置。团队可在文档中提供审查过的示例文件，让成员显式安装和核对；不要假设仓库 clone 后会自动启用个人 profile。
 
-很多人第一次会想给每种细小场景都建一个 Profile，最后变成十几个名字，自己都记不住差别。
+## 验收
 
-通常先保留 2 到 4 个最常用的即可：
+1. 运行 `codex --help` 确认当前版本支持 `-p/--profile`；
+2. 用只读任务测试 `review`；
+3. 要求读取工作区外文件或写入文件，确认边界按预期阻止；
+4. 检查有效配置，不要只相信文件名。
 
-- 日常开发
-- 严格模式
-- 只读审查
-- CI
+## 官方依据
 
-能明显区分风险边界即可。
+- [Codex 配置 schema](https://github.com/openai/codex/blob/main/codex-rs/core/config.schema.json)
+- [Codex CLI 源码中的配置层](https://github.com/openai/codex/blob/main/codex-rs/config/src/loader/mod.rs)
 
-### Profile 不是替代思考的开关
-
-切到某个 Profile，不代表以后所有任务都绝对安全或绝对合适。
-
-它只是帮你把“常见起始状态”切过去，具体任务仍然要结合当前仓库和风险判断。
-
-## 与 AGENTS.md 分工
-
-| | Profile | AGENTS.md |
-|---|---|---|
-| 管什么 | 能力开关、模型、沙盒 | 怎么写这个项目 |
-| 提交 Git | 可选（项目级 profile 片段） | 是 |
-| 个人/团队 | 个人 profile 可本机；团队 profile 应 PR | 团队 |
-
-## 常见错误
-
-- 每个仓库建 10 个 Profile 无人维护
-- `ci` Profile 仍允许 `git push`
-- Profile 名与文档不一致导致新人用错
-
-## 起步建议
-
-刚开始用 Profile 时，可以这样开始：
-
-1. 先保留一个 `daily` 作为默认档
-2. 再补一个 `strict`，专门应对不熟悉或风险高的仓库
-3. 如果团队有自动化，再单独加一个 `ci`
-
-这样已经能覆盖大多数常见情况。
-
-Profile 的价值在于让你在不同风险场景下，快速切到一套已经想清楚的默认组合。
-
-## 参考来源
-- OpenAI Codex profiles 文档
 ---
 
-**状态：** outdated  
-**适用产品：** CLI / App  
-**复核说明：** 本页将 `Profile`、`codex --profile` 和共享 profile 结构写得过于具体，但当前可核到的官方资料不足以证明这些用法在现版本中普遍成立；在补齐正式文档依据前，不宜标为 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI
+
+**最近核验：** 2026-08-26（本机 `codex-cli 0.148.0`）

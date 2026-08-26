@@ -3,14 +3,15 @@ title: Lệnh và lối tắt
 description: Lệnh con CLI, thao tác trong phiên và thói quen bàn phím — hướng dẫn theo sản phẩm; tham số đầy đủ xem khu tham chiếu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6a36a12
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-Hiệu quả trong terminal đến từ ba khối: **cách khởi**, **thao tác tắt trong phiên**, **phối hợp với script/trình soạn thảo**. Trang này nói cách dùng và thói quen; bảng tham số xem [Tham chiếu lệnh CLI](/guide/reference/commands/) và [Phím tắt](/guide/reference/keyboard-shortcuts/).
+Hiệu quả trong terminal đến từ ba khối: **cách khởi**, **thao tác tắt trong phiên**, **phối hợp với script/trình soạn thảo**. Trang này nói cách dùng và thói quen; bảng tham số xem [Tham chiếu lệnh CLI](/vi/guide/reference/commands/) và [Phím tắt](/vi/guide/reference/keyboard-shortcuts/).
 
 ## Nội dung trang
 
@@ -34,9 +35,9 @@ Phân rõ rồi thì chọn lệnh nào sẽ rõ hơn nhiều.
 
 | Việc bạn muốn | Lối vào | Chi tiết |
 |---|---|---|
-| Vừa chat vừa sửa mã | `codex` TUI tương tác | [Chế độ tương tác](/guide/cli/interactive-mode/) |
-| Tác vụ một lần CI / pipeline | `codex exec` (hoặc tương đương) | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) |
-| Đổi hành vi mặc định | Tệp cấu hình | [Cấu hình CLI](/guide/cli/configuration/) |
+| Vừa chat vừa sửa mã | `codex` TUI tương tác | [Chế độ tương tác](/vi/guide/cli/interactive-mode/) |
+| Tác vụ một lần CI / pipeline | `codex exec` (hoặc tương đương) | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
+| Đổi hành vi mặc định | Tệp cấu hình | [Cấu hình CLI](/vi/guide/cli/configuration/) |
 
 :::note
 Tên lệnh con đổi theo phiên bản — lấy theo `codex --help`.
@@ -79,11 +80,11 @@ Khóa và lệnh `/` cụ thể khác nhau theo phiên bản, nhưng hạng mụ
 
 ### Lệnh slash
 
-Gõ `/` tại dấu nhắc có thể kích hoạt quy trình tích hợp (rà soát, nén ngữ cảnh, v.v.). **Đừng học thuộc danh sách chết** — lấy theo hoàn thành `/` của môi trường hiện tại. Phân loại học: [Tra cứu lệnh slash](/guide/reference/slash-commands/).
+Gõ `/` tại dấu nhắc có thể kích hoạt quy trình tích hợp (rà soát, nén ngữ cảnh, v.v.). **Đừng học thuộc danh sách chết** — lấy theo hoàn thành `/` của môi trường hiện tại. Phân loại học: [Tra cứu lệnh slash](/vi/guide/reference/slash-commands/).
 
 ### Liên quan phê duyệt
 
-Khi Agent yêu cầu chạy shell hoặc ghi tệp, giao diện tương tác sẽ hỏi phê duyệt / từ chối / luôn cho phép (nếu có). Trước khi không người canh hãy đọc [Phê duyệt và Sandbox](/guide/cli/approvals-and-sandbox/).
+Khi Agent yêu cầu chạy shell hoặc ghi tệp, giao diện tương tác sẽ hỏi phê duyệt / từ chối / luôn cho phép (nếu có). Trước khi không người canh hãy đọc [Phê duyệt và Sandbox](/vi/guide/cli/approvals-and-sandbox/).
 
 ## Lối tắt tầng Shell (khuyến nghị)
 
@@ -113,11 +114,11 @@ Như vậy ít bị «công cụ chưa quen đã bọc thêm một lớp» ngay 
 
 | | CLI | Tiện ích IDE |
 |---|---|---|
-| Ngữ cảnh | `--cwd`, tệp @ (tùy phiên bản) | Tệp mở, mã chọn |
+| Ngữ cảnh | `--cd`, tệp @ (tùy phiên bản) | Tệp mở, mã chọn |
 | Phù hợp | Script, SSH từ xa, thuần terminal | Vừa sửa vừa xem diff |
 | Lối tắt | Phím terminal + `/` | Bảng lệnh trình soạn thảo |
 
-IDE: [Quy trình tác vụ local](/guide/ide/local-task-workflow/)
+IDE: [Quy trình tác vụ local](/vi/guide/ide/local-task-workflow/)
 
 ## Lỗi thường gặp
 

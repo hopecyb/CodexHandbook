@@ -3,9 +3,10 @@ title: Colaboração multi-Agent
 description: Exploração em paralelo, divisão de execução e fusão de resultados — quando dividir e como aceitar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Vários Agents adequam-se a subproblemas paralelizados e de baixo acoplamento — não a alterar o mesmo ficheiro em simultâneo sem coordenação humana.
@@ -18,7 +19,7 @@ Vários Agents adequam-se a subproblemas paralelizados e de baixo acoplamento �
 | Um corre testes, outro escreve documentação | Estado partilhado mutável sem lock |
 | Explorar várias opções de implementação | Dependências sequenciais fortes ainda por clarificar |
 
-Capacidades de produto em [Agents em paralelo](/guide/desktop-app/parallel-agents/) e [Subagents](/guide/agent-work/subagents/).
+Capacidades de produto em [Agents em paralelo](/pt/guide/desktop-app/parallel-agents/) e [Subagents](/pt/guide/agent-work/subagents/).
 
 ## Padrões de colaboração
 
@@ -36,11 +37,11 @@ Você: escolhe um e abre um único Agent para executar
 Agent de exploração → produz plano → Agent de execução (nova thread, com resumo do plano)
 ```
 
-Use [transferência e retoma](/guide/agent-work/handoff-and-resume/) para passar um resumo estruturado — não cole a conversa inteira.
+Use [transferência e retoma](/pt/guide/agent-work/handoff-and-resume/) para passar um resumo estruturado — não cole a conversa inteira.
 
 ### Padrão C: isolamento com árvores de trabalho
 
-Agents diferentes alteram ramos diferentes em [git worktrees](/guide/desktop-app/worktrees/) distintos; a fusão final é humana.
+Agents diferentes alteram ramos diferentes em [git worktrees](/pt/guide/desktop-app/worktrees/) distintos; a fusão final é humana.
 
 ## Regras de coordenação (sugeridas em AGENTS.md)
 

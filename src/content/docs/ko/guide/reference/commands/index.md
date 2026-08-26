@@ -3,11 +3,12 @@ title: CLI 명령 참고
 description: Codex CLI의 자주 쓰는 하위 명령과 파라미터 빠른 조회——학습용 색인이며 공식 매뉴얼을 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: bdc537d
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
 명령 참고 페이지는 입구를 가리는 데 쓰며, 처음부터 파라미터를 외울 필요는 없습니다.
@@ -35,9 +36,9 @@ CLI를 처음 쓰는 사람에게, 이 단계만으로도 입구 선택의 대�
 
 | 입구 | 용도 | 상세 |
 |---|---|---|
-| `codex` | 대화형 TUI 세션 | [대화형 모드](/guide/cli/interactive-mode/) |
-| `codex exec`(또는 동등) | 비대화형 단발/파이프 작업 | [비대화형 모드](/guide/cli/non-interactive-mode/) |
-| 설정 관련 | 사용자/프로젝트 설정 읽기·쓰기 | [CLI 설정](/guide/cli/configuration/) |
+| `codex` | 대화형 TUI 세션 | [대화형 모드](/ko/guide/cli/interactive-mode/) |
+| `codex exec`(또는 동등) | 비대화형 단발/파이프 작업 | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
+| 설정 관련 | 사용자/프로젝트 설정 읽기·쓰기 | [CLI 설정](/ko/guide/cli/configuration/) |
 
 :::caution[버전 민감]
 아래 표의 파라미터 이름은 커뮤니티 문서의 흔한 서술이며, **설치한 CLI와 일치한다고 보장하지 않습니다**. 업그레이드 후 `--help`를 다시 확인하세요.
@@ -77,7 +78,7 @@ codex
 # - shell / 파일 쓰기 요청 승인
 ```
 
-슬래시 명령：[슬래시 명령 빠른 조회](/guide/reference/slash-commands/)
+슬래시 명령：[슬래시 명령 빠른 조회](/ko/guide/reference/slash-commands/)
 
 ## 입구 판단
 
@@ -103,25 +104,25 @@ CLI를 처음 쓸 때 이 순서로 보세요.
 
 ```bash
 # 작업 디렉터리와 단발 프롬프트 지정(예시)
-codex exec --cwd /path/to/repo "완전한 작업 설명"
+codex exec --cd /path/to/repo "완전한 작업 설명"
 
 # 흔한 의도(파라미터 이름은 공식 기준)
-# --cwd          작업 디렉터리
+# --cd          작업 디렉터리
 # --model        모델 고정
 # --sandbox      샌드박스 정책
 # --approval     승인 정책(무인 운영 시 특히 중요)
 # stdin 파이프   파일이나 상위 명령에서 프롬프트 읽기
 ```
 
-보안：[사람 승인 패턴](/cases/workflows/human-approval-patterns/)
+보안：[사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/)
 
 ## 설정과 인증(개념)
 
 | 조작 | 설명 |
 |---|---|
-| 로그인 | [로그인과 인증](/guide/getting-started/sign-in-and-authentication/)과 일치 |
-| 설정 파일 | 사용자급 / 프로젝트급, [설정 참고](/guide/reference/configuration-reference/) |
-| MCP | [MCP 연결](/skills/mcp/connect-an-mcp-server/) |
+| 로그인 | [로그인과 인증](/ko/guide/getting-started/sign-in-and-authentication/)과 일치 |
+| 설정 파일 | 사용자급 / 프로젝트급, [설정 참고](/ko/guide/reference/configuration-reference/) |
+| MCP | [MCP 연결](/ko/skills/mcp/connect-an-mcp-server/) |
 
 ## 종료 코드와 자동화
 
@@ -132,24 +133,24 @@ codex exec --cwd /path/to/repo "완전한 작업 설명"
 
 CLI 명령 페이지는 입구를 가리고 의도를 찾는 데 쓰며, 파라미터를 외워 시작할 필요는 없습니다.
 
-CI에서 stderr를 무시하지 마세요. 로그를 남겨 [진단 우선](/cases/workflows/diagnose-before-fixing/)에 쓰세요.
+CI에서 stderr를 무시하지 마세요. 로그를 남겨 [진단 우선](/ko/cases/workflows/diagnose-before-fixing/)에 쓰세요.
 
 ## 채팅 슬래시 명령과의 차이
 
 | | `codex` 터미널 | 세션 안 `/` |
 |---|---|---|
-| 문서 | 이 페이지 + 제품 매뉴얼 | [slash-commands](/guide/reference/slash-commands/) |
+| 문서 | 이 페이지 + 제품 매뉴얼 | [slash-commands](/ko/guide/reference/slash-commands/) |
 | 적합 | 스크립트, CI | 대화형 탐색 |
 
 ## 장애 분석
 
 | 현상 | 가리키는 곳 |
 |---|---|
-| 명령이 없음 | [CLI 설치](/guide/getting-started/install-cli/) |
-| 설정이 적용되지 않음 | [CLI 설정](/guide/cli/configuration/) |
+| 명령이 없음 | [CLI 설치](/ko/guide/getting-started/install-cli/) |
+| 설정이 적용되지 않음 | [CLI 설정](/ko/guide/cli/configuration/) |
 | 승인 때문에 CI가 멈춤 | 프롬프트를 조이고 + 읽기 전용 샌드박스 |
 
-[CLI 장애 분석](/guide/cli/troubleshooting/)
+[CLI 장애 분석](/ko/guide/cli/troubleshooting/)
 
 ---
 

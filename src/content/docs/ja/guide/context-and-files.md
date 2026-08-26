@@ -5,9 +5,10 @@ sidebar:
   order: 15
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 2007fae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # コンテキストとファイル
@@ -43,13 +44,13 @@ Codex も同じです。コンテキストを管理できないと、どんな�
 
 ## コンテキスト管理
 
-- [プロジェクトコンテキスト](/guide/context/project-context/) — `AGENTS.md`、リポジトリの約束
-- [ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/) — `@` 参照と範囲
-- [会話コンテキスト](/guide/context/conversation-context/) — スレッドと圧縮
-- [焦点を保つ](/guide/context/keep-context-focused/) — 無関係なノイズを避ける
-- [機密コンテキスト](/guide/context/sensitive-context/) — 鍵とプライバシー
+- [プロジェクトコンテキスト](/ja/guide/context/project-context/) — `AGENTS.md`、リポジトリの約束
+- [ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/) — `@` 参照と範囲
+- [会話コンテキスト](/ja/guide/context/conversation-context/) — スレッドと圧縮
+- [焦点を保つ](/ja/guide/context/keep-context-focused/) — 無関係なノイズを避ける
+- [機密コンテキスト](/ja/guide/context/sensitive-context/) — 鍵とプライバシー
 
-プロンプトで背景をどう組み立てるかは [目標とコンテキスト](/prompts/goals-and-context/)。
+プロンプトで背景をどう組み立てるかは [目標とコンテキスト](/ja/prompts/goals-and-context/)。
 
 ## ファイルと成果物
 
@@ -67,18 +68,18 @@ Codex も同じです。コンテキストを管理できないと、どんな�
 
 ## ファイルと成果物
 
-- [テキストとコードファイル](/guide/files-and-artifacts/text-and-code-files/)
-- [画像とスクリーンショット](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDF とドキュメント](/guide/files-and-artifacts/pdf-and-documents/)
-- [表とスプレッドシート](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [プレゼンテーション](/guide/files-and-artifacts/presentations/)
+- [テキストとコードファイル](/ja/guide/files-and-artifacts/text-and-code-files/)
+- [画像とスクリーンショット](/ja/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF とドキュメント](/ja/guide/files-and-artifacts/pdf-and-documents/)
+- [表とスプレッドシート](/ja/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [プレゼンテーション](/ja/guide/files-and-artifacts/presentations/)
 
 ## おすすめの読み順
 
 一度に全部読む必要はありません。次の順がおすすめです。
 
-1. まず [ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/) で「どのファイルを見せるか」を理解
-2. 次に [焦点を保つ](/guide/context/keep-context-focused/) でタスクが散らばるのを防ぐ
+1. まず [ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/) で「どのファイルを見せるか」を理解
+2. 次に [焦点を保つ](/ja/guide/context/keep-context-focused/) でタスクが散らばるのを防ぐ
 3. 手元の資料タイプに応じて、対応するファイル章を読む
 
 コンテキストは Codex が判断するときの手元の情報の束です。正しく渡せば、結果も正しくなりやすくなります。

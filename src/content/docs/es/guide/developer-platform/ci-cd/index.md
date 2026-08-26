@@ -3,9 +3,10 @@ title: CI/CD
 description: Integra Codex en integración continua y release — empieza por automatización de bajo riesgo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Al conectar Codex a CI/CD, el fallo más habitual suele ser este:
@@ -16,7 +17,7 @@ Lo más habitual es empezar por solo lectura, solo sugerencias y solo informes.
 
 ## Entrada de este grupo
 
-- [Automatización de revisión de código](/guide/developer-platform/ci-cd/code-review-automation/)
+- [Automatización de revisión de código](/es/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Contenido del grupo
 

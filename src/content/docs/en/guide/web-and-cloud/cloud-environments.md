@@ -1,160 +1,84 @@
 ---
 title: Cloud environments
-description: What Codex Cloud remote run environments include, their lifecycle, and team configuration essentials.
+description: Configure runtimes, dependencies, setup, caching, and repository starting points for Codex Cloud.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: f7c7188
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-A **Cloud environment** is the worker machine Codex uses when running tasks remotely.
+A Cloud environment defines what Codex installs and runs for a repository. It does not inherit your laptop configuration. When work passes locally but fails in Cloud, compare runtimes, dependencies, variables, and network access first.
 
-It directly affects outcomes—including the OS, language versions, toolchain, network policy, and which repository branch is checked out. This page mainly answers a common question:
+## Execution order for each chat
 
-> **Why does it work locally but fail in Cloud?**
+1. Create a container and check out the selected branch or commit SHA.
+2. Run the setup script; when restoring a cache, optionally run the maintenance script.
+3. Apply the internet policy.
+4. Run the Agent loop to execute commands, edit, and verify while loading applicable `AGENTS.md` files.
+5. Return the answer and diff for follow-up or PR creation.
 
-## What's covered
+The default `universal` image includes common languages, packages, and tools. Pin Python, Node.js, and other versions in environment settings, and install additional dependencies in the setup script.
 
-- How Cloud environments differ from your local dev machine
-- How environments bind to GitHub repos and branches
-- How teams maintain reproducible Cloud configuration
+## Minimal reproducible configuration
 
-## Start with these three points
+For a pnpm project, pin the same Node.js version as CI and configure:
 
-Keep these in mind first:
-
-- Cloud does not "read everything on your current computer"—it only sees what exists in the remote environment
-- Cloud tasks still face real-world constraints: dependencies, version mismatches, and whether the network can reach what they need
-- Anything you have not committed or pushed locally is invisible to Cloud by default
-
-Think of Cloud as switching to a different machine to do the work.
-
-## Core concepts
-
-```text
-GitHub repo (a branch)
-        ↓ clone / checkout
-Cloud environment instance (container or VM—product-dependent)
-        ↓
-Agent runs the task: install deps, change code, test, push
+```bash
+corepack enable
+pnpm install --frozen-lockfile
 ```
 
-Use together with [Connect GitHub](/guide/web-and-cloud/connect-github/); the environment **cannot** access unpushed commits on your laptop.
+At the repository root, put validation rules in `AGENTS.md`:
 
-## Local vs Cloud
+```md
+## Validation
 
-- **Local tasks**: Codex works around your current machine, in front of you
-- **Cloud tasks**: Codex runs on a remote machine you delegate to
+- Run `pnpm test` after code changes.
+- Run `pnpm typecheck` before reporting completion.
+- Do not update the lockfile unless dependency changes are requested.
+```
 
-That gap is a common source of confusion when you first use Cloud:
+Setup and Agent run in separate Bash sessions. A temporary `export` in setup does not automatically persist. Configure non-sensitive values as environment variables or persist them through shell configuration as the official guidance recommends.
 
-- "Why can't it see the file I just changed locally?"
-- "Why doesn't it have that globally installed tool on my machine?"
-- "Why can't it reach the database I run locally?"
+## Cache and maintenance
 
-Most of the time, **that remote machine simply does not have those things**—the issue is the environment itself.
+Cloud may cache container state for up to 12 hours to accelerate new and follow-up chats. After restoring a cache, it checks out the chat's selected branch and can run a maintenance script to refresh dependencies.
 
-## What an environment includes (conceptual)
+Changing setup, maintenance, environment variables, or Secrets invalidates the cache automatically. Use **Reset cache** when repository changes make a cache incompatible. In Business and Enterprise, users with access to an environment may share its cache; resetting it can affect others in the workspace.
 
-| Component | Description |
+## Environment variables and Secrets
+
+- Environment variables are available during setup and the Agent phase.
+- Secrets are decrypted only for setup and removed before the Agent starts.
+- Setup has internet access.
+- Agent internet access is off by default and can be enabled per environment.
+
+These boundaries are easy to confuse. See [Secrets and environment variables](/en/guide/web-and-cloud/secrets-and-variables/).
+
+## Alignment checklist
+
+| Check | Target |
 |---|---|
-| Base image | OS, common build tools |
-| Runtime | Node, Python, Go, etc. (depends on image and task) |
-| Working directory | Path to the cloned repo |
-| Network policy | Whether outbound access is allowed and which domains |
-| Credential injection | [Secrets and variables](/guide/web-and-cloud/secrets-and-variables/) |
+| Starting branch/commit | Matches the task |
+| Runtime versions | Match CI or production constraints |
+| Lockfile | Frozen installation |
+| Setup | Repeatable, non-interactive, fail fast |
+| Verification commands | Recorded in `AGENTS.md` |
+| Network | Only required domains and methods for the Agent |
 
-For concrete image lists and customization, see [official Cloud documentation](https://developers.openai.com/codex).
+## Official sources
 
-## Common misconceptions
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [codex-universal image](https://github.com/openai/codex-universal)
 
-### 1. Assuming Cloud automatically inherits your local environment
-
-It does not.
-
-Node, Python, Homebrew, Chrome, or database clients on your machine do not appear in Cloud just because they exist locally.
-
-### 2. Assuming pushing the repo means everything is ready
-
-Repository code is only the starting point. Whether a task succeeds also depends on:
-
-- How dependencies are installed
-- What commands start or test the project
-- Which Secrets are required
-- Whether network policy allows access to external resources
-
-### 3. Assuming Cloud failure means Codex cannot do the task
-
-Many Cloud failures are misconfigured environments, not inability to complete the work.
-
-A sensible troubleshooting order:
-
-1. Is the repo and branch correct?
-2. Are dependencies and runtime versions correct?
-3. Are Secrets and network access available?
-4. Is the task prompt clear enough?
-
-## Recommended setup flow
-
-1. Complete your first Cloud task in a **test repo** and record dependency install commands
-2. Put repeatable steps in repo docs (`README`, `AGENTS.md`, or official environment config files)
-3. Configure [Secrets](/guide/web-and-cloud/secrets-and-variables/) (private registry, API keys)
-4. Confirm [internet access](/guide/web-and-cloud/internet-access/) policy meets security requirements
-5. Validate the issue → PR loop with the same environment template
-
-## When Cloud is a good fit
-
-Use this framing:
-
-- Changing a project on your machine and wanting immediate feedback: start local
-- Long-running tasks, a shared team environment, or remote GitHub workflows: use Cloud
-
-If your local workflow is not smooth yet, do not rush to turn every problem into a "Cloud configuration problem."
-
-## Aligning with local
-
-Avoid "green locally, red in Cloud":
-
-| Practice | Why |
-|---|---|
-| Pin dependency versions (lockfile) | Reproducible installs |
-| Document install and test commands in `AGENTS.md` | Agent does not guess |
-| Keep Node/Python versions close between CI and Cloud | Less version drift |
-| Use Git LFS or build-time downloads for large files | Controlled clone size |
-
-## Lifecycle
-
-A typical Cloud task:
-
-1. **Create or reuse** an environment instance
-2. **Prepare**: clone, checkout branch, install dependencies
-3. **Execute**: Agent changes code, runs commands
-4. **Output**: branch push, PR, log artifacts
-5. **Destroy or recycle** (policy varies by product)
-
-For long tasks, follow up via [desktop App notifications](/guide/desktop-app/notifications/) or mobile.
-
-## Common mistakes
-
-- Assuming Cloud pre-installs your entire private monorepo toolchain
-- Depending on `localhost` services (database, mock API) without providing them in the environment
-- Running unbounded tasks on a production repo on the first try
-- Misreading an environment problem as a model capability problem
-
-## Security boundaries
-
-- Treat the environment as **semi-trusted**: still require code review and branch protection
-- Inject production database connection strings only via Secrets, never in prompts
-- Periodically clean up unused environment templates and Secrets
-
-## References
-- OpenAI Codex Cloud environments
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This page covers environment instance shape, lifecycle, templates, and GitHub branch binding—details we cannot fully confirm against strong current official documentation; it should not be marked `verified` until formal Cloud environment docs are available.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

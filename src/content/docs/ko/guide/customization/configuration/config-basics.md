@@ -3,9 +3,10 @@ title: 설정 기초
 description: Codex 설정 파일 위치, 자주 쓰는 항목, 승인/샌드박스/모델 설정 입문.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ sidebar:
 - 복잡한 리팩터: 더 강한 추론 모델(요금제가 지원하면)
 - 스크립트/CI: 고정 모델로 재현성
 
-개념 배경: [모델과 추론](/guide/foundations/models-and-reasoning/)
+개념 배경: [모델과 추론](/ko/guide/foundations/models-and-reasoning/)
 
 ### 승인과 샌드박스
 
@@ -84,7 +85,7 @@ sidebar:
 | 신뢰하는 개인 프로젝트 | 안전 전제에서 중단을 줄일 수 있음 |
 | 기업 저장소 | 호스팅 정책을 따르고 임의로 완화하지 않음 |
 
-개념 배경: [권한과 승인](/guide/foundations/permissions-and-approvals/), [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
+개념 배경: [권한과 승인](/ko/guide/foundations/permissions-and-approvals/), [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
 
 ### CLI와 App 일관성
 
@@ -113,9 +114,9 @@ sidebar:
 
 ## CLI 특집과의 관계
 
-- 대화형 사용: [CLI 대화형 모드](/guide/cli/interactive-mode/)
-- 비대화형·스크립트: [비대화형 모드](/guide/cli/non-interactive-mode/)
-- 설정 세부 확장: [CLI 설정](/guide/cli/configuration/) · [설정 항목 참고](/guide/reference/configuration-reference/)
+- 대화형 사용: [CLI 대화형 모드](/ko/guide/cli/interactive-mode/)
+- 비대화형·스크립트: [비대화형 모드](/ko/guide/cli/non-interactive-mode/)
+- 설정 세부 확장: [CLI 설정](/ko/guide/cli/configuration/) · [설정 항목 참고](/ko/guide/reference/configuration-reference/)
 
 ## 흔한 실수
 

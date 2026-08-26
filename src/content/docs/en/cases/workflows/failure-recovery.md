@@ -3,12 +3,13 @@ title: Failure recovery
 description: When tasks drift, tests go red, or context runs out—how to roll back safely and continue.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-**Failure recovery** covers how to stabilize the situation after a task goes off track or stops mid-way. This chapter gives repeatable **detect → stop loss → recover → postmortem** steps—pair with [Undo and recover](/guide/getting-started/undo-and-recover/) and [Long-running task management](/cases/workflows/long-running-task-management/).
+**Failure recovery** covers how to stabilize the situation after a task goes off track or stops mid-way. This chapter gives repeatable **detect → stop loss → recover → postmortem** steps—pair with [Undo and recover](/en/guide/getting-started/undo-and-recover/) and [Long-running task management](/en/cases/workflows/long-running-task-management/).
 
 ## What this page covers
 
@@ -54,7 +55,7 @@ Detect (tests / human / CI)
     → Capture lessons
 ```
 
-Multi-agent: see [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)—on failure, clarify which sub-task owns rollback.
+Multi-agent: see [Multi-agent coordination](/en/cases/workflows/multi-agent-coordination/)—on failure, clarify which sub-task owns rollback.
 
 ## Common mistakes
 
@@ -65,7 +66,7 @@ Multi-agent: see [Multi-agent coordination](/cases/workflows/multi-agent-coordin
 
 ## Safety boundaries
 
-- Recovery itself constrained by [command rules](/guide/customization/rules/command-rules/)
+- Recovery itself constrained by [command rules](/en/guide/customization/rules/command-rules/)
 - Production incidents: roll back first, root cause later—don't let Agent fix production data directly
 
 ## Acceptance checklist
@@ -77,9 +78,9 @@ Multi-agent: see [Multi-agent coordination](/cases/workflows/multi-agent-coordin
 
 ## Related chapters
 
-- [Diagnose before fixing](/cases/workflows/diagnose-before-fixing/)
-- [Handoff and resume](/guide/agent-work/handoff-and-resume/)
-- [Error reference](/guide/reference/error-reference/)
+- [Diagnose before fixing](/en/cases/workflows/diagnose-before-fixing/)
+- [Handoff and resume](/en/guide/agent-work/handoff-and-resume/)
+- [Error reference](/en/guide/reference/error-reference/)
 
 ---
 

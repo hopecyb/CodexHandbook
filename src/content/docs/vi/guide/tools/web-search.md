@@ -3,9 +3,10 @@ title: Tìm kiếm web
 description: Dùng tìm kiếm để bổ sung sự kiện và ghi nguồn.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 559d082
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ Tìm kiếm web phù hợp bổ sung sự kiện, không phù hợp thay bạn �
 
 Phù hợp: tra tài liệu công khai, mã lỗi, ghi chú phiên bản. Không phù hợp: coi kết quả tìm kiếm là kết luận pháp lý/y tế cuối cùng.
 
-Yêu cầu kèm nguồn, và tự mở ra đối chiếu. Dùng cùng [Xác minh nguồn](/guide/quality/validate-sources/).
+Yêu cầu kèm nguồn, và tự mở ra đối chiếu. Dùng cùng [Xác minh nguồn](/vi/guide/quality/validate-sources/).
 
 ## Tìm kiếm phù hợp làm gì
 

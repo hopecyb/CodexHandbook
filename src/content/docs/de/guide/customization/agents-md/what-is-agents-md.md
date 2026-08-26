@@ -3,9 +3,10 @@ title: Was ist AGENTS.md
 description: "Persistente Projektanweisungsdatei — der «Kollaborationsvertrag» für Codex, keine Architektur-Enzyklopädie."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -86,7 +87,7 @@ Auch ohne selbst zu coden: Solange Codex dauerhaft an einem Projekt arbeitet, re
 | Unterverzeichnis-`AGENTS.md` | Dieses Verzeichnis und Unterpfade (häufig im Monorepo) |
 | Benutzerhinweise | Persönliche Config oder globale Vorlieben — nicht mit Projektanweisungen vermischen |
 
-Geltungsbereich und Konflikte: [Geltungsbereich und Priorität](/guide/customization/agents-md/scope-and-precedence/).
+Geltungsbereich und Konflikte: [Geltungsbereich und Priorität](/de/guide/customization/agents-md/scope-and-precedence/).
 
 ## Unterschied zu Skill und Slash-Befehlen
 
@@ -96,7 +97,7 @@ Geltungsbereich und Konflikte: [Geltungsbereich und Priorität](/guide/customiza
 | Skill | Wiederverwendbares Workflow-Paket (`SKILL.md`) | Release-Checkliste, Spezial-Review |
 | Slash-Befehl | Von Ihnen ausgelöster Shortcut | `/review`, einmalige Workflows |
 
-Projektregeln → `AGENTS.md`; **wiederholbare, teilbare Schrittfolgen** besser als [Skill](/skills/overview/).
+Projektregeln → `AGENTS.md`; **wiederholbare, teilbare Schrittfolgen** besser als [Skill](/de/skills/overview/).
 
 ## Wohin schreiben
 
@@ -115,7 +116,7 @@ Beispiele:
 ## Häufige Fehler
 
 - Datei zu lang, Modell liest nur den Anfang — **harte Constraints in die ersten 30 Zeilen**
-- Hochrisiko wie „immer auto-push“ — Konflikt mit [Berechtigungen und Freigabe](/guide/foundations/permissions-and-approvals/)
+- Hochrisiko wie „immer auto-push“ — Konflikt mit [Berechtigungen und Freigabe](/de/guide/foundations/permissions-and-approvals/)
 - Niemand pflegt es; Doku und echte Skriptbefehle divergieren
 
 ## Sicherheitsgrenzen

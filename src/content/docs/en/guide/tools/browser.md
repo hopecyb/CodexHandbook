@@ -3,9 +3,10 @@ title: Browser tool
 description: Letting Codex open pages, inspect UI state, and verify frontend behavior—capabilities and boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 The **browser tool** lets the Agent access real pages in a controlled environment: read the DOM, capture screenshots, sometimes perform simple interactions. Good for frontend acceptance, doc link checks, and design comparison—not a substitute for security audits or casual production admin use.
@@ -37,7 +38,7 @@ Code review or text alone often is not enough—you need the page open.
 | Compare static page to implementation | Replace full E2E test frameworks |
 | Read visible page text for debugging | Sites with heavy CAPTCHA |
 
-Background: [tool selection](/guide/tools/tool-selection/)
+Background: [tool selection](/en/guide/tools/tool-selection/)
 
 ## Comparison with other tools
 
@@ -81,7 +82,7 @@ The browser tool usually beats pure text analysis.
 1. **Local frontend**: run `npm run dev`, then provide `http://localhost:PORT/path`
 2. **Specific task**: "Check login form overflow at 375px width"—not "look at the website"
 3. **State boundaries**: no external network, no submitting forms to production
-4. **Acceptance**: compare with [verify artifacts](/guide/quality/verify-artifacts/) and screenshots
+4. **Acceptance**: compare with [verify artifacts](/en/guide/quality/verify-artifacts/) and screenshots
 
 ## Example prompt
 
@@ -96,9 +97,9 @@ If you find issues, provide screenshot evidence and fix suggestions.
 - Default assumption: browser can reach **everything your machine/environment can**—including internal admin
 - Declare in task: `localhost only` or an allowlist of domains
 - Do not run untrusted repo tasks in a browser profile logged into personal accounts
-- Cloud browser policy follows [Cloud environments](/guide/web-and-cloud/cloud-environments/) and network rules
+- Cloud browser policy follows [Cloud environments](/en/guide/web-and-cloud/cloud-environments/) and network rules
 
-Approvals: [permissions and approvals](/guide/foundations/permissions-and-approvals/)
+Approvals: [permissions and approvals](/en/guide/foundations/permissions-and-approvals/)
 
 ## Common mistakes
 

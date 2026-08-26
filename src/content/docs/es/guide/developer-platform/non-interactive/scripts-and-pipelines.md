@@ -3,24 +3,25 @@ title: Scripts y pipelines
 description: Orquestar codex exec en shell, Makefile y GitHub Actions — repetible y auditable.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
 Aquí se trata de pasar Codex de una operación puntual a un paso automatizado que **el equipo pueda repetir, rastrear si falla y que otra persona pueda retomar**.
 
 En breve: el script fija el flujo; el pipeline lo repite según reglas.
 
-Este capítulo explica cómo incrustar [codex exec](/guide/developer-platform/non-interactive/codex-exec/) en shell, Makefile o un pipeline de CI.
+Este capítulo explica cómo incrustar [codex exec](/es/guide/developer-platform/non-interactive/codex-exec/) en shell, Makefile o un pipeline de CI.
 
 ## Contenido de esta página
 
 - División entre script local y job de CI
 - Gestión de Prompt y secretos
-- Combinación con [Automatización de revisión de código](/guide/developer-platform/ci-cd/code-review-automation/)
+- Combinación con [Automatización de revisión de código](/es/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Qué se resuelve aquí
 
@@ -62,7 +63,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
 Incluye `prompts/ci/security-review.md` en Git; los cambios pasan por review.
@@ -98,7 +99,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
 ```
 
 :::caution
@@ -111,7 +112,7 @@ Ajusta el método de instalación y el scope de Permisos del ejemplo a los requi
 |---|---|
 | Repositorio | `prompts/`, `tools/run-codex.sh` |
 | CI | Checkout de solo lectura, CLI fijado, subir log artifact |
-| Callback | Opcional: [Webhook](/guide/developer-platform/webhooks/overview/) para actualizar sistemas internos |
+| Callback | Opcional: [Webhook](/es/guide/developer-platform/webhooks/overview/) para actualizar sistemas internos |
 
 ## Cómo juzgar
 

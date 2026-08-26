@@ -3,62 +3,70 @@ title: Instalar o CLI
 description: Instale a linha de comando do Codex e faça a checagem básica.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b12f7d0
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-Siga as instruções oficiais de instalação do CLI: [https://developers.openai.com/codex](https://developers.openai.com/codex) (em geral gerenciador de pacotes ou script oficial de instalação — use a documentação atual).
 
-Se você já usa terminal no dia a dia, o CLI tende a ser mais natural.  
-Na primeira instalação, o que mais trava costuma ser:
+Codex CLI keeps exploration, editing, testing, and review in the terminal. The official installation page provides macOS/Linux, Windows, npm, and Homebrew options. Choose one that matches your operating system and package-management approach.
 
-- Depois de instalar, como confirmar que não ficou pela metade
-- Por que o comando «está instalado» mas o terminal não encontra
-- Quando voltar a PATH / autenticação em vez de reinstalar
+## Official standalone installer for macOS and Linux
 
-Se o CLI está bem instalado depende sobretudo de o terminal atual reconhecer `codex` de forma estável.
+```bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+```
 
-## Checagem pós-instalação
+Run the same official installer again to update the CLI. Windows, npm, and Homebrew users should select the relevant tab on the [official Codex CLI page](https://learn.chatgpt.com/docs/codex/cli); do not apply the macOS/Linux command to every system.
 
-No terminal, rode o comando de versão ou de ajuda (subcomandos concretos seguem o oficial) e confirme:
+## Post-installation checks
 
-- O comando é executável
-- Consegue entrar no estado de login ou já autenticado
+Open a new terminal and run these commands in a practice repository:
 
-## Mal-entendidos comuns
+```bash
+codex --version
+codex login status
+```
 
-### 1. Depois de instalar, qualquer janela de terminal reconhece o comando na hora
+If you are not signed in:
 
-Às vezes é preciso reabrir o terminal ou confirmar que o `PATH` do shell atual já atualizou.
+```bash
+codex login
+```
 
-### 2. Ver saída de instalação com sucesso = já dá para usar
+After browser authorization, start an interactive session from the repository:
 
-Vale mais confirmar se o ambiente atual encontra o comando.
+```bash
+codex
+```
 
-### 3. Problema de CLI = reinstalar sempre
+Keep the first task read-only:
 
-Muitas vezes o que realmente precisa checar é:
+```text
+Do not edit files yet. Explain how this project is installed, tested, and built,
+and list the file paths you used as evidence.
+```
 
-- `PATH`
-- Shell atual
-- Estado de login
+## Troubleshoot in order
 
-## Como checar depois de instalar
+1. If `codex --version` is not found, reopen the terminal and inspect the current shell's `PATH`.
+2. If the command runs but Codex does not, use `codex login status` to distinguish installation from authentication.
+3. If the wrong identity is active, run `codex logout` and sign in again.
+4. If a company environment rejects access, inspect workspace, sign-in, and managed settings. Do not bypass policy with personal credentials.
 
-1. Confirmar primeiro que o comando executa
-2. Confirmar depois que a sessão atual consegue entrar ou já está autenticada
-3. Se ainda falhar, checar local de instalação e PATH
+Never paste an API key into shell history, tickets, or chats. For API-key sign-in, use the standard-input method in [Sign-in and authentication](/pt/guide/getting-started/sign-in-and-authentication/).
 
-Com o CLI instalado, o terminal atual deve encontrá-lo e você deve conseguir seguir a autenticação.
-
-Interação detalhada: [Modo interativo do CLI](/guide/cli/interactive-mode/). Problemas: [Problemas no CLI](/guide/cli/troubleshooting/).
+Continue with [CLI interactive mode](/pt/guide/cli/interactive-mode/). For other failures, see [CLI troubleshooting](/pt/guide/cli/troubleshooting/).
 
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** CLI  
-**Nota de revisão:** Embora a página evite de propósito comandos concretos de instalação, ainda pressupõe um ritmo atual de instalação do CLI, checagem no terminal e autenticação; como forma de instalação, plataformas suportadas e fluxo de autenticação mudam, antes de alinhar com as instruções oficiais mais recentes não convém marcar como `verified`.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** CLI
+
+**Verification basis:** Compared with the current Codex CLI quickstart and authentication documentation, including the official macOS/Linux installer, `codex` startup, ChatGPT sign-in, and status command. Other installation paths point to the live official tabs.
+
+**Last verified:** 2026-08-26

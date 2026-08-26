@@ -1,163 +1,100 @@
 ---
-title: Matriz de Permisos
-description: Tabla conceptual de tipos de operación de Codex, puntos de Aprobación y diferencias entre productos.
+title:  Matriz de Permisos
+description:  Tabla conceptual de tipos de operación de Codex, puntos de Aprobación y diferencias entre productos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: a161c0c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
 
-La «matriz de Permisos» también sirve al usuario cotidiano. Explica sobre todo: con la misma frase, por qué la reacción de Codex cambia según la entrada.
+Do not predict permissions from a fixed “will App/CLI/IDE/Cloud prompt?” table. Actual behavior depends on execution location, effective configuration, organization requirements, the operating system, and the requested action.
 
-Operaciones distintas, en entradas de producto distintas, disparan comportamientos distintos de Aprobación y Sandbox. Esta matriz ayuda al equipo a alinear «qué debe confirmar una persona»; es una **tabla de contraste de riesgo y comportamiento**, no un texto de cumplimiento legal. Los valores por defecto los marcan la [documentación oficial](https://developers.openai.com/codex) y la política gestionada por la organización.
+![Decision flow between sandbox enforcement, human approval, and the executed result](/diagrams/sandbox-approval-flow-es.svg)
 
-## Qué mira esta tabla
+## Three mechanisms to separate
 
-La primera vez que te encuentras con Aprobación, restricción o rechazo, sueles pensar:
-
-- El modelo se ha roto
-- Me expresé mal
-- ¿Por qué ayer sí y hoy no?
-
-Muchas diferencias vienen en realidad de la entrada actual, la política y el nivel de riesgo.
-
-## Punto central
-
-No todo «ayúdame a hacer esto» es el mismo riesgo.
-
-Por ejemplo:
-
-- Leer un archivo
-- Cambiar un archivo
-- Correr un comando
-- Conectar a internet
-- Hacer push de código
-
-Parecen «ejecutar la Tarea», pero el riesgo no es el mismo nivel. Por eso el producto añade Aprobación, límites y bloqueos distintos en sitios distintos.
-
-Base conceptual: [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
-
-## Niveles de riesgo de operación
-
-| Nivel | Ejemplo de operación | Expectativa por defecto |
+| Mechanism | Scope | Primary control |
 |---|---|---|
-| L0 lectura | Leer texto del proyecto, buscar código | Suele automático |
-| L1 escritura | Cambiar archivos del proyecto, formatear | A menudo confirmación o automático dentro del Sandbox |
-| L2 ejecución | Shell, gestor de paquetes, pruebas | Suele requerir confirmación |
-| L3 salida a red | curl, npm registry, API | Confirmación estricta o prohibido |
-| L4 fuera de alcance | Escribir fuera del proyecto, git push, borrar BD | Debe bloquearse o confirmarse con fuerza |
-| L5 GUI | Computer Use, diálogos del sistema | Máxima sensibilidad; a menudo desactivado por defecto |
+| Local Permission Profiles (Beta) | Local commands on macOS, Linux, WSL, and native Windows | Filesystem read/write/deny and network destinations |
+| Legacy sandbox settings | Local Codex | `read-only`, `workspace-write`, `danger-full-access`, and approval policy |
+| Cloud environment policy | Codex Cloud | Isolated container, setup internet, Agent network allowlist/HTTP methods |
 
-## Cómo leerla
+Permission Profiles do not compose with legacy `sandbox_mode`. If loaded configuration contains `sandbox_mode`, the command line passes `--sandbox`, or a configuration profile sets sandboxing, Codex uses the legacy sandbox rather than `default_permissions`.
 
-La primera vez no hace falta memorizar cada celda. Úsala así:
+## Built-in local Permission Profiles
 
-- Juzga a qué clase de operación pertenece esta Tarea
-- Mira si esa operación suele bloquearse en la entrada actual
-- Decide si completar la explicación, esperar Aprobación o cambiar a una entrada más adecuada
+| Name | Boundary | Suitable for |
+|---|---|---|
+| `:read-only` | Local commands are read-only | Code understanding, review, first contact with a repository |
+| `:workspace` | Writes to workspace roots and system temporary directories | Normal development work |
+| `:danger-full-access` | Removes local sandbox restrictions | Only when externally isolated and explicitly required |
 
-La tabla también sirve para anticipar.
+A custom profile can set paths to `read`, `write`, or `deny`, and exclude sensitive files such as `.env` from a broader scope. For a conflicting path, `deny` takes precedence over `write`, which takes precedence over `read`.
 
-## Matriz (concepto — valores típicos por defecto)
+## Least-privilege example
 
-**Y** = en casos habituales hace falta consentimiento explícito o está limitada por política · **A** = puede ser automática con configuración de confianza · **—** = depende de versión/política · **N** = normalmente no permitido
+```toml
+default_permissions = "project-edit"
 
-| Operación | App de escritorio | CLI interactivo | IDE | Cloud |
-|---|---|---|---|---|
-| Leer archivos del repo | A | A | A | A |
-| Escribir archivos dentro del repo | Y/A | Y | Y/A | Y/A |
-| Correr comandos de prueba | Y/A | Y | Y/A | Y/A |
-| Instalar dependencias globales | Y | Y | Y | Y |
-| Acceder a internet público | Y | Y | Y | Y |
-| Leer archivos sensibles como `.env` | Y | Y | Y | Y |
-| `git commit` | Y | Y | Y | Y |
-| `git push` | Y | Y | Y | Y |
-| Escribir fuera del proyecto | N/Y | N/Y | N/Y | N |
-| Herramientas MCP de terceros | Y | Y | Y | Y |
-| Abrir URL en el navegador | Y | — | — | Y |
-| Computer Use | Y/— | — | — | — |
+[features]
+network_proxy = true
 
-Notas:
+[permissions.project-edit.filesystem]
+":minimal" = "read"
 
-- **Cloud** corre en un Sandbox remoto y no puede acceder al sistema de archivos de tu portátil
-- **IDE** es similar a la App, pero la forma de Aprobación en la UI es distinta
-- La **política gestionada** puede forzar todo a Y o N
+[permissions.project-edit.filesystem.":workspace_roots"]
+"." = "write"
+".devcontainer" = "read"
+"**/*.env" = "deny"
 
-## Malentendidos frecuentes
+[permissions.project-edit.network]
+enabled = true
 
-### 1. Poder o no hacerlo no depende solo de si el modelo «quiere»
+[permissions.project-edit.network.domains]
+"api.openai.com" = "allow"
+"tracking.example.com" = "deny"
+```
 
-Muchas veces lo que más afecta al resultado es:
+`network.enabled = true` permits command networking. `features.network_proxy` must also be enabled for domain rules to be enforced through the proxy.
 
-- Si la entrada actual lo permite
-- Si la política actual lo deja pasar
-- Si el Permiso actual basta
+## Evaluate by action
 
-### 2. Cloud no es necesariamente más libre ni necesariamente más seguro
+| Action | Primary risk | Minimum boundary |
+|---|---|---|
+| Read source | Sensitive files enter context | Workspace read with explicit credential denies |
+| Modify files | Out-of-scope overwrite or deletion | Write only target workspace; inspect diff |
+| Run tests | Script side effects | Review scripts; use controlled environment |
+| Install dependencies | Supply chain and network | Pin versions and domains |
+| Git push / PR | External state change | Separate branch, protection, human review |
+| MCP/Plugin tool | Third-party data and writes | Minimum scope, per-action approval, logs |
 
-La seguridad depende de si Sandbox, red, Secrets, protección de ramas y política de Aprobación van juntos.
+`AGENTS.md` can say “do not push,” but is not a technical enforcement boundary. Combine rules with sandbox/permissions, GitHub access, and human review.
 
-### 3. Escribir reglas no hace desaparecer el riesgo solo
+## Team verification
 
-Reglas de documentación, política de Aprobación, límites técnicos y revisión humana suelen usarse juntos.
+1. Record client and Codex versions.
+2. List every loaded configuration layer.
+3. Confirm whether Permission Profiles or legacy sandboxing is active.
+4. In a non-sensitive test directory, verify read, write, deny, and network behavior separately.
+5. Only then connect a real repository, retaining Git and organization gates.
 
-### 4. Que te bloqueen no implica que hayas hecho mal
+Permission Profiles remain Beta. Rerun this verification after upgrades.
 
-A menudo solo indica:
+## Official sources
 
-- Este paso tiene más riesgo
-- La entrada actual no encaja para hacerlo
-- Hace falta Aprobación más explícita o un enfoque más ligero
-
-## Cómo aterrizan configuración y documentación
-
-| Mecanismo | Función |
-|---|---|
-| Modo Sandbox | Limitar L3/L4 aunque el Agent «quiera» hacerlo |
-| Política de Aprobación | Controlar si L1–L3 muestran diálogo |
-| `AGENTS.md` | Declarar prohibiciones a nivel de proyecto (p. ej. prohibir push) |
-| Protección de ramas | En GitHub, bloquear merge sin review |
-| Hooks | Comprobación automática antes del commit (véase la página de Hooks en la hoja de ruta) |
-
-[Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/) · [Referencia de configuración](/guide/reference/configuration-reference/)
-
-## Cuándo elevar la alerta
-
-Si una acción cumple cualquiera de estas, eleva la alerta:
-
-- Va a cambiar archivos
-- Va a correr comandos
-- Va a acceder a internet
-- Va a tocar información sensible
-- Va a enviar el resultado fuera del repo
-
-No hace falta recordar si es L-qué; sí saber que ya no es un riesgo de «mirar un momento».
-
-La matriz de Permisos es sobre todo una herramienta de anticipación: por qué este paso se bloquearía, si conviene más cautela, o si hay un enfoque más ligero.
-
-## Estrategia recomendada de equipo (ejemplo)
-
-| Escenario | Sugerencia |
-|---|---|
-| Repo de práctica open source | Sandbox estándar + permitir comandos de prueba |
-| Monorepo de empresa | Estricto + prohibir push + PR con review humana obligatoria |
-| CI `codex exec` | Solo lectura o directorio limitado + sin push |
-| Cloud relacionado con producción | Secrets al mínimo + protección de ramas |
-
-## Malentendidos habituales
-
-| Malentendido | Hecho |
-|---|---|
-| «Cloud es más seguro» | Depende de secrets, review y política de red |
-| «El IDE no corre shell» | Puede ejecutarlo vía Herramientas del Agent |
-| «Si escribí prohibir push, seguro que no hace push» | Hace falta Sandbox + Permisos de Git + review humana en capas |
+- [Permissions (Beta)](https://learn.chatgpt.com/docs/permissions)
+- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Nota de revisión:** La idea de niveles de riesgo sigue siendo útil, pero la matriz hace bastantes supuestos concretos sobre comportamiento por defecto, puntos de Aprobación y capacidades disponibles por entrada; sin documentación oficial actual de matriz de Permisos por entrada, esta tabla no debería seguir marcada como `review` o `verified`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE, Cloud
+
+**Last verified:** 2026-08-26

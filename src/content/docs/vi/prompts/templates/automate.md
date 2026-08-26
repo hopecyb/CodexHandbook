@@ -3,9 +3,10 @@ title: Mẫu tự động hóa
 description: Tác vụ lặp và quy trình tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu tự động hóa
@@ -58,8 +59,8 @@ Giá trị của mẫu tự động hóa là để nó chạy lâu dài và an t
 
 ## Liên quan
 
-- [Prompt cho tác vụ dài](/prompts/long-running-tasks/)
-- [Case tự động hóa báo cáo ngày](/cases/automate-a-daily-report/)
+- [Prompt cho tác vụ dài](/vi/prompts/long-running-tasks/)
+- [Case tự động hóa báo cáo ngày](/vi/cases/automate-a-daily-report/)
 
 ---
 

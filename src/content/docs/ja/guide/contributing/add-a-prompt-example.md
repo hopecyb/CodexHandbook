@@ -3,14 +3,15 @@ title: プロンプト例の追加
 description: examples/prompts に再現可能なプロンプトを提出する——メタデータと受け入れ基準を含む。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-プロンプト例はリポジトリルートの [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) に置き、ハンドブック本文からリンクします。設計仕様は [`docs/planning/examples-system.md`](/docs/planning/examples-system.md) を参照してください。
+プロンプト例はリポジトリルートの [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts) に置き、ハンドブック本文からリンクします。設計仕様は [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md) を参照してください。
 
 ## 本ページの内容
 
@@ -112,7 +113,7 @@ last_verified: YYYY-MM-DD
 - 目標と完了の定義が明確
 - 権限と安全境界の説明を含む
 - 実際の秘密鍵と PII を含まない
-- `verified` 状態には [独立検証](/guide/contributing/verify-technical-content/) が必要
+- `verified` 状態には [独立検証](/ja/guide/contributing/verify-technical-content/) が必要
 
 ## 提出フロー
 

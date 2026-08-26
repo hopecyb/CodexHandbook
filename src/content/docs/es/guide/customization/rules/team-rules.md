@@ -3,14 +3,15 @@ title: "Política de reglas de equipo"
 description: Gobierna por capas reglas de comandos y rutas entre organización, repositorio e individuo — revisable y reversible.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-Al usar Codex en equipo, la **política de reglas** responde: qué restricciones unifica toda la empresa, cuáles mantiene el repositorio y si el individuo aún puede relajarlas. Este capítulo es la perspectiva de gobernanza de [reglas de comandos](/guide/customization/rules/command-rules/) y [patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/).
+Al usar Codex en equipo, la **política de reglas** responde: qué restricciones unifica toda la empresa, cuáles mantiene el repositorio y si el individuo aún puede relajarlas. Este capítulo es la perspectiva de gobernanza de [reglas de comandos](/es/guide/customization/rules/command-rules/) y [patrones de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Contenido
 
@@ -61,7 +62,7 @@ L4 Configuración personal              → solo esta máquina; no puede debilit
 L5 Prompt de una sola tarea            → se puede endurecer temporalmente; relajar temporalmente está limitado por L1
 ```
 
-Contrasta con [alcance de AGENTS.md](/guide/customization/agents-md/scope-and-precedence/): **las reglas inclinan hacia enforcement de ejecución; AGENTS.md inclina hacia explicación de comportamiento**; deben ser coherentes, no escribir requisitos contradictorios por separado.
+Contrasta con [alcance de AGENTS.md](/es/guide/customization/agents-md/scope-and-precedence/): **las reglas inclinan hacia enforcement de ejecución; AGENTS.md inclina hacia explicación de comportamiento**; deben ser coherentes, no escribir requisitos contradictorios por separado.
 
 ## Enfoque básico
 
@@ -78,7 +79,7 @@ Propuesta (issue o RFC) → review de seguridad/plataforma → PR que cambia arc
     → prueba tipica en repo de staging → merge → anuncio + actualización de la página del manual
 ```
 
-Cambios grandes (por ejemplo abrir salida a red) deben actualizar a la vez [auditoría con Hooks](/skills/hooks/hooks-overview/) y [uso aceptable](/guide/team-enterprise/governance/acceptable-use/).
+Cambios grandes (por ejemplo abrir salida a red) deben actualizar a la vez [auditoría con Hooks](/es/skills/hooks/hooks-overview/) y [uso aceptable](/es/guide/team-enterprise/governance/acceptable-use/).
 
 ## Alineación con Hooks y CI
 
@@ -113,7 +114,7 @@ Suele corresponder a:
 
 ## Límites de seguridad
 
-- Las reglas no sustituyen el [modelo de amenazas](/guide/team-enterprise/security/threat-model/) ni el flujo de respuesta a incidentes
+- Las reglas no sustituyen el [modelo de amenazas](/es/guide/team-enterprise/security/threat-model/) ni el flujo de respuesta a incidentes
 - Con datos regulados, las reglas deben revisarse junto con clasificación de datos y políticas de retención
 - Un bypass de emergencia debe tener **registro de auditoría** y retrospectiva posterior
 

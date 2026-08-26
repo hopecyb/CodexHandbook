@@ -3,9 +3,10 @@ title: Tabellen und Spreadsheets
 description: "CSV, Excel und Tabellendaten lesen, bereinigen, analysieren und exportieren — Struktur und Encoding schützen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ Constraint: Original nicht ändern; Leere als 0; zwei Dezimalstellen
 Abnahme: erste 5 Zeilen + Gesamtzeilenanzahl ausgeben
 ```
 
-Kontext: [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
+Kontext: [Datei- und Ordnerkontext](/de/guide/context/file-and-folder-context/)
 
 ## Warum Tabellen still scheitern
 
@@ -108,7 +109,7 @@ Python: `pandas`; Node: `csv-parse` / `xlsx` usw. — Standardbibliotheken in `A
 
 - Zeilenanzahl und Summen gegen Quelle
 - In Excel prüfen, ob Daten als Zahlen missverstanden
-- [Artefakte überprüfen](/guide/quality/verify-artifacts/): Stichproben
+- [Artefakte überprüfen](/de/guide/quality/verify-artifacts/): Stichproben
 
 Bei Tabellen zählen Spalten, Typen, Regeln und Abnahme klarer als „irgendwie fertig“.
 
@@ -125,7 +126,7 @@ Bei Tabellen zählen Spalten, Typen, Regeln und Abnahme klarer als „irgendwie 
 - [ ] Original nicht versehentlich überschrieben (oder Diff sichtbar)
 
 ## Quellen
-- [Constraints und Grenzen](/prompts/constraints-and-boundaries/)
+- [Constraints und Grenzen](/de/prompts/constraints-and-boundaries/)
 ---
 
 **Status:** verified  

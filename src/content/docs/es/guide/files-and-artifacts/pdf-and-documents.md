@@ -3,9 +3,10 @@ title: PDF y documentos
 description: Alcance, herramientas y puntos de aceptación al hacer que Codex lea, resuma o genere documentos tipo PDF.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ Cuanto más claro digas «qué tramo mirar y qué resultado quieres», más esta
 1. **Indica la ruta del archivo**: `docs/spec.pdf` o referencia `@` (según soporte del cliente)
 2. **Di qué quieres**: resumen, contraste de un capítulo, extracción de datos de tablas
 3. **Páginas o capítulos**: en documentos largos limita el alcance y ahorra contexto
-4. **Contenido sensible**: contratos, escaneos de identidad, etc. siguen el flujo de [contexto sensible](/guide/context/sensitive-context/)
+4. **Contenido sensible**: contratos, escaneos de identidad, etc. siguen el flujo de [contexto sensible](/es/guide/context/sensitive-context/)
 
 ### Límites
 
@@ -97,8 +98,8 @@ Si el OCR o el reconocimiento de maquetación son dudosos, márcalo con claridad
 ## Relación con la política del repositorio
 
 - PDF binarios grandes: considera **Git LFS** o no meterlos en el repo
-- Cuando el diff no es legible, la aceptación es **abrir el archivo** + contrastar con [Verificar artefactos](/guide/quality/verify-artifacts/)
-- Lista de generados: [Aceptación de artefactos generados](/guide/files-and-artifacts/generated-artifacts/)
+- Cuando el diff no es legible, la aceptación es **abrir el archivo** + contrastar con [Verificar artefactos](/es/guide/quality/verify-artifacts/)
+- Lista de generados: [Aceptación de artefactos generados](/es/guide/files-and-artifacts/generated-artifacts/)
 
 ## Errores habituales
 

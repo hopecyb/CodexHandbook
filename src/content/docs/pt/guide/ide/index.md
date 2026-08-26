@@ -5,9 +5,10 @@ sidebar:
   order: 12
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 66307a0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 A extensão IDE convém quando **escreve e vê o Diff ao mesmo tempo**: abre ficheiros, seleciona código e descreve a Tarefa na barra lateral. Este capítulo cobre o percurso completo, desde a escolha até à revisão.
@@ -20,15 +21,15 @@ Traz diretamente o ficheiro aberto e a seleção atuais, por isso muitas Tarefas
 
 | Tema | Página |
 |---|---|
-| Escolha | [Editores suportados](/guide/ide/supported-editors/) |
-| Instalação | [Instalação](/guide/ide/installation/) |
-| Contexto | [Contexto do editor](/guide/ide/editor-context/) · [Seleção e ficheiros abertos](/guide/ide/selected-code-and-open-files/) |
-| Fluxo de trabalho | [Tarefas locais](/guide/ide/local-task-workflow/) · [Tarefas Cloud](/guide/ide/cloud-task-workflow/) |
-| Qualidade | [Rever mudanças](/guide/ide/reviewing-changes/) |
-| Configuração | [Definições](/guide/ide/settings/) |
-| Resolução de problemas | [Resolução de problemas](/guide/ide/troubleshooting/) |
+| Escolha | [Editores suportados](/pt/guide/ide/supported-editors/) |
+| Instalação | [Instalação](/pt/guide/ide/installation/) |
+| Contexto | [Contexto do editor](/pt/guide/ide/editor-context/) · [Seleção e ficheiros abertos](/pt/guide/ide/selected-code-and-open-files/) |
+| Fluxo de trabalho | [Tarefas locais](/pt/guide/ide/local-task-workflow/) · [Tarefas Cloud](/pt/guide/ide/cloud-task-workflow/) |
+| Qualidade | [Rever mudanças](/pt/guide/ide/reviewing-changes/) |
+| Configuração | [Definições](/pt/guide/ide/settings/) |
+| Resolução de problemas | [Resolução de problemas](/pt/guide/ide/troubleshooting/) |
 
-Atalhos de início: [Instalar a extensão IDE](/guide/getting-started/install-ide-extension/) · [Escolher cliente](/guide/getting-started/choose-your-codex-client/)
+Atalhos de início: [Instalar a extensão IDE](/pt/guide/getting-started/install-ide-extension/) · [Escolher cliente](/pt/guide/getting-started/choose-your-codex-client/)
 
 ## Preste atenção a isto primeiro
 

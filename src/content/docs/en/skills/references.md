@@ -3,9 +3,10 @@ title: references/ directory
 description: Organize long reference docs in a Skill for progressive disclosure.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: c595507
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 `references/` holds long material you do not need to expand every time—so the main flow stays short and clear.

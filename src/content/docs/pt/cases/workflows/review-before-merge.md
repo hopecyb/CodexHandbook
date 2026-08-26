@@ -3,12 +3,13 @@ title: Revisão antes de fundir
 description: Antes do merge, use o Codex para revisão estruturada do diff e de riscos — divisão clara entre humano e máquina.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Revisão antes de fundir** coloca [qualidade e verificação](/guide/quality/) no fluxo Git: antes de fundir o PR, o Codex verifica se diff, testes, segurança e especificação estão alinhados. Comentários automáticos não substituem a fusão automática.
+**Revisão antes de fundir** coloca [qualidade e verificação](/pt/guide/quality/) no fluxo Git: antes de fundir o PR, o Codex verifica se diff, testes, segurança e especificação estão alinhados. Comentários automáticos não substituem a fusão automática.
 
 ## Foco desta página
 
@@ -32,7 +33,7 @@ Produza uma checklist e marque P0/P1.
 
 - Versão fixa do prompt + token só de leitura
 - Resultado em comentário de PR ou check run
-- Ver [automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/)
+- Ver [automatização de revisão de código](/pt/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Dimensões de revisão recomendadas
 
@@ -44,7 +45,7 @@ Produza uma checklist e marque P0/P1.
 | Manutenibilidade | Nomes, duplicação, API pública |
 | Especificação | Consistente com issue/documento de especificação |
 
-Pode combinar com [rever diffs](/guide/quality/review-diffs/); itens de alto risco seguem [padrões de aprovação humana](/cases/workflows/human-approval-patterns/).
+Pode combinar com [rever diffs](/pt/guide/quality/review-diffs/); itens de alto risco seguem [padrões de aprovação humana](/pt/cases/workflows/human-approval-patterns/).
 
 ## Erros comuns
 
@@ -67,8 +68,8 @@ Pode combinar com [rever diffs](/guide/quality/review-diffs/); itens de alto ris
 
 ## Capítulos relacionados
 
-- [Revisão de código Cloud](/guide/web-and-cloud/code-review/)
-- [Criar Pull Requests](/guide/web-and-cloud/create-pull-requests/)
+- [Revisão de código Cloud](/pt/guide/web-and-cloud/code-review/)
+- [Criar Pull Requests](/pt/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

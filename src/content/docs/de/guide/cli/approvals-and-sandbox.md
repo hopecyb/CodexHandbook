@@ -3,9 +3,10 @@ title: Freigabe und Sandbox
 description: Freigabestrategien für Shell, Schreibzugriff und Netz in der CLI — und wie die Sandbox Agent-Verhalten begrenzt.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -27,7 +28,7 @@ Merksatz:
 
 Zusammen bestimmen sie, ob die CLI eher konservativ oder zu weit geöffnet wirkt.
 
-Grundlagen: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/) · [Sandbox und Netz](/guide/foundations/sandbox-and-network/)
+Grundlagen: [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/) · [Sandbox und Netz](/de/guide/foundations/sandbox-and-network/)
 
 ## Wann Freigabe kommt
 
@@ -57,7 +58,7 @@ Sandbox kann begrenzen:
 - Zugriff auf andere Projekte unter `$HOME`
 - Subprozesse und Netzfähigkeit
 
-Einstieg: [CLI-Konfiguration](/guide/cli/configuration/) · Matrix: [Berechtigungsmatrix](/guide/reference/permission-matrix/)
+Einstieg: [CLI-Konfiguration](/de/guide/cli/configuration/) · Matrix: [Berechtigungsmatrix](/de/guide/reference/permission-matrix/)
 
 ## Interaktiv vs. nicht-interaktiv
 
@@ -66,7 +67,7 @@ Einstieg: [CLI-Konfiguration](/guide/cli/configuration/) · Matrix: [Berechtigun
 | Interaktiv `codex` | Mensch dabei, Fall für Fall |
 | Nicht-interaktiv `exec` | ohne dich — Sandbox vorher eng + fester Prompt |
 
-Pflicht für CI: [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) · [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
+Pflicht für CI: [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/) · [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/)
 
 Empfohlene CI-Prinzipien:
 
@@ -76,7 +77,7 @@ Empfohlene CI-Prinzipien:
 
 ## Mit Allow/Deny-Regeln
 
-Projekte können in [Allow- und Deny-Regeln](/guide/customization/rules/allow-and-deny-patterns/) «erwartete Befehle» deklarieren. **Regeln müssen zum echten Produktverhalten passen** — sonst blockiert der Agent weiter oder wird zu weit.
+Projekte können in [Allow- und Deny-Regeln](/de/guide/customization/rules/allow-and-deny-patterns/) «erwartete Befehle» deklarieren. **Regeln müssen zum echten Produktverhalten passen** — sonst blockiert der Agent weiter oder wird zu weit.
 
 ## Häufige Fehler
 

@@ -3,9 +3,10 @@ title: "Fall: Geplante Dokumentenlink-Prüfung"
 description: Mit nicht-interaktivem Codex oder CI tote Links in der Site scannen — Einstiegsfall Team-Automatisierung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadaten
@@ -55,8 +56,8 @@ Nach meiner Bestätigung Dateien anlegen.
 ### Ausführen
 
 - `prompts/ci/link-check.md` hinzufügen
-- `.github/workflows/docs-link-check.yml` hinzufügen (Skizze, siehe [Skripte und Pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- [codex exec](/guide/developer-platform/non-interactive/codex-exec/) oder reines Skript + Codex zur Nachklassifikation
+- `.github/workflows/docs-link-check.yml` hinzufügen (Skizze, siehe [Skripte und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- [codex exec](/de/guide/developer-platform/non-interactive/codex-exec/) oder reines Skript + Codex zur Nachklassifikation
 
 ### Überprüfen
 
@@ -69,19 +70,19 @@ Nach meiner Bestätigung Dateien anlegen.
 | Problem | Vorgehen |
 |---|---|
 | Externer Site temporär 503 | Harte tote Links vs. weiche Fehler im Prompt unterscheiden |
-| JSON-Parse fehlgeschlagen | Constraints für [strukturierte Ausgabe](/guide/developer-platform/non-interactive/structured-output/) verschärfen |
+| JSON-Parse fehlgeschlagen | Constraints für [strukturierte Ausgabe](/de/guide/developer-platform/non-interactive/structured-output/) verschärfen |
 | Quota erschöpft | Auf wöchentlich + inkrementelle Prüfung umstellen |
 
 ## 5. Verstetigen
 
 - Nach dem dritten erfolgreichen Lauf als Skill `docs-link-audit` verstetigen
-- In den [Team-Befehlsregeln](/guide/customization/rules/team-rules/) `npm run build` und nur-lesendes Git erlauben
+- In den [Team-Befehlsregeln](/de/guide/customization/rules/team-rules/) `npm run build` und nur-lesendes Git erlauben
 
 ## 6. Verwandte Kapitel
 
-- [Lange Aufgaben verwalten](/cases/workflows/long-running-task-management/)
-- [Automations geplante Aufgaben](/skills/automations/scheduled-tasks/)
-- [Lernpfad für Teams](/guide/learning-paths/team/)
+- [Lange Aufgaben verwalten](/de/cases/workflows/long-running-task-management/)
+- [Automations geplante Aufgaben](/de/skills/automations/scheduled-tasks/)
+- [Lernpfad für Teams](/de/guide/learning-paths/team/)
 
 ---
 

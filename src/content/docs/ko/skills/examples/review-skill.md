@@ -3,14 +3,15 @@ title: '예시: 검토 Skill'
 description: pr-review 기반 Skill 예시. 팀 재사용이나 조정에 적합합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 예시: 검토 Skill
 
-이 예시는 [첫 Skill 만들기](/skills/create-your-first-skill/)의 `pr-review`와 대응하며, 팀 필요에 맞게 조정할 수 있습니다.
+이 예시는 [첫 Skill 만들기](/ko/skills/create-your-first-skill/)의 `pr-review`와 대응하며, 팀 필요에 맞게 조정할 수 있습니다.
 
 ## SKILL.md
 

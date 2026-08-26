@@ -57,7 +57,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 `prompts/ci/security-review.md` 纳入 Git，变更走 review。
@@ -72,7 +72,7 @@ codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
 
 这样以后你加日志、加 schema、加通知，都会顺得多。
 
-## GitHub Actions 示意
+## GitHub Actions：使用官方 Action
 
 ```yaml
 jobs:
@@ -80,24 +80,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # 固定版本号，以官方安装文档为准
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-示例中的安装方式与权限 scope 须按组织安全要求调整；**勿**在 workflow 中 echo 密钥。
+GitHub Actions 优先使用官方 `openai/codex-action`，不要把 API key 设为会运行仓库代码的整个 job 的环境变量。若后续需要写 PR，把写权限与密钥放在不同 job，并通过补丁 artifact 交接。
 :::
 
 ## 推荐工作流
@@ -143,7 +138,10 @@ jobs:
 - OpenAI Codex + GitHub 集成文档
 ---
 
-**状态：** outdated  
-**适用产品：** CLI  
-**复核说明：** 本页的“把 prompt、脚本和流水线纳入 Git 审查”的原则仍然成立，但文中示例依赖 `codex exec`、CLI 安装方式和 GitHub Actions 具体接法，这些都属于高波动实现细节；待补充当前官方流水线文档后再恢复 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** CLI / GitHub Actions
+
+**核验依据：** 已对照当前官方 Non-interactive mode 与 Codex GitHub Action 建议，修正 `--cd`，并把 API key 所在 job 与仓库写权限分离作为默认安全边界。
+
+**最近核验：** 2026-08-26

@@ -3,9 +3,10 @@ title: Approvals and sandbox
 description: CLI approval policy for shell, disk, and network—and how sandbox limits Agent behavior.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 In CLI, Agents can **read files, write files, run shell, and possibly use the network**—approvals and sandbox are the safety valve between you and automation. Misconfiguration means constant prompts in interactive use—or runaway risk in unattended CI.
@@ -25,7 +26,7 @@ Remember:
 
 Together they shape whether CLI feels conservative or overly permissive.
 
-Concept basics: [permissions and approvals](/guide/foundations/permissions-and-approvals/) · [sandbox and network](/guide/foundations/sandbox-and-network/)
+Concept basics: [permissions and approvals](/en/guide/foundations/permissions-and-approvals/) · [sandbox and network](/en/guide/foundations/sandbox-and-network/)
 
 ## When approvals fire
 
@@ -55,7 +56,7 @@ Sandbox may limit:
 - Access to other projects under `$HOME`
 - Subprocess and network capability
 
-Configuration: [CLI configuration](/guide/cli/configuration/) · matrix: [permission matrix](/guide/reference/permission-matrix/)
+Configuration: [CLI configuration](/en/guide/cli/configuration/) · matrix: [permission matrix](/en/guide/reference/permission-matrix/)
 
 ## Interactive vs non-interactive
 
@@ -64,7 +65,7 @@ Configuration: [CLI configuration](/guide/cli/configuration/) · matrix: [permis
 | Interactive `codex` | Human present; judge each request |
 | Non-interactive `exec` | No human; tighten sandbox + fixed prompt upfront |
 
-CI must read: [non-interactive mode](/guide/cli/non-interactive-mode/) · [human approval patterns](/cases/workflows/human-approval-patterns/)
+CI must read: [non-interactive mode](/en/guide/cli/non-interactive-mode/) · [human approval patterns](/en/cases/workflows/human-approval-patterns/)
 
 Recommended CI principles:
 
@@ -74,7 +75,7 @@ Recommended CI principles:
 
 ## Allow/deny rules
 
-Projects can declare expected commands in [allow and deny patterns](/guide/customization/rules/allow-and-deny-patterns/). **Rules must match real product behavior** or Agents stay blocked—or become too open.
+Projects can declare expected commands in [allow and deny patterns](/en/guide/customization/rules/allow-and-deny-patterns/). **Rules must match real product behavior** or Agents stay blocked—or become too open.
 
 ## Common mistakes
 

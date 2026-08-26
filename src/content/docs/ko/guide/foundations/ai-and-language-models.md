@@ -3,9 +3,10 @@ title: AI와 언어 모델
 description: 언어 모델이 컨텍스트에 따라 응답을 생성하는 방식을 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1951620
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -37,7 +38,7 @@ sidebar:
 ## 사용자에게 의미하는 것
 
 - **입력 품질이 상한을 정합니다**: 목표가 흐리면 출력도 빗나가기 쉽습니다
-- **컨텍스트는 유한합니다**: 긴 이력은 압축되거나 잘릴 수 있습니다. [Token·컨텍스트·압축](/guide/foundations/tokens-context-and-compaction/)
+- **컨텍스트는 유한합니다**: 긴 이력은 압축되거나 잘릴 수 있습니다. [Token·컨텍스트·압축](/ko/guide/foundations/tokens-context-and-compaction/)
 - **반드시 검증합니다**: 특히 숫자·법률·안전·대외 공개 내용
 
 ## 흔한 오해

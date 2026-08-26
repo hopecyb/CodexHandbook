@@ -3,9 +3,10 @@ title: Recherche et apprentissage
 description: Point d'entrée des cas de recherche sourcée, de comparaison et d'apprentissage — recherche, citation et limites des conclusions.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La différence majeure entre la recherche et une simple « question-réponse » :
@@ -14,7 +15,7 @@ La différence majeure entre la recherche et une simple « question-réponse » 
 
 ## Entrées de ce groupe
 
-- [Matrice comparative de fonctionnalités](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Matrice comparative de fonctionnalités](/fr/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## Points clés de ce groupe
 

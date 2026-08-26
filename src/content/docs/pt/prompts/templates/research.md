@@ -3,9 +3,10 @@ title: Template de pesquisa
 description: Investigação e comparação com citações.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d71c760
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Template de pesquisa
@@ -44,8 +45,8 @@ Restrição crítica deste template: cada conclusão importante tem de rastrear 
 
 ## Relacionado
 
-- [Caso: pesquisar com fontes](/cases/research-with-sources/)
-- [Verificação](/guide/verification/)
+- [Caso: pesquisar com fontes](/pt/cases/research-with-sources/)
+- [Verificação](/pt/guide/verification/)
 
 ---
 

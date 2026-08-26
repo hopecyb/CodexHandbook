@@ -3,9 +3,10 @@ title: マルチ Agent 協調
 description: 並列探索、分担実行、結果統合——いつ分割し、どう検証するか。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 マルチ Agent は、並列で疎結合なサブ問題に向きます。コーディネータなしに同一ファイルを2体が編集する用途には向きません。
@@ -18,7 +19,7 @@ translated_at: 2026-07-28
 | 一方がテスト、他方がドキュメント | ロックなしの共有可変状態 |
 | 複数実装案を探索 | 依存関係が未整理の強い直列依存 |
 
-製品能力：[並列 Agent](/guide/desktop-app/parallel-agents/)、[サブエージェント](/guide/agent-work/subagents/)。
+製品能力：[並列 Agent](/ja/guide/desktop-app/parallel-agents/)、[サブエージェント](/ja/guide/agent-work/subagents/)。
 
 ## 協調パターン
 
@@ -36,11 +37,11 @@ Agent 2：案 B の長所／短所と工数
 探索 Agent → 計画出力 → 実行 Agent（計画要約付き新スレッド）
 ```
 
-[引き継ぎと再開](/guide/agent-work/handoff-and-resume/) で構造化要約を渡す——チャット全文を貼らない。
+[引き継ぎと再開](/ja/guide/agent-work/handoff-and-resume/) で構造化要約を渡す——チャット全文を貼らない。
 
 ### パターン C：worktree 分離
 
-別 [git worktree](/guide/desktop-app/worktrees/) で別ブランチを別 Agent が編集。最後に人がマージ。
+別 [git worktree](/ja/guide/desktop-app/worktrees/) で別ブランチを別 Agent が編集。最後に人がマージ。
 
 ## 協調ルール（AGENTS.md 推奨）
 

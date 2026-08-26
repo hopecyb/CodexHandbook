@@ -3,9 +3,10 @@ title: ハンドブックのバージョンポリシー
 description: コンテンツの状態、検証日、継続的な更新方法を説明。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3f4e05e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 8
 ---

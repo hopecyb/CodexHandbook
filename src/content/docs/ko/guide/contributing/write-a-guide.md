@@ -3,11 +3,12 @@ title: 가이드 페이지 작성
 description: 새 핸드북 본문의 구조, frontmatter, 교차 링크 약속.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 이 페이지는 `src/content/docs/`에 **가이드형** 페이지(순수 사례·순수 참고표가 아님)를 추가하거나 다시 쓰는 방법을 설명합니다.
@@ -49,7 +50,7 @@ description: 이 글이 푸는 문제를 한 문장으로
 
 ## 권장 구조
 
-[외부 자료 통합 템플릿](/docs/planning/external-source-integration.md#6-추천页面模板)의 소절을 골라 쓰세요. 흔한 조합:
+[외부 자료 통합 템플릿](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-추천页面模板)의 소절을 골라 쓰세요. 흔한 조합:
 
 - 페이지가 푸는 문제
 - 누구에게 맞는지
@@ -113,7 +114,7 @@ description: 이 글이 푸는 문제를 한 문장으로
 
 ## 검증
 
-PR 전에 [기술 내용 검증](/guide/contributing/verify-technical-content/)을 읽으세요. 명령·가격·권한 등 쉽게 바뀌는 정보는 반드시 재확인합니다.
+PR 전에 [기술 내용 검증](/ko/guide/contributing/verify-technical-content/)을 읽으세요. 명령·가격·권한 등 쉽게 바뀌는 정보는 반드시 재확인합니다.
 
 좋은 가이드 페이지는 “자료를 다 썼는지”가 아니라, 처음 온 독자가 왜 있는지·먼저 무엇을 볼지·다음에 어디로 갈지를 알게 하는 데 있습니다.
 

@@ -3,104 +3,61 @@ title: "Raccourcis clavier"
 description: Index d'apprentissage des raccourcis courants dans App, CLI TUI et extension IDE — selon votre version installée.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 0edf4f3
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Les raccourcis varient beaucoup par **client et version**. Cette page regroupe par **intention** pour demander « existe-t-il un moyen plus rapide ? » — vérifier l'aide ou les paramètres du produit pour les liaisons exactes.
+Shortcuts vary by platform, client, and customization. This page includes only combinations explicitly documented today; use in-App **Keyboard Shortcuts** for the complete list.
 
-Pas besoin de chaque raccourci le premier jour. Fluidifier les actions qui interrompent le flux suffit.
+## Desktop App
 
-:::caution
-Le tableau ci-dessous est **illustratif**, pas une liste complète de liaisons. Les clés peuvent changer après mise à niveau.
-:::
+| Action | macOS | Windows |
+|---|---|---|
+| Open Settings | `Cmd + ,` | `Ctrl + ,` |
+| Open/close Activity | `Cmd + Option + U` | `Ctrl + Alt + U` |
+| Open integrated terminal | `Ctrl` + backtick | `Ctrl` + backtick |
+| Open App command palette | `Cmd + K` | Check Keyboard Shortcuts |
+| Clear terminal display | `Ctrl + L` | `Ctrl + L` |
 
-## Index par intention
+`Cmd + K` opens the App command palette; it does not clear the terminal.
 
-| Intention | App de bureau (illustratif) | CLI TUI (illustratif) | Extension IDE (illustratif) |
-|---|---|---|---|
-| Nouvelle tâche/session | `Cmd/Ctrl+N` ou barre latérale | Quitter/ré-entrer / commande nouveau thread | Palette de commandes « Codex » |
-| Envoyer message | `Enter` / `Cmd+Enter` | Selon doc produit | Envoi panneau |
-| Nouvelle ligne sans envoi | `Shift+Enter` | Selon TUI | Selon panneau |
-| Ouvrir palette de commandes | Classe `Cmd/Ctrl+K` | Commandes slash `/` | `Cmd/Ctrl+Shift+P` |
-| Rechercher historique | Recherche barre latérale | Recherche en session si disponible | Historique chat |
-| Approuver appel outil | Bouton panneau | `y` / flèches (selon TUI) | Notification ou bouton inline |
-| Rejeter | Bouton panneau | `n` | Rejet inline |
+Keyboard Shortcuts in Settings can search by command or key, change a binding, and restore defaults. After customization, the local binding takes precedence over an online reference card.
 
-**Suivez l'UI de votre version installée.**
+## IDE
 
-## Actions à apprendre en premier
+In VS Code-family editors, `chatgpt.composerEnterBehavior` determines how Enter and `Cmd/Ctrl + Enter` submit multiline prompts. Do not assume every computer uses the same send key.
 
-Les raccourcis réduisent la friction quand vous :
+While Codex is running, `chatgpt.followUpQueueMode` determines whether a new message queues or steers immediately. Press `Cmd/Ctrl + Shift + Enter` for a single send that reverses the current default.
 
-- Cherchez Envoyer
-- Envoyez accidentellement quand vous vouliez nouvelle ligne
-- Hésitez pour approuver des outils
-- Ne trouvez pas comment démarrer une nouvelle tâche
+If the Codex sidebar is missing, run this from the editor Command Palette:
 
-Prioriser :
+```text
+Codex: Open Codex Sidebar
+```
 
-- Envoyer / nouvelle ligne
-- Nouvelle tâche
-- Palette de commandes
-- Approuver / rejeter
+## CLI
 
-## Commandes slash vs clavier
+Use the current CLI TUI's `/help` and on-screen hints. This page does not guess `y`, `n`, or other approval keys because terminal, mode, and version affect interaction.
 
-- **Commandes slash** : `/review`, `/help`, etc. — voir [Référence commandes slash](/guide/reference/slash-commands/)
-- **Raccourcis** : actions UI sans taper
+The general terminal signal `Ctrl + C` may interrupt a command or session. Inspect current state rather than treating it as a side-effect-free Back key.
 
-Combiner : `Cmd+K` pour focaliser l'entrée, puis `/review`.
+## Learning order
 
-## Utilisateurs terminal CLI
+First learn to open Settings and Activity, open the terminal, and submit multiline prompts. Search in the App for other frequent actions. Team documentation should name actions rather than force the same customized bindings on everyone.
 
-- **Ctrl+C** pour interrompre sortie incontrôlée (attention état non sauvegardé)
-- Split tmux : Codex à côté de `git diff`
-- Alias shell pour `codex exec` courant — voir [Commandes et raccourcis](/guide/cli/commands-and-shortcuts/)
+## Official sources
 
-## Idées reçues courantes
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
+- [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
+- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
-### 1. Pas besoin de maîtriser les raccourcis avant utiliser Codex
-
-Fluidifier les quelques actions que vous répétez le plus.
-
-### 2. La mémoire musculaire des autres n'est pas votre barre
-
-Les raccourcis viennent avec la pratique — pas une porte d'onboarding.
-
-### 3. Les clients n'ont pas besoin de liaisons identiques
-
-Savoir si une action a un raccourci, où voir/changer les clés, et quelles actions valent la liaison en premier.
-
-## Les cinq premiers à apprendre
-
-1. Envoyer
-2. Nouvelle ligne sans envoi
-3. Palette de commandes
-4. Approuver ou rejeter
-5. Nouvelle tâche
-
-Ajouter plus au fil du temps.
-
-## Utilisateurs IDE
-
-- Lier « expliquer la sélection avec Codex » à une clé confortable
-- Utiliser diff éditeur et go-to-definition — moins de copier-coller
-
-[Paramètres IDE](/guide/ide/settings/) · [Code sélectionné et fichiers ouverts](/guide/ide/selected-code-and-open-files/)
-
-## Accessibilité et personnalisation
-
-La plupart des clients permettent rebinder. Les équipes peuvent documenter des liaisons **recommandées** — pas exiger l'uniformité.
-
-Les raccourcis ne sont pas un examen — fluidifiez les actions qui vous interrompent le plus.
-
-## Sources de référence
-- Page officielle Paramètres / Raccourcis clavier de chaque produit
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** App / CLI / IDE  
-**Note de révision :** Malgré les disclaimers « illustratif », le corps suppose des raccourcis client spécifiques, comportement d'envoi, clés palette et clés d'approbation — très dépendants de version et plateforme sans documentation officielle unifiée forte des raccourcis.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE
+
+**Last verified:** 2026-08-26

@@ -3,9 +3,10 @@ title: Mô hình mối đe dọa
 description: "Các bề mặt rủi ro chính của Codex trong môi trường đội — dữ liệu, công cụ, mở rộng và chuỗi cung ứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ Mô hình mối đe dọa nghĩa là nghĩ về rủi ro trước khi nó xảy 
 
 > **Nếu Codex thật sự nối vào code, lệnh và công cụ ngoài của chúng ta, điều gì dễ đi sai nhất?**
 
-**Mô hình hóa mối đe dọa** tách điều đó. Codex không phải «chỉ thêm một cửa sổ chat» — nó có thể **đọc code, chạy lệnh, gọi công cụ ngoài**. Chương này map các bề mặt rủi ro chính; kiểm soát nằm ở [Ma trận quyền](/guide/reference/permission-matrix/) và [Sandbox](/guide/foundations/sandbox-and-network/).
+**Mô hình hóa mối đe dọa** tách điều đó. Codex không phải «chỉ thêm một cửa sổ chat» — nó có thể **đọc code, chạy lệnh, gọi công cụ ngoài**. Chương này map các bề mặt rủi ro chính; kiểm soát nằm ở [Ma trận quyền](/vi/guide/reference/permission-matrix/) và [Sandbox](/vi/guide/foundations/sandbox-and-network/).
 
 ## Trang này sẽ nói gì
 
@@ -72,10 +73,10 @@ Khung này biến mô hình hóa mối đe dọa thành checklist rủi ro trư�
 
 | Mối đe dọa | Mô tả | Hướng giảm thiểu |
 |---|---|---|
-| Prompt injection | Issue/web độc hại định hướng quyền vượt mức | Vệ sinh đầu vào, CI chỉ đọc, [chủ đề injection](/guide/team-enterprise/security/prompt-injection/) |
+| Prompt injection | Issue/web độc hại định hướng quyền vượt mức | Vệ sinh đầu vào, CI chỉ đọc, [chủ đề injection](/vi/guide/team-enterprise/security/prompt-injection/) |
 | Quyền quá mức | Token, Sandbox quá rộng | Quyền tối thiểu, bảo vệ nhánh |
 | Exfiltration dữ liệu | Lệnh/MCP lộ repo | Chính sách mạng, DLP, Hook kiểm toán |
-| Mở rộng độc hại | Plugin/MCP chưa review | [Rủi ro mở rộng](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Mở rộng độc hại | Plugin/MCP chưa review | [Rủi ro mở rộng](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | Chuỗi cung ứng | Can thiệp dependency/script | SCA sẵn có, code review |
 | Thao tác sai | Agent drop DB, push nhầm | Deny lệnh, CI no-push |
 
@@ -141,8 +142,8 @@ Thiết lập:
 
 ## Liên quan
 
-- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
-- [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
+- [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
+- [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/)
 
 ## Nguồn tham chiếu
 - White paper bảo mật doanh nghiệp OpenAI (chính thức)

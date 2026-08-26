@@ -3,9 +3,10 @@ title: Referência de erros e avisos
 description: Índice de aprendizagem de mensagens de erro habituais, códigos de saída e causas de falha — aponta a páginas de diagnóstico; não substitui o suporte oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -24,14 +25,14 @@ Perante um erro, faz primeiro estes três passos:
 
 Costuma ser mais rápido do que adivinhar a causa.
 
-Índice global: [Diagnóstico](/guide/reference/troubleshooting/)
+Índice global: [Diagnóstico](/pt/guide/reference/troubleshooting/)
 
 ## Autenticação e conta
 
 | Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| Authentication failed / 401 | Token caducado, sem iniciar sessão | [Iniciar sessão e autenticação](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | A organização desativa a função ou o modelo | Contacta o administrador; olha o plano em [Conta e acesso](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | Token caducado, sem iniciar sessão | [Iniciar sessão e autenticação](/pt/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | A organização desativa a função ou o modelo | Contacta o administrador; olha o plano em [Conta e acesso](/pt/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Demasiados pedidos ou quota | Tenta de novo mais tarde; olha o uso do plano |
 
 ## Mal-entendidos frequentes
@@ -69,9 +70,9 @@ Diferem muito:
 
 | Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| command not found: codex | Não instalado ou PATH | [Instalar CLI](/guide/getting-started/install-cli/) |
-| Config parse error | Sintaxe TOML/YAML | [Configuração do CLI](/guide/cli/configuration/) |
-| Permission denied (write) | Sandbox ou Aprovação rejeitada | [Aprovações e Sandbox](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | Não instalado ou PATH | [Instalar CLI](/pt/guide/getting-started/install-cli/) |
+| Config parse error | Sintaxe TOML/YAML | [Configuração do CLI](/pt/guide/cli/configuration/) |
+| Permission denied (write) | Sandbox ou Aprovação rejeitada | [Aprovações e Sandbox](/pt/guide/cli/approvals-and-sandbox/) |
 | Código de saída diferente de zero (exec) | Falha de Tarefa ou critério de finalização não cumprido | Olha logs de stderr; endurece o Prompt |
 
 ## Classifica primeiro
@@ -111,23 +112,23 @@ Se ainda não souberes aonde olhar, usa esta página para classificar o problema
 | Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
 | User rejected tool call | Tu ou a política rejeitastes a operação | Confirma se deveria Aprovar-se; ou muda a Tarefa |
-| Sandbox violation | Caminho de escrita ou comando fora de alcance | [Sandbox e rede](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Saída à rede proibida | Cloud: [Acesso à Internet](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | Caminho de escrita ou comando fora de alcance | [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/) |
+| Network access denied | Saída à rede proibida | Cloud: [Acesso à Internet](/pt/guide/web-and-cloud/internet-access/) |
 
 ## Cloud e GitHub
 
 | Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| Repository access denied | Alcance OAuth insuficiente | [Ligar o GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Nome do repo, Permissão, rede | [Diagnóstico Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Nome incorreto ou alcance | [Secrets e variáveis](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Proteção de branches | [Criar PR](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Alcance OAuth insuficiente | [Ligar o GitHub](/pt/guide/web-and-cloud/connect-github/) |
+| Clone failed | Nome do repo, Permissão, rede | [Diagnóstico Cloud](/pt/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Nome incorreto ou alcance | [Secrets e variáveis](/pt/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Proteção de branches | [Criar PR](/pt/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP e extensões
 
 | Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| MCP server failed to start | Caminho do comando, dependências que faltam | [Ligar MCP](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | Caminho do comando, dependências que faltam | [Ligar MCP](/pt/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | API externa lenta ou caída | Retry; olhar logs de MCP |
 | Unknown tool | Configuração e versão do servidor inconsistentes | Reiniciar a sessão; atualizar a configuração |
 
@@ -135,14 +136,14 @@ Se ainda não souberes aonde olhar, usa esta página para classificar o problema
 
 | Mensagem ou fenómeno | Possível causa | Passo seguinte |
 |---|---|---|
-| Context length exceeded | Conversação ou ficheiros @ demasiado grandes | [Compactação](/guide/context/compaction/) · reduzir o alcance |
-| Model not available | Região ou plano não o suportam | [Modelos e raciocínio](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Conversação ou ficheiros @ demasiado grandes | [Compactação](/pt/guide/context/compaction/) · reduzir o alcance |
+| Model not available | Região ou plano não o suportam | [Modelos e raciocínio](/pt/guide/foundations/models-and-reasoning/) |
 
 ## Como usar esta página
 
 1. **Copia a frase-chave** para a pesquisa do cliente ou deste manual
 2. Salta pela tabela à página temática e executa a lista de verificação
-3. Se continuar sem resolver: conserva o log completo e olha [Recursos oficiais](/guide/reference/official-resources/)
+3. Se continuar sem resolver: conserva o log completo e olha [Recursos oficiais](/pt/guide/reference/official-resources/)
 
 ## Ao reportar um problema, isto ajuda mais
 

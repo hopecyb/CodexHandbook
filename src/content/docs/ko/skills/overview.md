@@ -3,9 +3,10 @@ title: Skills 개요
 description: SKILL.md로 재사용 가능한 워크플로를 Codex에 가르칩니다. 한 번 쓰고, 필요할 때 호출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75eaa78
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Skill**은 `SKILL.md`를 담은 디렉터리(스크립트와 참고 자료를 추가할 수 있음)로, 고정된 절차를 Codex가 **자동 또는 명시적으로 호출**할 수 있는 능력으로 패키징한 것입니다.
@@ -81,7 +82,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 4. 결정성이 필요할 때 `scripts/` 추가
 5. `.agents/skills/`에 커밋하고 팀에 PR
 
-실습: [첫 Skill 만들기](/skills/create-your-first-skill/)
+실습: [첫 Skill 만들기](/ko/skills/create-your-first-skill/)
 
 ## 흔한 혼란
 

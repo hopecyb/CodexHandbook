@@ -1,143 +1,100 @@
 ---
-title: MCP-Überblick
-description: Model Context Protocol — Codex sicher mit externen Werkzeugen und Datenquellen verbinden.
+title: MCP im Überblick
+description: Verstehe MCP-Client, Server, Werkzeuge, Authentifizierung und Sicherheitsgrenzen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7b8726f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP ist ein Standardanschluss für externe Werkzeuge und Datenquellen.
+MCP wandelt den Wunsch eines Modells nach einer externen Funktion in einen strukturierten Werkzeugaufruf um. Es eignet sich zur Einbindung von Drittanbieterdokumentation, Browsern, Figma, Ticketsystemen und internen Diensten.
 
-Soll Codex Jira abfragen, Wissensbasen lesen, interne APIs nutzen oder kontrollierte Werkzeuge bedienen, braucht es „wie verbinden, was aufrufbar, wie Berechtigungen steuern“. **MCP (Model Context Protocol)** adressiert genau das.
-
-## Inhalt
-
-- MCP löst „Codex erreicht echte Systeme nicht“
-- Teilung mit Skill und Plugin
-- Warum MCP in Sicherheits-Governance gehört
-
-## Was es nicht ist
-
-MCP ist nicht:
-
-- Konten/Passwörter direkt an Codex kleben
-- Das Modell „verbindet, wie es will“
-- Jeder Drittanbieterdienst standardmäßig vertrauenswürdig
-
-Es ist eine normierte Anschlussweise — steuerbarer und auditierbarer.
-
-## Kernkonzepte
+## Aufrufkette
 
 ```text
-Codex  ←→  MCP-Client  ←→  MCP-Server  ←→  externes System
+Codex in einer Aufgabe
+  -> MCP-Client (vom Codex-Host bereitgestellt)
+  -> MCP-Server (lokaler Prozess oder Remote-Dienst)
+  -> Externes System (Dokumentation, Design, Tickets, interne API)
+  -> Strukturiertes Ergebnis zurück an die Aufgabe
 ```
 
-| Komponente | Rolle |
+| Komponente | Zuständigkeit | Nicht zuständig für |
+|---|---|---|
+| Codex-Host | Konfiguration lesen, Server verbinden und Agent Werkzeuge bereitstellen | Fachliche Berechtigungen des Servers definieren |
+| MCP-Server | Werkzeuge, Authentifizierung, Parameter und strukturierte Ergebnisse definieren | Werkzeugsicherheit automatisch garantieren |
+| Skill | Festlegen, wann und in welchen Schritten Werkzeuge verwendet werden | Netzwerkverbindung herstellen |
+| Plugin | Skills, Connectoren, MCP und weitere Funktionen bündeln und verteilen | Kein alternatives Werkzeugprotokoll |
+
+## Aktuell unterstützte Serverarten
+
+### STDIO
+
+Codex startet einen lokalen Prozess und kommuniziert über Standardein- und -ausgabe. Geeignet ist dies für lokale Entwicklungswerkzeuge und Dienste, die nur auf dem aktuellen Rechner laufen.
+
+Wichtigstes Risiko: Der Prozess erbt die lokale Ausführungsumgebung. Prüfe Befehl, Abhängigkeitsquellen und weitergereichte Umgebungsvariablen.
+
+### Streamable HTTP
+
+Codex verbindet eine Remote-Adresse. Die aktuelle offizielle Dokumentation bestätigt Unterstützung für Bearer token, OAuth und die ChatGPT-Sitzungsauthentifizierung vertrauenswürdiger Erstanbieterserver.
+
+Wichtigstes Risiko: Der Remote-Dienst erhält Werkzeugparameter. Prüfe TLS, Identität, Protokollierung, Datenaufbewahrung und Werkzeugberechtigungen.
+
+## Kombination von MCP, Skill und Plugin
+
+Beispiel „Wöchentlich Tickets hoher Priorität prüfen“:
+
+| Ebene | Inhalt |
 |---|---|
-| MCP-Server | Exponiert Werkzeuge (z. B. `search_issues`, `get_user`) |
-| Konfiguration | Wie Codex den Server startet/verbindet |
-| Werkzeugaufruf | Modell wählt Werkzeuge in der Aufgabe — oft mit deiner Freigabe |
+| MCP | Werkzeuge wie `search_issues` und `get_issue` bereitstellen |
+| Skill | Filterkriterien, Nachweisanforderungen und Berichtsformat festlegen |
+| Plugin | Skill, Connector und MCP-Definition für die Teaminstallation bündeln |
+| Scheduled task | Bereits verifizierte Aufgabe zu einer festen Zeit ausführen |
 
-MCP liefert **keine** Geschäftslogik. Der Server implementiert Lese-/Schreibregeln; Codex wählt in der Aufgabe das Werkzeug.
+Dies sind voneinander unabhängige Zuständigkeiten, keine Aufstiegsleiter. Die vollständige Beziehung zeigt die [Karte der Erweiterungsfunktionen](/de/skills/capability-map/).
 
-## Position von MCP
+## Wann sich MCP lohnt
 
-Skill ≈ Bedienungsanleitung; MCP ≈ Werkzeugschnittstelle.
-
-- Skill erklärt Schritte
-- MCP reicht externe Werkzeuge an Codex
-
-Oft zusammen:  
-Skill definiert den Ablauf; ein Schritt ruft ein MCP-Werkzeug auf.
-
-## Bezug zu Skill und Plugin
-
-| | MCP | Skill | Plugin |
-|---|---|---|---|
-| Wesen | Werkzeugprotokoll | Workflow-Anleitung | Verteilungspaket |
-| Typischer Inhalt | API-Kapselung | Schritte und Normen | Skill + MCP + App-Connector |
-| Wer pflegt | du oder Drittanbieter-Server | du oder Team | Publisher |
-
-Häufig: **Skill definiert Ablauf**, Schritt **ruft MCP-Werkzeug** für Ticketliste.
-
-## Wann MCP erwägen
-
-Nur Repo-Dateien lesen/schreiben → meist kein MCP.  
-Systeme „außerhalb des Repos“ → MCP, API oder andere kontrollierte Integration prüfen.
-
-## Einsatzfälle
-
-| MCP geeignet | MCP ungeeignet |
+| Lohnend | Vorerst nicht lohnend |
 |---|---|
-| Linear/Jira-Tickets abfragen | Reine Repo-Codeänderungen |
-| Docs/Wissensbasis nur lesen | Einfaches `curl` ohne Wiederverwendung reicht |
-| Kontrollierte interne Tools | Schreibzugriff auf Produktions-DB ohne Audit |
+| Wiederholte Abfragen desselben externen Systems | Einmalige Abfrage einer öffentlichen Website |
+| Strukturierte Werkzeugparameter und Ergebnisse erforderlich | Repository-Dateioperationen reichen aus |
+| OAuth oder granulare Werkzeugkontrolle nötig | Nur Schreibschnittstelle mit hohen Berechtigungen, keine Testumgebung |
+| Team soll die Verbindung einheitlich wiederverwenden | Serverquelle ist nicht prüfbar |
 
-## Häufige Irrtümer
+## Sicherheitsstufen
 
-### 1. Mit MCP kann Codex alles
+1. **Schreibgeschützter Test:** Öffentliche Dokumentation oder Testmandant; nur Suchwerkzeuge aktivieren.
+2. **Teamverifikation:** Projekt, Rolle und Werkzeug-Allowlist begrenzen; Fehler und Laufzeit protokollieren.
+3. **Begrenztes Schreiben:** Kleine umkehrbare Schreibaktionen mit menschlicher Genehmigung.
+4. **Governance-Betrieb:** Autorisierung widerrufbar, Konfiguration prüfbar, Protokolle bereinigt und Umgebungen isoliert.
 
-Abhängig von exponierten Werkzeugen und deren Erlaubnissen.
+Schreibe Tokens nicht in Prompt, Git oder statische HTTP-Header. Verwende vorzugsweise OAuth, `bearer_token_env_var` oder weitergereichte Umgebungsvariablen.
 
-### 2. MCP ist nur Technik, keine Sicherheit
+## Checkliste vor der Verbindung
 
-Sobald echte Systeme verbunden sind:
+- [ ] Serverquelle, Version und Startbefehl sind prüfbar
+- [ ] Werkzeugliste unterscheidet Lese- und Schreibzugriffe
+- [ ] Testmandant oder Konto mit minimalen Berechtigungen wird verwendet
+- [ ] Es ist bekannt, welche Parameter und Ergebnisse in Remote-Protokolle gelangen
+- [ ] Schreibzugriffe besitzen Genehmigungs-, Rückgängig- und Auditpfad
+- [ ] Das Team weiß, wie der Server deaktiviert und die Autorisierung widerrufen wird
 
-- Berechtigung
-- Datenexposition
-- Audit
-- Lieferkette
+## Nächster Schritt
 
-### 3. Mit MCP entfallen Skill und Doku
+Öffne [Einen MCP-Server verbinden](/de/skills/mcp/connect-an-mcp-server/), verbinde zuerst einen schreibgeschützten Server und verifiziere ihn mit `codex mcp list` und `/mcp`.
 
-Nein. MCP = „kann Werkzeuge aufrufen“; nicht „nach welchem Ablauf / wann nicht“.
+## Offizielle Quellen
 
-## Sicherheitsgrenzen
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
-- **Least Privilege**: nur lesen, Projekt begrenzt, IP begrenzt
-- **Credentials**: OAuth oder Kurzzeit-Token — nicht in Prompt, nicht in Git
-- **Menschliche Freigabe**: Schreibaktionen, Massenlöschen, externe Nachrichten → Überprüfung
-- **Lieferkette**: Nur vertrauenswürdige Server; Drittanbieter-MCP-Quellcode prüfen
-
-Enterprise: Roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
-
-## Anbindungsreihenfolge
-
-1. Offizielle MCP-Doku: aktuelles Client-Konfigformat
-2. Mit **nur-lesen**-Beispielserver (offiziell/Community) starten
-3. In Testprojekt einzelnen Werkzeugaufruf prüfen
-4. Dann echte Systeme + Runbook
-
-Schritte: [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/)
-
-## Mit nur Lesen beginnen
-
-Sobald MCP ein echtes System berührt, gehört es zur Kette aus Berechtigung, Daten und Audit. Sicherer ist: erst Testdaten, dann Teamvalidierung nur lesend, dann wenige rücksetzbare Schreibaktionen mit Freigabe, später Rollen, Audit und widerrufbare Auth.
-
-Kommt der Wert eines Servers aus Schreibrechten, trennen Sie zuerst Lese- und Schreibwerkzeuge und geben Sie ihnen unterschiedliche Freigaben.
-
-## Checkliste vor der Anbindung
-
-- Welche Werkzeuge werden exponiert? Gibt es Schreibaktionen?
-- Wo liegen Zugangsdaten, und sind sie pro Person/Projekt/Umgebung widerrufbar?
-- Können Logs Kundendaten, interne Dokumente oder Secret-Fragmente enthalten?
-- Wurde ein einzelner Toolaufruf im Testprojekt geprüft?
-- Haben Schreibaktionen Bestätigung, Rollback und Auditlog?
-
-## Häufige Fehler
-
-- MCP-Server „zur Entwicklung“ zu hohe Berechtigung
-- MCP als Skill-Ersatz (Ablauf bleibt in Skill oder AGENTS.md)
-- Konfigänderungen ohne Code-Review
-
-## Quellen
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- OpenAI Codex MCP-Dokumentation
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Nachprüfhinweis:** Konzeptuell plus „Client-Konfigformat“ und Freigabe-Verhalten; bis 2026-07-26 reichen öffentliche Quellen nicht für volle Freigabe.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** ChatGPT-Desktop-App / Codex CLI / IDE; ChatGPT Web verwendet Remote-MCP-Werkzeuge über Plugins
+
+**Zuletzt geprüft:** 2026-08-25

@@ -3,9 +3,10 @@ title: 生成物の検証
 description: Codex が新規作成またはエクスポートしたファイル、レポート、ビルド成果物を体系的に検証する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -50,7 +51,7 @@ Codex が新しく作ったファイルだからといって、そのまま使�
 5. 判断：受け入れ / 部分修正 / 破棄してやり直し
 ```
 
-方法：[成果物の検証](/guide/quality/verify-artifacts/)、[完了の定義](/guide/quality/definition-of-done/)
+方法：[成果物の検証](/ja/guide/quality/verify-artifacts/)、[完了の定義](/ja/guide/quality/definition-of-done/)
 
 ## よくある誤解
 
@@ -111,7 +112,7 @@ Codex が新しく作ったファイルだからといって、そのまま使�
 - [ ] secrets や余分な生成ディレクトリがない
 
 ## 参考資料
-- [不確実性の扱い](/guide/quality/handle-uncertainty/)
+- [不確実性の扱い](/ja/guide/quality/handle-uncertainty/)
 ---
 
 **状態：** verified  

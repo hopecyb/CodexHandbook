@@ -1,58 +1,70 @@
 ---
-title: Web y Cloud (resumen)
-description: Navegación de entrada para Tareas Cloud, entornos, Secrets y revisión de PR.
-sidebar:
-  order: 13
+title:  Web y Cloud (resumen)
+description:  Navegación de entrada para Tareas Cloud, entornos, Secrets y revisión de PR.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5861c62
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 13
 ---
 
-Cloud encaja para correr Tareas en un **entorno remoto estandarizado**, conectar GitHub y producir PRs. Antes de empezar, mira [Local frente a Cloud](/guide/foundations/local-vs-cloud/) y lee la [documentación oficial de Cloud](https://developers.openai.com/codex).
+Codex Cloud runs coding tasks in isolated cloud environments. It is useful for long background tasks, parallel attempts, and work started from GitHub, GitLab (Beta), Linear, or Slack. It does not remotely control your computer or automatically see local unpushed files.
 
-La Tarea no corre en tu ordenador: sigue en un entorno remoto.
+## Cloud task lifecycle
 
-Escenarios habituales:
+```text
+Sign in with ChatGPT
+  → connect GitHub / GitLab
+  → create a repository environment
+  → check out the selected branch or commit
+  → run the setup script to install dependencies
+  → let the Agent modify and verify within the network policy
+  → inspect the summary, logs, and diff
+  → follow up or create a PR
+  → merge after human review and CI
+```
 
-- La Tarea tarda mucho
-- No quieres vigilar la máquina local todo el tiempo
-- Necesitas conectar directamente el repo remoto y el flujo de PR
+Cloud provides isolation, reproducibility, and parallelism. It does not remove review.
 
-Cloud no tiene por qué ser lo primero que tocas, pero al empezar con repos remotos, PRs y Tareas largas asíncronas casi siempre aparece.
+## Local or Cloud
 
-## Navegación del capítulo
-
-| Fase | Página |
+| Choose local | Choose Cloud |
 |---|---|
-| Conexión | [Conectar GitHub](/guide/web-and-cloud/connect-github/) |
-| Entorno | [Entorno Cloud](/guide/web-and-cloud/cloud-environments/) |
-| Credenciales | [Secrets y variables de entorno](/guide/web-and-cloud/secrets-and-variables/) |
-| Entrega | [Crear Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Calidad | [Revisión de código en Cloud](/guide/web-and-cloud/code-review/) |
-| Colaboración | [Delegar y hacer seguimiento](/guide/web-and-cloud/delegate-and-follow-up/) |
-| Red | [Acceso a internet](/guide/web-and-cloud/internet-access/) |
-| Diagnóstico | [Diagnóstico de Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Integración | [Integración con GitHub](/guide/integrations/github/) |
+| Work depends on uncommitted files or local services | Inputs are in a remote repository |
+| You must interact with a process in real time | The task can run independently in the background |
+| The change is small and fast | Work requires multiple build/test steps or parallel attempts |
+| A required tool exists only on this computer | Scripts can recreate the environment |
 
-Tareas Cloud desde la App de escritorio: [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/). Delegar desde el IDE: [Flujo de Tarea Cloud en el IDE](/guide/ide/cloud-task-workflow/).
+Read [Local and cloud execution](/es/guide/foundations/local-vs-cloud/) before choosing.
 
-## Orden de lectura sugerido
+## Recommended learning order
 
-La primera vez con Cloud, lee en este orden:
+1. [Connect GitHub](/es/guide/web-and-cloud/connect-github/): authorize only required repositories.
+2. [Cloud environments](/es/guide/web-and-cloud/cloud-environments/): pin tools, versions, and setup.
+3. [Secrets and environment variables](/es/guide/web-and-cloud/secrets-and-variables/): separate setup-only Secrets from ordinary variables.
+4. [Internet access](/es/guide/web-and-cloud/internet-access/): Agent access is off by default; open only required domains and methods.
+5. [Delegate and follow up](/es/guide/web-and-cloud/delegate-and-follow-up/): send goals, constraints, and acceptance criteria.
+6. [Create pull requests](/es/guide/web-and-cloud/create-pull-requests/) and [Code review](/es/guide/web-and-cloud/code-review/): turn a result into a mergeable deliverable.
+7. [Cloud troubleshooting](/es/guide/web-and-cloud/troubleshooting/): diagnose repository, setup, network, and task layers.
 
-1. [Conectar GitHub](/guide/web-and-cloud/connect-github/)
-2. [Secrets y variables de entorno](/guide/web-and-cloud/secrets-and-variables/)
-3. PR, revisión de código y flujo de colaboración
+When starting from the desktop App or IDE, also read [Local and cloud tasks](/es/guide/desktop-app/local-and-cloud-tasks/) or [Cloud tasks from the IDE](/es/guide/ide/cloud-task-workflow/).
 
-Cuando tengas claros «cómo se conecta el repo, cómo obtiene Permisos y cómo trata los secretos», los detalles de automatización cuestan menos.
+## First exercise
 
-Cloud sirve para Tareas de repo remoto que siguen corriendo lejos de tu máquina, no solo para «mover el flujo local a la web».
+Use a test repository with no production credentials. Ask Codex only to fix documentation links and run the link checker. Success means the environment starts, the diff contains only expected files, command output is visible, and the result can become a PR. A page showing “complete” is not sufficient acceptance evidence.
+
+## Official sources
+
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** Cloud  
-**Nota de revisión:** Como página de navegación de Cloud sigue teniendo valor estructural, pero depende de capacidades muy volátiles (conectar GitHub, Secrets, PR, seguimiento móvil, acceso a red); hasta completar página a página la documentación oficial actual de Cloud, conviene marcarla como `outdated`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

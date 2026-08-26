@@ -3,9 +3,10 @@ title: CI/CD
 description: 継続統合とリリースフローに Codex を接続——まず低リスク自動化から。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex を CI/CD に接続するとき、よくある問題は：
@@ -16,7 +17,7 @@ Codex を CI/CD に接続するとき、よくある問題は：
 
 ## 本グループの入口
 
-- [コードレビュー自動化](/guide/developer-platform/ci-cd/code-review-automation/)
+- [コードレビュー自動化](/ja/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## 本グループの内容
 

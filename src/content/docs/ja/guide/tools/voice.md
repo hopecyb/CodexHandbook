@@ -3,9 +3,10 @@ title: 音声入力と出力
 description: 音声で Codex とやり取りするシナリオ、制限、プライバシー上の注意。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -28,7 +29,7 @@ sidebar:
 | モバイルでの短いフォローアップ | API key、パスワードの読み上げ |
 | アクセシビリティのニーズ | 検索可能で diff 可能な仕様ドキュメント |
 
-口述後は、Codex に**理解の復唱**または文字版の計画生成をさせ、確認してから進めましょう。[計画の依頼](/prompts/ask-for-a-plan/) を参照。
+口述後は、Codex に**理解の復唱**または文字版の計画生成をさせ、確認してから進めましょう。[計画の依頼](/ja/prompts/ask-for-a-plan/) を参照。
 
 ## 音声が向いていること
 
@@ -93,7 +94,7 @@ sidebar:
 
 ## マルチモーダルとの関係
 
-- **画像入力**：デザイン稿、スクリーンショット → [画像プロンプト](/prompts/prompting-with-images/)
+- **画像入力**：デザイン稿、スクリーンショット → [画像プロンプト](/ja/prompts/prompting-with-images/)
 - **音声入力**：本ページ
 - **出力**：主にコード、ファイル、文字 diff。音声要約はレビューの代替にならない
 

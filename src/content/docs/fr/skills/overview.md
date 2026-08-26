@@ -3,9 +3,10 @@ title: "Vue d'ensemble des Skills"
 description: Enseigner des workflows réutilisables à Codex via SKILL.md — écrire une fois, invoquer à la demande.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75eaa78
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Un **Skill** est un répertoire contenant `SKILL.md` (scripts et références optionnels), qui empaquette un flux fixe en capacité **appelable automatiquement ou explicitement** par Codex.
@@ -81,7 +82,7 @@ Bien écrire `description` :
 4. ajouter `scripts/` si besoin de déterminisme
 5. commit dans `.agents/skills/` et PR équipe
 
-Exercice : [Créer votre premier Skill](/skills/create-your-first-skill/)
+Exercice : [Créer votre premier Skill](/fr/skills/create-your-first-skill/)
 
 ## Confusions courantes
 

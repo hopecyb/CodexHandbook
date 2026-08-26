@@ -3,9 +3,10 @@ title: 파일과 폴더 컨텍스트
 description: 관련 파일을 지정하고 불필요한 노이즈를 피합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bd2e62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---

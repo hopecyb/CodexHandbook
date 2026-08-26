@@ -3,9 +3,10 @@ title: 最初のタスク
 description: 明確なプロンプトで小さな変更を完了し、結果の確認方法を学ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a9bcbce
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 最初のタスク
@@ -48,9 +49,9 @@ translated_at: 2026-07-28
 
 ## 5. 次のステップ
 
-- [プロンプトの基礎](/prompts/basics/)
-- [検証](/guide/verification/)
-- [ここから始める](/guide/start-here/)
+- [プロンプトの基礎](/ja/prompts/basics/)
+- [検証](/ja/guide/verification/)
+- [ここから始める](/ja/guide/start-here/)
 
 ---
 

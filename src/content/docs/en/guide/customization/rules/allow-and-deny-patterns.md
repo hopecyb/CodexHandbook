@@ -3,9 +3,10 @@ title: Allow and Deny Rules
 description: Constrain what the Agent can run with command and path rules—personal habits and team bottom lines.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ Their value is mainly twofold:
 | Paths | Deny writing `../`, deny reading `~/.ssh` |
 | Network | Deny outbound or allow only registry domains |
 
-Compare with [Permission Matrix](/guide/reference/permission-matrix/): rules are **configurable** enforcement; the matrix describes **typical defaults**.
+Compare with [Permission Matrix](/en/guide/reference/permission-matrix/): rules are **configurable** enforcement; the matrix describes **typical defaults**.
 
 ## Recommended Layering
 

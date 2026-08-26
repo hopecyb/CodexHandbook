@@ -3,9 +3,10 @@ title: À qui s'adresse ce handbook
 description: Comment les débutants, créateurs, développeurs et équipes peuvent utiliser ce handbook.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 41e8ab8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
@@ -29,7 +30,7 @@ Le texte principal est rédigé pour des **lecteurs peu familiers avec le termin
 - Un dépôt de scripts que vous pouvez déployer en production sans Vérification
 - Un substitut aux politiques internes de sécurité et de conformité de votre organisation
 
-Étape suivante : [Choisir votre parcours](/guide/start-here/choose-your-path/).
+Étape suivante : [Choisir votre parcours](/fr/guide/start-here/choose-your-path/).
 
 ---
 

@@ -3,9 +3,10 @@ title: 効果的なプロジェクト指示の書き方
 description: AGENTS.md 執筆チェックリスト——短く、硬く、実行可能に、検証可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ sidebar:
 
 ### 1. ハード制約を前に
 
-「必須」「禁止」をファイル前半に。コンテキストが限られるとき、モデルは冒頭を重く扱う——[コンテキスト優先順位](/guide/context/context-priority/) と同じ論理。
+「必須」「禁止」をファイル前半に。コンテキストが限られるとき、モデルは冒頭を重く扱う——[コンテキスト優先順位](/ja/guide/context/context-priority/) と同じ論理。
 
 ### 2. コマンドはコピー可能に
 
@@ -139,9 +140,9 @@ pnpm test --filter @app/web
 
 ## 関連読み物
 
-- [プロジェクト説明](/guide/customization/project-instructions/)
-- [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
-- [完了の定義](/prompts/define-done/)
+- [プロジェクト説明](/ja/guide/customization/project-instructions/)
+- [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
+- [完了の定義](/ja/prompts/define-done/)
 
 ## 一度のタスクからプロジェクトルールへ
 

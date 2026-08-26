@@ -3,9 +3,10 @@ title: Phối hợp nhiều Agent
 description: Khám phá song song, phân công thực thi và gộp kết quả — khi nào tách, cách nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều Agent phù hợp bài toán con song song được, ít gắn kết; không phù hợp cùng sửa một tệp khi không ai điều phối.
@@ -18,7 +19,7 @@ Nhiều Agent phù hợp bài toán con song song được, ít gắn kết; kh�
 | Một chạy test, một viết tài liệu | Trạng thái dùng chung có thể đổi mà không khóa |
 | Khám phá nhiều phương án triển khai | Phụ thuộc tuần tự mạnh chưa làm rõ |
 
-Năng lực sản phẩm xem [Agent song song](/guide/desktop-app/parallel-agents/), [Subagent](/guide/agent-work/subagents/).
+Năng lực sản phẩm xem [Agent song song](/vi/guide/desktop-app/parallel-agents/), [Subagent](/vi/guide/agent-work/subagents/).
 
 ## Mẫu cộng tác
 
@@ -36,11 +37,11 @@ Bạn: Chọn một, rồi mở một Agent duy nhất thực thi
 Agent khám phá → xuất kế hoạch → Agent thực thi (Thread mới, kèm tóm tắt kế hoạch)
 ```
 
-Dùng [bàn giao và tiếp tục](/guide/agent-work/handoff-and-resume/) để truyền tóm tắt có cấu trúc; đừng dán cả đoạn chat.
+Dùng [bàn giao và tiếp tục](/vi/guide/agent-work/handoff-and-resume/) để truyền tóm tắt có cấu trúc; đừng dán cả đoạn chat.
 
 ### Mẫu C: Cô lập bằng worktree
 
-Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/guide/desktop-app/worktrees/) khác nhau; cuối cùng người gộp.
+Các Agent khác nhau sửa nhánh khác nhau trên [git worktree](/vi/guide/desktop-app/worktrees/) khác nhau; cuối cùng người gộp.
 
 ## Quy tắc phối hợp (nên ghi vào AGENTS.md)
 

@@ -3,86 +3,40 @@ title: Chọn client Codex
 description: Lựa chọn lần đầu giữa App, CLI, IDE, Cloud.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 960d5d3
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Lần đầu thấy các từ `App / CLI / IDE / Cloud`, câu hỏi phổ biến là: rốt cuộc nên dùng cái nào.
+Start with where most of the work happens:
 
-Lần chọn đầu không cần nghĩ nặng. Bắt đầu từ một lối vào dễ bắt tay trước — phía sau bổ sung cái khác cũng được.
-
-## Chọn trực tiếp
-
-Nếu giờ không có thiên hướng mạnh, có thể chọn như sau:
-
-- **Lần đầu dùng**: chọn Desktop App
-- **Bạn vốn dùng terminal hàng ngày**: chọn CLI
-- **Bạn chủ yếu viết mã trong VS Code / JetBrains**: chọn phần mở rộng IDE
-- **Bạn đã rõ cần nối kho đám mây GitHub hoặc chạy tác vụ dài**: xem Cloud
-
-## Các lối vào này lần lượt là gì
-
-| Lối vào | Có thể hiểu trực tiếp là |
+| You mainly work in | Start here |
 |---|---|
-| Desktop App | Bảng điều khiển đồ họa — phù hợp xem tác vụ, xem Diff, bấm phê duyệt |
-| CLI | Codex trong terminal — phù hợp người dùng dòng lệnh |
-| Phần mở rộng IDE | Trợ lý nhúng trong trình soạn thảo — phù hợp vừa xem mã vừa sửa |
-| Cloud | Cách chạy tác vụ từ xa — phù hợp cộng tác kho và tác vụ dài |
+| The desktop, managing projects, files, and multiple tasks | **ChatGPT desktop App** |
+| A terminal, running Git, tests, and scripts | **Codex CLI** |
+| VS Code, a compatible editor, Xcode, or JetBrains | **IDE integration** |
+| A connected remote repository and isolated environment | **Codex Cloud** |
 
-## Chọn theo tình huống hiện tại
+If this is your first time and you have no strong preference, start with the desktop App. It makes tasks, files, diffs, and approvals easier to see. This choice is not permanent: one workflow can start in the IDE, use the CLI for verification, and continue a long task in the desktop App or Cloud.
 
-| Nếu bạn… | Chọn |
-|---|---|
-| Lần đầu dùng, muốn thấy rõ Diff và rà soát | **Desktop App** |
-| Quen terminal, cần viết script | **CLI** |
-| Chủ yếu sửa mã trong trình soạn thảo | **Phần mở rộng IDE** |
-| Cần nối môi trường đám mây GitHub / tác vụ dài | **Cloud** (đọc tổng quan trước) |
+For the complete decision diagram, combined workflows, and verification steps, read [Choose a Codex client](/vi/guide/choose-your-client/). For a feature-by-feature comparison, see [Feature comparison](/vi/guide/reference/feature-comparison/).
 
-## Điểm xuất phát phổ biến của Desktop App
+Then continue to the relevant setup page:
 
-Với người mới, Desktop App có vài lợi ích rõ:
-
-- Dễ thấy hơn nó đã làm gì
-- Khi nào nó xin quyền thì một nhìn là rõ
-- Các khái niệm Diff, tác vụ, dự án trực quan hơn
-- Khi lỗi cũng dễ dừng lại kiểm tra hơn
-
-Nếu bạn không thiên về terminal rõ ràng, dùng Desktop App thường nhẹ hơn.
-
-## Hiểu nhầm thường gặp
-
-### 1. Bốn lối vào này là bốn sản phẩm hoàn toàn khác nhau
-
-Chúng vẫn dùng cùng một bộ năng lực — khác biệt chính ở cách thao tác và tình huống phù hợp.
-
-### 2. Lần đầu phải chọn đúng một phát, không thì sau này rất phiền
-
-Lần chọn đầu chỉ là điểm xuất phát, không phải quyết định cả đời.
-
-### 3. Sau này tôi chỉ được cố định một lối vào
-
-Nhiều người phía sau phối hợp như sau:
-
-- Hàng ngày dùng Desktop App xem tác vụ và rà soát thay đổi
-- Cần thao tác hàng loạt thì dùng CLI
-- Khi chủ yếu viết mã thì chuyển sang phần mở rộng IDE
-
-## Thứ tự bắt đầu
-
-1. Cài trước [Desktop App](/guide/getting-started/install-desktop-app/)
-2. Chạy một vòng [tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
-3. Dùng đã quen rồi mới cân nhắc CLI hoặc IDE
-
-Đối chiếu đầy đủ: [So sánh tính năng](/guide/reference/feature-comparison/). Có thể cài nhiều client; **giữ cùng một thư mục cho dự án luyện tập** để dễ đối chiếu trải nghiệm.
-
-Lần đầu đừng vội so «cái nào chuyên nghiệp hơn». Chọn lối vào dễ hiểu quy trình và kết quả nhất là được.
+- [Install the desktop App](/vi/guide/getting-started/install-desktop-app/)
+- [Install the CLI](/vi/guide/getting-started/install-cli/)
+- [Install an IDE integration](/vi/guide/getting-started/install-ide-extension/)
+- [Learn about Codex Cloud](/vi/guide/web-and-cloud/)
 
 ---
 
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện đồng thời trình bày Codex, quy trình desktop và lối vào nhà phát triển; kết luận trang này thuộc gợi ý chọn theo tình huống lần đầu bắt tay, và đã tránh viết App / CLI / IDE / Cloud như các sản phẩm loại trừ lẫn nhau hoặc năng lực hoàn toàn khác.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App / CLI / IDE / Cloud
+
+**Căn cứ kiểm chứng:** Compared with the four current official entry points. This page keeps only the quick beginner decision and navigation; detailed capabilities are maintained in the main client-selection and feature-comparison pages.
+
+**Kiểm chứng gần nhất:** 2026-08-26

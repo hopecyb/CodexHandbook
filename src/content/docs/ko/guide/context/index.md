@@ -5,9 +5,10 @@ sidebar:
   order: 16
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f647ae2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 컨텍스트는 모델이 「지금 효과적으로 쓸 수 있는 정보」입니다. 컨텍스트를 못 다루면, 아무리 좋은 프롬프트도 노이즈에 묻힙니다.
@@ -35,13 +36,13 @@ translated_at: 2026-07-28
 
 ## 이 장 탐색
 
-- [프로젝트 컨텍스트](/guide/context/project-context/)
-- [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
-- [대화 컨텍스트](/guide/context/conversation-context/)
-- [컨텍스트 우선순위](/guide/context/context-priority/)
-- [압축](/guide/context/compaction/)
-- [초점 유지](/guide/context/keep-context-focused/)
-- [민감 컨텍스트](/guide/context/sensitive-context/)
+- [프로젝트 컨텍스트](/ko/guide/context/project-context/)
+- [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
+- [대화 컨텍스트](/ko/guide/context/conversation-context/)
+- [컨텍스트 우선순위](/ko/guide/context/context-priority/)
+- [압축](/ko/guide/context/compaction/)
+- [초점 유지](/ko/guide/context/keep-context-focused/)
+- [민감 컨텍스트](/ko/guide/context/sensitive-context/)
 
 이 장이 반복해서 강조하는 것은: 컨텍스트는 “이번에 실제로 본 것”에 달려 있다는 점입니다. 알아야 한다고 생각해도 이번에 제공하지 않았다면 컨텍스트가 아닙니다.
 

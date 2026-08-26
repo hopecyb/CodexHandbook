@@ -3,9 +3,10 @@ title: 個人の好み
 description: ユーザーレベル設定、デフォルトモデル、UI の習慣——チーム約束をリポジトリを汚さない。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ sidebar:
 ## 内容
 
 - 個人層とプロジェクト層に何を置くか
-- [Profile](/guide/customization/configuration/profiles/) との連携でシーン切替
+- [Profile](/ja/guide/customization/configuration/profiles/) との連携でシーン切替
 - 個人の緩い設定がチームリポジトリに漏れないようにする
 
-優先順位の全体像：[カスタマイズ](/guide/customization/) · [スコープと優先順位](/guide/customization/agents-md/scope-and-precedence/)
+優先順位の全体像：[カスタマイズ](/ja/guide/customization/) · [スコープと優先順位](/ja/guide/customization/agents-md/scope-and-precedence/)
 
 ## なぜこの層を分けるか
 
@@ -39,10 +40,10 @@ sidebar:
 | 内容 | 例 |
 |---|---|
 | デフォルトモデルと推論段階 | 個人マシンの性能とプラン |
-| UI テーマ、フォント、通知 | デスクトップ App [設定](/guide/desktop-app/settings/) |
+| UI テーマ、フォント、通知 | デスクトップ App [設定](/ja/guide/desktop-app/settings/) |
 | 個人 MCP（私有ツール） | 本機 DB 読み取り専用（慎重に権限付与） |
 | 個人 Skill ライブラリパス | チーム Plugin と競合しない |
-| ターミナルエイリアス、`codex` 起動ディレクトリ習慣 | [CLI 設定](/guide/cli/configuration/) を参照 |
+| ターミナルエイリアス、`codex` 起動ディレクトリ習慣 | [CLI 設定](/ja/guide/cli/configuration/) を参照 |
 
 ## 個人層だけに置くべきでないチーム内容
 
@@ -89,7 +90,7 @@ sidebar:
 
 ## メモリ機能との関係
 
-製品が「メモリ」や永続好みを提供する場合は [メモリと永続コンテキスト](/guide/customization/memories-and-persistent-context/) を参照。メモリは安定した習慣向き。**プロジェクト固有の制約はリポジトリファイルが基準**です。
+製品が「メモリ」や永続好みを提供する場合は [メモリと永続コンテキスト](/ja/guide/customization/memories-and-persistent-context/) を参照。メモリは安定した習慣向き。**プロジェクト固有の制約はリポジトリファイルが基準**です。
 
 ## よくあるミス
 

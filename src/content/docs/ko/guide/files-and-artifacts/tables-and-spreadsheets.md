@@ -3,9 +3,10 @@ title: 표와 스프레드시트
 description: CSV, Excel과 표형 데이터의 읽기·정제·분석·보내기 — 구조와 인코딩을 깨지 않게.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ sidebar:
 검증: 앞 5행 출력 + 총 행 수
 ```
 
-컨텍스트: [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
+컨텍스트: [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 
 ## 왜 표 작업이 특히 몰래 틀리기 쉬운가
 
@@ -108,7 +109,7 @@ Python이면 `pandas`로 읽고 쓰고, Node면 `csv-parse` / `xlsx` 등 — `AG
 
 - 행 수·합계가 원천 데이터와 교차 검증되는지
 - Excel을 열어 날짜가 숫자로 취급되지 않았는지
-- [산출물 검증](/guide/quality/verify-artifacts/): 표본 대조
+- [산출물 검증](/ko/guide/quality/verify-artifacts/): 표본 대조
 
 표 작업에서는 열·타입·규칙·검증을 분명히 말하는 것이 더 중요합니다.
 
@@ -125,7 +126,7 @@ Python이면 `pandas`로 읽고 쓰고, Node면 `csv-parse` / `xlsx` 등 — `AG
 - [ ] 원본이 우연히 덮이지 않음(또는 변경이 diff에 보임)
 
 ## 참고 출처
-- [제약 정의](/prompts/constraints-and-boundaries/)
+- [제약 정의](/ko/prompts/constraints-and-boundaries/)
 ---
 
 **상태:** verified  

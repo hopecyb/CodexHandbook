@@ -1,187 +1,112 @@
 ---
-title: Hook-Konfigurationsbeispiele
-description: Anpassbare Hook-Konfig und Skript-Skelette — Secret-Scan, Audit-Log, Formatprüfung.
+title: Beispiele für Hook-Konfigurationen
+description: Implementiere mit einer echten hooks.json und einem Python-Skript aus der Standardbibliothek einen testbaren PreToolUse-Schutz.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5a86fd4
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Bei Hook-Beispielen zuerst klären, was sie verhindern sollen — dann an die eigene Umgebung anpassen.
+Dieses Kapitel enthält keine veralteten Beispielereignisse und Konfigurationsfelder mehr. Das Beispiel entspricht der aktuellen offiziellen Struktur von `hooks.json` und enthält ausführbare Tests.
 
-Kapitel mit **illustrativen** Konfigs und Skripten. Feldnamen und Pfade: [offizielle Doku](https://developers.openai.com/codex) und lokales `codex --help`; vor dem Kopieren in isoliertem Repo testen.
+Alle Dateien befinden sich unter [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
-Vorab: [Hooks-Überblick](/skills/hooks/hooks-overview/) · [Hook-Ereignistypen](/skills/hooks/hook-event-types/)
+## Ziel und Grenzen
 
-## Vor Nutzung den Scope klären
+Ziel: Vor der Werkzeugausführung ablehnen, wenn die Befehlseingabe für `Bash` oder `apply_patch` eine Testzeichenfolge enthält, die wie eine AWS Access Key ID aussieht.
 
-Keine „Standardantwort zum Blindkopieren“.  
-Drei Muster:
+Das Beispiel demonstriert ausschließlich Eingabe, Ausgabe und Teststruktur eines Hooks:
 
-- Nur aufzeichnen
-- Zuerst blockieren
-- Leichte Eingabeprüfung
+- Es ersetzt keinen professionellen Secret-Scanner
+- Der reguläre Ausdruck erzeugt Fehlalarme und übersieht Werte
+- Hosted tools werden nicht geprüft
+- Vollständige Werkzeugeingaben dürfen nicht protokolliert werden
 
-Zuerst Idee, dann ggf. erweitern.
-
-## Beispiel 1: Nach Werkzeugaufruf Audit-Log (nur lesen)
-
-**Ziel:** Wer wann welche Pfade geschrieben hat — ohne Secrets bei fehlgeschlagener Maskierung zu speichern.
-
-`hooks.json` (illustrativ):
+## 1. hooks.json konfigurieren
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.after",
-      "command": ".codex/hooks/audit-log.sh",
-      "timeout_ms": 500
-    }
-  ]
+  "description": "Block obvious secret-shaped strings before local writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/examples/hooks/secret-guard/pre_tool_use_guard.py\"",
+            "timeout": 3,
+            "statusMessage": "Checking tool input for secret-shaped strings"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
-`.codex/hooks/audit-log.sh`:
+Bei einer echten Verwendung im Repository liegt die Konfiguration normalerweise unter `.codex/hooks.json`, das Skript unter `.codex/hooks/`. Hier bleibt der Pfad unter examples erhalten, damit die vollständigen Materialien des Handbuch-Repositorys direkt verifiziert werden können.
 
-```bash
-#!/usr/bin/env bash
-# stdin: JSON-Payload (Struktur laut offizieller Doku)
-payload=$(cat)
-tool=$(echo "$payload" | jq -r '.tool // "unknown"')
-ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
-exit 0
-```
+## 2. Ausgabe bei Ablehnung
 
-**Abnahme:** Nach einem Dateischreiben eine Logzeile; Exit-Code immer 0.
-
-Nur Aufzeichnen, kein Verhaltenswechsel — niedrigstes Risiko, guter Start.
-
-## Beispiel 2: Vor Werkzeugaufruf vermutete Secrets blockieren
-
-**Ziel:** Diff oder Schreibinhalt matched AWS-Access-Key-Muster → `block`.
+Das Skript liest das Ereignis-JSON von stdin und prüft ausschließlich `tool_input.command`. Bei einem Treffer gibt es Folgendes aus:
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.before",
-      "command": ".codex/hooks/secret-scan.sh",
-      "on_failure": "block",
-      "timeout_ms": 300
-    }
-  ]
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Secret-shaped string blocked by example hook."
+  }
 }
 ```
 
-Kernlogik `secret-scan.sh` (illustrativ):
+Ohne Treffer endet es mit `0` und ohne Ausgabe. Normaler Text auf stdout erzeugt keine gültige `PreToolUse`-Entscheidung.
+
+## 3. Tests ausführen
 
 ```bash
-#!/usr/bin/env bash
-payload=$(cat)
-text=$(echo "$payload" | jq -r '.arguments // empty' 2>/dev/null)
-if echo "$text" | grep -qE 'AKIA[0-9A-Z]{16}'; then
-  echo "Blocked: possible AWS access key in tool arguments" >&2
-  exit 1
-fi
-exit 0
+python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-**Abnahme:** Teststring mit `AKIA` wird blockiert; normales `git status` geht durch.
+Erwartung: Drei Tests bestehen und decken einen normalen Befehl, einen vermuteten Schlüssel und ein `tool_input` ab, das kein Objekt ist.
 
-:::caution
-Regex-Scans haben Fehlalarme/Lücken — nur Ergänzung; echte Secrets über Secret Scanner und pre-commit, siehe [sensitiver Kontext](/guide/context/sensitive-context/).
-:::
-
-Solche Beispiele erst, wenn echte Aktionen gestoppt werden sollen. Direkt mit Block-Hooks starten erhöht den Debug-Aufwand.
-
-## Beispiel 3: Länge und Schlüsselwörter beim Prompt-Submit
-
-**Ziel:** Offensichtliche Versuche, Systemanweisungen zu überschreiben, ablehnen (vereinfacht).
+Du kannst ein Fixture auch manuell einspeisen:
 
 ```bash
-#!/usr/bin/env bash
-prompt=$(cat | jq -r '.prompt // empty')
-if [ "${#prompt}" -gt 50000 ]; then
-  echo "Prompt too long" >&2
-  exit 1
-fi
-if echo "$prompt" | grep -qi 'ignore previous instructions'; then
-  echo "Blocked: possible injection pattern" >&2
-  exit 1
-fi
-exit 0
+printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
+  | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-**Abnahme:** Überlänge und Treffer scheitern; normale Aufgaben gehen durch.
+Eine normale Eingabe erzeugt keine Ausgabe auf stdout.
 
-Mindestens:
+## 4. Im Projekt aktivieren
 
-- Eingabe lesen können
-- Klare Fehlermeldung
-- Normale Requests nicht massiv falsch treffen
+1. Lege Konfiguration und Skript im Ziel-Repository unter einem stabilen Pfad ab.
+2. Führe im isolierten Repository die Unit-Tests und einen echten normalen Befehl aus.
+3. Starte Codex und öffne `/hooks`, um Quelle und genaue Definition zu prüfen.
+4. Verifiziere nach dem Vertrauen separat „normaler Aufruf erlaubt“ und „Testzeichenfolge abgelehnt“.
+5. Prüfe nach jeder Skriptänderung erneut. Ein veränderter Hash setzt einen nicht verwalteten Hook wieder auf ausstehendes Vertrauen.
 
-## Mit Teamregeln aus einer Quelle
+## Von Hinweis zu Blockade wechseln
 
-Verbotene Befehlsteilstrings nach `tools/codex-policy.json` ziehen — Hook und [Befehlsregeln](/guide/customization/rules/command-rules/) lesen gemeinsam, Doppelpflege vermeiden.
+Produktionsteams beginnen normalerweise mit nicht blockierendem Audit oder zusätzlichem Kontext und wechseln erst später zu deny. Beantworte vorher mindestens:
 
-## Häufige Irrtümer
+- Decken Fixtures bekannte Fehlalarme ab?
+- Verstehen Benutzer einen Timeout oder Skriptabsturz?
+- Sichern CI oder serverseitige Richtlinien dieselbe Regel zusätzlich ab?
+- Sind Umgehung und Notfallwiederherstellung auditierbar?
 
-### 1. Läuft das Beispiel, kann es in Produktion
+## Offizielle Quelle
 
-Wert: Struktur und Idee — nicht Blind-Go-Live.
+- [OpenAI: Hooks configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
 
-### 2. Block-Hooks sind „reifere“ Log-Hooks
-
-Viele Teams starten mit Log, prüfen Fehlalarme und Performance, dann warn oder block.
-
-### 3. Beispiele sind nur Skript-Schreibstil
-
-Auch sehen:
-
-- An welches Ereignis gehängt
-- Welche Fehlschlag-Strategie
-- Kann das Team erklären, warum so gestoppt wird
-
-## Hook testen
-
-```bash
-# Skript mit Fixture (illustrativ)
-echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
-echo $?
-```
-
-## Typische Reihenfolge
-
-1. Read-only-Log
-2. Warn
-3. Block
-
-So trennst du „Logik richtig“ von „Team will wirklich blockieren“.
-
-Hook-Beispiele zum Lernen von Idee und Struktur — nicht 1:1 in Produktion.
-
-## Häufige Fehler
-
-- Skript ohne `chmod +x` → stilles Scheitern
-- `timeout_ms` zu kurz → Fehlblock
-- Log-Pfad nicht schreibbar → ganze Hook-Kette scheitert
-- Im Hook volles Payload per `curl` nach außen
-
-## Abnahme-Checkliste
-
-- [ ] Jeder Hook hat Fixture-Tests
-- [ ] Fehlschlag-Strategie (block/warn) = Teampolitik
-- [ ] Konfig und Skript im selben Repo, selber PR-Review
-- [ ] Doku mit Prüfdatum und CLI-Version
-
-## Quellen
-- OpenAI Codex Hooks-Beispiele
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** CLI / App (versionsabhängig)  
-**Nachprüfhinweis:** Enthält Hook-Konfigstruktur, Ereignisnamen, Payload-Felder und Skriptbeispiele — stark implementationsabhängig, ohne stabile öffentliche Grundlage.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host; Vertrauensverwaltung über `/hooks` in der Codex CLI
+
+**Zuletzt geprüft:** 2026-08-25

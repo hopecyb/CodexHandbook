@@ -3,9 +3,10 @@ title: Rà soát diff
 description: Cách đọc thay đổi và đặt câu hỏi.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7dc8ee8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -31,7 +32,7 @@ Khi đọc diff, ưu tiên xem:
 3. Tên gọi và phong cách có nhất quán không?
 4. Có khóa bí mật hoặc dấu vết gỡ lỗi còn sót không?
 
-Giao diện phía sản phẩm: [Diff, bình luận và rà soát](/guide/desktop-app/diffs-comments-and-review/)
+Giao diện phía sản phẩm: [Diff, bình luận và rà soát](/vi/guide/desktop-app/diffs-comments-and-review/)
 
 ## Hiểu lầm thường gặp
 

@@ -1,125 +1,67 @@
 ---
 title: Einstellungen der IDE-Erweiterung
-description: Einstiegspunkte für Modell, Freigabe, Kontext und Erweiterungsverhalten in der IDE.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Unterscheide die gemeinsam genutzte Agent-Konfiguration von Verhaltenseinstellungen VS-Code-basierter Editoren.
 sidebar:
   order: 80
+locale: de
+source_locale: zh-CN
+source_revision: d4a3506
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Einstellungen der IDE-Erweiterung verbinden **persönliche Vorlieben** und **Projektregeln**: welches Modell, wie streng Freigabe, ob geöffnete Dateien automatisch mitkommen. Konsistent mit den globalen [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/); Fokus hier auf typische Editor-Optionen.
+In der IDE gibt es zwei Einstellungsebenen:
 
-## Inhalt dieser Seite
-
-- Arbeitsteilung: IDE-Einstellungen vs. Nutzerkonfiguration vs. `AGENTS.md`
-- Was Entwickler am häufigsten anpassen
-- Wie Teams Defaults angleichen
-
-## Wofür diese Einstellungen stehen
-
-IDE-Einstellungen sind eher: **Default-Gewohnheiten, wenn Codex im Editor mit dir zusammenarbeitet**.
-
-Sie betreffen Fragen wie:
-
-- welches Modell standardmäßig
-- wie eng Freigabe standardmäßig
-- ob aktuelle Datei und Auswahl automatisch mitkommen
-
-Sie definieren keine Projektregeln selbst, sondern ob die Arbeit im Editor flüssig und stabil läuft.
-
-## Konfigurationsschichten (Wiederholung)
-
-| Schicht | Beispiel | Priorität |
+| Ebene | Speicherort | Zuständigkeit |
 |---|---|---|
-| Organisationsrichtlinie | Sandbox-Lockerung verbieten | höchste |
-| Projekt-`AGENTS.md` / Projektkonfig | Testbefehle, Verzeichnisvereinbarungen | hoch |
-| IDE-Erweiterungs-UI | Default-Modell, Panel-Layout | mittel |
-| Einmal-Prompt | «Diesmal nicht ins Netz» | Aufgabenstufe |
+| Codex-Agent-Einstellungen | `config.toml` | Modell, Reasoning-Intensität, Berechtigungen, Sandbox, MCP und Personalisierung; gemeinsam mit der CLI verwendet |
+| Editoreinstellungen | `chatgpt.*` im Einstellungssystem von VS Code | Seitenleiste, Nachrichtenwarteschlange, Sendetaste, Review-Anzeige, Sprache und Schrift |
 
-Siehe [Geltungsbereich und Vorrang](/guide/customization/agents-md/scope-and-precedence/)
+Repositoryregeln gehören weiterhin in `AGENTS.md`, nicht in die persönlichen Editoreinstellungen einer Person.
 
-## Häufige Missverständnisse
+## Einstellungen öffnen
 
-### IDE-Einstellungen sind keine Projektnorm
+Wähle in der Codex-Seitenleiste das Zahnrad und anschließend **Codex Settings**. Häufige Agent-Optionen lassen sich im Bereich ändern. Mit **Open config.toml** kannst du die aktuell wirksame Konfigurationsebene direkt bearbeiten.
 
-„So ist mein Editor default“ wird oft mit „so soll das Projekt laufen“ verwechselt.
+Suche für Einstellungen zum Editorverhalten in Settings nach `@ext:openai.chatgpt`, `Codex` oder einem konkreten Schlüsselnamen.
 
-Klarer:
+## Wichtige Einstellungen für den Einstieg
 
-- Editor-Einstellungen = persönliches Nutzungserlebnis
-- `AGENTS.md` und Projektkonfig = Teamkonsens
+| Schlüssel | Standardwert | Wann ändern? |
+|---|---:|---|
+| `chatgpt.openOnStartup` | `false` | Wenn die Erweiterung beim Start automatisch die Seitenleiste fokussieren soll |
+| `chatgpt.followUpQueueMode` | `queue` | Bei `steer` steuert eine neue Nachricht die aktuelle Ausführung |
+| `chatgpt.composerEnterBehavior` | `enter` | Wenn mehrzeilige Prompts häufig versehentlich abgesendet werden |
+| `chatgpt.reviewDelivery` | `inline` | Mit `detached` wird `/review` in einem eigenen Chat angezeigt |
+| `chatgpt.localeOverride` | Automatisch | Wenn die UI-Sprache fest eingestellt werden soll |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | Aktivieren, wenn Repository und Werkzeugkette in WSL2 liegen |
 
-Verwandt, aber nicht dasselbe.
+`chatgpt.cliExecutable` dient ausschließlich der Entwicklung der Codex CLI. Normale Benutzer sollten die in der Erweiterung enthaltene ausführbare Datei nicht manuell überschreiben, da sonst Funktionen ausfallen können.
 
-### Automatischer Kontext: mehr ist nicht immer besser
+## Konfigurationsrangfolge praktisch verstehen
 
-Aktuelle Datei, Auswahl, offene Tabs automatisch mitzunehmen ist bequem; zu viel Auto-Füllung verdünnt den Fokus.
+- Organisationsrichtlinien definieren unveränderliche Obergrenzen.
+- `config.toml` legt das Standardverhalten des Agents fest.
+- `AGENTS.md` stellt Regeln für Repository und Verzeichnisse bereit.
+- Editoreinstellungen verändern nur die IDE-Erfahrung.
+- Der Prompt ergänzt Ziel und Grenzen der einzelnen Aufgabe.
 
-Praktisch: genug — nicht „je mehr offen, desto stärker“.
+Wenn eine Einstellung scheinbar nicht greift, prüfe zuerst, welche Ebene du geändert hast, und anschließend, ob eine höherrangige Richtlinie sie einschränkt. Die vollständige Erklärung bietet [Geltungsbereich und Rangfolge](/de/guide/customization/agents-md/scope-and-precedence/).
 
-## Häufig geänderte Einstellungen (Konzept)
+## Nach einer Änderung verifizieren
 
-### Modell und Reasoning
+Ändere jeweils nur eine Einstellung. Setze zum Beispiel `chatgpt.reviewDelivery` auf `detached`, führe in einem Git-Repository `/review` aus und prüfe, ob ein separater Review-Chat geöffnet wird. Notiere den Ausgangswert. Stelle ihn wieder her und lade den Editor neu, wenn das Ergebnis abweicht.
 
-Beeinflusst Tempo und Qualität komplexer Aufgaben. Teams können im README „empfohlene Modellstufe“ nennen, damit Defaults nicht auseinanderlaufen und Probleme schwer reproduzierbar werden.
+## Offizielle Grundlage
 
-### Freigabe und Sandbox
+- [Referenz der Codex-IDE-Einstellungen](https://learn.chatgpt.com/docs/ide/settings)
+- [Konfigurationsgrundlagen](https://learn.chatgpt.com/docs/config)
 
-Entspricht [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/):
-
-- Einsteiger: Default oder strenger
-- Vertrauenswürdige Repos: vorsichtig lockern, nicht mit Produktions-Secrets-Verzeichnissen mischen
-
-CLI und IDE sollten dieselbe **Sicherheitsbasislinie** nutzen; CLI: [CLI-Konfiguration](/guide/cli/configuration/).
-
-### Kontextverhalten
-
-Manche Erweiterungen konfigurierbar:
-
-- aktuelle Datei / Auswahl automatisch einbeziehen
-- `AGENTS.md` lesen
-- Kontextfenster-Optionen (versionsabhängig)
-
-Zu viel Auto-Kontext erzeugt Rauschen; siehe [Kontext fokussiert halten](/guide/context/keep-context-focused/).
-
-### Anmeldung und Konto
-
-Gemeinsam mit [Anmelden und Authentifizierung](/guide/getting-started/sign-in-and-authentication/); nach Kontowechsel Erweiterungssitzung neu starten.
-
-## Team-Ausrichtung
-
-1. **Muss-konsistent**-Punkte ins Repo (`AGENTS.md` + optionale Projektkonfig)
-2. **Persönliche Gewohnheiten** in IDE-Einstellungen, nicht in Git
-3. Onboarding neuer Mitglieder: Erweiterungsversion gegen [IDE-Installation](/guide/ide/installation/) prüfen
-
-## Was zuerst ansehen
-
-Beim ersten Einrichten der IDE-Erweiterung reichen drei Gruppen:
-
-1. Modell und Reasoning-Stufe
-2. Freigabe / Sicherheit
-3. automatischer Kontext
-
-Sind diese drei stimmig, decken sie die meisten echten Nutzungsprobleme ab.
-
-## Fehlerbehebung
-
-| Phänomen | Prüfen |
-|---|---|
-| Einstellung wirkt nicht | Organisationsrichtlinie überschreibt? Fenster neu laden nötig? |
-| Verhalten weicht von CLI ab | [Konfigurationsreferenz](/guide/reference/configuration-reference/) vergleichen |
-| Erweiterung reagiert nicht | [IDE-Fehlerbehebung](/guide/ide/troubleshooting/) |
-
-IDE-Einstellungen = „wie du im Editor mit Codex zusammenarbeitest“; Projektregeln sind eine andere Schicht — nicht vermischen.
-
-## Quellen
-- OpenAI Codex IDE settings
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** IDE  
-**Prüfhinweis:** Diese Seite dreht sich um Einstellungsoptionen, Auto-Kontext, Freigabe-Vorlieben und Organisationsüberschreibung; Einstiege und Namen ändern sich leicht mit Erweiterungsversionen — aktuelle Official-Einstellungsdokumentation reicht nicht für die ganze Seite.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** IDE
+
+**Zuletzt geprüft:** 2026-08-26

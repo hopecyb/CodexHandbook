@@ -3,9 +3,10 @@ title: "Case: kiểm tra liên kết tài liệu theo lịch"
 description: Dùng Codex không tương tác hoặc CI quét liên kết chết trong site — case nhập môn tự động hóa nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Siêu dữ liệu
@@ -55,8 +56,8 @@ Không sửa tệp.
 ### Thực thi
 
 - Thêm `prompts/ci/link-check.md`
-- Thêm `.github/workflows/docs-link-check.yml` (minh họa, xem [script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Dùng [codex exec](/guide/developer-platform/non-interactive/codex-exec/) hoặc script thuần + Codex phân loại lần hai
+- Thêm `.github/workflows/docs-link-check.yml` (minh họa, xem [script và pipeline](/vi/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Dùng [codex exec](/vi/guide/developer-platform/non-interactive/codex-exec/) hoặc script thuần + Codex phân loại lần hai
 
 ### Kiểm chứng
 
@@ -69,19 +70,19 @@ Không sửa tệp.
 | Vấn đề | Xử lý |
 |---|---|
 | Site ngoài tạm 503 | Phân biệt liên kết chết cứng và thất bại mềm; định nghĩa trong prompt |
-| Parse JSON thất bại | Thắt chặt ràng buộc [đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/) |
+| Parse JSON thất bại | Thắt chặt ràng buộc [đầu ra có cấu trúc](/vi/guide/developer-platform/non-interactive/structured-output/) |
 | Hết hạn mức | Đổi lịch tuần + kiểm tra tăng dần |
 
 ## 5. Đóng gói lại
 
 - Sau lần thứ ba chạy thông thì đóng gói Skill: `docs-link-audit`
-- [Quy tắc lệnh](/guide/customization/rules/team-rules/) của nhóm cho phép `npm run build` và git chỉ đọc
+- [Quy tắc lệnh](/vi/guide/customization/rules/team-rules/) của nhóm cho phép `npm run build` và git chỉ đọc
 
 ## 6. Chương liên quan
 
-- [Quản lý tác vụ dài](/cases/workflows/long-running-task-management/)
-- [Tác vụ theo lịch Automations](/skills/automations/scheduled-tasks/)
-- [Lộ trình nhóm](/guide/learning-paths/team/)
+- [Quản lý tác vụ dài](/vi/cases/workflows/long-running-task-management/)
+- [Tác vụ theo lịch Automations](/vi/skills/automations/scheduled-tasks/)
+- [Lộ trình nhóm](/vi/guide/learning-paths/team/)
 
 ---
 

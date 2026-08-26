@@ -3,9 +3,10 @@ title: Research and learning
 description: Entry for source-backed research, comparison, and learning cases—search, citations, and conclusion boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Research tasks differ from ordinary Q&A in one way:
@@ -14,7 +15,7 @@ Research tasks differ from ordinary Q&A in one way:
 
 ## Cases in this group
 
-- [Competitive feature matrix](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Competitive feature matrix](/en/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## What this group emphasizes
 

@@ -5,9 +5,10 @@ sidebar:
   order: 31
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 477e693
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Agent-Arbeit fragt: Wie bringt man eine Aufgabe in einen **überprüfbaren Fertigzustand**? Wann zuerst planen, wann Subaufgaben splitten, wann mittendrin korrigieren, wann übergeben und fortsetzen — das behandelt dieses Kapitel.
@@ -25,10 +26,10 @@ Viele Aufgaben scheitern nicht am Aussprechen der Anforderung, sondern daran, si
 
 ## Empfohlene Lesereihenfolge
 
-1. [Planung](/guide/agent-work/planning/)
-2. [Fortschritt und Steuerung](/guide/agent-work/progress-and-steering/)
-3. [Subagents](/guide/agent-work/subagents/)
-4. [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
+1. [Planung](/de/guide/agent-work/planning/)
+2. [Fortschritt und Steuerung](/de/guide/agent-work/progress-and-steering/)
+3. [Subagents](/de/guide/agent-work/subagents/)
+4. [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 
 ## Ein üblicher Rahmen
 
@@ -70,10 +71,10 @@ Ohne klare Grenzen verwirrten mehr Subaufgaben den Hauptthread.
 
 ## Bezug zu anderen Kapiteln
 
-- Vollständiger Hauptworkflow: [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/)
-- Aufgabe klar formulieren: [Prompts](/prompts/)
-- Kontext managen: [Kontext](/guide/context/)
-- Mehrere Personen/Aufgaben parallel: [Parallele Agents](/guide/desktop-app/parallel-agents/) und [Multi-Agent-Kollaboration](/cases/workflows/multi-agent-coordination/)
+- Vollständiger Hauptworkflow: [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/)
+- Aufgabe klar formulieren: [Prompts](/de/prompts/)
+- Kontext managen: [Kontext](/de/guide/context/)
+- Mehrere Personen/Aufgaben parallel: [Parallele Agents](/de/guide/desktop-app/parallel-agents/) und [Multi-Agent-Kollaboration](/de/cases/workflows/multi-agent-coordination/)
 
 ## Minimalen Ablauf zuerst
 

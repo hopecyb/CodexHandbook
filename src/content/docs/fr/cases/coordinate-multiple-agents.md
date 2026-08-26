@@ -3,9 +3,10 @@ title: Coordonner plusieurs agents
 description: Cas de collaboration avec exploration parallèle, exécution partagée et fusion des résultats.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Coordonner plusieurs agents
@@ -36,7 +37,7 @@ Agent 2 : avantages, inconvénients et charge de travail du schéma B
 
 ### Isolation par worktree
 
-Différents agents modifient des branches distinctes dans des [git worktree](/guide/desktop-app/worktrees/) différents, fusion manuelle à la fin.
+Différents agents modifient des branches distinctes dans des [git worktree](/fr/guide/desktop-app/worktrees/) différents, fusion manuelle à la fin.
 
 ## 3. Règles de coordination (à inscrire dans AGENTS.md)
 
@@ -46,8 +47,8 @@ Différents agents modifient des branches distinctes dans des [git worktree](/gu
 
 ## 4. Voir aussi
 
-- [Coordination multi-agents](/cases/workflows/multi-agent-coordination/)
-- [Sous-agents](/guide/agent-work/subagents/)
+- [Coordination multi-agents](/fr/cases/workflows/multi-agent-coordination/)
+- [Sous-agents](/fr/guide/agent-work/subagents/)
 
 ---
 

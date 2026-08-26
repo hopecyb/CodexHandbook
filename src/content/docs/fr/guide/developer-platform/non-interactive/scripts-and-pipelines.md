@@ -3,9 +3,10 @@ title: "Scripts et pipelines"
 description: Orchestrer codex exec dans shell, Makefile et GitHub Actions — répétable et auditable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -14,13 +15,13 @@ Ceci traite de transformer Codex d'une action ponctuelle en **étapes que votre 
 
 Les scripts fixent le flux ; les pipelines le répètent sur schedule ou sur événements.
 
-Cette page montre comment intégrer [codex exec](/guide/developer-platform/non-interactive/codex-exec/) dans shell, Makefile ou pipelines CI.
+Cette page montre comment intégrer [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/) dans shell, Makefile ou pipelines CI.
 
 ## Ce que cette page couvre
 
 - Scripts locaux vs jobs CI
 - Gérer prompts et secrets
-- Combiner avec [automatisation de revue de code](/guide/developer-platform/ci-cd/code-review-automation/)
+- Combiner avec [automatisation de revue de code](/fr/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Ce que cela résout
 
@@ -60,7 +61,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
 Garder `prompts/ci/security-review.md` dans Git ; les changements passent par revue.
@@ -96,7 +97,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
 ```
 
 :::caution
@@ -109,7 +110,7 @@ Ajuster la méthode d'installation et les scopes de permission aux exigences de 
 |---|---|
 | Dépôt | `prompts/`, `tools/run-codex.sh` |
 | CI | Checkout lecture seule, CLI pinée, upload artefacts de log |
-| Callback | Optionnel [Webhook](/guide/developer-platform/webhooks/overview/) pour mettre à jour systèmes internes |
+| Callback | Optionnel [Webhook](/fr/guide/developer-platform/webhooks/overview/) pour mettre à jour systèmes internes |
 
 ## Comment décider
 

@@ -3,9 +3,10 @@ title: Software development
 description: Entry for code changes, bug fixes, and verification cases—scope control, tests, and rollback.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 84208b9
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Software development cases focus on this question:
@@ -14,7 +15,7 @@ Software development cases focus on this question:
 
 ## Cases in this group
 
-- [Fix a bug with verification](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Fix a bug with verification](/en/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ## What this group emphasizes
 

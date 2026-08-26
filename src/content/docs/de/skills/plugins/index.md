@@ -1,56 +1,53 @@
 ---
 title: Plugins
-description: Team-Verteilung von Erweiterungen — Plugin ist die Paketschicht, keine neue Fähigkeitsart.
+description: Durchsuche, installiere und verwalte wiederverwendbare Pakete aus Skills, Connectoren, MCP, Hooks und Aufgabenvorlagen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 33c9fe2
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Plugin löst vor allem: wie man Erweiterungen an andere zur Installation und Verwaltung gibt.
+Ein Plugin ist eine Einheit zum Bündeln und Verteilen von Funktionen. Es kann Skills, Connectoren, MCP-Server, Browsererweiterungen, Hooks und Vorlagen für Scheduled tasks enthalten. Die eigentliche Arbeit führen weiterhin diese enthaltenen Komponenten aus.
 
-Schwerpunkt:
+## Zielgruppe
 
-- Paketieren
-- Verteilen
-- Upgraden
-- Berechtigungs-Governance
+- Benutzer, die ein fertiges Funktionspaket aus der öffentlichen Sammlung installieren möchten
+- Verantwortliche, die Teamabläufe, Werkzeuge und Schutzmechanismen als versionierte Einheit verteilen möchten
+- Administratoren, die Quelle, Berechtigungen externer Dienste und Plugin-Hooks prüfen müssen
 
-Keine neu erfundene Fähigkeitsart.
+## Derzeit unterstützte Oberflächen
 
-## Einsatzszenarien
+| Oberfläche | Durchsuchen/Installieren | Verwenden |
+|---|---|---|
+| ChatGPT Web und Desktop-App | Registerkarte Plugins | Chat und Work |
+| ChatGPT Mobile | Kein primärer Verwaltungseinstieg | Bereits im Konto vorhandene Plugins verwenden |
+| Codex in der ChatGPT-Desktop-App | Registerkarte Plugins | Codex-Aufgaben |
+| Codex CLI | Browser unter `/plugins`; nach Installation neue Sitzung starten | Codex-Umgebung |
+| IDE-Erweiterung | **Unterstützt keine Plugins** | Einzelne in der IDE unterstützte Funktionen wie MCP oder Skill verwendbar |
 
-Diese Gruppe zielt auf:
+## Leseeinstiege
 
-- Dem Team einheitlich ein Erweiterungspaket geben
-- Entscheiden, ob ein Plugin lohnt
+- [Plugins im Überblick](/de/skills/plugins/plugins-overview/): Komponenten, Unterstützungsgrenzen, Installationsprüfung und Sicherheitsreview verstehen
+- [Karte der Erweiterungsfunktionen](/de/skills/capability-map/): Plugin, Skill, MCP, Hook und Scheduled task vergleichen
 
-Nur persönliches Lernen: oft reicht eine Konzeptseite.
+## Fragen vor der Installation
 
-## Einstieg dieser Gruppe
+1. Wer sind Quelle und verantwortlicher Maintainer?
+2. Welche Skills, Connectoren, MCP-Server, Browserfunktionen und Hooks sind enthalten?
+3. Müssen externe Konten verbunden werden, und welche Scopes erhält das Plugin?
+4. Wurden Hooks unter `/hooks` geprüft und als vertrauenswürdig markiert?
+5. Wie deaktiviert, aktualisiert und entfernt das Team das Plugin und widerruft Berechtigungen?
 
-- [Plugins-Überblick](/skills/plugins/plugins-overview/): Plugin vs. Skill vs. MCP — und warum eher Verteilungsschicht
+## Offizielle Quelle
 
-## Häufige Irrtümer
-
-### 1. Installiertes Plugin = automatisch sicher
-
-Plugin macht Verteilung bequemer — nicht standardmäßig vertrauenswürdig oder least-privilege.
-
-### 2. Mehr Features = lohnt sich zu installieren
-
-Zuerst prüfen:
-
-- Quelle vertrauenswürdig?
-- Berechtigungs-Scope groß?
-- Kann das Team upgraden, rollbacken, auditieren?
-
-Plugin ist ein Verteilungspaket für Erweiterungen — kein Ersatz für Skill oder MCP.
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI  
-**Nachprüfhinweis:** Plugin-Katalog, Installationspolitik und Oberflächen-Support entwickeln sich weiter; die Gruppe fixiert Details zu stark — vorerst `outdated`, nach aktuellem Plugin-Katalog neu schreiben.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** ChatGPT Web / Desktop-App / Mobile; Codex Desktop und CLI; IDE-Erweiterung unterstützt keine Plugins
+
+**Zuletzt geprüft:** 2026-08-26

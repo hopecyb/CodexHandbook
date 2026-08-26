@@ -3,9 +3,10 @@ title: Permissões e Aprovação
 description: Explica quando o Codex precisa da sua Aprovação para operar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -67,8 +68,8 @@ Em geral, não. Você pode recusar e pedir que ele continue de um jeito mais seg
 | Camada | O que cobre | Onde ler |
 |---|---|---|
 | Conceito (esta página) | Por que a Aprovação é necessária | — |
-| Diferenças de produto | Como cada entrada mostra a confirmação | [Guias de produto](/guide/) |
-| Estratégia de Prompt | Como declarar limites de Permissão na Tarefa | [Definir restrições](/prompts/constraints-and-boundaries/) |
+| Diferenças de produto | Como cada entrada mostra a confirmação | [Guias de produto](/pt/guide/) |
+| Estratégia de Prompt | Como declarar limites de Permissão na Tarefa | [Definir restrições](/pt/prompts/constraints-and-boundaries/) |
 
 Políticas oficiais e valores padrão podem mudar; confira [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

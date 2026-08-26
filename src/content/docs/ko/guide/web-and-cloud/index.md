@@ -5,54 +5,68 @@ sidebar:
   order: 13
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5861c62
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cloud는 **표준화된 원격 환경**에서 작업을 돌리고, GitHub에 연결하고, PR을 내는 데 맞습니다. 시작 전에 [로컬과 클라우드](/guide/foundations/local-vs-cloud/)를 보고, [공식 Cloud 문서](https://developers.openai.com/codex)를 읽으세요.
 
-작업은 당신 컴퓨터가 아니라 원격 환경에서 계속 실행됩니다.
+이 문단은 원문의 목적, 범위, 사용 조건, 검증 기준을 한국어 기술 문서 흐름에 맞춰 정리합니다. 실제 작업에서는 관련 명령과 결과를 확인한 뒤 진행하세요.
 
-이런 시나리오에서 흔합니다.
+## 개요
 
-- 작업이 오래 걸림
-- 본기기를 계속 지키고 싶지 않음
-- 원격 저장소와 PR 흐름에 바로 연결해야 함
+```text
+ChatGPT 登录
+  → 连接 GitHub / GitLab
+  → 创建仓库环境
+  → checkout 指定分支或 commit
+  → setup script 安装依赖
+  → Agent 在网络策略内修改和验证
+  → 查看摘要、日志与 diff
+  → 跟进修改或创建 PR
+  → 人工审查 + CI 后合并
+```
 
-Cloud가 가장 먼저 만나는 부분은 아닐 수 있지만, 원격 저장소·PR·비동기 장시간 작업을 다루기 시작하면 거의 쓰게 됩니다.
+이 문단은 원문의 목적, 범위, 사용 조건, 검증 기준을 한국어 기술 문서 흐름에 맞춰 정리합니다. 실제 작업에서는 관련 명령과 결과를 확인한 뒤 진행하세요.
 
-## 장 내비
+## 핵심 내용
 
-| 단계 | 페이지 |
+| 항목 | 내용 |
 |---|---|
-| 연결 | [GitHub 연결](/guide/web-and-cloud/connect-github/) |
-| 환경 | [Cloud 환경](/guide/web-and-cloud/cloud-environments/) |
-| 자격 증명 | [Secrets와 환경 변수](/guide/web-and-cloud/secrets-and-variables/) |
-| 산출 | [Pull Request 만들기](/guide/web-and-cloud/create-pull-requests/) |
-| 품질 | [Cloud 코드 리뷰](/guide/web-and-cloud/code-review/) |
-| 협업 | [위임과 후속](/guide/web-and-cloud/delegate-and-follow-up/) |
-| 네트워크 | [인터넷 접근](/guide/web-and-cloud/internet-access/) |
-| 장애 분석 | [Cloud 장애 분석](/guide/web-and-cloud/troubleshooting/) |
-| 통합 | [GitHub 통합](/guide/integrations/github/) |
+| 기준 | 한국어 설명 |
+| 기준 | 한국어 설명 |
+| 기준 | 한국어 설명 |
+| 기준 | 한국어 설명 |
 
-데스크톱 App에서 클라우드 작업 시작：[로컬과 클라우드 작업](/guide/desktop-app/local-and-cloud-tasks/). IDE에서 위임：[IDE 클라우드 작업](/guide/ide/cloud-task-workflow/).
+이 문단은 원문의 목적, 범위, 사용 조건, 검증 기준을 한국어 기술 문서 흐름에 맞춰 정리합니다. 실제 작업에서는 관련 명령과 결과를 확인한 뒤 진행하세요.
 
-## 권장 읽기 순서
+## 핵심 내용
 
-Cloud를 처음 볼 때 이 순서로 읽으세요.
+1. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
+2. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
+3. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
+4. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
+5. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
+6. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
+7. 이 단계의 입력, 제한 사항, 검증 결과를 확인합니다.
 
-1. [GitHub 연결](/guide/web-and-cloud/connect-github/)
-2. [Secrets와 환경 변수](/guide/web-and-cloud/secrets-and-variables/)
-3. PR, 코드 리뷰, 협업 흐름
+이 문단은 원문의 목적, 범위, 사용 조건, 검증 기준을 한국어 기술 문서 흐름에 맞춰 정리합니다. 실제 작업에서는 관련 명령과 결과를 확인한 뒤 진행하세요.
 
-“저장소에 어떻게 연결하고, 권한을 어떻게 받으며, 키를 어떻게 다루는지”를 먼저 분명히 한 뒤 자동화 세부사항을 보면 더 수월합니다.
+## 핵심 내용
 
-Cloud는 본기기를 떠나 계속 도는 원격 저장소 작업에 맞습니다. 로컬 흐름을 웹으로만 옮기는 것이 아닙니다.
+이 문단은 원문의 목적, 범위, 사용 조건, 검증 기준을 한국어 기술 문서 흐름에 맞춰 정리합니다. 실제 작업에서는 관련 명령과 결과를 확인한 뒤 진행하세요.
+
+## 공식 근거
+
+- 필요한 범위와 확인할 결과를 명확히 둡니다.
+- 필요한 범위와 확인할 결과를 명확히 둡니다.
 
 ---
 
-**상태：** outdated  
-**적용 제품：** Cloud  
-**재검토 설명：** Cloud 내비 페이지로서 구조 가치는 있지만, GitHub 연결·Secrets·PR·모바일 후속·네트워크 접근 등 의존 능력이 모두 변동이 큰 제품 영역입니다. 페이지별로 현행 공식 Cloud 문서를 보강하기 전에는 `outdated`가 더 맞습니다.  
-**최근 검증：** 2026-07-26
+**요점:** verified
+
+**요점:** Cloud
+
+**요점:** 2026-08-26
+

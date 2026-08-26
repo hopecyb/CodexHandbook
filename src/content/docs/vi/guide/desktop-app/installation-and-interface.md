@@ -3,56 +3,75 @@ title: Cài đặt và giao diện
 description: Các vùng giao diện chính sau khi cài ứng dụng Desktop.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d61c2fa
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-Các bước cài đặt xem [Cài đặt ứng dụng Desktop](/guide/getting-started/install-desktop-app/) và [https://developers.openai.com/codex](https://developers.openai.com/codex).
+This chapter is for readers opening the ChatGPT desktop App for the first time. The goal is not to memorize every button. It is to complete one **reviewable, verifiable small task**.
 
-Vừa mở ứng dụng Desktop, giao diện sẽ hiện nhiều thông tin cùng lúc.
+For installation and sign-in, see [Install the desktop App](/vi/guide/getting-started/install-desktop-app/). The official App is currently available for macOS, Windows, and Linux. After signing in, you can start a chat, create a project, or open a local folder.
 
-Không cần nắm hết mọi vùng ngay; chỉ cần nhận ra vài vị trí then chốt.
+## Three objects to recognize first
 
-## Vùng giao diện (phân chia logic)
+| Object | Purpose | First step for beginners |
+|---|---|---|
+| Project or folder | Provides files and a working directory to the chat | Open a practice repository, not a production directory |
+| Chat | Keeps the goal, context, progress, and result | Use one chat for one clear goal |
+| Codex | Reads, changes, and verifies project content | Start with a low-risk change that is easy to check |
 
-Tên nhãn cụ thể thay đổi theo phiên bản — đối chiếu văn bản thực trên màn hình của bạn:
+The interface will continue to evolve, but these objects are more stable than the location of any particular button.
 
-1. **Chọn dự án / không gian làm việc**: thư mục đang gắn
-2. **Vùng hội thoại / tác vụ**: nhập Prompt, xem tiến độ Agent
-3. **View thay đổi / diff**: rà soát các thay đổi đề xuất
-4. **Terminal hoặc nhật ký** (nếu bật): xem đầu ra lệnh
-5. **Cài đặt và tài khoản**: mô hình, quyền, thông báo, v.v.
+## Complete your first real task
 
-Ban đầu hãy tìm «nhập tác vụ ở đâu» và «phê duyệt thay đổi tệp ở đâu».
+Prepare an existing Git repository. First confirm that it does not contain unrecorded changes you need to preserve. Open the folder in the App and start a Codex chat.
 
-## Hiểu nhầm thường gặp
+Enter:
 
-### 1. Không cần hiểu hết mọi panel ngay từ đầu
+```text
+Read README.md first and modify only its "Run locally" section:
+1. Fix the startup command that no longer works.
+2. Leave every other section unchanged.
+3. Show the diff and run any verification command documented in the project.
+4. If verification is not possible, explain why. Do not claim completion.
+```
 
-Nhận ra ba khối này là đủ:
+When Codex finishes, do not rely only on the chat summary. Check:
 
-- Nhập tác vụ ở đâu
-- Xem thay đổi ở đâu
-- Phê duyệt hoặc từ chối ở đâu
+1. whether the review pane contains only the expected files;
+2. whether any deletion is justified;
+3. whether the terminal output actually supports the claim that verification passed;
+4. whether `git diff` matches the requested scope.
 
-### 2. Terminal, diff, cài đặt — học sau được không?
+## Choosing Chat, Work, or Codex
 
-Có thể học theo giai đoạn.  
-Nhưng view diff nên quen sớm, vì nó quyết định bạn có hiểu phạm vi thay đổi hay không.
+- Use Chat for knowledge questions or idea exploration.
+- Use Work for general work that spans files and tools.
+- Use Codex when the task requires understanding, modifying, and testing a repository.
 
-### 3. Nếu giao diện không khớp hẳn ảnh chụp trong tài liệu thì sao?
+Use Quick chat for a temporary question that does not need lasting context. Keep work that requires continuity in a regular chat or project.
 
-Lấy văn bản thực của phiên bản bạn đang dùng làm chuẩn.  
-Ở đây nói về vùng logic, không phải tên nút cụ thể.
+## What to check when something fails
 
-Tìm được ba việc «nhập tác vụ», «xem thay đổi», «phê duyệt» rồi thì vừa dùng vừa quen dần.
+- **Files are missing:** confirm that the correct folder is open and file access was not denied.
+- **A command cannot run:** confirm dependencies are installed, then inspect the first meaningful terminal error.
+- **Old changes are mixed in:** use `git status` to separate changes that existed before the task from current work.
+- **The interface differs from this page:** navigate by logical objects—project/folder, chat, review, and terminal—instead of relying on a fixed screenshot layout.
+
+Next, read [Diffs, comments, and review](/vi/guide/desktop-app/diffs-comments-and-review/) and [Integrated terminal](/vi/guide/desktop-app/integrated-terminal/).
+
+## Official sources
+
+- [ChatGPT desktop App](https://learn.chatgpt.com/docs/app)
+- [Code review](https://learn.chatgpt.com/docs/code-review)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App  
-**Ghi chú tái kiểm:** Ứng dụng ChatGPT desktop mới trong giai đoạn 2026-07 vẫn đang điều chỉnh điều hướng và bố cục Chat/Work/Codex; trang này cố chỉ mô tả «vùng logic» nhưng vẫn dựa trên một cách chia UI desktop cụ thể — cần viết lại khi giao diện ổn định.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App
+
+**Kiểm chứng gần nhất:** 2026-08-26

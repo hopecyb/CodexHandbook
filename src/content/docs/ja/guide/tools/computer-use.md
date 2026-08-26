@@ -3,9 +3,10 @@ title: Computer Use
 description: 画面と入力デバイスで GUI を操作する上級能力——適用シナリオ、リスク、承認。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -79,7 +80,7 @@ Computer Use は、ほぼ**キーボードとマウスを Agent に渡す**こ�
 - 確認ダイアログを誤ってクリックする可能性がある
 - 通知に機密情報が含まれる画面を共有する可能性がある
 
-必読：[権限と承認](/guide/foundations/permissions-and-approvals/)、[サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/)
+必読：[権限と承認](/ja/guide/foundations/permissions-and-approvals/)、[サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/)
 
 ## 使うべきかどうかの判断
 
@@ -118,7 +119,7 @@ IDE 以外のアプリを操作？      → Computer Use（より慎重に）
 コード変更とテストだけ？      → ターミナル + ファイルツール
 ```
 
-[ツール選択](/guide/tools/tool-selection/) を参照
+[ツール選択](/ja/guide/tools/tool-selection/) を参照
 
 ## そのまま使える書き方
 

@@ -3,9 +3,10 @@ title: Modèle d'automatisation
 description: Tâches répétées et flux réutilisables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèle d'automatisation
@@ -58,8 +59,8 @@ La valeur du modèle : tenir dans le temps en sécurité.
 
 ## Voir aussi
 
-- [Prompts pour tâches longues](/prompts/long-running-tasks/)
-- [Cas : automatiser un rapport quotidien](/cases/automate-a-daily-report/)
+- [Prompts pour tâches longues](/fr/prompts/long-running-tasks/)
+- [Cas : automatiser un rapport quotidien](/fr/cases/automate-a-daily-report/)
 
 ---
 

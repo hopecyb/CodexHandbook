@@ -3,9 +3,10 @@ title: コンテンツ制作
 description: ドキュメント、記事、コンテンツ資産の事例入口——レビュー、リライト、成果物検証に焦点。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 コンテンツ制作の事例は次のシナリオに焦点を当てます。
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 本グループの事例
 
-- [レビュー付きドキュメント改修](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [レビュー付きドキュメント改修](/ja/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## 本グループの強調点
 

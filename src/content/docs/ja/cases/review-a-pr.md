@@ -3,9 +3,10 @@ title: PR をレビューする
 description: マージ前に Codex で構造化された diff レビューを行う。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 29b081c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # PR をレビューする
@@ -36,13 +37,13 @@ translated_at: 2026-07-28
 
 ## 3. チームへの蓄積
 
-- [`$pr-review`](/skills/examples/review-skill/) Skill を使用する
-- CI 統合は [コードレビュー自動化](/guide/developer-platform/ci-cd/code-review-automation/) を参照
+- [`$pr-review`](/ja/skills/examples/review-skill/) Skill を使用する
+- CI 統合は [コードレビュー自動化](/ja/guide/developer-platform/ci-cd/code-review-automation/) を参照
 
 ## 4. 関連
 
-- [レビューテンプレート](/prompts/templates/review/)
-- [マージ前レビュー](/cases/workflows/review-before-merge/)
+- [レビューテンプレート](/ja/prompts/templates/review/)
+- [マージ前レビュー](/ja/cases/workflows/review-before-merge/)
 
 ---
 

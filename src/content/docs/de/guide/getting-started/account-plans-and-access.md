@@ -1,64 +1,64 @@
 ---
-title: "Konto, Tarif und Zugang"
-description: "Login-Wege, Tarife und Zugangsvoraussetzungen verstehen."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Konten, Tarife und Zugriff
+description: Unterscheide ChatGPT-Tarife, nutzungsabhängige API-Key-Abrechnung und Berechtigungen in Organisations-Workspaces.
 sidebar:
   order: 10
+locale: de
+source_locale: zh-CN
+source_revision: 7e2e8e6
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Viele stecken schon vor der Installation fest:
+Codex kann derzeit über einen **ChatGPT-Tarif** oder mit einem **nutzungsabhängig abgerechneten API-Key** verwendet werden. Beide Zugriffsarten bieten jedoch nicht dieselben Einstiege und Verwaltungsgrenzen.
 
-- Ich habe ein OpenAI-Konto — warum komme ich trotzdem nicht rein?
-- Login klappt — heißt das, alle Clients sind nutzbar?
-- Warum können Kollegen in der Firmenumgebung nutzen und ich nicht?
+## Zuerst die Zugriffsart wählen
 
-Häufiges Missverständnis: „Konto-Login möglich“ = „aktuell Zugang zum jeweiligen Produkt“.
+| Art | Geeignet für | Verfügbarkeitsgrenzen |
+|---|---|---|
+| Anmeldung mit ChatGPT | Persönliche interaktive Nutzung, Desktop, Cloud und Organisations-Workspaces | Unterliegt Kontingent des ChatGPT-Tarifs, Workspace-Rolle und Administratorrichtlinien |
+| Anmeldung mit API-Key | Lokales Codex, Skripte und CI | Abrechnung nach API-Nutzung; einige Funktionen mit ChatGPT-Workspace- oder Cloud-Abhängigkeit sind nicht verfügbar |
 
-Für Codex brauchst du ein gültiges OpenAI-Konto und die **Produktzugangsrechte**, die Region/Organisationspolitik erlauben. Tarifnamen, Kontingente und ob App/CLI/Cloud enthalten sind, richten sich nach offiziellen Angaben.
+Auf der aktuellen offiziellen Pricing-Seite sind ChatGPT Work und Codex in Tarifen wie Free, Go, Plus, Pro, Business, Edu und Enterprise enthalten. Preise, Kontingente, Modelle und enthaltene Funktionen können sich jedoch ändern. Dieses Handbuch kopiert keine Preistabelle. Verwende die [aktuelle offizielle Pricing-Seite](https://learn.chatgpt.com/docs/pricing).
 
-## Drei Dinge bestätigen
+## Weshalb ein vorhandenes Konto trotzdem keinen Zugriff garantiert
 
-1. Login unter [OpenAI- / Codex-Einstiegen](https://developers.openai.com/codex) möglich
-2. Dein Plan enthält den geplanten Client
-3. In Firmenumgebung: SSO, Geräteverwaltung oder Sperrpolitik?
+Die Anmeldung ist nur die erste Ebene. Der endgültige Zugriff hängt außerdem davon ab:
 
-## Häufige Missverständnisse
+1. Ob der aktuelle Tarif den gewünschten Einstieg oder die Funktion umfasst.
+2. Ob das Produkt in deiner Region derzeit verfügbar ist.
+3. Ob die Organisation dir einen Platz, eine Rolle und Workspace-Berechtigungen zugewiesen hat.
+4. Ob ein Administrator Anmeldeart, Modell oder lokale Funktionen über eine verwaltete Konfiguration einschränkt.
+5. Ob dein Verbrauch das aktuelle Zeitfenster- oder Wochenlimit erreicht hat.
 
-### 1. Konto = App / CLI / IDE / Cloud alle nutzbar
+## Checkliste für Einzelbenutzer
 
-Unterschiedliche Einstiege können unterschiedliche Verfügbarkeit, Tariffähigkeiten oder Organisationspolitiken haben.
+- Du kannst dich auf der offiziellen Seite beim richtigen ChatGPT-Konto anmelden
+- Du weißt, ob du ein Tarifkontingent oder nutzungsabhängige API-Abrechnung verwendest
+- Der Ziel-Client zeigt die richtige Identität an
+- Bei einem Kontingenthinweis prüfst du die aktuelle Nutzung, statt den Client wiederholt neu zu installieren
 
-### 2. Login-Fehler = immer falsches Passwort
+## Checkliste für Team- und Unternehmensbenutzer
 
-Auch möglich:
+- Der richtige Workspace ist ausgewählt, nicht der persönliche Bereich mit derselben E-Mail-Adresse
+- Der Administrator hat Mitglieder, Plätze und Rollen konfiguriert
+- SSO, MFA, Datenaufbewahrung und Regionsrichtlinien erfüllen die Anforderungen der Organisation
+- Eine verwaltete Konfiguration erzwingt lokal keinen anderen Anmeldemodus
+- Der API-Key gehört zur richtigen API-Organisation und wird nicht mit Richtlinien des ChatGPT-Workspaces verwechselt
 
-- Organisations-SSO-Limits
-- Regions- oder Gerätepolitik
-- Produkt für dein Konto nicht freigeschaltet
+## Beispiel für die Einordnung
 
-### 3. Firmen- und Privatumgebung sind dasselbe
+Wenn du dich in der CLI mit einem API-Key anmelden kannst, die Cloud-Schaltfläche aber nicht verfügbar ist, muss kein Installationsfehler vorliegen. Cloud erfordert eine ChatGPT-Anmeldung und unterliegt ChatGPT-Tarif sowie Workspace-Berechtigungen. Der API-Key deckt hauptsächlich lokale und programmatische Abläufe ab.
 
-In Firmenumgebungen hängen Nutzbarkeit und Einstiege oft an zusätzlichen Sicherheits- und Gerätepolitiken.
-
-## Prüfreihenfolge
-
-Wenn unklar, wo das Problem liegt:
-
-1. Kann ich den relevanten Einstieg öffnen/anmelden?
-2. Enthält mein aktueller Plan den Ziel-Client?
-3. Gibt es zusätzliche Organisationslimits?
-
-Konto verfügbar ist nur Schritt eins — danach Tarif und Organisationszugang.
-
-Diese Seite listet keine Preistabelle (veraltet schnell). Maßgeblich: offizielle Konto- und Abrechnungsseiten.
+Fahre mit [Anmeldung und Authentifizierung](/de/guide/getting-started/sign-in-and-authentication/) fort.
 
 ---
 
-**Status:** outdated  
-**Geeignete Produkte:** App / CLI / IDE  
-**Nachprüfhinweis:** Diese Seite behandelt Konto, Tarif, Organisationszugang und Client-Verfügbarkeit — häufig wechselnde Infos; das Prinzip „Konto ≠ alle Einstiege“ bleibt gültig, konkrete Zugangsvoraussetzungen, Planinhalte und Organisationslimits müssen anhand der aktuellen offiziellen Konto-/Abrechnungsseiten neu geschrieben werden.  
-**Zuletzt überprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App / CLI / IDE / Cloud
+
+**Prüfgrundlage:** Mit den aktuellen offiziellen Seiten zu Pricing und Authentication abgeglichen. Die Seite dokumentiert Zugriffsmodell und Reihenfolge der Fehlersuche, ohne veränderliche Preise, Kontingente oder Funktionslisten festzuschreiben.
+
+**Zuletzt geprüft:** 2026-08-26

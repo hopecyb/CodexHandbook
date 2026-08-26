@@ -3,9 +3,10 @@ title: Modèle de revue
 description: Revoir un diff et les risques de changement de façon structurée.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèle de revue
@@ -50,8 +51,8 @@ Le modèle **fait sortir les risques par axes fixes**, pas un « c'est bien ou p
 
 ## Voir aussi
 
-- [Revue avant fusion](/cases/workflows/review-before-merge/)
-- [Cas : revoir une PR](/cases/review-a-pr/)
+- [Revue avant fusion](/fr/cases/workflows/review-before-merge/)
+- [Cas : revoir une PR](/fr/cases/review-a-pr/)
 
 ---
 

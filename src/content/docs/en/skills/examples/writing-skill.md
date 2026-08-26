@@ -3,9 +3,10 @@ title: 'Example: Writing Skill'
 description: Turn research, outline, draft, and polish into a repeatable writing workflow.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Example: Writing Skill
@@ -32,7 +33,7 @@ description: Write technical articles from an outline—in research, draft, and 
 
 ## Related
 
-- [Write an article case](/cases/write-an-article/)
+- [Write an article case](/en/cases/write-an-article/)
 ---
 
 **Status:** verified  

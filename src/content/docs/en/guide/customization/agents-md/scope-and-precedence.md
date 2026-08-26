@@ -1,112 +1,86 @@
 ---
-title: AGENTS.md Scope and Precedence
-description: Multiple files, monorepos, and who wins between project rules and conversation prompts.
+title: AGENTS.md scope and precedence
+description: Understand exactly how global, project-root, and current-directory instructions are discovered and merged.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 698ab44
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-When multiple `AGENTS.md` files, configuration files, and the current conversation coexist, you need clarity on **which rule applies**.
+Codex builds an instruction chain at the start of every run. The important model is not a guessed ranking that mixes organization policy, configuration, and prompts; first understand how `AGENTS.md` files themselves are discovered.
 
-This page is about: when two rules look different, which one should you follow?
+## Official discovery order
 
-## Precedence Overview
+1. **Global layer:** in Codex home (default `~/.codex`), Codex looks for `AGENTS.override.md` and falls back to `AGENTS.md`; it uses only the first non-empty file.
+2. **Project layer:** from the project root (usually the Git root) down to the current working directory, each directory is checked for `AGENTS.override.md`, `AGENTS.md`, and configured fallback names; at most one is loaded per directory.
+3. **Merge:** content is concatenated from root to current directory. Files closer to the current directory appear later and can therefore override earlier guidance.
 
-```text
-Managed organization policy > nearer-directory AGENTS.md > repo-root AGENTS.md > user configuration > current conversation
-```
+Empty files are skipped. Loading stops when merged content reaches `project_doc_max_bytes`, whose default is 32 KiB.
 
-“Nearer” means the subdirectory file **closer to the current working path**. For example, when working under `packages/web/AGENTS.md`, that file merges with the root file; on conflict, **the subdirectory wins**.
-
-## How to Understand “Closer Wins”
-
-Think of it as:
-
-- Root rules are “whole-repo default law”
-- Subdirectory rules are “special notes for this local area”
-
-So rules closer to where you are working are usually more specific and should take priority.
-
-## Relationship with Conversation Prompts
-
-| Source | Persistence | Good for |
-|---|---|---|
-| AGENTS.md | Cross-session, versioned | Team consensus, build commands, no-go areas |
-| Task prompt | This session only | This task’s goal, scope, deadline |
-| @ file reference | Session context boost | Specific implementation files, design files |
-
-**Do not** paste the entire `AGENTS.md` into chat repeatedly; if you must emphasize one item, reference it in one line: “Follow test requirements in AGENTS.md; additionally do not change `legacy/` this time.”
-
-## Monorepo Pattern
+## Monorepo example
 
 ```text
 repo/
-├── AGENTS.md              # Whole repo: package manager, CI, security
+├── AGENTS.md
 ├── apps/
 │   └── web/
-│       └── AGENTS.md      # Frontend: component library, E2E commands
-└── packages/
-    └── api/
-        └── AGENTS.md      # Backend: database migration conventions
+│       └── AGENTS.md
+└── services/
+    └── payments/
+        ├── AGENTS.md
+        └── AGENTS.override.md
 ```
 
-Principles:
+When started from `services/payments`, the root `AGENTS.md` loads first. Because that directory contains `AGENTS.override.md`, its sibling `AGENTS.md` is ignored.
 
-- **Root file**: 10–20 hard rules shared across the repo
-- **Subpackage files**: commands and directory notes specific to that package only
-- Avoid three files that are 80% duplicate—put shared content at the root; subpackages write only deltas
+Put repository-wide rules—package manager, common tests, and security exclusions—at the root. Nested files should contain only incremental service rules. Do not duplicate 80% of the content.
 
-## Common Misconceptions
+## How task prompts fit
 
-### 1. What I say in the current conversation is newest, so it has highest priority
+`AGENTS.md` holds lasting, version-controlled project conventions. The prompt holds the current goal, scope, and acceptance criteria:
 
-Conversation is for “extra requirements this time,” not for casually overriding team or organization hard rules.
+```text
+Follow the applicable AGENTS.md files. For this task, modify only
+services/payments/retry.ts and its tests. Do not rotate credentials.
+Run make test-payments and report the actual result.
+```
 
-### 2. Subdirectory `AGENTS.md` is just copying root rules
+A prompt cannot turn an unavailable system, organization, sandbox, or permission capability into an available one. When instructions conflict, do not guess from “ignore previous rules.” Ask Codex to list loaded instruction sources, then narrow the task.
 
-It should not be.
+## Verify what actually loaded
 
-Better practice:
+Start a new session in the target directory and ask:
 
-- Root rules hold what is common
-- Subdirectories write only deltas and exceptions
+```text
+Before working, list the AGENTS.md / AGENTS.override.md sources loaded for this
+run in order, then summarize the additional constraints from each. Do not edit files.
+```
 
-### 3. Knowing the order alone is not enough
+`AGENTS.md` is read at startup. After changing it, verify in a new run or chat; do not assume a current session hot-reloads it.
 
-You also need to know:
+## Fallback names and capacity
 
-- Which kind of information belongs on which layer
-- Why one layer wins on conflict
+To use an existing `TEAM_GUIDE.md`:
 
-## How to Judge on Conflict
+```toml
+project_doc_fallback_filenames = ["TEAM_GUIDE.md", ".agents.md"]
+project_doc_max_bytes = 65536
+```
 
-When two rules seem to conflict, check in this order:
+A fallback applies only when no higher-priority file exists in the same directory. Remove duplicate and irrelevant background before increasing capacity so important rules are not crowded out.
 
-1. Which is closer to the current working directory
-2. Which is a long-term project rule versus a temporary addition for this time only
-3. Whether organization or managed policy restricts from above
+## Official source
 
-On rule conflict, usually prefer the layer that is closer, harder, and more explicit—do not assume “the latest sentence” always wins.
-
-## Common Mistakes
-
-- Subdirectory `AGENTS.md` contradicts the root file without saying which wins
-- Putting sensitive keys in `AGENTS.md` and committing to Git—use secret management and environment variables
-- Expecting a “temporary relaxation” in conversation to override team-managed policy (usually not possible)
-
-## Acceptance Checklist
-
-- [ ] Root `AGENTS.md` and subpackage files have a clear division of labor
-- [ ] Clear awareness that conflicting rules favor the subdirectory
-- [ ] Task prompts write only deltas, not a full copy of the project manual
+- [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Review note:** This page currently states precedence among `AGENTS.md`, user configuration, and the current conversation as an overly fixed linear order; actual precedence may differ across clients, organization-managed capabilities, and runtime environments. It needs a rewrite after official current sources are added.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE, Cloud
+
+**Last verified:** 2026-08-26

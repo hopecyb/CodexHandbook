@@ -3,9 +3,10 @@ title: Change template
 description: Bounded iteration on existing work.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Change template
@@ -61,8 +62,8 @@ Change prompts need "what to change" and "where changes are allowed."
 
 ## Related
 
-- [Define done](/prompts/define-done/)
-- [Constraints and boundaries](/prompts/constraints-and-boundaries/)
+- [Define done](/en/prompts/define-done/)
+- [Constraints and boundaries](/en/prompts/constraints-and-boundaries/)
 
 ---
 

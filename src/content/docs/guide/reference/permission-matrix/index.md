@@ -1,158 +1,94 @@
 ---
 title: 权限矩阵
-description: Codex 操作类型、审批点与产品差异的概念对照表。
+description: 区分本地 Permission Profile、旧沙箱与 Cloud 网络策略。
 sidebar:
   order: 70
 ---
 
-“权限矩阵”对普通使用者也有用。它主要说明：同样一句话，为什么在不同入口里，Codex 的反应会不一样。
+不要用一张“App/CLI/IDE/Cloud 都会不会弹窗”的固定表猜权限。实际行为由执行位置、有效配置、组织 requirements、操作系统和任务动作共同决定。
 
-不同**操作**在不同**产品入口**下会触发不同的审批与沙盒行为。本矩阵帮助团队对齐“什么必须人点同意”，它是**风险和行为对照表**，不是法律合规条文。默认值以 [官方文档](https://developers.openai.com/codex) 与组织托管策略为准。
+![沙箱拦截、人工审批与执行结果之间的决策流程](/diagrams/sandbox-approval-flow-zh-cn.svg)
 
-## 这张表在看什么
+## 先分清三套机制
 
-很多人第一次碰到审批、限制或拒绝时，会下意识觉得：
-
-- 是模型坏了
-- 是我表达错了
-- 为什么昨天能做，今天不能做
-
-很多差异其实来自当前入口、策略和风险等级不同。
-
-## 核心点
-
-不是所有“帮我做这件事”都属于同一种风险。
-
-例如：
-
-- 读一个文件
-- 改一个文件
-- 跑一条命令
-- 连外网
-- push 代码
-
-它们看起来都像“执行任务”，但风险并不是一个级别。所以产品才会在不同地方加不同的审批、限制和拦截。
-
-概念基础：[权限与审批](/guide/foundations/permissions-and-approvals/)
-
-## 操作风险分级
-
-| 级别 | 操作示例 | 默认期望 |
+| 机制 | 作用域 | 核心控制 |
 |---|---|---|
-| L0 读 | 读项目内文本、搜索代码 | 通常自动 |
-| L1 写 | 改项目文件、格式化 | 常需确认或沙盒内自动 |
-| L2 执行 | shell、包管理器、测试 | 多需确认 |
-| L3 出网 | curl、npm registry、API | 严格确认或禁止 |
-| L4 越界 | 写项目外路径、git push、删库 | 应阻断或强烈确认 |
-| L5 GUI | Computer Use、系统对话框 | 最高敏感，常默认关 |
+| 本地 Permission Profiles（Beta） | macOS、Linux、WSL、原生 Windows 的本地命令 | 文件系统 read/write/deny、网络目的地 |
+| 旧 sandbox settings | 本地 Codex | `read-only`、`workspace-write`、`danger-full-access` 与审批策略 |
+| Cloud environment policy | Codex Cloud | 隔离容器、setup 联网、Agent 网络 allowlist/HTTP 方法 |
 
-## 读法
+Permission Profiles 不与旧 `sandbox_mode` 组合。只要加载配置中存在 `sandbox_mode`、命令行传了 `--sandbox`，或配置 Profile 设置了 sandbox，Codex 就使用旧沙箱设置而不是 `default_permissions`。
 
-第一次看，不需要把每个格子都背下来。可以先这么用：
+## 本地内置 Permission Profiles
 
-- 先判断自己这次任务属于哪类操作
-- 再看这种操作在当前入口里一般会不会被拦
-- 再决定是该补说明、等审批，还是换更合适的入口
+| 名称 | 边界 | 适合 |
+|---|---|---|
+| `:read-only` | 本地命令只读 | 代码理解、审查、首次接触仓库 |
+| `:workspace` | 可写当前 workspace roots 与系统临时目录 | 常规开发任务 |
+| `:danger-full-access` | 移除本地沙箱限制 | 仅在外部已隔离且明确需要时 |
 
-这张表也能拿来提前做个判断。
+自定义 profile 可为路径设 `read`、`write`、`deny`，并用更具体规则从宽范围中排除 `.env` 等敏感文件。相同路径冲突时，`deny` 优先于 `write`，`write` 优先于 `read`。
 
-## 矩阵（概念 — 典型默认）
+## 最小权限示例
 
-**Y** = 常见情况下需明确同意或受策略限制 · **A** = 可在受信配置下自动 · **—** = 视版本/策略 · **N** = 通常不允许
+```toml
+default_permissions = "project-edit"
 
-| 操作 | 桌面 App | CLI 交互 | IDE | Cloud |
-|---|---|---|---|---|
-| 读仓库文件 | A | A | A | A |
-| 写仓库内文件 | Y/A | Y | Y/A | Y/A |
-| 运行测试命令 | Y/A | Y | Y/A | Y/A |
-| 安装全局依赖 | Y | Y | Y | Y |
-| 访问公网 | Y | Y | Y | Y |
-| 读 `.env` 等敏感文件 | Y | Y | Y | Y |
-| `git commit` | Y | Y | Y | Y |
-| `git push` | Y | Y | Y | Y |
-| 写项目外路径 | N/Y | N/Y | N/Y | N |
-| MCP 第三方工具 | Y | Y | Y | Y |
-| 浏览器打开 URL | Y | — | — | Y |
-| Computer Use | Y/— | — | — | — |
+[features]
+network_proxy = true
 
-说明：
+[permissions.project-edit.filesystem]
+":minimal" = "read"
 
-- **Cloud** 在远程沙盒内运行，不能访问你笔记本文件系统
-- **IDE** 与 App 类似，但 UI 审批形态不同
-- **托管策略**可强制全部为 Y 或 N
+[permissions.project-edit.filesystem.":workspace_roots"]
+"." = "write"
+".devcontainer" = "read"
+"**/*.env" = "deny"
 
-## 常见误会
+[permissions.project-edit.network]
+enabled = true
 
-### 1. 能不能做，不只看模型愿不愿意
+[permissions.project-edit.network.domains]
+"api.openai.com" = "allow"
+"tracking.example.com" = "deny"
+```
 
-很多时候，影响结果的主要是：
+`network.enabled = true` 只允许命令联网；还必须启用 `features.network_proxy`，域名规则才会通过代理强制执行。
 
-- 当前入口允不允许
-- 当前策略放不放行
-- 当前权限够不够
+## 按动作评估
 
-### 2. Cloud 不一定更自由，也不一定更安全
+| 动作 | 主要风险 | 最小边界 |
+|---|---|---|
+| 读取源码 | 敏感文件被纳入上下文 | workspace read，显式 deny credentials |
+| 修改文件 | 超范围覆盖或删除 | 只写目标 workspace，先看 diff |
+| 运行测试 | 脚本副作用 | 审查脚本，使用受控环境 |
+| 安装依赖 | 供应链与联网 | 固定版本、限制域名 |
+| Git push / PR | 外部状态变化 | 独立分支、分支保护、人审 |
+| MCP/插件工具 | 第三方数据与写操作 | 最小 scope、逐项审批与日志 |
 
-安不安全，要看沙盒、网络、Secrets、分支保护和审批策略是不是一起到位。
+`AGENTS.md` 能说明“不要 push”，但它不是技术强制边界。需要把规则与 sandbox/permissions、GitHub 权限和人工审查组合使用。
 
-### 3. 写了规则，不代表风险就自动消失
+## 团队核对方法
 
-文档规则、审批策略、技术限制和人工复核，经常要一起用。
+1. 记录客户端与 Codex 版本；
+2. 列出所有加载配置层；
+3. 确认使用 Permission Profile 还是旧 sandbox；
+4. 用无敏感数据的测试目录分别验证 read、write、deny 和网络；
+5. 再接入真实仓库，并保留 Git 与组织侧门禁。
 
-### 4. 被拦住，不一定说明你做错了
+Permission Profiles 仍处于 Beta，升级后应重新运行这套验证。
 
-很多时候只是说明：
+## 官方依据
 
-- 这一步风险更高
-- 当前入口不适合做这件事
-- 需要更明确的审批或换一种更轻的做法
-
-## 配置与文档如何落地
-
-| 机制 | 作用 |
-|---|---|
-| 沙盒模式 | 限制 L3/L4 即使 Agent「想」做 |
-| 审批策略 | 控制 L1–L3 是否弹窗 |
-| `AGENTS.md` | 声明项目级禁止项（如禁止 push） |
-| 分支保护 | GitHub 侧阻断未 review 的 merge |
-| Hooks | 提交前自动检查（见路线图 Hooks 页） |
-
-[人工审批模式](/cases/workflows/human-approval-patterns/) · [配置参考](/guide/reference/configuration-reference/)
-
-## 什么时候该提高警惕
-
-如果某个动作满足下面任意一条，就该提高警惕：
-
-- 会改文件
-- 会跑命令
-- 会访问外网
-- 会接触敏感信息
-- 会把结果发到仓库外
-
-你不一定要记住它属于 L 几，但至少要知道，这已经不是随手看一眼的风险级别。
-
-权限矩阵主要是个预判工具，用来提前判断这一步为什么会被拦、是否该更谨慎，或者换个更轻的做法。
-
-## 团队推荐策略（示例）
-
-| 场景 | 建议 |
-|---|---|
-| 开源练习仓库 | 标准沙盒 + 允许测试命令 |
-| 公司 monorepo | 严格 + 禁止 push + PR 必须人审 |
-| CI `codex exec` | 只读或限定目录 + 无 push |
-| Cloud 生产相关 | Secrets 最小化 + 分支保护 |
-
-## 常见误解
-
-| 误解 | 事实 |
-|---|---|
-| 「Cloud 更安全」 | 取决于 secrets、review、网络策略 |
-| 「IDE 不会跑 shell」 | 可能通过 Agent 工具执行 |
-| 「写了禁止 push 就一定不会 push」 | 需沙盒 + Git 权限 + 人审多层 |
+- [Permissions（Beta）](https://learn.chatgpt.com/docs/permissions)
+- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 
 ---
 
-**状态：** outdated  
-**适用产品：** App / CLI / IDE / Cloud  
-**复核说明：** 本页的风险分级思路仍有参考价值，但矩阵里对不同入口的典型默认行为、审批点和可用能力做了较多具体假设；在缺少当前官方逐入口权限矩阵文档的情况下，这张表不宜继续标为 `review` 或 `verified`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** App、CLI、IDE、Cloud
+
+**最近核验：** 2026-08-26

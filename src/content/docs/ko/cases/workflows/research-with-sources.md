@@ -3,18 +3,19 @@ title: 출처가 있는 리서치
 description: Codex로 검색·비교·사실 검증을 하며—추적 가능한 출처와 결론을 산출합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9ff7a5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **출처가 있는 리서치**는 핵심 결론마다 공식 문서, 논문, 저장소 파일 같은 구체 출처로 돌아갈 수 있어야 하며, 근거 없는 판단만 내놓아서는 안 된다고 요구합니다. 기술 선정, 경쟁 제품 비교, 문헌 리뷰, 정책 해석에 적합합니다.
 
 ## 이 페이지의 초점
 
-- [웹 검색](/guide/tools/web-search/) vs 저장소만 읽기를 언제 쓸지
+- [웹 검색](/ko/guide/tools/web-search/) vs 저장소만 읽기를 언제 쓸지
 - 인용 형식과 불확실성 표시를 어떻게 요구할지
-- [출처 검증](/guide/quality/validate-sources/) 단계와 어떻게 맞출지
+- [출처 검증](/ko/guide/quality/validate-sources/) 단계와 어떻게 맞출지
 
 ## 최소 실행 방법
 
@@ -37,7 +38,7 @@ translated_at: 2026-07-28
     → 사람이 결정하거나 스펙 단계로 진입
 ```
 
-긴 리서치 작업은 여러 라운드로 나눕니다. [긴 작업 관리](/cases/workflows/long-running-task-management/)를 참고하세요.
+긴 리서치 작업은 여러 라운드로 나눕니다. [긴 작업 관리](/ko/cases/workflows/long-running-task-management/)를 참고하세요.
 
 ## 흔한 실수
 
@@ -49,7 +50,7 @@ translated_at: 2026-07-28
 ## 보안 경계
 
 - 내부 미공개 자료는 통제되지 않는 MCP로 외부에 내보내면 안 됩니다
-- 가격, 버전, 지역 가용성 등 변동이 큰 사실은 [검증 날짜](/guide/start-here/handbook-version-policy/)를 표시해야 합니다
+- 가격, 버전, 지역 가용성 등 변동이 큰 사실은 [검증 날짜](/ko/guide/start-here/handbook-version-policy/)를 표시해야 합니다
 
 ## 인수 체크리스트
 
@@ -60,8 +61,8 @@ translated_at: 2026-07-28
 
 ## 관련 장
 
-- [불확실성 다루기](/guide/quality/handle-uncertainty/)
-- [사례: 문서 리팩터와 검토](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [불확실성 다루기](/ko/guide/quality/handle-uncertainty/)
+- [사례: 문서 리팩터와 검토](/ko/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

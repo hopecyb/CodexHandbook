@@ -3,149 +3,129 @@ title: Subagents
 description: Delegar subtarefas a Contexto independente — quando dividir, como fazer Transferência e como aceitar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d65f0ec
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
-Um **Subagent** é uma **unidade de trabalho independente** que o Agent principal arranca para um subproblema concreto, com Contexto relativamente isolado; no fim, resume o resultado na Thread principal.
 
-Pode entender o Subagent assim: entregar uma subtarefa clara a um assistente que só se foca nisso. O valor não é «mais cool», e sim «mais limpo, mais focado, mais fácil de paralelizar».
+A **subagent** is an independent work unit started by the main Agent for a defined subproblem. It has its own context and returns conclusions and evidence to the main thread. The main Agent retains global decisions and final acceptance.
 
-## Um conceito central
+![Codex subagent orchestration: the main Agent delegates bounded work, subagents return evidence, and the main Agent consolidates and verifies](/diagrams/subagent-orchestration-pt.svg)
 
-| Agent principal | Subagent |
-|---|---|
-| Mantém o objetivo global e o diálogo com o utilizador | Foca-se numa subtarefa única |
-| Contexto com histórico completo | Contexto mais limpo; adequado a aprofundar |
-| Coordena e funde resultados | Executa exploração, pesquisa, implementação especializada |
+## Three isolation layers
 
-Diferença face a [Agents em paralelo](/guide/desktop-app/parallel-agents/): o Subagent costuma ser uma unidade de Tarefa **delegada ativamente pelo Agent principal**, não várias janelas abertas manualmente pelo utilizador (as implementações de produto podem sobrepor-se; a UI atual manda).
-
-## Quando vale a pena dividir
-
-Não é «Tarefa grande = sempre dividir», e sim quando percebe que:
-
-- Um subproblema precisa de aprofundamento à parte
-- Esse subproblema e a linha principal não são o mesmo tipo de trabalho
-- Quer primeiro uma conclusão independente e só depois o regresso
-
-Aí, dividir em Subagent costuma ser mais estável do que a Thread principal gerir o global e o detalhe ao mesmo tempo.
-
-## Cenários adequados
-
-| Adequado | Inadequado |
-|---|---|
-| Pesquisa dirigida num repositório grande («como o módulo de auth valida o Token») | Precisa de clarificação contínua de requisitos com o utilizador |
-| Investigar em paralelo duas abordagens técnicas | Subtarefas com edição mutuamente exclusiva do mesmo ficheiro |
-| Análise só de leitura longa, sem poluir o Contexto principal | «Olhar um pouco» sem entregável claro |
-
-## Funções de subagent que vale consolidar
-
-Das delegações pontuais, vale preservar papéis com fronteiras claras e formato de entrega estável.
-
-| Função | Entrega forte | Restrição recomendada |
+| Layer | Isolated? | Meaning |
 |---|---|---|
-| Revisor de código | Problemas por gravidade, ficheiro, testes em falta | Só leitura por defeito; não corrige sem pedido |
-| Engenheiro de testes | Lacunas de cobertura, casos a adicionar, comandos | Um pacote ou workflow por vez |
-| Redator de documentação | API, migração, guia de utilizador | Ligado ao código e estilo existente |
-| Debugger | Reprodução, causa provável, plano de verificação | Conclusão baseada em logs, testes ou caminho de código |
-| Revisor de segurança | Ameaças, caminhos de abuso, riscos de secrets | Só leitura, escopo claro |
-| Analista de performance | Hipótese de gargalo, medição, melhorias de baixo risco | Exige benchmark ou experiência reprodutível |
+| Conversation context | Yes | Each subagent focuses on its task without carrying every main-thread detail |
+| Sandbox and permission mode | Inherited | Independent execution does not grant higher access |
+| Workspace files | Not necessarily | Agents may see one workspace; concurrent writes can conflict |
 
-Em tarefas com implementação, pede primeiro um plano de patch. A integração e verificação final ficam no fio principal.
+The key rule is: **context isolation is not file isolation.** Divide ownership by directory, component, or worktree before parallel edits.
 
-## Mal-entendidos habituais
+## Current availability
 
-### 1. Mais Subagents não é automaticamente melhor
+Current Codex versions provide subagents by default, with activity visible in relevant desktop App, CLI, and IDE surfaces. UI details change; the stable pattern is to ask Codex to delegate independent work while the main thread consolidates it.
 
-Dividir demais traz custos novos:
+Use `/agent` in the CLI to inspect or switch threads. Supporting IDE surfaces show background Agents, and the desktop App displays task thread activity. Exact controls depend on client and account.
 
-- Tem de ler mais resultados de regresso
-- Conclusões de Subagents diferentes podem conflitar
-- O custo de coordenação pode superar o benefício
+## When to split work
 
-### 2. Tarefa complexa = dividir Subagent de imediato?
+Consider a subagent when at least two apply:
 
-Também não necessariamente.  
-Se o problema for altamente acoplado e precisar de confirmações frequentes consigo, avançar na Thread principal pode poupar mais.
+1. The task can be described independently without frequent synchronization.
+2. It has an explicit deliverable such as a file list, test result, or one-page conclusion.
+3. It can run in parallel, or deep isolation greatly reduces main-thread noise.
 
-### 3. O Subagent pode já fazer todas as alterações por mim?
+### Good parallel work
 
-Pode ou não, conforme a delegação; o mais estável por defeito:
+- Read-only mapping of frontend, backend, and tests.
+- Independent investigation of unrelated failing tests.
+- Evidence collection for two technical options.
+- Dedicated security, performance, or documentation review.
 
-- Deixe o Subagent fazer análise só de leitura, comparação, localização
-- A Thread principal, após ver as conclusões, decide se entra em alteração
+### Keep in the main thread
 
-## Fluxo de trabalho recomendado
+- Requirements are unclear and need user dialogue.
+- Steps must run strictly in sequence.
+- Edits concentrate in one file or code region.
+- “Look around” has no completion criterion.
 
-### 1. O Agent principal escreve o contrato da subtarefa
+Subagents add token and consolidation costs. Do not parallelize a small task that one clear thread handles well.
 
-```text
-Subtarefa: análise só de leitura da lógica de refresh de session em packages/auth.
-Entrega: resumo ≤ 1 página + caminhos de ficheiros-chave + pontos de risco.
-Proibido: alterar qualquer ficheiro; não fazer push.
-```
+## Main Agent responsibilities remain
 
-O mais importante não é o formato, e sim clarificar 4 coisas:
+The main Agent retains:
 
-- De que é responsável exatamente
-- Como deve ser a saída
-- Que ações não pode fazer
-- Quem decide após o regresso
+- global goal, user constraints, and final decisions;
+- subtask boundaries and file ownership;
+- resolution of conflicting conclusions;
+- merged tests, build, and risk reporting.
 
-### 2. O Subagent executa e devolve resultado estruturado
+A subagent reporting “done” is a subtask signal, not proof that the whole task is complete.
 
-Formato esperado:
+## Write an acceptable delegation contract
 
 ```text
-## Conclusão
-## Evidência (ficheiro:linha)
-## Próximo passo sugerido
-## Problemas por resolver
+Start one subagent to analyze session refresh in packages/auth, read-only.
+
+Scope: packages/auth and corresponding tests; do not edit.
+Question: Can an old token be reused after refresh failure?
+Deliver: conclusion, key files and lines, reproduction path, recommended test.
+Verification: every claim must be checkable in source or existing tests.
+Return: under 500 words; the main thread decides whether to edit.
 ```
 
-### 3. O Agent principal funde e decide
+It defines responsibility, scope, question, prohibition, verification, and decision owner.
 
-A Thread principal (ou você) escolhe o caminho e entra na fase de execução de [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/).
+## Three-way example
 
-### 4. Aceitação
+For an intermittent sign-in regression:
 
-- A saída do Subagent é verificável de forma independente (abrir o ficheiro e conferir)
-- Alterou o repositório fora de âmbito?
-- Em conflito entre vários Subagents, o conflito está marcado?
+| Subtask | Permission and scope | Deliverable |
+|---|---|---|
+| A: code path | Read-only `src/auth/` | Call chain from entry to failure branch |
+| B: test evidence | Read-only tests and logs | Smallest stable reproduction |
+| C: recent changes | Read-only related Git history | Most likely introducing change and evidence |
 
-## Critérios de decisão
+After all return, compare evidence before choosing a repair. Do not let A, B, and C all edit `src/auth/session.ts`.
 
-Se uma subtarefa cumprir 2 das 3 condições abaixo, considere dividir:
+## Isolate parallel writes
 
-1. Pode descrever-se de forma independente
-2. Tem entregável claro
-3. Não precisa de partilhar frequentemente o mesmo Contexto miúdo com a Thread principal
+1. Split writes into non-overlapping directories or components.
+2. Assign separate worktrees or branches.
+3. State the exact files each Agent owns.
+4. Let the main Agent merge and rerun verification.
 
-## Coordenação com Skill e MCP
+Passing isolated tests does not prove the merged combination works.
 
-- **Skill**: define o formato padrão de entrega da subtarefa (p. ex. checklist de revisão de segurança)
-- **MCP**: o Subagent consulta tickets externos só de leitura; o Agent principal decide de forma integrada
+## Acceptance checklist
 
-## Erros habituais
+- Does the result answer the original question without expanding scope?
+- Does it include verifiable file locations, logs, or tests?
+- Did it obey read-only, directory, and command constraints?
+- Are conflicting results explicitly resolved?
+- Were full tests and build rerun after merging?
+- Are unresolved issues and residual risks stated?
 
-- Âmbito do Subagent demasiado grande — vira um segundo Agent principal
-- Sem exigir regresso estruturado; a Thread principal volta a ler logs longos
-- Vários Subagents a alterar o mesmo diretório ao mesmo tempo
+## Combine with other capabilities
 
-O Subagent encaixa melhor em subproblemas com «limite claro, entrega clara, conclusão independente» — não em copiar a Tarefa principal inteira outra vez.
+- **Skill** preserves a subtask method and output format.
+- **MCP** gives controlled external tools or data.
+- **Hook** adds guards at subagent start, stop, or tool calls.
+- **Worktree** isolates file edits; it solves workspace conflicts, not context.
 
-## Leitura complementar
-
-- [Coordenação multi-Agent](/cases/workflows/multi-agent-coordination/)
-- [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
+Continue with [Multi-agent coordination](/pt/cases/workflows/multi-agent-coordination/) and [Handoff and resume](/pt/guide/agent-work/handoff-and-resume/).
 
 ---
 
-**Estado:** verificado  
-**Produtos aplicáveis:** App / CLI / Cloud  
-**Base de verificação:** Cruzada com a documentação pública atual da OpenAI Developers sobre multi-agent, Tarefas longas e fluxos paralelos; esta página confirma só o princípio estável «subtarefa independente, limite claro, entrega clara»; onde a UI atual ou o agendamento concreto entram, mantém-se como formulação não contratual «conforme o produto atual».  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE
+
+**Verification basis:** Compared with current subagent documentation; explains context isolation, inherited permissions, activity entry points, token cost, write conflicts, and main-Agent final responsibility.
+
+**Last verified:** 2026-08-26

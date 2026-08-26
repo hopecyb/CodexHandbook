@@ -5,9 +5,10 @@ sidebar:
   order: 3
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 41e8ab8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 이 핸드북은 Codex를 본격적으로 막 접하기 시작한 사람을 주로 대상으로 합니다.
@@ -88,7 +89,7 @@ translated_at: 2026-07-28
 - 개인 사용법을 팀이 재사용할 흐름으로 정리하고 싶을 때
 - 개발 출신은 아니지만 AI를 일상 업무에 실제로 붙이고 싶을 때
 
-다음 단계: [경로 고르기](/guide/start-here/choose-your-path/).
+다음 단계: [경로 고르기](/ko/guide/start-here/choose-your-path/).
 
 ---
 

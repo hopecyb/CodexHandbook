@@ -3,9 +3,10 @@ title: Kontext
 description: Projekt-, Datei- und Gesprächskontext verwalten.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f647ae2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 16
 ---
@@ -35,13 +36,13 @@ Beim ersten systematischen Durchgang:
 
 ## Kapitelnavigation
 
-- [Projektkontext](/guide/context/project-context/)
-- [Datei- und Ordner-Kontext](/guide/context/file-and-folder-context/)
-- [Gesprächskontext](/guide/context/conversation-context/)
-- [Kontext-Priorität](/guide/context/context-priority/)
-- [Komprimierung](/guide/context/compaction/)
-- [Fokus halten](/guide/context/keep-context-focused/)
-- [Sensibler Kontext](/guide/context/sensitive-context/)
+- [Projektkontext](/de/guide/context/project-context/)
+- [Datei- und Ordner-Kontext](/de/guide/context/file-and-folder-context/)
+- [Gesprächskontext](/de/guide/context/conversation-context/)
+- [Kontext-Priorität](/de/guide/context/context-priority/)
+- [Komprimierung](/de/guide/context/compaction/)
+- [Fokus halten](/de/guide/context/keep-context-focused/)
+- [Sensibler Kontext](/de/guide/context/sensitive-context/)
 
 Wiederkehrender Punkt: Kontext hängt davon ab, «was es diesmal wirklich gesehen hat». Meinst du, es «sollte» es wissen, hast es aber nicht bereitgestellt — dann zählt es nicht.
 

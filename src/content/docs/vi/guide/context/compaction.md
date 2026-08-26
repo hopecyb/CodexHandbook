@@ -3,9 +3,10 @@ title: Nén ngữ cảnh
 description: Hội thoại dài sau khi nén giữ gì, mất gì.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 329ca4d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -73,7 +74,7 @@ Ràng buộc còn hiệu lực hiện tại:
 
 Cách này ổn hơn tiếp tục dựa vào cả chuỗi hội thoại dài.
 
-Tầng khái niệm: [Token, ngữ cảnh và nén](/guide/foundations/tokens-context-and-compaction/)
+Tầng khái niệm: [Token, ngữ cảnh và nén](/vi/guide/foundations/tokens-context-and-compaction/)
 
 Trong tác vụ dài, hạn chế then chốt đừng chỉ nói một lần; sau nén, quy tắc quan trọng đáng chủ động nhắc lại.
 

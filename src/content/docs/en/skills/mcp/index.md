@@ -1,50 +1,53 @@
 ---
 title: MCP
-description: Connect external tools and data sources—when MCP is actually needed.
+description: Connect third-party tools and context to ChatGPT and Codex with controlled access.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: ff68431
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`MCP` is a standard way for Codex to connect to external tools and data sources.
+MCP (Model Context Protocol) answers “how can an Agent call tools and data outside the repository?” It does not define a workflow.
 
-If Skill is more about "steps to do the work," MCP handles "bringing external tools in."
+## Who it is for
 
-## What this section covers
+- Individual developers who want Codex to query documentation, designs, tickets, or internal tools.
+- Teams that need consistent external-tool configuration, OAuth, and least privilege.
+- Maintainers diagnosing “the server is configured, but its tools are unavailable or calls fail.”
 
-- When you really need MCP
-- How to connect external systems without opening permissions too wide
-- What to check first when connection or calls fail
+If the task only reads and writes the current repository, start with built-in file and terminal capabilities. Add MCP only when third-party context or action is required.
 
-## Recommended order
+## Reading order
 
-1. [MCP overview](/skills/mcp/mcp-overview/): Separate MCP from Skill and Plugin first
-2. [Connect an MCP server](/skills/mcp/connect-an-mcp-server/): Wire your first server by configuration
-3. [Debugging MCP](/skills/mcp/debugging-mcp/): When connection fails, tools missing, or permissions wrong
+1. [MCP overview](/en/skills/mcp/mcp-overview/): separate the responsibilities of MCP, Skills, and Plugins
+2. [Connect an MCP server](/en/skills/mcp/connect-an-mcp-server/): connect the first server with the CLI or `config.toml`
+3. [Debug MCP](/en/skills/mcp/debugging-mcp/): diagnose configuration, startup, authentication, and tool layers
 
-## Common misconceptions
+## Current support boundaries
 
-### 1. MCP makes Codex "all-powerful"
+- The ChatGPT desktop App, Codex CLI, and IDE integration share MCP configuration when they use the same Codex host.
+- Local Codex clients support STDIO and Streamable HTTP servers.
+- ChatGPT Web does not read local `~/.codex/config.toml`; it uses remote MCP tools supplied by installed Plugins.
 
-What it can do depends entirely on which tools the MCP server exposes and what permissions those tools grant.
+## Three rules
 
-### 2. MCP is only a technical integration problem
+1. MCP exposes tools; it does not define a reliable process. Put durable workflows in a Skill or `AGENTS.md`.
+2. Server capability depends on its exposed tools and the scope of the underlying credential.
+3. Begin with read-only tools, a test tenant, and a small tool set. Do not experiment with a production administrator token.
 
-Once it touches real systems, it immediately becomes:
+## Official sources
 
-- A permissions problem
-- A data exposure problem
-- An audit problem
-
-So this section covers not only "how to connect" but "how not to connect badly."
-
-MCP is worth it when the task must touch real systems outside the repo.
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [Model Context Protocol specification](https://modelcontextprotocol.io/)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** This section covers how Codex currently connects MCP, config locations, and permission pairing; official public material has limited client detail—needs rewrite for current products.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP tools through Plugins
+
+**Verification scope:** Client support, shared configuration, transport types, and CLI commands
+
+**Last verified:** 2026-08-25

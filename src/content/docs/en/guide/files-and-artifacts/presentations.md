@@ -3,9 +3,10 @@ title: Presentations
 description: Generate and revise slides and decks—structure, masters, and speaker notes.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Choose by audience:
 5. Export PDF, rehearse timing
 ```
 
-Aligns with [Explore–plan–execute–verify](/cases/workflows/explore-plan-execute-verify/): approve outline before detail.
+Aligns with [Explore–plan–execute–verify](/en/cases/workflows/explore-plan-execute-verify/): approve outline before detail.
 
 ## Why structure comes first
 
@@ -110,13 +111,13 @@ Example tone:
 
 Better than “make a great PPT.”
 
-Images: [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/); pure generation: [Image generation](/guide/tools/image-generation/).
+Images: [Images and screenshots](/en/guide/files-and-artifacts/images-and-screenshots/); pure generation: [Image generation](/en/guide/tools/image-generation/).
 
 ## Verification
 
 - Readable font size at projection resolution
 - Animation restraint (hard to maintain if excessive)
-- Numbers match [Validate sources](/guide/quality/validate-sources/)
+- Numbers match [Validate sources](/en/guide/quality/validate-sources/)
 - Speaker notes sufficient if needed
 
 ## What to delegate vs own

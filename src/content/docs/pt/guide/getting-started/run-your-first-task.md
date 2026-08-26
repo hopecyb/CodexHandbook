@@ -3,9 +3,10 @@ title: Rodar a primeira Tarefa
 description: Complete uma mudança pequena com um Prompt claro.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ A primeira Tarefa já inclui:
 
 1. Peça um plano curto (ou peça o plano de forma ativa)
 2. Ao aprovar a escrita de arquivo, confirme que o caminho está certo
-3. Ao terminar, vá a [Revisar o resultado](/guide/getting-started/review-the-result/)
+3. Ao terminar, vá a [Revisar o resultado](/pt/guide/getting-started/review-the-result/)
 
 ## Ordem de execução
 
@@ -112,7 +113,7 @@ Ou:
 Não continue alterando. Diga-me o que você alterou agora há pouco.
 ```
 
-Princípios de Prompt: [Fundamentos de Prompt](/prompts/basics/).
+Princípios de Prompt: [Fundamentos de Prompt](/pt/prompts/basics/).
 
 ---
 

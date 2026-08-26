@@ -3,9 +3,10 @@ title: Configuration
 description: Vue d'ensemble des fichiers de configuration et des profils — quel comportement appartient à la configuration et quel ne l'appartient pas.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La première fois que vous voyez le groupe « configuration », il est facile de penser qu'il ne concerne que les noms de paramètres.
@@ -14,8 +15,8 @@ Il résout principalement une chose : comment Codex devrait travailler par défa
 
 ## Ordre recommandé
 
-1. [Bases de la configuration](/guide/customization/configuration/config-basics/)
-2. [Profils](/guide/customization/configuration/profiles/)
+1. [Bases de la configuration](/fr/guide/customization/configuration/config-basics/)
+2. [Profils](/fr/guide/customization/configuration/profiles/)
 
 ## Ce que ce groupe traite
 

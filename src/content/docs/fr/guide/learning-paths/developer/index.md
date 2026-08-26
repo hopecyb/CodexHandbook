@@ -3,9 +3,10 @@ title: Parcours développeur (aperçu)
 description: Aperçu des parcours de développement logiciel ; étapes détaillées à suivre.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -14,9 +15,9 @@ sidebar:
 
 ## Lire maintenant
 
-- [Premiers pas](/guide/getting-started/) et [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [Exécuter des tests](/guide/quality/run-tests/) · [Examiner les Diff](/guide/quality/review-diffs/)
-- [Planification Agent](/guide/agent-work/planning/)
+- [Premiers pas](/fr/guide/getting-started/) et [CLI](/fr/guide/cli/) / [IDE](/fr/guide/ide/)
+- [Exécuter des tests](/fr/guide/quality/run-tests/) · [Examiner les Diff](/fr/guide/quality/review-diffs/)
+- [Planification Agent](/fr/guide/agent-work/planning/)
 
 ## Étapes prévues (plan)
 

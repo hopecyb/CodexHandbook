@@ -3,9 +3,10 @@ title: Quand utiliser les Skills
 description: Juger si une tâche mérite un Skill, et la répartition avec commandes slash et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Question fréquente au début : est-ce que ça vaut le coup de faire un Skill ?
@@ -76,7 +77,7 @@ Un Skill issu de répétition réelle tient mieux qu'un design sur le papier.
 
 Les Skills figent ce qui se répète, doit rester cohérent, et qu'on ne veut pas réexpliquer.
 
-Voir [Choisir une méthode d'extension](/skills/choosing-an-extension-method/) et [Transformer un workflow en Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Voir [Choisir une méthode d'extension](/fr/skills/choosing-an-extension-method/) et [Transformer un workflow en Skill](/fr/cases/workflows/turn-a-workflow-into-a-skill/).
 
 ---
 

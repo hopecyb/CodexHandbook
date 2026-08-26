@@ -3,84 +3,98 @@ title: Depurar conexões MCP
 description: Passos sistemáticos quando o servidor MCP não sobe, a ferramenta dá timeout ou o resultado parece errado.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 829c1e9
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP traz sistemas externos para o Codex. Falhas costumam cair em três classes: **processo não sobe**, **autenticação errada**, **lógica da ferramenta ou timeout**. Esta página dá a ordem de checagem, para não ficar alterando configuração no chute.
 
-## Conteúdo desta página
+“MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
 
-- Como reproduzir o mínimo de um problema MCP
-- Checklist de logs e configuração
-- Quando suspeitar da implementação do servidor, não do Codex
+## Preserve four pieces of evidence
 
-Relacionado: [Visão geral de MCP](/skills/mcp/mcp-overview/) · [Conectar um servidor MCP](/skills/mcp/connect-an-mcp-server/)
-
-## Triagem
-
-```text
-1. O servidor sobe sozinho no terminal?
-2. A sintaxe e o caminho do JSON/TOML de configuração estão corretos?
-3. As variáveis de ambiente são visíveis no processo MCP?
-4. A sessão do Codex foi reiniciada para carregar a nova configuração?
-5. A chamada a uma ferramenta isolada dá timeout / parâmetros errados?
+```bash
+codex mcp list
+codex mcp --help
+node --version    # only for a Node.js STDIO server
+python3 --version # only for a Python STDIO server
 ```
 
-## Falha na inicialização
+Also record server name, STDIO versus Streamable HTTP, exact error, and whether it occurred in App, CLI, or IDE. Never record the complete token.
 
-| Item | Observação |
+## Four-layer triage
+
+| Layer | Symptom | First check |
+|---|---|---|
+| Configuration | Server absent from list | File path, TOML syntax, server name, `enabled` |
+| Startup/connection | Initialization timeout | STDIO command and PATH, or HTTP URL, TLS, proxy |
+| Authentication | 401/403 or sign-in request | OAuth state, token environment variable, scope |
+| Tool | Server online but call fails | Tool name, arguments, allowlist, timeout |
+
+## 1. Confirm configuration loaded
+
+- User file: `~/.codex/config.toml`.
+- Project file: `.codex/config.toml`, loaded only for a trusted project.
+- App, CLI, and IDE share configuration on one Codex host; do not maintain drifting copies.
+- Use `codex mcp list` or `/mcp`; file existence is not success evidence.
+
+## 2. STDIO startup failure
+
+Check that `command` is on PATH, runtime version is supported, `cwd` exists, and dependency provenance is trusted.
+
+Running the command directly proves only that it starts. A protocol server may wait indefinitely for input; that is not a complete tool-call test.
+
+Raise `startup_timeout_sec` only for a genuinely slow initialization. The default is 10 seconds; a huge value can hide a wrong command.
+
+## 3. Streamable HTTP connection failure
+
+Check in order:
+
+1. URL and TLS certificate.
+2. Corporate proxy or VPN.
+3. Existence of the environment variable named by `bearer_token_env_var`.
+4. Whether OAuth needs `codex mcp login <server-name>` again.
+5. Whether server logs received initialization.
+
+Do not temporarily put the token in static `http_headers`; it can leak into configuration and screenshots.
+
+## 4. Server online, tool unavailable
+
+| Symptom | Check |
 |---|---|
-| Caminho do comando | `npx`, `uvx`, caminho absoluto estão no PATH? |
-| Versão de dependências | Node/Python atendem ao servidor MCP? |
-| Execução manual | Copie command + args da configuração e rode no shell |
-| Transporte | stdio vs HTTP/SSE bate com a documentação? |
+| Tools absent | `enabled_tools` / `disabled_tools`, server tool list |
+| Tool not found | Server version, renamed tool, stale session list |
+| Argument validation | Tool schema rather than old prompt fields |
+| Timeout | Smaller query, then `tool_timeout_sec`; default 60 seconds |
+| Empty result | Verify source-system visibility and filters with the same identity |
 
-## Falha de autenticação
+## Minimal reproduction prompt
 
-- A API key é injetada por variável de ambiente (não escrita no repositório)?
-- MCP OAuth expirou e precisa reautorizar?
-- Proxy corporativo bloqueia saída MCP?
+```text
+Inspect only MCP server <server-name>:
+1. Report visible tool names.
+2. Call <readonly-tool> with <minimal-arguments>.
+3. Preserve the error type and server message, but redact credentials.
+4. Do not call another server or write.
+```
 
-Índice de variáveis de ambiente: [variáveis de ambiente](/guide/reference/environment-variables/)
+## Acceptance after repair
 
-## Chamada de ferramenta anormal
+- [ ] `codex mcp list` shows expected state.
+- [ ] One read-only tool succeeds with minimal arguments.
+- [ ] The root cause names a layer rather than “restart fixed it.”
+- [ ] Temporary tokens, debug logs, and broad permissions are removed.
+- [ ] Team configuration and repair notes are updated.
 
-| Sintoma | Possível causa |
-|---|---|
-| Tool not found | Versão do servidor e schema do cliente incompatíveis |
-| Timeout | API externa lenta; aumente o timeout ou otimize a consulta |
-| Resultado vazio | Nome de parâmetro errado; veja logs do servidor MCP |
-| Caracteres corrompidos | Encoding diferente de UTF-8 |
+## Official source
 
-No Prompt, peça ao Agent para **imprimir a estrutura retornada pela ferramenta** (com dados sensíveis mascarados) para facilitar a depuração.
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 
-## Hábitos seguros de depuração
-
-- Use API key de **tenant de teste**, não de produção
-- Não cole token completo no chat nos logs de debug
-- Se suspeitar de MCP malicioso, desconecte na hora e rotacione as chaves
-
-Índice de erros: [referência de erros e avisos](/guide/reference/error-reference/)
-
-## Erros comuns
-
-- Alterar configuração sem reiniciar a sessão do Codex
-- IDE e CLI com configurações MCP inconsistentes
-- Deixar log do servidor MCP em debug para sempre e colar screenshot com segredo
-
-## Checklist de aceite
-
-- [ ] Consegue iniciar o servidor MCP sozinho no terminal
-- [ ] Chamou com sucesso pelo menos uma ferramenta só leitura
-- [ ] Registrou o template padrão de configuração MCP da equipe
-
-## Fontes
-- Especificação e guia de debug do Model Context Protocol
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** CLI / IDE / App  
-**Nota de revisão:** Os passos de triagem dependem de como o cliente Codex atual carrega, exibe e chama ferramentas MCP; essa parte tem risco alto de mudança — precisa reconfirmação com a documentação vigente.  
-**Última Verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE
+
+**Last verified:** 2026-08-25

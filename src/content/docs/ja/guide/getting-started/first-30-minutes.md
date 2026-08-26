@@ -3,9 +3,10 @@ title: 最初の 30 分ルート
 description: 初回利用時にそのまま参照できる 30 分ルート。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ sidebar:
 
 | 時間 | やること |
 |---|---|
-| 0–5 分 | [安全チェックリスト](/guide/getting-started/beginner-safety-checklist/) を読む |
-| 5–10 分 | [デスクトップ App をインストール](/guide/getting-started/install-desktop-app/) して [ログイン](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 分 | [練習プロジェクトを作成](/guide/getting-started/create-your-first-project/) |
-| 15–25 分 | [最初のタスクを実行](/guide/getting-started/run-your-first-task/) して確認 |
-| 25–30 分 | [Codex と対話する](/guide/learning-paths/beginner/01-talk-to-codex/) を開き、初心者パスに入る |
+| 0–5 分 | [安全チェックリスト](/ja/guide/getting-started/beginner-safety-checklist/) を読む |
+| 5–10 分 | [デスクトップ App をインストール](/ja/guide/getting-started/install-desktop-app/) して [ログイン](/ja/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 分 | [練習プロジェクトを作成](/ja/guide/getting-started/create-your-first-project/) |
+| 15–25 分 | [最初のタスクを実行](/ja/guide/getting-started/run-your-first-task/) して確認 |
+| 25–30 分 | [Codex と対話する](/ja/guide/learning-paths/beginner/01-talk-to-codex/) を開き、初心者パスに入る |
 
 ## この 30 分で完了すること
 
@@ -94,7 +95,7 @@ sidebar:
 
 ## 詰まった場合
 
-まず [トラブルシューティング索引](/guide/reference/troubleshooting/) へ。概念がわからないだけなら、[始める前に必要なもの](/guide/start-here/prerequisites/) と [ローカルとクラウド](/guide/foundations/local-vs-cloud/) に戻ってもよいです。
+まず [トラブルシューティング索引](/ja/guide/reference/troubleshooting/) へ。概念がわからないだけなら、[始める前に必要なもの](/ja/guide/start-here/prerequisites/) と [ローカルとクラウド](/ja/guide/foundations/local-vs-cloud/) に戻ってもよいです。
 
 最初の 30 分で「タスクを出す、結果を見る、自分で判断する」ループを一度手で完了できれば、十分な価値があります。
 

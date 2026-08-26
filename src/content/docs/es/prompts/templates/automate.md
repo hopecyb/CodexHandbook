@@ -3,9 +3,10 @@ title: Plantilla de automatización
 description: Tareas repetidas y flujos reutilizables.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de automatización
@@ -58,8 +59,8 @@ El valor de esta plantilla es que pueda correr de forma segura y duradera.
 
 ## Relacionado
 
-- [Prompts para tareas largas](/prompts/long-running-tasks/)
-- [Caso: automatizar un informe diario](/cases/automate-a-daily-report/)
+- [Prompts para tareas largas](/es/prompts/long-running-tasks/)
+- [Caso: automatizar un informe diario](/es/cases/automate-a-daily-report/)
 
 ---
 

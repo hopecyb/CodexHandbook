@@ -1,79 +1,81 @@
 ---
 title: Editor context
-description: How the IDE extension passes open files, workspace, and project rules to Codex.
+description: How the IDE integration supplies open files, workspace context, and project rules to Codex.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: b6d208f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 30
 ---
 
-In the IDE, Codex gets more than your prompt—it automatically receives **editor state**. That is the IDE's core advantage over CLI. Understanding where context comes from avoids "the file is open but it ignored it" frustration.
+In an IDE, Codex receives more than the prompt. It also receives **editor state**. This is the main advantage over a bare terminal: understanding where context comes from prevents the frustration of “the file is open, but Codex did not see it.”
 
-IDE Codex does not only read what you type—it also references what you are looking at in the editor.
+## What this page covers
 
-## What's covered
-
-- What context the IDE attaches automatically
-- How that stacks with @ files, selection, and AGENTS.md
-- Reducing noise and improving hit rate
+- which context the IDE attaches automatically;
+- how it combines with `@` files, selections, and `AGENTS.md`;
+- how to reduce noise and improve targeting.
 
 ## Recommended workflow
 
-1. **Open the repo root as workspace**, not a subfolder only (monorepo exceptions per team docs)
-2. For local edits, **select relevant code** then describe the task → [selection and open files](/guide/ide/selected-code-and-open-files/)
-3. For cross-module work, @ key files—do not assume "it will search on its own"
-4. In long sessions, [compact context](/guide/context/compaction/) or start a new thread periodically
+1. **Open the repository root as the workspace**, rather than only a subfolder (see team guidance for monorepos).
+2. For local logic, **select the relevant code** before describing the task. See [Selected code and open files](/en/guide/ide/selected-code-and-open-files/).
+3. For cross-module work, name important files with `@` instead of assuming that Codex will discover them.
+4. Compact a long session with [context compaction](/en/guide/context/compaction/) or start a new thread.
 
-## Difference from CLI
+## IDE and CLI
 
-| | IDE extension | CLI |
+| | IDE integration | CLI |
 |---|---|---|
-| File awareness | Strong (open files in context) | Needs `--cwd` and tool reads |
-| Selection | Native | Paste or specify paths |
-| Best for | Line-level edits, explaining code | Scripts, CI, headless environments |
+| File awareness | Strong: open files are available as context | Use `--cd` / `-C` and tools to read from disk |
+| Selection | Native support | Paste it or specify a path |
+| Best for | Line-level edits and code explanation | Scripts, CI, and GUI-free environments |
 
 ## Common questions
 
-### 1. The file is open—why didn't it change what I expected?
+### Why did Codex ignore an open file?
 
-"Open" does not mean "focus is obvious."
+Opening a file does not make the task focus explicit. If the scope remains vague, Codex may inspect other related content or miss the selected fragment.
 
-If the task scope is still vague, it may read other material or miss the snippet you care about.
+### Is opening more files always better?
 
-### 2. More open files = better?
+Too many unrelated large files make the context noisy and dilute the important material.
 
-Too many unrelated open files add noise and dilute focus.
+### Does automatic IDE context replace a clear prompt?
 
-### 3. Automatic context means I can skip a clear task description?
+No. Automatic context helps, but it cannot replace a stated goal, scope, constraints, and acceptance criteria.
 
-Context helps; it does not replace stating goal, constraints, and done criteria.
-
-IDE context assists—it does not guess for you. Tighter file scope usually means steadier results.
+IDE context helps Codex, but does not make it guess. Precise file boundaries generally produce more stable results.
 
 ## Sensitive information
 
-Do not leave `.env` with secrets pinned open; see [sensitive context](/guide/context/sensitive-context/).
+Do not keep a secrets-containing `.env` file open in the foreground. See [Sensitive context](/en/guide/context/sensitive-context/).
 
-Redact logs and customer data before pasting; the IDE does not judge compliance for you.
+Redact logs and customer data before attaching them; the IDE cannot decide compliance for you.
 
 ## Common mistakes
 
-- Expecting `AGENTS.md` in single-file mode without a workspace
-- Opening many large unrelated files, filling the context window
-- Saying "this function" without selecting or @-mentioning the file
+- Expecting `AGENTS.md` discovery in a single-file window with no workspace.
+- Opening many unrelated large files and crowding out the context window.
+- Saying “this function” without selecting it or naming its file with `@`.
 
 ## Acceptance checklist
 
-- [ ] Workspace root is correct
-- [ ] 1–3 task-relevant files opened or @-mentioned
-- [ ] Test commands in `AGENTS.md` match IDE terminal usage
+- [ ] The workspace root is correct.
+- [ ] One to three task-relevant files are open or attached with `@`.
+- [ ] Test commands in `AGENTS.md` match the IDE terminal.
 
-## References
-- [File and folder context](/guide/context/file-and-folder-context/)
+## Reference
+
+- [File and folder context](/en/guide/context/file-and-folder-context/)
+
 ---
 
-**Status:** verified  
-**Applicable products:** IDE  
-**Verification basis:** OpenAI Help Center still positions the IDE extension as a primary entry paired with local tools; this page does not assume specific editor buttons—it summarizes workspace, open files, selection, @ files, and project rules as stable IDE context methodology.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

@@ -1,106 +1,65 @@
 ---
-title: Keyboard Shortcuts
-description: Learning index of common shortcuts in App, CLI TUI, and IDE extension—per your installed version.
+title: Keyboard shortcuts
+description: Only current App and IDE shortcuts that can be verified in official documentation.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 0edf4f3
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 90
 ---
 
-Shortcuts vary a lot by **client and version**. This page groups by **intent** so you can ask “is there a faster way?”—check in-product help or settings for exact bindings.
+Shortcuts vary by platform, client, and customization. This page includes only combinations explicitly documented today; use in-App **Keyboard Shortcuts** for the complete list.
 
-You do not need every shortcut on day one. Smoothing the actions that interrupt flow is enough.
+## Desktop App
 
-:::caution
-Table below is **illustrative**, not a complete binding list. Keys may change after upgrades.
-:::
+| Action | macOS | Windows |
+|---|---|---|
+| Open Settings | `Cmd + ,` | `Ctrl + ,` |
+| Open/close Activity | `Cmd + Option + U` | `Ctrl + Alt + U` |
+| Open integrated terminal | `Ctrl` + backtick | `Ctrl` + backtick |
+| Open App command palette | `Cmd + K` | Check Keyboard Shortcuts |
+| Clear terminal display | `Ctrl + L` | `Ctrl + L` |
 
-## Intent index
+`Cmd + K` opens the App command palette; it does not clear the terminal.
 
-| Intent | Desktop App (illustrative) | CLI TUI (illustrative) | IDE extension (illustrative) |
-|---|---|---|---|
-| New task/session | `Cmd/Ctrl+N` or sidebar | Exit/re-enter / new thread command | Command palette “Codex” |
-| Send message | `Enter` / `Cmd+Enter` | Per product docs | Panel send |
-| Newline without send | `Shift+Enter` | Per TUI | Per panel |
-| Open command palette | `Cmd/Ctrl+K` class | `/` slash commands | `Cmd/Ctrl+Shift+P` |
-| Search history | Sidebar search | In-session search if any | Chat history |
-| Approve tool call | Panel button | `y` / arrows (per TUI) | Notification or inline button |
-| Reject | Panel button | `n` | Inline reject |
+Keyboard Shortcuts in Settings can search by command or key, change a binding, and restore defaults. After customization, the local binding takes precedence over an online reference card.
 
-**Follow your installed version’s UI.**
+## IDE
 
-## Actions worth learning first
+In VS Code-family editors, `chatgpt.composerEnterBehavior` determines how Enter and `Cmd/Ctrl + Enter` submit multiline prompts. Do not assume every computer uses the same send key.
 
-Shortcuts reduce friction when you:
+While Codex is running, `chatgpt.followUpQueueMode` determines whether a new message queues or steers immediately. Press `Cmd/Ctrl + Shift + Enter` for a single send that reverses the current default.
 
-- Hunt for Send
-- Accidentally send when you wanted newline
-- Fumble approving tools
-- Cannot find how to start a new task
+If the Codex sidebar is missing, run this from the editor Command Palette:
 
-Prioritize:
+```text
+Codex: Open Codex Sidebar
+```
 
-- Send / newline
-- New task
-- Command palette
-- Approve / reject
+## CLI
 
-## Slash commands vs keyboard
+Use the current CLI TUI's `/help` and on-screen hints. This page does not guess `y`, `n`, or other approval keys because terminal, mode, and version affect interaction.
 
-- **Slash commands**: `/review`, `/help`, etc.—see [Slash command reference](/guide/reference/slash-commands/)
-- **Shortcuts**: UI actions without typing
+The general terminal signal `Ctrl + C` may interrupt a command or session. Inspect current state rather than treating it as a side-effect-free Back key.
 
-Combine: `Cmd+K` to focus input, then `/review`.
+## Learning order
 
-## CLI terminal users
+First learn to open Settings and Activity, open the terminal, and submit multiline prompts. Search in the App for other frequent actions. Team documentation should name actions rather than force the same customized bindings on everyone.
 
-- **Ctrl+C** to interrupt runaway output (mind unsaved state)
-- tmux split: Codex beside `git diff`
-- Shell alias for common `codex exec`—see [Commands and shortcuts](/guide/cli/commands-and-shortcuts/)
+## Official sources
 
-## Common misconceptions
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
+- [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
+- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
-### 1. No need to master shortcuts before using Codex
-
-Smooth the few actions you repeat most.
-
-### 2. Others’ muscle memory is not your bar
-
-Shortcuts come with practice—not an onboarding gate.
-
-### 3. Clients need not share identical bindings
-
-Know whether an action has a shortcut, where to view/change keys, and which actions are worth binding first.
-
-## First five to learn
-
-1. Send
-2. Newline without send
-3. Command palette
-4. Approve or reject
-5. New task
-
-Add more as you go.
-
-## IDE users
-
-- Bind “explain selection with Codex” to a comfortable key
-- Use editor diff and go-to-definition—less copy-paste
-
-[IDE settings](/guide/ide/settings/) · [Selected code and open files](/guide/ide/selected-code-and-open-files/)
-
-## Accessibility and customization
-
-Most clients allow rebinding. Teams may document **recommended** bindings—not require uniformity.
-
-Shortcuts are not an exam—smooth the actions that interrupt you most.
-
-## Reference sources
-- Each product Settings / Keyboard shortcuts official page
 ---
 
-**Status:** outdated  
-**Products:** App / CLI / IDE  
-**Review note:** Despite “illustrative” disclaimers, body assumes specific client shortcuts, send behavior, palette keys, and approval keys—highly version- and platform-dependent without strong unified official shortcut documentation.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App, CLI, IDE
+
+**Last verified:** 2026-08-26

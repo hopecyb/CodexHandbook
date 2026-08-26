@@ -3,9 +3,10 @@ title: Eine Website aufbauen
 description: Fallbeispiel vom Bedarf bis zur lokal vorführbaren Prototyp-Seite.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Eine Website aufbauen
@@ -41,8 +42,8 @@ Zuerst Wireframe-Plan liefern und auf meine Bestätigung warten, bevor Code gesc
 
 ## 4. Verwandt
 
-- [Erstellen-Vorlage](/prompts/templates/create/)
-- [Artefakt-first-Arbeit](/cases/workflows/artifact-first-work/)
+- [Erstellen-Vorlage](/de/prompts/templates/create/)
+- [Artefakt-first-Arbeit](/de/cases/workflows/artifact-first-work/)
 ---
 
 **Status:** verified  

@@ -3,9 +3,10 @@ title: Exploration—planification—exécution—vérification
 description: Flux de travail principal par défaut de Codex — quatre points de contrôle par phase, plus fiable que « tout en une fois ».
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 C'est le flux de travail par défaut recommandé par ce manuel — de « on ne sait pas encore comment » à « prêt à fusionner ».
@@ -19,7 +20,7 @@ C'est le flux de travail par défaut recommandé par ce manuel — de « on ne s
 ④ Vérifier     → Tests, revue du diff, contrôle par rapport à la définition de terminé
 ```
 
-Ne sautez pas ①② pour aller directement à ③ — cela devient souvent du « patch au hasard ». Voir [Diagnostiquer avant de corriger](/cases/workflows/diagnose-before-fixing/).
+Ne sautez pas ①② pour aller directement à ③ — cela devient souvent du « patch au hasard ». Voir [Diagnostiquer avant de corriger](/fr/cases/workflows/diagnose-before-fixing/).
 
 ## ① Explorer
 
@@ -45,7 +46,7 @@ Sur la base de l'exploration ci-dessus, proposez un plan : étapes numérotées,
 N'écrivez pas de code tant que je n'ai pas répondu « exécuter selon le plan ».
 ```
 
-Les changements importants ou à haut risque nécessitent d'abord une confirmation. Pour les petites tâches, on peut convenir que « un plan de moins de 3 étapes peut s'exécuter automatiquement » — l'écrire dans [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/).
+Les changements importants ou à haut risque nécessitent d'abord une confirmation. Pour les petites tâches, on peut convenir que « un plan de moins de 3 étapes peut s'exécuter automatiquement » — l'écrire dans [AGENTS.md](/fr/guide/customization/agents-md/writing-effective-instructions/).
 
 ## ③ Exécuter
 
@@ -67,7 +68,7 @@ Formule de guidage : « Exécutez l'étape 2 ; si le plan doit changer, arrêtez
 | Manuelle | Lire le diff, tester manuellement les chemins critiques |
 | Livrables | Captures d'écran, extraits de journaux, réponses API |
 
-Voir [Définition de terminé](/prompts/define-done/) et [Lancer les tests](/guide/quality/run-tests/) pour les listes de contrôle.
+Voir [Définition de terminé](/fr/prompts/define-done/) et [Lancer les tests](/fr/guide/quality/run-tests/) pour les listes de contrôle.
 
 ## Adapter selon l'ampleur de la tâche
 
@@ -80,7 +81,7 @@ Voir [Définition de terminé](/prompts/define-done/) et [Lancer les tests](/gui
 
 ## Modèle de cas EPXV
 
-Les équipes peuvent intégrer les quatre phases dans le [modèle de cas](/cases/use-cases/case-study-template/) et les descriptions de PR pour un langage commun.
+Les équipes peuvent intégrer les quatre phases dans le [modèle de cas](/fr/cases/use-cases/case-study-template/) et les descriptions de PR pour un langage commun.
 
 ## Erreurs courantes
 

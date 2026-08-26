@@ -3,9 +3,10 @@ title: Exécuter votre première Tâche
 description: Réaliser un petit changement avec un Prompt clair.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 766820b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -74,7 +75,7 @@ La première Tâche est censée inclure :
 
 1. Demandez d'abord un court plan (ou demandez-en un vous-même)
 2. Lors de l'Approbation des écritures de fichiers, confirmez que les chemins sont corrects
-3. Une fois terminé, allez à [Examiner le résultat](/guide/getting-started/review-the-result/)
+3. Une fois terminé, allez à [Examiner le résultat](/fr/guide/getting-started/review-the-result/)
 
 ## Ordre suggéré
 
@@ -112,7 +113,7 @@ Ou :
 Ne faites plus de modifications. Dites-moi exactement ce que vous venez de changer.
 ```
 
-Bases du prompting : [Bases du Prompt](/prompts/basics/).
+Bases du prompting : [Bases du Prompt](/fr/prompts/basics/).
 
 ---
 

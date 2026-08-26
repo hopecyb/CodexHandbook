@@ -3,9 +3,10 @@ title: "사례: Issue 분류와 라벨 제안"
 description: Codex로 새 Issue를 읽고 라벨과 담당자를 제안합니다—경량 팀 자동화입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## 메타 정보
@@ -41,7 +42,7 @@ translated_at: 2026-07-28
 
 **계획:** JSON schema 정의: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**실행:** `codex exec`에 issue title + body를 전달([프롬프트 주입](/guide/team-enterprise/security/prompt-injection/) 살균에 주의).
+**실행:** `codex exec`에 issue title + body를 전달([프롬프트 주입](/ko/guide/team-enterprise/security/prompt-injection/) 살균에 주의).
 
 **검증:** 과거 issue fixture 3개로 사람 라벨과 비교해, 일치율 > 80%일 때 온라인.
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-28
 
 ## 5. 정착
 
-- [Webhook](/guide/developer-platform/webhooks/overview/)로 내부 티켓 시스템과 연동(선택)
-- 회고를 [사례 템플릿](/cases/use-cases/case-study-template/)에 기록
+- [Webhook](/ko/guide/developer-platform/webhooks/overview/)로 내부 티켓 시스템과 연동(선택)
+- 회고를 [사례 템플릿](/ko/cases/use-cases/case-study-template/)에 기록
 
 ## 6. 관련 장
 
-- [GitHub 통합](/guide/integrations/github/)
-- [사람 승인 패턴](/cases/workflows/human-approval-patterns/)
+- [GitHub 통합](/ko/guide/integrations/github/)
+- [사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Prérequis
 description: Compte, appareil, projet d'entraînement et base de sécurité.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c8a032b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 5
 ---
@@ -19,8 +20,8 @@ sidebar:
 
 ## Recommandé
 
-- Lire d'abord la [Liste de contrôle sécurité pour débutants](/guide/getting-started/beginner-safety-checklist/)
-- Comprendre [Permissions et Approbations](/guide/foundations/permissions-and-approvals/) et [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
+- Lire d'abord la [Liste de contrôle sécurité pour débutants](/fr/guide/getting-started/beginner-safety-checklist/)
+- Comprendre [Permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/) et [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 - Pour l'installation officielle et les évolutions produit, consultez [https://developers.openai.com/codex](https://developers.openai.com/codex)
 
 ## Non requis

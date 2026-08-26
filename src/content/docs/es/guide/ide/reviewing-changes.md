@@ -1,98 +1,64 @@
 ---
-title: Revisar cambios en el IDE
-description: Leer diffs, comentar y aceptar/rechazar sugerencias de Codex dentro del editor.
+title:  Revisar cambios en el IDE
+description:  Leer diffs, comentar y aceptar/rechazar sugerencias de Codex dentro del editor.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1ca9ffe
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
 
-La experiencia de revisión de la extensión IDE está entre el «autocomplete en línea» y el «PR review completo»: los cambios suelen aparecer directamente en el editor o en una vista de diff lateral. Esta página explica cómo aceptar resultados con seguridad.
+The IDE is useful for reading summaries beside source code and focusing on a diff. A change appearing in the editor is not the same as acceptance. Inspect the diff, run tests, and then decide what to keep.
 
-Aunque en el IDE veas un cambio «listo para aceptar», no conviertas «aceptar de un clic» en la acción por defecto.
+## Complete a local review
 
-## Contenido de esta página
+1. Read the result summary, but do not substitute it for the diff.
+2. Expand changed lines and inspect every affected file.
+3. Keep required edits and request follow-up changes for anything outside scope.
+4. Run `/review` in the input area.
+5. Compare against a base branch or review uncommitted changes.
+6. Run project tests and static checks in the IDE terminal.
+7. Confirm the final Git state with Git tools.
 
-- Formas habituales de la UI de revisión en el IDE
-- Estrategias de aceptar, rechazar y aceptar en parte
-- Encaje con Git, tests y el flujo de PR
+`/review` appears only when the open project is a Git repository. It reports findings by priority and does not modify the worktree. In the IDE you can choose:
 
-## Flujo de revisión
+- **Review against a base branch:** compare the current branch with the selected base.
+- **Review uncommitted changes:** inspect current worktree changes.
 
-1. **Mira el alcance**: ¿qué archivos cambiaron? ¿hay borrados no pedidos o tormentas de formateo?
-2. **Lee la lógica**: ramas condicionales, manejo de errores, casos límite
-3. **Revisa seguridad**: claves, inyección, elevación de Permisos, envenenamiento de dependencias
-4. **Ejecuta la Verificación**: tests / lint acordados en el proyecto (terminal del IDE o scripts de Tarea)
-5. **Decide**: aceptar, pedir cambios o deshacer y reenviar la Tarea
+Results appear in the current chat by default. Set `chatgpt.reviewDelivery` to `detached` to open a separate review chat.
 
-Metodología: [Revisar diffs](/guide/quality/review-diffs/)
+## Prompt with explicit reviewer criteria
 
-## Operaciones propias del IDE (concepto)
+```text
+Review the current uncommitted changes. Prioritize defects that could cause
+wrong behavior, data loss, or security issues. Ignore pure style preferences.
+Every finding must include a file location, trigger condition, and verifiable
+impact. If there are no findings, state the remaining test gaps.
+```
 
-| Operación | Sugerencia |
-|---|---|
-| Inline diff / texto fantasma | Mira bloque a bloque antes de aceptar; evita aceptar todo de un clic |
-| Aceptar un solo archivo | Empieza por el de menor riesgo (p. ej. tests) |
-| Rechazar y reintentar | En el follow-up aclara «solo cambia X, no toques Y» |
-| Integración con Git | Tras aceptar, vuelve a contrastar con `git diff` antes del commit |
+## Acceptance checklist
 
-Las funciones de [Diff, comentarios y revisión](/guide/desktop-app/diffs-comments-and-review/) de la App de escritorio son más completas; en el IDE la revisión es sobre todo **ligera y de alta frecuencia**.
+- [ ] Changed files match the allowed task scope.
+- [ ] No accidental deletion, whole-file formatting, or sensitive files.
+- [ ] Failure paths and edge cases are covered.
+- [ ] Required tests, lint, and type checks pass.
+- [ ] High-priority reviewer findings are fixed or explicitly accepted.
+- [ ] `git diff --check` and `git status --short` are clean as expected.
 
-## Hábitos de Prompt recomendados
+For line comments, staging, or hunk-level reverts, use [Diffs, comments, and review](/es/guide/desktop-app/diffs-comments-and-review/). For the general method, see [Review diffs](/es/guide/quality/review-diffs/).
 
-Antes de empezar la Tarea, incluye:
+## Official sources
 
-- Glob de rutas que se pueden modificar
-- Prohibido: `git push`, tocar lockfile (salvo petición explícita)
-- Al terminar: listar un resumen de cambios, **sin hacer commit automático**
+- [Code review](https://learn.chatgpt.com/docs/code-review)
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 
-Ver [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/)
-
-## Errores frecuentes
-
-- Confiar en el icono verde de tests sin haberlos ejecutado tú
-- Esconder cambios de lógica dentro de un gran diff de formateo automático
-- Tras aceptar, hacer push directo sin PR / protección de rama
-
-## Lista de verificación
-
-- [ ] `git status` coincide con los archivos esperados
-- [ ] Tests en verde (local o CI)
-- [ ] Sin restos de `.env`, token ni `console.log` de depuración
-- [ ] El mensaje de commit lo escribes o confirmas tú
-
-## Preguntas frecuentes
-
-### 1. Si la sugerencia en línea se ve pequeña, ¿puedo aceptarla tal cual?
-
-Mejor no crear ese hábito.
-
-Muchos problemas no vienen de que «el cambio sea grande», sino de que «parece pequeño y por eso no se mira con cuidado».
-
-### 2. Si no se me da bien revisar lógica, ¿qué mirar primero?
-
-Estas tres cosas ya aportan mucho:
-
-- Si cambia el archivo que pediste
-- Si ha borrado algo que no debía
-- Si hay restos evidentes de depuración o deriva de estilo
-
-### 3. Tras aceptar, ¿ya está hecho?
-
-Todavía no.
-
-Aceptar solo mete el cambio en tu área de trabajo; después hay que verificar y decidir si hacer commit.
-
-En el IDE, «aceptar el cambio» es un paso intermedio, no la aceptación final.
-
-## Fuentes de referencia
-- [Verificación y revisión humana](/guide/foundations/verification-and-human-review/)
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** IDE  
-**Nota de revisión:** Esta página depende de si la extensión IDE ofrece UI concreta de revisión (inline diff, diff lateral, sugerencias por bloque aceptar/rechazar); el material oficial público vigente no basta para confirmar esas capacidades una a una; no conviene marcarla como `verified` hasta completar la documentación de la extensión nueva.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

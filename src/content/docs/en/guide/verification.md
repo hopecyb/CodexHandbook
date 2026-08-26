@@ -5,9 +5,10 @@ sidebar:
   order: 17
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Verification
@@ -74,12 +75,12 @@ Think of it as:
 
 ## Core topics
 
-- [Review diffs](/guide/quality/review-diffs/) — read diffs; confirm scope and risk
-- [Run tests](/guide/quality/run-tests/) — automated regression
-- [Verify artifacts](/guide/quality/verify-artifacts/) — docs, config, generated output
-- [Validate sources](/guide/quality/validate-sources/) — traceable research conclusions
-- [Handle uncertainty](/guide/quality/handle-uncertainty/) — when the model is unsure
-- [Definition of done](/guide/quality/definition-of-done/) — what "finished" means
+- [Review diffs](/en/guide/quality/review-diffs/) — read diffs; confirm scope and risk
+- [Run tests](/en/guide/quality/run-tests/) — automated regression
+- [Verify artifacts](/en/guide/quality/verify-artifacts/) — docs, config, generated output
+- [Validate sources](/en/guide/quality/validate-sources/) — traceable research conclusions
+- [Handle uncertainty](/en/guide/quality/handle-uncertainty/) — when the model is unsure
+- [Definition of done](/en/guide/quality/definition-of-done/) — what "finished" means
 
 ## Verification emphasis by task type
 
@@ -88,11 +89,11 @@ Think of it as:
 - **Research**: real, current sources; conclusions within evidence
 - **Config or scripts**: environment assumptions, permission scope, recovery if it fails
 
-Unsure where to start: default to [definition of done](/guide/quality/definition-of-done/).
+Unsure where to start: default to [definition of done](/en/guide/quality/definition-of-done/).
 
 Verification confirms the result is usable, trustworthy, and shippable.
 
-How to write acceptance in prompts: [define done](/prompts/define-done/). End-to-end examples: [cases](/cases/).
+How to write acceptance in prompts: [define done](/en/prompts/define-done/). End-to-end examples: [cases](/en/cases/).
 
 ---
 

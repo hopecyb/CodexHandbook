@@ -3,9 +3,10 @@ title: 画像プロンプト
 description: Codex にスクリーンショット、デザイン稿、ホワイトボード画像を渡すとき、実行しやすい結果を得る質問の仕方。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 「画像を見て作業する」失敗の多くは、モデルが見えていないのではなく、画像だけ渡して**図のどこに何を見てほしいか**を書いていないことにあります。
@@ -161,10 +162,10 @@ Codex が図から要件を全部逆算し、気にしていない細部まで�
 
 ## 他ページとの組み合わせ
 
-- 画像のアップロードと管理：[画像とスクリーンショット](/guide/files-and-artifacts/images-and-screenshots/)
-- 新規画像の生成：[画像生成](/guide/tools/image-generation/)
-- タスクを完結させる：[タスクの構造](/prompts/task-anatomy/)
-- 分析してから着手：[まず計画を求める](/prompts/ask-for-a-plan/)
+- 画像のアップロードと管理：[画像とスクリーンショット](/ja/guide/files-and-artifacts/images-and-screenshots/)
+- 新規画像の生成：[画像生成](/ja/guide/tools/image-generation/)
+- タスクを完結させる：[タスクの構造](/ja/prompts/task-anatomy/)
+- 分析してから着手：[まず計画を求める](/ja/prompts/ask-for-a-plan/)
 
 ## 実用的なコツ
 

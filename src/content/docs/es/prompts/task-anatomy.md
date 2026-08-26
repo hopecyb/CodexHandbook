@@ -1,96 +1,148 @@
 ---
-title: Anatomía de una tarea
-description: Objetivo, contexto, entradas, restricciones, aceptación y límites de permiso.
+title: Estructura de una buena tarea
+description: Objetivo, contexto, entradas, restricciones, aceptación y límites de permisos.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 4df3d01
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Al formular un requisito, con mucha información es fácil dispersarse: hay material de sobra, pero el foco no está claro, y Codex malinterpreta con más facilidad.
+Cuando una solicitud contiene mucha información sin organizar, el resultado esperado, los límites y la aceptación acaban mezclados. Codex tiene entonces que completar los vacíos por su cuenta.
 
-Aquí se resumen las partes habituales de una tarea.
+Esta página ofrece una ficha de tarea reutilizable. Explica qué problema resuelve cada parte y cómo la descripción entra en el ciclo de explorar, planificar, ejecutar y verificar.
+
+## Para quién es
+
+- Personas que ya saben abrir Codex, pero suelen obtener cambios excesivos, trabajos incompletos o resultados difíciles de verificar.
+- Desarrolladores, creadores y equipos que quieren convertir requisitos verbales en trabajo para un Agent.
+- Quienes necesitan definir el alcance, los permisos y las condiciones de parada de una tarea larga.
 
 ## Estructura de la tarea
 
 Puedes organizarla en este orden:
 
-- cuál es el resultado
-- por qué hay que hacerlo
-- qué materiales hacen falta
-- dónde están los límites
-- cómo juzgar que está terminado
+- resultado deseado;
+- motivo;
+- materiales necesarios;
+- límites;
+- forma de comprobar que ha terminado.
 
-El orden no tiene que ser rígido; cuando estos puntos están claros, la tarea se estabiliza mucho.
+El orden no tiene que ser rígido, pero aclarar estos puntos hace mucho más estable la ejecución.
 
 ## Plantilla recomendada
 
 ```text
-Objetivo: …… (cuál es el artefacto final)
-Contexto: …… (por qué importa, estado actual)
-Entradas: …… (archivos / enlaces / contenido pegado)
-Restricciones: …… (alcance editable, estilo, prohibiciones)
-Criterios de aceptación: …… (condiciones comprobables de terminado)
-Límites de permiso: …… (¿red? ¿instalar dependencias? ¿cambiar configuración?)
-Si falta información: pregunta primero, no adivines.
+Objetivo: ... (cuál es el entregable final)
+Contexto: ... (por qué importa y cuál es la situación actual)
+Entradas: ... (archivos, enlaces o contenido pegado relevante)
+Restricciones: ... (alcance editable, estilo y acciones prohibidas)
+Criterios de aceptación: ... (condiciones observables de finalización)
+Límites de permisos: ... (internet, dependencias y configuración)
+Si falta información: pregunta primero; no hagas suposiciones.
 ```
 
-## Función de cada bloque
+![Ciclo desde la especificación de una tarea hasta un resultado verificable](/diagrams/task-execution-loop-es.svg)
 
-- **Objetivo:** evita tareas que solo tienen acción y no resultado
-- **Contexto:** ayuda a Codex a entender por qué hacerlo así
-- **Entradas:** pone a su alcance los archivos, enlaces y materiales que de verdad necesita
-- **Restricciones:** evita extralimitarse y cambios «de paso»
-- **Criterios de aceptación:** convierte «¿está terminado?» en algo comprobable
-- **Límites de permiso:** aclara de antemano red, dependencias y configuración
+Los seis campos de la izquierda no pretenden alargar el prompt, sino eliminar vacíos críticos. Una vez iniciada la ejecución, las evidencias de verificación determinan el siguiente paso: solo se entrega si todo pasa; si no, se vuelve a la tarea o al plan con la información del fallo, en lugar de seguir cambiando cosas a ciegas.
 
-## Malentendidos habituales
+## Función de cada sección
 
-### 1. Cada bloque debe llenarse por completo
+- **Objetivo:** evita que la tarea describa una acción sin definir el resultado.
+- **Contexto:** ayuda a Codex a entender por qué importa ese enfoque.
+- **Entradas:** pone a su alcance los archivos, enlaces y materiales que debe consultar.
+- **Restricciones:** impide ampliar el alcance o realizar cambios incidentales.
+- **Aceptación:** convierte la finalización en algo comprobable.
+- **Permisos:** aclara de antemano los límites de internet, instalación y configuración.
 
-La plantilla es más una lista de comprobación que un formulario.  
-Algunas tareas no necesitan un contexto largo, pero al omitirlo también pierdes parte de la base de juicio.
+## Errores de interpretación habituales
 
-### 2. Objetivo y aceptación no son lo mismo
+### 1. Todas las secciones deben ser extensas
 
-No son lo mismo.
+La plantilla se parece más a una lista de comprobación que a un formulario. Algunas tareas no necesitan mucho contexto, pero omitirlo también elimina información útil para decidir.
 
-- **Objetivo** dice qué resultado quieres
-- **Aceptación** dice cómo comprobar que de verdad se alcanzó
+### 2. El objetivo y la aceptación son lo mismo
 
-### 3. Entradas = pegar un montón de material
+No lo son.
 
-Más no es mejor; importa la relevancia.  
-La clave es entregar con claridad el «material que debe mirar».
+- **Objetivo:** qué resultado quieres obtener.
+- **Aceptación:** cómo sabrás que realmente se ha conseguido.
 
-## Plantilla mínima de tarea
+### 3. Las entradas consisten en pegar todo el material disponible
 
-Si solo quieres una versión usable, puedes reducirla así:
+La relevancia importa más que el volumen. Señala de forma explícita qué materiales es imprescindible consultar.
+
+## Plantilla mínima
+
+Si solo necesitas una versión práctica para empezar, puedes reducirla a esto:
 
 ```text
-Objetivo: convertir qué en qué
-Entradas: archivos o páginas relevantes aquí
-Restricciones: solo puedes cambiar dónde; no toques qué
-Aceptación: cómo comprobaré que de verdad terminaste
-Ante la incertidumbre: pregunta primero
+Objetivo: convertir qué en qué resultado
+Entrada: archivos o páginas relevantes
+Restricciones: qué se puede modificar y qué no debe tocarse
+Aceptación: cómo comprobaré que el trabajo está terminado
+Si hay dudas: pregunta primero
 ```
 
-## Ejemplo
+## De una solicitud ambigua a una tarea ejecutable
+
+### Solicitud original
 
 ```text
-Objetivo: reescribir el copy de la primera pantalla de la home de docs para que lo entiendan principiantes
-Entradas: src/content/docs/guide/index.md
-Restricciones: solo este archivo; no cambiar estilos; no añadir componentes
-Aceptación: conservar la estructura actual; tono más conversacional; pnpm build pasa
-Ante la incertidumbre: primero expón tu comprensión y el alcance del cambio, luego actúa
+Mejora la página de inicio de la documentación.
 ```
 
-Esta estructura reduce las suposiciones y hace la aceptación más directa. Puedes recortar bloques según el caso, pero al eliminar uno aceptas perder esa parte de información.
+No define el público, el alcance editable ni qué significa «mejor». Aunque Codex produzca contenido, será difícil saber si se excedió.
+
+### Versión ejecutable
+
+```text
+Objetivo: reescribir la primera pantalla de la página de inicio para que una
+persona que no conoce Codex entienda en 30 segundos qué es y por dónde empezar.
+Contexto: la página actual presupone que el lector ya conoce Agent, contexto y Skill.
+Entrada: src/content/docs/guide/index.md
+Restricciones: modifica solo este archivo; no cambies la navegación, los estilos
+ni los componentes. Explica Agent en lenguaje sencillo la primera vez que aparezca.
+Criterios de aceptación:
+- La primera pantalla indica el propósito, el público y el primer punto de lectura.
+- Se conservan el frontmatter y los niveles de encabezado.
+- No se añade jerga sin explicar.
+- pnpm build pasa correctamente.
+Permisos: se pueden leer páginas relacionadas del sitio; sin internet, instalaciones,
+cambios de configuración ni Git commit.
+Si falta información: enumérala junto con el alcance propuesto y espera confirmación.
+```
+
+### Proceso de ejecución esperado
+
+1. Leer la página de inicio y las entradas adyacentes, y explicar los problemas actuales.
+2. Proponer un plan breve que afecte a un solo archivo.
+3. Modificar el texto y resumir el diff.
+4. Ejecutar `pnpm build`.
+5. Presentar evidencias para cada uno de los cuatro criterios de aceptación.
+
+## Cómo revisar la tarea antes de enviarla
+
+- ¿El objetivo describe un resultado o solo acciones como «mejorar», «arreglar» o «revisar»?
+- ¿Las entradas se limitan a archivos y materiales realmente relevantes?
+- ¿Las restricciones indican qué partes no deben tocarse?
+- ¿Otra persona podría decidir si cada criterio pasa o falla?
+- ¿Hace falta autorizar de antemano internet, instalaciones, escrituras externas o commits?
+- Cuando falte información, ¿el Agent debe preguntar, investigar o detenerse?
+
+Ajusta la plantilla al tamaño de la tarea. Una errata en un solo archivo necesita poco contexto; una migración entre módulos no puede reducirse a una frase con el objetivo.
+
+## Siguientes pasos
+
+- [Definir cuándo está terminado](/es/prompts/define-done/)
+- [Restricciones y límites](/es/prompts/constraints-and-boundaries/)
+- [Pedir primero un plan](/es/prompts/ask-for-a-plan/)
+- [Explorar, planificar, ejecutar y verificar](/es/cases/workflows/explore-plan-execute-verify/)
 
 ---
 
-**Estado:** verified  
-**Productos aplicables:** App / CLI / IDE / Cloud  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** Esta página solo describe el método de estructura de tarea; se han revisado ejemplos y enlaces internos, y el cuerpo no depende de hechos volátiles del producto.
+**Estado:** verified
+**Productos aplicables:** App / CLI / IDE / Cloud
+**Base de verificación:** Esta página documenta un método estable para diseñar tareas. Se revisaron los ejemplos y enlaces internos, y el contenido no depende de interfaces, precios ni versiones cambiantes.
+**Última verificación:** 2026-08-25

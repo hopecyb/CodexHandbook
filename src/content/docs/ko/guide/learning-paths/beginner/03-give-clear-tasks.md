@@ -3,9 +3,10 @@ title: 명확한 작업 주기
 description: 목표, 배경, 제약, 검수 기준으로 프롬프트를 조직합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7048d91
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 안정된 프레임으로 프롬프트 한 줄을 쓰세요.
 
-프레임은 [좋은 작업의 구조](/prompts/task-anatomy/)를 보세요.
+프레임은 [좋은 작업의 구조](/ko/prompts/task-anatomy/)를 보세요.
 
 앞 두 단계는 “작업을 분명히 말하기”를 다루고, 이 단계는 “작업을 더 안정적으로 말하기”를 이어 갑니다.
 
@@ -47,7 +48,7 @@ sidebar:
 
 명확한 작업의 핵심은 목표, 제한, 완료 기준이 함께 나타나는 것입니다.
 
-다음 단계：[결과 검토하기](/guide/learning-paths/beginner/04-review-results/)
+다음 단계：[결과 검토하기](/ko/guide/learning-paths/beginner/04-review-results/)
 
 ---
 

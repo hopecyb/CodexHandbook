@@ -3,9 +3,10 @@ title: Voice input and output
 description: When to use voice with Codex, limitations, and privacy considerations.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Some Codex clients support **voice**: speak a task or hear a reply summary. Good when your hands are busy or you want to dictate ideas quickly—**not** for reading secrets aloud or replacing written acceptance records.
@@ -26,7 +27,7 @@ Voice fits direction, background, and quick follow-up; precise, searchable, revi
 | Short mobile follow-ups | Reading API keys or passwords aloud |
 | Accessibility needs | Specs that must be searchable and diffable |
 
-After speaking, ask Codex to **repeat its understanding** or produce a written plan for your confirmation. See [ask for a plan](/prompts/ask-for-a-plan/).
+After speaking, ask Codex to **repeat its understanding** or produce a written plan for your confirmation. See [ask for a plan](/en/prompts/ask-for-a-plan/).
 
 ## What voice is good for
 
@@ -90,7 +91,7 @@ Then ask for a written version to confirm.
 
 ## Relation to multimodal input
 
-- **Image input**: mockups, screenshots → [prompting with images](/prompts/prompting-with-images/)
+- **Image input**: mockups, screenshots → [prompting with images](/en/prompts/prompting-with-images/)
 - **Voice input**: this page
 - **Output**: still mainly code, files, text diffs; voice summary does not replace review
 

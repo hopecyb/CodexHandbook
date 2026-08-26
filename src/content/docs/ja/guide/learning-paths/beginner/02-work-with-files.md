@@ -3,9 +3,10 @@ title: ファイルを扱う
 description: Codex に明確な範囲内でファイルの読み書きをさせます。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 7920b62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -24,7 +25,7 @@ hello.md のみ編集してください：文頭に日付コメント（今日�
 完了後、変更した行を列挙してください。
 ```
 
-差分を確認してから受け入れます。関連：[ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
+差分を確認してから受け入れます。関連：[ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/)
 
 ## 練習の重点
 
@@ -50,7 +51,7 @@ hello.md のみ編集してください：文頭に日付コメント（今日�
 
 初めてファイルを動かすとき、重要なのは変更量ではなく、変更の境界を明確にし、確認しやすくすることです。
 
-次のステップ：[明確なタスクを与える](/guide/learning-paths/beginner/03-give-clear-tasks/)
+次のステップ：[明確なタスクを与える](/ja/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 

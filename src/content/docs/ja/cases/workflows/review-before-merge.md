@@ -3,12 +3,13 @@ title: マージ前レビュー
 description: merge 前に Codex で構造化 diff とリスクレビューを行う——人間と機械の役割分担を明確にする。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**マージ前レビュー**は [品質と検証](/guide/quality/) を Git フローに組み込むものです。PR マージ前に、Codex で diff、テスト、セキュリティ、仕様の一貫性を確認します。自動コメント自体は自動マージの代替にはなりません。
+**マージ前レビュー**は [品質と検証](/ja/guide/quality/) を Git フローに組み込むものです。PR マージ前に、Codex で diff、テスト、セキュリティ、仕様の一貫性を確認します。自動コメント自体は自動マージの代替にはなりません。
 
 ## このページの重点
 
@@ -32,7 +33,7 @@ translated_at: 2026-07-28
 
 - 固定プロンプトバージョン + 読み取り専用 Token
 - 結果を PR コメントまたは check run に書き込む
-- [コードレビュー自動化](/guide/developer-platform/ci-cd/code-review-automation/) を参照
+- [コードレビュー自動化](/ja/guide/developer-platform/ci-cd/code-review-automation/) を参照
 
 ## 推奨レビュー次元
 
@@ -44,7 +45,7 @@ translated_at: 2026-07-28
 | 保守性 | 命名、重複、公開 API |
 | 仕様 | issue/仕様ドキュメントと一致しているか |
 
-[差分のレビュー](/guide/quality/review-diffs/) と組み合わせ可能。高リスク項目は [人間による承認パターン](/cases/workflows/human-approval-patterns/) を経由する。
+[差分のレビュー](/ja/guide/quality/review-diffs/) と組み合わせ可能。高リスク項目は [人間による承認パターン](/ja/cases/workflows/human-approval-patterns/) を経由する。
 
 ## よくある誤り
 
@@ -67,8 +68,8 @@ translated_at: 2026-07-28
 
 ## 関連章
 
-- [Cloud コードレビュー](/guide/web-and-cloud/code-review/)
-- [Pull Request の作成](/guide/web-and-cloud/create-pull-requests/)
+- [Cloud コードレビュー](/ja/guide/web-and-cloud/code-review/)
+- [Pull Request の作成](/ja/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

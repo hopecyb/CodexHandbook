@@ -3,14 +3,15 @@ title: 명령과 단축
 description: CLI 하위 명령, 세션 내 조작, 키보드 습관—제품 지향 설명. 전체 매개변수는 참고 구역을 보세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6a36a12
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-터미널 효율은 세 덩어리에서 옵니다. **시작 방식**, **세션 내 단축 조작**, **스크립트/에디터와의 맞춤**. 이 페이지는 사용법과 습관을 다룹니다. 매개변수 표는 [CLI 명령 참고](/guide/reference/commands/)와 [키보드 단축](/guide/reference/keyboard-shortcuts/)을 보세요.
+터미널 효율은 세 덩어리에서 옵니다. **시작 방식**, **세션 내 단축 조작**, **스크립트/에디터와의 맞춤**. 이 페이지는 사용법과 습관을 다룹니다. 매개변수 표는 [CLI 명령 참고](/ko/guide/reference/commands/)와 [키보드 단축](/ko/guide/reference/keyboard-shortcuts/)을 보세요.
 
 ## 이 페이지의 내용
 
@@ -34,9 +35,9 @@ sidebar:
 
 | 하려는 일 | 입구 | 상세 |
 |---|---|---|
-| 대화하며 코드 수정 | `codex` 대화형 TUI | [대화형 모드](/guide/cli/interactive-mode/) |
-| CI / 파이프 단일 작업 | `codex exec`(또는 동등) | [비대화형 모드](/guide/cli/non-interactive-mode/) |
-| 기본 동작 변경 | 구성 파일 | [CLI 구성](/guide/cli/configuration/) |
+| 대화하며 코드 수정 | `codex` 대화형 TUI | [대화형 모드](/ko/guide/cli/interactive-mode/) |
+| CI / 파이프 단일 작업 | `codex exec`(또는 동등) | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
+| 기본 동작 변경 | 구성 파일 | [CLI 구성](/ko/guide/cli/configuration/) |
 
 :::note
 하위 명령 이름은 버전에 따라 달라지므로 `codex --help`를 기준으로 하세요.
@@ -79,11 +80,11 @@ sidebar:
 
 ### 슬래시 명령
 
-프롬프트에 `/`를 입력하면 내장 흐름(검토, 컨텍스트 압축 등)이 트리거됩니다. **목록을 외우지 마세요**—현재 환경의 `/` 완성을 기준으로 하세요. 학습용 분류는 [슬래시 명령 빠른 참조](/guide/reference/slash-commands/)를 보세요.
+프롬프트에 `/`를 입력하면 내장 흐름(검토, 컨텍스트 압축 등)이 트리거됩니다. **목록을 외우지 마세요**—현재 환경의 `/` 완성을 기준으로 하세요. 학습용 분류는 [슬래시 명령 빠른 참조](/ko/guide/reference/slash-commands/)를 보세요.
 
 ### 승인 관련
 
-Agent가 shell 실행이나 파일 쓰기를 요청하면 대화형 UI가 승인/거부/항상 허용(제공 시)을 묻습니다. 무인 운전 전에 반드시 [승인과 샌드박스](/guide/cli/approvals-and-sandbox/)를 읽으세요.
+Agent가 shell 실행이나 파일 쓰기를 요청하면 대화형 UI가 승인/거부/항상 허용(제공 시)을 묻습니다. 무인 운전 전에 반드시 [승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)를 읽으세요.
 
 ## Shell 층 단축(권장)
 
@@ -113,11 +114,11 @@ CLI를 처음 쓸 때는 이 순서로:
 
 | | CLI | IDE 확장 |
 |---|---|---|
-| 컨텍스트 | `--cwd`, @ 파일(버전에 따라) | 열린 파일, 선택한 코드 |
+| 컨텍스트 | `--cd`, @ 파일(버전에 따라) | 열린 파일, 선택한 코드 |
 | 적합 | 스크립트, SSH 원격, 순수 터미널 | 고치면서 diff 보기 |
 | 단축 | 터미널 키 + `/` | 에디터 명령 팔레트 |
 
-IDE: [로컬 작업 워크플로](/guide/ide/local-task-workflow/)
+IDE: [로컬 작업 워크플로](/ko/guide/ide/local-task-workflow/)
 
 ## 흔한 실수
 

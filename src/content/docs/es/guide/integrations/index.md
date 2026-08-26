@@ -5,9 +5,10 @@ sidebar:
   order: 55
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d842500
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 El valor de las integraciones de Codex no es solo conectar una herramienta más: es meter al Agent en las cadenas de colaboración que ya usas — hosting de código, flujo de tickets, notificaciones, plataformas internas, bases de conocimiento.
@@ -101,7 +102,7 @@ Adecuado para:
 - Revisión no interactiva en CI
 - Segunda corrección en torno a review comments
 
-Entrada: [Integración con GitHub](/guide/integrations/github/) y [Web y Cloud](/guide/web-and-cloud/).
+Entrada: [Integración con GitHub](/es/guide/integrations/github/) y [Web y Cloud](/es/guide/web-and-cloud/).
 
 ### Tickets y gestión de proyectos
 
@@ -183,15 +184,15 @@ En la primera integración, dejar que Codex te ayude a «ver» y «sugerir» sue
 
 | Integración | Página |
 |---|---|
-| GitHub | [Integración con GitHub](/guide/integrations/github/) |
+| GitHub | [Integración con GitHub](/es/guide/integrations/github/) |
 | Slack / Linear / Jira, etc. | Sobre todo documentación oficial y capítulos MCP/Automation; este manual se irá completando |
 
 ## Relación con otros capítulos
 
-- Conectores de extensión y distribución empaquetada: ver [Resumen de Plugins](/skills/plugins/plugins-overview/)
-- Acceso a datos externos: ver [Resumen de MCP](/skills/mcp/mcp-overview/)
-- Ejecución programada y en segundo plano: ver [Tareas programadas y en segundo plano](/skills/automations/scheduled-tasks/)
-- Colaboración en repositorios Cloud: ver [Web y Cloud](/guide/web-and-cloud/)
+- Conectores de extensión y distribución empaquetada: ver [Resumen de Plugins](/es/skills/plugins/plugins-overview/)
+- Acceso a datos externos: ver [Resumen de MCP](/es/skills/mcp/mcp-overview/)
+- Ejecución programada y en segundo plano: ver [Tareas programadas y en segundo plano](/es/skills/automations/scheduled-tasks/)
+- Colaboración en repositorios Cloud: ver [Web y Cloud](/es/guide/web-and-cloud/)
 
 ## Referencias
 - Documentación oficial de OpenAI Codex sobre integraciones y desarrolladores

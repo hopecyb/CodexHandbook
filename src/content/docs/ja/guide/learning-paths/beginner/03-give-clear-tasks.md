@@ -3,9 +3,10 @@ title: 明確なタスクを与える
 description: 目標、背景、制約、受け入れ基準でプロンプトを構成します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 7048d91
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 安定した枠組みで 1 つのプロンプトを書くことです。
 
-枠組みの詳細：[良いタスクの構造](/prompts/task-anatomy/)
+枠組みの詳細：[良いタスクの構造](/ja/prompts/task-anatomy/)
 
 前の 2 ステップは主に「タスクを明確に伝える」ことを扱い、このステップでは「より安定して伝える」ことに進みます。
 
@@ -47,7 +48,7 @@ sidebar:
 
 明確なタスクの鍵は、目標、制限、完了基準が同時に現れることです。
 
-次のステップ：[結果をレビューする](/guide/learning-paths/beginner/04-review-results/)
+次のステップ：[結果をレビューする](/ja/guide/learning-paths/beginner/04-review-results/)
 
 ---
 

@@ -16,6 +16,28 @@ export const CONTENT_LOCALE_PREFIXES = new Set([
 	'vi',
 ]);
 
+const LOCALIZED_DIAGRAMS = new Set([
+	'codex-client-selection',
+	'codex-work-system-architecture',
+	'extension-selection-map',
+	'hook-lifecycle-events',
+	'sandbox-approval-flow',
+	'scheduled-task-safety-loop',
+	'subagent-orchestration',
+	'task-execution-loop',
+	'verified-bug-fix-workflow',
+]);
+
+const LOCALIZED_CONTENT_ROOTS = new Set([
+	'ai-roadmap',
+	'cases',
+	'guide',
+	'pets',
+	'prompts',
+	'skills',
+	'theme',
+]);
+
 const SKIP_CONVERT_KEYS = new Set([
 	'locale',
 	'source_locale',
@@ -54,14 +76,7 @@ export function shouldPrefixInternalPath(pathname) {
 	const segments = pathname.split('/').filter(Boolean);
 	if (segments.length === 0) return false;
 	if (CONTENT_LOCALE_PREFIXES.has(segments[0])) return false;
-	if (pathname.startsWith('/_')) return false;
-	if (pathname.startsWith('/favicon')) return false;
-	if (pathname.startsWith('/icon')) return false;
-	if (pathname.startsWith('/apple-touch')) return false;
-	if (pathname.startsWith('/cover')) return false;
-	if (pathname.startsWith('/brand')) return false;
-
-	return true;
+	return LOCALIZED_CONTENT_ROOTS.has(segments[0]);
 }
 
 export function prefixInternalPath(pathname, locale = LOCALE_CODE) {
@@ -165,12 +180,17 @@ function serializeFrontmatter(frontmatter) {
 }
 
 function localizeBodyLinks(body) {
-	let localized = body.replace(/href="(\/[^"]*)"/g, (match, pathname) => {
+	let localized = body.replace(/href=(['"])(\/[^'"]*)\1/g, (match, quote, pathname) => {
 		const next = prefixInternalPath(pathname);
-		return next === pathname ? match : `href="${next}"`;
+		return next === pathname ? match : `href=${quote}${next}${quote}`;
 	});
 
-	localized = localized.replace(/(^|\s)link:\s*(\/[^\s#]+)/gm, (match, prefix, pathname) => {
+	localized = localized.replace(/(?<!!)(\[[^\]\n]*\]\()(\/[^)\s]+)([^)]*\))/g, (match, prefix, pathname, suffix) => {
+		const next = prefixInternalPath(pathname);
+		return next === pathname ? match : `${prefix}${next}${suffix}`;
+	});
+
+	localized = localized.replace(/(^|\s)link:\s*(\/[^\s]+)/gm, (match, prefix, pathname) => {
 		const next = prefixInternalPath(pathname);
 		return next === pathname ? match : `${prefix}link: ${next}`;
 	});
@@ -204,6 +224,11 @@ export function convertDocument(source, { converter, sourceRevision: revision, t
 	convertedBody = convertedBody
 		.replaceAll('/diagrams/codex-capability-ladder-zh-cn.svg', '/diagrams/codex-capability-ladder-zh-tw.svg')
 		.replaceAll('/diagrams/codex-capability-ladder-zh-cn.png', '/diagrams/codex-capability-ladder-zh-tw.png');
+	convertedBody = convertedBody.replace(
+		/\/diagrams\/([a-z0-9-]+)-zh-cn\.svg/g,
+		(match, diagramName) =>
+			LOCALIZED_DIAGRAMS.has(diagramName) ? `/diagrams/${diagramName}-zh-tw.svg` : match,
+	);
 
 	return `${serializeFrontmatter(convertedFrontmatter)}\n${convertedBody}`;
 }

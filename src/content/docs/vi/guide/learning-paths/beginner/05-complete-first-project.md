@@ -3,9 +3,10 @@ title: Hoàn thành dự án nhỏ đầu tiên
 description: Nối các bước bắt đầu thành một lần giao hàng đầy đủ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -22,8 +23,8 @@ Bước này không phải làm một tài liệu «giống bài tập», mà n�
 
 ## Sau khi hoàn thành
 
-- Ôn [Bản đồ năng lực](/guide/start-here/codex-capability-map/)
-- Đi sâu [App máy tính](/guide/desktop-app/) hoặc [Prompt](/prompts/)
+- Ôn [Bản đồ năng lực](/vi/guide/start-here/codex-capability-map/)
+- Đi sâu [App máy tính](/vi/guide/desktop-app/) hoặc [Prompt](/vi/prompts/)
 
 ## Trọng tâm luyện
 

@@ -3,12 +3,13 @@ title: Specification-driven work
 description: Write an acceptance-ready spec first, then have Codex implement to plan—good for clear delivery tasks.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
-**Specification-driven** work means preparing a short spec before large file changes—goals, scope, interfaces, and acceptance criteria. It can follow [Brainstorm before building](/cases/workflows/brainstorm-before-building/), or go straight into [EPXV](/cases/workflows/explore-plan-execute-verify/) with already-clarified requirements.
+**Specification-driven** work means preparing a short spec before large file changes—goals, scope, interfaces, and acceptance criteria. It can follow [Brainstorm before building](/en/cases/workflows/brainstorm-before-building/), or go straight into [EPXV](/en/cases/workflows/explore-plan-execute-verify/) with already-clarified requirements.
 
 ## What's covered
 
@@ -57,7 +58,7 @@ do not add features not in the spec. Wait for my confirmation before writing cod
 
 ## Pairing with test-driven work
 
-Acceptance items in the spec should be **testable** where possible; write tests first when you can—see [Test-driven work](/cases/workflows/test-driven-work/).
+Acceptance items in the spec should be **testable** where possible; write tests first when you can—see [Test-driven work](/en/cases/workflows/test-driven-work/).
 
 ## Common mistakes
 

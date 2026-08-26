@@ -4,7 +4,7 @@ description: When Codex needs your approval before acting.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 0870303
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -25,8 +25,8 @@ Codex should not perform high-risk operations without consent. **Approval** is a
 | Layer | What it covers | Where to read |
 |---|---|---|
 | Concepts (this page) | Why approval matters | — |
-| Product differences | How each entry point prompts you | [Product guides](/guide/) |
-| Prompt strategy | How to declare permission boundaries in a task | [Define constraints](/prompts/constraints-and-boundaries/) |
+| Product differences | How each entry point prompts you | [Product guides](/en/guide/) |
+| Prompt strategy | How to declare permission boundaries in a task | [Define constraints](/en/prompts/constraints-and-boundaries/) |
 
 Official policy and defaults may change—check [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

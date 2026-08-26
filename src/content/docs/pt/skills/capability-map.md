@@ -3,112 +3,99 @@ title: Mapa de capacidades de extensão
 description: Como Skill, MCP, Plugin, Hooks, comandos de barra e AGENTS.md se relacionam.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: fa5604a
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Há muitos mecanismos de extensão, e é fácil confundir. Esta página explica as relações — não os passos de instalação.
 
-## Diagrama de relação
+Extension mechanisms are confusing because they appear in one workflow while solving different problems.
 
-![De um prompt a um pacote de capacidades para a equipe](/diagrams/codex-capability-ladder-pt.svg)
+Prompts and `AGENTS.md` provide tasks and rules; Skills provide reusable processes; MCP provides external tools; Hooks guard lifecycle points; Plugins compose and distribute; Scheduled tasks trigger by time. They combine without a fixed upgrade order.
 
-```text
-                    ┌─────────────────┐
-                    │  Seu objetivo    │
-                    │  da Tarefa       │
-                    └────────┬────────┘
-                             │
-         ┌───────────────────┼───────────────────┐
-         ▼                   ▼                   ▼
-   ┌───────────┐      ┌─────────────┐     ┌──────────────┐
-   │ AGENTS.md │      │ Prompt/      │     │ Comando de   │
-   │ Regras    │      │ template     │     │ barra        │
-   │ persistentes│    │ Desta Tarefa │     │ Você dispara │
-   └───────────┘      └─────────────┘     └──────────────┘
-         │                   │                   │
-         └───────────────────┼───────────────────┘
-                             ▼
-                    ┌─────────────────┐
-                    │      Skill       │
-                    │ Pacote de        │
-                    │ workflow         │
-                    │ reutilizável     │
-                    └────────┬────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              ▼              ▼              ▼
-        ┌──────────┐  ┌──────────┐  ┌─────────────┐
-        │   MCP    │  │  Hooks   │  │  Scripts    │
-        │ Ferramentas│ │ Auditoria│  │ Scripts no  │
-        │ externas │  │ /checagem│  │ Skill       │
-        └──────────┘  └──────────┘  └─────────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │     Plugin       │
-                    │ Distribuição e   │
-                    │ empacotamento    │
-                    └────────┬────────┘
-                             ▼
-                    ┌─────────────────┐
-                    │  Automations     │
-                    │ Sem supervisão / │
-                    │ agendado         │
-                    └─────────────────┘
-```
+## System architecture
 
-## Tabela comparativa
+![Reusable Codex work-system architecture](/diagrams/codex-work-system-architecture-en.svg)
 
-| | Quem dispara | Persistência | Liga sistemas externos | Distribuição em equipe |
-|---|---|---|---|---|
-| AGENTS.md | Carrega automaticamente | Alta (Git) | Fácil |
-| Prompt | Você | Baixa | Difícil |
-| Comando de barra | Você | Média | Depende do produto |
-| Skill | Você ou matching do modelo | Alta | Fácil (diretório/Git) |
-| MCP | Modelo chama ferramenta | Nível de configuração | Precisa de governança |
-| Plugin | Após instalar, efeito combinado | Alta | Canal oficial/equipe |
-| Hooks | Evento do sistema | Nível de configuração | Comum em empresas |
-| Automations | Tempo/evento | Nível de configuração | Precisa de fluxo de Aprovação |
+Read the diagram around three ideas:
 
-## Correspondências comuns
+- **Task input** defines this run; project rules define every run.
+- **Execution capability** expands reach but does not prove correctness; MCP, subagents, and scripts remain subject to permissions and acceptance.
+- **Distribution and triggering** are not the workflow itself. A Plugin bundles capabilities; a Scheduled task starts a run.
 
-| Necessidade | Escolha sugerida |
+## Eight responsibilities
+
+| Responsibility | Mechanism | Best problem | Not responsible for |
+|---|---|---|---|
+| Current task | Prompt | Goal, scope, acceptance | Persistent project rules |
+| Persistent rules | `AGENTS.md` | Commands, conventions, directory boundaries | Full steps for a task class |
+| Reusable process | Skill | Stable steps, references, templates, scripts | External-system authorization |
+| External tools | MCP / Connector | Repository-external data and actions | Correct business goals |
+| Lifecycle guard | Hook | Observe, check, add context, or block around events | Replacing tests and human review |
+| Composition/distribution | Plugin | Bundle Skills, connectors, MCP, Hooks, templates | Making every component trustworthy |
+| Time trigger | Scheduled task | Periodically run a verified task | Replacing prompts and stop conditions |
+| Parallel division | Subagent | Independent exploration, test, or review | Eliminating write conflicts and coordination cost |
+
+## Combining capabilities
+
+For weekly dependency-risk checks:
+
+1. `AGENTS.md` defines package manager, tests, and prohibited directories.
+2. A `dependency-audit` Skill defines collection, advisory checks, grading, and verification.
+3. GitHub or package-source MCP supplies read-only external data.
+4. A Hook blocks real credentials or logs external calls.
+5. A Plugin distributes the Skill, MCP config, and Hook.
+6. A Scheduled task runs weekly and creates only a report or draft issue for human review.
+
+Missing a layer does not make a solution inferior. One local check may need only a clear prompt and terminal commands.
+
+## Common mappings
+
+| Need | Choose |
 |---|---|
-| Unificar estilo de código e comandos de teste | AGENTS.md |
-| Padronizar o fluxo «revisar PR» | Skill |
-| Ler tickets Jira/Linear | MCP |
-| Instalar um kit de integração para toda a equipe | Plugin |
-| Scan de segredos antes de cada commit | Hooks |
-| Toda segunda, gerar rascunho de relatório semanal | Automations (+ publicação humana) |
+| Standard code style and test commands | AGENTS.md |
+| Standardize PR review | Skill |
+| Read Jira/Linear issues | MCP |
+| Install one integration bundle for a team | Plugin |
+| Scan credentials before each commit | Hooks |
+| Draft a report every Monday | Automations plus human publication |
 
-## De uma tarefa a um pacote para a equipe
+## From success to team asset
 
-Use esta progressão para decidir se um fluxo merece ser endurecido:
-
-| Etapa | Forma | Quando usar |
+| Stage | Form | When |
 |---|---|---|
-| Prompt pontual | Instruções na conversa atual | Uso único ou ainda exploratório |
-| Template | Estrutura fixa de objetivo, contexto, limites e aceite | Tarefas parecidas se repetem, mas os passos ainda mudam |
-| Skill | `SKILL.md` com templates, referências ou scripts | Processo estável com critérios claros de sucesso |
-| Subagent | Papel especializado em contexto separado | Revisão, testes, depuração ou pesquisa com escopo claro |
-| MCP | Ferramentas invocáveis de sistemas externos | Precisa ler tickets, repositórios ou sistemas internos |
-| Hook | Checagem ou bloqueio por evento | Segredos, formatação, comandos arriscados |
-| Plugin | Pacote instalável para a equipe | Skills, MCP, Hooks, templates e documentação juntos |
-| Automation | Tarefa agendada ou orientada por evento | Relatórios, monitoramento, revisões recorrentes |
+| One-off prompt | Current task specification | One use or ongoing exploration |
+| Template | Goal/context/constraints/acceptance skeleton | Repeated class, changing steps |
+| Skill | `SKILL.md` plus templates/references/scripts | Stable process and success criteria |
+| Plugin | Bundle of Skills, connectors, MCP, Hooks, templates | Unified installation, update, governance |
+| Scheduled task | Saved task, schedule, run history | Manually verified periodic work |
 
-Não comece desenhando um Plugin. Primeiro execute a tarefa uma vez; depois observe quais passos se repetem, quais checagens devem ser automáticas e quais permissões externas são realmente necessárias.
+MCP, Hooks, and subagents are not required stages; add them only for external tools, lifecycle guards, or parallel work. See [Choose an extension method](/pt/skills/choosing-an-extension-method/).
 
-Lógica detalhada de ramificação: [Como escolher o método de extensão](/skills/choosing-an-extension-method/).
+## Current product boundaries
 
-## Independente da entrada do produto
+- A Codex Skill is a directory containing `SKILL.md`, optionally scripts, references, and assets; full instructions load when needed.
+- The desktop App, CLI, and IDE share MCP configuration on one Codex host.
+- Plugins work in supported ChatGPT surfaces, Codex desktop, and CLI; the IDE integration does not support Plugin browsing or use.
+- Scheduled tasks are managed in ChatGPT Web or desktop App; CLI and IDE can test inputs but have no management UI.
+- Subagents fit independent read-only exploration, test, and review; concurrent writes raise conflict cost.
 
-Esses mecanismos **não amarram** a uma única UI: CLI, App desktop e IDE podem diferir no suporte a Skill/MCP — veja [comparação de recursos](/guide/reference/feature-comparison/) e a documentação oficial.
+Check [Feature comparison](/pt/guide/reference/feature-comparison/) and official sources before configuring changing entry points.
+
+## Official sources
+
+- [Skills and Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Build Codex Skills](https://learn.chatgpt.com/docs/build-skills)
+- [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp)
+- [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
+- [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
+- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
+- [Codex subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Nota de revisão:** Esta página desenha Skill, MCP, Plugin, Hooks e Automations como relações fixas e implica níveis de suporte atuais; esses limites e entradas não estão cobertos de forma completa no material oficial público em 2026-07-26 — precisa reescrita conforme o produto vigente.  
-**Última Verificação:** 2026-07-26
+**Status:** verified
+**Applies to:** ChatGPT Web / desktop App / Codex CLI / IDE (see individual mechanism boundaries)
+**Verification basis:** Rebuilt from OpenAI Skills, Plugins, MCP, Hooks, Scheduled tasks, and Subagents documentation available on 2026-08-25.
+**Last verified:** 2026-08-25

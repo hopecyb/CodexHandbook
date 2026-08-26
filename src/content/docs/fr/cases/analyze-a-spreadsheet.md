@@ -3,9 +3,10 @@ title: Analyser un tableur
 description: Téléversez ou référencez des données tabulaires pour obtenir des synthèses et des insights.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Analyser un tableur
@@ -40,7 +41,7 @@ Acceptation : chaque chiffre dans summary indique la méthode de calcul ou la co
 
 ## 4. Voir aussi
 
-- [Tableaux et feuilles de calcul](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Tableaux et feuilles de calcul](/fr/guide/files-and-artifacts/tables-and-spreadsheets/)
 
 ---
 

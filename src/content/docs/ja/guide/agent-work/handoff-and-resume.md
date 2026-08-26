@@ -3,9 +3,10 @@ title: 引き継ぎと再開
 description: 未完了の作業をセッションをまたいで続ける。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b92008e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---

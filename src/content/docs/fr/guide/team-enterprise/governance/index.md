@@ -3,9 +3,10 @@ title: Gouvernance
 description: Politiques, frontières et règles org — ce qui est permis, ce qui ne l'est pas et qui est responsable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Dans le contexte Codex, la gouvernance est principalement deux choses : ce que l'équipe autorise, et qui gère les problèmes quand ils arrivent.
@@ -18,7 +19,7 @@ Cela affecte :
 
 ## Entrée de section
 
-- [Politique d'usage acceptable](/guide/team-enterprise/governance/acceptable-use/)
+- [Politique d'usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/)
 
 ## Ce que ces pages répondent
 

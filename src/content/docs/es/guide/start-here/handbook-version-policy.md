@@ -3,9 +3,10 @@ title: Política de versiones del handbook
 description: Explica el estado del contenido, las fechas de verificación y cómo se actualiza de forma continua.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3f4e05e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 8
 ---

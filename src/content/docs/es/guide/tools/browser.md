@@ -3,9 +3,10 @@ title: Herramienta de navegador
 description: Dejar que Codex abra páginas web, compruebe el estado de la UI y verifique comportamiento frontend — capacidades y límites.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ Para esas preguntas, leer solo el código o la descripción textual suele no bas
 | Contrastar página estática e implementación | Sustituir un framework completo de tests E2E |
 | Leer texto visible de la página para depurar | Sitios que exigen CAPTCHA / verificación humana compleja |
 
-Contexto de selección: [Selección de herramientas](/guide/tools/tool-selection/)
+Contexto de selección: [Selección de herramientas](/es/guide/tools/tool-selection/)
 
 ## Comparación con otras herramientas
 
@@ -83,7 +84,7 @@ la herramienta de navegador suele encajar mejor que el análisis de texto puro.
 1. **Frontend local**: primero `npm run dev`, luego da `http://localhost:PORT/path`
 2. **Tarea clara**: «comprueba si el formulario de login desborda a 375px de ancho», no «mira la web»
 3. **Límites claros**: prohibir acceso a internet externo; prohibir enviar formularios a producción
-4. **Aceptación**: contrastar con [Verificar artefactos](/guide/quality/verify-artifacts/) y capturas
+4. **Aceptación**: contrastar con [Verificar artefactos](/es/guide/quality/verify-artifacts/) y capturas
 
 ## Formulación usable directamente
 
@@ -100,9 +101,9 @@ Si hay problemas, da evidencia en captura y sugerencias de cambio.
 - Por defecto, asume que el navegador puede acceder a **todo lo que tu máquina o entorno pueda acceder** — incluido admin de intranet
 - Declara en la tarea: `solo localhost` o lista blanca de dominios
 - No ejecutes tareas de repositorios no confiables en un perfil de navegador ya logueado con tu cuenta personal
-- La política de navegador en Cloud la definen [Entornos Cloud](/guide/web-and-cloud/cloud-environments/) y la política de red
+- La política de navegador en Cloud la definen [Entornos Cloud](/es/guide/web-and-cloud/cloud-environments/) y la política de red
 
-Concepto de aprobación: [Permisos y aprobaciones](/guide/foundations/permissions-and-approvals/)
+Concepto de aprobación: [Permisos y aprobaciones](/es/guide/foundations/permissions-and-approvals/)
 
 ## Errores frecuentes
 

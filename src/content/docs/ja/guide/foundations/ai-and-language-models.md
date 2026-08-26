@@ -3,9 +3,10 @@ title: AI と言語モデル
 description: 言語モデルがコンテキストに基づいて応答を生成する仕組みを理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 1951620
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -37,7 +38,7 @@ sidebar:
 ## 利用者にとっての意味
 
 - **入力の質が上限を決める**：目標が曖昧だと、出力もずれやすい
-- **コンテキストには限りがある**：長い履歴は圧縮や切り捨ての対象になる。詳しくは [Token、コンテキストと圧縮](/guide/foundations/tokens-context-and-compaction/)
+- **コンテキストには限りがある**：長い履歴は圧縮や切り捨ての対象になる。詳しくは [Token、コンテキストと圧縮](/ja/guide/foundations/tokens-context-and-compaction/)
 - **検証が必須**：特に数値、法律、セキュリティ、対外公開の内容
 
 ## よくある誤解

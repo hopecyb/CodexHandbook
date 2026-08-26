@@ -3,9 +3,10 @@ title: Revisa el resultado
 description: Lee los cambios, valida el artefacto y decide aceptar o modificar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb5b5d9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---
@@ -21,9 +22,9 @@ No te quedes solo con «está hecho»: mira qué cambió de verdad y si el resul
 1. **Mira el Diff**: ¿solo se modificaron los archivos permitidos?
 2. **Abre el artefacto**: ¿el contenido cumple los criterios de aceptación?
 3. **Pide una corrección**: si solo falta un poco, sigue con feedback preciso
-4. **Decide**: aceptar / editar a mano / [deshacer](/guide/getting-started/undo-and-recover/)
+4. **Decide**: aceptar / editar a mano / [deshacer](/es/guide/getting-started/undo-and-recover/)
 
-Más métodos: [revisar diffs](/guide/quality/review-diffs/).
+Más métodos: [revisar diffs](/es/guide/quality/review-diffs/).
 
 ## Puntos que suelen pasarse por alto
 

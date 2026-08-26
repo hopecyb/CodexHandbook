@@ -3,9 +3,10 @@ title: Primeros 30 minutos
 description: Ruta de 30 minutos que puedes seguir en el primer uso.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ El objetivo de los primeros 30 minutos es completar el primer ciclo de extremo a
 
 | Tiempo | Qué hacer |
 |---|---|
-| 0–5 min | Lee la [lista de seguridad](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 min | [Instala la App de escritorio](/guide/getting-started/install-desktop-app/) e [inicia sesión](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 min | [Crea un proyecto de práctica](/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/) y revísala |
-| 25–30 min | Abre [Habla con Codex](/guide/learning-paths/beginner/01-talk-to-codex/) y entra en la ruta para principiantes |
+| 0–5 min | Lee la [lista de seguridad](/es/guide/getting-started/beginner-safety-checklist/) |
+| 5–10 min | [Instala la App de escritorio](/es/guide/getting-started/install-desktop-app/) e [inicia sesión](/es/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 min | [Crea un proyecto de práctica](/es/guide/getting-started/create-your-first-project/) |
+| 15–25 min | [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/) y revísala |
+| 25–30 min | Abre [Habla con Codex](/es/guide/learning-paths/beginner/01-talk-to-codex/) y entra en la ruta para principiantes |
 
 ## Qué completar en estos 30 minutos
 
@@ -94,7 +95,7 @@ Si a los 30 minutos ya hiciste estas 4 cosas, esta ronda está hecha:
 
 ## Si te quedas atascado
 
-Ve primero al [índice de resolución de problemas](/guide/reference/troubleshooting/). Si solo no entiendes un concepto, vuelve a [Qué necesitas antes de empezar](/guide/start-here/prerequisites/) y [Local frente a Cloud](/guide/foundations/local-vs-cloud/).
+Ve primero al [índice de resolución de problemas](/es/guide/reference/troubleshooting/). Si solo no entiendes un concepto, vuelve a [Qué necesitas antes de empezar](/es/guide/start-here/prerequisites/) y [Local frente a Cloud](/es/guide/foundations/local-vs-cloud/).
 
 En los primeros 30 minutos, completar con tus manos un ciclo de «plantear Tarea, ver resultado, juzgar tú mismo» ya vale mucho.
 

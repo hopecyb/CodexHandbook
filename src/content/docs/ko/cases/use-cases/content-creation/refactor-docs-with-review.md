@@ -3,9 +3,10 @@ title: 검토와 함께 문서 사이트 리팩터
 description: "사례: Astro/Starlight 문서 프로젝트에서 링크와 장을 일괄 갱신—작은 걸음 diff, 빌드 검증."
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 이 사례는 **콘텐츠 엔지니어링** 작업을 보여 줍니다: 여러 Markdown 파일, 사이드바 설정, 빌드 검증. 기술 스택은 이 핸드북과 비슷하지만, 시나리오는 임의의 정적 사이트로 옮길 수 있습니다.
@@ -19,7 +20,7 @@ translated_at: 2026-07-28
 | 위험 | 중간(대량 링크와 내비게이션) |
 | 소요 시간 | 1～3시간(규모에 따라) |
 
-템플릿 설명: [사례 템플릿](/cases/use-cases/case-study-template/)
+템플릿 설명: [사례 템플릿](/ko/cases/use-cases/case-study-template/)
 
 ## 배경
 
@@ -50,7 +51,7 @@ translated_at: 2026-07-28
 
 - **먼저 config, 그다음 콘텐츠**: build의 missing slug를 피함
 - 배치당 3～5개 파일을 커밋해 review하기 쉽게
-- [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/) 사용
+- [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/) 사용
 
 ## 검사
 

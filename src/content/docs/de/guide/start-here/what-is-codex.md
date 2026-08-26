@@ -3,9 +3,10 @@ title: Was ist Codex
 description: "Erklärt in verständlicher Sprache, was Codex kann, was nicht, und welche Einstiege es gibt."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c6582f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 2
 ---
@@ -81,7 +82,7 @@ So sieht der übliche Ablauf aus:
 4. Danach zeigt es, was geändert wurde
 5. Du prüfst, ob das Ergebnis deinen Erwartungen entspricht
 
-Ein vollständiges Beispiel findest du unter [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/).
+Ein vollständiges Beispiel findest du unter [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/).
 
 ## Wichtige Einstiege
 
@@ -93,7 +94,7 @@ Ein vollständiges Beispiel findest du unter [Erste Aufgabe ausführen](/guide/g
 | Web / Cloud | Repos verbinden, Cloud-Umgebung und lange Aufgaben |
 | Mobil und remote | Überwachen, freigeben und leicht nachverfolgen |
 
-Vergleichstabelle: [Funktionsvergleich](/guide/reference/feature-comparison/). Konzeptuelle Zusammenhänge: [Fähigkeitskarte](/guide/start-here/).
+Vergleichstabelle: [Funktionsvergleich](/de/guide/reference/feature-comparison/). Konzeptuelle Zusammenhänge: [Fähigkeitskarte](/de/guide/start-here/).
 
 ## Als Nächstes
 
@@ -105,9 +106,9 @@ Wenn du nur drei Punkte mitnehmen willst:
 
 Weiterführende Seiten:
 
-1. [Codex-Client wählen](/guide/choose-your-client/)
-2. [Begriffe für Anfänger](/guide/start-here/terminology-for-beginners/)
-3. [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/)
+1. [Codex-Client wählen](/de/guide/choose-your-client/)
+2. [Begriffe für Anfänger](/de/guide/start-here/terminology-for-beginners/)
+3. [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/)
 
 ---
 

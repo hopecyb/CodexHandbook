@@ -3,9 +3,10 @@ title: Image generation
 description: Generating or editing images in Codex tasks—prompts, formats, and acceptance.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Codex can invoke **image generation** in some scenarios: illustration drafts, icon sketches, UI concept art, diagrams. Treat output as **artifacts to verify**—not production brand assets ready to ship.
@@ -26,7 +27,7 @@ Good for visual drafts—not final deliverables.
 | Quick UI layout exploration | Pixel-perfect design handoff |
 | Tutorial example icons | Real-person likeness without authorization |
 
-Complements [prompting with images](/prompts/prompting-with-images/): that page covers **input** images; this page covers **output** images.
+Complements [prompting with images](/en/prompts/prompting-with-images/): that page covers **input** images; this page covers **output** images.
 
 ## What image generation is for
 
@@ -46,7 +47,7 @@ Not a substitute for:
 
 1. State purpose, aspect ratio, style keywords (avoid piled trademark style names)
 2. Request output format (PNG/SVG if supported) and save path
-3. After generation, [verify artifacts](/guide/quality/verify-artifacts/): open file, check resolution and readability
+3. After generation, [verify artifacts](/en/guide/quality/verify-artifacts/): open file, check resolution and readability
 4. Design or legal review before external publication
 
 ## Common misconceptions
@@ -86,7 +87,7 @@ Closer to exploration, content illustration, and concept sketching—not strict 
 
 - Large images in `assets/` or CDN; watch Git size
 - In PR, note generation prompt and model version (internal audit)
-- See [images and screenshots](/guide/files-and-artifacts/images-and-screenshots/)
+- See [images and screenshots](/en/guide/files-and-artifacts/images-and-screenshots/)
 
 ## Safety and compliance
 

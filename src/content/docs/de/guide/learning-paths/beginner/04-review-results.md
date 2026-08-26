@@ -3,9 +3,10 @@ title: Ergebnisse prüfen
 description: 'Gewohnheit aufbauen: Diff prüfen, Verifikation ausführen, nachfragen.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 82d6754
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 „Kurz drüberschauen und durchwinken“ durch feste Prüfhandlungen ersetzen.
 
-Checklisten: [Ergebnis prüfen](/guide/getting-started/review-the-result/) · [Diffs reviewen](/guide/quality/review-diffs/)
+Checklisten: [Ergebnis prüfen](/de/guide/getting-started/review-the-result/) · [Diffs reviewen](/de/guide/quality/review-diffs/)
 
 Viele überspringen diesen Schritt. Ob Codex stabil wird, hängt oft davon ab, ob Sie Ergebnisse reviewen.
 
@@ -46,7 +47,7 @@ Der Plan hilft nur; Sie prüfen weiterhin, ob der Bereich stimmt.
 
 Ergebnisse prüfen ist kein Extra — Teil der Nutzung.
 
-Weiter: [Erstes kleines Projekt abschließen](/guide/learning-paths/beginner/05-complete-first-project/)
+Weiter: [Erstes kleines Projekt abschließen](/de/guide/learning-paths/beginner/05-complete-first-project/)
 
 ---
 

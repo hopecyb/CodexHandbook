@@ -3,9 +3,10 @@ title: Hablar con Codex
 description: Practica explicar objetivos y límites en lenguaje natural.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -49,7 +50,7 @@ Si ni siquiera las Tareas de solo lectura se formulan con claridad, las Tareas d
 
 Las Tareas de solo lectura, explicación o resumen también necesitan límites.
 
-Siguiente: [Trabajar con archivos](/guide/learning-paths/beginner/02-work-with-files/) · Conceptos: [Fundamentos del Prompt](/prompts/basics/)
+Siguiente: [Trabajar con archivos](/es/guide/learning-paths/beginner/02-work-with-files/) · Conceptos: [Fundamentos del Prompt](/es/prompts/basics/)
 
 ---
 

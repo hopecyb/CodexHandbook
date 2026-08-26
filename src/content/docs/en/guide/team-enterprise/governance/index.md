@@ -3,9 +3,10 @@ title: Governance
 description: Policies, boundaries, and org rules—what is allowed, what is not, and who is accountable.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 In the Codex context, governance is mainly two things: what the team allows, and who handles problems when they arise.
@@ -18,7 +19,7 @@ That affects:
 
 ## Section entry
 
-- [Acceptable use policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Acceptable use policy](/en/guide/team-enterprise/governance/acceptable-use/)
 
 ## What these pages answer
 

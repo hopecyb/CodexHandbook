@@ -3,9 +3,10 @@ title: Prompts para tareas largas
 description: Dividir en fases, checkpoints e información de traspaso.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b8e9c9b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Las formas habituales de fallar en tareas largas:
@@ -75,7 +76,7 @@ Fase 4: resume cambios, riesgos y siguientes pasos
 
 Lo más adecuado es poder parar a comprobar en cada tramo, no terminarlo de un golpe.
 
-Complementos: [Progreso y reorientación](/guide/agent-work/progress-and-steering/) · [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+Complementos: [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/) · [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
 
 ---
 

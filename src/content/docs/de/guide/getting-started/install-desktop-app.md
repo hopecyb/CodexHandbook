@@ -1,57 +1,66 @@
 ---
 title: Desktop-App installieren
-description: "Codex-Desktop-App installieren und öffnen."
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Installiere die ChatGPT-Desktop-App und öffne darin den Codex-Arbeitsbereich.
 sidebar:
   order: 30
+locale: de
+source_locale: zh-CN
+source_revision: 89d6303
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-1. Offizielle Codex-Doku zur Desktop-App-Installation öffnen: [https://developers.openai.com/codex](https://developers.openai.com/codex)
-2. Installationspaket für dein OS wählen und installieren
-3. App starten und prüfen, ob Login- oder Projekteinstieg sichtbar ist
+Mit „Desktop-App“ bezeichnet dieses Handbuch den aktuellen **Codex-Arbeitsbereich in der ChatGPT-Desktop-App**. Offizielle Versionen sind für macOS, Windows und Linux verfügbar.
 
-Erstes Mal Codex und kein Terminal-Fummel? Die Desktop-App ist ein direkter Einstieg.  
-Hier zählt vor allem: Nach der Installation — welcher Zustand heißt „bereit zum Start“?
+## Installationsschritte
 
-## Nach der Installation prüfen
+1. Öffne die [offizielle Dokumentation zur ChatGPT-Desktop-App](https://learn.chatgpt.com/docs/app).
+2. Lade über den offiziellen Einstieg das Installationspaket für dein Betriebssystem herunter.
+3. Installiere und öffne ChatGPT und melde dich mit deinem ChatGPT-Konto oder einer anderen verfügbaren Methode an.
+4. Erstelle einen neuen Chat oder ein Projekt oder öffne einen Übungsordner.
+5. Öffne Codex, erstelle eine Aufgabe und beschreibe das gewünschte Ergebnis.
 
-- App öffnet normal
-- Systemberechtigungen (z. B. Dateizugriff) nach Bedarf — nicht auf einmal irrelevante Disk-Rechte
-- UI-Überblick: [Installation und Oberfläche](/guide/desktop-app/installation-and-interface/)
+Lade Installationspakete nicht von Drittanbieterseiten aus Suchergebnissen herunter. Auf zentral verwalteten Unternehmensgeräten gelten die Softwareverteilungs- und Aktualisierungsrichtlinien der Organisation.
 
-## Häufige Missverständnisse
+## Minimale Prüfung nach der Installation
 
-### 1. App startet = alles ok
+Bereite ein Übungsverzeichnis ohne Zugangsdaten vor und prüfe:
 
-Wichtiger zu prüfen:
+- Die App öffnet sich und zeigt das aktuelle Konto oder den Workspace an
+- Das Verzeichnis lässt sich öffnen oder seine Dateien lassen sich einem Projekt hinzufügen
+- Eine Codex-Aufgabe lässt sich erstellen und beantwortet die Anfrage
+- Die Dateizugriffsberechtigung umfasst nur den für diese Arbeit nötigen Bereich
+- Aufgabenergebnis, Dateiänderungen und Genehmigungseinstieg sind auffindbar
 
-- Login möglich?
-- Projekt- oder Aufgabeneinstieg sichtbar?
-- Berechtigungen richtig vergeben?
+Verwende diese schreibgeschützte Aufgabe als Smoke-Test:
 
-### 2. Jeden System-Berechtigungsdialog sofort erlauben
+```text
+Lies dieses Verzeichnis nur und ändere keine Dateien. Nenne die enthaltenen Dateien, vermute den Projekttyp und erkläre, auf welche Dateinamen du dich stützt.
+```
 
-Sicherer: nach Bedarf vergeben — nicht auf einmal irrelevante Disks oder Systemfähigkeiten öffnen.
+## Häufige Probleme
 
-### 3. Direkt nach Installation große Aufgaben
+### Die App öffnet sich, aber Codex ist nicht sichtbar
 
-Zuerst Kleines bestätigen:
+Prüfe zuerst Konto, Workspace und Tarifzugriff. Prüfe dann, ob die Organisation die Funktion deaktiviert hat. Versuche nicht, Konto- oder Administratorrichtlinien durch wiederholte Neuinstallation zu umgehen.
 
-- Login ok
-- Seiten öffnen normal
-- Du weißt, wo Projekteinstieg und Grund-UI sind
+### Das System verlangt Datei-, Bedienungshilfen- oder App-Steuerungsberechtigungen
 
-Desktop-App installiert: Zuerst Öffnen, Login und Einstieg bestätigen — dann die erste Aufgabe.
+Prüfe zuerst, ob die aktuelle Aufgabe sie tatsächlich benötigt. Beim Öffnen eines Übungsverzeichnisses musst du nicht vorsorglich Zugriff auf weitere Datenträger oder Systemfunktionen gewähren. Eine Entscheidungshilfe bietet [Berechtigungen und Sandbox](/de/guide/permissions-and-sandbox/).
 
-Bei Fehlern: [Desktop-App-Fehlerbehebung](/guide/desktop-app/troubleshooting/).
+### Die Oberfläche sieht anders aus als auf einem Screenshot
+
+Die Desktop-App wird häufig aktualisiert. Als Erfolgskriterium gilt: Du kannst dich anmelden, den Arbeitsort auswählen, eine Aufgabe starten und das Ergebnis prüfen. Verlasse dich nicht auf die feste Position einer Schaltfläche.
+
+Eine ausführlichere Einführung bietet [Installation und erster Einsatz](/de/guide/desktop-app/installation-and-interface/). Bei Fehlern hilft die [Fehlersuche für die Desktop-App](/de/guide/desktop-app/troubleshooting/).
 
 ---
 
-**Status:** outdated  
-**Geeignete Produkte:** App  
-**Nachprüfhinweis:** Download-Einstieg, Paketform, UI-Einstiege und Berechtigungshinweise der Desktop-App können sich mit neuen ChatGPT-/Codex-Desktop-Versionen ändern; diese Seite behält nur grobe Schritte und belegt nicht, dass sie dem aktuellen offiziellen Installationsfluss entsprechen.  
-**Zuletzt überprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App
+
+**Prüfgrundlage:** Der aktuelle offizielle App-Schnellstart bietet ausdrücklich Downloads für macOS, Windows und Linux und verlangt nach der Anmeldung die Auswahl eines Chats, Projekts oder Ordners. Diese Seite schreibt keine veränderlichen Schaltflächenpositionen oder Paketnamen fest.
+
+**Zuletzt geprüft:** 2026-08-26

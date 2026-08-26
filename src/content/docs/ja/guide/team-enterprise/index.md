@@ -5,12 +5,13 @@ sidebar:
   order: 70
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3a4af60
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**チームとエンタープライズ**章はエンジニアリング責任者、プラットフォーム、セキュリティチーム向けです。Codex を個人で使える状態から、チームで管理・監査・振り返り可能な状態へ進めることを主眼に置きます。[学習パス · チーム](/guide/learning-paths/team/) と併読すると、本章はガバナンスと着地寄りです。
+**チームとエンタープライズ**章はエンジニアリング責任者、プラットフォーム、セキュリティチーム向けです。Codex を個人で使える状態から、チームで管理・監査・振り返り可能な状態へ進めることを主眼に置きます。[学習パス · チーム](/ja/guide/learning-paths/team/) と併読すると、本章はガバナンスと着地寄りです。
 
 まだ個人利用、または基礎に慣れている段階なら後回しでよいです。多人数利用時の境界、プロセス、責任の整理が主題です。
 
@@ -31,9 +32,9 @@ translated_at: 2026-07-28
 
 | 役割 | 先に読むページ |
 |---|---|
-| EM / 責任者 | [脅威モデル](/guide/team-enterprise/security/threat-model/) · [acceptable use](/guide/team-enterprise/governance/acceptable-use/) |
-| プラットフォームエンジニア | [チームルール](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| セキュリティ | [Plugin と MCP リスク](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/guide/team-enterprise/security/prompt-injection/) |
+| EM / 責任者 | [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) · [acceptable use](/ja/guide/team-enterprise/governance/acceptable-use/) |
+| プラットフォームエンジニア | [チームルール](/ja/guide/customization/rules/team-rules/) · [Hooks](/ja/skills/hooks/hooks-overview/) |
+| セキュリティ | [Plugin と MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/ja/guide/team-enterprise/security/prompt-injection/) |
 
 ## ガバナンスモデル（概念）
 
@@ -51,15 +52,15 @@ translated_at: 2026-07-28
 
 | テーマ | ページ |
 |---|---|
-| セキュリティ | [脅威モデル](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP リスク](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/guide/team-enterprise/security/prompt-injection/) |
-| ガバナンス | [acceptable use 政策](/guide/team-enterprise/governance/acceptable-use/) |
+| セキュリティ | [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) · [Plugin/MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt 注入](/ja/guide/team-enterprise/security/prompt-injection/) |
+| ガバナンス | [acceptable use 政策](/ja/guide/team-enterprise/governance/acceptable-use/) |
 
-adoption、administration、deployment-patterns などは [chapter-outline](/docs/planning/chapter-outline.md)（リポジトリ計画文書）で補充予定。
+adoption、administration、deployment-patterns などは [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)（リポジトリ計画文書）で補充予定。
 
 ## カスタマイズとの関係
 
-- [AGENTS.md 優先順位](/guide/customization/agents-md/scope-and-precedence/) の組織マネージド層
-- [チームルール方針](/guide/customization/rules/team-rules/)
+- [AGENTS.md 優先順位](/ja/guide/customization/agents-md/scope-and-precedence/) の組織マネージド層
+- [チームルール方針](/ja/guide/customization/rules/team-rules/)
 
 ## よくあるミス
 
@@ -85,8 +86,8 @@ adoption、administration、deployment-patterns などは [chapter-outline](/doc
 
 ### 3. 概念だけ知りたいなら何から？
 
-- [Plugin と MCP リスク](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [acceptable use 政策](/guide/team-enterprise/governance/acceptable-use/)
+- [Plugin と MCP リスク](/ja/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [acceptable use 政策](/ja/guide/team-enterprise/governance/acceptable-use/)
 
 個人入門が主なら後回し。チーム展開、権限管理、リスク制御のときに戻ってください。
 

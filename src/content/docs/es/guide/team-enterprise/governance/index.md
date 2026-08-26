@@ -3,9 +3,10 @@ title: Gobernanza
 description: 'Página de políticas, límites y reglas organizacionales: primero qué se puede hacer, qué no, y quién responde.'
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 En el contexto de Codex, gobernanza se resume en dos cosas: cómo permite el equipo usarlo, y quién actúa cuando hay un problema.
@@ -18,7 +19,7 @@ Eso afecta directamente a:
 
 ## Entrada de este grupo
 
-- [Política de uso aceptable](/guide/team-enterprise/governance/acceptable-use/)
+- [Política de uso aceptable](/es/guide/team-enterprise/governance/acceptable-use/)
 
 ## Qué responden estas páginas
 

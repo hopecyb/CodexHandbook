@@ -3,9 +3,10 @@ title: Goals and context
 description: Tell Codex what to accomplish and why it matters.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 6ec9636
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many prompts look information-rich but still miss two things:
@@ -79,7 +80,7 @@ For context, check:
 
 Goal decides what to deliver; context explains why.
 
-Related: project-level background can live in [project context](/guide/context/project-context/) so you don't repeat long blocks in every prompt.
+Related: project-level background can live in [project context](/en/guide/context/project-context/) so you don't repeat long blocks in every prompt.
 
 ---
 

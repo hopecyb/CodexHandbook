@@ -3,14 +3,15 @@ title: Begriffe für Anfänger
 description: "Kurze Definitionen für Aufgabe, Kontext, Sandbox, Skill und weitere häufige Wörter."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 401719c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 6
 ---
 
-Vollständigere Einträge findest du im [Glossar](/guide/reference/glossary/). Hier stehen zuerst die häufigsten Wörter, die das Lesen am meisten beeinflussen.
+Vollständigere Einträge findest du im [Glossar](/de/guide/reference/glossary/). Hier stehen zuerst die häufigsten Wörter, die das Lesen am meisten beeinflussen.
 
 Beim ersten Lesen des Codex-Handbooks stocken viele an der Begriffsdichte. Jedes Wort allein kennt man — zusammen wirken sie schnell überfordernd.
 
@@ -86,7 +87,7 @@ Das Folgende ist meist fortgeschritten — beim ersten Mal nicht zwingend durchd
 - Plugin
 - Details zur Cloud-Umgebung
 
-Zuerst die [erste Aufgabe](/guide/getting-started/run-your-first-task/) abschließen und die Begriffe danach nachschlagen — dann sitzt das Verständnis meist besser.
+Zuerst die [erste Aufgabe](/de/guide/getting-started/run-your-first-task/) abschließen und die Begriffe danach nachschlagen — dann sitzt das Verständnis meist besser.
 
 Bei unbekannten Wörtern kurz nachschlagen und weiterlesen.
 

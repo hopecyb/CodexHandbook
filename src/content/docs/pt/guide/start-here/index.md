@@ -3,9 +3,10 @@ title: Comece aqui
 description: Entenda o que é o Codex, para quem serve e escolha seu caminho de aprendizagem.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b7997c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 1
 ---
@@ -23,12 +24,12 @@ Este handbook é escrito principalmente para **iniciantes em IA**: não pressup�
 
 ## Ordem de leitura sugerida
 
-1. [O que é o Codex](/guide/start-here/what-is-codex/) — o que pode e o que não pode fazer
-2. [Escolher o cliente](/guide/choose-your-client/) — App, CLI, IDE ou Cloud
-3. [Completar a primeira Tarefa](/cases/first-task/) — uma mudança pequena com Prompt claro e revisão do resultado
-4. [Permissões e Sandbox](/guide/permissions-and-sandbox/) — Aprovação, isolamento e limites de rede
-5. [Contexto e arquivos](/guide/context-and-files/) — como fornecer entradas úteis
-6. [Verificação](/guide/verification/) — hábitos de revisão e testes
+1. [O que é o Codex](/pt/guide/start-here/what-is-codex/) — o que pode e o que não pode fazer
+2. [Escolher o cliente](/pt/guide/choose-your-client/) — App, CLI, IDE ou Cloud
+3. [Completar a primeira Tarefa](/pt/cases/first-task/) — uma mudança pequena com Prompt claro e revisão do resultado
+4. [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/) — Aprovação, isolamento e limites de rede
+5. [Contexto e arquivos](/pt/guide/context-and-files/) — como fornecer entradas úteis
+6. [Verificação](/pt/guide/verification/) — hábitos de revisão e testes
 
 ## Mal-entendidos comuns
 
@@ -54,30 +55,30 @@ Não basta. Entender, praticar em escala pequena e verificar o resultado precisa
 
 | Tempo | O que fazer |
 |---|---|
-| 0–5 min | Ler os pontos de segurança em [Permissões e Sandbox](/guide/permissions-and-sandbox/) |
-| 5–10 min | Instalar e entrar no cliente escolhido (veja [App desktop](/guide/desktop-app/) e outros) |
-| 10–25 min | Seguir o [caso da primeira Tarefa](/cases/first-task/) |
-| 25–30 min | Percorrer [Fundamentos de Prompt](/prompts/basics/) e se preparar para escrever Tarefas mais claras |
+| 0–5 min | Ler os pontos de segurança em [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/) |
+| 5–10 min | Instalar e entrar no cliente escolhido (veja [App desktop](/pt/guide/desktop-app/) e outros) |
+| 10–25 min | Seguir o [caso da primeira Tarefa](/pt/cases/first-task/) |
+| 25–30 min | Percorrer [Fundamentos de Prompt](/pt/prompts/basics/) e se preparar para escrever Tarefas mais claras |
 
-Se travar, consulte [Solução de problemas](/guide/troubleshooting/).
+Se travar, consulte [Solução de problemas](/pt/guide/troubleshooting/).
 
 ## Como ler a seguir
 
-1. [O que é o Codex](/guide/start-here/what-is-codex/)
-2. [Para quem é este handbook](/guide/start-here/who-is-this-handbook-for/)
-3. [Escolha seu caminho](/guide/start-here/choose-your-path/)
-4. Entrar em [Fundamentos](/guide/foundations/) e [Começar a usar](/guide/getting-started/)
+1. [O que é o Codex](/pt/guide/start-here/what-is-codex/)
+2. [Para quem é este handbook](/pt/guide/start-here/who-is-this-handbook-for/)
+3. [Escolha seu caminho](/pt/guide/start-here/choose-your-path/)
+4. Entrar em [Fundamentos](/pt/guide/foundations/) e [Começar a usar](/pt/guide/getting-started/)
 
-Se quiser pôr a mão na massa agora, veja a [Rota dos primeiros 30 minutos](/guide/getting-started/first-30-minutes/) e passe pela [Lista de segurança para iniciantes](/guide/getting-started/beginner-safety-checklist/).
+Se quiser pôr a mão na massa agora, veja a [Rota dos primeiros 30 minutos](/pt/guide/getting-started/first-30-minutes/) e passe pela [Lista de segurança para iniciantes](/pt/guide/getting-started/beginner-safety-checklist/).
 
 ## Como o site está organizado
 
 | Camada | Função | Entrada |
 |---|---|---|
-| Caminhos de aprendizagem | O que ler e em que ordem | [Caminhos de aprendizagem](/guide/learning-paths/) |
-| Guias de produto | Interface e operações | [Guias de produto](/guide/) |
-| Temas de capacidade | Princípios e métodos | [Capacidades principais](/guide/) |
-| Referência | Consulta rápida | [Referência](/guide/reference/) |
+| Caminhos de aprendizagem | O que ler e em que ordem | [Caminhos de aprendizagem](/pt/guide/learning-paths/) |
+| Guias de produto | Interface e operações | [Guias de produto](/pt/guide/) |
+| Temas de capacidade | Princípios e métodos | [Capacidades principais](/pt/guide/) |
+| Referência | Consulta rápida | [Referência](/pt/guide/reference/) |
 
 Cada conhecimento tem uma página autoritativa; caminhos e casos usam resumos com links para evitar duplicação.
 

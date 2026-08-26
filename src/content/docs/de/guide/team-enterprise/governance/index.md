@@ -3,9 +3,10 @@ title: Governance
 description: 'Erläuterungsseite zu Policy, Grenzen und Organisationsregeln — zuerst klar: was erlaubt ist, was nicht, und wer verantwortlich ist.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 51ffd69
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Governance im Codex-Kontext heißt vor allem zweierlei: Wie darf das Team nutzen — und wer kümmert sich bei Problemen.
@@ -18,7 +19,7 @@ Das wirkt direkt auf:
 
 ## Einstieg in diese Gruppe
 
-- [Acceptable-Use-Policy](/guide/team-enterprise/governance/acceptable-use/)
+- [Acceptable-Use-Policy](/de/guide/team-enterprise/governance/acceptable-use/)
 
 ## Welche Fragen diese Seiten beantworten
 

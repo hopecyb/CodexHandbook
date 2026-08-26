@@ -3,9 +3,10 @@ title: 設定
 description: 設定ファイルと profiles の説明ページ——何を設定に入れ、何を入れないかを先に分ける。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 「設定」グループを初めて見ると、パラメータ名の羅列だと思いがちです。
@@ -14,8 +15,8 @@ translated_at: 2026-07-28
 
 ## 推奨順序
 
-1. [設定の基礎](/guide/customization/configuration/config-basics/)
-2. [Profiles](/guide/customization/configuration/profiles/)
+1. [設定の基礎](/ja/guide/customization/configuration/config-basics/)
+2. [Profiles](/ja/guide/customization/configuration/profiles/)
 
 ## このグループが解くこと
 

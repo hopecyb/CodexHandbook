@@ -5,9 +5,10 @@ sidebar:
   order: 30
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a5cc3b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Die Kernausgabe von Codex sind oft **Dateiänderungen im Repo** oder **neu erzeugte Artefakte** (Dokumente, Bilder, Config). Dieses Thema beschreibt Best Practices je Dateityp — gegen „generiert, aber unbrauchbar“.
@@ -20,14 +21,14 @@ Auch „Datei“ heißt: unterschiedliche Typen brauchen unterschiedliche Auftra
 
 | Thema | Seite |
 |---|---|
-| Code und Text | [Text- und Codedateien](/guide/files-and-artifacts/text-and-code-files/) |
-| Screenshots und Design-Input | [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF und Langdokumente | [PDF und Dokumente](/guide/files-and-artifacts/pdf-and-documents/) |
-| Tabellendaten | [Tabellen und Spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| Folien | [Präsentationen](/guide/files-and-artifacts/presentations/) |
-| Agent-Ausgaben | [Generierte Artefakte abnehmen](/guide/files-and-artifacts/generated-artifacts/) |
+| Code und Text | [Text- und Codedateien](/de/guide/files-and-artifacts/text-and-code-files/) |
+| Screenshots und Design-Input | [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF und Langdokumente | [PDF und Dokumente](/de/guide/files-and-artifacts/pdf-and-documents/) |
+| Tabellendaten | [Tabellen und Spreadsheets](/de/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| Folien | [Präsentationen](/de/guide/files-and-artifacts/presentations/) |
+| Agent-Ausgaben | [Generierte Artefakte abnehmen](/de/guide/files-and-artifacts/generated-artifacts/) |
 
-Allgemeine Methode: [Artefakte überprüfen](/guide/quality/verify-artifacts/).
+Allgemeine Methode: [Artefakte überprüfen](/de/guide/quality/verify-artifacts/).
 
 ## Worum es in diesem Kapitel geht
 
@@ -44,8 +45,8 @@ Eher Bedienungsanleitung nach Dateityp — keine reine Feature-Liste.
 1. **Pfad klar**: Ausgabe pfad und Namensgebung im Prompt
 2. **Format vereinbaren**: Extension, Encoding (UTF-8), Zeilenenden wie im Projekt
 3. **Volumenbewusst**: große Binärdateien nicht ins Git — oder LFS/CDN
-4. **Menschliche Abnahme**: Generieren ≠ fertig; Abgleich mit [Definition of Done](/guide/quality/definition-of-done/)
-5. **Sensible Daten**: siehe [Sensibler Kontext](/guide/context/sensitive-context/)
+4. **Menschliche Abnahme**: Generieren ≠ fertig; Abgleich mit [Definition of Done](/de/guide/quality/definition-of-done/)
+5. **Sensible Daten**: siehe [Sensibler Kontext](/de/guide/context/sensitive-context/)
 
 ## Häufige Missverständnisse
 
@@ -86,9 +87,9 @@ So überfordert Sie das ganze Kapitel nicht auf einmal.
 ## Bezug zu Werkzeugen
 
 - Dateien lesen/schreiben: Dateiwerkzeug + Terminal
-- Bilder ansehen: [Prompting mit Bildern](/prompts/prompting-with-images/)
-- Seiten ansehen: [Browser-Werkzeug](/guide/tools/browser/)
-- Bilder erzeugen: [Bildgenerierung](/guide/tools/image-generation/)
+- Bilder ansehen: [Prompting mit Bildern](/de/prompts/prompting-with-images/)
+- Seiten ansehen: [Browser-Werkzeug](/de/guide/tools/browser/)
+- Bilder erzeugen: [Bildgenerierung](/de/guide/tools/image-generation/)
 
 Bei Dateiaufgaben ist oft schon etwas erzeugt — Format, Regeln oder Inhalt sind aber still abgewichen.
 

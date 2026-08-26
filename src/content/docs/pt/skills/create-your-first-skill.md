@@ -3,9 +3,10 @@ title: Criar seu primeiro Skill
 description: Crie do zero um Skill pr-review commitável, com testes e compartilhamento em equipe.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Se você já sabe atribuir Tarefas, mas ainda não fez um Skill de verdade, esta página cobre o básico do primeiro Skill.
@@ -14,7 +15,7 @@ Em 15–30 minutos, faça um Skill **reutilizável no repositório** — costuma
 
 ## Para quem é
 
-Já consegue completar a [primeira Tarefa](/cases/first-task/) e está disposto a experimentar num repositório de teste.
+Já consegue completar a [primeira Tarefa](/pt/cases/first-task/) e está disposto a experimentar num repositório de teste.
 
 ## Por que começar com `pr-review`
 
@@ -136,14 +137,14 @@ Um Skill útil precisa ao menos:
 - [ ] `$pr-review` roda e não executa operações git perigosas
 - [ ] A saída traz conclusões por gravidade, não genéricas
 - [ ] `description` deixa o cenário de disparo claro em uma frase
-- [ ] Conferiu [Permissão e Aprovação](/guide/permissions-and-sandbox/) quanto a necessidade de scripts (este exemplo não tem scripts)
+- [ ] Conferiu [Permissão e Aprovação](/pt/guide/permissions-and-sandbox/) quanto a necessidade de scripts (este exemplo não tem scripts)
 
 Começar com um Skill «pequeno e estável» facilita reutilizar um roteiro de trabalho claro.
 
 ## Próximos passos
 
-- Consolidar [explorar—planejar—executar—verificar](/prompts/templates/understand/) como Skill
-- Quando precisar da API do GitHub, introduza [MCP](/skills/mcp/mcp-overview/)
+- Consolidar [explorar—planejar—executar—verificar](/pt/prompts/templates/understand/) como Skill
+- Quando precisar da API do GitHub, introduza [MCP](/pt/skills/mcp/mcp-overview/)
 
 ## Fontes
 - Exemplos oficiais OpenAI Codex Skills e `skill-creator` (se o ambiente fornecer)

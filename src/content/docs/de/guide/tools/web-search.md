@@ -3,9 +3,10 @@ title: Web-Suche
 description: Fakten per Suche ergänzen und Quellen markieren.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 559d082
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ Web-Suche ergänzt Fakten — sie ersetzt nicht Ihre finale Schlussfolgerung.
 
 Geeignet: öffentliche Doku, Fehlercodes, Versionshinweise. Nicht geeignet: Suchergebnis als finale Rechts-/Medizinentscheidung.
 
-Quellen verlangen und manuell öffnen. Mit [Quellen validieren](/guide/quality/validate-sources/) kombinieren.
+Quellen verlangen und manuell öffnen. Mit [Quellen validieren](/de/guide/quality/validate-sources/) kombinieren.
 
 ## Wofür Suche taugt
 

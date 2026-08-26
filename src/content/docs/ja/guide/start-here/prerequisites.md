@@ -3,9 +3,10 @@ title: 始める前に必要なもの
 description: アカウント、デバイス、練習プロジェクト、安全の底線。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c8a032b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 5
 ---
@@ -59,8 +60,8 @@ Codex を始めるとき、多くの人がつまずくのは技術的背景で�
 
 ## 推奨事項
 
-- まず [初心者向け安全チェックリスト](/guide/getting-started/beginner-safety-checklist/) を読む
-- [権限と承認](/guide/foundations/permissions-and-approvals/) と [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/) を理解する
+- まず [初心者向け安全チェックリスト](/ja/guide/getting-started/beginner-safety-checklist/) を読む
+- [権限と承認](/ja/guide/foundations/permissions-and-approvals/) と [サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/) を理解する
 - 公式のインストールと製品変更は [https://developers.openai.com/codex](https://developers.openai.com/codex) が基準
 
 ## 参考ソース

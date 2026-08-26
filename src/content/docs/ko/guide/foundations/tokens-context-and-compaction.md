@@ -3,9 +3,10 @@ title: Token·컨텍스트·압축
 description: 컨텍스트 창·점유와 압축을 이해합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b33848c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -60,7 +61,7 @@ sidebar:
 
 - 핵심 제약은 현재 메시지나 프로젝트 설명에 쓰고, 아주 옛 대화에만 묻지 마세요
 - 주제가 바뀌면 새 스레드를 엽니다
-- 원리와 조작 제안은 [컨텍스트 압축](/guide/context/compaction/)과 [컨텍스트 초점 유지](/guide/context/keep-context-focused/)를 보세요
+- 원리와 조작 제안은 [컨텍스트 압축](/ko/guide/context/compaction/)과 [컨텍스트 초점 유지](/ko/guide/context/keep-context-focused/)를 보세요
 
 여기서는 개념만 다룹니다. 구체 통제는 `05`를 이어서 보세요.
 

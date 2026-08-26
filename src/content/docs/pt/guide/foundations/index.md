@@ -3,33 +3,34 @@ title: Fundamentos
 description: Estabeleça uma linguagem comum para modelo, Agent, Ferramenta, Permissão e Verificação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cf898a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
 
-Esta parte reúne os conceitos básicos que o handbook inteiro usa com frequência. Diferenças de interface de produto ficam em [Guias de produto](/guide/); técnicas de Prompt ficam em [Capacidades principais](/guide/).
+Esta parte reúne os conceitos básicos que o handbook inteiro usa com frequência. Diferenças de interface de produto ficam em [Guias de produto](/pt/guide/); técnicas de Prompt ficam em [Capacidades principais](/pt/guide/).
 
 Este conjunto explica principalmente como o Codex funciona e como colaborar com ele.
 
 ## Mapa do capítulo
 
-1. [IA e modelos de linguagem](/guide/foundations/ai-and-language-models/)
-2. [Fundamentos de Agent](/guide/foundations/agent-basics/)
-3. [Objetivo, Contexto e ação](/guide/foundations/goals-context-and-actions/)
-4. [Arquivos, Ferramentas e comandos](/guide/foundations/files-tools-and-commands/)
-5. [Local e Cloud](/guide/foundations/local-vs-cloud/)
-6. [Thread, Tarefa e projeto](/guide/foundations/threads-tasks-and-projects/)
-7. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
-8. [Sandbox e rede](/guide/foundations/sandbox-and-network/)
-9. [Modelos e Raciocínio](/guide/foundations/models-and-reasoning/)
-10. [Token, Contexto e Compactação](/guide/foundations/tokens-context-and-compaction/)
-11. [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
-12. [Mal-entendidos comuns](/guide/foundations/common-misconceptions/)
+1. [IA e modelos de linguagem](/pt/guide/foundations/ai-and-language-models/)
+2. [Fundamentos de Agent](/pt/guide/foundations/agent-basics/)
+3. [Objetivo, Contexto e ação](/pt/guide/foundations/goals-context-and-actions/)
+4. [Arquivos, Ferramentas e comandos](/pt/guide/foundations/files-tools-and-commands/)
+5. [Local e Cloud](/pt/guide/foundations/local-vs-cloud/)
+6. [Thread, Tarefa e projeto](/pt/guide/foundations/threads-tasks-and-projects/)
+7. [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
+8. [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
+9. [Modelos e Raciocínio](/pt/guide/foundations/models-and-reasoning/)
+10. [Token, Contexto e Compactação](/pt/guide/foundations/tokens-context-and-compaction/)
+11. [Verificação e revisão humana](/pt/guide/foundations/verification-and-human-review/)
+12. [Mal-entendidos comuns](/pt/guide/foundations/common-misconceptions/)
 
-Depois de ler, entre em [Começar a usar](/guide/getting-started/).
+Depois de ler, entre em [Começar a usar](/pt/guide/getting-started/).
 
 ## Mal-entendidos comuns
 
@@ -59,11 +60,11 @@ A leitura mais útil é:
 
 Se não quiser ler o capítulo de uma vez, comece por estas páginas:
 
-1. [Fundamentos de Agent](/guide/foundations/agent-basics/)
-2. [Objetivo, Contexto e ação](/guide/foundations/goals-context-and-actions/)
-3. [Arquivos, Ferramentas e comandos](/guide/foundations/files-tools-and-commands/)
-4. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
-5. [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
+1. [Fundamentos de Agent](/pt/guide/foundations/agent-basics/)
+2. [Objetivo, Contexto e ação](/pt/guide/foundations/goals-context-and-actions/)
+3. [Arquivos, Ferramentas e comandos](/pt/guide/foundations/files-tools-and-commands/)
+4. [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
+5. [Verificação e revisão humana](/pt/guide/foundations/verification-and-human-review/)
 
 Entender estas páginas já basta para o uso cotidiano.
 

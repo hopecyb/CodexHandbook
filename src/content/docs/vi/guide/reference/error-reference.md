@@ -3,9 +3,10 @@ title: Tham chiếu lỗi
 description: "Chỉ mục học lỗi thường gặp, mã thoát và dạng thất bại — trỏ tới xử lý sự cố, không thay hỗ trợ chính thức."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -22,14 +23,14 @@ Quyết định nó giống **auth, quyền, môi trường, mạng hay logic T�
 
 Thường nhanh hơn đoán.
 
-Chỉ mục toàn cục: [Xử lý sự cố](/guide/reference/troubleshooting/)
+Chỉ mục toàn cục: [Xử lý sự cố](/vi/guide/reference/troubleshooting/)
 
 ## Xác thực và tài khoản
 
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| Authentication failed / 401 | Token hết hạn, chưa đăng nhập | [Đăng nhập và xác thực](/guide/getting-started/sign-in-and-authentication/) |
-| Chính sách tổ chức | Org tắt tính năng hoặc mô hình | Liên hệ admin; [Tài khoản và truy cập](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | Token hết hạn, chưa đăng nhập | [Đăng nhập và xác thực](/vi/guide/getting-started/sign-in-and-authentication/) |
+| Chính sách tổ chức | Org tắt tính năng hoặc mô hình | Liên hệ admin; [Tài khoản và truy cập](/vi/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | Quá thường xuyên hoặc hết quota | Thử lại sau; kiểm mức dùng gói |
 
 ## Hiểu nhầm thường gặp
@@ -56,9 +57,9 @@ Các dòng trước có thể cho thấy bước, tệp, lệnh hoặc lý do n�
 
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| command not found: codex | Chưa cài hoặc PATH | [Cài CLI](/guide/getting-started/install-cli/) |
-| Config parse error | Cú pháp TOML/YAML | [Cấu hình CLI](/guide/cli/configuration/) |
-| Permission denied (write) | Deny Sandbox hoặc phê duyệt | [Phê duyệt và Sandbox](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | Chưa cài hoặc PATH | [Cài CLI](/vi/guide/getting-started/install-cli/) |
+| Config parse error | Cú pháp TOML/YAML | [Cấu hình CLI](/vi/guide/cli/configuration/) |
+| Permission denied (write) | Deny Sandbox hoặc phê duyệt | [Phê duyệt và Sandbox](/vi/guide/cli/approvals-and-sandbox/) |
 | Exit khác không (exec) | Tác vụ fail hoặc chưa đạt tiêu chí hoàn thành | Kiểm stderr; siết Prompt |
 
 ## Năm hạng mục
@@ -96,23 +97,23 @@ Dùng trang này để tới đúng hạng mục khi chưa chắc.
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
 | User rejected tool call | Bạn hoặc chính sách từ chối hành động | Xác nhận phê duyệt có đúng không; hoặc đổi Tác vụ |
-| Sandbox violation | Đường dẫn hoặc lệnh ngoài giới hạn | [Sandbox và mạng](/guide/foundations/sandbox-and-network/) |
-| Network access denied | Egress bị chặn | Cloud: [Truy cập Internet](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | Đường dẫn hoặc lệnh ngoài giới hạn | [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/) |
+| Network access denied | Egress bị chặn | Cloud: [Truy cập Internet](/vi/guide/web-and-cloud/internet-access/) |
 
 ## Cloud và GitHub
 
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| Repository access denied | Scope OAuth không đủ | [Kết nối GitHub](/guide/web-and-cloud/connect-github/) |
-| Clone failed | Tên repo, quyền, mạng | [Xử lý sự cố Cloud](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | Tên hoặc phạm vi sai | [Secrets và biến](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | Bảo vệ nhánh | [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | Scope OAuth không đủ | [Kết nối GitHub](/vi/guide/web-and-cloud/connect-github/) |
+| Clone failed | Tên repo, quyền, mạng | [Xử lý sự cố Cloud](/vi/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | Tên hoặc phạm vi sai | [Secrets và biến](/vi/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | Bảo vệ nhánh | [Tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP và mở rộng
 
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| MCP server failed to start | Đường dẫn lệnh, thiếu dependency | [Kết nối MCP](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | Đường dẫn lệnh, thiếu dependency | [Kết nối MCP](/vi/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | API ngoài chậm hoặc down | Thử lại; kiểm log MCP |
 | Unknown tool | Config/phiên bản máy chủ không tương thích | Khởi động lại phiên; cập nhật config |
 
@@ -120,14 +121,14 @@ Dùng trang này để tới đúng hạng mục khi chưa chắc.
 
 | Thông báo hoặc triệu chứng | Nguyên nhân có thể | Bước tiếp |
 |---|---|---|
-| Context length exceeded | Hội thoại hoặc tệp @ quá lớn | [Nén](/guide/context/compaction/) · thu hẹp phạm vi |
-| Model not available | Hạn chế vùng hoặc gói | [Mô hình và suy luận](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | Hội thoại hoặc tệp @ quá lớn | [Nén](/vi/guide/context/compaction/) · thu hẹp phạm vi |
+| Model not available | Hạn chế vùng hoặc gói | [Mô hình và suy luận](/vi/guide/foundations/models-and-reasoning/) |
 
 ## Dùng trang này
 
 1. **Copy cụm then chốt** vào tìm kiếm client hoặc sổ tay
 2. Theo bảng tới checklist chủ đề
-3. Vẫn kẹt: giữ log đầy đủ; xem [Tài nguyên chính thức](/guide/reference/official-resources/)
+3. Vẫn kẹt: giữ log đầy đủ; xem [Tài nguyên chính thức](/vi/guide/reference/official-resources/)
 
 ## Giúp người khác giúp bạn
 

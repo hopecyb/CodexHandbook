@@ -5,9 +5,10 @@ sidebar:
   order: 1
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b7997c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 여기서부터 시작
@@ -23,12 +24,12 @@ translated_at: 2026-07-28
 
 ## 권장 읽기 순서
 
-1. [Codex란 무엇인가](/guide/start-here/what-is-codex/) — 할 수 있는 일·할 수 없는 일
-2. [클라이언트 선택](/guide/choose-your-client/) — App, CLI, IDE, Cloud 중에서 고르기
-3. [첫 작업 완료](/cases/first-task/) — 명확한 프롬프트로 작은 변경을 하고 결과 확인
-4. [권한과 샌드박스](/guide/permissions-and-sandbox/) — 승인·격리·네트워크 경계 이해
-5. [컨텍스트와 파일](/guide/context-and-files/) — 유효한 입력 제공하기
-6. [결과 검증](/guide/verification/) — 검토와 테스트 습관 들이기
+1. [Codex란 무엇인가](/ko/guide/start-here/what-is-codex/) — 할 수 있는 일·할 수 없는 일
+2. [클라이언트 선택](/ko/guide/choose-your-client/) — App, CLI, IDE, Cloud 중에서 고르기
+3. [첫 작업 완료](/ko/cases/first-task/) — 명확한 프롬프트로 작은 변경을 하고 결과 확인
+4. [권한과 샌드박스](/ko/guide/permissions-and-sandbox/) — 승인·격리·네트워크 경계 이해
+5. [컨텍스트와 파일](/ko/guide/context-and-files/) — 유효한 입력 제공하기
+6. [결과 검증](/ko/guide/verification/) — 검토와 테스트 습관 들이기
 
 ## 흔한 오해
 
@@ -54,30 +55,30 @@ translated_at: 2026-07-28
 
 | 시간 | 할 일 |
 |---|---|
-| 0–5분 | [권한과 샌드박스](/guide/permissions-and-sandbox/)의 안전 요점 읽기 |
-| 5–10분 | 선택한 클라이언트 설치 및 로그인([데스크톱 App](/guide/desktop-app/) 등) |
-| 10–25분 | [첫 작업 사례](/cases/first-task/)에 따라 연습 |
-| 25–30분 | [프롬프트 기초](/prompts/basics/)를 훑고 더 명확한 작업 쓰기 준비 |
+| 0–5분 | [권한과 샌드박스](/ko/guide/permissions-and-sandbox/)의 안전 요점 읽기 |
+| 5–10분 | 선택한 클라이언트 설치 및 로그인([데스크톱 App](/ko/guide/desktop-app/) 등) |
+| 10–25분 | [첫 작업 사례](/ko/cases/first-task/)에 따라 연습 |
+| 25–30분 | [프롬프트 기초](/ko/prompts/basics/)를 훑고 더 명확한 작업 쓰기 준비 |
 
-막히면 [문제 해결](/guide/troubleshooting/)을 확인하세요.
+막히면 [문제 해결](/ko/guide/troubleshooting/)을 확인하세요.
 
 ## 다음에 어떻게 읽을까
 
-1. [Codex란 무엇인가](/guide/start-here/what-is-codex/)
-2. [이 핸드북은 누구를 위한가](/guide/start-here/who-is-this-handbook-for/)
-3. [경로 고르기](/guide/start-here/choose-your-path/)
-4. [기초 개념](/guide/foundations/)과 [빠른 시작](/guide/getting-started/)으로 들어가기
+1. [Codex란 무엇인가](/ko/guide/start-here/what-is-codex/)
+2. [이 핸드북은 누구를 위한가](/ko/guide/start-here/who-is-this-handbook-for/)
+3. [경로 고르기](/ko/guide/start-here/choose-your-path/)
+4. [기초 개념](/ko/guide/foundations/)과 [빠른 시작](/ko/guide/getting-started/)으로 들어가기
 
-바로 손을 대고 싶다면 [처음 30분 경로](/guide/getting-started/first-30-minutes/)를 보고, [초보자 안전 체크리스트](/guide/getting-started/beginner-safety-checklist/)도 한 번 확인하세요.
+바로 손을 대고 싶다면 [처음 30분 경로](/ko/guide/getting-started/first-30-minutes/)를 보고, [초보자 안전 체크리스트](/ko/guide/getting-started/beginner-safety-checklist/)도 한 번 확인하세요.
 
 ## 이 사이트의 계층
 
 | 계층 | 역할 | 입구 |
 |---|---|---|
-| 학습 경로 | 어떤 순서로 읽을지 | [학습 경로](/guide/learning-paths/) |
-| 제품 매뉴얼 | 인터페이스와 조작 | [제품 매뉴얼](/guide/) |
-| 역량 주제 | 원리와 방법 | [핵심 역량](/guide/) |
-| 참고 자료 | 빠른 조회 | [참고 자료](/guide/reference/) |
+| 학습 경로 | 어떤 순서로 읽을지 | [학습 경로](/ko/guide/learning-paths/) |
+| 제품 매뉴얼 | 인터페이스와 조작 | [제품 매뉴얼](/ko/guide/) |
+| 역량 주제 | 원리와 방법 | [핵심 역량](/ko/guide/) |
+| 참고 자료 | 빠른 조회 | [참고 자료](/ko/guide/reference/) |
 
 같은 지식은 권위 있는 본문을 한 곳만 두고, 경로·사례는 요약과 링크로 중복을 피합니다.
 

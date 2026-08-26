@@ -1,121 +1,67 @@
 ---
-title: IDE extension settings
-description: Model, approvals, context, and extension behavior configuration in the IDE.
+title: IDE integration settings
+description: Distinguish shared Agent configuration from VS Code-family editor behavior settings.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: d4a3506
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 80
 ---
 
-IDE extension settings connect **personal preferences** and **project rules**: which model, how strict approvals are, whether open files attach automatically, etc. Aligned with global [configuration basics](/guide/customization/configuration/config-basics/); this page focuses on common editor options.
+IDE settings have two layers:
 
-## What's covered
-
-- IDE settings vs user config vs `AGENTS.md`
-- Settings developers adjust most often
-- How teams align defaults
-
-## What these settings control
-
-IDE settings are closer to: **default habits when Codex works with you in the editor**.
-
-They answer questions like:
-
-- Default model
-- Default approval strictness
-- Whether to auto-attach current file and selection
-
-They do not define project rules—they shape whether the editor feels smooth and predictable.
-
-## Configuration layers (review)
-
-| Layer | Examples | Priority |
+| Layer | Location | Controls |
 |---|---|---|
-| Org managed policy | Forbid relaxing sandbox | Highest |
-| Project `AGENTS.md` / project config | Test commands, directory conventions | High |
-| IDE extension settings UI | Default model, panel layout | Medium |
-| Single-task prompt | "No network this time" | Task-level |
+| Codex Agent settings | `config.toml` | Model, reasoning effort, permissions, sandbox, MCP, and personalization; shared with the CLI |
+| Editor settings | VS Code settings with `chatgpt.*` | Sidebar, message queueing, send key, review delivery, language, and fonts |
 
-See [scope and precedence](/guide/customization/agents-md/scope-and-precedence/)
+Keep repository rules in `AGENTS.md`, not in one person's editor settings.
 
-## Common misconceptions
+## Open settings
 
-### IDE settings are not project standards
+Select the gear in the Codex sidebar, then **Codex Settings**. Change common Agent options in the panel or select **Open config.toml** to edit the active configuration layer.
 
-Do not confuse "how I like my editor configured" with "how this project should work."
+Change editor behavior in the editor's Settings by searching `@ext:openai.chatgpt`, `Codex`, or a specific key.
 
-- Editor settings → personal UX
-- `AGENTS.md` and project config → team agreement
+## Settings worth understanding first
 
-Related but not the same.
+| Key | Default | Change it when |
+|---|---:|---|
+| `chatgpt.openOnStartup` | `false` | You want the extension to focus the sidebar at startup |
+| `chatgpt.followUpQueueMode` | `queue` | Set `steer` to let a new message steer the current run |
+| `chatgpt.composerEnterBehavior` | `enter` | Multiline prompts are often sent accidentally |
+| `chatgpt.reviewDelivery` | `inline` | Set `detached` to show `/review` in a separate chat |
+| `chatgpt.localeOverride` | automatic | You need a fixed UI language |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | The repository and toolchain are in WSL2 |
 
-### More automatic context is not always better
+`chatgpt.cliExecutable` is for Codex CLI development. Ordinary users should not override the extension's bundled executable; some features may stop working.
 
-Auto-attaching current file, selection, and tabs helps until it dilutes the task focus.
+## How to reason about configuration precedence
 
-"Enough" beats "open everything."
+- Organization policy defines limits that cannot be exceeded.
+- `config.toml` sets Agent defaults.
+- `AGENTS.md` supplies repository and directory rules.
+- Editor settings change only the IDE experience.
+- A one-off prompt adds the current task's goal and boundary.
 
-## Commonly adjusted settings (conceptual)
+If a setting appears ineffective, identify which layer you changed and check whether a higher-level policy constrains it. See [Scope and precedence](/en/guide/customization/agents-md/scope-and-precedence/) for the full model.
 
-### Model and reasoning
+## Verify changes
 
-Affects speed vs quality on hard tasks. Teams can note recommended model tier in README so everyone does not debug different defaults.
+Change one setting class at a time. For example, after setting `chatgpt.reviewDelivery` to `detached`, run `/review` in a Git repository and confirm that a separate review chat opens. Record the old value, restore it if behavior is unexpected, and reload the editor.
 
-### Approvals and sandbox
+## Official sources
 
-Maps to [permissions and approvals](/guide/foundations/permissions-and-approvals/):
+- [Codex IDE settings](https://learn.chatgpt.com/docs/ide/settings)
+- [Configuration basics](https://learn.chatgpt.com/docs/config)
 
-- Beginners: keep default or stricter
-- Trusted repos: relax carefully; do not mix with production secrets directories
-
-CLI and IDE should share the **same security baseline**; CLI: [CLI configuration](/guide/cli/configuration/).
-
-### Context behavior
-
-Some extensions configure:
-
-- Auto-include current file / selection
-- Read `AGENTS.md`
-- Context window options (version-dependent)
-
-Too much auto-context adds noise; see [keep context focused](/guide/context/keep-context-focused/).
-
-### Login and account
-
-Shared with [sign-in and authentication](/guide/getting-started/sign-in-and-authentication/); restart extension session after switching accounts.
-
-## Team alignment
-
-1. Put **must-match** items in the repo (`AGENTS.md` + optional project config)
-2. Keep **personal habits** in IDE settings—not in Git
-3. New member onboarding: check extension version per [IDE installation](/guide/ide/installation/)
-
-## First-time focus
-
-On first setup, check three categories:
-
-1. Model and reasoning tier
-2. Approval / security
-3. Automatic context
-
-Tuning these covers most real-world friction.
-
-## Troubleshooting
-
-| Symptom | Check |
-|---|---|
-| Settings not applying | Org policy override? Reload window? |
-| Differs from CLI | Compare [configuration reference](/guide/reference/configuration-reference/) |
-| Extension unresponsive | [IDE troubleshooting](/guide/ide/troubleshooting/) |
-
-IDE settings are how you and Codex cooperate in the editor; project rules are a separate layer—do not mix them up.
-
-## References
-- OpenAI Codex IDE settings
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page covers IDE setting entries, auto-context, approval preferences, and org overrides—names and UI change frequently; lacks strong official settings documentation to support the full page.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

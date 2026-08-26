@@ -3,14 +3,15 @@ title: Terminología para principiantes
 description: Definiciones breves de Prompt, Contexto, Sandbox, Skill y otros términos frecuentes.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 401719c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 6
 ---
 
-Para entradas más completas, ve al [Glosario](/guide/reference/glossary/). Aquí están primero los términos más comunes y que más afectan la lectura.
+Para entradas más completas, ve al [Glosario](/es/guide/reference/glossary/). Aquí están primero los términos más comunes y que más afectan la lectura.
 
 Al empezar el handbook de Codex, lo que más atasca suele ser la densidad de nombres. Cada palabra por separado se entiende; juntas, marean.
 
@@ -86,7 +87,7 @@ Lo siguiente suele ser avanzado; la primera vez no hace falta dominarlo:
 - Plugin
 - Detalles del entorno Cloud
 
-Completa primero la [primera Tarea](/guide/getting-started/run-your-first-task/) y luego vuelve a estos términos; suele encajar mejor.
+Completa primero la [primera Tarea](/es/guide/getting-started/run-your-first-task/) y luego vuelve a estos términos; suele encajar mejor.
 
 Cuando aparezca una palabra nueva, consulta y sigue leyendo.
 

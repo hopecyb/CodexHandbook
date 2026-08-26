@@ -3,14 +3,15 @@ title: Acceptable Use Policy
 description: Team-level agreement on what Codex may and may not do—aligned with technical controls and training.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-An **Acceptable Use Policy (AUP)** turns “can we use Codex for this?” into org consensus instead of individual judgment. It complements the [threat model](/guide/team-enterprise/security/threat-model/): threat model covers risk; AUP covers **behavior boundaries**.
+An **Acceptable Use Policy (AUP)** turns “can we use Codex for this?” into org consensus instead of individual judgment. It complements the [threat model](/en/guide/team-enterprise/security/threat-model/): threat model covers risk; AUP covers **behavior boundaries**.
 
 ## What this page covers
 
@@ -59,7 +60,7 @@ AUP must align with training, permissions, config, and audit—not length alone.
 ## Basic structure
 
 1. **Purpose and scope**
-2. **Permitted scenarios** (link [Capability map](/guide/start-here/codex-capability-map/))
+2. **Permitted scenarios** (link [Capability map](/en/guide/start-here/codex-capability-map/))
 3. **Prohibited scenarios**
 4. **Data and confidentiality**
 5. **Human oversight** (merge, production changes)
@@ -93,7 +94,7 @@ More “yes” → more likely effective.
 ## Acceptance checklist
 
 - [ ] Onboarding includes AUP acknowledgment
-- [ ] No conflict with [Team rules](/guide/customization/rules/team-rules/)
+- [ ] No conflict with [Team rules](/en/guide/customization/rules/team-rules/)
 - [ ] Review yearly or on major feature releases
 
 An AUP’s value is clear team boundaries for Codex use—and alignment with actual controls.

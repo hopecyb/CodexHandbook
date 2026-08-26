@@ -3,9 +3,10 @@ title: Approbations et Bac à sable
 description: Politique d'Approbation CLI pour shell, disque et réseau — et comment le Bac à sable limite le comportement de l'Agent.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8ea7880
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Dans la CLI, les Agents peuvent **lire des fichiers, écrire des fichiers, exécuter le shell et éventuellement utiliser le réseau** — les Approbations et le Bac à sable sont la soupape de sécurité entre vous et l'automatisation. Une mauvaise configuration signifie des Prompts constants en usage interactif — ou un risque de dérapage en CI sans surveillance.
@@ -25,7 +26,7 @@ Rappelez-vous :
 
 Ensemble, ils façonnent si la CLI paraît conservatrice ou trop permissive.
 
-Bases conceptuelles : [permissions et Approbations](/guide/foundations/permissions-and-approvals/) · [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
+Bases conceptuelles : [permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/) · [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
 ## Quand les Approbations se déclenchent
 
@@ -55,7 +56,7 @@ Le Bac à sable peut limiter :
 - L'accès à d'autres projets sous `$HOME`
 - Les capacités sous-processus et réseau
 
-Configuration : [Configuration CLI](/guide/cli/configuration/) · matrice : [matrice des permissions](/guide/reference/permission-matrix/)
+Configuration : [Configuration CLI](/fr/guide/cli/configuration/) · matrice : [matrice des permissions](/fr/guide/reference/permission-matrix/)
 
 ## Interactif vs non interactif
 
@@ -64,7 +65,7 @@ Configuration : [Configuration CLI](/guide/cli/configuration/) · matrice : [mat
 | `codex` interactif | Humain présent ; juger chaque demande |
 | `exec` non interactif | Pas d'humain ; resserrer Bac à sable + Prompt fixe à l'avance |
 
-La CI doit lire : [mode non interactif](/guide/cli/non-interactive-mode/) · [modèles d'Approbation humaine](/cases/workflows/human-approval-patterns/)
+La CI doit lire : [mode non interactif](/fr/guide/cli/non-interactive-mode/) · [modèles d'Approbation humaine](/fr/cases/workflows/human-approval-patterns/)
 
 Principes CI recommandés :
 
@@ -74,7 +75,7 @@ Principes CI recommandés :
 
 ## Règles allow/deny
 
-Les projets peuvent déclarer les commandes attendues dans [motifs allow et deny](/guide/customization/rules/allow-and-deny-patterns/). **Les règles doivent correspondre au comportement produit réel** sinon les Agents restent bloqués — ou deviennent trop ouverts.
+Les projets peuvent déclarer les commandes attendues dans [motifs allow et deny](/fr/guide/customization/rules/allow-and-deny-patterns/). **Les règles doivent correspondre au comportement produit réel** sinon les Agents restent bloqués — ou deviennent trop ouverts.
 
 ## Erreurs courantes
 

@@ -3,9 +3,10 @@ title: Skill を使う
 description: Skill の明示的・暗黙的トリガー、および description の書き方の要点。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill を初めて使うとき、よくある誤解は「入れたら自動で効く」ことです。Skill を使うとは、Codex に事前に書いた作業の型に従わせることです。
@@ -85,7 +86,7 @@ $pr-review 現在の未コミット変更をレビューしてください
 
 読んでも「何でもできそう」と感じるなら、おそらく広すぎます。
 
-詳細は [Skills 概要](/skills/overview/)。
+詳細は [Skills 概要](/ja/skills/overview/)。
 
 ---
 

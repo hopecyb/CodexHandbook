@@ -3,16 +3,17 @@ title: Injeção de Prompt
 description: Quando texto não fiável entra no Contexto — identificação, mitigação e pontos de política de equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 A «injeção de Prompt» é meter no Contexto que o Codex verá conteúdo desenhado para o enganar.
 
-Esse conteúdo pode vir de issues, páginas web, comentários de dependências, documentação ou texto colado pelo utilizador, e costuma procurar que o Agent **ignore a política, filtre dados ou execute comandos perigosos**. É um risco frequente do [modelo de ameaças](/guide/team-enterprise/security/threat-model/) e não está longe do trabalho real.
+Esse conteúdo pode vir de issues, páginas web, comentários de dependências, documentação ou texto colado pelo utilizador, e costuma procurar que o Agent **ignore a política, filtre dados ou execute comandos perigosos**. É um risco frequente do [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) e não está longe do trabalho real.
 
 ## Conteúdo
 
@@ -84,12 +85,12 @@ Na realidade a injeção pode ser menos direta, mas esta distinção já bloquei
 **Camada de desenho**
 
 - Separar **política do sistema** e **conteúdo de utilizador não fiável** (a arquitetura varia conforme o produto)
-- Operações muito sensíveis sempre com [Aprovação humana](/cases/workflows/human-approval-patterns/)
+- Operações muito sensíveis sempre com [Aprovação humana](/pt/cases/workflows/human-approval-patterns/)
 
 **Camada de engenharia**
 
 - O Prompt de CI **não** deve concatenar o body do PR tal qual; usa campos estruturados + limite de comprimento
-- [Hook](/skills/hooks/hooks-examples/) que faça scan a frases de injeção conhecidas (camada complementar)
+- [Hook](/pt/skills/hooks/hooks-examples/) que faça scan a frases de injeção conhecidas (camada complementar)
 - Token só de leitura; proibir `git push`
 
 **Camada de processo**
@@ -129,7 +130,7 @@ As «ordens de operação» de fontes não de todo fiáveis não devem herdar-se
 
 - [ ] O fluxo de revisão CI/Cloud avaliou a superfície de injeção
 - [ ] Os maintainers sabem identificar issues suspeitos
-- [ ] Alinhado com o [uso aceitável](/guide/team-enterprise/governance/acceptable-use/)
+- [ ] Alinhado com o [uso aceitável](/pt/guide/team-enterprise/governance/acceptable-use/)
 
 ## Fontes de referência
 - OWASP LLM Top 10 (Prompt Injection)

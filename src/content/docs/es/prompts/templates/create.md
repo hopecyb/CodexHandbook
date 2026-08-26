@@ -3,9 +3,10 @@ title: Plantilla de creación
 description: Implementar de cero una función, un texto o un artefacto.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 96c864e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Plantilla de creación
@@ -62,8 +63,8 @@ Lo peor en creación: empezar sin aclarar «qué» y «para quién».
 
 ## Relacionado
 
-- [Trabajo guiado por especificación](/cases/workflows/specification-driven-work/)
-- [Definir el terminado](/prompts/define-done/)
+- [Trabajo guiado por especificación](/es/cases/workflows/specification-driven-work/)
+- [Definir el terminado](/es/prompts/define-done/)
 
 ---
 

@@ -3,116 +3,84 @@ title: Phạm vi và ưu tiên AGENTS.md
 description: Nhiều tệp, monorepo và «quy tắc dự án vs Prompt hội thoại» — ai nói đúng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 698ab44
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Khi nhiều `AGENTS.md`, tệp cấu hình và hội thoại hiện tại cùng tồn tại, cần làm rõ **quy tắc nào hiệu lực**.
+Codex builds an instruction chain at the start of every run. The important model is not a guessed ranking that mixes organization policy, configuration, and prompts; first understand how `AGENTS.md` files themselves are discovered.
 
-Ở đây nói: khi hai quy tắc trông khác nhau, thật sự nên nghe ai.
+## Official discovery order
 
-## Tổng quan ưu tiên
+1. **Global layer:** in Codex home (default `~/.codex`), Codex looks for `AGENTS.override.md` and falls back to `AGENTS.md`; it uses only the first non-empty file.
+2. **Project layer:** from the project root (usually the Git root) down to the current working directory, each directory is checked for `AGENTS.override.md`, `AGENTS.md`, and configured fallback names; at most one is loaded per directory.
+3. **Merge:** content is concatenated from root to current directory. Files closer to the current directory appear later and can therefore override earlier guidance.
 
-```text
-Chiến lược tổ chức quản trị > AGENTS.md thư mục nearer > AGENTS.md gốc kho > cấu hình người dùng > hội thoại hiện tại
-```
+Empty files are skipped. Loading stops when merged content reaches `project_doc_max_bytes`, whose default is 32 KiB.
 
-«nearer» chỉ tệp thư mục con **gần đường dẫn làm việc hiện tại hơn**. Ví dụ khi làm việc dưới `packages/web/AGENTS.md`, tệp đó gộp với tệp gốc; khi xung đột **thư mục con ưu tiên**.
-
-## Hiểu “gần hơn thì ưu tiên” thế nào
-
-Có thể coi:
-
-- Quy tắc gốc như “luật mặc định cả kho”
-- Quy tắc thư mục con như “ghi chú đặc biệt của vùng cục bộ này”
-
-Vậy quy tắc càng gần vị trí làm việc hiện tại thường càng cụ thể, cũng càng nên ưu tiên.
-
-## Quan hệ với Prompt hội thoại
-
-| Nguồn | Độ bền | Phù hợp viết gì |
-|---|---|---|
-| AGENTS.md | Qua phiên, quản lý phiên bản được | Đồng thuận nhóm, lệnh build, vùng cấm |
-| Prompt tác vụ | Chỉ phiên này | Mục tiêu lần này, phạm vi, hạn thời gian |
-| Tham chiếu tệp @ | Tăng ngữ cảnh phiên này | Tệp hiện thực cụ thể, bản thiết kế |
-
-**Đừng** trong hội thoại dán lặp cả `AGENTS.md`; nếu phải nhấn một mục, nhắc một câu: «Tuân yêu cầu kiểm thử trong AGENTS.md; lần này thêm đừng sửa thư mục `legacy/`.»
-
-## Mẫu Monorepo
+## Monorepo example
 
 ```text
 repo/
-├── AGENTS.md              # Chung cả kho: trình quản lý gói, CI, bảo mật
+├── AGENTS.md
 ├── apps/
 │   └── web/
-│       └── AGENTS.md      # Frontend: thư viện component, lệnh E2E
-└── packages/
-    └── api/
-        └── AGENTS.md      # Backend: ước định migration DB
+│       └── AGENTS.md
+└── services/
+    └── payments/
+        ├── AGENTS.md
+        └── AGENTS.override.md
 ```
 
-Nguyên tắc:
+When started from `services/payments`, the root `AGENTS.md` loads first. Because that directory contains `AGENTS.override.md`, its sibling `AGENTS.md` is ignored.
 
-- **Tệp gốc**: 10–20 quy tắc cứng chia sẻ cả kho
-- **Tệp gói con**: chỉ lệnh và mô tả thư mục đặc thù gói đó
-- Tránh ba tệp trùng 80% — nội dung trùng đặt gốc, gói con chỉ viết phần tăng
+Put repository-wide rules—package manager, common tests, and security exclusions—at the root. Nested files should contain only incremental service rules. Do not duplicate 80% of the content.
 
-## Ranh giới với sở thích cá nhân
+## How task prompts fit
 
-Thói cá nhân (chủ đề, mô hình mặc định, đường dẫn máy cục bộ) đặt **cấu hình người dùng**, đừng viết vào `AGENTS.md` kho nhóm, nếu không cộng tác viên bị hại nhầm.
+`AGENTS.md` holds lasting, version-controlled project conventions. The prompt holds the current goal, scope, and acceptance criteria:
 
-## Hiểu lầm thường gặp
+```text
+Follow the applicable AGENTS.md files. For this task, modify only
+services/payments/retry.ts and its tests. Do not rotate credentials.
+Run make test-payments and report the actual result.
+```
 
-### 1. Câu nói trong hội thoại hiện tại chắc mới nhất nên ưu tiên cũng cao nhất
+A prompt cannot turn an unavailable system, organization, sandbox, or permission capability into an available one. When instructions conflict, do not guess from “ignore previous rules.” Ask Codex to list loaded instruction sources, then narrow the task.
 
-Hội thoại phù hợp bổ sung “yêu cầu thêm lần này”, nhưng không bằng có thể tùy phủ quy tắc cứng cấp nhóm hoặc tổ chức.
+## Verify what actually loaded
 
-### 2. `AGENTS.md` thư mục con là sao chép một bản quy tắc gốc
+Start a new session in the target directory and ask:
 
-Cũng không nên vậy.
+```text
+Before working, list the AGENTS.md / AGENTS.override.md sources loaded for this
+run in order, then summarize the additional constraints from each. Do not edit files.
+```
 
-Cách phù hợp hơn:
+`AGENTS.md` is read at startup. After changing it, verify in a new run or chat; do not assume a current session hot-reloads it.
 
-- Quy tắc gốc viết phần chung
-- Thư mục con chỉ viết phần tăng và ngoại lệ
+## Fallback names and capacity
 
-### 3. Chỉ nhớ thứ tự vẫn chưa đủ
+To use an existing `TEAM_GUIDE.md`:
 
-Chưa đủ.
+```toml
+project_doc_fallback_filenames = ["TEAM_GUIDE.md", ".agents.md"]
+project_doc_max_bytes = 65536
+```
 
-Quan trọng hơn là bạn biết:
+A fallback applies only when no higher-priority file exists in the same directory. Remove duplicate and irrelevant background before increasing capacity so important rules are not crowded out.
 
-- Loại thông tin nào nên đặt tầng nào
-- Khi xung đột vì sao lấy một tầng làm chuẩn
+## Official source
 
-## Khi xung đột phán đoán thế nào
-
-Khi thấy hai quy tắc trông xung đột, xem theo thứ tự:
-
-1. Mục nào gần thư mục làm việc hiện tại hơn
-2. Mục nào là quy tắc dự án dài hạn, mục nào chỉ bổ sung tạm lần này
-3. Có chiến lược tổ chức hoặc quản trị ở tầng cao hơn hạn chế trực tiếp không
-
-Khi quy tắc xung đột, thường ưu tiên tầng gần hơn, cứng hơn, rõ hơn; đừng mặc định “câu mới nhất” chắc thắng.
-
-## Lỗi thường gặp
-
-- `AGENTS.md` thư mục con mâu thuẫn tệp gốc mà không nói lấy ai làm chuẩn
-- Viết khóa nhạy cảm vào `AGENTS.md` rồi commit Git — nên dùng quản lý khóa và biến môi trường
-- Kỳ vọng «nới tạm» trong hội thoại phủ chiến lược quản trị nhóm (thường không làm được)
-
-## Danh sách nghiệm thu
-
-- [ ] `AGENTS.md` gốc và tệp gói con phân công rõ
-- [ ] Có ý thức rõ «thư mục con ưu tiên» với quy tắc xung đột
-- [ ] Prompt tác vụ chỉ viết phần tăng, không sao chép cả sổ tay dự án
+- [Custom instructions with AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Ghi chú rà lại:** Trang này hiện viết ưu tiên của `AGENTS.md`, cấu hình người dùng và hội thoại hiện tại thành thứ tự tuyến tính quá chắc chắn, nhưng precedence thật của client khác nhau, năng lực quản trị tổ chức và môi trường chạy có thể khác; cần bổ sung căn cứ chính thức hiện tại rồi viết lại.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App, CLI, IDE, Cloud
+
+**Kiểm chứng gần nhất:** 2026-08-26

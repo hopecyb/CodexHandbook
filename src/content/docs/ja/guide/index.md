@@ -3,9 +3,10 @@ title: Codex ガイド
 description: Codex の理解、クライアントの選択、最初のタスクの完了、権限・コンテキスト・検証の理解。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6019b85
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Codex ガイド
@@ -25,14 +26,14 @@ translated_at: 2026-07-28
 
 ## 推奨順序
 
-1. [ここから始める](/guide/start-here/) — 新規読者向けの最短ルート
-2. [Codex とは](/guide/start-here/what-is-codex/)
-3. [クライアントの選択](/guide/choose-your-client/)
-4. [最初のタスクを完了する](/cases/first-task/)
-5. [権限とサンドボックス](/guide/permissions-and-sandbox/)
-6. [コンテキストとファイル](/guide/context-and-files/)
-7. [検証](/guide/verification/)
-8. 問題が起きたら [トラブルシューティング](/guide/troubleshooting/) を確認
+1. [ここから始める](/ja/guide/start-here/) — 新規読者向けの最短ルート
+2. [Codex とは](/ja/guide/start-here/what-is-codex/)
+3. [クライアントの選択](/ja/guide/choose-your-client/)
+4. [最初のタスクを完了する](/ja/cases/first-task/)
+5. [権限とサンドボックス](/ja/guide/permissions-and-sandbox/)
+6. [コンテキストとファイル](/ja/guide/context-and-files/)
+7. [検証](/ja/guide/verification/)
+8. 問題が起きたら [トラブルシューティング](/ja/guide/troubleshooting/) を確認
 
 ## よくある誤解
 
@@ -54,19 +55,19 @@ translated_at: 2026-07-28
 
 ## 製品の入口
 
-- [デスクトップ App](/guide/desktop-app/)
-- [CLI](/guide/cli/)
-- [IDE 拡張](/guide/ide/)
-- [Web と Cloud](/guide/web-and-cloud/)
+- [デスクトップ App](/ja/guide/desktop-app/)
+- [CLI](/ja/guide/cli/)
+- [IDE 拡張](/ja/guide/ide/)
+- [Web と Cloud](/ja/guide/web-and-cloud/)
 
 ## その他のトピック
 
-- [基礎概念](/guide/foundations/)
-- [クイックスタート](/guide/getting-started/)
-- [学習パス](/guide/learning-paths/)
-- [カスタマイズ](/guide/customization/)
-- [リファレンス](/guide/reference/)
-- [チームとエンタープライズ](/guide/team-enterprise/)
-- [開発者プラットフォーム](/guide/developer-platform/)
+- [基礎概念](/ja/guide/foundations/)
+- [クイックスタート](/ja/guide/getting-started/)
+- [学習パス](/ja/guide/learning-paths/)
+- [カスタマイズ](/ja/guide/customization/)
+- [リファレンス](/ja/guide/reference/)
+- [チームとエンタープライズ](/ja/guide/team-enterprise/)
+- [開発者プラットフォーム](/ja/guide/developer-platform/)
 
 Codex 全体を一度に学ぼうとするより、「今、次に何を読むべきか」をこのガイドで見つける方が、通常はより役立ちます。

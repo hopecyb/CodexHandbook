@@ -5,31 +5,32 @@ sidebar:
   order: 3
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cf898a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-이 파트는 핸드북 전체에서 반복되는 기초 개념을 한곳에 둡니다. 제품 UI 차이는 [제품 매뉴얼](/guide/)에, 프롬프트 기법은 [핵심 역량](/guide/)에 둡니다.
+이 파트는 핸드북 전체에서 반복되는 기초 개념을 한곳에 둡니다. 제품 UI 차이는 [제품 매뉴얼](/ko/guide/)에, 프롬프트 기법은 [핵심 역량](/ko/guide/)에 둡니다.
 
 여기에서는 Codex가 어떻게 작동하는지, 그리고 어떻게 협업하는지를 주로 설명합니다.
 
 ## 이 장의 지도
 
-1. [AI와 언어 모델](/guide/foundations/ai-and-language-models/)
-2. [Agent 기초](/guide/foundations/agent-basics/)
-3. [목표·컨텍스트·행동](/guide/foundations/goals-context-and-actions/)
-4. [파일·도구·명령](/guide/foundations/files-tools-and-commands/)
-5. [로컬과 클라우드](/guide/foundations/local-vs-cloud/)
-6. [스레드·작업·프로젝트](/guide/foundations/threads-tasks-and-projects/)
-7. [권한과 승인](/guide/foundations/permissions-and-approvals/)
-8. [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
-9. [모델과 추론](/guide/foundations/models-and-reasoning/)
-10. [Token·컨텍스트·압축](/guide/foundations/tokens-context-and-compaction/)
-11. [검증과 사람 검토](/guide/foundations/verification-and-human-review/)
-12. [흔한 오해](/guide/foundations/common-misconceptions/)
+1. [AI와 언어 모델](/ko/guide/foundations/ai-and-language-models/)
+2. [Agent 기초](/ko/guide/foundations/agent-basics/)
+3. [목표·컨텍스트·행동](/ko/guide/foundations/goals-context-and-actions/)
+4. [파일·도구·명령](/ko/guide/foundations/files-tools-and-commands/)
+5. [로컬과 클라우드](/ko/guide/foundations/local-vs-cloud/)
+6. [스레드·작업·프로젝트](/ko/guide/foundations/threads-tasks-and-projects/)
+7. [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
+8. [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
+9. [모델과 추론](/ko/guide/foundations/models-and-reasoning/)
+10. [Token·컨텍스트·압축](/ko/guide/foundations/tokens-context-and-compaction/)
+11. [검증과 사람 검토](/ko/guide/foundations/verification-and-human-review/)
+12. [흔한 오해](/ko/guide/foundations/common-misconceptions/)
 
-읽은 뒤 [빠른 시작](/guide/getting-started/)으로 들어가세요.
+읽은 뒤 [빠른 시작](/ko/guide/getting-started/)으로 들어가세요.
 
 ## 흔한 오해
 
@@ -59,11 +60,11 @@ translated_at: 2026-07-28
 
 한 번에 장을 다 읽고 싶지 않다면, 이 페이지만 먼저 보세요.
 
-1. [Agent 기초](/guide/foundations/agent-basics/)
-2. [목표·컨텍스트·행동](/guide/foundations/goals-context-and-actions/)
-3. [파일·도구·명령](/guide/foundations/files-tools-and-commands/)
-4. [권한과 승인](/guide/foundations/permissions-and-approvals/)
-5. [검증과 사람 검토](/guide/foundations/verification-and-human-review/)
+1. [Agent 기초](/ko/guide/foundations/agent-basics/)
+2. [목표·컨텍스트·행동](/ko/guide/foundations/goals-context-and-actions/)
+3. [파일·도구·명령](/ko/guide/foundations/files-tools-and-commands/)
+4. [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
+5. [검증과 사람 검토](/ko/guide/foundations/verification-and-human-review/)
 
 이 몇 페이지만 이해해도 일상 사용을 지탱하기에 충분합니다.
 

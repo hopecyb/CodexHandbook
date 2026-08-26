@@ -3,17 +3,18 @@ title: 팀 자동화
 description: 팀 내 반복 작업 자동화 사례 진입점입니다. 트리거 조건, 알림, 승인, 중지 조건을 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c95ca8c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 팀 자동화 사례는 흥분에 빠져 과하게 만들기 쉽습니다. 더 적합한 이해는 이렇습니다: 반복적이고 규칙이 명확한 동작은 넘기고, 나머지에는 사람 판단을 계속 둡니다.
 
 ## 이 그룹 진입점
 
-- [예약 문서 링크 검사](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Issue 분류 제안](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [예약 문서 링크 검사](/ko/cases/use-cases/team-automation/scheduled-link-check/)
+- [Issue 분류 제안](/ko/cases/use-cases/team-automation/issue-triage-suggestions/)
 
 ## 이 그룹의 초점
 

@@ -3,9 +3,10 @@ title: Nghiên cứu và học
 description: Lối vào case khảo sát, so sánh và học có nguồn — trọng tâm truy xuất, trích dẫn và ranh giới kết luận.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 862362f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khác biệt lớn nhất giữa tác vụ nghiên cứu và «hỏi-đáp» thường là:
@@ -14,7 +15,7 @@ Khác biệt lớn nhất giữa tác vụ nghiên cứu và «hỏi-đáp» th�
 
 ## Lối vào nhóm này
 
-- [Bảng so sánh tính năng đối thủ](/cases/use-cases/research-and-learning/competitive-feature-matrix/)
+- [Bảng so sánh tính năng đối thủ](/vi/cases/use-cases/research-and-learning/competitive-feature-matrix/)
 
 ## Trọng tâm nhóm này
 

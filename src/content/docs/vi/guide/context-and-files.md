@@ -3,9 +3,10 @@ title: Ngữ cảnh và tệp
 description: Quản lý ngữ cảnh dự án, tệp, hội thoại, cùng các loại đầu vào phổ biến.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2007fae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 15
 ---
@@ -41,13 +42,13 @@ Trọng tâm trang này là một tiêu chuẩn đơn giản:
 > **Để nó thấy thông tin thật sự liên quan — đừng để thông tin không liên quan chiếm chỗ.**
 ## Quản lý ngữ cảnh
 
-- [Ngữ cảnh dự án](/guide/context/project-context/) — `AGENTS.md`, thỏa thuận kho
-- [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/) — tham chiếu @ và phạm vi
-- [Ngữ cảnh hội thoại](/guide/context/conversation-context/) — Thread và nén
-- [Giữ tập trung](/guide/context/keep-context-focused/) — tránh nhiễu không liên quan
-- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/) — khóa và quyền riêng tư
+- [Ngữ cảnh dự án](/vi/guide/context/project-context/) — `AGENTS.md`, thỏa thuận kho
+- [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/) — tham chiếu @ và phạm vi
+- [Ngữ cảnh hội thoại](/vi/guide/context/conversation-context/) — Thread và nén
+- [Giữ tập trung](/vi/guide/context/keep-context-focused/) — tránh nhiễu không liên quan
+- [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/) — khóa và quyền riêng tư
 
-Cách tổ chức bối cảnh trong Prompt xem [Mục tiêu và ngữ cảnh](/prompts/goals-and-context/).
+Cách tổ chức bối cảnh trong Prompt xem [Mục tiêu và ngữ cảnh](/vi/prompts/goals-and-context/).
 
 ## Tệp và artifact
 
@@ -65,18 +66,18 @@ Loại tệp khác nhau thì cách Codex đọc, cách hỏi phù hợp, và cá
 
 ## Tệp và artifact
 
-- [Tệp văn bản và mã](/guide/files-and-artifacts/text-and-code-files/)
-- [Ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDF và tài liệu](/guide/files-and-artifacts/pdf-and-documents/)
-- [Bảng và bảng tính](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [Bản thuyết trình](/guide/files-and-artifacts/presentations/)
+- [Tệp văn bản và mã](/vi/guide/files-and-artifacts/text-and-code-files/)
+- [Ảnh và ảnh chụp màn hình](/vi/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF và tài liệu](/vi/guide/files-and-artifacts/pdf-and-documents/)
+- [Bảng và bảng tính](/vi/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Bản thuyết trình](/vi/guide/files-and-artifacts/presentations/)
 
 ## Thứ tự đọc gợi ý
 
 Không cần đọc hết một hơi. Có thể đọc theo thứ tự này:
 
-1. Đọc trước [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/) — hiểu «nên để nó xem những tệp nào»
-2. Rồi đọc [Giữ tập trung](/guide/context/keep-context-focused/) — tránh chat tác vụ đến mức phân tán
+1. Đọc trước [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/) — hiểu «nên để nó xem những tệp nào»
+2. Rồi đọc [Giữ tập trung](/vi/guide/context/keep-context-focused/) — tránh chat tác vụ đến mức phân tán
 3. Theo loại tài liệu đang cầm trên tay, rồi đọc chương tệp tương ứng
 
 Ngữ cảnh chính là đống thông tin Codex đang cầm khi phán đoán; đưa đúng thì kết quả cũng dễ làm đúng hơn.

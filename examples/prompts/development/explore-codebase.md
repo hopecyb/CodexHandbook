@@ -50,5 +50,5 @@ last_verified: 2026-07-25
 
 # 相关内容
 
-- [探索—计划—执行—验证](/09-workflows/explore-plan-execute-verify/)
-- [项目上下文](/05-core-capabilities/context/project-context/)
+- [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
+- [项目上下文](/guide/context/project-context/)

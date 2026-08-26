@@ -3,9 +3,10 @@ title: Refactorizar un sitio de docs con revisión
 description: "Caso: actualizar en lote enlaces y capítulos en un proyecto Astro/Starlight — diffs pequeños y verificación por build."
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Este caso ilustra tareas de **ingeniería de contenido**: Markdown multiarchivo, configuración de sidebar y verificación por build. El stack se parece al de este manual, pero el escenario se puede migrar a cualquier sitio estático.
@@ -19,7 +20,7 @@ Este caso ilustra tareas de **ingeniería de contenido**: Markdown multiarchivo,
 | Riesgo | Medio (muchos enlaces y navegación) |
 | Duración | 1–3 horas (según escala) |
 
-Sobre la plantilla: [Plantilla de caso](/cases/use-cases/case-study-template/)
+Sobre la plantilla: [Plantilla de caso](/es/cases/use-cases/case-study-template/)
 
 ## Contexto
 
@@ -50,7 +51,7 @@ Pasos: primero config, luego el md, por último actualizar 12-reference/index.md
 
 - **Config primero, contenido después:** evita errores de build por missing slug
 - Commit cada 3–5 archivos para facilitar el review
-- Usa [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
+- Usa [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
 
 ## Comprobación
 

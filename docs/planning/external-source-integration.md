@@ -16,7 +16,7 @@
 | 来源 | 定位 | 可借鉴内容 | 主要整合位置 | 优先级 |
 |---|---|---|---|---|
 | freestylefly/CodexGuide | Codex 实践知识库 | 学习路线、入口地图、AGENTS.md、沙盒审批、团队 playbook、案例结构、官方资料索引 | `03-learning-paths`、`06-customization`、`09-workflows`、`10-use-cases`、`11-team-enterprise`、`12-reference` | 高 |
-| KimYx0207/AI-Coding-Guide-Zh `docs/codex` | 多工具教程中的 Codex 专章 | App、Commands、项目指令、MCP、Skills、Plugins、Subagents、Automations、Review/PR、安全企业、与 Claude Code 对比 | `04-product-guides`、`05-core-capabilities`、`07-extensions-automation`、`08-developer-platform`、`11-team-enterprise`、`12-reference` | 高 |
+| KimYx0207/AI-Coding-Guide-Zh `docs/codex` | 多工具教程中的 Codex 专章 | App、Commands、项目指令、MCP、Skills、Plugins、Subagents、Automations、Review/PR、安全企业、跨工具能力对比 | `04-product-guides`、`05-core-capabilities`、`07-extensions-automation`、`08-developer-platform`、`11-team-enterprise`、`12-reference` | 高 |
 | stormzhang/ai-coding-guide `codex` | 小白教程集和功能覆盖清单 | 39 篇小白教程目录、安装、价格、第三方模型、首个任务、desktop/CLI/IDE/cloud、prompting、权限、安全、MCP、Skills、Plugins、Hooks、Worktrees、FAQ、术语 | `02-getting-started`、`04-product-guides`、`05-core-capabilities`、`07-extensions-automation`、`12-reference` | 中高 |
 | codex.bozhouai.com 橙皮书 | PDF/长文式系统教程 | 安装配置、核心功能、标准工作流、任务模板、App/CLI/IDE/Web、自动化、插件、Skill、MCP、Sites、Git/GitHub、云端、记忆、Chrome 插件、端到端案例 | `04-product-guides`、`07-extensions-automation`、`09-workflows`、`10-use-cases` | 高 |
 

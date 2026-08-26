@@ -3,14 +3,15 @@ title: 'Ví dụ: Skill review'
 description: Ví dụ Skill dựa trên pr-review — phù hợp nhóm tái dùng hoặc chỉnh sửa.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ví dụ: Skill review
 
-Ví dụ này tương ứng `pr-review` trong [Tạo Skill đầu tiên](/skills/create-your-first-skill/) — có thể chỉnh theo nhu cầu nhóm.
+Ví dụ này tương ứng `pr-review` trong [Tạo Skill đầu tiên](/vi/skills/create-your-first-skill/) — có thể chỉnh theo nhu cầu nhóm.
 
 ## SKILL.md
 

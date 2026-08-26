@@ -3,9 +3,10 @@ title: Reglas de permitir y denegar
 description: Restringe con reglas de comandos y rutas lo que el Agent puede ejecutar — hábitos personales y línea roja del equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ Su valor es sobre todo de dos tipos:
 | Rutas | Prohibir escritura en `../`, prohibir lectura de `~/.ssh` |
 | Red | Prohibir salida a internet o permitir solo dominios del registry |
 
-Contrasta con la [matriz de permisos](/guide/reference/permission-matrix/): las reglas son enforcement **configurable**; la matriz describe **defaults típicos**.
+Contrasta con la [matriz de permisos](/es/guide/reference/permission-matrix/): las reglas son enforcement **configurable**; la matriz describe **defaults típicos**.
 
 ## Capas recomendadas
 

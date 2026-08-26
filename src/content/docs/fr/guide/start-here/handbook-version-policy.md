@@ -3,9 +3,10 @@ title: Politique de version du handbook
 description: Statut du contenu, dates de vérification et maintenance des mises à jour.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3f4e05e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 8
 ---

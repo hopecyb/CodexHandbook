@@ -3,9 +3,10 @@ title: "Case study: Scheduled documentation link check"
 description: Non-interactive Codex or CI to scan for dead site links—a team automation starter case.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 ## Metadata
@@ -55,8 +56,8 @@ Wait for my confirmation before creating files.
 ### Execute
 
 - Add `prompts/ci/link-check.md`
-- Add `.github/workflows/docs-link-check.yml` (illustrative—see [Scripts and pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Use [codex exec](/guide/developer-platform/non-interactive/codex-exec/) or plain script + Codex for secondary classification
+- Add `.github/workflows/docs-link-check.yml` (illustrative—see [Scripts and pipelines](/en/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Use [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/) or plain script + Codex for secondary classification
 
 ### Verify
 
@@ -69,19 +70,19 @@ Wait for my confirmation before creating files.
 | Issue | Action |
 |---|---|
 | External site temporary 503 | Distinguish hard dead links vs soft failures in prompt |
-| JSON parse failure | Tighten [structured output](/guide/developer-platform/non-interactive/structured-output/) constraints |
+| JSON parse failure | Tighten [structured output](/en/guide/developer-platform/non-interactive/structured-output/) constraints |
 | Quota exhausted | Switch to weekly schedule + incremental checks |
 
 ## 5. Capture
 
 - After third successful run, capture as Skill: `docs-link-audit`
-- Team [command rules](/guide/customization/rules/team-rules/) allow `npm run build` and read-only git
+- Team [command rules](/en/guide/customization/rules/team-rules/) allow `npm run build` and read-only git
 
 ## 6. Related chapters
 
-- [Long-running task management](/cases/workflows/long-running-task-management/)
-- [Automations scheduled tasks](/skills/automations/scheduled-tasks/)
-- [Team learning path](/guide/learning-paths/team/)
+- [Long-running task management](/en/cases/workflows/long-running-task-management/)
+- [Automations scheduled tasks](/en/skills/automations/scheduled-tasks/)
+- [Team learning path](/en/guide/learning-paths/team/)
 
 ---
 

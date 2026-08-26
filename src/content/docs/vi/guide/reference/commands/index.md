@@ -3,11 +3,12 @@ title: Tham chiếu lệnh CLI
 description: "Lệnh con và flag Codex CLI phổ biến — chỉ mục học, không thay tài liệu chính thức."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: bdc537d
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
 Tham chiếu lệnh giúp chọn lối vào — không phải thuộc mọi flag:
@@ -33,9 +34,9 @@ Với người mới CLI, phân chia này giải hầu hết câu hỏi lối v�
 
 | Lối vào | Mục tiêu | Chi tiết |
 |---|---|---|
-| `codex` | Phiên TUI tương tác | [Chế độ tương tác](/guide/cli/interactive-mode/) |
-| `codex exec` (hoặc tương đương) | Tác vụ không tương tác một lần/pipeline | [Chế độ không tương tác](/guide/cli/non-interactive-mode/) |
-| Cấu hình | Đọc/ghi config người dùng/dự án | [Cấu hình CLI](/guide/cli/configuration/) |
+| `codex` | Phiên TUI tương tác | [Chế độ tương tác](/vi/guide/cli/interactive-mode/) |
+| `codex exec` (hoặc tương đương) | Tác vụ không tương tác một lần/pipeline | [Chế độ không tương tác](/vi/guide/cli/non-interactive-mode/) |
+| Cấu hình | Đọc/ghi config người dùng/dự án | [Cấu hình CLI](/vi/guide/cli/configuration/) |
 
 :::caution[Nhạy cảm phiên bản]
 Tên tham số dưới đây phản ánh tài liệu cộng đồng phổ biến — **có thể không khớp CLI bạn đã cài**. Đối chiếu lại `--help` sau khi nâng cấp.
@@ -75,7 +76,7 @@ codex
 # - Phê duyệt yêu cầu shell / ghi tệp
 ```
 
-Lệnh gạch chéo: [Tham chiếu lệnh gạch chéo](/guide/reference/slash-commands/)
+Lệnh gạch chéo: [Tham chiếu lệnh gạch chéo](/vi/guide/reference/slash-commands/)
 
 ## Luồng quyết định lối vào
 
@@ -95,25 +96,25 @@ Tránh chìm trong bảng flag đầy đủ ngày đầu.
 
 ```bash
 # Thư mục làm việc và Prompt một lần (minh họa)
-codex exec --cwd /path/to/repo "Mô tả Tác vụ đầy đủ của bạn"
+codex exec --cd /path/to/repo "Mô tả Tác vụ đầy đủ của bạn"
 
 # Ý định phổ biến (tên flag theo tài liệu chính thức)
-# --cwd          thư mục làm việc
+# --cd          thư mục làm việc
 # --model        ghim mô hình
 # --sandbox      chính sách Sandbox
 # --approval     chính sách phê duyệt (then chốt khi không giám sát)
 # stdin pipe     đọc Prompt từ tệp hoặc lệnh phía trước
 ```
 
-Bảo mật: [Mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/)
+Bảo mật: [Mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/)
 
 ## Cấu hình và auth (khái niệm)
 
 | Hành động | Ghi chú |
 |---|---|
-| Đăng nhập | Giống [Đăng nhập và xác thực](/guide/getting-started/sign-in-and-authentication/) |
-| Tệp cấu hình | Cấp người dùng/dự án — xem [Tham chiếu cấu hình](/guide/reference/configuration-reference/) |
-| MCP | [Kết nối MCP](/skills/mcp/connect-an-mcp-server/) |
+| Đăng nhập | Giống [Đăng nhập và xác thực](/vi/guide/getting-started/sign-in-and-authentication/) |
+| Tệp cấu hình | Cấp người dùng/dự án — xem [Tham chiếu cấu hình](/vi/guide/reference/configuration-reference/) |
+| MCP | [Kết nối MCP](/vi/skills/mcp/connect-an-mcp-server/) |
 
 ## Mã thoát và tự động hóa
 
@@ -124,24 +125,24 @@ Chế độ không tương tác thường dùng **mã thoát** cho CI:
 
 Trang lệnh CLI giúp chọn lối vào và ý định — không thuộc tham số.
 
-Đừng bỏ qua stderr trong CI; giữ log cho [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/).
+Đừng bỏ qua stderr trong CI; giữ log cho [Chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/).
 
 ## vs lệnh gạch chéo trong chat
 
 | | Terminal `codex` | `/` trong phiên |
 |---|---|---|
-| Tài liệu | Trang này + hướng dẫn sản phẩm | [slash-commands](/guide/reference/slash-commands/) |
+| Tài liệu | Trang này + hướng dẫn sản phẩm | [slash-commands](/vi/guide/reference/slash-commands/) |
 | Phù hợp | Script, CI | Khám phá tương tác |
 
 ## Xử lý sự cố
 
 | Triệu chứng | Xem |
 |---|---|
-| Không tìm thấy lệnh | [Cài CLI](/guide/getting-started/install-cli/) |
-| Config không áp dụng | [Cấu hình CLI](/guide/cli/configuration/) |
+| Không tìm thấy lệnh | [Cài CLI](/vi/guide/getting-started/install-cli/) |
+| Config không áp dụng | [Cấu hình CLI](/vi/guide/cli/configuration/) |
 | Phê duyệt chặn CI | Siết Prompt + Sandbox chỉ đọc |
 
-[Xử lý sự cố CLI](/guide/cli/troubleshooting/)
+[Xử lý sự cố CLI](/vi/guide/cli/troubleshooting/)
 
 ---
 

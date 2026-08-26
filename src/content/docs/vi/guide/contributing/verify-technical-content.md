@@ -3,9 +3,10 @@ title: Kiểm chứng nội dung kỹ thuật
 description: Cách đánh dấu trang là verified, gồm bước tái hiện, căn cứ chính thức và ngày tháng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -117,8 +118,8 @@ Các mục sau phải kiểm lại mỗi quý hoặc theo phát hành major:
 
 ## Liên quan
 
-- [Chính sách phiên bản sổ tay](/guide/start-here/handbook-version-policy/)
-- [Tài nguyên chính thức](/guide/reference/official-resources/)
+- [Chính sách phiên bản sổ tay](/vi/guide/start-here/handbook-version-policy/)
+- [Tài nguyên chính thức](/vi/guide/reference/official-resources/)
 
 `verified` nghĩa là “đã kiểm chứng thật theo căn cứ đánh dấu hiện tại, và có căn cứ truy được”. Chỉ dựa vào tác giả tự thấy đáng tin thì chưa đủ.
 

@@ -3,9 +3,10 @@ title: Mehrere Agents koordinieren
 description: Fallbeispiel zu paralleler Erkundung, Arbeitsteilung und Zusammenführung der Ergebnisse.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5abc786
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mehrere Agents koordinieren
@@ -36,7 +37,7 @@ Agent 2: Vor- und Nachteile sowie Aufwand von Option B
 
 ### Isolation über Worktrees
 
-Verschiedene Agents ändern in unterschiedlichen [git worktrees](/guide/desktop-app/worktrees/) unterschiedliche Branches; am Ende manuell mergen.
+Verschiedene Agents ändern in unterschiedlichen [git worktrees](/de/guide/desktop-app/worktrees/) unterschiedliche Branches; am Ende manuell mergen.
 
 ## 3. Koordinationsregeln (empfohlen in AGENTS.md)
 
@@ -46,8 +47,8 @@ Verschiedene Agents ändern in unterschiedlichen [git worktrees](/guide/desktop-
 
 ## 4. Verwandt
 
-- [Multi-Agent-Koordination](/cases/workflows/multi-agent-coordination/)
-- [Subagents](/guide/agent-work/subagents/)
+- [Multi-Agent-Koordination](/de/cases/workflows/multi-agent-coordination/)
+- [Subagents](/de/guide/agent-work/subagents/)
 ---
 
 **Status:** verified  

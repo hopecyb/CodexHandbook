@@ -8,6 +8,11 @@ trend: rising
 signal: well-calibrated
 tags: [harness, harness-engineering, agent, quality, llmops]
 authored_by: ai-assisted
+locale: en
+source_locale: zh-CN
+translation_status: reviewed
+reviewed_at: 2026-08-26
+source_revision: c47e003
 ---
 
 # Harness Engineering

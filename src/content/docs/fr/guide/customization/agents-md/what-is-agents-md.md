@@ -3,9 +3,10 @@ title: "Qu'est-ce que AGENTS.md"
 description: Fichier d'instructions projet persistant — un « contrat de collaboration » pour Codex, pas une encyclopédie d'architecture.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -87,7 +88,7 @@ Même si vous ne codez pas vous-même, tant que Codex travaille sur un projet au
 | `AGENTS.md` en sous-répertoire | Ce répertoire et ses sous-chemins (courant en monorepos) |
 | Notes utilisateur | Configuration personnelle ou préférences globales — ne pas mélanger avec les instructions projet |
 
-Portée et gestion des conflits : [Portée et priorité](/guide/customization/agents-md/scope-and-precedence/).
+Portée et gestion des conflits : [Portée et priorité](/fr/guide/customization/agents-md/scope-and-precedence/).
 
 ## Différence avec les Skills et les commandes slash
 
@@ -97,7 +98,7 @@ Portée et gestion des conflits : [Portée et priorité](/guide/customization/ag
 | Skill | Paquet de flux de travail réutilisable (`SKILL.md`) | Liste de contrôle de release, flux de revue spécialisé |
 | Commande slash | Raccourci que vous activez | `/review`, flux de travail ponctuels |
 
-Utilisez `AGENTS.md` pour les règles projet ; les **ensembles d'étapes répétables et partageables** conviennent mieux en tant que [Skill](/skills/overview/).
+Utilisez `AGENTS.md` pour les règles projet ; les **ensembles d'étapes répétables et partageables** conviennent mieux en tant que [Skill](/fr/skills/overview/).
 
 ## Comment décider où écrire quelque chose
 
@@ -116,7 +117,7 @@ Par exemple :
 ## Erreurs courantes
 
 - Fichier trop long ; le modèle ne lit que la première partie — **mettre les contraintes strictes dans les 30 premières lignes**
-- Écrire des instructions à haut risque comme « toujours push automatiquement », en conflit avec [Permissions et approbations](/guide/foundations/permissions-and-approvals/)
+- Écrire des instructions à haut risque comme « toujours push automatiquement », en conflit avec [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/)
 - Personne dans l'équipe ne le maintient ; la doc ne correspond pas aux vraies commandes de script
 
 ## Frontières de sécurité

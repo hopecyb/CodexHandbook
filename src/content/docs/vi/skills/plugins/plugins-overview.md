@@ -3,126 +3,110 @@ title: Tổng quan Plugins
 description: Đóng gói Skills, MCP và connector ứng dụng — tiện nhóm phân phối và quản lý thống nhất.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b2c5dae
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Plugin có thể xem như một gói cài: nó đóng một nhóm năng lực mở rộng đã cấu hình sẵn để người khác cài trực tiếp.
+ChatGPT and Codex use one public Plugin directory. A Plugin composes related capabilities into a discoverable, installable workflow; it is not a new tool-call protocol.
 
-**Plugin(plugin/connector)** đóng gói Skill, MCP server, tích hợp ứng dụng... thành đơn vị **cài được, cập nhật được, quản trị được** — đặc biệt phù hợp"một người cấu hình xong, cả nhóm tái dùng".
+## Plugin contents
 
-## Khác biệt cốt lõi
+| Component | Role | Installer review |
+|---|---|---|
+| Skills | Reusable steps, references, scripts | Instruction fit and script trust |
+| Connectors | GitHub, Slack, Drive, and other services | OAuth scopes, writes, external data |
+| MCP servers | Tools, authentication, structured data | Server source, tools, logs, permissions |
+| Browser extensions | Browser capability for a workflow | Browser access and necessity |
+| Hooks | Commands or MCP tools at lifecycle events | Review and trust exact definition |
+| Scheduled task templates | Reusable scheduling starting points | Frequency, access, exit, human review |
 
-| Dùng riêng | Qua Plugin |
-|---|---|
-| Copy thủ công thư mục Skill | Cài/nâng cấp một lần |
-| Mỗi người cấu hình MCP JSON riêng | Server và mô tả Quyền sẵn |
-| Tài liệu rải rác | Nhà phát hành cung cấp danh sách và ghi chú phiên bản |
+## Difference from Skill and MCP
 
-Plugin thuộc **lớp phân phối và tổ hợp**. Năng lực bản thân vẫn nằm ở Skill, MCP, connector — xem [Bản đồ năng lực mở rộng](/skills/capability-map/).
+| Mechanism | Main question | PR review example |
+|---|---|---|
+| Skill | Which steps? | Read diff, verify evidence, rank risk |
+| MCP / Connector | Which external tools? | Read GitHub PR and comments |
+| Hook | Which lifecycle check? | Scan secrets after a write |
+| Plugin | How is the bundle installed and distributed? | Team PR-review package |
 
-## Khác biệt Plugin, Skill, MCP
+A Plugin is a distribution layer, not the final execution step. See [Capability map](/vi/skills/capability-map/).
 
-Có thể xem bản rút gọn:
+## Install and verify
 
-- **Skill**: nói với Codex"làm theo bước nào"
-- **MCP**: nói với Codex"có thể gọi những công cụ ngoài nào"
-- **Plugin**: đóng gói các thứ trên cho tiện cài và quản trị
+### ChatGPT Web / desktop App
 
-Nhiều nhầm lẫn đến từ coi ba lớp này là cùng một thứ.
+1. Open Plugins.
+2. Inspect publisher, description, and contents.
+3. Install; review each external authorization separately.
+4. Verify at low risk in a new Chat, Work, or Codex task.
 
-## Thành phần điển hình
+### Codex CLI
+
+1. Enter `/plugins`.
+2. Install from a configured marketplace.
+3. **Start a new session**, then verify the installed Skill or tool.
+
+The IDE integration does not support Plugins. Manage them in the desktop App or CLI.
+
+## Low-risk prompt
 
 ```text
-Gói Plugin
-├── Skills(tùy chọn)
-├── Định nghĩa MCP server(tùy chọn)
-├── Connector ứng dụng / quy trình OAuth(tùy chọn)
-└── Metadata: phiên bản, tuyên bố Quyền, changelog
+Inspect only newly installed <plugin-name>; do not write:
+1. List related Skills and tools.
+2. Mark each tool read-only or externally mutating.
+3. Use test data or one read-only query.
+4. Name the component used and authorizations still requiring human review.
 ```
 
-## Khi nào dùng Plugin
+Do not send messages, change states, delete data, or bulk-write during first verification.
 
-| Dùng Plugin | Không dùng Plugin |
-|---|---|
-| Nhóm cài thống nhất gói tăng cường Figma/Linear/GitHub | Script nhỏ cá nhân một lần |
-| Cần quản lý phiên bản và rollback | Chỉ một `SKILL.md` là đủ |
-| Doanh nghiệp chỉ cho phép mở rộng whitelist | Prototype giai đoạn thử |
+## Team adoption
 
-## Khi nào cần quan tâm Plugin
+1. **Inventory:** Skills, connectors, MCP, browser extensions, Hooks, templates.
+2. **Provenance:** marketplace, repository, publisher, update policy.
+3. **Least privilege:** test account and read-only scopes.
+4. **Pilot:** non-production project or small team.
+5. **Hook review:** inspect bundled Hook hash and behavior in `/hooks`.
+6. **Exit record:** disable, uninstall, rollback, revoke OAuth.
 
-- Chỉ học cá nhân, tự viết vài Skill: có thể tạm để sau
-- Cần phát thống nhất một bộ năng lực mở rộng cho nhóm: nên bắt đầu quan tâm Plugin
+## Boundaries
 
-Plugin chủ yếu giải"**phân phối và quản trị**"— không phải thứ bắt buộc lần đầu dùng Codex.
+- Successful installation does not prove safety or data fit.
+- External authorization is a separate high-risk step.
+- Plugin Hooks run alongside matching Hooks from other sources.
+- Workspace administrators can restrict Plugins and tools.
+- Mobile uses installed Plugins but should not be assumed to have full management.
 
-## Tổ hợp phù hợp đóng gói thành Plugin
+## When not to build a Plugin
 
-Plugin có giá trị nhất khi nhiều năng lực cần được giao cùng nhau.
+- One simple `SKILL.md` with no distribution problem.
+- One personal experimental script.
+- Unstable permission and update policy.
+- Users work only in the IDE integration.
 
-| Gói nhóm | Có thể gồm |
-|---|---|
-| Gói review PR | Skill review, GitHub MCP chỉ đọc, mẫu review, Hook rủi ro |
-| Gói bảo trì tài liệu | Skill tạo tài liệu, bảng thuật ngữ, Hook kiểm link, mẫu release note |
-| Gói cộng tác thiết kế | Connector thiết kế, Skill chụp/ghi chú ảnh, mô tả quyền, ví dụ nhóm |
-| Gói kiểm tra bảo mật | Skill review chỉ đọc, Hook quét secret, cấu hình audit log |
+Stabilize one Skill or MCP workflow before bundling it.
 
-Nếu chỉ là script cá nhân dùng một lần, đừng làm Plugin. Nếu nhóm lặp lại việc cài, nâng cấp, thu hồi một nhóm năng lực, hãy đóng gói.
+## Acceptance checklist
 
-## Trước khi đóng gói
+- [ ] Target surface supports Plugins.
+- [ ] Publisher and source are traceable.
+- [ ] External connections and OAuth scopes reviewed.
+- [ ] Plugin Hooks reviewed and trusted.
+- [ ] Read-only minimal task succeeds.
+- [ ] New session discovers expected Skill/tool.
+- [ ] Team has disable, rollback, revocation steps.
 
-- Đây là workflow nhóm ổn định hay thử nghiệm tạm thời?
-- Phần nào là Skill, phần nào là MCP, phần nào là Hook?
-- Mô tả quyền có dễ hiểu trong 1 phút không?
-- Khi nâng cấp lỗi hoặc cài nhầm, có rollback không?
-- Khi nghỉ việc, đổi vai trò, kết thúc dự án, thu hồi ủy quyền thế nào?
+## Official sources
 
-## Cài và quản lý (khái niệm)
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
-1. Chọn Plugin từ **marketplace chính thức hoặc danh sách nhóm phê duyệt**
-2. Đọc mô tả Quyền: đọc repo nào, truy cập SaaS nào
-3. Sau cài khởi động lại phiên, Kiểm chứng danh sách công cụ và Skill
-4. Cập nhật định kỳ; phiên bản lớn thử trước trên repo staging
-
-Nút và lệnh cụ thể lấy UI hiện tại của Desktop App / CLI làm chuẩn.
-
-## Hiểu lầm thường gặp
-
-### 1. Cài Plugin rồi không đồng nghĩa tự động an toàn
-
-Plugin chỉ phân phối năng lực tiện hơn — không có nghĩa Quyền tự nhiên an toàn. Bạn vẫn phải xem:
-
-- Nó truy cập được gì
-- Nó có thay bạn thực hiện hành động ngoài không
-- Nguồn có đáng tin không
-
-### 2. Cài được là đáng cài hết
-
-Chỉ những mở rộng nhóm bảo trì, thu hồi, kiểm toán được mới phù hợp bật lâu dài.
-
-## Bảo mật và riêng tư
-
-- Chỉ cài nguồn đáng tin; review OAuth scope mà Plugin xin
-- Phân biệt Quyền"đọc bản thiết kế"với"gửi tin hộ"
-- Khi nghỉ việc hoặc chuyển vai thu hồi ủy quyền connector
-- Cộng với [Quyền và Phê duyệt](/guide/foundations/permissions-and-approvals/) — đừng giả định Plugin tự mang bảo mật
-
-## So với hệ sinh thái Agent khác
-
-"Plugin"ở các sản phẩm khác không hoàn toàn cùng nghĩa. Khi so hãy xem: **đóng gói gì, mô hình Quyền, có mã nguồn mở để kiểm toán không** — xem [đối chiếu tính năng](/guide/reference/feature-comparison/).
-
-## Lỗi thường gặp
-
-- Mỗi Skill nhỏ cũng làm một Plugin — chi phí bảo trì nổ
-- Cài xong không bao giờ cập nhật, lỡ bản vá bảo mật
-- Bật Plugin thử nghiệm trên repo production
-
-## Nguồn tham chiếu
-- Tài liệu OpenAI Codex Plugins
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI  
-**Ghi chú tái Kiểm chứng:** OpenAI Help đã xác nhận Plugin là container đóng gói Skills, Apps và app templates, nhưng trang này vẫn viết quy trình cài, nâng cấp và quản trị quá cụ thể, vượt căn cứ công khai ổn định hiện có.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** ChatGPT Web / desktop App / Mobile; Codex desktop and CLI; IDE integration does not support Plugins
+
+**Kiểm chứng gần nhất:** 2026-08-26

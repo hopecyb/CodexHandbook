@@ -3,9 +3,10 @@ title: Shell とターミナル
 description: コマンド実行の能力とリスク。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0b4d40a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -33,7 +34,7 @@ sidebar:
 - `rm -rf`、強制プッシュ、ssh 設定の変更などは、完全に理解していて必要な場合を除き禁止する
 - 検証コマンドを完了基準に書き込む
 
-製品の入口：[統合ターミナル](/guide/desktop-app/integrated-terminal/)
+製品の入口：[統合ターミナル](/ja/guide/desktop-app/integrated-terminal/)
 
 ## なぜターミナルのリスクが高いのか
 

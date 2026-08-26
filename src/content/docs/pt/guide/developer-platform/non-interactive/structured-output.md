@@ -3,11 +3,12 @@ title: Saída estruturada
 description: Fazer o exec produzir resultados parseáveis por máquina — para passos seguintes, painéis e portões de qualidade.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: aa19d49
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 Na primeira automatização, muita gente deixa o Codex escrever um parágrafo «que soa razoável». Serve para uma pessoa ler; não tanto para um script.
@@ -59,7 +60,7 @@ Requisitos de saída:
 Parse em Shell (esquema):
 
 ```bash
-result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
+result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
@@ -104,7 +105,7 @@ Enquanto o resultado tiver de continuar a ser processado por um programa, faz o 
 | Segurança de tipos | Por convenção + validação | Tipos do SDK |
 | Adequado | Scripts de CI | Serviços multi-tenant |
 
-Ver [Visão geral do SDK](/guide/developer-platform/sdk-overview/).
+Ver [Visão geral do SDK](/pt/guide/developer-platform/sdk-overview/).
 
 ## Erros frequentes
 
@@ -118,7 +119,7 @@ Ver [Visão geral do SDK](/guide/developer-platform/sdk-overview/).
 - [ ] Há ficheiro de schema ou campos documentados
 - [ ] A CI falha de forma explícita se o parse falhar
 - [ ] Saídas de exemplo em `fixtures/` para regressão
-- [ ] Alinhado com a estratégia de [códigos de saída](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [ ] Alinhado com a estratégia de [códigos de saída](/pt/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Fontes de referência
 - Práticas gerais de structured outputs da OpenAI (alinhamento conceptual)

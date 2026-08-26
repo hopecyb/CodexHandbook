@@ -3,9 +3,10 @@ title: Shell und Terminal
 description: Fähigkeiten und Risiken der Befehlsausführung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0b4d40a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -33,7 +34,7 @@ Stark und riskant. Prinzipien:
 - `rm -rf`, Force-Push, SSH-Config usw. verbieten — außer voll verstanden und nötig
 - Verifikationsbefehle in Abnahmekriterien
 
-Produkteinstieg: [Integriertes Terminal](/guide/desktop-app/integrated-terminal/)
+Produkteinstieg: [Integriertes Terminal](/de/guide/desktop-app/integrated-terminal/)
 
 ## Warum Terminal höheres Risiko hat
 

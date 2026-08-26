@@ -3,18 +3,19 @@ title: Artefato primeiro
 description: Acordar primeiro a forma e o caminho do artefato final, depois derivar os passos — adequado a documentação, configuração, relatórios e entregáveis semelhantes.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Artefato primeiro** significa clarificar a forma e a localização do entregável antes de deixar o Codex derivar os passos. Adequado a tarefas com saída clara — documentos Markdown, OpenAPI, scripts de migração, esboços de apresentação — e pode combinar-se com [trabalho orientado por especificação](/cases/workflows/specification-driven-work/).
+**Artefato primeiro** significa clarificar a forma e a localização do entregável antes de deixar o Codex derivar os passos. Adequado a tarefas com saída clara — documentos Markdown, OpenAPI, scripts de migração, esboços de apresentação — e pode combinar-se com [trabalho orientado por especificação](/pt/cases/workflows/specification-driven-work/).
 
 ## Foco desta página
 
 - Como descrever a estrutura do artefato em vez dos detalhes do processo
 - Verificação de consistência em artefatos multi-ficheiro
-- Alinhamento com as capacidades de [ficheiros e artefatos](/guide/files-and-artifacts/)
+- Alinhamento com as capacidades de [ficheiros e artefatos](/pt/guide/files-and-artifacts/)
 
 ## Prática mínima viável
 
@@ -37,7 +38,7 @@ Definir a lista de artefatos (caminho + formato + referência de exemplo)
     → Verificar (lint, verificação de ligações, pré-visualização)
 ```
 
-Para artefatos visuais, peça capturas ou notas de pré-visualização; ver [verificar artefatos](/guide/quality/verify-artifacts/).
+Para artefatos visuais, peça capturas ou notas de pré-visualização; ver [verificar artefatos](/pt/guide/quality/verify-artifacts/).
 
 ## Erros comuns
 
@@ -56,7 +57,7 @@ Para artefatos visuais, peça capturas ou notas de pré-visualização; ver [ver
 - [ ] Todos os ficheiros declarados existem e abrem
 - [ ] Formato consistente com o exemplo citado
 - [ ] Ligações / sumário / frontmatter válidos
-- [ ] Cumpre [definir concluído](/prompts/define-done/)
+- [ ] Cumpre [definir concluído](/pt/prompts/define-done/)
 
 ---
 

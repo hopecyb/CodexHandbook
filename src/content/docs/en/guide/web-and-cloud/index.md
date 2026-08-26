@@ -1,58 +1,70 @@
 ---
-title: Web and Cloud (overview)
-description: Entry navigation for Cloud tasks, environments, Secrets, and PR review.
-sidebar:
-  order: 13
+title: Web and Cloud overview
+description: The remote-task path from repository connection and reproducible environments to review and pull requests.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 5861c62
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 13
 ---
 
-Cloud fits running tasks in a **standardized remote environment**, connecting GitHub, and producing PRs. Start with [local vs cloud](/guide/foundations/local-vs-cloud/) and read [official Cloud documentation](https://developers.openai.com/codex).
+Codex Cloud runs coding tasks in isolated cloud environments. It is useful for long background tasks, parallel attempts, and work started from GitHub, GitLab (Beta), Linear, or Slack. It does not remotely control your computer or automatically see local unpushed files.
 
-Tasks do not run on your laptop—they continue in a remote environment.
+## Cloud task lifecycle
 
-Typical scenarios:
+```text
+Sign in with ChatGPT
+  → connect GitHub / GitLab
+  → create a repository environment
+  → check out the selected branch or commit
+  → run the setup script to install dependencies
+  → let the Agent modify and verify within the network policy
+  → inspect the summary, logs, and diff
+  → follow up or create a PR
+  → merge after human review and CI
+```
 
-- Long-running tasks
-- You do not want to babysit your machine
-- You need remote repo and PR workflows directly
+Cloud provides isolation, reproducibility, and parallelism. It does not remove review.
 
-Cloud is not always the first thing you touch, but once you work with remote repos, PRs, and async long tasks, you will likely use it.
+## Local or Cloud
 
-## Section navigation
-
-| Phase | Page |
+| Choose local | Choose Cloud |
 |---|---|
-| Connect | [Connect GitHub](/guide/web-and-cloud/connect-github/) |
-| Environment | [Cloud environments](/guide/web-and-cloud/cloud-environments/) |
-| Credentials | [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/) |
-| Output | [Create Pull Request](/guide/web-and-cloud/create-pull-requests/) |
-| Quality | [Cloud code review](/guide/web-and-cloud/code-review/) |
-| Collaboration | [Delegate and follow up](/guide/web-and-cloud/delegate-and-follow-up/) |
-| Network | [Internet access](/guide/web-and-cloud/internet-access/) |
-| Troubleshooting | [Cloud troubleshooting](/guide/web-and-cloud/troubleshooting/) |
-| Integration | [GitHub integration](/guide/integrations/github/) |
+| Work depends on uncommitted files or local services | Inputs are in a remote repository |
+| You must interact with a process in real time | The task can run independently in the background |
+| The change is small and fast | Work requires multiple build/test steps or parallel attempts |
+| A required tool exists only on this computer | Scripts can recreate the environment |
 
-Start Cloud tasks from the desktop App: [Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/). Delegate from IDE: [IDE Cloud tasks](/guide/ide/cloud-task-workflow/).
+Read [Local and cloud execution](/en/guide/foundations/local-vs-cloud/) before choosing.
 
-## Suggested reading order
+## Recommended learning order
 
-On first contact with Cloud:
+1. [Connect GitHub](/en/guide/web-and-cloud/connect-github/): authorize only required repositories.
+2. [Cloud environments](/en/guide/web-and-cloud/cloud-environments/): pin tools, versions, and setup.
+3. [Secrets and environment variables](/en/guide/web-and-cloud/secrets-and-variables/): separate setup-only Secrets from ordinary variables.
+4. [Internet access](/en/guide/web-and-cloud/internet-access/): Agent access is off by default; open only required domains and methods.
+5. [Delegate and follow up](/en/guide/web-and-cloud/delegate-and-follow-up/): send goals, constraints, and acceptance criteria.
+6. [Create pull requests](/en/guide/web-and-cloud/create-pull-requests/) and [Code review](/en/guide/web-and-cloud/code-review/): turn a result into a mergeable deliverable.
+7. [Cloud troubleshooting](/en/guide/web-and-cloud/troubleshooting/): diagnose repository, setup, network, and task layers.
 
-1. [Connect GitHub](/guide/web-and-cloud/connect-github/)
-2. [Secrets and environment variables](/guide/web-and-cloud/secrets-and-variables/)
-3. PR, code review, and collaboration flows
+When starting from the desktop App or IDE, also read [Local and cloud tasks](/en/guide/desktop-app/local-and-cloud-tasks/) or [Cloud tasks from the IDE](/en/guide/ide/cloud-task-workflow/).
 
-Understanding how it connects to repos, permissions, and secrets saves effort before diving into automation.
+## First exercise
 
-Cloud is for remote repo work that continues after you leave your machine—not simply "local workflow in a browser."
+Use a test repository with no production credentials. Ask Codex only to fix documentation links and run the link checker. Success means the environment starts, the diff contains only expected files, command output is visible, and the result can become a PR. A page showing “complete” is not sufficient acceptance evidence.
+
+## Official sources
+
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud  
-**Review note:** This navigation page still has structural value, but it depends on high-churn capabilities—GitHub connection, Secrets, PRs, mobile follow-up, network access; mark `outdated` until each subpage is aligned with current official Cloud docs.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

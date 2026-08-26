@@ -3,62 +3,63 @@ title: Conta, planos e acesso
 description: Entenda formas de login, planos e pré-requisitos de acesso.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7e2e8e6
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-Muita gente trava na primeira vez *antes* da instalação:
 
-- Tenho conta OpenAI — por que ainda não entro?
-- Se consigo fazer login, isso significa que todos os clientes funcionam?
-- No ambiente da empresa, por que o colega usa e eu não?
+Codex can currently be used through a **ChatGPT plan** or with **usage-based API-key billing**, but the two methods do not expose identical entry points or governance boundaries.
 
-O mal-entendido comum é achar que «conseguir entrar na conta» equivale a «ter necessariamente acesso ao produto correspondente agora».
+## Choose an access method first
 
-Antes de usar o Codex você precisa de uma conta OpenAI válida e da **permissão de acesso ao produto** permitida pela região/organização atual. Nome do plano, cotas e se inclui App/CLI/Cloud seguem a documentação oficial.
+| Method | Best for | Availability boundary |
+|---|---|---|
+| Sign in with ChatGPT | Personal interactive work, desktop, Cloud, and organization workspaces | Governed by ChatGPT plan limits, workspace roles, and administrator policies |
+| Sign in with an API key | Local Codex, scripts, and CI | Billed by API usage; some ChatGPT-workspace or Cloud features are unavailable |
 
-## Três coisas a confirmar
+The current official Pricing page includes ChatGPT Work and Codex in Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Prices, limits, models, and included features can change. This handbook does not duplicate the price table; consult the [live official Pricing page](https://learn.chatgpt.com/docs/pricing).
 
-1. Consegue entrar nas [entradas relacionadas a OpenAI / Codex](https://developers.openai.com/codex)
-2. Seu plano inclui o cliente que pretende usar
-3. Em ambiente corporativo: há SSO, gestão de dispositivos ou políticas de bloqueio?
+## Why an account may still lack access
 
-## Mal-entendidos comuns
+Signing in is only the first layer. Final access also depends on:
 
-### 1. Ter conta = App / CLI / IDE / Cloud todos disponíveis
+1. whether the current plan includes the target client or feature;
+2. whether the product is available in your region;
+3. whether your organization assigned the required seat, role, and workspace permission;
+4. whether managed configuration restricts sign-in methods, models, or local capabilities;
+5. whether usage has reached the current window or weekly limit.
 
-Entradas diferentes podem corresponder a alcances, capacidades de plano ou políticas de organização diferentes.
+## Personal access checklist
 
-### 2. Falha de login necessariamente é senha errada
+- You can sign in to the correct ChatGPT account on an official page.
+- You know whether usage consumes plan limits or usage-based API billing.
+- The target client shows the expected identity.
+- When a limit appears, you inspect current usage instead of reinstalling the client repeatedly.
 
-Também pode ser:
+## Team and enterprise checklist
 
-- Restrição de SSO da organização
-- Restrição de região ou política de dispositivo
-- O produto em si não está aberto para a sua conta
+- You selected the correct workspace rather than a personal space under the same email.
+- An administrator configured membership, seats, and roles.
+- SSO, MFA, retention, and regional policies satisfy organization requirements.
+- Managed configuration does not force a different local sign-in method.
+- The API key belongs to the correct API organization and is not confused with ChatGPT workspace policy.
 
-### 3. Ambiente da empresa e ambiente pessoal são a mesma coisa
+## Example diagnosis
 
-No ambiente da empresa, se a conta funciona e quais entradas pode usar costuma depender de políticas extras de segurança e de dispositivo.
+If the CLI works with an API key but the Cloud button is unavailable, installation may be fine. Cloud requires ChatGPT sign-in and is governed by ChatGPT plan and workspace access; API keys primarily cover local and programmatic workflows.
 
-## Ordem de investigação
-
-Se não souber onde está o problema, verifique nesta ordem:
-
-1. Consigo entrar na entrada relacionada?
-2. Meu plano atual inclui o cliente-alvo?
-3. Minha organização tem restrições extras?
-
-Conta utilizável é só o primeiro passo; depois ainda há plano e política de acesso da organização.
-
-Esta página não lista tabela de preços (envelhece rápido). Use as páginas oficiais de conta e cobrança.
+Next, read [Sign-in and authentication](/pt/guide/getting-started/sign-in-and-authentication/).
 
 ---
 
-**Status:** outdated  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Nota de revisão:** Esta página discute conta, planos, acesso organizacional e disponibilidade de clientes — informação de alta frequência de mudança; embora o princípio «ter conta ≠ todas as entradas disponíveis» ainda valha, pré-requisitos concretos, itens do plano e restrições da organização precisam ser reescritos conforme as páginas oficiais atuais de conta/cobrança.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE / Cloud
+
+**Verification basis:** Compared with the current official Pricing and Authentication pages. This page records the access model and diagnostic order without freezing volatile prices, limits, or feature lists.
+
+**Last verified:** 2026-08-26

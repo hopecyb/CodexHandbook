@@ -3,9 +3,10 @@ title: "Choisir le bon mécanisme"
 description: Cadre de décision pour où placer les prompts temporaires, AGENTS.md, la mémoire, les Skills et MCP.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ Ces règles à long terme doivent descendre plus bas.
 
 ### 2. Est-ce une règle de collaboration projet ou une habitude personnelle ?
 
-Si c'est quelque chose que **chaque collaborateur devrait connaître**, mettez-le dans [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+Si c'est quelque chose que **chaque collaborateur devrait connaître**, mettez-le dans [`AGENTS.md`](/fr/guide/customization/agents-md/what-is-agents-md/).
 
 Par exemple :
 
@@ -59,7 +60,7 @@ Par exemple :
 - Règles d'acceptation des messages de commit ou PR
 - Conventions spéciales pour différents sous-répertoires en monorepo
 
-Si c'est uniquement **votre préférence** — par exemple « expliquer en chinois » ou « conclusion d'abord, puis détails » — la [mémoire](/guide/customization/memories-and-persistent-context/) ou la configuration personnelle convient mieux.
+Si c'est uniquement **votre préférence** — par exemple « expliquer en chinois » ou « conclusion d'abord, puis détails » — la [mémoire](/fr/guide/customization/memories-and-persistent-context/) ou la configuration personnelle convient mieux.
 
 Règle empirique :
 
@@ -82,7 +83,7 @@ Pour décider, concentrez-vous sur ces deux points :
 - **Les règles** répondent à « ce qui est permis et ce qui ne l'est pas »
 - **Les étapes** répondent à « comment ce type de travail est habituellement fait »
 
-Les étapes réutilisables conviennent généralement mieux en tant que [Skill](/skills/overview/).
+Les étapes réutilisables conviennent généralement mieux en tant que [Skill](/fr/skills/overview/).
 
 ## Combinaisons courantes, pas l'un ou l'autre
 
@@ -196,11 +197,11 @@ Cela facilite la stabilisation du **consensus de collaboration** d'abord, puis l
 
 ## Pour aller plus loin
 
-- [Qu'est-ce que AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- [Mémoires et contexte persistant](/guide/customization/memories-and-persistent-context/)
-- [Vue d'ensemble des Skills](/skills/overview/)
-- [Vue d'ensemble MCP](/skills/mcp/mcp-overview/)
-- [Choisir une méthode d'extension](/skills/choosing-an-extension-method/)
+- [Qu'est-ce que AGENTS.md](/fr/guide/customization/agents-md/what-is-agents-md/)
+- [Mémoires et contexte persistant](/fr/guide/customization/memories-and-persistent-context/)
+- [Vue d'ensemble des Skills](/fr/skills/overview/)
+- [Vue d'ensemble MCP](/fr/skills/mcp/mcp-overview/)
+- [Choisir une méthode d'extension](/fr/skills/choosing-an-extension-method/)
 
 ## Références
 - Documentation officielle OpenAI Codex (selon la version actuelle)

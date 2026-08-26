@@ -3,9 +3,10 @@ title: Automate template
 description: Repeatable tasks and reusable flows.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Automate template
@@ -58,8 +59,8 @@ The automate template aims for safe, sustained operation.
 
 ## Related
 
-- [Long-running tasks](/prompts/long-running-tasks/)
-- [Automate a daily report case](/cases/automate-a-daily-report/)
+- [Long-running tasks](/en/prompts/long-running-tasks/)
+- [Automate a daily report case](/en/cases/automate-a-daily-report/)
 
 ---
 

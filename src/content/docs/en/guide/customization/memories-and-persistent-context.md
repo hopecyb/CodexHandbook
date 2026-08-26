@@ -3,9 +3,10 @@ title: Memories and Persistent Context
 description: How Codex remembers preferences and facts across sessions—capabilities, boundaries, and team norms.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ It is closer to “personal long-term preferences and a few stable facts,” not
 | Repeated project aliases (“backend means `services/api`”) | Changing sprint task status |
 | Non-sensitive facts you explicitly say “please remember” | Team norms that belong in Git |
 
-Team-level norms should go into **`AGENTS.md` or project configuration** for review and newcomer onboarding. See [Scope and Precedence](/guide/customization/agents-md/scope-and-precedence/).
+Team-level norms should go into **`AGENTS.md` or project configuration** for review and newcomer onboarding. See [Scope and Precedence](/en/guide/customization/agents-md/scope-and-precedence/).
 
 ## Common Misconceptions
 

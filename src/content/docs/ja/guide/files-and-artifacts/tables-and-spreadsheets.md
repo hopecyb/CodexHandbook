@@ -3,9 +3,10 @@ title: 表とスプレッドシート
 description: CSV、Excel、表形式データの読み取り、クレンジング、分析、エクスポート。構造とエンコーディングを壊さないために。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f9b9dfc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -47,7 +48,7 @@ sidebar:
 検証：先頭 5 行と総行数を表示
 ```
 
-コンテキスト：[ファイルとディレクトリのコンテキスト](/guide/context/file-and-folder-context/)
+コンテキスト：[ファイルとディレクトリのコンテキスト](/ja/guide/context/file-and-folder-context/)
 
 ## なぜ表タスクは静かに壊れやすいか
 
@@ -108,7 +109,7 @@ Python なら `pandas` で読み書き。Node なら `csv-parse` / `xlsx` など
 
 - 行数、合計がソースデータと突合できるか
 - Excel で日付が数値扱いになっていないか
-- [成果物の検証](/guide/quality/verify-artifacts/)：サンプル比較
+- [成果物の検証](/ja/guide/quality/verify-artifacts/)：サンプル比較
 
 表タスクでは、列・型・ルール・検証方法をはっきり書くことが重要です。
 
@@ -125,7 +126,7 @@ Python なら `pandas` で読み書き。Node なら `csv-parse` / `xlsx` など
 - [ ] 元ファイルが意図せず上書きされていない（または diff で見える）
 
 ## 参考資料
-- [制約の定義](/prompts/constraints-and-boundaries/)
+- [制約の定義](/ja/prompts/constraints-and-boundaries/)
 ---
 
 **状態：** verified  

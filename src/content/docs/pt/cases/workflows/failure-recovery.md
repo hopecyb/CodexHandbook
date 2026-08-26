@@ -3,12 +3,13 @@ title: Recuperação de falhas
 description: Quando a tarefa se desvia, os testes ficam vermelhos ou o contexto se esgota — como recuar com segurança e continuar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Recuperação de falhas** trata de como estabilizar a cena quando a tarefa se desvia ou é interrompida e depois avançar. Este capítulo oferece um ciclo repetível **detetar → conter → recuperar → retrospectiva**, combinável com [desfazer e recuperar](/guide/getting-started/undo-and-recover/) e [gestão de tarefas longas](/cases/workflows/long-running-task-management/).
+**Recuperação de falhas** trata de como estabilizar a cena quando a tarefa se desvia ou é interrompida e depois avançar. Este capítulo oferece um ciclo repetível **detetar → conter → recuperar → retrospectiva**, combinável com [desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/) e [gestão de tarefas longas](/pt/cases/workflows/long-running-task-management/).
 
 ## Foco desta página
 
@@ -54,7 +55,7 @@ Detetar (testes/humano/CI)
     → Retrospectiva e consolidação
 ```
 
-Em cenários multi-Agent, ver [colaboração multi-Agent](/cases/workflows/multi-agent-coordination/): em falha, clarifique que subtarefa é responsável pelo rollback.
+Em cenários multi-Agent, ver [colaboração multi-Agent](/pt/cases/workflows/multi-agent-coordination/): em falha, clarifique que subtarefa é responsável pelo rollback.
 
 ## Erros comuns
 
@@ -65,7 +66,7 @@ Em cenários multi-Agent, ver [colaboração multi-Agent](/cases/workflows/multi
 
 ## Limites de segurança
 
-- As próprias operações de recuperação estão sujeitas às [regras de comando](/guide/customization/rules/command-rules/)
+- As próprias operações de recuperação estão sujeitas às [regras de comando](/pt/guide/customization/rules/command-rules/)
 - Em incidentes de produção, rollback primeiro e análise de causa raiz depois; não deixe o Agent ligar-se à produção para «corrigir dados»
 
 ## Lista de aceitação
@@ -77,9 +78,9 @@ Em cenários multi-Agent, ver [colaboração multi-Agent](/cases/workflows/multi
 
 ## Capítulos relacionados
 
-- [Diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/)
-- [Transferência e retoma](/guide/agent-work/handoff-and-resume/)
-- [Referência de erros](/guide/reference/error-reference/)
+- [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/)
+- [Transferência e retoma](/pt/guide/agent-work/handoff-and-resume/)
+- [Referência de erros](/pt/guide/reference/error-reference/)
 
 ---
 

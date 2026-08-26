@@ -3,14 +3,15 @@ title: Configuración de la CLI
 description: Modelo, Sandbox, Aprobación y MCP — unificar el comportamiento de Codex en la terminal.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-La configuración de la CLI decide el **modelo por defecto, el directorio de trabajo, la severidad de Aprobación, los servidores MCP**, etc. Coincide conceptualmente con los [fundamentos de configuración](/guide/customization/configuration/config-basics/); esta página se centra en lo que más suelen cambiar los usuarios de terminal.
+La configuración de la CLI decide el **modelo por defecto, el directorio de trabajo, la severidad de Aprobación, los servidores MCP**, etc. Coincide conceptualmente con los [fundamentos de configuración](/es/guide/customization/configuration/config-basics/); esta página se centra en lo que más suelen cambiar los usuarios de terminal.
 
 ## Contenido de esta página
 
@@ -74,7 +75,7 @@ Afectan a velocidad, coste y tasa de éxito en Tareas complejas. En escenarios c
 | Estándar | Desarrollo diario |
 | Relajado | Solo entorno personal de confianza, y conforme a la política de la empresa |
 
-Conceptos: [Sandbox y red](/guide/foundations/sandbox-and-network/)
+Conceptos: [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
 
 ### Estrategia de Aprobación
 
@@ -82,7 +83,7 @@ La CLI puede preguntar antes de ejecutar shell, escribir en disco o conectar a l
 
 ### Lista de servidores MCP
 
-Comparte configuración con [Conectar un servidor MCP](/skills/mcp/connect-an-mcp-server/); tras cambiar, reinicia la sesión.
+Comparte configuración con [Conectar un servidor MCP](/es/skills/mcp/connect-an-mcp-server/); tras cambiar, reinicia la sesión.
 
 ## Un orden de configuración suficiente
 
@@ -111,7 +112,7 @@ Evita «en la App corre y en CI falla»:
 | MCP no carga | Sintaxis JSON/TOML, rutas |
 | Aprobación demasiado frecuente | Modo Sandbox y allowlist |
 
-Más: [Resolución de problemas de la CLI](/guide/cli/troubleshooting/)
+Más: [Resolución de problemas de la CLI](/es/guide/cli/troubleshooting/)
 
 Trata la configuración de la CLI como «hábitos de trabajo por defecto» y fija solo lo que **casi siempre vuelves a elegir**. Las capacidades avanzadas pueden llegar después.
 

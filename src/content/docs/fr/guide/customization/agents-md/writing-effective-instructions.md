@@ -3,9 +3,10 @@ title: "Écrire des instructions projet efficaces"
 description: Liste de contrôle pour écrire AGENTS.md — court, strict, exécutable, vérifiable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ Indiquer explicitement ce qu'il ne faut pas faire
 
 ### 1. Mettre les contraintes strictes en tête
 
-Placez « doit » et « ne doit pas » près du début du fichier. Quand le contexte est limité, le modèle accorde plus de poids au début — la même logique que [Priorité du contexte](/guide/context/context-priority/).
+Placez « doit » et « ne doit pas » près du début du fichier. Quand le contexte est limité, le modèle accorde plus de poids au début — la même logique que [Priorité du contexte](/fr/guide/context/context-priority/).
 
 ### 2. Les commandes doivent être copiables-collables
 
@@ -151,9 +152,9 @@ De bonnes instructions projet ne visent pas la quantité — elles rendent les c
 
 ## Pour aller plus loin
 
-- [Instructions projet](/guide/customization/project-instructions/)
-- [Explorer—Planifier—Exécuter—Vérifier](/cases/workflows/explore-plan-execute-verify/)
-- [Définir terminé](/prompts/define-done/)
+- [Instructions projet](/fr/guide/customization/project-instructions/)
+- [Explorer—Planifier—Exécuter—Vérifier](/fr/cases/workflows/explore-plan-execute-verify/)
+- [Définir terminé](/fr/prompts/define-done/)
 
 ## D’une tâche à une règle projet
 

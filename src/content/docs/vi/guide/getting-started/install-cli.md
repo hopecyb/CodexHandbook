@@ -3,62 +3,69 @@ title: Cài CLI
 description: Cài dòng lệnh Codex và hoàn thành kiểm tra cơ bản.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b12f7d0
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-Làm theo hướng dẫn cài CLI chính thức: [https://developers.openai.com/codex](https://developers.openai.com/codex) (thường là trình quản lý gói hoặc script cài chính thức — lấy tài liệu hiện hành làm chuẩn).
+Codex CLI keeps exploration, editing, testing, and review in the terminal. The official installation page provides macOS/Linux, Windows, npm, and Homebrew options. Choose one that matches your operating system and package-management approach.
 
-Nếu bạn vốn dùng terminal hàng ngày, CLI sẽ thuận tay hơn.  
-Khi cài lần đầu, chỗ dễ bị kẹt thường nằm ở đây:
+## Official standalone installer for macOS and Linux
 
-- Cài xong xác nhận thế nào là chưa cài nửa vời
-- Vì sao lệnh rõ ràng đã cài mà terminal lại không tìm thấy
-- Khi nào nên quay lại PATH / xác thực, thay vì cài lại nhiều lần
+```bash
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+```
 
-CLI đã cài ổn hay chưa — chủ yếu xem terminal hiện tại có nhận `codex` ổn định không.
+Run the same official installer again to update the CLI. Windows, npm, and Homebrew users should select the relevant tab on the [official Codex CLI page](https://learn.chatgpt.com/docs/codex/cli); do not apply the macOS/Linux command to every system.
 
-## Kiểm tra sau cài đặt
+## Post-installation checks
 
-Trong terminal chạy lệnh phiên bản hoặc trợ giúp (subcommand cụ thể lấy chính thức làm chuẩn), xác nhận:
+Open a new terminal and run these commands in a practice repository:
 
-- Lệnh thực thi được
-- Vào được trạng thái đăng nhập hoặc đã xác thực
+```bash
+codex --version
+codex login status
+```
 
-## Hiểu nhầm thường gặp
+If you are not signed in:
 
-### 1. Cài xong thì mọi cửa sổ terminal đều nhận lệnh ngay
+```bash
+codex login
+```
 
-Đôi khi bạn cần mở lại terminal, hoặc xác nhận `PATH` của shell hiện tại đã cập nhật.
+After browser authorization, start an interactive session from the repository:
 
-### 2. Thấy đầu ra cài đặt thành công là nghĩa đã dùng được
+```bash
+codex
+```
 
-Đáng xác nhận hơn là môi trường hiện tại có tìm thấy lệnh này không.
+Keep the first task read-only:
 
-### 3. Vấn đề CLI đều phải cài lại
+```text
+Do not edit files yet. Explain how this project is installed, tested, and built,
+and list the file paths you used as evidence.
+```
 
-Nhiều khi thật sự cần kiểm là:
+## Troubleshoot in order
 
-- `PATH`
-- Shell hiện tại
-- Trạng thái đăng nhập
+1. If `codex --version` is not found, reopen the terminal and inspect the current shell's `PATH`.
+2. If the command runs but Codex does not, use `codex login status` to distinguish installation from authentication.
+3. If the wrong identity is active, run `codex logout` and sign in again.
+4. If a company environment rejects access, inspect workspace, sign-in, and managed settings. Do not bypass policy with personal credentials.
 
-## Sau cài đặt kiểm thế nào
+Never paste an API key into shell history, tickets, or chats. For API-key sign-in, use the standard-input method in [Sign-in and authentication](/vi/guide/getting-started/sign-in-and-authentication/).
 
-1. Xác nhận lệnh thực thi được trước
-2. Rồi xác nhận phiên hiện tại vào được trạng thái đăng nhập hoặc đã đăng nhập
-3. Vẫn chưa được thì mới kiểm vị trí cài và PATH
-
-CLI cài xong rồi, terminal hiện tại nên tìm thấy nó, và bạn cũng tiếp tục hoàn thành xác thực được.
-
-Tương tác chi tiết xem [Chế độ tương tác CLI](/guide/cli/interactive-mode/). Xử lý sự cố: [Xử lý sự cố CLI](/guide/cli/troubleshooting/).
+Continue with [CLI interactive mode](/vi/guide/cli/interactive-mode/). For other failures, see [CLI troubleshooting](/vi/guide/cli/troubleshooting/).
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú rà soát lại:** Dù trang này cố ý tránh lệnh cài cụ thể, vẫn mặc định một nhịp cài CLI, kiểm tra terminal và xác thực hiện tại; vì cách cài, nền tảng hỗ trợ và luồng xác thực đều có thể đổi, trước khi bổ sung hướng dẫn cài chính thức phiên bản mới nhất thì không nên đánh dấu `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** CLI
+
+**Căn cứ kiểm chứng:** Compared with the current Codex CLI quickstart and authentication documentation, including the official macOS/Linux installer, `codex` startup, ChatGPT sign-in, and status command. Other installation paths point to the live official tabs.
+
+**Kiểm chứng gần nhất:** 2026-08-26

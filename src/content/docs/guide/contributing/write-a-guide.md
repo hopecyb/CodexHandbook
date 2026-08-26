@@ -44,7 +44,7 @@ description: 一句话说明本文解决的问题
 
 ## 推荐结构
 
-按 [外部资料整合模板](/docs/planning/external-source-integration.md#6-推荐页面模板) 选用小节，常见组合：
+按[外部资料整合模板](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF)选用小节，常见组合：
 
 - 页面要解决什么问题
 - 适合谁

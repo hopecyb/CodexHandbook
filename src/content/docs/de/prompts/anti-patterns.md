@@ -3,9 +3,10 @@ title: Prompt-Anti-Patterns
 description: 'Vage Formulierungen, Überschreitung von Grenzen und versteckte Reasoning-Anforderungen vermeiden.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beim Lernen von Prompts liegt der Fokus leicht nur auf „wie schreiben“.  

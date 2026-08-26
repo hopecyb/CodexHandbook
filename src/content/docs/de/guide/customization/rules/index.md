@@ -3,9 +3,10 @@ title: Regeln
 description: "Einstiegsseite zu allow/deny, Befehlsregeln und Teamrichtlinien — was blockieren, was nur erinnern."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1b6534d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Die Gruppe „Regeln“ wird von Einsteigern leicht als „noch ein paar Erinnerungen für Codex“ missverstanden.
@@ -14,9 +15,9 @@ Genauer: Regeln klären, welche Aktionen standardmäßig erlaubt sind, welche bl
 
 ## Empfohlene Reihenfolge
 
-1. [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Befehlsregeln](/guide/customization/rules/command-rules/)
-3. [Teamregeln](/guide/customization/rules/team-rules/)
+1. [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/)
+2. [Befehlsregeln](/de/guide/customization/rules/command-rules/)
+3. [Teamregeln](/de/guide/customization/rules/team-rules/)
 
 ## Was diese Gruppe hilft zu lösen
 

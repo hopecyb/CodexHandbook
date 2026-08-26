@@ -3,9 +3,10 @@ title: AGENTS.md
 description: "Einstiegsseite zu projektweiten Langzeit-Anweisungen: für wen, welches Problem — erst dann Inhalt schreiben."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce5c1af
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele sehen `AGENTS.md` zuerst als „noch einen längeren Prompt“.
@@ -16,9 +17,9 @@ Sie trägt Vereinbarungen, die Sie nicht jedes Mal neu sagen wollen und die Team
 
 ## Empfohlene Reihenfolge
 
-1. [Was ist AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-2. [Geltungsbereich und Priorität](/guide/customization/agents-md/scope-and-precedence/)
-3. [Projektanweisungen schreiben](/guide/customization/agents-md/writing-effective-instructions/)
+1. [Was ist AGENTS.md](/de/guide/customization/agents-md/what-is-agents-md/)
+2. [Geltungsbereich und Priorität](/de/guide/customization/agents-md/scope-and-precedence/)
+3. [Projektanweisungen schreiben](/de/guide/customization/agents-md/writing-effective-instructions/)
 
 ## Zuerst merken
 

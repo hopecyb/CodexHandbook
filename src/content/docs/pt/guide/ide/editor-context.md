@@ -3,11 +3,12 @@ title: Contexto do editor
 description: Como a extensão IDE passa ao Codex os ficheiros abertos, a área de trabalho e as regras do projeto.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b6d208f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
 No IDE, o Codex não lê só o seu Prompt: obtém automaticamente o **estado do editor**. Essa é a vantagem central do IDE face à CLI. Perceber de onde vem o Contexto evita a frustração de «tenho o ficheiro aberto e ele não o vê».
@@ -23,15 +24,15 @@ No IDE, o Codex não olha só para o que diz: também usa o que está a ver no e
 ## Fluxo recomendado
 
 1. **Abra o repositório pela raiz da área de trabalho**; não abra só uma subpasta (exceções em monorepos conforme a documentação da equipa)
-2. Em lógica local, **selecione primeiro o código relevante** e só depois descreva a Tarefa → [Seleção e ficheiros abertos](/guide/ide/selected-code-and-open-files/)
+2. Em lógica local, **selecione primeiro o código relevante** e só depois descreva a Tarefa → [Seleção e ficheiros abertos](/pt/guide/ide/selected-code-and-open-files/)
 3. Em Tarefas entre módulos, nomeie ficheiros-chave com `@`, em vez de assumir que «ele encontra sozinho»
-4. Em sessões longas, [compacte o Contexto](/guide/context/compaction/) periodicamente ou abra uma Thread nova
+4. Em sessões longas, [compacte o Contexto](/pt/guide/context/compaction/) periodicamente ou abra uma Thread nova
 
 ## Diferenças face à CLI
 
 | | Extensão IDE | CLI |
 |---|---|---|
-| Perceção de ficheiros | Forte (abrir já entra no Contexto) | Precisa de `--cwd` e Ferramentas a ler o disco |
+| Perceção de ficheiros | Forte (abrir já entra no Contexto) | Precisa de `--cd` e Ferramentas a ler o disco |
 | Seleção | Suporte nativo | Precisa de colar ou indicar o caminho |
 | Adequado a | Alterações ao nível da linha, explicar código | Scripts, CI, ambientes sem GUI |
 
@@ -56,7 +57,7 @@ O Contexto do IDE ajuda, mas não adivinha por si; quanto mais preciso for o alc
 
 ## Informação sensível
 
-Não deixe `.env` com chaves aberto em primeiro plano no editor durante muito tempo; ver [Contexto sensível](/guide/context/sensitive-context/).
+Não deixe `.env` com chaves aberto em primeiro plano no editor durante muito tempo; ver [Contexto sensível](/pt/guide/context/sensitive-context/).
 
 Antes de colar registos ou dados de clientes, desensibilize; o IDE não julga conformidade por si.
 
@@ -73,7 +74,7 @@ Antes de colar registos ou dados de clientes, desensibilize; o IDE não julga co
 - [ ] Comandos de teste em `AGENTS.md` alinhados com o terminal do IDE
 
 ## Fontes de referência
-- [Contexto de ficheiros e pastas](/guide/context/file-and-folder-context/)
+- [Contexto de ficheiros e pastas](/pt/guide/context/file-and-folder-context/)
 ---
 
 **Estado:** verified  

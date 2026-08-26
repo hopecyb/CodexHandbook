@@ -3,160 +3,172 @@ title: codex exec
 description: "Lối vào thực thi chế độ không tương tác — giao một Tác vụ đầy đủ trong script và CI."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 124836c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-Nếu `codex` tương tác là vừa trò chuyện vừa làm việc, thì **`codex exec`** gần với việc giao Tác vụ một lần, chạy xong rồi trả kết quả.
+If interactive `codex` is chat-while-you-work, **`codex exec`** is closer to handing off a one-shot job and getting a result when it finishes.
 
-Nó là lõi của [chế độ không tương tác](/guide/cli/non-interactive-mode/): không chat qua lại, không vừa làm vừa làm rõ, tiến trình kết thúc là bạn nhận kết quả hoặc trạng thái thất bại. Chương này hướng tới người tích hợp [nền tảng nhà phát triển](/guide/developer-platform/), cũng phù hợp độc giả lần đầu muốn nối Codex vào script hoặc CI.
+It is the core of [non-interactive mode](/vi/guide/cli/non-interactive-mode/): no back-and-forth chat, no mid-run clarification—the process ends with a result or failure. This chapter targets [developer platform](/vi/guide/developer-platform/) integrators and readers wiring Codex into scripts or CI for the first time.
 
-## Nội dung trang này
+## What this page covers
 
-- Khác biệt giữa `exec` và `codex` tương tác
-- Hình thái lệnh tối thiểu và thư mục làm việc
-- Yêu cầu về Phê duyệt và Sandbox khi không có người giám sát
+- How `exec` differs from interactive `codex`
+- Minimal command shape and working directory
+- Approval and sandbox requirements when unattended
 
-## `exec` đang làm gì
+## What `exec` does
 
-Có thể hiểu `codex exec` như:
+Think of `codex exec` as:
 
-- Phát một phiếu công việc một lần
-- Chạy xong rồi trả kết quả
+- Issuing a one-time work order
+- Running to completion and returning a result
 
-Phiếu đó viết rõ rồi thì nó chạy theo mô tả đó; xong, đưa kết quả, rồi kết thúc.
+Once the instructions are set, it runs accordingly, returns the outcome, and exits.
 
-Vì vậy nó phù hợp nhất khi:
+So it fits when:
 
-- Ranh giới Tác vụ đã cố định
-- Không cần làm rõ giữa chừng
-- Muốn lặp lại ổn định về sau
+- Task boundaries are fixed
+- No mid-run clarification is needed
+- You want repeatable execution later
 
-## Vì sao nó tồn tại
+## Why it exists
 
-Bạn sẽ không chat với Codex trong CI, cũng không kỳ vọng nó dừng giữa chừng hỏi bạn mười lần.
+You do not chat with Codex in CI, and you do not expect it to stop ten times to ask questions.
 
-Vì vậy tình huống phù hợp của `codex exec` thường là:
+Typical `codex exec` uses:
 
-- Tự động hóa review mã
-- Tác vụ theo lịch
-- Script batch
-- Bước phân tích hoặc sinh nội dung một lần trong pipeline
+- Code review automation
+- Scheduled jobs
+- Batch scripts
+- Single analysis or generation steps in a pipeline
 
-Nó phù hợp khi «**ranh giới Tác vụ đã nói rõ**»; nếu vẫn đang khám phá mơ hồ, chế độ tương tác thường phù hợp hơn.
+It fits when **task boundaries are already clear**; if you are still exploring, interactive mode is usually better.
 
 :::note
-**Tên lệnh và tham số lấy theo CLI chính thức.** Sau khi nâng cấp, chạy `codex --help` và `codex exec --help` để đối chiếu.
+**Command names and flags follow the official CLI.** After upgrades, run `codex --help` and `codex exec --help`.
 :::
 
-## Cách làm tối thiểu dùng được
+## Minimal viable approach
 
 ```bash
 cd /path/to/repo
-codex exec --cwd . "Chỉ đọc: so sánh diff nhánh hiện tại với main, liệt kê 3 rủi ro bảo mật cao nhất, không sửa tệp"
+codex exec --cd . "Read-only: compare current branch diff to main, list top 3 security risks, do not modify files"
 ```
 
-Nguyên tắc:
+Runs use a read-only sandbox by default. To permit workspace writes explicitly:
 
-- Trong shell script, `cd` trước tới worktree sạch
-- Đặt Prompt trong `prompts/` của repo hoặc heredoc, tránh lỗi escape shell
-- Trong CI, dùng **mã thoát** để phán thành bại
+```bash
+codex exec --cd . --sandbox workspace-write "Fix the failing test; modify only src/auth and tests/auth"
+```
 
-## Thực tế dễ bỏ qua nhất
+Progress is written to `stderr` and the final response to `stdout`. Use `--json` for the full machine-readable event stream, `-o` / `--output-last-message` for only the final response file, and `--output-schema` when downstream code requires stable fields.
 
-Trong chế độ tương tác bạn còn có thể bổ sung «không phải ý đó».  
-Trong chế độ `exec`, **lần đầu nói sai thì cả vòng có thể lệch hướng**.
+Principles:
 
-Vì vậy khi viết Prompt `exec`, cần rõ hơn bình thường:
+- In shell scripts, `cd` to a clean worktree first
+- Put prompts in versioned `prompts/` or heredocs to avoid shell escaping issues
+- In CI, judge pass/fail by **exit code**
 
-- Phải làm gì
-- Không được làm gì
-- Định dạng đầu ra là gì
-- Thế nào là hoàn thành
-- Khi thất bại muốn thoát thế nào
+## Easy-to-miss reality
 
-## Hiểu nhầm thường gặp
+In interactive mode you can say “that is not what I meant.”
+In `exec`, **if the first prompt is wrong, the whole run can go off track**.
 
-### `exec` phù hợp Tác vụ cố định hơn
+When writing `exec` prompts, be more explicit than usual about:
 
-Nhiều người lần đầu hiểu thành «chế độ nâng cao bản CLI».
+- What to do
+- What not to do
+- Output format
+- What counts as done
+- How to fail when things go wrong
 
-Hiểu chính xác hơn: nó phù hợp để **lặp lại ổn định**.
+## Common misconceptions
 
-### Prompt ngắn không đồng nghĩa Prompt rõ
+### `exec` fits fixed tasks
 
-Trong chế độ tương tác, nói hơi mơ hồ vẫn còn cơ hội bổ sung.
+Many people treat it as “advanced CLI mode.”
 
-Nhưng trong `exec`, Prompt ngắn nếu bỏ ranh giới, hạn chế và tiêu chí thành công thường không phải thanh lịch hơn, mà dễ mất kiểm soát hơn.
+More accurate: it is for **stable, repeatable** runs.
 
-## Quy trình khuyến nghị
+### Short prompts are not always clear prompts
+
+In interactive mode, vague wording can be fixed later.
+
+In `exec`, a short prompt that omits boundaries, limits, and success criteria is often not elegant—it is risky.
+
+## Recommended workflow
 
 ```text
-Chuẩn bị repo (checkout, install, token chỉ đọc)
-    → Ghim phiên bản Prompt (git sha)
+Prepare repo (checkout, install, read-only token)
+    → Pin prompt version (git sha)
     → codex exec
-    → Thu stdout / artifact
-    → Khác 0 thì fail CI, không thử lại vô hạn
+    → Collect stdout / artifacts
+    → Non-zero exit fails CI; do not retry forever
 ```
 
-Nối với [Script và pipeline](/guide/developer-platform/non-interactive/scripts-and-pipelines/).
+See [Scripts and pipelines](/vi/guide/developer-platform/non-interactive/scripts-and-pipelines/).
 
-## Có thể coi nó là gì
+## What to treat it as
 
-- Một lệnh Tác vụ một lần có thể script hóa
-- Phù hợp đặt vào script, CI hoặc cron
+- A scriptable one-shot task command
+- Suitable for scripts, CI, or cron
 
-Đó cũng là lý do nhiều đội gắn nó sau `make review`, GitHub Actions, cron hoặc nút trên nền tảng nội bộ.
+That is why many teams wire it behind `make review`, GitHub Actions, cron, or internal platform buttons.
 
-## So với chế độ tương tác
+## Compared to interactive mode
 
-| | `codex` tương tác | `codex exec` |
+| | Interactive `codex` | `codex exec` |
 |---|---|---|
-| Làm rõ câu hỏi | Nhiều vòng được | Phải nói rõ một lần |
-| Phê duyệt | Có người tại chỗ | Phải thắt chặt chiến lược trước |
-| Phù hợp | Học, khám phá | CI, cron |
+| Clarification | Multi-turn | Must be clear upfront |
+| Approval | Human present | Tighten policy beforehand |
+| Best for | Learning, exploration | CI, cron |
 
-## Khi chưa chắc thì chọn thế nào
+## When unsure
 
-- Vẫn đang mò nhu cầu, có thể đổi ý thường xuyên: ưu tiên chế độ tương tác
-- Tác vụ đã thành mẫu cố định, chỉ muốn chạy lặp ổn định: dùng `codex exec`
+- Still exploring requirements, may change your mind often: prefer interactive mode
+- Task is a template you want to run repeatedly: use `codex exec`
 
-`codex exec` phù hợp nhất với Tác vụ «đã nói rõ, sau này còn muốn chạy lại»; nếu vẫn vừa nghĩ vừa đổi ý, đừng vội nhét vào quy trình không tương tác.
+`codex exec` fits tasks that are already clear and worth repeating; if you are still thinking out loud, do not rush it into non-interactive flows.
 
-## Lỗi thường gặp
+## Common mistakes
 
-- Nhét cả lịch sử chat dài vào một lần exec
-- CI dùng token ghi và Prompt chứa thân PR chưa khử nhiễm
-- Không ghim phiên bản CLI khiến pipeline đột ngột fail
-- Bỏ qua mã thoát khác không vẫn đánh green
-- Nhét Tác vụ phức tạp cần phán đoán người vào quy trình không giám sát
+- Stuffing long chat history into a single exec
+- CI uses write token and prompt includes unsanitized PR body
+- Unpinned CLI version breaks pipelines suddenly
+- Ignoring non-zero exit codes and marking green
+- Forcing complex human-judgment tasks into unattended runs
 
-## Ranh giới bảo mật
+## Security boundaries
 
-- Không giám sát = [Phê duyệt của người](/cases/workflows/human-approval-patterns/) yếu đi, mặc định chỉ đọc
-- Xem [Quyền và bảo mật](/guide/developer-platform/ci-cd/code-review-automation/) (tham chiếu chéo cùng chương)
+- Unattended = weaker [human approval](/vi/cases/workflows/human-approval-patterns/); default read-only
+- See [Security credentials](/vi/guide/developer-platform/ci-cd/code-review-automation/#permissions-and-security) (cross-reference in same chapter)
 
-## Checklist nghiệm thu
+## Acceptance checklist
 
-- [ ] Local và CI dùng cùng tệp Prompt
-- [ ] Mã thoát được CI xử lý đúng
-- [ ] Log không chứa khóa bí mật và PII
-- [ ] Sandbox và quy tắc ngang hoặc chặt hơn lúc phát triển tương tác
+- [ ] Local and CI use the same prompt file
+- [ ] Exit codes handled correctly in CI
+- [ ] Logs contain no keys or PII
+- [ ] Sandbox and rules match or are stricter than interactive dev
 
-## Chương liên quan
+## Related
 
-- [Chế độ không tương tác CLI](/guide/cli/non-interactive-mode/)
-- [Đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/)
-- [Mã thoát và thử lại](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+- [CLI non-interactive mode](/vi/guide/cli/non-interactive-mode/)
+- [Structured output](/vi/guide/developer-platform/non-interactive/structured-output/)
+- [Exit codes and retries](/vi/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
-## Nguồn tham chiếu
-- Tài liệu OpenAI Codex CLI
+## Reference sources
+- OpenAI Codex CLI documentation
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI  
-**Ghi chú đối chiếu:** Trang này quanh `codex exec`, `--cwd` và cách tích hợp không tương tác đưa ra hướng hữu ích, nhưng hiện thiếu tài liệu chính thức hiện hành đủ mạnh để xác nhận từng mục về lối vào lệnh, tham số và chi tiết hành vi; trước khi bổ sung căn cứ CLI mới nhất, không nên đánh dấu `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** CLI
+
+**Căn cứ kiểm chứng:** Compared with current Non-interactive mode and Developer commands documentation for Stable `codex exec`, `--cd` / `-C`, the default read-only sandbox, `workspace-write`, JSONL, and schema output.
+
+**Kiểm chứng gần nhất:** 2026-08-26

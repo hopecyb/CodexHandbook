@@ -3,9 +3,10 @@ title: Prompt-Vorlagen
 description: 'Wiederverwendbare Prompt-Gerüste nach Aufgabentyp — Verstehen, Erstellen, Ändern, Diagnostizieren, Review, Recherchieren, Automatisieren.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Prompt-Vorlagen
@@ -30,13 +31,13 @@ Vorlagen sind Gerüst, keine Musterlösung.
 
 | Vorlage | Wann |
 |---|---|
-| [Verstehen](/prompts/templates/understand/) | Codebase, Docs oder Material lesen — zuerst Orientierung |
-| [Erstellen](/prompts/templates/create/) | Feature, Text oder Artefakt von null |
-| [Ändern](/prompts/templates/change/) | Iterative Änderungen auf Bestehendem |
-| [Diagnostizieren](/prompts/templates/diagnose/) | Ursache finden, noch keinen Code ändern |
-| [Review](/prompts/templates/review/) | Diff, PR oder Doc-Änderungen prüfen |
-| [Recherchieren](/prompts/templates/research/) | Recherche und Vergleich mit Quellen |
-| [Automatisieren](/prompts/templates/automate/) | Wiederholaufgaben, Skripte, unbeaufsichtigte Flows |
+| [Verstehen](/de/prompts/templates/understand/) | Codebase, Docs oder Material lesen — zuerst Orientierung |
+| [Erstellen](/de/prompts/templates/create/) | Feature, Text oder Artefakt von null |
+| [Ändern](/de/prompts/templates/change/) | Iterative Änderungen auf Bestehendem |
+| [Diagnostizieren](/de/prompts/templates/diagnose/) | Ursache finden, noch keinen Code ändern |
+| [Review](/de/prompts/templates/review/) | Diff, PR oder Doc-Änderungen prüfen |
+| [Recherchieren](/de/prompts/templates/research/) | Recherche und Vergleich mit Quellen |
+| [Automatisieren](/de/prompts/templates/automate/) | Wiederholaufgaben, Skripte, unbeaufsichtigte Flows |
 
 ## Von Vorlage zu Workflow
 
@@ -73,7 +74,7 @@ Für Einsteiger: „ausreichend, nicht aufgebläht“.
 
 Zuerst den richtigen Typ wählen, dann zur eigenen Aufgabe machen — die Vorlage selbst ist nicht die Aufgabe.
 
-Schreibprinzipien: [Prompt-Grundlagen](/prompts/basics/) und [Aufgabenstruktur](/prompts/task-anatomy/).
+Schreibprinzipien: [Prompt-Grundlagen](/de/prompts/basics/) und [Aufgabenstruktur](/de/prompts/task-anatomy/).
 
 ---
 

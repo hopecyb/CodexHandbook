@@ -3,9 +3,10 @@ title: "사례: 경쟁 제품 기능 비교표"
 description: 출처가 있는 리서치와 표 산출물—비개발 독자도 재사용할 수 있는 워크플로입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## 메타 정보
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. 준비
 
 - 비교 차원을 명확히(미리 프롬프트 또는 `@brief.md`에 작성)
-- [웹 검색](/guide/tools/web-search/) 활성화(제품이 지원하는 경우)
+- [웹 검색](/ko/guide/tools/web-search/) 활성화(제품이 지원하는 경우)
 
 ## 3. 워크플로
 
-[출처가 있는 리서치](/cases/workflows/research-with-sources/)를 따릅니다:
+[출처가 있는 리서치](/ko/cases/workflows/research-with-sources/)를 따릅니다:
 
 ```text
 A/B/C 세 곳의 「팀 협업」기능을 비교하세요:
@@ -44,7 +45,7 @@ A/B/C 세 곳의 「팀 협업」기능을 비교하세요:
 markdown 표를 출력하고, 저장소의 다른 파일은 수정하지 마세요.
 ```
 
-**검증:** 사람이 URL 3개를 열어 보고, 날짜와 [검증 정책](/guide/start-here/handbook-version-policy/)을 확인합니다.
+**검증:** 사람이 URL 3개를 열어 보고, 날짜와 [검증 정책](/ko/guide/start-here/handbook-version-policy/)을 확인합니다.
 
 ## 4. 실패와 복구
 
@@ -58,8 +59,8 @@ markdown 표를 출력하고, 저장소의 다른 파일은 수정하지 마세�
 
 ## 6. 관련 장
 
-- [산출물 우선](/cases/workflows/artifact-first-work/)
-- [출처 검증](/guide/quality/validate-sources/)
+- [산출물 우선](/ko/cases/workflows/artifact-first-work/)
+- [출처 검증](/ko/guide/quality/validate-sources/)
 
 ---
 

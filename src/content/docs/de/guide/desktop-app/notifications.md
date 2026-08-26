@@ -1,52 +1,57 @@
 ---
-title: Benachrichtigungen
-description: Abschluss langer Aufgaben und Freigabeanfragen verfolgen.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Benachrichtigungen und Aktivitätsansicht
+description: Konfiguriere Hinweise auf abgeschlossene Aufgaben, Berechtigungsanfragen und ausstehende Antworten.
 sidebar:
   order: 80
+locale: de
+source_locale: zh-CN
+source_revision: 0869db2
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Benachrichtigungen signalisieren vor allem Aufgabenstatus — damit Hintergrundaufgaben nicht stillstehen, auf Freigabe warten oder fertig sind, ohne dass du es merkst.
+Benachrichtigungen zeigen, wann du zu einer Aufgabe zurückkehren musst. Sie ersetzen nicht die Prüfung des Ergebnisses. In der Desktop-App kannst du Hinweise auf abgeschlossene Runden konfigurieren und Benachrichtigungen für Berechtigungsanfragen und Fragen getrennt steuern.
 
-Benachrichtigungen für:
+## Empfohlene Konfiguration
 
-- Abschluss langer Aufgaben
-- Wartende Freigabe durch dich
-- Fehler oder Nachverfolgungsbedarf
+Öffne **Settings → Notifications**:
 
-In den Systemeinstellungen nötige Benachrichtigungen behalten, sonst bleiben stecken gebliebene Hintergrundaufgaben unbearbeitet. Automatisierungsbezogene Hinweise folgen in späteren Kapiteln; hier geht es um Aufgabenhinweise in der App.
+| Ereignis | Empfehlung | Grund |
+|---|---|---|
+| Turn completion | Bei Ausführung im Hintergrund benachrichtigen | Lange Aufgaben müssen nicht dauerhaft beobachtet werden |
+| Permission | Aktivieren | Eine unbeantwortete Genehmigungsanfrage hält die Aufgabe an |
+| Question | Aktivieren | Codex benötigt eine Antwort, wenn entscheidender Kontext fehlt |
 
-## Häufige Fragen
+Auch das Betriebssystem muss der ChatGPT-Desktop-App Benachrichtigungen erlauben. Sind sie in der App aktiviert, aber im Betriebssystem gesperrt, werden weiterhin keine Hinweise angezeigt.
 
-### 1. App bleibt offen — brauche ich trotzdem Benachrichtigungen?
+## Mehrere Chats in der Activity-Ansicht bearbeiten
 
-Meist ja. Bei langen Läufen oder wartender Freigabe musst du die Oberfläche nicht dauernd anstarren.
+Wenn Activity verfügbar ist, wähle die Glocke in der Seitenleiste, um ungelesene, laufende oder auf eine Antwort wartende Chats anzuzeigen. Tastenkombinationen:
 
-### 2. Welche Benachrichtigungen behalten?
+- macOS: `Cmd + Option + U`
+- Windows: `Ctrl + Alt + U`
 
-Priorität haben:
+Die Filter können sich mit der Oberfläche ändern und beispielsweise Work, Chat, Pinned und Scheduled enthalten. Empfohlene Bearbeitungsreihenfolge: Warten auf Berechtigung oder Eingabe → Fehlgeschlagen → Abgeschlossen und zu prüfen → Weiterhin aktiv.
 
-- Aufgabe abgeschlossen
-- Freigabe ausstehend
-- Ausführung fehlgeschlagen
+## Vorgehen nach einer Benachrichtigung
 
-### 3. Was passiert, wenn ich alles abschalte?
+- **Abgeschlossen:** Öffne Diff und Verifikationsausgabe. Behandle die Benachrichtigung nicht als Abnahmeergebnis.
+- **Berechtigungsanfrage:** Prüfe Befehl, Zielressource, Auswirkungsbereich und Umkehrbarkeit.
+- **Antwort ausstehend:** Ergänze nur den erforderlichen Kontext und erweitere die Aufgabe nicht nebenbei.
+- **Fehlgeschlagen:** Ermittle den ersten aussagekräftigen Fehler und entscheide dann zwischen erneutem Versuch und geänderten Einschränkungen.
 
-Nicht sofort kaputt — aber häufiger:
+CLI und IDE verwenden andere Benachrichtigungsmechanismen: Die IDE besitzt keine eigenen Benachrichtigungseinstellungen. In der CLI kann eine erweiterte Konfiguration Abschlussmeldungen in der TUI oder über externe Programme steuern. Behandle Desktop-Einstellungen nicht als globalen Schalter.
 
-- die Aufgabe steht bereits still
-- sie wartet auf deine Freigabe
-- das Ergebnis liegt längst vor, und du hast es nicht gesehen
+## Offizielle Grundlage
 
-Ohne Benachrichtigungen verpasst du Statuswechsel leichter.
+- [Notifications](https://learn.chatgpt.com/docs/notifications)
+- [Desktop app settings](https://learn.chatgpt.com/docs/app/settings)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App  
-**Prüfhinweis:** Die Beschreibung von Benachrichtigungstypen, Freigabehinweisen und Hintergrundaufgaben kann weiterhin zutreffen, aber es fehlt ausreichend starke aktuelle Official-Dokumentation zur konkreten Darstellung und Konfiguration in der neuen Desktop-App.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App
+
+**Zuletzt geprüft:** 2026-08-26

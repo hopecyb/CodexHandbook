@@ -3,9 +3,10 @@ title: 처음 30분 경로
 description: 첫 시작 때 바로 참고할 수 있는 30분 경로.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ sidebar:
 
 | 시간 | 할 일 |
 |---|---|
-| 0–5분 | [안전 체크리스트](/guide/getting-started/beginner-safety-checklist/) 읽기 |
-| 5–10분 | [데스크톱 App 설치](/guide/getting-started/install-desktop-app/) 및 [로그인](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15분 | [연습 프로젝트 만들기](/guide/getting-started/create-your-first-project/) |
-| 15–25분 | [첫 작업 실행](/guide/getting-started/run-your-first-task/) 및 확인 |
-| 25–30분 | [Codex와 대화하기](/guide/learning-paths/beginner/01-talk-to-codex/)를 열어 초보자 경로로 |
+| 0–5분 | [안전 체크리스트](/ko/guide/getting-started/beginner-safety-checklist/) 읽기 |
+| 5–10분 | [데스크톱 App 설치](/ko/guide/getting-started/install-desktop-app/) 및 [로그인](/ko/guide/getting-started/sign-in-and-authentication/) |
+| 10–15분 | [연습 프로젝트 만들기](/ko/guide/getting-started/create-your-first-project/) |
+| 15–25분 | [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/) 및 확인 |
+| 25–30분 | [Codex와 대화하기](/ko/guide/learning-paths/beginner/01-talk-to-codex/)를 열어 초보자 경로로 |
 
 ## 이 30분에서 끝낼 것
 
@@ -94,7 +95,7 @@ sidebar:
 
 ## 막히면
 
-먼저 [문제 해결 색인](/guide/reference/troubleshooting/)으로 가세요. 개념만 안 들렸다면 [시작 전에 필요한 것](/guide/start-here/prerequisites/)과 [로컬과 클라우드](/guide/foundations/local-vs-cloud/)로 돌아가도 됩니다.
+먼저 [문제 해결 색인](/ko/guide/reference/troubleshooting/)으로 가세요. 개념만 안 들렸다면 [시작 전에 필요한 것](/ko/guide/start-here/prerequisites/)과 [로컬과 클라우드](/ko/guide/foundations/local-vs-cloud/)로 돌아가도 됩니다.
 
 처음 30분에 「작업 내기·결과 보기·스스로 판단」루프를 한 번 손으로 끝내면 이미 충분히 가치 있습니다.
 

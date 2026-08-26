@@ -3,14 +3,15 @@ title: CLI-Konfiguration
 description: Modell, Sandbox, Freigabe und MCP — Codex-Verhalten im Terminal vereinheitlichen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 48f3288
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
 
-CLI-Konfiguration steuert **Default-Modell, Arbeitsverzeichnis, Freigabestrenge, MCP-Server** usw. Konzeptuell wie [Konfigurationsgrundlagen](/guide/customization/configuration/config-basics/); Fokus hier auf häufige Terminal-Anpassungen.
+CLI-Konfiguration steuert **Default-Modell, Arbeitsverzeichnis, Freigabestrenge, MCP-Server** usw. Konzeptuell wie [Konfigurationsgrundlagen](/de/guide/customization/configuration/config-basics/); Fokus hier auf häufige Terminal-Anpassungen.
 
 ## Inhalt dieser Seite
 
@@ -74,7 +75,7 @@ Beeinflusst Tempo, Kosten und Erfolg komplexer Aufgaben. In Skripten **Modell fi
 | Standard | Alltag |
 | gelockert | nur persönliche vertrauenswürdige Umgebung, unternehmenskonform |
 
-Konzept: [Sandbox und Netz](/guide/foundations/sandbox-and-network/)
+Konzept: [Sandbox und Netz](/de/guide/foundations/sandbox-and-network/)
 
 ### Freigabestrategie
 
@@ -82,7 +83,7 @@ CLI kann vor Shell, Schreiben, Netz fragen. Teams sollten in `AGENTS.md` schreib
 
 ### MCP-Serverliste
 
-Gemeinsam mit [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/); nach Änderung Sitzung neu starten.
+Gemeinsam mit [MCP-Server verbinden](/de/skills/mcp/connect-an-mcp-server/); nach Änderung Sitzung neu starten.
 
 ## Ausreichende Konfigurationsreihenfolge
 
@@ -111,7 +112,7 @@ Die ersten zwei sind Alltag; die letzten zwei eher Risikosteuerung.
 | MCP nicht geladen | JSON/TOML-Syntax, Pfade |
 | Freigabe zu häufig | Sandbox-Modus und Allowlist |
 
-Mehr: [CLI-Fehlerbehebung](/guide/cli/troubleshooting/)
+Mehr: [CLI-Fehlerbehebung](/de/guide/cli/troubleshooting/)
 
 CLI-Config = „Default-Arbeitsgewohnheiten“ — nur das fixieren, was du **fast jedes Mal wieder wählst**. Fortgeschrittenes später.
 

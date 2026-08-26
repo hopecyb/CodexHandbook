@@ -5,9 +5,10 @@ sidebar:
   order: 5
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 05e85de
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Os percursos de aprendizagem **só organizam a ordem** — não replicam o texto longo dos manuais de produto ou dos tópicos de capacidades.
@@ -25,17 +26,17 @@ Este capítulo não acrescenta conhecimento novo; ajuda-te a evitar desvios.
 ## Percursos MVP disponíveis
 
 - **Principiante (cinco passos completos)**
-  1. [Conversar com o Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-  2. [Trabalhar com ficheiros](/guide/learning-paths/beginner/02-work-with-files/)
-  3. [Dar Tarefas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
-  4. [Rever resultados](/guide/learning-paths/beginner/04-review-results/)
-  5. [Concluir o primeiro projeto pequeno](/guide/learning-paths/beginner/05-complete-first-project/)
+  1. [Conversar com o Codex](/pt/guide/learning-paths/beginner/01-talk-to-codex/)
+  2. [Trabalhar com ficheiros](/pt/guide/learning-paths/beginner/02-work-with-files/)
+  3. [Dar Tarefas claras](/pt/guide/learning-paths/beginner/03-give-clear-tasks/)
+  4. [Rever resultados](/pt/guide/learning-paths/beginner/04-review-results/)
+  5. [Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Visão geral (passos aprofundados a completar depois)
 
-- [Criador](/guide/learning-paths/creator/)
-- [Desenvolvedor](/guide/learning-paths/developer/)
-- [Equipa](/guide/learning-paths/team/)
+- [Criador](/pt/guide/learning-paths/creator/)
+- [Desenvolvedor](/pt/guide/learning-paths/developer/)
+- [Equipa](/pt/guide/learning-paths/team/)
 
 ## Percurso de operador avançado
 
@@ -43,14 +44,14 @@ Se já consegues concluir pequenas tarefas, o passo seguinte não é decorar mai
 
 | Passo | Tema | Ler primeiro |
 |---|---|---|
-| 1 | Entradas rápidas | [Comandos slash e entradas rápidas](/guide/reference/slash-commands/) |
-| 2 | Contexto duradouro | [AGENTS.md](/guide/customization/agents-md/) e [Memórias e contexto persistente](/guide/customization/memories-and-persistent-context/) |
-| 3 | Workflows reutilizáveis | [Visão geral de Skills](/skills/overview/) e [Anatomia de Skill](/skills/skill-anatomy/) |
-| 4 | Subtarefas isoladas | [Subagents](/guide/agent-work/subagents/) e [Coordenação multi-agent](/cases/workflows/multi-agent-coordination/) |
-| 5 | Sistemas externos | [Visão geral de MCP](/skills/mcp/mcp-overview/) |
-| 6 | Guardrails automáticos | [Visão geral de Hooks](/skills/hooks/hooks-overview/) |
-| 7 | Distribuição em equipa | [Visão geral de Plugins](/skills/plugins/plugins-overview/) |
-| 8 | Recuperação e revisão | [Desfazer e recuperar](/guide/getting-started/undo-and-recover/) e [Rever diffs](/guide/quality/review-diffs/) |
+| 1 | Entradas rápidas | [Comandos slash e entradas rápidas](/pt/guide/reference/slash-commands/) |
+| 2 | Contexto duradouro | [AGENTS.md](/pt/guide/customization/agents-md/) e [Memórias e contexto persistente](/pt/guide/customization/memories-and-persistent-context/) |
+| 3 | Workflows reutilizáveis | [Visão geral de Skills](/pt/skills/overview/) e [Anatomia de Skill](/pt/skills/skill-anatomy/) |
+| 4 | Subtarefas isoladas | [Subagents](/pt/guide/agent-work/subagents/) e [Coordenação multi-agent](/pt/cases/workflows/multi-agent-coordination/) |
+| 5 | Sistemas externos | [Visão geral de MCP](/pt/skills/mcp/mcp-overview/) |
+| 6 | Guardrails automáticos | [Visão geral de Hooks](/pt/skills/hooks/hooks-overview/) |
+| 7 | Distribuição em equipa | [Visão geral de Plugins](/pt/skills/plugins/plugins-overview/) |
+| 8 | Recuperação e revisão | [Desfazer e recuperar](/pt/guide/getting-started/undo-and-recover/) e [Rever diffs](/pt/guide/quality/review-diffs/) |
 
 Este percurso ajuda a transformar “às vezes peço ajuda ao Codex” em “a equipa tem um pequeno sistema repetível”: instruções de projeto definem regras, Skills definem métodos, MCP fornece ferramentas externas, subagents dividem trabalho delimitado, Hooks protegem pontos-chave e Plugins empacotam tudo para outras pessoas.
 
@@ -73,10 +74,10 @@ O percurso é uma ordem recomendada, não um fluxo obrigatório. Na prática, po
 
 Se não souberes que percurso seguir, usa isto:
 
-- Ainda não concluíste a primeira Tarefa completa: segue o [percurso de principiante](/guide/learning-paths/beginner/)
-- Queres sobretudo escrever conteúdo, imagens ou demos: vê o [percurso de criador](/guide/learning-paths/creator/)
-- Queres sobretudo alterar código, corrigir bugs ou integrar projetos: vê o [percurso de desenvolvedor](/guide/learning-paths/developer/)
-- Estás a pensar em como a equipa adopta e controla riscos: vê o [percurso de equipa](/guide/learning-paths/team/)
+- Ainda não concluíste a primeira Tarefa completa: segue o [percurso de principiante](/pt/guide/learning-paths/beginner/)
+- Queres sobretudo escrever conteúdo, imagens ou demos: vê o [percurso de criador](/pt/guide/learning-paths/creator/)
+- Queres sobretudo alterar código, corrigir bugs ou integrar projetos: vê o [percurso de desenvolvedor](/pt/guide/learning-paths/developer/)
+- Estás a pensar em como a equipa adopta e controla riscos: vê o [percurso de equipa](/pt/guide/learning-paths/team/)
 
 O percurso decide o que ler a seguir segundo «o problema mais importante agora».
 

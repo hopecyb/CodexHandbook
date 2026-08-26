@@ -3,14 +3,15 @@ title: "Ejemplo: Skill de revisión"
 description: Ejemplo de Skill basado en pr-review, listo para reutilizar o adaptar en el equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ejemplo: Skill de revisión
 
-Este ejemplo corresponde al `pr-review` de [Crear tu primer Skill](/skills/create-your-first-skill/); ajústalo a las necesidades del equipo.
+Este ejemplo corresponde al `pr-review` de [Crear tu primer Skill](/es/skills/create-your-first-skill/); ajústalo a las necesidades del equipo.
 
 ## SKILL.md
 

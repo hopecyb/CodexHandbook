@@ -3,9 +3,10 @@ title: Lộ trình đội (tổng quan)
 description: Tổng quan tuyến liên quan triển khai đội; bước sâu sẽ bổ sung sau.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -22,9 +23,9 @@ Nếu bạn quan tâm hơn đội dùng Codex ổn định thế nào, có thể
 
 ## Hiện có thể đọc
 
-- [Quyền và Phê duyệt](/guide/foundations/permissions-and-approvals/)
-- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
-- [Định nghĩa hoàn thành](/guide/quality/definition-of-done/)
+- [Quyền và Phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
+- [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
+- [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/)
 
 ## Hiểu nhầm thường gặp
 
@@ -53,11 +54,11 @@ Triển khai đội cần hơn:
 
 Nếu chuẩn bị đẩy từ góc đội, đọc theo thứ tự này:
 
-1. [Quyền và Phê duyệt](/guide/foundations/permissions-and-approvals/)
-2. [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
-3. [Cá nhân hóa và cấu hình dự án](/guide/customization/)
-4. [Định nghĩa hoàn thành](/guide/quality/definition-of-done/)
-5. [Đội và doanh nghiệp](/guide/team-enterprise/)
+1. [Quyền và Phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
+2. [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
+3. [Cá nhân hóa và cấu hình dự án](/vi/guide/customization/)
+4. [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/)
+5. [Đội và doanh nghiệp](/vi/guide/team-enterprise/)
 
 Lộ trình này coi trọng hơn ranh giới, quy tắc và nghiệm thu, chứ không phải đẩy lượng dùng lên trước.
 

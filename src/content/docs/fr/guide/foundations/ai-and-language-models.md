@@ -3,9 +3,10 @@ title: IA et modèles de langage
 description: Comprendre comment les modèles de langage génèrent des réponses à partir du Contexte.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1951620
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -15,7 +16,7 @@ Les modèles de langage **prédisent une sortie plausible suivante** à partir d
 ## Ce que cela signifie pour vous
 
 - **La qualité de l'entrée fixe le plafond** : des objectifs vagues mènent à la dérive
-- **Le Contexte est limité** : les longs historiques sont compactés ou tronqués — voir [Tokens, Contexte et compaction](/guide/foundations/tokens-context-and-compaction/)
+- **Le Contexte est limité** : les longs historiques sont compactés ou tronqués — voir [Tokens, Contexte et compaction](/fr/guide/foundations/tokens-context-and-compaction/)
 - **Vous devez vérifier** : surtout les chiffres, textes juridiques, sécurité et tout ce qui est publié à l'extérieur
 
 ## Comment cela diffère d'un moteur de recherche

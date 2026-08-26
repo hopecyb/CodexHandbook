@@ -3,9 +3,10 @@ title: Restrições e limites
 description: Limite o alcance editável, o estilo e as proibições.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 617fa41
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muitas tarefas falham não porque o objetivo falte por completo, mas porque os **limites estão pouco claros**.
@@ -98,7 +99,7 @@ Nestes casos, escreva-as com clareza:
 
 O objetivo diz ao Codex o que fazer; a restrição diz até onde ir.
 
-Escreva limites de permissão junto com as restrições, para reduzir extralimitação «de passagem». Ver [Definir o concluído](/prompts/define-done/) e [Permissões e Sandbox](/guide/permissions-and-sandbox/).
+Escreva limites de permissão junto com as restrições, para reduzir extralimitação «de passagem». Ver [Definir o concluído](/pt/prompts/define-done/) e [Permissões e Sandbox](/pt/guide/permissions-and-sandbox/).
 
 ---
 

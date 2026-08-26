@@ -5,9 +5,10 @@ sidebar:
   order: 10
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a3f2555
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 La App de escritorio es el punto de entrada por defecto para principiantes: permite ver proyectos, Tareas, diferencias y Aprobaciones de forma visual.
@@ -72,18 +73,18 @@ Así suele resultar más fácil que empezar investigando todas las funciones.
 
 ## En este capítulo
 
-- [Instalación e interfaz](/guide/desktop-app/installation-and-interface/)
-- [Proyectos y Tareas](/guide/desktop-app/projects-and-tasks/)
-- [Agents en paralelo](/guide/desktop-app/parallel-agents/)
-- [Worktrees](/guide/desktop-app/worktrees/)
-- [Diff, comentarios y revisión](/guide/desktop-app/diffs-comments-and-review/)
-- [Terminal integrada](/guide/desktop-app/integrated-terminal/)
-- [Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/)
-- [Notificaciones](/guide/desktop-app/notifications/)
-- [Ajustes](/guide/desktop-app/settings/)
-- [Solución de problemas](/guide/desktop-app/troubleshooting/)
+- [Instalación e interfaz](/es/guide/desktop-app/installation-and-interface/)
+- [Proyectos y Tareas](/es/guide/desktop-app/projects-and-tasks/)
+- [Agents en paralelo](/es/guide/desktop-app/parallel-agents/)
+- [Worktrees](/es/guide/desktop-app/worktrees/)
+- [Diff, comentarios y revisión](/es/guide/desktop-app/diffs-comments-and-review/)
+- [Terminal integrada](/es/guide/desktop-app/integrated-terminal/)
+- [Tareas locales y Cloud](/es/guide/desktop-app/local-and-cloud-tasks/)
+- [Notificaciones](/es/guide/desktop-app/notifications/)
+- [Ajustes](/es/guide/desktop-app/settings/)
+- [Solución de problemas](/es/guide/desktop-app/troubleshooting/)
 
-Punto de partida: [Instalar la App de escritorio](/guide/getting-started/install-desktop-app/)
+Punto de partida: [Instalar la App de escritorio](/es/guide/getting-started/install-desktop-app/)
 
 La App de escritorio conviene para asentar primero la colaboración básica con Codex; después puedes complementar con la línea de comandos y flujos más avanzados.
 

@@ -3,14 +3,15 @@ title: 画像とスクリーンショット
 description: Codex にスクリーンショットやデザイン稿を渡し、タスク中の画像ファイルを管理する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-画像は Agent に UI の問題、デザイン意図、ホワイトボードのラフを **見せる** 手段になります。本ページは入力（あなたが渡す画像）とリポジトリ内画像の管理を扱います。新規画像の生成は [画像生成](/guide/tools/image-generation/) を参照してください。
+画像は Agent に UI の問題、デザイン意図、ホワイトボードのラフを **見せる** 手段になります。本ページは入力（あなたが渡す画像）とリポジトリ内画像の管理を扱います。新規画像の生成は [画像生成](/ja/guide/tools/image-generation/) を参照してください。
 
 スクリーンショットでタスクを出すときは、どこを見てほしいか、なぜそこが問題かを伝えるとよいです。
 
@@ -29,7 +30,7 @@ sidebar:
 | アーキテクチャのホワイトボード | 鮮明な写真またはエクスポート + 凡例 |
 | エラーダイアログ | エラーテキスト全体を含める。一部だけ切らない |
 
-詳細：[画像プロンプト](/prompts/prompting-with-images/)
+詳細：[画像プロンプト](/ja/prompts/prompting-with-images/)
 
 ## 画像が補うもの
 
@@ -102,7 +103,7 @@ sidebar:
 
 - スクリーンショットに顧客データ、内部 URL、token が含まれることがある。先にマスクする
 - 秘密鍵のある設定画面を信頼できないタスクに送らない
-- [機密コンテキスト](/guide/context/sensitive-context/)
+- [機密コンテキスト](/ja/guide/context/sensitive-context/)
 
 ## 参考資料
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -112,9 +113,9 @@ sidebar:
 
 「図どおりに実装」系タスクでは：
 
-1. 実装と参考図を並べて比較する（または [ブラウザツール](/guide/tools/browser/) でページを開く）
+1. 実装と参考図を並べて比較する（または [ブラウザツール](/ja/guide/tools/browser/) でページを開く）
 2. レスポンシブとダークモードを確認する（要件がある場合）
-3. [成果物の検証](/guide/quality/verify-artifacts/)
+3. [成果物の検証](/ja/guide/quality/verify-artifacts/)
 
 ## よくある失敗
 

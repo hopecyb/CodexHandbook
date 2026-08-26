@@ -3,9 +3,10 @@ title: Verificar contenido técnico
 description: Cómo marcar una página como verified, con pasos de reproducción, base oficial y fecha.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -117,8 +118,8 @@ Lo siguiente hay que reverificar cada trimestre o con cada major:
 
 ## Relacionado
 
-- [Política de versiones del manual](/guide/start-here/handbook-version-policy/)
-- [Recursos oficiales](/guide/reference/official-resources/)
+- [Política de versiones del manual](/es/guide/start-here/handbook-version-policy/)
+- [Recursos oficiales](/es/guide/reference/official-resources/)
 
 `verified` significa «verificado de verdad según la base actual anotada, y hay base que se puede rastrear». Que el autor solo «sienta que es fiable» no basta.
 

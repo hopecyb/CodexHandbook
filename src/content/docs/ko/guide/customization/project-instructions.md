@@ -3,9 +3,10 @@ title: 프로젝트 설명
 description: AGENTS.md 외의 프로젝트급 컨텍스트 — README, docs, 대화 참조의 역할을 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Codex는 도구로 이런 자료를 읽습니다. 핵심은 **진실이 하나**
 - **프로젝트 설명**: 수개월 동안 비교적 안정적
 - **대화 컨텍스트**: 이번 목표, 제약, 중간 결론
 
-긴 작업 중 어떤 규칙이 반복해서 언급되면, 열 개의 스레드에 복사하지 말고 `AGENTS.md`나 `docs/`에 **되돌려 쓰세요**. [컨텍스트를 집중 유지하기](/guide/context/keep-context-focused/)를 참고하세요.
+긴 작업 중 어떤 규칙이 반복해서 언급되면, 열 개의 스레드에 복사하지 말고 `AGENTS.md`나 `docs/`에 **되돌려 쓰세요**. [컨텍스트를 집중 유지하기](/ko/guide/context/keep-context-focused/)를 참고하세요.
 
 ## 흔한 실수
 

@@ -3,9 +3,10 @@ title: メモリと永続コンテキスト
 description: Codex がセッションをまたいで好みと事実を覚える仕組み——能力、境界、チーム規範。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ sidebar:
 | 繰り返し説明するプロジェクト別名（「バックエンドは `services/api`」） | 変わりやすい sprint タスク状態 |
 | 明示的に「覚えて」と言った非機密事実 | Git に書くべきチーム規範 |
 
-チームレベルの規範は **`AGENTS.md` またはプロジェクト設定**へ。review と新人 onboarding のため。[スコープと優先順位](/guide/customization/agents-md/scope-and-precedence/) を参照。
+チームレベルの規範は **`AGENTS.md` またはプロジェクト設定**へ。review と新人 onboarding のため。[スコープと優先順位](/ja/guide/customization/agents-md/scope-and-precedence/) を参照。
 
 ## よくある誤解
 

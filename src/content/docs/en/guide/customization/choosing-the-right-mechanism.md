@@ -3,9 +3,10 @@ title: Choosing the Right Mechanism
 description: A decision framework for where temporary prompts, AGENTS.md, memory, Skills, and MCP belong.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 99ae41f
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -50,7 +51,7 @@ Those long-term rules should sink further down.
 
 ### 2. Is this a project collaboration rule or a personal habit?
 
-If it is something **every collaborator should know**, put it in [`AGENTS.md`](/guide/customization/agents-md/what-is-agents-md/).
+If it is something **every collaborator should know**, put it in [`AGENTS.md`](/en/guide/customization/agents-md/what-is-agents-md/).
 
 For example:
 
@@ -59,7 +60,7 @@ For example:
 - Commit message or PR acceptance rules
 - Special conventions for different subdirectories in a monorepo
 
-If it is only **your preference**—for example, “explain in Chinese” or “conclusion first, then details”—[memory](/guide/customization/memories-and-persistent-context/) or personal configuration is a better fit.
+If it is only **your preference**—for example, “explain in Chinese” or “conclusion first, then details”—[memory](/en/guide/customization/memories-and-persistent-context/) or personal configuration is a better fit.
 
 Use this rule of thumb:
 
@@ -82,7 +83,7 @@ When deciding, focus on these two points:
 - **Rules** answer “what is allowed and what is not”
 - **Steps** answer “how this kind of work is usually done”
 
-Reusable steps usually fit better as a [Skill](/skills/overview/).
+Reusable steps usually fit better as a [Skill](/en/skills/overview/).
 
 ## Common Combinations, Not Either/Or
 
@@ -196,11 +197,11 @@ This makes it easier to stabilize **collaboration consensus** first, then expand
 
 ## Further Reading
 
-- [What Is AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- [Memories and Persistent Context](/guide/customization/memories-and-persistent-context/)
-- [Skills Overview](/skills/overview/)
-- [MCP Overview](/skills/mcp/mcp-overview/)
-- [Choosing an Extension Method](/skills/choosing-an-extension-method/)
+- [What Is AGENTS.md](/en/guide/customization/agents-md/what-is-agents-md/)
+- [Memories and Persistent Context](/en/guide/customization/memories-and-persistent-context/)
+- [Skills Overview](/en/skills/overview/)
+- [MCP Overview](/en/skills/mcp/mcp-overview/)
+- [Choosing an Extension Method](/en/skills/choosing-an-extension-method/)
 
 ## References
 - OpenAI Codex official documentation (per current version)

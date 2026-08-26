@@ -3,12 +3,13 @@ title: Review trước khi merge
 description: Trước khi merge, dùng Codex làm review diff và rủi ro có cấu trúc — phân công người-máy rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Review trước khi merge** là đặt [chất lượng và kiểm chứng](/guide/quality/) vào quy trình Git: trước khi merge PR, dùng Codex kiểm tra diff, test, bảo mật và đặc tả có khớp không. Comment tự động không thay cho merge tự động.
+**Review trước khi merge** là đặt [chất lượng và kiểm chứng](/vi/guide/quality/) vào quy trình Git: trước khi merge PR, dùng Codex kiểm tra diff, test, bảo mật và đặc tả có khớp không. Comment tự động không thay cho merge tự động.
 
 ## Trọng tâm trang này
 
@@ -32,7 +33,7 @@ Xuất checklist, gắn P0/P1.
 
 - Phiên bản prompt cố định + token chỉ đọc
 - Kết quả ghi vào PR comment hoặc check run
-- Xem [tự động hóa code review](/guide/developer-platform/ci-cd/code-review-automation/)
+- Xem [tự động hóa code review](/vi/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Chiều review đề xuất
 
@@ -44,7 +45,7 @@ Xuất checklist, gắn P0/P1.
 | Bảo trì | Đặt tên, trùng lặp, API công khai |
 | Đặc tả | Khớp issue/tài liệu đặc tả |
 
-Có thể dùng kèm [review diff](/guide/quality/review-diffs/); mục rủi ro cao đi [mẫu phê duyệt của người](/cases/workflows/human-approval-patterns/).
+Có thể dùng kèm [review diff](/vi/guide/quality/review-diffs/); mục rủi ro cao đi [mẫu phê duyệt của người](/vi/cases/workflows/human-approval-patterns/).
 
 ## Lỗi thường gặp
 
@@ -67,8 +68,8 @@ Có thể dùng kèm [review diff](/guide/quality/review-diffs/); mục rủi ro
 
 ## Chương liên quan
 
-- [Code review Cloud](/guide/web-and-cloud/code-review/)
-- [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
+- [Code review Cloud](/vi/guide/web-and-cloud/code-review/)
+- [Tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Prompt với hình ảnh
 description: Khi đưa Codex ảnh chụp màn hình, bản thiết kế hoặc ảnh bảng trắng, hỏi thế nào để dễ nhận kết quả thực thi được.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều tác vụ «xem hình rồi làm» thất bại không phải vì mô hình không thấy—mà vì chỉ đưa hình, **không nói muốn nó nhìn gì trong hình**.
@@ -161,10 +162,10 @@ Dù triển khai theo hình, cuối cùng vẫn phải xem trang thật, diff, h
 
 ## Kết hợp với trang khác thế nào
 
-- Tải lên và quản lý tệp hình: [Hình ảnh và ảnh chụp](/guide/files-and-artifacts/images-and-screenshots/)
-- Cần tạo hình mới: [Tạo hình ảnh](/guide/tools/image-generation/)
-- Cần nêu tác vụ đủ: [Cấu trúc tác vụ](/prompts/task-anatomy/)
-- Cần phân tích trước khi làm: [Xin kế hoạch trước](/prompts/ask-for-a-plan/)
+- Tải lên và quản lý tệp hình: [Hình ảnh và ảnh chụp](/vi/guide/files-and-artifacts/images-and-screenshots/)
+- Cần tạo hình mới: [Tạo hình ảnh](/vi/guide/tools/image-generation/)
+- Cần nêu tác vụ đủ: [Cấu trúc tác vụ](/vi/prompts/task-anatomy/)
+- Cần phân tích trước khi làm: [Xin kế hoạch trước](/vi/prompts/ask-for-a-plan/)
 
 ## Một kinh nghiệm thực dụng
 

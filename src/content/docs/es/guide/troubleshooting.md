@@ -5,9 +5,10 @@ sidebar:
   order: 18
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d1ad457
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Si algo ya falló pero aún no sabes a qué categoría pertenece, empieza por aquí.
@@ -24,12 +25,12 @@ No hace falta decidir de entrada si es CLI, IDE, Cloud, Permisos o Prompt. Clasi
 
 | Síntoma | Ir a |
 |---|---|
-| Fallo de instalación | [Resolución de problemas de escritorio](/guide/desktop-app/troubleshooting/) · [Resolución de problemas de la CLI](/guide/cli/troubleshooting/) · [Resolución de problemas del IDE](/guide/ide/troubleshooting/) |
-| Fallo de inicio de sesión / autenticación | [Inicio de sesión](/guide/getting-started/sign-in-and-authentication/) |
-| No sé qué cliente elegir | [Elige un cliente](/guide/choose-your-client/) · [Comparación de funciones](/guide/reference/feature-comparison/) |
-| Resultado fuera de alcance / muy malo | [Caso de la primera Tarea](/cases/first-task/) · [Depurar el Prompt](/prompts/prompt-debugging/) · [Deshacer](/guide/getting-started/undo-and-recover/) |
-| Contexto confuso | [Mantener el foco](/guide/context/keep-context-focused/) |
-| Dudas de Permisos / Sandbox | [Permisos y Sandbox](/guide/permissions-and-sandbox/) |
+| Fallo de instalación | [Resolución de problemas de escritorio](/es/guide/desktop-app/troubleshooting/) · [Resolución de problemas de la CLI](/es/guide/cli/troubleshooting/) · [Resolución de problemas del IDE](/es/guide/ide/troubleshooting/) |
+| Fallo de inicio de sesión / autenticación | [Inicio de sesión](/es/guide/getting-started/sign-in-and-authentication/) |
+| No sé qué cliente elegir | [Elige un cliente](/es/guide/choose-your-client/) · [Comparación de funciones](/es/guide/reference/feature-comparison/) |
+| Resultado fuera de alcance / muy malo | [Caso de la primera Tarea](/es/cases/first-task/) · [Depurar el Prompt](/es/prompts/prompt-debugging/) · [Deshacer](/es/guide/getting-started/undo-and-recover/) |
+| Contexto confuso | [Mantener el foco](/es/guide/context/keep-context-focused/) |
+| Dudas de Permisos / Sandbox | [Permisos y Sandbox](/es/guide/permissions-and-sandbox/) |
 
 ## Cómo clasificar cuando no sabes por dónde empezar
 
@@ -60,7 +61,7 @@ Suele ser mejor parar, clasificar a qué tipo perteneces y luego ir a la página
 
 Diagnosticar es primero clasificar; no hace falta empezar a reparar al instante.
 
-Más referencias: [FAQ](/guide/reference/faq/) · [Referencia de errores](/guide/reference/error-reference/) · [Documentación oficial de Codex](https://developers.openai.com/codex)
+Más referencias: [FAQ](/es/guide/reference/faq/) · [Referencia de errores](/es/guide/reference/error-reference/) · [Documentación oficial de Codex](https://developers.openai.com/codex)
 
 ---
 

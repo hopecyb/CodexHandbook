@@ -3,9 +3,10 @@ title: Percurso de principiante
 description: A rota mais curta em cinco passos para quem começa no Codex — de formular Tarefas a concluir o primeiro projeto pequeno.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -16,11 +17,11 @@ Este grupo é o caminho mais curto preparado para principiantes.
 
 ## Ordem recomendada
 
-1. [Conversar com o Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Trabalhar com ficheiros](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Dar Tarefas claras](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Rever resultados](/guide/learning-paths/beginner/04-review-results/)
-5. [Concluir o primeiro projeto pequeno](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Conversar com o Codex](/pt/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Trabalhar com ficheiros](/pt/guide/learning-paths/beginner/02-work-with-files/)
+3. [Dar Tarefas claras](/pt/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Rever resultados](/pt/guide/learning-paths/beginner/04-review-results/)
+5. [Concluir o primeiro projeto pequeno](/pt/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Para quem serve
 

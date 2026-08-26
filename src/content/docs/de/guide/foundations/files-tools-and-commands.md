@@ -3,9 +3,10 @@ title: "Dateien, Werkzeuge und Befehle"
 description: "Erklärt, wie Codex Dateien liest und schreibt, Befehle ausführt und Werkzeuge nutzt."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -86,7 +87,7 @@ Fehlt eine Antwort — erst erklären lassen.
 
 1. **Minimal nötiger Umfang**: Verzeichnisse und Dateien benennen — nicht „einfach das ganze Repo ändern“
 2. **Gefährliche Befehle brauchen Freigabe**: Löschen, Pushen, Systemkonfiguration ändern usw.
-3. **Werkzeugwahl hat Methode**: siehe [Werkzeugauswahl](/guide/tools/tool-selection/)
+3. **Werkzeugwahl hat Methode**: siehe [Werkzeugauswahl](/de/guide/tools/tool-selection/)
 
 Produkteinstiege unterscheiden sich in Werkzeugpanel und Bestätigung — Details in den jeweiligen Produkthandbüchern.
 
@@ -94,9 +95,9 @@ Codex „redet“ nicht nur — es handelt über Dateien, Befehle und Werkzeuge.
 
 Als Nächstes empfohlen:
 
-1. [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-2. [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
-3. [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/)
+1. [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
+2. [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
+3. [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/)
 
 ---
 

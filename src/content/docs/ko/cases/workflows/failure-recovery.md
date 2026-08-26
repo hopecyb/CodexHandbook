@@ -3,12 +3,13 @@ title: 실패 복구
 description: 작업이 빗나가거나, 테스트가 빨간색이 되거나, 컨텍스트가 소진될 때—안전하게 되돌리고 이어 가는 방법입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**실패 복구**는 작업이 빗나가거나 중단된 뒤, 현장을 수습하고 다시 앞으로 나아가는 방법을 다룹니다. 이 장은 반복 가능한 **감지 → 손실 차단 → 복구 → 회고** 단계를 제시하며, [취소와 복구](/guide/getting-started/undo-and-recover/) 및 [긴 작업 관리](/cases/workflows/long-running-task-management/)와 함께 쓸 수 있습니다.
+**실패 복구**는 작업이 빗나가거나 중단된 뒤, 현장을 수습하고 다시 앞으로 나아가는 방법을 다룹니다. 이 장은 반복 가능한 **감지 → 손실 차단 → 복구 → 회고** 단계를 제시하며, [취소와 복구](/ko/guide/getting-started/undo-and-recover/) 및 [긴 작업 관리](/ko/cases/workflows/long-running-task-management/)와 함께 쓸 수 있습니다.
 
 ## 이 페이지의 초점
 
@@ -54,7 +55,7 @@ translated_at: 2026-07-28
     → 회고 정착
 ```
 
-여러 Agent 시나리오는 [여러 Agent 협업](/cases/workflows/multi-agent-coordination/)을 참고하세요. 실패 시 어느 하위 작업이 롤백을 담당할지 명확히 해야 합니다.
+여러 Agent 시나리오는 [여러 Agent 협업](/ko/cases/workflows/multi-agent-coordination/)을 참고하세요. 실패 시 어느 하위 작업이 롤백을 담당할지 명확히 해야 합니다.
 
 ## 흔한 실수
 
@@ -65,7 +66,7 @@ translated_at: 2026-07-28
 
 ## 보안 경계
 
-- 복구 작업 자체도 [명령 규칙](/guide/customization/rules/command-rules/)의 제약을 받습니다
+- 복구 작업 자체도 [명령 규칙](/ko/guide/customization/rules/command-rules/)의 제약을 받습니다
 - 프로덕션 사고는 먼저 롤백한 뒤 근본 원인을 분석하고, Agent가 프로덕션에 직접 연결해 데이터를 고치게 하지 마세요
 
 ## 인수 체크리스트
@@ -77,9 +78,9 @@ translated_at: 2026-07-28
 
 ## 관련 장
 
-- [먼저 진단한 뒤 수정](/cases/workflows/diagnose-before-fixing/)
-- [인수인계와 복구](/guide/agent-work/handoff-and-resume/)
-- [오류 참고](/guide/reference/error-reference/)
+- [먼저 진단한 뒤 수정](/ko/cases/workflows/diagnose-before-fixing/)
+- [인수인계와 복구](/ko/guide/agent-work/handoff-and-resume/)
+- [오류 참고](/ko/guide/reference/error-reference/)
 
 ---
 

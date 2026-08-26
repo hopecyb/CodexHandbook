@@ -3,9 +3,10 @@ title: When to use Skills
 description: Decide whether a task fits a Skill, and how Skills divide work with slash commands and MCP.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 When you first encounter Skills, a common question is: is this worth packaging as a Skill?
@@ -79,7 +80,7 @@ Skills built this way are sturdier because they come from real repetition, not u
 
 Skills are best for flows that repeat, need consistency, and you do not want to re-explain every time.
 
-For extension choice, see [Choosing an extension method](/skills/choosing-an-extension-method/). For workflow capture, see [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+For extension choice, see [Choosing an extension method](/en/skills/choosing-an-extension-method/). For workflow capture, see [Turn a workflow into a Skill](/en/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Status:** verified  

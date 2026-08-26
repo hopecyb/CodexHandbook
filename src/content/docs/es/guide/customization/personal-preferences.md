@@ -3,9 +3,10 @@ title: Preferencias personales
 description: Configuración de usuario, modelo por defecto y hábitos de interfaz — sin contaminar las convenciones del equipo en el repositorio.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ Las **preferencias personales** son ajustes de tu máquina que valen entre proye
 ## Contenido
 
 - Qué va en la capa personal y qué en la de proyecto
-- Cómo combinarlas con [Profiles](/guide/customization/configuration/profiles/) para cambiar de escenario
+- Cómo combinarlas con [Profiles](/es/guide/customization/configuration/profiles/) para cambiar de escenario
 - Evitar que ajustes personales demasiado permisivos se filtren al repositorio del equipo
 
-Resumen de prioridad: [Personalización](/guide/customization/) · [Alcance y prioridad](/guide/customization/agents-md/scope-and-precedence/)
+Resumen de prioridad: [Personalización](/es/guide/customization/) · [Alcance y prioridad](/es/guide/customization/agents-md/scope-and-precedence/)
 
 ## Por qué hay que separar esta capa
 
@@ -80,7 +81,7 @@ Las preferencias personales existen para que te resulte más cómodo trabajar, n
 
 ## Relación con la función de memoria
 
-Si el producto ofrece «memoria» o preferencias persistentes, ver [Memorias y contexto persistente](/guide/customization/memories-and-persistent-context/). La memoria encaja con hábitos estables; **las restricciones específicas del proyecto deben seguir basándose en archivos del repositorio**.
+Si el producto ofrece «memoria» o preferencias persistentes, ver [Memorias y contexto persistente](/es/guide/customization/memories-and-persistent-context/). La memoria encaja con hábitos estables; **las restricciones específicas del proyecto deben seguir basándose en archivos del repositorio**.
 
 ## Errores habituales
 

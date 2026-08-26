@@ -3,9 +3,10 @@ title: Thuật ngữ
 description: Định nghĩa ngắn các thuật ngữ thường dùng trong sổ tay.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c07a94c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -27,14 +28,14 @@ sidebar:
 | Token | Đơn vị đo văn bản mô hình xử lý |
 | Cây làm việc | Thư mục làm việc cô lập cho thí nghiệm song song |
 
-Bản người mới: [Thuật ngữ cho người mới](/guide/start-here/terminology-for-beginners/)
+Bản người mới: [Thuật ngữ cho người mới](/vi/guide/start-here/terminology-for-beginners/)
 
 ## Cách dùng
 
 Đây là từ điển tra cứu nhanh, không phải tutorial đầy đủ.  
 Nếu trên trang khác thấy một từ mà tạm quên nghĩa, có thể quay lại tra ở đây.
 
-Nếu hầu hết các từ còn lạ, đọc [Thuật ngữ cho người mới](/guide/start-here/terminology-for-beginners/) trước sẽ thuận hơn.
+Nếu hầu hết các từ còn lạ, đọc [Thuật ngữ cho người mới](/vi/guide/start-here/terminology-for-beginners/) trước sẽ thuận hơn.
 
 ## Hiểu nhầm thường gặp
 

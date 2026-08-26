@@ -3,9 +3,10 @@ title: Review PR
 description: Dùng Codex để review diff có cấu trúc trước khi merge.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 29b081c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Review PR
@@ -36,13 +37,13 @@ Xuất checklist, gắn P0/P1, kèm đường dẫn tệp.
 
 ## 3. Đóng gói cho nhóm
 
-- Dùng Skill [`$pr-review`](/skills/examples/review-skill/)
-- Tích hợp CI xem [tự động hóa code review](/guide/developer-platform/ci-cd/code-review-automation/)
+- Dùng Skill [`$pr-review`](/vi/skills/examples/review-skill/)
+- Tích hợp CI xem [tự động hóa code review](/vi/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## 4. Liên quan
 
-- [Mẫu review](/prompts/templates/review/)
-- [Review trước khi merge](/cases/workflows/review-before-merge/)
+- [Mẫu review](/vi/prompts/templates/review/)
+- [Review trước khi merge](/vi/cases/workflows/review-before-merge/)
 ---
 
 **Trạng thái:** verified  

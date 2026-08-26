@@ -5,12 +5,13 @@ sidebar:
   order: 6
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 401719c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-더 완전한 항목은 [용어집](/guide/reference/glossary/)을 보세요. 여기에서는 가장 흔하고, 읽기에 가장 영향을 주는 말만 먼저 둡니다.
+더 완전한 항목은 [용어집](/ko/guide/reference/glossary/)을 보세요. 여기에서는 가장 흔하고, 읽기에 가장 영향을 주는 말만 먼저 둡니다.
 
 Codex 핸드북을 처음 볼 때 막히는 지점은 종종 명사가 너무 빽빽한 것입니다. 단어 하나씩은 알지만, 이어 붙이면 헷갈리기 쉽습니다.
 
@@ -86,7 +87,7 @@ Codex 핸드북을 처음 볼 때 막히는 지점은 종종 명사가 너무 �
 - Plugin
 - Cloud 환경 세부
 
-[첫 작업](/guide/getting-started/run-your-first-task/)을 마친 뒤 다시 보면 이해가 더 수월한 경우가 많습니다.
+[첫 작업](/ko/guide/getting-started/run-your-first-task/)을 마친 뒤 다시 보면 이해가 더 수월한 경우가 많습니다.
 
 모르는 말이 나오면 여기로 돌아와 확인한 뒤 계속 읽으면 됩니다.
 

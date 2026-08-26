@@ -3,9 +3,10 @@ title: いつ Skill を使うか
 description: タスクが Skill としてパッケージ化に適しているかの判断、およびスラッシュコマンド・MCP との役割分担。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill を初めて使うとき、よくある疑問は「これをわざわざ Skill にする価値があるか」です。
@@ -79,7 +80,7 @@ Skill を初めて使うとき、よくある疑問は「これをわざわざ S
 
 Skill は「繰り返す・一貫させたい・毎回説明し直したくない」フローの固定化に向いています。
 
-拡張方式の選定は [拡張方式の選び方](/skills/choosing-an-extension-method/)。ワークフローの Skill 化は [フローを Skill にする](/cases/workflows/turn-a-workflow-into-a-skill/)。
+拡張方式の選定は [拡張方式の選び方](/ja/skills/choosing-an-extension-method/)。ワークフローの Skill 化は [フローを Skill にする](/ja/cases/workflows/turn-a-workflow-into-a-skill/)。
 
 ---
 

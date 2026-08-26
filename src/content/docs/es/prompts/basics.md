@@ -3,9 +3,10 @@ title: Fundamentos de Prompts
 description: Los elementos esenciales de un buen Prompt.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Al empezar con Prompts, es fácil centrarse en si la redacción suena «avanzada».  
@@ -98,7 +99,7 @@ Para la mayoría de principiantes, empezar por la **versión recomendada** suele
 
 El núcleo de un buen Prompt: menos suposiciones, menos desviaciones, menos extralimitación.
 
-Ejemplos: [Primera tarea](/cases/first-task/) y [Anatomía de una tarea](/prompts/task-anatomy/).
+Ejemplos: [Primera tarea](/es/cases/first-task/) y [Anatomía de una tarea](/es/prompts/task-anatomy/).
 
 ---
 

@@ -3,9 +3,10 @@ title: 첫 작은 프로젝트 끝내기
 description: 입문 단계를 한 번의 완전한 납품으로 이어 붙입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -22,8 +23,8 @@ sidebar:
 
 ## 끝난 뒤
 
-- [능력 지도](/guide/start-here/codex-capability-map/) 복습
-- [데스크톱 App](/guide/desktop-app/) 또는 [프롬프트](/prompts/)를 더 깊이
+- [능력 지도](/ko/guide/start-here/codex-capability-map/) 복습
+- [데스크톱 App](/ko/guide/desktop-app/) 또는 [프롬프트](/ko/prompts/)를 더 깊이
 
 ## 연습 포인트
 

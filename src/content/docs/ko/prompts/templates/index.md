@@ -3,9 +3,10 @@ title: 프롬프트 템플릿
 description: 작업 유형별 재사용 프롬프트 골격—이해, 생성, 수정, 진단, 검토, 연구, 자동화.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 프롬프트 템플릿
@@ -32,13 +33,13 @@ translated_at: 2026-07-28
 
 | 템플릿 | 적용 장면 |
 |---|---|
-| [이해](/prompts/templates/understand/) | 코드베이스·문서·자료를 읽고 먼저 인지를 세움 |
-| [생성](/prompts/templates/create/) | 기능·원고·산출물을 처음부터 구현 |
-| [수정](/prompts/templates/change/) | 기존 기반에서 반복 변경 |
-| [진단](/prompts/templates/diagnose/) | 문제 근본 원인을 찾고, 먼저 코드는 수정하지 않음 |
-| [검토](/prompts/templates/review/) | diff, PR, 문서 변경을 검토 |
-| [연구](/prompts/templates/research/) | 인용이 있는 조사와 비교 |
-| [자동화](/prompts/templates/automate/) | 반복 작업, 스크립트, 무인 프로세스 |
+| [이해](/ko/prompts/templates/understand/) | 코드베이스·문서·자료를 읽고 먼저 인지를 세움 |
+| [생성](/ko/prompts/templates/create/) | 기능·원고·산출물을 처음부터 구현 |
+| [수정](/ko/prompts/templates/change/) | 기존 기반에서 반복 변경 |
+| [진단](/ko/prompts/templates/diagnose/) | 문제 근본 원인을 찾고, 먼저 코드는 수정하지 않음 |
+| [검토](/ko/prompts/templates/review/) | diff, PR, 문서 변경을 검토 |
+| [연구](/ko/prompts/templates/research/) | 인용이 있는 조사와 비교 |
+| [자동화](/ko/prompts/templates/automate/) | 반복 작업, 스크립트, 무인 프로세스 |
 
 ## 템플릿에서 워크플로로
 
@@ -75,7 +76,7 @@ translated_at: 2026-07-28
 
 먼저 유형을 맞춘 뒤 자신의 작업으로 고치세요. 템플릿 자체를 작업으로 두지 마세요.
 
-작성 원칙은 [프롬프트 기초](/prompts/basics/)와 [작업 구조](/prompts/task-anatomy/)를 참고하세요.
+작성 원칙은 [프롬프트 기초](/ko/prompts/basics/)와 [작업 구조](/ko/prompts/task-anatomy/)를 참고하세요.
 
 ---
 

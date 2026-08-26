@@ -3,9 +3,10 @@ title: Bắt đầu từ đây
 description: Hiểu Codex là gì, dành cho ai, và chọn lộ trình học của bạn.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b7997c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 1
 ---
@@ -23,12 +24,12 @@ Cẩm nang này chủ yếu viết cho **người mới bắt đầu với AI**:
 
 ## Thứ tự đọc gợi ý
 
-1. [Codex là gì](/guide/start-here/what-is-codex/) — làm rõ làm được gì, không làm được gì
-2. [Chọn client](/guide/choose-your-client/) — chọn giữa App, CLI, IDE, Cloud
-3. [Hoàn thành tác vụ đầu tiên](/cases/first-task/) — dùng Prompt rõ ràng để làm thay đổi nhỏ và kiểm tra kết quả
-4. [Quyền và Sandbox](/guide/permissions-and-sandbox/) — hiểu phê duyệt, cô lập và ranh giới mạng
-5. [Ngữ cảnh và tệp](/guide/context-and-files/) — học cung cấp đầu vào hiệu quả
-6. [Kiểm chứng kết quả](/guide/verification/) — hình thành thói quen rà soát và kiểm thử
+1. [Codex là gì](/vi/guide/start-here/what-is-codex/) — làm rõ làm được gì, không làm được gì
+2. [Chọn client](/vi/guide/choose-your-client/) — chọn giữa App, CLI, IDE, Cloud
+3. [Hoàn thành tác vụ đầu tiên](/vi/cases/first-task/) — dùng Prompt rõ ràng để làm thay đổi nhỏ và kiểm tra kết quả
+4. [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/) — hiểu phê duyệt, cô lập và ranh giới mạng
+5. [Ngữ cảnh và tệp](/vi/guide/context-and-files/) — học cung cấp đầu vào hiệu quả
+6. [Kiểm chứng kết quả](/vi/guide/verification/) — hình thành thói quen rà soát và kiểm thử
 
 ## Hiểu nhầm thường gặp
 
@@ -54,30 +55,30 @@ Chưa đủ. Hiểu, thực hành phạm vi nhỏ và kiểm tra kết quả c�
 
 | Thời gian | Việc cần làm |
 |---|---|
-| 0–5 phút | Đọc các điểm an toàn trong [Quyền và Sandbox](/guide/permissions-and-sandbox/) |
-| 5–10 phút | Cài đặt và đăng nhập client đã chọn (xem [Desktop App](/guide/desktop-app/) v.v.) |
-| 10–25 phút | Làm bài theo [case tác vụ đầu tiên](/cases/first-task/) |
-| 25–30 phút | Xem [cơ bản về Prompt](/prompts/basics/), chuẩn bị viết tác vụ rõ hơn |
+| 0–5 phút | Đọc các điểm an toàn trong [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/) |
+| 5–10 phút | Cài đặt và đăng nhập client đã chọn (xem [Desktop App](/vi/guide/desktop-app/) v.v.) |
+| 10–25 phút | Làm bài theo [case tác vụ đầu tiên](/vi/cases/first-task/) |
+| 25–30 phút | Xem [cơ bản về Prompt](/vi/prompts/basics/), chuẩn bị viết tác vụ rõ hơn |
 
-Khi bị kẹt, xem [Xử lý sự cố](/guide/troubleshooting/).
+Khi bị kẹt, xem [Xử lý sự cố](/vi/guide/troubleshooting/).
 
 ## Đọc tiếp như thế nào
 
-1. [Codex là gì](/guide/start-here/what-is-codex/)
-2. [Cẩm nang này dành cho ai](/guide/start-here/who-is-this-handbook-for/)
-3. [Chọn đường đi của bạn](/guide/start-here/choose-your-path/)
-4. Vào [Khái niệm nền tảng](/guide/foundations/) và [Bắt đầu nhanh](/guide/getting-started/)
+1. [Codex là gì](/vi/guide/start-here/what-is-codex/)
+2. [Cẩm nang này dành cho ai](/vi/guide/start-here/who-is-this-handbook-for/)
+3. [Chọn đường đi của bạn](/vi/guide/start-here/choose-your-path/)
+4. Vào [Khái niệm nền tảng](/vi/guide/foundations/) và [Bắt đầu nhanh](/vi/guide/getting-started/)
 
-Nếu muốn làm ngay, xem [Lộ trình ba mươi phút đầu](/guide/getting-started/first-30-minutes/), rồi duyệt lại [Checklist an toàn cho người mới](/guide/getting-started/beginner-safety-checklist/).
+Nếu muốn làm ngay, xem [Lộ trình ba mươi phút đầu](/vi/guide/getting-started/first-30-minutes/), rồi duyệt lại [Checklist an toàn cho người mới](/vi/guide/getting-started/beginner-safety-checklist/).
 
 ## Cách phân tầng trên site
 
 | Tầng | Vai trò | Lối vào |
 |---|---|---|
-| Lộ trình học | Cho bạn biết thứ tự đọc | [Lộ trình học](/guide/learning-paths/) |
-| Cẩm nang sản phẩm | Giao diện và thao tác | [Cẩm nang sản phẩm](/guide/) |
-| Chuyên đề năng lực | Nguyên lý và phương pháp | [Năng lực cốt lõi](/guide/) |
-| Tài liệu tham chiếu | Tra cứu nhanh | [Tài liệu tham chiếu](/guide/reference/) |
+| Lộ trình học | Cho bạn biết thứ tự đọc | [Lộ trình học](/vi/guide/learning-paths/) |
+| Cẩm nang sản phẩm | Giao diện và thao tác | [Cẩm nang sản phẩm](/vi/guide/) |
+| Chuyên đề năng lực | Nguyên lý và phương pháp | [Năng lực cốt lõi](/vi/guide/) |
+| Tài liệu tham chiếu | Tra cứu nhanh | [Tài liệu tham chiếu](/vi/guide/reference/) |
 
 Mỗi kiến thức chỉ giữ một bản chính thức; lộ trình và case dùng tóm tắt kèm liên kết để tránh trùng lặp.
 

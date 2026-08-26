@@ -3,9 +3,10 @@ title: 理解テンプレート
 description: 認識を揃えてから変更に入る。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 理解テンプレート
@@ -52,8 +53,8 @@ translated_at: 2026-07-28
 
 ## 関連
 
-- [探索—計画—実行—検証](/cases/workflows/explore-plan-execute-verify/)
-- [コードベース理解の事例](/cases/understand-a-codebase/)
+- [探索—計画—実行—検証](/ja/cases/workflows/explore-plan-execute-verify/)
+- [コードベース理解の事例](/ja/cases/understand-a-codebase/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Utiliser un Skill
 description: Déclenchement explicite et implicite, et bien rédiger description.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa190cf
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Idée reçue : « installé = actif tout seul ». Utiliser un Skill, c'est faire suivre à Codex un **workflow prédéfini**.
@@ -76,7 +77,7 @@ Après lecture de `description`, on doit savoir **quand oui, quand non**.
 
 Si « ça fait tout » → trop vague.
 
-Voir [Vue d'ensemble des Skills](/skills/overview/).
+Voir [Vue d'ensemble des Skills](/fr/skills/overview/).
 
 ---
 

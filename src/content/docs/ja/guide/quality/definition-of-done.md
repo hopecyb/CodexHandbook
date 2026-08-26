@@ -3,9 +3,10 @@ title: 完了の定義
 description: チームと個人で共有する完了チェックリストの考え方。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e6b6511
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---

@@ -3,14 +3,15 @@ title: Team Rules Policy
 description: Layer governance of command and path rules across organization, repo, and individual—reviewable and rollback-friendly.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-When teams use Codex, **rules policy** answers: which constraints are company-wide, which the repo maintains, and whether individuals may relax anything. This chapter is the governance view of [Command Rules](/guide/customization/rules/command-rules/) and [Allow and Deny Patterns](/guide/customization/rules/allow-and-deny-patterns/).
+When teams use Codex, **rules policy** answers: which constraints are company-wide, which the repo maintains, and whether individuals may relax anything. This chapter is the governance view of [Command Rules](/en/guide/customization/rules/command-rules/) and [Allow and Deny Patterns](/en/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Contents
 
@@ -61,7 +62,7 @@ L4 Personal configuration             → local only; must not weaken L1
 L5 Single-task prompt                 → temporary tightening OK; temporary relaxation limited by L1
 ```
 
-Compare with [AGENTS.md Scope](/guide/customization/agents-md/scope-and-precedence/): **rules lean toward execution enforcement; AGENTS.md leans toward behavior description**; they should agree—do not write contradictory requirements in two places.
+Compare with [AGENTS.md Scope](/en/guide/customization/agents-md/scope-and-precedence/): **rules lean toward execution enforcement; AGENTS.md leans toward behavior description**; they should agree—do not write contradictory requirements in two places.
 
 ## Basic Practice
 
@@ -78,7 +79,7 @@ Proposal (issue or RFC) → security/platform review → PR changing rule files
     → trial typical tasks in staging repo → merge → announcement + handbook update
 ```
 
-Large changes (e.g. allowing outbound network) should update [Hooks audit](/skills/hooks/hooks-overview/) and [acceptable use](/guide/team-enterprise/governance/acceptable-use/) together.
+Large changes (e.g. allowing outbound network) should update [Hooks audit](/en/skills/hooks/hooks-overview/) and [acceptable use](/en/guide/team-enterprise/governance/acceptable-use/) together.
 
 ## Alignment with Hooks and CI
 
@@ -113,7 +114,7 @@ Usually:
 
 ## Security Boundaries
 
-- Rules cannot replace [threat model](/guide/team-enterprise/security/threat-model/) and incident response
+- Rules cannot replace [threat model](/en/guide/team-enterprise/security/threat-model/) and incident response
 - For regulated data, rules need joint review with data classification and retention policy
 - Emergency bypass needs **audit record** and post-incident review
 

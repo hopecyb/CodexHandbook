@@ -1,148 +1,130 @@
 ---
 title: Subagents
-description: Delegating subtasks to isolated context—when to split, how to hand off, how to accept.
+description: Delegate bounded work to independent contexts, then let the main Agent consolidate evidence, resolve conflicts, and accept the result.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: d65f0ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 30
 ---
 
-A **Subagent** is an **independent work unit** the main Agent starts for a specific subproblem—relatively isolated context, results summarized back to the main thread.
+A **subagent** is an independent work unit started by the main Agent for a defined subproblem. It has its own context and returns conclusions and evidence to the main thread. The main Agent retains global decisions and final acceptance.
 
-Think of it as handing a clearly bounded small task to an assistant who only focuses on that piece. Value is not "cooler"—it is cleaner focus, easier parallelism.
+![Codex subagent orchestration: the main Agent delegates bounded work, subagents return evidence, and the main Agent consolidates and verifies](/diagrams/subagent-orchestration-en.svg)
 
-## Core concept
+## Three isolation layers
 
-| Main Agent | Subagent |
-|---|---|
-| Holds global goal and user conversation | Focuses on one subtask |
-| Context includes full history | Cleaner context for deep dive |
-| Coordinates and merges results | Executes exploration, retrieval, specialized implementation |
-
-vs [parallel Agents](/guide/desktop-app/parallel-agents/): subagents are usually **delegated by the main Agent**, not multiple windows you open manually (product implementations may overlap—follow current UI).
-
-## When splitting pays off
-
-Not every large task needs a split—consider it when:
-
-- A subproblem needs its own deep dive
-- That subproblem is a different kind of work than the main line
-- You want an independent conclusion before continuing
-
-Then a subagent usually beats the main thread juggling global and local detail at once.
-
-## Use cases
-
-| Good fit | Poor fit |
-|---|---|
-| Targeted search: "how does auth module validate token" in a large repo | Needs ongoing back-and-forth clarification with you |
-| Parallel research on two technical options | Subtasks need mutually exclusive edits to the same file |
-| Long read-only analysis without polluting main context | No clear deliverable—"just look around" |
-
-## Useful subagent roles
-
-These roles are often worth turning into repeatable subagent definitions or saved task templates:
-
-| Role | Strong deliverable | Keep constrained by |
+| Layer | Isolated? | Meaning |
 |---|---|---|
-| Code reviewer | Findings with file references, severity, and missing tests | Read-only tools unless the user asks for fixes |
-| Test engineer | Coverage gaps, test cases to add, commands to run | One package or workflow at a time |
-| Documentation writer | Draft docs, API explanations, migration notes | Source files and existing style guide |
-| Debugger | Reproduction notes, suspected root cause, verification plan | Evidence from logs, tests, and code paths |
-| Security reviewer | Threat notes, unsafe flows, secret-handling risks | Read-only mode and explicit scope |
-| Performance analyst | Bottlenecks, measurement plan, low-risk optimizations | Benchmarks or profiling evidence |
+| Conversation context | Yes | Each subagent focuses on its task without carrying every main-thread detail |
+| Sandbox and permission mode | Inherited | Independent execution does not grant higher access |
+| Workspace files | Not necessarily | Agents may see one workspace; concurrent writes can conflict |
 
-## Common misconceptions
+The key rule is: **context isolation is not file isolation.** Divide ownership by directory, component, or worktree before parallel edits.
 
-### 1. More subagents is not always better
+## Current availability
 
-Too many adds cost:
+Current Codex versions provide subagents by default, with activity visible in relevant desktop App, CLI, and IDE surfaces. UI details change; the stable pattern is to ask Codex to delegate independent work while the main thread consolidates it.
 
-- More results to read
-- Conflicting conclusions
-- Coordination overhead may exceed benefit
+Use `/agent` in the CLI to inspect or switch threads. Supporting IDE surfaces show background Agents, and the desktop App displays task thread activity. Exact controls depend on client and account.
 
-### 2. Complex task → always subagents?
+## When to split work
 
-Not if tightly coupled and needs frequent confirmation—main thread may be cheaper.
+Consider a subagent when at least two apply:
 
-### 3. Can subagents also make all the edits?
+1. The task can be described independently without frequent synchronization.
+2. It has an explicit deliverable such as a file list, test result, or one-page conclusion.
+3. It can run in parallel, or deep isolation greatly reduces main-thread noise.
 
-Depends on delegation—but safer default:
+### Good parallel work
 
-- Subagent does read-only analysis, comparison, localization
-- Main thread decides whether to modify after reading conclusions
+- Read-only mapping of frontend, backend, and tests.
+- Independent investigation of unrelated failing tests.
+- Evidence collection for two technical options.
+- Dedicated security, performance, or documentation review.
 
-## Recommended workflow
+### Keep in the main thread
 
-### 1. Main Agent writes subtask contract
+- Requirements are unclear and need user dialogue.
+- Steps must run strictly in sequence.
+- Edits concentrate in one file or code region.
+- “Look around” has no completion criterion.
+
+Subagents add token and consolidation costs. Do not parallelize a small task that one clear thread handles well.
+
+## Main Agent responsibilities remain
+
+The main Agent retains:
+
+- global goal, user constraints, and final decisions;
+- subtask boundaries and file ownership;
+- resolution of conflicting conclusions;
+- merged tests, build, and risk reporting.
+
+A subagent reporting “done” is a subtask signal, not proof that the whole task is complete.
+
+## Write an acceptable delegation contract
 
 ```text
-Subtask: read-only analysis of session refresh logic in packages/auth.
-Deliverable: summary within 1 page + key file paths + risks.
-Forbidden: change any file; do not push.
+Start one subagent to analyze session refresh in packages/auth, read-only.
+
+Scope: packages/auth and corresponding tests; do not edit.
+Question: Can an old token be reused after refresh failure?
+Deliver: conclusion, key files and lines, reproduction path, recommended test.
+Verification: every claim must be checkable in source or existing tests.
+Return: under 500 words; the main thread decides whether to edit.
 ```
 
-What matters is clarifying four things:
+It defines responsibility, scope, question, prohibition, verification, and decision owner.
 
-- Exactly what it owns
-- What output looks like
-- Disallowed actions
-- Who decides after return
+## Three-way example
 
-### 2. Subagent executes and returns structured result
+For an intermittent sign-in regression:
 
-Expected format:
+| Subtask | Permission and scope | Deliverable |
+|---|---|---|
+| A: code path | Read-only `src/auth/` | Call chain from entry to failure branch |
+| B: test evidence | Read-only tests and logs | Smallest stable reproduction |
+| C: recent changes | Read-only related Git history | Most likely introducing change and evidence |
 
-```text
-## Conclusion
-## Evidence (file:line)
-## Suggested next steps
-## Open questions
-```
+After all return, compare evidence before choosing a repair. Do not let A, B, and C all edit `src/auth/session.ts`.
 
-### 3. Main Agent merges and decides
+## Isolate parallel writes
 
-Main thread (or you) picks a path, then enters execution per [explore—plan—execute—verify](/cases/workflows/explore-plan-execute-verify/).
+1. Split writes into non-overlapping directories or components.
+2. Assign separate worktrees or branches.
+3. State the exact files each Agent owns.
+4. Let the main Agent merge and rerun verification.
 
-### 4. Acceptance
+Passing isolated tests does not prove the merged combination works.
 
-- Can subagent output be verified independently (open files and check)?
-- Did it modify repo without permission?
-- If multiple subagents conflict, is that called out?
+## Acceptance checklist
 
-For implementation-heavy work, ask the subagent to return a proposed patch plan first. The main thread should still own final merge decisions, because it has the user conversation, the repo state, and the responsibility to verify the whole task.
+- Does the result answer the original question without expanding scope?
+- Does it include verifiable file locations, logs, or tests?
+- Did it obey read-only, directory, and command constraints?
+- Are conflicting results explicitly resolved?
+- Were full tests and build rerun after merging?
+- Are unresolved issues and residual risks stated?
 
-## When to consider splitting
+## Combine with other capabilities
 
-If a subtask meets two of three:
+- **Skill** preserves a subtask method and output format.
+- **MCP** gives controlled external tools or data.
+- **Hook** adds guards at subagent start, stop, or tool calls.
+- **Worktree** isolates file edits; it solves workspace conflicts, not context.
 
-1. Can be described independently
-2. Has clear deliverable
-3. Does not need constant sharing of fine-grained context with main thread
-
-## With Skills and MCP
-
-- **Skill**: standard deliverable format for subtasks (e.g. security review checklist)
-- **MCP**: subagent read-only queries external tickets; main Agent synthesizes
-
-## Common mistakes
-
-- Subagent scope too large—becomes second main Agent
-- No structured return—main thread re-reads long logs
-- Multiple subagents editing same directory concurrently
-
-Subagents fit subproblems with clear boundaries, clear deliverables, and independent completion—not duplicating the entire main task.
-
-## Further reading
-
-- [Multi-agent coordination](/cases/workflows/multi-agent-coordination/)
-- [Handoff and resume](/guide/agent-work/handoff-and-resume/)
+Continue with [Multi-agent coordination](/en/cases/workflows/multi-agent-coordination/) and [Handoff and resume](/en/guide/agent-work/handoff-and-resume/).
 
 ---
 
-**Status:** verified  
-**Applicable products:** App / CLI / Cloud  
-**Verification basis:** Cross-checked with OpenAI Developers public material on multi-agent, long-running, and parallel workflows; this page confirms stable principles—isolated subtasks, clear boundaries, explicit deliverables—while UI and scheduling details remain non-contractual "per current product."  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE
+
+**Verification basis:** Compared with current subagent documentation; explains context isolation, inherited permissions, activity entry points, token cost, write conflicts, and main-Agent final responsibility.
+
+**Last verified:** 2026-08-26

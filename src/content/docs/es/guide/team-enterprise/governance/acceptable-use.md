@@ -3,14 +3,15 @@ title: Política de uso aceptable
 description: Acuerdos a nivel de equipo sobre qué puede y qué no puede hacer Codex, alineados con tecnología y formación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-La **política de uso aceptable (AUP)** convierte «¿se puede usar Codex para esto?» en un consenso organizacional, en lugar de dejarlo al criterio individual. Complementa el [modelo de amenazas](/guide/team-enterprise/security/threat-model/): el modelo habla de riesgos; la AUP habla de **límites de comportamiento**.
+La **política de uso aceptable (AUP)** convierte «¿se puede usar Codex para esto?» en un consenso organizacional, en lugar de dejarlo al criterio individual. Complementa el [modelo de amenazas](/es/guide/team-enterprise/security/threat-model/): el modelo habla de riesgos; la AUP habla de **límites de comportamiento**.
 
 ## Contenido
 
@@ -63,7 +64,7 @@ Por eso lo importante de la AUP es alinearla con formación, Permisos, configura
 ## Estructura básica
 
 1. **Propósito y alcance**
-2. **Escenarios de uso permitidos** (enlace al [mapa de capacidades](/guide/start-here/codex-capability-map/))
+2. **Escenarios de uso permitidos** (enlace al [mapa de capacidades](/es/guide/start-here/codex-capability-map/))
 3. **Escenarios de uso prohibidos**
 4. **Datos y confidencialidad**
 5. **Requisitos de supervisión humana** (merge, cambios de producción)
@@ -97,7 +98,7 @@ Si las tres se acercan a «sí», la política tiene más probabilidad de ser re
 ## Lista de aceptación
 
 - [ ] El onboarding incluye confirmación de la AUP
-- [ ] Sin contradicción con las [reglas de equipo](/guide/customization/rules/team-rules/)
+- [ ] Sin contradicción con las [reglas de equipo](/es/guide/customization/rules/team-rules/)
 - [ ] Revisión anual o al publicar funciones importantes
 
 El valor de la AUP es escribir con claridad los límites de uso de Codex en el equipo y alinearlos con los controles reales.

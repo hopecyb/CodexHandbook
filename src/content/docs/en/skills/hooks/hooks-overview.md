@@ -1,149 +1,93 @@
 ---
 title: Hooks overview
-description: Insert validation, logging, and audit at Agent key points—supplement team security and compliance.
+description: Understand Hook discovery, trust review, handlers, runtime behavior, and security boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 169a1ec
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Simply put, a Hook automatically inserts a check or log at a key point.
+Hooks run command scripts or tools from connected MCP servers inside the Codex Agent loop. Typical uses include prompt secret scanning, tool-call policy, audit logging, session summaries, and verification before stopping.
 
-**Hooks** let you run custom logic at fixed nodes in the Codex execution chain—for example pre-commit secret scans, MCP call logging, or blocking dangerous commands. They supplement policy and observability from [approvals and sandbox](/guide/cli/approvals-and-sandbox/).
+![Codex Hook lifecycle across sessions, turns, tool calls, compaction, and subagents](/diagrams/hook-lifecycle-events-en.svg)
 
-## Contents
+The most important distinction is that `PreToolUse` can deny or rewrite supported local tool input before execution. `PostToolUse` runs afterward and cannot undo side effects.
 
-- How Hooks differ from Skills and MCP
-- Typical team use cases
-- Security principles when designing Hooks
+## Configuration discovery
 
-## Why teams use Hooks
+Codex looks beside active configuration layers for:
 
-Even if you will not write Hooks yourself, know what teams use them for:
+- `~/.codex/hooks.json`
+- `[hooks]` in `~/.codex/config.toml`
+- `<repo>/.codex/hooks.json`
+- `[hooks]` in `<repo>/.codex/config.toml`
+- Hooks bundled with enabled Plugins
+- Managed Hooks delivered through system policy, MDM, Cloud, or `requirements.toml`
 
-- Why some actions get an extra gate at a key point
-- Why people say "this check is a Hook, not a Skill"
-- Why some rules live on system nodes instead of in prompts
+Project `.codex/` content loads only for a trusted project. Matching Hooks from multiple sources all run; a higher-priority layer does not replace the lower layer's whole Hook set.
 
-Many "why is there an extra check here?" moments in teams are Hooks.
+When one layer contains both `hooks.json` and inline `[hooks]`, Codex merges them and warns at startup. Prefer one representation per layer.
 
-Compare options: [Choosing an extension method](/skills/choosing-an-extension-method/)
+## Review every unmanaged Hook
 
-## What Hooks do
+Codex records trust against the Hook definition hash. New or changed unmanaged Hooks are skipped as pending review until a user trusts the new definition.
 
-| Phase (conceptual) | What a Hook can do |
-|---|---|
-| Before tool call | Reject commands with `rm -rf`, leaking `.env`, etc. |
-| After tool call | Write audit logs to SIEM |
-| Session end | Summarize changed files |
-| Before PR create | Check issue number format |
+Use `/hooks` in the CLI to inspect sources, review changes, trust, or disable an individual unmanaged Hook. Plugin Hooks follow the same trust process. Organization policy trusts Managed Hooks, which users cannot disable in their personal Hook browser.
 
-## How to tell Hook from Skill
+## Two executable handlers
 
-- **Skill**: Tell Codex "for this kind of task, follow this workflow"
-- **Hook**: Tell the system "at this node, run an automatic check first"
-
-They solve different problems:
-
-- Skill = workflow instructions
-- Hook = gate or observation point on the process
-
-Exact event names and config format: [official Hooks documentation](https://developers.openai.com/codex).
-
-## Compared to Skill / MCP
-
-| | Hooks | Skill | MCP |
-|---|---|---|---|
-| Trigger | System events | User or model invocation | Tool requests |
-| Purpose | Policy, audit | Workflow instructions | External systems |
-| Maintainer | Platform/team infra | Product or engineering | Integration developers |
-
-## Common misconceptions
-
-### 1. Hooks replace approval and sandbox
-
-Hooks are a supplemental check layer—not the only security boundary.
-
-### 2. More Hooks means safer
-
-Too many slow, heavy, opaque Hooks slow the flow and make debugging painful.
-
-### 3. Hooks are not for complex logic
-
-Hooks fit work that is:
-
-- Fast
-- Deterministic
-- Easy to test
-
-Do not add another layer of heavy reasoning here.
-
-## Recommended team use cases
-
-1. **Secret leak detection**: Block when diff matches AWS key patterns
-2. **License header check**: Warn when new files lack company copyright notice
-3. **Compliance logging**: Who, when, write actions on which repo (redacted)
-4. **Align with CI**: Local Hook rules share source with GitHub Action when possible
-
-## Candidate guardrails
-
-Start with narrow, observable checks before adding blocking behavior:
-
-| Hook pattern | First version | Mature version |
+| Handler | Purpose | Boundary |
 |---|---|---|
-| Command audit | Log shell commands with timestamp and working directory | Alert on privileged or unusual commands |
-| Secret scan | Warn on edits touching `.env`, key files, or token-looking strings | Block and explain the remediation path |
-| Format-on-write | Report formatting drift after generated edits | Run the same formatter used by CI |
-| Dependency check | Warn when package manifests change | Compare against an approved vulnerability or license policy |
-| Session summary | Write changed files and verification commands at session end | Feed the summary into handoff or PR templates |
+| `command` | Run a local script with event JSON on stdin | The script has local-process capability; review dependencies and output |
+| `mcp_tool` | Call a tool on an already connected MCP server | Does not start or reconnect a server; unsupported for `SessionEnd` |
 
-Good Hooks have boring failure modes: a clear message, a small scope, and a documented bypass path.
+The current documentation says `prompt` and `agent` handlers can be parsed but are skipped. Do not put them in runnable configuration.
+
+## Runtime behavior
+
+- Multiple matching command Hooks start concurrently; one cannot stop another that has already matched.
+- Most Hooks default to a 600-second `timeout`. `SessionEnd` defaults to one second and allows at most three. Production guards should set shorter explicit timeouts.
+- A command Hook runs with the session `cwd`. Resolve repository scripts from the Git root so a subdirectory start does not break relative paths.
+- Asynchronous Hooks fit logging and analysis but cannot block, approve, rewrite, or control their triggering action.
+
+## Relationship to other security layers
+
+| Layer | Responsibility |
+|---|---|
+| Sandbox | Filesystem, network, and system capability boundary |
+| Approval | Human decision before high-risk actions |
+| Command rules | Declarative allow/deny for known command patterns |
+| Hook | Custom, testable logic at lifecycle points |
+| Service permission | Final external-system read/write authority |
+
+Hook tool coverage is not a complete security boundary. Some dedicated tool paths can bypass the default Hook path; hosted tools such as WebSearch also do not run local `PreToolUse` or `PostToolUse`.
 
 ## Adoption order
 
-1. Log first, so the team can see real behavior without interrupting work
-2. Warn on high-confidence problems, such as obvious secrets
-3. Block only when the rule is deterministic and already accepted by the team
-4. Reuse CI scripts where possible, so local and remote checks do not drift
-
-## When Hooks fit
-
-A check belongs in a Hook if:
-
-- It always happens at the same node
-- People should not have to remember it manually every time
-
-Examples: sensitive data scan, naming validation, audit records.
-
-## Design principles
-
-- **Fast**: Hook timeouts slow every tool call
-- **Deterministic**: Avoid calling an LLM inside a Hook
-- **Testable**: Unit-test Hook scripts with fixed input
-- **Disableable**: Team can bypass in emergencies (with audit)
-
-Security angle: roadmap `11-team-enterprise`; personal users often start with read-only log Hooks.
-
-Hooks fit automatic checks at system key points. They are not workflow instructions and do not replace approval.
-
-## Common mistakes
-
-- Hook scripts with network write access become a new attack surface
-- Rules duplicate and contradict `AGENTS.md`
-- Hook config not versioned—teammates' environments diverge
+1. Start with redacted logging in `PostToolUse` or `SessionEnd`.
+2. Use `systemMessage` or additional context for high-confidence warnings.
+3. Block in `PreToolUse` only when the rule is certain, the script has fixtures, and false positives are acceptable.
+4. Align Hooks with CI, pre-commit checks, and service permissions so policies do not conflict.
 
 ## Acceptance checklist
 
-- [ ] Can name the one Hook scenario your team needs most
-- [ ] Clear error message to developers when Hook fails
-- [ ] Config included in code review
+- [ ] Event names come from the current official list.
+- [ ] Matchers cover only required tools or sources.
+- [ ] Scripts have fixture tests and readable errors.
+- [ ] Logs omit tokens, complete prompts, and sensitive tool inputs.
+- [ ] Failure, timeout, and disabled paths were exercised.
+- [ ] The team understands trust changes shown by `/hooks`.
 
-## References
-- OpenAI Codex Hooks documentation
+## Official source
+
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
+
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** This page depends on current Hook capability, typical nodes, and team governance; official public docs lack enough detail—needs rewrite for current clients.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host; CLI provides `/hooks` trust management
+
+**Last verified:** 2026-08-25

@@ -3,9 +3,10 @@ title: Définir le terminé
 description: Rédiger des conditions de fin vérifiables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b9d3ef1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 On dit souvent ce qu'on veut, mais pas **à quel point c'est fini** — d'où le jugement au feeling.
@@ -69,7 +70,7 @@ Si non, c'est encore trop vague.
 
 Évitez que « fini ou pas » repose sur la devinette.
 
-Incluez les commandes de validation pour que l'Agent les exécute : [Exécuter les tests](/guide/verification/).
+Incluez les commandes de validation pour que l'Agent les exécute : [Exécuter les tests](/fr/guide/verification/).
 
 ---
 

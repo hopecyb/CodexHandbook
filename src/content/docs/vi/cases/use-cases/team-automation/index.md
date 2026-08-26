@@ -3,17 +3,18 @@ title: Tự động hóa nhóm
 description: Lối vào case tự động hóa tác vụ lặp lại trong nhóm — trọng tâm điều kiện kích hoạt, thông báo, phê duyệt và điều kiện dừng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c95ca8c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Case tự động hóa nhóm dễ khiến người ta hứng quá mà làm quá tay. Cách hiểu phù hợp hơn: giao cho nó những thao tác lặp lại, quy tắc rõ; phần còn lại vẫn giữ phán đoán của người.
 
 ## Lối vào nhóm này
 
-- [Kiểm tra liên kết tài liệu theo lịch](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Gợi ý phân loại Issue](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [Kiểm tra liên kết tài liệu theo lịch](/vi/cases/use-cases/team-automation/scheduled-link-check/)
+- [Gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/)
 
 ## Trọng tâm nhóm này
 

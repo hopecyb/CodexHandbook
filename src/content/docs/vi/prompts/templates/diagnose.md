@@ -3,9 +3,10 @@ title: Mẫu chẩn đoán
 description: Định vị nguyên nhân gốc trước khi bàn sửa.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu chẩn đoán
@@ -47,8 +48,8 @@ Mẫu chẩn đoán yêu cầu nó nói vì sao hỏng trước, rồi mới bà
 
 ## Liên quan
 
-- [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/)
-- [Case sửa Bug](/cases/fix-a-bug/)
+- [Chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/)
+- [Case sửa Bug](/vi/cases/fix-a-bug/)
 
 ---
 

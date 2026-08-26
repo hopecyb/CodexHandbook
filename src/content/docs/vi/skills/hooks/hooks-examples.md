@@ -3,183 +3,110 @@ title: Ví dụ cấu hình Hook
 description: Khung cấu hình và script Hook có thể chỉnh — quét khóa, nhật ký kiểm toán, kiểm tra định dạng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 5a86fd4
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Khi xem ví dụ Hook, trước hết xác nhận nó muốn phòng gì, rồi chỉnh thành phiên bản phù hợp môi trường của bạn.
+This chapter removes old illustrative event names and fields. The example follows the current official `hooks.json` structure and includes runnable tests.
 
-Chương này cung cấp cấu hình và script **minh họa**, tiện nhóm chỉnh lại. Tên trường, đường dẫn lấy [tài liệu chính thức](https://developers.openai.com/codex) và `codex --help` cục bộ làm chuẩn; trước khi copy hãy thử trong repo cách ly.
+Complete files are in [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard).
 
-Đọc trước: [Tổng quan Hooks](/skills/hooks/hooks-overview/) · [Loại sự kiện Hook](/skills/hooks/hook-event-types/)
+## Goal and boundary
 
-## Trước khi dùng xác nhận phạm vi
+Before a `Bash` or `apply_patch` call runs, deny command input containing a test string shaped like an AWS Access Key ID.
 
-Đừng coi các ví dụ này là"đáp án chuẩn"copy nguyên.  
-Hãy xem chúng như ba mẫu:
+This demonstrates Hook input, output, and test structure only:
 
-- Chỉ ghi
-- Chặn trước
-- Kiểm tra đầu vào nhẹ trước
+- It does not replace a professional secret scanner.
+- The regular expression has false positives and false negatives.
+- It does not scan hosted tools.
+- It must not log complete tool input.
 
-Xem ý tưởng trước, rồi quyết có mở rộng xuống không.
-
-## Ví dụ 1: sau gọi công cụ ghi nhật ký kiểm toán (chỉ đọc)
-
-**Mục tiêu:** ghi ai khi nào đã ghi những đường dẫn nào; nếu ẩn danh thất bại thì không ghi khóa xuống đĩa.
-
-`hooks.json` (minh họa):
+## 1. Configure hooks.json
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.after",
-      "command": ".codex/hooks/audit-log.sh",
-      "timeout_ms": 500
-    }
-  ]
+  "description": "Block obvious secret-shaped strings before local writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/examples/hooks/secret-guard/pre_tool_use_guard.py\"",
+            "timeout": 3,
+            "statusMessage": "Checking tool input for secret-shaped strings"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
-`.codex/hooks/audit-log.sh`:
+In a real repository, place configuration in `.codex/hooks.json` and the script under `.codex/hooks/`. The handbook keeps example paths so the complete artifact can be tested directly.
 
-```bash
-#!/usr/bin/env bash
-# stdin: JSON payload (cấu trúc theo chính thức)
-payload=$(cat)
-tool=$(echo "$payload" | jq -r '.tool // "unknown"')
-ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
-exit 0
-```
+## 2. Denial output
 
-**Nghiệm thu:** sau một lần ghi file, nhật ký có một dòng; mã thoát script luôn là 0.
-
-Loại ví dụ này chỉ ghi, không đổi hành vi — rủi ro thấp nhất, thường phù hợp làm điểm bắt đầu.
-
-## Ví dụ 2: trước gọi công cụ chặn khóa nghi vấn
-
-**Mục tiêu:** khi diff hoặc nội dung ghi khớp mẫu AWS access key thì `block`.
+The script reads event JSON from stdin and checks only `tool_input.command`. On a match it prints:
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.before",
-      "command": ".codex/hooks/secret-scan.sh",
-      "on_failure": "block",
-      "timeout_ms": 300
-    }
-  ]
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Secret-shaped string blocked by example hook."
+  }
 }
 ```
 
-Logic lõi `secret-scan.sh` (minh họa):
+On no match it exits `0` with no output. Plain stdout is not a valid `PreToolUse` decision.
+
+## 3. Run tests
 
 ```bash
-#!/usr/bin/env bash
-payload=$(cat)
-text=$(echo "$payload" | jq -r '.arguments // empty' 2>/dev/null)
-if echo "$text" | grep -qE 'AKIA[0-9A-Z]{16}'; then
-  echo "Blocked: possible AWS access key in tool arguments" >&2
-  exit 1
-fi
-exit 0
+python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-**Nghiệm thu:** chuỗi thử chứa `AKIA` bị chặn; `git status` bình thường thì qua.
+Expected: three tests pass, covering a normal command, suspected credential, and non-object `tool_input`.
 
-:::caution
-Quét bằng regex có báo giả/sót — chỉ là lớp bổ sung; khóa thật nên đi secret scanner và pre-commit, xem [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/).
-:::
-
-Loại ví dụ này thường dùng sau khi bạn đã chắc muốn chặn hành động thật. Bắt đầu thẳng từ Hook kiểu block thì chi phí điều tra cao hơn nhiều.
-
-## Ví dụ 3: chiến lược độ dài và từ khóa khi gửi Prompt
-
-**Mục tiêu:** từ chối cụm rõ ràng định ghi đè hướng dẫn hệ thống (ví dụ đơn giản hóa).
+You can also pipe a fixture manually:
 
 ```bash
-#!/usr/bin/env bash
-prompt=$(cat | jq -r '.prompt // empty')
-if [ "${#prompt}" -gt 50000 ]; then
-  echo "Prompt too long" >&2
-  exit 1
-fi
-if echo "$prompt" | grep -qi 'ignore previous instructions'; then
-  echo "Blocked: possible injection pattern" >&2
-  exit 1
-fi
-exit 0
+printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
+  | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-**Nghiệm thu:** quá dài và khớp mẫu thì thất bại; Tác vụ bình thường thì qua.
+Normal input produces no stdout.
 
-Loại ví dụ này ít nhất cần:
+## 4. Enable it in a project
 
-- Đọc được đầu vào
-- Đưa được lý do thất bại rõ
-- Không làm tổn thương yêu cầu bình thường quá mức
+1. Put configuration and script in the target repository using a stable repository-relative path.
+2. Run unit tests and one real normal command in an isolated repository.
+3. Start Codex and open `/hooks` to inspect the source and exact definition.
+4. After trusting it, verify both a normal pass and test-string denial.
+5. Review again after editing the script; a hash change returns an unmanaged Hook to pending trust.
 
-## Hiểu lầm thường gặp
+## From warning to blocking
 
-### 1. Ví dụ chạy được là đưa thẳng production
+Production teams usually start with non-blocking audit or context, then move to deny. Before upgrading, answer:
 
-Giá trị ví dụ nằm ở cấu trúc và ý tưởng, không phải copy nguyên lên production.
+- Do fixtures cover known false positives?
+- Is a timeout or crash understandable to the user?
+- Does CI or service policy also enforce the rule?
+- Are bypass and emergency recovery auditable?
 
-### 2. Hook kiểu block chưa chắc chín hơn kiểu log
+## Official source
 
-Nhiều nhóm bắt đầu từ log, xác nhận báo giả và hiệu năng chấp nhận được rồi mới nâng lên warn hoặc block.
+- [OpenAI: Hook configuration and PreToolUse output](https://learn.chatgpt.com/docs/hooks)
 
-### 3. Ví dụ Hook không chỉ để xem cách viết script
-
-Chỉ xem script chưa đủ — còn phải xem:
-
-- Gắn sự kiện nào
-- Chiến lược thất bại là gì
-- Nhóm có giải thích được vì sao chặn vậy không
-
-## Kiểm thử Hook
-
-```bash
-# Dùng fixture test script (minh họa)
-echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
-echo $?
-```
-
-## Thứ tự thường gặp
-
-Nhiều nhóm tiến theo thứ tự:
-
-1. Làm kiểu nhật ký chỉ đọc trước
-2. Rồi kiểu warn
-3. Rồi kiểu block
-
-Dễ hơn để tách"logic viết đúng"và"nhóm thật sự muốn để nó chặn".
-
-Ví dụ Hook chủ yếu để học ý tưởng và cấu trúc — không phù hợp chuyển nguyên vào môi trường chính thức.
-
-## Lỗi thường gặp
-
-- Script thiếu `chmod +x`, thất bại im lặng
-- `timeout_ms` quá ngắn gây chặn nhầm
-- Đường nhật ký không ghi được khiến cả chuỗi Hook thất bại
-- Trong Hook `curl` gửi nguyên payload ra ngoài
-
-## Checklist nghiệm thu
-
-- [ ] Mỗi Hook có fixture test tương ứng
-- [ ] Chiến lược thất bại (block/warn) khớp chính sách nhóm
-- [ ] Cấu hình và script cùng repo, cùng PR review
-- [ ] Tài liệu ghi ngày Kiểm chứng và phiên bản CLI áp dụng
-
-## Nguồn tham chiếu
-- Ví dụ OpenAI Codex Hooks
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI / App(tùy phiên bản)  
-**Ghi chú tái Kiểm chứng:** Trang này gồm cấu trúc cấu hình Hook, tên sự kiện, trường payload và ví dụ script; các ví dụ phụ thuộc mạnh triển khai hiện tại, thiếu căn cứ công khai chính thức đủ ổn định.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** Environments using a local Codex host; use Codex CLI `/hooks` for trust management
+
+**Kiểm chứng gần nhất:** 2026-08-25

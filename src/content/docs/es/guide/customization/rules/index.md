@@ -3,9 +3,10 @@ title: Reglas
 description: Página de introducción a allow/deny, reglas de comandos y política de equipo — primero aclara qué hay que bloquear y qué hay que recordar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1b6534d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 El grupo de reglas es el que más fácil confunden los principiantes con «escribirle a Codex unas cuantas recordatorios más».
@@ -14,9 +15,9 @@ Es más preciso entenderlo así: las reglas resuelven «qué acciones se permite
 
 ## Orden recomendado
 
-1. [Patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/)
-2. [Reglas de comandos](/guide/customization/rules/command-rules/)
-3. [Reglas de equipo](/guide/customization/rules/team-rules/)
+1. [Patrones de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/)
+2. [Reglas de comandos](/es/guide/customization/rules/command-rules/)
+3. [Reglas de equipo](/es/guide/customization/rules/team-rules/)
 
 ## Qué te ayuda a resolver este grupo
 

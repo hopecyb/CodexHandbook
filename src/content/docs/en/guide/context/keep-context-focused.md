@@ -4,7 +4,7 @@ description: Control scope, start new threads, and hand off.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 042a77f
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -14,7 +14,7 @@ sidebar:
 - One goal per task
 - Periodically summarize "done / not done / constraints still in effect"
 - Use phase gates for long tasks
-- Use [Handoff and resume](/guide/agent-work/handoff-and-resume/) across sessions
+- Use [Handoff and resume](/en/guide/agent-work/handoff-and-resume/) across sessions
 
 ---
 

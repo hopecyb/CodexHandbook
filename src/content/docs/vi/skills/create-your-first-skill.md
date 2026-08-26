@@ -3,9 +3,10 @@ title: Tạo Skill đầu tiên
 description: Làm từ đầu một Skill pr-review có thể commit, gồm kiểm thử và chia sẻ nhóm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nếu bạn đã biết giao Tác vụ nhưng chưa từng làm Skill thật, trang này nói cách làm cơ bản cho Skill đầu tiên.
@@ -14,7 +15,7 @@ Dành 15–30 phút làm một Skill **tái dùng được trong repo** thườn
 
 ## Phù hợp với ai
 
-Đã chạy thông [Tác vụ đầu tiên](/cases/first-task/) và sẵn sàng thử trong repo kiểm thử.
+Đã chạy thông [Tác vụ đầu tiên](/vi/cases/first-task/) và sẵn sàng thử trong repo kiểm thử.
 
 ## Vì sao nên bắt đầu từ `pr-review`
 
@@ -136,14 +137,14 @@ Một Skill hữu ích ít nhất cần:
 - [ ] `$pr-review` chạy thông và không thực hiện thao tác git nguy hiểm
 - [ ] Đầu ra có kết luận phân cấp, không chung chung
 - [ ] `description` nói rõ kịch bản kích hoạt trong một câu
-- [ ] Đã đối chiếu [Quyền và Phê duyệt](/guide/permissions-and-sandbox/) về nhu cầu script (ví dụ này không có script)
+- [ ] Đã đối chiếu [Quyền và Phê duyệt](/vi/guide/permissions-and-sandbox/) về nhu cầu script (ví dụ này không có script)
 
 Bắt đầu từ một Skill"nhỏ mà ổn"dễ hơn để tái dùng ổn định một quy trình rõ ràng.
 
 ## Bước tiếp theo
 
-- Đóng [khám phá—lập kế hoạch—thực thi—Kiểm chứng](/prompts/templates/understand/) thành Skill
-- Khi cần nối GitHub API, mới đưa [MCP](/skills/mcp/mcp-overview/) vào
+- Đóng [khám phá—lập kế hoạch—thực thi—Kiểm chứng](/vi/prompts/templates/understand/) thành Skill
+- Khi cần nối GitHub API, mới đưa [MCP](/vi/skills/mcp/mcp-overview/) vào
 
 ## Nguồn tham chiếu
 - Ví dụ Skills chính thức của OpenAI Codex và `skill-creator` (nếu môi trường có)

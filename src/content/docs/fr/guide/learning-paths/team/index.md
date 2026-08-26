@@ -3,9 +3,10 @@ title: Parcours équipe (aperçu)
 description: Aperçu des parcours de déploiement en équipe ; étapes détaillées à suivre.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,9 +15,9 @@ sidebar:
 
 ## Lire maintenant
 
-- [Permissions et Approbations](/guide/foundations/permissions-and-approvals/)
-- [Contexte sensible](/guide/context/sensitive-context/)
-- [Définition de terminé](/guide/quality/definition-of-done/)
+- [Permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/)
+- [Contexte sensible](/fr/guide/context/sensitive-context/)
+- [Définition de terminé](/fr/guide/quality/definition-of-done/)
 
 ## Étapes prévues (plan)
 

@@ -5,9 +5,10 @@ sidebar:
   order: 17
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 검증
@@ -76,12 +77,12 @@ Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가
 
 ## 핵심 주제
 
-- [diff 검토](/guide/quality/review-diffs/) — diff를 읽고 범위·위험 확인
-- [테스트 실행](/guide/quality/run-tests/) — 자동 회귀
-- [산출물 검증](/guide/quality/verify-artifacts/) — 문서·설정·생성물
-- [출처 확인](/guide/quality/validate-sources/) — 조사 결론의 추적 가능성
-- [불확실성 다루기](/guide/quality/handle-uncertainty/) — 모델이 불확실할 때
-- [완료 정의](/guide/quality/definition-of-done/) — 「끝났다」의 의미
+- [diff 검토](/ko/guide/quality/review-diffs/) — diff를 읽고 범위·위험 확인
+- [테스트 실행](/ko/guide/quality/run-tests/) — 자동 회귀
+- [산출물 검증](/ko/guide/quality/verify-artifacts/) — 문서·설정·생성물
+- [출처 확인](/ko/guide/quality/validate-sources/) — 조사 결론의 추적 가능성
+- [불확실성 다루기](/ko/guide/quality/handle-uncertainty/) — 모델이 불확실할 때
+- [완료 정의](/ko/guide/quality/definition-of-done/) — 「끝났다」의 의미
 
 ## 작업마다 검증 초점이 다릅니다
 
@@ -90,11 +91,11 @@ Codex의 출력은 확인할 수 있어야 합니다. 검증은 선택 단계가
 - **조사**: 출처가 실제·최신인지, 결론이 증거를 넘지 않는지
 - **설정·스크립트 생성**: 환경 전제·권한 범위·실패 후 복구
 
-어디서부터인지 모르겠다면 기본으로 [완료 정의](/guide/quality/definition-of-done/)를 읽으세요.
+어디서부터인지 모르겠다면 기본으로 [완료 정의](/ko/guide/quality/definition-of-done/)를 읽으세요.
 
 검증은 이 결과가 정말 쓸 수 있고, 믿을 수 있고, 넘길 수 있는지 확인하는 일입니다.
 
-프롬프트에서 수락 기준을 쓰는 방법은 [완료 기준 정의](/prompts/define-done/)를 보세요. 엔드투엔드 사례는 [실전 사례](/cases/)를 보세요.
+프롬프트에서 수락 기준을 쓰는 방법은 [완료 기준 정의](/ko/prompts/define-done/)를 보세요. 엔드투엔드 사례는 [실전 사례](/ko/cases/)를 보세요.
 
 ---
 

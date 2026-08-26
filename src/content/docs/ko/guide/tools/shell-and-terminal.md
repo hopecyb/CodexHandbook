@@ -3,9 +3,10 @@ title: Shell과 터미널
 description: 명령 실행의 능력과 위험.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0b4d40a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -33,7 +34,7 @@ sidebar:
 - `rm -rf`, 강제 푸시, ssh 설정 변경 등은 완전히 이해하고 필요할 때만
 - 검증 명령을 검증 기준에 씀
 
-제품 진입점: [통합 터미널](/guide/desktop-app/integrated-terminal/)
+제품 진입점: [통합 터미널](/ko/guide/desktop-app/integrated-terminal/)
 
 ## 왜 터미널 위험이 더 높은가
 

@@ -3,9 +3,10 @@ title: Deinen Pfad wählen
 description: "Wähle den Leseweg nach Rolle, Aufgabe und Produkteinstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 612639b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -16,29 +17,29 @@ Es gibt viele Einstiege; wähle zuerst den, der deiner aktuellen Frage am nächs
 
 ## Nach Rolle
 
-- [Fünf Schritte für Anfänger](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP vollständig)
-- [Überblick Creator-Pfad](/guide/learning-paths/creator/)
-- [Überblick Entwickler-Pfad](/guide/learning-paths/developer/)
-- [Überblick Team-Pfad](/guide/learning-paths/team/)
+- [Fünf Schritte für Anfänger](/de/guide/learning-paths/beginner/01-talk-to-codex/) (MVP vollständig)
+- [Überblick Creator-Pfad](/de/guide/learning-paths/creator/)
+- [Überblick Entwickler-Pfad](/de/guide/learning-paths/developer/)
+- [Überblick Team-Pfad](/de/guide/learning-paths/team/)
 
 ## Nach Aufgabe
 
 | Du willst… | Zuerst lesen |
 |---|---|
-| Codex und Begriffe verstehen | [Grundlagen](/guide/foundations/) |
-| Heute einmal durchlaufen | [Schnellstart](/guide/getting-started/) |
-| Gute Prompts schreiben | [Prompts](/prompts/) |
-| Ergebnisse prüfen lernen | [Qualität und Überprüfung](/guide/quality/) |
-| Vergleiche und Fehlerbehebung | [Referenz](/guide/reference/) |
+| Codex und Begriffe verstehen | [Grundlagen](/de/guide/foundations/) |
+| Heute einmal durchlaufen | [Schnellstart](/de/guide/getting-started/) |
+| Gute Prompts schreiben | [Prompts](/de/prompts/) |
+| Ergebnisse prüfen lernen | [Qualität und Überprüfung](/de/guide/quality/) |
+| Vergleiche und Fehlerbehebung | [Referenz](/de/guide/reference/) |
 
 ## Nach Produkt
 
-- [Desktop-App](/guide/desktop-app/)
-- Terminal: [CLI](/guide/cli/)
-- Editor: [IDE](/guide/ide/)
-- Cloud-Überblick: [Web und Cloud](/guide/web-and-cloud/)
+- [Desktop-App](/de/guide/desktop-app/)
+- Terminal: [CLI](/de/guide/cli/)
+- Editor: [IDE](/de/guide/ide/)
+- Cloud-Überblick: [Web und Cloud](/de/guide/web-and-cloud/)
 
-Wenn du unsicher bist, schau dir [Codex-Client wählen](/guide/getting-started/choose-your-codex-client/) und den [Funktionsvergleich](/guide/reference/feature-comparison/) an.
+Wenn du unsicher bist, schau dir [Codex-Client wählen](/de/guide/getting-started/choose-your-codex-client/) und den [Funktionsvergleich](/de/guide/reference/feature-comparison/) an.
 
 ## Häufige Missverständnisse
 
@@ -58,7 +59,7 @@ Pfade sparen Umwege — sie sind kein Kurs, den du zwingend der Reihe nach absit
 
 Bei Unsicherheit kannst du so entscheiden:
 
-1. Erste Aufgabe noch nicht durchgelaufen → zuerst den [Anfänger-Pfad](/guide/learning-paths/beginner/)
+1. Erste Aufgabe noch nicht durchgelaufen → zuerst den [Anfänger-Pfad](/de/guide/learning-paths/beginner/)
 2. Du weißt schon, was du tun willst → über die Aufgabe-Tabelle einsteigen
 3. Du weißt schon, in welchem Einstieg du arbeitest → zum entsprechenden Produktkapitel
 

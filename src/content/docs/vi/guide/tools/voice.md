@@ -3,9 +3,10 @@ title: Nhập và xuất giọng nói
 description: Tình huống, giới hạn và lưu ý riêng tư khi tương tác với Codex bằng giọng nói.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -28,7 +29,7 @@ Giọng nói phù hợp hơn để nêu hướng, bổ sung nền hoặc theo d�
 | Theo dõi ngắn trên mobile | Đọc API key, mật khẩu |
 | Nhu cầu accessibility | Tài liệu quy chuẩn cần tìm kiếm được, diff được |
 
-Sau khi nói miệng, nên để Codex **nhắc lại hiểu biết** hoặc tạo kế hoạch chữ, rồi bạn xác nhận. Xem [Yêu cầu kế hoạch](/prompts/ask-for-a-plan/).
+Sau khi nói miệng, nên để Codex **nhắc lại hiểu biết** hoặc tạo kế hoạch chữ, rồi bạn xác nhận. Xem [Yêu cầu kế hoạch](/vi/prompts/ask-for-a-plan/).
 
 ## Giọng nói phù hợp làm gì
 
@@ -93,7 +94,7 @@ Nói xong, để nó gom thành bản chữ để bạn xác nhận.
 
 ## Quan hệ với đa phương thức
 
-- **Ảnh đầu vào**: bản thiết kế, ảnh chụp → [Prompt kèm ảnh](/prompts/prompting-with-images/)
+- **Ảnh đầu vào**: bản thiết kế, ảnh chụp → [Prompt kèm ảnh](/vi/prompts/prompting-with-images/)
 - **Giọng nói đầu vào**: trang này
 - **Đầu ra**: vẫn chủ yếu là mã, tệp, diff chữ; tóm tắt giọng nói không thay rà soát
 

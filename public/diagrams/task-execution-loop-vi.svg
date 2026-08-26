@@ -1,0 +1,66 @@
+<svg lang="vi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">Vòng kín từ mô tả tác vụ đến kết quả có thể xác minh</title>
+  <desc id="desc">Mục tiêu, bối cảnh, đầu vào, ràng buộc, tiêu chí chấp nhận và quyền tạo thành mô tả tác vụ. Codex lần lượt khám phá, lập kế hoạch, thực thi và xác minh; nếu không đạt thì quay lại mô tả hoặc kế hoạch kèm bằng chứng, nếu đạt thì bàn giao kết quả.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 24.6px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.1px; }
+    .label { fill: #f8fafc; font-size: 14.8px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 11.5px; }
+    .tiny { fill: #94a3b8; font-size: 9.8px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1000" height="560" rx="8" fill="#020617"/>
+  <rect width="1000" height="560" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">Từ mô tả tác vụ đến kết quả có thể xác minh</text>
+  <text x="44" y="70" class="sub">Prompt tốt không phải điểm cuối; nó phải nối thực thi, bằng chứng và phản hồi thành một vòng kín.</text>
+
+  <path d="M260 282H310" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <path d="M438 282H478" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M606 282H646" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 282H814" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M878 336V406H770" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M846 336V454H170V378" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="40" y="112" width="220" height="266" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="145" y="142" text-anchor="middle" class="label">Mô tả tác vụ</text>
+  <text x="115" y="177" text-anchor="end" class="note">Mục tiêu</text><text x="125" y="177" class="tiny">Sản phẩm cuối</text>
+  <text x="115" y="207" text-anchor="end" class="note">Bối cảnh</text><text x="125" y="207" class="tiny">Lý do thực hiện</text>
+  <text x="115" y="237" text-anchor="end" class="note">Đầu vào</text><text x="125" y="237" class="tiny">Tài liệu bắt buộc phải xem</text>
+  <text x="115" y="267" text-anchor="end" class="note">Ràng buộc</text><text x="125" y="267" class="tiny">Phạm vi và điều cấm</text>
+  <text x="115" y="297" text-anchor="end" class="note">Tiêu chí chấp nhận</text><text x="125" y="297" class="tiny">Bằng chứng quan sát được</text>
+  <text x="115" y="327" text-anchor="end" class="note">Quyền</text><text x="125" y="327" class="tiny">Mạng · ghi · phê duyệt</text>
+  <line x1="62" y1="344" x2="228" y2="344" stroke="#1e293b"/>
+  <text x="145" y="364" text-anchor="middle" class="tiny">Thiếu thông tin thì hỏi trước, không đoán</text>
+
+  <rect x="310" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="374" y="266" text-anchor="middle" class="label">Khám phá</text>
+  <text x="374" y="291" text-anchor="middle" class="note">Hiện trạng · phạm vi</text>
+  <text x="374" y="311" text-anchor="middle" class="note">Rủi ro · điều chưa biết</text>
+
+  <rect x="478" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="542" y="266" text-anchor="middle" class="label">Kế hoạch</text>
+  <text x="542" y="291" text-anchor="middle" class="note">Bước · tệp</text>
+  <text x="542" y="311" text-anchor="middle" class="note">Rủi ro · xác minh</text>
+
+  <rect x="646" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="710" y="266" text-anchor="middle" class="label">Thực thi</text>
+  <text x="710" y="291" text-anchor="middle" class="note">Sửa theo bước nhỏ</text>
+  <text x="710" y="311" text-anchor="middle" class="note">Kiểm soát phạm vi</text>
+
+  <rect x="814" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="878" y="266" text-anchor="middle" class="label">Xác minh</text>
+  <text x="878" y="291" text-anchor="middle" class="note">Kiểm thử · diff</text>
+  <text x="878" y="311" text-anchor="middle" class="note">Ảnh chụp · nguồn</text>
+
+  <rect x="490" y="382" width="280" height="62" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="630" y="408" text-anchor="middle" class="label">Đạt: bàn giao kết quả có thể xác minh</text>
+  <text x="630" y="429" text-anchor="middle" class="tiny">Sản phẩm + bằng chứng + rủi ro còn lại</text>
+  <text x="905" y="393" class="tiny" fill="#34d399">Đạt</text>
+  <text x="460" y="472" class="tiny" fill="#fb7185">Không đạt: quay lại mô tả hoặc kế hoạch kèm bằng chứng thất bại</text>
+</svg>

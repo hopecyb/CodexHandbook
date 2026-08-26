@@ -3,9 +3,10 @@ title: Giao Tác vụ rõ ràng
 description: "Tổ chức Prompt bằng mục tiêu, bối cảnh, ràng buộc và tiêu chí nghiệm thu."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7048d91
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Viết một Prompt theo khung ổn định.
 
-Chi tiết khung: [Cấu trúc Tác vụ tốt](/prompts/task-anatomy/)
+Chi tiết khung: [Cấu trúc Tác vụ tốt](/vi/prompts/task-anatomy/)
 
 Hai bước trước chủ yếu giải «nói rõ Tác vụ»; bước này tiếp tục «nói Tác vụ ổn định hơn».
 
@@ -47,7 +48,7 @@ Không có nghiệm thu, bạn khó phán kết quả là «chưa xong» hay «c
 
 Chìa khóa của Tác vụ rõ là mục tiêu, hạn chế và tiêu chí hoàn thành cùng xuất hiện.
 
-Bước tiếp: [Xem xét kết quả](/guide/learning-paths/beginner/04-review-results/)
+Bước tiếp: [Xem xét kết quả](/vi/guide/learning-paths/beginner/04-review-results/)
 
 ---
 

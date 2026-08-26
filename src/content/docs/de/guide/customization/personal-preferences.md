@@ -3,9 +3,10 @@ title: Persönliche Vorlieben
 description: Benutzerkonfiguration, Standardmodell und UI-Gewohnheiten — ohne Teamvereinbarungen im Repo zu verunreinigen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ sidebar:
 ## Inhalt
 
 - Was gehört auf die persönliche Schicht, was auf die Projektebene
-- Wie Sie mit [Profile](/guide/customization/configuration/profiles/) Szenarien wechseln
+- Wie Sie mit [Profile](/de/guide/customization/configuration/profiles/) Szenarien wechseln
 - Vermeiden, dass lockere persönliche Einstellungen ins Team-Repo sickern
 
-Prioritätsüberblick: [Personalisierung](/guide/customization/) · [Geltungsbereich und Priorität](/guide/customization/agents-md/scope-and-precedence/)
+Prioritätsüberblick: [Personalisierung](/de/guide/customization/) · [Geltungsbereich und Priorität](/de/guide/customization/agents-md/scope-and-precedence/)
 
 ## Warum diese Schicht trennen
 
@@ -39,10 +40,10 @@ Ohne Trennung entsteht leicht:
 | Inhalt | Beispiel |
 |---|---|
 | Standardmodell und Reasoning-Stufe | Maschinenleistung und Tarif |
-| UI-Theme, Schrift, Benachrichtigungen | Desktop-App-[Einstellungen](/guide/desktop-app/settings/) |
+| UI-Theme, Schrift, Benachrichtigungen | Desktop-App-[Einstellungen](/de/guide/desktop-app/settings/) |
 | Persönliches MCP (private Werkzeuge) | Lokale DB nur lesen (Berechtigung vorsichtig) |
 | Pfad zur persönlichen Skill-Bibliothek | Nicht mit Team-Plugins kollidieren |
-| Terminal-Aliase, `codex`-Startverzeichnis | Siehe [CLI-Konfiguration](/guide/cli/configuration/) |
+| Terminal-Aliase, `codex`-Startverzeichnis | Siehe [CLI-Konfiguration](/de/guide/cli/configuration/) |
 
 ## Was nicht nur auf der persönlichen Schicht liegen darf
 
@@ -90,7 +91,7 @@ Persönliche Vorlieben sollen Ihre Arbeit handlicher machen — nicht Teamregeln
 
 ## Zum Erinnerungsfeature
 
-Bietet das Produkt „Erinnerung“ oder persistente Vorlieben, siehe [Erinnerungen und persistenter Kontext](/guide/customization/memories-and-persistent-context/). Erinnerung eignet sich für stabile Gewohnheiten; **projektspezifische Constraints bleiben Dateien im Repo**.
+Bietet das Produkt „Erinnerung“ oder persistente Vorlieben, siehe [Erinnerungen und persistenter Kontext](/de/guide/customization/memories-and-persistent-context/). Erinnerung eignet sich für stabile Gewohnheiten; **projektspezifische Constraints bleiben Dateien im Repo**.
 
 ## Häufige Fehler
 

@@ -3,84 +3,97 @@ title: Gỡ lỗi kết nối MCP
 description: Các bước điều tra hệ thống khi MCP server không khởi động, công cụ hết thời gian hoặc kết quả bất thường.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 829c1e9
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP đưa hệ thống ngoài vào Codex. Khi thất bại thường có ba loại: **process không lên**, **xác thực sai**, **logic công cụ hoặc hết thời gian**. Trang này đưa thứ tự kiểm, tránh cứ sửa cấu hình thử vận may.
+“MCP tool does not work” hides several failure layers. Identify the layer first, then change one variable.
 
-## Nội dung trang này
+## Preserve four pieces of evidence
 
-- Cách tái hiện tối thiểu vấn đề MCP
-- Checklist đối chiếu nhật ký và cấu hình
-- Khi nào nghi triển khai server chứ không phải Codex
-
-Trang liên quan: [Tổng quan MCP](/skills/mcp/mcp-overview/) · [Nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/)
-
-## Quy trình phân loại
-
-```text
-1. Server có khởi động riêng trong terminal không?
-2. Cú pháp và đường dẫn JSON/TOML cấu hình đúng chưa?
-3. Biến môi trường có hiện trong process MCP không?
-4. Phiên Codex đã khởi động lại để nạp cấu hình mới chưa?
-5. Lời gọi một công cụ có hết thời gian / sai tham số không?
+```bash
+codex mcp list
+codex mcp --help
+node --version    # only for a Node.js STDIO server
+python3 --version # only for a Python STDIO server
 ```
 
-## Khởi động thất bại
+Also record server name, STDIO versus Streamable HTTP, exact error, and whether it occurred in App, CLI, or IDE. Never record the complete token.
 
-| Mục kiểm | Ghi chú |
+## Four-layer triage
+
+| Layer | Symptom | First check |
+|---|---|---|
+| Configuration | Server absent from list | File path, TOML syntax, server name, `enabled` |
+| Startup/connection | Initialization timeout | STDIO command and PATH, or HTTP URL, TLS, proxy |
+| Authentication | 401/403 or sign-in request | OAuth state, token environment variable, scope |
+| Tool | Server online but call fails | Tool name, arguments, allowlist, timeout |
+
+## 1. Confirm configuration loaded
+
+- User file: `~/.codex/config.toml`.
+- Project file: `.codex/config.toml`, loaded only for a trusted project.
+- App, CLI, and IDE share configuration on one Codex host; do not maintain drifting copies.
+- Use `codex mcp list` or `/mcp`; file existence is not success evidence.
+
+## 2. STDIO startup failure
+
+Check that `command` is on PATH, runtime version is supported, `cwd` exists, and dependency provenance is trusted.
+
+Running the command directly proves only that it starts. A protocol server may wait indefinitely for input; that is not a complete tool-call test.
+
+Raise `startup_timeout_sec` only for a genuinely slow initialization. The default is 10 seconds; a huge value can hide a wrong command.
+
+## 3. Streamable HTTP connection failure
+
+Check in order:
+
+1. URL and TLS certificate.
+2. Corporate proxy or VPN.
+3. Existence of the environment variable named by `bearer_token_env_var`.
+4. Whether OAuth needs `codex mcp login <server-name>` again.
+5. Whether server logs received initialization.
+
+Do not temporarily put the token in static `http_headers`; it can leak into configuration and screenshots.
+
+## 4. Server online, tool unavailable
+
+| Symptom | Check |
 |---|---|
-| Đường lệnh | `npx`, `uvx`, đường tuyệt đối có trong PATH không |
-| Phiên bản dependency | Node/Python có thỏa yêu cầu MCP server không |
-| Chạy thủ công | Copy command + args trong cấu hình rồi chạy trong shell |
-| Cách truyền tải | stdio vs HTTP/SSE có khớp tài liệu không |
+| Tools absent | `enabled_tools` / `disabled_tools`, server tool list |
+| Tool not found | Server version, renamed tool, stale session list |
+| Argument validation | Tool schema rather than old prompt fields |
+| Timeout | Smaller query, then `tool_timeout_sec`; default 60 seconds |
+| Empty result | Verify source-system visibility and filters with the same identity |
 
-## Xác thực thất bại
+## Minimal reproduction prompt
 
-- API key có tiêm qua biến môi trường không (không ghi vào repo)
-- MCP kiểu OAuth có hết hạn cần ủy quyền lại không
-- Proxy công ty có chặn MCP ra ngoài không
+```text
+Inspect only MCP server <server-name>:
+1. Report visible tool names.
+2. Call <readonly-tool> with <minimal-arguments>.
+3. Preserve the error type and server message, but redact credentials.
+4. Do not call another server or write.
+```
 
-Chỉ mục biến môi trường: [biến môi trường](/guide/reference/environment-variables/)
+## Acceptance after repair
 
-## Gọi công cụ bất thường
+- [ ] `codex mcp list` shows expected state.
+- [ ] One read-only tool succeeds with minimal arguments.
+- [ ] The root cause names a layer rather than “restart fixed it.”
+- [ ] Temporary tokens, debug logs, and broad permissions are removed.
+- [ ] Team configuration and repair notes are updated.
 
-| Hiện tượng | Nguyên nhân có thể |
-|---|---|
-| Tool not found | Phiên bản server và schema client không khớp |
-| Timeout | API ngoài chậm; tăng timeout hoặc tối ưu truy vấn |
-| Kết quả trống | Sai tên tham số; xem nhật ký MCP server |
-| Ký tự loạn | Encoding không phải UTF-8 |
+## Official source
 
-Trong Prompt yêu cầu Agent **in cấu trúc trả về của công cụ** (đã ẩn danh) để gỡ lỗi.
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
 
-## Thói quen gỡ lỗi an toàn
-
-- Dùng API key **tenant thử**, không dùng production
-- Nhật ký gỡ lỗi đừng dán nguyên token vào chat
-- Nghi MCP độc hại thì ngắt ngay và xoay khóa
-
-Chỉ mục lỗi: [tham chiếu lỗi và thông báo](/guide/reference/error-reference/)
-
-## Lỗi thường gặp
-
-- Sửa cấu hình không khởi động lại phiên Codex
-- IDE và CLI mỗi bên một cấu hình MCP lệch nhau
-- Mức nhật ký MCP server mãi để debug rồi nộp screenshot có khóa
-
-## Checklist nghiệm thu
-
-- [ ] Khởi động độc lập MCP server trong terminal được
-- [ ] Gọi thành công ít nhất một công cụ chỉ đọc
-- [ ] Ghi template cấu hình MCP chuẩn của nhóm
-
-## Nguồn tham chiếu
-- Đặc tả Model Context Protocol và hướng dẫn gỡ lỗi
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** CLI / IDE / App  
-**Ghi chú tái Kiểm chứng:** Các bước điều tra trang này phụ thuộc client Codex hiện tại nạp, hiện và gọi công cụ MCP thế nào; phần này rủi ro thay đổi cao, cần viết lại theo tài liệu hiện hành.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** ChatGPT desktop App / Codex CLI / IDE
+
+**Kiểm chứng gần nhất:** 2026-08-25

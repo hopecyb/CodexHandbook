@@ -3,9 +3,10 @@ title: モデルと推論
 description: モデル選択と推論強度を決めるときの考慮点。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 001ea32
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---

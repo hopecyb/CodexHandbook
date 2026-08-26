@@ -1,87 +1,50 @@
 ---
-title: 修复 Bug
-description: 从失败测试到最小修复与回归——开发者最常见闭环示例。
+title: 修复 Bug：从哪里开始
+description: 选择适合当前问题的 Bug 修复路径，并进入带可运行材料的完整案例。
 ---
 
-## 元信息
+这是一页短入口。完整步骤、可运行代码、红绿测试证据和逐阶段提示词统一维护在[带验证的 Bug 修复](/cases/use-cases/software-development/fix-a-bug-with-verification/)中，避免两个页面重复后逐渐产生冲突。
 
-| 字段 | 内容 |
+## 先判断你现在缺哪一步
+
+| 当前情况 | 从这里开始 |
 |---|---|
-| 适用读者 | 开发者 |
-| 客户端 | CLI 或 IDE（本地仓库） |
-| 预估耗时 | 30–60 分钟 |
-| 核验日期 | 2026-07-25 |
+| 只有“结果不对”，还没有稳定复现 | [先诊断再修复](/cases/workflows/diagnose-before-fixing/) |
+| 已有稳定失败测试 | [带验证的 Bug 修复](/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| 不熟悉相关模块 | [理解代码库](/cases/understand-a-codebase/) |
+| 修复已经完成，准备合并 | [审查 PR](/cases/review-a-pr/) |
+| 测试本身不稳定 | 先阅读[运行测试](/guide/quality/run-tests/)，不要把 flaky test 当作修复证据 |
 
-## 1. 目标与背景
+## 最小闭环
 
-**目标：** 修复一个已用单元测试捕获的回归 bug，且补测试防止再犯。
+无论使用哪种语言或框架，都要保住这条证据链：
 
-**成功标准：**
+1. 用明确命令稳定复现原问题。
+2. 保存失败断言、错误输出和输入条件。
+3. 先解释根因，再做最小修复。
+4. 让原失败测试和新增边界测试通过。
+5. 运行更大范围的回归检查。
+6. 人工阅读 diff，确认没有无关改动。
 
-- 原失败测试通过
-- 全量测试仍绿
-- diff 仅涉及必要文件
+只有第 4 步，没有第 1 步，不足以证明测试覆盖了原问题；只有“全量测试绿”，没有 diff 审查，也不足以证明修改范围正确。
 
-**不在范围：** 大规模重构、升级依赖 major 版本。
+## 可直接练习
 
-## 2. 准备
+仓库提供一个不依赖第三方包的 JavaScript 购物车折扣示例：
 
-- 克隆仓库，`pnpm install`（或按 `AGENTS.md`）
-- 确认能本地复现失败：`pnpm test -- path/to/failing.test.ts`
-- 分支：`fix/issue-123-short-desc`
+```bash
+# 起始代码：1 个测试预期失败
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-## 3. 工作流
-
-### 探索
-
-```text
-先不要改代码。阅读失败测试 @tests/auth/login.test.ts 与实现 @src/auth/login.ts，
-用 5 条以内说明失败原因，引用断言与堆栈行号。
+# 参考修复：3 个测试预期全部通过
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-### 计划
-
-```text
-给出修复计划：改哪些文件、是否需新测试、如何验证。
-等我回复「执行」再改代码。
-```
-
-### 执行
-
-```text
-执行计划第 1–2 步。每步后只跑相关测试。
-```
-
-### 验证
-
-```text
-跑完整测试套件；总结 diff 供我 review；不要 git push。
-```
-
-人工：读 diff，确认无无关改动，按 [审查差异](/guide/quality/review-diffs/) 检查。
-
-## 4. 失败与恢复
-
-| 问题 | 处理 |
-|---|---|
-| 修完引入新失败 | `git stash` 或回退 commit，缩小改动 |
-| 根因判断错误 | 回到探索，要求新假设 |
-| 测试 flaky | 先稳定测试再修业务逻辑 |
-
-## 5. 沉淀
-
-- 若此类 bug 重复出现，在 `AGENTS.md` 加一条约定
-- 可提取 `$regression-guard` Skill：合并前跑关键测试列表
-
-## 6. 相关章节
-
-- [理解代码库](/cases/understand-a-codebase/)
-- [审查差异](/guide/quality/review-diffs/)
-- [运行测试](/guide/quality/run-tests/)
+完整材料位于 [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix)。
 
 ---
 
 **状态：** verified  
 **适用产品：** CLI / IDE  
-**核验依据：** OpenAI Developers 首页当前仍将 Codex 描述为可用于修复缺陷、运行测试与审查变更；本页示例聚焦“先复现失败、做最小修复、补测试并回归验证”的稳定工程闭环，不依赖某个特定框架或产品界面。  
-**最近核验：** 2026-07-26
+**核验依据：** 本页作为入口只维护路径选择和稳定工程闭环；示例的预期失败与通过命令已在当前仓库实际运行验证。
+**最近核验：** 2026-08-25

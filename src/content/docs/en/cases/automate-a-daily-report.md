@@ -3,9 +3,10 @@ title: Automate a daily report
 description: Turn repetitive summarization into a reusable script or Skill.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Automate a daily report
@@ -35,8 +36,8 @@ Constraints: Read-only git; do not push; provide scripts/generate-daily.sh for r
 
 ## 4. Capture for reuse
 
-- [Automation Skill example](/skills/examples/automation-skill/)
-- [Scheduled tasks](/skills/automations/scheduled-tasks/)
+- [Automation Skill example](/en/skills/examples/automation-skill/)
+- [Scheduled tasks](/en/skills/automations/scheduled-tasks/)
 
 ---
 

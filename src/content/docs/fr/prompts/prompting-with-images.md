@@ -3,9 +3,10 @@ title: Prompts avec images
 description: Comment formuler une demande quand vous donnez à Codex des captures, maquettes ou photos de tableau blanc.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup d'échecs « à partir d'une image » ne viennent pas d'une image invisible, mais d'une image **sans consigne sur quoi en tirer**.
@@ -141,10 +142,10 @@ Même « selon la maquette », validez page réelle, diff, breakpoints, usage.
 
 ## Pages liées
 
-- [Images et captures](/guide/files-and-artifacts/images-and-screenshots/)
-- [Génération d'images](/guide/tools/image-generation/)
-- [Anatomie d'une tâche](/prompts/task-anatomy/)
-- [Demander un plan d'abord](/prompts/ask-for-a-plan/)
+- [Images et captures](/fr/guide/files-and-artifacts/images-and-screenshots/)
+- [Génération d'images](/fr/guide/tools/image-generation/)
+- [Anatomie d'une tâche](/fr/prompts/task-anatomy/)
+- [Demander un plan d'abord](/fr/prompts/ask-for-a-plan/)
 
 ## Astuce
 

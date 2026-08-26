@@ -1,143 +1,100 @@
 ---
 title: MCP overview
-description: Model Context Protocol—let Codex connect safely to external tools and data sources.
+description: Understand MCP clients, servers, tools, authentication, and security boundaries.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 7b8726f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-MCP is a standard way for Codex to connect to external tools and data sources.
+MCP turns “the model wants an external capability” into a structured tool call. It connects third-party documentation, browsers, Figma, issue trackers, and internal services.
 
-If you want Codex to query Jira, read a knowledge base, access internal APIs, or operate a controlled tool, you need a mechanism for **how to connect, what can be called, and how permissions are managed**. **MCP (Model Context Protocol)** addresses that.
-
-## Contents
-
-- What problem MCP solves: Codex cannot reach real systems alone
-- Division of labor with Skill and Plugin
-- Why MCP must be part of security governance
-
-## What it is not
-
-MCP is not:
-
-- Pasting account passwords directly to Codex
-- Letting the model connect however it wants
-- Making any third-party service implicitly trusted
-
-It is a normalized wiring path so connecting external systems is more controllable and auditable.
-
-## Core concepts
+## Call chain
 
 ```text
-Codex  ←→  MCP client  ←→  MCP server  ←→  External system
+Codex in a task
+  -> MCP client provided by the Codex host
+  -> MCP server: local process or remote service
+  -> external system: docs, design, tickets, internal API
+  -> structured result returned to the task
 ```
 
-| Component | Role |
+| Component | Responsible for | Not responsible for |
+|---|---|---|
+| Codex host | Read configuration, connect servers, expose tools to the Agent | Defining the server's business permissions |
+| MCP server | Define tools, authentication, arguments, and structured results | Automatically making every tool safe |
+| Skill | Define when and how to use tools | Establishing network connections |
+| Plugin | Compose and distribute Skills, connectors, MCP, and related capabilities | Acting as another tool protocol |
+
+## Supported server transports
+
+### STDIO
+
+Codex starts a local process and communicates over standard input/output. This fits local development tools and services that run only on the current computer.
+
+Review the command, dependency source, and forwarded environment variables because the process inherits the local execution environment.
+
+### Streamable HTTP
+
+Codex connects to a remote URL. Current documentation supports Bearer tokens, OAuth, and ChatGPT session authentication for trusted first-party servers.
+
+The service receives tool arguments. Verify TLS, identity, logging, retention, and tool permissions.
+
+## Combining MCP, Skills, and Plugins
+
+For a weekly high-priority issue check:
+
+| Layer | Content |
 |---|---|
-| MCP server | Exposes a set of tools (e.g. `search_issues`, `get_user`) |
-| Configuration | Tells Codex how to start/connect to the server |
-| Tool calls | Model picks tools in a task; you often approve |
+| MCP | Expose `search_issues`, `get_issue`, and related tools |
+| Skill | Define filters, evidence, and report format |
+| Plugin | Distribute the Skill, connector, and MCP definition |
+| Scheduled task | Run the verified task at a fixed time |
 
-MCP does **not** provide business logic. Your server implements read/write rules; Codex picks which tool to use in the task.
+These are orthogonal responsibilities, not an upgrade ladder. See the [capability map](/en/skills/capability-map/).
 
-## Where MCP sits
+## When MCP is worthwhile
 
-Skill is more like an "operator manual"; MCP handles "tool interfaces."
-
-- Skill explains steps
-- MCP hands certain external tools to Codex
-
-They often appear together:  
-Skill defines the flow; a step in the flow calls an MCP tool.
-
-## Relationship to Skill and Plugin
-
-| | MCP | Skill | Plugin |
-|---|---|---|---|
-| Nature | Tool protocol | Workflow instructions | Distribution package |
-| Typical content | API wrappers | Steps and standards | Skill + MCP + app connectors |
-| Maintainer | You or third-party server | You or team | Publisher |
-
-Common combo: **Skill defines flow**, a step **calls MCP tools** to fetch ticket lists.
-
-## When to consider MCP
-
-If the task only needs read/write inside the current repo, you usually do not need MCP.  
-If it must touch real systems **outside** the repo, start evaluating MCP, APIs, or other controlled integrations.
-
-## Use cases
-
-| Good for MCP | Poor for MCP |
+| Worthwhile | Not yet |
 |---|---|
-| Query Linear/Jira tickets | Pure in-repo code changes |
-| Read-only docs/knowledge base | Simple `curl` with no reuse need |
-| Controlled internal tools | Unaudited high-privilege production DB writes |
+| Repeated access to one external system | One public web lookup |
+| Structured arguments and results are required | Repository file tools are enough |
+| OAuth or granular tool control is required | Only privileged writes exist, with no test environment |
+| A team needs one reusable connection | Server provenance cannot be reviewed |
 
-## Common misconceptions
+## Security stages
 
-### 1. MCP means Codex can do anything
+1. **Read-only trial:** public docs or test tenant, query tools only.
+2. **Team validation:** restricted project, role, and tool allowlist; record failures and latency.
+3. **Limited writes:** reversible small writes with human approval.
+4. **Governed operation:** revocable authorization, reviewable config, redacted logs, environment isolation.
 
-It can only do what the MCP server exposes and what those tools allow.
+Never put tokens in prompts, Git, or static HTTP headers. Prefer OAuth, `bearer_token_env_var`, or forwarded environment variables.
 
-### 2. MCP is technical only, not security
+## Pre-connection checklist
 
-Once MCP touches real systems, it is also:
+- [ ] Server source, version, and startup command are reviewable.
+- [ ] Read and write tools are identified.
+- [ ] A test tenant or least-privilege identity is used.
+- [ ] Remote logging of arguments and results is understood.
+- [ ] Writes have approval, rollback, and audit paths.
+- [ ] The team can disable the server and revoke access.
 
-- Permissions
-- Data exposure
-- Audit
-- Supply chain
+## Next step
 
-### 3. With MCP, no Skill or docs needed
+[Connect an MCP server](/en/skills/mcp/connect-an-mcp-server/), beginning read-only, then verify with `codex mcp list` and `/mcp`.
 
-Still needed. MCP solves "can call tools," not "which flow to follow or when not to call."
+## Official sources
 
-## Security boundaries
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
-- **Least privilege**: read-only, scoped projects, scoped IPs
-- **Credentials**: OAuth or short-lived tokens—not in prompt, not in Git
-- **Human approval**: writes, bulk deletes, outbound messages should be reviewed
-- **Supply chain**: connect only trusted servers; review third-party MCP source
-
-Enterprise: roadmap `11-team-enterprise/security/plugin-and-mcp-risk`.
-
-## Onboarding order
-
-1. Read official MCP docs; confirm current client config format
-2. Start with a **read-only** official or community example server
-3. Verify a single tool call in a test project
-4. Connect real systems with a runbook
-
-Steps: [Connect an MCP server](/skills/mcp/connect-an-mcp-server/)
-
-## Start read-only
-
-Once MCP touches a real system, it becomes part of the permission, data, and audit chain. A safer path is trial data first, then team read-only validation, then small reversible writes with human approval, and only later mature governance with roles, audit, and revocable auth.
-
-If a server’s value comes from high-privilege writes, split read tools and write tools first, then give them different approvals.
-
-## Pre-connection review checklist
-
-- Which tools does the server expose? Are there writes?
-- Where are credentials stored, and can they be revoked by person/project/environment?
-- Could logs contain customer data, internal documents, or secret fragments?
-- Has one tool call been tested in a sandbox project?
-- Do writes have human confirmation, rollback, and audit logs?
-
-## Common mistakes
-
-- Over-permissive MCP server "for convenience"
-- Treating MCP as Skill replacement (flow still belongs in Skill or AGENTS.md)
-- MCP config changes not in code review
-
-## References
-- [Model Context Protocol](https://modelcontextprotocol.io/)
-- OpenAI Codex MCP documentation
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE  
-**Verification basis:** Conceptual content mixed with judgments about "client config format" and "approval behavior"; as of 2026-07-26 public official basis is insufficient for full verification.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP through Plugins
+
+**Last verified:** 2026-08-25

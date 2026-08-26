@@ -3,9 +3,10 @@ title: Skill-Sicherheit und Versionierung
 description: Installationsquellen, Berechtigungsgrenzen, Upgrade und Rollback — Skills teamfähig steuern.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8e8c837
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Ein Skill ist mehr als eine weitere Prompt-Vorlage.
@@ -33,7 +34,7 @@ bist du Teil der Risikokette.
 
 Skill-Sicherheit braucht nicht nur „eine zentrale Stelle“ — jede nutzende Person braucht Grundurteilskraft.
 
-Basis: [Skill-Überblick](/skills/overview/) · [Ersten Skill erstellen](/skills/create-your-first-skill/)
+Basis: [Skill-Überblick](/de/skills/overview/) · [Ersten Skill erstellen](/de/skills/create-your-first-skill/)
 
 ## Bedrohungsmodell (vereinfacht)
 
@@ -84,7 +85,7 @@ Für Teams ist Skill-Upgrade = Upgrade automatisierten Verhaltens — so ernst w
 | Changelog | Release Notes für das Team-Skill-Set |
 | Rollback | Vorversion behalten; bei Problemen schnell wechseln |
 
-Plugins können Skills gebündelt verteilen: [Plugins-Überblick](/skills/plugins/plugins-overview/)
+Plugins können Skills gebündelt verteilen: [Plugins-Überblick](/de/skills/plugins/plugins-overview/)
 
 ## Teamgewohnheiten
 
@@ -104,7 +105,7 @@ Bei explizitem `$name` ist die Absicht klar; bei **automatischer Modell-Wahl** i
 - [ ] Whitelist erlaubter Skill-Quellen
 - [ ] Onboarding neuer Mitarbeitender nur „Basispaket“
 - [ ] Quartalsweise: noch benötigte Skills prüfen
-- [ ] Abgestimmt mit [Allow- und Deny-Regeln](/guide/customization/rules/allow-and-deny-patterns/)
+- [ ] Abgestimmt mit [Allow- und Deny-Regeln](/de/guide/customization/rules/allow-and-deny-patterns/)
 
 ## Häufige Fehler
 

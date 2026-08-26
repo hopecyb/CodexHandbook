@@ -1,159 +1,100 @@
 ---
 title: 権限マトリクス
-description: Codex 操作種別、承認ポイント、製品差の概念対照表。
+description: ローカルの Permission Profile、従来のサンドボックス、Cloud のネットワークポリシーを区別します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: a161c0c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 70
+reviewed_at: 2026-08-26
 ---
 
-「権限マトリクス」は一般利用者にも有用です。同じ一言でも、入口によって Codex の反応が違う理由を説明します。
+「App / CLI / IDE / Cloud のどれが確認ダイアログを出すか」という固定表だけで権限を推測しないでください。実際の動作は、実行場所、有効な設定、組織の requirements、OS、タスクが行う操作の組み合わせで決まります。
 
-異なる**操作**が異なる**製品入口**で異なる承認とサンドボックス挙動を起動します。本マトリクスはチームが「何を人が明示同意すべきか」を揃える助けです。**リスクと挙動の対照表**であり、法的コンプライアンス条文ではありません。デフォルト値は [公式ドキュメント](https://developers.openai.com/codex) と組織マネージド方針を基準にしてください。
+![サンドボックスによる阻止、人による承認、実行結果までの判断フロー](/diagrams/sandbox-approval-flow-ja.svg)
 
-## この表が見ていること
+## まず 3 つの仕組みを区別する
 
-承認、制限、拒否に初めて遭遇すると：
-
-- モデルが壊れた
-- 自分の表現が悪い
-- 昨日できたのに今日できない
-
-多くの差は、現在入口、方針、リスク段階の違いから来ます。
-
-## 核心点
-
-すべての「これをやって」が同じリスクではありません。
-
-例：
-
-- ファイルを読む
-- ファイルを変える
-- コマンドを走らせる
-- 外網に繋ぐ
-- コードを push する
-
-すべて「タスク実行」に見えても、リスクは同一レベルではありません。だから製品は異なる場所で異なる承認、制限、遮断を入れます。
-
-概念基礎：[権限と承認](/guide/foundations/permissions-and-approvals/)
-
-## 操作リスク分級
-
-| レベル | 操作例 | デフォルト期待 |
+| 仕組み | スコープ | 主な制御対象 |
 |---|---|---|
-| L0 読取 | プロジェクト内テキスト読取、コード検索 | 通常自動 |
-| L1 書込 | プロジェクトファイル変更、フォーマット | 確認またはサンドボックス内自動が多い |
-| L2 実行 | shell、パッケージマネージャ、テスト | 多くは確認 |
-| L3 外向き | curl、npm registry、API | 厳格確認または禁止 |
-| L4 越界 | プロジェクト外書込、git push、DB 削除 | 遮断または強い確認 |
-| L5 GUI | Computer Use、システムダイアログ | 最高機密。しばしばデフォルト無効 |
+| ローカル Permission Profiles（Beta） | macOS、Linux、WSL、ネイティブ Windows で実行するローカルコマンド | ファイルシステムの read/write/deny、ネットワークの宛先 |
+| 従来の sandbox settings | ローカル Codex | `read-only`、`workspace-write`、`danger-full-access` と承認ポリシー |
+| Cloud environment policy | Codex Cloud | 隔離コンテナ、setup 時のネットワーク、Agent のネットワーク allowlist / HTTP メソッド |
 
-## 読み方
+Permission Profiles は従来の `sandbox_mode` と組み合わせません。読み込まれた設定に `sandbox_mode` がある、コマンドラインで `--sandbox` を渡した、または設定 Profile で sandbox を指定した場合、Codex は `default_permissions` ではなく従来のサンドボックス設定を使います。
 
-初見では全セルを暗記不要：
+## ローカル組み込み Permission Profiles
 
-- 今回タスクがどの操作類か判断
-- その操作が現在入口で一般に遮られるか見る
-- 説明補足、承認待ち、より適切な入口への切替を決める
+| 名前 | 境界 | 適した用途 |
+|---|---|---|
+| `:read-only` | ローカルコマンドは読み取り専用 | コード理解、レビュー、初めて扱うリポジトリ |
+| `:workspace` | 現在の workspace roots とシステムの一時ディレクトリに書き込み可能 | 通常の開発タスク |
+| `:danger-full-access` | ローカルサンドボックスの制限を解除 | 外部ですでに隔離され、明確に必要な場合のみ |
 
-事前判断にも使えます。
+カスタム profile では、パスごとに `read`、`write`、`deny` を指定できます。また、より具体的なルールを使って、広い範囲から `.env` などの機密ファイルを除外できます。同じパスで競合する場合、`deny` は `write` より優先され、`write` は `read` より優先されます。
 
-## マトリクス（概念 — 典型デフォルト）
+## 最小権限の例
 
-**Y** = 一般に明示同意または方針制限 · **A** = 信頼設定下で自動可 · **—** = バージョン/方針次第 · **N** = 通常不許可
+```toml
+default_permissions = "project-edit"
 
-| 操作 | デスクトップ App | CLI 対話 | IDE | Cloud |
-|---|---|---|---|---|
-| リポジトリファイル読取 | A | A | A | A |
-| リポジトリ内ファイル書込 | Y/A | Y | Y/A | Y/A |
-| テストコマンド実行 | Y/A | Y | Y/A | Y/A |
-| グローバル依存インストール | Y | Y | Y | Y |
-| 公網アクセス | Y | Y | Y | Y |
-| `.env` 等機密ファイル読取 | Y | Y | Y | Y |
-| `git commit` | Y | Y | Y | Y |
-| `git push` | Y | Y | Y | Y |
-| プロジェクト外パス書込 | N/Y | N/Y | N/Y | N |
-| MCP 第三者ツール | Y | Y | Y | Y |
-| ブラウザで URL 開く | Y | — | — | Y |
-| Computer Use | Y/— | — | — | — |
+[features]
+network_proxy = true
 
-説明：
+[permissions.project-edit.filesystem]
+":minimal" = "read"
 
-- **Cloud** はリモートサンドボックス内実行。ノート PC ファイルシステムにはアクセス不可
-- **IDE** は App に似るが UI 承認形が異なる
-- **マネージド方針**ですべて Y または N に強制可能
+[permissions.project-edit.filesystem.":workspace_roots"]
+"." = "write"
+".devcontainer" = "read"
+"**/*.env" = "deny"
 
-## よくある誤解
+[permissions.project-edit.network]
+enabled = true
 
-### 1. できるかはモデルの意思だけでは決まらない
+[permissions.project-edit.network.domains]
+"api.openai.com" = "allow"
+"tracking.example.com" = "deny"
+```
 
-多くは現在入口許可、現行方針、現在権限で決まります。
+`network.enabled = true` は、コマンドによるネットワーク接続を許可するだけです。ドメインルールをプロキシで強制するには、`features.network_proxy` も有効にする必要があります。
 
-### 2. Cloud が必ず自由、または必ず安全ではない
+## 操作ごとに評価する
 
-安全かはサンドボックス、ネットワーク、Secrets、ブランチ保護、承認方針の組み合わせ次第。
+| 操作 | 主なリスク | 最小限の境界 |
+|---|---|---|
+| ソースコードを読む | 機密ファイルがコンテキストに含まれる | workspace を read、credentials を明示的に deny |
+| ファイルを変更する | 範囲外の上書きや削除 | 対象 workspace だけを write、先に diff を確認 |
+| テストを実行する | スクリプトの副作用 | スクリプトをレビューし、管理された環境を使用 |
+| 依存関係をインストールする | サプライチェーンとネットワーク接続 | バージョンを固定し、ドメインを制限 |
+| Git push / PR | 外部状態の変更 | 独立したブランチ、ブランチ保護、人によるレビュー |
+| MCP / Plugin ツール | 第三者へのデータ送信と書き込み操作 | 最小 scope、項目ごとの承認とログ |
 
-### 3. ルールを書けばリスクが自動消滅しない
+`AGENTS.md` には「push しない」と書けますが、技術的に強制する境界ではありません。ルールを sandbox / permissions、GitHub 権限、人によるレビューと組み合わせる必要があります。
 
-文書ルール、承認方針、技術制限、人工复核はしばしば併用が必要。
+## チームでの確認方法
 
-### 4. 遮られた＝あなたが間違ったわけではない
+1. クライアントと Codex のバージョンを記録する。
+2. 読み込まれたすべての設定レイヤーを列挙する。
+3. Permission Profile と従来の sandbox のどちらを使用しているか確認する。
+4. 機密データを含まないテスト用ディレクトリで、read、write、deny、ネットワークをそれぞれ検証する。
+5. その後で実際のリポジトリに接続し、Git と組織側のガードレールを維持する。
 
-多くは：
+Permission Profiles はまだ Beta です。アップグレード後は、この検証をもう一度実施してください。
 
-- このステップのリスクが高い
-- 現在入口がこの作業に向かない
-- より明確な承認またはより軽い方法が必要
+## 公式情報
 
-## 設定と文書の着地
-
-| 仕組み | 役割 |
-|---|---|
-| サンドボックスモード | L3/L4 を Agent が「やりたくても」制限 |
-| 承認方針 | L1〜L3 のダイアログ制御 |
-| `AGENTS.md` | プロジェクト級禁止（例：push 禁止） |
-| ブランチ保護 | GitHub 側で未 review merge を遮断 |
-| Hooks | コミット前自動チェック（ロードマップ Hooks ページ参照） |
-
-[人工承認パターン](/cases/workflows/human-approval-patterns/) · [設定リファレンス](/guide/reference/configuration-reference/)
-
-## いつ警戒を上げるか
-
-次のいずれかなら警戒：
-
-- ファイルを変える
-- コマンドを走らせる
-- 外網にアクセスする
-- 機密情報に触れる
-- 結果をリポジトリ外へ送る
-
-L 番号を覚えなくても、「もう見るだけのリスクではない」と分かれば十分です。
-
-権限マトリクスは予測ツール。なぜ遮られるか、より慎重にすべきか、より軽い方法に切り替えるべきかを事前判断します。
-
-## チーム推奨方針（例）
-
-| シーン | 提案 |
-|---|---|
-| オープン練習リポジトリ | 標準サンドボックス + テストコマンド許可 |
-| 会社 monorepo | 厳格 + push 禁止 + PR 必須人審 |
-| CI `codex exec` | 読み取り専用または限定ディレクトリ + push なし |
-| Cloud 本番関連 | Secrets 最小化 + ブランチ保護 |
-
-## よくある誤解
-
-| 誤解 | 事実 |
-|---|---|
-| 「Cloud はより安全」 | Secrets、review、ネットワーク方針次第 |
-| 「IDE は shell を走らせない」 | Agent ツール経由で実行する可能性 |
-| 「push 禁止と書けば必ず push しない」 | サンドボックス + Git 権限 + 人審の多層が必要 |
+- [Permissions（Beta）](https://learn.chatgpt.com/docs/permissions)
+- [Sandboxing](https://learn.chatgpt.com/docs/sandboxing)
+- [Agent approvals and security](https://learn.chatgpt.com/docs/agent-approvals-security)
+- [Cloud internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
 
 ---
 
-**状態：** outdated  
-**対象製品：** App / CLI / IDE / Cloud  
-**検証根拠：** リスク分級思路には参考価値があるが、マトリクスは各入口の典型デフォルト挙動、承認ポイント、利用可能能力について多数仮定を含む。現行公式の入口別権限マトリクス文書が不足するため、本表を `review` または `verified` とすべきでない。  
-**最終検証：** 2026-07-26
+**ステータス：** verified
+
+**対象製品：** App、CLI、IDE、Cloud
+
+**最終確認：** 2026-08-26

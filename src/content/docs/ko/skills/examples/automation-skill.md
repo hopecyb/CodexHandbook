@@ -3,9 +3,10 @@ title: '예시: 자동화 Skill'
 description: 반복 검사나 보고서 생성을 Skill로 패키징합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 예시: 자동화 Skill
@@ -30,8 +31,8 @@ description: 어제 변경, 테스트 결과, 할 일을 모아 일보 Markdown�
 
 ## 관련
 
-- [자동화 일보 사례](/cases/automate-a-daily-report/)
-- [예약 작업](/skills/automations/scheduled-tasks/)
+- [자동화 일보 사례](/ko/cases/automate-a-daily-report/)
+- [예약 작업](/ko/skills/automations/scheduled-tasks/)
 ---
 
 **상태:** verified  

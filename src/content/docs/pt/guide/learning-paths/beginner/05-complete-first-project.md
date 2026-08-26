@@ -3,9 +3,10 @@ title: Concluir o primeiro projeto pequeno
 description: Encadeia os passos de arranque numa entrega completa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -22,8 +23,8 @@ Isto não é um «trabalho escolar» — é encadear os passos anteriores e fech
 
 ## Depois de concluir
 
-- Revisa o [mapa de capacidades](/guide/start-here/codex-capability-map/)
-- Aprofunda a [App de ambiente de trabalho](/guide/desktop-app/) ou [Prompts](/prompts/)
+- Revisa o [mapa de capacidades](/pt/guide/start-here/codex-capability-map/)
+- Aprofunda a [App de ambiente de trabalho](/pt/guide/desktop-app/) ou [Prompts](/pt/prompts/)
 
 ## Foco do exercício
 

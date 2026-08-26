@@ -3,18 +3,19 @@ title: Trabajo orientado a artefactos
 description: Acuerda primero la forma y la ruta del entregable final, luego deduce los pasos — ideal para docs, configs e informes.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Trabajo orientado a artefactos** consiste en dejar claras la forma y la ubicación del entregable antes de que Codex deduzca los pasos. Encaja con Markdown, OpenAPI, scripts de migración, esquemas de diapositivas y otras tareas con salida definida; también puede combinarse con [trabajo impulsado por especificación](/cases/workflows/specification-driven-work/).
+**Trabajo orientado a artefactos** consiste en dejar claras la forma y la ubicación del entregable antes de que Codex deduzca los pasos. Encaja con Markdown, OpenAPI, scripts de migración, esquemas de diapositivas y otras tareas con salida definida; también puede combinarse con [trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/).
 
 ## Enfoque de esta página
 
 - Cómo describir la estructura del artefacto, no el detalle del proceso
 - Comprobaciones de coherencia en artefactos multiarchivo
-- Alineación con [Archivos y artefactos](/guide/files-and-artifacts/)
+- Alineación con [Archivos y artefactos](/es/guide/files-and-artifacts/)
 
 ## Práctica mínima viable
 
@@ -37,7 +38,7 @@ Definir inventario de artefactos (ruta + formato + referencia de ejemplo)
     → Verificar (lint, comprobación de enlaces, previsualización)
 ```
 
-Para artefactos visuales puedes pedir capturas o notas de previsualización; ver [Verificar artefactos](/guide/quality/verify-artifacts/).
+Para artefactos visuales puedes pedir capturas o notas de previsualización; ver [Verificar artefactos](/es/guide/quality/verify-artifacts/).
 
 ## Errores frecuentes
 
@@ -56,7 +57,7 @@ Para artefactos visuales puedes pedir capturas o notas de previsualización; ver
 - [ ] Todos los archivos declarados existen y se pueden abrir
 - [ ] Formato coherente con el ejemplo de referencia
 - [ ] Enlaces / índice / frontmatter válidos
-- [ ] Cumple [Definir terminado](/prompts/define-done/)
+- [ ] Cumple [Definir terminado](/es/prompts/define-done/)
 
 ---
 

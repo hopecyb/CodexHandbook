@@ -3,9 +3,10 @@ title: "Exemples de Skills"
 description: Quatre types d'exemples — rédaction, examen, recherche et automatisation.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 346b14d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemples de Skills
@@ -14,12 +15,12 @@ Ces exemples servent surtout à observer la structure, puis à adapter selon vot
 
 | Exemple | Description |
 |---|---|
-| [Skill de rédaction](/skills/examples/writing-skill/) | Flux de rédaction longue structurée |
-| [Skill d'examen](/skills/examples/review-skill/) | Examen PR / diff (exemple complet) |
-| [Skill de recherche](/skills/examples/research-skill/) | Sortie de recherche avec citations |
-| [Skill d'automatisation](/skills/examples/automation-skill/) | Tâches répétitives et flux planifiés |
+| [Skill de rédaction](/fr/skills/examples/writing-skill/) | Flux de rédaction longue structurée |
+| [Skill d'examen](/fr/skills/examples/review-skill/) | Examen PR / diff (exemple complet) |
+| [Skill de recherche](/fr/skills/examples/research-skill/) | Sortie de recherche avec citations |
+| [Skill d'automatisation](/fr/skills/examples/automation-skill/) | Tâches répétitives et flux planifiés |
 
-Pages associées : [Créer votre premier Skill](/skills/create-your-first-skill/).
+Pages associées : [Créer votre premier Skill](/fr/skills/create-your-first-skill/).
 
 ---
 

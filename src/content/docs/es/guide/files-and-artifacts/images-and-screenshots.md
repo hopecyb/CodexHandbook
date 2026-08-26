@@ -3,14 +3,15 @@ title: Imágenes y capturas
 description: Proporciona capturas y diseños a Codex, y gestiona archivos de imagen en la tarea.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Las imágenes permiten al Agent **ver** problemas de interfaz, intención de diseño o bocetos de pizarra. Esta página cubre la entrada (imágenes que aportas) y la gestión de archivos de imagen en el repositorio; para generar imágenes nuevas, ver [Generación de imágenes](/guide/tools/image-generation/).
+Las imágenes permiten al Agent **ver** problemas de interfaz, intención de diseño o bocetos de pizarra. Esta página cubre la entrada (imágenes que aportas) y la gestión de archivos de imagen en el repositorio; para generar imágenes nuevas, ver [Generación de imágenes](/es/guide/tools/image-generation/).
 
 Al encargar una tarea con capturas, conviene que sepa dónde mirar y por qué ahí hay un problema.
 
@@ -29,7 +30,7 @@ Al encargar una tarea con capturas, conviene que sepa dónde mirar y por qué ah
 | Pizarra de arquitectura | Foto nítida o exportación + leyenda |
 | Ventana de error | Incluye el texto completo del error; evita cortar solo una esquina |
 
-Profundidad: [Prompt con imágenes](/prompts/prompting-with-images/)
+Profundidad: [Prompt con imágenes](/es/prompts/prompting-with-images/)
 
 ## Qué aporta realmente la imagen
 
@@ -102,7 +103,7 @@ No adivines lógica de negocio a partir de la captura; solo trata lo visual y el
 
 - Las capturas pueden contener datos de clientes, URLs internas, tokens — enmascáralos primero
 - No envíes pantallas de configuración con secretos a tareas no confiables
-- [Contexto sensible](/guide/context/sensitive-context/)
+- [Contexto sensible](/es/guide/context/sensitive-context/)
 
 ## Referencias
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -112,9 +113,9 @@ No adivines lógica de negocio a partir de la captura; solo trata lo visual y el
 
 Para tareas del tipo «implementar según la imagen»:
 
-1. Compara en paralelo implementación y referencia (o abre la página con la [herramienta de navegador](/guide/tools/browser/))
+1. Compara en paralelo implementación y referencia (o abre la página con la [herramienta de navegador](/es/guide/tools/browser/))
 2. Comprueba responsive y modo oscuro (si se exige)
-3. [Verificar artefactos](/guide/quality/verify-artifacts/)
+3. [Verificar artefactos](/es/guide/quality/verify-artifacts/)
 
 ## Errores habituales
 

@@ -3,9 +3,10 @@ title: 설정 항목 참고
 description: Codex 사용자급·프로젝트급 설정 키의 개념 색인——경로와 필드는 공식 문서를 기준으로 합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -58,7 +59,7 @@ sidebar:
 - 환경 변수：“이번 실행에 임시로 넣는 값”
 - 호스팅 정책：“조직이 이미 정해 둔 경계”
 
-입문：[설정 기초](/guide/customization/configuration/config-basics/) · 터미널 중심：[CLI 설정](/guide/cli/configuration/)
+입문：[설정 기초](/ko/guide/customization/configuration/config-basics/) · 터미널 중심：[CLI 설정](/ko/guide/cli/configuration/)
 
 ## 설정 영역 색인(개념)
 
@@ -70,7 +71,7 @@ sidebar:
 | 추론 강도 / reasoning | 복잡한 작업 등급(지원 시) |
 | 온도 등 샘플링 | 보통 기본 유지, 스크립트화 시 고정 |
 
-배경：[모델과 추론](/guide/foundations/models-and-reasoning/)
+배경：[모델과 추론](/ko/guide/foundations/models-and-reasoning/)
 
 ### 샌드박스와 네트워크
 
@@ -80,7 +81,7 @@ sidebar:
 | 네트워크 접근 | 금지 / 제한 / 허용 |
 | 출구 도메인 | 허용 목록(지원 시) |
 
-배경：[샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
+배경：[샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
 
 ### 승인 정책
 
@@ -90,7 +91,7 @@ sidebar:
 | 파일 쓰기 전 | 위와 같음 |
 | MCP 도구 호출 | 서버 또는 도구 단위 |
 
-배경：[권한과 승인](/guide/foundations/permissions-and-approvals/) · 매트릭스：[권한 매트릭스](/guide/reference/permission-matrix/)
+배경：[권한과 승인](/ko/guide/foundations/permissions-and-approvals/) · 매트릭스：[권한 매트릭스](/ko/guide/reference/permission-matrix/)
 
 ### 워크스페이스와 CLI
 
@@ -107,13 +108,13 @@ sidebar:
 | 서버 목록 | 명령, URL, 전송 방식 |
 | 환경 변수 주입 | MCP 프로세스에 묶고, Git에는 넣지 않음 |
 
-[MCP 연결](/skills/mcp/connect-an-mcp-server/)
+[MCP 연결](/ko/skills/mcp/connect-an-mcp-server/)
 
 ### IDE / App 확장
 
 일부 항목은 확장 설정 UI에만 있으며, CLI와 같은 사용자 설정 백엔드를 공유할 수 있습니다——제품 설명을 따릅니다.
 
-[IDE 설정](/guide/ide/settings/) · [데스크톱 App 설정](/guide/desktop-app/settings/)
+[IDE 설정](/ko/guide/ide/settings/) · [데스크톱 App 설정](/ko/guide/desktop-app/settings/)
 
 ## 흔한 오해
 
@@ -203,7 +204,7 @@ sidebar:
 
 설정 키 이름 목록만 보는 것보다 이렇게 보는 편이 정리하기 쉽습니다.
 
-Cloud Secrets：[Secrets와 환경 변수](/guide/web-and-cloud/secrets-and-variables/)
+Cloud Secrets：[Secrets와 환경 변수](/ko/guide/web-and-cloud/secrets-and-variables/)
 
 ## 변경 규율
 

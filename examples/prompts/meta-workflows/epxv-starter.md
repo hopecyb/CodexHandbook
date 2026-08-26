@@ -50,6 +50,6 @@ last_verified: 2026-07-25
 
 # 相关内容
 
-- [探索—计划—执行—验证](/09-workflows/explore-plan-execute-verify/)
-- [失败恢复](/09-workflows/failure-recovery/)
-- [定义完成](/05-core-capabilities/prompting/define-done/)
+- [探索—计划—执行—验证](/cases/workflows/explore-plan-execute-verify/)
+- [失败恢复](/cases/workflows/failure-recovery/)
+- [定义完成](/prompts/define-done/)

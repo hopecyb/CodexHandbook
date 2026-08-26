@@ -3,9 +3,10 @@ title: Examples
 description: Learn how configuration and AGENTS.md should be written from real examples, not abstract principles alone.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Many principles make sense in isolation but are hard to apply in your own repo.
@@ -14,7 +15,7 @@ This group shows “how others wrote it” so you can turn abstract rules into c
 
 ## Entries in This Group
 
-- [AGENTS.md in a Monorepo](/guide/customization/examples/monorepo-agents-md/)
+- [AGENTS.md in a Monorepo](/en/guide/customization/examples/monorepo-agents-md/)
 
 ## When to Read This Group
 

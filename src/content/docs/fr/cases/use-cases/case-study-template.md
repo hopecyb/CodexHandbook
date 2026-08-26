@@ -3,9 +3,10 @@ title: Modèle de cas
 description: Structure unifiée pour rédiger et rétrospecter des cas Codex — faciliter la capitalisation et la comparaison en équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a430fba
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Copiez ce modèle pour créer une nouvelle page de cas ou un document de rétrospective interne.

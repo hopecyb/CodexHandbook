@@ -3,9 +3,10 @@ title: Bản đồ năng lực
 description: Tổng quan các module năng lực như Prompt, công cụ, mở rộng, đa Agent và quản trị.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 7
 ---
@@ -59,25 +60,25 @@ Không cần đọc hết từng trang theo mục lục site. Có thể đi theo
 
 ## Thứ tự khởi đầu
 
-1. Xem [Codex là gì](/guide/start-here/what-is-codex/)
-2. Rồi xem [Chọn đường đi của bạn](/guide/start-here/choose-your-path/)
-3. Sau đó vào [Hướng dẫn bắt đầu](/guide/getting-started/)
-4. Khi bị kẹt, quay lại [Khái niệm nền tảng](/guide/foundations/) và [Lộ trình học](/guide/learning-paths/)
+1. Xem [Codex là gì](/vi/guide/start-here/what-is-codex/)
+2. Rồi xem [Chọn đường đi của bạn](/vi/guide/start-here/choose-your-path/)
+3. Sau đó vào [Hướng dẫn bắt đầu](/vi/guide/getting-started/)
+4. Khi bị kẹt, quay lại [Khái niệm nền tảng](/vi/guide/foundations/) và [Lộ trình học](/vi/guide/learning-paths/)
 
 ## Module và chương chính thức
 
 | Năng lực | Vị trí chính thức |
 |---|---|
-| Model, Agent, quyền, Sandbox | [Khái niệm nền tảng](/guide/foundations/) |
-| Cách bấm, cách chạy ở từng lối vào | [Cẩm nang sản phẩm](/guide/) |
-| Prompt, ngữ cảnh, công cụ, chất lượng | [Năng lực cốt lõi](/guide/) |
-| AGENTS.md và cấu hình | [Tùy chỉnh cá nhân hóa](/guide/customization/) |
-| Skills, MCP, Plugin, tự động hóa | [Mở rộng và tự động hóa](/skills/) |
-| Phương pháp cộng tác có thể lặp lại | [Phương pháp quy trình](/cases/workflows/) |
-| Case đầu-cuối | [Case theo tình huống](/cases/use-cases/) |
-| Thứ tự đọc | [Lộ trình học](/guide/learning-paths/) |
+| Model, Agent, quyền, Sandbox | [Khái niệm nền tảng](/vi/guide/foundations/) |
+| Cách bấm, cách chạy ở từng lối vào | [Cẩm nang sản phẩm](/vi/guide/) |
+| Prompt, ngữ cảnh, công cụ, chất lượng | [Năng lực cốt lõi](/vi/guide/) |
+| AGENTS.md và cấu hình | [Tùy chỉnh cá nhân hóa](/vi/guide/customization/) |
+| Skills, MCP, Plugin, tự động hóa | [Mở rộng và tự động hóa](/vi/skills/) |
+| Phương pháp cộng tác có thể lặp lại | [Phương pháp quy trình](/vi/cases/workflows/) |
+| Case đầu-cuối | [Case theo tình huống](/vi/cases/use-cases/) |
+| Thứ tự đọc | [Lộ trình học](/vi/guide/learning-paths/) |
 
-Sơ đồ chọn mở rộng tổng thể xem [Bản đồ năng lực mở rộng](/skills/capability-map/); đối chiếu sản phẩm xem [So sánh tính năng](/guide/reference/feature-comparison/). Khác biệt năng lực giữa các lối vào nằm ở trang so sánh tính năng.
+Sơ đồ chọn mở rộng tổng thể xem [Bản đồ năng lực mở rộng](/vi/skills/capability-map/); đối chiếu sản phẩm xem [So sánh tính năng](/vi/guide/reference/feature-comparison/). Khác biệt năng lực giữa các lối vào nằm ở trang so sánh tính năng.
 
 ---
 

@@ -3,14 +3,15 @@ title: "Règles de commandes"
 description: Allow/deny au niveau commande pour les appels shell et outils — plus exécutable qu'un accord verbal.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Les **règles de commandes** se concentrent sur « quelles commandes l'Agent peut exécuter et avec quels arguments ». C'est la forme la plus courante des [Règles Allow et Deny](/guide/customization/rules/allow-and-deny-patterns/), généralement dans la configuration ou les fichiers de règles revus par l'équipe.
+Les **règles de commandes** se concentrent sur « quelles commandes l'Agent peut exécuter et avec quels arguments ». C'est la forme la plus courante des [Règles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/), généralement dans la configuration ou les fichiers de règles revus par l'équipe.
 
 ## Ce que cette page couvre
 
@@ -90,7 +91,7 @@ Illustratif (format selon configuration officielle) :
 | Inventaire | Extraire les vraies commandes des scripts `package.json`, Makefile, workflow CI |
 | Couche | Baseline deny organisation → supplément allow projet → exception locale personnelle (si applicable) |
 | Essai | Valider avec des tâches à faible risque : « doit approuver fait ; doit bloquer bloque » |
-| Aligner | Règles locales et [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) partagent la source quand possible |
+| Aligner | Règles locales et [GitHub Action](/fr/guide/developer-platform/ci-cd/code-review-automation/) partagent la source quand possible |
 
 ## Erreurs courantes
 
@@ -115,10 +116,10 @@ Les règles de commandes ne sont pas « mémoriser les commandes » — elles s�
 
 ## Chapitres liés
 
-- [Modèles Allow et Deny](/guide/customization/rules/allow-and-deny-patterns/)
-- [Politique de règles d'équipe](/guide/customization/rules/team-rules/)
-- [Approbation et bac à sable CLI](/guide/cli/approvals-and-sandbox/)
-- [Matrice des permissions](/guide/reference/permission-matrix/)
+- [Modèles Allow et Deny](/fr/guide/customization/rules/allow-and-deny-patterns/)
+- [Politique de règles d'équipe](/fr/guide/customization/rules/team-rules/)
+- [Approbation et bac à sable CLI](/fr/guide/cli/approvals-and-sandbox/)
+- [Matrice des permissions](/fr/guide/reference/permission-matrix/)
 
 ---
 

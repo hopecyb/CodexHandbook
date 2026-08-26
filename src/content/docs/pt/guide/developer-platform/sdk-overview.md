@@ -3,9 +3,10 @@ title: Visão geral do SDK
 description: Lançar Tarefas Codex na tua aplicação com o SDK oficial — conceitos de autenticação, sessão e tratamento de erros.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,7 +23,7 @@ Ou seja: serve para «o teu sistema chamar o Codex». Se só lanças uma Tarefa 
 - Autenticação e isolamento de tenant
 - Ideias de combinação com Webhook e filas
 
-Vista geral da plataforma: [Plataforma para desenvolvedores](/guide/developer-platform/)
+Vista geral da plataforma: [Plataforma para desenvolvedores](/pt/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -67,7 +68,7 @@ O SDK serve para «ligar sistemas a partir de um programa», não como entrada p
 4. **Resultado**: histórico de mensagens, Diff de ficheiros, URL de artefatos (conforme a API)
 5. **Erros**: distinguir retentáveis (429) e não retentáveis (400)
 
-Índice de erros: [Referência de erros e avisos](/guide/reference/error-reference/)
+Índice de erros: [Referência de erros e avisos](/pt/guide/reference/error-reference/)
 
 ## Lista mínima de integração
 
@@ -78,7 +79,7 @@ O SDK serve para «ligar sistemas a partir de um programa», não como entrada p
 
 ## Encaixe com CI/CD
 
-O SDK pode disparar Cloud ou um runner remoto, ou a CI pode chamar o teu serviço para atualizar o estado do PR. Padrões de exemplo em [Automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/).
+O SDK pode disparar Cloud ou um runner remoto, ou a CI pode chamar o teu serviço para atualizar o estado do PR. Padrões de exemplo em [Automatização de revisão de código](/pt/guide/developer-platform/ci-cd/code-review-automation/).
 
 ## Erros frequentes
 

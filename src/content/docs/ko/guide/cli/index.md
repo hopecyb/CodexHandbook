@@ -5,9 +5,10 @@ sidebar:
   order: 11
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f654474
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 CLI는 터미널 사용자와 스크립트·CI 통합에 맞습니다.
@@ -22,15 +23,15 @@ CLI는 터미널 사용자와 스크립트·CI 통합에 맞습니다.
 
 터미널에 전혀 익숙하지 않은 초보자에게 CLI는 필수 첫 정류장이 아닙니다. 다만 기본 `cd`·`ls`와 프로젝트 디렉터리에서 명령을 실행할 줄 알면 매우 효율적입니다.
 
-- [설치와 업데이트](/guide/cli/installation-and-updates/)
-- [대화형 모드](/guide/cli/interactive-mode/)
-- [비대화형 모드](/guide/cli/non-interactive-mode/)
-- [CLI 구성](/guide/cli/configuration/)
-- [명령과 단축](/guide/cli/commands-and-shortcuts/)
-- [승인과 샌드박스](/guide/cli/approvals-and-sandbox/)
-- [문제 해결](/guide/cli/troubleshooting/)
+- [설치와 업데이트](/ko/guide/cli/installation-and-updates/)
+- [대화형 모드](/ko/guide/cli/interactive-mode/)
+- [비대화형 모드](/ko/guide/cli/non-interactive-mode/)
+- [CLI 구성](/ko/guide/cli/configuration/)
+- [명령과 단축](/ko/guide/cli/commands-and-shortcuts/)
+- [승인과 샌드박스](/ko/guide/cli/approvals-and-sandbox/)
+- [문제 해결](/ko/guide/cli/troubleshooting/)
 
-완전한 명령 참고는 [CLI 명령 참고](/guide/reference/commands/)를 보세요.
+완전한 명령 참고는 [CLI 명령 참고](/ko/guide/reference/commands/)를 보세요.
 
 ## 처음 사용할 때 먼저 구분할 것
 

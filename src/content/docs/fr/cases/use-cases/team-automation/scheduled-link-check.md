@@ -3,9 +3,10 @@ title: "Cas : vérification planifiée des liens de documentation"
 description: Utiliser Codex non interactif ou CI pour scanner les liens morts du site — cas d'introduction à l'automatisation d'équipe.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Métadonnées
@@ -55,8 +56,8 @@ Attendez ma confirmation avant de créer les fichiers.
 ### Exécuter
 
 - Ajouter `prompts/ci/link-check.md`
-- Ajouter `.github/workflows/docs-link-check.yml` (indicatif, voir [Scripts et pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Utiliser [codex exec](/guide/developer-platform/non-interactive/codex-exec/) ou script pur + reclassement Codex
+- Ajouter `.github/workflows/docs-link-check.yml` (indicatif, voir [Scripts et pipelines](/fr/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Utiliser [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/) ou script pur + reclassement Codex
 
 ### Vérifier
 
@@ -69,19 +70,19 @@ Attendez ma confirmation avant de créer les fichiers.
 | Problème | Traitement |
 |---|---|
 | Site externe temporairement en 503 | Distinguer lien mort dur et échec temporaire, définir dans le prompt |
-| Échec d'analyse JSON | Renforcer les contraintes de [sortie structurée](/guide/developer-platform/non-interactive/structured-output/) |
+| Échec d'analyse JSON | Renforcer les contraintes de [sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/) |
 | Quota épuisé | Passer à une planification hebdomadaire + vérification incrémentale |
 
 ## 5. Capitalisation
 
 - Après la troisième exécution réussie, capitaliser en Skill : `docs-link-audit`
-- [Règles de commande](/guide/customization/rules/team-rules/) d'équipe autorisant `npm run build` et git en lecture seule
+- [Règles de commande](/fr/guide/customization/rules/team-rules/) d'équipe autorisant `npm run build` et git en lecture seule
 
 ## 6. Chapitres connexes
 
-- [Gestion des tâches longues](/cases/workflows/long-running-task-management/)
-- [Tâches planifiées Automations](/skills/automations/scheduled-tasks/)
-- [Parcours équipe](/guide/learning-paths/team/)
+- [Gestion des tâches longues](/fr/cases/workflows/long-running-task-management/)
+- [Tâches planifiées Automations](/fr/skills/automations/scheduled-tasks/)
+- [Parcours équipe](/fr/guide/learning-paths/team/)
 
 ---
 

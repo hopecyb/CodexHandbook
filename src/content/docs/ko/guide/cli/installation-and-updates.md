@@ -3,11 +3,12 @@ title: CLI 설치와 업데이트
 description: 설치, 업그레이드, 버전 확인.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6b8ceaf
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 CLI를 처음 설치할 때 많은 사람이 여기서 막힙니다.
@@ -54,7 +55,7 @@ CLI 설치 완료는 명령을 한 번 실행한 것으로 끝나지 않습니�
 
 더 실질적인 기준은: 현재 터미널이 찾고, 인증까지 마친 상태입니다.
 
-대조: [CLI 설치](/guide/getting-started/install-cli/)  
+대조: [CLI 설치](/ko/guide/getting-started/install-cli/)
 공식 설치·업그레이드 설명은 [OpenAI Codex 문서](https://developers.openai.com/codex)를 보세요.
 
 ---

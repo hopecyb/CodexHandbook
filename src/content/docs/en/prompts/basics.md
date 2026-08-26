@@ -3,9 +3,10 @@ title: Prompt basics
 description: The basic building blocks of a good prompt.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b2a486e
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 When you're new to prompting, it's easy to focus on whether your wording sounds "advanced."  
@@ -98,7 +99,7 @@ For most beginners, practicing the **recommended** version first is usually the 
 
 The core of a good prompt is reducing guessing, drift, and overreach.
 
-See examples in [Run your first task](/cases/first-task/) and [Task anatomy](/prompts/task-anatomy/).
+See examples in [Run your first task](/en/cases/first-task/) and [Task anatomy](/en/prompts/task-anatomy/).
 
 ---
 

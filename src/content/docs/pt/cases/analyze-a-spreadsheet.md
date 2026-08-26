@@ -3,9 +3,10 @@ title: Analisar uma folha de cálculo
 description: Carregue ou referencie dados tabulares para resumos e insights.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Analisar uma folha de cálculo
@@ -40,7 +41,7 @@ Aceitação: cada número em summary indica o método de cálculo ou o nome da c
 
 ## 4. Relacionado
 
-- [Tabelas e folhas de cálculo](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Tabelas e folhas de cálculo](/pt/guide/files-and-artifacts/tables-and-spreadsheets/)
 ---
 
 **Estado:** verified  

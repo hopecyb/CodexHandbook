@@ -3,9 +3,10 @@ title: 'Ví dụ: Skill tự động hóa'
 description: Đóng kiểm tra lặp hoặc sinh báo cáo thành Skill.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0d33e2d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ví dụ: Skill tự động hóa
@@ -30,8 +31,8 @@ description: Tổng hợp thay đổi hôm qua, kết quả kiểm thử và vi�
 
 ## Liên quan
 
-- [Case tự động hóa báo cáo ngày](/cases/automate-a-daily-report/)
-- [Tác vụ hẹn giờ](/skills/automations/scheduled-tasks/)
+- [Case tự động hóa báo cáo ngày](/vi/cases/automate-a-daily-report/)
+- [Tác vụ hẹn giờ](/vi/skills/automations/scheduled-tasks/)
 ---
 
 **Trạng thái:** verified  

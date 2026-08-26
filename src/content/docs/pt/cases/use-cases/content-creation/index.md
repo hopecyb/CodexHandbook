@@ -3,9 +3,10 @@ title: Criação de conteúdo
 description: Entrada para casos de documentação, artigos e ativos de conteúdo — foco em revisão, reescrita e aceitação de artefatos.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Os casos de criação de conteúdo focam este tipo de cenário:
@@ -14,7 +15,7 @@ Os casos de criação de conteúdo focam este tipo de cenário:
 
 ## Entradas deste grupo
 
-- [Refatorar um site de documentação com revisão](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refatorar um site de documentação com revisão](/pt/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## Foco deste grupo
 

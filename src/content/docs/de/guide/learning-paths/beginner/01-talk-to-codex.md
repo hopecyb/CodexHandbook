@@ -3,9 +3,10 @@ title: Mit Codex sprechen
 description: Mit natürlicher Sprache Ziele und Grenzen üben.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3648830
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -49,7 +50,7 @@ Wenn schon Read-only unklar bleibt, laufen Änderungsaufgaben später leichter s
 
 Auch Lesen, Erklären, Zusammenfassen brauchen Grenzen.
 
-Weiter: [Mit Dateien arbeiten](/guide/learning-paths/beginner/02-work-with-files/) · Grundlagen: [Prompt-Grundlagen](/prompts/basics/)
+Weiter: [Mit Dateien arbeiten](/de/guide/learning-paths/beginner/02-work-with-files/) · Grundlagen: [Prompt-Grundlagen](/de/prompts/basics/)
 
 ---
 

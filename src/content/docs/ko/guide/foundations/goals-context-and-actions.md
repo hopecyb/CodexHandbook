@@ -3,9 +3,10 @@ title: 목표·컨텍스트·행동
 description: 성공적인 상호작용을 목표·배경·행동·수락으로 나눕니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -21,7 +22,7 @@ sidebar:
 3. **행동**: Codex가 취해도 되는 단계(읽기·수정·실행)
 4. **수락**: 완료 기준과 확인 방법
 
-프롬프트 교육은 이 네 덩어리를 안정 프레임으로 펼칩니다. [좋은 작업의 구조](/prompts/task-anatomy/)를 보세요.
+프롬프트 교육은 이 네 덩어리를 안정 프레임으로 펼칩니다. [좋은 작업의 구조](/ko/prompts/task-anatomy/)를 보세요.
 
 ## 네 덩어리가 각각 맡는 것
 

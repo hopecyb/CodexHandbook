@@ -1,98 +1,63 @@
 ---
 title: Änderungen in der IDE prüfen
-description: Diff im Editor lesen, kommentieren und Codex-Vorschläge annehmen oder ablehnen.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Prüfe Diffs direkt neben dem Quellcode und lasse den Worktree von einem schreibgeschützten Reviewer untersuchen.
 sidebar:
   order: 70
+locale: de
+source_locale: zh-CN
+source_revision: 1ca9ffe
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Die Überprüfung in der IDE-Erweiterung liegt zwischen „Inline-Completion“ und „vollständigem PR-Review“: Änderungen erscheinen oft direkt im Editor oder in der seitlichen Diff-Ansicht. Diese Seite erklärt, wie du Ergebnisse sicher annimmst.
+In der IDE kannst du eine Zusammenfassung und einen fokussierten Diff direkt neben dem Quellcode lesen. Dass Änderungen im Editor erscheinen, bedeutet jedoch nicht, dass sie abgenommen sind. Prüfe zuerst den Diff, führe dann die Tests aus und entscheide schließlich, welche Inhalte erhalten bleiben.
 
-Auch bei „direkt annehmbaren“ Änderungen in der IDE: „Alles annehmen“ nicht zur Default-Aktion machen.
+## Ein lokales Review abschließen
 
-## Inhalt dieser Seite
+1. Lies die Ergebniszusammenfassung, verwende sie aber nicht als Ersatz für den Diff.
+2. Klappe die geänderten Zeilen aus und prüfe jede betroffene Datei.
+3. Behalte passende Änderungen und fordere Korrekturen für Inhalte außerhalb des Umfangs an.
+4. Führe im Eingabebereich `/review` aus.
+5. Wähle den Vergleich mit einem Basis-Branch oder die Prüfung nicht committeter Änderungen.
+6. Führe im IDE-Terminal die Projekttests und statischen Prüfungen aus.
+7. Bestätige den Zustand abschließend erneut mit den Git-Werkzeugen.
 
-- Häufige Überprüfungs-UI in der IDE
-- Strategien für Annehmen, Ablehnen, teilweise Annehmen
-- Anschluss an Git, Tests und PR-Ablauf
+`/review` wird nur angezeigt, wenn das geöffnete Projekt ein Git-Repository ist. Der Befehl meldet Probleme nach Priorität geordnet und verändert den Worktree nicht. In der IDE kannst du wählen:
 
-## Überprüfungsablauf
+- **Review against a base branch:** Aktuellen Branch mit dem ausgewählten Basis-Branch vergleichen
+- **Review uncommitted changes:** Änderungen im aktuellen Worktree prüfen
 
-1. **Rahmen sehen:** Welche Dateien? Unerbetene Löschungen oder Formatierungsstürme?
-2. **Logik lesen:** Verzweigungen, Fehlerbehandlung, Randfälle
-3. **Sicherheit prüfen:** Geheimnisse, Injection, Rechteausweitung, Dependency-Poisoning
-4. **Verifizieren:** vereinbarte Tests / Lint (IDE-Terminal oder Task-Skript)
-5. **Entscheiden:** annehmen, Nachbesserung verlangen oder rückgängig und Aufgabe neu stellen
+Standardmäßig erscheinen die Ergebnisse im aktuellen Chat. Setze `chatgpt.reviewDelivery` auf `detached`, um einen eigenen Review-Chat zu starten.
 
-Methodik: [Diffs prüfen](/guide/quality/review-diffs/)
+## Beispiel: Eindeutige Kriterien für den Reviewer
 
-## IDE-spezifische Operationen (Konzept)
+```text
+Prüfe die aktuellen nicht committeten Änderungen. Suche vorrangig nach Fehlern, die falsches Verhalten, Datenverlust oder Sicherheitsprobleme verursachen.
+Ignoriere reine Stilpräferenzen. Jedes Finding muss eine konkrete Dateiposition, Auslösebedingung und überprüfbare Auswirkung enthalten.
+Wenn du keine Findings hast, nenne verbleibende Lücken in der Testabdeckung.
+```
 
-| Operation | Empfehlung |
-|---|---|
-| Inline-Diff / Ghost-Text | Blockweise lesen, dann annehmen — kein Ein-Klick-Alles |
-| Einzeldatei annehmen | zuerst risikoärmste Dateien (z. B. Tests) |
-| Ablehnen und erneut | Im Follow-up: «Nur X ändern, Y nicht anfassen» |
-| Git-Integration | Nach Annahme mit `git diff` nachprüfen, dann committen |
+## Abnahmecheckliste
 
-[Diff, Kommentare und Überprüfung](/guide/desktop-app/diffs-comments-and-review/) der Desktop-App ist vollständiger; IDE-Seite bleibt **leicht und hochfrequent**.
+- [ ] Die geänderten Dateien entsprechen dem erlaubten Aufgabenbereich
+- [ ] Keine unerwarteten Löschungen, Formatierung ganzer Dateien oder vertraulichen Dateien
+- [ ] Fehlerpfade und Grenzfälle sind abgedeckt
+- [ ] Tests, Linting und Typprüfung bestehen nach den Projektvorgaben
+- [ ] Findings hoher Priorität wurden behoben oder das Risiko ausdrücklich akzeptiert
+- [ ] `git diff --check` und `git status --short` zeigen einen erwarteten Zustand
 
-## Empfohlene Prompt-Gewohnheiten
+Für zeilenbezogene Kommentare, Vormerkung oder das Verwerfen einzelner Hunks kannst du in der Desktop-App [Diffs, Kommentare und Reviews](/de/guide/desktop-app/diffs-comments-and-review/) verwenden. Allgemeine Methoden beschreibt [Diffs prüfen](/de/guide/quality/review-diffs/).
 
-Vor Aufgabenstart festschreiben:
+## Offizielle Grundlage
 
-- erlaubte Pfad-Globs
-- verboten: `git push`, Lockfile ändern (außer explizit verlangt)
-- am Ende: Änderungszusammenfassung listen, **nicht automatisch committen**
+- [Code review](https://learn.chatgpt.com/docs/code-review)
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 
-Siehe [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
-
-## Häufige Fehler
-
-- Grünes Test-Icon vertrauen, ohne selbst gelaufen zu haben
-- Logikänderungen in großen Auto-Format-Diffs verstecken
-- Nach Annahme direkt pushen, ohne PR / Branch-Schutz
-
-## Abnahmeliste
-
-- [ ] `git status` entspricht erwarteten Dateien
-- [ ] Tests bestanden (lokal oder CI)
-- [ ] Kein `.env`, Token oder Debug-`console.log` übrig
-- [ ] Commit-Message von dir geschrieben oder bestätigt
-
-## Häufige Fragen
-
-### 1. Inline-Vorschlag wirkt klein — einfach annehmen?
-
-Besser keine solche Gewohnheit.
-
-Viele Probleme liegen nicht an „großer Änderung“, sondern an „wirkt klein, also nicht ernst gelesen“.
-
-### 2. Logik-Review fällt mir schwer — was zuerst?
-
-Diese drei Punkte sind schon wertvoll:
-
-- Sind es die gewünschten Dateien?
-- Wurde Unerwünschtes gelöscht?
-- Offensichtliche Debug-Reste oder Stil-Drift?
-
-### 3. Angenommen = fertig?
-
-Noch nicht.
-
-Annehmen legt Änderungen nur in deinen Arbeitsbereich — danach verifizieren und erst dann committen.
-
-„Änderung annehmen“ in der IDE ist ein Zwischenschritt, keine finale Abnahme.
-
-## Quellen
-- [Verifikation und menschliche Überprüfung](/guide/foundations/verification-and-human-review/)
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** IDE  
-**Prüfhinweis:** Diese Seite hängt an konkreten Überprüfungs-UIs (Inline-Diff, seitliches Diff, Annehmen/Ablehnen von Blöcken); aktuelle öffentliche Official-Quellen reichen nicht für Punkt-für-Punkt-Bestätigung — bis zur neuen Erweiterungsdokumentation nicht `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** IDE
+
+**Zuletzt geprüft:** 2026-08-26

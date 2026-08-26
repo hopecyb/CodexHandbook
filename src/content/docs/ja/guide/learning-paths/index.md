@@ -3,9 +3,10 @@ title: 学習パス
 description: 役割ごとに読む順序を整理し、正本の本文へリンクします。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 05e85de
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 5
 ---
@@ -25,17 +26,17 @@ sidebar:
 ## MVP 利用可能パス
 
 - **初心者（完全な 5 ステップ）**
-  1. [Codex と対話する](/guide/learning-paths/beginner/01-talk-to-codex/)
-  2. [ファイルを扱う](/guide/learning-paths/beginner/02-work-with-files/)
-  3. [明確なタスクを与える](/guide/learning-paths/beginner/03-give-clear-tasks/)
-  4. [結果をレビューする](/guide/learning-paths/beginner/04-review-results/)
-  5. [最初の小さなプロジェクトを完了する](/guide/learning-paths/beginner/05-complete-first-project/)
+  1. [Codex と対話する](/ja/guide/learning-paths/beginner/01-talk-to-codex/)
+  2. [ファイルを扱う](/ja/guide/learning-paths/beginner/02-work-with-files/)
+  3. [明確なタスクを与える](/ja/guide/learning-paths/beginner/03-give-clear-tasks/)
+  4. [結果をレビューする](/ja/guide/learning-paths/beginner/04-review-results/)
+  5. [最初の小さなプロジェクトを完了する](/ja/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## 概要（詳細ステップは今後追加）
 
-- [クリエイター](/guide/learning-paths/creator/)
-- [開発者](/guide/learning-paths/developer/)
-- [チーム](/guide/learning-paths/team/)
+- [クリエイター](/ja/guide/learning-paths/creator/)
+- [開発者](/ja/guide/learning-paths/developer/)
+- [チーム](/ja/guide/learning-paths/team/)
 
 ## 高度な操作者パス
 
@@ -43,14 +44,14 @@ sidebar:
 
 | ステップ | テーマ | 先に読むもの |
 |---|---|---|
-| 1 | すばやい入口 | [スラッシュコマンドとクイック入口](/guide/reference/slash-commands/) |
-| 2 | 永続的なコンテキスト | [AGENTS.md](/guide/customization/agents-md/) と [メモリと永続コンテキスト](/guide/customization/memories-and-persistent-context/) |
-| 3 | 再利用できるワークフロー | [Skills 概要](/skills/overview/) と [Skill の構造](/skills/skill-anatomy/) |
-| 4 | 独立したサブタスク | [サブエージェント](/guide/agent-work/subagents/) と [マルチ Agent 協調](/cases/workflows/multi-agent-coordination/) |
-| 5 | 外部システム | [MCP 概要](/skills/mcp/mcp-overview/) |
-| 6 | 自動ガードレール | [Hooks 概要](/skills/hooks/hooks-overview/) |
-| 7 | チーム配布 | [Plugins 概要](/skills/plugins/plugins-overview/) |
-| 8 | 復元とレビュー | [取り消しと復元](/guide/getting-started/undo-and-recover/) と [Diff をレビューする](/guide/quality/review-diffs/) |
+| 1 | すばやい入口 | [スラッシュコマンドとクイック入口](/ja/guide/reference/slash-commands/) |
+| 2 | 永続的なコンテキスト | [AGENTS.md](/ja/guide/customization/agents-md/) と [メモリと永続コンテキスト](/ja/guide/customization/memories-and-persistent-context/) |
+| 3 | 再利用できるワークフロー | [Skills 概要](/ja/skills/overview/) と [Skill の構造](/ja/skills/skill-anatomy/) |
+| 4 | 独立したサブタスク | [サブエージェント](/ja/guide/agent-work/subagents/) と [マルチ Agent 協調](/ja/cases/workflows/multi-agent-coordination/) |
+| 5 | 外部システム | [MCP 概要](/ja/skills/mcp/mcp-overview/) |
+| 6 | 自動ガードレール | [Hooks 概要](/ja/skills/hooks/hooks-overview/) |
+| 7 | チーム配布 | [Plugins 概要](/ja/skills/plugins/plugins-overview/) |
+| 8 | 復元とレビュー | [取り消しと復元](/ja/guide/getting-started/undo-and-recover/) と [Diff をレビューする](/ja/guide/quality/review-diffs/) |
 
 このパスは、「たまに Codex に頼む」状態から「チームで繰り返せる小さな仕組み」へ進むためのものです。プロジェクト指示が長期ルールを定め、Skill が方法を定め、MCP が外部ツールを提供し、サブエージェントが境界の明確な作業を分担し、Hook が要所を守り、Plugin が一式を配布します。
 
@@ -73,10 +74,10 @@ sidebar:
 
 どのパスを進むべきか迷ったら、次の方法で選べます。
 
-- まだ初回の完全なタスクを通していない：[初心者パス](/guide/learning-paths/beginner/)
-- 主にコンテンツ作成、図文、デモをしたい：[クリエイターパス](/guide/learning-paths/creator/)
-- 主にコード変更、バグ修正、プロジェクト対応をしたい：[開発者パス](/guide/learning-paths/developer/)
-- 主にチームでの導入方法やリスク管理を考えている：[チームパス](/guide/learning-paths/team/)
+- まだ初回の完全なタスクを通していない：[初心者パス](/ja/guide/learning-paths/beginner/)
+- 主にコンテンツ作成、図文、デモをしたい：[クリエイターパス](/ja/guide/learning-paths/creator/)
+- 主にコード変更、バグ修正、プロジェクト対応をしたい：[開発者パス](/ja/guide/learning-paths/developer/)
+- 主にチームでの導入方法やリスク管理を考えている：[チームパス](/ja/guide/learning-paths/team/)
 
 学習パスは、「今いちばん重要な問題」に基づいて、次に何を読むかを決めるためのものです。
 

@@ -3,18 +3,19 @@ title: 산출물 우선
 description: 먼저 최종 산출물 형태와 경로를 정한 뒤 단계를 역산합니다—문서, 설정, 보고서 등 인도물에 적합합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**산출물 우선**은 인도물의 형태와 위치를 먼저 밝힌 뒤, Codex가 단계를 역산하게 하는 방식입니다. Markdown 문서, OpenAPI, 마이그레이션 스크립트, 슬라이드 개요처럼 출력이 명확한 작업에 적합하며, [스펙 주도](/cases/workflows/specification-driven-work/)와 함께 쓸 수도 있습니다.
+**산출물 우선**은 인도물의 형태와 위치를 먼저 밝힌 뒤, Codex가 단계를 역산하게 하는 방식입니다. Markdown 문서, OpenAPI, 마이그레이션 스크립트, 슬라이드 개요처럼 출력이 명확한 작업에 적합하며, [스펙 주도](/ko/cases/workflows/specification-driven-work/)와 함께 쓸 수도 있습니다.
 
 ## 이 페이지의 초점
 
 - 과정 세부보다 산출물 구조를 어떻게 설명할지
 - 여러 파일 산출물의 일관성 검사
-- [파일과 산출물](/guide/files-and-artifacts/) 기능과의 정렬
+- [파일과 산출물](/ko/guide/files-and-artifacts/) 기능과의 정렬
 
 ## 최소 실행 방법
 
@@ -37,7 +38,7 @@ translated_at: 2026-07-28
     → 검증(lint, 링크 검사, 미리보기)
 ```
 
-시각 산출물은 스크린샷 또는 미리보기 설명을 요구할 수 있습니다. [산출물 검증](/guide/quality/verify-artifacts/)을 참고하세요.
+시각 산출물은 스크린샷 또는 미리보기 설명을 요구할 수 있습니다. [산출물 검증](/ko/guide/quality/verify-artifacts/)을 참고하세요.
 
 ## 흔한 실수
 
@@ -56,7 +57,7 @@ translated_at: 2026-07-28
 - [ ] 선언한 모든 파일이 존재하고 열 수 있음
 - [ ] 형식과 참조 샘플이 일치
 - [ ] 링크/목차/Frontmatter가 유효
-- [ ] [완료 정의](/prompts/define-done/)를 충족
+- [ ] [완료 정의](/ko/prompts/define-done/)를 충족
 
 ---
 

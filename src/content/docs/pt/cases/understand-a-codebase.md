@@ -3,9 +3,10 @@ title: Compreender um código-base
 description: Explore um repositório desconhecido em modo só de leitura e construa um mapa cognitivo acionável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb227a1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Compreender um código-base
@@ -42,8 +43,8 @@ Não altere código. Leia @src/ e @README e, em no máximo 8 pontos, explique:
 
 ## 4. Relacionado
 
-- [Modelo de compreensão](/prompts/templates/understand/)
-- [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/)
+- [Modelo de compreensão](/pt/prompts/templates/understand/)
+- [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/)
 ---
 
 **Estado:** verified  

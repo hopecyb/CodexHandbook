@@ -3,9 +3,10 @@ title: Archivos, Herramientas y comandos
 description: Explica cómo Codex lee y escribe archivos, ejecuta comandos y usa Herramientas.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -86,7 +87,7 @@ Si alguna no tiene respuesta clara, pídele primero una explicación.
 
 1. **Alcance mínimo necesario**: indica directorios y archivos; evita «cambiar el repositorio entero a voluntad»
 2. **Los comandos peligrosos necesitan Aprobación**: borrar, hacer push, cambiar configuración del sistema, etc.
-3. **Hay método para elegir Herramientas**: ver [Selección de Herramientas](/guide/tools/tool-selection/)
+3. **Hay método para elegir Herramientas**: ver [Selección de Herramientas](/es/guide/tools/tool-selection/)
 
 Según la entrada de producto, el panel de Herramientas y la forma de confirmar cambian; los detalles están en cada guía de producto.
 
@@ -94,9 +95,9 @@ Codex no solo «habla»: actúa de verdad mediante archivos, comandos y Herramie
 
 Siguiente lectura recomendada:
 
-1. [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/)
-2. [Sandbox y red](/guide/foundations/sandbox-and-network/)
-3. [Ejecuta tu primera Tarea](/guide/getting-started/run-your-first-task/)
+1. [Permisos y Aprobaciones](/es/guide/foundations/permissions-and-approvals/)
+2. [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
+3. [Ejecuta tu primera Tarea](/es/guide/getting-started/run-your-first-task/)
 
 ---
 

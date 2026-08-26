@@ -3,56 +3,76 @@ title: Instalação e interface
 description: Principais zonas da interface da App de desktop após a instalação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d61c2fa
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-Os passos de instalação estão em [Instalar a App de desktop](/guide/getting-started/install-desktop-app/) e em [https://developers.openai.com/codex](https://developers.openai.com/codex).
 
-Ao abrir a App de desktop pela primeira vez, a interface mostra muita informação de uma vez.
+This chapter is for readers opening the ChatGPT desktop App for the first time. The goal is not to memorize every button. It is to complete one **reviewable, verifiable small task**.
 
-Não precisa mapear todas as zonas de imediato; reconheça primeiro as posições mais importantes.
+For installation and sign-in, see [Install the desktop App](/pt/guide/getting-started/install-desktop-app/). The official App is currently available for macOS, Windows, and Linux. After signing in, you can start a chat, create a project, or open a local folder.
 
-## Zonas da interface (divisão lógica)
+## Three objects to recognize first
 
-Os nomes dos rótulos mudam com a versão; confira o texto real no ecrã:
+| Object | Purpose | First step for beginners |
+|---|---|---|
+| Project or folder | Provides files and a working directory to the chat | Open a practice repository, not a production directory |
+| Chat | Keeps the goal, context, progress, and result | Use one chat for one clear goal |
+| Codex | Reads, changes, and verifies project content | Start with a low-risk change that is easy to check |
 
-1. **Seleção de projeto / área de trabalho**: pasta ligada no momento
-2. **Zona de conversa / Tarefa**: introduzir o Prompt e acompanhar o progresso do Agent
-3. **Vista de mudanças / Diff**: rever as alterações propostas
-4. **Terminal ou registos** (se ativo): ver a saída dos comandos
-5. **Definições e conta**: modelo, Permissões, notificações, etc.
+The interface will continue to evolve, but these objects are more stable than the location of any particular button.
 
-No início, localize «onde introduzir a Tarefa» e «onde aprovar mudanças em ficheiros».
+## Complete your first real task
 
-## Mal-entendidos frequentes
+Prepare an existing Git repository. First confirm that it does not contain unrecorded changes you need to preserve. Open the folder in the App and start a Codex chat.
 
-### 1. Não é preciso entender todos os painéis no início
+Enter:
 
-Basta reconhecer estes três blocos:
+```text
+Read README.md first and modify only its "Run locally" section:
+1. Fix the startup command that no longer works.
+2. Leave every other section unchanged.
+3. Show the diff and run any verification command documented in the project.
+4. If verification is not possible, explain why. Do not claim completion.
+```
 
-- Onde introduzir a Tarefa
-- Onde ver as mudanças
-- Onde aprovar ou rejeitar
+When Codex finishes, do not rely only on the chat summary. Check:
 
-### 2. Terminal, Diff e definições podem ficar para depois?
+1. whether the review pane contains only the expected files;
+2. whether any deletion is justified;
+3. whether the terminal output actually supports the claim that verification passed;
+4. whether `git diff` matches the requested scope.
 
-Sim, pode aprender por etapas.  
-Mas convém familiarizar-se cedo com a vista de Diff, porque determina se consegue perceber o alcance das mudanças.
+## Choosing Chat, Work, or Codex
 
-### 3. E se a interface não coincidir com as capturas da documentação?
+- Use Chat for knowledge questions or idea exploration.
+- Use Work for general work that spans files and tools.
+- Use Codex when the task requires understanding, modifying, and testing a repository.
 
-Siga o texto da sua versão atual.  
-Aqui falamos de zonas lógicas, não de nomes concretos de botões.
+Use Quick chat for a temporary question that does not need lasting context. Keep work that requires continuity in a regular chat or project.
 
-Encontre primeiro «introduzir Tarefa», «ver mudanças» e «aprovar»; o resto familiariza-se com o uso.
+## What to check when something fails
+
+- **Files are missing:** confirm that the correct folder is open and file access was not denied.
+- **A command cannot run:** confirm dependencies are installed, then inspect the first meaningful terminal error.
+- **Old changes are mixed in:** use `git status` to separate changes that existed before the task from current work.
+- **The interface differs from this page:** navigate by logical objects—project/folder, chat, review, and terminal—instead of relying on a fixed screenshot layout.
+
+Next, read [Diffs, comments, and review](/pt/guide/desktop-app/diffs-comments-and-review/) and [Integrated terminal](/pt/guide/desktop-app/integrated-terminal/).
+
+## Official sources
+
+- [ChatGPT desktop App](https://learn.chatgpt.com/docs/app)
+- [Code review](https://learn.chatgpt.com/docs/code-review)
 
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** App  
-**Nota de revisão:** Em julho de 2026, a nova aplicação de desktop do ChatGPT continua a ajustar a navegação e o layout de Chat/Work/Codex; embora esta página tente descrever só «zonas lógicas», ainda se baseia na divisão de uma versão concreta da UI e deverá ser reescrita quando a interface estabilizar.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Last verified:** 2026-08-26

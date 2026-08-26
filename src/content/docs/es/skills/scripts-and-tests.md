@@ -3,9 +3,10 @@ title: scripts/ y pruebas
 description: Añade scripts deterministas a un Skill y verifica su comportamiento.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Al empezar un Skill, lo habitual es meterlo todo en `SKILL.md`. En flujos simples vale; pero cuando un paso debe ejecutarse de forma **estable, repetible y verificable**, un script es más fiable que solo prosa.
@@ -76,7 +77,7 @@ Así separas «el script está roto» de «la integración del Skill es incorrec
 
 Las acciones que pueden repetirse de forma estable no deben depender solo de prosa. Primero haz correr el script; luego confirma que la llamada del Skill está bien.
 
-Los scripts heredan la política de Aprobación actual; ver [Reglas de comandos](/guide/customization/rules/command-rules/) y [Seguridad de Skills](/skills/security/).
+Los scripts heredan la política de Aprobación actual; ver [Reglas de comandos](/es/guide/customization/rules/command-rules/) y [Seguridad de Skills](/es/skills/security/).
 ---
 
 **Estado:** verificado  

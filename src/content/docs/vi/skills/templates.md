@@ -3,9 +3,10 @@ title: Thư mục templates/
 description: Cung cấp template đầu ra và khung báo cáo trong Skill.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/` không chỉ là thư mục"tiết kiệm chút thời gian trình bày". Tác dụng thực tế hơn là làm đầu ra của Skill ổn định hơn, không phải mỗi lần ứng biến.

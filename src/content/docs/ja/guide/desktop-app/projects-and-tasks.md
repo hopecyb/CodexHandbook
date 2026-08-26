@@ -3,9 +3,10 @@ title: プロジェクトとタスク
 description: App でプロジェクトとタスクを管理する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 088dad1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -39,7 +40,7 @@ sidebar:
 「タスク」は今回の**具体的な依頼**です。  
 依頼が明確であるほど、Codex は作業しながら推測する必要が減ります。
 
-概念対照：[スレッド、タスク、プロジェクト](/guide/foundations/threads-tasks-and-projects/)
+概念対照：[スレッド、タスク、プロジェクト](/ja/guide/foundations/threads-tasks-and-projects/)
 
 ## よくある誤解
 

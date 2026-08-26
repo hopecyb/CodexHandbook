@@ -3,9 +3,10 @@ title: Modèle de modification
 description: Itérer sur l'existant avec des limites claires.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèle de modification
@@ -61,8 +62,8 @@ Un Prompt de modification dit **quoi** changer et **jusqu'où** seulement.
 
 ## Voir aussi
 
-- [Définir le terminé](/prompts/define-done/)
-- [Contraintes et limites](/prompts/constraints-and-boundaries/)
+- [Définir le terminé](/fr/prompts/define-done/)
+- [Contraintes et limites](/fr/prompts/constraints-and-boundaries/)
 
 ---
 

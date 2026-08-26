@@ -3,11 +3,12 @@ title: ガイドページの執筆
 description: 新しいハンドブック本文の構造、frontmatter、相互リンクの約束事。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 本ページでは、`src/content/docs/` に**ガイド型**のページ（純粋な事例や参照表だけではないページ）を追加・改稿する方法を説明します。
@@ -49,7 +50,7 @@ description: 本文が解決する問題を一文で
 
 ## 推奨構造
 
-[外部資料統合テンプレート](/docs/planning/external-source-integration.md#6-推荐页面模板) から節を選び、よくある組み合わせは次のとおりです。
+[外部資料統合テンプレート](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板) から節を選び、よくある組み合わせは次のとおりです。
 
 - ページが解決する問題
 - 誰向けか
@@ -113,7 +114,7 @@ description: 本文が解決する問題を一文で
 
 ## 検証
 
-PR 提出前に [技術コンテンツの検証](/guide/contributing/verify-technical-content/) を読んでください。コマンド、価格、権限など変わりやすい情報は必ず再確認します。
+PR 提出前に [技術コンテンツの検証](/ja/guide/contributing/verify-technical-content/) を読んでください。コマンド、価格、権限など変わりやすい情報は必ず再確認します。
 
 良いガイドページは「資料を全部書いた」ことではなく、初めて来た読者がページの存在理由、最初に読むべき箇所、次の一歩を理解できることにあります。
 

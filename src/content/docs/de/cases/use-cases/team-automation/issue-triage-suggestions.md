@@ -3,9 +3,10 @@ title: "Fall: Issue-Triage und Label-Vorschläge"
 description: Mit Codex neue Issues lesen und Labels sowie Zuständige vorschlagen — leichte Team-Automatisierung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadaten
@@ -41,7 +42,7 @@ translated_at: 2026-07-28
 
 **Planen:** JSON-Schema definieren: `{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Ausführen:** `codex exec` mit Issue-Title + Body (auf [Prompt-Injection](/guide/team-enterprise/security/prompt-injection/)-Bereinigung achten).
+**Ausführen:** `codex exec` mit Issue-Title + Body (auf [Prompt-Injection](/de/guide/team-enterprise/security/prompt-injection/)-Bereinigung achten).
 
 **Überprüfen:** An 3 historischen Issue-Fixtures mit menschlichen Labels vergleichen; Übereinstimmung > 80 %, bevor live.
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-28
 
 ## 5. Verstetigen
 
-- Optional an internes Ticketsystem über [Webhook](/guide/developer-platform/webhooks/overview/) anbinden
-- Retro in die [Fallvorlage](/cases/use-cases/case-study-template/) schreiben
+- Optional an internes Ticketsystem über [Webhook](/de/guide/developer-platform/webhooks/overview/) anbinden
+- Retro in die [Fallvorlage](/de/cases/use-cases/case-study-template/) schreiben
 
 ## 6. Verwandte Kapitel
 
-- [GitHub-Integration](/guide/integrations/github/)
-- [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/)
+- [GitHub-Integration](/de/guide/integrations/github/)
+- [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/)
 
 ---
 

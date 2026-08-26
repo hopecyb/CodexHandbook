@@ -3,12 +3,13 @@ title: Brainstormer avant de construire
 description: Exploration structurée pour converger vers une approche avant le code ou la rédaction longue — réduit les retours en arrière.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Brainstormer avant de construire** convient aux tâches où l'objectif est flou ou où plusieurs approches existent : nouvelles fonctionnalités, refontes, sujets de contenu, choix techniques. Cela se relie à la phase ① Explorer de [exploration—planification—exécution—vérification](/cases/workflows/explore-plan-execute-verify/), mais met l'accent sur la **divergence et la convergence** plutôt que de lire immédiatement le code et modifier des fichiers.
+**Brainstormer avant de construire** convient aux tâches où l'objectif est flou ou où plusieurs approches existent : nouvelles fonctionnalités, refontes, sujets de contenu, choix techniques. Cela se relie à la phase ① Explorer de [exploration—planification—exécution—vérification](/fr/cases/workflows/explore-plan-execute-verify/), mais met l'accent sur la **divergence et la convergence** plutôt que de lire immédiatement le code et modifier des fichiers.
 
 ## Ce que couvre cette page
 
@@ -43,7 +44,7 @@ indiquez 2 points de décision que je dois confirmer (format, permissions).
 
 **Phase C — Entrer en planification**
 
-Après confirmation, enchaîner avec le [travail piloté par la spécification](/cases/workflows/specification-driven-work/) ou l'EPXV ② Planifier.
+Après confirmation, enchaîner avec le [travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/) ou l'EPXV ② Planifier.
 
 ## Flux de travail recommandé
 
@@ -78,9 +79,9 @@ Fixer une **limite de temps** : par exemple, terminer la divergence en 15 minute
 
 ## Chapitres connexes
 
-- [Exploration—planification—exécution—vérification](/cases/workflows/explore-plan-execute-verify/)
-- [Travail piloté par la spécification](/cases/workflows/specification-driven-work/)
-- [Demander un plan](/prompts/ask-for-a-plan/)
+- [Exploration—planification—exécution—vérification](/fr/cases/workflows/explore-plan-execute-verify/)
+- [Travail piloté par la spécification](/fr/cases/workflows/specification-driven-work/)
+- [Demander un plan](/fr/prompts/ask-for-a-plan/)
 
 ---
 

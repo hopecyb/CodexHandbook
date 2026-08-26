@@ -1,120 +1,61 @@
 ---
 title: IDE 扩展设置
-description: 模型、审批、上下文与扩展行为在 IDE 中的配置入口。
+description: 区分共享 Agent 配置与 VS Code 系编辑器行为设置。
 sidebar:
   order: 80
 ---
 
-IDE 扩展设置连接**个人偏好**与**项目规则**：模型选哪档、审批多严、是否自动附带打开文件等。与全局 [配置基础](/guide/customization/configuration/config-basics/) 一致，本页侧重编辑器内的常见选项。
+IDE 里有两层设置：
 
-## 本页内容
-
-- IDE 设置 vs 用户配置 vs `AGENTS.md` 的分工
-- 开发者最常调整的项
-- 团队如何对齐默认值
-
-## 这些设置到底管什么
-
-IDE 设置更接近：**Codex 在编辑器里跟你配合时的默认习惯**。
-
-它处理的是像下面这些问题：
-
-- 默认用什么模型
-- 默认把审批收多紧
-- 默认要不要把当前文件、选区自动带进去
-
-它不负责定义项目规则本身，而是决定你在编辑器里用起来是否顺手、是否稳定。
-
-## 配置层级（复习）
-
-| 层级 | 示例 | 优先级 |
+| 设置层 | 存放位置 | 负责什么 |
 |---|---|---|
-| 组织托管策略 | 禁止放宽沙盒 | 最高 |
-| 项目 `AGENTS.md` / 项目配置 | 测试命令、目录约定 | 高 |
-| IDE 扩展设置 UI | 默认模型、面板布局 | 中 |
-| 单次任务 prompt | 「本次不要联网」 | 任务级 |
+| Codex Agent 设置 | `config.toml` | 模型、推理强度、权限、沙箱、MCP、个性化；与 CLI 共享 |
+| 编辑器设置 | VS Code 设置系统中的 `chatgpt.*` | 侧栏、消息排队、发送键、review 展示、语言和字体 |
 
-见 [作用域与优先级](/guide/customization/agents-md/scope-and-precedence/)
+仓库规则仍应写进 `AGENTS.md`，不要塞进某个人的编辑器设置。
 
-## 常见误会
+## 打开设置
 
-### IDE 设置不是项目规范
+在 Codex 侧栏选择齿轮，再选择 **Codex Settings**。常用 Agent 选项可在面板修改，也可选择 **Open config.toml** 编辑当前生效的配置层。
 
-很多人会把“我编辑器里默认怎么配”误当成“这个项目就应该这么做”。
+编辑器行为设置可在编辑器 Settings 中搜索 `@ext:openai.chatgpt`、`Codex` 或具体键名。
 
-更清楚的分法：
+## 值得先理解的设置
 
-- 编辑器设置偏个人使用体验
-- `AGENTS.md` 和项目配置偏团队共识
+| 键 | 默认值 | 何时修改 |
+|---|---:|---|
+| `chatgpt.openOnStartup` | `false` | 希望扩展启动后自动聚焦侧栏 |
+| `chatgpt.followUpQueueMode` | `queue` | 改为 `steer` 后，新消息会引导当前执行 |
+| `chatgpt.composerEnterBehavior` | `enter` | 多行提示词经常误发送时修改 |
+| `chatgpt.reviewDelivery` | `inline` | 希望 `/review` 改在独立聊天显示时用 `detached` |
+| `chatgpt.localeOverride` | 自动 | 需要固定界面语言 |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | 仓库和工具链位于 WSL2 时启用 |
 
-两者相关，但不是一回事。
+`chatgpt.cliExecutable` 只用于开发 Codex CLI；普通用户不应手工覆盖扩展内置可执行文件，否则部分功能可能失效。
 
-### 自动带上下文，不一定越多越好
+## 配置优先级的实际理解
 
-自动带上当前文件、选区、打开标签页，确实方便；但如果自动塞得太多，也会把任务重点冲淡。
+- 组织策略定义不可突破的上限；
+- `config.toml` 决定 Agent 默认行为；
+- `AGENTS.md` 提供仓库与目录规则；
+- 编辑器设置只改变 IDE 体验；
+- 单次提示词补充本次任务目标和边界。
 
-这里更实际的标准是够用就好，不必追求“开越多越强”。
+如果某项“设置不生效”，先确认自己改的是哪一层，再检查是否被更高层策略约束。完整原理见[作用域与优先级](/guide/customization/agents-md/scope-and-precedence/)。
 
-## 常改设置（概念）
+## 修改后验证
 
-### 模型与推理
+一次只改一项。例如把 `chatgpt.reviewDelivery` 改为 `detached` 后，在 Git 仓库中运行 `/review`，确认是否打开独立审查聊天。记录原值，结果不符时恢复并重载编辑器。
 
-影响响应速度与复杂任务质量。团队项目可以在 README 注明「推荐模型档位」，避免每人默认不一致导致难以复现问题。
+## 官方依据
 
-### 审批与沙盒
+- [Codex IDE 设置参考](https://learn.chatgpt.com/docs/ide/settings)
+- [配置基础](https://learn.chatgpt.com/docs/config)
 
-与 [权限与审批](/guide/foundations/permissions-and-approvals/) 对应：
-
-- 初学者：保持默认或更严格
-- 受信仓库：谨慎放宽，且不与生产 secrets 目录混用
-
-CLI 与 IDE 应使用**同一安全基线**；CLI 详见 [CLI 配置](/guide/cli/configuration/)。
-
-### 上下文行为
-
-部分扩展可配置：
-
-- 是否自动包含当前文件 / 选区
-- 是否读取 `AGENTS.md`
-- 上下文窗口相关选项（以版本为准）
-
-过多自动上下文会增加噪音；见 [保持上下文聚焦](/guide/context/keep-context-focused/)。
-
-### 登录与账号
-
-与 [登录与认证](/guide/getting-started/sign-in-and-authentication/) 共用；换账号后重启扩展会话。
-
-## 团队对齐
-
-1. 把**必须一致**的项写进仓库（`AGENTS.md` + 可选项目配置）
-2. 把**个人习惯**留在 IDE 设置，不写进 Git
-3. 新成员 onboarding：对照 [IDE 安装](/guide/ide/installation/) 检查扩展版本
-
-## 第一次看哪些
-
-第一次配 IDE 扩展，可以只看三类设置：
-
-1. 模型与推理档位
-2. 审批/安全相关
-3. 自动上下文相关
-
-把这三类调顺，基本已经能覆盖大多数真实使用问题。
-
-## 排障
-
-| 现象 | 检查 |
-|---|---|
-| 设置不生效 | 是否被组织策略覆盖；是否需重载窗口 |
-| 与 CLI 行为不一致 | 对比 [配置参考](/guide/reference/configuration-reference/) |
-| 扩展无响应 | [IDE 排障](/guide/ide/troubleshooting/) |
-
-IDE 设置更像“你在编辑器里怎么和 Codex 配合”；项目规则怎么写，是另一层事情，别混在一起。
-
-## 参考来源
-- OpenAI Codex IDE settings
 ---
 
-**状态：** outdated  
-**适用产品：** IDE  
-**复核说明：** 本页围绕 IDE 扩展设置项、自动上下文、审批偏好和组织覆盖展开，但这些设置入口和命名很容易随扩展版本变化；当前缺少足够强的官方设置文档来支撑整页内容。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** IDE
+
+**最近核验：** 2026-08-26

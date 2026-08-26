@@ -3,9 +3,10 @@ title: 일일 보고서 자동화
 description: 반복되는 요약 작업을 재사용 가능한 스크립트 또는 Skill로 고정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 일일 보고서 자동화
@@ -35,8 +36,8 @@ translated_at: 2026-07-28
 
 ## 4. 정착
 
-- [자동화 Skill 예시](/skills/examples/automation-skill/)
-- [예약 작업](/skills/automations/scheduled-tasks/)
+- [자동화 Skill 예시](/ko/skills/examples/automation-skill/)
+- [예약 작업](/ko/skills/automations/scheduled-tasks/)
 ---
 
 **상태:** verified  

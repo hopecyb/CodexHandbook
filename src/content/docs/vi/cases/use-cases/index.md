@@ -3,9 +3,10 @@ title: Thư viện kịch bản và case
 description: Tác vụ thực tế đầu-cuối — chuẩn bị, thực thi, kiểm chứng, phục hồi thất bại và rút kinh nghiệm.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6349392
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Thư viện case trả lời: «**Với mục tiêu thực tế kiểu này, trải nghiệm đi hết một vòng Codex là gì?**» Bổ sung cho mô tả sản phẩm từng trang.
@@ -21,17 +22,17 @@ Thư viện case trả lời: «**Với mục tiêu thực tế kiểu này, tr�
 ## Cách dùng
 
 1. Chọn case gần mục tiêu nhất (hoặc chỉ lấy «checklist chuẩn bị»)
-2. Đối chiếu [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-3. Sau khi xong, dùng [mẫu case](/cases/use-cases/case-study-template/) để rút kinh nghiệm, quyết định có đóng gói thành Skill không
+2. Đối chiếu [Khám phá—Lập kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+3. Sau khi xong, dùng [mẫu case](/vi/cases/use-cases/case-study-template/) để rút kinh nghiệm, quyết định có đóng gói thành Skill không
 
 ## Case starter hiện có
 
 | Lĩnh vực | Case | Mô tả |
 |---|---|---|
-| Phát triển phần mềm | [Sửa bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/) | Vòng lặp phổ biến nhất của nhà phát triển |
-| Sáng tạo nội dung | [Refactor site tài liệu kèm review](/cases/use-cases/content-creation/refactor-docs-with-review/) | Tài liệu nhiều tệp và nghiệm thu build |
-| Nghiên cứu và học | [Bảng so sánh tính năng đối thủ](/cases/use-cases/research-and-learning/competitive-feature-matrix/) | Đầu ra nghiên cứu có nguồn |
-| Tự động hóa nhóm | [Kiểm tra liên kết theo lịch](/cases/use-cases/team-automation/scheduled-link-check/) · [Gợi ý phân loại Issue](/cases/use-cases/team-automation/issue-triage-suggestions/) | Tự động hóa CI và ticket nhẹ |
+| Phát triển phần mềm | [Sửa bug kèm kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/) | Vòng lặp phổ biến nhất của nhà phát triển |
+| Sáng tạo nội dung | [Refactor site tài liệu kèm review](/vi/cases/use-cases/content-creation/refactor-docs-with-review/) | Tài liệu nhiều tệp và nghiệm thu build |
+| Nghiên cứu và học | [Bảng so sánh tính năng đối thủ](/vi/cases/use-cases/research-and-learning/competitive-feature-matrix/) | Đầu ra nghiên cứu có nguồn |
+| Tự động hóa nhóm | [Kiểm tra liên kết theo lịch](/vi/cases/use-cases/team-automation/scheduled-link-check/) · [Gợi ý phân loại Issue](/vi/cases/use-cases/team-automation/issue-triage-suggestions/) | Tự động hóa CI và ticket nhẹ |
 
 Prompt có thể sao chép xem trong kho [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts). Case theo lĩnh vực sẽ tiếp tục được bổ sung vào thư viện này.
 

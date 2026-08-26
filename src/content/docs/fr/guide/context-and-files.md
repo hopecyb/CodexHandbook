@@ -5,9 +5,10 @@ sidebar:
   order: 15
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2007fae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Contexte et fichiers
@@ -42,13 +43,13 @@ Un critère simple pour cette page :
 
 ## Gestion du Contexte
 
-- [Contexte de projet](/guide/context/project-context/) — `AGENTS.md`, conventions du dépôt
-- [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/) — références @ et périmètre
-- [Contexte de conversation](/guide/context/conversation-context/) — fils et compaction
-- [Garder le Contexte focalisé](/guide/context/keep-context-focused/) — éviter le bruit non lié
-- [Contexte sensible](/guide/context/sensitive-context/) — secrets et confidentialité
+- [Contexte de projet](/fr/guide/context/project-context/) — `AGENTS.md`, conventions du dépôt
+- [Contexte de fichiers et dossiers](/fr/guide/context/file-and-folder-context/) — références @ et périmètre
+- [Contexte de conversation](/fr/guide/context/conversation-context/) — fils et compaction
+- [Garder le Contexte focalisé](/fr/guide/context/keep-context-focused/) — éviter le bruit non lié
+- [Contexte sensible](/fr/guide/context/sensitive-context/) — secrets et confidentialité
 
-Comment organiser l'arrière-plan dans les Prompts : [objectifs et Contexte](/prompts/goals-and-context/).
+Comment organiser l'arrière-plan dans les Prompts : [objectifs et Contexte](/fr/prompts/goals-and-context/).
 
 ## Fichiers et artefacts
 
@@ -64,18 +65,18 @@ Différents types de fichiers impliquent différentes façons de lire, de prompt
 
 ## Fichiers et artefacts
 
-- [Fichiers texte et code](/guide/files-and-artifacts/text-and-code-files/)
-- [Images et captures d'écran](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDF et documents](/guide/files-and-artifacts/pdf-and-documents/)
-- [Tableaux et feuilles de calcul](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [Présentations](/guide/files-and-artifacts/presentations/)
+- [Fichiers texte et code](/fr/guide/files-and-artifacts/text-and-code-files/)
+- [Images et captures d'écran](/fr/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF et documents](/fr/guide/files-and-artifacts/pdf-and-documents/)
+- [Tableaux et feuilles de calcul](/fr/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [Présentations](/fr/guide/files-and-artifacts/presentations/)
 
 ## Ordre de lecture suggéré
 
 Pas besoin de tout lire d'un coup :
 
-1. [Contexte de fichiers et dossiers](/guide/context/file-and-folder-context/) — quels fichiers montrer
-2. [Garder le Contexte focalisé](/guide/context/keep-context-focused/) — éviter de disperser la Tâche
+1. [Contexte de fichiers et dossiers](/fr/guide/context/file-and-folder-context/) — quels fichiers montrer
+2. [Garder le Contexte focalisé](/fr/guide/context/keep-context-focused/) — éviter de disperser la Tâche
 3. Lisez les chapitres par type de fichier correspondant à ce sur quoi vous travaillez
 
 Le Contexte est la pile d'informations dont Codex juge — bien le préparer rend les résultats plus faciles à obtenir.

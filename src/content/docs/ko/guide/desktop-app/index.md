@@ -5,9 +5,10 @@ sidebar:
   order: 10
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a3f2555
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 데스크톱 App은 초보자의 기본 진입점입니다. 프로젝트, 작업, 차이, 승인을 시각적으로 다룰 수 있습니다.
@@ -72,18 +73,18 @@ translated_at: 2026-07-28
 
 ## 이 장
 
-- [설치와 인터페이스](/guide/desktop-app/installation-and-interface/)
-- [프로젝트와 작업](/guide/desktop-app/projects-and-tasks/)
-- [병렬 Agent](/guide/desktop-app/parallel-agents/)
-- [작업 트리](/guide/desktop-app/worktrees/)
-- [diff, 댓글, 검토](/guide/desktop-app/diffs-comments-and-review/)
-- [통합 터미널](/guide/desktop-app/integrated-terminal/)
-- [로컬과 Cloud 작업](/guide/desktop-app/local-and-cloud-tasks/)
-- [알림](/guide/desktop-app/notifications/)
-- [설정](/guide/desktop-app/settings/)
-- [문제 해결](/guide/desktop-app/troubleshooting/)
+- [설치와 인터페이스](/ko/guide/desktop-app/installation-and-interface/)
+- [프로젝트와 작업](/ko/guide/desktop-app/projects-and-tasks/)
+- [병렬 Agent](/ko/guide/desktop-app/parallel-agents/)
+- [작업 트리](/ko/guide/desktop-app/worktrees/)
+- [diff, 댓글, 검토](/ko/guide/desktop-app/diffs-comments-and-review/)
+- [통합 터미널](/ko/guide/desktop-app/integrated-terminal/)
+- [로컬과 Cloud 작업](/ko/guide/desktop-app/local-and-cloud-tasks/)
+- [알림](/ko/guide/desktop-app/notifications/)
+- [설정](/ko/guide/desktop-app/settings/)
+- [문제 해결](/ko/guide/desktop-app/troubleshooting/)
 
-시작 입구: [데스크톱 App 설치](/guide/getting-started/install-desktop-app/)
+시작 입구: [데스크톱 App 설치](/ko/guide/getting-started/install-desktop-app/)
 
 데스크톱 App은 Codex와의 기본 협업을 먼저 통과시키는 데 적합합니다. 그다음에 명령줄과 더 고급 워크플로를 보완하면 됩니다.
 

@@ -11,8 +11,10 @@ tags: [openclaw, personal-ai-assistant, gateway, multi-channel, agent]
 authored_by: ai-assisted
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-08-09
+reviewed_at: 2026-08-26
+source_revision: 2435d64
 ---
 
 # OpenClaw（個人 AI アシスタントゲートウェイ）

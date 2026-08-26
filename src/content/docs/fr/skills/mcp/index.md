@@ -3,48 +3,51 @@ title: MCP
 description: Connecter outils et sources de données externes — quand MCP est vraiment nécessaire.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ff68431
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`MCP` est une voie standard pour que Codex se connecte à des outils et sources de données externes.
+MCP (Model Context Protocol) answers “how can an Agent call tools and data outside the repository?” It does not define a workflow.
 
-Si le Skill porte surtout sur « les étapes pour faire le travail », MCP gère « amener les outils externes ».
+## Who it is for
 
-## Ce que couvre cette section
+- Individual developers who want Codex to query documentation, designs, tickets, or internal tools.
+- Teams that need consistent external-tool configuration, OAuth, and least privilege.
+- Maintainers diagnosing “the server is configured, but its tools are unavailable or calls fail.”
 
-- Quand vous avez vraiment besoin de MCP
-- Comment connecter des systèmes externes sans ouvrir les permissions trop largement
-- Ce qu'il faut vérifier en premier quand la connexion ou les appels échouent
+If the task only reads and writes the current repository, start with built-in file and terminal capabilities. Add MCP only when third-party context or action is required.
 
-## Ordre recommandé
+## Reading order
 
-1. [Vue d'ensemble MCP](/skills/mcp/mcp-overview/) : séparer MCP de Skill et Plugin d'abord
-2. [Connecter un serveur MCP](/skills/mcp/connect-an-mcp-server/) : câbler votre premier serveur par configuration
-3. [Déboguer MCP](/skills/mcp/debugging-mcp/) : quand la connexion échoue, outils manquants ou permissions incorrectes
+1. [MCP overview](/fr/skills/mcp/mcp-overview/): separate the responsibilities of MCP, Skills, and Plugins
+2. [Connect an MCP server](/fr/skills/mcp/connect-an-mcp-server/): connect the first server with the CLI or `config.toml`
+3. [Debug MCP](/fr/skills/mcp/debugging-mcp/): diagnose configuration, startup, authentication, and tool layers
 
-## Idées reçues courantes
+## Current support boundaries
 
-### 1. MCP rend Codex « tout-puissant »
+- The ChatGPT desktop App, Codex CLI, and IDE integration share MCP configuration when they use the same Codex host.
+- Local Codex clients support STDIO and Streamable HTTP servers.
+- ChatGPT Web does not read local `~/.codex/config.toml`; it uses remote MCP tools supplied by installed Plugins.
 
-Ce qu'il peut faire dépend entièrement des outils exposés par le serveur MCP et des permissions que ces outils accordent.
+## Three rules
 
-### 2. MCP n'est qu'un problème d'intégration technique
+1. MCP exposes tools; it does not define a reliable process. Put durable workflows in a Skill or `AGENTS.md`.
+2. Server capability depends on its exposed tools and the scope of the underlying credential.
+3. Begin with read-only tools, a test tenant, and a small tool set. Do not experiment with a production administrator token.
 
-Une fois qu'il touche de vrais systèmes, cela devient immédiatement :
+## Official sources
 
-- Un problème de permissions
-- Un problème d'exposition de données
-- Un problème d'audit
-
-Cette section couvre donc non seulement « comment connecter » mais « comment ne pas connecter mal ».
-
-MCP vaut le coup quand la tâche doit toucher de vrais systèmes hors du dépôt.
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [Model Context Protocol specification](https://modelcontextprotocol.io/)
 
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** App / CLI / IDE  
-**Base de vérification :** Cette section couvre comment Codex connecte actuellement MCP, emplacements de config et appariement des permissions ; la documentation publique officielle a un détail client limité — réécriture nécessaire pour les produits actuels.  
-**Dernière vérification :** 2026-07-26
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP tools through Plugins
+
+**Verification scope:** Client support, shared configuration, transport types, and CLI commands
+
+**Last verified:** 2026-08-25

@@ -3,16 +3,17 @@ title: Prompt injection
 description: Cuando texto no confiable entra en el Contexto — identificación, mitigación y puntos de política de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 La «Prompt injection» es meter en el Contexto que Codex verá contenido diseñado para engañarlo.
 
-Ese contenido puede venir de issues, páginas web, comentarios de dependencias, documentación o texto pegado por el usuario, y suele buscar que el Agent **ignore la política, filtre datos o ejecute comandos peligrosos**. Es un riesgo frecuente del [modelo de amenazas](/guide/team-enterprise/security/threat-model/) y no está lejos del trabajo real.
+Ese contenido puede venir de issues, páginas web, comentarios de dependencias, documentación o texto pegado por el usuario, y suele buscar que el Agent **ignore la política, filtre datos o ejecute comandos peligrosos**. Es un riesgo frecuente del [modelo de amenazas](/es/guide/team-enterprise/security/threat-model/) y no está lejos del trabajo real.
 
 ## Contenido
 
@@ -84,12 +85,12 @@ En la realidad la inyección puede ser menos directa, pero esta distinción ya b
 **Capa de diseño**
 
 - Separar **política del sistema** y **contenido de usuario no confiable** (la arquitectura varía según el producto)
-- Operaciones muy sensibles siempre con [Aprobación humana](/cases/workflows/human-approval-patterns/)
+- Operaciones muy sensibles siempre con [Aprobación humana](/es/cases/workflows/human-approval-patterns/)
 
 **Capa de ingeniería**
 
 - El Prompt de CI **no** debe concatenar el body del PR tal cual; usa campos estructurados + límite de longitud
-- [Hook](/skills/hooks/hooks-examples/) que escanee frases de inyección conocidas (capa complementaria)
+- [Hook](/es/skills/hooks/hooks-examples/) que escanee frases de inyección conocidas (capa complementaria)
 - Token de solo lectura; prohibir `git push`
 
 **Capa de proceso**
@@ -129,7 +130,7 @@ Las «órdenes de operación» de fuentes no del todo confiables no deben hereda
 
 - [ ] El flujo de revisión CI/Cloud ha evaluado la superficie de inyección
 - [ ] Los maintainers saben identificar issues sospechosos
-- [ ] Alineado con el [uso aceptable](/guide/team-enterprise/governance/acceptable-use/)
+- [ ] Alineado con el [uso aceptable](/es/guide/team-enterprise/governance/acceptable-use/)
 
 ## Fuentes de referencia
 - OWASP LLM Top 10 (Prompt Injection)

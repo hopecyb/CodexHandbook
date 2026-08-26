@@ -5,12 +5,13 @@ sidebar:
   order: 80
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b13e05c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Codex Handbook** est un site de documentation maintenu par la communauté. Nous accueillons les corrections, nouvelles pages, cas reproductibles et exemples de Prompt dans [examples/](/examples/README.md).
+**Codex Handbook** est un site de documentation maintenu par la communauté. Nous accueillons les corrections, nouvelles pages, cas reproductibles et exemples de Prompt dans [examples/](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md).
 
 ## Ce que cette page couvre
 
@@ -35,10 +36,10 @@ Vous n'avez pas besoin d'être l'expert du domaine en premier. Beaucoup d'améli
 | Type | Description | Guide |
 |---|---|---|
 | Correction / petite édition | Typos, liens, une phrase obsolète | PR directe |
-| Nouvelle page guide | Corps de chapitre sous `src/content/docs/` | [Écrire un guide](/guide/contributing/write-a-guide/) |
-| Étude de cas | `src/content/docs/cases/` | [Modèle de cas](/cases/use-cases/case-study-template/) |
-| Exemple de Prompt | `examples/prompts/` | [Ajouter un exemple de Prompt](/guide/contributing/add-a-prompt-example/) |
-| Vérification technique | Marquer `verified`, mettre à jour les dates | [Vérifier le contenu technique](/guide/contributing/verify-technical-content/) |
+| Nouvelle page guide | Corps de chapitre sous `src/content/docs/` | [Écrire un guide](/fr/guide/contributing/write-a-guide/) |
+| Étude de cas | `src/content/docs/cases/` | [Modèle de cas](/fr/cases/use-cases/case-study-template/) |
+| Exemple de Prompt | `examples/prompts/` | [Ajouter un exemple de Prompt](/fr/guide/contributing/add-a-prompt-example/) |
+| Vérification technique | Marquer `verified`, mettre à jour les dates | [Vérifier le contenu technique](/fr/guide/contributing/verify-technical-content/) |
 | Traduction | `en/`, `zh-tw/`, etc. | Roadmap M6 ; stabiliser la source d'abord |
 
 ## Idées reçues courantes
@@ -59,7 +60,7 @@ Si votre audience inclut des débutants, où vous bloquez est un signal — si v
 ## Principes fondamentaux
 
 1. **Le chinois simplifié `root` est la source** (sauf indication contraire)
-2. **Ne pas copier** les tutoriels externes mot pour mot ; voir [Plan d'intégration sources externes](/docs/planning/external-source-integration.md)
+2. **Ne pas copier** les tutoriels externes mot pour mot ; voir [Plan d'intégration sources externes](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. **Les faits volatils** nécessitent des dates `Dernière vérification`
 4. **Chaque slug sidebar** nécessite un fichier markdown ou `npm run build` échoue
 5. Les nouvelles pages doivent mettre à jour la sidebar `astro.config.mjs`
@@ -98,7 +99,7 @@ Une première contribution n'a pas besoin d'être immense — clarifier un vrai 
 ## Liens associés
 
 - Dépôt : <https://github.com/hopecyb/CodexHandbook>
-- [Plan de chapitres](/docs/planning/chapter-outline.md) (planification)
+- [Plan de chapitres](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (planification)
 
 ---
 

@@ -3,9 +3,10 @@ title: "Instructions projet"
 description: Contexte au niveau projet au-delà de AGENTS.md — comment README, docs et références de conversation divisent les responsabilités.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e2c79fe
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -55,7 +56,7 @@ Alors non seulement les humains sont confus — Codex aussi. Le point est de gar
 - **Instructions projet** : relativement stables pour des mois
 - **Contexte de conversation** : objectif, contraintes et conclusions intermédiaires de cette tâche
 
-Dans les longues tâches, si une règle revient sans cesse, **la réécrire** dans `AGENTS.md` ou `docs/` au lieu de copier-coller sur dix fils. Voir [Garder le contexte focalisé](/guide/context/keep-context-focused/).
+Dans les longues tâches, si une règle revient sans cesse, **la réécrire** dans `AGENTS.md` ou `docs/` au lieu de copier-coller sur dix fils. Voir [Garder le contexte focalisé](/fr/guide/context/keep-context-focused/).
 
 ## Erreurs courantes
 

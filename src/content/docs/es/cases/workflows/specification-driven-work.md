@@ -3,12 +3,13 @@ title: Trabajo impulsado por especificación
 description: Escribe primero una especificación aceptable y deja que Codex implemente según el plan — ideal para entregas con requisitos claros.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Trabajo impulsado por especificación** consiste en preparar una especificación breve —objetivo, alcance, interfaces y criterios de aceptación— antes de tocar muchos archivos. Puede ir después de [lluvia de ideas](/cases/workflows/brainstorm-before-building/) o entrar directamente en [EPXV](/cases/workflows/explore-plan-execute-verify/) cuando el requisito ya está claro.
+**Trabajo impulsado por especificación** consiste en preparar una especificación breve —objetivo, alcance, interfaces y criterios de aceptación— antes de tocar muchos archivos. Puede ir después de [lluvia de ideas](/es/cases/workflows/brainstorm-before-building/) o entrar directamente en [EPXV](/es/cases/workflows/explore-plan-execute-verify/) cuando el requisito ya está claro.
 
 ## Enfoque de esta página
 
@@ -57,7 +58,7 @@ no añadas funciones que no estén en la especificación. Espera mi confirmació
 
 ## Combinación con trabajo impulsado por tests
 
-Los criterios de aceptación de la especificación deberían ser, en la medida de lo posible, **testeables**; lo que se pueda escribir como test, escríbelo primero: [Trabajo impulsado por tests](/cases/workflows/test-driven-work/).
+Los criterios de aceptación de la especificación deberían ser, en la medida de lo posible, **testeables**; lo que se pueda escribir como test, escríbelo primero: [Trabajo impulsado por tests](/es/cases/workflows/test-driven-work/).
 
 ## Errores frecuentes
 

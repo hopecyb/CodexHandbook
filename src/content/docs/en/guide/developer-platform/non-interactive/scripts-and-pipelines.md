@@ -1,11 +1,12 @@
 ---
+reviewed_at: 2026-08-26
 title: Scripts and Pipelines
 description: Orchestrate codex exec in shell, Makefile, and GitHub Actions—repeatable and auditable.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -14,13 +15,13 @@ This is about turning Codex from a one-off action into **steps your team can rer
 
 Scripts fix the flow; pipelines repeat it on schedule or on events.
 
-This page shows how to embed [codex exec](/guide/developer-platform/non-interactive/codex-exec/) in shell, Makefile, or CI pipelines.
+This page shows how to embed [codex exec](/en/guide/developer-platform/non-interactive/codex-exec/) in shell, Makefile, or CI pipelines.
 
 ## What this page covers
 
 - Local scripts vs CI jobs
 - Managing prompts and secrets
-- Combining with [code review automation](/guide/developer-platform/ci-cd/code-review-automation/)
+- Combining with [code review automation](/en/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## What this solves
 
@@ -60,7 +61,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" --ephemeral "$(cat "$PROMPT_FILE")"
 ```
 
 Keep `prompts/ci/security-review.md` in Git; changes go through review.
@@ -75,7 +76,7 @@ Do not aim for “everything at once.” Fix these three first:
 
 Then adding logs, schema, and notifications is much easier.
 
-## GitHub Actions sketch
+## GitHub Actions: use the official Action
 
 ```yaml
 jobs:
@@ -83,24 +84,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Install Codex CLI
-        run: |
-          # Pin version per official install docs
-          npm install -g @openai/codex@<pinned-version>
       - name: Run review
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: prompts/ci/pr-review.md
 ```
 
 :::caution
-Adjust install method and permission scopes to org security requirements; **do not** echo secrets in workflows.
+Prefer the official `openai/codex-action` in GitHub Actions. Do not expose the API key to an entire job that also runs repository code. If a later step must write to a PR, separate write permission and the key into different jobs and pass a patch artifact between them.
 :::
 
 ## Recommended layers
@@ -109,7 +105,7 @@ Adjust install method and permission scopes to org security requirements; **do n
 |---|---|
 | Repo | `prompts/`, `tools/run-codex.sh` |
 | CI | Read-only checkout, pinned CLI, upload log artifacts |
-| Callback | Optional [Webhook](/guide/developer-platform/webhooks/overview/) to update internal systems |
+| Callback | Optional [Webhook](/en/guide/developer-platform/webhooks/overview/) to update internal systems |
 
 ## How to decide
 
@@ -146,7 +142,7 @@ Do not rush “full auto” before the flow is stable; script first, then pipeli
 - OpenAI Codex + GitHub integration docs
 ---
 
-**Status:** outdated  
-**Products:** CLI  
-**Review note:** The principle of versioning prompts, scripts, and pipelines in Git still holds, but examples depend on `codex exec`, CLI install, and GitHub Actions wiring—high-churn details; restore `verified` after current official pipeline docs are added.  
+**Status:** outdated
+**Products:** CLI
+**Review note:** The principle of versioning prompts, scripts, and pipelines in Git still holds, but examples depend on `codex exec`, CLI install, and GitHub Actions wiring—high-churn details; restore `verified` after current official pipeline docs are added.
 **Last verified:** 2026-07-26

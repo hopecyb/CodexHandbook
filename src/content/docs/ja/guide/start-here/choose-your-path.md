@@ -3,9 +3,10 @@ title: パスを選ぶ
 description: 役割、タスク、製品入口に応じて読むルートを選ぶ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 612639b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -16,29 +17,29 @@ sidebar:
 
 ## 役割別
 
-- [初心者 5 ステップ](/guide/learning-paths/beginner/01-talk-to-codex/)（MVP 完成）
-- [クリエイターパス概要](/guide/learning-paths/creator/)
-- [開発者パス概要](/guide/learning-paths/developer/)
-- [チームパス概要](/guide/learning-paths/team/)
+- [初心者 5 ステップ](/ja/guide/learning-paths/beginner/01-talk-to-codex/)（MVP 完成）
+- [クリエイターパス概要](/ja/guide/learning-paths/creator/)
+- [開発者パス概要](/ja/guide/learning-paths/developer/)
+- [チームパス概要](/ja/guide/learning-paths/team/)
 
 ## タスク別
 
 | やりたいこと | まず読む |
 |---|---|
-| Codex と用語を理解する | [基礎概念](/guide/foundations/) |
-| 今日 1 回通す | [クイックスタート](/guide/getting-started/) |
-| プロンプトを書く | [プロンプト](/prompts/) |
-| 結果の確認方法を学ぶ | [品質と検証](/guide/quality/) |
-| 対照表とトラブルシューティング | [リファレンス](/guide/reference/) |
+| Codex と用語を理解する | [基礎概念](/ja/guide/foundations/) |
+| 今日 1 回通す | [クイックスタート](/ja/guide/getting-started/) |
+| プロンプトを書く | [プロンプト](/ja/prompts/) |
+| 結果の確認方法を学ぶ | [品質と検証](/ja/guide/quality/) |
+| 対照表とトラブルシューティング | [リファレンス](/ja/guide/reference/) |
 
 ## 製品別
 
-- [デスクトップ App](/guide/desktop-app/)
-- ターミナル：[CLI](/guide/cli/)
-- エディタ：[IDE](/guide/ide/)
-- クラウド概要：[Web と Cloud](/guide/web-and-cloud/)
+- [デスクトップ App](/ja/guide/desktop-app/)
+- ターミナル：[CLI](/ja/guide/cli/)
+- エディタ：[IDE](/ja/guide/ide/)
+- クラウド概要：[Web と Cloud](/ja/guide/web-and-cloud/)
 
-まだ迷う場合は [Codex クライアントの選択](/guide/getting-started/choose-your-codex-client/) と [機能対照](/guide/reference/feature-comparison/) を参照してください。
+まだ迷う場合は [Codex クライアントの選択](/ja/guide/getting-started/choose-your-codex-client/) と [機能対照](/ja/guide/reference/feature-comparison/) を参照してください。
 
 ## よくある誤解
 
@@ -58,7 +59,7 @@ sidebar:
 
 迷ったら、次の順序で判断してください。
 
-1. まだ最初のタスクを通していない：[初心者パス](/guide/learning-paths/beginner/) から
+1. まだ最初のタスクを通していない：[初心者パス](/ja/guide/learning-paths/beginner/) から
 2. 何をしたいかはっきりしている：「タスク別」の表から入る
 3. 主に使う入口が決まっている：対応する製品章へ
 

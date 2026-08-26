@@ -3,9 +3,10 @@ title: Écrire une page guide
 description: Structure, frontmatter et conventions de liens croisés pour les nouveaux guides du handbook.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -47,7 +48,7 @@ Pied de page unifié optionnel (correspondre aux pages existantes) :
 
 ## Structure recommandée
 
-Selon [modèle d'intégration sources externes](/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, modèle de page recommandé), sections courantes :
+Selon [modèle d'intégration sources externes](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, modèle de page recommandé), sections courantes :
 
 - Quel problème la page résout
 - Pour qui elle est
@@ -105,7 +106,7 @@ Le handbook communautaire aide la compréhension et l'accueil — mais les faits
 
 ## Vérification
 
-Avant PR, lire [Vérifier le contenu technique](/guide/contributing/verify-technical-content/). Commandes, tarifs, permissions, etc. doivent être re-vérifiés.
+Avant PR, lire [Vérifier le contenu technique](/fr/guide/contributing/verify-technical-content/). Commandes, tarifs, permissions, etc. doivent être re-vérifiés.
 
 Un bon guide dit aux premiers lecteurs pourquoi la page existe, quoi lire en premier et où aller ensuite — pas seulement « tous les faits ».
 

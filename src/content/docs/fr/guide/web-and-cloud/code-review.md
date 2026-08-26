@@ -1,149 +1,87 @@
 ---
-title: Revue de code Cloud
-description: Revoir les diffs, PR et suggestions de revue automatisée des Tâches Cloud.
+title: Révision de code dans Cloud et GitHub
+description: Révisez un diff Cloud et utilisez Codex sur GitHub comme réviseur complémentaire à signal fort.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: a74296a
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-Cloud peut produire des changements pour vous, mais il ne prend pas la responsabilité de fusion en votre nom.
+Une tâche Cloud terminée fournit un résumé et un diff. Vous pouvez poursuivre la conversation, demander des modifications ou créer une PR. La fin de la tâche ne vaut pas approbation de fusion : la CI, la protection des branches et le jugement humain restent applicables.
 
-Après qu'une Tâche Cloud se termine, la **revue humaine** reste la dernière barrière avant la fusion. Cette page explique comment revoir la sortie d'Agent distant et la connecter aux PR GitHub, CI et revue par Skill.
+## Deux types de révision
 
-## Ce qui est couvert
+| Type | Éléments examinés | Résultat |
+|---|---|---|
+| Révision du résultat Cloud | Résumé de la tâche, journaux et diff | Décider de poursuivre ou de créer une PR |
+| Révision GitHub par Codex | Diff de la PR et règles `AGENTS.md` du dépôt connecté | Publier une revue de code GitHub |
 
-- Comment la revue PR Cloud diffère de la revue PR locale
-- Checklists de revue et points de risque courants
-- Utiliser Codex pour assister la revue sans abandonner la responsabilité
-
-## Pourquoi la revue Cloud nécessite une attention supplémentaire
-
-Les Agents distants sont plus susceptibles de :
-
-- Toucher des fichiers non liés en « corrigeant » quelque chose
-- Produire de grands diffs de lockfile ou fichiers générés par différences d'environnement
-- Montrer des tests comme exécutés sans couvrir la logique critique
-- Écrire des descriptions PR polies que vous n'avez pas vérifiées
-
-La revue Cloud n'est pas plus légère — elle nécessite une concentration plus aiguisée.
-
-## Où la revue se situe dans le flux
+Ajoutez ce commentaire à une PR GitHub :
 
 ```text
-Tâche Cloud terminée → pousser branche → ouvrir PR
-        ↓
-CI s'exécute (tests, lint, scans sécurité)
-        ↓
-Humain revoit diff + revue assistée Agent optionnelle
-        ↓
-Approuver fusion (sous protection de branche)
+@codex review
 ```
 
-Ouvrir des PR : [Créer une Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Codex publie ses constats sous forme de revue GitHub standard. Selon les recommandations officielles actuelles, ses commentaires GitHub ciblent les problèmes prioritaires P0/P1 ; s'il ne trouve rien, Codex peut ne laisser qu'une réaction. Un faible nombre de commentaires ne dispense jamais d'une révision humaine.
 
-## Barre minimale avant revue complète
+## Ordre de révision
 
-Avant un passage profond, confirmer au moins quatre choses :
+1. **Périmètre :** les fichiers, répertoires, dépendances et artefacts générés correspondent-ils à la tâche ?
+2. **Comportement :** les chemins de réussite, d'échec et de limites respectent-ils l'exigence ?
+3. **Sécurité :** examinez l'authentification, l'autorisation, le traitement des entrées, les identifiants et les accès réseau sortants.
+4. **Preuves :** quels tests ont réellement été exécutés, et les échecs ont-ils été signalés ?
+5. **Retour arrière :** la modification peut-elle être annulée de manière ciblée ou mélange-t-elle un refactoring sans rapport ?
 
-1. Le périmètre de changement a dérivé ?
-2. La logique critique a été changée comme prévu ?
-3. Les tests ou la Vérification ont vraiment été exécutés ?
-4. Des données sensibles ou changements dangereux ont été introduits ?
+Exemple de prompt :
 
-Jusqu'à confirmation, « Tâche terminée » n'est pas « sûr à fusionner ».
+```text
+Révise cette PR. Signale uniquement les constats susceptibles de provoquer un
+comportement incorrect, une perte de données, une faille de sécurité ou une
+régression de compatibilité. Pour chaque constat, indique la gravité,
+l'emplacement exact, la condition de déclenchement et l'impact. Ne présente pas
+les préférences de style comme des défauts.
+```
 
-## Checklist de revue humaine
+## Règles propres au dépôt
 
-Alignée avec [revoir les diffs](/guide/quality/review-diffs/) ; Cloud ajoute un focus supplémentaire :
+Ajoutez ceci au fichier `AGENTS.md` applicable :
 
-| Vérification | Pourquoi |
-|---|---|
-| Fichiers non liés changés | Agent distant peut « refactorer en passant » |
-| Lockfile / fichiers générés | Différences d'environnement causent de grands diffs |
-| Nouvelles sources de dépendances | Risque supply chain |
-| Tests couvrent vraiment la nouvelle logique | Agent peut écrire des tests vides |
-| Changements permission et auth | Escalade de privilèges, tokens codés en dur |
-| Correspond au périmètre issue | Empêcher l'expansion de périmètre |
+```md
+## Code Review Rules
 
-## Idées reçues courantes
+### Authentication boundaries
 
-### 1. CI vert signifie prêt à fusionner
+- Flag any path that logs access tokens or sends them to non-allowlisted hosts.
+  Safe path: keep tokens in the credential provider and redact diagnostic output.
+```
 
-CI signifie seulement « ces vérifications automatisées n'ont pas échoué ». Que les exigences ont été comprises, le périmètre resté correct et le risque acceptable nécessite encore le jugement humain.
+Les règles de la racine s'appliquent à tout le dépôt ; un fichier `AGENTS.md` imbriqué peut ajouter des contrôles propres à un service. Commencez par deux ou trois règles stables qui décrivent un chemin sûr, plutôt que par une longue liste de noms de fonctions susceptibles de changer.
 
-### 2. Une description PR complète signifie que je peux survoler le diff
+## Limite de la révision automatique
 
-Non.
+Les utilisateurs disposant des droits GitHub requis pour pousser ou administrer peuvent activer les révisions automatiques d'un dépôt dans les paramètres Codex. La révision automatique est un contrôle complémentaire et ne doit pas avoir le pouvoir de fusionner automatiquement. Les dépôts à haut risque ont toujours besoin de réviseurs obligatoires, de la CI et de la protection des branches.
 
-Les descriptions aident à obtenir le Contexte plus vite ; elles ne vérifient pas les faits pour vous.
+## Liste de contrôle d'acceptation
 
-### 3. Relancer une revue Codex égale terminé
+- [ ] Une personne a révisé le diff de la logique principale.
+- [ ] Les constats P0/P1 sont corrigés ou le risque est accepté par écrit.
+- [ ] La CI réussit et toute nouvelle exécution est expliquée.
+- [ ] Aucun Secret, fichier généré involontaire ou changement de lockfile sans rapport.
+- [ ] La tâche, la description de la PR et le diff réel concordent.
 
-La revue assistée est utile, mais la responsabilité reste aux personnes.
+## Sources officielles
 
-## Utiliser Codex pour assister la revue (pas vous remplacer)
+- [Révision de pull request GitHub](https://learn.chatgpt.com/docs/third-party/github)
+- [Révision de code entre clients](https://learn.chatgpt.com/docs/code-review)
 
-Acceptable :
-
-- Exécuter un Skill `$pr-review` en local ou Cloud sur une nouvelle PR (voir [Créer un Skill](/skills/create-your-first-skill/))
-- Demander des opinions groupées comme blockers / suggestions / nits
-- **Vous** confirmez chaque blocker
-
-Non acceptable :
-
-- Fusionner sans lire le diff parce que l'Agent a dit que ça a l'air bon
-- Laisser l'Agent approuver une branche protégée seul
-
-Voir [Vérification et revue humaine](/guide/foundations/verification-and-human-review/)
-
-## Ordre de revue suggéré
-
-1. Titre et description PR — confirmer l'objectif
-2. Diff de logique principale
-3. Tests, fichiers générés, config
-4. Commentaires automatisés et suggestions de suivi
-
-Cela évite de se noyer dans le bruit dès le début.
-
-## Conduire les révisions depuis les commentaires de revue
-
-Après que des commentaires de revue arrivent sur une PR :
-
-1. Démarrer une nouvelle Tâche Cloud ou locale : « Traiter uniquement les commentaires de revue suivants ; ne pas étendre le périmètre »
-2. Attacher les liens ou numéros de commentaires
-3. Pousser de nouveaux commits sur la même PR
-4. Relancer CI et survoler le diff incrémental
-
-Sur GitHub : [intégration GitHub](/guide/integrations/github/)
-
-## Combiner avec les Automations
-
-- Exécuter un Skill de revue automatiquement quand une PR s'ouvre (commentaire seulement, pas fusion)
-- Voir [Tâches planifiées et déclenchées](/skills/automations/scheduled-tasks/)
-
-## Erreurs courantes
-
-- Sauter la revue sécurité parce que Cloud est « isolé »
-- Fusionner un grand diff parce que « CI est vert »
-- Coller des logs production non nettoyés dans les commentaires de revue
-- Traiter « je n'ai pas repéré des problèmes » comme « il n'y a pas de problèmes »
-
-## Checklist d'acceptation
-
-- [ ] CI est vert et vous comprenez l'historique de retry
-- [ ] Au moins une personne a lu le diff de logique principale
-- [ ] Le périmètre correspond à la description issue/Tâche
-- [ ] Pas de Secrets commités dans le repo
-
-## Références
-- [Patterns d'Approbation humaine](/cases/workflows/human-approval-patterns/)
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** Cloud / GitHub  
-**Note de revue :** Le principe que la sortie Cloud nécessite encore une revue humaine tient, mais cette page décrit les PR Cloud, le comportement d'ouverture auto PR, le rythme de revue distant et les notifications comme un workflow actuel concret ; ces formes d'intégration changent rapidement et nécessitent une réécriture contre le flux officiel le plus récent.  
-**Dernière vérification :** 2026-07-26
+**Statut :** verified
+
+**Produits concernés :** Cloud, GitHub
+
+**Dernière vérification :** 2026-08-26

@@ -3,9 +3,10 @@ title: "事例: Issue トリアージとラベル提案"
 description: Codex で新規 Issue を読み、ラベルと担当候補を提案——軽量チーム自動化。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 23380ad
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## メタデータ
@@ -41,7 +42,7 @@ translated_at: 2026-07-28
 
 **Plan：** JSON スキーマ定義：`{ "labels": [], "priority": "P0-P3", "needs_security": bool, "rationale": "" }`
 
-**Execute：** issue タイトル + 本文で `codex exec`（[プロンプトインジェクション](/guide/team-enterprise/security/prompt-injection/) のサニタイズに注意）。
+**Execute：** issue タイトル + 本文で `codex exec`（[プロンプトインジェクション](/ja/guide/team-enterprise/security/prompt-injection/) のサニタイズに注意）。
 
 **Verify：** 過去 issue フィクスチャ 3 件で人のラベルと比較。一致率 80% 超で出荷。
 
@@ -52,13 +53,13 @@ translated_at: 2026-07-28
 
 ## 5. 定着（キャプチャ）
 
-- 任意 [Webhook](/guide/developer-platform/webhooks/overview/) で社内チケット連携
-- [事例テンプレート](/cases/use-cases/case-study-template/) で振り返り
+- 任意 [Webhook](/ja/guide/developer-platform/webhooks/overview/) で社内チケット連携
+- [事例テンプレート](/ja/cases/use-cases/case-study-template/) で振り返り
 
 ## 6. 関連章
 
-- [GitHub 連携](/guide/integrations/github/)
-- [人の承認パターン](/cases/workflows/human-approval-patterns/)
+- [GitHub 連携](/ja/guide/integrations/github/)
+- [人の承認パターン](/ja/cases/workflows/human-approval-patterns/)
 
 ---
 

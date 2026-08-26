@@ -3,9 +3,10 @@ title: 음성 입력과 출력
 description: 음성으로 Codex와 상호작용하는 장면, 제한, 프라이버시 주의.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -28,7 +29,7 @@ sidebar:
 | 모바일에서 짧은 후속 | API key·비밀번호 낭독 |
 | accessibility 요구 | 검색·diff 가능한 규범 문서 |
 
-구술 뒤에는 Codex가 **이해를 되풀이**하거나 문자 계획을 만들게 한 뒤 확인하세요. [계획 요청](/prompts/ask-for-a-plan/)을 참고하세요.
+구술 뒤에는 Codex가 **이해를 되풀이**하거나 문자 계획을 만들게 한 뒤 확인하세요. [계획 요청](/ko/prompts/ask-for-a-plan/)을 참고하세요.
 
 ## 음성이 잘 맞는 일
 
@@ -93,7 +94,7 @@ sidebar:
 
 ## 멀티모달과의 관계
 
-- **이미지 입력**: 디자인 시안, 스크린샷 → [이미지 프롬프트](/prompts/prompting-with-images/)
+- **이미지 입력**: 디자인 시안, 스크린샷 → [이미지 프롬프트](/ko/prompts/prompting-with-images/)
 - **음성 입력**: 이 페이지
 - **출력**: 여전히 코드·파일·문자 diff가 중심; 음성 요약이 심사를 대체하지 않음
 

@@ -5,9 +5,10 @@ sidebar:
   order: 55
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d842500
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex-Integration heißt nicht nur „noch ein Tool anschließen“, sondern den Agent in Ihre bestehende Kollaborationskette zu setzen: Code-Hosting, Ticketfluss, Notifications, interne Plattformen, Wissensbasen.
@@ -101,7 +102,7 @@ Geeignet:
 - CI: nicht-interaktives Review
 - Nach Review-Kommentar zweite Fixes
 
-Einstieg: [GitHub-Integration](/guide/integrations/github/) und [Web und Cloud](/guide/web-and-cloud/).
+Einstieg: [GitHub-Integration](/de/guide/integrations/github/) und [Web und Cloud](/de/guide/web-and-cloud/).
 
 ### Tickets und Projektmanagement
 
@@ -183,15 +184,15 @@ Erste Integration: Codex zuerst „sehen“ und „vorschlagen“ lassen — lei
 
 | Integration | Seite |
 |---|---|
-| GitHub | [GitHub-Integration](/guide/integrations/github/) |
+| GitHub | [GitHub-Integration](/de/guide/integrations/github/) |
 | Slack / Linear / Jira usw. | Offizielle Doku und MCP/Automation-Kapitel; Handbuch ergänzt schrittweise |
 
 ## Bezug zu anderen Kapiteln
 
-- Connectoren und Packaging: [Plugins-Überblick](/skills/plugins/plugins-overview/)
-- Externe Daten: [MCP-Überblick](/skills/mcp/mcp-overview/)
-- Zeitgesteuert und Hintergrund: [Geplante und Hintergrundaufgaben](/skills/automations/scheduled-tasks/)
-- Cloud-Repo-Kollaboration: [Web und Cloud](/guide/web-and-cloud/)
+- Connectoren und Packaging: [Plugins-Überblick](/de/skills/plugins/plugins-overview/)
+- Externe Daten: [MCP-Überblick](/de/skills/mcp/mcp-overview/)
+- Zeitgesteuert und Hintergrund: [Geplante und Hintergrundaufgaben](/de/skills/automations/scheduled-tasks/)
+- Cloud-Repo-Kollaboration: [Web und Cloud](/de/guide/web-and-cloud/)
 
 ## Quellen
 - Offizielle OpenAI-Codex-Integrations- und Entwicklerdokumentation

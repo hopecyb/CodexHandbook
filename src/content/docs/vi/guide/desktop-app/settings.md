@@ -3,57 +3,63 @@ title: Cài đặt
 description: Các mục cài đặt thường dùng của ứng dụng Desktop.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: c599d50
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 90
+reviewed_at: 2026-08-26
 ---
 
-Trang cài đặt có nhiều mục, nhưng lúc đầu không cần chỉnh hết. Chỉ cần xem vài mục ảnh hưởng an toàn, phê duyệt và trải nghiệm hàng ngày.
+Settings personalize App behavior. They are not the complete Codex permission configuration. Keep the defaults at first and change a setting only after you understand its scope.
 
-Hướng cấu hình thường gặp (tên lấy theo UI):
+Press `Cmd + ,` on macOS or `Ctrl + ,` on Windows, or open Settings from the application menu.
 
-- Mô hình mặc định và mức suy luận
-- Tùy chọn liên quan phê duyệt / Sandbox / mạng
-- Thông báo
-- Giao diện và sở thích chỉnh sửa
+## Four sections to check first
 
-Cấu hình do nhóm quản lý có thể ghi đè cài đặt cá nhân. Giải thích chính thức: [https://developers.openai.com/codex](https://developers.openai.com/codex). Khái niệm: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
+### General
 
-## Câu hỏi thường gặp
+- Whether `Cmd + Enter` is required to submit a multiline prompt.
+- Whether **Prevent sleep while running** lets a local long-running task continue while you are away.
+- Follow-up behavior determines whether a new message steers the current run immediately or is queued for the next turn.
 
-### 1. Có cần chỉnh hết mọi cài đặt ngay từ đầu?
+The last setting changes what happens when you add a clarification. Steer the current run for an urgent correction. Start a separate chat for an unrelated requirement.
 
-Không. Giữ mặc định trước, làm rõ từng mục ảnh hưởng gì.
+### Keyboard shortcuts
 
-### 2. Lần đầu nên xem những cài đặt nào
+Search commands, change bindings, or restore defaults. If an online shortcut differs from your App, use the binding displayed here.
 
-Thường chỉ cần ba nhóm này:
+### Notifications
 
-- Phê duyệt và quyền
-- Liên quan mạng
-- Thông báo
+Choose when turn-completion notifications appear and whether to notify for permission requests and questions. See [Notifications and Activity](/vi/guide/desktop-app/notifications/) for detailed recommendations.
 
-Các nhóm này ảnh hưởng trực tiếp nhất tới:
+### Appearance
 
-- Nó được làm gì
-- Nó có vượt biên không
-- Bạn có nhận được nhắc kịp thời không
+Choose light, dark, or system appearance, and adjust the accent color, background, foreground, UI font, code font, and font size. For long code reviews, prioritize contrast and readable type over theme effects.
 
-### 3. Vì sao tôi đổi cài đặt mà hiệu quả khác tài liệu?
+## What these settings do not control
 
-Có thể vì:
+- Repository rules belong in `AGENTS.md`.
+- Persistent CLI and Agent configuration primarily belongs in `config.toml`.
+- The sandbox, approval policy, and organization policy jointly determine whether files, networks, and commands are available.
+- Managed organization policy may restrict what an individual can select.
 
-- Phiên bản khác
-- Chính sách quản lý nhóm ghi đè cài đặt cá nhân
-- Môi trường tác vụ hiện tại có ràng buộc riêng
+A visible setting therefore does not guarantee that the current task has the corresponding permission. When an operation is denied, read [Permissions and sandboxing](/vi/guide/permissions-and-sandbox/) before expanding access.
 
-Lần đầu xem trang cài đặt, hiểu rõ biên an toàn và tùy chọn nhắc trước, rồi mới xét chi tiết khác.
+## Verify each change
+
+Change one class of settings at a time and verify it with a low-risk chat. Record the previous value. If behavior differs from your expectation, restore the default first, then check the App version, operating-system permissions, and organization policy.
+
+## Official sources
+
+- [ChatGPT desktop App settings](https://learn.chatgpt.com/docs/app/settings)
+- [Codex configuration basics](https://learn.chatgpt.com/docs/config)
+- [Permissions](https://learn.chatgpt.com/docs/permissions)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App  
-**Ghi chú tái kiểm:** Mục cài đặt, tên gọi và việc có bị ghi đè bởi chính sách không gian làm việc của ứng dụng desktop mới vẫn đang đổi; trang này dù chỉ liệt kê «hướng thường gặp» vẫn ngầm dựa trên một cấu trúc cài đặt cụ thể — cần tài liệu cài đặt chính thức đầy đủ hơn rồi mới khôi phục `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App
+
+**Kiểm chứng gần nhất:** 2026-08-26

@@ -3,9 +3,10 @@ title: Escolha seu caminho
 description: Escolha a rota de leitura por papel, Tarefa e entrada de produto.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 612639b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -16,29 +17,29 @@ Há muitas entradas; escolha a que estiver mais perto do problema atual.
 
 ## Por papel
 
-- [Cinco passos para iniciantes](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP completo)
-- [Visão geral do caminho do criador](/guide/learning-paths/creator/)
-- [Visão geral do caminho do desenvolvedor](/guide/learning-paths/developer/)
-- [Visão geral do caminho da equipe](/guide/learning-paths/team/)
+- [Cinco passos para iniciantes](/pt/guide/learning-paths/beginner/01-talk-to-codex/) (MVP completo)
+- [Visão geral do caminho do criador](/pt/guide/learning-paths/creator/)
+- [Visão geral do caminho do desenvolvedor](/pt/guide/learning-paths/developer/)
+- [Visão geral do caminho da equipe](/pt/guide/learning-paths/team/)
 
 ## Por Tarefa
 
 | Você quer… | Leia primeiro |
 |---|---|
-| Entender o Codex e a terminologia | [Fundamentos](/guide/foundations/) |
-| Rodar uma vez hoje | [Começar a usar](/guide/getting-started/) |
-| Escrever bons Prompts | [Prompts](/prompts/) |
-| Aprender a verificar resultados | [Qualidade e Verificação](/guide/quality/) |
-| Consultar tabelas e resolver problemas | [Referência](/guide/reference/) |
+| Entender o Codex e a terminologia | [Fundamentos](/pt/guide/foundations/) |
+| Rodar uma vez hoje | [Começar a usar](/pt/guide/getting-started/) |
+| Escrever bons Prompts | [Prompts](/pt/prompts/) |
+| Aprender a verificar resultados | [Qualidade e Verificação](/pt/guide/quality/) |
+| Consultar tabelas e resolver problemas | [Referência](/pt/guide/reference/) |
 
 ## Por produto
 
-- [App desktop](/guide/desktop-app/)
-- Terminal: [CLI](/guide/cli/)
-- Editor: [IDE](/guide/ide/)
-- Visão geral na nuvem: [Web e Cloud](/guide/web-and-cloud/)
+- [App desktop](/pt/guide/desktop-app/)
+- Terminal: [CLI](/pt/guide/cli/)
+- Editor: [IDE](/pt/guide/ide/)
+- Visão geral na nuvem: [Web e Cloud](/pt/guide/web-and-cloud/)
 
-Se ainda estiver em dúvida, veja [Escolher o cliente Codex](/guide/getting-started/choose-your-codex-client/) e [Comparação de recursos](/guide/reference/feature-comparison/).
+Se ainda estiver em dúvida, veja [Escolher o cliente Codex](/pt/guide/getting-started/choose-your-codex-client/) e [Comparação de recursos](/pt/guide/reference/feature-comparison/).
 
 ## Mal-entendidos comuns
 
@@ -58,7 +59,7 @@ O caminho só reduz desvios; não é um curso que precisa ser seguido na ordem.
 
 Quando estiver em dúvida, use esta ordem:
 
-1. Ainda não completou a primeira Tarefa: siga o [caminho do iniciante](/guide/learning-paths/beginner/)
+1. Ainda não completou a primeira Tarefa: siga o [caminho do iniciante](/pt/guide/learning-paths/beginner/)
 2. Já sabe o que quer fazer: entre pela tabela de «Tarefa»
 3. Já sabe em qual entrada vai trabalhar: vá ao capítulo do produto correspondente
 

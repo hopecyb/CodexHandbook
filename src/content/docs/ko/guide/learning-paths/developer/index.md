@@ -3,9 +3,10 @@ title: 개발자 경로(개요)
 description: 소프트웨어 개발 관련 루트 개요입니다. 심화 단계는 이후 보완합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5b5ac7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -22,9 +23,9 @@ Codex로 주로 코드를 고치고, 프로젝트를 이해하고, 문제를 고
 
 ## 지금 읽을 수 있는 것
 
-- [시작하기](/guide/getting-started/)와 [CLI](/guide/cli/) / [IDE](/guide/ide/)
-- [테스트 실행](/guide/quality/run-tests/) · [diff 검토](/guide/quality/review-diffs/)
-- [Agent 계획](/guide/agent-work/planning/)
+- [시작하기](/ko/guide/getting-started/)와 [CLI](/ko/guide/cli/) / [IDE](/ko/guide/ide/)
+- [테스트 실행](/ko/guide/quality/run-tests/) · [diff 검토](/ko/guide/quality/review-diffs/)
+- [Agent 계획](/ko/guide/agent-work/planning/)
 
 ## 흔한 오해
 
@@ -46,11 +47,11 @@ Codex의 일하는 방식은 일반 에디터 자동 완성과 다릅니다. 권
 
 Codex를 개발에 쓰려면 이 순서로 읽으세요.
 
-1. [시작하기](/guide/getting-started/)
-2. [CLI](/guide/cli/) 또는 [IDE](/guide/ide/)
-3. [Agent 작업](/guide/agent-work/)
-4. [테스트 실행](/guide/quality/run-tests/)
-5. [diff 검토](/guide/quality/review-diffs/)
+1. [시작하기](/ko/guide/getting-started/)
+2. [CLI](/ko/guide/cli/) 또는 [IDE](/ko/guide/ide/)
+3. [Agent 작업](/ko/guide/agent-work/)
+4. [테스트 실행](/ko/guide/quality/run-tests/)
+5. [diff 검토](/ko/guide/quality/review-diffs/)
 
 이 경로는 변경을 통제하고 결과를 검증할 수 있게 하는 데 무게를 둡니다. “일단 쓰게 한다”만 추구하지 않습니다.
 

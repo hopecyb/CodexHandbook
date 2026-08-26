@@ -3,12 +3,13 @@ title: Métodos de fluxo de trabalho
 description: Métodos de colaboração repetíveis — sem amarrar a uma única UI de produto; ênfase em checkpoints e aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2306981
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Os [prompts](/prompts/) ensinam a **dizer**; os fluxos de trabalho ensinam a **organizar um assunto completo**. Os métodos deste capítulo aplicam-se a App, CLI, IDE e Cloud.
+Os [prompts](/pt/prompts/) ensinam a **dizer**; os fluxos de trabalho ensinam a **organizar um assunto completo**. Os métodos deste capítulo aplicam-se a App, CLI, IDE e Cloud.
 
 ## Porque precisa de um fluxo de trabalho
 
@@ -24,26 +25,26 @@ Sem checkpoints, é fácil alterar o diretório errado, saltar testes, fundir po
 
 | Fluxo de trabalho | Que problema resolve |
 |---|---|
-| [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/) | Cadeia principal geral, adequada à maioria das tarefas |
-| [Brainstorm antes de construir](/cases/workflows/brainstorm-before-building/) | Divergir e convergir quando a solução ainda não está definida |
-| [Trabalho orientado por especificação](/cases/workflows/specification-driven-work/) | Escrever uma especificação aceitável antes de implementar |
-| [Trabalho orientado por testes](/cases/workflows/test-driven-work/) | Testes primeiro a conduzir a implementação |
-| [Padrões de aprovação humana](/cases/workflows/human-approval-patterns/) | Quando parar, quando aprovar, quando rejeitar |
-| [Diagnosticar antes de corrigir](/cases/workflows/diagnose-before-fixing/) | Evitar «adivinhar a correção» |
-| [Revisão antes de fundir](/cases/workflows/review-before-merge/) | Revisão estruturada do PR antes da fusão |
-| [Investigação com fontes](/cases/workflows/research-with-sources/) | Pesquisa, comparação e verificação de fontes |
-| [Artefato primeiro](/cases/workflows/artifact-first-work/) | Acordar o entregável antes de derivar os passos |
-| [Colaboração multi-Agent](/cases/workflows/multi-agent-coordination/) | Paralelismo e divisão de trabalho |
-| [Gestão de tarefas longas](/cases/workflows/long-running-task-management/) | Checkpoints entre sessões e condições de saída |
-| [Recuperação de falhas](/cases/workflows/failure-recovery/) | Recuar quando o trabalho se desvia ou os testes ficam vermelhos |
-| [Consolidar como Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Escrever fluxos repetidos como Skill |
+| [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/) | Cadeia principal geral, adequada à maioria das tarefas |
+| [Brainstorm antes de construir](/pt/cases/workflows/brainstorm-before-building/) | Divergir e convergir quando a solução ainda não está definida |
+| [Trabalho orientado por especificação](/pt/cases/workflows/specification-driven-work/) | Escrever uma especificação aceitável antes de implementar |
+| [Trabalho orientado por testes](/pt/cases/workflows/test-driven-work/) | Testes primeiro a conduzir a implementação |
+| [Padrões de aprovação humana](/pt/cases/workflows/human-approval-patterns/) | Quando parar, quando aprovar, quando rejeitar |
+| [Diagnosticar antes de corrigir](/pt/cases/workflows/diagnose-before-fixing/) | Evitar «adivinhar a correção» |
+| [Revisão antes de fundir](/pt/cases/workflows/review-before-merge/) | Revisão estruturada do PR antes da fusão |
+| [Investigação com fontes](/pt/cases/workflows/research-with-sources/) | Pesquisa, comparação e verificação de fontes |
+| [Artefato primeiro](/pt/cases/workflows/artifact-first-work/) | Acordar o entregável antes de derivar os passos |
+| [Colaboração multi-Agent](/pt/cases/workflows/multi-agent-coordination/) | Paralelismo e divisão de trabalho |
+| [Gestão de tarefas longas](/pt/cases/workflows/long-running-task-management/) | Checkpoints entre sessões e condições de saída |
+| [Recuperação de falhas](/pt/cases/workflows/failure-recovery/) | Recuar quando o trabalho se desvia ou os testes ficam vermelhos |
+| [Consolidar como Skill](/pt/cases/workflows/turn-a-workflow-into-a-skill/) | Escrever fluxos repetidos como Skill |
 
 ## Outros capítulos relacionados com fluxos
 
-- Qualidade: [capacidades essenciais · qualidade e verificação](/guide/quality/)
-- Agent: [planeamento](/guide/agent-work/planning/), [Subagents](/guide/agent-work/subagents/)
-- Consolidação: [Skill](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- Casos: [cenários e biblioteca de casos](/cases/use-cases/)
+- Qualidade: [capacidades essenciais · qualidade e verificação](/pt/guide/quality/)
+- Agent: [planeamento](/pt/guide/agent-work/planning/), [Subagents](/pt/guide/agent-work/subagents/)
+- Consolidação: [Skill](/pt/skills/overview/), [AGENTS.md](/pt/guide/customization/agents-md/what-is-agents-md/)
+- Casos: [cenários e biblioteca de casos](/pt/cases/use-cases/)
 
 ## Princípios de desenho
 

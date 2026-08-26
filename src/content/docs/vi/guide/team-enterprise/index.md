@@ -5,12 +5,13 @@ sidebar:
   order: 70
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3a4af60
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Chương **Đội và doanh nghiệp** hướng tới engineering lead, đội nền tảng và bảo mật — trọng tâm là đưa Codex từ dùng cá nhân sang đội quản được, kiểm toán được, rút kinh nghiệm được. Đọc kèm [Lộ trình học · Đội](/guide/learning-paths/team/); chương này nghiêng về quản trị và triển khai.
+Chương **Đội và doanh nghiệp** hướng tới engineering lead, đội nền tảng và bảo mật — trọng tâm là đưa Codex từ dùng cá nhân sang đội quản được, kiểm toán được, rút kinh nghiệm được. Đọc kèm [Lộ trình học · Đội](/vi/guide/learning-paths/team/); chương này nghiêng về quản trị và triển khai.
 
 Nếu hiện bạn còn dùng cá nhân hoặc đang làm quen cách dùng cơ bản, chương này có thể để sau. Ở đây chủ yếu bàn khi nhiều người cùng dùng, ranh giới, quy trình và trách nhiệm sắp xếp thế nào.
 
@@ -31,9 +32,9 @@ Nếu hiện bạn còn dùng cá nhân hoặc đang làm quen cách dùng cơ b
 
 | Vai trò | Đề xuất đọc trước |
 |---|---|
-| EM / phụ trách | [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) · [Sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/) |
-| Platform engineering | [Quy tắc đội](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Bảo mật | [Rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
+| EM / phụ trách | [Mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) · [Sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/) |
+| Platform engineering | [Quy tắc đội](/vi/guide/customization/rules/team-rules/) · [Hooks](/vi/skills/hooks/hooks-overview/) |
+| Bảo mật | [Rủi ro Plugin và MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/vi/guide/team-enterprise/security/prompt-injection/) |
 
 ## Mô hình quản trị (khái niệm)
 
@@ -51,15 +52,15 @@ Quan sát (kiểm toán, chỉ số, rút kinh nghiệm)
 
 | Chủ đề | Trang |
 |---|---|
-| Bảo mật | [Mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) · [Rủi ro Plugin/MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/guide/team-enterprise/security/prompt-injection/) |
-| Quản trị | [Chính sách sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/) |
+| Bảo mật | [Mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) · [Rủi ro Plugin/MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Prompt injection](/vi/guide/team-enterprise/security/prompt-injection/) |
+| Quản trị | [Chính sách sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/) |
 
-Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. — xem [chapter-outline](/docs/planning/chapter-outline.md) (tài liệu quy hoạch kho).
+Lộ trình sẽ bổ sung adoption, administration, deployment-patterns, v.v. — xem [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (tài liệu quy hoạch kho).
 
 ## Quan hệ với cấu hình cá nhân hóa
 
-- Tầng quản lý tổ chức trong [độ ưu tiên AGENTS.md](/guide/customization/agents-md/scope-and-precedence/)
-- [Chính sách quy tắc đội](/guide/customization/rules/team-rules/)
+- Tầng quản lý tổ chức trong [độ ưu tiên AGENTS.md](/vi/guide/customization/agents-md/scope-and-precedence/)
+- [Chính sách quy tắc đội](/vi/guide/customization/rules/team-rules/)
 
 ## Lỗi thường gặp
 
@@ -88,8 +89,8 @@ Trong môi trường đội, rủi ro lớn hơn là nhiều người dùng lâu
 
 Có thể xem trước:
 
-- [Rủi ro Plugin và MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Chính sách sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
+- [Rủi ro Plugin và MCP](/vi/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Chính sách sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/)
 
 Nếu hiện bạn chủ yếu quan tâm bắt đầu cá nhân, chương này có thể để sau; khi bắt đầu lan tỏa đội, quản lý quyền hoặc kiểm soát rủi ro hãy quay lại.
 

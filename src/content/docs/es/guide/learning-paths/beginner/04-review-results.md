@@ -3,9 +3,10 @@ title: Revisar resultados
 description: Crea el hábito de revisar el diff, ejecutar la Verificación y preguntar de nuevo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 82d6754
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 Sustituye «mirar un momento y dar por bueno» por una comprobación fija.
 
-Listas: [Revisar el resultado](/guide/getting-started/review-the-result/) · [Revisar diferencias](/guide/quality/review-diffs/)
+Listas: [Revisar el resultado](/es/guide/getting-started/review-the-result/) · [Revisar diferencias](/es/guide/quality/review-diffs/)
 
 Mucha gente se salta este paso. Usar Codex con estabilidad suele depender de si sabes hacer review del resultado.
 
@@ -46,7 +47,7 @@ El plan solo ayuda; sigues teniendo que ver si toca un alcance que no debía.
 
 Revisar el resultado no es un paso extra: forma parte del uso.
 
-Siguiente: [Completar el primer proyecto pequeño](/guide/learning-paths/beginner/05-complete-first-project/)
+Siguiente: [Completar el primer proyecto pequeño](/es/guide/learning-paths/beginner/05-complete-first-project/)
 
 ---
 

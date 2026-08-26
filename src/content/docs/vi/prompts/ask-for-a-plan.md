@@ -3,9 +3,10 @@ title: Xin kế hoạch trước
 description: Trước khi Codex chỉnh sửa, hãy để nó nêu rõ các bước, rủi ro và cách kiểm chứng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0a2c7c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Nhiều vấn đề không phải không làm được—chỉ là **bắt đầu quá nhanh**. Một câu «giúp tôi sửa» dễ trộn khám phá, lập kế hoạch và thực thi; cuối cùng bạn chỉ còn nghiệm thu thụ động trong diff.
@@ -108,7 +109,7 @@ Cách này tiết kiệm ngữ cảnh hơn «làm lại từ đầu», và dễ 
 | Dễ tách thành tác vụ con | Dễ trộn nhiều mục tiêu |
 | Cách kiểm chứng hiện rõ sớm | Thường đến cuối mới nhớ kiểm thử |
 
-Nhiều workflow tách riêng «khám phá» và «kế hoạch». Xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/).
+Nhiều workflow tách riêng «khám phá» và «kế hoạch». Xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/).
 
 ## Vấn đề dễ gặp nhất ở kế hoạch
 
@@ -126,10 +127,10 @@ Kế hoạch tốt thừa nhận sự không chắc chắn; không giả vờ m�
 
 ## Nên kết hợp với
 
-- Cần chuỗi thực thi chính thức: [Lập kế hoạch](/guide/agent-work/planning/)
-- Cần viết kế hoạch tái sử dụng được: [Cấu trúc tác vụ](/prompts/task-anatomy/)
-- Cần chỉnh hướng giữa chừng: [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/)
-- Cần định nghĩa nghiệm thu rõ: [Định nghĩa hoàn thành](/prompts/define-done/)
+- Cần chuỗi thực thi chính thức: [Lập kế hoạch](/vi/guide/agent-work/planning/)
+- Cần viết kế hoạch tái sử dụng được: [Cấu trúc tác vụ](/vi/prompts/task-anatomy/)
+- Cần chỉnh hướng giữa chừng: [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/)
+- Cần định nghĩa nghiệm thu rõ: [Định nghĩa hoàn thành](/vi/prompts/define-done/)
 
 ## Một thỏa thuận nội bộ nhóm rất hữu dụng
 

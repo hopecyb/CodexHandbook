@@ -3,9 +3,10 @@ title: "Case study: Competitive feature matrix"
 description: Source-backed research and table output—a workflow non-engineers can reuse.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 ## Metadata
@@ -30,11 +31,11 @@ translated_at: 2026-07-26
 ## 2. Preparation
 
 - Define comparison dimensions upfront (in prompt or `@brief.md`)
-- Enable [web search](/guide/tools/web-search/) (if the product supports it)
+- Enable [web search](/en/guide/tools/web-search/) (if the product supports it)
 
 ## 3. Workflow
 
-Follow [Research with sources](/cases/workflows/research-with-sources/):
+Follow [Research with sources](/en/cases/workflows/research-with-sources/):
 
 ```text
 Compare "team collaboration" features for vendors A/B/C:
@@ -44,7 +45,7 @@ mark price "to confirm" if unverifiable;
 output markdown table; do not change other repo files.
 ```
 
-**Verification:** Human opens 3 URLs; check dates against [verification policy](/guide/start-here/handbook-version-policy/).
+**Verification:** Human opens 3 URLs; check dates against [verification policy](/en/guide/start-here/handbook-version-policy/).
 
 ## 4. Failure and recovery
 
@@ -58,8 +59,8 @@ output markdown table; do not change other repo files.
 
 ## 6. Related chapters
 
-- [Artifact-first work](/cases/workflows/artifact-first-work/)
-- [Validate sources](/guide/quality/validate-sources/)
+- [Artifact-first work](/en/cases/workflows/artifact-first-work/)
+- [Validate sources](/en/guide/quality/validate-sources/)
 
 ---
 

@@ -3,9 +3,10 @@ title: CI/CD
 description: Ligar o Codex a fluxos de integração contínua e release — começa por automatização de baixo risco.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Ao ligar o Codex a CI/CD, o problema mais comum costuma ser este:
@@ -16,7 +17,7 @@ A prática mais habitual é deixar primeiro que só leia, só sugira e só produ
 
 ## Entrada deste grupo
 
-- [Automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/)
+- [Automatização de revisão de código](/pt/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Conteúdo deste grupo
 

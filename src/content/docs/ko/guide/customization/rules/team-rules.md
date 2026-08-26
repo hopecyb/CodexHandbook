@@ -3,14 +3,15 @@ title: 팀 규칙 정책
 description: 조직·저장소·개인 사이에서 명령·경로 규칙을 계층 거버넌스 — 심사 가능, 롤백 가능.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-팀이 Codex를 쓸 때 **규칙 정책**은 다음을 답합니다. 어떤 제약이 회사 전체에서 통일인지, 어떤 제약이 저장소 유지인지, 개인이 완화할 수 있는지. 이 장은 [명령 규칙](/guide/customization/rules/command-rules/)과 [허용과 거부 패턴](/guide/customization/rules/allow-and-deny-patterns/)의 거버넌스 관점입니다.
+팀이 Codex를 쓸 때 **규칙 정책**은 다음을 답합니다. 어떤 제약이 회사 전체에서 통일인지, 어떤 제약이 저장소 유지인지, 개인이 완화할 수 있는지. 이 장은 [명령 규칙](/ko/guide/customization/rules/command-rules/)과 [허용과 거부 패턴](/ko/guide/customization/rules/allow-and-deny-patterns/)의 거버넌스 관점입니다.
 
 ## 내용
 
@@ -61,7 +62,7 @@ L4 개인 설정                → 로컬만, L1을 약화하면 안 됨
 L5 단발 작업 prompt         → 임시 조이기는 가능, 임시 완화는 L1 제한
 ```
 
-[AGENTS.md 범위](/guide/customization/agents-md/scope-and-precedence/)와 대조하세요. **규칙은 실행 enforcement에 가깝고, AGENTS.md는 동작 설명에 가깝습니다.** 둘은 일치해야 하며, 서로 모순된 요구를 따로 쓰지 마세요.
+[AGENTS.md 범위](/ko/guide/customization/agents-md/scope-and-precedence/)와 대조하세요. **규칙은 실행 enforcement에 가깝고, AGENTS.md는 동작 설명에 가깝습니다.** 둘은 일치해야 하며, 서로 모순된 요구를 따로 쓰지 마세요.
 
 ## 기본 실천
 
@@ -78,7 +79,7 @@ L5 단발 작업 prompt         → 임시 조이기는 가능, 임시 완화는
     → staging 저장소에서 전형 작업 시범 → 머지 → 공지 + 핸드북 페이지 갱신
 ```
 
-큰 변경(예: 외부망 허용)은 [Hooks 감사](/skills/hooks/hooks-overview/)와 [acceptable use](/guide/team-enterprise/governance/acceptable-use/)를 함께 갱신하세요.
+큰 변경(예: 외부망 허용)은 [Hooks 감사](/ko/skills/hooks/hooks-overview/)와 [acceptable use](/ko/guide/team-enterprise/governance/acceptable-use/)를 함께 갱신하세요.
 
 ## Hooks·CI와 정렬
 
@@ -113,7 +114,7 @@ L5 단발 작업 prompt         → 임시 조이기는 가능, 임시 완화는
 
 ## 보안 경계
 
-- 규칙은 [위협 모델](/guide/team-enterprise/security/threat-model/)과 사건 대응 흐름을 대체하지 않음
+- 규칙은 [위협 모델](/ko/guide/team-enterprise/security/threat-model/)과 사건 대응 흐름을 대체하지 않음
 - 규제 대상 데이터면 규칙과 데이터 등급·보존 정책을 함께 심사
 - 긴급 우회에는 **감사 기록**과 사후 회고가 필요
 

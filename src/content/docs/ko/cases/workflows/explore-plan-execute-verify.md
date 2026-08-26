@@ -3,9 +3,10 @@ title: 탐색—계획—실행—검증
 description: Codex 일반 주 워크플로—네 단계 검사 지점으로, 「한 번에 끝」보다 안정적입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ac26bee
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 이 핸드북이 권장하는 기본 워크플로이며, 「아직 어떻게 할지 모름」에서 「병합해도 됨」까지 이어 가기에 적합합니다.
@@ -19,7 +20,7 @@ translated_at: 2026-07-28
 ④ 검증 Verify    → 테스트, diff 검토, 「완료 정의」대조
 ```
 
-①②를 건너뛰고 바로 ③으로 가지 마세요. 그렇게 하면 「추측 수정」이 되기 쉽습니다. [먼저 진단한 뒤 수정](/cases/workflows/diagnose-before-fixing/)을 참고하세요.
+①②를 건너뛰고 바로 ③으로 가지 마세요. 그렇게 하면 「추측 수정」이 되기 쉽습니다. [먼저 진단한 뒤 수정](/ko/cases/workflows/diagnose-before-fixing/)을 참고하세요.
 
 ## ① 탐색
 
@@ -45,7 +46,7 @@ translated_at: 2026-07-28
 내가 「계획대로 실행」이라고 답하기 전에는 코드를 쓰지 마세요.
 ```
 
-큰 작업이나 고위험 변경은 먼저 확인을 기다립니다. 작은 작업은 「계획이 3단계 이하면 자동 실행」을 약속한 뒤 [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/)에 적을 수 있습니다.
+큰 작업이나 고위험 변경은 먼저 확인을 기다립니다. 작은 작업은 「계획이 3단계 이하면 자동 실행」을 약속한 뒤 [AGENTS.md](/ko/guide/customization/agents-md/writing-effective-instructions/)에 적을 수 있습니다.
 
 ## ③ 실행
 
@@ -67,7 +68,7 @@ translated_at: 2026-07-28
 | 사람 | diff 읽기, 핵심 경로 수동 테스트 |
 | 산출물 | 스크린샷, 로그 조각, API 응답 |
 
-관련 체크리스트는 [완료 정의](/prompts/define-done/)와 [테스트 실행하기](/guide/quality/run-tests/)를 참고하세요.
+관련 체크리스트는 [완료 정의](/ko/prompts/define-done/)와 [테스트 실행하기](/ko/guide/quality/run-tests/)를 참고하세요.
 
 ## 작업 규모에 맞게 줄이기
 
@@ -80,7 +81,7 @@ translated_at: 2026-07-28
 
 ## EPXV 사례 템플릿과
 
-팀은 네 단계를 [사례 템플릿](/cases/use-cases/case-study-template/)과 PR 설명에 넣어 공통 언어를 만들 수 있습니다.
+팀은 네 단계를 [사례 템플릿](/ko/cases/use-cases/case-study-template/)과 PR 설명에 넣어 공통 언어를 만들 수 있습니다.
 
 ## 흔한 실수
 

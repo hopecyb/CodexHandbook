@@ -3,9 +3,10 @@ title: Schnellstart
 description: "Von Konto und Installation bis zur ersten prüfbaren Aufgabe."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 283b8cb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -25,15 +26,15 @@ Wenn deine Hauptfrage „Wie starte ich?“ und „Wie vermeide ich frühe Fehle
 
 ## Schritte
 
-1. [Konto, Tarif und Zugang](/guide/getting-started/account-plans-and-access/)
-2. [Client wählen](/guide/getting-started/choose-your-codex-client/)
-3. Installation: [Desktop-App](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
-4. [Anmelden](/guide/getting-started/sign-in-and-authentication/)
-5. [Übungsprojekt anlegen](/guide/getting-started/create-your-first-project/)
-6. [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/)
-7. [Ergebnis prüfen](/guide/getting-started/review-the-result/) · [Rückgängig machen und wiederherstellen](/guide/getting-started/undo-and-recover/)
+1. [Konto, Tarif und Zugang](/de/guide/getting-started/account-plans-and-access/)
+2. [Client wählen](/de/guide/getting-started/choose-your-codex-client/)
+3. Installation: [Desktop-App](/de/guide/getting-started/install-desktop-app/) · [CLI](/de/guide/getting-started/install-cli/) · [IDE](/de/guide/getting-started/install-ide-extension/)
+4. [Anmelden](/de/guide/getting-started/sign-in-and-authentication/)
+5. [Übungsprojekt anlegen](/de/guide/getting-started/create-your-first-project/)
+6. [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/)
+7. [Ergebnis prüfen](/de/guide/getting-started/review-the-result/) · [Rückgängig machen und wiederherstellen](/de/guide/getting-started/undo-and-recover/)
 
-Unter Zeitdruck: [Erste 30 Minuten](/guide/getting-started/first-30-minutes/) · zuerst die [Sicherheits-Checkliste](/guide/getting-started/beginner-safety-checklist/) lesen.
+Unter Zeitdruck: [Erste 30 Minuten](/de/guide/getting-started/first-30-minutes/) · zuerst die [Sicherheits-Checkliste](/de/guide/getting-started/beginner-safety-checklist/) lesen.
 
 Installationsschritte ändern sich mit Versionen — parallel [https://developers.openai.com/codex](https://developers.openai.com/codex) prüfen.
 

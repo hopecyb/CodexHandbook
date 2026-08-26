@@ -1,88 +1,97 @@
 ---
 title: Escolher o cliente Codex
-description: Faça a primeira escolha entre App, CLI, IDE e Cloud.
-locale: pt
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Escolher App desktop, CLI, integracao IDE ou Cloud conforme o local do trabalho.
 sidebar:
   order: 2
+locale: pt
+source_locale: zh-CN
+source_revision: 1e89f67
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Na primeira vez que vê `App / CLI / IDE / Cloud`, muita gente trava em «qual eu devo instalar?».
+Na primeira escolha nao precisa de comparar dezenas de funcionalidades. Comece por uma pergunta: **onde acontece principalmente este trabalho?**
 
-Não escolher a entrada mais adequada na primeira vez não impede de continuar. Use uma que seja confortável e complete as outras depois.
+![Escolha do cliente Codex conforme o local do trabalho](/diagrams/codex-client-selection-pt.svg)
 
-## Um critério direto
+## Escolha em 30 segundos
 
-Se agora não tem preferência forte, escolha assim:
+| Local principal | Entrada | Interacao adequada |
+|---|---|---|
+| Projetos locais e tarefas paralelas | **App desktop** | Ver tarefas, rever diffs, aprovacoes e trabalhos longos |
+| Terminal, scripts ou linha de comandos | **CLI** | Entregar tarefas, executar comandos e automatizar scripts |
+| VS Code, editores compativeis, Xcode ou JetBrains | **Integracao IDE** | Perguntar com contexto, alterar e rever no editor |
+| Repositorio remoto e ambiente isolado | **Cloud** | Executar remotamente, trabalhar em paralelo e rever depois |
 
-- **Primeira vez**: App desktop
-- **Você já vive no terminal**: CLI
-- **Você programa sobretudo no VS Code / JetBrains**: extensão IDE
-- **Você já sabe que precisa ligar a repositórios Cloud no GitHub ou rodar Tarefas longas**: aí veja Cloud
+Sem preferencia clara, o **App desktop** costuma ser o inicio mais intuitivo. Se ja trabalha diariamente no terminal ou VS Code, mantenha-se nesse espaco.
 
-## O que cada entrada é
+## O que cada entrada resolve
 
-| Entrada | Como entender |
-|---|---|
-| App desktop | Console gráfico; bom para ver Tarefas, Diff e clicar em Aprovação |
-| CLI | Codex no terminal; bom para usuários de linha de comando |
-| Extensão IDE | Assistente embutido no editor; bom para olhar código e alterar junto |
-| Cloud | Forma de rodar Tarefas remotamente; boa para colaboração em repositório e Tarefas longas |
+### App desktop: consola do trabalho local
 
-| Se você… | Escolha |
-|---|---|
-| Está começando e quer ver Diff e revisão com clareza | **App desktop** (padrão recomendado) |
-| Prefere terminal e quer escrever scripts | **CLI** |
-| Altera código sobretudo no editor | **Extensão IDE** |
-| Precisa de ambiente Cloud no GitHub / Tarefas longas | **Cloud** (leia a visão geral primeiro) |
+E adequado para ver o estado das tarefas, alteracoes e aprovacoes:
 
-## Mal-entendidos comuns
+- acompanhar varias tarefas ou projetos
+- isolar alteracoes paralelas com worktrees
+- rever um diff, perguntar e corrigir
+- organizar trabalhos longos em projetos locais
 
-### 1. Escolher o cliente é técnico demais — dá para pular
+Exemplo: uma tarefa corrige uma regressao de sessao e outra analisa um gargalo; depois reveja ambas separadamente.
 
-Este passo é bem prático: define se a primeira experiência será fluida.
+### CLI: Codex no fluxo do terminal
 
-### 2. Devo usar primeiro o que parece mais profissional
+A CLI fica perto dos testes, do Git e dos scripts e facilita documentar passos repetiveis.
 
-Na primeira vez, prefira a entrada em que é **mais fácil ver o processo e o resultado** — não persiga a mais hardcore.
+```bash
+codex
+```
 
-## Por que recomendo começar pelo App desktop
+Exemplo: a partir da raiz do repositorio, execute primeiro o teste que falha, localize a causa, aplique a alteracao minima e repita o teste.
 
-Para iniciantes, o App desktop costuma ser mais amigável porque:
+### Integracao IDE: em torno do codigo atual
 
-- Você vê com mais facilidade o que ele fez
-- Quando ele pede Permissão fica óbvio
-- Conceitos como Diff, Tarefa e projeto ficam mais intuitivos
-- Se algo der errado, é mais fácil parar e verificar
+E adequada quando a questao depende do ficheiro, selecao ou diff atual. VS Code, Cursor, Windsurf e editores compativeis usam a extensao Codex; Xcode e JetBrains tem integracoes proprias.
 
-Se você não tem preferência clara pelo terminal, o App desktop costuma ser melhor.
+Exemplo: selecione uma funcao dificil, explique entradas, saidas e excecoes e adicione testes de limites.
 
-## Depois você pode usar várias entradas ao mesmo tempo
+### Cloud: delegar num ambiente remoto isolado
 
-Não é escolher um entre quatro, nem vínculo permanente.
+Cloud e adequado para repositorios ligados e tarefas independentes do computador local. E util para exploracao paralela, trabalhos longos e revisao centralizada.
 
-Muita gente combina assim depois:
+## Nao sao opcoes exclusivas
 
-- No dia a dia, App desktop para ver Tarefas e revisar mudanças
-- CLI quando precisa de operação em lote
-- Extensão IDE quando o foco é escrever código
+1. Esclareca uma questao local no IDE.
+2. Entregue a exploracao longa ao App desktop ou Cloud.
+3. Execute os comandos da equipa na CLI.
+4. Confirme o diff final no App ou na interface de revisao.
 
-A primeira escolha é só o ponto de partida.
+Nao escolha a entrada «mais forte», mas **a mais proxima do contexto e cujo resultado seja facil de rever**.
 
-## Se quiser menos atrito
+## Dois cenarios comuns
 
-1. Instale primeiro o [App desktop](/guide/getting-started/install-desktop-app/)
-2. Rode a [primeira Tarefa](/guide/getting-started/run-your-first-task/)
-3. Quando estiver confortável, considere CLI ou IDE
+### Primeiro bug num projeto real
 
-Comparação completa: [Comparação de recursos](/guide/reference/feature-comparison/). Você pode instalar vários clientes; **mantenha o projeto de prática no mesmo diretório** para comparar com facilidade.
+Comece pelo App desktop para ver conversa, alteracoes e permissoes; depois experimente CLI ou IDE.
+
+### A equipa ja tem comandos e CI
+
+Comece pela CLI e registe instalacao, testes e formatacao em `AGENTS.md` para reutilizar as mesmas regras.
+
+## Verifique logo depois de escolher
+
+1. Peca que leia e explique um ficheiro.
+2. Solicite uma alteracao pequena e reversivel.
+3. Reveja o diff, nao apenas a resposta.
+4. Execute um comando de verificacao.
+5. Recuse ou restrinja um pedido de permissao.
+
+Consulte [comparacao de funcionalidades](/pt/guide/reference/feature-comparison/) e [permissoes e sandbox](/pt/guide/permissions-and-sandbox/).
 
 ---
 
-**Status:** verified  
-**Produtos aplicáveis:** App / CLI / IDE  
-**Base de verificação:** A página inicial da OpenAI Developers apresenta ao mesmo tempo Codex, fluxos desktop e entradas para desenvolvedores; esta página é uma sugestão de caminho para o primeiro uso e não trata as entradas como matriz fixa de capacidades nem como produtos mutuamente exclusivos.  
-**Última verificação:** 2026-07-26
+**Estado:** verified
+
+**Produtos aplicaveis:** App / CLI / IDE / Cloud
+
+**Ultima verificacao:** 2026-08-26

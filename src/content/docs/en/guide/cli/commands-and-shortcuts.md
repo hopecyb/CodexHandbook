@@ -1,14 +1,15 @@
 ---
+reviewed_at: 2026-08-26
 title: Commands and shortcuts
 description: CLI subcommands, in-session actions, and keyboard habits—product-oriented; full flags in reference.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 6a36a12
+translation_status: reviewed
+translated_at: 2026-08-26
 ---
 
-Terminal efficiency comes from three areas: **how you launch**, **in-session shortcuts**, and **pairing with scripts/editors**. This page covers habits; flag tables live in [CLI command reference](/guide/reference/commands/) and [keyboard shortcuts](/guide/reference/keyboard-shortcuts/).
+Terminal efficiency comes from three areas: **how you launch**, **in-session shortcuts**, and **pairing with scripts/editors**. This page covers habits; flag tables live in [CLI command reference](/en/guide/reference/commands/) and [keyboard shortcuts](/en/guide/reference/keyboard-shortcuts/).
 
 ## What's covered
 
@@ -32,12 +33,12 @@ That clarity usually picks the right command.
 
 | Goal | Entry | Details |
 |---|---|---|
-| Chat and edit interactively | `codex` interactive TUI | [Interactive mode](/guide/cli/interactive-mode/) |
-| CI / pipeline one-shot | `codex exec` (or equivalent) | [Non-interactive mode](/guide/cli/non-interactive-mode/) |
-| Change defaults | Config files | [CLI configuration](/guide/cli/configuration/) |
+| Chat and edit interactively | `codex` interactive TUI | [Interactive mode](/en/guide/cli/interactive-mode/) |
+| CI / pipeline one-shot | `codex exec` | [Non-interactive mode](/en/guide/cli/non-interactive-mode/) |
+| Change defaults | Config files | [CLI configuration](/en/guide/cli/configuration/) |
 
 :::note
-Subcommand names change by version—trust `codex --help`.
+`codex` and `codex exec` are currently Stable entry points. Use `codex --help` and `codex exec --help` for current flags.
 :::
 
 ## Common misconceptions
@@ -72,11 +73,11 @@ Exact keys and `/` commands vary by version; categories are stable:
 
 ### Slash commands
 
-Typing `/` at the prompt triggers built-in flows (review, compact context, etc.). **Do not memorize a frozen list**—use `/` completion in your environment. Learning-oriented taxonomy: [slash commands reference](/guide/reference/slash-commands/).
+Typing `/` at the prompt triggers built-in flows (review, compact context, etc.). **Do not memorize a frozen list**—use `/` completion in your environment. Learning-oriented taxonomy: [slash commands reference](/en/guide/reference/slash-commands/).
 
 ### Approvals
 
-When the Agent requests shell or file writes, the UI prompts approve/deny/always allow (if offered). Read [approvals and sandbox](/guide/cli/approvals-and-sandbox/) before unattended use.
+When the Agent requests shell or file writes, the UI prompts approve/deny/always allow (if offered). Read [approvals and sandbox](/en/guide/cli/approvals-and-sandbox/) before unattended use.
 
 ## Shell-layer shortcuts (recommended)
 
@@ -104,11 +105,11 @@ Avoid over-abstracting before the base tool feels natural.
 
 | | CLI | IDE extension |
 |---|---|---|
-| Context | `--cwd`, @ files (version-dependent) | Open files, selection |
+| Context | Directory selected with `--cd` / `-C`, plus files read by tools | Open files, selection |
 | Best for | Scripts, SSH remote, pure terminal | Edit while viewing diff |
 | Shortcuts | Terminal keys + `/` | Editor command palette |
 
-IDE: [local task workflow](/guide/ide/local-task-workflow/)
+IDE: [local task workflow](/en/guide/ide/local-task-workflow/)
 
 ## Common mistakes
 
@@ -128,7 +129,7 @@ You do not need every command and shortcut on day one. Clarify "chat while worki
 - OpenAI Codex CLI documentation
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI  
-**Review note:** Covers `codex`, `codex exec`, `/` command categories, and session shortcuts—details that shift by version; lacks strong current official command/shortcut documentation to verify; needs rewrite before verification.  
+**Status:** outdated
+**Applicable products:** CLI
+**Review note:** Covers `codex`, `codex exec`, `/` command categories, and session shortcuts—details that shift by version; lacks strong current official command/shortcut documentation to verify; needs rewrite before verification.
 **Last verified:** 2026-07-26

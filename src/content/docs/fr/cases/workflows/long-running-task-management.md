@@ -3,12 +3,13 @@ title: Gestion des tâches longues
 description: Grandes tâches sur plusieurs heures ou sessions — points de contrôle, compression, délégation et conditions de sortie.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Les tâches longues posent souvent les mêmes problèmes : **contexte saturé**, **personne absente**, **direction qui dérive**, **moment d'arrêt flou**. Cette page applique [exploration—planification—exécution—vérification](/cases/workflows/explore-plan-execute-verify/) aux scénarios de plusieurs heures ou de plusieurs sessions.
+Les tâches longues posent souvent les mêmes problèmes : **contexte saturé**, **personne absente**, **direction qui dérive**, **moment d'arrêt flou**. Cette page applique [exploration—planification—exécution—vérification](/fr/cases/workflows/explore-plan-execute-verify/) aux scénarios de plusieurs heures ou de plusieurs sessions.
 
 ## Ce que couvre cette page
 
@@ -16,7 +17,7 @@ Les tâches longues posent souvent les mêmes problèmes : **contexte saturé**,
 - Quoi écrire dans les points de contrôle et les notes d'état
 - Conditions de sortie pour les exécutions longues automatisées
 
-Connexes : [Déléguer et suivre](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Connexes : [Déléguer et suivre](/fr/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/fr/skills/automations/scheduled-tasks/)
 
 ## Signaux d'une tâche longue
 
@@ -33,7 +34,7 @@ Si l'un s'applique, rédiger d'abord le plan — ne pas enchaîner la conversati
 
 Produire un plan écrit : périmètre, non-objectifs, jalons, commandes d'acceptation. Obtenir la validation humaine avant une exécution à grande échelle.
 
-[Planification](/guide/agent-work/planning/) · [Sous-agents](/guide/agent-work/subagents/)
+[Planification](/fr/guide/agent-work/planning/) · [Sous-agents](/fr/guide/agent-work/subagents/)
 
 ### 2. Points de contrôle
 
@@ -41,11 +42,11 @@ Après chaque jalon :
 
 - Commit ou stash d'un incrément vérifiable
 - Mettre à jour `PROGRESS.md` ou un commentaire d'issue : ce qui est terminé, la suite, les blocages
-- Quand le contexte est plein, utiliser la [compression](/guide/context/compaction/) ou ouvrir une nouvelle session + lier le fichier de progression
+- Quand le contexte est plein, utiliser la [compression](/fr/guide/context/compaction/) ou ouvrir une nouvelle session + lier le fichier de progression
 
 ### 3. Clôture ou délégation
 
-- Capacité locale insuffisante → [délégation Cloud](/guide/web-and-cloud/delegate-and-follow-up/)
+- Capacité locale insuffisante → [délégation Cloud](/fr/guide/web-and-cloud/delegate-and-follow-up/)
 - Surveillance continue → Automation + **max iterations / date limite** explicites
 
 ## Conditions de sortie (indispensables pour l'automatisation)

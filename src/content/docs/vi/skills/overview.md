@@ -3,9 +3,10 @@ title: Tổng quan Skills
 description: Dùng SKILL.md để dạy Codex workflow tái sử dụng — viết một lần, gọi khi cần.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 75eaa78
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Skill** là một thư mục chứa `SKILL.md` (có thể kèm script và tài liệu tham chiếu), đóng gói một quy trình cố định thành năng lực mà Codex có thể **gọi tự động hoặc tường minh**.
@@ -81,7 +82,7 @@ description: Review diff của nhánh hiện tại so với main, đánh dấu r
 4. Khi cần tính xác định, bổ sung `scripts/`
 5. Commit vào `.agents/skills/` và mở PR cho nhóm
 
-Thực hành: [Tạo Skill đầu tiên](/skills/create-your-first-skill/)
+Thực hành: [Tạo Skill đầu tiên](/vi/skills/create-your-first-skill/)
 
 ## Thắc mắc thường gặp
 

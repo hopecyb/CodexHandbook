@@ -3,9 +3,10 @@ title: Diretório references/
 description: Organize documentação longa de referência no Skill com divulgação progressiva.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c595507
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `references/` serve para material longo que não precisa expandir de imediato toda vez — evita um fluxo principal longo e confuso.

@@ -1,45 +1,43 @@
 ---
 title: Hooks
-description: 在固定执行节点加检查、日志和阻断，说明何时该拦、何时该记。
+description: 在 Codex 生命周期中运行脚本或 MCP 工具，完成检查、记录和策略控制。
 ---
 
-Hook 就是在某个固定时刻自动插入一道检查或记录。
+Hook 是 Codex 生命周期中的自动处理器。它可以在会话开始、提示词提交、工具调用前后、上下文压缩、子 Agent 停止或主线程结束等节点运行脚本或 MCP 工具。
 
-它处理的是流程节点上的检查、记录和拦截，不负责定义任务本身怎么做。
+## 这一组解决什么
 
-## 内容
-
-这一组主要讲 3 个问题：
-
-- 我到底该在什么时候触发 Hook
-- 我是想阻止问题发生，还是只做记录
-- 第一次配置 Hook，怎样从低风险方式开始
+- 怎样选择正确事件，而不是编造 `pre_tool` 一类不存在的名字
+- 怎样区分“执行前阻断”和“执行后反馈”
+- 怎样从可测试、低风险的 Hook 开始
+- 怎样审查项目 Hook 和 Plugin 自带 Hook 的信任边界
 
 ## 阅读顺序
 
-1. [Hooks 概述](/skills/hooks/hooks-overview/)：先分清 Hook 跟 Skill、MCP 不是一回事
-2. [Hook 事件类型](/skills/hooks/hook-event-types/)：知道该挂在前面、后面，还是会话开头/结尾
-3. [Hook 配置示例](/skills/hooks/hooks-examples/)：看“只记录 / 先阻断 / 轻量输入检查”三种常见写法
+1. [Hooks 概述](/skills/hooks/hooks-overview/)：理解配置层、信任和运行行为
+2. [Hook 事件类型](/skills/hooks/hook-event-types/)：按生命周期选择事件和 matcher
+3. [Hook 配置示例](/skills/hooks/hooks-examples/)：运行一个能被单元测试的 `PreToolUse` 守护示例
 
-## 配置顺序
+## 最短判断
 
-不建议一开始就上最严的阻断策略。更合适的顺序是：
+| 目标 | 优先考虑 |
+|---|---|
+| 工具执行前拒绝或改写输入 | `PreToolUse` |
+| Codex 准备请求权限升级时决策 | `PermissionRequest` |
+| 工具已结束后记录或追加反馈 | `PostToolUse` |
+| 提示词提交时检查或补上下文 | `UserPromptSubmit` |
+| 要求主线程或子 Agent 再继续一轮 | `Stop` / `SubagentStop` |
 
-1. 先做 `log`
-2. 再做 `warn`
-3. 再做 `block`
+Hook 不能替代沙箱、审批、命令规则或服务端权限。它是额外守护层，而且部分托管工具路径不会经过本地工具 Hook。
 
-这样更容易先验证：
+## 官方来源
 
-- 事件是不是挂对了
-- 误报多不多
-- 性能会不会拖慢日常使用
-
-Hook 可以看成挂在流程节点上的一道小闸门，用来检查、记录或拦截。
+- [OpenAI：Hooks](https://learn.chatgpt.com/docs/hooks)
 
 ---
 
-**状态：** outdated  
-**适用产品：** CLI / App（视版本）  
-**复核说明：** Hooks 的支持面、事件模型和配置入口高度依赖当前客户端版本；截至 2026-07-26，官方公开资料不足以稳定核准本组说明，暂标为 `outdated`。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** 使用本地 Codex host 的环境；信任审查与 `/hooks` 管理以 Codex CLI 官方说明为准
+
+**最近核验：** 2026-08-25

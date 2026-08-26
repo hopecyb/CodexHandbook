@@ -5,9 +5,10 @@ sidebar:
   order: 30
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 3a5cc3b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Codex often produces **file changes in the repo** or **new artifacts** (docs, images, config). This section covers best practices by file type so you do not end up with “generated but unusable.”
@@ -20,14 +21,14 @@ Codex often produces **file changes in the repo** or **new artifacts** (docs, im
 
 | Topic | Page |
 |---|---|
-| Code and text | [Text and code files](/guide/files-and-artifacts/text-and-code-files/) |
-| Screenshots and design input | [Images and screenshots](/guide/files-and-artifacts/images-and-screenshots/) |
-| PDF and long documents | [PDF and documents](/guide/files-and-artifacts/pdf-and-documents/) |
-| Tabular data | [Tables and spreadsheets](/guide/files-and-artifacts/tables-and-spreadsheets/) |
-| Slides | [Presentations](/guide/files-and-artifacts/presentations/) |
-| Agent outputs | [Generated artifacts](/guide/files-and-artifacts/generated-artifacts/) |
+| Code and text | [Text and code files](/en/guide/files-and-artifacts/text-and-code-files/) |
+| Screenshots and design input | [Images and screenshots](/en/guide/files-and-artifacts/images-and-screenshots/) |
+| PDF and long documents | [PDF and documents](/en/guide/files-and-artifacts/pdf-and-documents/) |
+| Tabular data | [Tables and spreadsheets](/en/guide/files-and-artifacts/tables-and-spreadsheets/) |
+| Slides | [Presentations](/en/guide/files-and-artifacts/presentations/) |
+| Agent outputs | [Generated artifacts](/en/guide/files-and-artifacts/generated-artifacts/) |
 
-General method: [Verify artifacts](/guide/quality/verify-artifacts/).
+General method: [Verify artifacts](/en/guide/quality/verify-artifacts/).
 
 ## What this chapter covers
 
@@ -44,8 +45,8 @@ It is operational guidance by file type—not a feature list.
 1. **Explicit paths**: output path and naming in the prompt
 2. **Format conventions**: extension, encoding (UTF-8), line endings match the project
 3. **Size awareness**: large binaries stay out of Git, or use LFS/CDN
-4. **Human verification**: generated ≠ done; see [Definition of done](/guide/quality/definition-of-done/)
-5. **Sensitive data**: see [Sensitive context](/guide/context/sensitive-context/)
+4. **Human verification**: generated ≠ done; see [Definition of done](/en/guide/quality/definition-of-done/)
+5. **Sensitive data**: see [Sensitive context](/en/guide/context/sensitive-context/)
 
 ## Common misconceptions
 
@@ -84,9 +85,9 @@ Easier than reading the whole chapter at once.
 ## Relationship to tools
 
 - Read/write files: file tools + terminal
-- View images: [Prompting with images](/prompts/prompting-with-images/)
-- View pages: [Browser tool](/guide/tools/browser/)
-- Generate images: [Image generation](/guide/tools/image-generation/)
+- View images: [Prompting with images](/en/prompts/prompting-with-images/)
+- View pages: [Browser tool](/en/guide/tools/browser/)
+- Generate images: [Image generation](/en/guide/tools/image-generation/)
 
 File tasks often fail quietly—format, rules, or content drift while the file “exists.”
 

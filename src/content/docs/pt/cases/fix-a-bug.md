@@ -3,90 +3,55 @@ title: Corrigir um bug
 description: Do teste em falha à correção mínima e regressão — o ciclo mais comum para programadores.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 27c707b
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## Metadados
 
-| Campo | Conteúdo |
+This is a short entry page. The complete steps, runnable code, red/green test evidence, and phase-specific prompts are maintained in [Verified bug fixing](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/) so the two pages do not drift.
+
+## Identify the missing step
+
+| Current situation | Start here |
 |---|---|
-| Público | Programadores |
-| Cliente | CLI ou IDE (repositório local) |
-| Tempo estimado | 30–60 minutos |
-| Data de verificação | 2026-07-25 |
+| You only know the result is wrong; there is no stable reproduction | [Diagnose before fixing](/pt/cases/workflows/diagnose-before-fixing/) |
+| A test fails reliably | [Verified bug fixing](/pt/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| You do not know the module | [Understand a codebase](/pt/cases/understand-a-codebase/) |
+| The fix is complete and ready to merge | [Review a PR](/pt/cases/review-a-pr/) |
+| The test itself is unstable | Read [Run tests](/pt/guide/quality/run-tests/) first; a flaky test is not repair evidence |
 
-## 1. Objetivo e contexto
+## Minimal evidence loop
 
-**Objetivo:** Corrigir um bug de regressão já capturado por um teste unitário e acrescentar testes para evitar reincidência.
+Keep this evidence chain in any language or framework:
 
-**Critérios de sucesso:**
+1. Reproduce the original failure reliably with an explicit command.
+2. Save the failing assertion, error output, and input conditions.
+3. Explain the root cause before making the smallest repair.
+4. Make the original failing test and new boundary tests pass.
+5. Run broader regression checks.
+6. Read the diff manually and reject unrelated changes.
 
-- O teste que falhava passa
-- A suíte completa continua verde
-- O diff envolve apenas ficheiros necessários
+Step 4 without step 1 does not prove that the test covers the original issue. A green full suite without diff review also does not prove that the change scope is correct.
 
-**Fora de âmbito:** Refatorações em larga escala; upgrades major de dependências.
+## Practice directly
 
-## 2. Preparação
+The repository includes a JavaScript shopping-cart discount example with no third-party dependencies:
 
-- Clonar o repositório, `pnpm install` (ou conforme `AGENTS.md`)
-- Confirmar reprodução local da falha: `pnpm test -- path/to/failing.test.ts`
-- Ramo: `fix/issue-123-short-desc`
+```bash
+# Starter: one test is expected to fail
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-## 3. Fluxo de trabalho
-
-### Explorar
-
-```text
-Não altere código. Leia o teste em falha @tests/auth/login.test.ts e a implementação @src/auth/login.ts;
-em no máximo 5 pontos, explique a causa da falha, citando asserções e números de linha da stack.
+# Reference solution: all three tests are expected to pass
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-### Planear
-
-```text
-Apresente o plano de correção: que ficheiros alterar, se são necessários novos testes e como verificar.
-Espere a minha resposta «executar» antes de alterar código.
-```
-
-### Executar
-
-```text
-Execute os passos 1–2 do plano. Após cada passo, corra apenas os testes relacionados.
-```
-
-### Verificar
-
-```text
-Corra a suíte completa de testes; resuma o diff para a minha review; não faça git push.
-```
-
-Humano: ler o diff, confirmar que não há alterações irrelevantes e seguir [rever diffs](/guide/quality/review-diffs/).
-
-## 4. Falha e recuperação
-
-| Problema | Tratamento |
-|---|---|
-| A correção introduz novas falhas | `git stash` ou reverter o commit; reduzir o âmbito da alteração |
-| Diagnóstico da causa raiz errado | Voltar à exploração e pedir novas hipóteses |
-| Teste flaky | Estabilizar o teste antes de corrigir a lógica de negócio |
-
-## 5. Consolidação
-
-- Se este tipo de bug se repetir, acrescentar uma convenção em `AGENTS.md`
-- Pode extrair o Skill `$regression-guard`: correr a lista de testes críticos antes de fundir
-
-## 6. Capítulos relacionados
-
-- [Compreender um código-base](/cases/understand-a-codebase/)
-- [Rever diffs](/guide/quality/review-diffs/)
-- [Correr testes](/guide/quality/run-tests/)
+The complete materials are in [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
 
 ---
 
-**Estado:** verified  
-**Produtos aplicáveis:** CLI / IDE  
-**Base de verificação:** A página inicial atual de OpenAI Developers ainda descreve o Codex como útil para corrigir defeitos, correr testes e rever alterações; o exemplo desta página foca o ciclo de engenharia estável «reproduzir a falha, correção mínima, complementar testes e verificar regressão», sem depender de um framework ou UI específicos.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+**Applies to:** CLI / IDE
+**Verification basis:** This entry page maintains only path selection and a stable engineering loop. The expected failing and passing commands were run in the current repository.
+**Last verified:** 2026-08-25

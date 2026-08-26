@@ -1,150 +1,80 @@
 ---
 title: Cloud 排障
-description: GitHub 连接、环境、Secrets、出网与 PR 环节的常见故障索引。
+description: 按仓库、setup、网络、Agent 与交付五层定位 Cloud 失败。
 sidebar:
   order: 80
 ---
 
-Cloud 出问题时，重复运行一般解决不了根因。
+Cloud 重试会重新消耗时间，但不会自动补齐缺失的权限、依赖或网络配置。先判断失败发生在哪个阶段。
 
-Cloud 问题常出在**权限、环境差异、凭据或网络**四层。本页按症状指向对应专题，避免在聊天里盲目重试。
+## 五层分诊
 
-## 内容
+| 阶段 | 常见症状 | 第一检查点 |
+|---|---|---|
+| 仓库连接 | 仓库不在列表、403、分支不存在 | GitHub 授权范围、组织策略、起始分支 |
+| 容器/setup | `command not found`、依赖安装失败 | 固定运行时、setup script、Secret |
+| Agent 网络 | setup 可下载，Agent `curl` 失败 | Agent access 默认 Off、allowlist、HTTP 方法 |
+| Agent 执行 | 修改跑偏、测试命令不存在 | prompt 范围、`AGENTS.md`、工作日志 |
+| 交付 | diff 不完整、无法开 PR | 分支状态、写权限、保护规则 |
 
-- 任务失败时先查哪一类原因
-- 与本地排障的分工
-- 何时该回滚到本地小步验证
+## 先保留证据
 
-## 先查什么
+记录仓库、起始 commit、环境名称、失败阶段、第一条有效错误和完整命令。不要只保留最终一句“exit 1”。
 
-如果出现“Cloud 红了、本地绿了”，优先检查运行条件。
+```text
+环境：api-node22
+起点：main@abc123
+阶段：setup
+命令：pnpm install --frozen-lockfile
+首个错误：ERR_PNPM_FETCH_401 ...
+本地差异：本地使用了 ~/.npmrc，Cloud 未配置 NPM_TOKEN
+```
 
-常见原因包括：
+这类记录能直接指向修复，而不是让下一轮重新猜。
 
-- 远程环境和你本地不一样
-- Cloud 看不到你本地未推送的东西
-- Secret 没配好
-- 网络或权限被限制了
+## 高频问题
 
-排查时先看条件是否满足，再看任务本身有没有问题。
+### setup 中能读 Secret，Agent 中为空
 
-## 快速分诊
+这是设计行为：Secret 在 Agent 阶段前被移除。把使用凭据的安装动作放在 setup；不要改成普通环境变量来绕开保护。
 
-| 症状 | 优先查看 |
-|---|---|
-| 无法连接仓库 / 403 | [连接 GitHub](/guide/web-and-cloud/connect-github/) |
-| 依赖安装失败 | [互联网访问](/guide/web-and-cloud/internet-access/) · [Cloud 环境](/guide/web-and-cloud/cloud-environments/) |
-| 私有包 / API 401 | [Secrets 与变量](/guide/web-and-cloud/secrets-and-variables/) |
-| 任务一直等待 | [委托与跟进](/guide/web-and-cloud/delegate-and-follow-up/) · 是否待审批 |
-| 本地有 commit、Cloud 看不到 | 是否已 push；Cloud 不读本机未推送内容 |
-| PR 开不出或推不上去 | 分支保护 · [创建 PR](/guide/web-and-cloud/create-pull-requests/) |
-| 测试在 Cloud 红、本地绿 | 版本/环境对齐表见 [Cloud 环境](/guide/web-and-cloud/cloud-environments/) |
+### setup 能联网，Agent 不能
 
-## 排查顺序
+也是默认行为。若任务确实需要 Agent 联网，在环境中开启并限制域名和 HTTP 方法，随后审查日志。
 
-可以按这个顺序排查：
+### 缓存导致依赖旧
 
-1. 仓库和分支是不是对的
-2. 权限和授权是不是够
-3. 环境和依赖是不是齐
-4. Secret 和网络是不是通
-5. 任务描述是不是遗漏关键约束
+修改 setup、maintenance、变量或 secrets 会自动失效缓存。仓库本身的变化导致缓存不兼容时，在环境页 Reset cache；团队共享环境先评估对其他用户的影响。
 
-把这几项先排清，比直接重跑更有效。
+### 本地绿、Cloud 红
 
-## 连接与权限
+对比 Node/Python 版本、lockfile、系统依赖、本地隐藏配置、VPN/localhost 服务和大小写敏感路径。把差异变成显式 setup 与仓库规则。
 
-**现象：** OAuth 成功但任务无法 clone。
+### PR review 没触发
 
-**检查：**
+确认 Cloud 已为仓库配置、Code review 已开启、评论是 `@codex review`，并检查 GitHub 集成权限。自动 reviews 还需要单独启用。
 
-1. 授权范围是否包含目标组织/仓库
-2. 仓库是否为 archived、是否启用 GitHub App 限制
-3. 是否用个人账号连了需 org SSO 的仓库
+## 何时退回本地
 
-**现象：** push 被拒。
+若问题依赖本机服务，或连续两轮都在修环境而非业务代码，先在本地做最小复现。把成功命令、版本和测试写回 `AGENTS.md`/setup 后，再交给 Cloud。
 
-**检查：** 分支保护、required review、是否尝试直推 `main`
+## 解决后的验收
 
-## 常见误会
+- [ ] 同一环境从干净起点可重复运行
+- [ ] 没有用更大仓库权限或 unrestricted 网络掩盖问题
+- [ ] 日志未泄露 Secret
+- [ ] 结果 diff 与测试仍经过人工审查
 
-### 1. 报错出现在安装阶段，就一定是依赖问题吗
+## 官方依据
 
-也可能是网络、认证、Secret、私有 registry 权限问题。
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
-### 2. 本地能跑，就说明代码没问题，Cloud 是偶发抽风吗
-
-很多时候说明：  
-**你的本地环境里有 Cloud 没有的前提条件。**
-
-### 3. 任务卡住就是模型在思考吗
-
-也可能只是：
-
-- 在等审批
-- 在等网络
-- 在等环境启动
-- 在做一个范围过大的任务
-
-## 环境与依赖
-
-**现象：** `command not found`（node、python 等）。
-
-**检查：** 基础镜像是否含所需运行时；是否在 `AGENTS.md` 写明版本与安装命令。
-
-**现象：** lockfile 冲突或安装超时。
-
-**检查：** 出网策略；registry 镜像；依赖是否需 VPN（Cloud 一般不在内网）
-
-## Secrets 与变量
-
-**现象：** 构建时环境变量为空。
-
-**检查：**
-
-- Secret 名称是否与文档一致（大小写敏感常见）
-- 是否配置在正确的仓库/环境作用域
-- 是否误把 Secret 值写进 prompt 导致被脱敏
-
-更多：[Secrets 与变量](/guide/web-and-cloud/secrets-and-variables/)
-
-## 任务挂起与超时
-
-| 原因 | 处理 |
-|---|---|
-| 等待人工审批 | App/手机批准或拒绝 |
-| 任务过大 | 拆成多个小委托 |
-| 环境启动慢 | 首次冷启动正常；持续慢则查官方状态页 |
-
-跟进方法：[委托与跟进](/guide/web-and-cloud/delegate-and-follow-up/)
-
-## 产出质量
-
-Cloud 跑完但结果不可用：
-
-1. 对照任务描述是否缺少验收条件
-2. 本地 checkout 同一分支跑测试
-3. 用 [先诊断再修复](/cases/workflows/diagnose-before-fixing/) 追加跟进，而非整任务重来
-
-## 什么时候该先退回本地
-
-如果已经连续两轮都在排 Cloud 条件，而不是在推进任务本身，可以先退回本地：
-
-- 在本地做最小复现
-- 把依赖、命令、验证方式写清
-- 再重新委托 Cloud
-
-这样比一直在远程环境里猜更省时间。
-
-## 与全局排障索引的关系
-
-CLI/IDE/App 本地问题见 [参考资料 · 故障排查](/guide/reference/troubleshooting/)。本页只覆盖 **Cloud 特有**链路。
-
-## 参考来源
-- OpenAI Codex Cloud 支持文档
 ---
 
-**状态：** outdated  
-**适用产品：** Cloud  
-**复核说明：** 本页的排查框架有帮助，但它建立在当前 Cloud 仓库连接、Secrets、审批、网络与 PR 行为假设之上；随着 Cloud 产品和跨端能力变化，这些症状到专题页的映射需要按最新官方支持文档重写。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** Cloud
+
+**最近核验：** 2026-08-26

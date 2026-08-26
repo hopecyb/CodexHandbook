@@ -3,9 +3,10 @@ title: 흔한 오해
 description: Codex를 만능 블랙박스로 보는 몇 가지 오해를 바로잡습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 83a9c4c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -75,7 +76,7 @@ Codex의 가치는 반복 노동·정보 정리·실행 비용을 줄이는 것�
 
 Codex는 강하지만, 명확한 목표와 경계 안에서 더 잘 쓰이며, 이해와 판단을 대신해 주지는 않습니다.
 
-다음 단계: [빠른 시작](/guide/getting-started/).
+다음 단계: [빠른 시작](/ko/guide/getting-started/).
 
 ---
 

@@ -3,9 +3,10 @@ title: Anti-patterns de Prompts
 description: Formulaciones vagas, exceso de permisos y peticiones de razonamiento oculto que conviene evitar.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6aba346
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Al aprender Prompts, es fácil centrarse solo en «cómo hay que escribir».  

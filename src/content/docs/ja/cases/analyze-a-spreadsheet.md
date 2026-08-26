@@ -3,9 +3,10 @@ title: スプレッドシートを分析する
 description: スプレッドシートデータをアップロードまたは参照し、集計とインサイトを得る。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # スプレッドシートを分析する
@@ -40,7 +41,7 @@ translated_at: 2026-07-28
 
 ## 4. 関連
 
-- [表とスプレッドシート](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [表とスプレッドシート](/ja/guide/files-and-artifacts/tables-and-spreadsheets/)
 
 ---
 

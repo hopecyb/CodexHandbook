@@ -3,9 +3,10 @@ title: ルール
 description: allow/deny、コマンドルール、チーム方針の説明ページ——何を止め、何を注意させるかを先に分ける。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 1b6534d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ルールグループは「Codex にもう少し注意を書く」と誤解されがちです。
@@ -14,9 +15,9 @@ translated_at: 2026-07-28
 
 ## 推奨順序
 
-1. [許可と拒否パターン](/guide/customization/rules/allow-and-deny-patterns/)
-2. [コマンドルール](/guide/customization/rules/command-rules/)
-3. [チームルール](/guide/customization/rules/team-rules/)
+1. [許可と拒否パターン](/ja/guide/customization/rules/allow-and-deny-patterns/)
+2. [コマンドルール](/ja/guide/customization/rules/command-rules/)
+3. [チームルール](/ja/guide/customization/rules/team-rules/)
 
 ## このグループが助けること
 

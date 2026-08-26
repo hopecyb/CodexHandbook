@@ -3,48 +3,51 @@ title: MCP
 description: Trang giải thích nối công cụ và nguồn dữ liệu ngoài — giúp quyết khi nào cần MCP.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ff68431
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`MCP` là cách nối chuẩn: Codex nối công cụ và nguồn dữ liệu ngoài qua MCP.
+MCP (Model Context Protocol) answers “how can an Agent call tools and data outside the repository?” It does not define a workflow.
 
-Nếu Skill thiên về"bước làm việc", thì MCP xử lý"đưa công cụ ngoài vào".
+## Who it is for
 
-## Nội dung nhóm này
+- Individual developers who want Codex to query documentation, designs, tickets, or internal tools.
+- Teams that need consistent external-tool configuration, OAuth, and least privilege.
+- Maintainers diagnosing “the server is configured, but its tools are unavailable or calls fail.”
 
-- Khi nào thật sự cần MCP
-- Cách nối hệ thống ngoài mà không mở Quyền quá rộng
-- Không nối được, gọi không thông thì kiểm loại vấn đề nào trước
+If the task only reads and writes the current repository, start with built-in file and terminal capabilities. Add MCP only when third-party context or action is required.
 
-## Thứ tự khuyến nghị
+## Reading order
 
-1. [Tổng quan MCP](/skills/mcp/mcp-overview/): trước hết phân công MCP với Skill, Plugin
-2. [Nối máy chủ MCP](/skills/mcp/connect-an-mcp-server/): theo ý cấu hình nối máy chủ đầu tiên
-3. [Gỡ lỗi MCP](/skills/mcp/debugging-mcp/): không nối được, công cụ không hiện, Quyền sai thì điều tra thế nào
+1. [MCP overview](/vi/skills/mcp/mcp-overview/): separate the responsibilities of MCP, Skills, and Plugins
+2. [Connect an MCP server](/vi/skills/mcp/connect-an-mcp-server/): connect the first server with the CLI or `config.toml`
+3. [Debug MCP](/vi/skills/mcp/debugging-mcp/): diagnose configuration, startup, authentication, and tool layers
 
-## Hiểu lầm thường gặp
+## Current support boundaries
 
-### 1. Chỉ cần nối MCP là Codex"làm được mọi thứ"
+- The ChatGPT desktop App, Codex CLI, and IDE integration share MCP configuration when they use the same Codex host.
+- Local Codex clients support STDIO and Streamable HTTP servers.
+- ChatGPT Web does not read local `~/.codex/config.toml`; it uses remote MCP tools supplied by installed Plugins.
 
-Nó làm được gì hoàn toàn phụ thuộc máy chủ MCP bạn nối đã expose những công cụ nào, và các công cụ đó bản thân cho Quyền lớn đến đâu.
+## Three rules
 
-### 2. MCP chỉ là vấn đề tích hợp kỹ thuật
+1. MCP exposes tools; it does not define a reliable process. Put durable workflows in a Skill or `AGENTS.md`.
+2. Server capability depends on its exposed tools and the scope of the underlying credential.
+3. Begin with read-only tools, a test tenant, and a small tool set. Do not experiment with a production administrator token.
 
-Một khi nó nối hệ thống thật, ngay lập tức đồng thời trở thành:
+## Official sources
 
-- Vấn đề Quyền
-- Vấn đề lộ dữ liệu
-- Vấn đề kiểm toán
-
-Vì vậy ở đây không chỉ"cách nối", mà còn"cách tránh nối loạn".
-
-Chỉ khi Tác vụ cần chạm hệ thống thật ngoài repo, MCP mới đáng lên sân.
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [Model Context Protocol specification](https://modelcontextprotocol.io/)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Ghi chú tái Kiểm chứng:** Nhóm trang này chạm cách nối MCP hiện tại của Codex, vị trí cấu hình và phối hợp Quyền; tài liệu công khai chính thức phủ chi tiết client còn hạn chế, cần viết lại theo sản phẩm hiện hành.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** ChatGPT desktop App / Codex CLI / IDE; ChatGPT Web uses remote MCP tools through Plugins
+
+**Verification scope:** Client support, shared configuration, transport types, and CLI commands
+
+**Kiểm chứng gần nhất:** 2026-08-25

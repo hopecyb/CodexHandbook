@@ -3,9 +3,10 @@ title: Permissions et Approbations
 description: Quand Codex a besoin de votre Approbation avant d'agir.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -24,8 +25,8 @@ Codex ne doit pas effectuer d'opérations à haut risque sans consentement. L'**
 | Couche | Ce qu'elle couvre | Où lire |
 |---|---|---|
 | Concepts (cette page) | Pourquoi l'Approbation compte | — |
-| Différences produit | Comment chaque point d'entrée vous invite | [Guides produit](/guide/) |
-| Stratégie de Prompt | Comment déclarer les limites de Permission dans une Tâche | [Définir les contraintes](/prompts/constraints-and-boundaries/) |
+| Différences produit | Comment chaque point d'entrée vous invite | [Guides produit](/fr/guide/) |
+| Stratégie de Prompt | Comment déclarer les limites de Permission dans une Tâche | [Définir les contraintes](/fr/prompts/constraints-and-boundaries/) |
 
 La politique officielle et les valeurs par défaut peuvent changer — consultez [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

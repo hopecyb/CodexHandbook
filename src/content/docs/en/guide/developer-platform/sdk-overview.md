@@ -3,9 +3,10 @@ title: SDK Overview
 description: Start Codex tasks from your application via the official SDK—authentication, sessions, and error-handling concepts.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: a701e2d
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,7 +23,7 @@ In other words, it fits when **your system calls Codex**. For one-off tasks, you
 - Authentication and tenant isolation
 - How to pair with webhooks and queues
 
-Platform overview: [Developer platform](/guide/developer-platform/)
+Platform overview: [Developer platform](/en/guide/developer-platform/)
 
 ## SDK vs CLI
 
@@ -67,7 +68,7 @@ The SDK fits “connecting systems programmatically,” not as the main entry fo
 4. **Results**: message history, file diffs, artifact URLs (per API)
 5. **Errors**: distinguish retryable (429) from non-retryable (400)
 
-Error index: [Error reference](/guide/reference/error-reference/)
+Error index: [Error reference](/en/guide/reference/error-reference/)
 
 ## Minimal integration checklist
 
@@ -78,7 +79,7 @@ Error index: [Error reference](/guide/reference/error-reference/)
 
 ## Connecting to CI/CD
 
-The SDK can trigger Cloud or remote runners, or CI can callback your service to update PR status. Example patterns: [Code review automation](/guide/developer-platform/ci-cd/code-review-automation/).
+The SDK can trigger Cloud or remote runners, or CI can callback your service to update PR status. Example patterns: [Code review automation](/en/guide/developer-platform/ci-cd/code-review-automation/).
 
 ## Common mistakes
 

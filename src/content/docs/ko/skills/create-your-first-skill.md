@@ -3,9 +3,10 @@ title: 첫 Skill 만들기
 description: 커밋 가능한 pr-review Skill을 처음부터 만들고, 테스트와 팀 공유 단계까지 다룹니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d6ef72a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 이미 작업을 내릴 수는 있지만 아직 Skill을 실제로 만들어 본 적이 없다면, 이 페이지는 첫 Skill의 기본 방법을 다룹니다.
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 누구에게 맞나
 
-[첫 작업](/cases/first-task/)을 통과했고, 테스트용 저장소에서 실험할 의향이 있는 사람.
+[첫 작업](/ko/cases/first-task/)을 통과했고, 테스트용 저장소에서 실험할 의향이 있는 사람.
 
 ## 왜 `pr-review`부터 추천하나
 
@@ -136,14 +137,14 @@ git commit -m "docs: add pr-review skill for Codex"
 - [ ] `$pr-review`가 통과하고 위험한 git 조작을 하지 않음
 - [ ] 출력이 막연한 말이 아니라 등급별 결론을 포함함
 - [ ] `description`이 한 문장으로 트리거 장면을 설명함
-- [ ] [권한과 승인](/guide/permissions-and-sandbox/)에 맞춰 스크립트 필요 여부를 확인함(이 예시에는 스크립트 없음)
+- [ ] [권한과 승인](/ko/guide/permissions-and-sandbox/)에 맞춰 스크립트 필요 여부를 확인함(이 예시에는 스크립트 없음)
 
 「작고 안정적인」 Skill부터 시작하면, 분명한 작업 루틴을 안정적으로 재사용하기 쉽습니다.
 
 ## 다음 단계
 
-- [탐색—계획—실행—검증](/prompts/templates/understand/)을 Skill로 고정하기
-- GitHub API가 필요하면 [MCP](/skills/mcp/mcp-overview/)를 도입하기
+- [탐색—계획—실행—검증](/ko/prompts/templates/understand/)을 Skill로 고정하기
+- GitHub API가 필요하면 [MCP](/ko/skills/mcp/mcp-overview/)를 도입하기
 
 ## 참고 출처
 - OpenAI Codex Skills 공식 예시와 `skill-creator`(환경에서 제공되는 경우)

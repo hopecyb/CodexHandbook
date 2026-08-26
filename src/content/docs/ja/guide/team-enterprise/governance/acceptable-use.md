@@ -3,14 +3,15 @@ title: acceptable use 政策
 description: チームレベルで Codex に何をさせ、何をさせないか——技術と研修と整合。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**acceptable use 政策（AUP）**は「Codex でこれをやっていいか」を組織合意として書き、個人判断だけに頼らないものです。[脅威モデル](/guide/team-enterprise/security/threat-model/) と補完：脅威モデルはリスク、AUP は**行動境界**です。
+**acceptable use 政策（AUP）**は「Codex でこれをやっていいか」を組織合意として書き、個人判断だけに頼らないものです。[脅威モデル](/ja/guide/team-enterprise/security/threat-model/) と補完：脅威モデルはリスク、AUP は**行動境界**です。
 
 ## 内容
 
@@ -61,7 +62,7 @@ AUP は研修、権限、設定、監査と対応させることが重要。網�
 ## 基本構造
 
 1. **目的と範囲**
-2. **許可シーン**（[能力マップ](/guide/start-here/codex-capability-map/) へリンク）
+2. **許可シーン**（[能力マップ](/ja/guide/start-here/codex-capability-map/) へリンク）
 3. **禁止シーン**
 4. **データと機密**
 5. **人間監督要求**（マージ、本番変更）
@@ -93,7 +94,7 @@ AUP は研修、権限、設定、監査と対応させることが重要。網�
 ## 受け入れチェックリスト
 
 - [ ] onboarding に AUP 確認を含む
-- [ ] [チームルール](/guide/customization/rules/team-rules/) と矛盾なし
+- [ ] [チームルール](/ja/guide/customization/rules/team-rules/) と矛盾なし
 - [ ] 年次または重大機能リリース時に再審
 
 AUP の価値は、Codex 利用境界を明確にし、実際の制御手段と対応させることです。

@@ -3,12 +3,13 @@ title: Testgetriebene Arbeit
 description: Zuerst fehlschlagende Tests definieren oder ergänzen, dann die Implementierung treiben — damit Codex-Änderungen objektiv abnehmbar sind.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Testgetriebene Arbeit** (TDD oder „Tests zuerst“) lässt Tests zuerst fehlschlagen und bringt sie dann mit minimaler Implementierung zum Bestehen. Geeignet für Codebasen mit vorhandener Testinfrastruktur und eng verwandt mit Szenarien wie [Bug-Fix mit Überprüfung](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Testgetriebene Arbeit** (TDD oder „Tests zuerst“) lässt Tests zuerst fehlschlagen und bringt sie dann mit minimaler Implementierung zum Bestehen. Geeignet für Codebasen mit vorhandener Testinfrastruktur und eng verwandt mit Szenarien wie [Bug-Fix mit Überprüfung](/de/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Schwerpunkte dieser Seite
 
@@ -21,7 +22,7 @@ translated_at: 2026-07-28
 - Repositories mit Unit-/Integrationstests
 - Regressions-Bugs, API-Verhaltensänderungen, Refactorings
 
-Ungeeignet: Prototypen ohne Testinfrastruktur, einmalige Änderungen an reinen Textseiten. Dafür eher [EPXV](/cases/workflows/explore-plan-execute-verify/) mit manueller Überprüfung.
+Ungeeignet: Prototypen ohne Testinfrastruktur, einmalige Änderungen an reinen Textseiten. Dafür eher [EPXV](/de/cases/workflows/explore-plan-execute-verify/) mit manueller Überprüfung.
 
 ## Minimal brauchbares Vorgehen
 
@@ -47,7 +48,7 @@ Test ausführen und Fehlschlag bestätigen, danach Implementierung ändern; pro 
 | Grün | Minimale Implementierung + Tests bestanden |
 | Refactor | Code unter Testschutz aufräumen (optional eigener Schritt) |
 
-Kombinieren mit [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-before-fixing/): zuerst fehlschlagende Assertion und Stack lesen, dann Implementierung anfassen.
+Kombinieren mit [Zuerst diagnostizieren, dann fixen](/de/cases/workflows/diagnose-before-fixing/): zuerst fehlschlagende Assertion und Stack lesen, dann Implementierung anfassen.
 
 ## Häufige Fehler
 
@@ -58,7 +59,7 @@ Kombinieren mit [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-b
 
 ## Sicherheitsgrenzen
 
-- Testbefehle müssen im Rahmen der [Befehlsregeln](/guide/customization/rules/command-rules/) liegen
+- Testbefehle müssen im Rahmen der [Befehlsregeln](/de/guide/customization/rules/command-rules/) liegen
 - Integrationstests, die Produktions-APIs treffen, müssen in der Spezifikation verboten oder auf Mocks umgestellt werden
 
 ## Abnahme-Checkliste
@@ -66,12 +67,12 @@ Kombinieren mit [Zuerst diagnostizieren, dann fixen](/cases/workflows/diagnose-b
 - [ ] Evidenz für Fehlschlag→Bestehen (Logs oder CI)
 - [ ] Vollsuite oder vereinbarter Umfang bestanden
 - [ ] Diff enthält keine unrelated Testlöschungen
-- [ ] Konsistent mit [Done definieren](/prompts/define-done/)
+- [ ] Konsistent mit [Done definieren](/de/prompts/define-done/)
 
 ## Verwandte Kapitel
 
-- [Tests ausführen](/guide/quality/run-tests/)
-- [Fall: Bug-Fix mit Überprüfung](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Tests ausführen](/de/guide/quality/run-tests/)
+- [Fall: Bug-Fix mit Überprüfung](/de/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

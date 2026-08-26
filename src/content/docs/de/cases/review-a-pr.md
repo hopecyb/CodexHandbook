@@ -3,9 +3,10 @@ title: Einen PR prüfen
 description: Vor dem Merge eine strukturierte Diff-Prüfung mit Codex durchführen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 29b081c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Einen PR prüfen
@@ -36,13 +37,13 @@ Ausgabe als Checklist mit P0/P1 und Dateipfaden.
 
 ## 3. Team-Verstetigung
 
-- Skill [`$pr-review`](/skills/examples/review-skill/) verwenden
-- CI-Integration siehe [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
+- Skill [`$pr-review`](/de/skills/examples/review-skill/) verwenden
+- CI-Integration siehe [Code-Review-Automatisierung](/de/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## 4. Verwandt
 
-- [Prüf-Vorlage](/prompts/templates/review/)
-- [Prüfung vor dem Merge](/cases/workflows/review-before-merge/)
+- [Prüf-Vorlage](/de/prompts/templates/review/)
+- [Prüfung vor dem Merge](/de/cases/workflows/review-before-merge/)
 ---
 
 **Status:** verified  

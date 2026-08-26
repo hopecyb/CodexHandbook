@@ -3,9 +3,10 @@ title: Công cụ trình duyệt
 description: Để Codex mở trang web, kiểm trạng thái UI và kiểm chứng hành vi frontend — năng lực và ranh giới.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 97ba90e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -39,7 +40,7 @@ Loại câu hỏi này chỉ đọc mã hoặc xem mô tả chữ thường chư
 | Đối chiếu trang tĩnh với hiện thực | Thay khung kiểm thử E2E đầy đủ |
 | Đọc văn bản hiển thị trên trang hỗ trợ gỡ lỗi | Xử lý site cần xác minh người–máy phức tạp |
 
-Nền chọn công cụ: [Chọn công cụ](/guide/tools/tool-selection/)
+Nền chọn công cụ: [Chọn công cụ](/vi/guide/tools/tool-selection/)
 
 ## So sánh với công cụ khác
 
@@ -83,7 +84,7 @@ thì công cụ trình duyệt thường phù hợp hơn phân tích thuần vă
 1. **Frontend cục bộ**: chạy `npm run dev` trước, rồi đưa `http://localhost:PORT/path`
 2. **Nói rõ tác vụ**: «Kiểm form đăng nhập ở độ rộng 375px có bị tràn không», chứ không «xem trang web»
 3. **Viết rõ ranh giới**: cấm truy cập mạng ngoài, cấm gửi form tới production
-4. **Nghiệm thu**: đối chiếu [Kiểm chứng artifact](/guide/quality/verify-artifacts/) và ảnh chụp
+4. **Nghiệm thu**: đối chiếu [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/) và ảnh chụp
 
 ## Cách viết dùng trực tiếp được
 
@@ -100,9 +101,9 @@ Nếu phát hiện vấn đề, hãy đưa căn cứ ảnh chụp và đề xu�
 - Mặc định giả định trình duyệt có thể truy cập **mọi thứ máy hoặc môi trường của bạn truy cập được** — gồm cả admin nội bộ
 - Trong tác vụ khai báo: `chỉ truy cập localhost` hoặc danh sách trắng tên miền được phép
 - Đừng chạy tác vụ kho không đáng tin trong cấu hình trình duyệt đã đăng nhập tài khoản cá nhân
-- Chính sách trình duyệt môi trường Cloud do [Môi trường Cloud](/guide/web-and-cloud/cloud-environments/) và chính sách mạng quyết định
+- Chính sách trình duyệt môi trường Cloud do [Môi trường Cloud](/vi/guide/web-and-cloud/cloud-environments/) và chính sách mạng quyết định
 
-Khái niệm phê duyệt: [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/)
+Khái niệm phê duyệt: [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/)
 
 ## Lỗi thường gặp
 

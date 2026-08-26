@@ -3,9 +3,10 @@ title: 스레드·작업·프로젝트
 description: 세션·작업·프로젝트 작업 공간의 관계를 정리합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -37,8 +38,8 @@ sidebar:
 ## 실무 제안
 
 - 주제가 바뀌면 **새 스레드**를 열어 옛 컨텍스트 간섭을 피합니다
-- 장기 작업은 단계와 체크포인트를 분명히 씁니다. [장기 작업 프롬프트](/prompts/long-running-tasks/)
-- 세션을 넘어 이어갈 때는 인수인계 요약을 만듭니다. [인수인계와 재개](/guide/agent-work/handoff-and-resume/)
+- 장기 작업은 단계와 체크포인트를 분명히 씁니다. [장기 작업 프롬프트](/ko/prompts/long-running-tasks/)
+- 세션을 넘어 이어갈 때는 인수인계 요약을 만듭니다. [인수인계와 재개](/ko/guide/agent-work/handoff-and-resume/)
 
 ## 흔한 오해
 

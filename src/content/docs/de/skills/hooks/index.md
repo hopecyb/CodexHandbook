@@ -1,50 +1,49 @@
 ---
 title: Hooks
-description: An festen Ausführungspunkten prüfen, loggen und blockieren — wann stoppen, wann nur aufzeichnen.
+description: Führe Skripte oder MCP-Werkzeuge im Codex-Lebenszyklus für Prüfungen, Protokollierung und Richtliniensteuerung aus.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: c768708
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Ein Hook fügt an einem festen Zeitpunkt automatisch Prüfung oder Aufzeichnung ein.
+Ein Hook ist ein automatischer Handler im Codex-Lebenszyklus. Er kann beim Sitzungsstart, Absenden eines Prompts, vor oder nach Werkzeugaufrufen, bei Kontextkomprimierung, beim Ende eines Subagents oder am Ende des Hauptthreads ein Skript oder MCP-Werkzeug ausführen.
 
-Er kümmert sich um Checks, Logs und Sperren an Ablaufknoten — nicht darum, wie die Aufgabe selbst gelöst wird.
+## Welche Fragen diese Seitengruppe beantwortet
 
-## Inhalt
-
-Diese Gruppe behandelt drei Fragen:
-
-- Wann genau einen Hook auslösen?
-- Problem verhindern oder nur aufzeichnen?
-- Erste Hook-Konfiguration: wie risikoarm starten?
+- Wie wählst du ein echtes Ereignis statt eines erfundenen Namens wie `pre_tool`?
+- Wie unterscheidest du Blockade vor der Ausführung von Feedback nach der Ausführung?
+- Wie beginnst du mit einem testbaren Hook mit niedrigem Risiko?
+- Wie prüfst du die Vertrauensgrenzen von Projekt- und Plugin-Hooks?
 
 ## Lesereihenfolge
 
-1. [Hooks-Überblick](/skills/hooks/hooks-overview/): Hook ≠ Skill ≠ MCP
-2. [Hook-Ereignistypen](/skills/hooks/hook-event-types/): vorne, hinten, oder Sitzungsanfang/-ende
-3. [Hook-Konfigurationsbeispiele](/skills/hooks/hooks-examples/): „nur loggen / zuerst blockieren / leichte Eingabeprüfung“
+1. [Hooks im Überblick](/de/skills/hooks/hooks-overview/): Konfigurationsebenen, Vertrauen und Laufzeitverhalten verstehen
+2. [Hook-Ereignistypen](/de/skills/hooks/hook-event-types/): Ereignis und matcher nach Lebenszyklus wählen
+3. [Beispiele für Hook-Konfigurationen](/de/skills/hooks/hooks-examples/): Einen durch Unit-Tests geprüften `PreToolUse`-Schutz ausführen
 
-## Konfigurationsreihenfolge
+## Kürzeste Entscheidungshilfe
 
-Nicht sofort die strengste Block-Politik. Besser:
+| Ziel | Zuerst erwägen |
+|---|---|
+| Eingabe vor Werkzeugausführung ablehnen oder ändern | `PreToolUse` |
+| Entscheiden, wenn Codex eine Berechtigungserweiterung anfordern möchte | `PermissionRequest` |
+| Nach Werkzeugende protokollieren oder Feedback ergänzen | `PostToolUse` |
+| Prompt beim Absenden prüfen oder Kontext ergänzen | `UserPromptSubmit` |
+| Hauptthread oder Subagent zu einer weiteren Runde auffordern | `Stop` / `SubagentStop` |
 
-1. Zuerst `log`
-2. Dann `warn`
-3. Dann `block`
+Ein Hook ersetzt weder Sandbox, Genehmigung, Befehlsregeln noch serverseitige Berechtigungen. Er ist eine zusätzliche Schutzebene. Einige verwaltete Werkzeugpfade durchlaufen lokale Werkzeug-Hooks nicht.
 
-So prüfst du leichter:
+## Offizielle Quelle
 
-- Sitzt das Ereignis richtig?
-- Wie viele Fehlalarme?
-- Verlangsamt es den Alltag?
-
-Hooks sind kleine Schleusen an Ablaufknoten — zum Prüfen, Aufzeichnen oder Sperren.
+- [OpenAI: Hooks](https://learn.chatgpt.com/docs/hooks)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** CLI / App (versionsabhängig)  
-**Nachprüfhinweis:** Hook-Support, Ereignismodell und Konfigurationseinstiege hängen stark von der Client-Version ab; bis 2026-07-26 reichen öffentliche Quellen nicht für stabile Freigabe dieser Gruppe — vorerst `outdated`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Umgebungen mit lokalem Codex-Host; für Vertrauensprüfung und `/hooks`-Verwaltung gilt die offizielle Beschreibung der Codex CLI
+
+**Zuletzt geprüft:** 2026-08-25

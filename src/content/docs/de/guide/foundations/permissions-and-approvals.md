@@ -3,9 +3,10 @@ title: Berechtigungen und Freigaben
 description: "Erklärt, wann Codex deine Zustimmung für Operationen braucht."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -67,8 +68,8 @@ In der Regel nicht. Du kannst ablehnen und es einen sichereren Weg weitermachen 
 | Schicht | Inhalt | Wo lesen |
 |---|---|---|
 | Konzept (diese Seite) | Warum Freigabe nötig ist | — |
-| Produktunterschiede | Wie Einstiege Bestätigungen zeigen | [Produkthandbuch](/guide/) |
-| Prompt-Strategie | Wie du Berechtigungsgrenzen in der Aufgabe angibst | [Einschränkungen definieren](/prompts/constraints-and-boundaries/) |
+| Produktunterschiede | Wie Einstiege Bestätigungen zeigen | [Produkthandbuch](/de/guide/) |
+| Prompt-Strategie | Wie du Berechtigungsgrenzen in der Aufgabe angibst | [Einschränkungen definieren](/de/prompts/constraints-and-boundaries/) |
 
 Offizielle Politiken und Defaults können sich ändern — prüfe [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

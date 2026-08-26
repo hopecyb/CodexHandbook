@@ -1,50 +1,53 @@
 ---
 title: MCP
-description: Externe Werkzeuge und Datenquellen anbinden — und wann MCP wirklich nötig ist.
+description: Binde Drittanbieterwerkzeuge und -kontext kontrolliert in ChatGPT und Codex ein.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ff68431
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-`MCP` ist ein Standardanschluss: Codex verbindet über MCP externe Werkzeuge und Datenquellen.
+MCP (Model Context Protocol) löst die Frage, wie ein Agent Werkzeuge und Daten außerhalb des Repositorys aufruft, nicht wie ein Workflow beschrieben wird.
 
-Skills tragen eher „Arbeitsschritte“; MCP trägt „externe Werkzeuge anschließen“.
+## Zielgruppe
 
-## Inhalt dieser Gruppe
+- Einzelentwickler, die Codex Dokumentation, Entwürfe, Tickets oder interne Werkzeuge abfragen lassen möchten
+- Teams, die externe Werkzeuge, OAuth und minimale Berechtigungen einheitlich konfigurieren
+- Verantwortliche, die untersuchen, weshalb ein konfigurierter Server kein sichtbares oder ausführbares Werkzeug bereitstellt
 
-- Wann MCP wirklich nötig ist
-- Externe Systeme anbinden, ohne Berechtigungen zu weit zu öffnen
-- Bei Verbindungs-/Aufrufproblemen zuerst welche Klassen prüfen
+Wenn die Aufgabe nur im aktuellen Repository liest oder schreibt, beginne mit integrierten Datei- und Terminalfunktionen. Verbinde MCP erst bei einem tatsächlichen Bedarf an Drittanbieterkontext oder -aktionen.
 
-## Empfohlene Reihenfolge
+## Lesereihenfolge
 
-1. [MCP-Überblick](/skills/mcp/mcp-overview/): MCP vs. Skill vs. Plugin
-2. [MCP-Server verbinden](/skills/mcp/connect-an-mcp-server/): ersten Server nach Konfig-Idee anschließen
-3. [MCP debuggen](/skills/mcp/debugging-mcp/): keine Verbindung, Werkzeug fehlt, Berechtigung falsch
+1. [MCP-Überblick](/de/skills/mcp/mcp-overview/): Zuständigkeiten von MCP, Skill und Plugin unterscheiden
+2. [Einen MCP-Server verbinden](/de/skills/mcp/connect-an-mcp-server/): Ersten Server mit CLI oder `config.toml` einbinden
+3. [MCP-Verbindungen debuggen](/de/skills/mcp/debugging-mcp/): Nach Konfiguration, Start, Authentifizierung und Werkzeug untersuchen
 
-## Häufige Missverständnisse
+## Aktuelle Unterstützungsgrenzen
 
-### 1. Mit MCP kann Codex „alles“
+- ChatGPT-Desktop-App, Codex CLI und IDE-Erweiterung teilen MCP-Konfiguration im selben Codex-Host.
+- Lokale Codex-Clients unterstützen STDIO- und Streamable-HTTP-Server.
+- ChatGPT Web liest das lokale `~/.codex/config.toml` nicht. Es verwendet Remote-MCP-Werkzeuge über installierte Plugins.
 
-Was geht, hängt nur davon ab, welche Werkzeuge der MCP-Server exponiert und welche Berechtigungen sie haben.
+## Drei Grundregeln
 
-### 2. MCP ist nur Technikanschluss
+1. MCP stellt Werkzeuge bereit, definiert aber keinen zuverlässigen Workflow. Stabile Abläufe gehören weiterhin in Skill oder `AGENTS.md`.
+2. Die Fähigkeiten eines Servers werden durch seine Werkzeuge und den Berechtigungsumfang der zugrunde liegenden Anmeldedaten bestimmt.
+3. Beginne mit schreibgeschütztem Zugriff, Testmandant und wenigen Werkzeugen. Verwende zum Ausprobieren kein Produktions-Administrator-Token.
 
-Sobald echte Systeme hängen, wird es zugleich:
+## Offizielle Quellen
 
-- Berechtigungsfrage
-- Datenexpositionsfrage
-- Audit-Frage
-
-Also nicht nur „wie anschließen“, sondern „wie nicht chaotisch anschließen“.
-
-MCP lohnt erst, wenn die Aufgabe echte Systeme außerhalb des Repos braucht.
+- [OpenAI: Model Context Protocol](https://learn.chatgpt.com/docs/extend/mcp)
+- [Model Context Protocol specification](https://modelcontextprotocol.io/)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Nachprüfhinweis:** Gruppe betrifft aktuelle MCP-Anbindung, Konfigorte und Berechtigungszusammenspiel; öffentliche Quellen decken Client-Details begrenzt — nach aktuellem Produkt neu schreiben.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** ChatGPT-Desktop-App / Codex CLI / IDE; ChatGPT Web verwendet Remote-MCP-Werkzeuge über Plugins
+
+**Prüfumfang:** Client-Unterstützung, gemeinsame Konfiguration, Transportarten und CLI-Befehle
+
+**Zuletzt geprüft:** 2026-08-25

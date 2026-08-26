@@ -3,9 +3,10 @@ title: Webhooks
 description: 이벤트 트리거 통합 설명 페이지입니다. Webhook은 알림을 받으며, 워크플로 설계를 대체하지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b718fb3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `Webhook`라는 말은 조금 추상적으로 보일 수 있습니다.  
@@ -15,7 +16,7 @@ Codex 통합 시나리오에서는 “외부 이벤트가 왔을 때 이후 흐�
 
 ## 이 그룹 입구
 
-- [Webhooks 개요](/guide/developer-platform/webhooks/overview/)
+- [Webhooks 개요](/ko/guide/developer-platform/webhooks/overview/)
 
 ## 이 그룹 내용
 

@@ -3,105 +3,98 @@ title: Bản đồ năng lực mở rộng
 description: Quan hệ giữa Skill, MCP, Plugin, Hooks, lệnh slash và AGENTS.md.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: fa5604a
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cơ chế mở rộng không ít và thật sự dễ lẫn. Trang này chỉ nói quan hệ giữa chúng, không mở bước cài đặt.
+Extension mechanisms are confusing because they appear in one workflow while solving different problems.
 
-## Sơ đồ quan hệ
+Prompts and `AGENTS.md` provide tasks and rules; Skills provide reusable processes; MCP provides external tools; Hooks guard lifecycle points; Plugins compose and distribute; Scheduled tasks trigger by time. They combine without a fixed upgrade order.
 
-![Từ một prompt đến gói năng lực cho nhóm](/diagrams/codex-capability-ladder-vi.svg)
+## System architecture
 
-```text
-                    ┌─────────────────┐
-                    │ Mục tiêu Tác vụ của bạn │
-                    └────────┬────────┘
-                             │
-         ┌───────────────────┼───────────────────┐
-         ▼                   ▼                   ▼
-   ┌───────────┐      ┌─────────────┐     ┌──────────────┐
-   │ AGENTS.md │      │ Prompt/template │     │ Lệnh slash      │
-   │ Quy tắc bền vững │      │ Tác vụ lần này │     │ Bạn chủ động kích hoạt │
-   └───────────┘      └─────────────┘     └──────────────┘
-         │                   │                   │
-         └───────────────────┼───────────────────┘
-                             ▼
-                    ┌─────────────────┐
-                    │      Skill       │
-                    │ Gói workflow tái dùng │
-                    └────────┬────────┘
-                             │
-              ┌──────────────┼──────────────┐
-              ▼              ▼              ▼
-        ┌──────────┐  ┌──────────┐  ┌─────────────┐
-        │   MCP    │  │  Hooks   │  │  Scripts    │
-        │ Công cụ ngoài │  │ Kiểm tra kiểm toán │  │ Script trong Skill │
-        └──────────┘  └──────────┘  └─────────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │     Plugin       │
-                    │ Phân phối và đóng gói tổ hợp │
-                    └────────┬────────┘
-                             ▼
-                    ┌─────────────────┐
-                    │  Automations     │
-                    │ Không người trực / hẹn giờ │
-                    └─────────────────┘
-```
+![Reusable Codex work-system architecture](/diagrams/codex-work-system-architecture-vi.svg)
 
-## Bảng so sánh
+Read the diagram around three ideas:
 
-| | Ai kích hoạt | Độ bền | Nối hệ thống ngoài | Phân phối nhóm |
-|---|---|---|---|---|
-| AGENTS.md | Tự nạp | Cao (Git) | Dễ |
-| Prompt | Bạn | Thấp | Khó |
-| Lệnh slash | Bạn | Trung bình | Tùy sản phẩm |
-| Skill | Bạn hoặc model khớp | Cao | Dễ (thư mục/Git) |
-| MCP | Model gọi công cụ | Cấp cấu hình | Cần quản trị |
-| Plugin | Sau cài có hiệu lực tổng hợp | Cao | Kênh chính thức/nhóm |
-| Hooks | Sự kiện hệ thống | Cấp cấu hình | Doanh nghiệp hay gặp |
-| Automations | Thời gian/sự kiện | Cấp cấu hình | Cần luồng Phê duyệt |
+- **Task input** defines this run; project rules define every run.
+- **Execution capability** expands reach but does not prove correctness; MCP, subagents, and scripts remain subject to permissions and acceptance.
+- **Distribution and triggering** are not the workflow itself. A Plugin bundles capabilities; a Scheduled task starts a run.
 
-## Quan hệ thường gặp
+## Eight responsibilities
 
-| Nhu cầu | Gợi ý chọn |
+| Responsibility | Mechanism | Best problem | Not responsible for |
+|---|---|---|---|
+| Current task | Prompt | Goal, scope, acceptance | Persistent project rules |
+| Persistent rules | `AGENTS.md` | Commands, conventions, directory boundaries | Full steps for a task class |
+| Reusable process | Skill | Stable steps, references, templates, scripts | External-system authorization |
+| External tools | MCP / Connector | Repository-external data and actions | Correct business goals |
+| Lifecycle guard | Hook | Observe, check, add context, or block around events | Replacing tests and human review |
+| Composition/distribution | Plugin | Bundle Skills, connectors, MCP, Hooks, templates | Making every component trustworthy |
+| Time trigger | Scheduled task | Periodically run a verified task | Replacing prompts and stop conditions |
+| Parallel division | Subagent | Independent exploration, test, or review | Eliminating write conflicts and coordination cost |
+
+## Combining capabilities
+
+For weekly dependency-risk checks:
+
+1. `AGENTS.md` defines package manager, tests, and prohibited directories.
+2. A `dependency-audit` Skill defines collection, advisory checks, grading, and verification.
+3. GitHub or package-source MCP supplies read-only external data.
+4. A Hook blocks real credentials or logs external calls.
+5. A Plugin distributes the Skill, MCP config, and Hook.
+6. A Scheduled task runs weekly and creates only a report or draft issue for human review.
+
+Missing a layer does not make a solution inferior. One local check may need only a clear prompt and terminal commands.
+
+## Common mappings
+
+| Need | Choose |
 |---|---|
-| Thống nhất phong cách code và lệnh kiểm thử | AGENTS.md |
-| Chuẩn hóa quy trình"review PR" | Skill |
-| Đọc ticket Jira/Linear | MCP |
-| Cài một bộ tích hợp cho cả nhóm | Plugin |
-| Quét khóa bí mật trước mỗi lần commit | Hooks |
-| Thứ Hai hàng tuần tự sinh bản nháp báo cáo tuần | Automations (+ phát hành thủ công) |
+| Standard code style and test commands | AGENTS.md |
+| Standardize PR review | Skill |
+| Read Jira/Linear issues | MCP |
+| Install one integration bundle for a team | Plugin |
+| Scan credentials before each commit | Hooks |
+| Draft a report every Monday | Automations plus human publication |
 
-## Từ một tác vụ đến gói năng lực cho nhóm
+## From success to team asset
 
-Dùng lộ trình này để quyết định khi nào nên chuẩn hóa workflow:
-
-| Giai đoạn | Hình thức | Phù hợp khi |
+| Stage | Form | When |
 |---|---|---|
-| Prompt dùng một lần | Chỉ dẫn trong cuộc trò chuyện hiện tại | Chỉ dùng một lần hoặc vẫn đang thăm dò |
-| Template | Khung cố định cho mục tiêu, ngữ cảnh, ràng buộc và nghiệm thu | Tác vụ lặp lại, nhưng các bước còn thay đổi |
-| Skill | `SKILL.md` kèm template, tài liệu tham chiếu hoặc script | Quy trình ổn định, tiêu chí thành công rõ |
-| Subagent | Vai trò chuyên biệt trong ngữ cảnh riêng | Review, kiểm thử, debug hoặc nghiên cứu có ranh giới rõ |
-| MCP | Công cụ gọi được từ hệ thống bên ngoài | Cần đọc ticket, repo hoặc hệ thống nội bộ |
-| Hook | Kiểm tra hoặc chặn theo sự kiện | Quét bí mật, định dạng, kiểm tra lệnh rủi ro |
-| Plugin | Gói cài đặt cho nhóm | Skills, MCP, Hooks, template và tài liệu đi cùng nhau |
-| Automation | Tác vụ theo lịch hoặc theo sự kiện | Báo cáo, giám sát, review định kỳ |
+| One-off prompt | Current task specification | One use or ongoing exploration |
+| Template | Goal/context/constraints/acceptance skeleton | Repeated class, changing steps |
+| Skill | `SKILL.md` plus templates/references/scripts | Stable process and success criteria |
+| Plugin | Bundle of Skills, connectors, MCP, Hooks, templates | Unified installation, update, governance |
+| Scheduled task | Saved task, schedule, run history | Manually verified periodic work |
 
-Đừng bắt đầu bằng việc thiết kế Plugin. Hãy chạy tác vụ một lần trước, rồi xem bước nào lặp lại, kiểm tra nào cần tự động hóa và quyền ngoài nào thật sự cần thiết.
+MCP, Hooks, and subagents are not required stages; add them only for external tools, lifecycle guards, or parallel work. See [Choose an extension method](/vi/skills/choosing-an-extension-method/).
 
-Logic nhánh chi tiết: [Cách chọn phương thức mở rộng](/skills/choosing-an-extension-method/).
+## Current product boundaries
 
-## Không phụ thuộc lối vào sản phẩm
+- A Codex Skill is a directory containing `SKILL.md`, optionally scripts, references, and assets; full instructions load when needed.
+- The desktop App, CLI, and IDE share MCP configuration on one Codex host.
+- Plugins work in supported ChatGPT surfaces, Codex desktop, and CLI; the IDE integration does not support Plugin browsing or use.
+- Scheduled tasks are managed in ChatGPT Web or desktop App; CLI and IDE can test inputs but have no management UI.
+- Subagents fit independent read-only exploration, test, and review; concurrent writes raise conflict cost.
 
-Các cơ chế này **không gắn** một giao diện duy nhất: mức hỗ trợ Skill/MCP của CLI, Desktop App, IDE có thể khác nhau — lấy [đối chiếu tính năng](/guide/reference/feature-comparison/) và tài liệu chính thức làm chuẩn.
+Check [Feature comparison](/vi/guide/reference/feature-comparison/) and official sources before configuring changing entry points.
+
+## Official sources
+
+- [Skills and Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Build Codex Skills](https://learn.chatgpt.com/docs/build-skills)
+- [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp)
+- [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
+- [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
+- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
+- [Codex subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Ghi chú tái Kiểm chứng:** Trang này vẽ Skill, MCP, Plugin, Hooks, Automations thành sơ đồ quan hệ cố định và ngầm hàm cấp hỗ trợ hiện tại; các ranh giới và lối vào này trong tài liệu công khai chính thức ngày 2026-07-26 chưa phủ đủ, cần viết lại theo sản phẩm hiện hành.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+**Áp dụng cho:** ChatGPT Web / desktop App / Codex CLI / IDE (see individual mechanism boundaries)
+**Căn cứ kiểm chứng:** Rebuilt from OpenAI Skills, Plugins, MCP, Hooks, Scheduled tasks, and Subagents documentation available on 2026-08-25.
+**Kiểm chứng gần nhất:** 2026-08-25

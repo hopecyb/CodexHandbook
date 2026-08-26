@@ -3,9 +3,10 @@ title: 結果をレビューする
 description: diff の確認、検証の実行、追問の習慣を身につけます。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 82d6754
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -14,7 +15,7 @@ sidebar:
 
 「ざっと見て通す」を、固定のチェック動作に変えることです。
 
-チェックリスト：[結果の確認](/guide/getting-started/review-the-result/) · [差分のレビュー](/guide/quality/review-diffs/)
+チェックリスト：[結果の確認](/ja/guide/getting-started/review-the-result/) · [差分のレビュー](/ja/guide/quality/review-diffs/)
 
 多くの人はこのステップを飛ばします。Codex を安定して使えるかは、結果を review できるかに左右されることが多いです。
 
@@ -46,7 +47,7 @@ review の習慣を早く身につけるほど、後で結果を盲信しにく�
 
 結果のレビューは余分な動作ではなく、利用プロセスの一部です。
 
-次のステップ：[最初の小さなプロジェクトを完了する](/guide/learning-paths/beginner/05-complete-first-project/)
+次のステップ：[最初の小さなプロジェクトを完了する](/ja/guide/learning-paths/beginner/05-complete-first-project/)
 
 ---
 

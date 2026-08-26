@@ -3,9 +3,10 @@ title: Hướng dẫn Codex
 description: "Nhận biết Codex, chọn client, hoàn thành tác vụ đầu tiên, và hiểu quyền, ngữ cảnh cùng kiểm chứng."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6019b85
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Hướng dẫn Codex
@@ -25,14 +26,14 @@ Bạn không cần hiểu hết mọi thuật ngữ, sản phẩm và quy trình
 
 ## Thứ tự gợi ý
 
-1. [Bắt đầu từ đây](/guide/start-here/) — đường ngắn nhất cho độc giả mới
-2. [Codex là gì](/guide/start-here/what-is-codex/)
-3. [Chọn client](/guide/choose-your-client/)
-4. [Hoàn thành tác vụ đầu tiên](/cases/first-task/)
-5. [Quyền và Sandbox](/guide/permissions-and-sandbox/)
-6. [Ngữ cảnh và tệp](/guide/context-and-files/)
-7. [Kiểm chứng](/guide/verification/)
-8. Gặp vấn đề xem [Xử lý sự cố](/guide/troubleshooting/)
+1. [Bắt đầu từ đây](/vi/guide/start-here/) — đường ngắn nhất cho độc giả mới
+2. [Codex là gì](/vi/guide/start-here/what-is-codex/)
+3. [Chọn client](/vi/guide/choose-your-client/)
+4. [Hoàn thành tác vụ đầu tiên](/vi/cases/first-task/)
+5. [Quyền và Sandbox](/vi/guide/permissions-and-sandbox/)
+6. [Ngữ cảnh và tệp](/vi/guide/context-and-files/)
+7. [Kiểm chứng](/vi/guide/verification/)
+8. Gặp vấn đề xem [Xử lý sự cố](/vi/guide/troubleshooting/)
 
 ## Hiểu nhầm thường gặp
 
@@ -54,19 +55,19 @@ Client chỉ khác lối vào — nhiều khái niệm cốt lõi như quyền, 
 
 ## Lối vào sản phẩm
 
-- [Desktop App](/guide/desktop-app/)
-- [CLI](/guide/cli/)
-- [Phần mở rộng IDE](/guide/ide/)
-- [Web và Cloud](/guide/web-and-cloud/)
+- [Desktop App](/vi/guide/desktop-app/)
+- [CLI](/vi/guide/cli/)
+- [Phần mở rộng IDE](/vi/guide/ide/)
+- [Web và Cloud](/vi/guide/web-and-cloud/)
 
 ## Thêm chuyên đề
 
-- [Khái niệm nền tảng](/guide/foundations/)
-- [Bắt đầu nhanh](/guide/getting-started/)
-- [Lộ trình học](/guide/learning-paths/)
-- [Tùy chỉnh cá nhân hóa](/guide/customization/)
-- [Tài liệu tham chiếu](/guide/reference/)
-- [Nhóm và doanh nghiệp](/guide/team-enterprise/)
-- [Nền tảng nhà phát triển](/guide/developer-platform/)
+- [Khái niệm nền tảng](/vi/guide/foundations/)
+- [Bắt đầu nhanh](/vi/guide/getting-started/)
+- [Lộ trình học](/vi/guide/learning-paths/)
+- [Tùy chỉnh cá nhân hóa](/vi/guide/customization/)
+- [Tài liệu tham chiếu](/vi/guide/reference/)
+- [Nhóm và doanh nghiệp](/vi/guide/team-enterprise/)
+- [Nền tảng nhà phát triển](/vi/guide/developer-platform/)
 
 Dùng hướng dẫn này để tìm «bây giờ bước tiếp theo tôi nên xem gì» trước — thường hữu ích hơn cố học hết cả Codex trong một lần.

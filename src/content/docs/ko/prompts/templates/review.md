@@ -3,9 +3,10 @@ title: 검토 템플릿
 description: diff와 변경 위험을 구조화해 검토합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0c747c3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 검토 템플릿
@@ -50,8 +51,8 @@ translated_at: 2026-07-28
 
 ## 관련
 
-- [병합 전 검토](/cases/workflows/review-before-merge/)
-- [PR 검토 사례](/cases/review-a-pr/)
+- [병합 전 검토](/ko/cases/workflows/review-before-merge/)
+- [PR 검토 사례](/ko/cases/review-a-pr/)
 
 ---
 

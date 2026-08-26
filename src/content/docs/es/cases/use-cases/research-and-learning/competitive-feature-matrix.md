@@ -3,9 +3,10 @@ title: "Caso: matriz de funciones de competencia"
 description: Investigación con citas y salida tabular — un flujo reutilizable también para lectores no técnicos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadatos
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. Preparación
 
 - Aclara las dimensiones de comparación (en el prompt o en `@brief.md`)
-- Activa [búsqueda web](/guide/tools/web-search/) (si el producto lo admite)
+- Activa [búsqueda web](/es/guide/tools/web-search/) (si el producto lo admite)
 
 ## 3. Flujo de trabajo
 
-Sigue [Investigación con fuentes](/cases/workflows/research-with-sources/):
+Sigue [Investigación con fuentes](/es/cases/workflows/research-with-sources/):
 
 ```text
 Compara la función de «colaboración en equipo» de A/B/C:
@@ -44,7 +45,7 @@ si el precio no se puede verificar, marca «pendiente de confirmar»;
 salida en tabla markdown; no modifiques otros archivos del repo.
 ```
 
-**Verificación:** Abre a mano 3 URLs; comprueba fechas y la [política de verificación](/guide/start-here/handbook-version-policy/).
+**Verificación:** Abre a mano 3 URLs; comprueba fechas y la [política de verificación](/es/guide/start-here/handbook-version-policy/).
 
 ## 4. Fallo y recuperación
 
@@ -58,8 +59,8 @@ salida en tabla markdown; no modifiques otros archivos del repo.
 
 ## 6. Capítulos relacionados
 
-- [Trabajo orientado a artefactos](/cases/workflows/artifact-first-work/)
-- [Validar fuentes](/guide/quality/validate-sources/)
+- [Trabajo orientado a artefactos](/es/cases/workflows/artifact-first-work/)
+- [Validar fuentes](/es/guide/quality/validate-sources/)
 
 ---
 

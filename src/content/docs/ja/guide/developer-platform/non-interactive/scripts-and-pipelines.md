@@ -3,24 +3,25 @@ title: スクリプトとパイプライン
 description: shell、Makefile、GitHub Actions で codex exec を編成——再現可能、監査可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
 ここでは Codex を一回の臨時操作から、**チームが繰り返し走らせ、問題時に追跡し、担当が変わっても引き継げる**自動化ステップにする方法を説明します。
 
 スクリプトはフローを固定し、パイプラインはルールに従って反復実行します。
 
-本章は [codex exec](/guide/developer-platform/non-interactive/codex-exec/) を shell、Makefile、CI パイプラインに埋め込む方法を説明します。
+本章は [codex exec](/ja/guide/developer-platform/non-interactive/codex-exec/) を shell、Makefile、CI パイプラインに埋め込む方法を説明します。
 
 ## 本ページの内容
 
 - ローカルスクリプト vs CI job の分担
 - Prompt と秘密鍵の管理
-- [コードレビュー自動化](/guide/developer-platform/ci-cd/code-review-automation/) との組み合わせ
+- [コードレビュー自動化](/ja/guide/developer-platform/ci-cd/code-review-automation/) との組み合わせ
 
 ## 解くこと
 
@@ -60,7 +61,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
 `prompts/ci/security-review.md` は Git に入れ、変更は review 経由。
@@ -96,7 +97,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
 ```
 
 :::caution
@@ -109,7 +110,7 @@ jobs:
 |---|---|
 | リポジトリ | `prompts/`、`tools/run-codex.sh` |
 | CI | 読み取り専用 checkout、CLI 固定、log artifact アップロード |
-| コールバック | 任意 [Webhook](/guide/developer-platform/webhooks/overview/) で内部システム更新 |
+| コールバック | 任意 [Webhook](/ja/guide/developer-platform/webhooks/overview/) で内部システム更新 |
 
 ## 判断方法
 

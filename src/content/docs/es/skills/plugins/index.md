@@ -1,56 +1,53 @@
 ---
 title: Plugins
-description: Página sobre cómo el equipo distribuye capacidades de extensión; primero entiende que es la capa de empaquetado, no un tipo de capacidad nuevo.
+description: Explora, instala y gobierna paquetes reutilizables de Skills, conectores, MCP, Hooks y plantillas de tareas.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 33c9fe2
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Un Plugin resuelve sobre todo cómo empaquetar un conjunto de capacidades de extensión para que otros las instalen y gestionen.
+Un Plugin es una unidad de composición y distribución de capacidades. Puede contener Skills, conectores, servidores MCP, extensiones de navegador, Hooks y plantillas de Scheduled tasks; el trabajo real sigue correspondiendo a esos componentes.
 
-Se acerca más a:
+## Para quién es
 
-- Empaquetado
-- Distribución
-- Actualización
-- Gobernanza de Permisos
+- Personas que quieren instalar desde un catálogo público un conjunto de capacidades listo para usar.
+- Responsables que distribuyen flujos de equipo, herramientas y medidas de protección como una sola unidad versionada.
+- Administradores que revisan el origen, los permisos de servicios externos y los Hooks de un Plugin.
 
-No es un tipo de capacidad nuevo inventado por separado.
+## Superficies compatibles actuales
 
-## Escenarios de uso
+| Superficie | Explorar/instalar | Usar |
+|---|---|---|
+| ChatGPT Web y App de escritorio | Pestaña Plugins | Chat y Work |
+| ChatGPT Mobile | No es una superficie principal de gestión | Usar Plugins ya instalados en la cuenta |
+| Codex en la App de escritorio de ChatGPT | Pestaña Plugins | Tareas de Codex |
+| Codex CLI | Explorador `/plugins`; iniciar una sesión nueva tras instalar | Entorno Codex |
+| Integración IDE | **Plugins no compatibles** | Usar por separado MCP, Skills y otras capacidades compatibles con el IDE |
 
-Este grupo apunta sobre todo a dos situaciones:
+## Puntos de entrada
 
-- Vas a distribuir al equipo un conjunto unificado de capacidades de extensión
-- Quieres decidir si merece la pena instalar un Plugin
+- [Introducción a los Plugins](/es/skills/plugins/plugins-overview/): componentes, límites de compatibilidad, verificación de la instalación y revisión de seguridad
+- [Mapa de capacidades](/es/skills/capability-map/): compara Plugins, Skills, MCP, Hooks y Scheduled tasks
 
-Si solo estás aprendiendo por tu cuenta, suele bastar con una página de conceptos.
+## Antes de instalar
 
-## Entrada del grupo
+1. ¿Quién es el autor y responsable del mantenimiento?
+2. ¿Qué Skills, conectores, servidores MCP, capacidades de navegador y Hooks incluye?
+3. ¿Qué cuentas externas y scopes solicita?
+4. ¿Se revisaron y consideraron fiables sus Hooks en `/hooks`?
+5. ¿Cómo los desactivará, actualizará y revertirá el equipo, y cómo revocará sus permisos?
 
-- [Descripción general de Plugins](/skills/plugins/plugins-overview/): la relación del Plugin con Skill y MCP, y por qué se parece más a una capa de distribución
+## Fuente oficial
 
-## Errores frecuentes
-
-### 1. Instalar un Plugin implica seguridad automática
-
-El Plugin solo hace más cómoda la distribución de capacidades; no implica confianza por defecto ni Permiso bajo por defecto.
-
-### 2. Si tiene muchas funciones, merece la pena instalarlo
-
-Merece más mirar primero:
-
-- Si la fuente es de confianza
-- Si el alcance de Permisos es grande
-- Si el equipo puede actualizar, hacer rollback y auditar
-
-El Plugin se parece más a un paquete de distribución de capacidades de extensión; tampoco sustituye a Skill o MCP.
+- [OpenAI: Plugins](https://learn.chatgpt.com/docs/plugins)
 
 ---
 
-**Estado:** desactualizado  
-**Productos aplicables:** App / CLI  
-**Nota de revisión:** El catálogo de Plugins, la política de instalación y el soporte de superficie siguen evolucionando; este grupo fijó demasiado esos detalles, por eso se marca `outdated` hasta reescribirlo según el catálogo vigente.  
-**Última verificación:** 2026-07-26
+**Estado:** verified
+
+**Productos aplicables:** ChatGPT Web / App de escritorio / Mobile; Codex para escritorio y CLI; los Plugins no son compatibles con la integración IDE
+
+**Última verificación:** 2026-08-26

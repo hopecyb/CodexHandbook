@@ -3,9 +3,10 @@ title: AGENTS.md とは
 description: プロジェクトレベル永続指示ファイル——Codex への「協業契約」。アーキテクチャ百科ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c4bc1cc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -84,7 +85,7 @@ sidebar:
 | サブディレクトリ `AGENTS.md` | そのディレクトリと子パス（monorepo で一般的） |
 | ユーザーレベル説明 | 個人設定やグローバル好み。プロジェクト指示と混ぜない |
 
-スコープと衝突処理は [スコープと優先順位](/guide/customization/agents-md/scope-and-precedence/) を参照。
+スコープと衝突処理は [スコープと優先順位](/ja/guide/customization/agents-md/scope-and-precedence/) を参照。
 
 ## Skill、スラッシュコマンドとの違い
 
@@ -94,7 +95,7 @@ sidebar:
 | Skill | 再利用可能なワークフローパック（`SKILL.md`） | リリースチェックリスト、専門レビュー手順 |
 | スラッシュコマンド | あなたが能動的に起動するショートカット | `/review`、単発ワークフロー |
 
-プロジェクトルールは `AGENTS.md`。**反復可能で共有可能な一連の手順**は [Skill](/skills/overview/) が向きます。
+プロジェクトルールは `AGENTS.md`。**反復可能で共有可能な一連の手順**は [Skill](/ja/skills/overview/) が向きます。
 
 ## どこに書くかの判断
 
@@ -113,7 +114,7 @@ sidebar:
 ## よくあるミス
 
 - ファイルが長く、モデルが前半しか読まない——**ハード制約は先頭30行に**
-- 「常に自動 push」など高リスク指示を書き、[権限と承認](/guide/foundations/permissions-and-approvals/) と衝突
+- 「常に自動 push」など高リスク指示を書き、[権限と承認](/ja/guide/foundations/permissions-and-approvals/) と衝突
 - チームが保守せず、文書と実スクリプトが不一致
 
 ## セキュリティ境界

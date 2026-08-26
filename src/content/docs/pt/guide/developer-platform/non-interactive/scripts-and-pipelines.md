@@ -3,24 +3,25 @@ title: Scripts e pipelines
 description: Orquestrar codex exec em shell, Makefile e GitHub Actions — repetível e auditável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: ce1e940
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
 Aqui trata-se de passar o Codex de uma operação pontual a um passo automatizado que **a equipa possa repetir, rastrear se falhar e que outra pessoa possa retomar**.
 
 Em resumo: o script fixa o fluxo; o pipeline repete-o segundo regras.
 
-Este capítulo explica como embutir [codex exec](/guide/developer-platform/non-interactive/codex-exec/) em shell, Makefile ou um pipeline de CI.
+Este capítulo explica como embutir [codex exec](/pt/guide/developer-platform/non-interactive/codex-exec/) em shell, Makefile ou um pipeline de CI.
 
 ## Conteúdo desta página
 
 - Divisão entre script local e job de CI
 - Gestão de Prompt e secrets
-- Combinação com [Automatização de revisão de código](/guide/developer-platform/ci-cd/code-review-automation/)
+- Combinação com [Automatização de revisão de código](/pt/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## O que se resolve aqui
 
@@ -62,7 +63,7 @@ set -euo pipefail
 ROOT="$(git rev-parse --show-toplevel)"
 cd "$ROOT"
 PROMPT_FILE="prompts/ci/security-review.md"
-codex exec --cwd "$ROOT" "$(cat "$PROMPT_FILE")"
+codex exec --cd "$ROOT" "$(cat "$PROMPT_FILE")"
 ```
 
 Inclui `prompts/ci/security-review.md` em Git; as alterações passam por review.
@@ -98,7 +99,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          codex exec --cwd . "$(cat prompts/ci/pr-review.md)"
+          codex exec --cd . "$(cat prompts/ci/pr-review.md)"
 ```
 
 :::caution
@@ -111,7 +112,7 @@ Ajusta o método de instalação e o scope de Permissões do exemplo aos requisi
 |---|---|
 | Repositório | `prompts/`, `tools/run-codex.sh` |
 | CI | Checkout só de leitura, CLI fixado, subir log artifact |
-| Callback | Opcional: [Webhook](/guide/developer-platform/webhooks/overview/) para atualizar sistemas internos |
+| Callback | Opcional: [Webhook](/pt/guide/developer-platform/webhooks/overview/) para atualizar sistemas internos |
 
 ## Como julgar
 

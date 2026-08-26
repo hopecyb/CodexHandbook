@@ -3,12 +3,13 @@ title: Lluvia de ideas antes de construir
 description: Antes de escribir código o textos largos, explora de forma estructurada y converge en un plan — menos retrabajo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9bf8989
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Lluvia de ideas antes de construir** encaja cuando el objetivo es difuso y hay más de una solución: funciones nuevas, rediseños, temas de contenido, selección técnica. Se enlaza con la fase ① explorar de [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/), pero insiste en **divergir y converger**, no en leer código y editar archivos de inmediato.
+**Lluvia de ideas antes de construir** encaja cuando el objetivo es difuso y hay más de una solución: funciones nuevas, rediseños, temas de contenido, selección técnica. Se enlaza con la fase ① explorar de [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/), pero insiste en **divergir y converger**, no en leer código y editar archivos de inmediato.
 
 ## Qué resuelve esta página
 
@@ -43,7 +44,7 @@ indica 2 puntos de decisión que debo confirmar (formato, permisos).
 
 **Fase C — Pasar al plan**
 
-Tras confirmar, continúa con [trabajo impulsado por especificación](/cases/workflows/specification-driven-work/) o la fase ② planificar de EPXV.
+Tras confirmar, continúa con [trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/) o la fase ② planificar de EPXV.
 
 ## Flujo recomendado
 
@@ -78,9 +79,9 @@ Fija un **timebox**: por ejemplo, terminar la divergencia en 15 minutos para evi
 
 ## Capítulos relacionados
 
-- [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- [Trabajo impulsado por especificación](/cases/workflows/specification-driven-work/)
-- [Pedir un plan](/prompts/ask-for-a-plan/)
+- [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
+- [Trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/)
+- [Pedir un plan](/es/prompts/ask-for-a-plan/)
 
 ---
 

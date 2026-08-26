@@ -3,14 +3,15 @@ title: Adicionar um exemplo de Prompt
 description: Submeter Prompts reproduzíveis em examples/prompts, com metadados e critérios de aceitação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Os exemplos de Prompts ficam na raiz do repositório em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), referenciados pelo corpo do manual. Normas de desenho: [`docs/planning/examples-system.md`](/docs/planning/examples-system.md).
+Os exemplos de Prompts ficam na raiz do repositório em [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts), referenciados pelo corpo do manual. Normas de desenho: [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md).
 
 ## Conteúdo desta página
 
@@ -112,7 +113,7 @@ O exemplo ensina o método — não expõe o seu ambiente de produção.
 - Objetivo e definição de concluído claros
 - Explicação de Permissões e limites de segurança
 - Sem segredos reais nem PII
-- Estado `verified` exige [Verificação independente](/guide/contributing/verify-technical-content/)
+- Estado `verified` exige [Verificação independente](/pt/guide/contributing/verify-technical-content/)
 
 ## Fluxo de submissão
 

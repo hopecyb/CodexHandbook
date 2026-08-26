@@ -3,9 +3,10 @@ title: PDF et documents
 description: Périmètre, outils et Vérification lorsque Codex lit, résume ou génère des PDF et longs documents.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a086570
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -39,7 +40,7 @@ Un périmètre plus clair (« quelle section, quelle sortie ») signifie génér
 1. **Spécifier le chemin** : `docs/spec.pdf` ou référence @ (selon support client)
 2. **Indiquer l'objectif** : résumé, comparer un chapitre, extraire données de tableau
 3. **Page ou section** : limiter le périmètre sur longs docs pour sauver le Contexte
-4. **Contenu sensible** : contrats, scans d'ID — suivre [Contexte sensible](/guide/context/sensitive-context/)
+4. **Contenu sensible** : contrats, scans d'ID — suivre [Contexte sensible](/fr/guide/context/sensitive-context/)
 
 ### Limites
 
@@ -95,8 +96,8 @@ Si OCR ou mise en page incertaine, le dire explicitement.
 ## Politique repo
 
 - Gros PDF : **Git LFS** ou hors repo
-- Quand le diff est illisible, vérifier par **ouverture du fichier** + [Vérifier les artefacts](/guide/quality/verify-artifacts/)
-- Sorties générées : [Vérifier les artefacts générés](/guide/files-and-artifacts/generated-artifacts/)
+- Quand le diff est illisible, vérifier par **ouverture du fichier** + [Vérifier les artefacts](/fr/guide/quality/verify-artifacts/)
+- Sorties générées : [Vérifier les artefacts générés](/fr/guide/files-and-artifacts/generated-artifacts/)
 
 ## Erreurs courantes
 

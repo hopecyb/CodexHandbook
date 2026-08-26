@@ -3,62 +3,62 @@ title: Tài khoản, gói và quyền truy cập
 description: Hiểu cách đăng nhập, gói và tiền đề truy cập.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 7e2e8e6
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-Nhiều người bị kẹt lần đầu ngay trước bước cài đặt:
+Codex can currently be used through a **ChatGPT plan** or with **usage-based API-key billing**, but the two methods do not expose identical entry points or governance boundaries.
 
-- Tôi rõ ràng có tài khoản OpenAI, vì sao vẫn vào không được
-- Tôi đăng nhập được, có nghĩa mọi client đều dùng được không
-- Trong môi trường công ty vì sao đồng nghiệp dùng được còn tôi không
+## Choose an access method first
 
-Hiểu nhầm phổ biến: cứ tưởng «đăng nhập được tài khoản» bằng «hiện tại chắc chắn có quyền truy cập sản phẩm tương ứng».
+| Method | Best for | Availability boundary |
+|---|---|---|
+| Sign in with ChatGPT | Personal interactive work, desktop, Cloud, and organization workspaces | Governed by ChatGPT plan limits, workspace roles, and administrator policies |
+| Sign in with an API key | Local Codex, scripts, and CI | Billed by API usage; some ChatGPT-workspace or Cloud features are unavailable |
 
-Trước khi dùng Codex cần tài khoản OpenAI hợp lệ, cùng **quyền truy cập sản phẩm** mà khu vực/chính sách tổ chức hiện tại cho phép. Tên gói, hạn mức và việc có gồm App/CLI/Cloud lấy hướng dẫn chính thức làm chuẩn.
+The current official Pricing page includes ChatGPT Work and Codex in Free, Go, Plus, Pro, Business, Edu, and Enterprise plans. Prices, limits, models, and included features can change. This handbook does not duplicate the price table; consult the [live official Pricing page](https://learn.chatgpt.com/docs/pricing).
 
-## Ba việc cần xác nhận
+## Why an account may still lack access
 
-1. Đăng nhập được [lối vào liên quan OpenAI / Codex](https://developers.openai.com/codex)
-2. Kế hoạch của bạn gồm client định dùng
-3. Nếu ở môi trường công ty: có SSO, quản lý thiết bị hoặc chính sách tắt không
+Signing in is only the first layer. Final access also depends on:
 
-## Hiểu nhầm thường gặp
+1. whether the current plan includes the target client or feature;
+2. whether the product is available in your region;
+3. whether your organization assigned the required seat, role, and workspace permission;
+4. whether managed configuration restricts sign-in methods, models, or local capabilities;
+5. whether usage has reached the current window or weekly limit.
 
-### 1. Có tài khoản bằng App / CLI / IDE / Cloud đều dùng được
+## Personal access checklist
 
-Các lối vào khác nhau có thể tương ứng phạm vi khả dụng, năng lực gói hoặc chính sách tổ chức khác nhau.
+- You can sign in to the correct ChatGPT account on an official page.
+- You know whether usage consumes plan limits or usage-based API billing.
+- The target client shows the expected identity.
+- When a limit appears, you inspect current usage instead of reinstalling the client repeatedly.
 
-### 2. Đăng nhập thất bại chắc chắn là sai mật khẩu
+## Team and enterprise checklist
 
-Cũng có thể là:
+- You selected the correct workspace rather than a personal space under the same email.
+- An administrator configured membership, seats, and roles.
+- SSO, MFA, retention, and regional policies satisfy organization requirements.
+- Managed configuration does not force a different local sign-in method.
+- The API key belongs to the correct API organization and is not confused with ChatGPT workspace policy.
 
-- Hạn chế SSO của tổ chức
-- Hạn chế chính sách khu vực hoặc thiết bị hiện tại
-- Bản thân sản phẩm chưa mở cho tài khoản của bạn
+## Example diagnosis
 
-### 3. Môi trường công ty và môi trường cá nhân là một chuyện
+If the CLI works with an API key but the Cloud button is unavailable, installation may be fine. Cloud requires ChatGPT sign-in and is governed by ChatGPT plan and workspace access; API keys primarily cover local and programmatic workflows.
 
-Trong môi trường công ty, tài khoản dùng được hay không, dùng được lối vào nào — thường chịu thêm ảnh hưởng của chính sách an toàn và thiết bị.
-
-## Thứ tự xử lý sự cố
-
-Nếu tạm thời chưa chắc vấn đề nằm ở đâu, có thể kiểm theo thứ tự này:
-
-1. Tôi có đăng nhập được lối vào liên quan không
-2. Kế hoạch hiện tại của tôi có gồm client mục tiêu không
-3. Tổ chức tôi đang ở có hạn chế thêm không
-
-Tài khoản dùng được chỉ là bước đầu — phía sau còn phải xem gói và chính sách truy cập tổ chức.
-
-Trang này không liệt kê bảng giá (dễ lỗi thời). Lấy trang tài khoản và thanh toán chính thức làm chuẩn.
+Next, read [Sign-in and authentication](/vi/guide/getting-started/sign-in-and-authentication/).
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Ghi chú rà soát lại:** Trang này bàn về tài khoản, gói, truy cập tổ chức và khả dụng của client — đều thuộc thông tin thay đổi tần suất cao; dù nguyên tắc «có tài khoản không bằng mọi lối vào đều dùng được» vẫn đúng, tiền đề truy cập cụ thể, mục trong kế hoạch và hạn chế tổ chức cần viết lại theo trang tài khoản/thanh toán chính thức hiện hành.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** App / CLI / IDE / Cloud
+
+**Căn cứ kiểm chứng:** Compared with the current official Pricing and Authentication pages. This page records the access model and diagnostic order without freezing volatile prices, limits, or feature lists.
+
+**Kiểm chứng gần nhất:** 2026-08-26

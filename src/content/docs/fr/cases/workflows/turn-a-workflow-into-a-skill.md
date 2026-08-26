@@ -3,12 +3,13 @@ title: Transformer un flux de travail en Skill
 description: La troisième répétition du même flux mérite un Skill — déclencheur, instructions et acceptation au même endroit.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Quand la même catégorie de tâche (contrôles de release, synchronisation de doc, scans de sécurité) est accomplie **une troisième fois** en copiant-collant des prompts, envisagez un [Skill](/skills/overview/). Ce chapitre fait le lien entre les [méthodes de flux de travail](/cases/workflows/) et le système d'extensions.
+Quand la même catégorie de tâche (contrôles de release, synchronisation de doc, scans de sécurité) est accomplie **une troisième fois** en copiant-collant des prompts, envisagez un [Skill](/fr/skills/overview/). Ce chapitre fait le lien entre les [méthodes de flux de travail](/fr/cases/workflows/) et le système d'extensions.
 
 ## Ce que résout cette page
 
@@ -29,11 +30,11 @@ Pas besoin de capitaliser : exploration ponctuelle, petites corrections fortemen
 
 1. **Rédiger clairement SKILL.md** : quand déclencher, entrées/sorties, interdictions
 2. **Joindre `references/`** : checklists, exemples de diff
-3. **`scripts/` optionnel** : commandes de vérification reproductibles (alignées sur les [règles de commande](/guide/customization/rules/command-rules/))
+3. **`scripts/` optionnel** : commandes de vérification reproductibles (alignées sur les [règles de commande](/fr/guide/customization/rules/command-rules/))
 4. **Mentionner le nom du Skill** dans le README du dépôt ou AGENTS.md
 5. **Essayer 2–3 fois**, puis marquer `verified`
 
-Pour commencer : [Créer votre premier Skill](/skills/create-your-first-skill/)
+Pour commencer : [Créer votre premier Skill](/fr/skills/create-your-first-skill/)
 
 ## Flux de travail recommandé
 
@@ -45,7 +46,7 @@ Extraire prompt et critères d'acceptation d'un cas réussi
     → placer dans examples/ du dépôt, plugin d'équipe ou bibliothèque de skills interne
 ```
 
-Comparer avec [Transformer un flux en automatisation](/skills/automations/scheduled-tasks/) : les Skills sont une **guidance interactive** ; les Automations sont **planifiées/sans surveillance**.
+Comparer avec [Transformer un flux en automatisation](/fr/skills/automations/scheduled-tasks/) : les Skills sont une **guidance interactive** ; les Automations sont **planifiées/sans surveillance**.
 
 ## Erreurs courantes
 
@@ -56,8 +57,8 @@ Comparer avec [Transformer un flux en automatisation](/skills/automations/schedu
 
 ## Limites de sécurité
 
-- Voir [Sécurité et version des Skills](/skills/security/)
-- Les Skills d'équipe doivent figurer sur la liste d'approbation des extensions (voir [Risques Plugin et MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Voir [Sécurité et version des Skills](/fr/skills/security/)
+- Les Skills d'équipe doivent figurer sur la liste d'approbation des extensions (voir [Risques Plugin et MCP](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Liste de contrôle d'acceptation
 

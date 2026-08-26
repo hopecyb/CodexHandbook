@@ -3,9 +3,10 @@ title: 人の承認パターン
 description: Codex をいつ承認・拒否・一時停止するか——ルールの書き方。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 承認は不可逆な操作を人間に残します。本ページは一般的なパターンをまとめます。
@@ -20,7 +21,7 @@ translated_at: 2026-07-28
 人の必須ゾーン（push、データ削除、外部送信、本番設定変更）
 ```
 
-具体的なダイアログ挙動は [製品入口](/guide/) により異なりますが、原則は同じです。
+具体的なダイアログ挙動は [製品入口](/ja/guide/) により異なりますが、原則は同じです。
 
 ## パターン 1：先に計画、後で実行
 
@@ -32,7 +33,7 @@ translated_at: 2026-07-28
 
 ## パターン 2：コマンドホワイトリスト
 
-[AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) に：
+[AGENTS.md](/ja/guide/customization/agents-md/writing-effective-instructions/) に：
 
 ```md
 再確認なしで許可：pnpm test、pnpm lint、git status、git diff
@@ -46,7 +47,7 @@ translated_at: 2026-07-28
 1. Codex がドラフト PR またはローカルブランチを開く
 2. 人が CI + レビュー後にマージ
 
-Cloud：[プルリクエストを作成する](/guide/web-and-cloud/create-pull-requests/)。
+Cloud：[プルリクエストを作成する](/ja/guide/web-and-cloud/create-pull-requests/)。
 
 ## パターン 4：読み取り専用偵察
 
@@ -68,7 +69,7 @@ Cloud：[プルリクエストを作成する](/guide/web-and-cloud/create-pull-
 
 ## Automations との関係
 
-無人タスクでも人の確認ポイントを設計——[定期とバックグラウンドタスク](/skills/automations/scheduled-tasks/)。
+無人タスクでも人の確認ポイントを設計——[定期とバックグラウンドタスク](/ja/skills/automations/scheduled-tasks/)。
 
 ## よくあるミス
 

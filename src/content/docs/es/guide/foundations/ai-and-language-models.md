@@ -3,9 +3,10 @@ title: IA y modelos de lenguaje
 description: Entiende cómo un modelo de lenguaje genera respuestas a partir del Contexto.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1951620
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -37,7 +38,7 @@ Sigue empujando a partir del Contexto actual; no «sabe» la respuesta por su cu
 ## Qué implica para quien lo usa
 
 - **La calidad de la entrada marca el techo**: si el objetivo es vago, la salida se desvía con facilidad
-- **El Contexto es limitado**: un historial demasiado largo se compacta o se trunca; ver [Token, Contexto y Compactación](/guide/foundations/tokens-context-and-compaction/)
+- **El Contexto es limitado**: un historial demasiado largo se compacta o se trunca; ver [Token, Contexto y Compactación](/es/guide/foundations/tokens-context-and-compaction/)
 - **Hay que verificar**: sobre todo cifras, derecho, seguridad y contenido que se publica hacia fuera
 
 ## Malentendidos frecuentes

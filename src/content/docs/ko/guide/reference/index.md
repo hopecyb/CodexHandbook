@@ -5,9 +5,10 @@ sidebar:
   order: 60
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f13f975
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 짧고, 정확하고, 검색 가능하게. 이 구역은 주로 빠른 조회와 색인이며, 깊은 설명은 각 특집 장에 둡니다.
@@ -26,24 +27,24 @@ translated_at: 2026-07-28
 
 ## 학습용 색인
 
-- [용어집](/guide/reference/glossary/)
-- [자주 묻는 질문](/guide/reference/faq/)
-- [기능 대조](/guide/reference/feature-comparison/)
-- [슬래시 명령 빠른 조회](/guide/reference/slash-commands/)
+- [용어집](/ko/guide/reference/glossary/)
+- [자주 묻는 질문](/ko/guide/reference/faq/)
+- [기능 대조](/ko/guide/reference/feature-comparison/)
+- [슬래시 명령 빠른 조회](/ko/guide/reference/slash-commands/)
 
 ## 기술 빠른 조회
 
-- [CLI 명령 참고](/guide/reference/commands/)
-- [설정 항목 참고](/guide/reference/configuration-reference/)
-- [권한 매트릭스](/guide/reference/permission-matrix/)
-- [환경 변수](/guide/reference/environment-variables/)
-- [키보드 단축키](/guide/reference/keyboard-shortcuts/)
-- [오류와 안내 참고](/guide/reference/error-reference/)
+- [CLI 명령 참고](/ko/guide/reference/commands/)
+- [설정 항목 참고](/ko/guide/reference/configuration-reference/)
+- [권한 매트릭스](/ko/guide/reference/permission-matrix/)
+- [환경 변수](/ko/guide/reference/environment-variables/)
+- [키보드 단축키](/ko/guide/reference/keyboard-shortcuts/)
+- [오류와 안내 참고](/ko/guide/reference/error-reference/)
 
 ## 장애 분석과 외부 링크
 
-- [장애 분석 색인](/guide/reference/troubleshooting/)
-- [공식 리소스](/guide/reference/official-resources/)
+- [장애 분석 색인](/ko/guide/reference/troubleshooting/)
+- [공식 리소스](/ko/guide/reference/official-resources/)
 
 :::note[버전 민감]
 명령, 설정 키, 기본 권한은 제품 업데이트에 따라 바뀝니다. 각 페이지에 검증일이 있으니, 쓰기 전에 공식 문서를 확인하세요.

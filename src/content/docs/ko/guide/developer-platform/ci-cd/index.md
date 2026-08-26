@@ -3,9 +3,10 @@ title: CI/CD
 description: 지속적 통합과 릴리스 흐름에 Codex를 연결합니다. 먼저 저위험 자동화부터 하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 CI/CD에 Codex를 붙일 때 가장 흔한 문제는 보통 여기입니다.
@@ -16,7 +17,7 @@ CI/CD에 Codex를 붙일 때 가장 흔한 문제는 보통 여기입니다.
 
 ## 이 그룹 입구
 
-- [코드 리뷰 자동화](/guide/developer-platform/ci-cd/code-review-automation/)
+- [코드 리뷰 자동화](/ko/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## 이 그룹 내용
 

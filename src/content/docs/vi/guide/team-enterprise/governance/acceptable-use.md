@@ -3,14 +3,15 @@ title: Chính sách sử dụng chấp nhận được
 description: "Thỏa thuận cấp đội về Codex được làm gì và không được làm gì — căn chỉnh với kiểm soát kỹ thuật và đào tạo."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1ce50b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-Một **Chính sách sử dụng chấp nhận được (AUP)** biến «có được dùng Codex cho việc này không?» thành đồng thuận tổ chức thay vì phán đoán cá nhân. Nó bổ sung [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/): mô hình mối đe dọa bao rủi ro; AUP bao **ranh giới hành vi**.
+Một **Chính sách sử dụng chấp nhận được (AUP)** biến «có được dùng Codex cho việc này không?» thành đồng thuận tổ chức thay vì phán đoán cá nhân. Nó bổ sung [mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/): mô hình mối đe dọa bao rủi ro; AUP bao **ranh giới hành vi**.
 
 ## Trang này sẽ nói gì
 
@@ -59,7 +60,7 @@ AUP phải căn chỉnh với đào tạo, quyền, cấu hình và kiểm toán
 ## Cấu trúc cơ bản
 
 1. **Mục tiêu và phạm vi**
-2. **Tình huống được phép** (liên kết [Bản đồ năng lực](/guide/start-here/codex-capability-map/))
+2. **Tình huống được phép** (liên kết [Bản đồ năng lực](/vi/guide/start-here/codex-capability-map/))
 3. **Tình huống bị cấm**
 4. **Dữ liệu và bảo mật**
 5. **Giám sát của người** (merge, thay đổi production)
@@ -93,7 +94,7 @@ Càng nhiều «có» → càng có khả năng hiệu quả.
 ## Checklist nghiệm thu
 
 - [ ] Onboarding gồm xác nhận đã nhận AUP
-- [ ] Không xung đột với [Quy tắc đội](/guide/customization/rules/team-rules/)
+- [ ] Không xung đột với [Quy tắc đội](/vi/guide/customization/rules/team-rules/)
 - [ ] Rà soát hàng năm hoặc khi phát hành tính năng lớn
 
 Giá trị của AUP là ranh giới đội rõ cho việc dùng Codex — và căn chỉnh với kiểm soát thật.

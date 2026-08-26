@@ -3,9 +3,10 @@ title: Referência de configuração
 description: Índice conceptual de chaves de configuração de utilizador e de projeto do Codex — caminhos e campos conforme a documentação oficial.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -58,7 +59,7 @@ Ao começar não precisas de memorizar «quem sobrescreve quem»; basta saber o 
 - Variáveis de ambiente: «valores temporários desta execução»
 - Política gerida: «limites que a organização já fixou por ti»
 
-Entrada: [Fundamentos de configuração](/guide/customization/configuration/config-basics/) · Enfoque terminal: [Configuração do CLI](/guide/cli/configuration/)
+Entrada: [Fundamentos de configuração](/pt/guide/customization/configuration/config-basics/) · Enfoque terminal: [Configuração do CLI](/pt/guide/cli/configuration/)
 
 ## Índice de domínios de configuração (conceito)
 
@@ -70,7 +71,7 @@ Entrada: [Fundamentos de configuração](/guide/customization/configuration/conf
 | Intensidade de raciocínio / reasoning | Nível para Tarefas complexas (se suportado) |
 | Temperatura e amostragem | Costuma deixar-se por omissão; fixar ao scriptar |
 
-Contexto: [Modelos e raciocínio](/guide/foundations/models-and-reasoning/)
+Contexto: [Modelos e raciocínio](/pt/guide/foundations/models-and-reasoning/)
 
 ### Sandbox e rede
 
@@ -80,7 +81,7 @@ Contexto: [Modelos e raciocínio](/guide/foundations/models-and-reasoning/)
 | Acesso à rede | Proibido / limitado / permitido |
 | Domínios de saída | Allowlist (se suportado) |
 
-Contexto: [Sandbox e rede](/guide/foundations/sandbox-and-network/)
+Contexto: [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
 
 ### Política de Aprovação
 
@@ -90,7 +91,7 @@ Contexto: [Sandbox e rede](/guide/foundations/sandbox-and-network/)
 | Antes de escrever ficheiros | Igual |
 | Chamadas a Ferramentas MCP | Por servidor ou por Ferramenta |
 
-Contexto: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/) · Matriz: [Matriz de Permissões](/guide/reference/permission-matrix/)
+Contexto: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/) · Matriz: [Matriz de Permissões](/pt/guide/reference/permission-matrix/)
 
 ### Espaço de trabalho e CLI
 
@@ -107,13 +108,13 @@ Contexto: [Permissões e Aprovações](/guide/foundations/permissions-and-approv
 | Lista de servidores | Comando, URL, transporte |
 | Injeção de variáveis de ambiente | Ligada ao processo MCP, não a Git |
 
-[Ligar MCP](/skills/mcp/connect-an-mcp-server/)
+[Ligar MCP](/pt/skills/mcp/connect-an-mcp-server/)
 
 ### Extensões IDE / App
 
 Alguns itens só estão na UI de definições da extensão e podem partilhar o mesmo backend de configuração de utilizador que o CLI — conforme a documentação do produto.
 
-[Definições do IDE](/guide/ide/settings/) · [Definições da App de ambiente de trabalho](/guide/desktop-app/settings/)
+[Definições do IDE](/pt/guide/ide/settings/) · [Definições da App de ambiente de trabalho](/pt/guide/desktop-app/settings/)
 
 ## Mal-entendidos frequentes
 
@@ -203,7 +204,7 @@ Estas são as que mais confundem principiantes:
 
 Assim compreende-se melhor do que olhar só a lista de chaves.
 
-Secrets Cloud: [Secrets e variáveis de ambiente](/guide/web-and-cloud/secrets-and-variables/)
+Secrets Cloud: [Secrets e variáveis de ambiente](/pt/guide/web-and-cloud/secrets-and-variables/)
 
 ## Disciplina de mudança
 

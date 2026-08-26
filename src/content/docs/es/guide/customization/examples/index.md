@@ -3,9 +3,10 @@ title: Ejemplos
 description: Entiende cómo escribir configuración y AGENTS.md con ejemplos reales, no solo con principios abstractos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muchos principios se entienden al leerlos, pero al llegar a tu propio repositorio no sabes cómo aterrizarlos.
@@ -14,7 +15,7 @@ La función de este grupo es mostrarte «cómo lo escriben otros», para convert
 
 ## Entrada del grupo
 
-- [AGENTS.md en un monorepo](/guide/customization/examples/monorepo-agents-md/)
+- [AGENTS.md en un monorepo](/es/guide/customization/examples/monorepo-agents-md/)
 
 ## Cuándo conviene más mirar este grupo
 

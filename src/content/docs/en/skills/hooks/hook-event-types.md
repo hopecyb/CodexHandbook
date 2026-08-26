@@ -1,145 +1,90 @@
 ---
 title: Hook event types
-description: Hook trigger points in the Codex execution chain—for validation, logs, and blocks at the right stage.
+description: Choose events across session, turn, tool-call, compaction, and subagent lifecycles.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 7da5c40
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-This section is about **when** the same check should fire.
+The first question when choosing a Hook is not “how do I write the script?” It is “must this happen before or after the side effect?” A script attached to the wrong event may only report damage after the fact.
 
-**Hook events** are when the system calls your configured logic at fixed nodes. Understanding event types lets you implement "audit and validate" from [Hooks overview](/skills/hooks/hooks-overview/) without slowing every tool call.
+![Codex Hook lifecycle and key events](/diagrams/hook-lifecycle-events-en.svg)
 
-## Contents
+## Current events
 
-- Common event phases and use cases
-- How events divide work with [command rules](/guide/customization/rules/command-rules/)
-- Performance and failure strategy when configuring
+| Event | When it runs | Matcher filters | Common use |
+|---|---|---|---|
+| `SessionStart` | Session start or resume | `startup`, `resume`, `clear`, `compact` | Environment notes, restored context |
+| `SubagentStart` | Subagent starts | Subagent type | Add subagent constraints |
+| `UserPromptSubmit` | User submits a prompt | Unsupported; configuration is ignored | Secret scan, development context |
+| `PreToolUse` | Before a supported local tool runs | Tool name | Deny or rewrite the call |
+| `PermissionRequest` | Codex is about to request approval | Tool name | Allow, deny, or defer to normal approval |
+| `PostToolUse` | After a supported local tool returns | Tool name | Record results, feed later reasoning |
+| `PreCompact` | Before context compaction | `manual` / `auto` | Save state before compaction |
+| `PostCompact` | After context compaction | `manual` / `auto` | Restore required context |
+| `SubagentStop` | A subagent is about to stop | Subagent type | Require another check |
+| `Stop` | Main task turn is about to stop | Unsupported; configuration is ignored | Require more main-thread verification |
+| `SessionEnd` | Main thread ends | Currently `other` | Fast closing log; does not run for subagents |
 
-## One decision principle
+## Tool matchers
 
-Do not start with "can this Hook do it?"  
-Ask: do you want to stop something **before** it happens, or record it **after**?
-
-Many misplaced Hooks fail because timing was wrong.
-
-:::note
-**Event names and fields follow [official Hooks documentation](https://developers.openai.com/codex).** The table below is conceptual grouping—after CLI upgrades, check `--help` and release notes.
-:::
-
-## Event groups (conceptual)
-
-| Phase | Typical events (conceptual) | Good for |
-|---|---|---|
-| Session | `session.start` / `session.end` | Environment checks, summarize changes, audit footer |
-| Before tool | `tool.call.before` / `pre_tool_use` | Block dangerous commands, scan secret patterns |
-| After tool | `tool.call.after` / `post_tool_use` | Structured logs, metrics, redacted archive |
-| Prompt | `user_prompt.submit` | Policy scan injection, length limits |
-| Artifact | `artifact.create` | License headers, file type allowlist |
-| Integration | `pr.before_create` (if supported) | Issue numbers, changelog format |
-
-Do not hang the same logic on multiple events—pick the **earliest point that can block**.
-
-## How to read these phases
-
-- **Session**: Task start or end
-- **Before tool**: Command or tool not executed yet
-- **After tool**: Action happened—log, summarize, re-check
-- **Prompt**: Right after user content is submitted
-- **Artifact**: Right after a file or result is created
-
-Understand at this level first; memorizing every event name can wait.
-
-## Relationship to the rules engine
+Common values include:
 
 ```text
-User prompt → (optional) prompt Hook
-    → Model proposes tool call
-    → Rules engine allow/deny
-    → (optional) pre_tool Hook → execute → post_tool Hook
+Bash
+^apply_patch$
+Edit|Write
+mcp__filesystem__read_file
+mcp__filesystem__.*
 ```
 
-- **Rules**: Declarative, fast—known command patterns
-- **Hook**: Imperative scripts—complex policy and external systems
+Shell and unified command execution match `Bash`. `apply_patch` can also match the aliases `Edit` or `Write`. MCP and other local function tools match their actual tool names.
 
-## Common misconceptions
+## Three events commonly confused
 
-### 1. If it can be checked, before vs after does not matter
+### PreToolUse
 
-It matters a lot.
+Input contains `tool_name`, `tool_use_id`, and tool-specific `tool_input`. It can return:
 
-To **prevent side effects**, attach as early as possible.  
-If you only discover the problem in `post_tool`, it is often too late.
+- `permissionDecision: "deny"`: stop a supported call.
+- `permissionDecision: "allow"` plus `updatedInput`: rewrite supported input.
+- `additionalContext`: add model context without blocking.
 
-### 2. More granular events means more professional config
+Plain stdout is ignored; output the documented JSON. Exit code `2` with stderr can also block and provide a reason.
 
-Prefer "few and precise"—get the logic on the right single point first.
+### PermissionRequest
 
-### 3. Hook event types are just technical detail
+This runs only when Codex was already going to request approval for shell escalation, managed networking, or a similar action. It can allow, deny, or leave the decision to the normal approval UI. It does not replace general `PreToolUse` policy.
 
-They directly affect:
+### PostToolUse
 
-- Whether risk is stopped in time
-- Whether logs are useful
-- Whether the whole interaction slows down
+The tool has already run, and the event fires even when Bash exits non-zero. Returning block or exiting `2` can replace feedback for the model, but cannot undo a command, file write, or external action.
 
-## Failure strategies
+## Stop is not an undo button
 
-| Strategy | When to use |
-|---|---|
-| `block` | Security violation, hard compliance |
-| `warn` | Style, advisory checks |
-| `log` | Observe only, no block |
+`decision: "block"` for `Stop` automatically creates a continuation prompt from the reason, asking Codex to run another turn. It does not roll back completed side effects. Check `stop_hook_active` to prevent an infinite loop.
 
-Hook timeout or crash should default **safe**: production tends toward block or fail closed, with errors logged for investigation.
+## Event-selection exercise
 
-## When unsure where to attach
+| Need | Choose | Why |
+|---|---|---|
+| Stop a suspected token from being written | `PreToolUse` matching `apply_patch|Edit|Write` | Must act before the write |
+| Measure shell failure rate | `PostToolUse` matching `Bash` | Needs the result |
+| Save key decisions before automatic compaction | `PreCompact` | Runs before compaction |
+| Do not close until tests have run | `Stop` | Continue the current task |
+| Send a 30-second network request at shutdown | Not `SessionEnd` | Maximum three seconds; closing events should stay short |
 
-Simplified rules:
+## Official source
 
-- Stop dangerous action: prefer pre-events
-- Record what happened: prefer post-events
-- Opening checks or closing summaries: session events
+- [OpenAI: Hook events and matchers](https://learn.chatgpt.com/docs/hooks)
 
-That covers most configuration cases.
-
-## Minimal configuration approach
-
-1. Pick one event (start with `post_tool` read-only logging)
-2. Script stdin receives JSON payload (tool name, argument summary, working directory)
-3. Exit code `0` pass, non-`0` per policy block/warn
-4. Unit test: run script with fixed JSON fixture
-
-Decide whether you are blocking or recording, then pick the event.
-
-Full examples: [Hook configuration examples](/skills/hooks/hooks-examples/).
-
-## Common mistakes
-
-- Blocking in `post_tool` what should block in `pre_tool` (side effects already happened)
-- LLM or slow network inside Hook, killing interactivity
-- Payload contains secrets written to plaintext logs
-- Hook not versioned—teammate environments diverge
-
-## Security boundaries
-
-- Hook script permissions should be ≤ monitored Agent permissions
-- See [recommended team Hook use cases](/skills/hooks/hooks-overview/#recommended-team-use-cases) and [threat model](/guide/team-enterprise/security/threat-model/)
-
-## Acceptance checklist
-
-- [ ] Can name your team's most common event and why
-- [ ] Readable error on failure
-- [ ] Script has unit tests or fixtures
-- [ ] Config in code review
-
-## References
-- OpenAI Codex Hooks reference
 ---
 
-**Status:** outdated  
-**Applicable products:** CLI / App (version-dependent)  
-**Verification basis:** Core content is Hook event grouping, payload, and failure strategy—high-churn implementation detail; official public material as of 2026-07-26 is insufficient to mark stable.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Environments using a local Codex host
+
+**Last verified:** 2026-08-25

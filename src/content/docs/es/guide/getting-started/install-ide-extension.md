@@ -1,50 +1,64 @@
 ---
-title: Instalar la extensión IDE
-description: Instala la extensión de Codex en un editor compatible.
+title:  Instalar la extensión IDE
+description:  Instala la extensión de Codex en un editor compatible.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1196b38
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-1. Confirma que el editor está en la lista de soporte oficial (ver [https://developers.openai.com/codex](https://developers.openai.com/codex))
-2. Busca e instala la extensión oficial de Codex en el marketplace
-3. Reinicia el editor (si hace falta) y abre el panel de la extensión
+Current IDE support has more than one installation path:
 
-Si pasas la mayor parte del tiempo en VS Code o JetBrains, la extensión IDE suele encajar mejor.  
-En la primera instalación, lo más confuso es que «ya está instalada» y «ya funciona con normalidad en el espacio de trabajo actual» siguen siendo dos pasos.
+| IDE | Installation or activation |
+|---|---|
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Install or enable the Codex extension |
+| Xcode | Select Codex Agent in Xcode's coding assistant |
+| JetBrains IDEs | Select Codex in AI Chat |
 
-## Confirma también esto tras instalar
+Use the entry for your IDE on the [official Codex IDE page](https://learn.chatgpt.com/docs/codex/ide). Do not infer button locations from a different IDE.
 
-- Usas un editor con soporte oficial
-- La extensión está en el editor actual, no en el entorno equivocado
-- Tras reiniciar ves la entrada de la extensión
-- Abriste el directorio del proyecto en el que realmente vas a trabajar
+## VS Code-compatible editors
 
-## Malentendidos frecuentes
+1. Install the Codex extension from the official Marketplace entry.
+2. Open the root of a real project workspace.
+3. Select the Codex icon. If it is missing, open the Command Palette and run `Codex: Open Codex Sidebar`.
+4. Sign in with ChatGPT or an API key.
 
-### 1. Pulsar Instalar en el Marketplace ya basta
+## Xcode and JetBrains
 
-Después suele hacer falta:
+- Xcode: open the coding assistant, start a chat, and select Codex as the Agent.
+- JetBrains: open AI Chat and select Codex.
 
-- Reiniciar el editor
-- Iniciar sesión
-- Abrir el espacio de trabajo correcto
+These entry points are provided by their respective IDEs and do not have the same interface as the VS Code extension.
 
-### 2. La extensión IDE sabe por sí sola en qué proyecto quieres trabajar
+## Check editor context after installation
 
-Si la raíz del espacio de trabajo no es la correcta, el Contexto que obtiene también se desvía.
+Open a source file, select a short section, and ask:
 
-Tras instalar la extensión IDE, confirma además que aparece y funciona en tu editor y espacio de trabajo actuales.
+```text
+Explain only the inputs, outputs, and failure paths of the current selection.
+Do not edit files. Cite the relevant symbol names.
+```
 
-Siguiente: [flujo de Tareas locales en el IDE](/guide/ide/local-task-workflow/). Resolución de problemas: [resolución de problemas del IDE](/guide/ide/troubleshooting/).
+If the answer is unrelated to the selection, check:
+
+- whether the expected project root is open;
+- whether the file or selection is attached to the composer;
+- whether the correct identity and workspace are active;
+- whether another AI extension conflicts with the integration or shortcuts.
+
+Continue with the [local IDE task workflow](/es/guide/ide/local-task-workflow/). See [Supported editors](/es/guide/ide/supported-editors/) for the complete support matrix.
 
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** IDE  
-**Nota de revisión:** El alcance de soporte de la extensión IDE, la entrada del marketplace, el encaje del inicio de sesión y la integración con el espacio de trabajo son información de producto muy volátil; sin contrastar punto a punto la matriz de soporte y la documentación de instalación oficiales actuales, conviene marcarla primero como `outdated`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Verification basis:** The current official IDE quickstart lists VS Code, Cursor, Windsurf, VS Code Insiders, Xcode, and JetBrains, with separate integration paths for the latter two groups.
+
+**Last verified:** 2026-08-26

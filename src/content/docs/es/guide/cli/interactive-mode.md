@@ -3,9 +3,10 @@ title: Modo interactivo
 description: Conversar con Codex en la terminal y ejecutar Tareas.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 794dd7c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,7 +22,7 @@ Tras iniciar la sesión interactiva:
 3. Cuando te lo pida, aprueba / rechaza llamadas a herramientas
 4. Usa comandos rápidos tipo `/` (si existen) para gestionar la sesión — según la ayuda actual de la CLI
 
-Siguen valiendo los métodos de Prompt: [Prompts](/prompts/)
+Siguen valiendo los métodos de Prompt: [Prompts](/es/prompts/)
 
 ## Malentendidos frecuentes
 

@@ -3,9 +3,10 @@ title: Glossar
 description: Kurze Definitionen häufig genutzter Handbuchbegriffe.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c07a94c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -27,14 +28,14 @@ sidebar:
 | Token | Maßeinheit für Textverarbeitung im Modell |
 | Arbeitsbaum | Isoliertes Arbeitsverzeichnis für parallele Experimente |
 
-Einsteigerfassung: [Terminologie für Einsteiger](/guide/start-here/terminology-for-beginners/)
+Einsteigerfassung: [Terminologie für Einsteiger](/de/guide/start-here/terminology-for-beginners/)
 
 ## Nutzung
 
 Nachschlage-Wörterbuch, kein vollständiges Tutorial.  
 Taucht auf einer anderen Seite ein Wort auf, das Sie nicht einordnen können — hier nachschlagen.
 
-Sind die meisten Begriffe noch fremd, zuerst [Terminologie für Einsteiger](/guide/start-here/terminology-for-beginners/).
+Sind die meisten Begriffe noch fremd, zuerst [Terminologie für Einsteiger](/de/guide/start-here/terminology-for-beginners/).
 
 ## Häufige Missverständnisse
 

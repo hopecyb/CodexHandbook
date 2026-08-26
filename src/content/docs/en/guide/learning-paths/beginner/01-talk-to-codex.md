@@ -3,10 +3,12 @@ title: Talk to Codex
 description: Practice stating goals and constraints in natural language.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
+source_revision: 3648830
 ---
 
 ## Goal for this step
@@ -27,7 +29,7 @@ Do not modify any files.
 - Read-only tasks still need an explicit “do not modify”
 - Vague requests get vague answers
 
-Next: [Work with files](/guide/learning-paths/beginner/02-work-with-files/) · Concepts: [Prompt basics](/prompts/basics/)
+Next: [Work with files](/en/guide/learning-paths/beginner/02-work-with-files/) · Concepts: [Prompt basics](/en/prompts/basics/)
 
 ---
 

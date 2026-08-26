@@ -3,9 +3,10 @@ title: 事例テンプレート
 description: Codex 事例の執筆と振り返りの統一構造——チームでの記録と比較を容易に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a430fba
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 新しい事例ページや社内振り返りドキュメントを作るときは、このテンプレートをコピーしてください。

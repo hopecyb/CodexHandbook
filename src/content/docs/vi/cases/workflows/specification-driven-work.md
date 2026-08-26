@@ -3,12 +3,13 @@ title: Làm việc theo đặc tả
 description: Viết rõ đặc tả nghiệm thu được trước, rồi để Codex triển khai theo kế hoạch — phù hợp tác vụ giao có nhu cầu rõ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Làm việc theo đặc tả** là trước khi sửa nhiều tệp, chuẩn bị một đặc tả ngắn ghi rõ mục tiêu, phạm vi, giao diện và tiêu chí nghiệm thu. Có thể nối sau [brainstorm](/cases/workflows/brainstorm-before-building/), hoặc trực tiếp vào [EPXV](/cases/workflows/explore-plan-execute-verify/) với nhu cầu đã làm rõ.
+**Làm việc theo đặc tả** là trước khi sửa nhiều tệp, chuẩn bị một đặc tả ngắn ghi rõ mục tiêu, phạm vi, giao diện và tiêu chí nghiệm thu. Có thể nối sau [brainstorm](/vi/cases/workflows/brainstorm-before-building/), hoặc trực tiếp vào [EPXV](/vi/cases/workflows/explore-plan-execute-verify/) với nhu cầu đã làm rõ.
 
 ## Trọng tâm trang này
 
@@ -57,7 +58,7 @@ Không thêm tính năng chưa ghi trong đặc tả. Đợi tôi xác nhận r�
 
 ## Phối hợp với làm việc theo test
 
-Mục nghiệm thu trong đặc tả nên **kiểm thử được** càng nhiều càng tốt; cái viết thành test được thì viết test trước — xem [làm việc theo test](/cases/workflows/test-driven-work/).
+Mục nghiệm thu trong đặc tả nên **kiểm thử được** càng nhiều càng tốt; cái viết thành test được thì viết test trước — xem [làm việc theo test](/vi/cases/workflows/test-driven-work/).
 
 ## Lỗi thường gặp
 

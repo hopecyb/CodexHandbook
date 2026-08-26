@@ -3,9 +3,10 @@ title: Cần gì trước khi bắt đầu
 description: Tài khoản, thiết bị, dự án luyện tập và giới hạn an toàn tối thiểu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c8a032b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 5
 ---
@@ -59,8 +60,8 @@ Với hầu hết người mới, bắt đầu từ **Desktop App** sẽ nhẹ h
 
 ## Gợi ý
 
-- Đọc trước [Checklist an toàn cho người mới](/guide/getting-started/beginner-safety-checklist/)
-- Tìm hiểu [Quyền và phê duyệt](/guide/foundations/permissions-and-approvals/) cùng [Sandbox và mạng](/guide/foundations/sandbox-and-network/)
+- Đọc trước [Checklist an toàn cho người mới](/vi/guide/getting-started/beginner-safety-checklist/)
+- Tìm hiểu [Quyền và phê duyệt](/vi/guide/foundations/permissions-and-approvals/) cùng [Sandbox và mạng](/vi/guide/foundations/sandbox-and-network/)
 - Cài đặt chính thức và thay đổi sản phẩm lấy [https://developers.openai.com/codex](https://developers.openai.com/codex) làm chuẩn
 
 ## Nguồn tham chiếu

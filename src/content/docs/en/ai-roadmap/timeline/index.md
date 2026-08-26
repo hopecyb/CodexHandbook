@@ -3,8 +3,10 @@ title: Timeline
 description: Key applied AI engineering milestones.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-08-08
+reviewed_at: 2026-08-26
+source_revision: 78e55cc
 ---
 
 # Timeline

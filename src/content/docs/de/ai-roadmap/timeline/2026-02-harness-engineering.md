@@ -10,8 +10,10 @@ tags: [harness, harness-engineering, agent, quality, llmops]
 authored_by: ai-assisted
 locale: de
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-08-09
+reviewed_at: 2026-08-26
+source_revision: c47e003
 ---
 
 # Harness Engineering (Ausführungs-Harness)

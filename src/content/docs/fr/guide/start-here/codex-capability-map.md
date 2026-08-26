@@ -3,9 +3,10 @@ title: Carte des capacités
 description: Aperçu du prompting, des outils, des extensions, des flux multi-Agent et de la gouvernance.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0bfd4e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 7
 ---

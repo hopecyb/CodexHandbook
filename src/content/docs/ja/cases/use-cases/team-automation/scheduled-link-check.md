@@ -3,9 +3,10 @@ title: "事例: 定期ドキュメントリンクチェック"
 description: 非対話 Codex または CI でサイト内死リンクをスキャン——チーム自動化の入門事例。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## メタデータ
@@ -55,8 +56,8 @@ translated_at: 2026-07-28
 ### Execute（実行）
 
 - `prompts/ci/link-check.md` を追加
-- `.github/workflows/docs-link-check.yml` を追加（例示——[スクリプトとパイプライン](/guide/developer-platform/non-interactive/scripts-and-pipelines/) 参照）
-- [codex exec](/guide/developer-platform/non-interactive/codex-exec/) またはプレーンスクリプト + Codex で二次分類
+- `.github/workflows/docs-link-check.yml` を追加（例示——[スクリプトとパイプライン](/ja/guide/developer-platform/non-interactive/scripts-and-pipelines/) 参照）
+- [codex exec](/ja/guide/developer-platform/non-interactive/codex-exec/) またはプレーンスクリプト + Codex で二次分類
 
 ### Verify（検証）
 
@@ -69,19 +70,19 @@ translated_at: 2026-07-28
 | 問題 | 対応 |
 |---|---|
 | 外部サイト一時 503 | プロンプトで硬い死リンクとソフト失敗を区別 |
-| JSON パース失敗 | [構造化出力](/guide/developer-platform/non-interactive/structured-output/) 制約を強化 |
+| JSON パース失敗 | [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/) 制約を強化 |
 | クォータ枯渇 | 週次スケジュール + 増分チェックに切替 |
 
 ## 5. 定着（キャプチャ）
 
 - 3 回成功後 Skill 化：`docs-link-audit`
-- チーム [コマンドルール](/guide/customization/rules/team-rules/) で `npm run build` と読み取り専用 git を許可
+- チーム [コマンドルール](/ja/guide/customization/rules/team-rules/) で `npm run build` と読み取り専用 git を許可
 
 ## 6. 関連章
 
-- [長時間タスク管理](/cases/workflows/long-running-task-management/)
-- [Automations 定期タスク](/skills/automations/scheduled-tasks/)
-- [チーム学習パス](/guide/learning-paths/team/)
+- [長時間タスク管理](/ja/cases/workflows/long-running-task-management/)
+- [Automations 定期タスク](/ja/skills/automations/scheduled-tasks/)
+- [チーム学習パス](/ja/guide/learning-paths/team/)
 
 ---
 

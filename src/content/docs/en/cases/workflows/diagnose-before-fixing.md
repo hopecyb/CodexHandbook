@@ -3,9 +3,10 @@ title: Diagnose before fixing
 description: Production issues and stubborn bugs—build an evidence chain before changing code.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Asking Codex to fix a bug immediately usually means high rework. The diagnose workflow emphasizes: **symptoms → hypotheses → evidence → minimal fix**.

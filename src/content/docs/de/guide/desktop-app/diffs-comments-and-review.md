@@ -1,83 +1,71 @@
 ---
-title: Diff, Kommentare und Überprüfung
-description: Änderungen lesen und Prüfanmerkungen hinterlassen.
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Diffs, Kommentare und Reviews
+description: Prüfe vor Commit oder Push im Review-Bereich die tatsächlichen Änderungen und hinterlasse zeilenbezogenes Feedback.
 sidebar:
   order: 50
+locale: de
+source_locale: zh-CN
+source_revision: 3efee20
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## Überprüfungsablauf
+Die Chat-Zusammenfassung ist Codex' Erklärung der erledigten Arbeit. Der Git-Diff zeigt dagegen, was sich in den Dateien tatsächlich geändert hat. Im Review-Bereich der Desktop-App kannst du Diffs anzeigen, zeilenbezogene Kommentare hinzufügen und entscheiden, welche Inhalte vorgemerkt, verworfen, committet oder gepusht werden.
 
-1. Diff-Ansicht öffnen und dateiweise browsen
-2. Prüfen, dass Änderungen im vereinbarten Rahmen liegen
-3. Bei Verdacht nachfragen oder kommentieren (falls die UI das unterstützt)
-4. Annehmen, ablehnen oder Nachbesserung verlangen
+Das Projekt muss sich in einem Git-Repository befinden, damit der vollständige Review-Bereich und `/review` verfügbar sind.
 
-Methode: [Diffs prüfen](/guide/quality/review-diffs/)
+## Review in zwei Ebenen
 
-## Inhalt
+Prüfe zuerst selbst den Änderungsumfang und beauftrage anschließend einen unabhängigen Reviewer mit der Suche nach Implementierungsproblemen:
 
-In der Desktop-App siehst du Änderungen vor allem in der Diff-Ansicht, nicht im Gesprächsbereich.
+1. Öffne den Review-Bereich und prüfe zuerst Anzahl und Pfade der Dateien.
+2. Wähle **Last turn**, um die Änderungen der letzten Runde zu sehen.
+3. Wechsle zwischen **Unstaged**, **Staged**, **Commit** und **Branch**, um den Review-Umfang zu bestätigen.
+4. Führe im Eingabebereich `/review` aus.
+5. Wähle den Vergleich mit dem Basis-Branch, nicht committete Änderungen, einen bestimmten Commit oder eigene Kriterien.
+6. Lies die nach Priorität geordneten Findings und entscheide dann, ob sie behoben werden sollen.
 
-Der Chat ist „was es sagt“; die Diff-Ansicht ist „was tatsächlich passiert ist“.
+Der Reviewer von `/review` arbeitet standardmäßig nur lesend und verändert den Worktree nicht. Wenn du Codex anschließend mit der Behebung eines Findings beauftragst, gelten weiterhin die bestehenden Sandbox- und Genehmigungsregeln.
 
-## Häufige Missverständnisse
+## Wiederverwendbare Review-Kriterien
 
-### 1. Sind Kommentare nur für Teamkollaboration nützlich?
+```text
+Prüfe die aktuellen nicht committeten Änderungen. Achte besonders auf:
+- Änderungen außerhalb des Aufgabenbereichs;
+- Verhaltensregressionen, Grenzfälle und Sicherheitsprobleme;
+- fehlende Tests für Fehlerpfade;
+- Widersprüche zwischen Dokumentation und Implementierung.
 
-Auch allein helfen Kommentare oder Nachfragen — mindestens, um zu klären, „warum hier geändert wurde“.
+Liste zuerst die Probleme nach Schweregrad auf. Nenne für jedes Problem Datei, Position, Nachweis und den kleinsten sinnvollen Lösungsvorschlag.
+Wenn du keine Probleme findest, sage das ausdrücklich und nenne weiterhin nicht abgedeckte Testrisiken.
+```
 
-### 2. Ich bin unsicher, ob etwas falsch geändert wurde — was tun?
+## Mehrdeutigkeit mit zeilenbezogenen Kommentaren reduzieren
 
-Du brauchst nicht sofort ein Urteil. Verdachtspunkte benennen und erklären lassen ist stabiler als selbst zu raten.
+Bewege den Mauszeiger über eine verdächtige Zeile, wähle das eingeblendete **+** und schreibe konkretes Feedback. Sende nach Abschluss aller Kommentare eine eindeutige Anweisung:
 
-### 3. Was mindestens vor dem Annehmen prüfen?
+```text
+Bearbeite meine zeilenbezogenen Kommentare. Halte den Änderungsumfang so klein wie möglich,
+führe anschließend die relevanten Tests erneut aus und zeige den neuen Diff.
+```
 
-Mindestens drei Dinge:
+Ein hilfreicher Kommentar beschreibt ein Risiko oder Abnahmekriterium, etwa: „Was gibt diese Stelle bei einem leeren Array zurück?“ Die Aussage „Das ist falsch“ reicht in der Regel nicht.
 
-- welche Dateien geändert wurden
-- ob der erlaubte Rahmen überschritten wurde
-- ob offensichtlich unzulässige Löschungen oder Reste auftauchen
+## Vormerken und Verwerfen
 
-### 4. Ich bin kein Profi-Reviewer — sehe ich Probleme überhaupt?
+Im Review-Bereich kannst du einen vollständigen Diff, einzelne Dateien oder einzelne Hunks vormerken, aus dem Index entfernen oder verwerfen. Beim Verwerfen gehen Änderungen verloren. Prüfe vorher unbedingt, ob sie schon vor Aufgabenbeginn vorhanden waren und vom Benutzer stammen.
 
-Schau zuerst auf die direktesten Fragen:
+Eine sinnvolle feste Abnahmereihenfolge lautet: Umfang → Verhalten → Tests → Sicherheit → Wartbarkeit. Weitere Methoden findest du unter [Diffs prüfen](/de/guide/quality/review-diffs/).
 
-- Wurde etwas geändert, das nicht geändert werden sollte?
-- Wurde etwas Wichtiges gelöscht?
-- Es sagt, es habe A gemacht — enthält das Diff wirklich nur A?
+## Offizielle Grundlage
 
-## Überprüfungsreihenfolge
-
-Wenn Diffs dich oft durcheinanderbringen, fixiere zuerst diese Reihenfolge:
-
-1. Wie viele Dateien wurden geändert?
-2. Bezieht sich jede Dateiänderung auf die Aufgabe?
-3. Gibt es Änderungen außerhalb des Rahmens?
-4. Erst danach Formulierungen, Format und lokale Implementierungsdetails
-
-So lässt du dich weniger von Kleinigkeiten ablenken.
-
-## Was in Kommentaren lohnt
-
-Kommentare müssen nicht vollständig sein. Wertvoller sind Typen wie:
-
-- „Warum muss das hier geändert werden?“
-- „Geht das über den diesmaligen Rahmen hinaus?“
-- „Könnte das bestehendes Verhalten beeinflussen — bitte noch erklären?“
-- „Kann hier eine Überprüfungsmethode ergänzt werden?“
-
-Solche Kommentare treiben die nächste Korrektur besser voran als nur „da ist ein Problem“.
-
-Auf dieser Seite lohnt sich vor allem der wiederholte Blick auf die Diff-Ansicht.
+- [Code review](https://learn.chatgpt.com/docs/code-review)
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App  
-**Prüfhinweis:** Diese Seite dreht sich um Diff-Ansicht, Kommentareingänge und Annehmen/Ablehnen in der aktuellen Desktop-UI, ohne ausreichend starke aktuelle Official-Dokumentation; bis zur ergänzten Desktop-Überprüfungsdokumentation besser `outdated`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App, CLI, IDE
+
+**Zuletzt geprüft:** 2026-08-26

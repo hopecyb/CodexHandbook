@@ -3,10 +3,12 @@ title: Interactive Mode
 description: Talk to Codex in the terminal and run tasks.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
+source_revision: 794dd7c
 ---
 
 After starting an interactive session:
@@ -16,7 +18,7 @@ After starting an interactive session:
 3. Approve or reject tool calls when prompted
 4. Use `/` shortcuts (if available) to manage the session—check current CLI help
 
-Prompting guidance still applies: [Prompting](/prompts/)
+Prompting guidance still applies: [Prompting](/en/prompts/)
 
 ---
 

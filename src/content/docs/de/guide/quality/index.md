@@ -5,30 +5,31 @@ sidebar:
   order: 21
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 967fdd6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Viele fokussieren bei Codex auf „kann es das erzeugen?“ und übersehen die andere Frage: Wie bestätigen wir danach, dass wir das Ergebnis wirklich annehmen können?
 
 Genau darum geht es in dieser Gruppe. Qualität und Überprüfung sollen verhindern, dass etwas „fertig aussieht“, aber noch nicht stabil ist.
 
-- [Diffs prüfen](/guide/quality/review-diffs/)
-- [Tests ausführen](/guide/quality/run-tests/)
-- [Artefakte überprüfen](/guide/quality/verify-artifacts/)
-- [Quellen validieren](/guide/quality/validate-sources/)
-- [Unsicherheit handhaben](/guide/quality/handle-uncertainty/)
-- [Definition of Done](/guide/quality/definition-of-done/)
+- [Diffs prüfen](/de/guide/quality/review-diffs/)
+- [Tests ausführen](/de/guide/quality/run-tests/)
+- [Artefakte überprüfen](/de/guide/quality/verify-artifacts/)
+- [Quellen validieren](/de/guide/quality/validate-sources/)
+- [Unsicherheit handhaben](/de/guide/quality/handle-uncertainty/)
+- [Definition of Done](/de/guide/quality/definition-of-done/)
 
 ## Lesereihenfolge
 
 Beim ersten Durchgang:
 
-1. [Diffs prüfen](/guide/quality/review-diffs/) — was wurde wirklich geändert
-2. [Tests ausführen](/guide/quality/run-tests/) — ob etwas kaputtgegangen ist
-3. [Artefakte überprüfen](/guide/quality/verify-artifacts/) — ob das Ergebnis dem gewünschten entspricht
-4. [Definition of Done](/guide/quality/definition-of-done/) — wann es wirklich fertig ist
+1. [Diffs prüfen](/de/guide/quality/review-diffs/) — was wurde wirklich geändert
+2. [Tests ausführen](/de/guide/quality/run-tests/) — ob etwas kaputtgegangen ist
+3. [Artefakte überprüfen](/de/guide/quality/verify-artifacts/) — ob das Ergebnis dem gewünschten entspricht
+4. [Definition of Done](/de/guide/quality/definition-of-done/) — wann es wirklich fertig ist
 
 Ohne Prüfung ist „fertig“ oft nur vorübergehend so aussehend.
 

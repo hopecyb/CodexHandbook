@@ -3,9 +3,10 @@ title: プロンプトテンプレート
 description: タスク種別ごとに再利用するプロンプトの骨組み——理解、作成、変更、診断、レビュー、調査、自動化。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3dbc237
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # プロンプトテンプレート
@@ -32,13 +33,13 @@ translated_at: 2026-07-28
 
 | テンプレート | 向く場面 |
 |---|---|
-| [理解](/prompts/templates/understand/) | コードベース・ドキュメント・資料を読み、まず認識を揃える |
-| [作成](/prompts/templates/create/) | 機能・原稿・成果物をゼロから作る |
-| [変更](/prompts/templates/change/) | 既存の上で反復的に改める |
-| [診断](/prompts/templates/diagnose/) | 根因を特定し、先にコードは触らない |
-| [レビュー](/prompts/templates/review/) | diff、PR、ドキュメント変更をレビュー |
-| [調査](/prompts/templates/research/) | 出典付きの調査と比較 |
-| [自動化](/prompts/templates/automate/) | 反復タスク、スクリプト、無人フロー |
+| [理解](/ja/prompts/templates/understand/) | コードベース・ドキュメント・資料を読み、まず認識を揃える |
+| [作成](/ja/prompts/templates/create/) | 機能・原稿・成果物をゼロから作る |
+| [変更](/ja/prompts/templates/change/) | 既存の上で反復的に改める |
+| [診断](/ja/prompts/templates/diagnose/) | 根因を特定し、先にコードは触らない |
+| [レビュー](/ja/prompts/templates/review/) | diff、PR、ドキュメント変更をレビュー |
+| [調査](/ja/prompts/templates/research/) | 出典付きの調査と比較 |
+| [自動化](/ja/prompts/templates/automate/) | 反復タスク、スクリプト、無人フロー |
 
 ## テンプレートからワークフローへ
 
@@ -75,7 +76,7 @@ translated_at: 2026-07-28
 
 まず種別を選び、自分のタスクに直す。テンプレートそのものをタスクにしない。
 
-執筆の原則は [プロンプトの基礎](/prompts/basics/) と [タスクの構造](/prompts/task-anatomy/) を参照。
+執筆の原則は [プロンプトの基礎](/ja/prompts/basics/) と [タスクの構造](/ja/prompts/task-anatomy/) を参照。
 
 ---
 

@@ -1,184 +1,106 @@
 ---
 title: Hook 配置示例
-description: 可改编的 Hook 配置与脚本骨架，包含密钥扫描、审计日志与格式校验。
+description: 用真实 hooks.json 和标准库 Python 脚本实现可测试的 PreToolUse 守护栏。
 ---
 
-看 Hook 示例时，先确认它到底想防什么，再改成适合自己环境的版本。
+本章已移除旧版示意事件名和配置字段。示例遵循当前官方 `hooks.json` 结构，并附带可运行测试。
 
-本章提供**示意性**配置与脚本，便于团队改编。字段名、路径以 [官方文档](https://developers.openai.com/codex) 与本地 `codex --help` 为准；复制前请在隔离仓库试跑。
+完整文件位于 [`examples/hooks/secret-guard/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/hooks/secret-guard)。
 
-前置阅读：[Hooks 概述](/skills/hooks/hooks-overview/) · [Hook 事件类型](/skills/hooks/hook-event-types/)
+## 目标与边界
 
-## 使用前先确认范围
+目标：当 `Bash` 或 `apply_patch` 的命令输入出现形似 AWS Access Key ID 的测试串时，在工具执行前拒绝。
 
-不要把这些示例当成能直接照搬的“标准答案”。  
-把它们看成三种样板就行：
+它只是演示 Hook 输入、输出和测试结构：
 
-- 只记录
-- 先阻断
-- 先做轻量输入检查
+- 不能替代专业 secret scanner
+- 正则会误报和漏报
+- 不扫描 Hosted tools
+- 不应记录完整工具输入
 
-先看思路，再决定要不要往下扩。
-
-## 示例 1：工具调用后写审计日志（只读）
-
-**目标：** 记录谁在何时对哪些路径做了写操作，不脱敏失败则不落盘密钥。
-
-`hooks.json`（示意）：
+## 1. 配置 hooks.json
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.after",
-      "command": ".codex/hooks/audit-log.sh",
-      "timeout_ms": 500
-    }
-  ]
+  "description": "Block obvious secret-shaped strings before local writes.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$(git rev-parse --show-toplevel)/examples/hooks/secret-guard/pre_tool_use_guard.py\"",
+            "timeout": 3,
+            "statusMessage": "Checking tool input for secret-shaped strings"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
-`.codex/hooks/audit-log.sh`：
+仓库内实际使用时，通常把配置放在 `.codex/hooks.json`，脚本放到 `.codex/hooks/`。这里保留 examples 路径，方便直接验证手册仓库里的完整材料。
 
-```bash
-#!/usr/bin/env bash
-# stdin: JSON payload（结构以官方为准）
-payload=$(cat)
-tool=$(echo "$payload" | jq -r '.tool // "unknown"')
-ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-echo "$ts tool=$tool" >> "${CODEX_AUDIT_LOG:-/tmp/codex-audit.log}"
-exit 0
-```
+## 2. 拒绝输出
 
-**验收：** 执行一次文件写入后，日志有一行；脚本退出码始终为 0。
-
-这类示例只记录，不改行为，风险最低，通常适合作为起点。
-
-## 示例 2：工具调用前阻断疑似密钥
-
-**目标：** diff 或写入内容匹配 AWS 访问密钥模式时 `block`。
+脚本从 stdin 读取事件 JSON，只检查 `tool_input.command`。命中时输出：
 
 ```json
 {
-  "hooks": [
-    {
-      "event": "tool.call.before",
-      "command": ".codex/hooks/secret-scan.sh",
-      "on_failure": "block",
-      "timeout_ms": 300
-    }
-  ]
+  "hookSpecificOutput": {
+    "hookEventName": "PreToolUse",
+    "permissionDecision": "deny",
+    "permissionDecisionReason": "Secret-shaped string blocked by example hook."
+  }
 }
 ```
 
-`secret-scan.sh` 核心逻辑（示意）：
+未命中时退出 `0` 且不输出内容。普通 stdout 文本不会成为有效的 `PreToolUse` 决策。
+
+## 3. 运行测试
 
 ```bash
-#!/usr/bin/env bash
-payload=$(cat)
-text=$(echo "$payload" | jq -r '.arguments // empty' 2>/dev/null)
-if echo "$text" | grep -qE 'AKIA[0-9A-Z]{16}'; then
-  echo "Blocked: possible AWS access key in tool arguments" >&2
-  exit 1
-fi
-exit 0
+python3 -m unittest discover examples/hooks/secret-guard -p 'test_*.py'
 ```
 
-**验收：** 含 `AKIA` 测试串时被阻断；正常 `git status` 通过。
+预期结果：三个测试通过，覆盖正常命令、疑似密钥和非字典 `tool_input`。
 
-:::caution
-正则扫描有误报/漏报，仅作补充层；真实密钥应走 secret scanner 与 pre-commit，见 [敏感上下文](/guide/context/sensitive-context/)。
-:::
-
-这类示例通常放在你已经确定要拦真实动作之后再用。直接从 block 型 Hook 开始，排障成本会高不少。
-
-## 示例 3：用户提交 prompt 时的长度与关键字策略
-
-**目标：** 拒绝明显试图覆盖系统指令的短语（简化示例）。
+也可以手动喂入 fixture：
 
 ```bash
-#!/usr/bin/env bash
-prompt=$(cat | jq -r '.prompt // empty')
-if [ "${#prompt}" -gt 50000 ]; then
-  echo "Prompt too long" >&2
-  exit 1
-fi
-if echo "$prompt" | grep -qi 'ignore previous instructions'; then
-  echo "Blocked: possible injection pattern" >&2
-  exit 1
-fi
-exit 0
+printf '%s\n' '{"hook_event_name":"PreToolUse","tool_name":"Bash","tool_input":{"command":"git status"}}' \
+  | python3 examples/hooks/secret-guard/pre_tool_use_guard.py
 ```
 
-**验收：** 超长与命中模式时失败；正常任务通过。
+正常输入不会产生 stdout。
 
-这类示例至少要做到：
+## 4. 在项目中启用
 
-- 能看输入
-- 能给出明确失败原因
-- 不会把正常请求误伤得太离谱
+1. 把配置和脚本放入目标仓库，改成目标仓库内的稳定路径。
+2. 在隔离仓库运行单元测试和一次真实正常命令。
+3. 启动 Codex，打开 `/hooks` 审查来源和精确定义。
+4. 信任后分别验证“正常通过”和“测试串被拒绝”。
+5. 修改脚本后重新审查；hash 变化会使非托管 Hook 回到待信任状态。
 
-## 与团队规则同源
+## 从提醒升级到阻断
 
-将「禁止的命令子串」提取到 `tools/codex-policy.json`，供 Hook 与 [命令规则](/guide/customization/rules/command-rules/) 共同读取，避免两处维护。
+生产团队通常先做不阻断的审计或附加上下文，再升级为 deny。升级前至少回答：
 
-## 常见误区
+- fixture 能否覆盖已知误报？
+- 脚本超时或崩溃时用户能否看懂？
+- 规则是否也由 CI 或服务端策略兜底？
+- 绕过与紧急恢复是否可审计？
 
-### 1. 示例能跑，就能直接上生产
+## 官方来源
 
-示例的价值在于说明结构和思路，不在于可直接原样上线。
+- [OpenAI：Hooks 配置与 PreToolUse 输出](https://learn.chatgpt.com/docs/hooks)
 
-### 2. block 型 Hook 不一定比 log 型更成熟
-
-很多团队会先从 log 做起，确认误报和性能都能接受，再升级到 warn 或 block。
-
-### 3. Hook 示例不只是看脚本写法
-
-只看脚本还不够，还得看：
-
-- 挂在什么事件
-- 失败策略是什么
-- 团队是否能解释为什么要这样拦
-
-## 测试 Hook
-
-```bash
-# 用 fixture 测脚本（示意）
-echo '{"tool":"shell","arguments":"git status"}' | .codex/hooks/secret-scan.sh
-echo $?
-```
-
-## 常见顺序
-
-很多团队会按下面的顺序推进：
-
-1. 先做只读日志型
-2. 再做 warn 型
-3. 再做 block 型
-
-这样比较容易把“逻辑写对”和“团队真愿意让它拦”分开处理。
-
-Hook 示例主要是拿来学思路和结构的，不适合原样搬进正式环境。
-
-## 常见错误
-
-- 脚本无 `chmod +x`，静默失败
-- `timeout_ms` 过短导致误拦
-- 日志路径不可写导致整个 Hook 链失败
-- 在 Hook 里 `curl` 外发完整 payload
-
-## 验收清单
-
-- [ ] 每个 Hook 有对应 fixture 测试
-- [ ] 失败策略（block/warn）与团队政策一致
-- [ ] 配置与脚本同仓库、同 PR 审查
-- [ ] 文档注明核验日期与适用 CLI 版本
-
-## 参考来源
-- OpenAI Codex Hooks 示例
 ---
 
-**状态：** outdated  
-**适用产品：** CLI / App（视版本）  
-**复核说明：** 本页包含 Hook 配置结构、事件名、载荷字段与脚本示例；这些示例强依赖当前实现，缺少足够稳定的官方公开依据。  
-**最近核验：** 2026-07-26
+**状态：** verified
+
+**适用产品：** 使用本地 Codex host 的环境；信任管理使用 Codex CLI `/hooks`
+
+**最近核验：** 2026-08-25

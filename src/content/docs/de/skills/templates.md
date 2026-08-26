@@ -3,9 +3,10 @@ title: Verzeichnis templates/
 description: Ausgabevorlagen und Report-Skelette im Skill bereitstellen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f93d04
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `templates/` spart nicht nur Layout-Zeit. Der praktische Nutzen: Skill-Ausgaben werden stabiler — ohne jedes Mal neu zu improvisieren.

@@ -3,9 +3,10 @@ title: 출처 검증
 description: 연구 결론에 추적 가능한 근거를 요구합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 35bd9a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -18,7 +19,7 @@ Agent에게 요구하세요.
 핵심 사실마다 출처 URL 또는 문헌을 붙이고, 불확실한 것은 「미검증」으로 명시하세요.
 ```
 
-결과를 받은 뒤 링크를 열어 대조하세요. 검색 능력은 [Web 검색](/guide/tools/web-search/)을 참고하세요.
+결과를 받은 뒤 링크를 열어 대조하세요. 검색 능력은 [Web 검색](/ko/guide/tools/web-search/)을 참고하세요.
 
 ## 흔한 오해
 

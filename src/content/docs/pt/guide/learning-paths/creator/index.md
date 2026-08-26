@@ -3,9 +3,10 @@ title: Percurso de criador (visão geral)
 description: Visão geral da rota relacionada com criação de conteúdo; passos aprofundados a completar depois.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,9 +23,9 @@ Se queres usar o Codex sobretudo para conteúdo — não para alterar código �
 
 ## O que podes ler agora
 
-- [Prompts](/prompts/): formular Tarefas de criação com clareza
-- [Verificar artefatos](/guide/quality/verify-artifacts/): rever textos e páginas
-- [App de ambiente de trabalho](/guide/desktop-app/): entrada principal para quem não usa terminal
+- [Prompts](/pt/prompts/): formular Tarefas de criação com clareza
+- [Verificar artefatos](/pt/guide/quality/verify-artifacts/): rever textos e páginas
+- [App de ambiente de trabalho](/pt/guide/desktop-app/): entrada principal para quem não usa terminal
 
 ## Mal-entendidos frequentes
 
@@ -48,11 +49,11 @@ Também precisa de Verificação — só muda o foco: estrutura, tom, factos, fo
 
 Se queres começar já, lê nesta ordem:
 
-1. [Fundamentos de Prompt](/prompts/basics/)
-2. [Templates de Prompt](/prompts/templates/)
-3. [Apresentações](/guide/files-and-artifacts/presentations/)
-4. [Imagens e capturas de ecrã](/guide/files-and-artifacts/images-and-screenshots/)
-5. [Verificar artefatos](/guide/quality/verify-artifacts/)
+1. [Fundamentos de Prompt](/pt/prompts/basics/)
+2. [Templates de Prompt](/pt/prompts/templates/)
+3. [Apresentações](/pt/guide/files-and-artifacts/presentations/)
+4. [Imagens e capturas de ecrã](/pt/guide/files-and-artifacts/images-and-screenshots/)
+5. [Verificar artefatos](/pt/guide/quality/verify-artifacts/)
 
 Este percurso valoriza mais pedido claro e resultado verificável.
 

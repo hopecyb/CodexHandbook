@@ -1,88 +1,105 @@
 ---
-title: Choisir votre client Codex
-description: Faire votre premier choix entre App, CLI, IDE et Cloud.
-sidebar:
-  order: 2
+title: Choisir un client Codex
+description: Choisissez entre l'App de bureau, la CLI, l'intégration IDE et Cloud selon le lieu et la manière dont le travail s'effectue.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1e89f67
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 2
 ---
 
-Vous voyez `App / CLI / IDE / Cloud` pour la première fois, et beaucoup de gens s'arrêtent sur « lequel installer ? »
+Pour choisir votre premier point d'entrée Codex, inutile de comparer des dizaines de fonctionnalités. Commencez par répondre à une question : **où ce travail se déroule-t-il principalement ?**
 
-Choisir une mauvaise entrée au départ n'est pas fatal — commencez par quelque chose de pratique et ajoutez les autres plus tard.
+![Schéma de sélection du client Codex : choisir l'App de bureau, la CLI, l'intégration IDE ou Cloud selon le lieu de travail](/diagrams/codex-client-selection-fr.svg)
 
-## Une façon directe de choisir
+## Choisir en 30 secondes
 
-Sans préférence marquée :
+| Lieu de travail principal | Premier choix | Interaction la mieux adaptée |
+|---|---|---|
+| Entre plusieurs projets locaux et tâches parallèles | **App de bureau** | Suivre les tâches, réviser les diffs, traiter les approbations et gérer les travaux longs |
+| Dans un terminal, des scripts ou un flux existant en ligne de commande | **CLI** | Confier des tâches, exécuter des commandes, combiner des scripts et automatiser |
+| Dans VS Code, un éditeur compatible, Xcode ou JetBrains | **Intégration IDE** | Poser des questions avec le contexte de l'éditeur, puis modifier et réviser sur place |
+| Dans des dépôts distants connectés et des environnements isolés | **Cloud** | Déléguer des exécutions distantes, paralléliser le travail et réviser les résultats plus tard |
 
-- **Première fois** : App de bureau
-- **Vous vivez dans le terminal** : CLI
-- **Vous codez surtout dans VS Code / JetBrains** : extension IDE
-- **Vous avez déjà besoin de dépôts cloud GitHub ou de longues Tâches distantes** : regardez Cloud
+Sans préférence nette, l'**App de bureau** constitue généralement le point de départ le plus clair. Si vous travaillez déjà principalement dans un terminal ou dans VS Code, rester dans cet environnement limite les changements de contexte.
 
-## À quoi correspond chaque entrée
+## Le rôle de chaque point d'entrée
 
-| Entrée | À quoi la comparer |
-|---|---|
-| App de bureau | Console graphique — Tâches, diffs, Approbations |
-| CLI | Codex dans le terminal — pour les utilisateurs en ligne de commande |
-| Extension IDE | Assistant dans l'éditeur — modifier pendant que vous lisez le code |
-| Cloud | Exécution distante de Tâches — pour la collaboration sur dépôts et les longues exécutions |
+### App de bureau : piloter le travail local
 
-| Si vous… | Choisissez |
-|---|---|
-| Première fois ; voulez des diffs et une revue clairs | **App de bureau** (recommandé par défaut) |
-| Préférez le terminal et les scripts | **CLI** |
-| Éditez surtout dans un éditeur | **Extension IDE** |
-| Besoin d'un environnement cloud GitHub / longues Tâches | **Cloud** (lisez d'abord la vue d'ensemble) |
+L'App de bureau est utile lorsque vous devez garder visibles l'état des tâches, les modifications de fichiers et les approbations. Elle convient notamment pour :
 
-## Idées reçues courantes
+- suivre plusieurs tâches ou projets en parallèle ;
+- isoler des modifications concurrentes avec des worktrees ;
+- réviser un diff avant de poursuivre ou de corriger le travail ;
+- planifier un travail qui doit continuer à s'exécuter sur un projet local.
 
-### 1. Choisir un client est trop technique pour l'instant
+Exemple : confiez la correction d'une régression de connexion à une tâche et l'analyse en lecture seule d'un problème de performances à une autre, puis examinez les deux résultats séparément.
 
-C'est pratique — cela détermine si votre première expérience paraît claire ou opaque.
+### CLI : intégrer Codex au travail dans le terminal
 
-### 2. Choisir l'option qui a l'air la plus « pro »
+La CLI s'adresse aux personnes qui gèrent déjà leurs projets en ligne de commande. Elle reste au plus près des tests, de Git et des scripts, et permet de consigner facilement des étapes reproductibles dans la documentation de l'équipe.
 
-La première fois, choisissez l'entrée où le processus et les résultats sont les plus faciles à voir — pas la plus hardcore.
+```bash
+codex
+```
 
-## Pourquoi l'App de bureau en premier pour les débutants
+Exemple : démarrez Codex à la racine du dépôt et demandez-lui de reproduire un test en échec, d'identifier la cause racine, d'effectuer la modification minimale, puis de relancer le même test.
 
-Plus accueillante pour les nouveaux venus car :
+### Intégration IDE : travailler autour du code actuel
 
-- Plus facile de voir ce qu'elle a fait
-- Les demandes d'Approbation sont visibles
-- Tâches, diffs et projets paraissent plus concrets
-- Plus facile de faire une pause et d'inspecter quand quelque chose ne va pas
+Utilisez l'intégration IDE lorsque la question est directement liée au fichier, à la sélection ou au diff que vous consultez. Deux formes d'intégration sont actuellement disponibles : VS Code, Cursor, Windsurf et les éditeurs compatibles utilisent l'extension Codex ; Xcode et les IDE JetBrains disposent de leurs propres points d'entrée Codex.
 
-Sauf si vous préférez clairement le terminal, l'App de bureau est souvent le meilleur départ.
+Exemple : sélectionnez une fonction difficile à comprendre, demandez à Codex d'en expliquer les entrées, les sorties et les chemins d'exception, puis de proposer des tests pour les cas limites.
 
-## Vous pourrez utiliser plusieurs entrées plus tard
+### Cloud : déléguer dans un environnement distant isolé
 
-Ce n'est pas un choix définitif entre quatre options.
+Cloud convient aux dépôts distants connectés et aux tâches qui doivent s'exécuter indépendamment de votre ordinateur. Les tâches Cloud isolées sont adaptées à l'exploration parallèle, aux travaux longs et à une révision centralisée une fois l'exécution terminée.
 
-Beaucoup combinent ensuite :
+Exemple : déléguez trois problèmes indépendants d'un dépôt à trois tâches Cloud, attendez leurs modifications et leurs preuves de vérification, puis examinez chaque résultat.
 
-- App de bureau pour les Tâches et la revue
-- CLI pour les opérations par lot
-- Extension IDE pendant le codage
+## Ces clients se complètent
 
-Le premier choix n'est qu'un point de départ.
+Un même flux de travail peut passer d'un client à l'autre :
 
-## Si vous voulez moins de friction
+1. Clarifiez dans l'IDE un problème lié au fichier actuel.
+2. Déléguez l'exploration plus longue à l'App de bureau ou à Cloud.
+3. Exécutez les contrôles standard de l'équipe dans la CLI.
+4. Revenez dans l'App de bureau ou l'interface de revue pour examiner le diff final.
 
-1. Installez l'[App de bureau](/guide/getting-started/install-desktop-app/)
-2. Lancez [votre première Tâche](/guide/getting-started/run-your-first-task/)
-3. Ajoutez CLI ou IDE une fois à l'aise
+La bonne question n'est pas « quel client est le plus puissant ? », mais **quel client est le plus proche du contexte actuel et rend le résultat le plus facile à vérifier ?**
 
-Comparaison complète : [comparaison des fonctionnalités](/guide/reference/feature-comparison/). Vous pouvez installer plusieurs clients ; **gardez les projets d'entraînement dans le même répertoire** pour comparer les clients équitablement.
+## Deux scénarios courants
+
+### Scénario 1 : première correction d'un bug réel
+
+Commencez par l'App de bureau. La conversation, les modifications et les demandes d'autorisation restent visibles au même endroit. Une fois cette première boucle terminée, essayez la CLI ou l'IDE.
+
+### Scénario 2 : l'équipe utilise déjà des commandes fixes et des conventions CI
+
+Commencez par la CLI et consignez les commandes d'installation, de test et de formatage dans `AGENTS.md`. Codex pourra ainsi appliquer les mêmes règles du projet à chaque tâche.
+
+## Vérifier immédiatement votre choix
+
+Ne vous contentez pas de vérifier que le client s'ouvre. Realisez cette boucle dans un dépôt d'exercice :
+
+1. Demandez à Codex de lire et d'expliquer un fichier.
+2. Demandez une petite modification réversible.
+3. Examinez le diff, pas uniquement la réponse finale.
+4. Exécutez une commande de vérification.
+5. Assurez-vous de savoir refuser ou restreindre une demande d'autorisation.
+
+Consultez la [comparaison des fonctionnalités](/fr/guide/reference/feature-comparison/) pour la matrice complète et [Autorisations et bac à sable](/fr/guide/permissions-and-sandbox/) pour les limites d'exécution.
 
 ---
 
-**Statut :** vérifié  
-**Produits concernés :** App / CLI / IDE  
-**Base de vérification :** La page d'accueil OpenAI Developers présente actuellement Codex, les flux de travail de bureau et l'entrée développeur ensemble ; cette page offre des conseils de parcours pour la première fois sans figer une matrice de capacités rigide ni traiter les clients comme des produits mutuellement exclusifs.  
-**Dernière vérification :** 2026-07-26
+**Statut :** verified
+
+**Produits concernés :** App / CLI / IDE / Cloud
+
+**Base de vérification :** comparaison avec la documentation officielle actuelle de l'App de bureau ChatGPT, de Codex CLI, des intégrations IDE et de Cloud. Les recommandations reposent sur le lieu et le mode de travail, et distinguent l'extension compatible VS Code des intégrations propres à Xcode et JetBrains.
+
+**Dernière vérification :** 2026-08-26

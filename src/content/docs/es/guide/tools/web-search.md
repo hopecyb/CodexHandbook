@@ -3,9 +3,10 @@ title: Búsqueda web
 description: Complementar hechos con búsqueda y citar fuentes.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 559d082
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ La búsqueda web sirve para complementar hechos; no sirve para que te dé direct
 
 Adecuada para: consultar documentación pública, códigos de error, notas de versión. No adecuada para: tomar el resultado de búsqueda como conclusión legal/médica definitiva.
 
-Exige fuentes adjuntas y ábrelas a mano para contrastar. Úsala junto con [Validar fuentes](/guide/quality/validate-sources/).
+Exige fuentes adjuntas y ábrelas a mano para contrastar. Úsala junto con [Validar fuentes](/es/guide/quality/validate-sources/).
 
 ## Para qué sirve la búsqueda
 

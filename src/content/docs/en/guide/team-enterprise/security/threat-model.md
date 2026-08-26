@@ -3,9 +3,10 @@ title: Threat Model
 description: Main risk surfaces for Codex in team environments—data, tools, extensions, and supply chain.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 4e63649
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -14,7 +15,7 @@ A threat model means thinking about risk before it happens:
 
 > **If Codex really connects to our code, commands, and external tools, what is most likely to go wrong?**
 
-**Threat modeling** breaks that down. Codex is not “just another chat window”—it can **read code, run commands, call external tools**. This chapter maps main risk surfaces; controls live in [Permission matrix](/guide/reference/permission-matrix/) and [Sandbox](/guide/foundations/sandbox-and-network/).
+**Threat modeling** breaks that down. Codex is not “just another chat window”—it can **read code, run commands, call external tools**. This chapter maps main risk surfaces; controls live in [Permission matrix](/en/guide/reference/permission-matrix/) and [Sandbox](/en/guide/foundations/sandbox-and-network/).
 
 ## What this page covers
 
@@ -72,10 +73,10 @@ That framing turns threat modeling into a pre-launch risk checklist.
 
 | Threat | Description | Mitigation direction |
 |---|---|---|
-| Prompt injection | Malicious issue/web steers overreach | Input hygiene, read-only CI, [injection topic](/guide/team-enterprise/security/prompt-injection/) |
+| Prompt injection | Malicious issue/web steers overreach | Input hygiene, read-only CI, [injection topic](/en/guide/team-enterprise/security/prompt-injection/) |
 | Over-permission | Token, sandbox too broad | Least privilege, branch protection |
 | Data exfiltration | Commands/MCP leak repo | Network policy, DLP, audit Hooks |
-| Malicious extension | Unreviewed Plugin/MCP | [Extension risk](/guide/team-enterprise/security/plugin-and-mcp-risk/) |
+| Malicious extension | Unreviewed Plugin/MCP | [Extension risk](/en/guide/team-enterprise/security/plugin-and-mcp-risk/) |
 | Supply chain | Dependency/script tampering | Existing SCA, code review |
 | Misoperation | Agent drops DB, wrong push | Command deny, no-push CI |
 
@@ -141,8 +142,8 @@ That already suppresses much team risk; refine governance later.
 
 ## Related
 
-- [Sensitive context](/guide/context/sensitive-context/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+- [Sensitive context](/en/guide/context/sensitive-context/)
+- [Human approval patterns](/en/cases/workflows/human-approval-patterns/)
 
 ## Reference sources
 - OpenAI enterprise security whitepaper (official)

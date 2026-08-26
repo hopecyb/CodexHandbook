@@ -3,9 +3,10 @@ title: Tạo ảnh
 description: Tạo hoặc chỉnh ảnh trong tác vụ Codex — Prompt, định dạng và nghiệm thu.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -28,7 +29,7 @@ Nó phù hợp đưa bản nháp hình trước; không phù hợp coi thẳng l
 | Khám phá nhanh không khí bố cục UI | Giao thiết kế cần khớp pixel |
 | Icon ví dụ trong tutorial | Cảnh có chân dung người thật chưa được ủy quyền |
 
-Bổ sung với [Prompt kèm ảnh](/prompts/prompting-with-images/): trang đó nói ảnh **đầu vào**; trang này nói ảnh **đầu ra**.
+Bổ sung với [Prompt kèm ảnh](/vi/prompts/prompting-with-images/): trang đó nói ảnh **đầu vào**; trang này nói ảnh **đầu ra**.
 
 ## Tạo ảnh phù hợp làm gì
 
@@ -48,7 +49,7 @@ Các mục đích sau không phù hợp giao thẳng kết quả tạo:
 
 1. Nói rõ mục đích, tỷ lệ kích thước, từ khóa phong cách (tránh chất đống tên phong cách xâm phạm)
 2. Yêu cầu định dạng đầu ra (PNG/SVG nếu hỗ trợ) và đường dẫn lưu
-3. Sau khi tạo, [kiểm chứng artifact](/guide/quality/verify-artifacts/): mở tệp, kiểm độ phân giải và khả năng đọc
+3. Sau khi tạo, [kiểm chứng artifact](/vi/guide/quality/verify-artifacts/): mở tệp, kiểm độ phân giải và khả năng đọc
 4. Trước phát hành đối ngoại, để thiết kế hoặc pháp lý rà lại
 
 ## Hiểu lầm thường gặp
@@ -97,7 +98,7 @@ Có thể yêu cầu theo cấu trúc:
 
 - Ảnh lớn đặt `assets/` hoặc CDN, đánh giá dung lượng Git
 - Trong PR nói rõ Prompt tạo và phiên bản mô hình (kiểm toán nội bộ)
-- Xem [Hình ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/)
+- Xem [Hình ảnh và ảnh chụp màn hình](/vi/guide/files-and-artifacts/images-and-screenshots/)
 
 ## An toàn và tuân thủ
 

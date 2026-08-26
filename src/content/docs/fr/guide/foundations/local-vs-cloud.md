@@ -3,9 +3,10 @@ title: Local vs cloud
 description: Comparer les Tâches locales et Cloud et quand utiliser chacune.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c61d0ea
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -72,7 +73,7 @@ Passez à Cloud quand vous avez réellement besoin de :
 - Dépôts ou ressources distants
 - Ne pas occuper votre machine locale
 
-Beaucoup de débutants commencent par **local + App de bureau**. Détails Cloud : [Aperçu Web et Cloud](/guide/web-and-cloud/). Basculement dans l'App : [Tâches locales et Cloud](/guide/desktop-app/local-and-cloud-tasks/).
+Beaucoup de débutants commencent par **local + App de bureau**. Détails Cloud : [Aperçu Web et Cloud](/fr/guide/web-and-cloud/). Basculement dans l'App : [Tâches locales et Cloud](/fr/guide/desktop-app/local-and-cloud-tasks/).
 
 Le local convient mieux pour comprendre le flux et faire de petits changements. Cloud convient mieux pour un travail plus long, plus standardisé et plus collaboratif à distance.
 

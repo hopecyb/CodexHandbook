@@ -3,9 +3,10 @@ title: Spracheingabe und -ausgabe
 description: "Szenarien, Grenzen und Privacy bei Sprachinteraktion mit Codex."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f94ad9e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -28,7 +29,7 @@ Sprache: Richtung, Hintergrund, schnelles Follow-up; präzise, suchbare, nachpr�
 | Kurzes Mobile-Follow-up | API-Keys, Passwörter vorlesen |
 | Accessibility-Bedarf | Suchbare, diffbare Spez-Dokumente |
 
-Nach dem Diktat Codex **Verständnis wiederholen** oder Textplan erzeugen lassen, dann bestätigen. Siehe [Plan verlangen](/prompts/ask-for-a-plan/).
+Nach dem Diktat Codex **Verständnis wiederholen** oder Textplan erzeugen lassen, dann bestätigen. Siehe [Plan verlangen](/de/prompts/ask-for-a-plan/).
 
 ## Wofür Sprache taugt
 
@@ -89,7 +90,7 @@ Dann als Textversion zum Bestätigen.
 
 ## Bezug zu Multimodal
 
-- **Bild-Input**: Designs, Screenshots → [Prompting mit Bildern](/prompts/prompting-with-images/)
+- **Bild-Input**: Designs, Screenshots → [Prompting mit Bildern](/de/prompts/prompting-with-images/)
 - **Sprach-Input**: diese Seite
 - **Output**: weiter Code, Dateien, Text-Diff; Sprachzusammenfassung ersetzt kein Review
 

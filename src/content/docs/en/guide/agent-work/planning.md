@@ -3,13 +3,15 @@ title: Planning
 description: Plan first, then execute.
 locale: en
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-25
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
+source_revision: 75099ef
 ---
 
-A plan should include: steps, files involved, risks, verification approach. You approve the plan—not just the "start" button. See [Ask for a plan](/prompts/ask-for-a-plan/)
+A plan should include: steps, files involved, risks, verification approach. You approve the plan—not just the "start" button. See [Ask for a plan](/en/prompts/ask-for-a-plan/)
 
 ## Add three items for high-risk work
 

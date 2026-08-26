@@ -3,14 +3,15 @@ title: 프롬프트 예시 추가
 description: examples/prompts에 재현 가능한 프롬프트를 제출 — 메타데이터와 검증 기준 포함.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: cd78464
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-프롬프트 예시는 저장소 루트 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)에 두고, 핸드북 본문이 링크로 참조합니다. 설계 규범은 [`docs/planning/examples-system.md`](/docs/planning/examples-system.md)를 보세요.
+프롬프트 예시는 저장소 루트 [`examples/prompts/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/prompts)에 두고, 핸드북 본문이 링크로 참조합니다. 설계 규범은 [`docs/planning/examples-system.md`](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/examples-system.md)를 보세요.
 
 ## 이 페이지 내용
 
@@ -112,7 +113,7 @@ last_verified: YYYY-MM-DD
 - 목표와 완료 정의가 분명
 - 권한·보안 경계 설명이 있음
 - 실제 키와 PII가 없음
-- `verified` 상태는 [독립 검증](/guide/contributing/verify-technical-content/) 필요
+- `verified` 상태는 [독립 검증](/ko/guide/contributing/verify-technical-content/) 필요
 
 ## 제출 흐름
 

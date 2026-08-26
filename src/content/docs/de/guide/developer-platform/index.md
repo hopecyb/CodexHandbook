@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Die **Entwicklerplattform** richtet sich an alle, die Codex **produktisieren** und in Pipelines bringen wollen: eigene Apps, Batch-Reviews, Release-Gates, interne Entwicklerportale. Für den Alltag „einen Prompt schreiben und einen Bug fixen“ starten Sie bei [Erste Schritte](/guide/getting-started/).
+Die **Entwicklerplattform** richtet sich an alle, die Codex **produktisieren** und in Pipelines bringen wollen: eigene Apps, Batch-Reviews, Release-Gates, interne Entwicklerportale. Für den Alltag „einen Prompt schreiben und einen Bug fixen“ starten Sie bei [Erste Schritte](/de/guide/getting-started/).
 
 Dieses Kapitel erklärt nicht den täglichen Umgang mit Codex, sondern wie Sie Codex in Ihre eigenen Systeme einbinden.
 
@@ -30,10 +31,10 @@ Es passt besonders zu diesen Szenarien:
 
 | Leserfrage | Wohin |
 |---|---|
-| Wie starte ich `codex` im Terminal? | [CLI-Produkthandbuch](/guide/cli/) |
-| Wie führe ich Reviews in CI per exec aus? | [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) + CI in diesem Kapitel |
-| Wie bette ich einen Agent in meine App ein? | [SDK-Überblick](/guide/developer-platform/sdk-overview/) |
-| Berechtigungen und Sicherheitsmodell | [Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) |
+| Wie starte ich `codex` im Terminal? | [CLI-Produkthandbuch](/de/guide/cli/) |
+| Wie führe ich Reviews in CI per exec aus? | [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/) + CI in diesem Kapitel |
+| Wie bette ich einen Agent in meine App ein? | [SDK-Überblick](/de/guide/developer-platform/sdk-overview/) |
+| Berechtigungen und Sicherheitsmodell | [Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/) |
 
 ## Typische Architektur (Konzept)
 
@@ -56,10 +57,10 @@ Git-Anbieter / Tickets / Artifact-Store
 
 | Thema | Seite |
 |---|---|
-| SDK | [SDK-Überblick](/guide/developer-platform/sdk-overview/) |
-| Nicht-interaktiv | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Skripte und Pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Strukturierte Ausgabe](/guide/developer-platform/non-interactive/structured-output/) · [Exit-Codes und Retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Überblick](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [SDK-Überblick](/de/guide/developer-platform/sdk-overview/) |
+| Nicht-interaktiv | [codex exec](/de/guide/developer-platform/non-interactive/codex-exec/) · [Skripte und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Strukturierte Ausgabe](/de/guide/developer-platform/non-interactive/structured-output/) · [Exit-Codes und Retries](/de/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Überblick](/de/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Code-Review-Automatisierung](/de/guide/developer-platform/ci-cd/code-review-automation/) |
 
 Weitere `codex-sdk/`, `app-server/`, `architecture-patterns/` siehe [Kapitelübersicht](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
@@ -78,7 +79,7 @@ So lässt sich die Rolle einordnen:
 
 ### 3. Welche Seite lohnt sich beim ersten Lesen am meisten?
 
-Für den Konzeptüberblick zuerst [SDK-Überblick](/guide/developer-platform/sdk-overview/) und das Verhältnis zum [Nicht-interaktiven Modus](/guide/cli/non-interactive-mode/).
+Für den Konzeptüberblick zuerst [SDK-Überblick](/de/guide/developer-platform/sdk-overview/) und das Verhältnis zum [Nicht-interaktiven Modus](/de/guide/cli/non-interactive-mode/).
 
 Dieses Kapitel behandelt „wie man Codex in Systeme einbindet“. Für den ersten Einstieg in Codex bleiben die früheren Einsteigerseiten maßgeblich.
 

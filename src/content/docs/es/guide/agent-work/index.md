@@ -5,9 +5,10 @@ sidebar:
   order: 31
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 477e693
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 El trabajo con Agent se centra en cómo llevar una tarea hasta un **estado de finalización verificable**. Cuándo planificar primero, cuándo dividir subtareas, cuándo corregir a mitad de camino y cuándo hacer un traspaso y retomar: eso es lo que trata este capítulo.
@@ -25,10 +26,10 @@ Lo difícil de muchas tareas no es formular el requisito, sino llevarlo hasta «
 
 ## Orden de lectura recomendado
 
-1. [Planificación](/guide/agent-work/planning/)
-2. [Progreso y reorientación](/guide/agent-work/progress-and-steering/)
-3. [Subagents](/guide/agent-work/subagents/)
-4. [Traspaso y reanudación](/guide/agent-work/handoff-and-resume/)
+1. [Planificación](/es/guide/agent-work/planning/)
+2. [Progreso y reorientación](/es/guide/agent-work/progress-and-steering/)
+3. [Subagents](/es/guide/agent-work/subagents/)
+4. [Traspaso y reanudación](/es/guide/agent-work/handoff-and-resume/)
 
 ## Un marco habitual
 
@@ -70,10 +71,10 @@ Si los límites no están claros, cuantas más subtareas, más caótico queda el
 
 ## Relación de este capítulo con otros
 
-- Necesitas el flujo principal completo: ver [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/)
-- Necesitas formular bien la tarea: ver [Prompts](/prompts/)
-- Necesitas gestionar el contexto: ver [Contexto](/guide/context/)
-- Necesitas varios agentes / tareas en paralelo: ver [Agents en paralelo](/guide/desktop-app/parallel-agents/) y [Coordinación multi-agent](/cases/workflows/multi-agent-coordination/)
+- Necesitas el flujo principal completo: ver [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/)
+- Necesitas formular bien la tarea: ver [Prompts](/es/prompts/)
+- Necesitas gestionar el contexto: ver [Contexto](/es/guide/context/)
+- Necesitas varios agentes / tareas en paralelo: ver [Agents en paralelo](/es/guide/desktop-app/parallel-agents/) y [Coordinación multi-agent](/es/cases/workflows/multi-agent-coordination/)
 
 ## Empieza por este flujo mínimo
 

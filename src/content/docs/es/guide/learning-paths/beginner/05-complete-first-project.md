@@ -3,9 +3,10 @@ title: Completar el primer proyecto pequeño
 description: Encadena los pasos de puesta en marcha en una entrega completa.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -22,8 +23,8 @@ Este paso no es «hacer un documento tipo deberes», sino encadenar los pasos an
 
 ## Después de terminar
 
-- Repasa el [mapa de capacidades](/guide/start-here/codex-capability-map/)
-- Profundiza en [App de escritorio](/guide/desktop-app/) o [Prompts](/prompts/)
+- Repasa el [mapa de capacidades](/es/guide/start-here/codex-capability-map/)
+- Profundiza en [App de escritorio](/es/guide/desktop-app/) o [Prompts](/es/prompts/)
 
 ## Puntos clave del ejercicio
 

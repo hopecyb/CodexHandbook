@@ -3,18 +3,19 @@ title: Investigación con fuentes
 description: Usa Codex para buscar, comparar y verificar hechos — con fuentes y conclusiones trazables.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9ff7a5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Investigación con fuentes** exige que cada conclusión clave vuelva a una fuente concreta —documentación oficial, papers o archivos del repo—, no a un juicio sin base. Sirve para selección técnica, comparación de competidores, revisiones bibliográficas e interpretación de políticas.
 
 ## Enfoque de esta página
 
-- Cuándo usar [búsqueda web](/guide/tools/web-search/) frente a solo leer el repositorio
+- Cuándo usar [búsqueda web](/es/guide/tools/web-search/) frente a solo leer el repositorio
 - Cómo exigir formato de citas y marcar incertidumbre
-- Cómo encajar con [validar fuentes](/guide/quality/validate-sources/)
+- Cómo encajar con [validar fuentes](/es/guide/quality/validate-sources/)
 
 ## Práctica mínima viable
 
@@ -37,7 +38,7 @@ Definir el problema y las exclusiones
     → Decisión humana o pasar a la fase de especificación
 ```
 
-Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas largas](/cases/workflows/long-running-task-management/).
+Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas largas](/es/cases/workflows/long-running-task-management/).
 
 ## Errores frecuentes
 
@@ -49,7 +50,7 @@ Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas l
 ## Límites de seguridad
 
 - Material interno no publicado no debe salir por MCP no controlados
-- Hechos variables (precios, versiones, disponibilidad por región) deben marcar [fecha de verificación](/guide/start-here/handbook-version-policy/)
+- Hechos variables (precios, versiones, disponibilidad por región) deben marcar [fecha de verificación](/es/guide/start-here/handbook-version-policy/)
 
 ## Checklist de aceptación
 
@@ -60,8 +61,8 @@ Las investigaciones largas se parten en varias rondas; ver [Gestión de tareas l
 
 ## Capítulos relacionados
 
-- [Gestionar la incertidumbre](/guide/quality/handle-uncertainty/)
-- [Caso: refactorizar documentación con revisión](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Gestionar la incertidumbre](/es/guide/quality/handle-uncertainty/)
+- [Caso: refactorizar documentación con revisión](/es/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

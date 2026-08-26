@@ -3,9 +3,10 @@ title: Chẩn đoán trước khi sửa
 description: Sự cố production và bug cứng đầu — dựng chuỗi bằng chứng trước, rồi mới động dao.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bd7e38b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Để Codex sửa bug ngay từ đầu, tỷ lệ làm lại thường cao. Quy trình chẩn đoán nhấn mạnh hơn: **triệu chứng → giả thuyết → bằng chứng → sửa tối thiểu**.

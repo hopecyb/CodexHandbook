@@ -1,153 +1,86 @@
 ---
-title: Cloud-Troubleshooting
-description: 'Häufige Fehlerindex zu GitHub-Verbindung, Umgebung, Secrets, Outbound und PR.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Cloud-Fehlersuche
+description: Grenze Cloud-Fehler auf den fünf Ebenen Repository, Setup, Netzwerk, Agent und Auslieferung ein.
 sidebar:
   order: 80
+locale: de
+source_locale: zh-CN
+source_revision: 4ba9a4d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Bei Cloud-Problemen löst Wiederholen selten die Ursache.
+Ein neuer Cloud-Versuch verbraucht erneut Zeit, ergänzt aber fehlende Berechtigungen, Abhängigkeiten oder Netzwerkkonfiguration nicht automatisch. Bestimme zuerst, in welcher Phase der Fehler auftritt.
 
-Cloud-Probleme liegen oft in **Berechtigung, Umgebungsdifferenz, Credentials oder Netz**. Diese Seite mappt Symptome auf Themen — statt blind im Chat zu retryen.
+## Triage auf fünf Ebenen
 
-## Inhalt
+| Phase | Typische Symptome | Erster Prüfpunkt |
+|---|---|---|
+| Repository-Verbindung | Repository fehlt in der Liste, 403, Branch existiert nicht | GitHub-Autorisierungsumfang, Organisationsrichtlinie, Ausgangs-Branch |
+| Container/Setup | `command not found`, Installation von Abhängigkeiten schlägt fehl | Fixierte Laufzeit, Setup-Skript, Secret |
+| Agent-Netzwerk | Setup kann herunterladen, `curl` des Agents schlägt fehl | Agent access standardmäßig Off, Allowlist, HTTP-Methoden |
+| Agent-Ausführung | Änderungen verfehlen das Ziel, Testbefehl existiert nicht | Prompt-Umfang, `AGENTS.md`, Arbeitsprotokoll |
+| Auslieferung | Diff unvollständig, PR kann nicht erstellt werden | Branchzustand, Schreibberechtigung, Schutzregeln |
 
-- Bei Task-Fehler zuerst welche Ursachenklasse
-- Arbeitsteilung mit lokalem Troubleshooting
-- Wann zurück zu lokalem Kleinschritt
+## Zuerst Nachweise sichern
 
-## Zuerst prüfen
+Notiere Repository, Ausgangs-Commit, Umgebungsname, Fehlerphase, ersten aussagekräftigen Fehler und vollständigen Befehl. Bewahre nicht nur die letzte Aussage „exit 1“ auf.
 
-„Cloud rot, lokal grün“ → zuerst Laufbedingungen.
+```text
+Umgebung: api-node22
+Ausgangspunkt: main@abc123
+Phase: setup
+Befehl: pnpm install --frozen-lockfile
+Erster Fehler: ERR_PNPM_FETCH_401 ...
+Lokale Abweichung: Lokal wurde ~/.npmrc verwendet, in Cloud ist NPM_TOKEN nicht konfiguriert
+```
 
-Häufig:
+Eine solche Aufzeichnung weist direkt auf den Fix und verhindert, dass der nächste Lauf erneut raten muss.
 
-- Remote-Umgebung ≠ lokal
-- Cloud sieht ungepushstes Lokal nicht
-- Secrets fehlen
-- Netz oder Rechte eingeschränkt
+## Häufige Probleme
 
-Zuerst Bedingungen, dann die Aufgabe selbst.
+### Secret im Setup verfügbar, in Agent aber leer
 
-## Schnelle Triage
+Das ist das vorgesehene Verhalten: Secrets werden vor der Agent-Phase entfernt. Führe Installationsschritte mit Zugangsdaten im Setup aus. Wandle ein Secret nicht in eine normale Umgebungsvariable um, um die Schutzmaßnahme zu umgehen.
 
-| Symptom | Zuerst |
-|---|---|
-| Repo-Verbindung / 403 | [GitHub verbinden](/guide/web-and-cloud/connect-github/) |
-| Abhängigkeitsinstall fehlgeschlagen | [Internetzugriff](/guide/web-and-cloud/internet-access/) · [Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/) |
-| Private Packages / API 401 | [Secrets und Variablen](/guide/web-and-cloud/secrets-and-variables/) |
-| Task wartet ewig | [Delegieren und nachverfolgen](/guide/web-and-cloud/delegate-and-follow-up/) · Freigabe ausstehend? |
-| Lokaler Commit, Cloud sieht nichts | Gepusht? Cloud liest ungepushstes nicht |
-| PR öffnet/pusht nicht | Branch Protection · [PR erstellen](/guide/web-and-cloud/create-pull-requests/) |
-| Tests Cloud rot, lokal grün | Versions-/Umgebungstabelle in [Cloud-Umgebungen](/guide/web-and-cloud/cloud-environments/) |
+### Netzwerk im Setup verfügbar, in Agent aber nicht
 
-## Reihenfolge
+Auch dies ist das Standardverhalten. Wenn die Aufgabe tatsächlich Agent-Netzwerk benötigt, aktiviere es in der Umgebung, beschränke Domains und HTTP-Methoden und prüfe anschließend die Protokolle.
 
-1. Repo und Branch korrekt?
-2. Rechte und Autorisierung genug?
-3. Umgebung und Abhängigkeiten komplett?
-4. Secrets und Netz ok?
-5. Aufgabenbeschreibung ohne kritische Grenzen?
+### Veraltete Abhängigkeiten durch den Cache
 
-Das vor dem erneuten Lauf ist effektiver.
+Änderungen an Setup, Maintenance, Variablen oder Secrets machen den Cache automatisch ungültig. Wenn Änderungen im Repository selbst den Cache inkompatibel machen, verwende Reset cache auf der Umgebungsseite. Prüfe bei gemeinsam genutzten Teamumgebungen zuerst die Auswirkungen auf andere Benutzer.
 
-## Verbindung und Rechte
+### Lokal grün, Cloud rot
 
-**Symptom:** OAuth ok, Clone scheitert.
+Vergleiche Node-/Python-Version, Sperrdatei, Systemabhängigkeiten, versteckte lokale Konfiguration, VPN-/localhost-Dienste und Pfade mit Groß-/Kleinschreibung. Überführe Unterschiede in ein ausdrückliches Setup und Repositoryregeln.
 
-**Prüfen:**
+### PR-Review wurde nicht ausgelöst
 
-1. Scope enthält Ziel-Org/Repo?
-2. Repo archived? GitHub-App-Limits?
-3. Persönlicher Account an Org-SSO-Repo?
+Bestätige, dass Cloud für das Repository konfiguriert und Code review aktiviert ist, der Kommentar genau `@codex review` lautet und die GitHub-Integration die nötigen Berechtigungen besitzt. Automatische Reviews müssen zusätzlich separat aktiviert werden.
 
-**Symptom:** Push abgelehnt.
+## Wann zur lokalen Arbeit zurückkehren?
 
-**Prüfen:** Branch Protection, required review, direkter Push auf `main`?
+Wenn das Problem von einem lokalen Dienst abhängt oder zwei aufeinanderfolgende Läufe nur die Umgebung statt des fachlichen Codes reparieren, reproduziere es zunächst minimal lokal. Dokumentiere erfolgreiche Befehle, Versionen und Tests in `AGENTS.md` oder Setup und delegiere erst danach erneut an Cloud.
 
-## Häufige Missverständnisse
+## Abnahme nach der Lösung
 
-### 1. Fehler in der Install-Phase = immer Abhängigkeit?
+- [ ] Dieselbe Umgebung läuft reproduzierbar von einem sauberen Ausgangspunkt
+- [ ] Das Problem wurde nicht durch größere Repository-Berechtigungen oder unrestricted Netzwerk verdeckt
+- [ ] Protokolle enthalten kein Secret
+- [ ] Ergebnis-Diff und Tests wurden weiterhin menschlich geprüft
 
-Kann Netz, Auth, Secret, private Registry sein.
+## Offizielle Grundlage
 
-### 2. Lokal läuft = Code ok, Cloud „zickt“?
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
 
-Oft:  
-**Lokal hat Voraussetzungen, die Cloud nicht hat.**
-
-### 3. Hängt = Modell denkt?
-
-Auch:
-
-- Wartet auf Freigabe
-- Wartet auf Netz
-- Wartet auf Umgebungsstart
-- Aufgabe zu groß
-
-## Umgebung und Abhängigkeiten
-
-**Symptom:** `command not found` (node, python …).
-
-**Prüfen:** Basisimage mit Runtime? Version und Install in `AGENTS.md`?
-
-**Symptom:** Lockfile-Konflikt oder Install-Timeout.
-
-**Prüfen:** Outbound; Registry-Mirror; VPN nötig (Cloud meist nicht im Intranet)
-
-## Secrets und Variablen
-
-**Symptom:** Env-Vars beim Build leer.
-
-**Prüfen:**
-
-- Secret-Name = Doku (Groß-/Kleinschreibung)
-- Korrektes Repo-/Umgebungsscope
-- Secret-Wert im Prompt → Redaktion?
-
-Mehr: [Secrets und Variablen](/guide/web-and-cloud/secrets-and-variables/)
-
-## Hängen und Timeouts
-
-| Ursache | Behandlung |
-|---|---|
-| Menschliche Freigabe | App/Handy approve/reject |
-| Aufgabe zu groß | In kleinere Delegationen splitten |
-| Langsamer Start | Erster Cold Start normal; dauerhaft langsam → offizielle Statusseite |
-
-Follow-up: [Delegieren und nachverfolgen](/guide/web-and-cloud/delegate-and-follow-up/)
-
-## Output-Qualität
-
-Cloud fertig, Ergebnis unbrauchbar:
-
-1. Fehlen Abnahmekriterien in der Beschreibung?
-2. Denselben Branch lokal checkouten und testen
-3. Mit [Diagnose vor Fix](/cases/workflows/diagnose-before-fixing/) nachverfolgen statt Ganzaufgabe neu
-
-## Wann zuerst zurück lokal
-
-Zwei Runden nur Cloud-Bedingungen statt Aufgabenfortschritt:
-
-- Lokal minimale Repro
-- Abhängigkeiten, Befehle, Verifikation klar dokumentieren
-- Dann neu an Cloud
-
-Spart Rätselraten in der Remote-Umgebung.
-
-## Verhältnis zum globalen Troubleshooting-Index
-
-Lokale CLI/IDE/App-Probleme: [Referenz · Troubleshooting](/guide/reference/troubleshooting/). Diese Seite nur **Cloud-spezifische** Kette.
-
-## Quellen
-- OpenAI Codex Cloud Support-Dokumentation
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** Cloud  
-**Prüfhinweis:** Hilfreiches Triage-Framework auf Annahmen zu aktueller Cloud-Repo-Verbindung, Secrets, Freigabe, Netz und PR; Mapping Symptom→Thema bei Produktwechsel neu an offiziellen Support-Docs ausrichten.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** Cloud
+
+**Zuletzt geprüft:** 2026-08-26

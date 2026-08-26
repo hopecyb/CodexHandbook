@@ -3,9 +3,10 @@ title: Preferências pessoais
 description: Configuração de utilizador, modelo predefinido e hábitos de interface, sem poluir as convenções de equipa no repositório.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ As **preferências pessoais** são definições que se aplicam na sua máquina e
 ## Conteúdo
 
 - O que deve ficar na camada pessoal e o que na camada de projeto
-- Como combinar com [Profiles](/guide/customization/configuration/profiles/) para mudar de cenário
+- Como combinar com [Profiles](/pt/guide/customization/configuration/profiles/) para mudar de cenário
 - Evitar que definições pessoais permissivas se infiltrem no repositório da equipa
 
-Visão geral de prioridade: [Personalização](/guide/customization/) · [Âmbito e prioridade](/guide/customization/agents-md/scope-and-precedence/)
+Visão geral de prioridade: [Personalização](/pt/guide/customization/) · [Âmbito e prioridade](/pt/guide/customization/agents-md/scope-and-precedence/)
 
 ## Porque separar esta camada
 
@@ -80,7 +81,7 @@ As preferências pessoais existem para lhe ficar à mão — não para substitui
 
 ## Relação com a função de memória
 
-Se o produto oferecer «memória» ou preferências persistentes, veja [Memórias e Contexto persistente](/guide/customization/memories-and-persistent-context/). A memória serve para hábitos estáveis; **as restrições específicas do projeto devem continuar a basear-se nos ficheiros do repositório**.
+Se o produto oferecer «memória» ou preferências persistentes, veja [Memórias e Contexto persistente](/pt/guide/customization/memories-and-persistent-context/). A memória serve para hábitos estáveis; **as restrições específicas do projeto devem continuar a basear-se nos ficheiros do repositório**.
 
 ## Erros habituais
 

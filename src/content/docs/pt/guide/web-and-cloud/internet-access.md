@@ -3,139 +3,74 @@ title: Acesso à Internet
 description: Política de saída do Ambiente Cloud, instalação de dependências e risco de fuga de dados — abrir o necessário e manter o limite.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1e2d815
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 70
+reviewed_at: 2026-08-26
 ---
 
-As Tarefas Cloud costumam precisar de **saída à rede**: descarregar pacotes npm/PyPI, chamar APIs, clonar submódulos. Ao mesmo tempo, o acesso à Internet é uma superfície de alto risco de **fuga de dados**, porque o Agent também pode levar conteúdo do repo ou de Secrets a serviços externos.
 
-## Conteúdo
+Cloud has two separate network phases:
 
-- Se o Ambiente Cloud pode aceder à Internet por omissão
-- Quando abrir e como minimizar a exposição
-- Combinação com Sandbox local e política de Secrets
+| Phase | Default | Main purpose |
+|---|---|---|
+| Setup script | Internet available | Install dependencies and tools |
+| Agent phase | Off by default | Let the Agent access external resources during the task |
 
-## Limite básico
+A successful `pnpm install` during setup does not mean the Agent can later `curl` any site.
 
-«Precisa de rede» não significa «deve ter rede sem limites».
+## Why Agent access is off by default
 
-Muita gente vê isto como uma disjuntiva:
+Agent internet access increases the risks of prompt injection, code or data exfiltration, malicious dependencies, and license-incompatible material entering a repository. An untrusted issue, web page, or dependency README can contain instructions designed to induce exfiltration.
 
-- Ou não há rede de todo
-- Ou, por comodidade, se abre tudo
+Allow only the targets and actions required by the task, and review work logs.
 
-O mais habitual é dar só a capacidade de rede que a Tarefa precisa, não a mais.
+## Options
 
-## Duas camadas de «rede»
+Configure Agent internet access per environment:
 
-| Camada | Significado |
-|---|---|
-| Saída do Ambiente Cloud | Se a máquina remota pode aceder à Internet pública ou APIs internas |
-| Ferramentas de rede do Agent | web search, curl, etc. na sessão (a política varia por cliente) |
+- **Off:** block all Agent internet access.
+- **On:** allow access, optionally constrained by domains and HTTP methods.
 
-Esta página centra-se no **Ambiente Cloud**; conceitos gerais em [Sandbox e rede](/guide/foundations/sandbox-and-network/).
+Start with an empty domain list, use the Common dependencies preset, or select All (unrestricted). Do not use unrestricted access as a production troubleshooting shortcut.
 
-## Que local possa não implica que o Cloud possa
+For read-only documentation or downloads, allow only `GET`, `HEAD`, and `OPTIONS`. This blocks `POST`, `PUT`, `PATCH`, and `DELETE`, which may send or modify data.
 
-Em local podes ter rede porque:
+## Minimal-access example
 
-- Já iniciaste sessão em algum serviço
-- Tens `.npmrc`, chave SSH ou proxy local
-- Estás na VPN da empresa
+A task must read public API documentation:
 
-O Cloud não herda essas condições por omissão. Assim, «em local posso `npm install`» não implica «no Cloud também».
+1. Keep access Off and confirm that the failure is network-related.
+2. Enable Agent access.
+3. Add only the official documentation domain to the allowlist.
+4. Allow only `GET`, `HEAD`, and `OPTIONS`.
+5. Rerun the task and inspect every outbound request in the log.
+6. Decide whether to restore Off afterward.
 
-## Cenários típicos que precisam de saída
+## Relationship to Secrets
 
-- Instalar dependências: `npm install`, `pip install`, `go mod download`
-- Puxar de um registry privado (faz falta [Secrets](/guide/web-and-cloud/secrets-and-variables/))
-- Chamar APIs de terceiros (pagamentos, mapas, gateway LLM, etc.)
-- Clonar submódulos ou descarregar recursos de build
+Cloud Secrets are removed before the Agent phase, reducing the risk of directly exfiltrating a setup Secret. Ordinary environment variables, repository content, and generated data can still be sent out. Never disguise sensitive data as an ordinary variable to bypass the Secret lifecycle.
 
-## Princípio de juízo
+## Acceptance checklist
 
-Se uma ação de rede não for imprescindível para completar esta Tarefa, não a abras primeiro.
+- [ ] The need for Agent internet access is documented.
+- [ ] The allowlist contains only required domains.
+- [ ] HTTP methods are reduced to the smallest set.
+- [ ] Inputs are trusted or prompt-injection risk is considered.
+- [ ] Logs contain no command that uploads repository, environment, or credential data.
+- [ ] New dependencies were checked for source, version, and license.
 
-Por exemplo:
+## Official sources
 
-- Aceder à origem de pacotes para instalar dependências costuma ser necessário
-- Aceder a sites irrelevantes ou descarregar recursos extra «de passagem» costuma não o ser
+- [Agent internet access](https://learn.chatgpt.com/docs/cloud/internet-access)
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
 
-## Estratégia recomendada
-
-### Por omissão fechado; abrir conforme a necessidade
-
-1. No [Ambiente Cloud](/guide/web-and-cloud/cloud-environments/), confirma a política de rede atual
-2. Lista os **domínios imprescindíveis** (gestor de pacotes, API da empresa); evita «abrir toda a rede»
-3. Em `AGENTS.md` indica: que URLs se permitem e proíbe escrever secrets no Prompt
-4. Valida com uma Tarefa de teste: pode instalar dependências, mas não sites irrelevantes (se o produto suporte política fina)
-
-### Divisão com Secrets
-
-| Conteúdo | Onde |
-|---|---|
-| API key, token | Cloud Secrets; não no repo |
-| Base URL de API permitida | Documentação ou nome de variável de ambiente (não o valor) |
-| Proxy / URL de mirror | Configuração padrão da equipa |
-
-## Mal-entendidos frequentes
-
-### 1. Poder sair à rede é «só mais cómodo», não um tema de segurança
-
-Assim que há rede, converte-se ao mesmo tempo em:
-
-- Problema de download de dependências
-- Problema de uso de credenciais
-- Problema de saída de dados
-
-### 2. «Se não colar o Secret no Prompt, estou totalmente a salvo»
-
-Se o ambiente puder ler o Secret e além disso puder enviar resultados a um serviço externo, o risco continua a existir.
-
-### 3. web search e saída Cloud são a mesma coisa
-
-Uma é capacidade de rede ao nível de ambiente remoto; a outra, ao nível de Ferramenta de sessão. Não as mistures ao diagnosticar.
-
-### Proteção perante fuga de dados
-
-- Não ponhas a cadeia de ligação a BD de produção na descrição da Tarefa
-- Revê se o Agent tenta enviar `.env` ou conteúdo de ficheiros de secrets para o exterior
-- Na primeira Tarefa Cloud de um repo não fiável, **proíbe a saída ou experimenta em Sandbox só de leitura**
-
-## Alinhamento com o desenvolvimento local
-
-Que local possa `curl` não implica que o Cloud possa — causas habituais de «Cloud vermelho»:
-
-| Fenómeno | Possível causa |
-|---|---|
-| Falha ao instalar dependências | Saída proibida ou registry que requer autenticação |
-| Submódulo que não desce | Chave SSH não injetada em Secrets |
-| Timeout de API interna | Cloud não está na VPN da empresa |
-
-Direção de solução: HTTPS + token, mirror alcançável, ou documentar que o Cloud não suporta recursos de intranet.
-
-## Erros frequentes
-
-- Abrir toda a saída «por comodidade» e correr Tarefas sem limite num repo de produção com Secrets
-- Assumir que o Cloud partilha o mesmo `.npmrc` que o portátil (sem push ou sem Secret)
-- Confundir «precisa de rede» com «precisa da Ferramenta web search»
-- Dar-se conta só ao falhar a instalação de que o Cloud não tem o estado de sessão local
-
-## Lista de aceitação
-
-- [ ] Listar domínios/serviços de saída imprescindíveis para Tarefas Cloud desse repo
-- [ ] Secrets configurados e não commitados a Git
-- [ ] Num branch de teste, uma instalação + teste completo correto
-- [ ] A equipa sabe que dados não devem aparecer em Prompts com rede
-
-## Fontes de referência
-- Documentação de rede e segurança OpenAI Codex Cloud
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** Cloud  
-**Nota de revisão:** Esta página trata a capacidade de saída por omissão do Ambiente Cloud, a política de domínios e o controlo fino de rede, que dependem muito do produto e da configuração de segurança da organização; sem documentação oficial vigente de política de rede suficientemente sólida, não convém `verified`.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud
+
+**Last verified:** 2026-08-26

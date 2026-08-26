@@ -3,9 +3,10 @@ title: 개인 선호
 description: 사용자급 설정, 기본 모델과 UI 습관 — 저장소의 팀 약속을 오염시키지 않습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ sidebar:
 ## 내용
 
 - 무엇을 개인 계층에, 무엇을 프로젝트 계층에 둘지
-- [Profile](/guide/customization/configuration/profiles/)과 어떻게 맞춰 장면을 전환할지
+- [Profile](/ko/guide/customization/configuration/profiles/)과 어떻게 맞춰 장면을 전환할지
 - 개인이 느슨한 설정이 팀 저장소로 새지 않게 하기
 
-우선순위 개요: [개인화 설정](/guide/customization/) · [범위와 우선순위](/guide/customization/agents-md/scope-and-precedence/)
+우선순위 개요: [개인화 설정](/ko/guide/customization/) · [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)
 
 ## 왜 이 계층을 구분하나
 
@@ -39,10 +40,10 @@ sidebar:
 | 내용 | 예시 |
 |---|---|
 | 기본 모델과 추론 등급 | 개인 기기 성능과 요금제 |
-| UI 테마, 글꼴, 알림 | 데스크톱 App [설정](/guide/desktop-app/settings/) |
+| UI 테마, 글꼴, 알림 | 데스크톱 App [설정](/ko/guide/desktop-app/settings/) |
 | 개인 MCP(사설 도구) | 로컬 DB 읽기 전용(권한 신중) |
 | 개인 Skill 라이브러리 경로 | 팀 Plugin과 충돌하지 않게 |
-| 터미널 별칭, `codex` 시작 디렉터리 습관 | [CLI 설정](/guide/cli/configuration/) 참고 |
+| 터미널 별칭, `codex` 시작 디렉터리 습관 | [CLI 설정](/ko/guide/cli/configuration/) 참고 |
 
 ## 개인 계층에만 두면 안 되는 팀 내용
 
@@ -90,7 +91,7 @@ sidebar:
 
 ## 기억 기능과의 관계
 
-제품이 「기억」이나 지속 선호를 제공하면 [기억과 지속 컨텍스트](/guide/customization/memories-and-persistent-context/)를 보세요. 기억은 안정적 습관에 맞고, **프로젝트 고유 제약은 여전히 저장소 파일이 기준**입니다.
+제품이 「기억」이나 지속 선호를 제공하면 [기억과 지속 컨텍스트](/ko/guide/customization/memories-and-persistent-context/)를 보세요. 기억은 안정적 습관에 맞고, **프로젝트 고유 제약은 여전히 저장소 파일이 기준**입니다.
 
 ## 흔한 실수
 

@@ -5,9 +5,10 @@ sidebar:
   order: 40
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3a2992b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex는 “이번엔 어떻게 물을지”에만 의존하지 않습니다. **지속 설정**으로 당신과 팀의 약속을 기억합니다. 이 장에서는 어떤 요구를 대화에 남기고, 어떤 요구를 프로젝트에 내려둘지 구분합니다.
@@ -24,9 +25,9 @@ Codex는 “이번엔 어떻게 물을지”에만 의존하지 않습니다. **
 
 | 독자 | 먼저 읽기 |
 |---|---|
-| 첫 작업을 막 통과한 경우 | [프로젝트 설명](/guide/customization/project-instructions/) |
-| 저장소에 협업 규범을 고정하려는 경우 | [AGENTS.md란](/guide/customization/agents-md/what-is-agents-md/) |
-| CLI/App 동작을 통일하려는 경우 | [설정 기초](/guide/customization/configuration/config-basics/) |
+| 첫 작업을 막 통과한 경우 | [프로젝트 설명](/ko/guide/customization/project-instructions/) |
+| 저장소에 협업 규범을 고정하려는 경우 | [AGENTS.md란](/ko/guide/customization/agents-md/what-is-agents-md/) |
+| CLI/App 동작을 통일하려는 경우 | [설정 기초](/ko/guide/customization/configuration/config-basics/) |
 
 ## 이 장이 다루는 것
 
@@ -78,14 +79,14 @@ Codex를 한동안 쓰면 같은 유형의 문제에 자주 부딪힙니다. 규
 
 | 주제 | 페이지 |
 |---|---|
-| AGENTS.md | [개요](/guide/customization/agents-md/what-is-agents-md/) · [범위와 우선순위](/guide/customization/agents-md/scope-and-precedence/) · [프로젝트 지침 잘 쓰기](/guide/customization/agents-md/writing-effective-instructions/) |
-| 프로젝트 지침 | [프로젝트 설명](/guide/customization/project-instructions/) |
-| 기억 | [기억과 지속 컨텍스트](/guide/customization/memories-and-persistent-context/) |
-| 메커니즘 선택 | [적합한 메커니즘 고르기](/guide/customization/choosing-the-right-mechanism/) |
-| 설정 파일 | [설정 기초](/guide/customization/configuration/config-basics/) · [Profile](/guide/customization/configuration/profiles/) |
-| 개인 선호 | [개인 선호](/guide/customization/personal-preferences/) |
-| 규칙 | [허용과 거부](/guide/customization/rules/allow-and-deny-patterns/) · [명령 규칙](/guide/customization/rules/command-rules/) · [팀 정책](/guide/customization/rules/team-rules/) |
-| 예시 | [Monorepo의 AGENTS.md](/guide/customization/examples/monorepo-agents-md/) |
+| AGENTS.md | [개요](/ko/guide/customization/agents-md/what-is-agents-md/) · [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/) · [프로젝트 지침 잘 쓰기](/ko/guide/customization/agents-md/writing-effective-instructions/) |
+| 프로젝트 지침 | [프로젝트 설명](/ko/guide/customization/project-instructions/) |
+| 기억 | [기억과 지속 컨텍스트](/ko/guide/customization/memories-and-persistent-context/) |
+| 메커니즘 선택 | [적합한 메커니즘 고르기](/ko/guide/customization/choosing-the-right-mechanism/) |
+| 설정 파일 | [설정 기초](/ko/guide/customization/configuration/config-basics/) · [Profile](/ko/guide/customization/configuration/profiles/) |
+| 개인 선호 | [개인 선호](/ko/guide/customization/personal-preferences/) |
+| 규칙 | [허용과 거부](/ko/guide/customization/rules/allow-and-deny-patterns/) · [명령 규칙](/ko/guide/customization/rules/command-rules/) · [팀 정책](/ko/guide/customization/rules/team-rules/) |
+| 예시 | [Monorepo의 AGENTS.md](/ko/guide/customization/examples/monorepo-agents-md/) |
 
 Rules 세부는 이미 시작했고, 설정 세부 페이지는 커스터마이즈 모듈과 함께 계속 보강됩니다.
 

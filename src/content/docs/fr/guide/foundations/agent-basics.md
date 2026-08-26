@@ -3,9 +3,10 @@ title: Bases de l'Agent
 description: Comment un Agent progresse vers un objectif en appelant des outils et en itérant.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -23,8 +24,8 @@ Un **Agent** ne s'arrête pas à un tour de questions-réponses. Il : comprend l
 
 ## Concepts liés
 
-- Skill / Plugin / MCP : étendent **ce qu'il peut faire** et **à quoi il se connecte** — chapitres avancés à suivre ; voir la [carte des capacités](/guide/start-here/codex-capability-map/) pour les différences
-- Approbation humaine : voir [Permissions et Approbations](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP : étendent **ce qu'il peut faire** et **à quoi il se connecte** — chapitres avancés à suivre ; voir la [carte des capacités](/fr/guide/start-here/codex-capability-map/) pour les différences
+- Approbation humaine : voir [Permissions et Approbations](/fr/guide/foundations/permissions-and-approvals/)
 
 ---
 

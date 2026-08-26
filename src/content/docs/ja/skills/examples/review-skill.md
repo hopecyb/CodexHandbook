@@ -3,14 +3,15 @@ title: "例：レビュー Skill"
 description: pr-review ベースの Skill 例。チーム再利用や調整に向く。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 例：レビュー Skill
 
-本例は [最初の Skill を作成する](/skills/create-your-first-skill/) の `pr-review` に対応。チーム需要に合わせて調整可能。
+本例は [最初の Skill を作成する](/ja/skills/create-your-first-skill/) の `pr-review` に対応。チーム需要に合わせて調整可能。
 
 ## SKILL.md
 

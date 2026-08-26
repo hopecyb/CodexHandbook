@@ -3,8 +3,10 @@ title: Codex テーマスキン
 description: "Codex Dream Skin とは何か、インストールと背景変更の方法、CDP インジェクションを使う理由、テーマ利用前に確認すべき安全境界を説明します。"
 locale: ja
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-29
+reviewed_at: 2026-08-26
+source_revision: 8c0e360
 ---
 
 # Codex テーマスキン

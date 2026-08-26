@@ -5,12 +5,13 @@ sidebar:
   order: 70
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3a4af60
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Le chapitre **Équipe et entreprise** est pour les leads engineering, plateforme et sécurité — faire passer Codex de la productivité individuelle à quelque chose que les équipes peuvent gérer, auditer et apprendre. Associer avec [Parcours d'apprentissage · Équipe](/guide/learning-paths/team/) ; ce chapitre penche gouvernance et déploiement.
+Le chapitre **Équipe et entreprise** est pour les leads engineering, plateforme et sécurité — faire passer Codex de la productivité individuelle à quelque chose que les équipes peuvent gérer, auditer et apprendre. Associer avec [Parcours d'apprentissage · Équipe](/fr/guide/learning-paths/team/) ; ce chapitre penche gouvernance et déploiement.
 
 Si vous êtes encore solo ou apprenez les bases, vous pouvez lire ceci plus tard. Il se concentre sur les frontières, le processus et la responsabilité quand beaucoup de personnes utilisent Codex ensemble.
 
@@ -31,9 +32,9 @@ Questions clés :
 
 | Rôle | Commencer par |
 |---|---|
-| EM / lead | [Modèle de menace](/guide/team-enterprise/security/threat-model/) · [Usage acceptable](/guide/team-enterprise/governance/acceptable-use/) |
-| Engineering plateforme | [Règles d'équipe](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| Sécurité | [Risque Plugin et MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injection de prompt](/guide/team-enterprise/security/prompt-injection/) |
+| EM / lead | [Modèle de menace](/fr/guide/team-enterprise/security/threat-model/) · [Usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/) |
+| Engineering plateforme | [Règles d'équipe](/fr/guide/customization/rules/team-rules/) · [Hooks](/fr/skills/hooks/hooks-overview/) |
+| Sécurité | [Risque Plugin et MCP](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injection de prompt](/fr/guide/team-enterprise/security/prompt-injection/) |
 
 ## Modèle de gouvernance (conceptuel)
 
@@ -51,15 +52,15 @@ Observation (audit, métriques, rétrospectives)
 
 | Sujet | Pages |
 |---|---|
-| Sécurité | [Modèle de menace](/guide/team-enterprise/security/threat-model/) · [Risque Plugin/MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injection de prompt](/guide/team-enterprise/security/prompt-injection/) |
-| Gouvernance | [Politique d'usage acceptable](/guide/team-enterprise/governance/acceptable-use/) |
+| Sécurité | [Modèle de menace](/fr/guide/team-enterprise/security/threat-model/) · [Risque Plugin/MCP](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/) · [Injection de prompt](/fr/guide/team-enterprise/security/prompt-injection/) |
+| Gouvernance | [Politique d'usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/) |
 
-La roadmap ajoutera adoption, administration, deployment-patterns, etc. — voir [plan du chapitre](/docs/planning/chapter-outline.md) (doc de planification du dépôt).
+La roadmap ajoutera adoption, administration, deployment-patterns, etc. — voir [plan du chapitre](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (doc de planification du dépôt).
 
 ## Relation avec la personnalisation
 
-- Couche gérée org dans [priorité AGENTS.md](/guide/customization/agents-md/scope-and-precedence/)
-- [Politique de règles d'équipe](/guide/customization/rules/team-rules/)
+- Couche gérée org dans [priorité AGENTS.md](/fr/guide/customization/agents-md/scope-and-precedence/)
+- [Politique de règles d'équipe](/fr/guide/customization/rules/team-rules/)
 
 ## Erreurs courantes
 
@@ -88,8 +89,8 @@ Mais sachez : une fois Codex un système d'équipe, les problèmes ne sont pas s
 
 Commencer par :
 
-- [Risque Plugin et MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [Politique d'usage acceptable](/guide/team-enterprise/governance/acceptable-use/)
+- [Risque Plugin et MCP](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [Politique d'usage acceptable](/fr/guide/team-enterprise/governance/acceptable-use/)
 
 Si vous préférez l'onboarding personnel d'abord, reporter ce chapitre jusqu'au déploiement équipe, permissions ou contrôle des risques.
 

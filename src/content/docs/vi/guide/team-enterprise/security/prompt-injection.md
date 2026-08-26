@@ -3,16 +3,17 @@ title: Prompt injection
 description: "Khi văn bản không đáng tin vào Ngữ cảnh — nhận diện, giảm thiểu và điểm chính sách đội."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 432173c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
 «Prompt injection» nghĩa là ai đó nhúng nội dung vào Ngữ cảnh khiến Codex hiểu sai.
 
-Nó có thể đến từ issue, trang web, chú thích dependency, tài liệu hoặc văn bản dán — thường nhằm để Agent **bỏ qua chính sách, lộ dữ liệu hoặc chạy lệnh nguy hiểm**. Đây là rủi ro thường gặp của [mô hình mối đe dọa](/guide/team-enterprise/security/threat-model/) và gần công việc thật hơn nhiều người nghĩ.
+Nó có thể đến từ issue, trang web, chú thích dependency, tài liệu hoặc văn bản dán — thường nhằm để Agent **bỏ qua chính sách, lộ dữ liệu hoặc chạy lệnh nguy hiểm**. Đây là rủi ro thường gặp của [mô hình mối đe dọa](/vi/guide/team-enterprise/security/threat-model/) và gần công việc thật hơn nhiều người nghĩ.
 
 ## Trang này sẽ nói gì
 
@@ -73,12 +74,12 @@ Injection thật tinh vi hơn; phân biệt này vẫn chặn nhiều tấn côn
 **Thiết kế**
 
 - Tách **chính sách hệ thống** khỏi **nội dung người dùng không đáng tin** (kiến trúc tùy sản phẩm)
-- Hành động độ nhạy cao luôn [phê duyệt của người](/cases/workflows/human-approval-patterns/)
+- Hành động độ nhạy cao luôn [phê duyệt của người](/vi/cases/workflows/human-approval-patterns/)
 
 **Kỹ thuật**
 
 - Prompt CI **không** dán thân PR thô; trường có cấu trúc + giới hạn độ dài
-- [Hooks](/skills/hooks/hooks-examples/) quét cụm từ injection đã biết (chỉ bổ trợ)
+- [Hooks](/vi/skills/hooks/hooks-examples/) quét cụm từ injection đã biết (chỉ bổ trợ)
 - Token chỉ đọc, không `git push`
 
 **Quy trình**
@@ -118,7 +119,7 @@ Cái trước là sợi chỉ; cái sau mặc định đáng ngờ.
 
 - [ ] Luồng review CI/Cloud đã đánh giá bề mặt injection
 - [ ] Maintainer biết nhận diện issue đáng ngờ
-- [ ] Căn chỉnh với [Sử dụng chấp nhận được](/guide/team-enterprise/governance/acceptable-use/)
+- [ ] Căn chỉnh với [Sử dụng chấp nhận được](/vi/guide/team-enterprise/governance/acceptable-use/)
 
 ## Nguồn tham chiếu
 - OWASP LLM Top 10 (Prompt Injection)

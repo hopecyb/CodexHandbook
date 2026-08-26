@@ -3,9 +3,10 @@ title: Refactorisation de site de docs avec revue
 description: "Cas : mise à jour en lot des liens et chapitres dans un projet Astro/Starlight — petits diffs, validation de build."
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3acaf23
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Ce cas illustre une tâche d'**ingénierie de contenu** : Markdown multi-fichiers, configuration de barre latérale, validation de build. La pile technique est proche de ce manuel, mais le scénario est transférable à tout site statique.
@@ -19,7 +20,7 @@ Ce cas illustre une tâche d'**ingénierie de contenu** : Markdown multi-fichier
 | Risque | Moyen (nombreux liens et navigation) |
 | Durée | 1–3 heures (selon l'échelle) |
 
-Modèle : [Modèle de cas](/cases/use-cases/case-study-template/)
+Modèle : [Modèle de cas](/fr/cases/use-cases/case-study-template/)
 
 ## Contexte
 
@@ -50,7 +51,7 @@ Acceptation : npm run build réussit ; aucun lien mort.
 
 - **Config avant contenu** : éviter les erreurs de slug manquant au build
 - Commit par lots de 3–5 fichiers pour faciliter la revue
-- Utiliser [Explorer—Planifier—Exécuter—Vérifier](/cases/workflows/explore-plan-execute-verify/)
+- Utiliser [Explorer—Planifier—Exécuter—Vérifier](/fr/cases/workflows/explore-plan-execute-verify/)
 
 ## Contrôles
 

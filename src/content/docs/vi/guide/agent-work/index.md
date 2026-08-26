@@ -5,9 +5,10 @@ sidebar:
   order: 31
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 477e693
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Làm việc với Agent tập trung vào: làm sao đưa một tác vụ **đến trạng thái hoàn thành có thể kiểm chứng**. Khi nào lập kế hoạch trước, khi nào tách tác vụ con, khi nào chỉnh hướng giữa chừng, khi nào bàn giao và khôi phục — đều là vấn đề chương này xử lý.
@@ -25,10 +26,10 @@ Nhiều tác vụ khó không phải vì nói ra yêu cầu, mà vì đưa nó s
 
 ## Thứ tự đọc khuyến nghị
 
-1. [Lập kế hoạch](/guide/agent-work/planning/)
-2. [Tiến độ và điều hướng](/guide/agent-work/progress-and-steering/)
-3. [Subagent](/guide/agent-work/subagents/)
-4. [Bàn giao và khôi phục](/guide/agent-work/handoff-and-resume/)
+1. [Lập kế hoạch](/vi/guide/agent-work/planning/)
+2. [Tiến độ và điều hướng](/vi/guide/agent-work/progress-and-steering/)
+3. [Subagent](/vi/guide/agent-work/subagents/)
+4. [Bàn giao và khôi phục](/vi/guide/agent-work/handoff-and-resume/)
 
 ## Một khung dùng thường xuyên
 
@@ -70,10 +71,10 @@ Nếu ranh giới chưa rõ, càng nhiều tác vụ con thì thread chính càn
 
 ## Quan hệ chương này với các chương khác
 
-- Cần quy trình chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-- Cần nói rõ tác vụ: xem [Prompt](/prompts/)
-- Cần quản lý ngữ cảnh: xem [Ngữ cảnh](/guide/context/)
-- Cần song song nhiều người/nhiều tác vụ: xem [Agent song song](/guide/desktop-app/parallel-agents/) và [Phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/)
+- Cần quy trình chính đầy đủ: xem [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+- Cần nói rõ tác vụ: xem [Prompt](/vi/prompts/)
+- Cần quản lý ngữ cảnh: xem [Ngữ cảnh](/vi/guide/context/)
+- Cần song song nhiều người/nhiều tác vụ: xem [Agent song song](/vi/guide/desktop-app/parallel-agents/) và [Phối hợp nhiều Agent](/vi/cases/workflows/multi-agent-coordination/)
 
 ## Chạy thông quy trình tối thiểu này trước
 

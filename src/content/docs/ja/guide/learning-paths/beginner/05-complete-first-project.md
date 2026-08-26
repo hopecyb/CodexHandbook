@@ -3,9 +3,10 @@ title: 最初の小さなプロジェクトを完了する
 description: 入門ステップを 1 回の完全な納品にまとめます。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -22,8 +23,8 @@ sidebar:
 
 ## 完了後
 
-- [能力マップ](/guide/start-here/codex-capability-map/) を復習する
-- [デスクトップ App](/guide/desktop-app/) または [プロンプト](/prompts/) を深く学ぶ
+- [能力マップ](/ja/guide/start-here/codex-capability-map/) を復習する
+- [デスクトップ App](/ja/guide/desktop-app/) または [プロンプト](/ja/prompts/) を深く学ぶ
 
 ## 練習の重点
 

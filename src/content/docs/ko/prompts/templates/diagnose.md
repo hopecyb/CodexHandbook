@@ -3,9 +3,10 @@ title: 진단 템플릿
 description: 먼저 근본 원인을 찾은 뒤 수정을 논의합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b89ce2b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 진단 템플릿
@@ -47,8 +48,8 @@ translated_at: 2026-07-28
 
 ## 관련
 
-- [먼저 진단한 뒤 수정](/cases/workflows/diagnose-before-fixing/)
-- [버그 수정 사례](/cases/fix-a-bug/)
+- [먼저 진단한 뒤 수정](/ko/cases/workflows/diagnose-before-fixing/)
+- [버그 수정 사례](/ko/cases/fix-a-bug/)
 
 ---
 

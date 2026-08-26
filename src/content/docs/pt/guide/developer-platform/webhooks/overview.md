@@ -3,14 +3,15 @@ title: Visão geral de Webhooks
 description: Ligar o estado de Tarefas Codex a sistemas internos com callbacks HTTP — eventos, assinatura e idempotência.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-Um **Webhook** permite-te, quando muda o estado de uma Tarefa Codex ou Cloud, enviar um callback HTTP ao teu próprio serviço e disparar atualizações de tickets, notificações Slack ou mesas de Aprovação internas. Este capítulo é a entrada de integração por eventos da [plataforma para desenvolvedores](/guide/developer-platform/).
+Um **Webhook** permite-te, quando muda o estado de uma Tarefa Codex ou Cloud, enviar um callback HTTP ao teu próprio serviço e disparar atualizações de tickets, notificações Slack ou mesas de Aprovação internas. Este capítulo é a entrada de integração por eventos da [plataforma para desenvolvedores](/pt/guide/developer-platform/).
 
 ## O que esta página cobre
 
@@ -54,7 +55,7 @@ Sem verificação de assinatura, idempotência e tratamento de timeouts, podes a
 | Integrar com um bus de eventos existente | Um cron simples só precisa do código de saída de `exec` |
 | Orquestração multi-passo (completar → disparar deploy) | Sem endpoint alcançável da internet e sem querer usar fila |
 
-Pipelines simples podem bastar com [Scripts e pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/); um serviço multi-tenant productizado costuma combinar **SDK + Webhook**.
+Pipelines simples podem bastar com [Scripts e pipelines](/pt/guide/developer-platform/non-interactive/scripts-and-pipelines/); um serviço multi-tenant productizado costuma combinar **SDK + Webhook**.
 
 ## Eventos típicos (conceito)
 
@@ -110,7 +111,7 @@ Quanto mais respostas forem «sim», mais sentido tem o Webhook.
 
 ## Limites de segurança
 
-- Ver [modelo de ameaças](/guide/team-enterprise/security/threat-model/) e [uso aceitável](/guide/team-enterprise/governance/acceptable-use/)
+- Ver [modelo de ameaças](/pt/guide/team-enterprise/security/threat-model/) e [uso aceitável](/pt/guide/team-enterprise/governance/acceptable-use/)
 - Inclui a rotação do segredo do webhook no calendário de operações
 
 ## Lista de aceitação
@@ -118,7 +119,7 @@ Quanto mais respostas forem «sim», mais sentido tem o Webhook.
 - [ ] Falha de verificação de assinatura → 4xx
 - [ ] Tabela de idempotência ou chave de dedupe implementada
 - [ ] Worker assíncrono e DLQ (fila de letra morta) configurados
-- [ ] Convénio de campos alinhado com [saída estruturada](/guide/developer-platform/non-interactive/structured-output/)
+- [ ] Convénio de campos alinhado com [saída estruturada](/pt/guide/developer-platform/non-interactive/structured-output/)
 
 O Webhook serve para ligar mudanças de estado de Tarefa a outros sistemas; antes há que deixar bem assinatura, idempotência e processamento assíncrono.
 

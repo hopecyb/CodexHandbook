@@ -3,9 +3,10 @@ title: "Ejemplo: Skill de investigación"
 description: Ejemplo de Skill de investigación con citas y marcas de pendiente de confirmación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ejemplo: Skill de investigación
@@ -28,8 +29,8 @@ description: Investigación técnica y tablas comparativas con citas a URL o rut
 
 ## Relacionado
 
-- [Caso de investigación](/cases/research-with-sources/)
-- [Plantilla de investigación](/prompts/templates/research/)
+- [Caso de investigación](/es/cases/research-with-sources/)
+- [Plantilla de investigación](/es/prompts/templates/research/)
 ---
 
 **Estado:** verificado  

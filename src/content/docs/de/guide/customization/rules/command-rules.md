@@ -3,14 +3,15 @@ title: Befehlsregeln
 description: "Befehlsweises Allow/Deny für Shell und Werkzeugaufrufe — ausführbarer als mündliche Absprachen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-**Befehlsregeln** fokussieren „welche Befehle der Agent mit welchen Argumenten ausführen darf“. Sie sind die häufigste Form von [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/) und stehen typischerweise in team-reviewbaren Config- oder Regeldateien.
+**Befehlsregeln** fokussieren „welche Befehle der Agent mit welchen Argumenten ausführen darf“. Sie sind die häufigste Form von [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/) und stehen typischerweise in team-reviewbaren Config- oder Regeldateien.
 
 ## Was diese Seite behandelt
 
@@ -90,7 +91,7 @@ Schema (Format laut offizieller Config):
 | Inventur | Echte Befehle aus `package.json`-Scripts, Makefile, CI-Workflows |
 | Schichten | Organisations-Deny → Projekt-Allow → persönliche lokale Ausnahme (falls) |
 | Probelauf | Niedrigrisiko-Aufgabe: „was durchsollte geht, was blockieren sollte blockiert“ |
-| Abgleich | Lokale Regeln möglichst gleichursprünglich mit [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) |
+| Abgleich | Lokale Regeln möglichst gleichursprünglich mit [GitHub Action](/de/guide/developer-platform/ci-cd/code-review-automation/) |
 
 ## Häufige Fehler
 
@@ -115,10 +116,10 @@ Befehlsregeln „merken“ keine Befehle — sie trennen Alltag von Aktionen, di
 
 ## Verwandte Kapitel
 
-- [Erlauben und Ablehnen](/guide/customization/rules/allow-and-deny-patterns/)
-- [Teamregel-Strategie](/guide/customization/rules/team-rules/)
-- [CLI-Freigabe und Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Berechtigungsmatrix](/guide/reference/permission-matrix/)
+- [Erlauben und Ablehnen](/de/guide/customization/rules/allow-and-deny-patterns/)
+- [Teamregel-Strategie](/de/guide/customization/rules/team-rules/)
+- [CLI-Freigabe und Sandbox](/de/guide/cli/approvals-and-sandbox/)
+- [Berechtigungsmatrix](/de/guide/reference/permission-matrix/)
 
 ---
 

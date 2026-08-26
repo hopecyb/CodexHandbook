@@ -3,9 +3,10 @@ title: 자주 묻는 질문
 description: 입문과 사용 중의 고빈도 질문입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3f915e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,34 +22,34 @@ sidebar:
 - 방향 판단만 먼저 얻고 싶음
 
 **Q：처음에는 어떤 클라이언트를 써야 하나요?**  
-A：데스크톱 App. [클라이언트 선택](/guide/getting-started/choose-your-codex-client/)을 보세요.
+A：데스크톱 App. [클라이언트 선택](/ko/guide/getting-started/choose-your-codex-client/)을 보세요.
 
 **Q：확인을 건너뛰고 변경을 전부 수락해도 되나요?**  
-A：하지 않는 편이 좋습니다. [검증과 사람 재검토](/guide/foundations/verification-and-human-review/)를 보세요.
+A：하지 않는 편이 좋습니다. [검증과 사람 재검토](/ko/guide/foundations/verification-and-human-review/)를 보세요.
 
 **Q：프롬프트에 표준 템플릿이 있나요?**  
-A：프레임은 있고, 마법은 없습니다. [좋은 작업의 구조](/prompts/task-anatomy/)를 보세요.
+A：프레임은 있고, 마법은 없습니다. [좋은 작업의 구조](/ko/prompts/task-anatomy/)를 보세요.
 
 **Q：핸드북과 공식 문서가 충돌하면?**  
 A：공식을 따릅니다：[https://developers.openai.com/codex](https://developers.openai.com/codex). issue도 환영합니다.
 
 **Q：AGENTS.md, Skill, MCP의 차이는?**  
-A：[확장 능력 지도](/skills/capability-map/)와 [확장 방식 고르기](/skills/choosing-an-extension-method/)를 보세요.
+A：[확장 능력 지도](/ko/skills/capability-map/)와 [확장 방식 고르기](/ko/skills/choosing-an-extension-method/)를 보세요.
 
 **Q：권장 표준 워크플로가 있나요?**  
-A：기본은 [탐색—계획—실행—검증](/cases/workflows/explore-plan-execute-verify/)입니다.
+A：기본은 [탐색—계획—실행—검증](/ko/cases/workflows/explore-plan-execute-verify/)입니다.
 
 **Q：Cloud에서 GitHub 연결, PR 열기는?**  
-A：[GitHub 연결](/guide/web-and-cloud/connect-github/)과 [Pull Request 만들기](/guide/web-and-cloud/create-pull-requests/)를 보세요.
+A：[GitHub 연결](/ko/guide/web-and-cloud/connect-github/)과 [Pull Request 만들기](/ko/guide/web-and-cloud/create-pull-requests/)를 보세요.
 
 **Q：CLI를 CI에 넣을 수 있나요?**  
-A：가능합니다. [비대화형 모드](/guide/cli/non-interactive-mode/)부터 시작하고, 승인과 권한을 설계하세요.
+A：가능합니다. [비대화형 모드](/ko/guide/cli/non-interactive-mode/)부터 시작하고, 승인과 권한을 설계하세요.
 
 **Q：슬래시 명령에는 무엇이 있나요?**  
-A：클라이언트 `/` 자동완성을 기준으로 합니다. 학습용 설명은 [슬래시 명령 빠른 조회](/guide/reference/slash-commands/)를 보세요.
+A：클라이언트 `/` 자동완성을 기준으로 합니다. 학습용 설명은 [슬래시 명령 빠른 조회](/ko/guide/reference/slash-commands/)를 보세요.
 
 **Q：크리에이터/개발자/팀의 완전한 경로는?**  
-A：입문 경로는 이미 있습니다. 심화 사례는 [시나리오 사례](/cases/use-cases/), 팀 거버넌스는 로드맵 M6 `11-team-enterprise`를 보세요.
+A：입문 경로는 이미 있습니다. 심화 사례는 [시나리오 사례](/ko/cases/use-cases/), 팀 거버넌스는 로드맵 M6 `11-team-enterprise`를 보세요.
 
 ## 흔한 오해
 

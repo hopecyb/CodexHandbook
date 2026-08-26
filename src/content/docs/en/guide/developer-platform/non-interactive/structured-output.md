@@ -1,11 +1,12 @@
 ---
+reviewed_at: 2026-08-26
 title: Structured Output
 description: Make exec produce machine-parseable results for downstream steps, dashboards, and gates.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: aa19d49
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -57,7 +58,7 @@ Output requirements:
 Shell parsing (sketch):
 
 ```bash
-result=$(codex exec --cwd . "$(cat prompts/structured-review.md)")
+result=$(codex exec --cd . "$(cat prompts/structured-review.md)")
 echo "$result" | jq -e '.pass == true'
 ```
 
@@ -89,7 +90,7 @@ For large output, require a file path field; Agent writes to `artifacts/`, CI up
 
 ## How to decide
 
-If the next consumer is a program, prefer structure.  
+If the next consumer is a program, prefer structure.
 If the result is mainly for human reading and discussion, free text is often fine.
 
 Whenever results feed another program, ask Codex to return agreed fields consistently.
@@ -102,7 +103,7 @@ Whenever results feed another program, ask Codex to return agreed fields consist
 | Type safety | Convention + validation | SDK types |
 | Best for | CI scripts | Multi-tenant services |
 
-See [SDK overview](/guide/developer-platform/sdk-overview/).
+See [SDK overview](/en/guide/developer-platform/sdk-overview/).
 
 ## Common mistakes
 
@@ -116,13 +117,13 @@ See [SDK overview](/guide/developer-platform/sdk-overview/).
 - [ ] Schema file or documented fields exist
 - [ ] CI fails explicitly on parse failure
 - [ ] Sample output in `fixtures/` for regression
-- [ ] Aligned with [exit codes](/guide/developer-platform/non-interactive/exit-codes-and-retries/) strategy
+- [ ] Aligned with [exit codes](/en/guide/developer-platform/non-interactive/exit-codes-and-retries/) strategy
 
 ## Reference sources
 - OpenAI structured outputs general practice (conceptual alignment)
 ---
 
-**Status:** verified  
-**Products:** CLI / API  
-**Verification basis:** OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance.  
+**Status:** verified
+**Products:** CLI / API
+**Verification basis:** OpenAI API model/comparison docs still list `Structured outputs`; this page is limited to general practice for stable non-interactive output interfaces; JSON schema, validation, and fallback patterns are engineering guidance.
 **Last verified:** 2026-07-26

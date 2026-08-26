@@ -3,18 +3,19 @@ title: Ưu tiên Artifact
 description: Thỏa thuận hình thức và đường dẫn Artifact cuối trước, rồi suy ngược bước — phù hợp tài liệu, cấu hình, báo cáo và thành phẩm tương tự.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a1e1e0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Ưu tiên Artifact** là làm rõ hình thức và vị trí thành phẩm trước, rồi để Codex suy ngược bước. Phù hợp tài liệu Markdown, OpenAPI, script migration, dàn ý slide và tác vụ đầu ra rõ; cũng có thể kết hợp [làm việc theo đặc tả](/cases/workflows/specification-driven-work/).
+**Ưu tiên Artifact** là làm rõ hình thức và vị trí thành phẩm trước, rồi để Codex suy ngược bước. Phù hợp tài liệu Markdown, OpenAPI, script migration, dàn ý slide và tác vụ đầu ra rõ; cũng có thể kết hợp [làm việc theo đặc tả](/vi/cases/workflows/specification-driven-work/).
 
 ## Trọng tâm trang này
 
 - Cách mô tả cấu trúc Artifact thay vì chi tiết quy trình
 - Kiểm tra tính nhất quán khi Artifact nhiều tệp
-- Khớp năng lực [tệp và Artifact](/guide/files-and-artifacts/)
+- Khớp năng lực [tệp và Artifact](/vi/guide/files-and-artifacts/)
 
 ## Cách làm tối thiểu dùng được
 
@@ -37,7 +38,7 @@ Tôi xác nhận rồi mới sinh, và tự kiểm liên kết nội bộ còn h
     → Kiểm chứng (lint, kiểm tra liên kết, xem trước)
 ```
 
-Artifact trực quan có thể yêu cầu ảnh chụp hoặc mô tả xem trước; xem [kiểm chứng Artifact](/guide/quality/verify-artifacts/).
+Artifact trực quan có thể yêu cầu ảnh chụp hoặc mô tả xem trước; xem [kiểm chứng Artifact](/vi/guide/quality/verify-artifacts/).
 
 ## Lỗi thường gặp
 
@@ -56,7 +57,7 @@ Artifact trực quan có thể yêu cầu ảnh chụp hoặc mô tả xem trư�
 - [ ] Mọi tệp đã khai báo tồn tại và mở được
 - [ ] Định dạng khớp mẫu tham chiếu
 - [ ] Liên kết / mục lục / Frontmatter hợp lệ
-- [ ] Khớp [định nghĩa hoàn thành](/prompts/define-done/)
+- [ ] Khớp [định nghĩa hoàn thành](/vi/prompts/define-done/)
 
 ---
 

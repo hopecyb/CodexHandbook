@@ -1,79 +1,75 @@
 ---
 title: Funktionsvergleich
-description: 'Fähigkeitsvergleich von App, CLI, IDE und Cloud.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Vergleiche Desktop-App, CLI, IDE und Cloud nach Arbeitsoberfläche, Ausführungsort und Review-Methode.
 sidebar:
   order: 30
+locale: de
+source_locale: zh-CN
+source_revision: f2f0528
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Diese Tabelle dient Lernen und Auswahl; konkrete Fähigkeiten richten sich nach dem aktuellen Produkt.
+Diese Matrix vergleicht nur **stabile, grundlegende Arbeitsweisen** und verspricht keine dauerhaft unveränderten Detailfunktionen. Triff die erste Entscheidung mit der [Client-Auswahlgrafik](/de/guide/choose-your-client/) und prüfe hier anschließend die Unterschiede.
 
-Sie zeigt vor allem, welcher Einstieg zu welcher Nutzung passt.
+## Zentrale Gegenüberstellung
 
-| Fähigkeit | Desktop-App | CLI | IDE | Cloud |
+| Einstieg | Arbeitsort | Stärkster Kontext | Wichtigste Review-Methode | Typische Aufgaben |
 |---|---|---|---|---|
-| Visuales Review für Einsteiger | stark | mittel | mittel | mittel |
-| Terminal-/Skriptintegration | mittel | stark | mittel | mittel |
-| Editor-Inline-Kontext | mittel | schwach | stark | mittel |
-| Remote standardisierte Umgebung | je Integration | je Nutzung | je Nutzung | stark |
-| Parallele Aufgaben / Arbeitsbaum | üblich | je Workflow | je Workflow | je Produkt |
-| Skills / MCP / Plugin | üblich | üblich | je Version | je Produkt |
-| Freigabe unterwegs nachverfolgen | je Notification/Remote | schwach | schwach | je Produkt |
+| ChatGPT-Desktop-App | Lokale Projekte, Chats und Dateien | Geöffnete Ordner, Projekte und Aufgaben | Aufgabenzusammenfassung, Dateien, Diff und Genehmigungsoberfläche | Koordination mehrerer Projekte, Langzeitaufgaben, Datei- und Computeraktionen |
+| Codex CLI | Aktuelles Terminal und lokales Repository | Arbeitsverzeichnis, Befehlsausgabe und Git-Zustand | Befehle, Diffs und Ergebniszusammenfassung im Terminal | Untersuchung, Änderungen, Tests, Skripte und CI |
+| IDE-Integration | Aktueller Editor | Geöffnete Dateien, Auswahl und letzter Dialog | Änderungszusammenfassung und Diff neben dem Code | Lokale Erklärungen, kleine Änderungen und Review im Editor |
+| Codex Cloud | Isolierte Remote-Umgebung | Verbundenes Repository und Umgebungskonfiguration | Cloud-Protokolle, Zusammenfassung, Diff und PR | Langzeitaufgaben im Hintergrund, parallele Versuche und Remote-Zusammenarbeit |
 
-Auswahlhilfe: [Codex-Client wählen](/guide/getting-started/choose-your-codex-client/)
+## Installation und Identität
 
-## Häufige Missverständnisse
+| Element | Desktop-App | CLI | IDE | Cloud |
+|---|---|---|---|---|
+| Einstieg | Desktop-Anwendung für macOS / Windows / Linux | Lokale Kommandozeile | VS-Code-kompatible Erweiterung; eigene Integrationen für Xcode und JetBrains | Web und unterstützte Remote-Integrationen |
+| ChatGPT-Anmeldung | Unterstützt | Unterstützt | Unterstützt | Erforderlich |
+| Lokale Anmeldung mit API-Key | Unterstützt | Unterstützt | Unterstützt | Nicht unterstützt |
+| Wichtigste Abrechnungsbeziehung | ChatGPT-Tarif oder API-Nutzung | ChatGPT-Tarif oder API-Nutzung | ChatGPT-Tarif oder API-Nutzung | ChatGPT-Tarif und Workspace-Berechtigungen |
 
-### 1. Mehr Features ≠ besser zum Einstieg
+Lokale Arbeit mit API-Key und Arbeit mit ChatGPT-Anmeldung unterliegen unterschiedlichen Abrechnungs-, Verwaltungs- und Datenverarbeitungsrichtlinien. Ein API-Key stellt außerdem keine Funktionen bereit, die einen ChatGPT-Workspace oder Cloud erfordern. Aktuelle Tarife und Kontingente stehen immer auf den offiziellen Live-Seiten.
 
-Zuerst die benötigte Nutzungsart — nicht Feature-Anzahl.
+## Häufige Kombinationen
 
-### 2. Nicht alle vier Einstiege sofort lernen
+### Persönlicher Entwicklungszyklus
 
-Einen nutzbaren Einstieg reicht.
+```text
+Lokales Problem in der IDE bestimmen → genauen Test in der CLI ausführen → Langzeitaufgabe und Diff in der Desktop-App prüfen
+```
 
-### 3. Nach Ihrer Arbeitsweise wählen
+### Remote-Zyklus im Team
 
-- Am intuitivsten, gut zu reviewen → Desktop-App
-- Terminal-Gewohnheit → CLI
-- Meist im Editor → IDE
-- Remote-Repos, lange Aufgaben → Cloud
+```text
+Über GitHub / GitLab / Linear / Slack starten → isoliert in Cloud ausführen → Zusammenfassung und Diff menschlich prüfen → PR erstellen
+```
 
-### 4. Falscher Einstieg ist korrigierbar
+### Lernzyklus für Einsteiger
 
-Nicht überbewerten.  
-Erst starten, später wechseln.
+```text
+Übungsverzeichnis in der Desktop-App öffnen → kleine Aufgabe stellen → Berechtigungsanfrage prüfen → Diff ansehen → Verifikation ausführen
+```
 
-## Wenn unsicher
+## Die Matrix ersetzt keine aktuelle Prüfung
 
-1. Wo arbeiten Sie meist: Desktop, Terminal, Editor oder Browser?
-2. Wichtiger: klar sehen, oder Skripte/Code/Remote?
-3. Erst lernen oder schon Dauerworkflow?
+Plugins, Scheduled tasks, Benachrichtigungen, Modelle und Organisationsrichtlinien ändern sich schnell. Prüfe bei folgenden Fragen die aktuelle Client-Oberfläche und offizielle Dokumentation:
 
-Häufiger Weg:
+- Wird eine bestimmte Funktion für das aktuelle Konto angezeigt?
+- Unterliegt die Funktion Einschränkungen durch Tarif, Region oder Administratorrichtlinie?
+- Wie heißen Befehle, Tastenkombinationen oder UI-Elemente in der aktuellen Version?
+- Unterstützt eine API-Key-Anmeldung eine bestimmte ChatGPT- oder Cloud-Funktion?
 
-- Zuerst Desktop-App für den Rhythmus
-- Dann CLI oder IDE nach Gewohnheit
-- Cloud bei Remote-Langaufgaben
-
-## Schnellwahl
-
-| Aktueller Bedarf | Zuerst eher |
-|---|---|
-| Klar sehen, was es tut | Desktop-App |
-| Terminal und Skripte gewohnt | CLI |
-| Meiste Zeit Code schreiben | IDE |
-| Remote laufen, standardisierter | Cloud |
-
-Nach Szenario wählen ist oft zuverlässiger als Feature-Zählen.
+Die Auswahlregel bleibt einfach: **Lokaler Code in der IDE, vollständiger Terminalzyklus in der CLI, Koordination lokaler Aufgaben in der Desktop-App und isolierte Remote-Ausführung in Cloud.**
 
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI / IDE / Cloud  
-**Prüfhinweis:** Kern ist eine Stärken-/Eignungstabelle; parallele Aufgaben, Arbeitsbaum, Skills/MCP/Plugin, mobiles Follow-up ändern sich schnell und fehlen starke offizielle Einzelbelege — vor konservativerer Fassung nicht `verified`.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App / CLI / IDE / Cloud
+
+**Prüfgrundlage:** Mit den aktuellen offiziellen Seiten zu App, CLI, IDE, Cloud, Authentication und Pricing abgeglichen. Die Matrix enthält nur eindeutig bestätigte Angaben zu Arbeitsort, Kontext, Review und Anmeldegrenzen und bewertet veränderliche Funktionen nicht mehr spekulativ als stark, mittel oder schwach.
+
+**Zuletzt geprüft:** 2026-08-26

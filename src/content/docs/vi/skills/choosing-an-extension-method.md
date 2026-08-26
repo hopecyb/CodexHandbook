@@ -3,102 +3,148 @@ title: Cách chọn phương thức mở rộng
 description: Cây quyết định từ Prompt đến Automations — tránh"dùng cho có".
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 461cac4
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Cơ chế mở rộng càng nhiều, chọn sai càng tốn. Trang này giúp bạn, trước khi cài Plugin hoặc viết MCP, quyết xem có thật sự cần không.
+The common mistake is selecting a technology name before identifying the problem. Ask first: **what must persist, or what should happen automatically?**
 
-Những tên dễ lẫn nhất:
+The frequently confused names are:
 
-- Prompt
+- Prompts
 - AGENTS.md
-- Skill
+- Skills
 - MCP
-- Plugin
-- Automation
+- Plugins
+- Scheduled tasks
 
-Cùng là"mở rộng Codex", đôi khi một câu Prompt là đủ, đôi khi mới cần cơ chế nặng hơn.
+Sometimes a prompt is enough; heavier mechanisms are conditional.
 
-## Cây quyết định
+## Decision diagram
 
-```text
-Tác vụ sẽ lặp ≥3 lần?
-├─ Không → dùng tốt Prompt + @ tham chiếu là đủ
-└─ Có → cần quy tắc bền vững?
-    ├─ Có → viết vào AGENTS.md
-    └─ Không → quy trình cố định và mô tả được?
-        ├─ Có → làm Skill
-        └─ Không → cần đọc hệ thống ngoài?
-            ├─ Có → đánh giá MCP (ưu tiên chỉ đọc)
-            └─ Không → cần chạy không người trực?
-                ├─ Có → Automations + cổng kiểm soát thủ công
-                └─ Không → giữ Skill + kích hoạt thủ công
-```
+![Codex extension-method selection diagram](/diagrams/extension-selection-map-vi.svg)
 
-Nhóm cần phân phối thống nhất nhiều Skill + MCP? Ở cuối các nhánh trên, cân nhắc **Plugin**.
+This is not an exclusive tree. A mature workflow may combine `AGENTS.md`, a Skill, and MCP; the diagram prevents assigning the wrong responsibility.
 
-## Đối chiếu kịch bản
+## Seven questions
 
-| Kịch bản | Tổ hợp khuyến nghị |
+### 1. Only this task?
+
+Use a prompt. State goal, input, scope, acceptance, and permissions.
+
+### 2. Every run in this repository?
+
+Use `AGENTS.md` for tests, style, prohibited directories, and install rules. Do not persist one-off requirements.
+
+### 3. Stable steps and output for a task class?
+
+Create a Skill with reusable instructions, templates, references, assets, or scripts. Keep experimenting in prompts until success is stable.
+
+### 4. External data or actions?
+
+Evaluate MCP or a Connector. List required tools and data, start read-only and least privilege, and avoid a connection when local files or commands suffice.
+
+### 5. Check at a fixed lifecycle point?
+
+Use a Hook for pre-command policy, post-write patch scan, or closing summary. Test timeout, failure, and false positives.
+
+### 6. Distribute a capability bundle?
+
+Use a Plugin for Skills, connectors, MCP, Hooks, and Scheduled templates. Installation does not automatically establish trust.
+
+### 7. Manually stable and needs repetition by time?
+
+Create a Scheduled task only after verifying prompt, Skill, permissions, and output. Inspect early runs and retain human publish/merge gates.
+
+## Scenario mapping
+
+| Scenario | Combination |
 |---|---|
-| Thống nhất quy chuẩn kiểm thử và commit | AGENTS.md |
-| Checklist review trước mỗi lần merge | Skill `pr-review` |
-| Lấy Ngữ cảnh ticket từ Linear | MCP + Prompt Tác vụ |
-| Báo cáo dependency hàng tuần | Automation → mở issue |
-| Quét khóa bí mật trước commit | Hooks (doanh nghiệp) hoặc CI |
-| Newbie một lần cài đủ bộ công cụ | Plugin (qua kiểm tra bảo mật) |
+| Standard tests and commit rules | AGENTS.md |
+| Pre-merge checklist | `pr-review` Skill |
+| Fetch Linear ticket context | MCP plus task prompt |
+| Weekly dependency report | Scheduled task → draft issue |
+| Scan a patch for secrets after writing | Hook or CI; both for high risk |
+| Distribute review flow and GitHub tools | Plugin after permission and Hook review |
+| Weekly dependency-risk report | Verified Skill + Scheduled task + human review |
+| Parallel security, test, maintainability reviews | Read-only subagents, main Agent consolidates |
 
-## Chiều chi phí
+## Cost dimensions
 
-| Cơ chế | Chi phí viết | Chi phí bảo trì | Rủi ro bảo mật |
+| Mechanism | Authoring | Maintenance | Security risk |
 |---|---|---|---|
-| Prompt | Thấp | Thấp | Thấp |
-| AGENTS.md | Trung bình | Trung bình | Thấp |
-| Skill | Trung bình | Trung bình | Thấp–trung bình |
-| MCP | Cao | Cao | Trung bình–cao |
-| Plugin | Thấp (dùng sẵn) / cao (tự làm) | Trung bình | Trung bình–cao |
-| Automations | Cao | Cao | Cao |
+| Prompt | Low | Low | Low |
+| AGENTS.md | Medium | Medium | Low |
+| Skill | Medium | Medium | Low–medium |
+| MCP | High | High | Medium–high |
+| Hook | Medium | Medium–high | Medium–high |
+| Plugin | Low to install / high to build | Medium–high | Medium–high |
+| Scheduled task | Medium | High | High |
 
-## Phản mẫu
+## Anti-patterns
 
-- **Skill phình to**: cài hàng chục Skill, description tranh khớp lẫn nhau
-- **MCP như búa vạn năng**: việc vốn dùng `git` được vẫn cứng nối API
-- **Tự động hóa không nghiệm thu**: hẹn giờ sửa code nhưng không ai xem diff
-- **Làm lại bánh xe**: đã có Connector chính thức vẫn tự dựng MCP
+- **Skill bloat:** dozens of overlapping descriptions.
+- **MCP hammer:** API integration where `git` suffices.
+- **Unaccepted scheduling:** unattended code edits with no evidence, stop, or human review.
+- **Rebuilding official connectors:** unnecessary custom MCP.
+- **Misplaced rule:** one-off requirement in `AGENTS.md`.
+- **Hook overload:** long business logic on every tool call.
 
-## Câu hỏi thường gặp
+## Common questions
 
-### 1. Có phải ngay từ đầu nên cài Plugin, nối MCP?
+### 1. Install Plugins and MCP immediately?
 
-Nhiều vấn đề chỉ cần dùng tốt Prompt, kiểm soát phạm vi và `AGENTS.md` là giải quyết được.
+No. Clear prompts, scope, and `AGENTS.md` solve many tasks.
 
-### 2. Đọc cây quyết định này thế nào?
+### 2. How many repetitions justify a Skill?
 
-Một nguyên tắc là đủ: nhẹ trước, chưa đủ mới nặng thêm.
+No fixed count. Stability, success criteria, and failure cost matter more.
 
-### 3. Lần đầu thường bắt đầu từ loại nào?
+### 3. Where do beginners start?
 
-Phần lớn rơi vào ba loại:
+Usually:
 
-- Prompt
+- Prompts
 - `AGENTS.md`
-- Skill
+- Skills
 
-Thường chưa cần ngay MCP hay tự động hóa không người trực.
+MCP and unattended automation rarely belong at the beginning.
 
-Quan trọng không phải cơ chế cao cấp đến đâu, mà nó có khớp vấn đề hiện tại không.
+Match responsibility, minimize permission, and verify results.
 
-## Đọc thêm
+## Minimal exercise
 
-- [Bản đồ năng lực mở rộng](/skills/capability-map/)
-- [Mẫu Phê duyệt thủ công](/cases/workflows/human-approval-patterns/)
-- [Đóng quy trình thành Skill](/cases/workflows/turn-a-workflow-into-a-skill/)(trang lộ trình)
+For pre-merge diff review:
+
+1. Run a prompt twice and record repeated checks.
+2. Put fixed repository commands and generated-file exclusions in `AGENTS.md`.
+3. Put review steps, severity, and output format in a `pr-review` Skill.
+4. Add MCP/Connector only for GitHub comments or CI state.
+5. Add Hook or Scheduled only for fixed automatic checks.
+6. Build a Plugin only when several teams must install the bundle.
+
+For every added layer, ask: which access was added, how is it verified, and how is it disabled or rolled back?
+
+## Further reading
+
+- [Capability map](/vi/skills/capability-map/)
+- [Human approval patterns](/vi/cases/workflows/human-approval-patterns/)
+- [Turn a workflow into a Skill](/vi/cases/workflows/turn-a-workflow-into-a-skill/)
+
+## Official sources
+
+- [Skills and Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Build Codex Skills](https://learn.chatgpt.com/docs/build-skills)
+- [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp)
+- [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
+- [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
+- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** App / CLI / IDE / Cloud  
-**Ghi chú tái Kiểm chứng:** Cây quyết định trang này chạm ranh giới và phạm vi áp dụng hiện tại của Automations, Plugins, MCP và Connector chính thức; các hình thái sản phẩm vẫn đổi nhanh, tài liệu công khai hiện có chưa đủ để nâng đỡ ổn định toàn trang.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+**Áp dụng cho:** ChatGPT Web / desktop App / Codex CLI / IDE (support differs by mechanism)
+**Căn cứ kiểm chứng:** Compared against OpenAI Skills, Plugins, MCP, Hooks, and Scheduled tasks documentation on 2026-08-25.
+**Kiểm chứng gần nhất:** 2026-08-25

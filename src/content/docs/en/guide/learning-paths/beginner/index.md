@@ -3,9 +3,10 @@ title: Beginner path
 description: A shortest five-step route for first-time Codex users—from clear tasks to finishing a small project.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 When learning Codex for the first time, the blocker is often not one confusing page—it is not knowing where to start.
@@ -14,11 +15,11 @@ This path is the shortest route for newcomers.
 
 ## Recommended order
 
-1. [Talk to Codex](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [Work with files](/guide/learning-paths/beginner/02-work-with-files/)
-3. [Give clear tasks](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [Review results](/guide/learning-paths/beginner/04-review-results/)
-5. [Complete your first small project](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Talk to Codex](/en/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [Work with files](/en/guide/learning-paths/beginner/02-work-with-files/)
+3. [Give clear tasks](/en/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [Review results](/en/guide/learning-paths/beginner/04-review-results/)
+5. [Complete your first small project](/en/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## Who this is for
 

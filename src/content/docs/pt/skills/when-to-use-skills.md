@@ -3,9 +3,10 @@ title: Quando usar Skills
 description: Decidir se uma Tarefa deve virar Skill e como dividir o trabalho com comandos de barra e MCP.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6cdbeae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Quem começa com Skill costuma perguntar: isso realmente vale a pena virar um Skill dedicado?
@@ -79,7 +80,7 @@ Skills assim ficam mais sólidos, porque nascem de repetição real, não de des
 
 Skill serve melhor para fluxos que «se repetem, precisam ser consistentes e você não quer explicar de novo toda vez».
 
-Para escolher o método de extensão, veja [Como escolher o método de extensão](/skills/choosing-an-extension-method/). Para consolidar workflows, veja [Transformar um fluxo em Skill](/cases/workflows/turn-a-workflow-into-a-skill/).
+Para escolher o método de extensão, veja [Como escolher o método de extensão](/pt/skills/choosing-an-extension-method/). Para consolidar workflows, veja [Transformar um fluxo em Skill](/pt/cases/workflows/turn-a-workflow-into-a-skill/).
 ---
 
 **Status:** verified  

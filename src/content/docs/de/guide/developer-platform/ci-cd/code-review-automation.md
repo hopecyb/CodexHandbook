@@ -3,9 +3,10 @@ title: Code-Review-Automatisierung
 description: 'Codex-Review in CI- oder PR-Abläufe einbinden — Prompt, Berechtigungen und menschliche Gates.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ Am besten geeignet für:
 
 Nicht geeignet, um allein zu entscheiden „dieser PR darf gemerged werden“.
 
-Verwandt: [Nicht-interaktiver Modus](/guide/cli/non-interactive-mode/) · [SDK-Überblick](/guide/developer-platform/sdk-overview/)
+Verwandt: [Nicht-interaktiver Modus](/de/guide/cli/non-interactive-mode/) · [SDK-Überblick](/de/guide/developer-platform/sdk-overview/)
 
 ## Empfohlene Architektur
 
@@ -76,7 +77,7 @@ Versioniert unter `prompts/ci-review.md` ablegen.
 | Injection-Schutz | Unbereinigte PR-Beschreibung nicht in den System-Prompt mischen |
 | Secrets | Token in GitHub Secrets speichern |
 
-[Muster für menschliche Freigabe](/cases/workflows/human-approval-patterns/) · [Umgebungsvariablen](/guide/reference/environment-variables/)
+[Muster für menschliche Freigabe](/de/cases/workflows/human-approval-patterns/) · [Umgebungsvariablen](/de/guide/reference/environment-variables/)
 
 ## Qualitätsgates
 
@@ -86,7 +87,7 @@ Versioniert unter `prompts/ci-review.md` ablegen.
 
 ## Verhältnis zu Cloud
 
-Komplexe Repos können in [Cloud](/guide/web-and-cloud/) erst voll testen und dann reviewen; `exec` in CI eignet sich für **leichtes Diff-Review**.
+Komplexe Repos können in [Cloud](/de/guide/web-and-cloud/) erst voll testen und dann reviewen; `exec` in CI eignet sich für **leichtes Diff-Review**.
 
 ## Häufige Fehler
 

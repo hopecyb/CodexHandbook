@@ -3,9 +3,10 @@ title: Webhooks
 description: 'Erläuterungsseite zur ereignisgesteuerten Integration: Webhooks empfangen Benachrichtigungen und ersetzen keine Workflow-Gestaltung.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b718fb3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Das Wort `Webhook` klingt abstrakt.  
@@ -15,7 +16,7 @@ In Codex-Integrationen löst es „ein externes Ereignis ist da — wie starte i
 
 ## Einstieg in diese Gruppe
 
-- [Webhooks-Überblick](/guide/developer-platform/webhooks/overview/)
+- [Webhooks-Überblick](/de/guide/developer-platform/webhooks/overview/)
 
 ## Inhalt dieser Gruppe
 

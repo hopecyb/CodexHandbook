@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-La **Plateforme développeur** est pour ceux qui veulent **industrialiser** Codex dans les pipelines : apps personnalisées, revue par lot, portes de release, portails développeur internes. Pour l'usage quotidien « écrire un prompt pour corriger un bug », commencez par [Premiers pas](/guide/getting-started/).
+La **Plateforme développeur** est pour ceux qui veulent **industrialiser** Codex dans les pipelines : apps personnalisées, revue par lot, portes de release, portails développeur internes. Pour l'usage quotidien « écrire un prompt pour corriger un bug », commencez par [Premiers pas](/fr/guide/getting-started/).
 
 Ce chapitre ne traite pas l'usage quotidien de Codex — il traite le câblage de Codex dans vos propres systèmes.
 
@@ -30,10 +31,10 @@ Il vise des scénarios comme :
 
 | Question du lecteur | Où aller |
 |---|---|
-| Comment exécuter `codex` dans le terminal | [Guide produit CLI](/guide/cli/) |
-| Comment exécuter une revue en CI | [Mode non interactif](/guide/cli/non-interactive-mode/) + CI dans ce chapitre |
-| Comment intégrer un Agent dans votre app | [Vue d'ensemble SDK](/guide/developer-platform/sdk-overview/) |
-| Modèle de permissions et sécurité | [Modèles d'approbation humaine](/cases/workflows/human-approval-patterns/) |
+| Comment exécuter `codex` dans le terminal | [Guide produit CLI](/fr/guide/cli/) |
+| Comment exécuter une revue en CI | [Mode non interactif](/fr/guide/cli/non-interactive-mode/) + CI dans ce chapitre |
+| Comment intégrer un Agent dans votre app | [Vue d'ensemble SDK](/fr/guide/developer-platform/sdk-overview/) |
+| Modèle de permissions et sécurité | [Modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/) |
 
 ## Architecture typique (conceptuelle)
 
@@ -56,10 +57,10 @@ Fournisseur Git / tickets / stockage d'artefacts
 
 | Sujet | Pages |
 |---|---|
-| SDK | [Vue d'ensemble SDK](/guide/developer-platform/sdk-overview/) |
-| Non interactif | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [Scripts et pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Sortie structurée](/guide/developer-platform/non-interactive/structured-output/) · [Codes de sortie et retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [Vue d'ensemble](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [Automatisation de revue de code](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [Vue d'ensemble SDK](/fr/guide/developer-platform/sdk-overview/) |
+| Non interactif | [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/) · [Scripts et pipelines](/fr/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [Sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/) · [Codes de sortie et retries](/fr/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [Vue d'ensemble](/fr/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [Automatisation de revue de code](/fr/guide/developer-platform/ci-cd/code-review-automation/) |
 
 Pour plus sur `codex-sdk/`, `app-server/` et `architecture-patterns/`, voir le [plan du chapitre](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md).
 
@@ -78,7 +79,7 @@ Imaginez :
 
 ### 3. Qu'est-ce qui est le plus utile à lire en premier dans ce chapitre ?
 
-Si vous voulez seulement une vue conceptuelle, commencez par [Vue d'ensemble SDK](/guide/developer-platform/sdk-overview/) et sa relation avec le [mode non interactif](/guide/cli/non-interactive-mode/).
+Si vous voulez seulement une vue conceptuelle, commencez par [Vue d'ensemble SDK](/fr/guide/developer-platform/sdk-overview/) et sa relation avec le [mode non interactif](/fr/guide/cli/non-interactive-mode/).
 
 Le chapitre plateforme développeur traite le câblage de Codex dans les systèmes. Pour votre première utilisation pratique de Codex, lisez d'abord le contenu premiers pas.
 

@@ -3,14 +3,15 @@ title: Hình ảnh và ảnh chụp màn hình
 description: Cung cấp ảnh chụp, bản thiết kế cho Codex và quản lý tệp ảnh trong tác vụ.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Hình ảnh giúp Agent **nhìn thấy** vấn đề giao diện, ý đồ thiết kế hoặc bản phác bảng trắng. Trang này gồm đầu vào (ảnh bạn cung cấp) và quản lý tệp ảnh trong kho; tạo ảnh mới xem [Tạo ảnh](/guide/tools/image-generation/).
+Hình ảnh giúp Agent **nhìn thấy** vấn đề giao diện, ý đồ thiết kế hoặc bản phác bảng trắng. Trang này gồm đầu vào (ảnh bạn cung cấp) và quản lý tệp ảnh trong kho; tạo ảnh mới xem [Tạo ảnh](/vi/guide/tools/image-generation/).
 
 Khi dùng ảnh chụp để giao tác vụ, tốt nhất để nó biết bạn muốn nó nhìn chỗ nào, và vì sao chỗ đó có vấn đề.
 
@@ -29,7 +30,7 @@ Khi dùng ảnh chụp để giao tác vụ, tốt nhất để nó biết bạn
 | Bảng trắng kiến trúc | Ảnh rõ hoặc ảnh xuất + chú giải |
 | Hộp thoại lỗi | Gồm đủ văn bản lỗi, tránh chỉ cắt một góc |
 
-Sâu hơn: [Prompt kèm ảnh](/prompts/prompting-with-images/)
+Sâu hơn: [Prompt kèm ảnh](/vi/prompts/prompting-with-images/)
 
 ## Ảnh thật sự bổ sung gì
 
@@ -102,7 +103,7 @@ Hãy tập trung xem vùng tiêu đề màn đầu và khoảng cách nút.
 
 - Ảnh chụp có thể chứa dữ liệu khách hàng, URL nội bộ, token — che trước
 - Đừng gửi giao diện cấu hình chứa khóa cho tác vụ không đáng tin
-- [Ngữ cảnh nhạy cảm](/guide/context/sensitive-context/)
+- [Ngữ cảnh nhạy cảm](/vi/guide/context/sensitive-context/)
 
 ## Nguồn tham khảo
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -112,9 +113,9 @@ Hãy tập trung xem vùng tiêu đề màn đầu và khoảng cách nút.
 
 Với tác vụ kiểu «làm theo hình»:
 
-1. So sánh cạnh nhau hiện thực với ảnh tham chiếu (hoặc mở trang bằng [Công cụ trình duyệt](/guide/tools/browser/))
+1. So sánh cạnh nhau hiện thực với ảnh tham chiếu (hoặc mở trang bằng [Công cụ trình duyệt](/vi/guide/tools/browser/))
 2. Kiểm responsive và chế độ tối (nếu yêu cầu)
-3. [Kiểm chứng artifact](/guide/quality/verify-artifacts/)
+3. [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/)
 
 ## Lỗi thường gặp
 

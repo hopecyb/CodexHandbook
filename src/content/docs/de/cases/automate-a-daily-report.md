@@ -3,9 +3,10 @@ title: Einen Tagesbericht automatisieren
 description: Wiederkehrende Zusammenfassungsarbeit als wiederverwendbares Skript oder Skill verfestigen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Einen Tagesbericht automatisieren
@@ -26,7 +27,7 @@ translated_at: 2026-07-28
 
 ## 2. Referenzmuster
 
-Das Team hat bereits einen ähnlichen Fall: [Geprüfte Dokumentenlinks zeitgesteuert](/cases/use-cases/team-automation/scheduled-link-check/).
+Das Team hat bereits einen ähnlichen Fall: [Geprüfte Dokumentenlinks zeitgesteuert](/de/cases/use-cases/team-automation/scheduled-link-check/).
 
 ## 3. Empfohlener Prompt
 
@@ -39,8 +40,8 @@ Einschränkungen: Nur lesend auf git; kein push; scripts/generate-daily.sh berei
 
 ## 4. Verstetigen
 
-- [Beispiel Automatisierungs-Skill](/skills/examples/automation-skill/)
-- [Geplante Aufgaben](/skills/automations/scheduled-tasks/)
+- [Beispiel Automatisierungs-Skill](/de/skills/examples/automation-skill/)
+- [Geplante Aufgaben](/de/skills/automations/scheduled-tasks/)
 ---
 
 **Status:** verified  

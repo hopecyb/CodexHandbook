@@ -3,14 +3,15 @@ title: 初心者向け用語
 description: タスク、コンテキスト、サンドボックス、Skill などのよく使う用語を短く定義。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 401719c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 6
 ---
 
-より完全な用語集は [用語集](/guide/reference/glossary/) を参照してください。ここでは最も一般的で、読み進めに影響しやすい用語を先に挙げます。
+より完全な用語集は [用語集](/ja/guide/reference/glossary/) を参照してください。ここでは最も一般的で、読み進めに影響しやすい用語を先に挙げます。
 
 Codex ハンドブックを初めて読むとき、つまずきやすいのは用語の密度です。単語ごとにはわかっても、つながると混乱しがちです。
 
@@ -86,7 +87,7 @@ Codex ハンドブックを初めて読むとき、つまずきやすいのは�
 - Plugin
 - Cloud 環境の詳細
 
-まず [最初のタスク](/guide/getting-started/run-your-first-task/) を完了し、後からこれらの用語を見ると、理解がスムーズになります。
+まず [最初のタスク](/ja/guide/getting-started/run-your-first-task/) を完了し、後からこれらの用語を見ると、理解がスムーズになります。
 
 生詞に出会ったら、ここで確認して読み進めれば十分です。
 

@@ -3,9 +3,10 @@ title: Multi-agent coordination
 description: Parallel exploration, divided execution, and merging results—when to split and how to verify.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: e4d0f69
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Multi-agent setups fit parallel, loosely coupled sub-problems. They do not fit two agents editing the same file with no coordinator.
@@ -18,7 +19,7 @@ Multi-agent setups fit parallel, loosely coupled sub-problems. They do not fit t
 | One runs tests while another writes docs | Shared mutable state with no locking |
 | Explore multiple implementation options | Strong sequential dependency not yet mapped |
 
-Product capabilities: [Parallel agents](/guide/desktop-app/parallel-agents/), [Subagents](/guide/agent-work/subagents/).
+Product capabilities: [Parallel agents](/en/guide/desktop-app/parallel-agents/), [Subagents](/en/guide/agent-work/subagents/).
 
 ## Coordination patterns
 
@@ -36,11 +37,11 @@ You: pick one, then open a single Agent to execute
 Explore Agent → output plan → Execute Agent (new thread with plan summary)
 ```
 
-Use [handoff and resume](/guide/agent-work/handoff-and-resume/) to pass structured summaries—don't paste entire chats.
+Use [handoff and resume](/en/guide/agent-work/handoff-and-resume/) to pass structured summaries—don't paste entire chats.
 
 ### Pattern C: Worktree isolation
 
-Different Agents edit different branches in separate [git worktrees](/guide/desktop-app/worktrees/); humans merge at the end.
+Different Agents edit different branches in separate [git worktrees](/en/guide/desktop-app/worktrees/); humans merge at the end.
 
 ## Coordination rules (recommended in AGENTS.md)
 

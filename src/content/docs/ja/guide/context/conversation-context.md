@@ -3,9 +3,10 @@ title: 会話コンテキスト
 description: 同じスレッド内で情報がどう蓄積し、失効するか。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5c0569d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---

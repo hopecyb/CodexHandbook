@@ -5,9 +5,10 @@ sidebar:
   order: 55
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d842500
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니다. Agent를 이미 쓰는 협업 체인 — 코드 호스팅, 티켓 흐름, 알림 시스템, 내부 플랫폼, 지식 베이스 — 안에 넣는 일입니다.
@@ -101,7 +102,7 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 - CI에서 비대화형 심사
 - review comment를 중심으로 2차 수정
 
-진입점: [GitHub 통합](/guide/integrations/github/)과 [Web와 Cloud](/guide/web-and-cloud/).
+진입점: [GitHub 통합](/ko/guide/integrations/github/)과 [Web와 Cloud](/ko/guide/web-and-cloud/).
 
 ### 티켓과 프로젝트 관리
 
@@ -183,15 +184,15 @@ Codex 통합의 가치는 도구를 하나 더 연결하는 것만이 아닙니�
 
 | 통합 | 페이지 |
 |---|---|
-| GitHub | [GitHub 통합](/guide/integrations/github/) |
+| GitHub | [GitHub 통합](/ko/guide/integrations/github/) |
 | Slack / Linear / Jira 등 | 공식 문서와 MCP/Automation 장 중심; 본 핸드북이 점진적으로 보강 |
 
 ## 다른 장과의 관계
 
-- 확장 커넥터와 패키징 배포: [Plugins 개요](/skills/plugins/plugins-overview/)
-- 외부 데이터 연결: [MCP 개요](/skills/mcp/mcp-overview/)
-- 예약·백그라운드 실행: [예약과 백그라운드 작업](/skills/automations/scheduled-tasks/)
-- 클라우드 저장소 협업: [Web와 Cloud](/guide/web-and-cloud/)
+- 확장 커넥터와 패키징 배포: [Plugins 개요](/ko/skills/plugins/plugins-overview/)
+- 외부 데이터 연결: [MCP 개요](/ko/skills/mcp/mcp-overview/)
+- 예약·백그라운드 실행: [예약과 백그라운드 작업](/ko/skills/automations/scheduled-tasks/)
+- 클라우드 저장소 협업: [Web와 Cloud](/ko/guide/web-and-cloud/)
 
 ## 참고 출처
 - OpenAI Codex 공식 통합·개발자 문서

@@ -1,0 +1,70 @@
+<svg lang="zh-tw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" role="img" aria-labelledby="title desc">
+  <title id="title">Codex 擴充套件方式選擇圖</title>
+  <desc id="desc">從要持久化的物件出發選擇機制：單次任務用提示詞，專案規則用 AGENTS.md，可複用流程用 Skill，外部工具用 MCP，生命週期守護用 Hook，組合分發用 Plugin，按時間重複執行用 Scheduled task。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .lane { fill: #cbd5e1; font-size: 16px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 18px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 14px; }
+    .tiny { fill: #94a3b8; font-size: 12px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1100" height="700" rx="8" fill="#020617"/>
+  <rect width="1100" height="700" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">先問“要持久化什麼”，再選擴充套件機制</text>
+  <text x="44" y="70" class="sub">這些機制可以組合，但職責不同；不要把它們誤解成從低到高的升級階梯。</text>
+
+  <rect x="390" y="96" width="320" height="68" rx="8" fill="#0f172a" stroke="#f8fafc" stroke-width="1.5"/>
+  <text x="550" y="124" text-anchor="middle" class="label">當前問題主要是什麼？</text>
+  <text x="550" y="147" text-anchor="middle" class="note">指令 · 規則 · 流程 · 工具 · 觸發 · 分發</text>
+
+  <path d="M550 164V198H190V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M550 164V198H910V224" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="190" y="254" text-anchor="middle" class="lane">把知識和做法留下來</text>
+  <rect x="70" y="284" width="240" height="76" rx="8" fill="#083344" stroke="#22d3ee"/>
+  <text x="190" y="313" text-anchor="middle" class="label">提示詞</text>
+  <text x="190" y="337" text-anchor="middle" class="note">只服務當前任務</text>
+  <path d="M190 360V392" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <text x="205" y="382" class="tiny">同類任務會重複</text>
+  <rect x="70" y="394" width="240" height="76" rx="8" fill="#064e3b" stroke="#34d399"/>
+  <text x="190" y="423" text-anchor="middle" class="label">Skill</text>
+  <text x="190" y="447" text-anchor="middle" class="note">可複用流程、參考和指令碼</text>
+  <rect x="70" y="500" width="240" height="76" rx="8" fill="#3b0764" stroke="#a78bfa"/>
+  <text x="190" y="529" text-anchor="middle" class="label">AGENTS.md</text>
+  <text x="190" y="553" text-anchor="middle" class="note">每次進入專案都要遵守的規則</text>
+
+  <rect x="400" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="550" y="254" text-anchor="middle" class="lane">給執行過程增加能力</text>
+  <rect x="430" y="284" width="240" height="76" rx="8" fill="#1e1b4b" stroke="#a78bfa"/>
+  <text x="550" y="313" text-anchor="middle" class="label">MCP / Connector</text>
+  <text x="550" y="337" text-anchor="middle" class="note">連線外部工具和資料</text>
+  <rect x="430" y="394" width="240" height="76" rx="8" fill="#4c0519" stroke="#fb7185"/>
+  <text x="550" y="423" text-anchor="middle" class="label">Hook</text>
+  <text x="550" y="447" text-anchor="middle" class="note">在生命週期節點檢查或阻斷</text>
+  <rect x="430" y="500" width="240" height="76" rx="8" fill="#422006" stroke="#fbbf24"/>
+  <text x="550" y="529" text-anchor="middle" class="label">子 Agent</text>
+  <text x="550" y="553" text-anchor="middle" class="note">並行處理獨立子問題</text>
+
+  <rect x="760" y="224" width="300" height="382" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="910" y="254" text-anchor="middle" class="lane">分發或按時間觸發</text>
+  <rect x="790" y="304" width="240" height="90" rx="8" fill="#3f1d0b" stroke="#fb923c"/>
+  <text x="910" y="333" text-anchor="middle" class="label">Plugin</text>
+  <text x="910" y="357" text-anchor="middle" class="note">打包 Skills、聯結器與 MCP</text>
+  <text x="910" y="378" text-anchor="middle" class="tiny">也可包含 Hooks 與任務模板</text>
+  <rect x="790" y="444" width="240" height="90" rx="8" fill="#3f0713" stroke="#fb7185"/>
+  <text x="910" y="473" text-anchor="middle" class="label">Scheduled task</text>
+  <text x="910" y="497" text-anchor="middle" class="note">按時間重複執行</text>
+  <text x="910" y="518" text-anchor="middle" class="tiny">先驗證任務，再交給排程</text>
+
+  <rect x="120" y="626" width="860" height="58" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="651" text-anchor="middle" class="note">常見組合：AGENTS.md 定規則 + Skill 定流程 + MCP 提供工具 + Hook 守邊界</text>
+  <text x="550" y="673" text-anchor="middle" class="tiny">Plugin 負責分發，Scheduled task 負責定時觸發</text>
+</svg>

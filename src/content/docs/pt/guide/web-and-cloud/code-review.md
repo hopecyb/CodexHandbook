@@ -3,149 +3,85 @@ title: Revisão de código Cloud
 description: Rever o Diff, o PR e as sugestões de revisão automática que produz uma Tarefa Cloud.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: a74296a
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-O Cloud ajuda-te a produzir alterações, mas não assume por ti a responsabilidade do merge.
 
-Após uma Tarefa Cloud, a **revisão humana** continua a ser o último portão antes do merge. Esta página explica como rever o que o Agent remoto produz e como encaixá-lo com PR de GitHub, CI e revisão com Skill.
+A completed Cloud task provides a summary and diff. You can follow up, request changes, or create a PR. Completion is not merge approval; project CI, branch protection, and human judgment still apply.
 
-## Conteúdo
+## Two review types
 
-- Em que se diferencia rever um PR Cloud de um local
-- Lista de revisão e pontos de risco habituais
-- Como usar o Codex para ajudar a rever sem ceder a responsabilidade
+| Type | What it examines | Outcome |
+|---|---|---|
+| Cloud result review | Task summary, logs, and diff | Decide whether to follow up or create a PR |
+| GitHub Codex review | PR diff and connected-repository `AGENTS.md` rules | Publish a GitHub code review |
 
-## Porque a revisão Cloud pede um pouco mais de atenção
-
-Porque o Agent remoto cai com mais facilidade em:
-
-- Alterar ficheiros não relacionados «de passagem»
-- Gerar alterações massivas de lockfile ou ficheiros gerados por diferenças de ambiente
-- Parecer que correu testes sem cobrir a lógica-chave
-- Escrever uma descrição de PR muito completa que ainda não verificaste
-
-Assim, a revisão Cloud não é mais leve: há que agarrar os pontos-chave.
-
-## Onde a revisão encaixa no fluxo
+Comment on a GitHub PR:
 
 ```text
-Tarefa Cloud terminada → push de branch → abrir PR
-        ↓
-CI (testes, lint, scan de segurança)
-        ↓
-Revisão humana do Diff + revisão auxiliar opcional do Agent
-        ↓
-Aprovar merge (sujeito a proteção de branches)
+@codex review
 ```
 
-Abrir PR: [Criar Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Codex posts findings as a normal GitHub review. The current official guidance says GitHub comments focus on high-priority P0/P1 issues; when no issue is found, Codex may leave only a reaction. Few comments are not a reason to skip human review.
 
-## Critério mínimo de verificação
+## Review order
 
-Antes de uma revisão completa, confirma pelo menos quatro coisas:
+1. **Scope:** do files, directories, dependencies, and generated artifacts match the task?
+2. **Behavior:** do success, failure, and boundary paths satisfy the requirement?
+3. **Security:** inspect authentication, authorization, input handling, credentials, and outbound network access.
+4. **Evidence:** which tests actually ran, and were failures disclosed?
+5. **Rollback:** can the change be reverted narrowly, or does it mix unrelated refactoring?
 
-1. Se o alcance da alteração se desviou
-2. Se a lógica-chave mudou de verdade segundo o objetivo
-3. Se os testes ou a Verificação se fizeram de verdade
-4. Se entrou informação sensível ou uma alteração perigosa
+Example prompt:
 
-Sem isso, «Tarefa terminada» não equivale a «pode fazer-se merge».
+```text
+Review this PR. Report only findings that could cause wrong behavior, data loss,
+a security issue, or a compatibility regression. Each finding must include
+severity, exact location, trigger condition, and impact. Do not report style
+preferences as defects.
+```
 
-## Lista de revisão humana
+## Repository-specific rules
 
-Alinhada com [Rever Diffs](/guide/quality/review-diffs/); no Cloud presta atenção extra a:
+Add this to the applicable `AGENTS.md`:
 
-| Verificação | Motivo |
-|---|---|
-| Alterou ficheiros não relacionados? | O Agent remoto pode refatorar «de passagem» |
-| lockfile / ficheiros gerados | Diferenças de ambiente → alterações massivas |
-| Origem de dependências novas | Risco de cadeia de fornecimento |
-| Os testes cobrem de verdade a lógica nova? | O Agent pode escrever testes vazios |
-| Alterações de Permissão e autenticação | Elevação de privilégios, token hardcoded |
-| Alinhado com o alcance do issue | Evitar scope creep |
+```md
+## Code Review Rules
 
-## Mal-entendidos frequentes
+### Authentication boundaries
 
-### 1. CI a verde implica que se pode fazer merge?
+- Flag any path that logs access tokens or sends them to non-allowlisted hosts.
+  Safe path: keep tokens in the credential provider and redact diagnostic output.
+```
 
-A CI só diz «este conjunto de verificações automáticas não falhou». Se o requisito se compreendeu bem, se o alcance se desviou e se o risco é aceitável continua a ser juízo humano.
+Root rules apply across the repository; a nested `AGENTS.md` can add service-specific checks. Begin with two or three stable rules that describe a safe path rather than a long list of volatile function names.
 
-### 2. Se a descrição do PR que escreveu é completa, posso olhar menos?
+## Automatic-review boundary
 
-Também não.
+Users with the required GitHub push or admin permission can enable automatic reviews for a repository in Codex Settings. Automatic review is a supplementary gate and should not have automatic merge authority. High-risk repositories still need required reviewers, CI, and branch protection.
 
-A descrição do PR mete-te mais depressa no Contexto; não substitui verificar os factos.
+## Acceptance checklist
 
-### 3. Pedir ao Codex outra revisão equivale a ter revisto?
+- [ ] A person reviewed the main logic diff.
+- [ ] P0/P1 findings are fixed or the risk is accepted in writing.
+- [ ] CI passes and any rerun is explained.
+- [ ] No Secrets, unintended generated files, or unrelated lockfile changes.
+- [ ] Task, PR description, and actual diff agree.
 
-A revisão auxiliar é útil, mas a responsabilidade final continua a ser humana.
+## Official sources
 
-## Usar o Codex para ajudar a rever (sem substituir a pessoa)
+- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
+- [Cross-client code review](https://learn.chatgpt.com/docs/code-review)
 
-Aceitável:
-
-- Correr o Skill `$pr-review` em local ou Cloud sobre o PR novo (ver [Criar o teu primeiro Skill](/skills/create-your-first-skill/))
-- Pedir opiniões em três classes: «bloqueante / sugestão / nit»
-- **Tu** confirmas um a um os bloqueantes
-
-Não aceitável:
-
-- Fazer merge só porque o Agent «diz que não há problema» sem ler o Diff
-- Deixar que o Agent aprove sozinho um branch protegido
-
-Ver [Verificação e revisão humana](/guide/foundations/verification-and-human-review/)
-
-## Ordem sugerida
-
-Podes olhar nesta ordem:
-
-1. Título e descrição do PR; confirmar o objetivo
-2. Diff da lógica principal
-3. Testes, ficheiros gerados, configuração
-4. Comentários automáticos e sugestões complementares
-
-Assim evitas afogar-te de entrada em detalhes.
-
-## Comentários de review que impulsam a revisão
-
-Quando o PR recebe comentários de review:
-
-1. Abre uma Tarefa Cloud ou local nova: «trata só estes comentários de review; não amplies o alcance»
-2. Anexa ligações ou números de comentário
-3. Faz push de um commit novo ao mesmo PR
-4. Volta a correr CI + olha a olho o delta
-
-Lado GitHub: [Integração com GitHub](/guide/integrations/github/)
-
-## Combinar com Automations
-
-- Ao abrir o PR, correr automaticamente o Skill de revisão (só comentar, não merge)
-- Detalhe em [Tarefas agendadas e disparadas](/skills/automations/scheduled-tasks/)
-
-## Erros frequentes
-
-- Confiar no «isolamento» do Ambiente Cloud e saltar a revisão de segurança
-- Fazer merge de um Diff enorme porque «a CI está verde»
-- Colar em comentários de review logs de produção sem desensibilizar
-- Tomar «não encontrei problemas» por «de verdade não há problemas»
-
-## Lista de aceitação
-
-- [ ] CI toda verde e compreendes o histórico de retries falhados
-- [ ] Pelo menos uma pessoa leu o Diff da lógica principal
-- [ ] Alinhado com o alcance do issue/descrição da Tarefa
-- [ ] Sem Secrets no repo
-
-## Fontes de referência
-- [Padrões de Aprovação humana](/cases/workflows/human-approval-patterns/)
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** Cloud / GitHub  
-**Nota de revisão:** O princípio de que a entrega Cloud continua a precisar de revisão humana é correto, mas esta página escreve de forma bastante concreta o PR Cloud, a abertura automática, o ritmo de revisão remota e as notificações; essas formas de integração Cloud/GitHub mudam depressa e há que reescrevê-las segundo o fluxo oficial mais recente.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud, GitHub
+
+**Last verified:** 2026-08-26

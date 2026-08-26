@@ -3,9 +3,10 @@ title: Model và suy luận
 description: Các yếu tố cần cân nhắc khi chọn model và cường độ suy luận.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 001ea32
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 90
 ---

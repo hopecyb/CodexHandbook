@@ -3,9 +3,10 @@ title: Ứng dụng Desktop
 description: Cài đặt, giao diện và quy trình làm việc hàng ngày của ứng dụng Desktop.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a3f2555
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,18 +75,18 @@ Cách này thường nhẹ nhàng hơn là lao vào nghiên cứu mọi chức n
 
 ## Chương này
 
-- [Cài đặt và giao diện](/guide/desktop-app/installation-and-interface/)
-- [Dự án và tác vụ](/guide/desktop-app/projects-and-tasks/)
-- [Agent song song](/guide/desktop-app/parallel-agents/)
-- [Cây làm việc](/guide/desktop-app/worktrees/)
-- [Diff, bình luận và rà soát](/guide/desktop-app/diffs-comments-and-review/)
-- [Terminal tích hợp](/guide/desktop-app/integrated-terminal/)
-- [Tác vụ local và Cloud](/guide/desktop-app/local-and-cloud-tasks/)
-- [Thông báo](/guide/desktop-app/notifications/)
-- [Cài đặt](/guide/desktop-app/settings/)
-- [Xử lý sự cố](/guide/desktop-app/troubleshooting/)
+- [Cài đặt và giao diện](/vi/guide/desktop-app/installation-and-interface/)
+- [Dự án và tác vụ](/vi/guide/desktop-app/projects-and-tasks/)
+- [Agent song song](/vi/guide/desktop-app/parallel-agents/)
+- [Cây làm việc](/vi/guide/desktop-app/worktrees/)
+- [Diff, bình luận và rà soát](/vi/guide/desktop-app/diffs-comments-and-review/)
+- [Terminal tích hợp](/vi/guide/desktop-app/integrated-terminal/)
+- [Tác vụ local và Cloud](/vi/guide/desktop-app/local-and-cloud-tasks/)
+- [Thông báo](/vi/guide/desktop-app/notifications/)
+- [Cài đặt](/vi/guide/desktop-app/settings/)
+- [Xử lý sự cố](/vi/guide/desktop-app/troubleshooting/)
 
-Lối vào bắt đầu: [Cài đặt ứng dụng Desktop](/guide/getting-started/install-desktop-app/)
+Lối vào bắt đầu: [Cài đặt ứng dụng Desktop](/vi/guide/getting-started/install-desktop-app/)
 
 Ứng dụng Desktop rất phù hợp để chạy thông cộng tác cơ bản với Codex trước, rồi mới bổ sung dòng lệnh và quy trình nâng cao hơn.
 

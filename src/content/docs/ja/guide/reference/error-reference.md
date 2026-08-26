@@ -3,9 +3,10 @@ title: エラーとメッセージリファレンス
 description: 常见エラー、終了コード、失敗原因の学習向け索引——公式サポートの代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 24f3f25
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -22,14 +23,14 @@ sidebar:
 
 原因を直感で当てるより速いことが多いです。
 
-全体索引：[トラブルシュート](/guide/reference/troubleshooting/)
+全体索引：[トラブルシュート](/ja/guide/reference/troubleshooting/)
 
 ## 認証とアカウント
 
 | 表示または現象 | 可能性 | 次の一手 |
 |---|---|---|
-| Authentication failed / 401 | token 期限切れ、未ログイン | [ログインと認証](/guide/getting-started/sign-in-and-authentication/) |
-| Organization policy | 組織が機能またはモデルを無効化 | 管理者に連絡。[アカウントとアクセス](/guide/getting-started/account-plans-and-access/) |
+| Authentication failed / 401 | token 期限切れ、未ログイン | [ログインと認証](/ja/guide/getting-started/sign-in-and-authentication/) |
+| Organization policy | 組織が機能またはモデルを無効化 | 管理者に連絡。[アカウントとアクセス](/ja/guide/getting-started/account-plans-and-access/) |
 | Rate limit / 429 | リクエスト過多またはクォータ | 後で再試行。プラン使用量を確認 |
 
 ## よくある誤解
@@ -60,9 +61,9 @@ sidebar:
 
 | 表示または現象 | 可能性 | 次の一手 |
 |---|---|---|
-| command not found: codex | 未インストールまたは PATH | [CLI インストール](/guide/getting-started/install-cli/) |
-| Config parse error | TOML/YAML 構文 | [CLI 設定](/guide/cli/configuration/) |
-| Permission denied (write) | サンドボックスまたは承認拒否 | [承認とサンドボックス](/guide/cli/approvals-and-sandbox/) |
+| command not found: codex | 未インストールまたは PATH | [CLI インストール](/ja/guide/getting-started/install-cli/) |
+| Config parse error | TOML/YAML 構文 | [CLI 設定](/ja/guide/cli/configuration/) |
+| Permission denied (write) | サンドボックスまたは承認拒否 | [承認とサンドボックス](/ja/guide/cli/approvals-and-sandbox/) |
 | 非ゼロ終了コード（exec） | タスク失敗または完了条件未達 | stderr ログ確認。prompt を絞る |
 
 ## 先に分類
@@ -100,23 +101,23 @@ sidebar:
 | 表示または現象 | 可能性 | 次の一手 |
 |---|---|---|
 | User rejected tool call | あなたまたは方針が操作拒否 | 承認すべきか確認。またはタスク変更 |
-| Sandbox violation | 書き込みパスまたはコマンドが越界 | [サンドボックスとネットワーク](/guide/foundations/sandbox-and-network/) |
-| Network access denied | 外向き通信禁止 | Cloud：[インターネットアクセス](/guide/web-and-cloud/internet-access/) |
+| Sandbox violation | 書き込みパスまたはコマンドが越界 | [サンドボックスとネットワーク](/ja/guide/foundations/sandbox-and-network/) |
+| Network access denied | 外向き通信禁止 | Cloud：[インターネットアクセス](/ja/guide/web-and-cloud/internet-access/) |
 
 ## Cloud と GitHub
 
 | 表示または現象 | 可能性 | 次の一手 |
 |---|---|---|
-| Repository access denied | OAuth scope 不足 | [GitHub 接続](/guide/web-and-cloud/connect-github/) |
-| Clone failed | リポジトリ名、権限、ネットワーク | [Cloud トラブルシュート](/guide/web-and-cloud/troubleshooting/) |
-| Secret not found | 名前誤りまたは scope 誤り | [Secrets と変数](/guide/web-and-cloud/secrets-and-variables/) |
-| Push rejected | ブランチ保護 | [PR 作成](/guide/web-and-cloud/create-pull-requests/) |
+| Repository access denied | OAuth scope 不足 | [GitHub 接続](/ja/guide/web-and-cloud/connect-github/) |
+| Clone failed | リポジトリ名、権限、ネットワーク | [Cloud トラブルシュート](/ja/guide/web-and-cloud/troubleshooting/) |
+| Secret not found | 名前誤りまたは scope 誤り | [Secrets と変数](/ja/guide/web-and-cloud/secrets-and-variables/) |
+| Push rejected | ブランチ保護 | [PR 作成](/ja/guide/web-and-cloud/create-pull-requests/) |
 
 ## MCP と拡張
 
 | 表示または現象 | 可能性 | 次の一手 |
 |---|---|---|
-| MCP server failed to start | コマンドパス、依存不足 | [MCP 接続](/skills/mcp/connect-an-mcp-server/) |
+| MCP server failed to start | コマンドパス、依存不足 | [MCP 接続](/ja/skills/mcp/connect-an-mcp-server/) |
 | Tool timeout | 外部 API 遅延または障害 | 再試行。MCP ログ確認 |
 | Unknown tool | 設定とサーバーバージョン不一致 | セッション再起動。設定更新 |
 
@@ -124,14 +125,14 @@ sidebar:
 
 | 表示または現象 | 可能性 | 次の一手 |
 |---|---|---|
-| Context length exceeded | 会話または @ ファイルが大きすぎ | [圧縮](/guide/context/compaction/) · 範囲縮小 |
-| Model not available | 地域またはプラン非サポート | [モデルと推論](/guide/foundations/models-and-reasoning/) |
+| Context length exceeded | 会話または @ ファイルが大きすぎ | [圧縮](/ja/guide/context/compaction/) · 範囲縮小 |
+| Model not available | 地域またはプラン非サポート | [モデルと推論](/ja/guide/foundations/models-and-reasoning/) |
 
 ## 本ページの使い方
 
 1. **キー文を**クライアント検索または本ハンドブック検索にコピー
 2. 表からトピックページのチェックリストを実行
-3. 解決しない：完全ログを保持。[公式リソース](/guide/reference/official-resources/)
+3. 解決しない：完全ログを保持。[公式リソース](/ja/guide/reference/official-resources/)
 
 ## 報告時に添付すると助かる情報
 

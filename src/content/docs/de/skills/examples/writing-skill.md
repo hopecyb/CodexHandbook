@@ -3,9 +3,10 @@ title: "Beispiel: Schreib-Skill"
 description: Recherche, Gliederung, Entwurf und Feinschliff als wiederholbaren Schreibablauf.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Beispiel: Schreib-Skill
@@ -32,7 +33,7 @@ description: "Schreibt technische Artikel nach Gliederung inkl. Recherche, Entwu
 
 ## Verwandt
 
-- [Artikel schreiben (Fall)](/cases/write-an-article/)
+- [Artikel schreiben (Fall)](/de/cases/write-an-article/)
 ---
 
 **Status:** verified  

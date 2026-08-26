@@ -3,9 +3,10 @@ title: Interaktiver Modus
 description: Im Terminal mit Codex sprechen und Aufgaben ausführen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 794dd7c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,7 +22,7 @@ Nach Start der interaktiven Sitzung:
 3. Bei Aufforderung Werkzeugaufrufe freigeben / ablehnen
 4. Mit `/`-artigen Shortcuts (falls vorhanden) die Sitzung steuern — laut aktueller CLI-Hilfe
 
-Prompt-Methoden gelten weiter: [Prompts](/prompts/)
+Prompt-Methoden gelten weiter: [Prompts](/de/prompts/)
 
 ## Häufige Missverständnisse
 

@@ -3,9 +3,10 @@ title: Monorepo での AGENTS.md
 description: 単一リポジトリ複数パッケージ構造でのプロジェクト指示、スコープ、テストコマンドの例パターン。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b6c73e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -88,7 +89,7 @@ repo-root/
 受け入れ：pnpm --filter web test && pnpm --filter api-client test
 ```
 
-[ファイルとディレクトリコンテキスト](/guide/context/file-and-folder-context/) を参照。
+[ファイルとディレクトリコンテキスト](/ja/guide/context/file-and-folder-context/) を参照。
 
 ## Cloud と CI
 
@@ -98,7 +99,7 @@ Monorepo は Cloud で**ルート未インストール**や filter 誤りで失�
 - 単一パッケージタスクの filter コマンド
 - キャッシュ方針（turborepo/nx 使用時はタスク図を記載）
 
-[Cloud 環境](/guide/web-and-cloud/cloud-environments/)
+[Cloud 環境](/ja/guide/web-and-cloud/cloud-environments/)
 
 ## よくあるミス
 

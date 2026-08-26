@@ -3,9 +3,10 @@ title: "Préférences personnelles"
 description: Configuration utilisateur, modèles par défaut et habitudes UI — sans polluer les conventions d'équipe dans le dépôt.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e447e66
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -15,10 +16,10 @@ Les **préférences personnelles** sont des paramètres sur votre machine qui s'
 ## Contenu
 
 - Ce qui appartient à la couche personnelle versus la couche projet
-- Comment associer avec les [Profils](/guide/customization/configuration/profiles/) pour basculer de scénario
+- Comment associer avec les [Profils](/fr/guide/customization/configuration/profiles/) pour basculer de scénario
 - Comment éviter que des paramètres personnels relaxés fuient dans les dépôts d'équipe
 
-Vue d'ensemble de la priorité : [Personnalisation](/guide/customization/) · [Portée et priorité](/guide/customization/agents-md/scope-and-precedence/)
+Vue d'ensemble de la priorité : [Personnalisation](/fr/guide/customization/) · [Portée et priorité](/fr/guide/customization/agents-md/scope-and-precedence/)
 
 ## Pourquoi séparer cette couche
 
@@ -80,7 +81,7 @@ Les préférences personnelles existent pour que votre propre flux de travail so
 
 ## Et la fonctionnalité Memory
 
-Si le produit offre « mémoire » ou préférences persistantes, voir [Mémoires et contexte persistant](/guide/customization/memories-and-persistent-context/). La mémoire convient aux habitudes stables ; **les contraintes spécifiques au projet devraient encore venir des fichiers du dépôt**.
+Si le produit offre « mémoire » ou préférences persistantes, voir [Mémoires et contexte persistant](/fr/guide/customization/memories-and-persistent-context/). La mémoire convient aux habitudes stables ; **les contraintes spécifiques au projet devraient encore venir des fichiers du dépôt**.
 
 ## Erreurs courantes
 

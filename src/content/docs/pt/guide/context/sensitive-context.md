@@ -3,9 +3,10 @@ title: Contexto sensível
 description: Chaves, privacidade e material que não se partilha.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 909b1ff
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---

@@ -4,7 +4,7 @@ description: Installation, interface, and day-to-day workflows for the desktop A
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: a3f2555
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -15,18 +15,18 @@ The desktop App is the default entry for beginners: visualize projects, tasks, d
 
 ## In this chapter
 
-- [Installation and interface](/guide/desktop-app/installation-and-interface/)
-- [Projects and tasks](/guide/desktop-app/projects-and-tasks/)
-- [Parallel Agents](/guide/desktop-app/parallel-agents/)
-- [Worktrees](/guide/desktop-app/worktrees/)
-- [Diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/)
-- [Integrated terminal](/guide/desktop-app/integrated-terminal/)
-- [Local and Cloud tasks](/guide/desktop-app/local-and-cloud-tasks/)
-- [Notifications](/guide/desktop-app/notifications/)
-- [Settings](/guide/desktop-app/settings/)
-- [Troubleshooting](/guide/desktop-app/troubleshooting/)
+- [Installation and interface](/en/guide/desktop-app/installation-and-interface/)
+- [Projects and tasks](/en/guide/desktop-app/projects-and-tasks/)
+- [Parallel Agents](/en/guide/desktop-app/parallel-agents/)
+- [Worktrees](/en/guide/desktop-app/worktrees/)
+- [Diffs, comments, and review](/en/guide/desktop-app/diffs-comments-and-review/)
+- [Integrated terminal](/en/guide/desktop-app/integrated-terminal/)
+- [Local and Cloud tasks](/en/guide/desktop-app/local-and-cloud-tasks/)
+- [Notifications](/en/guide/desktop-app/notifications/)
+- [Settings](/en/guide/desktop-app/settings/)
+- [Troubleshooting](/en/guide/desktop-app/troubleshooting/)
 
-Getting started: [Install the desktop App](/guide/getting-started/install-desktop-app/)
+Getting started: [Install the desktop App](/en/guide/getting-started/install-desktop-app/)
 
 ---
 

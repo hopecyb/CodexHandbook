@@ -3,50 +3,62 @@ title: Instalar a extensão IDE
 description: Instalar a extensão nos editores suportados.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: fb7ff84
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-Se trabalha sobretudo no editor, esta página cobre, além do local de instalação, estas questões:
 
-- Se me convém começar pela extensão IDE
-- O que deveria ver depois de instalar
-- Por que às vezes o plugin aparece na lista, mas a experiência ainda não parece «utilizável»
+IDE entry points fall into two groups; their installation paths are not interchangeable:
 
-Instalar bem a extensão IDE não é só vê-la na lista: é poder invocá-la normalmente no editor e na área de trabalho certos.
+| Editor | Current entry | How to open |
+|---|---|---|
+| Visual Studio Code, Cursor, Windsurf, VS Code Insiders | Codex extension | Select the Codex icon or run `Codex: Open Codex Sidebar` |
+| Xcode | Xcode coding assistant integration | Start a chat and select the Codex Agent |
+| JetBrains IDEs | JetBrains AI Chat integration | Open AI Chat and select Codex |
 
-## Depois de instalar, confirme pelo menos isto
+See [Supported editors](/pt/guide/ide/supported-editors/) for the complete matrix.
 
-1. A extensão está no editor que está a usar agora
-2. O login ou a autenticação já estão concluídos
-3. A área de trabalho aberta é o projeto que realmente quer operar
-4. A entrada da extensão, o comando ou a barra lateral aparecem normalmente
+## Install and verify in VS Code-family editors
 
-## Mal-entendidos frequentes
+1. Install the Codex extension from the official Marketplace entry.
+2. Open a practice project rather than an empty window.
+3. Select the Codex icon. If it is not visible, run `Codex: Open Codex Sidebar` from the Command Palette.
+4. Authenticate with a ChatGPT account or API key.
+5. Start a chat, attach the current file, and ask a read-only question.
 
-### 1. Clicar em instalar no Marketplace basta para funcionar?
+Minimal acceptance prompt:
 
-Muitas vezes ainda faltam passos:
+```text
+Read only the file that is currently open. Do not edit code.
+Explain its responsibility, inputs, and outputs in three points, citing a symbol
+name for each point.
+```
 
-- Iniciar sessão
-- Recarregar a janela
-- Abrir a área de trabalho correta
+A response that matches the current file and symbols indicates that editor context is arriving correctly. Create a Git checkpoint before a write task.
 
-### 2. A extensão IDE e a CLI são exatamente a mesma coisa?
+## Common failures
 
-As capacidades de base podem coincidir, mas a entrada de uso e a origem do Contexto são diferentes.  
-O IDE depende mais de «que ficheiro e que projeto tem abertos agora».
+- **Sidebar missing:** run `Codex: Open Codex Sidebar` from the Command Palette.
+- **Wrong context:** confirm that the project window, current file, and selection belong to the expected repository.
+- **Repeated sign-in:** CLI and IDE share cached authentication; check the active account and sign in again.
+- **Windows toolchain in WSL:** enable `chatgpt.runCodexInWindowsSubsystemForLinux` only when needed; changing it reloads VS Code.
+- **Different third-party behavior:** verify compatibility with the VS Code extension. Do not copy the Xcode or JetBrains entry point into another editor.
 
-Para julgar se a extensão IDE está mesmo instalada, o essencial é conseguir invocá-la normalmente no editor e na área de trabalho atuais.
+For the longer beginner path, see [Install an IDE integration](/pt/guide/getting-started/install-ide-extension/).
 
-Passos detalhados em [Instalar a extensão IDE](/guide/getting-started/install-ide-extension/). Documentação oficial em [OpenAI Codex](https://developers.openai.com/codex).
+## Official sources
+
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** IDE  
-**Nota de revisão:** A entrada de instalação da extensão IDE, o fluxo de login, os passos de recarregar e a forma da barra lateral / paleta de comandos são informação de produto muito volátil; sem verificação item a item dos passos oficiais atuais, esta página convém marcar-se primeiro como `outdated`.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

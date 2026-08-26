@@ -3,12 +3,13 @@ title: Phục hồi thất bại
 description: Khi tác vụ lệch hướng, test đỏ hoặc ngữ cảnh hết — cách hoàn tác an toàn rồi tiếp tục.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a03b8c5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Phục hồi thất bại** nói về việc sau khi tác vụ lệch hoặc bị ngắt, làm sao giữ hiện trường rồi tiếp tục tiến. Chương này đưa bộ bước **phát hiện → chặn thiệt hại → phục hồi → rút kinh nghiệm** có thể lặp lại; dùng kèm [hoàn tác và phục hồi](/guide/getting-started/undo-and-recover/) cũng như [quản lý tác vụ dài](/cases/workflows/long-running-task-management/).
+**Phục hồi thất bại** nói về việc sau khi tác vụ lệch hoặc bị ngắt, làm sao giữ hiện trường rồi tiếp tục tiến. Chương này đưa bộ bước **phát hiện → chặn thiệt hại → phục hồi → rút kinh nghiệm** có thể lặp lại; dùng kèm [hoàn tác và phục hồi](/vi/guide/getting-started/undo-and-recover/) cũng như [quản lý tác vụ dài](/vi/cases/workflows/long-running-task-management/).
 
 ## Trọng tâm trang này
 
@@ -54,7 +55,7 @@ Phát hiện (test/người/CI)
     → Rút kinh nghiệm đóng gói
 ```
 
-Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/cases/workflows/multi-agent-coordination/): khi thất bại phải rõ tác vụ con nào chịu trách nhiệm hoàn tác.
+Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/vi/cases/workflows/multi-agent-coordination/): khi thất bại phải rõ tác vụ con nào chịu trách nhiệm hoàn tác.
 
 ## Lỗi thường gặp
 
@@ -65,7 +66,7 @@ Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/cases/workflows/mul
 
 ## Ranh giới an toàn
 
-- Bản thân thao tác phục hồi cũng chịu [quy tắc lệnh](/guide/customization/rules/command-rules/)
+- Bản thân thao tác phục hồi cũng chịu [quy tắc lệnh](/vi/guide/customization/rules/command-rules/)
 - Sự cố production: hoàn tác trước rồi phân tích nguyên nhân gốc; không để Agent nối thẳng production sửa dữ liệu
 
 ## Checklist nghiệm thu
@@ -77,9 +78,9 @@ Kịch bản nhiều Agent xem [phối hợp nhiều Agent](/cases/workflows/mul
 
 ## Chương liên quan
 
-- [Chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/)
-- [Bàn giao và tiếp tục](/guide/agent-work/handoff-and-resume/)
-- [Tham chiếu lỗi](/guide/reference/error-reference/)
+- [Chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/)
+- [Bàn giao và tiếp tục](/vi/guide/agent-work/handoff-and-resume/)
+- [Tham chiếu lỗi](/vi/guide/reference/error-reference/)
 
 ---
 

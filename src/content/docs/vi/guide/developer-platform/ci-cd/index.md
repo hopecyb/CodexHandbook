@@ -3,9 +3,10 @@ title: CI/CD
 description: Tích hợp Codex vào quy trình tích hợp liên tục và phát hành — bắt đầu từ tự động hóa rủi ro thấp.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Khi nối Codex vào CI/CD, vấn đề phổ biến nhất thường là:
@@ -16,7 +17,7 @@ Cách làm phổ biến hơn là để nó chỉ đọc, chỉ góp ý, chỉ t�
 
 ## Lối vào nhóm này
 
-- [Tự động hóa review mã](/guide/developer-platform/ci-cd/code-review-automation/)
+- [Tự động hóa review mã](/vi/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Nội dung nhóm
 

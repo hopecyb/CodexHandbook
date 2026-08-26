@@ -8,6 +8,11 @@ trend: stable
 signal: well-calibrated
 tags: [function-calling, tools, api, orchestration, reliability]
 authored_by: ai-assisted
+locale: en
+source_locale: zh-CN
+translation_status: reviewed
+reviewed_at: 2026-08-26
+source_revision: 2624937
 ---
 
 # Function Calling

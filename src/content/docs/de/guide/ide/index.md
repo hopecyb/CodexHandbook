@@ -3,9 +3,10 @@ title: IDE-Erweiterung
 description: Codex im Editor nutzen — Installation, Kontext, lokale und Cloud-Aufgaben, Überprüfung und Einstellungen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 66307a0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 12
 ---
@@ -20,15 +21,15 @@ Sie nimmt geöffnete Dateien und die Auswahl direkt mit — deshalb lassen sich 
 
 | Thema | Seite |
 |---|---|
-| Auswahl | [Unterstützte Editoren](/guide/ide/supported-editors/) |
-| Installation | [Installation](/guide/ide/installation/) |
-| Kontext | [Editor-Kontext](/guide/ide/editor-context/) · [Auswahl und geöffnete Dateien](/guide/ide/selected-code-and-open-files/) |
-| Workflow | [Lokale Aufgaben](/guide/ide/local-task-workflow/) · [Cloud-Aufgaben](/guide/ide/cloud-task-workflow/) |
-| Qualität | [Änderungen prüfen](/guide/ide/reviewing-changes/) |
-| Konfiguration | [Einstellungen](/guide/ide/settings/) |
-| Fehlerbehebung | [Fehlerbehebung](/guide/ide/troubleshooting/) |
+| Auswahl | [Unterstützte Editoren](/de/guide/ide/supported-editors/) |
+| Installation | [Installation](/de/guide/ide/installation/) |
+| Kontext | [Editor-Kontext](/de/guide/ide/editor-context/) · [Auswahl und geöffnete Dateien](/de/guide/ide/selected-code-and-open-files/) |
+| Workflow | [Lokale Aufgaben](/de/guide/ide/local-task-workflow/) · [Cloud-Aufgaben](/de/guide/ide/cloud-task-workflow/) |
+| Qualität | [Änderungen prüfen](/de/guide/ide/reviewing-changes/) |
+| Konfiguration | [Einstellungen](/de/guide/ide/settings/) |
+| Fehlerbehebung | [Fehlerbehebung](/de/guide/ide/troubleshooting/) |
 
-Schnellstart: [IDE-Erweiterung installieren](/guide/getting-started/install-ide-extension/) · [Client wählen](/guide/getting-started/choose-your-codex-client/)
+Schnellstart: [IDE-Erweiterung installieren](/de/guide/getting-started/install-ide-extension/) · [Client wählen](/de/guide/getting-started/choose-your-codex-client/)
 
 ## Diese Punkte zuerst beachten
 

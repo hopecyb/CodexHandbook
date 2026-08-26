@@ -3,9 +3,10 @@ title: Erstes kleines Projekt abschließen
 description: Die Einstiegsschritte zu einer vollständigen Lieferung verbinden.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f5de354
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -22,8 +23,8 @@ Kein „Hausaufgaben-Dokument“ — die vorherigen Schritte zu einem eigenstän
 
 ## Danach
 
-- [Fähigkeitskarte](/guide/start-here/codex-capability-map/) wiederholen
-- Vertiefen: [Desktop-App](/guide/desktop-app/) oder [Prompts](/prompts/)
+- [Fähigkeitskarte](/de/guide/start-here/codex-capability-map/) wiederholen
+- Vertiefen: [Desktop-App](/de/guide/desktop-app/) oder [Prompts](/de/prompts/)
 
 ## Übungsfokus
 

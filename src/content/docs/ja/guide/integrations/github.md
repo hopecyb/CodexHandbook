@@ -3,9 +3,10 @@ title: GitHub 連携
 description: リポジトリ接続、PR、Review、CI——GitHub ワークフローにおける Codex の位置づけ。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 5585550
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -24,11 +25,11 @@ GitHub は Codex にとって最も一般的なコード協業面です。Cloud 
 
 | 能力 | 典型的な入口 | ハンドブック位置 |
 |---|---|---|
-| リモートリポジトリ接続 | Cloud 設定 | [GitHub 接続](/guide/web-and-cloud/connect-github/) |
-| クラウドでコード変更し PR 作成 | Cloud タスク | [Pull Request の作成](/guide/web-and-cloud/create-pull-requests/) |
-| ローカルで diff レビュー | デスクトップ App / IDE | [diff とコメント](/guide/desktop-app/diffs-comments-and-review/) |
+| リモートリポジトリ接続 | Cloud 設定 | [GitHub 接続](/ja/guide/web-and-cloud/connect-github/) |
+| クラウドでコード変更し PR 作成 | Cloud タスク | [Pull Request の作成](/ja/guide/web-and-cloud/create-pull-requests/) |
+| ローカルで diff レビュー | デスクトップ App / IDE | [diff とコメント](/ja/guide/desktop-app/diffs-comments-and-review/) |
 | CI で Codex を実行 | GitHub Actions | ロードマップ `08-developer-platform/ci-cd/` |
-| PR 自動コメントレビュー | Actions + exec | [非対話モード](/guide/cli/non-interactive-mode/) |
+| PR 自動コメントレビュー | Actions + exec | [非対話モード](/ja/guide/cli/non-interactive-mode/) |
 
 ## 推奨チーム規約
 

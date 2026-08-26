@@ -3,9 +3,10 @@ title: このハンドブックは誰向けか
 description: 初心者、クリエイター、開発者、チームがこのハンドブックをどう使うかを説明。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 41e8ab8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
@@ -88,7 +89,7 @@ sidebar:
 - 個人の使い方をチームで再利用できるフローに整理したい
 - 開発出身ではないが、AI を日常業務に本当に接続したい
 
-次のステップ：[パスを選ぶ](/guide/start-here/choose-your-path/)。
+次のステップ：[パスを選ぶ](/ja/guide/start-here/choose-your-path/)。
 
 ---
 

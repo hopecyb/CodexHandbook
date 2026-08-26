@@ -3,16 +3,17 @@ title: スラッシュコマンドとショートカット入口
 description: / コマンドと $ Skill 呼び出し——学習向け早見。完全パラメータ手册の代替ではない。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 9debf5c
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
 初見のスラッシュコマンドは、覚えるべき呪文のように感じられます。能動的に点名できるショートカット入口と考えると分かりやすいです。
 
-固定モードや内蔵フローへ素早く入る用途が多いです。スラッシュコマンド（`/command`）と [Skill](/skills/overview/) の `$name` 呼び出しは関連しますが同一ではありません。具体リストは**製品とバージョンで変わる**。使用前はクライアント内 `/` 補完と公式ドキュメントを基準にしてください。
+固定モードや内蔵フローへ素早く入る用途が多いです。スラッシュコマンド（`/command`）と [Skill](/ja/skills/overview/) の `$name` 呼び出しは関連しますが同一ではありません。具体的な一覧は**製品とアクセス権限によって変わり**、デスクトップ App、CLI、IDE、ChatGPT Web でも異なります。使用前は、現在の composer の `/` 補完と公式ドキュメントを基準にしてください。
 
 ## 概念の区別
 
@@ -59,28 +60,24 @@ sidebar:
 
 自然言語で大半のタスクは可能。スラッシュコマンドは慣れてからの高速化と固定入口向きです。
 
-## よくあるカテゴリ（示意）
+## 現在よく使われる入口
 
-以下名称はバージョンで増減。**学習分類のみ**：
+### デスクトップ App / IDE
 
-### セッションとモード
+- `/plan`：複数ステップの計画モードへ切り替える
+- `/review`：未コミットの変更をレビューするか、基準ブランチと比較する
+- `/status`：chat ID、コンテキスト使用量、rate limits を確認する
+- `/mcp`：MCP の接続状態を確認する
+- `/init`：現在のプロジェクト向けに `AGENTS.md` のひな型を生成する
 
-- 計画モード切替、コンテキスト圧縮、ヘルプ表示
-- [計画](/guide/agent-work/planning/) と連携
+### CLI 固有のセッション制御
 
-### レビューと品質
+- `/permissions`：現在のセッションの権限方式を調整する
+- `/agent`：Agent スレッドを確認または切り替える
+- `/model`：現在のモデルを選択する
+- `/status`：現在のセッション設定を確認する
 
-- 現在 diff または PR のレビュー
-- [diff レビュー](/guide/quality/review-diffs/) と組み合わせ
-
-### ワークスペースと Git
-
-- 状態表示、コミットメッセージ生成（コミットするかはあなたが確認）
-- [人工承認パターン](/cases/workflows/human-approval-patterns/) に従う
-
-### 拡張
-
-- Skill のインストールまたは一覧（環境が `skill-installer` 等を提供する場合）
+ChatGPT Web には独自の composer コマンドメニューがあります。デスクトップ App や CLI のコマンドが Web でも同じ名前で使えるとは限りません。
 
 ## 使用時の注意
 
@@ -107,16 +104,19 @@ sidebar:
 
 | | チャット内 `/` | ターミナル `codex …` |
 |---|---|---|
-| コンテキスト | 現在セッションと @ ファイル | `--cwd` でディレクトリ指定 |
+| コンテキスト | 現在のセッションと添付ファイル | `--cd` / `-C` で指定したディレクトリ |
 | 向く用途 | 対話探索 | スクリプト、CI |
 
 スラッシュコマンドはチャット内ショートカット入口。現在環境の実際の提供を見る方が、コマンド名の暗記より有用です。
 
-CLI サブコマンドは [CLI 対話モード](/guide/cli/interactive-mode/) と [非対話モード](/guide/cli/non-interactive-mode/)。完全パラメータ表は [CLI コマンドリファレンス](/guide/reference/commands/)。
+CLI サブコマンドは [CLI 対話モード](/ja/guide/cli/interactive-mode/) と [非対話モード](/ja/guide/cli/non-interactive-mode/)。完全パラメータ表は [CLI コマンドリファレンス](/ja/guide/reference/commands/)。
 
 ---
 
-**状態：** outdated  
-**対象製品：** App / CLI / IDE  
-**検証根拠：** 本ページは `/review`、スラッシュコマンドカテゴリ、`$skill` 呼び出し関係を展開するが、これら入口の利用集合、命名、挙動は製品とバージョンで高速に変化。現行公式の完全コマンドリストと挙動説明が不足するため `outdated` が適切。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** App / CLI / IDE
+
+**検証根拠：** 現在の公式 Desktop App Slash commands と Developer commands を照合し、作業面ごとにコマンドの集合が異なることを明確にしました。掲載したコマンドは現在の公式一覧に基づきますが、最終的な利用可否は composer の補完を基準にしてください。
+
+**最終検証：** 2026-08-26

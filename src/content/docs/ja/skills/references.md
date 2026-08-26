@@ -3,9 +3,10 @@ title: references/ ディレクトリ
 description: Skill 内で長い参考ドキュメントを整理し、段階的開示を実現する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: c595507
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 `references/` は毎回展開不要な長文を置き、主フローを短く保つのに向いています。

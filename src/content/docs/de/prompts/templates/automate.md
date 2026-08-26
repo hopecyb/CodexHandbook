@@ -3,9 +3,10 @@ title: Automatisieren-Vorlage
 description: Wiederholaufgaben und wiederverwendbare Abläufe.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 4f14d7a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Automatisieren-Vorlage
@@ -58,8 +59,8 @@ Wert der Vorlage: langfristig und sicher laufen lassen.
 
 ## Verwandt
 
-- [Prompts für lange Aufgaben](/prompts/long-running-tasks/)
-- [Täglichen Report automatisieren (Fall)](/cases/automate-a-daily-report/)
+- [Prompts für lange Aufgaben](/de/prompts/long-running-tasks/)
+- [Täglichen Report automatisieren (Fall)](/de/cases/automate-a-daily-report/)
 
 ---
 

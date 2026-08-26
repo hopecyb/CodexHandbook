@@ -3,9 +3,10 @@ title: Ruta para creadores (resumen)
 description: Resumen de la ruta relacionada con creación de contenido; los pasos en profundidad se completarán más adelante.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,9 +23,9 @@ Si quieres usar Codex sobre todo para contenido, y no para cambiar código, pued
 
 ## Qué puedes leer ahora
 
-- [Prompts](/prompts/): formular con claridad las Tareas de creación
-- [Verificar artefactos](/guide/quality/verify-artifacts/): revisar textos y páginas
-- [App de escritorio](/guide/desktop-app/): entrada principal para quien no usa terminal
+- [Prompts](/es/prompts/): formular con claridad las Tareas de creación
+- [Verificar artefactos](/es/guide/quality/verify-artifacts/): revisar textos y páginas
+- [App de escritorio](/es/guide/desktop-app/): entrada principal para quien no usa terminal
 
 ## Malentendidos frecuentes
 
@@ -48,11 +49,11 @@ También necesita Verificación; lo que cambia es el foco: estructura, tono, hec
 
 Si quieres empezar ya, lee en este orden:
 
-1. [Fundamentos del Prompt](/prompts/basics/)
-2. [Plantillas de Prompt](/prompts/templates/)
-3. [Presentaciones](/guide/files-and-artifacts/presentations/)
-4. [Imágenes y capturas](/guide/files-and-artifacts/images-and-screenshots/)
-5. [Verificar artefactos](/guide/quality/verify-artifacts/)
+1. [Fundamentos del Prompt](/es/prompts/basics/)
+2. [Plantillas de Prompt](/es/prompts/templates/)
+3. [Presentaciones](/es/guide/files-and-artifacts/presentations/)
+4. [Imágenes y capturas](/es/guide/files-and-artifacts/images-and-screenshots/)
+5. [Verificar artefactos](/es/guide/quality/verify-artifacts/)
 
 Esta ruta prioriza formular bien la demanda y poder comprobar el resultado.
 

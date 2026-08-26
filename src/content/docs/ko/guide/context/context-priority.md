@@ -3,9 +3,10 @@ title: 컨텍스트 우선순위
 description: 지시가 충돌할 때 무엇이 우선인지.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d68a819
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---

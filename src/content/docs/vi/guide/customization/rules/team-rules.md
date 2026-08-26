@@ -3,14 +3,15 @@ title: Chiến lược quy tắc nhóm
 description: Phân tầng quản trị quy tắc lệnh và đường dẫn giữa tổ chức, kho và cá nhân — rà được, rollback được.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-Khi nhóm dùng Codex, **chiến lược quy tắc** trả lời: ràng buộc nào cả công ty thống nhất, ràng buộc nào giao kho duy trì, cá nhân còn nới được không. Chương này là góc quản trị của [Quy tắc lệnh](/guide/customization/rules/command-rules/) và [Mẫu cho phép và từ chối](/guide/customization/rules/allow-and-deny-patterns/).
+Khi nhóm dùng Codex, **chiến lược quy tắc** trả lời: ràng buộc nào cả công ty thống nhất, ràng buộc nào giao kho duy trì, cá nhân còn nới được không. Chương này là góc quản trị của [Quy tắc lệnh](/vi/guide/customization/rules/command-rules/) và [Mẫu cho phép và từ chối](/vi/guide/customization/rules/allow-and-deny-patterns/).
 
 ## Nội dung
 
@@ -61,7 +62,7 @@ L4 Cấu hình cá nhân               → Chỉ máy cục bộ, không đượ
 L5 Prompt tác vụ một lần          → Siết tạm được, nới tạm chịu hạn chế L1
 ```
 
-Đối chiếu nhớ với [Phạm vi AGENTS.md](/guide/customization/agents-md/scope-and-precedence/): **quy tắc nghiêng enforcement thực thi, AGENTS.md nghiêng mô tả hành vi**; hai bên nên nhất quán, đừng mỗi bên viết một bộ yêu cầu mâu thuẫn.
+Đối chiếu nhớ với [Phạm vi AGENTS.md](/vi/guide/customization/agents-md/scope-and-precedence/): **quy tắc nghiêng enforcement thực thi, AGENTS.md nghiêng mô tả hành vi**; hai bên nên nhất quán, đừng mỗi bên viết một bộ yêu cầu mâu thuẫn.
 
 ## Cách làm cơ bản
 
@@ -78,7 +79,7 @@ L5 Prompt tác vụ một lần          → Siết tạm được, nới tạm 
     → Thử chạy tác vụ điển hình trên kho staging → Gộp → Thông báo + cập nhật trang sổ tay
 ```
 
-Thay đổi lớn (ví dụ mở ra mạng) nên cập nhật đồng bộ [Kiểm toán Hooks](/skills/hooks/hooks-overview/) và [acceptable use](/guide/team-enterprise/governance/acceptable-use/).
+Thay đổi lớn (ví dụ mở ra mạng) nên cập nhật đồng bộ [Kiểm toán Hooks](/vi/skills/hooks/hooks-overview/) và [acceptable use](/vi/guide/team-enterprise/governance/acceptable-use/).
 
 ## Khớp với Hooks, CI
 
@@ -113,7 +114,7 @@ Thường tương ứng:
 
 ## Ranh giới an toàn
 
-- Quy tắc không thay [mô hình đe dọa](/guide/team-enterprise/security/threat-model/) và quy trình ứng phó sự cố
+- Quy tắc không thay [mô hình đe dọa](/vi/guide/team-enterprise/security/threat-model/) và quy trình ứng phó sự cố
 - Khi liên quan dữ liệu bị giám sát, quy tắc cần review cùng phân cấp dữ liệu và chiến lược lưu giữ
 - Vòng khẩn cấp phải có **bản ghi kiểm toán** và rà sau sự việc
 

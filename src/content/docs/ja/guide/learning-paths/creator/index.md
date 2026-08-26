@@ -3,9 +3,10 @@ title: クリエイターパス（概要）
 description: コンテンツ作成関連ルートの概要。詳細ステップは今後追加します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 1f053c7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -22,9 +23,9 @@ sidebar:
 
 ## 今読める内容
 
-- [プロンプト](/prompts/)：創作タスクを明確に書く
-- [成果物の検証](/guide/quality/verify-artifacts/)：文稿とページをチェックする
-- [デスクトップ App](/guide/desktop-app/)：非ターミナルユーザー向けの主な入口
+- [プロンプト](/ja/prompts/)：創作タスクを明確に書く
+- [成果物の検証](/ja/guide/quality/verify-artifacts/)：文稿とページをチェックする
+- [デスクトップ App](/ja/guide/desktop-app/)：非ターミナルユーザー向けの主な入口
 
 ## よくある誤解
 
@@ -48,11 +49,11 @@ sidebar:
 
 今すぐ始めたい場合は、次の順序で読めます。
 
-1. [プロンプトの基礎](/prompts/basics/)
-2. [プロンプトテンプレート](/prompts/templates/)
-3. [プレゼンテーション](/guide/files-and-artifacts/presentations/)
-4. [画像とスクリーンショット](/guide/files-and-artifacts/images-and-screenshots/)
-5. [成果物の検証](/guide/quality/verify-artifacts/)
+1. [プロンプトの基礎](/ja/prompts/basics/)
+2. [プロンプトテンプレート](/ja/prompts/templates/)
+3. [プレゼンテーション](/ja/guide/files-and-artifacts/presentations/)
+4. [画像とスクリーンショット](/ja/guide/files-and-artifacts/images-and-screenshots/)
+5. [成果物の検証](/ja/guide/quality/verify-artifacts/)
 
 このパスは、要件を明確に伝え、結果も確認できることを重視します。
 

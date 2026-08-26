@@ -3,9 +3,10 @@ title: 이미지 생성
 description: Codex 작업에서 이미지를 생성·편집 — 프롬프트, 형식, 검증.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 67d0eb7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -28,7 +29,7 @@ Codex는 일부 장면에서 **이미지 생성** 능력을 호출할 수 있습
 | UI 레이아웃 분위기의 빠른 탐색 | 픽셀 단위 재현이 필요한 디자인 납품 |
 | 튜토리얼 예시 아이콘 | 승인되지 않은 실물 초상 |
 
-[이미지 프롬프트](/prompts/prompting-with-images/)와 보완 관계입니다. 그 페이지는 **입력** 이미지, 이 페이지는 **출력** 이미지입니다.
+[이미지 프롬프트](/ko/prompts/prompting-with-images/)와 보완 관계입니다. 그 페이지는 **입력** 이미지, 이 페이지는 **출력** 이미지입니다.
 
 ## 이미지 생성이 잘 맞는 일
 
@@ -48,7 +49,7 @@ Codex는 일부 장면에서 **이미지 생성** 능력을 호출할 수 있습
 
 1. 용도, 화면비, 스타일 키워드를 설명(침해성 스타일명 나열 피함)
 2. 출력 형식(PNG/SVG 지원 시)과 저장 경로를 요구
-3. 생성 후 [산출물 검증](/guide/quality/verify-artifacts/): 파일 열기, 해상도·가독성 점검
+3. 생성 후 [산출물 검증](/ko/guide/quality/verify-artifacts/): 파일 열기, 해상도·가독성 점검
 4. 대외 배포 전 디자인 또는 법무 재검토
 
 ## 흔한 오해
@@ -97,7 +98,7 @@ Codex는 일부 장면에서 **이미지 생성** 능력을 호출할 수 있습
 
 - 큰 그림은 `assets/` 또는 CDN, Git 용량을 평가
 - PR에 생성 prompt와 모델 버전을 적음(내부 감사)
-- [이미지와 스크린샷](/guide/files-and-artifacts/images-and-screenshots/) 참고
+- [이미지와 스크린샷](/ko/guide/files-and-artifacts/images-and-screenshots/) 참고
 
 ## 보안과 컴플라이언스
 

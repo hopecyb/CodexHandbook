@@ -3,9 +3,10 @@ title: "Référence de configuration"
 description: Index conceptuel des clés de configuration Codex utilisateur et projet — chemins et champs selon la doc officielle.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ebf25a6
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Les pages de référence de configuration peuvent submerger avec clés, couches et overrides. Commencez par une question :
@@ -56,7 +57,7 @@ Pas besoin de mémoriser la priorité le premier jour — savoir à quoi sert ch
 - Environnement : « valeurs pour ce run »
 - Gérée : « l'org a déjà décidé »
 
-Intro : [Bases de la config](/guide/customization/configuration/config-basics/) · Focus CLI : [Configuration CLI](/guide/cli/configuration/)
+Intro : [Bases de la config](/fr/guide/customization/configuration/config-basics/) · Focus CLI : [Configuration CLI](/fr/guide/cli/configuration/)
 
 ## Domaines de configuration (conceptuels)
 
@@ -68,7 +69,7 @@ Intro : [Bases de la config](/guide/customization/configuration/config-basics/) 
 | Force de raisonnement | Niveau de complexité si supporté |
 | Échantillonnage (température, etc.) | Généralement défaut ; pin pour scripts |
 
-Contexte : [Modèles et raisonnement](/guide/foundations/models-and-reasoning/)
+Contexte : [Modèles et raisonnement](/fr/guide/foundations/models-and-reasoning/)
 
 ### Bac à sable et réseau
 
@@ -78,7 +79,7 @@ Contexte : [Modèles et raisonnement](/guide/foundations/models-and-reasoning/)
 | Accès réseau | Deny / restreint / allow |
 | Domaines egress | Liste d'autorisation si supporté |
 
-Contexte : [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
+Contexte : [Bac à sable et réseau](/fr/guide/foundations/sandbox-and-network/)
 
 ### Politique d'approbation
 
@@ -88,7 +89,7 @@ Contexte : [Bac à sable et réseau](/guide/foundations/sandbox-and-network/)
 | Avant écriture fichier | Idem |
 | Appels outils MCP | Granularité par serveur ou outil |
 
-Contexte : [Permissions et approbations](/guide/foundations/permissions-and-approvals/) · Matrice : [Matrice des permissions](/guide/reference/permission-matrix/)
+Contexte : [Permissions et approbations](/fr/guide/foundations/permissions-and-approvals/) · Matrice : [Matrice des permissions](/fr/guide/reference/permission-matrix/)
 
 ### Workspace et CLI
 
@@ -105,13 +106,13 @@ Contexte : [Permissions et approbations](/guide/foundations/permissions-and-appr
 | Liste serveurs | Commande, URL, transport |
 | Injection env | Liée au processus MCP — pas dans Git |
 
-[Connecter MCP](/skills/mcp/connect-an-mcp-server/)
+[Connecter MCP](/fr/skills/mcp/connect-an-mcp-server/)
 
 ### Extension IDE / App
 
 Certains paramètres vivent uniquement dans l'UI d'extension ; peuvent partager le backend config utilisateur avec CLI — selon doc produit.
 
-[Paramètres IDE](/guide/ide/settings/) · [Paramètres App de bureau](/guide/desktop-app/settings/)
+[Paramètres IDE](/fr/guide/ide/settings/) · [Paramètres App de bureau](/fr/guide/desktop-app/settings/)
 
 ## Idées reçues courantes
 
@@ -185,7 +186,7 @@ Puis placer dans config, env, `AGENTS.md`, Skill ou prompt actuel.
 
 Plus facile que fixer des listes de clés.
 
-Secrets Cloud : [Secrets et variables d'environnement](/guide/web-and-cloud/secrets-and-variables/)
+Secrets Cloud : [Secrets et variables d'environnement](/fr/guide/web-and-cloud/secrets-and-variables/)
 
 ## Discipline de changement
 

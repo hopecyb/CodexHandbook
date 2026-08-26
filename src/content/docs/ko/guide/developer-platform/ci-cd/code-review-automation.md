@@ -3,9 +3,10 @@ title: 코드 리뷰 자동화
 description: CI 또는 PR 흐름에 Codex 리뷰를 연결합니다——프롬프트, 권한, 사람 게이트입니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d8ddd16
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -30,7 +31,7 @@ Codex를 **Pull Request 파이프라인**에 넣으면, 사람 리뷰 전에 뚜
 
 “이 PR은 반드시 머지해도 된다”를 대신 결정하는 용도로는 맞지 않습니다.
 
-관련：[비대화형 모드](/guide/cli/non-interactive-mode/) · [SDK 개요](/guide/developer-platform/sdk-overview/)
+관련：[비대화형 모드](/ko/guide/cli/non-interactive-mode/) · [SDK 개요](/ko/guide/developer-platform/sdk-overview/)
 
 ## 권장 아키텍처
 
@@ -76,7 +77,7 @@ diff가 너무 크면 <경로 목록>만 리뷰하세요.
 | 주입 방지 | 소독하지 않은 PR 설명을 system prompt에 붙이지 마세요 |
 | 비밀 | GitHub Secrets에 token 저장 |
 
-[사람 승인 패턴](/cases/workflows/human-approval-patterns/) · [환경 변수](/guide/reference/environment-variables/)
+[사람 승인 패턴](/ko/cases/workflows/human-approval-patterns/) · [환경 변수](/ko/guide/reference/environment-variables/)
 
 ## 품질 게이트
 
@@ -86,7 +87,7 @@ diff가 너무 크면 <경로 목록>만 리뷰하세요.
 
 ## Cloud와의 관계
 
-복잡한 저장소는 [Cloud](/guide/web-and-cloud/)에서 전체 테스트를 돌린 뒤 리뷰할 수 있습니다. CI 안에서의 exec는 **가벼운 diff 리뷰**에 맞습니다.
+복잡한 저장소는 [Cloud](/ko/guide/web-and-cloud/)에서 전체 테스트를 돌린 뒤 리뷰할 수 있습니다. CI 안에서의 exec는 **가벼운 diff 리뷰**에 맞습니다.
 
 ## 흔한 실수
 

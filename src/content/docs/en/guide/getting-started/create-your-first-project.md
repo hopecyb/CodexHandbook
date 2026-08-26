@@ -4,7 +4,7 @@ description: Set up a safe, disposable practice directory.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: b461719
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:

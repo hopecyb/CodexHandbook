@@ -3,9 +3,10 @@ title: Perguntas frequentes
 description: Perguntas frequentes ao começar e ao usar.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 3f915e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -21,34 +22,34 @@ Perante situações como:
 - Só queres uma orientação de direção
 
 **P: Que cliente usar ao começar?**  
-R: A App de ambiente de trabalho. Ver [Escolher o cliente](/guide/getting-started/choose-your-codex-client/).
+R: A App de ambiente de trabalho. Ver [Escolher o cliente](/pt/guide/getting-started/choose-your-codex-client/).
 
 **P: Posso saltar a verificação e aceitar todas as alterações?**  
-R: Melhor não. Ver [Verificação e revisão humana](/guide/foundations/verification-and-human-review/).
+R: Melhor não. Ver [Verificação e revisão humana](/pt/guide/foundations/verification-and-human-review/).
 
 **P: Há template padrão de Prompt?**  
-R: Há um enquadramento, não magia. Ver [Anatomia de uma boa Tarefa](/prompts/task-anatomy/).
+R: Há um enquadramento, não magia. Ver [Anatomia de uma boa Tarefa](/pt/prompts/task-anatomy/).
 
 **P: O que faço se o manual chocar com a documentação oficial?**  
 R: Prevalece o oficial: [https://developers.openai.com/codex](https://developers.openai.com/codex), e agradece-se abrir um issue.
 
 **P: Em que se diferenciam AGENTS.md, Skill e MCP?**  
-R: Ver [Mapa de capacidades de extensão](/skills/capability-map/) e [Como escolher o método de extensão](/skills/choosing-an-extension-method/).
+R: Ver [Mapa de capacidades de extensão](/pt/skills/capability-map/) e [Como escolher o método de extensão](/pt/skills/choosing-an-extension-method/).
 
 **P: Há um fluxo de trabalho padrão recomendado?**  
-R: Por omissão [Explorar—planear—executar—verificar](/cases/workflows/explore-plan-execute-verify/).
+R: Por omissão [Explorar—planear—executar—verificar](/pt/cases/workflows/explore-plan-execute-verify/).
 
 **P: Como o Cloud liga o GitHub e abre PRs?**  
-R: Ver [Ligar o GitHub](/guide/web-and-cloud/connect-github/) e [Criar Pull Request](/guide/web-and-cloud/create-pull-requests/).
+R: Ver [Ligar o GitHub](/pt/guide/web-and-cloud/connect-github/) e [Criar Pull Request](/pt/guide/web-and-cloud/create-pull-requests/).
 
 **P: Dá para meter o CLI em CI?**  
-R: Sim; começa pelo [modo não interativo](/guide/cli/non-interactive-mode/) e desenha Aprovação e Permissões.
+R: Sim; começa pelo [modo não interativo](/pt/guide/cli/non-interactive-mode/) e desenha Aprovação e Permissões.
 
 **P: Que slash commands há?**  
-R: Conforme o autocompletar `/` do cliente; explicação de aprendizagem em [Slash commands](/guide/reference/slash-commands/).
+R: Conforme o autocompletar `/` do cliente; explicação de aprendizagem em [Slash commands](/pt/guide/reference/slash-commands/).
 
 **P: E as rotas completas de criador/desenvolvedor/equipa?**  
-R: A rota de entrada já está escrita; casos em profundidade em [Casos de uso](/cases/use-cases/); governação de equipa no roteiro M6 `11-team-enterprise`.
+R: A rota de entrada já está escrita; casos em profundidade em [Casos de uso](/pt/cases/use-cases/); governação de equipa no roteiro M6 `11-team-enterprise`.
 
 ## Mal-entendidos frequentes
 

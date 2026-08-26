@@ -3,9 +3,10 @@ title: Rota dos primeiros 30 minutos
 description: Uma rota de 30 minutos para consultar direto no primeiro uso.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ O objetivo dos primeiros 30 minutos é fechar o primeiro ciclo completo.
 
 | Tempo | O que fazer |
 |---|---|
-| 0–5 min | Ler a [Lista de segurança](/guide/getting-started/beginner-safety-checklist/) |
-| 5–10 min | [Instalar o App desktop](/guide/getting-started/install-desktop-app/) e [entrar](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 min | [Criar o projeto de prática](/guide/getting-started/create-your-first-project/) |
-| 15–25 min | [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/) e verificar |
-| 25–30 min | Abrir [Conversar com o Codex](/guide/learning-paths/beginner/01-talk-to-codex/) e entrar no caminho do iniciante |
+| 0–5 min | Ler a [Lista de segurança](/pt/guide/getting-started/beginner-safety-checklist/) |
+| 5–10 min | [Instalar o App desktop](/pt/guide/getting-started/install-desktop-app/) e [entrar](/pt/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 min | [Criar o projeto de prática](/pt/guide/getting-started/create-your-first-project/) |
+| 15–25 min | [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/) e verificar |
+| 25–30 min | Abrir [Conversar com o Codex](/pt/guide/learning-paths/beginner/01-talk-to-codex/) e entrar no caminho do iniciante |
 
 ## O que estes 30 minutos precisam concluir
 
@@ -94,7 +95,7 @@ Se depois de 30 minutos você já fez estas 4 coisas, esta rodada está concluí
 
 ## Se travar
 
-Vá primeiro ao [índice de solução de problemas](/guide/reference/troubleshooting/). Se for só conceito, volte a [O que você precisa antes de começar](/guide/start-here/prerequisites/) e [Local e Cloud](/guide/foundations/local-vs-cloud/).
+Vá primeiro ao [índice de solução de problemas](/pt/guide/reference/troubleshooting/). Se for só conceito, volte a [O que você precisa antes de começar](/pt/guide/start-here/prerequisites/) e [Local e Cloud](/pt/guide/foundations/local-vs-cloud/).
 
 Nos primeiros 30 minutos, completar com as próprias mãos um ciclo de «dar a Tarefa, ver o resultado, julgar você mesmo» já vale muito.
 

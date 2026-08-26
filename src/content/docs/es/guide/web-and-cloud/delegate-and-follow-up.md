@@ -1,133 +1,78 @@
 ---
-title: Delegar y hacer seguimiento
-description: Entregar Tareas a Cloud desde App, IDE o móvil, y seguir viendo, Aprobando e iterando lejos del ordenador.
+title:  Delegar y hacer seguimiento
+description:  Entregar Tareas a Cloud desde App, IDE o móvil, y seguir viendo, Aprobando e iterando lejos del ordenador.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 681ea7d
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
 
-**Delegar** es entregar la Tarea a Cloud para que se ejecute en un entorno remoto; **hacer seguimiento** es, mientras corre o al terminar, ver el progreso, completar el Contexto, Aprobar operaciones peligrosas y pedir cambios. Es el flujo central de «seguir avanzando lejos del puesto de trabajo».
+Delegation does not mean throwing a problem over the wall. It means giving an independent Cloud chat the goal, constraints, environment, and completion standard. The task can run in the background while you inspect logs, add context, request changes, and finally review the diff.
 
-## Contenido
+## When delegation fits
 
-- Cuándo delegar a Cloud en lugar de correr en local
-- Diferencias al lanzar la delegación desde cada entrada
-- Cómo hacer un seguimiento efectivo y evitar «lo tiro y me olvido»
+- Builds or tests take a long time.
+- Inputs are already in a remote repository.
+- Scripts can recreate the environment.
+- Work can progress independently of your current task.
+- You will review the result instead of merging it directly.
 
-## Cómo va este tipo de flujo
+Keep tasks local when they depend on uncommitted local state, a local service, or continuous human interaction.
 
-Una Tarea Cloud se parece más a esto:
-
-- Primero formular bien la Tarea
-- Empieza a correr en remoto
-- A mitad de camino puede hacer falta una restricción o una Aprobación
-- Al terminar aún hay que mirar el diff, el PR y decidir si continuar
-
-Cloud solo cambia el lugar de ejecución; el seguimiento y el juicio siguen siendo tuyos.
-
-## Para quién
-
-| Escenario | Sugerencia |
-|---|---|
-| Build/pruebas largas | Delega a Cloud; en local sigue con otra cosa |
-| Trayecto / huecos entre reuniones | Ver estado y Aprobar pasos clave en el móvil |
-| Necesitas entorno estandarizado | Cloud + [configuración de entorno](/guide/web-and-cloud/cloud-environments/) |
-| Prueba-error rápida en local | Prioriza [App de escritorio](/guide/desktop-app/) o [IDE](/guide/ide/local-task-workflow/) |
-
-## Cuándo conviene delegar
-
-Si no tienes claro si delegar:
-
-- La Tarea aún se prueba una y otra vez y quieres ir viendo y cambiando: primero local
-- La Tarea tarda mucho, quieres alejarte del ordenador o entregarla a un entorno unificado: entonces Cloud
-
-## Comprobación antes de delegar
-
-- [ ] [GitHub conectado](/guide/web-and-cloud/connect-github/); estrategia de rama objetivo clara
-- [ ] La descripción de la Tarea incluye: objetivo, alcance, prohibiciones, forma de aceptación (véase [Anatomía de una buena Tarea](/prompts/task-anatomy/))
-- [ ] Si hacen falta commits locales sin push, haz push primero o hazlo en local
-- [ ] Secrets / [necesidad de salida a red](/guide/web-and-cloud/internet-access/) listos
-
-## Malentendidos frecuentes
-
-### 1. Tras delegar, ya no hace falta mirar
-
-Eso es lo que más tiempo pierde. Si la dirección se desvía, cuanto más tarde lo detectes, más retrabajo.
-
-### 2. Hacer seguimiento es «empujar el progreso»
-
-El seguimiento de más valor son estas acciones:
-
-- Completar Contexto que faltaba
-- Acotar el alcance
-- Rechazar operaciones peligrosas que no deben pasar
-- Al terminar, pedir más correcciones
-
-### 3. Delegar y local son opuestos
-
-Un flujo real muy habitual es:  
-**explorar en local → delegar la Tarea larga → retomar el cierre en local.**
-
-## Delegación desde cada entrada (concepto)
-
-| Entrada | Peculiaridad |
-|---|---|
-| [App de escritorio · Tareas locales y Cloud](/guide/desktop-app/local-and-cloud-tasks/) | Misma vista de proyecto; cambiar entre local/Cloud |
-| [IDE · Tarea Cloud](/guide/ide/cloud-task-workflow/) | Lleva el código seleccionado y el Contexto de archivos abiertos |
-| Web / móvil | Ver ligero, Aprobar, añadir una línea de seguimiento |
-
-Botones y nombres según el producto actual.
-
-## Ritmo de seguimiento recomendado
+## Complete delegation prompt
 
 ```text
-Lanzar delegación → confirmar que el entorno arrancó → (opcional) mirar logs a mitad
-    → Aprobar en puntos de operación peligrosa → al terminar mirar diff/PR
-    → Si no convence: instrucción adicional o nueva Tarea de seguimiento
+Goal: Fix issue #42, where a sign-in request still holds a connection after 30 seconds.
+Starting point: branch fix/42-timeout in acme/api.
+Scope: packages/auth/** and the corresponding tests.
+Do not: upgrade dependencies, change the public API, or push to main.
+Verification: pnpm test --filter auth; pnpm typecheck.
+Completion: show the root cause, diff, commands, and exit results. Do not merge.
 ```
 
-Orden de acción:  
-**Tras enviarla, mira al menos una vez a mitad de camino y una vez al terminar.**
+After starting, confirm the environment and branch. Follow up only when a premise is missing or the run is drifting:
 
-### Intervención a mitad de camino
+```text
+Additional constraint: Do not change the global HTTP client. Keep the fix in the
+auth adapter. Explain how this changes the current approach before continuing.
+```
 
-- **Completar Contexto**: si faltaba un archivo o una restricción, dilo en un mensaje de seguimiento; evita reabrir la Tarea y perder historial
-- **Acotar alcance**: si se desvía, deja claro «deja de cambiar X; solo haz Y»
-- **Aprobar**: véase [Patrones de Aprobación humana](/cases/workflows/human-approval-patterns/) — mejor un paso más lento que aprobar en lote shells desconocidos
+Use the same chat to correct the same goal because it retains context. Start a new chat for an independent goal. Parallel tasks must not write the same branch or file set.
 
-### Al terminar
+## After the result arrives
 
-- Revisar el diff en el flujo de [Crear PR](/guide/web-and-cloud/create-pull-requests/)
-- Validar con [Revisión de código en Cloud](/guide/web-and-cloud/code-review/) o haciendo checkout local de la rama
-- Si hace falta seguir cambiando: delegar de nuevo sobre el mismo PR, o retomar en local
+1. Read the summary and complete diff.
+2. Compare changed paths with the allowed scope.
+3. Inspect actual output for each verification command.
+4. Ask for explanations of failures or skipped checks.
+5. Give a specific follow-up in the same chat when needed.
+6. Once criteria pass, create a PR and hand control to CI and human review.
 
-## Combinar con notificaciones
+Cloud work can start from Web, IDE, GitHub, GitLab (Beta), Linear, or Slack. The official Cloud page also describes starting and reviewing work from Codex CLI. The repository, environment, network, and review boundaries remain the same across entry points.
 
-Activa [notificaciones de escritorio](/guide/desktop-app/notifications/) o push móvil para evitar que la Tarea se quede colgada sin Aprobación. El equipo debería acordar: en qué franjas debe haber alguien que pueda Aprobar repos relacionados con producción.
+## Follow up on failures
 
-## Errores frecuentes
+Do not say only “try again.” Include evidence and the next decision:
 
-- Texto de delegación demasiado vago; Cloud «entiende» solo y hace un refactor amplio
-- Local a medias sin commit, y se delega a Cloud desde main remoto
-- Nunca mirar a mitad; al terminar descubres que la dirección era incorrecta y se pierde toda la ronda de entorno
-- En el PR solo «LGTM» sin correr pruebas
-- Confundir «ejecución remota» con «responsabilidad remota»
+```text
+The test fails at retry.test.ts:48. Explain whether this change caused it.
+If so, fix only that regression and rerun the auth tests. Otherwise, preserve
+the failure and record it explicitly.
+```
 
-## Lista de aceptación
+## Official sources
 
-- [ ] Puedes lanzar y completar una Tarea Cloud desde al menos una entrada
-- [ ] Puedes añadir una restricción efectiva mientras corre la Tarea
-- [ ] Produce PR o rama, y pasó por revisión humana del diff
+- [Codex Cloud](https://learn.chatgpt.com/docs/cloud)
+- [Long-running work](https://learn.chatgpt.com/docs/long-running-work)
 
-## Fuentes de referencia
-- Documentación de Tareas de OpenAI Codex Cloud
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** Cloud / App / IDE / Mobile  
-**Nota de revisión:** Esta página depende de la forma actual del producto para lanzar o seguir Tareas Cloud desde App, IDE, Web y móvil; esas capacidades multiplataforma han cambiado rápido en los últimos meses; hasta alinear ítem a ítem con la documentación oficial vigente, conviene `outdated`.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud, App, IDE, CLI
+
+**Last verified:** 2026-08-26

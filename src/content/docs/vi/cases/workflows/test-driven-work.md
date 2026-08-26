@@ -3,12 +3,13 @@ title: Làm việc theo test
 description: Định nghĩa hoặc bổ sung test thất bại trước, rồi dẫn dắt triển khai — để thay đổi của Codex nghiệm thu khách quan được.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9fb480f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Làm việc theo test** (TDD hoặc “test trước”) là để test thất bại trước, rồi bằng triển khai tối thiểu đưa nó sang pass. Phù hợp kho đã có nền tảng test, và liên quan trực tiếp các kịch bản như [sửa Bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/).
+**Làm việc theo test** (TDD hoặc “test trước”) là để test thất bại trước, rồi bằng triển khai tối thiểu đưa nó sang pass. Phù hợp kho đã có nền tảng test, và liên quan trực tiếp các kịch bản như [sửa Bug kèm kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/).
 
 ## Trọng tâm trang này
 
@@ -21,7 +22,7 @@ translated_at: 2026-07-28
 - Kho đã có unit/integration test
 - Bug hồi quy, đổi hành vi API, refactor
 
-Kịch bản không phù hợp gồm: nguyên mẫu chưa có nền tảng test, sửa một lần trên site copy thuần. Những tác vụ đó nên dùng [EPXV](/cases/workflows/explore-plan-execute-verify/) để người kiểm chứng.
+Kịch bản không phù hợp gồm: nguyên mẫu chưa có nền tảng test, sửa một lần trên site copy thuần. Những tác vụ đó nên dùng [EPXV](/vi/cases/workflows/explore-plan-execute-verify/) để người kiểm chứng.
 
 ## Cách làm tối thiểu dùng được
 
@@ -47,7 +48,7 @@ Chạy test xác nhận thất bại rồi mới sửa triển khai; mỗi bư�
 | Xanh | Triển khai tối thiểu + test pass |
 | Refactor | Chỉnh code dưới bảo vệ của test (tùy chọn bước riêng) |
 
-Kết hợp [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-fixing/): đọc assertion thất bại và stack trước, rồi mới động triển khai.
+Kết hợp [chẩn đoán trước khi sửa](/vi/cases/workflows/diagnose-before-fixing/): đọc assertion thất bại và stack trước, rồi mới động triển khai.
 
 ## Lỗi thường gặp
 
@@ -58,7 +59,7 @@ Kết hợp [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-
 
 ## Ranh giới an toàn
 
-- Lệnh test phải trong phạm vi [quy tắc lệnh](/guide/customization/rules/command-rules/) cho phép
+- Lệnh test phải trong phạm vi [quy tắc lệnh](/vi/guide/customization/rules/command-rules/) cho phép
 - Integration test nếu chạm API production phải cấm trong đặc tả hoặc đổi sang mock
 
 ## Checklist nghiệm thu
@@ -66,12 +67,12 @@ Kết hợp [chẩn đoán trước khi sửa](/cases/workflows/diagnose-before-
 - [ ] Có bằng chứng test thất bại→pass (log hoặc CI)
 - [ ] Test đầy đủ hoặc phạm vi đã thỏa thuận đều pass
 - [ ] Diff không chứa xóa test không liên quan
-- [ ] Khớp [định nghĩa hoàn thành](/prompts/define-done/)
+- [ ] Khớp [định nghĩa hoàn thành](/vi/prompts/define-done/)
 
 ## Chương liên quan
 
-- [Chạy test](/guide/quality/run-tests/)
-- [Case: sửa Bug kèm kiểm chứng](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [Chạy test](/vi/guide/quality/run-tests/)
+- [Case: sửa Bug kèm kiểm chứng](/vi/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ---
 

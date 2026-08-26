@@ -3,9 +3,10 @@ title: 선택 영역과 열린 파일
 description: 선택한 코드와 열린 파일로 IDE 작업 범위를 정확히 한정합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 032d53f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -28,11 +29,11 @@ IDE 확장은 **작은 범위·고정밀도** 변경에 잘 맞습니다. 코드
 | **열린 파일** | 파일 안 여러 연관 지점을 이해해야 할 때 | `auth.ts` + `auth.test.ts` 열기 |
 | **@ 경로** | 다른 디렉터리·미개방 파일 | `@src/api/client.ts`와 백엔드 타입 맞추기 |
 
-개념 심화: [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)
+개념 심화: [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)
 
 ## 최소 사용법
 
-1. **최소 관련 조각**(보통 10–80행)을 선택하고, 프롬프트에 목표와 [완료 정의](/prompts/define-done/)를 분명히 씁니다
+1. **최소 관련 조각**(보통 10–80행)을 선택하고, 프롬프트에 목표와 [완료 정의](/ko/prompts/define-done/)를 분명히 씁니다
 2. 호출 쪽이 관여하면 상위 파일 1–2개를 더 열거나 @합니다
 3. 「X와 관련 있는 파일만 수정; 수정할 파일을 나열한 뒤 작업」을 요구합니다
 4. IDE diff에서 블록 단위로 수락하고, 전부 수락하지 않습니다
@@ -45,7 +46,7 @@ IDE 확장은 **작은 범위·고정밀도** 변경에 잘 맞습니다. 코드
 Prompt: 모듈 경계, 수정 금지 디렉터리 명시
 ```
 
-큰 리팩터는 [데스크톱 App 작업 트리](/guide/desktop-app/worktrees/)나 [계획 모드](/guide/agent-work/planning/)가 더 낫습니다. IDE는 마무리와 작은 커밋에 더 적합합니다.
+큰 리팩터는 [데스크톱 App 작업 트리](/ko/guide/desktop-app/worktrees/)나 [계획 모드](/ko/guide/agent-work/planning/)가 더 낫습니다. IDE는 마무리와 작은 커밋에 더 적합합니다.
 
 ## 흔한 질문
 
@@ -68,13 +69,13 @@ Prompt: 모듈 경계, 수정 금지 디렉터리 명시
 
 ## 검토와 함께
 
-수락 전에 [diff 검토](/guide/quality/review-diffs/)와 대조하세요.
+수락 전에 [diff 검토](/ko/guide/quality/review-diffs/)와 대조하세요.
 
 - 합의한 파일만 바뀌었는지
 - 선택 영역 밖 예상치 못한 삭제가 있는지
 - 테스트가 새 분기를 커버하는지
 
-제품 측: [IDE 변경 검토](/guide/ide/reviewing-changes/)
+제품 측: [IDE 변경 검토](/ko/guide/ide/reviewing-changes/)
 
 ## 흔한 실수
 
@@ -85,7 +86,7 @@ Prompt: 모듈 경계, 수정 금지 디렉터리 명시
 | diff를 읽지 않고 제안 전부 수락 | 스타일 드리프트나 보안 취약점 |
 
 ## 참고 출처
-- [제약 정의](/prompts/constraints-and-boundaries/)
+- [제약 정의](/ko/prompts/constraints-and-boundaries/)
 ---
 
 **상태:** verified  

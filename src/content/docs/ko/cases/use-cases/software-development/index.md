@@ -3,9 +3,10 @@ title: 소프트웨어 개발
 description: 코드 수정, bug 수정, 검증 보완 사례 진입점입니다. 범위 통제, 테스트, 되돌리기를 중점으로 봅니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 84208b9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 소프트웨어 개발 사례는 주로 이런 문제를 봅니다:
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 이 그룹 진입점
 
-- [검증이 있는 bug 수정](/cases/use-cases/software-development/fix-a-bug-with-verification/)
+- [검증이 있는 bug 수정](/ko/cases/use-cases/software-development/fix-a-bug-with-verification/)
 
 ## 이 그룹의 초점
 

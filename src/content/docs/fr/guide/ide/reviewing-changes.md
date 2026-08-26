@@ -1,96 +1,65 @@
 ---
-title: Revoir les changements dans l'IDE
-description: Lire les diffs, commenter et accepter ou rejeter les suggestions Codex dans l'éditeur.
+title: Réviser les modifications dans l'IDE
+description: Examiner les différences à côté du code source et utiliser le relecteur en lecture seule pour contrôler le worktree.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 1ca9ffe
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 70
 ---
 
-La revue IDE se situe entre complétion inline et revue PR complète : les changements apparaissent souvent directement dans l'éditeur ou une vue diff latérale. Cette page explique comment accepter les résultats en sécurité.
+L'IDE facilite la lecture des résumés à côté du code source et l'examen ciblé d'un diff. Une modification visible dans l'éditeur n'est pas pour autant acceptée. Examinez le diff, exécutez les tests, puis décidez de ce que vous conservez.
 
-Dans l'IDE, ne traitez pas « accepter en un clic » comme défaut même quand un changement paraît prêt.
+## Effectuer une révision locale complète
 
-## Ce qui est couvert
+1. Lisez le résumé du résultat, sans le substituer au diff.
+2. Développez les lignes modifiées et examinez chaque fichier affecté.
+3. Conservez les modifications nécessaires et demandez des corrections pour tout ce qui dépasse le périmètre.
+4. Exécutez `/review` dans la zone de saisie.
+5. Comparez avec une branche de base ou révisez les modifications non validées.
+6. Exécutez les tests du projet et les contrôles statiques dans le terminal de l'IDE.
+7. Confirmez l'état Git final avec les outils Git.
 
-- Schémas courants d'interface de revue IDE
-- Stratégie accepter, rejeter et accepter partiellement
-- Lien avec Git, tests et flux PR
+`/review` n'apparaît que si le projet ouvert est un dépôt Git. Il présente les constats par priorité et ne modifie pas le worktree. Dans l'IDE, vous pouvez choisir :
 
-## Flux de revue
+- **Review against a base branch :** comparer la branche actuelle à la base sélectionnée.
+- **Review uncommitted changes :** examiner les modifications actuelles du worktree.
 
-1. **Périmètre** : quels fichiers ont changé ? suppressions inattendues ou tempêtes de formatage ?
-2. **Logique** : branches, gestion d'erreurs, cas limites
-3. **Sécurité** : secrets, injection, élévation de privilèges, altération de dépendances
-4. **Vérification** : tests projet / lint (terminal IDE ou scripts de Tâche)
-5. **Décision** : accepter, demander des changements, ou annuler et renvoyer la Tâche
+Par défaut, les résultats s'affichent dans la conversation actuelle. Définissez `chatgpt.reviewDelivery` sur `detached` pour ouvrir une conversation de révision distincte.
 
-Méthodologie : [revoir les diffs](/guide/quality/review-diffs/)
+## Prompt avec des critères de révision explicites
 
-## Actions spécifiques IDE (conceptuelles)
-
-| Action | Suggestion |
-|---|---|
-| Diff inline / texte fantôme | Lire bloc par bloc ; éviter tout accepter |
-| Accepter un seul fichier | Commencer par le fichier le moins risqué (ex. tests) |
-| Rejeter et réessayer | Suivi : « modifier seulement X, ne pas toucher Y » |
-| Intégration Git | Après acceptation, encore `git diff` avant commit |
-
-[Diffs, commentaires et revue App de bureau](/guide/desktop-app/diffs-comments-and-review/) est plus complet ; la revue IDE est **légère et haute fréquence**.
-
-## Habitudes de Prompt recommandées
-
-Énoncez dès le départ :
-
-- Globs de chemins autorisés
-- Interdit : `git push`, changer le lockfile (sauf demande explicite)
-- À l'achèvement : lister le résumé des changements ; **ne pas auto-committer**
-
-Voir [modèles d'Approbation humaine](/cases/workflows/human-approval-patterns/)
-
-## Erreurs courantes
-
-- Faire confiance à une icône de test verte sans lancer les tests vous-même
-- Cacher des changements de logique dans un gros diff auto-formaté
-- Pousser immédiatement après acceptation, en sautant PR / protection de branche
+```text
+Révise les modifications actuellement non validées. Donne la priorité aux défauts
+susceptibles d'entraîner un comportement incorrect, une perte de données ou un
+problème de sécurité. Ignore les préférences purement stylistiques. Chaque constat
+doit indiquer un emplacement de fichier, une condition de déclenchement et un impact
+vérifiable. S'il n'y a aucun constat, indique les lacunes restantes dans les tests.
+```
 
 ## Liste de contrôle d'acceptation
 
-- [ ] `git status` correspond aux fichiers attendus
-- [ ] Les tests passent (local ou CI)
-- [ ] Pas de `.env`, jetons ou `console.log` de débogage laissés
-- [ ] Message de commit rédigé ou confirmé par vous
+- [ ] Les fichiers modifiés correspondent au périmètre autorisé de la tâche.
+- [ ] Aucune suppression accidentelle, aucun reformatage de fichier entier et aucun fichier sensible.
+- [ ] Les chemins d'échec et les cas limites sont couverts.
+- [ ] Les tests, le lint et les vérifications de types requis réussissent.
+- [ ] Les constats prioritaires du relecteur sont corrigés ou explicitement acceptés.
+- [ ] `git diff --check` et `git status --short` présentent l'état attendu.
 
-## Questions courantes
+Pour les commentaires ligne par ligne, le staging ou l'annulation par hunk, utilisez [Diffs, commentaires et révision](/fr/guide/desktop-app/diffs-comments-and-review/). Pour la méthode générale, consultez [Réviser les diffs](/fr/guide/quality/review-diffs/).
 
-### 1. Les suggestions inline paraissent petites — sûr d'accepter ?
+## Sources officielles
 
-N'en faites pas une habitude.
+- [Code review](https://learn.chatgpt.com/docs/code-review)
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 
-Beaucoup de problèmes ne concernent pas la taille — ils concernent « assez petit pour que personne n'ait regardé de près ».
-
-### 2. Pas confiant pour revoir la logique — qu'est-ce qui aide le plus ?
-
-Ces trois contrôles ajoutent déjà de la valeur :
-
-- Les bons fichiers ont changé ?
-- Quelque chose de supprimé qui devait rester ?
-- Résidu de débogage ou dérive de style évidents ?
-
-### 3. Accepter signifie terminé ?
-
-Pas encore.
-
-Accepter met seulement les changements dans votre arbre de travail — vous Vérifiez encore et décidez de committer ou non.
-
-« Accepter » dans l'IDE est une étape intermédiaire, pas l'acceptation finale.
-
-## Références
-- [Vérification et revue humaine](/guide/foundations/verification-and-human-review/)
 ---
 
-**Statut :** obsolète  
-**Produits concernés :** IDE  
-**Note de revue :** Cette page dépend de si l'extension IDE offre actuellement diff inline, diff latéral, accepter/rejeter par bloc, etc. ; le matériel public officiel actuel ne peut pas Vérifier chaque capacité d'interface — ne pas marquer `vérifié` jusqu'à docs d'extension plus récentes.  
-**Dernière vérification :** 2026-07-26
+**Statut :** vérifié
+
+**Produits concernés :** IDE
+
+**Dernière vérification :** 2026-08-26

@@ -3,9 +3,10 @@ title: AGENTS.md num monorepo
 description: Padrão de exemplo para colocar instruções de projeto, âmbito e comandos de teste numa estrutura multi-pacote num só repositório.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b6c73e9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -91,7 +92,7 @@ Proibido: alterar diretamente o servidor em apps/api
 Aceitação: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-Ver [Contexto de ficheiros e diretórios](/guide/context/file-and-folder-context/)
+Ver [Contexto de ficheiros e diretórios](/pt/guide/context/file-and-folder-context/)
 
 ## Cloud e CI
 
@@ -101,7 +102,7 @@ Em Cloud, monorepos falham muitas vezes por **não instalar na raiz** ou por fil
 - Comandos filter para Tarefas de um só pacote
 - Estratégia de cache (se usar turborepo/nx, indique o grafo de Tarefas)
 
-[Ambientes Cloud](/guide/web-and-cloud/cloud-environments/)
+[Ambientes Cloud](/pt/guide/web-and-cloud/cloud-environments/)
 
 ## Erros habituais
 

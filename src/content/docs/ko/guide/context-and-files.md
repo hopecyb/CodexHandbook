@@ -5,9 +5,10 @@ sidebar:
   order: 15
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2007fae
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 컨텍스트와 파일
@@ -43,13 +44,13 @@ Codex도 같습니다. 컨텍스트를 못 다루면, 좋은 프롬프트도 노
 
 ## 컨텍스트 관리
 
-- [프로젝트 컨텍스트](/guide/context/project-context/) — `AGENTS.md`, 저장소 약속
-- [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/) — @ 참조와 범위
-- [대화 컨텍스트](/guide/context/conversation-context/) — 스레드와 압축
-- [초점 유지](/guide/context/keep-context-focused/) — 무관 노이즈 피하기
-- [민감 컨텍스트](/guide/context/sensitive-context/) — 비밀키와 프라이버시
+- [프로젝트 컨텍스트](/ko/guide/context/project-context/) — `AGENTS.md`, 저장소 약속
+- [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/) — @ 참조와 범위
+- [대화 컨텍스트](/ko/guide/context/conversation-context/) — 스레드와 압축
+- [초점 유지](/ko/guide/context/keep-context-focused/) — 무관 노이즈 피하기
+- [민감 컨텍스트](/ko/guide/context/sensitive-context/) — 비밀키와 프라이버시
 
-프롬프트에서 배경을 어떻게 조직하는지는 [목표와 컨텍스트](/prompts/goals-and-context/)를 보세요.
+프롬프트에서 배경을 어떻게 조직하는지는 [목표와 컨텍스트](/ko/prompts/goals-and-context/)를 보세요.
 
 ## 파일과 산출물
 
@@ -67,18 +68,18 @@ Codex도 같습니다. 컨텍스트를 못 다루면, 좋은 프롬프트도 노
 
 ## 파일과 산출물
 
-- [텍스트와 코드 파일](/guide/files-and-artifacts/text-and-code-files/)
-- [이미지와 스크린샷](/guide/files-and-artifacts/images-and-screenshots/)
-- [PDF와 문서](/guide/files-and-artifacts/pdf-and-documents/)
-- [표와 스프레드시트](/guide/files-and-artifacts/tables-and-spreadsheets/)
-- [프레젠테이션](/guide/files-and-artifacts/presentations/)
+- [텍스트와 코드 파일](/ko/guide/files-and-artifacts/text-and-code-files/)
+- [이미지와 스크린샷](/ko/guide/files-and-artifacts/images-and-screenshots/)
+- [PDF와 문서](/ko/guide/files-and-artifacts/pdf-and-documents/)
+- [표와 스프레드시트](/ko/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [프레젠테이션](/ko/guide/files-and-artifacts/presentations/)
 
 ## 권장 읽기 순서
 
 한 번에 다 읽을 필요는 없습니다. 이 순서로 가세요.
 
-1. 먼저 [파일과 폴더 컨텍스트](/guide/context/file-and-folder-context/)로 「어떤 파일을 보게 할지」를 이해합니다
-2. 다음으로 [초점 유지](/guide/context/keep-context-focused/)로 작업이 산만해지지 않게 합니다
+1. 먼저 [파일과 폴더 컨텍스트](/ko/guide/context/file-and-folder-context/)로 「어떤 파일을 보게 할지」를 이해합니다
+2. 다음으로 [초점 유지](/ko/guide/context/keep-context-focused/)로 작업이 산만해지지 않게 합니다
 3. 손에 든 자료 유형에 맞춰 해당 파일 장을 읽습니다
 
 컨텍스트는 Codex가 판단할 때 손옆의 정보 더미입니다. 맞게 주면 결과도 맞게 나오기 쉽습니다.

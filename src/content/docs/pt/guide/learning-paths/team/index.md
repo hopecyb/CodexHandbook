@@ -3,9 +3,10 @@ title: Percurso de equipa (visão geral)
 description: Visão geral da rota de adoção em equipa; passos aprofundados a completar depois.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5d835b8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -22,9 +23,9 @@ Se te preocupas sobretudo com a equipa usar o Codex de forma mais estável, pode
 
 ## O que podes ler agora
 
-- [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/)
-- [Contexto sensível](/guide/context/sensitive-context/)
-- [Definição de concluído](/guide/quality/definition-of-done/)
+- [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
+- [Contexto sensível](/pt/guide/context/sensitive-context/)
+- [Definição de concluído](/pt/guide/quality/definition-of-done/)
 
 ## Mal-entendidos frequentes
 
@@ -53,11 +54,11 @@ A adoção em equipa precisa de:
 
 Se vais avançar pelo ângulo da equipa, lê nesta ordem:
 
-1. [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/)
-2. [Contexto sensível](/guide/context/sensitive-context/)
-3. [Personalização e configuração do projeto](/guide/customization/)
-4. [Definição de concluído](/guide/quality/definition-of-done/)
-5. [Equipa e empresa](/guide/team-enterprise/)
+1. [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/)
+2. [Contexto sensível](/pt/guide/context/sensitive-context/)
+3. [Personalização e configuração do projeto](/pt/guide/customization/)
+4. [Definição de concluído](/pt/guide/quality/definition-of-done/)
+5. [Equipa e empresa](/pt/guide/team-enterprise/)
 
 Este percurso valoriza limites, regras e aceitação — não só empurrar o volume de uso.
 

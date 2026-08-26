@@ -1,0 +1,67 @@
+<svg lang="ko" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title desc">
+  <title id="title">검증을 포함한 Bug 수정 워크플로</title>
+  <desc id="desc">먼저 테스트를 실행해 실패를 안정적으로 재현하고 증거를 기록합니다. 그다음 근본 원인을 찾아 최소 수정하고 관련 테스트를 통과시킨 뒤 전체 회귀 테스트와 diff 검토를 수행합니다. 어느 단계든 실패하면 해당 단계로 돌아갑니다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 25.8px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 13.8px; }
+    .label { fill: #f8fafc; font-size: 14.6px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 12px; }
+    .tiny { fill: #94a3b8; font-size: 10.3px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1100" height="590" rx="8" fill="#020617"/>
+  <rect width="1100" height="590" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">검증을 포함한 Bug 수정: RED, GREEN, 회귀 순서</text>
+  <text x="44" y="70" class="sub">테스트 통과가 수정의 증거가 되려면 먼저 원래 문제를 안정적으로 재현해야 합니다.</text>
+
+  <path d="M186 260H226" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M374 260H414" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M562 260H602" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M750 260H790" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M938 260H974" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M864 320V410H488V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+  <path d="M676 320V456H300V322" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="38" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="112" y="235" text-anchor="middle" class="label">1. 안정적으로 재현</text>
+  <text x="112" y="261" text-anchor="middle" class="note">실패 테스트 실행</text>
+  <text x="112" y="283" text-anchor="middle" class="note">어설션과 스택 저장</text>
+  <text x="112" y="304" text-anchor="middle" class="tiny" fill="#fb7185">RED · 예상된 실패</text>
+
+  <rect x="226" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="300" y="235" text-anchor="middle" class="label">2. 근본 원인 찾기</text>
+  <text x="300" y="261" text-anchor="middle" class="note">구현과 테스트 읽기</text>
+  <text x="300" y="283" text-anchor="middle" class="note">인접 가설 배제</text>
+  <text x="300" y="304" text-anchor="middle" class="tiny">코드를 바꾸지 말고 먼저 설명</text>
+
+  <rect x="414" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="488" y="235" text-anchor="middle" class="label">3. 최소 수정</text>
+  <text x="488" y="261" text-anchor="middle" class="note">근본 원인 경로만 수정</text>
+  <text x="488" y="283" text-anchor="middle" class="note">공개 동작 유지</text>
+  <text x="488" y="304" text-anchor="middle" class="tiny">겸사겸사 리팩터링하지 않기</text>
+
+  <rect x="602" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="676" y="235" text-anchor="middle" class="label">4. 관련 테스트</text>
+  <text x="676" y="261" text-anchor="middle" class="note">기존 테스트 통과</text>
+  <text x="676" y="283" text-anchor="middle" class="note">경계 테스트 통과</text>
+  <text x="676" y="304" text-anchor="middle" class="tiny" fill="#34d399">GREEN</text>
+
+  <rect x="790" y="200" width="148" height="120" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="864" y="235" text-anchor="middle" class="label">5. 회귀와 검토</text>
+  <text x="864" y="261" text-anchor="middle" class="note">전체 테스트 · lint</text>
+  <text x="864" y="283" text-anchor="middle" class="note">diff와 범위 검사</text>
+  <text x="864" y="304" text-anchor="middle" class="tiny">잔여 위험 기록</text>
+
+  <rect x="974" y="218" width="94" height="84" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1021" y="250" text-anchor="middle" class="label">전달</text>
+  <text x="1021" y="275" text-anchor="middle" class="note">증거 완비</text>
+
+  <rect x="154" y="478" width="792" height="64" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="550" y="504" text-anchor="middle" class="note">증거 사슬: 실패 명령과 어설션 → 근본 원인 설명 → 최소 diff → 관련 테스트 통과 → 전체 회귀 통과 → 사람의 범위 검토</text>
+  <text x="550" y="526" text-anchor="middle" class="tiny">관련 테스트 실패 시 최소 수정으로 돌아가고, 전체 회귀 또는 diff 검토 실패 시 근본 원인 분석으로 돌아갑니다.</text>
+</svg>

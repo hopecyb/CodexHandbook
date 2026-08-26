@@ -3,100 +3,108 @@ title: MCP サーバー接続
 description: 設定、認証、検証、トラブルシュート。最初の MCP ツールを安全に接続する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 972ccc3
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-本ページは接続と検証フローに重点。プロトコル詳細とサーバー開発は公式 MCP ドキュメントを参照。
+This chapter completes the current official loop: **add server -> inspect configuration -> confirm tools in a session -> make one read-only call**.
 
-## 開始前
+## Before starting
 
-- [ ] [MCP 概要](/skills/mcp/mcp-overview/) のセキュリティ境界を理解している
-- [ ] 読み取り専用またはサンドボックスのテストアカウントがある
-- [ ] 現行 Codex クライアントバージョンが MCP をサポート（公式ドキュメントを正とする）
+- Read the [MCP overview](/ja/skills/mcp/mcp-overview/).
+- Confirm `codex mcp --help` runs.
+- Use a trusted source and read-only scenario first.
+- Never put a real token in history, prompts, or the repository.
 
-## 推奨フロー
+## Path A: add a STDIO server with the CLI
 
-### 1. サーバータイプの選択
+The official example uses the Context7 documentation server:
 
-| タイプ | 説明 | リスク |
-|---|---|---|
-| ローカル stdio サーバー | 本機でプロセス起動 | 中：プロセス権限＝あなたのユーザー権限 |
-| リモート HTTP/SSE | ホスト型サービス | 中高：TLS、Token ローテーションが必要 |
-
-初回接続は**公式例または読み取り専用ローカルサーバー**から推奨。
-
-### 2. 設定の追加
-
-設定位置は CLI/App により異なり、ユーザーまたはプロジェクトレベルの `mcp` 設定ブロックが一般的。構造の参考例（**フィールド名は公式ドキュメントを正とする**）：
-
-```json
-{
-  "mcpServers": {
-    "example-readonly": {
-      "command": "npx",
-      "args": ["-y", "@example/mcp-server"],
-      "env": {
-        "API_TOKEN": "環境変数から読み取り、リポジトリに直書きしない"
-      }
-    }
-  }
-}
+```bash
+codex mcp add context7 -- npx -y @upstash/context7-mcp
+codex mcp list
 ```
 
-原則：
+This writes the server to Codex configuration. Everything after `--` is the STDIO startup command. The first run may download an npm package, so verify its name and source first.
 
-- 秘密鍵は環境変数またはシークレットマネージャーで注入
-- 設定変更は Git レビュー（secrets を除く）
+## Path B: edit config.toml
 
-### 3. クライアントの再起動またはリロード
+User configuration defaults to `~/.codex/config.toml`. A trusted project may also use `.codex/config.toml`.
 
-MCP 設定変更後は通常 Codex セッションの再起動が必要で、サーバー一覧が更新されます。
+STDIO:
 
-### 4. ツール可視性の検証
+```toml
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp"]
+startup_timeout_sec = 10
+tool_timeout_sec = 60
+```
 
-タスクで明示的に依頼：
+Remote Streamable HTTP:
+
+```toml
+[mcp_servers.internal_docs]
+url = "https://mcp.example.com"
+bearer_token_env_var = "INTERNAL_DOCS_TOKEN"
+enabled_tools = ["search_docs", "get_doc"]
+```
+
+Replace the illustrative name, URL, and tools with actual server documentation. `bearer_token_env_var` stores an environment-variable name, not the token.
+
+## OAuth servers
+
+After configuring an OAuth-capable server, run:
+
+```bash
+codex mcp login <server-name>
+```
+
+The desktop App and IDE MCP lists also mark OAuth servers and offer Authenticate.
+
+## Inspect from each client
+
+| Surface | Configuration or inspection |
+|---|---|
+| ChatGPT desktop App | Settings -> MCP servers; Restart after saving; use `/mcp` |
+| Codex CLI | `codex mcp add/list/login`; use `/mcp` in TUI |
+| IDE integration | Gear -> MCP servers; Restart extension after saving |
+
+They share configuration on one Codex host. ChatGPT Web does not read local configuration.
+
+## Verification prompt
 
 ```text
-現在利用可能な MCP ツールを一覧（名前と一言説明のみ）。
-次に読み取り専用でテストツールを 1 つ呼び、結果を表示。
-書き込み操作は実行しない。
+Use only the currently connected MCP server:
+1. List tool names related to development-documentation search.
+2. Use one read-only tool to find basic Node.js test-runner usage.
+3. Name the tool actually called.
+4. Do not write or connect another service.
 ```
 
-### 5. 小さく試す
+Evidence: the server appears in `codex mcp list` or `/mcp`, a read-only tool returns structured data, and no unrelated permission is requested.
 
-実タスクだが低リスクなものを 1 つ選ぶ。例：「MCP でチケット #123 のタイトルを照会。ステータスは変更しない。」
+## Least-privilege options
 
-## 認証モード
+- `enabled_tools`: allow only listed tools.
+- `disabled_tools`: exclude more tools after the allowlist.
+- `enabled = false`: keep configuration but disable temporarily.
+- `required = true`: fail startup if an essential server cannot initialize.
 
-| モード | 向く用途 |
-|---|---|
-| API Key / PAT | 個人開発、定期ローテーション |
-| OAuth | ユーザー単位の認可、SaaS 向き |
-| 認証なしローカル | 本機 mock のみ。ネットワーク公開しない |
+## On failure
 
-失敗時の確認：Token 期限切れ、環境変数未伝播、会社プロキシによる遮断。
+Record the exact error and diagnose configuration, process/network, authentication, and individual tools in [Debug MCP](/ja/skills/mcp/debugging-mcp/). Change one field at a time.
 
-## デバッグチェックリスト
+## Official source
 
-| 現象 | 想定原因 |
-|---|---|
-| ツール一覧が空 | 設定パス誤り、プロセス起動失敗 |
-| 呼び出しタイムアウト | ネットワーク、VPN、サーバー停止 |
-| 権限拒否 | Token の scope 不足 |
-| モデルがツールを呼ばない | タスク記述に要求がない、またはツール description が不明瞭 |
+- [OpenAI: Connect Codex to an MCP server](https://learn.chatgpt.com/docs/extend/mcp#connect-codex-to-an-mcp-server)
 
-## 承認との連携
-
-初めて未知のツールを呼ぶとき、クライアントが確認を出すことがあり——想定挙動です。チーム規範で「すべての MCP 書き込みを永久許可」を推奨しないでください。
-
-## 参考ソース
-- OpenAI Codex MCP 設定ドキュメント
-- modelcontextprotocol.io サーバー例
 ---
 
-**状態：** outdated  
-**対象製品：** App / CLI / IDE  
-**最終検証：** 2026-07-26  
-**検証根拠：** 本ページは現行 MCP サーバー設定、リロード、検証手順を直接記述。手順はバージョンとクライアント実装に強く依存し、現時点では `verified` とすべきでない。
+**Status:** verified
+
+**Applies to:** ChatGPT desktop App / Codex CLI / IDE
+
+**Last verified:** 2026-08-25

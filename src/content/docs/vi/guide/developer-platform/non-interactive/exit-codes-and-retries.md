@@ -3,14 +3,15 @@ title: Mã thoát và thử lại
 description: "Đọc đúng thành bại của `codex exec` trong pipeline — khi nào thử lại, khi nào fail ngay."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 40d81b7
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 40
+reviewed_at: 2026-08-26
 ---
 
-CI dựa vào **mã thoát tiến trình** để phán bước thành hay bại. Chương này giải thích ngữ nghĩa thường gặp của [codex exec](/guide/developer-platform/non-interactive/codex-exec/), chiến lược thử lại và thiết kế idempotent.
+CI dựa vào **mã thoát tiến trình** để phán bước thành hay bại. Chương này giải thích ngữ nghĩa thường gặp của [codex exec](/vi/guide/developer-platform/non-interactive/codex-exec/), chiến lược thử lại và thiết kế idempotent.
 
 ## Nội dung trang này
 
@@ -59,7 +60,7 @@ Nếu nguyên nhân fail vốn không biến mất nhờ thử lại — quyền
 | `0` | Tác vụ hoàn thành và thỏa tiêu chí thành công trong Prompt |
 | Khác `0` và log có từ chối policy/sandbox | **Không** thử lại mù quáng; sửa cấu hình hoặc Prompt |
 | Khác `0` và API 429/5xx | Thử lại có giới hạn, exponential backoff |
-| Phát hiện vấn đề P0 nhưng thực thi thành công | Dùng `pass: false` của [đầu ra có cấu trúc](/guide/developer-platform/non-interactive/structured-output/) + script `exit 1` |
+| Phát hiện vấn đề P0 nhưng thực thi thành công | Dùng `pass: false` của [đầu ra có cấu trúc](/vi/guide/developer-platform/non-interactive/structured-output/) + script `exit 1` |
 
 «Phát hiện vấn đề bảo mật» không nên dựa vào exception kiểu sập, mà phải **tường minh** `pass: false` trong JSON và để script bọc quyết định mã thoát.
 
@@ -69,7 +70,7 @@ Nếu nguyên nhân fail vốn không biến mất nhờ thử lại — quyền
 max=3
 delay=10
 for i in $(seq 1 $max); do
-  if codex exec --cwd . "$(cat "$PROMPT")"; then
+  if codex exec --cd . "$(cat "$PROMPT")"; then
     exit 0
   fi
   code=$?
@@ -119,8 +120,8 @@ Hãy phân «đây là sự cố tạm thời, hay vốn không tốt hơn nhờ
 
 ## Chương liên quan
 
-- [Tham chiếu lỗi](/guide/reference/error-reference/)
-- [Phục hồi sau thất bại](/cases/workflows/failure-recovery/)
+- [Tham chiếu lỗi](/vi/guide/reference/error-reference/)
+- [Phục hồi sau thất bại](/vi/cases/workflows/failure-recovery/)
 
 ## Nguồn tham chiếu
 - Hướng dẫn thử lại OpenAI API (khái niệm)

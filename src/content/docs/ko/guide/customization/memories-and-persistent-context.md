@@ -3,9 +3,10 @@ title: 기억과 지속 컨텍스트
 description: Codex가 세션을 넘어 선호와 사실을 어떻게 기억하는지 — 능력, 경계, 팀 규범.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 039bc98
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -38,7 +39,7 @@ sidebar:
 | 반복 설명하는 프로젝트 별칭(「백엔드는 `services/api`」) | 바뀌는 sprint 작업 상태 |
 | 「기억해 줘」라고 명시했고 비민감한 사실 | Git에 넣어야 할 팀 규범 |
 
-팀급 규범은 **`AGENTS.md` 또는 프로젝트 설정**에 두어 review와 신규 onboarding이 가능하게 하세요. [범위와 우선순위](/guide/customization/agents-md/scope-and-precedence/)를 참고하세요.
+팀급 규범은 **`AGENTS.md` 또는 프로젝트 설정**에 두어 review와 신규 onboarding이 가능하게 하세요. [범위와 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)를 참고하세요.
 
 ## 흔한 오해
 

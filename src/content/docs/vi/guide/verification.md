@@ -3,9 +3,10 @@ title: Kiểm chứng
 description: Rà soát Diff, chạy kiểm thử, kiểm chứng nguồn và định nghĩa tiêu chí hoàn thành.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 915ee03
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 17
 ---
@@ -76,12 +77,12 @@ Có thể hiểu là:
 
 ## Chủ đề cốt lõi
 
-- [Rà soát Diff](/guide/quality/review-diffs/) — đọc Diff, xác nhận phạm vi và rủi ro
-- [Chạy kiểm thử](/guide/quality/run-tests/) — hồi quy tự động
-- [Kiểm chứng artifact](/guide/quality/verify-artifacts/) — tài liệu, cấu hình, sản phẩm tạo ra
-- [Kiểm chứng nguồn](/guide/quality/validate-sources/) — kết luận dạng nghiên cứu truy được
-- [Xử lý bất định](/guide/quality/handle-uncertainty/) — khi model không chắc thì sao
-- [Định nghĩa hoàn thành](/guide/quality/definition-of-done/) — thế nào gọi là «đã xong»
+- [Rà soát Diff](/vi/guide/quality/review-diffs/) — đọc Diff, xác nhận phạm vi và rủi ro
+- [Chạy kiểm thử](/vi/guide/quality/run-tests/) — hồi quy tự động
+- [Kiểm chứng artifact](/vi/guide/quality/verify-artifacts/) — tài liệu, cấu hình, sản phẩm tạo ra
+- [Kiểm chứng nguồn](/vi/guide/quality/validate-sources/) — kết luận dạng nghiên cứu truy được
+- [Xử lý bất định](/vi/guide/quality/handle-uncertainty/) — khi model không chắc thì sao
+- [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/) — thế nào gọi là «đã xong»
 
 ## Tác vụ khác nhau, trọng tâm kiểm chứng khác nhau
 
@@ -90,11 +91,11 @@ Có thể hiểu là:
 - **Làm nghiên cứu**: xem nguồn có thật không, có mới không, kết luận có vượt bằng chứng không
 - **Tạo cấu hình hoặc script**: xem tiền đề môi trường, phạm vi quyền, cách khôi phục sau khi thất bại
 
-Nếu không biết nên bắt đầu từ mục nào, mặc định đọc [Định nghĩa hoàn thành](/guide/quality/definition-of-done/).
+Nếu không biết nên bắt đầu từ mục nào, mặc định đọc [Định nghĩa hoàn thành](/vi/guide/quality/definition-of-done/).
 
 Kiểm chứng là để xác nhận kết quả này thật sự dùng được, dám dùng, giao đi được.
 
-Cách viết tiêu chí nghiệm thu trong Prompt xem [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/). Case đầu-cuối xem [Case thực chiến](/cases/).
+Cách viết tiêu chí nghiệm thu trong Prompt xem [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/). Case đầu-cuối xem [Case thực chiến](/vi/cases/).
 
 ---
 

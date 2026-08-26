@@ -1,149 +1,86 @@
 ---
-title: Cloud code review
-description: Reviewing diffs, PRs, and automated review suggestions from Cloud tasks.
+title: Code review in Cloud and GitHub
+description: Review a Cloud diff and use Codex on GitHub as a high-signal supplementary reviewer.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: a74296a
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-Cloud can produce changes for you, but it does not take merge responsibility on your behalf.
+A completed Cloud task provides a summary and diff. You can follow up, request changes, or create a PR. Completion is not merge approval; project CI, branch protection, and human judgment still apply.
 
-After a Cloud task finishes, **human review** remains the last gate before merge. This page explains how to review remote Agent output and connect it with GitHub PRs, CI, and Skill-based review.
+## Two review types
 
-## What's covered
+| Type | What it examines | Outcome |
+|---|---|---|
+| Cloud result review | Task summary, logs, and diff | Decide whether to follow up or create a PR |
+| GitHub Codex review | PR diff and connected-repository `AGENTS.md` rules | Publish a GitHub code review |
 
-- How Cloud PR review differs from local PR review
-- Review checklists and common risk points
-- Using Codex to assist review without giving up accountability
-
-## Why Cloud review needs extra attention
-
-Remote Agents are more likely to:
-
-- Touch unrelated files while "fixing" something
-- Produce large lockfile or generated-file diffs due to environment differences
-- Show tests as run without covering critical logic
-- Write polished PR descriptions you have not verified
-
-Cloud review is not lighter—it needs sharper focus.
-
-## Where review sits in the flow
+Comment on a GitHub PR:
 
 ```text
-Cloud task completes → push branch → open PR
-        ↓
-CI runs (tests, lint, security scans)
-        ↓
-Human reviews diff + optional Agent-assisted review
-        ↓
-Approve merge (subject to branch protection)
+@codex review
 ```
 
-Opening PRs: [Create Pull Request](/guide/web-and-cloud/create-pull-requests/)
+Codex posts findings as a normal GitHub review. The current official guidance says GitHub comments focus on high-priority P0/P1 issues; when no issue is found, Codex may leave only a reaction. Few comments are not a reason to skip human review.
 
-## Minimum bar before full review
+## Review order
 
-Before a deep pass, confirm at least four things:
+1. **Scope:** do files, directories, dependencies, and generated artifacts match the task?
+2. **Behavior:** do success, failure, and boundary paths satisfy the requirement?
+3. **Security:** inspect authentication, authorization, input handling, credentials, and outbound network access.
+4. **Evidence:** which tests actually ran, and were failures disclosed?
+5. **Rollback:** can the change be reverted narrowly, or does it mix unrelated refactoring?
 
-1. Did the change scope drift?
-2. Was critical logic actually changed as intended?
-3. Were tests or verification really run?
-4. Were sensitive data or dangerous changes introduced?
+Example prompt:
 
-Until those are confirmed, "task done" is not "safe to merge."
+```text
+Review this PR. Report only findings that could cause wrong behavior, data loss,
+a security issue, or a compatibility regression. Each finding must include
+severity, exact location, trigger condition, and impact. Do not report style
+preferences as defects.
+```
 
-## Human review checklist
+## Repository-specific rules
 
-Aligned with [review diffs](/guide/quality/review-diffs/); Cloud adds extra focus:
+Add this to the applicable `AGENTS.md`:
 
-| Check | Why |
-|---|---|
-| Unrelated files changed | Remote Agent may "refactor while here" |
-| Lockfile / generated files | Environment differences cause large diffs |
-| New dependency sources | Supply chain risk |
-| Tests actually cover new logic | Agent may write empty tests |
-| Permission and auth changes | Privilege escalation, hard-coded tokens |
-| Matches issue scope | Prevent scope creep |
+```md
+## Code Review Rules
 
-## Common misconceptions
+### Authentication boundaries
 
-### 1. CI green means ready to merge
+- Flag any path that logs access tokens or sends them to non-allowlisted hosts.
+  Safe path: keep tokens in the credential provider and redact diagnostic output.
+```
 
-CI only means "these automated checks did not fail." Whether requirements were understood, scope stayed correct, and risk is acceptable still needs human judgment.
+Root rules apply across the repository; a nested `AGENTS.md` can add service-specific checks. Begin with two or three stable rules that describe a safe path rather than a long list of volatile function names.
 
-### 2. A complete PR description means I can skim the diff
+## Automatic-review boundary
 
-No.
-
-Descriptions help you get context faster; they do not verify facts for you.
-
-### 3. Running Codex review again equals done
-
-Assisted review is useful, but accountability stays with people.
-
-## Using Codex to assist review (not replace you)
-
-Acceptable:
-
-- Run a `$pr-review` Skill locally or in Cloud on a new PR (see [Create a Skill](/skills/create-your-first-skill/))
-- Ask for opinions grouped as blockers / suggestions / nits
-- **You** confirm each blocker
-
-Not acceptable:
-
-- Merging without reading the diff because the Agent said it looks fine
-- Letting the Agent approve a protected branch on its own
-
-See [verification and human review](/guide/foundations/verification-and-human-review/)
-
-## Suggested review order
-
-1. PR title and description—confirm the goal
-2. Main logic diff
-3. Tests, generated files, config
-4. Automated comments and follow-up suggestions
-
-This avoids drowning in noise upfront.
-
-## Driving revisions from review comments
-
-After review comments land on a PR:
-
-1. Start a new Cloud or local task: "Address only the following review comments; do not expand scope"
-2. Attach comment links or numbers
-3. Push new commits to the same PR
-4. Re-run CI and skim the incremental diff
-
-On GitHub: [GitHub integration](/guide/integrations/github/)
-
-## Combining with Automations
-
-- Run a review Skill automatically when a PR opens (comment only, no merge)
-- See [scheduled and triggered tasks](/skills/automations/scheduled-tasks/)
-
-## Common mistakes
-
-- Skipping security review because Cloud is "isolated"
-- Merging a huge diff because "CI is green"
-- Pasting unsanitized production logs into review comments
-- Treating "I did not spot issues" as "there are no issues"
+Users with the required GitHub push or admin permission can enable automatic reviews for a repository in Codex Settings. Automatic review is a supplementary gate and should not have automatic merge authority. High-risk repositories still need required reviewers, CI, and branch protection.
 
 ## Acceptance checklist
 
-- [ ] CI is green and you understand any retry history
-- [ ] At least one person read the main logic diff
-- [ ] Scope matches the issue/task description
-- [ ] No Secrets committed to the repo
+- [ ] A person reviewed the main logic diff.
+- [ ] P0/P1 findings are fixed or the risk is accepted in writing.
+- [ ] CI passes and any rerun is explained.
+- [ ] No Secrets, unintended generated files, or unrelated lockfile changes.
+- [ ] Task, PR description, and actual diff agree.
 
-## References
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
+## Official sources
+
+- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
+- [Cross-client code review](https://learn.chatgpt.com/docs/code-review)
+
 ---
 
-**Status:** outdated  
-**Applicable products:** Cloud / GitHub  
-**Review note:** The principle that Cloud output still needs human review holds, but this page describes Cloud PRs, auto-open PR behavior, remote review rhythm, and notifications as a concrete current workflow; those integration shapes change quickly and need a rewrite against the latest official flow.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** Cloud, GitHub
+
+**Last verified:** 2026-08-26

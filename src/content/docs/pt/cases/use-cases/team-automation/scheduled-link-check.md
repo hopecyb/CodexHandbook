@@ -3,9 +3,10 @@ title: "Caso: verificação agendada de ligações na documentação"
 description: Use Codex não interativo ou CI para detetar ligações mortas no site — caso introdutório de automatização de equipa.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadados
@@ -55,8 +56,8 @@ Espere a minha confirmação antes de criar ficheiros.
 ### Executar
 
 - Acrescentar `prompts/ci/link-check.md`
-- Acrescentar `.github/workflows/docs-link-check.yml` (indicativo; ver [scripts e pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Usar [codex exec](/guide/developer-platform/non-interactive/codex-exec/) ou script puro + segunda classificação pelo Codex
+- Acrescentar `.github/workflows/docs-link-check.yml` (indicativo; ver [scripts e pipelines](/pt/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Usar [codex exec](/pt/guide/developer-platform/non-interactive/codex-exec/) ou script puro + segunda classificação pelo Codex
 
 ### Verificar
 
@@ -69,19 +70,19 @@ Espere a minha confirmação antes de criar ficheiros.
 | Problema | Tratamento |
 |---|---|
 | Site externo com 503 temporário | Distinguir ligação morta dura vs falha suave; definir no prompt |
-| Falha ao parsear JSON | Apertar restrições de [saída estruturada](/guide/developer-platform/non-interactive/structured-output/) |
+| Falha ao parsear JSON | Apertar restrições de [saída estruturada](/pt/guide/developer-platform/non-interactive/structured-output/) |
 | Quota esgotada | Passar a agendamento semanal + verificação incremental |
 
 ## 5. Consolidação
 
 - Após a terceira execução bem-sucedida, consolidar como Skill: `docs-link-audit`
-- [Regras de comando](/guide/customization/rules/team-rules/) da equipa permitem `npm run build` e git só de leitura
+- [Regras de comando](/pt/guide/customization/rules/team-rules/) da equipa permitem `npm run build` e git só de leitura
 
 ## 6. Capítulos relacionados
 
-- [Gestão de tarefas longas](/cases/workflows/long-running-task-management/)
-- [Tarefas agendadas Automations](/skills/automations/scheduled-tasks/)
-- [Percurso de aprendizagem da equipa](/guide/learning-paths/team/)
+- [Gestão de tarefas longas](/pt/cases/workflows/long-running-task-management/)
+- [Tarefas agendadas Automations](/pt/skills/automations/scheduled-tasks/)
+- [Percurso de aprendizagem da equipa](/pt/guide/learning-paths/team/)
 
 ---
 

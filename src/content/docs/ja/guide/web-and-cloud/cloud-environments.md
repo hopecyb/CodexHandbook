@@ -1,160 +1,84 @@
 ---
 title: Cloud 環境
-description: Codex Cloud リモート実行環境の構成、ライフサイクル、チーム設定の要点。
+description: Codex Cloud の runtime、依存関係、setup、cache、リポジトリの開始点を設定します。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f7c7188
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 20
+reviewed_at: 2026-08-26
 ---
 
-「Cloud 環境」とは、Codex がリモートでタスクを実行するときに使う作業マシンです。
+Cloud 環境は、Codex が特定のリポジトリで何をインストールし、どう実行するかを定義します。環境はノート PC の設定を継承しません。ローカルでは動くのに Cloud で失敗する場合は、まず runtime、依存関係、変数、ネットワークを比較してください。
 
-OS、言語バージョン、ツールチェーン、ネットワークポリシー、どのリポジトリブランチを取得するかなど、結果に直接影響します。このレイヤーは、よくある次の疑問を説明するためにあります：
+## 各チャットの実行順序
 
-> **なぜローカルでは動くのに、Cloud では失敗するのか？**
+1. コンテナを作成し、選択したブランチまたは commit SHA を checkout する。
+2. setup script を実行する。cache を再利用する場合は maintenance script も実行できる。
+3. インターネットポリシーを適用する。
+4. Agent がコマンド、編集、検証のループを実行し、適用される `AGENTS.md` を読む。
+5. 回答と diff を返し、follow-up または PR の作成へ進める。
 
-## 内容
+デフォルトの `universal` イメージには、一般的な言語、package、ツールが事前インストールされています。環境設定で Python、Node.js などのバージョンを固定し、setup script で追加の依存関係をインストールできます。
 
-- Cloud 環境とローカル開発マシンの違い
-- 環境が GitHub リポジトリ、ブランチとどう紐づくか
-- チームが再現可能な Cloud 設定を維持する方法
+## 最小限の再現可能な設定
 
-## まず確認すること
+pnpm プロジェクトでは、まず CI と同じ Node.js バージョンを環境で固定し、次を設定します。
 
-まずこの 3 点を確認してください：
-
-- Cloud は「現在の PC のすべてを読み取る」わけではなく、リモート環境にあるものだけを見る
-- Cloud でタスクを実行するときも、「依存関係があるか、バージョンが合っているか、ネットワークが通るか」といった現実的な問題に直面する
-- ローカルでコミット・プッシュしていないものは、Cloud からはデフォルトで見えない
-
-Cloud は、別のマシンに仕事を任せるイメージで捉えるとよいです。
-
-## コア概念
-
-```text
-GitHub リポジトリ（あるブランチ）
-        ↓ clone / checkout
-Cloud 環境インスタンス（コンテナまたは VM、製品仕様による）
-        ↓
-Agent がタスクを実行：依存関係のインストール、コード変更、テスト、プッシュ
+```bash
+corepack enable
+pnpm install --frozen-lockfile
 ```
 
-[GitHub に接続](/guide/web-and-cloud/connect-github/) と併用します。環境は**ノート PC 上の未プッシュ commit にはアクセスできません**。
+リポジトリルートの `AGENTS.md` に次を記述します。
 
-## ローカルと Cloud の違い
+```md
+## Validation
 
-- **ローカルタスク**：Codex が目の前で、現在の PC の周りで作業する
-- **Cloud タスク**：Codex をリモートマシンに派遣して作業させる
+- Run `pnpm test` after code changes.
+- Run `pnpm typecheck` before reporting completion.
+- Do not update the lockfile unless dependency changes are requested.
+```
 
-初めて Cloud を使うときによくある混乱の原因です：
+setup と Agent フェーズは別の Bash セッションです。setup で一時的に `export` した値は自動的に引き継がれません。機密でない値は環境設定で指定するか、公式の推奨に従って shell 設定へ永続化してください。
 
-- 「なぜローカルで直したファイルが見えないのか？」
-- 「なぜ PC にグローバルインストールしたツールがないのか？」
-- 「なぜローカルで起動したデータベースに接続できないのか？」
+## cache と maintenance
 
-多くの場合、**リモートマシンにそもそもそれらがない**だけです。問題は環境そのものにあります。
+Cloud は新しいチャットと follow-up を高速化するため、コンテナ状態を最大 12 時間 cache します。cache の復元後、チャットで指定したブランチを checkout し、maintenance script で依存関係を更新できます。
 
-## 環境に含まれるもの（概念レイヤー）
+setup、maintenance、環境変数、Secrets を変更すると cache は自動的に無効になります。リポジトリの変更で cache に互換性がなくなった場合は、手動で **Reset cache** を実行してください。Business と Enterprise の環境 cache は、その環境へアクセスできるユーザー間で共有される場合があり、reset は同じワークスペースのほかのユーザーにも影響します。
 
-| 構成要素 | 説明 |
+## 環境変数と Secret
+
+- 環境変数は setup と Agent の両フェーズで利用できる
+- Secret は setup フェーズだけで復号され、Agent の開始前に削除される
+- setup フェーズはインターネットへアクセスできる
+- Agent フェーズはデフォルトでオフライン。環境ごとにアクセスを許可できる
+
+これらの境界は混同されやすいため、次の章で詳しく説明します：[Secrets と環境変数](/ja/guide/web-and-cloud/secrets-and-variables/)。
+
+## 整合性チェックリスト
+
+| 確認項目 | 目標 |
 |---|---|
-| ベースイメージ | OS、一般的なビルドツール |
-| ランタイム | Node、Python、Go など（イメージとタスク次第） |
-| 作業ディレクトリ | クローン後のリポジトリパス |
-| ネットワークポリシー | 外部ネットワークへのアクセス可否、どのドメインにアクセスできるか |
-| 認証情報の注入 | [Secrets と変数](/guide/web-and-cloud/secrets-and-variables/) |
+| 開始ブランチ / commit | タスク説明と一致 |
+| runtime バージョン | CI または本番の制約と一致 |
+| lockfile | frozen install を使用 |
+| setup | 再実行可能、非対話、失敗時に停止 |
+| 検証コマンド | `AGENTS.md` に記述 |
+| ネットワーク | Agent には必要なドメインと method だけを許可 |
 
-具体的なイメージリストとカスタマイズ方法は [公式 Cloud ドキュメント](https://developers.openai.com/codex) に準拠してください。
+## 公式情報
 
-## よくある誤解
+- [Cloud environments](https://learn.chatgpt.com/docs/environments/cloud-environment)
+- [codex-universal イメージ](https://github.com/openai/codex-universal)
 
-### 1. Cloud がローカル環境を自動的に引き継ぐと思う
-
-引き継ぎません。
-
-ローカルにインストールした Node、Python、Homebrew、Chrome、データベースクライアントは、「ローカルにあるから」Cloud に自動的に現れることはありません。
-
-### 2. リポジトリをプッシュすればすべて準備完了だと思う
-
-リポジトリのコードは出発点に過ぎず、タスクの成否は次にも依存します：
-
-- 依存関係のインストール方法
-- 起動またはテストコマンド
-- 必要な Secret
-- ネットワークポリシーが外部リソースへのアクセスを許可しているか
-
-### 3. Cloud の失敗は Codex の能力不足だと思う
-
-多くの Cloud 失敗は、タスクができないのではなく、環境が整っていないことが原因です。
-
-トラブルシューティングの順序：
-
-1. リポジトリとブランチは正しいか
-2. 依存関係とランタイムのバージョンは正しいか
-3. Secret とネットワークは利用可能か
-4. タスクのプロンプトは明確か
-
-## 推奨設定フロー
-
-1. **テストリポジトリ**で初回 Cloud タスクを完了し、依存関係のインストールコマンドを記録
-2. 繰り返し手順をリポジトリドキュメント（`README`、`AGENTS.md`、または公式サポートの environment 設定ファイル）に記載
-3. [Secrets](/guide/web-and-cloud/secrets-and-variables/) を設定（プライベート registry、API key）
-4. [インターネットアクセス](/guide/web-and-cloud/internet-access/) ポリシーがセキュリティ要件を満たしているか確認
-5. 同じ環境テンプレートで issue → PR のクローズドループを検証
-
-## いつ Cloud を使うべきか
-
-次のように判断できます：
-
-- PC 上のプロジェクトを変更してすぐ結果を見たい：まずローカル
-- タスクをバックグラウンドで走らせたい、チームで統一環境を使いたい、GitHub をリモートで扱いたい：Cloud を使う
-
-ローカルワークフローがまだ安定していないなら、急いで「Cloud 設定の問題」に格上げする必要はありません。
-
-## ローカル環境との整合
-
-「ローカルは緑、Cloud は赤」を避ける：
-
-| プラクティス | 理由 |
-|---|---|
-| 依存関係のバージョンを固定（lockfile） | 再現可能なインストール |
-| `AGENTS.md` にインストールとテストコマンドを記載 | Agent が推測しない |
-| CI と Cloud で近い Node/Python バージョンを使用 | バージョンのドリフトを減らす |
-| 大きなファイルは Git LFS またはビルド時ダウンロード | クローンサイズを制御 |
-
-## ライフサイクル
-
-典型的な Cloud タスクの流れ：
-
-1. **作成/再利用**：環境インスタンス
-2. **準備**：clone、ブランチ checkout、依存関係のインストール
-3. **実行**：Agent がコードを変更し、コマンドを実行
-4. **成果物**：ブランチのプッシュ、PR、ログ artifact
-5. **破棄または回収**（ポリシーは製品次第）
-
-長時間タスクは [デスクトップ App 通知](/guide/desktop-app/notifications/) またはモバイルでフォローアップできます。
-
-## よくあるエラー
-
-- Cloud にプロジェクト固有 monorepo の全ツールチェーンがプリインストールされていると想定
-- `localhost` サービス（データベース、mock API）に依存しているが、環境で提供していない
-- 初回から本番リポジトリで無境界タスクを実行
-- 「環境の問題」を「モデル能力の問題」と誤判断
-
-## セキュリティ境界
-
-- 環境は**半信頼**とみなす：code review とブランチ保護は依然として必要
-- 本番データベース接続文字列は Secrets 経由でのみ注入し、プロンプトに入れない
-- 使われなくなった環境テンプレートと Secrets を定期的にクリーンアップ
-
-## 参考ソース
-- OpenAI Codex Cloud environments
 ---
 
-**状態：** outdated  
-**対象製品：** Cloud  
-**検証根拠：** 本ページは Cloud 環境インスタンスの形態、ライフサイクル、環境テンプレート、GitHub ブランチとの紐づけ方式など具体的な実装に触れているが、現行の公式 Cloud ドキュメントではこれらの詳細を一つずつ確認する根拠が不十分。Cloud 環境の正式資料を補完するまでは `verified` とすべきではない。  
-**最終検証：** 2026-07-26
+**状態：** verified
+
+**対象製品：** Cloud
+
+**最終検証：** 2026-08-26

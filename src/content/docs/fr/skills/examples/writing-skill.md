@@ -3,9 +3,10 @@ title: "Exemple : Skill de rédaction"
 description: Organiser recherche, plan, rédaction et relecture en flux d'écriture réutilisable.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Exemple : Skill de rédaction
@@ -32,7 +33,7 @@ description: Rédiger un article technique selon un plan, avec recherche, brouil
 
 ## Liens
 
-- [Cas : écrire un article](/cases/write-an-article/)
+- [Cas : écrire un article](/fr/cases/write-an-article/)
 
 ---
 

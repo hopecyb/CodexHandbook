@@ -3,9 +3,10 @@ title: Shell y terminal
 description: Capacidades y riesgos de la ejecución de comandos.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0b4d40a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -33,7 +34,7 @@ El terminal es potente y peligroso. Principios:
 - Prohibir `rm -rf`, force push, cambiar la configuración ssh, etc., salvo que lo entiendas del todo y sea necesario
 - Incluye los comandos de verificación en los criterios de aceptación
 
-Entrada de producto: [Terminal integrado](/guide/desktop-app/integrated-terminal/)
+Entrada de producto: [Terminal integrado](/es/guide/desktop-app/integrated-terminal/)
 
 ## Por qué el riesgo del terminal es mayor
 

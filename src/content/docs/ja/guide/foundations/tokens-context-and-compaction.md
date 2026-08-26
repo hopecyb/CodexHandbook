@@ -3,9 +3,10 @@ title: Token、コンテキストと圧縮
 description: コンテキストウィンドウ、占有、圧縮を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: b33848c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 100
 ---
@@ -60,7 +61,7 @@ sidebar:
 
 - 重要な制約は現在のメッセージまたはプロジェクト説明に書き、ずっと前の会話に埋もれさせない
 - テーマ切り替え時は新しいスレッドを開く
-- 原理と操作アドバイスは [コンテキスト圧縮](/guide/context/compaction/) と [コンテキストを集中させる](/guide/context/keep-context-focused/) を参照
+- 原理と操作アドバイスは [コンテキスト圧縮](/ja/guide/context/compaction/) と [コンテキストを集中させる](/ja/guide/context/keep-context-focused/) を参照
 
 ここではまず概念を説明します。具体的な制御方法は、続けて `05` を見てください。
 

@@ -3,9 +3,10 @@ title: Bắt đầu nhanh
 description: Từ tài khoản và cài đặt đến tác vụ đầu tiên có thể kiểm tra.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 283b8cb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 4
 ---
@@ -25,15 +26,15 @@ Nếu bạn muốn giải quyết trước «làm sao bắt đầu» và «làm 
 
 ## Các bước
 
-1. [Tài khoản, gói và quyền truy cập](/guide/getting-started/account-plans-and-access/)
-2. [Chọn client](/guide/getting-started/choose-your-codex-client/)
-3. Cài đặt: [Desktop App](/guide/getting-started/install-desktop-app/) · [CLI](/guide/getting-started/install-cli/) · [IDE](/guide/getting-started/install-ide-extension/)
-4. [Đăng nhập](/guide/getting-started/sign-in-and-authentication/)
-5. [Tạo dự án luyện tập](/guide/getting-started/create-your-first-project/)
-6. [Chạy tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
-7. [Kiểm tra kết quả](/guide/getting-started/review-the-result/) · [Hoàn tác và khôi phục](/guide/getting-started/undo-and-recover/)
+1. [Tài khoản, gói và quyền truy cập](/vi/guide/getting-started/account-plans-and-access/)
+2. [Chọn client](/vi/guide/getting-started/choose-your-codex-client/)
+3. Cài đặt: [Desktop App](/vi/guide/getting-started/install-desktop-app/) · [CLI](/vi/guide/getting-started/install-cli/) · [IDE](/vi/guide/getting-started/install-ide-extension/)
+4. [Đăng nhập](/vi/guide/getting-started/sign-in-and-authentication/)
+5. [Tạo dự án luyện tập](/vi/guide/getting-started/create-your-first-project/)
+6. [Chạy tác vụ đầu tiên](/vi/guide/getting-started/run-your-first-task/)
+7. [Kiểm tra kết quả](/vi/guide/getting-started/review-the-result/) · [Hoàn tác và khôi phục](/vi/guide/getting-started/undo-and-recover/)
 
-Gấp: [Ba mươi phút đầu](/guide/getting-started/first-30-minutes/) · đọc trước [Checklist an toàn](/guide/getting-started/beginner-safety-checklist/).
+Gấp: [Ba mươi phút đầu](/vi/guide/getting-started/first-30-minutes/) · đọc trước [Checklist an toàn](/vi/guide/getting-started/beginner-safety-checklist/).
 
 Bước cài đặt đổi theo phiên bản — hãy đồng thời đối chiếu [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

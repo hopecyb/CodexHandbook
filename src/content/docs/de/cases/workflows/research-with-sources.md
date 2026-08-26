@@ -3,18 +3,19 @@ title: Recherche mit Quellen
 description: Mit Codex suchen, vergleichen und Fakten prüfen — nachvollziehbare Quellen und Schlussfolgerungen liefern.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9ff7a5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 **Recherche mit Quellen** verlangt, dass jede zentrale Schlussfolgerung auf eine konkrete Quelle zurückgeht — etwa offizielle Docs, Papers oder Repository-Dateien — statt einer unbegründeten Aussage. Geeignet für Technikauswahl, Wettbewerbsvergleiche, Literaturreviews und Policy-Interpretation.
 
 ## Schwerpunkte dieser Seite
 
-- Wann [Websuche](/guide/tools/web-search/) vs. nur lesendes Repository
+- Wann [Websuche](/de/guide/tools/web-search/) vs. nur lesendes Repository
 - Wie Zitationsformat und Unsicherheitskennzeichnung verlangt werden
-- Zusammenspiel mit [Quellen validieren](/guide/quality/validate-sources/)
+- Zusammenspiel mit [Quellen validieren](/de/guide/quality/validate-sources/)
 
 ## Minimal brauchbares Vorgehen
 
@@ -37,7 +38,7 @@ Problem und Ausschlüsse definieren
     → Manuell entscheiden oder in die Spezifikationsphase gehen
 ```
 
-Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalten](/cases/workflows/long-running-task-management/).
+Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalten](/de/cases/workflows/long-running-task-management/).
 
 ## Häufige Fehler
 
@@ -49,7 +50,7 @@ Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalte
 ## Sicherheitsgrenzen
 
 - Interne, unveröffentlichte Materialien dürfen nicht über unkontrolliertes MCP nach außen gehen
-- Schnell wechselnde Fakten wie Preise, Versionen oder regionale Verfügbarkeit müssen mit [Prüfdatum](/guide/start-here/handbook-version-policy/) gekennzeichnet werden
+- Schnell wechselnde Fakten wie Preise, Versionen oder regionale Verfügbarkeit müssen mit [Prüfdatum](/de/guide/start-here/handbook-version-policy/) gekennzeichnet werden
 
 ## Abnahme-Checkliste
 
@@ -60,8 +61,8 @@ Lange Rechercheaufgaben in mehrere Runden teilen; siehe [Lange Aufgaben verwalte
 
 ## Verwandte Kapitel
 
-- [Mit Unsicherheit umgehen](/guide/quality/handle-uncertainty/)
-- [Fall: Docs refactoren und prüfen](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Mit Unsicherheit umgehen](/de/guide/quality/handle-uncertainty/)
+- [Fall: Docs refactoren und prüfen](/de/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ---
 

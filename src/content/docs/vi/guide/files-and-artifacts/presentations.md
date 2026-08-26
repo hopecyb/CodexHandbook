@@ -3,9 +3,10 @@ title: Bài trình bày
 description: Tạo, chỉnh bản và xuất slide và bài diễn — ước định cấu trúc, master và ghi chú diễn thuyết.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Chọn theo đối tượng giao cuối:
 5. Xuất PDF tập diễn và bấm giờ
 ```
 
-Khớp [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/): giai đoạn dàn ý nghiệm thu trước rồi mới điền chi tiết.
+Khớp [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/): giai đoạn dàn ý nghiệm thu trước rồi mới điền chi tiết.
 
 ## Vì sao bài trình bày tốt nhất kiểm soát cấu trúc trước
 
@@ -114,13 +115,13 @@ Cũng có thể nói yêu cầu theo giọng này:
 
 Yêu cầu kiểu này thường dễ ra bản còn mài tiếp được hơn “làm một PPT cao cấp”.
 
-Nhu cầu ảnh xem [Hình ảnh và ảnh chụp màn hình](/guide/files-and-artifacts/images-and-screenshots/); ảnh tạo thuần xem [Tạo ảnh](/guide/tools/image-generation/).
+Nhu cầu ảnh xem [Hình ảnh và ảnh chụp màn hình](/vi/guide/files-and-artifacts/images-and-screenshots/); ảnh tạo thuần xem [Tạo ảnh](/vi/guide/tools/image-generation/).
 
 ## Nghiệm thu
 
 - Cỡ chữ đọc được ở độ phân giải chiếu
 - Animation vừa phải (quá nhiều animation khó duy trì)
-- Số liệu khớp [Xác minh nguồn](/guide/quality/validate-sources/)
+- Số liệu khớp [Xác minh nguồn](/vi/guide/quality/validate-sources/)
 - Ghi chú diễn thuyết có đủ không (nếu cần)
 
 ## Phần nào phù hợp giao Codex nhất, phần nào tốt nhất bạn quyết

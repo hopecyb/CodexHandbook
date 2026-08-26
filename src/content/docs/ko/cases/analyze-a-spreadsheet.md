@@ -3,9 +3,10 @@ title: 스프레드시트 분석하기
 description: 표 데이터를 업로드하거나 참조하여 요약과 인사이트를 얻습니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fa6b8e1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 스프레드시트 분석하기
@@ -40,7 +41,7 @@ translated_at: 2026-07-28
 
 ## 4. 관련
 
-- [표와 스프레드시트](/guide/files-and-artifacts/tables-and-spreadsheets/)
+- [표와 스프레드시트](/ko/guide/files-and-artifacts/tables-and-spreadsheets/)
 ---
 
 **상태:** verified  

@@ -4,7 +4,7 @@ description: A shared completion checklist for individuals and teams.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: e6b6511
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:

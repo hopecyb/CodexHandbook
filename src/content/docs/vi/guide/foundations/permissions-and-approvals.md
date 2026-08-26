@@ -3,9 +3,10 @@ title: Quyền và phê duyệt
 description: Giải thích khi nào Codex cần bạn phê duyệt thao tác.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0870303
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -67,8 +68,8 @@ Thường thì không. Bạn có thể từ chối, rồi để nó đổi cách
 | Tầng | Viết gì | Đọc ở đâu |
 |---|---|---|
 | Khái niệm (trang này) | Vì sao cần phê duyệt | — |
-| Khác biệt sản phẩm | Mỗi lối vào hiện xác nhận thế nào | [Cẩm nang sản phẩm](/guide/) |
-| Chiến lược Prompt | Cách khai báo ranh giới quyền trong tác vụ | [Định nghĩa ràng buộc](/prompts/constraints-and-boundaries/) |
+| Khác biệt sản phẩm | Mỗi lối vào hiện xác nhận thế nào | [Cẩm nang sản phẩm](/vi/guide/) |
+| Chiến lược Prompt | Cách khai báo ranh giới quyền trong tác vụ | [Định nghĩa ràng buộc](/vi/prompts/constraints-and-boundaries/) |
 
 Chính sách chính thức và giá trị mặc định có thể thay đổi — hãy đối chiếu [https://developers.openai.com/codex](https://developers.openai.com/codex).
 

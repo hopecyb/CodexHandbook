@@ -3,9 +3,10 @@ title: "例：調査 Skill"
 description: 引用と要確認マーク付きの調査 Skill 例。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 例：調査 Skill
@@ -28,8 +29,8 @@ description: URL/ファイルパス引用付きの技術調査と比較表を作
 
 ## 関連
 
-- [調査ケース](/cases/research-with-sources/)
-- [調査テンプレート](/prompts/templates/research/)
+- [調査ケース](/ja/cases/research-with-sources/)
+- [調査テンプレート](/ja/prompts/templates/research/)
 
 ---
 

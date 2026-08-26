@@ -3,9 +3,10 @@ title: "Beispiel: Forschungs-Skill"
 description: Recherche-Skill mit Quellenangaben und „zu bestätigen“-Markierungen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Beispiel: Forschungs-Skill
@@ -28,8 +29,8 @@ description: "Technische Recherche und Vergleichstabellen mit URL-/Dateipfad-Que
 
 ## Verwandt
 
-- [Recherche-Fall](/cases/research-with-sources/)
-- [Recherche-Vorlage](/prompts/templates/research/)
+- [Recherche-Fall](/de/cases/research-with-sources/)
+- [Recherche-Vorlage](/de/prompts/templates/research/)
 ---
 
 **Status:** verified  

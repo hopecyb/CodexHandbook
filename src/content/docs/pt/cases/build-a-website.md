@@ -3,9 +3,10 @@ title: Criar um site
 description: Caso de protótipo — dos requisitos a uma página pré-visualizável.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Criar um site
@@ -41,8 +42,8 @@ Primeiro apresente o plano de wireframe; espere a minha confirmação antes de e
 
 ## 4. Relacionado
 
-- [Modelo de criação](/prompts/templates/create/)
-- [Trabalho orientado a artefatos](/cases/workflows/artifact-first-work/)
+- [Modelo de criação](/pt/prompts/templates/create/)
+- [Trabalho orientado a artefatos](/pt/cases/workflows/artifact-first-work/)
 ---
 
 **Estado:** verified  

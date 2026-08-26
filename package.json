@@ -7,10 +7,15 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "node scripts/generate-zh-tw.mjs && astro dev",
-    "start": "node scripts/generate-zh-tw.mjs && astro dev",
-    "build": "node scripts/generate-zh-tw.mjs && astro build",
+    "dev": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro dev",
+    "start": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro dev",
+    "build": "node scripts/generate-localized-diagrams.mjs && node scripts/generate-zh-tw.mjs && astro build",
     "build:brand": "node scripts/build-brand-assets.mjs",
+    "check:links": "node scripts/check-doc-links.mjs",
+    "check:i18n": "node scripts/check-i18n-parity.mjs",
+    "i18n:diagrams": "node scripts/generate-localized-diagrams.mjs",
+    "i18n:links": "node scripts/localize-i18n-links.mjs",
+    "i18n:revisions": "node scripts/sync-i18n-revisions.mjs",
     "i18n:zh-tw": "node scripts/generate-zh-tw.mjs",
     "i18n:status": "node scripts/i18n-status.mjs",
     "preview": "astro preview",

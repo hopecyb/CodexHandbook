@@ -1,104 +1,150 @@
 ---
-title: Choosing an extension method
-description: Decision tree from prompts to Automations—avoid using extensions for their own sake.
+title: Choose an extension method
+description: Choose prompts, AGENTS.md, Skills, MCP, Hooks, Plugins, or Scheduled tasks by what must persist.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 461cac4
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-More extension mechanisms mean higher cost when you pick the wrong one. This page helps you decide whether you need a Plugin or MCP before you install.
+The common mistake is selecting a technology name before identifying the problem. Ask first: **what must persist, or what should happen automatically?**
 
-These names get mixed up most often:
+The frequently confused names are:
 
-- Prompt
+- Prompts
 - AGENTS.md
-- Skill
+- Skills
 - MCP
-- Plugin
-- Automation
+- Plugins
+- Scheduled tasks
 
-All extend Codex—but sometimes a prompt is enough; sometimes you need something heavier.
+Sometimes a prompt is enough; heavier mechanisms are conditional.
 
-## Decision tree
+## Decision diagram
 
-```text
-Will the task repeat ≥3 times?
-├─ No → Use prompts + @ references
-└─ Yes → Need persistent rules?
-    ├─ Yes → Put in AGENTS.md
-    └─ No → Fixed, describable flow?
-        ├─ Yes → Build a Skill
-        └─ No → Need external systems?
-            ├─ Yes → Evaluate MCP (read-only first)
-            └─ No → Need unattended runs?
-                ├─ Yes → Automations + human gate
-                └─ No → Keep Skill + manual trigger
-```
+![Codex extension-method selection diagram](/diagrams/extension-selection-map-en.svg)
 
-Team needs to distribute multiple Skills + MCP? Consider **Plugin** at the end of the paths above.
+This is not an exclusive tree. A mature workflow may combine `AGENTS.md`, a Skill, and MCP; the diagram prevents assigning the wrong responsibility.
+
+## Seven questions
+
+### 1. Only this task?
+
+Use a prompt. State goal, input, scope, acceptance, and permissions.
+
+### 2. Every run in this repository?
+
+Use `AGENTS.md` for tests, style, prohibited directories, and install rules. Do not persist one-off requirements.
+
+### 3. Stable steps and output for a task class?
+
+Create a Skill with reusable instructions, templates, references, assets, or scripts. Keep experimenting in prompts until success is stable.
+
+### 4. External data or actions?
+
+Evaluate MCP or a Connector. List required tools and data, start read-only and least privilege, and avoid a connection when local files or commands suffice.
+
+### 5. Check at a fixed lifecycle point?
+
+Use a Hook for pre-command policy, post-write patch scan, or closing summary. Test timeout, failure, and false positives.
+
+### 6. Distribute a capability bundle?
+
+Use a Plugin for Skills, connectors, MCP, Hooks, and Scheduled templates. Installation does not automatically establish trust.
+
+### 7. Manually stable and needs repetition by time?
+
+Create a Scheduled task only after verifying prompt, Skill, permissions, and output. Inspect early runs and retain human publish/merge gates.
 
 ## Scenario mapping
 
-| Scenario | Suggested combo |
+| Scenario | Combination |
 |---|---|
-| Unify test and commit standards | AGENTS.md |
-| Pre-merge review checklist every time | Skill `pr-review` |
-| Pull ticket context from Linear | MCP + task prompt |
-| Weekly dependency report | Automation → open issue |
-| Secret scan before commit | Hooks (enterprise) or CI |
-| One-click tooling for new hires | Plugin (after security review) |
+| Standard tests and commit rules | AGENTS.md |
+| Pre-merge checklist | `pr-review` Skill |
+| Fetch Linear ticket context | MCP plus task prompt |
+| Weekly dependency report | Scheduled task → draft issue |
+| Scan a patch for secrets after writing | Hook or CI; both for high risk |
+| Distribute review flow and GitHub tools | Plugin after permission and Hook review |
+| Weekly dependency-risk report | Verified Skill + Scheduled task + human review |
+| Parallel security, test, maintainability reviews | Read-only subagents, main Agent consolidates |
 
 ## Cost dimensions
 
-| Mechanism | Authoring cost | Maintenance cost | Security risk |
+| Mechanism | Authoring | Maintenance | Security risk |
 |---|---|---|---|
 | Prompt | Low | Low | Low |
 | AGENTS.md | Medium | Medium | Low |
 | Skill | Medium | Medium | Low–medium |
 | MCP | High | High | Medium–high |
-| Plugin | Low (off-the-shelf) / high (custom) | Medium | Medium–high |
-| Automations | High | High | High |
+| Hook | Medium | Medium–high | Medium–high |
+| Plugin | Low to install / high to build | Medium–high | Medium–high |
+| Scheduled task | Medium | High | High |
 
 ## Anti-patterns
 
-- **Skill sprawl**: dozens of Skills with descriptions competing for matches
-- **MCP as hammer**: API where `git` would do
-- **Automation without acceptance**: scheduled code changes with nobody reviewing diffs
-- **Reinventing wheels**: custom MCP when an official Connector exists
+- **Skill bloat:** dozens of overlapping descriptions.
+- **MCP hammer:** API integration where `git` suffices.
+- **Unaccepted scheduling:** unattended code edits with no evidence, stop, or human review.
+- **Rebuilding official connectors:** unnecessary custom MCP.
+- **Misplaced rule:** one-off requirement in `AGENTS.md`.
+- **Hook overload:** long business logic on every tool call.
 
-## FAQ
+## Common questions
 
-### 1. Should I install Plugins and MCP from day one?
+### 1. Install Plugins and MCP immediately?
 
-Many problems are solved with prompts, scope control, and `AGENTS.md` first.
+No. Clear prompts, scope, and `AGENTS.md` solve many tasks.
 
-### 2. How do I read this tree?
+### 2. How many repetitions justify a Skill?
 
-One principle: start light; add weight only when needed.
+No fixed count. Stability, success criteria, and failure cost matter more.
 
-### 3. Where do most people start?
+### 3. Where do beginners start?
 
-Usually one of:
+Usually:
 
-- Prompt
+- Prompts
 - `AGENTS.md`
-- Skill
+- Skills
 
-You often do not need MCP or unattended automation on day one.
+MCP and unattended automation rarely belong at the beginning.
 
-What matters is fit with the problem—not how advanced the mechanism looks.
+Match responsibility, minimize permission, and verify results.
+
+## Minimal exercise
+
+For pre-merge diff review:
+
+1. Run a prompt twice and record repeated checks.
+2. Put fixed repository commands and generated-file exclusions in `AGENTS.md`.
+3. Put review steps, severity, and output format in a `pr-review` Skill.
+4. Add MCP/Connector only for GitHub comments or CI state.
+5. Add Hook or Scheduled only for fixed automatic checks.
+6. Build a Plugin only when several teams must install the bundle.
+
+For every added layer, ask: which access was added, how is it verified, and how is it disabled or rolled back?
 
 ## Further reading
 
-- [Capability map](/skills/capability-map/)
-- [Human approval patterns](/cases/workflows/human-approval-patterns/)
-- [Turn a workflow into a Skill](/cases/workflows/turn-a-workflow-into-a-skill/) (roadmap page)
+- [Capability map](/en/skills/capability-map/)
+- [Human approval patterns](/en/cases/workflows/human-approval-patterns/)
+- [Turn a workflow into a Skill](/en/cases/workflows/turn-a-workflow-into-a-skill/)
+
+## Official sources
+
+- [Skills and Plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+- [Build Codex Skills](https://learn.chatgpt.com/docs/build-skills)
+- [Codex MCP](https://learn.chatgpt.com/docs/extend/mcp)
+- [Codex Hooks](https://learn.chatgpt.com/docs/hooks)
+- [Codex Plugins](https://learn.chatgpt.com/docs/plugins)
+- [Scheduled tasks](https://learn.chatgpt.com/docs/automations)
 
 ---
 
-**Status:** outdated  
-**Applicable products:** App / CLI / IDE / Cloud  
-**Verification basis:** This decision tree touches current Automations, Plugins, MCP, and official Connector boundaries; those product surfaces change quickly and public material as of 2026-07-26 is not enough to stabilize the whole page.  
-**Last verified:** 2026-07-26
+**Status:** verified
+**Applies to:** ChatGPT Web / desktop App / Codex CLI / IDE (support differs by mechanism)
+**Verification basis:** Compared against OpenAI Skills, Plugins, MCP, Hooks, and Scheduled tasks documentation on 2026-08-25.
+**Last verified:** 2026-08-25

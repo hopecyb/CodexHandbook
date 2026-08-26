@@ -3,9 +3,10 @@ title: Fundamentos de Agent
 description: Explica como o Agent chama Ferramentas e avança de forma iterativa em torno de um objetivo.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -46,14 +47,14 @@ Quando ele começa a ler arquivos, alterá-los e rodar comandos, deixa de ser s�
 
 No começo, leia também:
 
-1. [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
-2. [Rodar a primeira Tarefa](/guide/getting-started/run-your-first-task/)
-3. [Revisar o resultado](/guide/getting-started/review-the-result/)
+1. [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
+2. [Rodar a primeira Tarefa](/pt/guide/getting-started/run-your-first-task/)
+3. [Revisar o resultado](/pt/guide/getting-started/review-the-result/)
 
 ## Conceitos relacionados
 
-- Skill / Plugin / MCP: ampliam «o que sabe fazer» e «a que se conecta» — veja [Extensão e automação](/skills/) e [Mapa de capacidades](/guide/start-here/codex-capability-map/)
-- Aprovação humana: veja [Permissões e Aprovação](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP: ampliam «o que sabe fazer» e «a que se conecta» — veja [Extensão e automação](/pt/skills/) e [Mapa de capacidades](/pt/guide/start-here/codex-capability-map/)
+- Aprovação humana: veja [Permissões e Aprovação](/pt/guide/foundations/permissions-and-approvals/)
 
 A característica do Agent é conseguir fazer vários passos seguidos em torno do objetivo — não só devolver um parágrafo.
 

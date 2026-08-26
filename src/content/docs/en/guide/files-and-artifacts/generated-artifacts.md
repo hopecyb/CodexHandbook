@@ -3,9 +3,10 @@ title: Verifying Generated Artifacts
 description: Systematically accept files, reports, and build outputs that Codex creates or exports.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 4b46d0b
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -48,7 +49,7 @@ Unlike “changed a few lines of existing code,” these are easy to overlook.
 5. Decide: accept / partial edit / discard and redo
 ```
 
-Methods: [Verify artifacts](/guide/quality/verify-artifacts/), [Definition of done](/guide/quality/definition-of-done/)
+Methods: [Verify artifacts](/en/guide/quality/verify-artifacts/), [Definition of done](/en/guide/quality/definition-of-done/)
 
 ## Common misconceptions
 
@@ -102,7 +103,7 @@ Generated does not mean verified—open, validate, and know whether it should be
 - [ ] No secrets, no stray generated directories
 
 ## Reference sources
-- [Handle uncertainty](/guide/quality/handle-uncertainty/)
+- [Handle uncertainty](/en/guide/quality/handle-uncertainty/)
 ---
 
 **Status:** verified  

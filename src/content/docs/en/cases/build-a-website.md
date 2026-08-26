@@ -3,9 +3,10 @@ title: Build a website
 description: A prototype case from requirements to a previewable page.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b3ec6d8
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Build a website
@@ -41,8 +42,8 @@ Give a wireframe plan first; wait for my confirmation before writing code.
 
 ## 4. Related
 
-- [Create template](/prompts/templates/create/)
-- [Artifact-first work](/cases/workflows/artifact-first-work/)
+- [Create template](/en/prompts/templates/create/)
+- [Artifact-first work](/en/cases/workflows/artifact-first-work/)
 
 ---
 

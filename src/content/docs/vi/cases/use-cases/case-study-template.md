@@ -3,9 +3,10 @@ title: Mẫu case
 description: Cấu trúc thống nhất để viết và rút kinh nghiệm case Codex — thuận tiện nhóm đóng gói và so sánh.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a430fba
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Sao chép mẫu này để tạo trang case mới hoặc tài liệu rút kinh nghiệm nội bộ.

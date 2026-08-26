@@ -5,9 +5,10 @@ sidebar:
   order: 10
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: a3f2555
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 デスクトップ App は初心者向けのデフォルト入口です。プロジェクト、タスク、差分、承認を視覚的に扱えます。
@@ -72,18 +73,18 @@ translated_at: 2026-07-28
 
 ## 本章
 
-- [インストールとインターフェース](/guide/desktop-app/installation-and-interface/)
-- [プロジェクトとタスク](/guide/desktop-app/projects-and-tasks/)
-- [並列 Agent](/guide/desktop-app/parallel-agents/)
-- [worktree](/guide/desktop-app/worktrees/)
-- [差分、コメント、レビュー](/guide/desktop-app/diffs-comments-and-review/)
-- [統合ターミナル](/guide/desktop-app/integrated-terminal/)
-- [ローカルと Cloud タスク](/guide/desktop-app/local-and-cloud-tasks/)
-- [通知](/guide/desktop-app/notifications/)
-- [設定](/guide/desktop-app/settings/)
-- [トラブルシューティング](/guide/desktop-app/troubleshooting/)
+- [インストールとインターフェース](/ja/guide/desktop-app/installation-and-interface/)
+- [プロジェクトとタスク](/ja/guide/desktop-app/projects-and-tasks/)
+- [並列 Agent](/ja/guide/desktop-app/parallel-agents/)
+- [worktree](/ja/guide/desktop-app/worktrees/)
+- [差分、コメント、レビュー](/ja/guide/desktop-app/diffs-comments-and-review/)
+- [統合ターミナル](/ja/guide/desktop-app/integrated-terminal/)
+- [ローカルと Cloud タスク](/ja/guide/desktop-app/local-and-cloud-tasks/)
+- [通知](/ja/guide/desktop-app/notifications/)
+- [設定](/ja/guide/desktop-app/settings/)
+- [トラブルシューティング](/ja/guide/desktop-app/troubleshooting/)
 
-入門はこちら：[デスクトップ App のインストール](/guide/getting-started/install-desktop-app/)
+入門はこちら：[デスクトップ App のインストール](/ja/guide/getting-started/install-desktop-app/)
 
 デスクトップ App は Codex との基本的な協業を先に通すのに向いており、その後にコマンドラインやより高度なワークフローを補えます。
 

@@ -3,50 +3,56 @@ title: Notificações
 description: Acompanhar a conclusão de Tarefas longas e lembretes de Aprovação.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 0869db2
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 80
+reviewed_at: 2026-08-26
 ---
 
-As notificações servem sobretudo para assinalar o estado da Tarefa, para não ficar presa em segundo plano à espera de Aprovação, ou concluída sem você notar.
 
-Usam-se para:
+Notifications tell you when a task needs attention. They do not replace review. The desktop App can notify you when a turn completes and can separately control alerts for permission requests and questions.
 
-- Conclusão de Tarefas longas
-- Espera da sua Aprovação
-- Falha ou necessidade de acompanhamento
+## Recommended configuration
 
-Nas definições do sistema, mantenha as notificações necessárias, para que Tarefas em segundo plano não fiquem sem tratamento. Notificações ligadas a automação ficam para capítulos posteriores; aqui o foco são os lembretes de Tarefa dentro da App.
+Open **Settings → Notifications**:
 
-## Dúvidas frequentes
+| Event | Recommendation | Reason |
+|---|---|---|
+| Turn completion | Notify when running in the background | You do not need to watch a long task continuously |
+| Permission | Enable | An unanswered approval request pauses the task |
+| Question | Enable | Codex needs your response when key context is missing |
 
-### 1. Com a App sempre aberta, ainda preciso de notificações?
+The operating system must also allow the ChatGPT desktop App to send notifications. Enabling them inside the App is not enough if the OS denies permission.
 
-Na maioria dos casos, sim. Se a Tarefa demora ou espera a sua Aprovação a meio, a notificação evita que fique a olhar para o ecrã o tempo todo.
+## Manage multiple chats in Activity
 
-### 2. Quais notificações convém manter?
+When Activity is available, select the bell in the sidebar to view chats that are unread, running, or awaiting a response. The shortcut is:
 
-Priorize estas:
+- macOS: `Cmd + Option + U`
+- Windows: `Ctrl + Alt + U`
 
-- Tarefa concluída
-- À espera de Aprovação
-- Falha na execução
+Filters depend on the current interface and may include Work, Chat, Pinned, and Scheduled. A useful processing order is: awaiting permission or input → failed → completed and awaiting review → still running.
 
-### 3. O que acontece se desligar todas?
+## What to do after a notification
 
-Pode não haver problema imediato, mas fica mais fácil:
+- **Completed:** open the diff and verification output; a notification is not an acceptance result.
+- **Permission request:** confirm the command, target resource, impact, and reversibility.
+- **Awaiting an answer:** add only the context needed; do not expand the task incidentally.
+- **Failed:** find the first meaningful error, then decide whether to retry or adjust the constraints.
 
-- A Tarefa já ter parado
-- Estar à espera da sua aprovação
-- O resultado já ter saído e você não ter visto
+CLI and IDE notifications work differently. The IDE has no separate notification settings. The CLI can use advanced configuration for TUI or external-program completion notifications. Desktop settings are not a global switch.
 
-Se desligar todas as notificações, é mais fácil perder estas mudanças de estado.
+## Official sources
+
+- [Notifications](https://learn.chatgpt.com/docs/notifications)
+- [Desktop App settings](https://learn.chatgpt.com/docs/app/settings)
 
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** App  
-**Nota de revisão:** A descrição dos tipos de notificação, avisos de espera de Aprovação e lembretes de Tarefas em segundo plano pode continuar válida, mas falta documentação oficial atual bastante sólida sobre como se apresentam e configuram na nova aplicação de desktop.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App
+
+**Last verified:** 2026-08-26

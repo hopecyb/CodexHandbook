@@ -3,14 +3,15 @@ title: Comandos e atalhos
 description: Subcomandos da CLI, operações na sessão e hábitos de teclado — explicação orientada ao produto; parâmetros completos na zona de referência.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6a36a12
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 50
+reviewed_at: 2026-08-26
 ---
 
-A eficiência no terminal vem de três blocos: **forma de arranque**, **atalhos dentro da sessão** e **coordenação com scripts/editores**. Esta página fala de uso e hábitos; tabelas de parâmetros em [Referência de comandos da CLI](/guide/reference/commands/) e [Atalhos de teclado](/guide/reference/keyboard-shortcuts/).
+A eficiência no terminal vem de três blocos: **forma de arranque**, **atalhos dentro da sessão** e **coordenação com scripts/editores**. Esta página fala de uso e hábitos; tabelas de parâmetros em [Referência de comandos da CLI](/pt/guide/reference/commands/) e [Atalhos de teclado](/pt/guide/reference/keyboard-shortcuts/).
 
 ## Conteúdo desta página
 
@@ -34,9 +35,9 @@ Com isto claro, a escolha de muitos comandos fica bem mais simples.
 
 | O que quer fazer | Entrada | Detalhe |
 |---|---|---|
-| Conversar enquanto altera código | TUI interativa `codex` | [Modo interativo](/guide/cli/interactive-mode/) |
-| Tarefa pontual em CI / pipeline | `codex exec` (ou equivalente) | [Modo não interativo](/guide/cli/non-interactive-mode/) |
-| Alterar o comportamento predefinido | Ficheiro de configuração | [Configuração da CLI](/guide/cli/configuration/) |
+| Conversar enquanto altera código | TUI interativa `codex` | [Modo interativo](/pt/guide/cli/interactive-mode/) |
+| Tarefa pontual em CI / pipeline | `codex exec` (ou equivalente) | [Modo não interativo](/pt/guide/cli/non-interactive-mode/) |
+| Alterar o comportamento predefinido | Ficheiro de configuração | [Configuração da CLI](/pt/guide/cli/configuration/) |
 
 :::note
 Os nomes dos subcomandos mudam com a versão; siga `codex --help`.
@@ -79,11 +80,11 @@ As teclas concretas e os comandos `/` diferem entre versões, mas as categorias 
 
 ### Comandos de barra
 
-No prompt, digite `/` para disparar fluxos internos (revisão, compactar Contexto, etc.). **Não decore a lista de cor** — siga a completação `/` do ambiente atual. Classificação para aprendizagem: [Consulta rápida de comandos de barra](/guide/reference/slash-commands/).
+No prompt, digite `/` para disparar fluxos internos (revisão, compactar Contexto, etc.). **Não decore a lista de cor** — siga a completação `/` do ambiente atual. Classificação para aprendizagem: [Consulta rápida de comandos de barra](/pt/guide/reference/slash-commands/).
 
 ### Relacionados com Aprovação
 
-Quando o Agent pede para correr shell ou escrever ficheiros, a interface interativa pede aprovar / rejeitar / permitir sempre (se existir). Antes de deixar sem supervisão, leia [Aprovação e Sandbox](/guide/cli/approvals-and-sandbox/).
+Quando o Agent pede para correr shell ou escrever ficheiros, a interface interativa pede aprovar / rejeitar / permitir sempre (se existir). Antes de deixar sem supervisão, leia [Aprovação e Sandbox](/pt/guide/cli/approvals-and-sandbox/).
 
 ## Atalhos na camada Shell (recomendado)
 
@@ -113,11 +114,11 @@ Assim evita cair logo em «ainda não domina a ferramenta e já a encapsulou nou
 
 | | CLI | Extensão IDE |
 |---|---|---|
-| Contexto | `--cwd`, ficheiros `@` (conforme a versão) | Ficheiros abertos, código selecionado |
+| Contexto | `--cd`, ficheiros `@` (conforme a versão) | Ficheiros abertos, código selecionado |
 | Adequado a | Scripts, SSH remoto, terminal puro | Alterar enquanto vê o Diff |
 | Atalhos | Teclas do terminal + `/` | Paleta de comandos do editor |
 
-IDE: [Fluxo de Tarefas locais](/guide/ide/local-task-workflow/)
+IDE: [Fluxo de Tarefas locais](/pt/guide/ide/local-task-workflow/)
 
 ## Erros comuns
 

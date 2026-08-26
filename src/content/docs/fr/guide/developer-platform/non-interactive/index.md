@@ -3,9 +3,10 @@ title: "Mode non interactif"
 description: Jobs par lot, scripts et pipelines — comprendre quelles tâches conviennent d'abord, puis les commandes et le design de sortie.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e226a62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beaucoup entendent d'abord « mode non interactif » et pensent « Codex sans chat ».
@@ -14,10 +15,10 @@ Le mode non interactif sert à mettre Codex dans des scripts, CI ou jobs par lot
 
 ## Ordre recommandé
 
-1. [codex exec](/guide/developer-platform/non-interactive/codex-exec/)
-2. [Scripts et pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/)
-3. [Sortie structurée](/guide/developer-platform/non-interactive/structured-output/)
-4. [Codes de sortie et retries](/guide/developer-platform/non-interactive/exit-codes-and-retries/)
+1. [codex exec](/fr/guide/developer-platform/non-interactive/codex-exec/)
+2. [Scripts et pipelines](/fr/guide/developer-platform/non-interactive/scripts-and-pipelines/)
+3. [Sortie structurée](/fr/guide/developer-platform/non-interactive/structured-output/)
+4. [Codes de sortie et retries](/fr/guide/developer-platform/non-interactive/exit-codes-and-retries/)
 
 ## Ce que cette section résout
 

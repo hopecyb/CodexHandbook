@@ -1,92 +1,56 @@
 ---
-title: Corregir un bug
-description: Del test fallido a la corrección mínima y la regresión — el bucle más habitual para desarrolladores.
+title: 'Corregir un bug: por dónde empezar'
+description: Elige la ruta de corrección que corresponda a tu situación y continúa con el caso completo y ejecutable.
 locale: es
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_locale: zh-cn
+source_revision: 27c707b
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-## Metadatos
+Esta es una página de entrada breve. Los pasos completos, el código ejecutable, las evidencias de pruebas en rojo y verde y los prompts de cada fase se mantienen en [Corrección de bugs con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/) para evitar que dos páginas se repitan y acaben contradiciéndose.
 
-| Campo | Contenido |
+## Identifica qué paso te falta
+
+| Situación actual | Empieza aquí |
 |---|---|
-| Público | Desarrolladores |
-| Cliente | CLI o IDE (repositorio local) |
-| Tiempo estimado | 30–60 minutos |
-| Fecha de verificación | 2026-07-25 |
+| Solo sabes que el resultado es incorrecto; todavía no hay una reproducción estable | [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/) |
+| Ya existe una prueba que falla de forma fiable | [Corrección de bugs con verificación](/es/cases/use-cases/software-development/fix-a-bug-with-verification/) |
+| No conoces el módulo relacionado | [Comprender una base de código](/es/cases/understand-a-codebase/) |
+| La corrección está terminada y lista para fusionar | [Revisar un PR](/es/cases/review-a-pr/) |
+| La propia prueba es inestable | Lee primero [Ejecutar pruebas](/es/guide/quality/run-tests/); una flaky test no demuestra una corrección |
 
-## 1. Objetivo y contexto
+## Ciclo mínimo de evidencias
 
-**Objetivo:** Corregir un bug de regresión capturado por un test unitario y añadir tests para que no se repita.
+Conserva esta cadena de evidencias en cualquier lenguaje o framework:
 
-**Criterios de éxito:**
+1. Reproduce de forma fiable el fallo original con un comando explícito.
+2. Guarda la aserción que falla, la salida de error y las condiciones de entrada.
+3. Explica la causa raíz antes de realizar la corrección mínima.
+4. Haz que pasen la prueba que fallaba y las nuevas pruebas de límites.
+5. Ejecuta comprobaciones de regresión más amplias.
+6. Lee manualmente el diff y rechaza cambios que no estén relacionados.
 
-- El test que fallaba pasa
-- La suite completa sigue en verde
-- El diff solo toca los archivos necesarios
+El paso 4 sin el paso 1 no demuestra que la prueba cubra el problema original. Una suite completa en verde sin revisar el diff tampoco demuestra que el alcance del cambio sea correcto.
 
-**Fuera de alcance:** Refactorizaciones grandes, upgrades major de dependencias.
+## Practicar directamente
 
-## 2. Preparación
+El repositorio incluye un ejemplo JavaScript de descuentos en un carrito que no necesita paquetes de terceros:
 
-- Clonar el repo, `pnpm install` (o según `AGENTS.md`)
-- Confirmar reproducción local: `pnpm test -- path/to/failing.test.ts`
-- Rama: `fix/issue-123-short-desc`
+```bash
+# Código inicial: se espera que falle una prueba
+node --test examples/complete-workflows/developer/verified-bug-fix/starter/cart.test.js
 
-## 3. Flujo de trabajo
-
-### Explorar
-
-```text
-No cambies el código todavía. Lee el test fallido @tests/auth/login.test.ts y la implementación @src/auth/login.ts,
-explica la causa del fallo en 5 puntos como máximo, citando aserciones y números de línea del stack.
+# Solución de referencia: se espera que pasen las tres pruebas
+node --test examples/complete-workflows/developer/verified-bug-fix/solution/cart.test.js
 ```
 
-### Planificar
-
-```text
-Propón un plan de corrección: qué archivos cambiar, si hacen falta tests nuevos, cómo verificar.
-Espera mi respuesta «ejecutar» antes de tocar el código.
-```
-
-### Ejecutar
-
-```text
-Ejecuta los pasos 1–2 del plan. Tras cada paso, corre solo los tests relacionados.
-```
-
-### Verificar
-
-```text
-Ejecuta la suite completa; resume el diff para mi review; no hagas git push.
-```
-
-Humano: lee el diff, confirma que no hay cambios ajenos y revisa según [Revisar diffs](/guide/quality/review-diffs/).
-
-## 4. Fallo y recuperación
-
-| Problema | Tratamiento |
-|---|---|
-| La corrección introduce nuevos fallos | `git stash` o revertir el commit; reduce el alcance |
-| Diagnóstico incorrecto | Vuelve a explorar y pide una nueva hipótesis |
-| Test flaky | Estabiliza el test antes de corregir la lógica de negocio |
-
-## 5. Captura para reutilizar
-
-- Si este tipo de bug se repite, añade una convención en `AGENTS.md`
-- Puedes extraer el Skill `$regression-guard`: ejecutar la lista de tests críticos antes de fusionar
-
-## 6. Capítulos relacionados
-
-- [Entender un código base](/cases/understand-a-codebase/)
-- [Revisar diffs](/guide/quality/review-diffs/)
-- [Ejecutar tests](/guide/quality/run-tests/)
+Los materiales completos están en [`examples/complete-workflows/developer/verified-bug-fix/`](https://github.com/hopecyb/CodexHandbook/tree/main/examples/complete-workflows/developer/verified-bug-fix).
 
 ---
 
-**Estado:** verified  
-**Productos aplicables:** CLI / IDE  
-**Última verificación:** 2026-07-26  
-**Base de verificación:** La home de OpenAI Developers sigue describiendo Codex como útil para corregir defectos, ejecutar tests y revisar cambios. Este ejemplo se centra en el bucle estable «reproducir el fallo → corrección mínima → tests complementarios → verificación de regresión», sin depender de un framework o UI concretos.
+**Estado:** verified
+**Productos aplicables:** CLI / IDE
+**Base de verificación:** Esta página de entrada solo mantiene la elección de ruta y un ciclo de ingeniería estable. Los comandos con el fallo esperado y con la solución correcta se ejecutaron en el repositorio actual.
+**Última verificación:** 2026-08-25

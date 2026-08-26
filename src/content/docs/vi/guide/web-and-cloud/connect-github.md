@@ -3,99 +3,70 @@ title: Kết nối GitHub
 description: "Nối Codex Cloud với repo GitHub — quyền, nhánh và môi trường."
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b811894
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
-Sau khi kết nối GitHub, Codex có thể clone repo, tạo nhánh, push và mở PR trong **môi trường từ xa** — tiền đề cho quy trình Cloud.
+Codex Cloud connects to GitHub or GitLab (Beta) before creating an environment for a repository. The GitHub authorization scope determines which repositories it can see. A local clone and unpushed changes are outside that scope.
 
-## Nội dung phủ
+## Connect
 
-- Vì sao cần kết nối và nên cấp quyền nào
-- Checklist trước và sau khi kết nối
-- Khác gì với Tác vụ cục bộ trên máy tính
+1. Open Codex Cloud and sign in with a ChatGPT account.
+2. Connect GitHub when prompted.
+3. In GitHub authorization, select the organization and **only the required repositories**.
+4. Return to Codex, select the repository, and create a Cloud environment.
+5. Verify checkout, branch, and diff with a read-only or small-change task.
+6. To use PR review, enable Code review for the repository in Codex Settings.
 
-## Sơ đồ quan hệ
+Authorize only repositories needed for the work. For team repositories, confirm that the organization permits the integration, your account has the required access, and branch protection remains enabled.
+
+## Before and after connecting
+
+- [ ] The target is not an unintended fork with the same name.
+- [ ] The default branch and task starting point are known.
+- [ ] Required local changes are pushed or explicitly excluded.
+- [ ] Direct, unreviewed writes to the main branch are blocked.
+- [ ] The environment has no unrestricted production credentials.
+- [ ] The first task changes only a low-risk file.
+
+## Two GitHub workflows
+
+### Let Cloud implement a task
+
+Select the repository environment and starting branch in Codex Cloud, then describe the goal. Review the diff before creating a PR.
+
+### Let Codex review a PR
+
+After enabling Code review, comment on the PR:
 
 ```text
-Repository GitHub của bạn
-    ↕ (OAuth / GitHub App — tùy sản phẩm)
-Môi trường Codex Cloud
-    ↕
-Tác vụ Cloud bạn khởi động trên Web/App
+@codex review
 ```
 
-[App máy tính](/guide/desktop-app/) cục bộ vẫn có thể sửa trực tiếp bản clone trên máy; Cloud phù hợp **môi trường chuẩn hóa, chạy khi không ngồi máy và Phê duyệt trên mobile**. Xem [cục bộ và đám mây](/guide/foundations/local-vs-cloud/).
+Codex posts a standard GitHub review. Automatic review must be enabled separately in Codex Settings. Teams can add repository-specific rules under `## Code Review Rules` in `AGENTS.md`.
 
-## Hiểu nhầm thường gặp
+## Diagnose permission errors
 
-### 1. Tôi đã có repo cục bộ — vì sao lại phải kết nối GitHub?
+- Repository missing: inspect the GitHub repository scope.
+- Organization repository returns 403: inspect organization policy, SSO, and integration installation.
+- Automatic review cannot be enabled: confirm the required GitHub push or admin permission.
+- Cloud cannot see a local commit: Cloud checks out the remote repository; push it to an explicit branch.
 
-Tác vụ Cloud thấy repository từ xa, không phải bản sao cục bộ của bạn.
+Do not grant access to every private repository to resolve one 403. Identify the exact target and missing permission first.
 
-### 2. Một khi đã kết nối, Codex thấy mọi thay đổi cục bộ?
+## Official sources
 
-Thay đổi cục bộ chưa push thường vô hình với Cloud.  
-Đây là điểm dễ nhầm phổ biến.
-
-### 3. Khi kết nối, điều gì quan trọng nhất?
-
-Xác nhận trước:
-
-- Phạm vi repo có quá rộng không
-- Bảo vệ nhánh cấu hình thế nào
-- Secrets có lưu trong cấu hình bảo mật Cloud, không phải trong repo không
-
-Sau khi kết nối, Cloud thấy repo từ xa — không phải trạng thái chưa push trên laptop.
-
-## Checklist trước khi kết nối
-
-- [ ] Bạn có quyền push tới repo đích (hoặc dùng chiến lược fork nếu chỉ cần PR)
-- [ ] Hiểu bảo vệ nhánh: push thẳng lên main bị chặn?
-- [ ] Secrets không nằm trong repo; Cloud dùng [cấu hình Secrets](/guide/web-and-cloud/secrets-and-variables/)
-- [ ] Tổ chức cho phép tích hợp GitHub bên thứ ba
-
-## Các bước khuyến nghị (khái niệm)
-
-1. Mở **kết nối GitHub** trong cài đặt Codex Web/Cloud
-2. Chọn tổ chức và phạm vi repo (**thu nhỏ danh sách repo**)
-3. Đọc văn bản quyền OAuth: thường đọc code và mở PR; quyền ghi tùy Tác vụ
-4. Chạy một Tác vụ Cloud nhỏ trên repo thử để xác nhận
-5. Thành công rồi mới đặt nhánh mặc định và biến môi trường nếu cần
-
-UI và nút cụ thể tùy sản phẩm hiện tại.
-
-## Quyền và bảo mật
-
-| Thực hành | Vì sao |
-|---|---|
-| Dùng tài khoản máy hoặc bot riêng (đội) | Đường kiểm toán và offboarding |
-| Không ủy quyền mọi repo riêng | Bán kính ảnh hưởng nhỏ hơn |
-| Bật bảo vệ nhánh + review bắt buộc | Đầu ra Cloud vẫn qua review người |
-| Định kỳ kiểm toán repo đã kết nối | Ngắt kết nối dự án đã rút |
-
-## Tác vụ thường gặp sau khi kết nối
-
-- Triển khai issue từ xa → [Tạo Pull Request](/guide/web-and-cloud/create-pull-requests/)
-- Review PR và theo dõi → tích hợp [GitHub](/guide/integrations/github/)
-- Kết hợp với [Automations](/skills/automations/scheduled-tasks/)
-
-## Lỗi thường gặp
-
-- Kết nối tài khoản GitHub cá nhân với repo org production kèm chính sách cá nhân
-- Giả định Cloud truy cập được commit chưa push trên máy
-- Lần đầu thử đã chạy Tác vụ không giới hạn trên monorepo lớn
-
-## Tham chiếu
-
-- Tài liệu tích hợp OpenAI Codex Cloud / GitHub
+- [Codex Cloud quickstart](https://learn.chatgpt.com/docs/cloud)
+- [GitHub pull-request review](https://learn.chatgpt.com/docs/third-party/github)
 
 ---
 
-**Trạng thái:** outdated  
-**Sản phẩm áp dụng:** Cloud / Web  
-**Ghi chú đối chiếu:** Trang phụ thuộc luồng kết nối GitHub hiện tại, mẫu ủy quyền, cài đặt phạm vi repo và lối vào UI Cloud — chi tiết tích hợp biến động cao cần tài liệu kết nối chính thức hiện hành trước khi trả về `verified`.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Áp dụng cho:** Cloud, GitHub
+
+**Kiểm chứng gần nhất:** 2026-08-26

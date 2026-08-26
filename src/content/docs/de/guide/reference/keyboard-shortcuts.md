@@ -1,112 +1,65 @@
 ---
-title: Tastenkürzel
-description: 'Lernindex gängiger Shortcuts in App, CLI-TUI und IDE-Erweiterung — aktuelle Version maßgeblich.'
-locale: de
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+title: Tastenkombinationen
+description: Nur aktuell in der offiziellen Dokumentation bestätigte Kurzbefehle für App und IDE.
 sidebar:
   order: 90
+locale: de
+source_locale: zh-CN
+source_revision: 0edf4f3
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Shortcuts unterscheiden sich stark nach **Client und Version**. Diese Seite ordnet nach **Absicht** — ob es einen schnelleren Weg gibt; konkrete Tasten in Hilfe oder Settings des Produkts.
+Tastenkombinationen unterscheiden sich nach Plattform, Client und eigenen Einstellungen. Diese Seite enthält nur Kombinationen, die in der aktuellen offiziellen Dokumentation ausdrücklich beschrieben sind. Die vollständige Liste findest du in der App unter **Keyboard Shortcuts**.
 
-Nicht alles auf einmal lernen. Die wenigen Aktionen, die den Rhythmus am häufigsten unterbrechen, reibungslos zu machen, reicht oft.
+## Desktop-App
 
-:::caution
-Tabelle unten ist **illustrativ**, keine vollständige Bindungstabelle. Nach Updates können Tasten wechseln.
-:::
+| Aktion | macOS | Windows |
+|---|---|---|
+| Settings öffnen | `Cmd + ,` | `Ctrl + ,` |
+| Activity öffnen/schließen | `Cmd + Option + U` | `Ctrl + Alt + U` |
+| Integriertes Terminal öffnen | `Ctrl` + Gravis-Taste | `Ctrl` + Gravis-Taste |
+| Befehlspalette der App öffnen | `Cmd + K` | Maßgeblich ist Keyboard Shortcuts |
+| Terminalanzeige leeren | `Ctrl + L` | `Ctrl + L` |
 
-## Index nach Absicht
+`Cmd + K` öffnet die Befehlspalette der App und leert nicht das Terminal.
 
-| Absicht | Desktop-App (illustrativ) | CLI-TUI (illustrativ) | IDE-Erweiterung (illustrativ) |
-|---|---|---|---|
-| Neue Aufgabe/Sitzung | `Cmd/Ctrl+N` oder Seitenleiste | Neu starten / neuer Thread-Befehl | Befehlspalette «Codex» |
-| Nachricht senden | `Enter` / `Cmd+Enter` | laut Produktdoku | Senden im Panel |
-| Zeilenumbruch ohne Senden | `Shift+Enter` | je TUI | je Panel |
-| Befehlspalette | `Cmd/Ctrl+K`-ähnlich | `/` Slash | `Cmd/Ctrl+Shift+P` |
-| Historie suchen | Seitenleisten-Suche | Sitzungssuche (falls vorhanden) | Chat-Historie |
-| Werkzeugaufruf freigeben | Panel-Button | `y` / Pfeiltasten (je TUI) | Notification oder Inline |
-| Ablehnen | Panel-Button | `n` | Inline ablehnen |
+Unter Keyboard Shortcuts in Settings kannst du nach Befehlsnamen oder Tasten suchen, Belegungen ändern und Standardwerte wiederherstellen. Nach einer Anpassung haben deine lokalen Einstellungen Vorrang vor einer Online-Übersicht.
 
-**Maßgeblich: UI Ihrer installierten Version.**
+## IDE
 
-## Welche Aktionen zuerst
+In VS-Code-basierten Editoren legt `chatgpt.composerEnterBehavior` fest, wie Enter und `Cmd/Ctrl + Enter` einen mehrzeiligen Prompt absenden. Gehe nicht davon aus, dass jede Installation dieselbe Sendetaste verwendet.
 
-Shortcuts reduzieren vor allem:
+Während Codex arbeitet, bestimmt `chatgpt.followUpQueueMode`, ob eine neue Nachricht in die Warteschlange kommt oder die aktuelle Ausführung sofort steuert. Mit `Cmd/Ctrl + Shift + Enter` kannst du für eine einzelne Nachricht das aktuelle Standardverhalten umkehren.
 
-- Senden und erst den Button suchen
-- Umbruch und versehentlich senden
-- Freigabe und hektisches Klicken
-- Neue Aufgabe und unklarer Einstieg
+Wenn die Codex-Seitenleiste nicht sichtbar ist, führe in der Befehlspalette des Editors Folgendes aus:
 
-Statt alles zu pauken — zuerst diese 4:
+```text
+Codex: Open Codex Sidebar
+```
 
-- Senden / Umbruch
-- Neue Aufgabe
-- Befehlspalette
-- Freigeben / Ablehnen
+## CLI
 
-## Slash vs. Tastatur
+Die Bedienung der CLI-TUI entnimmst du `/help` und den Hinweisen der aktuellen Version. Diese Seite spekuliert nicht über Genehmigungstasten wie `y` oder `n`, da Terminal, Modus und Version die Interaktion verändern können.
 
-- **Slash-Befehle**: `/review`, `/help` … — [Slash-Befehle](/guide/reference/slash-commands/)
-- **Shortcuts**: UI-Aktion ohne Text
+Das allgemeine Terminalsignal `Ctrl + C` kann einen laufenden Befehl oder eine Sitzung unterbrechen. Prüfe zuerst den aktuellen Zustand und behandle es nicht als nebenwirkungsfreie „Zurück“-Taste.
 
-Kombinierbar: zuerst `Cmd+K` Fokus, dann `/review`.
+## Lernreihenfolge
 
-## CLI-Terminalnutzer
+Lerne zuerst, wie du Settings, Activity und Terminal öffnest und mehrzeilige Prompts sendest. Suche weitere Tastenkombinationen nach den für dich tatsächlich häufigen Aktionen in der App. Teamdokumentation sollte Aktionsnamen beschreiben und keine identischen benutzerdefinierten Belegungen erzwingen.
 
-- **Ctrl+C** zum Abbrechen außer Kontrolle (Vorsicht: ungespeicherter Zustand?)
-- Terminal-Multiplexer (tmux): Codex und `git diff` nebeneinander
-- Häufiges `codex exec` als Shell-Alias — [Befehle und Shortcuts](/guide/cli/commands-and-shortcuts/)
+## Offizielle Grundlage
 
-## Häufige Missverständnisse
+- [Desktop app settings](https://learn.chatgpt.com/docs/app/settings)
+- [Notifications and Activity](https://learn.chatgpt.com/docs/notifications)
+- [Integrated terminal](https://learn.chatgpt.com/docs/integrated-terminal)
+- [IDE settings](https://learn.chatgpt.com/docs/ide/settings)
 
-### 1. Shortcuts pauken vor dem Nutzen?
-
-Die häufigsten Aktionen flüssig machen senkt die Kosten stark.
-
-### 2. Andere sind flüssig = ich bin ungeschickt?
-
-Shortcuts sind Muskelgedächtnis nach Familiarität — keine Einstiegshürde.
-
-### 3. Alle Clients auf dieselben Tasten zwingen?
-
-Wichtiger zu wissen:
-
-- Gibt es einen Shortcut für die Aktion?
-- Wo nachschlagen und umbinden?
-- Welche Aktionen lohnen zuerst
-
-## Am Anfang diese fünf
-
-1. Wie senden
-2. Wie Umbruch ohne Senden
-3. Wie Befehlspalette
-4. Wie freigeben oder ablehnen
-5. Wie neue Aufgabe
-
-Sind diese fünf flüssig, weitere Shortcuts nebenbei.
-
-## IDE-Nutzer
-
-- «Ausgewählten Code mit Codex erklären» auf bequeme Taste legen
-- Mit nativem Diff und Go-to-Definition — weniger Copy-Paste
-
-[IDE-Einstellungen](/guide/ide/settings/) · [Ausgewählter Code und offene Dateien](/guide/ide/selected-code-and-open-files/)
-
-## Barrierefreiheit und Anpassung
-
-Die meisten Clients erlauben Umbinden in Settings. Teams können **empfohlene Bindungen** dokumentieren — ohne Zwang zur Einheitlichkeit.
-
-Shortcuts sind kein Prüfungsstoff. Die Aktionen, die Sie am häufigsten unterbrechen, flüssig machen reicht meist.
-
-## Quellen
-- Offizielle Settings / Keyboard-shortcuts-Seiten der Produkte
 ---
 
-**Status:** outdated  
-**Anwendbare Produkte:** App / CLI / IDE  
-**Prüfhinweis:** Mehrfach als illustrativ gekennzeichnet, enthält aber Annahmen zu aktuellen Client-Shortcuts, Senden, Palette und Freigabetasten — stark versions-/plattformabhängig; ohne starke einheitliche offizielle Shortcut-Doku.  
-**Zuletzt geprüft:** 2026-07-26
+**Status:** verified
+
+**Unterstützte Produkte:** App, CLI, IDE
+
+**Zuletzt geprüft:** 2026-08-26

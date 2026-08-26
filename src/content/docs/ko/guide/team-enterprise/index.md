@@ -5,12 +5,13 @@ sidebar:
   order: 70
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 3a4af60
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**팀과 엔터프라이즈** 장은 엔지니어링 책임자, 플랫폼·보안 팀을 향합니다. Codex를 개인이 쓸 수 있는 수준에서 팀이 관리·감사·복기할 수 있는 수준으로 올리는 데 초점을 둡니다. [학습 경로 · 팀](/guide/learning-paths/team/)과 함께 읽을 때, 이 장은 거버넌스와 정착에 더 가깝습니다.
+**팀과 엔터프라이즈** 장은 엔지니어링 책임자, 플랫폼·보안 팀을 향합니다. Codex를 개인이 쓸 수 있는 수준에서 팀이 관리·감사·복기할 수 있는 수준으로 올리는 데 초점을 둡니다. [학습 경로 · 팀](/ko/guide/learning-paths/team/)과 함께 읽을 때, 이 장은 거버넌스와 정착에 더 가깝습니다.
 
 아직 개인 사용이거나 기초 사용법에 익숙해지는 단계라면, 이 장은 나중에 봐도 됩니다. 여기서는 여러 사람이 함께 쓸 때 경계, 프로세스, 책임을 어떻게 정리할지를 주로 다룹니다.
 
@@ -31,9 +32,9 @@ translated_at: 2026-07-28
 
 | 역할 | 먼저 읽을 것 |
 |---|---|
-| EM / 책임자 | [위협 모델](/guide/team-enterprise/security/threat-model/) · [허용 가능한 사용](/guide/team-enterprise/governance/acceptable-use/) |
-| 플랫폼 엔지니어링 | [팀 규칙](/guide/customization/rules/team-rules/) · [Hooks](/skills/hooks/hooks-overview/) |
-| 보안 | [Plugin과 MCP 위험](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [프롬프트 주입](/guide/team-enterprise/security/prompt-injection/) |
+| EM / 책임자 | [위협 모델](/ko/guide/team-enterprise/security/threat-model/) · [허용 가능한 사용](/ko/guide/team-enterprise/governance/acceptable-use/) |
+| 플랫폼 엔지니어링 | [팀 규칙](/ko/guide/customization/rules/team-rules/) · [Hooks](/ko/skills/hooks/hooks-overview/) |
+| 보안 | [Plugin과 MCP 위험](/ko/guide/team-enterprise/security/plugin-and-mcp-risk/) · [프롬프트 주입](/ko/guide/team-enterprise/security/prompt-injection/) |
 
 ## 거버넌스 모델(개념)
 
@@ -51,15 +52,15 @@ translated_at: 2026-07-28
 
 | 주제 | 페이지 |
 |---|---|
-| 보안 | [위협 모델](/guide/team-enterprise/security/threat-model/) · [Plugin/MCP 위험](/guide/team-enterprise/security/plugin-and-mcp-risk/) · [프롬프트 주입](/guide/team-enterprise/security/prompt-injection/) |
-| 거버넌스 | [허용 가능한 사용 정책](/guide/team-enterprise/governance/acceptable-use/) |
+| 보안 | [위협 모델](/ko/guide/team-enterprise/security/threat-model/) · [Plugin/MCP 위험](/ko/guide/team-enterprise/security/plugin-and-mcp-risk/) · [프롬프트 주입](/ko/guide/team-enterprise/security/prompt-injection/) |
+| 거버넌스 | [허용 가능한 사용 정책](/ko/guide/team-enterprise/governance/acceptable-use/) |
 
-로드맵은 adoption, administration, deployment-patterns 등 세부 항목을 보완합니다. [chapter-outline](/docs/planning/chapter-outline.md)(저장소 기획 문서)를 보세요.
+로드맵은 adoption, administration, deployment-patterns 등 세부 항목을 보완합니다. [chapter-outline](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md)(저장소 기획 문서)를 보세요.
 
 ## 개인화 설정과의 관계
 
-- [AGENTS.md 우선순위](/guide/customization/agents-md/scope-and-precedence/)의 조직 호스팅 계층
-- [팀 규칙 정책](/guide/customization/rules/team-rules/)
+- [AGENTS.md 우선순위](/ko/guide/customization/agents-md/scope-and-precedence/)의 조직 호스팅 계층
+- [팀 규칙 정책](/ko/guide/customization/rules/team-rules/)
 
 ## 흔한 실수
 
@@ -88,8 +89,8 @@ translated_at: 2026-07-28
 
 먼저 이것부터 보세요.
 
-- [Plugin과 MCP 위험](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-- [허용 가능한 사용 정책](/guide/team-enterprise/governance/acceptable-use/)
+- [Plugin과 MCP 위험](/ko/guide/team-enterprise/security/plugin-and-mcp-risk/)
+- [허용 가능한 사용 정책](/ko/guide/team-enterprise/governance/acceptable-use/)
 
 개인 입문이 주 관심이면 이 장은 나중에 두고, 팀 확산·권한 관리·위험 통제를 시작할 때 돌아오세요.
 

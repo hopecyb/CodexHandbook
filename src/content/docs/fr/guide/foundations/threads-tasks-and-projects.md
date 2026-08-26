@@ -3,9 +3,10 @@ title: Fils, Tâches et projets
 description: Comment sessions, Tâches et espaces de travail projet sont liés.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5f3b436
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -19,8 +20,8 @@ La formulation produit peut varier légèrement ; ce handbook utilise :
 ## Conseils pratiques
 
 - **Démarrez un nouveau Fil** quand le sujet change — l'ancien Contexte cause des interférences
-- Pour les longues Tâches, définissez phases et points de contrôle — voir [Prompting pour longues Tâches](/prompts/long-running-tasks/)
-- Pour continuer entre sessions, rédigez un résumé de passation — voir [Passation et reprise](/guide/agent-work/handoff-and-resume/)
+- Pour les longues Tâches, définissez phases et points de contrôle — voir [Prompting pour longues Tâches](/fr/prompts/long-running-tasks/)
+- Pour continuer entre sessions, rédigez un résumé de passation — voir [Passation et reprise](/fr/guide/agent-work/handoff-and-resume/)
 
 ---
 

@@ -5,12 +5,13 @@ sidebar:
   order: 50
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 2e1e79b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**開発者プラットフォーム**は Codex を**製品化**してパイプラインに入れたい人向けです：カスタムアプリ、一括レビュー、リリースゲート、内部開発者ポータル。日常の「prompt でバグ修正」は [クイックスタート](/guide/getting-started/) から始めてください。
+**開発者プラットフォーム**は Codex を**製品化**してパイプラインに入れたい人向けです：カスタムアプリ、一括レビュー、リリースゲート、内部開発者ポータル。日常の「prompt でバグ修正」は [クイックスタート](/ja/guide/getting-started/) から始めてください。
 
 この章は Codex の日常利用ではなく、自システムへの接続方法を扱います。
 
@@ -30,10 +31,10 @@ translated_at: 2026-07-28
 
 | 読者の問い | 行き先 |
 |---|---|
-| ターミナルで `codex` をどう走らせるか | [CLI 製品ハンドブック](/guide/cli/) |
-| CI で exec レビューするには | [非対話モード](/guide/cli/non-interactive-mode/) + 本章 CI |
-| 自社 App に Agent を埋め込むには | [SDK 概要](/guide/developer-platform/sdk-overview/) |
-| 権限とセキュリティモデル | [人工承認パターン](/cases/workflows/human-approval-patterns/) |
+| ターミナルで `codex` をどう走らせるか | [CLI 製品ハンドブック](/ja/guide/cli/) |
+| CI で exec レビューするには | [非対話モード](/ja/guide/cli/non-interactive-mode/) + 本章 CI |
+| 自社 App に Agent を埋め込むには | [SDK 概要](/ja/guide/developer-platform/sdk-overview/) |
+| 権限とセキュリティモデル | [人工承認パターン](/ja/cases/workflows/human-approval-patterns/) |
 
 ## 典型アーキテクチャ（概念）
 
@@ -56,10 +57,10 @@ Git プロバイダ / チケット / アーティファクトリポジトリ
 
 | テーマ | ページ |
 |---|---|
-| SDK | [SDK 概要](/guide/developer-platform/sdk-overview/) |
-| 非対話 | [codex exec](/guide/developer-platform/non-interactive/codex-exec/) · [スクリプトとパイプライン](/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [構造化出力](/guide/developer-platform/non-interactive/structured-output/) · [終了コードと再試行](/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
-| Webhooks | [概要](/guide/developer-platform/webhooks/overview/) |
-| CI/CD | [コードレビュー自動化](/guide/developer-platform/ci-cd/code-review-automation/) |
+| SDK | [SDK 概要](/ja/guide/developer-platform/sdk-overview/) |
+| 非対話 | [codex exec](/ja/guide/developer-platform/non-interactive/codex-exec/) · [スクリプトとパイプライン](/ja/guide/developer-platform/non-interactive/scripts-and-pipelines/) · [構造化出力](/ja/guide/developer-platform/non-interactive/structured-output/) · [終了コードと再試行](/ja/guide/developer-platform/non-interactive/exit-codes-and-retries/) |
+| Webhooks | [概要](/ja/guide/developer-platform/webhooks/overview/) |
+| CI/CD | [コードレビュー自動化](/ja/guide/developer-platform/ci-cd/code-review-automation/) |
 
 `codex-sdk/`、`app-server/`、`architecture-patterns/` などは [章アウトライン](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) を参照。
 
@@ -76,7 +77,7 @@ Git プロバイダ / チケット / アーティファクトリポジトリ
 
 ### 3. 初めて読むならどのページが価値が高い？
 
-概念構築なら [SDK 概要](/guide/developer-platform/sdk-overview/) と [非対話モード](/guide/cli/non-interactive-mode/) の関係を優先。
+概念構築なら [SDK 概要](/ja/guide/developer-platform/sdk-overview/) と [非対話モード](/ja/guide/cli/non-interactive-mode/) の関係を優先。
 
 開発者プラットフォーム章は「Codex をシステムに接続する」話。初めて Codex に触れるなら、先の入門を見てください。
 

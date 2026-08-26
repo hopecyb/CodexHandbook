@@ -3,9 +3,10 @@ title: GitHub 통합
 description: "저장소 연결, PR, Review, CI — Codex가 GitHub 워크플로에서 차지하는 위치."
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5585550
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -24,11 +25,11 @@ GitHub는 Codex가 가장 흔히 쓰는 코드 협업 면입니다. Cloud 작업
 
 | 능력 | 전형 진입점 | 핸드북 위치 |
 |---|---|---|
-| 원격 저장소 연결 | Cloud 설정 | [GitHub 연결](/guide/web-and-cloud/connect-github/) |
-| 클라우드에서 코드 수정·PR | Cloud 작업 | [Pull Request 만들기](/guide/web-and-cloud/create-pull-requests/) |
-| 로컬에서 diff 심사 | 데스크톱 App / IDE | [diff와 코멘트](/guide/desktop-app/diffs-comments-and-review/) |
+| 원격 저장소 연결 | Cloud 설정 | [GitHub 연결](/ko/guide/web-and-cloud/connect-github/) |
+| 클라우드에서 코드 수정·PR | Cloud 작업 | [Pull Request 만들기](/ko/guide/web-and-cloud/create-pull-requests/) |
+| 로컬에서 diff 심사 | 데스크톱 App / IDE | [diff와 코멘트](/ko/guide/desktop-app/diffs-comments-and-review/) |
 | CI에서 Codex 실행 | GitHub Actions | 로드맵 `08-developer-platform/ci-cd/` |
-| PR 자동 코멘트 심사 | Actions + exec | [비대화형 모드](/guide/cli/non-interactive-mode/) |
+| PR 자동 코멘트 심사 | Actions + exec | [비대화형 모드](/ko/guide/cli/non-interactive-mode/) |
 
 ## 권장 팀 규범
 

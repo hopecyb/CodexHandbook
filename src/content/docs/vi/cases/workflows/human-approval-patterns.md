@@ -3,9 +3,10 @@ title: Mẫu phê duyệt của người
 description: Khi nào phê duyệt, từ chối hoặc yêu cầu Codex dừng, và cách viết rõ các quy tắc đó.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0e37633
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Vai trò của phê duyệt là để người quyết các thao tác không đảo ngược được. Trang này sắp xếp vài cách làm phổ biến.
@@ -20,7 +21,7 @@ Vùng nhắc xác nhận (ghi tệp, chạy lệnh, lên mạng)
 Vùng bắt buộc người (push, xóa dữ liệu, gửi ra ngoài, sửa cấu hình production)
 ```
 
-Hành vi hộp thoại cụ thể khác theo [lối vào sản phẩm](/guide/); nguyên tắc thì giống nhau.
+Hành vi hộp thoại cụ thể khác theo [lối vào sản phẩm](/vi/guide/); nguyên tắc thì giống nhau.
 
 ## Mẫu một: Kế hoạch trước, thực thi sau
 
@@ -32,7 +33,7 @@ Phù hợp: chưa quen codebase, liên quan production, diff lớn.
 
 ## Mẫu hai: Lệnh whitelist
 
-Trong [AGENTS.md](/guide/customization/agents-md/writing-effective-instructions/) ghi rõ:
+Trong [AGENTS.md](/vi/guide/customization/agents-md/writing-effective-instructions/) ghi rõ:
 
 ```md
 Cho phép không cần hỏi lại: pnpm test, pnpm lint, git status, git diff
@@ -46,7 +47,7 @@ Khi xung đột với chính sách quản trị, lấy bên **nghiêm hơn**.
 1. Codex mở draft PR hoặc nhánh cục bộ
 2. Người + CI + review đạt rồi mới merge
 
-Kịch bản Cloud xem [tạo Pull Request](/guide/web-and-cloud/create-pull-requests/).
+Kịch bản Cloud xem [tạo Pull Request](/vi/guide/web-and-cloud/create-pull-requests/).
 
 ## Mẫu bốn: Thám sát chỉ đọc
 
@@ -68,7 +69,7 @@ Dùng cho audit, học dự án lạ, chẩn đoán sự cố production.
 
 ## Quan hệ với Automations
 
-Tác vụ không người trông cũng phải giữ điểm xác nhận của người khi thiết kế; xem [tác vụ theo lịch và nền](/skills/automations/scheduled-tasks/).
+Tác vụ không người trông cũng phải giữ điểm xác nhận của người khi thiết kế; xem [tác vụ theo lịch và nền](/vi/skills/automations/scheduled-tasks/).
 
 ## Lỗi thường gặp
 

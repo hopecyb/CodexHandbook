@@ -3,9 +3,10 @@ title: "事例: 競合機能マトリクス"
 description: 出典付き調査と表出力——非エンジニアも再利用できるワークフロー。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d90f5f1
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## メタデータ
@@ -30,11 +31,11 @@ translated_at: 2026-07-28
 ## 2. 準備
 
 - 比較軸を事前定義（プロンプトまたは `@brief.md`）
-- [ウェブ検索](/guide/tools/web-search/) を有効化（製品がサポートする場合）
+- [ウェブ検索](/ja/guide/tools/web-search/) を有効化（製品がサポートする場合）
 
 ## 3. ワークフロー
 
-[出典付き調査](/cases/workflows/research-with-sources/) に従う：
+[出典付き調査](/ja/cases/workflows/research-with-sources/) に従う：
 
 ```text
 ベンダー A/B/C の「チーム協業」機能を比較：
@@ -44,7 +45,7 @@ translated_at: 2026-07-28
 Markdown 表を出力。他のリポジトリファイルは変更しない。
 ```
 
-**検証：** 人が URL を 3 件開く。[検証ポリシー](/guide/start-here/handbook-version-policy/) に照らし日付を確認。
+**検証：** 人が URL を 3 件開く。[検証ポリシー](/ja/guide/start-here/handbook-version-policy/) に照らし日付を確認。
 
 ## 4. 失敗と回復
 
@@ -58,8 +59,8 @@ Markdown 表を出力。他のリポジトリファイルは変更しない。
 
 ## 6. 関連章
 
-- [成果物ファーストの作業](/cases/workflows/artifact-first-work/)
-- [出典を検証する](/guide/quality/validate-sources/)
+- [成果物ファーストの作業](/ja/cases/workflows/artifact-first-work/)
+- [出典を検証する](/ja/guide/quality/validate-sources/)
 
 ---
 

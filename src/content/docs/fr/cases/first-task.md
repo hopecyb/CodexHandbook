@@ -3,9 +3,10 @@ title: Première tâche
 description: Réalisez une petite modification avec un prompt clair et apprenez à vérifier le résultat.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a9bcbce
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Première tâche
@@ -48,9 +49,9 @@ Si des informations manquent, demandez-moi d'abord, ne devinez pas.
 
 ## 5. Étapes suivantes
 
-- [Bases des prompts](/prompts/basics/)
-- [Vérification](/guide/verification/)
-- [Commencer ici](/guide/start-here/)
+- [Bases des prompts](/fr/prompts/basics/)
+- [Vérification](/fr/guide/verification/)
+- [Commencer ici](/fr/guide/start-here/)
 
 ---
 

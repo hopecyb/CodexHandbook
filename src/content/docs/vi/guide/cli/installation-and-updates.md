@@ -3,11 +3,12 @@ title: Cài đặt và cập nhật CLI
 description: Cài đặt, nâng cấp và xác nhận phiên bản.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: 6b8ceaf
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
+reviewed_at: 2026-08-26
 ---
 
 Lần đầu cài CLI, nhiều người kẹt ở:
@@ -54,7 +55,7 @@ Vừa cài xong, có thể kiểm:
 
 Tiêu chuẩn thực tế hơn: terminal hiện tại tìm được nó, và bạn đã hoàn tất xác thực.
 
-Cũng có thể đối chiếu: [Cài đặt CLI](/guide/getting-started/install-cli/)  
+Cũng có thể đối chiếu: [Cài đặt CLI](/vi/guide/getting-started/install-cli/)
 Hướng dẫn cài và nâng cấp chính thức: [Tài liệu OpenAI Codex](https://developers.openai.com/codex).
 
 ---

@@ -3,12 +3,13 @@ title: Revue avant fusion
 description: Revue structurée du diff et des risques avec Codex avant la fusion — rôles humain–machine clairs.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: ce05ae9
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-La **revue avant fusion** intègre [qualité et vérification](/guide/quality/) au flux Git : avant la fusion d'une PR, utiliser Codex pour vérifier le diff, les tests, la sécurité et l'alignement avec la spécification. Les commentaires automatiques seuls ne remplacent pas la décision humaine de fusion.
+La **revue avant fusion** intègre [qualité et vérification](/fr/guide/quality/) au flux Git : avant la fusion d'une PR, utiliser Codex pour vérifier le diff, les tests, la sécurité et l'alignement avec la spécification. Les commentaires automatiques seuls ne remplacent pas la décision humaine de fusion.
 
 ## Ce que couvre cette page
 
@@ -32,7 +33,7 @@ Produire une checklist avec étiquettes P0/P1.
 
 - Version de prompt fixe + token en lecture seule
 - Résultats dans un commentaire de PR ou un check run
-- Voir [Automatisation de la revue de code](/guide/developer-platform/ci-cd/code-review-automation/)
+- Voir [Automatisation de la revue de code](/fr/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Dimensions de revue recommandées
 
@@ -44,7 +45,7 @@ Produire une checklist avec étiquettes P0/P1.
 | Maintenabilité | Nommage, duplication, API publique |
 | Spécification | Alignement avec l'issue/le document de spécification |
 
-À associer à [Revoir les diffs](/guide/quality/review-diffs/) ; les éléments à haut risque suivent les [modèles d'approbation humaine](/cases/workflows/human-approval-patterns/).
+À associer à [Revoir les diffs](/fr/guide/quality/review-diffs/) ; les éléments à haut risque suivent les [modèles d'approbation humaine](/fr/cases/workflows/human-approval-patterns/).
 
 ## Erreurs courantes
 
@@ -67,8 +68,8 @@ Produire une checklist avec étiquettes P0/P1.
 
 ## Chapitres connexes
 
-- [Revue de code Cloud](/guide/web-and-cloud/code-review/)
-- [Créer des pull requests](/guide/web-and-cloud/create-pull-requests/)
+- [Revue de code Cloud](/fr/guide/web-and-cloud/code-review/)
+- [Créer des pull requests](/fr/guide/web-and-cloud/create-pull-requests/)
 
 ---
 

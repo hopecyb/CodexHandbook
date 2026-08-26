@@ -3,9 +3,10 @@ title: Web 検索
 description: 検索で事実を補い、出典を明記する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 559d082
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -14,7 +15,7 @@ Web 検索は事実を補うのに向いていますが、最終結論を代わ�
 
 向いているのは、公開ドキュメント、エラーコード、バージョン説明の調査です。向いていないのは、検索結果を最終的な法律・医療の結論として扱うことです。
 
-出典の添付を求め、原文を自分で開いて確認してください。[出典の検証](/guide/quality/validate-sources/) と併用しましょう。
+出典の添付を求め、原文を自分で開いて確認してください。[出典の検証](/ja/guide/quality/validate-sources/) と併用しましょう。
 
 ## 検索が向いていること
 

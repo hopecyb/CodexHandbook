@@ -3,9 +3,10 @@ title: 초보자 경로
 description: Codex를 처음 쓰는 독자를 위한 가장 짧은 다섯 단계 루트입니다. 작업을 분명히 말하는 법부터 첫 작은 프로젝트까지.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 16252d8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -16,11 +17,11 @@ Codex를 처음 배울 때 가장 자주 막히는 지점은, 어떤 글이 안 
 
 ## 권장 순서
 
-1. [Codex와 대화하기](/guide/learning-paths/beginner/01-talk-to-codex/)
-2. [파일 다루기](/guide/learning-paths/beginner/02-work-with-files/)
-3. [명확한 작업 주기](/guide/learning-paths/beginner/03-give-clear-tasks/)
-4. [결과 검토하기](/guide/learning-paths/beginner/04-review-results/)
-5. [첫 작은 프로젝트 끝내기](/guide/learning-paths/beginner/05-complete-first-project/)
+1. [Codex와 대화하기](/ko/guide/learning-paths/beginner/01-talk-to-codex/)
+2. [파일 다루기](/ko/guide/learning-paths/beginner/02-work-with-files/)
+3. [명확한 작업 주기](/ko/guide/learning-paths/beginner/03-give-clear-tasks/)
+4. [결과 검토하기](/ko/guide/learning-paths/beginner/04-review-results/)
+5. [첫 작은 프로젝트 끝내기](/ko/guide/learning-paths/beginner/05-complete-first-project/)
 
 ## 이 그룹이 맞는 사람
 

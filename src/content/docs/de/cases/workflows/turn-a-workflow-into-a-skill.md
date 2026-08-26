@@ -3,12 +3,13 @@ title: Einen Workflow als Skill verfestigen
 description: "Beim dritten Mal lohnt sich ein Skill — Trigger, Anleitung und Abnahme in einem Paket."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: bc54539
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Wenn dieselbe Aufgabenklasse (Release-Check, Docs-Sync, Security-Scan) **zum dritten Mal** per Copy-Paste-Prompt erledigt wird, ist ein [Skill](/skills/overview/) fällig. Dieses Kapitel verbindet [Workflow-Methoden](/cases/workflows/) mit dem Erweiterungssystem.
+Wenn dieselbe Aufgabenklasse (Release-Check, Docs-Sync, Security-Scan) **zum dritten Mal** per Copy-Paste-Prompt erledigt wird, ist ein [Skill](/de/skills/overview/) fällig. Dieses Kapitel verbindet [Workflow-Methoden](/de/cases/workflows/) mit dem Erweiterungssystem.
 
 ## Welches Problem löst diese Seite
 
@@ -29,11 +30,11 @@ Nicht verstetigen: einmalige Erkundung, kleine Fixes stark abhängig vom Tagesko
 
 1. **SKILL.md klar schreiben**: Wann triggern, Ein-/Ausgabe, Verbote
 2. **`references/` anhängen**: Checklist, Beispiel-Diff
-3. **Optional `scripts/`**: wiederholbare Überprüfungsbefehle (konsistent mit [Befehlsregeln](/guide/customization/rules/command-rules/))
+3. **Optional `scripts/`**: wiederholbare Überprüfungsbefehle (konsistent mit [Befehlsregeln](/de/guide/customization/rules/command-rules/))
 4. **Skill-Namen in README oder AGENTS.md erwähnen**
 5. **2–3 Probeläufe**, dann als `verified` markieren
 
-Einstieg: [Ersten Skill erstellen](/skills/create-your-first-skill/)
+Einstieg: [Ersten Skill erstellen](/de/skills/create-your-first-skill/)
 
 ## Empfohlener Workflow
 
@@ -45,7 +46,7 @@ Aus erfolgreichem Fall Prompt und Abnahmepunkte extrahieren
     → In vereinbartes examples/-Verzeichnis, Team-Plugin oder interne Skill-Bibliothek
 ```
 
-Vergleich mit [Abläufe automatisieren](/skills/automations/scheduled-tasks/): Skills sind eher **interaktive Anleitung**; Automations eher **zeitgesteuert / unbeaufsichtigt**.
+Vergleich mit [Abläufe automatisieren](/de/skills/automations/scheduled-tasks/): Skills sind eher **interaktive Anleitung**; Automations eher **zeitgesteuert / unbeaufsichtigt**.
 
 ## Häufige Fehler
 
@@ -56,8 +57,8 @@ Vergleich mit [Abläufe automatisieren](/skills/automations/scheduled-tasks/): S
 
 ## Sicherheitsgrenzen
 
-- Siehe [Skill-Sicherheit und Versionierung](/skills/security/)
-- Team-Skills in die Freigabeliste für Erweiterungen aufnehmen (siehe [Plugin- und MCP-Risiko](/guide/team-enterprise/security/plugin-and-mcp-risk/))
+- Siehe [Skill-Sicherheit und Versionierung](/de/skills/security/)
+- Team-Skills in die Freigabeliste für Erweiterungen aufnehmen (siehe [Plugin- und MCP-Risiko](/de/guide/team-enterprise/security/plugin-and-mcp-risk/))
 
 ## Abnahme-Checkliste
 

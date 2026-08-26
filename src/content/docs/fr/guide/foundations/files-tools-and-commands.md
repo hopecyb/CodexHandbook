@@ -3,9 +3,10 @@ title: Fichiers, outils et commands
 description: Comment Codex lit et écrit des fichiers, exécute des commands et utilise des outils.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -20,7 +21,7 @@ Codex agit sur le monde réel via des **outils** :
 
 1. **Portée minimale nécessaire** : nommez répertoires et fichiers — évitez « modifier tout le dépôt »
 2. **Les commands dangereuses nécessitent une Approbation** : suppression, push, modification de config système, et similaires
-3. **Le choix d'outil a une méthode** : voir [Sélection d'outils](/guide/tools/tool-selection/)
+3. **Le choix d'outil a une méthode** : voir [Sélection d'outils](/fr/guide/tools/tool-selection/)
 
 Les points d'entrée diffèrent dans les panneaux d'outils et l'UX de confirmation ; voir chaque guide produit pour les détails.
 

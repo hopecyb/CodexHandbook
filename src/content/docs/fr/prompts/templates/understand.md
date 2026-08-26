@@ -3,9 +3,10 @@ title: Modèle de compréhension
 description: Construire une vision commune avant de modifier.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c723d45
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Modèle de compréhension
@@ -52,8 +53,8 @@ Le modèle sert à **resserrer** la prochaine tâche.
 
 ## Voir aussi
 
-- [Explorer — planifier — exécuter — vérifier](/cases/workflows/explore-plan-execute-verify/)
-- [Cas : comprendre un dépôt](/cases/understand-a-codebase/)
+- [Explorer — planifier — exécuter — vérifier](/fr/cases/workflows/explore-plan-execute-verify/)
+- [Cas : comprendre un dépôt](/fr/cases/understand-a-codebase/)
 
 ---
 

@@ -3,9 +3,10 @@ title: Tự động hóa báo cáo hàng ngày
 description: Cố định công việc tổng hợp lặp lại thành script hoặc Skill có thể tái sử dụng.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Tự động hóa báo cáo hàng ngày
@@ -26,7 +27,7 @@ translated_at: 2026-07-28
 
 ## 2. Mẫu tham chiếu
 
-Nhóm đã có case tương tự: [kiểm tra liên kết tài liệu theo lịch](/cases/use-cases/team-automation/scheduled-link-check/).
+Nhóm đã có case tương tự: [kiểm tra liên kết tài liệu theo lịch](/vi/cases/use-cases/team-automation/scheduled-link-check/).
 
 ## 3. Prompt đề xuất
 
@@ -39,8 +40,8 @@ Ràng buộc: Chỉ đọc git; không push; cung cấp scripts/generate-daily.s
 
 ## 4. Đóng gói lại
 
-- [Ví dụ Skill tự động hóa](/skills/examples/automation-skill/)
-- [Tác vụ theo lịch](/skills/automations/scheduled-tasks/)
+- [Ví dụ Skill tự động hóa](/vi/skills/examples/automation-skill/)
+- [Tác vụ theo lịch](/vi/skills/automations/scheduled-tasks/)
 ---
 
 **Trạng thái:** verified  

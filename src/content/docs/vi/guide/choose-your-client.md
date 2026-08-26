@@ -1,88 +1,105 @@
 ---
 title: Chọn client Codex
-description: Lựa chọn lần đầu giữa App, CLI, IDE, Cloud.
-locale: vi
-source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+description: Chọn App máy tính, CLI, tích hợp IDE hoặc Cloud theo nơi làm việc và cách tương tác.
 sidebar:
   order: 2
+locale: vi
+source_locale: zh-CN
+source_revision: 1e89f67
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-Lần đầu thấy các từ `App / CLI / IDE / Cloud`, nhiều người bị kẹt ở «rốt cuộc tôi nên cài cái nào».
+Khi chọn điểm vào Codex lần đầu, bạn không cần so sánh hàng chục tính năng. Hãy trả lời một câu hỏi trước: **công việc lần này chủ yếu diễn ra ở đâu?**
 
-Lần đầu chưa chọn được lối vào phù hợp nhất với mình cũng không đến mức đi không tiếp được. Dùng trước một cái thuận tay — phía sau bổ sung cái khác cũng được.
+![Sơ đồ chọn client Codex: chọn App máy tính, CLI, tích hợp IDE hoặc Cloud theo nơi làm việc](/diagrams/codex-client-selection-vi.svg)
 
-## Một cách chọn trực tiếp
+## Chọn trong 30 giây
 
-Nếu giờ không có thiên hướng mạnh, có thể chọn như sau:
+| Công việc chủ yếu diễn ra ở | Điểm vào ưu tiên | Kiểu tương tác phù hợp nhất |
+|---|---|---|
+| Nhiều dự án và tác vụ song song trên máy cục bộ | **App máy tính** | Xem tác vụ, rà soát diff, xử lý phê duyệt, quản lý công việc dài |
+| Terminal, script hoặc quy trình dòng lệnh hiện có | **CLI** | Giao tác vụ, chạy lệnh, kết hợp script và tự động hóa |
+| VS Code, trình soạn thảo tương thích, Xcode hoặc JetBrains | **Tích hợp IDE** | Hỏi kèm ngữ cảnh trình soạn thảo, sửa và rà soát tại chỗ |
+| Kho mã từ xa đã kết nối và môi trường cô lập | **Cloud** | Giao tác vụ cho đám mây, xử lý song song, rà soát kết quả sau |
 
-- **Lần đầu dùng**: chọn Desktop App
-- **Bạn vốn dùng terminal hàng ngày**: chọn CLI
-- **Bạn chủ yếu viết mã trong VS Code / JetBrains**: chọn phần mở rộng IDE
-- **Bạn đã rõ cần nối kho đám mây GitHub hoặc chạy tác vụ dài**: rồi mới xem Cloud
+Nếu chưa có sở thích rõ ràng, **App máy tính** thường là điểm bắt đầu trực quan nhất. Nếu đã dùng terminal hoặc VS Code lâu dài, ở lại bề mặt làm việc quen thuộc sẽ giảm chi phí chuyển đổi.
 
-## Các lối vào này lần lượt là gì
+## Bốn điểm vào giải quyết vấn đề gì
 
-| Lối vào | Bạn có thể hiểu nó là |
-|---|---|
-| Desktop App | Bảng điều khiển đồ họa — phù hợp xem tác vụ, xem Diff, bấm phê duyệt |
-| CLI | Codex trong terminal — phù hợp người dùng dòng lệnh |
-| Phần mở rộng IDE | Trợ lý nhúng trong trình soạn thảo — phù hợp vừa xem mã vừa sửa |
-| Cloud | Cách chạy tác vụ từ xa — phù hợp cộng tác kho và tác vụ dài |
+### App máy tính: bảng điều khiển công việc cục bộ
 
-| Nếu bạn… | Chọn |
-|---|---|
-| Lần đầu dùng, muốn thấy rõ Diff và rà soát | **Desktop App** (mặc định gợi ý) |
-| Quen terminal, cần viết script | **CLI** |
-| Chủ yếu sửa mã trong trình soạn thảo | **Phần mở rộng IDE** |
-| Cần nối môi trường đám mây GitHub / tác vụ dài | **Cloud** (đọc tổng quan trước) |
+App máy tính phù hợp khi bạn cần thấy rõ trạng thái tác vụ, thay đổi tệp và quy trình phê duyệt. Nó đặc biệt hữu ích để:
 
-## Hiểu nhầm thường gặp
+- Theo dõi nhiều tác vụ hoặc dự án cùng lúc
+- Cô lập các thay đổi song song bằng worktree
+- Rà soát diff rồi hỏi tiếp hoặc yêu cầu sửa
+- Quản lý công việc cần tiếp tục chạy trong dự án cục bộ
 
-### 1. Chọn client quá kỹ thuật, có thể bỏ qua trước
+Ví dụ: giao một tác vụ sửa lỗi hồi quy đăng nhập, một tác vụ khác chỉ đọc để phân tích nút thắt hiệu năng, rồi rà soát từng kết quả riêng.
 
-Bước này rất thực tế — vì nó trực tiếp quyết định trải nghiệm lần đầu của bạn có xuôi hay không.
+### CLI: đưa Codex vào quy trình terminal
 
-### 2. Cái nào trông chuyên nghiệp nhất thì nên dùng cái đó trước
+CLI phù hợp với người đã quản lý dự án bằng dòng lệnh. Nó ở gần lệnh kiểm thử, Git và script, đồng thời giúp ghi cùng thao tác vào tài liệu nhóm.
 
-Lần đầu phù hợp hơn chọn lối vào «dễ hiểu quy trình và kết quả nhất» — đừng đuổi theo cái cứng nhất.
+```bash
+codex
+```
 
-## Vì sao tôi gợi ý dùng Desktop App trước
+Ví dụ: khởi động Codex tại gốc kho mã, yêu cầu chạy kiểm thử thất bại, định vị nguyên nhân gốc, thực hiện sửa đổi tối thiểu rồi xác minh lại bằng chính lệnh kiểm thử đó.
 
-Với người mới, Desktop App thân thiện hơn ở chỗ:
+### Tích hợp IDE: làm việc quanh mã hiện tại
 
-- Bạn dễ thấy hơn nó đã làm gì
-- Khi nào nó xin quyền thì một nhìn là rõ
-- Các khái niệm Diff, tác vụ, dự án trực quan hơn
-- Khi lỗi cũng dễ dừng lại kiểm tra hơn
+Tích hợp IDE phù hợp khi vấn đề gắn chặt với “tệp, vùng chọn hoặc diff đang xem”. Hiện có hai cách hỗ trợ: VS Code, Cursor, Windsurf và các trình soạn thảo tương thích dùng phần mở rộng Codex; Xcode và IDE JetBrains dùng điểm vào tích hợp Codex riêng.
 
-Nếu bạn không thiên về terminal rõ ràng, Desktop App thường phù hợp hơn.
+Ví dụ: chọn một hàm khó hiểu, yêu cầu Codex giải thích đầu vào, đầu ra và đường lỗi, sau đó bổ sung các kiểm thử cho điều kiện biên.
 
-## Sau này bạn có thể dùng đồng thời nhiều lối vào
+### Cloud: giao việc cho môi trường từ xa cô lập
 
-Đây không phải chọn một trong bốn, cũng không phải gắn chặt lâu dài.
+Cloud phù hợp khi kho mã từ xa đã được kết nối và bạn muốn tác vụ chạy độc lập với máy cục bộ. Tác vụ đám mây chạy trong môi trường cô lập, phù hợp cho khám phá song song, tác vụ dài và rà soát tập trung sau khi hoàn tất.
 
-Nhiều người phía sau phối hợp như sau:
+Ví dụ: giao ba vấn đề kho mã độc lập cho ba tác vụ đám mây, chờ chúng trả về thay đổi và bằng chứng xác minh rồi rà soát từng kết quả.
 
-- Hàng ngày dùng Desktop App xem tác vụ và rà soát thay đổi
-- Cần thao tác hàng loạt thì dùng CLI
-- Khi chủ yếu viết mã thì chuyển sang phần mở rộng IDE
+## Không phải chọn một trong bốn
 
-Lần chọn đầu chỉ là điểm xuất phát.
+Một quy trình có thể tiếp nối qua nhiều điểm vào:
 
-## Nếu muốn ít loay hoay
+1. Làm rõ vấn đề quanh tệp hiện tại trong IDE.
+2. Giao phần cần khám phá lâu cho App máy tính hoặc Cloud.
+3. Chạy lệnh kiểm tra theo quy ước nhóm trong CLI.
+4. Quay lại App máy tính hoặc giao diện rà soát mã để xác nhận diff cuối.
 
-1. Cài trước [Desktop App](/guide/getting-started/install-desktop-app/)
-2. Chạy một vòng [tác vụ đầu tiên](/guide/getting-started/run-your-first-task/)
-3. Dùng đã quen rồi mới cân nhắc CLI hoặc IDE
+Nguyên tắc không phải “cái nào mạnh nhất”, mà là **cái nào gần ngữ cảnh hiện tại và giúp kiểm tra kết quả dễ nhất**.
 
-Đối chiếu đầy đủ xem [So sánh tính năng](/guide/reference/feature-comparison/). Có thể cài nhiều client; **giữ cùng một thư mục cho dự án luyện tập** — như vậy tiện hơn khi so đi so lại.
+## Hai tình huống thường gặp
+
+### Tình huống 1: lần đầu sửa bug trong dự án thật
+
+Ưu tiên App máy tính. Bạn có thể thấy cuộc trò chuyện tác vụ, thay đổi và yêu cầu quyền cùng lúc. Sau khi hoàn thành một vòng kín đầy đủ, hãy thử CLI hoặc IDE.
+
+### Tình huống 2: nhóm đã có lệnh cố định và quy ước CI
+
+Ưu tiên CLI và ghi lệnh cài đặt, kiểm thử, định dạng vào `AGENTS.md`. Nhờ đó Codex có thể tuân theo cùng quy tắc dự án trong mọi tác vụ.
+
+## Xác minh ngay sau khi chọn
+
+Đừng chỉ xác nhận client “mở được”. Hãy hoàn thành vòng kín sau trong một kho mã thực hành:
+
+1. Yêu cầu Codex đọc và giải thích một tệp.
+2. Yêu cầu một thay đổi nhỏ có thể hoàn tác.
+3. Kiểm tra diff thay vì chỉ đọc câu trả lời cuối.
+4. Chạy một lệnh xác minh.
+5. Xác nhận bạn biết cách từ chối hoặc thu hẹp yêu cầu quyền.
+
+Xem bảng đầy đủ tại [so sánh tính năng](/vi/guide/reference/feature-comparison/) và ranh giới an toàn tại [quyền và sandbox](/vi/guide/permissions-and-sandbox/).
 
 ---
 
-**Trạng thái:** verified  
-**Sản phẩm áp dụng:** App / CLI / IDE  
-**Cơ sở kiểm chứng:** Trang chủ OpenAI Developers hiện đồng thời trình bày Codex, quy trình desktop và lối vào nhà phát triển; trang này thuộc gợi ý lộ trình lần đầu bắt tay, và không viết các lối vào khác nhau thành ma trận năng lực cố định hay sản phẩm loại trừ lẫn nhau.  
-**Kiểm chứng gần nhất:** 2026-07-26
+**Trạng thái:** verified
+
+**Sản phẩm áp dụng:** App / CLI / IDE / Cloud
+
+**Căn cứ xác minh:** Đã đối chiếu với tài liệu chính thức hiện hành về App máy tính ChatGPT, Codex CLI, IDE và Cloud. Trang này chọn theo nơi làm việc và cách tương tác, đồng thời phân biệt phần mở rộng tương thích VS Code với các tích hợp riêng của Xcode và JetBrains.
+
+**Xác minh gần nhất:** 2026-08-26

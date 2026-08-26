@@ -5,9 +5,10 @@ sidebar:
   order: 55
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d842500
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Codex の連携価値は、ツールを 1 つ増やすことだけではありません。Agent を、すでに使っている協業の流れ——コードホスティング、チケット、通知、社内プラットフォーム、ナレッジベース——に組み込むことです。
@@ -101,7 +102,7 @@ Codex はデフォルトで **提案レイヤー** に置くのがおすすめ�
 - CI で非対話レビューを走らせる
 - review comment を起点に再修正
 
-入口：[GitHub 連携](/guide/integrations/github/) と [Web と Cloud](/guide/web-and-cloud/)。
+入口：[GitHub 連携](/ja/guide/integrations/github/) と [Web と Cloud](/ja/guide/web-and-cloud/)。
 
 ### チケットとプロジェクト管理
 
@@ -183,15 +184,15 @@ Slack、メール、企業 IM など。
 
 | 連携 | ページ |
 |---|---|
-| GitHub | [GitHub 連携](/guide/integrations/github/) |
+| GitHub | [GitHub 連携](/ja/guide/integrations/github/) |
 | Slack / Linear / Jira など | 公式ドキュメントと MCP / Automation 章を主とし、本ハンドブックは順次補完 |
 
 ## 他章との関係
 
-- 拡張コネクタと配布： [Plugins 概要](/skills/plugins/plugins-overview/)
-- 外部データ接続： [MCP 概要](/skills/mcp/mcp-overview/)
-- 定期・バックグラウンド実行： [定期とバックグラウンドタスク](/skills/automations/scheduled-tasks/)
-- クラウドリポジトリ協業： [Web と Cloud](/guide/web-and-cloud/)
+- 拡張コネクタと配布： [Plugins 概要](/ja/skills/plugins/plugins-overview/)
+- 外部データ接続： [MCP 概要](/ja/skills/mcp/mcp-overview/)
+- 定期・バックグラウンド実行： [定期とバックグラウンドタスク](/ja/skills/automations/scheduled-tasks/)
+- クラウドリポジトリ協業： [Web と Cloud](/ja/guide/web-and-cloud/)
 
 ## 参考ソース
 - OpenAI Codex 公式連携・開発者ドキュメント

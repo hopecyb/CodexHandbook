@@ -3,9 +3,10 @@ title: Automatizar un informe diario
 description: Convierte el resumen repetitivo en un script o Skill reutilizable.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Automatizar un informe diario
@@ -26,7 +27,7 @@ translated_at: 2026-07-28
 
 ## 2. Patrón de referencia
 
-El equipo ya tiene un caso similar: [Comprobación programada de enlaces](/cases/use-cases/team-automation/scheduled-link-check/).
+El equipo ya tiene un caso similar: [Comprobación programada de enlaces](/es/cases/use-cases/team-automation/scheduled-link-check/).
 
 ## 3. Prompt recomendado
 
@@ -39,8 +40,8 @@ Restricciones: git en solo lectura; no hacer push; proporcionar scripts/generate
 
 ## 4. Captura para reutilizar
 
-- [Ejemplo de Skill de automatización](/skills/examples/automation-skill/)
-- [Tareas programadas](/skills/automations/scheduled-tasks/)
+- [Ejemplo de Skill de automatización](/es/skills/examples/automation-skill/)
+- [Tareas programadas](/es/skills/automations/scheduled-tasks/)
 
 ---
 

@@ -3,9 +3,10 @@ title: KI und Sprachmodelle
 description: "Verstehe, wie Sprachmodelle Antworten aus dem Kontext erzeugen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 1951620
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -37,7 +38,7 @@ Es schiebt vom aktuellen Kontext aus weiter — es „weiß“ die Antwort nicht
 ## Was das für dich bedeutet
 
 - **Eingabequalität setzt die Obergrenze**: Unklares Ziel → Ausgabe läuft leicht schief
-- **Kontext ist begrenzt**: Zu lange Historie wird komprimiert oder abgeschnitten, siehe [Token, Kontext und Komprimierung](/guide/foundations/tokens-context-and-compaction/)
+- **Kontext ist begrenzt**: Zu lange Historie wird komprimiert oder abgeschnitten, siehe [Token, Kontext und Komprimierung](/de/guide/foundations/tokens-context-and-compaction/)
 - **Überprüfung ist Pflicht**: besonders bei Zahlen, Recht, Sicherheit und öffentlich freizugebenden Inhalten
 
 ## Häufige Missverständnisse

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">从任务说明到可验证结果的闭环</title>
+  <desc id="desc">目标、背景、输入、约束、验收和权限构成任务说明。Codex 依次探索、计划、执行和验证；验证不通过时带着证据返回任务说明或计划，通过后交付结果。</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: 0; }
+    .h1 { fill: #f8fafc; font-size: 30px; font-weight: 700; }
+    .sub { fill: #94a3b8; font-size: 16px; }
+    .label { fill: #f8fafc; font-size: 18px; font-weight: 700; }
+    .note { fill: #cbd5e1; font-size: 14px; }
+    .tiny { fill: #94a3b8; font-size: 12px; }
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#64748b"/></marker>
+    <marker id="cyan-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#22d3ee"/></marker>
+    <marker id="rose-arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#fb7185"/></marker>
+  </defs>
+  <rect width="1000" height="560" rx="8" fill="#020617"/>
+  <rect width="1000" height="560" rx="8" fill="url(#grid)"/>
+  <text x="44" y="46" class="h1">从任务说明到可验证结果</text>
+  <text x="44" y="70" class="sub">好提示词不是终点，它要把执行、证据和反馈接成一个闭环。</text>
+
+  <path d="M260 282H310" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#cyan-arrow)"/>
+  <path d="M438 282H478" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M606 282H646" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 282H814" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M878 336V406H770" fill="none" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M846 336V454H170V378" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#rose-arrow)"/>
+
+  <rect x="40" y="112" width="220" height="266" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="145" y="142" text-anchor="middle" class="label">任务说明</text>
+  <text x="115" y="177" text-anchor="end" class="note">目标</text><text x="125" y="177" class="tiny">最终产物</text>
+  <text x="115" y="207" text-anchor="end" class="note">背景</text><text x="125" y="207" class="tiny">为什么做</text>
+  <text x="115" y="237" text-anchor="end" class="note">输入</text><text x="125" y="237" class="tiny">必须看的材料</text>
+  <text x="115" y="267" text-anchor="end" class="note">约束</text><text x="125" y="267" class="tiny">范围与禁止项</text>
+  <text x="115" y="297" text-anchor="end" class="note">验收</text><text x="125" y="297" class="tiny">可观察证据</text>
+  <text x="115" y="327" text-anchor="end" class="note">权限</text><text x="125" y="327" class="tiny">联网、写入、审批</text>
+  <line x1="62" y1="344" x2="228" y2="344" stroke="#1e293b"/>
+  <text x="145" y="364" text-anchor="middle" class="tiny">信息不足时先问，不要猜</text>
+
+  <rect x="310" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="374" y="266" text-anchor="middle" class="label">探索</text>
+  <text x="374" y="291" text-anchor="middle" class="note">现状 · 范围</text>
+  <text x="374" y="311" text-anchor="middle" class="note">风险 · 未知</text>
+
+  <rect x="478" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="542" y="266" text-anchor="middle" class="label">计划</text>
+  <text x="542" y="291" text-anchor="middle" class="note">步骤 · 文件</text>
+  <text x="542" y="311" text-anchor="middle" class="note">风险 · 验证</text>
+
+  <rect x="646" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="710" y="266" text-anchor="middle" class="label">执行</text>
+  <text x="710" y="291" text-anchor="middle" class="note">小步修改</text>
+  <text x="710" y="311" text-anchor="middle" class="note">控制范围</text>
+
+  <rect x="814" y="230" width="128" height="104" rx="8" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="878" y="266" text-anchor="middle" class="label">验证</text>
+  <text x="878" y="291" text-anchor="middle" class="note">测试 · diff</text>
+  <text x="878" y="311" text-anchor="middle" class="note">截图 · 来源</text>
+
+  <rect x="490" y="382" width="280" height="62" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+  <text x="630" y="408" text-anchor="middle" class="label">通过：交付可验证结果</text>
+  <text x="630" y="429" text-anchor="middle" class="tiny">产物 + 证据 + 剩余风险</text>
+  <text x="905" y="393" class="tiny" fill="#34d399">通过</text>
+  <text x="460" y="472" class="tiny" fill="#fb7185">不通过：带着失败证据返回任务说明或计划</text>
+</svg>

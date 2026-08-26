@@ -3,9 +3,10 @@ title: Archivos de texto y código
 description: Haz que Codex lea y escriba correctamente código fuente, configuración y documentos de texto.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: a6005dd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -29,7 +30,7 @@ Al hacer que Codex cambie texto o código, lo clave es cambiar el sitio correcto
 | Documentos `.md` | Rutas relativas de enlaces, normas de mezcla de idiomas |
 | Código generado | Indica si debe hacerse commit o ir a gitignore |
 
-Contexto: [Contexto de archivos y carpetas](/guide/context/file-and-folder-context/)
+Contexto: [Contexto de archivos y carpetas](/es/guide/context/file-and-folder-context/)
 
 ## Por qué este tipo falla con más facilidad
 
@@ -50,7 +51,7 @@ Estilo: coherente con <archivo de ejemplo>
 Hecho: lista de archivos cambiados + ejecutar <comando de test>
 ```
 
-Ver [Anatomía de una buena tarea](/prompts/task-anatomy/)
+Ver [Anatomía de una buena tarea](/es/prompts/task-anatomy/)
 
 ## Malentendidos habituales
 
@@ -91,8 +92,8 @@ Si te preocupa que toque demasiado, exige estas tres cosas:
 
 ## Puntos de revisión
 
-- [Revisar diffs](/guide/quality/review-diffs/): lógica, alcance, borrados
-- [Ejecutar tests](/guide/quality/run-tests/)
+- [Revisar diffs](/es/guide/quality/review-diffs/): lógica, alcance, borrados
+- [Ejecutar tests](/es/guide/quality/run-tests/)
 - Introducción involuntaria de `TODO` sin implementar
 
 ## Errores habituales

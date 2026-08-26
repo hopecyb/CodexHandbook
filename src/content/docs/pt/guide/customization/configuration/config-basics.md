@@ -3,9 +3,10 @@ title: Fundamentos de configuração
 description: Localização dos ficheiros de configuração do Codex, itens comuns e introdução a Aprovação/Sandbox/modelo.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 6c67645
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -74,7 +75,7 @@ Isto não deve depender só da configuração pessoal.
 - Refactors complexos: modelo de raciocínio mais forte (se o plano permitir)
 - Scripts/CI: modelo fixo para reprodutibilidade
 
-Contexto conceptual: [Modelos e raciocínio](/guide/foundations/models-and-reasoning/)
+Contexto conceptual: [Modelos e raciocínio](/pt/guide/foundations/models-and-reasoning/)
 
 ### Aprovação e Sandbox
 
@@ -84,7 +85,7 @@ Contexto conceptual: [Modelos e raciocínio](/guide/foundations/models-and-reaso
 | Projeto pessoal de confiança | Pode reduzir interrupções com segurança |
 | Repositório empresarial | Seguir a política gerida; não relaxar por conta própria |
 
-Contexto conceptual: [Permissões e Aprovações](/guide/foundations/permissions-and-approvals/), [Sandbox e rede](/guide/foundations/sandbox-and-network/)
+Contexto conceptual: [Permissões e Aprovações](/pt/guide/foundations/permissions-and-approvals/), [Sandbox e rede](/pt/guide/foundations/sandbox-and-network/)
 
 ### Consistência CLI e App
 
@@ -113,9 +114,9 @@ Na maioria dos casos:
 
 ## Relação com o tema CLI
 
-- Uso interativo: [Modo interativo CLI](/guide/cli/interactive-mode/)
-- Não interativo e scripts: [Modo não interativo](/guide/cli/non-interactive-mode/)
-- Extensão de detalhes de configuração: [Configuração CLI](/guide/cli/configuration/) · [Referência de itens de configuração](/guide/reference/configuration-reference/)
+- Uso interativo: [Modo interativo CLI](/pt/guide/cli/interactive-mode/)
+- Não interativo e scripts: [Modo não interativo](/pt/guide/cli/non-interactive-mode/)
+- Extensão de detalhes de configuração: [Configuração CLI](/pt/guide/cli/configuration/) · [Referência de itens de configuração](/pt/guide/reference/configuration-reference/)
 
 ## Erros habituais
 

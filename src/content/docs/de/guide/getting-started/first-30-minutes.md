@@ -3,9 +3,10 @@ title: Route für die ersten 30 Minuten
 description: "Eine 30-Minuten-Route zum direkten Einstieg."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5363190
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -16,11 +17,11 @@ Ziel der ersten 30 Minuten: Den ersten Kreislauf durchziehen.
 
 | Zeit | Was tun |
 |---|---|
-| 0–5 Min. | [Sicherheits-Checkliste](/guide/getting-started/beginner-safety-checklist/) lesen |
-| 5–10 Min. | [Desktop-App installieren](/guide/getting-started/install-desktop-app/) und [anmelden](/guide/getting-started/sign-in-and-authentication/) |
-| 10–15 Min. | [Übungsprojekt anlegen](/guide/getting-started/create-your-first-project/) |
-| 15–25 Min. | [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/) und prüfen |
-| 25–30 Min. | [Mit Codex sprechen](/guide/learning-paths/beginner/01-talk-to-codex/) öffnen und in den Anfänger-Pfad einsteigen |
+| 0–5 Min. | [Sicherheits-Checkliste](/de/guide/getting-started/beginner-safety-checklist/) lesen |
+| 5–10 Min. | [Desktop-App installieren](/de/guide/getting-started/install-desktop-app/) und [anmelden](/de/guide/getting-started/sign-in-and-authentication/) |
+| 10–15 Min. | [Übungsprojekt anlegen](/de/guide/getting-started/create-your-first-project/) |
+| 15–25 Min. | [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/) und prüfen |
+| 25–30 Min. | [Mit Codex sprechen](/de/guide/learning-paths/beginner/01-talk-to-codex/) öffnen und in den Anfänger-Pfad einsteigen |
 
 ## Was diese 30 Minuten leisten sollen
 
@@ -94,7 +95,7 @@ Nach 30 Minuten gelten diese 4 Punkte als „diese Runde fertig“:
 
 ## Wenn du feststeckst
 
-Zuerst zum [Fehlerbehebungs-Index](/guide/reference/troubleshooting/). Nur Konzept unklar → zurück zu [Was du vor dem Start brauchst](/guide/start-here/prerequisites/) und [Lokal und Cloud](/guide/foundations/local-vs-cloud/).
+Zuerst zum [Fehlerbehebungs-Index](/de/guide/reference/troubleshooting/). Nur Konzept unklar → zurück zu [Was du vor dem Start brauchst](/de/guide/start-here/prerequisites/) und [Lokal und Cloud](/de/guide/foundations/local-vs-cloud/).
 
 In den ersten 30 Minuten lohnt schon ein handfester Kreislauf „Aufgabe stellen, Ergebnis sehen, selbst urteilen“.
 

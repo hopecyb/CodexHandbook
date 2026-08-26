@@ -3,9 +3,10 @@ title: scripts/ et tests
 description: Scripts déterministes dans un Skill et validation de leur comportement.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5a7da46
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Au début, tout dans `SKILL.md` — OK pour un flux simple. Dès qu'une étape doit être **stable, répétable et vérifiable**, un script bat la prose.
@@ -69,7 +70,7 @@ Sépare « script cassé » et « intégration Skill incorrecte ».
 
 Actions répétables stables : ne pas compter sur le texte seul. Script d'abord, puis intégration Skill.
 
-Les scripts héritent des approbations ; voir [Règles de commandes](/guide/customization/rules/command-rules/) et [Sécurité des Skills](/skills/security/).
+Les scripts héritent des approbations ; voir [Règles de commandes](/fr/guide/customization/rules/command-rules/) et [Sécurité des Skills](/fr/skills/security/).
 
 ---
 

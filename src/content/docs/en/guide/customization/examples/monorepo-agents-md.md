@@ -3,9 +3,10 @@ title: AGENTS.md in a Monorepo
 description: Example patterns for placing project instructions, scope, and test commands in a single-repo multi-package structure.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b6c73e9
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -91,7 +92,7 @@ Prohibited: change apps/api server directly
 Acceptance: pnpm --filter web test && pnpm --filter api-client test
 ```
 
-See [File and Folder Context](/guide/context/file-and-folder-context/)
+See [File and Folder Context](/en/guide/context/file-and-folder-context/)
 
 ## Cloud and CI
 
@@ -101,7 +102,7 @@ Monorepos on Cloud often fail from **install not at root** or wrong filter. In r
 - Filter commands for single-package tasks
 - Cache strategy (if using turborepo/nx, note task graph)
 
-[Cloud Environments](/guide/web-and-cloud/cloud-environments/)
+[Cloud Environments](/en/guide/web-and-cloud/cloud-environments/)
 
 ## Common Mistakes
 

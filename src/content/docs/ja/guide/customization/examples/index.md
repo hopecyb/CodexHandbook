@@ -3,9 +3,10 @@ title: 例
 description: 抽象原則ではなく実例から、設定と AGENTS.md の書き方を理解する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: d454969
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 原則だけ見ると分かっても、自分のリポジトリでは書けないことが多いです。
@@ -14,7 +15,7 @@ translated_at: 2026-07-28
 
 ## 本グループの入口
 
-- [Monorepo での AGENTS.md](/guide/customization/examples/monorepo-agents-md/)
+- [Monorepo での AGENTS.md](/ja/guide/customization/examples/monorepo-agents-md/)
 
 ## いつ見るとよいか
 

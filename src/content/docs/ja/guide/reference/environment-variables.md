@@ -3,9 +3,10 @@ title: 環境変数
 description: Codex 関連環境変数の用途、層分け、セキュリティ——設定リファレンスの補足索引。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 603ee7b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
@@ -30,7 +31,7 @@ sidebar:
 
 Token、一時スイッチ、CI 注入値が環境変数経路になりがちな理由です。
 
-設定キーの概念は [設定項目リファレンス](/guide/reference/configuration-reference/)。Cloud は [Secrets と変数](/guide/web-and-cloud/secrets-and-variables/)。
+設定キーの概念は [設定項目リファレンス](/ja/guide/reference/configuration-reference/)。Cloud は [Secrets と変数](/ja/guide/web-and-cloud/secrets-and-variables/)。
 
 ## 環境変数に向く内容
 
@@ -64,7 +65,7 @@ Token、一時スイッチ、CI 注入値が環境変数経路になりがちな
 
 - コーディング規範、ディレクトリ構造 → `AGENTS.md`
 - チーム合意のモデルデフォルト → プロジェクト設定（非秘密部分）
-- 複雑 allowlist → [ルール](/guide/customization/rules/allow-and-deny-patterns/)
+- 複雑 allowlist → [ルール](/ja/guide/customization/rules/allow-and-deny-patterns/)
 
 ## よくある誤解
 
@@ -125,11 +126,11 @@ Shell / CI 注入の環境変数
 
 ### CLI 非対話
 
-CI が secret store から変数注入後 `codex exec`。[非対話モード](/guide/cli/non-interactive-mode/) を参照。
+CI が secret store から変数注入後 `codex exec`。[非対話モード](/ja/guide/cli/non-interactive-mode/) を参照。
 
 ### MCP サーバー
 
-MCP プロセスは親プロセス環境を継承しがち。設定では値を直書きせず `$VAR` を参照。[MCP 接続](/skills/mcp/connect-an-mcp-server/)。
+MCP プロセスは親プロセス環境を継承しがち。設定では値を直書きせず `$VAR` を参照。[MCP 接続](/ja/skills/mcp/connect-an-mcp-server/)。
 
 ### Cloud
 

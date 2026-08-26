@@ -3,9 +3,10 @@ title: 기술 내용 검증
 description: 페이지를 verified로 표시하는 방법 — 재현 단계, 공식 근거, 날짜 포함.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -117,8 +118,8 @@ sidebar:
 
 ## 관련
 
-- [핸드북 버전 정책](/guide/start-here/handbook-version-policy/)
-- [공식 리소스](/guide/reference/official-resources/)
+- [핸드북 버전 정책](/ko/guide/start-here/handbook-version-policy/)
+- [공식 리소스](/ko/guide/reference/official-resources/)
 
 `verified`는 “현재 표시된 근거로 실제로 검증했고, 근거를 추적할 수 있다”는 뜻입니다. 작성자 본인의 확신만으로는 부족합니다.
 

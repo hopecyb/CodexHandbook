@@ -3,9 +3,10 @@ title: Sicherheits-Checkliste für Anfänger
 description: "Sicherheitsprüfungen, die du vor der ersten Nutzung sehen solltest."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 5add3bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -21,9 +22,9 @@ Vor dem Start abhaken:
 - [ ] Ich verstehe: Riskante Operationen brauchen meine Freigabe
 - [ ] Ich genehmige keine Befehle oder Netz-Anfragen, die ich nicht verstehe
 - [ ] Ich prüfe den Diff, bevor ich das Ergebnis annehme
-- [ ] Ich weiß, wie man [rückgängig macht](/guide/getting-started/undo-and-recover/)
+- [ ] Ich weiß, wie man [rückgängig macht](/de/guide/getting-started/undo-and-recover/)
 
-Konzeptergänzung: [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/) · [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/).
+Konzeptergänzung: [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/) · [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/).
 
 ## Häufige Missverständnisse
 

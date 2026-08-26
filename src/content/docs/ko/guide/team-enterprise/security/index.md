@@ -3,9 +3,10 @@ title: 보안
 description: 팀 수준 위험, 공격면, 방어 관점 설명 페이지입니다. 위험이 어디에 있는지 먼저 이해한 뒤 통제 수단을 이야기하세요.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 보안 그룹을 세부 페이지부터 들어가면, 흩어진 용어만 기억하고 무엇을 막는 것인지 놓치기 쉽습니다.
@@ -14,9 +15,9 @@ translated_at: 2026-07-28
 
 ## 권장 순서
 
-1. [위협 모델](/guide/team-enterprise/security/threat-model/)
-2. [Plugin과 MCP 위험](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [프롬프트 주입](/guide/team-enterprise/security/prompt-injection/)
+1. [위협 모델](/ko/guide/team-enterprise/security/threat-model/)
+2. [Plugin과 MCP 위험](/ko/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [프롬프트 주입](/ko/guide/team-enterprise/security/prompt-injection/)
 
 ## 먼저 보면 좋은 사람
 

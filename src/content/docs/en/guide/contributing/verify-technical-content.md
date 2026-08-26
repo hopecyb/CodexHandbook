@@ -3,9 +3,10 @@ title: Verify Technical Content
 description: How to mark pages verified—in reproduction steps, official sources, and dates.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: abada81
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -115,8 +116,8 @@ Re-check quarterly or on major releases:
 
 ## Related
 
-- [Handbook version policy](/guide/start-here/handbook-version-policy/)
-- [Official resources](/guide/reference/official-resources/)
+- [Handbook version policy](/en/guide/start-here/handbook-version-policy/)
+- [Official resources](/en/guide/reference/official-resources/)
 
 `verified` means checked against stated current basis with traceable evidence—not author gut feel alone.
 

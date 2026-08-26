@@ -4,7 +4,7 @@ description: How beginners, creators, developers, and teams can use this handboo
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 41e8ab8
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -30,7 +30,7 @@ The main text is written for **readers unfamiliar with the terminal and Agents**
 - A script repository you can ship to production without verification
 - A replacement for your organization's internal security and compliance policies
 
-Next step: [Choose your path](/guide/start-here/choose-your-path/).
+Next step: [Choose your path](/en/guide/start-here/choose-your-path/).
 
 ---
 

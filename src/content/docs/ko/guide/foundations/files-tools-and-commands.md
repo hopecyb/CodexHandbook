@@ -3,9 +3,10 @@ title: 파일·도구·명령
 description: Codex가 파일을 읽고 쓰고, 명령을 실행하고, 도구를 쓰는 방식을 설명합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 8c0e875
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 40
 ---
@@ -86,7 +87,7 @@ Codex는 **도구**로 실제 세계에 작용합니다.
 
 1. **최소 필요 범위**: 디렉터리·파일을 지정하고 「저장소 전체를 마음대로」를 피합니다
 2. **위험 명령은 승인**: 삭제·푸시·시스템 설정 변경 등
-3. **도구 선택에는 방법이 있습니다**: [도구 선택](/guide/tools/tool-selection/)
+3. **도구 선택에는 방법이 있습니다**: [도구 선택](/ko/guide/tools/tool-selection/)
 
 제품 입구마다 도구 패널과 확인 방식이 다르며, 세부는 각 제품 매뉴얼을 보세요.
 
@@ -94,9 +95,9 @@ Codex는 「말하기」만이 아니라 파일·명령·도구로 실제로 손
 
 다음으로 읽기:
 
-1. [권한과 승인](/guide/foundations/permissions-and-approvals/)
-2. [샌드박스와 네트워크](/guide/foundations/sandbox-and-network/)
-3. [첫 작업 실행](/guide/getting-started/run-your-first-task/)
+1. [권한과 승인](/ko/guide/foundations/permissions-and-approvals/)
+2. [샌드박스와 네트워크](/ko/guide/foundations/sandbox-and-network/)
+3. [첫 작업 실행](/ko/guide/getting-started/run-your-first-task/)
 
 ---
 

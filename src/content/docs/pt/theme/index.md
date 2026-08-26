@@ -3,8 +3,10 @@ title: Temas do Codex
 description: "Entenda o que é o Codex Dream Skin, como instalar e trocar imagens, por que ele usa injeção CDP e quais limites de segurança verificar antes de usar temas."
 locale: pt
 source_locale: zh-CN
-translation_status: draft
+translation_status: reviewed
 translated_at: 2026-07-29
+reviewed_at: 2026-08-26
+source_revision: 8c0e360
 ---
 
 # Temas do Codex

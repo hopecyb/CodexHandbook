@@ -3,12 +3,13 @@ title: 스펙 주도 작업
 description: 먼저 인수 가능한 스펙을 쓴 뒤 Codex가 계획대로 구현하게 합니다—요구가 명확한 인도 작업에 적합합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**스펙 주도**는 파일을 대량으로 고치기 전에 짧은 스펙을 준비해 목표, 범위, 인터페이스, 인수 기준을 밝히는 방식입니다. [브레인스토밍](/cases/workflows/brainstorm-before-building/) 뒤에 이어질 수도 있고, 이미 명확해진 요구와 함께 [EPXV](/cases/workflows/explore-plan-execute-verify/)로 바로 들어갈 수도 있습니다.
+**스펙 주도**는 파일을 대량으로 고치기 전에 짧은 스펙을 준비해 목표, 범위, 인터페이스, 인수 기준을 밝히는 방식입니다. [브레인스토밍](/ko/cases/workflows/brainstorm-before-building/) 뒤에 이어질 수도 있고, 이미 명확해진 요구와 함께 [EPXV](/ko/cases/workflows/explore-plan-execute-verify/)로 바로 들어갈 수도 있습니다.
 
 ## 이 페이지의 초점
 
@@ -57,7 +58,7 @@ translated_at: 2026-07-28
 
 ## 테스트 주도와의 협력
 
-스펙의 인수 항목은 가능한 한 **테스트 가능**해야 합니다. 테스트로 쓸 수 있는 것은 먼저 테스트를 쓰세요. [테스트 주도 작업](/cases/workflows/test-driven-work/)을 참고하세요.
+스펙의 인수 항목은 가능한 한 **테스트 가능**해야 합니다. 테스트로 쓸 수 있는 것은 먼저 테스트를 쓰세요. [테스트 주도 작업](/ko/cases/workflows/test-driven-work/)을 참고하세요.
 
 ## 흔한 실수
 

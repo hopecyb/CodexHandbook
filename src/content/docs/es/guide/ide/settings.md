@@ -1,125 +1,67 @@
 ---
-title: Ajustes de la extensión IDE
-description: Entradas de configuración en el IDE para modelo, Aprobación, Contexto y comportamiento de la extensión.
+title:  Ajustes de la extensión IDE
+description:  Entradas de configuración en el IDE para modelo, Aprobación, Contexto y comportamiento de la extensión.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: d4a3506
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 sidebar:
   order: 80
 ---
 
-Los ajustes de la extensión IDE conectan **preferencias personales** y **reglas del proyecto**: qué nivel de modelo, cuánta Aprobación, si se adjuntan automáticamente los archivos abiertos, etc. Coinciden con los [fundamentos de configuración](/guide/customization/configuration/config-basics/) globales; esta página se centra en las opciones habituales dentro del editor.
+IDE settings have two layers:
 
-## Contenido de esta página
-
-- Reparto entre ajustes del IDE, configuración de usuario y `AGENTS.md`
-- Lo que más suelen tocar los desarrolladores
-- Cómo alinear valores por defecto en el equipo
-
-## Qué controlan realmente estos ajustes
-
-Los ajustes del IDE se parecen más a: **los hábitos por defecto de cómo Codex colabora contigo en el editor**.
-
-Resuelven preguntas como:
-
-- Qué modelo usar por defecto
-- Cuánta Aprobación aplicar por defecto
-- Si incluir automáticamente el archivo actual y la selección
-
-No definen las reglas del proyecto en sí; deciden si el uso en el editor te resulta cómodo y estable.
-
-## Capas de configuración (repaso)
-
-| Capa | Ejemplo | Prioridad |
+| Layer | Location | Controls |
 |---|---|---|
-| Política gestionada por la organización | Prohibir relajar el Sandbox | Máxima |
-| `AGENTS.md` / configuración del proyecto | Comandos de test, convenciones de directorios | Alta |
-| UI de ajustes de la extensión IDE | Modelo por defecto, disposición del panel | Media |
-| Prompt de una sola Tarea | «Esta vez no conectes a la red» | A nivel de Tarea |
+| Codex Agent settings | `config.toml` | Model, reasoning effort, permissions, sandbox, MCP, and personalization; shared with the CLI |
+| Editor settings | VS Code settings with `chatgpt.*` | Sidebar, message queueing, send key, review delivery, language, and fonts |
 
-Ver [Alcance y precedencia](/guide/customization/agents-md/scope-and-precedence/)
+Keep repository rules in `AGENTS.md`, not in one person's editor settings.
 
-## Malentendidos frecuentes
+## Open settings
 
-### Los ajustes del IDE no son la norma del proyecto
+Select the gear in the Codex sidebar, then **Codex Settings**. Change common Agent options in the panel or select **Open config.toml** to edit the active configuration layer.
 
-Muchos confunden «cómo lo tengo por defecto en mi editor» con «así debe hacerse en este proyecto».
+Change editor behavior in the editor's Settings by searching `@ext:openai.chatgpt`, `Codex`, or a specific key.
 
-Más claro:
+## Settings worth understanding first
 
-- Los ajustes del editor van hacia la experiencia personal
-- `AGENTS.md` y la configuración del proyecto van hacia el consenso del equipo
+| Key | Default | Change it when |
+|---|---:|---|
+| `chatgpt.openOnStartup` | `false` | You want the extension to focus the sidebar at startup |
+| `chatgpt.followUpQueueMode` | `queue` | Set `steer` to let a new message steer the current run |
+| `chatgpt.composerEnterBehavior` | `enter` | Multiline prompts are often sent accidentally |
+| `chatgpt.reviewDelivery` | `inline` | Set `detached` to show `/review` in a separate chat |
+| `chatgpt.localeOverride` | automatic | You need a fixed UI language |
+| `chatgpt.runCodexInWindowsSubsystemForLinux` | `false` | The repository and toolchain are in WSL2 |
 
-Están relacionados, pero no son lo mismo.
+`chatgpt.cliExecutable` is for Codex CLI development. Ordinary users should not override the extension's bundled executable; some features may stop working.
 
-### Más Contexto automático no siempre es mejor
+## How to reason about configuration precedence
 
-Incluir automáticamente archivo actual, selección y pestañas abiertas es cómodo; pero si se mete demasiado, también diluye el foco de la Tarea.
+- Organization policy defines limits that cannot be exceeded.
+- `config.toml` sets Agent defaults.
+- `AGENTS.md` supplies repository and directory rules.
+- Editor settings change only the IDE experience.
+- A one-off prompt adds the current task's goal and boundary.
 
-El criterio práctico es lo suficiente; no hace falta perseguir «cuanto más abierto, más potente».
+If a setting appears ineffective, identify which layer you changed and check whether a higher-level policy constrains it. See [Scope and precedence](/es/guide/customization/agents-md/scope-and-precedence/) for the full model.
 
-## Ajustes que se cambian a menudo (concepto)
+## Verify changes
 
-### Modelo y razonamiento
+Change one setting class at a time. For example, after setting `chatgpt.reviewDelivery` to `detached`, run `/review` in a Git repository and confirm that a separate review chat opens. Record the old value, restore it if behavior is unexpected, and reload the editor.
 
-Afectan a la velocidad de respuesta y a la calidad en Tareas complejas. En proyectos de equipo, el README puede indicar el «nivel de modelo recomendado» para que cada uno no tenga un default distinto y sea difícil reproducir problemas.
+## Official sources
 
-### Aprobación y Sandbox
+- [Codex IDE settings](https://learn.chatgpt.com/docs/ide/settings)
+- [Configuration basics](https://learn.chatgpt.com/docs/config)
 
-Corresponde a [Permisos y Aprobaciones](/guide/foundations/permissions-and-approvals/):
-
-- Principiantes: mantén el default o algo más estricto
-- Repositorios de confianza: relaja con cuidado y no mezcles con directorios de secrets de producción
-
-CLI e IDE deben compartir la **misma línea base de seguridad**; detalle de CLI en [Configuración de la CLI](/guide/cli/configuration/).
-
-### Comportamiento del Contexto
-
-Algunas extensiones permiten configurar:
-
-- Si incluir automáticamente el archivo / selección actuales
-- Si leer `AGENTS.md`
-- Opciones relacionadas con la ventana de Contexto (según versión)
-
-Demasiado Contexto automático añade ruido; ver [Mantener el Contexto enfocado](/guide/context/keep-context-focused/).
-
-### Login y cuenta
-
-Se comparte con [Inicio de sesión y autenticación](/guide/getting-started/sign-in-and-authentication/); tras cambiar de cuenta, reinicia la sesión de la extensión.
-
-## Alineación de equipo
-
-1. Lo que **debe ser igual** va al repositorio (`AGENTS.md` + configuración de proyecto opcional)
-2. Los **hábitos personales** se quedan en los ajustes del IDE, fuera de Git
-3. Onboarding de nuevos miembros: contrastar la versión de la extensión con [Instalación IDE](/guide/ide/installation/)
-
-## Qué mirar la primera vez
-
-La primera vez que configures la extensión IDE, basta con tres tipos de ajustes:
-
-1. Modelo y nivel de razonamiento
-2. Relacionados con Aprobación / seguridad
-3. Relacionados con Contexto automático
-
-Si esas tres categorías están en orden, ya cubres la mayoría de problemas reales de uso.
-
-## Resolución de problemas
-
-| Fenómeno | Comprueba |
-|---|---|
-| El ajuste no aplica | Si lo sobrescribe una política de organización; si hace falta recargar la ventana |
-| Comportamiento distinto al de la CLI | Contrasta con la [referencia de configuración](/guide/reference/configuration-reference/) |
-| La extensión no responde | [Resolución de problemas del IDE](/guide/ide/troubleshooting/) |
-
-Los ajustes del IDE se parecen más a «cómo colaboras con Codex en el editor»; cómo se escriben las reglas del proyecto es otra capa — no las mezcles.
-
-## Fuentes de referencia
-- OpenAI Codex IDE settings
 ---
 
-**Estado:** outdated  
-**Productos aplicables:** IDE  
-**Nota de revisión:** Esta página gira en torno a opciones de la extensión IDE, Contexto automático, preferencias de Aprobación y cobertura por organización, pero esas entradas y nombres cambian con facilidad según la versión; falta documentación oficial de ajustes lo bastante sólida para sostener toda la página.  
-**Última verificación:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

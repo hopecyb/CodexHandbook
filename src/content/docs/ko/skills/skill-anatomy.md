@@ -3,9 +3,10 @@ title: Skill 구조
 description: SKILL.md, references/, templates/, scripts/의 역할과 예시.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Skill 디렉터리를 처음 볼 때 흔한 느낌은 「폴더는 다 아는데, 왜 이렇게 나눠 두는지 모르겠다」입니다.
@@ -87,7 +88,7 @@ description: 현재 브랜치의 main 대비 diff를 검토하고 위험과 테�
 
 먼저 `SKILL.md`로 통과시킨 뒤, 정말 복잡해질 때 자료·템플릿·스크립트를 단계적으로 빼내세요.
 
-전체 실습: [첫 Skill 만들기](/skills/create-your-first-skill/).
+전체 실습: [첫 Skill 만들기](/ko/skills/create-your-first-skill/).
 ## 템플릿에서 Skill로
 
 많은 팀은 처음부터 Skill을 설계하지 않습니다. 반복해서 복사하던 프롬프트에서 시작합니다. 다음 단계로 발전시킬 수 있습니다.

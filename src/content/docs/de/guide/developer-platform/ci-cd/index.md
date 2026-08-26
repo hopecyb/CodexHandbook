@@ -3,9 +3,10 @@ title: CI/CD
 description: Codex in Continuous Integration und Release-Abläufe einbinden — zuerst mit risikoarmer Automatisierung.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: fb8b1b7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Beim Anschluss von Codex an CI/CD scheitert es oft hier:
@@ -16,7 +17,7 @@ Man will sofort automatisches Ändern, Pushen und Mergen.
 
 ## Einstieg in diese Gruppe
 
-- [Code-Review-Automatisierung](/guide/developer-platform/ci-cd/code-review-automation/)
+- [Code-Review-Automatisierung](/de/guide/developer-platform/ci-cd/code-review-automation/)
 
 ## Inhalt dieser Gruppe
 

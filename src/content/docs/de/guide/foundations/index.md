@@ -3,33 +3,34 @@ title: Grundlagen
 description: "Eine gemeinsame Sprache für Modelle, Agent, Werkzeuge, Berechtigungen und Überprüfung aufbauen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cf898a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 3
 ---
 
-Dieser Teil bündelt die Grundlagenbegriffe, die das ganze Handbook immer wieder nutzt. Unterschiede der Produkt-UI stehen im [Produkthandbuch](/guide/); Prompt-Techniken in den [Kernfähigkeiten](/guide/).
+Dieser Teil bündelt die Grundlagenbegriffe, die das ganze Handbook immer wieder nutzt. Unterschiede der Produkt-UI stehen im [Produkthandbuch](/de/guide/); Prompt-Techniken in den [Kernfähigkeiten](/de/guide/).
 
 Hier geht es vor allem darum, wie Codex arbeitet — und wie du mit ihm zusammenarbeitest.
 
 ## Kapitelkarte
 
-1. [KI und Sprachmodelle](/guide/foundations/ai-and-language-models/)
-2. [Agent-Grundlagen](/guide/foundations/agent-basics/)
-3. [Ziel, Kontext und Aktionen](/guide/foundations/goals-context-and-actions/)
-4. [Dateien, Werkzeuge und Befehle](/guide/foundations/files-tools-and-commands/)
-5. [Lokal und Cloud](/guide/foundations/local-vs-cloud/)
-6. [Thread, Aufgabe und Projekt](/guide/foundations/threads-tasks-and-projects/)
-7. [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-8. [Sandbox und Netzwerk](/guide/foundations/sandbox-and-network/)
-9. [Modelle und Reasoning](/guide/foundations/models-and-reasoning/)
-10. [Token, Kontext und Komprimierung](/guide/foundations/tokens-context-and-compaction/)
-11. [Überprüfung und menschliche Kontrolle](/guide/foundations/verification-and-human-review/)
-12. [Häufige Missverständnisse](/guide/foundations/common-misconceptions/)
+1. [KI und Sprachmodelle](/de/guide/foundations/ai-and-language-models/)
+2. [Agent-Grundlagen](/de/guide/foundations/agent-basics/)
+3. [Ziel, Kontext und Aktionen](/de/guide/foundations/goals-context-and-actions/)
+4. [Dateien, Werkzeuge und Befehle](/de/guide/foundations/files-tools-and-commands/)
+5. [Lokal und Cloud](/de/guide/foundations/local-vs-cloud/)
+6. [Thread, Aufgabe und Projekt](/de/guide/foundations/threads-tasks-and-projects/)
+7. [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
+8. [Sandbox und Netzwerk](/de/guide/foundations/sandbox-and-network/)
+9. [Modelle und Reasoning](/de/guide/foundations/models-and-reasoning/)
+10. [Token, Kontext und Komprimierung](/de/guide/foundations/tokens-context-and-compaction/)
+11. [Überprüfung und menschliche Kontrolle](/de/guide/foundations/verification-and-human-review/)
+12. [Häufige Missverständnisse](/de/guide/foundations/common-misconceptions/)
 
-Danach weiter zum [Schnellstart](/guide/getting-started/).
+Danach weiter zum [Schnellstart](/de/guide/getting-started/).
 
 ## Häufige Missverständnisse
 
@@ -59,11 +60,11 @@ Praktischer ist:
 
 Wenn du das Kapitel nicht in einem Rutsch lesen willst, starte mit diesen Seiten:
 
-1. [Agent-Grundlagen](/guide/foundations/agent-basics/)
-2. [Ziel, Kontext und Aktionen](/guide/foundations/goals-context-and-actions/)
-3. [Dateien, Werkzeuge und Befehle](/guide/foundations/files-tools-and-commands/)
-4. [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-5. [Überprüfung und menschliche Kontrolle](/guide/foundations/verification-and-human-review/)
+1. [Agent-Grundlagen](/de/guide/foundations/agent-basics/)
+2. [Ziel, Kontext und Aktionen](/de/guide/foundations/goals-context-and-actions/)
+3. [Dateien, Werkzeuge und Befehle](/de/guide/foundations/files-tools-and-commands/)
+4. [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
+5. [Überprüfung und menschliche Kontrolle](/de/guide/foundations/verification-and-human-review/)
 
 Diese Seiten zu verstehen reicht schon für den Alltagseinsatz.
 

@@ -3,9 +3,10 @@ title: Security
 description: Team-level risks, attack surface, and defenses—understand where risk lives before controls.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 Jumping into security detail without framing can leave you with vocabulary but not “what we are defending against.”
@@ -14,9 +15,9 @@ This section reads clearer as: where risk comes from → what layer to block or 
 
 ## Recommended order
 
-1. [Threat model](/guide/team-enterprise/security/threat-model/)
-2. [Plugin and MCP risk](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Prompt injection](/guide/team-enterprise/security/prompt-injection/)
+1. [Threat model](/en/guide/team-enterprise/security/threat-model/)
+2. [Plugin and MCP risk](/en/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Prompt injection](/en/guide/team-enterprise/security/prompt-injection/)
 
 ## Who should start here
 

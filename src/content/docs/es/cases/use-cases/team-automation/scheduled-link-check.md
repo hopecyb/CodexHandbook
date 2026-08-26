@@ -3,9 +3,10 @@ title: "Caso: comprobación programada de enlaces de documentación"
 description: Escanea enlaces rotos del sitio con Codex no interactivo o CI — caso de entrada a la automatización de equipo.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8fa8bd
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 ## Metadatos
@@ -55,8 +56,8 @@ Espera mi confirmación antes de crear archivos.
 ### Ejecutar
 
 - Añadir `prompts/ci/link-check.md`
-- Añadir `.github/workflows/docs-link-check.yml` (esquema; ver [Scripts y pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/))
-- Usar [codex exec](/guide/developer-platform/non-interactive/codex-exec/) o script puro + reclasificación secundaria con Codex
+- Añadir `.github/workflows/docs-link-check.yml` (esquema; ver [Scripts y pipelines](/es/guide/developer-platform/non-interactive/scripts-and-pipelines/))
+- Usar [codex exec](/es/guide/developer-platform/non-interactive/codex-exec/) o script puro + reclasificación secundaria con Codex
 
 ### Verificar
 
@@ -69,19 +70,19 @@ Espera mi confirmación antes de crear archivos.
 | Problema | Tratamiento |
 |---|---|
 | Sitio externo con 503 temporal | Distingue enlace duro vs fallo blando; defínelo en el prompt |
-| Fallo al parsear JSON | Endurece las restricciones de [salida estructurada](/guide/developer-platform/non-interactive/structured-output/) |
+| Fallo al parsear JSON | Endurece las restricciones de [salida estructurada](/es/guide/developer-platform/non-interactive/structured-output/) |
 | Cuota agotada | Pasa a cron semanal + comprobación incremental |
 
 ## 5. Captura para reutilizar
 
 - Tras la tercera ejecución correcta, captura como Skill: `docs-link-audit`
-- Las [reglas de comandos del equipo](/guide/customization/rules/team-rules/) permiten `npm run build` y git en solo lectura
+- Las [reglas de comandos del equipo](/es/guide/customization/rules/team-rules/) permiten `npm run build` y git en solo lectura
 
 ## 6. Capítulos relacionados
 
-- [Gestión de tareas largas](/cases/workflows/long-running-task-management/)
-- [Tareas programadas de Automations](/skills/automations/scheduled-tasks/)
-- [Ruta de aprendizaje de equipo](/guide/learning-paths/team/)
+- [Gestión de tareas largas](/es/cases/workflows/long-running-task-management/)
+- [Tareas programadas de Automations](/es/skills/automations/scheduled-tasks/)
+- [Ruta de aprendizaje de equipo](/es/guide/learning-paths/team/)
 
 ---
 

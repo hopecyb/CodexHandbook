@@ -3,9 +3,10 @@ title: 日報の自動化
 description: 繰り返しの集計作業を再利用可能なスクリプトまたは Skill に固定化する。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: f03ed59
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 日報の自動化
@@ -35,8 +36,8 @@ translated_at: 2026-07-28
 
 ## 4. 蓄積
 
-- [自動化 Skill の例](/skills/examples/automation-skill/)
-- [定期タスク](/skills/automations/scheduled-tasks/)
+- [自動化 Skill の例](/ja/skills/examples/automation-skill/)
+- [定期タスク](/ja/skills/automations/scheduled-tasks/)
 
 ---
 

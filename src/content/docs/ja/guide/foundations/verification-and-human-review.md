@@ -3,9 +3,10 @@ title: 検証と人的レビュー
 description: なぜ結果は検証可能でなければならないか、どうレビューするか。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 19de747
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 110
 ---
@@ -14,10 +15,10 @@ Codex は作業を加速できますが、最終確認の責任を代わりに�
 
 Codex は速度を上げますが、**検収を免除しません**。最低限、次をレビューしてください。
 
-1. [差分](/guide/quality/review-diffs/) を読む：どのファイルを変更したか、範囲を超えていないか
+1. [差分](/ja/guide/quality/review-diffs/) を読む：どのファイルを変更したか、範囲を超えていないか
 2. 定義した完了基準に沿って確認する
-3. テストを実行できるなら実行する：[テストの実行](/guide/quality/run-tests/)
-4. 外部向けの事実は出典を確認する：[出典の検証](/guide/quality/validate-sources/)
+3. テストを実行できるなら実行する：[テストの実行](/ja/guide/quality/run-tests/)
+4. 外部向けの事実は出典を確認する：[出典の検証](/ja/guide/quality/validate-sources/)
 
 ## 人的レビューで何を見るか
 

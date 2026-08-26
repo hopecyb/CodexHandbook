@@ -3,9 +3,10 @@ title: Viết chỉ thị dự án tốt
 description: Danh sách viết AGENTS.md — ngắn, cứng, thực thi được, kiểm chứng được.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2d236a3
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -45,7 +46,7 @@ Viết rõ đừng làm gì
 
 ### 1. Đặt ràng buộc cứng lên trước
 
-Đặt «phải», «cấm» ở phần đầu tệp. Khi ngữ cảnh hữu hạn, mô hình trọng đầu cao hơn — cùng logic với [Ưu tiên ngữ cảnh](/guide/context/context-priority/).
+Đặt «phải», «cấm» ở phần đầu tệp. Khi ngữ cảnh hữu hạn, mô hình trọng đầu cao hơn — cùng logic với [Ưu tiên ngữ cảnh](/vi/guide/context/context-priority/).
 
 ### 2. Lệnh sao chép được
 
@@ -151,9 +152,9 @@ Chỉ thị dự án tốt không nằm ở viết nhiều, mà ở ràng buộc
 
 ## Đọc thêm
 
-- [Mô tả dự án](/guide/customization/project-instructions/)
-- [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/cases/workflows/explore-plan-execute-verify/)
-- [Định nghĩa hoàn thành](/prompts/define-done/)
+- [Mô tả dự án](/vi/guide/customization/project-instructions/)
+- [Khám phá—Kế hoạch—Thực thi—Kiểm chứng](/vi/cases/workflows/explore-plan-execute-verify/)
+- [Định nghĩa hoàn thành](/vi/prompts/define-done/)
 
 ## Từ một tác vụ thành quy tắc dự án
 

@@ -3,12 +3,13 @@ title: Spezifikationsgetriebene Arbeit
 description: Zuerst eine abnahmefähige Spezifikation schreiben, dann Codex nach Plan umsetzen lassen — geeignet für klar umrissene Lieferaufgaben.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-**Spezifikationsgetrieben** heißt: Vor vielen Dateiänderungen eine kurze Spezifikation anlegen — Ziel, Umfang, Schnittstellen und Akzeptanzkriterien. Kann nach [Brainstorming](/cases/workflows/brainstorm-before-building/) folgen oder bei bereits geklärten Anforderungen direkt in [EPXV](/cases/workflows/explore-plan-execute-verify/) einsteigen.
+**Spezifikationsgetrieben** heißt: Vor vielen Dateiänderungen eine kurze Spezifikation anlegen — Ziel, Umfang, Schnittstellen und Akzeptanzkriterien. Kann nach [Brainstorming](/de/cases/workflows/brainstorm-before-building/) folgen oder bei bereits geklärten Anforderungen direkt in [EPXV](/de/cases/workflows/explore-plan-execute-verify/) einsteigen.
 
 ## Schwerpunkte dieser Seite
 
@@ -57,7 +58,7 @@ Funktionen, die nicht in der Spezifikation stehen, nicht hinzufügen. Nach meine
 
 ## Zusammenspiel mit testgetriebener Arbeit
 
-Akzeptanzpunkte in der Spezifikation möglichst **testbar** halten; was sich als Test schreiben lässt, zuerst als Test — siehe [Testgetriebene Arbeit](/cases/workflows/test-driven-work/).
+Akzeptanzpunkte in der Spezifikation möglichst **testbar** halten; was sich als Test schreiben lässt, zuerst als Test — siehe [Testgetriebene Arbeit](/de/cases/workflows/test-driven-work/).
 
 ## Häufige Fehler
 

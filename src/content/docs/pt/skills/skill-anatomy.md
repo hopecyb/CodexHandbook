@@ -3,9 +3,10 @@ title: Anatomia de um Skill
 description: Papéis e exemplos de SKILL.md, references/, templates/ e scripts/.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: d22c83b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Na primeira vez que se olha um diretório Skill, a sensação comum é «reconheço as pastas, mas não sei por que estão assim».
@@ -87,7 +88,7 @@ Se um ou dois desses pontos forem «sim», comece a separar.
 
 Primeiro faça o `SKILL.md` funcionar; quando ficar complexo de verdade, extraia material, templates e scripts aos poucos.
 
-Exercício completo: [Criar seu primeiro Skill](/skills/create-your-first-skill/).
+Exercício completo: [Criar seu primeiro Skill](/pt/skills/create-your-first-skill/).
 ## De template a Skill
 
 Muitas equipas não começam por desenhar um Skill; começam por um Prompt que copiam repetidamente. Ele pode evoluir por etapas:

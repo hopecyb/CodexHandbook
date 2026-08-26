@@ -3,14 +3,15 @@ title: Imagens e ecrãs
 description: Fornecer ecrãs e mockups ao Codex e gerir ficheiros de imagem nas Tarefas.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b5ab733
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-As imagens permitem ao Agent **ver** problemas de interface, intenção de design ou esboços de quadro branco. Esta página cobre entrada (imagens que fornece) e gestão de ficheiros de imagem no repositório; para gerar imagens novas, veja [Geração de imagens](/guide/tools/image-generation/).
+As imagens permitem ao Agent **ver** problemas de interface, intenção de design ou esboços de quadro branco. Esta página cobre entrada (imagens que fornece) e gestão de ficheiros de imagem no repositório; para gerar imagens novas, veja [Geração de imagens](/pt/guide/tools/image-generation/).
 
 Ao encomendar com ecrãs, o ideal é ele saber onde olhar e porque há problema aí.
 
@@ -29,7 +30,7 @@ Ao encomendar com ecrãs, o ideal é ele saber onde olhar e porque há problema 
 | Quadro branco de arquitetura | Foto nítida ou exportação + legenda |
 | Diálogo de erro | Texto de erro completo; evitar cortar só um canto |
 
-Profundidade: [Prompt com imagens](/prompts/prompting-with-images/)
+Profundidade: [Prompt com imagens](/pt/prompts/prompting-with-images/)
 
 ## O que a imagem realmente acrescenta
 
@@ -102,7 +103,7 @@ Não adivinhe lógica de negócio a partir do ecrã; trate só visual e layout.
 
 - Ecrãs podem conter dados de clientes, URLs internas, Tokens — mascara primeiro
 - Não envie ecrãs de configuração com segredos a Tarefas não fiáveis
-- [Contexto sensível](/guide/context/sensitive-context/)
+- [Contexto sensível](/pt/guide/context/sensitive-context/)
 
 ## Referências
 - OpenAI Help Center: ChatGPT Image Inputs FAQ
@@ -112,9 +113,9 @@ Não adivinhe lógica de negócio a partir do ecrã; trate só visual e layout.
 
 Para Tarefas «implementar segundo a imagem»:
 
-1. Compare lado a lado implementação e imagem de referência (ou abra a página com a [Ferramenta de browser](/guide/tools/browser/))
+1. Compare lado a lado implementação e imagem de referência (ou abra a página com a [Ferramenta de browser](/pt/guide/tools/browser/))
 2. Verifique responsivo e modo escuro (se exigido)
-3. [Verificar Artefatos](/guide/quality/verify-artifacts/)
+3. [Verificar Artefatos](/pt/guide/quality/verify-artifacts/)
 
 ## Erros habituais
 

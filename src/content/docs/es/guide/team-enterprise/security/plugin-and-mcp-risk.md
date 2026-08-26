@@ -3,14 +3,15 @@ title: Riesgos de Plugin y MCP
 description: Qué pueden acceder las extensiones y cómo las aprueba y monitoriza el equipo — una mirada unificada a Skills, Plugin y MCP.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7e3cb49
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Los **Plugin** y los **servidores MCP** conectan Codex a sistemas externos: tickets, bases de datos, API internas. Cuanta más capacidad, mayor es la superficie de filtración y abuso de privilegios del [modelo de amenazas](/guide/team-enterprise/security/threat-model/). Léelo junto con [Resumen de MCP](/skills/mcp/mcp-overview/) y [Resumen de Plugins](/skills/plugins/plugins-overview/).
+Los **Plugin** y los **servidores MCP** conectan Codex a sistemas externos: tickets, bases de datos, API internas. Cuanta más capacidad, mayor es la superficie de filtración y abuso de privilegios del [modelo de amenazas](/es/guide/team-enterprise/security/threat-model/). Léelo junto con [Resumen de MCP](/es/skills/mcp/mcp-overview/) y [Resumen de Plugins](/es/skills/plugins/plugins-overview/).
 
 La primera vez que veas estos términos, no hace falta memorizar definiciones. Quédate con una idea: cuando Codex se conecta a sistemas externos, la capacidad crece y el riesgo también.
 
@@ -52,7 +53,7 @@ Un MCP experimental personal **no debe** compartir el mismo token que el reposit
 
 1. **Denegar por defecto** la instalación de MCP remotos fuera de la lista
 2. Un **MCP local** aún puede leer todo el disco — usa un usuario de SO dedicado o un contenedor
-3. **Registros**: nombre de la herramienta y resumen de parámetros (sin datos sensibles); véase [auditoría con Hook](/skills/hooks/hooks-examples/)
+3. **Registros**: nombre de la herramienta y resumen de parámetros (sin datos sensibles); véase [auditoría con Hook](/es/skills/hooks/hooks-examples/)
 4. **División Skill / MCP**: el Skill describe el flujo; el MCP ejecuta la conexión externa — la política más estricta gana al unir Permisos
 
 ## Errores frecuentes
@@ -92,10 +93,10 @@ Con extensiones externas, mira primero Permisos y límites; después, si la func
 
 - [ ] Hay lista de Aprobación escrita o flujo equivalente
 - [ ] Cada MCP de producción tiene owner y clasificación de datos
-- [ ] Alineado con la política de [seguridad de Skill](/skills/security/)
+- [ ] Alineado con la política de [seguridad de Skill](/es/skills/security/)
 
 ## Fuentes de referencia
-- [Depurar MCP](/skills/mcp/debugging-mcp/)
+- [Depurar MCP](/es/skills/mcp/debugging-mcp/)
 ---
 
 **Estado:** verified  

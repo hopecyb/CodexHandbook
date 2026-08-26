@@ -3,17 +3,18 @@ title: Team-Automatisierung
 description: Einstieg zu Fällen für wiederkehrende Teamaufgaben — Fokus auf Trigger, Benachrichtigung, Freigabe und Stoppbedingungen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c95ca8c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Bei Team-Automatisierung ist Übereifer häufig. Besser: klare, wiederholbare Aktionen automatisieren und den Rest menschlicher Beurteilung überlassen.
 
 ## Einstieg dieser Gruppe
 
-- [Geplante Dokumentenlink-Prüfung](/cases/use-cases/team-automation/scheduled-link-check/)
-- [Issue-Triage-Vorschläge](/cases/use-cases/team-automation/issue-triage-suggestions/)
+- [Geplante Dokumentenlink-Prüfung](/de/cases/use-cases/team-automation/scheduled-link-check/)
+- [Issue-Triage-Vorschläge](/de/cases/use-cases/team-automation/issue-triage-suggestions/)
 
 ## Schwerpunkte dieser Gruppe
 

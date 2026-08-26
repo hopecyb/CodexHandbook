@@ -1,96 +1,64 @@
 ---
-title: Reviewing changes in the IDE
-description: Reading diffs, commenting, and accepting or rejecting Codex suggestions in the editor.
+title: Review changes in the IDE
+description: Inspect diffs beside source code and use the read-only reviewer to check the worktree.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 1ca9ffe
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
+sidebar:
+  order: 70
 ---
 
-IDE review sits between inline completion and full PR review: changes often appear directly in the editor or a side diff view. This page explains how to accept results safely.
+The IDE is useful for reading summaries beside source code and focusing on a diff. A change appearing in the editor is not the same as acceptance. Inspect the diff, run tests, and then decide what to keep.
 
-In the IDE, do not treat "one-click accept" as the default even when a change looks ready.
+## Complete a local review
 
-## What's covered
+1. Read the result summary, but do not substitute it for the diff.
+2. Expand changed lines and inspect every affected file.
+3. Keep required edits and request follow-up changes for anything outside scope.
+4. Run `/review` in the input area.
+5. Compare against a base branch or review uncommitted changes.
+6. Run project tests and static checks in the IDE terminal.
+7. Confirm the final Git state with Git tools.
 
-- Common IDE review UI patterns
-- Accept, reject, and partial-accept strategy
-- Connecting to Git, tests, and PR workflow
+`/review` appears only when the open project is a Git repository. It reports findings by priority and does not modify the worktree. In the IDE you can choose:
 
-## Review flow
+- **Review against a base branch:** compare the current branch with the selected base.
+- **Review uncommitted changes:** inspect current worktree changes.
 
-1. **Scope**: which files changed? unexpected deletes or formatting storms?
-2. **Logic**: branches, error handling, edge cases
-3. **Security**: secrets, injection, privilege escalation, dependency tampering
-4. **Verification**: project tests / lint (IDE terminal or task scripts)
-5. **Decision**: accept, request changes, or undo and resend task
+Results appear in the current chat by default. Set `chatgpt.reviewDelivery` to `detached` to open a separate review chat.
 
-Methodology: [review diffs](/guide/quality/review-diffs/)
+## Prompt with explicit reviewer criteria
 
-## IDE-specific actions (conceptual)
-
-| Action | Suggestion |
-|---|---|
-| Inline diff / ghost text | Read block by block; avoid accept-all |
-| Accept single file | Start with lowest-risk file (e.g. tests) |
-| Reject and retry | Follow up: "change only X, do not touch Y" |
-| Git integration | After accept, still `git diff` before commit |
-
-[Desktop App diffs, comments, and review](/guide/desktop-app/diffs-comments-and-review/) is fuller; IDE review is **lightweight and high-frequency**.
-
-## Recommended prompt habits
-
-State up front:
-
-- Allowed path globs
-- Forbidden: `git push`, changing lockfile (unless explicitly requested)
-- On completion: list change summary; **do not auto-commit**
-
-See [human approval patterns](/cases/workflows/human-approval-patterns/)
-
-## Common mistakes
-
-- Trusting a green test icon without running tests yourself
-- Hiding logic changes inside a large auto-format diff
-- Push immediately after accept, skipping PR / branch protection
+```text
+Review the current uncommitted changes. Prioritize defects that could cause
+wrong behavior, data loss, or security issues. Ignore pure style preferences.
+Every finding must include a file location, trigger condition, and verifiable
+impact. If there are no findings, state the remaining test gaps.
+```
 
 ## Acceptance checklist
 
-- [ ] `git status` matches expected files
-- [ ] Tests pass (local or CI)
-- [ ] No `.env`, tokens, or debug `console.log` left behind
-- [ ] Commit message written or confirmed by you
+- [ ] Changed files match the allowed task scope.
+- [ ] No accidental deletion, whole-file formatting, or sensitive files.
+- [ ] Failure paths and edge cases are covered.
+- [ ] Required tests, lint, and type checks pass.
+- [ ] High-priority reviewer findings are fixed or explicitly accepted.
+- [ ] `git diff --check` and `git status --short` are clean as expected.
 
-## Common questions
+For line comments, staging, or hunk-level reverts, use [Diffs, comments, and review](/en/guide/desktop-app/diffs-comments-and-review/). For the general method, see [Review diffs](/en/guide/quality/review-diffs/).
 
-### 1. Inline suggestions look small—safe to accept?
+## Official sources
 
-Do not make that a habit.
+- [Code review](https://learn.chatgpt.com/docs/code-review)
+- [Codex IDE](https://learn.chatgpt.com/docs/codex/ide)
 
-Many issues are not about size—they are about "small enough that nobody looked closely."
-
-### 2. Not confident reviewing logic—what helps most?
-
-These three checks already add value:
-
-- Correct files changed?
-- Anything deleted that should stay?
-- Obvious debug residue or style drift?
-
-### 3. Does accept mean done?
-
-Not yet.
-
-Accept only puts changes in your working tree—you still verify and decide whether to commit.
-
-"Accept" in the IDE is a mid-step, not final acceptance.
-
-## References
-- [Verification and human review](/guide/foundations/verification-and-human-review/)
 ---
 
-**Status:** outdated  
-**Applicable products:** IDE  
-**Review note:** This page depends on whether the IDE extension currently offers inline diff, side diff, accept/reject per block, etc.; current official public material cannot verify each UI capability—do not mark `verified` until newer extension docs are available.  
-**Last verified:** 2026-07-26
+**Status:** verified
+
+**Applies to:** IDE
+
+**Last verified:** 2026-08-26

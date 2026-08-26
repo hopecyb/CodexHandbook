@@ -3,9 +3,10 @@ title: Malentendidos frecuentes
 description: Aclara varios mitos de tratar Codex como una caja negra todopoderosa.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 83a9c4c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 120
 ---
@@ -75,7 +76,7 @@ Si falta una de las tres, la probabilidad de problemas sube con claridad.
 
 Codex es potente, pero funciona mejor dentro de un objetivo y unos límites claros; no te ahorra entender ni juzgar.
 
-Siguiente paso: [Primeros pasos](/guide/getting-started/).
+Siguiente paso: [Primeros pasos](/es/guide/getting-started/).
 
 ---
 

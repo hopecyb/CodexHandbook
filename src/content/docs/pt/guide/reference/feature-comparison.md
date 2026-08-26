@@ -3,81 +3,76 @@ title: Comparação de funcionalidades
 description: Comparação de capacidades de App, CLI, IDE e Cloud.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: f2f0528
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 30
+reviewed_at: 2026-08-26
 ---
 
-Esta tabela serve sobretudo para aprendizagem e escolha; as capacidades concretas são definidas pelo produto atual.
 
-Ajuda-te a ver que tipo de uso encaixa melhor em cada entrada.
+This table compares only **stable primary workflows**. It does not turn rapidly changing small features into permanent promises. Decide with the [client-selection diagram](/pt/guide/choose-your-client/), then confirm differences here.
 
-| Capacidade | App de ambiente de trabalho | CLI | IDE | Cloud |
+## Core comparison
+
+| Entry | Where work happens | Strongest context | Primary review | Typical tasks |
 |---|---|---|---|---|
-| Revisão visual adequada a principiantes | Forte | Média | Média | Média |
-| Integração terminal/scripts | Média | Forte | Média | Média |
-| Contexto em linha no editor | Média | Fraca | Forte | Média |
-| Ambiente remoto padronizado | Conforme integração | Conforme uso | Conforme uso | Forte |
-| Tarefas em paralelo / árvores de trabalho | Habitual | Conforme fluxo | Conforme fluxo | Conforme produto |
-| Skills / MCP / Plugin | Habitual | Habitual | Conforme versão | Conforme produto |
-| Aprovação e acompanhamento em mobilidade | Conforme notificações/remoto | Fraca | Fraca | Conforme produto |
+| ChatGPT desktop App | Local projects, chats, and files | Open folders, projects, and tasks | Task summary, files, diff, approval UI | Multi-project coordination, long tasks, file and computer operations |
+| Codex CLI | Current terminal and local repository | Working directory, command output, Git state | Terminal commands, diff, result summary | Exploration, editing, testing, scripts, CI |
+| IDE integration | Current editor | Open files, selection, recent conversation | Change summary and diff beside code | Local explanation, incremental edits, editor review |
+| Codex Cloud | Isolated remote environment | Connected repository and environment configuration | Cloud logs, summary, diff, PR | Long background tasks, parallel attempts, remote collaboration |
 
-Sugestão de escolha: [Escolher o cliente Codex](/guide/getting-started/choose-your-codex-client/)
+## Installation and identity
 
-## Mal-entendidos frequentes
+| Item | Desktop App | CLI | IDE | Cloud |
+|---|---|---|---|---|
+| Entry | macOS / Windows / Linux desktop App | Local command line | VS Code-compatible extension; separate Xcode and JetBrains integrations | Web and supported remote integrations |
+| ChatGPT sign-in | Supported | Supported | Supported | Required |
+| Local API-key sign-in | Supported | Supported | Supported | Not supported |
+| Primary billing | ChatGPT plan or API usage | ChatGPT plan or API usage | ChatGPT plan or API usage | ChatGPT plan and workspace permissions |
 
-### 1. Mais funcionalidades ≠ melhor para começar
+Local work signed in with an API key follows different billing, administration, and data-handling policies from ChatGPT sign-in. API keys also do not provide ChatGPT-workspace or Cloud capabilities. Use live official pages for current plans and limits.
 
-Olha primeiro que forma de uso precisas agora; não fiques só a contar funcionalidades.
+## Common combinations
 
-### 2. Não precisas de aprender as quatro entradas de uma vez
+### Personal development loop
 
-Escolhe primeiro uma com que possas começar.
+```text
+IDE locates a local issue → CLI runs a precise test → desktop App reviews long work and the diff
+```
 
-### 3. Escolhe segundo a tua forma de trabalhar agora
+### Remote team loop
 
-Segundo os teus hábitos:
+```text
+Start from GitHub / GitLab / Linear / Slack → run in isolated Cloud
+→ human reviews summary and diff → create PR
+```
 
-- Queres o mais intuitivo e fácil de rever → App de ambiente de trabalho
-- Já estás habituado ao terminal → CLI
-- Passas o dia no editor → IDE
-- Mais repo remoto e Tarefas longas → Cloud
+### Beginner learning loop
 
-### 4. Se a entrada não acertar, depois podes ajustar
+```text
+Open a practice folder in the desktop App → request a small task
+→ inspect permission request → inspect diff → run verification
+```
 
-Não tomes isto como uma decisão demasiado grave.  
-Escolhe primeiro uma com que possas começar; mudar depois também vale.
+## Do not use the matrix instead of checking reality
 
-## Se não souberes como escolher
+Plugins, Scheduled tasks, notifications, models, and organization policies evolve quickly. Check the current client and official documentation for:
 
-Olha primeiro:
+- whether a feature appears for the current account;
+- whether plan, region, or administrator policy restricts it;
+- current command, shortcut, or UI names;
+- whether API-key sign-in supports a ChatGPT or Cloud feature.
 
-1. Onde trabalhas mais: ambiente de trabalho, terminal, editor ou browser
-2. O que te importa mais agora: ver com clareza, ou ligar scripts, código e ambiente remoto
-3. Se estás a aprender a usar ou já entras num fluxo contínuo
-
-Muitos fazem isto:
-
-- Primeiro a App de ambiente de trabalho para o ritmo básico
-- Depois complementar com CLI ou IDE segundo o hábito
-- Acrescentar Cloud quando forem precisas Tarefas remotas longas
-
-## Tabela de escolha rápida
-
-| Necessidade atual | Melhor começar por |
-|---|---|
-| Ver com clareza o que está a fazer | App de ambiente de trabalho |
-| Já estás em linha de comandos e scripts | CLI |
-| Passas a maior parte do tempo a escrever código | IDE |
-| Queres que a Tarefa corra em remoto, mais padronizada | Cloud |
-
-Escolher por cenário de uso costuma ser mais fiável do que olhar só quantas funcionalidades há.
+Keep the rule simple: **IDE for local code, CLI for terminal loops, desktop App for local task coordination, Cloud for isolated remote execution.**
 
 ---
 
-**Estado:** outdated  
-**Produtos aplicáveis:** App / CLI / IDE / Cloud  
-**Nota de revisão:** O núcleo é uma tabela de força e adequação por entrada, mas inclui juízos de capacidade atual (Tarefas em paralelo, árvores de trabalho, Skills/MCP/Plugin, Aprovação móvel) de alta volatilidade e sem base oficial item a item suficientemente sólida; até uma versão mais conservadora, não convém `verified`.  
-**Última verificação:** 2026-07-26
+**Status:** verified
+
+**Applies to:** App / CLI / IDE / Cloud
+
+**Verification basis:** Compared with current App, CLI, IDE, Cloud, Authentication, and Pricing documentation. The matrix keeps explicit work-location, context, review, and sign-in boundaries instead of guessing volatile features as strong, medium, or weak.
+
+**Last verified:** 2026-08-26

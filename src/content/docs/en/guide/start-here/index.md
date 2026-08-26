@@ -4,7 +4,7 @@ description: Learn what Codex is, who it's for, and choose your learning path.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: b7997c5
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -22,21 +22,21 @@ Welcome to the Codex Handbook. This handbook assumes **AI beginners** as the def
 
 ## Suggested reading order
 
-1. [What is Codex](/guide/start-here/what-is-codex/)
-2. [Who is this handbook for](/guide/start-here/who-is-this-handbook-for/)
-3. [Choose your path](/guide/start-here/choose-your-path/)
-4. Continue to [Foundations](/guide/foundations/) and [Getting Started](/guide/getting-started/)
+1. [What is Codex](/en/guide/start-here/what-is-codex/)
+2. [Who is this handbook for](/en/guide/start-here/who-is-this-handbook-for/)
+3. [Choose your path](/en/guide/start-here/choose-your-path/)
+4. Continue to [Foundations](/en/guide/foundations/) and [Getting Started](/en/guide/getting-started/)
 
-If you want to jump in right away, go straight to [First 30 minutes](/guide/getting-started/first-30-minutes/), and skim the [Beginner safety checklist](/guide/getting-started/beginner-safety-checklist/) first.
+If you want to jump in right away, go straight to [First 30 minutes](/en/guide/getting-started/first-30-minutes/), and skim the [Beginner safety checklist](/en/guide/getting-started/beginner-safety-checklist/) first.
 
 ## How this site is organized
 
 | Layer | Purpose | Entry |
 |---|---|---|
-| Learning paths | What to read and in what order | [Learning paths](/guide/learning-paths/) |
-| Product guides | UI and operations | [Product guides](/guide/) |
-| Capability topics | Principles and methods | [Core capabilities](/guide/) |
-| Reference | Quick lookup | [Reference](/guide/reference/) |
+| Learning paths | What to read and in what order | [Learning paths](/en/guide/learning-paths/) |
+| Product guides | UI and operations | [Product guides](/en/guide/) |
+| Capability topics | Principles and methods | [Core capabilities](/en/guide/) |
+| Reference | Quick lookup | [Reference](/en/guide/reference/) |
 
 Each topic has one authoritative page; paths and case studies use summaries with links to avoid duplication.
 

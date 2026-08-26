@@ -4,7 +4,7 @@ description: Pick a reading route by role, task, or product entry point.
 locale: en
 source_locale: zh-CN
 reviewed_at: 2026-07-26
-source_revision: 1013ae4
+source_revision: 612639b
 translation_status: reviewed
 translated_at: 2026-07-26
 sidebar:
@@ -15,29 +15,29 @@ You can enter by **role**, **task**, or **product**. All three paths converge on
 
 ## By role
 
-- [Beginner five steps](/guide/learning-paths/beginner/01-talk-to-codex/) (MVP complete)
-- [Creator path overview](/guide/learning-paths/creator/)
-- [Developer path overview](/guide/learning-paths/developer/)
-- [Team path overview](/guide/learning-paths/team/)
+- [Beginner five steps](/en/guide/learning-paths/beginner/01-talk-to-codex/) (MVP complete)
+- [Creator path overview](/en/guide/learning-paths/creator/)
+- [Developer path overview](/en/guide/learning-paths/developer/)
+- [Team path overview](/en/guide/learning-paths/team/)
 
 ## By task
 
 | You want to… | Start with |
 |---|---|
-| Understand Codex and terminology | [Foundations](/guide/foundations/) |
-| Run through once today | [Getting started](/guide/getting-started/) |
-| Write better prompts | [Prompting](/prompts/) |
-| Learn to check results | [Quality and verification](/guide/quality/) |
-| Look up comparisons and troubleshooting | [Reference](/guide/reference/) |
+| Understand Codex and terminology | [Foundations](/en/guide/foundations/) |
+| Run through once today | [Getting started](/en/guide/getting-started/) |
+| Write better prompts | [Prompting](/en/prompts/) |
+| Learn to check results | [Quality and verification](/en/guide/quality/) |
+| Look up comparisons and troubleshooting | [Reference](/en/guide/reference/) |
 
 ## By product
 
-- Default: [Desktop App](/guide/desktop-app/)
-- Terminal: [CLI](/guide/cli/)
-- Editor: [IDE](/guide/ide/)
-- Cloud overview: [Web and Cloud](/guide/web-and-cloud/)
+- Default: [Desktop App](/en/guide/desktop-app/)
+- Terminal: [CLI](/en/guide/cli/)
+- Editor: [IDE](/en/guide/ide/)
+- Cloud overview: [Web and Cloud](/en/guide/web-and-cloud/)
 
-Not sure which to pick? Start with [Choose your Codex client](/guide/getting-started/choose-your-codex-client/) and the [feature comparison](/guide/reference/feature-comparison/).
+Not sure which to pick? Start with [Choose your Codex client](/en/guide/getting-started/choose-your-codex-client/) and the [feature comparison](/en/guide/reference/feature-comparison/).
 
 ---
 

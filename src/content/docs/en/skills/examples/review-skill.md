@@ -3,14 +3,15 @@ title: 'Example: Review Skill'
 description: pr-review-based Skill example for team reuse or adaptation.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 5fb154c
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Example: Review Skill
 
-This example matches `pr-review` in [Create your first Skill](/skills/create-your-first-skill/)—adjust for your team.
+This example matches `pr-review` in [Create your first Skill](/en/skills/create-your-first-skill/)—adjust for your team.
 
 ## SKILL.md
 

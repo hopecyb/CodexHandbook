@@ -3,9 +3,10 @@ title: 로컬과 Cloud 작업
 description: App에서 로컬과 Cloud 실행을 전환합니다.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 95e2382
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 70
 ---
@@ -17,7 +18,7 @@ App에서 작업 실행 위치를 고릅니다.
 - **로컬**: 본기 파일과 환경, 반복이 빠름
 - **Cloud**: 클라우드 환경, 원격 저장소 연결과 긴 작업에 적합
 
-개념: [로컬과 클라우드](/guide/foundations/local-vs-cloud/) · 개요: [Web과 Cloud](/guide/web-and-cloud/)
+개념: [로컬과 클라우드](/ko/guide/foundations/local-vs-cloud/) · 개요: [Web과 Cloud](/ko/guide/web-and-cloud/)
 
 전환 전에 확인하세요. 키가 그 환경에 나타나도 되는지, 네트워크 정책이 허용하는지.
 

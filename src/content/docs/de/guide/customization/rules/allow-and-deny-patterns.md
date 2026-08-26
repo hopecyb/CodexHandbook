@@ -3,9 +3,10 @@ title: Erlauben und Ablehnen
 description: "Mit Befehls- und Pfadregeln Agent-Operationen einschränken — persönliche Gewohnheiten und Team-Untergrenzen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 0ae6680
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -36,7 +37,7 @@ Zwei Hauptnutzen:
 | Pfad | Kein Schreiben nach `../`, kein Lesen von `~/.ssh` |
 | Netzwerk | Kein Outbound oder nur Registry-Domains |
 
-Abgleich mit der [Berechtigungsmatrix](/guide/reference/permission-matrix/): Regeln sind **konfigurierbares** Enforcement; die Matrix beschreibt **übliche Defaults**.
+Abgleich mit der [Berechtigungsmatrix](/de/guide/reference/permission-matrix/): Regeln sind **konfigurierbares** Enforcement; die Matrix beschreibt **übliche Defaults**.
 
 ## Empfohlene Schichtung
 

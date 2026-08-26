@@ -3,9 +3,10 @@ title: Kontext fokussiert halten
 description: Rahmen steuern, neue Threads und Übergabe.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 042a77f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 60
 ---
@@ -43,7 +44,7 @@ Du denkst, du ergänzt Infos — Codex sieht einen immer diffuseren Schwerpunkt.
 - eine Aufgabe, ein Ziel
 - regelmäßig «erledigt / offen / weiter gültige Einschränkungen» zusammenfassen
 - lange Aufgaben mit Phasen-Toren
-- über Sitzungen hinweg: [Übergabe und Fortsetzen](/guide/agent-work/handoff-and-resume/)
+- über Sitzungen hinweg: [Übergabe und Fortsetzen](/de/guide/agent-work/handoff-and-resume/)
 
 ## Signale zum aktiven Schließen
 

@@ -3,22 +3,23 @@ title: Quy trình tác vụ local
 description: Trong IDE, khởi, theo dõi và hoàn thành tác vụ Codex local dựa trên tệp mở và vùng chọn.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f9abb5b
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
 
-Tác vụ local trong IDE là vòng khép «**mở → chọn → mô tả → rà soát → kiểm thử**», phù hợp chỉnh sửa nhỏ tần suất cao. Đây là một đường thực hành phổ biến nhất; chi tiết ngữ cảnh xem [Vùng chọn và tệp mở](/guide/ide/selected-code-and-open-files/).
+Tác vụ local trong IDE là vòng khép «**mở → chọn → mô tả → rà soát → kiểm thử**», phù hợp chỉnh sửa nhỏ tần suất cao. Đây là một đường thực hành phổ biến nhất; chi tiết ngữ cảnh xem [Vùng chọn và tệp mở](/vi/guide/ide/selected-code-and-open-files/).
 
 ## Quy trình khuyến nghị
 
 1. **Mở thư mục gốc không gian làm việc** (cả kho, không phải một tệp)
-2. Mở tệp liên quan; khi cần [chọn đoạn mã](/guide/ide/selected-code-and-open-files/)
-3. Trong bảng Codex viết rõ: mục tiêu, ràng buộc, [định nghĩa hoàn thành](/prompts/define-done/)
-4. Nếu tác vụ phức tạp, [xin kế hoạch](/prompts/ask-for-a-plan/) trước rồi mới thi hành
-5. Trong view diff / inline [rà soát thay đổi](/guide/ide/reviewing-changes/)
+2. Mở tệp liên quan; khi cần [chọn đoạn mã](/vi/guide/ide/selected-code-and-open-files/)
+3. Trong bảng Codex viết rõ: mục tiêu, ràng buộc, [định nghĩa hoàn thành](/vi/prompts/define-done/)
+4. Nếu tác vụ phức tạp, [xin kế hoạch](/vi/prompts/ask-for-a-plan/) trước rồi mới thi hành
+5. Trong view diff / inline [rà soát thay đổi](/vi/guide/ide/reviewing-changes/)
 6. Trong terminal IDE chạy lệnh kiểm thử của dự án
 7. Chính bạn `git commit` (trừ khi nhóm ủy quyền rõ Agent được commit)
 
@@ -35,9 +36,9 @@ Hoàn thành: chạy npm test -- auth, và liệt kê tóm tắt thay đổi.
 
 | Tình huống | Gợi ý |
 |---|---|
-| Đa tác vụ song song, cây làm việc | [Ứng dụng Desktop](/guide/desktop-app/) |
-| Script / CI | [CLI không tương tác](/guide/cli/non-interactive-mode/) |
-| Môi trường chuẩn hóa từ xa, mở PR | [Tác vụ Cloud trong IDE](/guide/ide/cloud-task-workflow/) |
+| Đa tác vụ song song, cây làm việc | [Ứng dụng Desktop](/vi/guide/desktop-app/) |
+| Script / CI | [CLI không tương tác](/vi/guide/cli/non-interactive-mode/) |
+| Môi trường chuẩn hóa từ xa, mở PR | [Tác vụ Cloud trong IDE](/vi/guide/ide/cloud-task-workflow/) |
 
 ## Lỗi thường gặp
 
@@ -45,7 +46,7 @@ Hoàn thành: chạy npm test -- auth, và liệt kê tóm tắt thay đổi.
 - Một lần chấp nhận hết mọi gợi ý inline
 - Commit khi chưa chạy kiểm thử
 
-Ngữ cảnh: [Ngữ cảnh trình soạn thảo](/guide/ide/editor-context/) · [Ngữ cảnh tệp và thư mục](/guide/context/file-and-folder-context/)
+Ngữ cảnh: [Ngữ cảnh trình soạn thảo](/vi/guide/ide/editor-context/) · [Ngữ cảnh tệp và thư mục](/vi/guide/context/file-and-folder-context/)
 
 ## Câu hỏi thường gặp
 

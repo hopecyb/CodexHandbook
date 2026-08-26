@@ -3,9 +3,10 @@ title: Objetivo, Contexto e ação
 description: Desmonte uma interação bem-sucedida em objetivo, contexto, ação e aceite.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -21,7 +22,7 @@ Uma interação mais estável com o Codex costuma ter quatro blocos:
 3. **Ação**: passos que o Codex pode tomar (ler, alterar, rodar)
 4. **Aceite**: o que conta como concluído e como verificar
 
-O ensino de Prompt desenvolve estes quatro blocos num framework estável; veja [Anatomia de uma boa Tarefa](/prompts/task-anatomy/).
+O ensino de Prompt desenvolve estes quatro blocos num framework estável; veja [Anatomia de uma boa Tarefa](/pt/prompts/task-anatomy/).
 
 ## O que cada bloco controla
 

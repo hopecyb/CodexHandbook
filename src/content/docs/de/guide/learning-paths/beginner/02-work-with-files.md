@@ -3,9 +3,10 @@ title: Mit Dateien arbeiten
 description: Codex Dateien in einem klaren Bereich lesen und schreiben lassen.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 7920b62
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -24,7 +25,7 @@ Keine anderen Dateien ändern, keine Befehle ausführen.
 Danach die geänderten Zeilen auflisten.
 ```
 
-Diff prüfen, dann annehmen. Verwandt: [Datei- und Ordnerkontext](/guide/context/file-and-folder-context/)
+Diff prüfen, dann annehmen. Verwandt: [Datei- und Ordnerkontext](/de/guide/context/file-and-folder-context/)
 
 ## Übungsfokus
 
@@ -50,7 +51,7 @@ Deshalb danach Diff prüfen.
 
 Beim ersten Dateieingriff zählt nicht Menge, sondern klare Änderungsgrenze und Prüfbarkeit.
 
-Weiter: [Klare Aufgaben geben](/guide/learning-paths/beginner/03-give-clear-tasks/)
+Weiter: [Klare Aufgaben geben](/de/guide/learning-paths/beginner/03-give-clear-tasks/)
 
 ---
 

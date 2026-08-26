@@ -3,9 +3,10 @@ title: Computer Use
 description: Capacidad avanzada de operar la GUI mediante pantalla y dispositivos de entrada — escenarios, riesgos y aprobación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: c783afc
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -79,7 +80,7 @@ Computer Use equivale casi a **entregar teclado y ratón al Agent**:
 - Puede pulsar por error diálogos de confirmación
 - La pantalla puede incluir información sensible en notificaciones
 
-Lectura obligatoria: [Permisos y aprobaciones](/guide/foundations/permissions-and-approvals/), [Sandbox y red](/guide/foundations/sandbox-and-network/)
+Lectura obligatoria: [Permisos y aprobaciones](/es/guide/foundations/permissions-and-approvals/), [Sandbox y red](/es/guide/foundations/sandbox-and-network/)
 
 ## Cómo decidir si usarlo
 
@@ -118,7 +119,7 @@ En entornos empresariales puede estar desactivado por defecto; prevalece la pol�
 ¿Solo cambiar código y ejecutar tests? → terminal + herramientas de archivo
 ```
 
-Ver [Selección de herramientas](/guide/tools/tool-selection/)
+Ver [Selección de herramientas](/es/guide/tools/tool-selection/)
 
 ## Formulación aplicable directamente
 

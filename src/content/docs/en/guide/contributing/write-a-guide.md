@@ -1,11 +1,12 @@
 ---
+reviewed_at: 2026-08-26
 title: Write a Guide Page
 description: Structure, frontmatter, and cross-link conventions for new handbook guides.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
-translated_at: 2026-07-26
+source_revision: 9b6d47f
+translation_status: reviewed
+translated_at: 2026-08-26
 sidebar:
   order: 10
 ---
@@ -47,7 +48,7 @@ Optional unified footer (match existing pages):
 
 ## Recommended structure
 
-Per [external source integration template](/docs/planning/external-source-integration.md#6-推荐页面模板) (section 6, recommended page template), common sections:
+Choose sections from the [external source integration template](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md#6-%E6%8E%A8%E8%8D%90%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF). Common combinations include:
 
 - What problem the page solves
 - Who it is for
@@ -105,7 +106,7 @@ Community handbook helps understanding and landing—but volatile facts need off
 
 ## Verification
 
-Before PR, read [Verify technical content](/guide/contributing/verify-technical-content/). Commands, pricing, permissions, etc. must be re-checked.
+Before PR, read [Verify technical content](/en/guide/contributing/verify-technical-content/). Commands, pricing, permissions, etc. must be re-checked.
 
 A good guide tells first-time readers why the page exists, what to read first, and where to go next—not only “all the facts.”
 
@@ -114,6 +115,6 @@ A good guide tells first-time readers why the page exists, what to read first, a
 ```
 ---
 
-**Status:** verified  
-**Verification basis:** Cross-checked current doc frontmatter, footer status system, cross-link habits, and sidebar maintenance; describes writing conventions—not specific product version details.  
+**Status:** verified
+**Verification basis:** Cross-checked current doc frontmatter, footer status system, cross-link habits, and sidebar maintenance; describes writing conventions—not specific product version details.
 **Last verified:** 2026-07-26

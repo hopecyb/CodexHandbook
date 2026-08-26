@@ -3,9 +3,10 @@ title: "Ejemplo: Skill de escritura"
 description: Organiza investigación, esquema, borrador y pulido en un flujo de escritura reutilizable.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f24afeb
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Ejemplo: Skill de escritura
@@ -32,7 +33,7 @@ description: Escribe artículos técnicos siguiendo un esquema, con investigaci�
 
 ## Relacionado
 
-- [Caso de escribir un artículo](/cases/write-an-article/)
+- [Caso de escribir un artículo](/es/cases/write-an-article/)
 ---
 
 **Estado:** verificado  

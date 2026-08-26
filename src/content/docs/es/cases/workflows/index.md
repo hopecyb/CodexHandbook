@@ -3,12 +3,13 @@ title: Métodos de flujo de trabajo
 description: Métodos de colaboración repetibles — no atados a una sola interfaz de producto, con puntos de control y criterios de aceptación.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 2306981
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Los [prompts](/prompts/) enseñan **cómo formular**; los flujos de trabajo enseñan **cómo organizar toda una tarea**. Los métodos de este capítulo aplican a App, CLI, IDE y Cloud.
+Los [prompts](/es/prompts/) enseñan **cómo formular**; los flujos de trabajo enseñan **cómo organizar toda una tarea**. Los métodos de este capítulo aplican a App, CLI, IDE y Cloud.
 
 ## Por qué hacen falta flujos de trabajo
 
@@ -24,26 +25,26 @@ Sin puntos de control es fácil: tocar el directorio equivocado, no ejecutar tes
 
 | Flujo de trabajo | Qué problema resuelve |
 |---|---|
-| [Explorar—planificar—ejecutar—verificar](/cases/workflows/explore-plan-execute-verify/) | Cadena principal genérica, adecuada para la mayoría de tareas |
-| [Lluvia de ideas antes de construir](/cases/workflows/brainstorm-before-building/) | Divergir y converger cuando la solución aún no está clara |
-| [Trabajo impulsado por especificación](/cases/workflows/specification-driven-work/) | Escribir una especificación aceptable antes de implementar |
-| [Trabajo impulsado por tests](/cases/workflows/test-driven-work/) | Dejar que los tests impulsen la implementación |
-| [Patrones de aprobación humana](/cases/workflows/human-approval-patterns/) | Cuándo pausar, cuándo aprobar, cuándo rechazar |
-| [Diagnosticar antes de corregir](/cases/workflows/diagnose-before-fixing/) | Evitar «arreglar a ciegas» |
-| [Revisión antes de fusionar](/cases/workflows/review-before-merge/) | Revisión estructurada del PR antes de fusionar |
-| [Investigación con fuentes](/cases/workflows/research-with-sources/) | Búsqueda, comparación y verificación de fuentes |
-| [Trabajo orientado a artefactos](/cases/workflows/artifact-first-work/) | Acordar el entregable primero y deducir los pasos |
-| [Coordinación multi-Agent](/cases/workflows/multi-agent-coordination/) | Paralelismo y división del trabajo |
-| [Gestión de tareas largas](/cases/workflows/long-running-task-management/) | Puntos de control entre sesiones y condiciones de salida |
-| [Recuperación ante fallos](/cases/workflows/failure-recovery/) | Retroceder cuando el trabajo se desvía o los tests fallan |
-| [Convertir un flujo en Skill](/cases/workflows/turn-a-workflow-into-a-skill/) | Escribir procesos repetidos como Skill |
+| [Explorar—planificar—ejecutar—verificar](/es/cases/workflows/explore-plan-execute-verify/) | Cadena principal genérica, adecuada para la mayoría de tareas |
+| [Lluvia de ideas antes de construir](/es/cases/workflows/brainstorm-before-building/) | Divergir y converger cuando la solución aún no está clara |
+| [Trabajo impulsado por especificación](/es/cases/workflows/specification-driven-work/) | Escribir una especificación aceptable antes de implementar |
+| [Trabajo impulsado por tests](/es/cases/workflows/test-driven-work/) | Dejar que los tests impulsen la implementación |
+| [Patrones de aprobación humana](/es/cases/workflows/human-approval-patterns/) | Cuándo pausar, cuándo aprobar, cuándo rechazar |
+| [Diagnosticar antes de corregir](/es/cases/workflows/diagnose-before-fixing/) | Evitar «arreglar a ciegas» |
+| [Revisión antes de fusionar](/es/cases/workflows/review-before-merge/) | Revisión estructurada del PR antes de fusionar |
+| [Investigación con fuentes](/es/cases/workflows/research-with-sources/) | Búsqueda, comparación y verificación de fuentes |
+| [Trabajo orientado a artefactos](/es/cases/workflows/artifact-first-work/) | Acordar el entregable primero y deducir los pasos |
+| [Coordinación multi-Agent](/es/cases/workflows/multi-agent-coordination/) | Paralelismo y división del trabajo |
+| [Gestión de tareas largas](/es/cases/workflows/long-running-task-management/) | Puntos de control entre sesiones y condiciones de salida |
+| [Recuperación ante fallos](/es/cases/workflows/failure-recovery/) | Retroceder cuando el trabajo se desvía o los tests fallan |
+| [Convertir un flujo en Skill](/es/cases/workflows/turn-a-workflow-into-a-skill/) | Escribir procesos repetidos como Skill |
 
 ## Otros capítulos relacionados con flujos
 
-- Calidad: [Capacidades clave · Calidad y verificación](/guide/quality/)
-- Agent: [Planificación](/guide/agent-work/planning/), [Subagents](/guide/agent-work/subagents/)
-- Captura: [Skill](/skills/overview/), [AGENTS.md](/guide/customization/agents-md/what-is-agents-md/)
-- Casos: [Biblioteca de escenarios y casos](/cases/use-cases/)
+- Calidad: [Capacidades clave · Calidad y verificación](/es/guide/quality/)
+- Agent: [Planificación](/es/guide/agent-work/planning/), [Subagents](/es/guide/agent-work/subagents/)
+- Captura: [Skill](/es/skills/overview/), [AGENTS.md](/es/guide/customization/agents-md/what-is-agents-md/)
+- Casos: [Biblioteca de escenarios y casos](/es/cases/use-cases/)
 
 ## Principios de diseño
 

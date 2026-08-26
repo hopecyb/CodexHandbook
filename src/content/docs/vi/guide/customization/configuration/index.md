@@ -3,9 +3,10 @@ title: Cấu hình
 description: Trang mô tả tệp cấu hình và profiles — phân rõ hành vi nào nên vào cấu hình, hành vi nào không.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 73d4bd8
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Lần đầu thấy nhóm “cấu hình”, dễ tưởng nó chỉ nói một đống tên tham số.
@@ -14,8 +15,8 @@ Nó chủ yếu giải quyết một việc: để Codex mặc định làm vi�
 
 ## Thứ tự khuyến nghị
 
-1. [Cơ bản cấu hình](/guide/customization/configuration/config-basics/)
-2. [Profiles](/guide/customization/configuration/profiles/)
+1. [Cơ bản cấu hình](/vi/guide/customization/configuration/config-basics/)
+2. [Profiles](/vi/guide/customization/configuration/profiles/)
 
 ## Nhóm này giải quyết vấn đề gì
 

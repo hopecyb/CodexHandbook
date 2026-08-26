@@ -3,9 +3,10 @@ title: Agent-Grundlagen
 description: "Erklärt, wie ein Agent um ein Ziel herum Werkzeuge aufruft und iterativ vorgeht."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cb6933a
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
@@ -46,14 +47,14 @@ Sobald es Dateien liest und ändert und Befehle ausführt, ist es nicht mehr nur
 
 Am Anfang lohnt sich parallel:
 
-1. [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
-2. [Erste Aufgabe ausführen](/guide/getting-started/run-your-first-task/)
-3. [Ergebnis prüfen](/guide/getting-started/review-the-result/)
+1. [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
+2. [Erste Aufgabe ausführen](/de/guide/getting-started/run-your-first-task/)
+3. [Ergebnis prüfen](/de/guide/getting-started/review-the-result/)
 
 ## Verwandte Begriffe
 
-- Skill / Plugin / MCP: erweitern „was es kann“ und „wohin es angebunden ist“ — siehe [Erweiterungen und Automatisierung](/skills/) sowie [Fähigkeitskarte](/guide/start-here/codex-capability-map/)
-- Menschliche Freigabe: siehe [Berechtigungen und Freigaben](/guide/foundations/permissions-and-approvals/)
+- Skill / Plugin / MCP: erweitern „was es kann“ und „wohin es angebunden ist“ — siehe [Erweiterungen und Automatisierung](/de/skills/) sowie [Fähigkeitskarte](/de/guide/start-here/codex-capability-map/)
+- Menschliche Freigabe: siehe [Berechtigungen und Freigaben](/de/guide/foundations/permissions-and-approvals/)
 
 Das Besondere am Agent: Er kann um ein Ziel herum mehrere Schritte am Stück machen — nicht nur einen Textabschnitt zurückgeben.
 

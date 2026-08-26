@@ -3,9 +3,10 @@ title: Create a slide deck
 description: A case for generating a presentable deck from an outline.
 locale: en
 source_locale: zh-CN
-source_revision: 1013ae4
-translation_status: draft
+source_revision: 42c7a26
+translation_status: reviewed
 translated_at: 2026-07-26
+reviewed_at: 2026-08-26
 ---
 
 # Create a slide deck
@@ -42,7 +43,7 @@ Constraints: Data must cite sources or be marked "example"; no outbound network 
 
 ## 4. Related
 
-- [Presentations capability](/guide/files-and-artifacts/presentations/)
+- [Presentations capability](/en/guide/files-and-artifacts/presentations/)
 
 ---
 

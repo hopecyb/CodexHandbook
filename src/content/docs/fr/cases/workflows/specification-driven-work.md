@@ -3,12 +3,13 @@ title: Travail piloté par la spécification
 description: Rédiger d'abord une spécification vérifiable, puis faire implémenter Codex selon le plan — adapté aux livraisons à besoin clair.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: cbd6ef7
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Le **travail piloté par la spécification** consiste à préparer une courte spécification avant de modifier de nombreux fichiers — objectifs, périmètre, interfaces et critères d'acceptation. Cela peut suivre [Brainstormer avant de construire](/cases/workflows/brainstorm-before-building/), ou entrer directement dans l'[EPXV](/cases/workflows/explore-plan-execute-verify/) avec des besoins déjà clarifiés.
+Le **travail piloté par la spécification** consiste à préparer une courte spécification avant de modifier de nombreux fichiers — objectifs, périmètre, interfaces et critères d'acceptation. Cela peut suivre [Brainstormer avant de construire](/fr/cases/workflows/brainstorm-before-building/), ou entrer directement dans l'[EPXV](/fr/cases/workflows/explore-plan-execute-verify/) avec des besoins déjà clarifiés.
 
 ## Ce que couvre cette page
 
@@ -57,7 +58,7 @@ n'ajoutez pas de fonctionnalités absentes de la spec. Attendez ma confirmation 
 
 ## Association avec le travail piloté par les tests
 
-Les critères d'acceptation de la spec doivent être **testables** autant que possible ; écrire les tests d'abord quand c'est faisable — voir [Travail piloté par les tests](/cases/workflows/test-driven-work/).
+Les critères d'acceptation de la spec doivent être **testables** autant que possible ; écrire les tests d'abord quand c'est faisable — voir [Travail piloté par les tests](/fr/cases/workflows/test-driven-work/).
 
 ## Erreurs courantes
 

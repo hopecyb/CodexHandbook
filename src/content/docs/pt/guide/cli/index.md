@@ -5,9 +5,10 @@ sidebar:
   order: 11
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f654474
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 A CLI adequa-se a utilizadores de terminal e à integração com scripts e CI.
@@ -22,15 +23,15 @@ Inclina-se para estes cenários:
 
 Para iniciantes que não conhecem o terminal, a CLI não é a primeira paragem obrigatória; mas se já sabe o básico de `cd`, `ls` e correr comandos no diretório do projeto, é muito eficiente.
 
-- [Instalação e atualizações](/guide/cli/installation-and-updates/)
-- [Modo interativo](/guide/cli/interactive-mode/)
-- [Modo não interativo](/guide/cli/non-interactive-mode/)
-- [Configuração da CLI](/guide/cli/configuration/)
-- [Comandos e atalhos](/guide/cli/commands-and-shortcuts/)
-- [Aprovação e Sandbox](/guide/cli/approvals-and-sandbox/)
-- [Resolução de problemas](/guide/cli/troubleshooting/)
+- [Instalação e atualizações](/pt/guide/cli/installation-and-updates/)
+- [Modo interativo](/pt/guide/cli/interactive-mode/)
+- [Modo não interativo](/pt/guide/cli/non-interactive-mode/)
+- [Configuração da CLI](/pt/guide/cli/configuration/)
+- [Comandos e atalhos](/pt/guide/cli/commands-and-shortcuts/)
+- [Aprovação e Sandbox](/pt/guide/cli/approvals-and-sandbox/)
+- [Resolução de problemas](/pt/guide/cli/troubleshooting/)
 
-Referência completa de comandos: [Referência de comandos da CLI](/guide/reference/commands/).
+Referência completa de comandos: [Referência de comandos da CLI](/pt/guide/reference/commands/).
 
 ## O que distinguir na primeira utilização
 

@@ -3,9 +3,10 @@ title: '예시: 연구 Skill'
 description: 인용과 「확인 필요」 표시가 있는 조사 Skill 예시.
 locale: ko
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: f159c6f
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # 예시: 연구 Skill
@@ -28,8 +29,8 @@ description: URL/파일 경로 인용이 있는 기술 조사와 비교표를 �
 
 ## 관련
 
-- [연구 사례](/cases/research-with-sources/)
-- [연구 템플릿](/prompts/templates/research/)
+- [연구 사례](/ko/cases/research-with-sources/)
+- [연구 템플릿](/ko/prompts/templates/research/)
 ---
 
 **상태:** verified  

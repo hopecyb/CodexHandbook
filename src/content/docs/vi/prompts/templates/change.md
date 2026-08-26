@@ -3,9 +3,10 @@ title: Mẫu sửa
 description: Lặp có ranh giới trên nền hiện có.
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e8cb4aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 # Mẫu sửa
@@ -63,8 +64,8 @@ Prompt kiểu sửa ngoài «sửa gì» còn phải nói rõ «chỉ được s
 
 ## Liên quan
 
-- [Định nghĩa tiêu chí hoàn thành](/prompts/define-done/)
-- [Ràng buộc và ranh giới](/prompts/constraints-and-boundaries/)
+- [Định nghĩa tiêu chí hoàn thành](/vi/prompts/define-done/)
+- [Ràng buộc và ranh giới](/vi/prompts/constraints-and-boundaries/)
 
 ---
 

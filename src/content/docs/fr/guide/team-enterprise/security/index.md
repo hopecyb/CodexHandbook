@@ -3,9 +3,10 @@ title: Sécurité
 description: Risques au niveau équipe, surface d'attaque et défenses — comprendre où vit le risque avant les contrôles.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: b0896a2
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Sauter dans le détail sécurité sans cadrage peut vous laisser avec du vocabulaire mais pas « ce que nous défendons ».
@@ -14,9 +15,9 @@ Cette section se lit plus clairement comme : d'où vient le risque → quelle co
 
 ## Ordre recommandé
 
-1. [Modèle de menace](/guide/team-enterprise/security/threat-model/)
-2. [Risque Plugin et MCP](/guide/team-enterprise/security/plugin-and-mcp-risk/)
-3. [Injection de prompt](/guide/team-enterprise/security/prompt-injection/)
+1. [Modèle de menace](/fr/guide/team-enterprise/security/threat-model/)
+2. [Risque Plugin et MCP](/fr/guide/team-enterprise/security/plugin-and-mcp-risk/)
+3. [Injection de prompt](/fr/guide/team-enterprise/security/prompt-injection/)
 
 ## Qui devrait commencer ici
 

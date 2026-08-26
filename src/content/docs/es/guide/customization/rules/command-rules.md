@@ -3,14 +3,15 @@ title: Reglas de comandos
 description: Restringe llamadas a shell y herramientas con allow/deny a nivel de comando — más ejecutable que un acuerdo oral.
 locale: es
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: e82113c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 20
 ---
 
-Las **reglas de comandos** se centran en «qué comandos puede ejecutar el Agent y con qué parámetros». Son la forma más habitual de [reglas de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/), y suelen escribirse en configuración o archivos de reglas que el equipo puede revisar.
+Las **reglas de comandos** se centran en «qué comandos puede ejecutar el Agent y con qué parámetros». Son la forma más habitual de [reglas de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/), y suelen escribirse en configuración o archivos de reglas que el equipo puede revisar.
 
 ## Qué cubre esta página
 
@@ -90,7 +91,7 @@ Ilustración (el formato sigue la configuración oficial):
 | Inventario | Extrae comandos reales de `package.json` scripts, Makefile y workflows de CI |
 | Capas | Deny de línea roja de la organización → allow complementario del proyecto → excepciones locales personales (si las hay) |
 | Prueba | Con tareas de bajo riesgo, verifica «lo que debe pasar, pasa; lo que debe bloquearse, se bloquea» |
-| Alineación | Reglas locales y [GitHub Action](/guide/developer-platform/ci-cd/code-review-automation/) con la misma fuente en la medida de lo posible |
+| Alineación | Reglas locales y [GitHub Action](/es/guide/developer-platform/ci-cd/code-review-automation/) con la misma fuente en la medida de lo posible |
 
 ## Errores habituales
 
@@ -115,10 +116,10 @@ Las reglas de comandos no «memorizan comandos»; separan cuáles son acciones c
 
 ## Capítulos relacionados
 
-- [Patrones de permitir y denegar](/guide/customization/rules/allow-and-deny-patterns/)
-- [Política de reglas de equipo](/guide/customization/rules/team-rules/)
-- [Aprobación y Sandbox en CLI](/guide/cli/approvals-and-sandbox/)
-- [Matriz de permisos](/guide/reference/permission-matrix/)
+- [Patrones de permitir y denegar](/es/guide/customization/rules/allow-and-deny-patterns/)
+- [Política de reglas de equipo](/es/guide/customization/rules/team-rules/)
+- [Aprobación y Sandbox en CLI](/es/guide/cli/approvals-and-sandbox/)
+- [Matriz de permisos](/es/guide/reference/permission-matrix/)
 
 ---
 

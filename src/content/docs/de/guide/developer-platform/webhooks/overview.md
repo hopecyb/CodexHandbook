@@ -3,14 +3,15 @@ title: Webhooks-Überblick
 description: 'Per HTTP-Callback Codex-Aufgabenstatus in interne Systeme bringen — Ereignisse, Signatur und Idempotenz.'
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 78f037e
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 10
 ---
 
-**Webhooks** lassen Sie bei Statusänderungen von Codex- oder Cloud-Aufgaben HTTP-Callbacks an eigene Dienste senden — für Ticket-Updates, Slack-Benachrichtigungen oder interne Freigabe-UIs. Dieses Kapitel ist der Einstieg in Ereignisintegration der [Entwicklerplattform](/guide/developer-platform/).
+**Webhooks** lassen Sie bei Statusänderungen von Codex- oder Cloud-Aufgaben HTTP-Callbacks an eigene Dienste senden — für Ticket-Updates, Slack-Benachrichtigungen oder interne Freigabe-UIs. Dieses Kapitel ist der Einstieg in Ereignisintegration der [Entwicklerplattform](/de/guide/developer-platform/).
 
 ## Was diese Seite behandelt
 
@@ -54,7 +55,7 @@ Ohne Signaturprüfung, Idempotenz und Timeout-Handling riskieren Sie gefälschte
 | Anbindung an bestehende Event-Busse | Einfacher Cron braucht nur `exec`-Exit-Code |
 | Mehrstufige Orchestrierung (fertig → Deploy) | Kein öffentlich erreichbarer Endpoint und keine Queue |
 
-Einfache Pipelines reichen oft mit [Skripten und Pipelines](/guide/developer-platform/non-interactive/scripts-and-pipelines/); produktisierte Multi-Tenant-Dienste kombinieren oft **SDK + Webhook**.
+Einfache Pipelines reichen oft mit [Skripten und Pipelines](/de/guide/developer-platform/non-interactive/scripts-and-pipelines/); produktisierte Multi-Tenant-Dienste kombinieren oft **SDK + Webhook**.
 
 ## Typische Ereignisse (Konzept)
 
@@ -110,7 +111,7 @@ Je mehr „ja“, desto sinnvoller der Webhook.
 
 ## Sicherheitsgrenzen
 
-- Siehe [Bedrohungsmodell](/guide/team-enterprise/security/threat-model/) und [Acceptable Use](/guide/team-enterprise/governance/acceptable-use/)
+- Siehe [Bedrohungsmodell](/de/guide/team-enterprise/security/threat-model/) und [Acceptable Use](/de/guide/team-enterprise/governance/acceptable-use/)
 - Rotation des Webhook-Secrets in den Ops-Kalender aufnehmen
 
 ## Abnahme-Checkliste
@@ -118,7 +119,7 @@ Je mehr „ja“, desto sinnvoller der Webhook.
 - [ ] Signaturfehler → 4xx
 - [ ] Idempotenz-Tabelle oder Dedupe-Key implementiert
 - [ ] Asynchroner Worker und DLQ (Dead Letter) konfiguriert
-- [ ] Feldkonventionen mit [Strukturierter Ausgabe](/guide/developer-platform/non-interactive/structured-output/) abgestimmt
+- [ ] Feldkonventionen mit [Strukturierter Ausgabe](/de/guide/developer-platform/non-interactive/structured-output/) abgestimmt
 
 Webhooks bringen Aufgabenstatus in andere Systeme — zuerst Signaturprüfung, Idempotenz und asynchrone Verarbeitung absichern.
 

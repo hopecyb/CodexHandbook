@@ -3,12 +3,13 @@ title: Gestão de tarefas longas
 description: Tarefas grandes que atravessam horas ou várias sessões — checkpoints, compactação, delegação e condições de saída.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 199bbe5
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
-Problemas comuns em tarefas longas: **contexto cheio**, **pessoa a sair**, **deriva de direção**, **não saber quando parar**. Esta página coloca [Explorar—Planear—Executar—Verificar](/cases/workflows/explore-plan-execute-verify/) no cenário de várias horas ou várias sessões.
+Problemas comuns em tarefas longas: **contexto cheio**, **pessoa a sair**, **deriva de direção**, **não saber quando parar**. Esta página coloca [Explorar—Planear—Executar—Verificar](/pt/cases/workflows/explore-plan-execute-verify/) no cenário de várias horas ou várias sessões.
 
 ## Foco desta página
 
@@ -16,7 +17,7 @@ Problemas comuns em tarefas longas: **contexto cheio**, **pessoa a sair**, **der
 - O que escrever em checkpoints e registos de estado
 - Condições de saída para tarefas longas automatizadas
 
-Relacionado: [delegar e acompanhar](/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/skills/automations/scheduled-tasks/)
+Relacionado: [delegar e acompanhar](/pt/guide/web-and-cloud/delegate-and-follow-up/) · [Automations](/pt/skills/automations/scheduled-tasks/)
 
 ## Sinais de tarefa longa
 
@@ -33,7 +34,7 @@ Se qualquer condição se cumprir, escreva o plano primeiro — não converse at
 
 Produza um plano escrito: âmbito, não-objetivos, marcos, comandos de aceitação. Confirmação humana antes de execução em larga escala.
 
-[Planeamento](/guide/agent-work/planning/) · [Subagents](/guide/agent-work/subagents/)
+[Planeamento](/pt/guide/agent-work/planning/) · [Subagents](/pt/guide/agent-work/subagents/)
 
 ### 2. Checkpoints
 
@@ -41,11 +42,11 @@ A cada marco concluído:
 
 - Commit ou stash de incremento revível
 - Atualizar `PROGRESS.md` ou comentário no issue: o que ficou feito, próximo passo, bloqueios
-- Com o contexto cheio, use [compactação](/guide/context/compaction/) ou abra uma nova sessão + ligue o ficheiro de progresso
+- Com o contexto cheio, use [compactação](/pt/guide/context/compaction/) ou abra uma nova sessão + ligue o ficheiro de progresso
 
 ### 3. Encerrar ou delegar
 
-- Quando o local não chega → [delegação Cloud](/guide/web-and-cloud/delegate-and-follow-up/)
+- Quando o local não chega → [delegação Cloud](/pt/guide/web-and-cloud/delegate-and-follow-up/)
 - Quando precisa de monitorização contínua → Automation + **max iterations / prazo** claros
 
 ## Condições de saída (obrigatórias em automatização)

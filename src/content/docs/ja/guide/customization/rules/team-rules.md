@@ -3,14 +3,15 @@ title: チームルール方針
 description: 組織、リポジトリ、個人の間でコマンドとパスルールを層分け——レビュー可能、ロールバック可能に。
 locale: ja
 source_locale: zh-CN
-source_revision: ba31b5a
-translation_status: draft
+source_revision: 3843326
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
 
-チームで Codex を使うとき、**ルール方針**は次を答えます：どの制約を全社統一し、どれをリポジトリに任せ、個人が緩められるか。本章は [コマンドルール](/guide/customization/rules/command-rules/) と [許可と拒否パターン](/guide/customization/rules/allow-and-deny-patterns/) のガバナンス視点です。
+チームで Codex を使うとき、**ルール方針**は次を答えます：どの制約を全社統一し、どれをリポジトリに任せ、個人が緩められるか。本章は [コマンドルール](/ja/guide/customization/rules/command-rules/) と [許可と拒否パターン](/ja/guide/customization/rules/allow-and-deny-patterns/) のガバナンス視点です。
 
 ## 内容
 
@@ -55,7 +56,7 @@ L4 個人設定                        → 本機のみ。L1 を弱めない
 L5 単発タスク prompt                → 一時的な厳格化は可。緩和は L1 に制限
 ```
 
-[AGENTS.md スコープ](/guide/customization/agents-md/scope-and-precedence/) と対で覚える：**ルールは実行 enforcement 寄り、AGENTS.md は行動説明寄り**。一致させ、矛盾する要求を別々に書かない。
+[AGENTS.md スコープ](/ja/guide/customization/agents-md/scope-and-precedence/) と対で覚える：**ルールは実行 enforcement 寄り、AGENTS.md は行動説明寄り**。一致させ、矛盾する要求を別々に書かない。
 
 ## 基本手順
 
@@ -72,7 +73,7 @@ L5 単発タスク prompt                → 一時的な厳格化は可。緩�
     → staging リポジトリで典型タスク試走 → マージ → 告知 + ハンドブック更新
 ```
 
-大変更（例：ネットワーク外向き開放）は [Hooks 監査](/skills/hooks/hooks-overview/) と [acceptable use](/guide/team-enterprise/governance/acceptable-use/) も同期更新。
+大変更（例：ネットワーク外向き開放）は [Hooks 監査](/ja/skills/hooks/hooks-overview/) と [acceptable use](/ja/guide/team-enterprise/governance/acceptable-use/) も同期更新。
 
 ## Hooks、CI との整合
 
@@ -101,7 +102,7 @@ L5 単発タスク prompt                → 一時的な厳格化は可。緩�
 
 ## セキュリティ境界
 
-- ルールは [脅威モデル](/guide/team-enterprise/security/threat-model/) とインシデント対応の代替ではない
+- ルールは [脅威モデル](/ja/guide/team-enterprise/security/threat-model/) とインシデント対応の代替ではない
 - 規制データでは、ルールをデータ分類・保持方針と一緒にレビュー
 - 緊急迂回は**監査記録**と事後レビューが必要
 

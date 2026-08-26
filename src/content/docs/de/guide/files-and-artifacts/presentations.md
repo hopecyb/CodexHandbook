@@ -3,9 +3,10 @@ title: Präsentationen
 description: "Folien erzeugen, überarbeiten und exportieren — Struktur, Master und Speaker Notes."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 791b567
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -47,7 +48,7 @@ Nach Empfänger:
 5. PDF exportieren, Probezeit
 ```
 
-Wie [Explore—Plan—Execute—Verify](/cases/workflows/explore-plan-execute-verify/): Outline zuerst abnehmen, dann Details.
+Wie [Explore—Plan—Execute—Verify](/de/cases/workflows/explore-plan-execute-verify/): Outline zuerst abnehmen, dann Details.
 
 ## Warum zuerst Struktur
 
@@ -114,13 +115,13 @@ Direkt so formulieren:
 
 Stabiler als „mach ein cooles PPT“.
 
-Bilder: [Bilder und Screenshots](/guide/files-and-artifacts/images-and-screenshots/); reine Generierung: [Bildgenerierung](/guide/tools/image-generation/).
+Bilder: [Bilder und Screenshots](/de/guide/files-and-artifacts/images-and-screenshots/); reine Generierung: [Bildgenerierung](/de/guide/tools/image-generation/).
 
 ## Abnahme
 
 - Schriftgröße unter Projektion lesbar
 - Animation maßvoll (zu viel schwer wartbar)
-- Zahlen konsistent mit [Quellen validieren](/guide/quality/validate-sources/)
+- Zahlen konsistent mit [Quellen validieren](/de/guide/quality/validate-sources/)
 - Speaker Notes ausreichend (falls nötig)
 
 ## Was Codex, was Sie

@@ -3,9 +3,10 @@ title: Kontextkomprimierung
 description: Was nach der Komprimierung langer Gespräche bleibt — und was verloren geht.
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 329ca4d
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 50
 ---
@@ -73,7 +74,7 @@ Aktuell gültige Einschränkungen:
 
 Stabiler als die ganze lange Konversation weiter zu verlassen.
 
-Konzept: [Token, Kontext und Komprimierung](/guide/foundations/tokens-context-and-compaction/)
+Konzept: [Token, Kontext und Komprimierung](/de/guide/foundations/tokens-context-and-compaction/)
 
 In langen Aufgaben: kritische Grenzen nicht nur einmal sagen; nach Komprimierung wichtige Regeln aktiv wiederholen.
 

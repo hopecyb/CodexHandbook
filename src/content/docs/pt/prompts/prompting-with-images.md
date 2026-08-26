@@ -3,9 +3,10 @@ title: Prompts com imagens
 description: Como perguntar quando envia capturas, designs ou quadros brancos ao Codex, para obter resultados executáveis.
 locale: pt
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 979c08c
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Muitas falhas de «trabalhar a partir da imagem» não vêm de o modelo não ver — vêm de enviar só a imagem **sem dizer o que deve observar nela**.
@@ -161,10 +162,10 @@ Mesmo implementando a partir da imagem, no fim há que ver página real, diff, b
 
 ## Como combinar com outras páginas
 
-- Enviar e gerir arquivos de imagem: [Imagens e capturas](/guide/files-and-artifacts/images-and-screenshots/)
-- Gerar imagens novas: [Geração de imagens](/guide/tools/image-generation/)
-- Formular a tarefa completa: [Anatomia de uma tarefa](/prompts/task-anatomy/)
-- Analisar antes de agir: [Pedir um plano primeiro](/prompts/ask-for-a-plan/)
+- Enviar e gerir arquivos de imagem: [Imagens e capturas](/pt/guide/files-and-artifacts/images-and-screenshots/)
+- Gerar imagens novas: [Geração de imagens](/pt/guide/tools/image-generation/)
+- Formular a tarefa completa: [Anatomia de uma tarefa](/pt/prompts/task-anatomy/)
+- Analisar antes de agir: [Pedir um plano primeiro](/pt/prompts/ask-for-a-plan/)
 
 ## Uma experiência prática
 

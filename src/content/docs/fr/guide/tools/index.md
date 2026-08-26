@@ -3,16 +3,17 @@ title: Outils (condensé)
 description: Choisir le bon outil ; le MVP ne couvre que les pages clés.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: adbe0aa
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Pages condensées MVP :
 
-- [Sélection d'outils](/guide/tools/tool-selection/)
-- [Shell et terminal](/guide/tools/shell-and-terminal/)
-- [Recherche web](/guide/tools/web-search/)
+- [Sélection d'outils](/fr/guide/tools/tool-selection/)
+- [Shell et terminal](/fr/guide/tools/shell-and-terminal/)
+- [Recherche web](/fr/guide/tools/web-search/)
 
 Navigateur, Computer Use, image et voix, etc. sont reportés.
 

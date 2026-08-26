@@ -3,9 +3,10 @@ title: Création de contenu
 description: Point d'entrée des cas de documentation, d'articles et d'actifs de contenu — revue, réécriture et validation des livrables.
 locale: fr
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 9f70ff0
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 ---
 
 Les cas de création de contenu portent surtout sur ce scénario :
@@ -14,7 +15,7 @@ Les cas de création de contenu portent surtout sur ce scénario :
 
 ## Entrées de ce groupe
 
-- [Refactorisation de site de docs avec revue](/cases/use-cases/content-creation/refactor-docs-with-review/)
+- [Refactorisation de site de docs avec revue](/fr/cases/use-cases/content-creation/refactor-docs-with-review/)
 
 ## Points clés de ce groupe
 

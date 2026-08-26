@@ -5,12 +5,13 @@ sidebar:
   order: 80
 locale: vi
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
-translated_at: 2026-07-28
+source_revision: b13e05c
+translation_status: reviewed
+translated_at: 2026-08-26
+reviewed_at: 2026-08-26
 ---
 
-**Sổ tay hướng dẫn Codex** là trang tài liệu do cộng đồng duy trì. Hoan nghênh sửa lỗi, bổ sung trang, thêm case tái hiện được và ví dụ Prompt trong [examples/](/examples/README.md).
+**Sổ tay hướng dẫn Codex** là trang tài liệu do cộng đồng duy trì. Hoan nghênh sửa lỗi, bổ sung trang, thêm case tái hiện được và ví dụ Prompt trong [examples/](https://github.com/hopecyb/CodexHandbook/blob/main/examples/README.md).
 
 ## Nội dung trang này
 
@@ -35,10 +36,10 @@ Bạn không cần trở thành “người hiểu nhất lĩnh vực” rồi m
 | Loại | Mô tả | Hướng dẫn |
 |---|---|---|
 | Sửa/chỉnh nhỏ | Chính tả, liên kết, một câu lỗi thời | PR trực tiếp |
-| Trang hướng dẫn mới | Nội dung chương dưới `src/content/docs/` | [Viết trang hướng dẫn](/guide/contributing/write-a-guide/) |
-| Case | `src/content/docs/cases/` | [Mẫu case](/cases/use-cases/case-study-template/) |
-| Ví dụ Prompt | `examples/prompts/` | [Thêm ví dụ Prompt](/guide/contributing/add-a-prompt-example/) |
-| Kiểm chứng kỹ thuật | Đánh dấu `verified`, cập nhật ngày | [Kiểm chứng nội dung kỹ thuật](/guide/contributing/verify-technical-content/) |
+| Trang hướng dẫn mới | Nội dung chương dưới `src/content/docs/` | [Viết trang hướng dẫn](/vi/guide/contributing/write-a-guide/) |
+| Case | `src/content/docs/cases/` | [Mẫu case](/vi/cases/use-cases/case-study-template/) |
+| Ví dụ Prompt | `examples/prompts/` | [Thêm ví dụ Prompt](/vi/guide/contributing/add-a-prompt-example/) |
+| Kiểm chứng kỹ thuật | Đánh dấu `verified`, cập nhật ngày | [Kiểm chứng nội dung kỹ thuật](/vi/guide/contributing/verify-technical-content/) |
 | Bản dịch | `en/`, `zh-tw/`, v.v. | Lộ trình M6; ổn định nguồn trước |
 
 ## Hiểu lầm thường gặp
@@ -63,7 +64,7 @@ Chỉ cần: nói cụ thể vấn đề, và cố bổ sung thành diễn đạ
 ## Nguyên tắc cơ bản
 
 1. **Tiếng Trung giản thể `root` là nguồn** (trừ khi có ghi chú khác)
-2. **Không sao chép** nguyên văn tutorial bên ngoài; tham khảo [kế hoạch tích hợp nguồn ngoài](/docs/planning/external-source-integration.md)
+2. **Không sao chép** nguyên văn tutorial bên ngoài; tham khảo [kế hoạch tích hợp nguồn ngoài](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/external-source-integration.md)
 3. **Sự kiện dễ thay đổi** phải ghi ngày `Kiểm chứng gần nhất`
 4. **Mỗi sidebar slug** phải có markdown tương ứng, nếu không `npm run build` thất bại
 5. Trang mới phải cập nhật đồng bộ sidebar trong `astro.config.mjs`
@@ -104,7 +105,7 @@ npm run build
 ## Liên kết liên quan
 
 - Kho: <https://github.com/hopecyb/CodexHandbook>
-- [Dàn ý chương](/docs/planning/chapter-outline.md) (dùng cho lập kế hoạch)
+- [Dàn ý chương](https://github.com/hopecyb/CodexHandbook/blob/main/docs/planning/chapter-outline.md) (dùng cho lập kế hoạch)
 
 ---
 

@@ -3,9 +3,10 @@ title: "Ziel, Kontext und Aktionen"
 description: "Eine gelungene Interaktion in Ziel, Hintergrund, Aktionen und Abnahme zerlegen."
 locale: de
 source_locale: zh-CN
-source_revision: 5f36443
-translation_status: draft
+source_revision: 656b931
+translation_status: reviewed
 translated_at: 2026-07-28
+reviewed_at: 2026-08-26
 sidebar:
   order: 30
 ---
@@ -21,7 +22,7 @@ Eine stabile Codex-Interaktion hat in der Regel vier Teile:
 3. **Aktionen**: Schritte, die Codex ausführen darf (lesen, ändern, ausführen)
 4. **Abnahme**: Wann es fertig ist und wie du prüfst
 
-Die Prompt-Lehre entfaltet diese vier Teile zu einem stabilen Rahmen — siehe [Struktur einer guten Aufgabe](/prompts/task-anatomy/).
+Die Prompt-Lehre entfaltet diese vier Teile zu einem stabilen Rahmen — siehe [Struktur einer guten Aufgabe](/de/prompts/task-anatomy/).
 
 ## Wofür die vier Teile zuständig sind
 
